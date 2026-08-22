@@ -393,7 +393,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8023","sv":4,"ph":"96078cc700b16039"},
 
   "telluride|2026-09-16|Historic & Architectural Review Commission - Sep 16 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8022","sv":4,"ph":"e63371133d9cef98"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8022","sv":4,"ph":"dc059514bc1f2944"},
 
   "telluride|2026-09-16|Parks & Recreation Commission - Sep 16 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082","sv":4,"ph":"6fb96e40a5040f91"},
@@ -841,106 +841,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "Monthly Chamber of Commerce meeting open to all.",
     href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
-    img: ""
-  },
-  {
-    title: "Best feathers forward",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 20, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.ouraynews.com/2026/08/19/best-feathers-forward/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Bear activity ramping up",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 20, 2026",
-    newsTopic: "recreation",
-    copy: "State wildlife officials killed a young, female bear that entered a Ridgway home last weekend after days of conflicts and at least one incident with the bear killing chickens. Colorado Parks and Wildlife District Manager Kelly Crane warned bear activity has ramped up significantly, with the bruins s",
-    href: "https://www.ouraynews.com/2026/08/19/bear-activity-ramping/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Police admin assistant resigns, blasts city",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 20, 2026",
-    newsTopic: "public-safety",
-    copy: "The Ouray Police Department s administrative assistant has resigned, leaving the office with one remaining employee assigned to desk duty. The resignation comes just after the city s response to a civil lawsuit from Sgt. Matt Troxell, who still reports to work and is suing the city for damages. Frid",
-    href: "https://www.ouraynews.com/2026/08/19/police-admin-assistant-resigns-blasts-city/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Disaster relief tax moves closer to ballot",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 20, 2026",
-    newsTopic: "government",
-    copy: "A proposed countywide sales tax to address fires, floods and other natural disasters appears to have a clear path to the November ballot, while a potential use tax on construction materials to raise more money for Ouray County roads and bridges is off the table for now. That’s the takeaway after Cou",
-    href: "https://www.ouraynews.com/2026/08/19/disaster-relief-tax-moves-closer-ballot/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "County road superintendent arrested on suspicion of DUI",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 20, 2026",
-    newsTopic: "infrastructure",
-    copy: "Ouray County Road and Bridge Superintendent Ty Barger was placed on paid administrative leave Monday following a driving under the influence arrest in Montrose Aug. 14. Crew Chief Don Castle has been designated interim superintendent while the county conducts its own investigation into the report of",
-    href: "https://www.ouraynews.com/2026/08/19/county-road-superintendent-arrested-suspicion-dui/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Ouray won’t join fire authority",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 20, 2026",
-    newsTopic: "public-safety",
-    copy: "Council cites unanswered questions, concerns about consolidation A proposal to consolidate all of Ouray County’s fire departments and its emergency medical services into one organization absorbed another blow this week when the city of Ouray declined to join the group. The Ouray City Council was sch",
-    href: "https://www.ouraynews.com/2026/08/19/ouray-wont-join-fire-authority/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Looking Back",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 20, 2026",
-    newsTopic: "arts-culture",
-    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago August 18, 1966 In the background is the sound of classical Chinese music, gaily lighted lanterns strewn overhead dance in the slight breeze, the aroma of charcoal, sesame oil and a ble",
-    href: "https://www.ouraynews.com/2026/08/19/looking-back-20260820-0147-500205/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Chamber music fest returns to San Juans",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 20, 2026",
-    newsTopic: "arts-culture",
-    copy: "43rd annual weeklong event features familiar favorites, new violist World-renowned concert pianist Max Levinson and the Ulysses String Quartet return to Ouray County next week for the Ouray County Performing Arts Guild s 43rd annual San Juan Chamber Music Festival. The musicians are excited to retur",
-    href: "https://www.ouraynews.com/2026/08/19/chamber-music-fest-returns-san-juans-20260820-0148-009847/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Ouray County Fair 2026",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 20, 2026",
-    newsTopic: "community",
-    copy: "Top: Annie Perkovich poses for a portrait with her miniature Hereford steer, Hudson, who weighed 954 pounds. She won reserve champion market steer this year, and her brother, Mikey, won grand champion. Middle: Maverick Scott clouds the air in the fair barn with shine spray while grooming his market ",
-    href: "https://www.ouraynews.com/2026/08/19/ouray-county-fair-2026/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "County OKs flood construction contract",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 20, 2026",
-    newsTopic: "public-safety",
-    copy: "Ouray County commissioners awarded Haynes Excavation Inc. the contract for the Emergency Watershed Protection project at a special meeting Monday for certain areas below the Gold Mountain Fire burn scar at risk of debris flows. The county received three responses from seven requests for qualificatio",
-    href: "https://www.ouraynews.com/2026/08/19/county-oks-flood-construction-contract/?ta_paidstory",
     img: ""
   },
   {
@@ -1668,6 +1568,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "A promise made — and kept",
+    source: "Telluride Times",
+    date: "August 22, 2026",
+    firstSeen: "2026-08-22",
+    newsTopic: "education",
+    copy: "What started as one scholarship pledge in 2016 has grown into more than 50 SPARKy Latina Scholarships for students across Telluride, Norwood, Nucla, and Naturita. The all-volunteer program also runs a monthly club offering tutoring, college application help, and career workshops. Most recipients are first-generation college students.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_5070c140-1469-4aed-83b9-ef98089bd22f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/36/93639c91-ce6e-42d6-a201-074c175c4417/6a8805e0da70a.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Federal officials announce water cuts as Colorado River supplies continue to plunge",
     source: "Telluride Times",
@@ -3583,7 +3495,7 @@ const WILKINSON_EVENTS = [
   {
     title: "90s Movie Matinee: The Mighty Ducks",
     link: "https://telluridelibrary.libcal.com/event/15536192?hs=a",
-    description: "A library screening of the beloved 1992 hockey film *The Mighty Ducks*, part of a 90s Movie Matinee series at Wilkinson Public Library. The event takes place in the Program Room from 2:00 to 4:00 PM.",
+    description: "2:00 PM – 4:00 PM",
     pubDate: "2026-08-22T20:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -4661,7 +4573,7 @@ const OURAY_RIDGWAY_EVENTS = [
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53763633777595/huge/f0db83a6fd50288b1f61d1973f86e8eb366be160.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53629793138788/huge/5bbae7e3ec0d15b3e428cf9f3487751fe52758ee.jpg"
   },
   {
     title: "A Blue Birdie’s Tale - Ridgway State Park Summer Program Series",
@@ -5469,6 +5381,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/87e789cb56363301409b7496f25a25cdfd62ef58.jpg"
   },
   {
+    title: "COUSIN CURTIS",
+    link: "https://events.ourayridgwayevents.com/event/cousin-curtis",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    pubDate: "2026-10-02T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
     title: "Containment",
     link: "https://events.ourayridgwayevents.com/event/containment",
     description: "Containment is an exhibition of mixed-media clay sculptures and assemblage by Michelle Montague of Ridgway, Colorado. Through tactile forms, layered materials, and carefully constructed scenes, Montague explores themes of vulnerability, perspective, angst, and hope. ARTIST RECEPTION: FIRST FRIDAY, OCTOBER 2ND • 5–7 PM On Display: SEPTEMBER 29 – OCTOBER 30, 2026 View on site | Email this event",
@@ -5534,17 +5457,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Fellin Park",
     imageUrl: "https://localist-images.azureedge.net/photos/52364674023264/huge/f98fd45e49189eebaa22894d39eb7c241c2e49a9.jpg"
-  },
-  {
-    title: "COUSIN CURTIS",
-    link: "https://events.ourayridgwayevents.com/event/cousin-curtis",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
-    pubDate: "2026-10-03T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
     title: "The Ridgway 1k Rally thru the Alley 2026 ~ presented by Citizens State Bank",
@@ -5662,7 +5574,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Cancelled",
     link: "https://www.norwoodtown.com/2026-08-17-planning-and-zoning-commission-cancelled",
-    description: "The Town of Norwood's Planning and Zoning Commission meeting scheduled for this date has been cancelled. No session will be held.",
+    description: "",
     pubDate: "2026-08-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5673,7 +5585,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-08-24-senior-lunch",
-    description: "A community lunch gathering for seniors, hosted by the Town of Norwood. It takes place at midday and offers older residents an opportunity to share a meal and connect with one another.",
+    description: "",
     pubDate: "2026-08-24T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5684,7 +5596,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-08-31-senior-lunch",
-    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    description: "",
     pubDate: "2026-08-31T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5695,7 +5607,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5706,7 +5618,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-14-senior-lunch",
-    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    description: "",
     pubDate: "2026-09-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5717,7 +5629,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
+    description: "",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5728,7 +5640,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
+    description: "",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5739,7 +5651,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Veterans Day",
     link: "https://www.norwoodtown.com/2026-11-11-closed-for-veterans-day",
-    description: "The Town of Norwood will be closed in observance of Veterans Day. Municipal offices and services will be unavailable on this federal holiday honoring those who have served in the United States armed forces.",
+    description: "",
     pubDate: "2026-11-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",

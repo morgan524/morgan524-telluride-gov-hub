@@ -115,7 +115,7 @@
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_13_17_32_57.png",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "A library screening of the beloved 1992 hockey film *The Mighty Ducks*, part of a 90s Movie Matinee series at Wilkinson Public Library. The event takes place in the Program Room from 2:00 to 4:00 PM.",
+    "desc": "2:00 PM – 4:00 PM",
     "type": "Arts & Film"
   },
   {
@@ -434,7 +434,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A community lunch gathering for seniors, hosted by the Town of Norwood. It takes place at midday and offers older residents an opportunity to share a meal and connect with one another.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1277,7 +1277,7 @@
     "time": "1:30 PM",
     "location": "",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53763633777595/huge/f0db83a6fd50288b1f61d1973f86e8eb366be160.jpg",
+    "img": "https://localist-images.azureedge.net/photos/53629793138788/huge/5bbae7e3ec0d15b3e428cf9f3487751fe52758ee.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "The Ouray County Performing Arts Guild proudly presents the 43rd Annual San Juan Chamber MusicFest Festival Concert at the historic Wright Opera House. Acclaimed pianist Max Levinson joins the internationally celebrated Ulysses Quartet for…",
@@ -1488,7 +1488,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2578,7 +2578,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -3235,7 +3235,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -3370,6 +3370,19 @@
     "type": "Community"
   },
   {
+    "title": "COUSIN CURTIS",
+    "href": "https://events.ourayridgwayevents.com/event/cousin-curtis",
+    "date": "2026-10-02",
+    "time": "4:00 PM",
+    "location": "687 N Cora Street, Ridgway, CO 81432",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
+  },
+  {
     "title": "Containment",
     "href": "https://events.ourayridgwayevents.com/event/containment",
     "date": "2026-10-02",
@@ -3459,19 +3472,6 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "🎶 Ouray 150th Anniversary Concert 🎶 Join us for an unforgettable evening of live music as we celebrate 150 years of Ouray with a FREE community concert in the park! 📅 October 3, 2026 ⏰ 4–8 PM 📍 Fellin Park Headlining the celebration…",
-    "type": "Music"
-  },
-  {
-    "title": "COUSIN CURTIS",
-    "href": "https://events.ourayridgwayevents.com/event/cousin-curtis",
-    "date": "2026-10-03",
-    "time": "4:00 PM",
-    "location": "687 N Cora Street, Ridgway, CO 81432",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
     "type": "Music"
   },
   {
