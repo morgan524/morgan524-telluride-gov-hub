@@ -226,13 +226,13 @@ function restore(){
 const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 function inline(s){
   s = esc(s);
-  s = s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2" target="_blank" style="color:#21443c;text-decoration:underline;">$1</a>');
+  s = s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2" target="_blank" style="color:#3a72ab;text-decoration:underline;">$1</a>');
   s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
   s = s.replace(/(^|[^*])\*([^*]+)\*/g, "$1<em>$2</em>");
   s = s.replace(/—/g,"&mdash;").replace(/'/g,"&rsquo;");
   return s;
 }
-const TD_BODY = 'padding:10px 34px 8px;font-family:Georgia,serif;font-size:18px;line-height:1.7;color:#2b2b2b;';
+const TD_BODY = 'padding:3px 34px 3px;font-family:Georgia,serif;font-size:18px;line-height:1.55;color:#2b2b2b;';
 const row = inner => '<tr><td style="'+TD_BODY+'">'+inner+'</td></tr>';
 
 function mdToEmail(md, meta){
@@ -242,7 +242,7 @@ function mdToEmail(md, meta){
 
   const flush = () => {
     if(!para.length) return;
-    out.push(row('<p style="margin:0 0 16px;">'+inline(para.join(" "))+'</p>'));
+    out.push(row('<p style="margin:0;">'+inline(para.join(" "))+'</p>'));
     para = [];
   };
 
@@ -294,7 +294,7 @@ function mdToEmail(md, meta){
     // section heading
     if(/^##\s+/.test(L)){
       flush(); i++;
-      out.push('<tr><td style="padding:16px 34px 2px;font-family:Georgia,serif;"><div style="font-size:21px;font-weight:700;color:#1c1c1c;">'+inline(L.replace(/^##\s+/,""))+'</div></td></tr>');
+      out.push('<tr><td style="padding:16px 34px 8px;font-family:Georgia,serif;"><div style="font-size:21px;font-weight:700;color:#1c1c1c;">'+inline(L.replace(/^##\s+/,""))+'</div></td></tr>');
       continue;
     }
 
