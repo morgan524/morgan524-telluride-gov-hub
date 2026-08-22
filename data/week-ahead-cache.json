@@ -1,26 +1,26 @@
 {
-  "hash": "4fdba20ba2ea018f828bb0c910fd1975299780e7",
-  "lede": "The school board votes Monday on a flood-damage budget appropriation — real money moving in response to a summer that hit the 5th grade pod, the high school cafeteria, and the Palm Theatre complex — and that's the sharpest decision of a busy week. The Ethics Commission takes up its Code of Conduct recommendation for Town Council on Tuesday, the Hospital District board discusses its Two Site Model for the new facility on Wednesday, and Mountain Village's HOA board moves to form a Workforce Housing Committee and vote on updated policies.",
+  "hash": "746a77272c17148043f8dc86bad56e2fdfdcba24",
+  "lede": "The school board votes Monday on a flood-damage budget appropriation for FY 2026-27 — real money being shifted to cover what the San Miguel River did to TIS, TMHS, and the Palm Theatre complex this summer. Alongside that, the Ethics Commission takes up a formal Code of Conduct recommendation for Town officials on Tuesday, and the Telluride Hospital District board considers possible action on a Two Site Model that would define what gets built and where for the new medical facility.",
   "notable": [
     {
       "id": 3,
-      "stake": "Board votes on flood-related budget appropriation for FY 2026-27."
+      "stake": "Board votes to adjust district budget to cover summer flood damage costs."
     },
     {
       "id": 2,
-      "stake": "Commission recommends whether to establish a formal Code of Conduct for town officials."
+      "stake": "Commission recommends whether Town officials get a binding Code of Conduct."
     },
     {
       "id": 8,
-      "stake": "Board may act on Two Site Model shaping what gets built and where."
-    },
-    {
-      "id": 10,
-      "stake": "Board votes on workforce housing committee formation and updated association policies."
+      "stake": "Board may act on Two Site Model shaping the new hospital's scope and location."
     },
     {
       "id": 4,
-      "stake": "County weighs CCAP funding cuts and their budget impact on child care access."
+      "stake": "CCAP childcare funding shortfall could affect county Human Services budget."
+    },
+    {
+      "id": 10,
+      "stake": "TMVOA votes on workforce housing committee and updated association policies."
     }
   ]
 }

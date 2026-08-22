@@ -774,6 +774,76 @@ const MEETING_PREVIEWS = {
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
+    title: "2026 Chamber Meeting, December",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
+    img: ""
+  },
+  {
+    title: "Noel Night",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 4, 2026",
+    newsTopic: "community",
+    copy: "Community shopping event and celebration.",
+    href: "https://norwoodcolorado.com/event/noel-night-3/",
+    img: ""
+  },
+  {
+    title: "West End Parade of Lights & Elfin Eve",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "Holiday parade and festival.",
+    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, November",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "November 10, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, October",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "October 13, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
+    img: ""
+  },
+  {
+    title: "Pioneer Day",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 26, 2026",
+    newsTopic: "community",
+    copy: "Celebration of local history and pioneers.",
+    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, September",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
+    img: ""
+  },
+  {
     title: "Best feathers forward",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
@@ -790,7 +860,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "recreation",
     copy: "State wildlife officials killed a young, female bear that entered a Ridgway home last weekend after days of conflicts and at least one incident with the bear killing chickens. Colorado Parks and Wildlife District Manager Kelly Crane warned bear activity has ramped up significantly, with the bruins s",
-    href: "https://www.ouraynews.com/2026/08/19/bear-activity-ramping/",
+    href: "https://www.ouraynews.com/2026/08/19/bear-activity-ramping/?ta_paidstory",
     img: ""
   },
   {
@@ -800,7 +870,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "public-safety",
     copy: "The Ouray Police Department s administrative assistant has resigned, leaving the office with one remaining employee assigned to desk duty. The resignation comes just after the city s response to a civil lawsuit from Sgt. Matt Troxell, who still reports to work and is suing the city for damages. Frid",
-    href: "https://www.ouraynews.com/2026/08/19/police-admin-assistant-resigns-blasts-city/",
+    href: "https://www.ouraynews.com/2026/08/19/police-admin-assistant-resigns-blasts-city/?ta_paidstory",
     img: ""
   },
   {
@@ -810,7 +880,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "government",
     copy: "A proposed countywide sales tax to address fires, floods and other natural disasters appears to have a clear path to the November ballot, while a potential use tax on construction materials to raise more money for Ouray County roads and bridges is off the table for now. That’s the takeaway after Cou",
-    href: "https://www.ouraynews.com/2026/08/19/disaster-relief-tax-moves-closer-ballot/",
+    href: "https://www.ouraynews.com/2026/08/19/disaster-relief-tax-moves-closer-ballot/?ta_paidstory",
     img: ""
   },
   {
@@ -834,33 +904,13 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "Looking Back",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 20, 2026",
-    newsTopic: "arts-culture",
-    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago August 18, 1966 In the background is the sound of classical Chinese music, gaily lighted lanterns strewn overhead dance in the slight breeze, the aroma of charcoal, sesame oil and a ble",
-    href: "https://www.ouraynews.com/2026/08/19/looking-back-20260820-0147-500205/",
-    img: ""
-  },
-  {
     title: "Chamber music fest returns to San Juans",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "August 20, 2026",
     newsTopic: "arts-culture",
-    copy: "43rd annual weeklong event features familiar favorites, new violist World-renowned concert pianist Max Levinson and the Ulysses String Quartet return to Ouray County next week for the Ouray County Performing Arts Guild s 43rd annual San Juan Chamber Music Festival. The musicians are excited to retur",
-    href: "https://www.ouraynews.com/2026/08/19/chamber-music-fest-returns-san-juans-20260820-0148-009847/",
-    img: ""
-  },
-  {
-    title: "Ouray County Fair 2026",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 20, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.ouraynews.com/2026/08/19/ouray-county-fair-2026/",
+    copy: "World-renowned concert pianist Max Levinson and the Ulysses String Quartet return to Ouray County next week for the Ouray County Performing Arts Guild s 43rd annual San Juan Chamber Music Festival. The musicians are excited to return to perform in one of their favorite venues. Though they travel aro",
+    href: "https://www.ouraynews.com/2026/08/19/chamber-music-fest-returns-san-juans-20260820-0148-009847/?ta_paidstory",
     img: ""
   },
   {
@@ -871,6 +921,26 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "public-safety",
     copy: "Ouray County commissioners awarded Haynes Excavation Inc. the contract for the Emergency Watershed Protection project at a special meeting Monday for certain areas below the Gold Mountain Fire burn scar at risk of debris flows. The county received three responses from seven requests for qualificatio",
     href: "https://www.ouraynews.com/2026/08/19/county-oks-flood-construction-contract/",
+    img: ""
+  },
+  {
+    title: "Ridgway student proposes ‘free box’ for donations",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "education",
+    copy: "A presentation about an idea for a “free box” by a Ridgway National Honor Society student at the Ridgway Town Council meeting Aug. 12 led to lengthy discussion and a $750 contribution to the project, with conditions. Ariel Hessler, a junior at Ridgway Secondary School, proposed the idea of the free ",
+    href: "https://www.ouraynews.com/2026/08/19/ridgway-student-proposes-free-box-donations/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Debra Lynn Todd",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "community",
+    copy: "November 5, 1953 – August 15, 2026 Debra Lynn Todd, 72, of Ouray, Colorado, passed away on August 15, 2026. She was born November 5, 1953, in Hutchinson, Kansas. She was the daughter of Chester and Kathleen Todd, who preceded her in death. Survivors include a sister, Jennene Kay Todd Mashburn, niece",
+    href: "https://www.ouraynews.com/2026/08/19/debra-lynn-todd/",
     img: ""
   },
   {
@@ -911,6 +981,16 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "We are glad that you will be joining our Fall Virtual Study. Here are the details so that you can get the information on your calendar and order your book. Please make note from below that we have a NEW ZOOM LINK. Contact us with quest...",
     href: "https://stpatrickstelluride.com/2026/parish-news/fall-tuesday-virtual-information/",
+    img: ""
+  },
+  {
+    title: "Fall Foliage Tour Contest 🍂",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 12, 2026",
+    newsTopic: "community",
+    copy: "Norwood s putting on its best autumn colors — time to grab your camera and go see them all. Here s the deal: Hit all 9 spots around town, snap 2 photos [ ]",
+    href: "https://norwoodcolorado.com/event/fall-foliage-tour-contest-%f0%9f%8d%82/",
     img: ""
   },
   {
@@ -2975,16 +3055,6 @@ const TELLURIDE_FARMERS_MARKET = (function () {
 // out-of-season entries simply don't render until they approach.
 const TELLURIDE_SCIENCE_EVENTS = [
   {
-    title: "Noche de Luz (Night of Light)",
-    date: "2026-08-21",
-    time: "6:30 PM – 10:00 PM",
-    location: "Telluride Innovation Center, Telluride",
-    description: "NOCHE DE LUZ: Comunidad en Flor A Vibrant Celebration of Connection, Culture and a Community in Bloom, presented by Community Banks of Colorado A fundraiser for the Multicultural Advocacy Programs at Thrive Community Health Network, in partnership with Raices sin Fronteras. Join us Friday, August 21st at 6:30pm to celebrate our \"Community in Bloom!\" The event will feature tastings from diverse local restaurants and caterers, cocktails and mocktails, artist demonstrations and live music from Denver-based \"Chicano funk\" band Los Mocochetes! Your Ticket Includes: – Enjoy appetizers, dinner and desert with tastings from local, immigrant-owned restaurants and catering businesses – 1 drink ticket for the bar serving signature cocktails and mocktails, beer and wine (additional drinks available for purchase) – Live Artist Demonstrations and Traditional Artisan Displays – Live Music! …",
-    link: "https://telluridescience.org/event/noche-de-luz-night-of-light/",
-    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/07/Poster-without-Sponsor-block.jpg",
-    sourceLabel: "Telluride Science"
-  },
-  {
     title: "Earth's Most Resilient Life, Our Greatest Hope: Exploring Unusual Microbes to Solve Humanity’s Biggest Challenges",
     date: "2026-08-25",
     time: "6:30 PM – 7:30 PM",
@@ -3057,17 +3127,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Bilingual Balance in Motion",
-    link: "https://koto.org/event/bilingual-balance-in-motion/2026-08-22/",
-    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
-    pubDate: "2026-08-22T10:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
-  },
   {
     title: "People's March",
     link: "https://koto.org/event/peoples-march/",
