@@ -446,6 +446,14 @@ const DEEP_DIVE_UPDATES = [
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-08-22",
+    title: "Mountain Village weighing a workforce housing committee",
+    body: "The TMVOA Board is looking at forming a Workforce Housing Committee. Up here, that kind of body can mean real policy momentum — or it can mean a long runway before anything changes on the ground. People who think Mountain Village isn't moving fast enough on housing will see a new committee as a start. People skeptical of process will wonder whether another committee is action or a substitute for it. The board is also taking up a grant request for the TMV Ice Pad and updates on a Pond Improvement Plan — but it's the housing committee question that tends to split a room. So: does a new committee move the needle, or not?",
+    choices: ["Committees get things done", "It's just more process", "Depends on who's on it", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-08-21",
     title: "A new committee for rental housing — what will it actually do?",
     body: "Telluride's new Resident Advisory Committee holds its inaugural meeting this week. The first order of business is organizing itself — officers, procedures, purpose. But the substantive item is a review of the Town's Employee Rental Housing Policies.\n\nSome will see this as a real seat at the table: residents with skin in the game finally helping shape how workforce housing gets managed. Others will wonder whether an advisory body with no binding authority changes much at all.\n\nSo — is a resident advisory committee the right lever for housing policy up here, or is it window dressing?",
@@ -676,14 +684,6 @@ const DAILY_QUESTIONS = [
     choices: ["More acceptable — town can control it", "Less acceptable — protect that edge", "Depends on what gets built", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-07-23",
-    title: "Who counts as a resident when a kid has two homes?",
-    body: "The Telluride Housing Authority is taking up a genuinely knotty question: what happens to deed-restricted housing rules when a household doesn't fit the standard definition — specifically, dependents of multiple custodial parents. The board has set aside 40 minutes for a proposed policy statement on primary residency in those cases, which signals it's not a clean fix.\n\nSome will say the rules need to flex for real family situations. Others will say any loosening of residency definitions creates openings that undermine deed restrictions for everyone. The waitlist pressure isn't getting lighter.\n\nHow strictly should primary residency be defined in deed-restricted housing?",
-    choices: ["Strict definitions protect the system", "Real families don't fit neat rules", "Depends on the case", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -850,7 +850,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "community",
     copy: "",
-    href: "https://www.ouraynews.com/2026/08/19/best-feathers-forward/",
+    href: "https://www.ouraynews.com/2026/08/19/best-feathers-forward/?ta_paidstory",
     img: ""
   },
   {
@@ -860,7 +860,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "recreation",
     copy: "State wildlife officials killed a young, female bear that entered a Ridgway home last weekend after days of conflicts and at least one incident with the bear killing chickens. Colorado Parks and Wildlife District Manager Kelly Crane warned bear activity has ramped up significantly, with the bruins s",
-    href: "https://www.ouraynews.com/2026/08/19/bear-activity-ramping/",
+    href: "https://www.ouraynews.com/2026/08/19/bear-activity-ramping/?ta_paidstory",
     img: ""
   },
   {
@@ -870,7 +870,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "public-safety",
     copy: "The Ouray Police Department s administrative assistant has resigned, leaving the office with one remaining employee assigned to desk duty. The resignation comes just after the city s response to a civil lawsuit from Sgt. Matt Troxell, who still reports to work and is suing the city for damages. Frid",
-    href: "https://www.ouraynews.com/2026/08/19/police-admin-assistant-resigns-blasts-city/",
+    href: "https://www.ouraynews.com/2026/08/19/police-admin-assistant-resigns-blasts-city/?ta_paidstory",
     img: ""
   },
   {
@@ -880,7 +880,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "government",
     copy: "A proposed countywide sales tax to address fires, floods and other natural disasters appears to have a clear path to the November ballot, while a potential use tax on construction materials to raise more money for Ouray County roads and bridges is off the table for now. That’s the takeaway after Cou",
-    href: "https://www.ouraynews.com/2026/08/19/disaster-relief-tax-moves-closer-ballot/",
+    href: "https://www.ouraynews.com/2026/08/19/disaster-relief-tax-moves-closer-ballot/?ta_paidstory",
     img: ""
   },
   {
@@ -890,7 +890,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "infrastructure",
     copy: "Ouray County Road and Bridge Superintendent Ty Barger was placed on paid administrative leave Monday following a driving under the influence arrest in Montrose Aug. 14. Crew Chief Don Castle has been designated interim superintendent while the county conducts its own investigation into the report of",
-    href: "https://www.ouraynews.com/2026/08/19/county-road-superintendent-arrested-suspicion-dui/",
+    href: "https://www.ouraynews.com/2026/08/19/county-road-superintendent-arrested-suspicion-dui/?ta_paidstory",
     img: ""
   },
   {
@@ -900,7 +900,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "public-safety",
     copy: "Council cites unanswered questions, concerns about consolidation A proposal to consolidate all of Ouray County’s fire departments and its emergency medical services into one organization absorbed another blow this week when the city of Ouray declined to join the group. The Ouray City Council was sch",
-    href: "https://www.ouraynews.com/2026/08/19/ouray-wont-join-fire-authority/",
+    href: "https://www.ouraynews.com/2026/08/19/ouray-wont-join-fire-authority/?ta_paidstory",
     img: ""
   },
   {
@@ -910,7 +910,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "arts-culture",
     copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago August 18, 1966 In the background is the sound of classical Chinese music, gaily lighted lanterns strewn overhead dance in the slight breeze, the aroma of charcoal, sesame oil and a ble",
-    href: "https://www.ouraynews.com/2026/08/19/looking-back-20260820-0147-500205/",
+    href: "https://www.ouraynews.com/2026/08/19/looking-back-20260820-0147-500205/?ta_paidstory",
     img: ""
   },
   {
@@ -920,7 +920,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "arts-culture",
     copy: "43rd annual weeklong event features familiar favorites, new violist World-renowned concert pianist Max Levinson and the Ulysses String Quartet return to Ouray County next week for the Ouray County Performing Arts Guild s 43rd annual San Juan Chamber Music Festival. The musicians are excited to retur",
-    href: "https://www.ouraynews.com/2026/08/19/chamber-music-fest-returns-san-juans-20260820-0148-009847/",
+    href: "https://www.ouraynews.com/2026/08/19/chamber-music-fest-returns-san-juans-20260820-0148-009847/?ta_paidstory",
     img: ""
   },
   {
@@ -929,8 +929,8 @@ const REGIONAL_NEWS_ARTICLES = [
     sourceKey: "ouray-plaindealer",
     date: "August 20, 2026",
     newsTopic: "community",
-    copy: "",
-    href: "https://www.ouraynews.com/2026/08/19/ouray-county-fair-2026/",
+    copy: "Top: Annie Perkovich poses for a portrait with her miniature Hereford steer, Hudson, who weighed 954 pounds. She won reserve champion market steer this year, and her brother, Mikey, won grand champion. Middle: Maverick Scott clouds the air in the fair barn with shine spray while grooming his market ",
+    href: "https://www.ouraynews.com/2026/08/19/ouray-county-fair-2026/?ta_paidstory",
     img: ""
   },
   {
@@ -940,7 +940,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "public-safety",
     copy: "Ouray County commissioners awarded Haynes Excavation Inc. the contract for the Emergency Watershed Protection project at a special meeting Monday for certain areas below the Gold Mountain Fire burn scar at risk of debris flows. The county received three responses from seven requests for qualificatio",
-    href: "https://www.ouraynews.com/2026/08/19/county-oks-flood-construction-contract/",
+    href: "https://www.ouraynews.com/2026/08/19/county-oks-flood-construction-contract/?ta_paidstory",
     img: ""
   },
   {
@@ -3105,39 +3105,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "KOTO Guest DJ Day!",
-    link: "https://koto.org/event/koto-guest-dj-day/",
-    description: "This Friday, August 21st, KOTO once again opens our turntables & microphones to the community for Guest DJ Day! Celebrity DJs from around the region are stepping up to the mic, spinning the tracks they love and helping raise funds to keep this station and community Stayin' Alive! Tune in all day to hear from your favorite local voices, and feel free to bring a little disco energy with you.",
-    pubDate: "2026-08-21T00:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/KOTO-s26-Guest-DJ-insta-1080x1350-1.jpg"
-  },
-  {
-    title: "Noche de Luz (Night of Light)",
-    link: "https://koto.org/event/noche-de-luz-night-of-light/",
-    description: "NOCHE DE LUZ: Comunidad en Flor A Vibrant Celebration of Connection, Culture and a Community in Bloom Join us Friday, August 21st at 6:30pm at the Telluride Innovation Center to celebrate our \"Community in Bloom!\" The event will feature tastings from local immigrant owned restaurants, cocktails and mocktails, artist demonstrations and live music from Denver-based Chicano funk band Los Mocochetes! Tickets and Sponsorships include; – Enjoy appetizers, dinner and desert with tastings from local, immigrant-owned restaurants and catering businesses – 1 drink ticket for the bar serving signature cocktails and mocktails, beer and wine (additional drinks available for purchase) – Live Artist Demonstrations and Traditional Artisan Displays – Live Music! Performances from local DJs and a live 5-piece latin funk band to close out the night – Silent Auction &#8230;.. and more! …",
-    pubDate: "2026-08-21T18:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Science &#038; Innovation Center, TELLURIDE",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/NDLBanner.png"
-  },
-  {
-    title: "BURLESQUE BUFFET!",
-    link: "https://koto.org/event/burlesque-buffet/2026-08-21/",
-    description: "Telluride Theatre's HOUSE OF SHIMMY SHAKE returns for a mid-summer twist on BURLESQUE WEEK, with a delicious AND nutritious night of food-themed theatrics. Join us for live music, comedy, and beautiful locals at the Sheridan Opera House. VIP Table Seats enjoy a delicious Sampler Tasting Menu, prepared by local chef Graeme Charles (Telluride Sleighs & Wagons), to accompany the performance. Don't miss out on this off-the-walls celebration of femininity, the weird, and the wild.",
-    pubDate: "2026-08-21T20:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Sheridan Opera House, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Bilingual Balance in Motion",
     link: "https://koto.org/event/bilingual-balance-in-motion/2026-08-22/",
     description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
@@ -3603,15 +3570,26 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Pooh Storytime / Hora de Cuentos de Winnie Pooh",
-    link: "https://telluridelibrary.libcal.com/event/17285962?hs=a",
-    description: "10:30 AM – 11:30 AM",
-    pubDate: "2026-08-21T16:30:00.000Z",
+    title: "Zumba with Marlen",
+    link: "https://telluridelibrary.libcal.com/event/17469953?hs=a",
+    description: "12:00 PM – 1:00 PM · Ditch the workout and join the party! Zumba&reg; is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. &iexcl;Olvida el entrenamiento y &uacute;nete a la fiesta! Zumba&reg; es una clase de fitness de baile de alta energ&iacute;a que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calor&iacute;as. …",
+    pubDate: "2026-08-22T18:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_11_13_00.png"
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_11_17_14.jpg"
+  },
+  {
+    title: "90s Movie Matinee: The Mighty Ducks",
+    link: "https://telluridelibrary.libcal.com/event/15536192?hs=a",
+    description: "A library screening of the beloved 1992 hockey film *The Mighty Ducks*, part of a 90s Movie Matinee series at Wilkinson Public Library. The event takes place in the Program Room from 2:00 to 4:00 PM.",
+    pubDate: "2026-08-22T20:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_13_17_32_57.png"
   }
 ];
 
@@ -4205,7 +4183,7 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Fall Registration is NOW OPEN",
     link: "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
     description: "Whether your child dreams of dancing across the stage, flying through the air on silks, mastering hip hop, ballet, jazz, tap, acro, or finding a place where they truly belong—we have a class for them. **Celebrating 19 Years of Weehawken Dance!** Join hundreds of students from across the region in a program that builds confidence, friendships, creativity, community and lifelong memories. Weehawken offers Dance (ballet, tap, jazz, lyrical, west african & more!) Aerial (silks & lyra) Acro Performance Opportunities -- all youth students will perform in THE NUTCRACKER in December in Montrose! Ages 3 through Adult Montrose • Ridgway • Ouray Don't wait—many classes fill quickly! **Registration is now open! **dance.weehawkenarts.org** View on site | Email this event",
-    pubDate: "2026-08-21T06:00:00.000Z",
+    pubDate: "2026-08-22T06:00:00.000Z",
     endDate: "2026-08-23",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4217,128 +4195,13 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Highgraders Holiday & Mining History",
     link: "https://events.ourayridgwayevents.com/event/highgraders-holiday",
     description: "Watch the Hardrock mining competition and learn about the history of mining in Ouray. There will be a full bar, and food vendors. Miner’s Heritage Park is on the southwest corner of Fellin Park. Friday, Aug. 21 | Fellin Park Horseshoe Tournament (open to the public) Registration from 2-3 PM $20/team Saturday, Aug. 22 | Miner’s Heritage Park 9-10 AM - Registration 10 AM - Hand Mucking 11 AM - Spike Driving 12 PM - Single Man Drilling 3 PM - Single Jack Sunday, Aug. 23 | Miner’s Heritage Park 9-10 AM - Registration 10 AM - Team Drilling 12 PM - Machine Mucking 2 PM - Double Jack Awards Ceremony *All times are approximate and subject to change. View on site | Email this event",
-    pubDate: "2026-08-21T06:00:00.000Z",
+    pubDate: "2026-08-22T06:00:00.000Z",
     endDate: "2026-08-23",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Miner's Heritage Park",
     imageUrl: "https://localist-images.azureedge.net/photos/53693434559707/huge/f6d4e9925c9d72212aaa732c6f83114b2783c1de.jpg"
-  },
-  {
-    title: "On Display: PAWS for Art Gallery Asian-themed show",
-    link: "https://events.ourayridgwayevents.com/event/paws-for-art-gallery-asian-themed-show",
-    description: "Our gallery across the parking lot from the Second Chance Thriftshop is featuring an Asian-themed art show through August. Stop by to see the variety and quality of our offerings! View on site | Email this event",
-    pubDate: "2026-08-21T16:00:00.000Z",
-    endDate: "2026-08-31",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Second Chance PAWS for Art Gallery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53621678601741/huge/19c8fd1126bf67093819de3139e06e71a7d0cf8d.jpg"
-  },
-  {
-    title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
-    link: "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
-    description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
-    pubDate: "2026-08-21T16:00:00.000Z",
-    endDate: "2026-08-28",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The 610 Arts Collective",
-    imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
-  },
-  {
-    title: "Ridgway Farmers Market",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
-    description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here. View on site | Email this event",
-    pubDate: "2026-08-21T16:00:00.000Z",
-    endDate: "2026-10-16",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Hartwell Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
-  },
-  {
-    title: "Horsin' Around- Storytime with a Mini Horse",
-    link: "https://events.ourayridgwayevents.com/event/horsin-around-storytime-with-a-mini-horse",
-    description: "Join us at the Ouray Library for a Mini Horse Dragon-Themed Storytime! This will start at 11:00 am and go till around 11:45 am. Ages: Elementary View on site | Email this event",
-    pubDate: "2026-08-21T17:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Public Library",
-    imageUrl: "https://localist-images.azureedge.net/photos/53692409030601/huge/d4393446b79aa70e307aa9a1dbe54b3cd5832a05.jpg"
-  },
-  {
-    title: "True Grit Historic Walking Tours",
-    link: "https://events.ourayridgwayevents.com/event/true-grit-tours",
-    description: "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen in the movie are still in place. John Wayne won his only Oscar for his portrail of Marshal Rooster Cogburn. Offered every Friday at 3 pm in June, July and August. Additional tours are offered at 10am Mondays and 3 pm Wednesdays in July. Meet at the Hartwell Park gazebo 15 minutes before tours begin. FREE. Tours last about an hour. In 2022, this tour was recognized nationally when it was named the reader's choice for best historic town tour by True West magazine. For more information see the website: TrueGritTours.org or on facebook: True Grit Tours. …",
-    pubDate: "2026-08-21T21:00:00.000Z",
-    endDate: "2026-08-28",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Hartwell Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/52285883190282/huge/99283c09e34ca5aeabd7006cca2ba5b2b28899c3.jpg"
-  },
-  {
-    title: "RIDGWAY WRECKING CREW",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-wrecking-crew-9105",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
-    pubDate: "2026-08-21T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "The Flight of the Pollinators - Ridgway State Park Summer Program Series",
-    link: "https://events.ourayridgwayevents.com/event/the-flight-of-the-pollinators-ridgway-state-park-summer-program-series",
-    description: "Bees are the quiet champions of the Uncompahgre Valley, keeping our wild high-desert valleys blooming and our local backyard gardens thriving. In this fun, eye-opening evening presentation, you will discover the incredible diversity of Colorado's native bees—from chubby wild bumblebees to solitary miners—and learn the complex social secrets of the hive. Whether you are a backyard gardener looking to boost your summer blooms or just a nature lover curious about the life of a pollinator, you will walk away with deeper understanding of these vital insects. View on site | Email this event",
-    pubDate: "2026-08-22T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway State Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/53594904289337/huge/5dcda519655d9c8463440969864239b2fdd45d31.jpg"
-  },
-  {
-    title: "the Fabulous Blues Tones - Live @ Floating Lotus Brewery",
-    link: "https://events.ourayridgwayevents.com/event/the-fabulous-blues-tones-live-floating-lotus-brewery",
-    description: "If you like blues music with a kick, you will love the Fabulous Blues Tones. With Greg Jacobs and Tony Kovacic out front on vocals and guitars, the band comes to the stage with a whole slew of house-rocking material—some timeless standards and some pulled from deep within the blues vault. On drums and bass, Tim Brennan and Dave Underwood keep the pocket tight and the groove going strong all night long. This is authentic, hard-driving blues played by four musicians who dearly love it. Come out and get your mojo working. View on site | Email this event",
-    pubDate: "2026-08-22T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53604223147724/huge/c985d5189882648846e08f8f047b93c0a26dab4a.jpg"
-  },
-  {
-    title: "The Courtyard at 610 Presents: Flagship Romance + The Rough & Tumble at The Courtyard",
-    link: "https://events.ourayridgwayevents.com/event/the-courtyard-at-610-presents-flagship-romance-the-rough-tumble",
-    description: "Gates: 6:30 || Show: 7:00 || $25 advance / $30 – day of show General Admission Seating || Limited Bar || The Courtyard at 610 is a unique little venue behind our gallery space, the 610 Arts Collective, on Clinton St. The entrance is through the alleyway between N Cora St. and N Laura St behind the gallery and The Sherbino Theater. TWO DUOS ON TOUR TOGETHER Rough Romance U.S. Tour 2026 unites Flagship Romance and The Rough & Tumble for a six-month cross-country run of high-energy, harmony-soaked, heart-forward shows. Expect laughter, lump-in-your-throat moments, and a dynamic co-headlining format that turns every venue into a listening room you’ll never forget. Flagship Romance: Flagship Romance is an unforgettable alternative folk duo known for breathtaking vocal harmonies, inspired songwriting, and a dynamic live show that leaves audiences feeling like they just made two new best friends. …",
-    pubDate: "2026-08-22T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "610",
-    imageUrl: "https://localist-images.azureedge.net/photos/52994270870445/huge/daf9e9efd8da0f386a5f5b85b8847791c2588a2f.jpg"
-  },
-  {
-    title: "Steps Tavern Presents Karaoke Night",
-    link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
-    description: "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM Every Friday Night View on site | Email this event",
-    pubDate: "2026-08-22T02:00:00.000Z",
-    endDate: "2026-09-26",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "STEPS TAVERN",
-    imageUrl: "https://localist-images.azureedge.net/photos/53142698527493/huge/db3a6ef58a79b18eea8c70a4d583bbf3d9498404.jpg"
   },
   {
     title: "Bats, Our Friends in the Dark - Ridgway State Park Summer Program Series",
@@ -4362,6 +4225,30 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Fellin Park",
     imageUrl: "https://localist-images.azureedge.net/photos/53233830352657/huge/0d1cbbdf672690b660591a1d6fa1c311b49b04ef.jpg"
+  },
+  {
+    title: "On Display: PAWS for Art Gallery Asian-themed show",
+    link: "https://events.ourayridgwayevents.com/event/paws-for-art-gallery-asian-themed-show",
+    description: "Our gallery across the parking lot from the Second Chance Thriftshop is featuring an Asian-themed art show through August. Stop by to see the variety and quality of our offerings! View on site | Email this event",
+    pubDate: "2026-08-22T16:00:00.000Z",
+    endDate: "2026-08-31",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Second Chance PAWS for Art Gallery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53621678601741/huge/19c8fd1126bf67093819de3139e06e71a7d0cf8d.jpg"
+  },
+  {
+    title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
+    link: "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
+    description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
+    pubDate: "2026-08-22T18:00:00.000Z",
+    endDate: "2026-08-28",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The 610 Arts Collective",
+    imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
   },
   {
     title: "Ouray Day",
@@ -4675,6 +4562,29 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53604234896494/huge/7d3a3f2cb3d8a141dbf964c56c072834ed01eb67.jpg"
   },
   {
+    title: "Ridgway Farmers Market",
+    link: "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
+    description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here. View on site | Email this event",
+    pubDate: "2026-08-28T16:00:00.000Z",
+    endDate: "2026-10-16",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Hartwell Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
+  },
+  {
+    title: "True Grit Historic Walking Tours",
+    link: "https://events.ourayridgwayevents.com/event/true-grit-tours",
+    description: "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen in the movie are still in place. John Wayne won his only Oscar for his portrail of Marshal Rooster Cogburn. Offered every Friday at 3 pm in June, July and August. Additional tours are offered at 10am Mondays and 3 pm Wednesdays in July. Meet at the Hartwell Park gazebo 15 minutes before tours begin. FREE. Tours last about an hour. In 2022, this tour was recognized nationally when it was named the reader's choice for best historic town tour by True West magazine. For more information see the website: TrueGritTours.org or on facebook: True Grit Tours. …",
+    pubDate: "2026-08-28T21:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Hartwell Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/52285883190282/huge/99283c09e34ca5aeabd7006cca2ba5b2b28899c3.jpg"
+  },
+  {
     title: "OLD MAN POLLY",
     link: "https://events.ourayridgwayevents.com/event/old-man-polly-4070",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
@@ -4731,9 +4641,21 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53595153401195/huge/21d02df3239c35fcac02e56bef6792ae2e868513.jpg"
   },
   {
+    title: "Steps Tavern Presents Karaoke Night",
+    link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
+    description: "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM Every Friday Night View on site | Email this event",
+    pubDate: "2026-08-29T02:00:00.000Z",
+    endDate: "2026-09-26",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "STEPS TAVERN",
+    imageUrl: "https://localist-images.azureedge.net/photos/53142698527493/huge/db3a6ef58a79b18eea8c70a4d583bbf3d9498404.jpg"
+  },
+  {
     title: "San Juan Chamber MusicFest Festival Concert",
     link: "https://events.ourayridgwayevents.com/event/san-juan-chamber-musicfest-festival-concert",
-    description: "The Ouray County Performing Arts Guild proudly presents the 43rd Annual San Juan Chamber MusicFest Festival Concert at the historic Wright Opera House. Acclaimed pianist Max Levinson joins the internationally celebrated Ulysses Quartet for an unforgettable evening of chamber music, showcasing masterworks performed by some of today's most accomplished classical musicians. Following the concert, guests are invited to continue the evening with a reception in the Wright Tavern, offering an opportunity to meet fellow music lovers and celebrate another remarkable season of Chamber MusicFest in the San Juans. Tickets available through the Ouray County Performing Arts Guild. Meet the SJCMF musicians >> See the complete festival lineup>> View on site | Email this event",
+    description: "The Ouray County Performing Arts Guild proudly presents the 43rd Annual San Juan Chamber MusicFest Festival Concert at the historic Wright Opera House. Acclaimed pianist Max Levinson joins the internationally celebrated Ulysses Quartet for an unforgettable evening of chamber music, showcasing masterworks performed by some of today's most accomplished classical musicians. Following the concert, guests are invited to continue the evening with a reception in the Wright Tavern, offering an opportunity to meet fellow music lovers and celebrate another remarkable season of Chamber MusicFest in the San Juans. See the complete festival lineup>> View on site | Email this event",
     pubDate: "2026-08-29T19:30:16.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4755,7 +4677,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "DARRELL SCOTT - Live at The Sherbino",
     link: "https://events.ourayridgwayevents.com/event/darrell-scott-live-at-the-sherbino",
-    description: "About Darrell Scott Darrell Scott is an acclaimed singer, songwriter, and multi-instrumentalist widely regarded as one of the most respected voices in contemporary American roots music. A masterful storyteller with deep roots in country, bluegrass, folk, and Americana, Scott delivers powerful performances where his expressive voice, heartfelt songwriting, and exceptional musicianship takes center stage. Scott’s debut album, Aloha from Nashville, introduced enduring songs that became modern standards, including “You’ll Never Leave Harlan Alive” and “It’s A Great Day To Be Alive.” Across albums including Family Tree, The Invisible Man, Modern Hymns, A Crooked Road, and Long Ride Home, Scott’s songwriting and instrumental artistry have continued to resonate with audiences and fellow musicians alike. Scott has built a career defined by authenticity, instrumental versatility, and lyrical depth. His voice and instrumental work appear on hundreds of studio sessions recorded from Nashville and Los Angeles to Toronto and London. …",
+    description: "Darrell Scott is an acclaimed singer, songwriter, and multi-instrumentalist widely regarded as one of the most respected voices in contemporary American roots music. A masterful storyteller with deep roots in country, bluegrass, folk, and Americana, Scott delivers powerful performances where his expressive voice, heartfelt songwriting, and exceptional musicianship takes center stage.. Scott has received multiple Grammy and Nashville Songwriter Hall of Fame nominations and was honored with a 2025 Lifetime Achievement Award from the Americana Music Association. He’s earned Songwriter of the Year awards from both ASCAP and NSAI. This fall, he will be inducted into the Kentucky Music Hall of Fame. View on site | Email this event",
     pubDate: "2026-08-30T01:30:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5740,7 +5662,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Cancelled",
     link: "https://www.norwoodtown.com/2026-08-17-planning-and-zoning-commission-cancelled",
-    description: "",
+    description: "The Town of Norwood's Planning and Zoning Commission meeting scheduled for this date has been cancelled. No session will be held.",
     pubDate: "2026-08-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5751,7 +5673,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-08-24-senior-lunch",
-    description: "",
+    description: "A community lunch gathering for seniors, hosted by the Town of Norwood. It takes place at midday and offers older residents an opportunity to share a meal and connect with one another.",
     pubDate: "2026-08-24T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5762,7 +5684,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-08-31-senior-lunch",
-    description: "",
+    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     pubDate: "2026-08-31T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5773,7 +5695,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5784,7 +5706,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-14-senior-lunch",
-    description: "",
+    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     pubDate: "2026-09-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5795,7 +5717,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "",
+    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5806,7 +5728,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5817,7 +5739,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Veterans Day",
     link: "https://www.norwoodtown.com/2026-11-11-closed-for-veterans-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Veterans Day. Municipal offices and services will be unavailable on this federal holiday honoring those who have served in the United States armed forces.",
     pubDate: "2026-11-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",

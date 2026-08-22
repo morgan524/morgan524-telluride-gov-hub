@@ -1,26 +1,26 @@
 {
-  "hash": "1b9e45bdac91bcf3aae5e63a3ca75533899d1b13",
-  "lede": "The school board votes Monday on a flood-related budget appropriation for FY 2026-27 — real money being redirected because this summer's flooding hit the TIS 5th grade pod, the high school cafeteria, and the Palm Theatre complex hard. Alongside that, the Ethics Commission takes up whether Telluride should have a formal Code of Conduct for its officials, the County is weighing what CCAP childcare funding cuts mean for its budget, and the Telluride Hospital District board could take action on a Two Site Model that shapes what gets built and where.",
+  "hash": "4fdba20ba2ea018f828bb0c910fd1975299780e7",
+  "lede": "The school board votes Monday on a flood-damage budget appropriation — real money moving in response to a summer that hit the 5th grade pod, the high school cafeteria, and the Palm Theatre complex — and that's the sharpest decision of a busy week. The Ethics Commission takes up its Code of Conduct recommendation for Town Council on Tuesday, the Hospital District board discusses its Two Site Model for the new facility on Wednesday, and Mountain Village's HOA board moves to form a Workforce Housing Committee and vote on updated policies.",
   "notable": [
     {
       "id": 3,
-      "stake": "Board votes to adjust district budget to cover flood damage costs."
+      "stake": "Board votes on flood-related budget appropriation for FY 2026-27."
     },
     {
       "id": 2,
-      "stake": "Commission recommends whether Town adopts a formal Code of Conduct for officials."
-    },
-    {
-      "id": 4,
-      "stake": "County weighs CCAP childcare funding cuts and their budget implications."
+      "stake": "Commission recommends whether to establish a formal Code of Conduct for town officials."
     },
     {
       "id": 8,
-      "stake": "Hospital board may act on Two Site Model shaping new facility scale and location."
+      "stake": "Board may act on Two Site Model shaping what gets built and where."
     },
     {
       "id": 10,
-      "stake": "TMVOA votes to form Workforce Housing Committee and adopt updated policies."
+      "stake": "Board votes on workforce housing committee formation and updated association policies."
+    },
+    {
+      "id": 4,
+      "stake": "County weighs CCAP funding cuts and their budget impact on child care access."
     }
   ]
 }
