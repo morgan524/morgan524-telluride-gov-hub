@@ -154,6 +154,7 @@ Click Upload photo to insert an image — it uploads and inserts a live URL."></
     <div class="previewbar">
       <button id="btndesktop" class="primary">Desktop</button>
       <button id="btnmobile">Mobile</button>
+      <button id="btnback" title="Re-render the preview (use this if a link navigated it away)">&larr; Back to preview</button>
       <span class="grow"></span>
       <button id="btncopy">Copy HTML</button>
       <button id="btndl">Download .html</button>
@@ -226,13 +227,13 @@ function restore(){
 const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 function inline(s){
   s = esc(s);
-  s = s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2" target="_blank" style="color:#21443c;text-decoration:underline;">$1</a>');
+  s = s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2" target="_blank" style="color:#3a72ab;text-decoration:underline;">$1</a>');
   s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
   s = s.replace(/(^|[^*])\*([^*]+)\*/g, "$1<em>$2</em>");
   s = s.replace(/—/g,"&mdash;").replace(/'/g,"&rsquo;");
   return s;
 }
-const TD_BODY = 'padding:10px 34px 8px;font-family:Georgia,serif;font-size:18px;line-height:1.7;color:#2b2b2b;';
+const TD_BODY = 'padding:5px 34px 5px;font-family:Georgia,serif;font-size:18px;line-height:1.55;color:#2b2b2b;';
 const row = inner => '<tr><td style="'+TD_BODY+'">'+inner+'</td></tr>';
 
 function mdToEmail(md, meta){
@@ -242,7 +243,7 @@ function mdToEmail(md, meta){
 
   const flush = () => {
     if(!para.length) return;
-    out.push(row('<p style="margin:0 0 16px;">'+inline(para.join(" "))+'</p>'));
+    out.push(row('<p style="margin:0;">'+inline(para.join(" "))+'</p>'));
     para = [];
   };
 
@@ -294,7 +295,7 @@ function mdToEmail(md, meta){
     // section heading
     if(/^##\s+/.test(L)){
       flush(); i++;
-      out.push('<tr><td style="padding:16px 34px 2px;font-family:Georgia,serif;"><div style="font-size:21px;font-weight:700;color:#1c1c1c;">'+inline(L.replace(/^##\s+/,""))+'</div></td></tr>');
+      out.push('<tr><td style="padding:16px 34px 8px;font-family:Georgia,serif;"><div style="font-size:21px;font-weight:700;color:#1c1c1c;">'+inline(L.replace(/^##\s+/,""))+'</div></td></tr>');
       continue;
     }
 
@@ -310,6 +311,7 @@ function mdToEmail(md, meta){
   + '<td style="background:#ffffff;border-radius:10px;padding:6px;width:56px;"><a href="https://livabletelluride.org" target="_blank"><img src="'+LOGO+'" width="52" height="52" alt="Livable Telluride" style="display:block;width:52px;height:52px;border:0;"></a></td>'
   + '<td style="padding-left:14px;font-family:Georgia,serif;color:#ffffff;font-size:22px;font-weight:700;letter-spacing:.02em;">Livable Telluride</td>'
   + '</tr></table></td></tr>'
+  + '<!--LT-HEADER-->'
   + out.join("")
   + '<tr><td style="padding:26px 34px 30px;border-top:1px solid #e4e8e4;">'
   + '<div style="font-family:Georgia,serif;font-size:17px;color:#21443c;font-weight:700;">Livable Telluride</div>'
@@ -329,13 +331,18 @@ function headerRows(){
 function buildHtml(){
   const md = $("md").value;
   let html = mdToEmail(md, { subject:$("subject").value });
-  // headline block goes after the hero image if one leads, else right after the masthead
+  // Header block (kicker, headline, byline) goes after a leading hero image if
+  // there is one, otherwise straight after the masthead. Anchored on an
+  // explicit marker, NOT on a body row's padding: the old regex matched
+  // "padding:1[0-6]px 34px", so changing body spacing silently relocated the
+  // headline into the middle of the article -- or dropped it entirely when
+  // nothing else happened to match.
   const heroMatch = html.match(/<tr><td style="padding:0;"><img[^>]*><\/td><\/tr>/);
-  if(heroMatch) html = html.replace(heroMatch[0], heroMatch[0] + headerRows());
-  else html = html.replace(/(<\/tr>)(?=<tr><td style="padding:1[0-6]px 34px)/, "$1"+headerRows());
-  if(html.indexOf("<h1")===-1) html = html.replace('</table></td></tr>'+"", '</table></td></tr>'); // no-op safety
-  return html;
+  return heroMatch
+    ? html.replace("<!--LT-HEADER-->", "").replace(heroMatch[0], heroMatch[0] + headerRows())
+    : html.replace("<!--LT-HEADER-->", headerRows());
 }
+
 
 /* ---------------- preview + checks ---------------- */
 let lastHtml = "";
@@ -344,6 +351,11 @@ function render(){
   window.lastHtml = lastHtml;
   const doc = $("frame").contentDocument;
   doc.open(); doc.write(lastHtml); doc.close();
+  // Preview-only: a link with no target (the footer unsubscribe tag) would
+  // navigate the iframe away, and render() only re-fires on input -- so the
+  // preview became unrecoverable. Mutates the iframe DOM, never lastHtml,
+  // so the copied/downloaded/sent HTML is unchanged.
+  doc.querySelectorAll("a[href]").forEach(a => a.setAttribute("target", "_blank"));
   runChecks();
   persist();
 }
@@ -615,6 +627,7 @@ $("chatin").addEventListener("keydown", e=>{ if(e.key==="Enter" && !e.shiftKey){
 /* ---------------- output ---------------- */
 $("btndesktop").onclick = ()=>{ $("frame").classList.remove("mobile"); $("btndesktop").classList.add("primary"); $("btnmobile").classList.remove("primary"); };
 $("btnmobile").onclick  = ()=>{ $("frame").classList.add("mobile");    $("btnmobile").classList.add("primary");  $("btndesktop").classList.remove("primary"); };
+$("btnback").onclick = ()=>{ render(); setStatus("\u2713 Preview re-rendered."); };
 $("btncopy").onclick = async ()=>{ await navigator.clipboard.writeText(lastHtml); setStatus("✓ HTML copied to the clipboard."); };
 $("btndl").onclick = ()=>{
   const slug = ($("subject").value.trim().toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")||"newsletter").slice(0,50);

@@ -1,5 +1,65 @@
 [
   {
+    "date": "2026-08-23",
+    "title": "Bears, people, and who gives way",
+    "body": "The Ecology Commission meets September 2 to work on human-wildlife interactions — its standing job is reducing threats to both wildlife and public safety up here. That pairing is where the tension lives. Some residents think the priority should be protecting wildlife from people: stricter rules on trash, attractants, outdoor dining. Others think public safety has to come first, which can mean more aggressive hazing or removal of animals that keep showing up in town. The two goals aren't always the same goal.\n\nWhen the two conflict, which one should drive the decision?",
+    "choices": [
+      "Wildlife protection comes first",
+      "Public safety comes first",
+      "We can balance both",
+      "It's complicated"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
+    "date": "2026-08-22",
+    "title": "Mountain Village weighing a workforce housing committee",
+    "body": "The TMVOA Board is looking at forming a Workforce Housing Committee. Up here, that kind of body can mean real policy momentum — or it can mean a long runway before anything changes on the ground. People who think Mountain Village isn't moving fast enough on housing will see a new committee as a start. People skeptical of process will wonder whether another committee is action or a substitute for it. The board is also taking up a grant request for the TMV Ice Pad and updates on a Pond Improvement Plan — but it's the housing committee question that tends to split a room. So: does a new committee move the needle, or not?",
+    "choices": [
+      "Committees get things done",
+      "It's just more process",
+      "Depends on who's on it",
+      "It's complicated"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
+    "date": "2026-08-21",
+    "title": "A new committee for rental housing — what will it actually do?",
+    "body": "Telluride's new Resident Advisory Committee holds its inaugural meeting this week. The first order of business is organizing itself — officers, procedures, purpose. But the substantive item is a review of the Town's Employee Rental Housing Policies.\n\nSome will see this as a real seat at the table: residents with skin in the game finally helping shape how workforce housing gets managed. Others will wonder whether an advisory body with no binding authority changes much at all.\n\nSo — is a resident advisory committee the right lever for housing policy up here, or is it window dressing?",
+    "choices": [
+      "Real seat at the table",
+      "Advisory only — too weak",
+      "Depends what power it gets",
+      "It's complicated"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
+    "date": "2026-08-20",
+    "title": "Is the campground leaving locals behind?",
+    "body": "Parks staff is recommending 2027 fee increases at the Town Park Campground — nightly rates up roughly 8%, with premium vehicle sites moving from $55 to $60 and walk-in sites from $32 to $35. Shower tokens jump from $4 to $5, a 25% bump, partly to cover a new credit-card payment machine. The campground ran at 97–99% occupancy in June and July, which gives staff some market cover. But near-capacity numbers cut both ways: they signal demand that supports higher rates, and a squeeze that already pushes out anyone watching every dollar. Is this smart cost recovery, or one more ratchet upward?",
+    "choices": [
+      "Fair — the market supports it",
+      "Too steep for working visitors",
+      "Raise rates, fix the access problem",
+      "It's complicated"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-08-19",
     "title": "A cap on how much your home can appreciate",
     "body": "Town Council is expected to set a sale price appreciation cap under municipal code. The idea behind a cap like this is straightforward — limit runaway resale prices and keep homes within reach of working residents. But the tension is real. Property owners reasonably ask whether the town should be able to limit what they can earn on an asset they bought and maintain. Others will argue that without some constraint, the market keeps doing what it's been doing up here. Neither side is wrong, exactly.\n\nWhere do you land on the town putting a ceiling on home price appreciation?",
@@ -382,50 +442,6 @@
       "Getting housing built on it",
       "Keeping it open or low-impact",
       "Depends on the specific site",
-      "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-07-24",
-    "title": "Town land, town call",
-    "body": "Three projects on town-owned parcels are heading to Planning & Zoning — two at Carhenge (700 W Pacific Ave) and one at the Shandoka Lot (860 Black Bear Rd, 4.07 acres). All three sit next to open space. All three are designed by the same firm, on land the town itself owns. That's the tension: some neighbors will see town-owned, open-space-adjacent land as the last place to put new construction; others will argue that if the town controls the land, this is exactly where it should direct development it can shape. Neither position is crazy.\n\nSo — when the town owns the land, does that make development there more acceptable, or less?",
-    "choices": [
-      "More acceptable — town can control it",
-      "Less acceptable — protect that edge",
-      "Depends on what gets built",
-      "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-07-23",
-    "title": "Who counts as a resident when a kid has two homes?",
-    "body": "The Telluride Housing Authority is taking up a genuinely knotty question: what happens to deed-restricted housing rules when a household doesn't fit the standard definition — specifically, dependents of multiple custodial parents. The board has set aside 40 minutes for a proposed policy statement on primary residency in those cases, which signals it's not a clean fix.\n\nSome will say the rules need to flex for real family situations. Others will say any loosening of residency definitions creates openings that undermine deed restrictions for everyone. The waitlist pressure isn't getting lighter.\n\nHow strictly should primary residency be defined in deed-restricted housing?",
-    "choices": [
-      "Strict definitions protect the system",
-      "Real families don't fit neat rules",
-      "Depends on the case",
-      "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-07-22",
-    "title": "Healing centers, meet the Land Use Code",
-    "body": "Town Council takes up a Land Use Code amendment August 11 that would add new regulations for natural medicine businesses — a fresh Section 5-31 — with an intergovernmental worksession alongside the county the day before.\n\nSome will read this as sensible groundwork: write the rules before anyone opens a door. Others will ask why a town this size needs a new chapter of code before there's a business to regulate. Nothing's decided yet — the amendment still has to get through Council.\n\nGood groundwork, or code creep?",
-    "choices": [
-      "Write the rules first",
-      "Wait for a real applicant",
       "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",

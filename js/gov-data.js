@@ -37,7 +37,7 @@ const COUNTY_CIVICCLERK_AGENDA_FILES = {
   919:  1705,  // Planning Commission May 14 2026
 };
 
-const COUNTY_CACHE_DATE = '2026-08-19';
+const COUNTY_CACHE_DATE = '2026-08-23';
 
 const COUNTY_CACHED_DATA = [
   {
@@ -56,6 +56,15 @@ const COUNTY_CACHED_DATA = [
     type: "bocc",
     location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
     civicClerkId: 899,
+    note: null
+  },
+  {
+    date: "August 24, 2026",
+    time: "4:00 PM",
+    title: "Open Space Commission Meeting",
+    type: "other",
+    location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+    civicClerkId: 1056,
     note: null
   },
   {
@@ -122,6 +131,15 @@ const COUNTY_CACHED_DATA = [
     note: null
   },
   {
+    date: "September 28, 2026",
+    time: "4:00 PM",
+    title: "Open Space Commission Meeting",
+    type: "other",
+    location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+    civicClerkId: 1057,
+    note: null
+  },
+  {
     date: "October 7, 2026",
     time: "10:00 AM",
     title: "Board of County Commissioners Meeting",
@@ -158,6 +176,15 @@ const COUNTY_CACHED_DATA = [
     note: null
   },
   {
+    date: "October 26, 2026",
+    time: "4:00 PM",
+    title: "Open Space Commission Meeting",
+    type: "other",
+    location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+    civicClerkId: 1058,
+    note: null
+  },
+  {
     date: "October 28, 2026",
     time: "4:00 PM",
     title: "Board of County Commissioners Work Session",
@@ -174,12 +201,21 @@ const COUNTY_CACHED_DATA = [
     location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
     civicClerkId: 889,
     note: null
+  },
+  {
+    date: "November 18, 2026",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Meeting",
+    type: "bocc",
+    location: "Norwood Sheriff Annex, 1110 Summit St, Norwood, CO 81423",
+    civicClerkId: 902,
+    note: null
   }
 ];
 
 const SMART_BOARD_URL = 'https://smarttelluride.colorado.gov/board-meetings';
 
-const SMART_CACHE_DATE = '2026-08-19';
+const SMART_CACHE_DATE = '2026-08-23';
 
 const SMART_CACHED_DATA = [
   {
@@ -194,7 +230,7 @@ const SMART_CACHED_DATA = [
 
 const TMVOA_URL = 'https://tmvoa.org/meetings-events/meeting-materials/';
 
-const TMVOA_CACHE_DATE = '2026-08-19';
+const TMVOA_CACHE_DATE = '2026-08-23';
 
 // TMVOA (Telluride Mountain Village Owners Association) — a private HOA, not
 // a government body, but its Gondola Leadership/Subcommittee meetings and
@@ -203,22 +239,6 @@ const TMVOA_CACHE_DATE = '2026-08-19';
 // every run by syncTMVOAAgendas() from the live meeting-materials page —
 // see that function for the robots.txt-aware scraping note.
 const TMVOA_CACHED_DATA = [
-  {
-    date: "July 23, 2026",
-    title: "TMVOA Board of Directors Meeting",
-    board: "board",
-    agendaUrl: "https://tmvoa.org/site/assets/files/4822/tmvoa_board_meeting_agenda_7_23-1.pdf",
-    packetUrl: "https://tmvoa.org/site/assets/files/4822/tmvoa_board_meeting_packet_7_23-1.pdf",
-    location: "Mountain Village, CO (see agenda for Zoom link)"
-  },
-  {
-    date: "July 23, 2026",
-    title: "TMVOA Annual Members Meeting",
-    board: "annual",
-    agendaUrl: "https://tmvoa.org/site/assets/files/4727/tmvoa_annual_members_meeting_agenda_7_23_26.pdf",
-    packetUrl: "https://tmvoa.org/site/assets/files/4727/tmvoa_annual_members_meeting_packet_7_23_26.pdf",
-    location: "Mountain Village, CO (see agenda for Zoom link)"
-  },
   {
     date: "July 28, 2026",
     title: "Gondola Leadership Committee Meeting",
@@ -255,7 +275,7 @@ const TMVOA_CACHED_DATA = [
     date: "August 27, 2026",
     title: "TMVOA Board of Directors Meeting",
     board: "board",
-    agendaUrl: null,
+    agendaUrl: "https://tmvoa.org/site/assets/files/4851/tmvoa_board_meeting_agenda_8_27_26.pdf",
     packetUrl: null,
     location: "Mountain Village, CO (see agenda for Zoom link)"
   },
@@ -281,29 +301,18 @@ const MV_TC_URL = 'https://townofmountainvillage.com/government/town-council/tow
 
 const MV_DRB_URL = 'https://townofmountainvillage.com/business/planning/design-review-board/';
 
-const MV_CACHE_DATE = '2026-08-19';
+const MV_CACHE_DATE = '2026-08-23';
 
 const MV_CACHED_DATA = [
-  {
-    date: "August 20, 2026",
-    time: "2:00 PM - 8:00 PM",
-    title: "Town Council Meeting",
-    board: "tc",
-    agendaUrl: "https://townofmountainvillage.com/site/assets/files/49695/august_20-_2026_town_council_meeting_agenda.pdf",
-    packetUrl: "https://townofmountainvillage.com/site/assets/files/49696/august_20-_2026_town_council_meeting_packet.pdf",
-    special: false,
-    location: "Town Hall, 455 Mountain Village Blvd, Suite A"
-  },
   {
     date: "September 3, 2026",
     time: "10:00 AM - 3:00 PM",
     title: "Design Review Board",
     board: "drb",
-    agendaUrl: null,
+    agendaUrl: "https://townofmountainvillage.com/site/assets/files/49733/september_3-_2026_design_review_board_meeting_agenda.pdf",
     packetUrl: null,
     special: false,
-    location: "Town Hall, 455 Mountain Village Blvd, Suite A",
-    note: "Agenda typically posted the Friday before."
+    location: "Town Hall, 455 Mountain Village Blvd, Suite A"
   },
   {
     date: "September 17, 2026",
@@ -337,33 +346,51 @@ const MV_CACHED_DATA = [
     special: false,
     location: "Town Hall, 455 Mountain Village Blvd, Suite A",
     note: "Agenda typically posted the Friday before."
+  },
+  {
+    date: "October 15, 2026",
+    time: "2:00 PM - 6:45 PM",
+    title: "Town Council Meeting",
+    board: "tc",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Town Hall, 455 Mountain Village Blvd, Suite A",
+    note: "Agenda typically posted the Friday before."
   }
 ];
 
 const SCHOOL_BOARD_URL = 'https://www.tellurideschool.org/agendasandminutes';
 
-const SCHOOL_CACHE_DATE = '2026-08-19';
+const SCHOOL_CACHE_DATE = '2026-08-23';
 
 const SCHOOL_CACHED_DATA = [
   {
     date: "August 24, 2026",
-    time: "3:30 PM",
+    time: null,
     title: "Telluride Board of Education Work Session",
-    agendaUrl: null,
+    agendaUrl: "https://files.smartsites.parentsquare.com/3403/82426_ws_packet.pdf",
     packetUrl: null,
     special: false,
-    location: "Bridal Veil District Conference Room / Zoom",
-    note: "Scheduled meeting -- agenda posted closer to the date."
+    location: "Bridal Veil District Conference Room / Zoom"
   },
   {
     date: "August 25, 2026",
-    time: "5:15 PM",
+    time: null,
     title: "Telluride Board of Education Monthly Meeting",
-    agendaUrl: null,
+    agendaUrl: "https://files.smartsites.parentsquare.com/3403/82526_mm_packet_1.pdf",
     packetUrl: null,
     special: false,
-    location: "Bridal Veil District Conference Room / Zoom",
-    note: "Scheduled meeting -- agenda posted closer to the date."
+    location: "Bridal Veil District Conference Room / Zoom"
+  },
+  {
+    date: "August 26, 2026",
+    time: null,
+    title: "Telluride Board of Education Monthly Meeting",
+    agendaUrl: "https://files.smartsites.parentsquare.com/3403/82626_board_retreat_packet.pdf",
+    packetUrl: null,
+    special: false,
+    location: "Bridal Veil District Conference Room / Zoom"
   },
   {
     date: "September 22, 2026",
@@ -559,7 +586,7 @@ const SCHOOL_CACHED_DATA = [
 
 const FIRE_BOARD_URL = 'https://www.telluridefire.com/board-meetings';
 
-const FIRE_CACHE_DATE = '2026-08-19';
+const FIRE_CACHE_DATE = '2026-08-23';
 
 const FIRE_CACHED_DATA = [
   {
@@ -595,7 +622,7 @@ const FIRE_CACHED_DATA = [
 
 const MED_BOARD_URL = 'https://www.tellmed.org/board-meetings';
 
-const MED_CACHE_DATE = '2026-08-19';
+const MED_CACHE_DATE = '2026-08-23';
 
 const MED_CACHED_DATA = [
   {
@@ -627,7 +654,7 @@ const NORWOOD_NWC_URL = 'https://www.norwoodtown.com/nwc-meetings';
 
 const NORWOOD_SAN_URL = 'https://www.norwoodtown.com/norwood-sanitation-district-meeting';
 
-const NORWOOD_CACHE_DATE = '2026-08-19';
+const NORWOOD_CACHE_DATE = '2026-08-23';
 
 const NORWOOD_CACHED_DATA = [
   {
@@ -705,7 +732,7 @@ const OPHIR_GA_URL = 'https://townofophir.colorado.gov/general-assembly-2';
 
 const OPHIR_PZ_URL = 'https://townofophir.colorado.gov/planning-and-zoning';
 
-const OPHIR_CACHE_DATE = '2026-08-19';
+const OPHIR_CACHE_DATE = '2026-08-23';
 
 const OPHIR_CACHED_DATA = [
   {
@@ -749,7 +776,7 @@ const RICO_BOARD_URL = 'https://townofrico.colorado.gov/government/board-of-trus
 
 const RIDGWAY_COUNCIL_URL = 'https://townofridgway.colorado.gov/i-want-to/ridgway-town-council';
 
-const RIDGWAY_CACHE_DATE = '2026-08-19';
+const RIDGWAY_CACHE_DATE = '2026-08-23';
 
 // Ridgway meeting stubs. Town Council = 2nd Wednesday @ 6:00 PM; Planning
 // Commission = 3rd Wednesday @ 5:30 PM. The agenda/packet PDF for each date is
@@ -803,7 +830,7 @@ const TOWN_CIVICWEB_IDS = {
 
 const TELLURIDE_HARC_URL = 'https://telluride.gov/100/Historic-and-Architectural-Review-Commis';
 
-const TELLURIDE_CACHE_DATE = '2026-08-19';
+const TELLURIDE_CACHE_DATE = '2026-08-23';
 
 const TELLURIDE_CACHED_DATA = [
   {
@@ -838,7 +865,7 @@ const TELLURIDE_CACHED_DATA = [
 
 const AIRPORT_BOARD_URL = 'https://tellurideairport.com/traa-board-information/';
 
-const AIRPORT_CACHE_DATE = '2026-08-19';
+const AIRPORT_CACHE_DATE = '2026-08-23';
 
 const AIRPORT_CACHED_DATA = [
   {
@@ -1184,24 +1211,7 @@ const DEEP_DIVE_PAGES = [
 //   { "topic": "carhenge", "date": "2026-07-23",
 //     "headline": "…optional…", "blurb": "…optional…" }
 // The pin is ignored once its date has passed (falls back to automatic).
-const FEATURED_ACTION_PIN = {
-  "topic": "carhenge",
-  "date": "2026-08-19",
-  "headline": "HARC takes up the Shandoka Lot redevelopment Wednesday, with a 3:00 PM site walk",
-  "blurb": "The Historic & Architectural Review Commission hears preliminary large-scale applications for all four Shandoka buildings at 860 Black Bear Rd: Buildings 1 and 2 as one hearing, Buildings 3 and 4 as another. A site walk on the lot at 3:00 PM comes first, then the evening session at 5:30 PM. Both are open to everyone. The same agenda carries a work session on the County and Town facilities at 335 W Colorado, the Fruen Building. HARC reviews height, mass, scale, materials and context, which is exactly what is still movable at this stage. Share your thoughts with the Town Council as well; Council makes the final call.",
-  "images": [
-    {
-      "src": "/assets/Shandoka/shandoka-sightline-scale.jpg",
-      "alt": "Two views of the proposed Shandoka Lot redevelopment. Above, the application's birds-eye view from a high elevation. Below, a street-level view from Black Bear Road showing the buildings at approximately 50 feet, or five stories, as a person standing on the ground would see them.",
-      "caption": "Shandoka Lot: the application's birds-eye view, and the same buildings seen from the street at eye level."
-    },
-    {
-      "src": "/assets/Fruen/fruen-building-rendering.jpg",
-      "alt": "Rendering of the proposed County and Town facilities at 335 W Colorado Avenue, a two-storey brick building on the corner with ground-floor storefronts and a wood-clad section behind.",
-      "caption": "335 W Colorado, the Fruen Building: County and Town facilities, back for a second work session."
-    }
-  ]
-};
+const FEATURED_ACTION_PIN = {};
 
 const ENTITY_LOGOS = {
   telluride: '<img src="/logo/Telluride%20Town.png" alt="Town of Telluride" style="width:100%;height:100%;object-fit:contain;">',

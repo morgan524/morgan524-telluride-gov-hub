@@ -1,34 +1,26 @@
 {
-  "hash": "0b942ab974148918676417178fe3a54bd4b519c7",
-  "lede": "Mountain Village Council meets Wednesday to vote on a sale price appreciation cap that will determine whether deed-restricted units actually stay affordable long-term — that one's worth showing up for. Across town, HARC takes a hard look at the Shandoka Lot redevelopment on Black Bear Road, Ouray County holds three public hearings including a full repeal of a land-use code section, and the BOCC sits as the Housing Authority to work through affordable housing compliance at a moment when regional finances are under strain.",
+  "hash": "43775ec5e294aca7c739dff3916faf8d8ab12c22",
+  "lede": "The School Board votes Monday on a flood-damage budget appropriation for FY 2026-27 — real money tied to this summer's hits on the TIS 5th grade pod, the high school cafeteria, and the Palm Theatre complex. Alongside that, the Ethics Commission takes up whether to establish a formal Code of Conduct for Town officials, the Hospital District board could act on a Two Site Model for the new facility, and Mountain Village's HOA moves to form a Workforce Housing Committee and vote on updated policies.",
   "notable": [
     {
-      "id": 1,
-      "stake": "HARC votes on after-the-fact permit for unpermitted Elks Lodge pergola."
+      "id": 3,
+      "stake": "Board votes on flood-damage budget appropriation affecting district spending this year."
     },
     {
       "id": 2,
-      "stake": "Preliminary large-scale review of Shandoka Lot redevelopment — four new buildings."
-    },
-    {
-      "id": 3,
-      "stake": "Staff recommending 2027 campground and shower fee increases of up to 25%."
+      "stake": "Commission develops recommendation on a formal Code of Conduct for Town officials."
     },
     {
       "id": 4,
-      "stake": "BOCC reviews housing authority compliance and holds a public hearing on land use."
-    },
-    {
-      "id": 6,
-      "stake": "Three public hearings including full repeal of an Ouray County land-use code section."
+      "stake": "County discusses CCAP childcare funding and its direct budget implications."
     },
     {
       "id": 8,
-      "stake": "Mountain Village Council votes on deed-restriction appreciation cap affecting affordability."
+      "stake": "Hospital board may act on Two Site Model, shaping what and where gets built."
     },
     {
-      "id": 9,
-      "stake": "First formal review of school district employee housing proposal at 725 W Colorado."
+      "id": 10,
+      "stake": "TMVOA votes on updated policies and acts on workforce housing committee formation."
     }
   ]
 }

@@ -76,7 +76,7 @@
     "link": "https://www.telluride.com/event/telluride-farmers-market-music-series/",
     "description": "Augment Music Project sponsors local music in various ways, including weekly performances at the Telluride Farmers' …",
     "pubDate": "2026-05-29",
-    "endDate": "2026-09-26",
+    "endDate": "2026-09-25",
     "source": "telluride-com",
     "sourceLabel": "Telluride.com",
     "category": "Community Event",
@@ -228,18 +228,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/62830/the_national_wine.800x533.webp"
   },
   {
-    "title": "Sunset Concert Series",
-    "link": "https://www.telluride.com/event/sunset-music-concert-series/",
-    "description": "The Telluride Mountain Village Owners Association (TMVOA) has announced the return of the Sunset Concert Series for the …",
-    "pubDate": "2026-06-24",
-    "endDate": "2026-08-19",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/44886/sunsetconcert.800x533.webp"
-  },
-  {
     "title": "Oak Street Park SummerSHOW Series",
     "link": "https://www.telluride.com/event/oak-street-park-summershow-series/",
     "description": "The Sheridan Opera House’s SHOW Bar has proudly hosted free summer patio shows to keep the arts accessible to all. …",
@@ -262,6 +250,18 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/36321/couch_1600x900.800x533.webp"
+  },
+  {
+    "title": "Village Film Nights",
+    "link": "https://www.telluride.com/event/village-film-nights/",
+    "description": "The Telluride Film Festival, in collaboration with the Town of Mountain Village, the Telluride Conference Center, and …",
+    "pubDate": "2026-07-05",
+    "endDate": "2026-08-23",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/58512/vfn-tony-banner1800x900-v2-9900000000079e3c.800x533.jpg"
   },
   {
     "title": "Alpine Chapel Outdoor Service",
@@ -348,28 +348,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/60285/download_8.800x533.webp"
   },
   {
-    "title": "\"Best Day Ever\" Free Movie Screening",
-    "link": "https://www.telluride.com/event/best-day-ever-free-movie-screening/",
-    "description": "Join Telluride Adaptive Sports Program (TASP) for a free community screening of Best Day Ever, the Audience Choice …",
-    "pubDate": "2026-08-18",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63200/best_day_ever.800x533.webp"
-  },
-  {
-    "title": "Community Game Night",
-    "link": "https://www.telluride.com/event/community-game-night/",
-    "description": "Join TMVOA and Telluride Brewing Company for a Community Game Night. Games & drinks provided.",
-    "pubDate": "2026-08-18",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63377/tbc_game_night.800x533.webp"
-  },
-  {
     "title": "Blizzard Sale",
     "link": "https://www.telluride.com/event/blizzard-sale/",
     "description": "Save up to 70% at Telluride’s BIGGEST and BEST sale on skis, boots, bindings, bikes, outerwear, footwear, accessories …",
@@ -404,17 +382,6 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/62743/buffet_visit_telluride_image.800x533.webp"
-  },
-  {
-    "title": "Noche de Luz (Night of Light)",
-    "link": "https://www.telluride.com/event/noche-de-luz-night-of-light/",
-    "description": "Join Tri-County Health Network for a Night of Light, Celebrating our Community in Bloom! A Vibrant Celebration of …",
-    "pubDate": "2026-08-21",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/62940/untitled_2200_x_1237_px.800x533.webp"
   },
   {
     "title": "Telluride Mountain Run",
@@ -497,6 +464,17 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/63239/fcf_web.800x533.webp"
   },
   {
+    "title": "Piercing Pop-Up",
+    "link": "https://www.telluride.com/event/piercing-pop-up-at-fringe-gallery/",
+    "description": "Join Fringe Gallery for a Piercing Pop Up! Sign up for an appointment with Gemstone Piercing's Kirsten Foster. Come …",
+    "pubDate": "2026-08-29",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63408/untitled_-_august_13-_2026_at_11_55_17_1.800x533.webp"
+  },
+  {
     "title": "An Evening With Ken Burns",
     "link": "https://www.telluride.com/event/an-evening-with-ken-burns/",
     "description": "Join the Telluride Museum for their annual Evening With Ken Burns, tentatively at the Palm Theatre. Tickets are $25 for …",
@@ -506,6 +484,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/53487/kenburns_620x370_0.800x533.webp"
+  },
+  {
+    "title": "Emergency Preparedness for People, Pets and Our Communities",
+    "link": "https://www.telluride.com/event/emergency-preparedness-for-people-pets-and-our-communities/",
+    "description": "ARE YOU READY? Wildfires, floods and other emergencies can happen quickly. Join Patagonia, San Miguel County Emergency …",
+    "pubDate": "2026-08-31",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63418/emergency_preparedness_flyer-_jabor.800x533.webp"
   },
   {
     "title": "Mountain Towns 2030: Leveraging A Network of Community Leaders to Accelerate Climate Action",

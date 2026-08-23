@@ -1,5 +1,29 @@
 [
   {
+    "title": "Newscast 8-21-26",
+    "source": "KOTO Community Radio",
+    "date": "August 22, 2026",
+    "newsTopic": "recreation",
+    "copy": "On this week’s Regional Roundup, we head to the alpine tundra of Rocky Mountain National Park with naturalists searching for ptarmigan. We also learn about efforts to restore beaver habitat in other parts of the park. Then, we travel to the small Western Colorado town of Lake City, where three newly trained EMTs are stepping up to help provide medi",
+    "href": "https://koto.org/news/newscast-8-21-26/"
+  },
+  {
+    "title": "Newscast 8-20-26",
+    "source": "KOTO Community Radio",
+    "date": "August 21, 2026",
+    "newsTopic": "public-safety",
+    "copy": "West End Food Banks Close Indefinitely; Gold Mountain Fire Leaves Some Trees Behind; Palm Theatre Cleanup Nears Completion",
+    "href": "https://koto.org/news/newscast-8-20-26/"
+  },
+  {
+    "title": "Newscast 8-19-26",
+    "source": "KOTO Community Radio",
+    "date": "August 20, 2026",
+    "newsTopic": "public-safety",
+    "copy": "Telluride Marshals Use Flock Cameras in Theft Investigation; Telluride Talks Flood Mapping; KOTO is Stayin’ Alive",
+    "href": "https://koto.org/news/newscast-8-19-26/"
+  },
+  {
     "title": "Newscast 8-17-26",
     "source": "KOTO Community Radio",
     "date": "August 18, 2026",
@@ -38,21 +62,5 @@
     "newsTopic": "community",
     "copy": "Coming Up Next, Telluride; Eco-Grief Finds the Space Between Grief and Gratitude",
     "href": "https://koto.org/news/newscast-8-10-26/"
-  },
-  {
-    "title": "Newscast 8-6-26",
-    "source": "KOTO Community Radio",
-    "date": "August 7, 2026",
-    "newsTopic": "arts-culture",
-    "copy": "Ranching in Drought; West End Roundup with the San Miguel Basin Forum; Music on the Mesa Brings the Burroughs",
-    "href": "https://koto.org/news/newscast-8-6-26/"
-  },
-  {
-    "title": "Newscast 8-5-26",
-    "source": "KOTO Community Radio",
-    "date": "August 6, 2026",
-    "newsTopic": "government",
-    "copy": "Dylan Brooks Vies for Seat on San Miguel Board of County Commissioners; Tri-County Shifts to Thrive Community Health Network; Feathered Athletes Flock to Telluride",
-    "href": "https://koto.org/news/newscast-8-5-26/"
   }
 ]

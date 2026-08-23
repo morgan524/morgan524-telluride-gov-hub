@@ -1,5 +1,95 @@
 [
   {
+    "sourceKey": "mv",
+    "sourceLabel": "Mountain Village",
+    "date": "2026-08-20",
+    "title": "Mountain Village Town Council — Aug 20, 2026",
+    "recap": "Council approved a budget appropriation resolution covering several items: $500,000 from TMVOA for fire mitigation efforts (defensive space rebates, assessments, and dead-tree removal on vacant lots); replacement of two Mountain Munchkins vans funded through the Child Development Fund; and $200,000 for the first-ever YES Program down payment assistance application, helping a longtime local purchase a home in Placerville with a deed restriction and 4% annual price appreciation cap attached.\n\nCouncil also passed a resolution setting a 4% annual price appreciation cap for affordable housing restriction properties under municipal code section 16.02.070, aligning those units with the Meadowlark and YES Program standards.\n\nOver DRB's 5-1 recommendation for denial, council approved a conditional use permit allowing a temporary office use at the vacant Wells Fargo space (Lot 68R, Unit 1A) for up to three years — through August 20, 2029 — to house construction staff for the Four Seasons project. The approval included conditions requiring Telski to market all vacant commercial spaces publicly within 45 days and prohibiting tenants from using the 11 parking spaces directly in front of the unit. The staff-level one-year extension was removed.\n\nCouncil approved amended bylaws for the Plaza Vending Committee, replacing the staff voting seat with a TMVOA-recommended representative to be appointed by council. First reading of an ordinance making a parallel change to the Public Art Commission's composition also passed. A worker protection ordinance proposal — covering anonymous complaint portals, up-the-chain contractor liability, business license accountability, and a CEO pay-ratio fee — was presented by Thrive Community Health Network and Raíces en Fronteras; council directed staff to research a framework and return with options.",
+    "votes": [
+      {
+        "item": "Budget appropriation resolution (fire mitigation, vans, YES Program)",
+        "outcome": "Passed",
+        "tally": "6-0"
+      },
+      {
+        "item": "Resolution setting 4% price appreciation cap (16.02.070)",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "CUP for temporary office at Lot 68R Unit 1A (Wells Fargo space)",
+        "outcome": "Passed",
+        "tally": "5-1"
+      },
+      {
+        "item": "Resolution amending Plaza Vending Committee bylaws",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "First reading: ordinance amending Public Art Commission (Ch. 2.18)",
+        "outcome": "Passed",
+        "tally": ""
+      }
+    ],
+    "videoUrl": "https://media.avcaptureall.cloud/meeting/3e38de7b-9e4f-43e3-8a96-2d5b71511d10"
+  },
+  {
+    "sourceKey": "telluride",
+    "sourceLabel": "Town of Telluride",
+    "date": "2026-08-20",
+    "title": "Planning & Zoning — Aug 20, 2026",
+    "recap": "Two items were continued without discussion. The Telluride School District R-1 employee housing work session — proposed new construction at the middle school site — was continued to September 24, pending the town's intergovernmental agreement with the district, which awaits the school board's signature. A minor subdivision application for 238 North Pine Street was continued to October 22, with staff noting it will be recommended for withdrawal if the applicant is not ready to proceed at that meeting.\n\nThe commission held a comprehensive plan status update with consultants Logan Simpson. Phase one outreach reached roughly 480 in-person contacts and 357 questionnaire responses; top themes were housing and affordability, sustainability, and community equity. Commissioners flagged concerns about census data understating the Hispanic population, the absence of natural-hazard topics (wildfire, flood, mudslide) from phase-one findings, and the need for higher engagement numbers. The team is targeting a major community outreach push in late September through October, with a follow-up work session tentatively set for September 17.\n\nThe commission then took up a discussion on Land Use Code Section 3-505 governing tree maintenance, removal, and relocation. Two local arborists addressed the commission, raising concerns about inconsistent permitting, the lack of a clear hazard-tree definition, mitigation fees that discourage removal of genuinely dangerous trees, and staff turnover creating unpredictable reviews. Key themes included the need for a formal hazard-tree definition, a public tree inventory, streamlined site-visit protocols, and the long-term possibility of a municipal arborist position. No code amendments were adopted; next steps include a community info session for contractors on August 25 and a follow-up work session at the September 24 regular meeting.",
+    "votes": [
+      {
+        "item": "Continue R-1 employee housing work session to Sep 24",
+        "outcome": "Continued",
+        "tally": ""
+      },
+      {
+        "item": "Continue 238 N Pine St minor subdivision to Oct 22",
+        "outcome": "Continued",
+        "tally": ""
+      }
+    ],
+    "videoUrl": "https://www.youtube.com/watch?v=owcOgLJ1Qto"
+  },
+  {
+    "sourceKey": "telluride",
+    "sourceLabel": "Town of Telluride",
+    "date": "2026-08-19",
+    "title": "HARC — Aug 19, 2026",
+    "recap": "HARC held its second work session on a proposed new county-town municipal building at 335 West Colorado. The applicant presented revisions responding to earlier feedback, including additional third-floor setbacks, simplified massing along Aspen Street, and reduced glazing. Commissioners offered eight areas for further refinement: better differentiation between the new building and the adjacent Miramonte building, increased third-floor setbacks from Colorado Avenue and Aspen Street, material changes on the west elevation, corner redesign at Aspen and Colorado, improved alley-facing windows, relief near the historic shed, more street-level perspectives, and a clearer main entry. The question of where to relocate a second historic shed — the applicant proposes a nearby county pocket park — remains unresolved; several commissioners and public commenters said it belongs on an alley.\n\nHARC then held preliminary public hearings on the Shandoka Lot redevelopment (860 Black Bear Road), a four-building mixed-use project combining affordable housing, underground parking, transit infrastructure, and neighborhood commercial uses on town-owned land. After extensive public comment — nearly universally critical of mass and scale — commissioners voted to continue both applications to October 21, 2026, with conditions requiring substantial reductions: all corners capped at two stories, elimination of the fifth floor of Building One, Building Two reduced to two stories and broken into two or three separate structures, east and west setbacks increased by at least 20 feet on each end, no unbroken three-story wall planes, revised rooftop treatment replacing the large green space with landscape islands, and completion of a hydrostatic study before the next hearing. The motion on Buildings One and Two passed 4-1; Buildings Three and Four passed 5-0, with an added condition to increase the setback on Building Three's west side for pedestrian access.\n\nFive additional applications — the Carhenge redevelopment (Buildings A–E, three separate items) and two items at 238 North Pine — were continued without discussion, Carhenge to September 30 and North Pine to November 18. Three further individual-property items were continued to the September 16 regular meeting.",
+    "votes": [
+      {
+        "item": "335 W Colorado work session (no formal vote)",
+        "outcome": "Tabled",
+        "tally": ""
+      },
+      {
+        "item": "Shandoka Lot Bldgs 1&2 — continue to Oct 21",
+        "outcome": "Continued",
+        "tally": "4-1"
+      },
+      {
+        "item": "Shandoka Lot Bldgs 3&4 — continue to Oct 21",
+        "outcome": "Continued",
+        "tally": "5-0"
+      },
+      {
+        "item": "Carhenge Bldgs A-E (3 items) — continue to Sep 30",
+        "outcome": "Continued",
+        "tally": ""
+      },
+      {
+        "item": "238 North Pine (2 items) — continue to Nov 18",
+        "outcome": "Continued",
+        "tally": ""
+      }
+    ],
+    "videoUrl": "https://www.youtube.com/watch?v=5Nuo30i3vGk"
+  },
+  {
     "sourceKey": "telluride",
     "sourceLabel": "Town of Telluride",
     "date": "2026-08-11",

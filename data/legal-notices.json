@@ -117,26 +117,6 @@
     "caseNumber": "202604"
   },
   {
-    "title": "Lost Share Certificate Replacement -- Farmers' Water Development Company Share Certificate #887 (COL-000188)",
-    "entity": "Farmers' Water Development Company (FWDC)",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "💧",
-    "iconClass": "type-hearing",
-    "type": "Utilities",
-    "filterTag": "utilities",
-    "summary": "The Farmers' Water Development Company (FWDC) has received a written request to replace lost, destroyed, or wrongfully taken share certificate #887, currently issued in the name of A.F. Newans M.D., C.P. Any person wishing to object to the issuance of a replacement certificate must file written notice with FWDC at PO Box 10, Norwood, CO 81423 within 30 days of the last publication date in the Norwood Post. If no objection is received, a replacement certificate will be issued and the original will be permanently cancelled.",
-    "deadline": "2026-08-20",
-    "expires": "2026-08-20",
-    "dates": "7/9",
-    "papers": [
-      "ttimes_0709"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
-    "address": "PO Box 10, Norwood, CO 81423",
-    "noticeKey": "fwdc-share-cert-887"
-  },
-  {
     "title": "Notice to Creditors -- Estate of Lawrence de Bivort (Case No. 2026PR30008)",
     "entity": "Estate of Lawrence de Bivort",
     "entityClass": "ent-county",
@@ -197,46 +177,6 @@
     "address": "350 S Mahoney Drive, Unit 7, Telluride, Colorado 81435",
     "noticeKey": "foreclosure-202605-350-mahoney-unit7",
     "caseNumber": "202605"
-  },
-  {
-    "title": "Notice of Vesting -- Site-Specific Development Plan (Project Title: 72 [truncated])",
-    "entity": "Town of Telluride",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "📋",
-    "iconClass": "type-hearing",
-    "type": "Ordinance",
-    "filterTag": "ordinance",
-    "summary": "The Town of Telluride is giving public notice pursuant to Colorado Revised Statutes Section 24-68-103(1) and Telluride Municipal Code Title 18, Article 5, Division 2, Section 5-208.H that a site-specific development plan and vested property right has been approved for a project identified in the notice (project title beginning with '72'; full details were truncated in the source text). Vesting notices typically establish property rights for a defined period following approval. Community members with questions should contact the Town of Telluride directly for full project details.",
-    "deadline": "",
-    "expires": "2026-08-22",
-    "dates": "7/23",
-    "papers": [
-      "ttimes_0723"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
-    "address": "Telluride, Colorado (specific parcel address truncated in source text)",
-    "noticeKey": "vesting-project-72-telluride"
-  },
-  {
-    "title": "Public Notice -- Town of Telluride 2027 Budget Preparation",
-    "entity": "Town of Telluride",
-    "entityClass": "ent-county",
-    "entityLogo": "assessor",
-    "icon": "💰",
-    "iconClass": "type-tax",
-    "type": "Tax & Finance",
-    "filterTag": "tax-finance",
-    "summary": "The Town Manager of Telluride is giving public notice of the 2027 budget preparation process, effective July 30, 2026. All town departments, boards, commissions, and citizens must submit funding requests to the Town Manager no later than 5:00 PM on Friday, August 21, 2026. Requests for CCAASE (Commission for Community Assistance, Arts and Special Events) funding are subject to a separate grant process available at www.telluride.gov.",
-    "deadline": "2026-08-21",
-    "expires": "2026-08-21",
-    "dates": "7/30",
-    "papers": [
-      "ttimes_0730"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    "address": "Town Hall, 135 W. Columbia Ave, Telluride, CO 81435",
-    "noticeKey": "COL-000208-telluride-2027-budget"
   },
   {
     "title": "Public Notice -- Farmers' Water Development Company Replacement Share Certificate #887",
@@ -390,5 +330,106 @@
     "url": "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
     "address": "350 S Mahoney Dr, Unit 7, Telluride, CO 81435 (Condominium Unit 7, Double Diamond Condominium, San Miguel County)",
     "noticeKey": "foreclosure-sale-202605"
+  },
+  {
+    "title": "RFP -- Fuel Island Canopy Design & Construction (RFP-L-000219)",
+    "entity": "San Miguel County Road & Bridge",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County Road & Bridge is seeking qualified contractors to design, engineer, permit, and construct a fuel island canopy at the Norwood Road & Bridge Maintenance Yard at 39595 Highway 145, Norwood, CO. A mandatory pre-proposal site meeting is scheduled for August 24, 2026. Proposals must be submitted electronically by September 3, 2026 at 4:00 p.m., with contractor selection announced September 7, 2026.",
+    "deadline": "2026-09-03T16:00:00",
+    "expires": "2026-09-03",
+    "dates": "8/20",
+    "papers": [
+      "ttimes_0820"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_7e6a7420-27c6-4f95-b0b8-101dfc5b4763.html",
+    "address": "39595 Highway 145, Norwood, CO 81423",
+    "noticeKey": "rfp-fuel-island-canopy-norwood-2026"
+  },
+  {
+    "title": "Ordinance -- Colorado Wildfire Resiliency Code Amendment to Land Use Code (Ordinance #1640)",
+    "entity": "Town of Telluride",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "📋",
+    "iconClass": "type-hearing",
+    "type": "Ordinance",
+    "filterTag": "ordinance",
+    "summary": "The Telluride Town Council passed Ordinance #1640 on August 11, 2026, amending Chapter 18 of the Telluride Municipal Code (Land Use Code) to implement the Colorado Wildfire Resiliency Code (CWRC). The amendments affect Historic and Architectural Review standards and Landscaping/Outdoor Illumination/Tree standards in the Zone District Regulations. The ordinance is effective upon publication of this notice; copies are available at Town Hall or online.",
+    "deadline": "2026-08-20",
+    "expires": "2026-10-20",
+    "dates": "8/20",
+    "papers": [
+      "ttimes_0820"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_7e6a7420-27c6-4f95-b0b8-101dfc5b4763.html",
+    "address": "Town of Telluride, Colorado",
+    "noticeKey": "ord-1640"
+  },
+  {
+    "title": "Public Hearing Notice -- 2026 Budget Supplemental Appropriations Ordinance (COL-000220)",
+    "entity": "Town of Telluride",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "📋",
+    "iconClass": "type-hearing",
+    "type": "Ordinance",
+    "filterTag": "ordinance",
+    "summary": "The Telluride Town Council has scheduled a public hearing at its regular meeting on September 1, 2026, to consider an ordinance amending the 2026 Municipal Budget. The ordinance would reappropriate unexpended 2025 budget line items, make supplemental appropriations from existing fund balances, and appropriate revenues in excess of 2025 estimates. Community members interested in the Town's budget adjustments are encouraged to attend.",
+    "deadline": "2026-09-01",
+    "expires": "2026-09-01",
+    "dates": "8/20",
+    "papers": [
+      "ttimes_0820"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_7e6a7420-27c6-4f95-b0b8-101dfc5b4763.html",
+    "address": "Town of Telluride, Colorado",
+    "noticeKey": "public-hearing-telluride-budget-2026-supplemental"
+  },
+  {
+    "title": "ECMC Hearing Notice -- Order Finding Violation Against American Helium Operating LLC (Docket No. 260700207)",
+    "entity": "Colorado Energy and Carbon Management Commission / American Helium Operating LLC",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "The Colorado Energy and Carbon Management Commission (ECMC) Staff has applied for an Order Finding Violation against American Helium Operating LLC (Operator No. 10841) related to Notice of Alleged Violation No. 404024729. A hearing before an ECMC Hearing Officer is scheduled for October 29, 2026 at 9:00 a.m. in Denver, with virtual access also available. Affected persons must petition to participate by September 29, 2026.",
+    "deadline": "2026-09-29",
+    "expires": "2026-10-29",
+    "dates": "8/20",
+    "papers": [
+      "ttimes_0820"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_7e6a7420-27c6-4f95-b0b8-101dfc5b4763.html",
+    "address": "Colorado Energy and Carbon Management Commission, 1120 Lincoln Street, Suite 801, Denver, CO 80203",
+    "noticeKey": "ecmc-docket-260700207-american-helium",
+    "caseNumber": "260700207"
+  },
+  {
+    "title": "ITB -- 2026 Street Mill & Overlay Program (COL-000221)",
+    "entity": "Town of Telluride Public Works",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "The Town of Telluride is accepting sealed bids for its 2026 Street Mill & Overlay Project within Telluride, Colorado. Bids must be received by 4:00 p.m. on Tuesday, September 1, 2026, either in person at Telluride's Public Works & Transit Facility or via confirmed electronic submission. Bid documents are available through Public Works, by email/phone, or at www.bidnetdirect.com.",
+    "deadline": "2026-09-01T16:00:00",
+    "expires": "2026-09-01",
+    "dates": "8/20",
+    "papers": [
+      "ttimes_0820"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_7e6a7420-27c6-4f95-b0b8-101dfc5b4763.html",
+    "address": "1370 Black Bear Road, Telluride, CO 81435",
+    "noticeKey": "itb-telluride-street-mill-overlay-2026"
   }
 ]

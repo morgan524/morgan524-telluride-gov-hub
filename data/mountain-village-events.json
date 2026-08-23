@@ -1,38 +1,5 @@
 [
   {
-    "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
-    "description": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
-    "pubDate": "2026-08-18T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
-  },
-  {
-    "title": "Sunset Concert Series",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/sunset-concert-series/",
-    "description": "Set against the stunning alpine backdrop of Mountain Village, TMVOA's Sunset Concert Series returns for its 25th year—bringing free,",
-    "pubDate": "2026-08-19T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/41147/scs_event_thumbnail.png"
-  },
-  {
-    "title": "Market on the Plaza",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
-    "description": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
-    "pubDate": "2026-08-19T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
-  },
-  {
     "title": "Movies Under the Stars",
     "link": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     "description": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
@@ -88,6 +55,17 @@
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
   },
   {
+    "title": "Earth’s Most Resilient Life, Our Greatest Hope: Exploring Unusual Microbes to Solve Humanity’s Biggest Challenges",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/earths-most-resilient-life-our-greatest-hope-exploring-unusual-microbes-to-solve-humanitys-biggest-challenges/",
+    "description": "Join us at the Telluride Innovation Center as Braden Tierney, cofounder and executive director of the Two Frontiers Project,",
+    "pubDate": "2026-08-25T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49629/microbes_tomv.png"
+  },
+  {
     "title": "Market on the Plaza",
     "link": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     "description": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
@@ -108,6 +86,17 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/49529/akb_1557-1.jpeg"
+  },
+  {
+    "title": "Water in the West: The Colorado River and the Future of Lake Powell",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/water-in-the-west-the-colorado-river-and-the-future-of-lake-powell/",
+    "description": "Join Sheep Mountain Alliance, San Juan Citizens Alliance, Patagonia Telluride and Wilkinson Public Library for a conversation with author and journalist Zak",
+    "pubDate": "2026-08-26T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49683/water_in_the_west_instagram_copy.jpg"
   },
   {
     "title": "Music on the Green Presents Cristina Vane",
@@ -196,6 +185,28 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    "title": "Mountain Towns 2030: Leveraging A Network of Community Leaders to Accelerate Climate Action",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/mountain-towns-2030-leveraging-a-network-of-community-leaders-to-accelerate-climate-action/",
+    "description": "As climate challenges grow, no community can solve them alone. The most effective solutions often emerge when leaders come together, learn from one another,",
+    "pubDate": "2026-09-02T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49605/tomv.jpg"
+  },
+  {
+    "title": "Design Review Board Meeting September 2026",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/september-design-review-board-meeting/",
+    "description": "The Mountain Village Design Review Board meets for its monthly meeting. Meeting material is typically posted on the Friday before a scheduled meeting.",
+    "pubDate": "2026-09-03T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/31725/drb-event-new.png"
   },
   {
     "title": "Music on the Green Presents Daniel Rodriguez",
@@ -297,17 +308,6 @@
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   },
   {
-    "title": "Music on the Green Presents Danno Simpson",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-danno-simpson/",
-    "description": "Beyond The Groove and TMVOA (tmvoa.org) present Danno Simpson at Reflection Plaza in Mountain Village. The Friday shows are free, all ages and family friendly.",
-    "pubDate": "2026-09-11T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/48869/danno_simpson_1800x900px_1.png"
-  },
-  {
     "title": "Movies Under the Stars",
     "link": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     "description": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
@@ -350,6 +350,17 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
+  },
+  {
+    "title": "Mountain Village Matters radio show",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/mountain-village-matters-radio-show/",
+    "description": "The Town of Mountain Village presents Mountain Village Matters on KOTO Community Radio. Tune in to hear Communications Manager Kathrine Warren chatting with",
+    "pubDate": "2026-09-14T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49725/koto_show.png"
   },
   {
     "title": "Bike & Brewery Tour",
@@ -405,5 +416,49 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/48871/leon_timbo_1800x900px_1.png"
+  },
+  {
+    "title": "Movies Under the Stars",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    "description": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "pubDate": "2026-09-19T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
+  {
+    "title": "Mind Blown Telluride",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    "description": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    "pubDate": "2026-09-19T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
+  },
+  {
+    "title": "Sunday Rehab at Alloy Kitchen",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
+    "description": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
+    "pubDate": "2026-09-20T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
+  },
+  {
+    "title": "Bike & Brewery Tour",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    "description": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    "pubDate": "2026-09-21T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   }
 ]
