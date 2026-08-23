@@ -1668,6 +1668,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Telluride Fire plans station expansion in Placerville",
+    source: "Telluride Times",
+    date: "August 23, 2026",
+    firstSeen: "2026-08-23",
+    newsTopic: "government",
+    copy: "Telluride Fire Protection District is expanding Station 3 in Placerville with a new apparatus bay, updated crew quarters, and the district's first training tower — funded through the operating budget plus a $575,000 state grant, no new taxes. The three-story live-burn facility must be operational by August 2027. Station remodel is estimated at $7 million and still in permitting.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_37484dae-0d32-43f3-a9c8-8910191c83c1.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/f4/2f44c84d-2a71-4ba5-9820-a208e47ce0ad/6a8b318f45bd1.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Fashion with a conscience",
     source: "Telluride Times",
     date: "August 23, 2026",
@@ -3117,17 +3129,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-23/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    pubDate: "2026-08-23T13:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
   {
     title: "Lynne Beck Memorial Meeting",
     link: "https://koto.org/event/lynne-beck-memorial-meeting/",
