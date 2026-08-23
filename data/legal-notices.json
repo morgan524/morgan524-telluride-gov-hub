@@ -179,26 +179,6 @@
     "caseNumber": "202605"
   },
   {
-    "title": "Notice of Vesting -- Site-Specific Development Plan (Project Title: 72 [truncated])",
-    "entity": "Town of Telluride",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "📋",
-    "iconClass": "type-hearing",
-    "type": "Ordinance",
-    "filterTag": "ordinance",
-    "summary": "The Town of Telluride is giving public notice pursuant to Colorado Revised Statutes Section 24-68-103(1) and Telluride Municipal Code Title 18, Article 5, Division 2, Section 5-208.H that a site-specific development plan and vested property right has been approved for a project identified in the notice (project title beginning with '72'; full details were truncated in the source text). Vesting notices typically establish property rights for a defined period following approval. Community members with questions should contact the Town of Telluride directly for full project details.",
-    "deadline": "",
-    "expires": "2026-08-22",
-    "dates": "7/23",
-    "papers": [
-      "ttimes_0723"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
-    "address": "Telluride, Colorado (specific parcel address truncated in source text)",
-    "noticeKey": "vesting-project-72-telluride"
-  },
-  {
     "title": "Public Notice -- Farmers' Water Development Company Replacement Share Certificate #887",
     "entity": "Farmers' Water Development Company",
     "entityClass": "ent-county",
