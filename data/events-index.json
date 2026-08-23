@@ -781,7 +781,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn…",
     "type": "Arts & Film",
-    "endDate": "2026-10-14"
+    "endDate": "2026-10-21"
   },
   {
     "title": "Gaiascope Opening Night",
@@ -822,7 +822,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Join us every Wednesday at 6 PM for Open Mic Night with DJ Strong at Floating Lotus Brewery. Bring an original song, play a favorite cover, meet other local musicians, or jump into one of our full-band jam sessions. Solo performers,…",
     "type": "Music",
-    "endDate": "2026-10-15"
+    "endDate": "2026-10-22"
   },
   {
     "title": "Yoga in the Park- Wednesday evenings",
@@ -1440,6 +1440,32 @@
     "type": "Music"
   },
   {
+    "title": "Tennis Clinic 4.0+",
+    "href": "https://koto.org/event/tennis-clinic-4-0/2026-08-31/",
+    "date": "2026-08-31",
+    "time": "11:00 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Emergency Preparedness For People, Pets and Our Communities",
+    "href": "https://koto.org/event/emergency-preparedness-for-people-pets-and-our-communities/",
+    "date": "2026-08-31",
+    "time": "5:00 PM",
+    "location": "Patagonia Telluride, Telluride Retail",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/Emergency-Preparedness-Flyer-JABOR.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "ARE YOU READY? Wildfires, floods and other emergencies can happen quickly. Join Patagonia, San Miguel County Emergency Management, Second Chance Humane Society and Just A Bunch of Roadies for a practical one-hour session on how to prepare…",
+    "type": "Community"
+  },
+  {
     "title": "August Culinary Club: Creamy Taco Soup",
     "href": "https://events.ourayridgwayevents.com/event/august-culinary-club-creamy-taco-soup",
     "date": "2026-08-31",
@@ -1479,19 +1505,6 @@
     "type": "Outdoors & Sports"
   },
   {
-    "title": "Emergency Preparedness for People, Pets and Our Communities",
-    "href": "https://www.telluride.com/event/emergency-preparedness-for-people-pets-and-our-communities/",
-    "date": "2026-08-31",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63418/emergency_preparedness_flyer-_jabor.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "ARE YOU READY? Wildfires, floods and other emergencies can happen quickly. Join Patagonia, San Miguel County Emergency …",
-    "type": "Community"
-  },
-  {
     "title": "Tennis Clinic 3.0-4.0",
     "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-31/",
     "date": "2026-08-31",
@@ -1519,6 +1532,19 @@
     "endDate": "2026-09-25"
   },
   {
+    "title": "Tennis Clinic 4.0+",
+    "href": "https://koto.org/event/tennis-clinic-4-0/2026-09-01/",
+    "date": "2026-09-01",
+    "time": "11:00 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
+    "type": "Outdoors & Sports"
+  },
+  {
     "title": "CORAL SKYE",
     "href": "https://events.ourayridgwayevents.com/event/coral-skye-7556",
     "date": "2026-09-01",
@@ -1530,6 +1556,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
     "type": "Music"
+  },
+  {
+    "title": "Gather and Grieve",
+    "href": "https://koto.org/event/gather-and-grieve/2026-09-01/",
+    "date": "2026-09-01",
+    "time": "5:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/Gather-and-Grieve-updated.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Telluride Gather and Grieve support group is scheduled to begin August 25th and will run for eight weeks on Tuesday evenings. The group will meet at the Wilkinson Public Library, is free of charge, and will incorporate a variety of…",
+    "type": "Community"
   },
   {
     "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
@@ -1572,6 +1611,32 @@
     "endDate": "2026-10-07"
   },
   {
+    "title": "Bardic Trails Online Poetry Night",
+    "href": "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-09-01/",
+    "date": "2026-09-01",
+    "time": "7:00 PM",
+    "location": "",
+    "town": "",
+    "img": "https://koto.org/wp-content/uploads/2026/03/Bardic-Trails-2026.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for…",
+    "type": "Talks & Classes"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-01/",
+    "date": "2026-09-01",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
+    "type": "Outdoors & Sports"
+  },
+  {
     "title": "The M Factor, Shredding the Silence on Menopause. Film followed by a panel discussion",
     "href": "https://sherbino.org/event/the-m-factor-shredding-the-silence-on-menopause-film-followed-by-a-panel-discussion/",
     "date": "2026-09-01",
@@ -1599,15 +1664,15 @@
   },
   {
     "title": "Market on the Plaza",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    "href": "https://koto.org/event/market-on-the-plaza/2026-09-02/",
     "date": "2026-09-02",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
+    "time": "11:00 AM",
+    "location": "Heritage Plaza, Mountain Village",
     "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/mountainvillage.jpg",
     "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    "source": "KOTO Community Calendar",
+    "desc": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan…",
     "type": "Community"
   },
   {
@@ -1674,6 +1739,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Hike up the Silvershield Trail to see fossilized dinosaur tracks. This is a strenuous and steep hike of 1600 vertical feet. You should be in good hiking shape to do this tour. We will discuss the geology and natural history of this…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-02/",
+    "date": "2026-09-02",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
     "type": "Outdoors & Sports"
   },
   {
