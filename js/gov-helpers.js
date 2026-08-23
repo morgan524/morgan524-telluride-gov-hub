@@ -1678,15 +1678,15 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "Collaborating on climate action",
+    title: "Fashion with a conscience",
     source: "Telluride Times",
     date: "August 23, 2026",
     firstSeen: "2026-08-23",
-    newsTopic: "community",
-    copy: "EcoAction Partners, the Telluride Foundation, and Telluride Science are hosting a free public event on Sept. 2, 6–7 p.m. at the Telluride Innovation Center, featuring Mountain Towns 2030, a nonprofit network focused on practical climate action for mountain communities. The evening includes a panel with leaders from Breckenridge, Ridgway, and MT2030.",
+    newsTopic: "education",
+    copy: "EcoAction Partners is hosting its first \"Full-Circle Fashion Fundraiser\" — a sip-and-shop clothing sale — August 29–30 at the Ah Haa School Sky Deck. Gently used clothing can be donated at several drop-off locations through Aug. 29, or consigned at the EcoAction office Aug. 24–28. Proceeds support the local climate action nonprofit.",
     claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_407d6ab9-8150-4eb9-8259-1b2b83bcf1a9.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/0a/10a2c19f-c364-4cbf-b414-6be0f2c4584e/6a89daf284ad8.image.jpg",
+    href: "https://www.telluridenews.com/news/article_c767cb0d-80b0-4d2e-ad9c-1816456891e3.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     imgHiRes: true
   },
   {
@@ -2282,6 +2282,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Collaborating on climate action",
+    source: "Telluride Times",
+    date: "August 23, 2026",
+    firstSeen: "2026-08-23",
+    newsTopic: "community",
+    copy: "EcoAction Partners, the Telluride Foundation, and Telluride Science are hosting a free public event on Sept. 2, 6–7 p.m. at the Telluride Innovation Center, featuring Mountain Towns 2030, a nonprofit network focused on practical climate action for mountain communities. The evening includes a panel with leaders from Breckenridge, Ridgway, and MT2030.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_407d6ab9-8150-4eb9-8259-1b2b83bcf1a9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/0a/10a2c19f-c364-4cbf-b414-6be0f2c4584e/6a89daf284ad8.image.jpg",
     imgHiRes: true
   },
   {
@@ -6185,6 +6197,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
+  },
+  {
+    title: "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
+    link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
+    description: "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
+    pubDate: "2026-09-22T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
   }
 ];
 
