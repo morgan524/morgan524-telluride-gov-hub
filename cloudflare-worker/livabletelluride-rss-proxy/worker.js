@@ -244,6 +244,88 @@ async function cioIdentify(env, email, attrs) {
   }
 }
 
+// ── New-subscriber notification ──────────────────────────────────────
+// Customer.io has no built-in "email me when someone subscribes" setting, so
+// the notification is raised here, at the source. Fires only when a sub_*
+// attribute goes FALSE -> TRUE, so re-saving a profile or toggling a topic
+// stays quiet; the topic_* attributes deliberately do not count as a new
+// subscription.
+//
+// Entirely optional and off by default: with neither SIGNUP_NOTIFY_WEBHOOK nor
+// SIGNUP_NOTIFY_EMAIL set, nothing runs and signup does not pay for the extra
+// prior-state read. Every failure path is swallowed -- a notification must
+// never break a signup -- and the send runs in waitUntil() so it adds no
+// latency to the response.
+const NOTIFY_SUB_ATTRS = Object.values(CIO_SUBS_TO_ATTR).filter((a) => a.startsWith("sub_"));
+const SUB_LABELS = { sub_weekly_update: "Weekly Update", sub_newsletter: "Newsletter", sub_daily: "Daily Update" };
+
+const cioTruthy = (v) => v === true || v === 1 || v === "true" || v === "1";
+
+function signupNotifyEnabled(env) {
+  return !!(env.SIGNUP_NOTIFY_WEBHOOK || (env.SIGNUP_NOTIFY_EMAIL && env.SIGNUP_NOTIFY_TRANSACTIONAL_ID));
+}
+
+// Prior attributes for the false->true diff. Returns {} for a person Customer.io
+// has never seen (404 -- every flag was effectively false), or null when the
+// answer is unknowable (no App API key, network error, unexpected status). Null
+// means "do not guess": skipping a notification is better than inventing one.
+// Kept separate from handleProfileRead's inline lookup on purpose -- that path
+// is token-gated and shapes a response for the profile page; this one is an
+// internal read on the signup path and must never throw.
+async function cioPriorAttrs(env, email) {
+  if (!env.CUSTOMERIO_APP_API_KEY) return null;
+  try {
+    const r = await fetch("https://api.customer.io/v1/customers/" + encodeURIComponent(email) + "/attributes", {
+      headers: { Authorization: "Bearer " + env.CUSTOMERIO_APP_API_KEY },
+    });
+    if (r.status === 404) return {};
+    if (!r.ok) return null;
+    const j = await r.json();
+    return (j.customer && j.customer.attributes) || j.attributes || {};
+  } catch (_) { return null; }
+}
+
+async function sendSignupNotification(env, email, newlyOn, attrs) {
+  const lists = newlyOn.map((a) => SUB_LABELS[a] || a).join(", ");
+  const name = [attrs.first_name, attrs.last_name].filter(Boolean).join(" ");
+  const summary = "New Livable Telluride subscriber: " + email + (name ? " (" + name + ")" : "") + " -- " + lists;
+
+  if (env.SIGNUP_NOTIFY_WEBHOOK) {
+    try {
+      await fetch(env.SIGNUP_NOTIFY_WEBHOOK, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        // `text` is what a Slack incoming webhook renders; the rest is there for
+        // any other consumer (Zapier, Make, a script of our own).
+        body: JSON.stringify({
+          text: summary,
+          event: "new_subscription",
+          email,
+          newly_subscribed: newlyOn,
+          first_name: attrs.first_name || "",
+          region: attrs.region || "",
+          at: new Date().toISOString(),
+        }),
+      });
+    } catch (_) {}
+  }
+
+  if (env.SIGNUP_NOTIFY_EMAIL && env.SIGNUP_NOTIFY_TRANSACTIONAL_ID && env.CUSTOMERIO_APP_API_KEY) {
+    try {
+      await fetch("https://api.customer.io/v1/send/email", {
+        method: "POST",
+        headers: { Authorization: "Bearer " + env.CUSTOMERIO_APP_API_KEY, "Content-Type": "application/json" },
+        body: JSON.stringify({
+          transactional_message_id: env.SIGNUP_NOTIFY_TRANSACTIONAL_ID,
+          to: env.SIGNUP_NOTIFY_EMAIL,
+          identifiers: { email: env.SIGNUP_NOTIFY_EMAIL },
+          message_data: { subscriber_email: email, subscriber_name: name, lists, summary },
+        }),
+      });
+    } catch (_) {}
+  }
+}
+
 function profileCorsHeaders(origin) {
   const allow = PROFILE_ALLOWED_ORIGINS.includes(origin) ? origin : PROFILE_ALLOWED_ORIGINS[0];
   return {
@@ -334,7 +416,7 @@ async function handleProfileRead(request, env) {
   });
 }
 
-async function handleUpdateProfile(request, env) {
+async function handleUpdateProfile(request, env, ctx) {
   const cors = profileCorsHeaders(request.headers.get("Origin") || "");
   const json = (obj, status) => new Response(JSON.stringify(obj), { status: status || 200, headers: cors });
   if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
@@ -381,8 +463,26 @@ async function handleUpdateProfile(request, env) {
   if (optingIn) cioAttrs.unsubscribed = false;
   if (!Object.keys(cioAttrs).length) return json({ ok: false, msg: "Nothing to update." }, 400);
 
+  // Which list subscriptions is this request switching ON? The prior state has
+  // to be read BEFORE the upsert overwrites it, so this sits on the request
+  // path -- but only when a notification is actually configured AND this
+  // request could plausibly be a new subscription, so the common cases (a name
+  // edit, an opt-out, notifications off) pay nothing.
+  const turningOn = NOTIFY_SUB_ATTRS.filter((a) => cioAttrs[a] === true);
+  let newlyOn = [];
+  if (turningOn.length && signupNotifyEnabled(env)) {
+    const prior = await cioPriorAttrs(env, email);
+    // null = prior state unknown; stay quiet rather than risk a false alarm.
+    if (prior) newlyOn = turningOn.filter((a) => !cioTruthy(prior[a]));
+  }
+
   const cioStatus = await cioIdentify(env, email, cioAttrs);
   if (cioStatus === "ok") {
+    // Only after the save actually landed, and never blocking the response.
+    if (newlyOn.length) {
+      const p = sendSignupNotification(env, email, newlyOn, cioAttrs);
+      if (ctx) ctx.waitUntil(p); else p.catch(() => {});
+    }
     return json({ ok: true, msg: "Your info has been updated — thank you!", cio: cioStatus });
   }
   return json({ ok: false, msg: "Couldn't save your info right now — please try again.", cio: cioStatus }, 502);
@@ -952,7 +1052,7 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     if (url.pathname === "/update-profile") {
-      return handleUpdateProfile(request, env);
+      return handleUpdateProfile(request, env, ctx);
     }
     if (url.pathname === "/profile-read") {
       return handleProfileRead(request, env);
