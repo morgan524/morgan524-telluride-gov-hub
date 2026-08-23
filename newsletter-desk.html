@@ -311,6 +311,7 @@ function mdToEmail(md, meta){
   + '<td style="background:#ffffff;border-radius:10px;padding:6px;width:56px;"><a href="https://livabletelluride.org" target="_blank"><img src="'+LOGO+'" width="52" height="52" alt="Livable Telluride" style="display:block;width:52px;height:52px;border:0;"></a></td>'
   + '<td style="padding-left:14px;font-family:Georgia,serif;color:#ffffff;font-size:22px;font-weight:700;letter-spacing:.02em;">Livable Telluride</td>'
   + '</tr></table></td></tr>'
+  + '<!--LT-HEADER-->'
   + out.join("")
   + '<tr><td style="padding:26px 34px 30px;border-top:1px solid #e4e8e4;">'
   + '<div style="font-family:Georgia,serif;font-size:17px;color:#21443c;font-weight:700;">Livable Telluride</div>'
@@ -330,13 +331,18 @@ function headerRows(){
 function buildHtml(){
   const md = $("md").value;
   let html = mdToEmail(md, { subject:$("subject").value });
-  // headline block goes after the hero image if one leads, else right after the masthead
+  // Header block (kicker, headline, byline) goes after a leading hero image if
+  // there is one, otherwise straight after the masthead. Anchored on an
+  // explicit marker, NOT on a body row's padding: the old regex matched
+  // "padding:1[0-6]px 34px", so changing body spacing silently relocated the
+  // headline into the middle of the article -- or dropped it entirely when
+  // nothing else happened to match.
   const heroMatch = html.match(/<tr><td style="padding:0;"><img[^>]*><\/td><\/tr>/);
-  if(heroMatch) html = html.replace(heroMatch[0], heroMatch[0] + headerRows());
-  else html = html.replace(/(<\/tr>)(?=<tr><td style="padding:1[0-6]px 34px)/, "$1"+headerRows());
-  if(html.indexOf("<h1")===-1) html = html.replace('</table></td></tr>'+"", '</table></td></tr>'); // no-op safety
-  return html;
+  return heroMatch
+    ? html.replace("<!--LT-HEADER-->", "").replace(heroMatch[0], heroMatch[0] + headerRows())
+    : html.replace("<!--LT-HEADER-->", headerRows());
 }
+
 
 /* ---------------- preview + checks ---------------- */
 let lastHtml = "";
