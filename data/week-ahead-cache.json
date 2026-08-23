@@ -1,6 +1,6 @@
 {
-  "hash": "fe56eaabe879208796e4093f0b06d2c104b73322",
-  "lede": "The school board votes Monday on a flood-related budget appropriation for the coming school year — real money tied to real damage at TIS, TMHS, and the Palm Theatre complex — and that alone is worth tracking. Alongside it, the Ethics Commission takes up a formal Code of Conduct recommendation for Town officials on Tuesday, the county weighs child-care funding implications on Wednesday, and the Hospital District board considers a Two Site Model that could define what gets built and where for years to come.",
+  "hash": "43775ec5e294aca7c739dff3916faf8d8ab12c22",
+  "lede": "The School Board votes Monday on a flood-damage budget appropriation for FY 2026-27 — real money tied to this summer's hits on the TIS 5th grade pod, the high school cafeteria, and the Palm Theatre complex. Alongside that, the Ethics Commission takes up whether to establish a formal Code of Conduct for Town officials, the Hospital District board could act on a Two Site Model for the new facility, and Mountain Village's HOA moves to form a Workforce Housing Committee and vote on updated policies.",
   "notable": [
     {
       "id": 3,
@@ -8,19 +8,19 @@
     },
     {
       "id": 2,
-      "stake": "Commission recommends whether Town officials get a binding Code of Conduct."
+      "stake": "Commission develops recommendation on a formal Code of Conduct for Town officials."
     },
     {
       "id": 4,
-      "stake": "County weighs CCAP child-care funding and its budget impact on Human Services."
+      "stake": "County discusses CCAP childcare funding and its direct budget implications."
     },
     {
       "id": 8,
-      "stake": "Hospital board may act on Two Site Model, shaping scope and location of new facility."
+      "stake": "Hospital board may act on Two Site Model, shaping what and where gets built."
     },
     {
       "id": 10,
-      "stake": "TMVOA votes on workforce housing committee formation and updated association policies."
+      "stake": "TMVOA votes on updated policies and acts on workforce housing committee formation."
     }
   ]
 }
