@@ -1150,6 +1150,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Summer School: Tale of Two Terroirs: Pommard & Volnay",
+    "href": "https://www.telluride.com/event/the-national-summer-school-tale-of-two-terroirs-pommard-volnay/",
+    "date": "2026-08-30",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63427/the-national_wineeducation-flyer_8_5x11_1.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Experience the profound nuances of the world's most prestigious wine region as part of The National's ongoing …",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Big Blitz",
     "href": "https://www.alibitelluride.com/calendar#eca-event=big-blitz",
     "date": "2026-08-30",
@@ -1268,6 +1281,19 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "The Democracy We Must Keep-Online Talk with David O. Stewart",
+    "href": "https://koto.org/event/the-democracy-we-must-keep-online-talk-with-david-o-stewart/",
+    "date": "2026-09-01",
+    "time": "12:00 PM",
+    "location": "Zoom",
+    "town": "",
+    "img": "https://koto.org/wp-content/uploads/2026/08/david.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join us as we chat with award-winning historian David O. Stewart about his newest work, The Democracy We Must Keep, and the question he explores throughout the book: What did America's founders say about democracy, and can we remain true…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "CORAL SKYE",
     "href": "https://events.ourayridgwayevents.com/event/coral-skye-7556",
     "date": "2026-09-01",
@@ -1279,6 +1305,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
     "type": "Music"
+  },
+  {
+    "title": "Summer Sketch Book Club",
+    "href": "https://koto.org/event/summer-sketch-book-club/",
+    "date": "2026-09-01",
+    "time": "5:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join us for our summer sketchbook club! Unwind, connect with other artists, and find inspiration in nature as you fill up your sketchbook. We will meet in the library lobby and together we will walk to find a drawing spot by the river or…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
@@ -1530,6 +1569,20 @@
     "type": "Community"
   },
   {
+    "title": "Trivia Night",
+    "href": "https://events.ourayridgwayevents.com/event/floating-lotus-trivia-night",
+    "date": "2026-09-03",
+    "time": "6:00 PM",
+    "location": "Floating Lotus Brewery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53790516346797/huge/599d1a7013ddde307592e7dfc9b892fe265527e0.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Trivia Night at Floating Lotus Brewery! Join us on the 1st & 3rd Thursdays from 6-9 PM for a lively night of questions, drinks, and friendly competition. Grab a table, bring your team, and learn more at floatinglotusbrewery.com. View on…",
+    "type": "Food & Drink",
+    "endDate": "2026-10-16"
+  },
+  {
     "title": "America 250 - Colorado 150 \"Stories in the Sky\" Drone Show",
     "href": "https://www.telluride.com/event/america-250-colorado-150-stories-in-the-sky-drone-show/",
     "date": "2026-09-03",
@@ -1543,20 +1596,6 @@
     "type": "Community"
   },
   {
-    "title": "Trivia Night | Music Bingo",
-    "href": "https://events.ourayridgwayevents.com/event/trivia-night-music-bingo",
-    "date": "2026-09-03",
-    "time": "7:00 PM",
-    "location": "Floating Lotus Brewery",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53774280499304/huge/b7b8de294fcf5d7a8eeea15f309e79792a5bc48a.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Thirsty Thursday Game Night is back at Floating Lotus Brewery! Join us every Thursday for a rotating lineup of trivia and music bingo: 1st & 3rd Thursdays: Trivia2nd & 4th Thursdays: Music Bingo Grab a table, bring your friends, and settle…",
-    "type": "Food & Drink",
-    "endDate": "2026-10-23"
-  },
-  {
     "title": "Pickleball Nights",
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-09-03",
@@ -1567,19 +1606,6 @@
     "category": "Community Event",
     "source": "Beacon",
     "desc": "Thursday night pickleball with no experience necessary; all supplies provided.",
-    "type": "Outdoors & Sports"
-  },
-  {
-    "title": "Tennis Clinic 3.0-4.0",
-    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-03/",
-    "date": "2026-09-03",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
     "type": "Outdoors & Sports"
   },
   {
@@ -2107,6 +2133,20 @@
     "source": "Telluride Chamber Music",
     "desc": "An hour of chamber music on the deck — the perfect way to unwind.",
     "type": "Music"
+  },
+  {
+    "title": "Music Bingo",
+    "href": "https://events.ourayridgwayevents.com/event/music-bingo",
+    "date": "2026-09-10",
+    "time": "6:00 PM",
+    "location": "Floating Lotus Brewery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53790449536989/huge/a7181e9d298980d4c2377db45d06d26bb81e0b12.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Music Bingo at Floating Lotus Brewery! Join us on the 2nd & 4th Thursdays from 6-9 PM for a high-energy night of music, drinks, and bingo-style fun. Listen, mark your card, and sing along. Learn more at floatinglotusbrewery.com. View on…",
+    "type": "Food & Drink",
+    "endDate": "2026-10-23"
   },
   {
     "title": "Ouray Comedy Night with Casey Skinner",

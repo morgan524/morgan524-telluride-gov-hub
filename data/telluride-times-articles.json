@@ -1,5 +1,29 @@
 [
   {
+    "title": "‘Fear took over’",
+    "source": "Telluride Times",
+    "date": "August 24, 2026",
+    "firstSeen": "2026-08-24",
+    "newsTopic": "government",
+    "copy": "Advocates from the Workers' School presented Mountain Village Town Council with a proposed workers' rights ordinance at the Aug. 20 meeting, backed by a 142-page packet on wage theft, labor trafficking, and worker misclassification. Testimony included a domestic worker's account of a work-related miscarriage and a story of a commuter worker who died from overwork. The ordinance calls for anonymous reporting, retaliation protections, and enforcement tied to business licensing.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_6cc11ae2-c3ba-457f-a8b8-38feb97aae16.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/c9/dc97a2da-4298-41fb-a16a-2d7aeda9f7d7/6a88bf233be2e.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "‘El miedo se apoderó de nosotros’",
+    "source": "Telluride Times",
+    "date": "August 24, 2026",
+    "firstSeen": "2026-08-24",
+    "newsTopic": "community",
+    "copy": "To read this article in English, please click here.",
+    "claudeSummary": false,
+    "href": "https://www.telluridenews.com/news/article_912fb87f-47a2-4b5d-955d-29e93b886b28.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/a7/6a7eb7c6-a329-475f-9fd8-8d59f26124ea/6a8caf0264c0a.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Collaborating on climate action",
     "source": "Telluride Times",
     "date": "August 23, 2026",
@@ -836,7 +860,7 @@
   {
     "title": "Waste Tire Collection Event",
     "source": "San Miguel County",
-    "date": "August 18, 2026",
+    "date": "August 24, 2026",
     "newsTopic": "community",
     "copy": "",
     "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",

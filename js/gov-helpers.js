@@ -282,7 +282,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118","sv":4,"ph":"470be197e8a2ab23"},
 
   "telluride|2026-09-02|Commission for Community Assistance, Arts & Special Events - Sep 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066","sv":4,"ph":"3bcbff87c865ec6d"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066","sv":4,"ph":"271e26295cef7f51"},
 
   "telluride|2026-09-02|Telluride Housing Authority Subcommittee - Sep 02 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163","sv":4,"ph":"558b2c991b258cd1"},
@@ -363,7 +363,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"agendaUrl":"https://files.smartsites.parentsquare.com/3403/82426_ws_packet.pdf","zoomUrl":"https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09","meetingId":"865 8512 4120","passcode":"468668"},
 
   "school|2026-08-25|Telluride Board of Education Monthly Meeting":
-    {"sv":4,"agendaUrl":"https://files.smartsites.parentsquare.com/3403/82526_mm_packet_1.pdf","zoomUrl":"https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09","meetingId":"865 8512 4120","passcode":"468668","phone":"970-728-6617"},
+    {"sv":4,"agendaUrl":"https://files.smartsites.parentsquare.com/3403/82526_mm_packet.pdf","zoomUrl":"https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09","meetingId":"865 8512 4120","passcode":"468668","phone":"970-728-6617"},
 
   "fire|2026-09-15|Board of Directors Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -1681,6 +1681,30 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "‘Fear took over’",
+    source: "Telluride Times",
+    date: "August 24, 2026",
+    firstSeen: "2026-08-24",
+    newsTopic: "government",
+    copy: "Advocates from the Workers' School presented Mountain Village Town Council with a proposed workers' rights ordinance at the Aug. 20 meeting, backed by a 142-page packet on wage theft, labor trafficking, and worker misclassification. Testimony included a domestic worker's account of a work-related miscarriage and a story of a commuter worker who died from overwork. The ordinance calls for anonymous reporting, retaliation protections, and enforcement tied to business licensing.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_6cc11ae2-c3ba-457f-a8b8-38feb97aae16.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/c9/dc97a2da-4298-41fb-a16a-2d7aeda9f7d7/6a88bf233be2e.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "‘El miedo se apoderó de nosotros’",
+    source: "Telluride Times",
+    date: "August 24, 2026",
+    firstSeen: "2026-08-24",
+    newsTopic: "community",
+    copy: "To read this article in English, please click here.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/article_912fb87f-47a2-4b5d-955d-29e93b886b28.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/a7/6a7eb7c6-a329-475f-9fd8-8d59f26124ea/6a8caf0264c0a.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Collaborating on climate action",
     source: "Telluride Times",
     date: "August 23, 2026",
@@ -2517,7 +2541,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Waste Tire Collection Event",
     source: "San Miguel County",
-    date: "August 18, 2026",
+    date: "August 24, 2026",
     newsTopic: "community",
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
@@ -2721,7 +2745,7 @@ const SMB_FORUM_ARTICLES = [
     copy: "Norwood Fire and EMS Chief John Bockrath is stepping down Sept. 30 after admitting he repeatedly bent SOPs — administering narcotics and other treatments without required transports or call-ins, citing the disconnect between Denver Metro protocols and rural realities. Authorities ruled the violations procedural, not criminal. The district's future leadership remains unsettled.",
     claudeSummary: true,
     href: "https://www.sanmiguelbasinforum.com/stories/bockrath-resigns-as-chief-confesses-errors,127202",
-    img: ""
+    img: "https://zeta.creativecirclecdn.com/smb/original/20260824-154413-efb-att.xeahuViXb-eb7tNtZoEzB5n87D_s2drnOQxiyw41AvA.JPG"
   },
   {
     title: "Bray talks drought, hay; calls for better relationships in navigating tough issues",
@@ -3539,6 +3563,28 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "The Democracy We Must Keep-Online Talk with David O. Stewart",
+    link: "https://koto.org/event/the-democracy-we-must-keep-online-talk-with-david-o-stewart/",
+    description: "Join us as we chat with award-winning historian David O. Stewart about his newest work, The Democracy We Must Keep, and the question he explores throughout the book: What did America's founders say about democracy, and can we remain true to their vision for America? Two hundred fifty years ago, passionate men attempted to create something the world had never seen before: a nation built not on kings or armies, but on ideas where the people ruled. In The Democracy We Must Keep, historian David O. Stewart takes readers inside the nine key documents that shaped the formation of the United States—from Patrick Henry's thunderous cry for liberty to the carefully crafted design of a government chosen by the people, with limits on all officials holding power under the Constitution. …",
+    pubDate: "2026-09-01T12:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Zoom",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/david.png"
+  },
+  {
+    title: "Summer Sketch Book Club",
+    link: "https://koto.org/event/summer-sketch-book-club/",
+    description: "Join us for our summer sketchbook club! Unwind, connect with other artists, and find inspiration in nature as you fill up your sketchbook. We will meet in the library lobby and together we will walk to find a drawing spot by the river or in the park. All experience levels and drawing styles are welcome. Bring your own sketchbook and drawing materials; some materials may be available to borrow. You may also wish to bring sun protection, a towel or folding chair to sit on, and an extra layer as we will be sketching outside.",
+    pubDate: "2026-09-01T17:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
     title: "Bardic Trails Online Poetry Night",
     link: "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-09-01/",
     description: "The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit to get the zoom link each month, Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. Jan. 6 / Euro-American poet Dane Cervine of California Feb. …",
@@ -3602,28 +3648,6 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Innovation Center",
-    imageUrl: ""
-  },
-  {
-    title: "Telluride Rotary Club Meeting",
-    link: "https://koto.org/event/telluride-rotary-club-meeting-2/",
-    description: "Telluride Rotary Club meets Wednesday, September 2, at 6 p.m. at the Mountain Lodge in Mountain Village. Come at 5:30PM to socialize before the meeting. Meetings feature guest speakers and discussion of club projects. Anyone with an interest in networking and service is welcome to drop in as a guest. Email telluriderotary@gmail.com for info or to rsvp.",
-    pubDate: "2026-09-02T18:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Mountain Lodge Telluride, Mountain Village",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/Telluride-Rotary-Logo-White.jpg"
-  },
-  {
-    title: "Tennis Clinic 3.0-4.0",
-    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-03/",
-    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-03T09:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
   }
 ];
@@ -4733,16 +4757,16 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53629792913484/huge/0f655603601840911844cbf1cce4ddcdecf2dbb1.jpg"
   },
   {
-    title: "Trivia Night | Music Bingo",
-    link: "https://events.ourayridgwayevents.com/event/trivia-night-music-bingo",
-    description: "Thirsty Thursday Game Night is back at Floating Lotus Brewery! Join us every Thursday for a rotating lineup of trivia and music bingo: 1st & 3rd Thursdays: Trivia2nd & 4th Thursdays: Music Bingo Grab a table, bring your friends, and settle in for a fun night of games, drinks, and friendly competition at Floating Lotus Brewery. View on site | Email this event",
-    pubDate: "2026-09-04T01:00:00.000Z",
-    endDate: "2026-10-23",
+    title: "Trivia Night",
+    link: "https://events.ourayridgwayevents.com/event/floating-lotus-trivia-night",
+    description: "Trivia Night at Floating Lotus Brewery! Join us on the 1st & 3rd Thursdays from 6-9 PM for a lively night of questions, drinks, and friendly competition. Grab a table, bring your team, and learn more at floatinglotusbrewery.com. View on site | Email this event",
+    pubDate: "2026-09-04T00:00:00.000Z",
+    endDate: "2026-10-16",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53774280499304/huge/b7b8de294fcf5d7a8eeea15f309e79792a5bc48a.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53790516346797/huge/599d1a7013ddde307592e7dfc9b892fe265527e0.jpg"
   },
   {
     title: "Trivia Night @ the Wright",
@@ -5002,6 +5026,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53629792987218/huge/6f3a915f33285c3e3da2dbe8c54dfcf731474ba0.jpg"
+  },
+  {
+    title: "Music Bingo",
+    link: "https://events.ourayridgwayevents.com/event/music-bingo",
+    description: "Music Bingo at Floating Lotus Brewery! Join us on the 2nd & 4th Thursdays from 6-9 PM for a high-energy night of music, drinks, and bingo-style fun. Listen, mark your card, and sing along. Learn more at floatinglotusbrewery.com. View on site | Email this event",
+    pubDate: "2026-09-11T00:00:00.000Z",
+    endDate: "2026-10-23",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53790449536989/huge/a7181e9d298980d4c2377db45d06d26bb81e0b12.jpg"
   },
   {
     title: "Ouray Comedy Night with Casey Skinner",
@@ -6726,6 +6762,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/53487/kenburns_620x370_0.800x533.webp"
+  },
+  {
+    title: "Summer School: Tale of Two Terroirs: Pommard & Volnay",
+    link: "https://www.telluride.com/event/the-national-summer-school-tale-of-two-terroirs-pommard-volnay/",
+    description: "Experience the profound nuances of the world's most prestigious wine region as part of The National's ongoing …",
+    pubDate: "2026-08-30",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63427/the-national_wineeducation-flyer_8_5x11_1.800x533.webp"
   },
   {
     title: "Emergency Preparedness for People, Pets and Our Communities",

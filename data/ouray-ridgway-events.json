@@ -517,16 +517,16 @@
     "imageUrl": "https://localist-images.azureedge.net/photos/53629792913484/huge/0f655603601840911844cbf1cce4ddcdecf2dbb1.jpg"
   },
   {
-    "title": "Trivia Night | Music Bingo",
-    "link": "https://events.ourayridgwayevents.com/event/trivia-night-music-bingo",
-    "description": "Thirsty Thursday Game Night is back at Floating Lotus Brewery! Join us every Thursday for a rotating lineup of trivia and music bingo: 1st & 3rd Thursdays: Trivia2nd & 4th Thursdays: Music Bingo Grab a table, bring your friends, and settle in for a fun night of games, drinks, and friendly competition at Floating Lotus Brewery. View on site | Email this event",
-    "pubDate": "2026-09-04T01:00:00.000Z",
-    "endDate": "2026-10-23",
+    "title": "Trivia Night",
+    "link": "https://events.ourayridgwayevents.com/event/floating-lotus-trivia-night",
+    "description": "Trivia Night at Floating Lotus Brewery! Join us on the 1st & 3rd Thursdays from 6-9 PM for a lively night of questions, drinks, and friendly competition. Grab a table, bring your team, and learn more at floatinglotusbrewery.com. View on site | Email this event",
+    "pubDate": "2026-09-04T00:00:00.000Z",
+    "endDate": "2026-10-16",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
     "category": "Community Event",
     "location": "Floating Lotus Brewery",
-    "imageUrl": "https://localist-images.azureedge.net/photos/53774280499304/huge/b7b8de294fcf5d7a8eeea15f309e79792a5bc48a.jpg"
+    "imageUrl": "https://localist-images.azureedge.net/photos/53790516346797/huge/599d1a7013ddde307592e7dfc9b892fe265527e0.jpg"
   },
   {
     "title": "Trivia Night @ the Wright",
@@ -786,6 +786,18 @@
     "category": "Community Event",
     "location": "",
     "imageUrl": "https://localist-images.azureedge.net/photos/53629792987218/huge/6f3a915f33285c3e3da2dbe8c54dfcf731474ba0.jpg"
+  },
+  {
+    "title": "Music Bingo",
+    "link": "https://events.ourayridgwayevents.com/event/music-bingo",
+    "description": "Music Bingo at Floating Lotus Brewery! Join us on the 2nd & 4th Thursdays from 6-9 PM for a high-energy night of music, drinks, and bingo-style fun. Listen, mark your card, and sing along. Learn more at floatinglotusbrewery.com. View on site | Email this event",
+    "pubDate": "2026-09-11T00:00:00.000Z",
+    "endDate": "2026-10-23",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Floating Lotus Brewery",
+    "imageUrl": "https://localist-images.azureedge.net/photos/53790449536989/huge/a7181e9d298980d4c2377db45d06d26bb81e0b12.jpg"
   },
   {
     "title": "Ouray Comedy Night with Casey Skinner",
