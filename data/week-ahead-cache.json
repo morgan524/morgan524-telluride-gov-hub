@@ -1,26 +1,26 @@
 {
-  "hash": "e7d15473db8aba5147abd934869571825c88bbaf",
-  "lede": "The school board votes Monday on a flood-damage budget appropriation — real money to cover real destruction to TIS and TMHS — and that's the most concrete decision hitting any public body this week. Alongside it, the Ethics Commission takes up a Code of Conduct recommendation for Town officials, Mountain Village's HOA moves to form a Workforce Housing Committee, and the county digs into childcare funding implications. A full week of government with actual stakes, not just updates.",
+  "hash": "2231c0cfe6d3866ec44f58d503d717f885e33d20",
+  "lede": "The school board votes Monday on a flood-related budget appropriation for FY 2026-27 — real money being shifted because this summer's flooding tore through TIS, TMHS, and the Palm Theatre complex, and that vote on August 25 is the most consequential single action of the week. Alongside it, the Ethics Commission takes up whether to recommend a formal Code of Conduct for Town officials, the County weighs child-care assistance funding and its budget implications, and the Telluride Hospital District board could act on a Two Site Model that would shape what gets built and where for the new medical facility.",
   "notable": [
     {
       "id": 3,
-      "stake": "Board votes on flood-related budget appropriation affecting district spending this year."
+      "stake": "Board votes on flood-driven budget appropriation affecting district spending this year."
     },
     {
       "id": 2,
-      "stake": "Commission recommends whether Town officials get a formal, enforceable Code of Conduct."
+      "stake": "Commission drafts recommendation on formal Code of Conduct for Town officials."
     },
     {
       "id": 4,
-      "stake": "County weighs CCAP childcare funding and its real budget consequences for residents."
+      "stake": "County weighs CCAP child-care funding with direct budget implications for FY 2026-27."
     },
     {
       "id": 8,
-      "stake": "Hospital board may act on Two Site Model, shaping what new facility gets built and where."
+      "stake": "Hospital board may act on Two Site Model shaping scope and location of new facility."
     },
     {
       "id": 10,
-      "stake": "TMVOA votes to form Workforce Housing Committee and act on updated board policies."
+      "stake": "Board votes on policies, workforce housing committee formation, and ice pad grant."
     }
   ]
 }
