@@ -675,7 +675,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Thursday night pickleball with no experience necessary. All supplies provided.",
+    "desc": "Thursday night pickleball with no experience necessary; all supplies provided.",
     "type": "Outdoors & Sports"
   },
   {
@@ -1565,7 +1565,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Thursday night pickleball with no experience necessary. All supplies provided.",
+    "desc": "Thursday night pickleball with no experience necessary; all supplies provided.",
     "type": "Outdoors & Sports"
   },
   {
@@ -2117,7 +2117,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Thursday night pickleball with no experience necessary. All supplies provided.",
+    "desc": "Thursday night pickleball with no experience necessary; all supplies provided.",
     "type": "Outdoors & Sports"
   },
   {
@@ -2654,7 +2654,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Thursday night pickleball with no experience necessary. All supplies provided.",
+    "desc": "Thursday night pickleball with no experience necessary; all supplies provided.",
     "type": "Outdoors & Sports"
   },
   {
@@ -3010,7 +3010,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Thursday night pickleball with no experience necessary. All supplies provided.",
+    "desc": "Thursday night pickleball with no experience necessary; all supplies provided.",
     "type": "Outdoors & Sports"
   },
   {
@@ -3040,6 +3040,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Telluride Farmers' Market Music Series: Danny D'Alessandro",
+    "href": "https://www.telluride.com/event/telluride-farmers-market-music-series/",
+    "date": "2026-09-25",
+    "time": "11am - 3pm",
+    "location": "Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/farmersmarket-1.jpg",
+    "category": "",
+    "source": "Telluride.com",
+    "desc": "Augment Music Project sponsors local music with weekly performances at the Telluride Farmers' Market.",
+    "type": "Food & Drink"
+  },
+  {
     "title": "JEAN SANDOVAL AND THE TOWNKIDS",
     "href": "https://events.ourayridgwayevents.com/event/jean-sandoval-and-the-townkids",
     "date": "2026-09-25",
@@ -3064,19 +3077,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "This National Public Lands Day, join San Juan Moutains Association for our Ironton Valley Campsite Cleanup! We’ll have some friendly competition to see who can collect the most litter, artistically naturalize a fire ring, find the most…",
     "type": "Community"
-  },
-  {
-    "title": "Telluride Farmers' Market Music Series: Danny D'Alessandro",
-    "href": "https://www.telluride.com/event/telluride-farmers-market-music-series/",
-    "date": "2026-09-26",
-    "time": "11am - 3pm",
-    "location": "Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/farmersmarket-1.jpg",
-    "category": "",
-    "source": "Telluride.com",
-    "desc": "Augment Music Project sponsors local music with weekly performances at the Telluride Farmers' Market.",
-    "type": "Food & Drink"
   },
   {
     "title": "Exceptional Women of Ouray County",
@@ -3209,6 +3209,19 @@
     "type": "Music"
   },
   {
+    "title": "Weekly Young Adult Gathering",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-09-29",
+    "time": "6:00 PM",
+    "location": "The Well, 122 S Aspen",
+    "town": "",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Ouray: Echoes in the Canyon",
     "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon",
     "date": "2026-09-30",
@@ -3234,6 +3247,19 @@
     "desc": "Original Thinkers returns to breathtaking Telluride, Colorado, for the highly anticipated ninth annual festival, taking …",
     "type": "Festivals",
     "endDate": "2026-10-05"
+  },
+  {
+    "title": "Pickleball Nights",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-10-01",
+    "time": "7:00-9:00 PM",
+    "location": "Telluride Racket Club",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "Thursday night pickleball with no experience necessary; all supplies provided.",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Ken Gentry & the Companions",
