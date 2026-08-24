@@ -414,7 +414,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-09-22|Telluride Housing Authority - Sep 22 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303","sv":4,"ph":"df16bef2d4cca5b3"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303","sv":4,"ph":"02e6315b73bb46df"},
 
   "telluride|2026-09-22|Town Council - Sep 22 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043","sv":4,"ph":"6826f139b142e7dc"}
@@ -770,7 +770,7 @@ const MEETING_PREVIEWS = {
     "Council is expected to revisit matters related to Ordinance #1640, which amended Telluride's Land Use Code to implement the Colorado Wildfire Resiliency Code. The meeting may address follow-up actions or implementation details stemming from the ordinance passed on August 11, 2026.",
 
   "county|2026-08-24|Open Space Commission Meeting":
-    "The Open Space Commission is expected to receive updates on several ongoing projects, including the East End Connector Trail, Galloping Goose Park, Mill Creek Park, and the Placerville Schoolhouse restoration. The commission will also address citizen concerns about water flow diversion related to the Bridal Veil conservation easement."
+    "The Open Space Commission is expected to receive updates on natural resource and climate resiliency efforts, a new Parks and Open Space Manager hiring, Mill Creek Park seeding, trail connectivity, and park projects. Members will also discuss citizen concerns about water flow diversion and a conservation easement near Bridal Veil."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
