@@ -263,7 +263,10 @@
   "telluride|2026-09-01|Town Council - Sep 01 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042",
     "sv": 4,
-    "ph": "afbb6fcf58f46cfd"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/XA2kUuXlTg2aifJ0Qwwc-g",
+    "meetingId": "847 6915 1454",
+    "passcode": "077111.",
+    "phone": "719) 359-4580"
   },
   "telluride|2026-09-02|Ecology Commission - Sep 02 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118",
@@ -333,7 +336,7 @@
   "telluride|2026-09-10|Town Council Budget - Sep 10 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052",
     "sv": 4,
-    "ph": "71461d3fdc27b654"
+    "ph": "a2d452b639a44962"
   },
   "county|2026-09-10|Planning Commission Meeting": {
     "sv": 4,
@@ -429,7 +432,7 @@
   "telluride|2026-09-16|Historic & Architectural Review Commission Chair - Sep 16 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8023",
     "sv": 4,
-    "ph": "1c9ac53f80dc8a0e"
+    "ph": "96078cc700b16039"
   },
   "telluride|2026-09-16|Historic & Architectural Review Commission - Sep 16 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8022",
@@ -456,7 +459,7 @@
   "telluride|2026-09-17|Liquor Licensing Authority - Sep 17 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8145",
     "sv": 4,
-    "ph": "119eaf8e632151ef"
+    "ph": "5e169e6aed7b742f"
   },
   "telluride|2026-08-26|Resident Advisory Committee - Aug 26 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8304",
@@ -494,7 +497,7 @@
   "telluride|2026-09-22|Town Council - Sep 22 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043",
     "sv": 4,
-    "ph": "6826f139b142e7dc"
+    "ph": "c5b14e4bfd86db54"
   },
   "county|2026-09-23|Board of County Commissioners Work Session": {
     "sv": 4,

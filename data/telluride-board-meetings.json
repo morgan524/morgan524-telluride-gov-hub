@@ -13,10 +13,11 @@
     "date": "September 1, 2026",
     "title": "Town Council",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042",
-    "hasAgenda": false,
+    "hasAgenda": true,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "",
-    "civicwebId": 8042
+    "civicwebId": 8042,
+    "packetUrl": "https://telluride-co.civicweb.net/document/443717/"
   },
   {
     "date": "September 2, 2026",

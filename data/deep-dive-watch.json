@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-24T13:01:31.151Z",
+ "generated": "2026-08-24T15:47:29.966Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -16,6 +16,18 @@
      "link": "https://files.smartsites.parentsquare.com/3403/82526_mm_packet_1.pdf",
      "zoomLink": "https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09",
      "livestream": ""
+    },
+    {
+     "source": "telluride",
+     "sourceLabel": "Town of Telluride",
+     "title": "Town Council",
+     "date": "2026-09-01",
+     "time": "",
+     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042",
+     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042",
+     "zoomLink": "https://us06web.zoom.us/meeting/register/XA2kUuXlTg2aifJ0Qwwc-g",
+     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
     }
    ],
    "recent": [
@@ -86,7 +98,20 @@
   "wildfire": {
    "label": "Wildfire Resiliency",
    "lastUpdated": "2026-06-01",
-   "upcoming": [],
+   "upcoming": [
+    {
+     "source": "telluride",
+     "sourceLabel": "Town of Telluride",
+     "title": "Town Council",
+     "date": "2026-09-01",
+     "time": "",
+     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042",
+     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042",
+     "zoomLink": "https://us06web.zoom.us/meeting/register/XA2kUuXlTg2aifJ0Qwwc-g",
+     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+    }
+   ],
    "recent": [
     {
      "source": "fire",

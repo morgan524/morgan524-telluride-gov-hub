@@ -276,7 +276,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1014","sv":4},
 
   "telluride|2026-09-01|Town Council - Sep 01 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042","sv":4,"ph":"afbb6fcf58f46cfd"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/XA2kUuXlTg2aifJ0Qwwc-g","meetingId":"847 6915 1454","passcode":"077111.","phone":"719) 359-4580"},
 
   "telluride|2026-09-02|Ecology Commission - Sep 02 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118","sv":4,"ph":"470be197e8a2ab23"},
@@ -324,7 +324,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"307e0c7b19e4ff5b"},
 
   "telluride|2026-09-10|Town Council Budget - Sep 10 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052","sv":4,"ph":"71461d3fdc27b654"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052","sv":4,"ph":"a2d452b639a44962"},
 
   "county|2026-09-10|Planning Commission Meeting":
     {"sv":4,"ph":"b7c74705fcca6b2f"},
@@ -375,7 +375,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-09-16|Historic & Architectural Review Commission Chair - Sep 16 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8023","sv":4,"ph":"1c9ac53f80dc8a0e"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8023","sv":4,"ph":"96078cc700b16039"},
 
   "telluride|2026-09-16|Historic & Architectural Review Commission - Sep 16 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8022","sv":4,"ph":"e63371133d9cef98"},
@@ -393,7 +393,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-09-17|Liquor Licensing Authority - Sep 17 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8145","sv":4,"ph":"119eaf8e632151ef"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8145","sv":4,"ph":"5e169e6aed7b742f"},
 
   "telluride|2026-08-26|Resident Advisory Committee - Aug 26 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8304","zoomUrl":"https://us06web.zoom.us/j/83515721292?pwd=UWdbpZwQcmiOOtH3Ktbdarl9CZyHjm.1","meetingId":"835 1572 1292","passcode":"983442","phone":"970-728-2496","sv":4},
@@ -417,7 +417,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303","sv":4,"ph":"df16bef2d4cca5b3"},
 
   "telluride|2026-09-22|Town Council - Sep 22 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043","sv":4,"ph":"6826f139b142e7dc"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043","sv":4,"ph":"c5b14e4bfd86db54"},
 
   "county|2026-09-23|Board of County Commissioners Work Session":
     {"sv":4,"ph":"307e0c7b19e4ff5b"}
@@ -776,7 +776,7 @@ const MEETING_PREVIEWS = {
     "Board will consider matters including a request for quote for material hauling, proposals for a Lawson Hill Connector Trail Project and fuel island canopy construction, and related county procurement items. Additional context includes local probate proceedings, a foreclosure sale, and a federal environmental assessment for a hazardous fuels project in the region.",
 
   "county|2026-08-24|Open Space Commission Meeting":
-    "The Open Space Commission is expected to receive updates on natural resource and climate resiliency efforts, a Parks and Open Space Manager job posting, Mill Creek Park grass seeding, trail and park projects, a historic masonry restoration, and citizen concerns regarding water flow diversion near Bridal Veil."
+    "The Open Space Commission will receive updates on several ongoing projects, including the East End Connector Trail, Galloping Goose Park, Mill Creek Park, and the Placerville Schoolhouse restoration. The commission will also address citizen concerns about water flow and diversion related to the Bridal Veil conservation easement."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1181,7 +1181,7 @@ const MANUAL_SUMMARIES = {
     "Ouray County Planning Commission meets virtually August 5th, 2–4 PM, for a work session on possible changes to the Land Use Code's Section 2 — the definitions section. No in-person attendance. Work sessions like this are where the real shaping happens: definitions determine what the rules actually mean in practice, and a tweak to how a term is defined can quietly shift what gets permitted, what gets denied, and how future applications get read. The packet is attached to the posted agenda, but the agenda itself doesn't spell out which definitions are under review.",
 
   "telluride|2026-09-01|Town Council - Sep 01 2026":
-    "The September 1, 2026 Town Council agenda hasn't been posted yet.",
+    "Three work sessions open the day: a deep look at Comprehensive Plan goals and objectives with project consultants, a Gondola Subcommittee update, and a review of proposals for a third-party audit of the Town's rental housing policies — that last one worth watching given how central rent policy has become to who can stay in the canyon. A second work session later covers AMI increases and rental rate adjustments for 2027 budgetary planning. On the action side: second reading of the 2026 budget reappropriation ordinance; a resolution permitting dogs on a limited stretch of the River Trail near the Public Works facility; approval of a wildfire mitigation project south of the Shandoka Apartments; and first readings authorizing the sale of three deed-restricted units — Spruce House Unit H and two FINO II units. Council will also consider finalizing a 30-minute free parking program. The long-running appeal of the Stender Residence HARC approval is continued again. Five board and commission seats are up for appointment.",
 
   "telluride|2026-09-02|Ecology Commission - Sep 02 2026":
     "The September 2, 2026 Ecology Commission agenda hasn't been posted yet.",
@@ -2499,6 +2499,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15642"
   },
   {
+    title: "State of the Town Address: The State of the Town Is Strong and Engaging",
+    source: "Town of Telluride",
+    date: "August 8, 2026",
+    newsTopic: "government",
+    copy: "The Mayor's biannual State of the Town Address was delivered on Tuesday, July 21 during the regular meeting of Telluride Town Council, here's what Mayor Teddy Errico had to say.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=400",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15641"
+  },
+  {
     title: "Waste Tire Collection Event",
     source: "San Miguel County",
     date: "August 18, 2026",
@@ -2514,6 +2523,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "community",
     copy: "All County offices will be closed on Thursday, August 27, 2026, for an Employee Appreciation Picnic. We apologize for any inconvenience.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=541",
+    img: ""
+  },
+  {
+    title: "Black Bear Pass Now Open",
+    source: "San Miguel County",
+    date: "August 3, 2026",
+    newsTopic: "recreation",
+    copy: "County crews finished work this afternoon, Black Bear Pass is now open from Red Mountain Pass to Telluride.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=539",
     img: ""
   },
   {
@@ -4552,6 +4570,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53629793138788/huge/5bbae7e3ec0d15b3e428cf9f3487751fe52758ee.jpg"
   },
   {
+    title: "Cornhole Singles Mixer",
+    link: "https://events.ourayridgwayevents.com/event/cornhole-singles-mixer",
+    description: "Need a teammate for the Floating Lotus Fall Cornhole League? Come meet other players, throw some bags and find a good team match. “Singles” means players registering without a teammate—not relationship status. Saturday, August 292–5 PMFloating Lotus Brewery • Ridgway, Colorado What to expect: • Casual, unsupervised open play• Opportunities to rotate partners and meet other players• Help forming two-person league teams• All experience levels welcome• Cornhole boards and bags provided The six-week league begins Saturday, September 19, followed by the Championship Tournament on October 31. Each team’s best four weekly scores will count, so missing one or two weeks won’t knock you out of contention. Register as a single at FloatingLotusBrewery.com, then join us August 29 to find your teammate. View on site | Email this event",
+    pubDate: "2026-08-29T20:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53782334529812/huge/d47421cf70a69560d0e84f1aad632cb58eb6792c.jpg"
+  },
+  {
     title: "A Blue Birdie’s Tale - Ridgway State Park Summer Program Series",
     link: "https://events.ourayridgwayevents.com/event/a-blue-birdies-tale-ridgway-state-park-summer-program-series",
     description: "Get ready to add a splash of sapphire to your weekend! Pack your binoculars and join professor Bruce Ackerman at the Visitor Center for a fun, feather-filled evening discovering Colorado’s most brilliant bluebirds—from their cheerful songs and quirky nesting habits to the best spots for watching them flap around Ridgway! View on site | Email this event",
@@ -4584,6 +4613,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Billy Goat Gruff's Patio Patio",
     imageUrl: "https://localist-images.azureedge.net/photos/53744791155044/huge/7870fdaa876bce23bf9db7e6664d294f7d856b0b.jpg"
+  },
+  {
+    title: "Western Medicine - Live @ Floating Lotus Brewery",
+    link: "https://events.ourayridgwayevents.com/event/western-medicine-live-floating-lotus-brewery",
+    description: "Swinging from powerful harmonies and distortion to acoustic guitars, brushes, and tender lap-steel melodies, Los Angeles-based Western Medicine paints a vivid yet bittersweet image of their upbringing on Colorado’s Western Slope. Whether they are playing festival stages, honky-tonk bars, or through your truck’s stereo, this six-piece outfit puts on a heartfelt show you will not forget. Their recent appearances include Telluride Bluegrass, the Temecula Balloon and Wine Festival, NextFest at the LA County Fair, and a sold-out Colorado tour that included the Sheridan Opera House. View on site | Email this event",
+    pubDate: "2026-08-31T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53774245932386/huge/a983022deeba7f71c5044f0358d99b07dd378b13.jpg"
   },
   {
     title: "August Culinary Club: Creamy Taco Soup",
@@ -4697,6 +4737,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53629792913484/huge/0f655603601840911844cbf1cce4ddcdecf2dbb1.jpg"
+  },
+  {
+    title: "Trivia Night | Music Bingo",
+    link: "https://events.ourayridgwayevents.com/event/trivia-night-music-bingo",
+    description: "Thirsty Thursday Game Night is back at Floating Lotus Brewery! Join us every Thursday for a rotating lineup of trivia and music bingo: 1st & 3rd Thursdays: Trivia2nd & 4th Thursdays: Music Bingo Grab a table, bring your friends, and settle in for a fun night of games, drinks, and friendly competition at Floating Lotus Brewery. View on site | Email this event",
+    pubDate: "2026-09-04T01:00:00.000Z",
+    endDate: "2026-10-23",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53774280499304/huge/b7b8de294fcf5d7a8eeea15f309e79792a5bc48a.jpg"
   },
   {
     title: "Trivia Night @ the Wright",
@@ -4821,6 +4873,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Fellin Park",
     imageUrl: "https://localist-images.azureedge.net/photos/52324818447922/huge/3f4a7ad14fc7dbe59a7600bfd9c554e32680c1d7.jpg"
+  },
+  {
+    title: "Fantasy Football Kickoff - DraftSunday",
+    link: "https://events.ourayridgwayevents.com/event/fantasy-football-kickoff-draftsunday",
+    description: "The Floating Lotus 2026 Fantasy Football League kicks off Sunday, September 6! We’re building a competitive 8- or 10-team redraft league for experienced fantasy players. Expect full-PPR scoring, FAAB waivers, league-median matchups, two FLEX spots, no kickers, and transparent payouts. Official DraftSunday, September 6, 2026 6:00 PM Mountain TimeOnline through SleeperSnake draft · 90 seconds per pick Applications are free. Once enough managers are confirmed, accepted players will receive the final league details, $50 buy-in request, payout structure, and Sleeper invitation. Nobody pays unless the league has enough committed managers to run. This draft is for confirmed league managers. Interested in a roster spot? Apply here: https://fantasy.floatinglotusbrewery.com Find your flow. Win your week. View on site | Email this event",
+    pubDate: "2026-09-07T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53782367546889/huge/f0ba54fc5c969098eaf29e9a75c1c660d97a6bff.jpg"
   },
   {
     title: "Mojo Birds - Live at Floating Lotus Brewery",
@@ -5115,6 +5178,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53693235946239/huge/0f1ea37ac1cf168d15be34057cbc7d78b1368e42.jpg"
   },
   {
+    title: "TODDLER STORYTIME ART FOR AGES 2.5-5",
+    link: "https://events.ourayridgwayevents.com/event/toddler-storytime-art-for-ages-25-5",
+    description: "TODDLER STORYTIME ART FOR AGES 2.5-5 Wednesdays, 10:00am–11:00am Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $70): September 16 – October 7 Session 2 (4 weeks • $70): October 21 – November 11 Session 3 (3 weeks • $55): December 2 – December 16 * Multi-session discount: Sign up for multiple fall semester sessions at once and receive $10 off each session! Come join us for Storytime + Art! Each week, your child will enjoy story time with songs and finger rhymes, a process‑art project, and a variety of creative sensory play. We end with a quick cleanup, circle time, and movement songs. This class gently supports preschool prep and helps your child develop important school‑readiness skills—such as fine‑motor coordination, independence, and the ability to listen and follow directions—in a warm, supportive setting. …",
+    pubDate: "2026-09-16T16:00:00.000Z",
+    endDate: "2026-10-07",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Annex on Cora",
+    imageUrl: "https://localist-images.azureedge.net/photos/53780434962919/huge/3aff831f26d7f9d4824893f89d8fd88416047a44.jpg"
+  },
+  {
     title: "Ouray: Echoes in the Canyon",
     link: "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-692",
     description: "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history, landscapes, and enduring spirit that helped shape what many still call \"The Gem of the Rockies.\" Through storytelling, archival perspective, aerial cinematography, and local voices, the film traces the layered history of Ouray and the individuals who built a mountain community that continues to evolve while remaining deeply connected to its frontier roots. The film features aerial photography by Ouray By Flight, cinematography by Levi Kramer, and is produced and directed by Hank Braxtan. We are offering a \"pay what you can\" for your ticket - $5, $10 and $15. Pick the amount that fees \"Wright\" to you. Thank you for your support! …",
@@ -5124,6 +5199,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/87e789cb56363301409b7496f25a25cdfd62ef58.jpg"
+  },
+  {
+    title: "AFTER SCHOOL ART FOR AGES 8-12",
+    link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-8-12",
+    description: "AFTER SCHOOL ART FOR AGES 8-12 Wednesdays, 3:15–4:45 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 16 – October 7Session 2 (4 weeks • $85): October 21 – November 11Session 3 (3 weeks • $70): December 2 – December 16Each week, students will explore an exciting theme while experimenting with a wide range of materials and techniques. Drawing inspiration from well-known artists and design styles, young artists will be supported in discovering their own unique creative voice in a fun, nurturing, studio-like setting. These classes are designed to foster a love of the arts through hands-on exploration, age-appropriate projects, and a focus on the joy of the creative process. A student art reception will be held in December. Students will take home their collected works in the days following the event. …",
+    pubDate: "2026-09-16T21:15:00.000Z",
+    endDate: "2026-10-07",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Annex on Cora",
+    imageUrl: "https://localist-images.azureedge.net/photos/53780624349826/huge/2ad5a3657f19d47b14c7833f838ac040c0836f38.jpg"
   },
   {
     title: "The Sherbino Presents: “Out There, a National Park Story” film celebrating the National Park Service’s 110th birthday",
@@ -5146,6 +5233,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53759764782802/huge/dc7e273f56ef01d450bc75d4e9c24bb9c5c68230.jpg"
+  },
+  {
+    title: "AFTER SCHOOL ART FOR AGES 5-8",
+    link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-5-8",
+    description: "AFTER SCHOOL ART FOR AGES 5-8 Thursdays, 3:15–4:30 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 17 – October 8Session 2 (4 weeks • $85): October 22 – November 12Session 3 (3 weeks • $70): December 3 – December 17Each week, students will explore exciting themes and projects while experimenting with a wide variety of art materials—such as watercolor and acrylic paints, oil and chalk pastels, clay, collage, printmaking, and more. Through open-ended projects, students are encouraged to explore their creativity, make artistic choices, take creative risks, and discover their unique artistic voice. Our classes nurture imaginative thinking and storytelling, helping children express big ideas and emotions through visual narratives and personal creations. In addition to sparking imagination, our signature art projects support the development of fine motor skills, confidence, and social-emotional development in a fun group environment. …",
+    pubDate: "2026-09-17T21:15:00.000Z",
+    endDate: "2026-10-08",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Annex on Cora",
+    imageUrl: "https://localist-images.azureedge.net/photos/53780725919104/huge/846566299e8e325221de54dd5a54a0fd6427fbf5.jpg"
   },
   {
     title: "4th Annual San Juan Slam Pickleball Tournament",
@@ -5191,6 +5290,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ridgway State Park",
     imageUrl: "https://localist-images.azureedge.net/photos/53702771968357/huge/e53b021369f111f5d927b10fb43889fa856f6d5f.jpg"
+  },
+  {
+    title: "\"llumination! Learning to Use Light, Shadow & Color in Acrylic Landscapes\" with Wayne McKinzie",
+    link: "https://events.ourayridgwayevents.com/event/llumination-learning-to-use-light-shadow-color-in-acrylic-landscapeswith-wayne-mckinzie",
+    description: "\"llumination! Learning to Use Light, Shadow & Color in Acrylic Landscapes\" with Wayne McKinzie September 19th, 10:00am-2:30pm (incl. a 30min. lunch break) Cora Annex, Ridgway Tuition: $70 Registration: www.weehawkenarts.org Join acclaimed landscape artist Wayne McKinzie for a unique \"Paint with Wayne\" experience. Rather than a traditional painting class, everyone will paint the same landscape alongside Wayne, giving you a front-row seat to his creative process from start to finish. Each participant will receive an 8\" x 10\" primed panel and will work step-by-step with Wayne as he demonstrates how he uses light, shadow, color, brushwork, and composition to bring a landscape to life. Throughout the class, students are encouraged to ask questions, observe his techniques in real time, and gain insight into the artistic decisions that go into creating an original painting. …",
+    pubDate: "2026-09-19T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Annex on Cora",
+    imageUrl: "https://localist-images.azureedge.net/photos/53780308794900/huge/41691d46e1e475e3b5f20b3e40f3c8218e5b1c84.jpg"
   },
   {
     title: "Colona Community Church’s Annual Harvest Dinner",
@@ -5257,6 +5367,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/87e789cb56363301409b7496f25a25cdfd62ef58.jpg"
+  },
+  {
+    title: "Watercolor & Wine with Katey Fetch: \"Paint the Peaks\"",
+    link: "https://events.ourayridgwayevents.com/event/watercolor-wine-with-katey-fetch-paint-the-peaks",
+    description: "Watercolor & Wine with Katey Fetch: Paint the Peaks Date: Thursday, September 24 Time: 6:00–8:00 PM Location: Cora Annex, Ridgway Tuition: $49 incl. a beverage and all supplies Registration: www.weehawkenarts.org Whether you’ve never picked up a paintbrush or you’re looking to sharpen your skills, you’ll learn basic watercolor techniques, color flowing, layering, and tips and tricks while enjoying your favorite beverage. There are no mistakes here—just creativity, laughter, and a chance to slow down and make something uniquely your own. A beverage and all supplies are included. About the Instructor: Katey Fetch Katey Fetch hails from a small town in Colorado, where she continues to learn how to be an artist. Though she went to art school, she took a long hiatus from art and is in the midst of rediscovering what art means to her. Her favorite mediums are graphite pencil and watercolor. …",
+    pubDate: "2026-09-25T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Annex on Cora",
+    imageUrl: "https://localist-images.azureedge.net/photos/53780354578802/huge/20de7f4389a6dc490aa55564b6fb62fa7b8e05b8.jpg"
   },
   {
     title: "JEAN SANDOVAL AND THE TOWNKIDS",
@@ -5555,6 +5676,39 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "TODDLER STORYTIME ART FOR AGES 2.5-5",
+    link: "https://events.ourayridgwayevents.com/event/toddler-storytimeartfor-ages-2-5",
+    description: "TODDLER STORYTIME ART FOR AGES 2.5-5 Wednesdays, 10:00am–11:00am Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $70): September 16 – October 7Session 2 (4 weeks • $70): October 21 – November 11Session 3 (3 weeks • $55): December 2 – December 16Come join us for Storytime + Art! Each week, your child will enjoy story time with songs and finger rhymes, a process‑art project, and a variety of creative sensory play. We end with a quick cleanup, circle time, and movement songs. This class gently supports preschool prep and helps your child develop important school‑readiness skills—such as fine‑motor coordination, independence, and the ability to listen and follow directions—in a warm, supportive setting. Children will grow in: Social, language, and communication skillsFine‑ and gross‑motor coordinationListening and direction‑following abilitiesConfidence, creativity, and imaginationParents and caregivers stay to support their child—but we handle the mess! …",
+    pubDate: "2026-10-21T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Annex on Cora",
+    imageUrl: "https://localist-images.azureedge.net/photos/53780434962919/huge/3aff831f26d7f9d4824893f89d8fd88416047a44.jpg"
+  },
+  {
+    title: "AFTER SCHOOL ART FOR AGES 8-12",
+    link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-8-12-7963",
+    description: "AFTER SCHOOL ART FOR AGES 8-12 Wednesdays, 3:15–4:45 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 16 – October 7Session 2 (4 weeks • $85): October 21 – November 11Session 3 (3 weeks • $70): December 2 – December 16Each week, students will explore an exciting theme while experimenting with a wide range of materials and techniques. Drawing inspiration from well-known artists and design styles, young artists will be supported in discovering their own unique creative voice in a fun, nurturing, studio-like setting. These classes are designed to foster a love of the arts through hands-on exploration, age-appropriate projects, and a focus on the joy of the creative process.. A student art reception will be held in December. Students will take home their collected works in the days following the event. …",
+    pubDate: "2026-10-21T21:15:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Annex on Cora",
+    imageUrl: "https://localist-images.azureedge.net/photos/53780624349826/huge/2ad5a3657f19d47b14c7833f838ac040c0836f38.jpg"
+  },
+  {
+    title: "AFTER SCHOOL ART FOR AGES 5-8",
+    link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-5-8-6970",
+    description: "AFTER SCHOOL ART FOR AGES 5-8 Thursdays, 3:15–4:30 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 17 – October 8Session 2 (4 weeks • $85): October 22 – November 12Session 3 (3 weeks • $70): December 3 – December 17Each week, students will explore exciting themes and projects while experimenting with a wide variety of art materials—such as watercolor and acrylic paints, oil and chalk pastels, clay, collage, printmaking, and more. Through open-ended projects, students are encouraged to explore their creativity, make artistic choices, take creative risks, and discover their unique artistic voice. Our classes nurture imaginative thinking and storytelling, helping children express big ideas and emotions through visual narratives and personal creations. In addition to sparking imagination, our signature art projects support the development of fine motor skills, confidence, and social-emotional development in a fun group environment. …",
+    pubDate: "2026-10-22T21:15:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Annex on Cora",
+    imageUrl: "https://localist-images.azureedge.net/photos/53780725919104/huge/846566299e8e325221de54dd5a54a0fd6427fbf5.jpg"
   }
 ];
 
@@ -8680,10 +8834,11 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "September 1, 2026",
     title: "Town Council",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
-    civicwebId: 8042
+    civicwebId: 8042,
+    packetUrl: "https://telluride-co.civicweb.net/document/443717/"
   },
   {
     date: "September 2, 2026",
