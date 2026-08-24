@@ -30,6 +30,19 @@ const TOPIC_PRIORITY = ['carhenge', 'society', 'diamond', 'gondola', 'code', 'wi
 const TOPIC_HREF = {
   fieldpaving: '/deep-dive-field-paving-town-park.html'
 };
+
+// Per-entity livestream, for a meeting whose row carries none of its own — a
+// hand pin has no week-meetings row at all, and the card must still offer the
+// two remote ways in (Morgan, 2026-08-19: always the Zoom link AND the YouTube
+// link). Keep in sync with ENTITY_REMOTE in js/gov-data.js;
+// scripts/meeting-recaps.js carries the same URLs for the same reason — a
+// node-side script can't require the browser data file.
+const ENTITY_LIVESTREAM = {
+  telluride: 'https://www.youtube.com/@townoftelluridecolorado8739/streams',
+  county: 'https://www.youtube.com/@sanmiguelcountyco/streams',
+  mv: 'https://media.avcaptureall.cloud/?customerGuid=f6f590a7-5acc-4d32-9928-ad9ae0d02e06',
+  rico: 'https://www.youtube.com/@townofrico/streams'
+};
 const topicHref = (key) => TOPIC_HREF[key] || ('/deep-dive-' + key + '.html');
 
 // Cut at a sentence boundary, never mid-sentence (digest convention).
@@ -85,7 +98,7 @@ function run(repoRoot) {
     // A pin for a meeting the watch doesn't know is honored with watch-less
     // minimal data so a hand pin can never silently no-op.
     if (!choice && (watch.topics || {})[pin.topic]) {
-      choice = { topic: pin.topic, label: watch.topics[pin.topic].label, meeting: { date: pin.date, title: '', sourceLabel: '' } };
+      choice = { topic: pin.topic, label: watch.topics[pin.topic].label, meeting: { date: pin.date, title: '', sourceLabel: '', source: pin.source || '' } };
     }
   }
   if (!choice) {
@@ -138,8 +151,14 @@ function run(repoRoot) {
         agendaUrl: m.agendaUrl || wk.agendaUrl || '',
         hasAgenda: wk.hasAgenda !== undefined ? !!wk.hasAgenda : !!(m.agendaUrl),
         packetUrl: wk.packetUrl || '',
-        zoomLink: m.zoomLink || wk.zoomLink || '',
-        livestream: m.livestream || wk.livestream || ''
+        // Pin-supplied links win, then the meeting's own, then the entity's
+        // channel — an active pin for a meeting the watch doesn't know still
+        // renders "Join Zoom" and "Watch on YouTube". Both are gated on
+        // pinActive for the same reason the copy is: an expired pin must not
+        // staple its Zoom room onto whatever meeting is auto-selected next.
+        zoomLink: (pinActive && pin.zoomLink) || m.zoomLink || wk.zoomLink || '',
+        livestream: (pinActive && pin.livestream) || m.livestream || wk.livestream
+          || ENTITY_LIVESTREAM[m.source || wk.source || ''] || ''
       }
     };
   }

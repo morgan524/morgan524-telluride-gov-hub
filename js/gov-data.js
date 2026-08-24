@@ -1211,6 +1211,14 @@ const DEEP_DIVE_PAGES = [
 //   { "topic": "carhenge", "date": "2026-07-23",
 //     "headline": "…optional…", "blurb": "…optional…" }
 // The pin is ignored once its date has passed (falls back to automatic).
+//
+// ALWAYS give a pin its remote ways in: "zoomLink" (the meeting's join /
+// registration URL, from MEETING_AGENDA_META in js/gov-helpers.js) and
+// "livestream" (the body's YouTube channel). The card renders them as "Join
+// Zoom" and "Watch on YouTube" — a featured meeting no one can join from home
+// is only half an action. Optional "source" (an ENTITY_REMOTE key, e.g.
+// "telluride") lets the builder fall back to that body's channel when
+// "livestream" is omitted.
 const FEATURED_ACTION_PIN = {};
 
 const ENTITY_LOGOS = {

@@ -125,3 +125,55 @@ test('the committed pin in js/gov-data.js is not expired', () => {
     assert.ok(pin.date >= mtToday(), `FEATURED_ACTION_PIN expired on ${pin.date} — clear it or update the date`);
   }
 });
+
+// ── Remote ways in ────────────────────────────────────────────────────────────
+// Morgan, 2026-08-19: the featured action must always carry the Zoom link and
+// the YouTube link. A hand pin has no week-meetings row to inherit them from,
+// so the pin itself may supply both — and an auto pick with neither falls back
+// to the body's channel.
+
+test('an ACTIVE pin supplies its Zoom + livestream links', () => {
+  const today = mtToday();
+  const out = run(makeRepo(
+    {
+      topic: 'code',
+      date: shiftDays(today, 5),
+      zoomLink: 'https://us06web.zoom.us/meeting/register/PINNED',
+      livestream: 'https://www.youtube.com/@pinned/streams',
+    },
+    shiftDays(today, 3),
+  ));
+  assert.equal(out.meeting.zoomLink, 'https://us06web.zoom.us/meeting/register/PINNED');
+  assert.equal(out.meeting.livestream, 'https://www.youtube.com/@pinned/streams');
+});
+
+test('an EXPIRED pin supplies no links either', () => {
+  const today = mtToday();
+  const out = run(makeRepo(
+    {
+      topic: 'fieldpaving',
+      date: shiftDays(today, -10),
+      zoomLink: 'https://us06web.zoom.us/meeting/register/STALE',
+      livestream: 'https://www.youtube.com/@stale/streams',
+    },
+    shiftDays(today, 3),
+  ));
+  assert.equal(out.pinned, false);
+  assert.ok(!/STALE/.test(out.meeting.zoomLink), `expired pin leaked its Zoom room: ${out.meeting.zoomLink}`);
+  assert.ok(!/@stale/.test(out.meeting.livestream), `expired pin leaked its livestream: ${out.meeting.livestream}`);
+});
+
+test('a meeting with no livestream of its own falls back to the entity channel', () => {
+  // The fixture meeting is a Town of Telluride one and carries no livestream.
+  const out = run(makeRepo({}, shiftDays(mtToday(), 3)));
+  assert.equal(out.meeting.livestream, 'https://www.youtube.com/@townoftelluridecolorado8739/streams');
+});
+
+test('the committed pin carries both remote ways in', () => {
+  const src = fs.readFileSync(path.join(__dirname, '..', '..', 'js', 'gov-data.js'), 'utf8');
+  const pin = JSON.parse(/const\s+FEATURED_ACTION_PIN\s*=\s*(\{[\s\S]*?\});/.exec(src)[1]);
+  if (pin && pin.date) {
+    assert.ok(pin.zoomLink, 'FEATURED_ACTION_PIN has no zoomLink — the card would offer no way to take part remotely');
+    assert.ok(pin.livestream || pin.source, 'FEATURED_ACTION_PIN has no livestream and no source to fall back on');
+  }
+});
