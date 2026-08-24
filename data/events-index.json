@@ -41,19 +41,6 @@
     "endDate": "2026-09-25"
   },
   {
-    "title": "Tennis Clinic 4.0+",
-    "href": "https://koto.org/event/tennis-clinic-4-0/2026-08-24/",
-    "date": "2026-08-24",
-    "time": "11:00 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "Senior Lunch by Neighbor to Neighbor",
     "href": "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
     "date": "2026-08-24",
@@ -160,19 +147,6 @@
     "desc": "Roots & Rhythms features mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and…",
     "type": "Arts & Film",
     "endDate": "2026-08-31"
-  },
-  {
-    "title": "Tennis Clinic 3.0-4.0",
-    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-24/",
-    "date": "2026-08-24",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "First Day of School K-12 - Ridgway",
@@ -317,19 +291,6 @@
     "category": "Community Event",
     "source": "KOTO Community Calendar",
     "desc": "Join us at the Telluride Innovation Center as Braden Tierney, cofounder and executive director of the Two Frontiers Project, takes us into Earth’s strangest ecosystems. Hydrothermal vents, volcanic seeps, alpine soils, mine drainage right…",
-    "type": "Community"
-  },
-  {
-    "title": "Gather and Grieve",
-    "href": "https://koto.org/event/gather-and-grieve/2026-08-25/1/",
-    "date": "2026-08-25",
-    "time": "8:00 AM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/08/Gather-and-Grieve-updated.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Telluride Gather and Grieve support group is scheduled to begin August 25th and will run for eight weeks on Tuesday evenings. The group will meet at the Wilkinson Public Library, is free of charge, and will incorporate a variety of…",
     "type": "Community"
   },
   {
@@ -1320,19 +1281,6 @@
     "type": "Music"
   },
   {
-    "title": "Gather and Grieve",
-    "href": "https://koto.org/event/gather-and-grieve/2026-09-01/",
-    "date": "2026-09-01",
-    "time": "5:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/08/Gather-and-Grieve-updated.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Telluride Gather and Grieve support group is scheduled to begin August 25th and will run for eight weeks on Tuesday evenings. The group will meet at the Wilkinson Public Library, is free of charge, and will incorporate a variety of…",
-    "type": "Community"
-  },
-  {
     "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
     "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
     "date": "2026-09-01",
@@ -1384,6 +1332,19 @@
     "source": "KOTO Community Calendar",
     "desc": "The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for…",
     "type": "Talks & Classes"
+  },
+  {
+    "title": "Birding Walk with Katie Triest",
+    "href": "https://koto.org/event/birding-walk-with-katie-triest/",
+    "date": "2026-09-01",
+    "time": "8:00 AM",
+    "location": "Telluride Post Office",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-10.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join ornithological expert Katie Triest for this series of chill walks where you'll learn amazing facts and practice identifying local birds! Meet at the post office and we'll head to the beaver ponds at the edge of Town Park. Bring your…",
+    "type": "Community"
   },
   {
     "title": "Tennis Clinic 3.0-4.0",
@@ -1607,6 +1568,32 @@
     "source": "Beacon",
     "desc": "Thursday night pickleball with no experience necessary; all supplies provided.",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-03/",
+    "date": "2026-09-03",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Auditions, Take 2: Rocky Horror Picture Show Live Shadow Cast Edition (Show in Oct.)",
+    "href": "https://sherbino.org/event/rocky-horror-shadow-cast-auditions-take-2-sherbino/",
+    "date": "2026-09-03",
+    "time": "",
+    "location": "The Sherbino, Ridgway",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2026/08/rocky-auditions-round-2.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Trivia Night @ the Wright",

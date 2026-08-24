@@ -255,7 +255,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "county|2026-08-26|Board of County Commissioners Work Session":
-    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/869/files/agenda/1965","zoomUrl":"https://us02web.zoom.us/meeting/register/9OtfsijQQWSJMrVmAUrDCw","meetingId":"858 7914 5422","passcode":"509931","phone":"719-359-4580"},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/869/files/agenda/1969","zoomUrl":"https://us02web.zoom.us/meeting/register/9OtfsijQQWSJMrVmAUrDCw","meetingId":"858 7914 5422","passcode":"509931","phone":"719-359-4580"},
 
   "norwood|2026-07-29|Board of Trustees Work Session":
     {"agendaUrl":"https://www.norwoodtown.com/files/62b999f7f/07.29.2026+Work+Session+Board+of+Trustee+Agenda+ADA.pdf","zoomUrl":"https://us02web.zoom.us/j/84191917434","meetingId":"841 9191 7434","passcode":"905972","phone":"970-327-4288","sv":4},
@@ -773,10 +773,7 @@ const MEETING_PREVIEWS = {
     "Council is expected to revisit matters related to Ordinance #1640, which amended Telluride's Land Use Code to implement the Colorado Wildfire Resiliency Code. The meeting may address follow-up actions or implementation details stemming from the ordinance passed on August 11, 2026.",
 
   "county|2026-09-23|Board of County Commissioners Work Session":
-    "Board will consider matters including a request for quote for material hauling, proposals for a Lawson Hill Connector Trail Project and fuel island canopy construction, and related county procurement items. Additional context includes local probate proceedings, a foreclosure sale, and a federal environmental assessment for a hazardous fuels project in the region.",
-
-  "county|2026-08-24|Open Space Commission Meeting":
-    "The Open Space Commission will receive updates on several ongoing projects, including the East End Connector Trail, Galloping Goose Park, Mill Creek Park, and the Placerville Schoolhouse restoration. The commission will also address citizen concerns about water flow and diversion related to the Bridal Veil conservation easement."
+    "Board will consider matters including a request for quote for material hauling, proposals for a Lawson Hill Connector Trail Project and fuel island canopy construction, and related county procurement items. Additional context includes local probate proceedings, a foreclosure sale, and a federal environmental assessment for a hazardous fuels project in the region."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -848,6 +845,16 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Monthly Chamber of Commerce meeting open to all.",
     href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
     img: ""
+  },
+  {
+    title: "Long-term road closure for the Corbett Creek Bridge Project",
+    source: "Ouray County",
+    sourceKey: "ouray-county",
+    date: "August 24, 2026",
+    newsTopic: "infrastructure",
+    copy: "Long-term road closure for the Corbett Creek Bridge Project, July 24 through October 8, 2026.",
+    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=955",
+    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22829"
   },
   {
     title: "Best feathers forward",
@@ -3125,28 +3132,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Tennis Clinic 3.0-4.0",
-    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-24/",
-    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-08-24T09:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Tennis Clinic 4.0+",
-    link: "https://koto.org/event/tennis-clinic-4-0/2026-08-24/",
-    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-08-24T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
     title: "Telluride R-1 School Board Work Session",
     link: "https://koto.org/event/telluride-r-1-school-board-work-session/",
     description: "Telluride R-1 School District Board of Education holds a work session on Monday, August 24th, at 3:30 p.m. in the Bridal Veil conference room at TMHS and via Zoom. Agenda & Zoom link can be found at tellurideschool.org.",
@@ -3156,17 +3141,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Middle/High School, TELLURIDE",
     imageUrl: ""
-  },
-  {
-    title: "Gather and Grieve",
-    link: "https://koto.org/event/gather-and-grieve/2026-08-25/1/",
-    description: "The Telluride Gather and Grieve support group is scheduled to begin August 25th and will run for eight weeks on Tuesday evenings. The group will meet at the Wilkinson Public Library, is free of charge, and will incorporate a variety of healing modalities, including art therapy, grief-informed yoga/movement, writing, and acupuncture. We ask that participants be at least six months into their grief, as this group is intended to support individuals who are outside of the more acute phase and able to engage in a reflective, group-based process. There is no maximum time frame for grief, so individuals at any point beyond six months are welcome to attend. There is limited space, so please reach out to Hunter or Maggie at h.emmonscounseling@gmail.com or mmcnally@telluridelibrary.org to register.",
-    pubDate: "2026-08-25T08:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/Gather-and-Grieve-updated.jpg"
   },
   {
     title: "Tennis Clinic 3.0-4.0",
@@ -3222,17 +3196,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2026/08/Between-Grief-Gratitude-Updated.webp"
-  },
-  {
-    title: "Gather and Grieve",
-    link: "https://koto.org/event/gather-and-grieve/2026-08-25/2/",
-    description: "The Telluride Gather and Grieve support group is scheduled to begin August 25th and will run for eight weeks on Tuesday evenings. The group will meet at the Wilkinson Public Library, is free of charge, and will incorporate a variety of healing modalities, including art therapy, grief-informed yoga/movement, writing, and acupuncture. We ask that participants be at least six months into their grief, as this group is intended to support individuals who are outside of the more acute phase and able to engage in a reflective, group-based process. There is no maximum time frame for grief, so individuals at any point beyond six months are welcome to attend. There is limited space, so please reach out to Hunter or Maggie at h.emmonscounseling@gmail.com or mmcnally@telluridelibrary.org to register.",
-    pubDate: "2026-08-25T17:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/Gather-and-Grieve-updated.jpg"
   },
   {
     title: "Earth’s Most Resilient Life, Our Greatest Hope: Exploring Unusual Microbes to Solve Humanity’s Biggest Challenges",
@@ -3543,6 +3506,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/08/Emergency-Preparedness-Flyer-JABOR.png"
   },
   {
+    title: "Birding Walk with Katie Triest",
+    link: "https://koto.org/event/birding-walk-with-katie-triest/",
+    description: "Join ornithological expert Katie Triest for this series of chill walks where you'll learn amazing facts and practice identifying local birds! Meet at the post office and we'll head to the beaver ponds at the edge of Town Park. Bring your own binoculars if you have them and make sure to dress for variant weather. Be on time, and PLEASE cancel your reservation if you are unable to make it. This event is very popular and the waiting list is long.",
+    pubDate: "2026-09-01T08:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Post Office",
+    imageUrl: ""
+  },
+  {
     title: "Tennis Clinic 3.0-4.0",
     link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-01/",
     description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
@@ -3563,17 +3537,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
-  },
-  {
-    title: "Gather and Grieve",
-    link: "https://koto.org/event/gather-and-grieve/2026-09-01/",
-    description: "The Telluride Gather and Grieve support group is scheduled to begin August 25th and will run for eight weeks on Tuesday evenings. The group will meet at the Wilkinson Public Library, is free of charge, and will incorporate a variety of healing modalities, including art therapy, grief-informed yoga/movement, writing, and acupuncture. We ask that participants be at least six months into their grief, as this group is intended to support individuals who are outside of the more acute phase and able to engage in a reflective, group-based process. There is no maximum time frame for grief, so individuals at any point beyond six months are welcome to attend. There is limited space, so please reach out to Hunter or Maggie at h.emmonscounseling@gmail.com or mmcnally@telluridelibrary.org to register.",
-    pubDate: "2026-09-01T17:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/Gather-and-Grieve-updated.jpg"
   },
   {
     title: "Bardic Trails Online Poetry Night",
@@ -3639,6 +3602,28 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Innovation Center",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride Rotary Club Meeting",
+    link: "https://koto.org/event/telluride-rotary-club-meeting-2/",
+    description: "Telluride Rotary Club meets Wednesday, September 2, at 6 p.m. at the Mountain Lodge in Mountain Village. Come at 5:30PM to socialize before the meeting. Meetings feature guest speakers and discussion of club projects. Anyone with an interest in networking and service is welcome to drop in as a guest. Email telluriderotary@gmail.com for info or to rsvp.",
+    pubDate: "2026-09-02T18:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Mountain Lodge Telluride, Mountain Village",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/Telluride-Rotary-Logo-White.jpg"
+  },
+  {
+    title: "Tennis Clinic 3.0-4.0",
+    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-03/",
+    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-09-03T09:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
   }
 ];
@@ -3887,6 +3872,15 @@ const SHERBINO_EVENTS = [
     location: "The Sherbino, Ridgway",
     copy: "The Sherbino presents The M Factor: Shredding the Silence on Menopause on September 1 at 6:30 PM, followed by a panel discussion. @ Doors at 6:00 PM, Film at 6:30 PM followed by a panel discussion led by local specialists in women's health issues Dr. Abigail Seaver, ND; Meg Benasutti, ANP-BC, Jennifer McGeorge, ARNP, CNM, MSCP and Kim Walker, DNP, WHNP. Note: this is a different film from the one we showed back in May, which was about Perimenopause About The M Factor Film Menopause is a silent epidemic that affects the health and well‑being of millions of American women. In addition to experiencing traumatic physical symptoms, women are struggling with the related stresses of billions of dollars in lost wages, upended careers, family disruptions, and emotional chaos. This film confront this neglected crisis, challenges societal and medical shortcomings and advocates for a revolutionary approach to women's health all over the world. …",
     imageUrl: "https://sherbino.org/wp-content/uploads/2026/06/ChatGPT-Image-Jun-23-2026-07_58_16-PM.png"
+  },
+  {
+    title: "Auditions, Take 2: Rocky Horror Picture Show Live Shadow Cast Edition (Show in Oct.)",
+    href: "https://sherbino.org/event/rocky-horror-shadow-cast-auditions-take-2-sherbino/",
+    date: "2026-09-03 17:30:00",
+    endDate: "2026-09-03 19:00:00",
+    location: "The Sherbino, Ridgway",
+    copy: "@ Rocky Horror Picture Show — Live Shadowcast Edition, Directed by Erin Cawley Auditions · Thursday, Sept 3 · 5:30 – 7:00 p.m. · The Sherbino (604 Clinton St.) The Sherbino is casting for its live shadowcast production of The Rocky Horror Picture Show — and we’re opening up a second night of auditions! We know that the Sunday before school starts can be a hectic time with a lot of conflicts, so if you missed the first audition date, this is your second chance to jump in. This is your chance to step into the spotlight, don a wild costume, and bring this cult classic to life on stage. If auditioning for a specific character, we suggest preparing a 1–2 minute section of the film to audition with in shadowcast as that character. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/08/rocky-auditions-round-2.png"
   },
   {
     title: "First Friday Opening Reception: Bonnie Bucknam's \"Unscripted: Fiber Improvisations\"",

@@ -378,7 +378,7 @@ const SCHOOL_CACHED_DATA = [
     date: "August 25, 2026",
     time: null,
     title: "Telluride Board of Education Monthly Meeting",
-    agendaUrl: "https://files.smartsites.parentsquare.com/3403/82526_mm_packet_1.pdf",
+    agendaUrl: "https://files.smartsites.parentsquare.com/3403/82526_mm_packet.pdf",
     packetUrl: null,
     special: false,
     location: "Bridal Veil District Conference Room / Zoom"
