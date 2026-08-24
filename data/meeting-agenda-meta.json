@@ -429,12 +429,12 @@
   "telluride|2026-09-16|Historic & Architectural Review Commission Chair - Sep 16 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8023",
     "sv": 4,
-    "ph": "1c9ac53f80dc8a0e"
+    "ph": "96078cc700b16039"
   },
   "telluride|2026-09-16|Historic & Architectural Review Commission - Sep 16 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8022",
     "sv": 4,
-    "ph": "dc059514bc1f2944"
+    "ph": "e63371133d9cef98"
   },
   "telluride|2026-09-16|Parks & Recreation Commission - Sep 16 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082",
@@ -494,6 +494,10 @@
   "telluride|2026-09-22|Town Council - Sep 22 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043",
     "sv": 4,
-    "ph": "83717f08f7675efe"
+    "ph": "6826f139b142e7dc"
+  },
+  "county|2026-09-23|Board of County Commissioners Work Session": {
+    "sv": 4,
+    "ph": "307e0c7b19e4ff5b"
   }
 }
