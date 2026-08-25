@@ -324,7 +324,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"307e0c7b19e4ff5b"},
 
   "telluride|2026-09-10|Town Council Budget - Sep 10 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052","sv":4,"ph":"b68ea752a2f71495"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052","sv":4,"ph":"a2d452b639a44962"},
 
   "county|2026-09-10|Planning Commission Meeting":
     {"sv":4,"ph":"b7c74705fcca6b2f"},
@@ -1698,6 +1698,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Telluride Town Council OKs flood hazard remapping",
+    source: "Telluride Times",
+    date: "August 25, 2026",
+    firstSeen: "2026-08-25",
+    newsTopic: "government",
+    copy: "Telluride's flood hazard map hasn't been updated since 1992, and Town Council unanimously directed staff to move forward on remapping it. The process is expected to take about two years and cost $225,000–$275,000. Some properties currently outside flood zones could end up inside them once the new map is done.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_7f5ed85c-f89d-4605-a632-00bb9593f3aa.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/10/91017025-43d4-455a-9565-9f6b7ee7ff57/6a8cd98e8710e.image.png",
+    imgHiRes: true
+  },
   {
     title: "Locals concerned as Trump admin fast-tracks public process for Wyoming rare earth mine",
     source: "Telluride Times",
