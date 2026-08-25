@@ -1699,6 +1699,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Sentencing set for polygamous leader convicted of abuse in Arizona after girls discovered in trailer",
+    source: "Telluride Times",
+    date: "August 25, 2026",
+    firstSeen: "2026-08-25",
+    newsTopic: "community",
+    copy: "Samuel Bateman, already serving 50 years federally for child sex crimes, faces sentencing Tuesday on three Arizona child abuse counts after three girls aged 11–14 were found in an unventilated trailer during a 2022 Flagstaff traffic stop. Each count carries 4–8 years. Bateman led a splinter group tied to Warren Jeffs' polygamous sect.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_dd2970b9-da44-5d42-af4a-263f98c8783a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/9e/f9eec24e-6e80-5775-a648-310fd59563f9/6a8d85eccdd66.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Telluride Town Council OKs flood hazard remapping",
     source: "Telluride Times",
     date: "August 25, 2026",
