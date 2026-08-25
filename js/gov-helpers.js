@@ -321,7 +321,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "county|2026-09-09|Board of County Commissioners Work Session":
-    {"sv":4,"ph":"307e0c7b19e4ff5b"},
+    {"sv":4,"ph":"5bee59f208152c68"},
 
   "telluride|2026-09-10|Town Council Budget - Sep 10 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052","sv":4,"ph":"a2d452b639a44962"},
@@ -384,7 +384,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082","sv":4,"ph":"6fb96e40a5040f91"},
 
   "county|2026-09-16|Board of County Commissioners Meeting":
-    {"sv":4,"ph":"49e704e3c3bab858"},
+    {"sv":4,"ph":"a12dfd2ce826475e"},
 
   "mv|2026-09-17|Town Council Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -1023,16 +1023,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "Please note: 1. There will be No Holy Mass on this Friday, August 14. 2. There will be a Holy Mass on Saturday, August 15 at 9 am for the Solemnity of the Assumption of the Blessed Virgin Mary.",
     href: "https://stpatrickstelluride.com/2026/parish-news/changes-to-holy-mass-schedule-on-fri-sat/",
-    img: ""
-  },
-  {
-    title: "Invitation to Prayer/Fellowship Wednesday Morning",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "August 11, 2026",
-    newsTopic: "community",
-    copy: "This is an open invitation to all women in Telluride. Please come and join us on Wednesday, August 12th...7:30 am Rosary8:00 am Holy MassImmediately after we will go to Butcher and Baker for fellowship. Join as able....Contact Katrina with questio...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/invitation-to-prayer-fellowship-wednesday-morning-5/",
     img: ""
   }
 ];  // 7 regional feeds (West End, Ouray, …)
@@ -2456,6 +2446,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15642"
   },
   {
+    title: "State of the Town Address: The State of the Town Is Strong and Engaging",
+    source: "Town of Telluride",
+    date: "August 8, 2026",
+    newsTopic: "government",
+    copy: "The Mayor's biannual State of the Town Address was delivered on Tuesday, July 21 during the regular meeting of Telluride Town Council, here's what Mayor Teddy Errico had to say.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=400",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15641"
+  },
+  {
     title: "Waste Tire Collection Event",
     source: "San Miguel County",
     date: "August 24, 2026",
@@ -2471,6 +2470,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "community",
     copy: "All County offices will be closed on Thursday, August 27, 2026, for an Employee Appreciation Picnic. We apologize for any inconvenience.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=541",
+    img: ""
+  },
+  {
+    title: "Black Bear Pass Now Open",
+    source: "San Miguel County",
+    date: "August 3, 2026",
+    newsTopic: "recreation",
+    copy: "County crews finished work this afternoon, Black Bear Pass is now open from Red Mountain Pass to Telluride.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=539",
     img: ""
   },
   {
