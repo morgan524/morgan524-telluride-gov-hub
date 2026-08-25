@@ -429,7 +429,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104","sv":4,"ph":"da56d8c16badccc4"},
 
   "telluride|2026-09-24|Planning & Zoning Commission Chair - Sep 24 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8103","sv":4,"ph":"313a820643e5b960"}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8103","sv":4,"ph":"313a820643e5b960"},
+
+  "telluride|2026-08-27|Open Space Commission Site Walk - Aug 27 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8306","sv":4,"ph":"c009cde25a17b404"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -782,7 +785,10 @@ const MEETING_PREVIEWS = {
     "The Planning & Zoning Commission is expected to discuss implementation of the Colorado Wildfire Resiliency Code (CWRC), following Town Council's passage of Ordinance #1640 in August 2026, which amended Chapter 18 of the Telluride Municipal Code to incorporate wildfire resiliency standards into the Land Use Code.",
 
   "telluride|2026-09-24|Planning & Zoning Commission Chair - Sep 24 2026":
-    "The Planning & Zoning Commission Chair is expected to discuss the Colorado Wildfire Resiliency Code amendments to Telluride's Land Use Code, following Town Council's passage of Ordinance #1640 on August 11, 2026, which updated Chapter 18 of the Municipal Code to incorporate wildfire resiliency standards."
+    "The Planning & Zoning Commission Chair is expected to discuss the Colorado Wildfire Resiliency Code amendments to Telluride's Land Use Code, following Town Council's passage of Ordinance #1640 on August 11, 2026, which updated Chapter 18 of the Municipal Code to incorporate wildfire resiliency standards.",
+
+  "telluride|2026-08-27|Open Space Commission Site Walk - Aug 27 2026":
+    "The Open Space Commission will conduct a site walk on August 27, 2026. These field visits typically support the commission's work evaluating properties for potential acquisition or assessing management and maintenance needs for existing open space lands within the Town of Telluride."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1340,7 +1346,10 @@ const MANUAL_SUMMARIES = {
     "The September 24, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-09-24|Planning & Zoning Commission Chair - Sep 24 2026":
-    "The September 24, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet."
+    "The September 24, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
+
+  "telluride|2026-08-27|Open Space Commission Site Walk - Aug 27 2026":
+    "The August 27 Open Space Commission Site Walk agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1688,6 +1697,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "‘We all love seasonal workers’",
+    source: "Telluride Times",
+    date: "August 25, 2026",
+    firstSeen: "2026-08-25",
+    newsTopic: "community",
+    copy: "A faith-based nonprofit called Beacon Telluride launched last fall to support seasonal workers — lift ops, servers, baristas — who face high costs and limited social options after long shifts. Programs include free meals, game nights, and an \"Adopt-a-Liftie\" program placing workers in local homes for dinner. Telski's lift operations manager says he's already telling job candidates about it.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_4f54b626-c38c-45eb-b7ef-105406305eeb.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/c7/2c7d8e61-c635-4c53-bd92-91965f17702e/6a8ccffbc4260.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Sentencing set for polygamous leader convicted of abuse in Arizona after girls discovered in trailer",
     source: "Telluride Times",
@@ -3052,17 +3073,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "TRC Tennis Clinics w/ Eric Fey & Eric Alexon",
-    link: "https://koto.org/event/trc-tennis-clinics-w-eric-fey-eric-alexon/2026-08-25/",
-    description: "Join Eric & Eric for a special tennis camp at the end of August! Eric Alexon is one of the top teaching professionals in the industry. He is known for his high-energy coaching style, creative drills, and excellent tips that make sure your time on court is memorable. Must be 3.5+ to sign up Space: Limited to 8 spots Dates: August 25th & 26th Time: 12pm-2pm Price: $299/person Please sign up online or directly through the pro shop.",
-    pubDate: "2026-08-25T12:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
     title: "Telluride R-1 School Board Regular Meeting",
     link: "https://koto.org/event/telluride-r-1-school-board-regular-meeting/",
     description: "Telluride R-1 School District Board of Education holds a regular meeting on Tuesday, August 25th, at 5:15 p.m. in the Bridal Veil conference room at TMHS and via Zoom. The Zoom link and meeting agenda can be found at tellurideschool.org.",
@@ -3726,7 +3736,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Camp Alderwild Telluride Festival",
     link: "https://sheridanoperahouse.com/events/camp-alderwild-telluride-festival/",
-    description: "",
+    description: "Camp Alderwild Telluride Festival is a music festival event taking place at the Sheridan Opera House in Telluride. The historic venue will host performances as part of this festival gathering in late August 2026.",
     pubDate: "2026-08-27",
     endDate: "2026-08-29",
     source: "sheridan",
@@ -3738,7 +3748,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Telluride Film Festival",
     link: "https://sheridanoperahouse.com/events/telluride-film-festival/",
-    description: "",
+    description: "The Telluride Film Festival returns to the Sheridan Opera House, bringing screenings and cinematic programming to one of the mountain town's most storied historic venues. This beloved annual event draws film enthusiasts from around the world for a celebrated weekend of independent and international cinema in the heart of Telluride.",
     pubDate: "2026-09-04",
     endDate: "2026-09-07",
     source: "sheridan",
@@ -3750,7 +3760,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "The Meditations Live in Concert",
     link: "https://sheridanoperahouse.com/events/the-meditations-live-in-concert/",
-    description: "",
+    description: "The Meditations, the legendary Jamaican reggae vocal group, perform live at the historic Sheridan Opera House in Telluride. This concert brings their classic roots reggae harmonies to one of the region's most celebrated intimate venues.",
     pubDate: "2026-09-11",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -3836,7 +3846,8 @@ const SHERBINO_EVENTS = [
     endDate: "2026-09-08 12:00:00",
     location: "Ridgway, CO",
     copy: "",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png"
+    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
+    description: "A monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The recurring event offers a casual space for veterans to connect with one another and with community support."
   },
   {
     title: "Jolie Holland",
@@ -4608,6 +4619,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53629792721969/huge/b36605ccda743f761d9a7e7ab62dfce88160e90c.jpg"
   },
   {
+    title: "September Adult Craft Night: Stuffed Animal Taxidermy",
+    link: "https://events.ourayridgwayevents.com/event/september-adult-craft-night-stuffed-animal-taxidermy",
+    description: "Join us for our September Adult Craft Night to make some fun decor! You can bring a stuffy of your choice, but we will also have some available. Please RSVP at programsouraypl@gmail.com View on site | Email this event",
+    pubDate: "2026-09-02T23:15:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The San Juan Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53764117805107/huge/b17797e9e4d988e64f568119042052c2f7d2c082.jpg"
+  },
+  {
     title: "Mountain Towns 2030 with Mayor John Clark",
     link: "https://events.ourayridgwayevents.com/event/mountain-towns-2030-with-mayor-john-clark",
     description: "As climate challenges grow, no community can solve them alone. The most effective solutions often emerge when leaders come together, learn from one another, and take action collectively. And with the window to help solve climate change tightening, speed is essential. Join a conversation with Mountain Towns 2030, alongside community leaders exploring how networks, partnerships, and peer learning are accelerating climate action and resilience efforts in communities of every size - including Telluride and across the surrounding region. View on site | Email this event",
@@ -4753,6 +4775,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ridgway State Park",
     imageUrl: "https://localist-images.azureedge.net/photos/53595198326789/huge/b52afc36fd4c4e87537e211690d7093afa8c36a3.jpg"
+  },
+  {
+    title: "Music and Makers Fest",
+    link: "https://events.ourayridgwayevents.com/event/music-and-makers-fest",
+    description: "Ouray Made's Music and Makers Fest 2026 Join us for our annual Music and Makers Fest, a celebration of creativity and music surrounded by the breathtaking mountain views at Fellin Park in Ouray, CO! We have a fantastic live music line up, food vendors, an art market featuring local and regional makers, as well as a beer tent! Event Highlights: Live Music: 10:30 AM - Apes Nova 12:30 PM - Red Mountain Revival 2:30 PM - The Sweet Lillies 4:30 PM - Cousin Curtiss Artisan Market: Featuring handmade from local and regional makers. Food Truck Alley: Explore a variety of delicious foods from local food trucks. Beer Tent: Grab a refreshment from the MAMS beer tent. We'll have a variety of alcohol and non-alcohol beverages available! …",
+    pubDate: "2026-09-06T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Fellin Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/53793277001824/huge/c116110eff98984ba8ba5012fad204a327fddfc4.jpg"
   },
   {
     title: "Fantasy Football Kickoff - DraftSunday",
@@ -5608,7 +5641,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-08-24-senior-lunch",
-    description: "",
+    description: "A community lunch gathering for seniors, hosted by the Town of Norwood. It takes place at midday and offers older residents an opportunity to share a meal and connect with one another.",
     pubDate: "2026-08-24T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5619,8 +5652,19 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-08-31-senior-lunch",
-    description: "",
+    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     pubDate: "2026-08-31T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Community Event",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Municipal Court",
+    link: "https://www.norwoodtown.com/2026-09-02-municipal-court",
+    description: "Municipal Court is a regularly scheduled court session held by the Town of Norwood. It is an official local government proceeding open to those with business before the court.",
+    pubDate: "2026-09-02T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
     category: "Community Event",
@@ -5630,7 +5674,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5640,9 +5684,31 @@ const NORWOOD_EVENTS = [
   },
   {
     title: "Senior Lunch",
-    link: "https://www.norwoodtown.com/2026-09-14-senior-lunch",
-    description: "",
-    pubDate: "2026-09-14T12:00:00.000Z",
+    link: "https://www.norwoodtown.com/2026-09-10-senior-lunch",
+    description: "A midday meal gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    pubDate: "2026-09-10T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Community Event",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Senior Lunch",
+    link: "https://www.norwoodtown.com/2026-09-17-senior-lunch",
+    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    pubDate: "2026-09-17T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Community Event",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Senior Lunch",
+    link: "https://www.norwoodtown.com/2026-09-24-senior-lunch",
+    description: "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
+    pubDate: "2026-09-24T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
     category: "Community Event",
@@ -5652,7 +5718,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "",
+    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5663,7 +5729,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5674,7 +5740,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Veterans Day",
     link: "https://www.norwoodtown.com/2026-11-11-closed-for-veterans-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Veterans Day. Municipal offices and services will be unavailable on this federal holiday honoring those who have served in the United States armed forces.",
     pubDate: "2026-11-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6750,13 +6816,13 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Trout-A-Palooza",
     link: "https://www.telluride.com/event/troutapalooza/",
-    description: "Welcome friends of Troutapalooza!  Don't miss this year's fundraiser auction, featuring more exclusive guide service …",
+    description: "Troutapalooza is the premier fundraiser for Gunnison Gorge Anglers and the San Miguel Valley Floor project. The event …",
     pubDate: "2026-09-23",
     source: "telluride-com",
     sourceLabel: "Telluride.com",
     category: "Community Event",
     location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/53749/unnamed-file-3-ezgif_com-webp-to-jpg-converter.800x533.webp"
+    imageUrl: "https://www.telluride.com/site/assets/files/53749/download_14.800x533.webp"
   },
   {
     title: "Telluride Autumn Classic",

@@ -42,19 +42,6 @@
     "endDate": "2026-09-25"
   },
   {
-    "title": "TRC Tennis Clinics w/ Eric Fey & Eric Alexon",
-    "href": "https://koto.org/event/trc-tennis-clinics-w-eric-fey-eric-alexon/2026-08-25/",
-    "date": "2026-08-25",
-    "time": "12:00 PM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join Eric & Eric for a special tennis camp at the end of August! Eric Alexon is one of the top teaching professionals in the industry. He is known for his high-energy coaching style, creative drills, and excellent tips that make sure your…",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "When Trees Testify: Reclaiming America&#039;s Black Botanical Legacy with Beronda Montgomery",
     "href": "https://telluridelibrary.libcal.com/event/17222922?hs=a",
     "date": "2026-08-25",
@@ -489,7 +476,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/03/camp_alderwild_20250822_221747.webp",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "",
+    "desc": "Camp Alderwild Telluride Festival is a music festival event taking place at the Sheridan Opera House in Telluride. The historic venue will host performances as part of this festival gathering in late August 2026.",
     "type": "Festivals",
     "endDate": "2026-08-29"
   },
@@ -1131,7 +1118,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     "type": "Community"
   },
   {
@@ -1396,6 +1383,32 @@
     "source": "KOTO Community Calendar",
     "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "September Adult Craft Night: Stuffed Animal Taxidermy",
+    "href": "https://events.ourayridgwayevents.com/event/september-adult-craft-night-stuffed-animal-taxidermy",
+    "date": "2026-09-02",
+    "time": "5:15 PM",
+    "location": "The San Juan Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53764117805107/huge/b17797e9e4d988e64f568119042052c2f7d2c082.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us for our September Adult Craft Night to make some fun decor! You can bring a stuffy of your choice, but we will also have some available. Please RSVP at programsouraypl@gmail.com View on site | Email this event",
+    "type": "Community"
+  },
+  {
+    "title": "Municipal Court",
+    "href": "https://www.norwoodtown.com/2026-09-02-municipal-court",
+    "date": "2026-09-02",
+    "time": "6:00 AM",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "Town of Norwood",
+    "desc": "Municipal Court is a regularly scheduled court session held by the Town of Norwood. It is an official local government proceeding open to those with business before the court.",
+    "type": "Community"
   },
   {
     "title": "Mountain Towns 2030: Leveraging A Network of Community Leaders to Accelerate Climate Action",
@@ -1737,7 +1750,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/03/4fd403bf-4bc8-9f64-6ab9-26b72e8ee156.jpg",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "",
+    "desc": "The Telluride Film Festival returns to the Sheridan Opera House, bringing screenings and cinematic programming to one of the mountain town's most storied historic venues. This beloved annual event draws film enthusiasts from around the…",
     "type": "Arts & Film",
     "endDate": "2026-09-07"
   },
@@ -1805,6 +1818,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Join us for a morning of science and discovery at Ridgway State Park. This unique, hands-on event offers a rare \"behind-the-scenes\" look at how researchers track and protect our feathered friends. This program offers a front-row seat to…",
     "type": "Talks & Classes"
+  },
+  {
+    "title": "Music and Makers Fest",
+    "href": "https://events.ourayridgwayevents.com/event/music-and-makers-fest",
+    "date": "2026-09-06",
+    "time": "10:00 AM",
+    "location": "Fellin Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53793277001824/huge/c116110eff98984ba8ba5012fad204a327fddfc4.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray Made's Music and Makers Fest 2026 Join us for our annual Music and Makers Fest, a celebration of creativity and music surrounded by the breathtaking mountain views at Fellin Park in Ouray, CO! We have a fantastic live music line up,…",
+    "type": "Music"
   },
   {
     "title": "Sunday Rehab at Alloy Kitchen",
@@ -2000,7 +2026,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "",
+    "desc": "A monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The recurring event offers a casual space for veterans to connect with one another and with community support.",
     "type": "Community"
   },
   {
@@ -2054,6 +2080,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Join the Ouray County Arts Association and the Wright Opera House for the opening reception of Historic Treasures of the San Juan Mountains, a photography exhibition by Colorado photographer Thomas Livingstone. Through striking black and…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Senior Lunch",
+    "href": "https://www.norwoodtown.com/2026-09-10-senior-lunch",
+    "date": "2026-09-10",
+    "time": "6:00 AM",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "Town of Norwood",
+    "desc": "A midday meal gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    "type": "Community"
   },
   {
     "title": "Telluride Community Concert — September",
@@ -2223,7 +2262,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/05/unnamed-file.jpg",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "",
+    "desc": "The Meditations, the legendary Jamaican reggae vocal group, perform live at the historic Sheridan Opera House in Telluride. This concert brings their classic roots reggae harmonies to one of the region's most celebrated intimate venues.",
     "type": "Wellness"
   },
   {
@@ -2408,19 +2447,6 @@
     "source": "Telluride Chamber Music",
     "desc": "An evening of Ravel and Brahms in the historic Sheridan Opera House.",
     "type": "Arts & Film"
-  },
-  {
-    "title": "Senior Lunch",
-    "href": "https://www.norwoodtown.com/2026-09-14-senior-lunch",
-    "date": "2026-09-14",
-    "time": "6:00 AM",
-    "location": "Norwood, CO",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "Town of Norwood",
-    "desc": "",
-    "type": "Community"
   },
   {
     "title": "Mountain Village Matters radio show",
@@ -2673,6 +2699,19 @@
     "desc": "AFTER SCHOOL ART FOR AGES 5-8 Thursdays, 3:15–4:30 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 17 – October 8Session 2 (4 weeks • $85): October 22 – November 12Session 3 (3…",
     "type": "Arts & Film",
     "endDate": "2026-10-08"
+  },
+  {
+    "title": "Senior Lunch",
+    "href": "https://www.norwoodtown.com/2026-09-17-senior-lunch",
+    "date": "2026-09-17",
+    "time": "6:00 AM",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "Town of Norwood",
+    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    "type": "Community"
   },
   {
     "title": "Telluride Adaptive Sports&#039; Bob Miller Memorial Golf Classic",
@@ -3035,11 +3074,24 @@
     "time": "6:00 PM",
     "location": "Telluride, CO",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/53749/unnamed-file-3-ezgif_com-webp-to-jpg-converter.800x533.webp",
+    "img": "https://www.telluride.com/site/assets/files/53749/download_14.800x533.webp",
     "category": "Community Event",
     "source": "Telluride.com",
-    "desc": "Welcome friends of Troutapalooza! Don't miss this year's fundraiser auction, featuring more exclusive guide service …",
+    "desc": "Troutapalooza is the premier fundraiser for Gunnison Gorge Anglers and the San Miguel Valley Floor project. The event …",
     "type": "Community"
+  },
+  {
+    "title": "Senior Lunch",
+    "href": "https://www.norwoodtown.com/2026-09-24-senior-lunch",
+    "date": "2026-09-24",
+    "time": "6:00 AM",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "Town of Norwood",
+    "desc": "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
+    "type": "Food & Drink"
   },
   {
     "title": "Watercolor & Wine with Katey Fetch: \"Paint the Peaks\"",
@@ -3196,7 +3248,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
     "type": "Community"
   },
   {

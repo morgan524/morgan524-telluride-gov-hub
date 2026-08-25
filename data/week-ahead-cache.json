@@ -1,26 +1,26 @@
 {
-  "hash": "75efd277b4d15a1d676053351267cea5ecbfedb4",
-  "lede": "The school board votes Tuesday on a flood-related budget appropriation for FY 2026-27 — real money being reallocated because the canyon took a hit, and worth knowing about. Alongside that, the Ethics Commission is shaping a formal Code of Conduct recommendation for Town Council, the Hospital District board could act on a Two Site Model that would define what gets built and where, and Mountain Village's HOA is moving to form a Workforce Housing Committee. A full week of decisions that will settle things for a while.",
+  "hash": "b817ebbacf9a347d55f86f655fffc4a7207c049c",
+  "lede": "The school board's vote Tuesday on a flood-related budget appropriation for FY 2026-27 is the sharpest item of the week — real money being redirected because the canyon flooded, and the district has to adjust. Alongside that, the Ethics Commission is drafting a formal Code of Conduct recommendation for Town Council, the Telluride Medical Center board is weighing a Two Site Model that would shape what gets built and where, and TMVOA is moving to formalize its workforce housing response.",
   "notable": [
     {
       "id": 1,
-      "stake": "Board votes on flood-driven budget changes to district's FY 2026-27 spending plan."
+      "stake": "Board votes to adjust district budget due to flood damage costs."
     },
     {
       "id": 0,
-      "stake": "Commission drafts Code of Conduct recommendation that goes directly to Town Council."
+      "stake": "Commission drafts Code of Conduct recommendation that goes to Town Council."
     },
     {
       "id": 2,
-      "stake": "CCAP funding discussion carries direct budget implications for county human services."
+      "stake": "CCAP funding discussion carries direct budget implications for the county."
     },
     {
       "id": 6,
-      "stake": "Board may act on Two Site Model, shaping scale and location of new medical facility."
+      "stake": "Board may act on Two Site Model shaping scope and location of new hospital."
     },
     {
       "id": 8,
-      "stake": "Board votes on updated policies and forms a new Workforce Housing Committee."
+      "stake": "Board votes on workforce housing committee formation and updated policies."
     }
   ]
 }
