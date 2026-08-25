@@ -1595,8 +1595,10 @@
 
       <!-- ── SIGNUP panel ── -->
       <div id="hbSignupPanel">
-        <h2 id="hbModalTitle">Create your free account</h2>
-        <p class="hb-modal-sub">Get the weekly email and choose what you hear about. Your account also lets you update your preferences any time.</p>
+        <h2 id="hbModalTitle" class="hb-community-only">Create your free account</h2>
+        <h2 class="hb-paused-only">Subscribe</h2>
+        <p class="hb-modal-sub hb-community-only">Get the weekly email and choose what you hear about. Your account also lets you update your preferences any time.</p>
+        <p class="hb-modal-sub hb-paused-only">Get the weekly email and choose what you hear about. Every email has a link to change your preferences or unsubscribe.</p>
 
         <div class="hb-modal-row">
           <div class="hb-modal-field">
@@ -1614,7 +1616,7 @@
           <input type="email" id="hbSignupEmail" autocomplete="email" placeholder="jane@example.com">
         </div>
 
-        <div class="hb-modal-field">
+        <div class="hb-modal-field hb-community-only">
           <label for="hbSignupPassword">Create a password</label>
           <input type="password" id="hbSignupPassword" autocomplete="new-password" placeholder="At least 8 characters">
         </div>
@@ -1686,12 +1688,12 @@
           </div>
         </div>
 
-        <div class="hb-modal-notice">
+        <div class="hb-modal-notice hb-community-only">
           🔒 A free account lets you post and comment on Hub-Bub.
         </div>
 
         <button class="hb-modal-submit" id="hbSignupSubmit" type="button">Sign me up</button>
-        <div class="hb-modal-switch">Already have an account? <a id="hbSwitchToLogin">Log in instead</a></div>
+        <div class="hb-modal-switch hb-community-only">Already have an account? <a id="hbSwitchToLogin">Log in instead</a></div>
         <div class="hb-modal-msg" id="hbSignupMsg"></div>
       </div>
 
@@ -1765,6 +1767,13 @@
        callback contract so the signup control flow (subscribe → create
        Firebase account → sign in) is unchanged; it just no longer contacts
        Mailchimp. */
+    // Hub-Bub's board is hidden, so this page is purely a subscribe surface and
+    // signing up must not demand a password or mint a Firebase account nobody
+    // can use yet. Flip to true alongside the .hb-community-only CSS when the
+    // board comes back; the password field and login panel are still in the
+    // markup, just hidden.
+    const HB_ACCOUNTS_ENABLED = false;
+
     function mcSubscribe(email, firstName, lastName, digestFreq, includeNewsletter, region, cb) {
       // No external call — the Customer.io write is the /update-profile POST in
       // the callback. Invoke asynchronously to preserve the original timing.
@@ -1942,17 +1951,17 @@
 
       if (!firstName || !lastName) return showMsg('hbSignupMsg', 'Please enter your first and last name.', 'error');
       if (!email || !email.includes('@')) return showMsg('hbSignupMsg', 'Please enter a valid email address.', 'error');
-      if (password.length < 8)  return showMsg('hbSignupMsg', 'Password must be at least 8 characters.', 'error');
+      if (HB_ACCOUNTS_ENABLED && password.length < 8) return showMsg('hbSignupMsg', 'Password must be at least 8 characters.', 'error');
 
       btn.disabled = true;
-      btn.textContent = 'Creating account…';
+      btn.textContent = HB_ACCOUNTS_ENABLED ? 'Creating account…' : 'Subscribing…';
 
       // Step 1: newsletter subscribe — BEST EFFORT, never blocks account
       // creation. The subscription write is the Worker /update-profile POST in
       // the callback below (Customer.io); mcSubscribe is now a shim. A
       // mailing-list hiccup must never stop someone from getting their Hub-Bub
       // account and being logged in, so failures are logged, not surfaced.
-      showMsg('hbSignupMsg', 'Creating your account…', 'info');
+      showMsg('hbSignupMsg', HB_ACCOUNTS_ENABLED ? 'Creating your account…' : 'Signing you up…', 'info');
 
       mcSubscribe(email, firstName, lastName, digestFreq, includeNewsletter, region, function (ok, msg) {
         // The subscribe shim above never fails; kept best-effort + non-blocking
@@ -1974,12 +1983,31 @@
         // / region attributes.
         var profFields = { FNAME: firstName, LNAME: lastName };
         if (region) profFields.MMERGE6 = region;
+        var profileWrite;
         try {
-          fetch(SITE_CONFIG.RSS_PROXY_BASE + '/update-profile', {
+          profileWrite = fetch(SITE_CONFIG.RSS_PROXY_BASE + '/update-profile', {
             method: 'POST', headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email: email, fields: profFields, subs: subs })
-          }).catch(function () {});
-        } catch (e) {}
+          }).then(function (r) { return r.json(); }).catch(function () { return { ok: false }; });
+        } catch (e) { profileWrite = Promise.resolve({ ok: false }); }
+
+        // With accounts off this POST IS the signup, so its result drives the
+        // message. Firebase used to report success even when the subscription
+        // write had failed, which would tell someone they were signed up when
+        // the only thing that actually mattered had not happened.
+        if (!HB_ACCOUNTS_ENABLED) {
+          profileWrite.then(function (res) {
+            btn.disabled = false;
+            btn.textContent = 'Sign me up';
+            if (res && res.ok) {
+              showMsg('hbSignupMsg', '✓ You\u2019re subscribed \u2014 thank you! Every email has a link to change your preferences or unsubscribe.', 'success');
+              setTimeout(closeModal, 2200);
+            } else {
+              showMsg('hbSignupMsg', (res && res.msg) || 'Couldn\u2019t sign you up right now \u2014 please try again.', 'error');
+            }
+          });
+          return;
+        }
 
         // Step 2: Firebase Auth — create account (auto-signs the user in)
         waitForFirebase(function () {
