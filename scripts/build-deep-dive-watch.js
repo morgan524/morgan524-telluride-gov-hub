@@ -67,7 +67,12 @@ function topicRegexes() {
   const out = {};
   for (const [key, t] of Object.entries(TOPICS)) {
     const kws = (WATCH_OVERRIDES[key] && WATCH_OVERRIDES[key].keywords) || t.keywords;
-    out[key] = kws.map(k => new RegExp(k.replace(/\.\*/g, '[^.!?]{0,60}'), 'i'));
+    // \b at both ends: without it a keyword matches mid-word, and on
+    // 2026-08-25 'lot l' matched inside "revised MLO bal|lot l|anguage",
+    // putting the school board's monthly meeting on the Carhenge/Shandoka
+    // watch and onto the homepage Featured Action card. Every keyword starts
+    // and ends with a word character, so the boundaries are unconditional.
+    out[key] = kws.map(k => new RegExp('\\b' + k.replace(/\.\*/g, '[^.!?]{0,60}') + '\\b', 'i'));
   }
   return out;
 }
