@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 8-24-26",
+    "source": "KOTO Community Radio",
+    "date": "August 25, 2026",
+    "newsTopic": "community",
+    "copy": "Region Considers Chamber of Commerce; Governments Talk Childcare",
+    "href": "https://koto.org/news/newscast-8-24-26/"
+  },
+  {
     "title": "Newscast 8-21-26",
     "source": "KOTO Community Radio",
     "date": "August 22, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "government",
     "copy": "Paul Reich Vies for Seat on San Miguel Board of County Commissioners; A Placerville Poetry Box",
     "href": "https://koto.org/news/newscast-8-12-26/"
-  },
-  {
-    "title": "Newscast 8-10-26",
-    "source": "KOTO Community Radio",
-    "date": "August 11, 2026",
-    "newsTopic": "community",
-    "copy": "Coming Up Next, Telluride; Eco-Grief Finds the Space Between Grief and Gratitude",
-    "href": "https://koto.org/news/newscast-8-10-26/"
   }
 ]

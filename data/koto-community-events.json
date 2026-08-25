@@ -1,16 +1,5 @@
 [
   {
-    "title": "Telluride R-1 School Board Work Session",
-    "link": "https://koto.org/event/telluride-r-1-school-board-work-session/",
-    "description": "Telluride R-1 School District Board of Education holds a work session on Monday, August 24th, at 3:30 p.m. in the Bridal Veil conference room at TMHS and via Zoom. Agenda & Zoom link can be found at tellurideschool.org.",
-    "pubDate": "2026-08-24T15:30:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Middle/High School, TELLURIDE",
-    "imageUrl": ""
-  },
-  {
     "title": "Tennis Clinic 3.0-4.0",
     "link": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-25/",
     "description": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
@@ -206,6 +195,17 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Arleene Correa Valencia \"Me Quiero Ir Contigo/ I Want to Go With You\"",
+    "link": "https://koto.org/event/arleene-correa-valencia-me-quiero-ir-contigo-i-want-to-go-with-you/",
+    "description": "Arleene Correa Valencia is a Mexican-born embroidery and textile artist known for multiple solo and group exhibitions based on the emotional impacts of migrations through the perspective of family separation, identity, and visual representation on families migrating for a better life. Arleene’s Ah Haa exhibition, Me Quiero Ir Contigo / I Want To Go With You uses repurposed textiles on canvas to discuss the history of human migration as a way of survival. When: Thursday, August 27th, 5pm Where: Daniel Tucker Gallery, Ah Haa School Correa Valencia received a regional Emmy award from the Headlands Center for the Arts for her piece REPRESENT: Portraits of Napa Workers. In 2023 she was named a Eureka Fellow by the Fleishhacker Foundation. …",
+    "pubDate": "2026-08-27T17:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Ah Haa School for the Arts, Telluride",
     "imageUrl": ""
   },
   {
@@ -492,6 +492,28 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Telluride Innovation Center",
+    "imageUrl": ""
+  },
+  {
+    "title": "Telluride Rotary Club Meeting",
+    "link": "https://koto.org/event/telluride-rotary-club-meeting-2/",
+    "description": "Telluride Rotary Club meets Wednesday, September 2, at 6 p.m. at the Mountain Lodge in Mountain Village. Come at 5:30PM to socialize before the meeting. Meetings feature guest speakers and discussion of club projects. Anyone with an interest in networking and service is welcome to drop in as a guest. Email telluriderotary@gmail.com for info or to rsvp.",
+    "pubDate": "2026-09-02T18:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Mountain Lodge Telluride, Mountain Village",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/08/Telluride-Rotary-Logo-White.jpg"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "link": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-03/",
+    "description": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    "pubDate": "2026-09-03T09:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
     "imageUrl": ""
   }
 ]

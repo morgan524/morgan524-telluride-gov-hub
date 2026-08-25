@@ -217,7 +217,7 @@
   },
   "county|2026-08-26|Board of County Commissioners Work Session": {
     "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/869/files/agenda/1969",
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/869/files/agenda/1971",
     "zoomUrl": "https://us02web.zoom.us/meeting/register/9OtfsijQQWSJMrVmAUrDCw",
     "meetingId": "858 7914 5422",
     "passcode": "509931",
@@ -276,7 +276,7 @@
   "telluride|2026-09-02|Commission for Community Assistance, Arts & Special Events - Sep 02 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066",
     "sv": 4,
-    "ph": "271e26295cef7f51"
+    "ph": "3bcbff87c865ec6d"
   },
   "telluride|2026-09-02|Telluride Housing Authority Subcommittee - Sep 02 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163",
@@ -502,5 +502,19 @@
   "county|2026-09-23|Board of County Commissioners Work Session": {
     "sv": 4,
     "ph": "307e0c7b19e4ff5b"
+  },
+  "med|2026-09-24|Regular Board Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "telluride|2026-09-24|Planning & Zoning Commission - Sep 24 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104",
+    "sv": 4,
+    "ph": "da56d8c16badccc4"
+  },
+  "telluride|2026-09-24|Planning & Zoning Commission Chair - Sep 24 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8103",
+    "sv": 4,
+    "ph": "313a820643e5b960"
   }
 }
