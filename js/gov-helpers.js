@@ -324,7 +324,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"307e0c7b19e4ff5b"},
 
   "telluride|2026-09-10|Town Council Budget - Sep 10 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052","sv":4,"ph":"a2d452b639a44962"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052","sv":4,"ph":"b68ea752a2f71495"},
 
   "county|2026-09-10|Planning Commission Meeting":
     {"sv":4,"ph":"b7c74705fcca6b2f"},
@@ -454,6 +454,14 @@ const DEEP_DIVE_UPDATES = [
 //   sourceUrl, topics: [] }. Rendered by hub-bub.html from the JSON mirror
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
+  {
+    date: "2026-08-25",
+    title: "A new committee takes its first breath",
+    body: "The Resident Advisory Committee holds its inaugural meeting — introductions, officer elections, and a look at Telluride's Employee Rental Housing Policies. That last item is where it gets interesting. Some folks will see this committee as real teeth: residents finally at the table on housing decisions that affect whether workers can stay in town. Others will wonder whether an advisory body with no binding authority just adds a layer without changing anything. So — does a resident voice in the room matter if it's purely advisory?",
+    choices: ["A voice at the table is real power", "Advisory only means ignored", "Depends on who's listening", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
   {
     date: "2026-08-24",
     title: "Who gets the arts money — and who decides?",
@@ -683,14 +691,6 @@ const DAILY_QUESTIONS = [
     title: "Town Park gets a makeover — but which one?",
     body: "The Parks & Recreation Commission has a rescheduled meeting on the books, and on the table are two potential improvements: upgrades to the Telluride Town Park Oval and fencing and safety netting at Warner Field. Both cost money and change spaces people already use every day. Some residents will say the Oval and Warner Field are overdue for attention — safety netting especially is hard to argue with. Others will wonder whether the priority and the price are right when housing and basic services are still stretched. Nothing is decided yet.\n\nSo — which of these feels more pressing to you, or do you think neither should jump the line right now?",
     choices: ["Town Park Oval first", "Warner Field safety first", "Neither is the priority", "Not sure yet"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
-  },
-  {
-    date: "2026-07-26",
-    title: "The gondola's books are open — sort of",
-    body: "The Gondola Leadership Committee is taking up a fiscal and economic impact analysis at its next meeting, alongside updates on CIG Program funding commitments and where the project actually stands. That's the kind of agenda that tends to split a room. Supporters will say the numbers prove the gondola pays for itself and then some. Skeptics will want to know who's on the hook if the projections don't hold. Neither side is wrong to ask.\n\nSo — does an economic impact analysis change how you're thinking about this project, or is the funding picture still too murky to say?",
-    choices: ["The analysis moves me toward yes", "Still too many unknowns", "Depends what the numbers actually show", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
   }
@@ -2604,6 +2604,19 @@ const KOTO_FEATURED_STORIES = [
 // and the array will naturally shed the sentinels via the same logic.
 const SMB_FORUM_ARTICLES = [
   {
+    title: "What species are the native fish exactly?",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "August 25, 2026",
+    firstSeen: "2026-08-25",
+    dateSource: "article",
+    newsTopic: "community",
+    copy: "Three native fish — Bluehead Sucker, Flannelmouth Sucker, and Roundtail Chub — are the focus of conservation efforts in the San Miguel and Dolores rivers. All three are Colorado Tier 1 species, have lost more than half their historic range, and are covered by a multiagency agreement. Colorado Pikeminnow and Razorback Sucker are also present but extremely rare, with low flows cited as the primary threat.",
+    claudeSummary: true,
+    href: "https://www.sanmiguelbasinforum.com/stories/untitled,127312",
+    img: ""
+  },
+  {
     title: "Bockrath resigns as chief, confesses errors",
     source: "San Miguel Basin Forum",
     sourceKey: "smb",
@@ -3545,37 +3558,37 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Savvy Seniors-Open Tech",
-    link: "https://telluridelibrary.libcal.com/event/17029824?hs=a",
-    description: "1:30 PM – 2:30 PM · Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone.",
-    pubDate: "2026-08-24T19:30:00.000Z",
+    title: "When Trees Testify: Reclaiming America&#039;s Black Botanical Legacy with Beronda Montgomery",
+    link: "https://telluridelibrary.libcal.com/event/17222922?hs=a",
+    description: "12:00 PM – 1:00 PM · Join us for a riveting conversation with award-winning biologist Beronda Montgomery as we discuss her book, When Trees Testify: Science, Wisdom, History, and America's Black Botanical Legacy. PLEASE NOTE: This is an online author talk. The histories of trees in America are also the histories of Black Americans. Pecan trees were domesticated by an enslaved African named Antoine; sycamore trees were both havens and signposts for people trying to escape enslavement; poplar trees are historically associated with lynching; and willow bark has offered the gift of medicine. These trees, and others, testify not only to the complexity of the Black American narrative but also to a heritage of Black botanical expertise that, like Native American traditions, predates the United States entirely. In When Trees Testify , award-winning plant biologist Beronda L. …",
+    pubDate: "2026-08-25T18:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Meeting Room #6 - large",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_23_14_40_56.png"
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_17_13_59_12.jpg"
   },
   {
-    title: "Cardio Dance (Baile Cardio) with Kelsey",
-    link: "https://telluridelibrary.libcal.com/event/16548398?hs=a",
-    description: "6:00 PM – 7:00 PM · Join us for a fun evening of dancing and getting your heart rate up!  You will be having so much fun, you won&#39;t even know you are exercising!  Led by Kelsey Trottier from the Telluride Dance Collective. 2nd and 4th Monday of the month. &iexcl;&Uacute;nete a nosotros para una divertida noche de baile y ejercicio! Te divertir&aacute;s tanto que ni te dar&aacute;s cuenta de que est&aacute;s haciendo ejercicio. Dirigido por Kelsey Trottier del Telluride Dance Collective.",
-    pubDate: "2026-08-25T00:00:00.000Z",
+    title: "Teen Cook",
+    link: "https://telluridelibrary.libcal.com/event/17486112?hs=a",
+    description: "2:00 PM – 3:00 PM · Join the WPL Every Tuesday after school for Teen Cook. We will cook a different recipe from scratch, and have enough to share with those around!",
+    pubDate: "2026-08-25T20:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Teen Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_27_00.png"
+  },
+  {
+    title: "Eco Series: Between Grief & Gratitude",
+    link: "https://telluridelibrary.libcal.com/event/17177338?hs=a",
+    description: "5:30 PM – 7:00 PM · Between Grief & Gratitude Where Love and Loss Meet in a Changing World Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-part series on navigating climate anxiety and eco-grief. The first two sessions will consist of a facilitated community conversation connecting our love of these landscapes with the challenge of the climate crisis at our doorsteps. After exploring our shared relationship with the current reality, the second two sessions will provide opportunities to express pain, grief, love and hope through various mediums including local poetry and group art projects.",
+    pubDate: "2026-08-25T23:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1768253322.jpg"
-  },
-  {
-    title: "The Listening Club- Book Club BBQ",
-    link: "https://telluridelibrary.libcal.com/event/17171249?hs=a",
-    description: "6:00 PM – 7:00 PM · Join The Listening Club Book Club Back to School BBQ! We are back from summer break and will talk about our summer reading, which is varied this year!  Everyone who was lucky enough to be at the May hang out grabbed a different music-themed book and we&#39;ll all be giving little book reports!  Anyone is welcome to come even if you didn&#39;t get the chance to read a book. We&#39;ll start discussing albums again in September, but join us for this discussion of books and some comestibles this month.  Register online so we know how much food to get!",
-    pubDate: "2026-08-25T00:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_22_16_29_53.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_30_12_01_31.jpg"
   }
 ];
 
@@ -4131,100 +4144,6 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "First Day of School K-12 - Ridgway",
-    link: "https://events.ourayridgwayevents.com/event/first-day-of-school-k-12-ridgway",
-    description: "Pre-K starts August 26 View on site | Email this event",
-    pubDate: "2026-08-24T06:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
-  },
-  {
-    title: "First day of School - Ouray",
-    link: "https://events.ourayridgwayevents.com/event/first-day-of-school-ouray",
-    description: "View on site | Email this event",
-    pubDate: "2026-08-24T06:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52322176935102/huge/ddc5d3f4273e28e34256e8e641136b3515c2f377.jpg"
-  },
-  {
-    title: "Pilates Mat All Levels",
-    link: "https://events.ourayridgwayevents.com/event/pilates-mat-all-levels",
-    description: "This all levels Classical Pilates Mat class will center, strengthen and legnthen your entire body. Specialty mats are provided. Contact us to learn more or purchase a pass from the link below. We are located in the Historic Bank Building at 521 Clinton Street., View on site | Email this event",
-    pubDate: "2026-08-24T14:30:00.000Z",
-    endDate: "2026-08-31",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway Pilates",
-    imageUrl: "https://localist-images.azureedge.net/photos/53461881445043/huge/bea9b1b613e5c4368deec4a9cd935c81f0ae72c8.jpg"
-  },
-  {
-    title: "On Display - Roots and Rhythms",
-    link: "https://events.ourayridgwayevents.com/event/ongoing-roots-and-rhythms",
-    description: "Roots & Rhythms features mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and transformation—rooted in what came before, flowing toward what is possible. The exhibition remains on view until August 31st, with gallery hours Monday–Wednesday and Friday, 9 a.m.–4 p.m.st View on site | Email this event",
-    pubDate: "2026-08-24T15:00:00.000Z",
-    endDate: "2026-08-31",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Space to Create Gallery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53622400474001/huge/4d4b348dd13c551177bad3f73488afc2565fc57f.jpg"
-  },
-  {
-    title: "On Display: PAWS for Art Gallery Asian-themed show",
-    link: "https://events.ourayridgwayevents.com/event/paws-for-art-gallery-asian-themed-show",
-    description: "Our gallery across the parking lot from the Second Chance Thriftshop is featuring an Asian-themed art show through August. Stop by to see the variety and quality of our offerings! View on site | Email this event",
-    pubDate: "2026-08-24T16:00:00.000Z",
-    endDate: "2026-08-31",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Second Chance PAWS for Art Gallery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53621678601741/huge/19c8fd1126bf67093819de3139e06e71a7d0cf8d.jpg"
-  },
-  {
-    title: "Ongoing Exhibition: BIG BOX-Big New Work By T-Bone",
-    link: "https://events.ourayridgwayevents.com/event/ongoing-exhibition-big-box-big-new-work-by-t-bone",
-    description: "The Big Box Show! Bigger, better and more. This groundbreaking local art won't last long! Ridgway's own T-Bone and his quintessential colorful cardboard paintings take on new life and meaning in the Decker where they have room to stretch out and really TALK to you! Come and be delighted by the playful T-Bone experience. Stay to cool off, craft, co-work, hang out. or plan your own future exhibition or event in the space! The Decker is a unique community rental-art gallery hybrid, incubated and managed by the Town of Ridgway, in cooperation with our sister ARTSpace gallery next door. View on site | Email this event",
-    pubDate: "2026-08-24T16:00:00.000Z",
-    endDate: "2026-09-25",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53736310463128/huge/ce8867efeba0934913913ee401aff4479a074ba5.jpg"
-  },
-  {
-    title: "Senior Lunch by Neighbor to Neighbor",
-    link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
-    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
-    pubDate: "2026-08-24T18:00:00.000Z",
-    endDate: "2026-10-19",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
-  },
-  {
-    title: "Breathe Together",
-    link: "https://events.ourayridgwayevents.com/event/breathe-together-9572",
-    description: "We explore and practice breath awareness and conscious breathing techniques as doorways to physical and emotional regulation and spiritual growth. Through these practices we also grow our awareness and achieve higher states of consciousness that can help us in our everyday life, relationships, general wellbeing and ultimately reconnect with our higher nature. No previous experience is required. View on site | Email this event",
-    pubDate: "2026-08-25T00:15:00.000Z",
-    endDate: "2026-09-29",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Bee True You Wellness and Creative Studio",
-    imageUrl: "https://localist-images.azureedge.net/photos/53197444379202/huge/26813502ab1ba3ae9f231b0cd774d101f4f32f02.jpg"
-  },
-  {
     title: "San Juan Chamber MusicFest",
     link: "https://events.ourayridgwayevents.com/event/san-juan-chamber-musicfest",
     description: "August 25 - August 30 at multiple venues in Ridway and Ouray, Colorado. The annual San Juan Chamber MusicFest, OCPAG’s flagship event, features a group of chamber musicians of international acclaim, under the artistic direction of renowned concert pianist Max Levinson. Together, they produce a number of concerts and events in Ouray and Ridgway over the course of a week each August. This year's MusicFest will feature the world-renowned Ulysses Quartet. Read more about the SJCMF musicians HERE. OCPAG is grateful for the grant support from the Dave and Mary Wood Fund and the Western Colorado Community Foundation so that OCPAG is able to bring these concerts to stages around Ouray County. We are also most grateful to the patrons who attend and support this chamber music programming! View on site | Email this event",
@@ -4249,6 +4168,30 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/860fbc87ce3cc92e25c09e723732d04292df18ba.jpg"
   },
   {
+    title: "On Display - Roots and Rhythms",
+    link: "https://events.ourayridgwayevents.com/event/ongoing-roots-and-rhythms",
+    description: "Roots & Rhythms features mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and transformation—rooted in what came before, flowing toward what is possible. The exhibition remains on view until August 31st, with gallery hours Monday–Wednesday and Friday, 9 a.m.–4 p.m.st View on site | Email this event",
+    pubDate: "2026-08-25T15:00:00.000Z",
+    endDate: "2026-08-31",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create Gallery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53622400474001/huge/4d4b348dd13c551177bad3f73488afc2565fc57f.jpg"
+  },
+  {
+    title: "On Display: PAWS for Art Gallery Asian-themed show",
+    link: "https://events.ourayridgwayevents.com/event/paws-for-art-gallery-asian-themed-show",
+    description: "Our gallery across the parking lot from the Second Chance Thriftshop is featuring an Asian-themed art show through August. Stop by to see the variety and quality of our offerings! View on site | Email this event",
+    pubDate: "2026-08-25T16:00:00.000Z",
+    endDate: "2026-08-31",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Second Chance PAWS for Art Gallery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53621678601741/huge/19c8fd1126bf67093819de3139e06e71a7d0cf8d.jpg"
+  },
+  {
     title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
     link: "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
     description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
@@ -4259,6 +4202,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The 610 Arts Collective",
     imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
+  },
+  {
+    title: "Ongoing Exhibition: BIG BOX-Big New Work By T-Bone",
+    link: "https://events.ourayridgwayevents.com/event/ongoing-exhibition-big-box-big-new-work-by-t-bone",
+    description: "The Big Box Show! Bigger, better and more. This groundbreaking local art won't last long! Ridgway's own T-Bone and his quintessential colorful cardboard paintings take on new life and meaning in the Decker where they have room to stretch out and really TALK to you! Come and be delighted by the playful T-Bone experience. Stay to cool off, craft, co-work, hang out. or plan your own future exhibition or event in the space! The Decker is a unique community rental-art gallery hybrid, incubated and managed by the Town of Ridgway, in cooperation with our sister ARTSpace gallery next door. View on site | Email this event",
+    pubDate: "2026-08-25T16:00:00.000Z",
+    endDate: "2026-09-25",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53736310463128/huge/ce8867efeba0934913913ee401aff4479a074ba5.jpg"
   },
   {
     title: "DAVE JORDAN",
@@ -4535,6 +4490,29 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53774245932386/huge/a983022deeba7f71c5044f0358d99b07dd378b13.jpg"
   },
   {
+    title: "Pilates Mat All Levels",
+    link: "https://events.ourayridgwayevents.com/event/pilates-mat-all-levels",
+    description: "This all levels Classical Pilates Mat class will center, strengthen and legnthen your entire body. Specialty mats are provided. Contact us to learn more or purchase a pass from the link below. We are located in the Historic Bank Building at 521 Clinton Street., View on site | Email this event",
+    pubDate: "2026-08-31T14:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ridgway Pilates",
+    imageUrl: "https://localist-images.azureedge.net/photos/53461881445043/huge/bea9b1b613e5c4368deec4a9cd935c81f0ae72c8.jpg"
+  },
+  {
+    title: "Senior Lunch by Neighbor to Neighbor",
+    link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
+    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
+    pubDate: "2026-08-31T18:00:00.000Z",
+    endDate: "2026-10-19",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
+  },
+  {
     title: "August Culinary Club: Creamy Taco Soup",
     link: "https://events.ourayridgwayevents.com/event/august-culinary-club-creamy-taco-soup",
     description: "Join the Ouray Library to create a delicious soup in the Massard Room in the Ouray Community Center on Monday, August 31st, starting at 5:30 p.m.! Sign up is required at programsouraypl@gmail.com Ages: Adults View on site | Email this event",
@@ -4544,6 +4522,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Massard Room",
     imageUrl: "https://localist-images.azureedge.net/photos/53693195881547/huge/75d70dc5cdd5fba693c00e1d3a5370a40e5fc232.jpg"
+  },
+  {
+    title: "Breathe Together",
+    link: "https://events.ourayridgwayevents.com/event/breathe-together-9572",
+    description: "We explore and practice breath awareness and conscious breathing techniques as doorways to physical and emotional regulation and spiritual growth. Through these practices we also grow our awareness and achieve higher states of consciousness that can help us in our everyday life, relationships, general wellbeing and ultimately reconnect with our higher nature. No previous experience is required. View on site | Email this event",
+    pubDate: "2026-09-01T00:15:00.000Z",
+    endDate: "2026-09-29",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Bee True You Wellness and Creative Studio",
+    imageUrl: "https://localist-images.azureedge.net/photos/53197444379202/huge/26813502ab1ba3ae9f231b0cd774d101f4f32f02.jpg"
   },
   {
     title: "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",

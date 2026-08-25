@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-08-25",
+    "title": "A new committee takes its first breath",
+    "body": "The Resident Advisory Committee holds its inaugural meeting — introductions, officer elections, and a look at Telluride's Employee Rental Housing Policies. That last item is where it gets interesting. Some folks will see this committee as real teeth: residents finally at the table on housing decisions that affect whether workers can stay in town. Others will wonder whether an advisory body with no binding authority just adds a layer without changing anything. So — does a resident voice in the room matter if it's purely advisory?",
+    "choices": [
+      "A voice at the table is real power",
+      "Advisory only means ignored",
+      "Depends on who's listening",
+      "It's complicated"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-08-24",
     "title": "Who gets the arts money — and who decides?",
     "body": "The Commission for Community Assistance, Arts & Special Events meets September 2 to consider annual funding allocations for community support and arts organizations, plus special events scheduling and street closure applications. That's a lot of ground for one body to cover. Some residents think arts and events funding is exactly what keeps this place worth living in. Others figure that money and public space should be weighed against basic community needs first. Both camps tend to feel strongly — and they don't always agree on what \"community support\" even means.\n\nWhen the same body controls arts grants, event permits, and street closures, does that produce good decisions — or too many tradeoffs in one room?",
@@ -428,21 +443,6 @@
       "Warner Field safety first",
       "Neither is the priority",
       "Not sure yet"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-07-26",
-    "title": "The gondola's books are open — sort of",
-    "body": "The Gondola Leadership Committee is taking up a fiscal and economic impact analysis at its next meeting, alongside updates on CIG Program funding commitments and where the project actually stands. That's the kind of agenda that tends to split a room. Supporters will say the numbers prove the gondola pays for itself and then some. Skeptics will want to know who's on the hook if the projections don't hold. Neither side is wrong to ask.\n\nSo — does an economic impact analysis change how you're thinking about this project, or is the funding picture still too murky to say?",
-    "choices": [
-      "The analysis moves me toward yes",
-      "Still too many unknowns",
-      "Depends what the numbers actually show",
-      "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",
     "topics": [
