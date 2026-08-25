@@ -1,26 +1,26 @@
 {
-  "hash": "7d3b551827920202b4d6da566aaae94e22b2fea3",
-  "lede": "The school board votes Tuesday on a flood-related budget appropriation — real money moving because the canyon took a hit, and it's worth knowing how the district is adjusting. Alongside that, the Ethics Commission is drafting a formal Code of Conduct recommendation for Town Council, the hospital district board is weighing a Two Site Model for the new facility, and TMVOA is moving to form a Workforce Housing Committee, which tells you something about where Mountain Village's housing pressure has landed.",
+  "hash": "75efd277b4d15a1d676053351267cea5ecbfedb4",
+  "lede": "The school board votes Tuesday on a flood-related budget appropriation for FY 2026-27 — real money being reallocated because the canyon took a hit, and worth knowing about. Alongside that, the Ethics Commission is shaping a formal Code of Conduct recommendation for Town Council, the Hospital District board could act on a Two Site Model that would define what gets built and where, and Mountain Village's HOA is moving to form a Workforce Housing Committee. A full week of decisions that will settle things for a while.",
   "notable": [
     {
-      "id": 0,
-      "stake": "Commission shapes Code of Conduct recommendation headed to Town Council."
+      "id": 1,
+      "stake": "Board votes on flood-driven budget changes to district's FY 2026-27 spending plan."
     },
     {
-      "id": 1,
-      "stake": "Board votes on flood-driven budget appropriation adjusting district spending plan."
+      "id": 0,
+      "stake": "Commission drafts Code of Conduct recommendation that goes directly to Town Council."
     },
     {
       "id": 2,
-      "stake": "County weighs CCAP childcare funding and its budget implications for residents."
+      "stake": "CCAP funding discussion carries direct budget implications for county human services."
     },
     {
       "id": 6,
-      "stake": "Hospital board may act on Two Site Model, shaping what and where gets built."
+      "stake": "Board may act on Two Site Model, shaping scale and location of new medical facility."
     },
     {
       "id": 8,
-      "stake": "TMVOA votes on updated policies, workforce housing committee, and ice pad grant."
+      "stake": "Board votes on updated policies and forms a new Workforce Housing Committee."
     }
   ]
 }

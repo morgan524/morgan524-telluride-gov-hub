@@ -294,7 +294,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"agendaUrl":"https://townofmountainvillage.com/site/assets/files/49733/september_3-_2026_design_review_board_meeting_agenda.pdf","zoomUrl":"https://us06web.zoom.us/j/83949014976?pwd=oze6zDkOSb0a8fjpvluaHR1zcyO0XN.1","meetingId":"839 4901 4976"},
 
   "county|2026-08-27|CWAB":
-    {"sv":4,"ph":"23152d2f933fa82e"},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1055/files/agenda/1973"},
 
   "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026 - Cancelled":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8101","sv":4},
@@ -856,6 +856,26 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Fire, EMS consolidation proponents consider next steps",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 25, 2026",
+    newsTopic: "public-safety",
+    copy: "Advocates for a county-wide consolidated fire and emergency response authority still believe there is a path forward, even though the proposal suffered another setback last week when the Ouray City Council declined to consider an agreement. Ouray County EMS Chief Nate McCullough said he thinks the c",
+    href: "https://www.ouraynews.com/2026/08/25/fire-ems-consolidation-proponents-consider-next-steps/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Invitation to Prayer/Fellowship Wednesday Morning",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "August 25, 2026",
+    newsTopic: "community",
+    copy: "This is an open invitation to all women in Telluride. Please come and join us on Wednesday, August 26th...7:30 am Rosary8:00 am Holy MassImmediately after we will go to Butcher and Baker for fellowship. Join as able....Contact Katrina with questio...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/invitation-to-prayer-fellowship-wednesday-morning-7/",
+    img: ""
+  },
+  {
     title: "Long-term road closure for the Corbett Creek Bridge Project",
     source: "Ouray County",
     sourceKey: "ouray-county",
@@ -956,26 +976,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "Debra Lynn Todd",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 20, 2026",
-    newsTopic: "community",
-    copy: "November 5, 1953 – August 15, 2026 Debra Lynn Todd, 72, of Ouray, Colorado, passed away on August 15, 2026. She was born November 5, 1953, in Hutchinson, Kansas. She was the daughter of Chester and Kathleen Todd, who preceded her in death. Survivors include a sister, Jennene Kay Todd Mashburn, niece",
-    href: "https://www.ouraynews.com/2026/08/19/debra-lynn-todd/",
-    img: ""
-  },
-  {
-    title: "News Release: Road and Bridge Superintendent Placed on Paid Admin Leave",
-    source: "Ouray County",
-    sourceKey: "ouray-county",
-    date: "August 17, 2026",
-    newsTopic: "infrastructure",
-    copy: "Ouray County has placed Road and Bridge Superintendent Ty Barger on paid administrative leave",
-    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=959",
-    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22895"
-  },
-  {
     title: "Invitation to Prayer/Fellowship Wednesday Morning",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -1028,13 +1028,13 @@ const REGIONAL_NEWS_ARTICLES = [
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
   {
-    title: "All County Offices Closed Thursday 8/27!",
+    title: "All County Offices Closed at Noon Thursday 8/27",
     source: "San Miguel County",
     sourceLabel: "San Miguel County",
     category: "Alert",
-    date: "2026-08-21",
-    pubDate: "2026-08-21T17:53:01.000Z",
-    copy: "All County offices will be closed on Thursday, August 27, 2026, for an Employee Appreciation Picnic. We apologize for any inconvenience.",
+    date: "2026-08-25",
+    pubDate: "2026-08-25T18:23:03.000Z",
+    copy: "All County offices will be closing at noon at the latest on Thursday, August 27, 2026, for an Employee Appreciation Picnic. We apologize for any inconvenience.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=541",
     img: ""
   },
@@ -1205,7 +1205,7 @@ const MANUAL_SUMMARIES = {
     "One item worth noting on this September 3rd Design Review Board agenda: a conditional-use permit review for a temporary tent and food truck at 332 Adams Ranch Rd (Lots OSP-35-B & OSP-35-C), which goes to the DRB for a recommendation to Town Council. There's also a general easement encroachment review at 140 Cortina Dr and an informational session on Pond Plaza with staff and Design Workshop. The 15-unit employee apartment building at 306 Adams Ranch Rd — the one item of broader housing consequence — is being continued to the October 1st meeting. The remainder of the agenda is single-family and detached condominium architecture reviews.",
 
   "county|2026-08-27|CWAB":
-    "The August 27 CWAB meeting agenda hasn't been posted yet.",
+    "The Citizens' Weed Advisory Board meets August 27 at 4:30 PM via Zoom for its regular session. Julie Kolb presents on vegetation control and management — treatments applied and areas covered — along with a report on U.S. Forest Service and ATB treatment work from 2025. The board also takes up landowner response to the Noxious Weed Fund Grant and approves May meeting minutes.",
 
   "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026 - Cancelled":
     "The August 20, 2026 Planning & Zoning Commission meeting has been cancelled.",
@@ -2464,11 +2464,11 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
   },
   {
-    title: "All County Offices Closed Thursday 8/27!",
+    title: "All County Offices Closed at Noon Thursday 8/27",
     source: "San Miguel County",
-    date: "August 21, 2026",
+    date: "August 25, 2026",
     newsTopic: "community",
-    copy: "All County offices will be closed on Thursday, August 27, 2026, for an Employee Appreciation Picnic. We apologize for any inconvenience.",
+    copy: "All County offices will be closing at noon at the latest on Thursday, August 27, 2026, for an Employee Appreciation Picnic. We apologize for any inconvenience.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=541",
     img: ""
   },
@@ -3051,28 +3051,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Tennis Clinic 3.0-4.0",
-    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-25/",
-    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-08-25T09:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Tennis Clinic 4.0+",
-    link: "https://koto.org/event/tennis-clinic-4-0/2026-08-25/",
-    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-08-25T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
   {
     title: "TRC Tennis Clinics w/ Eric Fey & Eric Alexon",
     link: "https://koto.org/event/trc-tennis-clinics-w-eric-fey-eric-alexon/2026-08-25/",
@@ -6071,7 +6049,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   },
   {
-    title: "Telluride Adaptive Sports Presents the 27th Annual Bob Miller Memorial Golf Classic",
+    title: "Telluride Adaptive Sports&#039; Bob Miller Memorial Golf Classic",
     link: "https://townofmountainvillage.com/explore/events/all-events/telluride-adaptive-sports-presents-the-27th-annual-bob-miller-memorial-golf-classic-1/",
     description: "Tee off for a cause at 9,500 feet! Join the Telluride Adaptive Sports Program (TASP) for the 28th Annual Bob Miller Memorial Golf Tournament on Thursday,",
     pubDate: "2026-09-17T12:00:00.000Z",
@@ -6772,7 +6750,7 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Trout-A-Palooza",
     link: "https://www.telluride.com/event/troutapalooza/",
-    description: "The annual Troutapalooza live event hosted by the Gunnison Gorge Anglers Chapter of Trout Unlimited takes place on …",
+    description: "Welcome friends of Troutapalooza!  Don't miss this year's fundraiser auction, featuring more exclusive guide service …",
     pubDate: "2026-09-23",
     source: "telluride-com",
     sourceLabel: "Telluride.com",
