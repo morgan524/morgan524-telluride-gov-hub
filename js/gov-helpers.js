@@ -1727,9 +1727,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Telluride Times",
     date: "August 24, 2026",
     firstSeen: "2026-08-24",
-    newsTopic: "community",
-    copy: "To read this article in English, please click here.",
-    claudeSummary: false,
+    newsTopic: "government",
+    copy: "Advocates from the Escuela de Trabajadores — a collaboration between Thrive Community Health Network and Raíces Sin Fronteras — appeared before Mountain Village Town Council on August 20th to request a municipal labor rights protection ordinance. They brought a 142-page packet documenting wage theft, worker exploitation, unsafe conditions, and housing instability, along with personal testimonies including a Colombian attorney's account of a work-related miscarriage and a worker who died after repeated 14–15-hour days commuting from Montrose. The council has not yet acted on the proposal.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_912fb87f-47a2-4b5d-955d-29e93b886b28.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/a7/6a7eb7c6-a329-475f-9fd8-8d59f26124ea/6a8caf0264c0a.image.jpg",
     imgHiRes: true
@@ -3721,7 +3721,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Camp Alderwild Telluride Festival",
     link: "https://sheridanoperahouse.com/events/camp-alderwild-telluride-festival/",
-    description: "Camp Alderwild Telluride Festival is a music festival event taking place at the Sheridan Opera House in Telluride. The historic venue will host performances as part of this festival gathering in late August 2026.",
+    description: "",
     pubDate: "2026-08-27",
     endDate: "2026-08-29",
     source: "sheridan",
@@ -3733,7 +3733,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Telluride Film Festival",
     link: "https://sheridanoperahouse.com/events/telluride-film-festival/",
-    description: "The Telluride Film Festival returns to the Sheridan Opera House, bringing screenings and cinematic programming to one of the mountain town's most storied historic venues. This beloved annual event draws film enthusiasts from around the world for a celebrated weekend of independent and international cinema in the heart of Telluride.",
+    description: "",
     pubDate: "2026-09-04",
     endDate: "2026-09-07",
     source: "sheridan",
@@ -3745,7 +3745,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "The Meditations Live in Concert",
     link: "https://sheridanoperahouse.com/events/the-meditations-live-in-concert/",
-    description: "The Meditations, the legendary Jamaican reggae vocal group, perform live at the historic Sheridan Opera House in Telluride. This concert brings their classic roots reggae harmonies to one of the region's most celebrated intimate venues.",
+    description: "",
     pubDate: "2026-09-11",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -4771,17 +4771,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ridgway State Park",
     imageUrl: "https://localist-images.azureedge.net/photos/53595198326789/huge/b52afc36fd4c4e87537e211690d7093afa8c36a3.jpg"
-  },
-  {
-    title: "Music and Makers Fest",
-    link: "https://events.ourayridgwayevents.com/event/music-and-makers-fest",
-    description: "Join the highly anticipated Ouray Made's Annual Music and Makers Fest, a celebration of creativity, community, and culture set against the breathtaking San Juan Mountains! This year, immerse yourself in a vibrant atmosphere filled with local music, artisan crafts, and delectable food. Event Highlights - More details to come! Live Music: Enjoy performances from talented local musicians across various genres, providing an energetic festival soundtrack. Artisan Market: Discover and purchase from a diverse selection of local makers offering handmade items, including jewelry, pottery, textiles, and artwork. Food Truck Alley: Indulge in a variety of culinary delights from an array of food trucks serving diverse cuisines. View on site | Email this event",
-    pubDate: "2026-09-06T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Fellin Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/52324818447922/huge/3f4a7ad14fc7dbe59a7600bfd9c554e32680c1d7.jpg"
   },
   {
     title: "Fantasy Football Kickoff - DraftSunday",

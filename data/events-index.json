@@ -609,7 +609,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/03/camp_alderwild_20250822_221747.webp",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "Camp Alderwild Telluride Festival is a music festival event taking place at the Sheridan Opera House in Telluride. The historic venue will host performances as part of this festival gathering in late August 2026.",
+    "desc": "",
     "type": "Festivals",
     "endDate": "2026-08-29"
   },
@@ -1816,7 +1816,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/03/4fd403bf-4bc8-9f64-6ab9-26b72e8ee156.jpg",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "The Telluride Film Festival returns to the Sheridan Opera House, bringing screenings and cinematic programming to one of the mountain town's most storied historic venues. This beloved annual event draws film enthusiasts from around the…",
+    "desc": "",
     "type": "Arts & Film",
     "endDate": "2026-09-07"
   },
@@ -1884,19 +1884,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Join us for a morning of science and discovery at Ridgway State Park. This unique, hands-on event offers a rare \"behind-the-scenes\" look at how researchers track and protect our feathered friends. This program offers a front-row seat to…",
     "type": "Talks & Classes"
-  },
-  {
-    "title": "Music and Makers Fest",
-    "href": "https://events.ourayridgwayevents.com/event/music-and-makers-fest",
-    "date": "2026-09-06",
-    "time": "10:00 AM",
-    "location": "Fellin Park",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/52324818447922/huge/3f4a7ad14fc7dbe59a7600bfd9c554e32680c1d7.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Join the highly anticipated Ouray Made's Annual Music and Makers Fest, a celebration of creativity, community, and culture set against the breathtaking San Juan Mountains! This year, immerse yourself in a vibrant atmosphere filled with…",
-    "type": "Community"
   },
   {
     "title": "Sunday Rehab at Alloy Kitchen",
@@ -2315,7 +2302,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/05/unnamed-file.jpg",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "The Meditations, the legendary Jamaican reggae vocal group, perform live at the historic Sheridan Opera House in Telluride. This concert brings their classic roots reggae harmonies to one of the region's most celebrated intimate venues.",
+    "desc": "",
     "type": "Wellness"
   },
   {
