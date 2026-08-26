@@ -11,17 +11,6 @@
     "imageUrl": ""
   },
   {
-    "title": "Tennis Clinic 3.0-4.0",
-    "link": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-26/",
-    "description": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    "pubDate": "2026-08-26T09:30:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "imageUrl": ""
-  },
-  {
     "title": "Market on the Plaza",
     "link": "https://koto.org/event/market-on-the-plaza/2026-08-26/",
     "description": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
@@ -30,17 +19,6 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Heritage Plaza, Mountain Village",
-    "imageUrl": ""
-  },
-  {
-    "title": "Tennis Clinic 4.0+",
-    "link": "https://koto.org/event/tennis-clinic-4-0/2026-08-26/",
-    "description": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    "pubDate": "2026-08-26T11:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Racquet Club, Mountain Village",
     "imageUrl": ""
   },
   {
@@ -418,6 +396,17 @@
     "imageUrl": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
   },
   {
+    "title": "Grand Opening of the Youth Area at Wilkinson Public Library",
+    "link": "https://koto.org/event/grand-opening-of-the-youth-area-at-wilkinson-public-library/",
+    "description": "Wilkinson Public Library invites the community to the grand repoening of its Youth Space, Wednesday, September 2 at 3:30 PM. We hope to see you there! La Biblioteca Pública de Wilkinson invita a la comunidad a la gran inauguración del nuevo espacio de niños, el miércoles 2 de septiembre a las 3:30 pm. Esperamos a verlos allí!",
+    "pubDate": "2026-09-02T15:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
+  },
+  {
     "title": "Mountain Towns 2030: Leveraging A Network of Community Leaders to Accelerate Climate Action",
     "link": "https://koto.org/event/mountain-towns-2030-leveraging-a-network-of-community-leaders-to-accelerate-climate-action/",
     "description": "As climate challenges grow, no community can solve them alone. The most effective solutions often emerge when leaders come together, learn from one another, and take action collectively. And with the window to help solve climate change tightening, speed is essential. Join a conversation with Mountain Towns 2030, alongside community leaders exploring how networks, partnerships, and peer learning are accelerating climate action and resilience efforts in communities of every size – including Telluride and across the surrounding region. Moderator: Siobhan Montoya Lavendar, Regional Climate Action Development Director, EcoAction Partners Panelists: Jessica Burley, Sustainability & Parking Manager, Town of Breckenridge John Clark, Mayor, Town of Ridgway Chris Steinkamp, Executive Director, Mountain Towns 2030 This event is in collaboration with Eco Action Partners, Mountain Towns 2030, Telluride Foundation, and Telluride Science. Sponsored by JP Morgan Private Bank. …",
@@ -470,17 +459,6 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": ""
-  },
-  {
-    "title": "TRC Men's Tennis Singles",
-    "link": "https://koto.org/event/trc-mens-tennis-singles/2026-09-03/",
-    "description": "The 1st TRC Men's Singles League! Sign up on a week-to-week basis. No long-term commitment.",
-    "pubDate": "2026-09-03T16:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Racquet Club, Mountain Village",
     "imageUrl": ""
   }
 ]
