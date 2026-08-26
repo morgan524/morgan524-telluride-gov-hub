@@ -455,6 +455,14 @@ const DEEP_DIVE_UPDATES = [
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-08-26",
+    title: "A tent, a food truck, and 15 apartments walk into Adams Ranch Road",
+    body: "Two very different proposals are landing at 306 and 332 Adams Ranch Rd. One is a conditional use permit for a temporary tent and food truck. The other — a 15-unit employee apartment building — is big enough that its architecture review got pushed to October.\n\nPeople who want more workforce housing will say the apartments can't come fast enough. Others will want a hard look at what 15 units does to that stretch of road before anything gets approved. The tent and food truck raise their own questions about what belongs where.\n\nWhat matters most to you as these two proposals move forward?",
+    choices: ["Get the apartments built", "Slow down, look closer", "Fine with the tent, not the building", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-08-25",
     title: "A new committee takes its first breath",
     body: "The Resident Advisory Committee holds its inaugural meeting — introductions, officer elections, and a look at Telluride's Employee Rental Housing Policies. That last item is where it gets interesting. Some folks will see this committee as real teeth: residents finally at the table on housing decisions that affect whether workers can stay in town. Others will wonder whether an advisory body with no binding authority just adds a layer without changing anything. So — does a resident voice in the room matter if it's purely advisory?",
@@ -685,14 +693,6 @@ const DAILY_QUESTIONS = [
     choices: ["More units, keep it moving", "Design and scale matter first", "Depends on the project", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-07-27",
-    title: "Town Park gets a makeover — but which one?",
-    body: "The Parks & Recreation Commission has a rescheduled meeting on the books, and on the table are two potential improvements: upgrades to the Telluride Town Park Oval and fencing and safety netting at Warner Field. Both cost money and change spaces people already use every day. Some residents will say the Oval and Warner Field are overdue for attention — safety netting especially is hard to argue with. Others will wonder whether the priority and the price are right when housing and basic services are still stretched. Nothing is decided yet.\n\nSo — which of these feels more pressing to you, or do you think neither should jump the line right now?",
-    choices: ["Town Park Oval first", "Warner Field safety first", "Neither is the priority", "Not sure yet"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -776,7 +776,7 @@ const MEETING_PREVIEWS = {
     "The Open Space Commission will conduct a site walk on August 27, 2026. These field visits typically support the commission's work evaluating properties for potential acquisition or assessing management and maintenance needs for existing open space lands within the Town of Telluride.",
 
   "county|2026-08-26|Board of County Commissioners Work Session":
-    "Board of County Commissioners will convene in a special work session on August 26, 2026, in Telluride. The meeting includes standard procedural items such as roll call, agenda review, and public comment. Specific action items were not fully detailed in the available agenda excerpt."
+    "Board of County Commissioners will hold a special work session on August 26, 2026, in Telluride. The meeting agenda details are limited, but commissioners are expected to address routine county business and public comment. The session is accessible via Zoom and YouTube livestream."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -2485,12 +2485,12 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Stage 2 Fire Restrictions In Effect",
+    title: "Stage 1 Fire Restrictions In Effect",
     source: "Town of Telluride",
     date: "August 26, 2026",
     newsTopic: "public-safety",
-    copy: "In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
-    href: "https://www.telluride.gov/AlertCenter.aspx?AID=67",
+    copy: "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=65",
     img: ""
   },
   {
@@ -3551,37 +3551,37 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "When Trees Testify: Reclaiming America&#039;s Black Botanical Legacy with Beronda Montgomery",
-    link: "https://telluridelibrary.libcal.com/event/17222922?hs=a",
-    description: "12:00 PM – 1:00 PM · Join us for a riveting conversation with award-winning biologist Beronda Montgomery as we discuss her book, When Trees Testify: Science, Wisdom, History, and America's Black Botanical Legacy. PLEASE NOTE: This is an online author talk. The histories of trees in America are also the histories of Black Americans. Pecan trees were domesticated by an enslaved African named Antoine; sycamore trees were both havens and signposts for people trying to escape enslavement; poplar trees are historically associated with lynching; and willow bark has offered the gift of medicine. These trees, and others, testify not only to the complexity of the Black American narrative but also to a heritage of Black botanical expertise that, like Native American traditions, predates the United States entirely. In When Trees Testify , award-winning plant biologist Beronda L. …",
-    pubDate: "2026-08-25T18:00:00.000Z",
+    title: "Mahjongg for Independent Players",
+    link: "https://telluridelibrary.libcal.com/event/16767663?hs=a",
+    description: "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-08-26T19:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_17_13_59_12.jpg"
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg"
   },
   {
-    title: "Teen Cook",
-    link: "https://telluridelibrary.libcal.com/event/17486112?hs=a",
-    description: "2:00 PM – 3:00 PM · Join the WPL Every Tuesday after school for Teen Cook. We will cook a different recipe from scratch, and have enough to share with those around!",
-    pubDate: "2026-08-25T20:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_27_00.png"
-  },
-  {
-    title: "Eco Series: Between Grief & Gratitude",
-    link: "https://telluridelibrary.libcal.com/event/17177338?hs=a",
-    description: "5:30 PM – 7:00 PM · Between Grief & Gratitude Where Love and Loss Meet in a Changing World Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-part series on navigating climate anxiety and eco-grief. The first two sessions will consist of a facilitated community conversation connecting our love of these landscapes with the challenge of the climate crisis at our doorsteps. After exploring our shared relationship with the current reality, the second two sessions will provide opportunities to express pain, grief, love and hope through various mediums including local poetry and group art projects.",
-    pubDate: "2026-08-25T23:30:00.000Z",
+    title: "Summer Wellness: DIY Soothing Foot Scrubs",
+    link: "https://telluridelibrary.libcal.com/event/16448488?hs=a",
+    description: "5:00 PM – 7:00 PM · Give your hard-working summer feet some well-deserved care! In this relaxing wellness workshop, participants will create their own nourishing foot scrubs designed to soothe dry, cracked summer feet and leave skin feeling soft and refreshed. Enjoy a calming, hands-on experience while making a personalized spa-inspired treat to take home. Free and open to adults. All materials will be provided. Registration is required.",
+    pubDate: "2026-08-26T23:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_30_12_01_31.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_10_02_16.jpg"
+  },
+  {
+    title: "Romance with Rachel",
+    link: "https://telluridelibrary.libcal.com/event/16590833?hs=a",
+    description: "5:30 PM – 7:00 PM · If you haven&#39;t been paying attention.... Romance is IN! Welcome to Wilkinson&#39;s newest book club celebrating the sales-sweeping genre on love and all its glory—Romance with Rachel. Each month, join Rachel in reading a romance novel from a new subgenre and then engage the group in discussion about all the nitty gritty details. At the end of the event, our ravenous romance readers will collaboratively choose the novel for the next month. We will meet either at the library or offsite the fourth Wednesday of each month. August&#39;s selection is the first book of Demi Winter&#39;s the Ashen Series titled Road of Bones . Five copies will be first come, first serve for registrees. Reach out to Rachel at rbrand@telluridelibrary.org if you have trouble acquiring a copy. Description below: A woman on the run. A crew of Viking mercenaries. A forbidden romance. …",
+    pubDate: "2026-08-26T23:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_24_16_42_31.jpg"
   }
 ];
 
@@ -3602,18 +3602,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "The Last Wild Buffalo w/ Hunter Archer",
-    link: "https://www.alibitelluride.com/calendar#eca-event=the-last-wild-buffalo-w-hunter-archer",
-    description: "The Last Wild Buffalo is a soulful Americana band from Utah, blending the raw ho...",
-    pubDate: "2026-08-25",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/80e2e21e-674b-4121-b683-5081a143cca8/-/crop/1308x1310/67,0/-/preview/"
-  },
   {
     title: "RSUN \\\\ MINDSET",
     link: "https://www.alibitelluride.com/calendar#eca-event=rsun-mindset",
