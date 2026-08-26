@@ -133,8 +133,21 @@ section goes stale for days with nobody noticing.
   into the same issue + exception email. Alerting lives where the owner already
   looks; baseline-writing lives where there's commit access.
 - **Thresholds:** 0 items when the 14-day max was ≥3 → `High`; current < 20% of
-  a ≥15 baseline → `Medium`. `LEGAL_NOTICES` and `SMC_ALERTS` are excluded
-  (legitimately sporadic). New sources auto-enroll once they first return data.
+  a ≥15 baseline → `Medium`. `LEGAL_NOTICES`, `SMC_ALERTS` and `ENGAGE_MEETINGS`
+  are excluded (legitimately sporadic). New sources auto-enroll once they first
+  return data.
+- **A forward-window source is not a broken source.** `ENGAGE_MEETINGS` holds
+  only the project key dates falling in the next 60 days, so it empties whenever
+  nothing is scheduled in that window and refills when something is. It sat at 0
+  from 2026-08-20 and raised a daily `High` "scraper has likely broken" for a
+  week — while the refresh log for those same runs read `26 published projects
+  found / 0 upcoming key date(s)`. Excluding it costs no coverage, because
+  `refreshEngageMeetings()` now detects the real failure at the source: a
+  zero-slug parse of the projects page carries the existing rows forward and
+  warns, instead of emptying the array and leaving a count heuristic to guess
+  why.
+- **An array emptied on purpose is not a broken source either** — see
+  `emptiedBy` under Auto-fix below.
 - **Shared loader:** both scripts evaluate the data files via
   `scripts/lib/load-data.js` (one copy of the eval-and-capture logic).
 

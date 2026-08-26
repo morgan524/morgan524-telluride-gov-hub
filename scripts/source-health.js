@@ -32,7 +32,23 @@ const PARTIAL_FLOOR = 15;   // only flag a partial drop when the baseline is siz
 const PARTIAL_RATIO = 0.2;  // …and the current count is < 20% of it
 
 // Arrays that legitimately go to zero (sporadic by nature) — never alarm on these.
-const EXCLUDE = new Set(['LEGAL_NOTICES', 'SMC_ALERTS']);
+//
+// ENGAGE_MEETINGS added 2026-08-26. It is not a feed of everything Engage
+// Telluride publishes; it is the subset of project key dates falling in the next
+// 60 days, so it empties whenever no project has a date scheduled in that window
+// and refills when one does. It sat at 0 from 2026-08-20 and raised a High
+// "scraper has likely broken" every day for a week — while the refresh log for
+// the same runs read "26 published projects found / 0 upcoming key date(s)".
+// The count heuristic cannot see that difference, and a High that is wrong seven
+// days running is worse than no signal: it is the one alarm on this board worth
+// reading, and it was training the reader to skip it (non-Low findings are
+// emailed).
+//
+// This is not a blind spot: refreshEngageMeetings() now detects the real failure
+// directly and far more precisely — a zero-slug parse of the projects page means
+// the tile markup moved, so it carries the existing rows forward and warns,
+// rather than emptying the array and waiting for a count check to notice.
+const EXCLUDE = new Set(['LEGAL_NOTICES', 'SMC_ALERTS', 'ENGAGE_MEETINGS']);
 
 function baselineFile(repoRoot) { return path.join(repoRoot, 'scripts', 'source-baselines.json'); }
 
