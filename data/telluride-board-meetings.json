@@ -20,7 +20,7 @@
   },
   {
     "date": "September 10, 2026",
-    "title": "Town Council Budget",
+    "title": "to Oct 13th) Town Council Budget",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
@@ -89,6 +89,15 @@
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "",
     "civicwebId": 8164
+  },
+  {
+    "date": "October 13, 2026",
+    "title": "Special Town Council Budget",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8307",
+    "hasAgenda": false,
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "time": "",
+    "civicwebId": 8307
   },
   {
     "date": "October 21, 2026",

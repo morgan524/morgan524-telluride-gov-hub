@@ -429,7 +429,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8103","sv":4,"ph":"313a820643e5b960"},
 
   "telluride|2026-08-27|Open Space Commission Site Walk - Aug 27 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8306","sv":4}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8306","sv":4},
+
+  "telluride|2026-09-10|(Rescheduled to Oct 13th) Town Council Budget - Sep 10 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -773,7 +776,10 @@ const MEETING_PREVIEWS = {
     "The Planning & Zoning Commission Chair is expected to discuss the Colorado Wildfire Resiliency Code amendments to Telluride's Land Use Code, following Town Council's passage of Ordinance #1640 on August 11, 2026, which updated Chapter 18 of the Municipal Code to incorporate wildfire resiliency standards.",
 
   "telluride|2026-08-27|Open Space Commission Site Walk - Aug 27 2026":
-    "The Open Space Commission will conduct a site walk on August 27, 2026. These field visits typically support the commission's work evaluating properties for potential acquisition or assessing management and maintenance needs for existing open space lands within the Town of Telluride."
+    "The Open Space Commission will conduct a site walk on August 27, 2026. These field visits typically support the commission's work evaluating properties for potential acquisition or assessing management and maintenance needs for existing open space lands within the Town of Telluride.",
+
+  "telluride|2026-09-10|(Rescheduled to Oct 13th) Town Council Budget - Sep 10 2026":
+    "Council is expected to discuss the town's budget during this rescheduled session. Members may also revisit Ordinance #1640, which amended the Land Use Code to implement the Colorado Wildfire Resiliency Code, following its passage on August 11, 2026."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -994,16 +1000,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "We are glad that you will be joining our Fall Virtual Study. Here are the details so that you can get the information on your calendar and order your book. Please make note from below that we have a NEW ZOOM LINK. Contact us with quest...",
     href: "https://stpatrickstelluride.com/2026/parish-news/fall-tuesday-virtual-information/",
-    img: ""
-  },
-  {
-    title: "Fall Foliage Tour Contest 🍂",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 12, 2026",
-    newsTopic: "community",
-    copy: "Norwood s putting on its best autumn colors — time to grab your camera and go see them all. Here s the deal: Hit all 9 spots around town, snap 2 photos [ ]",
-    href: "https://norwoodcolorado.com/event/fall-foliage-tour-contest-%f0%9f%8d%82/",
     img: ""
   },
   {
@@ -1331,7 +1327,10 @@ const MANUAL_SUMMARIES = {
     "The September 24, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-08-27|Open Space Commission Site Walk - Aug 27 2026":
-    "The Open Space Commission heads out to Bear Creek Reserve for a site walk — meeting at the Town Park vehicle bridge at 4:00 PM. The one substantive item is a work session review of Camp Alderwild festival camping in Zone 1 of the reserve. No formal votes expected; this is a field look at how that use is playing out on the ground."
+    "The Open Space Commission heads out to Bear Creek Reserve for a site walk — meeting at the Town Park vehicle bridge at 4:00 PM. The one substantive item is a work session review of Camp Alderwild festival camping in Zone 1 of the reserve. No formal votes expected; this is a field look at how that use is playing out on the ground.",
+
+  "telluride|2026-09-10|(Rescheduled to Oct 13th) Town Council Budget - Sep 10 2026":
+    "This September 10 budget session has been rescheduled to October 13th. No agenda has been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1679,6 +1678,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Highway 141 open north of Slick Rock after sinkhole",
+    source: "Telluride Times",
+    date: "August 26, 2026",
+    firstSeen: "2026-08-26",
+    newsTopic: "infrastructure",
+    copy: "Highway 141 between Slick Rock and Naturita reopened Aug. 20 after a sinkhole—about 12 inches across with a larger cavity underneath—was found and excavated. A temporary steel plate remains at Mile Point 24 until paving is finished. Slow down through there.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_2884079b-9979-4083-80df-1e9e89b29729.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/8d/88da3008-2e95-4080-ace7-bc89d85e9770/6a8f06cc9978b.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Setting the pace in Colorado Springs",
     source: "Telluride Times",
@@ -2440,6 +2451,33 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Marya Stark and Charles Dalton Sworn In to Telluride Town Council",
+    source: "Town of Telluride",
+    date: "August 12, 2026",
+    newsTopic: "government",
+    copy: "(July 21, 2026) – The Town welcomed two new members to Town Council this morning as Charles Dalton and Marya Stark were sworn into office at 9:30 a.m. Town Clerk Tiffany Kavanaugh administered the oath of office for both officials.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=402",
+    img: ""
+  },
+  {
+    title: "Arrest Made in String of Telluride Mountain Bike Thefts",
+    source: "Town of Telluride",
+    date: "August 12, 2026",
+    newsTopic: "recreation",
+    copy: "(August 11, 2026) – The Telluride Marshal's Department has identified and arrested a suspect in a series of mountain bike thefts that account for more than $22,000 in reported losses.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=401",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15642"
+  },
+  {
+    title: "State of the Town Address: The State of the Town Is Strong and Engaging",
+    source: "Town of Telluride",
+    date: "August 8, 2026",
+    newsTopic: "government",
+    copy: "The Mayor's biannual State of the Town Address was delivered on Tuesday, July 21 during the regular meeting of Telluride Town Council, here's what Mayor Teddy Errico had to say.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=400",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15641"
+  },
+  {
     title: "Waste Tire Collection Event",
     source: "San Miguel County",
     date: "August 24, 2026",
@@ -2455,6 +2493,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "community",
     copy: "All County offices will be closing at noon at the latest on Thursday, August 27, 2026, for an Employee Appreciation Picnic. We apologize for any inconvenience.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=541",
+    img: ""
+  },
+  {
+    title: "Black Bear Pass Now Open",
+    source: "San Miguel County",
+    date: "August 3, 2026",
+    newsTopic: "recreation",
+    copy: "County crews finished work this afternoon, Black Bear Pass is now open from Red Mountain Pass to Telluride.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=539",
     img: ""
   },
   {
@@ -4240,6 +4287,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Decker Community Room",
     imageUrl: "https://localist-images.azureedge.net/photos/53736310463128/huge/ce8867efeba0934913913ee401aff4479a074ba5.jpg"
+  },
+  {
+    title: "North Cora Block Party--6th Annual",
+    link: "https://events.ourayridgwayevents.com/event/north-cora-block-party-6th-annual",
+    description: "Ridgway Industrial Zone presents the 6th Annual North Cora Block Party featuring Desiderata and Psylo. This is a free event. The El Agave Azul food truck will be open for business. View on site | Email this event",
+    pubDate: "2026-08-27T23:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Colorado Boy Depot",
+    imageUrl: "https://localist-images.azureedge.net/photos/53806469302738/huge/52716b6a4ead01714a6c23c9b284d92a6e6af38b.jpg"
   },
   {
     title: "The Fabulous Blues Tones - Live @ Floating Lotus Brewery",
@@ -8726,7 +8784,7 @@ const TELLURIDE_BOARD_MEETINGS = [
   },
   {
     date: "September 10, 2026",
-    title: "Town Council Budget",
+    title: "to Oct 13th) Town Council Budget",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052",
     hasAgenda: false,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
@@ -8795,6 +8853,15 @@ const TELLURIDE_BOARD_MEETINGS = [
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
     civicwebId: 8164
+  },
+  {
+    date: "October 13, 2026",
+    title: "Special Town Council Budget",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8307",
+    hasAgenda: false,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: "",
+    civicwebId: 8307
   },
   {
     date: "October 21, 2026",
