@@ -181,7 +181,29 @@ pruned automatically) — a permanent override silently distorts data long after
 the source fixed its mistake, and nobody remembers it exists.
 
 Kinds: `event-date` (rewrite the date), `clear-link` (drop a dead href, **keep
-the event**), `drop-event` (remove a phantom entry).
+the event**), `set-link` (swap in a known-good href), `drop-event` (remove a
+phantom entry), `fix-title` (rename one garbled/misspelled title).
+
+`fix-title` is deliberately not a spell-checker. It renames exactly the one
+string named in `titleMatch`, on exactly the date the source currently
+publishes, and goes inert the moment the source fixes itself — because a rule
+that rewrites titles it *thinks* are wrong will eventually rename a real event.
+
+**Task 21d resolves a correction's array from both data files** (`gov-helpers.js`
+first, then `gov-data.js`) and loads every array the corrections *name*, not a
+fixed list. Before 2026-08-26 it read only the 15 trust-reconcile arrays out of
+`gov-helpers.js`, so a correction on anything else silently no-opped: the
+`drop-event` + `clear-link` rows for the dead TJC "Shabbat!" href sat inert from
+2026-08-16 on (`TJC_EVENTS` lives in `gov-data.js`) while the review re-flagged
+the same 404 every day. A correction naming an array in neither file now warns
+by name instead of being skipped quietly.
+
+**A source emptied by an active `drop-event` is not a broken scraper.**
+`detectAnomalies()` takes an `emptiedBy` map (array name → correction id) and
+downgrades that array's zero-count finding from `High` to `Low`. Without it,
+finally *applying* the TJC drop would have replaced one recurring finding with
+another, and a false `High` on the board's single highest-value alarm is worse
+than silence.
 
 ### Two tiers
 

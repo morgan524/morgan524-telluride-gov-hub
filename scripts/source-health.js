@@ -71,14 +71,26 @@ function updateBaseline(baseline, arrays, today) {
 // Compare current counts to the baseline. Pure — does NOT mutate the baseline,
 // so content-review can call it read-only. recentMax includes today's value
 // (a max, so today's 0 never masks a prior high).
-function detectAnomalies(arrays, baseline) {
+// `emptiedBy` maps an array name to the id of an active drop-event correction
+// targeting it. An array we deliberately emptied is not a broken scraper, and
+// reporting it as one is worse than saying nothing: it trains the reader to
+// ignore the single highest-value alarm on the board. It still gets a Low
+// advisory, because "we emptied this on purpose" and "this has been empty for
+// weeks and nobody remembers why" have to stay distinguishable.
+function detectAnomalies(arrays, baseline, emptiedBy = {}) {
   const out = [];
   for (const [name, arr] of Object.entries(arrays)) {
     if (EXCLUDE.has(name)) continue;
     const count = Array.isArray(arr) ? arr.length : 0;
     const dm = (baseline.sources[name] && baseline.sources[name].dailyMax) || {};
     const recentMax = Math.max(0, ...Object.values(dm));
-    if (count === 0 && recentMax >= MIN_EXPECTED) {
+    if (count === 0 && recentMax >= MIN_EXPECTED && emptiedBy[name]) {
+      out.push({
+        name, count, recentMax, severity: 'Low',
+        message: `${name}: 0 items — emptied by the active correction "${emptiedBy[name]}", not by a broken scraper. ` +
+          `It will refill on its own when that correction expires or the source publishes something new.`
+      });
+    } else if (count === 0 && recentMax >= MIN_EXPECTED) {
       out.push({
         name, count, recentMax, severity: 'High',
         message: `${name}: 0 items now — had up to ${recentMax} in the last ${WINDOW_DAYS} days. ` +
