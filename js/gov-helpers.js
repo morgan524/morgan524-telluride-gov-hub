@@ -776,7 +776,7 @@ const MEETING_PREVIEWS = {
     "The Open Space Commission will conduct a site walk on August 27, 2026. These field visits typically support the commission's work evaluating properties for potential acquisition or assessing management and maintenance needs for existing open space lands within the Town of Telluride.",
 
   "county|2026-08-26|Board of County Commissioners Work Session":
-    "Board of County Commissioners will hold a special work session on August 26, 2026, in Telluride. The meeting will include a review of the agenda and public comment opportunities. Specific action items were not detailed in the available agenda excerpt."
+    "Board of County Commissioners will convene in a special work session on August 26, 2026, in Telluride. The meeting includes standard procedural items such as roll call, agenda review, and public comment. Specific action items were not fully detailed in the available agenda excerpt."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -2482,6 +2482,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "recreation",
     copy: "County crews finished work this afternoon, Black Bear Pass is now open from Red Mountain Pass to Telluride.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=539",
+    img: ""
+  },
+  {
+    title: "Stage 2 Fire Restrictions In Effect",
+    source: "Town of Telluride",
+    date: "August 26, 2026",
+    newsTopic: "public-safety",
+    copy: "In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=67",
     img: ""
   },
   {
