@@ -81,19 +81,6 @@
     "type": "Music"
   },
   {
-    "title": "Eco-Grief Workshops: Between Grief & Gratitude, love and loss in a changing world",
-    "href": "https://koto.org/event/eco-grief-workshops-between-grief-gratitude-love-and-loss-in-a-changing-world/2026-08-25/",
-    "date": "2026-08-25",
-    "time": "5:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/08/Between-Grief-Gratitude-Updated.webp",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-part series on navigating climate anxiety and eco-grief. The first two sessions will consist of a facilitated…",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "Eco Series: Between Grief & Gratitude",
     "href": "https://telluridelibrary.libcal.com/event/17177338?hs=a",
     "date": "2026-08-25",
@@ -134,6 +121,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "Earth’s Most Resilient Life, Our Greatest Hope: Exploring Unusual Microbes to Solve Humanity’s Biggest Challenges",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/earths-most-resilient-life-our-greatest-hope-exploring-unusual-microbes-to-solve-humanitys-biggest-challenges/",
+    "date": "2026-08-25",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49629/microbes_tomv.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Join us at the Telluride Innovation Center as Braden Tierney, cofounder and executive director of the Two Frontiers Project,",
+    "type": "Community"
+  },
+  {
     "title": "Weekly Young Adult Gathering",
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-08-25",
@@ -145,19 +145,6 @@
     "source": "Beacon",
     "desc": "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
     "type": "Food & Drink"
-  },
-  {
-    "title": "Earth’s Most Resilient Life, Our Greatest Hope: Exploring Unusual Microbes to Solve Humanity’s Biggest Challenges",
-    "href": "https://koto.org/event/earths-most-resilient-life-our-greatest-hope-exploring-unusual-microbes-to-solve-humanitys-biggest-challenges/",
-    "date": "2026-08-25",
-    "time": "6:30 PM",
-    "location": "Telluride Innovation Center",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-7.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join us at the Telluride Innovation Center as Braden Tierney, cofounder and executive director of the Two Frontiers Project, takes us into Earth’s strangest ecosystems. Hydrothermal vents, volcanic seeps, alpine soils, mine drainage right…",
-    "type": "Community"
   },
   {
     "title": "Functional Fitness - Strength & Mobility Training For Women",
@@ -1118,7 +1105,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1407,7 +1394,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Municipal Court is a regularly scheduled court session held by the Town of Norwood. It is an official local government proceeding open to those with business before the court.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1501,6 +1488,45 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Come see In Color, a new exhibition by regional artist Brittany Stadler in the Tavern at the Wright. Art on display through September 3. Brittany Stadler: Artist Statement My work often begins with a single form — typically an animal whose…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Tennis Clinic 4.0+",
+    "href": "https://koto.org/event/tennis-clinic-4-0/2026-09-03/",
+    "date": "2026-09-03",
+    "time": "11:00 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Pilates for All Bodies with Laura",
+    "href": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-09-03/",
+    "date": "2026-09-03",
+    "time": "12:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/wellness.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    "type": "Wellness"
+  },
+  {
+    "title": "TRC Men's Tennis Singles",
+    "href": "https://koto.org/event/trc-mens-tennis-singles/2026-09-03/",
+    "date": "2026-09-03",
+    "time": "4:00 PM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The 1st TRC Men's Singles League! Sign up on a week-to-week basis. No long-term commitment.",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Design Review Board Meeting September 2026",
@@ -1779,6 +1805,20 @@
     "source": "Sherbino Theater",
     "desc": "",
     "type": "Community"
+  },
+  {
+    "title": "Labor Day Weekend - No School- Ridgway",
+    "href": "https://events.ourayridgwayevents.com/event/labor-day-no-school-ridgway",
+    "date": "2026-09-04",
+    "time": "",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "View on site | Email this event",
+    "type": "Community",
+    "endDate": "2026-09-07"
   },
   {
     "title": "Movies Under the Stars",
@@ -2091,7 +2131,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday meal gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2710,7 +2750,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -3055,6 +3095,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "September Book Club: \"The Constant Gardener\"",
+    "href": "https://events.ourayridgwayevents.com/event/september-book-club-the-constant-gardener",
+    "date": "2026-09-23",
+    "time": "5:00 PM",
+    "location": "Ouray Public Library",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53764141935106/huge/5fea0efc9d4b56f2aa50cae11c356177b92bea0e.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us on Wednesday, September 23rd at 5:00 p.m. to discuss our September Book Club Book, The Constant Gardener, by John le Carré. View on site | Email this event",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Market on the Plaza",
     "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     "date": "2026-09-23",
@@ -3090,8 +3143,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
-    "type": "Food & Drink"
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Watercolor & Wine with Katey Fetch: \"Paint the Peaks\"",
@@ -3200,6 +3253,19 @@
     "type": "Music"
   },
   {
+    "title": "Exploring Cyanotype with Angela LeClair",
+    "href": "https://events.ourayridgwayevents.com/event/exploring-cyanotype-with-angela-leclair",
+    "date": "2026-09-26",
+    "time": "10:00 AM",
+    "location": "The Annex on Cora",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53799659802012/huge/c2927afcf6407147c343bd4295145b709ec447bd.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Exploring Cyanotype with Angela LeClair September 26th, 10am-Noon Cora Annex, Ridgway Tuition: $60 Discover the magic of alternative photography in this beginner-friendly, hands-on workshop! Learn how to create beautiful cyanotype prints…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "National Public Lands Day Campsite Cleanup - Ironton",
     "href": "https://events.ourayridgwayevents.com/event/national-public-lands-day-campsite-cleanup-ironton",
     "date": "2026-09-26",
@@ -3226,6 +3292,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Mountain Girl Gallery Fall Fiesta",
+    "href": "https://events.ourayridgwayevents.com/event/mountain-girl-gallery-fall-fiesta",
+    "date": "2026-09-26",
+    "time": "4:00 PM",
+    "location": "Mountain Girl Gallery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53799469848261/huge/e6d1ccd4114025feaf8eb83d7e37cd545eb81420.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Let's celebrate Fall! Join us for live music, good times and fresh local art! Walter St. Clair will be playing tunes on the porch and the vibes will be high. View on site | Email this event",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Jeep Jamboree Historical Parade",
     "href": "https://events.ourayridgwayevents.com/event/jeep-jamboree-historical-parade",
     "date": "2026-09-26",
@@ -3248,7 +3327,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -3684,6 +3763,20 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Are you interested in connecting with the landscapes of Ouray? Do you wish for a fun and engaging exploration that you can share with your family? Join SJMA in Ouray for the fourth exploration hike of the Nature in Four-Season series. For…",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Fall Break - Ridgway Schools",
+    "href": "https://events.ourayridgwayevents.com/event/fall-break-ridgway-schools",
+    "date": "2026-10-12",
+    "time": "",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "View on site | Email this event",
+    "type": "Community",
+    "endDate": "2026-10-16"
   },
   {
     "title": "TYLER SIMMONS",

@@ -1,38 +1,5 @@
 [
   {
-    "title": "Telluride R-1 School Board Regular Meeting",
-    "link": "https://koto.org/event/telluride-r-1-school-board-regular-meeting/",
-    "description": "Telluride R-1 School District Board of Education holds a regular meeting on Tuesday, August 25th, at 5:15 p.m. in the Bridal Veil conference room at TMHS and via Zoom. The Zoom link and meeting agenda can be found at tellurideschool.org.",
-    "pubDate": "2026-08-25T17:15:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Middle/High School, TELLURIDE",
-    "imageUrl": ""
-  },
-  {
-    "title": "Eco-Grief Workshops: Between Grief & Gratitude, love and loss in a changing world",
-    "link": "https://koto.org/event/eco-grief-workshops-between-grief-gratitude-love-and-loss-in-a-changing-world/2026-08-25/",
-    "description": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-part series on navigating climate anxiety and eco-grief. The first two sessions will consist of a facilitated community conversation connecting our love of these landscapes with the challenge of the climate crisis at our doorsteps. After exploring our shared relationship with the current reality, the second two sessions will provide opportunities to express pain, grief, love and hope through various mediums including local poetry and group art projects. August 4 8:30 a.m.- 10:00 a.m. Telluride Room August 11 5:30 p.m. – 7 p.m. Telluride Room August 18 8:30 a.m.- 10:00 a.m. Program Room August 25 5:30 p.m. – 7 p.m. Program Room",
-    "pubDate": "2026-08-25T17:30:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/08/Between-Grief-Gratitude-Updated.webp"
-  },
-  {
-    "title": "Earth’s Most Resilient Life, Our Greatest Hope: Exploring Unusual Microbes to Solve Humanity’s Biggest Challenges",
-    "link": "https://koto.org/event/earths-most-resilient-life-our-greatest-hope-exploring-unusual-microbes-to-solve-humanitys-biggest-challenges/",
-    "description": "Join us at the Telluride Innovation Center as Braden Tierney, cofounder and executive director of the Two Frontiers Project, takes us into Earth’s strangest ecosystems. Hydrothermal vents, volcanic seeps, alpine soils, mine drainage right here in Telluride — these unusual environments harbor microscopic life with extraordinary abilities. Tierney will share stories from the field and the lab, where his team at the Two Frontiers Project searches the planet’s microbial diversity for “microbial superpowers” that could help fight pollution, support agriculture, protect ecosystems, and improve human health. This is a co-sponsored event with Telluride Science. This is a free event but please register at https://earth-life.eventbrite.com Thank you to our sponsor, Alpine Bank.",
-    "pubDate": "2026-08-25T18:30:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Innovation Center",
-    "imageUrl": ""
-  },
-  {
     "title": "Telluride R-1 School District Board Retreat",
     "link": "https://koto.org/event/telluride-r-1-school-district-board-retreat/",
     "description": "The Telluride R-1 School District School Board Retreat will be Wednesday, August 26th, from 9 a.m. to 3 p.m. at Wilkinson Public Library.",
@@ -477,6 +444,39 @@
     "link": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-03/",
     "description": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
     "pubDate": "2026-09-03T09:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Tennis Clinic 4.0+",
+    "link": "https://koto.org/event/tennis-clinic-4-0/2026-09-03/",
+    "description": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
+    "pubDate": "2026-09-03T11:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Pilates for All Bodies with Laura",
+    "link": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-09-03/",
+    "description": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    "pubDate": "2026-09-03T12:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "TRC Men's Tennis Singles",
+    "link": "https://koto.org/event/trc-mens-tennis-singles/2026-09-03/",
+    "description": "The 1st TRC Men's Singles League! Sign up on a week-to-week basis. No long-term commitment.",
+    "pubDate": "2026-09-03T16:00:00-06:00",
     "source": "koto",
     "sourceLabel": "KOTO",
     "category": "Community Event",
