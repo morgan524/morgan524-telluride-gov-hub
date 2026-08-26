@@ -22,6 +22,17 @@
     "imageUrl": ""
   },
   {
+    "title": "Municipal Court",
+    "link": "https://www.norwoodtown.com/2026-09-02-municipal-court",
+    "description": "",
+    "pubDate": "2026-09-02T12:00:00.000Z",
+    "source": "norwood",
+    "sourceLabel": "Town of Norwood",
+    "category": "Community Event",
+    "location": "Norwood, CO",
+    "imageUrl": ""
+  },
+  {
     "title": "Closed For Labor Day",
     "link": "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
     "description": "",
@@ -34,9 +45,31 @@
   },
   {
     "title": "Senior Lunch",
-    "link": "https://www.norwoodtown.com/2026-09-14-senior-lunch",
+    "link": "https://www.norwoodtown.com/2026-09-10-senior-lunch",
     "description": "",
-    "pubDate": "2026-09-14T12:00:00.000Z",
+    "pubDate": "2026-09-10T12:00:00.000Z",
+    "source": "norwood",
+    "sourceLabel": "Town of Norwood",
+    "category": "Community Event",
+    "location": "Norwood, CO",
+    "imageUrl": ""
+  },
+  {
+    "title": "Senior Lunch",
+    "link": "https://www.norwoodtown.com/2026-09-17-senior-lunch",
+    "description": "",
+    "pubDate": "2026-09-17T12:00:00.000Z",
+    "source": "norwood",
+    "sourceLabel": "Town of Norwood",
+    "category": "Community Event",
+    "location": "Norwood, CO",
+    "imageUrl": ""
+  },
+  {
+    "title": "Senior Lunch",
+    "link": "https://www.norwoodtown.com/2026-09-24-senior-lunch",
+    "description": "",
+    "pubDate": "2026-09-24T12:00:00.000Z",
     "source": "norwood",
     "sourceLabel": "Town of Norwood",
     "category": "Community Event",

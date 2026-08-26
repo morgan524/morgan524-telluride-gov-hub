@@ -1,26 +1,18 @@
 {
-  "hash": "75efd277b4d15a1d676053351267cea5ecbfedb4",
-  "lede": "The school board votes Tuesday on a flood-related budget appropriation for FY 2026-27 — real money being reallocated because the canyon took a hit, and worth knowing about. Alongside that, the Ethics Commission is shaping a formal Code of Conduct recommendation for Town Council, the Hospital District board could act on a Two Site Model that would define what gets built and where, and Mountain Village's HOA is moving to form a Workforce Housing Committee. A full week of decisions that will settle things for a while.",
+  "hash": "660d1c38d3ef7dc5eea95cb0acb1e0bd14eae578",
+  "lede": "The Telluride Medical Center board meets Thursday with a possible vote on a Two Site Model for the new hospital facility — a decision that will shape what gets built and where for decades to come. Also Thursday, the TMVOA board takes up the formation of a Workforce Housing Committee and votes on updated policies. Monday, Town Council opens with a work session on Comprehensive Plan goals and a review of proposals for a third-party audit of the Town's rental housing policies — that one matters to anyone who lives or works in employee housing here.",
   "notable": [
     {
-      "id": 1,
-      "stake": "Board votes on flood-driven budget changes to district's FY 2026-27 spending plan."
-    },
-    {
-      "id": 0,
-      "stake": "Commission drafts Code of Conduct recommendation that goes directly to Town Council."
-    },
-    {
-      "id": 2,
-      "stake": "CCAP funding discussion carries direct budget implications for county human services."
+      "id": 4,
+      "stake": "Board may vote on Two Site Model shaping the new hospital's location and scale."
     },
     {
       "id": 6,
-      "stake": "Board may act on Two Site Model, shaping scale and location of new medical facility."
+      "stake": "Board votes on updated policies and forming a Workforce Housing Committee."
     },
     {
       "id": 8,
-      "stake": "Board votes on updated policies and forms a new Workforce Housing Committee."
+      "stake": "Council reviews third-party audit proposals for Town rental housing policies."
     }
   ]
 }
