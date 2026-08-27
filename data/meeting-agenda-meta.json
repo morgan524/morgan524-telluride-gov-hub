@@ -1,7 +1,4 @@
 {
-  "county|2026-07-27|Open Space Commission Meeting": {
-    "sv": 4
-  },
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session": {
     "sv": 4,
     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1043/files/agenda/1934",
@@ -85,21 +82,6 @@
   "county|2026-08-13|Planning Commission Meeting": {
     "sv": 4,
     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/922/files/agenda/1949"
-  },
-  "telluride|2026-07-27|Special Town Council - Jul 27 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8294",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/j/83026171795?pwd=4cWG6X1zHUnG7rNIbuMYaAeGXgIESW.1",
-    "meetingId": "830 2617 1795",
-    "passcode": "256663.",
-    "phone": "719) 359-4580"
-  },
-  "county|2026-07-27|Housing Code Update SSR": {
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1052/files/agenda/1930",
-    "zoomUrl": "https://us06web.zoom.us/j/84045287708?pwd=2u4vMzFjoI7ZFitrp3Zp9yUa0YQh0b.1",
-    "meetingId": "840 4528 7708",
-    "passcode": "230003"
   },
   "rico|2026-08-19|Rico Board of Trustees Regular Meeting": {
     "sv": 4,
@@ -336,7 +318,11 @@
   },
   "county|2026-09-10|Planning Commission Meeting": {
     "sv": 4,
-    "ph": "b7c74705fcca6b2f"
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/923/files/agenda/1979",
+    "zoomUrl": "https://us06web.zoom.us/j/84540142300?pwd=kR3YU9IZBab43RLiNx0ox1gygbOI8C.1",
+    "meetingId": "845 4014 2300",
+    "passcode": "704358",
+    "phone": "970-728-3844"
   },
   "telluride|2026-08-13|San Miguel Authority for Regional Transportation - Aug 13 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8299",
@@ -519,6 +505,14 @@
   },
   "telluride|2026-09-10|(Rescheduled to Oct 13th) Town Council Budget - Sep 10 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052",
+    "sv": 4
+  },
+  "county|2026-08-27|Citizens Weed Advisory Board": {
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1055/files/agenda/1977",
+    "zoomUrl": "https://us06web.zoom.us/j/84507830944?pwd=dB15RuiMh7QbzfkYiaiomIXqFXJmd7.1",
+    "meetingId": "845 0783 0944",
+    "passcode": "633618",
+    "phone": "970-728-3174",
     "sv": 4
   }
 }

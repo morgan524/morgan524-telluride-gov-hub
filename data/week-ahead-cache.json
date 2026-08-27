@@ -1,22 +1,18 @@
 {
-  "hash": "00e97a9c354a5f61b306400145ce3380bbcc0d30",
-  "lede": "The biggest thing on the calendar this week is Town Council's September 1 work session, where a third-party audit of the Town's rental housing policies is up for review — a process that could shape who gets to stay in this valley for years to come. The Telluride Hospital District board also meets Thursday to weigh a Two Site Model for the new facility and possibly act on architect selection, two decisions that will define what gets built and where. Elsewhere, TMVOA is moving to formalize a Workforce Housing Committee, the county is sorting out child care funding implications, and the Open Space Commission is taking a field look at festival camping in Bear Creek Reserve.",
+  "hash": "e33cf85b06e1b037d347aa65ff4500f2521211f3",
+  "lede": "The biggest thing on the government calendar this week is the Telluride Hospital District board meeting Wednesday, where the board is expected to act on a Two Site Model for the new facility — a decision that will shape what gets built, where, and at what scale for years to come. Mountain Village's homeowner association is also moving, voting to form a Workforce Housing Committee and act on updated policies. Meanwhile, Town Council convenes Monday for work sessions on the Comprehensive Plan, the gondola, and a proposed third-party audit of the Town's rental housing policies.",
   "notable": [
     {
-      "id": 4,
-      "stake": "Board may act on hospital's Two Site Model and architect selection process."
-    },
-    {
-      "id": 6,
-      "stake": "TMVOA votes to form Workforce Housing Committee and adopt updated policies."
-    },
-    {
-      "id": 8,
-      "stake": "Town Council reviews third-party audit of rental housing policies — central to who can afford to stay."
-    },
-    {
       "id": 0,
-      "stake": "County weighs CCAP child care funding and its budget implications for San Miguel County."
+      "stake": "Board may act on Two Site Model, shaping the new hospital's location and scale."
+    },
+    {
+      "id": 2,
+      "stake": "TMVOA votes to form Workforce Housing Committee and adopt updated association policies."
+    },
+    {
+      "id": 5,
+      "stake": "Council reviews Comprehensive Plan goals and a third-party audit of rental housing policy."
     }
   ]
 }

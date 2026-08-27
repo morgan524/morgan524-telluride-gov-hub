@@ -1,5 +1,13 @@
 [
   {
+    "title": "",
+    "source": "KOTO Community Radio",
+    "date": "August 27, 2026",
+    "newsTopic": "public-safety",
+    "copy": "San Miguel County Shifts to Stage 1 Fire Restrictions; Community Advocates for Worker Protections; Gaiascope Lights Up Mountain Village",
+    "href": "https://koto.org/news/newscast-8-26-26/"
+  },
+  {
     "title": "Newscast 8-24-26",
     "source": "KOTO Community Radio",
     "date": "August 25, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "community",
     "copy": "West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda",
     "href": "https://koto.org/news/newscast-8-13-26/"
-  },
-  {
-    "title": "Newscast 8-12-26",
-    "source": "KOTO Community Radio",
-    "date": "August 13, 2026",
-    "newsTopic": "government",
-    "copy": "Paul Reich Vies for Seat on San Miguel Board of County Commissioners; A Placerville Poetry Box",
-    "href": "https://koto.org/news/newscast-8-12-26/"
   }
 ]
