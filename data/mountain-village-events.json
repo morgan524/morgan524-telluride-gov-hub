@@ -11,28 +11,6 @@
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   },
   {
-    "title": "Gaiascope Opening Night",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/gaiascope-opening-night/",
-    "description": "Celebrate the opening of Gaiascope with artist Brooke Einbender during a special golden hour gathering in the Heritage Plaza, Mountain Village.",
-    "pubDate": "2026-08-26T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49529/akb_1557-1.jpeg"
-  },
-  {
-    "title": "Water in the West: The Colorado River and the Future of Lake Powell",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/water-in-the-west-the-colorado-river-and-the-future-of-lake-powell/",
-    "description": "Join Sheep Mountain Alliance, San Juan Citizens Alliance, Patagonia Telluride and Wilkinson Public Library for a conversation with author and journalist Zak",
-    "pubDate": "2026-08-26T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49683/water_in_the_west_instagram_copy.jpg"
-  },
-  {
     "title": "Music on the Green Presents Cristina Vane",
     "link": "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-cristina-vane/",
     "description": "Beyond The Groove and TMVOA (tmvoa.org) present Cristina Vane at Reflection Plaza in Mountain Village. The Friday shows are free, all ages and family friendly.",
@@ -416,5 +394,27 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    "title": "Movies Under the Stars",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    "description": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "pubDate": "2026-09-26T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
+  {
+    "title": "Mind Blown Telluride",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    "description": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    "pubDate": "2026-09-26T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
   }
 ]

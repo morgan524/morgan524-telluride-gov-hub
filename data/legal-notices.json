@@ -431,5 +431,82 @@
     "url": "https://www.telluridenews.com/news/legals/article_7e6a7420-27c6-4f95-b0b8-101dfc5b4763.html",
     "address": "1370 Black Bear Road, Telluride, CO 81435",
     "noticeKey": "itb-telluride-street-mill-overlay-2026"
+  },
+  {
+    "title": "Public Hearing -- Adoption of 2024 International Building Code and Colorado Low Energy & Carbon Code",
+    "entity": "San Miguel County Board of Commissioners",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "The San Miguel County Board of Commissioners will hold a public hearing on September 16, 2026 at 9:00 AM in Telluride to consider adopting the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Written comments must be received by noon on September 10, 2026, limited to one page. Proposed amendments are available in the meeting agenda packet at the county website.",
+    "deadline": "2026-09-10T12:00:00 (written comments); hearing 2026-09-16T09:00:00",
+    "expires": "2026-09-16",
+    "dates": "8/27",
+    "papers": [
+      "ttimes_0827"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    "address": "Telluride, Colorado (San Miguel County)",
+    "noticeKey": "COL-000222-ibc-2024-hearing"
+  },
+  {
+    "title": "RFP -- Fuel Island Canopy Construction, Norwood Road & Bridge Maintenance Yard (COL-000219)",
+    "entity": "San Miguel County Road & Bridge Department",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County Road & Bridge is seeking proposals from qualified contractors to design, engineer, permit, and construct a fuel island canopy at the Norwood Road & Bridge Maintenance Yard, 39595 Highway 145, Norwood, CO. Proposals are due by 4:00 PM on September 3, 2026, submitted electronically; late proposals will not be accepted. Selection notification is expected by September 7, 2026.",
+    "deadline": "2026-09-03T16:00:00",
+    "expires": "2026-09-03",
+    "dates": "8/27",
+    "papers": [
+      "ttimes_0827"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    "address": "39595 Highway 145, Norwood, CO 81423",
+    "noticeKey": "COL-000219-fuel-island-canopy-norwood"
+  },
+  {
+    "title": "RFP -- San Miguel County Jail Repainting, Illium (COL-000224)",
+    "entity": "San Miguel County Fleet & Facilities Department",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County is requesting proposals from contractors to repaint the San Miguel County Jail located at 684 County Road 63L, Telluride (Illium), CO. RFP documents are available on the county website or from the Fleet & Facilities Department at 333 W. Colorado Ave, 2nd Floor, Telluride. Proposals are due by 5:00 PM on Friday, September 18, 2026, submitted via email or delivered in person.",
+    "deadline": "2026-09-18T17:00:00",
+    "expires": "2026-09-18",
+    "dates": "8/27",
+    "papers": [
+      "ttimes_0827"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    "address": "684 County Road 63L, Telluride, CO 81435",
+    "noticeKey": "COL-000224-jail-repaint-illium"
+  },
+  {
+    "title": "Request for Proposal -- Painting of the San Miguel County Jail",
+    "entity": "San Miguel County",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Request for Proposal",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County is seeking qualified respondents for: Painting of the San Miguel County Jail.",
+    "deadline": "Open until contracted",
+    "expires": "2026-11-25",
+    "dates": "8/27",
+    "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=209",
+    "address": "",
+    "smcBidID": "209"
   }
 ]
