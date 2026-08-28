@@ -108,5 +108,16 @@
     "category": "Town Closure",
     "location": "Norwood, CO",
     "imageUrl": ""
+  },
+  {
+    "title": "Closed For Thanksgiving",
+    "link": "https://www.norwoodtown.com/2026-11-26-closed-for-thanksgiving",
+    "description": "The Town of Norwood will be closed in observance of Thanksgiving Day. Municipal offices and services will be unavailable, with normal operations expected to resume following the holiday.",
+    "pubDate": "2026-11-26T12:00:00.000Z",
+    "source": "norwood",
+    "sourceLabel": "Town of Norwood",
+    "category": "Town Closure",
+    "location": "Norwood, CO",
+    "imageUrl": ""
   }
 ]
