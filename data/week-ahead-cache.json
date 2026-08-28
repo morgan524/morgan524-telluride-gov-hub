@@ -1,18 +1,18 @@
 {
-  "hash": "8c54ea6688ea2e4b64d63f4764ee0c9d508c456c",
-  "lede": "The biggest thing on the government calendar this week is the Telluride Hospital District board meeting Wednesday, where directors are expected to act on a Two Site Model for the new facility and take up a Letter of Intent — decisions that will shape what gets built and where for decades. Mountain Village's HOA board also meets that day to form a Workforce Housing Committee and vote on updated policies. And Tuesday, Town Council sits down for a serious look at Comprehensive Plan goals, a gondola subcommittee update, and proposals for a third-party audit of the Town's rental housing policies.",
+  "hash": "fa4811be59d6d76573fb2bb71c469e289886c289",
+  "lede": "The biggest thing to watch this week is Tuesday's Town Council session, where work sessions cover the Comprehensive Plan, a Gondola Subcommittee update, and — most consequentially — a review of proposals for a third-party audit of the Town's rental housing policies, which goes to the heart of who can actually afford to live here. Ouray County's Planning Commission also meets virtually Wednesday to work through possible Land Use Code definition changes, the kind of quiet groundwork that shapes what gets built and where. Mountain Village's Design Review Board takes up a conditional-use permit for a temporary tent and food truck on Adams Ranch Road Thursday.",
   "notable": [
     {
       "id": 0,
-      "stake": "Board may act on Two Site Model and LOI, shaping the new hospital's scale and location."
-    },
-    {
-      "id": 2,
-      "stake": "TMVOA votes to form Workforce Housing Committee and adopt updated policies."
+      "stake": "Third-party audit of rental housing policies could reshape who stays in Telluride."
     },
     {
       "id": 5,
-      "stake": "Council reviews Comprehensive Plan goals and third-party audit of town rental housing policies."
+      "stake": "Land Use Code definition changes are being shaped before any public hearing."
+    },
+    {
+      "id": 6,
+      "stake": "Conditional-use permit for Adams Ranch Rd tent and food truck goes to DRB for recommendation."
     }
   ]
 }

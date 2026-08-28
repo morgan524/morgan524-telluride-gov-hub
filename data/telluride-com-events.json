@@ -276,18 +276,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/58269/norwood.800x533.webp"
   },
   {
-    "title": "Wine and Wickets",
-    "link": "https://www.telluride.com/event/wine-and-wickets/",
-    "description": "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our …",
-    "pubDate": "2026-07-29",
-    "endDate": "2026-10-14",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63144/wine-and-wickets-1800x900_870x435.800x533.webp"
-  },
-  {
     "title": "Live at the Drive",
     "link": "https://www.telluride.com/event/live-at-the-drive/",
     "description": "Join KOTO for a party at the purple house! They will be closing down North Pine Street and using the driveway as a …",
@@ -334,28 +322,6 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63362/tdp3588.800x533.webp"
-  },
-  {
-    "title": "Gaiascope Opening Night",
-    "link": "https://www.telluride.com/event/gaiascope-opening-night/",
-    "description": "Celebrate the opening of Gaiascope with artist Brooke Einbender during a special golden hour gathering in the Heritage …",
-    "pubDate": "2026-08-26",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63278/akb_1557-1_870x435.800x533.webp"
-  },
-  {
-    "title": "Water in the West: The Colorado River and the Future of Lake Powell",
-    "link": "https://www.telluride.com/event/water-in-the-west-the-colorado-river-and-the-future-of-lake-powell/",
-    "description": "Join Sheep Mountain Alliance, San Juan Citizens Alliance, Patagonia Telluride and Wilkinson Public Library for a …",
-    "pubDate": "2026-08-26",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63380/water_in_the_west_instagram_copy.800x533.webp"
   },
   {
     "title": "Coffee & Climate Conversations",
@@ -457,6 +423,18 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/62752/colorado_250-150.800x533.webp"
+  },
+  {
+    "title": "Birding With Katie",
+    "link": "https://www.telluride.com/event/birding-with-katie/",
+    "description": "Patagonia Telluride will host a bird talk with Katie Triest from 5-6 pm on Sept 3 at the Patagonia store. Katie will …",
+    "pubDate": "2026-09-03",
+    "endDate": "2026-09-04",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63443/screenshot_2026-08-21_114434-v1.800x533.webp"
   },
   {
     "title": "Telluride Film Festival",
@@ -581,6 +559,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/53749/download_14.800x533.webp"
+  },
+  {
+    "title": "Optimize Your Brain Health With Lifestyle Medicine",
+    "link": "https://www.telluride.com/event/optimize-your-brain-health-with-lifestyle-medicine/",
+    "description": "Can up to half of dementia cases be prevented? Emerging evidence suggests the answer is yes. In this engaging and …",
+    "pubDate": "2026-09-23",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63441/brain-health_tdotcom-2200x1237.800x533.webp"
   },
   {
     "title": "Telluride Autumn Classic",

@@ -1,5 +1,29 @@
 [
   {
+    "title": "Miner soccer looking super-stocked",
+    "source": "Telluride Times",
+    "date": "August 27, 2026",
+    "firstSeen": "2026-08-28",
+    "newsTopic": "education",
+    "copy": "The Telluride High boys soccer team heads into 2026 with nearly its entire roster intact — coach Ramon Rodriguez says the only starter lost to graduation was center-mid Spencer du Toit. Goalkeeper Maddox Slosberg and all four starting fullbacks return, along with senior leaders in the attack. The Miners went 13-4-0 last season before falling to eventual state champ Crested Butte in the Great Eight.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/sports/article_08775cdb-e5ea-4af2-8a71-dfd7548e5464.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/5c/25c3ca45-e412-4c41-adf6-b6f819d71f00/6a8eaff26b086.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Colorado West Land Trust releases new restoration plan",
+    "source": "Telluride Times",
+    "date": "August 27, 2026",
+    "firstSeen": "2026-08-28",
+    "newsTopic": "health",
+    "copy": "Colorado West Land Trust has released its first Restoration Plan, a five-year framework covering six western Colorado counties focused on watershed health, wildlife habitat, and agricultural resilience. Alongside it, CWLT is restoring 115-plus acres of wetlands and riparian habitat along the North Fork of the Gunnison River in Delta County.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/norwood_post/article_d6ed84a7-ffc4-4946-814e-cdf92262d4d4.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/47/14731eb7-9b30-4179-b3ae-bdb29fa2dfdf/6a8f062dc54a5.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Local, hot lunch returns to Lone Cone Library",
     "source": "Telluride Times",
     "date": "August 27, 2026",
@@ -130,7 +154,7 @@
     "copy": "Drought is pushing bears to work harder for food this year, and a few have been put down after getting into homes. A local resident is reminding neighbors that we moved into bear country — not the other way around. Lock your doors, secure your food, and don't make it easy for them.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_b3877f87-d6ee-4b22-a06c-5dbcdac89b36.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "letterAuthor": "Tricia Porter",
     "isLetter": true,
     "imgHiRes": true
@@ -842,30 +866,6 @@
     "imgHiRes": true
   },
   {
-    "title": "An 'influencer' degree? Colleges bet on content creator major as critics question its value",
-    "source": "Telluride Times",
-    "date": "August 14, 2026",
-    "firstSeen": "2026-08-14",
-    "newsTopic": "government",
-    "copy": "Arizona State just launched a bachelor's degree in content creation through its journalism school, joining a handful of universities now offering formal programs in the field. The creator economy tops $20 billion in U.S. revenue, though analysts note most of that money doesn't reach individual creators. It's a crowded, competitive space — worth watching how these degrees translate to actual careers.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/state/article_149025a1-8121-5718-aca8-442898992d60.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "‘We’re not going to turn into a pumpkin’",
-    "source": "Telluride Times",
-    "date": "August 14, 2026",
-    "firstSeen": "2026-08-14",
-    "newsTopic": "public-safety",
-    "copy": "Five local governments met August 10 for an intergovernmental work session covering infant care shortages (18 spots, 21 waitlisted), Ute Mountain Ute allyship, and wildfire updates. TRMC now plans a two-site approach — emergency room at Society Turn, primary care staying on Pacific Avenue — after Newmont unexpectedly offered a 30-year lease extension through 2061.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/article_b60bdf58-4398-4697-864a-cd1754ceddd4.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/64/e6431f68-6379-411c-bfb4-77d8a42f0dc0/6a7cf92badfcb.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Town of Telluride Downgrades to Stage 1 Fire Restrictions",
     "source": "Town of Telluride",
     "date": "August 26, 2026",
@@ -873,6 +873,33 @@
     "copy": "(August 25, 2026) – Following improved fire conditions across the region, Town Manager Zoe Dohnal has downgraded fire restrictions within the Town of Telluride from Stage 2 to Stage 1, effective 12:01 a.m. MT on Wednesday, August 26, 2026.",
     "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=403",
     "img": ""
+  },
+  {
+    "title": "Marya Stark and Charles Dalton Sworn In to Telluride Town Council",
+    "source": "Town of Telluride",
+    "date": "August 12, 2026",
+    "newsTopic": "government",
+    "copy": "(July 21, 2026) – The Town welcomed two new members to Town Council this morning as Charles Dalton and Marya Stark were sworn into office at 9:30 a.m. Town Clerk Tiffany Kavanaugh administered the oath of office for both officials.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=402",
+    "img": ""
+  },
+  {
+    "title": "Arrest Made in String of Telluride Mountain Bike Thefts",
+    "source": "Town of Telluride",
+    "date": "August 12, 2026",
+    "newsTopic": "recreation",
+    "copy": "(August 11, 2026) – The Telluride Marshal's Department has identified and arrested a suspect in a series of mountain bike thefts that account for more than $22,000 in reported losses.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=401",
+    "img": "https://www.telluride.gov/ImageRepository/Document?documentID=15642"
+  },
+  {
+    "title": "State of the Town Address: The State of the Town Is Strong and Engaging",
+    "source": "Town of Telluride",
+    "date": "August 8, 2026",
+    "newsTopic": "government",
+    "copy": "The Mayor's biannual State of the Town Address was delivered on Tuesday, July 21 during the regular meeting of Telluride Town Council, here's what Mayor Teddy Errico had to say.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=400",
+    "img": "https://www.telluride.gov/ImageRepository/Document?documentID=15641"
   },
   {
     "title": "Waste Tire Collection Event",
@@ -890,6 +917,15 @@
     "newsTopic": "community",
     "copy": "All County offices will be closing at noon at the latest on Thursday, August 27, 2026, for an Employee Appreciation Picnic. We apologize for any inconvenience.",
     "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=541",
+    "img": ""
+  },
+  {
+    "title": "Black Bear Pass Now Open",
+    "source": "San Miguel County",
+    "date": "August 3, 2026",
+    "newsTopic": "recreation",
+    "copy": "County crews finished work this afternoon, Black Bear Pass is now open from Red Mountain Pass to Telluride.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=539",
     "img": ""
   },
   {

@@ -163,11 +163,6 @@
     "passcode": "997236",
     "phone": "346-248-7799"
   },
-  "telluride|2026-07-28|Gondola Leadership Committee - Jul 28 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8297",
-    "zoomUrl": "https://us06web.zoom.us/j/85350165336?pwd=P0eS14nFbqd5jLXEO2gckIoA9kPAro.1",
-    "sv": 4
-  },
   "telluride|2026-08-20|Planning & Zoning Commission - Aug 20 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8102",
     "sv": 4,
@@ -178,11 +173,6 @@
   },
   "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8101",
-    "sv": 4
-  },
-  "tmvoa|2026-07-28|Gondola Leadership Committee Meeting": {
-    "agendaUrl": "https://tmvoa.org/site/assets/files/4825/07_28_26_leadership_gondola_agenda_updated.pdf",
-    "zoomUrl": "https://us06web.zoom.us/j/85350165336?pwd=P0eS14nFbqd5jLXEO2gckIoA9kPAro.1",
     "sv": 4
   },
   "tmvoa|2026-08-11|Mountain Village Merchant Meeting": {
@@ -513,6 +503,19 @@
     "meetingId": "845 0783 0944",
     "passcode": "633618",
     "phone": "970-728-3174",
+    "sv": 4
+  },
+  "telluride|2026-09-23|Vending Subcommittee - Sep 23 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8308",
+    "sv": 4,
+    "ph": "1ddd1637fea52e35"
+  },
+  "county|2026-09-15|Housing Code Update SSR": {
+    "sv": 4,
+    "ph": "0b96eaea9b0b51f7"
+  },
+  "ouray|2026-09-02|PM - Note: Virtual/Zoom meeting only!  The Planning Commission will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (packet materials are attached to the agenda)": {
+    "agendaUrl": "https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1016",
     "sv": 4
   }
 }

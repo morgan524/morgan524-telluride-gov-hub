@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-27T14:02:25.409Z",
+ "generated": "2026-08-28T00:22:22.849Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -80,6 +80,18 @@
      "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/923/files",
      "link": "https://sanmiguelcoco.portal.civicclerk.com/event/923/files",
      "zoomLink": "https://us06web.zoom.us/j/84540142300?pwd=kR3YU9IZBab43RLiNx0ox1gygbOI8C.1",
+     "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
+    },
+    {
+     "source": "county",
+     "sourceLabel": "San Miguel County",
+     "title": "Housing Code Update SSR",
+     "date": "2026-09-15",
+     "time": "",
+     "location": "BOCC Meeting Room",
+     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1069/files",
+     "link": "https://sanmiguelcoco.portal.civicclerk.com/event/1069/files",
+     "zoomLink": "",
      "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
     }
    ],
