@@ -255,7 +255,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/tZ0pc-ChqDwsGNFpPigfqqLQptmoMmpJdiOx"},
 
   "telluride|2026-09-02|Telluride Housing Authority Subcommittee - Sep 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163","sv":4,"ph":"b8be81b862717054"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163","sv":4,"ph":"558b2c991b258cd1"},
 
   "county|2026-09-02|Board of County Commissioners Meeting":
     {"sv":4,"ph":"a12dfd2ce826475e"},
@@ -351,7 +351,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8022","sv":4,"ph":"e63371133d9cef98"},
 
   "telluride|2026-09-16|Parks & Recreation Commission - Sep 16 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082","sv":4,"ph":"1668886d38956c2d"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082","sv":4,"ph":"6fb96e40a5040f91"},
 
   "county|2026-09-16|Board of County Commissioners Meeting":
     {"sv":4,"ph":"a12dfd2ce826475e"},
@@ -387,7 +387,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303","sv":4,"ph":"df16bef2d4cca5b3"},
 
   "telluride|2026-09-22|Town Council - Sep 22 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043","sv":4,"ph":"0c2ea006f5fde3ee"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043","sv":4,"ph":"c5b14e4bfd86db54"},
 
   "county|2026-09-23|Board of County Commissioners Work Session":
     {"sv":4,"ph":"307e0c7b19e4ff5b"},
@@ -442,6 +442,14 @@ const DEEP_DIVE_UPDATES = [
 //   sourceUrl, topics: [] }. Rendered by hub-bub.html from the JSON mirror
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
+  {
+    date: "2026-08-29",
+    title: "Street banners and arts cash — who's in line?",
+    body: "The Commission for Community Assistance, Arts & Special Events meets September 2 to take up annual funding allocations for community support and arts organizations, plus applications for street closures and banners.\n\nThat's a lot on one plate. Some folks think a single commission juggling arts grants, community assistance, and who gets to hang a banner or shut down a street is a reasonable way to run a small town. Others wonder whether mixing those decisions means any one of them gets the attention it deserves — or whether the same organizations win every year.\n\nHow should a town weigh arts funding against community assistance, and who should be making those calls?",
+    choices: ["Keep it all under one commission", "Split arts and assistance funding", "Open the process up more", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
   {
     date: "2026-08-28",
     title: "One hospital, two sites — or just one?",
@@ -673,14 +681,6 @@ const DAILY_QUESTIONS = [
     choices: ["Regulate and allow them", "Keep them out entirely", "Depends on the rules", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-07-30",
-    title: "Should your tax bill get a second opinion?",
-    body: "Through August 5, the San Miguel County Board of Commissioners is sitting as the Board of Equalization — meaning property owners can appeal the Assessor's valuation of their land. It's a quiet process most people don't know exists. Those who do show up argue the numbers are off and they're paying more than their fair share. Assessors counter that their valuations reflect the market and that appeals from high-value owners can quietly shift the burden onto everyone else. So: is the appeals process a necessary check, or a tool that mostly benefits those who already know how to use it?",
-    choices: ["Necessary check on the Assessor", "Shifts burden onto everyone else", "Depends who's appealing", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -841,7 +841,17 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 27, 2026",
     newsTopic: "public-safety",
     copy: "In the summer of 1879, the largest wildfire in Colorado history at the time tore through 26,000 acres of rugged forest about eight miles south of Silverton and presaged a vast shift in its landscape. Laying waste to the coniferous forests in its path, the Lime Creek Fire opened the door for huge sta",
-    href: "https://www.ouraynews.com/2026/08/26/factors-behind-fire-drove-spread/",
+    href: "https://www.ouraynews.com/2026/08/26/factors-behind-fire-drove-spread/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Autopsy: Pilot drowned",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 27, 2026",
+    newsTopic: "public-safety",
+    copy: "The death of a pilot whose firefighting helicopter crashed into Silver Jack Reservoir last month has been ruled an accident by a Grand Junction medical examiner, according to an autopsy report obtained by the Plaindealer. The Gunnison County Coroner s Office determined that Nicholas Dale drowned. Th",
+    href: "https://www.ouraynews.com/2026/08/26/autopsy-pilot-drowned/?ta_paidstory",
     img: ""
   },
   {
@@ -875,16 +885,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "Construction to control flooding begins",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 27, 2026",
-    newsTopic: "public-safety",
-    copy: "Crews from Haynes Excavation began work last week to repair and protect areas prone to flooding and debris flows beneath the Gold Mountain Fire burn scar. The $2.8 million Emergency Watershed Protect authorized by the federal Natural Resources Conservation Service is funded by the NRCS, the Colorado",
-    href: "https://www.ouraynews.com/2026/08/26/construction-control-flooding-begins/?ta_paidstory",
-    img: ""
-  },
-  {
     title: "Disaster relief sales tax headed for ballot",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
@@ -895,43 +895,33 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "Public trails for all, not personal interests",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 27, 2026",
-    newsTopic: "recreation",
-    copy: "Dear Editor: In response to the letter to the editor from Dianne Eschman in the Aug. 13 edition, as an avid off-roader and business owner in Ouray, I take issue with a few claims made. Off-highway vehicles exhaust and noise are regulated by the federal government, they are under strict requirements ",
-    href: "https://www.ouraynews.com/2026/08/26/public-trails-not-personal-interests/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "County needs a disaster fund, not an endless tax",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 27, 2026",
-    newsTopic: "government",
-    copy: "Dear Editor: I am writing because the proposed disaster recovery fund sales tax deserves careful consideration before voters approve it. I’m concerned the ballot language creates an unlimited forever growing revenue source rather than a defined disaster reserve. The relevant question isn’t what the ",
-    href: "https://www.ouraynews.com/2026/08/26/county-needs-disaster-fund-not-endless-tax/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Monsoon flooding as old as Ouray itself",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
+    title: "We’re Hiring- Bilingual Food Pantry and seNior Lunch Cook Assistant/ Estamos Contratando: Asistente Bilingüe del Banco de Alimentos y Asistente de Cocina del Almuerzo para Personas Mayores",
+    source: "Fresh Food Hub",
+    sourceKey: "fresh-food-hub",
     date: "August 27, 2026",
     newsTopic: "community",
-    copy: "Situated on debris fans created by Portland and Cascade creeks, Ouray lies in a 5,000-foot deep rock bowl drained by five major creeks emptying into the Uncompahgre River. It’s not surprising that for the 150 years of the city’s existence, it has flooded repeatedly in monsoon season. July 22, 1878: ",
-    href: "https://www.ouraynews.com/2026/08/26/monsoon-flooding-old-ouray/?ta_paidstory",
+    copy: "We re hiring for two part-time positions: Bilingual Food Pantry Assistant — Sundays, 1:30–6:30 p.m. This role provides Spanish-English translation support for our Spanish-speaking clients during food pantry distribution. Senior Lunch Assistant — Thursdays, 8:30 a.m.–1:30 p.m. at Norwood Town Hall. T",
+    href: "https://freshfoodhub.net/were-hiring-bilingual-food-pantry-and-senior-lunch-cook-assistant-estamos-contratando-asistente-bilingue-del-banco-de-alimentos-y-asistente-de-cocina-del-almuerzo-para-personas-mayores/",
     img: ""
   },
   {
-    title: "Advocates for fire authority pivot",
+    title: "Pilot’s death ruled an accident",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
-    date: "August 27, 2026",
+    date: "August 25, 2026",
     newsTopic: "public-safety",
-    copy: "Organizers pitch placing county EMS under Ridgway Fire Ouray County plans to pivot efforts to consolidate a proposed fire and emergency response authority by merging Ouray County Emergency Medical Services with the Ridgway Fire Protection District. With Log Hill Mesa Fire Protection District and the",
-    href: "https://www.ouraynews.com/2026/08/26/advocates-fire-authority-pivot/?ta_paidstory",
+    copy: "The death of a pilot whose firefighting helicopter crashed into Silver Jack Reservoir last month has been ruled an accident by a Grand Junction medical examiner, according to an autopsy report obtained by the Plaindealer. The Gunnison County Coroner s Office determined that Nicholas Dale drowned. Th",
+    href: "https://www.ouraynews.com/2026/08/25/pilots-death-ruled-accident/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Fire, EMS consolidation proponents consider next steps",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 25, 2026",
+    newsTopic: "public-safety",
+    copy: "Advocates for a county-wide consolidated fire and emergency response authority still believe there is a path forward, even though the proposal suffered another setback last week when the Ouray City Council declined to consider an agreement. Ouray County EMS Chief Nate McCullough said he thinks the c",
+    href: "https://www.ouraynews.com/2026/08/25/fire-ems-consolidation-proponents-consider-next-steps/?ta_paidstory",
     img: ""
   },
   {
@@ -953,6 +943,26 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Long-term road closure for the Corbett Creek Bridge Project, July 24 through October 8, 2026.",
     href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=955",
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22829"
+  },
+  {
+    title: "Best feathers forward",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.ouraynews.com/2026/08/19/best-feathers-forward/",
+    img: ""
+  },
+  {
+    title: "Bear activity ramping up",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "recreation",
+    copy: "State wildlife officials killed a young, female bear that entered a Ridgway home last weekend after days of conflicts and at least one incident with the bear killing chickens. Colorado Parks and Wildlife District Manager Kelly Crane warned bear activity has ramped up significantly, with the bruins s",
+    href: "https://www.ouraynews.com/2026/08/19/bear-activity-ramping/?ta_paidstory",
+    img: ""
   },
   {
     title: "Invitation to Prayer/Fellowship Wednesday Morning",
@@ -1632,6 +1642,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "BOCC discuss continuing qualification for housing",
+    source: "Telluride Times",
+    date: "August 29, 2026",
+    firstSeen: "2026-08-29",
+    newsTopic: "housing",
+    copy: "San Miguel County commissioners and the housing authority are working to clarify how deed-restricted residents prove they still qualify — particularly self-employed people who struggle to document income and hours. A CPA affidavit was floated as one possible solution. The county plans to update its deed restriction covenant starting in 2027.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_43b9033c-1a6e-4c12-96f6-9378ea0238c6.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/e6/de6c7789-04cd-4256-b963-97c763e253cc/6a9137394a8fd.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "New Bridal Veil Lodging is ‘intentionally boutique’",
     source: "Telluride Times",
@@ -3618,28 +3640,6 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Yoga for ALL with Jane & Jay",
-    link: "https://telluridelibrary.libcal.com/event/15803455?hs=a",
-    description: "8:30 AM – 9:45 AM · Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
-    pubDate: "2026-08-28T14:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg"
-  },
-  {
-    title: "DIY Upcycled Merch Workshop with Camp Alderwild",
-    link: "https://telluridelibrary.libcal.com/event/17358278?hs=a",
-    description: "1:00 PM – 2:30 PM · You know that feeling when your friend shows up to the function wearing the coolest, one-of-a-kind festival fit, and you ask, \"Where did you get that?\" Only for them to say, \"I made it,\" or \"A friend made it,\" or \"I picked it up from a local artist at a festival.\" And you think... \"Damn. I wish I knew how to do that.\" Good news: you can. In this hands-on workshop, MikeyJ shares the story of how he discovered upcycling and the creative practice that&#39;s shaped both his art and his career. Then it&#39;s your turn. Using thrifted clothing (choose from MikeyJ&#39;s curated thrift rack or bring your own), unique fabrics, and custom patches, you&#39;ll learn the fundamentals of sewing while creating a one-of-a-kind piece that&#39;s completely your own. …",
-    pubDate: "2026-08-28T19:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: ""
-  },
-  {
     title: "High Camp",
     link: "https://telluridelibrary.libcal.com/event/17246239?hs=a",
     description: "4:00 PM – 1:00 PM · Nos reuniremos en la biblioteca a las 4 y conduciremos a la area cerca de Trout Lake (Lizard Head) y caminaremos una corta distancia hasta High Camp. Pasaremos la noche y volveremos a Telluride alrededor de las 12 o 1. P&oacute;ngase en contacto con Claudia si tiene alguna pregunta o inquietud. Debes registrarte para este evento y los espacios son limitados",
@@ -3649,6 +3649,28 @@ const WILKINSON_EVENTS = [
     category: "Library Event",
     location: "Lobby",
     imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_22_18_06_26.jpg"
+  },
+  {
+    title: "Zumba with Marlen",
+    link: "https://telluridelibrary.libcal.com/event/17469954?hs=a",
+    description: "12:00 PM – 1:00 PM · Ditch the workout and join the party! Zumba&reg; is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. &iexcl;Olvida el entrenamiento y &uacute;nete a la fiesta! Zumba&reg; es una clase de fitness de baile de alta energ&iacute;a que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calor&iacute;as. …",
+    pubDate: "2026-08-29T18:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_11_17_14.jpg"
+  },
+  {
+    title: "DIY Upcycled Merch Workshop with Camp Alderwild",
+    link: "https://telluridelibrary.libcal.com/event/17358279?hs=a",
+    description: "1:00 PM – 2:30 PM · You know that feeling when your friend shows up to the function wearing the coolest, one-of-a-kind festival fit, and you ask, \"Where did you get that?\" Only for them to say, \"I made it,\" or \"A friend made it,\" or \"I picked it up from a local artist at a festival.\" And you think... \"Damn. I wish I knew how to do that.\" Good news: you can. In this hands-on workshop, MikeyJ shares the story of how he discovered upcycling and the creative practice that&#39;s shaped both his art and his career. Then it&#39;s your turn. Using thrifted clothing (choose from MikeyJ&#39;s curated thrift rack or bring your own), unique fabrics, and custom patches, you&#39;ll learn the fundamentals of sewing while creating a one-of-a-kind piece that&#39;s completely your own. …",
+    pubDate: "2026-08-29T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: ""
   }
 ];
 
@@ -3682,30 +3704,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "MIKEY THUNDER \\\\ BAD SNACKS",
-    link: "https://www.alibitelluride.com/calendar#eca-event=rsun-mindset-1",
-    description: "Camp Alderwild After Party. These Shows are sold out, tickets are available on Fan Exchange",
-    pubDate: "2026-08-28",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/0793e80b-a99a-4924-a9a8-d6e5b31fed89/-/crop/399x399/0,15/-/preview/"
-  },
-  {
-    title: "ESSEKS \\\\ TIEDYE KY",
-    link: "https://www.alibitelluride.com/calendar#eca-event=rsun-mindset-2",
-    description: "Camp Alderwild After Party. These Shows are sold out, tickets are available on Fan Exchange",
-    pubDate: "2026-08-28",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/0793e80b-a99a-4924-a9a8-d6e5b31fed89/-/crop/399x399/0,15/-/preview/"
-  },
   {
     title: "Big Blitz",
     link: "https://www.alibitelluride.com/calendar#eca-event=big-blitz",
@@ -4219,126 +4217,13 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "San Juan Chamber MusicFest",
     link: "https://events.ourayridgwayevents.com/event/san-juan-chamber-musicfest",
     description: "August 25 - August 30 at multiple venues in Ridway and Ouray, Colorado. The annual San Juan Chamber MusicFest, OCPAG’s flagship event, features a group of chamber musicians of international acclaim, under the artistic direction of renowned concert pianist Max Levinson. Together, they produce a number of concerts and events in Ouray and Ridgway over the course of a week each August. This year's MusicFest will feature the world-renowned Ulysses Quartet. Read more about the SJCMF musicians HERE. OCPAG is grateful for the grant support from the Dave and Mary Wood Fund and the Western Colorado Community Foundation so that OCPAG is able to bring these concerts to stages around Ouray County. We are also most grateful to the patrons who attend and support this chamber music programming! View on site | Email this event",
-    pubDate: "2026-08-28T06:00:00.000Z",
+    pubDate: "2026-08-29T06:00:00.000Z",
     endDate: "2026-08-30",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53249632392911/huge/75dcb70d103e562fc3b68267bd405813886a92df.jpg"
-  },
-  {
-    title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
-    link: "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
-    description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
-    pubDate: "2026-08-28T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The 610 Arts Collective",
-    imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
-  },
-  {
-    title: "Ridgway Farmers Market",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
-    description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here. View on site | Email this event",
-    pubDate: "2026-08-28T16:00:00.000Z",
-    endDate: "2026-10-16",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Hartwell Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
-  },
-  {
-    title: "SECOND CHANCE PAWS for Art Gallery's Native American and Western show",
-    link: "https://events.ourayridgwayevents.com/event/second-chance-paws-for-art-gallerys-native-american-and-western-show",
-    description: "For Rodeo month we're featuring a Native American and Western themed show in our gallery! View on site | Email this event",
-    pubDate: "2026-08-28T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Paws For Art Gallery & More",
-    imageUrl: "https://localist-images.azureedge.net/photos/53817488087266/huge/b2d58cc418d56f3c7c40977b1431985ddcb2ee84.jpg"
-  },
-  {
-    title: "True Grit Historic Walking Tours",
-    link: "https://events.ourayridgwayevents.com/event/true-grit-tours",
-    description: "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen in the movie are still in place. John Wayne won his only Oscar for his portrail of Marshal Rooster Cogburn. Offered every Friday at 3 pm in June, July and August. Additional tours are offered at 10am Mondays and 3 pm Wednesdays in July. Meet at the Hartwell Park gazebo 15 minutes before tours begin. FREE. Tours last about an hour. In 2022, this tour was recognized nationally when it was named the reader's choice for best historic town tour by True West magazine. For more information see the website: TrueGritTours.org or on facebook: True Grit Tours. …",
-    pubDate: "2026-08-28T21:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Hartwell Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/52285883190282/huge/99283c09e34ca5aeabd7006cca2ba5b2b28899c3.jpg"
-  },
-  {
-    title: "OLD MAN POLLY",
-    link: "https://events.ourayridgwayevents.com/event/old-man-polly-4070",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
-    pubDate: "2026-08-28T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Final Friday: Clowning Around",
-    link: "https://events.ourayridgwayevents.com/event/final-friday-clowning-around",
-    description: "CLOWN SCHOOL IS NOW IN SESSION! Join us at the end of the first week back at school to be a little less serious and a little more silly. For Middle & High School Students, Final Friday is reclaiming Voyager as the Teen Center it used to be. 🤘 Come hang out for an evening that mixes chill social time with free food and fun activities. Every month, we have games, art and more available. All we ask is that you clean up after yourself and help us create a welcoming space for everyone. This month, Andrea Sokolowski, founder of the local improv group The Play Does will be joining us. If you've ever been interested in learning about improv or wanted to run away to the circus then this is the Final Friday for you! …",
-    pubDate: "2026-08-28T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Voyager Basecamp",
-    imageUrl: "https://localist-images.azureedge.net/photos/53428561014390/huge/ddcc842e71104da739a6e5d9ae3d47e5e9c98a98.jpg"
-  },
-  {
-    title: "Alpine Jam - Live @ Floating Lotus Brewerty",
-    link: "https://events.ourayridgwayevents.com/event/alpine-jam-live-floating-lotus-brewerty",
-    description: "Ridgway-based Alpine Jam plays an eclectic, high-energy mix of real rock and roll, down-home blues, and upbeat country. Their dynamic vocals, wailing saxophone and guitar leads, and instrumental jams are sure to get you up and moving. View on site | Email this event",
-    pubDate: "2026-08-29T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53604246650500/huge/18e210b78b98c467d364bab798eb9b5e4c95c24d.jpg"
-  },
-  {
-    title: "Dinner & Magic Show",
-    link: "https://events.ourayridgwayevents.com/event/dinner-magic-show",
-    description: "Join us in Ouray for an evening of wow with magician Mason Michael! You will be treated to a gourmet dinner followed by a close-up magic show. A night you won't want to miss! Click the link to buy tickets now! Enjoy a one of a kind course meal at the Yankee Girl Cafe, followed by a 45 minute Close-Up show of \"Freakishly Good Magic\" presented by local magician Mason Michael. Mason has performed all over the country for everyone from random people on the street, to theaters full of 600 people. He’s toured with renowned magician Ty Gallenbeck, sold out his own one-man show, and has regular performances all around Colorado. He has promised to never pull a bunny out of a hat, because nobody wants to see that. General Admission pricing is for the magic show AND dinner, this ticket includes both. …",
-    pubDate: "2026-08-29T00:00:00.000Z",
-    endDate: "2026-08-30",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Yankee Girl Cafe",
-    imageUrl: "https://localist-images.azureedge.net/photos/53737486688667/huge/ac13f67b069695c3e8a1a4ab698a497f3d80d55a.jpg"
-  },
-  {
-    title: "Roots & Wings: The Pollinator Connection - Ridgway State Park Summer Program Series",
-    link: "https://events.ourayridgwayevents.com/event/roots-wings-the-pollinator-connection-ridgway-state-park-summer-program-series",
-    description: "Discover the secret, bustling world of our local ecosystem! Join passionate plant enthusiast Zoe Debenedette for an eye-opening evening exploring the incredible native flora of the San Juan region and the vital pollinators they support. You will learn how local wildflowers, shrubs, and trees have evolved alongside native bees, butterflies, and hummingbirds—and discover simple, powerful ways you can use these hardy plants to invite colorful wildlife right into your own backyard. It is the perfect summer evening for gardeners, nature lovers, and anyone curious about the living landscape around us. View on site | Email this event",
-    pubDate: "2026-08-29T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway State Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/53595153401195/huge/21d02df3239c35fcac02e56bef6792ae2e868513.jpg"
-  },
-  {
-    title: "Steps Tavern Presents Karaoke Night",
-    link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
-    description: "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM Every Friday Night View on site | Email this event",
-    pubDate: "2026-08-29T02:00:00.000Z",
-    endDate: "2026-09-26",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "STEPS TAVERN",
-    imageUrl: "https://localist-images.azureedge.net/photos/53142698527493/huge/db3a6ef58a79b18eea8c70a4d583bbf3d9498404.jpg"
   },
   {
     title: "Saturday Yoga",
@@ -4383,6 +4268,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ridgway State Park",
     imageUrl: "https://localist-images.azureedge.net/photos/53595172751829/huge/9578a24cf2da72cd8b280b6b30487657c8b924e2.jpg"
+  },
+  {
+    title: "Dinner & Magic Show",
+    link: "https://events.ourayridgwayevents.com/event/dinner-magic-show",
+    description: "Join us in Ouray for an evening of wow with magician Mason Michael! You will be treated to a gourmet dinner followed by a close-up magic show. A night you won't want to miss! Click the link to buy tickets now! Enjoy a one of a kind course meal at the Yankee Girl Cafe, followed by a 45 minute Close-Up show of \"Freakishly Good Magic\" presented by local magician Mason Michael. Mason has performed all over the country for everyone from random people on the street, to theaters full of 600 people. He’s toured with renowned magician Ty Gallenbeck, sold out his own one-man show, and has regular performances all around Colorado. He has promised to never pull a bunny out of a hat, because nobody wants to see that. General Admission pricing is for the magic show AND dinner, this ticket includes both. …",
+    pubDate: "2026-08-30T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Yankee Girl Cafe",
+    imageUrl: "https://localist-images.azureedge.net/photos/53737486688667/huge/ac13f67b069695c3e8a1a4ab698a497f3d80d55a.jpg"
   },
   {
     title: "DARRELL SCOTT - Live at The Sherbino",
@@ -4673,6 +4569,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
   },
   {
+    title: "Ridgway Farmers Market",
+    link: "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
+    description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here. View on site | Email this event",
+    pubDate: "2026-09-04T16:00:00.000Z",
+    endDate: "2026-10-16",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Hartwell Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
+  },
+  {
     title: "Trivia Night @ the Wright",
     link: "https://events.ourayridgwayevents.com/event/trivia-night-the-wright-1382",
     description: "Come test the true limits of the human mind at Trivia Night @ the Wright, where obscure facts become temporary personality traits. Questions may include history, movies, science, music, local lore, accidental expertise, and things you absolutely learned once in 8th grade and never expected to need again. Bring a team, bring a friend, or arrive alone like a mysterious wandering scholar of useless information. Competitive spirits, wild guesses, and dramatic confidence are all encouraged. No studying required. In fact, studying may make things worse. View on site | Email this event",
@@ -4773,6 +4681,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/53358101603318/huge/d6a95490ff2eae257adf6f909e37473c1092b24e.jpg"
+  },
+  {
+    title: "Steps Tavern Presents Karaoke Night",
+    link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
+    description: "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM Every Friday Night View on site | Email this event",
+    pubDate: "2026-09-05T02:00:00.000Z",
+    endDate: "2026-09-26",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "STEPS TAVERN",
+    imageUrl: "https://localist-images.azureedge.net/photos/53142698527493/huge/db3a6ef58a79b18eea8c70a4d583bbf3d9498404.jpg"
   },
   {
     title: "Public Bird Banding Day - Ridgway State Park",
@@ -4931,6 +4851,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Floating Lotus Brewery",
     imageUrl: "https://localist-images.azureedge.net/photos/53790449536989/huge/a7181e9d298980d4c2377db45d06d26bb81e0b12.jpg"
+  },
+  {
+    title: "Ouray Comedy Night",
+    link: "https://events.ourayridgwayevents.com/event/ouray-comedy-night",
+    description: "Stand-up comedy is coming to Ouray! One night only! Get your tickets now before it's too late! Headliners: Casey Skinner (Netflix, Discovery, HBO Max) and David Uhlfelder (Netflix Is A Joke Fest, ESPN3, Comedy Store) Casey Skinner is a Los Angeles–based stand‑up comedian, writer, and producer whose work bridges the stage and behind the camera. Known for weaving true crime stories, absurd humor, and personal quandaries into his performances, he brings a distinct voice shaped by unexpected experiences and often explores the darker, stranger corners of his life with humor. He’s performed in some of comedy's most iconic venues, including The Comedy Store and The Improv. Casey's work has been featured on Netflix, Discovery, HBO Max, Bravo and more! He was also featured in the 2026 Netflix Is A Joke Fest. David Uhlfelder was raised in the Colorado wilderness. …",
+    pubDate: "2026-09-11T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53830617900756/huge/9b913f03ccb0050e92a935ee9d2a464f7fe5b853.jpg"
   },
   {
     title: "Ouray Comedy Night with Casey Skinner",

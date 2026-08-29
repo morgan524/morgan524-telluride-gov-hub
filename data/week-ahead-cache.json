@@ -1,18 +1,14 @@
 {
-  "hash": "5bc70293983afbc9e18afe5b8df5fa2b51bd2392",
-  "lede": "The biggest thing on the civic calendar this week is Tuesday's Town Council session, which opens with a deep dive into Comprehensive Plan goals and a third-party audit review of the Town's rental housing policies — that audit question cuts right to the heart of who gets to live here long-term. Wednesday's Ouray County Planning Commission is meeting virtually to work through possible Land Use Code definition changes, which is the kind of quiet session where big things get shaped before anyone notices. The Mountain Village Design Review Board also takes up a conditional-use permit on Adams Ranch Road Thursday.",
+  "hash": "145c3596942474f24bbdf6197e9bca8c3402b410",
+  "lede": "The biggest thing on the calendar this week is Tuesday's Town Council work session, where staff will dig into the Comprehensive Plan, get a Gondola Subcommittee update, and — most consequentially — review proposals for a third-party audit of the Town's rental housing policies, which cuts right to the heart of who can actually afford to live here. Ouray County's Planning Commission meets virtually Wednesday to work through proposed changes to the Land Use Code definitions, the kind of quiet shaping session that tends to matter more than it looks. Elsewhere around the valley, community events run the full range from an emergency preparedness talk Monday night to a Mountain Towns 2030 climate discussion Wednesday.",
   "notable": [
     {
       "id": 0,
-      "stake": "Rental housing audit review and Comprehensive Plan goals could reshape who stays in the canyon."
+      "stake": "Third-party audit of rental housing policies could reshape who stays in the canyon."
     },
     {
       "id": 5,
-      "stake": "Land Use Code definition changes under review — early shaping before any public hearing."
-    },
-    {
-      "id": 6,
-      "stake": "Conditional-use permit for tent and food truck on Adams Ranch Rd goes to DRB for recommendation."
+      "stake": "Land Use Code definition changes being shaped before any public hearing stage."
     }
   ]
 }
