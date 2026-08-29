@@ -1,14 +1,18 @@
 {
-  "hash": "d75fc8d3278785cc6340d76c9aceaab90260814f",
-  "lede": "The most consequential meeting this week is Tuesday's Town Council work session, which takes up the Comprehensive Plan, a Gondola Subcommittee update, and — most notably — proposals for a third-party audit of the Town's rental housing policies, a question that cuts right to the heart of who gets to stay here. Ouray County's Planning Commission also meets virtually Wednesday to work through possible changes to their Land Use Code definitions, the kind of quiet process that shapes everything downstream.",
+  "hash": "5bc70293983afbc9e18afe5b8df5fa2b51bd2392",
+  "lede": "The biggest thing on the civic calendar this week is Tuesday's Town Council session, which opens with a deep dive into Comprehensive Plan goals and a third-party audit review of the Town's rental housing policies — that audit question cuts right to the heart of who gets to live here long-term. Wednesday's Ouray County Planning Commission is meeting virtually to work through possible Land Use Code definition changes, which is the kind of quiet session where big things get shaped before anyone notices. The Mountain Village Design Review Board also takes up a conditional-use permit on Adams Ranch Road Thursday.",
   "notable": [
     {
       "id": 0,
-      "stake": "Third-party rental housing policy audit and Comprehensive Plan goals up for review."
+      "stake": "Rental housing audit review and Comprehensive Plan goals could reshape who stays in the canyon."
     },
     {
       "id": 5,
-      "stake": "Land Use Code definition changes being shaped before any public hearing."
+      "stake": "Land Use Code definition changes under review — early shaping before any public hearing."
+    },
+    {
+      "id": 6,
+      "stake": "Conditional-use permit for tent and food truck on Adams Ranch Rd goes to DRB for recommendation."
     }
   ]
 }

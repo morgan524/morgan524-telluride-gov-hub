@@ -6,32 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-outdoors.xml" rel="self" type="application/rss+xml" />
     <description>Hikes, races, ski events, and stewardship days — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Aug 2026 15:13:01 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2026 01:38:08 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Fri, Aug 28] Tennis Clinic 3.0-4.0</title>
-      <link>https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-28/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/tennis%20clinic%203%200%7C2026-08-28</guid>
-      <pubDate>Fri, 28 Aug 2026 15:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Telluride Racquet Club, Mountain Village
-
-This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Fri, Aug 28] Tennis Clinic 4.0+</title>
-      <link>https://koto.org/event/tennis-clinic-4-0/2026-08-28/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/tennis%20clinic%204%200%7C2026-08-28</guid>
-      <pubDate>Fri, 28 Aug 2026 17:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Telluride Racquet Club, Mountain Village
-
-Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
     <item>
       <title>[Mon, Aug 31] Tennis Clinic 3.0-4.0</title>
       <link>https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-31/</link>
@@ -65,7 +41,7 @@ Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot an
 
 Three work sessions open the day: a deep look at Comprehensive Plan goals and objectives with project consultants, a Gondola Subcommittee update, and a review of proposals for a third-party audit of the Town's rental housing policies — that last one worth watching given how central rent policy has become to who can stay in the canyon. A second work session later covers AMI increases and rental rate adjustments for 2027 budgetary planning. On the action side: second reading of the 2026 budget reappropriation ordinance; a resolution permitting dogs on a limited stretch of the River Trail near the Public Works facility; approval of a wildfire mitigation project south of the Shandoka Apartments; and first readings authorizing the sale of three deed-restricted units — Spruce House Unit H and two FINO II units. Council will also consider finalizing a 30-minute free parking program. The long-running appeal of the Stender Residence HARC approval is continued again. Five board and commission seats are up for appointment.
 
-⚡ Why it matters: Third-party rental housing policy audit and Comprehensive Plan goals up for review.]]></description>
+⚡ Why it matters: Rental housing audit review and Comprehensive Plan goals could reshape who stays in the canyon.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -78,6 +54,42 @@ Three work sessions open the day: a deep look at Comprehensive Plan goals and ob
 📍 Telluride Post Office
 
 Join ornithological expert Katie Triest for this series of chill walks where you'll learn amazing facts and practice identifying local birds! Meet at the post office and we'll head to the beaver ponds at the edge of Town Park. Bring your own binoculars if you have them and make sure to dress for variant weather. Be on time, and PLEASE cancel your reservation if you are unable to make it. This event is very popular and the waiting list is long.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Tue, Sep 1] Tennis Clinic 3.0-4.0</title>
+      <link>https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-01/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/tennis%20clinic%203%200%7C2026-09-01</guid>
+      <pubDate>Tue, 01 Sep 2026 15:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Telluride Racquet Club, Mountain Village
+
+This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Tue, Sep 1] Tennis Clinic 4.0+</title>
+      <link>https://koto.org/event/tennis-clinic-4-0/2026-09-01/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/tennis%20clinic%204%200%7C2026-09-01</guid>
+      <pubDate>Tue, 01 Sep 2026 17:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Telluride Racquet Club, Mountain Village
+
+Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Tue, Sep 1] Summer Sketch Book Club</title>
+      <link>https://koto.org/event/summer-sketch-book-club/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/summer%20sketch%20book%20club%7C2026-09-01</guid>
+      <pubDate>Tue, 01 Sep 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Join us for our summer sketchbook club! Unwind, connect with other artists, and find inspiration in nature as you fill up your sketchbook. We will meet in the library lobby and together we will walk to find a drawing spot by the river or in the park. All experience levels and drawing styles are welcome. Bring your own sketchbook and drawing materials; some materials may be available to borrow. You may also wish to bring sun protection, a towel or folding chair to sit on, and an extra layer as we will be sketching outside.]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
     </item>
@@ -99,7 +111,7 @@ The September 2, 2026 Ecology Commission agenda hasn't been posted yet.]]></desc
       <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-09-02
 
-The September 2, 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.]]></description>
+A working meeting for CCAASE, the Town's grant and events commission. The board continues its 2026 organization interview series — this round brings in Telluride Youth Lacrosse Association, Ah Haa School for the Arts, and the Telluride Council for the Arts and Humanities, each getting five minutes to present before questions. On the action side: a calendar and banner date request from Telluride Chamber Music for the Hanneke Cassel Trio at The Alibi on October 13; banner design approvals for Bear Safety Week and Ah Haa's Artabout; and a letter to Town Council formalizing the commission's 2027 grant budget request. That last item follows the board's August 5 vote — held flat at $696,750 total ($277,415 arts and special events, $419,335 community support) in recognition of the Town's decreased revenue projections.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -134,18 +146,44 @@ The September 2, 2026 Board of County Commissioners Meeting agenda hasn't been p
 
 Ouray County's Planning Commission meets virtually on September 2 for a work session on possible changes to the Land Use Code, Section 2 — Definitions. Work sessions like this one are where the real shaping happens, before anything goes to a public hearing. The specific definition changes under discussion aren't detailed in the posted notice, but packet materials are attached to the agenda for anyone who wants to dig in ahead of the meeting.
 
-⚡ Why it matters: Land Use Code definition changes being shaped before any public hearing.]]></description>
+⚡ Why it matters: Land Use Code definition changes under review — early shaping before any public hearing.]]></description>
       <category>Meeting</category>
       <category>ouray</category>
     </item>
     <item>
-      <title>[Meeting] Design Review Board — 2026-09-03</title>
+      <title>[Wed, Sep 2] Tennis Clinic 3.0-4.0</title>
+      <link>https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-02/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/tennis%20clinic%203%200%7C2026-09-02</guid>
+      <pubDate>Wed, 02 Sep 2026 15:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Telluride Racquet Club, Mountain Village
+
+This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Wed, Sep 2] Tennis Clinic 4.0+</title>
+      <link>https://koto.org/event/tennis-clinic-4-0/2026-09-02/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/tennis%20clinic%204%200%7C2026-09-02</guid>
+      <pubDate>Wed, 02 Sep 2026 17:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Telluride Racquet Club, Mountain Village
+
+Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>⚡ [Meeting] Design Review Board — 2026-09-03</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/mv%7C2026-09-03%7CDesign%20Review%20Board</guid>
       <pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Mountain Village • 2026-09-03
 
-One item worth noting on this September 3rd Design Review Board agenda: a conditional-use permit review for a temporary tent and food truck at 332 Adams Ranch Rd (Lots OSP-35-B & OSP-35-C), which goes to the DRB for a recommendation to Town Council. There's also a general easement encroachment review at 140 Cortina Dr and an informational session on Pond Plaza with staff and Design Workshop. The 15-unit employee apartment building at 306 Adams Ranch Rd — the one item of broader housing consequence — is being continued to the October 1st meeting. The remainder of the agenda is single-family and detached condominium architecture reviews.]]></description>
+One item worth noting on this September 3rd Design Review Board agenda: a conditional-use permit review for a temporary tent and food truck at 332 Adams Ranch Rd (Lots OSP-35-B & OSP-35-C), which goes to the DRB for a recommendation to Town Council. There's also a general easement encroachment review at 140 Cortina Dr and an informational session on Pond Plaza with staff and Design Workshop. The 15-unit employee apartment building at 306 Adams Ranch Rd — the one item of broader housing consequence — is being continued to the October 1st meeting. The remainder of the agenda is single-family and detached condominium architecture reviews.
+
+⚡ Why it matters: Conditional-use permit for tent and food truck on Adams Ranch Rd goes to DRB for recommendation.]]></description>
       <category>Meeting</category>
       <category>Mountain Village</category>
     </item>

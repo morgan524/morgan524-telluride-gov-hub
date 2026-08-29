@@ -1,17 +1,4 @@
 {
-  "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session": {
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1043/files/agenda/1934",
-    "zoomUrl": "https://us02web.zoom.us/j/89046113764",
-    "meetingId": "890 4611 3764",
-    "passcode": "475547",
-    "phone": "719-359-4580"
-  },
-  "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026": {
-    "sv": 4,
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8288",
-    "zoomUrl": "https://us06web.zoom.us/j/84856441443?pwd=rmlX3jEAgnuYU0lkGGCJWN2aaQ5lyr.1"
-  },
   "telluride|2026-08-03|Open Space Commission - Aug 03 2026": {
     "sv": 4,
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8130",
@@ -191,23 +178,11 @@
     "passcode": "509931",
     "phone": "719-359-4580"
   },
-  "norwood|2026-07-29|Board of Trustees Work Session": {
-    "agendaUrl": "https://www.norwoodtown.com/files/62b999f7f/07.29.2026+Work+Session+Board+of+Trustee+Agenda+ADA.pdf",
-    "zoomUrl": "https://us02web.zoom.us/j/84191917434",
-    "meetingId": "841 9191 7434",
-    "passcode": "905972",
-    "phone": "970-327-4288",
-    "sv": 4
-  },
   "med|2026-08-27|Regular Board Meeting": {
     "sv": 4,
     "agendaUrl": "https://www.tellmed.org/files/2218817c5/THD+Reg+BOD+Mtg+8.27.26+Agenda.pdf",
     "zoomUrl": "https://us02web.zoom.us/j/89509331558",
     "meetingId": "895 0933 1558"
-  },
-  "norwood|2026-07-29|NWC Possible Quorum": {
-    "agendaUrl": "https://www.norwoodtown.com/files/1c026ffd5/07+2026+QUORUM+NOTICE.pdf",
-    "sv": 4
   },
   "norwood|2026-08-05|Board of Trustees Work Session": {
     "agendaUrl": "https://www.norwoodtown.com/files/6bce913bf/08.05.2026+Work+Session+Board+of+Trustee+Agenda+ADA.pdf",
@@ -244,12 +219,12 @@
   "telluride|2026-09-02|Commission for Community Assistance, Arts & Special Events - Sep 02 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066",
     "sv": 4,
-    "ph": "3bcbff87c865ec6d"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/tZ0pc-ChqDwsGNFpPigfqqLQptmoMmpJdiOx"
   },
   "telluride|2026-09-02|Telluride Housing Authority Subcommittee - Sep 02 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163",
     "sv": 4,
-    "ph": "558b2c991b258cd1"
+    "ph": "b8be81b862717054"
   },
   "county|2026-09-02|Board of County Commissioners Meeting": {
     "sv": 4,
@@ -414,7 +389,7 @@
   "telluride|2026-09-16|Parks & Recreation Commission - Sep 16 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082",
     "sv": 4,
-    "ph": "6fb96e40a5040f91"
+    "ph": "1668886d38956c2d"
   },
   "county|2026-09-16|Board of County Commissioners Meeting": {
     "sv": 4,
@@ -469,7 +444,7 @@
   "telluride|2026-09-22|Town Council - Sep 22 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043",
     "sv": 4,
-    "ph": "c5b14e4bfd86db54"
+    "ph": "0c2ea006f5fde3ee"
   },
   "county|2026-09-23|Board of County Commissioners Work Session": {
     "sv": 4,

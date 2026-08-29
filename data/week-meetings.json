@@ -87,7 +87,7 @@
     "time": "",
     "location": "Town Hall, 455 Mountain Village Blvd, Suite A",
     "agendaUrl": "https://townofmountainvillage.com/site/assets/files/49787/september_3-_2026_design_review_board_meeting_agenda.pdf",
-    "packetUrl": "",
+    "packetUrl": "https://townofmountainvillage.com/site/assets/files/49789/september_3-_2026_design_review_board_meeting_packet_part_2.pdf",
     "link": "https://townofmountainvillage.com/site/assets/files/49787/september_3-_2026_design_review_board_meeting_agenda.pdf",
     "hasAgenda": true,
     "summary": "One item worth noting on this September 3rd Design Review Board agenda: a conditional-use permit review for a temporary tent and food truck at 332 Adams Ranch Rd (Lots OSP-35-B & OSP-35-C), which goes to the DRB for a recommendation to Town Council. There's also a general easement encroachment review at 140 Cortina Dr and an informational session on Pond Plaza with staff and Design Workshop. The 15-unit employee apartment building at 306 Adams Ranch Rd — the one item of broader housing consequence — is being continued to the October 1st meeting. The remainder of the agenda is single-family and detached condominium architecture reviews.",
@@ -577,6 +577,26 @@
     "zoomPhone": "",
     "livestream": "",
     "commentEmail": "bodadmin@tellmed.org",
+    "hook": ""
+  },
+  {
+    "source": "county",
+    "sourceLabel": "San Miguel County",
+    "title": "Open Space Commission Meeting",
+    "date": "2026-09-28",
+    "time": "",
+    "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1057/files",
+    "packetUrl": "",
+    "link": "https://sanmiguelcoco.portal.civicclerk.com/event/1057/files",
+    "hasAgenda": true,
+    "summary": "",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams",
+    "commentEmail": "bocc@sanmiguelcountyco.gov",
     "hook": ""
   }
 ]

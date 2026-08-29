@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 8-28-26",
+    "source": "KOTO Community Radio",
+    "date": "August 29, 2026",
+    "newsTopic": "community",
+    "copy": "On this week’s Regional Roundup, we look at the latest efforts to open Bears Ears National Monument to mining and we'll hear about a public awareness campaign in Colorado aimed at helping people stay bear aware. We’ll also hear about a Western Colorado nonprofit building community by encouraging women and girls to exercise, and learn how the Ute Mo",
+    "href": "https://koto.org/news/newscast-8-28-26/"
+  },
+  {
     "title": "Newscast 8-27-26",
     "source": "KOTO Community Radio",
     "date": "August 28, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "community",
     "copy": "Telluride Debriefs on Parking; Tribal Allyship in San Miguel County",
     "href": "https://koto.org/news/newscast-8-17-26/"
-  },
-  {
-    "title": "Newscast 8-14-26",
-    "source": "KOTO Community Radio",
-    "date": "August 15, 2026",
-    "newsTopic": "public-safety",
-    "copy": "On this week's Regional Roundup, we explore the mental and emotional toll a hectic fire season can take on firefighters. We also look at how the language we use to describe wildfire can shape the way we feel about fire. Then, we turn to water and we hear a report about the impact of this year's drought on the Arkansas River and the communities that",
-    "href": "https://koto.org/news/newscast-8-14-26/"
   }
 ]
