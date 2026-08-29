@@ -3130,6 +3130,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Bike & Brewery Tour",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    "date": "2026-09-28",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    "type": "Outdoors & Sports"
+  },
+  {
     "title": "ETHAN PERRY",
     "href": "https://events.ourayridgwayevents.com/event/ethan-perry",
     "date": "2026-09-29",
@@ -3549,7 +3562,8 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "TODDLER STORYTIME ART FOR AGES 2.5-5 Wednesdays, 10:00am–11:00am Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $70): September 16 – October 7Session 2 (4 weeks • $70): October 21 – November…",
-    "type": "Arts & Film"
+    "type": "Arts & Film",
+    "endDate": "2026-10-28"
   },
   {
     "title": "AFTER SCHOOL ART FOR AGES 8-12",

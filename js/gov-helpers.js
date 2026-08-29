@@ -417,7 +417,10 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"0b96eaea9b0b51f7"},
 
   "ouray|2026-09-02|PM - Note: Virtual/Zoom meeting only!  The Planning Commission will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (packet materials are attached to the agenda)":
-    {"agendaUrl":"https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1016","sv":4}
+    {"agendaUrl":"https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1016","sv":4},
+
+  "county|2026-09-28|Open Space Commission Meeting":
+    {"sv":4,"ph":"1ff606174e68cca5"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -761,7 +764,10 @@ const MEETING_PREVIEWS = {
     "Board will consider adopting the 2024 International Building Code and the Colorado Low Energy & Carbon Code during a public hearing scheduled for September 16, 2026, in Telluride.",
 
   "ouray|2026-09-02|PM - Note: Virtual/Zoom meeting only!  The Planning Commission will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (packet materials are attached to the agenda)":
-    "The Ouray County Planning Commission will hold a virtual work session to review and discuss potential amendments to Section 2 – Definitions of the Ouray County Land Use Code."
+    "The Ouray County Planning Commission will hold a virtual work session to review and discuss potential amendments to Section 2 – Definitions of the Ouray County Land Use Code.",
+
+  "county|2026-09-28|Open Space Commission Meeting":
+    "The Open Space Commission is expected to discuss land and trail-related matters, potentially including the Lawson Hill Connector Trail Project, material hauling needs, and other open space management topics in San Miguel County."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -841,17 +847,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 27, 2026",
     newsTopic: "public-safety",
     copy: "In the summer of 1879, the largest wildfire in Colorado history at the time tore through 26,000 acres of rugged forest about eight miles south of Silverton and presaged a vast shift in its landscape. Laying waste to the coniferous forests in its path, the Lime Creek Fire opened the door for huge sta",
-    href: "https://www.ouraynews.com/2026/08/26/factors-behind-fire-drove-spread/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Autopsy: Pilot drowned",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 27, 2026",
-    newsTopic: "public-safety",
-    copy: "The death of a pilot whose firefighting helicopter crashed into Silver Jack Reservoir last month has been ruled an accident by a Grand Junction medical examiner, according to an autopsy report obtained by the Plaindealer. The Gunnison County Coroner s Office determined that Nicholas Dale drowned. Th",
-    href: "https://www.ouraynews.com/2026/08/26/autopsy-pilot-drowned/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/08/26/factors-behind-fire-drove-spread/",
     img: ""
   },
   {
@@ -885,6 +881,16 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Construction to control flooding begins",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 27, 2026",
+    newsTopic: "public-safety",
+    copy: "Crews from Haynes Excavation began work last week to repair and protect areas prone to flooding and debris flows beneath the Gold Mountain Fire burn scar. The $2.8 million Emergency Watershed Protect authorized by the federal Natural Resources Conservation Service is funded by the NRCS, the Colorado",
+    href: "https://www.ouraynews.com/2026/08/26/construction-control-flooding-begins/?ta_paidstory",
+    img: ""
+  },
+  {
     title: "Disaster relief sales tax headed for ballot",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
@@ -895,6 +901,46 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Public trails for all, not personal interests",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 27, 2026",
+    newsTopic: "recreation",
+    copy: "Dear Editor: In response to the letter to the editor from Dianne Eschman in the Aug. 13 edition, as an avid off-roader and business owner in Ouray, I take issue with a few claims made. Off-highway vehicles exhaust and noise are regulated by the federal government, they are under strict requirements ",
+    href: "https://www.ouraynews.com/2026/08/26/public-trails-not-personal-interests/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "County needs a disaster fund, not an endless tax",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 27, 2026",
+    newsTopic: "government",
+    copy: "Dear Editor: I am writing because the proposed disaster recovery fund sales tax deserves careful consideration before voters approve it. I’m concerned the ballot language creates an unlimited forever growing revenue source rather than a defined disaster reserve. The relevant question isn’t what the ",
+    href: "https://www.ouraynews.com/2026/08/26/county-needs-disaster-fund-not-endless-tax/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Monsoon flooding as old as Ouray itself",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 27, 2026",
+    newsTopic: "community",
+    copy: "Situated on debris fans created by Portland and Cascade creeks, Ouray lies in a 5,000-foot deep rock bowl drained by five major creeks emptying into the Uncompahgre River. It’s not surprising that for the 150 years of the city’s existence, it has flooded repeatedly in monsoon season. July 22, 1878: ",
+    href: "https://www.ouraynews.com/2026/08/26/monsoon-flooding-old-ouray/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Advocates for fire authority pivot",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 27, 2026",
+    newsTopic: "public-safety",
+    copy: "Organizers pitch placing county EMS under Ridgway Fire Ouray County plans to pivot efforts to consolidate a proposed fire and emergency response authority by merging Ouray County Emergency Medical Services with the Ridgway Fire Protection District. With Log Hill Mesa Fire Protection District and the",
+    href: "https://www.ouraynews.com/2026/08/26/advocates-fire-authority-pivot/?ta_paidstory",
+    img: ""
+  },
+  {
     title: "We’re Hiring- Bilingual Food Pantry and seNior Lunch Cook Assistant/ Estamos Contratando: Asistente Bilingüe del Banco de Alimentos y Asistente de Cocina del Almuerzo para Personas Mayores",
     source: "Fresh Food Hub",
     sourceKey: "fresh-food-hub",
@@ -902,26 +948,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "We re hiring for two part-time positions: Bilingual Food Pantry Assistant — Sundays, 1:30–6:30 p.m. This role provides Spanish-English translation support for our Spanish-speaking clients during food pantry distribution. Senior Lunch Assistant — Thursdays, 8:30 a.m.–1:30 p.m. at Norwood Town Hall. T",
     href: "https://freshfoodhub.net/were-hiring-bilingual-food-pantry-and-senior-lunch-cook-assistant-estamos-contratando-asistente-bilingue-del-banco-de-alimentos-y-asistente-de-cocina-del-almuerzo-para-personas-mayores/",
-    img: ""
-  },
-  {
-    title: "Pilot’s death ruled an accident",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 25, 2026",
-    newsTopic: "public-safety",
-    copy: "The death of a pilot whose firefighting helicopter crashed into Silver Jack Reservoir last month has been ruled an accident by a Grand Junction medical examiner, according to an autopsy report obtained by the Plaindealer. The Gunnison County Coroner s Office determined that Nicholas Dale drowned. Th",
-    href: "https://www.ouraynews.com/2026/08/25/pilots-death-ruled-accident/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Fire, EMS consolidation proponents consider next steps",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 25, 2026",
-    newsTopic: "public-safety",
-    copy: "Advocates for a county-wide consolidated fire and emergency response authority still believe there is a path forward, even though the proposal suffered another setback last week when the Ouray City Council declined to consider an agreement. Ouray County EMS Chief Nate McCullough said he thinks the c",
-    href: "https://www.ouraynews.com/2026/08/25/fire-ems-consolidation-proponents-consider-next-steps/?ta_paidstory",
     img: ""
   },
   {
@@ -943,26 +969,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Long-term road closure for the Corbett Creek Bridge Project, July 24 through October 8, 2026.",
     href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=955",
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22829"
-  },
-  {
-    title: "Best feathers forward",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 20, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.ouraynews.com/2026/08/19/best-feathers-forward/",
-    img: ""
-  },
-  {
-    title: "Bear activity ramping up",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 20, 2026",
-    newsTopic: "recreation",
-    copy: "State wildlife officials killed a young, female bear that entered a Ridgway home last weekend after days of conflicts and at least one incident with the bear killing chickens. Colorado Parks and Wildlife District Manager Kelly Crane warned bear activity has ramped up significantly, with the bruins s",
-    href: "https://www.ouraynews.com/2026/08/19/bear-activity-ramping/?ta_paidstory",
-    img: ""
   },
   {
     title: "Invitation to Prayer/Fellowship Wednesday Morning",
@@ -1294,7 +1300,10 @@ const MANUAL_SUMMARIES = {
     "The agenda for this San Miguel County Housing Code Update SSR meeting hasn't been posted yet beyond the meeting title itself — no item details, staff reports, or supporting materials are available to summarize.",
 
   "ouray|2026-09-02|PM - Note: Virtual/Zoom meeting only!  The Planning Commission will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (packet materials are attached to the agenda)":
-    "Ouray County's Planning Commission meets virtually on September 2 for a work session on possible changes to the Land Use Code, Section 2 — Definitions. Work sessions like this one are where the real shaping happens, before anything goes to a public hearing. The specific definition changes under discussion aren't detailed in the posted notice, but packet materials are attached to the agenda for anyone who wants to dig in ahead of the meeting."
+    "Ouray County's Planning Commission meets virtually on September 2 for a work session on possible changes to the Land Use Code, Section 2 — Definitions. Work sessions like this one are where the real shaping happens, before anything goes to a public hearing. The specific definition changes under discussion aren't detailed in the posted notice, but packet materials are attached to the agenda for anyone who wants to dig in ahead of the meeting.",
+
+  "county|2026-09-28|Open Space Commission Meeting":
+    "The September 28, 2026 Open Space Commission Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1642,6 +1651,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Colorado River plan to cut water amid drought brings uncertainty for cities and farmers",
+    source: "Telluride Times",
+    date: "August 29, 2026",
+    firstSeen: "2026-08-29",
+    newsTopic: "community",
+    copy: "Lake Mead and Lake Powell both hit record lows this month as the federal government moves to cut Colorado River water use by 1.25 million acre-feet annually across California, Nevada, and Arizona. Farmers are holding back on planting, some towns have capped growth, and Nevada has sued the Interior Department over cuts that could reach 70% of its allocation. Seven states, tribal nations, and Mexico are all sitting with real uncertainty about what comes next.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_af7a5bfc-1fea-5f8b-a8e7-1f6cea331407.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/97/e9723896-80c8-5e8b-81d8-b342b5b9ce5d/6a92ceb38172d.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Some US cities have begun rewarding careful drivers with fewer red lights",
+    source: "Telluride Times",
+    date: "August 29, 2026",
+    firstSeen: "2026-08-29",
+    newsTopic: "public-safety",
+    copy: "Albuquerque and Portland have added speed sensors to traffic signals that reward drivers going the speed limit with an earlier green light — and leave speeders sitting at red. Albuquerque credits the system with a notable drop in crashes along two residential corridors. A few other cities have tried versions of the idea, though researchers say it's still early to call it a proven fix.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_d50dd2de-4a44-508f-b9f5-137929b9e68e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/4e/74e141f5-96d5-5c35-af25-eb05e6f3c359/6a92b290aa4ad.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "BOCC discuss continuing qualification for housing",
     source: "Telluride Times",
@@ -5616,6 +5649,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/toddler-storytimeartfor-ages-2-5",
     description: "TODDLER STORYTIME ART FOR AGES 2.5-5 Wednesdays, 10:00am–11:00am Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $70): September 16 – October 7Session 2 (4 weeks • $70): October 21 – November 11Session 3 (3 weeks • $55): December 2 – December 16Come join us for Storytime + Art! Each week, your child will enjoy story time with songs and finger rhymes, a process‑art project, and a variety of creative sensory play. We end with a quick cleanup, circle time, and movement songs. This class gently supports preschool prep and helps your child develop important school‑readiness skills—such as fine‑motor coordination, independence, and the ability to listen and follow directions—in a warm, supportive setting. Children will grow in: Social, language, and communication skillsFine‑ and gross‑motor coordinationListening and direction‑following abilitiesConfidence, creativity, and imaginationParents and caregivers stay to support their child—but we handle the mess! …",
     pubDate: "2026-10-21T16:00:00.000Z",
+    endDate: "2026-10-28",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5782,28 +5816,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Music on the Green Presents Cristina Vane",
-    link: "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-cristina-vane/",
-    description: "Beyond The Groove and TMVOA (tmvoa.org) present Cristina Vane at Reflection Plaza in Mountain Village. The Friday shows are free, all ages and family friendly.",
-    pubDate: "2026-08-28T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48865/cristina_vane_1800x900px_1.png"
-  },
-  {
-    title: "Camp Alderwild",
-    link: "https://townofmountainvillage.com/explore/events/all-events/camp-alderwild-1/",
-    description: "Camp Alderwild returns to Telluride, Colorado August 28th + 29th with Of The Trees & Daily Bread.",
-    pubDate: "2026-08-28T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49541/campalderwild_2026_telluride_support_1800x900.png"
-  },
   {
     title: "Movies Under the Stars",
     link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
@@ -6199,6 +6211,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
+  },
+  {
+    title: "Bike & Brewery Tour",
+    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    pubDate: "2026-09-28T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   }
 ];
 
