@@ -26,19 +26,6 @@
     "type": "Festivals"
   },
   {
-    "title": "Full Circle Fashion Fundraiser",
-    "href": "https://koto.org/event/full-circle-fashion-fundraiser/2026-08-29/",
-    "date": "2026-08-29",
-    "time": "11:00 AM",
-    "location": "Ah Haa School for the Arts, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-10.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "EcoAction Partners and The AhHaa School for the Arts are hosting a Full Circle Fashion Fundraiser! You can donate or consign your clothes leading up to this event and help support sustainability and the arts in your community! Come shop…",
-    "type": "Community"
-  },
-  {
     "title": "Zumba with Marlen",
     "href": "https://telluridelibrary.libcal.com/event/17469954?hs=a",
     "date": "2026-08-29",
@@ -115,6 +102,20 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Join us in Ouray for an evening of wow with magician Mason Michael! You will be treated to a gourmet dinner followed by a close-up magic show. A night you won't want to miss! Click the link to buy tickets now! Enjoy a one of a kind course…",
     "type": "Food & Drink"
+  },
+  {
+    "title": "Full Circle Fashion Fundraiser",
+    "href": "https://www.telluride.com/event/full-circle-fashion-fundraiser/",
+    "date": "2026-08-29",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63239/fcf_web.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "EcoAction Partners and The Ah Haa School for the Arts are hosting a Full Circle Fashion Fundraiser Saturday August 29th …",
+    "type": "Community",
+    "endDate": "2026-08-31"
   },
   {
     "title": "Piercing Pop-Up",
@@ -761,7 +762,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Join us every Wednesday at 6 PM for Open Mic Night with DJ Strong at Floating Lotus Brewery. Bring an original song, play a favorite cover, meet other local musicians, or jump into one of our full-band jam sessions. Solo performers,…",
     "type": "Music",
-    "endDate": "2026-10-22"
+    "endDate": "2026-10-29"
   },
   {
     "title": "Yoga in the Park- Wednesday evenings",
@@ -1608,6 +1609,32 @@
     "endDate": "2026-10-13"
   },
   {
+    "title": "Tennis Clinic 4.0+",
+    "href": "https://koto.org/event/tennis-clinic-4-0/2026-09-08/",
+    "date": "2026-09-08",
+    "time": "11:00 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Free Legal Clinic – Clínica Jurídica Gratuita",
+    "href": "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-09-08/",
+    "date": "2026-09-08",
+    "time": "4:00 PM",
+    "location": "",
+    "town": "",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "DAVE MENSCH",
     "href": "https://events.ourayridgwayevents.com/event/dave-mensch-1938",
     "date": "2026-09-08",
@@ -1618,6 +1645,32 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
+  },
+  {
+    "title": "Online Author Talk with Daniel Kraus",
+    "href": "https://koto.org/event/online-author-talk-with-daniel-kraus/",
+    "date": "2026-09-08",
+    "time": "5:00 PM",
+    "location": "Zoom",
+    "town": "",
+    "img": "https://koto.org/wp-content/uploads/2026/08/daniel.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Prepare to launch into the darkest depths of deep space! Join us online as we sit down with master storyteller Daniel Kraus, winner of the 2026 Pulitzer Prize for Fiction, to celebrate the release of his breathtaking new novel, The Sixth…",
+    "type": "Talks & Classes"
+  },
+  {
+    "title": "West African Drum & Dance",
+    "href": "https://koto.org/event/west-african-drum-dance/",
+    "date": "2026-09-08",
+    "time": "5:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This class is geared towards adults and teens. Children 12 and under must be accompanied by an adult. Sign up at the bottom of this page! Participants will learn a specific Guinean rhythm and get the opportunity to learn various…",
     "type": "Music"
   },
   {
@@ -1658,6 +1711,19 @@
     "source": "Beacon",
     "desc": "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
     "type": "Food & Drink"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-08/",
+    "date": "2026-09-08",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Monthly Welcome Home Alliance Veteran's Coffee at the Sherbino",
@@ -2774,7 +2840,8 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "AUGUST EDITION: MAKING YOUR MARK WITH JULIA REID (re)discover your own creativity with this hands-on artist talk and demonstration. Mark making without expectation or ego frees the latent artist in all of us. Join us in welcoming Julia…",
-    "type": "Arts & Film"
+    "type": "Arts & Film",
+    "endDate": "2026-10-29"
   },
   {
     "title": "Trout-A-Palooza",

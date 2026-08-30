@@ -1,14 +1,14 @@
 {
-  "hash": "75fa4c5130ffa82b71da8dfd50d0ba03415d08df",
-  "lede": "The biggest thing on the civic calendar this week is Tuesday's Town Council session, where work sessions tackle the Comprehensive Plan, a Gondola Subcommittee update, and — most importantly — proposals for a third-party audit of the Town's rental housing policies, a process that could meaningfully shape who gets to stay in this canyon. Over in Ouray County on Wednesday, the Planning Commission meets virtually to work through possible changes to the Land Use Code's definitions section, which is the kind of quiet groundwork that determines what gets built and where. The week rounds out with a full slate of community events, including an emergency preparedness talk Monday and a Mountain Towns 2030 climate action discussion Wednesday.",
+  "hash": "e8c1f3dcf07d012b41b94caaef7e906c2443168f",
+  "lede": "The biggest thing on the government calendar this week is Tuesday's Town Council work session, which includes a review of proposals for a third-party audit of the Town's rental housing policies — that's a significant moment given how directly those policies shape who can afford to live here. Council is also taking a deep look at Comprehensive Plan goals with project consultants, and the Gondola Subcommittee gets a hearing too. Over in Ouray County, the Planning Commission meets virtually Wednesday to work through possible changes to their Land Use Code definitions, which is the quiet upstream work that shapes everything that comes later.",
   "notable": [
     {
       "id": 0,
-      "stake": "Third-party audit of rental housing policies could reshape who stays in Telluride."
+      "stake": "Third-party audit of rental housing policies could reshape who stays in this valley."
     },
     {
       "id": 5,
-      "stake": "Land use code definition changes in Ouray County shape future development rules."
+      "stake": "Land Use Code definition changes are shaping Ouray County's rules before any public hearing."
     }
   ]
 }

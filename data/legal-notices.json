@@ -138,26 +138,6 @@
     "caseNumber": "2026PR30008"
   },
   {
-    "title": "Public Notice -- Farmers' Water Development Company Replacement Share Certificate #887",
-    "entity": "Farmers' Water Development Company",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "💧",
-    "iconClass": "type-hearing",
-    "type": "Utilities",
-    "filterTag": "utilities",
-    "summary": "The Farmers' Water Development Company (FWDC) has received a written request to replace lost, destroyed, or wrongfully taken share certificate #887, currently issued in the name of A.F. Newans M.D., C.P. Unless a written objection is filed with FWDC at PO Box 10, Norwood, CO 81423 within 30 days of the last publication date in the Norwood Post, a replacement certificate will be issued and the original will be permanently cancelled. Last publication date in this series is July 30, 2026.",
-    "deadline": "2026-08-29",
-    "expires": "2026-08-29",
-    "dates": "7/23",
-    "papers": [
-      "ttimes_0723"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
-    "address": "PO Box 10, Norwood, Colorado 81423",
-    "noticeKey": "fwdc-share-cert-887-replacement"
-  },
-  {
     "title": "Foreclosure Sale Notice -- 350 S Mahoney Dr Unit 7, Telluride (Sale No. 202605)",
     "entity": "San Miguel County Public Trustee / Wilmington Savings Fund Society FSB",
     "entityClass": "ent-county",
@@ -177,26 +157,6 @@
     "address": "350 S Mahoney Drive, Unit 7, Telluride, Colorado 81435",
     "noticeKey": "foreclosure-202605-350-mahoney-unit7",
     "caseNumber": "202605"
-  },
-  {
-    "title": "Public Notice -- Farmers' Water Development Company Replacement Share Certificate #887",
-    "entity": "Farmers' Water Development Company",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "💧",
-    "iconClass": "type-hearing",
-    "type": "Utilities",
-    "filterTag": "utilities",
-    "summary": "The Farmers' Water Development Company (FWDC) has received a written request to replace lost, destroyed, or wrongfully taken share certificate #887, currently issued in the name of A.F. Newans M.D., C.P. Any written objection to the issuance of a replacement certificate must be filed with FWDC at PO Box 10, Norwood, CO 81423 within 30 days of the last publication date (July 30, 2026). If no objection is received, a replacement certificate will be issued and the original will be permanently cancelled.",
-    "deadline": "2026-08-29 (30 days after last publication 7/30/2026)",
-    "expires": "2026-08-29",
-    "dates": "7/30",
-    "papers": [
-      "ttimes_0730"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    "address": "Farmers' Water Development Company, PO Box 10, Norwood, CO 81423",
-    "noticeKey": "COL-000181-fwdc-share-887"
   },
   {
     "title": "Foreclosure Sale Notice -- 350 S Mahoney Dr Unit 7, Telluride (Sale No. 2026-05)",

@@ -1,17 +1,6 @@
 [
   {
     "title": "Full Circle Fashion Fundraiser",
-    "link": "https://koto.org/event/full-circle-fashion-fundraiser/2026-08-29/",
-    "description": "EcoAction Partners and The AhHaa School for the Arts are hosting a Full Circle Fashion Fundraiser! You can donate or consign your clothes leading up to this event and help support sustainability and the arts in your community! Come shop the sale on Saturday, August 29th and Sunday August 30th. Shop the sale Saturday August 29th 11am-7pm and Sunday August 30th 10am-2pm Location: AhHaa Sky Deck Collaborators: EcoAction Partners and AhHaa School for the arts Tags: Community Swap, Fundraiser, Sustainability, Arts Event webpage: https://www. ecoactionpartners.org/ fullcirclefashion",
-    "pubDate": "2026-08-29T11:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Ah Haa School for the Arts, Telluride",
-    "imageUrl": ""
-  },
-  {
-    "title": "Full Circle Fashion Fundraiser",
     "link": "https://koto.org/event/full-circle-fashion-fundraiser/2026-08-30/",
     "description": "EcoAction Partners and The AhHaa School for the Arts are hosting a Full Circle Fashion Fundraiser! You can donate or consign your clothes leading up to this event and help support sustainability and the arts in your community! Come shop the sale on Saturday, August 29th and Sunday August 30th. Shop the sale Saturday August 29th 11am-7pm and Sunday August 30th 10am-2pm Location: AhHaa Sky Deck Collaborators: EcoAction Partners and AhHaa School for the arts Tags: Community Swap, Fundraiser, Sustainability, Arts Event webpage: https://www. ecoactionpartners.org/ fullcirclefashion",
     "pubDate": "2026-08-30T10:00:00-06:00",
@@ -481,6 +470,61 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "link": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-08/",
+    "description": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    "pubDate": "2026-09-08T09:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Tennis Clinic 4.0+",
+    "link": "https://koto.org/event/tennis-clinic-4-0/2026-09-08/",
+    "description": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
+    "pubDate": "2026-09-08T11:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Free Legal Clinic – Clínica Jurídica Gratuita",
+    "link": "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-09-08/",
+    "description": "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. Abogados voluntarios responderán a preguntas, ayudarán a llenar formularios y explicarán el proceso y el procedimiento de cuestiones jurídicas. Los abogados voluntarios no te representan y esta clínica es sólo informativa. CON CITA PREVIA. Llame a 970-728-4519 para más información y para registrarse.",
+    "pubDate": "2026-09-08T16:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "",
+    "imageUrl": ""
+  },
+  {
+    "title": "Online Author Talk with Daniel Kraus",
+    "link": "https://koto.org/event/online-author-talk-with-daniel-kraus/",
+    "description": "Prepare to launch into the darkest depths of deep space! Join us online as we sit down with master storyteller Daniel Kraus, winner of the 2026 Pulitzer Prize for Fiction, to celebrate the release of his breathtaking new novel, The Sixth Nik. Deep into space, far past the triworld outposts, beyond range of the lethal trollbot internet, soars The Sickness: a ship woven from biomatter and capable of reacting to every need of its human crew. Sisilla, a nine-year-old cultist with a brain enhanced by arcane tech known as “niks,” has boarded to investigate the enigma of Fém—a plague-riddled planet that has abruptly gone rogue. The mysterious crew includes a faceless assassin, a beautiful engineer jigsawed by plastic surgery, a peyote-addicted medic, and—most lethal of all—a rugged, NonModded captain with a score to settle with Sisilla. Other dangers abound. A hacked robot begins to believe Sisilla is its daughter. …",
+    "pubDate": "2026-09-08T17:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Zoom",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/08/daniel.png"
+  },
+  {
+    "title": "West African Drum & Dance",
+    "link": "https://koto.org/event/west-african-drum-dance/",
+    "description": "This class is geared towards adults and teens. Children 12 and under must be accompanied by an adult. Sign up at the bottom of this page! Participants will learn a specific Guinean rhythm and get the opportunity to learn various foundational techniques and skills for playing the Djembe in harmony and beat with one another. The second half of the class will be learning the dance rhythm associated to the drum rhythm learned. This is accompanied by live drumming where participants get to experience how the drumming and dance play together. The classes are a full body, mind and heart experience that focuses on left and right brain activities as well as connection to comm",
+    "pubDate": "2026-09-08T17:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
     "imageUrl": ""
   }
 ]

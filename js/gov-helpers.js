@@ -387,7 +387,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303","sv":4,"ph":"df16bef2d4cca5b3"},
 
   "telluride|2026-09-22|Town Council - Sep 22 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043","sv":4,"ph":"ae6995b1fe6dbf00"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043","sv":4,"ph":"c5b14e4bfd86db54"},
 
   "county|2026-09-23|Board of County Commissioners Work Session":
     {"sv":4,"ph":"307e0c7b19e4ff5b"},
@@ -951,6 +951,16 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "We’re Hiring- Bilingual Food Pantry and seNior Lunch Cook Assistant/ Estamos Contratando: Asistente Bilingüe del Banco de Alimentos y Asistente de Cocina del Almuerzo para Personas Mayores",
+    source: "Fresh Food Hub",
+    sourceKey: "fresh-food-hub",
+    date: "August 27, 2026",
+    newsTopic: "community",
+    copy: "We re hiring for two part-time positions: Bilingual Food Pantry Assistant — Sundays, 1:30–6:30 p.m. This role provides Spanish-English translation support for our Spanish-speaking clients during food pantry distribution. Senior Lunch Assistant — Thursdays, 8:30 a.m.–1:30 p.m. at Norwood Town Hall. T",
+    href: "https://freshfoodhub.net/were-hiring-bilingual-food-pantry-and-senior-lunch-cook-assistant-estamos-contratando-asistente-bilingue-del-banco-de-alimentos-y-asistente-de-cocina-del-almuerzo-para-personas-mayores/",
+    img: ""
+  },
+  {
     title: "Invitation to Prayer/Fellowship Wednesday Morning",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -1026,7 +1036,7 @@ const ENGAGE_MEETINGS = [
   }
 ];         // Engage Telluride project key dates
 const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-29';
-const LEGAL_NOTICES_CACHE_DATE = '2026-08-27';
+const LEGAL_NOTICES_CACHE_DATE = '2026-08-30';
 
 const MANUAL_SUMMARIES = {
   "telluride|2026-08-03|Open Space Commission - Aug 03 2026":
@@ -2518,42 +2528,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Lake Powell hits record low, threatening key water and electricity supply for millions",
-    source: "Telluride Times",
-    date: "August 16, 2026",
-    firstSeen: "2026-08-17",
-    newsTopic: "community",
-    copy: "Lake Powell just hit a record low — barely edging below its April 2023 mark — while Lake Mead did the same just days before. Both reservoirs are now at their lowest combined levels since the 1950s, threatening hydropower and water supplies for 40 million people across seven states, including Colorado.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_043cb804-f025-55ac-a749-84bf8936c360.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Alpine Wellness lawsuit against Town of Telluride dismissed",
-    source: "Telluride Times",
-    date: "August 16, 2026",
-    firstSeen: "2026-08-16",
-    newsTopic: "community",
-    copy: "Alpine Wellness, a Telluride marijuana retailer for 15 years, lost its lawsuit against the Town after San Miguel County District Court dismissed the case with prejudice on Aug. 10. The dispute centered on the Town's local licensing demands for IRS records before granting renewal — something Alpine Wellness said went beyond state licensing requirements.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_6d3ac139-0b59-4378-abf9-e66540448099.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/27/227ffc82-82e1-416c-9d28-b7230f39a041/6a80ecb0e4c63.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "‘We want to find projects that push people’",
-    source: "Telluride Times",
-    date: "August 16, 2026",
-    firstSeen: "2026-08-16",
-    newsTopic: "arts-culture",
-    copy: "Augment Music Series, a Telluride Arts partner, has awarded three grants for 2026 — supporting a vinyl release for local band Atari Safari, equipment for pianist Travis Fisher, and a two-day choral workshop with conductor Paul Smith and flutist Daniela Mars. Since 2023, Augment has funded 22 local musicians and bands. The group also sponsors live performances at venues like Elks Park and the Farmers Market.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_798c043c-6c3b-4ace-bbc1-b6691ae8ab9c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/ce/9ce22c91-95a6-42b6-a678-f21d4d7a9c91/6a7eba6d3fa8e.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride Downgrades to Stage 1 Fire Restrictions",
     source: "Town of Telluride",
     date: "August 26, 2026",
@@ -3188,17 +3162,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Full Circle Fashion Fundraiser",
-    link: "https://koto.org/event/full-circle-fashion-fundraiser/2026-08-29/",
-    description: "EcoAction Partners and The AhHaa School for the Arts are hosting a Full Circle Fashion Fundraiser! You can donate or consign your clothes leading up to this event and help support sustainability and the arts in your community! Come shop the sale on Saturday, August 29th and Sunday August 30th. Shop the sale Saturday August 29th 11am-7pm and Sunday August 30th 10am-2pm Location: AhHaa Sky Deck Collaborators: EcoAction Partners and AhHaa School for the arts Tags: Community Swap, Fundraiser, Sustainability, Arts Event webpage: https://www. ecoactionpartners.org/ fullcirclefashion",
-    pubDate: "2026-08-29T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Ah Haa School for the Arts, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Full Circle Fashion Fundraiser",
     link: "https://koto.org/event/full-circle-fashion-fundraiser/2026-08-30/",
     description: "EcoAction Partners and The AhHaa School for the Arts are hosting a Full Circle Fashion Fundraiser! You can donate or consign your clothes leading up to this event and help support sustainability and the arts in your community! Come shop the sale on Saturday, August 29th and Sunday August 30th. Shop the sale Saturday August 29th 11am-7pm and Sunday August 30th 10am-2pm Location: AhHaa Sky Deck Collaborators: EcoAction Partners and AhHaa School for the arts Tags: Community Swap, Fundraiser, Sustainability, Arts Event webpage: https://www. ecoactionpartners.org/ fullcirclefashion",
     pubDate: "2026-08-30T10:00:00-06:00",
@@ -3669,6 +3632,61 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "Tennis Clinic 3.0-4.0",
+    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-08/",
+    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-09-08T09:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Tennis Clinic 4.0+",
+    link: "https://koto.org/event/tennis-clinic-4-0/2026-09-08/",
+    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-09-08T11:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Free Legal Clinic – Clínica Jurídica Gratuita",
+    link: "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-09-08/",
+    description: "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. Abogados voluntarios responderán a preguntas, ayudarán a llenar formularios y explicarán el proceso y el procedimiento de cuestiones jurídicas. Los abogados voluntarios no te representan y esta clínica es sólo informativa. CON CITA PREVIA. Llame a 970-728-4519 para más información y para registrarse.",
+    pubDate: "2026-09-08T16:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
+  },
+  {
+    title: "Online Author Talk with Daniel Kraus",
+    link: "https://koto.org/event/online-author-talk-with-daniel-kraus/",
+    description: "Prepare to launch into the darkest depths of deep space! Join us online as we sit down with master storyteller Daniel Kraus, winner of the 2026 Pulitzer Prize for Fiction, to celebrate the release of his breathtaking new novel, The Sixth Nik. Deep into space, far past the triworld outposts, beyond range of the lethal trollbot internet, soars The Sickness: a ship woven from biomatter and capable of reacting to every need of its human crew. Sisilla, a nine-year-old cultist with a brain enhanced by arcane tech known as “niks,” has boarded to investigate the enigma of Fém—a plague-riddled planet that has abruptly gone rogue. The mysterious crew includes a faceless assassin, a beautiful engineer jigsawed by plastic surgery, a peyote-addicted medic, and—most lethal of all—a rugged, NonModded captain with a score to settle with Sisilla. Other dangers abound. A hacked robot begins to believe Sisilla is its daughter. …",
+    pubDate: "2026-09-08T17:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Zoom",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/daniel.png"
+  },
+  {
+    title: "West African Drum & Dance",
+    link: "https://koto.org/event/west-african-drum-dance/",
+    description: "This class is geared towards adults and teens. Children 12 and under must be accompanied by an adult. Sign up at the bottom of this page! Participants will learn a specific Guinean rhythm and get the opportunity to learn various foundational techniques and skills for playing the Djembe in harmony and beat with one another. The second half of the class will be learning the dance rhythm associated to the drum rhythm learned. This is accompanied by live drumming where participants get to experience how the drumming and dance play together. The classes are a full body, mind and heart experience that focuses on left and right brain activities as well as connection to comm",
+    pubDate: "2026-09-08T17:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
   }
 ];
 
@@ -3715,7 +3733,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Shepherd, Australian • Male",
     firstSeen: "2026-08-28",
     revealDate: "2026-08-28",
-    lastSeen: "2026-08-29"
+    lastSeen: "2026-08-30"
   }
 ];
 
@@ -4525,7 +4543,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/open-mic-jam-night-w-host-dj-strong",
     description: "Join us every Wednesday at 6 PM for Open Mic Night with DJ Strong at Floating Lotus Brewery. Bring an original song, play a favorite cover, meet other local musicians, or jump into one of our full-band jam sessions. Solo performers, groups, and musicians looking to collaborate are all welcome. Open Mic is also where we discover artists for Floating Lotus Mainstage. Standout performers may be invited back to play a full featured set, creating a path from Open Mic to the Mainstage. Come perform, connect, experiment, or simply enjoy an evening of live local music. Every Wednesday at 6 PM Floating Lotus Brewery View on site | Email this event",
     pubDate: "2026-09-03T00:00:00.000Z",
-    endDate: "2026-10-22",
+    endDate: "2026-10-29",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5273,6 +5291,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/creative-space-artist-salon-series",
     description: "AUGUST EDITION: MAKING YOUR MARK WITH JULIA REID (re)discover your own creativity with this hands-on artist talk and demonstration. Mark making without expectation or ego frees the latent artist in all of us. Join us in welcoming Julia Reid, local artist and creator of Chicago's celebrated\"Around the Coyote\" art festival. Materials provided. Free. Snacks! Please bring food or drinks to share! Inspired by our vibrant creative community, these monthly events are intended to build creative community across disciplines! With a different focus each time, we will keep things interesting and engaging! Anyone is welcome to attend, and creatives of all kinds are invited to give talks and demonstrations. We welcome your ideas for future events! To learn more or suggest a topic, reach out to the Decker Room Coordinator, Arielle. decker@ridgwayfuse.org 872-772-9484 View on site | Email this event",
     pubDate: "2026-09-24T00:00:00.000Z",
+    endDate: "2026-10-29",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -7041,24 +7060,6 @@ const LEGAL_NOTICES = [
     caseNumber: "2026PR30008"
   },
   {
-    title: "Public Notice -- Farmers' Water Development Company Replacement Share Certificate #887",
-    entity: "Farmers' Water Development Company",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "💧",
-    iconClass: "type-hearing",
-    type: "Utilities",
-    filterTag: "utilities",
-    summary: "The Farmers' Water Development Company (FWDC) has received a written request to replace lost, destroyed, or wrongfully taken share certificate #887, currently issued in the name of A.F. Newans M.D., C.P. Unless a written objection is filed with FWDC at PO Box 10, Norwood, CO 81423 within 30 days of the last publication date in the Norwood Post, a replacement certificate will be issued and the original will be permanently cancelled. Last publication date in this series is July 30, 2026.",
-    deadline: "2026-08-29",
-    expires: "2026-08-29",
-    dates: "7/23",
-    papers: ["ttimes_0723"],
-    url: "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
-    address: "PO Box 10, Norwood, Colorado 81423",
-    noticeKey: "fwdc-share-cert-887-replacement"
-  },
-  {
     title: "Foreclosure Sale Notice -- 350 S Mahoney Dr Unit 7, Telluride (Sale No. 202605)",
     entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society FSB",
     entityClass: "ent-county",
@@ -7076,24 +7077,6 @@ const LEGAL_NOTICES = [
     address: "350 S Mahoney Drive, Unit 7, Telluride, Colorado 81435",
     noticeKey: "foreclosure-202605-350-mahoney-unit7",
     caseNumber: "202605"
-  },
-  {
-    title: "Public Notice -- Farmers' Water Development Company Replacement Share Certificate #887",
-    entity: "Farmers' Water Development Company",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "💧",
-    iconClass: "type-hearing",
-    type: "Utilities",
-    filterTag: "utilities",
-    summary: "The Farmers' Water Development Company (FWDC) has received a written request to replace lost, destroyed, or wrongfully taken share certificate #887, currently issued in the name of A.F. Newans M.D., C.P. Any written objection to the issuance of a replacement certificate must be filed with FWDC at PO Box 10, Norwood, CO 81423 within 30 days of the last publication date (July 30, 2026). If no objection is received, a replacement certificate will be issued and the original will be permanently cancelled.",
-    deadline: "2026-08-29 (30 days after last publication 7/30/2026)",
-    expires: "2026-08-29",
-    dates: "7/30",
-    papers: ["ttimes_0730"],
-    url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    address: "Farmers' Water Development Company, PO Box 10, Norwood, CO 81423",
-    noticeKey: "COL-000181-fwdc-share-887"
   },
   {
     title: "Foreclosure Sale Notice -- 350 S Mahoney Dr Unit 7, Telluride (Sale No. 2026-05)",
