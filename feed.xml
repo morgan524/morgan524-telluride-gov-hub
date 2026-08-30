@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Aug 2026 04:42:23 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 11:38:26 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Aug 30–5</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-34</guid>
-      <pubDate>Sun, 30 Aug 2026 04:42:23 GMT</pubDate>
-      <description><![CDATA[The biggest thing on the government calendar this week is Tuesday's Town Council work session, which includes a review of proposals for a third-party audit of the Town's rental housing policies — that's a significant moment given how directly those policies shape who can afford to live here. Council is also taking a deep look at Comprehensive Plan goals with project consultants, and the Gondola Subcommittee gets a hearing too. Over in Ouray County, the Planning Commission meets virtually Wednesday to work through possible changes to their Land Use Code definitions, which is the quiet upstream work that shapes everything that comes later.]]></description>
+      <pubDate>Sun, 30 Aug 2026 11:38:26 GMT</pubDate>
+      <description><![CDATA[The biggest thing to track this week is Tuesday's Town Council session, where work sessions cover a third-party audit of rental housing policies — a review that cuts to the core of who can actually afford to live here. Council also takes up the Comprehensive Plan and a Gondola Subcommittee update on the same day. Meanwhile, Ouray County's Planning Commission meets virtually Wednesday to work through possible Land Use Code definition changes, the kind of quiet groundwork that shapes what gets built and where for years to come.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -56,29 +56,56 @@ EcoAction Partners and The AhHaa School for the Arts are hosting a Full Circle F
       <category>KOTO</category>
     </item>
     <item>
-      <title>[Sun, Aug 30] Drop In Tech Time with Oliver</title>
-      <link>https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-30/</link>
+      <title>[Sun, Aug 30] Gentle Yoga with Kristen Milord</title>
+      <link>https://telluridelibrary.libcal.com/event/16536451?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/gentle%20yoga%20with%20kristen%7C2026-08-30</guid>
+      <pubDate>Sun, 30 Aug 2026 17:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Sun, Aug 30] Drop-In Tech Time with Oliver</title>
+      <link>https://telluridelibrary.libcal.com/event/15970389?hs=a</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/drop%20in%20tech%20time%7C2026-08-30</guid>
       <pubDate>Sun, 30 Aug 2026 19:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Wilkinson Public Library, Telluride
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 2nd Floor Desk
 
-Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!]]></description>
+1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg" medium="image" />
       <category>Community Event</category>
-      <category>KOTO</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Sun, Aug 30] Tea and Tarot</title>
-      <link>https://koto.org/event/tea-and-tarot/2026-08-30/</link>
+      <link>https://telluridelibrary.libcal.com/event/17029770?hs=a</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/tea%20and%20tarot%7C2026-08-30</guid>
       <pubDate>Sun, 30 Aug 2026 20:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/04/tea-1.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Wilkinson Public Library, Telluride
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Telluride Room
 
-Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2025/04/tea-1.jpg" medium="image" />
+2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance. Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png" medium="image" />
       <category>Community Event</category>
-      <category>KOTO</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Sun, Aug 30] The Real Book Club: Jazz Standards</title>
+      <link>https://telluridelibrary.libcal.com/event/17253341?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/the%20real%20book%20club%7C2026-08-30</guid>
+      <pubDate>Sun, 30 Aug 2026 23:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1765483363.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+5:00 PM – 7:00 PM · Join us for The Real Book Club, a monthly jazz jam session for musicians of all levels who want to dive into classic jazz standards together! Whether you&#39;re a seasoned improviser or just starting out, this is a welcoming space to play, practice, and connect with fellow jazz enthusiasts. Each month, we'll focus on three jazz standards selected from The Real Book. You'll receive PDFs of the tunes in advance so you can shed at home and come ready to jam. Lead sheets will also be available on the day of the event. Bring your instrument and amplification (if necessary), and your love for jazz. Let's swing, comp, and solo our way through the standards.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1765483363.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Sun, Aug 30] An Evening With Ken Burns</title>
@@ -139,7 +166,7 @@ ARE YOU READY? Wildfires, floods and other emergencies can happen quickly. Join 
 
 Three work sessions open the day: a deep look at Comprehensive Plan goals and objectives with project consultants, a Gondola Subcommittee update, and a review of proposals for a third-party audit of the Town's rental housing policies — that last one worth watching given how central rent policy has become to who can stay in the canyon. A second work session later covers AMI increases and rental rate adjustments for 2027 budgetary planning. On the action side: second reading of the 2026 budget reappropriation ordinance; a resolution permitting dogs on a limited stretch of the River Trail near the Public Works facility; approval of a wildfire mitigation project south of the Shandoka Apartments; and first readings authorizing the sale of three deed-restricted units — Spruce House Unit H and two FINO II units. Council will also consider finalizing a 30-minute free parking program. The long-running appeal of the Stender Residence HARC approval is continued again. Five board and commission seats are up for appointment.
 
-⚡ Why it matters: Third-party audit of rental housing policies could reshape who stays in this valley.]]></description>
+⚡ Why it matters: Third-party rental housing audit review could reshape who stays in the canyon.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -268,7 +295,7 @@ The September 2, 2026 Board of County Commissioners Meeting agenda hasn't been p
 
 Ouray County's Planning Commission meets virtually on September 2 for a work session on possible changes to the Land Use Code, Section 2 — Definitions. Work sessions like this one are where the real shaping happens, before anything goes to a public hearing. The specific definition changes under discussion aren't detailed in the posted notice, but packet materials are attached to the agenda for anyone who wants to dig in ahead of the meeting.
 
-⚡ Why it matters: Land Use Code definition changes are shaping Ouray County's rules before any public hearing.]]></description>
+⚡ Why it matters: Land Use Code definition changes are in play before any public hearing.]]></description>
       <category>Meeting</category>
       <category>ouray</category>
     </item>
@@ -380,32 +407,6 @@ One item worth noting on this September 3rd Design Review Board agenda: a condit
 As climate challenges grow, no community can solve them alone. The most effective solutions often emerge when leaders come together, learn from one another, and take action collectively. And with the window to help solve climate change tightening, speed is essential. Join a conversation with Mountain Towns 2030, alongside community leaders exploring how networks, partnerships, and peer learning are accelerating climate action and resilience efforts in communities of every size – including Telluride and across the surrounding region. Moderator: Siobhan Montoya Lavendar, Regional Climate Action Development Director, EcoAction Partners Panelists: Jessica Burley, Sustainability & Parking Manager, Town of Breckenridge John Clark, Mayor, Town of Ridgway Chris Steinkamp, Executive Director, Mountain Towns 2030 This event is in collaboration with Eco Action Partners, Mountain Towns 2030, Telluride Foundation, and Telluride Science. Sponsored by JP Morgan Private Bank. …]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Thu, Sep 3] Telluride Rotary Club Meeting</title>
-      <link>https://koto.org/event/telluride-rotary-club-meeting-2/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20rotary%20club%20meeting%7C2026-09-03</guid>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/08/Telluride-Rotary-Logo-White.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Mountain Lodge Telluride, Mountain Village
-
-Telluride Rotary Club meets Wednesday, September 2, at 6 p.m. at the Mountain Lodge in Mountain Village. Come at 5:30PM to socialize before the meeting. Meetings feature guest speakers and discussion of club projects. Anyone with an interest in networking and service is welcome to drop in as a guest. Email telluriderotary@gmail.com for info or to rsvp.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/08/Telluride-Rotary-Logo-White.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Thu, Sep 3] America 250 - Colorado 150 &quot;Stories in the Sky&quot; Drone Show</title>
-      <link>https://www.telluride.com/event/america-250-colorado-150-stories-in-the-sky-drone-show/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/america%20250%20colorado%20150%7C2026-09-03</guid>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62752/colorado_250-150.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-The America 250 - Colorado 150 Commission is taking its milestone celebrations to new heights with Stories in the Sky, …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/62752/colorado_250-150.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
     </item>
   </channel>
 </rss>

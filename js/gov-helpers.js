@@ -446,6 +446,14 @@ const DEEP_DIVE_UPDATES = [
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-08-30",
+    title: "267,000 acres on the edge of the county's to-do list",
+    body: "The county commissioners are holding a work session that includes a federal hazardous fuels management project affecting over 267,000 acres in nearby national forests. That's a lot of ground. Fuels work — thinning, prescribed burns, that kind of thing — can mean fewer catastrophic wildfires down the road. It can also mean smoke, road closures, altered terrain, and years of disruption up here. Some folks see it as overdue protection. Others worry about the scale and who really calls the shots when federal projects move through the neighborhood.\n\nWhere do you come down on large-scale fuels management this close to home?",
+    choices: ["Do it — wildfire risk is too high", "Depends on the specifics", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-08-29",
     title: "Street banners and arts cash — who's in line?",
     body: "The Commission for Community Assistance, Arts & Special Events meets September 2 to take up annual funding allocations for community support and arts organizations, plus applications for street closures and banners.\n\nThat's a lot on one plate. Some folks think a single commission juggling arts grants, community assistance, and who gets to hang a banner or shut down a street is a reasonable way to run a small town. Others wonder whether mixing those decisions means any one of them gets the attention it deserves — or whether the same organizations win every year.\n\nHow should a town weigh arts funding against community assistance, and who should be making those calls?",
@@ -674,14 +682,6 @@ const DAILY_QUESTIONS = [
     title: "Wildfire rules: how tight is tight enough?",
     body: "The intergovernmental worksession on August 10 has Council sitting down with San Miguel County to talk through proposed updates to Wildfire Area standards — no final vote, just a work session. Some residents will want stricter rules: the fire risk up here is real and the stakes are high. Others will push back on what tighter regulations mean for property owners, builders, and costs. Both sides have a point. So where do you land — do current wildfire standards need to get tougher, or is the county overreaching?",
     choices: ["Tighten the standards", "Current rules are enough", "Depends on the details", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
-  },
-  {
-    date: "2026-07-31",
-    title: "Natural medicine businesses — where do they fit up here?",
-    body: "Town and county reps are set to sit down together on August 10 to talk about proposed Land Use Code amendments — one of which would create new regulations for Natural Medicine Businesses. Nothing is decided yet; this is a worksession.\n\nSome residents will see a framework for natural medicine businesses as a reasonable step toward clarity and oversight. Others will question whether the valley needs to invite that particular industry at all, or worry about what regulations might — or might not — actually control.\n\nWhere do you come down?",
-    choices: ["Regulate and allow them", "Keep them out entirely", "Depends on the rules", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
   }
@@ -1661,6 +1661,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Uplifting education",
+    source: "Telluride Times",
+    date: "August 30, 2026",
+    firstSeen: "2026-08-30",
+    newsTopic: "education",
+    copy: "“It takes a village to raise a child,” the old adage reminds us. Here in Telluride, we might add, “It takes a village to uplift a school.”",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/article_ff48806a-d703-4bac-b490-8d5ae6f3a7fa.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/34/d34a5acc-f379-43b2-b40a-a09faff7cde0/6a930b6f60a4e.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "‘Gondola or not; that’s really the choice’",
     source: "Telluride Times",
@@ -3692,26 +3704,48 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Zumba with Marlen",
-    link: "https://telluridelibrary.libcal.com/event/17469954?hs=a",
-    description: "12:00 PM – 1:00 PM · Ditch the workout and join the party! Zumba&reg; is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. &iexcl;Olvida el entrenamiento y &uacute;nete a la fiesta! Zumba&reg; es una clase de fitness de baile de alta energ&iacute;a que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calor&iacute;as. …",
-    pubDate: "2026-08-29T18:00:00.000Z",
+    title: "Gentle Yoga with Kristen Milord",
+    link: "https://telluridelibrary.libcal.com/event/16536451?hs=a",
+    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
+    pubDate: "2026-08-30T17:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_11_17_14.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
   },
   {
-    title: "DIY Upcycled Merch Workshop with Camp Alderwild",
-    link: "https://telluridelibrary.libcal.com/event/17358279?hs=a",
-    description: "1:00 PM – 2:30 PM · You know that feeling when your friend shows up to the function wearing the coolest, one-of-a-kind festival fit, and you ask, \"Where did you get that?\" Only for them to say, \"I made it,\" or \"A friend made it,\" or \"I picked it up from a local artist at a festival.\" And you think... \"Damn. I wish I knew how to do that.\" Good news: you can. In this hands-on workshop, MikeyJ shares the story of how he discovered upcycling and the creative practice that&#39;s shaped both his art and his career. Then it&#39;s your turn. Using thrifted clothing (choose from MikeyJ&#39;s curated thrift rack or bring your own), unique fabrics, and custom patches, you&#39;ll learn the fundamentals of sewing while creating a one-of-a-kind piece that&#39;s completely your own. …",
-    pubDate: "2026-08-29T19:00:00.000Z",
+    title: "Drop-In Tech Time with Oliver",
+    link: "https://telluridelibrary.libcal.com/event/15970389?hs=a",
+    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
+    pubDate: "2026-08-30T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "2nd Floor Desk",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://telluridelibrary.libcal.com/event/17029770?hs=a",
+    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
+    pubDate: "2026-08-30T20:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
+  },
+  {
+    title: "The Real Book Club: Jazz Standards",
+    link: "https://telluridelibrary.libcal.com/event/17253341?hs=a",
+    description: "5:00 PM – 7:00 PM · Join us for The Real Book Club, a monthly jazz jam session for musicians of all levels who want to dive into classic jazz standards together! Whether you&#39;re a seasoned improviser or just starting out, this is a welcoming space to play, practice, and connect with fellow jazz enthusiasts. Each month, we'll focus on three jazz standards selected from The Real Book. You'll receive PDFs of the tunes in advance so you can shed at home and come ready to jam. Lead sheets will also be available on the day of the event. Bring your instrument and amplification (if necessary), and your love for jazz. Let's swing, comp, and solo our way through the standards.",
+    pubDate: "2026-08-30T23:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: ""
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1765483363.jpg"
   }
 ];
 
@@ -4246,79 +4280,12 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "San Juan Chamber MusicFest",
     link: "https://events.ourayridgwayevents.com/event/san-juan-chamber-musicfest",
     description: "August 25 - August 30 at multiple venues in Ridway and Ouray, Colorado. The annual San Juan Chamber MusicFest, OCPAG’s flagship event, features a group of chamber musicians of international acclaim, under the artistic direction of renowned concert pianist Max Levinson. Together, they produce a number of concerts and events in Ouray and Ridgway over the course of a week each August. This year's MusicFest will feature the world-renowned Ulysses Quartet. Read more about the SJCMF musicians HERE. OCPAG is grateful for the grant support from the Dave and Mary Wood Fund and the Western Colorado Community Foundation so that OCPAG is able to bring these concerts to stages around Ouray County. We are also most grateful to the patrons who attend and support this chamber music programming! View on site | Email this event",
-    pubDate: "2026-08-29T06:00:00.000Z",
-    endDate: "2026-08-30",
+    pubDate: "2026-08-30T06:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53249632392911/huge/75dcb70d103e562fc3b68267bd405813886a92df.jpg"
-  },
-  {
-    title: "Saturday Yoga",
-    link: "https://events.ourayridgwayevents.com/event/saturday-yoga",
-    description: "Zen Mountain Yoga is a carefully designed yoga class created to move your mind, body, and spirit through a series of seated and standing yoga poses. Yoga props are used to facilitate deeper movement for a richer stretch environment, designed to increase flexibility, balance, and range of movement. Restorative breathing exercises, neurogenic brain training, and guided relaxation will promote stress reduction and mental clarity. Zen out in as we explore the eight limbs of yoga through your dosha awareness, and bring the mountain home to your heart. Appropriate for beginner to advanced. ***Please visit studioouray.com in case of inclement weather or class cancellation.***Please bring a yoga mat, sun protection, and water.*** $10.00 outside until Labor Day. Drop-indoors after labor day $20.00. View on site | Email this event",
-    pubDate: "2026-08-29T15:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Fellin Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/53233830352657/huge/0d1cbbdf672690b660591a1d6fa1c311b49b04ef.jpg"
-  },
-  {
-    title: "San Juan Chamber MusicFest Festival Concert",
-    link: "https://events.ourayridgwayevents.com/event/san-juan-chamber-musicfest-festival-concert",
-    description: "The Ouray County Performing Arts Guild proudly presents the 43rd Annual San Juan Chamber MusicFest Festival Concert at the historic Wright Opera House. Acclaimed pianist Max Levinson joins the internationally celebrated Ulysses Quartet for an unforgettable evening of chamber music, showcasing masterworks performed by some of today's most accomplished classical musicians. Following the concert, guests are invited to continue the evening with a reception in the Wright Tavern, offering an opportunity to meet fellow music lovers and celebrate another remarkable season of Chamber MusicFest in the San Juans. See the complete festival lineup>> View on site | Email this event",
-    pubDate: "2026-08-29T19:30:16.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53629793138788/huge/5bbae7e3ec0d15b3e428cf9f3487751fe52758ee.jpg"
-  },
-  {
-    title: "Cornhole Singles Mixer",
-    link: "https://events.ourayridgwayevents.com/event/cornhole-singles-mixer",
-    description: "Need a teammate for the Floating Lotus Fall Cornhole League? Come meet other players, throw some bags and find a good team match. “Singles” means players registering without a teammate—not relationship status. Saturday, August 292–5 PMFloating Lotus Brewery • Ridgway, Colorado What to expect: • Casual, unsupervised open play• Opportunities to rotate partners and meet other players• Help forming two-person league teams• All experience levels welcome• Cornhole boards and bags provided The six-week league begins Saturday, September 19, followed by the Championship Tournament on October 31. Each team’s best four weekly scores will count, so missing one or two weeks won’t knock you out of contention. Register as a single at FloatingLotusBrewery.com, then join us August 29 to find your teammate. View on site | Email this event",
-    pubDate: "2026-08-29T20:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53782334529812/huge/d47421cf70a69560d0e84f1aad632cb58eb6792c.jpg"
-  },
-  {
-    title: "A Blue Birdie’s Tale - Ridgway State Park Summer Program Series",
-    link: "https://events.ourayridgwayevents.com/event/a-blue-birdies-tale-ridgway-state-park-summer-program-series",
-    description: "Get ready to add a splash of sapphire to your weekend! Pack your binoculars and join professor Bruce Ackerman at the Visitor Center for a fun, feather-filled evening discovering Colorado’s most brilliant bluebirds—from their cheerful songs and quirky nesting habits to the best spots for watching them flap around Ridgway! View on site | Email this event",
-    pubDate: "2026-08-29T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway State Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/53595172751829/huge/9578a24cf2da72cd8b280b6b30487657c8b924e2.jpg"
-  },
-  {
-    title: "Dinner & Magic Show",
-    link: "https://events.ourayridgwayevents.com/event/dinner-magic-show",
-    description: "Join us in Ouray for an evening of wow with magician Mason Michael! You will be treated to a gourmet dinner followed by a close-up magic show. A night you won't want to miss! Click the link to buy tickets now! Enjoy a one of a kind course meal at the Yankee Girl Cafe, followed by a 45 minute Close-Up show of \"Freakishly Good Magic\" presented by local magician Mason Michael. Mason has performed all over the country for everyone from random people on the street, to theaters full of 600 people. He’s toured with renowned magician Ty Gallenbeck, sold out his own one-man show, and has regular performances all around Colorado. He has promised to never pull a bunny out of a hat, because nobody wants to see that. General Admission pricing is for the magic show AND dinner, this ticket includes both. …",
-    pubDate: "2026-08-30T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Yankee Girl Cafe",
-    imageUrl: "https://localist-images.azureedge.net/photos/53737486688667/huge/ac13f67b069695c3e8a1a4ab698a497f3d80d55a.jpg"
-  },
-  {
-    title: "DARRELL SCOTT - Live at The Sherbino",
-    link: "https://events.ourayridgwayevents.com/event/darrell-scott-live-at-the-sherbino",
-    description: "Darrell Scott is an acclaimed singer, songwriter, and multi-instrumentalist widely regarded as one of the most respected voices in contemporary American roots music. A masterful storyteller with deep roots in country, bluegrass, folk, and Americana, Scott delivers powerful performances where his expressive voice, heartfelt songwriting, and exceptional musicianship takes center stage.. Scott has received multiple Grammy and Nashville Songwriter Hall of Fame nominations and was honored with a 2025 Lifetime Achievement Award from the Americana Music Association. He’s earned Songwriter of the Year awards from both ASCAP and NSAI. This fall, he will be inducted into the Kentucky Music Hall of Fame. View on site | Email this event",
-    pubDate: "2026-08-30T01:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Sherbino",
-    imageUrl: "https://localist-images.azureedge.net/photos/52994385870281/huge/7231300fd573b444d8ac4e1e1c8f4890c0f0feab.jpg"
   },
   {
     title: "Open Air Market",
@@ -5013,6 +4980,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/53180328283019/huge/ac1aa0240d78b51097ebe512629240264b0a77b2.jpg"
+  },
+  {
+    title: "Britley & Matt",
+    link: "https://events.ourayridgwayevents.com/event/britley-matt-349",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    pubDate: "2026-09-13T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
     title: "Woman's Club of Ouray County monthly meeting",

@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Aug 2026 04:42:23 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 11:38:26 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Sun, Aug 30] Big Blitz</title>
@@ -23,16 +23,30 @@ Hailing from Pittsburgh, PA, Big Blitz combines dance, jazz, rock, and electroni
       <category>The Alibi</category>
     </item>
     <item>
-      <title>[Sun, Aug 30] Drop In Tech Time with Oliver</title>
-      <link>https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-30/</link>
+      <title>[Sun, Aug 30] Drop-In Tech Time with Oliver</title>
+      <link>https://telluridelibrary.libcal.com/event/15970389?hs=a</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/drop%20in%20tech%20time%7C2026-08-30</guid>
       <pubDate>Sun, 30 Aug 2026 19:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Wilkinson Public Library, Telluride
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 2nd Floor Desk
 
-Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!]]></description>
+1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg" medium="image" />
       <category>Community Event</category>
-      <category>KOTO</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Sun, Aug 30] The Real Book Club: Jazz Standards</title>
+      <link>https://telluridelibrary.libcal.com/event/17253341?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/the%20real%20book%20club%7C2026-08-30</guid>
+      <pubDate>Sun, 30 Aug 2026 23:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1765483363.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+5:00 PM – 7:00 PM · Join us for The Real Book Club, a monthly jazz jam session for musicians of all levels who want to dive into classic jazz standards together! Whether you&#39;re a seasoned improviser or just starting out, this is a welcoming space to play, practice, and connect with fellow jazz enthusiasts. Each month, we'll focus on three jazz standards selected from The Real Book. You'll receive PDFs of the tunes in advance so you can shed at home and come ready to jam. Lead sheets will also be available on the day of the event. Bring your instrument and amplification (if necessary), and your love for jazz. Let's swing, comp, and solo our way through the standards.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1765483363.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Sun, Aug 30] An Evening With Ken Burns</title>
@@ -56,7 +70,7 @@ Join us for an Evening with Ken Burns tentatively at The Palm Theatre. We will b
 
 Three work sessions open the day: a deep look at Comprehensive Plan goals and objectives with project consultants, a Gondola Subcommittee update, and a review of proposals for a third-party audit of the Town's rental housing policies — that last one worth watching given how central rent policy has become to who can stay in the canyon. A second work session later covers AMI increases and rental rate adjustments for 2027 budgetary planning. On the action side: second reading of the 2026 budget reappropriation ordinance; a resolution permitting dogs on a limited stretch of the River Trail near the Public Works facility; approval of a wildfire mitigation project south of the Shandoka Apartments; and first readings authorizing the sale of three deed-restricted units — Spruce House Unit H and two FINO II units. Council will also consider finalizing a 30-minute free parking program. The long-running appeal of the Stender Residence HARC approval is continued again. Five board and commission seats are up for appointment.
 
-⚡ Why it matters: Third-party audit of rental housing policies could reshape who stays in this valley.]]></description>
+⚡ Why it matters: Third-party rental housing audit review could reshape who stays in the canyon.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -113,7 +127,7 @@ The September 2, 2026 Board of County Commissioners Meeting agenda hasn't been p
 
 Ouray County's Planning Commission meets virtually on September 2 for a work session on possible changes to the Land Use Code, Section 2 — Definitions. Work sessions like this one are where the real shaping happens, before anything goes to a public hearing. The specific definition changes under discussion aren't detailed in the posted notice, but packet materials are attached to the agenda for anyone who wants to dig in ahead of the meeting.
 
-⚡ Why it matters: Land Use Code definition changes are shaping Ouray County's rules before any public hearing.]]></description>
+⚡ Why it matters: Land Use Code definition changes are in play before any public hearing.]]></description>
       <category>Meeting</category>
       <category>ouray</category>
     </item>
