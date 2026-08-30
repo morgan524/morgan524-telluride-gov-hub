@@ -13,19 +13,6 @@
     "type": "Community"
   },
   {
-    "title": "Full Circle Fashion Fundraiser",
-    "href": "https://koto.org/event/full-circle-fashion-fundraiser/2026-08-30/",
-    "date": "2026-08-30",
-    "time": "10:00 AM",
-    "location": "Ah Haa School for the Arts, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-10.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "EcoAction Partners and The AhHaa School for the Arts are hosting a Full Circle Fashion Fundraiser! You can donate or consign your clothes leading up to this event and help support sustainability and the arts in your community! Come shop…",
-    "type": "Community"
-  },
-  {
     "title": "Open Air Market",
     "href": "https://events.ourayridgwayevents.com/event/open-air-market",
     "date": "2026-08-30",
@@ -2765,6 +2752,19 @@
     "type": "Community"
   },
   {
+    "title": "Ouray Chamber Business After Hours",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-chamber-business-after-hours-9080",
+    "date": "2026-09-24",
+    "time": "5:30 PM",
+    "location": "636 Main Street",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53799978983659/huge/ea52c8e358b57e26f19a76695d4ac28e6c8ed0a3.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "IT'S BEEN A HECK OF A SUMMER! After taking a break over the summer months, the Ouray Chamber invites you to join us for our September Business After Hours! Isabella Geyer will be hosting in her home, on behalf of her business Ouray…",
+    "type": "Community"
+  },
+  {
     "title": "Senior Lunch",
     "href": "https://www.norwoodtown.com/2026-09-24-senior-lunch",
     "date": "2026-09-24",
@@ -3090,6 +3090,19 @@
     "source": "Mountain Village",
     "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Colorado Poet Laureate: Crisosto Apache Reading",
+    "href": "https://events.ourayridgwayevents.com/event/colorado-poet-laureate-crisosto-apache-reading",
+    "date": "2026-09-29",
+    "time": "1:30 PM",
+    "location": "Ouray School",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53816408650430/huge/03e52865d13accd44bfe2d41810a8a214024c424.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us in the Ouray School APAC at 1:30 p.m. to listen to a poetry reading by the Colorado Poet Laureate, Crisosto Apache! Open to the Public View on site | Email this event",
+    "type": "Talks & Classes"
   },
   {
     "title": "ETHAN PERRY",
