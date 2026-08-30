@@ -989,16 +989,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "This is an open invitation to all women in Telluride. Please come and join us on Wednesday, August 19th...7:30 am Rosary8:00 am Holy MassImmediately after we will go to Butcher and Baker for fellowship. Join as able....Contact Katrina with questio...",
     href: "https://stpatrickstelluride.com/2026/parish-news/invitation-to-prayer-fellowship-wednesday-morning-6/",
     img: ""
-  },
-  {
-    title: "Parish Bulletin for August 16",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "August 16, 2026",
-    newsTopic: "community",
-    copy: "This week's bulletin--Check it out for all Parish Events and read about Reverend Chad Ripperger, who will lead our Anniversary Parish Mission on September 25-27. There is no cost to attend, but we kindly ask you to sign up and get more infor...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-august-16/",
-    img: ""
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
@@ -1667,8 +1657,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "August 30, 2026",
     firstSeen: "2026-08-30",
     newsTopic: "education",
-    copy: "“It takes a village to raise a child,” the old adage reminds us. Here in Telluride, we might add, “It takes a village to uplift a school.”",
-    claudeSummary: false,
+    copy: "The Telluride Education Foundation, now in its 32nd year, is hiring its first paid executive director — a part-time role focused on fundraising and sustainability, with applications open through Sept. 18. TEF has donated over $1.3M to local schools and recently gave $100K two years running to support key departments amid state and federal budget cuts.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_ff48806a-d703-4bac-b490-8d5ae6f3a7fa.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/34/d34a5acc-f379-43b2-b40a-a09faff7cde0/6a930b6f60a4e.image.jpg",
     imgHiRes: true
@@ -4384,7 +4374,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
     description: "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Instructor: Jenn Turner “Jenn may be a highly certified instructor, but her greatest strength lies in creating a welcoming space for women to meet, gather, and sweat. The workouts are always fun, and the next-day burn is guaranteed.” — E.C. …",
     pubDate: "2026-09-01T14:15:00.000Z",
-    endDate: "2026-10-27",
+    endDate: "2026-10-29",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4493,6 +4483,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The San Juan Room",
     imageUrl: "https://localist-images.azureedge.net/photos/53764117805107/huge/b17797e9e4d988e64f568119042052c2f7d2c082.jpg"
+  },
+  {
+    title: "Zumba Fitness with Tamra",
+    link: "https://events.ourayridgwayevents.com/event/zumba-fitness-with-tamra",
+    description: "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn calories, and tone muscles. Classes are often described as a \"fitness party\" that reduces stress. All levels of fitness and dance experience are welcome. Classes are $12 to drop in. Class packs are available for purchase (5 classes for $50, 10 classes for $95). For more information, check out the instructor's website: https://zumba.com/p/zumbafitnesswithTamra or email Tamra at tamra.nichols@icloud.com . For updated class information, including last-minute changes or cancellations, follow the instructor's Zumba Facebook page at https://www.facebook.com/ZumbaFitnesswithTamra . View on site | Email this event",
+    pubDate: "2026-09-02T23:30:00.000Z",
+    endDate: "2026-10-28",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Community Center",
+    imageUrl: "https://localist-images.azureedge.net/photos/52277881680293/huge/aa29110a3c05049d073e03408632a25f10e17ba5.jpg"
   },
   {
     title: "Mountain Towns 2030 with Mayor John Clark",
@@ -5457,7 +5459,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
     description: "Come see Space Cowboy durings its stop in Ridgway! Space Cowboy is a large-scale traveling exhibition that creates a high-engagement public experience wherever it lands — drawing community members in through fiber art, live story collection, and programming that connects Colorado's frontier identity to its aerospace future. It doesn't just show up. It listens. Community voices are archived through , and woven into the exhibition itself — creating a living record that grows with every stop. Over four years, Space Cowboy is estimated to reach 37,000 Coloradans across every economic region, scenic corridor, and creative district in the state. Space Cowboy launches at the Annual Summit in Trinidad, June 3, 2026 — at the heart of the Santa Fe Trail corridor in Southeast Colorado, the first stop on a four-year statewide journey. View on site | Email this event",
     pubDate: "2026-10-02T23:00:00.000Z",
-    endDate: "2026-10-27",
+    endDate: "2026-10-29",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6198,6 +6200,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
+  },
+  {
+    title: "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
+    link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
+    description: "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
+    pubDate: "2026-09-29T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
   }
 ];
 
