@@ -1652,6 +1652,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "‘Breaking the model because we’ve noticed it’s broken’",
+    source: "Telluride Times",
+    date: "August 30, 2026",
+    firstSeen: "2026-08-30",
+    newsTopic: "housing",
+    copy: "Five of Pinion Park's 24 affordable homes in Norwood are sitting unsold despite the regional shortage — asking prices around $370,000 are out of reach for buyers at the 80% AMI income ceiling once current ~6% interest rates hit. The BOCC discussed allowing those units to sell to buyers up to 120% AMI, a threshold the state has now approved.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_7f4edf9a-a53f-4685-a5e0-a5ab8fd8e152.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/37/237058a9-59ee-4904-8189-85aa69c9fa71/6a930e035b19c.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Uplifting education",
     source: "Telluride Times",
     date: "August 30, 2026",
@@ -3162,28 +3174,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-30/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    pubDate: "2026-08-30T13:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-08-30/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-08-30T14:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
   {
     title: "An Evening With Ken Burns",
     link: "https://koto.org/event/an-evening-with-ken-burns/",
@@ -5661,6 +5651,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-5-8-6970",
     description: "AFTER SCHOOL ART FOR AGES 5-8 Thursdays, 3:15–4:30 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 17 – October 8Session 2 (4 weeks • $85): October 22 – November 12Session 3 (3 weeks • $70): December 3 – December 17Each week, students will explore exciting themes and projects while experimenting with a wide variety of art materials—such as watercolor and acrylic paints, oil and chalk pastels, clay, collage, printmaking, and more. Through open-ended projects, students are encouraged to explore their creativity, make artistic choices, take creative risks, and discover their unique artistic voice. Our classes nurture imaginative thinking and storytelling, helping children express big ideas and emotions through visual narratives and personal creations. In addition to sparking imagination, our signature art projects support the development of fine motor skills, confidence, and social-emotional development in a fun group environment. …",
     pubDate: "2026-10-22T21:15:00.000Z",
+    endDate: "2026-10-29",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",

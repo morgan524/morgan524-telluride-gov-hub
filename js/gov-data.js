@@ -844,6 +844,13 @@ const TELLURIDE_CACHED_DATA = [
     civicWebId: 8022
   },
   {
+    date: "September 30, 2026",
+    title: "HARC Meeting",
+    board: "harc",
+    location: "Rebekah Hall, 113 W Columbia Ave",
+    civicWebId: 8309
+  },
+  {
     date: "October 21, 2026",
     title: "HARC Meeting",
     board: "harc",
