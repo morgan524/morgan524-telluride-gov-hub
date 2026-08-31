@@ -449,6 +449,14 @@ const DEEP_DIVE_UPDATES = [
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-08-31",
+    title: "Wildfire rules are now town law — now what?",
+    body: "Ordinance #1640 passed on August 11, 2026, writing the Colorado Wildfire Resiliency Code into Telluride's Land Use Code. Now council is circling back to it at a rescheduled budget session. Some residents will see this as overdue — up here, the fire risk is real and defensible space matters. Others may worry that new code requirements mean new costs and new hurdles for property owners already navigating a tough market. The ordinance is passed, but how it gets implemented is still an open conversation.\n\nSo: do you think folding wildfire resiliency rules into the Land Use Code is the right tool for the job?",
+    choices: ["Yes — code it in", "Too much burden on owners", "Depends on enforcement", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-08-30",
     title: "267,000 acres on the edge of the county's to-do list",
     body: "The county commissioners are holding a work session that includes a federal hazardous fuels management project affecting over 267,000 acres in nearby national forests. That's a lot of ground. Fuels work — thinning, prescribed burns, that kind of thing — can mean fewer catastrophic wildfires down the road. It can also mean smoke, road closures, altered terrain, and years of disruption up here. Some folks see it as overdue protection. Others worry about the scale and who really calls the shots when federal projects move through the neighborhood.\n\nWhere do you come down on large-scale fuels management this close to home?",
@@ -677,14 +685,6 @@ const DAILY_QUESTIONS = [
     title: "What's open space actually for?",
     body: "The Open Space Commission is meeting to talk about priorities and criteria for acquiring, managing, and maintaining open space in town. That sounds straightforward — until you realize \"open space\" means different things to different people. Some want land preserved as-is, untouched. Others see managed open space as a place for trails, recreation, or even future infrastructure. How the commission sets its criteria now shapes what council hears next. Nothing is decided yet — this is a priorities conversation.\n\nSo: what should come first when the town decides what open space is worth protecting — and how?",
     choices: ["Keep it wild, limit the uses", "Build it out for recreation", "Acquisition first, debate use later", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
-  },
-  {
-    date: "2026-08-01",
-    title: "Wildfire rules: how tight is tight enough?",
-    body: "The intergovernmental worksession on August 10 has Council sitting down with San Miguel County to talk through proposed updates to Wildfire Area standards — no final vote, just a work session. Some residents will want stricter rules: the fire risk up here is real and the stakes are high. Others will push back on what tighter regulations mean for property owners, builders, and costs. Both sides have a point. So where do you land — do current wildfire standards need to get tougher, or is the county overreaching?",
-    choices: ["Tighten the standards", "Current rules are enough", "Depends on the details", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
   }
@@ -957,6 +957,16 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "public-safety",
     copy: "Organizers pitch placing county EMS under Ridgway Fire Ouray County plans to pivot efforts to consolidate a proposed fire and emergency response authority by merging Ouray County Emergency Medical Services with the Ridgway Fire Protection District. With Log Hill Mesa Fire Protection District and the",
     href: "https://www.ouraynews.com/2026/08/26/advocates-fire-authority-pivot/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "We’re Hiring- Bilingual Food Pantry and seNior Lunch Cook Assistant/ Estamos Contratando: Asistente Bilingüe del Banco de Alimentos y Asistente de Cocina del Almuerzo para Personas Mayores",
+    source: "Fresh Food Hub",
+    sourceKey: "fresh-food-hub",
+    date: "August 27, 2026",
+    newsTopic: "community",
+    copy: "We re hiring for two part-time positions: Bilingual Food Pantry Assistant — Sundays, 1:30–6:30 p.m. This role provides Spanish-English translation support for our Spanish-speaking clients during food pantry distribution. Senior Lunch Assistant — Thursdays, 8:30 a.m.–1:30 p.m. at Norwood Town Hall. T",
+    href: "https://freshfoodhub.net/were-hiring-bilingual-food-pantry-and-senior-lunch-cook-assistant-estamos-contratando-asistente-bilingue-del-banco-de-alimentos-y-asistente-de-cocina-del-almuerzo-para-personas-mayores/",
     img: ""
   },
   {
@@ -1653,6 +1663,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Rich Hamilton says goodbye to San Miguel County after 17 years",
+    source: "Telluride Times",
+    date: "August 31, 2026",
+    firstSeen: "2026-08-31",
+    newsTopic: "recreation",
+    copy: "Rich Hamilton is retiring from San Miguel County after 17 years as Park Supervisor — 34 years total serving the area if you count his time with the Town of Telluride. He oversaw seven trail builds, the development of Down Valley Park, and restoration of historic sites like Fort Peabody. A farewell gathering is set for Sept. 12 at Down Valley Park, 3–7 p.m.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_235e0e4e-aca1-4b7d-95ca-2401e36cf5d7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/5f/e5f8576a-53a1-40e7-ab44-b569a49345d8/6a950a74f1cbd.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "‘Breaking the model because we’ve noticed it’s broken’",
     source: "Telluride Times",
@@ -3639,48 +3661,37 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Gentle Yoga with Kristen Milord",
-    link: "https://telluridelibrary.libcal.com/event/16536451?hs=a",
-    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
-    pubDate: "2026-08-30T17:00:00.000Z",
+    title: "Desserts and Doc-The Colorado Experience",
+    link: "https://telluridelibrary.libcal.com/event/17029825?hs=a",
+    description: "1:30 PM – 2:30 PM · Join us for this 4 part series as we watch episodes from RMPBS Flagship history series, explores the people, places. and events that has shaped Colorado&#39;s rich heritage.  August: \"The Original Coloradans\" An incredible look at the Ute Nation, their history before colonization, and their interactions with early trappers. September: \"The Sand Creek Massacre\" or \"Dearfield: Uncovering Dearfield\" . A deep look at the tragic growing pains of the frontier or the rise of Colorado&#39;s historic Black homesteader town. October: \"The Tabors\" or \"The Cripple Creek Gold Rush\" . The legendary, dramatic, real-life soap opera of Silver King Horace Tabor and Baby Doe Tabor. November: \"The Games That Never Happened\" . The fascinating modern-history story of how Denver became the only city in the world to win the Winter Olympics and then vote to give them back!",
+    pubDate: "2026-08-31T19:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_09_16_21_36.jpg"
   },
   {
-    title: "Drop-In Tech Time with Oliver",
-    link: "https://telluridelibrary.libcal.com/event/15970389?hs=a",
-    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
-    pubDate: "2026-08-30T19:00:00.000Z",
+    title: "Hobby Hopping: Music Production with DJ TJ Highland",
+    link: "https://telluridelibrary.libcal.com/event/17286076?hs=a",
+    description: "2:00 PM – 3:00 PM · Learn a new hobby every Monday afternoon in the summer! August 3: Pickle Ball August 10: Cyanotype Printing August 17: Bullet Journaling August 31: Music Production: DJ TJ Highland",
+    pubDate: "2026-08-31T20:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "2nd Floor Desk",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
+    location: "Teen Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_11_21_05.png"
   },
   {
-    title: "Tea and Tarot",
-    link: "https://telluridelibrary.libcal.com/event/17029770?hs=a",
-    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
-    pubDate: "2026-08-30T20:30:00.000Z",
+    title: "An Absolute Beginner&#039;s Guide to Music Theory",
+    link: "https://telluridelibrary.libcal.com/event/17268607?hs=a",
+    description: "5:30 PM – 6:30 PM · In this event series, Annie and Rachel will take you on a journey,—starting from the very beginning of reading music—to give you the skills to start reading sheet music on your own. Annie began playing the piano at age 5 and the violin at age 8. She continued studying classical violin throughout high school and college. Today she enjoys playing chamber music with Telluride Chamber, working with her violin and piano students, and performing at wedding ceremonies throughout Southwest Colorado. She also enjoys learning new instruments- right now she is learning how to play the cello, and she is a new member of the Telluride Chorale. Rachel learned to read music at four years old during piano lessons and played the violin for eight years from elementary through high school. …",
+    pubDate: "2026-08-31T23:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
-  },
-  {
-    title: "The Real Book Club: Jazz Standards",
-    link: "https://telluridelibrary.libcal.com/event/17253341?hs=a",
-    description: "5:00 PM – 7:00 PM · Join us for The Real Book Club, a monthly jazz jam session for musicians of all levels who want to dive into classic jazz standards together! Whether you&#39;re a seasoned improviser or just starting out, this is a welcoming space to play, practice, and connect with fellow jazz enthusiasts. Each month, we'll focus on three jazz standards selected from The Real Book. You'll receive PDFs of the tunes in advance so you can shed at home and come ready to jam. Lead sheets will also be available on the day of the event. Bring your instrument and amplification (if necessary), and your love for jazz. Let's swing, comp, and solo our way through the standards.",
-    pubDate: "2026-08-30T23:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1765483363.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_27_14_14_52.jpg"
   }
 ];
 
@@ -3701,18 +3712,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "Big Blitz",
-    link: "https://www.alibitelluride.com/calendar#eca-event=big-blitz",
-    description: "Hailing from Pittsburgh, PA, Big Blitz combines dance, jazz, rock, and electroni...",
-    pubDate: "2026-08-30",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/d2998c5f-69ce-4db7-bee5-9c0a3e1ded0c/-/crop/2048x1024/0,158/-/preview/"
-  },
   {
     title: "Mama Said String Band",
     link: "https://www.alibitelluride.com/calendar#eca-event=mama-said-string-band",
@@ -4207,40 +4206,6 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "San Juan Chamber MusicFest",
-    link: "https://events.ourayridgwayevents.com/event/san-juan-chamber-musicfest",
-    description: "August 25 - August 30 at multiple venues in Ridway and Ouray, Colorado. The annual San Juan Chamber MusicFest, OCPAG’s flagship event, features a group of chamber musicians of international acclaim, under the artistic direction of renowned concert pianist Max Levinson. Together, they produce a number of concerts and events in Ouray and Ridgway over the course of a week each August. This year's MusicFest will feature the world-renowned Ulysses Quartet. Read more about the SJCMF musicians HERE. OCPAG is grateful for the grant support from the Dave and Mary Wood Fund and the Western Colorado Community Foundation so that OCPAG is able to bring these concerts to stages around Ouray County. We are also most grateful to the patrons who attend and support this chamber music programming! View on site | Email this event",
-    pubDate: "2026-08-30T06:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53249632392911/huge/75dcb70d103e562fc3b68267bd405813886a92df.jpg"
-  },
-  {
-    title: "Open Air Market",
-    link: "https://events.ourayridgwayevents.com/event/open-air-market",
-    description: "Fresh Air & Local Flair The Ouray Open-Air Market is launching this 2026 season at Billy Goat Gruff's Patio (located at 408 Main Street, Ouray, CO). The market will run every Sunday from June 21, 2026, through September 6, 2026, operating from 10:00 AM to 2:00 PM. View on site | Email this event",
-    pubDate: "2026-08-30T16:00:00.000Z",
-    endDate: "2026-09-06",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Billy Goat Gruff's Patio Patio",
-    imageUrl: "https://localist-images.azureedge.net/photos/53744791155044/huge/7870fdaa876bce23bf9db7e6664d294f7d856b0b.jpg"
-  },
-  {
-    title: "Western Medicine - Live @ Floating Lotus Brewery",
-    link: "https://events.ourayridgwayevents.com/event/western-medicine-live-floating-lotus-brewery",
-    description: "Swinging from powerful harmonies and distortion to acoustic guitars, brushes, and tender lap-steel melodies, Los Angeles-based Western Medicine paints a vivid yet bittersweet image of their upbringing on Colorado’s Western Slope. Whether they are playing festival stages, honky-tonk bars, or through your truck’s stereo, this six-piece outfit puts on a heartfelt show you will not forget. Their recent appearances include Telluride Bluegrass, the Temecula Balloon and Wine Festival, NextFest at the LA County Fair, and a sold-out Colorado tour that included the Sheridan Opera House. View on site | Email this event",
-    pubDate: "2026-08-31T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53774245932386/huge/a983022deeba7f71c5044f0358d99b07dd378b13.jpg"
-  },
-  {
     title: "Pilates Mat All Levels",
     link: "https://events.ourayridgwayevents.com/event/pilates-mat-all-levels",
     description: "This all levels Classical Pilates Mat class will center, strengthen and legnthen your entire body. Specialty mats are provided. Contact us to learn more or purchase a pass from the link below. We are located in the Historic Bank Building at 521 Clinton Street., View on site | Email this event",
@@ -4653,6 +4618,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Fellin Park",
     imageUrl: "https://localist-images.azureedge.net/photos/53793277001824/huge/c116110eff98984ba8ba5012fad204a327fddfc4.jpg"
+  },
+  {
+    title: "Open Air Market",
+    link: "https://events.ourayridgwayevents.com/event/open-air-market",
+    description: "Fresh Air & Local Flair The Ouray Open-Air Market is launching this 2026 season at Billy Goat Gruff's Patio (located at 408 Main Street, Ouray, CO). The market will run every Sunday from June 21, 2026, through September 6, 2026, operating from 10:00 AM to 2:00 PM. View on site | Email this event",
+    pubDate: "2026-09-06T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Billy Goat Gruff's Patio Patio",
+    imageUrl: "https://localist-images.azureedge.net/photos/53744791155044/huge/7870fdaa876bce23bf9db7e6664d294f7d856b0b.jpg"
   },
   {
     title: "Fantasy Football Kickoff - DraftSunday",
@@ -5635,17 +5611,6 @@ const OURAY_RIDGWAY_EVENTS = [
 const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
-    link: "https://www.norwoodtown.com/2026-08-24-senior-lunch",
-    description: "",
-    pubDate: "2026-08-24T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Community Event",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
-    title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-08-31-senior-lunch",
     description: "",
     pubDate: "2026-08-31T12:00:00.000Z",
@@ -6152,6 +6117,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
+  },
+  {
+    title: "Market on the Plaza",
+    link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    pubDate: "2026-09-30T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   }
 ];
 

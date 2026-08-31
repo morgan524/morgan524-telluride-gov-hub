@@ -1,22 +1,22 @@
 {
-  "hash": "d1df13dba5019f56c4dc44c69fdbe9a2ee23f3fb",
-  "lede": "The week's biggest item is Tuesday's Town Council work session, where three consequential threads come together: a deep dive into the Comprehensive Plan, a Gondola Subcommittee update, and — most notably — a review of proposals for a third-party audit of the Town's rental housing policies, which cuts right to the heart of who gets to stay in this valley. Alongside that, the Housing Authority Subcommittee takes up the Martin exception request on Wednesday, and Ouray County's Planning Commission meets virtually to work through possible Land Use Code definition changes.",
+  "hash": "667a6bf7704ae80d2c35b76f80220b5268eb9e58",
+  "lede": "The biggest thing on the government calendar this week is Tuesday's Town Council work session, where the Comp Plan, the Gondola Subcommittee, and — most critically — a third-party audit of the Town's rental housing policies all get air time; that housing audit question touches something fundamental about who can actually afford to live here, so it's worth paying attention to. Alongside that, the Housing Authority Subcommittee takes up the Martin exception request Wednesday, a real-stakes decision about whether deed-restricted homeowners can get roof repairs approved. The week also brings the Wilkinson Library's Youth Area grand opening Wednesday and a drone show Thursday.",
   "notable": [
     {
       "id": 0,
-      "stake": "Third-party rental housing audit proposals reviewed — directly shapes who can afford to stay."
+      "stake": "Third-party rental housing audit review could shape who stays in the canyon."
     },
     {
       "id": 3,
-      "stake": "Martin exception for deed-restricted unit roof repair comes to a decision after August continuance."
+      "stake": "Vote on whether deed-restricted homeowners can approve a $47K roof repair."
     },
     {
       "id": 5,
-      "stake": "Land Use Code definitions under revision — early-stage changes that shape future development rules."
+      "stake": "Land Use Code definition changes being shaped before any public hearing stage."
     },
     {
       "id": 6,
-      "stake": "Conditional-use permit for temp tent and food truck advances to Council recommendation."
+      "stake": "Conditional-use permit for tent and food truck goes to Council via DRB recommendation."
     }
   ]
 }

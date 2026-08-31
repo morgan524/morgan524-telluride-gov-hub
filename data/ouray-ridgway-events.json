@@ -1,39 +1,5 @@
 [
   {
-    "title": "San Juan Chamber MusicFest",
-    "link": "https://events.ourayridgwayevents.com/event/san-juan-chamber-musicfest",
-    "description": "August 25 - August 30 at multiple venues in Ridway and Ouray, Colorado. The annual San Juan Chamber MusicFest, OCPAG’s flagship event, features a group of chamber musicians of international acclaim, under the artistic direction of renowned concert pianist Max Levinson. Together, they produce a number of concerts and events in Ouray and Ridgway over the course of a week each August. This year's MusicFest will feature the world-renowned Ulysses Quartet. Read more about the SJCMF musicians HERE. OCPAG is grateful for the grant support from the Dave and Mary Wood Fund and the Western Colorado Community Foundation so that OCPAG is able to bring these concerts to stages around Ouray County. We are also most grateful to the patrons who attend and support this chamber music programming! View on site | Email this event",
-    "pubDate": "2026-08-30T06:00:00.000Z",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "",
-    "imageUrl": "https://localist-images.azureedge.net/photos/53249632392911/huge/75dcb70d103e562fc3b68267bd405813886a92df.jpg"
-  },
-  {
-    "title": "Open Air Market",
-    "link": "https://events.ourayridgwayevents.com/event/open-air-market",
-    "description": "Fresh Air & Local Flair The Ouray Open-Air Market is launching this 2026 season at Billy Goat Gruff's Patio (located at 408 Main Street, Ouray, CO). The market will run every Sunday from June 21, 2026, through September 6, 2026, operating from 10:00 AM to 2:00 PM. View on site | Email this event",
-    "pubDate": "2026-08-30T16:00:00.000Z",
-    "endDate": "2026-09-06",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "Billy Goat Gruff's Patio Patio",
-    "imageUrl": "https://localist-images.azureedge.net/photos/53744791155044/huge/7870fdaa876bce23bf9db7e6664d294f7d856b0b.jpg"
-  },
-  {
-    "title": "Western Medicine - Live @ Floating Lotus Brewery",
-    "link": "https://events.ourayridgwayevents.com/event/western-medicine-live-floating-lotus-brewery",
-    "description": "Swinging from powerful harmonies and distortion to acoustic guitars, brushes, and tender lap-steel melodies, Los Angeles-based Western Medicine paints a vivid yet bittersweet image of their upbringing on Colorado’s Western Slope. Whether they are playing festival stages, honky-tonk bars, or through your truck’s stereo, this six-piece outfit puts on a heartfelt show you will not forget. Their recent appearances include Telluride Bluegrass, the Temecula Balloon and Wine Festival, NextFest at the LA County Fair, and a sold-out Colorado tour that included the Sheridan Opera House. View on site | Email this event",
-    "pubDate": "2026-08-31T00:00:00.000Z",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "Floating Lotus Brewery",
-    "imageUrl": "https://localist-images.azureedge.net/photos/53774245932386/huge/a983022deeba7f71c5044f0358d99b07dd378b13.jpg"
-  },
-  {
     "title": "Pilates Mat All Levels",
     "link": "https://events.ourayridgwayevents.com/event/pilates-mat-all-levels",
     "description": "This all levels Classical Pilates Mat class will center, strengthen and legnthen your entire body. Specialty mats are provided. Contact us to learn more or purchase a pass from the link below. We are located in the Historic Bank Building at 521 Clinton Street., View on site | Email this event",
@@ -446,6 +412,17 @@
     "category": "Community Event",
     "location": "Fellin Park",
     "imageUrl": "https://localist-images.azureedge.net/photos/53793277001824/huge/c116110eff98984ba8ba5012fad204a327fddfc4.jpg"
+  },
+  {
+    "title": "Open Air Market",
+    "link": "https://events.ourayridgwayevents.com/event/open-air-market",
+    "description": "Fresh Air & Local Flair The Ouray Open-Air Market is launching this 2026 season at Billy Goat Gruff's Patio (located at 408 Main Street, Ouray, CO). The market will run every Sunday from June 21, 2026, through September 6, 2026, operating from 10:00 AM to 2:00 PM. View on site | Email this event",
+    "pubDate": "2026-09-06T16:00:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Billy Goat Gruff's Patio Patio",
+    "imageUrl": "https://localist-images.azureedge.net/photos/53744791155044/huge/7870fdaa876bce23bf9db7e6664d294f7d856b0b.jpg"
   },
   {
     "title": "Fantasy Football Kickoff - DraftSunday",
