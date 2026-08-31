@@ -192,13 +192,6 @@
     "phone": "970-327-4288",
     "sv": 4
   },
-  "tmvoa|2026-07-31|TMVOA Board of Directors Meeting": {
-    "agendaUrl": "https://tmvoa.org/site/assets/files/4830/tmvoa_board_meeting_agenda_7_31_26-1.pdf",
-    "zoomUrl": "https://us02web.zoom.us/meeting/register/0AWXShBnSs6SxMTp_gdNUg",
-    "meetingId": "8 7 3 8703 5414",
-    "passcode": "213545",
-    "sv": 4
-  },
   "ouray|2026-08-05|, 2-4:00 PM - Virtual Meeting Only - No in-person attendance.  Work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (Packet materials are attached to the agenda)": {
     "agendaUrl": "https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1014",
     "sv": 4
@@ -224,7 +217,10 @@
   "telluride|2026-09-02|Telluride Housing Authority Subcommittee - Sep 02 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163",
     "sv": 4,
-    "ph": "2ff2425f8a4e6c6f"
+    "zoomUrl": "https://us06web.zoom.us/j/83022451705?pwd=Lj8jkLF9GQny7CWBqvP8IYkQhviQBb.1",
+    "meetingId": "830 2245 1705",
+    "passcode": "229528.",
+    "phone": "719) 359-4580"
   },
   "county|2026-09-02|Board of County Commissioners Meeting": {
     "sv": 4,
@@ -496,5 +492,15 @@
   "county|2026-09-28|Open Space Commission Meeting": {
     "sv": 4,
     "ph": "1ff606174e68cca5"
+  },
+  "telluride|2026-09-30|Special Meeting - Historic & Architectural Review Commission - Sep 30 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309",
+    "sv": 4,
+    "ph": "fcd71e9a9b6a541a"
+  },
+  "telluride|2026-09-17|Special Meeting - Planning & Zoning Commission - Sep 17 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8310",
+    "sv": 4,
+    "ph": "81ba2cbb2cd41959"
   }
 }

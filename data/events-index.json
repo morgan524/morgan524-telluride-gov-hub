@@ -66,32 +66,6 @@
     "type": "Talks & Classes"
   },
   {
-    "title": "An Evening With Ken Burns",
-    "href": "https://koto.org/event/an-evening-with-ken-burns/",
-    "date": "2026-08-30",
-    "time": "5:30 PM",
-    "location": "Michael D. Palm Theater, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/08/KenBurns2026Poster-03-1-scaled.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join us for an Evening with Ken Burns tentatively at The Palm Theatre. We will be screening episode 5 of Vietnam, \"This is What We Do.\" There will be a Q&A and book signing to follow. Tickets are $20.00 for members, and $25.00 for…",
-    "type": "Arts & Film"
-  },
-  {
-    "title": "An Evening with Ken Burns & Telluride Historical Museum",
-    "href": "https://koto.org/event/an-evening-with-ken-burns-telluride-historical-museum/",
-    "date": "2026-08-30",
-    "time": "5:30 PM",
-    "location": "Michael D. Palm Theater, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-6.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join Telluride Historical Museum on Sunday August 30th for their annual Evening With Ken Burns. This year watch a screening of Episode 5 of Vietnam, This is What We Do. The event will be tentatively held at the Palm Theatre, if the venue…",
-    "type": "Arts & Film"
-  },
-  {
     "title": "Sunday Rehab at Alloy Kitchen",
     "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
     "date": "2026-08-30",
@@ -116,6 +90,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Swinging from powerful harmonies and distortion to acoustic guitars, brushes, and tender lap-steel melodies, Los Angeles-based Western Medicine paints a vivid yet bittersweet image of their upbringing on Colorado’s Western Slope. Whether…",
     "type": "Food & Drink"
+  },
+  {
+    "title": "An Evening With Ken Burns",
+    "href": "https://www.telluride.com/event/an-evening-with-ken-burns/",
+    "date": "2026-08-30",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/53487/kenburns_620x370_0.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Join the Telluride Museum for their annual Evening With Ken Burns, tentatively at the Palm Theatre. Tickets are $25 for …",
+    "type": "Arts & Film"
   },
   {
     "title": "Summer School: Tale of Two Terroirs: Pommard & Volnay",
@@ -1543,6 +1530,19 @@
     "type": "Music"
   },
   {
+    "title": "Book Buzz at Telluride Brewing Co-Lawson Hill",
+    "href": "https://koto.org/event/book-buzz-at-telluride-brewing-co-lawson-hill/",
+    "date": "2026-09-08",
+    "time": "5:30 PM",
+    "location": "Telluride Brewing Company Lawson Hill Taproom",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/book-buzz-14.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join WPL on the 2nd Tuesday 5:30-6:30pm of each month at TBC in Lawson Hill May-September. Our queen of Reader's Advisory, Tiffany Osborne, will be there to talk about our hottest new titles and Miss Melissa will be providing an…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Mountain Village Merchant Meeting",
     "href": "https://townofmountainvillage.com/explore/events/all-events/merchant-meeting/",
     "date": "2026-09-08",
@@ -1604,7 +1604,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "A monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The recurring event offers a casual space for veterans to connect with one another and with community support.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1645,6 +1645,19 @@
     "source": "The Alibi",
     "desc": "Mama Said String Band is an instant classic, since 2016 they’ve been bringing th...",
     "type": "Music"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-09/",
+    "date": "2026-09-09",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "OCAA Art Show: Thomas Livingstone Photography",
@@ -2600,7 +2613,7 @@
     "time": "",
     "location": "The Courtyard at 610, Ridgway",
     "town": "Ridgway",
-    "img": "https://sherbino.org/wp-content/uploads/2026/07/Alex-Dunn-and-Mimi-sept-6-banner-2.png",
+    "img": "https://sherbino.org/wp-content/uploads/2026/07/alex-dunn-New-banner.png",
     "category": "",
     "source": "Sherbino Theater",
     "desc": "",
@@ -3066,17 +3079,17 @@
     "type": "Community"
   },
   {
-    "title": "Slap Dragon ~ Live at the Sherbino",
-    "href": "https://events.ourayridgwayevents.com/event/slap-dragon-live-at-the-sherbino",
+    "title": "Slap Dragon",
+    "href": "https://sherbino.org/event/slap-dragon-sherbino-september-27-2026/",
     "date": "2026-09-27",
-    "time": "7:30 PM",
-    "location": "The Sherbino",
+    "time": "",
+    "location": "The Sherbino, Ridgway",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53693260359887/huge/4d3201be3b01f5eb6d9920a6793bf0d6b3b4400c.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Doors at 7:00 PM; show at 7:30 PM. The Sherbino and Pickin' Productions welcome Slap Dragon, a Nashville-based band blending acoustic funk, bluegrass, R&B, disco energy, improvisation and sharp songwriting. Expect soulful vocals, acoustic…",
-    "type": "Arts & Film"
+    "img": "https://sherbino.org/wp-content/uploads/2026/08/2026-sherb-event-banners-12.jpg",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Bike & Brewery Tour",
@@ -3142,6 +3155,19 @@
     "source": "Beacon",
     "desc": "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
     "type": "Food & Drink"
+  },
+  {
+    "title": "The Sherbino Presents: \"Thinking Like Water\", a DIY look at watershed restoration",
+    "href": "https://sherbino.org/event/the-sherbino-presents-thinking-like-water-a-diy-look-at-watershed-restoration/",
+    "date": "2026-09-29",
+    "time": "",
+    "location": "The Sherbino, Ridgway",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2026/08/Thinking-like-water-banner.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Ouray: Echoes in the Canyon",

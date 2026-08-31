@@ -239,9 +239,6 @@ const MEETING_AGENDA_META = {
   "norwood|2026-08-05|Board of Trustees Work Session":
     {"agendaUrl":"https://www.norwoodtown.com/files/6bce913bf/08.05.2026+Work+Session+Board+of+Trustee+Agenda+ADA.pdf","zoomUrl":"https://us02web.zoom.us/j/87433907008","meetingId":"874 3390 7008","passcode":"126738","phone":"970-327-4288","sv":4},
 
-  "tmvoa|2026-07-31|TMVOA Board of Directors Meeting":
-    {"agendaUrl":"https://tmvoa.org/site/assets/files/4830/tmvoa_board_meeting_agenda_7_31_26-1.pdf","zoomUrl":"https://us02web.zoom.us/meeting/register/0AWXShBnSs6SxMTp_gdNUg","meetingId":"8 7 3 8703 5414","passcode":"213545","sv":4},
-
   "ouray|2026-08-05|, 2-4:00 PM - Virtual Meeting Only - No in-person attendance.  Work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (Packet materials are attached to the agenda)":
     {"agendaUrl":"https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1014","sv":4},
 
@@ -255,7 +252,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/tZ0pc-ChqDwsGNFpPigfqqLQptmoMmpJdiOx"},
 
   "telluride|2026-09-02|Telluride Housing Authority Subcommittee - Sep 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163","sv":4,"ph":"2ff2425f8a4e6c6f"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163","sv":4,"zoomUrl":"https://us06web.zoom.us/j/83022451705?pwd=Lj8jkLF9GQny7CWBqvP8IYkQhviQBb.1","meetingId":"830 2245 1705","passcode":"229528.","phone":"719) 359-4580"},
 
   "county|2026-09-02|Board of County Commissioners Meeting":
     {"sv":4,"ph":"a12dfd2ce826475e"},
@@ -420,7 +417,13 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1016","sv":4},
 
   "county|2026-09-28|Open Space Commission Meeting":
-    {"sv":4,"ph":"1ff606174e68cca5"}
+    {"sv":4,"ph":"1ff606174e68cca5"},
+
+  "telluride|2026-09-30|Special Meeting - Historic & Architectural Review Commission - Sep 30 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309","sv":4,"ph":"fcd71e9a9b6a541a"},
+
+  "telluride|2026-09-17|Special Meeting - Planning & Zoning Commission - Sep 17 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8310","sv":4,"ph":"81ba2cbb2cd41959"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -767,7 +770,13 @@ const MEETING_PREVIEWS = {
     "The Ouray County Planning Commission will hold a virtual work session to review and discuss potential amendments to Section 2 – Definitions of the Ouray County Land Use Code.",
 
   "county|2026-09-28|Open Space Commission Meeting":
-    "The Open Space Commission is expected to discuss land and trail-related matters, potentially including the Lawson Hill Connector Trail Project, material hauling needs, and other open space management topics in San Miguel County."
+    "The Open Space Commission is expected to discuss land and trail-related matters, potentially including the Lawson Hill Connector Trail Project, material hauling needs, and other open space management topics in San Miguel County.",
+
+  "telluride|2026-09-30|Special Meeting - Historic & Architectural Review Commission - Sep 30 2026":
+    "The Historic and Architectural Review Commission is expected to discuss the implementation of Ordinance #1640, which amended the Land Use Code to incorporate the Colorado Wildfire Resiliency Code, and how its requirements apply to the review and approval of Certificates of Appropriateness for structures within Telluride.",
+
+  "telluride|2026-09-17|Special Meeting - Planning & Zoning Commission - Sep 17 2026":
+    "The Planning & Zoning Commission is expected to review Ordinance #1640, passed by Town Council on August 11, 2026, which amends Telluride's Land Use Code to implement the Colorado Wildfire Resiliency Code (CWRC), addressing wildfire risk mitigation standards within the town's development regulations."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -951,16 +960,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "We’re Hiring- Bilingual Food Pantry and seNior Lunch Cook Assistant/ Estamos Contratando: Asistente Bilingüe del Banco de Alimentos y Asistente de Cocina del Almuerzo para Personas Mayores",
-    source: "Fresh Food Hub",
-    sourceKey: "fresh-food-hub",
-    date: "August 27, 2026",
-    newsTopic: "community",
-    copy: "We re hiring for two part-time positions: Bilingual Food Pantry Assistant — Sundays, 1:30–6:30 p.m. This role provides Spanish-English translation support for our Spanish-speaking clients during food pantry distribution. Senior Lunch Assistant — Thursdays, 8:30 a.m.–1:30 p.m. at Norwood Town Hall. T",
-    href: "https://freshfoodhub.net/were-hiring-bilingual-food-pantry-and-senior-lunch-cook-assistant-estamos-contratando-asistente-bilingue-del-banco-de-alimentos-y-asistente-de-cocina-del-almuerzo-para-personas-mayores/",
-    img: ""
-  },
-  {
     title: "Invitation to Prayer/Fellowship Wednesday Morning",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -1025,7 +1024,7 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/2025-comprehensive-plan/widgets/101864/key_dates#41868"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-29';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-31';
 const LEGAL_NOTICES_CACHE_DATE = '2026-08-30';
 
 const MANUAL_SUMMARIES = {
@@ -1122,9 +1121,6 @@ const MANUAL_SUMMARIES = {
   "norwood|2026-08-05|Board of Trustees Work Session":
     "A short work session for the Norwood Board of Trustees, with two lease renewals on the table — Motion Sense Therapy and Performance at 1110 Lucerne St and Austin Overholt at 1475 Pine St. No executive session, no code changes, no land-use items. Formal action can't be taken at a work session, so any decisions will follow at a regular meeting.",
 
-  "tmvoa|2026-07-31|TMVOA Board of Directors Meeting":
-    "The TMVOA Board meets July 31 with three substantive items on the docket: fall and winter programming decisions, election of board officers, and — the weightiest item — proposed amendments to the organization's fiscal policies and procedures. That last one gets 30 minutes, more than anything else on the agenda, which tells you where the real work is. Board officer elections mark the kind of organizational housekeeping that shapes who steers the association going into the next season.",
-
   "ouray|2026-08-05|, 2-4:00 PM - Virtual Meeting Only - No in-person attendance.  Work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (Packet materials are attached to the agenda)":
     "Ouray County Planning Commission meets virtually August 5th, 2–4 PM, for a work session on possible changes to the Land Use Code's Section 2 — the definitions section. No in-person attendance. Work sessions like this are where the real shaping happens: definitions determine what the rules actually mean in practice, and a tweak to how a term is defined can quietly shift what gets permitted, what gets denied, and how future applications get read. The packet is attached to the posted agenda, but the agenda itself doesn't spell out which definitions are under review.",
 
@@ -1138,7 +1134,7 @@ const MANUAL_SUMMARIES = {
     "A working meeting for CCAASE, the Town's grant and events commission. The board continues its 2026 organization interview series — this round brings in Telluride Youth Lacrosse Association, Ah Haa School for the Arts, and the Telluride Council for the Arts and Humanities, each getting five minutes to present before questions. On the action side: a calendar and banner date request from Telluride Chamber Music for the Hanneke Cassel Trio at The Alibi on October 13; banner design approvals for Bear Safety Week and Ah Haa's Artabout; and a letter to Town Council formalizing the commission's 2027 grant budget request. That last item follows the board's August 5 vote — held flat at $696,750 total ($277,415 arts and special events, $419,335 community support) in recognition of the Town's decreased revenue projections.",
 
   "telluride|2026-09-02|Telluride Housing Authority Subcommittee - Sep 02 2026":
-    "The September 2, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "Three months of draft minutes — June, July, and August — come up for approval together, which is itself a small sign of how thinly stretched these oversight bodies can run. The substantive work: the Martin exception request returns after being continued from August 5. Lela and Jon Martin own a deed-restricted unit at Gold Run and need a new roof — bid at $47,743.86, or about 17% of their original purchase price. Their deed restriction caps staff-approvable capital improvements at 5% of OPP (~$13,960), and allows more only if the work 'increases the unit's capacity to house additional occupants' — a standard staff acknowledges the roof replacement doesn't meet, even while recommending approval. The subcommittee will work through that tension. A worksession on 'subpar bedroom' occupancy exceptions follows. Most consequentially, the group will set a date for a special meeting on housing waitlist policies and the recent suspension of the waitlist — that last item touches something a lot of people in this valley are watching closely.",
 
   "county|2026-09-02|Board of County Commissioners Meeting":
     "The September 2, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
@@ -1303,7 +1299,13 @@ const MANUAL_SUMMARIES = {
     "Ouray County's Planning Commission meets virtually on September 2 for a work session on possible changes to the Land Use Code, Section 2 — Definitions. Work sessions like this one are where the real shaping happens, before anything goes to a public hearing. The specific definition changes under discussion aren't detailed in the posted notice, but packet materials are attached to the agenda for anyone who wants to dig in ahead of the meeting.",
 
   "county|2026-09-28|Open Space Commission Meeting":
-    "The September 28, 2026 Open Space Commission Meeting agenda hasn't been posted yet."
+    "The September 28, 2026 Open Space Commission Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-09-30|Special Meeting - Historic & Architectural Review Commission - Sep 30 2026":
+    "The September 30, 2026 Special Meeting - Historic & Architectural Review Commission agenda hasn't been posted yet.",
+
+  "telluride|2026-09-17|Special Meeting - Planning & Zoning Commission - Sep 17 2026":
+    "The September 17, 2026 Special Meeting - Planning & Zoning Commission agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2506,42 +2508,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Suspect arrested for over $22,000 of Telluride bike thefts",
-    source: "Telluride Times",
-    date: "August 17, 2026",
-    firstSeen: "2026-08-17",
-    newsTopic: "government",
-    copy: "A Telluride man, Dustin Friday, 38, was arrested July 31 after the Marshal's Department used license plate reader cameras to link him to over $22,000 in mountain bike thefts. The cameras tracked his vehicle entering and leaving town near the times of reported thefts, and stolen bikes turned up on his social media. The case has also reignited a local debate about ALPR surveillance, with Town Council set to hold a work session on the cameras.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_855ba2c6-46a1-4a2b-807a-7f07c9d71c28.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/ed/8edf495d-5504-4c9a-b1fa-2fc29282bc05/6a8367e3c6f73.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "Uplifting souls since 1896",
-    source: "Telluride Times",
-    date: "August 17, 2026",
-    firstSeen: "2026-08-17",
-    newsTopic: "community",
-    copy: "St. Patrick's Catholic Church on North Spruce Street is marking 130 years in Telluride — built in 1896 for around $4,800, it's the town's only historic church still standing in its original form. The parish has seen steady growth in recent years, with daily Mass now led by a full-time resident priest. Anniversary events run through December.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_22d748bb-fcbd-42d9-91ed-62b182125d81.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/71/e71fefe0-9e87-4e65-8d4e-0845b72110f9/6a80f120087f3.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "States take Meta to trial in California in the biggest fight yet over social media harms to children",
-    source: "Telluride Times",
-    date: "August 17, 2026",
-    firstSeen: "2026-08-17",
-    newsTopic: "community",
-    copy: "A multi-state trial opened this week in California federal court, with 29 states accusing Meta of deliberately designing Facebook and Instagram to addict children and collecting data on under-13 users without parental consent. States are seeking damages that could theoretically reach $1.4 trillion, though legal experts say anything near that figure is highly unlikely.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_c27b1d4e-62bc-53e6-97e1-64bb4744b118.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/fc/8fc9d1ff-d627-596d-9fbb-16ddcacdebf2/6a7ca8e503b25.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride Downgrades to Stage 1 Fire Restrictions",
     source: "Town of Telluride",
     date: "August 26, 2026",
@@ -3175,28 +3141,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "An Evening With Ken Burns",
-    link: "https://koto.org/event/an-evening-with-ken-burns/",
-    description: "Join us for an Evening with Ken Burns tentatively at The Palm Theatre. We will be screening episode 5 of Vietnam, \"This is What We Do.\" There will be a Q&A and book signing to follow. Tickets are $20.00 for members, and $25.00 for non-members. Doors open at 5:30 and the film will begin at 6:00.",
-    pubDate: "2026-08-30T17:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Michael D. Palm Theater, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/KenBurns2026Poster-03-1-scaled.jpg"
-  },
-  {
-    title: "An Evening with Ken Burns & Telluride Historical Museum",
-    link: "https://koto.org/event/an-evening-with-ken-burns-telluride-historical-museum/",
-    description: "Join Telluride Historical Museum on Sunday August 30th for their annual Evening With Ken Burns. This year watch a screening of Episode 5 of Vietnam, This is What We Do. The event will be tentatively held at the Palm Theatre, if the venue changes the museum will update ticketholders. There will be a Q&A and book signing to follow.",
-    pubDate: "2026-08-30T17:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Michael D. Palm Theater, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Tennis Clinic 3.0-4.0",
     link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-31/",
     description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
@@ -3668,6 +3612,28 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
+  },
+  {
+    title: "Book Buzz at Telluride Brewing Co-Lawson Hill",
+    link: "https://koto.org/event/book-buzz-at-telluride-brewing-co-lawson-hill/",
+    description: "Join WPL on the 2nd Tuesday 5:30-6:30pm of each month at TBC in Lawson Hill May-September. Our queen of Reader's Advisory, Tiffany Osborne, will be there to talk about our hottest new titles and Miss Melissa will be providing an interactive story time for the kids. We'll have grab-and-go activity kits for the littles as well, and plenty of books to checkout. ADDED BONUS: Enjoy a 10% discount on food as well as $5 TBC Beers when you show your library card to the TBC staff. Don't have a card? No problem! We'll make one for you on the spot!",
+    pubDate: "2026-09-08T17:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Brewing Company Lawson Hill Taproom",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/book-buzz-14.png"
+  },
+  {
+    title: "Tennis Clinic 3.0-4.0",
+    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-09/",
+    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-09-09T09:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
   }
 ];
 
@@ -3724,20 +3690,7 @@ const WILKINSON_EVENTS = [
 // none of which are advertised as adoptable. The sync filters those out, so
 // this repopulates automatically when THS posts genuinely-available pets.
 const HUMANE_SOCIETY_ANIMALS = [
-  {
-    id: "TEL-A-201",
-    name: "Poncho",
-    species: "Dog",
-    breed: "Shepherd, Australian",
-    ageGroup: "Young Dog",
-    sex: "Male",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/8c85c63edb518fd3819c783a0fb26a96/28ba179dcbfb1ff99150b5604368855d.jpg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/214332992",
-    summary: "Young Dog • Shepherd, Australian • Male",
-    firstSeen: "2026-08-28",
-    revealDate: "2026-08-28",
-    lastSeen: "2026-08-30"
-  }
+
 ];
 
 /* The Alibi events — refreshed by syncAlibiEvents() every 6 hours.
@@ -3875,15 +3828,6 @@ const CLUB_RED_SHOWS = [];
 const FRESH_FOOD_HUB_EVENTS = [];
 const SHERBINO_EVENTS = [
   {
-    title: "DARRELL SCOTT",
-    href: "https://sherbino.org/event/darrell-scott-sherbino-ridgway-august-29/",
-    date: "2026-08-29 19:30:00",
-    endDate: "2026-08-29 21:00:00",
-    location: "The Sherbino, Ridgway",
-    copy: "@ SATURDAY || Doors: 7:00 PM || Show: 7:30 PM || Tickets: $30 in advance / $35 Day of Show || Solo Show || Some Reserved Section Seats Available || YES! THERE ARE General Admission tickets still available! Please go BELOW the reserved seating diagram to purchase GA tickets! Presented in partnership by The Sherbino with Pickin' Productions About Darrell Scott Darrell Scott is an acclaimed singer, songwriter, and multi-instrumentalist widely regarded as one of the most respected voices in contemporary American roots music. A masterful storyteller with deep roots in country, bluegrass, folk, and Americana, Scott delivers powerful performances where his expressive voice, heartfelt songwriting, and exceptional musicianship takes center stage. …",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/04/2026-sherb-event-banners-7-e1777594191779.jpg"
-  },
-  {
     title: "The M Factor, Shredding the Silence on Menopause. Film followed by a panel discussion",
     href: "https://sherbino.org/event/the-m-factor-shredding-the-silence-on-menopause-film-followed-by-a-panel-discussion/",
     date: "2026-09-01 18:30:00",
@@ -3935,8 +3879,7 @@ const SHERBINO_EVENTS = [
     endDate: "2026-09-08 12:00:00",
     location: "Ridgway, CO",
     copy: "",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
-    description: "A monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The recurring event offers a casual space for veterans to connect with one another and with community support."
+    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png"
   },
   {
     title: "Jolie Holland",
@@ -3980,8 +3923,26 @@ const SHERBINO_EVENTS = [
     date: "2026-09-20 18:30:00",
     endDate: "2026-09-20 20:00:00",
     location: "The Courtyard at 610, Ridgway",
-    copy: "@ Gates: 6:00 || Show: 6:30 pm || $20 Advance / $25 day of show || Enter via the alleyway behind the Sherbino and 610 Arts Collective || Outdoor Venue || Setting: seated  || Limited bar onsite **Due to the local Gold Mountain Fire – Poor air quality or rain location will be inside on The Sherbino main stage for Courtyard shows** The Courtyard at 610 is a unique little venue behind our gallery space, the 610 Arts Collective, on Clinton St. The entrance is through the alleyway between N Cora St. and N Laura St behind the gallery and The Sherbino Theater.  Likely to be our last Courtyard Show of the season! Join us for an intimate evening with Alex Dunn and Mimi Genheimer! …",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/07/Alex-Dunn-and-Mimi-sept-6-banner-2.png"
+    copy: "@ Gates: 6:00 || Show: 6:30 pm || $20 Advance / $25 day of show || Enter via the alleyway behind the Sherbino and 610 Arts Collective || Outdoor Venue || Setting: seated  || Limited bar onsite Don't miss the last outdoor Courtyard Show of the season! The Courtyard at 610 is a unique little venue behind our gallery space, the 610 Arts Collective, on Clinton St. The entrance is through the alleyway between N Cora St. and N Laura St behind the gallery and The Sherbino Theater.  Join us for an intimate evening with Alex Dunn and Mimi Genheimer!  Dunn uses his own personal blend of Folk/Americana to reflect on the many lives he's led, from his youth along the border of Colorado and Wyoming to the quiet moments aboard commercial fishing vessels in the remote waters of Southeast Alaska, where he spent over a decade toiling on the sea and writing songs during …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/07/alex-dunn-New-banner.png"
+  },
+  {
+    title: "Slap Dragon",
+    href: "https://sherbino.org/event/slap-dragon-sherbino-september-27-2026/",
+    date: "2026-09-27 19:30:00",
+    endDate: "2026-09-27 21:00:00",
+    location: "The Sherbino, Ridgway",
+    copy: "@ Sunday || Doors at 7 pm || Show at 7:30 pm || Dancehall-style show with limited seating || Tickets:  $28 advance / $32 day of show || A limited number of reserved tables are available.  GA Tickets can be found under the venue diagram.  Reserved tables are found by hovering over the diagram.  GA seats are available in the bar area. The Sherbino and Pickin’ Productions welcome Slap Dragon, a Nashville-based band serving up a joyful, hard-to-define blend of acoustic funk, bluegrass instincts, R&B soul, disco energy, improvisation, and seriously sharp songwriting. Slap Dragon began as something of a half-joke—an acoustic funk band—but once bassist and songwriter Scott Mulvahill and vocalist Laura Berens began making music together, the idea quickly became something real. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/08/2026-sherb-event-banners-12.jpg"
+  },
+  {
+    title: "The Sherbino Presents: \"Thinking Like Water\", a DIY look at watershed restoration",
+    href: "https://sherbino.org/event/the-sherbino-presents-thinking-like-water-a-diy-look-at-watershed-restoration/",
+    date: "2026-09-29 18:30:00",
+    endDate: "2026-09-29 20:00:00",
+    location: "The Sherbino, Ridgway",
+    copy: "Join us at the Sherbino Theatre on Tuesday, September 29, 2026, for Episode 1 of this award-wining docuseries on our watersheds. Doors open at 6:00 p.m., the film begins at 6:30 p.m., a panel discussion follows. Tickets are $10. @ Doors: 6:00 PM || Film: 6:30 PM || Tickets: $10 in advance Setting: Seated at The Sherbino Doors: 6:00 Film: 6:30 followed by a discussion with the filmmaker Renea Roberts, and Jake Kurzweil, PH.D., Hydrologist with the Mountain Studies Institute & Uncompahgre Watershed Partnership.Part biography, part how-to, “Water Wizard” Bill Zeedyk and his allies illustrate a proven toolbox of simple low-tech, low-cost methods to restore degraded lands. They work with Nature, rather than against her, to gird against the extremes of drought and flood while fostering climate resiliency. We’ll be screening: Episode 1: “Willing to Try Things\"  Today, “water wizard” Bill Zeedyk is a legend in the ecological restoration community. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/08/Thinking-like-water-banner.png"
   }
 ];
 
@@ -5797,28 +5758,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Movies Under the Stars",
-    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    pubDate: "2026-08-29T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
-  },
-  {
-    title: "Mind Blown Telluride",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
-    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
-    pubDate: "2026-08-29T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
-  },
-  {
     title: "Sunday Rehab at Alloy Kitchen",
     link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
     description: "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
@@ -6540,17 +6479,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/63239/fcf_web.800x533.webp"
-  },
-  {
-    title: "Piercing Pop-Up",
-    link: "https://www.telluride.com/event/piercing-pop-up-at-fringe-gallery/",
-    description: "Join Fringe Gallery for a Piercing Pop Up! Sign up for an appointment with Gemstone Piercing's Kirsten Foster. Come …",
-    pubDate: "2026-08-29",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63408/untitled_-_august_13-_2026_at_11_55_17_1.800x533.webp"
   },
   {
     title: "An Evening With Ken Burns",
@@ -8733,10 +8661,11 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "September 2, 2026",
     title: "Telluride Housing Authority Subcommittee",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
-    civicwebId: 8163
+    civicwebId: 8163,
+    packetUrl: "https://telluride-co.civicweb.net/document/444280/"
   },
   {
     date: "September 10, 2026",
@@ -8755,6 +8684,15 @@ const TELLURIDE_BOARD_MEETINGS = [
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
     civicwebId: 8082
+  },
+  {
+    date: "September 17, 2026",
+    title: "Special Meeting - Planning & Zoning Commission",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8310",
+    hasAgenda: false,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: "",
+    civicwebId: 8310
   },
   {
     date: "September 22, 2026",
@@ -8811,6 +8749,15 @@ const TELLURIDE_BOARD_MEETINGS = [
     civicwebId: 8164
   },
   {
+    date: "October 8, 2026",
+    title: "Special Meeting - Planning & Zoning Commission",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8311",
+    hasAgenda: false,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: "",
+    civicwebId: 8311
+  },
+  {
     date: "October 13, 2026",
     title: "Special Town Council Budget",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8307",
@@ -8854,6 +8801,15 @@ const TELLURIDE_BOARD_MEETINGS = [
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
     civicwebId: 8165
+  },
+  {
+    date: "November 5, 2026",
+    title: "Special Meeting - Planning & Zoning Commission",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312",
+    hasAgenda: false,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: "",
+    civicwebId: 8312
   },
   {
     date: "November 5, 2026",
