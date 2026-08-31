@@ -1,5 +1,5 @@
 {
-  "_comment": "Durable editorial corrections, re-applied on EVERY content refresh (content-refresh.js Task 21d, via scripts/lib/content-corrections.js). They exist because the arrays they fix are re-scraped from scratch every 6 hours, so editing js/gov-helpers.js directly fixes nothing. Rows are written by scripts/content-autofix.js -- deterministic ones automatically, judgment ones via a pull request -- and can be hand-edited or deleted at any time. kind: event-date | clear-link | drop-event. A row matches on array + normalized title + the date the SOURCE currently publishes (wrongDate), so it goes inert the moment the source corrects itself. EVERY ROW EXPIRES: expiresOn is required and pruned automatically, because a permanent override silently distorts data long after the source fixed its own mistake.",
+  "_comment": "Durable editorial corrections, re-applied on EVERY content refresh (content-refresh.js Task 21d, via scripts/lib/content-corrections.js). They exist because the arrays they fix are re-scraped from scratch every 6 hours, so editing js/gov-helpers.js directly fixes nothing. Rows are written by scripts/content-autofix.js -- deterministic ones automatically, judgment ones via a pull request -- and can be hand-edited or deleted at any time. kind: event-date | clear-link | set-link | drop-event | fix-title. A row matches on array + normalized title + the date the SOURCE currently publishes (wrongDate), so it goes inert the moment the source corrects itself. EVERY ROW EXPIRES: expiresOn is required and pruned automatically, because a permanent override silently distorts data long after the source fixed its own mistake.",
   "corrections": [
     {
       "id": "drop-tjc-shabbat-2026-08-16",
@@ -22,6 +22,31 @@
       "addedBy": "content-autofix",
       "addedOn": "2026-08-16",
       "expiresOn": "2026-10-15"
+    },
+    {
+      "id": "drop-koto-ken-burns-dup-2026-08-30",
+      "kind": "drop-event",
+      "array": "KOTO_COMMUNITY_EVENTS",
+      "titleMatch": "An Evening with Ken Burns & Telluride Historical Museum",
+      "wrongDate": "2026-08-30",
+      "reason": "KOTO publishes this event twice under two slugs (an-evening-with-ken-burns and an-evening-with-ken-burns-telluride-historical-museum), same date and 17:30 start, so the exact-duplicate rule in sanitizeRecords cannot see it -- the links differ. Dropping the LONGER title, not the shorter one, on purpose: the kept entry carries the poster image (the co-presenter copy has imageUrl empty) and its title matches TELLURIDE_COM_EVENTS exactly, so cross-source dedup collapses the two into a single card. Keeping the fuller title instead would leave two cards, one per source.",
+      "evidence": "https://koto.org/event/an-evening-with-ken-burns-telluride-historical-museum/",
+      "addedBy": "claude-content-review",
+      "addedOn": "2026-08-26",
+      "expiresOn": "2026-09-29"
+    },
+    {
+      "id": "fix-title-ongiong-space-cowboy-2026-10-02",
+      "kind": "fix-title",
+      "array": "OURAY_RIDGWAY_EVENTS",
+      "titleMatch": "Ongiong: Space Cowboy by Dundee & Lee",
+      "correctTitle": "Ongoing: Space Cowboy by Dundee & Lee",
+      "wrongDate": "2026-10-02",
+      "reason": "'Ongiong' is a typo for 'Ongoing' on the Ouray/Ridgway Localist listing. A one-off source misspelling, so it is corrected by name rather than by a spell-check rule that would eventually rename a real event.",
+      "evidence": "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
+      "addedBy": "claude-content-review",
+      "addedOn": "2026-08-26",
+      "expiresOn": "2026-11-21"
     }
   ]
 }

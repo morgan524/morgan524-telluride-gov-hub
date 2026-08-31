@@ -27,7 +27,8 @@ const FILE = 'content-corrections.json';
 //   clear-link  — the link 404s; keep the event, drop the dead href
 //   set-link    — the link 404s but a working one is known; point it at newLink
 //   drop-event  — the entry is phantom/cancelled; remove it entirely
-const KINDS = new Set(['event-date', 'clear-link', 'set-link', 'drop-event']);
+//   fix-title   — the source published a garbled/misspelled title; set correctTitle
+const KINDS = new Set(['event-date', 'clear-link', 'set-link', 'drop-event', 'fix-title']);
 
 // The semantic identity of a correction — what it does, to which record, on the
 // strength of which evidence. NOT the id: auto-written ids embed the date they
@@ -132,6 +133,11 @@ function applyCorrections(arraysByName, corrections, todayISO) {
         else out.date = c.correctDate;
         return out;
       }
+      // fix-title: a one-off source typo ("Ongiong" for "Ongoing"). Deliberately
+      // NOT a generic spell-fix -- a rule that rewrites titles it thinks are
+      // wrong will eventually rename a real event. This renames exactly one
+      // known string, and stops matching the moment the source corrects it.
+      if (c.kind === 'fix-title') return c.correctTitle ? { ...r, title: c.correctTitle } : r;
       // set-link: the dead href has a known-good replacement.
       if (c.kind === 'set-link') return { ...r, link: c.newLink || '' };
       // clear-link: keep the event, drop the dead href.

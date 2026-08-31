@@ -649,7 +649,19 @@ function checkSourceHealth(ctx) {
   let baseline;
   try { baseline = sourceHealth.readBaseline(REPO_ROOT); } catch { return; }
   if (!baseline || !baseline.sources || !Object.keys(baseline.sources).length) return;
-  for (const a of sourceHealth.detectAnomalies(ctx.arrays, baseline)) {
+  // An array emptied on purpose by an active drop-event correction must not be
+  // reported as a broken scraper — see detectAnomalies' `emptiedBy`.
+  const emptiedBy = {};
+  try {
+    const { readCorrections, isExpired } = require('./lib/content-corrections.js');
+    const todayISO = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Denver' }).format(new Date());
+    for (const c of readCorrections(REPO_ROOT).corrections) {
+      if (c && c.kind === 'drop-event' && c.array && !isExpired(c, todayISO)) {
+        emptiedBy[c.array] = c.id || c.titleMatch;
+      }
+    }
+  } catch { /* no corrections file — every zero stays a High, which is the safe default */ }
+  for (const a of sourceHealth.detectAnomalies(ctx.arrays, baseline, emptiedBy)) {
     add(a.severity, 'Source may be broken', a.name, a.message);
   }
   // Staleness/orphan checks don't need the baseline — a frozen cached meeting

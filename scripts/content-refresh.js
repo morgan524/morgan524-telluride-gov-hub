@@ -6030,6 +6030,21 @@ async function refreshEngageMeetings(existing = []) {
     const slugs = [...slugSet];
     console.log(`  Engage Telluride: ${slugs.length} published projects found`);
 
+    // A zero-slug parse is a BROKEN SCRAPER, not an empty calendar: the
+    // projects page always lists projects, so matching none means the markup
+    // moved (the data-state='published' tile shape is the fragile part).
+    // Returning [] here is what silently empties ENGAGE_MEETINGS and leaves the
+    // section stale -- exactly the failure the source-health check exists to
+    // catch, and it caught it. Carry the existing rows forward instead and say
+    // so loudly; a genuinely empty calendar still empties below, where we know
+    // the parse worked.
+    if (slugs.length === 0) {
+      console.warn('  \u26a0 Engage Telluride: projects page parsed 0 published projects \u2014 ' +
+        'the tile markup has probably changed. Carrying forward ' +
+        `${existing.length} existing row(s) rather than emptying the section.`);
+      return existing;
+    }
+
     for (const slug of slugs) {
       try {
         // 2. Fetch the project page to find Key Date widget IDs
@@ -6094,7 +6109,16 @@ async function refreshEngageMeetings(existing = []) {
       return true;
     });
     deduped.sort((a, b) => a.date.localeCompare(b.date));
-    console.log(`  Engage Telluride: ${deduped.length} upcoming key date(s) found`);
+    // Reaching here means the parse worked, so an empty result is real news --
+    // every key date has simply passed. Distinguish it in the log from the
+    // broken-parse case above, so "ENGAGE_MEETINGS: 0" in a review finding can
+    // be diagnosed from the refresh log without re-running the scrape.
+    if (deduped.length === 0) {
+      console.log(`  Engage Telluride: 0 upcoming key date(s) \u2014 parsed ${slugs.length} ` +
+        'project(s) fine, none has a date in the next 60 days (section legitimately empty).');
+    } else {
+      console.log(`  Engage Telluride: ${deduped.length} upcoming key date(s) found`);
+    }
     return deduped;
 
   } catch (e) {
@@ -6781,6 +6805,19 @@ async function syncSchoolAgendas() {
     if (!dm) continue;
     const mo = +dm[1], da = +dm[2], yr = 2000 + +dm[3];
     if (mo < 1 || mo > 12 || da < 1 || da > 31) continue;
+    // Retreats and the CASB conference are not meetings where the board takes
+    // action, so syncSchoolSchedule already skips them. This scraper didn't,
+    // and its `type` defaults to 'monthly' -- so the 8.26.26 board-retreat
+    // packet shipped as a second "Monthly Meeting" the day after the real one
+    // (flagged as a duplicate by the content review). Match the same filter as
+    // the schedule, on the PDF filename too: the retreat's link text is
+    // sometimes just the date, with only 82626_board_retreat_packet.pdf saying
+    // what it is. To start listing retreats instead, drop this and give them
+    // their own `type` + TITLES entry in rebuildSchoolMeetings.
+    if (/conference|retreat|casb/i.test(text) || /retreat|casb/i.test(href)) {
+      console.log(`  School: skipping non-action item "${text}"`);
+      continue;
+    }
     let type = 'monthly';
     if (/work\s*session/i.test(text)) type = 'work';
     else if (/special/i.test(text)) type = 'special';
@@ -7940,12 +7977,43 @@ async function main() {
         require('./lib/content-corrections.js');
       const { doc, corrections } = readCorrections(REPO_ROOT);
       const todayISO = today();
+
+      // Load every array a correction actually NAMES, not just the trust-
+      // reconcile list, and look in BOTH data files.
+      //
+      // Before this, corrArrays was built solely from `reconcileNames` against
+      // govHubSrc (= gov-helpers.js). Two consequences, both silent:
+      //   1. a correction on any array outside those 15 names was skipped;
+      //   2. a correction on an array that lives in gov-data.js could never
+      //      apply at all, since that source string was never consulted.
+      // TJC_EVENTS is in gov-data.js, so the drop-event + clear-link rows for
+      // the dead "Shabbat!" href no-opped on every refresh from 2026-08-16 on,
+      // and the 404 was re-flagged by the content review indefinitely. The rows
+      // were right; nothing was reading them.
+      const srcFor = {};                        // array name -> 'helpers' | 'data'
       const corrArrays = {};
-      for (const n of reconcileNames) corrArrays[n] = extractJsArray(govHubSrc, n) || [];
+      const wanted = new Set([...reconcileNames, ...corrections.map(c => c && c.array).filter(Boolean)]);
+      for (const n of wanted) {
+        const fromHelpers = extractJsArray(govHubSrc, n);
+        if (fromHelpers) { corrArrays[n] = fromHelpers; srcFor[n] = 'helpers'; continue; }
+        const fromData = extractJsArray(govDataSrc, n);
+        if (fromData) { corrArrays[n] = fromData; srcFor[n] = 'data'; continue; }
+        // reconcileNames are expected to exist; a correction naming an array in
+        // neither file is a typo, and silently skipping it is how a finding
+        // looks handled without being handled.
+        if (reconcileNames.includes(n)) { corrArrays[n] = []; srcFor[n] = 'helpers'; }
+        else console.warn(`  ⚠ correction targets unknown array "${n}" — in neither gov-helpers.js nor gov-data.js`);
+      }
+
       const { arrays: fixed, applied, skipped } = applyCorrections(corrArrays, corrections, todayISO);
       for (const a of applied) {
-        govHubSrc = replaceJsValue(govHubSrc, a.array, fixed[a.array], false);
-        changed = true;
+        if (srcFor[a.array] === 'data') {
+          govDataSrc = replaceJsValue(govDataSrc, a.array, fixed[a.array], false);
+          govDataChanged = true;
+        } else {
+          govHubSrc = replaceJsValue(govHubSrc, a.array, fixed[a.array], false);
+          changed = true;
+        }
         console.log(`  Correction ${a.id || '(unnamed)'}: ${a.kind} on ${a.array} (${a.hits || a.after + '/' + a.before})`);
       }
       for (const s of skipped) console.warn(`  ⚠ correction skipped (${s.why}): ${s.c && s.c.id}`);
