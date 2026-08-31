@@ -16,6 +16,8 @@
 // persona here means the two paths can't drift.
 // ──────────────────────────────────────────────────────────────────────────
 const https = require('https');
+const fs = require('fs');
+const crypto = require('crypto');
 const { SONNET } = require('./claude-model.js');
 
 // The persona line. Cadence-neutral ("community email", not "weekly") so it
@@ -79,20 +81,85 @@ function ledePrompt({ meetings, events, cadence }) {
   return parts.join('\n');
 }
 
+// ── Lede cache ──────────────────────────────────────────────────────────────
+// The lede is a Claude call, so the SAME inputs used to produce a DIFFERENT
+// paragraph on every render. That made the digest render non-deterministic,
+// which mattered once the digest started re-rendering whenever the bot data
+// changes (digest-refresh.yml runs after Content Refresh): every run rewrote
+// digest/week.html with a reworded intro, so "commit only if the render
+// changed" always committed, and a real change (an agenda link appearing) was
+// buried in lede churn.
+//
+// Fix: content-address the lede. The key is a hash of EXACTLY what the prompt
+// is built from — cadence + the meetings/events list — so the same window
+// returns the same paragraph with no API call, and the lede is rewritten only
+// when the underlying meetings/events actually change (e.g. an agenda posts
+// and a placeholder summary becomes a real one). Same pattern as
+// data/meeting-hooks-cache.json.
+function ledeInputFingerprint({ meetings, events, cadence } = {}) {
+  // Hash the prompt inputs, not the prompt string: prompt wording can be
+  // edited without invalidating every cached lede in the file.
+  const payload = JSON.stringify({
+    cadence: cadence === 'weekend' ? 'weekend' : 'week',
+    // Weekend ledes are events-only (see ledePrompt), so meetings must not
+    // enter the key there — otherwise a meeting change would bust a cache
+    // entry whose text can't possibly depend on it.
+    meetings: cadence === 'weekend' ? [] : (meetings || []),
+    events: events || [],
+  });
+  return crypto.createHash('sha1').update(payload).digest('hex').slice(0, 16);
+}
+
+function loadLedeCache(cacheFile) {
+  if (!cacheFile) return {};
+  try { return JSON.parse(fs.readFileSync(cacheFile, 'utf8')) || {}; }
+  catch (e) { return {}; }   // missing/corrupt cache is a miss, never an error
+}
+
+function saveLedeCache(cacheFile, cache) {
+  if (!cacheFile) return;
+  // Keep the file from growing without bound: ledes are per-window and go
+  // stale the moment the window passes. 40 entries is several weeks of both
+  // cadences; oldest-written are dropped first.
+  const keys = Object.keys(cache);
+  if (keys.length > 40) {
+    const trimmed = {};
+    for (const k of keys.slice(-40)) trimmed[k] = cache[k];
+    cache = trimmed;
+  }
+  try { fs.writeFileSync(cacheFile, JSON.stringify(cache, null, 1) + '\n'); }
+  catch (e) { /* best-effort: a read-only FS must not fail the render */ }
+}
+
 // Generate the Rick-voice lede from the ACTUAL meetings + events in the window.
 // Best-effort: returns null (never throws) when there is no API key, nothing to
 // write about, or the call/parse fails — so the caller keeps its fallback lede.
-async function generateRickLede({ meetings, events, apiKey, cadence } = {}) {
-  const key = apiKey || process.env.ANTHROPIC_API_KEY;
-  if (!key) { console.log('  i No ANTHROPIC_API_KEY — skipping Rick lede (using fallback)'); return null; }
+async function generateRickLede({ meetings, events, apiKey, cadence, cacheFile } = {}) {
   const ev = Array.isArray(events) ? events : [];
   const mtg = Array.isArray(meetings) ? meetings : [];
   if (!ev.length && !mtg.length) return null;   // nothing to summarize
+
+  // A cache hit needs no API key — that's the point: re-rendering the same
+  // window is free and byte-identical, so only a real content change moves
+  // the digest.
+  const fp = ledeInputFingerprint({ meetings: mtg, events: ev, cadence });
+  const cache = loadLedeCache(cacheFile);
+  if (cache[fp] && cache[fp].lede) {
+    console.log('  i Rick lede cache hit (' + fp + ') — no Claude call');
+    return cache[fp].lede;
+  }
+
+  // Log the fingerprint on a MISS too: when a digest re-render moves the lede,
+  // this is the one line that says why (the inputs changed, and to what key).
+  console.log('  i Rick lede cache miss (' + fp + ') — generating');
+  const key = apiKey || process.env.ANTHROPIC_API_KEY;
+  if (!key) { console.log('  i No ANTHROPIC_API_KEY — skipping Rick lede (using fallback)'); return null; }
   try {
     const raw = await callClaude(key, ledePrompt({ meetings: mtg, events: ev, cadence }), 500);
     const m = raw.match(/\{[\s\S]*\}/);          // tolerate a stray markdown fence
     const parsed = JSON.parse(m ? m[0] : raw);
     const lede = String(parsed.lede || '').trim();
+    if (lede) { cache[fp] = { lede, at: new Date().toISOString().slice(0, 10) }; saveLedeCache(cacheFile, cache); }
     return lede || null;
   } catch (e) {
     console.log('  ! Rick lede generation failed (' + e.message + ') — using fallback');
@@ -100,4 +167,4 @@ async function generateRickLede({ meetings, events, apiKey, cadence } = {}) {
   }
 }
 
-module.exports = { generateRickLede, ledePrompt, RICK_VOICE };
+module.exports = { generateRickLede, ledePrompt, RICK_VOICE, ledeInputFingerprint };

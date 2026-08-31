@@ -16,6 +16,23 @@ on:
                            #   commits only if the render changed, so running
                            #   both DST twins is harmless. (Wed→Thu 2026-07-23
                            #   with the weekend send moving Thu→Fri.)
+  # Re-render as soon as the bot data the digest reads actually CHANGES.
+  # Without this the digest only refreshed on the crons above, so an agenda
+  # that posted after a run sat unpublished for up to a day — the Aug 31 case:
+  # the Telluride Housing Authority Subcommittee agenda landed in
+  # js/gov-helpers.js at the 13:13 UTC content refresh, but digest/week.html
+  # had last rendered at 18:48 UTC the previous evening and still said the
+  # agenda wasn't posted. (A `push` trigger can't do this job: pushes made with
+  # the workflow GITHUB_TOKEN — i.e. every bot commit — do not fire `on: push`.
+  # `workflow_run` does.)
+  #
+  # Safe to run often: the render is deterministic for unchanged inputs (the
+  # Rick lede is content-addressed in data/rick-lede-cache.json), the commit
+  # step is a no-op when nothing changed, and an APPROVED digest stays frozen
+  # behind its .lock.json.
+  workflow_run:
+    workflows: ['Content Refresh']
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -25,6 +42,12 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    # On a workflow_run trigger, only follow a SUCCESSFUL Content Refresh — a
+    # failed one may have written nothing (or partial data), and re-rendering
+    # from it would just churn. Scheduled/dispatch runs always proceed.
+    if: >-
+      github.event_name != 'workflow_run' ||
+      github.event.workflow_run.conclusion == 'success'
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
@@ -80,11 +103,27 @@ jobs:
           export WK WE   # ISO weekStart per digest → the desk passes it to /save so the lock matches
           export GEN="$(date -u '+%Y-%m-%d %H:%M UTC')"
           python3 - <<'PY'
-          import json, os
-          m={"generated":os.environ["GEN"],"digests":{
+          import json, os, subprocess
+          digests={
             "weekly":{"name":"The Week Ahead Outlook","subject":os.environ["WK_SUBJ"],"covers":os.environ["WK_COV"],"weekStart":os.environ["WK"],"audience":"Weekly Update","file":"digest/week.html"},
-            "weekend":{"name":"The Weekend Ahead Outlook","subject":os.environ["WE_SUBJ"],"covers":os.environ["WE_COV"],"weekStart":os.environ["WE"],"audience":"Weekly Update","file":"digest/weekend.html"}}}
-          open("digest/manifest.json","w").write(json.dumps(m,indent=2)+"\n")
+            "weekend":{"name":"The Weekend Ahead Outlook","subject":os.environ["WE_SUBJ"],"covers":os.environ["WE_COV"],"weekStart":os.environ["WE"],"audience":"Weekly Update","file":"digest/weekend.html"}}
+          # "generated" is a wall-clock stamp, so rewriting it unconditionally
+          # made EVERY run a change — which was tolerable on a daily cron but
+          # would be ~8 empty commits a day now that this workflow also runs
+          # after each Content Refresh. Only advance the stamp when something
+          # real moved (a rendered digest, or a lock added/removed); otherwise
+          # carry the previous one forward so the run is a true no-op.
+          moved=[l for l in subprocess.run(["git","status","--porcelain","digest/"],
+                 capture_output=True,text=True).stdout.splitlines()
+                 if l.strip() and not l.split()[-1].endswith("digest/manifest.json")]
+          old={}
+          try: old=json.load(open("digest/manifest.json"))
+          except Exception: pass
+          gen=os.environ["GEN"]
+          if not moved and old.get("digests")==digests and old.get("generated"):
+              gen=old["generated"]
+              print("no digest changes — carrying generated stamp forward")
+          open("digest/manifest.json","w").write(json.dumps({"generated":gen,"digests":digests},indent=2)+"\n")
           print("manifest:",os.environ["WK_SUBJ"],"|",os.environ["WE_SUBJ"])
           PY
       - name: Commit if changed
@@ -92,6 +131,11 @@ jobs:
           git config user.name "Gov Hub Bot"
           git config user.email "bot@livabletelluride.org"
           git add -A digest/   # -A so a deleted (stale) lock file is staged too
+          # The lede cache has to PERSIST between runs to do its job — CI starts
+          # from a fresh checkout, so an uncommitted cache is a guaranteed miss
+          # (and a reworded lede) every single run. Same reason
+          # data/meeting-hooks-cache.json is committed.
+          if [ -f data/rick-lede-cache.json ]; then git add data/rick-lede-cache.json; fi
           if git diff --cached --quiet; then
             echo "no digest changes"
           else
