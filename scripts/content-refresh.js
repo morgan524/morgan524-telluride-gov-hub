@@ -1229,6 +1229,56 @@ async function fetchTownTellurideMeetings(now, horizon) {
   return out;
 }
 
+// Hand-verified {civicClerkId: fileId} escape hatch from gov-data.js, used
+// ONLY when the API reports no agenda file for an event. CivicClerk's
+// publishedFiles list is not always complete: on 2026-08-31 the Sep 2 BOCC
+// (event 887) had a live agenda at /event/887/files/agenda/1980 that the API
+// never listed, so every card and the weekly digest said "agenda hasn't been
+// posted yet" for five days.
+//
+// COUNTY_CIVICCLERK_AGENDA_FILES has existed in gov-data.js since the same
+// class of miss in April/May 2026, but its only reader was deleted in a
+// refactor, so the three entries in it have been dead ever since. This is that
+// reader, restored. An override never overrides anything: it fills in only
+// where pickAgendaFile() found nothing, so a real published file always wins
+// and a stale hand entry can't shadow it.
+let _countyAgendaFileOverrides = null;
+function countyAgendaFileOverrides() {
+  if (_countyAgendaFileOverrides) return _countyAgendaFileOverrides;
+  try {
+    _countyAgendaFileOverrides = extractJsObject(readJsFile(GOV_DATA_JS), 'COUNTY_CIVICCLERK_AGENDA_FILES') || {};
+  } catch (e) {
+    console.warn(`  COUNTY_CIVICCLERK_AGENDA_FILES load error: ${e.message}`);
+    _countyAgendaFileOverrides = {};
+  }
+  return _countyAgendaFileOverrides;
+}
+
+// Resolve one CivicClerk event to its agenda document URL, or '' when the
+// county genuinely hasn't published one. Shared by fetchSmcCountyMeetings()
+// (which feeds MEETING_AGENDA_META) and syncCountyAgendas() (which patches
+// COUNTY_CACHED_DATA) so the two can never disagree about whether an agenda
+// exists — they used to carry two copies of the same `f.type === 'Agenda'`
+// line. `label` just tags the log line with which pass reported the miss.
+const _countyAgendaLogged = new Set();   // one line per event per run, not per pass
+function countyAgendaFor(ev, label) {
+  const base = `${AGENDA_SOURCES.county.portalBase}/event/${ev.id}/files/agenda/`;
+  const file = pickAgendaFile(ev.publishedFiles);
+  if (file) return { url: `${base}${file.fileId}`, name: file.name || '' };
+
+  const say = (msg) => { if (!_countyAgendaLogged.has(ev.id)) { _countyAgendaLogged.add(ev.id); console.log(msg); } };
+  const overrideFileId = countyAgendaFileOverrides()[ev.id];
+  if (overrideFileId) {
+    say(`    County event ${ev.id} (${ev.eventName}): API lists no agenda; using verified override file ${overrideFileId}`);
+    return { url: `${base}${overrideFileId}`, name: '' };
+  }
+  // Not an error — most events legitimately have no agenda yet. Logged so the
+  // next "the agenda is right there and the site says it isn't" is one grep
+  // away instead of a five-day mystery.
+  say(`    ${label}: no agenda file for event ${ev.id} (${ev.eventName}) — publishedFiles: ${describePublishedFiles(ev.publishedFiles)}`);
+  return { url: '', name: '' };
+}
+
 /**
  * Fetch upcoming San Miguel County meetings from the CivicClerk OData API.
  *
@@ -1238,8 +1288,9 @@ async function fetchTownTellurideMeetings(now, horizon) {
  *   - source: 'county'
  *   - date: 'YYYY-MM-DD' (real event date, not RSS pubDate)
  *   - title: eventName
- *   - agendaUrl: portal /event/<id>/files/agenda/<fileId> URL when a
- *     publishedFile of type "Agenda" exists; otherwise empty string
+ *   - agendaUrl: portal /event/<id>/files/agenda/<fileId> URL, resolved by
+ *     countyAgendaFor() from the event's publishedFiles (or the verified
+ *     COUNTY_CIVICCLERK_AGENDA_FILES override); otherwise empty string
  *   - hasAgenda: boolean
  *   - agendaSeedText: a fallback "agenda body" cobbled together from the
  *     API's eventName + eventDescription + agendaName + categoryName.
@@ -1282,12 +1333,7 @@ async function fetchSmcCountyMeetings(now, horizon) {
     // cases (timezone math, removed events).
     if (startDate < now || startDate > horizon) continue;
 
-    const agendaFile = Array.isArray(ev.publishedFiles)
-      ? ev.publishedFiles.find((f) => f && f.type === 'Agenda')
-      : null;
-    const agendaUrl = agendaFile
-      ? `${AGENDA_SOURCES.county.portalBase}/event/${ev.id}/files/agenda/${agendaFile.fileId}`
-      : '';
+    const { url: agendaUrl, name: agendaFileName } = countyAgendaFor(ev, 'CivicClerk summaries');
 
     // Build a structured "seed" agenda body. Not the actual PDF content
     // (see extractAgendaText note), but more useful for Claude than just
@@ -1297,7 +1343,7 @@ async function fetchSmcCountyMeetings(now, horizon) {
       ev.eventName    ? `Event: ${ev.eventName}`       : '',
       ev.agendaName   ? `Agenda: ${ev.agendaName}`     : '',
       ev.eventDescription ? `Description: ${ev.eventDescription}` : '',
-      agendaFile?.name ? `Agenda file: ${agendaFile.name}` : '',
+      agendaFileName ? `Agenda file: ${agendaFileName}` : '',
     ].filter(Boolean);
     const agendaSeedText = seedParts.join('\n');
 
@@ -3257,7 +3303,9 @@ function readJsFile(filePath) {
 const { extractJsArray, extractJsObject } = require('./lib/extract.js');
 // JS→JSON migration (Phase 1): dual-write mirrored arrays to data/<name>.json.
 const { mirrorAll } = require('./lib/json-mirror.js');
-const { countyRowsFromEvents, mergeCountyRows } = require('./lib/civicclerk-events.js');
+const {
+  countyRowsFromEvents, mergeCountyRows, pickAgendaFile, describePublishedFiles,
+} = require('./lib/civicclerk-events.js');
 const { stripDescPreamble } = require('./lib/clean-text.js');
 
 /**
@@ -5651,11 +5699,8 @@ async function syncCountyAgendas() {
     // Limit to BOCC / Open Space / Planning to avoid stomping on unrelated
     // CACHED entries with the same date.
     if (!/board of county commissioners|planning commission|open space/i.test(ev.eventName || '')) continue;
-    const pubFiles = Array.isArray(ev.publishedFiles) ? ev.publishedFiles : [];
-    const agendaFile = pubFiles.find(f => f && f.type === 'Agenda');
-    if (!agendaFile) continue;
-    const agendaUrl =
-      `${AGENDA_SOURCES.county.portalBase}/event/${ev.id}/files/agenda/${agendaFile.fileId}`;
+    const { url: agendaUrl } = countyAgendaFor(ev, 'CivicClerk agenda sync');
+    if (!agendaUrl) continue;
     const start = new Date(ev.startDateTime || ev.eventDate);
     if (isNaN(start)) continue;
     // gov-data.js dates are in MT local calendar terms ("May 27, 2026"),
