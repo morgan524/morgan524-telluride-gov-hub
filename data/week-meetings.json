@@ -1,5 +1,25 @@
 [
   {
+    "source": "norwood",
+    "sourceLabel": "Town of Norwood",
+    "title": "NWC Work Session",
+    "date": "2026-09-01",
+    "time": "",
+    "location": "1670 Naturita St, Norwood CO 81423",
+    "agendaUrl": "",
+    "packetUrl": "",
+    "link": "https://www.norwoodtown.com/files/3e106c50e/09.01.2026+NWC+WORK+SESSION.pdf",
+    "hasAgenda": true,
+    "summary": "",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "",
+    "commentEmail": "cross@norwoodtown.com",
+    "hook": ""
+  },
+  {
     "source": "telluride",
     "sourceLabel": "Town of Telluride",
     "title": "Town Council",
@@ -637,6 +657,26 @@
     "zoomPhone": "",
     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams",
     "commentEmail": "dcandelaria@telluride.gov",
+    "hook": ""
+  },
+  {
+    "source": "telluride",
+    "sourceLabel": "Town of Telluride",
+    "title": "Special Town Council",
+    "date": "2026-09-30",
+    "time": "",
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313",
+    "packetUrl": "",
+    "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313",
+    "hasAgenda": false,
+    "summary": "The September 30, 2026 Special Town Council agenda hasn't been posted yet.",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams",
+    "commentEmail": "townclerk@telluride.gov",
     "hook": ""
   }
 ]

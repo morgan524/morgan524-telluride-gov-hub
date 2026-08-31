@@ -1,22 +1,22 @@
 {
-  "hash": "7e5b668b6e72f5b506e9c50c4108dade2680307e",
-  "lede": "The biggest thing on the board this week is Wednesday's County Commissioner meeting, where the BOCC will ratify a policy change at Pinion Park that drops income eligibility to 80% AMI — a quiet threshold shift that determines who actually gets a deed-restricted unit in this valley. Alongside that, Tuesday's Town Council work sessions dig into the Comprehensive Plan and a proposed third-party audit of rental housing policies, and the Housing Authority Subcommittee takes up a real exception request from homeowners needing a roof on their deed-restricted unit at Gold Run.",
+  "hash": "f36a5f9865610ec61155c3c5fec6f9bf95b48ea9",
+  "lede": "The biggest thing on the calendar this week is Tuesday's Town Council work session, where the comp plan, gondola subcommittee, and — most consequentially — a third-party audit of the Town's rental housing policies all come up for review; that last piece directly shapes who can afford to stay here. Wednesday's County meeting carries real weight too, with the BOCC set to ratify an income-eligibility shift at Pinion Park to 80% AMI, quietly redrawing who qualifies for a deed-restricted unit.",
   "notable": [
     {
       "id": 0,
-      "stake": "Rental housing audit and Comprehensive Plan goals up for substantive Council review."
-    },
-    {
-      "id": 3,
-      "stake": "Martin exception request decides whether deed-restricted owners can fund a $47K roof repair."
+      "stake": "Third-party rental housing audit review could reshape who stays in the canyon."
     },
     {
       "id": 4,
-      "stake": "BOCC vote to shift Pinion Park income eligibility to 80% AMI changes who qualifies for a unit."
+      "stake": "Martin exception decision on $47K roof repair for deed-restricted Gold Run unit."
     },
     {
       "id": 5,
-      "stake": "Land Use Code definition changes being shaped before any public hearing is held."
+      "stake": "BOCC vote to shift Pinion Park income eligibility to 80% AMI changes who qualifies."
+    },
+    {
+      "id": 6,
+      "stake": "Land Use Code definition changes — where zoning rules get quietly rewritten first."
     }
   ]
 }

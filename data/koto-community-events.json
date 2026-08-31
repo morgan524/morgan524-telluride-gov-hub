@@ -1,27 +1,5 @@
 [
   {
-    "title": "Tennis Clinic 3.0-4.0",
-    "link": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-31/",
-    "description": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    "pubDate": "2026-08-31T09:30:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "imageUrl": ""
-  },
-  {
-    "title": "Tennis Clinic 4.0+",
-    "link": "https://koto.org/event/tennis-clinic-4-0/2026-08-31/",
-    "description": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    "pubDate": "2026-08-31T11:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "imageUrl": ""
-  },
-  {
     "title": "Emergency Preparedness For People, Pets and Our Communities",
     "link": "https://koto.org/event/emergency-preparedness-for-people-pets-and-our-communities/",
     "description": "ARE YOU READY? Wildfires, floods and other emergencies can happen quickly. Join Patagonia, San Miguel County Emergency Management, Second Chance Humane Society and Just A Bunch of Roadies for a practical one-hour session on how to prepare yourself, your family and your pets before an emergency happens. Learn how to make a plan, stay informed, prepare your animals and build an Emergency Go Kit—and find out how you can help provide Go Kits to vulnerable families in our region.",
@@ -31,17 +9,6 @@
     "category": "Community Event",
     "location": "Patagonia Telluride, Telluride Retail",
     "imageUrl": "https://koto.org/wp-content/uploads/2026/08/Emergency-Preparedness-Flyer-JABOR.png"
-  },
-  {
-    "title": "Birding Walk with Katie Triest",
-    "link": "https://koto.org/event/birding-walk-with-katie-triest/",
-    "description": "Join ornithological expert Katie Triest for this series of chill walks where you'll learn amazing facts and practice identifying local birds! Meet at the post office and we'll head to the beaver ponds at the edge of Town Park. Bring your own binoculars if you have them and make sure to dress for variant weather. Be on time, and PLEASE cancel your reservation if you are unable to make it. This event is very popular and the waiting list is long.",
-    "pubDate": "2026-09-01T08:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Post Office",
-    "imageUrl": ""
   },
   {
     "title": "Tennis Clinic 3.0-4.0",
@@ -415,6 +382,17 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "RESCHEDULED: Birding Walk with Katie Triest",
+    "link": "https://koto.org/event/birding-walk-with-katie-triest/",
+    "description": "Join ornithological expert Katie Triest for this series of chill walks where you'll learn amazing facts and practice identifying local birds! Meet at the post office and we'll head to the beaver ponds at the edge of Town Park. Bring your own binoculars if you have them and make sure to dress for variant weather. Be on time, and PLEASE cancel your reservation if you are unable to make it. This event is very popular and the waiting list is long.",
+    "pubDate": "2026-09-08T08:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Post Office",
     "imageUrl": ""
   },
   {
