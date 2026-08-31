@@ -750,7 +750,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Thursday night pickleball with no experience necessary; all supplies provided.",
+    "desc": "Thursday night Pickleball with no experience necessary; all supplies provided.",
     "type": "Outdoors & Sports"
   },
   {
@@ -1603,7 +1603,7 @@
     "img": "https://telluridechambermusic.org/concerts/community-sep.webp",
     "category": "Concert",
     "source": "Telluride Chamber Music",
-    "desc": "An hour of chamber music on the deck — the perfect way to unwind.",
+    "desc": "An hour of chamber music on the deck — the perfect way to unwind. Free event.",
     "type": "Music"
   },
   {
@@ -1682,7 +1682,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Thursday night pickleball with no experience necessary; all supplies provided.",
+    "desc": "Thursday night Pickleball with no experience necessary; all supplies provided.",
     "type": "Outdoors & Sports"
   },
   {
@@ -2300,7 +2300,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Thursday night pickleball with no experience necessary; all supplies provided.",
+    "desc": "Thursday night Pickleball with no experience necessary; all supplies provided.",
     "type": "Outdoors & Sports"
   },
   {
@@ -2762,7 +2762,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Thursday night pickleball with no experience necessary; all supplies provided.",
+    "desc": "Thursday night Pickleball with no experience necessary; all supplies provided.",
     "type": "Outdoors & Sports"
   },
   {
@@ -3140,7 +3140,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Thursday night pickleball with no experience necessary; all supplies provided.",
+    "desc": "Thursday night Pickleball with no experience necessary; all supplies provided.",
     "type": "Outdoors & Sports"
   },
   {
@@ -3329,6 +3329,19 @@
     "type": "Music"
   },
   {
+    "title": "Weekly Young Adult Gathering",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-10-06",
+    "time": "6:00 PM",
+    "location": "The Well, 122 S Aspen",
+    "town": "",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Ice Park Advisory Team",
     "href": "https://events.ourayridgwayevents.com/event/ice-park-advisory-team",
     "date": "2026-10-07",
@@ -3367,6 +3380,19 @@
     "desc": "The Sheridan Arts Foundation’s 6th annual Not- So Young People’s Theater production! NYSPT presents Shrek The …",
     "type": "Arts & Film",
     "endDate": "2026-10-12"
+  },
+  {
+    "title": "Pickleball Nights",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-10-08",
+    "time": "7:00-9:00 PM",
+    "location": "Telluride Racket Club",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "Thursday night Pickleball with no experience necessary; all supplies provided.",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "WOWZERS",

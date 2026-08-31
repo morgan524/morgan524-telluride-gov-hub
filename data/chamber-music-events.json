@@ -1,20 +1,8 @@
 [
   {
-    "title": "Chill with Chamber Music! — Norwood",
-    "link": "https://telluridechambermusic.org/concert/norwood-aug",
-    "description": "An hour of gorgeous music. The perfect way to unwind after your day.",
-    "date": "2026-08-27",
-    "time": "6:00 PM",
-    "source": "chamber-music",
-    "sourceLabel": "Telluride Chamber Music",
-    "category": "Concert",
-    "location": "The Livery, Norwood, CO",
-    "imageUrl": "https://telluridechambermusic.org/concerts/norwood-aug.webp"
-  },
-  {
     "title": "Telluride Community Concert — September",
     "link": "https://telluridechambermusic.org/concert/community-sep",
-    "description": "An hour of chamber music on the deck — the perfect way to unwind.",
+    "description": "An hour of chamber music on the deck — the perfect way to unwind. Free event.",
     "date": "2026-09-10",
     "time": "6:00 PM",
     "source": "chamber-music",
