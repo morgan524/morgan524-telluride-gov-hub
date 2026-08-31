@@ -190,6 +190,37 @@ Audit with `node scripts/audit-meeting-summaries.js /tmp/gd.js /tmp/gh.js 21 45`
 same predicates so the audit and the email can never disagree — **if you change
 the agenda logic here, mirror it in the audit script.**
 
+### The other half: an agenda that exists but never got ingested
+
+The three rejection cases above are the RENDER side, and they are correct — but
+they are only ever as honest as the data. If the ingest misses an agenda that
+was posted, the summary stays on its "hasn't been posted yet" stub, case 1 fires
+on that wording, and the digest suppresses a link to a document that is sitting
+right there on the portal. From the outside this is indistinguishable from a
+county that hasn't posted yet, which is what made it take five days to notice.
+
+So when a reader says "the agenda is up and the site says it isn't", check the
+ingest before touching the render rules:
+
+- **County (CivicClerk).** `countyAgendaFor()` in `scripts/content-refresh.js`
+  resolves the agenda file for an event via `pickAgendaFile()`
+  (`scripts/lib/civicclerk-events.js`). It used to be a bare
+  `f.type === 'Agenda'` — an exact, case-sensitive match, duplicated in two
+  places, silent when it missed. It now matches agenda-ish types and file names
+  in descending order of confidence, logs the event's whole `publishedFiles`
+  list when it still finds nothing, and falls back to
+  `COUNTY_CIVICCLERK_AGENDA_FILES` in `gov-data.js` — a hand-VERIFIED
+  `{civicClerkId: fileId}` map for agendas the API refuses to list at all
+  (observed: event 887, Sep 2 2026 BOCC, file 1980). A real published file
+  always wins over an override.
+- **Timing.** `MEETING_AGENDA_META`'s `ph` hash is the fingerprint of the
+  summary inputs. If it hasn't changed across days of commits
+  (`git log -S'"<source>|<date>|<title>":'`), the ingest never saw anything new
+  — that is an ingest miss, not a slow AI pass.
+
+`digest-refresh.yml` re-renders on every Content Refresh, so once the data is
+right the link appears within minutes rather than at the next daily cron.
+
 Note `MANUAL_SUMMARIES` and `MEETING_PREVIEWS` live in **`js/gov-helpers.js`**
 (~lines 940 and 503), not `gov-data.js`. `AI_SUMMARIES` is Firestore-backed and
 inlined ONLY on `gov-hub.html`, so it's empty in any node-side render.

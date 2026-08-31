@@ -153,7 +153,55 @@ function mergeCountyRows(existing, fresh, opts = {}) {
   return [...byKey.values()].sort((a, b) => new Date(a.date) - new Date(b.date));
 }
 
+// ── Which published file IS the agenda? ────────────────────────────────────
+//
+// The rule used to be `f.type === 'Agenda'` — one exact, case-sensitive match
+// on one field, with no log line when it missed. That makes "the county hasn't
+// posted an agenda" and "the county posted one under a name we don't
+// recognise" look identical from the outside, and the second is the one that
+// silently ships a wrong "agenda hasn't been posted yet" card.
+//
+// Observed 2026-08-31: San Miguel event 923 (Sep 10 Planning Commission)
+// ingested agenda file 1979 on Aug 27, while event 887 (Sep 2 BOCC) never
+// picked up file 1980 — the adjacent file id, so uploaded in the same sitting.
+// The Sep 2 card sat on the placeholder stub for five days and ~30 refresh
+// runs, and the weekly digest suppressed its "View agenda" link the whole time
+// (correctly, per the never-link-to-an-agenda-that-doesn't-exist rule: the
+// summary said the agenda was pending, so the rule believed it).
+//
+// So: match in descending order of confidence, and never invent a file. Every
+// candidate comes from the API's own publishedFiles list, so a URL built from
+// one always points at a document the county really published. Minutes and
+// packets must not outrank a plain agenda, which is why this is an ordered
+// walk rather than a single predicate.
+function pickAgendaFile(publishedFiles) {
+  const files = (Array.isArray(publishedFiles) ? publishedFiles : [])
+    .filter((f) => f && f.fileId != null);
+  const typeOf = (f) => String(f.type || '').trim().toLowerCase();
+  const nameOf = (f) => String(f.name || '').trim().toLowerCase();
+  return files.find((f) => typeOf(f) === 'agenda')                      // "Agenda"
+      || files.find((f) => /^agenda\b/.test(typeOf(f)))                 // "Agenda Packet", "Agenda - Amended"
+      || files.find((f) => /agenda/.test(typeOf(f)))                    // "Revised Agenda", "AgendaPacket"
+      // Type missing or unrecognised, but the file names itself. Exclude
+      // minutes: "Agenda and Minutes" is the record of a PAST meeting.
+      || files.find((f) => /agenda/.test(nameOf(f)) && !/minutes/.test(nameOf(f)))
+      || null;
+}
+
+// One-line summary of what the API DID publish for an event, for the log we
+// print when pickAgendaFile comes back empty. Without this, a miss is
+// invisible and the only way to notice is a reader complaining that a card
+// says "not posted yet" about an agenda they are looking at.
+function describePublishedFiles(publishedFiles) {
+  const files = (Array.isArray(publishedFiles) ? publishedFiles : []).filter(Boolean);
+  if (!files.length) return 'none';
+  return files
+    .map((f) => `${f.type || '?'}:${f.name || '?'}#${f.fileId == null ? '?' : f.fileId}`)
+    .join(' | ');
+}
+
 module.exports = {
   wallParts, fmtMeetingDate, fmtMeetingTime, countyTypeOf, formatEventLocation,
   countyRowsFromEvents, mergeCountyRows, MONTHS,
+  pickAgendaFile, describePublishedFiles,
 };

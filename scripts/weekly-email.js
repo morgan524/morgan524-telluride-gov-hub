@@ -1017,6 +1017,12 @@ if (!LEDE_IS_OVERRIDE) {
     meetings: WEEKEND ? [] : meetings.map((m) => ({ title: m.name, date: m.date, summary: m.summary })),
     events: chosen.map((e) => ({ title: e.title, date: e.date, location: townLabel(e), summary: e.summary })),
     apiKey: process.env.ANTHROPIC_API_KEY,
+    // Content-addressed so re-rendering an UNCHANGED window is free and
+    // byte-identical. digest-refresh.yml now re-renders after every Content
+    // Refresh (so a newly posted agenda reaches the digest in minutes instead
+    // of waiting for the next daily cron); without this the reworded lede
+    // would make every one of those runs look like a change.
+    cacheFile: path.join(__dirname, '..', 'data', 'rick-lede-cache.json'),
   });
   if (rickLede) LEDE = rickLede;
 }
