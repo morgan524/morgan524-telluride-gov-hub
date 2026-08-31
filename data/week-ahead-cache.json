@@ -1,22 +1,22 @@
 {
-  "hash": "667a6bf7704ae80d2c35b76f80220b5268eb9e58",
-  "lede": "The biggest thing on the government calendar this week is Tuesday's Town Council work session, where the Comp Plan, the Gondola Subcommittee, and — most critically — a third-party audit of the Town's rental housing policies all get air time; that housing audit question touches something fundamental about who can actually afford to live here, so it's worth paying attention to. Alongside that, the Housing Authority Subcommittee takes up the Martin exception request Wednesday, a real-stakes decision about whether deed-restricted homeowners can get roof repairs approved. The week also brings the Wilkinson Library's Youth Area grand opening Wednesday and a drone show Thursday.",
+  "hash": "7e5b668b6e72f5b506e9c50c4108dade2680307e",
+  "lede": "The biggest thing on the board this week is Wednesday's County Commissioner meeting, where the BOCC will ratify a policy change at Pinion Park that drops income eligibility to 80% AMI — a quiet threshold shift that determines who actually gets a deed-restricted unit in this valley. Alongside that, Tuesday's Town Council work sessions dig into the Comprehensive Plan and a proposed third-party audit of rental housing policies, and the Housing Authority Subcommittee takes up a real exception request from homeowners needing a roof on their deed-restricted unit at Gold Run.",
   "notable": [
     {
       "id": 0,
-      "stake": "Third-party rental housing audit review could shape who stays in the canyon."
+      "stake": "Rental housing audit and Comprehensive Plan goals up for substantive Council review."
     },
     {
       "id": 3,
-      "stake": "Vote on whether deed-restricted homeowners can approve a $47K roof repair."
+      "stake": "Martin exception request decides whether deed-restricted owners can fund a $47K roof repair."
+    },
+    {
+      "id": 4,
+      "stake": "BOCC vote to shift Pinion Park income eligibility to 80% AMI changes who qualifies for a unit."
     },
     {
       "id": 5,
-      "stake": "Land Use Code definition changes being shaped before any public hearing stage."
-    },
-    {
-      "id": 6,
-      "stake": "Conditional-use permit for tent and food truck goes to Council via DRB recommendation."
+      "stake": "Land Use Code definition changes being shaped before any public hearing is held."
     }
   ]
 }
