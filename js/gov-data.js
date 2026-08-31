@@ -37,6 +37,14 @@ const COUNTY_HOSTED_PACKETS = {
 // when the API reports no agenda file — a real published file always wins, so
 // a stale entry here can never shadow one.
 //
+// Reach for this LAST. The 2026-08-31 miss (Sep 2 BOCC, event 887) looked like
+// an API omission and wasn't: the file was listed all along, under a type the
+// old exact `f.type === 'Agenda'` match didn't recognise. pickAgendaFile()
+// handles that shape now, and the override entry added for 887 never fired, so
+// it was removed. Before adding a row here, read the run log's
+// `no agenda file for event <id> — publishedFiles: …` line: if it names any
+// file at all, the matcher is what needs widening, not this map.
+//
 // Verify before adding: open
 // https://sanmiguelcoco.portal.civicclerk.com/event/<civicClerkId>/files/agenda/<fileId>
 // and confirm it renders that meeting's agenda. Anything unverified would put
@@ -46,7 +54,6 @@ const COUNTY_CIVICCLERK_AGENDA_FILES = {
   1025: 1652,  // Planning Commission Apr 2 2026
   999:  1702,  // BOCC May 13 2026
   919:  1705,  // Planning Commission May 14 2026
-  887:  1980,  // BOCC Sep 2 2026 — verified by Morgan 2026-08-31; API never listed it
 };
 
 const COUNTY_CACHE_DATE = '2026-08-31';

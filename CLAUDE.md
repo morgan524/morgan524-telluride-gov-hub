@@ -210,9 +210,14 @@ ingest before touching the render rules:
   in descending order of confidence, logs the event's whole `publishedFiles`
   list when it still finds nothing, and falls back to
   `COUNTY_CIVICCLERK_AGENDA_FILES` in `gov-data.js` — a hand-VERIFIED
-  `{civicClerkId: fileId}` map for agendas the API refuses to list at all
-  (observed: event 887, Sep 2 2026 BOCC, file 1980). A real published file
-  always wins over an override.
+  `{civicClerkId: fileId}` map for agendas the API refuses to list at all. A
+  real published file always wins over an override.
+  **Widen the matcher before reaching for the map.** The 2026-08-31 miss (Sep 2
+  BOCC, event 887, file 1980) presented as an API omission and was not: the
+  file was listed the whole time, under a type the exact match didn't
+  recognise. The run log tells you which it is — `no agenda file for event
+  <id> — publishedFiles: …` prints `none` for a genuine omission and names the
+  files otherwise.
 - **Timing.** `MEETING_AGENDA_META`'s `ph` hash is the fingerprint of the
   summary inputs. If it hasn't changed across days of commits
   (`git log -S'"<source>|<date>|<title>":'`), the ingest never saw anything new
