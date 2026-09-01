@@ -1,159 +1,5 @@
 [
   {
-    "title": "Movies Under the Stars",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    "description": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    "pubDate": "2026-08-22T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
-  },
-  {
-    "title": "Mind Blown Telluride",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
-    "description": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
-    "pubDate": "2026-08-22T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
-  },
-  {
-    "title": "Sunday Rehab at Alloy Kitchen",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
-    "description": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
-    "pubDate": "2026-08-23T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
-  },
-  {
-    "title": "Bike & Brewery Tour",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
-    "description": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
-    "pubDate": "2026-08-24T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
-  },
-  {
-    "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
-    "description": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
-    "pubDate": "2026-08-25T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
-  },
-  {
-    "title": "Earth’s Most Resilient Life, Our Greatest Hope: Exploring Unusual Microbes to Solve Humanity’s Biggest Challenges",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/earths-most-resilient-life-our-greatest-hope-exploring-unusual-microbes-to-solve-humanitys-biggest-challenges/",
-    "description": "Join us at the Telluride Innovation Center as Braden Tierney, cofounder and executive director of the Two Frontiers Project,",
-    "pubDate": "2026-08-25T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49629/microbes_tomv.png"
-  },
-  {
-    "title": "Market on the Plaza",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
-    "description": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
-    "pubDate": "2026-08-26T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
-  },
-  {
-    "title": "Gaiascope Opening Night",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/gaiascope-opening-night/",
-    "description": "Celebrate the opening of Gaiascope with artist Brooke Einbender during a special golden hour gathering in the Heritage Plaza, Mountain Village.",
-    "pubDate": "2026-08-26T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49529/akb_1557-1.jpeg"
-  },
-  {
-    "title": "Water in the West: The Colorado River and the Future of Lake Powell",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/water-in-the-west-the-colorado-river-and-the-future-of-lake-powell/",
-    "description": "Join Sheep Mountain Alliance, San Juan Citizens Alliance, Patagonia Telluride and Wilkinson Public Library for a conversation with author and journalist Zak",
-    "pubDate": "2026-08-26T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49683/water_in_the_west_instagram_copy.jpg"
-  },
-  {
-    "title": "Music on the Green Presents Cristina Vane",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-cristina-vane/",
-    "description": "Beyond The Groove and TMVOA (tmvoa.org) present Cristina Vane at Reflection Plaza in Mountain Village. The Friday shows are free, all ages and family friendly.",
-    "pubDate": "2026-08-28T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/48865/cristina_vane_1800x900px_1.png"
-  },
-  {
-    "title": "Camp Alderwild",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/camp-alderwild-1/",
-    "description": "Camp Alderwild returns to Telluride, Colorado August 28th + 29th with Of The Trees & Daily Bread.",
-    "pubDate": "2026-08-28T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49541/campalderwild_2026_telluride_support_1800x900.png"
-  },
-  {
-    "title": "Movies Under the Stars",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    "description": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    "pubDate": "2026-08-29T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
-  },
-  {
-    "title": "Mind Blown Telluride",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
-    "description": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
-    "pubDate": "2026-08-29T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
-  },
-  {
-    "title": "Sunday Rehab at Alloy Kitchen",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
-    "description": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
-    "pubDate": "2026-08-30T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
-  },
-  {
     "title": "Bike & Brewery Tour",
     "link": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     "description": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
@@ -396,7 +242,7 @@
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   },
   {
-    "title": "Telluride Adaptive Sports Presents the 27th Annual Bob Miller Memorial Golf Classic",
+    "title": "Telluride Adaptive Sports&#039; Bob Miller Memorial Golf Classic",
     "link": "https://townofmountainvillage.com/explore/events/all-events/telluride-adaptive-sports-presents-the-27th-annual-bob-miller-memorial-golf-classic-1/",
     "description": "Tee off for a cause at 9,500 feet! Join the Telluride Adaptive Sports Program (TASP) for the 28th Annual Bob Miller Memorial Golf Tournament on Thursday,",
     "pubDate": "2026-09-17T12:00:00.000Z",
@@ -460,5 +306,104 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
+  },
+  {
+    "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
+    "description": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
+    "pubDate": "2026-09-22T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
+  },
+  {
+    "title": "Market on the Plaza",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    "description": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    "pubDate": "2026-09-23T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    "title": "Movies Under the Stars",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    "description": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "pubDate": "2026-09-26T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
+  {
+    "title": "Mind Blown Telluride",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    "description": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    "pubDate": "2026-09-26T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
+  },
+  {
+    "title": "Sunday Rehab at Alloy Kitchen",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
+    "description": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
+    "pubDate": "2026-09-27T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
+  },
+  {
+    "title": "Bike & Brewery Tour",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    "description": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    "pubDate": "2026-09-28T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
+  },
+  {
+    "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
+    "description": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
+    "pubDate": "2026-09-29T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
+  },
+  {
+    "title": "Market on the Plaza",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    "description": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    "pubDate": "2026-09-30T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    "title": "Telluride Art Walk",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/telluride-art-walk-2/",
+    "description": "The Telluride Art Walk is a lively monthly celebration of art, community, and creativity in downtown Telluride and Mountain Village.",
+    "pubDate": "2026-10-01T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/48372/artwalk-1800x900.jpg"
   }
 ]

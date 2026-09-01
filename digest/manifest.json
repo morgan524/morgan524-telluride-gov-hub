@@ -1,19 +1,19 @@
 {
-  "generated": "2026-08-22 13:22 UTC",
+  "generated": "2026-09-01 17:01 UTC",
   "digests": {
     "weekly": {
       "name": "The Week Ahead Outlook",
-      "subject": "The Week Ahead Outlook - August 24 - August 30, 2026",
-      "covers": "Mon Aug 24 to Sun Aug 30, 2026",
-      "weekStart": "2026-08-24",
+      "subject": "The Week Ahead Outlook - September 7 - September 13, 2026",
+      "covers": "Mon Sep 7 to Sun Sep 13, 2026",
+      "weekStart": "2026-09-07",
       "audience": "Weekly Update",
       "file": "digest/week.html"
     },
     "weekend": {
       "name": "The Weekend Ahead Outlook",
-      "subject": "The Weekend Ahead Outlook - August 28 - August 30, 2026",
-      "covers": "Fri Aug 28 to Sun Aug 30, 2026",
-      "weekStart": "2026-08-28",
+      "subject": "The Weekend Ahead Outlook - September 4 - September 6, 2026",
+      "covers": "Fri Sep 4 to Sun Sep 6, 2026",
+      "weekStart": "2026-09-04",
       "audience": "Weekly Update",
       "file": "digest/weekend.html"
     }

@@ -13,27 +13,6 @@
     "url": "https://townofridgway.colorado.gov/resources/requests-for-proposals/bids"
   },
   {
-    "title": "Water Court Application -- Trout Lake Reservoir Storage Rights (Case No. 26CW3028)",
-    "entity": "Colorado District Court, Water Division No. 4",
-    "entityClass": "ent-county",
-    "entityLogo": "water_court",
-    "icon": "💧",
-    "iconClass": "type-bid",
-    "type": "Water Court",
-    "filterTag": "water-court",
-    "summary": "Telluride Preserve Homeowners Association filed an application to make absolute a 3.0 acre-foot conditional water right from Lake Fork of the San Miguel River for storage in Trout Lake Reservoir. The water right is for replacement of depletions and augmentation purposes, with beneficial use claimed as of June 16, 2025.",
-    "deadline": "Statutory protest period (typically 4-6 months from publication)",
-    "expires": "2026-08-31",
-    "dates": "6/11",
-    "papers": [
-      "ttimes_0611"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_6de56aef-d7ac-4c1e-bb5f-1bc3f669e424.html",
-    "address": "NE SW Section 8, Township 41 North, Range 9 West, NMPM",
-    "noticeKey": "26cw3028",
-    "caseNumber": "26CW3028"
-  },
-  {
     "title": "Probate Notice -- Claims Against Estate (Case No. 26PR30006)",
     "entity": "Estate of (unnamed), Patricia L. Bode Personal Representative",
     "entityClass": "ent-county",
@@ -138,26 +117,6 @@
     "caseNumber": "2026PR30008"
   },
   {
-    "title": "Public Notice -- Farmers' Water Development Company Replacement Share Certificate #887",
-    "entity": "Farmers' Water Development Company",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "💧",
-    "iconClass": "type-hearing",
-    "type": "Utilities",
-    "filterTag": "utilities",
-    "summary": "The Farmers' Water Development Company (FWDC) has received a written request to replace lost, destroyed, or wrongfully taken share certificate #887, currently issued in the name of A.F. Newans M.D., C.P. Unless a written objection is filed with FWDC at PO Box 10, Norwood, CO 81423 within 30 days of the last publication date in the Norwood Post, a replacement certificate will be issued and the original will be permanently cancelled. Last publication date in this series is July 30, 2026.",
-    "deadline": "2026-08-29",
-    "expires": "2026-08-29",
-    "dates": "7/23",
-    "papers": [
-      "ttimes_0723"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
-    "address": "PO Box 10, Norwood, Colorado 81423",
-    "noticeKey": "fwdc-share-cert-887-replacement"
-  },
-  {
     "title": "Foreclosure Sale Notice -- 350 S Mahoney Dr Unit 7, Telluride (Sale No. 202605)",
     "entity": "San Miguel County Public Trustee / Wilmington Savings Fund Society FSB",
     "entityClass": "ent-county",
@@ -177,26 +136,6 @@
     "address": "350 S Mahoney Drive, Unit 7, Telluride, Colorado 81435",
     "noticeKey": "foreclosure-202605-350-mahoney-unit7",
     "caseNumber": "202605"
-  },
-  {
-    "title": "Public Notice -- Farmers' Water Development Company Replacement Share Certificate #887",
-    "entity": "Farmers' Water Development Company",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "💧",
-    "iconClass": "type-hearing",
-    "type": "Utilities",
-    "filterTag": "utilities",
-    "summary": "The Farmers' Water Development Company (FWDC) has received a written request to replace lost, destroyed, or wrongfully taken share certificate #887, currently issued in the name of A.F. Newans M.D., C.P. Any written objection to the issuance of a replacement certificate must be filed with FWDC at PO Box 10, Norwood, CO 81423 within 30 days of the last publication date (July 30, 2026). If no objection is received, a replacement certificate will be issued and the original will be permanently cancelled.",
-    "deadline": "2026-08-29 (30 days after last publication 7/30/2026)",
-    "expires": "2026-08-29",
-    "dates": "7/30",
-    "papers": [
-      "ttimes_0730"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    "address": "Farmers' Water Development Company, PO Box 10, Norwood, CO 81423",
-    "noticeKey": "COL-000181-fwdc-share-887"
   },
   {
     "title": "Foreclosure Sale Notice -- 350 S Mahoney Dr Unit 7, Telluride (Sale No. 2026-05)",
@@ -431,5 +370,82 @@
     "url": "https://www.telluridenews.com/news/legals/article_7e6a7420-27c6-4f95-b0b8-101dfc5b4763.html",
     "address": "1370 Black Bear Road, Telluride, CO 81435",
     "noticeKey": "itb-telluride-street-mill-overlay-2026"
+  },
+  {
+    "title": "Public Hearing -- Adoption of 2024 International Building Code and Colorado Low Energy & Carbon Code",
+    "entity": "San Miguel County Board of Commissioners",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "The San Miguel County Board of Commissioners will hold a public hearing on September 16, 2026 at 9:00 AM in Telluride to consider adopting the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Written comments must be received by noon on September 10, 2026, limited to one page. Proposed amendments are available in the meeting agenda packet at the county website.",
+    "deadline": "2026-09-10T12:00:00 (written comments); hearing 2026-09-16T09:00:00",
+    "expires": "2026-09-16",
+    "dates": "8/27",
+    "papers": [
+      "ttimes_0827"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    "address": "Telluride, Colorado (San Miguel County)",
+    "noticeKey": "COL-000222-ibc-2024-hearing"
+  },
+  {
+    "title": "RFP -- Fuel Island Canopy Construction, Norwood Road & Bridge Maintenance Yard (COL-000219)",
+    "entity": "San Miguel County Road & Bridge Department",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County Road & Bridge is seeking proposals from qualified contractors to design, engineer, permit, and construct a fuel island canopy at the Norwood Road & Bridge Maintenance Yard, 39595 Highway 145, Norwood, CO. Proposals are due by 4:00 PM on September 3, 2026, submitted electronically; late proposals will not be accepted. Selection notification is expected by September 7, 2026.",
+    "deadline": "2026-09-03T16:00:00",
+    "expires": "2026-09-03",
+    "dates": "8/27",
+    "papers": [
+      "ttimes_0827"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    "address": "39595 Highway 145, Norwood, CO 81423",
+    "noticeKey": "COL-000219-fuel-island-canopy-norwood"
+  },
+  {
+    "title": "RFP -- San Miguel County Jail Repainting, Illium (COL-000224)",
+    "entity": "San Miguel County Fleet & Facilities Department",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County is requesting proposals from contractors to repaint the San Miguel County Jail located at 684 County Road 63L, Telluride (Illium), CO. RFP documents are available on the county website or from the Fleet & Facilities Department at 333 W. Colorado Ave, 2nd Floor, Telluride. Proposals are due by 5:00 PM on Friday, September 18, 2026, submitted via email or delivered in person.",
+    "deadline": "2026-09-18T17:00:00",
+    "expires": "2026-09-18",
+    "dates": "8/27",
+    "papers": [
+      "ttimes_0827"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    "address": "684 County Road 63L, Telluride, CO 81435",
+    "noticeKey": "COL-000224-jail-repaint-illium"
+  },
+  {
+    "title": "Request for Proposal -- Painting of the San Miguel County Jail",
+    "entity": "San Miguel County",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Request for Proposal",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County is seeking qualified respondents for: Painting of the San Miguel County Jail.",
+    "deadline": "Open until contracted",
+    "expires": "2026-11-25",
+    "dates": "8/27",
+    "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=209",
+    "address": "",
+    "smcBidID": "209"
   }
 ]

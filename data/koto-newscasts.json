@@ -1,5 +1,45 @@
 [
   {
+    "title": "Newscast 8-31-26",
+    "source": "KOTO Community Radio",
+    "date": "September 1, 2026",
+    "newsTopic": "community",
+    "copy": "Coming Up Next, Telluride; Telluride’s Alderwild Swan Song",
+    "href": "https://koto.org/news/newscast-8-31-26/"
+  },
+  {
+    "title": "Newscast 8-28-26",
+    "source": "KOTO Community Radio",
+    "date": "August 29, 2026",
+    "newsTopic": "community",
+    "copy": "On this week’s Regional Roundup, we look at the latest efforts to open Bears Ears National Monument to mining and we'll hear about a public awareness campaign in Colorado aimed at helping people stay bear aware. We’ll also hear about a Western Colorado nonprofit building community by encouraging women and girls to exercise, and learn how the Ute Mo",
+    "href": "https://koto.org/news/newscast-8-28-26/"
+  },
+  {
+    "title": "Newscast 8-27-26",
+    "source": "KOTO Community Radio",
+    "date": "August 28, 2026",
+    "newsTopic": "community",
+    "copy": "West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda; Remembering Dolly Parton",
+    "href": "https://koto.org/news/newscast-8-27-26/"
+  },
+  {
+    "title": "Newscast 8-26-26",
+    "source": "KOTO Community Radio",
+    "date": "August 27, 2026",
+    "newsTopic": "public-safety",
+    "copy": "San Miguel County Shifts to Stage 1 Fire Restrictions; Community Advocates for Worker Protections; Gaiascope Lights Up Mountain Village",
+    "href": "https://koto.org/news/newscast-8-26-26/"
+  },
+  {
+    "title": "Newscast 8-24-26",
+    "source": "KOTO Community Radio",
+    "date": "August 25, 2026",
+    "newsTopic": "community",
+    "copy": "Region Considers Chamber of Commerce; Governments Talk Childcare",
+    "href": "https://koto.org/news/newscast-8-24-26/"
+  },
+  {
     "title": "Newscast 8-21-26",
     "source": "KOTO Community Radio",
     "date": "August 22, 2026",
@@ -22,45 +62,5 @@
     "newsTopic": "public-safety",
     "copy": "Telluride Marshals Use Flock Cameras in Theft Investigation; Telluride Talks Flood Mapping; KOTO is Stayin’ Alive",
     "href": "https://koto.org/news/newscast-8-19-26/"
-  },
-  {
-    "title": "Newscast 8-17-26",
-    "source": "KOTO Community Radio",
-    "date": "August 18, 2026",
-    "newsTopic": "community",
-    "copy": "Telluride Debriefs on Parking; Tribal Allyship in San Miguel County",
-    "href": "https://koto.org/news/newscast-8-17-26/"
-  },
-  {
-    "title": "Newscast 8-14-26",
-    "source": "KOTO Community Radio",
-    "date": "August 15, 2026",
-    "newsTopic": "public-safety",
-    "copy": "On this week's Regional Roundup, we explore the mental and emotional toll a hectic fire season can take on firefighters. We also look at how the language we use to describe wildfire can shape the way we feel about fire. Then, we turn to water and we hear a report about the impact of this year's drought on the Arkansas River and the communities that",
-    "href": "https://koto.org/news/newscast-8-14-26/"
-  },
-  {
-    "title": "Newscast 8-13-26",
-    "source": "KOTO Community Radio",
-    "date": "August 14, 2026",
-    "newsTopic": "community",
-    "copy": "West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda",
-    "href": "https://koto.org/news/newscast-8-13-26/"
-  },
-  {
-    "title": "Newscast 8-12-26",
-    "source": "KOTO Community Radio",
-    "date": "August 13, 2026",
-    "newsTopic": "government",
-    "copy": "Paul Reich Vies for Seat on San Miguel Board of County Commissioners; A Placerville Poetry Box",
-    "href": "https://koto.org/news/newscast-8-12-26/"
-  },
-  {
-    "title": "Newscast 8-10-26",
-    "source": "KOTO Community Radio",
-    "date": "August 11, 2026",
-    "newsTopic": "community",
-    "copy": "Coming Up Next, Telluride; Eco-Grief Finds the Space Between Grief and Gratitude",
-    "href": "https://koto.org/news/newscast-8-10-26/"
   }
 ]

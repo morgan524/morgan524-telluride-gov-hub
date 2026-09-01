@@ -1,15 +1,5 @@
 [
   {
-    "title": "Earth's Most Resilient Life, Our Greatest Hope: Exploring Unusual Microbes to Solve Humanity’s Biggest Challenges",
-    "date": "2026-08-25",
-    "time": "6:30 PM – 7:30 PM",
-    "location": "Telluride Innovation Center, Telluride",
-    "description": "  This special town talk, presented by Braden Tierney, cofounder and executive director of the Two Frontiers Project extends the season and will be held in town at the Telluride Innovation Center. From hydrothermal vents and volcanic seeps to alpine soils and mine drainage right here in Telluride, Earth’s most unusual ecosystems are home to microscopic life with extraordinary abilities. In this talk, Tierney will share stories from the field and the lab through their team at the Two Frontiers Project. They explore the planet’s microbial diversity in search of “microbial superpowers” that could help tackle pollution, support agriculture, protect ecosystems, and improve human health. With an emphasis on projects ongoing in Colorado, we’ll explore how these invisible ecosystems work, why they matter for everyday life, and how citizen scientists and students can help map this hidden world. …",
-    "link": "https://telluridescience.org/event/talk-unusual-microbes/",
-    "imageUrl": "https://telluridescience.org/wp-content/uploads/2026/06/TT0825_320-x-212.jpg",
-    "sourceLabel": "Telluride Science"
-  },
-  {
     "title": "Mountain Towns 2030: Leveraging a Network of Community Leaders to Accelerate Climate Action",
     "date": "2026-09-02",
     "time": "6:00 PM – 7:00 PM",
@@ -27,6 +17,16 @@
     "description": "Join Telluride Science and Telluride Chamber Music for a free community concert on the scenic patio at the Innovation Center. \r\nFeatured musicians:Danny DeSantis (viola), Anne Foxen (violin), Steve White (cell) and Travis Fisher (piano) \r\nAll are welcome—come soak in the beauty of live chamber music in an inspiring setting.",
     "link": "https://telluridescience.org/event/community-concert-september/",
     "imageUrl": "https://telluridescience.org/wp-content/uploads/2026/07/com_concert-0910_1080x1080.png",
+    "sourceLabel": "Telluride Science"
+  },
+  {
+    "title": "Optimize Your Brain Health with Lifestyle Medicine",
+    "date": "2026-09-23",
+    "time": "6:30 PM – 7:30 PM",
+    "location": "Telluride Innovation Center, Telluride",
+    "description": "What if nearly half of dementia cases could be prevented? Growing scientific evidence says it's possible—and it starts with the choices we make every day. Join Dr. Melissa Sundermann, a double board-certified Lifestyle Medicine physician known as Doctor Outdoors, for an engaging look at the science behind lifelong brain health. From nutrition and movement to sleep, stress management, social connection, and time outdoors, discover how everyday habits shape cognitive performance and long-term wellbeing. You'll leave with practical, research-backed strategies—and a personalized roadmap for protecting your brain, your most valuable asset.\r\nThis event is co-sposnored by Telluride Science and Telluride Foundation and is free and open the public. RSVP is required.  RSVP HERE",
+    "link": "https://telluridescience.org/event/brain-health/",
+    "imageUrl": "https://telluridescience.org/wp-content/uploads/2026/08/Brain-Health_1080x1080-05.jpg",
     "sourceLabel": "Telluride Science"
   }
 ]

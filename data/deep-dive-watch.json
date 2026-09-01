@@ -1,24 +1,30 @@
 {
- "generated": "2026-08-23T09:35:11.305Z",
+ "generated": "2026-09-01T14:05:24.202Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
    "lastUpdated": "2026-08-17",
    "upcoming": [
     {
-     "source": "school",
-     "sourceLabel": "School District R-1",
-     "title": "Telluride Board of Education Monthly Meeting",
-     "date": "2026-08-25",
+     "source": "telluride",
+     "sourceLabel": "Town of Telluride",
+     "title": "Town Council",
+     "date": "2026-09-01",
      "time": "",
-     "location": "Bridal Veil District Conference Room / Zoom",
-     "agendaUrl": "https://files.smartsites.parentsquare.com/3403/82526_mm_packet_1.pdf",
-     "link": "https://files.smartsites.parentsquare.com/3403/82526_mm_packet_1.pdf",
-     "zoomLink": "https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09",
-     "livestream": ""
+     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042",
+     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042",
+     "zoomLink": "https://us06web.zoom.us/meeting/register/XA2kUuXlTg2aifJ0Qwwc-g",
+     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
     }
    ],
    "recent": [
+    {
+     "source": "school",
+     "date": "2026-08-25",
+     "title": "Telluride Board of Education Monthly Meeting",
+     "snippet": "The August 25 Board of Education meeting carries real weight. The most consequential item is a flood-related budget appropriation for FY 2026-27 — the board will discuss and then vote on adjusting…"
+    },
     {
      "source": "telluride",
      "date": "2026-08-19",
@@ -39,6 +45,7 @@
     }
    ],
    "stale": [
+    "Carhenge / Shandoka: school discussed it on 2026-08-25 (\"Telluride Board of Education Monthly Meeting\") but the deep dive was last edited 2026-08-17.",
     "Carhenge / Shandoka: telluride discussed it on 2026-08-19 (\"Historic & Architectural Review Commission - Aug 19 2026\") but the deep dive was last edited 2026-08-17.",
     "Carhenge / Shandoka: timeline entry \"HARC hears Shandoka's four buildings; Carhenge slips to…\" (Aug 19, 2026) is still marked upcoming but the date has passed."
    ]
@@ -62,49 +69,73 @@
   "code": {
    "label": "Code Changes & Accelerated Review",
    "lastUpdated": "2026-07-19",
-   "upcoming": [],
+   "upcoming": [
+    {
+     "source": "county",
+     "sourceLabel": "San Miguel County",
+     "title": "Planning Commission Meeting",
+     "date": "2026-09-10",
+     "time": "",
+     "location": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
+     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/923/files",
+     "link": "https://sanmiguelcoco.portal.civicclerk.com/event/923/files",
+     "zoomLink": "https://us06web.zoom.us/j/84540142300?pwd=kR3YU9IZBab43RLiNx0ox1gygbOI8C.1",
+     "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
+    },
+    {
+     "source": "county",
+     "sourceLabel": "San Miguel County",
+     "title": "Housing Code Update SSR",
+     "date": "2026-09-15",
+     "time": "",
+     "location": "BOCC Meeting Room",
+     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1069/files",
+     "link": "https://sanmiguelcoco.portal.civicclerk.com/event/1069/files",
+     "zoomLink": "",
+     "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
+    }
+   ],
    "recent": [
     {
      "source": "telluride",
      "date": "2026-08-20",
      "title": "Planning & Zoning Commission - Aug 20 2026",
      "snippet": "The August 20 P&Z meeting has two work sessions and one public hearing worth following. The school district's employee housing proposal gets its first formal look — a work session on new construction…"
-    },
-    {
-     "source": "telluride",
-     "date": "2026-08-11",
-     "title": "Town Council - Aug 11 2026",
-     "snippet": "The most consequential item on this agenda is third reading of the Colorado Wildfire Resiliency Code — if approved, it amends the Land Use Code's historic and architectural review standards and…"
     }
    ],
    "developments": [],
    "stale": [
-    "Code Changes & Accelerated Review: telluride discussed it on 2026-08-20 (\"Planning & Zoning Commission - Aug 20 2026\") but the deep dive was last edited 2026-07-19.",
-    "Code Changes & Accelerated Review: telluride discussed it on 2026-08-11 (\"Town Council - Aug 11 2026\") but the deep dive was last edited 2026-07-19."
+    "Code Changes & Accelerated Review: telluride discussed it on 2026-08-20 (\"Planning & Zoning Commission - Aug 20 2026\") but the deep dive was last edited 2026-07-19."
    ]
   },
   "wildfire": {
    "label": "Wildfire Resiliency",
    "lastUpdated": "2026-06-01",
-   "upcoming": [],
+   "upcoming": [
+    {
+     "source": "telluride",
+     "sourceLabel": "Town of Telluride",
+     "title": "Town Council",
+     "date": "2026-09-01",
+     "time": "",
+     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042",
+     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042",
+     "zoomLink": "https://us06web.zoom.us/meeting/register/XA2kUuXlTg2aifJ0Qwwc-g",
+     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+    }
+   ],
    "recent": [
     {
      "source": "fire",
      "date": "2026-08-18",
      "title": "Board of Directors Meeting",
      "snippet": "The Telluride Fire Protection District board meets August 18th at 5:30 p.m. at 131 W. Columbia Ave. Station 3 gets another update — that project has been moving through the district's planning for a…"
-    },
-    {
-     "source": "telluride",
-     "date": "2026-08-11",
-     "title": "Town Council - Aug 11 2026",
-     "snippet": "The most consequential item on this agenda is third reading of the Colorado Wildfire Resiliency Code — if approved, it amends the Land Use Code's historic and architectural review standards and…"
     }
    ],
    "developments": [],
    "stale": [
-    "Wildfire Resiliency: fire discussed it on 2026-08-18 (\"Board of Directors Meeting\") but the deep dive was last edited 2026-06-01.",
-    "Wildfire Resiliency: telluride discussed it on 2026-08-11 (\"Town Council - Aug 11 2026\") but the deep dive was last edited 2026-06-01."
+    "Wildfire Resiliency: fire discussed it on 2026-08-18 (\"Board of Directors Meeting\") but the deep dive was last edited 2026-06-01."
    ]
   },
   "diamond": {
@@ -149,18 +180,9 @@
      "livestream": ""
     }
    ],
-   "recent": [
-    {
-     "source": "norwood",
-     "date": "2026-08-11",
-     "title": "Norwood Water Commission Meeting",
-     "snippet": "The Norwood Water Commission meets August 11 at 6:30 p.m. at Town Hall with a Zoom option. Routine consent items cover July financials, meeting minutes, and budget-to-actuals. Board business includes…"
-    }
-   ],
+   "recent": [],
    "developments": [],
-   "stale": [
-    "Norwood Water: norwood discussed it on 2026-08-11 (\"Norwood Water Commission Meeting\") but the deep dive was last edited 2026-07-23."
-   ]
+   "stale": []
   },
   "fieldpaving": {
    "label": "Field Paving at Town Park",

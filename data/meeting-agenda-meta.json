@@ -1,20 +1,4 @@
 {
-  "county|2026-07-27|Open Space Commission Meeting": {
-    "sv": 4
-  },
-  "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session": {
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1043/files/agenda/1934",
-    "zoomUrl": "https://us02web.zoom.us/j/89046113764",
-    "meetingId": "890 4611 3764",
-    "passcode": "475547",
-    "phone": "719-359-4580"
-  },
-  "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026": {
-    "sv": 4,
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8288",
-    "zoomUrl": "https://us06web.zoom.us/j/84856441443?pwd=rmlX3jEAgnuYU0lkGGCJWN2aaQ5lyr.1"
-  },
   "telluride|2026-08-03|Open Space Commission - Aug 03 2026": {
     "sv": 4,
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8130",
@@ -66,10 +50,6 @@
     "passcode": "070631.",
     "phone": "719) 359-4580"
   },
-  "telluride|2026-07-26|Open Space Commission - Jul 26 2026": {
-    "sv": 4,
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8292"
-  },
   "telluride|2026-08-11|Town Council - Aug 11 2026": {
     "sv": 4,
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8041",
@@ -89,21 +69,6 @@
   "county|2026-08-13|Planning Commission Meeting": {
     "sv": 4,
     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/922/files/agenda/1949"
-  },
-  "telluride|2026-07-27|Special Town Council - Jul 27 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8294",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/j/83026171795?pwd=4cWG6X1zHUnG7rNIbuMYaAeGXgIESW.1",
-    "meetingId": "830 2617 1795",
-    "passcode": "256663.",
-    "phone": "719) 359-4580"
-  },
-  "county|2026-07-27|Housing Code Update SSR": {
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1052/files/agenda/1930",
-    "zoomUrl": "https://us06web.zoom.us/j/84045287708?pwd=2u4vMzFjoI7ZFitrp3Zp9yUa0YQh0b.1",
-    "meetingId": "840 4528 7708",
-    "passcode": "230003"
   },
   "rico|2026-08-19|Rico Board of Trustees Regular Meeting": {
     "sv": 4,
@@ -185,11 +150,6 @@
     "passcode": "997236",
     "phone": "346-248-7799"
   },
-  "telluride|2026-07-28|Gondola Leadership Committee - Jul 28 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8297",
-    "zoomUrl": "https://us06web.zoom.us/j/85350165336?pwd=P0eS14nFbqd5jLXEO2gckIoA9kPAro.1",
-    "sv": 4
-  },
   "telluride|2026-08-20|Planning & Zoning Commission - Aug 20 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8102",
     "sv": 4,
@@ -202,11 +162,6 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8101",
     "sv": 4
   },
-  "tmvoa|2026-07-28|Gondola Leadership Committee Meeting": {
-    "agendaUrl": "https://tmvoa.org/site/assets/files/4825/07_28_26_leadership_gondola_agenda_updated.pdf",
-    "zoomUrl": "https://us06web.zoom.us/j/85350165336?pwd=P0eS14nFbqd5jLXEO2gckIoA9kPAro.1",
-    "sv": 4
-  },
   "tmvoa|2026-08-11|Mountain Village Merchant Meeting": {
     "sv": 4,
     "ph": "b858cb282617fb09"
@@ -217,29 +172,17 @@
   },
   "county|2026-08-26|Board of County Commissioners Work Session": {
     "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/869/files/agenda/1965",
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/869/files/agenda/1971",
     "zoomUrl": "https://us02web.zoom.us/meeting/register/9OtfsijQQWSJMrVmAUrDCw",
     "meetingId": "858 7914 5422",
     "passcode": "509931",
     "phone": "719-359-4580"
-  },
-  "norwood|2026-07-29|Board of Trustees Work Session": {
-    "agendaUrl": "https://www.norwoodtown.com/files/62b999f7f/07.29.2026+Work+Session+Board+of+Trustee+Agenda+ADA.pdf",
-    "zoomUrl": "https://us02web.zoom.us/j/84191917434",
-    "meetingId": "841 9191 7434",
-    "passcode": "905972",
-    "phone": "970-327-4288",
-    "sv": 4
   },
   "med|2026-08-27|Regular Board Meeting": {
     "sv": 4,
     "agendaUrl": "https://www.tellmed.org/files/2218817c5/THD+Reg+BOD+Mtg+8.27.26+Agenda.pdf",
     "zoomUrl": "https://us02web.zoom.us/j/89509331558",
     "meetingId": "895 0933 1558"
-  },
-  "norwood|2026-07-29|NWC Possible Quorum": {
-    "agendaUrl": "https://www.norwoodtown.com/files/1c026ffd5/07+2026+QUORUM+NOTICE.pdf",
-    "sv": 4
   },
   "norwood|2026-08-05|Board of Trustees Work Session": {
     "agendaUrl": "https://www.norwoodtown.com/files/6bce913bf/08.05.2026+Work+Session+Board+of+Trustee+Agenda+ADA.pdf",
@@ -249,13 +192,6 @@
     "phone": "970-327-4288",
     "sv": 4
   },
-  "tmvoa|2026-07-31|TMVOA Board of Directors Meeting": {
-    "agendaUrl": "https://tmvoa.org/site/assets/files/4830/tmvoa_board_meeting_agenda_7_31_26-1.pdf",
-    "zoomUrl": "https://us02web.zoom.us/meeting/register/0AWXShBnSs6SxMTp_gdNUg",
-    "meetingId": "8 7 3 8703 5414",
-    "passcode": "213545",
-    "sv": 4
-  },
   "ouray|2026-08-05|, 2-4:00 PM - Virtual Meeting Only - No in-person attendance.  Work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (Packet materials are attached to the agenda)": {
     "agendaUrl": "https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1014",
     "sv": 4
@@ -263,7 +199,10 @@
   "telluride|2026-09-01|Town Council - Sep 01 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042",
     "sv": 4,
-    "ph": "afbb6fcf58f46cfd"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/XA2kUuXlTg2aifJ0Qwwc-g",
+    "meetingId": "847 6915 1454",
+    "passcode": "077111.",
+    "phone": "719) 359-4580"
   },
   "telluride|2026-09-02|Ecology Commission - Sep 02 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118",
@@ -273,26 +212,33 @@
   "telluride|2026-09-02|Commission for Community Assistance, Arts & Special Events - Sep 02 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066",
     "sv": 4,
-    "ph": "3bcbff87c865ec6d"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/tZ0pc-ChqDwsGNFpPigfqqLQptmoMmpJdiOx"
   },
   "telluride|2026-09-02|Telluride Housing Authority Subcommittee - Sep 02 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163",
     "sv": 4,
-    "ph": "558b2c991b258cd1"
+    "zoomUrl": "https://us06web.zoom.us/j/83022451705?pwd=Lj8jkLF9GQny7CWBqvP8IYkQhviQBb.1",
+    "meetingId": "830 2245 1705",
+    "passcode": "229528.",
+    "phone": "719) 359-4580"
   },
   "county|2026-09-02|Board of County Commissioners Meeting": {
     "sv": 4,
-    "ph": "a12dfd2ce826475e"
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/887/files/agenda/1980",
+    "zoomUrl": "https://us02web.zoom.us/meeting/register/Yn2gLRVBQmaLhCboss4rJw",
+    "meetingId": "874 3946 5050",
+    "passcode": "885643",
+    "phone": "719-359-4580"
   },
   "mv|2026-09-03|Design Review Board": {
     "sv": 4,
-    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/49733/september_3-_2026_design_review_board_meeting_agenda.pdf",
+    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/49787/september_3-_2026_design_review_board_meeting_agenda.pdf",
     "zoomUrl": "https://us06web.zoom.us/j/83949014976?pwd=oze6zDkOSb0a8fjpvluaHR1zcyO0XN.1",
     "meetingId": "839 4901 4976"
   },
   "county|2026-08-27|CWAB": {
     "sv": 4,
-    "ph": "23152d2f933fa82e"
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1055/files/agenda/1973"
   },
   "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026 - Cancelled": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8101",
@@ -328,16 +274,20 @@
   },
   "county|2026-09-09|Board of County Commissioners Work Session": {
     "sv": 4,
-    "ph": "307e0c7b19e4ff5b"
+    "ph": "5bee59f208152c68"
   },
   "telluride|2026-09-10|Town Council Budget - Sep 10 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052",
     "sv": 4,
-    "ph": "71461d3fdc27b654"
+    "ph": "a2d452b639a44962"
   },
   "county|2026-09-10|Planning Commission Meeting": {
     "sv": 4,
-    "ph": "b7c74705fcca6b2f"
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/923/files/agenda/1979",
+    "zoomUrl": "https://us06web.zoom.us/j/84540142300?pwd=kR3YU9IZBab43RLiNx0ox1gygbOI8C.1",
+    "meetingId": "845 4014 2300",
+    "passcode": "704358",
+    "phone": "970-728-3844"
   },
   "telluride|2026-08-13|San Miguel Authority for Regional Transportation - Aug 13 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8299",
@@ -354,7 +304,7 @@
   },
   "tmvoa|2026-08-27|TMVOA Board of Directors Meeting": {
     "sv": 4,
-    "agendaUrl": "https://tmvoa.org/site/assets/files/4851/tmvoa_board_meeting_agenda_8_27_26.pdf",
+    "agendaUrl": "https://tmvoa.org/site/assets/files/4851/tmvoa_board_meeting_agenda_8_27_26_revised.pdf",
     "zoomUrl": "https://us02web.zoom.us/meeting/register/N4y5Yn2FSqCtz42k2HzXYg",
     "meetingId": "822 1299 4362",
     "passcode": "097542",
@@ -393,7 +343,7 @@
   "telluride|2026-09-14|Open Space Commission - Sep 14 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8131",
     "sv": 4,
-    "ph": "1ee3d118528867aa"
+    "ph": "23f9d455f0c1977f"
   },
   "telluride|2026-08-17|Open Space Commission Site Walk - Aug 17 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8302",
@@ -408,7 +358,7 @@
   },
   "school|2026-08-25|Telluride Board of Education Monthly Meeting": {
     "sv": 4,
-    "agendaUrl": "https://files.smartsites.parentsquare.com/3403/82526_mm_packet_1.pdf",
+    "agendaUrl": "https://files.smartsites.parentsquare.com/3403/82526_mm_packet.pdf",
     "zoomUrl": "https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09",
     "meetingId": "865 8512 4120",
     "passcode": "468668",
@@ -443,7 +393,7 @@
   },
   "county|2026-09-16|Board of County Commissioners Meeting": {
     "sv": 4,
-    "ph": "49e704e3c3bab858"
+    "ph": "a12dfd2ce826475e"
   },
   "mv|2026-09-17|Town Council Meeting": {
     "sv": 4,
@@ -456,7 +406,7 @@
   "telluride|2026-09-17|Liquor Licensing Authority - Sep 17 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8145",
     "sv": 4,
-    "ph": "5e169e6aed7b742f"
+    "ph": "63611b4d3d7b271f"
   },
   "telluride|2026-08-26|Resident Advisory Committee - Aug 26 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8304",
@@ -494,6 +444,85 @@
   "telluride|2026-09-22|Town Council - Sep 22 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043",
     "sv": 4,
-    "ph": "6826f139b142e7dc"
+    "ph": "c5b14e4bfd86db54"
+  },
+  "county|2026-09-23|Board of County Commissioners Work Session": {
+    "sv": 4,
+    "ph": "307e0c7b19e4ff5b"
+  },
+  "med|2026-09-24|Regular Board Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "telluride|2026-09-24|Planning & Zoning Commission - Sep 24 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104",
+    "sv": 4,
+    "ph": "da56d8c16badccc4"
+  },
+  "telluride|2026-09-24|Planning & Zoning Commission Chair - Sep 24 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8103",
+    "sv": 4,
+    "ph": "313a820643e5b960"
+  },
+  "telluride|2026-08-27|Open Space Commission Site Walk - Aug 27 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8306",
+    "sv": 4
+  },
+  "telluride|2026-09-10|(Rescheduled to Oct 13th) Town Council Budget - Sep 10 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052",
+    "sv": 4
+  },
+  "county|2026-08-27|Citizens Weed Advisory Board": {
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1055/files/agenda/1977",
+    "zoomUrl": "https://us06web.zoom.us/j/84507830944?pwd=dB15RuiMh7QbzfkYiaiomIXqFXJmd7.1",
+    "meetingId": "845 0783 0944",
+    "passcode": "633618",
+    "phone": "970-728-3174",
+    "sv": 4
+  },
+  "telluride|2026-09-23|Vending Subcommittee - Sep 23 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8308",
+    "sv": 4,
+    "ph": "1ddd1637fea52e35"
+  },
+  "county|2026-09-15|Housing Code Update SSR": {
+    "sv": 4,
+    "ph": "0b96eaea9b0b51f7"
+  },
+  "ouray|2026-09-02|PM - Note: Virtual/Zoom meeting only!  The Planning Commission will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (packet materials are attached to the agenda)": {
+    "agendaUrl": "https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1016",
+    "sv": 4
+  },
+  "county|2026-09-28|Open Space Commission Meeting": {
+    "sv": 4,
+    "ph": "1ff606174e68cca5"
+  },
+  "telluride|2026-09-30|Special Meeting - Historic & Architectural Review Commission - Sep 30 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309",
+    "sv": 4,
+    "ph": "fcd71e9a9b6a541a"
+  },
+  "telluride|2026-09-17|Special Meeting - Planning & Zoning Commission - Sep 17 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8310",
+    "sv": 4,
+    "ph": "81ba2cbb2cd41959"
+  },
+  "telluride|2026-09-30|Special Town Council - Sep 30 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313",
+    "sv": 4,
+    "ph": "6ee2e9f9e57bb867"
+  },
+  "mv|2026-10-01|Design Review Board": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "telluride|2026-10-01|Town Council Budget - Oct 01 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8053",
+    "sv": 4,
+    "ph": "ae63a84c96949f40"
+  },
+  "county|2026-10-01|Lodging Tax Panel Meeting": {
+    "sv": 4,
+    "ph": "1f577e951aaf55d2"
   }
 }

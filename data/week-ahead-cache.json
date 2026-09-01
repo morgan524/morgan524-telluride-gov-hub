@@ -1,26 +1,22 @@
 {
-  "hash": "43775ec5e294aca7c739dff3916faf8d8ab12c22",
-  "lede": "The School Board votes Monday on a flood-damage budget appropriation for FY 2026-27 — real money tied to this summer's hits on the TIS 5th grade pod, the high school cafeteria, and the Palm Theatre complex. Alongside that, the Ethics Commission takes up whether to establish a formal Code of Conduct for Town officials, the Hospital District board could act on a Two Site Model for the new facility, and Mountain Village's HOA moves to form a Workforce Housing Committee and vote on updated policies.",
+  "hash": "4a6822b85548f3b70a1f0eeacc02959526ae3c68",
+  "lede": "The biggest thing on the government calendar this week is Tuesday's Town Council work session, where three consequential topics land at once: a deep review of Comprehensive Plan goals, a Gondola Subcommittee update, and — the one worth clearing your schedule for — a look at proposals for a third-party audit of Town rental housing policies. Wednesday adds a BOCC vote that would shift income eligibility at Pinion Park to 80% AMI, quietly redrawing who qualifies for deed-restricted housing in the valley.",
   "notable": [
     {
-      "id": 3,
-      "stake": "Board votes on flood-damage budget appropriation affecting district spending this year."
-    },
-    {
-      "id": 2,
-      "stake": "Commission develops recommendation on a formal Code of Conduct for Town officials."
+      "id": 0,
+      "stake": "Third-party rental housing audit review could reshape who stays in Telluride."
     },
     {
       "id": 4,
-      "stake": "County discusses CCAP childcare funding and its direct budget implications."
+      "stake": "Martin exception request: vote on $47K roof repair for deed-restricted Gold Run unit."
     },
     {
-      "id": 8,
-      "stake": "Hospital board may act on Two Site Model, shaping what and where gets built."
+      "id": 5,
+      "stake": "BOCC vote shifts Pinion Park income eligibility to 80% AMI, changing who qualifies."
     },
     {
-      "id": 10,
-      "stake": "TMVOA votes on updated policies and acts on workforce housing committee formation."
+      "id": 6,
+      "stake": "Land Use Code definition changes — early shaping before any public hearing."
     }
   ]
 }

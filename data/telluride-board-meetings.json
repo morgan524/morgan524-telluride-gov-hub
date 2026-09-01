@@ -1,35 +1,27 @@
 [
   {
-    "date": "August 25, 2026",
-    "title": "Ethics Commission",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8301",
-    "hasAgenda": true,
-    "location": "Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
-    "civicwebId": 8301,
-    "packetUrl": "https://telluride-co.civicweb.net/document/443653/"
-  },
-  {
     "date": "September 1, 2026",
     "title": "Town Council",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042",
-    "hasAgenda": false,
+    "hasAgenda": true,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "",
-    "civicwebId": 8042
+    "civicwebId": 8042,
+    "packetUrl": "https://telluride-co.civicweb.net/document/443717/"
   },
   {
     "date": "September 2, 2026",
     "title": "Telluride Housing Authority Subcommittee",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163",
-    "hasAgenda": false,
+    "hasAgenda": true,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "",
-    "civicwebId": 8163
+    "civicwebId": 8163,
+    "packetUrl": "https://telluride-co.civicweb.net/document/444280/"
   },
   {
     "date": "September 10, 2026",
-    "title": "Town Council Budget",
+    "title": "to Oct 13th) Town Council Budget",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
@@ -44,6 +36,15 @@
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "",
     "civicwebId": 8082
+  },
+  {
+    "date": "September 17, 2026",
+    "title": "Special Meeting - Planning & Zoning Commission",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8310",
+    "hasAgenda": false,
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "time": "",
+    "civicwebId": 8310
   },
   {
     "date": "September 22, 2026",
@@ -73,6 +74,15 @@
     "civicwebId": 8104
   },
   {
+    "date": "September 30, 2026",
+    "title": "Special Town Council",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313",
+    "hasAgenda": false,
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "time": "",
+    "civicwebId": 8313
+  },
+  {
     "date": "October 1, 2026",
     "title": "Town Council Budget",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8053",
@@ -98,6 +108,24 @@
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "",
     "civicwebId": 8164
+  },
+  {
+    "date": "October 8, 2026",
+    "title": "Special Meeting - Planning & Zoning Commission",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8311",
+    "hasAgenda": false,
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "time": "",
+    "civicwebId": 8311
+  },
+  {
+    "date": "October 13, 2026",
+    "title": "Special Town Council Budget",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8307",
+    "hasAgenda": false,
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "time": "",
+    "civicwebId": 8307
   },
   {
     "date": "October 21, 2026",
@@ -134,6 +162,15 @@
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "",
     "civicwebId": 8165
+  },
+  {
+    "date": "November 5, 2026",
+    "title": "Special Meeting - Planning & Zoning Commission",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312",
+    "hasAgenda": false,
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "time": "",
+    "civicwebId": 8312
   },
   {
     "date": "November 5, 2026",
