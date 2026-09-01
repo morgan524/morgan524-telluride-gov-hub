@@ -28,32 +28,6 @@
     "endDate": "2026-09-25"
   },
   {
-    "title": "Tennis Clinic 4.0+",
-    "href": "https://koto.org/event/tennis-clinic-4-0/2026-09-01/",
-    "date": "2026-09-01",
-    "time": "11:00 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
-    "type": "Outdoors & Sports"
-  },
-  {
-    "title": "The Democracy We Must Keep-Online Talk with David O. Stewart",
-    "href": "https://koto.org/event/the-democracy-we-must-keep-online-talk-with-david-o-stewart/",
-    "date": "2026-09-01",
-    "time": "12:00 PM",
-    "location": "Zoom",
-    "town": "",
-    "img": "https://koto.org/wp-content/uploads/2026/08/david.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join us as we chat with award-winning historian David O. Stewart about his newest work, The Democracy We Must Keep, and the question he explores throughout the book: What did America's founders say about democracy, and can we remain true…",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "The Democracy We Must Keep with David O. Stewart (Online Talk)",
     "href": "https://telluridelibrary.libcal.com/event/17358102?hs=a",
     "date": "2026-09-01",
@@ -578,6 +552,19 @@
     "category": "Community Event",
     "source": "Mountain Village",
     "desc": "The Mountain Village Design Review Board meets for its monthly meeting. Meeting material is typically posted on the Friday before a scheduled meeting.",
+    "type": "Community"
+  },
+  {
+    "title": "TMVOA Millennial Trivia at Telluride Distilling Company",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/tmvoa-millennial-trivia-at-telluride-distilling-company/",
+    "date": "2026-09-03",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49790/trivia_tdc_for_tmv.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Grab your flip phone, update your Top 8, set your AIM away message, and put your millennial knowledge to the test! Join us at Telluride Distilling Company on",
     "type": "Community"
   },
   {
@@ -1634,19 +1621,6 @@
     "type": "Community"
   },
   {
-    "title": "Ouray Comedy Night with Casey Skinner",
-    "href": "https://events.ourayridgwayevents.com/event/comedy-casey-skinner-wright",
-    "date": "2026-09-10",
-    "time": "6:00 PM",
-    "location": "The Wright Opera House",
-    "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/53689568797710/huge/f51f372eb10b5686aa14f1294d26a48f5aa02005.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Casey Skinner is an Los Angeles-based comedian whose credits include appearances on Netflix, HBO Max, BRAVO, E!, and the Netflix Is A Joke Festival. He has performed at iconic venues including The Comedy Store and The Improv, while also…",
-    "type": "Arts & Film"
-  },
-  {
     "title": "Telluride Dinner Party",
     "href": "https://www.telluride.com/event/telluride-dinner-party/",
     "date": "2026-09-10",
@@ -2291,6 +2265,19 @@
     "type": "Community"
   },
   {
+    "title": "Local Legends Blues & Brews Kick Off",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/local-legends-blues-brews-kick-off/",
+    "date": "2026-09-17",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49794/website_ll_26_sliders.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Join Ah Haa School for the Arts in partnership with Telluride Blues & Brews Festival for Local Legends, a beer tasting and food pairing on the Ah Haa Sky",
+    "type": "Food & Drink"
+  },
+  {
     "title": "TASP Bob Miller Memorial Golf Classic",
     "href": "https://www.telluride.com/event/tasp-bob-miller-memorial-golf-classic/",
     "date": "2026-09-17",
@@ -2699,6 +2686,19 @@
     "type": "Community"
   },
   {
+    "title": "Optimize Your Brain Health with Lifestyle Medicine",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/optimize-your-brain-health-with-lifestyle-medicine/",
+    "date": "2026-09-23",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49783/tomv.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Can up to half of dementia cases be prevented? Emerging evidence suggests the answer is yes. In this engaging and evidence-based presentation, Dr.",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Creative Space: Artist Salon Series",
     "href": "https://events.ourayridgwayevents.com/event/creative-space-artist-salon-series",
     "date": "2026-09-23",
@@ -2723,19 +2723,6 @@
     "category": "Community Event",
     "source": "Telluride.com",
     "desc": "Troutapalooza is the premier fundraiser for Gunnison Gorge Anglers and the San Miguel Valley Floor project. The event …",
-    "type": "Community"
-  },
-  {
-    "title": "Optimize Your Brain Health With Lifestyle Medicine",
-    "href": "https://www.telluride.com/event/optimize-your-brain-health-with-lifestyle-medicine/",
-    "date": "2026-09-23",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63441/brain-health_tdotcom-2200x1237.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Can up to half of dementia cases be prevented? Emerging evidence suggests the answer is yes. In this engaging and …",
     "type": "Community"
   },
   {
@@ -3632,6 +3619,19 @@
     "desc": "AFTER SCHOOL ART FOR AGES 5-8 Thursdays, 3:15–4:30 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 17 – October 8Session 2 (4 weeks • $85): October 22 – November 12Session 3 (3…",
     "type": "Arts & Film",
     "endDate": "2026-10-29"
+  },
+  {
+    "title": "4th Annual Boo-Mont Halloween Ball",
+    "href": "https://events.ourayridgwayevents.com/event/4th-annual-boo-mont-halloween-ball",
+    "date": "2026-10-24",
+    "time": "8:00 PM",
+    "location": "Beaumont Hotel & Spa",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53860846025163/huge/937b6538c82ba8eff32aac54b7325895b4cde3f4.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Get ready for the 4th Annual Boo-Mont Halloween Ball at the historic Beaumont Hotel in Ouray, Colorado! Come dressed to impress, scare, or simply make a statement! The evening will feature a costume contest with prizes, a DJ, spooky drink…",
+    "type": "Music"
   },
   {
     "title": "Sherb Literary Living Room featuring Pam Houston with her new book: \"Animals Taught Me Everything\"",

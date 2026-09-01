@@ -1,22 +1,26 @@
 {
-  "hash": "dd33648782f11945121ed3bc2a1c0d196f1ed7bd",
-  "lede": "The biggest thing on the government calendar this week is Wednesday's Board of County Commissioners meeting, where the San Miguel County Housing Authority will vote to shift Pinion Park's income eligibility to 80% AMI — a quiet policy change that determines who actually gets a deed-restricted unit in this valley. Also Tuesday, Town Council opens a full day of work sessions covering the Comprehensive Plan, a Gondola Subcommittee update, and a third-party audit of rental housing policy, while the Housing Authority Subcommittee takes up the Martin exception request — a real roof, a real cost, a real precedent. On the community side, the Youth Area grand opening at Wilkinson Public Library happens Wednesday, and the Stories in the Sky drone show lands Thursday.",
+  "hash": "a5dbc7599fccfa0acb101cb636dd1d5fc386d3b0",
+  "lede": "The biggest thing on the government calendar this week is Wednesday's Board of County Commissioners meeting, where the county — sitting as the Housing Authority — is set to ratify a policy change at Pinion Park that would shift income eligibility to 80% AMI, quietly redrawing the line on who qualifies for a unit. That same day, Town of Telluride's Ecology Commission takes up a draft ordinance that would phase out combustion-powered lawn and garden equipment entirely, with leaf blowers banned by 2028. Tuesday's Town Council work sessions are also worth tracking, covering the Comprehensive Plan, a gondola subcommittee update, and a proposed third-party audit of rental housing policies.",
   "notable": [
     {
       "id": 0,
-      "stake": "Third-party rental housing audit review touches who can afford to stay here."
+      "stake": "Third-party audit of rent policy and Comprehensive Plan goals up for Council review."
+    },
+    {
+      "id": 2,
+      "stake": "Draft ordinance would ban gas-powered lawn equipment in Town limits by 2030."
     },
     {
       "id": 4,
-      "stake": "Martin exception vote sets precedent for deed-restricted unit repair costs."
+      "stake": "Martin exception request for deed-restricted unit repair returns for a decision."
     },
     {
       "id": 5,
-      "stake": "BOCC vote shifts Pinion Park income eligibility to 80% AMI, changing who qualifies."
+      "stake": "BOCC vote would shift Pinion Park income eligibility threshold to 80% AMI."
     },
     {
       "id": 6,
-      "stake": "Land Use Code definition changes shaped here before any public hearing."
+      "stake": "Ouray County Land Use Code definitions under revision — early shaping before public hearing."
     }
   ]
 }

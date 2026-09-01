@@ -246,7 +246,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/XA2kUuXlTg2aifJ0Qwwc-g","meetingId":"847 6915 1454","passcode":"077111.","phone":"719) 359-4580"},
 
   "telluride|2026-09-02|Ecology Commission - Sep 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118","sv":4,"ph":"470be197e8a2ab23"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118","sv":4,"zoomUrl":"https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1","phone":"970-728-3071"},
 
   "telluride|2026-09-02|Commission for Community Assistance, Arts & Special Events - Sep 02 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/tZ0pc-ChqDwsGNFpPigfqqLQptmoMmpJdiOx"},
@@ -393,7 +393,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-09-24|Planning & Zoning Commission - Sep 24 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104","sv":4,"ph":"da56d8c16badccc4"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104","sv":4,"ph":"a4a2fa0dcd5838f9"},
 
   "telluride|2026-09-24|Planning & Zoning Commission Chair - Sep 24 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8103","sv":4,"ph":"313a820643e5b960"},
@@ -423,7 +423,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309","sv":4,"ph":"fcd71e9a9b6a541a"},
 
   "telluride|2026-09-17|Special Meeting - Planning & Zoning Commission - Sep 17 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8310","sv":4,"ph":"81ba2cbb2cd41959"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8310","sv":4,"ph":"f8c6407358f324ed"},
 
   "telluride|2026-09-30|Special Town Council - Sep 30 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313","sv":4,"ph":"6ee2e9f9e57bb867"},
@@ -868,6 +868,26 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Sheriff Rescinds Stage 2 Fire Restrictions",
+    source: "Ouray County",
+    sourceKey: "ouray-county",
+    date: "September 1, 2026",
+    newsTopic: "public-safety",
+    copy: "Ouray County RESCINDS Stage 2 Fire Restrictions, reinstates Stage 1 Fire Restrictions effective 12:01AM Thursday, September 3",
+    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=960",
+    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22895"
+  },
+  {
+    title: "No Women’s Group Tomorrow",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "September 1, 2026",
+    newsTopic: "community",
+    copy: "With many women out of town this week, there will be no 'official' women's Rosary and fellowship. However, if you are in town, you are still encouraged to lead a Rosary at 7:30 before Holy Mass. Reminder: It is not too late to join our Women's Vir...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/no-womens-group-tomorrow/",
+    img: ""
+  },
+  {
     title: "Stage 2 Fire Restrictions",
     source: "Ouray County",
     sourceKey: "ouray-county",
@@ -1156,7 +1176,7 @@ const MANUAL_SUMMARIES = {
     "Three work sessions open the day: a deep look at Comprehensive Plan goals and objectives with project consultants, a Gondola Subcommittee update, and a review of proposals for a third-party audit of the Town's rental housing policies — that last one worth watching given how central rent policy has become to who can stay in the canyon. A second work session later covers AMI increases and rental rate adjustments for 2027 budgetary planning. On the action side: second reading of the 2026 budget reappropriation ordinance; a resolution permitting dogs on a limited stretch of the River Trail near the Public Works facility; approval of a wildfire mitigation project south of the Shandoka Apartments; and first readings authorizing the sale of three deed-restricted units — Spruce House Unit H and two FINO II units. Council will also consider finalizing a 30-minute free parking program. The long-running appeal of the Stender Residence HARC approval is continued again. Five board and commission seats are up for appointment.",
 
   "telluride|2026-09-02|Ecology Commission - Sep 02 2026":
-    "The September 2, 2026 Ecology Commission agenda hasn't been posted yet.",
+    "The Ecology Commission takes up three substantive items at this work session. The headliner is a draft ordinance proposing a full phase-out of combustion-powered lawn and garden equipment within Town limits — leaf blowers banned by January 1, 2028, all other covered equipment by January 1, 2030. The draft ordinance cites air quality, noise, and greenhouse gas goals, and points to existing state and utility rebates that could offset roughly half the replacement cost. The Commission is working toward a formal recommendation to Town Council; no vote is taken tonight. Also on the table: initial discussion of the 2027 workplan and a progress review of the 2027 Climate Action Plan update, which serves as the policy backbone for the equipment ban and other upcoming proposals.",
 
   "telluride|2026-09-02|Commission for Community Assistance, Arts & Special Events - Sep 02 2026":
     "A working meeting for CCAASE, the Town's grant and events commission. The board continues its 2026 organization interview series — this round brings in Telluride Youth Lacrosse Association, Ah Haa School for the Arts, and the Telluride Council for the Arts and Humanities, each getting five minutes to present before questions. On the action side: a calendar and banner date request from Telluride Chamber Music for the Hanneke Cassel Trio at The Alibi on October 13; banner design approvals for Bear Safety Week and Ah Haa's Artabout; and a letter to Town Council formalizing the commission's 2027 grant budget request. That last item follows the board's August 5 vote — held flat at $696,750 total ($277,415 arts and special events, $419,335 community support) in recognition of the Town's decreased revenue projections.",
@@ -1694,6 +1714,84 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Boys’ soccer bags third at two-day event",
+    source: "Telluride Times",
+    date: "September 1, 2026",
+    firstSeen: "2026-09-01",
+    newsTopic: "community",
+    copy: "Telluride's boys soccer team went 2-1 at the Coal Ridge Invitational, taking a tough 7-1 loss to Roaring Fork before bouncing back with a 5-2 win over host Coal Ridge to finish third. Abi Clarke had a strong Saturday with a goal and three assists.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_491e0114-aefc-4fdc-b3c6-44079f32e3f0.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/a0/7a0ec9eb-c41a-463a-a711-ccebca7e9677/6a973e4e83f22.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Commentary from your independent candidate for sheriff, part two",
+    source: "Telluride Times",
+    date: "September 1, 2026",
+    firstSeen: "2026-09-01",
+    newsTopic: "public-safety",
+    copy: "San Miguel County Sheriff — appointed from undersheriff in 2025 — is running as an independent in 2026 and outlines a year of operational changes: a 52.6% cut in overtime, updated technology, and new programs covering mental health response, festival safety, and wildfire water staging.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/editorials/article_ab498d10-080f-4de3-b2b8-f24762409a7e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/07/407f0759-8be0-4e14-84b3-19aa823ae488/6a9719ec16960.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "In the dark together",
+    source: "Telluride Times",
+    date: "September 1, 2026",
+    firstSeen: "2026-09-01",
+    newsTopic: "arts-culture",
+    copy: "Watching a movie in a theater does something measurable to us — research shows viewers' brain activity, eye movements, even blinks can sync up during a film. It's called neurocinematics, and it's been studied for less than 20 years. In a time of growing isolation, the darkened theater remains one of the few places you can be alone and connected at the same time.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_ebd5291f-cd6c-4abb-810a-7f5ab004f512.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/56/05649855-aa1f-409e-815c-03bc012f79ee/6a9718c59853f.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Library hosts presentation of new book, 'American Archaeology'",
+    source: "Telluride Times",
+    date: "September 1, 2026",
+    firstSeen: "2026-09-01",
+    newsTopic: "community",
+    copy: "R.E. Burillo presents his new book on American archaeology — covering the field's history, science, and growing threats from profit-driven practices — Thursday, Sept. 3 at 5:30 p.m. at Wilkinson Public Library. Burillo is a journalist and conservation archaeologist with deep ties to the Colorado Plateau and Bears Ears.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_47be00a2-4028-4b7c-9610-5629eb71c9c7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/df/1dfded6d-068b-40e4-8c77-49d47573f69a/6a9717e36194f.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Before asking for more, examine what we have",
+    source: "Telluride Times",
+    date: "September 1, 2026",
+    firstSeen: "2026-09-01",
+    newsTopic: "education",
+    copy: "Enrollment in the Telluride School District has been declining, but a local resident is questioning why taxes keep rising anyway. The letter asks the district to show it's adjusted staffing and operations before seeking another mill levy. The writer suggests combining classes and cutting overhead before going back to taxpayers.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_a15b52a7-3374-4030-bb16-04ad513eb0f1.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Jolana Vanek",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "EDM good riddance",
+    source: "Telluride Times",
+    date: "September 1, 2026",
+    firstSeen: "2026-09-01",
+    newsTopic: "government",
+    copy: "East end residents say the recent EDM festival rattled windows hard enough to knock pictures off walls, and complaints routed to the Marshal's office went nowhere. The letter writer argues Town Council prioritizes outside promoters over the people who actually live here year-round.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_78bd185a-00cc-4a58-9b18-83702d518863.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Sincerely, Michael Tobin",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
     title: "Traveling with pets",
     source: "Telluride Times",
     date: "September 1, 2026",
@@ -1714,7 +1812,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A Telluride parent shares how the district's Dual Immersion program paid off when their daughter spent two weeks in Cuzco, Peru, translating between doctors and patients at mobile clinics — and turned out to be one of the strongest Spanish speakers in her group. The family has considered leaving the area but says the schools keep them here.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/editorials/article_b0c872c7-4b6f-4344-a807-1aa66ee4c935.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     isLetter: true,
     imgHiRes: true
   },
@@ -3194,28 +3292,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Tennis Clinic 4.0+",
-    link: "https://koto.org/event/tennis-clinic-4-0/2026-09-01/",
-    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-01T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "The Democracy We Must Keep-Online Talk with David O. Stewart",
-    link: "https://koto.org/event/the-democracy-we-must-keep-online-talk-with-david-o-stewart/",
-    description: "Join us as we chat with award-winning historian David O. Stewart about his newest work, The Democracy We Must Keep, and the question he explores throughout the book: What did America's founders say about democracy, and can we remain true to their vision for America? Two hundred fifty years ago, passionate men attempted to create something the world had never seen before: a nation built not on kings or armies, but on ideas where the people ruled. In The Democracy We Must Keep, historian David O. Stewart takes readers inside the nine key documents that shaped the formation of the United States—from Patrick Henry's thunderous cry for liberty to the carefully crafted design of a government chosen by the people, with limits on all officials holding power under the Constitution. …",
-    pubDate: "2026-09-01T12:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Zoom",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/david.png"
-  },
-  {
     title: "Summer Sketch Book Club",
     link: "https://koto.org/event/summer-sketch-book-club/",
     description: "Join us for our summer sketchbook club! Unwind, connect with other artists, and find inspiration in nature as you fill up your sketchbook. We will meet in the library lobby and together we will walk to find a drawing spot by the river or in the park. All experience levels and drawing styles are welcome. Bring your own sketchbook and drawing materials; some materials may be available to borrow. You may also wish to bring sun protection, a towel or folding chair to sit on, and an extra layer as we will be sketching outside.",
@@ -4606,7 +4682,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "The Sherbino Presents: Donny Morales – First Friday Show",
     link: "https://events.ourayridgwayevents.com/event/the-sherbino-presents-donny-morales-first-friday-show",
-    description: "Friday, September 4th | 6:00–8:00 pm Sherbino “Living Room” Free Show | Cash Bar | Tips Encouraged Celebrate First Friday with an intimate evening of live music at the Sherbino! Join us in the Sherbino’s cozy “Living Room” near the bar for a special performance by Donny Morales. Donny brings his signature blend of “soul-acousti-funk”, delivering an irresistible mix of soulful vocals, funky rhythms, and masterful acoustic guitar. A longtime favorite on Colorado’s Western Slope, Donny’s performances are equal parts heartfelt storytelling, infectious grooves, and musical spontaneity. Whether he’s reimagining familiar favorites or sharing original songs, his warm stage presence and feel-good energy create an experience that’s impossible not to move to. Come ready to clap, sway, sing along, and enjoy an unforgettable evening of soul, acoustic vibes, and funk. …",
+    description: "Sherbino “Living Room” Free Show | Cash Bar | Tips Encouraged Celebrate First Friday with an intimate evening of live music at the Sherbino! Join us in the Sherbino’s cozy “Living Room” near the bar for a special performance by Donny Morales. Donny brings his signature blend of “soul-acousti-funk”, delivering an irresistible mix of soulful vocals, funky rhythms, and masterful acoustic guitar. A longtime favorite on Colorado’s Western Slope, Donny’s performances are equal parts heartfelt storytelling, infectious grooves, and musical spontaneity. Whether he’s reimagining familiar favorites or sharing original songs, his warm stage presence and feel-good energy create an experience that’s impossible not to move to. Come ready to clap, sway, sing along, and enjoy an unforgettable evening of soul, acoustic vibes, and funk. If you love discovering new artists on the rise or simply enjoy a cozy, live-music atmosphere, this is the perfect way to start your weekend. …",
     pubDate: "2026-09-05T00:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4829,17 +4905,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53830617900756/huge/9b913f03ccb0050e92a935ee9d2a464f7fe5b853.jpg"
-  },
-  {
-    title: "Ouray Comedy Night with Casey Skinner",
-    link: "https://events.ourayridgwayevents.com/event/comedy-casey-skinner-wright",
-    description: "Casey Skinner is an Los Angeles-based comedian whose credits include appearances on Netflix, HBO Max, BRAVO, E!, and the Netflix Is A Joke Festival. He has performed at iconic venues including The Comedy Store and The Improv, while also producing television projects for Netflix, Discovery, and Max. His storytelling style has been described as \"an ADHD Nate Bargatze,\" blending sharp observations, self-deprecating humor, and expertly crafted narratives into an unforgettable live performance. View on site | Email this event",
-    pubDate: "2026-09-11T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53689568797710/huge/f51f372eb10b5686aa14f1294d26a48f5aa02005.jpg"
   },
   {
     title: "Jolie Holland - Live at The Sherbino",
@@ -5682,6 +5747,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53780725919104/huge/846566299e8e325221de54dd5a54a0fd6427fbf5.jpg"
   },
   {
+    title: "4th Annual Boo-Mont Halloween Ball",
+    link: "https://events.ourayridgwayevents.com/event/4th-annual-boo-mont-halloween-ball",
+    description: "Get ready for the 4th Annual Boo-Mont Halloween Ball at the historic Beaumont Hotel in Ouray, Colorado! Come dressed to impress, scare, or simply make a statement! The evening will feature a costume contest with prizes, a DJ, spooky drink specials, a cash bar, and delicious hors d'oeuvres. 🎭 Costume Contest 🎶 DJ 🍸 Cash Bar + Spooky Drink Specials 🥂 Hors d'oeuvres 👻 Halloween Fun All Night 🎟️ Tickets are on sale now! Tickets are limited, so don't wait to get yours. 18 and up only. Must show valid ID at the door. Get ready for a night of costumes, cocktails, music, and Halloween magic at the Beaumont. View on site | Email this event",
+    pubDate: "2026-10-25T02:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Beaumont Hotel & Spa",
+    imageUrl: "https://localist-images.azureedge.net/photos/53860846025163/huge/937b6538c82ba8eff32aac54b7325895b4cde3f4.jpg"
+  },
+  {
     title: "Sherb Literary Living Room featuring Pam Houston with her new book: \"Animals Taught Me Everything\"",
     link: "https://events.ourayridgwayevents.com/event/sherb-literary-living-room-featuring-pam-houston-with-her-new-book-animals-taught-me-everything",
     description: "Doors at 6:00 PM; talk at 6:30 PM. Join the Sherbino Literary Living Room for author Pam Houston and her new book, Animals Taught Me Everything. Drawing on encounters with horses, dogs, elephants, big cats and other animals, Houston reflects on what animals can teach us about presence, joy, love, rest, death and our relationship with the living world. Houston is the award-winning author of Deep Creek, Cowboys Are My Weakness and other works. Seated event. Tickets: $15. View on site | Email this event",
@@ -5897,6 +5973,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/31725/drb-event-new.png"
   },
   {
+    title: "TMVOA Millennial Trivia at Telluride Distilling Company",
+    link: "https://townofmountainvillage.com/explore/events/all-events/tmvoa-millennial-trivia-at-telluride-distilling-company/",
+    description: "Grab your flip phone, update your Top 8, set your AIM away message, and put your millennial knowledge to the test! Join us at Telluride Distilling Company on",
+    pubDate: "2026-09-03T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49790/trivia_tdc_for_tmv.jpg"
+  },
+  {
     title: "Music on the Green Presents Daniel Rodriguez",
     link: "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-daniel-rodriguez-4/",
     description: "Beyond The Groove and TMVOA (tmvoa.org) present Daniel Rodriguez at Reflection Plaza in Mountain Village. The Friday shows are free,",
@@ -6095,6 +6182,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49087/screenshot_2026-06-05_132605.png"
   },
   {
+    title: "Local Legends Blues & Brews Kick Off",
+    link: "https://townofmountainvillage.com/explore/events/all-events/local-legends-blues-brews-kick-off/",
+    description: "Join Ah Haa School for the Arts in partnership with Telluride Blues & Brews Festival for Local Legends, a beer tasting and food pairing on the Ah Haa Sky",
+    pubDate: "2026-09-17T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49794/website_ll_26_sliders.png"
+  },
+  {
     title: "Music on the Green Presents Leon Timbo",
     link: "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-leon-timbo/",
     description: "Beyond The Groove and TMVOA (tmvoa.org) present Leon Timbo at Reflection Plaza in Mountain Village. The Friday shows are free, all ages and family friendly.",
@@ -6170,6 +6268,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    title: "Optimize Your Brain Health with Lifestyle Medicine",
+    link: "https://townofmountainvillage.com/explore/events/all-events/optimize-your-brain-health-with-lifestyle-medicine/",
+    description: "Can up to half of dementia cases be prevented? Emerging evidence suggests the answer is yes. In this engaging and evidence-based presentation, Dr.",
+    pubDate: "2026-09-23T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49783/tomv.jpg"
   },
   {
     title: "Movies Under the Stars",
@@ -6707,6 +6816,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/55141/download_13.800x533.webp"
+  },
+  {
+    title: "Local Legends Blues & Brews Kick-Off",
+    link: "https://www.telluride.com/event/local-legends-blues-brews-kick-off/",
+    description: "Join Ah Haa School for the Arts in partnership with Telluride Blues & Brews Festival for Local Legends, a beer …",
+    pubDate: "2026-09-17",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63467/screenshot_2026-09-01_at_9_12_39_am.800x533.webp"
   },
   {
     title: "Telluride Blues & Brews Festival",
@@ -8721,16 +8841,6 @@ const TELLURIDE_BOARD_MEETINGS = [
     time: "",
     civicwebId: 8042,
     packetUrl: "https://telluride-co.civicweb.net/document/443717/"
-  },
-  {
-    date: "September 2, 2026",
-    title: "Telluride Housing Authority Subcommittee",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163",
-    hasAgenda: true,
-    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: "",
-    civicwebId: 8163,
-    packetUrl: "https://telluride-co.civicweb.net/document/444280/"
   },
   {
     date: "September 10, 2026",
