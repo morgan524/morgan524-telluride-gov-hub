@@ -1,14 +1,14 @@
 {
-  "hash": "4a6822b85548f3b70a1f0eeacc02959526ae3c68",
-  "lede": "The biggest thing on the government calendar this week is Tuesday's Town Council work session, where three consequential topics land at once: a deep review of Comprehensive Plan goals, a Gondola Subcommittee update, and — the one worth clearing your schedule for — a look at proposals for a third-party audit of Town rental housing policies. Wednesday adds a BOCC vote that would shift income eligibility at Pinion Park to 80% AMI, quietly redrawing who qualifies for deed-restricted housing in the valley.",
+  "hash": "dd33648782f11945121ed3bc2a1c0d196f1ed7bd",
+  "lede": "The biggest thing on the government calendar this week is Wednesday's Board of County Commissioners meeting, where the San Miguel County Housing Authority will vote to shift Pinion Park's income eligibility to 80% AMI — a quiet policy change that determines who actually gets a deed-restricted unit in this valley. Also Tuesday, Town Council opens a full day of work sessions covering the Comprehensive Plan, a Gondola Subcommittee update, and a third-party audit of rental housing policy, while the Housing Authority Subcommittee takes up the Martin exception request — a real roof, a real cost, a real precedent. On the community side, the Youth Area grand opening at Wilkinson Public Library happens Wednesday, and the Stories in the Sky drone show lands Thursday.",
   "notable": [
     {
       "id": 0,
-      "stake": "Third-party rental housing audit review could reshape who stays in Telluride."
+      "stake": "Third-party rental housing audit review touches who can afford to stay here."
     },
     {
       "id": 4,
-      "stake": "Martin exception request: vote on $47K roof repair for deed-restricted Gold Run unit."
+      "stake": "Martin exception vote sets precedent for deed-restricted unit repair costs."
     },
     {
       "id": 5,
@@ -16,7 +16,7 @@
     },
     {
       "id": 6,
-      "stake": "Land Use Code definition changes — early shaping before any public hearing."
+      "stake": "Land Use Code definition changes shaped here before any public hearing."
     }
   ]
 }

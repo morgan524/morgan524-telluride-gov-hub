@@ -225,19 +225,6 @@
     "endDate": "2026-10-29"
   },
   {
-    "title": "Tennis Clinic 3.0-4.0",
-    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-01/",
-    "date": "2026-09-01",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "The M Factor, Shredding the Silence on Menopause. Film followed by a panel discussion",
     "href": "https://sherbino.org/event/the-m-factor-shredding-the-silence-on-menopause-film-followed-by-a-panel-discussion/",
     "date": "2026-09-01",
@@ -366,7 +353,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Municipal Court is a regularly scheduled court session held by the Town of Norwood. It is an official local government proceeding open to those with business before the court.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -907,7 +894,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/03/4fd403bf-4bc8-9f64-6ab9-26b72e8ee156.jpg",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "The Telluride Film Festival returns to the Sheridan Opera House, bringing screenings and cinematic programming to one of the mountain town's most storied historic venues. This beloved annual event draws film enthusiasts from around the…",
+    "desc": "",
     "type": "Arts & Film",
     "endDate": "2026-09-07"
   },
@@ -1568,6 +1555,19 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Woman's Club Thank You Breakfast",
+    "href": "https://ouraycountyco.gov/Calendar.aspx?EID=3780",
+    "date": "2026-09-10",
+    "time": "1:30 AM",
+    "location": "Ouray County 4-H Event Center - 22739 Highway 550 Ridgway CO 81432",
+    "town": "Ridgway",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
+    "category": "Community Event",
+    "source": "Ouray County",
+    "desc": "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3780",
+    "type": "Community"
+  },
+  {
     "title": "OCAA Art Show: Thomas Livingstone Photography",
     "href": "https://events.ourayridgwayevents.com/event/ocaa-art-show-thomas-livingstone-photography",
     "date": "2026-09-10",
@@ -1590,7 +1590,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday meal gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1774,7 +1774,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/05/unnamed-file.jpg",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "The Meditations, the legendary Jamaican reggae vocal group, perform live at the historic Sheridan Opera House in Telluride. This concert brings their classic roots reggae harmonies to one of the region's most celebrated intimate venues.",
+    "desc": "",
     "type": "Wellness"
   },
   {
@@ -1800,7 +1800,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
     "category": "Community Event",
     "source": "Ouray County",
-    "desc": "The Imogene Pass Run is an annual footrace that takes competitors over the challenging Imogene Pass between Telluride and Ouray, traversing one of the most scenic and demanding mountain routes in the San Juan Mountains. The course climbs…",
+    "desc": "https://ouraycountyco.gov/calendar.aspx?EID=3779",
     "type": "Community"
   },
   {
@@ -1931,7 +1931,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2022/08/VendorBadge_AsSeenOnWeb.png",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "La Familia Music Group takes the stage at the historic Sheridan Opera House as part of the Telluride Theater Fringe Project. This performance brings together theater and live music in an intimate venue setting during the fall season.",
+    "desc": "",
     "type": "Arts & Film"
   },
   {
@@ -2274,7 +2274,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2761,8 +2761,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
-    "type": "Food & Drink"
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Watercolor & Wine with Katey Fetch: \"Paint the Peaks\"",
@@ -2945,7 +2945,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
+    "desc": "",
     "type": "Community"
   },
   {
