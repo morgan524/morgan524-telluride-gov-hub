@@ -360,7 +360,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-09-17|Liquor Licensing Authority - Sep 17 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8145","sv":4,"ph":"5e169e6aed7b742f"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8145","sv":4,"ph":"63611b4d3d7b271f"},
 
   "telluride|2026-08-26|Resident Advisory Committee - Aug 26 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8304","zoomUrl":"https://us06web.zoom.us/j/83515721292?pwd=UWdbpZwQcmiOOtH3Ktbdarl9CZyHjm.1","meetingId":"835 1572 1292","passcode":"983442","phone":"970-728-2496","sv":4},
@@ -432,7 +432,10 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-10-01|Town Council Budget - Oct 01 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8053","sv":4,"ph":"ae63a84c96949f40"}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8053","sv":4,"ph":"ae63a84c96949f40"},
+
+  "county|2026-10-01|Lodging Tax Panel Meeting":
+    {"sv":4,"ph":"1f577e951aaf55d2"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -788,7 +791,10 @@ const MEETING_PREVIEWS = {
     "Council is expected to discuss matters related to Ordinance #1640, which amended Telluride's Land Use Code to implement the Colorado Wildfire Resiliency Code. The ordinance was originally passed on August 11, 2026, and this special session may address follow-up actions or implementation details related to wildfire resiliency standards.",
 
   "telluride|2026-10-01|Town Council Budget - Oct 01 2026":
-    "Council is expected to focus on budget discussions for the Town of Telluride. Members may also revisit matters related to Ordinance #1640, which amended the Land Use Code to implement the Colorado Wildfire Resiliency Code, following its passage on August 11, 2026."
+    "Council is expected to focus on budget discussions for the Town of Telluride. Members may also revisit matters related to Ordinance #1640, which amended the Land Use Code to implement the Colorado Wildfire Resiliency Code, following its passage on August 11, 2026.",
+
+  "county|2026-10-01|Lodging Tax Panel Meeting":
+    "The Lodging Tax Panel is expected to discuss matters related to the administration and allocation of lodging tax revenues in San Miguel County. No additional agenda details or directly relevant legal notices are available to indicate specific items beyond the panel's standard oversight responsibilities."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1336,7 +1342,10 @@ const MANUAL_SUMMARIES = {
     "The October 1, 2026 Mountain Village Design Review Board agenda hasn't been posted yet.",
 
   "telluride|2026-10-01|Town Council Budget - Oct 01 2026":
-    "The October 1, 2026 Town Council Budget agenda hasn't been posted yet."
+    "The October 1, 2026 Town Council Budget agenda hasn't been posted yet.",
+
+  "county|2026-10-01|Lodging Tax Panel Meeting":
+    "The October 1 Lodging Tax Panel agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1684,6 +1693,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Telluride Times collects 18 awards at annual press convention",
+    source: "Telluride Times",
+    date: "September 1, 2026",
+    firstSeen: "2026-09-01",
+    newsTopic: "community",
+    copy: "The Telluride Times took home 18 awards at the Colorado Press Association's Better News Contest, double last year's total, spanning advertising, editorial, photography, and design. The advertising department claimed top honors for the third straight year. Seven editorial awards also came in from the Colorado Society of Professional Journalists earlier in 2025.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_72bcc7a0-cfc1-4271-896e-8f86daec9761.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/12/712a7b69-dd93-4818-a07b-d1387b156c0f/6a9687a81f7ea.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Colorado drone show comes to Telluride",
     source: "Telluride Times",
@@ -3848,6 +3869,17 @@ const SHERIDAN_EVENTS = [
     category: "Concert / Performance",
     location: "Sheridan Opera House • Telluride, CO",
     imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/05/unnamed-file.jpg"
+  },
+  {
+    title: "Telluride Theater Fringe Project: La Familia Music Group",
+    link: "https://sheridanoperahouse.com/events/telluride-theater-fringe-project-la-familia-music-group/",
+    description: "La Familia Music Group takes the stage at the historic Sheridan Opera House as part of the Telluride Theater Fringe Project. This performance brings together theater and live music in an intimate venue setting during the fall season.",
+    pubDate: "2026-09-12",
+    source: "sheridan",
+    sourceLabel: "Sheridan Opera House",
+    category: "Concert / Performance",
+    location: "Sheridan Opera House • Telluride, CO",
+    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2022/08/VendorBadge_AsSeenOnWeb.png"
   }
 ];
 
@@ -4223,7 +4255,7 @@ const OURAY_COUNTY_EVENTS = [
   {
     title: "Imogene Pass Run",
     link: "https://ouraycountyco.gov/Calendar.aspx?EID=3779",
-    description: "https://ouraycountyco.gov/calendar.aspx?EID=3779",
+    description: "The Imogene Pass Run is an annual footrace that takes competitors over the challenging Imogene Pass between Telluride and Ouray, traversing one of the most scenic and demanding mountain routes in the San Juan Mountains. The course climbs to an elevation of over 13,000 feet, making it a notable test of endurance for participants.",
     pubDate: "2026-09-12T07:00:00.000Z",
     source: "ouraycounty",
     sourceLabel: "Ouray County",
@@ -4328,6 +4360,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53622925400388/huge/78ed1b5451403be8feaebe77cd45b69c1a39e826.jpg"
   },
   {
+    title: "City Slickers: CO-150 Film Festival @ the Wright",
+    link: "https://events.ourayridgwayevents.com/event/city-slickers-co-150-film-festival-the-wright",
+    description: "City Slickers (1991) follows three lifelong friends who leave their comfortable city lives behind to join a cattle drive across the American West in search of adventure, purpose, and perhaps themselves. Along the trail, they discover that life has a way of teaching its biggest lessons in the most unexpected places. Starring Billy Crystal, Daniel Stern, Jack Palance, and Bruno Kirby, this Academy Award-winning comedy blends heartfelt storytelling with unforgettable humor and breathtaking western landscapes. This Colorado-themed screening celebrates the spirit of the modern West and the places that continue to inspire it. While much of the film was shot in New Mexico, its themes of open spaces, ranching heritage, mountain landscapes, and personal renewal resonate deeply throughout Colorado and the San Juan Mountains. Funny, thoughtful, and surprisingly moving, City Slickers reminds us that sometimes the hardest trail to ride is the one that leads us back to ourselves. …",
+    pubDate: "2026-09-02T19:00:18.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Wright Opera House",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629792721969/huge/b36605ccda743f761d9a7e7ab62dfce88160e90c.jpg"
+  },
+  {
     title: "NEW With Weehawken: Beat & Step: West African Dance, Drum & Body Percussion ~ with performances in The Nutcracker Remixed!",
     link: "https://events.ourayridgwayevents.com/event/new-with-weehawken-beat-step-west-african-dance-drum-body-percussion-with-performances-in-the-nutcracker-remixed",
     description: "Beat & Step: West African Dance, Drum & Body Percussion is an energetic and interactive class that combines traditional West African dance, drumming, and body percussion into one exciting experience. Students will learn dance combinations, explore traditional drumming rhythms that tell stories, and create music using their hands, feet, body, drums, and voice. Along the way, they'll develop coordination, rhythm, musicality, focus, memory, confidence, and teamwork while experiencing the rich cultural traditions of West Africa. No previous dance or music experience is required—just curiosity, energy, and a willingness to learn. Students enrolled in this performance class will showcase what they've learned in our winter production. Dress Code: Students should wear comfortable clothing that allows for plenty of movement. Athletic clothing such as T-shirts, leggings, athletic pants, or shorts is recommended. Please avoid jeans or restrictive clothing. Wear comfortable athletic shoes or sneakers that are clean and reserved for class. …",
@@ -4398,17 +4441,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52880886803755/huge/ba2d24fbf09ba1f9a707a06213d60685581d7322.jpg"
   },
   {
-    title: "City Slickers: CO-150 Film Festival @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/city-slickers-co-150-film-festival-the-wright",
-    description: "City Slickers (1991) follows three lifelong friends who leave their comfortable city lives behind to join a cattle drive across the American West in search of adventure, purpose, and perhaps themselves. Along the trail, they discover that life has a way of teaching its biggest lessons in the most unexpected places. Starring Billy Crystal, Daniel Stern, Jack Palance, and Bruno Kirby, this Academy Award-winning comedy blends heartfelt storytelling with unforgettable humor and breathtaking western landscapes. This Colorado-themed screening celebrates the spirit of the modern West and the places that continue to inspire it. While much of the film was shot in New Mexico, its themes of open spaces, ranching heritage, mountain landscapes, and personal renewal resonate deeply throughout Colorado and the San Juan Mountains. Funny, thoughtful, and surprisingly moving, City Slickers reminds us that sometimes the hardest trail to ride is the one that leads us back to ourselves. …",
-    pubDate: "2026-09-03T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53629792721969/huge/b36605ccda743f761d9a7e7ab62dfce88160e90c.jpg"
-  },
-  {
     title: "WOH Art Show: Brittany Stadler",
     link: "https://events.ourayridgwayevents.com/event/woh-art-show-brittany-stadler",
     description: "Come see In Color, a new exhibition by regional artist Brittany Stadler in the Tavern at the Wright. Art on display through September 3. Brittany Stadler: Artist Statement My work often begins with a single form — typically an animal whose presence represents an ecosystem, region, or symbol. From that base shape, I build inward and intuitively. I draw in larger forms first, and work my way toward the smaller details. Research is an essential part of the practice. I study each plant and animal that I consider for a piece — how they move, how they relate to their environment. These rhythms inform the poses and compositions in my work, helping each subject feel alive and true. What results is part collage, part optical illusion — a work that I hope will be a process of discovery for everyone that views it. …",
@@ -4454,6 +4486,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Hartwell Park",
     imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
+  },
+  {
+    title: "Trivia Night @ the Wright",
+    link: "https://events.ourayridgwayevents.com/event/trivia-night-the-wright-1382",
+    description: "Come test the true limits of the human mind at Trivia Night @ the Wright, where obscure facts become temporary personality traits. Questions may include history, movies, science, music, local lore, accidental expertise, and things you absolutely learned once in 8th grade and never expected to need again. Bring a team, bring a friend, or arrive alone like a mysterious wandering scholar of useless information. Competitive spirits, wild guesses, and dramatic confidence are all encouraged. No studying required. In fact, studying may make things worse. View on site | Email this event",
+    pubDate: "2026-09-04T19:00:12.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Wright Opera House",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629793379457/huge/94e90759cff30df21fa21e46e7fcd2e69c247e84.jpg"
   },
   {
     title: "RIDGWAY WRECKING CREW",
@@ -4545,17 +4588,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/53358101603318/huge/d6a95490ff2eae257adf6f909e37473c1092b24e.jpg"
-  },
-  {
-    title: "Trivia Night @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/trivia-night-the-wright-1382",
-    description: "Come test the true limits of the human mind at Trivia Night @ the Wright, where obscure facts become temporary personality traits. Questions may include history, movies, science, music, local lore, accidental expertise, and things you absolutely learned once in 8th grade and never expected to need again. Bring a team, bring a friend, or arrive alone like a mysterious wandering scholar of useless information. Competitive spirits, wild guesses, and dramatic confidence are all encouraged. No studying required. In fact, studying may make things worse. View on site | Email this event",
-    pubDate: "2026-09-05T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53629793379457/huge/94e90759cff30df21fa21e46e7fcd2e69c247e84.jpg"
   },
   {
     title: "Steps Tavern Presents Karaoke Night",
@@ -5663,7 +5695,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-08-31-senior-lunch",
-    description: "",
+    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     pubDate: "2026-08-31T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5674,7 +5706,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Work Session",
     link: "https://www.norwoodtown.com/2026-09-01-nwc-work-session",
-    description: "",
+    description: "A work session hosted by the Norwood Water Commission (or similar NWC body) held in Norwood, CO, providing an opportunity for members to review, discuss, and work through agenda items outside of a formal public meeting. These sessions typically allow for more in-depth examination of ongoing projects, policies, or operational matters.",
     pubDate: "2026-09-01T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5685,7 +5717,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Municipal Court",
     link: "https://www.norwoodtown.com/2026-09-02-municipal-court",
-    description: "",
+    description: "Municipal Court is a regularly scheduled court session held by the Town of Norwood. It is an official local government proceeding open to those with business before the court.",
     pubDate: "2026-09-02T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5696,7 +5728,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5707,7 +5739,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-10-senior-lunch",
-    description: "",
+    description: "A midday meal gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     pubDate: "2026-09-10T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5718,7 +5750,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-17-senior-lunch",
-    description: "",
+    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     pubDate: "2026-09-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5729,7 +5761,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-24-senior-lunch",
-    description: "",
+    description: "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
     pubDate: "2026-09-24T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5740,7 +5772,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "",
+    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5751,7 +5783,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5762,7 +5794,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Veterans Day",
     link: "https://www.norwoodtown.com/2026-11-11-closed-for-veterans-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Veterans Day. Municipal offices and services will be unavailable on this federal holiday honoring those who have served in the United States armed forces.",
     pubDate: "2026-11-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5773,7 +5805,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Thanksgiving",
     link: "https://www.norwoodtown.com/2026-11-26-closed-for-thanksgiving",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Thanksgiving Day. Municipal offices and services will be unavailable, with normal operations expected to resume following the holiday.",
     pubDate: "2026-11-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6179,6 +6211,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    title: "Telluride Art Walk",
+    link: "https://townofmountainvillage.com/explore/events/all-events/telluride-art-walk-2/",
+    description: "The Telluride Art Walk is a lively monthly celebration of art, community, and creativity in downtown Telluride and Mountain Village.",
+    pubDate: "2026-10-01T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48372/artwalk-1800x900.jpg"
   }
 ];
 

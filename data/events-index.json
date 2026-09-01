@@ -264,6 +264,19 @@
     "type": "Community"
   },
   {
+    "title": "City Slickers: CO-150 Film Festival @ the Wright",
+    "href": "https://events.ourayridgwayevents.com/event/city-slickers-co-150-film-festival-the-wright",
+    "date": "2026-09-02",
+    "time": "1:00 PM",
+    "location": "The Wright Opera House",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53629792721969/huge/b36605ccda743f761d9a7e7ab62dfce88160e90c.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "City Slickers (1991) follows three lifelong friends who leave their comfortable city lives behind to join a cattle drive across the American West in search of adventure, purpose, and perhaps themselves. Along the trail, they discover that…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Market on the Plaza",
     "href": "https://koto.org/event/market-on-the-plaza/2026-09-02/",
     "date": "2026-09-02",
@@ -353,7 +366,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Municipal Court is a regularly scheduled court session held by the Town of Norwood. It is an official local government proceeding open to those with business before the court.",
     "type": "Community"
   },
   {
@@ -422,19 +435,6 @@
     "source": "Telluride Rotary",
     "desc": "Telluride Rotary Club meets the 1st & 3rd Wednesdays at 6:00 PM (gathering at 5:30) — 1st Wednesday at Mountain Lodge in Mountain Village, 3rd Wednesday at an announced Telluride location. A service club supporting scholarships, Youth…",
     "type": "Family & Kids"
-  },
-  {
-    "title": "City Slickers: CO-150 Film Festival @ the Wright",
-    "href": "https://events.ourayridgwayevents.com/event/city-slickers-co-150-film-festival-the-wright",
-    "date": "2026-09-02",
-    "time": "7:00 PM",
-    "location": "The Wright Opera House",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53629792721969/huge/b36605ccda743f761d9a7e7ab62dfce88160e90c.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "City Slickers (1991) follows three lifelong friends who leave their comfortable city lives behind to join a cattle drive across the American West in search of adventure, purpose, and perhaps themselves. Along the trail, they discover that…",
-    "type": "Arts & Film"
   },
   {
     "title": "Beautification Committee (OBC)",
@@ -700,6 +700,19 @@
     "type": "Community"
   },
   {
+    "title": "Trivia Night @ the Wright",
+    "href": "https://events.ourayridgwayevents.com/event/trivia-night-the-wright-1382",
+    "date": "2026-09-04",
+    "time": "1:00 PM",
+    "location": "The Wright Opera House",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53629793379457/huge/94e90759cff30df21fa21e46e7fcd2e69c247e84.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Come test the true limits of the human mind at Trivia Night @ the Wright, where obscure facts become temporary personality traits. Questions may include history, movies, science, music, local lore, accidental expertise, and things you…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Up-off Gymnastics, Dance, and Spanish",
     "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-09-04/",
     "date": "2026-09-04",
@@ -897,19 +910,6 @@
     "desc": "The Telluride Film Festival returns to the Sheridan Opera House, bringing screenings and cinematic programming to one of the mountain town's most storied historic venues. This beloved annual event draws film enthusiasts from around the…",
     "type": "Arts & Film",
     "endDate": "2026-09-07"
-  },
-  {
-    "title": "Trivia Night @ the Wright",
-    "href": "https://events.ourayridgwayevents.com/event/trivia-night-the-wright-1382",
-    "date": "2026-09-04",
-    "time": "7:00 PM",
-    "location": "The Wright Opera House",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53629793379457/huge/94e90759cff30df21fa21e46e7fcd2e69c247e84.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Come test the true limits of the human mind at Trivia Night @ the Wright, where obscure facts become temporary personality traits. Questions may include history, movies, science, music, local lore, accidental expertise, and things you…",
-    "type": "Talks & Classes"
   },
   {
     "title": "Birding with Katie, Sept 3rd and 4th",
@@ -1590,7 +1590,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday meal gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     "type": "Community"
   },
   {
@@ -1800,7 +1800,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
     "category": "Community Event",
     "source": "Ouray County",
-    "desc": "https://ouraycountyco.gov/calendar.aspx?EID=3779",
+    "desc": "The Imogene Pass Run is an annual footrace that takes competitors over the challenging Imogene Pass between Telluride and Ouray, traversing one of the most scenic and demanding mountain routes in the San Juan Mountains. The course climbs…",
     "type": "Community"
   },
   {
@@ -1920,6 +1920,19 @@
     "source": "Mountain Village",
     "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
     "type": "Community"
+  },
+  {
+    "title": "Telluride Theater Fringe Project: La Familia Music Group",
+    "href": "https://sheridanoperahouse.com/events/telluride-theater-fringe-project-la-familia-music-group/",
+    "date": "2026-09-12",
+    "time": "6:00 PM",
+    "location": "Sheridan Opera House • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://sheridanoperahouse.com/wp-content/uploads/2022/08/VendorBadge_AsSeenOnWeb.png",
+    "category": "Concert / Performance",
+    "source": "Sheridan Opera House",
+    "desc": "La Familia Music Group takes the stage at the historic Sheridan Opera House as part of the Telluride Theater Fringe Project. This performance brings together theater and live music in an intimate venue setting during the fall season.",
+    "type": "Arts & Film"
   },
   {
     "title": "Happy's Birthday w/ Chromatic Cowboy - Live at Floating Lotus Brewery",
@@ -2261,7 +2274,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     "type": "Community"
   },
   {
@@ -2748,8 +2761,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
-    "type": "Community"
+    "desc": "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
+    "type": "Food & Drink"
   },
   {
     "title": "Watercolor & Wine with Katey Fetch: \"Paint the Peaks\"",
@@ -2932,7 +2945,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
     "type": "Community"
   },
   {
@@ -3155,6 +3168,19 @@
     "source": "Mountain Village",
     "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
     "type": "Community"
+  },
+  {
+    "title": "Telluride Art Walk",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/telluride-art-walk-2/",
+    "date": "2026-10-01",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/48372/artwalk-1800x900.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "The Telluride Art Walk is a lively monthly celebration of art, community, and creativity in downtown Telluride and Mountain Village.",
+    "type": "Arts & Film"
   },
   {
     "title": "Original Thinkers",

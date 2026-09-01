@@ -394,5 +394,16 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    "title": "Telluride Art Walk",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/telluride-art-walk-2/",
+    "description": "The Telluride Art Walk is a lively monthly celebration of art, community, and creativity in downtown Telluride and Mountain Village.",
+    "pubDate": "2026-10-01T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/48372/artwalk-1800x900.jpg"
   }
 ]
