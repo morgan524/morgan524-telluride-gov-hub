@@ -13,27 +13,6 @@
     "url": "https://townofridgway.colorado.gov/resources/requests-for-proposals/bids"
   },
   {
-    "title": "Water Court Application -- Trout Lake Reservoir Storage Rights (Case No. 26CW3028)",
-    "entity": "Colorado District Court, Water Division No. 4",
-    "entityClass": "ent-county",
-    "entityLogo": "water_court",
-    "icon": "💧",
-    "iconClass": "type-bid",
-    "type": "Water Court",
-    "filterTag": "water-court",
-    "summary": "Telluride Preserve Homeowners Association filed an application to make absolute a 3.0 acre-foot conditional water right from Lake Fork of the San Miguel River for storage in Trout Lake Reservoir. The water right is for replacement of depletions and augmentation purposes, with beneficial use claimed as of June 16, 2025.",
-    "deadline": "Statutory protest period (typically 4-6 months from publication)",
-    "expires": "2026-08-31",
-    "dates": "6/11",
-    "papers": [
-      "ttimes_0611"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_6de56aef-d7ac-4c1e-bb5f-1bc3f669e424.html",
-    "address": "NE SW Section 8, Township 41 North, Range 9 West, NMPM",
-    "noticeKey": "26cw3028",
-    "caseNumber": "26CW3028"
-  },
-  {
     "title": "Probate Notice -- Claims Against Estate (Case No. 26PR30006)",
     "entity": "Estate of (unnamed), Patricia L. Bode Personal Representative",
     "entityClass": "ent-county",

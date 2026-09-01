@@ -1,6 +1,6 @@
 {
-  "hash": "f36a5f9865610ec61155c3c5fec6f9bf95b48ea9",
-  "lede": "The biggest thing on the calendar this week is Tuesday's Town Council work session, where the comp plan, gondola subcommittee, and — most consequentially — a third-party audit of the Town's rental housing policies all come up for review; that last piece directly shapes who can afford to stay here. Wednesday's County meeting carries real weight too, with the BOCC set to ratify an income-eligibility shift at Pinion Park to 80% AMI, quietly redrawing who qualifies for a deed-restricted unit.",
+  "hash": "4f901fe4bde5f84649493944a84d2d246ecac1d9",
+  "lede": "The biggest thing on the calendar this week is Tuesday's Town Council work session, where a third-party audit of the Town's rental housing policies is on the table — that one cuts right to who can actually afford to live here. The County commissioners also meet Wednesday to ratify an income-eligibility shift at Pinion Park to 80% AMI, a quiet threshold change with real consequences for housing access. Sprinkled through the week: the library opens its new youth area Wednesday, and the Stories in the Sky drone show lands Thursday.",
   "notable": [
     {
       "id": 0,
@@ -8,15 +8,19 @@
     },
     {
       "id": 4,
-      "stake": "Martin exception decision on $47K roof repair for deed-restricted Gold Run unit."
+      "stake": "Martin exception vote decides whether deed-restricted owners can fund a $47K roof repair."
     },
     {
       "id": 5,
-      "stake": "BOCC vote to shift Pinion Park income eligibility to 80% AMI changes who qualifies."
+      "stake": "BOCC ratifying 80% AMI eligibility change at Pinion Park alters who qualifies for a unit."
     },
     {
       "id": 6,
-      "stake": "Land Use Code definition changes — where zoning rules get quietly rewritten first."
+      "stake": "Ouray County land-use definition changes in work session shape future code interpretations."
+    },
+    {
+      "id": 7,
+      "stake": "Conditional-use permit for food truck at 332 Adams Ranch goes to DRB for Council recommendation."
     }
   ]
 }

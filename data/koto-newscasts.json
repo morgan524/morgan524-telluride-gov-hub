@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 8-31-26",
+    "source": "KOTO Community Radio",
+    "date": "September 1, 2026",
+    "newsTopic": "community",
+    "copy": "Coming Up Next, Telluride; Telluride’s Alderwild Swan Song",
+    "href": "https://koto.org/news/newscast-8-31-26/"
+  },
+  {
     "title": "Newscast 8-28-26",
     "source": "KOTO Community Radio",
     "date": "August 29, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "public-safety",
     "copy": "Telluride Marshals Use Flock Cameras in Theft Investigation; Telluride Talks Flood Mapping; KOTO is Stayin’ Alive",
     "href": "https://koto.org/news/newscast-8-19-26/"
-  },
-  {
-    "title": "Newscast 8-17-26",
-    "source": "KOTO Community Radio",
-    "date": "August 18, 2026",
-    "newsTopic": "community",
-    "copy": "Telluride Debriefs on Parking; Tribal Allyship in San Miguel County",
-    "href": "https://koto.org/news/newscast-8-17-26/"
   }
 ]

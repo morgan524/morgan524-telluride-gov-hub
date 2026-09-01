@@ -300,18 +300,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/63362/tdp3588.800x533.webp"
   },
   {
-    "title": "Camp Alderwild",
-    "link": "https://www.telluride.com/event/camp-alderwild/",
-    "description": "Denver-based producer Of the Trees will be returning to play two nights at Town Park this summer. Of The Trees will be …",
-    "pubDate": "2026-08-28",
-    "endDate": "2026-08-30",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/57622/of_the_trees_by_frankie_zarantonello.800x533.webp"
-  },
-  {
     "title": "Full Circle Fashion Fundraiser",
     "link": "https://www.telluride.com/event/full-circle-fashion-fundraiser/",
     "description": "EcoAction Partners and The Ah Haa School for the Arts are hosting a Full Circle Fashion Fundraiser Saturday August 29th …",
@@ -322,28 +310,6 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63239/fcf_web.800x533.webp"
-  },
-  {
-    "title": "An Evening With Ken Burns",
-    "link": "https://www.telluride.com/event/an-evening-with-ken-burns/",
-    "description": "Join the Telluride Museum for their annual Evening With Ken Burns, tentatively at the Palm Theatre. Tickets are $25 for …",
-    "pubDate": "2026-08-30",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/53487/kenburns_620x370_0.800x533.webp"
-  },
-  {
-    "title": "Summer School: Tale of Two Terroirs: Pommard & Volnay",
-    "link": "https://www.telluride.com/event/the-national-summer-school-tale-of-two-terroirs-pommard-volnay/",
-    "description": "Experience the profound nuances of the world's most prestigious wine region as part of The National's ongoing …",
-    "pubDate": "2026-08-30",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63427/the-national_wineeducation-flyer_8_5x11_1.800x533.webp"
   },
   {
     "title": "Emergency Preparedness for People, Pets and Our Communities",
@@ -389,6 +355,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63443/screenshot_2026-08-21_114434-v1.800x533.webp"
+  },
+  {
+    "title": "TMVOA Millennial Trivia",
+    "link": "https://www.telluride.com/event/tmvoa-millennial-trivia-at-telluride-distilling-company/",
+    "description": "Grab your flip phone, update your Top 8, set your AIM away message, and put your millennial knowledge to the test! Join …",
+    "pubDate": "2026-09-03",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63464/trivia_tdc_for_ttb.800x533.webp"
   },
   {
     "title": "Telluride Film Festival",

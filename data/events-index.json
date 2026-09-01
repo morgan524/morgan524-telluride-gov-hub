@@ -54,19 +54,6 @@
     "type": "Music"
   },
   {
-    "title": "Emergency Preparedness For People, Pets and Our Communities",
-    "href": "https://koto.org/event/emergency-preparedness-for-people-pets-and-our-communities/",
-    "date": "2026-08-31",
-    "time": "5:00 PM",
-    "location": "Patagonia Telluride, Telluride Retail",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/08/Emergency-Preparedness-Flyer-JABOR.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "ARE YOU READY? Wildfires, floods and other emergencies can happen quickly. Join Patagonia, San Miguel County Emergency Management, Second Chance Humane Society and Just A Bunch of Roadies for a practical one-hour session on how to prepare…",
-    "type": "Community"
-  },
-  {
     "title": "An Absolute Beginner&#039;s Guide to Music Theory",
     "href": "https://telluridelibrary.libcal.com/event/17268607?hs=a",
     "date": "2026-08-31",
@@ -102,7 +89,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -117,6 +104,19 @@
     "source": "Mountain Village",
     "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Emergency Preparedness for People, Pets and Our Communities",
+    "href": "https://www.telluride.com/event/emergency-preparedness-for-people-pets-and-our-communities/",
+    "date": "2026-08-31",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63418/emergency_preparedness_flyer-_jabor.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "ARE YOU READY? Wildfires, floods and other emergencies can happen quickly. Join Patagonia, San Miguel County Emergency …",
+    "type": "Community"
   },
   {
     "title": "Breathe Together",
@@ -420,7 +420,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Municipal Court is a regularly scheduled court session held by the Town of Norwood. It is an official local government proceeding open to those with business before the court.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -700,6 +700,19 @@
     "desc": "Patagonia Telluride will host a bird talk with Katie Triest from 5-6 pm on Sept 3 at the Patagonia store. Katie will …",
     "type": "Talks & Classes",
     "endDate": "2026-09-04"
+  },
+  {
+    "title": "TMVOA Millennial Trivia",
+    "href": "https://www.telluride.com/event/tmvoa-millennial-trivia-at-telluride-distilling-company/",
+    "date": "2026-09-03",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63464/trivia_tdc_for_ttb.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Grab your flip phone, update your Top 8, set your AIM away message, and put your millennial knowledge to the test! Join …",
+    "type": "Community"
   },
   {
     "title": "Pickleball Nights",
@@ -1490,6 +1503,19 @@
     "type": "Community"
   },
   {
+    "title": "Mahjongg for Independent Players",
+    "href": "https://koto.org/event/mahjongg-for-independent-players-4/2026-09-09/",
+    "date": "2026-09-09",
+    "time": "1:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have…",
+    "type": "Community"
+  },
+  {
     "title": "Ouray: Echoes in the Canyon",
     "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-2450",
     "date": "2026-09-09",
@@ -1504,16 +1530,55 @@
   },
   {
     "title": "Market on the Plaza",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    "href": "https://koto.org/event/market-on-the-plaza/2026-09-09/",
     "date": "2026-09-09",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
+    "time": "11:00 AM",
+    "location": "Heritage Plaza, Mountain Village",
     "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/mountainvillage.jpg",
     "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    "source": "KOTO Community Calendar",
+    "desc": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan…",
     "type": "Community"
+  },
+  {
+    "title": "Tennis Clinic 4.0+",
+    "href": "https://koto.org/event/tennis-clinic-4-0/2026-09-09/",
+    "date": "2026-09-09",
+    "time": "11:00 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Sewing 101 with Melissa",
+    "href": "https://koto.org/event/sewing-101-with-melissa/2026-09-09/",
+    "date": "2026-09-09",
+    "time": "5:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/02/sewing.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll…",
+    "type": "Community"
+  },
+  {
+    "title": "Sound Bath with Danielle & Ian",
+    "href": "https://koto.org/event/sound-bath-with-danielle-ian-2/",
+    "date": "2026-09-09",
+    "time": "5:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/danielle-sound-1.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join us for an hour of traveling through sound and the inner self! In this once a month community event, we are healing the body and auric field with a multitude of sound frequencies. Chimes, 432hz quartz singing bowls, crystal tuning…",
+    "type": "Wellness"
   },
   {
     "title": "Mama Said String Band",
@@ -1564,7 +1629,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday meal gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1774,7 +1839,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
     "category": "Community Event",
     "source": "Ouray County",
-    "desc": "The Imogene Pass Run is an annual footrace that takes competitors over the challenging Imogene Pass between Telluride and Ouray, traversing one of the most scenic and demanding mountain routes in the San Juan Mountains. The course climbs…",
+    "desc": "https://ouraycountyco.gov/calendar.aspx?EID=3779",
     "type": "Community"
   },
   {
@@ -2235,7 +2300,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2302,6 +2367,19 @@
     "source": "Telluride.com",
     "desc": "Augment Music Project sponsors local music with weekly performances at the Telluride Farmers' Market.",
     "type": "Food & Drink"
+  },
+  {
+    "title": "Emergency Go Kit Assembly Project at the Telluride Blues and Brews Festival at Town Park",
+    "href": "https://events.ourayridgwayevents.com/event/emergency-go-kit-assembly-project-at-the-telluride-blues-and-brews-festival",
+    "date": "2026-09-18",
+    "time": "12:00 PM",
+    "location": "the Festival",
+    "town": "Telluride",
+    "img": "https://localist-images.azureedge.net/photos/53853077811116/huge/8e41947484ff02c59861ff15f9c199d0f9076964.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Spend 15 minutes at the Festival helping to assemble Emergency Go Kits to be distributed for free to vunerable families in Ouray, Montrose and San Miguel Counties. Sponsored by Ouray, Montrose and San Miguel County Emergency Management,…",
+    "type": "Festivals"
   },
   {
     "title": "OLD MAN POLLY",
@@ -2475,6 +2553,19 @@
     "desc": "Head to Telluride for the Crystal Festival, an educational and vendor event featuring rocks, minerals, fossils, …",
     "type": "Festivals",
     "endDate": "2026-09-21"
+  },
+  {
+    "title": "Ouray Mountain Trail Run",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-mountain-trail-run",
+    "date": "2026-09-19",
+    "time": "7:30 AM",
+    "location": "Fellin Park",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53845081366165/huge/81169ec498ed88b72ba4159faa91cff1827d17f7.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "13-mile trail run around the perimeter of Ouray. With approx 4000 ft of total elevation gain, runners will run past the dinosaur tracks, across the box canyon, past the ice park & via feratta, up into the amphitheater, and past the Cascade…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "BRITLEY & MATT",
@@ -2696,8 +2787,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
-    "type": "Food & Drink"
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Watercolor & Wine with Katey Fetch: \"Paint the Peaks\"",
@@ -2880,7 +2971,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -3567,5 +3658,18 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Doors at 6:00 PM; talk at 6:30 PM. Join the Sherbino Literary Living Room for author Pam Houston and her new book, Animals Taught Me Everything. Drawing on encounters with horses, dogs, elephants, big cats and other animals, Houston…",
     "type": "Talks & Classes"
+  },
+  {
+    "title": "JELLY BOWL BAND",
+    "href": "https://events.ourayridgwayevents.com/event/jelly-bowl-band",
+    "date": "2026-10-30",
+    "time": "4:00 PM",
+    "location": "687 N Cora Street, Ridgway, CO 81432",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   }
 ]
