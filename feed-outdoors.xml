@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-outdoors.xml" rel="self" type="application/rss+xml" />
     <description>Hikes, races, ski events, and stewardship days — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Sep 2026 00:32:10 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 08:31:22 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>⚡ [Meeting] Town Council - Sep 01 2026 — 2026-09-01</title>
@@ -17,7 +17,7 @@
 
 Three work sessions open the day: a deep look at Comprehensive Plan goals and objectives with project consultants, a Gondola Subcommittee update, and a review of proposals for a third-party audit of the Town's rental housing policies — that last one worth watching given how central rent policy has become to who can stay in the canyon. A second work session later covers AMI increases and rental rate adjustments for 2027 budgetary planning. On the action side: second reading of the 2026 budget reappropriation ordinance; a resolution permitting dogs on a limited stretch of the River Trail near the Public Works facility; approval of a wildfire mitigation project south of the Shandoka Apartments; and first readings authorizing the sale of three deed-restricted units — Spruce House Unit H and two FINO II units. Council will also consider finalizing a 30-minute free parking program. The long-running appeal of the Stender Residence HARC approval is continued again. Five board and commission seats are up for appointment.
 
-⚡ Why it matters: Third-party rental housing audit review could reshape who stays in the canyon.]]></description>
+⚡ Why it matters: Third-party rental housing audit review could reshape who stays in Telluride.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -57,16 +57,30 @@ Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot an
       <category>KOTO</category>
     </item>
     <item>
-      <title>[Tue, Sep 1] Summer Sketch Book Club</title>
-      <link>https://koto.org/event/summer-sketch-book-club/</link>
+      <title>[Tue, Sep 1] Ice Age Artifacts with Rob Schultheis</title>
+      <link>https://telluridelibrary.libcal.com/event/17111101?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/ice%20age%20artifacts%20with%7C2026-09-01</guid>
+      <pubDate>Tue, 01 Sep 2026 22:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_26_17_01_21.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+4:30 PM – 6:00 PM · Rob Schultheis is a local author and journalist, as well as an amatuer archeologist who has collected heaps of Ice Age artifacts from the region. In his words: I have been gathering Ice Age artifacts from the mammoth-hunting era around 12,000 years ago. I began looking for them after hearing about the Ice Age sites above Aspen and Snowmass, and have found literally hundreds of pieces, mostly from the Lawson Hill area, lower Bilk Creek, the bike path along the river below the Mountain School, etc. The most spectacular are carvings in gold deposits of mammoth eyes and trunks, large pieces of fossilized tusk, carved shells and wood, relief sculptures of entire mammoths, incised depictions on stone of mammoth faces, points and tools, and beautifully intricate stone carvings. …]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_26_17_01_21.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Tue, Sep 1] Summer Sketch Book Club with Annie</title>
+      <link>https://telluridelibrary.libcal.com/event/16759156?hs=a</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/summer%20sketch%20book%20club%7C2026-09-01</guid>
       <pubDate>Tue, 01 Sep 2026 23:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Wilkinson Public Library, Telluride
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_12_34_15.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Lobby
 
-Join us for our summer sketchbook club! Unwind, connect with other artists, and find inspiration in nature as you fill up your sketchbook. We will meet in the library lobby and together we will walk to find a drawing spot by the river or in the park. All experience levels and drawing styles are welcome. Bring your own sketchbook and drawing materials; some materials may be available to borrow. You may also wish to bring sun protection, a towel or folding chair to sit on, and an extra layer as we will be sketching outside.]]></description>
+5:30 PM – 7:00 PM · Join us for our summer sketchbook club! Unwind, connect with other artists, and find inspiration in nature as you fill up your sketchbook. We will meet in the library lobby and together we will walk to find a drawing spot by the river or in the park. All experience levels and drawing styles are welcome. Bring your own sketchbook and drawing materials; some materials may be available to borrow. You may also wish to bring sun protection, a towel or folding chair to sit on, and an extra layer as we will be sketching outside.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_12_34_15.png" medium="image" />
       <category>Community Event</category>
-      <category>KOTO</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Meeting] Ecology Commission - Sep 02 2026 — 2026-09-02</title>
@@ -99,7 +113,7 @@ A working meeting for CCAASE, the Town's grant and events commission. The board 
 
 Three months of draft minutes — June, July, and August — come up for approval together, which is itself a small sign of how thinly stretched these oversight bodies can run. The substantive work: the Martin exception request returns after being continued from August 5. Lela and Jon Martin own a deed-restricted unit at Gold Run and need a new roof — bid at $47,743.86, or about 17% of their original purchase price. Their deed restriction caps staff-approvable capital improvements at 5% of OPP (~$13,960), and allows more only if the work 'increases the unit's capacity to house additional occupants' — a standard staff acknowledges the roof replacement doesn't meet, even while recommending approval. The subcommittee will work through that tension. A worksession on 'subpar bedroom' occupancy exceptions follows. Most consequentially, the group will set a date for a special meeting on housing waitlist policies and the recent suspension of the waitlist — that last item touches something a lot of people in this valley are watching closely.
 
-⚡ Why it matters: Martin exception vote decides whether deed-restricted owners can fund a $47K roof repair.]]></description>
+⚡ Why it matters: Martin exception request: vote on $47K roof repair for deed-restricted Gold Run unit.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -112,7 +126,7 @@ Three months of draft minutes — June, July, and August — come up for approva
 
 A short meeting with two substantive items. On the housing side, the BOCC — sitting as the San Miguel County Housing Authority — will ratify a policy change at Pinion Park that adjusts income eligibility to 80% AMI. That kind of threshold shift quietly determines who qualifies for a unit, which matters a great deal in a valley where the gap between market rate and what workers can actually pay keeps widening. On the administrative side, the board will consider appointing Commissioner Anne Brown as the county's voting representative for the Colorado Counties Inc. 2027 Legislative Agenda — a routine designation, but one that shapes how county priorities get carried to the Capitol. There's also a proclamation declaring September Suicide Prevention Month through Thrive Community Health Network.
 
-⚡ Why it matters: BOCC ratifying 80% AMI eligibility change at Pinion Park alters who qualifies for a unit.]]></description>
+⚡ Why it matters: BOCC vote shifts Pinion Park income eligibility to 80% AMI, changing who qualifies.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -125,7 +139,7 @@ A short meeting with two substantive items. On the housing side, the BOCC — si
 
 Ouray County's Planning Commission meets virtually on September 2 for a work session on possible changes to the Land Use Code, Section 2 — Definitions. Work sessions like this one are where the real shaping happens, before anything goes to a public hearing. The specific definition changes under discussion aren't detailed in the posted notice, but packet materials are attached to the agenda for anyone who wants to dig in ahead of the meeting.
 
-⚡ Why it matters: Ouray County land-use definition changes in work session shape future code interpretations.]]></description>
+⚡ Why it matters: Land Use Code definition changes — early shaping before any public hearing.]]></description>
       <category>Meeting</category>
       <category>ouray</category>
     </item>
@@ -167,15 +181,13 @@ Patagonia Telluride will host a bird talk with Katie Triest from 5-6 pm on Sept 
       <category>Telluride.com</category>
     </item>
     <item>
-      <title>⚡ [Meeting] Design Review Board — 2026-09-03</title>
+      <title>[Meeting] Design Review Board — 2026-09-03</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/mv%7C2026-09-03%7CDesign%20Review%20Board</guid>
       <pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Mountain Village • 2026-09-03
 
-One item worth noting on this September 3rd Design Review Board agenda: a conditional-use permit review for a temporary tent and food truck at 332 Adams Ranch Rd (Lots OSP-35-B & OSP-35-C), which goes to the DRB for a recommendation to Town Council. There's also a general easement encroachment review at 140 Cortina Dr and an informational session on Pond Plaza with staff and Design Workshop. The 15-unit employee apartment building at 306 Adams Ranch Rd — the one item of broader housing consequence — is being continued to the October 1st meeting. The remainder of the agenda is single-family and detached condominium architecture reviews.
-
-⚡ Why it matters: Conditional-use permit for food truck at 332 Adams Ranch goes to DRB for Council recommendation.]]></description>
+One item worth noting on this September 3rd Design Review Board agenda: a conditional-use permit review for a temporary tent and food truck at 332 Adams Ranch Rd (Lots OSP-35-B & OSP-35-C), which goes to the DRB for a recommendation to Town Council. There's also a general easement encroachment review at 140 Cortina Dr and an informational session on Pond Plaza with staff and Design Workshop. The 15-unit employee apartment building at 306 Adams Ranch Rd — the one item of broader housing consequence — is being continued to the October 1st meeting. The remainder of the agenda is single-family and detached condominium architecture reviews.]]></description>
       <category>Meeting</category>
       <category>Mountain Village</category>
     </item>
@@ -200,19 +212,6 @@ This is the TRC flagship Tennis Clinic. Courts will be divided based on level an
 📍 Telluride Racquet Club, Mountain Village
 
 Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Thu, Sep 3] Birding with Katie, Sept 3rd and 4th</title>
-      <link>https://koto.org/event/birding-with-katie-sept-3rd-and-4th/2026-09-03/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/birding%20with%20katie%20sept%7C2026-09-03</guid>
-      <pubDate>Thu, 03 Sep 2026 23:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/08/image-1.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Patagonia Telluride, Telluride Retail
-
-Patagonia Telluride will offer a bird talk with local birder Katie Triest at the Telluride Patagonia store on Thursday, Sept. 3 from 5-6 pm. Katie will be offering a bird walk on Friday, Sept 4th from 8-10 am. Please meet at the Patagonia Telluride store for the walk. Limited to 12 participants. You can sign up at the Patagonia store or by using the QR code on flyers around town. Binoculars will be provided.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/08/image-1.png" medium="image" />
       <category>Community Event</category>
       <category>KOTO</category>
     </item>

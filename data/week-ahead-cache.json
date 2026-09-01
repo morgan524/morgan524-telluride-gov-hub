@@ -1,26 +1,22 @@
 {
-  "hash": "4f901fe4bde5f84649493944a84d2d246ecac1d9",
-  "lede": "The biggest thing on the calendar this week is Tuesday's Town Council work session, where a third-party audit of the Town's rental housing policies is on the table — that one cuts right to who can actually afford to live here. The County commissioners also meet Wednesday to ratify an income-eligibility shift at Pinion Park to 80% AMI, a quiet threshold change with real consequences for housing access. Sprinkled through the week: the library opens its new youth area Wednesday, and the Stories in the Sky drone show lands Thursday.",
+  "hash": "4a6822b85548f3b70a1f0eeacc02959526ae3c68",
+  "lede": "The biggest thing on the government calendar this week is Tuesday's Town Council work session, where three consequential topics land at once: a deep review of Comprehensive Plan goals, a Gondola Subcommittee update, and — the one worth clearing your schedule for — a look at proposals for a third-party audit of Town rental housing policies. Wednesday adds a BOCC vote that would shift income eligibility at Pinion Park to 80% AMI, quietly redrawing who qualifies for deed-restricted housing in the valley.",
   "notable": [
     {
       "id": 0,
-      "stake": "Third-party rental housing audit review could reshape who stays in the canyon."
+      "stake": "Third-party rental housing audit review could reshape who stays in Telluride."
     },
     {
       "id": 4,
-      "stake": "Martin exception vote decides whether deed-restricted owners can fund a $47K roof repair."
+      "stake": "Martin exception request: vote on $47K roof repair for deed-restricted Gold Run unit."
     },
     {
       "id": 5,
-      "stake": "BOCC ratifying 80% AMI eligibility change at Pinion Park alters who qualifies for a unit."
+      "stake": "BOCC vote shifts Pinion Park income eligibility to 80% AMI, changing who qualifies."
     },
     {
       "id": 6,
-      "stake": "Ouray County land-use definition changes in work session shape future code interpretations."
-    },
-    {
-      "id": 7,
-      "stake": "Conditional-use permit for food truck at 332 Adams Ranch goes to DRB for Council recommendation."
+      "stake": "Land Use Code definition changes — early shaping before any public hearing."
     }
   ]
 }

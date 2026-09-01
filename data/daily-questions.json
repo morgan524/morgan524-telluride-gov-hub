@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-09-01",
+    "title": "Foreclosures on the agenda — twice",
+    "body": "The Board of County Commissioners meets September 2 with two foreclosure sales on the docket — one involving a property in Telluride, another in Mountain Village. Foreclosures up here don't happen in a vacuum. Some residents see them as a market correction that could open doors for locals who've been priced out. Others worry they signal deeper financial stress in the community — or that the properties will simply flip to the next highest bidder and nothing changes.\n\nWhat do foreclosures in this market actually mean to you?",
+    "choices": [
+      "Sign of opportunity for locals",
+      "Sign of deeper trouble",
+      "Just routine legal process",
+      "It's complicated"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-08-31",
     "title": "Wildfire rules are now town law — now what?",
     "body": "Ordinance #1640 passed on August 11, 2026, writing the Colorado Wildfire Resiliency Code into Telluride's Land Use Code. Now council is circling back to it at a rescheduled budget session. Some residents will see this as overdue — up here, the fire risk is real and defensible space matters. Others may worry that new code requirements mean new costs and new hurdles for property owners already navigating a tough market. The ordinance is passed, but how it gets implemented is still an open conversation.\n\nSo: do you think folding wildfire resiliency rules into the Land Use Code is the right tool for the job?",
@@ -425,21 +440,6 @@
       "Part of how markets work",
       "Worth paying attention to",
       "Depends on who's affected",
-      "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-08-02",
-    "title": "What's open space actually for?",
-    "body": "The Open Space Commission is meeting to talk about priorities and criteria for acquiring, managing, and maintaining open space in town. That sounds straightforward — until you realize \"open space\" means different things to different people. Some want land preserved as-is, untouched. Others see managed open space as a place for trails, recreation, or even future infrastructure. How the commission sets its criteria now shapes what council hears next. Nothing is decided yet — this is a priorities conversation.\n\nSo: what should come first when the town decides what open space is worth protecting — and how?",
-    "choices": [
-      "Keep it wild, limit the uses",
-      "Build it out for recreation",
-      "Acquisition first, debate use later",
       "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",
