@@ -264,18 +264,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/62860/img_4897.800x533.webp"
   },
   {
-    "title": "Bike and Brewery Tour",
-    "link": "https://www.telluride.com/event/bike-and-brewery-tour/",
-    "description": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride …",
-    "pubDate": "2026-08-03",
-    "endDate": "2026-10-12",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63161/bike-and-brewery-tour-1800x900_870x435.800x533.webp"
-  },
-  {
     "title": "Community Concert",
     "link": "https://www.telluride.com/event/community-concert/",
     "description": "A fun and free chamber music series featuring talented local musicians. These concerts will appeal to both first time …",
@@ -357,6 +345,17 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/28877/144071284720c1c00935.800x533.webp"
   },
   {
+    "title": "Mama Said String Band",
+    "link": "https://www.telluride.com/event/mama-said-string-band/",
+    "description": "Mama Said String Band is an instant classic, since 2016 they’ve been bringing their own brand of the grassroots music …",
+    "pubDate": "2026-09-09",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63472/screenshot_2026-09-02_at_12_37_53_pm.800x533.webp"
+  },
+  {
     "title": "Telluride Dinner Party",
     "link": "https://www.telluride.com/event/telluride-dinner-party/",
     "description": "Join the Telluride Historical Museum for dinner for their premier fundraising event! Enjoy an excellent catered meal, …",
@@ -366,6 +365,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/48558/screenshot_2026-08-11_at_4_32_53_pm.800x533.webp"
+  },
+  {
+    "title": "Vana Liya",
+    "link": "https://www.telluride.com/event/vana-liya/",
+    "description": "Genre-busting vocalist and songwriter Vana Liya made a serendipitous arrival on the music scene after she posted …",
+    "pubDate": "2026-09-10",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63475/screenshot_2026-09-02_at_12_39_17_pm.800x533.webp"
   },
   {
     "title": "The Meditations",
@@ -527,6 +537,17 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/48115/2023_corvettes_and_colors.800x533.webp"
   },
   {
+    "title": "Photon",
+    "link": "https://www.telluride.com/event/photon/",
+    "description": "What started as a passion project dedicated to the late and great Stephen Hawking quickly evolved into a serious deep …",
+    "pubDate": "2026-09-24",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63478/screenshot_2026-09-02_at_12_40_25_pm.800x533.webp"
+  },
+  {
     "title": "Mountains to the Desert Classic",
     "link": "https://www.telluride.com/event/mountains-to-the-desert-classic/",
     "description": "The Mountains to the Desert Classic (M2D) is celebrating its 22 Anniversary as the primary fundraising event for the …",
@@ -536,6 +557,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/48458/m2dlogonob_g.800x533.webp"
+  },
+  {
+    "title": "Yope",
+    "link": "https://www.telluride.com/event/yope/",
+    "description": "Yope is a Durango, CO based rock/funk/jam/fusion band that has been making waves over the past two years in the Four …",
+    "pubDate": "2026-09-26",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63481/screenshot_2026-09-02_at_12_41_29_pm.800x533.webp"
   },
   {
     "title": "Original Thinkers",
@@ -548,6 +580,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/28484/ot_poster_2025_final.800x533.webp"
+  },
+  {
+    "title": "Ken Gentry & the Companions",
+    "link": "https://www.telluride.com/event/ken-gentry-the-companions/",
+    "description": "Rooted in the soulful grit of a St. Louis upbringing and refined by the clarity of Colorado's Western Slope, Ken Gentry …",
+    "pubDate": "2026-10-01",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63484/screenshot_2026-09-02_at_12_42_42_pm.800x533.webp"
   },
   {
     "title": "Pink Talking Fish",

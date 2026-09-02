@@ -345,7 +345,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8023","sv":4,"ph":"96078cc700b16039"},
 
   "telluride|2026-09-16|Historic & Architectural Review Commission - Sep 16 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8022","sv":4,"ph":"e63371133d9cef98"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8022","sv":4,"ph":"357f7b650fab0207"},
 
   "telluride|2026-09-16|Parks & Recreation Commission - Sep 16 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082","sv":4,"ph":"6fb96e40a5040f91"},
@@ -381,7 +381,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-09-22|Telluride Housing Authority - Sep 22 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303","sv":4,"ph":"df16bef2d4cca5b3"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303","sv":4,"ph":"d6200257aab6f8b7"},
 
   "telluride|2026-09-22|Town Council - Sep 22 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043","sv":4,"ph":"c5b14e4bfd86db54"},
@@ -420,7 +420,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"1ff606174e68cca5"},
 
   "telluride|2026-09-30|Special Meeting - Historic & Architectural Review Commission - Sep 30 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309","sv":4,"ph":"fcd71e9a9b6a541a"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309","sv":4,"ph":"6d74144a26371ce4"},
 
   "telluride|2026-09-17|Special Meeting - Planning & Zoning Commission - Sep 17 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8310","sv":4,"ph":"0d28d97b4ee2d60d"},
@@ -435,7 +435,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8053","sv":4,"ph":"ae63a84c96949f40"},
 
   "county|2026-10-01|Lodging Tax Panel Meeting":
-    {"sv":4,"ph":"1f577e951aaf55d2"}
+    {"sv":4,"ph":"1f577e951aaf55d2"},
+
+  "county|2026-09-09|Board of County Commissioners Special Meeting":
+    {"sv":4,"ph":"7751bc604656aec0"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -779,7 +782,10 @@ const MEETING_PREVIEWS = {
     "Council is expected to focus on budget discussions for the Town of Telluride. Members may also revisit matters related to Ordinance #1640, which amended the Land Use Code to implement the Colorado Wildfire Resiliency Code, following its passage on August 11, 2026.",
 
   "county|2026-10-01|Lodging Tax Panel Meeting":
-    "The Lodging Tax Panel is expected to discuss matters related to the administration and allocation of lodging tax revenues in San Miguel County. No additional agenda details or directly relevant legal notices are available to indicate specific items beyond the panel's standard oversight responsibilities."
+    "The Lodging Tax Panel is expected to discuss matters related to the administration and allocation of lodging tax revenues in San Miguel County. No additional agenda details or directly relevant legal notices are available to indicate specific items beyond the panel's standard oversight responsibilities.",
+
+  "county|2026-09-09|Board of County Commissioners Special Meeting":
+    "Board will consider matters including a public hearing on adopting the 2024 International Building Code and Colorado Low Energy & Carbon Code, a request for quotes for material hauling, and proposals for repainting the county jail. Related legal notices include estate probate matters and a foreclosure sale."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -983,6 +989,16 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "We’re Hiring- Bilingual Food Pantry and seNior Lunch Cook Assistant/ Estamos Contratando: Asistente Bilingüe del Banco de Alimentos y Asistente de Cocina del Almuerzo para Personas Mayores",
+    source: "Fresh Food Hub",
+    sourceKey: "fresh-food-hub",
+    date: "August 27, 2026",
+    newsTopic: "community",
+    copy: "We re hiring for two part-time positions: Bilingual Food Pantry Assistant — Sundays, 1:30–6:30 p.m. This role provides Spanish-English translation support for our Spanish-speaking clients during food pantry distribution. Senior Lunch Assistant — Thursdays, 8:30 a.m.–1:30 p.m. at Norwood Town Hall. T",
+    href: "https://freshfoodhub.net/were-hiring-bilingual-food-pantry-and-senior-lunch-cook-assistant-estamos-contratando-asistente-bilingue-del-banco-de-alimentos-y-asistente-de-cocina-del-almuerzo-para-personas-mayores/",
+    img: ""
+  },
+  {
     title: "Invitation to Prayer/Fellowship Wednesday Morning",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -1030,7 +1046,7 @@ const SMC_ALERTS = [
 const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-01';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-02';
 const LEGAL_NOTICES_CACHE_DATE = '2026-09-02';
 
 const MANUAL_SUMMARIES = {
@@ -1323,7 +1339,10 @@ const MANUAL_SUMMARIES = {
     "The October 1, 2026 Town Council Budget agenda hasn't been posted yet.",
 
   "county|2026-10-01|Lodging Tax Panel Meeting":
-    "The October 1 Lodging Tax Panel agenda hasn't been posted yet."
+    "The October 1 Lodging Tax Panel agenda hasn't been posted yet.",
+
+  "county|2026-09-09|Board of County Commissioners Special Meeting":
+    "The September 9, 2026 Board of County Commissioners Special Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1681,18 +1700,6 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "PHOTO ESSAY: Inside a detention center where scam workers wait for their return home",
-    source: "Telluride Times",
-    date: "September 2, 2026",
-    firstSeen: "2026-09-02",
-    newsTopic: "community",
-    copy: "Hundreds of workers caught up in large-scale cyberscam operations in the Philippines are being held at a seized six-story building in Pasay while they wait to be repatriated home — a process that can take months or years. Some were trafficked, others came voluntarily, and many describe beatings and being sold between operations. The facility once held over 900 people; around 70 remain.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_fd288a9b-e8a1-5542-8f62-6f16579cc761.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/db/3dbc6793-b30b-5e5c-9478-016b67c9f70f/6a98143d4c9c4.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "What to know about the AP/FRONTLINE investigation into scam victims",
     source: "Telluride Times",
     date: "September 2, 2026",
@@ -1705,6 +1712,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Energetic responsibilities",
+    source: "Telluride Times",
+    date: "September 2, 2026",
+    firstSeen: "2026-09-02",
+    newsTopic: "community",
+    copy: "One day, early in her career as an energy healer, Karen O’Dell had a moment with her child, who was overwrought after a sleepover and lots of friend time.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/norwood_post/article_e9289e3f-50ef-4896-95d0-92c07610b6ba.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/da/2da5af3d-6fab-4bd6-8c41-617cada772df/6a9879164037e.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Scams in the US are at a record high. Yet most victims get no help and some end up losing even more",
     source: "Telluride Times",
     date: "September 2, 2026",
@@ -1714,6 +1733,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_bf60538d-c978-520d-8adf-5fd4490f3f41.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/91/39174b17-dbe4-50d9-8b75-331a65f90676/6a9811dceac84.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "PHOTO ESSAY: Inside a detention center where scam workers wait for their return home",
+    source: "Telluride Times",
+    date: "September 2, 2026",
+    firstSeen: "2026-09-02",
+    newsTopic: "community",
+    copy: "Hundreds of workers caught up in large-scale cyberscam operations in the Philippines are being held at a seized six-story building in Pasay while they wait to be repatriated home — a process that can take months or years. Some were trafficked, others came voluntarily, and many describe beatings and being sold between operations. The facility once held over 900 people; around 70 remain.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_fd288a9b-e8a1-5542-8f62-6f16579cc761.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/db/3dbc6793-b30b-5e5c-9478-016b67c9f70f/6a98143d4c9c4.image.jpg",
     imgHiRes: true
   },
   {
@@ -2568,6 +2599,33 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Marya Stark and Charles Dalton Sworn In to Telluride Town Council",
+    source: "Town of Telluride",
+    date: "August 12, 2026",
+    newsTopic: "government",
+    copy: "(July 21, 2026) – The Town welcomed two new members to Town Council this morning as Charles Dalton and Marya Stark were sworn into office at 9:30 a.m. Town Clerk Tiffany Kavanaugh administered the oath of office for both officials.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=402",
+    img: ""
+  },
+  {
+    title: "Arrest Made in String of Telluride Mountain Bike Thefts",
+    source: "Town of Telluride",
+    date: "August 12, 2026",
+    newsTopic: "recreation",
+    copy: "(August 11, 2026) – The Telluride Marshal's Department has identified and arrested a suspect in a series of mountain bike thefts that account for more than $22,000 in reported losses.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=401",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15642"
+  },
+  {
+    title: "State of the Town Address: The State of the Town Is Strong and Engaging",
+    source: "Town of Telluride",
+    date: "August 8, 2026",
+    newsTopic: "government",
+    copy: "The Mayor's biannual State of the Town Address was delivered on Tuesday, July 21 during the regular meeting of Telluride Town Council, here's what Mayor Teddy Errico had to say.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=400",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15641"
+  },
+  {
     title: "CDOT Performing Ditch Cleaning 8/31 - 9/3",
     source: "San Miguel County",
     date: "August 28, 2026",
@@ -2595,6 +2653,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Black Bear Pass Now Open",
+    source: "San Miguel County",
+    date: "August 3, 2026",
+    newsTopic: "recreation",
+    copy: "County crews finished work this afternoon, Black Bear Pass is now open from Red Mountain Pass to Telluride.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=539",
+    img: ""
+  },
+  {
     title: "Stage 1 Fire Restrictions In Effect",
     source: "Town of Telluride",
     date: "August 26, 2026",
@@ -2612,6 +2679,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Rescind-Stage-2%2C-Reinstate-Stage-1-Fire-Restrictions-Press-Release-2026-09-02.pdf",
+    img: ""
+  },
+  {
+    title: "Public Hearing Notice Wed., Sept. 16, 2026 at 5:30pm - Lot 10 of Block 3 of Lidell-Stanton Business Park Subdivision; Lot 4 and Outlot of Riverview Business Park Subdivision; Lena Street Commons Planned Unit Development - Sept. 2, 2026",
+    source: "Town of Ridgway",
+    date: "September 2, 2026",
+    firstSeen: "2026-09-02",
+    newsTopic: "land-use",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.09.16_public-hearing-notice.pdf",
     img: ""
   },
   {
@@ -4727,6 +4805,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53629792987218/huge/6f3a915f33285c3e3da2dbe8c54dfcf731474ba0.jpg"
   },
   {
+    title: "Middle School Volleyball: Ouray vs Norwood",
+    link: "https://events.ourayridgwayevents.com/event/middle-school-volleyball-ouray-vs-norwood",
+    description: "Ouray Middle School will be playing Norwood Middle School @ Ouray View on site | Email this event",
+    pubDate: "2026-09-10T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray School",
+    imageUrl: "https://localist-images.azureedge.net/photos/53861297432644/huge/0881f9c577bef68a34ca3d7295e47b218cb6980e.jpg"
+  },
+  {
     title: "Music Bingo",
     link: "https://events.ourayridgwayevents.com/event/music-bingo",
     description: "Music Bingo at Floating Lotus Brewery! Join us on the 2nd & 4th Thursdays from 6-9 PM for a high-energy night of music, drinks, and bingo-style fun. Listen, mark your card, and sing along. Learn more at floatinglotusbrewery.com. View on site | Email this event",
@@ -5601,6 +5690,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53780725919104/huge/846566299e8e325221de54dd5a54a0fd6427fbf5.jpg"
   },
   {
+    title: "Pumpkins & Flowers at The Adobe Inn with San Juan Blooms!",
+    link: "https://events.ourayridgwayevents.com/event/pumpkins-flowers-at-the-adobe-inn-with-san-juan-blooms",
+    description: "An evening of Pumpkins & Flowers at The Adobe Inn! Kick off fall with a little hands-on flower arranging. Join San Juan Blooms for our Pumpkins + Flowers Workshop, where you’ll sip a cocktail, enjoy delicious appetizers, and build your own seasonal centerpiece using fresh autumn blooms and local pumpkins. Event Details When: Thursday, October 22, 2026 | 6:00 PM – 9:00 PM Where: The Adobe Inn - Ridgway, CO Tickets: $85 per person What’s Included: All supplies, fresh flowers, and prepped pumpkins Bites and appetizers throughout the evening One drink (cocktails, mocktails, beer, or wine) View on site | Email this event",
+    pubDate: "2026-10-23T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Adobe Inn",
+    imageUrl: "https://localist-images.azureedge.net/photos/53853672137353/huge/5d72d8d4bb7838f935a11a5d61d599e6d3719f6b.jpg"
+  },
+  {
     title: "4th Annual Boo-Mont Halloween Ball",
     link: "https://events.ourayridgwayevents.com/event/4th-annual-boo-mont-halloween-ball",
     description: "Get ready for the 4th Annual Boo-Mont Halloween Ball at the historic Beaumont Hotel in Ouray, Colorado! Come dressed to impress, scare, or simply make a statement! The evening will feature a costume contest with prizes, a DJ, spooky drink specials, a cash bar, and delicious hors d'oeuvres. 🎭 Costume Contest 🎶 DJ 🍸 Cash Bar + Spooky Drink Specials 🥂 Hors d'oeuvres 👻 Halloween Fun All Night 🎟️ Tickets are on sale now! Tickets are limited, so don't wait to get yours. 18 and up only. Must show valid ID at the door. Get ready for a night of costumes, cocktails, music, and Halloween magic at the Beaumont. View on site | Email this event",
@@ -6469,18 +6569,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/62860/img_4897.800x533.webp"
   },
   {
-    title: "Bike and Brewery Tour",
-    link: "https://www.telluride.com/event/bike-and-brewery-tour/",
-    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride …",
-    pubDate: "2026-08-03",
-    endDate: "2026-10-12",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63161/bike-and-brewery-tour-1800x900_870x435.800x533.webp"
-  },
-  {
     title: "Community Concert",
     link: "https://www.telluride.com/event/community-concert/",
     description: "A fun and free chamber music series featuring talented local musicians. These concerts will appeal to both first time …",
@@ -6562,6 +6650,17 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/28877/144071284720c1c00935.800x533.webp"
   },
   {
+    title: "Mama Said String Band",
+    link: "https://www.telluride.com/event/mama-said-string-band/",
+    description: "Mama Said String Band is an instant classic, since 2016 they’ve been bringing their own brand of the grassroots music …",
+    pubDate: "2026-09-09",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63472/screenshot_2026-09-02_at_12_37_53_pm.800x533.webp"
+  },
+  {
     title: "Telluride Dinner Party",
     link: "https://www.telluride.com/event/telluride-dinner-party/",
     description: "Join the Telluride Historical Museum for dinner for their premier fundraising event! Enjoy an excellent catered meal, …",
@@ -6571,6 +6670,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/48558/screenshot_2026-08-11_at_4_32_53_pm.800x533.webp"
+  },
+  {
+    title: "Vana Liya",
+    link: "https://www.telluride.com/event/vana-liya/",
+    description: "Genre-busting vocalist and songwriter Vana Liya made a serendipitous arrival on the music scene after she posted …",
+    pubDate: "2026-09-10",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63475/screenshot_2026-09-02_at_12_39_17_pm.800x533.webp"
   },
   {
     title: "The Meditations",
@@ -6732,6 +6842,17 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/48115/2023_corvettes_and_colors.800x533.webp"
   },
   {
+    title: "Photon",
+    link: "https://www.telluride.com/event/photon/",
+    description: "What started as a passion project dedicated to the late and great Stephen Hawking quickly evolved into a serious deep …",
+    pubDate: "2026-09-24",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63478/screenshot_2026-09-02_at_12_40_25_pm.800x533.webp"
+  },
+  {
     title: "Mountains to the Desert Classic",
     link: "https://www.telluride.com/event/mountains-to-the-desert-classic/",
     description: "The Mountains to the Desert Classic (M2D) is celebrating its 22 Anniversary as the primary fundraising event for the …",
@@ -6741,6 +6862,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/48458/m2dlogonob_g.800x533.webp"
+  },
+  {
+    title: "Yope",
+    link: "https://www.telluride.com/event/yope/",
+    description: "Yope is a Durango, CO based rock/funk/jam/fusion band that has been making waves over the past two years in the Four …",
+    pubDate: "2026-09-26",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63481/screenshot_2026-09-02_at_12_41_29_pm.800x533.webp"
   },
   {
     title: "Original Thinkers",
@@ -6753,6 +6885,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/28484/ot_poster_2025_final.800x533.webp"
+  },
+  {
+    title: "Ken Gentry & the Companions",
+    link: "https://www.telluride.com/event/ken-gentry-the-companions/",
+    description: "Rooted in the soulful grit of a St. Louis upbringing and refined by the clarity of Colorado's Western Slope, Ken Gentry …",
+    pubDate: "2026-10-01",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63484/screenshot_2026-09-02_at_12_42_42_pm.800x533.webp"
   },
   {
     title: "Pink Talking Fish",
