@@ -1,26 +1,22 @@
 {
-  "hash": "0cce875d2b3d3684fc9a5f6b7ea8075cc7a002e1",
-  "lede": "The Ecology Commission is set to dig into a draft ordinance that would ban gas-powered leaf blowers in Town by 2028 and all other combustion lawn equipment by 2030 — that's a real policy proposal with a real timeline, and Wednesday is the moment to pay attention. The county is also moving on an income-eligibility change at Pinion Park, dropping the threshold to 80% AMI, which quietly reshapes who can get a deed-restricted unit here. Elsewhere, the Housing Authority subcommittee takes up the Martin roof exception, and the Film Festival rolls in Friday.",
+  "hash": "d3dd8b670edce2fabaee2d23433bf5586f8d10d2",
+  "lede": "The biggest item on your civic radar this week is the San Miguel County Housing Authority's vote Wednesday to shift Pinion Park income eligibility to 80% AMI — a quiet threshold change that decides who actually gets a shot at a deed-restricted unit in this valley. Also Wednesday, the Ecology Commission takes up a draft ordinance that would ban combustion-powered lawn and garden equipment in Town limits, starting with leaf blowers in 2028. The Housing Authority subcommittee meets the same day on the Martin roof-repair exception, and the Mountain Village Design Review Board weighs in Thursday on a conditional-use permit at 332 Adams Ranch Rd.",
   "notable": [
     {
+      "id": 3,
+      "stake": "Vote shifts Pinion Park eligibility to 80% AMI, changing who qualifies for deed-restricted housing."
+    },
+    {
       "id": 0,
-      "stake": "Draft ordinance would ban gas lawn equipment in Town by 2028–2030."
+      "stake": "Draft ordinance would ban gas-powered lawn equipment in Town limits by 2028–2030."
     },
     {
       "id": 2,
-      "stake": "Board votes on deed-restricted owner's $47K roof exception request."
-    },
-    {
-      "id": 3,
-      "stake": "County ratifies Pinion Park income-eligibility shift to 80% AMI."
-    },
-    {
-      "id": 4,
-      "stake": "Land use code definition changes shaped here before any public hearing."
+      "stake": "Martin exception request up for decision — deed-restricted unit repair approval on the table."
     },
     {
       "id": 5,
-      "stake": "Conditional-use permit for tent and food truck goes to DRB for recommendation."
+      "stake": "DRB recommends on conditional-use permit for tent and food truck at 332 Adams Ranch Rd."
     }
   ]
 }

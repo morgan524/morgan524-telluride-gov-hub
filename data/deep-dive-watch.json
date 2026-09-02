@@ -1,11 +1,17 @@
 {
- "generated": "2026-09-02T03:50:21.806Z",
+ "generated": "2026-09-02T10:59:58.504Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
    "lastUpdated": "2026-08-17",
    "upcoming": [],
    "recent": [
+    {
+     "source": "telluride",
+     "date": "2026-09-01",
+     "title": "Town Council - Sep 01 2026",
+     "snippet": "Three work sessions open the day: a deep look at Comprehensive Plan goals and objectives with project consultants, a Gondola Subcommittee update, and a review of proposals for a third-party audit of…"
+    },
     {
      "source": "school",
      "date": "2026-08-25",
@@ -32,6 +38,7 @@
     }
    ],
    "stale": [
+    "Carhenge / Shandoka: telluride discussed it on 2026-09-01 (\"Town Council - Sep 01 2026\") but the deep dive was last edited 2026-08-17.",
     "Carhenge / Shandoka: school discussed it on 2026-08-25 (\"Telluride Board of Education Monthly Meeting\") but the deep dive was last edited 2026-08-17.",
     "Carhenge / Shandoka: telluride discussed it on 2026-08-19 (\"Historic & Architectural Review Commission - Aug 19 2026\") but the deep dive was last edited 2026-08-17.",
     "Carhenge / Shandoka: timeline entry \"HARC hears Shandoka's four buildings; Carhenge slips to…\" (Aug 19, 2026) is still marked upcoming but the date has passed."
@@ -101,15 +108,15 @@
    "upcoming": [],
    "recent": [
     {
-     "source": "fire",
-     "date": "2026-08-18",
-     "title": "Board of Directors Meeting",
-     "snippet": "The Telluride Fire Protection District board meets August 18th at 5:30 p.m. at 131 W. Columbia Ave. Station 3 gets another update — that project has been moving through the district's planning for a…"
+     "source": "telluride",
+     "date": "2026-09-01",
+     "title": "Town Council - Sep 01 2026",
+     "snippet": "Three work sessions open the day: a deep look at Comprehensive Plan goals and objectives with project consultants, a Gondola Subcommittee update, and a review of proposals for a third-party audit of…"
     }
    ],
    "developments": [],
    "stale": [
-    "Wildfire Resiliency: fire discussed it on 2026-08-18 (\"Board of Directors Meeting\") but the deep dive was last edited 2026-06-01."
+    "Wildfire Resiliency: telluride discussed it on 2026-09-01 (\"Town Council - Sep 01 2026\") but the deep dive was last edited 2026-06-01."
    ]
   },
   "diamond": {

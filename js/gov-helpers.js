@@ -348,7 +348,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8022","sv":4,"ph":"e63371133d9cef98"},
 
   "telluride|2026-09-16|Parks & Recreation Commission - Sep 16 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082","sv":4,"ph":"74a846d62014eeb4"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082","sv":4,"ph":"6fb96e40a5040f91"},
 
   "county|2026-09-16|Board of County Commissioners Meeting":
     {"sv":4,"ph":"a12dfd2ce826475e"},
@@ -460,6 +460,14 @@ const DEEP_DIVE_UPDATES = [
 //   sourceUrl, topics: [] }. Rendered by hub-bub.html from the JSON mirror
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
+  {
+    date: "2026-09-02",
+    title: "When a roof doesn't fit the rules — but they approve it anyway",
+    body: "Lela and Jon Martin need a new roof on their deed-restricted unit at Gold Run. The bid came in at $47,743.86 — roughly 17% of their original purchase price. Their deed restriction caps staff-approvable capital improvements at 5% of that price, or about $13,960, and allows exceptions only when work increases the unit's capacity to house additional occupants. Staff acknowledges the roof doesn't meet that standard. They're recommending approval anyway.\n\nSome will say the restriction exists for a reason and bending it sets a precedent. Others will say a roof is a roof — you can't let a deed-restricted unit fall apart over a technicality. Where do you come down?",
+    choices: ["Approve it — a roof is basic upkeep", "Hold the line on deed restrictions", "Fix the policy first, then decide", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
   {
     date: "2026-09-01",
     title: "Foreclosures on the agenda — twice",
@@ -691,14 +699,6 @@ const DAILY_QUESTIONS = [
     choices: ["Protect wildlife first", "Prioritize human safety", "Both, if rules are fair", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-08-03",
-    title: "Foreclosure in Mountain Village — who's watching?",
-    body: "Two properties in Mountain Village are headed to foreclosure sale. That's not nothing up here. Some residents will see it as routine legal process — debts come due, the system works as designed. Others will wonder what it signals about the broader market, or whether there are downstream effects on the community. Neither read is wrong. The sales are upcoming; nothing has been decided beyond the legal notices.\n\nWhat do foreclosure sales in Mountain Village mean to you?",
-    choices: ["Part of how markets work", "Worth paying attention to", "Depends on who's affected", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -779,10 +779,7 @@ const MEETING_PREVIEWS = {
     "Council is expected to focus on budget discussions for the Town of Telluride. Members may also revisit matters related to Ordinance #1640, which amended the Land Use Code to implement the Colorado Wildfire Resiliency Code, following its passage on August 11, 2026.",
 
   "county|2026-10-01|Lodging Tax Panel Meeting":
-    "The Lodging Tax Panel is expected to discuss matters related to the administration and allocation of lodging tax revenues in San Miguel County. No additional agenda details or directly relevant legal notices are available to indicate specific items beyond the panel's standard oversight responsibilities.",
-
-  "county|2026-09-02|Board of County Commissioners Meeting":
-    "Board will consider routine county business at its regular September 2 meeting in Telluride. Related legal notices indicate active foreclosure proceedings, estate matters, and procurement activity in the county, including requests for proposals for a fuel island canopy and jail repainting project."
+    "The Lodging Tax Panel is expected to discuss matters related to the administration and allocation of lodging tax revenues in San Miguel County. No additional agenda details or directly relevant legal notices are available to indicate specific items beyond the panel's standard oversight responsibilities."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -896,13 +893,103 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "We’re Hiring- Bilingual Food Pantry and seNior Lunch Cook Assistant/ Estamos Contratando: Asistente Bilingüe del Banco de Alimentos y Asistente de Cocina del Almuerzo para Personas Mayores",
-    source: "Fresh Food Hub",
-    sourceKey: "fresh-food-hub",
+    title: "Factors behind the fire: What drove its spread?",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 27, 2026",
+    newsTopic: "public-safety",
+    copy: "In the summer of 1879, the largest wildfire in Colorado history at the time tore through 26,000 acres of rugged forest about eight miles south of Silverton and presaged a vast shift in its landscape. Laying waste to the coniferous forests in its path, the Lime Creek Fire opened the door for huge sta",
+    href: "https://www.ouraynews.com/2026/08/26/factors-behind-fire-drove-spread/",
+    img: ""
+  },
+  {
+    title: "Tax districts approved for proposed project",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 27, 2026",
+    newsTopic: "government",
+    copy: "The Ridgway Town Council approved creating four metropolitan districts at its Aug. 12 meeting for a proposed residential and commercial development on 19 acres in north Ridgway. The development, Alpenglow Vista, anticipates up to 150 residential units and 50,000 square feet of commercial and light i",
+    href: "https://www.ouraynews.com/2026/08/26/tax-districts-approved-proposed-project/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Officials push Trump for disaster declaration",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 27, 2026",
+    newsTopic: "public-safety",
+    copy: "Federal, state and local officials pushed this week for President Donald Trump to issue a disaster declaration for the Gold Mountain and Aspen Acres fires that would open the door to additional federal funding for relief and remediation efforts. Colorado Gov. Jared Polis formally requested a major d",
+    href: "https://www.ouraynews.com/2026/08/26/officials-push-trump-disaster-declaration/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "New principal brings international experience",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 27, 2026",
+    newsTopic: "government",
+    copy: "Michael Flaim, an educator who taught economics and social studies at international schools for nearly 20 years, has started as Ouray School’s interim preK-8 principal for the 2026-2027 school year. The Ouray School Board accepted Superintendent Tod Lokey’s recommendation to hire him late last month",
+    href: "https://www.ouraynews.com/2026/08/26/new-principal-brings-international-experience/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Construction to control flooding begins",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 27, 2026",
+    newsTopic: "public-safety",
+    copy: "Crews from Haynes Excavation began work last week to repair and protect areas prone to flooding and debris flows beneath the Gold Mountain Fire burn scar. The $2.8 million Emergency Watershed Protect authorized by the federal Natural Resources Conservation Service is funded by the NRCS, the Colorado",
+    href: "https://www.ouraynews.com/2026/08/26/construction-control-flooding-begins/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Disaster relief sales tax headed for ballot",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 27, 2026",
+    newsTopic: "government",
+    copy: "Ouray County commissioners approved a ballot question Tuesday to ask voters for a county-wide 0.5% disaster recovery sales tax at the Nov. 3 election. Commissioners also paused efforts to pursue a 3% use tax on construction materials to fund the county’s roads and bridges until next year. The Ouray ",
+    href: "https://www.ouraynews.com/2026/08/26/disaster-relief-sales-tax-headed-ballot/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Public trails for all, not personal interests",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 27, 2026",
+    newsTopic: "recreation",
+    copy: "Dear Editor: In response to the letter to the editor from Dianne Eschman in the Aug. 13 edition, as an avid off-roader and business owner in Ouray, I take issue with a few claims made. Off-highway vehicles exhaust and noise are regulated by the federal government, they are under strict requirements ",
+    href: "https://www.ouraynews.com/2026/08/26/public-trails-not-personal-interests/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "County needs a disaster fund, not an endless tax",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 27, 2026",
+    newsTopic: "government",
+    copy: "Dear Editor: I am writing because the proposed disaster recovery fund sales tax deserves careful consideration before voters approve it. I’m concerned the ballot language creates an unlimited forever growing revenue source rather than a defined disaster reserve. The relevant question isn’t what the ",
+    href: "https://www.ouraynews.com/2026/08/26/county-needs-disaster-fund-not-endless-tax/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Monsoon flooding as old as Ouray itself",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
     date: "August 27, 2026",
     newsTopic: "community",
-    copy: "We re hiring for two part-time positions: Bilingual Food Pantry Assistant — Sundays, 1:30–6:30 p.m. This role provides Spanish-English translation support for our Spanish-speaking clients during food pantry distribution. Senior Lunch Assistant — Thursdays, 8:30 a.m.–1:30 p.m. at Norwood Town Hall. T",
-    href: "https://freshfoodhub.net/were-hiring-bilingual-food-pantry-and-senior-lunch-cook-assistant-estamos-contratando-asistente-bilingue-del-banco-de-alimentos-y-asistente-de-cocina-del-almuerzo-para-personas-mayores/",
+    copy: "Situated on debris fans created by Portland and Cascade creeks, Ouray lies in a 5,000-foot deep rock bowl drained by five major creeks emptying into the Uncompahgre River. It’s not surprising that for the 150 years of the city’s existence, it has flooded repeatedly in monsoon season. July 22, 1878: ",
+    href: "https://www.ouraynews.com/2026/08/26/monsoon-flooding-old-ouray/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Advocates for fire authority pivot",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 27, 2026",
+    newsTopic: "public-safety",
+    copy: "Organizers pitch placing county EMS under Ridgway Fire Ouray County plans to pivot efforts to consolidate a proposed fire and emergency response authority by merging Ouray County Emergency Medical Services with the Ridgway Fire Protection District. With Log Hill Mesa Fire Protection District and the",
+    href: "https://www.ouraynews.com/2026/08/26/advocates-fire-authority-pivot/?ta_paidstory",
     img: ""
   },
   {
@@ -1594,6 +1681,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "The one that got away",
+    source: "Telluride Times",
+    date: "September 2, 2026",
+    firstSeen: "2026-09-02",
+    newsTopic: "arts-culture",
+    copy: "The Telluride Bluegrass Festival's 50th anniversary film was pulled from a planned Film Festival premiere after undisclosed AI-generated animation was discovered in the footage — a problem given the film celebrates the world's top acoustic artists. Director Craig Ferguson hopes to reschedule the premiere at the Sheridan Opera House.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_36a7635f-d51e-438c-a8df-fc1ee5f21baf.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/71/771852d0-1ebe-4728-b85b-beb00e2cdbd5/6a93173fc54bc.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Court dismisses ‘deficient’ Telski lawsuit against Fee, Prohaska, Wisor",
     source: "Telluride Times",
@@ -2624,6 +2723,19 @@ const KOTO_FEATURED_STORIES = [
 // and the array will naturally shed the sentinels via the same logic.
 const SMB_FORUM_ARTICLES = [
   {
+    title: "Coach celebrates baseball awards, optimistic about 2027",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "September 2, 2026",
+    firstSeen: "2026-09-02",
+    dateSource: "article",
+    newsTopic: "community",
+    copy: "Norwood's Mustang baseball program picked up five conference honors and four All-State awards this season, with Cole Bray, Jackson McCabe, Jace Bonacquista, Daniel Zunich, Jacob Davis, and Brycen Rummel all recognized. Coach Randy Gabriel was named San Juan Basin League Coach of the Year. He's looking ahead to 2027 with a big senior class returning and tougher competition on the schedule.",
+    claudeSummary: true,
+    href: "https://www.sanmiguelbasinforum.com/stories/coach-celebrates-baseball-awards-optimistic-about-2027,128026",
+    img: ""
+  },
+  {
     title: "What species are the native fish exactly?",
     source: "San Miguel Basin Forum",
     sourceKey: "smb",
@@ -3556,70 +3668,48 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "The Democracy We Must Keep with David O. Stewart (Online Talk)",
-    link: "https://telluridelibrary.libcal.com/event/17358102?hs=a",
-    description: "12:00 PM – 1:00 PM · Join us as we chat with award-winning historian David O. Stewart about his newest work, The Democracy We Must Keep , and the question he explores throughout the book: What did America&#39;s founders say about democracy, and can we remain true to their vision for America? Two hundred fifty years ago, passionate men attempted to create something the world had never seen before: a nation built not on kings or armies, but on ideas where the people ruled. In The Democracy We Must Keep , historian David O. Stewart takes readers inside the nine key documents that shaped the formation of the United States—from Patrick Henry&#39;s thunderous cry for liberty to the carefully crafted design of a government chosen by the people, with limits on all officials holding power under the Constitution. …",
-    pubDate: "2026-09-01T18:00:00.000Z",
+    title: "Radio Biblioteca",
+    link: "https://telluridelibrary.libcal.com/event/17469622?hs=a",
+    description: "12:00 PM – 1:00 PM · Escucha a KOTO Miercoles por Medio y conoce las noticias y eventos que tendremos en nuestra comunidad &bull; Tune in to Koto 91.7 FM every other Wednesday and learn about the news and events we will have in our community",
+    pubDate: "2026-09-02T18:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_07_15_39_50.jpg"
+    location: "KOTO Radio Station",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_11_00_33.png"
   },
   {
-    title: "Teen Cook",
-    link: "https://telluridelibrary.libcal.com/event/17486113?hs=a",
-    description: "2:00 PM – 3:00 PM · Join the WPL Every Tuesday after school for Teen Cook. We will cook a different recipe from scratch, and have enough to share with those around!",
-    pubDate: "2026-09-01T20:00:00.000Z",
+    title: "Mahjongg for Independent Players",
+    link: "https://telluridelibrary.libcal.com/event/17457126?hs=a",
+    description: "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-09-02T19:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_27_00.png"
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg"
   },
   {
-    title: "I Heart Art / Amo Arte",
-    link: "https://telluridelibrary.libcal.com/event/17292076?hs=a",
-    description: "2:30 PM – 3:30 PM · Looking for a fun and enriching way to spend your afternoons? Join us Tuesdays for I Heart Art, designed especially for kids aged 5-12!  &iquest;Buscas una manera divertida de pasar tus tardes? &iexcl;Unete a nuestro programa extracurricular, dise&ntilde;ado especialmente para ni&ntilde;os de 5 a 12 a&ntilde;os!",
-    pubDate: "2026-09-01T20:30:00.000Z",
+    title: "Youth Area Grand Opening • Gran Apertura del Area del Área de Niño",
+    link: "https://telluridelibrary.libcal.com/event/17528283?hs=a",
+    description: "The Wilkinson Public Library is celebrating the grand opening of its Youth Area with a special event for the community. The two-hour program marks the debut of the dedicated children's space at the library.",
+    pubDate: "2026-09-02T21:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_36_08.png"
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_26_18_57_54.png"
   },
   {
-    title: "Ice Age Artifacts with Rob Schultheis",
-    link: "https://telluridelibrary.libcal.com/event/17111101?hs=a",
-    description: "4:30 PM – 6:00 PM · Rob Schultheis is a local author and journalist, as well as an amatuer archeologist who has collected heaps of Ice Age artifacts from the region. In his words: I have been gathering Ice Age artifacts from the mammoth-hunting era around 12,000 years ago. I began looking for them after hearing about the Ice Age sites above Aspen and Snowmass, and have found literally hundreds of pieces, mostly from the Lawson Hill area, lower Bilk Creek, the bike path along the river below the Mountain School, etc. The most spectacular are carvings in gold deposits of mammoth eyes and trunks, large pieces of fossilized tusk, carved shells and wood, relief sculptures of entire mammoths, incised depictions on stone of mammoth faces, points and tools, and beautifully intricate stone carvings. …",
-    pubDate: "2026-09-01T22:30:00.000Z",
+    title: "Harry Potter Watch Party",
+    link: "https://telluridelibrary.libcal.com/event/17486054?hs=a",
+    description: "4:00 PM – 6:30 PM · Join the WPL every Wednesday after school in September and October, where we will sequentially watch all 8 of the original Harry Potter movies. This event is for teens/youth.",
+    pubDate: "2026-09-02T22:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_26_17_01_21.jpg"
-  },
-  {
-    title: "Summer Sketch Book Club with Annie",
-    link: "https://telluridelibrary.libcal.com/event/16759156?hs=a",
-    description: "5:30 PM – 7:00 PM · Join us for our summer sketchbook club! Unwind, connect with other artists, and find inspiration in nature as you fill up your sketchbook. We will meet in the library lobby and together we will walk to find a drawing spot by the river or in the park. All experience levels and drawing styles are welcome. Bring your own sketchbook and drawing materials; some materials may be available to borrow. You may also wish to bring sun protection, a towel or folding chair to sit on, and an extra layer as we will be sketching outside.",
-    pubDate: "2026-09-01T23:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lobby",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_12_34_15.png"
-  },
-  {
-    title: "Bardic Trails Online Poetry Night: Michele Battiste",
-    link: "https://telluridelibrary.libcal.com/event/15970603?hs=a",
-    description: "7:00 PM – 8:30 PM · The Telluride Institute&#39;s Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet's work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit < https://www. tellurideinstitute.org/ western-slope-calendar > to get the zoom link each month , Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. Jan. 6 / Euro-American poet Dane Cervine of Santa Cruz (CA)* Feb. …",
-    pubDate: "2026-09-02T01:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_29_15_45_27.jpg"
+    location: "Magazine Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_22_52.jpg"
   }
 ];
 
@@ -3717,7 +3807,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Telluride Film Festival",
     link: "https://sheridanoperahouse.com/events/telluride-film-festival/",
-    description: "",
+    description: "The Telluride Film Festival returns to the Sheridan Opera House, bringing screenings and cinematic programming to one of the mountain town's most storied historic venues. This beloved annual event draws film enthusiasts from around the world for a celebrated weekend of independent and international cinema in the heart of Telluride.",
     pubDate: "2026-09-04",
     endDate: "2026-09-07",
     source: "sheridan",
@@ -3729,7 +3819,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "The Meditations Live in Concert",
     link: "https://sheridanoperahouse.com/events/the-meditations-live-in-concert/",
-    description: "",
+    description: "The Meditations, the legendary Jamaican reggae vocal group, perform live at the historic Sheridan Opera House in Telluride. This concert brings their classic roots reggae harmonies to one of the region's most celebrated intimate venues.",
     pubDate: "2026-09-11",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -3740,7 +3830,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Telluride Theater Fringe Project: La Familia Music Group",
     link: "https://sheridanoperahouse.com/events/telluride-theater-fringe-project-la-familia-music-group/",
-    description: "",
+    description: "La Familia Music Group takes the stage at the historic Sheridan Opera House as part of the Telluride Theater Fringe Project. This performance brings together theater and live music in an intimate venue setting during the fall season.",
     pubDate: "2026-09-12",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -4122,7 +4212,7 @@ const OURAY_COUNTY_EVENTS = [
   {
     title: "Imogene Pass Run",
     link: "https://ouraycountyco.gov/Calendar.aspx?EID=3779",
-    description: "https://ouraycountyco.gov/calendar.aspx?EID=3779",
+    description: "The Imogene Pass Run is an annual footrace that takes competitors over the challenging Imogene Pass between Telluride and Ouray, traversing one of the most scenic and demanding mountain routes in the San Juan Mountains. The course climbs to an elevation of over 13,000 feet, making it a notable test of endurance for participants.",
     pubDate: "2026-09-12T07:00:00.000Z",
     source: "ouraycounty",
     sourceLabel: "Ouray County",
@@ -4145,76 +4235,6 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "Functional Fitness - Strength & Mobility Training For Women",
-    link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
-    description: "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Instructor: Jenn Turner “Jenn may be a highly certified instructor, but her greatest strength lies in creating a welcoming space for women to meet, gather, and sweat. The workouts are always fun, and the next-day burn is guaranteed.” — E.C. …",
-    pubDate: "2026-09-01T14:15:00.000Z",
-    endDate: "2026-10-29",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Weehawken Ridgway (Old Schoolhouse)",
-    imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/860fbc87ce3cc92e25c09e723732d04292df18ba.jpg"
-  },
-  {
-    title: "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
-    link: "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
-    description: "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the International Quilt Museum in Lincoln, Nebraska. Bonnie’s work has been shown in numerous exhibits in the United States. In 2015, Bonnie’s work was in a year-long solo exhibition at the Portland Oregon International Airport. She was a solo artist at the Visions Museum of Textile Art, San Diego, in 2019. Internationally, Bonnie’s work has appeared in the Haus der Wirtschaft museum in Stuttgart, Germany, the Museum of Modern Art in Verona, Italy, and other venues in Germany, England, Ireland, France, Japan, Brazil, and the Netherlands. Bonnie’s work Tangle is part of the permanent collection of the Tuch + Technik Textilmuseum, Neumunster, Germany. …",
-    pubDate: "2026-09-01T16:00:00.000Z",
-    endDate: "2026-09-25",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The 610 Arts Collective",
-    imageUrl: "https://localist-images.azureedge.net/photos/53551302433703/huge/07561f7b06b24999f21e6be2347e5102b9b92cc3.jpg"
-  },
-  {
-    title: "Ongoing Exhibition: BIG BOX-Big New Work By T-Bone",
-    link: "https://events.ourayridgwayevents.com/event/ongoing-exhibition-big-box-big-new-work-by-t-bone",
-    description: "The Big Box Show! Bigger, better and more. This groundbreaking local art won't last long! Ridgway's own T-Bone and his quintessential colorful cardboard paintings take on new life and meaning in the Decker where they have room to stretch out and really TALK to you! Come and be delighted by the playful T-Bone experience. Stay to cool off, craft, co-work, hang out. or plan your own future exhibition or event in the space! The Decker is a unique community rental-art gallery hybrid, incubated and managed by the Town of Ridgway, in cooperation with our sister ARTSpace gallery next door. View on site | Email this event",
-    pubDate: "2026-09-01T16:00:00.000Z",
-    endDate: "2026-09-25",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53736310463128/huge/ce8867efeba0934913913ee401aff4479a074ba5.jpg"
-  },
-  {
-    title: "CORAL SKYE",
-    link: "https://events.ourayridgwayevents.com/event/coral-skye-7556",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
-    pubDate: "2026-09-01T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Parks and Recreation Committee (PARC)",
-    link: "https://events.ourayridgwayevents.com/event/parks-and-recreation-committee-parc",
-    description: "The Parks and Recreation Committee (PARC) is made up of community members who volunteer their time to support and enhance recreational opportunities in Ouray. PARC organizes safe, family-friendly events that bring the community together. Events include Broomball, Cabin Fever Days, Dodgeball, Softball, and Game Night, among others. The committee works closely with local organizations, businesses, and other City committees to carry out its mission. Community partners include the Ouray Hot Springs Pool & Fitness Center, the Beautification Committee, and the Ouray School District. PARC also plays an important role in developing and implementing master plans for the City’s park system, helping ensure that Ouray’s parks and recreational spaces serve residents and visitors for years to come. Members of the public are welcome to attend these meetings. Meetings: PARC meets monthly on the first Tuesday at 6:00 p.m. …",
-    pubDate: "2026-09-02T00:00:00.000Z",
-    endDate: "2026-10-07",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Community Center",
-    imageUrl: "https://localist-images.azureedge.net/photos/51579968896083/huge/c4cfc0e9259666342735abc334be44580e4c7198.jpg"
-  },
-  {
-    title: "The M Factor, Shredding the Silence on Menopause. Film followed by a panel discussion",
-    link: "https://events.ourayridgwayevents.com/event/the-m-factor-shredding-the-silence-on-menopause-film-followed-by-a-panel-discussion-8635",
-    description: "September 1 @ 6:30 pm – 8:00 pm Doors at 6:00 PM, Film at 6:30 PM followed by a panel discussion led by local specialists in women’s health issues Dr. Abigail Seaver, ND; Meg Benasutti, ANP-BC, Jennifer McGeorge, ARNP, CNM, MSCP and Kim Walker, DNP, WHNP. Note: this is a different film from the one we showed back in May, which was about Perimenopause About The M Factor Film Menopause is a silent epidemic that affects the health and well‑being of millions of American women. In addition to experiencing traumatic physical symptoms, women are struggling with the related stresses of billions of dollars in lost wages, upended careers, family disruptions, and emotional chaos. This film confront this neglected crisis, challenges societal and medical shortcomings and advocates for a revolutionary approach to women’s health all over the world. …",
-    pubDate: "2026-09-02T00:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Sherbino",
-    imageUrl: "https://localist-images.azureedge.net/photos/53551521567232/huge/386838c9a250aca9388bec73873cf507473ae100.jpg"
-  },
-  {
     title: "Beautification Committee (OBC)",
     link: "https://events.ourayridgwayevents.com/event/beautification-committee",
     description: "The Beautification Committee (OBC) works on projects to help beautify the community. The committee oversees the installation of all the flower gardens in the City as well as all the hanging baskets and plantings on Main Street. They have also worked hard over the years to acquire many historic mining pieces and equipment that are displayed throughout the community to recognize Ouray's mining heritage. The committee has also provided direction on signage, light poles, and benches on the public rights of way. The Beautification Committee also plays an important role in developing and implementing master plans for the City’s park system. The committee makes recommendations to the City Council on these many beautification projects as well as the use of dollars from the Beautification Fund. This fund is supported by a portion of the Lodging Occupation Tax and is used exclusively for projects that help beautify the community. …",
@@ -4236,6 +4256,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Silvershield Trailhead",
     imageUrl: "https://localist-images.azureedge.net/photos/53622925400388/huge/78ed1b5451403be8feaebe77cd45b69c1a39e826.jpg"
+  },
+  {
+    title: "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
+    link: "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
+    description: "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the International Quilt Museum in Lincoln, Nebraska. Bonnie’s work has been shown in numerous exhibits in the United States. In 2015, Bonnie’s work was in a year-long solo exhibition at the Portland Oregon International Airport. She was a solo artist at the Visions Museum of Textile Art, San Diego, in 2019. Internationally, Bonnie’s work has appeared in the Haus der Wirtschaft museum in Stuttgart, Germany, the Museum of Modern Art in Verona, Italy, and other venues in Germany, England, Ireland, France, Japan, Brazil, and the Netherlands. Bonnie’s work Tangle is part of the permanent collection of the Tuch + Technik Textilmuseum, Neumunster, Germany. …",
+    pubDate: "2026-09-02T16:00:00.000Z",
+    endDate: "2026-09-25",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The 610 Arts Collective",
+    imageUrl: "https://localist-images.azureedge.net/photos/53551302433703/huge/07561f7b06b24999f21e6be2347e5102b9b92cc3.jpg"
   },
   {
     title: "City Slickers: CO-150 Film Festival @ the Wright",
@@ -4317,6 +4349,30 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Gazebo south of Chipeta Lodge, Ridgway, CO (Or studio if raining)",
     imageUrl: "https://localist-images.azureedge.net/photos/52880886803755/huge/ba2d24fbf09ba1f9a707a06213d60685581d7322.jpg"
+  },
+  {
+    title: "Functional Fitness - Strength & Mobility Training For Women",
+    link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
+    description: "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Instructor: Jenn Turner “Jenn may be a highly certified instructor, but her greatest strength lies in creating a welcoming space for women to meet, gather, and sweat. The workouts are always fun, and the next-day burn is guaranteed.” — E.C. …",
+    pubDate: "2026-09-03T14:15:00.000Z",
+    endDate: "2026-10-29",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Ridgway (Old Schoolhouse)",
+    imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/860fbc87ce3cc92e25c09e723732d04292df18ba.jpg"
+  },
+  {
+    title: "Ongoing Exhibition: BIG BOX-Big New Work By T-Bone",
+    link: "https://events.ourayridgwayevents.com/event/ongoing-exhibition-big-box-big-new-work-by-t-bone",
+    description: "The Big Box Show! Bigger, better and more. This groundbreaking local art won't last long! Ridgway's own T-Bone and his quintessential colorful cardboard paintings take on new life and meaning in the Decker where they have room to stretch out and really TALK to you! Come and be delighted by the playful T-Bone experience. Stay to cool off, craft, co-work, hang out. or plan your own future exhibition or event in the space! The Decker is a unique community rental-art gallery hybrid, incubated and managed by the Town of Ridgway, in cooperation with our sister ARTSpace gallery next door. View on site | Email this event",
+    pubDate: "2026-09-03T16:00:00.000Z",
+    endDate: "2026-09-25",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53736310463128/huge/ce8867efeba0934913913ee401aff4479a074ba5.jpg"
   },
   {
     title: "WOH Art Show: Brittany Stadler",
@@ -5399,6 +5455,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
+    title: "Parks and Recreation Committee (PARC)",
+    link: "https://events.ourayridgwayevents.com/event/parks-and-recreation-committee-parc",
+    description: "The Parks and Recreation Committee (PARC) is made up of community members who volunteer their time to support and enhance recreational opportunities in Ouray. PARC organizes safe, family-friendly events that bring the community together. Events include Broomball, Cabin Fever Days, Dodgeball, Softball, and Game Night, among others. The committee works closely with local organizations, businesses, and other City committees to carry out its mission. Community partners include the Ouray Hot Springs Pool & Fitness Center, the Beautification Committee, and the Ouray School District. PARC also plays an important role in developing and implementing master plans for the City’s park system, helping ensure that Ouray’s parks and recreational spaces serve residents and visitors for years to come. Members of the public are welcome to attend these meetings. Meetings: PARC meets monthly on the first Tuesday at 6:00 p.m. …",
+    pubDate: "2026-10-07T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Community Center",
+    imageUrl: "https://localist-images.azureedge.net/photos/51579968896083/huge/c4cfc0e9259666342735abc334be44580e4c7198.jpg"
+  },
+  {
     title: "Ice Park Advisory Team",
     link: "https://events.ourayridgwayevents.com/event/ice-park-advisory-team",
     description: "The Ice Park Advisory Team (IPAT) Opens in new window was created to provide an informal, good-faith forum for discussion about the future and ongoing management of the Ouray Ice Park. IPAT serves as a space for the Parties and any interested community members to come together and talk through topics that impact the Ice Park, including: Management and operationsPark usage and recreational interestsCommercial interests and guiding considerationsCapital planning and long-term strategic planningSuccession planning and sustainabilityMission, vision, and valuesEconomic impact to the communityUnforeseen issues as they arise View on site | Email this event",
@@ -5574,7 +5641,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-08-31-senior-lunch",
-    description: "",
+    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     pubDate: "2026-08-31T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5585,7 +5652,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Work Session",
     link: "https://www.norwoodtown.com/2026-09-01-nwc-work-session",
-    description: "",
+    description: "A work session hosted by the Norwood Water Commission (or similar NWC body) held in Norwood, CO, providing an opportunity for members to review, discuss, and work through agenda items outside of a formal public meeting. These sessions typically allow for more in-depth examination of ongoing projects, policies, or operational matters.",
     pubDate: "2026-09-01T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5596,7 +5663,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Municipal Court",
     link: "https://www.norwoodtown.com/2026-09-02-municipal-court",
-    description: "",
+    description: "Municipal Court is a regularly scheduled court session held by the Town of Norwood. It is an official local government proceeding open to those with business before the court.",
     pubDate: "2026-09-02T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5607,7 +5674,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5618,7 +5685,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-10-senior-lunch",
-    description: "",
+    description: "A midday meal gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     pubDate: "2026-09-10T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5629,7 +5696,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-17-senior-lunch",
-    description: "",
+    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     pubDate: "2026-09-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5640,7 +5707,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-24-senior-lunch",
-    description: "",
+    description: "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
     pubDate: "2026-09-24T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5651,7 +5718,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "",
+    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5662,7 +5729,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5673,7 +5740,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Veterans Day",
     link: "https://www.norwoodtown.com/2026-11-11-closed-for-veterans-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Veterans Day. Municipal offices and services will be unavailable on this federal holiday honoring those who have served in the United States armed forces.",
     pubDate: "2026-11-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5684,7 +5751,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Thanksgiving",
     link: "https://www.norwoodtown.com/2026-11-26-closed-for-thanksgiving",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Thanksgiving Day. Municipal offices and services will be unavailable, with normal operations expected to resume following the holiday.",
     pubDate: "2026-11-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",

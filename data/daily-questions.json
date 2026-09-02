@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-09-02",
+    "title": "When a roof doesn't fit the rules — but they approve it anyway",
+    "body": "Lela and Jon Martin need a new roof on their deed-restricted unit at Gold Run. The bid came in at $47,743.86 — roughly 17% of their original purchase price. Their deed restriction caps staff-approvable capital improvements at 5% of that price, or about $13,960, and allows exceptions only when work increases the unit's capacity to house additional occupants. Staff acknowledges the roof doesn't meet that standard. They're recommending approval anyway.\n\nSome will say the restriction exists for a reason and bending it sets a precedent. Others will say a roof is a roof — you can't let a deed-restricted unit fall apart over a technicality. Where do you come down?",
+    "choices": [
+      "Approve it — a roof is basic upkeep",
+      "Hold the line on deed restrictions",
+      "Fix the policy first, then decide",
+      "It's complicated"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-09-01",
     "title": "Foreclosures on the agenda — twice",
     "body": "The Board of County Commissioners meets September 2 with two foreclosure sales on the docket — one involving a property in Telluride, another in Mountain Village. Foreclosures up here don't happen in a vacuum. Some residents see them as a market correction that could open doors for locals who've been priced out. Others worry they signal deeper financial stress in the community — or that the properties will simply flip to the next highest bidder and nothing changes.\n\nWhat do foreclosures in this market actually mean to you?",
@@ -425,21 +440,6 @@
       "Protect wildlife first",
       "Prioritize human safety",
       "Both, if rules are fair",
-      "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-08-03",
-    "title": "Foreclosure in Mountain Village — who's watching?",
-    "body": "Two properties in Mountain Village are headed to foreclosure sale. That's not nothing up here. Some residents will see it as routine legal process — debts come due, the system works as designed. Others will wonder what it signals about the broader market, or whether there are downstream effects on the community. Neither read is wrong. The sales are upcoming; nothing has been decided beyond the legal notices.\n\nWhat do foreclosure sales in Mountain Village mean to you?",
-    "choices": [
-      "Part of how markets work",
-      "Worth paying attention to",
-      "Depends on who's affected",
       "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",
