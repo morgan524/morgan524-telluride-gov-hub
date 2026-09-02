@@ -311,26 +311,6 @@
     "noticeKey": "ord-1640"
   },
   {
-    "title": "Public Hearing Notice -- 2026 Budget Supplemental Appropriations Ordinance (COL-000220)",
-    "entity": "Town of Telluride",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "📋",
-    "iconClass": "type-hearing",
-    "type": "Ordinance",
-    "filterTag": "ordinance",
-    "summary": "The Telluride Town Council has scheduled a public hearing at its regular meeting on September 1, 2026, to consider an ordinance amending the 2026 Municipal Budget. The ordinance would reappropriate unexpended 2025 budget line items, make supplemental appropriations from existing fund balances, and appropriate revenues in excess of 2025 estimates. Community members interested in the Town's budget adjustments are encouraged to attend.",
-    "deadline": "2026-09-01",
-    "expires": "2026-09-01",
-    "dates": "8/20",
-    "papers": [
-      "ttimes_0820"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_7e6a7420-27c6-4f95-b0b8-101dfc5b4763.html",
-    "address": "Town of Telluride, Colorado",
-    "noticeKey": "public-hearing-telluride-budget-2026-supplemental"
-  },
-  {
     "title": "ECMC Hearing Notice -- Order Finding Violation Against American Helium Operating LLC (Docket No. 260700207)",
     "entity": "Colorado Energy and Carbon Management Commission / American Helium Operating LLC",
     "entityClass": "ent-county",
@@ -350,26 +330,6 @@
     "address": "Colorado Energy and Carbon Management Commission, 1120 Lincoln Street, Suite 801, Denver, CO 80203",
     "noticeKey": "ecmc-docket-260700207-american-helium",
     "caseNumber": "260700207"
-  },
-  {
-    "title": "ITB -- 2026 Street Mill & Overlay Program (COL-000221)",
-    "entity": "Town of Telluride Public Works",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "The Town of Telluride is accepting sealed bids for its 2026 Street Mill & Overlay Project within Telluride, Colorado. Bids must be received by 4:00 p.m. on Tuesday, September 1, 2026, either in person at Telluride's Public Works & Transit Facility or via confirmed electronic submission. Bid documents are available through Public Works, by email/phone, or at www.bidnetdirect.com.",
-    "deadline": "2026-09-01T16:00:00",
-    "expires": "2026-09-01",
-    "dates": "8/20",
-    "papers": [
-      "ttimes_0820"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_7e6a7420-27c6-4f95-b0b8-101dfc5b4763.html",
-    "address": "1370 Black Bear Road, Telluride, CO 81435",
-    "noticeKey": "itb-telluride-street-mill-overlay-2026"
   },
   {
     "title": "Public Hearing -- Adoption of 2024 International Building Code and Colorado Low Energy & Carbon Code",

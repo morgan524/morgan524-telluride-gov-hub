@@ -93,19 +93,6 @@
     "type": "Talks & Classes"
   },
   {
-    "title": "Summer Sketch Book Club",
-    "href": "https://koto.org/event/summer-sketch-book-club/",
-    "date": "2026-09-01",
-    "time": "5:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join us for our summer sketchbook club! Unwind, connect with other artists, and find inspiration in nature as you fill up your sketchbook. We will meet in the library lobby and together we will walk to find a drawing spot by the river or…",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "Summer Sketch Book Club with Annie",
     "href": "https://telluridelibrary.libcal.com/event/16759156?hs=a",
     "date": "2026-09-01",
@@ -157,19 +144,6 @@
     "desc": "The Parks and Recreation Committee (PARC) is made up of community members who volunteer their time to support and enhance recreational opportunities in Ouray. PARC organizes safe, family-friendly events that bring the community together.…",
     "type": "Family & Kids",
     "endDate": "2026-10-07"
-  },
-  {
-    "title": "Bardic Trails Online Poetry Night",
-    "href": "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-09-01/",
-    "date": "2026-09-01",
-    "time": "7:00 PM",
-    "location": "",
-    "town": "",
-    "img": "https://koto.org/wp-content/uploads/2026/03/Bardic-Trails-2026.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for…",
-    "type": "Talks & Classes"
   },
   {
     "title": "Bardic Trails Online Poetry Night: Michele Battiste",
@@ -1568,6 +1542,32 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Tennis Clinic 4.0+",
+    "href": "https://koto.org/event/tennis-clinic-4-0/2026-09-10/",
+    "date": "2026-09-10",
+    "time": "11:00 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Pilates for All Bodies with Laura",
+    "href": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-09-10/",
+    "date": "2026-09-10",
+    "time": "12:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/wellness.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    "type": "Wellness"
+  },
+  {
     "title": "Senior Lunch",
     "href": "https://www.norwoodtown.com/2026-09-10-senior-lunch",
     "date": "2026-09-10",
@@ -1685,6 +1685,19 @@
     "source": "The Alibi",
     "desc": "Genre-busting vocalist and songwriter Vana Liya made a serendipitous arrival o...",
     "type": "Music"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-10/",
+    "date": "2026-09-10",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Jolie Holland",
@@ -3670,6 +3683,7 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Easy Jim Halloween Run Brings Two Nights of Grateful Dead Celebrations to the Sherbino! October 30 & 31, 2026 • 8:00 p.m. nightly Sherbino Theatre | Ridgway, Colorado Some concerts are just concerts. This is a Run! The Sherbino and Pickin’…",
-    "type": "Arts & Film"
+    "type": "Arts & Film",
+    "endDate": "2026-11-01"
   }
 ]

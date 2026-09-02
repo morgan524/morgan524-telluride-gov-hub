@@ -1,26 +1,26 @@
 {
- "generated": "2026-09-01T23:14:04.238Z",
+ "generated": "2026-09-02T03:50:21.809Z",
  "pinned": false,
- "topic": "carhenge",
- "topicLabel": "Carhenge / Shandoka",
- "headline": "Carhenge / Shandoka goes before Town Council on Tuesday, September 1",
- "blurb": "Three work sessions open the day: a deep look at Comprehensive Plan goals and objectives with project consultants, a Gondola Subcommittee update, and a review of proposals for a third-party audit of the Town's rental housing policies — that last one worth watching given how central rent policy has become to who can stay in the canyon. A second work session later covers AMI increases and rental rate adjustments for 2027 budgetary planning.",
+ "topic": "norwoodwater",
+ "topicLabel": "Norwood Water",
+ "headline": "Norwood Water goes before Norwood Water Commission Meeting on Tuesday, September 8",
+ "blurb": "The September 8, 2026 Norwood Water Commission Meeting agenda hasn't been posted yet.",
  "images": [],
  "deepDive": {
-  "label": "Carhenge / Shandoka",
-  "href": "/deep-dive-carhenge.html"
+  "label": "Norwood Water",
+  "href": "/deep-dive-norwoodwater.html"
  },
  "meeting": {
-  "title": "Town Council",
-  "sourceLabel": "Town of Telluride",
-  "date": "2026-09-01",
-  "humanDate": "Tuesday, September 1",
+  "title": "Norwood Water Commission Meeting",
+  "sourceLabel": "Town of Norwood",
+  "date": "2026-09-08",
+  "humanDate": "Tuesday, September 8",
   "time": "",
-  "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042",
-  "hasAgenda": true,
-  "packetUrl": "https://telluride-co.civicweb.net/document/443717/",
-  "zoomLink": "https://us06web.zoom.us/meeting/register/XA2kUuXlTg2aifJ0Qwwc-g",
-  "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+  "location": "1670 Naturita St, Norwood CO 81423",
+  "agendaUrl": "",
+  "hasAgenda": false,
+  "packetUrl": "",
+  "zoomLink": "",
+  "livestream": ""
  }
 }
