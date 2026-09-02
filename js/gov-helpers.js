@@ -360,7 +360,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-09-17|Liquor Licensing Authority - Sep 17 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8145","sv":4,"ph":"5e169e6aed7b742f"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8145","sv":4,"ph":"63611b4d3d7b271f"},
 
   "telluride|2026-08-26|Resident Advisory Committee - Aug 26 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8304","zoomUrl":"https://us06web.zoom.us/j/83515721292?pwd=UWdbpZwQcmiOOtH3Ktbdarl9CZyHjm.1","meetingId":"835 1572 1292","passcode":"983442","phone":"970-728-2496","sv":4},
@@ -396,7 +396,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104","sv":4,"ph":"d0064703fee6e2cf"},
 
   "telluride|2026-09-24|Planning & Zoning Commission Chair - Sep 24 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8103","sv":4,"ph":"313a820643e5b960"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8103","sv":4,"ph":"aa14bfd5ab167459"},
 
   "telluride|2026-08-27|Open Space Commission Site Walk - Aug 27 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8306","sv":4},
@@ -438,7 +438,10 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"1f577e951aaf55d2"},
 
   "county|2026-09-09|Board of County Commissioners Special Meeting":
-    {"sv":4,"ph":"7751bc604656aec0"}
+    {"sv":4,"ph":"7751bc604656aec0"},
+
+  "ouray|2026-09-16|, 1-4:00 PM (@ OURAY COURTHOUSE!) - The PC will hold 2 public hearings; Curry Regular PUD, and an Exemption application from Clifford Pastor to subdivide his parcel into 2 lots. (Packet materials are under media TV icon)":
+    {"agendaUrl":"https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1017","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -785,7 +788,10 @@ const MEETING_PREVIEWS = {
     "The Lodging Tax Panel is expected to discuss matters related to the administration and allocation of lodging tax revenues in San Miguel County. No additional agenda details or directly relevant legal notices are available to indicate specific items beyond the panel's standard oversight responsibilities.",
 
   "county|2026-09-09|Board of County Commissioners Special Meeting":
-    "Board will consider matters including a public hearing on adopting the 2024 International Building Code and Colorado Low Energy & Carbon Code, a request for quotes for material hauling, and proposals for repainting the county jail. Related legal notices include estate probate matters and a foreclosure sale."
+    "Board will consider matters including a public hearing on adopting the 2024 International Building Code and Colorado Low Energy & Carbon Code, a request for quotes for material hauling, and proposals for repainting the county jail. Related legal notices include estate probate matters and a foreclosure sale.",
+
+  "ouray|2026-09-16|, 1-4:00 PM (@ OURAY COURTHOUSE!) - The PC will hold 2 public hearings; Curry Regular PUD, and an Exemption application from Clifford Pastor to subdivide his parcel into 2 lots. (Packet materials are under media TV icon)":
+    "The Planning Commission is expected to hold two public hearings on September 16 at the Ouray Courthouse. Members will review the Curry Regular PUD proposal and consider an exemption application from Clifford Pastor seeking to subdivide his parcel into two lots."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -986,16 +992,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "public-safety",
     copy: "Organizers pitch placing county EMS under Ridgway Fire Ouray County plans to pivot efforts to consolidate a proposed fire and emergency response authority by merging Ouray County Emergency Medical Services with the Ridgway Fire Protection District. With Log Hill Mesa Fire Protection District and the",
     href: "https://www.ouraynews.com/2026/08/26/advocates-fire-authority-pivot/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "We’re Hiring- Bilingual Food Pantry and seNior Lunch Cook Assistant/ Estamos Contratando: Asistente Bilingüe del Banco de Alimentos y Asistente de Cocina del Almuerzo para Personas Mayores",
-    source: "Fresh Food Hub",
-    sourceKey: "fresh-food-hub",
-    date: "August 27, 2026",
-    newsTopic: "community",
-    copy: "We re hiring for two part-time positions: Bilingual Food Pantry Assistant — Sundays, 1:30–6:30 p.m. This role provides Spanish-English translation support for our Spanish-speaking clients during food pantry distribution. Senior Lunch Assistant — Thursdays, 8:30 a.m.–1:30 p.m. at Norwood Town Hall. T",
-    href: "https://freshfoodhub.net/were-hiring-bilingual-food-pantry-and-senior-lunch-cook-assistant-estamos-contratando-asistente-bilingue-del-banco-de-alimentos-y-asistente-de-cocina-del-almuerzo-para-personas-mayores/",
     img: ""
   },
   {
@@ -1342,7 +1338,10 @@ const MANUAL_SUMMARIES = {
     "The October 1 Lodging Tax Panel agenda hasn't been posted yet.",
 
   "county|2026-09-09|Board of County Commissioners Special Meeting":
-    "The September 9, 2026 Board of County Commissioners Special Meeting agenda hasn't been posted yet."
+    "The September 9, 2026 Board of County Commissioners Special Meeting agenda hasn't been posted yet.",
+
+  "ouray|2026-09-16|, 1-4:00 PM (@ OURAY COURTHOUSE!) - The PC will hold 2 public hearings; Curry Regular PUD, and an Exemption application from Clifford Pastor to subdivide his parcel into 2 lots. (Packet materials are under media TV icon)":
+    "Ouray County's Planning Commission meets at the Ouray Courthouse for two public hearings. First up is the Curry Regular PUD — a formal planned unit development application that will get a full public hearing. Second is an exemption application from Clifford Pastor to subdivide his parcel into two lots. Both items require public hearings before the PC can make a recommendation, and packet materials are available through the county's agenda portal."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1700,6 +1699,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Wizard of ahhs",
+    source: "Telluride Times",
+    date: "September 2, 2026",
+    firstSeen: "2026-09-02",
+    newsTopic: "community",
+    copy: "Deb Pera D'Angelo, a fifth-generation Telluride local, was appointed director of the Spa at the Peaks in January after three years on staff. Her family roots here go back to hardrock mining days, and her parents founded Timberline Hardware in 1969. The spa offers full fitness and wellness facilities, with locals-only discounts available in fall and spring.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/business/article_443da1a7-6b36-4452-8aec-2ae38803c952.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/9b/39b979aa-e5aa-4bfa-96b4-cc26b5bf0217/6a977d4ccd816.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "What to know about the AP/FRONTLINE investigation into scam victims",
     source: "Telluride Times",
     date: "September 2, 2026",
@@ -1716,9 +1727,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Telluride Times",
     date: "September 2, 2026",
     firstSeen: "2026-09-02",
-    newsTopic: "community",
-    copy: "One day, early in her career as an energy healer, Karen O’Dell had a moment with her child, who was overwrought after a sleepover and lots of friend time.",
-    claudeSummary: false,
+    newsTopic: "education",
+    copy: "Karen O'Dell runs Ancient Arts Health and Wellness in Norwood, offering energy healing that draws on her background as a combat medic, EMT, hospice worker, and certified psychotherapist. She uses a device called Bio-Well to show clients visual maps of their energy patterns, alongside hands-on Healing Touch techniques. She also teaches energy awareness locally, including at Norwood School and community events.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/norwood_post/article_e9289e3f-50ef-4896-95d0-92c07610b6ba.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/da/2da5af3d-6fab-4bd6-8c41-617cada772df/6a9879164037e.image.jpg",
     imgHiRes: true
@@ -2682,7 +2693,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Public Hearing Notice Wed., Sept. 16, 2026 at 5:30pm - Lot 10 of Block 3 of Lidell-Stanton Business Park Subdivision; Lot 4 and Outlot of Riverview Business Park Subdivision; Lena Street Commons Planned Unit Development - Sept. 2, 2026",
+    title: "Public Hearing Notice Wed., Sept. 16, 2026 at 5:30pm - 1) Site Plan and Conditional Use Permit for Riverbend Townhomes (TBD Liddell Dr.); 2) Plat Amendment of Lot 4 and Outlot of Riverview Business Park Subdivision (TBD Liddell Dr.); 3) PUD Amendment Lena Street Commons Planned Unit Development (TBD N. Lena Street) - Sept. 2, 2026",
     source: "Town of Ridgway",
     date: "September 2, 2026",
     firstSeen: "2026-09-02",
@@ -3257,50 +3268,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Tennis Clinic 3.0-4.0",
-    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-02/",
-    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-02T09:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Market on the Plaza",
-    link: "https://koto.org/event/market-on-the-plaza/2026-09-02/",
-    description: "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
-    pubDate: "2026-09-02T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Heritage Plaza, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Tennis Clinic 4.0+",
-    link: "https://koto.org/event/tennis-clinic-4-0/2026-09-02/",
-    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-02T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Mahjongg for Independent Players",
-    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-09-02/",
-    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
-    pubDate: "2026-09-02T13:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
-  },
   {
     title: "Grand Opening of the Youth Area at Wilkinson Public Library",
     link: "https://koto.org/event/grand-opening-of-the-youth-area-at-wilkinson-public-library/",

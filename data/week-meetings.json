@@ -320,6 +320,26 @@
     "hook": ""
   },
   {
+    "source": "ouray",
+    "sourceLabel": "Ouray County",
+    "title": "Meeting",
+    "date": "2026-09-16",
+    "time": "",
+    "location": "Ouray County, CO",
+    "agendaUrl": "https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1017",
+    "packetUrl": "",
+    "link": "https://ouraycountyco.gov/AgendaCenter",
+    "hasAgenda": true,
+    "summary": "Ouray County's Planning Commission meets at the Ouray Courthouse for two public hearings. First up is the Curry Regular PUD — a formal planned unit development application that will get a full public hearing. Second is an exemption application from Clifford Pastor to subdivide his parcel into two lots. Both items require public hearings before the PC can make a recommendation, and packet materials are available through the county's agenda portal.",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "",
+    "commentEmail": "",
+    "hook": ""
+  },
+  {
     "source": "telluride",
     "sourceLabel": "Town of Telluride",
     "title": "Parks & Recreation Commission",

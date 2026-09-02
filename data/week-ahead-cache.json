@@ -1,26 +1,22 @@
 {
-  "hash": "0978cb64a38e88b76614589e973b9f45616d9a66",
-  "lede": "The biggest thing on the government calendar this week is Wednesday's Board of County Commissioners meeting, where the BOCC will ratify a policy change at Pinion Park dropping income eligibility to 80% AMI — a quiet but consequential shift that determines who can actually get into deed-restricted housing in this valley. Also Wednesday, the Ecology Commission takes up a draft ordinance that would ban gas-powered leaf blowers in Town limits by 2028 and all covered equipment by 2030. On the community side, Wilkinson Public Library opens its new Youth Area Wednesday, and the Mountain Towns 2030 climate network has sessions both Wednesday and Thursday.",
+  "hash": "92c2225cf8ae3074164db24550dc8326c8866b1a",
+  "lede": "The County is moving to ratify an income-eligibility change at Pinion Park — adjusting the threshold to 80% AMI — which quietly shifts who can qualify for a deed-restricted unit in this valley, and that's worth paying attention to on Wednesday. Also Wednesday, the Town's Ecology Commission takes up a draft ordinance that would ban combustion-powered lawn and garden equipment within Town limits, starting with leaf blowers in 2028. The Housing Authority subcommittee revisits the Martin exception request for a deed-restricted unit roof replacement, and the Film Festival opens Friday at the Sheridan.",
   "notable": [
     {
       "id": 3,
-      "stake": "BOCC vote shifts Pinion Park income eligibility to 80% AMI, changing who qualifies."
+      "stake": "County vote on Pinion Park income eligibility shift to 80% AMI affects who qualifies."
     },
     {
       "id": 0,
-      "stake": "Draft ordinance would ban gas lawn equipment in Town limits by 2028–2030."
+      "stake": "Draft ordinance would ban gas-powered lawn equipment in Town limits by 2030."
     },
     {
       "id": 2,
-      "stake": "Martin exception request up for decision — deed-restricted owner seeks roof repair approval."
+      "stake": "Board decides on deed-restricted homeowner's $47K roof replacement exception request."
     },
     {
       "id": 4,
-      "stake": "Land Use Code definition changes under discussion before any public hearing stage."
-    },
-    {
-      "id": 5,
-      "stake": "Conditional-use permit recommendation for commercial tent and food truck at Adams Ranch Rd."
+      "stake": "Land Use Code definition changes shaped here before any public hearing process begins."
     }
   ]
 }
