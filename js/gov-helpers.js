@@ -873,16 +873,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "Stage 2 Fire Restrictions",
-    source: "Ouray County",
-    sourceKey: "ouray-county",
-    date: "August 31, 2026",
-    newsTopic: "public-safety",
-    copy: "Ouray County Remains in Stage 2 Fire Restrictions",
-    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=953",
-    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22782"
-  },
-  {
     title: "Parish bulletin for August 30",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -1690,6 +1680,42 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "PHOTO ESSAY: Inside a detention center where scam workers wait for their return home",
+    source: "Telluride Times",
+    date: "September 2, 2026",
+    firstSeen: "2026-09-02",
+    newsTopic: "community",
+    copy: "Hundreds of workers caught up in large-scale cyberscam operations in the Philippines are being held at a seized six-story building in Pasay while they wait to be repatriated home — a process that can take months or years. Some were trafficked, others came voluntarily, and many describe beatings and being sold between operations. The facility once held over 900 people; around 70 remain.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_fd288a9b-e8a1-5542-8f62-6f16579cc761.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/db/3dbc6793-b30b-5e5c-9478-016b67c9f70f/6a98143d4c9c4.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "What to know about the AP/FRONTLINE investigation into scam victims",
+    source: "Telluride Times",
+    date: "September 2, 2026",
+    firstSeen: "2026-09-02",
+    newsTopic: "government",
+    copy: "U.S. scam losses hit a record $15.9 billion reported to the FTC last year — with estimated real losses near $200 billion. An AP/FRONTLINE investigation found victims have little recourse: banks rarely reimburse them, tax law can leave them owing the IRS, and U.S. consumer protections trail those in the UK, EU, and Australia.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_3757ef5c-d08d-57f0-9fd8-efb2b8fa2c49.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/a4/da4a0746-8139-55ed-b225-3edb81392787/6a98142ce1efb.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Scams in the US are at a record high. Yet most victims get no help and some end up losing even more",
+    source: "Telluride Times",
+    date: "September 2, 2026",
+    firstSeen: "2026-09-02",
+    newsTopic: "government",
+    copy: "US scam losses hit a record $15.9 billion reported to the FTC last year — likely a fraction of the real total, estimated near $200 billion. Victims often face dismissal from banks, law enforcement, and even additional taxes on lost funds. Recovery is rare, and some lose even more chasing it.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_bf60538d-c978-520d-8adf-5fd4490f3f41.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/91/39174b17-dbe4-50d9-8b75-331a65f90676/6a9811dceac84.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "The one that got away",
     source: "Telluride Times",
@@ -2614,6 +2640,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Ridgway Rescinds Stage 2 Fire Restrictions, Reinstates Stage 1 Fire Restrictions effective 12:01am on Thursday, Sept. 3rd - Sept. 2, 2026",
+    source: "Town of Ridgway",
+    date: "September 2, 2026",
+    firstSeen: "2026-09-02",
+    newsTopic: "public-safety",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Rescind-Stage-2%2C-Reinstate-Stage-1-Fire-Restrictions-Press-Release-2026-09-02.pdf",
+    img: ""
+  },
+  {
     title: "Ridgway Sustainability Advisory Board Meeting Agenda",
     source: "Town of Ridgway",
     date: "September 3, 2026",
@@ -3355,6 +3392,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Facing the Mourning",
+    link: "https://koto.org/event/facing-the-mourning/2026-09-03/",
+    description: "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit from additional support while navigating grief and loss. Please feel free to share this information with others who may be interested.",
+    pubDate: "2026-09-03T18:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Redvale Community Center",
+    imageUrl: ""
+  },
+  {
     title: "Birding with Katie, Sept 3rd and 4th",
     link: "https://koto.org/event/birding-with-katie-sept-3rd-and-4th/2026-09-04/",
     description: "Patagonia Telluride will offer a bird talk with local birder Katie Triest at the Telluride Patagonia store on Thursday, Sept. 3 from 5-6 pm. Katie will be offering a bird walk on Friday, Sept 4th from 8-10 am. Please meet at the Patagonia Telluride store for the walk. Limited to 12 participants. You can sign up at the Patagonia store or by using the QR code on flyers around town. Binoculars will be provided.",
@@ -3661,17 +3709,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
-  },
-  {
-    title: "Pilates for All Bodies with Laura",
-    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-09-10/",
-    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-09-10T12:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
   }
 ];
 
@@ -3701,7 +3738,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Youth Area Grand Opening • Gran Apertura del Area del Área de Niño",
     link: "https://telluridelibrary.libcal.com/event/17528283?hs=a",
-    description: "The Wilkinson Public Library is celebrating the grand opening of its Youth Area with a special event for the community. The two-hour program marks the debut of the dedicated children's space at the library.",
+    description: "3:30 PM – 5:30 PM",
     pubDate: "2026-09-02T21:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -4221,7 +4258,7 @@ const OURAY_COUNTY_EVENTS = [
   {
     title: "Imogene Pass Run",
     link: "https://ouraycountyco.gov/Calendar.aspx?EID=3779",
-    description: "The Imogene Pass Run is an annual footrace that takes competitors over the challenging Imogene Pass between Telluride and Ouray, traversing one of the most scenic and demanding mountain routes in the San Juan Mountains. The course climbs to an elevation of over 13,000 feet, making it a notable test of endurance for participants.",
+    description: "https://ouraycountyco.gov/calendar.aspx?EID=3779",
     pubDate: "2026-09-12T07:00:00.000Z",
     source: "ouraycounty",
     sourceLabel: "Ouray County",
@@ -5650,7 +5687,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-08-31-senior-lunch",
-    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    description: "",
     pubDate: "2026-08-31T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5661,7 +5698,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Work Session",
     link: "https://www.norwoodtown.com/2026-09-01-nwc-work-session",
-    description: "A work session hosted by the Norwood Water Commission (or similar NWC body) held in Norwood, CO, providing an opportunity for members to review, discuss, and work through agenda items outside of a formal public meeting. These sessions typically allow for more in-depth examination of ongoing projects, policies, or operational matters.",
+    description: "",
     pubDate: "2026-09-01T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5672,7 +5709,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Municipal Court",
     link: "https://www.norwoodtown.com/2026-09-02-municipal-court",
-    description: "Municipal Court is a regularly scheduled court session held by the Town of Norwood. It is an official local government proceeding open to those with business before the court.",
+    description: "",
     pubDate: "2026-09-02T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5683,7 +5720,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5694,7 +5731,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-10-senior-lunch",
-    description: "A midday meal gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    description: "",
     pubDate: "2026-09-10T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5705,7 +5742,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-17-senior-lunch",
-    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    description: "",
     pubDate: "2026-09-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5716,7 +5753,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-24-senior-lunch",
-    description: "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
+    description: "",
     pubDate: "2026-09-24T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5727,7 +5764,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
+    description: "",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5738,7 +5775,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
+    description: "",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5749,7 +5786,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Veterans Day",
     link: "https://www.norwoodtown.com/2026-11-11-closed-for-veterans-day",
-    description: "The Town of Norwood will be closed in observance of Veterans Day. Municipal offices and services will be unavailable on this federal holiday honoring those who have served in the United States armed forces.",
+    description: "",
     pubDate: "2026-11-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5760,7 +5797,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Thanksgiving",
     link: "https://www.norwoodtown.com/2026-11-26-closed-for-thanksgiving",
-    description: "The Town of Norwood will be closed in observance of Thanksgiving Day. Municipal offices and services will be unavailable, with normal operations expected to resume following the holiday.",
+    description: "",
     pubDate: "2026-11-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
