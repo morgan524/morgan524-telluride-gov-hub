@@ -969,26 +969,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22895"
   },
   {
-    title: "No Women’s Group Tomorrow",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "September 1, 2026",
-    newsTopic: "community",
-    copy: "With many women out of town this week, there will be no 'official' women's Rosary and fellowship. However, if you are in town, you are still encouraged to lead a Rosary at 7:30 before Holy Mass. Reminder: It is not too late to join our Women's Vir...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/no-womens-group-tomorrow/",
-    img: ""
-  },
-  {
-    title: "Parish bulletin for August 30",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "August 29, 2026",
-    newsTopic: "community",
-    copy: "Attached is this week's Parish Bulletin. Please check our calendar for all updated information. This weekend:Saturday Vigil (Aug. 29) is a bilingual Holy Mass.Sunday (Aug. 30) 8:30 am pray the Rosary, 9 am Holy Mass. Immediately ...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-august-30/",
-    img: ""
-  },
-  {
     title: "We’re Hiring- Bilingual Food Pantry and seNior Lunch Cook Assistant/ Estamos Contratando: Asistente Bilingüe del Banco de Alimentos y Asistente de Cocina del Almuerzo para Personas Mayores",
     source: "Fresh Food Hub",
     sourceKey: "fresh-food-hub",
@@ -996,16 +976,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "We re hiring for two part-time positions: Bilingual Food Pantry Assistant — Sundays, 1:30–6:30 p.m. This role provides Spanish-English translation support for our Spanish-speaking clients during food pantry distribution. Senior Lunch Assistant — Thursdays, 8:30 a.m.–1:30 p.m. at Norwood Town Hall. T",
     href: "https://freshfoodhub.net/were-hiring-bilingual-food-pantry-and-senior-lunch-cook-assistant-estamos-contratando-asistente-bilingue-del-banco-de-alimentos-y-asistente-de-cocina-del-almuerzo-para-personas-mayores/",
-    img: ""
-  },
-  {
-    title: "Invitation to Prayer/Fellowship Wednesday Morning",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "August 25, 2026",
-    newsTopic: "community",
-    copy: "This is an open invitation to all women in Telluride. Please come and join us on Wednesday, August 26th...7:30 am Rosary8:00 am Holy MassImmediately after we will go to Butcher and Baker for fellowship. Join as able....Contact Katrina with questio...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/invitation-to-prayer-fellowship-wednesday-morning-7/",
     img: ""
   },
   {
@@ -2663,6 +2633,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "What to do in Colorado this week: Free music and fresh murals on East Colfax in Aurora",
+    source: "Colorado Sun",
+    date: "September 3, 2026",
+    firstSeen: "2026-09-03",
+    newsTopic: "arts-culture",
+    copy: "Plus: the Telluride Film Festival, a Labor Day weekend car show and last call for the Colorado State Fair",
+    claudeSummary: false,
+    href: "https://coloradosun.com/2026/09/03/whats-happening-colorado-state-fair-mural-festival/",
+    img: "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2024/09/Colfax-Canvas-supplies-credit_-Alek-Seballes-scaled.jpg?fit=1024%2C576&amp;ssl=1"
+  },
+  {
     title: "Ridgway Rescinds Stage 2 Fire Restrictions, Reinstates Stage 1 Fire Restrictions effective 12:01am on Thursday, Sept. 3rd - Sept. 2, 2026",
     source: "Town of Ridgway",
     date: "September 3, 2026",
@@ -3249,17 +3230,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Yin Yang Yoga with Miriah",
-    link: "https://koto.org/event/yin-yang-yoga-with-miriah-2/2026-09-03/",
-    description: "Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses. We'll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome. Miriah has been local to Telluride area for over ten years and have been teaching yoga for six years. She owns her own herbal business, makes herbal products and co-hosts a weekly podcast. She also is an avid snowboarder, photographer, sticker artist and comedian.",
-    pubDate: "2026-09-03T09:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/MIRIAH-2.png"
-  },
   {
     title: "Tennis Clinic 3.0-4.0",
     link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-03/",
@@ -5874,17 +5844,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   },
   {
-    title: "Mountain Towns 2030: Leveraging A Network of Community Leaders to Accelerate Climate Action",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountain-towns-2030-leveraging-a-network-of-community-leaders-to-accelerate-climate-action/",
-    description: "As climate challenges grow, no community can solve them alone. The most effective solutions often emerge when leaders come together, learn from one another,",
-    pubDate: "2026-09-02T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49605/tomv.jpg"
-  },
-  {
     title: "Design Review Board Meeting September 2026",
     link: "https://townofmountainvillage.com/explore/events/all-events/september-design-review-board-meeting/",
     description: "The Mountain Village Design Review Board meets for its monthly meeting. Meeting material is typically posted on the Friday before a scheduled meeting.",
@@ -6279,6 +6238,28 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48372/artwalk-1800x900.jpg"
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    pubDate: "2026-10-03T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
+  {
+    title: "Mind Blown Telluride",
+    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    pubDate: "2026-10-03T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
   }
 ];
 
