@@ -969,13 +969,33 @@ const REGIONAL_NEWS_ARTICLES = [
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22895"
   },
   {
-    title: "We’re Hiring- Bilingual Food Pantry and seNior Lunch Cook Assistant/ Estamos Contratando: Asistente Bilingüe del Banco de Alimentos y Asistente de Cocina del Almuerzo para Personas Mayores",
-    source: "Fresh Food Hub",
-    sourceKey: "fresh-food-hub",
-    date: "August 27, 2026",
+    title: "No Women’s Group Tomorrow",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "September 1, 2026",
     newsTopic: "community",
-    copy: "We re hiring for two part-time positions: Bilingual Food Pantry Assistant — Sundays, 1:30–6:30 p.m. This role provides Spanish-English translation support for our Spanish-speaking clients during food pantry distribution. Senior Lunch Assistant — Thursdays, 8:30 a.m.–1:30 p.m. at Norwood Town Hall. T",
-    href: "https://freshfoodhub.net/were-hiring-bilingual-food-pantry-and-senior-lunch-cook-assistant-estamos-contratando-asistente-bilingue-del-banco-de-alimentos-y-asistente-de-cocina-del-almuerzo-para-personas-mayores/",
+    copy: "With many women out of town this week, there will be no 'official' women's Rosary and fellowship. However, if you are in town, you are still encouraged to lead a Rosary at 7:30 before Holy Mass. Reminder: It is not too late to join our Women's Vir...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/no-womens-group-tomorrow/",
+    img: ""
+  },
+  {
+    title: "Parish bulletin for August 30",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "August 29, 2026",
+    newsTopic: "community",
+    copy: "Attached is this week's Parish Bulletin. Please check our calendar for all updated information. This weekend:Saturday Vigil (Aug. 29) is a bilingual Holy Mass.Sunday (Aug. 30) 8:30 am pray the Rosary, 9 am Holy Mass. Immediately ...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-august-30/",
+    img: ""
+  },
+  {
+    title: "Invitation to Prayer/Fellowship Wednesday Morning",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "August 25, 2026",
+    newsTopic: "community",
+    copy: "This is an open invitation to all women in Telluride. Please come and join us on Wednesday, August 26th...7:30 am Rosary8:00 am Holy MassImmediately after we will go to Butcher and Baker for fellowship. Join as able....Contact Katrina with questio...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/invitation-to-prayer-fellowship-wednesday-morning-7/",
     img: ""
   },
   {
@@ -995,8 +1015,8 @@ const SMC_ALERTS = [
     source: "San Miguel County",
     sourceLabel: "San Miguel County",
     category: "Alert",
-    date: "2026-08-28",
-    pubDate: "2026-08-28T19:13:49.000Z",
+    date: "2026-09-03",
+    pubDate: "2026-09-03T17:50:17.000Z",
     copy: "Imogene Pass/Tomboy Road will be closed 12:01 a.m. - 3:00 p.m. on Saturday, September 12th, to accommodate the Imogene Pass Run. Black Bear Pass/Bridal Veil Road and the Valley View parking area will be closed 7:00 a.m. - 12:00 p.m. on that day, too.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=542",
     img: ""
@@ -1658,6 +1678,55 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "US Forest Service closing 23 research facilities as part of reorganization under Trump",
+    source: "Telluride Times",
+    date: "September 3, 2026",
+    firstSeen: "2026-09-03",
+    newsTopic: "housing",
+    copy: "The U.S. Forest Service is closing 23 research stations across more than a dozen states, though officials say the science work will continue at other locations. The moves are part of a broader reorganization that includes relocating agency headquarters from D.C. to Salt Lake City and is expected to save around $16 million. The agency has shed roughly 6,000 employees — about 15% of its workforce — since the start of Trump's second term.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_50cf65b2-703c-5581-bc08-0cb36eb38eee.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/2c/b2c784ed-ddf2-509d-8a18-461187aca55b/6a99c80a6a3b8.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "CHALKBOARD Week of Sept. 3-9",
+    source: "Telluride Times",
+    date: "September 3, 2026",
+    firstSeen: "2026-09-03",
+    newsTopic: "government",
+    copy: "Birthdays, meetings, and recurring events fill the Norwood-area calendar for the week of Sept. 3–9. Regulars include the Farmers Market Thursdays in Pocket Park, senior meals Mondays and Thursdays, Sunday food pantry distribution at Norwood School, and pickleball several days a week. Various board meetings and community services continue on their usual schedules.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_1b65b2cc-7349-4828-8583-7db27354551f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/83/58327133-e68f-48b4-9435-57ae76b95e85/6a992ba59f32c.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "What is an Enterprise Zone?",
+    source: "Telluride Times",
+    date: "September 3, 2026",
+    firstSeen: "2026-09-03",
+    newsTopic: "government",
+    copy: "San Miguel County joined the Region 10 Enterprise Zone on July 16, a designation tied to last winter's rough season — low snowfall and a holiday ski area closure hurt enough businesses to qualify the east end of the county. Businesses, farms, nonprofits, and local governments may now be eligible for up to 10 different Colorado state income tax credits covering hiring, equipment, training, and more. One catch: you must pre-certify before starting any activity you plan to claim — you can't do it after the fact.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_676078a9-2cf2-486a-aa29-5a4ec17f8504.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/1f/61f75095-5ffd-464a-9c39-3d8c4a5117e0/6a971ab817307.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "‘A piece of cultural history’",
+    source: "Telluride Times",
+    date: "September 3, 2026",
+    firstSeen: "2026-09-03",
+    newsTopic: "arts-culture",
+    copy: "British fashion designer Bella Freud has created the official poster for the 53rd Telluride Film Festival, set for 2026. Her design centers on bold, shiny lettering — \"Telluride,\" \"Film Festival,\" and \"SH~W\" — against a black-and-white pixelated backdrop of town and peaks. Festival posters here have long been collected as artistic artifacts, with past contributors including Ed Ruscha, Chuck Jones, and Julian Schnabel.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_e5eac4e0-e596-47f8-ba7b-6aee7ecbdd80.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/6d/56d76aaa-339d-4745-9857-665d3df9f31e/6a93201314de2.image.png",
+    imgHiRes: true
+  },
   {
     title: "SHOW Time: Telluride Film Festival illuminates the box canyon",
     source: "Telluride Times",
@@ -2570,6 +2639,51 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Marya Stark and Charles Dalton Sworn In to Telluride Town Council",
+    source: "Town of Telluride",
+    date: "August 12, 2026",
+    newsTopic: "government",
+    copy: "(July 21, 2026) – The Town welcomed two new members to Town Council this morning as Charles Dalton and Marya Stark were sworn into office at 9:30 a.m. Town Clerk Tiffany Kavanaugh administered the oath of office for both officials.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=402",
+    img: ""
+  },
+  {
+    title: "Arrest Made in String of Telluride Mountain Bike Thefts",
+    source: "Town of Telluride",
+    date: "August 12, 2026",
+    newsTopic: "recreation",
+    copy: "(August 11, 2026) – The Telluride Marshal's Department has identified and arrested a suspect in a series of mountain bike thefts that account for more than $22,000 in reported losses.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=401",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15642"
+  },
+  {
+    title: "State of the Town Address: The State of the Town Is Strong and Engaging",
+    source: "Town of Telluride",
+    date: "August 8, 2026",
+    newsTopic: "government",
+    copy: "The Mayor's biannual State of the Town Address was delivered on Tuesday, July 21 during the regular meeting of Telluride Town Council, here's what Mayor Teddy Errico had to say.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=400",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15641"
+  },
+  {
+    title: "Please Take the Advanced Web Map Survey",
+    source: "San Miguel County",
+    date: "September 3, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1408",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14763"
+  },
+  {
+    title: "Two Domestic Pets in San Miguel County Test Positive for the Plague",
+    source: "San Miguel County",
+    date: "September 3, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
+  },
+  {
     title: "CDOT Performing Ditch Cleaning 8/31 - 9/3",
     source: "San Miguel County",
     date: "August 28, 2026",
@@ -2590,7 +2704,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Imogene and Black Bear Passes Closed 9/12",
     source: "San Miguel County",
-    date: "August 28, 2026",
+    date: "September 3, 2026",
     newsTopic: "infrastructure",
     copy: "Imogene Pass/Tomboy Road will be closed 12:01 a.m. - 3:00 p.m. on Saturday, September 12th, to accommodate the Imogene Pass Run. Black Bear Pass/Bridal Veil Road and the Valley View parking area will be closed 7:00 a.m. - 12:00 p.m. on that day, too.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=542",
@@ -3131,16 +3245,6 @@ const TELLURIDE_FARMERS_MARKET = (function () {
 // out-of-season entries simply don't render until they approach.
 const TELLURIDE_SCIENCE_EVENTS = [
   {
-    title: "Mountain Towns 2030: Leveraging a Network of Community Leaders to Accelerate Climate Action",
-    date: "2026-09-02",
-    time: "6:00 PM – 7:00 PM",
-    location: "Telluride Innovation Center, Telluride",
-    description: "In collaboration with Telluride Science, Telluride Foundation, Mountain Towns 2030, and Eco Action Partners As climate challenges grow, no community can solve them alone. The most effective solutions often emerge when leaders come together, learn from one another, and take action collectively. And with the window to help solve climate change tightening, speed is essential. Join a conversation with Mountain Towns 20203, alongside community leaders exploring how networks, partnerships, and peer learning are accelerating climate action and resilience efforts in communities of every size – including Telluride and across the surrounding region. Panelists include Jessica Burley, Sustainability Manager for the Town of Breckenridge; John Clark, Mayor of Ridgway, and MT2030 Executive Director Chris Steinkamp. About Mountain Towns 2030: 96% of local leaders cite limited staffing and bandwidth as the number one barrier to climate action. …",
-    link: "https://telluridescience.org/event/mountain-towns2030/",
-    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/08/MT2030_320x212.jpg",
-    sourceLabel: "Telluride Science"
-  },
-  {
     title: "Telluride Chamber Music and Telluride Science Community Concert",
     date: "2026-09-10",
     time: "6:00 PM – 7:00 PM",
@@ -3203,39 +3307,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Tennis Clinic 3.0-4.0",
-    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-03/",
-    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-03T09:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Tennis Clinic 4.0+",
-    link: "https://koto.org/event/tennis-clinic-4-0/2026-09-03/",
-    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-03T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Pilates for All Bodies with Laura",
-    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-09-03/",
-    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-09-03T12:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
   {
     title: "TRC Men's Tennis Singles",
     link: "https://koto.org/event/trc-mens-tennis-singles/2026-09-03/",
@@ -3689,17 +3760,6 @@ const WILKINSON_EVENTS = [
     category: "Library Event",
     location: "Kids Area",
     imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
-  },
-  {
-    title: "Pilates for All Bodies",
-    link: "https://telluridelibrary.libcal.com/event/16536340?hs=a",
-    description: "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-09-03T18:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg"
   },
   {
     title: "Littles On the Move",
@@ -4246,7 +4306,7 @@ const OURAY_COUNTY_EVENTS = [
   {
     title: "Imogene Pass Run",
     link: "https://ouraycountyco.gov/Calendar.aspx?EID=3779",
-    description: "https://ouraycountyco.gov/calendar.aspx?EID=3779",
+    description: "The Imogene Pass Run is an annual footrace that takes competitors over the challenging Imogene Pass between Telluride and Ouray, traversing one of the most scenic and demanding mountain routes in the San Juan Mountains. The course climbs to an elevation of over 13,000 feet, making it a notable test of endurance for participants.",
     pubDate: "2026-09-12T07:00:00.000Z",
     source: "ouraycounty",
     sourceLabel: "Ouray County",
@@ -4558,7 +4618,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
     description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
     pubDate: "2026-09-07T18:00:00.000Z",
-    endDate: "2026-10-26",
+    endDate: "2026-11-02",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5684,7 +5744,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-08-31-senior-lunch",
-    description: "",
+    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     pubDate: "2026-08-31T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5695,7 +5755,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Work Session",
     link: "https://www.norwoodtown.com/2026-09-01-nwc-work-session",
-    description: "",
+    description: "A work session hosted by the Norwood Water Commission (or similar NWC body) held in Norwood, CO, providing an opportunity for members to review, discuss, and work through agenda items outside of a formal public meeting. These sessions typically allow for more in-depth examination of ongoing projects, policies, or operational matters.",
     pubDate: "2026-09-01T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5706,7 +5766,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Municipal Court",
     link: "https://www.norwoodtown.com/2026-09-02-municipal-court",
-    description: "",
+    description: "Municipal Court is a regularly scheduled court session held by the Town of Norwood. It is an official local government proceeding open to those with business before the court.",
     pubDate: "2026-09-02T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5717,7 +5777,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5726,9 +5786,42 @@ const NORWOOD_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "NWC Rescheduled To 09 22 2026",
+    link: "https://www.norwoodtown.com/2026-09-08-nwc-rescheduled-to-09-22-2026",
+    description: "A previously scheduled Norwood Town government meeting has been rescheduled to September 22, 2026. The rescheduled meeting will take place in Norwood, CO, and is organized by the Town of Norwood.",
+    pubDate: "2026-09-08T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Government Meeting",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Board Of Trustees Meeting",
+    link: "https://www.norwoodtown.com/2026-09-09-board-of-trustees-meeting",
+    description: "A regularly scheduled meeting of the Town of Norwood Board of Trustees, providing an opportunity for local governance and public business to be conducted. Community members are welcome to attend and observe the proceedings.",
+    pubDate: "2026-09-09T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Government Meeting",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Norwood Sanitation District Meeting",
+    link: "https://www.norwoodtown.com/2026-09-10-norwood-sanitation-district-meeting-meeting",
+    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and district operations are welcome to attend.",
+    pubDate: "2026-09-10T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Government Meeting",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-10-senior-lunch",
-    description: "",
+    description: "A midday meal gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     pubDate: "2026-09-10T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5739,7 +5832,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-17-senior-lunch",
-    description: "",
+    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     pubDate: "2026-09-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5748,9 +5841,20 @@ const NORWOOD_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Planning And Zoning Commission Meeting",
+    link: "https://www.norwoodtown.com/2026-09-21-planning-and-zoning-commission-meeting",
+    description: "The Town of Norwood's Planning and Zoning Commission will hold a regular meeting to review and discuss land use, development, and zoning matters within the community. Members of the public are welcome to attend and observe the proceedings.",
+    pubDate: "2026-09-21T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Government Meeting",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-24-senior-lunch",
-    description: "",
+    description: "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
     pubDate: "2026-09-24T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5761,7 +5865,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "",
+    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5772,7 +5876,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5783,7 +5887,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Veterans Day",
     link: "https://www.norwoodtown.com/2026-11-11-closed-for-veterans-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Veterans Day. Municipal offices and services will be unavailable on this federal holiday honoring those who have served in the United States armed forces.",
     pubDate: "2026-11-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5794,7 +5898,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Thanksgiving",
     link: "https://www.norwoodtown.com/2026-11-26-closed-for-thanksgiving",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Thanksgiving Day. Municipal offices and services will be unavailable, with normal operations expected to resume following the holiday.",
     pubDate: "2026-11-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6458,7 +6562,7 @@ const TELLURIDE_COM_EVENTS = [
     link: "https://www.telluride.com/event/weird-wine-wednesdays-at-the-national/",
     description: "Elevate your evening on the rooftop at The National with Weird Wine Wednesdays, a laid-back, weekly tasting experience …",
     pubDate: "2026-06-17",
-    endDate: "2026-09-02",
+    endDate: "2026-09-30",
     source: "telluride-com",
     sourceLabel: "Telluride.com",
     category: "Community Event",
@@ -6581,6 +6685,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/28877/144071284720c1c00935.800x533.webp"
+  },
+  {
+    title: "After Telluride Film Festival",
+    link: "https://www.telluride.com/event/after-telluride-film-festival/",
+    description: "After Telluride Film Festival (ATFF) screens eight popular Festival films for locals on the Tuesday - Friday following …",
+    pubDate: "2026-09-08",
+    endDate: "2026-09-12",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/55245/screenshot_2026-09-03_at_2_12_52_pm.800x533.webp"
   },
   {
     title: "Mama Said String Band",

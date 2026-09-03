@@ -54,45 +54,6 @@
     "type": "Family & Kids"
   },
   {
-    "title": "Tennis Clinic 4.0+",
-    "href": "https://koto.org/event/tennis-clinic-4-0/2026-09-03/",
-    "date": "2026-09-03",
-    "time": "11:00 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
-    "type": "Outdoors & Sports"
-  },
-  {
-    "title": "Pilates for All Bodies with Laura",
-    "href": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-09-03/",
-    "date": "2026-09-03",
-    "time": "12:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/wellness.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    "type": "Wellness"
-  },
-  {
-    "title": "Pilates for All Bodies",
-    "href": "https://telluridelibrary.libcal.com/event/16536340?hs=a",
-    "date": "2026-09-03",
-    "time": "12:30 PM",
-    "location": "Magazine Room",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own…",
-    "type": "Wellness"
-  },
-  {
     "title": "Littles On the Move",
     "href": "https://telluridelibrary.libcal.com/event/13960359?hs=a",
     "date": "2026-09-03",
@@ -341,19 +302,6 @@
     "source": "Wilkinson Public Library",
     "desc": "9:00 AM – 10:00 AM · Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses. We ll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses.…",
     "type": "Wellness"
-  },
-  {
-    "title": "Tennis Clinic 3.0-4.0",
-    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-03/",
-    "date": "2026-09-03",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "Auditions, Take 2: Rocky Horror Picture Show Live Shadow Cast Edition (Show in Oct.)",
@@ -893,7 +841,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
     "type": "Community",
-    "endDate": "2026-10-26"
+    "endDate": "2026-11-02"
   },
   {
     "title": "Monthly Karate in Ouray County",
@@ -1042,6 +990,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "NWC Rescheduled To 09 22 2026",
+    "href": "https://www.norwoodtown.com/2026-09-08-nwc-rescheduled-to-09-22-2026",
+    "date": "2026-09-08",
+    "time": "6:00 AM",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Government Meeting",
+    "source": "Town of Norwood",
+    "desc": "A previously scheduled Norwood Town government meeting has been rescheduled to September 22, 2026. The rescheduled meeting will take place in Norwood, CO, and is organized by the Town of Norwood.",
+    "type": "Community"
+  },
+  {
     "title": "Mountain Village Merchant Meeting",
     "href": "https://townofmountainvillage.com/explore/events/all-events/merchant-meeting/",
     "date": "2026-09-08",
@@ -1079,6 +1040,20 @@
     "source": "Beacon",
     "desc": "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
     "type": "Food & Drink"
+  },
+  {
+    "title": "After Telluride Film Festival",
+    "href": "https://www.telluride.com/event/after-telluride-film-festival/",
+    "date": "2026-09-08",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/55245/screenshot_2026-09-03_at_2_12_52_pm.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "After Telluride Film Festival (ATFF) screens eight popular Festival films for locals on the Tuesday - Friday following …",
+    "type": "Arts & Film",
+    "endDate": "2026-09-12"
   },
   {
     "title": "RESCHEDULED: Birding Walk with Katie Triest",
@@ -1383,6 +1358,19 @@
     "type": "Community"
   },
   {
+    "title": "Norwood Sanitation District Meeting",
+    "href": "https://www.norwoodtown.com/2026-09-10-norwood-sanitation-district-meeting-meeting",
+    "date": "2026-09-10",
+    "time": "6:00 AM",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Government Meeting",
+    "source": "Town of Norwood",
+    "desc": "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and district operations are welcome to attend.",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Senior Lunch",
     "href": "https://www.norwoodtown.com/2026-09-10-senior-lunch",
     "date": "2026-09-10",
@@ -1392,7 +1380,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday meal gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     "type": "Community"
   },
   {
@@ -1641,7 +1629,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
     "category": "Community Event",
     "source": "Ouray County",
-    "desc": "https://ouraycountyco.gov/calendar.aspx?EID=3779",
+    "desc": "The Imogene Pass Run is an annual footrace that takes competitors over the challenging Imogene Pass between Telluride and Ouray, traversing one of the most scenic and demanding mountain routes in the San Juan Mountains. The course climbs…",
     "type": "Community"
   },
   {
@@ -2141,7 +2129,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     "type": "Community"
   },
   {
@@ -2654,8 +2642,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
-    "type": "Community"
+    "desc": "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
+    "type": "Food & Drink"
   },
   {
     "title": "Watercolor & Wine with Katey Fetch: \"Paint the Peaks\"",
@@ -2838,7 +2826,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
     "type": "Community"
   },
   {
