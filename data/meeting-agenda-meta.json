@@ -372,12 +372,18 @@
   "telluride|2026-09-16|Historic & Architectural Review Commission Chair - Sep 16 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8023",
     "sv": 4,
-    "ph": "96078cc700b16039"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/dRjdHtmeTB6DmemBLALAFw",
+    "meetingId": "854 0207 9752",
+    "passcode": "775535",
+    "phone": "301-715-8592"
   },
   "telluride|2026-09-16|Historic & Architectural Review Commission - Sep 16 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8022",
     "sv": 4,
-    "ph": "357f7b650fab0207"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA",
+    "meetingId": "812 9136 3866",
+    "passcode": "440860.",
+    "phone": "301-715-8592"
   },
   "telluride|2026-09-16|Parks & Recreation Commission - Sep 16 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082",
@@ -493,7 +499,7 @@
   "telluride|2026-09-30|Special Meeting - Historic & Architectural Review Commission - Sep 30 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309",
     "sv": 4,
-    "ph": "6d74144a26371ce4"
+    "ph": "fc8ba4c0a7de2333"
   },
   "telluride|2026-09-17|Special Meeting - Planning & Zoning Commission - Sep 17 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8310",
@@ -524,6 +530,14 @@
   },
   "ouray|2026-09-16|, 1-4:00 PM (@ OURAY COURTHOUSE!) - The PC will hold 2 public hearings; Curry Regular PUD, and an Exemption application from Clifford Pastor to subdivide his parcel into 2 lots. (Packet materials are under media TV icon)": {
     "agendaUrl": "https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1017",
+    "sv": 4
+  },
+  "norwood|2026-09-08|NWC Rescheduled to 09/22/2026": {
+    "agendaUrl": "https://www.norwoodtown.com/files/5f8304a63/09.08.2026+RESCHEDULED+NWC+Agenda.pdf",
+    "zoomUrl": "https://us02web.zoom.us/j/88274908233",
+    "meetingId": "882 7490 8233",
+    "passcode": "997236",
+    "phone": "346-248-7799",
     "sv": 4
   }
 }

@@ -1,10 +1,23 @@
 {
- "generated": "2026-09-03T20:49:47.016Z",
+ "generated": "2026-09-03T23:14:41.769Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
    "lastUpdated": "2026-08-17",
-   "upcoming": [],
+   "upcoming": [
+    {
+     "source": "telluride",
+     "sourceLabel": "Town of Telluride",
+     "title": "HARC Meeting",
+     "date": "2026-09-16",
+     "time": "",
+     "location": "Rebekah Hall, 113 W Columbia Ave",
+     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8022",
+     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8022",
+     "zoomLink": "https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA",
+     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+    }
+   ],
    "recent": [
     {
      "source": "telluride",
@@ -148,9 +161,9 @@
      "date": "2026-09-08",
      "time": "",
      "location": "1670 Naturita St, Norwood CO 81423",
-     "agendaUrl": "",
+     "agendaUrl": "https://www.norwoodtown.com/files/5f8304a63/09.08.2026+RESCHEDULED+NWC+Agenda.pdf",
      "link": "https://www.norwoodtown.com/files/5f8304a63/09.08.2026+RESCHEDULED+NWC+Agenda.pdf",
-     "zoomLink": "",
+     "zoomLink": "https://us02web.zoom.us/j/88274908233",
      "livestream": ""
     }
    ],

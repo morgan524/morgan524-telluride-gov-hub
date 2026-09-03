@@ -1,10 +1,10 @@
 {
- "generated": "2026-09-03T20:49:47.018Z",
+ "generated": "2026-09-03T23:14:41.771Z",
  "pinned": false,
  "topic": "norwoodwater",
  "topicLabel": "Norwood Water",
  "headline": "Norwood Water goes before NWC Rescheduled to 09/22/2026 on Tuesday, September 8",
- "blurb": "The September 8, 2026 Norwood Water Commission Meeting agenda hasn't been posted yet.",
+ "blurb": "The September 8th Norwood Water Commission meeting has been rescheduled to Tuesday, September 22, 2026, at 6:30 p.m. at Norwood Town Hall.",
  "images": [],
  "deepDive": {
   "label": "Norwood Water",
@@ -17,10 +17,10 @@
   "humanDate": "Tuesday, September 8",
   "time": "",
   "location": "1670 Naturita St, Norwood CO 81423",
-  "agendaUrl": "",
-  "hasAgenda": false,
+  "agendaUrl": "https://www.norwoodtown.com/files/5f8304a63/09.08.2026+RESCHEDULED+NWC+Agenda.pdf",
+  "hasAgenda": true,
   "packetUrl": "",
-  "zoomLink": "",
+  "zoomLink": "https://us02web.zoom.us/j/88274908233",
   "livestream": ""
  }
 }
