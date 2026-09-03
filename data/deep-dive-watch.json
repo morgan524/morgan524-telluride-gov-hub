@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-03T03:49:44.306Z",
+ "generated": "2026-09-03T10:59:37.909Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -17,12 +17,6 @@
      "date": "2026-08-25",
      "title": "Telluride Board of Education Monthly Meeting",
      "snippet": "The August 25 Board of Education meeting carries real weight. The most consequential item is a flood-related budget appropriation for FY 2026-27 — the board will discuss and then vote on adjusting…"
-    },
-    {
-     "source": "telluride",
-     "date": "2026-08-19",
-     "title": "Historic & Architectural Review Commission - Aug 19 2026",
-     "snippet": "A full slate at HARC on August 19, dominated by two projects that have been in the room before and will be again. The Shandoka Lot Redevelopment at 860 Black Bear Rd comes in for preliminary…"
     }
    ],
    "developments": [
@@ -40,7 +34,6 @@
    "stale": [
     "Carhenge / Shandoka: telluride discussed it on 2026-09-01 (\"Town Council - Sep 01 2026\") but the deep dive was last edited 2026-08-17.",
     "Carhenge / Shandoka: school discussed it on 2026-08-25 (\"Telluride Board of Education Monthly Meeting\") but the deep dive was last edited 2026-08-17.",
-    "Carhenge / Shandoka: telluride discussed it on 2026-08-19 (\"Historic & Architectural Review Commission - Aug 19 2026\") but the deep dive was last edited 2026-08-17.",
     "Carhenge / Shandoka: timeline entry \"HARC hears Shandoka's four buildings; Carhenge slips to…\" (Aug 19, 2026) is still marked upcoming but the date has passed."
    ]
   },
@@ -169,14 +162,7 @@
    "label": "Field Paving at Town Park",
    "lastUpdated": "",
    "upcoming": [],
-   "recent": [
-    {
-     "source": "telluride",
-     "date": "2026-08-19",
-     "title": "Parks & Recreation Commission - Aug 19 2026",
-     "snippet": "The Commission takes up two substantive items. First, staff is recommending 2027 fee increases for the Town Park Campground and showers — nightly rates would rise roughly 8%, with premium vehicle…"
-    }
-   ],
+   "recent": [],
    "developments": [],
    "stale": []
   }
