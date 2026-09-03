@@ -53,19 +53,6 @@
     "type": "Community"
   },
   {
-    "title": "Grand Opening of the Youth Area at Wilkinson Public Library",
-    "href": "https://koto.org/event/grand-opening-of-the-youth-area-at-wilkinson-public-library/",
-    "date": "2026-09-02",
-    "time": "3:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/family.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Wilkinson Public Library invites the community to the grand repoening of its Youth Space, Wednesday, September 2 at 3:30 PM. We hope to see you there! La Biblioteca Pública de Wilkinson invita a la comunidad a la gran inauguración del…",
-    "type": "Family & Kids"
-  },
-  {
     "title": "Youth Area Grand Opening • Gran Apertura del Area del Área de Niño",
     "href": "https://telluridelibrary.libcal.com/event/17528283?hs=a",
     "date": "2026-09-02",
@@ -160,15 +147,15 @@
   },
   {
     "title": "Mountain Towns 2030: Leveraging A Network of Community Leaders to Accelerate Climate Action",
-    "href": "https://koto.org/event/mountain-towns-2030-leveraging-a-network-of-community-leaders-to-accelerate-climate-action/",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/mountain-towns-2030-leveraging-a-network-of-community-leaders-to-accelerate-climate-action/",
     "date": "2026-09-02",
-    "time": "6:00 PM",
-    "location": "Telluride Innovation Center",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-1.jpg",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49605/tomv.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "As climate challenges grow, no community can solve them alone. The most effective solutions often emerge when leaders come together, learn from one another, and take action collectively. And with the window to help solve climate change…",
+    "source": "Mountain Village",
+    "desc": "As climate challenges grow, no community can solve them alone. The most effective solutions often emerge when leaders come together, learn from one another,",
     "type": "Community"
   },
   {
@@ -822,19 +809,6 @@
     "endDate": "2026-09-07"
   },
   {
-    "title": "Bilingual Balance in Motion",
-    "href": "https://koto.org/event/bilingual-balance-in-motion/2026-09-05/",
-    "date": "2026-09-05",
-    "time": "10:00 AM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and…",
-    "type": "Wellness"
-  },
-  {
     "title": "Movies Under the Stars",
     "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     "date": "2026-09-05",
@@ -1437,6 +1411,32 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Pilates for All Bodies with Laura",
+    "href": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-09-10/",
+    "date": "2026-09-10",
+    "time": "12:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/wellness.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    "type": "Wellness"
+  },
+  {
+    "title": "TRC Men's Tennis Singles",
+    "href": "https://koto.org/event/trc-mens-tennis-singles/2026-09-10/",
+    "date": "2026-09-10",
+    "time": "4:00 PM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The 1st TRC Men's Singles League! Sign up on a week-to-week basis. No long-term commitment.",
+    "type": "Outdoors & Sports"
+  },
+  {
     "title": "Middle School Volleyball: Ouray vs Norwood",
     "href": "https://events.ourayridgwayevents.com/event/middle-school-volleyball-ouray-vs-norwood",
     "date": "2026-09-10",
@@ -1447,6 +1447,32 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Ouray Middle School will be playing Norwood Middle School @ Ouray View on site | Email this event",
+    "type": "Community"
+  },
+  {
+    "title": "Booze and Books at Liz",
+    "href": "https://koto.org/event/booze-and-books-at-liz-2/",
+    "date": "2026-09-10",
+    "time": "5:15 PM",
+    "location": "Liz, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/BoozeBooks-Liz.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Sip on a libation while chatting with other bibliophiles about books you have read recently. It's totally open ended and open to everyone! 5:15 the second Thursday of every month. The library will get some apps for the table; you purchase…",
+    "type": "Community"
+  },
+  {
+    "title": "The Creative Exchange at Telluride Arts HQ",
+    "href": "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-09-10/",
+    "date": "2026-09-10",
+    "time": "5:30 PM",
+    "location": "Telluride Arts HQ, TELLURIDE",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories…",
     "type": "Community"
   },
   {
@@ -1474,6 +1500,19 @@
     "source": "Telluride Chamber Music",
     "desc": "An hour of chamber music on the deck — the perfect way to unwind. Free event.",
     "type": "Music"
+  },
+  {
+    "title": "Facing the Mourning",
+    "href": "https://koto.org/event/facing-the-mourning/2026-09-10/",
+    "date": "2026-09-10",
+    "time": "6:00 PM",
+    "location": "Redvale Community Center",
+    "town": "",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit…",
+    "type": "Community"
   },
   {
     "title": "Music Bingo",
@@ -1671,6 +1710,19 @@
     "source": "Telluride.com",
     "desc": "Founded in Jamaica in the 1970s, The Meditations are legendary roots reggae pioneers whose soulful harmonies and …",
     "type": "Wellness"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-11/",
+    "date": "2026-09-11",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Imogene Pass Run",
@@ -1934,6 +1986,19 @@
     "type": "Community"
   },
   {
+    "title": "Middle School Volleyball: Ouray vs Centennial",
+    "href": "https://events.ourayridgwayevents.com/event/middle-school-volleyball-ouray-vs-centennial",
+    "date": "2026-09-15",
+    "time": "4:00 PM",
+    "location": "Ouray School",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53861527126164/huge/f25eb4c3e140a86cc61c64c128fd96a5d907b670.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray Middle School plays Centennial Middle School @ Ouray View on site | Email this event",
+    "type": "Community"
+  },
+  {
     "title": "TYLER SIMMONS",
     "href": "https://events.ourayridgwayevents.com/event/tyler-simmons-8192",
     "date": "2026-09-15",
@@ -2079,6 +2144,19 @@
     "desc": "AFTER SCHOOL ART FOR AGES 8-12 Wednesdays, 3:15–4:45 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 16 – October 7Session 2 (4 weeks • $85): October 21 – November 11Session 3…",
     "type": "Arts & Film",
     "endDate": "2026-10-07"
+  },
+  {
+    "title": "Ouray HS Volleyball vs De Beque",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-hs-volleyball-vs-de-beque",
+    "date": "2026-09-16",
+    "time": "4:30 AM",
+    "location": "Ouray School",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53861825122366/huge/bd563b6fd4c272468a52f44be10f353adfc067ae.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray High School Volleyball will be playing De Beque @ Ouray HS View on site | Email this event",
+    "type": "Community"
   },
   {
     "title": "Market on the Plaza",
@@ -2368,6 +2446,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "",
+    "type": "Community"
+  },
+  {
+    "title": "Ouray HS Volleyball vs Mancos",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-hs-volleyball-vs-mancos",
+    "date": "2026-09-19",
+    "time": "11:00 AM",
+    "location": "Ouray School",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53861933199264/huge/a6b3ed3547c7583cd9c727f1be07b81f6be27814.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray highschool will be playing Mancos @ Ouray View on site | Email this event",
     "type": "Community"
   },
   {

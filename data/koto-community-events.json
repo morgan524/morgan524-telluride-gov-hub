@@ -1,38 +1,5 @@
 [
   {
-    "title": "Grand Opening of the Youth Area at Wilkinson Public Library",
-    "link": "https://koto.org/event/grand-opening-of-the-youth-area-at-wilkinson-public-library/",
-    "description": "Wilkinson Public Library invites the community to the grand repoening of its Youth Space, Wednesday, September 2 at 3:30 PM. We hope to see you there! La Biblioteca Pública de Wilkinson invita a la comunidad a la gran inauguración del nuevo espacio de niños, el miércoles 2 de septiembre a las 3:30 pm. Esperamos a verlos allí!",
-    "pubDate": "2026-09-02T15:30:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": ""
-  },
-  {
-    "title": "Mountain Towns 2030: Leveraging A Network of Community Leaders to Accelerate Climate Action",
-    "link": "https://koto.org/event/mountain-towns-2030-leveraging-a-network-of-community-leaders-to-accelerate-climate-action/",
-    "description": "As climate challenges grow, no community can solve them alone. The most effective solutions often emerge when leaders come together, learn from one another, and take action collectively. And with the window to help solve climate change tightening, speed is essential. Join a conversation with Mountain Towns 2030, alongside community leaders exploring how networks, partnerships, and peer learning are accelerating climate action and resilience efforts in communities of every size – including Telluride and across the surrounding region. Moderator: Siobhan Montoya Lavendar, Regional Climate Action Development Director, EcoAction Partners Panelists: Jessica Burley, Sustainability & Parking Manager, Town of Breckenridge John Clark, Mayor, Town of Ridgway Chris Steinkamp, Executive Director, Mountain Towns 2030 This event is in collaboration with Eco Action Partners, Mountain Towns 2030, Telluride Foundation, and Telluride Science. Sponsored by JP Morgan Private Bank. …",
-    "pubDate": "2026-09-02T18:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Innovation Center",
-    "imageUrl": ""
-  },
-  {
-    "title": "Telluride Rotary Club Meeting",
-    "link": "https://koto.org/event/telluride-rotary-club-meeting-2/",
-    "description": "Telluride Rotary Club meets Wednesday, September 2, at 6 p.m. at the Mountain Lodge in Mountain Village. Come at 5:30PM to socialize before the meeting. Meetings feature guest speakers and discussion of club projects. Anyone with an interest in networking and service is welcome to drop in as a guest. Email telluriderotary@gmail.com for info or to rsvp.",
-    "pubDate": "2026-09-02T18:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Mountain Lodge Telluride, Mountain Village",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/08/Telluride-Rotary-Logo-White.jpg"
-  },
-  {
     "title": "Yin Yang Yoga with Miriah",
     "link": "https://koto.org/event/yin-yang-yoga-with-miriah-2/2026-09-03/",
     "description": "Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses. We'll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome. Miriah has been local to Telluride area for over ten years and have been teaching yoga for six years. She owns her own herbal business, makes herbal products and co-hosts a weekly podcast. She also is an avid snowboarder, photographer, sticker artist and comedian.",
@@ -207,17 +174,6 @@
     "category": "Community Event",
     "location": "Telluride Racquet Club, Mountain Village",
     "imageUrl": ""
-  },
-  {
-    "title": "Bilingual Balance in Motion",
-    "link": "https://koto.org/event/bilingual-balance-in-motion/2026-09-05/",
-    "description": "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
-    "pubDate": "2026-09-05T10:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
   },
   {
     "title": "Gentle Yoga with Kristen Milord",
@@ -444,6 +400,72 @@
     "link": "https://koto.org/event/tennis-clinic-4-0/2026-09-10/",
     "description": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
     "pubDate": "2026-09-10T11:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Pilates for All Bodies with Laura",
+    "link": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-09-10/",
+    "description": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    "pubDate": "2026-09-10T12:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "TRC Men's Tennis Singles",
+    "link": "https://koto.org/event/trc-mens-tennis-singles/2026-09-10/",
+    "description": "The 1st TRC Men's Singles League! Sign up on a week-to-week basis. No long-term commitment.",
+    "pubDate": "2026-09-10T16:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Booze and Books at Liz",
+    "link": "https://koto.org/event/booze-and-books-at-liz-2/",
+    "description": "Sip on a libation while chatting with other bibliophiles about books you have read recently. It's totally open ended and open to everyone! 5:15 the second Thursday of every month. The library will get some apps for the table; you purchase your own beverage. Please sign up in advance. Meet at Liz at 200 W. Colorado Ave. in Telluride. (Entrance is on Fir St.)",
+    "pubDate": "2026-09-10T17:15:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Liz, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/08/BoozeBooks-Liz.png"
+  },
+  {
+    "title": "The Creative Exchange at Telluride Arts HQ",
+    "link": "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-09-10/",
+    "description": "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories that fuel their work. Think of it as an open source model for creativity—where we learn from each other, swap ideas, and help strengthen one another’s practice. Each session is hosted by local artists and creative leaders who bring their own perspectives, techniques, and creative journeys into the room. Topics may span everything from the business of art and professional development, to creative process, storytelling, collaboration, and the philosophical underpinnings of making art. Whether you’re a full-time working artist, an educator, a student, a maker, or simply someone curious about creative expression, the Creative Exchange is open to you. …",
+    "pubDate": "2026-09-10T17:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Arts HQ, TELLURIDE",
+    "imageUrl": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png"
+  },
+  {
+    "title": "Facing the Mourning",
+    "link": "https://koto.org/event/facing-the-mourning/2026-09-10/",
+    "description": "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit from additional support while navigating grief and loss. Please feel free to share this information with others who may be interested.",
+    "pubDate": "2026-09-10T18:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Redvale Community Center",
+    "imageUrl": ""
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "link": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-11/",
+    "description": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    "pubDate": "2026-09-11T09:30:00-06:00",
     "source": "koto",
     "sourceLabel": "KOTO",
     "category": "Community Event",

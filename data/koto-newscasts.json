@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 9-2-26",
+    "source": "KOTO Community Radio",
+    "date": "September 3, 2026",
+    "newsTopic": "housing",
+    "copy": "Telluride Looks for Outside Assessment on Rental Housing Policies; Exploring the Living History, Stolen Pasts, and Future of American Archaeology; UnBOCES Supports Students in Educational Journey",
+    "href": "https://koto.org/news/newscast-9-2-26/"
+  },
+  {
     "title": "Newscast 8-31-26",
     "source": "KOTO Community Radio",
     "date": "September 1, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "public-safety",
     "copy": "West End Food Banks Close Indefinitely; Gold Mountain Fire Leaves Some Trees Behind; Palm Theatre Cleanup Nears Completion",
     "href": "https://koto.org/news/newscast-8-20-26/"
-  },
-  {
-    "title": "Newscast 8-19-26",
-    "source": "KOTO Community Radio",
-    "date": "August 20, 2026",
-    "newsTopic": "public-safety",
-    "copy": "Telluride Marshals Use Flock Cameras in Theft Investigation; Telluride Talks Flood Mapping; KOTO is Stayin’ Alive",
-    "href": "https://koto.org/news/newscast-8-19-26/"
   }
 ]
