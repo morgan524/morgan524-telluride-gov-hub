@@ -2977,6 +2977,19 @@ const SMB_FORUM_ARTICLES = [
 // dropped it stays dropped; the review finds something new.
 const LOCAL_NEWS_FEATURED = [
   {
+    title: "New medicine for a vulnerable economy",
+    source: "Telluride Times",
+    sourceKey: "ttimes",
+    date: "September 3, 2026",
+    summary: "San Miguel County has joined Colorado's Region 10 Enterprise Zone, unlocking state grants and tax credits aimed at shoring up the region's economy. The designation is paired with a push to better coordinate emergency medical care across Telluride, Norwood, Ridgway, and other remote communities, including satellite clinic networks and shared triage protocols. Dr. Kim Hewson outlines a strategy for pooling medical resources across town lines rather than each community going it alone.",
+    href: "https://www.telluridenews.com/article_443b80a1-ddbc-5133-8843-fc9a06df6359.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/c4/7c456985-867a-50e6-a5e7-715c13382d79/6a994f3985289.image.jpg",
+    category: "Health",
+    newsTopic: "health",
+    featured: true,
+    expires: "2026-09-05"   // pinned 2026-09-04; hands off at the next morning review
+  },
+  {
     title: "Fire management moonshot",
     source: "Telluride Times",
     sourceKey: "ttimes",
@@ -2986,8 +2999,7 @@ const LOCAL_NEWS_FEATURED = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/84/e849a731-98e2-5067-a168-3729aa39f798/6a745ca4b69ef.image.jpg?crop=766%2C403%2C0%2C11",
     category: "Opinion",
     newsTopic: "public-safety",
-    featured: true,
-    expires: "2026-08-08"   // Morgan directed a longer run: through Aug 7, off at the Aug 8 review
+    featured: false   // had its run as the feature (Aug 6 – Sep 4); never re-feature
   },
   {
     title: "Stakeholders discuss housing density",
