@@ -2987,7 +2987,7 @@ const LOCAL_NEWS_FEATURED = [
     category: "Health",
     newsTopic: "health",
     featured: true,
-    expires: "2026-09-05"   // pinned 2026-09-04; hands off at the next morning review
+    expires: "2026-09-07"   // Morgan directed a longer run: through Sunday 9/6, off at the Monday 9/7 review
   },
   {
     title: "Fire management moonshot",
