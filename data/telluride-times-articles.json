@@ -1,14 +1,38 @@
 [
   {
-    "title": "Breaking news: Plane crashes southwest of Telluride",
+    "title": "Telluride Town Council discusses rental rates",
+    "source": "Telluride Times",
+    "date": "September 4, 2026",
+    "firstSeen": "2026-09-04",
+    "newsTopic": "government",
+    "copy": "San Miguel County's AMI rose 9.7% in 2026, which would have pushed rents higher in Telluride's 244 town-managed units. Council voted to hold rental rates at 2025 AMI levels instead, citing a rough winter season and slow summer. A broader housing policy review is underway, but consultant findings won't arrive until after the 2027 budget is set.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_d06d1db0-2b56-471a-9bd1-b714aa12b1cc.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/5c/25c2813e-8353-48f6-bab0-c5b59f444583/6a9a457ad61ee.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Speed limit reduced to 15 mph",
     "source": "Telluride Times",
     "date": "September 4, 2026",
     "firstSeen": "2026-09-04",
     "newsTopic": "public-safety",
-    "copy": "A single-engine plane crashed near Dolores Peak, about 15 miles southwest of Telluride, Thursday afternoon. Smoke was reported around 3:22 p.m., and Denver Air Traffic Control flagged a missing plane shortly after. As of Thursday night, no word yet on who was aboard or any survivors.",
+    "copy": "Norwood has dropped its town speed limit to 15 mph, with new signs going up as soon as public works can swap them out. San Miguel Power Association also weighed in — more outages are expected while the grid runs in fire-safe mode, and small rate increases are likely each year for the next three years.",
     "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/article_f0d53ee9-c764-4db8-8c16-bb49ef3dac2e.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/f2/5f281e8b-deac-492e-a466-888a413732d8/6a9a0ea1414e0.image.jpg",
+    "href": "https://www.telluridenews.com/norwood_post/article_35fde4ca-ce1c-403a-972d-7b8b3fa62e30.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/d1/bd13af59-c5d3-4c4b-ae12-fcfe6b1b29ea/6a992fce8549b.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Updated: Plane with two occupants crashes southwest of Telluride",
+    "source": "Telluride Times",
+    "date": "September 4, 2026",
+    "firstSeen": "2026-09-04",
+    "newsTopic": "public-safety",
+    "copy": "A Cessna 206 with two men aboard crashed on the north side of Dolores Peak, about 15 miles southwest of Telluride, on Thursday afternoon. Both occupants were killed. The plane had taken off from Grand Junction and was conducting survey and mapping operations when Denver Air Traffic Control reported it missing at 3:43 p.m. NTSB is investigating.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_55a719fb-7905-4ecf-8097-a67752a102bc.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/cf/1cf2fd93-2a27-4243-a7c3-15f70a700919/6a9a527ab729a.image.jpg",
     "imgHiRes": true
   },
   {
@@ -582,6 +606,18 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/gallery/featured/article_55653dfe-d23d-4dbf-bddd-5ead39f35fbf.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/d6/7d627f99-6454-46f9-a71a-f2fc451fa3e3/6a8f5af3c984c.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Breaking news: Plane crashes southwest of Telluride",
+    "source": "Telluride Times",
+    "date": "September 4, 2026",
+    "firstSeen": "2026-09-04",
+    "newsTopic": "public-safety",
+    "copy": "A single-engine plane crashed near Dolores Peak, about 15 miles southwest of Telluride, Thursday afternoon. Smoke was reported around 3:22 p.m., and Denver Air Traffic Control flagged a missing plane shortly after. As of Thursday night, no word yet on who was aboard or any survivors.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_f0d53ee9-c764-4db8-8c16-bb49ef3dac2e.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/f2/5f281e8b-deac-492e-a466-888a413732d8/6a9a0ea1414e0.image.jpg",
     "imgHiRes": true
   },
   {

@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-04T03:52:09.853Z",
+ "generated": "2026-09-04T11:04:01.645Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -95,18 +95,9 @@
      "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
     }
    ],
-   "recent": [
-    {
-     "source": "telluride",
-     "date": "2026-08-20",
-     "title": "Planning & Zoning Commission - Aug 20 2026",
-     "snippet": "The August 20 P&Z meeting has two work sessions and one public hearing worth following. The school district's employee housing proposal gets its first formal look — a work session on new construction…"
-    }
-   ],
+   "recent": [],
    "developments": [],
-   "stale": [
-    "Code Changes & Accelerated Review: telluride discussed it on 2026-08-20 (\"Planning & Zoning Commission - Aug 20 2026\") but the deep dive was last edited 2026-07-19."
-   ]
+   "stale": []
   },
   "wildfire": {
    "label": "Wildfire Resiliency",
@@ -137,18 +128,9 @@
    "label": "Gondola 3A",
    "lastUpdated": "2026-07-20",
    "upcoming": [],
-   "recent": [
-    {
-     "source": "mv",
-     "date": "2026-08-20",
-     "title": "Town Council Meeting",
-     "snippet": "A full agenda for Mountain Village this Thursday. The most consequential action item is a resolution setting a sale price appreciation cap under Municipal Code Section 16.02.070 — the kind of…"
-    }
-   ],
+   "recent": [],
    "developments": [],
-   "stale": [
-    "Gondola 3A: mv discussed it on 2026-08-20 (\"Town Council Meeting\") but the deep dive was last edited 2026-07-20."
-   ]
+   "stale": []
   },
   "norwoodwater": {
    "label": "Norwood Water",

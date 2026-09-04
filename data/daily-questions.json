@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-09-04",
+    "title": "New building code — does it fit up here?",
+    "body": "The county is holding a public hearing on whether to adopt the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Those who favor adoption say updated codes mean safer buildings and lower carbon footprints — reasonable goals anywhere. Those who push back say modern energy codes can drive up construction costs in a place where building is already expensive, and that standards written for the Front Range don't always translate to a mountain county with a short construction season and a thin contractor pool. Nothing is adopted yet — this is a public hearing. So: do updated building codes make sense for San Miguel County right now, or is the timing wrong?",
+    "choices": [
+      "Adopt them — overdue",
+      "Too costly for here",
+      "Phase them in slowly",
+      "Not sure yet"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-09-03",
     "title": "Gas-powered leaf blowers — gone by 2028?",
     "body": "The Ecology Commission is working toward recommending a full phase-out of combustion-powered lawn and garden equipment in Town. Leaf blowers would go first, banned by January 1, 2028. Everything else covered by the ordinance would follow by January 1, 2030. The case for it: air quality, noise, and emissions. The case against: cost, even with rebates the draft says could offset roughly half of replacement. No vote was taken — this is still a recommendation in progress. So: is this a reasonable step, or an overreach?\n\nWhere do you land?",
@@ -425,21 +440,6 @@
       "Approve it — a roof is a roof",
       "Hold the line on the cap",
       "Update the deed restriction first",
-      "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-08-05",
-    "title": "Dogs on the Valley Floor — a little, or not at all?",
-    "body": "The Open Space Commission is weighing a recommendation to Town Council to allow dogs on a limited portion of the River Trail on the Valley Floor. Three trail alignments for that same Reach 1 segment are also on the table, each routed around mapped wetlands near the Public Works facility. Nothing is decided yet — this is a commission recommendation, not a final vote. Some residents see a reasonable middle ground; others think any access sets a precedent for a space that was set aside for a reason. Where do you stand?",
-    "choices": [
-      "Dogs belong on the trail",
-      "Keep the floor dog-free",
-      "Depends on the alignment",
       "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",

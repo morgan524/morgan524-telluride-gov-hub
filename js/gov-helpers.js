@@ -378,7 +378,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-09-22|Telluride Housing Authority - Sep 22 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303","sv":4,"ph":"0bb3b4721c07c88b"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303","sv":4,"ph":"d6200257aab6f8b7"},
 
   "telluride|2026-09-22|Town Council - Sep 22 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043","sv":4,"ph":"c5b14e4bfd86db54"},
@@ -466,6 +466,14 @@ const DEEP_DIVE_UPDATES = [
 //   sourceUrl, topics: [] }. Rendered by hub-bub.html from the JSON mirror
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
+  {
+    date: "2026-09-04",
+    title: "New building code — does it fit up here?",
+    body: "The county is holding a public hearing on whether to adopt the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Those who favor adoption say updated codes mean safer buildings and lower carbon footprints — reasonable goals anywhere. Those who push back say modern energy codes can drive up construction costs in a place where building is already expensive, and that standards written for the Front Range don't always translate to a mountain county with a short construction season and a thin contractor pool. Nothing is adopted yet — this is a public hearing. So: do updated building codes make sense for San Miguel County right now, or is the timing wrong?",
+    choices: ["Adopt them — overdue", "Too costly for here", "Phase them in slowly", "Not sure yet"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
   {
     date: "2026-09-03",
     title: "Gas-powered leaf blowers — gone by 2028?",
@@ -695,14 +703,6 @@ const DAILY_QUESTIONS = [
     title: "When a roof costs more than the rules allow",
     body: "Lela and Jon Martin need a new roof on their deed-restricted Gold Run unit. The bid came in at $47,743.86 — roughly 17% of their original purchase price. Their 2010-era deed restriction only lets staff approve capital improvements up to 5% without a finding that the work adds occupancy capacity. A failing roof clearly doesn't do that. Staff recommends approval anyway, but admits the legal standard may not be met.\n\nOne view: the rules exist to keep deed-restricted units affordable, not to trap owners with deteriorating roofs. The other: if exceptions get made case by case, the caps lose their meaning.\n\nWhen the rules and the reality collide like this, what should the subcommittee do?",
     choices: ["Approve it — a roof is a roof", "Hold the line on the cap", "Update the deed restriction first", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
-  },
-  {
-    date: "2026-08-05",
-    title: "Dogs on the Valley Floor — a little, or not at all?",
-    body: "The Open Space Commission is weighing a recommendation to Town Council to allow dogs on a limited portion of the River Trail on the Valley Floor. Three trail alignments for that same Reach 1 segment are also on the table, each routed around mapped wetlands near the Public Works facility. Nothing is decided yet — this is a commission recommendation, not a final vote. Some residents see a reasonable middle ground; others think any access sets a precedent for a space that was set aside for a reason. Where do you stand?",
-    choices: ["Dogs belong on the trail", "Keep the floor dog-free", "Depends on the alignment", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
   }
@@ -992,16 +992,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "Attached is this week's Parish Bulletin. Please check our calendar for all updated information. This weekend:Saturday Vigil (Aug. 29) is a bilingual Holy Mass.Sunday (Aug. 30) 8:30 am pray the Rosary, 9 am Holy Mass. Immediately ...",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-august-30/",
-    img: ""
-  },
-  {
-    title: "We’re Hiring- Bilingual Food Pantry and seNior Lunch Cook Assistant/ Estamos Contratando: Asistente Bilingüe del Banco de Alimentos y Asistente de Cocina del Almuerzo para Personas Mayores",
-    source: "Fresh Food Hub",
-    sourceKey: "fresh-food-hub",
-    date: "August 27, 2026",
-    newsTopic: "community",
-    copy: "We re hiring for two part-time positions: Bilingual Food Pantry Assistant — Sundays, 1:30–6:30 p.m. This role provides Spanish-English translation support for our Spanish-speaking clients during food pantry distribution. Senior Lunch Assistant — Thursdays, 8:30 a.m.–1:30 p.m. at Norwood Town Hall. T",
-    href: "https://freshfoodhub.net/were-hiring-bilingual-food-pantry-and-senior-lunch-cook-assistant-estamos-contratando-asistente-bilingue-del-banco-de-alimentos-y-asistente-de-cocina-del-almuerzo-para-personas-mayores/",
     img: ""
   },
   {
@@ -1698,15 +1688,39 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "Breaking news: Plane crashes southwest of Telluride",
+    title: "Telluride Town Council discusses rental rates",
+    source: "Telluride Times",
+    date: "September 4, 2026",
+    firstSeen: "2026-09-04",
+    newsTopic: "government",
+    copy: "San Miguel County's AMI rose 9.7% in 2026, which would have pushed rents higher in Telluride's 244 town-managed units. Council voted to hold rental rates at 2025 AMI levels instead, citing a rough winter season and slow summer. A broader housing policy review is underway, but consultant findings won't arrive until after the 2027 budget is set.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_d06d1db0-2b56-471a-9bd1-b714aa12b1cc.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/5c/25c2813e-8353-48f6-bab0-c5b59f444583/6a9a457ad61ee.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Speed limit reduced to 15 mph",
     source: "Telluride Times",
     date: "September 4, 2026",
     firstSeen: "2026-09-04",
     newsTopic: "public-safety",
-    copy: "A single-engine plane crashed near Dolores Peak, about 15 miles southwest of Telluride, Thursday afternoon. Smoke was reported around 3:22 p.m., and Denver Air Traffic Control flagged a missing plane shortly after. As of Thursday night, no word yet on who was aboard or any survivors.",
+    copy: "Norwood has dropped its town speed limit to 15 mph, with new signs going up as soon as public works can swap them out. San Miguel Power Association also weighed in — more outages are expected while the grid runs in fire-safe mode, and small rate increases are likely each year for the next three years.",
     claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_f0d53ee9-c764-4db8-8c16-bb49ef3dac2e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/f2/5f281e8b-deac-492e-a466-888a413732d8/6a9a0ea1414e0.image.jpg",
+    href: "https://www.telluridenews.com/norwood_post/article_35fde4ca-ce1c-403a-972d-7b8b3fa62e30.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/d1/bd13af59-c5d3-4c4b-ae12-fcfe6b1b29ea/6a992fce8549b.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Updated: Plane with two occupants crashes southwest of Telluride",
+    source: "Telluride Times",
+    date: "September 4, 2026",
+    firstSeen: "2026-09-04",
+    newsTopic: "public-safety",
+    copy: "A Cessna 206 with two men aboard crashed on the north side of Dolores Peak, about 15 miles southwest of Telluride, on Thursday afternoon. Both occupants were killed. The plane had taken off from Grand Junction and was conducting survey and mapping operations when Denver Air Traffic Control reported it missing at 3:43 p.m. NTSB is investigating.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_55a719fb-7905-4ecf-8097-a67752a102bc.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/cf/1cf2fd93-2a27-4243-a7c3-15f70a700919/6a9a527ab729a.image.jpg",
     imgHiRes: true
   },
   {
@@ -2280,6 +2294,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/gallery/featured/article_55653dfe-d23d-4dbf-bddd-5ead39f35fbf.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/d6/7d627f99-6454-46f9-a71a-f2fc451fa3e3/6a8f5af3c984c.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Breaking news: Plane crashes southwest of Telluride",
+    source: "Telluride Times",
+    date: "September 4, 2026",
+    firstSeen: "2026-09-04",
+    newsTopic: "public-safety",
+    copy: "A single-engine plane crashed near Dolores Peak, about 15 miles southwest of Telluride, Thursday afternoon. Smoke was reported around 3:22 p.m., and Denver Air Traffic Control flagged a missing plane shortly after. As of Thursday night, no word yet on who was aboard or any survivors.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_f0d53ee9-c764-4db8-8c16-bb49ef3dac2e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/f2/5f281e8b-deac-492e-a466-888a413732d8/6a9a0ea1414e0.image.jpg",
     imgHiRes: true
   },
   {
@@ -3731,70 +3757,37 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Yin Yang Yoga with Miriah",
-    link: "https://telluridelibrary.libcal.com/event/17497567?hs=a",
-    description: "9:00 AM – 10:00 AM · Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses.  We&#39;ll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome.  Miriah has been local to Telluride area for over ten years and have been teaching yoga for six years. She owns her own herbal business, makes herbal products and co-hosts a weekly podcast. She also is an avid snowboarder, photographer, sticker artist and comedian.",
-    pubDate: "2026-09-03T15:00:00.000Z",
+    title: "Yoga for ALL with Jane & Jay",
+    link: "https://telluridelibrary.libcal.com/event/15803456?hs=a",
+    description: "8:30 AM – 9:45 AM · Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
+    pubDate: "2026-09-04T14:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_08_13_53_35.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg"
   },
   {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/17514592?hs=a",
-    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    pubDate: "2026-09-03T16:30:00.000Z",
+    title: "Coffee, Croissants and Cribbage",
+    link: "https://telluridelibrary.libcal.com/event/17357536?hs=a",
+    description: "10:00 AM – 11:30 AM · Coffee, croissants and cribbage is back! Come by the library Magazine Room 10-11:30am for friendly competition, free coffee and pastries, and community connection. May the nibs be with you.",
+    pubDate: "2026-09-04T16:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+    location: "Magazine Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_27_10_38_03.jpg"
   },
   {
-    title: "Littles On the Move",
-    link: "https://telluridelibrary.libcal.com/event/13960359?hs=a",
-    description: "3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.",
-    pubDate: "2026-09-03T21:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png"
-  },
-  {
-    title: "The Spark Lab: Tinker Time with Pinhead",
-    link: "https://telluridelibrary.libcal.com/event/17292165?hs=a",
-    description: "3:30 PM – 4:30 PM · Each week we will do a fun activity! First thursdays: Tinker Time with Pinhead Second Thursdays with EcoAction partners Third Thursday: Thursday Creativos at Ah Haa * registration required * Fourth Thursdays with Telluride Theatre",
-    pubDate: "2026-09-03T21:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_50_13.png"
-  },
-  {
-    title: "French Happy Hour",
-    link: "https://telluridelibrary.libcal.com/event/15970655?hs=a",
-    description: "5:00 PM – 6:00 PM · Practice speaking in French with other French speakers in an informal setting at the Alibi. Light snacks are provided and beverages are available to purchase at the bar. Space is limited, sign up at www.telluridelibrary.org.",
-    pubDate: "2026-09-03T23:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "The Alibi",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1747415393.jpg"
-  },
-  {
-    title: "Authors Uncovered: American Archeology by R. E. Burillo",
-    link: "https://telluridelibrary.libcal.com/event/16995212?hs=a",
-    description: "5:30 PM – 7:00 PM · Join us for a presentation from R.E. Burillo about his new book, American Archeology: Living History, Stolen Pasts, and Defending the Future . A gripping, often irreverent exploration of the past, present, and future of archaeology in America. Archaeology has long captivated the American public, yet pop culture mythology often obscures the harsh realities, thrilling discoveries, and complex moral decisions that archaeologists confront out in the field. Journalist and conservation archaeologist R. E. Burrillo illuminates the joys and contradictions of digging into humanity's past: the history of the practice, its evolution into science, the influences of nationalism and colonialism, and its ongoing problems with exploitation and misrepresentation. Now, profit-driven practices are shaping how we study and preserve the past—and pose a serious and growing threat to our scientific and cultural understanding of history itself. …",
-    pubDate: "2026-09-03T23:30:00.000Z",
+    title: "No School Science with Pinhead",
+    link: "https://telluridelibrary.libcal.com/event/17459728?hs=a",
+    description: "A hands-on science program hosted by Pinhead Institute, held outdoors on the Lower Terrace at Wilkinson Public Library on a day off from school. The event runs from 1:00 to 3:00 PM and offers kids the chance to explore science through interactive activities.",
+    pubDate: "2026-09-04T19:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_24_16_44_19.jpeg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_26_10_07_56.png"
   }
 ];
 
@@ -3892,7 +3885,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Telluride Film Festival",
     link: "https://sheridanoperahouse.com/events/telluride-film-festival/",
-    description: "",
+    description: "The Telluride Film Festival returns to the Sheridan Opera House, bringing screenings and cinematic programming to one of the mountain town's most storied historic venues. This beloved annual event draws film enthusiasts from around the world for a celebrated weekend of independent and international cinema in the heart of Telluride.",
     pubDate: "2026-09-04",
     endDate: "2026-09-07",
     source: "sheridan",
@@ -3904,7 +3897,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "The Meditations Live in Concert",
     link: "https://sheridanoperahouse.com/events/the-meditations-live-in-concert/",
-    description: "",
+    description: "The Meditations, the legendary Jamaican reggae vocal group, perform live at the historic Sheridan Opera House in Telluride. This concert brings their classic roots reggae harmonies to one of the region's most celebrated intimate venues.",
     pubDate: "2026-09-11",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -3915,7 +3908,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Telluride Theater Fringe Project: La Familia Music Group",
     link: "https://sheridanoperahouse.com/events/telluride-theater-fringe-project-la-familia-music-group/",
-    description: "",
+    description: "La Familia Music Group takes the stage at the historic Sheridan Opera House as part of the Telluride Theater Fringe Project. This performance brings together theater and live music in an intimate venue setting during the fall season.",
     pubDate: "2026-09-12",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -4297,7 +4290,7 @@ const OURAY_COUNTY_EVENTS = [
   {
     title: "Imogene Pass Run",
     link: "https://ouraycountyco.gov/Calendar.aspx?EID=3779",
-    description: "https://ouraycountyco.gov/calendar.aspx?EID=3779",
+    description: "The Imogene Pass Run is an annual footrace that takes competitors over the challenging Imogene Pass between Telluride and Ouray, traversing one of the most scenic and demanding mountain routes in the San Juan Mountains. The course climbs to an elevation of over 13,000 feet, making it a notable test of endurance for participants.",
     pubDate: "2026-09-12T07:00:00.000Z",
     source: "ouraycounty",
     sourceLabel: "Ouray County",
@@ -4320,22 +4313,22 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "Functional Fitness - Strength & Mobility Training For Women",
-    link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
-    description: "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Instructor: Jenn Turner “Jenn may be a highly certified instructor, but her greatest strength lies in creating a welcoming space for women to meet, gather, and sweat. The workouts are always fun, and the next-day burn is guaranteed.” — E.C. …",
-    pubDate: "2026-09-03T14:15:00.000Z",
-    endDate: "2026-10-29",
+    title: "Labor Day Weekend - No School- Ridgway",
+    link: "https://events.ourayridgwayevents.com/event/labor-day-no-school-ridgway",
+    description: "View on site | Email this event",
+    pubDate: "2026-09-04T06:00:00.000Z",
+    endDate: "2026-09-07",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
-    location: "Weehawken Ridgway (Old Schoolhouse)",
-    imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/860fbc87ce3cc92e25c09e723732d04292df18ba.jpg"
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
   },
   {
     title: "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
     link: "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
     description: "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the International Quilt Museum in Lincoln, Nebraska. Bonnie’s work has been shown in numerous exhibits in the United States. In 2015, Bonnie’s work was in a year-long solo exhibition at the Portland Oregon International Airport. She was a solo artist at the Visions Museum of Textile Art, San Diego, in 2019. Internationally, Bonnie’s work has appeared in the Haus der Wirtschaft museum in Stuttgart, Germany, the Museum of Modern Art in Verona, Italy, and other venues in Germany, England, Ireland, France, Japan, Brazil, and the Netherlands. Bonnie’s work Tangle is part of the permanent collection of the Tuch + Technik Textilmuseum, Neumunster, Germany. …",
-    pubDate: "2026-09-03T16:00:00.000Z",
+    pubDate: "2026-09-04T16:00:00.000Z",
     endDate: "2026-09-25",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4347,48 +4340,13 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Ongoing Exhibition: BIG BOX-Big New Work By T-Bone",
     link: "https://events.ourayridgwayevents.com/event/ongoing-exhibition-big-box-big-new-work-by-t-bone",
     description: "The Big Box Show! Bigger, better and more. This groundbreaking local art won't last long! Ridgway's own T-Bone and his quintessential colorful cardboard paintings take on new life and meaning in the Decker where they have room to stretch out and really TALK to you! Come and be delighted by the playful T-Bone experience. Stay to cool off, craft, co-work, hang out. or plan your own future exhibition or event in the space! The Decker is a unique community rental-art gallery hybrid, incubated and managed by the Town of Ridgway, in cooperation with our sister ARTSpace gallery next door. View on site | Email this event",
-    pubDate: "2026-09-03T16:00:00.000Z",
+    pubDate: "2026-09-04T16:00:00.000Z",
     endDate: "2026-09-25",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Decker Community Room",
     imageUrl: "https://localist-images.azureedge.net/photos/53736310463128/huge/ce8867efeba0934913913ee401aff4479a074ba5.jpg"
-  },
-  {
-    title: "WOH Art Show: Brittany Stadler",
-    link: "https://events.ourayridgwayevents.com/event/woh-art-show-brittany-stadler",
-    description: "Come see In Color, a new exhibition by regional artist Brittany Stadler in the Tavern at the Wright. Art on display through September 3. Brittany Stadler: Artist Statement My work often begins with a single form — typically an animal whose presence represents an ecosystem, region, or symbol. From that base shape, I build inward and intuitively. I draw in larger forms first, and work my way toward the smaller details. Research is an essential part of the practice. I study each plant and animal that I consider for a piece — how they move, how they relate to their environment. These rhythms inform the poses and compositions in my work, helping each subject feel alive and true. What results is part collage, part optical illusion — a work that I hope will be a process of discovery for everyone that views it. …",
-    pubDate: "2026-09-03T16:00:37.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53629792913484/huge/0f655603601840911844cbf1cce4ddcdecf2dbb1.jpg"
-  },
-  {
-    title: "Trivia Night",
-    link: "https://events.ourayridgwayevents.com/event/floating-lotus-trivia-night",
-    description: "Trivia Night at Floating Lotus Brewery! Join us on the 1st & 3rd Thursdays from 6-9 PM for a lively night of questions, drinks, and friendly competition. Grab a table, bring your team, and learn more at floatinglotusbrewery.com. View on site | Email this event",
-    pubDate: "2026-09-04T00:00:00.000Z",
-    endDate: "2026-10-16",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53790516346797/huge/599d1a7013ddde307592e7dfc9b892fe265527e0.jpg"
-  },
-  {
-    title: "Labor Day Weekend - No School- Ridgway",
-    link: "https://events.ourayridgwayevents.com/event/labor-day-no-school-ridgway",
-    description: "View on site | Email this event",
-    pubDate: "2026-09-04T06:00:00.000Z",
-    endDate: "2026-09-07",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
   },
   {
     title: "Ridgway Farmers Market",
@@ -4639,6 +4597,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Bee True You Wellness and Creative Studio",
     imageUrl: "https://localist-images.azureedge.net/photos/53197444379202/huge/26813502ab1ba3ae9f231b0cd774d101f4f32f02.jpg"
+  },
+  {
+    title: "Functional Fitness - Strength & Mobility Training For Women",
+    link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
+    description: "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Instructor: Jenn Turner “Jenn may be a highly certified instructor, but her greatest strength lies in creating a welcoming space for women to meet, gather, and sweat. The workouts are always fun, and the next-day burn is guaranteed.” — E.C. …",
+    pubDate: "2026-09-08T14:15:00.000Z",
+    endDate: "2026-10-29",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Ridgway (Old Schoolhouse)",
+    imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/860fbc87ce3cc92e25c09e723732d04292df18ba.jpg"
   },
   {
     title: "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
@@ -5058,6 +5028,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Annex on Cora",
     imageUrl: "https://localist-images.azureedge.net/photos/53780725919104/huge/846566299e8e325221de54dd5a54a0fd6427fbf5.jpg"
+  },
+  {
+    title: "Trivia Night",
+    link: "https://events.ourayridgwayevents.com/event/floating-lotus-trivia-night",
+    description: "Trivia Night at Floating Lotus Brewery! Join us on the 1st & 3rd Thursdays from 6-9 PM for a lively night of questions, drinks, and friendly competition. Grab a table, bring your team, and learn more at floatinglotusbrewery.com. View on site | Email this event",
+    pubDate: "2026-09-18T00:00:00.000Z",
+    endDate: "2026-10-16",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53790516346797/huge/599d1a7013ddde307592e7dfc9b892fe265527e0.jpg"
   },
   {
     title: "4th Annual San Juan Slam Pickleball Tournament",
@@ -5746,7 +5728,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-08-31-senior-lunch",
-    description: "",
+    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     pubDate: "2026-08-31T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5757,7 +5739,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Work Session",
     link: "https://www.norwoodtown.com/2026-09-01-nwc-work-session",
-    description: "",
+    description: "A work session hosted by the Norwood Water Commission (or similar NWC body) held in Norwood, CO, providing an opportunity for members to review, discuss, and work through agenda items outside of a formal public meeting. These sessions typically allow for more in-depth examination of ongoing projects, policies, or operational matters.",
     pubDate: "2026-09-01T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5768,7 +5750,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Municipal Court",
     link: "https://www.norwoodtown.com/2026-09-02-municipal-court",
-    description: "",
+    description: "Municipal Court is a regularly scheduled court session held by the Town of Norwood. It is an official local government proceeding open to those with business before the court.",
     pubDate: "2026-09-02T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5779,7 +5761,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5790,7 +5772,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Rescheduled To 09 22 2026",
     link: "https://www.norwoodtown.com/2026-09-08-nwc-rescheduled-to-09-22-2026",
-    description: "",
+    description: "A previously scheduled Norwood Town government meeting has been rescheduled to September 22, 2026. The rescheduled meeting will take place in Norwood, CO, and is organized by the Town of Norwood.",
     pubDate: "2026-09-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5801,7 +5783,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-09-09-board-of-trustees-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Town of Norwood Board of Trustees, providing an opportunity for local governance and public business to be conducted. Community members are welcome to attend and observe the proceedings.",
     pubDate: "2026-09-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5812,7 +5794,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-09-10-norwood-sanitation-district-meeting-meeting",
-    description: "",
+    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and district operations are welcome to attend.",
     pubDate: "2026-09-10T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5823,7 +5805,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-10-senior-lunch",
-    description: "",
+    description: "A midday meal gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     pubDate: "2026-09-10T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5834,7 +5816,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-17-senior-lunch",
-    description: "",
+    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     pubDate: "2026-09-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5845,7 +5827,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-09-21-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "The Town of Norwood's Planning and Zoning Commission will hold a regular meeting to review and discuss land use, development, and zoning matters within the community. Members of the public are welcome to attend and observe the proceedings.",
     pubDate: "2026-09-21T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5856,7 +5838,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-24-senior-lunch",
-    description: "",
+    description: "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
     pubDate: "2026-09-24T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5867,7 +5849,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "",
+    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5878,7 +5860,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5889,7 +5871,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Veterans Day",
     link: "https://www.norwoodtown.com/2026-11-11-closed-for-veterans-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Veterans Day. Municipal offices and services will be unavailable on this federal holiday honoring those who have served in the United States armed forces.",
     pubDate: "2026-11-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5900,7 +5882,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Thanksgiving",
     link: "https://www.norwoodtown.com/2026-11-26-closed-for-thanksgiving",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Thanksgiving Day. Municipal offices and services will be unavailable, with normal operations expected to resume following the holiday.",
     pubDate: "2026-11-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -7318,26 +7300,7 @@ const LEGAL_NOTICES = [
     smcBidID: "209"
   },
   {
-    title: "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominium (Sale No. 202605)",
-    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "The San Miguel County Public Trustee has scheduled a public foreclosure auction for Condominium Unit 7 at Double Diamond Condominium, located at 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor Ryan Pfaff failed to pay principal and interest on a $1,200,000 deed of trust (current outstanding balance ~$1,199,032) originally benefiting Mortgage Electronic Registration Systems as nominee for Deephaven Mortgage LLC, now held by Wilmington Savings Fund Society as trustee. The public auction will be held at 10:00 A.M. on September 3, 2026, at 305 W. Colorado Avenue, East entry, Telluride, CO.",
-    deadline: "2026-09-03",
-    expires: "2026-09-03",
-    dates: "8/13",
-    papers: ["ttimes_0813"],
-    url: "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
-    address: "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
-    noticeKey: "foreclosure-sale-202605",
-    caseNumber: "202605"
-  },
-  {
-    title: "Public Hearing -- Adoption of 2024 International Building Code & Colorado Low Energy & Carbon Code (COL-000206)",
+    title: "Public Hearing -- Adoption of 2024 International Building Code & Colorado Low Energy & Carbon Code",
     entity: "San Miguel County Planning Commission",
     entityClass: "ent-county",
     entityLogo: "telluride",
@@ -7346,16 +7309,16 @@ const LEGAL_NOTICES = [
     type: "Ordinance",
     filterTag: "ordinance",
     summary: "San Miguel County Planning Commission will hold a public hearing on August 13, 2026 at 9:00 AM in Telluride to consider recommending adoption of the 2024 International Building Code and the Colorado Low Energy & Carbon Code to the Board of County Commissioners. Written comments must be received by noon on Monday, August 10, 2026. Proposed amendments are available in the meeting agenda packet at www.sanmiguelcountyco.gov.",
-    deadline: "2026-08-10T12:00:00",
+    deadline: "2026-08-10",
     expires: "2026-08-13",
     dates: "7/30",
     papers: ["ttimes_0730"],
     url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
     address: "Telluride, Colorado (San Miguel County)",
-    noticeKey: "ord-2024-ibc-clecc"
+    noticeKey: "COL-000206-ibc-clecc-hearing"
   },
   {
-    title: "Public Notice -- Town of Telluride 2027 Budget Preparation (COL-000208)",
+    title: "Public Notice -- Town of Telluride 2027 Budget Preparation",
     entity: "Town of Telluride",
     entityClass: "ent-county",
     entityLogo: "assessor",
@@ -7363,17 +7326,17 @@ const LEGAL_NOTICES = [
     iconClass: "type-tax",
     type: "Tax & Finance",
     filterTag: "tax-finance",
-    summary: "The Town Manager of Telluride is giving public notice that the 2027 budget preparation process has begun, effective July 30, 2026. All town departments, boards, commissions, and citizens must submit funding requests to the Town Manager no later than 5:00 PM on Friday, August 21, 2026. Requests for funding through the Commission for Community Assistance, Arts and Special Events (CCAASE) are subject to separate grant guidelines available at www.telluride.gov.",
-    deadline: "2026-08-21T17:00:00",
+    summary: "The Town Manager of Telluride is giving public notice that the 2027 budget preparation process has begun as of July 30, 2026. All Town departments, boards, commissions, and citizens must submit funding requests to the Town Finance Director no later than 5:00 PM on Friday, August 21, 2026. Agencies seeking funding through the Commission for Community Assistance, Arts and Special Events (CCAASE) should consult separate grant guidelines at www.telluride.gov.",
+    deadline: "2026-08-21",
     expires: "2026-08-21",
     dates: "7/30",
     papers: ["ttimes_0730"],
     url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
     address: "Town Hall, 135 W. Columbia Ave, Telluride, CO 81435",
-    noticeKey: "telluride-budget-2027"
+    noticeKey: "COL-000208-telluride-2027-budget"
   },
   {
-    title: "Public Notice -- Montrose Memorial Hospital Board of Directors Applications (COL-000203)",
+    title: "Public Notice -- Montrose Memorial Hospital Board of Directors Applications",
     entity: "Montrose Memorial Hospital, Inc.",
     entityClass: "ent-county",
     entityLogo: "county",
@@ -7381,17 +7344,17 @@ const LEGAL_NOTICES = [
     iconClass: "type-rfp",
     type: "Public Notice",
     filterTag: "public-entity",
-    summary: "Montrose Memorial Hospital, Inc. is accepting applications to fill open positions on its Board of Directors. Application packets are available online at www.montrosehealth.com, by email, or in person at the Montrose Regional Health Administration office at 800 South 3rd Street, Montrose. Completed applications must be returned by Friday, August 14, 2026 at 5:00 PM, with elections to be held at the Board's annual meeting in October.",
-    deadline: "2026-08-14T17:00:00",
+    summary: "Montrose Memorial Hospital, Inc., a Colorado community nonprofit, is accepting applications for available positions on its Board of Directors. Application packets are available at www.montrosehealth.com or at the MRH Administration office at 800 South 3rd Street, Montrose. Completed applications must be returned by Friday, August 14, 2026 at 5:00 PM, with elections to be held at the annual Board meeting in October.",
+    deadline: "2026-08-14",
     expires: "2026-08-14",
     dates: "7/30",
     papers: ["ttimes_0730"],
     url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
     address: "800 South 3rd Street, Montrose, Colorado",
-    noticeKey: "mrh-bod-applications-2026"
+    noticeKey: "COL-000203-montrose-hospital-board"
   },
   {
-    title: "Public Notice -- Farmers' Water Development Company Replacement Share Certificate #887 (COL-000181)",
+    title: "Public Notice -- Farmers' Water Development Company Replacement Share Certificate #887",
     entity: "Farmers' Water Development Company",
     entityClass: "ent-county",
     entityLogo: "telluride",
@@ -7399,17 +7362,17 @@ const LEGAL_NOTICES = [
     iconClass: "type-hearing",
     type: "Utilities",
     filterTag: "utilities",
-    summary: "The Farmers' Water Development Company (FWDC) has received a request to replace lost, destroyed, or wrongfully taken share certificate #887, originally issued in the name of A.F. Newans M.D., C.P. Any written objection to issuance of a replacement certificate must be filed with FWDC at PO Box 10, Norwood, CO 81423 within 30 days of the last publication date (July 30, 2026). If no objection is received, the replacement certificate will be issued and the original permanently cancelled.",
+    summary: "The Farmers' Water Development Company (FWDC) has received a request to replace lost, destroyed, or wrongfully taken share certificate #887, currently issued to A.F. Newans M.D., C.P. Any written objection to issuing the replacement must be filed with FWDC at PO Box 10, Norwood, CO 81423 within 30 days of the last publication date. If no objection is received, the replacement certificate will be issued and the original permanently cancelled.",
     deadline: "2026-08-29",
     expires: "2026-08-29",
     dates: "7/30",
     papers: ["ttimes_0730"],
     url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    address: "Norwood, Colorado (FWDC service area)",
-    noticeKey: "fwdc-share-cert-887"
+    address: "Farmers' Water Development Company, PO Box 10, Norwood, CO 81423",
+    noticeKey: "COL-000181-fwdc-share-cert-887"
   },
   {
-    title: "RFP -- Interior Repainting, Historic Placerville Schoolhouse (COL-000205)",
+    title: "RFP -- Interior Repainting of Historic Placerville Schoolhouse",
     entity: "San Miguel County Fleet & Facilities",
     entityClass: "ent-county",
     entityLogo: "county",
@@ -7417,50 +7380,50 @@ const LEGAL_NOTICES = [
     iconClass: "type-rfp",
     type: "Public Notice",
     filterTag: "public-entity",
-    summary: "San Miguel County is seeking proposals from contractors to repaint the interior of the Historic Placerville Schoolhouse at 400 Front St, Placerville. RFP information is available at www.sanmiguelcountyco.gov/bids.aspx or from the Fleet & Facilities Department at 333 W Colorado Ave, 2nd floor, Telluride. Proposals must be submitted by 5:00 PM on Wednesday, August 6, 2026, either via email or in person at the Fleet & Facilities office.",
-    deadline: "2026-08-06T17:00:00",
+    summary: "San Miguel County is soliciting proposals from contractors to repaint the interior of the Historic Placerville Schoolhouse located at 400 Front St, Placerville. Full RFP information is available at www.sanmiguelcountyco.gov/bids.aspx or through the Fleet & Facilities department at 333 W Colorado Ave, 2nd Floor, Telluride. Proposals must be submitted by 5:00 PM on Wednesday, August 6, 2026 via email or in person at the Fleet & Facilities department.",
+    deadline: "2026-08-06",
     expires: "2026-08-06",
     dates: "7/30",
     papers: ["ttimes_0730"],
     url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    address: "400 Front St, Placerville, Colorado",
-    noticeKey: "rfp-placerville-schoolhouse-repaint"
+    address: "400 Front St, Placerville, CO (Historic Placerville Schoolhouse)",
+    noticeKey: "COL-000205-placerville-schoolhouse-rfp"
   },
   {
     title: "Foreclosure Sale Notice -- 350 S Mahoney Dr Unit 7, Telluride (Sale No. 2026-05)",
-    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society FSB",
+    entity: "Wilmington Savings Fund Society, FSB / Public Trustee San Miguel County",
     entityClass: "ent-county",
     entityLogo: "assessor",
     icon: "💰",
     iconClass: "type-tax",
     type: "Tax & Finance",
     filterTag: "tax-finance",
-    summary: "Public Trustee Brandi R. Hatfield of San Miguel County has scheduled a foreclosure auction for Condominium Unit 7, Double Diamond Condominium, located at 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor is Ryan Pfaff; the current debt holder is Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust, with an outstanding principal balance of approximately $1,199,032.37. The public auction will be held at 10:00 AM on Thursday, September 3, 2026, at 305 W. Colorado Avenue (East entry), Telluride.",
-    deadline: "2026-09-03T10:00:00",
+    summary: "Public Trustee Brandi R. Hatfield of San Miguel County will conduct a foreclosure auction on September 3, 2026 at 10:00 AM at 305 W. Colorado Avenue, Telluride for Condominium Unit 7, Double Diamond Condominium, after grantor Ryan Pfaff failed to make payments on a $1,200,000 deed of trust originally benefiting Deephaven Mortgage LLC (now held by Wilmington Savings Fund Society as trustee). The outstanding principal balance is $1,199,032.37. The lien foreclosed may not be a first lien.",
+    deadline: "2026-09-03",
     expires: "2026-09-03",
     dates: "7/30",
     papers: ["ttimes_0730"],
     url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    address: "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
-    noticeKey: "foreclosure-2026-05-double-diamond-unit7",
+    address: "350 S Mahoney Dr Unit 7, Telluride, CO 81435 (Condominium Unit 7, Double Diamond Condominium)",
+    noticeKey: "foreclosure-2026-05-350-mahoney-unit7",
     caseNumber: "2026-05"
   },
   {
     title: "Foreclosure Sale Notice -- Stonegate Drive (Vacant Lot), Mountain Village (Sale No. 2026-04)",
-    entity: "San Miguel County Public Trustee / Federal Holding Realty",
+    entity: "Federal Holding Realty / Public Trustee San Miguel County",
     entityClass: "ent-county",
     entityLogo: "assessor",
     icon: "💰",
     iconClass: "type-tax",
     type: "Tax & Finance",
     filterTag: "tax-finance",
-    summary: "Public Trustee Brandi R. Hatfield of San Miguel County has scheduled a foreclosure auction for Lot 166AR2, Telluride Mountain Village (a vacant lot on Stonegate Drive, Mountain Village, CO 81435). The original grantor is Two Stonegate LLC; the current debt holder is Federal Holding Realty, with an outstanding principal balance of $500,000.00. The public auction will be held at 10:00 AM on Thursday, September 3, 2026, at 305 W. Colorado Avenue (East entry), Telluride.",
-    deadline: "2026-09-03T10:00:00",
+    summary: "Public Trustee Brandi R. Hatfield of San Miguel County will conduct a foreclosure auction on September 3, 2026 at 10:00 AM at 305 W. Colorado Avenue, Telluride for Lot 166AR2, Telluride Mountain Village (a vacant parcel on Stonegate Drive), after grantor Two Stonegate LLC failed to make payments on a $500,000 deed of trust held by Federal Holding Realty. The full outstanding principal balance of $500,000 remains due. The lien foreclosed may not be a first lien.",
+    deadline: "2026-09-03",
     expires: "2026-09-03",
     dates: "7/30",
     papers: ["ttimes_0730"],
     url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    address: "TBD Stonegate Drive (Vacant Lot), Mountain Village, CO 81435 (Lot 166AR2, Telluride Mountain Village)",
+    address: "TBD (Vacant) Stonegate Drive, Mountain Village, CO 81435 (Lot 166AR2, Telluride Mountain Village)",
     noticeKey: "foreclosure-2026-04-stonegate-mountain-village",
     caseNumber: "2026-04"
   }
