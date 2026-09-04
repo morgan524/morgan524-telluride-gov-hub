@@ -6,57 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Sep 2026 23:14:48 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 03:52:19 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>⚡ [Meeting] Design Review Board — 2026-09-03</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/mv%7C2026-09-03%7CDesign%20Review%20Board</guid>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Mountain Village • 2026-09-03
-
-One item worth noting on this September 3rd Design Review Board agenda: a conditional-use permit review for a temporary tent and food truck at 332 Adams Ranch Rd (Lots OSP-35-B & OSP-35-C), which goes to the DRB for a recommendation to Town Council. There's also a general easement encroachment review at 140 Cortina Dr and an informational session on Pond Plaza with staff and Design Workshop. The 15-unit employee apartment building at 306 Adams Ranch Rd — the one item of broader housing consequence — is being continued to the October 1st meeting. The remainder of the agenda is single-family and detached condominium architecture reviews.
-
-⚡ Why it matters: DRB votes on conditional-use permit heading to Town Council for approval.]]></description>
-      <category>Meeting</category>
-      <category>Mountain Village</category>
-    </item>
-    <item>
-      <title>[Thu, Sep 3] Yin Yang Yoga with Miriah</title>
-      <link>https://telluridelibrary.libcal.com/event/17497567?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/yin%20yang%20yoga%20with%7C2026-09-03</guid>
-      <pubDate>Thu, 03 Sep 2026 15:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_08_13_53_35.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Magazine Room
-
-9:00 AM – 10:00 AM · Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses. We&#39;ll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome. Miriah has been local to Telluride area for over ten years and have been teaching yoga for six years. She owns her own herbal business, makes herbal products and co-hosts a weekly podcast. She also is an avid snowboarder, photographer, sticker artist and comedian.]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_08_13_53_35.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Thu, Sep 3] Auditions, Take 2: Rocky Horror Picture Show Live Shadow Cast Edition (Show in Oct.)</title>
-      <link>https://sherbino.org/event/rocky-horror-shadow-cast-auditions-take-2-sherbino/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/auditions%20take%202%20rocky%7C2026-09-03</guid>
-      <pubDate>Thu, 03 Sep 2026 17:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://sherbino.org/wp-content/uploads/2026/08/rocky-auditions-round-2.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />📍 The Sherbino, Ridgway
-
-@ Rocky Horror Picture Show — Live Shadowcast Edition, Directed by Erin Cawley Auditions · Thursday, Sept 3 · 5:30 – 7:00 p.m. · The Sherbino (604 Clinton St.) The Sherbino is casting for its live shadowcast production of The Rocky Horror Picture Show — and we’re opening up a second night of auditions! We know that the Sunday before school starts can be a hectic time with a lot of conflicts, so if you missed the first audition date, this is your second chance to jump in. This is your chance to step into the spotlight, don a wild costume, and bring this cult classic to life on stage. If auditioning for a specific character, we suggest preparing a 1–2 minute section of the film to audition with in shadowcast as that character. …]]></description>
-      <media:content url="https://sherbino.org/wp-content/uploads/2026/08/rocky-auditions-round-2.png" medium="image" />
-      <category>Community Event</category>
-    </item>
-    <item>
-      <title>[Thu, Sep 3] Art Walk Telluride</title>
-      <link>https://koto.org/event/art-walk-telluride/2026-09-03/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/art%20walk%20telluride%7C2026-09-03</guid>
-      <pubDate>Thu, 03 Sep 2026 23:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.42-PM.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-
-Join us the first Thursday of every month for Telluride's Art Walk. It will be an evening filled with inspiring exhibits, engaging receptions, and the chance to meet local and visiting artists. From 5–7 pm, participating venues will open their doors, showcasing new collections and inviting art lovers to explore the vibrant gallery scene. Find what's new on www.telluridearts.org Note: Special Edition Art Walk May 21st.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.42-PM.png" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
     <item>
       <title>[Fri, Sep 4] Telluride Film Festival</title>
       <link>https://sheridanoperahouse.com/events/telluride-film-festival/</link>
@@ -102,6 +53,44 @@ The Ridgway Farmer's Market takes place every Friday from May 22nd through Octob
 @ Friday, September 4th | 6:00–8:00 pmSherbino “Living Room” Free Show | Cash Bar | Tips EncouragedCelebrate First Friday with an intimate evening of live music at the Sherbino! Join us in the Sherbino’s cozy “Living Room” near the bar for a special performance by Donny Morales. Donny brings his signature blend of "soul-acousti-funk", delivering an irresistible mix of soulful vocals, funky rhythms, and masterful acoustic guitar. A longtime favorite on Colorado's Western Slope, Donny's performances are equal parts heartfelt storytelling, infectious grooves, and musical spontaneity. Whether he's reimagining familiar favorites or sharing original songs, his warm stage presence and feel-good energy create an experience that's impossible not to move to. Come ready to clap, sway, sing along, and enjoy an unforgettable evening of soul, acoustic vibes, and funk. …]]></description>
       <media:content url="https://sherbino.org/wp-content/uploads/2026/07/Donny-Morales-banner-Sept-4th.png" medium="image" />
       <category>Community Event</category>
+    </item>
+    <item>
+      <title>[Sun, Sep 6] Drop In Tech Time with Oliver</title>
+      <link>https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-09-06/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/drop%20in%20tech%20time%7C2026-09-06</guid>
+      <pubDate>Sun, 06 Sep 2026 19:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sun, Sep 6] Immersive Sound Journey with Dustin Wells</title>
+      <link>https://koto.org/event/immersive-sound-journey-with-dustin-wells/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/immersive%20sound%20journey%20with%7C2026-09-06</guid>
+      <pubDate>Sun, 06 Sep 2026 20:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/08/sound-JOURNEY.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+An immersive sound journey is a live musical experience you take lying down. Musician and sound ceremony artist Dustin Wells surrounds the room with sacred instruments — gongs, shamanic drums, singing bowls, crystal bowls, wind chimes — woven live with synths, guitar, and voice into a single two-hour soundscape. The journey moves through a deliberate arc, from settling in to full sound to a quiet return, designed to guide the nervous system out of fight-or-flight and into the state where the body does its own healing. Come as you are; leave with what you came for. THIS EVENT WILL BE HELD ON THE TERRACE-DRESS ACCORDINGLY · Please arrive 30 minutes early to find your spot and get comfortable. · Suggested: bring what makes the floor feel like home — a yoga mat, pillow, blanket, or eye mask. Guests lie down if there's room, or sit as needed. …]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/08/sound-JOURNEY.png" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Tue, Sep 8] After Telluride Film Festival</title>
+      <link>https://www.telluride.com/event/after-telluride-film-festival/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/after%20telluride%20film%20festival%7C2026-09-08</guid>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/55245/screenshot_2026-09-03_at_2_12_52_pm.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+After Telluride Film Festival (ATFF) screens eight popular Festival films for locals on the Tuesday - Friday following …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/55245/screenshot_2026-09-03_at_2_12_52_pm.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
     </item>
     <item>
       <title>[Meeting] Norwood Water Commission Meeting — 2026-09-08</title>
@@ -179,6 +168,52 @@ The September 9, 2026 Board of County Commissioners Work Session agenda hasn't b
 The September 9, 2026 Board of County Commissioners Special Meeting agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>[Meeting] Town Council Budget - Sep 10 2026 — 2026-09-10</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-09-10%7CTown%20Council%20Budget%20-%20Sep%2010%202026</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-09-10
+
+The September 10, 2026 Town Council Budget agenda hasn't been posted yet.]]></description>
+      <category>Meeting</category>
+      <category>Town of Telluride</category>
+    </item>
+    <item>
+      <title>⚡ [Meeting] Planning Commission Meeting — 2026-09-10</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-09-10%7CPlanning%20Commission%20Meeting</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[San Miguel County • 2026-09-10
+
+Three Land Use Code amendments are on the table for the Planning Commission's recommendation — covering forestry practices, oil and gas, and geothermal energy. All three are code-change items, meaning the Commission is being asked to weigh in before any revisions move forward to the BOCC. The agenda text doesn't detail the specific proposed changes within each amendment, but the pairing of oil & gas with geothermal in the same session signals the county is taking a broad look at how extraction and energy activities are regulated in unincorporated San Miguel County.
+
+⚡ Why it matters: Three Land Use Code amendments — forestry, oil/gas, geothermal — up for Planning Commission recommendation.]]></description>
+      <category>Meeting</category>
+      <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>[Meeting] SMART Board of Directors — 2026-09-10</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/smart%7C2026-09-10%7CSMART%20Board%20of%20Directors</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[SMART Transit • 2026-09-10
+
+The September 10, 2026 SMART Board of Directors agenda hasn't been posted yet.]]></description>
+      <category>Meeting</category>
+      <category>SMART Transit</category>
+    </item>
+    <item>
+      <title>[Meeting] (Rescheduled to Oct 13th) Town Council Budget - Sep 10 2026 — 2026-09-10</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-09-10%7C(Rescheduled%20to%20Oct%2013th)%20Town%20Council%20Budget%20-%20Sep%2010%202026</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-09-10
+
+This September 10 budget session has been rescheduled to October 13th. No agenda has been posted yet.]]></description>
+      <category>Meeting</category>
+      <category>Town of Telluride</category>
     </item>
   </channel>
 </rss>

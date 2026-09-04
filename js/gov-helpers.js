@@ -378,7 +378,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-09-22|Telluride Housing Authority - Sep 22 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303","sv":4,"ph":"d6200257aab6f8b7"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303","sv":4,"ph":"0bb3b4721c07c88b"},
 
   "telluride|2026-09-22|Town Council - Sep 22 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043","sv":4,"ph":"c5b14e4bfd86db54"},
@@ -995,6 +995,16 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "We’re Hiring- Bilingual Food Pantry and seNior Lunch Cook Assistant/ Estamos Contratando: Asistente Bilingüe del Banco de Alimentos y Asistente de Cocina del Almuerzo para Personas Mayores",
+    source: "Fresh Food Hub",
+    sourceKey: "fresh-food-hub",
+    date: "August 27, 2026",
+    newsTopic: "community",
+    copy: "We re hiring for two part-time positions: Bilingual Food Pantry Assistant — Sundays, 1:30–6:30 p.m. This role provides Spanish-English translation support for our Spanish-speaking clients during food pantry distribution. Senior Lunch Assistant — Thursdays, 8:30 a.m.–1:30 p.m. at Norwood Town Hall. T",
+    href: "https://freshfoodhub.net/were-hiring-bilingual-food-pantry-and-senior-lunch-cook-assistant-estamos-contratando-asistente-bilingue-del-banco-de-alimentos-y-asistente-de-cocina-del-almuerzo-para-personas-mayores/",
+    img: ""
+  },
+  {
     title: "Invitation to Prayer/Fellowship Wednesday Morning",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -1032,7 +1042,7 @@ const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
 const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-03';
-const LEGAL_NOTICES_CACHE_DATE = '2026-09-02';
+const LEGAL_NOTICES_CACHE_DATE = '2026-09-04';
 
 const MANUAL_SUMMARIES = {
   "telluride|2026-08-05|Ecology Commission - Aug 05 2026":
@@ -1687,6 +1697,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Breaking news: Plane crashes southwest of Telluride",
+    source: "Telluride Times",
+    date: "September 4, 2026",
+    firstSeen: "2026-09-04",
+    newsTopic: "public-safety",
+    copy: "A single-engine plane crashed near Dolores Peak, about 15 miles southwest of Telluride, Thursday afternoon. Smoke was reported around 3:22 p.m., and Denver Air Traffic Control flagged a missing plane shortly after. As of Thursday night, no word yet on who was aboard or any survivors.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_f0d53ee9-c764-4db8-8c16-bb49ef3dac2e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/f2/5f281e8b-deac-492e-a466-888a413732d8/6a9a0ea1414e0.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "FIFA accuses European body UEFA of 'smear campaign' in filing related to World Cup sell-off plan",
     source: "Telluride Times",
@@ -2579,90 +2601,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Billy Ball and Sobernauts take home the trophies",
-    source: "Telluride Times",
-    date: "August 21, 2026",
-    firstSeen: "2026-08-21",
-    newsTopic: "recreation",
-    copy: "Billy Ball won the A league title over the Nuggets 29-25 in a back-and-forth championship game, while the Sobernauts took the B league crown — both teams celebrating together at the Buck afterward. The men's rec softball season runs May through mid-July, with 14 teams total this year. Anyone interested can sign up as a free agent through Telluride Parks and Recreation.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_1cd66cf6-c571-4a6b-8b47-a9afb988cc4d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/0f/00ffb706-b490-4479-a981-7ee2269899c1/6a856f3a825af.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Norwood fire chief announces resignation",
-    source: "Telluride Times",
-    date: "August 21, 2026",
-    firstSeen: "2026-08-21",
-    newsTopic: "public-safety",
-    copy: "Norwood Fire Chief John Bockrath has resigned effective Sept. 30, citing a rapidly spreading lung disease that requires him to relocate to a humid climate. He also relinquished his paramedic license after breaking protocol on a narcotics call; a state investigation was subsequently closed. The board now faces the challenge of finding a replacement for a chief who spent nearly a decade earning deep respect from the Norwood community.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_8eec0fa9-0a50-480d-90c7-fbf8ea56bd8a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/5c/a5cb78ca-a562-47c4-a054-670e40e6a929/6a889cf5715b0.image.webp",
-    imgHiRes: true
-  },
-  {
-    title: "Move over bears. Fat Marmot Week puts a spotlight on the alpine rodents",
-    source: "Telluride Times",
-    date: "August 21, 2026",
-    firstSeen: "2026-08-21",
-    newsTopic: "community",
-    copy: "Two-thirds of one Gothic marmot population died last winter from lack of snow cover — their burrows got too cold. Researchers are launching Fat Marmot Week, an online voting contest modeled on Fat Bear Week, partly for fun but mainly to raise private donations as federal funding shrinks.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_8f6fdaec-c077-5964-a75e-314171956f27.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/7e/e7e2a4fc-26bd-5234-b81e-a2a0e18e47a2/6a884dd0502c3.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Norwood Public School is off to a strong start",
-    source: "Telluride Times",
-    date: "August 21, 2026",
-    firstSeen: "2026-08-21",
-    newsTopic: "education",
-    copy: "Norwood Public School heads into the new school year fully staffed — no small thing given ongoing shortages across Colorado. The 200-student, pre-K–12 district brought on several new faces, including a new elementary principal and IT director. Superintendent Bissell called it an exciting start with great kids and a solid team in place.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_6d11db05-d947-469f-b1ac-ee3c8281f5ad.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/40/740b7742-a8c6-4506-8425-a95570c22185/6a873e18b72fa.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Colorado Hay Directory connects agricultural producers amid statewide drought",
-    source: "Telluride Times",
-    date: "August 21, 2026",
-    firstSeen: "2026-08-21",
-    newsTopic: "community",
-    copy: "Colorado's 2026 Hay Directory has gone fully digital, letting buyers filter listings by region, forage type, bale size, and certification status — with real-time inventory updates. Drought has tightened supply and pushed prices up, so the state is also warning buyers to watch for hay scams and avoid prepayment. Directory at ag.colorado.gov/markets.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_1b3f3f7d-f1a4-4eab-a62a-44833d00f84c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/39/83934067-1261-4e77-a20b-6168e90bef39/6a873d811bcc0.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "CHALKBOARD Week of Aug. 20-26",
-    source: "Telluride Times",
-    date: "August 21, 2026",
-    firstSeen: "2026-08-21",
-    newsTopic: "arts-culture",
-    copy: "Norwood's weekly community calendar for Aug. 20–26 lists local birthdays and recurring meetings for town, school, and chamber boards. Ongoing programs include the Farmers Market Thursdays 2–6 p.m., senior meals Mondays and Thursdays, and Sunday food pantry distribution. A free Chamber Music concert is set for Aug. 27 at The Livery, 6–7 p.m.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_cb6ee434-20c2-429a-a93c-4af2ad362639.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/43/b437db5e-4a51-4343-abda-6e89e087a28e/6a873cee61cbf.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Camp Alderwild bids adieu to Telluride with farewell event",
-    source: "Telluride Times",
-    date: "August 21, 2026",
-    firstSeen: "2026-08-21",
-    newsTopic: "arts-culture",
-    copy: "Camp Alderwild, the EDM festival that drew around 5,000 attendees its first year and is on pace for 7,000 this year, will not return to Telluride in 2026. Organizers cite a packed summer calendar and a lodging cost cliff that cuts ticket sales once camping fills up. A new Colorado location is planned for next year, with details coming after this weekend's farewell event wraps.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_82c22ae0-75f9-4ac9-9ab6-512c8cb63e99.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/65/76587782-1163-4ede-8d96-d61d8fee6c8e/6a86c15501873.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town Council Proclaims September 7-11 Black Bear Safety Week",
     source: "Town of Telluride",
     date: "September 3, 2026",
@@ -2775,7 +2713,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Ridgway Rescinds Stage 2 Fire Restrictions, Reinstates Stage 1 Fire Restrictions effective 12:01am on Thursday, Sept. 3rd - Sept. 2, 2026",
     source: "Town of Ridgway",
-    date: "September 3, 2026",
+    date: "September 4, 2026",
     firstSeen: "2026-09-02",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2786,7 +2724,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Public Hearing Notice Wed., Sept. 16, 2026 at 5:30pm - 1) Site Plan and Conditional Use Permit for Riverbend Townhomes (TBD Liddell Dr.); 2) Plat Amendment of Lot 4 and Outlot of Riverview Business Park Subdivision (TBD Liddell Dr.); 3) PUD Amendment Lena Street Commons Planned Unit Development (TBD N. Lena Street) - Sept. 2, 2026",
     source: "Town of Ridgway",
-    date: "September 3, 2026",
+    date: "September 4, 2026",
     firstSeen: "2026-09-02",
     newsTopic: "land-use",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2808,6 +2746,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 9-3-26",
+    source: "KOTO Community Radio",
+    date: "September 4, 2026",
+    newsTopic: "community",
+    copy: "Welcome Back, Eliza Dunn; West End Roundup with the San Miguel Basin Forum; Telluride Library Opens New Youth Area",
+    href: "https://koto.org/news/newscast-9-3-26/"
+  },
   {
     title: "Newscast 9-2-26",
     source: "KOTO Community Radio",
@@ -2863,14 +2809,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "recreation",
     copy: "On this week’s Regional Roundup, we head to the alpine tundra of Rocky Mountain National Park with naturalists searching for ptarmigan. We also learn about efforts to restore beaver habitat in other parts of the park. Then, we travel to the small Western Colorado town of Lake City, where three newly trained EMTs are stepping up to help provide medi",
     href: "https://koto.org/news/newscast-8-21-26/"
-  },
-  {
-    title: "Newscast 8-20-26",
-    source: "KOTO Community Radio",
-    date: "August 21, 2026",
-    newsTopic: "public-safety",
-    copy: "West End Food Banks Close Indefinitely; Gold Mountain Fire Leaves Some Trees Behind; Palm Theatre Cleanup Nears Completion",
-    href: "https://koto.org/news/newscast-8-20-26/"
   }
 ];
 
@@ -3350,72 +3288,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "TRC Men's Tennis Singles",
-    link: "https://koto.org/event/trc-mens-tennis-singles/2026-09-03/",
-    description: "The 1st TRC Men's Singles League! Sign up on a week-to-week basis. No long-term commitment.",
-    pubDate: "2026-09-03T16:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Art Walk Telluride",
-    link: "https://koto.org/event/art-walk-telluride/2026-09-03/",
-    description: "Join us the first Thursday of every month for Telluride's Art Walk. It will be an evening filled with inspiring exhibits, engaging receptions, and the chance to meet local and visiting artists. From 5–7 pm, participating venues will open their doors, showcasing new collections and inviting art lovers to explore the vibrant gallery scene. Find what's new on www.telluridearts.org Note: Special Edition Art Walk May 21st.",
-    pubDate: "2026-09-03T17:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.42-PM.png"
-  },
-  {
-    title: "Birding with Katie, Sept 3rd and 4th",
-    link: "https://koto.org/event/birding-with-katie-sept-3rd-and-4th/2026-09-03/",
-    description: "Patagonia Telluride will offer a bird talk with local birder Katie Triest at the Telluride Patagonia store on Thursday, Sept. 3 from 5-6 pm. Katie will be offering a bird walk on Friday, Sept 4th from 8-10 am. Please meet at the Patagonia Telluride store for the walk. Limited to 12 participants. You can sign up at the Patagonia store or by using the QR code on flyers around town. Binoculars will be provided.",
-    pubDate: "2026-09-03T17:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Patagonia Telluride, Telluride Retail",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/image-1.png"
-  },
-  {
-    title: "A Celebration of Glen Canyon Exposed – Sept. 3rd in Green River, UT",
-    link: "https://koto.org/event/a-celebration-of-glen-canyon-exposed-sept-3rd-in-green-river-ut/",
-    description: "On Thursday, September 3, the John Wesley Powell River History Museum and Glen Canyon Institute invite the public to A Celebration of Glen Canyon Exposed. This special one-night event will bring together award-winning storyteller Craig Childs, photographer and exhibit co-curator Dawn Kish, master printmaker and exhibit co-curator Richard Jackson, and Hopi cultural educator Georgie Pongyesva. Together they will explore Glen Canyon through literature, photography, artistic collaboration, and Indigenous knowledge, offering audiences an experience that reaches far beyond a traditional museum program. The evening marks the conclusion of the acclaimed exhibition \"Glen Canyon Exposed: Then + Now\" and features a reception, presentations by each guest, audience conversation, and a final opportunity to experience the exhibition before it closes. At the heart of the evening is an extraordinary story. …",
-    pubDate: "2026-09-03T17:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "John Wesley Powell River History Museum, Green River, UT",
-    imageUrl: ""
-  },
-  {
-    title: "Author Talk: R.E. Burillo",
-    link: "https://koto.org/event/author-talk-r-e-burillo/",
-    description: "Join us for a presentation from R.E. Burillo about his new book, American Archeology: Living History, Stolen Pasts, and Defending the Future. A gripping, often irreverent exploration of the past, present, and future of archaeology in America. Archaeology has long captivated the American public, yet pop culture mythology often obscures the harsh realities, thrilling discoveries, and complex moral decisions that archaeologists confront out in the field. Journalist and conservation archaeologist R. E. Burrillo illuminates the joys and contradictions of digging into humanity’s past: the history of the practice, its evolution into science, the influences of nationalism and colonialism, and its ongoing problems with exploitation and misrepresentation. Now, profit-driven practices are shaping how we study and preserve the past—and pose a serious and growing threat to our scientific and cultural understanding of history itself. …",
-    pubDate: "2026-09-03T17:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Facing the Mourning",
-    link: "https://koto.org/event/facing-the-mourning/2026-09-03/",
-    description: "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit from additional support while navigating grief and loss. Please feel free to share this information with others who may be interested.",
-    pubDate: "2026-09-03T18:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Redvale Community Center",
-    imageUrl: ""
-  },
-  {
     title: "Birding with Katie, Sept 3rd and 4th",
     link: "https://koto.org/event/birding-with-katie-sept-3rd-and-4th/2026-09-04/",
     description: "Patagonia Telluride will offer a bird talk with local birder Katie Triest at the Telluride Patagonia store on Thursday, Sept. 3 from 5-6 pm. Katie will be offering a bird walk on Friday, Sept 4th from 8-10 am. Please meet at the Patagonia Telluride store for the walk. Limited to 12 participants. You can sign up at the Patagonia store or by using the QR code on flyers around town. Binoculars will be provided.",
@@ -3777,6 +3649,83 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "Up-off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-09-11/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-09-11T10:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "Ridgway Farmer's Market",
+    link: "https://koto.org/event/ridgway-farmers-market/2026-09-11/",
+    description: "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday",
+    pubDate: "2026-09-11T10:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Hartwell Park Ridgway",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride Farmer's Market",
+    link: "https://koto.org/event/telluride-farmers-market/2026-09-11/",
+    description: "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.",
+    pubDate: "2026-09-11T10:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Oak Street Plaza, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Tennis Clinic 4.0+",
+    link: "https://koto.org/event/tennis-clinic-4-0/2026-09-11/",
+    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-09-11T11:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Zumba with Gise",
+    link: "https://koto.org/event/zumba-with-gise/2026-09-12/",
+    description: "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. ¡Olvida el entrenamiento y únete a la fiesta! Zumba® es una clase de fitness de baile de alta energía que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calorías. …",
+    pubDate: "2026-09-12T10:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/zumba-gise.png"
+  },
+  {
+    title: "20th Anniversary of Down Valley Park + Rich's Retirement Party!",
+    link: "https://koto.org/event/20th-anniversary-of-down-valley-park-richs-retirement-party/",
+    description: "Celebrate the down valley park and community, and wish Rich Hamilton a happy retirement, on Saturday, September 12th, from 3-7 p.m. at Down Valley Park. Free food provided by Sawpit Mercantile and SMC Parks + Open Space. Live music with Telluride Gold Kings 4-6 p.m.",
+    pubDate: "2026-09-12T15:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
+  },
+  {
+    title: "Gentle Yoga with Kristen Milord",
+    link: "https://koto.org/event/gentle-yoga-with-kristen-milord/2026-09-13/",
+    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
+    pubDate: "2026-09-13T11:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/gentle-yoga-kristen.png"
   }
 ];
 
@@ -4672,7 +4621,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/monthly-karate-in-ouray-county",
     description: "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month. Karate class is a great way to learn skills to keep you safe, stay in shape and strong core movements. Karate believes in using it only to protect self and is taught accordingly. Whether you are new to Karate or a seasoned student, the Sensei will work with your level. Taught in the kyokushin kai-kan style, similar shotokan style of karate, we welcome new students to try this exceptional experience for your mind and body! Mixed ages --- Ages 7 through Adult (extended time for more experience) Mondays in Ouray: St. …",
     pubDate: "2026-09-07T23:00:00.000Z",
-    endDate: "2026-10-05",
+    endDate: "2026-11-03",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5963,17 +5912,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Market on the Plaza",
-    link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
-    description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
-    pubDate: "2026-09-02T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
-  },
-  {
     title: "Design Review Board Meeting September 2026",
     link: "https://townofmountainvillage.com/explore/events/all-events/september-design-review-board-meeting/",
     description: "The Mountain Village Design Review Board meets for its monthly meeting. Meeting material is typically posted on the Friday before a scheduled meeting.",
@@ -6683,17 +6621,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/63362/tdp3588.800x533.webp"
   },
   {
-    title: "Mountain Towns 2030: Leveraging A Network of Community Leaders to Accelerate Climate Action",
-    link: "https://www.telluride.com/event/mountain-towns-2030-leveraging-a-network-of-community-leaders-to-accelerate-climate-action/",
-    description: "As climate challenges grow, no community can solve them alone. The most effective solutions often emerge when leaders …",
-    pubDate: "2026-09-02",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63253/telluride_com.800x533.webp"
-  },
-  {
     title: "America 250 - Colorado 150 \"Stories in the Sky\" Drone Show",
     link: "https://www.telluride.com/event/america-250-colorado-150-stories-in-the-sky-drone-show/",
     description: "The America 250 - Colorado 150 Commission is taking its milestone celebrations to new heights with Stories in the Sky, …",
@@ -7232,63 +7159,6 @@ const LEGAL_NOTICES = [
     caseNumber: "2026PR30008"
   },
   {
-    title: "Foreclosure Sale Notice -- 350 S Mahoney Dr Unit 7, Telluride (Sale No. 202605)",
-    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society FSB",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "Public Trustee Brandi R. Hatfield of San Miguel County is proceeding with a foreclosure sale of Condominium Unit 7, Double Diamond Condominium, located at 350 S. Mahoney Drive, Unit 7, Telluride, CO 81435. The original grantor is Ryan Pfaff; the current debt holder is Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust, with an outstanding principal balance of approximately $1,199,032.37. The public auction is scheduled for 10:00 AM on Thursday, September 3, 2026, at 305 W. Colorado Avenue, East entry, Telluride, Colorado.",
-    deadline: "2026-09-03",
-    expires: "2026-09-03",
-    dates: "7/23",
-    papers: ["ttimes_0723"],
-    url: "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
-    address: "350 S Mahoney Drive, Unit 7, Telluride, Colorado 81435",
-    noticeKey: "foreclosure-202605-350-mahoney-unit7",
-    caseNumber: "202605"
-  },
-  {
-    title: "Foreclosure Sale Notice -- 350 S Mahoney Dr Unit 7, Telluride (Sale No. 2026-05)",
-    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society FSB",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "San Miguel County Public Trustee Brandi R. Hatfield has scheduled a foreclosure auction for Condominium Unit 7, Double Diamond Condominium, located at 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor is Ryan Pfaff, with an outstanding principal balance of approximately $1,199,032.37 on a deed of trust originally held by Deephaven Mortgage LLC (now Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust). The public auction will be held at 10:00 AM on Thursday, September 3, 2026, at 305 W. Colorado Avenue, East entry, Telluride.",
-    deadline: "2026-09-03 (auction date)",
-    expires: "2026-09-03",
-    dates: "7/30",
-    papers: ["ttimes_0730"],
-    url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    address: "350 S Mahoney Dr Unit 7, Telluride, CO 81435 (Double Diamond Condominium, Unit 7)",
-    noticeKey: "COL-000202-foreclosure-2026-05-pfaff",
-    caseNumber: "Foreclosure Sale No. 2026-05"
-  },
-  {
-    title: "Foreclosure Sale Notice -- Stonegate Drive (Vacant Lot), Mountain Village (Sale No. 2026-04)",
-    entity: "San Miguel County Public Trustee / Federal Holding Realty",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "San Miguel County Public Trustee has scheduled a foreclosure auction for Lot 166AR2, Telluride Mountain Village (a vacant parcel on Stonegate Drive, Mountain Village, CO 81435), originally granted by Two Stonegate LLC. The current debt holder is Federal Holding Realty, with an outstanding principal balance of $500,000.00. The public auction is set for 10:00 AM on Thursday, September 3, 2026, at 305 W. Colorado Avenue, East entry, Telluride.",
-    deadline: "2026-09-03 (auction date)",
-    expires: "2026-09-03",
-    dates: "7/30",
-    papers: ["ttimes_0730"],
-    url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    address: "TBD (Vacant) Stonegate Drive, Mountain Village, CO 81435 (Lot 166AR2, Telluride Mountain Village)",
-    noticeKey: "COL-000202-foreclosure-2026-04-stonegate",
-    caseNumber: "Foreclosure Sale No. 2026-04"
-  },
-  {
     title: "Request for Quote -- Request for Quote: Material Hauling",
     entity: "San Miguel County",
     entityClass: "ent-county",
@@ -7358,42 +7228,6 @@ const LEGAL_NOTICES = [
     smcBidID: "208"
   },
   {
-    title: "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominiums (Sale No. 202605)",
-    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "Public Trustee Brandi R. Hatfield of San Miguel County has scheduled a public foreclosure auction for a deed of trust originally granted by Ryan Pfaff on a condominium at 350 S Mahoney Dr, Unit 7, Telluride. The original loan of $1,200,000 (outstanding balance ~$1,199,032) was recorded May 31, 2022, and the Notice of Election and Demand was recorded April 28, 2026, due to failure to pay principal and interest. The property will be sold to the highest cash bidder at 305 W. Colorado Avenue, Telluride on September 3, 2026 at 10:00 A.M.",
-    deadline: "2026-09-03",
-    expires: "2026-09-03",
-    dates: "8/13",
-    papers: ["ttimes_0813"],
-    url: "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
-    address: "350 S Mahoney Dr, Unit 7, Telluride, CO 81435 (Condominium Unit 7, Double Diamond Condominium, San Miguel County)",
-    noticeKey: "foreclosure-sale-202605"
-  },
-  {
-    title: "RFP -- Fuel Island Canopy Design & Construction (RFP-L-000219)",
-    entity: "San Miguel County Road & Bridge",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County Road & Bridge is seeking qualified contractors to design, engineer, permit, and construct a fuel island canopy at the Norwood Road & Bridge Maintenance Yard at 39595 Highway 145, Norwood, CO. A mandatory pre-proposal site meeting is scheduled for August 24, 2026. Proposals must be submitted electronically by September 3, 2026 at 4:00 p.m., with contractor selection announced September 7, 2026.",
-    deadline: "2026-09-03T16:00:00",
-    expires: "2026-09-03",
-    dates: "8/20",
-    papers: ["ttimes_0820"],
-    url: "https://www.telluridenews.com/news/legals/article_7e6a7420-27c6-4f95-b0b8-101dfc5b4763.html",
-    address: "39595 Highway 145, Norwood, CO 81423",
-    noticeKey: "rfp-fuel-island-canopy-norwood-2026"
-  },
-  {
     title: "Ordinance -- Colorado Wildfire Resiliency Code Amendment to Land Use Code (Ordinance #1640)",
     entity: "Town of Telluride",
     entityClass: "ent-county",
@@ -7449,24 +7283,6 @@ const LEGAL_NOTICES = [
     noticeKey: "COL-000222-ibc-2024-hearing"
   },
   {
-    title: "RFP -- Fuel Island Canopy Construction, Norwood Road & Bridge Maintenance Yard (COL-000219)",
-    entity: "San Miguel County Road & Bridge Department",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County Road & Bridge is seeking proposals from qualified contractors to design, engineer, permit, and construct a fuel island canopy at the Norwood Road & Bridge Maintenance Yard, 39595 Highway 145, Norwood, CO. Proposals are due by 4:00 PM on September 3, 2026, submitted electronically; late proposals will not be accepted. Selection notification is expected by September 7, 2026.",
-    deadline: "2026-09-03T16:00:00",
-    expires: "2026-09-03",
-    dates: "8/27",
-    papers: ["ttimes_0827"],
-    url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
-    address: "39595 Highway 145, Norwood, CO 81423",
-    noticeKey: "COL-000219-fuel-island-canopy-norwood"
-  },
-  {
     title: "RFP -- San Miguel County Jail Repainting, Illium (COL-000224)",
     entity: "San Miguel County Fleet & Facilities Department",
     entityClass: "ent-county",
@@ -7500,6 +7316,153 @@ const LEGAL_NOTICES = [
     url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=209",
     address: "",
     smcBidID: "209"
+  },
+  {
+    title: "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominium (Sale No. 202605)",
+    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "The San Miguel County Public Trustee has scheduled a public foreclosure auction for Condominium Unit 7 at Double Diamond Condominium, located at 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor Ryan Pfaff failed to pay principal and interest on a $1,200,000 deed of trust (current outstanding balance ~$1,199,032) originally benefiting Mortgage Electronic Registration Systems as nominee for Deephaven Mortgage LLC, now held by Wilmington Savings Fund Society as trustee. The public auction will be held at 10:00 A.M. on September 3, 2026, at 305 W. Colorado Avenue, East entry, Telluride, CO.",
+    deadline: "2026-09-03",
+    expires: "2026-09-03",
+    dates: "8/13",
+    papers: ["ttimes_0813"],
+    url: "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
+    address: "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
+    noticeKey: "foreclosure-sale-202605",
+    caseNumber: "202605"
+  },
+  {
+    title: "Public Hearing -- Adoption of 2024 International Building Code & Colorado Low Energy & Carbon Code (COL-000206)",
+    entity: "San Miguel County Planning Commission",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "San Miguel County Planning Commission will hold a public hearing on August 13, 2026 at 9:00 AM in Telluride to consider recommending adoption of the 2024 International Building Code and the Colorado Low Energy & Carbon Code to the Board of County Commissioners. Written comments must be received by noon on Monday, August 10, 2026. Proposed amendments are available in the meeting agenda packet at www.sanmiguelcountyco.gov.",
+    deadline: "2026-08-10T12:00:00",
+    expires: "2026-08-13",
+    dates: "7/30",
+    papers: ["ttimes_0730"],
+    url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
+    address: "Telluride, Colorado (San Miguel County)",
+    noticeKey: "ord-2024-ibc-clecc"
+  },
+  {
+    title: "Public Notice -- Town of Telluride 2027 Budget Preparation (COL-000208)",
+    entity: "Town of Telluride",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "The Town Manager of Telluride is giving public notice that the 2027 budget preparation process has begun, effective July 30, 2026. All town departments, boards, commissions, and citizens must submit funding requests to the Town Manager no later than 5:00 PM on Friday, August 21, 2026. Requests for funding through the Commission for Community Assistance, Arts and Special Events (CCAASE) are subject to separate grant guidelines available at www.telluride.gov.",
+    deadline: "2026-08-21T17:00:00",
+    expires: "2026-08-21",
+    dates: "7/30",
+    papers: ["ttimes_0730"],
+    url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
+    address: "Town Hall, 135 W. Columbia Ave, Telluride, CO 81435",
+    noticeKey: "telluride-budget-2027"
+  },
+  {
+    title: "Public Notice -- Montrose Memorial Hospital Board of Directors Applications (COL-000203)",
+    entity: "Montrose Memorial Hospital, Inc.",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "Montrose Memorial Hospital, Inc. is accepting applications to fill open positions on its Board of Directors. Application packets are available online at www.montrosehealth.com, by email, or in person at the Montrose Regional Health Administration office at 800 South 3rd Street, Montrose. Completed applications must be returned by Friday, August 14, 2026 at 5:00 PM, with elections to be held at the Board's annual meeting in October.",
+    deadline: "2026-08-14T17:00:00",
+    expires: "2026-08-14",
+    dates: "7/30",
+    papers: ["ttimes_0730"],
+    url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
+    address: "800 South 3rd Street, Montrose, Colorado",
+    noticeKey: "mrh-bod-applications-2026"
+  },
+  {
+    title: "Public Notice -- Farmers' Water Development Company Replacement Share Certificate #887 (COL-000181)",
+    entity: "Farmers' Water Development Company",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "💧",
+    iconClass: "type-hearing",
+    type: "Utilities",
+    filterTag: "utilities",
+    summary: "The Farmers' Water Development Company (FWDC) has received a request to replace lost, destroyed, or wrongfully taken share certificate #887, originally issued in the name of A.F. Newans M.D., C.P. Any written objection to issuance of a replacement certificate must be filed with FWDC at PO Box 10, Norwood, CO 81423 within 30 days of the last publication date (July 30, 2026). If no objection is received, the replacement certificate will be issued and the original permanently cancelled.",
+    deadline: "2026-08-29",
+    expires: "2026-08-29",
+    dates: "7/30",
+    papers: ["ttimes_0730"],
+    url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
+    address: "Norwood, Colorado (FWDC service area)",
+    noticeKey: "fwdc-share-cert-887"
+  },
+  {
+    title: "RFP -- Interior Repainting, Historic Placerville Schoolhouse (COL-000205)",
+    entity: "San Miguel County Fleet & Facilities",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "San Miguel County is seeking proposals from contractors to repaint the interior of the Historic Placerville Schoolhouse at 400 Front St, Placerville. RFP information is available at www.sanmiguelcountyco.gov/bids.aspx or from the Fleet & Facilities Department at 333 W Colorado Ave, 2nd floor, Telluride. Proposals must be submitted by 5:00 PM on Wednesday, August 6, 2026, either via email or in person at the Fleet & Facilities office.",
+    deadline: "2026-08-06T17:00:00",
+    expires: "2026-08-06",
+    dates: "7/30",
+    papers: ["ttimes_0730"],
+    url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
+    address: "400 Front St, Placerville, Colorado",
+    noticeKey: "rfp-placerville-schoolhouse-repaint"
+  },
+  {
+    title: "Foreclosure Sale Notice -- 350 S Mahoney Dr Unit 7, Telluride (Sale No. 2026-05)",
+    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society FSB",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "Public Trustee Brandi R. Hatfield of San Miguel County has scheduled a foreclosure auction for Condominium Unit 7, Double Diamond Condominium, located at 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor is Ryan Pfaff; the current debt holder is Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust, with an outstanding principal balance of approximately $1,199,032.37. The public auction will be held at 10:00 AM on Thursday, September 3, 2026, at 305 W. Colorado Avenue (East entry), Telluride.",
+    deadline: "2026-09-03T10:00:00",
+    expires: "2026-09-03",
+    dates: "7/30",
+    papers: ["ttimes_0730"],
+    url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
+    address: "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
+    noticeKey: "foreclosure-2026-05-double-diamond-unit7",
+    caseNumber: "2026-05"
+  },
+  {
+    title: "Foreclosure Sale Notice -- Stonegate Drive (Vacant Lot), Mountain Village (Sale No. 2026-04)",
+    entity: "San Miguel County Public Trustee / Federal Holding Realty",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "Public Trustee Brandi R. Hatfield of San Miguel County has scheduled a foreclosure auction for Lot 166AR2, Telluride Mountain Village (a vacant lot on Stonegate Drive, Mountain Village, CO 81435). The original grantor is Two Stonegate LLC; the current debt holder is Federal Holding Realty, with an outstanding principal balance of $500,000.00. The public auction will be held at 10:00 AM on Thursday, September 3, 2026, at 305 W. Colorado Avenue (East entry), Telluride.",
+    deadline: "2026-09-03T10:00:00",
+    expires: "2026-09-03",
+    dates: "7/30",
+    papers: ["ttimes_0730"],
+    url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
+    address: "TBD Stonegate Drive (Vacant Lot), Mountain Village, CO 81435 (Lot 166AR2, Telluride Mountain Village)",
+    noticeKey: "foreclosure-2026-04-stonegate-mountain-village",
+    caseNumber: "2026-04"
   }
 ];
 
@@ -9059,6 +9022,15 @@ const TELLURIDE_BOARD_MEETINGS = [
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
     civicwebId: 8166
+  },
+  {
+    date: "December 3, 2026",
+    title: "Town Council Retreat",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8051",
+    hasAgenda: false,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: "",
+    civicwebId: 8051
   }
 ];
 

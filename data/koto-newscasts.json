@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 9-3-26",
+    "source": "KOTO Community Radio",
+    "date": "September 4, 2026",
+    "newsTopic": "community",
+    "copy": "Welcome Back, Eliza Dunn; West End Roundup with the San Miguel Basin Forum; Telluride Library Opens New Youth Area",
+    "href": "https://koto.org/news/newscast-9-3-26/"
+  },
+  {
     "title": "Newscast 9-2-26",
     "source": "KOTO Community Radio",
     "date": "September 3, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "recreation",
     "copy": "On this week’s Regional Roundup, we head to the alpine tundra of Rocky Mountain National Park with naturalists searching for ptarmigan. We also learn about efforts to restore beaver habitat in other parts of the park. Then, we travel to the small Western Colorado town of Lake City, where three newly trained EMTs are stepping up to help provide medi",
     "href": "https://koto.org/news/newscast-8-21-26/"
-  },
-  {
-    "title": "Newscast 8-20-26",
-    "source": "KOTO Community Radio",
-    "date": "August 21, 2026",
-    "newsTopic": "public-safety",
-    "copy": "West End Food Banks Close Indefinitely; Gold Mountain Fire Leaves Some Trees Behind; Palm Theatre Cleanup Nears Completion",
-    "href": "https://koto.org/news/newscast-8-20-26/"
   }
 ]
