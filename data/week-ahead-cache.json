@@ -1,10 +1,14 @@
 {
-  "hash": "0fae07e6b3f3ad400fde838ff670d6e4cde9f7be",
-  "lede": "The most concrete government action this week is the San Miguel County Planning Commission taking up three Land Use Code amendments — covering forestry practices, oil and gas, and geothermal energy — on September 10th, with their recommendations heading to the BOCC if approved. Most other meetings either haven't posted agendas yet or have been rescheduled, including the Telluride Town Council budget session now pushed to October 13th. On the community side, the Telluride Film Festival carries the week.",
+  "hash": "4e0ea31421691f7dfeb893a9d79b02cdad6f7778",
+  "lede": "The most consequential item this week is the San Miguel County Board of County Commissioners special meeting on September 9, where the Housing Authority will vote on Resolution 2026-34 to change Area Median Income limitations for deed-restricted properties in Pinion Park — a quiet but pivotal adjustment that shapes who actually qualifies for local housing. The County Planning Commission meets September 10 to weigh in on Land Use Code amendments covering forestry, oil and gas, and geothermal energy before those changes can move to the BOCC. The Film Festival crowd is clearing out, and the valley settles back into its working-week rhythm.",
   "notable": [
     {
+      "id": 6,
+      "stake": "BOCC votes on AMI changes for Pinion Park deed-restricted housing eligibility."
+    },
+    {
       "id": 8,
-      "stake": "County Land Use Code changes on forestry, oil/gas, and geothermal head to BOCC next."
+      "stake": "Planning Commission recommends on Land Use Code changes for forestry, oil/gas, geothermal."
     }
   ]
 }

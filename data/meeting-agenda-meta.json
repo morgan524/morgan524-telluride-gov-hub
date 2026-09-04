@@ -438,7 +438,7 @@
   "telluride|2026-09-22|Telluride Housing Authority - Sep 22 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303",
     "sv": 4,
-    "ph": "d6200257aab6f8b7"
+    "ph": "0bb3b4721c07c88b"
   },
   "telluride|2026-09-22|Town Council - Sep 22 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043",
@@ -526,7 +526,11 @@
   },
   "county|2026-09-09|Board of County Commissioners Special Meeting": {
     "sv": 4,
-    "ph": "7751bc604656aec0"
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/857/files/agenda/1983",
+    "zoomUrl": "https://us02web.zoom.us/meeting/register/Jxg2WRQ2SEKGwI4gi2zyAg",
+    "meetingId": "867 2008 8025",
+    "passcode": "755642",
+    "phone": "719-359-4580"
   },
   "ouray|2026-09-16|, 1-4:00 PM (@ OURAY COURTHOUSE!) - The PC will hold 2 public hearings; Curry Regular PUD, and an Exemption application from Clifford Pastor to subdivide his parcel into 2 lots. (Packet materials are under media TV icon)": {
     "agendaUrl": "https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1017",

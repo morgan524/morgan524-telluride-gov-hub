@@ -9,7 +9,7 @@
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_26_10_07_56.png",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "A hands-on science program hosted by Pinhead Institute, held outdoors on the Lower Terrace at Wilkinson Public Library on a day off from school. The event runs from 1:00 to 3:00 PM and offers kids the chance to explore science through…",
+    "desc": "1:00 PM – 3:00 PM",
     "type": "Talks & Classes"
   },
   {
@@ -749,7 +749,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "A previously scheduled Norwood Town government meeting has been rescheduled to September 22, 2026. The rescheduled meeting will take place in Norwood, CO, and is organized by the Town of Norwood.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -830,7 +830,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups…",
     "type": "Talks & Classes",
-    "endDate": "2026-10-29"
+    "endDate": "2026-11-03"
   },
   {
     "title": "Tennis Clinic 3.0-4.0",
@@ -1131,8 +1131,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and district operations are welcome to attend.",
-    "type": "Arts & Film"
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Senior Lunch",
@@ -1144,7 +1144,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday meal gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1432,7 +1432,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
     "category": "Community Event",
     "source": "Ouray County",
-    "desc": "The Imogene Pass Run is an annual footrace that takes competitors over the challenging Imogene Pass between Telluride and Ouray, traversing one of the most scenic and demanding mountain routes in the San Juan Mountains. The course climbs…",
+    "desc": "https://ouraycountyco.gov/calendar.aspx?EID=3779",
     "type": "Community"
   },
   {
@@ -1447,6 +1447,19 @@
     "source": "KOTO Community Calendar",
     "desc": "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa,…",
     "type": "Talks & Classes"
+  },
+  {
+    "title": "Crystal Festival – A Rock, Mineral, Gem, & Crystal Show",
+    "href": "https://koto.org/event/crystal-festival-a-rock-mineral-gem-crystal-show/2026-09-12/",
+    "date": "2026-09-12",
+    "time": "10:00 AM",
+    "location": "Telluride Conference Center, Mountain Village",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/09/bozeman-Crystal-Festival-.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join us for two incredible days celebrating rocks, minerals, fossils, gems, crystals, jewelry, and more at the Crystal Festival! 📅 September 12th and 13th, 2026 🕰️10am to 8pm both days 📍 Gallatin County Fairgrounds – Bozeman, Montana…",
+    "type": "Festivals"
   },
   {
     "title": "Dallas Park Cemetery Tour",
@@ -1630,19 +1643,6 @@
     "source": "Sherbino Theater",
     "desc": "",
     "type": "Community"
-  },
-  {
-    "title": "Gentle Yoga with Kristen Milord",
-    "href": "https://koto.org/event/gentle-yoga-with-kristen-milord/2026-09-13/",
-    "date": "2026-09-13",
-    "time": "11:00 AM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/08/gentle-yoga-kristen.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also…",
-    "type": "Wellness"
   },
   {
     "title": "Britley & Matt",
@@ -1971,7 +1971,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2119,6 +2119,19 @@
     "type": "Music"
   },
   {
+    "title": "Chris Baron – Live at Floating Lotus Brewery",
+    "href": "https://events.ourayridgwayevents.com/event/chris-baron-live-at-floating-lotus-brewery",
+    "date": "2026-09-18",
+    "time": "6:00 PM",
+    "location": "Floating Lotus Brewery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52352007922073/huge/6e1d6344c68fc21891f3b86ca94c989690337619.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Pacific Northwest singer-songwriter Chris Baron brings his distinctive brand of orchestral folk to Floating Lotus Brewery for an intimate guitar-and-cello performance. Baron combines ferocious acoustic guitar, soaring melodies and deeply…",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Telluride Blues & Brews Festival",
     "href": "https://www.telluride.com/event/telluride-blues-brews-festival/",
     "date": "2026-09-18",
@@ -2211,6 +2224,20 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Ouray highschool will be playing Mancos @ Ouray View on site | Email this event",
     "type": "Community"
+  },
+  {
+    "title": "Floating Lotus Fall Cornhole League",
+    "href": "https://events.ourayridgwayevents.com/event/floating-lotus-fall-cornhole-league",
+    "date": "2026-09-19",
+    "time": "2:00 PM",
+    "location": "Floating Lotus Brewery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/51579997965478/huge/4984f693db71ca30a33ee066346909a44bc0987f.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join the Floating Lotus Fall Cornhole League for six Saturdays of friendly competition. League play runs September 19 through October 24 from 2–5 PM, followed by the championship on October 31. Register a two-person team or sign up solo to…",
+    "type": "Arts & Film",
+    "endDate": "2026-10-31"
   },
   {
     "title": "Colona Community Church’s Annual Harvest Dinner",
@@ -2511,8 +2538,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
-    "type": "Food & Drink"
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Watercolor & Wine with Katey Fetch: \"Paint the Peaks\"",
@@ -2621,6 +2648,19 @@
     "type": "Music"
   },
   {
+    "title": "Final Friday: Sherlock Holmes & Forensics",
+    "href": "https://events.ourayridgwayevents.com/event/final-friday-sherlock-holmes-forensics",
+    "date": "2026-09-25",
+    "time": "5:00 PM",
+    "location": "Voyager Basecamp",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53877561898327/huge/3c4f8faf5039f048816e418ec7b92c64bface9d0.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "For Sherlock Holmes Fans and those interested in forensics! Channel your inner detective with a scavenger hunt, win prizes and solve riddles from elementary level difficulty to impenetrable. For Middle & High School Students, Final Friday…",
+    "type": "Community"
+  },
+  {
     "title": "Exploring Cyanotype with Angela LeClair",
     "href": "https://events.ourayridgwayevents.com/event/exploring-cyanotype-with-angela-leclair",
     "date": "2026-09-26",
@@ -2695,7 +2735,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -3026,6 +3066,19 @@
     "endDate": "2026-10-29"
   },
   {
+    "title": "Roma Ransom – Live at Floating Lotus Brewery",
+    "href": "https://events.ourayridgwayevents.com/event/roma-ransom-live-at-floating-lotus-brewery",
+    "date": "2026-10-02",
+    "time": "6:00 PM",
+    "location": "Floating Lotus Brewery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52352007922073/huge/6e1d6344c68fc21891f3b86ca94c989690337619.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Great music should do three things: connect us to the past, inspire us to envision the future, and root us fully in the present. Roma Ransom does all three. The duo blends old-time traditional ballads with European influences—particularly…",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Pink Talking Fish",
     "href": "https://www.telluride.com/event/pink-talking-fish/",
     "date": "2026-10-02",
@@ -3142,6 +3195,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "San Juan Oktoberfest with Live Music by Ridgway Band (opening) and BLUE CAMOOSE polka! Sunday, October 4, 2026 | Hartwell Park | Ridgway, Colorado There’s nothing quite like Ridgway in early October — bright blue skies, golden aspens and…",
     "type": "Music"
+  },
+  {
+    "title": "Sunday Rehab at Alloy Kitchen",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
+    "date": "2026-10-04",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
+    "type": "Community"
   },
   {
     "title": "Telluride Leadership Summit",
