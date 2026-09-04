@@ -26,32 +26,6 @@
     "type": "Talks & Classes"
   },
   {
-    "title": "Up-off Gymnastics, Dance, and Spanish",
-    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-09-04/",
-    "date": "2026-09-04",
-    "time": "10:00 AM",
-    "location": "Lone Cone Library Norwood",
-    "town": "Norwood",
-    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
-    "type": "Music"
-  },
-  {
-    "title": "Ridgway Farmer's Market",
-    "href": "https://koto.org/event/ridgway-farmers-market/2026-09-04/",
-    "date": "2026-09-04",
-    "time": "10:00 AM",
-    "location": "Hartwell Park Ridgway",
-    "town": "Ridgway",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every…",
-    "type": "Music"
-  },
-  {
     "title": "Coffee, Croissants and Cribbage",
     "href": "https://telluridelibrary.libcal.com/event/17357536?hs=a",
     "date": "2026-09-04",
@@ -93,6 +67,20 @@
     "endDate": "2026-09-25"
   },
   {
+    "title": "Ridgway Farmers Market",
+    "href": "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
+    "date": "2026-09-04",
+    "time": "10:00 AM",
+    "location": "Hartwell Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and…",
+    "type": "Food & Drink",
+    "endDate": "2026-10-16"
+  },
+  {
     "title": "Telluride Farmers Market",
     "href": "https://www.thetelluridefarmersmarket.com/",
     "date": "2026-09-04",
@@ -104,19 +92,6 @@
     "source": "Telluride Farmers Market",
     "desc": "The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced…",
     "type": "Food & Drink"
-  },
-  {
-    "title": "Tennis Clinic 4.0+",
-    "href": "https://koto.org/event/tennis-clinic-4-0/2026-09-04/",
-    "date": "2026-09-04",
-    "time": "11:00 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "Telluride Farmers' Market Music Series: Kirk Drogsvold",
@@ -306,19 +281,6 @@
     "type": "Wellness"
   },
   {
-    "title": "Tennis Clinic 3.0-4.0",
-    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-04/",
-    "date": "2026-09-04",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "First Friday Opening Reception: Bonnie Bucknam's \"Unscripted: Fiber Improvisations\"",
     "href": "https://sherbino.org/event/unscripted-fiber-improvisations-bonnie-bucknam/",
     "date": "2026-09-04",
@@ -383,6 +345,19 @@
     "source": "Mountain Village",
     "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
     "type": "Community"
+  },
+  {
+    "title": "Gaiascope Saturday Sessions",
+    "href": "https://koto.org/event/gaiascope-saturday-sessions/",
+    "date": "2026-09-05",
+    "time": "7:00 PM",
+    "location": "Heritage Plaza, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/mountainvillage.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Experience artist Brooke Einbender's Gaiascope installation in Mountain Village's Heritage Plaza every Saturday evening in September, with live DJ sets from 7-10 p.m. presented by Telluride Arts, TMVOA and Mindbender Studio.",
+    "type": "Arts & Film"
   },
   {
     "title": "Public Bird Banding Day - Ridgway State Park",
@@ -819,6 +794,19 @@
     "type": "Community"
   },
   {
+    "title": "West End Trail Running",
+    "href": "https://koto.org/event/west-end-trail-running/2026-09-08/",
+    "date": "2026-09-08",
+    "time": "8:15 AM",
+    "location": "",
+    "town": "",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/hiking.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens &…",
+    "type": "Outdoors & Sports"
+  },
+  {
     "title": "Functional Fitness - Strength & Mobility Training For Women",
     "href": "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
     "date": "2026-09-08",
@@ -883,6 +871,20 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Water Aerobics",
+    "href": "https://events.ourayridgwayevents.com/event/water-aerobics",
+    "date": "2026-09-09",
+    "time": "10:00 AM",
+    "location": "Ouray Hot Springs",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53887699628224/huge/dec56b594a12eb9537121495212b009fe9b63184.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join water aerobics weekly Wednesdays from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy the positive atmosphere! Water aerobics is free for pool members, and non-members can join for just $5 per…",
+    "type": "Community",
+    "endDate": "2026-10-28"
   },
   {
     "title": "Market on the Plaza",
@@ -1094,6 +1096,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Ouray Middle School will be playing Norwood Middle School @ Ouray View on site | Email this event",
     "type": "Community"
+  },
+  {
+    "title": "West End Trail Running",
+    "href": "https://koto.org/event/west-end-trail-running-2/2026-09-10/",
+    "date": "2026-09-10",
+    "time": "5:00 PM",
+    "location": "",
+    "town": "",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/hiking.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens &…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Booze and Books at Liz",
@@ -1397,6 +1412,20 @@
     "type": "Wellness"
   },
   {
+    "title": "Lone Tree Cemetery Tours",
+    "href": "https://www.telluride.com/event/lone-tree-cemetery-tours/",
+    "date": "2026-09-11",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/49105/scott-rodgerson-zlhbjxbccec-unsplash.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Join the Telluride Historical Museum for Lone Tree Cemetery Tours this fall! This Telluride Historical Museum tour …",
+    "type": "Community",
+    "endDate": "2026-10-16"
+  },
+  {
     "title": "The Meditations",
     "href": "https://www.telluride.com/event/the-meditations/",
     "date": "2026-09-11",
@@ -1434,32 +1463,6 @@
     "source": "Ouray County",
     "desc": "https://ouraycountyco.gov/calendar.aspx?EID=3779",
     "type": "Community"
-  },
-  {
-    "title": "Zumba with Gise",
-    "href": "https://koto.org/event/zumba-with-gise/2026-09-12/",
-    "date": "2026-09-12",
-    "time": "10:00 AM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/08/zumba-gise.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa,…",
-    "type": "Talks & Classes"
-  },
-  {
-    "title": "Crystal Festival – A Rock, Mineral, Gem, & Crystal Show",
-    "href": "https://koto.org/event/crystal-festival-a-rock-mineral-gem-crystal-show/2026-09-12/",
-    "date": "2026-09-12",
-    "time": "10:00 AM",
-    "location": "Telluride Conference Center, Mountain Village",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/09/bozeman-Crystal-Festival-.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join us for two incredible days celebrating rocks, minerals, fossils, gems, crystals, jewelry, and more at the Crystal Festival! 📅 September 12th and 13th, 2026 🕰️10am to 8pm both days 📍 Gallatin County Fairgrounds – Bozeman, Montana…",
-    "type": "Festivals"
   },
   {
     "title": "Dallas Park Cemetery Tour",
@@ -1513,19 +1516,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Join us at Ouray Books for an exclusive author meet & greet and book signing with author Marcy S. Wood, celebrating the launch. All Welcome! FREE EVENT! September 12th marks a somber milestone—the 139th anniversary of the tragic events…",
     "type": "Talks & Classes"
-  },
-  {
-    "title": "20th Anniversary of Down Valley Park + Rich's Retirement Party!",
-    "href": "https://koto.org/event/20th-anniversary-of-down-valley-park-richs-retirement-party/",
-    "date": "2026-09-12",
-    "time": "3:00 PM",
-    "location": "",
-    "town": "",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Celebrate the down valley park and community, and wish Rich Hamilton a happy retirement, on Saturday, September 12th, from 3-7 p.m. at Down Valley Park. Free food provided by Sawpit Mercantile and SMC Parks + Open Space. Live music with…",
-    "type": "Food & Drink"
   },
   {
     "title": "Historic Sites Tour and Reception",

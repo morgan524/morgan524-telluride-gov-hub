@@ -1,14 +1,14 @@
 {
-  "hash": "4e0ea31421691f7dfeb893a9d79b02cdad6f7778",
-  "lede": "The most consequential item this week is the San Miguel County Board of County Commissioners special meeting on September 9, where the Housing Authority will vote on Resolution 2026-34 to change Area Median Income limitations for deed-restricted properties in Pinion Park — a quiet but pivotal adjustment that shapes who actually qualifies for local housing. The County Planning Commission meets September 10 to weigh in on Land Use Code amendments covering forestry, oil and gas, and geothermal energy before those changes can move to the BOCC. The Film Festival crowd is clearing out, and the valley settles back into its working-week rhythm.",
+  "hash": "7af2ded4f8d45fb20502f9219285bbbe2241f887",
+  "lede": "The most consequential thing happening in local government this week is a San Miguel County special meeting Wednesday where the Housing Authority will vote on Resolution 2026-34, adjusting AMI limits for deed-restricted units at Pinion Park — a quiet but pivotal move that shapes who actually qualifies for workforce housing here. The county Planning Commission also takes up three Land Use Code amendments Thursday covering forestry, oil and gas, and geothermal energy, all headed toward the BOCC if they get a recommendation. Meanwhile, the Film Festival aftermath settles over town as the week finds its rhythm.",
   "notable": [
     {
       "id": 6,
-      "stake": "BOCC votes on AMI changes for Pinion Park deed-restricted housing eligibility."
+      "stake": "Vote on AMI limits for deed-restricted Pinion Park housing units."
     },
     {
       "id": 8,
-      "stake": "Planning Commission recommends on Land Use Code changes for forestry, oil/gas, geothermal."
+      "stake": "Planning Commission recommends on three Land Use Code amendments before BOCC action."
     }
   ]
 }

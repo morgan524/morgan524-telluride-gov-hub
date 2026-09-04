@@ -11,39 +11,6 @@
     "imageUrl": "https://koto.org/wp-content/uploads/2026/08/image-1.png"
   },
   {
-    "title": "Tennis Clinic 3.0-4.0",
-    "link": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-04/",
-    "description": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    "pubDate": "2026-09-04T09:30:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "imageUrl": ""
-  },
-  {
-    "title": "Up-off Gymnastics, Dance, and Spanish",
-    "link": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-09-04/",
-    "description": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
-    "pubDate": "2026-09-04T10:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Lone Cone Library Norwood",
-    "imageUrl": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
-  },
-  {
-    "title": "Ridgway Farmer's Market",
-    "link": "https://koto.org/event/ridgway-farmers-market/2026-09-04/",
-    "description": "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday",
-    "pubDate": "2026-09-04T10:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Hartwell Park Ridgway",
-    "imageUrl": ""
-  },
-  {
     "title": "Telluride Farmer's Market",
     "link": "https://koto.org/event/telluride-farmers-market/2026-09-04/",
     "description": "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.",
@@ -55,14 +22,14 @@
     "imageUrl": ""
   },
   {
-    "title": "Tennis Clinic 4.0+",
-    "link": "https://koto.org/event/tennis-clinic-4-0/2026-09-04/",
-    "description": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    "pubDate": "2026-09-04T11:00:00-06:00",
+    "title": "Gaiascope Saturday Sessions",
+    "link": "https://koto.org/event/gaiascope-saturday-sessions/",
+    "description": "Experience artist Brooke Einbender's Gaiascope installation in Mountain Village's Heritage Plaza every Saturday evening in September, with live DJ sets from 7-10 p.m. presented by Telluride Arts, TMVOA and Mindbender Studio.",
+    "pubDate": "2026-09-05T19:00:00-06:00",
     "source": "koto",
     "sourceLabel": "KOTO",
     "category": "Community Event",
-    "location": "Telluride Racquet Club, Mountain Village",
+    "location": "Heritage Plaza, Mountain Village",
     "imageUrl": ""
   },
   {
@@ -140,6 +107,17 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Telluride Post Office",
+    "imageUrl": ""
+  },
+  {
+    "title": "West End Trail Running",
+    "link": "https://koto.org/event/west-end-trail-running/2026-09-08/",
+    "description": "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens & adults 15 and older are welcome to participate. Contact director Alicia O'Connel at montrosewestrec@gmail.com or text her at 302-690-0160 for more information, including a nominal registration fee.",
+    "pubDate": "2026-09-08T08:15:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "",
     "imageUrl": ""
   },
   {
@@ -319,6 +297,17 @@
     "imageUrl": ""
   },
   {
+    "title": "West End Trail Running",
+    "link": "https://koto.org/event/west-end-trail-running-2/2026-09-10/",
+    "description": "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens & adults 15 and older are welcome to participate. Contact director Alicia O'Connel at montrosewestrec@gmail.com or text her at 302-690-0160 for more information, including a nominal registration fee.",
+    "pubDate": "2026-09-10T17:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "",
+    "imageUrl": ""
+  },
+  {
     "title": "Booze and Books at Liz",
     "link": "https://koto.org/event/booze-and-books-at-liz-2/",
     "description": "Sip on a libation while chatting with other bibliophiles about books you have read recently. It's totally open ended and open to everyone! 5:15 the second Thursday of every month. The library will get some apps for the table; you purchase your own beverage. Please sign up in advance. Meet at Liz at 200 W. Colorado Ave. in Telluride. (Entrance is on Fir St.)",
@@ -404,39 +393,6 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Telluride Racquet Club, Mountain Village",
-    "imageUrl": ""
-  },
-  {
-    "title": "Zumba with Gise",
-    "link": "https://koto.org/event/zumba-with-gise/2026-09-12/",
-    "description": "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. ¡Olvida el entrenamiento y únete a la fiesta! Zumba® es una clase de fitness de baile de alta energía que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calorías. …",
-    "pubDate": "2026-09-12T10:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/08/zumba-gise.png"
-  },
-  {
-    "title": "Crystal Festival – A Rock, Mineral, Gem, & Crystal Show",
-    "link": "https://koto.org/event/crystal-festival-a-rock-mineral-gem-crystal-show/2026-09-12/",
-    "description": "Join us for two incredible days celebrating rocks, minerals, fossils, gems, crystals, jewelry, and more at the Crystal Festival! 📅 September 12th and 13th, 2026 🕰️10am to 8pm both days 📍 Gallatin County Fairgrounds – Bozeman, Montana Whether you’re a seasoned collector, a crystal enthusiast, a geology lover, or simply looking for a fun family outing, there’s something for everyone! ✨ Shop from amazing vendors featuring: • Crystals & Minerals • Fossils & Dinosaur Fossils • Gemstones & Jewelry • Meteorites • Handmade Art & Gifts • Metaphysical Items • Home Décor • Much More! 🔨 Enjoy hands-on activities, educational displays, and discover the fascinating stories behind Earth’s natural treasures. Meet knowledgeable vendors, learn about geology, and find unique pieces to add to your collection. 👨‍👩‍👧‍👦 Family-friendly fun for all ages! …",
-    "pubDate": "2026-09-12T10:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Conference Center, Mountain Village",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/09/bozeman-Crystal-Festival-.jpg"
-  },
-  {
-    "title": "20th Anniversary of Down Valley Park + Rich's Retirement Party!",
-    "link": "https://koto.org/event/20th-anniversary-of-down-valley-park-richs-retirement-party/",
-    "description": "Celebrate the down valley park and community, and wish Rich Hamilton a happy retirement, on Saturday, September 12th, from 3-7 p.m. at Down Valley Park. Free food provided by Sawpit Mercantile and SMC Parks + Open Space. Live music with Telluride Gold Kings 4-6 p.m.",
-    "pubDate": "2026-09-12T15:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "",
     "imageUrl": ""
   }
 ]
