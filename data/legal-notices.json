@@ -284,5 +284,168 @@
     "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=209",
     "address": "",
     "smcBidID": "209"
+  },
+  {
+    "title": "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominium (Sale No. 202605)",
+    "entity": "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB (Trustee for Residential Investment Trust)",
+    "entityClass": "ent-county",
+    "entityLogo": "assessor",
+    "icon": "💰",
+    "iconClass": "type-tax",
+    "type": "Tax & Finance",
+    "filterTag": "tax-finance",
+    "summary": "Public Trustee Brandi R. Hatfield of San Miguel County is conducting a foreclosure sale on Condominium Unit 7 at 350 S Mahoney Dr, Telluride, originally granted by Ryan Pfaff. The deed of trust (recorded May 31, 2022, Reception No. 476806) is held by Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust, with an outstanding principal balance of approximately $1,199,032. The property will be auctioned to the highest cash bidder at 10:00 A.M. on September 3, 2026, at 305 W. Colorado Avenue, East entry, Telluride, CO.",
+    "deadline": "2026-09-03",
+    "expires": "2026-09-03",
+    "dates": "8/13",
+    "papers": [
+      "ttimes_0813"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
+    "address": "350 S Mahoney Dr, Unit 7, Telluride, CO 81435 (Condominium Unit 7, Double Diamond Condominium)",
+    "noticeKey": "foreclosure-sale-202605",
+    "caseNumber": "202605"
+  },
+  {
+    "title": "Public Hearing -- Adoption of 2024 International Building Code & Colorado Low Energy & Carbon Code",
+    "entity": "San Miguel County Planning Commission",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "📋",
+    "iconClass": "type-hearing",
+    "type": "Ordinance",
+    "filterTag": "ordinance",
+    "summary": "San Miguel County Planning Commission will hold a public hearing on August 13, 2026 at 9:00 AM in Telluride to consider recommending adoption of the 2024 International Building Code and the Colorado Low Energy & Carbon Code to the Board of County Commissioners. Written comments must be received by noon on Monday, August 10, 2026. Proposed amendments are available in the meeting agenda packet at www.sanmiguelcountyco.gov.",
+    "deadline": "2026-08-10T12:00:00",
+    "expires": "2026-08-13",
+    "dates": "7/30",
+    "papers": [
+      "ttimes_0730"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
+    "address": "Telluride, Colorado (San Miguel County)",
+    "noticeKey": "COL-000206-ibc-adoption"
+  },
+  {
+    "title": "Public Notice -- Town of Telluride 2027 Budget Preparation",
+    "entity": "Town of Telluride",
+    "entityClass": "ent-county",
+    "entityLogo": "assessor",
+    "icon": "💰",
+    "iconClass": "type-tax",
+    "type": "Tax & Finance",
+    "filterTag": "tax-finance",
+    "summary": "The Town Manager of Telluride has issued public notice of the 2027 budget preparation process, effective July 30, 2026. All town departments, boards, commissions, and citizens must submit funding requests to the Town Finance Director no later than 5:00 PM on Friday, August 21, 2026. An exception applies for organizations seeking CCAASE grants, with separate guidelines available at www.telluride.gov.",
+    "deadline": "2026-08-21T17:00:00",
+    "expires": "2026-08-21",
+    "dates": "7/30",
+    "papers": [
+      "ttimes_0730"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
+    "address": "135 W. Columbia Ave (Town Hall), Telluride, CO 81435",
+    "noticeKey": "COL-000208-telluride-2027-budget"
+  },
+  {
+    "title": "Public Notice -- Montrose Memorial Hospital Board of Directors Applications",
+    "entity": "Montrose Memorial Hospital, Inc.",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "Montrose Memorial Hospital, Inc., a Colorado community nonprofit corporation, is accepting applications for open positions on its Board of Directors. Application packets are available online at www.montrosehealth.com, by email, or in person at 800 South 3rd Street, Montrose, Colorado. Completed applications must be returned by 5:00 PM on Friday, August 14, 2026, with elections to be held at the Board's annual meeting in October.",
+    "deadline": "2026-08-14T17:00:00",
+    "expires": "2026-08-14",
+    "dates": "7/30",
+    "papers": [
+      "ttimes_0730"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
+    "address": "800 South 3rd Street, Montrose, Colorado",
+    "noticeKey": "COL-000203-montrose-hospital-board"
+  },
+  {
+    "title": "Public Notice -- Farmers' Water Development Company Replacement Share Certificate #887",
+    "entity": "Farmers' Water Development Company",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "💧",
+    "iconClass": "type-hearing",
+    "type": "Utilities",
+    "filterTag": "utilities",
+    "summary": "The Farmers' Water Development Company (FWDC) has received a written request to replace lost, destroyed, or wrongfully taken share certificate #887, currently issued in the name of A.F. Newans M.D., C.P. Unless a written objection is filed with FWDC at PO Box 10, Norwood, CO 81423 within 30 days of the last publication date in the Norwood Post, a replacement certificate will be issued and the original permanently cancelled. The last publication date in this outlet is July 30, 2026.",
+    "deadline": "2026-08-29",
+    "expires": "2026-08-29",
+    "dates": "7/30",
+    "papers": [
+      "ttimes_0730"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
+    "address": "Norwood, Colorado 81423 (FWDC service area)",
+    "noticeKey": "COL-000181-fwdc-share-cert-887"
+  },
+  {
+    "title": "RFP -- Interior Repainting, Historic Placerville Schoolhouse",
+    "entity": "San Miguel County Fleet & Facilities",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County is soliciting proposals from contractors to repaint the interior of the Historic Placerville Schoolhouse at 400 Front St, Placerville. RFP details are available at www.sanmiguelcountyco.gov/bids.aspx or from the Fleet & Facilities Department at 333 W Colorado Ave, 2nd Floor, Telluride. Proposals must be submitted by 5:00 PM on Wednesday, August 6, 2026, either via email or in person at the Fleet & Facilities Department.",
+    "deadline": "2026-08-06T17:00:00",
+    "expires": "2026-08-06",
+    "dates": "7/30",
+    "papers": [
+      "ttimes_0730"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
+    "address": "400 Front St, Placerville, Colorado",
+    "noticeKey": "COL-000205-placerville-schoolhouse-rfp"
+  },
+  {
+    "title": "Foreclosure Sale Notice -- 350 S Mahoney Dr Unit 7, Telluride (Sale No. 2026-05)",
+    "entity": "San Miguel County Public Trustee / Wilmington Savings Fund Society FSB",
+    "entityClass": "ent-county",
+    "entityLogo": "assessor",
+    "icon": "💰",
+    "iconClass": "type-tax",
+    "type": "Tax & Finance",
+    "filterTag": "tax-finance",
+    "summary": "San Miguel County Public Trustee Brandi R. Hatfield will conduct a public auction on September 3, 2026 at 10:00 AM at 305 W. Colorado Avenue, Telluride, for Condominium Unit 7, Double Diamond Condominium (350 S Mahoney Dr Unit 7, Telluride, CO 81435). The original grantor Ryan Pfaff defaulted on a deed of trust with an outstanding principal balance of approximately $1,199,032.37, originally benefiting Deephaven Mortgage LLC via MERS. The current debt holder is Wilmington Savings Fund Society, FSB, as Trustee for Residential Investment Trust.",
+    "deadline": "2026-09-03T10:00:00",
+    "expires": "2026-09-03",
+    "dates": "7/30",
+    "papers": [
+      "ttimes_0730"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
+    "address": "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
+    "noticeKey": "foreclosure-2026-05-double-diamond-unit7",
+    "caseNumber": "2026-05"
+  },
+  {
+    "title": "Foreclosure Sale Notice -- TBD Stonegate Drive, Mountain Village (Sale No. 2026-04)",
+    "entity": "San Miguel County Public Trustee / Federal Holding Realty",
+    "entityClass": "ent-county",
+    "entityLogo": "assessor",
+    "icon": "💰",
+    "iconClass": "type-tax",
+    "type": "Tax & Finance",
+    "filterTag": "tax-finance",
+    "summary": "San Miguel County Public Trustee Brandi R. Hatfield will conduct a public auction on September 3, 2026 at 10:00 AM at 305 W. Colorado Avenue, Telluride, for Lot 166AR2, Telluride Mountain Village (vacant land on Stonegate Drive, Mountain Village, CO 81435). The original grantor Two Stonegate LLC defaulted on a deed of trust with an outstanding principal balance of $500,000.00, with Federal Holding Realty as both original beneficiary and current debt holder. The deed of trust was recorded July 2, 2025.",
+    "deadline": "2026-09-03T10:00:00",
+    "expires": "2026-09-03",
+    "dates": "7/30",
+    "papers": [
+      "ttimes_0730"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
+    "address": "TBD Stonegate Drive, Mountain Village, CO 81435 (Lot 166AR2, Telluride Mountain Village)",
+    "noticeKey": "foreclosure-2026-04-stonegate-mv",
+    "caseNumber": "2026-04"
   }
 ]
