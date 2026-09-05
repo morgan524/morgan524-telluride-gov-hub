@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 9-4-26",
+    "source": "KOTO Community Radio",
+    "date": "September 5, 2026",
+    "newsTopic": "community",
+    "copy": "On this week’s Regional Roundup, we hear about efforts to repeal the Roadless Rule, which protects national forests, and reaction from public lands advocates in Wyoming. Then, we hear from the Southern Ute Tribe about its objections to a proposed mine in the La Plata Mountains. We’ll also hear about the challenges of recycling in rural Colorado, an",
+    "href": "https://koto.org/news/newscast-9-4-26/"
+  },
+  {
     "title": "Newscast 9-3-26",
     "source": "KOTO Community Radio",
     "date": "September 4, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "community",
     "copy": "Region Considers Chamber of Commerce; Governments Talk Childcare",
     "href": "https://koto.org/news/newscast-8-24-26/"
-  },
-  {
-    "title": "Newscast 8-21-26",
-    "source": "KOTO Community Radio",
-    "date": "August 22, 2026",
-    "newsTopic": "recreation",
-    "copy": "On this week’s Regional Roundup, we head to the alpine tundra of Rocky Mountain National Park with naturalists searching for ptarmigan. We also learn about efforts to restore beaver habitat in other parts of the park. Then, we travel to the small Western Colorado town of Lake City, where three newly trained EMTs are stepping up to help provide medi",
-    "href": "https://koto.org/news/newscast-8-21-26/"
   }
 ]

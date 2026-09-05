@@ -146,18 +146,6 @@ function resolveEventImage(e, opts) {
 // stays current automatically; the static config is the fallback for
 // sources without a PDF agenda.
 const MEETING_AGENDA_META = {
-  "telluride|2026-08-05|Ecology Commission - Aug 05 2026":
-    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8117","zoomUrl":"https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1","phone":"970-728-3071"},
-
-  "telluride|2026-08-05|Commission for Community Assistance, Arts & Special Events - Aug 05 2026":
-    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8065","zoomUrl":"https://us06web.zoom.us/meeting/register/tZ0pc-ChqDwsGNFpPigfqqLQptmoMmpJdiOx"},
-
-  "telluride|2026-08-05|Telluride Housing Authority Subcommittee - Aug 05 2026":
-    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8162","zoomUrl":"https://us06web.zoom.us/j/83022451705?pwd=Lj8jkLF9GQny7CWBqvP8IYkQhviQBb.1","meetingId":"830 2245 1705","passcode":"229528.","phone":"719) 359-4580"},
-
-  "county|2026-08-05|Board of County Commissioners Meeting":
-    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/886/files/agenda/1944","zoomUrl":"https://us02web.zoom.us/meeting/register/Usig5v0QSkGHbjSBf4K6oA","meetingId":"838 9184 9311","passcode":"530688","phone":"719-359-4580"},
-
   "telluride|2026-08-06|Town Council Retreat - Aug 06 2026":
     {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8050","zoomUrl":"https://us06web.zoom.us/meeting/register/8596sfn-QZC7tbYJiXF4YA","meetingId":"845 3020 1574","passcode":"082987.","phone":"719) 359-4580"},
 
@@ -233,12 +221,6 @@ const MEETING_AGENDA_META = {
   "med|2026-08-27|Regular Board Meeting":
     {"sv":4,"agendaUrl":"https://www.tellmed.org/files/2218817c5/THD+Reg+BOD+Mtg+8.27.26+Agenda.pdf","zoomUrl":"https://us02web.zoom.us/j/89509331558","meetingId":"895 0933 1558"},
 
-  "norwood|2026-08-05|Board of Trustees Work Session":
-    {"agendaUrl":"https://www.norwoodtown.com/files/6bce913bf/08.05.2026+Work+Session+Board+of+Trustee+Agenda+ADA.pdf","zoomUrl":"https://us02web.zoom.us/j/87433907008","meetingId":"874 3390 7008","passcode":"126738","phone":"970-327-4288","sv":4},
-
-  "ouray|2026-08-05|, 2-4:00 PM - Virtual Meeting Only - No in-person attendance.  Work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (Packet materials are attached to the agenda)":
-    {"agendaUrl":"https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1014","sv":4},
-
   "telluride|2026-09-01|Town Council - Sep 01 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/XA2kUuXlTg2aifJ0Qwwc-g","meetingId":"847 6915 1454","passcode":"077111.","phone":"719) 359-4580"},
 
@@ -282,7 +264,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "ridgway|2026-09-09|Ridgway Town Council Regular Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"},
+    {"sv":4,"agendaUrl":"https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---September-9%2C-2026.pdf","zoomUrl":"https://us02web.zoom.us/j/81840930273?pwd=2OkbQtAHo5WBatJ59jd6UlvLRe6R88.1","meetingId":"818 4093 0273","passcode":"837340","phone":"346 248 7799"},
 
   "county|2026-09-09|Board of County Commissioners Work Session":
     {"sv":4,"ph":"5bee59f208152c68"},
@@ -435,13 +417,16 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"1f577e951aaf55d2"},
 
   "county|2026-09-09|Board of County Commissioners Special Meeting":
-    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/857/files/agenda/1983","zoomUrl":"https://us02web.zoom.us/meeting/register/Jxg2WRQ2SEKGwI4gi2zyAg","meetingId":"867 2008 8025","passcode":"755642","phone":"719-359-4580"},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/857/files/agenda/1986","zoomUrl":"https://us02web.zoom.us/meeting/register/Jxg2WRQ2SEKGwI4gi2zyAg","meetingId":"867 2008 8025","passcode":"755642","phone":"719-359-4580"},
 
   "ouray|2026-09-16|, 1-4:00 PM (@ OURAY COURTHOUSE!) - The PC will hold 2 public hearings; Curry Regular PUD, and an Exemption application from Clifford Pastor to subdivide his parcel into 2 lots. (Packet materials are under media TV icon)":
     {"agendaUrl":"https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1017","sv":4},
 
   "norwood|2026-09-08|NWC Rescheduled to 09/22/2026":
-    {"agendaUrl":"https://www.norwoodtown.com/files/5f8304a63/09.08.2026+RESCHEDULED+NWC+Agenda.pdf","zoomUrl":"https://us02web.zoom.us/j/88274908233","meetingId":"882 7490 8233","passcode":"997236","phone":"346-248-7799","sv":4}
+    {"agendaUrl":"https://www.norwoodtown.com/files/5f8304a63/09.08.2026+RESCHEDULED+NWC+Agenda.pdf","zoomUrl":"https://us02web.zoom.us/j/88274908233","meetingId":"882 7490 8233","passcode":"997236","phone":"346-248-7799","sv":4},
+
+  "telluride|2026-10-05|Open Space Commission - Oct 05 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132","sv":4,"ph":"681ef775e57db365"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -791,79 +776,15 @@ const MEETING_PREVIEWS = {
     "The Planning Commission is expected to hold two public hearings on September 16 at the Ouray Courthouse. Members will review the Curry Regular PUD proposal and consider an exemption application from Clifford Pastor seeking to subdivide his parcel into two lots.",
 
   "norwood|2026-09-08|NWC Rescheduled to 09/22/2026":
-    "The Norwood Water Commission meeting originally scheduled for September 8, 2026 has been rescheduled to September 22, 2026 at 6:30 p.m. No specific agenda items have been listed at this time."
+    "The Norwood Water Commission meeting originally scheduled for September 8, 2026 has been rescheduled to September 22, 2026 at 6:30 p.m. No specific agenda items have been listed at this time.",
+
+  "ridgway|2026-09-09|Ridgway Town Council Regular Meeting":
+    "Council is expected to approve routine financial demands, authorize a mayoral letter supporting a proposed recreation fee structure at Blue Lakes, and consider additional consent calendar items. The meeting will be held both in person in Ridgway, Colorado and virtually via Zoom.",
+
+  "telluride|2026-10-05|Open Space Commission - Oct 05 2026":
+    "The Open Space Commission is expected to discuss matters related to open space acquisition, management, and planning priorities. The meeting may also address implications of Ordinance #1640, which amended Telluride's Land Use Code to implement the Colorado Wildfire Resiliency Code, passed by Town Council in August 2026."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
-  {
-    title: "2026 Chamber Meeting, December",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 8, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
-    img: ""
-  },
-  {
-    title: "Noel Night",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 4, 2026",
-    newsTopic: "community",
-    copy: "Community shopping event and celebration.",
-    href: "https://norwoodcolorado.com/event/noel-night-3/",
-    img: ""
-  },
-  {
-    title: "West End Parade of Lights & Elfin Eve",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 3, 2026",
-    newsTopic: "arts-culture",
-    copy: "Holiday parade and festival.",
-    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, November",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "November 10, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, October",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "October 13, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
-    img: ""
-  },
-  {
-    title: "Pioneer Day",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "September 26, 2026",
-    newsTopic: "community",
-    copy: "Celebration of local history and pioneers.",
-    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, September",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "September 8, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
-    img: ""
-  },
   {
     title: "FEMA Public Assistance Approved for Colorado’s Major Disaster Declaration",
     source: "Ouray County",
@@ -1051,22 +972,10 @@ const SMC_ALERTS = [
 const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-04';
-const LEGAL_NOTICES_CACHE_DATE = '2026-09-04';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-05';
+const LEGAL_NOTICES_CACHE_DATE = '2026-09-05';
 
 const MANUAL_SUMMARIES = {
-  "telluride|2026-08-05|Ecology Commission - Aug 05 2026":
-    "The Ecology Commission meets August 5 for a work session heavy on planning. Two items will advance the 2027 Climate Action Plan update — one broad discussion of the working document, and a focused session on the Materials & Consumption focus area. The commission will also plan Black Bear Safety Week. Minutes from the July 8 meeting are up for approval; that session covered Transportation & Land Use and Materials & Consumption focus areas, and the commission appointed Ruthie Boyd as primary and Kristen Rosenbaum as alternate to the Green Grants selection subcommittee.",
-
-  "telluride|2026-08-05|Commission for Community Assistance, Arts & Special Events - Aug 05 2026":
-    "CCAASE's August meeting is grant-season housekeeping more than anything else. The board will interview four organizations — Second Chance Humane Society, Telluride Soccer Club, Telluride Mountain Club, and Sheep Mountain Alliance — as part of the 2026 grant cycle review. On the action side: a calendar date request from Telluride Humane Society for a Tails on the Trail 5K fun run on October 10, 2026 (using Elks Park, the River Trail, and Colorado Ave.); final approval of 2027 CCAASE grant materials including guidelines and application; and a recommendation to Town Council on the 2027 CCAASE budget allocation. The grant materials were workshopped at the July meeting — this is the approval step.",
-
-  "telluride|2026-08-05|Telluride Housing Authority Subcommittee - Aug 05 2026":
-    "The Telluride Housing Authority Subcommittee meets August 5 with two items on the deed-restricted housing front. The action item is a request from Lela and Jon Martin to exceed the 5% Permitted Capital Improvement (PCI) limit on their Gold Run unit — they need a new roof, bid at $47,743.86 (roughly 17% of their original purchase price), but their 2010-era deed restriction only allows staff to approve up to 5% without a finding that the work increases the unit's capacity to house additional occupants. Staff recommends approval on the merits of the failing roof, but flags that the legal standard may not be met — leaving the Subcommittee in a bind that could resolve by encouraging the Martins to update to the current deed restriction language, which allows up to 10% without that constraint. The worksession takes up a request from Alpine Planning to deed-restrict Unit H at Pacifica House Condominiums as an employee dwelling unit under Guidelines §211, as mitigation for new free-market construction.",
-
-  "county|2026-08-05|Board of County Commissioners Meeting":
-    "Three Land Use Code amendments are the main event on August 5. The BOCC will hold public hearings on all three: a change to the definition of 'Qualified Owner' in Section 5-1305B (with related amendments to 5-1305C and 5-1350F), a wildfire areas update to Section 5-406 and Article 7 definitions, and a continued hearing on nonconforming lots — all heading toward formal resolutions. On the administrative side, the board takes up a tax abatement petition from Robert N. and Claudina E. Posey (recommended for denial) and approval of the 2026 Board of Equalization officer recommendations. The consent agenda covers meeting minutes and two Chevrolet Silverado pickups for Road and Bridge at up to $89,400. The BLM Tres Rios Field Office also gets time for an update.",
-
   "telluride|2026-08-06|Town Council Retreat - Aug 06 2026":
     "The August 6 retreat is a single three-hour work session in which Council will set the Town's goals and objectives for 2027. No votes, no land-use items — just the annual exercise of deciding what this Council wants to prioritize in the year ahead. Those priorities, once set, tend to shape budget decisions and staff direction for the whole cycle, so the conversation matters even if nothing is formally adopted.",
 
@@ -1142,12 +1051,6 @@ const MANUAL_SUMMARIES = {
   "med|2026-08-27|Regular Board Meeting":
     "The Telluride Hospital District board meets July 23 with a heavy agenda centered on the new facility project. Two items stand out: an update on the RFQ for architect selection, and a discussion and possible action on a Two Site Model — a direction that would shape what gets built, where, and at what scale. The board will also take up a Letter of Intent with CommonSpirit Health, a large Catholic health system, which could define the partnership framework for whatever comes next. Routine finance and administrative updates round out the morning, along with an executive session for CEO review.",
 
-  "norwood|2026-08-05|Board of Trustees Work Session":
-    "A short work session for the Norwood Board of Trustees, with two lease renewals on the table — Motion Sense Therapy and Performance at 1110 Lucerne St and Austin Overholt at 1475 Pine St. No executive session, no code changes, no land-use items. Formal action can't be taken at a work session, so any decisions will follow at a regular meeting.",
-
-  "ouray|2026-08-05|, 2-4:00 PM - Virtual Meeting Only - No in-person attendance.  Work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (Packet materials are attached to the agenda)":
-    "Ouray County Planning Commission meets virtually August 5th, 2–4 PM, for a work session on possible changes to the Land Use Code's Section 2 — the definitions section. No in-person attendance. Work sessions like this are where the real shaping happens: definitions determine what the rules actually mean in practice, and a tweak to how a term is defined can quietly shift what gets permitted, what gets denied, and how future applications get read. The packet is attached to the posted agenda, but the agenda itself doesn't spell out which definitions are under review.",
-
   "telluride|2026-09-01|Town Council - Sep 01 2026":
     "Three work sessions open the day: a deep look at Comprehensive Plan goals and objectives with project consultants, a Gondola Subcommittee update, and a review of proposals for a third-party audit of the Town's rental housing policies — that last one worth watching given how central rent policy has become to who can stay in the canyon. A second work session later covers AMI increases and rental rate adjustments for 2027 budgetary planning. On the action side: second reading of the 2026 budget reappropriation ordinance; a resolution permitting dogs on a limited stretch of the River Trail near the Public Works facility; approval of a wildfire mitigation project south of the Shandoka Apartments; and first readings authorizing the sale of three deed-restricted units — Spruce House Unit H and two FINO II units. Council will also consider finalizing a 30-minute free parking program. The long-running appeal of the Stender Residence HARC approval is continued again. Five board and commission seats are up for appointment.",
 
@@ -1191,7 +1094,7 @@ const MANUAL_SUMMARIES = {
     "The September 9, 2026 Norwood Board of Trustees Meeting agenda hasn't been posted yet.",
 
   "ridgway|2026-09-09|Ridgway Town Council Regular Meeting":
-    "The September 9, 2026 Ridgway Town Council Regular Meeting agenda hasn't been posted yet.",
+    "A heavy agenda for a small-town council — and some of it carries real weight. The Council will ratify two letters already sent: one backing a federal Major Disaster Declaration for the Gold Mountain Fire, which has burned nearly 40,000 acres northeast of Ouray, severed Highway 550 repeatedly, and left communities like Ridgway isolated and facing years of post-fire debris flows; and one supporting proposed recreation fees at Blue Lakes in the Mount Sneffels Wilderness to address overcrowding. On the policy side: interviews and appointment of Sustainability Advisory Board members; a Notice of Award for pre-approved ADU architectural design plans; authorization of more than $25,000 for sidewalk repairs near the Post Office and Clinton Street; a request from the Athletic Park Coalition to fund professional design services for a bike park; proposed changes to the Marshal's Office overtime policy; acceptance of the completed ductile iron pipe replacement project; direction on Wastewater Treatment Plant siting options; and consideration of scaling back from Stage 2 to Stage 1 fire restrictions and rescinding Stage 2 mandatory water restrictions.",
 
   "county|2026-09-09|Board of County Commissioners Work Session":
     "The September 9, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet.",
@@ -1350,7 +1253,10 @@ const MANUAL_SUMMARIES = {
     "Ouray County's Planning Commission meets at the Ouray Courthouse for two public hearings. First up is the Curry Regular PUD — a formal planned unit development application that will get a full public hearing. Second is an exemption application from Clifford Pastor to subdivide his parcel into two lots. Both items require public hearings before the PC can make a recommendation, and packet materials are available through the county's agenda portal.",
 
   "norwood|2026-09-08|NWC Rescheduled to 09/22/2026":
-    "The September 8th Norwood Water Commission meeting has been rescheduled to Tuesday, September 22, 2026, at 6:30 p.m. at Norwood Town Hall."
+    "The September 8th Norwood Water Commission meeting has been rescheduled to Tuesday, September 22, 2026, at 6:30 p.m. at Norwood Town Hall.",
+
+  "telluride|2026-10-05|Open Space Commission - Oct 05 2026":
+    "The October 5, 2026 Open Space Commission agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1716,6 +1622,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Court dismisses ‘deficient’ Telski lawsuit against Fee, Prohaska, Wisor",
+    source: "Telluride Times",
+    date: "September 5, 2026",
+    firstSeen: "2026-09-05",
+    newsTopic: "recreation",
+    copy: "A judge dismissed Telski's lawsuit against three former local officials — Meehan Fee, Marti Prohaska, and Paul Wisor — who had approached resort owner Chuck Horning with a $127.5M buyout offer during last winter's ski patrol strike. The court found Telski failed to allege any improper regulatory action that caused its losses, ruling the strike itself caused the damages.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_9a0c040a-80d1-4915-85ad-6a7719bd024a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/db/3db7d153-55d2-4772-bcc2-80b522ff6e2a/6a9b708f63ada.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Colorado man who was free on bond in wife's alleged killing is jailed after hit-and-run",
     source: "Telluride Times",
@@ -2644,54 +2562,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Updated: Museum events bring history to life",
-    source: "Telluride Times",
-    date: "August 22, 2026",
-    firstSeen: "2026-08-29",
-    newsTopic: "arts-culture",
-    copy: "The Telluride Historical Museum has two signature summer events coming up: An Evening with Ken Burns on Aug. 30 at the Palm Theatre, screening episode five of *The Vietnam War*, and the Telluride Dinner Party on Sept. 10 at the museum itself. This year's dinner is notable — people born in the building when it was a hospital will be there mingling with guests. The museum is also marking its 60th anniversary.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_6aaa2989-5168-4f5c-813a-d3eaf0ed3ca0.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/2a/a2a66974-708c-4ae8-93f0-c3129561bfee/6a7b882ed21ef.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Inside Trump's remake of the White House Rose Garden. First a stone patio, then statues",
-    source: "Telluride Times",
-    date: "August 22, 2026",
-    firstSeen: "2026-08-22",
-    newsTopic: "community",
-    copy: "The White House Rose Garden has been reworked — lawn replaced with white stone patio, now featuring bronze statues of Washington, Hamilton, Franklin, Jefferson, and a Revolutionary War piece. The Jefferson sculpture came from Loveland, CO sculptor George Lundeen, gifted ahead of the nation's 250th.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_b939f5aa-5091-5a89-9ce0-179dbddeb3d8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/f0/ff06f8bc-5244-5f68-8c06-4403371344a2/6a899165603b6.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "A promise made — and kept",
-    source: "Telluride Times",
-    date: "August 22, 2026",
-    firstSeen: "2026-08-22",
-    newsTopic: "education",
-    copy: "What started as one scholarship pledge in 2016 has grown into more than 50 SPARKy Latina Scholarships for students across Telluride, Norwood, Nucla, and Naturita. The all-volunteer program also runs a monthly club offering tutoring, college application help, and career workshops. Most recipients are first-generation college students.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_5070c140-1469-4aed-83b9-ef98089bd22f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/36/93639c91-ce6e-42d6-a201-074c175c4417/6a8805e0da70a.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Federal officials announce water cuts as Colorado River supplies continue to plunge",
-    source: "Telluride Times",
-    date: "August 22, 2026",
-    firstSeen: "2026-08-22",
-    newsTopic: "community",
-    copy: "Federal officials announced Colorado River water cuts of 1.25 million acre-feet annually for California, Nevada, and Arizona through 2028, with Arizona absorbing the largest share. Upstream states including Colorado face no cuts for now. Lake Mead and Lake Powell have both hit historic lows, and the current rules governing river use expire in October with no long-term agreement yet in place.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_fe86e7b5-5fb5-52f4-85c1-d8ef2ec9b189.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town Council Proclaims September 7-11 Black Bear Safety Week",
     source: "Town of Telluride",
     date: "September 3, 2026",
@@ -2793,7 +2663,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Ridgway Rescinds Stage 2 Fire Restrictions, Reinstates Stage 1 Fire Restrictions effective 12:01am on Thursday, Sept. 3rd - Sept. 2, 2026",
     source: "Town of Ridgway",
-    date: "September 4, 2026",
+    date: "September 5, 2026",
     firstSeen: "2026-09-02",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2815,7 +2685,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Public Hearing Notice Wed., Sept. 16, 2026 at 5:30pm - 1) Site Plan and Conditional Use Permit for Riverbend Townhomes (TBD Liddell Dr.); 2) Plat Amendment of Lot 4 and Outlot of Riverview Business Park Subdivision (TBD Liddell Dr.); 3) PUD Amendment Lena Street Commons Planned Unit Development (TBD N. Lena Street) - Sept. 2, 2026",
     source: "Town of Ridgway",
-    date: "September 4, 2026",
+    date: "September 5, 2026",
     firstSeen: "2026-09-02",
     newsTopic: "land-use",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2826,6 +2696,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 9-4-26",
+    source: "KOTO Community Radio",
+    date: "September 5, 2026",
+    newsTopic: "community",
+    copy: "On this week’s Regional Roundup, we hear about efforts to repeal the Roadless Rule, which protects national forests, and reaction from public lands advocates in Wyoming. Then, we hear from the Southern Ute Tribe about its objections to a proposed mine in the La Plata Mountains. We’ll also hear about the challenges of recycling in rural Colorado, an",
+    href: "https://koto.org/news/newscast-9-4-26/"
+  },
   {
     title: "Newscast 9-3-26",
     source: "KOTO Community Radio",
@@ -2881,14 +2759,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "community",
     copy: "Region Considers Chamber of Commerce; Governments Talk Childcare",
     href: "https://koto.org/news/newscast-8-24-26/"
-  },
-  {
-    title: "Newscast 8-21-26",
-    source: "KOTO Community Radio",
-    date: "August 22, 2026",
-    newsTopic: "recreation",
-    copy: "On this week’s Regional Roundup, we head to the alpine tundra of Rocky Mountain National Park with naturalists searching for ptarmigan. We also learn about efforts to restore beaver habitat in other parts of the park. Then, we travel to the small Western Colorado town of Lake City, where three newly trained EMTs are stepping up to help provide medi",
-    href: "https://koto.org/news/newscast-8-21-26/"
   }
 ];
 
@@ -3769,6 +3639,116 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Zumba with Gise",
+    link: "https://koto.org/event/zumba-with-gise/2026-09-12/",
+    description: "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. ¡Olvida el entrenamiento y únete a la fiesta! Zumba® es una clase de fitness de baile de alta energía que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calorías. …",
+    pubDate: "2026-09-12T10:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/zumba-gise.png"
+  },
+  {
+    title: "Crystal Festival – A Rock, Mineral, Gem, & Crystal Show",
+    link: "https://koto.org/event/crystal-festival-a-rock-mineral-gem-crystal-show/2026-09-12/",
+    description: "Join us for two incredible days celebrating rocks, minerals, fossils, gems, crystals, jewelry, and more at the Crystal Festival! 📅 September 12th and 13th, 2026 🕰️10am to 8pm both days 📍 Gallatin County Fairgrounds – Bozeman, Montana Whether you’re a seasoned collector, a crystal enthusiast, a geology lover, or simply looking for a fun family outing, there’s something for everyone! ✨ Shop from amazing vendors featuring: • Crystals & Minerals • Fossils & Dinosaur Fossils • Gemstones & Jewelry • Meteorites • Handmade Art & Gifts • Metaphysical Items • Home Décor • Much More! 🔨 Enjoy hands-on activities, educational displays, and discover the fascinating stories behind Earth’s natural treasures. Meet knowledgeable vendors, learn about geology, and find unique pieces to add to your collection. 👨‍👩‍👧‍👦 Family-friendly fun for all ages! …",
+    pubDate: "2026-09-12T10:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Conference Center, Mountain Village",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/09/bozeman-Crystal-Festival-.jpg"
+  },
+  {
+    title: "The LA FAMILIA MUSIC GROUP Experience (Telluride Theatre)",
+    link: "https://koto.org/event/the-la-familia-music-group-experience-telluride-theatre/",
+    description: "Telluride Theatre FRINGE Projects, in collaboration with LA FAMILIA MUSIC GROUP, invites you to a day of Youth Music Workshops and a Community Concert! All events are FREE, with the option to donate to Telluride Theatre. During the day, students (age 10 – 18) can take part in a DJ & Beat-Making Workshop, where they will get a hands-on introduction to music production, creating loops, song mixing and more. No previous music or DJ experience required! Later that evening, students can showcase what they've learned during a COMMUNITY CONCERT with La Familia Music Group, featuring more local bands from LFMG's music collective. The Youth Workshop & Community Concert are both Bilingual, English and Spanish. All members of our community are invited to take part in this day of music, education and celebration. Learn more and Register on Telluride Theatre's website.",
+    pubDate: "2026-09-12T11:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Sheridan Opera House, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/09/lfmg-instagram-post.png"
+  },
+  {
+    title: "20th Anniversary of Down Valley Park + Rich's Retirement Party!",
+    link: "https://koto.org/event/20th-anniversary-of-down-valley-park-richs-retirement-party/",
+    description: "Celebrate the down valley park and community, and wish Rich Hamilton a happy retirement, on Saturday, September 12th, from 3-7 p.m. at Down Valley Park. Free food provided by Sawpit Mercantile and SMC Parks + Open Space. Live music with Telluride Gold Kings 4-6 p.m.",
+    pubDate: "2026-09-12T15:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
+  },
+  {
+    title: "Crystal Festival – A Rock, Mineral, Gem, & Crystal Show",
+    link: "https://koto.org/event/crystal-festival-a-rock-mineral-gem-crystal-show/2026-09-13/",
+    description: "Join us for two incredible days celebrating rocks, minerals, fossils, gems, crystals, jewelry, and more at the Crystal Festival! 📅 September 12th and 13th, 2026 🕰️10am to 8pm both days 📍 Gallatin County Fairgrounds – Bozeman, Montana Whether you’re a seasoned collector, a crystal enthusiast, a geology lover, or simply looking for a fun family outing, there’s something for everyone! ✨ Shop from amazing vendors featuring: • Crystals & Minerals • Fossils & Dinosaur Fossils • Gemstones & Jewelry • Meteorites • Handmade Art & Gifts • Metaphysical Items • Home Décor • Much More! 🔨 Enjoy hands-on activities, educational displays, and discover the fascinating stories behind Earth’s natural treasures. Meet knowledgeable vendors, learn about geology, and find unique pieces to add to your collection. 👨‍👩‍👧‍👦 Family-friendly fun for all ages! …",
+    pubDate: "2026-09-13T10:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Conference Center, Mountain Village",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/09/bozeman-Crystal-Festival-.jpg"
+  },
+  {
+    title: "Gentle Yoga with Kristen Milord",
+    link: "https://koto.org/event/gentle-yoga-with-kristen-milord/2026-09-13/",
+    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
+    pubDate: "2026-09-13T11:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/gentle-yoga-kristen.png"
+  },
+  {
+    title: "Drop In Tech Time with Oliver",
+    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-09-13/",
+    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
+    pubDate: "2026-09-13T13:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://koto.org/event/tea-and-tarot/2026-09-13/",
+    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    pubDate: "2026-09-13T14:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "Telluride Choral Society WinterSing rehearsals & auditions",
+    link: "https://koto.org/event/telluride-choral-society-wintersing-rehearsals-auditions/",
+    description: "WinterSing 2026 rehearsals begin Sunday, Sept. 13th, 4:30, at Christ Church. No experience necessary. Open to everyone aged 13 and up. If you want to audition for the Chamber Singers, come at 3:30. To learn more, visit telluridechoralsociety.org",
+    pubDate: "2026-09-13T15:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Christ Church Telluride, TELLURIDE",
+    imageUrl: ""
+  },
+  {
+    title: "Piano on the Patio with Oliver",
+    link: "https://koto.org/event/piano-on-the-patio-with-oliver/",
+    description: "Craving a break from the hustle and bustle of your day? Take a lunchtime escape to the library for a dose of tranquility. Settle into a comfy chair and unwind with ethereal piano melodies played live by WPL's very own, Oliver Henry, of Après Nova. Unplug from your devices and bring a book, magazine, or simply enjoy a moment of peace and quiet. This program is a great way to de-stress, recharge, and refocus for the rest of your afternoon. Feel free to bring your lunch and enjoy it while listening to the music! No registration required. Join us on the second Monday of the month from 12-1pm at the Wilkinson Public Library.",
+    pubDate: "2026-09-14T08:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
   }
 ];
@@ -5599,6 +5579,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/parks-and-recreation-committee-parc",
     description: "The Parks and Recreation Committee (PARC) is made up of community members who volunteer their time to support and enhance recreational opportunities in Ouray. PARC organizes safe, family-friendly events that bring the community together. Events include Broomball, Cabin Fever Days, Dodgeball, Softball, and Game Night, among others. The committee works closely with local organizations, businesses, and other City committees to carry out its mission. Community partners include the Ouray Hot Springs Pool & Fitness Center, the Beautification Committee, and the Ouray School District. PARC also plays an important role in developing and implementing master plans for the City’s park system, helping ensure that Ouray’s parks and recreational spaces serve residents and visitors for years to come. Members of the public are welcome to attend these meetings. Meetings: PARC meets monthly on the first Tuesday at 6:00 p.m. …",
     pubDate: "2026-10-07T00:00:00.000Z",
+    endDate: "2026-11-04",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6487,18 +6468,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/36708/artwalk-2200x1237.800x533.webp"
   },
   {
-    title: "Rooftop Pop-Up Local Artist Market",
-    link: "https://www.telluride.com/event/pop-up-local-artist-market/",
-    description: "Shop an incredible rotating selection of Ah Haa’s staff, instructors and open studio memeber’s artwork in the …",
-    pubDate: "2026-06-04",
-    endDate: "2026-09-03",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/58400/screenshot_2026-01-21_at_4_30_00_pm.800x533.webp"
-  },
-  {
     title: "Free Tasting",
     link: "https://www.telluride.com/event/free-tasting-at-telluride-wine-merchant/",
     description: "Free tasting every Thursday from 4-6pm. The theme of the tasting will vary from different seasonal selections in wine, …",
@@ -6667,17 +6636,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/63362/tdp3588.800x533.webp"
   },
   {
-    title: "America 250 - Colorado 150 \"Stories in the Sky\" Drone Show",
-    link: "https://www.telluride.com/event/america-250-colorado-150-stories-in-the-sky-drone-show/",
-    description: "The America 250 - Colorado 150 Commission is taking its milestone celebrations to new heights with Stories in the Sky, …",
-    pubDate: "2026-09-03",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62752/colorado_250-150.800x533.webp"
-  },
-  {
     title: "Birding With Katie",
     link: "https://www.telluride.com/event/birding-with-katie/",
     description: "Patagonia Telluride will host a bird talk with Katie Triest from 5-6 pm on Sept 3 at the Patagonia store. Katie will …",
@@ -6688,17 +6646,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/63443/screenshot_2026-08-21_114434-v1.800x533.webp"
-  },
-  {
-    title: "TMVOA Millennial Trivia",
-    link: "https://www.telluride.com/event/tmvoa-millennial-trivia-at-telluride-distilling-company/",
-    description: "Grab your flip phone, update your Top 8, set your AIM away message, and put your millennial knowledge to the test! Join …",
-    pubDate: "2026-09-03",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63464/trivia_tdc_for_ttb.800x533.webp"
   },
   {
     title: "Telluride Film Festival",
@@ -7376,25 +7323,6 @@ const LEGAL_NOTICES = [
     smcBidID: "209"
   },
   {
-    title: "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominium (Sale No. 202605)",
-    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "The San Miguel County Public Trustee has scheduled a public auction foreclosure sale for Condominium Unit 7 at Double Diamond Condominium, located at 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor is Ryan Pfaff; the current debt holder is Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust, with an outstanding principal balance of approximately $1,199,032. The sale will be held at 10:00 A.M. on September 3, 2026 at 305 W. Colorado Avenue, East entry, Telluride, CO.",
-    deadline: "2026-09-03",
-    expires: "2026-09-03",
-    dates: "8/13",
-    papers: ["ttimes_0813"],
-    url: "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
-    address: "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
-    noticeKey: "foreclosure-sale-202605",
-    caseNumber: "202605"
-  },
-  {
     title: "Public Hearing -- Adoption of 2024 International Building Code & Colorado Low Energy & Carbon Code",
     entity: "San Miguel County Planning Commission",
     entityClass: "ent-county",
@@ -7403,14 +7331,14 @@ const LEGAL_NOTICES = [
     iconClass: "type-hearing",
     type: "Ordinance",
     filterTag: "ordinance",
-    summary: "San Miguel County Planning Commission will hold a public hearing on August 13, 2026 at 9:00 AM in Telluride to consider recommending adoption of the 2024 International Building Code and the Colorado Low Energy & Carbon Code to the Board of County Commissioners. Written comments must be received by noon on Monday, August 10, 2026 and are limited to one page. Proposed amendments are available in the meeting agenda packet at www.sanmiguelcountyco.gov.",
-    deadline: "2026-08-10",
+    summary: "San Miguel County Planning Commission will hold a public hearing on August 13, 2026 at 9:00 AM in Telluride to consider recommending adoption of the 2024 International Building Code and the Colorado Low Energy & Carbon Code to the Board of County Commissioners. Written comments must be received by noon on Monday, August 10, 2026. Proposed amendments are available in the meeting agenda packet at www.sanmiguelcountyco.gov.",
+    deadline: "2026-08-10T12:00:00",
     expires: "2026-08-13",
     dates: "7/30",
     papers: ["ttimes_0730"],
     url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
     address: "Telluride, Colorado (San Miguel County)",
-    noticeKey: "COL-000206-ibc-2024-hearing"
+    noticeKey: "COL-000206-ibc-clecc-hearing"
   },
   {
     title: "Public Notice -- Town of Telluride 2027 Budget Preparation",
@@ -7421,8 +7349,8 @@ const LEGAL_NOTICES = [
     iconClass: "type-tax",
     type: "Tax & Finance",
     filterTag: "tax-finance",
-    summary: "The Town Manager of Telluride has issued public notice of the 2027 budget preparation process, effective July 30, 2026. All town departments, boards, commissions, and citizens must submit funding requests to the Town Manager no later than 5:00 PM on Friday, August 21, 2026. Requests for funding through the Commission for Community Assistance, Arts and Special Events (CCAASE) are subject to separate guidelines available at www.telluride.gov.",
-    deadline: "2026-08-21",
+    summary: "The Town Manager of Telluride has issued public notice of the 2027 budget preparation process, effective July 30, 2026. All Town departments, boards, commissions, and citizens must submit funding requests to the Town Manager no later than 5:00 PM on Friday, August 21, 2026. Requests for funding through the Commission for Community Assistance, Arts and Special Events (CCAASE) are subject to separate grant guidelines available at www.telluride.gov.",
+    deadline: "2026-08-21T17:00:00",
     expires: "2026-08-21",
     dates: "7/30",
     papers: ["ttimes_0730"],
@@ -7439,14 +7367,14 @@ const LEGAL_NOTICES = [
     iconClass: "type-rfp",
     type: "Public Notice",
     filterTag: "public-entity",
-    summary: "Montrose Memorial Hospital, Inc. is accepting applications to fill available positions on its Board of Directors. Application packets are available online at www.montrosehealth.com, by email, or in person at the MRH Administration office at 800 South 3rd Street, Montrose, Colorado. Completed applications must be returned by 5:00 PM on Friday, August 14, 2026; elections will be held at the Board's annual meeting in October.",
-    deadline: "2026-08-14",
+    summary: "Montrose Memorial Hospital, Inc., a Colorado community nonprofit corporation, is accepting applications to fill open positions on its Board of Directors. Application packets are available online at www.montrosehealth.com, by email, or in person at the MRH Administration office at 800 South 3rd Street, Montrose, Colorado. Completed applications must be returned by 5:00 PM on Friday, August 14, 2026; elections will be held at the Board's annual meeting in October.",
+    deadline: "2026-08-14T17:00:00",
     expires: "2026-08-14",
     dates: "7/30",
     papers: ["ttimes_0730"],
     url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
     address: "800 South 3rd Street, Montrose, Colorado",
-    noticeKey: "COL-000203-montrose-hospital-board"
+    noticeKey: "COL-000203-mmh-board-applications"
   },
   {
     title: "Public Notice -- Farmers' Water Development Company Replacement Share Certificate #887",
@@ -7457,32 +7385,32 @@ const LEGAL_NOTICES = [
     iconClass: "type-hearing",
     type: "Utilities",
     filterTag: "utilities",
-    summary: "The Farmers' Water Development Company (FWDC) has received a written request to replace lost, destroyed, or wrongfully taken share certificate #887, currently issued in the name A.F. Newans M.D., C.P. Any person objecting to the issuance of a replacement certificate must file written notice with FWDC at PO Box 10, Norwood, CO 81423 within 30 days of the last publication date. If no objection is filed, a replacement certificate will be issued and the original permanently cancelled.",
+    summary: "The Farmers' Water Development Company (FWDC) has received a written request to replace lost, destroyed, or wrongfully taken share certificate #887, originally issued to A.F. Newans M.D., C.P. If no written objection is filed with FWDC at P.O. Box 10, Norwood, CO 81423 within 30 days of the last publication date, a replacement certificate will be issued and the original permanently cancelled. Last publication date is July 30, 2026.",
     deadline: "2026-08-29",
     expires: "2026-08-29",
     dates: "7/30",
     papers: ["ttimes_0730"],
     url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    address: "PO Box 10, Norwood, CO 81423",
-    noticeKey: "COL-000181-fwdc-cert-887"
+    address: "Norwood, Colorado (FWDC service area)",
+    noticeKey: "COL-000181-fwdc-share-cert-887"
   },
   {
-    title: "RFP -- Interior Repainting of Historic Placerville Schoolhouse",
-    entity: "San Miguel County Fleet & Facilities Department",
+    title: "RFP -- Interior Repainting of Historic Placerville Schoolhouse (COL-000205)",
+    entity: "San Miguel County Fleet & Facilities",
     entityClass: "ent-county",
     entityLogo: "county",
     icon: "🏛️",
     iconClass: "type-rfp",
     type: "Public Notice",
     filterTag: "public-entity",
-    summary: "San Miguel County is seeking proposals from contractors to repaint the interior of the Historic Placerville Schoolhouse located at 400 Front St, Placerville, Colorado. RFP information is available at www.sanmiguelcountyco.gov/bids.aspx or from the Fleet & Facilities Department at 333 W Colorado Ave, 2nd Floor, Telluride. Proposals must be submitted by 5:00 PM on Wednesday, August 6, 2026, either by email or in person at the Fleet & Facilities Department.",
-    deadline: "2026-08-06",
+    summary: "San Miguel County is seeking proposals from contractors to repaint the interior of the Historic Placerville Schoolhouse at 400 Front St, Placerville, Colorado. RFP information is available at www.sanmiguelcountyco.gov/bids.aspx or from the Fleet & Facilities Department at 333 W Colorado Ave, 2nd floor, Telluride. Proposals must be submitted by 5:00 PM on Wednesday, August 6, 2026, either via email or in person at the Fleet & Facilities Department.",
+    deadline: "2026-08-06T17:00:00",
     expires: "2026-08-06",
     dates: "7/30",
     papers: ["ttimes_0730"],
     url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
     address: "400 Front St, Placerville, Colorado",
-    noticeKey: "COL-000205-placerville-schoolhouse-rfp"
+    noticeKey: "COL-000205-rfp-placerville-schoolhouse"
   },
   {
     title: "Foreclosure Sale Notice -- 350 S Mahoney Dr Unit 7, Telluride (Sale No. 2026-05)",
@@ -7493,8 +7421,8 @@ const LEGAL_NOTICES = [
     iconClass: "type-tax",
     type: "Tax & Finance",
     filterTag: "tax-finance",
-    summary: "San Miguel County Public Trustee Brandi R. Hatfield has issued a foreclosure sale notice for Condominium Unit 7, Double Diamond Condominium, located at 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor is Ryan Pfaff, with an outstanding principal balance of approximately $1,199,032 on a deed of trust originally benefiting Deephaven Mortgage LLC, now held by Wilmington Savings Fund Society as trustee. The public auction is scheduled for 10:00 AM on Thursday, September 3, 2026 at 305 W. Colorado Avenue, East entry, Telluride, CO.",
-    deadline: "2026-09-03",
+    summary: "San Miguel County Public Trustee Brandi R. Hatfield will conduct a public auction on September 3, 2026 at 10:00 AM at 305 W. Colorado Avenue, Telluride, for Condominium Unit 7, Double Diamond Condominium, following default on a deed of trust with an outstanding principal balance of $1,199,032.37. The original grantor is Ryan Pfaff; the current debt holder is Wilmington Savings Fund Society, FSB, as Trustee for Residential Investment Trust. The lien foreclosed may not be a first lien.",
+    deadline: "2026-09-03T10:00:00",
     expires: "2026-09-03",
     dates: "7/30",
     papers: ["ttimes_0730"],
@@ -7504,7 +7432,7 @@ const LEGAL_NOTICES = [
     caseNumber: "2026-05"
   },
   {
-    title: "Foreclosure Sale Notice -- TBD Stonegate Drive, Mountain Village (Sale No. 2026-04)",
+    title: "Foreclosure Sale Notice -- Stonegate Drive (Vacant Lot 166AR2), Mountain Village (Sale No. 2026-04)",
     entity: "San Miguel County Public Trustee / Federal Holding Realty",
     entityClass: "ent-county",
     entityLogo: "assessor",
@@ -7512,14 +7440,14 @@ const LEGAL_NOTICES = [
     iconClass: "type-tax",
     type: "Tax & Finance",
     filterTag: "tax-finance",
-    summary: "San Miguel County Public Trustee has issued a foreclosure sale notice for Lot 166AR2, Telluride Mountain Village, a vacant parcel on Stonegate Drive, Mountain Village, CO 81435. The original grantor is Two Stonegate LLC, with an outstanding principal balance of $500,000 on a deed of trust held by Federal Holding Realty. The public auction is scheduled for 10:00 AM on Thursday, September 3, 2026 at 305 W. Colorado Avenue, East entry, Telluride, CO.",
-    deadline: "2026-09-03",
+    summary: "San Miguel County Public Trustee Brandi R. Hatfield will conduct a public auction on September 3, 2026 at 10:00 AM at 305 W. Colorado Avenue, Telluride, for Lot 166AR2 on Stonegate Drive (vacant land) in Mountain Village, following default on a deed of trust with an outstanding principal balance of $500,000.00. The original grantor is Two Stonegate LLC; the current debt holder is Federal Holding Realty. The lien foreclosed may not be a first lien.",
+    deadline: "2026-09-03T10:00:00",
     expires: "2026-09-03",
     dates: "7/30",
     papers: ["ttimes_0730"],
     url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    address: "TBD Stonegate Drive (Lot 166AR2), Mountain Village, CO 81435",
-    noticeKey: "foreclosure-2026-04-stonegate-mv",
+    address: "TBD (Vacant) Stonegate Drive, Mountain Village, CO 81435 (Lot 166AR2, Telluride Mountain Village)",
+    noticeKey: "foreclosure-2026-04-stonegate-lot166ar2",
     caseNumber: "2026-04"
   }
 ];

@@ -1,14 +1,18 @@
 {
-  "hash": "2faab1de4e52f00a5dcee5c76b83b6524baca9b2",
-  "lede": "The sharpest item this week is the San Miguel County BOCC's special meeting Wednesday, where they'll sit as the Housing Authority and vote on Resolution 2026-34 — a change to Area Median Income limits for deed-restricted units at Pinion Park, the kind of technical adjustment that quietly determines who actually qualifies for affordable housing here. Also worth watching: the County Planning Commission takes up three Land Use Code amendments Thursday covering forestry, oil and gas, and geothermal energy, all headed toward the BOCC if recommended. Meanwhile, the Film Festival crowd is clearing out and the valley is settling back into fall.",
+  "hash": "a4e1799164c26a7e5aa42b93531d354850f6d316",
+  "lede": "The biggest thing on the government calendar this week is the San Miguel County BOCC's special meeting Wednesday, where they'll consider Resolution 2026-34 to adjust Area Median Income limits on deed-restricted properties in Pinion Park — a technical-sounding item that directly shapes who qualifies for local housing. Also worth watching: the County Planning Commission takes up three Land Use Code amendments on forestry, oil and gas, and geothermal energy Thursday, and Ridgway Town Council meets Wednesday to ratify letters supporting a federal disaster declaration tied to the Gold Mountain Fire, which has scorched nearly 40,000 acres and repeatedly cut off Highway 550.",
   "notable": [
     {
+      "id": 4,
+      "stake": "Council ratifies disaster declaration support for Gold Mountain Fire's regional damage."
+    },
+    {
       "id": 6,
-      "stake": "BOCC votes on AMI limits that determine who qualifies for Pinion Park deed-restricted housing."
+      "stake": "AMI threshold change on Pinion Park deed-restricted units affects who qualifies for local housing."
     },
     {
       "id": 8,
-      "stake": "Planning Commission weighs in on three Land Use Code changes before they advance to BOCC."
+      "stake": "Planning Commission weighs in on Land Use Code changes covering forestry, oil/gas, and geothermal."
     }
   ]
 }
