@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-09-05",
+    "title": "Blue Lakes wants a fee. Ridgway's about to weigh in.",
+    "body": "Ridgway Town Council is expected to authorize a mayoral letter supporting a proposed recreation fee structure at Blue Lakes. That's not a final vote — it's the town putting its name behind a position.\n\nSome will say fees are overdue. Popular spots take a beating, and money for upkeep has to come from somewhere. Others will push back: public lands have always been free to access, and fees can quietly price out the people who live closest to them.\n\nWhere do you stand on charging for access to Blue Lakes?",
+    "choices": [
+      "Fees make sense",
+      "Keep it free",
+      "Depends on the amount",
+      "It's complicated"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-09-04",
     "title": "New building code — does it fit up here?",
     "body": "The county is holding a public hearing on whether to adopt the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Those who favor adoption say updated codes mean safer buildings and lower carbon footprints — reasonable goals anywhere. Those who push back say modern energy codes can drive up construction costs in a place where building is already expensive, and that standards written for the Front Range don't always translate to a mountain county with a short construction season and a thin contractor pool. Nothing is adopted yet — this is a public hearing. So: do updated building codes make sense for San Miguel County right now, or is the timing wrong?",
@@ -425,21 +440,6 @@
       "Definition's too restrictive",
       "Current rules protect us",
       "Depends who benefits",
-      "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-08-06",
-    "title": "When a roof costs more than the rules allow",
-    "body": "Lela and Jon Martin need a new roof on their deed-restricted Gold Run unit. The bid came in at $47,743.86 — roughly 17% of their original purchase price. Their 2010-era deed restriction only lets staff approve capital improvements up to 5% without a finding that the work adds occupancy capacity. A failing roof clearly doesn't do that. Staff recommends approval anyway, but admits the legal standard may not be met.\n\nOne view: the rules exist to keep deed-restricted units affordable, not to trap owners with deteriorating roofs. The other: if exceptions get made case by case, the caps lose their meaning.\n\nWhen the rules and the reality collide like this, what should the subcommittee do?",
-    "choices": [
-      "Approve it — a roof is a roof",
-      "Hold the line on the cap",
-      "Update the deed restriction first",
       "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",

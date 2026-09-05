@@ -452,6 +452,14 @@ const DEEP_DIVE_UPDATES = [
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-09-05",
+    title: "Blue Lakes wants a fee. Ridgway's about to weigh in.",
+    body: "Ridgway Town Council is expected to authorize a mayoral letter supporting a proposed recreation fee structure at Blue Lakes. That's not a final vote — it's the town putting its name behind a position.\n\nSome will say fees are overdue. Popular spots take a beating, and money for upkeep has to come from somewhere. Others will push back: public lands have always been free to access, and fees can quietly price out the people who live closest to them.\n\nWhere do you stand on charging for access to Blue Lakes?",
+    choices: ["Fees make sense", "Keep it free", "Depends on the amount", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-09-04",
     title: "New building code — does it fit up here?",
     body: "The county is holding a public hearing on whether to adopt the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Those who favor adoption say updated codes mean safer buildings and lower carbon footprints — reasonable goals anywhere. Those who push back say modern energy codes can drive up construction costs in a place where building is already expensive, and that standards written for the Front Range don't always translate to a mountain county with a short construction season and a thin contractor pool. Nothing is adopted yet — this is a public hearing. So: do updated building codes make sense for San Miguel County right now, or is the timing wrong?",
@@ -682,14 +690,6 @@ const DAILY_QUESTIONS = [
     choices: ["Definition's too restrictive", "Current rules protect us", "Depends who benefits", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-08-06",
-    title: "When a roof costs more than the rules allow",
-    body: "Lela and Jon Martin need a new roof on their deed-restricted Gold Run unit. The bid came in at $47,743.86 — roughly 17% of their original purchase price. Their 2010-era deed restriction only lets staff approve capital improvements up to 5% without a finding that the work adds occupancy capacity. A failing roof clearly doesn't do that. Staff recommends approval anyway, but admits the legal standard may not be met.\n\nOne view: the rules exist to keep deed-restricted units affordable, not to trap owners with deteriorating roofs. The other: if exceptions get made case by case, the caps lose their meaning.\n\nWhen the rules and the reality collide like this, what should the subcommittee do?",
-    choices: ["Approve it — a roof is a roof", "Hold the line on the cap", "Update the deed restriction first", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -785,6 +785,76 @@ const MEETING_PREVIEWS = {
     "The Open Space Commission is expected to discuss matters related to open space acquisition, management, and planning priorities. The meeting may also address implications of Ordinance #1640, which amended Telluride's Land Use Code to implement the Colorado Wildfire Resiliency Code, passed by Town Council in August 2026."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
+  {
+    title: "2026 Chamber Meeting, December",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
+    img: ""
+  },
+  {
+    title: "Noel Night",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 4, 2026",
+    newsTopic: "community",
+    copy: "Community shopping event and celebration.",
+    href: "https://norwoodcolorado.com/event/noel-night-3/",
+    img: ""
+  },
+  {
+    title: "West End Parade of Lights & Elfin Eve",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "Holiday parade and festival.",
+    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, November",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "November 10, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, October",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "October 13, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
+    img: ""
+  },
+  {
+    title: "Pioneer Day",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 26, 2026",
+    newsTopic: "community",
+    copy: "Celebration of local history and pioneers.",
+    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, September",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
+    img: ""
+  },
   {
     title: "FEMA Public Assistance Approved for Colorado’s Major Disaster Declaration",
     source: "Ouray County",
@@ -1622,6 +1692,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "‘Coming of age film disguised as a skateboarding film’",
+    source: "Telluride Times",
+    date: "September 5, 2026",
+    firstSeen: "2026-09-05",
+    newsTopic: "arts-culture",
+    copy: "Local filmmaker Brett Schreckengost and Telluride High School mentee Charlie Raible spent two years creating \"Entrada,\" a documentary following the Graves brothers — competitive skateboarders from Ridgway — skating slickrock in Moab and their backyard half-pipe. Schreckengost calls it a coming-of-age film about family and brotherhood in skateboarding's clothing.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_526d2ea1-1ee3-492e-8e16-e37eb2ffbd76.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/93/5934b017-8846-41d0-831b-1c05398da1b3/6a9781ad403ae.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Court dismisses ‘deficient’ Telski lawsuit against Fee, Prohaska, Wisor",
     source: "Telluride Times",
@@ -3754,39 +3836,7 @@ const KOTO_COMMUNITY_EVENTS = [
 ];
 
 const WILKINSON_EVENTS = [
-  {
-    title: "Yoga for ALL with Jane & Jay",
-    link: "https://telluridelibrary.libcal.com/event/15803456?hs=a",
-    description: "8:30 AM – 9:45 AM · Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
-    pubDate: "2026-09-04T14:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg"
-  },
-  {
-    title: "Coffee, Croissants and Cribbage",
-    link: "https://telluridelibrary.libcal.com/event/17357536?hs=a",
-    description: "10:00 AM – 11:30 AM · Coffee, croissants and cribbage is back! Come by the library Magazine Room 10-11:30am for friendly competition, free coffee and pastries, and community connection. May the nibs be with you.",
-    pubDate: "2026-09-04T16:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_27_10_38_03.jpg"
-  },
-  {
-    title: "No School Science with Pinhead",
-    link: "https://telluridelibrary.libcal.com/event/17459728?hs=a",
-    description: "1:00 PM – 3:00 PM",
-    pubDate: "2026-09-04T19:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_26_10_07_56.png"
-  }
+
 ];
 
 // Bot-managed by scripts/content-refresh.js Task 7 (syncHumaneSocietyAnimals).
@@ -4314,163 +4364,13 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Labor Day Weekend - No School- Ridgway",
     link: "https://events.ourayridgwayevents.com/event/labor-day-no-school-ridgway",
     description: "View on site | Email this event",
-    pubDate: "2026-09-04T06:00:00.000Z",
+    pubDate: "2026-09-05T06:00:00.000Z",
     endDate: "2026-09-07",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
-  },
-  {
-    title: "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
-    link: "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
-    description: "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the International Quilt Museum in Lincoln, Nebraska. Bonnie’s work has been shown in numerous exhibits in the United States. In 2015, Bonnie’s work was in a year-long solo exhibition at the Portland Oregon International Airport. She was a solo artist at the Visions Museum of Textile Art, San Diego, in 2019. Internationally, Bonnie’s work has appeared in the Haus der Wirtschaft museum in Stuttgart, Germany, the Museum of Modern Art in Verona, Italy, and other venues in Germany, England, Ireland, France, Japan, Brazil, and the Netherlands. Bonnie’s work Tangle is part of the permanent collection of the Tuch + Technik Textilmuseum, Neumunster, Germany. …",
-    pubDate: "2026-09-04T16:00:00.000Z",
-    endDate: "2026-09-25",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The 610 Arts Collective",
-    imageUrl: "https://localist-images.azureedge.net/photos/53551302433703/huge/07561f7b06b24999f21e6be2347e5102b9b92cc3.jpg"
-  },
-  {
-    title: "Ongoing Exhibition: BIG BOX-Big New Work By T-Bone",
-    link: "https://events.ourayridgwayevents.com/event/ongoing-exhibition-big-box-big-new-work-by-t-bone",
-    description: "The Big Box Show! Bigger, better and more. This groundbreaking local art won't last long! Ridgway's own T-Bone and his quintessential colorful cardboard paintings take on new life and meaning in the Decker where they have room to stretch out and really TALK to you! Come and be delighted by the playful T-Bone experience. Stay to cool off, craft, co-work, hang out. or plan your own future exhibition or event in the space! The Decker is a unique community rental-art gallery hybrid, incubated and managed by the Town of Ridgway, in cooperation with our sister ARTSpace gallery next door. View on site | Email this event",
-    pubDate: "2026-09-04T16:00:00.000Z",
-    endDate: "2026-09-25",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53736310463128/huge/ce8867efeba0934913913ee401aff4479a074ba5.jpg"
-  },
-  {
-    title: "Ridgway Farmers Market",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
-    description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here. View on site | Email this event",
-    pubDate: "2026-09-04T16:00:00.000Z",
-    endDate: "2026-10-16",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Hartwell Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
-  },
-  {
-    title: "Trivia Night @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/trivia-night-the-wright-1382",
-    description: "Come test the true limits of the human mind at Trivia Night @ the Wright, where obscure facts become temporary personality traits. Questions may include history, movies, science, music, local lore, accidental expertise, and things you absolutely learned once in 8th grade and never expected to need again. Bring a team, bring a friend, or arrive alone like a mysterious wandering scholar of useless information. Competitive spirits, wild guesses, and dramatic confidence are all encouraged. No studying required. In fact, studying may make things worse. View on site | Email this event",
-    pubDate: "2026-09-04T19:00:12.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53629793379457/huge/94e90759cff30df21fa21e46e7fcd2e69c247e84.jpg"
-  },
-  {
-    title: "RIDGWAY WRECKING CREW",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-wrecking-crew-2643",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
-    pubDate: "2026-09-04T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Electric Badlands: First Friday Opening Night",
-    link: "https://events.ourayridgwayevents.com/event/electric-badlands-first-friday-opening-night",
-    description: "Where old country grit meets neon-lit dissent. Space to Create Gallery proudly presents Electric Badlands, a solo exhibition by Spencer Fuller. Stepping away from sepia-toned nostalgia, Fuller reimagines the mythology of the American West through high-voltage neon pigments, dripping brushstrokes, and traditional frontier iconography. Blending a sharp political critique with the raw, rebellious pulse of classic country and rock, these works challenge how we look at history, power, and contemporary identity. Join us for the opening reception during the Ridgway First Friday Art Walk to meet the artist, explore the works, and enjoy refreshments. The exhibition runs through September 28. View on site | Email this event",
-    pubDate: "2026-09-04T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Space to Create Gallery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53764195995930/huge/26a45ab073a35cce3a87bf6cbea54303787871f9.jpg"
-  },
-  {
-    title: "First Friday Art Walk",
-    link: "https://events.ourayridgwayevents.com/event/first-friday-art-walk",
-    description: "Discover new work, celebrate openings, and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month, galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits, live music and special programming — perfect for art lovers and casual browsers alike. NEW! 🎨🛍️ Shop local. Win local. Celebrate local. 🎶🍷 New this summer, your First Friday stroll through Ridgway could score you a $100 gift card to your favorite local business. 👀 Follow the link for more details. First Friday Map & Offer Details View on site | Email this event",
-    pubDate: "2026-09-04T23:00:00.000Z",
-    endDate: "2026-10-02",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Downtown Ridgway, CO",
-    imageUrl: "https://localist-images.azureedge.net/photos/52941247100302/huge/24aa8ce412f9817ce04becd51e5d1cc5b8db2cad.jpg"
-  },
-  {
-    title: "First Friday Opening Reception ~ Bonnie Bucknam's \"UNSCRIPTED ~ Fiber Improvisations\" at 610 Arts",
-    link: "https://events.ourayridgwayevents.com/event/first-friday-opening-reception-bonnie-bucknams-unscripted-fiber-improvisations-at-610-arts",
-    description: "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work Crater won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the International Quilt Museum in Lincoln, Nebraska. Bonnie’s work has been shown in numerous exhibits in the United States. In 2015, Bonnie’s work was in a year-long solo exhibition at the Portland Oregon International Airport. She was a solo artist at the Visions Museum of Textile Art, San Diego, in 2019. Internationally, Bonnie’s work has appeared in the Haus der Wirtschaft museum in Stuttgart, Germany, the Museum of Modern Art in Verona, Italy, and other venues in Germany, England, Ireland, France, Japan, Brazil, and the Netherlands. Bonnie’s work Tangle is part of the permanent collection of the Tuch + Technik Textilmuseum, Neumunster, Germany. …",
-    pubDate: "2026-09-04T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The 610 Arts Collective",
-    imageUrl: "https://localist-images.azureedge.net/photos/53551327108460/huge/e4d20fe9a7a9c8a310fdf85111342924891b0c1b.jpg"
-  },
-  {
-    title: "First Friday at Rootwings Art at Rootwings Art",
-    link: "https://events.ourayridgwayevents.com/event/first-friday-at-rootwings-art-1540",
-    description: "Rootwings Art will be open for Ridgway's First Friday Art Walk, featuring local ceramic sculptures and large vessels by artist Andy Nasisse, original oils by Emma Kalff, Bruce Backer's Ravens & Crows, Taos artist Fred Burns fantasy nudes and one of a kind jewelry and ceramics by Vanessa Backer. View on site | Email this event",
-    pubDate: "2026-09-04T23:00:00.000Z",
-    endDate: "2026-10-02",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Herran House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53312391289791/huge/00a6a9e1834a357256b5925d35f6a6525ff06493.jpg"
-  },
-  {
-    title: "Ongoing: Social Justice Travel Exhibition",
-    link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-social-justice-travel-exhibition",
-    description: "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote wellness. This exhibition features new works by artists who recieved a Social Justice Grant from Telluride Arts to create work for this traveling exhibit. View on site | Email this event",
-    pubDate: "2026-09-04T23:00:00.000Z",
-    endDate: "2026-09-29",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53764349683288/huge/471bb8c36dc067ddd9b229c9e31032260184eb5e.jpg"
-  },
-  {
-    title: "September - Art Opening: Social Justice Travel Exhibition",
-    link: "https://events.ourayridgwayevents.com/event/art-opening-social-justice-travel-exhibition",
-    description: "Art as Witness. Art as Action. A traveling exhibition featuring the work of five artists exploring the urgent issues of our time. Supported by the social justice artist grant program and creative districts across Western Colorado. Five artists. Ten communities. One vision for a more just future. Featured Artists & Collections Aela Morgan | In Pieces Together (Telluride)Mixed-media works exploring political division, civic unrest, and the tension between fracture and connection.Christy Ferrato | Obantu (Durango Creative District)Sculptural figures that confront oppression and resist tyranny, honoring truth, dignity, and the fight for human rights.Cie Hoover | Eroded World (Ridgway FUSE Creative Main Street)A large-scale wood relief on environmental degradation and the inheritance we leave future generations.Jed Smith & Amy Cao | Los Migrantes (Mancos Creative District)Historic narratives and new works sparking conversation on immigration, borders, and who gets to call this land home.Olivia Perea | Too Bad (Durango Creative District)A collage …",
-    pubDate: "2026-09-04T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53701474198982/huge/f9179e466383e9846f78d7eb788c2ec155dc6a2b.jpg"
-  },
-  {
-    title: "The Sherbino Presents: Donny Morales – First Friday Show",
-    link: "https://events.ourayridgwayevents.com/event/the-sherbino-presents-donny-morales-first-friday-show",
-    description: "Sherbino “Living Room” Free Show | Cash Bar | Tips Encouraged Celebrate First Friday with an intimate evening of live music at the Sherbino! Join us in the Sherbino’s cozy “Living Room” near the bar for a special performance by Donny Morales. Donny brings his signature blend of “soul-acousti-funk”, delivering an irresistible mix of soulful vocals, funky rhythms, and masterful acoustic guitar. A longtime favorite on Colorado’s Western Slope, Donny’s performances are equal parts heartfelt storytelling, infectious grooves, and musical spontaneity. Whether he’s reimagining familiar favorites or sharing original songs, his warm stage presence and feel-good energy create an experience that’s impossible not to move to. Come ready to clap, sway, sing along, and enjoy an unforgettable evening of soul, acoustic vibes, and funk. If you love discovering new artists on the rise or simply enjoy a cozy, live-music atmosphere, this is the perfect way to start your weekend. …",
-    pubDate: "2026-09-05T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Sherbino",
-    imageUrl: "https://localist-images.azureedge.net/photos/53358101603318/huge/d6a95490ff2eae257adf6f909e37473c1092b24e.jpg"
-  },
-  {
-    title: "Steps Tavern Presents Karaoke Night",
-    link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
-    description: "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM Every Friday Night View on site | Email this event",
-    pubDate: "2026-09-05T02:00:00.000Z",
-    endDate: "2026-09-26",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "STEPS TAVERN",
-    imageUrl: "https://localist-images.azureedge.net/photos/53142698527493/huge/db3a6ef58a79b18eea8c70a4d583bbf3d9498404.jpg"
   },
   {
     title: "Public Bird Banding Day - Ridgway State Park",
@@ -4482,6 +4382,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ridgway State Park",
     imageUrl: "https://localist-images.azureedge.net/photos/53595198326789/huge/b52afc36fd4c4e87537e211690d7093afa8c36a3.jpg"
+  },
+  {
+    title: "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
+    link: "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
+    description: "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the International Quilt Museum in Lincoln, Nebraska. Bonnie’s work has been shown in numerous exhibits in the United States. In 2015, Bonnie’s work was in a year-long solo exhibition at the Portland Oregon International Airport. She was a solo artist at the Visions Museum of Textile Art, San Diego, in 2019. Internationally, Bonnie’s work has appeared in the Haus der Wirtschaft museum in Stuttgart, Germany, the Museum of Modern Art in Verona, Italy, and other venues in Germany, England, Ireland, France, Japan, Brazil, and the Netherlands. Bonnie’s work Tangle is part of the permanent collection of the Tuch + Technik Textilmuseum, Neumunster, Germany. …",
+    pubDate: "2026-09-05T16:00:00.000Z",
+    endDate: "2026-09-25",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The 610 Arts Collective",
+    imageUrl: "https://localist-images.azureedge.net/photos/53551302433703/huge/07561f7b06b24999f21e6be2347e5102b9b92cc3.jpg"
   },
   {
     title: "Music and Makers Fest",
@@ -4548,6 +4460,30 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Hartwell Park",
     imageUrl: "https://localist-images.azureedge.net/photos/53745054025330/huge/907904d9f77c544312a94c550a4205ddddb5d06a.jpg"
+  },
+  {
+    title: "Ongoing Exhibition: BIG BOX-Big New Work By T-Bone",
+    link: "https://events.ourayridgwayevents.com/event/ongoing-exhibition-big-box-big-new-work-by-t-bone",
+    description: "The Big Box Show! Bigger, better and more. This groundbreaking local art won't last long! Ridgway's own T-Bone and his quintessential colorful cardboard paintings take on new life and meaning in the Decker where they have room to stretch out and really TALK to you! Come and be delighted by the playful T-Bone experience. Stay to cool off, craft, co-work, hang out. or plan your own future exhibition or event in the space! The Decker is a unique community rental-art gallery hybrid, incubated and managed by the Town of Ridgway, in cooperation with our sister ARTSpace gallery next door. View on site | Email this event",
+    pubDate: "2026-09-07T16:00:00.000Z",
+    endDate: "2026-09-25",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53736310463128/huge/ce8867efeba0934913913ee401aff4479a074ba5.jpg"
+  },
+  {
+    title: "Ongoing: Social Justice Travel Exhibition",
+    link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-social-justice-travel-exhibition",
+    description: "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote wellness. This exhibition features new works by artists who recieved a Social Justice Grant from Telluride Arts to create work for this traveling exhibit. View on site | Email this event",
+    pubDate: "2026-09-07T16:00:00.000Z",
+    endDate: "2026-09-29",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53764349683288/huge/471bb8c36dc067ddd9b229c9e31032260184eb5e.jpg"
   },
   {
     title: "Ouray County Labor Day Rodeo",
@@ -4644,6 +4580,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53887699628224/huge/dec56b594a12eb9537121495212b009fe9b63184.jpg"
   },
   {
+    title: "Ouray: Echoes in the Canyon",
+    link: "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-2450",
+    description: "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history, landscapes, and enduring spirit that helped shape what many still call \"The Gem of the Rockies.\" Through storytelling, archival perspective, aerial cinematography, and local voices, the film traces the layered history of Ouray and the individuals who built a mountain community that continues to evolve while remaining deeply connected to its frontier roots. The film features aerial photography by Ouray By Flight, cinematography by Levi Kramer, and is produced and directed by Hank Braxtan. We are offering a \"pay what you can\" for your ticket - $5, $10 and $15. Pick the amount that fees \"Wright\" to you. Thank you for your support! …",
+    pubDate: "2026-09-09T19:00:43.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Wright Opera House",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg"
+  },
+  {
     title: "NEW With Weehawken: Beat & Step: West African Dance, Drum & Body Percussion ~ with performances in The Nutcracker Remixed!",
     link: "https://events.ourayridgwayevents.com/event/new-with-weehawken-beat-step-west-african-dance-drum-body-percussion-with-performances-in-the-nutcracker-remixed",
     description: "Beat & Step: West African Dance, Drum & Body Percussion is an energetic and interactive class that combines traditional West African dance, drumming, and body percussion into one exciting experience. Students will learn dance combinations, explore traditional drumming rhythms that tell stories, and create music using their hands, feet, body, drums, and voice. Along the way, they'll develop coordination, rhythm, musicality, focus, memory, confidence, and teamwork while experiencing the rich cultural traditions of West Africa. No previous dance or music experience is required—just curiosity, energy, and a willingness to learn. Students enrolled in this performance class will showcase what they've learned in our winter production. Dress Code: Students should wear comfortable clothing that allows for plenty of movement. Athletic clothing such as T-shirts, leggings, athletic pants, or shorts is recommended. Please avoid jeans or restrictive clothing. Wear comfortable athletic shoes or sneakers that are clean and reserved for class. …",
@@ -4689,17 +4636,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Gazebo south of Chipeta Lodge, Ridgway, CO (Or studio if raining)",
     imageUrl: "https://localist-images.azureedge.net/photos/52880886803755/huge/ba2d24fbf09ba1f9a707a06213d60685581d7322.jpg"
-  },
-  {
-    title: "Ouray: Echoes in the Canyon",
-    link: "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-2450",
-    description: "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history, landscapes, and enduring spirit that helped shape what many still call \"The Gem of the Rockies.\" Through storytelling, archival perspective, aerial cinematography, and local voices, the film traces the layered history of Ouray and the individuals who built a mountain community that continues to evolve while remaining deeply connected to its frontier roots. The film features aerial photography by Ouray By Flight, cinematography by Levi Kramer, and is produced and directed by Hank Braxtan. We are offering a \"pay what you can\" for your ticket - $5, $10 and $15. Pick the amount that fees \"Wright\" to you. Thank you for your support! …",
-    pubDate: "2026-09-10T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg"
   },
   {
     title: "Ouray Economic Development Committee",
@@ -4770,6 +4706,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53306519672947/huge/94dbb34c3a7f806ee827594137fa43bd0c00bfb2.jpg"
   },
   {
+    title: "Ridgway Farmers Market",
+    link: "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
+    description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here. View on site | Email this event",
+    pubDate: "2026-09-11T16:00:00.000Z",
+    endDate: "2026-10-16",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Hartwell Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
+  },
+  {
     title: "RED MOUNTAIN REVIVAL",
     link: "https://events.ourayridgwayevents.com/event/red-mountain-revival",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
@@ -4779,6 +4727,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Steps Tavern Presents Karaoke Night",
+    link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
+    description: "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM Every Friday Night View on site | Email this event",
+    pubDate: "2026-09-12T02:00:00.000Z",
+    endDate: "2026-09-26",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "STEPS TAVERN",
+    imageUrl: "https://localist-images.azureedge.net/photos/53142698527493/huge/db3a6ef58a79b18eea8c70a4d583bbf3d9498404.jpg"
   },
   {
     title: "Happy Little Trees: Classes @ the Wright",
@@ -4983,6 +4943,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53780434962919/huge/3aff831f26d7f9d4824893f89d8fd88416047a44.jpg"
   },
   {
+    title: "Ouray: Echoes in the Canyon",
+    link: "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-692",
+    description: "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history, landscapes, and enduring spirit that helped shape what many still call \"The Gem of the Rockies.\" Through storytelling, archival perspective, aerial cinematography, and local voices, the film traces the layered history of Ouray and the individuals who built a mountain community that continues to evolve while remaining deeply connected to its frontier roots. The film features aerial photography by Ouray By Flight, cinematography by Levi Kramer, and is produced and directed by Hank Braxtan. We are offering a \"pay what you can\" for your ticket - $5, $10 and $15. Pick the amount that fees \"Wright\" to you. Thank you for your support! …",
+    pubDate: "2026-09-16T19:00:43.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg"
+  },
+  {
     title: "AFTER SCHOOL ART FOR AGES 8-12",
     link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-8-12",
     description: "AFTER SCHOOL ART FOR AGES 8-12 Wednesdays, 3:15–4:45 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 16 – October 7Session 2 (4 weeks • $85): October 21 – November 11Session 3 (3 weeks • $70): December 2 – December 16Each week, students will explore an exciting theme while experimenting with a wide range of materials and techniques. Drawing inspiration from well-known artists and design styles, young artists will be supported in discovering their own unique creative voice in a fun, nurturing, studio-like setting. These classes are designed to foster a love of the arts through hands-on exploration, age-appropriate projects, and a focus on the joy of the creative process. A student art reception will be held in December. Students will take home their collected works in the days following the event. …",
@@ -5004,17 +4975,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/53551593926247/huge/02f3a13038681c325dd89c895e1675f9a2442f8f.jpg"
-  },
-  {
-    title: "Ouray: Echoes in the Canyon",
-    link: "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-692",
-    description: "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history, landscapes, and enduring spirit that helped shape what many still call \"The Gem of the Rockies.\" Through storytelling, archival perspective, aerial cinematography, and local voices, the film traces the layered history of Ouray and the individuals who built a mountain community that continues to evolve while remaining deeply connected to its frontier roots. The film features aerial photography by Ouray By Flight, cinematography by Levi Kramer, and is produced and directed by Hank Braxtan. We are offering a \"pay what you can\" for your ticket - $5, $10 and $15. Pick the amount that fees \"Wright\" to you. Thank you for your support! …",
-    pubDate: "2026-09-17T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg"
   },
   {
     title: "Stillhouse Junkies: Live Music @ the Wright",
@@ -5243,6 +5203,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52338340283147/huge/582622671001d9ab20f8c25a5d229c9ecbbba165.jpg"
   },
   {
+    title: "Ouray: Echoes in the Canyon",
+    link: "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-8790",
+    description: "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history, landscapes, and enduring spirit that helped shape what many still call \"The Gem of the Rockies.\" Through storytelling, archival perspective, aerial cinematography, and local voices, the film traces the layered history of Ouray and the individuals who built a mountain community that continues to evolve while remaining deeply connected to its frontier roots. The film features aerial photography by Ouray By Flight, cinematography by Levi Kramer, and is produced and directed by Hank Braxtan. We are offering a \"pay what you can\" for your ticket - $5, $10 and $15. Pick the amount that fees \"Wright\" to you. Thank you for your support! …",
+    pubDate: "2026-09-23T19:00:43.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg"
+  },
+  {
     title: "September Book Club: \"The Constant Gardener\"",
     link: "https://events.ourayridgwayevents.com/event/september-book-club-the-constant-gardener",
     description: "Join us on Wednesday, September 23rd at 5:00 p.m. to discuss our September Book Club Book, The Constant Gardener, by John le Carré. View on site | Email this event",
@@ -5264,17 +5235,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Decker Community Room",
     imageUrl: "https://localist-images.azureedge.net/photos/53738040069217/huge/449549e29368908fd534c31a53bcd1a1adc7b887.jpg"
-  },
-  {
-    title: "Ouray: Echoes in the Canyon",
-    link: "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-8790",
-    description: "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history, landscapes, and enduring spirit that helped shape what many still call \"The Gem of the Rockies.\" Through storytelling, archival perspective, aerial cinematography, and local voices, the film traces the layered history of Ouray and the individuals who built a mountain community that continues to evolve while remaining deeply connected to its frontier roots. The film features aerial photography by Ouray By Flight, cinematography by Levi Kramer, and is produced and directed by Hank Braxtan. We are offering a \"pay what you can\" for your ticket - $5, $10 and $15. Pick the amount that fees \"Wright\" to you. Thank you for your support! …",
-    pubDate: "2026-09-24T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg"
   },
   {
     title: "Ouray Chamber Business After Hours",
@@ -5445,7 +5405,7 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Ouray: Echoes in the Canyon",
     link: "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon",
     description: "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history, landscapes, and enduring spirit that helped shape what many still call \"The Gem of the Rockies.\" Through storytelling, archival perspective, aerial cinematography, and local voices, the film traces the layered history of Ouray and the individuals who built a mountain community that continues to evolve while remaining deeply connected to its frontier roots. The film features aerial photography by Ouray By Flight, cinematography by Levi Kramer, and is produced and directed by Hank Braxtan. We are offering a \"pay what you can\" for your ticket - $5, $10 and $15. Pick the amount that fees \"Wright\" to you. Thank you for your support! …",
-    pubDate: "2026-10-01T01:00:00.000Z",
+    pubDate: "2026-09-30T19:00:43.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5473,6 +5433,28 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The 610 Arts Collective",
     imageUrl: "https://localist-images.azureedge.net/photos/53693053505919/huge/8a780ff6c8312fd2ff43dfb21dd65bcccea56d49.jpg"
+  },
+  {
+    title: "First Friday Art Walk",
+    link: "https://events.ourayridgwayevents.com/event/first-friday-art-walk",
+    description: "Discover new work, celebrate openings, and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month, galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits, live music and special programming — perfect for art lovers and casual browsers alike. NEW! 🎨🛍️ Shop local. Win local. Celebrate local. 🎶🍷 New this summer, your First Friday stroll through Ridgway could score you a $100 gift card to your favorite local business. 👀 Follow the link for more details. First Friday Map & Offer Details View on site | Email this event",
+    pubDate: "2026-10-02T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Downtown Ridgway, CO",
+    imageUrl: "https://localist-images.azureedge.net/photos/52941247100302/huge/24aa8ce412f9817ce04becd51e5d1cc5b8db2cad.jpg"
+  },
+  {
+    title: "First Friday at Rootwings Art at Rootwings Art",
+    link: "https://events.ourayridgwayevents.com/event/first-friday-at-rootwings-art-1540",
+    description: "Rootwings Art will be open for Ridgway's First Friday Art Walk, featuring local ceramic sculptures and large vessels by artist Andy Nasisse, original oils by Emma Kalff, Bruce Backer's Ravens & Crows, Taos artist Fred Burns fantasy nudes and one of a kind jewelry and ceramics by Vanessa Backer. View on site | Email this event",
+    pubDate: "2026-10-02T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Herran House",
+    imageUrl: "https://localist-images.azureedge.net/photos/53312391289791/huge/00a6a9e1834a357256b5925d35f6a6525ff06493.jpg"
   },
   {
     title: "October - Art Opening: Space Cowboy by Dundee & Lee - special reading by Poet Laureate Crisosto Apache",
@@ -7323,7 +7305,26 @@ const LEGAL_NOTICES = [
     smcBidID: "209"
   },
   {
-    title: "Public Hearing -- Adoption of 2024 International Building Code & Colorado Low Energy & Carbon Code",
+    title: "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominiums (Sale No. 202605)",
+    entity: "San Miguel County Public Trustee",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "Public Trustee Brandi R. Hatfield of San Miguel County has scheduled a foreclosure auction for Condominium Unit 7 at Double Diamond Condominiums, 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor is Ryan Pfaff, with an outstanding principal balance of approximately $1,199,032 on a deed of trust dated May 23, 2022. The public auction will be held at 10:00 AM on September 3, 2026, at 305 W. Colorado Avenue (East entry), Telluride, CO.",
+    deadline: "2026-09-03",
+    expires: "2026-09-03",
+    dates: "8/13",
+    papers: ["ttimes_0813"],
+    url: "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
+    address: "350 S Mahoney Dr, Unit 7, Telluride, CO 81435",
+    noticeKey: "foreclosure-sale-202605",
+    caseNumber: "202605"
+  },
+  {
+    title: "Public Hearing -- Adoption of 2024 International Building Code & Colorado Low Energy & Carbon Code (COL-000206)",
     entity: "San Miguel County Planning Commission",
     entityClass: "ent-county",
     entityLogo: "telluride",
@@ -7331,17 +7332,17 @@ const LEGAL_NOTICES = [
     iconClass: "type-hearing",
     type: "Ordinance",
     filterTag: "ordinance",
-    summary: "San Miguel County Planning Commission will hold a public hearing on August 13, 2026 at 9:00 AM in Telluride to consider recommending adoption of the 2024 International Building Code and the Colorado Low Energy & Carbon Code to the Board of County Commissioners. Written comments must be received by noon on Monday, August 10, 2026. Proposed amendments are available in the meeting agenda packet at www.sanmiguelcountyco.gov.",
+    summary: "San Miguel County Planning Commission will hold a public hearing on August 13, 2026 at 9:00 AM in Telluride to consider recommending adoption of the 2024 International Building Code and the Colorado Low Energy & Carbon Code to the Board of County Commissioners. Written comments must be received by noon on Monday, August 10, 2026 and should be limited to one page. Proposed amendments are available in the meeting agenda packet at www.sanmiguelcountyco.gov.",
     deadline: "2026-08-10T12:00:00",
     expires: "2026-08-13",
     dates: "7/30",
     papers: ["ttimes_0730"],
     url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
     address: "Telluride, Colorado (San Miguel County)",
-    noticeKey: "COL-000206-ibc-clecc-hearing"
+    noticeKey: "ord-2024-ibc-clecac-smc"
   },
   {
-    title: "Public Notice -- Town of Telluride 2027 Budget Preparation",
+    title: "Public Notice -- Town of Telluride 2027 Budget Preparation (COL-000208)",
     entity: "Town of Telluride",
     entityClass: "ent-county",
     entityLogo: "assessor",
@@ -7349,17 +7350,17 @@ const LEGAL_NOTICES = [
     iconClass: "type-tax",
     type: "Tax & Finance",
     filterTag: "tax-finance",
-    summary: "The Town Manager of Telluride has issued public notice of the 2027 budget preparation process, effective July 30, 2026. All Town departments, boards, commissions, and citizens must submit funding requests to the Town Manager no later than 5:00 PM on Friday, August 21, 2026. Requests for funding through the Commission for Community Assistance, Arts and Special Events (CCAASE) are subject to separate grant guidelines available at www.telluride.gov.",
+    summary: "The Town Manager of Telluride is giving public notice that the 2027 budget preparation process has begun effective July 30, 2026. All Town Departments, Boards, Commissions, and citizens must submit funding requests to the Town Manager's office no later than 5:00 PM on Friday, August 21, 2026. Requests for CCAASE (Commission for Community Assistance, Arts and Special Events) funding are subject to separate grant guidelines available at www.telluride.gov.",
     deadline: "2026-08-21T17:00:00",
     expires: "2026-08-21",
     dates: "7/30",
     papers: ["ttimes_0730"],
     url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    address: "Town Hall, 135 W. Columbia Ave, Telluride, CO 81435",
-    noticeKey: "COL-000208-telluride-2027-budget"
+    address: "135 W. Columbia Ave (Town Hall), Telluride, CO 81435",
+    noticeKey: "telluride-budget-2027-prep"
   },
   {
-    title: "Public Notice -- Montrose Memorial Hospital Board of Directors Applications",
+    title: "Public Notice -- Montrose Memorial Hospital Board of Directors Applications (COL-000203)",
     entity: "Montrose Memorial Hospital, Inc.",
     entityClass: "ent-county",
     entityLogo: "county",
@@ -7374,46 +7375,46 @@ const LEGAL_NOTICES = [
     papers: ["ttimes_0730"],
     url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
     address: "800 South 3rd Street, Montrose, Colorado",
-    noticeKey: "COL-000203-mmh-board-applications"
+    noticeKey: "mmh-bod-applications-2026"
   },
   {
-    title: "Public Notice -- Farmers' Water Development Company Replacement Share Certificate #887",
-    entity: "Farmers' Water Development Company",
+    title: "Public Notice -- Farmers' Water Development Company Replacement Share Certificate #887 (COL-000181)",
+    entity: "Farmers' Water Development Company (FWDC)",
     entityClass: "ent-county",
     entityLogo: "telluride",
     icon: "💧",
     iconClass: "type-hearing",
     type: "Utilities",
     filterTag: "utilities",
-    summary: "The Farmers' Water Development Company (FWDC) has received a written request to replace lost, destroyed, or wrongfully taken share certificate #887, originally issued to A.F. Newans M.D., C.P. If no written objection is filed with FWDC at P.O. Box 10, Norwood, CO 81423 within 30 days of the last publication date, a replacement certificate will be issued and the original permanently cancelled. Last publication date is July 30, 2026.",
+    summary: "The Farmers' Water Development Company (FWDC) has received a request to replace lost, destroyed, or wrongfully taken share certificate #887, originally issued to A.F. Newans M.D., C.P. Written objections to the issuance of a replacement certificate must be filed with FWDC at P.O. Box 10, Norwood, CO 81423 within 30 days of the last publication date (July 30, 2026). If no objection is received, a replacement certificate will be issued and the original will be permanently cancelled.",
     deadline: "2026-08-29",
     expires: "2026-08-29",
     dates: "7/30",
     papers: ["ttimes_0730"],
     url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    address: "Norwood, Colorado (FWDC service area)",
-    noticeKey: "COL-000181-fwdc-share-cert-887"
+    address: "P.O. Box 10, Norwood, CO 81423 (Farmers' Water Development Company service area)",
+    noticeKey: "fwdc-share-cert-887-replacement"
   },
   {
     title: "RFP -- Interior Repainting of Historic Placerville Schoolhouse (COL-000205)",
-    entity: "San Miguel County Fleet & Facilities",
+    entity: "San Miguel County Fleet & Facilities Department",
     entityClass: "ent-county",
     entityLogo: "county",
     icon: "🏛️",
     iconClass: "type-rfp",
     type: "Public Notice",
     filterTag: "public-entity",
-    summary: "San Miguel County is seeking proposals from contractors to repaint the interior of the Historic Placerville Schoolhouse at 400 Front St, Placerville, Colorado. RFP information is available at www.sanmiguelcountyco.gov/bids.aspx or from the Fleet & Facilities Department at 333 W Colorado Ave, 2nd floor, Telluride. Proposals must be submitted by 5:00 PM on Wednesday, August 6, 2026, either via email or in person at the Fleet & Facilities Department.",
+    summary: "San Miguel County is requesting proposals from contractors to repaint the interior of the Historic Placerville Schoolhouse at 400 Front St, Placerville. RFP information is available at www.sanmiguelcountyco.gov/bids.aspx or from the Fleet & Facilities Department at 333 W Colorado Ave, 2nd floor, Telluride. Proposals must be submitted by 5:00 PM on Wednesday, August 6, 2026, either via email or in person at the Fleet & Facilities Department.",
     deadline: "2026-08-06T17:00:00",
     expires: "2026-08-06",
     dates: "7/30",
     papers: ["ttimes_0730"],
     url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
     address: "400 Front St, Placerville, Colorado",
-    noticeKey: "COL-000205-rfp-placerville-schoolhouse"
+    noticeKey: "rfp-placerville-schoolhouse-repaint"
   },
   {
-    title: "Foreclosure Sale Notice -- 350 S Mahoney Dr Unit 7, Telluride (Sale No. 2026-05)",
+    title: "Foreclosure Sale Notice -- 350 S Mahoney Dr Unit 7, Telluride (Sale No. 2026-05, COL-000202)",
     entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society FSB",
     entityClass: "ent-county",
     entityLogo: "assessor",
@@ -7421,18 +7422,18 @@ const LEGAL_NOTICES = [
     iconClass: "type-tax",
     type: "Tax & Finance",
     filterTag: "tax-finance",
-    summary: "San Miguel County Public Trustee Brandi R. Hatfield will conduct a public auction on September 3, 2026 at 10:00 AM at 305 W. Colorado Avenue, Telluride, for Condominium Unit 7, Double Diamond Condominium, following default on a deed of trust with an outstanding principal balance of $1,199,032.37. The original grantor is Ryan Pfaff; the current debt holder is Wilmington Savings Fund Society, FSB, as Trustee for Residential Investment Trust. The lien foreclosed may not be a first lien.",
+    summary: "San Miguel County Public Trustee Brandi R. Hatfield will hold a public auction on September 3, 2026 at 10:00 AM at 305 W. Colorado Avenue, Telluride, for Condominium Unit 7, Double Diamond Condominium, due to the original grantor Ryan Pfaff's failure to pay principal and interest on a deed of trust with an outstanding balance of approximately $1,199,032.37. The property is located at 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The lien foreclosed may not be a first lien; the current holder of the debt is Wilmington Savings Fund Society, FSB, as trustee for Residential Investment Trust.",
     deadline: "2026-09-03T10:00:00",
     expires: "2026-09-03",
     dates: "7/30",
     papers: ["ttimes_0730"],
     url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    address: "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
-    noticeKey: "foreclosure-2026-05-350-mahoney-unit7",
+    address: "350 S Mahoney Dr Unit 7, Telluride, CO 81435 (Double Diamond Condominium)",
+    noticeKey: "foreclosure-2026-05-pfaff-350-mahoney",
     caseNumber: "2026-05"
   },
   {
-    title: "Foreclosure Sale Notice -- Stonegate Drive (Vacant Lot 166AR2), Mountain Village (Sale No. 2026-04)",
+    title: "Foreclosure Sale Notice -- TBD Stonegate Drive, Mountain Village (Sale No. 2026-04)",
     entity: "San Miguel County Public Trustee / Federal Holding Realty",
     entityClass: "ent-county",
     entityLogo: "assessor",
@@ -7440,14 +7441,14 @@ const LEGAL_NOTICES = [
     iconClass: "type-tax",
     type: "Tax & Finance",
     filterTag: "tax-finance",
-    summary: "San Miguel County Public Trustee Brandi R. Hatfield will conduct a public auction on September 3, 2026 at 10:00 AM at 305 W. Colorado Avenue, Telluride, for Lot 166AR2 on Stonegate Drive (vacant land) in Mountain Village, following default on a deed of trust with an outstanding principal balance of $500,000.00. The original grantor is Two Stonegate LLC; the current debt holder is Federal Holding Realty. The lien foreclosed may not be a first lien.",
+    summary: "San Miguel County Public Trustee Brandi R. Hatfield will hold a public auction on September 3, 2026 at 10:00 AM at 305 W. Colorado Avenue, Telluride, for Lot 166AR2, Telluride Mountain Village (a vacant lot on Stonegate Drive, Mountain Village), due to the original grantor Two Stonegate LLC's failure to make payments on a deed of trust with an outstanding balance of $500,000.00. The current holder of the debt is Federal Holding Realty. The lien foreclosed may not be a first lien.",
     deadline: "2026-09-03T10:00:00",
     expires: "2026-09-03",
     dates: "7/30",
     papers: ["ttimes_0730"],
     url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
     address: "TBD (Vacant) Stonegate Drive, Mountain Village, CO 81435 (Lot 166AR2, Telluride Mountain Village)",
-    noticeKey: "foreclosure-2026-04-stonegate-lot166ar2",
+    noticeKey: "foreclosure-2026-04-two-stonegate-llc",
     caseNumber: "2026-04"
   }
 ];
