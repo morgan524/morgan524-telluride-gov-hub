@@ -1,27 +1,5 @@
 [
   {
-    "title": "Music on the Green Presents Daniel Rodriguez",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-daniel-rodriguez-4/",
-    "description": "Beyond The Groove and TMVOA (tmvoa.org) present Daniel Rodriguez at Reflection Plaza in Mountain Village. The Friday shows are free,",
-    "pubDate": "2026-09-04T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/48867/daniel_rodriguez_1800x900px.png"
-  },
-  {
-    "title": "Town Talk: Single molecule views of Nature&#039;s nanomachines",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/town-talk-single-molecule-views-of-natures-nanomachines/",
-    "description": "This town talk will be presented by Taekjip (TJ) Ha, Harvard Medical School, Boston Children’s Hospital, Howard Hughes Medical School.",
-    "pubDate": "2026-09-04T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/48909/tt_logo_1048x802_a.png"
-  },
-  {
     "title": "Movies Under the Stars",
     "link": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     "description": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
@@ -405,5 +383,16 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
+  },
+  {
+    "title": "Bike & Brewery Tour",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    "description": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    "pubDate": "2026-10-05T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   }
 ]
