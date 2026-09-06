@@ -2679,33 +2679,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Marya Stark and Charles Dalton Sworn In to Telluride Town Council",
-    source: "Town of Telluride",
-    date: "August 12, 2026",
-    newsTopic: "government",
-    copy: "(July 21, 2026) – The Town welcomed two new members to Town Council this morning as Charles Dalton and Marya Stark were sworn into office at 9:30 a.m. Town Clerk Tiffany Kavanaugh administered the oath of office for both officials.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=402",
-    img: ""
-  },
-  {
-    title: "Arrest Made in String of Telluride Mountain Bike Thefts",
-    source: "Town of Telluride",
-    date: "August 12, 2026",
-    newsTopic: "recreation",
-    copy: "(August 11, 2026) – The Telluride Marshal's Department has identified and arrested a suspect in a series of mountain bike thefts that account for more than $22,000 in reported losses.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=401",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15642"
-  },
-  {
-    title: "State of the Town Address: The State of the Town Is Strong and Engaging",
-    source: "Town of Telluride",
-    date: "August 8, 2026",
-    newsTopic: "government",
-    copy: "The Mayor's biannual State of the Town Address was delivered on Tuesday, July 21 during the regular meeting of Telluride Town Council, here's what Mayor Teddy Errico had to say.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=400",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15641"
-  },
-  {
     title: "Please Take the Advanced Web Map Survey",
     source: "San Miguel County",
     date: "September 3, 2026",
@@ -7362,25 +7335,6 @@ const LEGAL_NOTICES = [
     url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=209",
     address: "",
     smcBidID: "209"
-  },
-  {
-    title: "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominiums (Foreclosure Sale No. 202605)",
-    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "Public Trustee Brandi R. Hatfield of San Miguel County is conducting a foreclosure sale on a deed of trust originally granted by Ryan Pfaff, with the current debt holder being Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust. The property is Condominium Unit 7 at Double Diamond Condominiums, commonly known as 350 S Mahoney Dr Unit 7, Telluride, CO 81435, with an outstanding principal balance of approximately $1,199,032. The public auction will be held at 10:00 A.M. on September 3, 2026, at 305 W. Colorado Avenue, East entry, Telluride, CO.",
-    deadline: "2026-09-03",
-    expires: "2026-09-03",
-    dates: "8/13",
-    papers: ["ttimes_0813"],
-    url: "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
-    address: "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
-    noticeKey: "foreclosure-202605-350-s-mahoney-unit7",
-    caseNumber: "202605"
   }
 ];
 
