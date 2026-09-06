@@ -482,5 +482,71 @@
     "category": "Community Event",
     "location": "Wilkinson Public Library, Telluride",
     "imageUrl": ""
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "link": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-14/",
+    "description": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    "pubDate": "2026-09-14T09:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Tennis Clinic 4.0+",
+    "link": "https://koto.org/event/tennis-clinic-4-0/2026-09-14/",
+    "description": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
+    "pubDate": "2026-09-14T11:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "DIY Green Cleaning Supplies",
+    "link": "https://koto.org/event/diy-green-cleaning-supplies/",
+    "description": "Have you ever wanted to make your own \"green\" cleaning solutions? Non-toxic cleaning solutions are a must have for the winter, or just anytime of year. If you have ever wanted to make your own cleaning solutions, join us as we make a spray for countertops, and a scrub for everything else, all while using everyday essential items.",
+    "pubDate": "2026-09-14T17:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/08/DIY-CLEANING-PRODUCTS.png"
+  },
+  {
+    "title": "West End Trail Running",
+    "link": "https://koto.org/event/west-end-trail-running/2026-09-15/",
+    "description": "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens & adults 15 and older are welcome to participate. Contact director Alicia O'Connel at montrosewestrec@gmail.com or text her at 302-690-0160 for more information, including a nominal registration fee.",
+    "pubDate": "2026-09-15T08:15:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "",
+    "imageUrl": ""
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "link": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-15/",
+    "description": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    "pubDate": "2026-09-15T09:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Tennis Clinic 4.0+",
+    "link": "https://koto.org/event/tennis-clinic-4-0/2026-09-15/",
+    "description": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
+    "pubDate": "2026-09-15T11:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
   }
 ]

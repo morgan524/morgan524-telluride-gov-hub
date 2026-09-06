@@ -1,12 +1,4 @@
 {
-  "telluride|2026-08-06|Town Council Retreat - Aug 06 2026": {
-    "sv": 4,
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8050",
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/8596sfn-QZC7tbYJiXF4YA",
-    "meetingId": "845 3020 1574",
-    "passcode": "082987.",
-    "phone": "719) 359-4580"
-  },
   "telluride|2026-08-10|Intergovernmental Worksession - Aug 10 2026": {
     "sv": 4,
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8057",
@@ -88,12 +80,6 @@
   "norwood|2026-08-17|Planning and Zoning Commission Meeting": {
     "sv": 4,
     "ph": "b858cb282617fb09"
-  },
-  "mv|2026-08-06|Design Review Board": {
-    "sv": 4,
-    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/49516/august_6-_2026_design_review_board_meeting_agenda.pdf",
-    "zoomUrl": "https://us06web.zoom.us/j/84661174346?pwd=pGG47aNtAK3sjfccaVrai3o6jbV3bZ.1",
-    "meetingId": "846 6117 4346"
   },
   "ophir|2026-08-18|General Assembly Meeting": {
     "sv": 4,
@@ -353,7 +339,7 @@
   "telluride|2026-09-16|Parks & Recreation Commission - Sep 16 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082",
     "sv": 4,
-    "ph": "74a846d62014eeb4"
+    "ph": "6fb96e40a5040f91"
   },
   "county|2026-09-16|Board of County Commissioners Meeting": {
     "sv": 4,
@@ -483,7 +469,7 @@
   "telluride|2026-10-01|Town Council Budget - Oct 01 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8053",
     "sv": 4,
-    "ph": "066ac20be57f21cc"
+    "ph": "ae63a84c96949f40"
   },
   "county|2026-10-01|Lodging Tax Panel Meeting": {
     "sv": 4,
@@ -513,5 +499,10 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132",
     "sv": 4,
     "ph": "681ef775e57db365"
+  },
+  "telluride|2026-10-06|Town Council - Oct 06 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044",
+    "sv": 4,
+    "ph": "861712471a1ec903"
   }
 }

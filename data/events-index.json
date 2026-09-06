@@ -698,7 +698,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn…",
     "type": "Arts & Film",
-    "endDate": "2026-10-28"
+    "endDate": "2026-11-05"
   },
   {
     "title": "OPEN MIC / JAM NIGHT w/ host DJ Strong",
@@ -712,7 +712,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Join us every Wednesday at 6 PM for Open Mic Night with DJ Strong at Floating Lotus Brewery. Bring an original song, play a favorite cover, meet other local musicians, or jump into one of our full-band jam sessions. Solo performers,…",
     "type": "Music",
-    "endDate": "2026-10-29"
+    "endDate": "2026-11-05"
   },
   {
     "title": "Yoga in the Park- Wednesday evenings",
@@ -1540,6 +1540,32 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Tennis Clinic 4.0+",
+    "href": "https://koto.org/event/tennis-clinic-4-0/2026-09-14/",
+    "date": "2026-09-14",
+    "time": "11:00 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "DIY Green Cleaning Supplies",
+    "href": "https://koto.org/event/diy-green-cleaning-supplies/",
+    "date": "2026-09-14",
+    "time": "5:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/DIY-CLEANING-PRODUCTS.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Have you ever wanted to make your own \"green\" cleaning solutions? Non-toxic cleaning solutions are a must have for the winter, or just anytime of year. If you have ever wanted to make your own cleaning solutions, join us as we make a spray…",
+    "type": "Community"
+  },
+  {
     "title": "Mountain Village Matters radio show",
     "href": "https://townofmountainvillage.com/explore/events/all-events/mountain-village-matters-radio-show/",
     "date": "2026-09-14",
@@ -1579,6 +1605,19 @@
     "type": "Community"
   },
   {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-14/",
+    "date": "2026-09-14",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
+    "type": "Outdoors & Sports"
+  },
+  {
     "title": "Woman's Club of Ouray County monthly meeting",
     "href": "https://events.ourayridgwayevents.com/event/womans-club-of-ouray-county-monthly-meeting-3004",
     "date": "2026-09-15",
@@ -1590,6 +1629,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "All Ouray County women are invited to attend the monthly meeting for the Woman's Club of Ouray County (WCOC). The WCOC, created in 1897, is a local philanthropic and community focused nonprofit organization. Monthly meetings include local…",
     "type": "Community"
+  },
+  {
+    "title": "Tennis Clinic 4.0+",
+    "href": "https://koto.org/event/tennis-clinic-4-0/2026-09-15/",
+    "date": "2026-09-15",
+    "time": "11:00 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Middle School Volleyball: Ouray vs Centennial",
@@ -1696,6 +1748,32 @@
     "source": "Telluride.com",
     "desc": "Join La Piazza and TMVOA for Wine and Watercolor on the patio. Beverages & painting supplies provided.",
     "type": "Food & Drink"
+  },
+  {
+    "title": "West End Trail Running",
+    "href": "https://koto.org/event/west-end-trail-running/2026-09-15/",
+    "date": "2026-09-15",
+    "time": "8:15 AM",
+    "location": "",
+    "town": "",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/hiking.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens &…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-15/",
+    "date": "2026-09-15",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Native Rhythms, Native Jazz: R. Carlos Nakai, AmoChip Dabney, & Will Clipman – at the Montrose Pavilion",

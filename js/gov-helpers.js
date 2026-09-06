@@ -146,9 +146,6 @@ function resolveEventImage(e, opts) {
 // stays current automatically; the static config is the fallback for
 // sources without a PDF agenda.
 const MEETING_AGENDA_META = {
-  "telluride|2026-08-06|Town Council Retreat - Aug 06 2026":
-    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8050","zoomUrl":"https://us06web.zoom.us/meeting/register/8596sfn-QZC7tbYJiXF4YA","meetingId":"845 3020 1574","passcode":"082987.","phone":"719) 359-4580"},
-
   "telluride|2026-08-10|Intergovernmental Worksession - Aug 10 2026":
     {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8057","zoomUrl":"https://us06web.zoom.us/meeting/register/ZOZQ7J9UTmKHp7XXMuliiw","meetingId":"886 1441 5107","passcode":"070631.","phone":"719) 359-4580"},
 
@@ -190,9 +187,6 @@ const MEETING_AGENDA_META = {
 
   "norwood|2026-08-17|Planning and Zoning Commission Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
-
-  "mv|2026-08-06|Design Review Board":
-    {"sv":4,"agendaUrl":"https://townofmountainvillage.com/site/assets/files/49516/august_6-_2026_design_review_board_meeting_agenda.pdf","zoomUrl":"https://us06web.zoom.us/j/84661174346?pwd=pGG47aNtAK3sjfccaVrai3o6jbV3bZ.1","meetingId":"846 6117 4346"},
 
   "ophir|2026-08-18|General Assembly Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -327,7 +321,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8022","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA","meetingId":"812 9136 3866","passcode":"440860.","phone":"301-715-8592"},
 
   "telluride|2026-09-16|Parks & Recreation Commission - Sep 16 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082","sv":4,"ph":"74a846d62014eeb4"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082","sv":4,"ph":"6fb96e40a5040f91"},
 
   "county|2026-09-16|Board of County Commissioners Meeting":
     {"sv":4,"ph":"a12dfd2ce826475e"},
@@ -411,7 +405,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-10-01|Town Council Budget - Oct 01 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8053","sv":4,"ph":"066ac20be57f21cc"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8053","sv":4,"ph":"ae63a84c96949f40"},
 
   "county|2026-10-01|Lodging Tax Panel Meeting":
     {"sv":4,"ph":"1f577e951aaf55d2"},
@@ -426,7 +420,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://www.norwoodtown.com/files/5f8304a63/09.08.2026+RESCHEDULED+NWC+Agenda.pdf","zoomUrl":"https://us02web.zoom.us/j/88274908233","meetingId":"882 7490 8233","passcode":"997236","phone":"346-248-7799","sv":4},
 
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132","sv":4,"ph":"681ef775e57db365"}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132","sv":4,"ph":"681ef775e57db365"},
+
+  "telluride|2026-10-06|Town Council - Oct 06 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044","sv":4,"ph":"861712471a1ec903"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -782,7 +779,10 @@ const MEETING_PREVIEWS = {
     "Council is expected to approve routine financial demands, authorize a mayoral letter supporting a proposed recreation fee structure at Blue Lakes, and consider additional consent calendar items. The meeting will be held both in person in Ridgway, Colorado and virtually via Zoom.",
 
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026":
-    "The Open Space Commission is expected to discuss matters related to open space acquisition, management, and planning priorities. The meeting may also address implications of Ordinance #1640, which amended Telluride's Land Use Code to implement the Colorado Wildfire Resiliency Code, passed by Town Council in August 2026."
+    "The Open Space Commission is expected to discuss matters related to open space acquisition, management, and planning priorities. The meeting may also address implications of Ordinance #1640, which amended Telluride's Land Use Code to implement the Colorado Wildfire Resiliency Code, passed by Town Council in August 2026.",
+
+  "telluride|2026-10-06|Town Council - Oct 06 2026":
+    "Council is expected to discuss matters related to the Colorado Wildfire Resiliency Code amendment to Telluride's Land Use Code (Ordinance #1640), which was previously passed in August 2026 to update Chapter 18 of the Municipal Code with new wildfire resiliency standards."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -853,6 +853,16 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "Monthly Chamber of Commerce meeting open to all.",
     href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
+    img: ""
+  },
+  {
+    title: "Parish Bulletin for September 6",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "September 6, 2026",
+    newsTopic: "community",
+    copy: "Attached is this week's parish bulletin. Please check the parish calendar for all updated schedule of events. *Holy Adoration begins at 8:30 am before Sunday's Holy Mass-September 6. *Immediately after Holy Mass, join us for...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-september-6/",
     img: ""
   },
   {
@@ -1042,13 +1052,10 @@ const SMC_ALERTS = [
 const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-05';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-06';
 const LEGAL_NOTICES_CACHE_DATE = '2026-09-05';
 
 const MANUAL_SUMMARIES = {
-  "telluride|2026-08-06|Town Council Retreat - Aug 06 2026":
-    "The August 6 retreat is a single three-hour work session in which Council will set the Town's goals and objectives for 2027. No votes, no land-use items — just the annual exercise of deciding what this Council wants to prioritize in the year ahead. Those priorities, once set, tend to shape budget decisions and staff direction for the whole cycle, so the conversation matters even if nothing is formally adopted.",
-
   "telluride|2026-08-10|Intergovernmental Worksession - Aug 10 2026":
     "This intergovernmental worksession brings together representatives from Telluride, Mountain Village, Ophir, San Miguel County, and Norwood for a regional check-in. The session opens with a large-projects update spanning all five jurisdictions — a regular pulse-check on what's moving across the region. From there: a presentation on allyship with the Ute people from Ernest House Jr.; a status update on the Telluride Regional Medical Center's new facility from Tom Crabtree and Heidi Lauterbach; an update on regional infant care and the Munchkins program from Chambers Squier and Michelle Bulson; and a U.S. Forest Service update from Megan Eno. No votes or land-use decisions are on the agenda — this is a listening and coordination session.",
 
@@ -1090,9 +1097,6 @@ const MANUAL_SUMMARIES = {
 
   "norwood|2026-08-17|Planning and Zoning Commission Meeting":
     "The August 17, 2026 Norwood Planning and Zoning Commission Meeting agenda hasn't been posted yet.",
-
-  "mv|2026-08-06|Design Review Board":
-    "Three multifamily projects are on the board's plate Thursday morning. First up is an initial architecture and site review for four new multifamily units at 100 Pennington Place (Lot 726-R1). Then the board returns to a multifamily building at TBD Lost Creek Lane (Lot 27A) — continued from June — for another initial architecture review. A conditional-use permit for office space at 620 Mountain Village Blvd, Unit 1A goes to the DRB for a recommendation to Town Council. Finally, the final architecture review for a 15-unit employee apartment building at 306 Adams Ranch Road (Lot 640A) is expected to be continued to the September 3 meeting.",
 
   "ophir|2026-08-18|General Assembly Meeting":
     "The August 18, 2026 Ophir General Assembly Meeting agenda hasn't been posted yet.",
@@ -1326,7 +1330,10 @@ const MANUAL_SUMMARIES = {
     "The September 8th Norwood Water Commission meeting has been rescheduled to Tuesday, September 22, 2026, at 6:30 p.m. at Norwood Town Hall.",
 
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026":
-    "The October 5, 2026 Open Space Commission agenda hasn't been posted yet."
+    "The October 5, 2026 Open Space Commission agenda hasn't been posted yet.",
+
+  "telluride|2026-10-06|Town Council - Oct 06 2026":
+    "The October 6, 2026 Town Council agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1692,6 +1699,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Plane crash victims named",
+    source: "Telluride Times",
+    date: "September 6, 2026",
+    firstSeen: "2026-09-06",
+    newsTopic: "public-safety",
+    copy: "Randy Ramirez, 34, of Jupiter, FL and Belen, NM, and Blake Klobuchar, 20, of Peralta, NM, died when their Cessna T206 struck the north face of Dolores Peak on Sept. 3. They were returning from aerial survey work in Grand Junction. The NTSB and FAA are investigating.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_1f23f083-9184-4c92-9452-d9b89e9e0ef6.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/fb/3fb6cf5f-4f86-4e93-90f4-677776411493/6a9cd2bd4e5f5.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Ravel, Brahms and a journey to the stars",
     source: "Telluride Times",
@@ -2620,42 +2639,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Collaborating on climate action",
-    source: "Telluride Times",
-    date: "August 23, 2026",
-    firstSeen: "2026-08-23",
-    newsTopic: "community",
-    copy: "EcoAction Partners, the Telluride Foundation, and Telluride Science are hosting a free public event on Sept. 2, 6–7 p.m. at the Telluride Innovation Center, featuring Mountain Towns 2030, a nonprofit network focused on practical climate action for mountain communities. The evening includes a panel with leaders from Breckenridge, Ridgway, and MT2030.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_407d6ab9-8150-4eb9-8259-1b2b83bcf1a9.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/0a/10a2c19f-c364-4cbf-b414-6be0f2c4584e/6a89daf284ad8.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride Fire plans station expansion in Placerville",
-    source: "Telluride Times",
-    date: "August 23, 2026",
-    firstSeen: "2026-08-23",
-    newsTopic: "government",
-    copy: "Telluride Fire Protection District is expanding Station 3 in Placerville with a new apparatus bay, updated crew quarters, and the district's first training tower — funded through the operating budget plus a $575,000 state grant, no new taxes. The three-story live-burn facility must be operational by August 2027. Station remodel is estimated at $7 million and still in permitting.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_37484dae-0d32-43f3-a9c8-8910191c83c1.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/f4/2f44c84d-2a71-4ba5-9820-a208e47ce0ad/6a8b318f45bd1.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Fashion with a conscience",
-    source: "Telluride Times",
-    date: "August 23, 2026",
-    firstSeen: "2026-08-23",
-    newsTopic: "education",
-    copy: "EcoAction Partners is hosting its first \"Full-Circle Fashion Fundraiser\" — a sip-and-shop clothing sale — August 29–30 at the Ah Haa School Sky Deck. Gently used clothing can be donated at several drop-off locations through Aug. 29, or consigned at the EcoAction office Aug. 24–28. Proceeds support the local climate action nonprofit.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_c767cb0d-80b0-4d2e-ad9c-1816456891e3.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town Council Proclaims September 7-11 Black Bear Safety Week",
     source: "Town of Telluride",
     date: "September 3, 2026",
@@ -2757,7 +2740,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Ridgway Rescinds Stage 2 Fire Restrictions, Reinstates Stage 1 Fire Restrictions effective 12:01am on Thursday, Sept. 3rd - Sept. 2, 2026",
     source: "Town of Ridgway",
-    date: "September 5, 2026",
+    date: "September 6, 2026",
     firstSeen: "2026-09-02",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2779,7 +2762,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Public Hearing Notice Wed., Sept. 16, 2026 at 5:30pm - 1) Site Plan and Conditional Use Permit for Riverbend Townhomes (TBD Liddell Dr.); 2) Plat Amendment of Lot 4 and Outlot of Riverview Business Park Subdivision (TBD Liddell Dr.); 3) PUD Amendment Lena Street Commons Planned Unit Development (TBD N. Lena Street) - Sept. 2, 2026",
     source: "Town of Ridgway",
-    date: "September 5, 2026",
+    date: "September 6, 2026",
     firstSeen: "2026-09-02",
     newsTopic: "land-use",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3833,6 +3816,72 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
+  },
+  {
+    title: "Tennis Clinic 3.0-4.0",
+    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-14/",
+    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-09-14T09:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Tennis Clinic 4.0+",
+    link: "https://koto.org/event/tennis-clinic-4-0/2026-09-14/",
+    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-09-14T11:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "DIY Green Cleaning Supplies",
+    link: "https://koto.org/event/diy-green-cleaning-supplies/",
+    description: "Have you ever wanted to make your own \"green\" cleaning solutions? Non-toxic cleaning solutions are a must have for the winter, or just anytime of year. If you have ever wanted to make your own cleaning solutions, join us as we make a spray for countertops, and a scrub for everything else, all while using everyday essential items.",
+    pubDate: "2026-09-14T17:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/DIY-CLEANING-PRODUCTS.png"
+  },
+  {
+    title: "West End Trail Running",
+    link: "https://koto.org/event/west-end-trail-running/2026-09-15/",
+    description: "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens & adults 15 and older are welcome to participate. Contact director Alicia O'Connel at montrosewestrec@gmail.com or text her at 302-690-0160 for more information, including a nominal registration fee.",
+    pubDate: "2026-09-15T08:15:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
+  },
+  {
+    title: "Tennis Clinic 3.0-4.0",
+    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-15/",
+    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-09-15T09:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Tennis Clinic 4.0+",
+    link: "https://koto.org/event/tennis-clinic-4-0/2026-09-15/",
+    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-09-15T11:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
   }
 ];
 
@@ -4607,7 +4656,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/zumba-fitness-with-tamra",
     description: "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn calories, and tone muscles. Classes are often described as a \"fitness party\" that reduces stress. All levels of fitness and dance experience are welcome. Classes are $12 to drop in. Class packs are available for purchase (5 classes for $50, 10 classes for $95). For more information, check out the instructor's website: https://zumba.com/p/zumbafitnesswithTamra or email Tamra at tamra.nichols@icloud.com . For updated class information, including last-minute changes or cancellations, follow the instructor's Zumba Facebook page at https://www.facebook.com/ZumbaFitnesswithTamra . View on site | Email this event",
     pubDate: "2026-09-09T23:30:00.000Z",
-    endDate: "2026-10-28",
+    endDate: "2026-11-05",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4619,7 +4668,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/open-mic-jam-night-w-host-dj-strong",
     description: "Join us every Wednesday at 6 PM for Open Mic Night with DJ Strong at Floating Lotus Brewery. Bring an original song, play a favorite cover, meet other local musicians, or jump into one of our full-band jam sessions. Solo performers, groups, and musicians looking to collaborate are all welcome. Open Mic is also where we discover artists for Floating Lotus Mainstage. Standout performers may be invited back to play a full featured set, creating a path from Open Mic to the Mainstage. Come perform, connect, experiment, or simply enjoy an evening of live local music. Every Wednesday at 6 PM Floating Lotus Brewery View on site | Email this event",
     pubDate: "2026-09-10T00:00:00.000Z",
-    endDate: "2026-10-29",
+    endDate: "2026-11-05",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6561,18 +6610,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/58332/dsc01583lr--1-.800x533.webp"
   },
   {
-    title: "Mind Blown",
-    link: "https://www.telluride.com/event/mind-blown/",
-    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of …",
-    pubDate: "2026-07-03",
-    endDate: "2026-09-04",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/36321/couch_1600x900.800x533.webp"
-  },
-  {
     title: "Alpine Chapel Outdoor Service",
     link: "https://www.telluride.com/event/alpine-chapel-outdoor-service/",
     description: "The Alpine Chapel will host an outdoor worship service at the Sunset Plaza Stage in Mountain Village at 9:30 a.m.",
@@ -6607,18 +6644,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/63362/tdp3588.800x533.webp"
-  },
-  {
-    title: "Birding With Katie",
-    link: "https://www.telluride.com/event/birding-with-katie/",
-    description: "Patagonia Telluride will host a bird talk with Katie Triest from 5-6 pm on Sept 3 at the Patagonia store. Katie will …",
-    pubDate: "2026-09-03",
-    endDate: "2026-09-04",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63443/screenshot_2026-08-21_114434-v1.800x533.webp"
   },
   {
     title: "Telluride Film Festival",
