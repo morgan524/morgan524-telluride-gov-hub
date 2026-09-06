@@ -284,5 +284,26 @@
     "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=209",
     "address": "",
     "smcBidID": "209"
+  },
+  {
+    "title": "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominium (Sale No. 202605)",
+    "entity": "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB",
+    "entityClass": "ent-county",
+    "entityLogo": "assessor",
+    "icon": "💰",
+    "iconClass": "type-tax",
+    "type": "Tax & Finance",
+    "filterTag": "tax-finance",
+    "summary": "The San Miguel County Public Trustee has scheduled a foreclosure sale for Condominium Unit 7, Double Diamond Condominium, located at 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor is Ryan Pfaff, with the current debt holder being Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust, on an original principal of $1,200,000. The public auction will be held at 10:00 A.M. on September 3, 2026, at 305 W. Colorado Avenue, East entry, Telluride, CO.",
+    "deadline": "2026-09-03",
+    "expires": "2026-09-03",
+    "dates": "8/13",
+    "papers": [
+      "ttimes_0813"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
+    "address": "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
+    "noticeKey": "foreclosure-sale-202605",
+    "caseNumber": "202605"
   }
 ]
