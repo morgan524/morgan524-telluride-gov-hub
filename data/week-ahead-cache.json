@@ -1,18 +1,18 @@
 {
-  "hash": "7ba4c91ee7dfba2ff5371007525366cf648838c5",
-  "lede": "The San Miguel County BOCC's special meeting Wednesday is the one to watch — they'll consider Resolution 2026-34, which would change Area Median Income limits on deed-restricted properties in Pinion Park, a technical move that directly shapes who actually qualifies for affordable housing here. Also Wednesday, the County Planning Commission takes up three Land Use Code amendments touching forestry, oil and gas, and geothermal energy. Over in Ridgway Tuesday, the Town Council meets on a heavy agenda that includes ratifying support for a federal Major Disaster Declaration tied to the nearly 40,000-acre Gold Mountain Fire.",
+  "hash": "2d88e95d16f24ab00d36ac6c6d900d7a7594cf11",
+  "lede": "The biggest item this week is the San Miguel County BOCC special meeting Wednesday, where commissioners will take up Resolution 2026-34 — a change to Area Median Income limits on deed-restricted properties in Pinion Park that could reshape who qualifies for local workforce housing. Ridgway's Town Council also meets Wednesday with real weight on its agenda, including ratifying support for a federal Major Disaster Declaration tied to the Gold Mountain Fire, which has burned nearly 40,000 acres and repeatedly cut off Highway 550. The county Planning Commission meets Thursday to weigh in on Land Use Code amendments touching forestry, oil and gas, and geothermal energy.",
   "notable": [
     {
+      "id": 4,
+      "stake": "Council ratifies disaster declaration support for 40,000-acre Gold Mountain Fire fallout."
+    },
+    {
       "id": 6,
-      "stake": "AMI threshold change on deed-restricted units determines who qualifies for local housing."
+      "stake": "AMI threshold change on deed-restricted Pinion Park units could shift who qualifies for local housing."
     },
     {
       "id": 8,
-      "stake": "Planning Commission votes on three Land Use Code amendments: forestry, oil/gas, geothermal."
-    },
-    {
-      "id": 4,
-      "stake": "Council ratifies disaster declaration support for the 40,000-acre Gold Mountain Fire."
+      "stake": "Planning Commission votes on Land Use Code amendments for forestry, oil and gas, and geothermal."
     }
   ]
 }

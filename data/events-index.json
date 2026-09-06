@@ -1,18 +1,5 @@
 [
   {
-    "title": "Drop In Tech Time with Oliver",
-    "href": "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-09-06/",
-    "date": "2026-09-06",
-    "time": "1:00 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-3.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads,…",
-    "type": "Community"
-  },
-  {
     "title": "Music and Makers Fest",
     "href": "https://events.ourayridgwayevents.com/event/music-and-makers-fest",
     "date": "2026-09-06",
@@ -67,28 +54,28 @@
   },
   {
     "title": "Immersive Sound Journey with Dustin Wells",
-    "href": "https://koto.org/event/immersive-sound-journey-with-dustin-wells/",
+    "href": "https://telluridelibrary.libcal.com/event/17347348?hs=a",
     "date": "2026-09-06",
     "time": "2:00 PM",
-    "location": "Wilkinson Public Library, Telluride",
+    "location": "Lower Terrace - outdoors",
     "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/08/sound-JOURNEY.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "An immersive sound journey is a live musical experience you take lying down. Musician and sound ceremony artist Dustin Wells surrounds the room with sacred instruments — gongs, shamanic drums, singing bowls, crystal bowls, wind chimes —…",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_11_10_11.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "2:00 PM – 4:00 PM · An immersive sound journey is a live musical experience you take lying down. Musician and sound ceremony artist Dustin Wells surrounds the room with sacred instruments — gongs, shamanic drums, singing bowls, crystal…",
     "type": "Arts & Film"
   },
   {
     "title": "Tea and Tarot",
-    "href": "https://koto.org/event/tea-and-tarot/2026-09-06/",
+    "href": "https://telluridelibrary.libcal.com/event/17029771?hs=a",
     "date": "2026-09-06",
     "time": "2:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
+    "location": "Telluride Room",
     "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance. Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in…",
     "type": "Community"
   },
   {
@@ -488,20 +475,6 @@
     "source": "KOTO Community Calendar",
     "desc": "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens &…",
     "type": "Outdoors & Sports"
-  },
-  {
-    "title": "Functional Fitness - Strength & Mobility Training For Women",
-    "href": "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
-    "date": "2026-09-08",
-    "time": "8:15 AM",
-    "location": "Weehawken Ridgway (Old Schoolhouse)",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53312790468311/huge/860fbc87ce3cc92e25c09e723732d04292df18ba.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups…",
-    "type": "Talks & Classes",
-    "endDate": "2026-11-05"
   },
   {
     "title": "Tennis Clinic 3.0-4.0",
@@ -3448,7 +3421,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "AFTER SCHOOL ART FOR AGES 5-8 Thursdays, 3:15–4:30 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 17 – October 8Session 2 (4 weeks • $85): October 22 – November 12Session 3 (3…",
     "type": "Arts & Film",
-    "endDate": "2026-10-29"
+    "endDate": "2026-11-05"
   },
   {
     "title": "Pumpkins & Flowers at The Adobe Inn with San Juan Blooms!",

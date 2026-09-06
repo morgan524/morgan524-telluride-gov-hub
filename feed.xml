@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Sep 2026 20:17:32 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 22:52:07 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Sep 6–12</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-35</guid>
-      <pubDate>Sun, 06 Sep 2026 20:17:32 GMT</pubDate>
-      <description><![CDATA[The San Miguel County BOCC's special meeting Wednesday is the one to watch — they'll consider Resolution 2026-34, which would change Area Median Income limits on deed-restricted properties in Pinion Park, a technical move that directly shapes who actually qualifies for affordable housing here. Also Wednesday, the County Planning Commission takes up three Land Use Code amendments touching forestry, oil and gas, and geothermal energy. Over in Ridgway Tuesday, the Town Council meets on a heavy agenda that includes ratifying support for a federal Major Disaster Declaration tied to the nearly 40,000-acre Gold Mountain Fire.]]></description>
+      <pubDate>Sun, 06 Sep 2026 22:52:07 GMT</pubDate>
+      <description><![CDATA[The biggest item this week is the San Miguel County BOCC special meeting Wednesday, where commissioners will take up Resolution 2026-34 — a change to Area Median Income limits on deed-restricted properties in Pinion Park that could reshape who qualifies for local workforce housing. Ridgway's Town Council also meets Wednesday with real weight on its agenda, including ratifying support for a federal Major Disaster Declaration tied to the Gold Mountain Fire, which has burned nearly 40,000 acres and repeatedly cut off Highway 550. The county Planning Commission meets Thursday to weigh in on Land Use Code amendments touching forestry, oil and gas, and geothermal energy.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -28,18 +28,6 @@
       <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_25_08_51_50.png" medium="image" />
       <category>Community Event</category>
       <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Sun, Sep 6] Drop In Tech Time with Oliver</title>
-      <link>https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-09-06/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/drop%20in%20tech%20time%7C2026-09-06</guid>
-      <pubDate>Sun, 06 Sep 2026 19:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Wilkinson Public Library, Telluride
-
-Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
     <item>
       <title>[Sun, Sep 6] The Courtyard at 610 Presents: Heather &amp; Douglas</title>
@@ -275,7 +263,7 @@ The September 9, 2026 Norwood Board of Trustees Meeting agenda hasn't been poste
 
 A heavy agenda for a small-town council — and some of it carries real weight. The Council will ratify two letters already sent: one backing a federal Major Disaster Declaration for the Gold Mountain Fire, which has burned nearly 40,000 acres northeast of Ouray, severed Highway 550 repeatedly, and left communities like Ridgway isolated and facing years of post-fire debris flows; and one supporting proposed recreation fees at Blue Lakes in the Mount Sneffels Wilderness to address overcrowding. On the policy side: interviews and appointment of Sustainability Advisory Board members; a Notice of Award for pre-approved ADU architectural design plans; authorization of more than $25,000 for sidewalk repairs near the Post Office and Clinton Street; a request from the Athletic Park Coalition to fund professional design services for a bike park; proposed changes to the Marshal's Office overtime policy; acceptance of the completed ductile iron pipe replacement project; direction on Wastewater Treatment Plant siting options; and consideration of scaling back from Stage 2 to Stage 1 fire restrictions and rescinding Stage 2 mandatory water restrictions.
 
-⚡ Why it matters: Council ratifies disaster declaration support for the 40,000-acre Gold Mountain Fire.]]></description>
+⚡ Why it matters: Council ratifies disaster declaration support for 40,000-acre Gold Mountain Fire fallout.]]></description>
       <category>Meeting</category>
       <category>ridgway</category>
     </item>
@@ -299,7 +287,7 @@ The September 9, 2026 Board of County Commissioners Work Session agenda hasn't b
 
 A short special meeting with two items worth watching. On the housing side, the BOCC — sitting as the San Miguel County Housing Authority — will consider Resolution 2026-34, which would authorize a change in Area Median Income limitations for certain deed-restricted properties in Pinion Park. That's a technical adjustment, but AMI thresholds are the fulcrum on which affordability restrictions actually turn. There's also an initial discussion on Covenant Amendment Provisions — early-stage, but covenant language is where deed restrictions either hold or erode over time. Separately, the Board will discuss Colorado State Ballot Measures and take up a procedural question about CCI Legislative Committee representation. Consent agenda covers the July Road Report and a subrecipient certification.
 
-⚡ Why it matters: AMI threshold change on deed-restricted units determines who qualifies for local housing.]]></description>
+⚡ Why it matters: AMI threshold change on deed-restricted Pinion Park units could shift who qualifies for local housing.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -412,7 +400,7 @@ The September 10, 2026 Town Council Budget agenda hasn't been posted yet.]]></de
 
 Three Land Use Code amendments are on the table for the Planning Commission's recommendation — covering forestry practices, oil and gas, and geothermal energy. All three are code-change items, meaning the Commission is being asked to weigh in before any revisions move forward to the BOCC. The agenda text doesn't detail the specific proposed changes within each amendment, but the pairing of oil & gas with geothermal in the same session signals the county is taking a broad look at how extraction and energy activities are regulated in unincorporated San Miguel County.
 
-⚡ Why it matters: Planning Commission votes on three Land Use Code amendments: forestry, oil/gas, geothermal.]]></description>
+⚡ Why it matters: Planning Commission votes on Land Use Code amendments for forestry, oil and gas, and geothermal.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -451,6 +439,19 @@ Genre-busting vocalist and songwriter Vana Liya made a serendipitous arrival o..
       <media:content url="https://ucarecdn.com/1550b57f-249f-4e1f-9096-b818dd357f2b/-/crop/1080x540/0,487/-/preview/" medium="image" />
       <category>Community Event</category>
       <category>The Alibi</category>
+    </item>
+    <item>
+      <title>[Thu, Sep 10] Telluride Dinner Party</title>
+      <link>https://www.telluride.com/event/telluride-dinner-party/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20dinner%20party%7C2026-09-10</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/48558/screenshot_2026-08-11_at_4_32_53_pm.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Join the Telluride Historical Museum for dinner for their premier fundraising event! Enjoy an excellent catered meal, …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/48558/screenshot_2026-08-11_at_4_32_53_pm.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
     </item>
   </channel>
 </rss>
