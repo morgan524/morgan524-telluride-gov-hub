@@ -449,6 +449,14 @@ const DEEP_DIVE_UPDATES = [
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-09-06",
+    title: "What should open space cost us — and why",
+    body: "The Open Space Commission meets September 14 to work through priorities and criteria for acquiring, managing, and maintaining open space — and to shape what it recommends to Town Council.\n\nThat's where the tension lives. Some residents see open space acquisition as the clearest thing a mountain town can do to protect what's left. Others wonder whether the criteria and priorities get set in a way that reflects the whole community, not just those who show up. Neither side is wrong.\n\nSo: who should be driving open space priorities up here — and what should the criteria actually be?",
+    choices: ["Community input should lead", "Let the experts set priorities", "Depends on the parcel", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-09-05",
     title: "Blue Lakes wants a fee. Ridgway's about to weigh in.",
     body: "Ridgway Town Council is expected to authorize a mayoral letter supporting a proposed recreation fee structure at Blue Lakes. That's not a final vote — it's the town putting its name behind a position.\n\nSome will say fees are overdue. Popular spots take a beating, and money for upkeep has to come from somewhere. Others will push back: public lands have always been free to access, and fees can quietly price out the people who live closest to them.\n\nWhere do you stand on charging for access to Blue Lakes?",
@@ -677,14 +685,6 @@ const DAILY_QUESTIONS = [
     title: "Natural medicine businesses — where do they fit in town?",
     body: "Town Council is expected to consider a Land Use Code amendment that would add new regulations for Natural Medicine Businesses. That's a real category now in Colorado, and Telluride has to decide what the rules look like up here.\n\nSome residents will want clear, workable rules that let legitimate businesses operate — delay just creates gray areas. Others will want strict limits on where and how these businesses can set up, worried about fit with the town's existing character and land use patterns.\n\nNo vote has happened yet. So: should Telluride move quickly to regulate and allow, or take its time and draw tighter lines?",
     choices: ["Move quickly, get rules in place", "Take more time, tighten the limits", "Shouldn't be here at all", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
-  },
-  {
-    date: "2026-08-07",
-    title: "Who counts as a 'Qualified Owner' anyway?",
-    body: "The Board of County Commissioners held a public hearing August 5 on a proposed change to the Land Use Code's definition of 'Qualified Owner' — Section 5-1305B, with ripple amendments to two related sections. That definition shapes who can own and do what with certain properties in the county. Tighten it and you may keep speculation out; loosen it and you may open doors for legitimate buyers who don't currently qualify. Nothing is final — these are hearings, not adopted resolutions. So: does the current definition need fixing, and if so, in which direction?",
-    choices: ["Definition's too restrictive", "Current rules protect us", "Depends who benefits", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
   }
@@ -1053,7 +1053,7 @@ const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
 const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-06';
-const LEGAL_NOTICES_CACHE_DATE = '2026-09-05';
+const LEGAL_NOTICES_CACHE_DATE = '2026-09-06';
 
 const MANUAL_SUMMARIES = {
   "telluride|2026-08-10|Intergovernmental Worksession - Aug 10 2026":
@@ -1699,6 +1699,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Chef Graeme Charles focuses on fresh, regional",
+    source: "Telluride Times",
+    date: "September 6, 2026",
+    firstSeen: "2026-09-06",
+    newsTopic: "arts-culture",
+    copy: "Graeme Charles has been cooking in Telluride for 19 years, splitting his time between Telluride Sleighs and Wagons, private cheffing, and community events like the Telluride Theatre's Burlesque Buffet. At Sleighs and Wagons, his menu leans into the Aldasoro family's Basque ranching roots — think paella with foraged mushrooms, elk sausage, and handmade juniper oil. He's a two-time local Top Chef champion and has competed at the World Food Championships.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/business/article_d6aae682-c944-4be8-82e7-2e8fc9b2cac2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/d9/7d97140d-0109-435a-a563-e3d7c1ef2f2c/6a97b78525f74.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Plane crash victims named",
     source: "Telluride Times",
@@ -3334,17 +3346,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Gaiascope Saturday Sessions",
-    link: "https://koto.org/event/gaiascope-saturday-sessions/",
-    description: "Experience artist Brooke Einbender's Gaiascope installation in Mountain Village's Heritage Plaza every Saturday evening in September, with live DJ sets from 7-10 p.m. presented by Telluride Arts, TMVOA and Mindbender Studio.",
-    pubDate: "2026-09-05T19:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Heritage Plaza, Mountain Village",
-    imageUrl: ""
-  },
-  {
     title: "Gentle Yoga with Kristen Milord",
     link: "https://koto.org/event/gentle-yoga-with-kristen-milord/2026-09-06/",
     description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
@@ -3886,7 +3887,39 @@ const KOTO_COMMUNITY_EVENTS = [
 ];
 
 const WILKINSON_EVENTS = [
-
+  {
+    title: "Caminata de Otoño",
+    link: "https://telluridelibrary.libcal.com/event/17505359?hs=a",
+    description: "11:00 AM – 1:00 PM · Vamos a caminar por la naturaleza, nos vamos a ver en la biblioteca antes de empezar.  La caminata que vamos a hacer es Telluride Trail (llegaremos a un &aacute;rea muy especial!). Todas las edades son bienvenidas.",
+    pubDate: "2026-09-06T17:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lobby",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_25_08_51_50.png"
+  },
+  {
+    title: "Immersive Sound Journey with Dustin Wells",
+    link: "https://telluridelibrary.libcal.com/event/17347348?hs=a",
+    description: "2:00 PM – 4:00 PM · An immersive sound journey is a live musical experience you take lying down. Musician and sound ceremony artist Dustin Wells surrounds the room with sacred instruments — gongs, shamanic drums, singing bowls, crystal bowls, wind chimes — woven live with synths, guitar, and voice into a single two-hour soundscape. The journey moves through a deliberate arc, from settling in to full sound to a quiet return, designed to guide the nervous system out of fight-or-flight and into the state where the body does its own healing. Come as you are; leave with what you came for. &middot; Please arrive 30 minutes early to find your spot and get comfortable. &middot; Suggested: bring what makes the floor feel like home — a yoga mat, pillow, blanket, or eye mask. Guests lie down if there&#39;s room, or sit as needed. …",
+    pubDate: "2026-09-06T20:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_11_10_11.jpg"
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://telluridelibrary.libcal.com/event/17029771?hs=a",
+    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
+    pubDate: "2026-09-06T20:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
+  }
 ];
 
 // Bot-managed by scripts/content-refresh.js Task 7 (syncHumaneSocietyAnimals).
@@ -4414,36 +4447,13 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Labor Day Weekend - No School- Ridgway",
     link: "https://events.ourayridgwayevents.com/event/labor-day-no-school-ridgway",
     description: "View on site | Email this event",
-    pubDate: "2026-09-05T06:00:00.000Z",
+    pubDate: "2026-09-06T06:00:00.000Z",
     endDate: "2026-09-07",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
-  },
-  {
-    title: "Public Bird Banding Day - Ridgway State Park",
-    link: "https://events.ourayridgwayevents.com/event/public-bird-banding-day-ridgway-state-park",
-    description: "Join us for a morning of science and discovery at Ridgway State Park. This unique, hands-on event offers a rare \"behind-the-scenes\" look at how researchers track and protect our feathered friends. This program offers a front-row seat to the delicate intersection of wildlife conservation and field science. It is an opportunity for families and nature enthusiasts to move beyond the binoculars and witness the vibrant details of migratory birds up close as they are measured and banded by experts. Set against the serene backdrop of the Dallas Creek Confluence area, this hands-on experience not only demystifies the migratory patterns of our feathered neighbors but also fosters a deep, personal connection to the local ecosystem. Whether you are an aspiring biologist or simply looking for a peaceful morning in the park, this free event provides an unforgettable look at the small wonders that call our region home. …",
-    pubDate: "2026-09-05T14:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway State Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/53595198326789/huge/b52afc36fd4c4e87537e211690d7093afa8c36a3.jpg"
-  },
-  {
-    title: "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
-    link: "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
-    description: "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the International Quilt Museum in Lincoln, Nebraska. Bonnie’s work has been shown in numerous exhibits in the United States. In 2015, Bonnie’s work was in a year-long solo exhibition at the Portland Oregon International Airport. She was a solo artist at the Visions Museum of Textile Art, San Diego, in 2019. Internationally, Bonnie’s work has appeared in the Haus der Wirtschaft museum in Stuttgart, Germany, the Museum of Modern Art in Verona, Italy, and other venues in Germany, England, Ireland, France, Japan, Brazil, and the Netherlands. Bonnie’s work Tangle is part of the permanent collection of the Tuch + Technik Textilmuseum, Neumunster, Germany. …",
-    pubDate: "2026-09-05T16:00:00.000Z",
-    endDate: "2026-09-25",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The 610 Arts Collective",
-    imageUrl: "https://localist-images.azureedge.net/photos/53551302433703/huge/07561f7b06b24999f21e6be2347e5102b9b92cc3.jpg"
   },
   {
     title: "Music and Makers Fest",
@@ -4455,6 +4465,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Fellin Park",
     imageUrl: "https://localist-images.azureedge.net/photos/53793277001824/huge/c116110eff98984ba8ba5012fad204a327fddfc4.jpg"
+  },
+  {
+    title: "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
+    link: "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
+    description: "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the International Quilt Museum in Lincoln, Nebraska. Bonnie’s work has been shown in numerous exhibits in the United States. In 2015, Bonnie’s work was in a year-long solo exhibition at the Portland Oregon International Airport. She was a solo artist at the Visions Museum of Textile Art, San Diego, in 2019. Internationally, Bonnie’s work has appeared in the Haus der Wirtschaft museum in Stuttgart, Germany, the Museum of Modern Art in Verona, Italy, and other venues in Germany, England, Ireland, France, Japan, Brazil, and the Netherlands. Bonnie’s work Tangle is part of the permanent collection of the Tuch + Technik Textilmuseum, Neumunster, Germany. …",
+    pubDate: "2026-09-06T16:00:00.000Z",
+    endDate: "2026-09-25",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The 610 Arts Collective",
+    imageUrl: "https://localist-images.azureedge.net/photos/53551302433703/huge/07561f7b06b24999f21e6be2347e5102b9b92cc3.jpg"
   },
   {
     title: "Open Air Market",
@@ -7321,151 +7343,23 @@ const LEGAL_NOTICES = [
     smcBidID: "209"
   },
   {
-    title: "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominium (Sale No. 202605)",
-    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB (Trustee for Residential Investment Trust)",
+    title: "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominiums (Foreclosure Sale No. 202605)",
+    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB",
     entityClass: "ent-county",
     entityLogo: "assessor",
     icon: "💰",
     iconClass: "type-tax",
     type: "Tax & Finance",
     filterTag: "tax-finance",
-    summary: "Public Trustee Brandi R. Hatfield of San Miguel County is conducting a foreclosure sale on Condominium Unit 7 at 350 S Mahoney Dr, Telluride, originally granted by Ryan Pfaff. The deed of trust (recorded May 31, 2022, Reception No. 476806) is held by Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust, with an outstanding principal balance of approximately $1,199,032. The property will be auctioned to the highest cash bidder at 10:00 A.M. on September 3, 2026, at 305 W. Colorado Avenue, East entry, Telluride, CO.",
+    summary: "Public Trustee Brandi R. Hatfield of San Miguel County is conducting a foreclosure sale on a deed of trust originally granted by Ryan Pfaff, with the current debt holder being Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust. The property is Condominium Unit 7 at Double Diamond Condominiums, commonly known as 350 S Mahoney Dr Unit 7, Telluride, CO 81435, with an outstanding principal balance of approximately $1,199,032. The public auction will be held at 10:00 A.M. on September 3, 2026, at 305 W. Colorado Avenue, East entry, Telluride, CO.",
     deadline: "2026-09-03",
     expires: "2026-09-03",
     dates: "8/13",
     papers: ["ttimes_0813"],
     url: "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
-    address: "350 S Mahoney Dr, Unit 7, Telluride, CO 81435 (Condominium Unit 7, Double Diamond Condominium)",
-    noticeKey: "foreclosure-sale-202605",
-    caseNumber: "202605"
-  },
-  {
-    title: "Public Hearing -- Adoption of 2024 International Building Code & Colorado Low Energy & Carbon Code",
-    entity: "San Miguel County Planning Commission",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "San Miguel County Planning Commission will hold a public hearing on August 13, 2026 at 9:00 AM in Telluride to consider recommending adoption of the 2024 International Building Code and the Colorado Low Energy & Carbon Code to the Board of County Commissioners. Written comments must be received by noon on Monday, August 10, 2026. Proposed amendments are available in the meeting agenda packet at www.sanmiguelcountyco.gov.",
-    deadline: "2026-08-10T12:00:00",
-    expires: "2026-08-13",
-    dates: "7/30",
-    papers: ["ttimes_0730"],
-    url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    address: "Telluride, Colorado (San Miguel County)",
-    noticeKey: "COL-000206-ibc-adoption"
-  },
-  {
-    title: "Public Notice -- Town of Telluride 2027 Budget Preparation",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "The Town Manager of Telluride has issued public notice of the 2027 budget preparation process, effective July 30, 2026. All town departments, boards, commissions, and citizens must submit funding requests to the Town Finance Director no later than 5:00 PM on Friday, August 21, 2026. An exception applies for organizations seeking CCAASE grants, with separate guidelines available at www.telluride.gov.",
-    deadline: "2026-08-21T17:00:00",
-    expires: "2026-08-21",
-    dates: "7/30",
-    papers: ["ttimes_0730"],
-    url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    address: "135 W. Columbia Ave (Town Hall), Telluride, CO 81435",
-    noticeKey: "COL-000208-telluride-2027-budget"
-  },
-  {
-    title: "Public Notice -- Montrose Memorial Hospital Board of Directors Applications",
-    entity: "Montrose Memorial Hospital, Inc.",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "Montrose Memorial Hospital, Inc., a Colorado community nonprofit corporation, is accepting applications for open positions on its Board of Directors. Application packets are available online at www.montrosehealth.com, by email, or in person at 800 South 3rd Street, Montrose, Colorado. Completed applications must be returned by 5:00 PM on Friday, August 14, 2026, with elections to be held at the Board's annual meeting in October.",
-    deadline: "2026-08-14T17:00:00",
-    expires: "2026-08-14",
-    dates: "7/30",
-    papers: ["ttimes_0730"],
-    url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    address: "800 South 3rd Street, Montrose, Colorado",
-    noticeKey: "COL-000203-montrose-hospital-board"
-  },
-  {
-    title: "Public Notice -- Farmers' Water Development Company Replacement Share Certificate #887",
-    entity: "Farmers' Water Development Company",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "💧",
-    iconClass: "type-hearing",
-    type: "Utilities",
-    filterTag: "utilities",
-    summary: "The Farmers' Water Development Company (FWDC) has received a written request to replace lost, destroyed, or wrongfully taken share certificate #887, currently issued in the name of A.F. Newans M.D., C.P. Unless a written objection is filed with FWDC at PO Box 10, Norwood, CO 81423 within 30 days of the last publication date in the Norwood Post, a replacement certificate will be issued and the original permanently cancelled. The last publication date in this outlet is July 30, 2026.",
-    deadline: "2026-08-29",
-    expires: "2026-08-29",
-    dates: "7/30",
-    papers: ["ttimes_0730"],
-    url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    address: "Norwood, Colorado 81423 (FWDC service area)",
-    noticeKey: "COL-000181-fwdc-share-cert-887"
-  },
-  {
-    title: "RFP -- Interior Repainting, Historic Placerville Schoolhouse",
-    entity: "San Miguel County Fleet & Facilities",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County is soliciting proposals from contractors to repaint the interior of the Historic Placerville Schoolhouse at 400 Front St, Placerville. RFP details are available at www.sanmiguelcountyco.gov/bids.aspx or from the Fleet & Facilities Department at 333 W Colorado Ave, 2nd Floor, Telluride. Proposals must be submitted by 5:00 PM on Wednesday, August 6, 2026, either via email or in person at the Fleet & Facilities Department.",
-    deadline: "2026-08-06T17:00:00",
-    expires: "2026-08-06",
-    dates: "7/30",
-    papers: ["ttimes_0730"],
-    url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    address: "400 Front St, Placerville, Colorado",
-    noticeKey: "COL-000205-placerville-schoolhouse-rfp"
-  },
-  {
-    title: "Foreclosure Sale Notice -- 350 S Mahoney Dr Unit 7, Telluride (Sale No. 2026-05)",
-    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society FSB",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "San Miguel County Public Trustee Brandi R. Hatfield will conduct a public auction on September 3, 2026 at 10:00 AM at 305 W. Colorado Avenue, Telluride, for Condominium Unit 7, Double Diamond Condominium (350 S Mahoney Dr Unit 7, Telluride, CO 81435). The original grantor Ryan Pfaff defaulted on a deed of trust with an outstanding principal balance of approximately $1,199,032.37, originally benefiting Deephaven Mortgage LLC via MERS. The current debt holder is Wilmington Savings Fund Society, FSB, as Trustee for Residential Investment Trust.",
-    deadline: "2026-09-03T10:00:00",
-    expires: "2026-09-03",
-    dates: "7/30",
-    papers: ["ttimes_0730"],
-    url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
     address: "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
-    noticeKey: "foreclosure-2026-05-double-diamond-unit7",
-    caseNumber: "2026-05"
-  },
-  {
-    title: "Foreclosure Sale Notice -- TBD Stonegate Drive, Mountain Village (Sale No. 2026-04)",
-    entity: "San Miguel County Public Trustee / Federal Holding Realty",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "San Miguel County Public Trustee Brandi R. Hatfield will conduct a public auction on September 3, 2026 at 10:00 AM at 305 W. Colorado Avenue, Telluride, for Lot 166AR2, Telluride Mountain Village (vacant land on Stonegate Drive, Mountain Village, CO 81435). The original grantor Two Stonegate LLC defaulted on a deed of trust with an outstanding principal balance of $500,000.00, with Federal Holding Realty as both original beneficiary and current debt holder. The deed of trust was recorded July 2, 2025.",
-    deadline: "2026-09-03T10:00:00",
-    expires: "2026-09-03",
-    dates: "7/30",
-    papers: ["ttimes_0730"],
-    url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    address: "TBD Stonegate Drive, Mountain Village, CO 81435 (Lot 166AR2, Telluride Mountain Village)",
-    noticeKey: "foreclosure-2026-04-stonegate-mv",
-    caseNumber: "2026-04"
+    noticeKey: "foreclosure-202605-350-s-mahoney-unit7",
+    caseNumber: "202605"
   }
 ];
 

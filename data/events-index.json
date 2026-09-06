@@ -1,85 +1,5 @@
 [
   {
-    "title": "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
-    "href": "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
-    "date": "2026-09-05",
-    "time": "10:00 AM",
-    "location": "The 610 Arts Collective",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53551302433703/huge/07561f7b06b24999f21e6be2347e5102b9b92cc3.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the…",
-    "type": "Arts & Film",
-    "endDate": "2026-09-25"
-  },
-  {
-    "title": "Movies Under the Stars",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    "date": "2026-09-05",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    "type": "Community"
-  },
-  {
-    "title": "Mind Blown Telluride",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
-    "date": "2026-09-05",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
-    "type": "Community"
-  },
-  {
-    "title": "Gaiascope Saturday Sessions",
-    "href": "https://koto.org/event/gaiascope-saturday-sessions/",
-    "date": "2026-09-05",
-    "time": "7:00 PM",
-    "location": "Heritage Plaza, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/mountainvillage.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Experience artist Brooke Einbender's Gaiascope installation in Mountain Village's Heritage Plaza every Saturday evening in September, with live DJ sets from 7-10 p.m. presented by Telluride Arts, TMVOA and Mindbender Studio.",
-    "type": "Arts & Film"
-  },
-  {
-    "title": "Public Bird Banding Day - Ridgway State Park",
-    "href": "https://events.ourayridgwayevents.com/event/public-bird-banding-day-ridgway-state-park",
-    "date": "2026-09-05",
-    "time": "8:00 AM",
-    "location": "Ridgway State Park",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53595198326789/huge/b52afc36fd4c4e87537e211690d7093afa8c36a3.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Join us for a morning of science and discovery at Ridgway State Park. This unique, hands-on event offers a rare \"behind-the-scenes\" look at how researchers track and protect our feathered friends. This program offers a front-row seat to…",
-    "type": "Talks & Classes"
-  },
-  {
-    "title": "Labor Day Weekend - No School- Ridgway",
-    "href": "https://events.ourayridgwayevents.com/event/labor-day-no-school-ridgway",
-    "date": "2026-09-05",
-    "time": "",
-    "location": "",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "View on site | Email this event",
-    "type": "Community",
-    "endDate": "2026-09-07"
-  },
-  {
     "title": "Drop In Tech Time with Oliver",
     "href": "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-09-06/",
     "date": "2026-09-06",
@@ -106,6 +26,20 @@
     "type": "Music"
   },
   {
+    "title": "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
+    "href": "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
+    "date": "2026-09-06",
+    "time": "10:00 AM",
+    "location": "The 610 Arts Collective",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53551302433703/huge/07561f7b06b24999f21e6be2347e5102b9b92cc3.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the…",
+    "type": "Arts & Film",
+    "endDate": "2026-09-25"
+  },
+  {
     "title": "Open Air Market",
     "href": "https://events.ourayridgwayevents.com/event/open-air-market",
     "date": "2026-09-06",
@@ -130,6 +64,19 @@
     "source": "KOTO Community Calendar",
     "desc": "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also…",
     "type": "Wellness"
+  },
+  {
+    "title": "Caminata de Otoño",
+    "href": "https://telluridelibrary.libcal.com/event/17505359?hs=a",
+    "date": "2026-09-06",
+    "time": "11:00 AM",
+    "location": "Lobby",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_25_08_51_50.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "11:00 AM – 1:00 PM · Vamos a caminar por la naturaleza, nos vamos a ver en la biblioteca antes de empezar. La caminata que vamos a hacer es Telluride Trail (llegaremos a un rea muy especial!). Todas las edades son bienvenidas.",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Immersive Sound Journey with Dustin Wells",
@@ -221,6 +168,20 @@
     "source": "Sherbino Theater",
     "desc": "",
     "type": "Community"
+  },
+  {
+    "title": "Labor Day Weekend - No School- Ridgway",
+    "href": "https://events.ourayridgwayevents.com/event/labor-day-no-school-ridgway",
+    "date": "2026-09-06",
+    "time": "",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "View on site | Email this event",
+    "type": "Community",
+    "endDate": "2026-09-07"
   },
   {
     "title": "Labor Day Parade in Ridgway",
