@@ -357,7 +357,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303","sv":4,"ph":"d6200257aab6f8b7"},
 
   "telluride|2026-09-22|Town Council - Sep 22 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043","sv":4,"ph":"0c2ea006f5fde3ee"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043","sv":4,"ph":"c5b14e4bfd86db54"},
 
   "county|2026-09-23|Board of County Commissioners Work Session":
     {"sv":4,"ph":"307e0c7b19e4ff5b"},
@@ -420,7 +420,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://www.norwoodtown.com/files/5f8304a63/09.08.2026+RESCHEDULED+NWC+Agenda.pdf","zoomUrl":"https://us02web.zoom.us/j/88274908233","meetingId":"882 7490 8233","passcode":"997236","phone":"346-248-7799","sv":4},
 
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132","sv":4,"ph":"436156d895c3bff0"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132","sv":4,"ph":"681ef775e57db365"},
 
   "telluride|2026-10-06|Town Council - Oct 06 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044","sv":4,"ph":"861712471a1ec903"},
@@ -432,10 +432,13 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8119","sv":4,"ph":"82b6deaef9451b0e"},
 
   "telluride|2026-10-07|Commission for Community Assistance, Arts & Special Events - Oct 07 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8067","sv":4,"ph":"f5cc045b9e98abbb"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8067","sv":4,"ph":"b351f6bb6fbe13ad"},
 
   "telluride|2026-10-07|Telluride Housing Authority Subcommittee - Oct 07 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8164","sv":4,"ph":"54a781daedea7749"}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8164","sv":4,"ph":"224c78f657d14d0a"},
+
+  "county|2026-10-07|Board of County Commissioners Meeting":
+    {"sv":4,"ph":"49e704e3c3bab858"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -460,6 +463,14 @@ const DEEP_DIVE_UPDATES = [
 //   sourceUrl, topics: [] }. Rendered by hub-bub.html from the JSON mirror
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
+  {
+    date: "2026-09-07",
+    title: "The county's buying a trail connector — who's watching the tab?",
+    body: "The Board of County Commissioners is set to take up procurement on several fronts — material hauling, a fuel island canopy, and a trail connector project. The trail piece is the one worth watching. Trail connectors sound easy to love, but procurement decisions at the county level raise real questions about priorities and process. Some residents will see investment in trail infrastructure as exactly what keeps this place livable. Others will ask whether the county's spending is being scrutinized carefully enough, and by whom.\n\nWhere do you land on county-level trail spending right now?",
+    choices: ["Trail investment is worth it", "Scrutinize the spending first", "Depends what it connects", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
   {
     date: "2026-09-06",
     title: "What should open space cost us — and why",
@@ -691,14 +702,6 @@ const DAILY_QUESTIONS = [
     choices: ["Build the connection", "Hold off on the trail", "Depends on the habitat impact", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-08-08",
-    title: "Natural medicine businesses — where do they fit in town?",
-    body: "Town Council is expected to consider a Land Use Code amendment that would add new regulations for Natural Medicine Businesses. That's a real category now in Colorado, and Telluride has to decide what the rules look like up here.\n\nSome residents will want clear, workable rules that let legitimate businesses operate — delay just creates gray areas. Others will want strict limits on where and how these businesses can set up, worried about fit with the town's existing character and land use patterns.\n\nNo vote has happened yet. So: should Telluride move quickly to regulate and allow, or take its time and draw tighter lines?",
-    choices: ["Move quickly, get rules in place", "Take more time, tighten the limits", "Shouldn't be here at all", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -803,7 +806,10 @@ const MEETING_PREVIEWS = {
     "The Commission for Community Assistance, Arts & Special Events is expected to address funding allocations for community support and arts organizations, review special events applications, and discuss related town policy matters. The meeting may also touch on the recently adopted Colorado Wildfire Resiliency Code amendment to Telluride's Land Use Code.",
 
   "telluride|2026-10-07|Telluride Housing Authority Subcommittee - Oct 07 2026":
-    "The Telluride Housing Authority Subcommittee is expected to meet on October 7, 2026, though a detailed agenda was not available. Members may address ongoing local housing matters. A related legal notice references Ordinance #1640, adopting the Colorado Wildfire Resiliency Code amendments to the Land Use Code."
+    "The Telluride Housing Authority Subcommittee is expected to meet on October 7, 2026, though a detailed agenda was not available. Members may address ongoing local housing matters. A related legal notice references Ordinance #1640, adopting the Colorado Wildfire Resiliency Code amendments to the Land Use Code.",
+
+  "county|2026-10-07|Board of County Commissioners Meeting":
+    "Board will consider procurement matters including material hauling, trail construction, fuel island canopy work, and jail painting projects. Several probate estate notices are also associated with the meeting, along with an energy regulatory hearing involving an alleged violation against American Helium Operating LLC."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1376,7 +1382,10 @@ const MANUAL_SUMMARIES = {
     "The October 7, 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-10-07|Telluride Housing Authority Subcommittee - Oct 07 2026":
-    "The October 7, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet."
+    "The October 7, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+
+  "county|2026-10-07|Board of County Commissioners Meeting":
+    "The October 7, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1742,6 +1751,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "The poorest in the US can't find housing even as low-income units sit empty",
+    source: "Telluride Times",
+    date: "September 7, 2026",
+    firstSeen: "2026-09-07",
+    newsTopic: "housing",
+    copy: "Units labeled \"affordable\" are sitting empty across the U.S. because they're priced for people earning 50% or more of area median income — not the truly destitute. Only about 4 million units exist for 11 million extremely low-income households. The math just doesn't pencil out for the poorest renters.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_1c74a971-d601-50d1-99f0-2dfea295d81c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/69/469a56a3-19f3-57b6-9da3-2fe2321495f1/6a9ea2100b599.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "A ‘chill’ send-off to summer",
+    source: "Telluride Times",
+    date: "September 7, 2026",
+    firstSeen: "2026-09-07",
+    newsTopic: "recreation",
+    copy: "The Meditations, the legendary Jamaican reggae group formed in the 1970s, play the Sheridan Opera House on Sept. 11 at 8 p.m. Then on Sept. 24, Grand Junction's Mariachi San Jose wraps up the outdoor season with a free 5–7 p.m. show on the SHOW Bar patio at Oak St. Park.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_77351a5e-1b32-4f69-8a4e-e0d4abf6dfbe.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/0d/80dfeded-ab3d-4daa-8da9-41643d803bd3/6a9b20d38ee5f.image.png",
+    imgHiRes: true
+  },
   {
     title: "Council discusses hiring consultants to review Telluride housing policies",
     source: "Telluride Times",
@@ -2731,15 +2764,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
-  },
-  {
-    title: "CDOT Performing Ditch Cleaning 8/31 - 9/3",
-    source: "San Miguel County",
-    date: "August 28, 2026",
-    newsTopic: "arts-culture",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1406",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14744"
   },
   {
     title: "Waste Tire Collection Event",
@@ -3873,39 +3897,7 @@ const KOTO_COMMUNITY_EVENTS = [
 ];
 
 const WILKINSON_EVENTS = [
-  {
-    title: "Caminata de Otoño",
-    link: "https://telluridelibrary.libcal.com/event/17505359?hs=a",
-    description: "11:00 AM – 1:00 PM · Vamos a caminar por la naturaleza, nos vamos a ver en la biblioteca antes de empezar.  La caminata que vamos a hacer es Telluride Trail (llegaremos a un &aacute;rea muy especial!). Todas las edades son bienvenidas.",
-    pubDate: "2026-09-06T17:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lobby",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_25_08_51_50.png"
-  },
-  {
-    title: "Immersive Sound Journey with Dustin Wells",
-    link: "https://telluridelibrary.libcal.com/event/17347348?hs=a",
-    description: "2:00 PM – 4:00 PM · An immersive sound journey is a live musical experience you take lying down. Musician and sound ceremony artist Dustin Wells surrounds the room with sacred instruments — gongs, shamanic drums, singing bowls, crystal bowls, wind chimes — woven live with synths, guitar, and voice into a single two-hour soundscape. The journey moves through a deliberate arc, from settling in to full sound to a quiet return, designed to guide the nervous system out of fight-or-flight and into the state where the body does its own healing. Come as you are; leave with what you came for. &middot; Please arrive 30 minutes early to find your spot and get comfortable. &middot; Suggested: bring what makes the floor feel like home — a yoga mat, pillow, blanket, or eye mask. Guests lie down if there&#39;s room, or sit as needed. …",
-    pubDate: "2026-09-06T20:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_11_10_11.jpg"
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://telluridelibrary.libcal.com/event/17029771?hs=a",
-    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
-    pubDate: "2026-09-06T20:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
-  }
+
 ];
 
 // Bot-managed by scripts/content-refresh.js Task 7 (syncHumaneSocietyAnimals).
@@ -4423,80 +4415,12 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Labor Day Weekend - No School- Ridgway",
     link: "https://events.ourayridgwayevents.com/event/labor-day-no-school-ridgway",
     description: "View on site | Email this event",
-    pubDate: "2026-09-06T06:00:00.000Z",
-    endDate: "2026-09-07",
+    pubDate: "2026-09-07T06:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
-  },
-  {
-    title: "Music and Makers Fest",
-    link: "https://events.ourayridgwayevents.com/event/music-and-makers-fest",
-    description: "Ouray Made's Music and Makers Fest 2026 Join us for our annual Music and Makers Fest, a celebration of creativity and music surrounded by the breathtaking mountain views at Fellin Park in Ouray, CO! We have a fantastic live music line up, food vendors, an art market featuring local and regional makers, as well as a beer tent! Event Highlights: Live Music: 10:30 AM - Apes Nova 12:30 PM - Red Mountain Revival 2:30 PM - The Sweet Lillies 4:30 PM - Cousin Curtiss Artisan Market: Featuring handmade from local and regional makers. Food Truck Alley: Explore a variety of delicious foods from local food trucks. Beer Tent: Grab a refreshment from the MAMS beer tent. We'll have a variety of alcohol and non-alcohol beverages available! …",
-    pubDate: "2026-09-06T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Fellin Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/53793277001824/huge/c116110eff98984ba8ba5012fad204a327fddfc4.jpg"
-  },
-  {
-    title: "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
-    link: "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
-    description: "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the International Quilt Museum in Lincoln, Nebraska. Bonnie’s work has been shown in numerous exhibits in the United States. In 2015, Bonnie’s work was in a year-long solo exhibition at the Portland Oregon International Airport. She was a solo artist at the Visions Museum of Textile Art, San Diego, in 2019. Internationally, Bonnie’s work has appeared in the Haus der Wirtschaft museum in Stuttgart, Germany, the Museum of Modern Art in Verona, Italy, and other venues in Germany, England, Ireland, France, Japan, Brazil, and the Netherlands. Bonnie’s work Tangle is part of the permanent collection of the Tuch + Technik Textilmuseum, Neumunster, Germany. …",
-    pubDate: "2026-09-06T16:00:00.000Z",
-    endDate: "2026-09-25",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The 610 Arts Collective",
-    imageUrl: "https://localist-images.azureedge.net/photos/53551302433703/huge/07561f7b06b24999f21e6be2347e5102b9b92cc3.jpg"
-  },
-  {
-    title: "Open Air Market",
-    link: "https://events.ourayridgwayevents.com/event/open-air-market",
-    description: "Fresh Air & Local Flair The Ouray Open-Air Market is launching this 2026 season at Billy Goat Gruff's Patio (located at 408 Main Street, Ouray, CO). The market will run every Sunday from June 21, 2026, through September 6, 2026, operating from 10:00 AM to 2:00 PM. View on site | Email this event",
-    pubDate: "2026-09-06T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Billy Goat Gruff's Patio Patio",
-    imageUrl: "https://localist-images.azureedge.net/photos/53744791155044/huge/7870fdaa876bce23bf9db7e6664d294f7d856b0b.jpg"
-  },
-  {
-    title: "Fantasy Football Kickoff - DraftSunday",
-    link: "https://events.ourayridgwayevents.com/event/fantasy-football-kickoff-draftsunday",
-    description: "The Floating Lotus 2026 Fantasy Football League kicks off Sunday, September 6! We’re building a competitive 8- or 10-team redraft league for experienced fantasy players. Expect full-PPR scoring, FAAB waivers, league-median matchups, two FLEX spots, no kickers, and transparent payouts. Official DraftSunday, September 6, 2026 6:00 PM Mountain TimeOnline through SleeperSnake draft · 90 seconds per pick Applications are free. Once enough managers are confirmed, accepted players will receive the final league details, $50 buy-in request, payout structure, and Sleeper invitation. Nobody pays unless the league has enough committed managers to run. This draft is for confirmed league managers. Interested in a roster spot? Apply here: https://fantasy.floatinglotusbrewery.com Find your flow. Win your week. View on site | Email this event",
-    pubDate: "2026-09-07T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53782367546889/huge/f0ba54fc5c969098eaf29e9a75c1c660d97a6bff.jpg"
-  },
-  {
-    title: "Mojo Birds - Live at Floating Lotus Brewery",
-    link: "https://events.ourayridgwayevents.com/event/mojo-birds-live-at-floating-lotus-brewery",
-    description: "Mojo Birds formed their funky flock in Durango, Colorado, bringing together musicians from across the country and around the world. The result is a tight-knit, groove-first sound built for celebration—rootsy, soulful, feel-good, with a little Afro-Peruvian spice. Their self-titled debut album, Mojo Birds (released January 2026), was produced by Jano Rix (The Wood Brothers) and engineered by Brook Sutton in Nashville, Tennessee. Recorded largely live in studio, it captures the band’s raw, high-energy built for the stage. View on site | Email this event",
-    pubDate: "2026-09-07T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53659627140416/huge/f7834614852e4bda2fb40a7b3a07c324c6e1ff24.jpg"
-  },
-  {
-    title: "The Courtyard at 610 Presents: Heather & Douglas at The Courtyard",
-    link: "https://events.ourayridgwayevents.com/event/the-courtyard-at-610-presents-heather-douglas-4082",
-    description: "September 6 @ 7:00 pm – 8:30 pm Gates: 6:30 || Show: 7:00pm || $15 Advance / $20 at gates || Enter via the alleyway behind the Sherbino and 610 Arts Collective || Outdoor Venue || Setting: seated || Limited Bar Available || There will be a few “agility” tickets at the gate — which are tickets for seats that you have to climb over a railing for. We don’t sell those online — but we do sell them onsite IF there is space. **Due to the local Gold Mountain Fire – Poor air quality or rain location will be inside on The Sherbino main stage for Courtyard shows** Join us for an unforgettable evening of music under the stars in one of Ridgway’s most charming hidden venues—The Courtyard at 610, tucked behind the 610 Arts Collective and Sherbino Theater. …",
-    pubDate: "2026-09-07T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "610",
-    imageUrl: "https://localist-images.azureedge.net/photos/53551561816356/huge/5397f983bd33ef7292511908911ca22097960ab5.jpg"
   },
   {
     title: "Labor Day Parade in Ridgway",
@@ -4508,6 +4432,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Hartwell Park",
     imageUrl: "https://localist-images.azureedge.net/photos/53745054025330/huge/907904d9f77c544312a94c550a4205ddddb5d06a.jpg"
+  },
+  {
+    title: "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
+    link: "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
+    description: "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the International Quilt Museum in Lincoln, Nebraska. Bonnie’s work has been shown in numerous exhibits in the United States. In 2015, Bonnie’s work was in a year-long solo exhibition at the Portland Oregon International Airport. She was a solo artist at the Visions Museum of Textile Art, San Diego, in 2019. Internationally, Bonnie’s work has appeared in the Haus der Wirtschaft museum in Stuttgart, Germany, the Museum of Modern Art in Verona, Italy, and other venues in Germany, England, Ireland, France, Japan, Brazil, and the Netherlands. Bonnie’s work Tangle is part of the permanent collection of the Tuch + Technik Textilmuseum, Neumunster, Germany. …",
+    pubDate: "2026-09-07T16:00:00.000Z",
+    endDate: "2026-09-25",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The 610 Arts Collective",
+    imageUrl: "https://localist-images.azureedge.net/photos/53551302433703/huge/07561f7b06b24999f21e6be2347e5102b9b92cc3.jpg"
   },
   {
     title: "Ongoing Exhibition: BIG BOX-Big New Work By T-Bone",
@@ -4724,6 +4660,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/ouray-comedy-night",
     description: "Stand-up comedy is coming to Ouray! One night only! Get your tickets now before it's too late! Headliners: Casey Skinner (Netflix, Discovery, HBO Max) and David Uhlfelder (Netflix Is A Joke Fest, ESPN3, Comedy Store) Casey Skinner is a Los Angeles–based stand‑up comedian, writer, and producer whose work bridges the stage and behind the camera. Known for weaving true crime stories, absurd humor, and personal quandaries into his performances, he brings a distinct voice shaped by unexpected experiences and often explores the darker, stranger corners of his life with humor. He’s performed in some of comedy's most iconic venues, including The Comedy Store and The Improv. Casey's work has been featured on Netflix, Discovery, HBO Max, Bravo and more! He was also featured in the 2026 Netflix Is A Joke Fest. David Uhlfelder was raised in the Colorado wilderness. …",
     pubDate: "2026-09-11T00:00:00.000Z",
+    endDate: "2026-09-12",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5801,17 +5738,6 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "Senior Lunch",
-    link: "https://www.norwoodtown.com/2026-08-31-senior-lunch",
-    description: "",
-    pubDate: "2026-08-31T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Community Event",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "NWC Work Session",
     link: "https://www.norwoodtown.com/2026-09-01-nwc-work-session",
     description: "",
@@ -6352,6 +6278,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
+  },
+  {
+    title: "Market on the Plaza",
+    link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    pubDate: "2026-10-07T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   }
 ];
 
