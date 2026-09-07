@@ -2721,6 +2721,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Marya Stark and Charles Dalton Sworn In to Telluride Town Council",
+    source: "Town of Telluride",
+    date: "August 12, 2026",
+    newsTopic: "government",
+    copy: "(July 21, 2026) – The Town welcomed two new members to Town Council this morning as Charles Dalton and Marya Stark were sworn into office at 9:30 a.m. Town Clerk Tiffany Kavanaugh administered the oath of office for both officials.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=402",
+    img: ""
+  },
+  {
+    title: "Arrest Made in String of Telluride Mountain Bike Thefts",
+    source: "Town of Telluride",
+    date: "August 12, 2026",
+    newsTopic: "recreation",
+    copy: "(August 11, 2026) – The Telluride Marshal's Department has identified and arrested a suspect in a series of mountain bike thefts that account for more than $22,000 in reported losses.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=401",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15642"
+  },
+  {
     title: "Please Take the Advanced Web Map Survey",
     source: "San Miguel County",
     date: "September 3, 2026",
@@ -2737,6 +2755,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
+  },
+  {
+    title: "Waste Tire Collection Event",
+    source: "San Miguel County",
+    date: "August 24, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
   },
   {
     title: "Imogene and Black Bear Passes Closed 9/12",
@@ -3352,28 +3379,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Tennis Clinic 3.0-4.0",
-    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-07/",
-    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-07T09:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Tennis Clinic 4.0+",
-    link: "https://koto.org/event/tennis-clinic-4-0/2026-09-07/",
-    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-07T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
   {
     title: "RESCHEDULED: Birding Walk with Katie Triest",
     link: "https://koto.org/event/birding-walk-with-katie-triest/",
@@ -4007,15 +4012,6 @@ const CLUB_RED_SHOWS = [];
 const FRESH_FOOD_HUB_EVENTS = [];
 const SHERBINO_EVENTS = [
   {
-    title: "The Courtyard at 610 Presents: Heather & Douglas",
-    href: "https://sherbino.org/event/the-courtyard-at-610-presents-heather-douglas-2/",
-    date: "2026-09-06 19:00:00",
-    endDate: "2026-09-06 20:30:00",
-    location: "The Courtyard at 610, Ridgway",
-    copy: "@ Gates: 6:30 || Show: 7:00pm || $15 Advance / $20 at gates || Enter via the alleyway behind the Sherbino and 610 Arts Collective || Outdoor Venue || Setting: seated || Limited Bar Available || There will be a few \"agility\" tickets at the gate — which are tickets for seats that you have to climb over a railing for.  We don't sell those online — but we do sell them onsite IF there is space. Tickets to a Sold out Courtyard Show: For Courtyard shows we have a maximum seated capacity of 50. If a show is sold out, we MAY be able to sell a few more tickets at Doors. These few tickets are standing room / “agility seating” room. The ‘Agility seating’ means it takes a little leg swing over a handrail to get to or the option is to stand. …",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/07/Heather-Douglas-September-6-banner.png"
-  },
-  {
     title: "Monthly Welcome Home Alliance Veteran's Coffee at the Sherbino",
     href: "https://sherbino.org/event/monthly-welcome-home-alliance-veterans-coffee-at-the-sherbino/2026-09-08/",
     date: "2026-09-08 10:00:00",
@@ -4620,18 +4616,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53790449536989/huge/a7181e9d298980d4c2377db45d06d26bb81e0b12.jpg"
   },
   {
-    title: "Ouray Comedy Night",
-    link: "https://events.ourayridgwayevents.com/event/ouray-comedy-night",
-    description: "Stand-up comedy is coming to Ouray! One night only! Get your tickets now before it's too late! Headliners: Casey Skinner (Netflix, Discovery, HBO Max) and David Uhlfelder (Netflix Is A Joke Fest, ESPN3, Comedy Store) Casey Skinner is a Los Angeles–based stand‑up comedian, writer, and producer whose work bridges the stage and behind the camera. Known for weaving true crime stories, absurd humor, and personal quandaries into his performances, he brings a distinct voice shaped by unexpected experiences and often explores the darker, stranger corners of his life with humor. He’s performed in some of comedy's most iconic venues, including The Comedy Store and The Improv. Casey's work has been featured on Netflix, Discovery, HBO Max, Bravo and more! He was also featured in the 2026 Netflix Is A Joke Fest. David Uhlfelder was raised in the Colorado wilderness. …",
-    pubDate: "2026-09-11T00:00:00.000Z",
-    endDate: "2026-09-12",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53830617900756/huge/9b913f03ccb0050e92a935ee9d2a464f7fe5b853.jpg"
-  },
-  {
     title: "Jolie Holland - Live at The Sherbino",
     link: "https://events.ourayridgwayevents.com/event/jolie-holland-live-at-the-sherbino",
     description: "THURSDAY || Doors: 6:30 PM || Show: 7:00 PM || Tickets: $30 in advance / $35 Day of Show || Solo Show || Some Reserved Section Seats Available Presented in partnership by The Sherbino with Pickin’ Productions About Jolie Holand Jolie Holland has forged a timeless, captivating musical legacy; as she mines the depths of her, at times harrowing, life experiences, her creative choices are rooted in honesty and presence. They are also fearless. Jolie Holland has been on the road since the early 2000s, releasing seven of her own albums and collaborating on countless others. Her work has been described as a syncretization of American roots, with rock and experimental elements. She’s been in the studio with Booker T, Lucinda Williams, and TV On The Radio; and shared stages with Big Thief, St. Vincent, Elbow, and Mavis Staples. …",
@@ -4664,6 +4648,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Ouray Comedy Night",
+    link: "https://events.ourayridgwayevents.com/event/ouray-comedy-night",
+    description: "Stand-up comedy is coming to Ouray! One night only! Get your tickets now before it's too late! Headliners: Casey Skinner (Netflix, Discovery, HBO Max) and David Uhlfelder (Netflix Is A Joke Fest, ESPN3, Comedy Store) Casey Skinner is a Los Angeles–based stand‑up comedian, writer, and producer whose work bridges the stage and behind the camera. Known for weaving true crime stories, absurd humor, and personal quandaries into his performances, he brings a distinct voice shaped by unexpected experiences and often explores the darker, stranger corners of his life with humor. He’s performed in some of comedy's most iconic venues, including The Comedy Store and The Improv. Casey's work has been featured on Netflix, Discovery, HBO Max, Bravo and more! He was also featured in the 2026 Netflix Is A Joke Fest. David Uhlfelder was raised in the Colorado wilderness. …",
+    pubDate: "2026-09-12T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53830617900756/huge/9b913f03ccb0050e92a935ee9d2a464f7fe5b853.jpg"
   },
   {
     title: "Steps Tavern Presents Karaoke Night",
@@ -5641,17 +5636,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Annex on Cora",
     imageUrl: "https://localist-images.azureedge.net/photos/53780725919104/huge/846566299e8e325221de54dd5a54a0fd6427fbf5.jpg"
-  },
-  {
-    title: "Pumpkins & Flowers at The Adobe Inn with San Juan Blooms!",
-    link: "https://events.ourayridgwayevents.com/event/pumpkins-flowers-at-the-adobe-inn-with-san-juan-blooms",
-    description: "An evening of Pumpkins & Flowers at The Adobe Inn! Kick off fall with a little hands-on flower arranging. Join San Juan Blooms for our Pumpkins + Flowers Workshop, where you’ll sip a cocktail, enjoy delicious appetizers, and build your own seasonal centerpiece using fresh autumn blooms and local pumpkins. Event Details When: Thursday, October 22, 2026 | 6:00 PM – 9:00 PM Where: The Adobe Inn - Ridgway, CO Tickets: $85 per person What’s Included: All supplies, fresh flowers, and prepped pumpkins Bites and appetizers throughout the evening One drink (cocktails, mocktails, beer, or wine) View on site | Email this event",
-    pubDate: "2026-10-23T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Adobe Inn",
-    imageUrl: "https://localist-images.azureedge.net/photos/53853672137353/huge/5d72d8d4bb7838f935a11a5d61d599e6d3719f6b.jpg"
   },
   {
     title: "4th Annual Boo-Mont Halloween Ball",
@@ -7195,6 +7179,42 @@ const LEGAL_NOTICES = [
     url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=209",
     address: "",
     smcBidID: "209"
+  },
+  {
+    title: "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominiums (Sale No. 202605)",
+    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "The San Miguel County Public Trustee has scheduled a public foreclosure auction for Condominium Unit 7 at Double Diamond Condominium, 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor is Ryan Pfaff; the current debt holder is Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust, with an outstanding principal balance of approximately $1,199,032.37 on a deed of trust dated May 23, 2022. The public auction will be held at 10:00 A.M. on September 3, 2026, at 305 W. Colorado Avenue, East entry, Telluride, CO.",
+    deadline: "2026-09-03",
+    expires: "2026-09-03",
+    dates: "8/13",
+    papers: ["ttimes_0813"],
+    url: "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
+    address: "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
+    noticeKey: "foreclosure-sale-202605",
+    caseNumber: "202605"
+  },
+  {
+    title: "Request for Proposal -- 2028 Multi-Jurisdictional All-Hazard Mitigation Plan Update",
+    entity: "San Miguel County",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Request for Proposal",
+    filterTag: "public-entity",
+    summary: "San Miguel County is seeking qualified respondents for: 2028 Multi-Jurisdictional All-Hazard Mitigation Plan Update.",
+    deadline: "Closes 0/12/2026",
+    expires: "2026-12-06",
+    dates: "9/7",
+    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=210",
+    address: "",
+    smcBidID: "210"
   }
 ];
 

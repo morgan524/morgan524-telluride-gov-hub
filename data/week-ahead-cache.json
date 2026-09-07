@@ -1,18 +1,18 @@
 {
-  "hash": "011961cb3f365e233b1a89141f4dd972f409f573",
-  "lede": "The biggest thing on the government calendar this week is the San Miguel County BOCC's special meeting Wednesday, where they'll consider changing Area Median Income limits on deed-restricted properties in Pinion Park — a technical-sounding move that directly affects who qualifies for local housing. Also worth watching: Ridgway's Town Council meets Wednesday to ratify letters supporting a federal Major Disaster Declaration for the Gold Mountain Fire, which has torched nearly 40,000 acres and repeatedly cut off Highway 550, and the County Planning Commission takes up three Land Use Code amendments covering forestry, oil and gas, and geothermal energy.",
+  "hash": "a9038239aac62601a67a899532ea5db2fe1cad8c",
+  "lede": "The Gold Mountain Fire — nearly 40,000 acres burned northeast of Ouray, Highway 550 severed repeatedly, communities cut off — lands squarely on the agenda Wednesday when Ridgway Town Council meets to ratify its backing of a federal Major Disaster Declaration. Also Wednesday, the San Miguel County BOCC holds a special meeting to consider a resolution adjusting AMI limits on deed-restricted properties at Pinion Park, which is the kind of technical-sounding item that actually determines who qualifies for affordable housing. Thursday, the County Planning Commission takes up three Land Use Code amendments covering forestry, oil and gas, and geothermal energy.",
   "notable": [
     {
-      "id": 6,
-      "stake": "AMI change on deed-restricted Pinion Park units decides who qualifies for local housing."
+      "id": 4,
+      "stake": "Council ratifies disaster declaration support for Gold Mountain Fire recovery."
     },
     {
-      "id": 4,
-      "stake": "Council ratifies disaster declaration support for Gold Mountain Fire recovery — public record matters."
+      "id": 6,
+      "stake": "AMI threshold change on deed-restricted Pinion Park units affects who qualifies."
     },
     {
       "id": 8,
-      "stake": "Planning Commission weighs in on three Land Use Code amendments before they reach the BOCC."
+      "stake": "Three Land Use Code amendments — forestry, oil/gas, geothermal — up for recommendation."
     }
   ]
 }
