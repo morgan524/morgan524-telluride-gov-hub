@@ -407,7 +407,7 @@
   "telluride|2026-09-24|Planning & Zoning Commission - Sep 24 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104",
     "sv": 4,
-    "ph": "d0064703fee6e2cf"
+    "ph": "62adcd3b9f83c037"
   },
   "telluride|2026-09-24|Planning & Zoning Commission Chair - Sep 24 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8103",
@@ -455,7 +455,10 @@
   "telluride|2026-09-17|Special Meeting - Planning & Zoning Commission - Sep 17 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8310",
     "sv": 4,
-    "ph": "0d28d97b4ee2d60d"
+    "zoomUrl": "https://us06web.zoom.us/j/85992668350?pwd=R89oLHvfdFJZrpNb6yzGqqHUrl3phe.1",
+    "meetingId": "859 9266 8350",
+    "passcode": "503877",
+    "phone": "301-715-8592"
   },
   "telluride|2026-09-30|Special Town Council - Sep 30 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313",

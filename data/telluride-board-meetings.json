@@ -21,10 +21,11 @@
     "date": "September 17, 2026",
     "title": "Special Meeting - Planning & Zoning Commission",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8310",
-    "hasAgenda": false,
+    "hasAgenda": true,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "",
-    "civicwebId": 8310
+    "civicwebId": 8310,
+    "packetUrl": "https://telluride-co.civicweb.net/document/444543/"
   },
   {
     "date": "September 22, 2026",

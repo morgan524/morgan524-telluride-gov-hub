@@ -366,7 +366,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-09-24|Planning & Zoning Commission - Sep 24 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104","sv":4,"ph":"d0064703fee6e2cf"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104","sv":4,"ph":"62adcd3b9f83c037"},
 
   "telluride|2026-09-24|Planning & Zoning Commission Chair - Sep 24 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8103","sv":4,"ph":"313a820643e5b960"},
@@ -396,7 +396,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309","sv":4,"ph":"fc8ba4c0a7de2333"},
 
   "telluride|2026-09-17|Special Meeting - Planning & Zoning Commission - Sep 17 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8310","sv":4,"ph":"0d28d97b4ee2d60d"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8310","sv":4,"zoomUrl":"https://us06web.zoom.us/j/85992668350?pwd=R89oLHvfdFJZrpNb6yzGqqHUrl3phe.1","meetingId":"859 9266 8350","passcode":"503877","phone":"301-715-8592"},
 
   "telluride|2026-09-30|Special Town Council - Sep 30 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313","sv":4,"ph":"6ee2e9f9e57bb867"},
@@ -1043,16 +1043,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "We’re Hiring- Bilingual Food Pantry and seNior Lunch Cook Assistant/ Estamos Contratando: Asistente Bilingüe del Banco de Alimentos y Asistente de Cocina del Almuerzo para Personas Mayores",
-    source: "Fresh Food Hub",
-    sourceKey: "fresh-food-hub",
-    date: "August 27, 2026",
-    newsTopic: "community",
-    copy: "We re hiring for two part-time positions: Bilingual Food Pantry Assistant — Sundays, 1:30–6:30 p.m. This role provides Spanish-English translation support for our Spanish-speaking clients during food pantry distribution. Senior Lunch Assistant — Thursdays, 8:30 a.m.–1:30 p.m. at Norwood Town Hall. T",
-    href: "https://freshfoodhub.net/were-hiring-bilingual-food-pantry-and-senior-lunch-cook-assistant-estamos-contratando-asistente-bilingue-del-banco-de-alimentos-y-asistente-de-cocina-del-almuerzo-para-personas-mayores/",
-    img: ""
-  },
-  {
     title: "Invitation to Prayer/Fellowship Wednesday Morning",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -1061,16 +1051,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "This is an open invitation to all women in Telluride. Please come and join us on Wednesday, August 26th...7:30 am Rosary8:00 am Holy MassImmediately after we will go to Butcher and Baker for fellowship. Join as able....Contact Katrina with questio...",
     href: "https://stpatrickstelluride.com/2026/parish-news/invitation-to-prayer-fellowship-wednesday-morning-7/",
     img: ""
-  },
-  {
-    title: "Long-term road closure for the Corbett Creek Bridge Project",
-    source: "Ouray County",
-    sourceKey: "ouray-county",
-    date: "August 24, 2026",
-    newsTopic: "infrastructure",
-    copy: "Long-term road closure for the Corbett Creek Bridge Project, July 24 through October 8, 2026.",
-    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=955",
-    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22829"
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
@@ -1343,7 +1323,7 @@ const MANUAL_SUMMARIES = {
     "The September 30, 2026 Special Meeting - Historic & Architectural Review Commission agenda hasn't been posted yet.",
 
   "telluride|2026-09-17|Special Meeting - Planning & Zoning Commission - Sep 17 2026":
-    "The September 17, 2026 Special Meeting - Planning & Zoning Commission agenda hasn't been posted yet.",
+    "A special P&Z work session covering two tracks. First, the ongoing Comprehensive Plan update — consultants and staff will walk through the Existing Conditions StoryMap, review where Phase 2 community engagement stands, and present Survey #2. The Comp Plan process sets the long-range framework for land use, density, and character across town, so these check-ins matter. Second, the commission continues its discussion of potential Land Use Code amendments to LUC 3-502 (landscaping requirements) and LUC 3-505 (maintenance, removal, or relocation of trees) — code language that quietly shapes how development projects are reviewed and conditioned. No votes are expected; this is a working session.",
 
   "telluride|2026-09-30|Special Town Council - Sep 30 2026":
     "The September 30, 2026 Special Town Council agenda hasn't been posted yet.",
@@ -1751,6 +1731,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Community laces up for Imogene Pass Run",
+    source: "Telluride Times",
+    date: "September 7, 2026",
+    firstSeen: "2026-09-07",
+    newsTopic: "health",
+    copy: "The 53rd Imogene Pass Run heads out from Ouray on Sept. 12, covering 17.1 miles over 13,114-foot Imogene Pass into Telluride. The nonprofit race has run every year since 1974, including through COVID, with Alpine Bank as its sole sponsor. An 85-year-old from Austria is among this year's field; volunteers still needed at the Telluride finish line.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_e087c8fa-7441-4774-8cfa-07a104664708.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/c4/9c4098ac-9c48-4da0-9c30-ec5528347595/6a9f138c04687.image.png",
+    imgHiRes: true
+  },
   {
     title: "The poorest in the US can't find housing even as low-income units sit empty",
     source: "Telluride Times",
@@ -8602,10 +8594,11 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "September 17, 2026",
     title: "Special Meeting - Planning & Zoning Commission",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8310",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
-    civicwebId: 8310
+    civicwebId: 8310,
+    packetUrl: "https://telluride-co.civicweb.net/document/444543/"
   },
   {
     date: "September 22, 2026",
