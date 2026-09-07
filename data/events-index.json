@@ -302,7 +302,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
+    "desc": "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
     "type": "Food & Drink"
   },
   {
@@ -790,7 +790,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Thursday night Pickleball with no experience necessary; all supplies provided.",
+    "desc": "Thursday night Pickleball with no experience necessary. All supplies provided.",
     "type": "Outdoors & Sports"
   },
   {
@@ -1537,7 +1537,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
+    "desc": "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
     "type": "Food & Drink"
   },
   {
@@ -1788,7 +1788,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Thursday night Pickleball with no experience necessary; all supplies provided.",
+    "desc": "Thursday night Pickleball with no experience necessary. All supplies provided.",
     "type": "Outdoors & Sports"
   },
   {
@@ -2184,7 +2184,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
+    "desc": "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
     "type": "Food & Drink"
   },
   {
@@ -2343,7 +2343,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Thursday night Pickleball with no experience necessary; all supplies provided.",
+    "desc": "Thursday night Pickleball with no experience necessary. All supplies provided.",
     "type": "Outdoors & Sports"
   },
   {
@@ -2668,7 +2668,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
+    "desc": "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
     "type": "Food & Drink"
   },
   {
@@ -2747,7 +2747,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Thursday night Pickleball with no experience necessary; all supplies provided.",
+    "desc": "Thursday night Pickleball with no experience necessary. All supplies provided.",
     "type": "Outdoors & Sports"
   },
   {
@@ -3088,7 +3088,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
+    "desc": "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
     "type": "Food & Drink"
   },
   {
@@ -3182,7 +3182,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Thursday night Pickleball with no experience necessary; all supplies provided.",
+    "desc": "Thursday night Pickleball with no experience necessary. All supplies provided.",
     "type": "Outdoors & Sports"
   },
   {
@@ -3278,6 +3278,19 @@
     "type": "Music"
   },
   {
+    "title": "Weekly Young Adult Gathering",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-10-13",
+    "time": "6:00 PM",
+    "location": "The Well, 122 S Aspen",
+    "town": "",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Hanneke Cassel Trio",
     "href": "https://telluridechambermusic.org/concert/hanneke-cassel-trio",
     "date": "2026-10-13",
@@ -3289,6 +3302,19 @@
     "source": "Telluride Chamber Music",
     "desc": "Our \"Not Your Average Classical\" series is back!",
     "type": "Community"
+  },
+  {
+    "title": "Pickleball Nights",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-10-15",
+    "time": "7:00-9:00 PM",
+    "location": "Telluride Racket Club",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "Thursday night Pickleball with no experience necessary. All supplies provided.",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "ALPINE JAM",

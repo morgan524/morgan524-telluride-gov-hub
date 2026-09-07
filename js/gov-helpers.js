@@ -4127,31 +4127,7 @@ const BEACON_EVENTS = [
   {
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
-    date: "2026-09-01",
-    time: "6:00 PM",
-    source: "beacon",
-    sourceLabel: "Beacon",
-    category: "Community Event",
-    location: "The Well, 122 S Aspen",
-    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
-  },
-  {
-    title: "Pickleball Nights",
-    link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night Pickleball with no experience necessary; all supplies provided.",
-    date: "2026-09-03",
-    time: "7:00-9:00 PM",
-    source: "beacon",
-    sourceLabel: "Beacon",
-    category: "Community Event",
-    location: "Telluride Racket Club",
-    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
-  },
-  {
-    title: "Weekly Young Adult Gathering",
-    link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
+    description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
     date: "2026-09-08",
     time: "6:00 PM",
     source: "beacon",
@@ -4163,7 +4139,7 @@ const BEACON_EVENTS = [
   {
     title: "Pickleball Nights",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night Pickleball with no experience necessary; all supplies provided.",
+    description: "Thursday night Pickleball with no experience necessary. All supplies provided.",
     date: "2026-09-10",
     time: "7:00-9:00 PM",
     source: "beacon",
@@ -4175,7 +4151,7 @@ const BEACON_EVENTS = [
   {
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
+    description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
     date: "2026-09-15",
     time: "6:00 PM",
     source: "beacon",
@@ -4187,7 +4163,7 @@ const BEACON_EVENTS = [
   {
     title: "Pickleball Nights",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night Pickleball with no experience necessary; all supplies provided.",
+    description: "Thursday night Pickleball with no experience necessary. All supplies provided.",
     date: "2026-09-17",
     time: "7:00-9:00 PM",
     source: "beacon",
@@ -4199,7 +4175,7 @@ const BEACON_EVENTS = [
   {
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
+    description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
     date: "2026-09-22",
     time: "6:00 PM",
     source: "beacon",
@@ -4211,7 +4187,7 @@ const BEACON_EVENTS = [
   {
     title: "Pickleball Nights",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night Pickleball with no experience necessary; all supplies provided.",
+    description: "Thursday night Pickleball with no experience necessary. All supplies provided.",
     date: "2026-09-24",
     time: "7:00-9:00 PM",
     source: "beacon",
@@ -4223,7 +4199,7 @@ const BEACON_EVENTS = [
   {
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
+    description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
     date: "2026-09-29",
     time: "6:00 PM",
     source: "beacon",
@@ -4235,7 +4211,7 @@ const BEACON_EVENTS = [
   {
     title: "Pickleball Nights",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night Pickleball with no experience necessary; all supplies provided.",
+    description: "Thursday night Pickleball with no experience necessary. All supplies provided.",
     date: "2026-10-01",
     time: "7:00-9:00 PM",
     source: "beacon",
@@ -4247,7 +4223,7 @@ const BEACON_EVENTS = [
   {
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
+    description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
     date: "2026-10-06",
     time: "6:00 PM",
     source: "beacon",
@@ -4259,8 +4235,32 @@ const BEACON_EVENTS = [
   {
     title: "Pickleball Nights",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night Pickleball with no experience necessary; all supplies provided.",
+    description: "Thursday night Pickleball with no experience necessary. All supplies provided.",
     date: "2026-10-08",
+    time: "7:00-9:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "Telluride Racket Club",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Weekly Young Adult Gathering",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
+    date: "2026-10-13",
+    time: "6:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "The Well, 122 S Aspen",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Pickleball Nights",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Thursday night Pickleball with no experience necessary. All supplies provided.",
+    date: "2026-10-15",
     time: "7:00-9:00 PM",
     source: "beacon",
     sourceLabel: "Beacon",
