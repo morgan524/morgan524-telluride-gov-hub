@@ -357,7 +357,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303","sv":4,"ph":"d6200257aab6f8b7"},
 
   "telluride|2026-09-22|Town Council - Sep 22 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043","sv":4,"ph":"c5b14e4bfd86db54"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043","sv":4,"ph":"0c2ea006f5fde3ee"},
 
   "county|2026-09-23|Board of County Commissioners Work Session":
     {"sv":4,"ph":"307e0c7b19e4ff5b"},
@@ -420,10 +420,22 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://www.norwoodtown.com/files/5f8304a63/09.08.2026+RESCHEDULED+NWC+Agenda.pdf","zoomUrl":"https://us02web.zoom.us/j/88274908233","meetingId":"882 7490 8233","passcode":"997236","phone":"346-248-7799","sv":4},
 
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132","sv":4,"ph":"681ef775e57db365"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132","sv":4,"ph":"436156d895c3bff0"},
 
   "telluride|2026-10-06|Town Council - Oct 06 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044","sv":4,"ph":"861712471a1ec903"}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044","sv":4,"ph":"861712471a1ec903"},
+
+  "mv|2026-10-07|Town Council Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "telluride|2026-10-07|Ecology Commission - Oct 07 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8119","sv":4,"ph":"82b6deaef9451b0e"},
+
+  "telluride|2026-10-07|Commission for Community Assistance, Arts & Special Events - Oct 07 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8067","sv":4,"ph":"f5cc045b9e98abbb"},
+
+  "telluride|2026-10-07|Telluride Housing Authority Subcommittee - Oct 07 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8164","sv":4,"ph":"54a781daedea7749"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -782,7 +794,16 @@ const MEETING_PREVIEWS = {
     "The Open Space Commission is expected to discuss matters related to open space acquisition, management, and planning priorities. The meeting may also address implications of Ordinance #1640, which amended Telluride's Land Use Code to implement the Colorado Wildfire Resiliency Code, passed by Town Council in August 2026.",
 
   "telluride|2026-10-06|Town Council - Oct 06 2026":
-    "Council is expected to discuss matters related to the Colorado Wildfire Resiliency Code amendment to Telluride's Land Use Code (Ordinance #1640), which was previously passed in August 2026 to update Chapter 18 of the Municipal Code with new wildfire resiliency standards."
+    "Council is expected to discuss matters related to the Colorado Wildfire Resiliency Code amendment to Telluride's Land Use Code (Ordinance #1640), which was previously passed in August 2026 to update Chapter 18 of the Municipal Code with new wildfire resiliency standards.",
+
+  "telluride|2026-10-07|Ecology Commission - Oct 07 2026":
+    "The Ecology Commission is expected to discuss human-wildlife interactions and related public safety concerns. The meeting may also address the recently passed Ordinance #1640, which amended Telluride's Land Use Code to implement the Colorado Wildfire Resiliency Code, reflecting the town's broader environmental and ecological priorities.",
+
+  "telluride|2026-10-07|Commission for Community Assistance, Arts & Special Events - Oct 07 2026":
+    "The Commission for Community Assistance, Arts & Special Events is expected to address funding allocations for community support and arts organizations, review special events applications, and discuss related town policy matters. The meeting may also touch on the recently adopted Colorado Wildfire Resiliency Code amendment to Telluride's Land Use Code.",
+
+  "telluride|2026-10-07|Telluride Housing Authority Subcommittee - Oct 07 2026":
+    "The Telluride Housing Authority Subcommittee is expected to meet on October 7, 2026, though a detailed agenda was not available. Members may address ongoing local housing matters. A related legal notice references Ordinance #1640, adopting the Colorado Wildfire Resiliency Code amendments to the Land Use Code."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1062,7 +1083,7 @@ const SMC_ALERTS = [
 const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-06';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-07';
 const LEGAL_NOTICES_CACHE_DATE = '2026-09-06';
 
 const MANUAL_SUMMARIES = {
@@ -1343,7 +1364,19 @@ const MANUAL_SUMMARIES = {
     "The October 5, 2026 Open Space Commission agenda hasn't been posted yet.",
 
   "telluride|2026-10-06|Town Council - Oct 06 2026":
-    "The October 6, 2026 Town Council agenda hasn't been posted yet."
+    "The October 6, 2026 Town Council agenda hasn't been posted yet.",
+
+  "mv|2026-10-07|Town Council Meeting":
+    "The October 7, 2026 Mountain Village Town Council Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-10-07|Ecology Commission - Oct 07 2026":
+    "The October 7, 2026 Ecology Commission agenda hasn't been posted yet.",
+
+  "telluride|2026-10-07|Commission for Community Assistance, Arts & Special Events - Oct 07 2026":
+    "The October 7, 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+
+  "telluride|2026-10-07|Telluride Housing Authority Subcommittee - Oct 07 2026":
+    "The October 7, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2637,42 +2670,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Locals concerned as Trump admin fast-tracks public process for Wyoming rare earth mine",
-    source: "Telluride Times",
-    date: "August 24, 2026",
-    firstSeen: "2026-08-25",
-    newsTopic: "government",
-    copy: "A Colorado company plans an open-pit rare earth mine in Wyoming's Black Hills National Forest, with the Forest Service offering just a 30-day public comment window — the only federal input opportunity. Locals near Sundance say the fast-tracked process caught them off guard. County commissioners support the project but say they have questions too.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_b515d996-e427-51d1-b533-5489e5d2e60a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "‘Fear took over’",
-    source: "Telluride Times",
-    date: "August 24, 2026",
-    firstSeen: "2026-08-24",
-    newsTopic: "government",
-    copy: "Advocates from the Workers' School presented Mountain Village Town Council with a proposed workers' rights ordinance at the Aug. 20 meeting, backed by a 142-page packet on wage theft, labor trafficking, and worker misclassification. Testimony included a domestic worker's account of a work-related miscarriage and a story of a commuter worker who died from overwork. The ordinance calls for anonymous reporting, retaliation protections, and enforcement tied to business licensing.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_6cc11ae2-c3ba-457f-a8b8-38feb97aae16.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/c9/dc97a2da-4298-41fb-a16a-2d7aeda9f7d7/6a88bf233be2e.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "‘El miedo se apoderó de nosotros’",
-    source: "Telluride Times",
-    date: "August 24, 2026",
-    firstSeen: "2026-08-24",
-    newsTopic: "government",
-    copy: "Advocates from the Escuela de Trabajadores — a collaboration between Thrive Community Health Network and Raíces Sin Fronteras — appeared before Mountain Village Town Council on August 20th to request a municipal labor rights protection ordinance. They brought a 142-page packet documenting wage theft, worker exploitation, unsafe conditions, and housing instability, along with personal testimonies including a Colombian attorney's account of a work-related miscarriage and a worker who died after repeated 14–15-hour days commuting from Montrose. The council has not yet acted on the proposal.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_912fb87f-47a2-4b5d-955d-29e93b886b28.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/a7/6a7eb7c6-a329-475f-9fd8-8d59f26124ea/6a8caf0264c0a.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town Council Proclaims September 7-11 Black Bear Safety Week",
     source: "Town of Telluride",
     date: "September 3, 2026",
@@ -2774,7 +2771,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Ridgway Rescinds Stage 2 Fire Restrictions, Reinstates Stage 1 Fire Restrictions effective 12:01am on Thursday, Sept. 3rd - Sept. 2, 2026",
     source: "Town of Ridgway",
-    date: "September 6, 2026",
+    date: "September 7, 2026",
     firstSeen: "2026-09-02",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2796,7 +2793,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Public Hearing Notice Wed., Sept. 16, 2026 at 5:30pm - 1) Site Plan and Conditional Use Permit for Riverbend Townhomes (TBD Liddell Dr.); 2) Plat Amendment of Lot 4 and Outlot of Riverview Business Park Subdivision (TBD Liddell Dr.); 3) PUD Amendment Lena Street Commons Planned Unit Development (TBD N. Lena Street) - Sept. 2, 2026",
     source: "Town of Ridgway",
-    date: "September 6, 2026",
+    date: "September 7, 2026",
     firstSeen: "2026-09-02",
     newsTopic: "land-use",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3861,6 +3858,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "Online Author Talk with Priya Parker",
+    link: "https://koto.org/event/online-author-talk-with-priya-parker/",
+    description: "Join us for a paradigm-shifting, essential event as we sit down with world-renowned master facilitator Priya Parker to discuss her groundbreaking new book, The Art of Fighting: The Transformative Power of Conflict. In The Art of Fighting, Priya Parker explains that we can’t form and grow effective relationships without a fight. She rejects the idea that conflict is abnormal or that good groups don’t fight. All groups change and evolve; indeed, it’s because people disagree that good groups flourish. As she did in the now-classic The Art of Gathering, Parker draws on her far-reaching experience as a conflict facilitator, her own detailed research, and real-world examples to lay out the ways that people can identify disputes, determine how to address them, and what to do if they are insurmountable. …",
+    pubDate: "2026-09-15T14:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
   }
 ];
 
@@ -4043,48 +4051,12 @@ const CLUB_RED_SHOWS = [];
 const FRESH_FOOD_HUB_EVENTS = [];
 const SHERBINO_EVENTS = [
   {
-    title: "The M Factor, Shredding the Silence on Menopause. Film followed by a panel discussion",
-    href: "https://sherbino.org/event/the-m-factor-shredding-the-silence-on-menopause-film-followed-by-a-panel-discussion/",
-    date: "2026-09-01 18:30:00",
-    endDate: "2026-09-01 20:00:00",
-    location: "The Sherbino, Ridgway",
-    copy: "The Sherbino presents The M Factor: Shredding the Silence on Menopause on September 1 at 6:30 PM, followed by a panel discussion. @ Doors at 6:00 PM, Film at 6:30 PM followed by a panel discussion led by local specialists in women's health issues Dr. Abigail Seaver, ND; Meg Benasutti, ANP-BC, Jennifer McGeorge, ARNP, CNM, MSCP and Kim Walker, DNP, WHNP. Note: this is a different film from the one we showed back in May, which was about Perimenopause About The M Factor Film Menopause is a silent epidemic that affects the health and well‑being of millions of American women. In addition to experiencing traumatic physical symptoms, women are struggling with the related stresses of billions of dollars in lost wages, upended careers, family disruptions, and emotional chaos. This film confront this neglected crisis, challenges societal and medical shortcomings and advocates for a revolutionary approach to women's health all over the world. …",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/06/ChatGPT-Image-Jun-23-2026-07_58_16-PM.png"
-  },
-  {
-    title: "Auditions, Take 2: Rocky Horror Picture Show Live Shadow Cast Edition (Show in Oct.)",
-    href: "https://sherbino.org/event/rocky-horror-shadow-cast-auditions-take-2-sherbino/",
-    date: "2026-09-03 17:30:00",
-    endDate: "2026-09-03 19:00:00",
-    location: "The Sherbino, Ridgway",
-    copy: "@ Rocky Horror Picture Show — Live Shadowcast Edition, Directed by Erin Cawley Auditions · Thursday, Sept 3 · 5:30 – 7:00 p.m. · The Sherbino (604 Clinton St.) The Sherbino is casting for its live shadowcast production of The Rocky Horror Picture Show — and we’re opening up a second night of auditions! We know that the Sunday before school starts can be a hectic time with a lot of conflicts, so if you missed the first audition date, this is your second chance to jump in. This is your chance to step into the spotlight, don a wild costume, and bring this cult classic to life on stage. If auditioning for a specific character, we suggest preparing a 1–2 minute section of the film to audition with in shadowcast as that character. …",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/08/rocky-auditions-round-2.png"
-  },
-  {
-    title: "First Friday Opening Reception: Bonnie Bucknam's \"Unscripted: Fiber Improvisations\"",
-    href: "https://sherbino.org/event/unscripted-fiber-improvisations-bonnie-bucknam/",
-    date: "2026-09-04 17:00:00",
-    endDate: "2026-09-04 19:00:00",
-    location: "The Sherbino, Ridgway",
-    copy: "@ UNSCRIPTED: Fiber Improvosations ~ An Exhibition by Bonnie Bucknam On display at The Sherbino and Weehwaken's 610 Arts Collective Gallery from September 1 – 23, 2026 Artist Reception Join us during Ridgway’s First Friday on Friday, September 4, from 5–7 pm. Stop by the 610 Arts Collective, explore the exhibition, and meet artist Bonnie Bucknam. In Unscripted: Fiber Improvisations, Bucknam embraces intuition, experimentation, and the unexpected. Rather than beginning with a predetermined design, she places a pieced or solid fabric shape on her pin wall and responds to it—adding another shape, observing the result, and allowing each composition to evolve organically. “These pieces go with the flow,” Bucknam explains. Free from rigid plans, rulers, and straight edges, the work celebrates irregularity and the expressive possibilities of imperfection. …",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/08/bucknam-at-610.png"
-  },
-  {
-    title: "The Sherbino Presents: Donny Morales – First Friday Show",
-    href: "https://sherbino.org/event/the-sherbino-presents-donny-morales-first-friday-show/",
-    date: "2026-09-04 18:00:00",
-    endDate: "2026-09-04 20:00:00",
-    location: "The Sherbino, Ridgway",
-    copy: "@ Friday, September 4th | 6:00–8:00 pmSherbino “Living Room” Free Show | Cash Bar | Tips EncouragedCelebrate First Friday with an intimate evening of live music at the Sherbino! Join us in the Sherbino’s cozy “Living Room” near the bar for a special performance by Donny Morales. Donny brings his signature blend of \"soul-acousti-funk\", delivering an irresistible mix of soulful vocals, funky rhythms, and masterful acoustic guitar. A longtime favorite on Colorado's Western Slope, Donny's performances are equal parts heartfelt storytelling, infectious grooves, and musical spontaneity. Whether he's reimagining familiar favorites or sharing original songs, his warm stage presence and feel-good energy create an experience that's impossible not to move to. Come ready to clap, sway, sing along, and enjoy an unforgettable evening of soul, acoustic vibes, and funk. …",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/07/Donny-Morales-banner-Sept-4th.png"
-  },
-  {
     title: "The Courtyard at 610 Presents: Heather & Douglas",
     href: "https://sherbino.org/event/the-courtyard-at-610-presents-heather-douglas-2/",
     date: "2026-09-06 19:00:00",
     endDate: "2026-09-06 20:30:00",
     location: "The Courtyard at 610, Ridgway",
-    copy: "@ Gates: 6:30 || Show: 7:00pm || $15 Advance / $20 at gates || Enter via the alleyway behind the Sherbino and 610 Arts Collective || Outdoor Venue || Setting: seated || Limited Bar Available || There will be a few \"agility\" tickets at the gate — which are tickets for seats that you have to climb over a railing for. We don't sell those online — but we do sell them onsite IF there is space. **Due to the local Gold Mountain Fire – Poor air quality or rain location will be inside on The Sherbino main stage for Courtyard shows** Join us for an unforgettable evening of music under the stars in one of Ridgway’s most charming hidden venues—The Courtyard at 610, tucked behind the 610 Arts Collective and Sherbino Theater. Enter through the alleyway behind the Sherbino and 610 Gallery for a magical summer night. …",
+    copy: "@ Gates: 6:30 || Show: 7:00pm || $15 Advance / $20 at gates || Enter via the alleyway behind the Sherbino and 610 Arts Collective || Outdoor Venue || Setting: seated || Limited Bar Available || There will be a few \"agility\" tickets at the gate — which are tickets for seats that you have to climb over a railing for.  We don't sell those online — but we do sell them onsite IF there is space. Tickets to a Sold out Courtyard Show: For Courtyard shows we have a maximum seated capacity of 50. If a show is sold out, we MAY be able to sell a few more tickets at Doors. These few tickets are standing room / “agility seating” room. The ‘Agility seating’ means it takes a little leg swing over a handrail to get to or the option is to stand. …",
     imageUrl: "https://sherbino.org/wp-content/uploads/2026/07/Heather-Douglas-September-6-banner.png"
   },
   {
@@ -4094,8 +4066,7 @@ const SHERBINO_EVENTS = [
     endDate: "2026-09-08 12:00:00",
     location: "Ridgway, CO",
     copy: "",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
-    description: "A monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The recurring event offers a casual space for veterans to connect with one another and with community support."
+    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png"
   },
   {
     title: "Jolie Holland",
@@ -4103,7 +4074,7 @@ const SHERBINO_EVENTS = [
     date: "2026-09-10 19:30:00",
     endDate: "2026-09-10 21:00:00",
     location: "The Sherbino, Ridgway",
-    copy: "@ THURSDAY || Doors: 6:30 PM || Show: 7:00 PM || Tickets: $30 in advance / $35 Day of Show || Solo Show || Some Reserved Section Seats Available Presented in partnership by The Sherbino with Pickin' Productions About Jolie Holand Jolie Holland has forged a timeless, captivating musical legacy; as she mines the depths of her, at times harrowing, life experiences, her creative choices are rooted in honesty and presence. They are also fearless. Jolie Holland has been on the road since the early 2000s, releasing seven of her own albums and collaborating on countless others. Her work has been described as a syncretization of American roots, with rock and experimental elements. She’s been in the studio with Booker T, Lucinda Williams, and TV On The Radio; and shared stages with Big Thief, St. Vincent, Elbow, and Mavis Staples. …",
+    copy: "@ THURSDAY || Doors: 6:30 PM || Show: 7:00 PM || Tickets: $30 in advance / $35 Day of Show || Duo Show with Max Knouse || Some Reserved Section Seats Available Presented in partnership by The Sherbino with Pickin' Productions About Jolie Holand Jolie Holland has forged a timeless, captivating musical legacy; as she mines the depths of her, at times harrowing, life experiences, her creative choices are rooted in honesty and presence. They are also fearless. Jolie Holland has been on the road since the early 2000s, releasing seven of her own albums and collaborating on countless others. Her work has been described as a syncretization of American roots, with rock and experimental elements. She’s been in the studio with Booker T, Lucinda Williams, and TV On The Radio; and shared stages with Big Thief, St. Vincent, Elbow, and Mavis Staples. …",
     imageUrl: "https://sherbino.org/wp-content/uploads/2026/06/2026-sherb-event-banners-45.png"
   },
   {
@@ -4121,7 +4092,7 @@ const SHERBINO_EVENTS = [
     date: "2026-09-15 18:30:00",
     endDate: "2026-09-15 20:30:00",
     location: "montrose pavilion, Montrose",
-    copy: "@ BUY TICKETS Doors: 6:00 PM ||  Show: 6:30 PM – This show is at the Montrose Pavilion, brought to you in partnership by The Sherbino and Weehawken Creative Arts Native Rhythms, Native Jazz: The Genre-Bending Journey of R. Carlos Nakai, AmoChip Dabney, and Will Clipman $25 in advance General Admission (GA) Seats || $30 in advance for reserved section seats (no longer available day-of-show) || $32 GA day of show || (you will select the actual seat in the diagram below to purchase reserved section seats. If you want GA seats, just scroll below the map to buy GA seats) Where Tradition Meets Innovation, and Boundaries Dissolve in Sound Amidst the vast tapestry of American music, few collaborations illustrate the spirit of genre-bending innovation as vividly as that of R. Carlos Nakai, AmoChip Dabney, and Will Clipman. …",
+    copy: "@ BUY TICKETS Doors: 6:00 PM ||  Show: 6:30 PM – This show is at the Montrose Pavilion, brought to you in partnership by The Sherbino and Weehawken Creative Arts Native Rhythms, Native Jazz: The Genre-Bending Journey of R. Carlos Nakai, AmoChip Dabney, and Will Clipman  $25 in advance General Admission (GA) Seats || $30 in advance for reserved section seats (no longer available day-of-show) || $32 GA day of show || $21 GA SENIOR (65 or older) || (you will select the actual seat in the diagram below to purchase reserved section seats. If you want GA seats, just scroll below the map to buy GA seats) Where Tradition Meets Innovation, and Boundaries Dissolve in Sound Amidst the vast tapestry of American music, few collaborations illustrate the spirit of genre-bending innovation as vividly as that of R. Carlos Nakai, AmoChip Dabney, and Will Clipman. …",
     imageUrl: "https://sherbino.org/wp-content/uploads/2026/04/R-Carlos-Native-Rythms-Native-Jazz-banner.png"
   },
   {
@@ -4159,6 +4130,33 @@ const SHERBINO_EVENTS = [
     location: "The Sherbino, Ridgway",
     copy: "Join us at the Sherbino Theatre on Tuesday, September 29, 2026, for Episode 1 of this award-wining docuseries on our watersheds. Doors open at 6:00 p.m., the film begins at 6:30 p.m., a panel discussion follows. Tickets are $10. @ Doors: 6:00 PM || Film: 6:30 PM || Tickets: $10 in advance Setting: Seated at The Sherbino Doors: 6:00 Film: 6:30 followed by a discussion with the filmmaker Renea Roberts, and Jake Kurzweil, PH.D., Hydrologist with the Mountain Studies Institute & Uncompahgre Watershed Partnership.Part biography, part how-to, “Water Wizard” Bill Zeedyk and his allies illustrate a proven toolbox of simple low-tech, low-cost methods to restore degraded lands. They work with Nature, rather than against her, to gird against the extremes of drought and flood while fostering climate resiliency. We’ll be screening: Episode 1: “Willing to Try Things\"  Today, “water wizard” Bill Zeedyk is a legend in the ecological restoration community. …",
     imageUrl: "https://sherbino.org/wp-content/uploads/2026/08/Thinking-like-water-banner.png"
+  },
+  {
+    title: "First Friday Opening Reception: Michelle Montague",
+    href: "https://sherbino.org/event/containment-michelle-montague-610-arts-collective-meta-description/",
+    date: "2026-10-02 17:00:00",
+    endDate: "2026-10-02 19:00:00",
+    location: "The Sherbino, Ridgway",
+    copy: "@ CONTAINMENT ~ An Exhibition by Michelle Montague at the Sherbino's 610 Arts Collective gallery On display September 29 – October 30, 2026 Artist Reception: Friday, October 2 | 5:00–7:00 PM | Free! 610 Arts Collective presents CONTAINMENT, a new exhibition by Ridgway artist Michelle Montague. In this body of work, Montague places her signature clay figures within mixed-media box assemblages, creating intimate environments that hold both personal emotion and cultural tension. Begun in the aftermath of the 2024 election, the series reflects her response to current events, balancing anxiety, vulnerability, and frustration with an enduring hope for change. Using wooden crates, found objects, and sculpted human forms, Montague builds layered scenes that invite viewers to look closely and question their first impressions. The boxes serve as both practical display structures and symbolic containers—framing each narrative while intensifying the sense of confinement, exposure, and emotional pressure within the work. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/08/montague.png"
+  },
+  {
+    title: "Ridgway 1k 2026",
+    href: "https://sherbino.org/event/ridgway-1k-2026/",
+    date: "2026-10-04 12:15:00",
+    endDate: "2026-10-04 13:30:00",
+    location: "Ridgway, CO",
+    copy: "@ Ridgway 1K ~ Rally Through The Alley: Colorado’s Most Entertaining Fun Run 🗓 Event Date: October 4, 2026⏰ In-person Registration Opens: 12:15 PM🏁 Race Starts: 12:45 PM📣 Last Call for Runners: 1:15 PM (all runners must be checked-in by 1:15 pm).📍 Downtown Ridgway, Colorado New this year – Registered racers can pick up their Bibs at Packet Pickup: Friday, October 2nd, 3:00-6:00pm @ The Sherbino Join the most hilarious costumed fun run in Colorado!The Ridgway 1K Rally Through The Alley is a family-friendly, costume-themed, 1K race in downtown Ridgway. But don’t be fooled—this 6-block, downhill “race” is all about fun, food, and funky vibes, not speed. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2025/11/sherb-2025-EVENT-BANNERS-1920-x-1080-px-45.png"
+  },
+  {
+    title: "San Juan Oktoberfest",
+    href: "https://sherbino.org/event/san-juan-oktoberfest-ridgway-colorado-2026/",
+    date: "2026-10-04 14:00:00",
+    endDate: "2026-10-04 17:00:00",
+    location: "Ridgway, CO",
+    copy: "@ San Juan Oktoberfest Sunday, October 4, 2026 | Hartwell Park | Ridgway, Colorado There’s nothing quite like Ridgway in early October — bright blue skies, golden aspens and cottonwoods glowing on the hillsides, and the irresistible scent of bratwursts sizzling in Hartwell Park. That can only mean one thing: Oktoberfest has arrived! This year marks the inaugural San Juan Oktoberfest, happening Sunday, October 4, immediately following the wildly fun Ridgway 1K Rally Through the Alley. After the costumes, laughter, and downhill dash through town, the celebration continues in the park with a festival that blends Austrian tradition with Rocky Mountain charm. LIVE MUSIC by RHS Band members and leaders to kick things off — followed by POLKA MUSIC BY POLKA POYO of Paonia! Polka Poyo is what a polka band should be in the 21st century. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/04/2026-sherb-event-banners-3.jpg"
   }
 ];
 
@@ -5042,7 +5040,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/floating-lotus-trivia-night",
     description: "Trivia Night at Floating Lotus Brewery! Join us on the 1st & 3rd Thursdays from 6-9 PM for a lively night of questions, drinks, and friendly competition. Grab a table, bring your team, and learn more at floatinglotusbrewery.com. View on site | Email this event",
     pubDate: "2026-09-18T00:00:00.000Z",
-    endDate: "2026-10-16",
+    endDate: "2026-11-06",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5970,28 +5968,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Movies Under the Stars",
-    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    pubDate: "2026-09-05T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
-  },
-  {
-    title: "Mind Blown Telluride",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
-    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
-    pubDate: "2026-09-05T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
-  },
   {
     title: "Sunday Rehab at Alloy Kitchen",
     link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",

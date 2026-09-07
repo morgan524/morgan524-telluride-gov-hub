@@ -499,7 +499,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "A monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The recurring event offers a casual space for veterans to connect with one another and with community support.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1565,6 +1565,19 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Online Author Talk with Priya Parker",
+    "href": "https://koto.org/event/online-author-talk-with-priya-parker/",
+    "date": "2026-09-15",
+    "time": "2:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join us for a paradigm-shifting, essential event as we sit down with world-renowned master facilitator Priya Parker to discuss her groundbreaking new book, The Art of Fighting: The Transformative Power of Conflict. In The Art of Fighting,…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Middle School Volleyball: Ouray vs Centennial",
     "href": "https://events.ourayridgwayevents.com/event/middle-school-volleyball-ouray-vs-centennial",
     "date": "2026-09-15",
@@ -1880,7 +1893,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Trivia Night at Floating Lotus Brewery! Join us on the 1st & 3rd Thursdays from 6-9 PM for a lively night of questions, drinks, and friendly competition. Grab a table, bring your team, and learn more at floatinglotusbrewery.com. View on…",
     "type": "Food & Drink",
-    "endDate": "2026-10-16"
+    "endDate": "2026-11-06"
   },
   {
     "title": "TASP Bob Miller Memorial Golf Classic",
@@ -2999,6 +3012,19 @@
     "type": "Festivals"
   },
   {
+    "title": "First Friday Opening Reception: Michelle Montague",
+    "href": "https://sherbino.org/event/containment-michelle-montague-610-arts-collective-meta-description/",
+    "date": "2026-10-02",
+    "time": "",
+    "location": "The Sherbino, Ridgway",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2026/08/montague.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
+    "type": "Community"
+  },
+  {
     "title": "Mineral Identification Workshop For Kids",
     "href": "https://events.ourayridgwayevents.com/event/mineral-identification-workshop-for-kids",
     "date": "2026-10-03",
@@ -3116,6 +3142,32 @@
     "desc": "Where limits end, leadership begins. Welcome to the Telluride Leadership Summit - A mountain destination experience …",
     "type": "Outdoors & Sports",
     "endDate": "2026-10-07"
+  },
+  {
+    "title": "Ridgway 1k 2026",
+    "href": "https://sherbino.org/event/ridgway-1k-2026/",
+    "date": "2026-10-04",
+    "time": "",
+    "location": "Ridgway, CO",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2025/11/sherb-2025-EVENT-BANNERS-1920-x-1080-px-45.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
+    "type": "Community"
+  },
+  {
+    "title": "San Juan Oktoberfest",
+    "href": "https://sherbino.org/event/san-juan-oktoberfest-ridgway-colorado-2026/",
+    "date": "2026-10-04",
+    "time": "",
+    "location": "Ridgway, CO",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2026/04/2026-sherb-event-banners-3.jpg",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Bike & Brewery Tour",
