@@ -438,7 +438,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8164","sv":4,"ph":"224c78f657d14d0a"},
 
   "county|2026-10-07|Board of County Commissioners Meeting":
-    {"sv":4,"ph":"49e704e3c3bab858"}
+    {"sv":4,"ph":"49e704e3c3bab858"},
+
+  "telluride|2026-10-08|Special Meeting - Planning & Zoning Commission - Oct 08 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8311","sv":4,"ph":"8fb47750538763cf"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -787,9 +790,6 @@ const MEETING_PREVIEWS = {
   "ouray|2026-09-16|, 1-4:00 PM (@ OURAY COURTHOUSE!) - The PC will hold 2 public hearings; Curry Regular PUD, and an Exemption application from Clifford Pastor to subdivide his parcel into 2 lots. (Packet materials are under media TV icon)":
     "The Planning Commission is expected to hold two public hearings on September 16 at the Ouray Courthouse. Members will review the Curry Regular PUD proposal and consider an exemption application from Clifford Pastor seeking to subdivide his parcel into two lots.",
 
-  "norwood|2026-09-08|NWC Rescheduled to 09/22/2026":
-    "The Norwood Water Commission meeting originally scheduled for September 8, 2026 has been rescheduled to September 22, 2026 at 6:30 p.m. No specific agenda items have been listed at this time.",
-
   "ridgway|2026-09-09|Ridgway Town Council Regular Meeting":
     "Council is expected to approve routine financial demands, authorize a mayoral letter supporting a proposed recreation fee structure at Blue Lakes, and consider additional consent calendar items. The meeting will be held both in person in Ridgway, Colorado and virtually via Zoom.",
 
@@ -809,7 +809,10 @@ const MEETING_PREVIEWS = {
     "The Telluride Housing Authority Subcommittee is expected to meet on October 7, 2026, though a detailed agenda was not available. Members may address ongoing local housing matters. A related legal notice references Ordinance #1640, adopting the Colorado Wildfire Resiliency Code amendments to the Land Use Code.",
 
   "county|2026-10-07|Board of County Commissioners Meeting":
-    "Board will consider procurement matters including material hauling, trail construction, fuel island canopy work, and jail painting projects. Several probate estate notices are also associated with the meeting, along with an energy regulatory hearing involving an alleged violation against American Helium Operating LLC."
+    "Board will consider procurement matters including material hauling, trail construction, fuel island canopy work, and jail painting projects. Several probate estate notices are also associated with the meeting, along with an energy regulatory hearing involving an alleged violation against American Helium Operating LLC.",
+
+  "telluride|2026-10-08|Special Meeting - Planning & Zoning Commission - Oct 08 2026":
+    "The Planning & Zoning Commission is expected to discuss the Colorado Wildfire Resiliency Code amendment to Telluride's Land Use Code (Ordinance #1640), passed by Town Council on August 11, 2026, which amended Chapter 18 of the Municipal Code to implement wildfire resiliency standards."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1043,6 +1046,16 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "We’re Hiring- Bilingual Food Pantry and seNior Lunch Cook Assistant/ Estamos Contratando: Asistente Bilingüe del Banco de Alimentos y Asistente de Cocina del Almuerzo para Personas Mayores",
+    source: "Fresh Food Hub",
+    sourceKey: "fresh-food-hub",
+    date: "August 27, 2026",
+    newsTopic: "community",
+    copy: "We re hiring for two part-time positions: Bilingual Food Pantry Assistant — Sundays, 1:30–6:30 p.m. This role provides Spanish-English translation support for our Spanish-speaking clients during food pantry distribution. Senior Lunch Assistant — Thursdays, 8:30 a.m.–1:30 p.m. at Norwood Town Hall. T",
+    href: "https://freshfoodhub.net/were-hiring-bilingual-food-pantry-and-senior-lunch-cook-assistant-estamos-contratando-asistente-bilingue-del-banco-de-alimentos-y-asistente-de-cocina-del-almuerzo-para-personas-mayores/",
+    img: ""
+  },
+  {
     title: "Invitation to Prayer/Fellowship Wednesday Morning",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -1069,7 +1082,7 @@ const SMC_ALERTS = [
 const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-07';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-08';
 const LEGAL_NOTICES_CACHE_DATE = '2026-09-07';
 
 const MANUAL_SUMMARIES = {
@@ -1365,7 +1378,10 @@ const MANUAL_SUMMARIES = {
     "The October 7, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-10-07|Board of County Commissioners Meeting":
-    "The October 7, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet."
+    "The October 7, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-10-08|Special Meeting - Planning & Zoning Commission - Oct 08 2026":
+    "The October 8, 2026 Special Meeting - Planning & Zoning Commission agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2623,18 +2639,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Sentencing set for polygamous leader convicted of abuse in Arizona after girls discovered in trailer",
-    source: "Telluride Times",
-    date: "August 25, 2026",
-    firstSeen: "2026-08-25",
-    newsTopic: "community",
-    copy: "Samuel Bateman, already serving 50 years federally for child sex crimes, faces sentencing Tuesday on three Arizona child abuse counts after three girls aged 11–14 were found in an unventilated trailer during a 2022 Flagstaff traffic stop. Each count carries 4–8 years. Bateman led a splinter group tied to Warren Jeffs' polygamous sect.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_dd2970b9-da44-5d42-af4a-263f98c8783a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/9e/f9eec24e-6e80-5775-a648-310fd59563f9/6a8d85eccdd66.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Movie Review: A tender love story with postapocalyptic teeth in Ridley Scott’s 'The Dog Stars'",
     source: "Telluride Times",
     date: "August 26, 2026",
@@ -2644,54 +2648,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_e883c85f-8c7d-5181-9ad9-14f5d0460f2b.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c4/ec4cc373-ba88-5b62-a551-c0b590ba0bc2/6a8e37f1b6bff.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Polygamous sect leader sentenced to 24 additional years in prison for hauling girls in unventilated trailer in Arizona",
-    source: "Telluride Times",
-    date: "August 25, 2026",
-    firstSeen: "2026-08-26",
-    newsTopic: "community",
-    copy: "Warren Jeffs, already serving life plus 20 years for child sexual assault, got 24 more years after being convicted of transporting underage girls in an unventilated trailer in Arizona. He leads the FLDS Church.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_a9e3b803-95fd-553c-91a8-79e8cc4fb741.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Instagram chief takes the stand in a trial pitting Meta against states over social media harms",
-    source: "Telluride Times",
-    date: "August 25, 2026",
-    firstSeen: "2026-08-26",
-    newsTopic: "health",
-    copy: "Four states are suing Meta in federal court in Oakland, claiming Instagram was deliberately designed to addict kids and worsen youth mental health. Instagram's head Adam Mosseri defended the platform's safety efforts, while a former employee testified the well-being team existed mainly to shield the company from lawsuits.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_34daf968-d047-5e06-b2e2-78a1a71cfcc2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/de/4de6439d-5323-5d56-abc5-8635e6868afc/6a8e1c003514b.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "‘We all love seasonal workers’",
-    source: "Telluride Times",
-    date: "August 25, 2026",
-    firstSeen: "2026-08-25",
-    newsTopic: "community",
-    copy: "A faith-based nonprofit called Beacon Telluride launched last fall to support seasonal workers — lift ops, servers, baristas — who face high costs and limited social options after long shifts. Programs include free meals, game nights, and an \"Adopt-a-Liftie\" program placing workers in local homes for dinner. Telski's lift operations manager says he's already telling job candidates about it.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_4f54b626-c38c-45eb-b7ef-105406305eeb.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/c7/2c7d8e61-c635-4c53-bd92-91965f17702e/6a8ccffbc4260.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride Town Council OKs flood hazard remapping",
-    source: "Telluride Times",
-    date: "August 25, 2026",
-    firstSeen: "2026-08-25",
-    newsTopic: "government",
-    copy: "Telluride's flood hazard map hasn't been updated since 1992, and Town Council unanimously directed staff to move forward on remapping it. The process is expected to take about two years and cost $225,000–$275,000. Some properties currently outside flood zones could end up inside them once the new map is done.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_7f5ed85c-f89d-4605-a632-00bb9593f3aa.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/10/91017025-43d4-455a-9565-9f6b7ee7ff57/6a8cd98e8710e.image.png",
     imgHiRes: true
   },
   {
@@ -2778,7 +2734,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Ridgway Rescinds Stage 2 Fire Restrictions, Reinstates Stage 1 Fire Restrictions effective 12:01am on Thursday, Sept. 3rd - Sept. 2, 2026",
     source: "Town of Ridgway",
-    date: "September 7, 2026",
+    date: "September 8, 2026",
     firstSeen: "2026-09-02",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2800,7 +2756,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Public Hearing Notice Wed., Sept. 16, 2026 at 5:30pm - 1) Site Plan and Conditional Use Permit for Riverbend Townhomes (TBD Liddell Dr.); 2) Plat Amendment of Lot 4 and Outlot of Riverview Business Park Subdivision (TBD Liddell Dr.); 3) PUD Amendment Lena Street Commons Planned Unit Development (TBD N. Lena Street) - Sept. 2, 2026",
     source: "Town of Ridgway",
-    date: "September 7, 2026",
+    date: "September 8, 2026",
     firstSeen: "2026-09-02",
     newsTopic: "land-use",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2866,14 +2822,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "public-safety",
     copy: "San Miguel County Shifts to Stage 1 Fire Restrictions; Community Advocates for Worker Protections; Gaiascope Lights Up Mountain Village",
     href: "https://koto.org/news/newscast-8-26-26/"
-  },
-  {
-    title: "Newscast 8-24-26",
-    source: "KOTO Community Radio",
-    date: "August 25, 2026",
-    newsTopic: "community",
-    copy: "Region Considers Chamber of Commerce; Governments Talk Childcare",
-    href: "https://koto.org/news/newscast-8-24-26/"
   }
 ];
 
@@ -3853,6 +3801,50 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Spanish Happy Hour at La Cocina",
+    link: "https://koto.org/event/spanish-happy-hour-at-la-cocina/",
+    description: "Practice your Spanish skills with other Spanish speakers at La Cocina. The Library will provide appetizers, and the bar will be available for you to purchase a beverage of your choice. Registration is not required, but it helps us have an idea of how many people will be in attendance, and therefore how much food to order. All levels welcome!",
+    pubDate: "2026-09-15T17:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Zumba with Marlen",
+    link: "https://koto.org/event/zumba-with-marlen/",
+    description: "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. ¡Olvida el entrenamiento y únete a la fiesta! Zumba® es una clase de fitness de baile de alta energía que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calorías. …",
+    pubDate: "2026-09-15T17:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/zumba-marlen.png"
+  },
+  {
+    title: "Beans and Books at Coffee Cowboy",
+    link: "https://koto.org/event/beans-and-books-at-coffee-cowboy/",
+    description: "What better way to start out your day than by sipping on a hot cup of coffee while chatting with other bibliophiles about books? It's a chance to talk about whatever you have been reading (or listening to) and hear about what other folks have been reading (or listening to). Drop in anytime at the beautiful Coffee Cowboy General Store on the corner of Pacific and Willow the third Wednesday of every month!",
+    pubDate: "2026-09-16T08:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Coffee Cowboy General Store, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/beans-books-5.png"
+  },
+  {
+    title: "Tennis Clinic 3.0-4.0",
+    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-16/",
+    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-09-16T09:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
   }
 ];
@@ -5363,6 +5355,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/first-friday-art-walk",
     description: "Discover new work, celebrate openings, and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month, galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits, live music and special programming — perfect for art lovers and casual browsers alike. NEW! 🎨🛍️ Shop local. Win local. Celebrate local. 🎶🍷 New this summer, your First Friday stroll through Ridgway could score you a $100 gift card to your favorite local business. 👀 Follow the link for more details. First Friday Map & Offer Details View on site | Email this event",
     pubDate: "2026-10-02T23:00:00.000Z",
+    endDate: "2026-11-07",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5374,6 +5367,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/first-friday-at-rootwings-art-1540",
     description: "Rootwings Art will be open for Ridgway's First Friday Art Walk, featuring local ceramic sculptures and large vessels by artist Andy Nasisse, original oils by Emma Kalff, Bruce Backer's Ravens & Crows, Taos artist Fred Burns fantasy nudes and one of a kind jewelry and ceramics by Vanessa Backer. View on site | Email this event",
     pubDate: "2026-10-02T23:00:00.000Z",
+    endDate: "2026-11-07",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5673,6 +5667,28 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/53551962688679/huge/530cd950230f451d84a4795936d5b7a904b733f2.jpg"
+  },
+  {
+    title: "November - Art Opening: Film Stills-Ridgway Independent Film Fest",
+    link: "https://events.ourayridgwayevents.com/event/art-opening-film-stills-ridgway-independent-film-fest",
+    description: "Get a truly unique sneak preview of the upcoming film festival at this opening reception! The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In coordination with the annual Independent Film Festival (November 13-15) this show is both a preview and a celebration of the art of short filmmaking. View on site | Email this event",
+    pubDate: "2026-11-07T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53048304229484/huge/448e2d96ea605dd9b840c088158ffcfb1b9eebeb.jpg"
+  },
+  {
+    title: "Ongoing: Film Stills from the Ridgway Independent Film Fest",
+    link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-film-stills-ridgway-independent-film-fest",
+    description: "The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In coordination with the annual Independent Film Festival (November 13-15) this show is both a preview and a celebration of the art of short filmmaking. View on site | Email this event",
+    pubDate: "2026-11-07T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53048306784001/huge/b4907ccb0dd0b51c0bd862f76e556e669e3684c2.jpg"
   }
 ];
 
@@ -5834,17 +5850,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Sunday Rehab at Alloy Kitchen",
-    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
-    description: "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
-    pubDate: "2026-09-06T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
-  },
   {
     title: "Bike & Brewery Tour",
     link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
@@ -6460,18 +6465,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/58332/dsc01583lr--1-.800x533.webp"
-  },
-  {
-    title: "Alpine Chapel Outdoor Service",
-    link: "https://www.telluride.com/event/alpine-chapel-outdoor-service/",
-    description: "The Alpine Chapel will host an outdoor worship service at the Sunset Plaza Stage in Mountain Village at 9:30 a.m.",
-    pubDate: "2026-07-05",
-    endDate: "2026-09-06",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62860/img_4897.800x533.webp"
   },
   {
     title: "Community Concert",

@@ -1,18 +1,18 @@
 {
-  "hash": "a9038239aac62601a67a899532ea5db2fe1cad8c",
-  "lede": "The Gold Mountain Fire — nearly 40,000 acres burned northeast of Ouray, Highway 550 severed repeatedly, communities cut off — lands squarely on the agenda Wednesday when Ridgway Town Council meets to ratify its backing of a federal Major Disaster Declaration. Also Wednesday, the San Miguel County BOCC holds a special meeting to consider a resolution adjusting AMI limits on deed-restricted properties at Pinion Park, which is the kind of technical-sounding item that actually determines who qualifies for affordable housing. Thursday, the County Planning Commission takes up three Land Use Code amendments covering forestry, oil and gas, and geothermal energy.",
+  "hash": "92cc050360744fec2182864965a2da1400f9abbb",
+  "lede": "The Gold Mountain Fire — nearly 40,000 acres burned northeast of Ouray, Highway 550 cut off repeatedly — is front and center at the Ridgway Town Council meeting Wednesday, where the council will ratify a letter backing a federal Major Disaster Declaration. That same day, the San Miguel County BOCC holds a special meeting to consider Resolution 2026-34, which would adjust Area Median Income limits on deed-restricted properties in Pinion Park — a small technical change with real consequences for who actually qualifies for local housing. Thursday, the County Planning Commission takes up three Land Use Code amendments covering forestry, oil and gas, and geothermal energy.",
   "notable": [
     {
       "id": 4,
-      "stake": "Council ratifies disaster declaration support for Gold Mountain Fire recovery."
+      "stake": "Council ratifies Major Disaster Declaration support for Gold Mountain Fire communities."
     },
     {
       "id": 6,
-      "stake": "AMI threshold change on deed-restricted Pinion Park units affects who qualifies."
+      "stake": "AMI limit change on deed-restricted Pinion Park units affects who qualifies for local housing."
     },
     {
       "id": 8,
-      "stake": "Three Land Use Code amendments — forestry, oil/gas, geothermal — up for recommendation."
+      "stake": "Planning Commission votes on Land Use Code amendments for forestry, oil/gas, and geothermal."
     }
   ]
 }

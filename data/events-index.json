@@ -1474,6 +1474,32 @@
     "type": "Music"
   },
   {
+    "title": "Spanish Happy Hour at La Cocina",
+    "href": "https://koto.org/event/spanish-happy-hour-at-la-cocina/",
+    "date": "2026-09-15",
+    "time": "5:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-3.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Practice your Spanish skills with other Spanish speakers at La Cocina. The Library will provide appetizers, and the bar will be available for you to purchase a beverage of your choice. Registration is not required, but it helps us have an…",
+    "type": "Talks & Classes"
+  },
+  {
+    "title": "Zumba with Marlen",
+    "href": "https://koto.org/event/zumba-with-marlen/",
+    "date": "2026-09-15",
+    "time": "5:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/zumba-marlen.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa,…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Ridgway FUSE Creative Main Street - Committee Meeting",
     "href": "https://events.ourayridgwayevents.com/event/ridgway-fuse-creative-main-street-committee-meeting",
     "date": "2026-09-15",
@@ -1644,6 +1670,32 @@
     "source": "Telluride Rotary",
     "desc": "Telluride Rotary Club meets the 1st & 3rd Wednesdays at 6:00 PM (gathering at 5:30) — 1st Wednesday at Mountain Lodge in Mountain Village, 3rd Wednesday at an announced Telluride location. A service club supporting scholarships, Youth…",
     "type": "Family & Kids"
+  },
+  {
+    "title": "Beans and Books at Coffee Cowboy",
+    "href": "https://koto.org/event/beans-and-books-at-coffee-cowboy/",
+    "date": "2026-09-16",
+    "time": "8:30 AM",
+    "location": "Coffee Cowboy General Store, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/beans-books-5.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "What better way to start out your day than by sipping on a hot cup of coffee while chatting with other bibliophiles about books? It's a chance to talk about whatever you have been reading (or listening to) and hear about what other folks…",
+    "type": "Talks & Classes"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-16/",
+    "date": "2026-09-16",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "The Sherbino Presents: \"Out There, a National Park Story\" film celebrating the National Park Service's 110th birthday",
@@ -2773,7 +2825,8 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Discover new work, celebrate openings, and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month, galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits, live music and…",
-    "type": "Arts & Film"
+    "type": "Arts & Film",
+    "endDate": "2026-11-07"
   },
   {
     "title": "First Friday at Rootwings Art at Rootwings Art",
@@ -2786,7 +2839,8 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Rootwings Art will be open for Ridgway's First Friday Art Walk, featuring local ceramic sculptures and large vessels by artist Andy Nasisse, original oils by Emma Kalff, Bruce Backer's Ravens & Crows, Taos artist Fred Burns fantasy nudes…",
-    "type": "Arts & Film"
+    "type": "Arts & Film",
+    "endDate": "2026-11-07"
   },
   {
     "title": "October - Art Opening: Space Cowboy by Dundee & Lee - special reading by Poet Laureate Crisosto Apache",
@@ -3422,5 +3476,31 @@
     "source": "Telluride Rotary",
     "desc": "Telluride Rotary Club meets the 1st & 3rd Wednesdays at 6:00 PM (gathering at 5:30) — 1st Wednesday at Mountain Lodge in Mountain Village, 3rd Wednesday at an announced Telluride location. A service club supporting scholarships, Youth…",
     "type": "Family & Kids"
+  },
+  {
+    "title": "November - Art Opening: Film Stills-Ridgway Independent Film Fest",
+    "href": "https://events.ourayridgwayevents.com/event/art-opening-film-stills-ridgway-independent-film-fest",
+    "date": "2026-11-06",
+    "time": "5:00 PM",
+    "location": "Decker Community Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53048304229484/huge/448e2d96ea605dd9b840c088158ffcfb1b9eebeb.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Get a truly unique sneak preview of the upcoming film festival at this opening reception! The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives…",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Ongoing: Film Stills from the Ridgway Independent Film Fest",
+    "href": "https://events.ourayridgwayevents.com/event/copy-of-art-opening-film-stills-ridgway-independent-film-fest",
+    "date": "2026-11-06",
+    "time": "5:00 PM",
+    "location": "Decker Community Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53048306784001/huge/b4907ccb0dd0b51c0bd862f76e556e669e3684c2.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In…",
+    "type": "Arts & Film"
   }
 ]

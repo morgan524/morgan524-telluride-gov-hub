@@ -530,5 +530,10 @@
   "county|2026-10-07|Board of County Commissioners Meeting": {
     "sv": 4,
     "ph": "49e704e3c3bab858"
+  },
+  "telluride|2026-10-08|Special Meeting - Planning & Zoning Commission - Oct 08 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8311",
+    "sv": 4,
+    "ph": "8fb47750538763cf"
   }
 }
