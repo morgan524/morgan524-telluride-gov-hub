@@ -354,10 +354,10 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-09-22|Telluride Housing Authority - Sep 22 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303","sv":4,"ph":"d6200257aab6f8b7"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303","sv":4,"ph":"e1e1bf39ad17a096"},
 
   "telluride|2026-09-22|Town Council - Sep 22 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043","sv":4,"ph":"0c2ea006f5fde3ee"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043","sv":4,"ph":"c5b14e4bfd86db54"},
 
   "county|2026-09-23|Board of County Commissioners Work Session":
     {"sv":4,"ph":"307e0c7b19e4ff5b"},
@@ -411,7 +411,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"1f577e951aaf55d2"},
 
   "county|2026-09-09|Board of County Commissioners Special Meeting":
-    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/857/files/agenda/1986","zoomUrl":"https://us02web.zoom.us/meeting/register/Jxg2WRQ2SEKGwI4gi2zyAg","meetingId":"867 2008 8025","passcode":"755642","phone":"719-359-4580"},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/857/files/agenda/1988","zoomUrl":"https://us02web.zoom.us/meeting/register/Jxg2WRQ2SEKGwI4gi2zyAg","meetingId":"867 2008 8025","passcode":"755642","phone":"719-359-4580"},
 
   "ouray|2026-09-16|, 1-4:00 PM (@ OURAY COURTHOUSE!) - The PC will hold 2 public hearings; Curry Regular PUD, and an Exemption application from Clifford Pastor to subdivide his parcel into 2 lots. (Packet materials are under media TV icon)":
     {"agendaUrl":"https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1017","sv":4},
@@ -444,7 +444,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8311","sv":4,"ph":"8fb47750538763cf"},
 
   "county|2026-10-08|Planning Commission Meeting":
-    {"sv":4,"ph":"b7c74705fcca6b2f"}
+    {"sv":4,"ph":"b7c74705fcca6b2f"},
+
+  "telluride|2026-09-10|San Miguel Authority for Regional Transportation - Sep 10 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8314","zoomUrl":"https://us02web.zoom.us/j/89045288089?pwd=b1Gfa5STKy8Wstoqdc8oBxCCs1s6pg.1","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -818,7 +821,10 @@ const MEETING_PREVIEWS = {
     "The Planning & Zoning Commission is expected to discuss the Colorado Wildfire Resiliency Code amendment to Telluride's Land Use Code (Ordinance #1640), passed by Town Council on August 11, 2026, which amended Chapter 18 of the Municipal Code to implement wildfire resiliency standards.",
 
   "county|2026-10-08|Planning Commission Meeting":
-    "The Planning Commission is expected to review land use and development matters relevant to San Miguel County. Related notices suggest ongoing county procurement activity, including trail construction, facility improvements, and hazard mitigation planning, which may inform planning discussions."
+    "The Planning Commission is expected to review land use and development matters relevant to San Miguel County. Related notices suggest ongoing county procurement activity, including trail construction, facility improvements, and hazard mitigation planning, which may inform planning discussions.",
+
+  "telluride|2026-09-10|San Miguel Authority for Regional Transportation - Sep 10 2026":
+    "Board will consider approving FY25 audit financials, selecting PFM Asset Management for investment advisory services, and discussing FY27 budget development. A gondola project update and September operations report are also on the agenda. The meeting concludes with an executive session to discuss personnel matters."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1079,7 +1085,7 @@ const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
 const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-08';
-const LEGAL_NOTICES_CACHE_DATE = '2026-09-07';
+const LEGAL_NOTICES_CACHE_DATE = '2026-09-08';
 
 const MANUAL_SUMMARIES = {
   "telluride|2026-08-10|Intergovernmental Worksession - Aug 10 2026":
@@ -1380,7 +1386,10 @@ const MANUAL_SUMMARIES = {
     "The October 8, 2026 Special Meeting - Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "county|2026-10-08|Planning Commission Meeting":
-    "The October 8, 2026 Planning Commission agenda hasn't been posted yet."
+    "The October 8, 2026 Planning Commission agenda hasn't been posted yet.",
+
+  "telluride|2026-09-10|San Miguel Authority for Regional Transportation - Sep 10 2026":
+    "SMART's board meets virtually on September 10th with a full slate of financial and operational business. The board will act on the FY25 audit report and accept those financials — a routine but consequential step in closing out a fiscal year. More forward-looking: the board votes on hiring PFM Asset Management as SMART's investment advisor and entering the CSIP investment pool, which determines how the authority manages what is now a significant revenue stream. FY27 budget development goes to discussion, an early but important moment given the scale of spending the gondola program has put in motion. The gondola project itself gets a verbal update — the one item everyone in the valley is watching. September operations round out the agenda, along with an executive session on personnel matters."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2080,6 +2089,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "John Steven Whetsell, a Telluride resident who co-founded Potomac Custom Builders with his wife Denise, passed away August 19, 2026, at age 74. He spent decades in banking and home building, and was known locally for his integrity, curiosity, and quiet generosity. He is survived by his wife, son Alexander of Telluride, and daughter Sarah of Austin.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/obituaries/article_6abe7f57-f780-4a3d-8234-3e1118580b56.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Legals and Public Notices for September 3-9, 2026",
+    source: "Telluride Times",
+    date: "September 3, 2026",
+    firstSeen: "2026-09-08",
+    newsTopic: "community",
+    copy: "TOWN OF MOUNTAIN VILLAGE",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     imgHiRes: true
   },
@@ -3343,28 +3364,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "RESCHEDULED: Birding Walk with Katie Triest",
-    link: "https://koto.org/event/birding-walk-with-katie-triest/",
-    description: "Join ornithological expert Katie Triest for this series of chill walks where you'll learn amazing facts and practice identifying local birds! Meet at the post office and we'll head to the beaver ponds at the edge of Town Park. Bring your own binoculars if you have them and make sure to dress for variant weather. Be on time, and PLEASE cancel your reservation if you are unable to make it. This event is very popular and the waiting list is long.",
-    pubDate: "2026-09-08T08:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Post Office",
-    imageUrl: ""
-  },
-  {
-    title: "West End Trail Running",
-    link: "https://koto.org/event/west-end-trail-running/2026-09-08/",
-    description: "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens & adults 15 and older are welcome to participate. Contact director Alicia O'Connel at montrosewestrec@gmail.com or text her at 302-690-0160 for more information, including a nominal registration fee.",
-    pubDate: "2026-09-08T08:15:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
     title: "Tennis Clinic 3.0-4.0",
     link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-08/",
     description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
@@ -4440,6 +4439,17 @@ const TELLURIDE_FOUNDATION_EVENTS = [
 ];
 
 const OURAY_COUNTY_EVENTS = [
+  {
+    title: "Ouray County MAC Group Meeting",
+    link: "https://ouraycountyco.gov/Calendar.aspx?EID=2379",
+    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=2379",
+    pubDate: "2026-10-08T14:00:00.000Z",
+    source: "ouraycounty",
+    sourceLabel: "Ouray County",
+    category: "Community Event",
+    location: "4-H Event Center - 22739 Highway 550 Ridgway CO 81432",
+    imageUrl: ""
+  },
   {
     title: "Imogene Pass Run",
     link: "https://ouraycountyco.gov/Calendar.aspx?EID=3779",
@@ -5771,17 +5781,6 @@ const OURAY_RIDGWAY_EVENTS = [
 ];
 
 const NORWOOD_EVENTS = [
-  {
-    title: "NWC Work Session",
-    link: "https://www.norwoodtown.com/2026-09-01-nwc-work-session",
-    description: "",
-    pubDate: "2026-09-01T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Government Meeting",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
   {
     title: "Municipal Court",
     link: "https://www.norwoodtown.com/2026-09-02-municipal-court",
@@ -7244,25 +7243,6 @@ const LEGAL_NOTICES = [
     smcBidID: "209"
   },
   {
-    title: "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominiums (Sale No. 202605)",
-    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "The San Miguel County Public Trustee has scheduled a public foreclosure auction for Condominium Unit 7 at Double Diamond Condominium, 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor is Ryan Pfaff; the current debt holder is Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust, with an outstanding principal balance of approximately $1,199,032.37 on a deed of trust dated May 23, 2022. The public auction will be held at 10:00 A.M. on September 3, 2026, at 305 W. Colorado Avenue, East entry, Telluride, CO.",
-    deadline: "2026-09-03",
-    expires: "2026-09-03",
-    dates: "8/13",
-    papers: ["ttimes_0813"],
-    url: "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
-    address: "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
-    noticeKey: "foreclosure-sale-202605",
-    caseNumber: "202605"
-  },
-  {
     title: "Request for Proposal -- 2028 Multi-Jurisdictional All-Hazard Mitigation Plan Update",
     entity: "San Miguel County",
     entityClass: "ent-county",
@@ -7278,6 +7258,96 @@ const LEGAL_NOTICES = [
     url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=210",
     address: "",
     smcBidID: "210"
+  },
+  {
+    title: "Ordinance -- Amending Chapter 2.18 Municipal Code re: Public Art Commission (COL-000226)",
+    entity: "Town of Mountain Village",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "The Town of Mountain Village Town Council passed on first reading an ordinance amending Chapter 2.18 of the Municipal Code regarding the Public Art Commission at its August 20, 2026 meeting. The second reading, public hearing, and final vote are scheduled for September 17, 2026, at 2:00 p.m. at Mountain Village Town Hall and via Zoom. The ordinance is available for review at the Town Clerk's office at 455 Mountain Village Blvd, Suite A, or on the town website.",
+    deadline: "2026-09-17",
+    expires: "2026-09-17",
+    dates: "9/3",
+    papers: ["ttimes_0903"],
+    url: "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
+    address: "455 Mountain Village Blvd, Suite A, Mountain Village, CO",
+    noticeKey: "ord-ch218-public-art-commission-2026"
+  },
+  {
+    title: "Utility Notice -- Paper Billing Fee Effective October 29, 2026 (COL-000225)",
+    entity: "San Miguel Power Association (SMPA)",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "💧",
+    iconClass: "type-hearing",
+    type: "Utilities",
+    filterTag: "utilities",
+    summary: "The Board of Directors of San Miguel Power Association (SMPA) has approved a $2.00 monthly Paper Billing Fee for members who choose to receive printed billing statements, effective for all paper bills generated on or after October 29, 2026. Members enrolled in paperless billing through SmartHub will not be charged the fee. Members can avoid the fee at any time by switching to paperless billing via the SmartHub online portal or mobile app.",
+    deadline: "2026-10-29",
+    expires: "2026-10-29",
+    dates: "9/3",
+    papers: ["ttimes_0903"],
+    url: "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
+    address: "San Miguel County, CO (SMPA service area)",
+    noticeKey: "smpa-paper-billing-fee-2026"
+  },
+  {
+    title: "RFP -- San Miguel County Jail Repainting, Illium (COL-000224)",
+    entity: "San Miguel County",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "San Miguel County is requesting proposals from contractors to repaint the San Miguel County Jail located at 684 County Road 63L in Illium (Telluride), CO. RFP documents are available on the county's bids webpage or from the Fleet & Facilities Department at 333 W. Colorado Ave, 2nd Floor, Telluride. Proposals must be submitted by 5:00 PM on Friday, September 18, 2026, either via email or in person at the Fleet & Facilities Department.",
+    deadline: "2026-09-18",
+    expires: "2026-09-18",
+    dates: "9/3",
+    papers: ["ttimes_0903"],
+    url: "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
+    address: "684 County Road 63L, Telluride (Illium), CO 81435",
+    noticeKey: "rfp-smco-jail-repaint-2026"
+  },
+  {
+    title: "Public Hearing -- Shandoka Lot Redevelopment Preliminary PUD, Telluride Planning & Zoning (COL-000227)",
+    entity: "Town of Telluride / Design Workshop",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "The Town of Telluride Planning and Zoning Commission will hold a public hearing on September 24, 2026, at 5:30 p.m. (hybrid/Zoom) to consider a Preliminary Planned Unit Development (PUD) application for the Shandoka Lot Redevelopment Project at 860 Black Bear Rd. The application, submitted by Design Workshop on behalf of the Town of Telluride (property owner), seeks to increase certain dimensional limitations and provide public benefits on town property pursuant to LUC 6-309.F. The property is Lot L Backman Village (4.07 acres) in the Accommodations 2 zone district.",
+    deadline: "2026-09-24",
+    expires: "2026-09-24",
+    dates: "9/3",
+    papers: ["ttimes_0903"],
+    url: "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
+    address: "860 Black Bear Rd (Shandoka Lot), Telluride, CO",
+    noticeKey: "pz-shandoka-lot-pud-2026"
+  },
+  {
+    title: "Ordinance -- Adoption of Colorado Low Energy and Carbon Code, Ophir (Ordinance #2026-06) (COL-000228)",
+    entity: "Town of Ophir",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "The Town of Ophir General Assembly will hold a public hearing on September 15, 2026, at 7:00 PM at Ophir Town Hall, 36 Porphyry Street, to consider Ordinance #2026-06 on second reading, which proposes adoption of the Colorado Low Energy and Carbon Code (LECC). The applicant is the Town of Ophir. More complete information is available at Ophir Town Hall.",
+    deadline: "2026-09-15",
+    expires: "2026-09-15",
+    dates: "9/3",
+    papers: ["ttimes_0903"],
+    url: "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
+    address: "36 Porphyry Street, Ophir, CO 81426",
+    noticeKey: "ord-2026-06-ophir-lecc"
   }
 ];
 

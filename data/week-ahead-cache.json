@@ -1,18 +1,22 @@
 {
-  "hash": "6a93d1aef0e8353591d52a9066f2a89b76245a80",
-  "lede": "The biggest item this week is the San Miguel County BOCC special meeting Wednesday, where the Housing Authority will consider Resolution 2026-34, a change to Area Median Income limits for deed-restricted properties at Pinion Park — the kind of technical adjustment that quietly determines who qualifies for affordable housing here. Also Wednesday, the County Planning Commission takes up three Land Use Code amendments covering forestry, oil and gas, and geothermal energy. Over in Ridgway, the Town Council meets Tuesday with fire-related business tied to the Gold Mountain Fire, which has scorched nearly 40,000 acres and repeatedly cut off Highway 550.",
+  "hash": "e03303ac582a74ff9589541d650f30846ab3a658",
+  "lede": "The biggest thing on the government calendar this week is the San Miguel County BOCC special meeting Wednesday, where commissioners will consider changing the AMI income limits on deed-restricted properties at Pinion Park — a move that could quietly shift who qualifies for local housing. Also Wednesday, the county Planning Commission takes up three proposed Land Use Code amendments covering forestry, oil and gas, and geothermal energy. Over in Ridgway, the town council meets Tuesday with the Gold Mountain Fire's aftermath squarely on the agenda.",
   "notable": [
     {
       "id": 4,
-      "stake": "Council ratifies disaster declaration support tied to 40,000-acre Gold Mountain Fire."
+      "stake": "Council ratifies disaster declaration support for Gold Mountain Fire-affected communities."
     },
     {
       "id": 6,
-      "stake": "AMI limit change for Pinion Park deed-restricted housing could shift who qualifies."
+      "stake": "AMI threshold change on deed-restricted Pinion Park homes could alter who qualifies."
     },
     {
       "id": 8,
-      "stake": "Planning Commission votes on three Land Use Code amendments before they reach the BOCC."
+      "stake": "Planning Commission votes on Land Use Code changes covering forestry, oil/gas, and geothermal."
+    },
+    {
+      "id": 11,
+      "stake": "SMART board votes on investment advisor hire and FY25 audit acceptance."
     }
   ]
 }

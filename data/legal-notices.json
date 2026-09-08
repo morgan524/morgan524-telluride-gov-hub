@@ -286,27 +286,6 @@
     "smcBidID": "209"
   },
   {
-    "title": "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominiums (Sale No. 202605)",
-    "entity": "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB",
-    "entityClass": "ent-county",
-    "entityLogo": "assessor",
-    "icon": "💰",
-    "iconClass": "type-tax",
-    "type": "Tax & Finance",
-    "filterTag": "tax-finance",
-    "summary": "The San Miguel County Public Trustee has scheduled a public foreclosure auction for Condominium Unit 7 at Double Diamond Condominium, 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor is Ryan Pfaff; the current debt holder is Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust, with an outstanding principal balance of approximately $1,199,032.37 on a deed of trust dated May 23, 2022. The public auction will be held at 10:00 A.M. on September 3, 2026, at 305 W. Colorado Avenue, East entry, Telluride, CO.",
-    "deadline": "2026-09-03",
-    "expires": "2026-09-03",
-    "dates": "8/13",
-    "papers": [
-      "ttimes_0813"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
-    "address": "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
-    "noticeKey": "foreclosure-sale-202605",
-    "caseNumber": "202605"
-  },
-  {
     "title": "Request for Proposal -- 2028 Multi-Jurisdictional All-Hazard Mitigation Plan Update",
     "entity": "San Miguel County",
     "entityClass": "ent-county",
@@ -322,5 +301,105 @@
     "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=210",
     "address": "",
     "smcBidID": "210"
+  },
+  {
+    "title": "Ordinance -- Amending Chapter 2.18 Municipal Code re: Public Art Commission (COL-000226)",
+    "entity": "Town of Mountain Village",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "📋",
+    "iconClass": "type-hearing",
+    "type": "Ordinance",
+    "filterTag": "ordinance",
+    "summary": "The Town of Mountain Village Town Council passed on first reading an ordinance amending Chapter 2.18 of the Municipal Code regarding the Public Art Commission at its August 20, 2026 meeting. The second reading, public hearing, and final vote are scheduled for September 17, 2026, at 2:00 p.m. at Mountain Village Town Hall and via Zoom. The ordinance is available for review at the Town Clerk's office at 455 Mountain Village Blvd, Suite A, or on the town website.",
+    "deadline": "2026-09-17",
+    "expires": "2026-09-17",
+    "dates": "9/3",
+    "papers": [
+      "ttimes_0903"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
+    "address": "455 Mountain Village Blvd, Suite A, Mountain Village, CO",
+    "noticeKey": "ord-ch218-public-art-commission-2026"
+  },
+  {
+    "title": "Utility Notice -- Paper Billing Fee Effective October 29, 2026 (COL-000225)",
+    "entity": "San Miguel Power Association (SMPA)",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "💧",
+    "iconClass": "type-hearing",
+    "type": "Utilities",
+    "filterTag": "utilities",
+    "summary": "The Board of Directors of San Miguel Power Association (SMPA) has approved a $2.00 monthly Paper Billing Fee for members who choose to receive printed billing statements, effective for all paper bills generated on or after October 29, 2026. Members enrolled in paperless billing through SmartHub will not be charged the fee. Members can avoid the fee at any time by switching to paperless billing via the SmartHub online portal or mobile app.",
+    "deadline": "2026-10-29",
+    "expires": "2026-10-29",
+    "dates": "9/3",
+    "papers": [
+      "ttimes_0903"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
+    "address": "San Miguel County, CO (SMPA service area)",
+    "noticeKey": "smpa-paper-billing-fee-2026"
+  },
+  {
+    "title": "RFP -- San Miguel County Jail Repainting, Illium (COL-000224)",
+    "entity": "San Miguel County",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County is requesting proposals from contractors to repaint the San Miguel County Jail located at 684 County Road 63L in Illium (Telluride), CO. RFP documents are available on the county's bids webpage or from the Fleet & Facilities Department at 333 W. Colorado Ave, 2nd Floor, Telluride. Proposals must be submitted by 5:00 PM on Friday, September 18, 2026, either via email or in person at the Fleet & Facilities Department.",
+    "deadline": "2026-09-18",
+    "expires": "2026-09-18",
+    "dates": "9/3",
+    "papers": [
+      "ttimes_0903"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
+    "address": "684 County Road 63L, Telluride (Illium), CO 81435",
+    "noticeKey": "rfp-smco-jail-repaint-2026"
+  },
+  {
+    "title": "Public Hearing -- Shandoka Lot Redevelopment Preliminary PUD, Telluride Planning & Zoning (COL-000227)",
+    "entity": "Town of Telluride / Design Workshop",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "The Town of Telluride Planning and Zoning Commission will hold a public hearing on September 24, 2026, at 5:30 p.m. (hybrid/Zoom) to consider a Preliminary Planned Unit Development (PUD) application for the Shandoka Lot Redevelopment Project at 860 Black Bear Rd. The application, submitted by Design Workshop on behalf of the Town of Telluride (property owner), seeks to increase certain dimensional limitations and provide public benefits on town property pursuant to LUC 6-309.F. The property is Lot L Backman Village (4.07 acres) in the Accommodations 2 zone district.",
+    "deadline": "2026-09-24",
+    "expires": "2026-09-24",
+    "dates": "9/3",
+    "papers": [
+      "ttimes_0903"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
+    "address": "860 Black Bear Rd (Shandoka Lot), Telluride, CO",
+    "noticeKey": "pz-shandoka-lot-pud-2026"
+  },
+  {
+    "title": "Ordinance -- Adoption of Colorado Low Energy and Carbon Code, Ophir (Ordinance #2026-06) (COL-000228)",
+    "entity": "Town of Ophir",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "📋",
+    "iconClass": "type-hearing",
+    "type": "Ordinance",
+    "filterTag": "ordinance",
+    "summary": "The Town of Ophir General Assembly will hold a public hearing on September 15, 2026, at 7:00 PM at Ophir Town Hall, 36 Porphyry Street, to consider Ordinance #2026-06 on second reading, which proposes adoption of the Colorado Low Energy and Carbon Code (LECC). The applicant is the Town of Ophir. More complete information is available at Ophir Town Hall.",
+    "deadline": "2026-09-15",
+    "expires": "2026-09-15",
+    "dates": "9/3",
+    "papers": [
+      "ttimes_0903"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
+    "address": "36 Porphyry Street, Ophir, CO 81426",
+    "noticeKey": "ord-2026-06-ophir-lecc"
   }
 ]

@@ -662,15 +662,6 @@ const NORWOOD_CACHE_DATE = '2026-09-08';
 
 const NORWOOD_CACHED_DATA = [
   {
-    date: "September 1, 2026",
-    time: null,
-    title: "NWC Work Session",
-    agendaUrl: "https://www.norwoodtown.com/files/3e106c50e/09.01.2026+NWC+WORK+SESSION.pdf",
-    packetUrl: null,
-    special: false,
-    board: "nwc"
-  },
-  {
     date: "September 8, 2026",
     time: null,
     title: "NWC Rescheduled to 09/22/2026",

@@ -100,6 +100,26 @@
     "hook": ""
   },
   {
+    "source": "telluride",
+    "sourceLabel": "Town of Telluride",
+    "title": "(Rescheduled to Oct 13th) Town Council Budget",
+    "date": "2026-09-10",
+    "time": "",
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052",
+    "packetUrl": "",
+    "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052",
+    "hasAgenda": true,
+    "summary": "This September 10 budget session has been rescheduled to October 13th. No agenda has been posted yet.",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams",
+    "commentEmail": "townclerk@telluride.gov",
+    "hook": ""
+  },
+  {
     "source": "county",
     "sourceLabel": "San Miguel County",
     "title": "Planning Commission Meeting",
@@ -137,26 +157,6 @@
     "zoomPhone": "",
     "livestream": "",
     "commentEmail": "",
-    "hook": ""
-  },
-  {
-    "source": "telluride",
-    "sourceLabel": "Town of Telluride",
-    "title": "to Oct 13th) Town Council Budget",
-    "date": "2026-09-10",
-    "time": "",
-    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052",
-    "packetUrl": "",
-    "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052",
-    "hasAgenda": true,
-    "summary": "This September 10 budget session has been rescheduled to October 13th. No agenda has been posted yet.",
-    "zoomLink": "",
-    "zoomMeetingId": "",
-    "zoomPasscode": "",
-    "zoomPhone": "",
-    "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams",
-    "commentEmail": "townclerk@telluride.gov",
     "hook": ""
   },
   {

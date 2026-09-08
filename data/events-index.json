@@ -278,19 +278,6 @@
     "endDate": "2026-09-12"
   },
   {
-    "title": "RESCHEDULED: Birding Walk with Katie Triest",
-    "href": "https://koto.org/event/birding-walk-with-katie-triest/",
-    "date": "2026-09-08",
-    "time": "8:00 AM",
-    "location": "Telluride Post Office",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-10.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join ornithological expert Katie Triest for this series of chill walks where you'll learn amazing facts and practice identifying local birds! Meet at the post office and we'll head to the beaver ponds at the edge of Town Park. Bring your…",
-    "type": "Community"
-  },
-  {
     "title": "Birding Walk with Katie Triest",
     "href": "https://telluridelibrary.libcal.com/event/16991385?hs=a",
     "date": "2026-09-08",
@@ -302,19 +289,6 @@
     "source": "Wilkinson Public Library",
     "desc": "8:00 AM – 10:00 AM · Join ornithological expert Katie Triest for this series of chill walks where you ll learn amazing facts and practice identifying local birds! Meet at the post office and we ll head to the beaver ponds at the edge of…",
     "type": "Community"
-  },
-  {
-    "title": "West End Trail Running",
-    "href": "https://koto.org/event/west-end-trail-running/2026-09-08/",
-    "date": "2026-09-08",
-    "time": "8:15 AM",
-    "location": "",
-    "town": "",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/hiking.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens &…",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "Tennis Clinic 3.0-4.0",
@@ -3251,6 +3225,19 @@
     "source": "Beacon",
     "desc": "Thursday night Pickleball with no experience necessary. All supplies provided.",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Ouray County MAC Group Meeting",
+    "href": "https://ouraycountyco.gov/Calendar.aspx?EID=2379",
+    "date": "2026-10-08",
+    "time": "8:00 AM",
+    "location": "4-H Event Center - 22739 Highway 550 Ridgway CO 81432",
+    "town": "Ridgway",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "Ouray County",
+    "desc": "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=2379",
+    "type": "Community"
   },
   {
     "title": "WOWZERS",
