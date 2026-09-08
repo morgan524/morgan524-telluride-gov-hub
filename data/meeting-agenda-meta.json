@@ -437,7 +437,10 @@
   },
   "county|2026-09-15|Housing Code Update SSR": {
     "sv": 4,
-    "ph": "0b96eaea9b0b51f7"
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1069/files/agenda/1990",
+    "zoomUrl": "https://us06web.zoom.us/j/88053660816?pwd=n7qJTXvayoEO5RY4eo8koGmh4nHHai.1",
+    "meetingId": "880 5366 0816",
+    "passcode": "616389"
   },
   "ouray|2026-09-02|PM - Note: Virtual/Zoom meeting only!  The Planning Commission will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (packet materials are attached to the agenda)": {
     "agendaUrl": "https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1016",
@@ -501,7 +504,7 @@
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132",
     "sv": 4,
-    "ph": "9d8dff37eec1599d"
+    "ph": "681ef775e57db365"
   },
   "telluride|2026-10-06|Town Council - Oct 06 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044",

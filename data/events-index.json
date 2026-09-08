@@ -173,6 +173,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "TACO TUESDAY + COREY HOOKER LIVE",
+    "href": "https://events.ourayridgwayevents.com/event/taco-tuesday-corey-hooker-live",
+    "date": "2026-09-08",
+    "time": "5:00 PM",
+    "location": "The Adobe Inn",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53922057710760/huge/b3209a617c9bff0b6b938d99671354a9b36811c1.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "TACO TUESDAY + COREY HOOKER LIVE View on site | Email this event",
+    "type": "Community"
+  },
+  {
     "title": "Book Buzz at Telluride Brewing Co-Lawson Hill",
     "href": "https://koto.org/event/book-buzz-at-telluride-brewing-co-lawson-hill/",
     "date": "2026-09-08",
@@ -208,7 +221,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "A previously scheduled Norwood Town government meeting has been rescheduled to September 22, 2026. The rescheduled meeting will take place in Norwood, CO, and is organized by the Town of Norwood.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -276,6 +289,20 @@
     "source": "Wilkinson Public Library",
     "desc": "8:00 AM – 10:00 AM · Join ornithological expert Katie Triest for this series of chill walks where you ll learn amazing facts and practice identifying local birds! Meet at the post office and we ll head to the beaver ponds at the edge of…",
     "type": "Community"
+  },
+  {
+    "title": "Functional Fitness - Strength & Mobility Training For Women",
+    "href": "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
+    "date": "2026-09-08",
+    "time": "8:15 AM",
+    "location": "Weehawken Ridgway (Old Schoolhouse)",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53312790468311/huge/d76b2fb7534e91f8369b0dace133058cd22fa783.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Welcome to Ridgway's strength and mobility training + YOGA! Functional Strength & Mobility Training (for women): Tuesday & Thursday 8:15-9 am Vinyasa Yoga: Wednesday 8:15-9:15 am Functional means we focus on movements that mimic everyday…",
+    "type": "Talks & Classes",
+    "endDate": "2026-11-05"
   },
   {
     "title": "Monthly Welcome Home Alliance Veteran's Coffee at the Sherbino",
@@ -590,8 +617,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and district operations are welcome to attend.",
-    "type": "Arts & Film"
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Senior Lunch",
@@ -603,7 +630,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday meal gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -651,7 +678,7 @@
     "href": "https://events.ourayridgwayevents.com/event/ouray-comedy-night",
     "date": "2026-09-10",
     "time": "6:00 PM",
-    "location": "",
+    "location": "The Wright Opera House",
     "town": "Ouray",
     "img": "https://localist-images.azureedge.net/photos/53830617900756/huge/9b913f03ccb0050e92a935ee9d2a464f7fe5b853.jpg",
     "category": "Community Event",
@@ -685,6 +712,20 @@
     "source": "Telluride.com",
     "desc": "Genre-busting vocalist and songwriter Vana Liya made a serendipitous arrival on the music scene after she posted …",
     "type": "Music"
+  },
+  {
+    "title": "Jane Pope Jewelry Show",
+    "href": "https://www.telluride.com/event/jane-pope-jewelry-show/",
+    "date": "2026-09-10",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63534/jp_seventpointemeraldcut.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Jane Pope returns to Telluride for a solo jewelry show at Fringe Gallery. Visit them from Thursday, September 10th to …",
+    "type": "Arts & Film",
+    "endDate": "2026-09-13"
   },
   {
     "title": "Telluride Chamber Music and Telluride Science Community Concert",
@@ -853,7 +894,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/05/unnamed-file.jpg",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "The Meditations, the legendary Jamaican reggae vocal group, perform live at the historic Sheridan Opera House in Telluride. This concert brings their classic roots reggae harmonies to one of the region's most celebrated intimate venues.",
+    "desc": "",
     "type": "Wellness"
   },
   {
@@ -920,7 +961,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
     "category": "Community Event",
     "source": "Ouray County",
-    "desc": "The Imogene Pass Run is an annual footrace that takes competitors over the challenging Imogene Pass between Telluride and Ouray, traversing one of the most scenic and demanding mountain routes in the San Juan Mountains. The course climbs…",
+    "desc": "https://ouraycountyco.gov/calendar.aspx?EID=3779",
     "type": "Community"
   },
   {
@@ -1103,7 +1144,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/06/mv-calendar-la-familia.jpg",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "La Familia Music Group takes the stage at the historic Sheridan Opera House as part of the Telluride Theater Fringe Project. This performance brings together theater and live music in an intimate venue setting during the fall season.",
+    "desc": "",
     "type": "Arts & Film"
   },
   {
@@ -1260,7 +1301,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/03/logo-v4-4-web-2-final.png",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "A chamber music concert at the historic Sheridan Opera House in Telluride. The intimate venue provides a fitting backdrop for this acoustic ensemble performance in the classical tradition.",
+    "desc": "",
     "type": "Music"
   },
   {
@@ -1673,6 +1714,19 @@
     "type": "Family & Kids"
   },
   {
+    "title": "Kipori Woods — Fine Taste Tour Opening at St. Elmo",
+    "href": "https://events.ourayridgwayevents.com/event/kipori-woods-fine-taste-tour-opening-at-st-elmo",
+    "date": "2026-09-16",
+    "time": "7:00 PM",
+    "location": "St. Elmo Hotel & Tavern",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53913799593562/huge/d051c1ffbc39b75a1ea0d2ca7e0fd4481cabb8f0.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "New Orleans-raised guitarist, vocalist and songwriter Kipori Woods opens his Fine Taste Tour at the historic St. Elmo Hotel & Tavern in Ouray. Kipori brings expressive guitar work and a remarkable musical range crossing blues, jazz, soul,…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Beans and Books at Coffee Cowboy",
     "href": "https://koto.org/event/beans-and-books-at-coffee-cowboy/",
     "date": "2026-09-16",
@@ -1748,7 +1802,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1816,6 +1870,20 @@
     "source": "Telluride.com",
     "desc": "As Telluride settles into Blues & Brews weekend, gather around the table for an evening devoted to the art of craft …",
     "type": "Food & Drink"
+  },
+  {
+    "title": "Volunteer Trail Work Day",
+    "href": "https://www.telluride.com/event/volunteer-trail-work-day/",
+    "date": "2026-09-17",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63536/vol-trail-work--499x624.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Join the Telluride Mountain Club for their volunteer trail work day! Spend time with friends, get your hands dirty, and …",
+    "type": "Outdoors & Sports",
+    "endDate": "2026-10-11"
   },
   {
     "title": "Pickleball Nights",
@@ -2067,6 +2135,19 @@
     "source": "Mountain Village",
     "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
     "type": "Community"
+  },
+  {
+    "title": "Kipori Woods Live at Floating Lotus Brewery",
+    "href": "https://events.ourayridgwayevents.com/event/kipori-woods-live-at-floating-lotus-brewery",
+    "date": "2026-09-19",
+    "time": "6:00 PM",
+    "location": "Floating Lotus Brewery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53913854366205/huge/5098caf43f4189a9977ecc7eca3dca010a4284d5.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "New Orleans-raised guitarist, vocalist and songwriter Kipori Woods performs live at Floating Lotus Brewery in Ridgway. Kipori’s expressive guitar work and remarkable musical range cross blues, jazz, soul, country and Southern rock. This…",
+    "type": "Food & Drink"
   },
   {
     "title": "Crystal Festival - A Rock, Mineral, Gem, & Crystal Show",
@@ -2341,8 +2422,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
-    "type": "Food & Drink"
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Watercolor & Wine with Katey Fetch: \"Paint the Peaks\"",
@@ -2538,7 +2619,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -3466,6 +3547,19 @@
     "endDate": "2026-11-05"
   },
   {
+    "title": "Pumpkins & Flowers at The Adobe Inn with San Juan Blooms!",
+    "href": "https://events.ourayridgwayevents.com/event/pumpkins-flowers-at-the-adobe-inn-with-san-juan-blooms",
+    "date": "2026-10-22",
+    "time": "6:00 PM",
+    "location": "The Adobe Inn",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53853672137353/huge/8b0ef433dfa6ed38ee66e112e97c6806157e5e49.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "An evening of Pumpkins & Flowers at The Adobe Inn! Kick off fall with a little hands-on flower arranging. Join San Juan Blooms for our Pumpkins + Flowers Workshop, where you’ll sip a cocktail, enjoy delicious appetizers, and build your own…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "4th Annual Boo-Mont Halloween Ball",
     "href": "https://events.ourayridgwayevents.com/event/4th-annual-boo-mont-halloween-ball",
     "date": "2026-10-24",
@@ -3477,6 +3571,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Get ready for the 4th Annual Boo-Mont Halloween Ball at the historic Beaumont Hotel in Ouray, Colorado! Come dressed to impress, scare, or simply make a statement! The evening will feature a costume contest with prizes, a DJ, spooky drink…",
     "type": "Music"
+  },
+  {
+    "title": "Teen Takeover at Ouray Hot Springs Pool",
+    "href": "https://events.ourayridgwayevents.com/event/teen-takeover-at-ouray-hot-springs-pool",
+    "date": "2026-10-25",
+    "time": "5:00 PM",
+    "location": "Ouray Hot Springs",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53924398882536/huge/48f1c9ad32c649d8109fc1cbc9df1e222820a6ca.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Grab your friends and take over the Ouray Hot Springs Pool for an evening of swimming, games, food, music, and hanging out. Middle School Takeover | 5–6:45 PM High School Takeover | 7–9 PM FREE for Ouray Hot Springs Pool members $5 for…",
+    "type": "Food & Drink"
   },
   {
     "title": "Sherb Literary Living Room featuring Pam Houston with her new book: \"Animals Taught Me Everything\"",

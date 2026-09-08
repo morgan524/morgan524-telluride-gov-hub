@@ -384,7 +384,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8308","sv":4,"ph":"1ddd1637fea52e35"},
 
   "county|2026-09-15|Housing Code Update SSR":
-    {"sv":4,"ph":"0b96eaea9b0b51f7"},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1069/files/agenda/1990","zoomUrl":"https://us06web.zoom.us/j/88053660816?pwd=n7qJTXvayoEO5RY4eo8koGmh4nHHai.1","meetingId":"880 5366 0816","passcode":"616389"},
 
   "ouray|2026-09-02|PM - Note: Virtual/Zoom meeting only!  The Planning Commission will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (packet materials are attached to the agenda)":
     {"agendaUrl":"https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1016","sv":4},
@@ -420,7 +420,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://www.norwoodtown.com/files/5f8304a63/09.08.2026+RESCHEDULED+NWC+Agenda.pdf","zoomUrl":"https://us02web.zoom.us/j/88274908233","meetingId":"882 7490 8233","passcode":"997236","phone":"346-248-7799","sv":4},
 
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132","sv":4,"ph":"9d8dff37eec1599d"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132","sv":4,"ph":"681ef775e57db365"},
 
   "telluride|2026-10-06|Town Council - Oct 06 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044","sv":4,"ph":"861712471a1ec903"},
@@ -1052,16 +1052,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Attached is this week's Parish Bulletin. Please check our calendar for all updated information. This weekend:Saturday Vigil (Aug. 29) is a bilingual Holy Mass.Sunday (Aug. 30) 8:30 am pray the Rosary, 9 am Holy Mass. Immediately ...",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-august-30/",
     img: ""
-  },
-  {
-    title: "We’re Hiring- Bilingual Food Pantry and seNior Lunch Cook Assistant/ Estamos Contratando: Asistente Bilingüe del Banco de Alimentos y Asistente de Cocina del Almuerzo para Personas Mayores",
-    source: "Fresh Food Hub",
-    sourceKey: "fresh-food-hub",
-    date: "August 27, 2026",
-    newsTopic: "community",
-    copy: "We re hiring for two part-time positions: Bilingual Food Pantry Assistant — Sundays, 1:30–6:30 p.m. This role provides Spanish-English translation support for our Spanish-speaking clients during food pantry distribution. Senior Lunch Assistant — Thursdays, 8:30 a.m.–1:30 p.m. at Norwood Town Hall. T",
-    href: "https://freshfoodhub.net/were-hiring-bilingual-food-pantry-and-senior-lunch-cook-assistant-estamos-contratando-asistente-bilingue-del-banco-de-alimentos-y-asistente-de-cocina-del-almuerzo-para-personas-mayores/",
-    img: ""
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
@@ -1078,7 +1068,14 @@ const SMC_ALERTS = [
   }
 ];              // SMC AlertCenter items
 const ENGAGE_MEETINGS = [
-
+  {
+    projectName: "Shandoka Lot Redevelopment Project",
+    projectUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project",
+    title: "P&Z | Public Hearing Shandoka Lot Redevelopment Project – Preliminary PUD",
+    date: "2026-09-24",
+    board: "pz",
+    dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#42052"
+  }
 ];         // Engage Telluride project key dates
 const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-08';
 const LEGAL_NOTICES_CACHE_DATE = '2026-09-08';
@@ -1322,7 +1319,7 @@ const MANUAL_SUMMARIES = {
     "The September 23, 2026 Vending Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-09-15|Housing Code Update SSR":
-    "The agenda for this San Miguel County Housing Code Update SSR meeting hasn't been posted yet beyond the meeting title itself — no item details, staff reports, or supporting materials are available to summarize.",
+    "The Stakeholder Strategic Roundtable (SSR) working group convenes for its eighth session on the San Miguel County Housing Code Update — a Proposition 123-funded effort to strip out Land Use Code provisions that slow workforce and affordable housing production in unincorporated areas of the county. The two-hour working session zeroes in on the proposed Community Housing Zone, refining draft code recommendations that will eventually go to the BOCC and Planning Commission as formal redlines. Earlier sessions produced a handful of majority-consensus positions: allowing multiple ADUs on larger lots when the bonus unit is deed-restricted for workforce housing; reducing side setbacks to 10 feet in Medium and High Density zones; and preserving by-right density at 1 DU/35 acres while routing additional density exclusively through a workforce housing bonus track — with free-market development required to go through PUD. A range of other ideas, including RV/camper housing, parking reductions, and a TDR program, were set aside for now.",
 
   "ouray|2026-09-02|PM - Note: Virtual/Zoom meeting only!  The Planning Commission will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (packet materials are attached to the agenda)":
     "Ouray County's Planning Commission meets virtually on September 2 for a work session on possible changes to the Land Use Code, Section 2 — Definitions. Work sessions like this one are where the real shaping happens, before anything goes to a public hearing. The specific definition changes under discussion aren't detailed in the posted notice, but packet materials are attached to the agenda for anyone who wants to dig in ahead of the meeting.",
@@ -1755,6 +1752,30 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Ballots discounted for late postmarks surged in Washington and Oregon after Postal Service changes",
+    source: "Telluride Times",
+    date: "September 8, 2026",
+    firstSeen: "2026-09-08",
+    newsTopic: "government",
+    copy: "Postal Service consolidation changes are leading to more mail ballots being rejected for late postmarks in Washington and Oregon — thousands during this year's primaries alone. Rural areas are seeing some of the highest rejection rates. Officials are adding drop boxes and urging voters to mail ballots at least a week early or request a manual postmark at the post office.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_74fe784a-ca86-5f20-a621-23ea082650d4.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/40/340ce52b-bfb9-5c99-b9ac-bdffacb4c511/6aa09490ce94e.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Judge increases bond to $10M for Colorado man charged with killing his wife",
+    source: "Telluride Times",
+    date: "September 8, 2026",
+    firstSeen: "2026-09-08",
+    newsTopic: "government",
+    copy: "Barry Morphew, charged with killing his wife Suzanne — whose remains were found off a dirt road in southern Colorado in 2023 — had his bond raised to $10 million cash after he fled a Denver car crash following an airport pickup, raising flight risk concerns. He's been in and out of prosecution for six years and faces trial next summer.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_8cd9c589-c5ae-58cb-8424-a5ebf797d65c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/99/d99d62fe-515a-5896-bc8c-42932a0e5d33/6a9b482624f9a.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Former Colorado crime analyst gets 10-year prison sentence for manipulating DNA data",
     source: "Telluride Times",
     date: "September 8, 2026",
@@ -1764,6 +1785,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_ac6d3c1b-7c33-50eb-a730-0d430f84bfd4.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Sensational 6",
+    source: "Telluride Times",
+    date: "September 8, 2026",
+    firstSeen: "2026-09-08",
+    newsTopic: "community",
+    copy: "Telluride boys soccer rolled to a 6-0 home win over Bayfield on Sept. 5, with junior Henry Raible and senior Obi Clarke each scoring twice. The Miners move to 3-1 overall and host Delta on Thursday, Sept. 10, then Moffat County on Saturday the 12th at 11 a.m.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_d003c883-119f-40e1-ae46-459ed2dc976c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/53/2537c15d-e631-42f2-9a19-0c83ab66f02a/6aa0704349bc0.image.jpg",
     imgHiRes: true
   },
   {
@@ -2784,6 +2817,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "public-safety",
     copy: "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=65",
+    img: ""
+  },
+  {
+    title: "Town Manager's Report",
+    source: "Town of Ridgway",
+    date: "September 8, 2026",
+    firstSeen: "2026-09-08",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Manager%27s-Report---September-8%2C-2026.pdf",
     img: ""
   },
   {
@@ -4042,7 +4086,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "The Meditations Live in Concert",
     link: "https://sheridanoperahouse.com/events/the-meditations-live-in-concert/",
-    description: "The Meditations, the legendary Jamaican reggae vocal group, perform live at the historic Sheridan Opera House in Telluride. This concert brings their classic roots reggae harmonies to one of the region's most celebrated intimate venues.",
+    description: "",
     pubDate: "2026-09-11",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -4053,7 +4097,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Telluride Theater Fringe Project: La Familia Music Group",
     link: "https://sheridanoperahouse.com/events/telluride-theater-fringe-project-la-familia-music-group/",
-    description: "La Familia Music Group takes the stage at the historic Sheridan Opera House as part of the Telluride Theater Fringe Project. This performance brings together theater and live music in an intimate venue setting during the fall season.",
+    description: "",
     pubDate: "2026-09-12",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -4064,7 +4108,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Telluride Chamber Music",
     link: "https://sheridanoperahouse.com/events/telluride-chamber-music/",
-    description: "A chamber music concert at the historic Sheridan Opera House in Telluride. The intimate venue provides a fitting backdrop for this acoustic ensemble performance in the classical tradition.",
+    description: "",
     pubDate: "2026-09-13",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -4439,7 +4483,7 @@ const OURAY_COUNTY_EVENTS = [
   {
     title: "Imogene Pass Run",
     link: "https://ouraycountyco.gov/Calendar.aspx?EID=3779",
-    description: "The Imogene Pass Run is an annual footrace that takes competitors over the challenging Imogene Pass between Telluride and Ouray, traversing one of the most scenic and demanding mountain routes in the San Juan Mountains. The course climbs to an elevation of over 13,000 feet, making it a notable test of endurance for participants.",
+    description: "https://ouraycountyco.gov/calendar.aspx?EID=3779",
     pubDate: "2026-09-12T07:00:00.000Z",
     source: "ouraycounty",
     sourceLabel: "Ouray County",
@@ -4461,6 +4505,18 @@ const OURAY_COUNTY_EVENTS = [
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
+  {
+    title: "Functional Fitness - Strength & Mobility Training For Women",
+    link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
+    description: "Welcome to Ridgway's strength and mobility training + YOGA! Functional Strength & Mobility Training (for women): Tuesday & Thursday 8:15-9 am Vinyasa Yoga: Wednesday 8:15-9:15 am Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Class Structure: 5 minute warm up / 30 minute circuit workout / 10 minute cooldown stretch & mobility Vinyasa Yoga: This is a dynamic practice that will challenge, strengthen, and uplift you both physically and mentally. …",
+    pubDate: "2026-09-08T14:15:00.000Z",
+    endDate: "2026-11-05",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Ridgway (Old Schoolhouse)",
+    imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/d76b2fb7534e91f8369b0dace133058cd22fa783.jpg"
+  },
   {
     title: "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
     link: "https://events.ourayridgwayevents.com/event/monthly-welcome-home-alliance-veterans-coffee-the-sherbino",
@@ -4519,6 +4575,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "TACO TUESDAY + COREY HOOKER LIVE",
+    link: "https://events.ourayridgwayevents.com/event/taco-tuesday-corey-hooker-live",
+    description: "TACO TUESDAY + COREY HOOKER LIVE View on site | Email this event",
+    pubDate: "2026-09-08T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Adobe Inn",
+    imageUrl: "https://localist-images.azureedge.net/photos/53922057710760/huge/b3209a617c9bff0b6b938d99671354a9b36811c1.jpg"
   },
   {
     title: "Water Aerobics",
@@ -4645,7 +4712,7 @@ const OURAY_RIDGWAY_EVENTS = [
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
-    location: "",
+    location: "The Wright Opera House",
     imageUrl: "https://localist-images.azureedge.net/photos/53830617900756/huge/9b913f03ccb0050e92a935ee9d2a464f7fe5b853.jpg"
   },
   {
@@ -4955,6 +5022,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53551593926247/huge/02f3a13038681c325dd89c895e1675f9a2442f8f.jpg"
   },
   {
+    title: "Kipori Woods — Fine Taste Tour Opening at St. Elmo",
+    link: "https://events.ourayridgwayevents.com/event/kipori-woods-fine-taste-tour-opening-at-st-elmo",
+    description: "New Orleans-raised guitarist, vocalist and songwriter Kipori Woods opens his Fine Taste Tour at the historic St. Elmo Hotel & Tavern in Ouray. Kipori brings expressive guitar work and a remarkable musical range crossing blues, jazz, soul, country and Southern rock. Join him for an intimate patio performance filled with accomplished musicianship, genuine personality and the soul and flavor of New Orleans. Admission is free, and reservations are encouraged. View on site | Email this event",
+    pubDate: "2026-09-17T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "St. Elmo Hotel & Tavern",
+    imageUrl: "https://localist-images.azureedge.net/photos/53913799593562/huge/d051c1ffbc39b75a1ea0d2ca7e0fd4481cabb8f0.jpg"
+  },
+  {
     title: "Stillhouse Junkies: Live Music @ the Wright",
     link: "https://events.ourayridgwayevents.com/event/stillhouse-junkies-live-music-the-wright",
     description: "The Wright Opera House welcomes Stillhouse Junkies, the acclaimed Durango-based trio explore the worlds between roots, bluegrass, Texas swing, blues, and rock. Their free-flowing musical interplay and improvisation make every show unique as the trio weave through high-energy, intricately composed original songs, never taking the same path twice. Formed in 2017, the band consists of Fred Kosak (guitar, mandolin), Alissa Wolf (fiddle), and Jeanette Adams (bass). Part of programming at the Wright Opera House, bringing arts, conversation, and community to downtown Ouray since 1889. View on site | Email this event",
@@ -5111,6 +5189,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Colona Stockyard across from the church",
     imageUrl: "https://localist-images.azureedge.net/photos/53722349858154/huge/934ef243440a192b17a6d756428b9bac45537d94.jpg"
+  },
+  {
+    title: "Kipori Woods Live at Floating Lotus Brewery",
+    link: "https://events.ourayridgwayevents.com/event/kipori-woods-live-at-floating-lotus-brewery",
+    description: "New Orleans-raised guitarist, vocalist and songwriter Kipori Woods performs live at Floating Lotus Brewery in Ridgway. Kipori’s expressive guitar work and remarkable musical range cross blues, jazz, soul, country and Southern rock. This lively, audience-driven performance is built to get people on their feet and into the groove while carrying the musicianship, genuine personality and flavor of New Orleans into the room. The performance is planned for the Outdoor Stage, weather permitting, with an indoor alternative available. View on site | Email this event",
+    pubDate: "2026-09-20T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53913854366205/huge/5098caf43f4189a9977ecc7eca3dca010a4284d5.jpg"
   },
   {
     title: "BRITLEY & MATT",
@@ -5698,6 +5787,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53780725919104/huge/846566299e8e325221de54dd5a54a0fd6427fbf5.jpg"
   },
   {
+    title: "Pumpkins & Flowers at The Adobe Inn with San Juan Blooms!",
+    link: "https://events.ourayridgwayevents.com/event/pumpkins-flowers-at-the-adobe-inn-with-san-juan-blooms",
+    description: "An evening of Pumpkins & Flowers at The Adobe Inn! Kick off fall with a little hands-on flower arranging. Join San Juan Blooms for our Pumpkins + Flowers Workshop, where you’ll sip a cocktail, enjoy delicious appetizers, and build your own seasonal centerpiece using fresh autumn blooms and local pumpkins. Event Details When: Thursday, October 22, 2026 | 6:00 PM – 9:00 PM Where: The Adobe Inn - Ridgway, CO Tickets: $85 per person What’s Included: All supplies, fresh flowers, and prepped pumpkins Bites and appetizers throughout the evening One drink (cocktails, mocktails, beer, or wine) View on site | Email this event",
+    pubDate: "2026-10-23T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Adobe Inn",
+    imageUrl: "https://localist-images.azureedge.net/photos/53853672137353/huge/8b0ef433dfa6ed38ee66e112e97c6806157e5e49.jpg"
+  },
+  {
     title: "4th Annual Boo-Mont Halloween Ball",
     link: "https://events.ourayridgwayevents.com/event/4th-annual-boo-mont-halloween-ball",
     description: "Get ready for the 4th Annual Boo-Mont Halloween Ball at the historic Beaumont Hotel in Ouray, Colorado! Come dressed to impress, scare, or simply make a statement! The evening will feature a costume contest with prizes, a DJ, spooky drink specials, a cash bar, and delicious hors d'oeuvres. 🎭 Costume Contest 🎶 DJ 🍸 Cash Bar + Spooky Drink Specials 🥂 Hors d'oeuvres 👻 Halloween Fun All Night 🎟️ Tickets are on sale now! Tickets are limited, so don't wait to get yours. 18 and up only. Must show valid ID at the door. Get ready for a night of costumes, cocktails, music, and Halloween magic at the Beaumont. View on site | Email this event",
@@ -5707,6 +5807,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Beaumont Hotel & Spa",
     imageUrl: "https://localist-images.azureedge.net/photos/53860846025163/huge/937b6538c82ba8eff32aac54b7325895b4cde3f4.jpg"
+  },
+  {
+    title: "Teen Takeover at Ouray Hot Springs Pool",
+    link: "https://events.ourayridgwayevents.com/event/teen-takeover-at-ouray-hot-springs-pool",
+    description: "Grab your friends and take over the Ouray Hot Springs Pool for an evening of swimming, games, food, music, and hanging out. Middle School Takeover | 5–6:45 PM High School Takeover | 7–9 PM FREE for Ouray Hot Springs Pool members $5 for everyone else All participants must: Have a waiver signed by a parent/guardian Show a valid school ID at entry LOCAL BUSINESSES Some of our Local businesses are providing local discounts for parents so they can enjoy time together without the kids. The Tavern - 20% off Interested in being a business partner? Contact Zach Root | zroot@cityofouray.com View on site | Email this event",
+    pubDate: "2026-10-25T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Hot Springs",
+    imageUrl: "https://localist-images.azureedge.net/photos/53924398882536/huge/48f1c9ad32c649d8109fc1cbc9df1e222820a6ca.jpg"
   },
   {
     title: "Sherb Literary Living Room featuring Pam Houston with her new book: \"Animals Taught Me Everything\"",
@@ -5770,7 +5881,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Municipal Court",
     link: "https://www.norwoodtown.com/2026-09-02-municipal-court",
-    description: "Municipal Court is a regularly scheduled court session held by the Town of Norwood. It is an official local government proceeding open to those with business before the court.",
+    description: "",
     pubDate: "2026-09-02T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5781,7 +5892,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5792,7 +5903,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Rescheduled To 09 22 2026",
     link: "https://www.norwoodtown.com/2026-09-08-nwc-rescheduled-to-09-22-2026",
-    description: "A previously scheduled Norwood Town government meeting has been rescheduled to September 22, 2026. The rescheduled meeting will take place in Norwood, CO, and is organized by the Town of Norwood.",
+    description: "",
     pubDate: "2026-09-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5803,7 +5914,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-09-09-board-of-trustees-meeting",
-    description: "A regularly scheduled meeting of the Town of Norwood Board of Trustees, providing an opportunity for local governance and public business to be conducted. Community members are welcome to attend and observe the proceedings.",
+    description: "",
     pubDate: "2026-09-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5814,7 +5925,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-09-10-norwood-sanitation-district-meeting-meeting",
-    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and district operations are welcome to attend.",
+    description: "",
     pubDate: "2026-09-10T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5825,7 +5936,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-10-senior-lunch",
-    description: "A midday meal gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    description: "",
     pubDate: "2026-09-10T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5836,7 +5947,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-17-senior-lunch",
-    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    description: "",
     pubDate: "2026-09-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5847,7 +5958,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-09-21-planning-and-zoning-commission-meeting",
-    description: "The Town of Norwood's Planning and Zoning Commission will hold a regular meeting to review and discuss land use, development, and zoning matters within the community. Members of the public are welcome to attend and observe the proceedings.",
+    description: "",
     pubDate: "2026-09-21T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5858,7 +5969,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-24-senior-lunch",
-    description: "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
+    description: "",
     pubDate: "2026-09-24T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5869,7 +5980,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
+    description: "",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5880,7 +5991,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
+    description: "",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5891,7 +6002,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Veterans Day",
     link: "https://www.norwoodtown.com/2026-11-11-closed-for-veterans-day",
-    description: "The Town of Norwood will be closed in observance of Veterans Day. Municipal offices and services will be unavailable on this federal holiday honoring those who have served in the United States armed forces.",
+    description: "",
     pubDate: "2026-11-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5902,7 +6013,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Thanksgiving",
     link: "https://www.norwoodtown.com/2026-11-26-closed-for-thanksgiving",
-    description: "The Town of Norwood will be closed in observance of Thanksgiving Day. Municipal offices and services will be unavailable, with normal operations expected to resume following the holiday.",
+    description: "",
     pubDate: "2026-11-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6611,6 +6722,18 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/63475/screenshot_2026-09-02_at_12_39_17_pm.800x533.webp"
   },
   {
+    title: "Jane Pope Jewelry Show",
+    link: "https://www.telluride.com/event/jane-pope-jewelry-show/",
+    description: "Jane Pope returns to Telluride for a solo jewelry show at Fringe Gallery. Visit them from Thursday, September 10th to …",
+    pubDate: "2026-09-10",
+    endDate: "2026-09-13",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63534/jp_seventpointemeraldcut.800x533.webp"
+  },
+  {
     title: "Lone Tree Cemetery Tours",
     link: "https://www.telluride.com/event/lone-tree-cemetery-tours/",
     description: "Join the Telluride Historical Museum for Lone Tree Cemetery Tours this fall! This Telluride Historical Museum tour …",
@@ -6721,6 +6844,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/63525/blues_dinner.800x533.webp"
+  },
+  {
+    title: "Volunteer Trail Work Day",
+    link: "https://www.telluride.com/event/volunteer-trail-work-day/",
+    description: "Join the Telluride Mountain Club for their volunteer trail work day! Spend time with friends, get your hands dirty, and …",
+    pubDate: "2026-09-17",
+    endDate: "2026-10-11",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63536/vol-trail-work--499x624.800x533.webp"
   },
   {
     title: "Telluride Blues & Brews Festival",
@@ -7368,6 +7503,25 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
     address: "36 Porphyry Street, Ophir, CO 81426",
     noticeKey: "ord-2026-06-ophir-lecc"
+  },
+  {
+    title: "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominium (Foreclosure Sale No. 202605)",
+    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "Public Trustee Brandi R. Hatfield of San Miguel County has scheduled a public foreclosure auction for Condominium Unit 7 at Double Diamond Condominium, 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor is Ryan Pfaff; the current debt holder is Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust, with an outstanding principal balance of approximately $1,199,032.37. The auction will be held at 10:00 A.M. on September 3, 2026, at 305 W. Colorado Avenue (East entry), Telluride, CO.",
+    deadline: "2026-09-03",
+    expires: "2026-09-03",
+    dates: "8/13",
+    papers: ["ttimes_0813"],
+    url: "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
+    address: "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
+    noticeKey: "foreclosure-202605-double-diamond-unit7",
+    caseNumber: "202605"
   }
 ];
 
