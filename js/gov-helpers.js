@@ -8645,7 +8645,7 @@ function getTownAgendaLink(title, eventDate) {
 const TELLURIDE_BOARD_MEETINGS = [
   {
     date: "September 10, 2026",
-    title: "to Oct 13th) Town Council Budget",
+    title: "(Rescheduled to Oct 13th) Town Council Budget",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052",
     hasAgenda: false,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",

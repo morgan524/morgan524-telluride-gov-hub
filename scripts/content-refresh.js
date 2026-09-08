@@ -5813,7 +5813,14 @@ async function syncTellurideBoardMeetings() {
     const dateKey = `${months[d.getUTCMonth()]} ${d.getUTCDate()}, ${d.getUTCFullYear()}`;
     const title = name
       .replace(/\s*-\s*[A-Za-z]{3,9}\.?\s+\d{1,2}\s+\d{4}\s*$/, '')   // drop CivicWeb date suffix
-      .replace(/^\(?rescheduled\)?:?\s*/i, '')                        // "(RESCHEDULED) Parks & Rec…" — card shows the clean name; the date field is already the new date
+      // Strip a BARE "(RESCHEDULED)"/"RESCHEDULED:" tag — card shows the clean
+      // name, trusting the date field for the new date. Do NOT strip when the
+      // parenthetical carries more than the bare word (e.g. "(Rescheduled to
+      // Oct 13th)") — that annotation is the only place the new date lives
+      // when this entry's own date field is still the OLD slot, and the old
+      // `\)?` (optional close-paren) let the match run past the open paren
+      // and eat into "to Oct 13th)", leaving a dangling "to Oct 13th) Title".
+      .replace(/^(?:\(rescheduled\)|rescheduled):?\s*/i, '')
       .trim();
     const dedup = dateKey + '|' + title.toLowerCase();
     if (seen.has(dedup)) continue;
