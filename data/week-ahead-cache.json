@@ -1,18 +1,18 @@
 {
-  "hash": "92cc050360744fec2182864965a2da1400f9abbb",
-  "lede": "The Gold Mountain Fire — nearly 40,000 acres burned northeast of Ouray, Highway 550 cut off repeatedly — is front and center at the Ridgway Town Council meeting Wednesday, where the council will ratify a letter backing a federal Major Disaster Declaration. That same day, the San Miguel County BOCC holds a special meeting to consider Resolution 2026-34, which would adjust Area Median Income limits on deed-restricted properties in Pinion Park — a small technical change with real consequences for who actually qualifies for local housing. Thursday, the County Planning Commission takes up three Land Use Code amendments covering forestry, oil and gas, and geothermal energy.",
+  "hash": "6a93d1aef0e8353591d52a9066f2a89b76245a80",
+  "lede": "The biggest item this week is the San Miguel County BOCC special meeting Wednesday, where the Housing Authority will consider Resolution 2026-34, a change to Area Median Income limits for deed-restricted properties at Pinion Park — the kind of technical adjustment that quietly determines who qualifies for affordable housing here. Also Wednesday, the County Planning Commission takes up three Land Use Code amendments covering forestry, oil and gas, and geothermal energy. Over in Ridgway, the Town Council meets Tuesday with fire-related business tied to the Gold Mountain Fire, which has scorched nearly 40,000 acres and repeatedly cut off Highway 550.",
   "notable": [
     {
       "id": 4,
-      "stake": "Council ratifies Major Disaster Declaration support for Gold Mountain Fire communities."
+      "stake": "Council ratifies disaster declaration support tied to 40,000-acre Gold Mountain Fire."
     },
     {
       "id": 6,
-      "stake": "AMI limit change on deed-restricted Pinion Park units affects who qualifies for local housing."
+      "stake": "AMI limit change for Pinion Park deed-restricted housing could shift who qualifies."
     },
     {
       "id": 8,
-      "stake": "Planning Commission votes on Land Use Code amendments for forestry, oil/gas, and geothermal."
+      "stake": "Planning Commission votes on three Land Use Code amendments before they reach the BOCC."
     }
   ]
 }

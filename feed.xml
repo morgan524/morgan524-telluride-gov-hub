@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Sep 2026 03:56:18 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2026 11:00:06 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Sep 8–14</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-35</guid>
-      <pubDate>Tue, 08 Sep 2026 03:56:18 GMT</pubDate>
-      <description><![CDATA[The Gold Mountain Fire — nearly 40,000 acres burned northeast of Ouray, Highway 550 cut off repeatedly — is front and center at the Ridgway Town Council meeting Wednesday, where the council will ratify a letter backing a federal Major Disaster Declaration. That same day, the San Miguel County BOCC holds a special meeting to consider Resolution 2026-34, which would adjust Area Median Income limits on deed-restricted properties in Pinion Park — a small technical change with real consequences for who actually qualifies for local housing. Thursday, the County Planning Commission takes up three Land Use Code amendments covering forestry, oil and gas, and geothermal energy.]]></description>
+      <pubDate>Tue, 08 Sep 2026 11:00:06 GMT</pubDate>
+      <description><![CDATA[The biggest item this week is the San Miguel County BOCC special meeting Wednesday, where the Housing Authority will consider Resolution 2026-34, a change to Area Median Income limits for deed-restricted properties at Pinion Park — the kind of technical adjustment that quietly determines who qualifies for affordable housing here. Also Wednesday, the County Planning Commission takes up three Land Use Code amendments covering forestry, oil and gas, and geothermal energy. Over in Ridgway, the Town Council meets Tuesday with fire-related business tied to the Gold Mountain Fire, which has scorched nearly 40,000 acres and repeatedly cut off Highway 550.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -73,6 +73,19 @@ After Telluride Film Festival (ATFF) screens eight popular Festival films for lo
       <category>Community Event</category>
     </item>
     <item>
+      <title>[Tue, Sep 8] Birding Walk with Katie Triest</title>
+      <link>https://telluridelibrary.libcal.com/event/16991385?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/birding%20walk%20with%20katie%7C2026-09-08</guid>
+      <pubDate>Tue, 08 Sep 2026 14:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_31_08_57_38.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Telluride Post Office
+
+8:00 AM – 10:00 AM · Join ornithological expert Katie Triest for this series of chill walks where you&#39;ll learn amazing facts and practice identifying local birds! Meet at the post office and we&#39;ll head to the beaver ponds at the edge of Town Park. Bring your own binoculars if you have them and make sure to dress for variant weather. Be on time, and PLEASE cancel your reservation if you are unable to make it. This event is very popular and the waiting list is long.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_31_08_57_38.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
       <title>[Tue, Sep 8] RESCHEDULED: Birding Walk with Katie Triest</title>
       <link>https://koto.org/event/birding-walk-with-katie-triest/</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/rescheduled%20birding%20walk%20with%7C2026-09-08</guid>
@@ -108,6 +121,19 @@ This is the TRC flagship Tennis Clinic. Courts will be divided based on level an
       <category>KOTO</category>
     </item>
     <item>
+      <title>[Tue, Sep 8] Storytime / Hora de Cuentos</title>
+      <link>https://telluridelibrary.libcal.com/event/17514579?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/storytime%20hora%20de%20cuentos%7C2026-09-08</guid>
+      <pubDate>Tue, 08 Sep 2026 16:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Kids Area
+
+10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
       <title>[Tue, Sep 8] Tennis Clinic 4.0+</title>
       <link>https://koto.org/event/tennis-clinic-4-0/2026-09-08/</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/tennis%20clinic%204%200%7C2026-09-08</guid>
@@ -120,15 +146,69 @@ Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot an
       <category>KOTO</category>
     </item>
     <item>
-      <title>[Tue, Sep 8] Free Legal Clinic – Clínica Jurídica Gratuita</title>
-      <link>https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-09-08/</link>
+      <title>[Tue, Sep 8] Teen Cook</title>
+      <link>https://telluridelibrary.libcal.com/event/17486114?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/teen%20cook%7C2026-09-08</guid>
+      <pubDate>Tue, 08 Sep 2026 20:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_27_00.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Teen Area
+
+2:00 PM – 3:00 PM · Join the WPL Every Tuesday after school for Teen Cook. We will cook a different recipe from scratch, and have enough to share with those around!]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_27_00.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Tue, Sep 8] I Heart Art with Ah Haa</title>
+      <link>https://telluridelibrary.libcal.com/event/17292100?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/i%20heart%20art%20with%7C2026-09-08</guid>
+      <pubDate>Tue, 08 Sep 2026 20:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_39_32.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Kids Area
+
+2:30 PM – 4:00 PM · Looking for a fun and enriching way to spend your afternoons? Join us Tuesdays for I Heart Art, designed especially for kids aged 5-12! &iquest;Buscas una manera divertida de pasar tus tardes? &iexcl;Unete a nuestro programa extracurricular, dise&ntilde;ado especialmente para ni&ntilde;os de 5 a 12 a&ntilde;os!]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_39_32.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Tue, Sep 8] Free Legal Clinic - Clínica Jurídica Gratuita (Zoom)</title>
+      <link>https://telluridelibrary.libcal.com/event/16009653?hs=a</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/free%20legal%20clinic%20cl%7C2026-09-08</guid>
       <pubDate>Tue, 08 Sep 2026 22:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1760996664.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Meeting Room #5 - small
 
-A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. Abogados voluntarios responderán a preguntas, ayudarán a llenar formularios y explicarán el proceso y el procedimiento de cuestiones jurídicas. Los abogados voluntarios no te representan y esta clínica es sólo informativa. CON CITA PREVIA. Llame a 970-728-4519 para más información y para registrarse.]]></description>
+4:00 PM – 5:40 PM · A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una cl&iacute;nica de asesoramiento jur&iacute;dico GRATUITO para las personas que notienen abogado. Abogados voluntarios responder&aacute;n a preguntas, ayudar&aacute;n a llenar formularios y explicar&aacute;n el proceso y el procedimiento de cuestiones jur&iacute;dicas. Los abogados voluntarios no te representan y esta cl&iacute;nica es s&oacute;lo informativa. CON CITA PREVIA. Llame a 970-728-4519 para m&aacute;s informaci&oacute;n y para registrarse.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1760996664.jpg" medium="image" />
       <category>Community Event</category>
-      <category>KOTO</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Tue, Sep 8] The Sixth Nik with Daniel Kraus (Online Author Talk)</title>
+      <link>https://telluridelibrary.libcal.com/event/17358126?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/the%20sixth%20nik%20with%7C2026-09-08</guid>
+      <pubDate>Tue, 08 Sep 2026 23:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_07_15_55_02.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Wilkinson Public Library
+
+5:00 PM – 6:00 PM · Prepare to launch into the darkest depths of deep space! Join us online as we sit down with master storyteller Daniel Kraus, winner of the 2026 Pulitzer Prize for Fiction, to celebrate the release of his breathtaking new novel, The Sixth Nik. Deep into space, far past the triworld outposts, beyond range of the lethal trollbot internet, soars The Sickness : a ship woven from biomatter and capable of reacting to every need of its human crew. Sisilla, a nine-year-old cultist with a brain enhanced by arcane tech known as "niks," has boarded to investigate the enigma of F&eacute;m—a plague-riddled planet that has abruptly gone rogue. The mysterious crew includes a faceless assassin, a beautiful engineer jigsawed by plastic surgery, a peyote-addicted medic, and—most lethal of all—a rugged, NonModded captain with a score to settle with Sisilla. Other dangers abound. …]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_07_15_55_02.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Tue, Sep 8] West African Drum and Dance</title>
+      <link>https://telluridelibrary.libcal.com/event/17093094?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/west%20african%20drum%20and%7C2026-09-08</guid>
+      <pubDate>Tue, 08 Sep 2026 23:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_22_16_56_02.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Lower Terrace - outdoors
+
+5:00 PM – 6:30 PM · This class is geared towards adults and teens. Children 12 and under must be accompanied by an adult. Sign up at the bottom of this page! Participants will learn a specific Guinean rhythm and get the opportunity to learn various foundational techniques and skills for playing the Djembe in harmony and beat with one another. The second half of the class will be learning the dance rhythm associated to the drum rhythm learned. This is accompanied by live drumming where participants get to experience how the drumming and dance play together. The classes are a full body, mind and heart experience that focuses on left and right brain activities as well as connection to community and a deeper understanding of Guinean arts. Song is also incorporated! Etienne Tolno is a professional musician from Guinea, West Africa. …]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_22_16_56_02.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Tue, Sep 8] Online Author Talk with Daniel Kraus</title>
@@ -144,16 +224,17 @@ Prepare to launch into the darkest depths of deep space! Join us online as we si
       <category>KOTO</category>
     </item>
     <item>
-      <title>[Tue, Sep 8] West African Drum &amp; Dance</title>
-      <link>https://koto.org/event/west-african-drum-dance/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/west%20african%20drum%20and%7C2026-09-08</guid>
-      <pubDate>Tue, 08 Sep 2026 23:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Wilkinson Public Library, Telluride
+      <title>[Tue, Sep 8] Book Buzz at the Telluride Brewing Company</title>
+      <link>https://telluridelibrary.libcal.com/event/16877752?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/book%20buzz%20at%20the%7C2026-09-08</guid>
+      <pubDate>Tue, 08 Sep 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_11_15_14_08.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Telluride Brewing Company
 
-This class is geared towards adults and teens. Children 12 and under must be accompanied by an adult. Sign up at the bottom of this page! Participants will learn a specific Guinean rhythm and get the opportunity to learn various foundational techniques and skills for playing the Djembe in harmony and beat with one another. The second half of the class will be learning the dance rhythm associated to the drum rhythm learned. This is accompanied by live drumming where participants get to experience how the drumming and dance play together. The classes are a full body, mind and heart experience that focuses on left and right brain activities as well as connection to comm]]></description>
+5:30 PM – 6:30 PM · Join WPL on the 2nd Tuesday 5:30-6:30pm of each month at TBC in Lawson Hill May-September. Our queen of Reader&#39;s Advisory, Tiffany Osborne, will be there to talk about our hottest new titles and Miss Melissa will be providing an interactive story time for the kids. We&#39;ll have grab-and-go activity kits for the littles as well, and plenty of books to checkout. ADDED BONUS: Enjoy a 10% discount on food as well as $5 TBC Beers when you show your library card to the TBC staff . Don&#39;t have a card? No problem! We&#39;ll make one for you on the spot!]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_11_15_14_08.jpg" medium="image" />
       <category>Community Event</category>
-      <category>KOTO</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Tue, Sep 8] Book Buzz at Telluride Brewing Co-Lawson Hill</title>
@@ -188,7 +269,7 @@ The September 9, 2026 Norwood Board of Trustees Meeting agenda hasn't been poste
 
 A heavy agenda for a small-town council — and some of it carries real weight. The Council will ratify two letters already sent: one backing a federal Major Disaster Declaration for the Gold Mountain Fire, which has burned nearly 40,000 acres northeast of Ouray, severed Highway 550 repeatedly, and left communities like Ridgway isolated and facing years of post-fire debris flows; and one supporting proposed recreation fees at Blue Lakes in the Mount Sneffels Wilderness to address overcrowding. On the policy side: interviews and appointment of Sustainability Advisory Board members; a Notice of Award for pre-approved ADU architectural design plans; authorization of more than $25,000 for sidewalk repairs near the Post Office and Clinton Street; a request from the Athletic Park Coalition to fund professional design services for a bike park; proposed changes to the Marshal's Office overtime policy; acceptance of the completed ductile iron pipe replacement project; direction on Wastewater Treatment Plant siting options; and consideration of scaling back from Stage 2 to Stage 1 fire restrictions and rescinding Stage 2 mandatory water restrictions.
 
-⚡ Why it matters: Council ratifies Major Disaster Declaration support for Gold Mountain Fire communities.]]></description>
+⚡ Why it matters: Council ratifies disaster declaration support tied to 40,000-acre Gold Mountain Fire.]]></description>
       <category>Meeting</category>
       <category>ridgway</category>
     </item>
@@ -212,7 +293,7 @@ The September 9, 2026 Board of County Commissioners Work Session agenda hasn't b
 
 A short special meeting with two items worth watching. On the housing side, the BOCC — sitting as the San Miguel County Housing Authority — will consider Resolution 2026-34, which would authorize a change in Area Median Income limitations for certain deed-restricted properties in Pinion Park. That's a technical adjustment, but AMI thresholds are the fulcrum on which affordability restrictions actually turn. There's also an initial discussion on Covenant Amendment Provisions — early-stage, but covenant language is where deed restrictions either hold or erode over time. Separately, the Board will discuss Colorado State Ballot Measures and take up a procedural question about CCI Legislative Committee representation. Consent agenda covers the July Road Report and a subrecipient certification.
 
-⚡ Why it matters: AMI limit change on deed-restricted Pinion Park units affects who qualifies for local housing.]]></description>
+⚡ Why it matters: AMI limit change for Pinion Park deed-restricted housing could shift who qualifies.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -325,7 +406,7 @@ The September 10, 2026 Town Council Budget agenda hasn't been posted yet.]]></de
 
 Three Land Use Code amendments are on the table for the Planning Commission's recommendation — covering forestry practices, oil and gas, and geothermal energy. All three are code-change items, meaning the Commission is being asked to weigh in before any revisions move forward to the BOCC. The agenda text doesn't detail the specific proposed changes within each amendment, but the pairing of oil & gas with geothermal in the same session signals the county is taking a broad look at how extraction and energy activities are regulated in unincorporated San Miguel County.
 
-⚡ Why it matters: Planning Commission votes on Land Use Code amendments for forestry, oil/gas, and geothermal.]]></description>
+⚡ Why it matters: Planning Commission votes on three Land Use Code amendments before they reach the BOCC.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -377,78 +458,6 @@ Join the Telluride Historical Museum for dinner for their premier fundraising ev
       <media:content url="https://www.telluride.com/site/assets/files/48558/screenshot_2026-08-11_at_4_32_53_pm.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Thu, Sep 10] Vana Liya</title>
-      <link>https://www.telluride.com/event/vana-liya/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/vana%20liya%7C2026-09-10</guid>
-      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/63475/screenshot_2026-09-02_at_12_39_17_pm.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Genre-busting vocalist and songwriter Vana Liya made a serendipitous arrival on the music scene after she posted …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/63475/screenshot_2026-09-02_at_12_39_17_pm.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Thu, Sep 10] Tennis Clinic 3.0-4.0</title>
-      <link>https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-10/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/tennis%20clinic%203%200%7C2026-09-10</guid>
-      <pubDate>Thu, 10 Sep 2026 15:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Telluride Racquet Club, Mountain Village
-
-This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Thu, Sep 10] Tennis Clinic 4.0+</title>
-      <link>https://koto.org/event/tennis-clinic-4-0/2026-09-10/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/tennis%20clinic%204%200%7C2026-09-10</guid>
-      <pubDate>Thu, 10 Sep 2026 17:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Telluride Racquet Club, Mountain Village
-
-Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Thu, Sep 10] Pilates for All Bodies with Laura</title>
-      <link>https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-09-10/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/pilates%20for%20all%20bodies%7C2026-09-10</guid>
-      <pubDate>Thu, 10 Sep 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Wilkinson Public Library, Telluride
-
-Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Thu, Sep 10] Jolie Holland</title>
-      <link>https://sherbino.org/event/jolie-holland/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/jolie%20holland%7C2026-09-10</guid>
-      <pubDate>Thu, 10 Sep 2026 19:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://sherbino.org/wp-content/uploads/2026/06/2026-sherb-event-banners-45.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />📍 The Sherbino, Ridgway
-
-@ THURSDAY || Doors: 6:30 PM || Show: 7:00 PM || Tickets: $30 in advance / $35 Day of Show || Duo Show with Max Knouse || Some Reserved Section Seats Available Presented in partnership by The Sherbino with Pickin' Productions About Jolie Holand Jolie Holland has forged a timeless, captivating musical legacy; as she mines the depths of her, at times harrowing, life experiences, her creative choices are rooted in honesty and presence. They are also fearless. Jolie Holland has been on the road since the early 2000s, releasing seven of her own albums and collaborating on countless others. Her work has been described as a syncretization of American roots, with rock and experimental elements. She’s been in the studio with Booker T, Lucinda Williams, and TV On The Radio; and shared stages with Big Thief, St. Vincent, Elbow, and Mavis Staples. …]]></description>
-      <media:content url="https://sherbino.org/wp-content/uploads/2026/06/2026-sherb-event-banners-45.png" medium="image" />
-      <category>Community Event</category>
-    </item>
-    <item>
-      <title>[Thu, Sep 10] TRC Men&apos;s Tennis Singles</title>
-      <link>https://koto.org/event/trc-mens-tennis-singles/2026-09-10/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/trc%20men%20s%20tennis%7C2026-09-10</guid>
-      <pubDate>Thu, 10 Sep 2026 22:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Telluride Racquet Club, Mountain Village
-
-The 1st TRC Men's Singles League! Sign up on a week-to-week basis. No long-term commitment.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
     <item>
       <title>[Meeting] Open Space Commission - Sep 14 2026 — 2026-09-14</title>

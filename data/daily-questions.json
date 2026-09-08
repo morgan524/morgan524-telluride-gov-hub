@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-09-08",
+    "title": "Wildfire code is law — now what?",
+    "body": "Town Council passed Ordinance #1640 on August 11, 2026, amending the Land Use Code to implement the Colorado Wildfire Resiliency Code. Now a rescheduled budget session may revisit it. Some residents will see the code as overdue — the fire risk up here is real and the old rules didn't account for it. Others will push back on what new resiliency requirements cost property owners, or whether state-level rules translate cleanly to a tight canyon town. Nothing's been undone yet. So where do you stand — was folding a wildfire code into the Land Use Code the right call?",
+    "choices": [
+      "Right call, long overdue",
+      "Wrong fit for this town",
+      "Depends on the cost",
+      "It's complicated"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-09-07",
     "title": "The county's buying a trail connector — who's watching the tab?",
     "body": "The Board of County Commissioners is set to take up procurement on several fronts — material hauling, a fuel island canopy, and a trail connector project. The trail piece is the one worth watching. Trail connectors sound easy to love, but procurement decisions at the county level raise real questions about priorities and process. Some residents will see investment in trail infrastructure as exactly what keeps this place livable. Others will ask whether the county's spending is being scrutinized carefully enough, and by whom.\n\nWhere do you land on county-level trail spending right now?",
@@ -425,21 +440,6 @@
       "Developer — certainty matters",
       "Community — keep options open",
       "Depends on the project",
-      "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-08-09",
-    "title": "Bear Creek's beavers and the trail question",
-    "body": "The Open Space Commission is heading out to Bear Creek Trailhead to look at a potential new trail alignment connecting to Firecracker Hill — and also to check on beaver activity in the preserve. Those two things pull in different directions. More trail access means more people out there, which is the whole point of public land. But the commission is also doing restoration planning, and active beavers in a protected zone complicate what \"open\" in open space actually means. How much human use belongs alongside active habitat work?\n\nWhere do you land — more trail, or let the beavers have it?",
-    "choices": [
-      "Build the connection",
-      "Hold off on the trail",
-      "Depends on the habitat impact",
       "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",

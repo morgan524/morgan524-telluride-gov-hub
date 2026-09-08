@@ -357,7 +357,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303","sv":4,"ph":"d6200257aab6f8b7"},
 
   "telluride|2026-09-22|Town Council - Sep 22 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043","sv":4,"ph":"c5b14e4bfd86db54"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043","sv":4,"ph":"0c2ea006f5fde3ee"},
 
   "county|2026-09-23|Board of County Commissioners Work Session":
     {"sv":4,"ph":"307e0c7b19e4ff5b"},
@@ -441,7 +441,10 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"49e704e3c3bab858"},
 
   "telluride|2026-10-08|Special Meeting - Planning & Zoning Commission - Oct 08 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8311","sv":4,"ph":"8fb47750538763cf"}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8311","sv":4,"ph":"8fb47750538763cf"},
+
+  "county|2026-10-08|Planning Commission Meeting":
+    {"sv":4,"ph":"b7c74705fcca6b2f"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -466,6 +469,14 @@ const DEEP_DIVE_UPDATES = [
 //   sourceUrl, topics: [] }. Rendered by hub-bub.html from the JSON mirror
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
+  {
+    date: "2026-09-08",
+    title: "Wildfire code is law — now what?",
+    body: "Town Council passed Ordinance #1640 on August 11, 2026, amending the Land Use Code to implement the Colorado Wildfire Resiliency Code. Now a rescheduled budget session may revisit it. Some residents will see the code as overdue — the fire risk up here is real and the old rules didn't account for it. Others will push back on what new resiliency requirements cost property owners, or whether state-level rules translate cleanly to a tight canyon town. Nothing's been undone yet. So where do you stand — was folding a wildfire code into the Land Use Code the right call?",
+    choices: ["Right call, long overdue", "Wrong fit for this town", "Depends on the cost", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
   {
     date: "2026-09-07",
     title: "The county's buying a trail connector — who's watching the tab?",
@@ -697,14 +708,6 @@ const DAILY_QUESTIONS = [
     choices: ["Developer — certainty matters", "Community — keep options open", "Depends on the project", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-08-09",
-    title: "Bear Creek's beavers and the trail question",
-    body: "The Open Space Commission is heading out to Bear Creek Trailhead to look at a potential new trail alignment connecting to Firecracker Hill — and also to check on beaver activity in the preserve. Those two things pull in different directions. More trail access means more people out there, which is the whole point of public land. But the commission is also doing restoration planning, and active beavers in a protected zone complicate what \"open\" in open space actually means. How much human use belongs alongside active habitat work?\n\nWhere do you land — more trail, or let the beavers have it?",
-    choices: ["Build the connection", "Hold off on the trail", "Depends on the habitat impact", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -812,7 +815,10 @@ const MEETING_PREVIEWS = {
     "Board will consider procurement matters including material hauling, trail construction, fuel island canopy work, and jail painting projects. Several probate estate notices are also associated with the meeting, along with an energy regulatory hearing involving an alleged violation against American Helium Operating LLC.",
 
   "telluride|2026-10-08|Special Meeting - Planning & Zoning Commission - Oct 08 2026":
-    "The Planning & Zoning Commission is expected to discuss the Colorado Wildfire Resiliency Code amendment to Telluride's Land Use Code (Ordinance #1640), passed by Town Council on August 11, 2026, which amended Chapter 18 of the Municipal Code to implement wildfire resiliency standards."
+    "The Planning & Zoning Commission is expected to discuss the Colorado Wildfire Resiliency Code amendment to Telluride's Land Use Code (Ordinance #1640), passed by Town Council on August 11, 2026, which amended Chapter 18 of the Municipal Code to implement wildfire resiliency standards.",
+
+  "county|2026-10-08|Planning Commission Meeting":
+    "The Planning Commission is expected to review land use and development matters relevant to San Miguel County. Related notices suggest ongoing county procurement activity, including trail construction, facility improvements, and hazard mitigation planning, which may inform planning discussions."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -873,16 +879,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "Celebration of local history and pioneers.",
     href: "https://norwoodcolorado.com/event/pioneer-day-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, September",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "September 8, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
     img: ""
   },
   {
@@ -1381,7 +1377,10 @@ const MANUAL_SUMMARIES = {
     "The October 7, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-10-08|Special Meeting - Planning & Zoning Commission - Oct 08 2026":
-    "The October 8, 2026 Special Meeting - Planning & Zoning Commission agenda hasn't been posted yet."
+    "The October 8, 2026 Special Meeting - Planning & Zoning Commission agenda hasn't been posted yet.",
+
+  "county|2026-10-08|Planning Commission Meeting":
+    "The October 8, 2026 Planning Commission agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1747,6 +1746,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "A fundraiser that keeps growing",
+    source: "Telluride Times",
+    date: "September 8, 2026",
+    firstSeen: "2026-09-08",
+    newsTopic: "public-safety",
+    copy: "The Telluride Humane Society — a shelter-free, all-volunteer operation that has rescued over 1,000 animals — is publishing two new coffee-table dog books, *Dogs of Colorado* and *Dogs of Colorado: Legends*, to cover mounting rescue and medical costs through 2026. The effort expands on last year's successful *Dogs of Telluride*. Submissions open to any Colorado dog owner.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_7e57cb83-a757-4baf-b9a5-08097944c89d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/f7/4f759951-daa8-4c30-bd44-3d7bf65d8ff1/6a9f4e339f5de.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Parched summer in the Rockies sends hungry bears into urban areas and confrontations with people",
+    source: "Telluride Times",
+    date: "September 8, 2026",
+    firstSeen: "2026-09-08",
+    newsTopic: "recreation",
+    copy: "Drought across the Rockies has pushed hungry black bears into towns, cars, and campgrounds at record rates this summer. Colorado reports twice the normal bear conflicts, with animals showing up on the eastern plains where they rarely venture. Unsecured trash is the leading cause — and bears that learn to associate people with food often end up euthanized.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_e68ae67b-39e9-5426-86ad-61cdcf862698.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/f4/8f4c268f-a4ab-5d2e-89d9-d8970952f631/6a9f8c57d4ec2.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Community laces up for Imogene Pass Run",
     source: "Telluride Times",
@@ -3850,7 +3873,94 @@ const KOTO_COMMUNITY_EVENTS = [
 ];
 
 const WILKINSON_EVENTS = [
-
+  {
+    title: "Birding Walk with Katie Triest",
+    link: "https://telluridelibrary.libcal.com/event/16991385?hs=a",
+    description: "8:00 AM – 10:00 AM · Join ornithological expert Katie Triest for this series of chill walks where you&#39;ll learn amazing facts and practice identifying local birds!  Meet at the post office and we&#39;ll head to the beaver ponds at the edge of Town Park.   Bring your own binoculars if you have them and make sure to dress for variant weather. Be on time, and PLEASE cancel your reservation if you are unable to make it. This event is very popular and the waiting list is long.",
+    pubDate: "2026-09-08T14:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Post Office",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_31_08_57_38.jpg"
+  },
+  {
+    title: "Storytime / Hora de Cuentos",
+    link: "https://telluridelibrary.libcal.com/event/17514579?hs=a",
+    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
+    pubDate: "2026-09-08T16:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+  },
+  {
+    title: "Teen Cook",
+    link: "https://telluridelibrary.libcal.com/event/17486114?hs=a",
+    description: "2:00 PM – 3:00 PM · Join the WPL Every Tuesday after school for Teen Cook. We will cook a different recipe from scratch, and have enough to share with those around!",
+    pubDate: "2026-09-08T20:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Teen Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_27_00.png"
+  },
+  {
+    title: "I Heart Art with Ah Haa",
+    link: "https://telluridelibrary.libcal.com/event/17292100?hs=a",
+    description: "2:30 PM – 4:00 PM · Looking for a fun and enriching way to spend your afternoons? Join us Tuesdays for I Heart Art, designed especially for kids aged 5-12!  &iquest;Buscas una manera divertida de pasar tus tardes? &iexcl;Unete a nuestro programa extracurricular, dise&ntilde;ado especialmente para ni&ntilde;os de 5 a 12 a&ntilde;os!",
+    pubDate: "2026-09-08T20:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_39_32.png"
+  },
+  {
+    title: "Free Legal Clinic - Clínica Jurídica Gratuita (Zoom)",
+    link: "https://telluridelibrary.libcal.com/event/16009653?hs=a",
+    description: "4:00 PM – 5:40 PM · A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only.  BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una cl&iacute;nica de asesoramiento jur&iacute;dico GRATUITO para las personas que notienen abogado. Abogados voluntarios responder&aacute;n a preguntas, ayudar&aacute;n a llenar formularios y explicar&aacute;n el proceso y el procedimiento de cuestiones jur&iacute;dicas. Los abogados voluntarios no te representan y esta cl&iacute;nica es s&oacute;lo informativa. CON CITA PREVIA. Llame a 970-728-4519 para m&aacute;s informaci&oacute;n y para registrarse.",
+    pubDate: "2026-09-08T22:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Meeting Room #5 - small",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1760996664.jpg"
+  },
+  {
+    title: "The Sixth Nik with Daniel Kraus (Online Author Talk)",
+    link: "https://telluridelibrary.libcal.com/event/17358126?hs=a",
+    description: "5:00 PM – 6:00 PM · Prepare to launch into the darkest depths of deep space! Join us online as we sit down with master storyteller Daniel Kraus, winner of the 2026 Pulitzer Prize for Fiction, to celebrate the release of his breathtaking new novel, The Sixth Nik. Deep into space, far past the triworld outposts, beyond range of the lethal trollbot internet, soars The Sickness : a ship woven from biomatter and capable of reacting to every need of its human crew. Sisilla, a nine-year-old cultist with a brain enhanced by arcane tech known as \"niks,\" has boarded to investigate the enigma of F&eacute;m—a plague-riddled planet that has abruptly gone rogue. The mysterious crew includes a faceless assassin, a beautiful engineer jigsawed by plastic surgery, a peyote-addicted medic, and—most lethal of all—a rugged, NonModded captain with a score to settle with Sisilla. Other dangers abound. …",
+    pubDate: "2026-09-08T23:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_07_15_55_02.jpg"
+  },
+  {
+    title: "West African Drum and Dance",
+    link: "https://telluridelibrary.libcal.com/event/17093094?hs=a",
+    description: "5:00 PM – 6:30 PM · This class is geared towards adults and teens. Children 12 and under must be accompanied by an adult. Sign up at the bottom of this page! Participants will learn a specific Guinean rhythm and get the opportunity to learn various foundational techniques and skills for playing the Djembe in harmony and beat with one another. The second half of the class will be learning the dance rhythm associated to the drum rhythm learned. This is accompanied by live drumming where participants get to experience how the drumming and dance play together. The classes are a full body, mind and heart experience that focuses on left and right brain activities as well as connection to community and a deeper understanding of Guinean arts. Song is also incorporated! Etienne Tolno is a professional musician from Guinea, West Africa. …",
+    pubDate: "2026-09-08T23:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_22_16_56_02.jpg"
+  },
+  {
+    title: "Book Buzz at the Telluride Brewing Company",
+    link: "https://telluridelibrary.libcal.com/event/16877752?hs=a",
+    description: "5:30 PM – 6:30 PM · Join WPL on the 2nd Tuesday 5:30-6:30pm of each month at TBC in Lawson Hill May-September. Our queen of Reader&#39;s Advisory, Tiffany Osborne, will be there to talk about our hottest new titles and Miss Melissa will be providing an interactive story time for the kids. We&#39;ll have grab-and-go activity kits for the littles as well, and plenty of books to checkout. ADDED BONUS: Enjoy a 10% discount on food as well as $5 TBC Beers when you show your library card to the TBC staff . Don&#39;t have a card? No problem! We&#39;ll make one for you on the spot!",
+    pubDate: "2026-09-08T23:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Brewing Company",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_11_15_14_08.jpg"
+  }
 ];
 
 // Bot-managed by scripts/content-refresh.js Task 7 (syncHumaneSocietyAnimals).
@@ -4356,32 +4466,22 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "Labor Day Weekend - No School- Ridgway",
-    link: "https://events.ourayridgwayevents.com/event/labor-day-no-school-ridgway",
-    description: "View on site | Email this event",
-    pubDate: "2026-09-07T06:00:00.000Z",
+    title: "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
+    link: "https://events.ourayridgwayevents.com/event/monthly-welcome-home-alliance-veterans-coffee-the-sherbino",
+    description: "MONTHLY WELCOME HOME ALLIANCE VETERAN’S COFFEE @ THE SHERBINO Every Branch. Every Era. Every Ability. Offering coffee, donuts and camaraderie. Mike Trickey and April Heard will be there bringing information to you on topics such as: Navigating the VA, Housing, Jobs, Volunteer Opportunities, community resources, VA benefits, recreation and mental health. For more information or to offer support (products or monetary), call 970-765-2210 or visit https://www.whafv.org/ Occurs the 2nd Tuesday of Every Month || 10 am - Noon || Free to attend || Vets Only, Please View on site | Email this event",
+    pubDate: "2026-09-08T16:00:00.000Z",
+    endDate: "2026-10-13",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
-  },
-  {
-    title: "Labor Day Parade in Ridgway",
-    link: "https://events.ourayridgwayevents.com/event/labor-day-parade-in-ridgway",
-    description: "Find your spot along Sherman Street in Ridgway to watch the Labor Day Parade. It'll start at 10am. You'll see things like horseback riders, cowboys, classic vehicles, and more. Stay on the sidewalk if you want to get soaked by the Firetrucks; otherwise, stand further back from the street. The parade kicks off the Ouray County Rodeo at the Ouray County Fairgrounds beginning at noon! View on site | Email this event",
-    pubDate: "2026-09-07T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Hartwell Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/53745054025330/huge/907904d9f77c544312a94c550a4205ddddb5d06a.jpg"
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/52236172073282/huge/134613035140f6c008febe657f2e7e23acc365e9.jpg"
   },
   {
     title: "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
     link: "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
     description: "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the International Quilt Museum in Lincoln, Nebraska. Bonnie’s work has been shown in numerous exhibits in the United States. In 2015, Bonnie’s work was in a year-long solo exhibition at the Portland Oregon International Airport. She was a solo artist at the Visions Museum of Textile Art, San Diego, in 2019. Internationally, Bonnie’s work has appeared in the Haus der Wirtschaft museum in Stuttgart, Germany, the Museum of Modern Art in Verona, Italy, and other venues in Germany, England, Ireland, France, Japan, Brazil, and the Netherlands. Bonnie’s work Tangle is part of the permanent collection of the Tuch + Technik Textilmuseum, Neumunster, Germany. …",
-    pubDate: "2026-09-07T16:00:00.000Z",
+    pubDate: "2026-09-08T16:00:00.000Z",
     endDate: "2026-09-25",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4393,7 +4493,7 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Ongoing Exhibition: BIG BOX-Big New Work By T-Bone",
     link: "https://events.ourayridgwayevents.com/event/ongoing-exhibition-big-box-big-new-work-by-t-bone",
     description: "The Big Box Show! Bigger, better and more. This groundbreaking local art won't last long! Ridgway's own T-Bone and his quintessential colorful cardboard paintings take on new life and meaning in the Decker where they have room to stretch out and really TALK to you! Come and be delighted by the playful T-Bone experience. Stay to cool off, craft, co-work, hang out. or plan your own future exhibition or event in the space! The Decker is a unique community rental-art gallery hybrid, incubated and managed by the Town of Ridgway, in cooperation with our sister ARTSpace gallery next door. View on site | Email this event",
-    pubDate: "2026-09-07T16:00:00.000Z",
+    pubDate: "2026-09-08T16:00:00.000Z",
     endDate: "2026-09-25",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4405,72 +4505,13 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Ongoing: Social Justice Travel Exhibition",
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-social-justice-travel-exhibition",
     description: "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote wellness. This exhibition features new works by artists who recieved a Social Justice Grant from Telluride Arts to create work for this traveling exhibit. View on site | Email this event",
-    pubDate: "2026-09-07T16:00:00.000Z",
+    pubDate: "2026-09-08T16:00:00.000Z",
     endDate: "2026-09-29",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Decker Community Room",
     imageUrl: "https://localist-images.azureedge.net/photos/53764349683288/huge/471bb8c36dc067ddd9b229c9e31032260184eb5e.jpg"
-  },
-  {
-    title: "Ouray County Labor Day Rodeo",
-    link: "https://events.ourayridgwayevents.com/event/ouray-county-labor-day-rodeo-4239",
-    description: "The Ouray County Labor Day Rodeo has been running continuously since 1917, making it a historic tradition spanning over a century. Feel the adrenaline rush with daring performances, electrifying action, and nonstop rodeo excitement that will keep you on the edge of your seat! Gates open at 11 a.m. The Rodeo begins at noon. Tickets $15 online or at the gate, Kids 5 & Under Free, Military Free with ID Featured events include: Parade in Ridgway at 10am Bareback riding Mutton Bustin - Ages 3-10 Saddle Bronc Riding Wild Cow Milking Bull Riding Rescue Race Barrel Racing Team Roping Stick Horse Races Steer Wresting, and more! No dogs, please. It is hosted annually by the Ouray County Rodeo Association (a 501c3 Non-Profit Organization) at the Ouray County Fairgrounds in Ridgway, Colorado. Presenting sponsors: RRL Ranch and True Grit Ranch. …",
-    pubDate: "2026-09-07T18:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray County Fairgrounds",
-    imageUrl: "https://localist-images.azureedge.net/photos/53737685960448/huge/7ed716278e1f9bfa37323fc141bb6dffb17d87f8.jpg"
-  },
-  {
-    title: "Senior Lunch by Neighbor to Neighbor",
-    link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
-    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
-    pubDate: "2026-09-07T18:00:00.000Z",
-    endDate: "2026-11-02",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
-  },
-  {
-    title: "Monthly Karate in Ouray County",
-    link: "https://events.ourayridgwayevents.com/event/monthly-karate-in-ouray-county",
-    description: "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month. Karate class is a great way to learn skills to keep you safe, stay in shape and strong core movements. Karate believes in using it only to protect self and is taught accordingly. Whether you are new to Karate or a seasoned student, the Sensei will work with your level. Taught in the kyokushin kai-kan style, similar shotokan style of karate, we welcome new students to try this exceptional experience for your mind and body! Mixed ages --- Ages 7 through Adult (extended time for more experience) Mondays in Ouray: St. …",
-    pubDate: "2026-09-07T23:00:00.000Z",
-    endDate: "2026-11-03",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Weehawken Ridgway (Old Schoolhouse)",
-    imageUrl: "https://localist-images.azureedge.net/photos/52253033564264/huge/ef12b5792bac47932752278d68230c7704389412.jpg"
-  },
-  {
-    title: "Breathe Together",
-    link: "https://events.ourayridgwayevents.com/event/breathe-together-9572",
-    description: "We explore and practice breath awareness and conscious breathing techniques as doorways to physical and emotional regulation and spiritual growth. Through these practices we also grow our awareness and achieve higher states of consciousness that can help us in our everyday life, relationships, general wellbeing and ultimately reconnect with our higher nature. No previous experience is required. View on site | Email this event",
-    pubDate: "2026-09-08T00:15:00.000Z",
-    endDate: "2026-09-29",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Bee True You Wellness and Creative Studio",
-    imageUrl: "https://localist-images.azureedge.net/photos/53197444379202/huge/26813502ab1ba3ae9f231b0cd774d101f4f32f02.jpg"
-  },
-  {
-    title: "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
-    link: "https://events.ourayridgwayevents.com/event/monthly-welcome-home-alliance-veterans-coffee-the-sherbino",
-    description: "MONTHLY WELCOME HOME ALLIANCE VETERAN’S COFFEE @ THE SHERBINO Every Branch. Every Era. Every Ability. Offering coffee, donuts and camaraderie. Mike Trickey and April Heard will be there bringing information to you on topics such as: Navigating the VA, Housing, Jobs, Volunteer Opportunities, community resources, VA benefits, recreation and mental health. For more information or to offer support (products or monetary), call 970-765-2210 or visit https://www.whafv.org/ Occurs the 2nd Tuesday of Every Month || 10 am - Noon || Free to attend || Vets Only, Please View on site | Email this event",
-    pubDate: "2026-09-08T16:00:00.000Z",
-    endDate: "2026-10-13",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Sherbino",
-    imageUrl: "https://localist-images.azureedge.net/photos/52236172073282/huge/134613035140f6c008febe657f2e7e23acc365e9.jpg"
   },
   {
     title: "DAVE MENSCH",
@@ -4600,6 +4641,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53790449536989/huge/a7181e9d298980d4c2377db45d06d26bb81e0b12.jpg"
   },
   {
+    title: "Ouray Comedy Night",
+    link: "https://events.ourayridgwayevents.com/event/ouray-comedy-night",
+    description: "Stand-up comedy is coming to Ouray! One night only! Get your tickets now before it's too late! Headliners: Casey Skinner (Netflix, Discovery, HBO Max) and David Uhlfelder (Netflix Is A Joke Fest, ESPN3, Comedy Store) Casey Skinner is a Los Angeles–based stand‑up comedian, writer, and producer whose work bridges the stage and behind the camera. Known for weaving true crime stories, absurd humor, and personal quandaries into his performances, he brings a distinct voice shaped by unexpected experiences and often explores the darker, stranger corners of his life with humor. He’s performed in some of comedy's most iconic venues, including The Comedy Store and The Improv. Casey's work has been featured on Netflix, Discovery, HBO Max, Bravo and more! He was also featured in the 2026 Netflix Is A Joke Fest. David Uhlfelder was raised in the Colorado wilderness. …",
+    pubDate: "2026-09-11T00:00:00.000Z",
+    endDate: "2026-09-12",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53830617900756/huge/9b913f03ccb0050e92a935ee9d2a464f7fe5b853.jpg"
+  },
+  {
     title: "Jolie Holland - Live at The Sherbino",
     link: "https://events.ourayridgwayevents.com/event/jolie-holland-live-at-the-sherbino",
     description: "THURSDAY || Doors: 6:30 PM || Show: 7:00 PM || Tickets: $30 in advance / $35 Day of Show || Solo Show || Some Reserved Section Seats Available Presented in partnership by The Sherbino with Pickin’ Productions About Jolie Holand Jolie Holland has forged a timeless, captivating musical legacy; as she mines the depths of her, at times harrowing, life experiences, her creative choices are rooted in honesty and presence. They are also fearless. Jolie Holland has been on the road since the early 2000s, releasing seven of her own albums and collaborating on countless others. Her work has been described as a syncretization of American roots, with rock and experimental elements. She’s been in the studio with Booker T, Lucinda Williams, and TV On The Radio; and shared stages with Big Thief, St. Vincent, Elbow, and Mavis Staples. …",
@@ -4632,17 +4685,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Ouray Comedy Night",
-    link: "https://events.ourayridgwayevents.com/event/ouray-comedy-night",
-    description: "Stand-up comedy is coming to Ouray! One night only! Get your tickets now before it's too late! Headliners: Casey Skinner (Netflix, Discovery, HBO Max) and David Uhlfelder (Netflix Is A Joke Fest, ESPN3, Comedy Store) Casey Skinner is a Los Angeles–based stand‑up comedian, writer, and producer whose work bridges the stage and behind the camera. Known for weaving true crime stories, absurd humor, and personal quandaries into his performances, he brings a distinct voice shaped by unexpected experiences and often explores the darker, stranger corners of his life with humor. He’s performed in some of comedy's most iconic venues, including The Comedy Store and The Improv. Casey's work has been featured on Netflix, Discovery, HBO Max, Bravo and more! He was also featured in the 2026 Netflix Is A Joke Fest. David Uhlfelder was raised in the Colorado wilderness. …",
-    pubDate: "2026-09-12T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53830617900756/huge/9b913f03ccb0050e92a935ee9d2a464f7fe5b853.jpg"
   },
   {
     title: "Steps Tavern Presents Karaoke Night",
@@ -4766,6 +4808,30 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Senior Lunch by Neighbor to Neighbor",
+    link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
+    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
+    pubDate: "2026-09-14T18:00:00.000Z",
+    endDate: "2026-11-02",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
+  },
+  {
+    title: "Breathe Together",
+    link: "https://events.ourayridgwayevents.com/event/breathe-together-9572",
+    description: "We explore and practice breath awareness and conscious breathing techniques as doorways to physical and emotional regulation and spiritual growth. Through these practices we also grow our awareness and achieve higher states of consciousness that can help us in our everyday life, relationships, general wellbeing and ultimately reconnect with our higher nature. No previous experience is required. View on site | Email this event",
+    pubDate: "2026-09-15T00:15:00.000Z",
+    endDate: "2026-09-29",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Bee True You Wellness and Creative Studio",
+    imageUrl: "https://localist-images.azureedge.net/photos/53197444379202/huge/26813502ab1ba3ae9f231b0cd774d101f4f32f02.jpg"
   },
   {
     title: "Woman's Club of Ouray County monthly meeting",
@@ -5462,6 +5528,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Hartwell Park",
     imageUrl: "https://localist-images.azureedge.net/photos/52595045386518/huge/f5138926bb27495f4ce42292fa805810d8db023d.jpg"
+  },
+  {
+    title: "Monthly Karate in Ouray County",
+    link: "https://events.ourayridgwayevents.com/event/monthly-karate-in-ouray-county",
+    description: "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month. Karate class is a great way to learn skills to keep you safe, stay in shape and strong core movements. Karate believes in using it only to protect self and is taught accordingly. Whether you are new to Karate or a seasoned student, the Sensei will work with your level. Taught in the kyokushin kai-kan style, similar shotokan style of karate, we welcome new students to try this exceptional experience for your mind and body! Mixed ages --- Ages 7 through Adult (extended time for more experience) Mondays in Ouray: St. …",
+    pubDate: "2026-10-05T23:00:00.000Z",
+    endDate: "2026-11-03",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Ridgway (Old Schoolhouse)",
+    imageUrl: "https://localist-images.azureedge.net/photos/52253033564264/huge/ef12b5792bac47932752278d68230c7704389412.jpg"
   },
   {
     title: "CORAL SKYE",
