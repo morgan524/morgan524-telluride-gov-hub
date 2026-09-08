@@ -501,7 +501,7 @@
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132",
     "sv": 4,
-    "ph": "681ef775e57db365"
+    "ph": "9d8dff37eec1599d"
   },
   "telluride|2026-10-06|Town Council - Oct 06 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044",
@@ -544,5 +544,9 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8314",
     "zoomUrl": "https://us02web.zoom.us/j/89045288089?pwd=b1Gfa5STKy8Wstoqdc8oBxCCs1s6pg.1",
     "sv": 4
+  },
+  "county|2026-09-24|5 x 5 County Meeting - San Miguel County Hosts": {
+    "sv": 4,
+    "ph": "f5486c159942d7f1"
   }
 }

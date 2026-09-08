@@ -480,6 +480,26 @@
     "hook": ""
   },
   {
+    "source": "county",
+    "sourceLabel": "San Miguel County",
+    "title": "5 x 5 County Meeting - San Miguel County Hosts",
+    "date": "2026-09-24",
+    "time": "",
+    "location": "Wilkinson Public Library, 100 West Pacific Ave., Telluride, CO 81435",
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1071/files",
+    "packetUrl": "",
+    "link": "https://sanmiguelcoco.portal.civicclerk.com/event/1071/files",
+    "hasAgenda": false,
+    "summary": "The September 24 5 x 5 County Meeting agenda hasn't been posted yet.",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams",
+    "commentEmail": "bocc@sanmiguelcountyco.gov",
+    "hook": ""
+  },
+  {
     "source": "telluride",
     "sourceLabel": "Town of Telluride",
     "title": "Planning & Zoning Commission",

@@ -69,19 +69,6 @@
     "type": "Family & Kids"
   },
   {
-    "title": "Tennis Clinic 4.0+",
-    "href": "https://koto.org/event/tennis-clinic-4-0/2026-09-08/",
-    "date": "2026-09-08",
-    "time": "11:00 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "Teen Cook",
     "href": "https://telluridelibrary.libcal.com/event/17486114?hs=a",
     "date": "2026-09-08",
@@ -221,7 +208,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A previously scheduled Norwood Town government meeting has been rescheduled to September 22, 2026. The rescheduled meeting will take place in Norwood, CO, and is organized by the Town of Norwood.",
     "type": "Community"
   },
   {
@@ -291,19 +278,6 @@
     "type": "Community"
   },
   {
-    "title": "Tennis Clinic 3.0-4.0",
-    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-08/",
-    "date": "2026-09-08",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "Monthly Welcome Home Alliance Veteran's Coffee at the Sherbino",
     "href": "https://sherbino.org/event/monthly-welcome-home-alliance-veterans-coffee-at-the-sherbino/2026-09-08/",
     "date": "2026-09-08",
@@ -313,7 +287,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "",
+    "desc": "A monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The recurring event offers a casual space for veterans to connect with one another and with community support.",
     "type": "Community"
   },
   {
@@ -616,8 +590,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "",
-    "type": "Community"
+    "desc": "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and district operations are welcome to attend.",
+    "type": "Arts & Film"
   },
   {
     "title": "Senior Lunch",
@@ -629,7 +603,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday meal gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     "type": "Community"
   },
   {
@@ -946,7 +920,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
     "category": "Community Event",
     "source": "Ouray County",
-    "desc": "https://ouraycountyco.gov/calendar.aspx?EID=3779",
+    "desc": "The Imogene Pass Run is an annual footrace that takes competitors over the challenging Imogene Pass between Telluride and Ouray, traversing one of the most scenic and demanding mountain routes in the San Juan Mountains. The course climbs…",
     "type": "Community"
   },
   {
@@ -1126,7 +1100,7 @@
     "time": "6:00 PM",
     "location": "Sheridan Opera House • Telluride, CO",
     "town": "Telluride",
-    "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/06/Screenshot-2026-09-03-at-11.21.00-AM.png",
+    "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/06/mv-calendar-la-familia.jpg",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
     "desc": "La Familia Music Group takes the stage at the historic Sheridan Opera House as part of the Telluride Theater Fringe Project. This performance brings together theater and live music in an intimate venue setting during the fall season.",
@@ -1144,6 +1118,20 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Happy’s Birthday has carved out a unique space in the Los Angeles music community by providing theatrical performances with whimsical and vidid story telling. Their unique sound combines elements of folk and indie with the bite of post…",
     "type": "Food & Drink"
+  },
+  {
+    "title": "Gaiascope Saturday Sessions",
+    "href": "https://www.telluride.com/event/gaiascope-saturday-sessions/",
+    "date": "2026-09-12",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63515/screenshot_2026-09-05_at_11_00_00_am.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Gaiascope Saturday Sessions Live music + Kaleidoscope art every Saturday in September.",
+    "type": "Music",
+    "endDate": "2026-09-26"
   },
   {
     "title": "A Telluride Theatre FRINGE Project: La Familia Music Group",
@@ -1261,6 +1249,19 @@
     "source": "Mountain Village",
     "desc": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
     "type": "Community"
+  },
+  {
+    "title": "Telluride Chamber Music",
+    "href": "https://sheridanoperahouse.com/events/telluride-chamber-music/",
+    "date": "2026-09-13",
+    "time": "6:00 PM",
+    "location": "Sheridan Opera House • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/03/logo-v4-4-web-2-final.png",
+    "category": "Concert / Performance",
+    "source": "Sheridan Opera House",
+    "desc": "A chamber music concert at the historic Sheridan Opera House in Telluride. The intimate venue provides a fitting backdrop for this acoustic ensemble performance in the classical tradition.",
+    "type": "Music"
   },
   {
     "title": "Balourdet Quartet",
@@ -1747,7 +1748,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     "type": "Community"
   },
   {
@@ -1802,6 +1803,19 @@
     "source": "Telluride.com",
     "desc": "Tee off for a cause at 9,500 feet! Join the Telluride Adaptive Sports Program for the 28th Annual Bob Miller Memorial …",
     "type": "Community"
+  },
+  {
+    "title": "Blues & Brews Beer Pairing Dinner",
+    "href": "https://www.telluride.com/event/blues-brews-beer-pairing-dinner-1/",
+    "date": "2026-09-17",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63525/blues_dinner.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "As Telluride settles into Blues & Brews weekend, gather around the table for an evening devoted to the art of craft …",
+    "type": "Food & Drink"
   },
   {
     "title": "Pickleball Nights",
@@ -2108,6 +2122,19 @@
     "type": "Community"
   },
   {
+    "title": "Blues Brunch",
+    "href": "https://www.telluride.com/event/blues-brunch/",
+    "date": "2026-09-20",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63527/blues_brunch.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Gather at Black Iron Kitchen + Bar for a Sunday brunch where mountain mornings and live music set the tone. From 7:00AM …",
+    "type": "Food & Drink"
+  },
+  {
     "title": "The Courtyard at 610 Presents: Alex Dunn & Mimi Genheimer at The Courtyard",
     "href": "https://events.ourayridgwayevents.com/event/the-courtyard-at-610-presents-alex-dunn-mimi-genheimer",
     "date": "2026-09-20",
@@ -2314,8 +2341,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
-    "type": "Community"
+    "desc": "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
+    "type": "Food & Drink"
   },
   {
     "title": "Watercolor & Wine with Katey Fetch: \"Paint the Peaks\"",
@@ -2511,7 +2538,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
     "type": "Community"
   },
   {

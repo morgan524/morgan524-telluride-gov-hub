@@ -151,6 +151,15 @@ const COUNTY_CACHED_DATA = [
     note: null
   },
   {
+    date: "September 24, 2026",
+    time: "1:00 PM",
+    title: "5 x 5 County Meeting - San Miguel County Hosts",
+    type: "other",
+    location: "Wilkinson Public Library, 100 West Pacific Ave., Telluride, CO 81435",
+    civicClerkId: 1071,
+    note: null
+  },
+  {
     date: "September 28, 2026",
     time: "4:00 PM",
     title: "Open Space Commission Meeting",

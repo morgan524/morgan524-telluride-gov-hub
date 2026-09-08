@@ -1,14 +1,14 @@
 [
   {
-    "title": "A fundraiser that keeps growing",
+    "title": "Former Colorado crime analyst gets 10-year prison sentence for manipulating DNA data",
     "source": "Telluride Times",
     "date": "September 8, 2026",
     "firstSeen": "2026-09-08",
-    "newsTopic": "public-safety",
-    "copy": "The Telluride Humane Society — a shelter-free, all-volunteer operation that has rescued over 1,000 animals — is publishing two new coffee-table dog books, *Dogs of Colorado* and *Dogs of Colorado: Legends*, to cover mounting rescue and medical costs through 2026. The effort expands on last year's successful *Dogs of Telluride*. Submissions open to any Colorado dog owner.",
+    "newsTopic": "community",
+    "copy": "A former Colorado Bureau of Investigation forensic analyst was sentenced to 10 years in prison for manipulating DNA data across hundreds of criminal cases, including homicides and sexual assaults. At least one murder conviction has been overturned, and the fallout may cost the state over $11 million. Concerns about her work apparently surfaced as far back as 2014.",
     "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/article_7e57cb83-a757-4baf-b9a5-08097944c89d.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/f7/4f759951-daa8-4c30-bd44-3d7bf65d8ff1/6a9f4e339f5de.image.jpg",
+    "href": "https://www.telluridenews.com/news/state/article_ac6d3c1b-7c33-50eb-a730-0d430f84bfd4.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     "imgHiRes": true
   },
   {
@@ -21,6 +21,18 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/news/state/article_e68ae67b-39e9-5426-86ad-61cdcf862698.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/f4/8f4c268f-a4ab-5d2e-89d9-d8970952f631/6a9f8c57d4ec2.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "A fundraiser that keeps growing",
+    "source": "Telluride Times",
+    "date": "September 8, 2026",
+    "firstSeen": "2026-09-08",
+    "newsTopic": "public-safety",
+    "copy": "The Telluride Humane Society — a shelter-free, all-volunteer operation that has rescued over 1,000 animals — is publishing two new coffee-table dog books, *Dogs of Colorado* and *Dogs of Colorado: Legends*, to cover mounting rescue and medical costs through 2026. The effort expands on last year's successful *Dogs of Telluride*. Submissions open to any Colorado dog owner.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_7e57cb83-a757-4baf-b9a5-08097944c89d.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/f7/4f759951-daa8-4c30-bd44-3d7bf65d8ff1/6a9f4e339f5de.image.jpg",
     "imgHiRes": true
   },
   {
@@ -341,9 +353,9 @@
     "source": "Telluride Times",
     "date": "September 3, 2026",
     "firstSeen": "2026-09-08",
-    "newsTopic": "community",
-    "copy": "TOWN OF MOUNTAIN VILLAGE",
-    "claudeSummary": false,
+    "newsTopic": "land-use",
+    "copy": "Mountain Village is holding a Sept. 17 public hearing on an ordinance amending its Public Art Commission rules. SMPA will charge a $2 paper billing fee starting Oct. 29. San Miguel County is seeking bids to repaint the county jail, and Telluride's Planning & Zoning will hear a preliminary PUD application for the Shandoka Lot on Sept. 24.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     "imgHiRes": true
@@ -957,6 +969,24 @@
     "img": ""
   },
   {
+    "title": "Marya Stark and Charles Dalton Sworn In to Telluride Town Council",
+    "source": "Town of Telluride",
+    "date": "August 12, 2026",
+    "newsTopic": "government",
+    "copy": "(July 21, 2026) – The Town welcomed two new members to Town Council this morning as Charles Dalton and Marya Stark were sworn into office at 9:30 a.m. Town Clerk Tiffany Kavanaugh administered the oath of office for both officials.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=402",
+    "img": ""
+  },
+  {
+    "title": "Arrest Made in String of Telluride Mountain Bike Thefts",
+    "source": "Town of Telluride",
+    "date": "August 12, 2026",
+    "newsTopic": "recreation",
+    "copy": "(August 11, 2026) – The Telluride Marshal's Department has identified and arrested a suspect in a series of mountain bike thefts that account for more than $22,000 in reported losses.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=401",
+    "img": "https://www.telluride.gov/ImageRepository/Document?documentID=15642"
+  },
+  {
     "title": "Please Take the Advanced Web Map Survey",
     "source": "San Miguel County",
     "date": "September 3, 2026",
@@ -973,6 +1003,15 @@
     "copy": "",
     "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
+  },
+  {
+    "title": "Waste Tire Collection Event",
+    "source": "San Miguel County",
+    "date": "August 24, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
   },
   {
     "title": "Imogene and Black Bear Passes Closed 9/12",

@@ -343,6 +343,18 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/28638/149445047981c35a961.800x533.webp"
   },
   {
+    "title": "Gaiascope Saturday Sessions",
+    "link": "https://www.telluride.com/event/gaiascope-saturday-sessions/",
+    "description": "Gaiascope Saturday Sessions Live music + Kaleidoscope art every Saturday in September.",
+    "pubDate": "2026-09-12",
+    "endDate": "2026-09-26",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63515/screenshot_2026-09-05_at_11_00_00_am.800x533.webp"
+  },
+  {
     "title": "A Telluride Theatre FRINGE Project: La Familia Music Group",
     "link": "https://www.telluride.com/event/a-telluride-theatre-fringe-project-la-familia-music-group/",
     "description": "Created by La Familia Music Group, this day of youth workshops culminates in a community concert, showcasing student …",
@@ -398,6 +410,17 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/63467/screenshot_2026-09-01_at_9_12_39_am.800x533.webp"
   },
   {
+    "title": "Blues & Brews Beer Pairing Dinner",
+    "link": "https://www.telluride.com/event/blues-brews-beer-pairing-dinner-1/",
+    "description": "As Telluride settles into Blues & Brews weekend, gather around the table for an evening devoted to the art of craft …",
+    "pubDate": "2026-09-17",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63525/blues_dinner.800x533.webp"
+  },
+  {
     "title": "Telluride Blues & Brews Festival",
     "link": "https://www.telluride.com/event/telluride-blues-brews-festival/",
     "description": "Renowned as one of the most scenic and intimate music festivals in the country, Telluride Blues & Brews Festival is …",
@@ -432,6 +455,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/61644/img_7366.800x533.webp"
+  },
+  {
+    "title": "Blues Brunch",
+    "link": "https://www.telluride.com/event/blues-brunch/",
+    "description": "Gather at Black Iron Kitchen + Bar for a Sunday brunch where mountain mornings and live music set the tone. From 7:00AM …",
+    "pubDate": "2026-09-20",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63527/blues_brunch.800x533.webp"
   },
   {
     "title": "Trout-A-Palooza",

@@ -1,22 +1,22 @@
 {
-  "hash": "e03303ac582a74ff9589541d650f30846ab3a658",
-  "lede": "The biggest thing on the government calendar this week is the San Miguel County BOCC special meeting Wednesday, where commissioners will consider changing the AMI income limits on deed-restricted properties at Pinion Park — a move that could quietly shift who qualifies for local housing. Also Wednesday, the county Planning Commission takes up three proposed Land Use Code amendments covering forestry, oil and gas, and geothermal energy. Over in Ridgway, the town council meets Tuesday with the Gold Mountain Fire's aftermath squarely on the agenda.",
+  "hash": "6831437d8330c63813f09e73543572e7201bc82e",
+  "lede": "The biggest item this week is the San Miguel County BOCC's special meeting Wednesday, where they'll consider changing the AMI limits on deed-restricted properties at Pinion Park — a technical-sounding move that directly shapes who qualifies for local workforce housing. Also worth watching: the County Planning Commission takes up three Land Use Code amendments covering forestry, oil and gas, and geothermal energy on Thursday, and the Ridgway Town Council meets Wednesday to ratify letters supporting a federal Major Disaster Declaration tied to the Gold Mountain Fire, which has scorched nearly 40,000 acres and repeatedly cut off Highway 550.",
   "notable": [
     {
       "id": 4,
-      "stake": "Council ratifies disaster declaration support for Gold Mountain Fire-affected communities."
+      "stake": "Council ratifies disaster declaration support for 40,000-acre Gold Mountain Fire."
     },
     {
       "id": 6,
-      "stake": "AMI threshold change on deed-restricted Pinion Park homes could alter who qualifies."
+      "stake": "BOCC vote could shift AMI limits on Pinion Park deed-restricted housing units."
     },
     {
       "id": 8,
-      "stake": "Planning Commission votes on Land Use Code changes covering forestry, oil/gas, and geothermal."
+      "stake": "Planning Commission recommends on three Land Use Code amendments before BOCC action."
     },
     {
       "id": 11,
-      "stake": "SMART board votes on investment advisor hire and FY25 audit acceptance."
+      "stake": "SMART board votes on investment advisor hire and accepts FY25 audit financials."
     }
   ]
 }
