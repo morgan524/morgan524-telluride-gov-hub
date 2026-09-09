@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Sep 2026 04:01:49 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 11:04:57 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Sep 9–15</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-35</guid>
-      <pubDate>Wed, 09 Sep 2026 04:01:49 GMT</pubDate>
-      <description><![CDATA[The biggest item this week is San Miguel County's special BOCC meeting Wednesday, where commissioners will consider changing the AMI limits on deed-restricted properties at Pinion Park — a technical tweak that directly shapes who qualifies for affordable housing in the county. Also worth your attention: Ridgway's council ratifies letters supporting a federal disaster declaration for the Gold Mountain Fire, the county Planning Commission weighs in on Land Use Code amendments covering forestry, oil and gas, and geothermal, and the Housing Code SSR working group hits its eighth session on stripping barriers to workforce housing production.]]></description>
+      <pubDate>Wed, 09 Sep 2026 11:04:57 GMT</pubDate>
+      <description><![CDATA[The biggest item this week is the San Miguel County BOCC's special meeting Tuesday, where they'll consider changing the AMI limits on deed-restricted properties in Pinion Park — a technical-sounding vote that determines who actually qualifies for affordable housing. Also Tuesday, the County Planning Commission takes up three Land Use Code amendments covering forestry, oil and gas, and geothermal energy. Over in Ridgway, the Town Council is ratifying letters supporting a federal disaster declaration tied to the Gold Mountain Fire, which has scorched nearly 40,000 acres and repeatedly cut off Highway 550.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -36,7 +36,7 @@ The September 9, 2026 Norwood Board of Trustees Meeting agenda hasn't been poste
 
 A heavy agenda for a small-town council — and some of it carries real weight. The Council will ratify two letters already sent: one backing a federal Major Disaster Declaration for the Gold Mountain Fire, which has burned nearly 40,000 acres northeast of Ouray, severed Highway 550 repeatedly, and left communities like Ridgway isolated and facing years of post-fire debris flows; and one supporting proposed recreation fees at Blue Lakes in the Mount Sneffels Wilderness to address overcrowding. On the policy side: interviews and appointment of Sustainability Advisory Board members; a Notice of Award for pre-approved ADU architectural design plans; authorization of more than $25,000 for sidewalk repairs near the Post Office and Clinton Street; a request from the Athletic Park Coalition to fund professional design services for a bike park; proposed changes to the Marshal's Office overtime policy; acceptance of the completed ductile iron pipe replacement project; direction on Wastewater Treatment Plant siting options; and consideration of scaling back from Stage 2 to Stage 1 fire restrictions and rescinding Stage 2 mandatory water restrictions.
 
-⚡ Why it matters: Council ratifies support for federal disaster declaration after Gold Mountain Fire devastation.]]></description>
+⚡ Why it matters: Council ratifies disaster declaration support for Gold Mountain Fire recovery.]]></description>
       <category>Meeting</category>
       <category>ridgway</category>
     </item>
@@ -60,7 +60,7 @@ The September 9, 2026 Board of County Commissioners Work Session agenda hasn't b
 
 A short special meeting with two items worth watching. On the housing side, the BOCC — sitting as the San Miguel County Housing Authority — will consider Resolution 2026-34, which would authorize a change in Area Median Income limitations for certain deed-restricted properties in Pinion Park. That's a technical adjustment, but AMI thresholds are the fulcrum on which affordability restrictions actually turn. There's also an initial discussion on Covenant Amendment Provisions — early-stage, but covenant language is where deed restrictions either hold or erode over time. Separately, the Board will discuss Colorado State Ballot Measures and take up a procedural question about CCI Legislative Committee representation. Consent agenda covers the July Road Report and a subrecipient certification.
 
-⚡ Why it matters: BOCC may change AMI limits on deed-restricted Pinion Park homes, affecting who qualifies.]]></description>
+⚡ Why it matters: AMI threshold change for Pinion Park deed-restricted housing — determines who qualifies.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -77,6 +77,19 @@ Mama Said String Band is an instant classic, since 2016 they’ve been bringing 
       <media:content url="https://ucarecdn.com/a853e817-2c27-4803-a085-95d7ee11beaf/-/crop/999x1000/250,0/-/preview/" medium="image" />
       <category>Community Event</category>
       <category>The Alibi</category>
+    </item>
+    <item>
+      <title>[Wed, Sep 9] Bear Aware Puppet Show</title>
+      <link>https://telluridelibrary.libcal.com/event/17255211?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/bear%20aware%20puppet%20show%7C2026-09-09</guid>
+      <pubDate>Wed, 09 Sep 2026 15:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_24_08_04_34.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Kids Area
+
+A puppet show at Wilkinson Public Library's Kids Area focused on bear awareness, offering young audiences a fun and educational introduction to living safely alongside wildlife in the region. The program runs approximately 30 minutes.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_24_08_04_34.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Wed, Sep 9] Tennis Clinic 3.0-4.0</title>
@@ -115,17 +128,82 @@ Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot an
       <category>KOTO</category>
     </item>
     <item>
+      <title>[Wed, Sep 9] Lite lunch- Land</title>
+      <link>https://telluridelibrary.libcal.com/event/17475536?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/lite%20lunch%20land%7C2026-09-09</guid>
+      <pubDate>Wed, 09 Sep 2026 18:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_24_09_25_44.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Lower Terrace - outdoors
+
+12:00 PM – 1:00 PM · Land by Maggie O&#39;Farrell On a windswept peninsula stretching out into the Atlantic, Tom&aacute;s and his reluctant son, Liam, are working for the great Ordnance Survey project to map the whole of Ireland. The year is 1865, and in a country not long since ravaged and emptied by the Great Hunger, the task is not an easy one. Tom&aacute;s, however, is determined that his maps will be a record of the disaster. The British soldiers in charge are due to arrive any day, expecting the work to be completed, but Tom&aacute;s is unexpectedly sent off course by an unsettling encounter in a copse. His life, and the lives of those of his family, will never be the same again. Liam is terrified by the sudden change in his taciturn father. …]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_24_09_25_44.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
       <title>[Wed, Sep 9] Mahjongg for Independent Players</title>
-      <link>https://koto.org/event/mahjongg-for-independent-players-4/2026-09-09/</link>
+      <link>https://telluridelibrary.libcal.com/event/17457127?hs=a</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/mahjongg%20for%20independent%20players%7C2026-09-09</guid>
       <pubDate>Wed, 09 Sep 2026 19:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/mahj.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Wilkinson Public Library, Telluride
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Lower Terrace - outdoors
 
-Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/05/mahj.jpg" medium="image" />
+1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg" medium="image" />
       <category>Community Event</category>
-      <category>KOTO</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Wed, Sep 9] Movie and A Snack Club</title>
+      <link>https://telluridelibrary.libcal.com/event/17283035?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/movie%20and%20a%20snack%7C2026-09-09</guid>
+      <pubDate>Wed, 09 Sep 2026 21:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_26_10_08_32.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Telluride Room
+
+A recurring library program at Wilkinson Public Library where participants gather in the Telluride Room to watch a movie and enjoy a snack. The event runs from 3:30 to 5:30 PM.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_26_10_08_32.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Wed, Sep 9] Harry Potter Watch Party</title>
+      <link>https://telluridelibrary.libcal.com/event/17486055?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/harry%20potter%20watch%20party%7C2026-09-09</guid>
+      <pubDate>Wed, 09 Sep 2026 22:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_22_52.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Wilkinson Public Library
+
+4:00 PM – 6:30 PM · Join the WPL every Wednesday after school in September and October, where we will sequentially watch all 8 of the original Harry Potter movies. This event is for teens/youth.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_22_52.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Wed, Sep 9] Poderosa Grupo de Lectura</title>
+      <link>https://telluridelibrary.libcal.com/event/15905935?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/poderosa%20grupo%20de%20lectura%7C2026-09-09</guid>
+      <pubDate>Wed, 09 Sep 2026 23:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_13_00_19.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Magazine Room
+
+5:00 PM – 6:30 PM · Vamos a discutir el libro (La Corresponsal) y compartir nuestros pensamientos. Este es un grupo de lectura y necesitas recoger su libro con Claudia. Por favor de registrarse con Claudia]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_13_00_19.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Wed, Sep 9] CANCELLEDSewing 101 with Melissa</title>
+      <link>https://telluridelibrary.libcal.com/event/15970621?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/cancelledsewing%20101%20with%20melissa%7C2026-09-09</guid>
+      <pubDate>Wed, 09 Sep 2026 23:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1717100108.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Meeting Room #6 - large
+
+5:00 PM – 7:00 PM · Don&#39;t throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we&#39;ll provide the sewing materials.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1717100108.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Wed, Sep 9] Sewing 101 with Melissa</title>
@@ -141,17 +219,17 @@ Don't throw away your old clothes just because they have a tiny (or even a large
       <category>KOTO</category>
     </item>
     <item>
-      <title>[Wed, Sep 9] Sound Bath with Danielle &amp; Ian</title>
-      <link>https://koto.org/event/sound-bath-with-danielle-ian-2/</link>
+      <title>[Wed, Sep 9] Sound Bath with Danielle Christmas &amp; Ian Wilson</title>
+      <link>https://telluridelibrary.libcal.com/event/16802613?hs=a</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/sound%20bath%20with%20danielle%7C2026-09-09</guid>
       <pubDate>Wed, 09 Sep 2026 23:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/08/danielle-sound-1.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Wilkinson Public Library, Telluride
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_09_11_28_23.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
 
-Join us for an hour of traveling through sound and the inner self! In this once a month community event, we are healing the body and auric field with a multitude of sound frequencies. Chimes, 432hz quartz singing bowls, crystal tuning pyramids, rain drums, GALORE! We will also be holding space for group conversation, weaving through topics of spirituality. Bring a blanket, yoga mat, water bottle, journal, and your psycho-spiritual discussion hat! After each sound bath, we will be sticking around for group discussion for a duration of 30 – 40 minutes. Each month will have a different psycho-spiritual topic, and will offer tools to integrate these themes into our daily lives. Join us for this beautiful summer offering! Hosted by: Danielle Christmas & Ian Wilson Danielle Christmas: Sound healer/ Reiki 2/ YTT 200hr/ Breathwork coach Ian Wilson: Sound healing practitioner/ Level 3 Reiki practitioner/ Herbalist]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/08/danielle-sound-1.png" medium="image" />
+5:30 PM – 7:00 PM · Join us for an hour of traveling through sound and the inner self! In this once a month community event, we are healing the body and auric field with a multitude of sound frequencies. Chimes, 432hz quartz singing bowls, crystal tuning pyramids, rain drums, GALORE! We will also be holding space for group conversation, weaving through topics of spirituality. Bring a blanket, yoga mat, water bottle, journal, and your psycho-spiritual discussion hat! After each sound bath, we will be sticking around for group discussion for a duration of 30 - 40 minutes. Each month will have a different psycho-spiritual topic, and will offer tools to integrate these themes into our daily lives. Join us for this beautiful summer offering! …]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_09_11_28_23.jpg" medium="image" />
       <category>Community Event</category>
-      <category>KOTO</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Meeting] Town Council Budget - Sep 10 2026 — 2026-09-10</title>
@@ -173,7 +251,7 @@ The September 10, 2026 Town Council Budget agenda hasn't been posted yet.]]></de
 
 Three Land Use Code amendments are on the table for the Planning Commission's recommendation — covering forestry practices, oil and gas, and geothermal energy. All three are code-change items, meaning the Commission is being asked to weigh in before any revisions move forward to the BOCC. The agenda text doesn't detail the specific proposed changes within each amendment, but the pairing of oil & gas with geothermal in the same session signals the county is taking a broad look at how extraction and energy activities are regulated in unincorporated San Miguel County.
 
-⚡ Why it matters: Planning Commission recommends on code changes covering forestry, oil and gas, and geothermal.]]></description>
+⚡ Why it matters: Planning Commission weighs in on three Land Use Code amendments before BOCC action.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -362,81 +440,6 @@ The Creative Exchange is a brand-new monthly series by Telluride Arts designed f
       <category>KOTO</category>
     </item>
     <item>
-      <title>[Fri, Sep 11] Facing the Mourning</title>
-      <link>https://koto.org/event/facing-the-mourning/2026-09-10/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/facing%20the%20mourning%7C2026-09-11</guid>
-      <pubDate>Fri, 11 Sep 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Redvale Community Center
-
-Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit from additional support while navigating grief and loss. Please feel free to share this information with others who may be interested.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Fri, Sep 11] The Meditations Live in Concert</title>
-      <link>https://sheridanoperahouse.com/events/the-meditations-live-in-concert/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/the%20meditations%20live%20in%7C2026-09-11</guid>
-      <pubDate>Fri, 11 Sep 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://sheridanoperahouse.com/wp-content/uploads/2026/05/unnamed-file.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Sheridan Opera House
-📍 Sheridan Opera House • Telluride, CO
-]]></description>
-      <media:content url="https://sheridanoperahouse.com/wp-content/uploads/2026/05/unnamed-file.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>Sheridan Opera House</category>
-    </item>
-    <item>
-      <title>[Fri, Sep 11] Lone Tree Cemetery Tours</title>
-      <link>https://www.telluride.com/event/lone-tree-cemetery-tours/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/lone%20tree%20cemetery%20tours%7C2026-09-11</guid>
-      <pubDate>Fri, 11 Sep 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/49105/scott-rodgerson-zlhbjxbccec-unsplash.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Join the Telluride Historical Museum for Lone Tree Cemetery Tours this fall! This Telluride Historical Museum tour …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/49105/scott-rodgerson-zlhbjxbccec-unsplash.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Fri, Sep 11] The Meditations</title>
-      <link>https://www.telluride.com/event/the-meditations/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/the%20meditations%7C2026-09-11</guid>
-      <pubDate>Fri, 11 Sep 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62648/meditations_poster_template_2018.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Founded in Jamaica in the 1970s, The Meditations are legendary roots reggae pioneers whose soulful harmonies and …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/62648/meditations_poster_template_2018.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Fri, Sep 11] Tennis Clinic 3.0-4.0</title>
-      <link>https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-11/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/tennis%20clinic%203%200%7C2026-09-11</guid>
-      <pubDate>Fri, 11 Sep 2026 15:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Telluride Racquet Club, Mountain Village
-
-This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Fri, Sep 11] Up-off Gymnastics, Dance, and Spanish</title>
-      <link>https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-09-11/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/up%20off%20gymnastics%20dance%7C2026-09-11</guid>
-      <pubDate>Fri, 11 Sep 2026 16:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Lone Cone Library Norwood
-
-We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
       <title>[Meeting] Open Space Commission - Sep 14 2026 — 2026-09-14</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-09-14%7COpen%20Space%20Commission%20-%20Sep%2014%202026</guid>
@@ -478,7 +481,7 @@ The September 15, 2026 Ophir General Assembly Meeting agenda hasn't been posted 
 
 The Stakeholder Strategic Roundtable (SSR) working group convenes for its eighth session on the San Miguel County Housing Code Update — a Proposition 123-funded effort to strip out Land Use Code provisions that slow workforce and affordable housing production in unincorporated areas of the county. The two-hour working session zeroes in on the proposed Community Housing Zone, refining draft code recommendations that will eventually go to the BOCC and Planning Commission as formal redlines. Earlier sessions produced a handful of majority-consensus positions: allowing multiple ADUs on larger lots when the bonus unit is deed-restricted for workforce housing; reducing side setbacks to 10 feet in Medium and High Density zones; and preserving by-right density at 1 DU/35 acres while routing additional density exclusively through a workforce housing bonus track — with free-market development required to go through PUD. A range of other ideas, including RV/camper housing, parking reductions, and a TDR program, were set aside for now.
 
-⚡ Why it matters: Working group advances county housing code overhaul aimed at cutting barriers to affordable units.]]></description>
+⚡ Why it matters: Working group advances housing code changes designed to speed affordable housing production.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>

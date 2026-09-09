@@ -1,22 +1,34 @@
 [
   {
-    "title": "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
-    "href": "https://events.ourayridgwayevents.com/event/monthly-welcome-home-alliance-veterans-coffee-the-sherbino",
-    "date": "2026-09-08",
-    "time": "10:00 AM",
-    "location": "The Sherbino",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/52236172073282/huge/134613035140f6c008febe657f2e7e23acc365e9.jpg",
+    "title": "Mahjongg for Independent Players",
+    "href": "https://koto.org/event/mahjongg-for-independent-players-4/2026-09-09/",
+    "date": "2026-09-09",
+    "time": "1:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have…",
+    "type": "Community"
+  },
+  {
+    "title": "Ouray: Echoes in the Canyon",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-2450",
+    "date": "2026-09-09",
+    "time": "1:00 PM",
+    "location": "The Wright Opera House",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "",
-    "type": "Community",
-    "endDate": "2026-10-13"
+    "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
+    "type": "Arts & Film"
   },
   {
     "title": "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
     "href": "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
-    "date": "2026-09-08",
+    "date": "2026-09-09",
     "time": "10:00 AM",
     "location": "The 610 Arts Collective",
     "town": "Ridgway",
@@ -30,7 +42,7 @@
   {
     "title": "Ongoing Exhibition: BIG BOX-Big New Work By T-Bone",
     "href": "https://events.ourayridgwayevents.com/event/ongoing-exhibition-big-box-big-new-work-by-t-bone",
-    "date": "2026-09-08",
+    "date": "2026-09-09",
     "time": "10:00 AM",
     "location": "Decker Community Room",
     "town": "Ridgway",
@@ -40,243 +52,6 @@
     "desc": "The Big Box Show! Bigger, better and more. This groundbreaking local art won't last long! Ridgway's own T-Bone and his quintessential colorful cardboard paintings take on new life and meaning in the Decker where they have room to stretch…",
     "type": "Arts & Film",
     "endDate": "2026-09-25"
-  },
-  {
-    "title": "Ongoing: Social Justice Travel Exhibition",
-    "href": "https://events.ourayridgwayevents.com/event/copy-of-art-opening-social-justice-travel-exhibition",
-    "date": "2026-09-08",
-    "time": "10:00 AM",
-    "location": "Decker Community Room",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53764349683288/huge/471bb8c36dc067ddd9b229c9e31032260184eb5e.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote…",
-    "type": "Arts & Film",
-    "endDate": "2026-09-29"
-  },
-  {
-    "title": "Storytime / Hora de Cuentos",
-    "href": "https://telluridelibrary.libcal.com/event/17514579?hs=a",
-    "date": "2026-09-08",
-    "time": "10:30 AM",
-    "location": "Kids Area",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi n en ingl s para ni os de todas las edades y sus padres o cuidadores.",
-    "type": "Family & Kids"
-  },
-  {
-    "title": "Teen Cook",
-    "href": "https://telluridelibrary.libcal.com/event/17486114?hs=a",
-    "date": "2026-09-08",
-    "time": "2:00 PM",
-    "location": "Teen Area",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_27_00.png",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "2:00 PM – 3:00 PM · Join the WPL Every Tuesday after school for Teen Cook. We will cook a different recipe from scratch, and have enough to share with those around!",
-    "type": "Community"
-  },
-  {
-    "title": "I Heart Art with Ah Haa",
-    "href": "https://telluridelibrary.libcal.com/event/17292100?hs=a",
-    "date": "2026-09-08",
-    "time": "2:30 PM",
-    "location": "Kids Area",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_39_32.png",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "2:30 PM – 4:00 PM · Looking for a fun and enriching way to spend your afternoons? Join us Tuesdays for I Heart Art, designed especially for kids aged 5-12! Buscas una manera divertida de pasar tus tardes? Unete a nuestro programa…",
-    "type": "Arts & Film"
-  },
-  {
-    "title": "Free Legal Clinic - Clínica Jurídica Gratuita (Zoom)",
-    "href": "https://telluridelibrary.libcal.com/event/16009653?hs=a",
-    "date": "2026-09-08",
-    "time": "4:00 PM",
-    "location": "Meeting Room #5 - small",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1760996664.jpg",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "4:00 PM – 5:40 PM · A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The…",
-    "type": "Talks & Classes"
-  },
-  {
-    "title": "DAVE MENSCH",
-    "href": "https://events.ourayridgwayevents.com/event/dave-mensch-1938",
-    "date": "2026-09-08",
-    "time": "4:00 PM",
-    "location": "687 N Cora Street, Ridgway, CO 81432",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
-    "type": "Music"
-  },
-  {
-    "title": "The Sixth Nik with Daniel Kraus (Online Author Talk)",
-    "href": "https://telluridelibrary.libcal.com/event/17358126?hs=a",
-    "date": "2026-09-08",
-    "time": "5:00 PM",
-    "location": "Wilkinson Public Library",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_07_15_55_02.jpg",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "5:00 PM – 6:00 PM · Prepare to launch into the darkest depths of deep space! Join us online as we sit down with master storyteller Daniel Kraus, winner of the 2026 Pulitzer Prize for Fiction, to celebrate the release of his breathtaking…",
-    "type": "Talks & Classes"
-  },
-  {
-    "title": "TACO TUESDAY + COREY HOOKER LIVE",
-    "href": "https://events.ourayridgwayevents.com/event/taco-tuesday-corey-hooker-live",
-    "date": "2026-09-08",
-    "time": "5:00 PM",
-    "location": "The Adobe Inn",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53922057710760/huge/b3209a617c9bff0b6b938d99671354a9b36811c1.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "TACO TUESDAY + COREY HOOKER LIVE View on site | Email this event",
-    "type": "Community"
-  },
-  {
-    "title": "Book Buzz at the Telluride Brewing Company",
-    "href": "https://telluridelibrary.libcal.com/event/16877752?hs=a",
-    "date": "2026-09-08",
-    "time": "5:30 PM",
-    "location": "Telluride Brewing Company",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_11_15_14_08.jpg",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "5:30 PM – 6:30 PM · Join WPL on the 2nd Tuesday 5:30-6:30pm of each month at TBC in Lawson Hill May-September. Our queen of Reader s Advisory, Tiffany Osborne, will be there to talk about our hottest new titles and Miss Melissa will be…",
-    "type": "Talks & Classes"
-  },
-  {
-    "title": "NWC Rescheduled To 09 22 2026",
-    "href": "https://www.norwoodtown.com/2026-09-08-nwc-rescheduled-to-09-22-2026",
-    "date": "2026-09-08",
-    "time": "6:00 AM",
-    "location": "Norwood, CO",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Government Meeting",
-    "source": "Town of Norwood",
-    "desc": "",
-    "type": "Community"
-  },
-  {
-    "title": "Mountain Village Merchant Meeting",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/merchant-meeting/",
-    "date": "2026-09-08",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/27556/merchant_event-1.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Join us for the monthly Mountain Village Merchant Meeting to be held on the second Tuesday of each month from 10 to 11 a.m. The meeting will be hybrid with",
-    "type": "Community"
-  },
-  {
-    "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
-    "date": "2026-09-08",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
-    "type": "Talks & Classes"
-  },
-  {
-    "title": "Weekly Young Adult Gathering",
-    "href": "https://www.beacontelluride.com/upcoming-events",
-    "date": "2026-09-08",
-    "time": "6:00 PM",
-    "location": "The Well, 122 S Aspen",
-    "town": "",
-    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
-    "category": "Community Event",
-    "source": "Beacon",
-    "desc": "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
-    "type": "Food & Drink"
-  },
-  {
-    "title": "After Telluride Film Festival",
-    "href": "https://www.telluride.com/event/after-telluride-film-festival/",
-    "date": "2026-09-08",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/55245/screenshot_2026-09-03_at_2_12_52_pm.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "After Telluride Film Festival (ATFF) screens eight popular Festival films for locals on the Tuesday - Friday following …",
-    "type": "Arts & Film",
-    "endDate": "2026-09-12"
-  },
-  {
-    "title": "Birding Walk with Katie Triest",
-    "href": "https://telluridelibrary.libcal.com/event/16991385?hs=a",
-    "date": "2026-09-08",
-    "time": "8:00 AM",
-    "location": "Telluride Post Office",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_31_08_57_38.jpg",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "8:00 AM – 10:00 AM · Join ornithological expert Katie Triest for this series of chill walks where you ll learn amazing facts and practice identifying local birds! Meet at the post office and we ll head to the beaver ponds at the edge of…",
-    "type": "Community"
-  },
-  {
-    "title": "Functional Fitness - Strength & Mobility Training For Women",
-    "href": "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
-    "date": "2026-09-08",
-    "time": "8:15 AM",
-    "location": "Weehawken Ridgway (Old Schoolhouse)",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53312790468311/huge/d76b2fb7534e91f8369b0dace133058cd22fa783.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Welcome to Ridgway's strength and mobility training + YOGA! Functional Strength & Mobility Training (for women): Tuesday & Thursday 8:15-9 am Vinyasa Yoga: Wednesday 8:15-9:15 am Functional means we focus on movements that mimic everyday…",
-    "type": "Talks & Classes",
-    "endDate": "2026-11-05"
-  },
-  {
-    "title": "Monthly Welcome Home Alliance Veteran's Coffee at the Sherbino",
-    "href": "https://sherbino.org/event/monthly-welcome-home-alliance-veterans-coffee-at-the-sherbino/2026-09-08/",
-    "date": "2026-09-08",
-    "time": "",
-    "location": "Ridgway, CO",
-    "town": "Ridgway",
-    "img": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
-    "category": "",
-    "source": "Sherbino Theater",
-    "desc": "A monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The recurring event offers a casual space for veterans to connect with one another and with community support.",
-    "type": "Community"
-  },
-  {
-    "title": "Mahjongg for Independent Players",
-    "href": "https://koto.org/event/mahjongg-for-independent-players-4/2026-09-09/",
-    "date": "2026-09-09",
-    "time": "1:00 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have…",
-    "type": "Community"
   },
   {
     "title": "Water Aerobics",
@@ -319,6 +94,58 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "WPBL Games Live Streamed in the Tavern",
+    "href": "https://events.ourayridgwayevents.com/event/wpbl-games-live-streamed-in-the-tavern-3695",
+    "date": "2026-09-09",
+    "time": "11:00 AM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53927988718089/huge/3ea539deab7496fee7b6c38ac0ae6e419522e669.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Semifinal A - Game 1. Free to attend. Doors at 4:30 pm, Game at 5 pm. View on site | Email this event",
+    "type": "Community"
+  },
+  {
+    "title": "Lite lunch- Land",
+    "href": "https://telluridelibrary.libcal.com/event/17475536?hs=a",
+    "date": "2026-09-09",
+    "time": "12:00 PM",
+    "location": "Lower Terrace - outdoors",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_24_09_25_44.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "12:00 PM – 1:00 PM · Land by Maggie O Farrell On a windswept peninsula stretching out into the Atlantic, Tom s and his reluctant son, Liam, are working for the great Ordnance Survey project to map the whole of Ireland. The year is 1865,…",
+    "type": "Community"
+  },
+  {
+    "title": "Movie and A Snack Club",
+    "href": "https://telluridelibrary.libcal.com/event/17283035?hs=a",
+    "date": "2026-09-09",
+    "time": "3:30 PM",
+    "location": "Telluride Room",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_26_10_08_32.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "A recurring library program at Wilkinson Public Library where participants gather in the Telluride Room to watch a movie and enjoy a snack. The event runs from 3:30 to 5:30 PM.",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Harry Potter Watch Party",
+    "href": "https://telluridelibrary.libcal.com/event/17486055?hs=a",
+    "date": "2026-09-09",
+    "time": "4:00 PM",
+    "location": "Wilkinson Public Library",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_22_52.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "4:00 PM – 6:30 PM · Join the WPL every Wednesday after school in September and October, where we will sequentially watch all 8 of the original Harry Potter movies. This event is for teens/youth.",
+    "type": "Family & Kids"
+  },
+  {
     "title": "NEW With Weehawken: Beat & Step: West African Dance, Drum & Body Percussion ~ with performances in The Nutcracker Remixed!",
     "href": "https://events.ourayridgwayevents.com/event/new-with-weehawken-beat-step-west-african-dance-drum-body-percussion-with-performances-in-the-nutcracker-remixed",
     "date": "2026-09-09",
@@ -345,6 +172,32 @@
     "type": "Community"
   },
   {
+    "title": "Poderosa Grupo de Lectura",
+    "href": "https://telluridelibrary.libcal.com/event/15905935?hs=a",
+    "date": "2026-09-09",
+    "time": "5:00 PM",
+    "location": "Magazine Room",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_13_00_19.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "5:00 PM – 6:30 PM · Vamos a discutir el libro (La Corresponsal) y compartir nuestros pensamientos. Este es un grupo de lectura y necesitas recoger su libro con Claudia. Por favor de registrarse con Claudia",
+    "type": "Community"
+  },
+  {
+    "title": "CANCELLEDSewing 101 with Melissa",
+    "href": "https://telluridelibrary.libcal.com/event/15970621?hs=a",
+    "date": "2026-09-09",
+    "time": "5:00 PM",
+    "location": "Meeting Room #6 - large",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1717100108.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "5:00 PM – 7:00 PM · Don t throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own…",
+    "type": "Community"
+  },
+  {
     "title": "Sound Bath with Danielle & Ian",
     "href": "https://koto.org/event/sound-bath-with-danielle-ian-2/",
     "date": "2026-09-09",
@@ -355,6 +208,19 @@
     "category": "Community Event",
     "source": "KOTO Community Calendar",
     "desc": "Join us for an hour of traveling through sound and the inner self! In this once a month community event, we are healing the body and auric field with a multitude of sound frequencies. Chimes, 432hz quartz singing bowls, crystal tuning…",
+    "type": "Wellness"
+  },
+  {
+    "title": "Sound Bath with Danielle Christmas & Ian Wilson",
+    "href": "https://telluridelibrary.libcal.com/event/16802613?hs=a",
+    "date": "2026-09-09",
+    "time": "5:30 PM",
+    "location": "Program Room",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_09_11_28_23.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "5:30 PM – 7:00 PM · Join us for an hour of traveling through sound and the inner self! In this once a month community event, we are healing the body and auric field with a multitude of sound frequencies. Chimes, 432hz quartz singing bowls,…",
     "type": "Wellness"
   },
   {
@@ -400,17 +266,17 @@
     "endDate": "2026-09-17"
   },
   {
-    "title": "Ouray: Echoes in the Canyon",
-    "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-2450",
+    "title": "Bear Aware Puppet Show",
+    "href": "https://telluridelibrary.libcal.com/event/17255211?hs=a",
     "date": "2026-09-09",
-    "time": "7:00 PM",
-    "location": "The Wright Opera House",
-    "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
-    "type": "Arts & Film"
+    "time": "9:00 AM",
+    "location": "Kids Area",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_24_08_04_34.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "A puppet show at Wilkinson Public Library's Kids Area focused on bear awareness, offering young audiences a fun and educational introduction to living safely alongside wildlife in the region. The program runs approximately 30 minutes.",
+    "type": "Family & Kids"
   },
   {
     "title": "Mama Said String Band",
@@ -450,6 +316,20 @@
     "source": "Ouray County",
     "desc": "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3780",
     "type": "Community"
+  },
+  {
+    "title": "Ongoing: Social Justice Travel Exhibition",
+    "href": "https://events.ourayridgwayevents.com/event/copy-of-art-opening-social-justice-travel-exhibition",
+    "date": "2026-09-10",
+    "time": "10:00 AM",
+    "location": "Decker Community Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53764349683288/huge/471bb8c36dc067ddd9b229c9e31032260184eb5e.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote…",
+    "type": "Arts & Film",
+    "endDate": "2026-09-29"
   },
   {
     "title": "OCAA Art Show: Thomas Livingstone Photography",
@@ -565,8 +445,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "",
-    "type": "Community"
+    "desc": "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and district operations are welcome to attend.",
+    "type": "Arts & Film"
   },
   {
     "title": "Senior Lunch",
@@ -578,7 +458,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday meal gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     "type": "Community"
   },
   {
@@ -700,6 +580,20 @@
     "source": "Beacon",
     "desc": "Thursday night Pickleball with no experience necessary. All supplies provided.",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Functional Fitness - Strength & Mobility Training For Women",
+    "href": "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
+    "date": "2026-09-10",
+    "time": "8:15 AM",
+    "location": "Weehawken Ridgway (Old Schoolhouse)",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53312790468311/huge/d76b2fb7534e91f8369b0dace133058cd22fa783.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Welcome to Ridgway's strength and mobility training + YOGA! Functional Strength & Mobility Training (for women): Tuesday & Thursday 8:15-9 am Vinyasa Yoga: Wednesday 8:15-9:15 am Functional means we focus on movements that mimic everyday…",
+    "type": "Talks & Classes",
+    "endDate": "2026-11-05"
   },
   {
     "title": "Ouray Economic Development Committee",
@@ -855,7 +749,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/05/unnamed-file.jpg",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "",
+    "desc": "The Meditations, the legendary Jamaican reggae vocal group, perform live at the historic Sheridan Opera House in Telluride. This concert brings their classic roots reggae harmonies to one of the region's most celebrated intimate venues.",
     "type": "Wellness"
   },
   {
@@ -922,7 +816,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
     "category": "Community Event",
     "source": "Ouray County",
-    "desc": "https://ouraycountyco.gov/calendar.aspx?EID=3779",
+    "desc": "The Imogene Pass Run is an annual footrace that takes competitors over the challenging Imogene Pass between Telluride and Ouray, traversing one of the most scenic and demanding mountain routes in the San Juan Mountains. The course climbs…",
     "type": "Community"
   },
   {
@@ -1096,7 +990,7 @@
     "type": "Community"
   },
   {
-    "title": "Telluride Theater Fringe Project: La Familia Music Group",
+    "title": "Telluride Theater Fringe Project: The LFMG Experience with La Familia Music Group",
     "href": "https://sheridanoperahouse.com/events/telluride-theater-fringe-project-la-familia-music-group/",
     "date": "2026-09-12",
     "time": "6:00 PM",
@@ -1105,7 +999,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/06/mv-calendar-la-familia.jpg",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "",
+    "desc": "A Fringe Project performance by La Familia Music Group at the historic Sheridan Opera House, presented as part of Telluride Theater's ongoing Fringe series. The show brings the ensemble's signature musical experience to Telluride's beloved…",
     "type": "Arts & Film"
   },
   {
@@ -1200,6 +1094,19 @@
     "type": "Wellness"
   },
   {
+    "title": "WPBL Games Live Streamed in the Tavern",
+    "href": "https://events.ourayridgwayevents.com/event/wpbl-games-live-streamed-in-the-tavern",
+    "date": "2026-09-13",
+    "time": "11:30 AM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53927988718089/huge/3ea539deab7496fee7b6c38ac0ae6e419522e669.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Semifinal A - Game 3 (if necessary). Free to attend. Doors at 5 pm, Game at 5:30 pm. View on site | Email this event",
+    "type": "Community"
+  },
+  {
     "title": "Tea and Tarot",
     "href": "https://koto.org/event/tea-and-tarot/2026-09-13/",
     "date": "2026-09-13",
@@ -1261,7 +1168,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/03/logo-v4-4-web-2-final.png",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "",
+    "desc": "A chamber music concert at the historic Sheridan Opera House in Telluride. The intimate venue provides a fitting backdrop for this acoustic ensemble performance in the classical tradition.",
     "type": "Music"
   },
   {
@@ -1775,7 +1682,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     "type": "Community"
   },
   {
@@ -1870,6 +1777,19 @@
     "source": "Beacon",
     "desc": "Thursday night Pickleball with no experience necessary. All supplies provided.",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Music Bingo",
+    "href": "https://events.ourayridgwayevents.com/event/music-bingo-3805",
+    "date": "2026-09-18",
+    "time": "1:00 PM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53927988654594/huge/47a621344dfb303a07f678d459cf5d7ebfb65204.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "It’s bingo. But louder. And somehow emotionally complicated. Battle for glory using songs, questionable music knowledge, accidental dancing, and the sudden realization that one hit from 2007 still lives in your head rent-free. Expect…",
+    "type": "Community"
   },
   {
     "title": "Telluride Farmers Market",
@@ -2280,6 +2200,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Ouray: Echoes in the Canyon",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-8790",
+    "date": "2026-09-23",
+    "time": "1:00 PM",
+    "location": "",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "September Book Club: \"The Constant Gardener\"",
     "href": "https://events.ourayridgwayevents.com/event/september-book-club-the-constant-gardener",
     "date": "2026-09-23",
@@ -2346,19 +2279,6 @@
     "type": "Community"
   },
   {
-    "title": "Ouray: Echoes in the Canyon",
-    "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-8790",
-    "date": "2026-09-23",
-    "time": "7:00 PM",
-    "location": "",
-    "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
-    "type": "Arts & Film"
-  },
-  {
     "title": "Ouray Chamber Business After Hours",
     "href": "https://events.ourayridgwayevents.com/event/ouray-chamber-business-after-hours-9080",
     "date": "2026-09-24",
@@ -2381,8 +2301,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
-    "type": "Community"
+    "desc": "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
+    "type": "Food & Drink"
   },
   {
     "title": "Watercolor & Wine with Katey Fetch: \"Paint the Peaks\"",
@@ -2578,7 +2498,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
     "type": "Community"
   },
   {
@@ -2777,6 +2697,19 @@
     "type": "Community"
   },
   {
+    "title": "Ouray: Echoes in the Canyon",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon",
+    "date": "2026-09-30",
+    "time": "1:00 PM",
+    "location": "",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Market on the Plaza",
     "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     "date": "2026-09-30",
@@ -2788,19 +2721,6 @@
     "source": "Mountain Village",
     "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
     "type": "Community"
-  },
-  {
-    "title": "Ouray: Echoes in the Canyon",
-    "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon",
-    "date": "2026-09-30",
-    "time": "7:00 PM",
-    "location": "",
-    "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
-    "type": "Arts & Film"
   },
   {
     "title": "Telluride Art Walk",
@@ -3384,6 +3304,19 @@
     "desc": "View on site | Email this event",
     "type": "Community",
     "endDate": "2026-10-16"
+  },
+  {
+    "title": "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
+    "href": "https://events.ourayridgwayevents.com/event/monthly-welcome-home-alliance-veterans-coffee-the-sherbino",
+    "date": "2026-10-13",
+    "time": "10:00 AM",
+    "location": "The Sherbino",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52236172073282/huge/134613035140f6c008febe657f2e7e23acc365e9.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "TYLER SIMMONS",

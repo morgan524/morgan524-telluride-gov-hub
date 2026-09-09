@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-09T04:01:37.405Z",
+ "generated": "2026-09-09T11:04:49.127Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -24,12 +24,6 @@
      "date": "2026-09-01",
      "title": "Town Council - Sep 01 2026",
      "snippet": "Three work sessions open the day: a deep look at Comprehensive Plan goals and objectives with project consultants, a Gondola Subcommittee update, and a review of proposals for a third-party audit of…"
-    },
-    {
-     "source": "school",
-     "date": "2026-08-25",
-     "title": "Telluride Board of Education Monthly Meeting",
-     "snippet": "The August 25 Board of Education meeting carries real weight. The most consequential item is a flood-related budget appropriation for FY 2026-27 — the board will discuss and then vote on adjusting…"
     }
    ],
    "developments": [
@@ -46,7 +40,6 @@
    ],
    "stale": [
     "Carhenge / Shandoka: telluride discussed it on 2026-09-01 (\"Town Council - Sep 01 2026\") but the deep dive was last edited 2026-08-17.",
-    "Carhenge / Shandoka: school discussed it on 2026-08-25 (\"Telluride Board of Education Monthly Meeting\") but the deep dive was last edited 2026-08-17.",
     "Carhenge / Shandoka: timeline entry \"HARC hears Shandoka's four buildings; Carhenge slips to…\" (Aug 19, 2026) is still marked upcoming but the date has passed."
    ]
   },
@@ -148,9 +141,25 @@
    "label": "Norwood Water",
    "lastUpdated": "2026-07-23",
    "upcoming": [],
-   "recent": [],
+   "recent": [
+    {
+     "source": "norwood",
+     "date": "2026-09-08",
+     "title": "Norwood Water Commission Meeting",
+     "snippet": "The September 8, 2026 Norwood Water Commission Meeting agenda hasn't been posted yet."
+    },
+    {
+     "source": "norwood",
+     "date": "2026-09-08",
+     "title": "NWC Rescheduled to 09/22/2026",
+     "snippet": "The September 8th Norwood Water Commission meeting has been rescheduled to Tuesday, September 22, 2026, at 6:30 p.m. at Norwood Town Hall."
+    }
+   ],
    "developments": [],
-   "stale": []
+   "stale": [
+    "Norwood Water: norwood discussed it on 2026-09-08 (\"Norwood Water Commission Meeting\") but the deep dive was last edited 2026-07-23.",
+    "Norwood Water: norwood discussed it on 2026-09-08 (\"NWC Rescheduled to 09/22/2026\") but the deep dive was last edited 2026-07-23."
+   ]
   },
   "fieldpaving": {
    "label": "Field Paving at Town Park",

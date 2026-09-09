@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-09-09",
+    "title": "The county's got a fuel island project. Worth asking about.",
+    "body": "The Board of County Commissioners is set to consider several procurement items — material hauling, a trail connector, and fuel island canopy construction. Tucked alongside those is a federal environmental assessment for a hazardous fuels management project in the Uncompahgre and Gunnison National Forests. Some folks will see federal fuels work on nearby forest lands as overdue and necessary. Others will want to know exactly what that means on the ground — and who has a say. Nothing's final yet; this is still at the consideration stage.\n\nSo where do you stand: is federal hazardous fuels work on our neighboring forests a straightforward win, or do you want more details before you're comfortable?",
+    "choices": [
+      "Get it done — overdue",
+      "Need more details first",
+      "Depends on the scope",
+      "It's complicated"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-09-08",
     "title": "Wildfire code is law — now what?",
     "body": "Town Council passed Ordinance #1640 on August 11, 2026, amending the Land Use Code to implement the Colorado Wildfire Resiliency Code. Now a rescheduled budget session may revisit it. Some residents will see the code as overdue — the fire risk up here is real and the old rules didn't account for it. Others will push back on what new resiliency requirements cost property owners, or whether state-level rules translate cleanly to a tight canyon town. Nothing's been undone yet. So where do you stand — was folding a wildfire code into the Land Use Code the right call?",
@@ -425,21 +440,6 @@
       "Worth the investment",
       "Other priorities first",
       "Depends on the cost",
-      "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-08-10",
-    "title": "Lock it in — or leave room to adjust?",
-    "body": "The Planning & Zoning Commission is set to consider a site-specific development plan vesting notice for a local project. A vested plan is a big deal: once approved, it locks in a developer's right to build under current rules, even if the Land Use Code changes later. That protects investment and gives developers certainty. But it also ties the community's hands — if neighbors or commissioners later have second thoughts, the window to adjust closes. So the question is whose interests the clock should favor.\n\nWhen a development plan gets vested, who should get the benefit of the doubt — the developer or the community?",
-    "choices": [
-      "Developer — certainty matters",
-      "Community — keep options open",
-      "Depends on the project",
       "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",
