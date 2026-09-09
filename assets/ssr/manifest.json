@@ -1,6 +1,16 @@
 {
   "documents": [
     {
+      "id": "14789",
+      "title": "September SSR No. 8 Meeting Packet",
+      "slug": "SSR-No-8-September-Meeting-Packet",
+      "sourceUrl": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/14789/SSR-No-8-September-Meeting-Packet",
+      "localPath": "assets/ssr/14789-SSR-No-8-September-Meeting-Packet.pdf",
+      "contentType": "application/pdf",
+      "bytes": 349608,
+      "firstSeen": "2026-09-09T20:57:21.791Z"
+    },
+    {
       "id": "14410",
       "title": "July SSR No. 7 Meeting Packet",
       "slug": "SSR-No-7-July-Meeting-Packet",
@@ -181,5 +191,5 @@
       "firstSeen": "2026-04-27T17:16:56.032Z"
     }
   ],
-  "lastChecked": "2026-09-09T16:40:10.505Z"
+  "lastChecked": "2026-09-09T20:57:21.791Z"
 }
