@@ -1,22 +1,26 @@
 {
-  "hash": "7fd2d1b3a2a5e086904e1e982229417999f794bc",
-  "lede": "The most consequential item this week is the San Miguel County BOCC's special meeting Wednesday, where they'll consider changing the Area Median Income limits on deed-restricted properties in Pinion Park — a technical-sounding move that directly shapes who qualifies for workforce housing here. Also worth watching: the County Planning Commission takes up three Land Use Code amendments covering forestry, oil and gas, and geothermal energy, and the Ridgway Town Council meets Tuesday on disaster response tied to the Gold Mountain Fire, which has scorched nearly 40,000 acres and repeatedly cut off Highway 550.",
+  "hash": "b11a80fca04b566b9c38d5440423fa78672c6551",
+  "lede": "The biggest item this week is San Miguel County's special BOCC meeting Wednesday, where commissioners will consider changing the AMI limits on deed-restricted properties at Pinion Park — a technical tweak that directly shapes who qualifies for affordable housing in the county. Also worth your attention: Ridgway's council ratifies letters supporting a federal disaster declaration for the Gold Mountain Fire, the county Planning Commission weighs in on Land Use Code amendments covering forestry, oil and gas, and geothermal, and the Housing Code SSR working group hits its eighth session on stripping barriers to workforce housing production.",
   "notable": [
     {
-      "id": 6,
-      "stake": "AMI limit change on deed-restricted Pinion Park units could shift who qualifies for local housing."
+      "id": 1,
+      "stake": "Council ratifies support for federal disaster declaration after Gold Mountain Fire devastation."
+    },
+    {
+      "id": 3,
+      "stake": "BOCC may change AMI limits on deed-restricted Pinion Park homes, affecting who qualifies."
+    },
+    {
+      "id": 5,
+      "stake": "Planning Commission recommends on code changes covering forestry, oil and gas, and geothermal."
     },
     {
       "id": 8,
-      "stake": "Planning Commission votes on LUC amendments covering forestry, oil and gas, and geothermal energy."
+      "stake": "SMART board votes on investment advisor hire and accepts FY25 audit financials."
     },
     {
-      "id": 4,
-      "stake": "Council ratifies disaster declaration support for Gold Mountain Fire's devastating regional impact."
-    },
-    {
-      "id": 11,
-      "stake": "SMART board votes on FY25 audit acceptance and hiring a new investment advisor."
+      "id": 12,
+      "stake": "Working group advances county housing code overhaul aimed at cutting barriers to affordable units."
     }
   ]
 }

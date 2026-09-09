@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-08T23:20:38.138Z",
+ "generated": "2026-09-09T04:01:37.405Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -147,20 +147,7 @@
   "norwoodwater": {
    "label": "Norwood Water",
    "lastUpdated": "2026-07-23",
-   "upcoming": [
-    {
-     "source": "norwood",
-     "sourceLabel": "Town of Norwood",
-     "title": "NWC Rescheduled to 09/22/2026",
-     "date": "2026-09-08",
-     "time": "",
-     "location": "1670 Naturita St, Norwood CO 81423",
-     "agendaUrl": "https://www.norwoodtown.com/files/5f8304a63/09.08.2026+RESCHEDULED+NWC+Agenda.pdf",
-     "link": "https://www.norwoodtown.com/files/5f8304a63/09.08.2026+RESCHEDULED+NWC+Agenda.pdf",
-     "zoomLink": "https://us02web.zoom.us/j/88274908233",
-     "livestream": ""
-    }
-   ],
+   "upcoming": [],
    "recent": [],
    "developments": [],
    "stale": []

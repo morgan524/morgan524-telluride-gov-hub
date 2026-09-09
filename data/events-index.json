@@ -95,19 +95,6 @@
     "type": "Arts & Film"
   },
   {
-    "title": "Free Legal Clinic – Clínica Jurídica Gratuita",
-    "href": "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-09-08/",
-    "date": "2026-09-08",
-    "time": "4:00 PM",
-    "location": "",
-    "town": "",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys…",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "Free Legal Clinic - Clínica Jurídica Gratuita (Zoom)",
     "href": "https://telluridelibrary.libcal.com/event/16009653?hs=a",
     "date": "2026-09-08",
@@ -131,32 +118,6 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
-    "type": "Music"
-  },
-  {
-    "title": "Online Author Talk with Daniel Kraus",
-    "href": "https://koto.org/event/online-author-talk-with-daniel-kraus/",
-    "date": "2026-09-08",
-    "time": "5:00 PM",
-    "location": "Zoom",
-    "town": "",
-    "img": "https://koto.org/wp-content/uploads/2026/08/daniel.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Prepare to launch into the darkest depths of deep space! Join us online as we sit down with master storyteller Daniel Kraus, winner of the 2026 Pulitzer Prize for Fiction, to celebrate the release of his breathtaking new novel, The Sixth…",
-    "type": "Talks & Classes"
-  },
-  {
-    "title": "West African Drum & Dance",
-    "href": "https://koto.org/event/west-african-drum-dance/",
-    "date": "2026-09-08",
-    "time": "5:00 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "This class is geared towards adults and teens. Children 12 and under must be accompanied by an adult. Sign up at the bottom of this page! Participants will learn a specific Guinean rhythm and get the opportunity to learn various…",
     "type": "Music"
   },
   {
@@ -184,19 +145,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "TACO TUESDAY + COREY HOOKER LIVE View on site | Email this event",
     "type": "Community"
-  },
-  {
-    "title": "Book Buzz at Telluride Brewing Co-Lawson Hill",
-    "href": "https://koto.org/event/book-buzz-at-telluride-brewing-co-lawson-hill/",
-    "date": "2026-09-08",
-    "time": "5:30 PM",
-    "location": "Telluride Brewing Company Lawson Hill Taproom",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/08/book-buzz-14.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join WPL on the 2nd Tuesday 5:30-6:30pm of each month at TBC in Lawson Hill May-September. Our queen of Reader's Advisory, Tiffany Osborne, will be there to talk about our hottest new titles and Miss Melissa will be providing an…",
-    "type": "Talks & Classes"
   },
   {
     "title": "Book Buzz at the Telluride Brewing Company",
@@ -331,19 +279,6 @@
     "type": "Community"
   },
   {
-    "title": "Ouray: Echoes in the Canyon",
-    "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-2450",
-    "date": "2026-09-09",
-    "time": "1:00 PM",
-    "location": "The Wright Opera House",
-    "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
-    "type": "Arts & Film"
-  },
-  {
     "title": "Water Aerobics",
     "href": "https://events.ourayridgwayevents.com/event/water-aerobics",
     "date": "2026-09-09",
@@ -463,6 +398,19 @@
     "desc": "For noncyclists and cyclists alike. After an optional social bike ride at 5 pm, wind down for a yoga class in the park 6 - 7 pm. A moderate to advanced vinyasa style class targetting the areas of the body affected by time in the bike…",
     "type": "Wellness",
     "endDate": "2026-09-17"
+  },
+  {
+    "title": "Ouray: Echoes in the Canyon",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-2450",
+    "date": "2026-09-09",
+    "time": "7:00 PM",
+    "location": "The Wright Opera House",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
+    "type": "Arts & Film"
   },
   {
     "title": "Mama Said String Band",
@@ -885,6 +833,19 @@
     "type": "Music"
   },
   {
+    "title": "9/11 Memorial Walk",
+    "href": "https://events.ourayridgwayevents.com/event/911-memorial-walk",
+    "date": "2026-09-11",
+    "time": "5:30 PM",
+    "location": "Ouray Fire Department",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53924455201629/huge/d6c7efd5fbb5bc1441804ffd8f389fa16bd99fea.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray Volunteer Fire Department invites the community to join a 9/11 Memorial Walk. Together, we will walk approximately 2,200 steps, symbolizing the 110 stories of the World Trade Center, as we honor the lives lost and the first…",
+    "type": "Community"
+  },
+  {
     "title": "The Meditations Live in Concert",
     "href": "https://sheridanoperahouse.com/events/the-meditations-live-in-concert/",
     "date": "2026-09-11",
@@ -1161,20 +1122,6 @@
     "type": "Food & Drink"
   },
   {
-    "title": "Gaiascope Saturday Sessions",
-    "href": "https://www.telluride.com/event/gaiascope-saturday-sessions/",
-    "date": "2026-09-12",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63515/screenshot_2026-09-05_at_11_00_00_am.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Gaiascope Saturday Sessions Live music + Kaleidoscope art every Saturday in September.",
-    "type": "Music",
-    "endDate": "2026-09-26"
-  },
-  {
     "title": "A Telluride Theatre FRINGE Project: La Familia Music Group",
     "href": "https://www.telluride.com/event/a-telluride-theatre-fringe-project-la-familia-music-group/",
     "date": "2026-09-12",
@@ -1185,6 +1132,19 @@
     "category": "Community Event",
     "source": "Telluride.com",
     "desc": "Created by La Familia Music Group, this day of youth workshops culminates in a community concert, showcasing student …",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Gaiascope Saturday Sessions",
+    "href": "https://koto.org/event/gaiascope-saturday-sessions/2026-09-12/",
+    "date": "2026-09-12",
+    "time": "7:00 PM",
+    "location": "Heritage Plaza, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/mountainvillage.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Experience artist Brooke Einbender's Gaiascope installation in Mountain Village's Heritage Plaza every Saturday evening in September, with live DJ sets from 7-10 p.m. presented by Telluride Arts, TMVOA and Mindbender Studio.",
     "type": "Arts & Film"
   },
   {
@@ -1661,6 +1621,19 @@
     "endDate": "2026-10-07"
   },
   {
+    "title": "Tennis Clinic 4.0+",
+    "href": "https://koto.org/event/tennis-clinic-4-0/2026-09-16/",
+    "date": "2026-09-16",
+    "time": "11:00 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
+    "type": "Outdoors & Sports"
+  },
+  {
     "title": "AFTER SCHOOL ART FOR AGES 8-12",
     "href": "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-8-12",
     "date": "2026-09-16",
@@ -2044,20 +2017,6 @@
     "type": "Talks & Classes"
   },
   {
-    "title": "4th Annual San Juan Slam Pickleball Tournament",
-    "href": "https://events.ourayridgwayevents.com/event/4th-annual-san-juan-slam-pickleball-tournament",
-    "date": "2026-09-18",
-    "time": "9:00 AM",
-    "location": "Ridgway Athletic Park",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53613028091683/huge/89356c844c3d4e996774f5c668ba438226be20a1.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "The 4th Annual San Juan Slam, a Western Slope regional pickleball tournament hosted by the Ridgway Pickleball Club (RPC) with Presenting/Title Sponsor Citizen's State Bank. The San Juan Slam, a family friendly event and free for…",
-    "type": "Outdoors & Sports",
-    "endDate": "2026-09-20"
-  },
-  {
     "title": "\"llumination! Learning to Use Light, Shadow & Color in Acrylic Landscapes\" with Wayne McKinzie",
     "href": "https://events.ourayridgwayevents.com/event/llumination-learning-to-use-light-shadow-color-in-acrylic-landscapeswith-wayne-mckinzie",
     "date": "2026-09-19",
@@ -2321,19 +2280,6 @@
     "type": "Food & Drink"
   },
   {
-    "title": "Ouray: Echoes in the Canyon",
-    "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-8790",
-    "date": "2026-09-23",
-    "time": "1:00 PM",
-    "location": "",
-    "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
-    "type": "Arts & Film"
-  },
-  {
     "title": "September Book Club: \"The Constant Gardener\"",
     "href": "https://events.ourayridgwayevents.com/event/september-book-club-the-constant-gardener",
     "date": "2026-09-23",
@@ -2398,6 +2344,19 @@
     "source": "Telluride.com",
     "desc": "Troutapalooza is the premier fundraiser for Gunnison Gorge Anglers and the San Miguel Valley Floor project. The event …",
     "type": "Community"
+  },
+  {
+    "title": "Ouray: Echoes in the Canyon",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-8790",
+    "date": "2026-09-23",
+    "time": "7:00 PM",
+    "location": "",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
+    "type": "Arts & Film"
   },
   {
     "title": "Ouray Chamber Business After Hours",
@@ -2818,19 +2777,6 @@
     "type": "Community"
   },
   {
-    "title": "Ouray: Echoes in the Canyon",
-    "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon",
-    "date": "2026-09-30",
-    "time": "1:00 PM",
-    "location": "",
-    "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
-    "type": "Arts & Film"
-  },
-  {
     "title": "Market on the Plaza",
     "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     "date": "2026-09-30",
@@ -2842,6 +2788,19 @@
     "source": "Mountain Village",
     "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
     "type": "Community"
+  },
+  {
+    "title": "Ouray: Echoes in the Canyon",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon",
+    "date": "2026-09-30",
+    "time": "7:00 PM",
+    "location": "",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
+    "type": "Arts & Film"
   },
   {
     "title": "Telluride Art Walk",

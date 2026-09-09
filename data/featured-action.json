@@ -1,26 +1,26 @@
 {
- "generated": "2026-09-08T23:20:38.140Z",
+ "generated": "2026-09-09T04:01:37.407Z",
  "pinned": false,
- "topic": "norwoodwater",
- "topicLabel": "Norwood Water",
- "headline": "Norwood Water goes before NWC Rescheduled to 09/22/2026 on Tuesday, September 8",
- "blurb": "The September 8th Norwood Water Commission meeting has been rescheduled to Tuesday, September 22, 2026, at 6:30 p.m. at Norwood Town Hall.",
+ "topic": "code",
+ "topicLabel": "Code Changes & Accelerated Review",
+ "headline": "Code Changes & Accelerated Review goes before Planning Commission Meeting on Thursday, September 10",
+ "blurb": "Three Land Use Code amendments are on the table for the Planning Commission's recommendation — covering forestry practices, oil and gas, and geothermal energy. All three are code-change items, meaning the Commission is being asked to weigh in before any revisions move forward to the BOCC.",
  "images": [],
  "deepDive": {
-  "label": "Norwood Water",
-  "href": "/deep-dive-norwoodwater.html"
+  "label": "Code Changes & Accelerated Review",
+  "href": "/deep-dive-code.html"
  },
  "meeting": {
-  "title": "NWC Rescheduled to 09/22/2026",
-  "sourceLabel": "Town of Norwood",
-  "date": "2026-09-08",
-  "humanDate": "Tuesday, September 8",
+  "title": "Planning Commission Meeting",
+  "sourceLabel": "San Miguel County",
+  "date": "2026-09-10",
+  "humanDate": "Thursday, September 10",
   "time": "",
-  "location": "1670 Naturita St, Norwood CO 81423",
-  "agendaUrl": "https://www.norwoodtown.com/files/5f8304a63/09.08.2026+RESCHEDULED+NWC+Agenda.pdf",
+  "location": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
+  "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/923/files",
   "hasAgenda": true,
   "packetUrl": "",
-  "zoomLink": "https://us02web.zoom.us/j/88274908233",
-  "livestream": ""
+  "zoomLink": "https://us06web.zoom.us/j/84540142300?pwd=kR3YU9IZBab43RLiNx0ox1gygbOI8C.1",
+  "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
  }
 }
