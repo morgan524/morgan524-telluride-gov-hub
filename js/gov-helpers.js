@@ -456,7 +456,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-09-24|Resident Advisory Committee - Sep 24 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8315","sv":4,"ph":"1dfc6a6591e6662d"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8315","sv":4,"ph":"bbdf287f962aba89"},
 
   "telluride|2026-09-16|CANCELED - Parks & Recreation Commission - Sep 16 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082","sv":4}
@@ -1777,6 +1777,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Democratic state rep. candidate Alec Lindeman denied ballot access",
+    source: "Telluride Times",
+    date: "September 9, 2026",
+    firstSeen: "2026-09-09",
+    newsTopic: "government",
+    copy: "Democratic candidate Alec Lindeman won't appear on the November ballot for HD58 after the party's vacancy committee failed to submit required paperwork on time following a candidate swap. Incumbent Larry Don Suckla, who won the seat in 2024 with 54.6% of the vote, will run unopposed. Lindeman says he plans to try again in 2028.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_66c482ec-a629-45c6-9c83-f27714615f16.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/35/c356cdc8-fb2a-4785-9021-77ebe994c2e0/6aa1b60cd24a2.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "A Dem for Dan",
     source: "Telluride Times",
     date: "September 9, 2026",
@@ -1822,8 +1834,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "September 9, 2026",
     firstSeen: "2026-09-09",
     newsTopic: "community",
-    copy: "",
-    claudeSummary: false,
+    copy: "Second Chance Humane Society in Ridgway has intentionally reduced its shelter population — from 20–25 cats and 10–15 dogs down to roughly half that — to better match the small local population of Ouray County. Keeping fewer animals shortens shelter stays and reduces stress-related behavior problems that make adoption harder.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_1730f867-ebb6-4097-ab2e-87c24ef991b3.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/e9/4e9b4d67-8864-4f46-9b58-50c8933037e0/6aa19a686e477.image.jpg",
     imgHiRes: true
@@ -3453,28 +3465,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Market on the Plaza",
-    link: "https://koto.org/event/market-on-the-plaza/2026-09-09/",
-    description: "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
-    pubDate: "2026-09-09T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Heritage Plaza, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Mahjongg for Independent Players",
-    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-09-09/",
-    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
-    pubDate: "2026-09-09T13:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
-  },
-  {
     title: "Sewing 101 with Melissa",
     link: "https://koto.org/event/sewing-101-with-melissa/2026-09-09/",
     description: "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.",
@@ -3673,17 +3663,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/08/zumba-gise.png"
   },
   {
-    title: "Crystal Festival – A Rock, Mineral, Gem, & Crystal Show",
-    link: "https://koto.org/event/crystal-festival-a-rock-mineral-gem-crystal-show/2026-09-12/",
-    description: "Join us for two incredible days celebrating rocks, minerals, fossils, gems, crystals, jewelry, and more at the Crystal Festival! 📅 September 12th and 13th, 2026 🕰️10am to 8pm both days 📍 Gallatin County Fairgrounds – Bozeman, Montana Whether you’re a seasoned collector, a crystal enthusiast, a geology lover, or simply looking for a fun family outing, there’s something for everyone! ✨ Shop from amazing vendors featuring: • Crystals & Minerals • Fossils & Dinosaur Fossils • Gemstones & Jewelry • Meteorites • Handmade Art & Gifts • Metaphysical Items • Home Décor • Much More! 🔨 Enjoy hands-on activities, educational displays, and discover the fascinating stories behind Earth’s natural treasures. Meet knowledgeable vendors, learn about geology, and find unique pieces to add to your collection. 👨‍👩‍👧‍👦 Family-friendly fun for all ages! …",
-    pubDate: "2026-09-12T10:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Conference Center, Mountain Village",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/09/bozeman-Crystal-Festival-.jpg"
-  },
-  {
     title: "The LA FAMILIA MUSIC GROUP Experience (Telluride Theatre)",
     link: "https://koto.org/event/the-la-familia-music-group-experience-telluride-theatre/",
     description: "Telluride Theatre FRINGE Projects, in collaboration with LA FAMILIA MUSIC GROUP, invites you to a day of Youth Music Workshops and a Community Concert! All events are FREE, with the option to donate to Telluride Theatre. During the day, students (age 10 – 18) can take part in a DJ & Beat-Making Workshop, where they will get a hands-on introduction to music production, creating loops, song mixing and more. No previous music or DJ experience required! Later that evening, students can showcase what they've learned during a COMMUNITY CONCERT with La Familia Music Group, featuring more local bands from LFMG's music collective. The Youth Workshop & Community Concert are both Bilingual, English and Spanish. All members of our community are invited to take part in this day of music, education and celebration. Learn more and Register on Telluride Theatre's website.",
@@ -3715,17 +3694,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Heritage Plaza, Mountain Village",
     imageUrl: ""
-  },
-  {
-    title: "Crystal Festival – A Rock, Mineral, Gem, & Crystal Show",
-    link: "https://koto.org/event/crystal-festival-a-rock-mineral-gem-crystal-show/2026-09-13/",
-    description: "Join us for two incredible days celebrating rocks, minerals, fossils, gems, crystals, jewelry, and more at the Crystal Festival! 📅 September 12th and 13th, 2026 🕰️10am to 8pm both days 📍 Gallatin County Fairgrounds – Bozeman, Montana Whether you’re a seasoned collector, a crystal enthusiast, a geology lover, or simply looking for a fun family outing, there’s something for everyone! ✨ Shop from amazing vendors featuring: • Crystals & Minerals • Fossils & Dinosaur Fossils • Gemstones & Jewelry • Meteorites • Handmade Art & Gifts • Metaphysical Items • Home Décor • Much More! 🔨 Enjoy hands-on activities, educational displays, and discover the fascinating stories behind Earth’s natural treasures. Meet knowledgeable vendors, learn about geology, and find unique pieces to add to your collection. 👨‍👩‍👧‍👦 Family-friendly fun for all ages! …",
-    pubDate: "2026-09-13T10:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Conference Center, Mountain Village",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/09/bozeman-Crystal-Festival-.jpg"
   },
   {
     title: "Gentle Yoga with Kristen Milord",
@@ -3891,6 +3859,28 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Coffee Cowboy General Store, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2026/08/beans-books-5.png"
+  },
+  {
+    title: "Tennis Clinic 3.0-4.0",
+    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-16/",
+    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-09-16T09:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Tennis Clinic 4.0+",
+    link: "https://koto.org/event/tennis-clinic-4-0/2026-09-16/",
+    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-09-16T11:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
   }
 ];
 
@@ -3898,7 +3888,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Bear Aware Puppet Show",
     link: "https://telluridelibrary.libcal.com/event/17255211?hs=a",
-    description: "9:00 AM – 9:30 AM",
+    description: "A puppet show at Wilkinson Public Library's Kids Area focused on bear awareness, offering young audiences a fun and educational introduction to living safely alongside wildlife in the region. The program runs approximately 30 minutes.",
     pubDate: "2026-09-09T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -3909,7 +3899,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Bear Aware Puppet Show",
     link: "https://telluridelibrary.libcal.com/event/17255224?hs=a",
-    description: "10:00 AM – 10:30 AM",
+    description: "A puppet show at Wilkinson Public Library's Kids Area focused on bear awareness, offering young audiences a fun and educational introduction to living safely alongside wildlife in the region. The program runs approximately 30 minutes.",
     pubDate: "2026-09-09T16:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -3942,7 +3932,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Movie and A Snack Club",
     link: "https://telluridelibrary.libcal.com/event/17283035?hs=a",
-    description: "3:30 PM – 5:30 PM",
+    description: "A recurring library program at Wilkinson Public Library where participants gather in the Telluride Room to watch a movie and enjoy a snack. The event runs from 3:30 to 5:30 PM.",
     pubDate: "2026-09-09T21:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -4498,7 +4488,7 @@ const OURAY_COUNTY_EVENTS = [
   {
     title: "Imogene Pass Run",
     link: "https://ouraycountyco.gov/Calendar.aspx?EID=3779",
-    description: "https://ouraycountyco.gov/calendar.aspx?EID=3779",
+    description: "The Imogene Pass Run is an annual footrace that takes competitors over the challenging Imogene Pass between Telluride and Ouray, traversing one of the most scenic and demanding mountain routes in the San Juan Mountains. The course climbs to an elevation of over 13,000 feet, making it a notable test of endurance for participants.",
     pubDate: "2026-09-12T07:00:00.000Z",
     source: "ouraycounty",
     sourceLabel: "Ouray County",
@@ -5905,7 +5895,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5916,7 +5906,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Rescheduled To 09 22 2026",
     link: "https://www.norwoodtown.com/2026-09-08-nwc-rescheduled-to-09-22-2026",
-    description: "",
+    description: "A previously scheduled Norwood Town government meeting has been rescheduled to September 22, 2026. The rescheduled meeting will take place in Norwood, CO, and is organized by the Town of Norwood.",
     pubDate: "2026-09-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5927,7 +5917,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-09-09-board-of-trustees-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Town of Norwood Board of Trustees, providing an opportunity for local governance and public business to be conducted. Community members are welcome to attend and observe the proceedings.",
     pubDate: "2026-09-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5938,7 +5928,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-09-10-norwood-sanitation-district-meeting-meeting",
-    description: "",
+    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and district operations are welcome to attend.",
     pubDate: "2026-09-10T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5949,7 +5939,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-10-senior-lunch",
-    description: "",
+    description: "A midday meal gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     pubDate: "2026-09-10T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5958,9 +5948,20 @@ const NORWOOD_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Office Closed For Training 1 3pm",
+    link: "https://www.norwoodtown.com/2026-09-14-office-closed-for-training-1-3pm",
+    description: "The Town of Norwood offices will be closed for staff training on the afternoon of September 14, 2026, beginning at 3 p.m. Residents should plan accordingly for any town business that may need to be addressed before or after the closure.",
+    pubDate: "2026-09-14T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Town Closure",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-17-senior-lunch",
-    description: "",
+    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     pubDate: "2026-09-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5971,7 +5972,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-09-21-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "The Town of Norwood's Planning and Zoning Commission will hold a regular meeting to review and discuss land use, development, and zoning matters within the community. Members of the public are welcome to attend and observe the proceedings.",
     pubDate: "2026-09-21T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5982,7 +5983,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-24-senior-lunch",
-    description: "",
+    description: "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
     pubDate: "2026-09-24T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5993,8 +5994,30 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "",
+    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
     pubDate: "2026-09-26T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Community Event",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Senior Meals",
+    link: "https://www.norwoodtown.com/2026-10-01-senior-meals",
+    description: "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
+    pubDate: "2026-10-01T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Community Event",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Senior Meals",
+    link: "https://www.norwoodtown.com/2026-10-08-senior-meals",
+    description: "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
+    pubDate: "2026-10-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
     category: "Community Event",
@@ -6004,7 +6027,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6013,9 +6036,42 @@ const NORWOOD_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Senior Meals",
+    link: "https://www.norwoodtown.com/2026-10-15-senior-meals",
+    description: "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather, share a meal, and connect with neighbors. This recurring community event takes place in Norwood and is organized through local town services.",
+    pubDate: "2026-10-15T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Community Event",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Senior Meals",
+    link: "https://www.norwoodtown.com/2026-10-22-senior-meals",
+    description: "A midday community meal program for seniors, hosted by the Town of Norwood. It offers older residents a chance to gather, share a meal, and connect with neighbors in a welcoming setting.",
+    pubDate: "2026-10-22T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Community Event",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Senior Meals",
+    link: "https://www.norwoodtown.com/2026-10-29-senior-meals",
+    description: "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather and share a meal together. This recurring community event provides both nourishment and social connection for Norwood's senior residents.",
+    pubDate: "2026-10-29T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Community Event",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
     title: "Closed For Veterans Day",
     link: "https://www.norwoodtown.com/2026-11-11-closed-for-veterans-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Veterans Day. Municipal offices and services will be unavailable on this federal holiday honoring those who have served in the United States armed forces.",
     pubDate: "2026-11-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6026,7 +6082,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Thanksgiving",
     link: "https://www.norwoodtown.com/2026-11-26-closed-for-thanksgiving",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Thanksgiving Day. Municipal offices and services will be unavailable, with normal operations expected to resume following the holiday.",
     pubDate: "2026-11-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -7494,25 +7550,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
     address: "36 Porphyry Street, Ophir, CO 81426",
     noticeKey: "ord-2026-06-ophir-lecc"
-  },
-  {
-    title: "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominiums (Sale No. 202605)",
-    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "The San Miguel County Public Trustee has scheduled a public auction foreclosure sale for Condominium Unit 7 at Double Diamond Condominium, 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor is Ryan Pfaff, with the current debt holder being Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust, on an original principal of $1,200,000. The public auction will be held at 10:00 A.M. on September 3, 2026, at 305 W. Colorado Avenue, Telluride, CO.",
-    deadline: "2026-09-03",
-    expires: "2026-09-03",
-    dates: "8/13",
-    papers: ["ttimes_0813"],
-    url: "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
-    address: "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
-    noticeKey: "foreclosure-sale-202605",
-    caseNumber: "202605"
   }
 ];
 

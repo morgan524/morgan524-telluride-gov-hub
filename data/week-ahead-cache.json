@@ -1,18 +1,18 @@
 {
-  "hash": "d02d62e3542d7e71d22dc68ea1a59d547228152d",
-  "lede": "The biggest thing on the civic calendar this week is the San Miguel County BOCC's special meeting Tuesday, where they'll consider changing the AMI limits on deed-restricted properties in Pinion Park — a technical-sounding move that directly shapes who can qualify for workforce housing in the county. The county Planning Commission also takes up three Land Use Code amendments covering forestry, oil and gas, and geothermal on Wednesday, and Ridgway's council is ratifying letters backing a federal disaster declaration for the Gold Mountain Fire, which has scorched nearly 40,000 acres and repeatedly cut off Highway 550.",
+  "hash": "eba35303752becbd86f9e801e5a7a728c865742a",
+  "lede": "The biggest item this week is the San Miguel County BOCC's special meeting Tuesday, where they'll consider Resolution 2026-34 to change Area Median Income limits on deed-restricted properties at Pinion Park — a technical vote with real teeth for who qualifies for affordable housing in the county. Ridgway's Town Council also meets Tuesday with weighty business, including ratifying a letter backing a federal Major Disaster Declaration for the Gold Mountain Fire, which has torched nearly 40,000 acres and repeatedly cut off Highway 550. The county Planning Commission weighs in Wednesday on three Land Use Code amendments covering forestry, oil and gas, and geothermal energy, and the Housing Code Update working group holds its eighth session Monday on reforms meant to speed workforce housing production in unincorporated areas.",
   "notable": [
     {
       "id": 1,
-      "stake": "Council ratifies disaster declaration support for 40,000-acre Gold Mountain Fire."
+      "stake": "Council ratifies support for federal disaster declaration tied to Gold Mountain Fire."
     },
     {
       "id": 3,
-      "stake": "BOCC may change AMI limits on deed-restricted Pinion Park housing — affects who qualifies."
+      "stake": "Vote on AMI limit changes for Pinion Park deed-restricted housing directly affects eligibility."
     },
     {
       "id": 5,
-      "stake": "Planning Commission weighs in on Land Use Code changes for forestry, oil/gas, and geothermal."
+      "stake": "Planning Commission recommends on three Land Use Code amendments before BOCC action."
     },
     {
       "id": 8,
@@ -20,7 +20,7 @@
     },
     {
       "id": 12,
-      "stake": "Housing Code Update working group reviews proposed changes to speed workforce housing production."
+      "stake": "Working group shapes county housing code reforms funded under Proposition 123."
     }
   ]
 }
