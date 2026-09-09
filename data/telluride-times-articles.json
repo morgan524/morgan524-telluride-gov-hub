@@ -1,12 +1,60 @@
 [
   {
-    "title": "A send-off for Suss",
+    "title": "A love affair with local food",
     "source": "Telluride Times",
     "date": "September 9, 2026",
     "firstSeen": "2026-09-09",
     "newsTopic": "community",
-    "copy": "On Sunday, Sept. 13, the Telluride Adaptive Sports Program (TASP) is hosting a farewell party for David Sussman at Oak.",
+    "copy": "A free community conversation on local food resilience is set for Sept. 10 at 6 p.m. at the Naturita Community Library, part of the monthly West End Stories & Poems series. Melanie Eggers and Bodie Johansson, both with years in regenerative agriculture, will discuss rebuilding food systems in the West End.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/norwood_post/article_00b4bae1-ca6f-40f8-8a14-9afefff78b5a.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/e0/5e0f6aef-e58d-4ae2-a198-9aefe9f0b5c3/6aa16e62f380c.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Join Norwood School’s District Accountability Committee",
+    "source": "Telluride Times",
+    "date": "September 9, 2026",
+    "firstSeen": "2026-09-09",
+    "newsTopic": "education",
+    "copy": "Norwood School District is looking for staff and parents to join its District Accountability Committee, a legally required advisory group that weighs in on budget priorities, improvement plans, and family engagement. The DAC meets four times during the 2026–2027 school year, starting September 9. Contact Superintendent Todd Bissell at todd.bissell@norwoodk12.org or 970-729-9131.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/norwood_post/article_73fe7573-55ad-4091-a3ee-b782586b14d9.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/e5/5e5b6cd6-1a6f-43fc-ad6f-ea150ecb022f/6aa16cdc2dd45.image.png",
+    "imgHiRes": true
+  },
+  {
+    "title": "Takeaways from AP story on a major effort to restore peatland in North Carolina",
+    "source": "Telluride Times",
+    "date": "September 9, 2026",
+    "firstSeen": "2026-09-09",
+    "newsTopic": "community",
+    "copy": "A Colorado company is working to restore 23 square miles of drained peatland in North Carolina by plugging old drainage ditches and replanting native species. The site currently releases 130,000 tons of CO₂ annually — peatlands hold roughly a third of Earth's stored carbon despite covering just 3% of its surface. Pantheon Regeneration plans to fund the work through carbon credit sales.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/state/article_5fbd3ade-b429-540c-8b7c-136954b19a74.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/23/92313ae5-8476-599d-866a-500524e468bf/6aa15c4ea0c60.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "In North Carolina, a race is on to restore critical peatland before it dries up or is destroyed",
+    "source": "Telluride Times",
+    "date": "September 9, 2026",
+    "firstSeen": "2026-09-09",
+    "newsTopic": "community",
+    "copy": "Scientists and investors are restoring a 23-square-mile tract of peatland in North Carolina to help curb climate-warming emissions and restore native habitat. Ditches have drained water from thousands of years of accumulated peat, leaving the site vulnerable to drought and…",
     "claudeSummary": false,
+    "href": "https://www.telluridenews.com/news/state/article_f706d4bc-85b2-5a14-8d3e-58d383f8414a.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c7/ec78a45d-b020-57a7-8032-fd3c642dc44d/6aa1598030477.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "A send-off for Suss",
+    "source": "Telluride Times",
+    "date": "September 9, 2026",
+    "firstSeen": "2026-09-09",
+    "newsTopic": "government",
+    "copy": "TASP is throwing a farewell party for David \"Suss\" Sussman — board president, instructor, and adaptive athlete — Sunday, Sept. 13, 4–6 p.m. at Oak. After 12 years and 948 ski days here, he's heading to San Diego to be near family and manage ongoing spinal health needs.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/sports/article_a784609b-fec1-4128-8dac-561f422e7d30.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/52/d5273b0a-6975-4612-a2a9-c9256d6185fe/6aa0c231575bc.image.jpg",
     "imgHiRes": true
@@ -848,6 +896,33 @@
     "img": "https://www.telluride.gov/ImageRepository/Document?documentID=15642"
   },
   {
+    "title": "Please Take the Advanced Web Map Survey",
+    "source": "San Miguel County",
+    "date": "September 3, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1408",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14763"
+  },
+  {
+    "title": "Two Domestic Pets in San Miguel County Test Positive for the Plague",
+    "source": "San Miguel County",
+    "date": "September 3, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
+  },
+  {
+    "title": "Waste Tire Collection Event",
+    "source": "San Miguel County",
+    "date": "August 24, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
+  },
+  {
     "title": "Imogene and Black Bear Passes Closed 9/12",
     "source": "San Miguel County",
     "date": "September 3, 2026",
@@ -863,50 +938,6 @@
     "newsTopic": "public-safety",
     "copy": "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
     "href": "https://www.telluride.gov/AlertCenter.aspx?AID=65",
-    "img": ""
-  },
-  {
-    "title": "Town Manager's Report",
-    "source": "Town of Ridgway",
-    "date": "September 8, 2026",
-    "firstSeen": "2026-09-08",
-    "newsTopic": "community",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Manager%27s-Report---September-8%2C-2026.pdf",
-    "img": ""
-  },
-  {
-    "title": "Ridgway Rescinds Stage 2 Fire Restrictions, Reinstates Stage 1 Fire Restrictions effective 12:01am on Thursday, Sept. 3rd - Sept. 2, 2026",
-    "source": "Town of Ridgway",
-    "date": "September 9, 2026",
-    "firstSeen": "2026-09-02",
-    "newsTopic": "public-safety",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Rescind-Stage-2%2C-Reinstate-Stage-1-Fire-Restrictions-Press-Release-2026-09-02.pdf",
-    "img": ""
-  },
-  {
-    "title": "Ridgway Town Council Regular Meeting Agenda",
-    "source": "Town of Ridgway",
-    "date": "September 9, 2026",
-    "firstSeen": "2026-09-04",
-    "newsTopic": "government",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/00-Sept-9-tc-agenda.pdf",
-    "img": ""
-  },
-  {
-    "title": "Public Hearing Notice Wed., Sept. 16, 2026 at 5:30pm - 1) Site Plan and Conditional Use Permit for Riverbend Townhomes (TBD Liddell Dr.); 2) Plat Amendment of Lot 4 and Outlot of Riverview Business Park Subdivision (TBD Liddell Dr.); 3) PUD Amendment Lena Street Commons Planned Unit Development (TBD N. Lena Street) - Sept. 2, 2026",
-    "source": "Town of Ridgway",
-    "date": "September 9, 2026",
-    "firstSeen": "2026-09-02",
-    "newsTopic": "land-use",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.09.16_public-hearing-notice.pdf",
     "img": ""
   }
 ]

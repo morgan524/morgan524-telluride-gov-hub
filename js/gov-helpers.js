@@ -357,7 +357,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303","sv":4,"ph":"e1e1bf39ad17a096"},
 
   "telluride|2026-09-22|Town Council - Sep 22 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043","sv":4,"ph":"0c2ea006f5fde3ee"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043","sv":4,"ph":"c5b14e4bfd86db54"},
 
   "county|2026-09-23|Board of County Commissioners Work Session":
     {"sv":4,"ph":"307e0c7b19e4ff5b"},
@@ -453,7 +453,13 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"f5486c159942d7f1"},
 
   "tmvoa|2026-09-29|TMVOA Board of Directors Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"}
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "telluride|2026-09-24|Resident Advisory Committee - Sep 24 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8315","sv":4,"ph":"bbdf287f962aba89"},
+
+  "telluride|2026-09-16|CANCELED - Parks & Recreation Commission - Sep 16 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -824,7 +830,13 @@ const MEETING_PREVIEWS = {
     "Board will consider approving FY25 audit financials, selecting PFM Asset Management for investment advisory services, and discussing FY27 budget development. A gondola project update and September operations report are also on the agenda. The meeting concludes with an executive session to discuss personnel matters.",
 
   "county|2026-09-24|5 x 5 County Meeting - San Miguel County Hosts":
-    "County officials are expected to address several local matters, including a material hauling contract, the Lawson Hill Connector Trail Project, and fuel island canopy construction. The meeting may also touch on the South Uncompahgre Hazardous Fuels project and ongoing probate and foreclosure proceedings affecting San Miguel County residents."
+    "County officials are expected to address several local matters, including a material hauling contract, the Lawson Hill Connector Trail Project, and fuel island canopy construction. The meeting may also touch on the South Uncompahgre Hazardous Fuels project and ongoing probate and foreclosure proceedings affecting San Miguel County residents.",
+
+  "telluride|2026-09-24|Resident Advisory Committee - Sep 24 2026":
+    "The Resident Advisory Committee is expected to discuss the recently passed Colorado Wildfire Resiliency Code amendment to the Town's Land Use Code, as well as a new $2.00 monthly paper billing fee approved by San Miguel Power Association, set to take effect October 29, 2026.",
+
+  "telluride|2026-09-16|CANCELED - Parks & Recreation Commission - Sep 16 2026":
+    "The September 16, 2026 Parks & Recreation Commission meeting has been canceled. No agenda items will be discussed. The commission typically meets the third Wednesday of each month to address community parks and recreation needs."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1046,6 +1058,16 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Attached is this week's Parish Bulletin. Please check our calendar for all updated information. This weekend:Saturday Vigil (Aug. 29) is a bilingual Holy Mass.Sunday (Aug. 30) 8:30 am pray the Rosary, 9 am Holy Mass. Immediately ...",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-august-30/",
     img: ""
+  },
+  {
+    title: "We’re Hiring- Bilingual Food Pantry and seNior Lunch Cook Assistant/ Estamos Contratando: Asistente Bilingüe del Banco de Alimentos y Asistente de Cocina del Almuerzo para Personas Mayores",
+    source: "Fresh Food Hub",
+    sourceKey: "fresh-food-hub",
+    date: "August 27, 2026",
+    newsTopic: "community",
+    copy: "We re hiring for two part-time positions: Bilingual Food Pantry Assistant — Sundays, 1:30–6:30 p.m. This role provides Spanish-English translation support for our Spanish-speaking clients during food pantry distribution. Senior Lunch Assistant — Thursdays, 8:30 a.m.–1:30 p.m. at Norwood Town Hall. T",
+    href: "https://freshfoodhub.net/were-hiring-bilingual-food-pantry-and-senior-lunch-cook-assistant-estamos-contratando-asistente-bilingue-del-banco-de-alimentos-y-asistente-de-cocina-del-almuerzo-para-personas-mayores/",
+    img: ""
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
@@ -1072,7 +1094,7 @@ const ENGAGE_MEETINGS = [
   }
 ];         // Engage Telluride project key dates
 const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-09';
-const LEGAL_NOTICES_CACHE_DATE = '2026-09-08';
+const LEGAL_NOTICES_CACHE_DATE = '2026-09-09';
 
 const MANUAL_SUMMARIES = {
   "telluride|2026-08-10|Intergovernmental Worksession - Aug 10 2026":
@@ -1382,7 +1404,13 @@ const MANUAL_SUMMARIES = {
     "The September 24 5 x 5 County Meeting agenda hasn't been posted yet.",
 
   "tmvoa|2026-09-29|TMVOA Board of Directors Meeting":
-    "The September 29, 2026 TMVOA Board of Directors Meeting agenda hasn't been posted yet."
+    "The September 29, 2026 TMVOA Board of Directors Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-09-24|Resident Advisory Committee - Sep 24 2026":
+    "The September 24, 2026 Resident Advisory Committee agenda hasn't been posted yet.",
+
+  "telluride|2026-09-16|CANCELED - Parks & Recreation Commission - Sep 16 2026":
+    "The September 16, 2026 Parks & Recreation Commission meeting is canceled."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1749,13 +1777,61 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "A send-off for Suss",
+    title: "A love affair with local food",
     source: "Telluride Times",
     date: "September 9, 2026",
     firstSeen: "2026-09-09",
     newsTopic: "community",
-    copy: "On Sunday, Sept. 13, the Telluride Adaptive Sports Program (TASP) is hosting a farewell party for David Sussman at Oak.",
+    copy: "A free community conversation on local food resilience is set for Sept. 10 at 6 p.m. at the Naturita Community Library, part of the monthly West End Stories & Poems series. Melanie Eggers and Bodie Johansson, both with years in regenerative agriculture, will discuss rebuilding food systems in the West End.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_00b4bae1-ca6f-40f8-8a14-9afefff78b5a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/e0/5e0f6aef-e58d-4ae2-a198-9aefe9f0b5c3/6aa16e62f380c.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Join Norwood School’s District Accountability Committee",
+    source: "Telluride Times",
+    date: "September 9, 2026",
+    firstSeen: "2026-09-09",
+    newsTopic: "education",
+    copy: "Norwood School District is looking for staff and parents to join its District Accountability Committee, a legally required advisory group that weighs in on budget priorities, improvement plans, and family engagement. The DAC meets four times during the 2026–2027 school year, starting September 9. Contact Superintendent Todd Bissell at todd.bissell@norwoodk12.org or 970-729-9131.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_73fe7573-55ad-4091-a3ee-b782586b14d9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/e5/5e5b6cd6-1a6f-43fc-ad6f-ea150ecb022f/6aa16cdc2dd45.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "Takeaways from AP story on a major effort to restore peatland in North Carolina",
+    source: "Telluride Times",
+    date: "September 9, 2026",
+    firstSeen: "2026-09-09",
+    newsTopic: "community",
+    copy: "A Colorado company is working to restore 23 square miles of drained peatland in North Carolina by plugging old drainage ditches and replanting native species. The site currently releases 130,000 tons of CO₂ annually — peatlands hold roughly a third of Earth's stored carbon despite covering just 3% of its surface. Pantheon Regeneration plans to fund the work through carbon credit sales.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_5fbd3ade-b429-540c-8b7c-136954b19a74.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/23/92313ae5-8476-599d-866a-500524e468bf/6aa15c4ea0c60.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "In North Carolina, a race is on to restore critical peatland before it dries up or is destroyed",
+    source: "Telluride Times",
+    date: "September 9, 2026",
+    firstSeen: "2026-09-09",
+    newsTopic: "community",
+    copy: "Scientists and investors are restoring a 23-square-mile tract of peatland in North Carolina to help curb climate-warming emissions and restore native habitat. Ditches have drained water from thousands of years of accumulated peat, leaving the site vulnerable to drought and…",
     claudeSummary: false,
+    href: "https://www.telluridenews.com/news/state/article_f706d4bc-85b2-5a14-8d3e-58d383f8414a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c7/ec78a45d-b020-57a7-8032-fd3c642dc44d/6aa1598030477.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "A send-off for Suss",
+    source: "Telluride Times",
+    date: "September 9, 2026",
+    firstSeen: "2026-09-09",
+    newsTopic: "government",
+    copy: "TASP is throwing a farewell party for David \"Suss\" Sussman — board president, instructor, and adaptive athlete — Sunday, Sept. 13, 4–6 p.m. at Oak. After 12 years and 948 ski days here, he's heading to San Diego to be near family and manage ongoing spinal health needs.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/sports/article_a784609b-fec1-4128-8dac-561f422e7d30.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/52/d5273b0a-6975-4612-a2a9-c9256d6185fe/6aa0c231575bc.image.jpg",
     imgHiRes: true
@@ -2597,6 +2673,33 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15642"
   },
   {
+    title: "Please Take the Advanced Web Map Survey",
+    source: "San Miguel County",
+    date: "September 3, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1408",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14763"
+  },
+  {
+    title: "Two Domestic Pets in San Miguel County Test Positive for the Plague",
+    source: "San Miguel County",
+    date: "September 3, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
+  },
+  {
+    title: "Waste Tire Collection Event",
+    source: "San Miguel County",
+    date: "August 24, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
+  },
+  {
     title: "Imogene and Black Bear Passes Closed 9/12",
     source: "San Miguel County",
     date: "September 3, 2026",
@@ -2612,50 +2715,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "public-safety",
     copy: "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=65",
-    img: ""
-  },
-  {
-    title: "Town Manager's Report",
-    source: "Town of Ridgway",
-    date: "September 8, 2026",
-    firstSeen: "2026-09-08",
-    newsTopic: "community",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Manager%27s-Report---September-8%2C-2026.pdf",
-    img: ""
-  },
-  {
-    title: "Ridgway Rescinds Stage 2 Fire Restrictions, Reinstates Stage 1 Fire Restrictions effective 12:01am on Thursday, Sept. 3rd - Sept. 2, 2026",
-    source: "Town of Ridgway",
-    date: "September 9, 2026",
-    firstSeen: "2026-09-02",
-    newsTopic: "public-safety",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Rescind-Stage-2%2C-Reinstate-Stage-1-Fire-Restrictions-Press-Release-2026-09-02.pdf",
-    img: ""
-  },
-  {
-    title: "Ridgway Town Council Regular Meeting Agenda",
-    source: "Town of Ridgway",
-    date: "September 9, 2026",
-    firstSeen: "2026-09-04",
-    newsTopic: "government",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/00-Sept-9-tc-agenda.pdf",
-    img: ""
-  },
-  {
-    title: "Public Hearing Notice Wed., Sept. 16, 2026 at 5:30pm - 1) Site Plan and Conditional Use Permit for Riverbend Townhomes (TBD Liddell Dr.); 2) Plat Amendment of Lot 4 and Outlot of Riverview Business Park Subdivision (TBD Liddell Dr.); 3) PUD Amendment Lena Street Commons Planned Unit Development (TBD N. Lena Street) - Sept. 2, 2026",
-    source: "Town of Ridgway",
-    date: "September 9, 2026",
-    firstSeen: "2026-09-02",
-    newsTopic: "land-use",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.09.16_public-hearing-notice.pdf",
     img: ""
   }
 ];
@@ -3702,7 +3761,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Bear Aware Puppet Show",
     link: "https://telluridelibrary.libcal.com/event/17255211?hs=a",
-    description: "A puppet show at Wilkinson Public Library's Kids Area focused on bear awareness, offering young audiences a fun and educational introduction to living safely alongside wildlife in the region. The program runs approximately 30 minutes.",
+    description: "9:00 AM – 9:30 AM",
     pubDate: "2026-09-09T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -3713,7 +3772,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Bear Aware Puppet Show",
     link: "https://telluridelibrary.libcal.com/event/17255224?hs=a",
-    description: "A puppet show at Wilkinson Public Library's Kids Area focused on bear awareness, offering young audiences a fun and educational introduction to living safely alongside wildlife in the region. The program runs approximately 30 minutes.",
+    description: "10:00 AM – 10:30 AM",
     pubDate: "2026-09-09T16:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -3746,7 +3805,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Movie and A Snack Club",
     link: "https://telluridelibrary.libcal.com/event/17283035?hs=a",
-    description: "A recurring library program at Wilkinson Public Library where participants gather in the Telluride Room to watch a movie and enjoy a snack. The event runs from 3:30 to 5:30 PM.",
+    description: "3:30 PM – 5:30 PM",
     pubDate: "2026-09-09T21:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -4291,7 +4350,7 @@ const OURAY_COUNTY_EVENTS = [
   {
     title: "Imogene Pass Run",
     link: "https://ouraycountyco.gov/Calendar.aspx?EID=3779",
-    description: "The Imogene Pass Run is an annual footrace that takes competitors over the challenging Imogene Pass between Telluride and Ouray, traversing one of the most scenic and demanding mountain routes in the San Juan Mountains. The course climbs to an elevation of over 13,000 feet, making it a notable test of endurance for participants.",
+    description: "https://ouraycountyco.gov/calendar.aspx?EID=3779",
     pubDate: "2026-09-12T07:00:00.000Z",
     source: "ouraycounty",
     sourceLabel: "Ouray County",
@@ -5696,20 +5755,9 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "Municipal Court",
-    link: "https://www.norwoodtown.com/2026-09-02-municipal-court",
-    description: "Municipal Court is a regularly scheduled court session held by the Town of Norwood. It is an official local government proceeding open to those with business before the court.",
-    pubDate: "2026-09-02T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Community Event",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5720,7 +5768,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Rescheduled To 09 22 2026",
     link: "https://www.norwoodtown.com/2026-09-08-nwc-rescheduled-to-09-22-2026",
-    description: "A previously scheduled Norwood Town government meeting has been rescheduled to September 22, 2026. The rescheduled meeting will take place in Norwood, CO, and is organized by the Town of Norwood.",
+    description: "",
     pubDate: "2026-09-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5731,7 +5779,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-09-09-board-of-trustees-meeting",
-    description: "A regularly scheduled meeting of the Town of Norwood Board of Trustees, providing an opportunity for local governance and public business to be conducted. Community members are welcome to attend and observe the proceedings.",
+    description: "",
     pubDate: "2026-09-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5742,7 +5790,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-09-10-norwood-sanitation-district-meeting-meeting",
-    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and district operations are welcome to attend.",
+    description: "",
     pubDate: "2026-09-10T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5753,7 +5801,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-10-senior-lunch",
-    description: "A midday meal gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    description: "",
     pubDate: "2026-09-10T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5764,7 +5812,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-17-senior-lunch",
-    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    description: "",
     pubDate: "2026-09-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5775,7 +5823,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-09-21-planning-and-zoning-commission-meeting",
-    description: "The Town of Norwood's Planning and Zoning Commission will hold a regular meeting to review and discuss land use, development, and zoning matters within the community. Members of the public are welcome to attend and observe the proceedings.",
+    description: "",
     pubDate: "2026-09-21T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5786,7 +5834,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-24-senior-lunch",
-    description: "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
+    description: "",
     pubDate: "2026-09-24T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5797,7 +5845,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
+    description: "",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5808,7 +5856,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
+    description: "",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5819,7 +5867,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Veterans Day",
     link: "https://www.norwoodtown.com/2026-11-11-closed-for-veterans-day",
-    description: "The Town of Norwood will be closed in observance of Veterans Day. Municipal offices and services will be unavailable on this federal holiday honoring those who have served in the United States armed forces.",
+    description: "",
     pubDate: "2026-11-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5830,7 +5878,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Thanksgiving",
     link: "https://www.norwoodtown.com/2026-11-26-closed-for-thanksgiving",
-    description: "The Town of Norwood will be closed in observance of Thanksgiving Day. Municipal offices and services will be unavailable, with normal operations expected to resume following the holiday.",
+    description: "",
     pubDate: "2026-11-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5841,17 +5889,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Mountain Village Merchant Meeting",
-    link: "https://townofmountainvillage.com/explore/events/all-events/merchant-meeting/",
-    description: "Join us for the monthly Mountain Village Merchant Meeting to be held on the second Tuesday of each month from 10 to 11 a.m. The meeting will be hybrid with",
-    pubDate: "2026-09-08T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/27556/merchant_event-1.png"
-  },
   {
     title: "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
     link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
@@ -7309,25 +7346,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
     address: "36 Porphyry Street, Ophir, CO 81426",
     noticeKey: "ord-2026-06-ophir-lecc"
-  },
-  {
-    title: "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominium (Foreclosure Sale No. 202605)",
-    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "Public Trustee Brandi R. Hatfield of San Miguel County has scheduled a public foreclosure auction for Condominium Unit 7 at Double Diamond Condominium, 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor is Ryan Pfaff; the current debt holder is Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust, with an outstanding principal balance of approximately $1,199,032.37. The auction will be held at 10:00 A.M. on September 3, 2026, at 305 W. Colorado Avenue (East entry), Telluride, CO.",
-    deadline: "2026-09-03",
-    expires: "2026-09-03",
-    dates: "8/13",
-    papers: ["ttimes_0813"],
-    url: "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
-    address: "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
-    noticeKey: "foreclosure-202605-double-diamond-unit7",
-    caseNumber: "202605"
   }
 ];
 
@@ -8704,7 +8722,7 @@ const TELLURIDE_BOARD_MEETINGS = [
   },
   {
     date: "September 16, 2026",
-    title: "Parks & Recreation Commission",
+    title: "CANCELED - Parks & Recreation Commission",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082",
     hasAgenda: false,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
