@@ -1,18 +1,18 @@
 {
-  "hash": "4b1c46fe7027d97273fb2fc88884d8eec0720119",
-  "lede": "The biggest item this week is the San Miguel County BOCC's special meeting Tuesday, where they'll consider changing the AMI limits on deed-restricted properties in Pinion Park — a technical-sounding vote that determines who actually qualifies for affordable housing. Also Tuesday, the County Planning Commission takes up three Land Use Code amendments covering forestry, oil and gas, and geothermal energy. Over in Ridgway, the Town Council is ratifying letters supporting a federal disaster declaration tied to the Gold Mountain Fire, which has scorched nearly 40,000 acres and repeatedly cut off Highway 550.",
+  "hash": "d02d62e3542d7e71d22dc68ea1a59d547228152d",
+  "lede": "The biggest thing on the civic calendar this week is the San Miguel County BOCC's special meeting Tuesday, where they'll consider changing the AMI limits on deed-restricted properties in Pinion Park — a technical-sounding move that directly shapes who can qualify for workforce housing in the county. The county Planning Commission also takes up three Land Use Code amendments covering forestry, oil and gas, and geothermal on Wednesday, and Ridgway's council is ratifying letters backing a federal disaster declaration for the Gold Mountain Fire, which has scorched nearly 40,000 acres and repeatedly cut off Highway 550.",
   "notable": [
     {
       "id": 1,
-      "stake": "Council ratifies disaster declaration support for Gold Mountain Fire recovery."
+      "stake": "Council ratifies disaster declaration support for 40,000-acre Gold Mountain Fire."
     },
     {
       "id": 3,
-      "stake": "AMI threshold change for Pinion Park deed-restricted housing — determines who qualifies."
+      "stake": "BOCC may change AMI limits on deed-restricted Pinion Park housing — affects who qualifies."
     },
     {
       "id": 5,
-      "stake": "Planning Commission weighs in on three Land Use Code amendments before BOCC action."
+      "stake": "Planning Commission weighs in on Land Use Code changes for forestry, oil/gas, and geothermal."
     },
     {
       "id": 8,
@@ -20,7 +20,7 @@
     },
     {
       "id": 12,
-      "stake": "Working group advances housing code changes designed to speed affordable housing production."
+      "stake": "Housing Code Update working group reviews proposed changes to speed workforce housing production."
     }
   ]
 }

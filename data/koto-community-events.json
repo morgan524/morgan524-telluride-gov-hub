@@ -1,16 +1,5 @@
 [
   {
-    "title": "Tennis Clinic 3.0-4.0",
-    "link": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-09/",
-    "description": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    "pubDate": "2026-09-09T09:30:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "imageUrl": ""
-  },
-  {
     "title": "Market on the Plaza",
     "link": "https://koto.org/event/market-on-the-plaza/2026-09-09/",
     "description": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
@@ -19,17 +8,6 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Heritage Plaza, Mountain Village",
-    "imageUrl": ""
-  },
-  {
-    "title": "Tennis Clinic 4.0+",
-    "link": "https://koto.org/event/tennis-clinic-4-0/2026-09-09/",
-    "description": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    "pubDate": "2026-09-09T11:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Racquet Club, Mountain Village",
     "imageUrl": ""
   },
   {
@@ -66,6 +44,17 @@
     "imageUrl": "https://koto.org/wp-content/uploads/2026/08/danielle-sound-1.png"
   },
   {
+    "title": "Bear Aware Puppet Shows",
+    "link": "https://koto.org/event/bear-aware-puppet-shows/2026-09-10/1/",
+    "description": "Come learn how to keep bears safe! Ven a aprender cómo mantener a los osos seguros!",
+    "pubDate": "2026-09-10T09:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/09/Bear-Aware-2026.png"
+  },
+  {
     "title": "Tennis Clinic 3.0-4.0",
     "link": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-10/",
     "description": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
@@ -75,6 +64,17 @@
     "category": "Community Event",
     "location": "Telluride Racquet Club, Mountain Village",
     "imageUrl": ""
+  },
+  {
+    "title": "Bear Aware Puppet Shows",
+    "link": "https://koto.org/event/bear-aware-puppet-shows/2026-09-10/2/",
+    "description": "Come learn how to keep bears safe! Ven a aprender cómo mantener a los osos seguros!",
+    "pubDate": "2026-09-10T10:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/09/Bear-Aware-2026.png"
   },
   {
     "title": "Tennis Clinic 4.0+",
@@ -438,27 +438,5 @@
     "category": "Community Event",
     "location": "Coffee Cowboy General Store, Telluride",
     "imageUrl": "https://koto.org/wp-content/uploads/2026/08/beans-books-5.png"
-  },
-  {
-    "title": "Tennis Clinic 3.0-4.0",
-    "link": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-16/",
-    "description": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    "pubDate": "2026-09-16T09:30:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "imageUrl": ""
-  },
-  {
-    "title": "Tennis Clinic 4.0+",
-    "link": "https://koto.org/event/tennis-clinic-4-0/2026-09-16/",
-    "description": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    "pubDate": "2026-09-16T11:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "imageUrl": ""
   }
 ]

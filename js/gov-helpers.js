@@ -423,7 +423,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132","sv":4,"ph":"681ef775e57db365"},
 
   "telluride|2026-10-06|Town Council - Oct 06 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044","sv":4,"ph":"861712471a1ec903"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044","sv":4,"ph":"5eeb6493d1e6e82a"},
 
   "mv|2026-10-07|Town Council Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -456,7 +456,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-09-24|Resident Advisory Committee - Sep 24 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8315","sv":4,"ph":"bbdf287f962aba89"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8315","sv":4,"ph":"1dfc6a6591e6662d"},
 
   "telluride|2026-09-16|CANCELED - Parks & Recreation Commission - Sep 16 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082","sv":4}
@@ -1777,6 +1777,133 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "A Dem for Dan",
+    source: "Telluride Times",
+    date: "September 9, 2026",
+    firstSeen: "2026-09-09",
+    newsTopic: "public-safety",
+    copy: "A letter-to-the-editor from a self-identified Democrat endorsing independent Sheriff Dan Covault in San Miguel County this November. The writer highlights Covault's collaborative work with the San Miguel Resource Center and Telluride Marshal's Office on Safe Festivals. She encourages voters of all affiliations to evaluate the candidate on record and relationships, not party label.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_ca8bb1a4-a7cc-4a0d-904f-e1845df60af1.html",
+    img: "",
+    letterAuthor: "Erin Ries",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Applications open for Angel Baskets",
+    source: "Telluride Times",
+    date: "September 9, 2026",
+    firstSeen: "2026-09-09",
+    newsTopic: "community",
+    copy: "Angel Baskets is accepting applications for its Holiday Gifting Program at tellurideangelbaskets.org through Sept. 30. They deliver food, household items, toys, and gift cards to hundreds of San Miguel County and West End families each year — delivery set for Dec. 12. Libraries in Telluride, Norwood, Naturita, and Nucla can help with applications.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_6ac21b15-444b-4a25-b0a4-0889dabe97d5.html",
+    img: "",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Local news can bring communities together",
+    source: "Telluride Times",
+    date: "September 9, 2026",
+    firstSeen: "2026-09-09",
+    newsTopic: "community",
+    copy: "David Hoffmann, founder and chairman of the company that owns this paper, wrote to introduce himself and explain his commitment to local journalism. He says local news has weakened in many communities and he wants to help reverse that. His stated goal is coverage that serves the whole community, not any particular side.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/editorials/article_5a7d5ff2-95ef-4cc4-abdf-7088fee1eec6.html",
+    img: "",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Why we have fewer animals",
+    source: "Telluride Times",
+    date: "September 9, 2026",
+    firstSeen: "2026-09-09",
+    newsTopic: "community",
+    copy: "",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news_release/article_1730f867-ebb6-4097-ab2e-87c24ef991b3.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/e9/4e9b4d67-8864-4f46-9b58-50c8933037e0/6aa19a686e477.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Speak up now to save the Roadless Rule",
+    source: "Telluride Times",
+    date: "September 9, 2026",
+    firstSeen: "2026-09-09",
+    newsTopic: "infrastructure",
+    copy: "The Trump administration has proposed eliminating the 2001 National Roadless Rule, which currently shields 58.5 million acres of national forest from roads, logging, and extraction. Colorado's own 2012 Roadless Rule would still protect local areas like Wilson Mesa and Lizard Head. A public comment period is open now.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/editorials/article_356fa282-8f5c-4806-9c7a-a504c679b107.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/0d/30dbd0a0-812a-499d-a705-cf002df5929c/6aa19b407c84b.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Authors discuss their newest book, 'Beyond Honor'",
+    source: "Telluride Times",
+    date: "September 9, 2026",
+    firstSeen: "2026-09-09",
+    newsTopic: "arts-culture",
+    copy: "Part-time locals Karen and Bill Brodsky, who write together as K.B. Brodsky, are presenting their debut spy thriller \"Beyond Honor\" at Wilkinson Public Library on Thursday, Sept. 17 at 5:30 p.m. The event is a joint effort between the library and Between the Covers bookstore.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_ac06b02b-b3d6-4253-9f74-89de7552c350.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/f4/5f4032e1-7af8-461a-9b3a-7d9b48d3f5c5/6aa19753bace9.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "Wake",
+    source: "Telluride Times",
+    date: "September 9, 2026",
+    firstSeen: "2026-09-09",
+    newsTopic: "community",
+    copy: "A habituated black bear was trapped and removed near a Silver Creek neighborhood after charging residents, chasing a woman and her dog, and repeatedly breaking into vehicles. Colorado's black bear population has nearly doubled in a decade while drought has shrunk wild food sources, pushing more bears into town.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_486697e1-cddb-46b1-94ce-1b42472061df.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/c5/9c5534b2-ffcd-43cc-b279-be1f3a76f04e/6aa196a31fa05.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "With every season",
+    source: "Telluride Times",
+    date: "September 9, 2026",
+    firstSeen: "2026-09-09",
+    newsTopic: "recreation",
+    copy: "A local trail through the valley gets a seasonal checkup — eroded sidehills, muddy dips after rain, and a new engineered switchback where a rough V-notch used to be. After the ride, firewood splitting fills the afternoon, maul swinging to a Tigers game on the radio.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_665f07eb-e707-4cf8-9a0e-09131218c888.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/33/c3314947-c732-4520-a208-53b4b82d608c/6aa19559d186d.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "What a film fest it was",
+    source: "Telluride Times",
+    date: "September 9, 2026",
+    firstSeen: "2026-09-09",
+    newsTopic: "arts-culture",
+    copy: "The 53rd Telluride Film Festival ran Sept. 4–7, featuring premieres from Simon Stone, Jesse Eisenberg, and Mike Leigh, with Julianne Moore and Andrew Scott drawing strong praise. Mountain-themed films and an Elizabeth Holmes documentary rounded out the lineup, alongside tributes to Sandra Hüller and John Malkovich.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_9dab5370-584e-4b82-b447-58e1110f044f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/70/f70d0030-8464-48c2-9d24-7bedcb4bf19c/6aa0d2f386ee8.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "In North Carolina, a race is on to restore critical peatland before it dries up or is destroyed",
+    source: "Telluride Times",
+    date: "September 9, 2026",
+    firstSeen: "2026-09-09",
+    newsTopic: "community",
+    copy: "A 23-square-mile peatland in North Carolina — drained decades ago for a failed farming venture — is now the target of a major restoration effort. A Colorado company plans to block old drainage ditches, replant native species, and sell carbon credits to fund preservation of up to a million acres along the Eastern Seaboard.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_f706d4bc-85b2-5a14-8d3e-58d383f8414a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c7/ec78a45d-b020-57a7-8032-fd3c642dc44d/6aa1598030477.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "A love affair with local food",
     source: "Telluride Times",
     date: "September 9, 2026",
@@ -1810,18 +1937,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_5fbd3ade-b429-540c-8b7c-136954b19a74.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/23/92313ae5-8476-599d-866a-500524e468bf/6aa15c4ea0c60.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "In North Carolina, a race is on to restore critical peatland before it dries up or is destroyed",
-    source: "Telluride Times",
-    date: "September 9, 2026",
-    firstSeen: "2026-09-09",
-    newsTopic: "community",
-    copy: "Scientists and investors are restoring a 23-square-mile tract of peatland in North Carolina to help curb climate-warming emissions and restore native habitat. Ditches have drained water from thousands of years of accumulated peat, leaving the site vulnerable to drought and…",
-    claudeSummary: false,
-    href: "https://www.telluridenews.com/news/state/article_f706d4bc-85b2-5a14-8d3e-58d383f8414a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c7/ec78a45d-b020-57a7-8032-fd3c642dc44d/6aa1598030477.image.jpg",
     imgHiRes: true
   },
   {
@@ -2646,6 +2761,33 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
   },
   {
+    title: "Town of Telluride Downgrades to Stage 1 Fire Restrictions",
+    source: "Town of Telluride",
+    date: "August 26, 2026",
+    newsTopic: "public-safety",
+    copy: "(August 25, 2026) – Following improved fire conditions across the region, Town Manager Zoe Dohnal has downgraded fire restrictions within the Town of Telluride from Stage 2 to Stage 1, effective 12:01 a.m. MT on Wednesday, August 26, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=403",
+    img: ""
+  },
+  {
+    title: "Marya Stark and Charles Dalton Sworn In to Telluride Town Council",
+    source: "Town of Telluride",
+    date: "August 12, 2026",
+    newsTopic: "government",
+    copy: "(July 21, 2026) – The Town welcomed two new members to Town Council this morning as Charles Dalton and Marya Stark were sworn into office at 9:30 a.m. Town Clerk Tiffany Kavanaugh administered the oath of office for both officials.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=402",
+    img: ""
+  },
+  {
+    title: "Arrest Made in String of Telluride Mountain Bike Thefts",
+    source: "Town of Telluride",
+    date: "August 12, 2026",
+    newsTopic: "recreation",
+    copy: "(August 11, 2026) – The Telluride Marshal's Department has identified and arrested a suspect in a series of mountain bike thefts that account for more than $22,000 in reported losses.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=401",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15642"
+  },
+  {
     title: "Please Take the Advanced Web Map Survey",
     source: "San Miguel County",
     date: "September 3, 2026",
@@ -2664,12 +2806,74 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
   },
   {
+    title: "Waste Tire Collection Event",
+    source: "San Miguel County",
+    date: "August 24, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
+  },
+  {
     title: "Imogene and Black Bear Passes Closed 9/12",
     source: "San Miguel County",
     date: "September 3, 2026",
     newsTopic: "infrastructure",
     copy: "Imogene Pass/Tomboy Road will be closed 12:01 a.m. - 3:00 p.m. on Saturday, September 12th, to accommodate the Imogene Pass Run. Black Bear Pass/Bridal Veil Road and the Valley View parking area will be closed 7:00 a.m. - 12:00 p.m. on that day, too.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=542",
+    img: ""
+  },
+  {
+    title: "Stage 1 Fire Restrictions In Effect",
+    source: "Town of Telluride",
+    date: "August 26, 2026",
+    newsTopic: "public-safety",
+    copy: "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=65",
+    img: ""
+  },
+  {
+    title: "Town Manager's Report",
+    source: "Town of Ridgway",
+    date: "September 8, 2026",
+    firstSeen: "2026-09-09",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Manager%27s-Report---September-8%2C-2026.pdf",
+    img: ""
+  },
+  {
+    title: "Ridgway Rescinds Stage 2 Fire Restrictions, Reinstates Stage 1 Fire Restrictions effective 12:01am on Thursday, Sept. 3rd - Sept. 2, 2026",
+    source: "Town of Ridgway",
+    date: "September 9, 2026",
+    firstSeen: "2026-09-09",
+    newsTopic: "public-safety",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Rescind-Stage-2%2C-Reinstate-Stage-1-Fire-Restrictions-Press-Release-2026-09-02.pdf",
+    img: ""
+  },
+  {
+    title: "Ridgway Town Council Regular Meeting Agenda",
+    source: "Town of Ridgway",
+    date: "September 9, 2026",
+    firstSeen: "2026-09-09",
+    newsTopic: "government",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/00-Sept-9-tc-agenda.pdf",
+    img: ""
+  },
+  {
+    title: "Public Hearing Notice Wed., Sept. 16, 2026 at 5:30pm - 1) Site Plan and Conditional Use Permit for Riverbend Townhomes (TBD Liddell Dr.); 2) Plat Amendment of Lot 4 and Outlot of Riverview Business Park Subdivision (TBD Liddell Dr.); 3) PUD Amendment Lena Street Commons Planned Unit Development (TBD N. Lena Street) - Sept. 2, 2026",
+    source: "Town of Ridgway",
+    date: "September 9, 2026",
+    firstSeen: "2026-09-09",
+    newsTopic: "land-use",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.09.16_public-hearing-notice.pdf",
     img: ""
   }
 ];
@@ -3249,17 +3453,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Tennis Clinic 3.0-4.0",
-    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-09/",
-    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-09T09:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
     title: "Market on the Plaza",
     link: "https://koto.org/event/market-on-the-plaza/2026-09-09/",
     description: "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
@@ -3268,17 +3461,6 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Heritage Plaza, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Tennis Clinic 4.0+",
-    link: "https://koto.org/event/tennis-clinic-4-0/2026-09-09/",
-    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-09T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
   },
   {
@@ -3315,6 +3497,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/08/danielle-sound-1.png"
   },
   {
+    title: "Bear Aware Puppet Shows",
+    link: "https://koto.org/event/bear-aware-puppet-shows/2026-09-10/1/",
+    description: "Come learn how to keep bears safe! Ven a aprender cómo mantener a los osos seguros!",
+    pubDate: "2026-09-10T09:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/09/Bear-Aware-2026.png"
+  },
+  {
     title: "Tennis Clinic 3.0-4.0",
     link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-10/",
     description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
@@ -3324,6 +3517,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "Bear Aware Puppet Shows",
+    link: "https://koto.org/event/bear-aware-puppet-shows/2026-09-10/2/",
+    description: "Come learn how to keep bears safe! Ven a aprender cómo mantener a los osos seguros!",
+    pubDate: "2026-09-10T10:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/09/Bear-Aware-2026.png"
   },
   {
     title: "Tennis Clinic 4.0+",
@@ -3687,28 +3891,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Coffee Cowboy General Store, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2026/08/beans-books-5.png"
-  },
-  {
-    title: "Tennis Clinic 3.0-4.0",
-    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-16/",
-    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-16T09:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Tennis Clinic 4.0+",
-    link: "https://koto.org/event/tennis-clinic-4-0/2026-09-16/",
-    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-16T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
   }
 ];
 
@@ -4300,6 +4482,17 @@ const OURAY_COUNTY_EVENTS = [
     sourceLabel: "Ouray County",
     category: "Community Event",
     location: "4-H Event Center - 22739 Highway 550 Ridgway CO 81432",
+    imageUrl: ""
+  },
+  {
+    title: "Colorado River District - 2026 Annual Water Seminar",
+    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3781",
+    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3781",
+    pubDate: "2026-09-18T08:30:00.000Z",
+    source: "ouraycounty",
+    sourceLabel: "Ouray County",
+    category: "Community Event",
+    location: "Colorado Mesa University - 1100 North Ave Grand Junction CO 81501",
     imageUrl: ""
   },
   {
@@ -7301,6 +7494,25 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
     address: "36 Porphyry Street, Ophir, CO 81426",
     noticeKey: "ord-2026-06-ophir-lecc"
+  },
+  {
+    title: "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominiums (Sale No. 202605)",
+    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "The San Miguel County Public Trustee has scheduled a public auction foreclosure sale for Condominium Unit 7 at Double Diamond Condominium, 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor is Ryan Pfaff, with the current debt holder being Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust, on an original principal of $1,200,000. The public auction will be held at 10:00 A.M. on September 3, 2026, at 305 W. Colorado Avenue, Telluride, CO.",
+    deadline: "2026-09-03",
+    expires: "2026-09-03",
+    dates: "8/13",
+    papers: ["ttimes_0813"],
+    url: "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
+    address: "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
+    noticeKey: "foreclosure-sale-202605",
+    caseNumber: "202605"
   }
 ];
 
@@ -7410,7 +7622,7 @@ const HOUSING_LISTINGS = [
 
 const RIDGWAY_AGENDA_MAP = {
   "September 9, 2026":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---September-9%2C-2026.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---September-9%2C-2026_0.pdf",
 
   "August 12, 2026":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet-August-12-2026_0.pdf",
