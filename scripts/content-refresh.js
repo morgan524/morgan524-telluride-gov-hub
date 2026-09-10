@@ -5137,14 +5137,38 @@ async function syncMVAgendas() {
 // then pairs each meeting with the first agenda PDF that falls between it
 // and the next meeting slug. This avoids the trap where a future meeting
 // (no agenda yet) on the listing page borrows the next past meeting's PDF.
+// Off-cadence card (a work session or special meeting) carries its type in the
+// URL slug ("...-board-work-session-...", "...-special-meeting-..."), unlike a
+// regular meeting whose slug vocabulary varies month to month ("regular-meeting"
+// vs "regular-board-meeting") and must NOT drive the title — that would orphan
+// every MEETING_AGENDA_META/MANUAL_SUMMARIES key already written against the
+// fixed "Regular Board Meeting" / "Board of Directors Meeting" title. So this
+// only overrides title/special for the two off-cadence cases it can name with
+// confidence; a regular meeting's slug never matches either and falls through
+// to the caller's fixed title, unchanged from before this function existed.
+function classifyTractionRecSlug(slug) {
+  if (/work-session/.test(slug)) return { title: 'Board Work Session', special: false };
+  if (/special/.test(slug)) return { title: null, special: true };
+  return { title: null, special: false };
+}
+
+// A window's own posted time ("3:00 p.m.", "8:30 a.m.(MST)") only matters for
+// those same off-cadence cards — a regular meeting keeps the caller's fixed
+// cadence time as before. Normalized to "H:MM AM/PM" to match existing data.
+function extractTractionRecTime(windowText) {
+  const m = /(\d{1,2})(?::(\d{2}))?\s*([ap])\.?\s*m\.?/i.exec(windowText);
+  if (!m) return null;
+  return `${m[1]}:${m[2] || '00'} ${m[3].toUpperCase()}M`;
+}
+
 function parseTractionRecAgendas(html, host) {
-  const meetingRe = /\/(\d{4})-(\d{2})-(\d{2})-[a-z0-9-]*(?:board|meeting)[a-z0-9-]*/g;
+  const meetingRe = /\/(\d{4})-(\d{2})-(\d{2})-([a-z0-9-]*(?:board|meeting)[a-z0-9-]*)/g;
   const pdfRe = /\/files\/([a-z0-9]+)\/([^"'\s<>]*[Aa]genda[^"'\s<>]*\.pdf)/g;
   const meetings = [];
   const pdfs = [];
   let m;
   while ((m = meetingRe.exec(html)) !== null) {
-    meetings.push({ pos: m.index, year: m[1], month: m[2], day: m[3] });
+    meetings.push({ pos: m.index, year: m[1], month: m[2], day: m[3], slug: m[4] });
   }
   while ((m = pdfRe.exec(html)) !== null) {
     pdfs.push({ pos: m.index, hash: m[1], name: m[2] });
@@ -5161,15 +5185,30 @@ function parseTractionRecAgendas(html, host) {
     uniqMeetings.push(mt);
   }
   const map = {};
+  // Every card the page lists, not just the ones with an agenda PDF attached —
+  // a work session or special meeting with no packet yet used to vanish
+  // entirely here (silently, since assembleBoardStubs only ever sees what this
+  // function returns). See the 2026-09-11 tellmed work-session miss.
+  const list = [];
   for (let i = 0; i < uniqMeetings.length; i++) {
     const mt = uniqMeetings[i];
     const nextPos = i + 1 < uniqMeetings.length ? uniqMeetings[i + 1].pos : Infinity;
     const candidate = pdfs.find(p => p.pos > mt.pos && p.pos < nextPos);
-    if (!candidate) continue;
     const key = dateKeyFromYMD(mt.year, parseInt(mt.month, 10) - 1, mt.day);
-    map[key] = `https://${host}/files/${candidate.hash}/${candidate.name}`;
+    let agendaUrl = null;
+    if (candidate) {
+      agendaUrl = `https://${host}/files/${candidate.hash}/${candidate.name}`;
+      map[key] = agendaUrl;
+    }
+    const cls = classifyTractionRecSlug(mt.slug);
+    const entry = { date: key, agendaUrl, title: cls.title, special: cls.special };
+    if (cls.title || cls.special) {
+      const time = extractTractionRecTime(html.slice(mt.pos, mt.pos + 900));
+      if (time) entry.time = time;
+    }
+    list.push(entry);
   }
-  return map;
+  return { map, meetings: list };
 }
 
 async function syncFireAgendas() {
@@ -5177,9 +5216,9 @@ async function syncFireAgendas() {
   const PAGE = 'https://www.telluridefire.com/board-meetings';
   const html = await fetchPage(PAGE, 'Fire District board-meetings page');
   if (!html) return null;
-  const map = parseTractionRecAgendas(html, 'www.telluridefire.com');
-  console.log(`  Found ${Object.keys(map).length} Fire District agenda PDF(s)`);
-  return map;
+  const result = parseTractionRecAgendas(html, 'www.telluridefire.com');
+  console.log(`  Found ${Object.keys(result.map).length} Fire District agenda PDF(s), ${result.meetings.length} meeting(s) total`);
+  return result;
 }
 
 async function syncMedAgendas() {
@@ -5187,9 +5226,9 @@ async function syncMedAgendas() {
   const PAGE = 'https://www.tellmed.org/board-meetings';
   const html = await fetchPage(PAGE, 'Hospital District board-meetings page');
   if (!html) return null;
-  const map = parseTractionRecAgendas(html, 'www.tellmed.org');
-  console.log(`  Found ${Object.keys(map).length} Hospital District agenda PDF(s)`);
-  return map;
+  const result = parseTractionRecAgendas(html, 'www.tellmed.org');
+  console.log(`  Found ${Object.keys(result.map).length} Hospital District agenda PDF(s), ${result.meetings.length} meeting(s) total`);
+  return result;
 }
 
 // ── Generate + reconcile: shared meeting-list rebuild ─────────────────────────
@@ -5257,9 +5296,9 @@ function assembleBoardStubs(scraped, cadence, opts, now = new Date()) {
 // (Verified cadence: the regular board meeting is the 4th Thursday every month.)
 async function rebuildMedMeetings() {
   console.log('\n🏥 Rebuilding Hospital District meetings...');
-  const map = await syncMedAgendas();               // { 'Month D, YYYY': url } or null
-  if (map === null) { console.warn('  Med: fetch failed — preserving existing MED_CACHED_DATA'); return null; }
-  const scraped = Object.keys(map).map(date => ({ date, agendaUrl: map[date] }));
+  const result = await syncMedAgendas();             // { map, meetings } or null
+  if (result === null) { console.warn('  Med: fetch failed — preserving existing MED_CACHED_DATA'); return null; }
+  const scraped = result.meetings;
   return assembleBoardStubs(scraped, { nth: 4, weekday: 4 }, {
     title: 'Regular Board Meeting',
     time: '8:30 AM - 11:30 AM',
@@ -5414,9 +5453,9 @@ async function rebuildCountyMeetings(existing, now = new Date()) {
 // solve this the same way — Fire was the one district left un-wired.
 async function rebuildFireMeetings() {
   console.log('\n🚒 Rebuilding Fire District meetings...');
-  const map = await syncFireAgendas();              // { 'Month D, YYYY': url } or null
-  if (map === null) { console.warn('  Fire: fetch failed — preserving existing FIRE_CACHED_DATA'); return null; }
-  const scraped = Object.keys(map).map(date => ({ date, agendaUrl: map[date] }));
+  const result = await syncFireAgendas();           // { map, meetings } or null
+  if (result === null) { console.warn('  Fire: fetch failed — preserving existing FIRE_CACHED_DATA'); return null; }
+  const scraped = result.meetings;
   return assembleBoardStubs(scraped, { nth: 3, weekday: 2 }, {
     title: 'Board of Directors Meeting',
     time: '5:30 PM',

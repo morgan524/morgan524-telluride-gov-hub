@@ -645,6 +645,15 @@ const MED_CACHE_DATE = '2026-09-10';
 
 const MED_CACHED_DATA = [
   {
+    date: "September 11, 2026",
+    time: "3:00 PM",
+    title: "Board Work Session",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "333 W Colorado Ave (2nd Floor), Telluride / Zoom"
+  },
+  {
     date: "August 27, 2026",
     time: "8:30 AM - 11:30 AM",
     title: "Regular Board Meeting",
