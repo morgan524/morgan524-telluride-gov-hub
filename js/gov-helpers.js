@@ -146,9 +146,6 @@ function resolveEventImage(e, opts) {
 // stays current automatically; the static config is the fallback for
 // sources without a PDF agenda.
 const MEETING_AGENDA_META = {
-  "telluride|2026-08-10|Intergovernmental Worksession - Aug 10 2026":
-    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8057","zoomUrl":"https://us06web.zoom.us/meeting/register/ZOZQ7J9UTmKHp7XXMuliiw","meetingId":"886 1441 5107","passcode":"070631.","phone":"719) 359-4580"},
-
   "telluride|2026-08-11|Town Council - Aug 11 2026":
     {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8041","zoomUrl":"https://us06web.zoom.us/meeting/register/HhPERZh2Rey09qBDf2d5ug","meetingId":"830 1182 2138","passcode":"888369.","phone":"719) 359-4580"},
 
@@ -238,9 +235,6 @@ const MEETING_AGENDA_META = {
 
   "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026 - Cancelled":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8101","sv":4},
-
-  "telluride|2026-08-10|Open Space Commission Site Walk - Aug 10 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8298","sv":4},
 
   "norwood|2026-09-08|Norwood Water Commission Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -733,12 +727,6 @@ const DAILY_QUESTIONS = [
 // target, and these seeds let the data start landing again. No page renders
 // them yet — restoring (or retiring) the reader UIs is tracked separately.
 const MEETING_PREVIEWS = {
-  "telluride|2026-09-10|Town Council Budget - Sep 10 2026":
-    "Council is expected to review and discuss the Town of Telluride's budget during this dedicated budget session. The meeting will likely address municipal funding priorities, departmental allocations, and financial planning considerations for the upcoming fiscal period.",
-
-  "county|2026-09-10|Planning Commission Meeting":
-    "Planning Commission is expected to address land use and development matters in San Miguel County. Related notices suggest ongoing activity around property foreclosure, estate administration, material hauling procurement, and a federal hazardous fuels project affecting nearby national forest lands managed by the USDA Forest Service.",
-
   "telluride|2026-09-14|Open Space Commission - Sep 14 2026":
     "The Open Space Commission is expected to discuss priorities and criteria related to open space acquisition, management, and maintenance, as well as review open space elements of relevant plans and potentially formulate recommendations to Town Council on open-space-related matters.",
 
@@ -771,9 +759,6 @@ const MEETING_PREVIEWS = {
 
   "telluride|2026-09-24|Planning & Zoning Commission Chair - Sep 24 2026":
     "The Planning & Zoning Commission Chair is expected to discuss the Colorado Wildfire Resiliency Code amendments to Telluride's Land Use Code, following Town Council's passage of Ordinance #1640 on August 11, 2026, which updated Chapter 18 of the Municipal Code to incorporate wildfire resiliency standards.",
-
-  "telluride|2026-09-10|(Rescheduled to Oct 13th) Town Council Budget - Sep 10 2026":
-    "Council is expected to discuss the town's budget during this rescheduled session. Members may also revisit Ordinance #1640, which amended the Land Use Code to implement the Colorado Wildfire Resiliency Code, following its passage on August 11, 2026.",
 
   "telluride|2026-09-23|Vending Subcommittee - Sep 23 2026":
     "The Telluride Vending Subcommittee is expected to review vending permit applications, as is typical for its seasonal meetings held at Rebekah Hall. No specific agenda items were publicly detailed for this session.",
@@ -826,9 +811,6 @@ const MEETING_PREVIEWS = {
   "county|2026-10-08|Planning Commission Meeting":
     "The Planning Commission is expected to review land use and development matters relevant to San Miguel County. Related notices suggest ongoing county procurement activity, including trail construction, facility improvements, and hazard mitigation planning, which may inform planning discussions.",
 
-  "telluride|2026-09-10|San Miguel Authority for Regional Transportation - Sep 10 2026":
-    "Board will consider approving FY25 audit financials, selecting PFM Asset Management for investment advisory services, and discussing FY27 budget development. A gondola project update and September operations report are also on the agenda. The meeting concludes with an executive session to discuss personnel matters.",
-
   "county|2026-09-24|5 x 5 County Meeting - San Miguel County Hosts":
     "County officials are expected to address several local matters, including a material hauling contract, the Lawson Hill Connector Trail Project, and fuel island canopy construction. The meeting may also touch on the South Uncompahgre Hazardous Fuels project and ongoing probate and foreclosure proceedings affecting San Miguel County residents.",
 
@@ -836,7 +818,10 @@ const MEETING_PREVIEWS = {
     "The Resident Advisory Committee is expected to discuss the recently passed Colorado Wildfire Resiliency Code amendment to the Town's Land Use Code, as well as a new $2.00 monthly paper billing fee approved by San Miguel Power Association, set to take effect October 29, 2026.",
 
   "telluride|2026-09-16|CANCELED - Parks & Recreation Commission - Sep 16 2026":
-    "The September 16, 2026 Parks & Recreation Commission meeting has been canceled. No agenda items will be discussed. The commission typically meets the third Wednesday of each month to address community parks and recreation needs."
+    "The September 16, 2026 Parks & Recreation Commission meeting has been canceled. No agenda items will be discussed. The commission typically meets the third Wednesday of each month to address community parks and recreation needs.",
+
+  "county|2026-09-10|Planning Commission Meeting":
+    "The San Miguel County Planning Commission is expected to review and approve August meeting minutes, then consider recommending amendments to the county's Land Use Code covering three topics: forestry practices, oil and gas, and geothermal energy."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -900,6 +885,106 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "A barrel of fun on Labor Day",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.ouraynews.com/2026/09/09/barrel-fun-labor-day/",
+    img: ""
+  },
+  {
+    title: "Water restrictions exception, not rule",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "community",
+    copy: "In the early days of summer, it remained a matter of some debate where the drought of 2026 ranked in the annals of long, hot Colorado summers. For Cary Denison, Ouray County’s representative on the Colorado River Water Conservation District, that debate is settled. “It’s absolutely the worst year I’",
+    href: "https://www.ouraynews.com/2026/09/09/water-restrictions-exception-not-rule/",
+    img: ""
+  },
+  {
+    title: "Trump declares disaster for fire",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "public-safety",
+    copy: "Move frees up federal relief money President Donald Trump approved a major disaster declaration for the Gold Mountain and Aspen Acres fires, unlocking millions of dollars in Federal Emergency Management Agency relief funds for the state. Federal and state officials confirmed Friday that Trump approv",
+    href: "https://www.ouraynews.com/2026/09/09/trump-declares-disaster-fire/",
+    img: ""
+  },
+  {
+    title: "Crews working to plug old water well",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "infrastructure",
+    copy: "It’s not what you think. A towering steel drill that’s been perched along the side of U.S. Highway 550 in recent weeks isn’t probing for gas, or oil, or even a route to the Far East. The operation is instead part of a state program to plug thousands of abandoned or “orphaned” wells across Colorado. ",
+    href: "https://www.ouraynews.com/2026/09/09/crews-working-plug-old-water-well/",
+    img: ""
+  },
+  {
+    title: "Parking enforcement nixes popular highway camping spot",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "infrastructure",
+    copy: "Officials cite concerns about safety, health at Tuffy s Corner A highway pullout popular for overnight camper parking north of Ouray has been empty in recent weeks since ‘no camping’ signs were installed. The wide gravel shoulder following the outside curve of U.S. Highway 550 between the Whispering",
+    href: "https://www.ouraynews.com/2026/09/09/parking-enforcement-nixes-popular-highway-camping-spot/",
+    img: ""
+  },
+  {
+    title: "Fourteen measures to appear on statewide ballot",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "government",
+    copy: "The Colorado secretary of state’s office on Friday certified the list of ballot measures going before voters in November 2026 — and once again, the list is a long one. A total of 14 measures will be decided by Colorado voters this year. The figure ties a record for the most questions put to voters i",
+    href: "https://www.ouraynews.com/2026/09/09/fourteen-measures-appear-statewide-ballot/",
+    img: ""
+  },
+  {
+    title: "Disaster relief tax an investment in resilience",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "government",
+    copy: "Dear Editor: I am writing to express my strong support for a dedicated Ouray County tax to provide funding for disaster relief, emergency preparedness, and community recovery. Those of us who live in Ouray County understand both the extraordinary beauty of our mountain environment and the risks that",
+    href: "https://www.ouraynews.com/2026/09/09/disaster-relief-tax-investment-resilience/",
+    img: ""
+  },
+  {
+    title: "Grateful to tell stories here, ink stains and all",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "community",
+    copy: "Sometimes, I journal to process major life events. I’ve lived in a lot of places worth journaling about and my latest move is no exception. I’ve been in Ouray for six weeks now and I’m struck by the similarities to a mountain village in Japan where I taught English for three years after college. Kos",
+    href: "https://www.ouraynews.com/2026/09/09/grateful-tell-stories-ink-stains/",
+    img: ""
+  },
+  {
+    title: "Looking Back",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "health",
+    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago September 8, 1966 The Colorado Board of Public Health has ordered Ouray to appear before that body in Denver on Sept. 13 at 4:20 p.m. to explain the steps Ouray is taking to establish a",
+    href: "https://www.ouraynews.com/2026/09/09/looking-back-20260910-0159-410636/",
+    img: ""
+  },
+  {
+    title: "Colorado’s rocky road to statehood",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "infrastructure",
+    copy: "Last month Colorado celebrated its 150th anniversary of statehood. Many of us assume that statehood was inevitable for this place we love. However, the 17-year quest was met with significant resistance from residents and national officials. Long before President Ulysses S. Grant signed Proclamation ",
+    href: "https://www.ouraynews.com/2026/09/09/colorados-rocky-road-statehood/",
+    img: ""
+  },
+  {
     title: "Parish Bulletin for September 6",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -930,106 +1015,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22931"
   },
   {
-    title: "Crews working to fill 1950s-era well along U.S. 550",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 4, 2026",
-    newsTopic: "infrastructure",
-    copy: "It’s not what you think. A towering steel drill rig that’s been perched along the side of U.S. Highway 550 in recent weeks isn’t probing for gas, or oil, or even a route to the Far East. The operation is instead part of a state program to plug thousands of abandoned, or “orphaned” wells across Color",
-    href: "https://www.ouraynews.com/2026/09/04/crews-working-fill-1950s-era-well-along-u-s-550/",
-    img: ""
-  },
-  {
-    title: "Trump declares disaster for Gold Mountain, Aspen Acres fires",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 4, 2026",
-    newsTopic: "public-safety",
-    copy: "President Donald Trump has signed off on a major disaster declaration for the Gold Mountain and Aspen Acres fires that unlocks millions of dollars in Federal Emergency Management Agency relief funds for the state. Colorado’s Office of Emergency Management confirmed Friday that Trump approved the dec",
-    href: "https://www.ouraynews.com/2026/09/04/trump-declares-disaster-gold-mountain-aspen-acres-fires/",
-    img: ""
-  },
-  {
-    title: "Hickenlooper hopeful for fire disaster order",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 3, 2026",
-    newsTopic: "public-safety",
-    copy: "U.S. Sen. John Hickenlooper said Friday he was optimistic the Trump administration will declare the Gold Mountain Fire a federal disaster, arguing Congress “wouldn’t settle for” the White House withholding relief funds from Colorado for the second year in a row. Hickenlooper, who surveyed fire damag",
-    href: "https://www.ouraynews.com/2026/09/02/hickenlooper-hopeful-fire-disaster-order/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "County employees remain on paid leave",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 3, 2026",
-    newsTopic: "public-safety",
-    copy: "Ouray County has had two emergency- related employees on paid administrative leave since the early days of the Gold Mountain Fire. A third employee, Road and Bridge Superintendent Ty Barger, was placed on paid administrative leave following an arrest on suspicion of driving under the influence in th",
-    href: "https://www.ouraynews.com/2026/09/02/county-employees-remain-paid-leave/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Businesses share struggles with senator",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 3, 2026",
-    newsTopic: "public-safety",
-    copy: "Ouray County business owners bent the ear of U.S. Sen. John Hickenlooper on Friday, sharing stories of declining profits and mass cancellations in the wake of the Gold Mountain Fire in the hopes the Democrat can help secure federal disaster relief funding. About a dozen business owners and the direc",
-    href: "https://www.ouraynews.com/2026/09/02/businesses-share-struggles-senator/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Cleanup project at former mine site to take until 2028, Thorin says",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 3, 2026",
-    newsTopic: "government",
-    copy: "A representative from Thorin Resources, the owner and operator of the Revenue-Virginius Mine, told Ouray County commissioners last week the company expects to complete a federally supervised cleanup project at the site by the fall of 2028. At a Board of County Commissioners work session on Aug. 25, ",
-    href: "https://www.ouraynews.com/2026/09/02/cleanup-project-former-mine-site-take-2028-thorin-says/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Mining proposal faces unanimous scrutiny",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 3, 2026",
-    newsTopic: "government",
-    copy: "Kris Peterson and Alex Klemt said it was an algorithm that led them west from Colorado Springs, up a rough dirt road past the Camp Bird Mine, and into the lofty tundra of Governor Basin. With the help of AI, the two men told Ouray County commissioners last week, they had searched far and wide across",
-    href: "https://www.ouraynews.com/2026/09/02/mining-proposal-faces-unanimous-scrutiny/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Who is the MTN Lodge?",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 3, 2026",
-    newsTopic: "community",
-    copy: "Dear Editor: I opened the letter received last Wednesday and was a bit confused as to the intent, since the photos leading the letter are of the True Grit and several businesses that no longer exist in Ridgway, but I read through the entire letter with interest. I continue to marvel at the amount of",
-    href: "https://www.ouraynews.com/2026/09/02/who-is-the-mtn-lodge/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "OHVs have made trail access more difficult",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 3, 2026",
-    newsTopic: "recreation",
-    copy: "Dear Editor: I am writing in response to Jeff Lindberg’s letter in the Aug. 27 edition. My husband and I live in Ouray County primarily because we love to hike. We have lived here for eight years, but we have been visiting for more than 30 years. Jeff L. stated that the trails/roads are for everyone",
-    href: "https://www.ouraynews.com/2026/09/02/ohvs-made-trail-access-difficult/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Tree thinning vital to managing wildfire",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 3, 2026",
-    newsTopic: "public-safety",
-    copy: "Dear Editor: This letter pertains to an article by Chart Riggall in the Aug. 27 edition. I thought it was an excellent article on the history of fire in the San Juans, etc. However, there was, in my opinion, one glaring error of great importance. Deborah Kennard, a Colorado Mesa University environme",
-    href: "https://www.ouraynews.com/2026/09/02/tree-thinning-vital-managing-wildfire/?ta_paidstory",
-    img: ""
-  },
-  {
     title: "Sheriff Rescinds Stage 2 Fire Restrictions",
     source: "Ouray County",
     sourceKey: "ouray-county",
@@ -1058,16 +1043,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Attached is this week's Parish Bulletin. Please check our calendar for all updated information. This weekend:Saturday Vigil (Aug. 29) is a bilingual Holy Mass.Sunday (Aug. 30) 8:30 am pray the Rosary, 9 am Holy Mass. Immediately ...",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-august-30/",
     img: ""
-  },
-  {
-    title: "We’re Hiring- Bilingual Food Pantry and seNior Lunch Cook Assistant/ Estamos Contratando: Asistente Bilingüe del Banco de Alimentos y Asistente de Cocina del Almuerzo para Personas Mayores",
-    source: "Fresh Food Hub",
-    sourceKey: "fresh-food-hub",
-    date: "August 27, 2026",
-    newsTopic: "community",
-    copy: "We re hiring for two part-time positions: Bilingual Food Pantry Assistant — Sundays, 1:30–6:30 p.m. This role provides Spanish-English translation support for our Spanish-speaking clients during food pantry distribution. Senior Lunch Assistant — Thursdays, 8:30 a.m.–1:30 p.m. at Norwood Town Hall. T",
-    href: "https://freshfoodhub.net/were-hiring-bilingual-food-pantry-and-senior-lunch-cook-assistant-estamos-contratando-asistente-bilingue-del-banco-de-alimentos-y-asistente-de-cocina-del-almuerzo-para-personas-mayores/",
-    img: ""
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
@@ -1093,13 +1068,10 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#42052"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-09';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-10';
 const LEGAL_NOTICES_CACHE_DATE = '2026-09-09';
 
 const MANUAL_SUMMARIES = {
-  "telluride|2026-08-10|Intergovernmental Worksession - Aug 10 2026":
-    "This intergovernmental worksession brings together representatives from Telluride, Mountain Village, Ophir, San Miguel County, and Norwood for a regional check-in. The session opens with a large-projects update spanning all five jurisdictions — a regular pulse-check on what's moving across the region. From there: a presentation on allyship with the Ute people from Ernest House Jr.; a status update on the Telluride Regional Medical Center's new facility from Tom Crabtree and Heidi Lauterbach; an update on regional infant care and the Munchkins program from Chambers Squier and Michelle Bulson; and a U.S. Forest Service update from Megan Eno. No votes or land-use decisions are on the agenda — this is a listening and coordination session.",
-
   "telluride|2026-08-11|Town Council - Aug 11 2026":
     "The most consequential item on this agenda is third reading of the Colorado Wildfire Resiliency Code — if approved, it amends the Land Use Code's historic and architectural review standards and landscaping/tree maintenance rules to align with state wildfire mitigation requirements. That's the kind of code change that quietly reshapes what property owners can and can't do with vegetation and building materials for years to come. The morning work sessions cover a parking program update, next steps for the Fino Units and Spruce House affordable housing properties, a potential floodplain remapping project, and a Comprehensive Plan update — four topics that touch the town's long-running tensions around housing, infrastructure, and growth management. The afternoon brings a 2027 goals-and-objectives discussion and a look at potential updates to the Telluride Energy Mitigation Program's fee calculations. A budget reappropriation ordinance gets its first reading. The manager's report includes occupancy updates on the Virginia Placer 2A housing project, mudslide cleanup and stormwater infrastructure, and a status check on the Oval Project.",
 
@@ -1189,9 +1161,6 @@ const MANUAL_SUMMARIES = {
 
   "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026 - Cancelled":
     "The August 20, 2026 Planning & Zoning Commission meeting has been cancelled.",
-
-  "telluride|2026-08-10|Open Space Commission Site Walk - Aug 10 2026":
-    "The Open Space Commission trades the conference room for the trail on August 10, meeting at the Bear Creek Trailhead at 4:00 PM for a site walk. Three things are on the ground-level agenda: a potential new trail alignment connecting Bear Creek Trailhead to Firecracker Hill, a look at beaver activity in Zone 3 of the Bear Creek Preserve, and restoration planning in Zone 1. Site walks like this are where the real decisions get shaped — what gets built, what gets left alone, what nature is already rerouting on its own.",
 
   "norwood|2026-09-08|Norwood Water Commission Meeting":
     "The September 8, 2026 Norwood Water Commission Meeting agenda hasn't been posted yet.",
@@ -1776,6 +1745,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "THS volleyball loses 3-1 to Durango",
+    source: "Telluride Times",
+    date: "September 10, 2026",
+    firstSeen: "2026-09-10",
+    newsTopic: "community",
+    copy: "Telluride volleyball fell 3-1 to 4A Durango on Sept. 5, dropping sets 1, 2, and 4 but taking set 3 behind a big run from sophomore Grace Blakney. The Lady Miners sit 4-4 overall heading to Hotchkiss on Sept. 10, then host Pagosa Springs Sept. 12 at 1 p.m.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_3a5055d5-c30a-4f4a-beec-a490a62bd662.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/01/f0109352-7e6a-4e0b-a8d0-26b7eca10598/6aa0ca23395fc.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Democratic state rep. candidate Alec Lindeman denied ballot access",
     source: "Telluride Times",
@@ -2680,78 +2661,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Miner soccer looking super-stocked",
-    source: "Telluride Times",
-    date: "August 27, 2026",
-    firstSeen: "2026-08-28",
-    newsTopic: "education",
-    copy: "The Telluride High boys soccer team heads into 2026 with nearly its entire roster intact — coach Ramon Rodriguez says the only starter lost to graduation was center-mid Spencer du Toit. Goalkeeper Maddox Slosberg and all four starting fullbacks return, along with senior leaders in the attack. The Miners went 13-4-0 last season before falling to eventual state champ Crested Butte in the Great Eight.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_08775cdb-e5ea-4af2-8a71-dfd7548e5464.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/5c/25c3ca45-e412-4c41-adf6-b6f819d71f00/6a8eaff26b086.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Colorado West Land Trust releases new restoration plan",
-    source: "Telluride Times",
-    date: "August 27, 2026",
-    firstSeen: "2026-08-28",
-    newsTopic: "health",
-    copy: "Colorado West Land Trust has released its first Restoration Plan, a five-year framework covering six western Colorado counties focused on watershed health, wildlife habitat, and agricultural resilience. Alongside it, CWLT is restoring 115-plus acres of wetlands and riparian habitat along the North Fork of the Gunnison River in Delta County.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_d6ed84a7-ffc4-4946-814e-cdf92262d4d4.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/47/14731eb7-9b30-4179-b3ae-bdb29fa2dfdf/6a8f062dc54a5.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Local, hot lunch returns to Lone Cone Library",
-    source: "Telluride Times",
-    date: "August 27, 2026",
-    firstSeen: "2026-08-27",
-    newsTopic: "community",
-    copy: "Fresh Food Hub's First Friday Family Hot Lunch resumes Sept. 3 at 11 a.m. at Lone Cone Library — locally sourced, made-from-scratch meals for kids and caregivers, continuing a four-year partnership. Lunches run first Fridays through December, funding permitting.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_35362685-e8fe-4525-93b5-1a985f0ac3c3.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/e7/4e7e55d0-2294-475e-aa35-b7ae6721a1da/6a8f04dd95dc9.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "CHALKBOARD Week of Aug. 27 - Sept. 2",
-    source: "Telluride Times",
-    date: "August 27, 2026",
-    firstSeen: "2026-08-27",
-    newsTopic: "arts-culture",
-    copy: "Norwood-area weekly community roundup for Aug. 27–Sept. 2 includes a free Chamber Music concert at The Livery on Aug. 27, the weekly Farmers Market Thursdays in Pocket Park, and regular meetings for town, school, and county boards. Food pantry runs Sundays 3–6 p.m.; senior meals Mondays and Thursdays at noon.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_f9bcbb79-510c-4a39-9d02-8d2b36c23f2f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/8f/08f554d5-f14a-4938-9b6b-a1f797203c42/6a8f077b9a196.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Camp Alderwild cranks up EDM festival for final year",
-    source: "Telluride Times",
-    date: "August 27, 2026",
-    firstSeen: "2026-08-27",
-    newsTopic: "arts-culture",
-    copy: "Camp Alderwild returns to Telluride Aug. 28–29 for its second and final year, with roughly twice the programming of last summer's inaugural run. Of The Trees headlines alongside Daily Bread, with additional acts and after-hours shows at venues across town and Mountain Village. Planet Bluegrass has confirmed no VIP tier is coming to Telluride Bluegrass.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_80f4db90-1e7d-4019-87af-12508a0b99ac.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/33/4334355b-647e-4a05-9d57-d26310f1d1b3/6a8cca13b2a03.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Legals and Public Notices for August 27-September 2, 2026",
-    source: "Telluride Times",
-    date: "August 27, 2026",
-    firstSeen: "2026-08-27",
-    newsTopic: "community",
-    copy: "San Miguel County is holding a public hearing Sept. 16 to consider adopting the 2024 International Building Code and Colorado Low Energy & Carbon Code — written comments due Sept. 10. The county is also taking contractor proposals for a fuel island canopy in Norwood (due Sept. 3) and jail repainting in Ilium (due Sept. 18).",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Breaking news: Plane crashes southwest of Telluride",
     source: "Telluride Times",
     date: "September 4, 2026",
@@ -2858,7 +2767,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Ridgway Rescinds Stage 2 Fire Restrictions, Reinstates Stage 1 Fire Restrictions effective 12:01am on Thursday, Sept. 3rd - Sept. 2, 2026",
     source: "Town of Ridgway",
-    date: "September 9, 2026",
+    date: "September 10, 2026",
     firstSeen: "2026-09-09",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2880,7 +2789,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Public Hearing Notice Wed., Sept. 16, 2026 at 5:30pm - 1) Site Plan and Conditional Use Permit for Riverbend Townhomes (TBD Liddell Dr.); 2) Plat Amendment of Lot 4 and Outlot of Riverview Business Park Subdivision (TBD Liddell Dr.); 3) PUD Amendment Lena Street Commons Planned Unit Development (TBD N. Lena Street) - Sept. 2, 2026",
     source: "Town of Ridgway",
-    date: "September 9, 2026",
+    date: "September 10, 2026",
     firstSeen: "2026-09-09",
     newsTopic: "land-use",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2891,6 +2800,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 9-9-26",
+    source: "KOTO Community Radio",
+    date: "September 10, 2026",
+    newsTopic: "public-safety",
+    copy: "Two Die in Plane Crash Outside of Telluride; The Season of Voracity",
+    href: "https://koto.org/news/newscast-9-9-26/"
+  },
   {
     title: "Newscast 9-4-26",
     source: "KOTO Community Radio",
@@ -2938,14 +2855,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "community",
     copy: "West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda; Remembering Dolly Parton",
     href: "https://koto.org/news/newscast-8-27-26/"
-  },
-  {
-    title: "Newscast 8-26-26",
-    source: "KOTO Community Radio",
-    date: "August 27, 2026",
-    newsTopic: "public-safety",
-    copy: "San Miguel County Shifts to Stage 1 Fire Restrictions; Community Advocates for Worker Protections; Gaiascope Lights Up Mountain Village",
-    href: "https://koto.org/news/newscast-8-26-26/"
   }
 ];
 
@@ -3465,28 +3374,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Sewing 101 with Melissa",
-    link: "https://koto.org/event/sewing-101-with-melissa/2026-09-09/",
-    description: "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.",
-    pubDate: "2026-09-09T17:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/02/sewing.jpg"
-  },
-  {
-    title: "Sound Bath with Danielle & Ian",
-    link: "https://koto.org/event/sound-bath-with-danielle-ian-2/",
-    description: "Join us for an hour of traveling through sound and the inner self! In this once a month community event, we are healing the body and auric field with a multitude of sound frequencies. Chimes, 432hz quartz singing bowls, crystal tuning pyramids, rain drums, GALORE! We will also be holding space for group conversation, weaving through topics of spirituality. Bring a blanket, yoga mat, water bottle, journal, and your psycho-spiritual discussion hat! After each sound bath, we will be sticking around for group discussion for a duration of 30 – 40 minutes. Each month will have a different psycho-spiritual topic, and will offer tools to integrate these themes into our daily lives. Join us for this beautiful summer offering! Hosted by: Danielle Christmas & Ian Wilson Danielle Christmas: Sound healer/ Reiki 2/ YTT 200hr/ Breathwork coach Ian Wilson: Sound healing practitioner/ Level 3 Reiki practitioner/ Herbalist",
-    pubDate: "2026-09-09T17:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/danielle-sound-1.png"
-  },
-  {
     title: "Bear Aware Puppet Shows",
     link: "https://koto.org/event/bear-aware-puppet-shows/2026-09-10/1/",
     description: "Come learn how to keep bears safe! Ven a aprender cómo mantener a los osos seguros!",
@@ -3881,6 +3768,94 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "Mahjongg for Independent Players",
+    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-09-16/",
+    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-09-16T13:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
+  },
+  {
+    title: "Songs of the Season: Fall",
+    link: "https://koto.org/event/songs-of-the-season-fall/",
+    description: "Join Oliver & Jackson in a Seasonal Sing Along event, focusing on songs relevant to each coming season. Bring an instrument, just your voice, or even dancing shoes. All are invited. Chords and lyrics will be displayed.",
+    pubDate: "2026-09-16T17:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/Songs-of-the-season-5.png"
+  },
+  {
+    title: "Telluride Rotary Club Meeting",
+    link: "https://koto.org/event/telluride-rotary-club-meeting-8/",
+    description: "Telluride Rotary Club meets Wednesday, September 16, at 6:00 p.m. at the MountainFilm location, 122 S Oak Street, Telluride. Meetings feature guest speakers and discussion of club projects. Anyone with an interest in networking and service is welcome to drop in as a guest. Email telluriderotary@gmail.com for info or to rsvp.",
+    pubDate: "2026-09-16T18:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/Telluride-Rotary-Logo-White-1.jpg"
+  },
+  {
+    title: "Yin Yang Yoga with Miriah",
+    link: "https://koto.org/event/yin-yang-yoga-with-miriah-2/2026-09-17/",
+    description: "Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses. We'll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome. Miriah has been local to Telluride area for over ten years and have been teaching yoga for six years. She owns her own herbal business, makes herbal products and co-hosts a weekly podcast. She also is an avid snowboarder, photographer, sticker artist and comedian.",
+    pubDate: "2026-09-17T09:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/MIRIAH-2.png"
+  },
+  {
+    title: "Tennis Clinic 3.0-4.0",
+    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-17/",
+    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-09-17T09:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Tennis Clinic 4.0+",
+    link: "https://koto.org/event/tennis-clinic-4-0/2026-09-17/",
+    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-09-17T11:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Pilates for All Bodies with Laura",
+    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-09-17/",
+    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-09-17T12:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "TRC Men's Tennis Singles",
+    link: "https://koto.org/event/trc-mens-tennis-singles/2026-09-17/",
+    description: "The 1st TRC Men's Singles League! Sign up on a week-to-week basis. No long-term commitment.",
+    pubDate: "2026-09-17T16:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
   }
 ];
 
@@ -3888,7 +3863,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Bear Aware Puppet Show",
     link: "https://telluridelibrary.libcal.com/event/17255211?hs=a",
-    description: "A puppet show at Wilkinson Public Library's Kids Area focused on bear awareness, offering young audiences a fun and educational introduction to living safely alongside wildlife in the region. The program runs approximately 30 minutes.",
+    description: "9:00 AM – 9:30 AM",
     pubDate: "2026-09-09T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -3899,7 +3874,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Bear Aware Puppet Show",
     link: "https://telluridelibrary.libcal.com/event/17255224?hs=a",
-    description: "A puppet show at Wilkinson Public Library's Kids Area focused on bear awareness, offering young audiences a fun and educational introduction to living safely alongside wildlife in the region. The program runs approximately 30 minutes.",
+    description: "10:00 AM – 10:30 AM",
     pubDate: "2026-09-09T16:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -3932,7 +3907,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Movie and A Snack Club",
     link: "https://telluridelibrary.libcal.com/event/17283035?hs=a",
-    description: "A recurring library program at Wilkinson Public Library where participants gather in the Telluride Room to watch a movie and enjoy a snack. The event runs from 3:30 to 5:30 PM.",
+    description: "3:30 PM – 5:30 PM",
     pubDate: "2026-09-09T21:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -4488,7 +4463,7 @@ const OURAY_COUNTY_EVENTS = [
   {
     title: "Imogene Pass Run",
     link: "https://ouraycountyco.gov/Calendar.aspx?EID=3779",
-    description: "The Imogene Pass Run is an annual footrace that takes competitors over the challenging Imogene Pass between Telluride and Ouray, traversing one of the most scenic and demanding mountain routes in the San Juan Mountains. The course climbs to an elevation of over 13,000 feet, making it a notable test of endurance for participants.",
+    description: "https://ouraycountyco.gov/calendar.aspx?EID=3779",
     pubDate: "2026-09-12T07:00:00.000Z",
     source: "ouraycounty",
     sourceLabel: "Ouray County",
@@ -5895,7 +5870,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5906,7 +5881,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Rescheduled To 09 22 2026",
     link: "https://www.norwoodtown.com/2026-09-08-nwc-rescheduled-to-09-22-2026",
-    description: "A previously scheduled Norwood Town government meeting has been rescheduled to September 22, 2026. The rescheduled meeting will take place in Norwood, CO, and is organized by the Town of Norwood.",
+    description: "",
     pubDate: "2026-09-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5917,7 +5892,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-09-09-board-of-trustees-meeting",
-    description: "A regularly scheduled meeting of the Town of Norwood Board of Trustees, providing an opportunity for local governance and public business to be conducted. Community members are welcome to attend and observe the proceedings.",
+    description: "",
     pubDate: "2026-09-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5928,7 +5903,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-09-10-norwood-sanitation-district-meeting-meeting",
-    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and district operations are welcome to attend.",
+    description: "",
     pubDate: "2026-09-10T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5939,7 +5914,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-10-senior-lunch",
-    description: "A midday meal gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    description: "",
     pubDate: "2026-09-10T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5950,7 +5925,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Office Closed For Training 1 3pm",
     link: "https://www.norwoodtown.com/2026-09-14-office-closed-for-training-1-3pm",
-    description: "The Town of Norwood offices will be closed for staff training on the afternoon of September 14, 2026, beginning at 3 p.m. Residents should plan accordingly for any town business that may need to be addressed before or after the closure.",
+    description: "",
     pubDate: "2026-09-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5961,7 +5936,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-17-senior-lunch",
-    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    description: "",
     pubDate: "2026-09-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5972,7 +5947,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-09-21-planning-and-zoning-commission-meeting",
-    description: "The Town of Norwood's Planning and Zoning Commission will hold a regular meeting to review and discuss land use, development, and zoning matters within the community. Members of the public are welcome to attend and observe the proceedings.",
+    description: "",
     pubDate: "2026-09-21T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5983,7 +5958,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-24-senior-lunch",
-    description: "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
+    description: "",
     pubDate: "2026-09-24T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5994,7 +5969,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
+    description: "",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6005,7 +5980,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Meals",
     link: "https://www.norwoodtown.com/2026-10-01-senior-meals",
-    description: "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
+    description: "",
     pubDate: "2026-10-01T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6016,7 +5991,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Meals",
     link: "https://www.norwoodtown.com/2026-10-08-senior-meals",
-    description: "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
+    description: "",
     pubDate: "2026-10-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6027,7 +6002,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
+    description: "",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6038,7 +6013,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Meals",
     link: "https://www.norwoodtown.com/2026-10-15-senior-meals",
-    description: "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather, share a meal, and connect with neighbors. This recurring community event takes place in Norwood and is organized through local town services.",
+    description: "",
     pubDate: "2026-10-15T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6049,7 +6024,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Meals",
     link: "https://www.norwoodtown.com/2026-10-22-senior-meals",
-    description: "A midday community meal program for seniors, hosted by the Town of Norwood. It offers older residents a chance to gather, share a meal, and connect with neighbors in a welcoming setting.",
+    description: "",
     pubDate: "2026-10-22T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6060,7 +6035,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Meals",
     link: "https://www.norwoodtown.com/2026-10-29-senior-meals",
-    description: "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather and share a meal together. This recurring community event provides both nourishment and social connection for Norwood's senior residents.",
+    description: "",
     pubDate: "2026-10-29T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6071,7 +6046,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Veterans Day",
     link: "https://www.norwoodtown.com/2026-11-11-closed-for-veterans-day",
-    description: "The Town of Norwood will be closed in observance of Veterans Day. Municipal offices and services will be unavailable on this federal holiday honoring those who have served in the United States armed forces.",
+    description: "",
     pubDate: "2026-11-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6082,7 +6057,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Thanksgiving",
     link: "https://www.norwoodtown.com/2026-11-26-closed-for-thanksgiving",
-    description: "The Town of Norwood will be closed in observance of Thanksgiving Day. Municipal offices and services will be unavailable, with normal operations expected to resume following the holiday.",
+    description: "",
     pubDate: "2026-11-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6093,17 +6068,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
-    link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
-    description: "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
-    pubDate: "2026-09-08T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
-  },
   {
     title: "Market on the Plaza",
     link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
@@ -6700,30 +6664,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/60285/download_8.800x533.webp"
   },
   {
-    title: "Mountain Biking Meet-Up",
-    link: "https://www.telluride.com/event/mountain-biking-meet-up/",
-    description: "As part of TMVOA’s efforts to support and grow mountain biking in Mountain Village, TMVOA is hosting Mountain Biking …",
-    pubDate: "2026-08-20",
-    endDate: "2026-09-08",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63362/tdp3588.800x533.webp"
-  },
-  {
-    title: "Telluride Film Festival",
-    link: "https://www.telluride.com/event/telluride-film-festival/",
-    description: "Each Labor Day weekend, the tiny mountain village of Telluride, Colorado triples in size. Swells of passionate film …",
-    pubDate: "2026-09-04",
-    endDate: "2026-09-08",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/28877/144071284720c1c00935.800x533.webp"
-  },
-  {
     title: "After Telluride Film Festival",
     link: "https://www.telluride.com/event/after-telluride-film-festival/",
     description: "After Telluride Film Festival (ATFF) screens eight popular Festival films for locals on the Tuesday - Friday following …",
@@ -6976,14 +6916,14 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Telluride Autumn Classic",
     link: "https://www.telluride.com/event/telluride-autumn-classic/",
-    description: "A Colorful Car Show in the Mountains\n\nWhile still very much a celebration of cars and colors, the Autumn Classic is the …",
+    description: "A Colorful Car Show in the Mountains\n\nHeld September 24–27, 2026, in Telluride, Colorado, the Telluride Autumn …",
     pubDate: "2026-09-24",
     endDate: "2026-09-28",
     source: "telluride-com",
     sourceLabel: "Telluride.com",
     category: "Community Event",
     location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/37495/0_dvs_4564_small_2mp.800x533.webp"
+    imageUrl: "https://www.telluride.com/site/assets/files/37495/download.800x533.webp"
   },
   {
     title: "Corvettes & Colors",

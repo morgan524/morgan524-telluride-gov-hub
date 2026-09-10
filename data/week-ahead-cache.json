@@ -1,26 +1,22 @@
 {
-  "hash": "eba35303752becbd86f9e801e5a7a728c865742a",
-  "lede": "The biggest item this week is the San Miguel County BOCC's special meeting Tuesday, where they'll consider Resolution 2026-34 to change Area Median Income limits on deed-restricted properties at Pinion Park — a technical vote with real teeth for who qualifies for affordable housing in the county. Ridgway's Town Council also meets Tuesday with weighty business, including ratifying a letter backing a federal Major Disaster Declaration for the Gold Mountain Fire, which has torched nearly 40,000 acres and repeatedly cut off Highway 550. The county Planning Commission weighs in Wednesday on three Land Use Code amendments covering forestry, oil and gas, and geothermal energy, and the Housing Code Update working group holds its eighth session Monday on reforms meant to speed workforce housing production in unincorporated areas.",
+  "hash": "7ed1e1e87f7ce9d9751f4e46019bba95b97e3561",
+  "lede": "The week's most consequential meeting is San Miguel County's Planning Commission on September 10th, where three Land Use Code amendments — covering forestry practices, oil and gas, and geothermal energy — are up for the Commission's formal recommendation before heading to the BOCC. Also worth tracking: SMART's board votes September 10th on its FY25 audit and a new investment advisor, and the Housing Code Update working group convenes September 15th to dig into proposed Community Housing provisions aimed at cutting red tape for affordable housing in unincorporated areas.",
   "notable": [
     {
       "id": 1,
-      "stake": "Council ratifies support for federal disaster declaration tied to Gold Mountain Fire."
+      "stake": "Three county Land Use Code amendments — forestry, oil/gas, geothermal — up for Planning Commission recommendation."
     },
     {
-      "id": 3,
-      "stake": "Vote on AMI limit changes for Pinion Park deed-restricted housing directly affects eligibility."
-    },
-    {
-      "id": 5,
-      "stake": "Planning Commission recommends on three Land Use Code amendments before BOCC action."
+      "id": 4,
+      "stake": "SMART board votes on FY25 audit acceptance and hiring a new investment advisor."
     },
     {
       "id": 8,
-      "stake": "SMART board votes on investment advisor hire and accepts FY25 audit financials."
+      "stake": "Working group shapes county housing code changes meant to fast-track affordable housing production."
     },
     {
-      "id": 12,
-      "stake": "Working group shapes county housing code reforms funded under Proposition 123."
+      "id": 11,
+      "stake": "HARC holds work session on potential demolition and new construction of Town-owned Rebekah Hall."
     }
   ]
 }
