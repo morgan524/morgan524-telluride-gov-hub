@@ -1,5 +1,29 @@
 [
   {
+    "title": "‘Financial literacy is so important’",
+    "source": "Telluride Times",
+    "date": "September 10, 2026",
+    "firstSeen": "2026-09-10",
+    "newsTopic": "education",
+    "copy": "A group called CLEF — Centro Latino de Educación Financiera — is offering free financial literacy workshops out of Montrose, taught in Spanish by volunteer coaches. They've already brought sessions to Telluride High School, the Wilkinson Public Library, and the Hispanic Affairs Project. No products to buy, no catch.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_af466b6d-c05a-423c-8cdf-e92f9d4d1a29.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/e0/fe0fc4c5-8c0f-4bb8-ace1-c616685f9bf3/6aa1e7abd69e8.image.png",
+    "imgHiRes": true
+  },
+  {
+    "title": "‘La educación financiera es muy importante’",
+    "source": "Telluride Times",
+    "date": "September 10, 2026",
+    "firstSeen": "2026-09-10",
+    "newsTopic": "education",
+    "copy": "A Montrose-based nonprofit called CLEF now offers free financial literacy workshops — primarily in Spanish — through an affiliation with the National Financial Literacy Campaign. Classes cover budgeting, debt, retirement, and saving for education, taught by volunteer facilitators from the local Latino community. Workshops have been held at Telluride High School, the Wilkinson Library, and other regional venues.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_42e2d0cb-6f7b-433b-8924-e60f041c9740.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/6e/d6e6b161-1126-45ce-aa48-7eafaddf427a/6aa1eb456f35e.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Natural intelligence in an age of confusion",
     "source": "Telluride Times",
     "date": "September 10, 2026",
@@ -1033,6 +1057,15 @@
     "copy": "(August 11, 2026) – The Telluride Marshal's Department has identified and arrested a suspect in a series of mountain bike thefts that account for more than $22,000 in reported losses.",
     "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=401",
     "img": "https://www.telluride.gov/ImageRepository/Document?documentID=15642"
+  },
+  {
+    "title": "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
+    "source": "San Miguel County",
+    "date": "September 10, 2026",
+    "newsTopic": "health",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1409",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
   },
   {
     "title": "Please Take the Advanced Web Map Survey",

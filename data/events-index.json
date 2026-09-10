@@ -238,20 +238,6 @@
     "endDate": "2026-10-23"
   },
   {
-    "title": "Ouray Comedy Night",
-    "href": "https://events.ourayridgwayevents.com/event/ouray-comedy-night",
-    "date": "2026-09-10",
-    "time": "6:00 PM",
-    "location": "The Wright Opera House",
-    "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/53830617900756/huge/9b913f03ccb0050e92a935ee9d2a464f7fe5b853.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Stand-up comedy is coming to Ouray! One night only! Get your tickets now before it's too late! Headliners: Casey Skinner (Netflix, Discovery, HBO Max) and David Uhlfelder (Netflix Is A Joke Fest, ESPN3, Comedy Store) Casey Skinner is a Los…",
-    "type": "Community",
-    "endDate": "2026-09-12"
-  },
-  {
     "title": "Telluride Dinner Party",
     "href": "https://www.telluride.com/event/telluride-dinner-party/",
     "date": "2026-09-10",
@@ -489,6 +475,32 @@
     "type": "Wellness"
   },
   {
+    "title": "Ouray Comedy Night",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-comedy-night",
+    "date": "2026-09-11",
+    "time": "6:00 PM",
+    "location": "The Wright Opera House",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53830617900756/huge/9b913f03ccb0050e92a935ee9d2a464f7fe5b853.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Stand-up comedy is coming to Ouray! One night only! Get your tickets now before it's too late! Headliners: Casey Skinner (Netflix, Discovery, HBO Max) and David Uhlfelder (Netflix Is A Joke Fest, ESPN3, Comedy Store) Casey Skinner is a Los…",
+    "type": "Community"
+  },
+  {
+    "title": "Sound Bath & Reiki Healing Event",
+    "href": "https://events.ourayridgwayevents.com/event/sound-bath-reiki-healing-event",
+    "date": "2026-09-11",
+    "time": "6:00 PM",
+    "location": "Grass next to Gazebo, south of Chipeta Lodge",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53940055438768/huge/75a07b6c3fcd094753d6a538fb84c392daea82f0.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "On Friday September 11th, enjoy a sound healing outside, under the trees in the park near the Gazebo, south of the Chipeta Resort. This session will incllude Reiki healing from Ian and other local Reiki practitioners. Donations can be made…",
+    "type": "Wellness"
+  },
+  {
     "title": "Lone Tree Cemetery Tours",
     "href": "https://www.telluride.com/event/lone-tree-cemetery-tours/",
     "date": "2026-09-11",
@@ -661,6 +673,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "Wild Child Art Show Opening Reception",
+    "href": "https://events.ourayridgwayevents.com/event/wild-child-art-show-opening-reception",
+    "date": "2026-09-12",
+    "time": "4:00 PM",
+    "location": "Ridgway Public Library",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53924390035045/huge/23c8232d63aa55a9a46c28d88b4da76a20d698e2.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Opening reception for Wild Child will be 4pm to 7pm. This show will be up from September 12th through November 12th. Artists are Laura Pierce & Nicole Greenfield. Explore the wilderness and its creations through paint, pencil, and pastel.…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Happy Little Trees: Classes @ the Wright",
     "href": "https://events.ourayridgwayevents.com/event/happy-little-trees-classes-the-wright-6743",
     "date": "2026-09-12",
@@ -778,6 +803,19 @@
     "type": "Community"
   },
   {
+    "title": "PIZZA THERAPY + DJ NIGHT NURSE",
+    "href": "https://events.ourayridgwayevents.com/event/pizza-therapy-dj-night-nurse",
+    "date": "2026-09-12",
+    "time": "",
+    "location": "The Adobe Inn",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53941240155427/huge/ca29c30efa67e9486dbc2a2764ad4f3f8969bf61.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us for some cheesy fun at our PIZZA PARTY – good vibes, great slices, and groovy tunes all night! DJ NightNurse spinning roots reggae Join us for some cheesy fun at our first PIZZA PARTY – good vibes, great slices, and groovy tunes…",
+    "type": "Music"
+  },
+  {
     "title": "Drop In Tech Time with Oliver",
     "href": "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-09-13/",
     "date": "2026-09-13",
@@ -856,6 +894,19 @@
     "type": "Music"
   },
   {
+    "title": "Soulful Sister Circle",
+    "href": "https://events.ourayridgwayevents.com/event/soulful-sister-circle",
+    "date": "2026-09-13",
+    "time": "5:30 PM",
+    "location": "Bee True You Wellness & Creative Studio",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53940077165512/huge/45af00fc22ad3d00b3aa9a51f74b52218ec7cde8.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Gather with other women who are interested in Soulful Sisters Circle. Handouts will be provided. Bring your goals, challenges, and questions. Pick one or two areas of your life to culitvate growth or self care . . . in community with other…",
+    "type": "Community"
+  },
+  {
     "title": "Sunday Rehab at Alloy Kitchen",
     "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
     "date": "2026-09-13",
@@ -919,7 +970,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
     "type": "Community",
-    "endDate": "2026-11-02"
+    "endDate": "2026-11-09"
   },
   {
     "title": "DIY Green Cleaning Supplies",
@@ -1330,6 +1381,19 @@
     "desc": "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn…",
     "type": "Arts & Film",
     "endDate": "2026-11-05"
+  },
+  {
+    "title": "Public Art Commission Meeting",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/public-art-commission-meeting/",
+    "date": "2026-09-16",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49288/2.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "The Public Art Commission meets on an as-needed basis. Please join the meeting from your computer, tablet or smartphone through this link.",
+    "type": "Arts & Film"
   },
   {
     "title": "Market on the Plaza",
@@ -1806,6 +1870,20 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "4th Annual San Juan Slam Pickleball Tournament",
+    "href": "https://events.ourayridgwayevents.com/event/4th-annual-san-juan-slam-pickleball-tournament",
+    "date": "2026-09-18",
+    "time": "9:00 AM",
+    "location": "Ridgway Athletic Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53613028091683/huge/89356c844c3d4e996774f5c668ba438226be20a1.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The 4th Annual San Juan Slam, a Western Slope regional pickleball tournament hosted by the Ridgway Pickleball Club (RPC) with Presenting/Title Sponsor Citizens State Bank. The San Juan Slam, a family friendly event and free for spectators,…",
+    "type": "Outdoors & Sports",
+    "endDate": "2026-09-20"
+  },
+  {
     "title": "\"llumination! Learning to Use Light, Shadow & Color in Acrylic Landscapes\" with Wayne McKinzie",
     "href": "https://events.ourayridgwayevents.com/event/llumination-learning-to-use-light-shadow-color-in-acrylic-landscapeswith-wayne-mckinzie",
     "date": "2026-09-19",
@@ -1936,6 +2014,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
     "type": "Music"
+  },
+  {
+    "title": "Fall Equinox Candlelit Event",
+    "href": "https://events.ourayridgwayevents.com/event/fall-equinox-candlelit-event",
+    "date": "2026-09-20",
+    "time": "5:30 PM",
+    "location": "Bee True You Wellness & Creative Studio",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53940112365937/huge/f610ca8c034ecac5aef2e4563f4b2f9b908573f9.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Celebrate the transition to fall during a Festive, Sacred Candle Lit Event with all levels yoga, chanting with harmonium, breathwork, guided meditation, SOUND BATH and optional essential oils. Move, sweat, breath, chant and release what no…",
+    "type": "Wellness"
   },
   {
     "title": "Sunday Rehab at Alloy Kitchen",
@@ -3318,6 +3409,19 @@
     "type": "Music"
   },
   {
+    "title": "Posture: The Joy of Alignment",
+    "href": "https://events.ourayridgwayevents.com/event/posture-the-joy-of-alignment",
+    "date": "2026-10-18",
+    "time": "10:00 AM",
+    "location": "Bee True You Wellness & Creative Studio",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53940133685119/huge/12d87bcb7ab37fac8b109f8ddf888685a78d34d4.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "POSTURE: The Joy of Alignment Stop Shrinking. Start Rising. Imagine standing taller, breathing deeper, moving freer, and feeling effortlessly at home in your body. Through asana, breath, and embodied awareness, you’ll discover how to…",
+    "type": "Community"
+  },
+  {
     "title": "TODDLER STORYTIME ART FOR AGES 2.5-5",
     "href": "https://events.ourayridgwayevents.com/event/toddler-storytimeartfor-ages-2-5",
     "date": "2026-10-21",
@@ -3418,11 +3522,11 @@
     "time": "5:00 PM",
     "location": "Ouray Hot Springs",
     "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/53924398882536/huge/48f1c9ad32c649d8109fc1cbc9df1e222820a6ca.jpg",
+    "img": "https://localist-images.azureedge.net/photos/53924398882536/huge/a5451161d264c1870d73a22c5d5625c3a29a8c63.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Grab your friends and take over the Ouray Hot Springs Pool for an evening of swimming, games, food, music, and hanging out. Middle School Takeover | 5–6:45 PM High School Takeover | 7–9 PM FREE for Ouray Hot Springs Pool members $5 for…",
-    "type": "Food & Drink"
+    "desc": "Grab your friends and take over the Ouray Hot Springs Pool for an evening of swimming, games, food, music, and hanging out. Activities include high-energy games, basketball, races on the Wibit, music, and more. Middle School Takeover |…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Sherb Literary Living Room featuring Pam Houston with her new book: \"Animals Taught Me Everything\"",
@@ -3514,6 +3618,7 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In…",
-    "type": "Arts & Film"
+    "type": "Arts & Film",
+    "endDate": "2026-11-09"
   }
 ]
