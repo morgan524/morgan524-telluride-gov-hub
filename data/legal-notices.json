@@ -401,5 +401,68 @@
     "url": "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
     "address": "36 Porphyry Street, Ophir, CO 81426",
     "noticeKey": "ord-2026-06-ophir-lecc"
+  },
+  {
+    "title": "Water Court Application -- Finding of Reasonable Diligence, Telluride Pines Alder Creek Pump and Pipeline (26CW3043)",
+    "entity": "Colorado District Court, Water Division No. 4",
+    "entityClass": "ent-county",
+    "entityLogo": "water_court",
+    "icon": "💧",
+    "iconClass": "type-bid",
+    "type": "Water Court",
+    "filterTag": "water-court",
+    "summary": "Telluride Pines Homeowners Association has filed an application in Water Division No. 4 seeking a finding of reasonable diligence for a conditional water right of 0.016 c.f.s. (7 gpm) from Alder Creek, tributary to Leopard Creek and the San Miguel River. The water right, originally decreed in 2014, is intended for domestic use on 38 lots and fire protection in San Miguel County. During the 2020–2026 diligence period, the applicant spent approximately $300,000 on water system maintenance, well drilling, water-quality testing, and engineering evaluations. Any person wishing to object must file a Verified Statement of Opposition with the Water Clerk by the last day of October 2026.",
+    "deadline": "2026-10-31",
+    "expires": "2026-10-31",
+    "dates": "9/10",
+    "papers": [
+      "ttimes_0910"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_d69b406f-c2c0-4bcd-a711-174867b9de48.html",
+    "address": "SE1/4 SE1/4 NW1/4 of Section 19, Township 44 North, Range 10 West, N.M.P.M., San Miguel County, Colorado",
+    "noticeKey": "26CW3043",
+    "caseNumber": "26CW3043"
+  },
+  {
+    "title": "Water Court Application -- Make Conditional Water Right Absolute and Finding of Reasonable Diligence, Leopard Creek Ditch / San Juan Vista Wells (26CW3039)",
+    "entity": "Colorado District Court, Water Division No. 4",
+    "entityClass": "ent-county",
+    "entityLogo": "water_court",
+    "icon": "💧",
+    "iconClass": "type-bid",
+    "type": "Water Court",
+    "filterTag": "water-court",
+    "summary": "San Juan Vista Landowners Association has filed an application in Water Division No. 4 seeking to make four additional in-house wells (Well Nos. 51, 60, 61, and 62) absolute under the Leopard Creek Ditch conditional water right, and to obtain a continued finding of diligence on the remaining 21 conditional wells within the San Juan Vista Subdivision in San Miguel County. The original water right of 0.279 c.f.s. was decreed in 1974 for up to 82 domestic wells, of which 57 have previously been made absolute. Any person wishing to object must file a Verified Statement of Opposition with the Water Clerk by the last day of October 2026.",
+    "deadline": "2026-10-31",
+    "expires": "2026-10-31",
+    "dates": "9/10",
+    "papers": [
+      "ttimes_0910"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_d69b406f-c2c0-4bcd-a711-174867b9de48.html",
+    "address": "San Juan Vista Subdivision, Filing No. 1, SE1/4SE1/4 Section 12, S1/2, S1/2N1/2 and N1/2NE1/4 Section 13, Township 44 North, Range 10 West, N.M.P.M., San Miguel County, Colorado",
+    "noticeKey": "26CW3039",
+    "caseNumber": "26CW3039"
+  },
+  {
+    "title": "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominiums (Sale No. 202605)",
+    "entity": "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB",
+    "entityClass": "ent-county",
+    "entityLogo": "assessor",
+    "icon": "💰",
+    "iconClass": "type-tax",
+    "type": "Tax & Finance",
+    "filterTag": "tax-finance",
+    "summary": "The San Miguel County Public Trustee has scheduled a public foreclosure auction for Condominium Unit 7 at Double Diamond Condominiums, 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor is Ryan Pfaff, and the current debt holder is Wilmington Savings Fund Society, FSB as trustee, with an outstanding principal balance of approximately $1,199,032. The public auction will be held at 10:00 A.M. on September 3, 2026, at 305 W. Colorado Avenue, East entry, Telluride, CO.",
+    "deadline": "2026-09-03",
+    "expires": "2026-09-03",
+    "dates": "8/13",
+    "papers": [
+      "ttimes_0813"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
+    "address": "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
+    "noticeKey": "foreclosure-sale-202605",
+    "caseNumber": "202605"
   }
 ]
