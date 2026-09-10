@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steering Committee — Livable Telluride</title>
+<meta name="description" content="Who's currently subscribed to steering@livabletelluride.org, synced weekly.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="lt.css?v=8">
+<link rel="icon" href="/logo/icon-192.png?v=2">
+<link rel="apple-touch-icon" href="/logo/apple-touch-icon.png?v=2">
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://livabletelluride.org/steering.html">
+<style>
+  .steering-wrap { max-width: 680px; margin: 0 auto; padding: 26px var(--pad-x) 60px; }
+  .steering-note { font: 400 15.5px/1.6 var(--sans); color: var(--body2); margin: 0 0 28px; }
+  .steering-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; }
+  .steering-list li { font: 400 17px/1.4 var(--serif); color: var(--forest); padding: 10px 0; border-bottom: 1px solid var(--hairline); }
+  .steering-empty { font: 400 15.5px/1.6 var(--sans); color: var(--body2); border: 1px dashed var(--hairline); border-radius: 10px; padding: 22px; }
+  @media (max-width: 560px) {
+    .steering-list { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div id="lt-header"></div>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="crumb">Livable Telluride <span class="sep">&rsaquo;</span> Steering</div>
+    <h1>Steering Committee</h1>
+    <p class="sub">Everyone currently subscribed to steering@livabletelluride.org.</p>
+  </div>
+</header>
+
+<main class="steering-wrap">
+  <p class="steering-note">This list syncs automatically every Monday morning from the steering@livabletelluride.org group &mdash; it's not hand-maintained, so it reflects who's actually on the list. Questions or think someone's missing? Email <a href="mailto:info@livabletelluride.org">info@livabletelluride.org</a>.</p>
+  <div id="steering-body"><p class="meta">Loading&hellip;</p></div>
+</main>
+
+<div id="lt-footer"></div>
+<script src="site.js?v=12"></script>
+<script src="/js/lt-data.js?v=12"></script>
+<script>
+(function () {
+  var body = document.getElementById('steering-body');
+  if (!window.LTData) { body.innerHTML = '<div class="lt-data-error">This section failed to load. Please refresh in a minute.</div>'; return; }
+  LTData.load(['steering-members']).then(function (d) {
+    var members = d['steering-members'] || [];
+    if (!members.length) {
+      body.innerHTML = '<p class="steering-empty">The roster sync hasn&rsquo;t run yet &mdash; check back soon.</p>';
+      return;
+    }
+    body.innerHTML = '<ul class="steering-list">' +
+      members.map(function (name) { return '<li>' + LTData.esc(name) + '</li>'; }).join('') +
+      '</ul>';
+  }).catch(function (err) { LTData.showError(body, err); });
+})();
+</script>
+</body>
+</html>

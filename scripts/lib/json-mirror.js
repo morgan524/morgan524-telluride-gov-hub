@@ -48,6 +48,8 @@ const MIRROR_ARRAYS = [
   // Hub-Bub Question of the Day (content-refresh Task 24); hub-bub.html reads
   // the JSON mirror directly.
   'DAILY_QUESTIONS',
+  // Steering committee roster (names only) — written by steering-refresh.js.
+  'STEERING_MEMBERS',
 ];
 
 // Bot-managed OBJECT maps (keyed data, not arrays) — same dual-write, extracted

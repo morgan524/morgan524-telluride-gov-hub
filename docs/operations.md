@@ -101,9 +101,57 @@ different job. Easy to mix them up — keep them straight:
 | `info@livabletelluride.org`      | Main public contact + Hub-Bub admin identity | 14 places: contact links across the site, corrections form, event-submission backup, Mailchimp signup wrap-up, **hardcoded admin check in `js/hub-bub.js` and `js/gov-helpers.js` (`user.email === 'info@livabletelluride.org'`)**, and the destination for Apps-Script confirmation emails. If you log into Hub-Bub / Firebase Auth as this address, the UI grants moderator privileges. |
 | `bot@livabletelluride.org`       | Git commit author for automated workflows  | All four GH Actions workflows set `git config user.email "bot@livabletelluride.org"` so commits are attributed to "Gov Hub Bot". Nothing reads mail here; it's just an identity string. |
 | `events@livabletelluride.org`    | Inbox for the email-to-events pipeline     | Only used by the Apps Script + Google Sheet flow described below. Treat it as a service inbox, not a contact. |
+| `steering@livabletelluride.org`  | Steering committee mailing list (Google Group) | Its membership is synced weekly to `/steering.html` (not in nav — see below). Nothing else reads it. |
 
 If you spin up a fourth alias (e.g. for a new project), add it to this table
 and grep the codebase for any place that needs to know about it.
+
+## Steering roster (`/steering.html`) — one-time Google Workspace setup
+
+`scripts/steering-refresh.js` (weekly, `.github/workflows/steering-refresh.yml`,
+Mondays 13:00 UTC) syncs `STEERING_MEMBERS` in `js/gov-helpers.js` to the current
+membership of the `steering@livabletelluride.org` Google Group. The page itself
+is deliberately **not in the nav** (per [[nav_canonical_spec]] — just don't add
+it to site.js's `NAV` array) and carries `<meta name="robots" content="noindex">`
+plus a `sitemap.xml` exclusion, so it's reachable only by direct URL.
+
+Until the three secrets below are set, the workflow no-ops harmlessly (logs a
+warning, exits 0) rather than failing — `STEERING_MEMBERS` stays `[]` and the
+page shows "the roster sync hasn't run yet."
+
+**One-time setup (do this in Google Cloud Console + Workspace Admin, both need
+your own admin login — not something Claude can do for you):**
+
+1. In a Google Cloud project tied to the Workspace (the Firebase project
+   `telluride-gov-hub` works fine), enable the **Admin SDK API**.
+2. Create a **service account**, generate a JSON key for it, and note its
+   `client_email`.
+3. In that service account's details, enable **domain-wide delegation**.
+4. In **admin.google.com → Security → API controls → Domain-wide delegation**,
+   add the service account's Client ID authorized for these two scopes
+   (comma-separated, exactly):
+   `https://www.googleapis.com/auth/admin.directory.group.member.readonly,https://www.googleapis.com/auth/admin.directory.user.readonly`
+5. Confirm `steering@livabletelluride.org` is an actual **Google Group** (Admin
+   console → Groups), not just an alias or shared inbox — the Admin SDK only
+   has "members" for real Groups.
+6. In the GitHub repo → Settings → Secrets and variables → Actions, add:
+   - `GOOGLE_ADMIN_SA_KEY` — the full service-account JSON key, pasted as-is.
+   - `GOOGLE_ADMIN_IMPERSONATE_EMAIL` — a real Workspace **admin** mailbox for
+     the service account to impersonate (domain-wide delegation calls always
+     run as some real user); `info@livabletelluride.org` if that account has
+     admin rights, otherwise whichever admin account does.
+   - `STEERING_NAME_OVERRIDES` (optional) — a JSON object mapping member email
+     → display name, e.g. `{"jsmith23@gmail.com": "Jane Smith"}`. **Only names
+     are ever written to the (public) repo** — the script resolves a name via
+     this override, then via the Workspace directory (works only for
+     `@livabletelluride.org` accounts), then falls back to a guess from the
+     email's local part and logs a warning. Since a volunteer steering
+     committee is likely mostly personal-email members, expect to populate
+     this secret after the first run using the emails its log warns about —
+     never put those emails in a committed file, only in this secret.
+7. `workflow_dispatch` the workflow once (Actions tab → Steering Roster
+   Refresh → Run workflow) to confirm it resolves members before waiting for
+   Monday.
 
 ## Known loose ends
 

@@ -9379,3 +9379,12 @@ function getMeetingPasscode(item) {
 
   return null;
 }
+
+// Steering committee roster for steering.html — names only (see the privacy
+// note in scripts/steering-refresh.js: member emails are never committed).
+// Synced weekly from the steering@livabletelluride.org Google Group by
+// steering-refresh.js; empty until that workflow's Google Workspace
+// credentials are configured (see docs/operations.md).
+const STEERING_MEMBERS = [];
+
+const STEERING_LAST_SYNCED = '';
