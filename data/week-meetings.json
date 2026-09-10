@@ -60,6 +60,26 @@
     "hook": ""
   },
   {
+    "source": "med",
+    "sourceLabel": "Telluride Regional Medical Center",
+    "title": "Board Work Session",
+    "date": "2026-09-11",
+    "time": "",
+    "location": "333 W Colorado Ave (2nd Floor), Telluride / Zoom",
+    "agendaUrl": "",
+    "packetUrl": "",
+    "link": "https://www.tellmed.org/board-meetings",
+    "hasAgenda": true,
+    "summary": "A single-item work session: a presentation from CommonSpirit Health on a potential partnership with the Telluride Hospital District. No packet or supporting materials are posted ahead of the session, so the scope and terms of what's being discussed aren't yet public -- worth watching given the board's ongoing Letter of Intent talks with CommonSpirit on the new facility project. No board action is scheduled; this is a discussion-only session, held in person and by Zoom.",
+    "zoomLink": "https://us02web.zoom.us/j/83975455041?pwd=JFP4C7xMrNnAn93sWUhROdSuVzQbeq.1",
+    "zoomMeetingId": "839 7545 5041",
+    "zoomPasscode": "388003",
+    "zoomPhone": "",
+    "livestream": "",
+    "commentEmail": "bodadmin@tellmed.org",
+    "hook": ""
+  },
+  {
     "source": "fire",
     "sourceLabel": "Fire Protection",
     "title": "Board of Directors Meeting",

@@ -351,7 +351,10 @@
   "telluride|2026-09-17|Liquor Licensing Authority - Sep 17 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8145",
     "sv": 4,
-    "ph": "5e169e6aed7b742f"
+    "zoomUrl": "https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1",
+    "meetingId": "861 6987 1704",
+    "passcode": "281002.",
+    "phone": "346-248-7799"
   },
   "telluride|2026-08-26|Resident Advisory Committee - Aug 26 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8304",

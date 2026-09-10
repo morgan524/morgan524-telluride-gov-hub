@@ -330,7 +330,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-09-17|Liquor Licensing Authority - Sep 17 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8145","sv":4,"ph":"5e169e6aed7b742f"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8145","sv":4,"zoomUrl":"https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1","meetingId":"861 6987 1704","passcode":"281002.","phone":"346-248-7799"},
 
   "telluride|2026-08-26|Resident Advisory Committee - Aug 26 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8304","zoomUrl":"https://us06web.zoom.us/j/83515721292?pwd=UWdbpZwQcmiOOtH3Ktbdarl9CZyHjm.1","meetingId":"835 1572 1292","passcode":"983442","phone":"970-728-2496","sv":4},
@@ -891,7 +891,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "September 10, 2026",
     newsTopic: "community",
     copy: "",
-    href: "https://www.ouraynews.com/2026/09/09/barrel-fun-labor-day/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/09/09/barrel-fun-labor-day/",
     img: ""
   },
   {
@@ -901,7 +901,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "September 10, 2026",
     newsTopic: "community",
     copy: "In the early days of summer, it remained a matter of some debate where the drought of 2026 ranked in the annals of long, hot Colorado summers. For Cary Denison, Ouray County’s representative on the Colorado River Water Conservation District, that debate is settled. “It’s absolutely the worst year I’",
-    href: "https://www.ouraynews.com/2026/09/09/water-restrictions-exception-not-rule/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/09/09/water-restrictions-exception-not-rule/",
     img: ""
   },
   {
@@ -911,7 +911,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "September 10, 2026",
     newsTopic: "public-safety",
     copy: "Move frees up federal relief money President Donald Trump approved a major disaster declaration for the Gold Mountain and Aspen Acres fires, unlocking millions of dollars in Federal Emergency Management Agency relief funds for the state. Federal and state officials confirmed Friday that Trump approv",
-    href: "https://www.ouraynews.com/2026/09/09/trump-declares-disaster-fire/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/09/09/trump-declares-disaster-fire/",
     img: ""
   },
   {
@@ -921,7 +921,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "September 10, 2026",
     newsTopic: "infrastructure",
     copy: "It’s not what you think. A towering steel drill that’s been perched along the side of U.S. Highway 550 in recent weeks isn’t probing for gas, or oil, or even a route to the Far East. The operation is instead part of a state program to plug thousands of abandoned or “orphaned” wells across Colorado. ",
-    href: "https://www.ouraynews.com/2026/09/09/crews-working-plug-old-water-well/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/09/09/crews-working-plug-old-water-well/",
     img: ""
   },
   {
@@ -931,7 +931,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "September 10, 2026",
     newsTopic: "infrastructure",
     copy: "Officials cite concerns about safety, health at Tuffy s Corner A highway pullout popular for overnight camper parking north of Ouray has been empty in recent weeks since ‘no camping’ signs were installed. The wide gravel shoulder following the outside curve of U.S. Highway 550 between the Whispering",
-    href: "https://www.ouraynews.com/2026/09/09/parking-enforcement-nixes-popular-highway-camping-spot/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/09/09/parking-enforcement-nixes-popular-highway-camping-spot/",
     img: ""
   },
   {
@@ -941,7 +941,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "September 10, 2026",
     newsTopic: "government",
     copy: "The Colorado secretary of state’s office on Friday certified the list of ballot measures going before voters in November 2026 — and once again, the list is a long one. A total of 14 measures will be decided by Colorado voters this year. The figure ties a record for the most questions put to voters i",
-    href: "https://www.ouraynews.com/2026/09/09/fourteen-measures-appear-statewide-ballot/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/09/09/fourteen-measures-appear-statewide-ballot/",
     img: ""
   },
   {
@@ -952,6 +952,36 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "government",
     copy: "Dear Editor: I am writing to express my strong support for a dedicated Ouray County tax to provide funding for disaster relief, emergency preparedness, and community recovery. Those of us who live in Ouray County understand both the extraordinary beauty of our mountain environment and the risks that",
     href: "https://www.ouraynews.com/2026/09/09/disaster-relief-tax-investment-resilience/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Grateful to tell stories here, ink stains and all",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "community",
+    copy: "Sometimes, I journal to process major life events. I’ve lived in a lot of places worth journaling about and my latest move is no exception. I’ve been in Ouray for six weeks now and I’m struck by the similarities to a mountain village in Japan where I taught English for three years after college. Kos",
+    href: "https://www.ouraynews.com/2026/09/09/grateful-tell-stories-ink-stains/",
+    img: ""
+  },
+  {
+    title: "Looking Back",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "health",
+    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago September 8, 1966 The Colorado Board of Public Health has ordered Ouray to appear before that body in Denver on Sept. 13 at 4:20 p.m. to explain the steps Ouray is taking to establish a",
+    href: "https://www.ouraynews.com/2026/09/09/looking-back-20260910-0159-410636/",
+    img: ""
+  },
+  {
+    title: "Colorado’s rocky road to statehood",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "infrastructure",
+    copy: "Last month Colorado celebrated its 150th anniversary of statehood. Many of us assume that statehood was inevitable for this place we love. However, the 17-year quest was met with significant resistance from residents and national officials. Long before President Ulysses S. Grant signed Proclamation ",
+    href: "https://www.ouraynews.com/2026/09/09/colorados-rocky-road-statehood/?ta_paidstory",
     img: ""
   },
   {
@@ -983,36 +1013,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "TABOR Election Notice: Invitation for Pro/Con Statements on November 2026 Ballot Issue",
     href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=961",
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22931"
-  },
-  {
-    title: "Crews working to fill 1950s-era well along U.S. 550",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 4, 2026",
-    newsTopic: "infrastructure",
-    copy: "It’s not what you think. A towering steel drill rig that’s been perched along the side of U.S. Highway 550 in recent weeks isn’t probing for gas, or oil, or even a route to the Far East. The operation is instead part of a state program to plug thousands of abandoned, or “orphaned” wells across Color",
-    href: "https://www.ouraynews.com/2026/09/04/crews-working-fill-1950s-era-well-along-u-s-550/",
-    img: ""
-  },
-  {
-    title: "Trump declares disaster for Gold Mountain, Aspen Acres fires",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 4, 2026",
-    newsTopic: "public-safety",
-    copy: "President Donald Trump has signed off on a major disaster declaration for the Gold Mountain and Aspen Acres fires that unlocks millions of dollars in Federal Emergency Management Agency relief funds for the state. Colorado’s Office of Emergency Management confirmed Friday that Trump approved the dec",
-    href: "https://www.ouraynews.com/2026/09/04/trump-declares-disaster-gold-mountain-aspen-acres-fires/",
-    img: ""
-  },
-  {
-    title: "Hickenlooper hopeful for fire disaster order",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 3, 2026",
-    newsTopic: "public-safety",
-    copy: "U.S. Sen. John Hickenlooper said Friday he was optimistic the Trump administration will declare the Gold Mountain Fire a federal disaster, arguing Congress “wouldn’t settle for” the White House withholding relief funds from Colorado for the second year in a row. Hickenlooper, who surveyed fire damag",
-    href: "https://www.ouraynews.com/2026/09/02/hickenlooper-hopeful-fire-disaster-order/?ta_paidstory",
-    img: ""
   },
   {
     title: "Sheriff Rescinds Stage 2 Fire Restrictions",
@@ -1267,7 +1267,7 @@ const MANUAL_SUMMARIES = {
     "The September 17, 2026 TRAA Board of Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-09-17|Liquor Licensing Authority - Sep 17 2026":
-    "The September 17, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
+    "A routine session for the Liquor Licensing Authority. The main action item is a permanent modification of premises for FA Whining Pig Bars (138 E. Colorado Ave., Unit 105) — the applicant is looking to retract its licensed footprint to match current operational needs, a housekeeping change under Colorado Liquor Code 44-3-301. Staff finds the application complete and recommends approval. On the public hearing side, the Elks Lodge (BPOE #692) is requesting five special event permits: three for Horror Fest at 472 W. Pacific Ave. across October 16–18, and two for Turkey Bingo 2026 on November 21–22. The authority will also approve minutes from the August 20 meeting, at which special event permits were granted for Blues & Brews, a Ken Burns evening at the Palm, and a KOTO street concert.",
 
   "telluride|2026-08-26|Resident Advisory Committee - Aug 26 2026":
     "The Resident Advisory Committee holds its inaugural meeting — a body created to give Town of Telluride employee-housing tenants a structured voice on rental policies and conditions. The hour is organized around the fundamentals: introductions, electing a chair and secretary, aligning on the RAC's mission and limitations, and walking through meeting procedures including confidentiality rules and public notice practices. Town Representatives and a Telluride Housing Authority board rep will share updates on a tenant survey, a resident informational session scheduled for September 23 at Wilkinson Library, and an ongoing review of rental housing policies. Members will also take public comment from tenants and set the next meeting date, with a target cadence of at least four meetings per year.",
@@ -1759,6 +1759,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Natural intelligence in an age of confusion",
+    source: "Telluride Times",
+    date: "September 10, 2026",
+    firstSeen: "2026-09-10",
+    newsTopic: "community",
+    copy: "As AI handles more analytical tasks, the argument here is that other kinds of smarts — reading people, physical know-how, emotional awareness — may matter more, not less. Animals have always shown us that intelligence takes many forms well outside any test or measurement. Worth keeping in mind as things keep shifting.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_9a82a845-d09b-4a5f-ae12-4256f3694d20.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/b4/ab401721-d7de-4cee-8d58-6566bd2382e1/6aa16b9f78fa2.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Keeping an eye on safety for bears and people",
     source: "Telluride Times",
@@ -2756,6 +2768,33 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
   },
   {
+    title: "Town of Telluride Downgrades to Stage 1 Fire Restrictions",
+    source: "Town of Telluride",
+    date: "August 26, 2026",
+    newsTopic: "public-safety",
+    copy: "(August 25, 2026) – Following improved fire conditions across the region, Town Manager Zoe Dohnal has downgraded fire restrictions within the Town of Telluride from Stage 2 to Stage 1, effective 12:01 a.m. MT on Wednesday, August 26, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=403",
+    img: ""
+  },
+  {
+    title: "Marya Stark and Charles Dalton Sworn In to Telluride Town Council",
+    source: "Town of Telluride",
+    date: "August 12, 2026",
+    newsTopic: "government",
+    copy: "(July 21, 2026) – The Town welcomed two new members to Town Council this morning as Charles Dalton and Marya Stark were sworn into office at 9:30 a.m. Town Clerk Tiffany Kavanaugh administered the oath of office for both officials.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=402",
+    img: ""
+  },
+  {
+    title: "Arrest Made in String of Telluride Mountain Bike Thefts",
+    source: "Town of Telluride",
+    date: "August 12, 2026",
+    newsTopic: "recreation",
+    copy: "(August 11, 2026) – The Telluride Marshal's Department has identified and arrested a suspect in a series of mountain bike thefts that account for more than $22,000 in reported losses.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=401",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15642"
+  },
+  {
     title: "Please Take the Advanced Web Map Survey",
     source: "San Miguel County",
     date: "September 3, 2026",
@@ -2774,6 +2813,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
   },
   {
+    title: "Waste Tire Collection Event",
+    source: "San Miguel County",
+    date: "August 24, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
+  },
+  {
     title: "Imogene Pass & Black Bear Pass Closed 9/12/26",
     source: "San Miguel County",
     date: "September 10, 2026",
@@ -2789,6 +2837,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "infrastructure",
     copy: "Imogene Pass/Tomboy Road will be closed 12:01 a.m. - 3:00 p.m. on Saturday, September 12th, to accommodate the Imogene Pass Run. Black Bear Pass/Bridal Veil Road and the Valley View parking area will be closed 7:00 a.m. - 12:00 p.m. on that day, too.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=542",
+    img: ""
+  },
+  {
+    title: "Stage 1 Fire Restrictions In Effect",
+    source: "Town of Telluride",
+    date: "August 26, 2026",
+    newsTopic: "public-safety",
+    copy: "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=65",
     img: ""
   },
   {
@@ -2811,17 +2868,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Rescind-Stage-2%2C-Reinstate-Stage-1-Fire-Restrictions-Press-Release-2026-09-02.pdf",
-    img: ""
-  },
-  {
-    title: "Ridgway Town Council Regular Meeting Agenda",
-    source: "Town of Ridgway",
-    date: "September 9, 2026",
-    firstSeen: "2026-09-09",
-    newsTopic: "government",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/00-Sept-9-tc-agenda.pdf",
     img: ""
   },
   {
@@ -3411,50 +3457,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Tennis Clinic 3.0-4.0",
-    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-10/",
-    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-10T09:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Bear Aware Puppet Shows",
-    link: "https://koto.org/event/bear-aware-puppet-shows/2026-09-10/2/",
-    description: "Come learn how to keep bears safe! Ven a aprender cómo mantener a los osos seguros!",
-    pubDate: "2026-09-10T10:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/09/Bear-Aware-2026.png"
-  },
-  {
-    title: "Tennis Clinic 4.0+",
-    link: "https://koto.org/event/tennis-clinic-4-0/2026-09-10/",
-    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-10T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Pilates for All Bodies with Laura",
-    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-09-10/",
-    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-09-10T12:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
   {
     title: "TRC Men's Tennis Singles",
     link: "https://koto.org/event/trc-mens-tennis-singles/2026-09-10/",
@@ -7487,6 +7489,25 @@ const LEGAL_NOTICES = [
     address: "San Juan Vista Subdivision, Filing No. 1, SE1/4SE1/4 Section 12, S1/2, S1/2N1/2 and N1/2NE1/4 Section 13, Township 44 North, Range 10 West, N.M.P.M., San Miguel County, Colorado",
     noticeKey: "26CW3039",
     caseNumber: "26CW3039"
+  },
+  {
+    title: "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominium (Sale No. 202605)",
+    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "Public Trustee Brandi R. Hatfield of San Miguel County is conducting a foreclosure sale on Condominium Unit 7, Double Diamond Condominium, located at 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor is Ryan Pfaff, with an outstanding principal balance of approximately $1,199,032.37 on a deed of trust originally benefiting Mortgage Electronic Registration Systems, Inc. as nominee for Deephaven Mortgage LLC, now held by Wilmington Savings Fund Society, FSB as trustee. The public auction is scheduled for 10:00 A.M. on September 3, 2026, at 305 W. Colorado Avenue, East entry, Telluride, CO.",
+    deadline: "2026-09-03",
+    expires: "2026-09-03",
+    dates: "8/13",
+    papers: ["ttimes_0813"],
+    url: "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
+    address: "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
+    noticeKey: "foreclosure-sale-202605",
+    caseNumber: "202605"
   }
 ];
 

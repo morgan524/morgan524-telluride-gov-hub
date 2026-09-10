@@ -1,26 +1,26 @@
 {
-  "hash": "49c87445facafdb6121c9efddb03fd45ca7aa832",
-  "lede": "The item worth your attention this week is San Miguel County's Planning Commission meeting on September 10th, where three Land Use Code amendments — covering forestry practices, oil and gas, and geothermal energy — are up for the Commission's recommendation before moving to the BOCC. Also on the 10th, SMART's board votes on hiring an investment advisor and accepting the FY25 audit. Later in the week, the Housing Code Update working group holds its eighth session on September 15th, focused on removing Land Use Code barriers to workforce and affordable housing in unincorporated county.",
+  "hash": "4e114b98284716214162c02d39a0ff4fe62c412b",
+  "lede": "The most consequential meeting this week is San Miguel County's Planning Commission on September 10th, where commissioners will weigh in on three Land Use Code amendments — covering forestry, oil and gas, and geothermal energy — before any changes move to the BOCC. The Telluride Hospital District board also meets September 11th for a closed work session with CommonSpirit Health on a potential partnership that could shape the future of local healthcare. Rounding out the week, the county's Housing Code Update working group holds its eighth session September 15th, drilling into proposed changes meant to remove Land Use Code barriers to affordable and workforce housing.",
   "notable": [
     {
       "id": 1,
-      "stake": "Three Land Use Code amendments — forestry, oil/gas, geothermal — up for Planning Commission recommendation."
+      "stake": "Three Land Use Code amendments up for Planning Commission recommendation before BOCC."
     },
     {
       "id": 4,
-      "stake": "SMART board votes on investment advisor hire and accepts FY25 audit financials."
+      "stake": "SMART board votes on FY25 audit acceptance and hiring a new investment advisor."
     },
     {
-      "id": 8,
-      "stake": "Working group shapes county housing code changes aimed at removing affordable-housing barriers."
+      "id": 5,
+      "stake": "CommonSpirit partnership presentation could shape the future of Telluride's hospital."
     },
     {
-      "id": 11,
-      "stake": "HARC reviews potential demolition of historic Rebekah Hall, a Town-owned landmark on Columbia Ave."
+      "id": 9,
+      "stake": "Working group refines county code changes to speed affordable and workforce housing production."
     },
     {
-      "id": 14,
-      "stake": "Two public hearings: Curry PUD application and a parcel subdivision request before Ouray County PC."
+      "id": 12,
+      "stake": "HARC considers potential demolition of Town-owned Rebekah Hall, a historic anchor building."
     }
   ]
 }
