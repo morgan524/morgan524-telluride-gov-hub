@@ -1,5 +1,17 @@
 [
   {
+    "title": "Keeping an eye on safety for bears and people",
+    "source": "Telluride Times",
+    "date": "September 10, 2026",
+    "firstSeen": "2026-09-10",
+    "newsTopic": "community",
+    "copy": "Bears are hungrier than usual around Norwood this fall — drought, late freezes, and bare fruit trees have pushed them toward yards, gardens, and chicken coops. CPW asks residents to secure trash, livestock feed, and grills, and reminds hunters and campers to store food and scented items well away from camp. Local sightings are down 68% in San Miguel County this year, though statewide numbers have doubled.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/norwood_post/article_83770074-792f-4d85-8d8c-c43eb496a120.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/1c/e1c199b1-1c29-4b10-8dce-e886fa419759/6aa169dc6979c.image.png",
+    "imgHiRes": true
+  },
+  {
     "title": "CHALKBOARD Week of Sept. 10-16",
     "source": "Telluride Times",
     "date": "September 10, 2026",
@@ -9,18 +21,6 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/norwood_post/article_da6c0815-04d6-4624-9bc2-e2f9faa4e6e9.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/5c/25c9740b-166f-45ee-9e2e-6bedb5ba4a26/6aa16a9fb6555.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "Democratic state rep. candidate Alec Lindeman denied ballot access",
-    "source": "Telluride Times",
-    "date": "September 9, 2026",
-    "firstSeen": "2026-09-09",
-    "newsTopic": "government",
-    "copy": "Democratic candidate Alec Lindeman won't appear on the November ballot for HD58 after the party's vacancy committee failed to submit required paperwork on time following a candidate swap. Incumbent Larry Don Suckla, who won the seat in 2024 with 54.6% of the vote, will run unopposed. Lindeman says he plans to try again in 2028.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/article_66c482ec-a629-45c6-9c83-f27714615f16.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/35/c356cdc8-fb2a-4785-9021-77ebe994c2e0/6aa1b60cd24a2.image.jpg",
     "imgHiRes": true
   },
   {
@@ -69,6 +69,18 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/sports/article_3a5055d5-c30a-4f4a-beec-a490a62bd662.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/01/f0109352-7e6a-4e0b-a8d0-26b7eca10598/6aa0ca23395fc.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Democratic state rep. candidate Alec Lindeman denied ballot access",
+    "source": "Telluride Times",
+    "date": "September 9, 2026",
+    "firstSeen": "2026-09-09",
+    "newsTopic": "government",
+    "copy": "Democratic candidate Alec Lindeman won't appear on the November ballot for HD58 after the party's vacancy committee failed to submit required paperwork on time following a candidate swap. Incumbent Larry Don Suckla, who won the seat in 2024 with 54.6% of the vote, will run unopposed. Lindeman says he plans to try again in 2028.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_66c482ec-a629-45c6-9c83-f27714615f16.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/35/c356cdc8-fb2a-4785-9021-77ebe994c2e0/6aa1b60cd24a2.image.jpg",
     "imgHiRes": true
   },
   {
@@ -1036,6 +1048,15 @@
     "copy": "",
     "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
+  },
+  {
+    "title": "Imogene Pass & Black Bear Pass Closed 9/12/26",
+    "source": "San Miguel County",
+    "date": "September 10, 2026",
+    "newsTopic": "infrastructure",
+    "copy": "Imogene Pass/Tomboy Road will be closed 12:01 a.m. - 3:00 p.m. on Saturday, September 12th, to accommodate the Imogene Pass Run. Black Bear Pass/Bridal Veil Road and the Valley View parking area will also be closed 7:00 a.m. - 12:00 p.m.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=543",
+    "img": ""
   },
   {
     "title": "Imogene and Black Bear Passes Closed 9/12",

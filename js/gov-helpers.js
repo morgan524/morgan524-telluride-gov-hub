@@ -892,6 +892,66 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Water restrictions exception, not rule",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "community",
+    copy: "In the early days of summer, it remained a matter of some debate where the drought of 2026 ranked in the annals of long, hot Colorado summers. For Cary Denison, Ouray County’s representative on the Colorado River Water Conservation District, that debate is settled. “It’s absolutely the worst year I’",
+    href: "https://www.ouraynews.com/2026/09/09/water-restrictions-exception-not-rule/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Trump declares disaster for fire",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "public-safety",
+    copy: "Move frees up federal relief money President Donald Trump approved a major disaster declaration for the Gold Mountain and Aspen Acres fires, unlocking millions of dollars in Federal Emergency Management Agency relief funds for the state. Federal and state officials confirmed Friday that Trump approv",
+    href: "https://www.ouraynews.com/2026/09/09/trump-declares-disaster-fire/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Crews working to plug old water well",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "infrastructure",
+    copy: "It’s not what you think. A towering steel drill that’s been perched along the side of U.S. Highway 550 in recent weeks isn’t probing for gas, or oil, or even a route to the Far East. The operation is instead part of a state program to plug thousands of abandoned or “orphaned” wells across Colorado. ",
+    href: "https://www.ouraynews.com/2026/09/09/crews-working-plug-old-water-well/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Parking enforcement nixes popular highway camping spot",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "infrastructure",
+    copy: "Officials cite concerns about safety, health at Tuffy s Corner A highway pullout popular for overnight camper parking north of Ouray has been empty in recent weeks since ‘no camping’ signs were installed. The wide gravel shoulder following the outside curve of U.S. Highway 550 between the Whispering",
+    href: "https://www.ouraynews.com/2026/09/09/parking-enforcement-nixes-popular-highway-camping-spot/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Fourteen measures to appear on statewide ballot",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "government",
+    copy: "The Colorado secretary of state’s office on Friday certified the list of ballot measures going before voters in November 2026 — and once again, the list is a long one. A total of 14 measures will be decided by Colorado voters this year. The figure ties a record for the most questions put to voters i",
+    href: "https://www.ouraynews.com/2026/09/09/fourteen-measures-appear-statewide-ballot/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Disaster relief tax an investment in resilience",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "government",
+    copy: "Dear Editor: I am writing to express my strong support for a dedicated Ouray County tax to provide funding for disaster relief, emergency preparedness, and community recovery. Those of us who live in Ouray County understand both the extraordinary beauty of our mountain environment and the risks that",
+    href: "https://www.ouraynews.com/2026/09/09/disaster-relief-tax-investment-resilience/?ta_paidstory",
+    img: ""
+  },
+  {
     title: "Parish Bulletin for September 6",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -952,66 +1012,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "County employees remain on paid leave",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 3, 2026",
-    newsTopic: "public-safety",
-    copy: "Ouray County has had two emergency-related employees on paid administrative leave since the early days of the Gold Mountain Fire. A third employee, Road and Bridge Superintendent Ty Barger, was placed on paid administrative leave following an arrest on suspicion of driving under the influence in the",
-    href: "https://www.ouraynews.com/2026/09/02/county-employees-remain-paid-leave/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Businesses share struggles with senator",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 3, 2026",
-    newsTopic: "public-safety",
-    copy: "Ouray County business owners bent the ear of U.S. Sen. John Hickenlooper on Friday, sharing stories of declining profits and mass cancellations in the wake of the Gold Mountain Fire in the hopes the Democrat can help secure federal disaster relief funding. About a dozen business owners and the direc",
-    href: "https://www.ouraynews.com/2026/09/02/businesses-share-struggles-senator/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Cleanup project at former mine site to take until 2028, Thorin says",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 3, 2026",
-    newsTopic: "government",
-    copy: "A representative from Thorin Resources, the owner and operator of the Revenue-Virginius Mine, told Ouray County commissioners last week the company expects to complete a federally supervised cleanup project at the site by the fall of 2028. At a Board of County Commissioners work session on Aug. 25, ",
-    href: "https://www.ouraynews.com/2026/09/02/cleanup-project-former-mine-site-take-2028-thorin-says/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Mining proposal faces unanimous scrutiny",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 3, 2026",
-    newsTopic: "government",
-    copy: "Kris Peterson and Alex Klemt said it was an algorithm that led them west from Colorado Springs, up a rough dirt road past the Camp Bird Mine, and into the lofty tundra of Governor Basin. With the help of AI, the two men told Ouray County commissioners last week, they had searched far and wide across",
-    href: "https://www.ouraynews.com/2026/09/02/mining-proposal-faces-unanimous-scrutiny/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Who is the MTN Lodge?",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 3, 2026",
-    newsTopic: "community",
-    copy: "Dear Editor: I opened the letter received last Wednesday and was a bit confused as to the intent, since the photos leading the letter are of the True Grit and several businesses that no longer exist in Ridgway, but I read through the entire letter with interest. I continue to marvel at the amount of",
-    href: "https://www.ouraynews.com/2026/09/02/who-is-the-mtn-lodge/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "OHVs have made trail access more difficult",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 3, 2026",
-    newsTopic: "recreation",
-    copy: "Dear Editor: I am writing in response to Jeff Lindberg’s letter in the Aug. 27 edition. My husband and I live in Ouray County primarily because we love to hike. We have lived here for eight years, but we have been visiting for more than 30 years. Jeff L. stated that the trails/roads are for everyone",
-    href: "https://www.ouraynews.com/2026/09/02/ohvs-made-trail-access-difficult/?ta_paidstory",
-    img: ""
-  },
-  {
     title: "Sheriff Rescinds Stage 2 Fire Restrictions",
     source: "Ouray County",
     sourceKey: "ouray-county",
@@ -1040,19 +1040,20 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Attached is this week's Parish Bulletin. Please check our calendar for all updated information. This weekend:Saturday Vigil (Aug. 29) is a bilingual Holy Mass.Sunday (Aug. 30) 8:30 am pray the Rosary, 9 am Holy Mass. Immediately ...",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-august-30/",
     img: ""
-  },
-  {
-    title: "We’re Hiring- Bilingual Food Pantry and seNior Lunch Cook Assistant/ Estamos Contratando: Asistente Bilingüe del Banco de Alimentos y Asistente de Cocina del Almuerzo para Personas Mayores",
-    source: "Fresh Food Hub",
-    sourceKey: "fresh-food-hub",
-    date: "August 27, 2026",
-    newsTopic: "community",
-    copy: "We re hiring for two part-time positions: Bilingual Food Pantry Assistant — Sundays, 1:30–6:30 p.m. This role provides Spanish-English translation support for our Spanish-speaking clients during food pantry distribution. Senior Lunch Assistant — Thursdays, 8:30 a.m.–1:30 p.m. at Norwood Town Hall. T",
-    href: "https://freshfoodhub.net/were-hiring-bilingual-food-pantry-and-senior-lunch-cook-assistant-estamos-contratando-asistente-bilingue-del-banco-de-alimentos-y-asistente-de-cocina-del-almuerzo-para-personas-mayores/",
-    img: ""
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
+  {
+    title: "Imogene Pass & Black Bear Pass Closed 9/12/26",
+    source: "San Miguel County",
+    sourceLabel: "San Miguel County",
+    category: "Alert",
+    date: "2026-09-10",
+    pubDate: "2026-09-10T15:12:28.000Z",
+    copy: "Imogene Pass/Tomboy Road will be closed 12:01 a.m. - 3:00 p.m. on Saturday, September 12th, to accommodate the Imogene Pass Run. Black Bear Pass/Bridal Veil Road and the Valley View parking area will also be closed 7:00 a.m. - 12:00 p.m.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=543",
+    img: ""
+  },
   {
     title: "Imogene and Black Bear Passes Closed 9/12",
     source: "San Miguel County",
@@ -1753,6 +1754,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Keeping an eye on safety for bears and people",
+    source: "Telluride Times",
+    date: "September 10, 2026",
+    firstSeen: "2026-09-10",
+    newsTopic: "community",
+    copy: "Bears are hungrier than usual around Norwood this fall — drought, late freezes, and bare fruit trees have pushed them toward yards, gardens, and chicken coops. CPW asks residents to secure trash, livestock feed, and grills, and reminds hunters and campers to store food and scented items well away from camp. Local sightings are down 68% in San Miguel County this year, though statewide numbers have doubled.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_83770074-792f-4d85-8d8c-c43eb496a120.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/1c/e1c199b1-1c29-4b10-8dce-e886fa419759/6aa169dc6979c.image.png",
+    imgHiRes: true
+  },
+  {
     title: "CHALKBOARD Week of Sept. 10-16",
     source: "Telluride Times",
     date: "September 10, 2026",
@@ -1762,18 +1775,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/norwood_post/article_da6c0815-04d6-4624-9bc2-e2f9faa4e6e9.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/5c/25c9740b-166f-45ee-9e2e-6bedb5ba4a26/6aa16a9fb6555.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Democratic state rep. candidate Alec Lindeman denied ballot access",
-    source: "Telluride Times",
-    date: "September 9, 2026",
-    firstSeen: "2026-09-09",
-    newsTopic: "government",
-    copy: "Democratic candidate Alec Lindeman won't appear on the November ballot for HD58 after the party's vacancy committee failed to submit required paperwork on time following a candidate swap. Incumbent Larry Don Suckla, who won the seat in 2024 with 54.6% of the vote, will run unopposed. Lindeman says he plans to try again in 2028.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_66c482ec-a629-45c6-9c83-f27714615f16.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/35/c356cdc8-fb2a-4785-9021-77ebe994c2e0/6aa1b60cd24a2.image.jpg",
     imgHiRes: true
   },
   {
@@ -1822,6 +1823,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/sports/article_3a5055d5-c30a-4f4a-beec-a490a62bd662.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/01/f0109352-7e6a-4e0b-a8d0-26b7eca10598/6aa0ca23395fc.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Democratic state rep. candidate Alec Lindeman denied ballot access",
+    source: "Telluride Times",
+    date: "September 9, 2026",
+    firstSeen: "2026-09-09",
+    newsTopic: "government",
+    copy: "Democratic candidate Alec Lindeman won't appear on the November ballot for HD58 after the party's vacancy committee failed to submit required paperwork on time following a candidate swap. Incumbent Larry Don Suckla, who won the seat in 2024 with 54.6% of the vote, will run unopposed. Lindeman says he plans to try again in 2028.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_66c482ec-a629-45c6-9c83-f27714615f16.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/35/c356cdc8-fb2a-4785-9021-77ebe994c2e0/6aa1b60cd24a2.image.jpg",
     imgHiRes: true
   },
   {
@@ -2791,6 +2804,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
   },
   {
+    title: "Imogene Pass & Black Bear Pass Closed 9/12/26",
+    source: "San Miguel County",
+    date: "September 10, 2026",
+    newsTopic: "infrastructure",
+    copy: "Imogene Pass/Tomboy Road will be closed 12:01 a.m. - 3:00 p.m. on Saturday, September 12th, to accommodate the Imogene Pass Run. Black Bear Pass/Bridal Veil Road and the Valley View parking area will also be closed 7:00 a.m. - 12:00 p.m.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=543",
+    img: ""
+  },
+  {
     title: "Imogene and Black Bear Passes Closed 9/12",
     source: "San Miguel County",
     date: "September 3, 2026",
@@ -3429,17 +3451,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Bear Aware Puppet Shows",
-    link: "https://koto.org/event/bear-aware-puppet-shows/2026-09-10/1/",
-    description: "Come learn how to keep bears safe! Ven a aprender cómo mantener a los osos seguros!",
-    pubDate: "2026-09-10T09:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/09/Bear-Aware-2026.png"
-  },
-  {
     title: "Tennis Clinic 3.0-4.0",
     link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-10/",
     description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
@@ -3918,7 +3929,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Bear Aware Puppet Show",
     link: "https://telluridelibrary.libcal.com/event/17255226?hs=a",
-    description: "A puppet show at the Wilkinson Public Library's Kids Area focused on bear awareness. The program is aimed at younger audiences and offers an engaging, educational look at living safely alongside bears in the region.",
+    description: "9:00 AM – 9:30 AM",
     pubDate: "2026-09-10T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -3929,7 +3940,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Bear Aware Puppet Show",
     link: "https://telluridelibrary.libcal.com/event/17255229?hs=a",
-    description: "A puppet show at the Wilkinson Public Library's Kids Area focused on bear awareness. The program is aimed at younger audiences and offers an engaging, educational look at living safely alongside bears in the region.",
+    description: "10:00 AM – 10:30 AM",
     pubDate: "2026-09-10T16:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -4473,7 +4484,7 @@ const OURAY_COUNTY_EVENTS = [
   {
     title: "Imogene Pass Run",
     link: "https://ouraycountyco.gov/Calendar.aspx?EID=3779",
-    description: "The Imogene Pass Run is an annual footrace that takes competitors over the challenging Imogene Pass between Telluride and Ouray, traversing one of the most scenic and demanding mountain routes in the San Juan Mountains. The course climbs to an elevation of over 13,000 feet, making it a notable test of endurance for participants.",
+    description: "https://ouraycountyco.gov/calendar.aspx?EID=3779",
     pubDate: "2026-09-12T07:00:00.000Z",
     source: "ouraycounty",
     sourceLabel: "Ouray County",
@@ -5835,7 +5846,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5846,7 +5857,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Rescheduled To 09 22 2026",
     link: "https://www.norwoodtown.com/2026-09-08-nwc-rescheduled-to-09-22-2026",
-    description: "A previously scheduled Norwood Town government meeting has been rescheduled to September 22, 2026. The rescheduled meeting will take place in Norwood, CO, and is organized by the Town of Norwood.",
+    description: "",
     pubDate: "2026-09-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5857,7 +5868,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-09-09-board-of-trustees-meeting",
-    description: "A regularly scheduled meeting of the Town of Norwood Board of Trustees, providing an opportunity for local governance and public business to be conducted. Community members are welcome to attend and observe the proceedings.",
+    description: "",
     pubDate: "2026-09-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5868,7 +5879,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-09-10-norwood-sanitation-district-meeting-meeting",
-    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and district operations are welcome to attend.",
+    description: "",
     pubDate: "2026-09-10T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5879,7 +5890,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-10-senior-lunch",
-    description: "A midday meal gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    description: "",
     pubDate: "2026-09-10T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5890,7 +5901,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Office Closed For Training 1 3pm",
     link: "https://www.norwoodtown.com/2026-09-14-office-closed-for-training-1-3pm",
-    description: "The Town of Norwood offices will be closed for staff training on the afternoon of September 14, 2026, beginning at 3 p.m. Residents should plan accordingly for any town business that may need to be addressed before or after the closure.",
+    description: "",
     pubDate: "2026-09-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5901,7 +5912,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-17-senior-lunch",
-    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    description: "",
     pubDate: "2026-09-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5912,7 +5923,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-09-21-planning-and-zoning-commission-meeting",
-    description: "The Town of Norwood's Planning and Zoning Commission will hold a regular meeting to review and discuss land use, development, and zoning matters within the community. Members of the public are welcome to attend and observe the proceedings.",
+    description: "",
     pubDate: "2026-09-21T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5923,7 +5934,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-24-senior-lunch",
-    description: "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
+    description: "",
     pubDate: "2026-09-24T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5934,7 +5945,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
+    description: "",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5945,7 +5956,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Meals",
     link: "https://www.norwoodtown.com/2026-10-01-senior-meals",
-    description: "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
+    description: "",
     pubDate: "2026-10-01T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5956,7 +5967,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Meals",
     link: "https://www.norwoodtown.com/2026-10-08-senior-meals",
-    description: "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
+    description: "",
     pubDate: "2026-10-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5967,7 +5978,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
+    description: "",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5978,7 +5989,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Meals",
     link: "https://www.norwoodtown.com/2026-10-15-senior-meals",
-    description: "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather, share a meal, and connect with neighbors. This recurring community event takes place in Norwood and is organized through local town services.",
+    description: "",
     pubDate: "2026-10-15T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5989,7 +6000,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Meals",
     link: "https://www.norwoodtown.com/2026-10-22-senior-meals",
-    description: "A midday community meal program for seniors, hosted by the Town of Norwood. It offers older residents a chance to gather, share a meal, and connect with neighbors in a welcoming setting.",
+    description: "",
     pubDate: "2026-10-22T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6000,7 +6011,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Meals",
     link: "https://www.norwoodtown.com/2026-10-29-senior-meals",
-    description: "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather and share a meal together. This recurring community event provides both nourishment and social connection for Norwood's senior residents.",
+    description: "",
     pubDate: "2026-10-29T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6011,7 +6022,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Veterans Day",
     link: "https://www.norwoodtown.com/2026-11-11-closed-for-veterans-day",
-    description: "The Town of Norwood will be closed in observance of Veterans Day. Municipal offices and services will be unavailable on this federal holiday honoring those who have served in the United States armed forces.",
+    description: "",
     pubDate: "2026-11-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6022,7 +6033,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Thanksgiving",
     link: "https://www.norwoodtown.com/2026-11-26-closed-for-thanksgiving",
-    description: "The Town of Norwood will be closed in observance of Thanksgiving Day. Municipal offices and services will be unavailable, with normal operations expected to resume following the holiday.",
+    description: "",
     pubDate: "2026-11-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6384,6 +6395,28 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    pubDate: "2026-10-10T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
+  {
+    title: "Mind Blown Telluride",
+    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    pubDate: "2026-10-10T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
   }
 ];
 
