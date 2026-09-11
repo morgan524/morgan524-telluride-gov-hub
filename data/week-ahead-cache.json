@@ -1,22 +1,26 @@
 {
-  "hash": "b2032c9cb6d44e2e40fb46fdbf67d59d7f2035c1",
-  "lede": "The biggest thing to track this week is the Telluride Hospital District's work session Monday, where CommonSpirit Health presents on a potential partnership — no supporting materials are public yet, but this is the same relationship at the heart of the ongoing Letter of Intent talks around the new hospital, so it matters. Mid-week, San Miguel County's Housing Code SSR working group holds its eighth session, drilling into proposed changes meant to remove Land Use Code barriers to workforce housing in unincorporated areas. On the lighter side, Imogene Pass Run takes over Saturday and the Sheridan has live music both ends of the weekend.",
+  "hash": "d2f0fa06a67dab2244be18d957f947a5434540a0",
+  "lede": "The biggest thing to watch this week is Tuesday's CommonSpirit Health presentation to the Telluride Hospital District board — a single-item work session with no packet posted yet, on a potential partnership that could reshape how this valley gets its healthcare. Alongside that, the Housing Authority Subcommittee takes up a real policy knot around subpar bedrooms in mitigation units, and the county's housing code working group meets again to push forward Land Use Code changes meant to speed up affordable housing. On the lighter side, the Imogene Pass Run goes Saturday and the week opens with The Meditations at the Sheridan.",
   "notable": [
     {
       "id": 0,
-      "stake": "CommonSpirit partnership terms are undisclosed; hospital's future direction is at stake."
+      "stake": "CommonSpirit partnership terms for the hospital district remain undisclosed to the public."
+    },
+    {
+      "id": 2,
+      "stake": "Policy decisions on subpar bedrooms in mitigation units could affect housing stock rules."
     },
     {
       "id": 5,
-      "stake": "Land Use Code changes could meaningfully accelerate or reshape county affordable housing."
+      "stake": "Code changes could remove Land Use barriers slowing affordable housing in unincorporated county."
     },
     {
       "id": 8,
-      "stake": "Potential demolition of Town-owned Rebekah Hall and Phoenix Market signage up for review."
+      "stake": "Potential demolition of Town-owned Rebekah Hall gets a public work session before HARC."
     },
     {
       "id": 11,
-      "stake": "Two public hearings on a PUD and a parcel subdivision — public comment is open."
+      "stake": "Two public hearings on land subdivision and a PUD — residents may testify."
     }
   ]
 }

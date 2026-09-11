@@ -1,311 +1,5 @@
 [
   {
-    "title": "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
-    "href": "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
-    "date": "2026-09-10",
-    "time": "10:00 AM",
-    "location": "The 610 Arts Collective",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53551302433703/huge/07561f7b06b24999f21e6be2347e5102b9b92cc3.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the…",
-    "type": "Arts & Film",
-    "endDate": "2026-09-25"
-  },
-  {
-    "title": "Ongoing Exhibition: BIG BOX-Big New Work By T-Bone",
-    "href": "https://events.ourayridgwayevents.com/event/ongoing-exhibition-big-box-big-new-work-by-t-bone",
-    "date": "2026-09-10",
-    "time": "10:00 AM",
-    "location": "Decker Community Room",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53736310463128/huge/ce8867efeba0934913913ee401aff4479a074ba5.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "The Big Box Show! Bigger, better and more. This groundbreaking local art won't last long! Ridgway's own T-Bone and his quintessential colorful cardboard paintings take on new life and meaning in the Decker where they have room to stretch…",
-    "type": "Arts & Film",
-    "endDate": "2026-09-25"
-  },
-  {
-    "title": "Ongoing: Social Justice Travel Exhibition",
-    "href": "https://events.ourayridgwayevents.com/event/copy-of-art-opening-social-justice-travel-exhibition",
-    "date": "2026-09-10",
-    "time": "10:00 AM",
-    "location": "Decker Community Room",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53764349683288/huge/471bb8c36dc067ddd9b229c9e31032260184eb5e.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote…",
-    "type": "Arts & Film",
-    "endDate": "2026-09-29"
-  },
-  {
-    "title": "OCAA Art Show: Thomas Livingstone Photography",
-    "href": "https://events.ourayridgwayevents.com/event/ocaa-art-show-thomas-livingstone-photography",
-    "date": "2026-09-10",
-    "time": "10:00 AM",
-    "location": "The Wright Opera House",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53629792987218/huge/6f3a915f33285c3e3da2dbe8c54dfcf731474ba0.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Join the Ouray County Arts Association and the Wright Opera House for the opening reception of Historic Treasures of the San Juan Mountains, a photography exhibition by Colorado photographer Thomas Livingstone. Through striking black and…",
-    "type": "Arts & Film"
-  },
-  {
-    "title": "Pilates for All Bodies",
-    "href": "https://telluridelibrary.libcal.com/event/16536344?hs=a",
-    "date": "2026-09-10",
-    "time": "12:30 PM",
-    "location": "Program Room",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own…",
-    "type": "Wellness"
-  },
-  {
-    "title": "Littles On the Move",
-    "href": "https://telluridelibrary.libcal.com/event/13960360?hs=a",
-    "date": "2026-09-10",
-    "time": "3:30 PM",
-    "location": "Program Room",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. nase a nosotros en este grupo de juego inclusivo y acogedor…",
-    "type": "Family & Kids"
-  },
-  {
-    "title": "The Spark Lab with EcoAction Partners",
-    "href": "https://telluridelibrary.libcal.com/event/17292166?hs=a",
-    "date": "2026-09-10",
-    "time": "3:30 PM",
-    "location": "Kids Area",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_50_13.png",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "3:30 PM – 4:30 PM · Each week we will do a fun activity! First thursdays: Tinker Time with Pinhead Second Thursdays with EcoAction partners Third Thursday: Thursday Creativos at Ah Haa * registration required * Fourth Thursdays with…",
-    "type": "Talks & Classes"
-  },
-  {
-    "title": "Middle School Volleyball: Ouray vs Norwood",
-    "href": "https://events.ourayridgwayevents.com/event/middle-school-volleyball-ouray-vs-norwood",
-    "date": "2026-09-10",
-    "time": "4:00 PM",
-    "location": "Ouray School",
-    "town": "Norwood",
-    "img": "https://localist-images.azureedge.net/photos/53861297432644/huge/0881f9c577bef68a34ca3d7295e47b218cb6980e.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Ouray Middle School will be playing Norwood Middle School @ Ouray View on site | Email this event",
-    "type": "Community"
-  },
-  {
-    "title": "Booze and Books",
-    "href": "https://telluridelibrary.libcal.com/event/16963783?hs=a",
-    "date": "2026-09-10",
-    "time": "5:15 PM",
-    "location": "Liz",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_15_54_25.jpg",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "5:15 PM – 6:30 PM · Sip on a libation while chatting with other bibliophiles about books you have read recently. It s totally open ended and open to everyone! 5:15 the second Thursday of every month. The library will get some apps for the…",
-    "type": "Community"
-  },
-  {
-    "title": "Norwood Sanitation District Meeting",
-    "href": "https://www.norwoodtown.com/2026-09-10-norwood-sanitation-district-meeting-meeting",
-    "date": "2026-09-10",
-    "time": "6:00 AM",
-    "location": "Norwood, CO",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Government Meeting",
-    "source": "Town of Norwood",
-    "desc": "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and district operations are welcome to attend.",
-    "type": "Arts & Film"
-  },
-  {
-    "title": "Senior Lunch",
-    "href": "https://www.norwoodtown.com/2026-09-10-senior-lunch",
-    "date": "2026-09-10",
-    "time": "6:00 AM",
-    "location": "Norwood, CO",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "Town of Norwood",
-    "desc": "A midday meal gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
-    "type": "Community"
-  },
-  {
-    "title": "Telluride Community Concert — September",
-    "href": "https://telluridechambermusic.org/concert/community-sep",
-    "date": "2026-09-10",
-    "time": "6:00 PM",
-    "location": "Telluride Science and Innovation Center",
-    "town": "Telluride",
-    "img": "https://telluridechambermusic.org/concerts/community-sep.webp",
-    "category": "Concert",
-    "source": "Telluride Chamber Music",
-    "desc": "An hour of chamber music on the deck — the perfect way to unwind. Free event.",
-    "type": "Music"
-  },
-  {
-    "title": "Music Bingo",
-    "href": "https://events.ourayridgwayevents.com/event/music-bingo",
-    "date": "2026-09-10",
-    "time": "6:00 PM",
-    "location": "Floating Lotus Brewery",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53790449536989/huge/a7181e9d298980d4c2377db45d06d26bb81e0b12.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Music Bingo at Floating Lotus Brewery! Join us on the 2nd & 4th Thursdays from 6-9 PM for a high-energy night of music, drinks, and bingo-style fun. Listen, mark your card, and sing along. Learn more at floatinglotusbrewery.com. View on…",
-    "type": "Food & Drink",
-    "endDate": "2026-10-23"
-  },
-  {
-    "title": "Telluride Dinner Party",
-    "href": "https://www.telluride.com/event/telluride-dinner-party/",
-    "date": "2026-09-10",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/48558/screenshot_2026-08-11_at_4_32_53_pm.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Join the Telluride Historical Museum for dinner for their premier fundraising event! Enjoy an excellent catered meal, …",
-    "type": "Food & Drink"
-  },
-  {
-    "title": "Vana Liya",
-    "href": "https://www.telluride.com/event/vana-liya/",
-    "date": "2026-09-10",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63475/screenshot_2026-09-02_at_12_39_17_pm.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Genre-busting vocalist and songwriter Vana Liya made a serendipitous arrival on the music scene after she posted …",
-    "type": "Music"
-  },
-  {
-    "title": "Jane Pope Jewelry Show",
-    "href": "https://www.telluride.com/event/jane-pope-jewelry-show/",
-    "date": "2026-09-10",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63534/jp_seventpointemeraldcut.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Jane Pope returns to Telluride for a solo jewelry show at Fringe Gallery. Visit them from Thursday, September 10th to …",
-    "type": "Arts & Film",
-    "endDate": "2026-09-13"
-  },
-  {
-    "title": "Telluride Chamber Music and Telluride Science Community Concert",
-    "href": "https://telluridescience.org/event/community-concert-september/",
-    "date": "2026-09-10",
-    "time": "6:00 PM – 7:00 PM",
-    "location": "Telluride Innovation Center, Telluride",
-    "town": "Telluride",
-    "img": "https://telluridescience.org/wp-content/uploads/2026/07/com_concert-0910_1080x1080.png",
-    "category": "",
-    "source": "Telluride Science",
-    "desc": "Join Telluride Science and Telluride Chamber Music for a free community concert on the scenic patio at the Innovation Center. Featured musicians:Danny DeSantis (viola), Anne Foxen (violin), Steve White (cell) and Travis Fisher (piano) All…",
-    "type": "Talks & Classes"
-  },
-  {
-    "title": "Pickleball Nights",
-    "href": "https://www.beacontelluride.com/upcoming-events",
-    "date": "2026-09-10",
-    "time": "7:00-9:00 PM",
-    "location": "Telluride Racket Club",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
-    "category": "Community Event",
-    "source": "Beacon",
-    "desc": "Thursday night Pickleball with no experience necessary. All supplies provided.",
-    "type": "Outdoors & Sports"
-  },
-  {
-    "title": "Functional Fitness - Strength & Mobility Training For Women",
-    "href": "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
-    "date": "2026-09-10",
-    "time": "8:15 AM",
-    "location": "Weehawken Ridgway (Old Schoolhouse)",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53312790468311/huge/d76b2fb7534e91f8369b0dace133058cd22fa783.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Welcome to Ridgway's strength and mobility training + YOGA! Functional Strength & Mobility Training (for women): Tuesday & Thursday 8:15-9 am Vinyasa Yoga: Wednesday 8:15-9:15 am Functional means we focus on movements that mimic everyday…",
-    "type": "Talks & Classes",
-    "endDate": "2026-11-05"
-  },
-  {
-    "title": "Ouray Economic Development Committee",
-    "href": "https://events.ourayridgwayevents.com/event/ouray-economic-development-committee",
-    "date": "2026-09-10",
-    "time": "8:30 AM",
-    "location": "Ouray Community Center",
-    "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "The Ouray Economic Development Committee (OEDC) works as the liaison between the City and the local business community. This includes creating and implementing an Economic Development Plan and economic development incentives to best serve…",
-    "type": "Community",
-    "endDate": "2026-10-08"
-  },
-  {
-    "title": "Bear Aware Puppet Show",
-    "href": "https://telluridelibrary.libcal.com/event/17255226?hs=a",
-    "date": "2026-09-10",
-    "time": "9:00 AM",
-    "location": "Kids Area",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_24_08_05_06.png",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "A puppet show at the Wilkinson Public Library's Kids Area focused on bear awareness. The program is aimed at younger audiences and offers an engaging, educational look at living safely alongside bears in the region.",
-    "type": "Family & Kids"
-  },
-  {
-    "title": "Vana Liya w/ Lola Rising",
-    "href": "https://www.alibitelluride.com/calendar#eca-event=vana-liya-w-lola-rising",
-    "date": "2026-09-10",
-    "time": "9:00 PM",
-    "location": "The Alibi • Telluride, CO",
-    "town": "Telluride",
-    "img": "https://ucarecdn.com/1550b57f-249f-4e1f-9096-b818dd357f2b/-/crop/1080x540/0,487/-/preview/",
-    "category": "Live Music",
-    "source": "The Alibi",
-    "desc": "Genre-busting vocalist and songwriter Vana Liya made a serendipitous arrival o...",
-    "type": "Music"
-  },
-  {
-    "title": "Jolie Holland",
-    "href": "https://sherbino.org/event/jolie-holland/",
-    "date": "2026-09-10",
-    "time": "",
-    "location": "The Sherbino, Ridgway",
-    "town": "Ridgway",
-    "img": "https://sherbino.org/wp-content/uploads/2026/06/2026-sherb-event-banners-45.png",
-    "category": "",
-    "source": "Sherbino Theater",
-    "desc": "",
-    "type": "Community"
-  },
-  {
     "title": "Up-off Gymnastics, Dance, and Spanish",
     "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-09-11/",
     "date": "2026-09-11",
@@ -330,6 +24,34 @@
     "source": "KOTO Community Calendar",
     "desc": "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every…",
     "type": "Music"
+  },
+  {
+    "title": "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
+    "href": "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
+    "date": "2026-09-11",
+    "time": "10:00 AM",
+    "location": "The 610 Arts Collective",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53551302433703/huge/07561f7b06b24999f21e6be2347e5102b9b92cc3.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the…",
+    "type": "Arts & Film",
+    "endDate": "2026-09-25"
+  },
+  {
+    "title": "Ongoing Exhibition: BIG BOX-Big New Work By T-Bone",
+    "href": "https://events.ourayridgwayevents.com/event/ongoing-exhibition-big-box-big-new-work-by-t-bone",
+    "date": "2026-09-11",
+    "time": "10:00 AM",
+    "location": "Decker Community Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53736310463128/huge/ce8867efeba0934913913ee401aff4479a074ba5.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The Big Box Show! Bigger, better and more. This groundbreaking local art won't last long! Ridgway's own T-Bone and his quintessential colorful cardboard paintings take on new life and meaning in the Decker where they have room to stretch…",
+    "type": "Arts & Film",
+    "endDate": "2026-09-25"
   },
   {
     "title": "Telluride Farmers Market",
@@ -477,6 +199,19 @@
     "endDate": "2026-09-26"
   },
   {
+    "title": "Yoga for ALL with Jane & Jay",
+    "href": "https://telluridelibrary.libcal.com/event/15803457?hs=a",
+    "date": "2026-09-11",
+    "time": "8:30 AM",
+    "location": "Program Room",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "8:30 AM – 9:45 AM · Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound…",
+    "type": "Wellness"
+  },
+  {
     "title": "Tennis Clinic 3.0-4.0",
     "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-11/",
     "date": "2026-09-11",
@@ -499,7 +234,7 @@
     "img": "https://ucarecdn.com/c33bd8f9-e07f-458b-a5a0-93b1ac17b3ce/-/crop/1320x1317/0,101/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Dynamic, a DJ associated with YAK and Flowmatic, takes over The Alibi for a late-night set kicking off at 9:30 PM. The evening is part of a local night series at the bar.",
+    "desc": "Local Night w. Dynamic (YAK & FLOWMATIC)",
     "type": "Music"
   },
   {
@@ -512,7 +247,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
     "category": "Community Event",
     "source": "Ouray County",
-    "desc": "The Imogene Pass Run is an annual footrace that takes competitors over the challenging Imogene Pass between Telluride and Ouray, traversing one of the most scenic and demanding mountain routes in the San Juan Mountains. The course climbs…",
+    "desc": "https://ouraycountyco.gov/calendar.aspx?EID=3779",
     "type": "Community"
   },
   {
@@ -578,7 +313,7 @@
     "img": "https://ucarecdn.com/1ae56fce-374d-41f0-ab3c-b5df1057cdf2/-/crop/1294x1295/0,29/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "A late-night DJ set at The Alibi featuring BASH, part of the venue's local night programming. The event gets underway at 10:00 PM.",
+    "desc": "Local Night w. BASH",
     "type": "Music"
   },
   {
@@ -907,6 +642,20 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Ongoing: Social Justice Travel Exhibition",
+    "href": "https://events.ourayridgwayevents.com/event/copy-of-art-opening-social-justice-travel-exhibition",
+    "date": "2026-09-14",
+    "time": "10:00 AM",
+    "location": "Decker Community Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53764349683288/huge/471bb8c36dc067ddd9b229c9e31032260184eb5e.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote…",
+    "type": "Arts & Film",
+    "endDate": "2026-09-29"
+  },
+  {
     "title": "Tennis Clinic 4.0+",
     "href": "https://koto.org/event/tennis-clinic-4-0/2026-09-14/",
     "date": "2026-09-14",
@@ -1048,7 +797,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Ouray County",
-    "desc": "This is an internal employee meeting hosted by Ouray County, taking place in Ouray. As a county government gathering, it is intended for Ouray County staff and personnel rather than the general public.",
+    "desc": "https://ouraycountyco.gov/calendar.aspx?EID=3783",
     "type": "Community"
   },
   {
@@ -1208,6 +957,20 @@
     "source": "KOTO Community Calendar",
     "desc": "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens &…",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Functional Fitness - Strength & Mobility Training For Women",
+    "href": "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
+    "date": "2026-09-15",
+    "time": "8:15 AM",
+    "location": "Weehawken Ridgway (Old Schoolhouse)",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53312790468311/huge/d76b2fb7534e91f8369b0dace133058cd22fa783.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Welcome to Ridgway's strength and mobility training + YOGA! Functional Strength & Mobility Training (for women): Tuesday & Thursday 8:15-9 am Vinyasa Yoga: Wednesday 8:15-9:15 am Functional means we focus on movements that mimic everyday…",
+    "type": "Talks & Classes",
+    "endDate": "2026-11-05"
   },
   {
     "title": "Tennis Clinic 3.0-4.0",
@@ -1615,7 +1378,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2300,8 +2063,22 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
-    "type": "Food & Drink"
+    "desc": "",
+    "type": "Community"
+  },
+  {
+    "title": "Music Bingo",
+    "href": "https://events.ourayridgwayevents.com/event/music-bingo",
+    "date": "2026-09-24",
+    "time": "6:00 PM",
+    "location": "Floating Lotus Brewery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53790449536989/huge/a7181e9d298980d4c2377db45d06d26bb81e0b12.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Music Bingo at Floating Lotus Brewery! Join us on the 2nd & 4th Thursdays from 6-9 PM for a high-energy night of music, drinks, and bingo-style fun. Listen, mark your card, and sing along. Learn more at floatinglotusbrewery.com. View on…",
+    "type": "Food & Drink",
+    "endDate": "2026-10-23"
   },
   {
     "title": "Watercolor & Wine with Katey Fetch: \"Paint the Peaks\"",
@@ -2497,7 +2274,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2731,7 +2508,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -3208,7 +2985,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -3249,6 +3026,19 @@
     "category": "Community Event",
     "source": "Ouray County",
     "desc": "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=2379",
+    "type": "Community"
+  },
+  {
+    "title": "Ouray Economic Development Committee",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-economic-development-committee",
+    "date": "2026-10-08",
+    "time": "8:30 AM",
+    "location": "Ouray Community Center",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The Ouray Economic Development Committee (OEDC) works as the liaison between the City and the local business community. This includes creating and implementing an Economic Development Plan and economic development incentives to best serve…",
     "type": "Community"
   },
   {
@@ -3418,7 +3208,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather, share a meal, and connect with neighbors. This recurring community event takes place in Norwood and is organized through…",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -3525,7 +3315,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday community meal program for seniors, hosted by the Town of Norwood. It offers older residents a chance to gather, share a meal, and connect with neighbors in a welcoming setting.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -3590,7 +3380,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather and share a meal together. This recurring community event provides both nourishment and social connection for Norwood's…",
+    "desc": "",
     "type": "Community"
   },
   {

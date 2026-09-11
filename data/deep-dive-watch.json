@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-11T03:56:28.686Z",
+ "generated": "2026-09-11T10:59:40.690Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -88,9 +88,18 @@
      "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
     }
    ],
-   "recent": [],
+   "recent": [
+    {
+     "source": "county",
+     "date": "2026-09-10",
+     "title": "Planning Commission Meeting",
+     "snippet": "Three Land Use Code amendments are on the table for the Planning Commission's recommendation — covering forestry practices, oil and gas, and geothermal energy. All three are code-change items,…"
+    }
+   ],
    "developments": [],
-   "stale": []
+   "stale": [
+    "Code Changes & Accelerated Review: county discussed it on 2026-09-10 (\"Planning Commission Meeting\") but the deep dive was last edited 2026-07-19."
+   ]
   },
   "wildfire": {
    "label": "Wildfire Resiliency",

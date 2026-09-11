@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Sep 2026 03:56:37 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 10:59:50 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Sep 11–17</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-36</guid>
-      <pubDate>Fri, 11 Sep 2026 03:56:37 GMT</pubDate>
-      <description><![CDATA[The biggest thing to track this week is the Telluride Hospital District's work session Monday, where CommonSpirit Health presents on a potential partnership — no supporting materials are public yet, but this is the same relationship at the heart of the ongoing Letter of Intent talks around the new hospital, so it matters. Mid-week, San Miguel County's Housing Code SSR working group holds its eighth session, drilling into proposed changes meant to remove Land Use Code barriers to workforce housing in unincorporated areas. On the lighter side, Imogene Pass Run takes over Saturday and the Sheridan has live music both ends of the weekend.]]></description>
+      <pubDate>Fri, 11 Sep 2026 10:59:50 GMT</pubDate>
+      <description><![CDATA[The biggest thing to watch this week is Tuesday's CommonSpirit Health presentation to the Telluride Hospital District board — a single-item work session with no packet posted yet, on a potential partnership that could reshape how this valley gets its healthcare. Alongside that, the Housing Authority Subcommittee takes up a real policy knot around subpar bedrooms in mitigation units, and the county's housing code working group meets again to push forward Land Use Code changes meant to speed up affordable housing. On the lighter side, the Imogene Pass Run goes Saturday and the week opens with The Meditations at the Sheridan.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -25,7 +25,7 @@
 
 A single-item work session: a presentation from CommonSpirit Health on a potential partnership with the Telluride Hospital District. No packet or supporting materials are posted ahead of the session, so the scope and terms of what's being discussed aren't yet public -- worth watching given the board's ongoing Letter of Intent talks with CommonSpirit on the new facility project. No board action is scheduled; this is a discussion-only session, held in person and by Zoom.
 
-⚡ Why it matters: CommonSpirit partnership terms are undisclosed; hospital's future direction is at stake.]]></description>
+⚡ Why it matters: CommonSpirit partnership terms for the hospital district remain undisclosed to the public.]]></description>
       <category>Meeting</category>
       <category>Telluride Medical Center</category>
     </item>
@@ -51,7 +51,7 @@ The Meditations, the legendary Jamaican reggae vocal group, perform live at the 
 📍 The Alibi • Telluride, CO
 🕒 9:30 PM
 
-Dynamic, a DJ associated with YAK and Flowmatic, takes over The Alibi for a late-night set kicking off at 9:30 PM. The evening is part of a local night series at the bar.]]></description>
+Local Night w. Dynamic (YAK & FLOWMATIC)]]></description>
       <media:content url="https://ucarecdn.com/c33bd8f9-e07f-458b-a5a0-93b1ac17b3ce/-/crop/1320x1317/0,101/-/preview/" medium="image" />
       <category>Community Event</category>
       <category>The Alibi</category>
@@ -81,6 +81,19 @@ Founded in Jamaica in the 1970s, The Meditations are legendary roots reggae pion
       <media:content url="https://www.telluride.com/site/assets/files/62648/meditations_poster_template_2018.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Fri, Sep 11] Yoga for ALL with Jane &amp; Jay</title>
+      <link>https://telluridelibrary.libcal.com/event/15803457?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/yoga%20for%20all%20with%7C2026-09-11</guid>
+      <pubDate>Fri, 11 Sep 2026 14:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+8:30 AM – 9:45 AM · Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Fri, Sep 11] Tennis Clinic 3.0-4.0</title>
@@ -165,7 +178,7 @@ A Fringe Project performance by La Familia Music Group at the historic Sheridan 
 📍 The Alibi • Telluride, CO
 🕒 10:00 PM
 
-A late-night DJ set at The Alibi featuring BASH, part of the venue's local night programming. The event gets underway at 10:00 PM.]]></description>
+Local Night w. BASH]]></description>
       <media:content url="https://ucarecdn.com/1ae56fce-374d-41f0-ab3c-b5df1057cdf2/-/crop/1294x1295/0,29/-/preview/" medium="image" />
       <category>Community Event</category>
       <category>The Alibi</category>
@@ -334,18 +347,6 @@ Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in th
       <category>KOTO</category>
     </item>
     <item>
-      <title>[Sun, Sep 13] Telluride Choral Society WinterSing rehearsals &amp; auditions</title>
-      <link>https://koto.org/event/telluride-choral-society-wintersing-rehearsals-auditions/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20choral%20society%20wintersing%7C2026-09-13</guid>
-      <pubDate>Sun, 13 Sep 2026 21:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Christ Church Telluride, TELLURIDE
-
-WinterSing 2026 rehearsals begin Sunday, Sept. 13th, 4:30, at Christ Church. No experience necessary. Open to everyone aged 13 and up. If you want to audition for the Chamber Singers, come at 3:30. To learn more, visit telluridechoralsociety.org]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
       <title>[Meeting] Open Space Commission - Sep 14 2026 — 2026-09-14</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-09-14%7COpen%20Space%20Commission%20-%20Sep%2014%202026</guid>
@@ -357,13 +358,15 @@ The September 14, 2026 Open Space Commission agenda hasn't been posted yet.]]></
       <category>Town of Telluride</category>
     </item>
     <item>
-      <title>[Meeting] Telluride Housing Authority Subcommittee Special Meeting - Sep 14 2026 — 2026-09-14</title>
+      <title>⚡ [Meeting] Telluride Housing Authority Subcommittee Special Meeting - Sep 14 2026 — 2026-09-14</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-09-14%7CTelluride%20Housing%20Authority%20Subcommittee%20Special%20Meeting%20-%20Sep%2014%202026</guid>
       <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-09-14
 
-The September 14, 2026 Telluride Housing Authority Subcommittee Special Meeting agenda hasn't been posted yet.]]></description>
+The Telluride Housing Authority Subcommittee meets in worksession on two policy questions that get at a recurring tension: the gap between rules written for ideal conditions and the messier reality on the ground. First up is how to handle 'subpar bedrooms' in mitigation units — rooms that don't meet current Guidelines or building code standards, including several Element 52 units with no windows at all. Owners of these units are seeking exceptions to occupancy requirements, and the Subcommittee will consider whether the existing administrative exception process is sufficient or whether a blanket preemptive exception makes more sense. Second, the Subcommittee will revisit the housing waitlist suspension that's been in place since April 2026. The original Placement Waitlist had over 280 people, but response rates to apartment offers ran as low as 1–15%, vacant units were piling up, and the list has since been purged to 164 households. The question is whether the suspension should continue, and what a functional waitlist policy actually looks like — ahead of a full policy review planned for early 2027. No formal votes can be taken; both items are worksessions.
+
+⚡ Why it matters: Policy decisions on subpar bedrooms in mitigation units could affect housing stock rules.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -398,7 +401,7 @@ The September 15, 2026 Ophir General Assembly Meeting agenda hasn't been posted 
 
 The Stakeholder Strategic Roundtable (SSR) working group convenes for its eighth session on the San Miguel County Housing Code Update — a Proposition 123-funded effort to strip out Land Use Code provisions that slow workforce and affordable housing production in unincorporated areas of the county. The two-hour working session zeroes in on the proposed Community Housing Zone, refining draft code recommendations that will eventually go to the BOCC and Planning Commission as formal redlines. Earlier sessions produced a handful of majority-consensus positions: allowing multiple ADUs on larger lots when the bonus unit is deed-restricted for workforce housing; reducing side setbacks to 10 feet in Medium and High Density zones; and preserving by-right density at 1 DU/35 acres while routing additional density exclusively through a workforce housing bonus track — with free-market development required to go through PUD. A range of other ideas, including RV/camper housing, parking reductions, and a TDR program, were set aside for now.
 
-⚡ Why it matters: Land Use Code changes could meaningfully accelerate or reshape county affordable housing.]]></description>
+⚡ Why it matters: Code changes could remove Land Use barriers slowing affordable housing in unincorporated county.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -433,7 +436,7 @@ The September 16 HARC agenda has one item: a certificate of appropriateness exte
 
 Two items stand out on this HARC agenda. First, a work session on a potential demolition and new construction application for Rebekah Hall itself — 113 W Columbia, the very building where HARC meets — a Town-owned property in the Residential/Commercial zone, with HOK as applicant. That's worth watching. Second, the Phoenix Market at 221 W Colorado Ave comes in for a Certificate of Appropriateness extension along with a vested property rights extension, which goes to Town Council as a recommendation. Beyond those, the board takes up a continued large-scale final development hearing for a new commercial building at 208 S Fir (5,000+ sq ft, Commercial zone), plus three continued single-family hillside matters. The Shandoka Lot Redevelopment — continued from August to October 21 — does not appear on this agenda.
 
-⚡ Why it matters: Potential demolition of Town-owned Rebekah Hall and Phoenix Market signage up for review.]]></description>
+⚡ Why it matters: Potential demolition of Town-owned Rebekah Hall gets a public work session before HARC.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -468,7 +471,7 @@ The September 16, 2026 Board of County Commissioners Meeting agenda hasn't been 
 
 Ouray County's Planning Commission meets at the Ouray Courthouse for two public hearings. First up is the Curry Regular PUD — a formal planned unit development application that will get a full public hearing. Second is an exemption application from Clifford Pastor to subdivide his parcel into two lots. Both items require public hearings before the PC can make a recommendation, and packet materials are available through the county's agenda portal.
 
-⚡ Why it matters: Two public hearings on a PUD and a parcel subdivision — public comment is open.]]></description>
+⚡ Why it matters: Two public hearings on land subdivision and a PUD — residents may testify.]]></description>
       <category>Meeting</category>
       <category>ouray</category>
     </item>

@@ -506,7 +506,7 @@
   "telluride|2026-10-07|Telluride Housing Authority Subcommittee - Oct 07 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8164",
     "sv": 4,
-    "ph": "224c78f657d14d0a"
+    "ph": "fbf369f84f691ffa"
   },
   "county|2026-10-07|Board of County Commissioners Meeting": {
     "sv": 4,
@@ -546,6 +546,13 @@
   "telluride|2026-09-14|Telluride Housing Authority Subcommittee Special Meeting - Sep 14 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8316",
     "sv": 4,
-    "ph": "4b1191ea8d187cff"
+    "zoomUrl": "https://us06web.zoom.us/j/88002208411?pwd=ofXFpbWHXtGZcNFnjfWucOBrCmoYqU.1",
+    "meetingId": "880 0220 8411",
+    "passcode": "541637.",
+    "phone": "719) 359-4580"
+  },
+  "smart|2026-10-08|SMART Board of Directors": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   }
 }

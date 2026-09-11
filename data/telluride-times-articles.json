@@ -1,5 +1,17 @@
 [
   {
+    "title": "‘Every river needs a champion’",
+    "source": "Telluride Times",
+    "date": "September 11, 2026",
+    "firstSeen": "2026-09-11",
+    "newsTopic": "community",
+    "copy": "The San Miguel and Upper Dolores are among the last free-flowing, undammed rivers in the Rockies. Telluride ~utside hosts Trout-a-palooza annually to support Gunnison Gorge Anglers; since 2016 it's helped generate over $9M for Valley Floor river restoration. This year's event is Sept. 23 at the Sheridan ~pera House.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/sports/article_e28dacce-a143-48e3-ae52-bf263e9e875b.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/c6/fc61604e-5208-49b0-9422-9e843b8b02bf/6a9779bbc08fb.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "‘Financial literacy is so important’",
     "source": "Telluride Times",
     "date": "September 10, 2026",
@@ -1096,6 +1108,17 @@
     "copy": "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
     "href": "https://www.telluride.gov/AlertCenter.aspx?AID=65",
     "img": ""
+  },
+  {
+    "title": "Judge tosses Telluride ski area owner’s lawsuit alleging coercion over failed sale",
+    "source": "Colorado Sun",
+    "date": "September 11, 2026",
+    "firstSeen": "2026-09-11",
+    "newsTopic": "recreation",
+    "copy": "Chuck Horning claimed Telluride and Mountain Village leaders promised to end a patroller strike if he sold the ski area",
+    "claudeSummary": false,
+    "href": "https://coloradosun.com/2026/09/11/judge-dismisses-telluride-ski-area-owner-lawsuit/",
+    "img": "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2025/12/122725_TRIDE_STRIKE_028-1-scaled.jpg?fit=1024%2C683&amp;ssl=1"
   },
   {
     "title": "Town Manager's Report",
