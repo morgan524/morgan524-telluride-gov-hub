@@ -1,12 +1,36 @@
 [
   {
+    "title": "A sublime century ride returns",
+    "source": "Telluride Times",
+    "date": "September 11, 2026",
+    "firstSeen": "2026-09-11",
+    "newsTopic": "infrastructure",
+    "copy": "The Mountains to the Desert Classic century ride returns September 26, raising money for the Just for Kids Foundation, which has distributed over $2.5 million to San Miguel Watershed youth programs since 2002. The fully supported, 100-mile ride runs on low-traffic paved roads from Telluride, Ridgway, or Norwood down to Gateway Canyons Resort. Registration is capped near 200 riders.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/sports/article_bb880243-0caf-48b5-a24e-73e67aa3a355.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/10/910ceaf4-877f-456a-a988-456b85399991/6a9f04eb9efb5.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Reviving community and self",
+    "source": "Telluride Times",
+    "date": "September 11, 2026",
+    "firstSeen": "2026-09-11",
+    "newsTopic": "arts-culture",
+    "copy": "Norwood's Wild Roots Revival returns to The Livery on Sept. 19–20, offering yoga, workshops, music, art, and whole food over equinox weekend. Now in its fourth year under organizer Julie Maynard, the event draws around 30 attendees annually and features local wellness practitioners leading sessions on movement, vision boarding, kids' crafts, and more.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/norwood_post/article_c00d23e9-e7ad-481f-9fd4-f8b7a27650dc.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/e1/4e11112d-77ee-46fa-a335-49f89fe50b11/6aa16d4ea40ef.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Federal court rejects Trump order keeping Michigan coal plant open",
     "source": "Telluride Times",
     "date": "September 11, 2026",
     "firstSeen": "2026-09-11",
-    "newsTopic": "community",
-    "copy": "A federal court has declared that the Energy Department exceeded its authority by forcing a Michigan coal-fired power plant to remain open past its scheduled retirement date last year. Energy Secretary Chris Wright had said the 64-year-old J.H. Campbell plant…",
-    "claudeSummary": false,
+    "newsTopic": "public-safety",
+    "copy": "A federal appeals court ruled the Energy Department overstepped its authority by forcing Michigan's 64-year-old J.H. Campbell coal plant to stay open past its planned retirement. The court found no legitimate emergency under the law. The plant has cost roughly $259M to keep running, with those losses expected to fall on Midwest ratepayers.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/news/state/article_2afc4519-e9cb-5284-9705-a5d96dc6541c.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/d8/7d8d2864-a91c-548a-8576-4547df4817d3/6aa4676990b4a.image.jpg",
     "imgHiRes": true
@@ -1038,15 +1062,6 @@
     "newsTopic": "public-safety",
     "copy": "(August 25, 2026) – Following improved fire conditions across the region, Town Manager Zoe Dohnal has downgraded fire restrictions within the Town of Telluride from Stage 2 to Stage 1, effective 12:01 a.m. MT on Wednesday, August 26, 2026.",
     "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=403",
-    "img": ""
-  },
-  {
-    "title": "Marya Stark and Charles Dalton Sworn In to Telluride Town Council",
-    "source": "Town of Telluride",
-    "date": "August 12, 2026",
-    "newsTopic": "government",
-    "copy": "(July 21, 2026) – The Town welcomed two new members to Town Council this morning as Charles Dalton and Marya Stark were sworn into office at 9:30 a.m. Town Clerk Tiffany Kavanaugh administered the oath of office for both officials.",
-    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=402",
     "img": ""
   },
   {

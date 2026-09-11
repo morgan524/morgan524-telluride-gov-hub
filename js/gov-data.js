@@ -347,11 +347,10 @@ const MV_CACHED_DATA = [
     time: "2:00 PM - 7:45 PM",
     title: "Town Council Meeting",
     board: "tc",
-    agendaUrl: null,
-    packetUrl: null,
+    agendaUrl: "https://townofmountainvillage.com/site/assets/files/49907/september_17-_2026_town_council_meeting_agenda.pdf",
+    packetUrl: "https://townofmountainvillage.com/site/assets/files/49908/september_17-_2026_town_council_meeting_packet.pdf",
     special: false,
-    location: "Town Hall, 455 Mountain Village Blvd, Suite A",
-    note: "Agenda typically posted the Friday before."
+    location: "Town Hall, 455 Mountain Village Blvd, Suite A"
   },
   {
     date: "October 1, 2026",
