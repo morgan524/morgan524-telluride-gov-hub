@@ -1,31 +1,5 @@
 [
   {
-    "title": "Up-off Gymnastics, Dance, and Spanish",
-    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-09-11/",
-    "date": "2026-09-11",
-    "time": "10:00 AM",
-    "location": "Lone Cone Library Norwood",
-    "town": "Norwood",
-    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
-    "type": "Music"
-  },
-  {
-    "title": "Ridgway Farmer's Market",
-    "href": "https://koto.org/event/ridgway-farmers-market/2026-09-11/",
-    "date": "2026-09-11",
-    "time": "10:00 AM",
-    "location": "Hartwell Park Ridgway",
-    "town": "Ridgway",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every…",
-    "type": "Music"
-  },
-  {
     "title": "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
     "href": "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
     "date": "2026-09-11",
@@ -54,6 +28,20 @@
     "endDate": "2026-09-25"
   },
   {
+    "title": "Ridgway Farmers Market",
+    "href": "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
+    "date": "2026-09-11",
+    "time": "10:00 AM",
+    "location": "Hartwell Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and…",
+    "type": "Food & Drink",
+    "endDate": "2026-10-16"
+  },
+  {
     "title": "Telluride Farmers Market",
     "href": "https://www.thetelluridefarmersmarket.com/",
     "date": "2026-09-11",
@@ -65,19 +53,6 @@
     "source": "Telluride Farmers Market",
     "desc": "The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced…",
     "type": "Food & Drink"
-  },
-  {
-    "title": "Tennis Clinic 4.0+",
-    "href": "https://koto.org/event/tennis-clinic-4-0/2026-09-11/",
-    "date": "2026-09-11",
-    "time": "11:00 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "RED MOUNTAIN REVIVAL",
@@ -210,19 +185,6 @@
     "source": "Wilkinson Public Library",
     "desc": "8:30 AM – 9:45 AM · Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound…",
     "type": "Wellness"
-  },
-  {
-    "title": "Tennis Clinic 3.0-4.0",
-    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-11/",
-    "date": "2026-09-11",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "DYNAMIC (DJ set)",
@@ -2506,11 +2468,11 @@
     "time": "6:00 PM",
     "location": "Telluride, CO",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/28484/ot_poster_2025_final.800x533.webp",
+    "img": "https://www.telluride.com/site/assets/files/28484/download_1.800x533.webp",
     "category": "Community Event",
     "source": "Telluride.com",
-    "desc": "Original Thinkers returns to breathtaking Telluride, Colorado, for the highly anticipated ninth annual festival, taking …",
-    "type": "Festivals",
+    "desc": "Original Thinkers is a boutique festival of film, ideas, art, performance, and conversation held annually in Telluride, …",
+    "type": "Arts & Film",
     "endDate": "2026-10-05"
   },
   {
@@ -3145,7 +3107,8 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "",
-    "type": "Community"
+    "type": "Community",
+    "endDate": "2026-11-10"
   },
   {
     "title": "TYLER SIMMONS",
@@ -3436,7 +3399,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In…",
     "type": "Arts & Film",
-    "endDate": "2026-11-09"
+    "endDate": "2026-11-10"
   },
   {
     "title": "Teeth to the Wind: fundraiser for George & Michael Gardner Fund",

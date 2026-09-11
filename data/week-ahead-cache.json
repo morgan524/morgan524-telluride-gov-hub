@@ -1,30 +1,30 @@
 {
-  "hash": "108d7f850f398b84b159642d02cad381f98903b1",
-  "lede": "The biggest thing to track this week is the Telluride Medical Center board's work session with CommonSpirit Health on Thursday — no supporting materials are posted yet, but with a Letter of Intent already in motion, this partnership discussion could shape how healthcare works in this valley for a long time. Alongside that, the Housing Authority Subcommittee digs into real policy gaps in workforce housing rules on Sunday, the county's housing code overhaul working group meets Tuesday, and HARC takes up a potential demolition and rebuild of Rebekah Hall — the town-owned building where they actually meet.",
+  "hash": "623142266b87d7771051f59ed95feec4b3cabe5f",
+  "lede": "The biggest thing to track this week is the Telluride Hospital District's work session on Monday, where CommonSpirit Health comes in to present on a potential partnership — the terms still aren't public, but with a Letter of Intent already in play, this is the kind of quiet meeting that can shape how healthcare works in this valley for a long time. Alongside that, the Housing Authority Subcommittee digs into real policy questions about subpar bedrooms in mitigation units, the county's Housing Code Update SSR hits its eighth session targeting Land Use Code barriers to workforce housing, and HARC takes a hard look at a possible demolition and rebuild of Rebekah Hall — the town-owned building where they meet.",
   "notable": [
     {
       "id": 0,
-      "stake": "CommonSpirit partnership terms could reshape local healthcare; no materials public yet."
+      "stake": "CommonSpirit partnership terms could reshape local healthcare; no materials posted yet."
     },
     {
       "id": 2,
-      "stake": "Policy decisions on subpar bedrooms in mitigation units affect real workforce housing availability."
+      "stake": "Policy worksession on subpar bedrooms in mitigation units affects real housing inventory."
     },
     {
       "id": 5,
-      "stake": "Prop 123-funded code changes could remove barriers to affordable housing in unincorporated county."
+      "stake": "County code changes could remove barriers slowing workforce housing production."
     },
     {
       "id": 8,
-      "stake": "Potential demolition of town-owned Rebekah Hall and Phoenix Market changes both up for review."
+      "stake": "Potential demolition of Town-owned Rebekah Hall gets first HARC review."
     },
     {
       "id": 10,
-      "stake": "BOCC considers MOU on 1999 view-plain settlement affecting Mountain Village development rights."
+      "stake": "BOCC takes up view plain MOU and Constitutional Amendment positions with public consequences."
     },
     {
       "id": 11,
-      "stake": "Two public hearings — PUD application and parcel subdivision — open for public comment."
+      "stake": "Two public hearings on new development and subdivision in Ouray County."
     }
   ]
 }

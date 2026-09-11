@@ -1,5 +1,17 @@
 [
   {
+    "title": "Federal court rejects Trump order keeping Michigan coal plant open",
+    "source": "Telluride Times",
+    "date": "September 11, 2026",
+    "firstSeen": "2026-09-11",
+    "newsTopic": "community",
+    "copy": "A federal court has declared that the Energy Department exceeded its authority by forcing a Michigan coal-fired power plant to remain open past its scheduled retirement date last year. Energy Secretary Chris Wright had said the 64-year-old J.H. Campbell plant…",
+    "claudeSummary": false,
+    "href": "https://www.telluridenews.com/news/state/article_2afc4519-e9cb-5284-9705-a5d96dc6541c.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/d8/7d8d2864-a91c-548a-8576-4547df4817d3/6aa4676990b4a.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "‘Every river needs a champion’",
     "source": "Telluride Times",
     "date": "September 11, 2026",
@@ -1020,6 +1032,24 @@
     "img": "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
   },
   {
+    "title": "Town of Telluride Downgrades to Stage 1 Fire Restrictions",
+    "source": "Town of Telluride",
+    "date": "August 26, 2026",
+    "newsTopic": "public-safety",
+    "copy": "(August 25, 2026) – Following improved fire conditions across the region, Town Manager Zoe Dohnal has downgraded fire restrictions within the Town of Telluride from Stage 2 to Stage 1, effective 12:01 a.m. MT on Wednesday, August 26, 2026.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=403",
+    "img": ""
+  },
+  {
+    "title": "Marya Stark and Charles Dalton Sworn In to Telluride Town Council",
+    "source": "Town of Telluride",
+    "date": "August 12, 2026",
+    "newsTopic": "government",
+    "copy": "(July 21, 2026) – The Town welcomed two new members to Town Council this morning as Charles Dalton and Marya Stark were sworn into office at 9:30 a.m. Town Clerk Tiffany Kavanaugh administered the oath of office for both officials.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=402",
+    "img": ""
+  },
+  {
     "title": "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
     "source": "San Miguel County",
     "date": "September 10, 2026",
@@ -1045,6 +1075,33 @@
     "copy": "",
     "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
+  },
+  {
+    "title": "Waste Tire Collection Event",
+    "source": "San Miguel County",
+    "date": "August 24, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
+  },
+  {
+    "title": "Tomboy Road Closed Intermittently Tuesday 9/15 - Friday 9/18",
+    "source": "San Miguel County",
+    "date": "September 11, 2026",
+    "newsTopic": "infrastructure",
+    "copy": "Tomboy Road will be closed Tues 9/15 - Fri 9/18 to accommodate waterline work being performed by the Town of Telluride. Times are not exact, motorists should avoid the area or prepare for extended delays and possibly being turned away.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=545",
+    "img": ""
+  },
+  {
+    "title": "Tomboy Road Closed Intermittently Tuesday 9/15 - Friday 9/18",
+    "source": "San Miguel County",
+    "date": "September 11, 2026",
+    "newsTopic": "infrastructure",
+    "copy": "Tomboy Road will be closed Tues 9/15 - Fri 9/18 to accommodate waterline work being performed by the Town of Telluride. Times are not exact, motorists should avoid the area or prepare for extended delays and possibly being turned away.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=544",
+    "img": ""
   },
   {
     "title": "Imogene Pass & Black Bear Pass Closed 9/12/26",
@@ -1074,6 +1131,15 @@
     "img": ""
   },
   {
+    "title": "Stage 1 Fire Restrictions In Effect",
+    "source": "Town of Telluride",
+    "date": "August 26, 2026",
+    "newsTopic": "public-safety",
+    "copy": "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
+    "href": "https://www.telluride.gov/AlertCenter.aspx?AID=65",
+    "img": ""
+  },
+  {
     "title": "Judge tosses Telluride ski area owner’s lawsuit alleging coercion over failed sale",
     "source": "Colorado Sun",
     "date": "September 11, 2026",
@@ -1083,6 +1149,17 @@
     "claudeSummary": false,
     "href": "https://coloradosun.com/2026/09/11/judge-dismisses-telluride-ski-area-owner-lawsuit/",
     "img": "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2025/12/122725_TRIDE_STRIKE_028-1-scaled.jpg?fit=1024%2C683&amp;ssl=1"
+  },
+  {
+    "title": "Ridgway Seeking Candidates for 2026-2027 Youth Advisory Council",
+    "source": "Town of Ridgway",
+    "date": "September 12, 2026",
+    "firstSeen": "2026-09-11",
+    "newsTopic": "government",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026-2027-Town-of-Ridgway-Youth-Advisory-Council---Application-Materials.pdf",
+    "img": ""
   },
   {
     "title": "Town Manager's Report",
@@ -1115,6 +1192,28 @@
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
     "claudeSummary": false,
     "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.09.16_public-hearing-notice.pdf",
+    "img": ""
+  },
+  {
+    "title": "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council",
+    "source": "Town of Ridgway",
+    "date": "September 10, 2026",
+    "firstSeen": "2026-09-11",
+    "newsTopic": "government",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Budget-meetings-notice-2026.pdf",
+    "img": ""
+  },
+  {
+    "title": "Ridgway Seeking Candidates for 2026-2027 Youth Advisory Council",
+    "source": "Town of Ridgway",
+    "date": "September 11, 2026",
+    "firstSeen": "2026-09-11",
+    "newsTopic": "government",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Youth-Advisory-Council-Press-Release-2026-09-11.pdf",
     "img": ""
   }
 ]
