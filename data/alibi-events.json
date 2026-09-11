@@ -12,6 +12,30 @@
     "imageUrl": "https://ucarecdn.com/1550b57f-249f-4e1f-9096-b818dd357f2b/-/crop/1080x540/0,487/-/preview/"
   },
   {
+    "title": "DYNAMIC (DJ set)",
+    "link": "https://www.alibitelluride.com/calendar#eca-event=bash-dj-set-2",
+    "description": "Dynamic, a DJ associated with YAK and Flowmatic, takes over The Alibi for a late-night set kicking off at 9:30 PM. The evening is part of a local night series at the bar.",
+    "pubDate": "2026-09-11",
+    "time": "9:30 PM",
+    "source": "alibi",
+    "sourceLabel": "The Alibi",
+    "category": "Live Music",
+    "location": "The Alibi • Telluride, CO",
+    "imageUrl": "https://ucarecdn.com/c33bd8f9-e07f-458b-a5a0-93b1ac17b3ce/-/crop/1320x1317/0,101/-/preview/"
+  },
+  {
+    "title": "BASH (DJ set)",
+    "link": "https://www.alibitelluride.com/calendar#eca-event=bash-dj-set-1",
+    "description": "A late-night DJ set at The Alibi featuring BASH, part of the venue's local night programming. The event gets underway at 10:00 PM.",
+    "pubDate": "2026-09-12",
+    "time": "10:00 PM",
+    "source": "alibi",
+    "sourceLabel": "The Alibi",
+    "category": "Live Music",
+    "location": "The Alibi • Telluride, CO",
+    "imageUrl": "https://ucarecdn.com/1ae56fce-374d-41f0-ab3c-b5df1057cdf2/-/crop/1294x1295/0,29/-/preview/"
+  },
+  {
     "title": "Photon",
     "link": "https://www.alibitelluride.com/calendar#eca-event=photon",
     "description": "What started as a passion project dedicated to the late and great Stephen Hawkin...",

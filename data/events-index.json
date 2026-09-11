@@ -94,19 +94,6 @@
     "type": "Talks & Classes"
   },
   {
-    "title": "TRC Men's Tennis Singles",
-    "href": "https://koto.org/event/trc-mens-tennis-singles/2026-09-10/",
-    "date": "2026-09-10",
-    "time": "4:00 PM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The 1st TRC Men's Singles League! Sign up on a week-to-week basis. No long-term commitment.",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "Middle School Volleyball: Ouray vs Norwood",
     "href": "https://events.ourayridgwayevents.com/event/middle-school-volleyball-ouray-vs-norwood",
     "date": "2026-09-10",
@@ -117,32 +104,6 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Ouray Middle School will be playing Norwood Middle School @ Ouray View on site | Email this event",
-    "type": "Community"
-  },
-  {
-    "title": "West End Trail Running",
-    "href": "https://koto.org/event/west-end-trail-running-2/2026-09-10/",
-    "date": "2026-09-10",
-    "time": "5:00 PM",
-    "location": "",
-    "town": "",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/hiking.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens &…",
-    "type": "Outdoors & Sports"
-  },
-  {
-    "title": "Booze and Books at Liz",
-    "href": "https://koto.org/event/booze-and-books-at-liz-2/",
-    "date": "2026-09-10",
-    "time": "5:15 PM",
-    "location": "Liz, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/08/BoozeBooks-Liz.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Sip on a libation while chatting with other bibliophiles about books you have read recently. It's totally open ended and open to everyone! 5:15 the second Thursday of every month. The library will get some apps for the table; you purchase…",
     "type": "Community"
   },
   {
@@ -159,19 +120,6 @@
     "type": "Community"
   },
   {
-    "title": "The Creative Exchange at Telluride Arts HQ",
-    "href": "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-09-10/",
-    "date": "2026-09-10",
-    "time": "5:30 PM",
-    "location": "Telluride Arts HQ, TELLURIDE",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories…",
-    "type": "Community"
-  },
-  {
     "title": "Norwood Sanitation District Meeting",
     "href": "https://www.norwoodtown.com/2026-09-10-norwood-sanitation-district-meeting-meeting",
     "date": "2026-09-10",
@@ -181,8 +129,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "",
-    "type": "Community"
+    "desc": "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and district operations are welcome to attend.",
+    "type": "Arts & Film"
   },
   {
     "title": "Senior Lunch",
@@ -194,7 +142,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday meal gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     "type": "Community"
   },
   {
@@ -209,19 +157,6 @@
     "source": "Telluride Chamber Music",
     "desc": "An hour of chamber music on the deck — the perfect way to unwind. Free event.",
     "type": "Music"
-  },
-  {
-    "title": "Facing the Mourning",
-    "href": "https://koto.org/event/facing-the-mourning/2026-09-10/",
-    "date": "2026-09-10",
-    "time": "6:00 PM",
-    "location": "Redvale Community Center",
-    "town": "",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit…",
-    "type": "Community"
   },
   {
     "title": "Music Bingo",
@@ -341,7 +276,7 @@
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_24_08_05_06.png",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "9:00 AM – 9:30 AM",
+    "desc": "A puppet show at the Wilkinson Public Library's Kids Area focused on bear awareness. The program is aimed at younger audiences and offers an engaging, educational look at living safely alongside bears in the region.",
     "type": "Family & Kids"
   },
   {
@@ -555,6 +490,19 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "DYNAMIC (DJ set)",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=bash-dj-set-2",
+    "date": "2026-09-11",
+    "time": "9:30 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/c33bd8f9-e07f-458b-a5a0-93b1ac17b3ce/-/crop/1320x1317/0,101/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Dynamic, a DJ associated with YAK and Flowmatic, takes over The Alibi for a late-night set kicking off at 9:30 PM. The evening is part of a local night series at the bar.",
+    "type": "Music"
+  },
+  {
     "title": "Imogene Pass Run",
     "href": "https://ouraycountyco.gov/Calendar.aspx?EID=3779",
     "date": "2026-09-12",
@@ -564,7 +512,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
     "category": "Community Event",
     "source": "Ouray County",
-    "desc": "https://ouraycountyco.gov/calendar.aspx?EID=3779",
+    "desc": "The Imogene Pass Run is an annual footrace that takes competitors over the challenging Imogene Pass between Telluride and Ouray, traversing one of the most scenic and demanding mountain routes in the San Juan Mountains. The course climbs…",
     "type": "Community"
   },
   {
@@ -618,6 +566,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "We are happy to announce our 2nd Annual Zumbathon (Charity Dance Benefit) for Second Chance Humane Society. Date: Sept 12 Time: 10 am-1 pm, doors open at 9:30 am (arrive early)Location: Montrose Rec CenterCost $20 (gets you into the Rec…",
+    "type": "Music"
+  },
+  {
+    "title": "BASH (DJ set)",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=bash-dj-set-1",
+    "date": "2026-09-12",
+    "time": "10:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/1ae56fce-374d-41f0-ab3c-b5df1057cdf2/-/crop/1294x1295/0,29/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "A late-night DJ set at The Alibi featuring BASH, part of the venue's local night programming. The event gets underway at 10:00 PM.",
     "type": "Music"
   },
   {
@@ -1076,6 +1037,19 @@
     "source": "KOTO Community Calendar",
     "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Employee Meeting",
+    "href": "https://ouraycountyco.gov/Calendar.aspx?EID=3783",
+    "date": "2026-09-15",
+    "time": "2:00 AM",
+    "location": "- Ouray CO 81427",
+    "town": "Ouray",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "Ouray County",
+    "desc": "This is an internal employee meeting hosted by Ouray County, taking place in Ouray. As a county government gathering, it is intended for Ouray County staff and personnel rather than the general public.",
+    "type": "Community"
   },
   {
     "title": "Online Author Talk with Priya Parker",
@@ -1567,6 +1541,71 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Local Legends Blues & Brews Kick Off",
+    "href": "https://koto.org/event/local-legends-blues-brews-kick-off/",
+    "date": "2026-09-17",
+    "time": "5:00 PM",
+    "location": "Ah Haa School for the Arts, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/09/Local-legends-poster-26sm.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join Ah Haa School for the Arts in partnership with Telluride Blues & Brews Festival for Local Legends, a beer tasting and food pairing on Ah Haa's Sky Deck! Telluride's own local legends, Telluride Brewing Co will host iconic breweries…",
+    "type": "Food & Drink"
+  },
+  {
+    "title": "West End Trail Running",
+    "href": "https://koto.org/event/west-end-trail-running-2/2026-09-17/",
+    "date": "2026-09-17",
+    "time": "5:00 PM",
+    "location": "",
+    "town": "",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/hiking.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens &…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Volunteer Trail Work Day: Deep Creek Trail",
+    "href": "https://koto.org/event/volunteer-trail-work-day-deep-creek-trail/",
+    "date": "2026-09-17",
+    "time": "5:15 PM",
+    "location": "",
+    "town": "",
+    "img": "https://koto.org/wp-content/uploads/2026/09/Vol-Trail-Work-499x624-1.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join Telluride Mountain Club for a day of maintaining trails! Spend time with friends, get your hands dirty, and help care for the trails we all love. Projects may include clearing debris, improving drainage, and general maintenance to…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Salon Night at Telluride Arts HQ",
+    "href": "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-09-17/",
+    "date": "2026-09-17",
+    "time": "5:30 PM",
+    "location": "Telluride Arts HQ, TELLURIDE",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it…",
+    "type": "Community"
+  },
+  {
+    "title": "Authors Uncovered: K.B. Brodsky",
+    "href": "https://koto.org/event/authors-uncovered-k-b-brodsky/",
+    "date": "2026-09-17",
+    "time": "5:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/Brodsky-Beyond-Honor.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join Karen and Bill Brodsky part-time locals and husband & wife author duo (K.B. Brodsky) as they discuss their newest novel, Beyond Honor at the library on Thursday, September 17th at 5:30pm. A paramilitary operative confronting his grief…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Senior Lunch",
     "href": "https://www.norwoodtown.com/2026-09-17-senior-lunch",
     "date": "2026-09-17",
@@ -1576,7 +1615,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     "type": "Community"
   },
   {
@@ -1593,17 +1632,17 @@
     "type": "Community"
   },
   {
-    "title": "Local Legends Blues & Brews Kick Off",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/local-legends-blues-brews-kick-off/",
+    "title": "Facing the Mourning",
+    "href": "https://koto.org/event/facing-the-mourning/2026-09-17/",
     "date": "2026-09-17",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49794/website_ll_26_sliders.png",
+    "time": "6:00 PM",
+    "location": "Redvale Community Center",
+    "town": "",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Join Ah Haa School for the Arts in partnership with Telluride Blues & Brews Festival for Local Legends, a beer tasting and food pairing on the Ah Haa Sky",
-    "type": "Food & Drink"
+    "source": "KOTO Community Calendar",
+    "desc": "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit…",
+    "type": "Community"
   },
   {
     "title": "Trivia Night",
@@ -2261,8 +2300,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
-    "type": "Community"
+    "desc": "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
+    "type": "Food & Drink"
   },
   {
     "title": "Watercolor & Wine with Katey Fetch: \"Paint the Peaks\"",
@@ -2458,7 +2497,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
     "type": "Community"
   },
   {
@@ -2692,7 +2731,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
     "type": "Community"
   },
   {
@@ -3169,7 +3208,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
     "type": "Community"
   },
   {
@@ -3379,7 +3418,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather, share a meal, and connect with neighbors. This recurring community event takes place in Norwood and is organized through…",
     "type": "Community"
   },
   {
@@ -3486,7 +3525,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday community meal program for seniors, hosted by the Town of Norwood. It offers older residents a chance to gather, share a meal, and connect with neighbors in a welcoming setting.",
     "type": "Community"
   },
   {
@@ -3551,7 +3590,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather and share a meal together. This recurring community event provides both nourishment and social connection for Norwood's…",
     "type": "Community"
   },
   {

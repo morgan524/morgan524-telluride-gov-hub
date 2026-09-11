@@ -1,12 +1,4 @@
 {
-  "telluride|2026-08-11|Town Council - Aug 11 2026": {
-    "sv": 4,
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8041",
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/HhPERZh2Rey09qBDf2d5ug",
-    "meetingId": "830 1182 2138",
-    "passcode": "888369.",
-    "phone": "719) 359-4580"
-  },
   "county|2026-08-12|Board of County Commissioners Work Session": {
     "sv": 4
   },
@@ -85,14 +77,6 @@
     "passcode": "194920",
     "phone": "346 248 7799"
   },
-  "norwood|2026-08-11|Norwood Water Commission Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://www.norwoodtown.com/files/ed8086933/08.11.2026+NWC+Agenda.pdf",
-    "zoomUrl": "https://us02web.zoom.us/j/88274908233",
-    "meetingId": "882 7490 8233",
-    "passcode": "997236",
-    "phone": "346-248-7799"
-  },
   "telluride|2026-08-20|Planning & Zoning Commission - Aug 20 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8102",
     "sv": 4,
@@ -104,10 +88,6 @@
   "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8101",
     "sv": 4
-  },
-  "tmvoa|2026-08-11|Mountain Village Merchant Meeting": {
-    "sv": 4,
-    "ph": "b858cb282617fb09"
   },
   "tmvoa|2026-08-20|TMVOA Investment Committee Meeting": {
     "sv": 4,
@@ -562,5 +542,10 @@
   "telluride|2026-09-16|CANCELED - Parks & Recreation Commission - Sep 16 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082",
     "sv": 4
+  },
+  "telluride|2026-09-14|Telluride Housing Authority Subcommittee Special Meeting - Sep 14 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8316",
+    "sv": 4,
+    "ph": "4b1191ea8d187cff"
   }
 }

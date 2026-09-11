@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 9-10-26",
+    "source": "KOTO Community Radio",
+    "date": "September 11, 2026",
+    "newsTopic": "public-safety",
+    "copy": "West End Round Up with the San Miguel Basin Forum; Two Pets Test Positive for the Plague; Heather King Appointed Interim Fire Chief in Norwood",
+    "href": "https://koto.org/news/newscast-9-10-26/"
+  },
+  {
     "title": "Newscast 9-9-26",
     "source": "KOTO Community Radio",
     "date": "September 10, 2026",
@@ -46,13 +54,5 @@
     "newsTopic": "community",
     "copy": "On this week’s Regional Roundup, we look at the latest efforts to open Bears Ears National Monument to mining and we'll hear about a public awareness campaign in Colorado aimed at helping people stay bear aware. We’ll also hear about a Western Colorado nonprofit building community by encouraging women and girls to exercise, and learn how the Ute Mo",
     "href": "https://koto.org/news/newscast-8-28-26/"
-  },
-  {
-    "title": "Newscast 8-27-26",
-    "source": "KOTO Community Radio",
-    "date": "August 28, 2026",
-    "newsTopic": "community",
-    "copy": "West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda; Remembering Dolly Parton",
-    "href": "https://koto.org/news/newscast-8-27-26/"
   }
 ]
