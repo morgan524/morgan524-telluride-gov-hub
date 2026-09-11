@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-11T10:59:40.690Z",
+ "generated": "2026-09-11T16:14:50.518Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -73,6 +73,18 @@
      "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1069/files",
      "link": "https://sanmiguelcoco.portal.civicclerk.com/event/1069/files",
      "zoomLink": "https://us06web.zoom.us/j/88053660816?pwd=n7qJTXvayoEO5RY4eo8koGmh4nHHai.1",
+     "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
+    },
+    {
+     "source": "county",
+     "sourceLabel": "San Miguel County",
+     "title": "Board of County Commissioners Meeting",
+     "date": "2026-09-16",
+     "time": "",
+     "location": "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/900/files",
+     "link": "https://sanmiguelcoco.portal.civicclerk.com/event/900/files",
+     "zoomLink": "https://us02web.zoom.us/meeting/register/tnLYPloRS7mtngp_HQWFXQ",
      "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
     },
     {

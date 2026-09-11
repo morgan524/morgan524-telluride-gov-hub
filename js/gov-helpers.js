@@ -312,7 +312,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082","sv":4,"ph":"6fb96e40a5040f91"},
 
   "county|2026-09-16|Board of County Commissioners Meeting":
-    {"sv":4,"ph":"a12dfd2ce826475e"},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/900/files/agenda/1992","zoomUrl":"https://us02web.zoom.us/meeting/register/tnLYPloRS7mtngp_HQWFXQ","meetingId":"867 6377 9971","passcode":"898059","phone":"719-359-4580"},
 
   "mv|2026-09-17|Town Council Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -357,7 +357,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104","sv":4,"ph":"62adcd3b9f83c037"},
 
   "telluride|2026-09-24|Planning & Zoning Commission Chair - Sep 24 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8103","sv":4,"ph":"313a820643e5b960"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8103","sv":4,"ph":"47098d6355184b1f"},
 
   "telluride|2026-08-27|Open Space Commission Site Walk - Aug 27 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8306","sv":4},
@@ -387,7 +387,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8310","sv":4,"zoomUrl":"https://us06web.zoom.us/j/85992668350?pwd=R89oLHvfdFJZrpNb6yzGqqHUrl3phe.1","meetingId":"859 9266 8350","passcode":"503877","phone":"301-715-8592"},
 
   "telluride|2026-09-30|Special Town Council - Sep 30 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313","sv":4,"ph":"6ee2e9f9e57bb867"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313","sv":4,"ph":"e919ae4458dc8a36"},
 
   "mv|2026-10-01|Design Review Board":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -825,6 +825,66 @@ const MEETING_PREVIEWS = {
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
+    title: "2026 Chamber Meeting, December",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
+    img: ""
+  },
+  {
+    title: "Noel Night",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 4, 2026",
+    newsTopic: "community",
+    copy: "Community shopping event and celebration.",
+    href: "https://norwoodcolorado.com/event/noel-night-3/",
+    img: ""
+  },
+  {
+    title: "West End Parade of Lights & Elfin Eve",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "Holiday parade and festival.",
+    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, November",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "November 10, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, October",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "October 13, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
+    img: ""
+  },
+  {
+    title: "Pioneer Day",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 26, 2026",
+    newsTopic: "community",
+    copy: "Celebration of local history and pioneers.",
+    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
+    img: ""
+  },
+  {
     title: "A barrel of fun on Labor Day",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
@@ -1189,7 +1249,7 @@ const MANUAL_SUMMARIES = {
     "The September 16, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-09-16|Board of County Commissioners Meeting":
-    "The September 16, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "A full agenda for the September 16 BOCC. The commissioners continue their discussion of Constitutional Amendments 81 and 86 — touching immigration enforcement communication and congressional redistricting. A notable land-use matter: a Memorandum of Understanding with Telluride Mountain Village and the Ridge HOA regarding view plain restrictions from a 1999 settlement agreement. The board will review the 2025 county audit and take up a discussion about seed funding for a new Telluride Chamber of Commerce. Sitting as the Housing Authority, the board considers an exception request to the 'Employee' definition under the Land Use Code — the kind of eligibility question that keeps coming back as housing costs squeeze who qualifies. The Building Department holds a public hearing on continued adoption of the 2024 International Building Code and Colorado Low Energy and Carbon Code. The board also takes up a resolution update letting the Assessor settle smaller abatements, an intergovernmental agreement with Ouray County for veterans transportation, and a new driver position for that same program. Personnel matters — including an extended leave for the Juvenile Services Director and parental leave for the County Attorney — may go to executive session.",
 
   "mv|2026-09-17|Town Council Meeting":
     "The September 17, 2026 Mountain Village Town Council Meeting agenda hasn't been posted yet.",
@@ -4475,24 +4535,13 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "PIZZA THERAPY + DJ NIGHT NURSE",
     link: "https://events.ourayridgwayevents.com/event/pizza-therapy-dj-night-nurse",
-    description: "Join us for some cheesy fun at our PIZZA PARTY – good vibes, great slices, and groovy tunes all night! DJ NightNurse spinning roots reggae Join us for some cheesy fun at our first PIZZA PARTY – good vibes, great slices, and groovy tunes all night! DJ NIGHT NURSE spinning Roots Reggae, Dub, and Funk. Pies by legendary Pizza Therepy. Cocktails by the Adobe Inn. Margaritas and Margaritas! View on site | Email this event",
+    description: "Join us for some cheesy fun at our first PIZZA PARTY – good vibes, great slices, and groovy tunes all night! DJ NIGHT NURSE spinning Roots Reggae, Dub, and Funk. Pies by legendary Pizza Therepy. Cocktails by the Adobe Inn. Margaritas and Margaritas! View on site | Email this event",
     pubDate: "2026-09-12T06:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "The Adobe Inn",
     imageUrl: "https://localist-images.azureedge.net/photos/53941240155427/huge/ca29c30efa67e9486dbc2a2764ad4f3f8969bf61.jpg"
-  },
-  {
-    title: "Happy Little Trees: Classes @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/happy-little-trees-classes-the-wright-6743",
-    description: "\"ARIZONA SPLENDOR\" Join Emma Kalff for a morning of coffee and painting at the Wright Opera House Community Room. Participants will follow along with a classic Bob Ross episode and create their own Bob Ross–style landscape painting. All supplies are included, and no prior painting experience is necessary. Just bring your curiosity and enjoy a relaxed, creative morning inspired by the joy of painting. FULL SCHEDULE April 11 — Horizons West May 9 — Barn at Sunset June 13 — LIttle House by the Road July 11 — Mountain Splendor August 8 — Quiet Woods September 12 — Arizona Splendor October 3 — Meadow Stream November 14 — Lonely Retreat December 12 — Snow Trail Part of Classes @ the Wright, bringing creativity, learning, and community together in downtown Ouray since Letitia Wright first dreamed it up. View on site | Email this event",
-    pubDate: "2026-09-12T10:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53644731506912/huge/89ae9ae8e058db83a936dd643f6af477841cd019.jpg"
   },
   {
     title: "Dallas Park Cemetery Tour",
@@ -4527,6 +4576,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Montrose Recreational District",
     imageUrl: "https://localist-images.azureedge.net/photos/53808943751530/huge/be9cd2397aa33916151e9c89974ac88ff07ec836.jpg"
+  },
+  {
+    title: "Happy Little Trees: Classes @ the Wright",
+    link: "https://events.ourayridgwayevents.com/event/happy-little-trees-classes-the-wright-6743",
+    description: "\"ARIZONA SPLENDOR\" Join Emma Kalff for a morning of coffee and painting at the Wright Opera House Community Room. Participants will follow along with a classic Bob Ross episode and create their own Bob Ross–style landscape painting. All supplies are included, and no prior painting experience is necessary. Just bring your curiosity and enjoy a relaxed, creative morning inspired by the joy of painting. FULL SCHEDULE April 11 — Horizons West May 9 — Barn at Sunset June 13 — LIttle House by the Road July 11 — Mountain Splendor August 8 — Quiet Woods September 12 — Arizona Splendor October 3 — Meadow Stream November 14 — Lonely Retreat December 12 — Snow Trail Part of Classes @ the Wright, bringing creativity, learning, and community together in downtown Ouray since Letitia Wright first dreamed it up. View on site | Email this event",
+    pubDate: "2026-09-12T16:30:00.000Z",
+    endDate: "2026-10-03",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Wright Opera House",
+    imageUrl: "https://localist-images.azureedge.net/photos/53644731506912/huge/89ae9ae8e058db83a936dd643f6af477841cd019.jpg"
   },
   {
     title: "Ellar Day at Ouray Books",
@@ -4595,17 +4656,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53180328283019/huge/ac1aa0240d78b51097ebe512629240264b0a77b2.jpg"
   },
   {
-    title: "WPBL Games Live Streamed in the Tavern",
-    link: "https://events.ourayridgwayevents.com/event/wpbl-games-live-streamed-in-the-tavern",
-    description: "Semifinal A - Game 3 (if necessary). Free to attend. Doors at 5 pm, Game at 5:30 pm. View on site | Email this event",
-    pubDate: "2026-09-13T17:30:31.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53927988718089/huge/3ea539deab7496fee7b6c38ac0ae6e419522e669.jpg"
-  },
-  {
     title: "Britley & Matt",
     link: "https://events.ourayridgwayevents.com/event/britley-matt-349",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
@@ -4668,7 +4718,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
     description: "Welcome to Ridgway's strength and mobility training + YOGA! Functional Strength & Mobility Training (for women): Tuesday & Thursday 8:15-9 am Vinyasa Yoga: Wednesday 8:15-9:15 am Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Class Structure: 5 minute warm up / 30 minute circuit workout / 10 minute cooldown stretch & mobility Vinyasa Yoga: This is a dynamic practice that will challenge, strengthen, and uplift you both physically and mentally. …",
     pubDate: "2026-09-15T14:15:00.000Z",
-    endDate: "2026-11-05",
+    endDate: "2026-11-10",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4779,17 +4829,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53887699628224/huge/dec56b594a12eb9537121495212b009fe9b63184.jpg"
   },
   {
-    title: "Ouray: Echoes in the Canyon",
-    link: "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-692",
-    description: "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history, landscapes, and enduring spirit that helped shape what many still call \"The Gem of the Rockies.\" Through storytelling, archival perspective, aerial cinematography, and local voices, the film traces the layered history of Ouray and the individuals who built a mountain community that continues to evolve while remaining deeply connected to its frontier roots. The film features aerial photography by Ouray By Flight, cinematography by Levi Kramer, and is produced and directed by Hank Braxtan. We are offering a \"pay what you can\" for your ticket - $5, $10 and $15. Pick the amount that fees \"Wright\" to you. Thank you for your support! …",
-    pubDate: "2026-09-16T19:00:43.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg"
-  },
-  {
     title: "AFTER SCHOOL ART FOR AGES 8-12",
     link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-8-12",
     description: "AFTER SCHOOL ART FOR AGES 8-12 Wednesdays, 3:15–4:45 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 16 – October 7Session 2 (4 weeks • $85): October 21 – November 11Session 3 (3 weeks • $70): December 2 – December 16Each week, students will explore an exciting theme while experimenting with a wide range of materials and techniques. Drawing inspiration from well-known artists and design styles, young artists will be supported in discovering their own unique creative voice in a fun, nurturing, studio-like setting. These classes are designed to foster a love of the arts through hands-on exploration, age-appropriate projects, and a focus on the joy of the creative process. A student art reception will be held in December. Students will take home their collected works in the days following the event. …",
@@ -4859,15 +4898,15 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53913799593562/huge/d051c1ffbc39b75a1ea0d2ca7e0fd4481cabb8f0.jpg"
   },
   {
-    title: "Stillhouse Junkies: Live Music @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/stillhouse-junkies-live-music-the-wright",
-    description: "The Wright Opera House welcomes Stillhouse Junkies, the acclaimed Durango-based trio explore the worlds between roots, bluegrass, Texas swing, blues, and rock. Their free-flowing musical interplay and improvisation make every show unique as the trio weave through high-energy, intricately composed original songs, never taking the same path twice. Formed in 2017, the band consists of Fred Kosak (guitar, mandolin), Alissa Wolf (fiddle), and Jeanette Adams (bass). Part of programming at the Wright Opera House, bringing arts, conversation, and community to downtown Ouray since 1889. View on site | Email this event",
-    pubDate: "2026-09-17T19:00:00.000Z",
+    title: "Ouray: Echoes in the Canyon",
+    link: "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-692",
+    description: "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history, landscapes, and enduring spirit that helped shape what many still call \"The Gem of the Rockies.\" Through storytelling, archival perspective, aerial cinematography, and local voices, the film traces the layered history of Ouray and the individuals who built a mountain community that continues to evolve while remaining deeply connected to its frontier roots. The film features aerial photography by Ouray By Flight, cinematography by Levi Kramer, and is produced and directed by Hank Braxtan. We are offering a \"pay what you can\" for your ticket - $5, $10 and $15. Pick the amount that fees \"Wright\" to you. Thank you for your support! …",
+    pubDate: "2026-09-17T01:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53759764782802/huge/dc7e273f56ef01d450bc75d4e9c24bb9c5c68230.jpg"
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg"
   },
   {
     title: "AFTER SCHOOL ART FOR AGES 5-8",
@@ -4894,6 +4933,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53790516346797/huge/599d1a7013ddde307592e7dfc9b892fe265527e0.jpg"
   },
   {
+    title: "Stillhouse Junkies: Live Music @ the Wright",
+    link: "https://events.ourayridgwayevents.com/event/stillhouse-junkies-live-music-the-wright",
+    description: "The Wright Opera House welcomes Stillhouse Junkies, the acclaimed Durango-based trio explore the worlds between roots, bluegrass, Texas swing, blues, and rock. Their free-flowing musical interplay and improvisation make every show unique as the trio weave through high-energy, intricately composed original songs, never taking the same path twice. Formed in 2017, the band consists of Fred Kosak (guitar, mandolin), Alissa Wolf (fiddle), and Jeanette Adams (bass). Part of programming at the Wright Opera House, bringing arts, conversation, and community to downtown Ouray since 1889. View on site | Email this event",
+    pubDate: "2026-09-18T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Wright Opera House",
+    imageUrl: "https://localist-images.azureedge.net/photos/53759764782802/huge/dc7e273f56ef01d450bc75d4e9c24bb9c5c68230.jpg"
+  },
+  {
     title: "4th Annual San Juan Slam Pickleball Tournament",
     link: "https://events.ourayridgwayevents.com/event/4th-annual-san-juan-slam-pickleball-tournament",
     description: "The 4th Annual San Juan Slam, a Western Slope regional pickleball tournament hosted by the Ridgway Pickleball Club (RPC) with Presenting/Title Sponsor Citizens State Bank. The San Juan Slam, a family friendly event and free for spectators, takes place at the Ridgway Athletic Field from September 18-20. Sept. 18 Women's Doubles, Sept. 19 Mixed Doubles, and Sept. 20 Men's Doubles. This year's tournament will follow a Team Round-Robin pool play format with medal rounds at every skill and age level, providing participants and spectators plenty of gameplay. Our 4-legged friends (on leashes of course) are welcome to get their photo taken for inclusion in the World Famous 'Dogs of the San Juan Slam'. View on site | Email this event",
@@ -4915,17 +4965,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "the Festival",
     imageUrl: "https://localist-images.azureedge.net/photos/53853077811116/huge/8e41947484ff02c59861ff15f9c199d0f9076964.jpg"
-  },
-  {
-    title: "Music Bingo",
-    link: "https://events.ourayridgwayevents.com/event/music-bingo-3805",
-    description: "It’s bingo. But louder. And somehow emotionally complicated. Battle for glory using songs, questionable music knowledge, accidental dancing, and the sudden realization that one hit from 2007 still lives in your head rent-free. Expect singalongs, dramatic betrayals, nostalgic bangers, deep cuts, and at least one person absolutely convinced they should have won three rounds ago. Whether you’re a human jukebox or someone who confidently calls every song “that one TikTok song,” Music Bingo welcomes all skill levels and levels of chaos. View on site | Email this event",
-    pubDate: "2026-09-18T19:00:42.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53927988654594/huge/47a621344dfb303a07f678d459cf5d7ebfb65204.jpg"
   },
   {
     title: "OLD MAN POLLY",
@@ -4958,7 +4997,7 @@ const OURAY_RIDGWAY_EVENTS = [
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53560045436493/huge/a14a8a4e7c57d0a1bef341efac6f2260bc078cfc.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53560045436493/huge/e5640d2e033c030786307a61a48c3f9decd17af0.jpg"
   },
   {
     title: "Talon Talk: Ridgway State Park Summer Program Series",
@@ -5118,17 +5157,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52338340283147/huge/582622671001d9ab20f8c25a5d229c9ecbbba165.jpg"
   },
   {
-    title: "Ouray: Echoes in the Canyon",
-    link: "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-8790",
-    description: "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history, landscapes, and enduring spirit that helped shape what many still call \"The Gem of the Rockies.\" Through storytelling, archival perspective, aerial cinematography, and local voices, the film traces the layered history of Ouray and the individuals who built a mountain community that continues to evolve while remaining deeply connected to its frontier roots. The film features aerial photography by Ouray By Flight, cinematography by Levi Kramer, and is produced and directed by Hank Braxtan. We are offering a \"pay what you can\" for your ticket - $5, $10 and $15. Pick the amount that fees \"Wright\" to you. Thank you for your support! …",
-    pubDate: "2026-09-23T19:00:43.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg"
-  },
-  {
     title: "September Book Club: \"The Constant Gardener\"",
     link: "https://events.ourayridgwayevents.com/event/september-book-club-the-constant-gardener",
     description: "Join us on Wednesday, September 23rd at 5:00 p.m. to discuss our September Book Club Book, The Constant Gardener, by John le Carré. View on site | Email this event",
@@ -5150,6 +5178,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Decker Community Room",
     imageUrl: "https://localist-images.azureedge.net/photos/53738040069217/huge/449549e29368908fd534c31a53bcd1a1adc7b887.jpg"
+  },
+  {
+    title: "Ouray: Echoes in the Canyon",
+    link: "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-8790",
+    description: "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history, landscapes, and enduring spirit that helped shape what many still call \"The Gem of the Rockies.\" Through storytelling, archival perspective, aerial cinematography, and local voices, the film traces the layered history of Ouray and the individuals who built a mountain community that continues to evolve while remaining deeply connected to its frontier roots. The film features aerial photography by Ouray By Flight, cinematography by Levi Kramer, and is produced and directed by Hank Braxtan. We are offering a \"pay what you can\" for your ticket - $5, $10 and $15. Pick the amount that fees \"Wright\" to you. Thank you for your support! …",
+    pubDate: "2026-09-24T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg"
   },
   {
     title: "Ouray Chamber Business After Hours",
@@ -5768,6 +5807,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Decker Community Room",
     imageUrl: "https://localist-images.azureedge.net/photos/53048306784001/huge/b4907ccb0dd0b51c0bd862f76e556e669e3684c2.jpg"
+  },
+  {
+    title: "Teeth to the Wind: fundraiser for George & Michael Gardner Fund",
+    link: "https://events.ourayridgwayevents.com/event/teeth-to-the-wind",
+    description: "Join the George and Michael Gardner Fund for the showing of Teeth to the Wind. \"It's not going to be a climbing film\" Michael Gardner claimed in his original film pitch. \"More like a rom-com?\" Along with his partner and fellow alpinist, Sam Hennessey, the pair documented their seasons in the Tetons, Alaska, and Nepal. The film holds to its original vision: a lighthearted and unassuming glimpse into what Michael and Sam lovingly referred to as \"the spirit.\" A silent auction begins at 6:00 pm; movie at 7:00 View on site | Email this event",
+    pubDate: "2026-11-10T13:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray County 4-H Center",
+    imageUrl: "https://localist-images.azureedge.net/photos/53897046880484/huge/13cfa3523d07ba3e5c34401b1895f185c1c548d9.jpg"
   }
 ];
 
@@ -6346,6 +6396,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
+  },
+  {
+    title: "Sunday Rehab at Alloy Kitchen",
+    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
+    description: "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
+    pubDate: "2026-10-11T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
   }
 ];
 

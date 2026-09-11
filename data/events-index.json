@@ -317,6 +317,20 @@
     "type": "Music"
   },
   {
+    "title": "Happy Little Trees: Classes @ the Wright",
+    "href": "https://events.ourayridgwayevents.com/event/happy-little-trees-classes-the-wright-6743",
+    "date": "2026-09-12",
+    "time": "10:30 AM",
+    "location": "The Wright Opera House",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53644731506912/huge/89ae9ae8e058db83a936dd643f6af477841cd019.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "\"ARIZONA SPLENDOR\" Join Emma Kalff for a morning of coffee and painting at the Wright Opera House Community Room. Participants will follow along with a classic Bob Ross episode and create their own Bob Ross–style landscape painting. All…",
+    "type": "Arts & Film",
+    "endDate": "2026-10-03"
+  },
+  {
     "title": "The LA FAMILIA MUSIC GROUP Experience (Telluride Theatre)",
     "href": "https://koto.org/event/the-la-familia-music-group-experience-telluride-theatre/",
     "date": "2026-09-12",
@@ -379,19 +393,6 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Opening reception for Wild Child will be 4pm to 7pm. This show will be up from September 12th through November 12th. Artists are Laura Pierce & Nicole Greenfield. Explore the wilderness and its creations through paint, pencil, and pastel.…",
-    "type": "Arts & Film"
-  },
-  {
-    "title": "Happy Little Trees: Classes @ the Wright",
-    "href": "https://events.ourayridgwayevents.com/event/happy-little-trees-classes-the-wright-6743",
-    "date": "2026-09-12",
-    "time": "4:30 AM",
-    "location": "The Wright Opera House",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53644731506912/huge/89ae9ae8e058db83a936dd643f6af477841cd019.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "\"ARIZONA SPLENDOR\" Join Emma Kalff for a morning of coffee and painting at the Wright Opera House Community Room. Participants will follow along with a classic Bob Ross episode and create their own Bob Ross–style landscape painting. All…",
     "type": "Arts & Film"
   },
   {
@@ -508,7 +509,7 @@
     "img": "https://localist-images.azureedge.net/photos/53941240155427/huge/ca29c30efa67e9486dbc2a2764ad4f3f8969bf61.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Join us for some cheesy fun at our PIZZA PARTY – good vibes, great slices, and groovy tunes all night! DJ NightNurse spinning roots reggae Join us for some cheesy fun at our first PIZZA PARTY – good vibes, great slices, and groovy tunes…",
+    "desc": "Join us for some cheesy fun at our first PIZZA PARTY – good vibes, great slices, and groovy tunes all night! DJ NIGHT NURSE spinning Roots Reggae, Dub, and Funk. Pies by legendary Pizza Therepy. Cocktails by the Adobe Inn. Margaritas and…",
     "type": "Music"
   },
   {
@@ -536,19 +537,6 @@
     "source": "KOTO Community Calendar",
     "desc": "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also…",
     "type": "Wellness"
-  },
-  {
-    "title": "WPBL Games Live Streamed in the Tavern",
-    "href": "https://events.ourayridgwayevents.com/event/wpbl-games-live-streamed-in-the-tavern",
-    "date": "2026-09-13",
-    "time": "11:30 AM",
-    "location": "",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53927988718089/huge/3ea539deab7496fee7b6c38ac0ae6e419522e669.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Semifinal A - Game 3 (if necessary). Free to attend. Doors at 5 pm, Game at 5:30 pm. View on site | Email this event",
-    "type": "Community"
   },
   {
     "title": "Tea and Tarot",
@@ -970,7 +958,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Welcome to Ridgway's strength and mobility training + YOGA! Functional Strength & Mobility Training (for women): Tuesday & Thursday 8:15-9 am Vinyasa Yoga: Wednesday 8:15-9:15 am Functional means we focus on movements that mimic everyday…",
     "type": "Talks & Classes",
-    "endDate": "2026-11-05"
+    "endDate": "2026-11-10"
   },
   {
     "title": "Tennis Clinic 3.0-4.0",
@@ -1010,19 +998,6 @@
     "source": "KOTO Community Calendar",
     "desc": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have…",
     "type": "Community"
-  },
-  {
-    "title": "Ouray: Echoes in the Canyon",
-    "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-692",
-    "date": "2026-09-16",
-    "time": "1:00 PM",
-    "location": "",
-    "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
-    "type": "Arts & Film"
   },
   {
     "title": "TODDLER STORYTIME ART FOR AGES 2.5-5",
@@ -1199,6 +1174,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Ouray: Echoes in the Canyon",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-692",
+    "date": "2026-09-16",
+    "time": "7:00 PM",
+    "location": "",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Beans and Books at Coffee Cowboy",
     "href": "https://koto.org/event/beans-and-books-at-coffee-cowboy/",
     "date": "2026-09-16",
@@ -1236,19 +1224,6 @@
     "source": "Sherbino Theater",
     "desc": "",
     "type": "Arts & Film"
-  },
-  {
-    "title": "Stillhouse Junkies: Live Music @ the Wright",
-    "href": "https://events.ourayridgwayevents.com/event/stillhouse-junkies-live-music-the-wright",
-    "date": "2026-09-17",
-    "time": "1:00 PM",
-    "location": "The Wright Opera House",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53759764782802/huge/dc7e273f56ef01d450bc75d4e9c24bb9c5c68230.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "The Wright Opera House welcomes Stillhouse Junkies, the acclaimed Durango-based trio explore the worlds between roots, bluegrass, Texas swing, blues, and rock. Their free-flowing musical interplay and improvisation make every show unique…",
-    "type": "Music"
   },
   {
     "title": "Tennis Clinic 4.0+",
@@ -1462,6 +1437,19 @@
     "endDate": "2026-10-11"
   },
   {
+    "title": "Stillhouse Junkies: Live Music @ the Wright",
+    "href": "https://events.ourayridgwayevents.com/event/stillhouse-junkies-live-music-the-wright",
+    "date": "2026-09-17",
+    "time": "7:00 PM",
+    "location": "The Wright Opera House",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53759764782802/huge/dc7e273f56ef01d450bc75d4e9c24bb9c5c68230.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The Wright Opera House welcomes Stillhouse Junkies, the acclaimed Durango-based trio explore the worlds between roots, bluegrass, Texas swing, blues, and rock. Their free-flowing musical interplay and improvisation make every show unique…",
+    "type": "Music"
+  },
+  {
     "title": "Pickleball Nights",
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-09-17",
@@ -1499,19 +1487,6 @@
     "source": "KOTO Community Calendar",
     "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
     "type": "Outdoors & Sports"
-  },
-  {
-    "title": "Music Bingo",
-    "href": "https://events.ourayridgwayevents.com/event/music-bingo-3805",
-    "date": "2026-09-18",
-    "time": "1:00 PM",
-    "location": "",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53927988654594/huge/47a621344dfb303a07f678d459cf5d7ebfb65204.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "It’s bingo. But louder. And somehow emotionally complicated. Battle for glory using songs, questionable music knowledge, accidental dancing, and the sudden realization that one hit from 2007 still lives in your head rent-free. Expect…",
-    "type": "Community"
   },
   {
     "title": "Telluride Farmers Market",
@@ -1652,7 +1627,7 @@
     "time": "7:00 PM",
     "location": "The Wright Opera House",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53560045436493/huge/a14a8a4e7c57d0a1bef341efac6f2260bc078cfc.jpg",
+    "img": "https://localist-images.azureedge.net/photos/53560045436493/huge/e5640d2e033c030786307a61a48c3f9decd17af0.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Music Bingo @ the Wright WHEN? Friday, September 18 Doors at 6:30 pm • Music Bingo at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT It's bingo with a soundtrack. Instead of numbers, your bingo card is…",
@@ -1962,19 +1937,6 @@
     "type": "Food & Drink"
   },
   {
-    "title": "Ouray: Echoes in the Canyon",
-    "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-8790",
-    "date": "2026-09-23",
-    "time": "1:00 PM",
-    "location": "",
-    "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
-    "type": "Arts & Film"
-  },
-  {
     "title": "September Book Club: \"The Constant Gardener\"",
     "href": "https://events.ourayridgwayevents.com/event/september-book-club-the-constant-gardener",
     "date": "2026-09-23",
@@ -2039,6 +2001,19 @@
     "source": "Telluride.com",
     "desc": "Troutapalooza is the premier fundraiser for Gunnison Gorge Anglers and the San Miguel Valley Floor project. The event …",
     "type": "Community"
+  },
+  {
+    "title": "Ouray: Echoes in the Canyon",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-8790",
+    "date": "2026-09-23",
+    "time": "7:00 PM",
+    "location": "",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
+    "type": "Arts & Film"
   },
   {
     "title": "Ouray Chamber Business After Hours",
@@ -3133,6 +3108,19 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Sunday Rehab at Alloy Kitchen",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
+    "date": "2026-10-11",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
+    "type": "Community"
+  },
+  {
     "title": "Fall Break - Ridgway Schools",
     "href": "https://events.ourayridgwayevents.com/event/fall-break-ridgway-schools",
     "date": "2026-10-12",
@@ -3449,5 +3437,18 @@
     "desc": "The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In…",
     "type": "Arts & Film",
     "endDate": "2026-11-09"
+  },
+  {
+    "title": "Teeth to the Wind: fundraiser for George & Michael Gardner Fund",
+    "href": "https://events.ourayridgwayevents.com/event/teeth-to-the-wind",
+    "date": "2026-11-10",
+    "time": "6:00 AM",
+    "location": "Ouray County 4-H Center",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53897046880484/huge/13cfa3523d07ba3e5c34401b1895f185c1c548d9.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join the George and Michael Gardner Fund for the showing of Teeth to the Wind. \"It's not going to be a climbing film\" Michael Gardner claimed in his original film pitch. \"More like a rom-com?\" Along with his partner and fellow alpinist,…",
+    "type": "Arts & Film"
   }
 ]
