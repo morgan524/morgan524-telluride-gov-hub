@@ -1359,6 +1359,19 @@
     "type": "Community"
   },
   {
+    "title": "Blues & Brews Beer Pairing Dinner",
+    "href": "https://koto.org/event/blues-brews-beer-pairing-dinner/",
+    "date": "2026-09-17",
+    "time": "6:00 PM",
+    "location": "The Madeline Hotel, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/09/blues-dinner-1.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "As Telluride settles into Blues & Brews weekend, gather around the table for an evening devoted to the art of craft brewing. On Thursday, September 17, 2026, enjoy a five-course dinner paired with exceptional beers from featured breweries,…",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Trivia Night",
     "href": "https://events.ourayridgwayevents.com/event/floating-lotus-trivia-night",
     "date": "2026-09-17",
@@ -1384,19 +1397,6 @@
     "source": "Telluride.com",
     "desc": "Tee off for a cause at 9,500 feet! Join the Telluride Adaptive Sports Program for the 28th Annual Bob Miller Memorial …",
     "type": "Community"
-  },
-  {
-    "title": "Blues & Brews Beer Pairing Dinner",
-    "href": "https://www.telluride.com/event/blues-brews-beer-pairing-dinner-1/",
-    "date": "2026-09-17",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63525/blues_dinner.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "As Telluride settles into Blues & Brews weekend, gather around the table for an evening devoted to the art of craft …",
-    "type": "Food & Drink"
   },
   {
     "title": "Volunteer Trail Work Day",
@@ -1465,6 +1465,32 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Up-off Gymnastics, Dance, and Spanish",
+    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-09-18/",
+    "date": "2026-09-18",
+    "time": "10:00 AM",
+    "location": "Lone Cone Library Norwood",
+    "town": "Norwood",
+    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
+    "type": "Music"
+  },
+  {
+    "title": "Ridgway Farmer's Market",
+    "href": "https://koto.org/event/ridgway-farmers-market/2026-09-18/",
+    "date": "2026-09-18",
+    "time": "10:00 AM",
+    "location": "Hartwell Park Ridgway",
+    "town": "Ridgway",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every…",
+    "type": "Music"
+  },
+  {
     "title": "Telluride Farmers Market",
     "href": "https://www.thetelluridefarmersmarket.com/",
     "date": "2026-09-18",
@@ -1476,6 +1502,19 @@
     "source": "Telluride Farmers Market",
     "desc": "The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced…",
     "type": "Food & Drink"
+  },
+  {
+    "title": "Tennis Clinic 4.0+",
+    "href": "https://koto.org/event/tennis-clinic-4-0/2026-09-18/",
+    "date": "2026-09-18",
+    "time": "11:00 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Telluride Farmers' Market Music Series: Kevin Hauze",
@@ -1637,6 +1676,32 @@
     "endDate": "2026-09-20"
   },
   {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-18/",
+    "date": "2026-09-18",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Zumba with Gise",
+    "href": "https://koto.org/event/zumba-with-gise/2026-09-19/",
+    "date": "2026-09-19",
+    "time": "10:00 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/zumba-gise.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa,…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "\"llumination! Learning to Use Light, Shadow & Color in Acrylic Landscapes\" with Wayne McKinzie",
     "href": "https://events.ourayridgwayevents.com/event/llumination-learning-to-use-light-shadow-color-in-acrylic-landscapeswith-wayne-mckinzie",
     "date": "2026-09-19",
@@ -1729,18 +1794,17 @@
     "type": "Food & Drink"
   },
   {
-    "title": "Crystal Festival - A Rock, Mineral, Gem, & Crystal Show",
-    "href": "https://www.telluride.com/event/crystal-festival-a-rock-mineral-gem-crystal-show-1/",
+    "title": "Gaiascope Saturday Sessions",
+    "href": "https://koto.org/event/gaiascope-saturday-sessions/2026-09-19/",
     "date": "2026-09-19",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/61644/img_7366.800x533.webp",
+    "time": "7:00 PM",
+    "location": "Heritage Plaza, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/mountainvillage.jpg",
     "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Head to Telluride for the Crystal Festival, an educational and vendor event featuring rocks, minerals, fossils, …",
-    "type": "Festivals",
-    "endDate": "2026-09-21"
+    "source": "KOTO Community Calendar",
+    "desc": "Experience artist Brooke Einbender's Gaiascope installation in Mountain Village's Heritage Plaza every Saturday evening in September, with live DJ sets from 7-10 p.m. presented by Telluride Arts, TMVOA and Mindbender Studio.",
+    "type": "Arts & Film"
   },
   {
     "title": "Ouray Mountain Trail Run",
@@ -1754,6 +1818,32 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "13-mile trail run around the perimeter of Ouray. With approx 4000 ft of total elevation gain, runners will run past the dinosaur tracks, across the box canyon, past the ice park & via feratta, up into the amphitheater, and past the Cascade…",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Wild Roots Revival",
+    "href": "https://koto.org/event/wild-roots-revival/",
+    "date": "2026-09-19",
+    "time": "8:00 AM",
+    "location": "The Livery Norwood",
+    "town": "Norwood",
+    "img": "https://koto.org/wp-content/uploads/2026/09/Wild-Roots-Revival-Meadowlark.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Wild Roots Revival is a gathering highlighting the interconnection between mind, body, spirit, and nature. A mini-retreat on the west end centered around setting intentions for the Fall Equinox. Join us Saturday at the Livery in…",
+    "type": "Community"
+  },
+  {
+    "title": "Crystal Festival – A Rock, Mineral, Gem, & Crystal Show",
+    "href": "https://koto.org/event/crystal-festival-a-rock-mineral-gem-crystal-show/",
+    "date": "2026-09-19",
+    "time": "",
+    "location": "Telluride Conference Center, Mountain Village",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/09/bozeman-Crystal-Festival-.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join us for two incredible days celebrating rocks, minerals, fossils, gems, crystals, jewelry, and more at the Crystal Festival! 📅 September 19th and 20th, 2026 🕰️10am to 8pm both days 📍 Telluride Conference Center – Mountain Village,…",
+    "type": "Festivals"
   },
   {
     "title": "BRITLEY & MATT",
@@ -1793,19 +1883,6 @@
     "source": "Mountain Village",
     "desc": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
     "type": "Community"
-  },
-  {
-    "title": "Blues Brunch",
-    "href": "https://www.telluride.com/event/blues-brunch/",
-    "date": "2026-09-20",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63527/blues_brunch.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Gather at Black Iron Kitchen + Bar for a Sunday brunch where mountain mornings and live music set the tone. From 7:00AM …",
-    "type": "Food & Drink"
   },
   {
     "title": "The Courtyard at 610 Presents: Alex Dunn & Mimi Genheimer at The Courtyard",

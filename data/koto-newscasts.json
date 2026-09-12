@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 9-11-26",
+    "source": "KOTO Community Radio",
+    "date": "September 12, 2026",
+    "newsTopic": "community",
+    "copy": "Telluride Talks Comprehensive Plan; Staying Bear Aware; Cat Movie Fisher with Risho Unda",
+    "href": "https://koto.org/news/newscast-9-11-26/"
+  },
+  {
     "title": "Newscast 9-10-26",
     "source": "KOTO Community Radio",
     "date": "September 11, 2026",
@@ -46,13 +54,5 @@
     "newsTopic": "community",
     "copy": "Coming Up Next, Telluride; Telluride’s Alderwild Swan Song",
     "href": "https://koto.org/news/newscast-8-31-26/"
-  },
-  {
-    "title": "Newscast 8-28-26",
-    "source": "KOTO Community Radio",
-    "date": "August 29, 2026",
-    "newsTopic": "community",
-    "copy": "On this week’s Regional Roundup, we look at the latest efforts to open Bears Ears National Monument to mining and we'll hear about a public awareness campaign in Colorado aimed at helping people stay bear aware. We’ll also hear about a Western Colorado nonprofit building community by encouraging women and girls to exercise, and learn how the Ute Mo",
-    "href": "https://koto.org/news/newscast-8-28-26/"
   }
 ]

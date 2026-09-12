@@ -6,94 +6,15 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Sep 2026 23:09:45 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 03:59:19 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
-      <title>📅 The Week Ahead — Sep 11–17</title>
+      <title>📅 The Week Ahead — Sep 12–18</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-36</guid>
-      <pubDate>Fri, 11 Sep 2026 23:09:45 GMT</pubDate>
-      <description><![CDATA[The biggest thing to track this week is Tuesday's CommonSpirit Health presentation to the Telluride Hospital District board — no packet is public yet, but with a Letter of Intent already in motion, this is the kind of closed-door conversation that shapes how this valley gets medical care for decades. Alongside that, the Housing Authority Subcommittee takes up the thorny question of subpar bedrooms in mitigation units, and the county's housing code working group meets for its eighth session on stripping Land Use Code barriers to workforce housing. HARC also has an unusual one: a work session on potentially demolishing Rebekah Hall, the town-owned building where the commission itself meets.]]></description>
+      <pubDate>Sat, 12 Sep 2026 03:59:19 GMT</pubDate>
+      <description><![CDATA[The biggest thing on the government calendar this week is Mountain Village Town Council taking up first reading of an ordinance that would move Housing Authority fees out of the municipal code and into an annually updated fee schedule — a structural shift in how affordable housing costs get set going forward. Alongside that, the County Housing Code Update working group meets Tuesday on proposed changes designed to remove Land Use Code barriers to workforce housing, HARC takes a hard look at a potential demolition of Rebekah Hall — the Town-owned building where HARC itself meets — and the BOCC has a full plate including a view-plain MOU tied to a 1999 settlement.]]></description>
       <category>The Week Ahead</category>
-    </item>
-    <item>
-      <title>⚡ [Meeting] Board Work Session — 2026-09-11</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/med%7C2026-09-11%7CBoard%20Work%20Session</guid>
-      <pubDate>Fri, 11 Sep 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Telluride Medical Center • 2026-09-11
-
-A single-item work session: a presentation from CommonSpirit Health on a potential partnership with the Telluride Hospital District. No packet or supporting materials are posted ahead of the session, so the scope and terms of what's being discussed aren't yet public -- worth watching given the board's ongoing Letter of Intent talks with CommonSpirit on the new facility project. No board action is scheduled; this is a discussion-only session, held in person and by Zoom.
-
-⚡ Why it matters: CommonSpirit partnership terms could shape local hospital care for generations.]]></description>
-      <category>Meeting</category>
-      <category>Telluride Medical Center</category>
-    </item>
-    <item>
-      <title>[Fri, Sep 11] The Meditations Live in Concert</title>
-      <link>https://sheridanoperahouse.com/events/the-meditations-live-in-concert/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/the%20meditations%20live%20in%7C2026-09-11</guid>
-      <pubDate>Fri, 11 Sep 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://sheridanoperahouse.com/wp-content/uploads/2026/05/unnamed-file.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Sheridan Opera House
-📍 Sheridan Opera House • Telluride, CO
-
-The Meditations, the legendary Jamaican reggae vocal group, perform live at the historic Sheridan Opera House in Telluride. This concert brings their classic roots reggae harmonies to one of the region's most celebrated intimate venues.]]></description>
-      <media:content url="https://sheridanoperahouse.com/wp-content/uploads/2026/05/unnamed-file.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>Sheridan Opera House</category>
-    </item>
-    <item>
-      <title>[Fri, Sep 11] DYNAMIC (DJ set)</title>
-      <link>https://www.alibitelluride.com/calendar#eca-event=bash-dj-set-2</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/dynamic%20dj%20set%7C2026-09-11</guid>
-      <pubDate>Fri, 11 Sep 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://ucarecdn.com/c33bd8f9-e07f-458b-a5a0-93b1ac17b3ce/-/crop/1320x1317/0,101/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
-📍 The Alibi • Telluride, CO
-🕒 9:30 PM
-
-Local Night w. Dynamic (YAK & FLOWMATIC)]]></description>
-      <media:content url="https://ucarecdn.com/c33bd8f9-e07f-458b-a5a0-93b1ac17b3ce/-/crop/1320x1317/0,101/-/preview/" medium="image" />
-      <category>Community Event</category>
-      <category>The Alibi</category>
-    </item>
-    <item>
-      <title>[Fri, Sep 11] Lone Tree Cemetery Tours</title>
-      <link>https://www.telluride.com/event/lone-tree-cemetery-tours/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/lone%20tree%20cemetery%20tours%7C2026-09-11</guid>
-      <pubDate>Fri, 11 Sep 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/49105/scott-rodgerson-zlhbjxbccec-unsplash.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Join the Telluride Historical Museum for Lone Tree Cemetery Tours this fall! This Telluride Historical Museum tour …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/49105/scott-rodgerson-zlhbjxbccec-unsplash.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Fri, Sep 11] The Meditations</title>
-      <link>https://www.telluride.com/event/the-meditations/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/the%20meditations%7C2026-09-11</guid>
-      <pubDate>Fri, 11 Sep 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62648/meditations_poster_template_2018.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Founded in Jamaica in the 1970s, The Meditations are legendary roots reggae pioneers whose soulful harmonies and …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/62648/meditations_poster_template_2018.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Fri, Sep 11] Yoga for ALL with Jane &amp; Jay</title>
-      <link>https://telluridelibrary.libcal.com/event/15803457?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/yoga%20for%20all%20with%7C2026-09-11</guid>
-      <pubDate>Fri, 11 Sep 2026 14:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Program Room
-
-8:30 AM – 9:45 AM · Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Sat, Sep 12] Telluride Theater Fringe Project: The LFMG Experience with La Familia Music Group</title>
@@ -304,7 +225,7 @@ WinterSing 2026 rehearsals begin Sunday, Sept. 13th, 4:30, at Christ Church. No 
       <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-09-14
 
-The September 14, 2026 Open Space Commission agenda hasn't been posted yet.]]></description>
+The Open Space Commission meets Monday to work through a busy stretch of site-walk debriefs and planning. First up: a debrief from the August 10th walk that covered a potential trail alignment connecting the Bear Creek Trailhead to Firecracker Hill, beaver activity in Zone 3 of the Bear Creek Preserve, and restoration planning in Zone 1. Then a debrief from the August 17th walk on sign sizes and placements — non-content — for the Telluride Valley Floor Open Space. The commission will also prepare for two September 21st site walks: Zone 1's restoration plan and the Reach 3/USFS River Restoration Project at the Mill Creek Confluence on the Valley Floor. Rounding it out: scheduling future site walks for the ST-1 Project and wetland connectivity, the Cornet to Jud Wiebe Trail/Mill Placer CE, and High Country areas.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -317,7 +238,7 @@ The September 14, 2026 Open Space Commission agenda hasn't been posted yet.]]></
 
 The Telluride Housing Authority Subcommittee meets in worksession on two policy questions that get at a recurring tension: the gap between rules written for ideal conditions and the messier reality on the ground. First up is how to handle 'subpar bedrooms' in mitigation units — rooms that don't meet current Guidelines or building code standards, including several Element 52 units with no windows at all. Owners of these units are seeking exceptions to occupancy requirements, and the Subcommittee will consider whether the existing administrative exception process is sufficient or whether a blanket preemptive exception makes more sense. Second, the Subcommittee will revisit the housing waitlist suspension that's been in place since April 2026. The original Placement Waitlist had over 280 people, but response rates to apartment offers ran as low as 1–15%, vacant units were piling up, and the list has since been purged to 164 households. The question is whether the suspension should continue, and what a functional waitlist policy actually looks like — ahead of a full policy review planned for early 2027. No formal votes can be taken; both items are worksessions.
 
-⚡ Why it matters: Policy decisions on subpar bedrooms directly affect workforce housing unit compliance.]]></description>
+⚡ Why it matters: Policy decision on subpar bedrooms in mitigation units affects real housing supply.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -401,9 +322,68 @@ The September 15, 2026 Ophir General Assembly Meeting agenda hasn't been posted 
 
 The Stakeholder Strategic Roundtable (SSR) working group convenes for its eighth session on the San Miguel County Housing Code Update — a Proposition 123-funded effort to strip out Land Use Code provisions that slow workforce and affordable housing production in unincorporated areas of the county. The two-hour working session zeroes in on the proposed Community Housing Zone, refining draft code recommendations that will eventually go to the BOCC and Planning Commission as formal redlines. Earlier sessions produced a handful of majority-consensus positions: allowing multiple ADUs on larger lots when the bonus unit is deed-restricted for workforce housing; reducing side setbacks to 10 feet in Medium and High Density zones; and preserving by-right density at 1 DU/35 acres while routing additional density exclusively through a workforce housing bonus track — with free-market development required to go through PUD. A range of other ideas, including RV/camper housing, parking reductions, and a TDR program, were set aside for now.
 
-⚡ Why it matters: County housing code rewrite could remove key barriers to affordable housing production.]]></description>
+⚡ Why it matters: County working group shapes Land Use Code changes to unlock workforce housing production.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>[Tue, Sep 15] Wine &amp; Watercolor</title>
+      <link>https://www.telluride.com/event/wine-watercolor/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/wine%20and%20watercolor%7C2026-09-15</guid>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/63374/greg-rosenke-tmxiwznctzu-unsplash.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Join La Piazza and TMVOA for Wine and Watercolor on the patio. Beverages & painting supplies provided.]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/63374/greg-rosenke-tmxiwznctzu-unsplash.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Tue, Sep 15] West End Trail Running</title>
+      <link>https://koto.org/event/west-end-trail-running/2026-09-15/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/west%20end%20trail%20running%7C2026-09-15</guid>
+      <pubDate>Tue, 15 Sep 2026 14:15:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+
+Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens & adults 15 and older are welcome to participate. Contact director Alicia O'Connel at montrosewestrec@gmail.com or text her at 302-690-0160 for more information, including a nominal registration fee.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Tue, Sep 15] Tennis Clinic 3.0-4.0</title>
+      <link>https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-15/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/tennis%20clinic%203%200%7C2026-09-15</guid>
+      <pubDate>Tue, 15 Sep 2026 15:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Telluride Racquet Club, Mountain Village
+
+This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Tue, Sep 15] Tennis Clinic 4.0+</title>
+      <link>https://koto.org/event/tennis-clinic-4-0/2026-09-15/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/tennis%20clinic%204%200%7C2026-09-15</guid>
+      <pubDate>Tue, 15 Sep 2026 17:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Telluride Racquet Club, Mountain Village
+
+Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Tue, Sep 15] Native Rhythms, Native Jazz: R. Carlos Nakai, AmoChip Dabney, &amp; Will Clipman – at the Montrose Pavilion</title>
+      <link>https://sherbino.org/event/native-rhythms-native-jazz-r-carlos-nakai-at-the-montrose-pavilion/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/native%20rhythms%20native%20jazz%7C2026-09-15</guid>
+      <pubDate>Tue, 15 Sep 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://sherbino.org/wp-content/uploads/2026/04/R-Carlos-Native-Rythms-Native-Jazz-banner.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />📍 montrose pavilion, Montrose
+
+@ BUY TICKETS Doors: 6:00 PM || Show: 6:30 PM – This show is at the Montrose Pavilion, brought to you in partnership by The Sherbino and Weehawken Creative Arts Native Rhythms, Native Jazz: The Genre-Bending Journey of R. Carlos Nakai, AmoChip Dabney, and Will Clipman $25 in advance General Admission (GA) Seats || $30 in advance for reserved section seats (no longer available day-of-show) || $32 GA day of show || $21 GA SENIOR (65 or older) || (you will select the actual seat in the diagram below to purchase reserved section seats. If you want GA seats, just scroll below the map to buy GA seats) Where Tradition Meets Innovation, and Boundaries Dissolve in Sound Amidst the vast tapestry of American music, few collaborations illustrate the spirit of genre-bending innovation as vividly as that of R. Carlos Nakai, AmoChip Dabney, and Will Clipman. …]]></description>
+      <media:content url="https://sherbino.org/wp-content/uploads/2026/04/R-Carlos-Native-Rythms-Native-Jazz-banner.png" medium="image" />
+      <category>Community Event</category>
     </item>
     <item>
       <title>[Meeting] Rico Board of Trustees Regular Meeting — 2026-09-16</title>
@@ -436,7 +416,7 @@ The September 16 HARC agenda has one item: a certificate of appropriateness exte
 
 Two items stand out on this HARC agenda. First, a work session on a potential demolition and new construction application for Rebekah Hall itself — 113 W Columbia, the very building where HARC meets — a Town-owned property in the Residential/Commercial zone, with HOK as applicant. That's worth watching. Second, the Phoenix Market at 221 W Colorado Ave comes in for a Certificate of Appropriateness extension along with a vested property rights extension, which goes to Town Council as a recommendation. Beyond those, the board takes up a continued large-scale final development hearing for a new commercial building at 208 S Fir (5,000+ sq ft, Commercial zone), plus three continued single-family hillside matters. The Shandoka Lot Redevelopment — continued from August to October 21 — does not appear on this agenda.
 
-⚡ Why it matters: Potential demolition of town-owned Rebekah Hall is on the table for review.]]></description>
+⚡ Why it matters: HARC reviews potential demolition of Town-owned Rebekah Hall, a historic landmark.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -460,7 +440,7 @@ The September 16, 2026 Parks & Recreation Commission agenda hasn't been posted y
 
 A full agenda for the September 16 BOCC. The commissioners continue their discussion of Constitutional Amendments 81 and 86 — touching immigration enforcement communication and congressional redistricting. A notable land-use matter: a Memorandum of Understanding with Telluride Mountain Village and the Ridge HOA regarding view plain restrictions from a 1999 settlement agreement. The board will review the 2025 county audit and take up a discussion about seed funding for a new Telluride Chamber of Commerce. Sitting as the Housing Authority, the board considers an exception request to the 'Employee' definition under the Land Use Code — the kind of eligibility question that keeps coming back as housing costs squeeze who qualifies. The Building Department holds a public hearing on continued adoption of the 2024 International Building Code and Colorado Low Energy and Carbon Code. The board also takes up a resolution update letting the Assessor settle smaller abatements, an intergovernmental agreement with Ouray County for veterans transportation, and a new driver position for that same program. Personnel matters — including an extended leave for the Juvenile Services Director and parental leave for the County Attorney — may go to executive session.
 
-⚡ Why it matters: BOCC takes up a view-plain MOU and two constitutional amendment discussions.]]></description>
+⚡ Why it matters: BOCC takes up view-plain MOU and constitutional amendment discussions with regional impact.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -473,7 +453,7 @@ A full agenda for the September 16 BOCC. The commissioners continue their discus
 
 Ouray County's Planning Commission meets at the Ouray Courthouse for two public hearings. First up is the Curry Regular PUD — a formal planned unit development application that will get a full public hearing. Second is an exemption application from Clifford Pastor to subdivide his parcel into two lots. Both items require public hearings before the PC can make a recommendation, and packet materials are available through the county's agenda portal.
 
-⚡ Why it matters: Two public hearings on a PUD application and a parcel subdivision in Ouray County.]]></description>
+⚡ Why it matters: Two public hearings on subdivision and PUD applications — public comment accepted.]]></description>
       <category>Meeting</category>
       <category>ouray</category>
     </item>
@@ -489,13 +469,15 @@ The September 16, 2026 Parks & Recreation Commission meeting is canceled.]]></de
       <category>Town of Telluride</category>
     </item>
     <item>
-      <title>[Meeting] Town Council Meeting — 2026-09-17</title>
+      <title>⚡ [Meeting] Town Council Meeting — 2026-09-17</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/mv%7C2026-09-17%7CTown%20Council%20Meeting</guid>
       <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Mountain Village • 2026-09-17
 
-The September 17, 2026 Mountain Village Town Council Meeting agenda hasn't been posted yet.]]></description>
+A full agenda for Mountain Village this September, with several items worth tracking. The most consequential: first reading of an ordinance that would shift Mountain Village Housing Authority fees out of the municipal code and into an annually updated MVHA fee schedule — a structural change to how affordable housing costs get set and adjusted. Also on the legislative side, second reading and a public hearing on changes to the Public Art Commission's municipal code chapter, followed by a resolution adopting that commission's bylaws. The quasi-judicial portion involves a conditional use permit for a temporary food truck, seating, and tent at Lot OSP-35-C — modest in scope but going through the full CUP process. Council will also get a presentation on the draft 2027 budget and a pond improvements plan update covering conceptual designs and the entitlement path forward. Routine consent items include winter parking policies and rates, a Cortina Land condo association maintenance agreement, and the Telluride Foundation agency fund agreement.
+
+⚡ Why it matters: First reading: ordinance shifts MVHA fee-setting out of municipal code, changing housing cost structure.]]></description>
       <category>Meeting</category>
       <category>Mountain Village</category>
     </item>
@@ -509,6 +491,17 @@ The September 17, 2026 Mountain Village Town Council Meeting agenda hasn't been 
 The September 17, 2026 TRAA Board of Commissioners Meeting agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>airport</category>
+    </item>
+    <item>
+      <title>[Meeting] Liquor Licensing Authority - Sep 17 2026 — 2026-09-17</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-09-17%7CLiquor%20Licensing%20Authority%20-%20Sep%2017%202026</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-09-17
+
+A routine session for the Liquor Licensing Authority. The main action item is a permanent modification of premises for FA Whining Pig Bars (138 E. Colorado Ave., Unit 105) — the applicant is looking to retract its licensed footprint to match current operational needs, a housekeeping change under Colorado Liquor Code 44-3-301. Staff finds the application complete and recommends approval. On the public hearing side, the Elks Lodge (BPOE #692) is requesting five special event permits: three for Horror Fest at 472 W. Pacific Ave. across October 16–18, and two for Turkey Bingo 2026 on November 21–22. The authority will also approve minutes from the August 20 meeting, at which special event permits were granted for Blues & Brews, a Ken Burns evening at the Palm, and a KOTO street concert.]]></description>
+      <category>Meeting</category>
+      <category>Town of Telluride</category>
     </item>
   </channel>
 </rss>

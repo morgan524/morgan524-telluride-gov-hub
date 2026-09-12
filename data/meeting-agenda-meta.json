@@ -1,7 +1,4 @@
 {
-  "county|2026-08-12|Board of County Commissioners Work Session": {
-    "sv": 4
-  },
   "smart|2026-08-13|SMART Board of Directors": {
     "agendaUrl": "null",
     "sv": 4,
@@ -57,10 +54,6 @@
     "zoomUrl": "https://us06web.zoom.us/webinar/register/WN_ndaN3Xr5TWe9uANpXwY42w",
     "phone": "970-369-6429"
   },
-  "norwood|2026-08-12|Board of Trustees Meeting": {
-    "sv": 4,
-    "ph": "b858cb282617fb09"
-  },
   "norwood|2026-08-17|Planning and Zoning Commission Meeting": {
     "sv": 4,
     "ph": "b858cb282617fb09"
@@ -68,14 +61,6 @@
   "ophir|2026-08-18|General Assembly Meeting": {
     "sv": 4,
     "ph": "b858cb282617fb09"
-  },
-  "ridgway|2026-08-12|Ridgway Town Council Regular Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet-August-12-2026_0.pdf",
-    "zoomUrl": "https://us02web.zoom.us/j/84715599948?pwd=SykKnn9yD3R1s6uF08awGxXm8s8y6P.1",
-    "meetingId": "847 1559 9948",
-    "passcode": "194920",
-    "phone": "346 248 7799"
   },
   "telluride|2026-08-20|Planning & Zoning Commission - Aug 20 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8102",
@@ -262,7 +247,10 @@
   "telluride|2026-09-14|Open Space Commission - Sep 14 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8131",
     "sv": 4,
-    "ph": "23f9d455f0c1977f"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/ePrh_CzmTLKqp0syEbUesw",
+    "meetingId": "894 7506 0147",
+    "passcode": "314276.",
+    "phone": "719) 359-4580"
   },
   "telluride|2026-08-17|Open Space Commission Site Walk - Aug 17 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8302",
@@ -326,7 +314,9 @@
   },
   "mv|2026-09-17|Town Council Meeting": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/49907/september_17-_2026_town_council_meeting_agenda.pdf",
+    "zoomUrl": "https://us06web.zoom.us/webinar/register/WN_Kr1kwk46TGyPz8uk-4_ktA",
+    "phone": "970-369-6429"
   },
   "airport|2026-09-17|TRAA Board of Commissioners Meeting": {
     "sv": 4,
@@ -486,7 +476,7 @@
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132",
     "sv": 4,
-    "ph": "681ef775e57db365"
+    "ph": "71ddd589523e78ab"
   },
   "telluride|2026-10-06|Town Council - Oct 06 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044",
@@ -500,7 +490,7 @@
   "telluride|2026-10-07|Ecology Commission - Oct 07 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8119",
     "sv": 4,
-    "ph": "824dab27a3e6d959"
+    "ph": "82b6deaef9451b0e"
   },
   "telluride|2026-10-07|Commission for Community Assistance, Arts & Special Events - Oct 07 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8067",
