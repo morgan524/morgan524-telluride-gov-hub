@@ -1,5 +1,17 @@
 [
   {
+    "title": "Building bridges with Pinhead",
+    "source": "Telluride Times",
+    "date": "September 12, 2026",
+    "firstSeen": "2026-09-12",
+    "newsTopic": "education",
+    "copy": "Pinhead Institute brought a bridge engineering day to Telluride Town Park, working with TIS fourth graders to design and build structures hands-on. Students tested their own DaVinci-style bridges with help from Pinhead staff. Good to see local kids getting real STEM experience outside the classroom.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/gallery/news/article_84d791fa-3f5c-4956-8ebb-664bd460a4d9.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/e1/0e12de6e-24ec-4928-bf4a-c95e38ab38b6/6aa4edada4944.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Two local races highlight Nov. 3 election",
     "source": "Telluride Times",
     "date": "September 12, 2026",
@@ -1020,6 +1032,15 @@
     "img": "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
   },
   {
+    "title": "Town of Telluride Downgrades to Stage 1 Fire Restrictions",
+    "source": "Town of Telluride",
+    "date": "August 26, 2026",
+    "newsTopic": "public-safety",
+    "copy": "(August 25, 2026) – Following improved fire conditions across the region, Town Manager Zoe Dohnal has downgraded fire restrictions within the Town of Telluride from Stage 2 to Stage 1, effective 12:01 a.m. MT on Wednesday, August 26, 2026.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=403",
+    "img": ""
+  },
+  {
     "title": "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
     "source": "San Miguel County",
     "date": "September 10, 2026",
@@ -1045,6 +1066,15 @@
     "copy": "",
     "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
+  },
+  {
+    "title": "Waste Tire Collection Event",
+    "source": "San Miguel County",
+    "date": "August 24, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
   },
   {
     "title": "Tomboy Road Closed Intermittently Tuesday 9/15 - Friday 9/18",
@@ -1089,6 +1119,15 @@
     "newsTopic": "community",
     "copy": "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
     "href": "https://www.telluride.gov/AlertCenter.aspx?AID=45",
+    "img": ""
+  },
+  {
+    "title": "Stage 1 Fire Restrictions In Effect",
+    "source": "Town of Telluride",
+    "date": "August 26, 2026",
+    "newsTopic": "public-safety",
+    "copy": "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
+    "href": "https://www.telluride.gov/AlertCenter.aspx?AID=65",
     "img": ""
   },
   {
