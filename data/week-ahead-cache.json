@@ -1,30 +1,30 @@
 {
-  "hash": "67c8c2e6d7f37a1721244903b1ae77a8c7af26b3",
-  "lede": "The biggest thing on the government calendar this week is Mountain Village Town Council taking up first reading of an ordinance that would move Housing Authority fees out of the municipal code and into an annually updated fee schedule — a structural shift in how affordable housing costs get set going forward. Alongside that, the County Housing Code Update working group meets Tuesday on proposed changes designed to remove Land Use Code barriers to workforce housing, HARC takes a hard look at a potential demolition of Rebekah Hall — the Town-owned building where HARC itself meets — and the BOCC has a full plate including a view-plain MOU tied to a 1999 settlement.",
+  "hash": "3256c4a55e86251ed8c4f8b7c7063058dc2861e1",
+  "lede": "The biggest thing on the government calendar this week is Mountain Village Town Council's first reading of an ordinance that would move Housing Authority fees out of municipal code and into an annually updated fee schedule — a structural shift worth understanding before it advances. Alongside that, the Housing Authority Subcommittee is wrestling with how to handle subpar bedrooms in mitigation units, the county's Housing Code Update working group continues its Prop 123-funded effort to clear land-use barriers, and HARC takes up a potential demolition and rebuild of Rebekah Hall — the very building where the commission meets.",
   "notable": [
     {
       "id": 1,
-      "stake": "Policy decision on subpar bedrooms in mitigation units affects real housing supply."
+      "stake": "Policy on subpar mitigation-unit bedrooms could affect housing stock quality and compliance."
     },
     {
       "id": 4,
-      "stake": "County working group shapes Land Use Code changes to unlock workforce housing production."
+      "stake": "Prop 123-funded code changes could reshape how affordable housing gets approved countywide."
     },
     {
       "id": 7,
-      "stake": "HARC reviews potential demolition of Town-owned Rebekah Hall, a historic landmark."
+      "stake": "Potential demolition of Town-owned Rebekah Hall is up for HARC work session review."
     },
     {
       "id": 9,
-      "stake": "BOCC takes up view-plain MOU and constitutional amendment discussions with regional impact."
+      "stake": "BOCC takes up view-plain MOU and constitutional amendment positions affecting county policy."
     },
     {
       "id": 10,
-      "stake": "Two public hearings on subdivision and PUD applications — public comment accepted."
+      "stake": "Two public hearings on new development and a subdivision in Ouray County — comment open."
     },
     {
       "id": 12,
-      "stake": "First reading: ordinance shifts MVHA fee-setting out of municipal code, changing housing cost structure."
+      "stake": "First reading: ordinance shifting MVHA fees out of municipal code into adjustable fee schedule."
     }
   ]
 }

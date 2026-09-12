@@ -470,6 +470,14 @@ const DEEP_DIVE_UPDATES = [
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-09-12",
+    title: "New building codes are coming. That's the easy part.",
+    body: "The county is holding a public hearing on September 16 to consider adopting the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Two codes, one hearing. On one side: updated standards mean safer, more efficient buildings — hard to argue with that up here. On the other: new code requirements can add cost and complexity to construction at a moment when building anything affordable is already a stretch. Neither outcome is final yet.\n\nSo — do tighter building codes help this community, or do they make an already difficult situation harder?",
+    choices: ["They raise the floor for everyone", "More costs we can't afford", "Depends on what's in the fine print", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-09-11",
     title: "Hazardous fuels work in the national forests — your call?",
     body: "The Board of County Commissioners is taking up a federal environmental assessment for a hazardous fuels management project in the Uncompahgre and Gunnison National Forests. That means treatments — thinning, burning, clearing — on public land that surrounds this place. Some folks will say it's overdue and reduces real fire risk to communities up here. Others will push back on the scale, the methods, or whether a federal assessment process gives locals enough of a voice. Nothing's been decided locally yet.\n\nWhere do you stand — does aggressive hazardous fuels work on surrounding forest land make you feel safer, or does it raise more questions than it answers?",
@@ -700,14 +708,6 @@ const DAILY_QUESTIONS = [
     choices: ["Bear safety is the priority", "The climate plan matters more", "Both deserve equal attention", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-08-13",
-    title: "Energy codes: raising the bar, or raising the cost?",
-    body: "The San Miguel County Planning Commission is scheduled to review a referral and recommendation on an energy code update at its August 13 meeting. That's a work session — nothing binding yet. But energy code updates tend to split people pretty cleanly up here. Tighter standards can mean lower long-term energy bills and a smaller footprint. They can also mean higher construction costs at a moment when building anything affordable is already a stretch. Both things are true at once.\n\nSo where do you land — is a stronger energy code worth the added upfront cost, or does it make an already tough housing situation harder?",
-    choices: ["Worth the upfront cost", "Makes housing harder to build", "Depends on what's in it", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -885,97 +885,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "September 10, 2026",
     newsTopic: "community",
     copy: "",
-    href: "https://www.ouraynews.com/2026/09/09/barrel-fun-labor-day/",
-    img: ""
-  },
-  {
-    title: "Water restrictions exception, not rule",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 10, 2026",
-    newsTopic: "community",
-    copy: "In the early days of summer, it remained a matter of some debate where the drought of 2026 ranked in the annals of long, hot Colorado summers. For Cary Denison, Ouray County’s representative on the Colorado River Water Conservation District, that debate is settled. “It’s absolutely the worst year I’",
-    href: "https://www.ouraynews.com/2026/09/09/water-restrictions-exception-not-rule/",
-    img: ""
-  },
-  {
-    title: "Trump declares disaster for fire",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 10, 2026",
-    newsTopic: "public-safety",
-    copy: "Move frees up federal relief money President Donald Trump approved a major disaster declaration for the Gold Mountain and Aspen Acres fires, unlocking millions of dollars in Federal Emergency Management Agency relief funds for the state. Federal and state officials confirmed Friday that Trump approv",
-    href: "https://www.ouraynews.com/2026/09/09/trump-declares-disaster-fire/",
-    img: ""
-  },
-  {
-    title: "Crews working to plug old water well",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 10, 2026",
-    newsTopic: "infrastructure",
-    copy: "It’s not what you think. A towering steel drill that’s been perched along the side of U.S. Highway 550 in recent weeks isn’t probing for gas, or oil, or even a route to the Far East. The operation is instead part of a state program to plug thousands of abandoned or “orphaned” wells across Colorado. ",
-    href: "https://www.ouraynews.com/2026/09/09/crews-working-plug-old-water-well/",
-    img: ""
-  },
-  {
-    title: "Parking enforcement nixes popular highway camping spot",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 10, 2026",
-    newsTopic: "infrastructure",
-    copy: "Officials cite concerns about safety, health at Tuffy s Corner A highway pullout popular for overnight camper parking north of Ouray has been empty in recent weeks since ‘no camping’ signs were installed. The wide gravel shoulder following the outside curve of U.S. Highway 550 between the Whispering",
-    href: "https://www.ouraynews.com/2026/09/09/parking-enforcement-nixes-popular-highway-camping-spot/",
-    img: ""
-  },
-  {
-    title: "Fourteen measures to appear on statewide ballot",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 10, 2026",
-    newsTopic: "government",
-    copy: "The Colorado secretary of state’s office on Friday certified the list of ballot measures going before voters in November 2026 — and once again, the list is a long one. A total of 14 measures will be decided by Colorado voters this year. The figure ties a record for the most questions put to voters i",
-    href: "https://www.ouraynews.com/2026/09/09/fourteen-measures-appear-statewide-ballot/",
-    img: ""
-  },
-  {
-    title: "Disaster relief tax an investment in resilience",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 10, 2026",
-    newsTopic: "government",
-    copy: "Dear Editor: I am writing to express my strong support for a dedicated Ouray County tax to provide funding for disaster relief, emergency preparedness, and community recovery. Those of us who live in Ouray County understand both the extraordinary beauty of our mountain environment and the risks that",
-    href: "https://www.ouraynews.com/2026/09/09/disaster-relief-tax-investment-resilience/",
-    img: ""
-  },
-  {
-    title: "Grateful to tell stories here, ink stains and all",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 10, 2026",
-    newsTopic: "community",
-    copy: "Sometimes, I journal to process major life events. I’ve lived in a lot of places worth journaling about and my latest move is no exception. I’ve been in Ouray for six weeks now and I’m struck by the similarities to a mountain village in Japan where I taught English for three years after college. Kos",
-    href: "https://www.ouraynews.com/2026/09/09/grateful-tell-stories-ink-stains/",
-    img: ""
-  },
-  {
-    title: "Looking Back",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 10, 2026",
-    newsTopic: "health",
-    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago September 8, 1966 The Colorado Board of Public Health has ordered Ouray to appear before that body in Denver on Sept. 13 at 4:20 p.m. to explain the steps Ouray is taking to establish a",
-    href: "https://www.ouraynews.com/2026/09/09/looking-back-20260910-0159-410636/",
-    img: ""
-  },
-  {
-    title: "Colorado’s rocky road to statehood",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 10, 2026",
-    newsTopic: "infrastructure",
-    copy: "Last month Colorado celebrated its 150th anniversary of statehood. Many of us assume that statehood was inevitable for this place we love. However, the 17-year quest was met with significant resistance from residents and national officials. Long before President Ulysses S. Grant signed Proclamation ",
-    href: "https://www.ouraynews.com/2026/09/09/colorados-rocky-road-statehood/",
+    href: "https://www.ouraynews.com/2026/09/09/barrel-fun-labor-day/?ta_paidstory",
     img: ""
   },
   {
@@ -1007,6 +917,96 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "TABOR Election Notice: Invitation for Pro/Con Statements on November 2026 Ballot Issue",
     href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=961",
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22931"
+  },
+  {
+    title: "Crews working to fill 1950s-era well along U.S. 550",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 4, 2026",
+    newsTopic: "infrastructure",
+    copy: "It’s not what you think. A towering steel drill rig that’s been perched along the side of U.S. Highway 550 in recent weeks isn’t probing for gas, or oil, or even a route to the Far East. The operation is instead part of a state program to plug thousands of abandoned, or “orphaned” wells across Color",
+    href: "https://www.ouraynews.com/2026/09/04/crews-working-fill-1950s-era-well-along-u-s-550/",
+    img: ""
+  },
+  {
+    title: "Trump declares disaster for Gold Mountain, Aspen Acres fires",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 4, 2026",
+    newsTopic: "public-safety",
+    copy: "President Donald Trump has signed off on a major disaster declaration for the Gold Mountain and Aspen Acres fires that unlocks millions of dollars in Federal Emergency Management Agency relief funds for the state. Colorado’s Office of Emergency Management confirmed Friday that Trump approved the dec",
+    href: "https://www.ouraynews.com/2026/09/04/trump-declares-disaster-gold-mountain-aspen-acres-fires/",
+    img: ""
+  },
+  {
+    title: "Hickenlooper hopeful for fire disaster order",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 3, 2026",
+    newsTopic: "public-safety",
+    copy: "U.S. Sen. John Hickenlooper said Friday he was optimistic the Trump administration will declare the Gold Mountain Fire a federal disaster, arguing Congress “wouldn’t settle for” the White House withholding relief funds from Colorado for the second year in a row. Hickenlooper, who surveyed fire damag",
+    href: "https://www.ouraynews.com/2026/09/02/hickenlooper-hopeful-fire-disaster-order/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "County employees remain on paid leave",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 3, 2026",
+    newsTopic: "public-safety",
+    copy: "Ouray County has had two emergency-related employees on paid administrative leave since the early days of the Gold Mountain Fire. A third employee, Road and Bridge Superintendent Ty Barger, was placed on paid administrative leave following an arrest on suspicion of driving under the influence in the",
+    href: "https://www.ouraynews.com/2026/09/02/county-employees-remain-paid-leave/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Businesses share struggles with senator",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 3, 2026",
+    newsTopic: "public-safety",
+    copy: "Ouray County business owners bent the ear of U.S. Sen. John Hickenlooper on Friday, sharing stories of declining profits and mass cancellations in the wake of the Gold Mountain Fire in the hopes the Democrat can help secure federal disaster relief funding. About a dozen business owners and the direc",
+    href: "https://www.ouraynews.com/2026/09/02/businesses-share-struggles-senator/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Cleanup project at former mine site to take until 2028, Thorin says",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 3, 2026",
+    newsTopic: "government",
+    copy: "A representative from Thorin Resources, the owner and operator of the Revenue-Virginius Mine, told Ouray County commissioners last week the company expects to complete a federally supervised cleanup project at the site by the fall of 2028. At a Board of County Commissioners work session on Aug. 25, ",
+    href: "https://www.ouraynews.com/2026/09/02/cleanup-project-former-mine-site-take-2028-thorin-says/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Mining proposal faces unanimous scrutiny",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 3, 2026",
+    newsTopic: "government",
+    copy: "Kris Peterson and Alex Klemt said it was an algorithm that led them west from Colorado Springs, up a rough dirt road past the Camp Bird Mine, and into the lofty tundra of Governor Basin. With the help of AI, the two men told Ouray County commissioners last week, they had searched far and wide across",
+    href: "https://www.ouraynews.com/2026/09/02/mining-proposal-faces-unanimous-scrutiny/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Who is the MTN Lodge?",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 3, 2026",
+    newsTopic: "community",
+    copy: "Dear Editor: I opened the letter received last Wednesday and was a bit confused as to the intent, since the photos leading the letter are of the True Grit and several businesses that no longer exist in Ridgway, but I read through the entire letter with interest. I continue to marvel at the amount of",
+    href: "https://www.ouraynews.com/2026/09/02/who-is-the-mtn-lodge/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "OHVs have made trail access more difficult",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 3, 2026",
+    newsTopic: "recreation",
+    copy: "Dear Editor: I am writing in response to Jeff Lindberg’s letter in the Aug. 27 edition. My husband and I live in Ouray County primarily because we love to hike. We have lived here for eight years, but we have been visiting for more than 30 years. Jeff L. stated that the trails/roads are for everyone",
+    href: "https://www.ouraynews.com/2026/09/02/ohvs-made-trail-access-difficult/?ta_paidstory",
+    img: ""
   },
   {
     title: "Sheriff Rescinds Stage 2 Fire Restrictions",
@@ -1763,6 +1763,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Two local races highlight Nov. 3 election",
+    source: "Telluride Times",
+    date: "September 12, 2026",
+    firstSeen: "2026-09-12",
+    newsTopic: "government",
+    copy: "Two contested races headline San Miguel County's November 3 ballot: the District 2 Commissioner seat, where 25-year resident Paul Reich (D) and lifelong local Dylan Brooks (unaffiliated) are squaring off, and the Sheriff's race between appointed incumbent Dan Covault (unaffiliated) and Democratic challenger Lane Masters.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_e722cb7a-8b50-486b-99d8-e579c3a2a77e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/88/988afcdf-a6ea-4726-a3c3-2170a811c264/6aa39e36657fe.image.png",
+    imgHiRes: true
+  },
   {
     title: "Federal court rejects Trump order keeping Michigan coal plant open",
     source: "Telluride Times",
@@ -3986,15 +3998,26 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Yoga for ALL with Jane & Jay",
-    link: "https://telluridelibrary.libcal.com/event/15803457?hs=a",
-    description: "8:30 AM – 9:45 AM · Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
-    pubDate: "2026-09-11T14:30:00.000Z",
+    title: "Zumba with Gise",
+    link: "https://telluridelibrary.libcal.com/event/17470020?hs=a",
+    description: "10:00 AM – 11:00 AM · Ditch the workout and join the party! Zumba&reg; is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. &iexcl;Olvida el entrenamiento y &uacute;nete a la fiesta! Zumba&reg; es una clase de fitness de baile de alta energ&iacute;a que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calor&iacute;as. …",
+    pubDate: "2026-09-12T16:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_11_20_18.jpg"
+  },
+  {
+    title: "Pieles y Pociones",
+    link: "https://telluridelibrary.libcal.com/event/17021903?hs=a",
+    description: "2:00 PM – 4:00 PM · &iexcl;Ven y aprende a crear tus propias pociones para cuidar tu piel y la de tu familia con Mar&iacute;a Mart&iacute;nez del Campo!",
+    pubDate: "2026-09-12T20:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_15_15_14_14.png"
   }
 ];
 
@@ -4015,18 +4038,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "DYNAMIC (DJ set)",
-    link: "https://www.alibitelluride.com/calendar#eca-event=bash-dj-set-2",
-    description: "Local Night w. Dynamic (YAK & FLOWMATIC)",
-    pubDate: "2026-09-11",
-    time: "9:30 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/c33bd8f9-e07f-458b-a5a0-93b1ac17b3ce/-/crop/1320x1317/0,101/-/preview/"
-  },
   {
     title: "BASH (DJ set)",
     link: "https://www.alibitelluride.com/calendar#eca-event=bash-dj-set-1",
@@ -4506,17 +4517,6 @@ const OURAY_COUNTY_EVENTS = [
     sourceLabel: "Ouray County",
     category: "Community Event",
     location: "- Ouray CO 81427",
-    imageUrl: ""
-  },
-  {
-    title: "Imogene Pass Run",
-    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3779",
-    description: "https://ouraycountyco.gov/calendar.aspx?EID=3779",
-    pubDate: "2026-09-12T07:00:00.000Z",
-    source: "ouraycounty",
-    sourceLabel: "Ouray County",
-    category: "Community Event",
-    location: "Imogene Pass - Ouray CO 81427",
     imageUrl: ""
   }
 ];
