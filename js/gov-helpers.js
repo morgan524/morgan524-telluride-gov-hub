@@ -885,7 +885,97 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "September 10, 2026",
     newsTopic: "community",
     copy: "",
-    href: "https://www.ouraynews.com/2026/09/09/barrel-fun-labor-day/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/09/09/barrel-fun-labor-day/",
+    img: ""
+  },
+  {
+    title: "Water restrictions exception, not rule",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "community",
+    copy: "In the early days of summer, it remained a matter of some debate where the drought of 2026 ranked in the annals of long, hot Colorado summers. For Cary Denison, Ouray County’s representative on the Colorado River Water Conservation District, that debate is settled. “It’s absolutely the worst year I’",
+    href: "https://www.ouraynews.com/2026/09/09/water-restrictions-exception-not-rule/",
+    img: ""
+  },
+  {
+    title: "Trump declares disaster for fire",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "public-safety",
+    copy: "Move frees up federal relief money President Donald Trump approved a major disaster declaration for the Gold Mountain and Aspen Acres fires, unlocking millions of dollars in Federal Emergency Management Agency relief funds for the state. Federal and state officials confirmed Friday that Trump approv",
+    href: "https://www.ouraynews.com/2026/09/09/trump-declares-disaster-fire/",
+    img: ""
+  },
+  {
+    title: "Crews working to plug old water well",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "infrastructure",
+    copy: "It’s not what you think. A towering steel drill that’s been perched along the side of U.S. Highway 550 in recent weeks isn’t probing for gas, or oil, or even a route to the Far East. The operation is instead part of a state program to plug thousands of abandoned or “orphaned” wells across Colorado. ",
+    href: "https://www.ouraynews.com/2026/09/09/crews-working-plug-old-water-well/",
+    img: ""
+  },
+  {
+    title: "Parking enforcement nixes popular highway camping spot",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "infrastructure",
+    copy: "Officials cite concerns about safety, health at Tuffy s Corner A highway pullout popular for overnight camper parking north of Ouray has been empty in recent weeks since ‘no camping’ signs were installed. The wide gravel shoulder following the outside curve of U.S. Highway 550 between the Whispering",
+    href: "https://www.ouraynews.com/2026/09/09/parking-enforcement-nixes-popular-highway-camping-spot/",
+    img: ""
+  },
+  {
+    title: "Fourteen measures to appear on statewide ballot",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "government",
+    copy: "The Colorado secretary of state’s office on Friday certified the list of ballot measures going before voters in November 2026 — and once again, the list is a long one. A total of 14 measures will be decided by Colorado voters this year. The figure ties a record for the most questions put to voters i",
+    href: "https://www.ouraynews.com/2026/09/09/fourteen-measures-appear-statewide-ballot/",
+    img: ""
+  },
+  {
+    title: "Disaster relief tax an investment in resilience",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "government",
+    copy: "Dear Editor: I am writing to express my strong support for a dedicated Ouray County tax to provide funding for disaster relief, emergency preparedness, and community recovery. Those of us who live in Ouray County understand both the extraordinary beauty of our mountain environment and the risks that",
+    href: "https://www.ouraynews.com/2026/09/09/disaster-relief-tax-investment-resilience/",
+    img: ""
+  },
+  {
+    title: "Grateful to tell stories here, ink stains and all",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "community",
+    copy: "Sometimes, I journal to process major life events. I’ve lived in a lot of places worth journaling about and my latest move is no exception. I’ve been in Ouray for six weeks now and I’m struck by the similarities to a mountain village in Japan where I taught English for three years after college. Kos",
+    href: "https://www.ouraynews.com/2026/09/09/grateful-tell-stories-ink-stains/",
+    img: ""
+  },
+  {
+    title: "Looking Back",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "health",
+    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago September 8, 1966 The Colorado Board of Public Health has ordered Ouray to appear before that body in Denver on Sept. 13 at 4:20 p.m. to explain the steps Ouray is taking to establish a",
+    href: "https://www.ouraynews.com/2026/09/09/looking-back-20260910-0159-410636/",
+    img: ""
+  },
+  {
+    title: "Colorado’s rocky road to statehood",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "infrastructure",
+    copy: "Last month Colorado celebrated its 150th anniversary of statehood. Many of us assume that statehood was inevitable for this place we love. However, the 17-year quest was met with significant resistance from residents and national officials. Long before President Ulysses S. Grant signed Proclamation ",
+    href: "https://www.ouraynews.com/2026/09/09/colorados-rocky-road-statehood/",
     img: ""
   },
   {
@@ -917,96 +1007,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "TABOR Election Notice: Invitation for Pro/Con Statements on November 2026 Ballot Issue",
     href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=961",
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22931"
-  },
-  {
-    title: "Crews working to fill 1950s-era well along U.S. 550",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 4, 2026",
-    newsTopic: "infrastructure",
-    copy: "It’s not what you think. A towering steel drill rig that’s been perched along the side of U.S. Highway 550 in recent weeks isn’t probing for gas, or oil, or even a route to the Far East. The operation is instead part of a state program to plug thousands of abandoned, or “orphaned” wells across Color",
-    href: "https://www.ouraynews.com/2026/09/04/crews-working-fill-1950s-era-well-along-u-s-550/",
-    img: ""
-  },
-  {
-    title: "Trump declares disaster for Gold Mountain, Aspen Acres fires",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 4, 2026",
-    newsTopic: "public-safety",
-    copy: "President Donald Trump has signed off on a major disaster declaration for the Gold Mountain and Aspen Acres fires that unlocks millions of dollars in Federal Emergency Management Agency relief funds for the state. Colorado’s Office of Emergency Management confirmed Friday that Trump approved the dec",
-    href: "https://www.ouraynews.com/2026/09/04/trump-declares-disaster-gold-mountain-aspen-acres-fires/",
-    img: ""
-  },
-  {
-    title: "Hickenlooper hopeful for fire disaster order",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 3, 2026",
-    newsTopic: "public-safety",
-    copy: "U.S. Sen. John Hickenlooper said Friday he was optimistic the Trump administration will declare the Gold Mountain Fire a federal disaster, arguing Congress “wouldn’t settle for” the White House withholding relief funds from Colorado for the second year in a row. Hickenlooper, who surveyed fire damag",
-    href: "https://www.ouraynews.com/2026/09/02/hickenlooper-hopeful-fire-disaster-order/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "County employees remain on paid leave",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 3, 2026",
-    newsTopic: "public-safety",
-    copy: "Ouray County has had two emergency-related employees on paid administrative leave since the early days of the Gold Mountain Fire. A third employee, Road and Bridge Superintendent Ty Barger, was placed on paid administrative leave following an arrest on suspicion of driving under the influence in the",
-    href: "https://www.ouraynews.com/2026/09/02/county-employees-remain-paid-leave/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Businesses share struggles with senator",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 3, 2026",
-    newsTopic: "public-safety",
-    copy: "Ouray County business owners bent the ear of U.S. Sen. John Hickenlooper on Friday, sharing stories of declining profits and mass cancellations in the wake of the Gold Mountain Fire in the hopes the Democrat can help secure federal disaster relief funding. About a dozen business owners and the direc",
-    href: "https://www.ouraynews.com/2026/09/02/businesses-share-struggles-senator/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Cleanup project at former mine site to take until 2028, Thorin says",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 3, 2026",
-    newsTopic: "government",
-    copy: "A representative from Thorin Resources, the owner and operator of the Revenue-Virginius Mine, told Ouray County commissioners last week the company expects to complete a federally supervised cleanup project at the site by the fall of 2028. At a Board of County Commissioners work session on Aug. 25, ",
-    href: "https://www.ouraynews.com/2026/09/02/cleanup-project-former-mine-site-take-2028-thorin-says/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Mining proposal faces unanimous scrutiny",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 3, 2026",
-    newsTopic: "government",
-    copy: "Kris Peterson and Alex Klemt said it was an algorithm that led them west from Colorado Springs, up a rough dirt road past the Camp Bird Mine, and into the lofty tundra of Governor Basin. With the help of AI, the two men told Ouray County commissioners last week, they had searched far and wide across",
-    href: "https://www.ouraynews.com/2026/09/02/mining-proposal-faces-unanimous-scrutiny/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Who is the MTN Lodge?",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 3, 2026",
-    newsTopic: "community",
-    copy: "Dear Editor: I opened the letter received last Wednesday and was a bit confused as to the intent, since the photos leading the letter are of the True Grit and several businesses that no longer exist in Ridgway, but I read through the entire letter with interest. I continue to marvel at the amount of",
-    href: "https://www.ouraynews.com/2026/09/02/who-is-the-mtn-lodge/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "OHVs have made trail access more difficult",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 3, 2026",
-    newsTopic: "recreation",
-    copy: "Dear Editor: I am writing in response to Jeff Lindberg’s letter in the Aug. 27 edition. My husband and I live in Ouray County primarily because we love to hike. We have lived here for eight years, but we have been visiting for more than 30 years. Jeff L. stated that the trails/roads are for everyone",
-    href: "https://www.ouraynews.com/2026/09/02/ohvs-made-trail-access-difficult/?ta_paidstory",
-    img: ""
   },
   {
     title: "Sheriff Rescinds Stage 2 Fire Restrictions",
@@ -2927,6 +2927,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Ridgway Planning Commission Meeting Agenda",
+    source: "Town of Ridgway",
+    date: "September 16, 2026",
+    firstSeen: "2026-09-12",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-Planning-Commission-Meeting-Packet---September-16%2C-2026-%281%29.pdf",
+    img: ""
+  },
+  {
     title: "Public Hearing Notice Wed., Sept. 16, 2026 at 5:30pm - 1) Site Plan and Conditional Use Permit for Riverbend Townhomes (TBD Liddell Dr.); 2) Plat Amendment of Lot 4 and Outlot of Riverview Business Park Subdivision (TBD Liddell Dr.); 3) PUD Amendment Lena Street Commons Planned Unit Development (TBD N. Lena Street) - Sept. 2, 2026",
     source: "Town of Ridgway",
     date: "September 12, 2026",
@@ -4523,98 +4534,6 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
-    link: "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
-    description: "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the International Quilt Museum in Lincoln, Nebraska. Bonnie’s work has been shown in numerous exhibits in the United States. In 2015, Bonnie’s work was in a year-long solo exhibition at the Portland Oregon International Airport. She was a solo artist at the Visions Museum of Textile Art, San Diego, in 2019. Internationally, Bonnie’s work has appeared in the Haus der Wirtschaft museum in Stuttgart, Germany, the Museum of Modern Art in Verona, Italy, and other venues in Germany, England, Ireland, France, Japan, Brazil, and the Netherlands. Bonnie’s work Tangle is part of the permanent collection of the Tuch + Technik Textilmuseum, Neumunster, Germany. …",
-    pubDate: "2026-09-11T16:00:00.000Z",
-    endDate: "2026-09-25",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The 610 Arts Collective",
-    imageUrl: "https://localist-images.azureedge.net/photos/53551302433703/huge/07561f7b06b24999f21e6be2347e5102b9b92cc3.jpg"
-  },
-  {
-    title: "Ongoing Exhibition: BIG BOX-Big New Work By T-Bone",
-    link: "https://events.ourayridgwayevents.com/event/ongoing-exhibition-big-box-big-new-work-by-t-bone",
-    description: "The Big Box Show! Bigger, better and more. This groundbreaking local art won't last long! Ridgway's own T-Bone and his quintessential colorful cardboard paintings take on new life and meaning in the Decker where they have room to stretch out and really TALK to you! Come and be delighted by the playful T-Bone experience. Stay to cool off, craft, co-work, hang out. or plan your own future exhibition or event in the space! The Decker is a unique community rental-art gallery hybrid, incubated and managed by the Town of Ridgway, in cooperation with our sister ARTSpace gallery next door. View on site | Email this event",
-    pubDate: "2026-09-11T16:00:00.000Z",
-    endDate: "2026-09-25",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53736310463128/huge/ce8867efeba0934913913ee401aff4479a074ba5.jpg"
-  },
-  {
-    title: "Ridgway Farmers Market",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
-    description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here. View on site | Email this event",
-    pubDate: "2026-09-11T16:00:00.000Z",
-    endDate: "2026-10-16",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Hartwell Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
-  },
-  {
-    title: "RED MOUNTAIN REVIVAL",
-    link: "https://events.ourayridgwayevents.com/event/red-mountain-revival",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
-    pubDate: "2026-09-11T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "9/11 Memorial Walk",
-    link: "https://events.ourayridgwayevents.com/event/911-memorial-walk",
-    description: "Ouray Volunteer Fire Department invites the community to join a 9/11 Memorial Walk. Together, we will walk approximately 2,200 steps, symbolizing the 110 stories of the World Trade Center, as we honor the lives lost and the first responders who made the ultimate sacrifice on September 11, 2001. Meet at the Ouray Firehouse Friday, Sept. 11 5:30 PM All are welcome! This year marks 25 years since 9/11. We hope you'll join us as we walk together in honor, remembrance, and gratitude. View on site | Email this event",
-    pubDate: "2026-09-11T23:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Fire Department",
-    imageUrl: "https://localist-images.azureedge.net/photos/53924455201629/huge/d6c7efd5fbb5bc1441804ffd8f389fa16bd99fea.jpg"
-  },
-  {
-    title: "Ouray Comedy Night",
-    link: "https://events.ourayridgwayevents.com/event/ouray-comedy-night",
-    description: "Stand-up comedy is coming to Ouray! One night only! Get your tickets now before it's too late! Headliners: Casey Skinner (Netflix, Discovery, HBO Max) and David Uhlfelder (Netflix Is A Joke Fest, ESPN3, Comedy Store) Casey Skinner is a Los Angeles–based stand‑up comedian, writer, and producer whose work bridges the stage and behind the camera. Known for weaving true crime stories, absurd humor, and personal quandaries into his performances, he brings a distinct voice shaped by unexpected experiences and often explores the darker, stranger corners of his life with humor. He’s performed in some of comedy's most iconic venues, including The Comedy Store and The Improv. Casey's work has been featured on Netflix, Discovery, HBO Max, Bravo and more! He was also featured in the 2026 Netflix Is A Joke Fest. David Uhlfelder was raised in the Colorado wilderness. …",
-    pubDate: "2026-09-12T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53830617900756/huge/9b913f03ccb0050e92a935ee9d2a464f7fe5b853.jpg"
-  },
-  {
-    title: "Sound Bath & Reiki Healing Event",
-    link: "https://events.ourayridgwayevents.com/event/sound-bath-reiki-healing-event",
-    description: "On Friday September 11th, enjoy a sound healing outside, under the trees in the park near the Gazebo, south of the Chipeta Resort. This session will incllude Reiki healing from Ian and other local Reiki practitioners. Donations can be made in a group tip jar afterwards for the group efforts of those additional healers. Meet Ian Wilson, who hails from Miami, lived for a stint in Las Vegas, and arrived in the San Juan Mountain over a year ago. Trained by Sound Healing Academy, Ian has been studying frequency, sound, music theory, harmonics and applied physics for 3 years. His influences include Nicola Tesla, Beethoven, Slim Spurling, and Drunvalo Melechezdek. Ian has been practicing reiki since 2018, completing level III Master certification in 2022, under the guidance and teaching of Reiki Master Melissa Aluna Solano in Boulder. …",
-    pubDate: "2026-09-12T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Grass next to Gazebo, south of Chipeta Lodge",
-    imageUrl: "https://localist-images.azureedge.net/photos/53940055438768/huge/75a07b6c3fcd094753d6a538fb84c392daea82f0.jpg"
-  },
-  {
-    title: "Steps Tavern Presents Karaoke Night",
-    link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
-    description: "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM Every Friday Night View on site | Email this event",
-    pubDate: "2026-09-12T02:00:00.000Z",
-    endDate: "2026-09-26",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "STEPS TAVERN",
-    imageUrl: "https://localist-images.azureedge.net/photos/53142698527493/huge/db3a6ef58a79b18eea8c70a4d583bbf3d9498404.jpg"
-  },
-  {
     title: "PIZZA THERAPY + DJ NIGHT NURSE",
     link: "https://events.ourayridgwayevents.com/event/pizza-therapy-dj-night-nurse",
     description: "Join us for some cheesy fun at our first PIZZA PARTY – good vibes, great slices, and groovy tunes all night! DJ NIGHT NURSE spinning Roots Reggae, Dub, and Funk. Pies by legendary Pizza Therepy. Cocktails by the Adobe Inn. Margaritas and Margaritas! View on site | Email this event",
@@ -4636,6 +4555,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Dallas Park Cemetery",
     imageUrl: "https://localist-images.azureedge.net/photos/52462667793124/huge/857907efd93056a1ba298d906bd6d5231a5f9d13.jpg"
+  },
+  {
+    title: "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
+    link: "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
+    description: "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the International Quilt Museum in Lincoln, Nebraska. Bonnie’s work has been shown in numerous exhibits in the United States. In 2015, Bonnie’s work was in a year-long solo exhibition at the Portland Oregon International Airport. She was a solo artist at the Visions Museum of Textile Art, San Diego, in 2019. Internationally, Bonnie’s work has appeared in the Haus der Wirtschaft museum in Stuttgart, Germany, the Museum of Modern Art in Verona, Italy, and other venues in Germany, England, Ireland, France, Japan, Brazil, and the Netherlands. Bonnie’s work Tangle is part of the permanent collection of the Tuch + Technik Textilmuseum, Neumunster, Germany. …",
+    pubDate: "2026-09-12T16:00:00.000Z",
+    endDate: "2026-09-25",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The 610 Arts Collective",
+    imageUrl: "https://localist-images.azureedge.net/photos/53551302433703/huge/07561f7b06b24999f21e6be2347e5102b9b92cc3.jpg"
   },
   {
     title: "WCOC Rummage Sale Collection Day",
@@ -4770,6 +4701,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Bee True You Wellness & Creative Studio",
     imageUrl: "https://localist-images.azureedge.net/photos/53940077165512/huge/45af00fc22ad3d00b3aa9a51f74b52218ec7cde8.jpg"
+  },
+  {
+    title: "Ongoing Exhibition: BIG BOX-Big New Work By T-Bone",
+    link: "https://events.ourayridgwayevents.com/event/ongoing-exhibition-big-box-big-new-work-by-t-bone",
+    description: "The Big Box Show! Bigger, better and more. This groundbreaking local art won't last long! Ridgway's own T-Bone and his quintessential colorful cardboard paintings take on new life and meaning in the Decker where they have room to stretch out and really TALK to you! Come and be delighted by the playful T-Bone experience. Stay to cool off, craft, co-work, hang out. or plan your own future exhibition or event in the space! The Decker is a unique community rental-art gallery hybrid, incubated and managed by the Town of Ridgway, in cooperation with our sister ARTSpace gallery next door. View on site | Email this event",
+    pubDate: "2026-09-14T16:00:00.000Z",
+    endDate: "2026-09-25",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53736310463128/huge/ce8867efeba0934913913ee401aff4479a074ba5.jpg"
   },
   {
     title: "Ongoing: Social Justice Travel Exhibition",
@@ -5050,6 +4993,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53613028091683/huge/89356c844c3d4e996774f5c668ba438226be20a1.jpg"
   },
   {
+    title: "Ridgway Farmers Market",
+    link: "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
+    description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here. View on site | Email this event",
+    pubDate: "2026-09-18T16:00:00.000Z",
+    endDate: "2026-10-16",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Hartwell Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
+  },
+  {
     title: "Emergency Go Kit Assembly Project at the Telluride Blues and Brews Festival at Town Park",
     link: "https://events.ourayridgwayevents.com/event/emergency-go-kit-assembly-project-at-the-telluride-blues-and-brews-festival",
     description: "Spend 15 minutes at the Festival helping to assemble Emergency Go Kits to be distributed for free to vunerable families in Ouray, Montrose and San Miguel Counties. Sponsored by Ouray, Montrose and San Miguel County Emergency Management, the Telluride Foundation, and local nonprofits. Share the gift of preparedness! View on site | Email this event",
@@ -5103,6 +5058,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ridgway State Park",
     imageUrl: "https://localist-images.azureedge.net/photos/53702771968357/huge/e53b021369f111f5d927b10fb43889fa856f6d5f.jpg"
+  },
+  {
+    title: "Steps Tavern Presents Karaoke Night",
+    link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
+    description: "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM Every Friday Night View on site | Email this event",
+    pubDate: "2026-09-19T02:00:00.000Z",
+    endDate: "2026-09-26",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "STEPS TAVERN",
+    imageUrl: "https://localist-images.azureedge.net/photos/53142698527493/huge/db3a6ef58a79b18eea8c70a4d583bbf3d9498404.jpg"
   },
   {
     title: "Ouray Mountain Trail Run",
@@ -5677,6 +5644,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg"
   },
   {
+    title: "FLANNEL FEEDBACK",
+    link: "https://events.ourayridgwayevents.com/event/flannel-feedback-5281",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    pubDate: "2026-10-09T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
     title: "WOWZERS",
     link: "https://events.ourayridgwayevents.com/event/wowzers",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
@@ -5776,6 +5754,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Bee True You Wellness & Creative Studio",
     imageUrl: "https://localist-images.azureedge.net/photos/53940133685119/huge/12d87bcb7ab37fac8b109f8ddf888685a78d34d4.jpg"
+  },
+  {
+    title: "THE YOUNG FABLES",
+    link: "https://events.ourayridgwayevents.com/event/the-young-fables",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    pubDate: "2026-10-18T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
     title: "TODDLER STORYTIME ART FOR AGES 2.5-5",
@@ -6502,6 +6491,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
+  },
+  {
+    title: "Bike & Brewery Tour",
+    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    pubDate: "2026-10-12T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   }
 ];
 
