@@ -819,6 +819,66 @@ const MEETING_PREVIEWS = {
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
+    title: "2026 Chamber Meeting, December",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
+    img: ""
+  },
+  {
+    title: "Noel Night",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 4, 2026",
+    newsTopic: "community",
+    copy: "Community shopping event and celebration.",
+    href: "https://norwoodcolorado.com/event/noel-night-3/",
+    img: ""
+  },
+  {
+    title: "West End Parade of Lights & Elfin Eve",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "Holiday parade and festival.",
+    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, November",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "November 10, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, October",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "October 13, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
+    img: ""
+  },
+  {
+    title: "Pioneer Day",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 26, 2026",
+    newsTopic: "community",
+    copy: "Celebration of local history and pioneers.",
+    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
+    img: ""
+  },
+  {
     title: "Parish Bulletin/Last Call for Parish Mission",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -845,7 +905,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "September 10, 2026",
     newsTopic: "community",
     copy: "In the early days of summer, it remained a matter of some debate where the drought of 2026 ranked in the annals of long, hot Colorado summers. For Cary Denison, Ouray County’s representative on the Colorado River Water Conservation District, that debate is settled. “It’s absolutely the worst year I’",
-    href: "https://www.ouraynews.com/2026/09/09/water-restrictions-exception-not-rule/",
+    href: "https://www.ouraynews.com/2026/09/09/water-restrictions-exception-not-rule/?ta_paidstory",
     img: ""
   },
   {
@@ -895,7 +955,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "September 10, 2026",
     newsTopic: "government",
     copy: "Dear Editor: I am writing to express my strong support for a dedicated Ouray County tax to provide funding for disaster relief, emergency preparedness, and community recovery. Those of us who live in Ouray County understand both the extraordinary beauty of our mountain environment and the risks that",
-    href: "https://www.ouraynews.com/2026/09/09/disaster-relief-tax-investment-resilience/",
+    href: "https://www.ouraynews.com/2026/09/09/disaster-relief-tax-investment-resilience/?ta_paidstory",
     img: ""
   },
   {
@@ -925,7 +985,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "September 10, 2026",
     newsTopic: "infrastructure",
     copy: "Last month Colorado celebrated its 150th anniversary of statehood. Many of us assume that statehood was inevitable for this place we love. However, the 17-year quest was met with significant resistance from residents and national officials. Long before President Ulysses S. Grant signed Proclamation ",
-    href: "https://www.ouraynews.com/2026/09/09/colorados-rocky-road-statehood/",
+    href: "https://www.ouraynews.com/2026/09/09/colorados-rocky-road-statehood/?ta_paidstory",
     img: ""
   },
   {
@@ -1000,17 +1060,6 @@ const SMC_ALERTS = [
     pubDate: "2026-09-11T18:11:45.000Z",
     copy: "Tomboy Road will be closed Tues 9/15 - Fri 9/18 to accommodate waterline work being performed by the Town of Telluride. Times are not exact, motorists should avoid the area or prepare for extended delays and possibly being turned away.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=544",
-    img: ""
-  },
-  {
-    title: "Imogene Pass & Black Bear Pass Closed 9/12/26",
-    source: "San Miguel County",
-    sourceLabel: "San Miguel County",
-    category: "Alert",
-    date: "2026-09-10",
-    pubDate: "2026-09-10T15:12:28.000Z",
-    copy: "Imogene Pass/Tomboy Road will be closed 12:01 a.m. - 3:00 p.m. on Saturday, September 12th, to accommodate the Imogene Pass Run. Black Bear Pass/Bridal Veil Road and the Valley View parking area will also be closed 7:00 a.m. - 12:00 p.m.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=543",
     img: ""
   },
   {
@@ -2796,15 +2845,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "infrastructure",
     copy: "Tomboy Road will be closed Tues 9/15 - Fri 9/18 to accommodate waterline work being performed by the Town of Telluride. Times are not exact, motorists should avoid the area or prepare for extended delays and possibly being turned away.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=544",
-    img: ""
-  },
-  {
-    title: "Imogene Pass & Black Bear Pass Closed 9/12/26",
-    source: "San Miguel County",
-    date: "September 10, 2026",
-    newsTopic: "infrastructure",
-    copy: "Imogene Pass/Tomboy Road will be closed 12:01 a.m. - 3:00 p.m. on Saturday, September 12th, to accommodate the Imogene Pass Run. Black Bear Pass/Bridal Veil Road and the Valley View parking area will also be closed 7:00 a.m. - 12:00 p.m.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=543",
     img: ""
   },
   {
@@ -4784,7 +4824,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/water-aerobics",
     description: "Join water aerobics weekly Wednesdays from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy the positive atmosphere! Water aerobics is free for pool members, and non-members can join for just $5 per class. View on site | Email this event",
     pubDate: "2026-09-16T16:00:00.000Z",
-    endDate: "2026-11-04",
+    endDate: "2026-11-11",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5697,7 +5737,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/toddler-storytimeartfor-ages-2-5",
     description: "TODDLER STORYTIME ART FOR AGES 2.5-5 Wednesdays, 10:00am–11:00am Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $70): September 16 – October 7Session 2 (4 weeks • $70): October 21 – November 11Session 3 (3 weeks • $55): December 2 – December 16Come join us for Storytime + Art! Each week, your child will enjoy story time with songs and finger rhymes, a process‑art project, and a variety of creative sensory play. We end with a quick cleanup, circle time, and movement songs. This class gently supports preschool prep and helps your child develop important school‑readiness skills—such as fine‑motor coordination, independence, and the ability to listen and follow directions—in a warm, supportive setting. Children will grow in: Social, language, and communication skillsFine‑ and gross‑motor coordinationListening and direction‑following abilitiesConfidence, creativity, and imaginationParents and caregivers stay to support their child—but we handle the mess! …",
     pubDate: "2026-10-21T16:00:00.000Z",
-    endDate: "2026-11-04",
+    endDate: "2026-11-11",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5709,7 +5749,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-8-12-7963",
     description: "AFTER SCHOOL ART FOR AGES 8-12 Wednesdays, 3:15–4:45 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 16 – October 7Session 2 (4 weeks • $85): October 21 – November 11Session 3 (3 weeks • $70): December 2 – December 16Each week, students will explore an exciting theme while experimenting with a wide range of materials and techniques. Drawing inspiration from well-known artists and design styles, young artists will be supported in discovering their own unique creative voice in a fun, nurturing, studio-like setting. These classes are designed to foster a love of the arts through hands-on exploration, age-appropriate projects, and a focus on the joy of the creative process.. A student art reception will be held in December. Students will take home their collected works in the days following the event. …",
     pubDate: "2026-10-21T21:15:00.000Z",
-    endDate: "2026-11-04",
+    endDate: "2026-11-11",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
