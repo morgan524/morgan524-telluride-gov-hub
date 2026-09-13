@@ -41,15 +41,15 @@
   },
   {
     "title": "Gentle Yoga with Kristen Milord",
-    "href": "https://koto.org/event/gentle-yoga-with-kristen-milord/2026-09-13/",
+    "href": "https://telluridelibrary.libcal.com/event/16536458?hs=a",
     "date": "2026-09-13",
     "time": "11:00 AM",
-    "location": "Wilkinson Public Library, Telluride",
+    "location": "Program Room",
     "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/08/gentle-yoga-kristen.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also…",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat,…",
     "type": "Wellness"
   },
   {
@@ -1635,6 +1635,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Middle School Volleyball: Ouray vs Mancos",
+    "href": "https://events.ourayridgwayevents.com/event/middle-school-volleyball-ouray-vs-mancos",
+    "date": "2026-09-23",
+    "time": "4:00 PM",
+    "location": "",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53950003853299/huge/afb35ff2c92eb3767e07e95a9ae999c66567049c.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray Middle School plays Mancos Middle School at Ouray. Times are approximate depending on legth of the previous games A Team: 4:00pm B Team: 5:00-6:00pm C Team: 6:00-6:30pm View on site | Email this event",
+    "type": "Community"
+  },
+  {
     "title": "September Book Club: \"The Constant Gardener\"",
     "href": "https://events.ourayridgwayevents.com/event/september-book-club-the-constant-gardener",
     "date": "2026-09-23",
@@ -1712,6 +1725,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "High School Volleyball Ouray vs Nucla",
+    "href": "https://events.ourayridgwayevents.com/event/high-school-volleyball-ouray-vs-nucla",
+    "date": "2026-09-24",
+    "time": "4:30 PM",
+    "location": "Ouray School",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53950094911567/huge/429ff9e951ad2f9afdae3f84931b848106aa4614.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray High School will be hosting Nucla High School JV: 4:30pm - 5:30pm Varsity: 5:30pm View on site | Email this event",
+    "type": "Community"
   },
   {
     "title": "Ouray Chamber Business After Hours",
@@ -1987,6 +2013,19 @@
     "category": "Community Event",
     "source": "Telluride.com",
     "desc": "The Mountains to the Desert Classic (M2D) is celebrating its 22 Anniversary as the primary fundraising event for the …",
+    "type": "Community"
+  },
+  {
+    "title": "Ouray High School Volleyball: Round Robin",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-high-school-volleyball-round-robin",
+    "date": "2026-09-26",
+    "time": "8:00 AM",
+    "location": "Ouray High School",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53950178072854/huge/16dc14833872982aa7afeb2aeb13bb6624738122.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray High School Volleyball will be hosting a Round Robin Schedule: best of 5 sets 8:00 am: Ouray vs Creede 10:00 am: Crested Butte vs SIerra Grande 12:00 pm: Ouray vs Sierra Grande 2:00 pm: Creede vs Crested Butte 4:00 pm: Creede vs…",
     "type": "Community"
   },
   {
@@ -3227,7 +3266,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In…",
     "type": "Arts & Film",
-    "endDate": "2026-11-10"
+    "endDate": "2026-11-12"
   },
   {
     "title": "Teeth to the Wind: fundraiser for George & Michael Gardner Fund",

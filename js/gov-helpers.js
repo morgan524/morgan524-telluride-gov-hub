@@ -2777,6 +2777,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
   },
   {
+    title: "Town of Telluride Downgrades to Stage 1 Fire Restrictions",
+    source: "Town of Telluride",
+    date: "August 26, 2026",
+    newsTopic: "public-safety",
+    copy: "(August 25, 2026) – Following improved fire conditions across the region, Town Manager Zoe Dohnal has downgraded fire restrictions within the Town of Telluride from Stage 2 to Stage 1, effective 12:01 a.m. MT on Wednesday, August 26, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=403",
+    img: ""
+  },
+  {
     title: "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
     source: "San Miguel County",
     date: "September 10, 2026",
@@ -2793,6 +2802,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
+  },
+  {
+    title: "Waste Tire Collection Event",
+    source: "San Miguel County",
+    date: "August 24, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
   },
   {
     title: "Tomboy Road Closed Intermittently Tuesday 9/15 - Friday 9/18",
@@ -2819,6 +2837,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "community",
     copy: "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=45",
+    img: ""
+  },
+  {
+    title: "Stage 1 Fire Restrictions In Effect",
+    source: "Town of Telluride",
+    date: "August 26, 2026",
+    newsTopic: "public-safety",
+    copy: "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=65",
     img: ""
   },
   {
@@ -3423,17 +3450,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Gentle Yoga with Kristen Milord",
-    link: "https://koto.org/event/gentle-yoga-with-kristen-milord/2026-09-13/",
-    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
-    pubDate: "2026-09-13T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/gentle-yoga-kristen.png"
-  },
   {
     title: "Drop In Tech Time with Oliver",
     link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-09-13/",
@@ -5018,6 +5034,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52338340283147/huge/582622671001d9ab20f8c25a5d229c9ecbbba165.jpg"
   },
   {
+    title: "Middle School Volleyball: Ouray vs Mancos",
+    link: "https://events.ourayridgwayevents.com/event/middle-school-volleyball-ouray-vs-mancos",
+    description: "Ouray Middle School plays Mancos Middle School at Ouray. Times are approximate depending on legth of the previous games A Team: 4:00pm B Team: 5:00-6:00pm C Team: 6:00-6:30pm View on site | Email this event",
+    pubDate: "2026-09-23T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53950003853299/huge/afb35ff2c92eb3767e07e95a9ae999c66567049c.jpg"
+  },
+  {
     title: "September Book Club: \"The Constant Gardener\"",
     link: "https://events.ourayridgwayevents.com/event/september-book-club-the-constant-gardener",
     description: "Join us on Wednesday, September 23rd at 5:00 p.m. to discuss our September Book Club Book, The Constant Gardener, by John le Carré. View on site | Email this event",
@@ -5050,6 +5077,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg"
+  },
+  {
+    title: "High School Volleyball Ouray vs Nucla",
+    link: "https://events.ourayridgwayevents.com/event/high-school-volleyball-ouray-vs-nucla",
+    description: "Ouray High School will be hosting Nucla High School JV: 4:30pm - 5:30pm Varsity: 5:30pm View on site | Email this event",
+    pubDate: "2026-09-24T22:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray School",
+    imageUrl: "https://localist-images.azureedge.net/photos/53950094911567/huge/429ff9e951ad2f9afdae3f84931b848106aa4614.jpg"
   },
   {
     title: "Ouray Chamber Business After Hours",
@@ -5117,6 +5155,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ridgway Railroad Museum",
     imageUrl: "https://localist-images.azureedge.net/photos/52594260880730/huge/9b3f82c821e5f84eb57dee6af0b87a07ecd09517.jpg"
+  },
+  {
+    title: "Ouray High School Volleyball: Round Robin",
+    link: "https://events.ourayridgwayevents.com/event/ouray-high-school-volleyball-round-robin",
+    description: "Ouray High School Volleyball will be hosting a Round Robin Schedule: best of 5 sets 8:00 am: Ouray vs Creede 10:00 am: Crested Butte vs SIerra Grande 12:00 pm: Ouray vs Sierra Grande 2:00 pm: Creede vs Crested Butte 4:00 pm: Creede vs Sierra Grande 6:00 pm: Ouray vs Crested Butte View on site | Email this event",
+    pubDate: "2026-09-26T14:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray High School",
+    imageUrl: "https://localist-images.azureedge.net/photos/53950178072854/huge/16dc14833872982aa7afeb2aeb13bb6624738122.jpg"
   },
   {
     title: "Geology Tour",
@@ -5708,7 +5757,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-film-stills-ridgway-independent-film-fest",
     description: "The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In coordination with the annual Independent Film Festival (November 13-15) this show is both a preview and a celebration of the art of short filmmaking. View on site | Email this event",
     pubDate: "2026-11-07T00:00:00.000Z",
-    endDate: "2026-11-10",
+    endDate: "2026-11-12",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -7376,6 +7425,25 @@ const LEGAL_NOTICES = [
     address: "San Juan Vista Subdivision, Filing No. 1, SE1/4SE1/4 Section 12, S1/2, S1/2N1/2 and N1/2NE1/4 Section 13, Township 44 North, Range 10 West, N.M.P.M., San Miguel County, Colorado",
     noticeKey: "26CW3039",
     caseNumber: "26CW3039"
+  },
+  {
+    title: "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominiums (Foreclosure Sale No. 202605)",
+    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society FSB",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "The San Miguel County Public Trustee has scheduled a public auction foreclosure sale for Condominium Unit 7 at Double Diamond Condominium, located at 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The property securing an original principal of $1,200,000 (outstanding balance ~$1,199,032) was deeded by Ryan Pfaff, with the current debt holder being Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust. The auction will be held at 10:00 A.M. on September 3, 2026, at 305 W. Colorado Avenue (East entry), Telluride, CO.",
+    deadline: "2026-09-03",
+    expires: "2026-09-03",
+    dates: "8/13",
+    papers: ["ttimes_0813"],
+    url: "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
+    address: "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
+    noticeKey: "foreclosure-202605-double-diamond-unit7",
+    caseNumber: "202605"
   }
 ];
 
