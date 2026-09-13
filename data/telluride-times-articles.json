@@ -1,5 +1,17 @@
 [
   {
+    "title": "Hockey with heart",
+    "source": "Telluride Times",
+    "date": "September 13, 2026",
+    "firstSeen": "2026-09-13",
+    "newsTopic": "education",
+    "copy": "Telluride's Lizard Head Hockey program has been building competitive players out of an eight-by-five-block town for 15 years, with a 4A state championship in 2024 and multiple alumni playing collegiate hockey. Senior Seven Tudor recently earned a spot on Team Colorado AAA, the top high school level in the state. A need-based scholarship and a $1 intro program keep the sport accessible to local families.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/sports/article_0ec7c30a-e9d7-460e-903d-5856a3f89e4d.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/b5/6b51e4ad-eda3-4bae-8a8b-3bbd0a7241f8/6aa1cd20ac106.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Two pets test positive for the plague in San Miguel County",
     "source": "Telluride Times",
     "date": "September 12, 2026",
@@ -1038,15 +1050,6 @@
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
   },
   {
-    "title": "Please Take the Advanced Web Map Survey",
-    "source": "San Miguel County",
-    "date": "September 3, 2026",
-    "newsTopic": "community",
-    "copy": "",
-    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1408",
-    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14763"
-  },
-  {
     "title": "Two Domestic Pets in San Miguel County Test Positive for the Plague",
     "source": "San Miguel County",
     "date": "September 3, 2026",
@@ -1083,15 +1086,6 @@
     "img": ""
   },
   {
-    "title": "Imogene and Black Bear Passes Closed 9/12",
-    "source": "San Miguel County",
-    "date": "September 3, 2026",
-    "newsTopic": "infrastructure",
-    "copy": "Imogene Pass/Tomboy Road will be closed 12:01 a.m. - 3:00 p.m. on Saturday, September 12th, to accommodate the Imogene Pass Run. Black Bear Pass/Bridal Veil Road and the Valley View parking area will be closed 7:00 a.m. - 12:00 p.m. on that day, too.",
-    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=542",
-    "img": ""
-  },
-  {
     "title": "Water Restrictions in Place",
     "source": "Town of Telluride",
     "date": "September 11, 2026",
@@ -1108,17 +1102,6 @@
     "copy": "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
     "href": "https://www.telluride.gov/AlertCenter.aspx?AID=65",
     "img": ""
-  },
-  {
-    "title": "Judge tosses Telluride ski area owner’s lawsuit alleging coercion over failed sale",
-    "source": "Colorado Sun",
-    "date": "September 11, 2026",
-    "firstSeen": "2026-09-11",
-    "newsTopic": "recreation",
-    "copy": "Chuck Horning claimed Telluride and Mountain Village leaders promised to end a patroller strike if he sold the ski area",
-    "claudeSummary": false,
-    "href": "https://coloradosun.com/2026/09/11/judge-dismisses-telluride-ski-area-owner-lawsuit/",
-    "img": "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2025/12/122725_TRIDE_STRIKE_028-1-scaled.jpg?fit=1024%2C683&amp;ssl=1"
   },
   {
     "title": "Ridgway Seeking Candidates for 2026-2027 Youth Advisory Council",

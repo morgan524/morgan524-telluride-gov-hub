@@ -470,6 +470,14 @@ const DEEP_DIVE_UPDATES = [
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-09-13",
+    title: "Another liquor license — who gets to decide if that's too many?",
+    body: "The Liquor Licensing Authority meets September 17 to review applications or modifications for liquor licenses. Under Colorado law, both the local authority and the state Department of Revenue have to sign off before anything moves.\n\nHere's the rub: some residents think more licensed establishments mean more vitality — jobs, tax revenue, a livelier town. Others figure up here we already tip the balance toward bars and away from the kind of place locals can actually live in. The licensing board weighs the application in front of it, not the big picture.\n\nSo — should the local authority be thinking about the cumulative effect, or is that the wrong question to put to them?",
+    choices: ["Count cumulative impact", "Judge each app on its own", "State rules cover it", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-09-12",
     title: "New building codes are coming. That's the easy part.",
     body: "The county is holding a public hearing on September 16 to consider adopting the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Two codes, one hearing. On one side: updated standards mean safer, more efficient buildings — hard to argue with that up here. On the other: new code requirements can add cost and complexity to construction at a moment when building anything affordable is already a stretch. Neither outcome is final yet.\n\nSo — do tighter building codes help this community, or do they make an already difficult situation harder?",
@@ -698,14 +706,6 @@ const DAILY_QUESTIONS = [
     title: "Vested rights: protection or workaround?",
     body: "The Planning & Zoning Commission is set to consider a site-specific development plan vesting notice for a local project. Vesting locks in the rules that apply to a development at the time of approval — meaning future code changes can't touch it. Supporters say that's basic fairness: you plan around the rules in place. Critics worry it can shield projects from improvements the community later decides matter. The tension is real, and neither side is wrong.\n\nWhere do you come down on vesting rights for development up here?",
     choices: ["Vesting protects fair planning", "It blocks needed changes", "Depends on the project", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
-  },
-  {
-    date: "2026-08-14",
-    title: "Bears, bins, and the next climate plan",
-    body: "The Ecology Commission is set to work on two things at once: planning Black Bear Safety Week and reviewing the Materials & Consumption section of the 2027 Climate Action Plan update. That's a lot on one agenda. Bear safety tends to unite people — nobody wants a conflict. Climate action plans are different. Some residents think Telluride needs stronger consumption targets to mean anything; others worry the town is already asking a lot of people who are just trying to live up here. Which piece of this meeting matters more to you?",
-    choices: ["Bear safety is the priority", "The climate plan matters more", "Both deserve equal attention", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
   }
@@ -1063,17 +1063,6 @@ const SMC_ALERTS = [
     pubDate: "2026-09-11T18:11:45.000Z",
     copy: "Tomboy Road will be closed Tues 9/15 - Fri 9/18 to accommodate waterline work being performed by the Town of Telluride. Times are not exact, motorists should avoid the area or prepare for extended delays and possibly being turned away.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=544",
-    img: ""
-  },
-  {
-    title: "Imogene and Black Bear Passes Closed 9/12",
-    source: "San Miguel County",
-    sourceLabel: "San Miguel County",
-    category: "Alert",
-    date: "2026-09-03",
-    pubDate: "2026-09-03T17:50:17.000Z",
-    copy: "Imogene Pass/Tomboy Road will be closed 12:01 a.m. - 3:00 p.m. on Saturday, September 12th, to accommodate the Imogene Pass Run. Black Bear Pass/Bridal Veil Road and the Valley View parking area will be closed 7:00 a.m. - 12:00 p.m. on that day, too.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=542",
     img: ""
   }
 ];              // SMC AlertCenter items
@@ -1755,6 +1744,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Hockey with heart",
+    source: "Telluride Times",
+    date: "September 13, 2026",
+    firstSeen: "2026-09-13",
+    newsTopic: "education",
+    copy: "Telluride's Lizard Head Hockey program has been building competitive players out of an eight-by-five-block town for 15 years, with a 4A state championship in 2024 and multiple alumni playing collegiate hockey. Senior Seven Tudor recently earned a spot on Team Colorado AAA, the top high school level in the state. A need-based scholarship and a $1 intro program keep the sport accessible to local families.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_0ec7c30a-e9d7-460e-903d-5856a3f89e4d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/b5/6b51e4ad-eda3-4bae-8a8b-3bbd0a7241f8/6aa1cd20ac106.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Two pets test positive for the plague in San Miguel County",
     source: "Telluride Times",
@@ -2794,15 +2795,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
   },
   {
-    title: "Please Take the Advanced Web Map Survey",
-    source: "San Miguel County",
-    date: "September 3, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1408",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14763"
-  },
-  {
     title: "Two Domestic Pets in San Miguel County Test Positive for the Plague",
     source: "San Miguel County",
     date: "September 3, 2026",
@@ -2839,15 +2831,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Imogene and Black Bear Passes Closed 9/12",
-    source: "San Miguel County",
-    date: "September 3, 2026",
-    newsTopic: "infrastructure",
-    copy: "Imogene Pass/Tomboy Road will be closed 12:01 a.m. - 3:00 p.m. on Saturday, September 12th, to accommodate the Imogene Pass Run. Black Bear Pass/Bridal Veil Road and the Valley View parking area will be closed 7:00 a.m. - 12:00 p.m. on that day, too.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=542",
-    img: ""
-  },
-  {
     title: "Water Restrictions in Place",
     source: "Town of Telluride",
     date: "September 11, 2026",
@@ -2864,17 +2847,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=65",
     img: ""
-  },
-  {
-    title: "Judge tosses Telluride ski area owner’s lawsuit alleging coercion over failed sale",
-    source: "Colorado Sun",
-    date: "September 11, 2026",
-    firstSeen: "2026-09-11",
-    newsTopic: "recreation",
-    copy: "Chuck Horning claimed Telluride and Mountain Village leaders promised to end a patroller strike if he sold the ski area",
-    claudeSummary: false,
-    href: "https://coloradosun.com/2026/09/11/judge-dismisses-telluride-ski-area-owner-lawsuit/",
-    img: "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2025/12/122725_TRIDE_STRIKE_028-1-scaled.jpg?fit=1024%2C683&amp;ssl=1"
   },
   {
     title: "Ridgway Seeking Candidates for 2026-2027 Youth Advisory Council",
@@ -3988,26 +3960,37 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Zumba with Gise",
-    link: "https://telluridelibrary.libcal.com/event/17470020?hs=a",
-    description: "10:00 AM – 11:00 AM · Ditch the workout and join the party! Zumba&reg; is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. &iexcl;Olvida el entrenamiento y &uacute;nete a la fiesta! Zumba&reg; es una clase de fitness de baile de alta energ&iacute;a que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calor&iacute;as. …",
-    pubDate: "2026-09-12T16:00:00.000Z",
+    title: "Bicicletada Comunitaria",
+    link: "https://telluridelibrary.libcal.com/event/17462057?hs=a",
+    description: "10:00 AM – 12:00 PM · Paseo comunitario en bicicleta el domingo 13 de septiembre, 10:00 AM, desde Telluride Cyclery hasta el sendero Valley Floor. Punto de encuentro en la tienda de bicicletas para prepararnos y salir en grupo ;) &iexcl;An&oacute;tate!",
+    pubDate: "2026-09-13T16:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_11_20_18.jpg"
+    location: "Lobby",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_19_14_53_40.png"
   },
   {
-    title: "Pieles y Pociones",
-    link: "https://telluridelibrary.libcal.com/event/17021903?hs=a",
-    description: "2:00 PM – 4:00 PM · &iexcl;Ven y aprende a crear tus propias pociones para cuidar tu piel y la de tu familia con Mar&iacute;a Mart&iacute;nez del Campo!",
-    pubDate: "2026-09-12T20:00:00.000Z",
+    title: "Gentle Yoga with Kristen Milord",
+    link: "https://telluridelibrary.libcal.com/event/16536458?hs=a",
+    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
+    pubDate: "2026-09-13T17:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_15_15_14_14.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://telluridelibrary.libcal.com/event/17029772?hs=a",
+    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
+    pubDate: "2026-09-13T20:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
   }
 ];
 
@@ -4028,18 +4011,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "BASH (DJ set)",
-    link: "https://www.alibitelluride.com/calendar#eca-event=bash-dj-set-1",
-    description: "Local Night w. BASH",
-    pubDate: "2026-09-12",
-    time: "10:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/1ae56fce-374d-41f0-ab3c-b5df1057cdf2/-/crop/1294x1295/0,29/-/preview/"
-  },
   {
     title: "Photon",
     link: "https://www.alibitelluride.com/calendar#eca-event=photon",
@@ -4513,139 +4484,16 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "Dallas Park Cemetery Tour",
-    link: "https://events.ourayridgwayevents.com/event/dallas-park-cemetery-tour",
-    description: "Tour of Dallas Park Cemetery Tour, led by Coleen McElroy. $20.00 Per Person. $15.00 OCHS Members. Call 970-325-4576 to RSVP/Pre Pay View on site | Email this event",
-    pubDate: "2026-09-12T16:00:00.000Z",
-    endDate: "2026-10-10",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Dallas Park Cemetery",
-    imageUrl: "https://localist-images.azureedge.net/photos/52462667793124/huge/857907efd93056a1ba298d906bd6d5231a5f9d13.jpg"
-  },
-  {
     title: "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
     link: "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
     description: "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the International Quilt Museum in Lincoln, Nebraska. Bonnie’s work has been shown in numerous exhibits in the United States. In 2015, Bonnie’s work was in a year-long solo exhibition at the Portland Oregon International Airport. She was a solo artist at the Visions Museum of Textile Art, San Diego, in 2019. Internationally, Bonnie’s work has appeared in the Haus der Wirtschaft museum in Stuttgart, Germany, the Museum of Modern Art in Verona, Italy, and other venues in Germany, England, Ireland, France, Japan, Brazil, and the Netherlands. Bonnie’s work Tangle is part of the permanent collection of the Tuch + Technik Textilmuseum, Neumunster, Germany. …",
-    pubDate: "2026-09-12T16:00:00.000Z",
+    pubDate: "2026-09-13T16:00:00.000Z",
     endDate: "2026-09-25",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "The 610 Arts Collective",
     imageUrl: "https://localist-images.azureedge.net/photos/53551302433703/huge/07561f7b06b24999f21e6be2347e5102b9b92cc3.jpg"
-  },
-  {
-    title: "WCOC Rummage Sale Collection Day",
-    link: "https://events.ourayridgwayevents.com/event/wcoc-rummage-sale-collection-day-7834",
-    description: "Have a pile of unneeded items you would like to remove from your home before winter? The Woman's Club of Ouray County (WCOC) could probably use them for the 2027 Rummage Sale! The WCOC sells the donated items and turns the cash into grants benefiting Ouray County nonprofits! The WCOC is a 501(c)(3) organization. Please visit the WCOC website to see a list of items that cannot be accepted for donation. We thank our community for their past, present and future support! View on site | Email this event",
-    pubDate: "2026-09-12T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "St. John's Episcopal Church",
-    imageUrl: "https://localist-images.azureedge.net/photos/53623942514307/huge/7e3390c38586c7689074adcead387d39a23bfaee.jpg"
-  },
-  {
-    title: "Zumbathon for Second Chance",
-    link: "https://events.ourayridgwayevents.com/event/zumbathon-for-second-chance",
-    description: "We are happy to announce our 2nd Annual Zumbathon (Charity Dance Benefit) for Second Chance Humane Society. Date: Sept 12 Time: 10 am-1 pm, doors open at 9:30 am (arrive early)Location: Montrose Rec CenterCost $20 (gets you into the Rec Center and the event. All of the money goes to Second Chance!)Pet themed (costumes encouraged)Instructors: Tamra Evangelista, Eloisa McManaman, Cindy Distel, Rebecca Reichard, Alison Malone, and introducing Libby TenerOther info: There will be a bunch of awesome raffles, donated by local businesses and individuals, to win. Please bring cash to purchase raffle tickets if you can! Venmo will also be available. If you arrive in costume, you will receive a free raffle ticket.If you pre-register with Second Chance, you will also receive a free raffle ticket upon arrival.To pre-register, please go to: https://secondchancehumane.org/events/zumbathon-charity-fun-raiser This is a 3-hour event; however, we will not be dancing for the full three hours. …",
-    pubDate: "2026-09-12T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Montrose Recreational District",
-    imageUrl: "https://localist-images.azureedge.net/photos/53808943751530/huge/be9cd2397aa33916151e9c89974ac88ff07ec836.jpg"
-  },
-  {
-    title: "Happy Little Trees: Classes @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/happy-little-trees-classes-the-wright-6743",
-    description: "\"ARIZONA SPLENDOR\" Join Emma Kalff for a morning of coffee and painting at the Wright Opera House Community Room. Participants will follow along with a classic Bob Ross episode and create their own Bob Ross–style landscape painting. All supplies are included, and no prior painting experience is necessary. Just bring your curiosity and enjoy a relaxed, creative morning inspired by the joy of painting. FULL SCHEDULE April 11 — Horizons West May 9 — Barn at Sunset June 13 — LIttle House by the Road July 11 — Mountain Splendor August 8 — Quiet Woods September 12 — Arizona Splendor October 3 — Meadow Stream November 14 — Lonely Retreat December 12 — Snow Trail Part of Classes @ the Wright, bringing creativity, learning, and community together in downtown Ouray since Letitia Wright first dreamed it up. View on site | Email this event",
-    pubDate: "2026-09-12T16:30:00.000Z",
-    endDate: "2026-10-03",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53644731506912/huge/89ae9ae8e058db83a936dd643f6af477841cd019.jpg"
-  },
-  {
-    title: "Ellar Day at Ouray Books",
-    link: "https://events.ourayridgwayevents.com/event/ellar-day-at-ouray-books",
-    description: "Join us at Ouray Books for an exclusive author meet & greet and book signing with author Marcy S. Wood, celebrating the launch. All Welcome! FREE EVENT! September 12th marks a somber milestone—the 139th anniversary of the tragic events that defined the lives and deaths of Ellar Day and Joe Dixon. Immerse yourself in the world of a bustling Colorado mining town as we explore the haunting story behind this piece of local history. About the Novel In a time of suffocating societal judgment, nineteen-year-old Ellar Day finds herself caught between the ghosts of her past and a forbidden, passionate love for Joe Dixon, a former Buffalo Soldier. Against a backdrop of deep-seated racial prejudice and small-town volatility, Ellar’s attempts to protect her family and the man she loves lead to a chain of events that would end in a brutal, unforgettable tragedy. Marcy S. …",
-    pubDate: "2026-09-12T20:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Books",
-    imageUrl: "https://localist-images.azureedge.net/photos/53585920590422/huge/0c3d546070c874ec15fc8d0e89b1c48824f1a12e.jpg"
-  },
-  {
-    title: "Historic Sites Tour and Reception",
-    link: "https://events.ourayridgwayevents.com/event/historic-sites-tour-and-reception",
-    description: "Join us for an author-led historic tour followed by an intimate gathering, marking the anniversary of the Ellar Day and Joe Dixon tragedy. Commemorating History: The Ellar Day Legacy Join us on September 12th, 2026 as we mark the 139th anniversary of the tragic events that defined the lives and deaths of Ellar Day and Joseph W. Dixon. This special event invites you to step back in time and explore the haunting history behind Marcy S. Wood’s novel, The Notorious Murder of Ellar Day. The Walking Tour: Immerse yourself in the setting of the novel with a guided walking tour of landmark buildings central to the story. We will trace the path of history—from the Beaumont Hotel to the site of Joe Dixon’s final hours—visiting many of the key locations featured in the book. The Reception: The evening concludes at Cassidy’s Cafe & Antiques. …",
-    pubDate: "2026-09-12T21:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Cassidy's Cafe and Antiques",
-    imageUrl: "https://localist-images.azureedge.net/photos/53585949770506/huge/c98cb43fee3b91d08bc4ebb6a015b0d4a5e3f886.jpg"
-  },
-  {
-    title: "Wild Child Art Show Opening Reception",
-    link: "https://events.ourayridgwayevents.com/event/wild-child-art-show-opening-reception",
-    description: "Opening reception for Wild Child will be 4pm to 7pm. This show will be up from September 12th through November 12th. Artists are Laura Pierce & Nicole Greenfield. Explore the wilderness and its creations through paint, pencil, and pastel. View on site | Email this event",
-    pubDate: "2026-09-12T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway Public Library",
-    imageUrl: "https://localist-images.azureedge.net/photos/53924390035045/huge/23c8232d63aa55a9a46c28d88b4da76a20d698e2.jpg"
-  },
-  {
-    title: "PIZZA THERAPY + DJ NIGHT NURSE",
-    link: "https://events.ourayridgwayevents.com/event/pizza-therapy-dj-night-nurse",
-    description: "Join us for some cheesy fun at our first PIZZA PARTY – good vibes, great slices, and groovy tunes all night! DJ NIGHT NURSE spinning Roots Reggae, Dub, and Funk. Pies by legendary Pizza Therepy. Cocktails by the Adobe Inn. Margaritas and Margaritas! View on site | Email this event",
-    pubDate: "2026-09-12T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Adobe Inn",
-    imageUrl: "https://localist-images.azureedge.net/photos/53941240155427/huge/ca29c30efa67e9486dbc2a2764ad4f3f8969bf61.jpg"
-  },
-  {
-    title: "The Collective | Autumnal Social",
-    link: "https://events.ourayridgwayevents.com/event/the-collective-autumnal-social",
-    description: "Libations provided. Burgers 6:30 to 8p + potluck side dishes. Live music by Organtic around 7p. All are welcome, family friendly, come as you are. View on site | Email this event",
-    pubDate: "2026-09-12T23:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Collective",
-    imageUrl: "https://localist-images.azureedge.net/photos/53833846000120/huge/2162ad8b46f2ffddbfcc7c582f8094a884e90675.jpg"
-  },
-  {
-    title: "Happy's Birthday w/ Chromatic Cowboy - Live at Floating Lotus Brewery",
-    link: "https://events.ourayridgwayevents.com/event/happys-birthday-w-chromatic-cowboy-live-at-floating-lotus-brewery",
-    description: "Happy’s Birthday has carved out a unique space in the Los Angeles music community by providing theatrical performances with whimsical and vidid story telling. Their unique sound combines elements of folk and indie with the bite of post hardcore and experimental rock to create a colorful and zany array of songs. View on site | Email this event",
-    pubDate: "2026-09-13T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53660243978511/huge/0d850e6e74677d6cc9089c2193c88214448d54ea.jpg"
-  },
-  {
-    title: "Young & Dead - Live at The Sherbino",
-    link: "https://events.ourayridgwayevents.com/event/young-dead-live-at-the-sherbino",
-    description: "Doors at 7 pm || Show at 7:30 pm || Dancehall-style show with limited seating || Tickets: $25 advance / $28 day of show || A limited number of reserved tables are available. GA Tickets can be found under the venue diagram. Reserved tables are found by hovering over the diagram. GA seats are available in the bar area. Get ready for a high-energy night of psychedelic exploration when Young & Dead takes over the Sherbino stage on Saturday, September 12. Hailing from Boulder, Colorado, this group of talented musicians in their early 20s bringsa fresh and electrifying approach to the music of the Grateful Dead — not simply recreating the catalog, but diving deep into the spirit of improvisation, experimentation, and musical adventure that made the Dead legendary. …",
-    pubDate: "2026-09-13T01:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Sherbino",
-    imageUrl: "https://localist-images.azureedge.net/photos/53180328283019/huge/ac1aa0240d78b51097ebe512629240264b0a77b2.jpg"
   },
   {
     title: "Britley & Matt",
@@ -5419,7 +5267,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg"
   },
   {
-    title: "COUSIN CURTIS",
+    title: "COUSIN CURTISS",
     link: "https://events.ourayridgwayevents.com/event/cousin-curtis",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
     pubDate: "2026-10-02T22:00:00.000Z",
@@ -5519,6 +5367,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray County Historical Society Research Center & Archive",
     imageUrl: "https://localist-images.azureedge.net/photos/52278219322548/huge/0e7cc3a05f960a6d1c77d69eb8423134dfed7fa4.jpg"
+  },
+  {
+    title: "Happy Little Trees: Classes @ the Wright",
+    link: "https://events.ourayridgwayevents.com/event/happy-little-trees-classes-the-wright-6743",
+    description: "\"ARIZONA SPLENDOR\" Join Emma Kalff for a morning of coffee and painting at the Wright Opera House Community Room. Participants will follow along with a classic Bob Ross episode and create their own Bob Ross–style landscape painting. All supplies are included, and no prior painting experience is necessary. Just bring your curiosity and enjoy a relaxed, creative morning inspired by the joy of painting. FULL SCHEDULE April 11 — Horizons West May 9 — Barn at Sunset June 13 — LIttle House by the Road July 11 — Mountain Splendor August 8 — Quiet Woods September 12 — Arizona Splendor October 3 — Meadow Stream November 14 — Lonely Retreat December 12 — Snow Trail Part of Classes @ the Wright, bringing creativity, learning, and community together in downtown Ouray since Letitia Wright first dreamed it up. View on site | Email this event",
+    pubDate: "2026-10-03T16:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Wright Opera House",
+    imageUrl: "https://localist-images.azureedge.net/photos/53644731506912/huge/89ae9ae8e058db83a936dd643f6af477841cd019.jpg"
   },
   {
     title: "150th Concert: Big Head Todd & the Monsters w/ Hazel Miller & The Collective",
@@ -5654,6 +5513,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray Visitor Center",
     imageUrl: "https://localist-images.azureedge.net/photos/52948888142369/huge/a751aa96f77dfb66351272d701cd748a3cc4bdbc.jpg"
+  },
+  {
+    title: "Dallas Park Cemetery Tour",
+    link: "https://events.ourayridgwayevents.com/event/dallas-park-cemetery-tour",
+    description: "Tour of Dallas Park Cemetery Tour, led by Coleen McElroy. $20.00 Per Person. $15.00 OCHS Members. Call 970-325-4576 to RSVP/Pre Pay View on site | Email this event",
+    pubDate: "2026-10-10T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Dallas Park Cemetery",
+    imageUrl: "https://localist-images.azureedge.net/photos/52462667793124/huge/857907efd93056a1ba298d906bd6d5231a5f9d13.jpg"
   },
   {
     title: "Mineral Identification Workshop for Adults",
