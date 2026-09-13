@@ -146,12 +146,6 @@ function resolveEventImage(e, opts) {
 // stays current automatically; the static config is the fallback for
 // sources without a PDF agenda.
 const MEETING_AGENDA_META = {
-  "smart|2026-08-13|SMART Board of Directors":
-    {"agendaUrl":"null","sv":4,"ph":"b858cb282617fb09"},
-
-  "county|2026-08-13|Planning Commission Meeting":
-    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/922/files/agenda/1949"},
-
   "rico|2026-08-19|Rico Board of Trustees Regular Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
 
@@ -247,9 +241,6 @@ const MEETING_AGENDA_META = {
 
   "county|2026-09-10|Planning Commission Meeting":
     {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/923/files/agenda/1979","zoomUrl":"https://us06web.zoom.us/j/84540142300?pwd=kR3YU9IZBab43RLiNx0ox1gygbOI8C.1","meetingId":"845 4014 2300","passcode":"704358","phone":"970-728-3844"},
-
-  "telluride|2026-08-13|San Miguel Authority for Regional Transportation - Aug 13 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8299","zoomUrl":"https://us02web.zoom.us/j/83623251474?pwd=JsZ0QipUWbrsNcS7ASKWqZcbQs4Qud.1","sv":4},
 
   "telluride|2026-08-26|Public Art Commission - Aug 26 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8300","sv":4,"zoomUrl":"https://us06web.zoom.us/j/84265567776?pwd=P1j50JyBNUh3Yh0s6i573T4slkNZR9.1","meetingId":"842 6556 7776","passcode":"392496.","phone":"301-715-8592"},
@@ -444,7 +435,16 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8316","sv":4,"zoomUrl":"https://us06web.zoom.us/j/88002208411?pwd=ofXFpbWHXtGZcNFnjfWucOBrCmoYqU.1","meetingId":"880 0220 8411","passcode":"541637.","phone":"719) 359-4580"},
 
   "smart|2026-10-08|SMART Board of Directors":
-    {"sv":4,"ph":"b858cb282617fb09"}
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "norwood|2026-10-13|Norwood Water Commission Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "tmvoa|2026-10-13|Mountain Village Merchant Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "telluride|2026-10-13|Special Town Council Budget - Oct 13 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8307","sv":4,"ph":"69ce14e842dca9f5"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -815,7 +815,10 @@ const MEETING_PREVIEWS = {
     "The Telluride Housing Authority Subcommittee is expected to convene for a special meeting on September 14, 2026, though specific agenda items have not been detailed in available materials. The meeting continues the subcommittee's ongoing work overseeing local housing authority matters for the Town of Telluride.",
 
   "mv|2026-09-17|Town Council Meeting":
-    "Council is expected to introduce new lift maintenance staff, consider a proclamation declaring September as Suicide Prevention Month, and act on several consent agenda items including meeting minutes, a condominium maintenance agreement, winter parking policies, and a Telluride Foundation agreement."
+    "Council is expected to introduce new lift maintenance staff, consider a proclamation declaring September as Suicide Prevention Month, and act on several consent agenda items including meeting minutes, a condominium maintenance agreement, winter parking policies, and a Telluride Foundation agreement.",
+
+  "telluride|2026-10-13|Special Town Council Budget - Oct 13 2026":
+    "Council is expected to focus on budget discussions for the Town of Telluride. Related matters include a previously passed wildfire resiliency land use code amendment and an upcoming paper billing fee from San Miguel Power Association, which may factor into financial planning considerations."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1084,16 +1087,10 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#42052"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-12';
-const LEGAL_NOTICES_CACHE_DATE = '2026-09-12';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-13';
+const LEGAL_NOTICES_CACHE_DATE = '2026-09-13';
 
 const MANUAL_SUMMARIES = {
-  "smart|2026-08-13|SMART Board of Directors":
-    "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
-
-  "county|2026-08-13|Planning Commission Meeting":
-    "Two substantive items on the August 13 agenda. The commission takes up a work session on minor and major subdivisions — the kind of foundational land-use mechanics that quietly shape how parcels get divided across the county. Then, on referral and recommendation, an energy code update, which would revise the building standards that apply to new construction and major renovations. Code updates like this tend to move without much fanfare but set the baseline rules for years.",
-
   "rico|2026-08-19|Rico Board of Trustees Regular Meeting":
     "The August 19, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet.",
 
@@ -1189,9 +1186,6 @@ const MANUAL_SUMMARIES = {
 
   "county|2026-09-10|Planning Commission Meeting":
     "Three Land Use Code amendments are on the table for the Planning Commission's recommendation — covering forestry practices, oil and gas, and geothermal energy. All three are code-change items, meaning the Commission is being asked to weigh in before any revisions move forward to the BOCC. The agenda text doesn't detail the specific proposed changes within each amendment, but the pairing of oil & gas with geothermal in the same session signals the county is taking a broad look at how extraction and energy activities are regulated in unincorporated San Miguel County.",
-
-  "telluride|2026-08-13|San Miguel Authority for Regional Transportation - Aug 13 2026":
-    "SMART's board meets virtually on August 13th with a agenda that touches both the organization's structure and its ongoing gondola work. The board takes up Resolution 2026-15, which restructures the Gondola Advisory Committee — a body that has been central to the $5.2M/year gondola tax project since voters approved 3A. Resolution 2026-16 assigns the existing professional services contract with attorney Paul J. Taddune, P.C. to the law firm JVAM, PLLC — a transition worth noting given the legal complexity surrounding the gondola project. Resolution 2026-17 amends the current FY26 budget and capital spending plan, and the board opens a conversation on FY27 budget development. A gondola project update and standard operations report round out the substantive items. The meeting closes in executive session on personnel matters.",
 
   "telluride|2026-08-26|Public Art Commission - Aug 26 2026":
     "The Public Art Commission holds what appears to be an early organizational meeting — electing a chairperson, reviewing existing policy and guidelines, and setting a meeting schedule. The substantive work session centers on public art installations, with Town Council Objective I.D.5 directing the commission to explore integrating art into Town infrastructure, starting with a coordinated installation at the Silver Jack Stair.",
@@ -1386,7 +1380,16 @@ const MANUAL_SUMMARIES = {
     "The Telluride Housing Authority Subcommittee meets in worksession on two policy questions that get at a recurring tension: the gap between rules written for ideal conditions and the messier reality on the ground. First up is how to handle 'subpar bedrooms' in mitigation units — rooms that don't meet current Guidelines or building code standards, including several Element 52 units with no windows at all. Owners of these units are seeking exceptions to occupancy requirements, and the Subcommittee will consider whether the existing administrative exception process is sufficient or whether a blanket preemptive exception makes more sense. Second, the Subcommittee will revisit the housing waitlist suspension that's been in place since April 2026. The original Placement Waitlist had over 280 people, but response rates to apartment offers ran as low as 1–15%, vacant units were piling up, and the list has since been purged to 164 households. The question is whether the suspension should continue, and what a functional waitlist policy actually looks like — ahead of a full policy review planned for early 2027. No formal votes can be taken; both items are worksessions.",
 
   "smart|2026-10-08|SMART Board of Directors":
-    "The October 8, 2026 SMART Board of Directors agenda hasn't been posted yet."
+    "The October 8, 2026 SMART Board of Directors agenda hasn't been posted yet.",
+
+  "norwood|2026-10-13|Norwood Water Commission Meeting":
+    "The October 13 Norwood Water Commission Meeting agenda hasn't been posted yet.",
+
+  "tmvoa|2026-10-13|Mountain Village Merchant Meeting":
+    "The October 13 Mountain Village Merchant Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-10-13|Special Town Council Budget - Oct 13 2026":
+    "The October 13, 2026 Special Town Council Budget agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1752,6 +1755,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Two pets test positive for the plague in San Miguel County",
+    source: "Telluride Times",
+    date: "September 12, 2026",
+    firstSeen: "2026-09-13",
+    newsTopic: "community",
+    copy: "Two domestic animals in Norwood — a barn cat and a ranch dog from separate households — tested positive for plague in August; the cat died, the dog recovered. No human cases have been reported. Vets urge year-round flea prevention for all pets in the region.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_7513516b-5e03-43d5-b944-ea6289bdffc3.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/66/f661b1d8-24ed-4abc-80bb-d05f79c2f2a5/6aa45e707845a.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Building bridges with Pinhead",
     source: "Telluride Times",
@@ -2740,30 +2755,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "‘Breaking the model because we’ve noticed it’s broken’",
-    source: "Telluride Times",
-    date: "August 30, 2026",
-    firstSeen: "2026-08-30",
-    newsTopic: "housing",
-    copy: "Five of Pinion Park's 24 affordable homes in Norwood are sitting unsold despite the regional shortage — asking prices around $370,000 are out of reach for buyers at the 80% AMI income ceiling once current ~6% interest rates hit. The BOCC discussed allowing those units to sell to buyers up to 120% AMI, a threshold the state has now approved.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_7f4edf9a-a53f-4685-a5e0-a5ab8fd8e152.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/37/237058a9-59ee-4904-8189-85aa69c9fa71/6a930e035b19c.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Uplifting education",
-    source: "Telluride Times",
-    date: "August 30, 2026",
-    firstSeen: "2026-08-30",
-    newsTopic: "education",
-    copy: "The Telluride Education Foundation, now in its 32nd year, is hiring its first paid executive director — a part-time role focused on fundraising and sustainability, with applications open through Sept. 18. TEF has donated over $1.3M to local schools and recently gave $100K two years running to support key departments amid state and federal budget cuts.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_ff48806a-d703-4bac-b490-8d5ae6f3a7fa.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/34/d34a5acc-f379-43b2-b40a-a09faff7cde0/6a930b6f60a4e.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Breaking news: Plane crashes southwest of Telluride",
     source: "Telluride Times",
     date: "September 4, 2026",
@@ -2910,7 +2901,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Ridgway Rescinds Stage 2 Fire Restrictions, Reinstates Stage 1 Fire Restrictions effective 12:01am on Thursday, Sept. 3rd - Sept. 2, 2026",
     source: "Town of Ridgway",
-    date: "September 12, 2026",
+    date: "September 13, 2026",
     firstSeen: "2026-09-09",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2932,7 +2923,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Public Hearing Notice Wed., Sept. 16, 2026 at 5:30pm - 1) Site Plan and Conditional Use Permit for Riverbend Townhomes (TBD Liddell Dr.); 2) Plat Amendment of Lot 4 and Outlot of Riverview Business Park Subdivision (TBD Liddell Dr.); 3) PUD Amendment Lena Street Commons Planned Unit Development (TBD N. Lena Street) - Sept. 2, 2026",
     source: "Town of Ridgway",
-    date: "September 12, 2026",
+    date: "September 13, 2026",
     firstSeen: "2026-09-09",
     newsTopic: "land-use",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3488,39 +3479,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "The LA FAMILIA MUSIC GROUP Experience (Telluride Theatre)",
-    link: "https://koto.org/event/the-la-familia-music-group-experience-telluride-theatre/",
-    description: "Telluride Theatre FRINGE Projects, in collaboration with LA FAMILIA MUSIC GROUP, invites you to a day of Youth Music Workshops and a Community Concert! All events are FREE, with the option to donate to Telluride Theatre. During the day, students (age 10 – 18) can take part in a DJ & Beat-Making Workshop, where they will get a hands-on introduction to music production, creating loops, song mixing and more. No previous music or DJ experience required! Later that evening, students can showcase what they've learned during a COMMUNITY CONCERT with La Familia Music Group, featuring more local bands from LFMG's music collective. The Youth Workshop & Community Concert are both Bilingual, English and Spanish. All members of our community are invited to take part in this day of music, education and celebration. Learn more and Register on Telluride Theatre's website.",
-    pubDate: "2026-09-12T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Sheridan Opera House, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/09/lfmg-instagram-post.png"
-  },
-  {
-    title: "20th Anniversary of Down Valley Park + Rich's Retirement Party!",
-    link: "https://koto.org/event/20th-anniversary-of-down-valley-park-richs-retirement-party/",
-    description: "Celebrate the down valley park and community, and wish Rich Hamilton a happy retirement, on Saturday, September 12th, from 3-7 p.m. at Down Valley Park. Free food provided by Sawpit Mercantile and SMC Parks + Open Space. Live music with Telluride Gold Kings 4-6 p.m.",
-    pubDate: "2026-09-12T15:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Gaiascope Saturday Sessions",
-    link: "https://koto.org/event/gaiascope-saturday-sessions/2026-09-12/",
-    description: "Experience artist Brooke Einbender's Gaiascope installation in Mountain Village's Heritage Plaza every Saturday evening in September, with live DJ sets from 7-10 p.m. presented by Telluride Arts, TMVOA and Mindbender Studio.",
-    pubDate: "2026-09-12T19:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Heritage Plaza, Mountain Village",
-    imageUrl: ""
-  },
-  {
     title: "Gentle Yoga with Kristen Milord",
     link: "https://koto.org/event/gentle-yoga-with-kristen-milord/2026-09-13/",
     description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
@@ -3970,6 +3928,61 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Heritage Plaza, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "Blues Brunch",
+    link: "https://koto.org/event/blues-brunch/",
+    description: "Gather at Black Iron Kitchen + Bar for a Sunday brunch where mountain mornings and live music set the tone. From 7:00AM to 3:00PM, enjoy a specialty à la carte brunch menu, accompanied by a live performance by Ken Valdez from 10:00AM to 12:00PM. Originally from Santa Fe, Valdez brings a soulful voice and expressive guitar style shaped by blues, rock, funk, and Latin influences. It's an easygoing morning of seasonal flavors, meaningful conversation, and music that carries the spirit of Blues & Brews beyond the festival stage.",
+    pubDate: "2026-09-20T10:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Black Iron Kitchen + Bar, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/09/blues-brunch.png"
+  },
+  {
+    title: "Gentle Yoga with Kristen Milord",
+    link: "https://koto.org/event/gentle-yoga-with-kristen-milord/2026-09-20/",
+    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
+    pubDate: "2026-09-20T11:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/gentle-yoga-kristen.png"
+  },
+  {
+    title: "Drop In Tech Time with Oliver",
+    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-09-20/",
+    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
+    pubDate: "2026-09-20T13:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Glow with the Flow",
+    link: "https://koto.org/event/glow-with-the-flow/",
+    description: "Skin Care through Life's Stages: Britt Bradford is a botanical skin care formulator,That will show and share how to make a botanical skin care solution that works with wherever we are right now. Do you have a baby, do you have a teen, are you experiencing peri-menopause symptoms, there is something for everyone so you can glow with the flow.",
+    pubDate: "2026-09-20T13:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/glow.jpg"
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://koto.org/event/tea-and-tarot/2026-09-20/",
+    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    pubDate: "2026-09-20T14:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   }
 ];
 
@@ -4500,17 +4513,6 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "PIZZA THERAPY + DJ NIGHT NURSE",
-    link: "https://events.ourayridgwayevents.com/event/pizza-therapy-dj-night-nurse",
-    description: "Join us for some cheesy fun at our first PIZZA PARTY – good vibes, great slices, and groovy tunes all night! DJ NIGHT NURSE spinning Roots Reggae, Dub, and Funk. Pies by legendary Pizza Therepy. Cocktails by the Adobe Inn. Margaritas and Margaritas! View on site | Email this event",
-    pubDate: "2026-09-12T06:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Adobe Inn",
-    imageUrl: "https://localist-images.azureedge.net/photos/53941240155427/huge/ca29c30efa67e9486dbc2a2764ad4f3f8969bf61.jpg"
-  },
-  {
     title: "Dallas Park Cemetery Tour",
     link: "https://events.ourayridgwayevents.com/event/dallas-park-cemetery-tour",
     description: "Tour of Dallas Park Cemetery Tour, led by Coleen McElroy. $20.00 Per Person. $15.00 OCHS Members. Call 970-325-4576 to RSVP/Pre Pay View on site | Email this event",
@@ -4600,6 +4602,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ridgway Public Library",
     imageUrl: "https://localist-images.azureedge.net/photos/53924390035045/huge/23c8232d63aa55a9a46c28d88b4da76a20d698e2.jpg"
+  },
+  {
+    title: "PIZZA THERAPY + DJ NIGHT NURSE",
+    link: "https://events.ourayridgwayevents.com/event/pizza-therapy-dj-night-nurse",
+    description: "Join us for some cheesy fun at our first PIZZA PARTY – good vibes, great slices, and groovy tunes all night! DJ NIGHT NURSE spinning Roots Reggae, Dub, and Funk. Pies by legendary Pizza Therepy. Cocktails by the Adobe Inn. Margaritas and Margaritas! View on site | Email this event",
+    pubDate: "2026-09-12T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Adobe Inn",
+    imageUrl: "https://localist-images.azureedge.net/photos/53941240155427/huge/ca29c30efa67e9486dbc2a2764ad4f3f8969bf61.jpg"
   },
   {
     title: "The Collective | Autumnal Social",
@@ -4848,7 +4861,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/zumba-fitness-with-tamra",
     description: "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn calories, and tone muscles. Classes are often described as a \"fitness party\" that reduces stress. All levels of fitness and dance experience are welcome. Classes are $12 to drop in. Class packs are available for purchase (5 classes for $50, 10 classes for $95). For more information, check out the instructor's website: https://zumba.com/p/zumbafitnesswithTamra or email Tamra at tamra.nichols@icloud.com . For updated class information, including last-minute changes or cancellations, follow the instructor's Zumba Facebook page at https://www.facebook.com/ZumbaFitnesswithTamra . View on site | Email this event",
     pubDate: "2026-09-16T23:30:00.000Z",
-    endDate: "2026-11-05",
+    endDate: "2026-11-12",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4860,7 +4873,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/open-mic-jam-night-w-host-dj-strong",
     description: "Join us every Wednesday at 6 PM for Open Mic Night with DJ Strong at Floating Lotus Brewery. Bring an original song, play a favorite cover, meet other local musicians, or jump into one of our full-band jam sessions. Solo performers, groups, and musicians looking to collaborate are all welcome. Open Mic is also where we discover artists for Floating Lotus Mainstage. Standout performers may be invited back to play a full featured set, creating a path from Open Mic to the Mainstage. Come perform, connect, experiment, or simply enjoy an evening of live local music. Every Wednesday at 6 PM Floating Lotus Brewery View on site | Email this event",
     pubDate: "2026-09-17T00:00:00.000Z",
-    endDate: "2026-11-05",
+    endDate: "2026-11-12",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6713,17 +6726,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/49105/scott-rodgerson-zlhbjxbccec-unsplash.800x533.webp"
   },
   {
-    title: "The Meditations",
-    link: "https://www.telluride.com/event/the-meditations/",
-    description: "Founded in Jamaica in the 1970s, The Meditations are legendary roots reggae pioneers whose soulful harmonies and …",
-    pubDate: "2026-09-11",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62648/meditations_poster_template_2018.800x533.webp"
-  },
-  {
     title: "Imogene Pass Run",
     link: "https://www.telluride.com/event/imogene-pass-run/",
     description: "What began as a way to train for the Pike's Peak marathon in 1974 is now a full-fledged race. The race ventures from …",
@@ -7497,25 +7499,6 @@ const LEGAL_NOTICES = [
     address: "San Juan Vista Subdivision, Filing No. 1, SE1/4SE1/4 Section 12, S1/2, S1/2N1/2 and N1/2NE1/4 Section 13, Township 44 North, Range 10 West, N.M.P.M., San Miguel County, Colorado",
     noticeKey: "26CW3039",
     caseNumber: "26CW3039"
-  },
-  {
-    title: "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominium (Sale No. 202605)",
-    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "The San Miguel County Public Trustee has scheduled a foreclosure sale for Condominium Unit 7 at Double Diamond Condominium, located at 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The property is being foreclosed due to failure to pay principal and interest on a $1,200,000 deed of trust originally granted by Ryan Pfaff in May 2022, now held by Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust. The public auction will be held at 10:00 A.M. on September 3, 2026, at 305 W. Colorado Avenue, East entry, Telluride, CO.",
-    deadline: "2026-09-03",
-    expires: "2026-09-03",
-    dates: "8/13",
-    papers: ["ttimes_0813"],
-    url: "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
-    address: "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
-    noticeKey: "foreclosure-sale-202605",
-    caseNumber: "202605"
   }
 ];
 
