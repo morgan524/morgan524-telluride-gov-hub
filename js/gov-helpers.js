@@ -1745,6 +1745,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "County discusses oil and gas regulations",
+    source: "Telluride Times",
+    date: "September 13, 2026",
+    firstSeen: "2026-09-13",
+    newsTopic: "land-use",
+    copy: "San Miguel County's Planning Commission reviewed proposed Land Use Code updates covering oil and gas, forestry, and geothermal resources. A key change bumps the setback for oil and gas operations from 1,500 to 2,000 feet. Most activity is in the West End, where many wells are already inactive, capped, or abandoned.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_8d318aa5-2456-49db-9e09-c00665e3f2d1.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/f2/df2177f5-7ab0-41ae-9bc9-0a48dd2388fa/6aa4627e9680a.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Hockey with heart",
     source: "Telluride Times",
     date: "September 13, 2026",
@@ -3450,28 +3462,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-09-13/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    pubDate: "2026-09-13T13:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-09-13/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-09-13T14:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
   {
     title: "Telluride Choral Society WinterSing rehearsals & auditions",
     link: "https://koto.org/event/telluride-choral-society-wintersing-rehearsals-auditions/",
@@ -5667,7 +5657,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-5-8-6970",
     description: "AFTER SCHOOL ART FOR AGES 5-8 Thursdays, 3:15–4:30 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 17 – October 8Session 2 (4 weeks • $85): October 22 – November 12Session 3 (3 weeks • $70): December 3 – December 17Each week, students will explore exciting themes and projects while experimenting with a wide variety of art materials—such as watercolor and acrylic paints, oil and chalk pastels, clay, collage, printmaking, and more. Through open-ended projects, students are encouraged to explore their creativity, make artistic choices, take creative risks, and discover their unique artistic voice. Our classes nurture imaginative thinking and storytelling, helping children express big ideas and emotions through visual narratives and personal creations. In addition to sparking imagination, our signature art projects support the development of fine motor skills, confidence, and social-emotional development in a fun group environment. …",
     pubDate: "2026-10-22T21:15:00.000Z",
-    endDate: "2026-11-05",
+    endDate: "2026-11-12",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",

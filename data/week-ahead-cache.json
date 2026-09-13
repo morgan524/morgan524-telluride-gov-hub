@@ -1,30 +1,30 @@
 {
-  "hash": "e7cd5df379599114cd2d4572f7a9813fd428be66",
-  "lede": "The biggest item this week is Mountain Village Town Council taking up first reading of an ordinance that would move Housing Authority fees out of the municipal code and into an annually updated fee schedule — a structural shift in how affordable housing costs get set that's worth understanding before it advances. Meanwhile, the County's Housing Code SSR working group holds its eighth session Tuesday on Proposition 123-funded Land Use Code changes, the BOCC takes up a view-plain MOU tied to a 1999 settlement, and HARC weighs in on a potential demolition and new construction at Rebekah Hall — the building where they meet.",
+  "hash": "7fa6ec7b7689b4f03a8eae0cdea0609d40517687",
+  "lede": "The biggest thing on the government calendar this week is Mountain Village Town Council taking up first reading of an ordinance that would move Housing Authority fees out of municipal code and into an annually updated fee schedule — a structural shift in how affordable housing costs get set. Close behind: the San Miguel County Housing Code Update SSR holds its eighth working session on stripping Land Use Code barriers to workforce housing, HARC takes up a potential demolition and new construction application for Rebekah Hall — the historic Town-owned building where HARC itself meets — and the BOCC weighs in on a view-plain MOU tied to a 1999 settlement.",
   "notable": [
     {
       "id": 1,
-      "stake": "Policy vote on how 'subpar bedrooms' in mitigation units get handled going forward."
+      "stake": "Policy vote on how subpar mitigation bedrooms get handled under Housing Guidelines."
     },
     {
       "id": 4,
-      "stake": "Working session shapes county Land Use Code changes affecting workforce housing production."
+      "stake": "Working session shaping county code changes that govern workforce housing production."
     },
     {
       "id": 7,
-      "stake": "HARC considers demolition and new construction of Town-owned Rebekah Hall at 113 W Columbia."
+      "stake": "HARC reviews potential demolition of historic Town-owned Rebekah Hall building."
     },
     {
       "id": 9,
-      "stake": "BOCC acts on view-plain MOU and discusses two state constitutional amendments."
+      "stake": "BOCC considers view-plain MOU and immigration/redistricting constitutional amendment discussion."
     },
     {
       "id": 10,
-      "stake": "Two public hearings — Curry PUD and a parcel subdivision — open for public comment."
+      "stake": "Two public hearings: Curry PUD and a parcel subdivision application in Ouray County."
     },
     {
       "id": 12,
-      "stake": "First reading: ordinance shifting MVHA fees out of municipal code into adjustable fee schedule."
+      "stake": "First reading of ordinance shifting MVHA fees out of municipal code — changes how housing costs are set."
     }
   ]
 }
