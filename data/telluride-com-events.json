@@ -343,6 +343,18 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/61644/img_7366.800x533.webp"
   },
   {
+    "title": "Fireside Chats",
+    "link": "https://www.telluride.com/event/fireside-chats/",
+    "description": "A series of free weekly lectures on Wednesdays this fall by scholars, writers, storytellers, and experts of Telluride's …",
+    "pubDate": "2026-09-23",
+    "endDate": "2026-10-07",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/49419/fireside_chat.800x533.webp"
+  },
+  {
     "title": "Trout-A-Palooza",
     "link": "https://www.telluride.com/event/troutapalooza/",
     "description": "Troutapalooza is the premier fundraiser for Gunnison Gorge Anglers and the San Miguel Valley Floor project. The event …",
@@ -400,6 +412,17 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/63478/screenshot_2026-09-02_at_12_40_25_pm.800x533.webp"
   },
   {
+    "title": "Screen Print for Public Lands",
+    "link": "https://www.telluride.com/event/screen-print-for-public-lands/",
+    "description": "Patagonia Telluride is hosting an evening of screen printing - bring your own tees, totes, or clothing to customize, …",
+    "pubDate": "2026-09-24",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63578/screen_print_for_public_lands_flyer.800x533.webp"
+  },
+  {
     "title": "Mountains to the Desert Classic",
     "link": "https://www.telluride.com/event/mountains-to-the-desert-classic/",
     "description": "The Mountains to the Desert Classic (M2D) is celebrating its 22 Anniversary as the primary fundraising event for the …",
@@ -409,6 +432,18 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/48458/m2dlogonob_g.800x533.webp"
+  },
+  {
+    "title": "Hike Into History",
+    "link": "https://www.telluride.com/event/hike-into-history/",
+    "description": "Join the Telluride Historical Museum for their summer monthly Hike Into History series! \n\nSchedule:\n\n\n\tSeptember 26 - …",
+    "pubDate": "2026-09-26",
+    "endDate": "2026-10-03",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/53479/screenshot_2025-07-02_at_11_06_15_am.800x533.webp"
   },
   {
     "title": "Yope",
@@ -512,6 +547,18 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63340/hanneke_cassel.800x533.webp"
+  },
+  {
+    "title": "Lamplight Cemetery Tour",
+    "link": "https://www.telluride.com/event/lamplight-cemetery-tour/",
+    "description": "Explore the historic Lone Tree Cemetery by the eeriness of lamplight. This tour takes place in the evening and recounts …",
+    "pubDate": "2026-10-23",
+    "endDate": "2026-10-30",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/49427/2019-lamplight-cemetery-tours-website-header.800x533.webp"
   },
   {
     "title": "KOTO Ski Swap",

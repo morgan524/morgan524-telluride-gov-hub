@@ -68,19 +68,6 @@
     "type": "Family & Kids"
   },
   {
-    "title": "Tennis Clinic 4.0+",
-    "href": "https://koto.org/event/tennis-clinic-4-0/2026-09-14/",
-    "date": "2026-09-14",
-    "time": "11:00 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "Senior Lunch by Neighbor to Neighbor",
     "href": "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
     "date": "2026-09-14",
@@ -139,7 +126,7 @@
     "href": "https://telluridelibrary.libcal.com/event/16448515?hs=a",
     "date": "2026-09-14",
     "time": "5:30 PM",
-    "location": "Program Room",
+    "location": "Magazine Room",
     "town": "Telluride",
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_12_34_37.jpg",
     "category": "Library Event",
@@ -191,7 +178,7 @@
     "href": "https://telluridelibrary.libcal.com/event/17527360?hs=a",
     "date": "2026-09-14",
     "time": "6:00 PM",
-    "location": "Lower Terrace - outdoors",
+    "location": "Program Room",
     "town": "Telluride",
     "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1768253322.jpg",
     "category": "Library Event",
@@ -225,19 +212,6 @@
     "source": "KOTO Community Calendar",
     "desc": "Craving a break from the hustle and bustle of your day? Take a lunchtime escape to the library for a dose of tranquility. Settle into a comfy chair and unwind with ethereal piano melodies played live by WPL's very own, Oliver Henry, of…",
     "type": "Community"
-  },
-  {
-    "title": "Tennis Clinic 3.0-4.0",
-    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-14/",
-    "date": "2026-09-14",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "Woman's Club of Ouray County monthly meeting",
@@ -275,7 +249,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Ouray County",
-    "desc": "https://ouraycountyco.gov/calendar.aspx?EID=3783",
+    "desc": "This is an internal employee meeting hosted by Ouray County, taking place in Ouray. As a county government gathering, it is intended for Ouray County staff and personnel rather than the general public.",
     "type": "Community"
   },
   {
@@ -843,7 +817,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     "type": "Community"
   },
   {
@@ -1093,19 +1067,6 @@
     "category": "",
     "source": "Music on the Green",
     "desc": "Outdoor summer concert in Mountain Village's Music on the Green series, presented by Beyond the Groove. Live music at Reflection Plaza (next to Hotel Madeline), Fridays 5–7 PM. This week: Leon Timbo.",
-    "type": "Music"
-  },
-  {
-    "title": "Music on the Green Presents Leon Timbo",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-leon-timbo/",
-    "date": "2026-09-18",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/48871/leon_timbo_1800x900px_1.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Beyond The Groove and TMVOA (tmvoa.org) present Leon Timbo at Reflection Plaza in Mountain Village. The Friday shows are free, all ages and family friendly.",
     "type": "Music"
   },
   {
@@ -1775,8 +1736,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
-    "type": "Community"
+    "desc": "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
+    "type": "Food & Drink"
   },
   {
     "title": "Music Bingo",
@@ -1832,6 +1793,19 @@
     "desc": "Corvettes, and their owners, are invited to celebrate the Rocky Mountain Fall colors, the crisp San Juan Mountain air …",
     "type": "Community",
     "endDate": "2026-09-28"
+  },
+  {
+    "title": "Screen Print for Public Lands",
+    "href": "https://www.telluride.com/event/screen-print-for-public-lands/",
+    "date": "2026-09-24",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63578/screen_print_for_public_lands_flyer.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Patagonia Telluride is hosting an evening of screen printing - bring your own tees, totes, or clothing to customize, …",
+    "type": "Community"
   },
   {
     "title": "Pickleball Nights",
@@ -1986,7 +1960,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
     "type": "Community"
   },
   {
@@ -2027,6 +2001,20 @@
     "source": "Telluride.com",
     "desc": "The Mountains to the Desert Classic (M2D) is celebrating its 22 Anniversary as the primary fundraising event for the …",
     "type": "Community"
+  },
+  {
+    "title": "Hike Into History",
+    "href": "https://www.telluride.com/event/hike-into-history/",
+    "date": "2026-09-26",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/53479/screenshot_2025-07-02_at_11_06_15_am.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Join the Telluride Historical Museum for their summer monthly Hike Into History series! Schedule: September 26 - …",
+    "type": "Outdoors & Sports",
+    "endDate": "2026-10-03"
   },
   {
     "title": "Ouray High School Volleyball: Round Robin",
@@ -2185,6 +2173,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Thinking Like Water film screening – a DIY look at watershed restoration",
+    "href": "https://events.ourayridgwayevents.com/event/thinking-like-water-film-screening",
+    "date": "2026-09-29",
+    "time": "6:30 PM",
+    "location": "The Sherbino",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53974512668640/huge/967df9dc1194b18c21883098a7e7e490a2507260.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Doors: 6:00pm Film: 6:30pm followed by a discussion with the filmmaker Renea Roberts; Amanda Clements, Uncompaghre Watershed Partnership - Board Chair/Friends of the River Uncompahgre- Vice Chair; Tanner Banks, Trout Unlimited -…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "The Sherbino Presents: \"Thinking Like Water\", a DIY look at watershed restoration",
     "href": "https://sherbino.org/event/the-sherbino-presents-thinking-like-water-a-diy-look-at-watershed-restoration/",
     "date": "2026-09-29",
@@ -2233,7 +2234,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
     "type": "Community"
   },
   {
@@ -2350,10 +2351,10 @@
     "time": "5:00 PM",
     "location": "Decker Community Room",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53048200847384/huge/574f2906fa13a967da1b53fe33b1ea163558dc3f.jpg",
+    "img": "https://localist-images.azureedge.net/photos/53975454573398/huge/fed6f5172fe765abe1cd1b3f3447b64e3cd83d27.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Join us for the opening of Space Cowboy for its stop in Ridgway! Space Cowboy is a large-scale traveling exhibition that creates a high-engagement public experience wherever it lands — drawing community members in through fiber art, live…",
+    "desc": "Opening Reception Schedule - Part of Ridgway's First Friday Art Walk Gallery Open 5-8PM Artist Talk and Poetry Reading 630-7:30 Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry,…",
     "type": "Arts & Film"
   },
   {
@@ -2363,11 +2364,11 @@
     "time": "5:00 PM",
     "location": "Decker Community Room",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53048203945878/huge/24f84f08b2f8624cb59d2163b0403c16995d63c2.jpg",
+    "img": "https://localist-images.azureedge.net/photos/53975670057489/huge/75be37bbb2b6bd7ba17f7754e11da5a0eaf5930c.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Come see Space Cowboy durings its stop in Ridgway! Space Cowboy is a large-scale traveling exhibition that creates a high-engagement public experience wherever it lands — drawing community members in through fiber art, live story…",
-    "type": "Arts & Film",
+    "desc": "Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado…",
+    "type": "Community",
     "endDate": "2026-10-29"
   },
   {
@@ -2581,6 +2582,19 @@
     "type": "Community"
   },
   {
+    "title": "Ballot Issue Briefing (hosted by ROCC and LWV-UV)",
+    "href": "https://ouraycountyco.gov/Calendar.aspx?EID=3784",
+    "date": "2026-10-05",
+    "time": "11:30 AM",
+    "location": "***Two or more county commissioners may attend and participate at this event*** Presentation of statewide measures on the November 2026 ballot.&nbsp; 675 Clinton Street, Ridgway, CO (Decker Room) https://www.lwv-uv.org/ - Ouray CO 81427",
+    "town": "Ridgway",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/voting-1.jpg",
+    "category": "Community Event",
+    "source": "Ouray County",
+    "desc": "A joint briefing hosted by ROCC and the League of Women Voters of the Upper Valley covering statewide measures on the November 2026 ballot. The event takes place in the Decker Room at 675 Clinton Street in Ridgway, with notice that two or…",
+    "type": "Community"
+  },
+  {
     "title": "Monthly Karate in Ouray County",
     "href": "https://events.ourayridgwayevents.com/event/monthly-karate-in-ouray-county",
     "date": "2026-10-05",
@@ -2723,7 +2737,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
     "type": "Community"
   },
   {
@@ -2833,6 +2847,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "“A WALK IN THE WOODS”: ACRYLIC PAINTING WORKSHOP WITH MARY PAT ETTINGER",
+    "href": "https://events.ourayridgwayevents.com/event/a-walk-in-the-woods-acrylic-painting-workshop-with-mary-pat-ettinger",
+    "date": "2026-10-10",
+    "time": "11:00 AM",
+    "location": "The Annex on Cora",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53967883969496/huge/d2428dc5e6782e6f1e062e79f5d622145108e918.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Movies Under the Stars",
     "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     "date": "2026-10-10",
@@ -2856,6 +2883,19 @@
     "category": "Community Event",
     "source": "Mountain Village",
     "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    "type": "Community"
+  },
+  {
+    "title": "PAINT AND SIP WITH NICOLE GREENFIELD: “GOLDEN ASPENS“",
+    "href": "https://events.ourayridgwayevents.com/event/paint-and-sip-with-nicole-greenfield-golden-aspens",
+    "date": "2026-10-10",
+    "time": "6:00 PM",
+    "location": "Weehawken Montrose",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53967916717098/huge/ca0a75a89f0b2971d55317823daf190b4a7fb259.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Montrose Paint & Sip with Nicole 6:00pm-8:00pm $49 incl. all supplies and an adult beverage Sat, Oct 10th: Golden Aspens Sat, Nov 14th: Morning Peaks Sat, Dec 5th: Snow Topped Treeline Unwind, sip, and create! Join us for a relaxed…",
     "type": "Community"
   },
   {
@@ -3039,7 +3079,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "",
+    "desc": "A recurring monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The event offers a casual space for veterans to connect with one another and with community support.",
     "type": "Community"
   },
   {
@@ -3065,7 +3105,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather, share a meal, and connect with neighbors. This recurring community event takes place in Norwood and is organized through…",
     "type": "Community"
   },
   {
@@ -3093,6 +3133,32 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
     "type": "Music"
+  },
+  {
+    "title": "No Kings Afterparty in the Garden",
+    "href": "https://events.ourayridgwayevents.com/event/no-kings-afterparty-in-the-garden",
+    "date": "2026-10-17",
+    "time": "3:00 PM",
+    "location": "Chloe's Charcuterie & Wine",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/51579855188578/huge/de5019ffbfacf4a9f5e85d8a14961584c70e7873.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Details forthcoming View on site | Email this event",
+    "type": "Community"
+  },
+  {
+    "title": "Love Your Gorge",
+    "href": "https://events.ourayridgwayevents.com/event/love-your-gorge-2026",
+    "date": "2026-10-17",
+    "time": "9:00 AM",
+    "location": "Ouray Ice Park",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53950572424037/huge/aa74aed14780ee99117533d3ad6303db0ccf191b.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The Uncompahgre Watershed Partnership and Ouray Ice Park invite volunteers to Love Your Gorge – a fun day of hard work to cleanup and maintain infrastructure and the environment around the Uncompahgre Gorge in Ouray. Our 2026 work plan in…",
+    "type": "Community"
   },
   {
     "title": "Posture: The Joy of Alignment",
@@ -3198,7 +3264,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday community meal program for seniors, hosted by the Town of Norwood. It offers older residents a chance to gather, share a meal, and connect with neighbors in a welcoming setting.",
     "type": "Community"
   },
   {
@@ -3226,6 +3292,33 @@
     "source": "Beacon",
     "desc": "Thursday night pickleball with no experience necessary. All supplies provided.",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Lamplight Cemetery Tour",
+    "href": "https://www.telluride.com/event/lamplight-cemetery-tour/",
+    "date": "2026-10-23",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/49427/2019-lamplight-cemetery-tours-website-header.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Explore the historic Lone Tree Cemetery by the eeriness of lamplight. This tour takes place in the evening and recounts …",
+    "type": "Community",
+    "endDate": "2026-10-30"
+  },
+  {
+    "title": "PINE NEEDLE WEAVING: JEWELRY, BASKETS AND MORE! WITH EMILY KNICKERBOCKER",
+    "href": "https://events.ourayridgwayevents.com/event/pine-needle-weaving-jewelry-baskets-and-more-with-emily-knickerbocker",
+    "date": "2026-10-24",
+    "time": "10:00 AM",
+    "location": "The Annex on Cora",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53967939605631/huge/56b61991a8d062e4e1f71cbdf51fdd4fa7b4daea.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "4th Annual Boo-Mont Halloween Ball",
@@ -3276,7 +3369,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather and share a meal together. This recurring community event provides both nourishment and social connection for Norwood's…",
     "type": "Community"
   },
   {
@@ -3305,6 +3398,19 @@
     "desc": "Easy Jim Halloween Run Brings Two Nights of Grateful Dead Celebrations to the Sherbino! October 30 & 31, 2026 • 8:00 p.m. nightly Sherbino Theatre | Ridgway, Colorado Some concerts are just concerts. This is a Run! The Sherbino and Pickin’…",
     "type": "Arts & Film",
     "endDate": "2026-11-01"
+  },
+  {
+    "title": "\"Hello to Golden Autumn\" Acrylic Painting Workshop",
+    "href": "https://events.ourayridgwayevents.com/event/hello-to-golden-autumn-acrylic-painting-workshop",
+    "date": "2026-10-30",
+    "time": "9:30 AM",
+    "location": "Weehawken Creative Arts in Montrose",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53967861373929/huge/1167e663cc84a9c4be3eccaa396cf973741529f4.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "",
+    "type": "Arts & Film"
   },
   {
     "title": "Telluride Rotary Club Meeting",

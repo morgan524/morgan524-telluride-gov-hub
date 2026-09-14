@@ -292,7 +292,7 @@
   },
   "county|2026-09-16|Board of County Commissioners Meeting": {
     "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/900/files/agenda/1994",
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/900/files/agenda/1999",
     "zoomUrl": "https://us02web.zoom.us/meeting/register/tnLYPloRS7mtngp_HQWFXQ",
     "meetingId": "867 6377 9971",
     "passcode": "898059",
@@ -346,13 +346,15 @@
   },
   "telluride|2026-09-22|Telluride Housing Authority - Sep 22 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303",
-    "sv": 4,
-    "ph": "e1e1bf39ad17a096"
+    "sv": 4
   },
   "telluride|2026-09-22|Town Council - Sep 22 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043",
     "sv": 4,
-    "ph": "c5b14e4bfd86db54"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/SHk2kkI1S6SZlmiHuwkPLg",
+    "meetingId": "822 3651 5916",
+    "passcode": "159154.",
+    "phone": "719) 359-4580"
   },
   "county|2026-09-23|Board of County Commissioners Work Session": {
     "sv": 4,
@@ -424,7 +426,7 @@
   "telluride|2026-09-30|Special Town Council - Sep 30 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313",
     "sv": 4,
-    "ph": "6ee2e9f9e57bb867"
+    "ph": "aa45589c1f4c4a4e"
   },
   "mv|2026-10-01|Design Review Board": {
     "sv": 4,
@@ -433,7 +435,7 @@
   "telluride|2026-10-01|Town Council Budget - Oct 01 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8053",
     "sv": 4,
-    "ph": "ae63a84c96949f40"
+    "ph": "521165b2c958b221"
   },
   "county|2026-10-01|Lodging Tax Panel Meeting": {
     "sv": 4,
@@ -467,7 +469,7 @@
   "telluride|2026-10-06|Town Council - Oct 06 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044",
     "sv": 4,
-    "ph": "5eeb6493d1e6e82a"
+    "ph": "276ac1e5db35b48f"
   },
   "mv|2026-10-07|Town Council Meeting": {
     "sv": 4,
@@ -546,7 +548,7 @@
   "telluride|2026-10-13|Special Town Council Budget - Oct 13 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8307",
     "sv": 4,
-    "ph": "69ce14e842dca9f5"
+    "ph": "69e6b564095609ef"
   },
   "norwood|2026-10-14|Board of Trustees Meeting": {
     "sv": 4,
