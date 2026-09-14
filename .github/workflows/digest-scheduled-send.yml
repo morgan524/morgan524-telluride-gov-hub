@@ -21,11 +21,20 @@ name: Digest Scheduled Send
 # scheduled at the exact top of the hour (":00") sit on the single most
 # congested slot on GitHub's scheduler and are the ones most likely to be
 # dropped outright rather than merely delayed (documented GitHub behavior).
-# The guard step below only requires the Denver hour to equal 09 — any
-# minute within that hour is valid — so these extra offset triggers are safe,
-# free backups: the approval-lock + duplicate-sent-broadcast checks make a
-# second firing within the same hour a guaranteed no-op once the digest has
-# actually gone out.
+#
+# 2026-09-14 finding: the congestion isn't limited to dropped runs — every one
+# of these triggers can also fire HOURS late (observed 3-6h delays repeatedly
+# Jul-Sep 2026: a 15:00 UTC Monday schedule actually starting anywhere from
+# 18:00 to 21:00+ UTC). The guard used to require the Denver hour to equal
+# exactly 09, so a late-firing run almost always read hour 10-15 and silently
+# skipped with go=false — which also suppressed the tripwire below (it only
+# fires when go=='true'). Net effect: every automatic weekly send from
+# mid-July through Sep 8 2026 actually went out only because someone noticed
+# and ran `gh workflow run ... confirm=SEND` by hand, often a day later. The
+# guard now accepts any hour >= 09:00 MT on the right weekday instead of
+# exactly 09 — the approval-lock + duplicate-sent-broadcast checks are what
+# actually keep this safe, so a late (or repeated) firing that day is just a
+# normal send, or a no-op if one already went out.
 on:
   schedule:
     - cron: '0 15 * * 1'    # Mon 15:00 UTC = 09:00 MDT (summer) — primary
@@ -79,17 +88,19 @@ jobs:
             echo "override=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          # Scheduled: only proceed at 09:00 America/Denver (so exactly one of the
-          # summer/winter cron pair fires), and map the weekday to a digest.
+          # Scheduled: proceed once it's on or after 09:00 America/Denver (a
+          # delayed cron firing later the same morning/afternoon still counts —
+          # see the REDUNDANT TRIGGERS note above), and map the weekday to a digest.
           HOUR="$(TZ='America/Denver' date +%H)"
           DOW="$(TZ='America/Denver' date +%u)"   # 1=Mon … 7=Sun
-          if [ "$HOUR" != "09" ]; then echo "Denver hour=$HOUR (not 09) — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          HOUR10=$((10#$HOUR))   # strip any leading zero so bash doesn't read it as octal
+          if [ "$HOUR10" -lt 9 ]; then echo "Denver hour=$HOUR (before 09:00) — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           case "$DOW" in
             1) DIGEST=weekly ;;
             5) DIGEST=weekend ;;
             *) echo "Denver weekday=$DOW (not Mon/Fri) — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0 ;;
           esac
-          echo "scheduled send — digest=$DIGEST at 09:00 MT"
+          echo "scheduled send — digest=$DIGEST (Denver hour=$HOUR, >= 09:00)"
           echo "go=true" >> "$GITHUB_OUTPUT"
           echo "digest=$DIGEST" >> "$GITHUB_OUTPUT"
           echo "override=false" >> "$GITHUB_OUTPUT"
