@@ -56,18 +56,9 @@ const COUNTY_CIVICCLERK_AGENDA_FILES = {
   919:  1705,  // Planning Commission May 14 2026
 };
 
-const COUNTY_CACHE_DATE = '2026-09-13';
+const COUNTY_CACHE_DATE = '2026-09-14';
 
 const COUNTY_CACHED_DATA = [
-  {
-    date: "August 24, 2026",
-    time: "4:00 PM",
-    title: "Open Space Commission Meeting",
-    type: "other",
-    location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
-    civicClerkId: 1056,
-    note: null
-  },
   {
     date: "August 26, 2026",
     time: "9:30 AM",
