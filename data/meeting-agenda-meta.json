@@ -411,7 +411,7 @@
   "telluride|2026-09-30|Special Meeting - Historic & Architectural Review Commission - Sep 30 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309",
     "sv": 4,
-    "ph": "fc8ba4c0a7de2333"
+    "ph": "4ceca2932db822bf"
   },
   "telluride|2026-09-17|Special Meeting - Planning & Zoning Commission - Sep 17 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8310",
@@ -547,5 +547,18 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8307",
     "sv": 4,
     "ph": "69ce14e842dca9f5"
+  },
+  "norwood|2026-10-14|Board of Trustees Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "ridgway|2026-10-14|Ridgway Town Council Regular Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "telluride|2026-10-14|Liquor Licensing Authority - Oct 14 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8146",
+    "sv": 4,
+    "ph": "28ddc62878422962"
   }
 }

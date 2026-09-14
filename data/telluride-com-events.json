@@ -204,18 +204,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/58332/dsc01583lr--1-.800x533.webp"
   },
   {
-    "title": "After Telluride Film Festival",
-    "link": "https://www.telluride.com/event/after-telluride-film-festival/",
-    "description": "After Telluride Film Festival (ATFF) screens eight popular Festival films for locals on the Tuesday - Friday following …",
-    "pubDate": "2026-09-08",
-    "endDate": "2026-09-12",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/55245/screenshot_2026-09-03_at_2_12_52_pm.800x533.webp"
-  },
-  {
     "title": "Jane Pope Jewelry Show",
     "link": "https://www.telluride.com/event/jane-pope-jewelry-show/",
     "description": "Jane Pope returns to Telluride for a solo jewelry show at Fringe Gallery. Visit them from Thursday, September 10th to …",
@@ -240,17 +228,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/49105/scott-rodgerson-zlhbjxbccec-unsplash.800x533.webp"
   },
   {
-    "title": "Imogene Pass Run",
-    "link": "https://www.telluride.com/event/imogene-pass-run/",
-    "description": "What began as a way to train for the Pike's Peak marathon in 1974 is now a full-fledged race. The race ventures from …",
-    "pubDate": "2026-09-12",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/28638/149445047981c35a961.800x533.webp"
-  },
-  {
     "title": "Gaiascope Saturday Sessions",
     "link": "https://www.telluride.com/event/gaiascope-saturday-sessions/",
     "description": "Gaiascope Saturday Sessions Live music + Kaleidoscope art every Saturday in September.",
@@ -261,17 +238,6 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63515/screenshot_2026-09-05_at_11_00_00_am.800x533.webp"
-  },
-  {
-    "title": "A Telluride Theatre FRINGE Project: La Familia Music Group",
-    "link": "https://www.telluride.com/event/a-telluride-theatre-fringe-project-la-familia-music-group/",
-    "description": "Created by La Familia Music Group, this day of youth workshops culminates in a community concert, showcasing student …",
-    "pubDate": "2026-09-12",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/62898/screenshot_2026-06-15_at_11_29_51_am.800x533.webp"
   },
   {
     "title": "Balourdet Quartet",
@@ -546,5 +512,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63340/hanneke_cassel.800x533.webp"
+  },
+  {
+    "title": "KOTO Ski Swap",
+    "link": "https://www.telluride.com/event/koto-ski-swap/",
+    "description": "Get prepped for the winter season ahead at the annual KOTO Ski Swap at the Wilkinson Public Library. Donate your used …",
+    "pubDate": "2026-11-13",
+    "endDate": "2026-11-16",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/28871/464865559_570687275405719_3117454875494611862_n.800x533.webp"
   }
 ]

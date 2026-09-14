@@ -1,16 +1,5 @@
 [
   {
-    "title": "Telluride Choral Society WinterSing rehearsals & auditions",
-    "link": "https://koto.org/event/telluride-choral-society-wintersing-rehearsals-auditions/",
-    "description": "WinterSing 2026 rehearsals begin Sunday, Sept. 13th, 4:30, at Christ Church. No experience necessary. Open to everyone aged 13 and up. If you want to audition for the Chamber Singers, come at 3:30. To learn more, visit telluridechoralsociety.org",
-    "pubDate": "2026-09-13T15:30:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Christ Church Telluride, TELLURIDE",
-    "imageUrl": ""
-  },
-  {
     "title": "Piano on the Patio with Oliver",
     "link": "https://koto.org/event/piano-on-the-patio-with-oliver/",
     "description": "Craving a break from the hustle and bustle of your day? Take a lunchtime escape to the library for a dose of tranquility. Settle into a comfy chair and unwind with ethereal piano melodies played live by WPL's very own, Oliver Henry, of Après Nova. Unplug from your devices and bring a book, magazine, or simply enjoy a moment of peace and quiet. This program is a great way to de-stress, recharge, and refocus for the rest of your afternoon. Feel free to bring your lunch and enjoy it while listening to the music! No registration required. Join us on the second Monday of the month from 12-1pm at the Wilkinson Public Library.",
@@ -471,5 +460,49 @@
     "category": "Community Event",
     "location": "Wilkinson Public Library, Telluride",
     "imageUrl": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    "title": "Book Buzz w/The Pour Over Pedaler",
+    "link": "https://koto.org/event/book-buzz-w-the-pour-over-pedaler/",
+    "description": "Get the scoop on the hottest new titles at the library during Book Buzz! Discover upcoming releases, hidden gems, and staff favorites while enjoying a complimentary handcrafted coffee from Luke of The Pour Over Pedaler. Come sip, socialize, and leave with your next great read!",
+    "pubDate": "2026-09-21T09:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/08/book-buzz-13-1.png"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "link": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-21/",
+    "description": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    "pubDate": "2026-09-21T09:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Tennis Clinic 4.0+",
+    "link": "https://koto.org/event/tennis-clinic-4-0/2026-09-21/",
+    "description": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
+    "pubDate": "2026-09-21T11:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Book Talk: Clotilda",
+    "link": "https://koto.org/event/book-talk-clotilda/",
+    "description": "Join the Telluride Historical Museum and Wilkinson Public Library for a deep dive into some of the threads that make up the tapestry of Colorado's and the United States of America's history as we celebrate Colorado's 150th year as state and USA's 250th year as an independent country. This month the book discussion will be lead by Kiernan Lannon, Telluride Historical Museum Director on Monday, September 21st at 5:30 pm! The featured book is The Survivors of the Clotilda: The Lost Stories of the Last Captives of the American Slave Trade by Hannah Durkin. You can check out the book from the library or purchase to book from Between the Covers Bookstore for 10% off!",
+    "pubDate": "2026-09-21T17:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
   }
 ]

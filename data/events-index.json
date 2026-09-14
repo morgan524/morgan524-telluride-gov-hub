@@ -53,19 +53,6 @@
     "type": "Community"
   },
   {
-    "title": "Telluride Choral Society WinterSing rehearsals & auditions",
-    "href": "https://koto.org/event/telluride-choral-society-wintersing-rehearsals-auditions/",
-    "date": "2026-09-13",
-    "time": "3:30 PM",
-    "location": "Christ Church Telluride, TELLURIDE",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-7.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "WinterSing 2026 rehearsals begin Sunday, Sept. 13th, 4:30, at Christ Church. No experience necessary. Open to everyone aged 13 and up. If you want to audition for the Chamber Singers, come at 3:30. To learn more, visit…",
-    "type": "Music"
-  },
-  {
     "title": "Britley & Matt",
     "href": "https://events.ourayridgwayevents.com/event/britley-matt-349",
     "date": "2026-09-13",
@@ -314,7 +301,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Ouray County",
-    "desc": "https://ouraycountyco.gov/calendar.aspx?EID=3783",
+    "desc": "This is an internal employee meeting hosted by Ouray County, taking place in Ouray. As a county government gathering, it is intended for Ouray County staff and personnel rather than the general public.",
     "type": "Community"
   },
   {
@@ -882,7 +869,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     "type": "Community"
   },
   {
@@ -1543,6 +1530,32 @@
     "type": "Community"
   },
   {
+    "title": "Tennis Clinic 4.0+",
+    "href": "https://koto.org/event/tennis-clinic-4-0/2026-09-21/",
+    "date": "2026-09-21",
+    "time": "11:00 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Book Talk: Clotilda",
+    "href": "https://koto.org/event/book-talk-clotilda/",
+    "date": "2026-09-21",
+    "time": "5:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join the Telluride Historical Museum and Wilkinson Public Library for a deep dive into some of the threads that make up the tapestry of Colorado's and the United States of America's history as we celebrate Colorado's 150th year as state…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Bike & Brewery Tour",
     "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     "date": "2026-09-21",
@@ -1553,6 +1566,32 @@
     "category": "Community Event",
     "source": "Mountain Village",
     "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Book Buzz w/The Pour Over Pedaler",
+    "href": "https://koto.org/event/book-buzz-w-the-pour-over-pedaler/",
+    "date": "2026-09-21",
+    "time": "9:00 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/book-buzz-13-1.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Get the scoop on the hottest new titles at the library during Book Buzz! Discover upcoming releases, hidden gems, and staff favorites while enjoying a complimentary handcrafted coffee from Luke of The Pour Over Pedaler. Come sip,…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-21/",
+    "date": "2026-09-21",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
     "type": "Outdoors & Sports"
   },
   {
@@ -1749,8 +1788,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
-    "type": "Community"
+    "desc": "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
+    "type": "Food & Drink"
   },
   {
     "title": "Music Bingo",
@@ -1764,7 +1803,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Music Bingo at Floating Lotus Brewery! Join us on the 2nd & 4th Thursdays from 6-9 PM for a high-energy night of music, drinks, and bingo-style fun. Listen, mark your card, and sing along. Learn more at floatinglotusbrewery.com. View on…",
     "type": "Food & Drink",
-    "endDate": "2026-10-23"
+    "endDate": "2026-11-13"
   },
   {
     "title": "Watercolor & Wine with Katey Fetch: \"Paint the Peaks\"",
@@ -1960,7 +1999,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
     "type": "Community"
   },
   {
@@ -2207,7 +2246,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
     "type": "Community"
   },
   {
@@ -2548,7 +2587,7 @@
     "time": "",
     "location": "Ridgway, CO",
     "town": "Ridgway",
-    "img": "https://sherbino.org/wp-content/uploads/2026/04/2026-sherb-event-banners-3.jpg",
+    "img": "https://sherbino.org/wp-content/uploads/2026/04/sherb-and-wca-EVENT-BANNERS-2-e1788900662419.png",
     "category": "",
     "source": "Sherbino Theater",
     "desc": "",
@@ -2697,7 +2736,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
     "type": "Community"
   },
   {
@@ -2872,6 +2911,19 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Alysha Brilla",
+    "href": "https://sherbino.org/event/alysha-brilla/",
+    "date": "2026-10-10",
+    "time": "",
+    "location": "The Sherbino, Ridgway",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2026/07/alysha-1-e1783453241649.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
+    "type": "Community"
+  },
+  {
     "title": "Sunday Rehab at Alloy Kitchen",
     "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
     "date": "2026-10-11",
@@ -2991,6 +3043,19 @@
     "type": "Community"
   },
   {
+    "title": "Monthly Welcome Home Alliance Veteran's Coffee at the Sherbino",
+    "href": "https://sherbino.org/event/monthly-welcome-home-alliance-veterans-coffee-at-the-sherbino/2026-10-13/",
+    "date": "2026-10-13",
+    "time": "",
+    "location": "Ridgway, CO",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "A recurring monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The event offers a casual space for veterans to connect with one another and with community support.",
+    "type": "Community"
+  },
+  {
     "title": "Senior Meals",
     "href": "https://www.norwoodtown.com/2026-10-15-senior-meals",
     "date": "2026-10-15",
@@ -3000,7 +3065,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather, share a meal, and connect with neighbors. This recurring community event takes place in Norwood and is organized through…",
     "type": "Community"
   },
   {
@@ -3120,7 +3185,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday community meal program for seniors, hosted by the Town of Norwood. It offers older residents a chance to gather, share a meal, and connect with neighbors in a welcoming setting.",
     "type": "Community"
   },
   {
@@ -3185,7 +3250,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather and share a meal together. This recurring community event provides both nourishment and social connection for Norwood's…",
     "type": "Community"
   },
   {
@@ -3267,5 +3332,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Join the George and Michael Gardner Fund for the showing of Teeth to the Wind. \"It's not going to be a climbing film\" Michael Gardner claimed in his original film pitch. \"More like a rom-com?\" Along with his partner and fellow alpinist,…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "KOTO Ski Swap",
+    "href": "https://www.telluride.com/event/koto-ski-swap/",
+    "date": "2026-11-13",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/28871/464865559_570687275405719_3117454875494611862_n.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Get prepped for the winter season ahead at the annual KOTO Ski Swap at the Wilkinson Public Library. Donate your used …",
+    "type": "Community",
+    "endDate": "2026-11-16"
   }
 ]
