@@ -510,7 +510,11 @@
   },
   "county|2026-09-24|5 x 5 County Meeting - San Miguel County Hosts": {
     "sv": 4,
-    "ph": "f5486c159942d7f1"
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1071/files/agenda/2001",
+    "zoomUrl": "https://us02web.zoom.us/meeting/register/MPkylS4iTRCn1ZOARSNRPQ",
+    "meetingId": "867 6377 9971",
+    "passcode": "898059.",
+    "phone": "719-359-4580"
   },
   "tmvoa|2026-09-29|TMVOA Board of Directors Meeting": {
     "sv": 4,

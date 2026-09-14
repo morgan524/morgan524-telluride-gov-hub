@@ -1,12 +1,24 @@
 [
   {
+    "title": "All that sparkles",
+    "source": "Telluride Times",
+    "date": "September 14, 2026",
+    "firstSeen": "2026-09-14",
+    "newsTopic": "arts-culture",
+    "copy": "A free Crystal Festival comes to the Telluride Conference Center September 19–20, with minerals, fossils, jewelry, and oddities from roughly 60 vendors. Host Adrienne McElwain, a self-described \"geologist by trade and pirate by choice,\" has deep roots in the rock world. Kids get free geology treasure hunts and a microscope lab.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/arts_and_entertainment/article_be42326e-836f-4a56-a43c-bf62ddb42ea9.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/ad/1ada80a7-f736-49f1-9d14-c57b260db821/6aa480b649f93.image.png",
+    "imgHiRes": true
+  },
+  {
     "title": "States, cities sue over Trump rule seeking to deny green cards to immigrants using public benefits",
     "source": "Telluride Times",
     "date": "September 14, 2026",
     "firstSeen": "2026-09-14",
     "newsTopic": "community",
-    "copy": "Democratic-led states and cities are challenging a federal rule they say gives President Donald Trump’s administration broad discretion to deny green cards to immigrants who use food stamps and other public benefits. The lawsuits filed Monday in Manhattan federal court…",
-    "claudeSummary": false,
+    "copy": "Twenty-one states and several major cities have filed federal lawsuits challenging a revived \"public charge\" rule set to take effect Friday, which would give immigration officers broad discretion to deny green cards to immigrants who use public benefits. Critics say the rule could penalize applicants even for benefits used by their U.S. citizen children. DHS disputes the warnings.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/news/state/article_d95152ee-05ec-598d-ae2b-46c238420775.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/a9/6a9372cc-74eb-5407-a04f-aa196cf38b2f/6aa84e69528ce.image.jpg",
     "imgHiRes": true
@@ -1128,6 +1140,17 @@
     "img": ""
   },
   {
+    "title": "Town of Ridgway Housing Action Plan Draft Now Available for Review and Comment",
+    "source": "Town of Ridgway",
+    "date": "September 14, 2026",
+    "firstSeen": "2026-09-14",
+    "newsTopic": "housing",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/CO-Ridgway-HAP_Draft_091426.pdf",
+    "img": ""
+  },
+  {
     "title": "Ridgway Seeking Candidates for 2026-2027 Youth Advisory Council",
     "source": "Town of Ridgway",
     "date": "September 12, 2026",
@@ -1150,9 +1173,9 @@
     "img": ""
   },
   {
-    "title": "Ridgway Rescinds Stage 2 Fire Restrictions, Reinstates Stage 1 Fire Restrictions effective 12:01am on Thursday, Sept. 3rd - Sept. 2, 2026",
+    "title": "Ridgway Rescinds Stage 2 Fire Restrictions, Reinstates Stage 1 Fire Restrictions effective 12:01am on Thursday, Sept. 3rd",
     "source": "Town of Ridgway",
-    "date": "September 14, 2026",
+    "date": "September 2, 2026",
     "firstSeen": "2026-09-09",
     "newsTopic": "public-safety",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
