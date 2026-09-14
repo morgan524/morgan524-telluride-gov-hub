@@ -4256,31 +4256,7 @@ const BEACON_EVENTS = [
   {
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
-    date: "2026-09-08",
-    time: "6:00 PM",
-    source: "beacon",
-    sourceLabel: "Beacon",
-    category: "Community Event",
-    location: "The Well, 122 S Aspen",
-    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
-  },
-  {
-    title: "Pickleball Nights",
-    link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night Pickleball with no experience necessary. All supplies provided.",
-    date: "2026-09-10",
-    time: "7:00-9:00 PM",
-    source: "beacon",
-    sourceLabel: "Beacon",
-    category: "Community Event",
-    location: "Telluride Racket Club",
-    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
-  },
-  {
-    title: "Weekly Young Adult Gathering",
-    link: "https://www.beacontelluride.com/upcoming-events",
-    description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
+    description: "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
     date: "2026-09-15",
     time: "6:00 PM",
     source: "beacon",
@@ -4292,7 +4268,7 @@ const BEACON_EVENTS = [
   {
     title: "Pickleball Nights",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night Pickleball with no experience necessary. All supplies provided.",
+    description: "Thursday night pickleball with no experience necessary. All supplies provided.",
     date: "2026-09-17",
     time: "7:00-9:00 PM",
     source: "beacon",
@@ -4304,7 +4280,7 @@ const BEACON_EVENTS = [
   {
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
+    description: "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
     date: "2026-09-22",
     time: "6:00 PM",
     source: "beacon",
@@ -4316,7 +4292,7 @@ const BEACON_EVENTS = [
   {
     title: "Pickleball Nights",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night Pickleball with no experience necessary. All supplies provided.",
+    description: "Thursday night pickleball with no experience necessary. All supplies provided.",
     date: "2026-09-24",
     time: "7:00-9:00 PM",
     source: "beacon",
@@ -4328,7 +4304,7 @@ const BEACON_EVENTS = [
   {
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
+    description: "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
     date: "2026-09-29",
     time: "6:00 PM",
     source: "beacon",
@@ -4340,7 +4316,7 @@ const BEACON_EVENTS = [
   {
     title: "Pickleball Nights",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night Pickleball with no experience necessary. All supplies provided.",
+    description: "Thursday night pickleball with no experience necessary. All supplies provided.",
     date: "2026-10-01",
     time: "7:00-9:00 PM",
     source: "beacon",
@@ -4352,7 +4328,7 @@ const BEACON_EVENTS = [
   {
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
+    description: "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
     date: "2026-10-06",
     time: "6:00 PM",
     source: "beacon",
@@ -4364,7 +4340,7 @@ const BEACON_EVENTS = [
   {
     title: "Pickleball Nights",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night Pickleball with no experience necessary. All supplies provided.",
+    description: "Thursday night pickleball with no experience necessary. All supplies provided.",
     date: "2026-10-08",
     time: "7:00-9:00 PM",
     source: "beacon",
@@ -4376,7 +4352,7 @@ const BEACON_EVENTS = [
   {
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
+    description: "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
     date: "2026-10-13",
     time: "6:00 PM",
     source: "beacon",
@@ -4388,8 +4364,32 @@ const BEACON_EVENTS = [
   {
     title: "Pickleball Nights",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night Pickleball with no experience necessary. All supplies provided.",
+    description: "Thursday night pickleball with no experience necessary. All supplies provided.",
     date: "2026-10-15",
+    time: "7:00-9:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "Telluride Racket Club",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Weekly Young Adult Gathering",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
+    date: "2026-10-20",
+    time: "6:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "The Well, 122 S Aspen",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Pickleball Nights",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Thursday night pickleball with no experience necessary. All supplies provided.",
+    date: "2026-10-22",
     time: "7:00-9:00 PM",
     source: "beacon",
     sourceLabel: "Beacon",
@@ -4403,30 +4403,6 @@ const BEACON_EVENTS = [
 // Telluride Chamber Music concerts (telluridechambermusic.org/events).
 // Bot-refreshed by the chamber-music-events-refresh scheduled task.
 const CHAMBER_MUSIC_EVENTS = [
-  {
-    title: "Telluride Community Concert — September",
-    link: "https://telluridechambermusic.org/concert/community-sep",
-    description: "An hour of chamber music on the deck — the perfect way to unwind. Free event.",
-    date: "2026-09-10",
-    time: "6:00 PM",
-    source: "chamber-music",
-    sourceLabel: "Telluride Chamber Music",
-    category: "Concert",
-    location: "Telluride Science and Innovation Center",
-    imageUrl: "https://telluridechambermusic.org/concerts/community-sep.webp"
-  },
-  {
-    title: "Balourdet Quartet",
-    link: "https://telluridechambermusic.org/concert/balourdet",
-    description: "An evening of Ravel and Brahms in the historic Sheridan Opera House.",
-    date: "2026-09-13",
-    time: "7:00 PM",
-    source: "chamber-music",
-    sourceLabel: "Telluride Chamber Music",
-    category: "Concert",
-    location: "Sheridan Opera House, Telluride, CO",
-    imageUrl: "https://telluridechambermusic.org/concerts/balourdet.webp"
-  },
   {
     title: "Hanneke Cassel Trio",
     link: "https://telluridechambermusic.org/concert/hanneke-cassel-trio",
