@@ -109,19 +109,6 @@
     "endDate": "2026-09-20"
   },
   {
-    "title": "DIY Green Cleaning Supplies",
-    "href": "https://koto.org/event/diy-green-cleaning-supplies/",
-    "date": "2026-09-14",
-    "time": "5:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/08/DIY-CLEANING-PRODUCTS.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Have you ever wanted to make your own \"green\" cleaning solutions? Non-toxic cleaning solutions are a must have for the winter, or just anytime of year. If you have ever wanted to make your own cleaning solutions, join us as we make a spray…",
-    "type": "Community"
-  },
-  {
     "title": "DIY - Eco-Green Cleaning Products",
     "href": "https://telluridelibrary.libcal.com/event/16448515?hs=a",
     "date": "2026-09-14",
@@ -1517,6 +1504,32 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Tennis Clinic 4.0+",
+    "href": "https://koto.org/event/tennis-clinic-4-0/2026-09-22/",
+    "date": "2026-09-22",
+    "time": "11:00 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Lunch and Learn: Colorado Historic Newspapers",
+    "href": "https://koto.org/event/lunch-and-learn-colorado-historic-newspapers/",
+    "date": "2026-09-22",
+    "time": "12:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/lunch-10.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "WPL’s Alison Farnham will guide you through the Colorado Historic Newspaper Collection as well as her digitization project of local newspapers from the mid 1900s. Lunch will be provided. Please sign up in advance at telluridelibrary.org.…",
+    "type": "Community"
+  },
+  {
     "title": "ALPINE JAM",
     "href": "https://events.ourayridgwayevents.com/event/alpine-jam-8336",
     "date": "2026-09-22",
@@ -1594,6 +1607,32 @@
     "source": "Telluride.com",
     "desc": "Head to Communion for a beyond-the-basics wine tasting class! The event is limited to 25 participants, so sign-up is …",
     "type": "Food & Drink"
+  },
+  {
+    "title": "West End Trail Running",
+    "href": "https://koto.org/event/west-end-trail-running/2026-09-22/",
+    "date": "2026-09-22",
+    "time": "8:15 AM",
+    "location": "",
+    "town": "",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/hiking.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens &…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-22/",
+    "date": "2026-09-22",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Middle School Volleyball: Ouray vs Mancos",
@@ -2609,6 +2648,19 @@
     "endDate": "2026-11-03"
   },
   {
+    "title": "Ballot Issue Briefing with the League of Women Voters",
+    "href": "https://events.ourayridgwayevents.com/event/ballot-issue-briefing-with-the-league-of-women-voters",
+    "date": "2026-10-05",
+    "time": "5:30 PM",
+    "location": "Decker Community Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53976969820438/huge/596930aaaab7842412da6bae07ce1b11adcfa7f8.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The League of Women Voter's (LWV) mission is to ensure that every voter is an informed voter. The statewide measures on the November ballot are important and complex, shaping the future of Colorad on issues that matter to every voter. LWV…",
+    "type": "Community"
+  },
+  {
     "title": "Bike & Brewery Tour",
     "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     "date": "2026-10-05",
@@ -3463,6 +3515,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Join the George and Michael Gardner Fund for the showing of Teeth to the Wind. \"It's not going to be a climbing film\" Michael Gardner claimed in his original film pitch. \"More like a rom-com?\" Along with his partner and fellow alpinist,…",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Ridgway Independent Film Fest 2026",
+    "href": "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-2026",
+    "date": "2026-11-13",
+    "time": "4:00 PM",
+    "location": "The Sherbino",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52598272968905/huge/c44b2640e412b36de53d91eef3c5e204dac6a8b4.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "November 13 – November 15 12 Years of Fierce, Fearless, Independent Film The Ridgway Independent Film Festival (RIFF) returns in 2026 with its 12th year of celebrating bold storytelling, emerging filmmakers, and the power of community…",
     "type": "Arts & Film"
   },
   {

@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 9-14-26",
+    "source": "KOTO Community Radio",
+    "date": "September 15, 2026",
+    "newsTopic": "infrastructure",
+    "copy": "Gondola Replacement Project Moves Forward; Holocaust Learning Experience Honors the Past and Inspires the Future",
+    "href": "https://koto.org/news/newscast-9-14-26/"
+  },
+  {
     "title": "Newscast 9-11-26",
     "source": "KOTO Community Radio",
     "date": "September 12, 2026",
@@ -46,13 +54,5 @@
     "newsTopic": "housing",
     "copy": "Telluride Looks for Outside Assessment on Rental Housing Policies; Exploring the Living History, Stolen Pasts, and Future of American Archaeology; UnBOCES Supports Students in Educational Journey",
     "href": "https://koto.org/news/newscast-9-2-26/"
-  },
-  {
-    "title": "Newscast 8-31-26",
-    "source": "KOTO Community Radio",
-    "date": "September 1, 2026",
-    "newsTopic": "community",
-    "copy": "Coming Up Next, Telluride; Telluride’s Alderwild Swan Song",
-    "href": "https://koto.org/news/newscast-8-31-26/"
   }
 ]
