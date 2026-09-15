@@ -160,6 +160,26 @@
     "hook": ""
   },
   {
+    "source": "med",
+    "sourceLabel": "Telluride Regional Medical Center",
+    "title": "Regular Board Meeting -- Special Meeting",
+    "date": "2026-09-17",
+    "time": "",
+    "location": "333 W Colorado Ave (2nd Floor), Telluride / Zoom",
+    "agendaUrl": "",
+    "packetUrl": "",
+    "link": "https://www.tellmed.org/files/61309e97c/THD+Special+Bd+Mtg+Agenda+9.17.26.pdf",
+    "hasAgenda": true,
+    "summary": "",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "",
+    "commentEmail": "bodadmin@tellmed.org",
+    "hook": ""
+  },
+  {
     "source": "telluride",
     "sourceLabel": "Town of Telluride",
     "title": "Special Meeting - Planning & Zoning Commission",

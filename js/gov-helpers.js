@@ -833,10 +833,7 @@ const MEETING_PREVIEWS = {
     "The Telluride Liquor Licensing Authority is expected to review liquor license applications or modifications requiring local approval. Both the Authority and the Colorado Department of Revenue must consent before any license is issued or amended. New licenses and appeals are handled separately by the Town Council.",
 
   "county|2026-10-14|Board of County Commissioners Work Session":
-    "Board will consider matters including material hauling services, construction of a fuel island canopy, jail painting, a Lawson Hill Connector Trail project, and an update to the county's multi-jurisdictional all-hazard mitigation plan. Procurement opportunities across these areas suggest a focus on infrastructure maintenance and emergency planning.",
-
-  "county|2026-09-15|Housing Code Update SSR":
-    "Board will consider proposed changes to San Miguel County's Land Use Code aimed at reducing regulatory barriers to affordable and workforce housing. Discussion will focus on refining draft recommendations, particularly around a proposed Community Housing Zone, as part of an ongoing code audit funded by Colorado's Proposition 123 grant."
+    "Board will consider matters including material hauling services, construction of a fuel island canopy, jail painting, a Lawson Hill Connector Trail project, and an update to the county's multi-jurisdictional all-hazard mitigation plan. Procurement opportunities across these areas suggest a focus on infrastructure maintenance and emergency planning."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -907,6 +904,106 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "Attached is the Parish Bulletin for September 13. As a reminder, always check the parish calendar for the most updated information. REMINDER: Due to a Diocese of Pueblo Clergy Retreat the week of September 14-18, there will be no Holy ...",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-last-call-for-parish-mission/",
+    img: ""
+  },
+  {
+    title: "A barrel of fun on Labor Day",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.ouraynews.com/2026/09/09/barrel-fun-labor-day/",
+    img: ""
+  },
+  {
+    title: "Water restrictions exception, not rule",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "community",
+    copy: "In the early days of summer, it remained a matter of some debate where the drought of 2026 ranked in the annals of long, hot Colorado summers. For Cary Denison, Ouray County’s representative on the Colorado River Water Conservation District, that debate is settled. “It’s absolutely the worst year I’",
+    href: "https://www.ouraynews.com/2026/09/09/water-restrictions-exception-not-rule/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Trump declares disaster for fire",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "public-safety",
+    copy: "Move frees up federal relief money President Donald Trump approved a major disaster declaration for the Gold Mountain and Aspen Acres fires, unlocking millions of dollars in Federal Emergency Management Agency relief funds for the state. Federal and state officials confirmed Friday that Trump approv",
+    href: "https://www.ouraynews.com/2026/09/09/trump-declares-disaster-fire/",
+    img: ""
+  },
+  {
+    title: "Crews working to plug old water well",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "infrastructure",
+    copy: "It’s not what you think. A towering steel drill that’s been perched along the side of U.S. Highway 550 in recent weeks isn’t probing for gas, or oil, or even a route to the Far East. The operation is instead part of a state program to plug thousands of abandoned or “orphaned” wells across Colorado. ",
+    href: "https://www.ouraynews.com/2026/09/09/crews-working-plug-old-water-well/",
+    img: ""
+  },
+  {
+    title: "Parking enforcement nixes popular highway camping spot",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "infrastructure",
+    copy: "Officials cite concerns about safety, health at Tuffy s Corner A highway pullout popular for overnight camper parking north of Ouray has been empty in recent weeks since ‘no camping’ signs were installed. The wide gravel shoulder following the outside curve of U.S. Highway 550 between the Whispering",
+    href: "https://www.ouraynews.com/2026/09/09/parking-enforcement-nixes-popular-highway-camping-spot/",
+    img: ""
+  },
+  {
+    title: "Fourteen measures to appear on statewide ballot",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "government",
+    copy: "The Colorado secretary of state’s office on Friday certified the list of ballot measures going before voters in November 2026 — and once again, the list is a long one. A total of 14 measures will be decided by Colorado voters this year. The figure ties a record for the most questions put to voters i",
+    href: "https://www.ouraynews.com/2026/09/09/fourteen-measures-appear-statewide-ballot/",
+    img: ""
+  },
+  {
+    title: "Disaster relief tax an investment in resilience",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "government",
+    copy: "Dear Editor: I am writing to express my strong support for a dedicated Ouray County tax to provide funding for disaster relief, emergency preparedness, and community recovery. Those of us who live in Ouray County understand both the extraordinary beauty of our mountain environment and the risks that",
+    href: "https://www.ouraynews.com/2026/09/09/disaster-relief-tax-investment-resilience/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Grateful to tell stories here, ink stains and all",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "community",
+    copy: "Sometimes, I journal to process major life events. I’ve lived in a lot of places worth journaling about and my latest move is no exception. I’ve been in Ouray for six weeks now and I’m struck by the similarities to a mountain village in Japan where I taught English for three years after college. Kos",
+    href: "https://www.ouraynews.com/2026/09/09/grateful-tell-stories-ink-stains/",
+    img: ""
+  },
+  {
+    title: "Looking Back",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "health",
+    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago September 8, 1966 The Colorado Board of Public Health has ordered Ouray to appear before that body in Denver on Sept. 13 at 4:20 p.m. to explain the steps Ouray is taking to establish a",
+    href: "https://www.ouraynews.com/2026/09/09/looking-back-20260910-0159-410636/",
+    img: ""
+  },
+  {
+    title: "Colorado’s rocky road to statehood",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 10, 2026",
+    newsTopic: "infrastructure",
+    copy: "Last month Colorado celebrated its 150th anniversary of statehood. Many of us assume that statehood was inevitable for this place we love. However, the 17-year quest was met with significant resistance from residents and national officials. Long before President Ulysses S. Grant signed Proclamation ",
+    href: "https://www.ouraynews.com/2026/09/09/colorados-rocky-road-statehood/?ta_paidstory",
     img: ""
   },
   {
@@ -1680,6 +1777,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "County Public Health introduces ‘Free Care Boxes’ at local libraries",
+    source: "Telluride Times",
+    date: "September 15, 2026",
+    firstSeen: "2026-09-15",
+    newsTopic: "health",
+    copy: "San Miguel County Public Health installed \"Free Care Boxes\" at Wilkinson Public Library and Lone Cone Library on Sept. 1, stocked with Narcan, diapers, menstrual products, oral-hygiene supplies, and QR codes linking to local health resources. The cabinets are walk-up, no appointment needed. Usage will be tracked to help shape future offerings.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_2028bfb0-d8b6-412b-bfdb-dcd6d88b72df.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/73/4734af0f-135b-4e8a-ac19-393d27167eb0/6aa954a6cacc8.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Alpine Wellness lawsuit: It ain’t over ‘til it’s over",
     source: "Telluride Times",
@@ -2774,14 +2883,14 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Ridgway Planning Commission Meeting Agenda",
+    title: "Ridgway Planning Commission Meeting Agenda Revised",
     source: "Town of Ridgway",
     date: "September 16, 2026",
-    firstSeen: "2026-09-12",
+    firstSeen: "2026-09-15",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-Planning-Commission-Meeting-Packet---September-16%2C-2026-%281%29.pdf",
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-Planning-Commission-Meeting-Packet---September-16%2C-2026--REVISION-1.pdf",
     img: ""
   },
   {
@@ -3366,17 +3475,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "West End Trail Running",
-    link: "https://koto.org/event/west-end-trail-running/2026-09-15/",
-    description: "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens & adults 15 and older are welcome to participate. Contact director Alicia O'Connel at montrosewestrec@gmail.com or text her at 302-690-0160 for more information, including a nominal registration fee.",
-    pubDate: "2026-09-15T08:15:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
   {
     title: "Tennis Clinic 3.0-4.0",
     link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-15/",
@@ -5793,17 +5891,6 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "NWC Rescheduled To 09 22 2026",
-    link: "https://www.norwoodtown.com/2026-09-08-nwc-rescheduled-to-09-22-2026",
-    description: "",
-    pubDate: "2026-09-08T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Government Meeting",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-09-09-board-of-trustees-meeting",
     description: "",
@@ -5982,17 +6069,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Mountain Village Matters radio show",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-matters-radio-show/",
-    description: "The Town of Mountain Village presents Mountain Village Matters on KOTO Community Radio. Tune in to hear Communications Manager Kathrine Warren chatting with",
-    pubDate: "2026-09-14T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49725/koto_show.png"
-  },
   {
     title: "Bike & Brewery Tour",
     link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
@@ -7852,7 +7928,7 @@ const RIDGWAY_AGENDA_MAP = {
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.03.11%20TC%20Agenda%20Packet.pdf",
 
   "September 16, 2026":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-Planning-Commission-Meeting-Packet---September-16%2C-2026-%281%29.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-Planning-Commission-Meeting-Packet---September-16%2C-2026--REVISION-1.pdf",
 
   "August 19, 2026":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-Planning-Commission-Meeting-Packet---August-19%2C-2026.pdf",

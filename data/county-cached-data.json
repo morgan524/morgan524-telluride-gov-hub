@@ -179,5 +179,14 @@
     "location": "Norwood Sheriff Annex, 1110 Summit St, Norwood, CO 81423",
     "civicClerkId": 902,
     "note": null
+  },
+  {
+    "date": "November 23, 2026",
+    "time": "4:00 PM",
+    "title": "Open Space Commission Meeting",
+    "type": "other",
+    "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+    "civicClerkId": 1059,
+    "note": null
   }
 ]
