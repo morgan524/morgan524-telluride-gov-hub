@@ -126,11 +126,12 @@ const COUNTY_CACHED_DATA = [
   {
     date: "September 23, 2026",
     time: "9:30 AM",
-    title: "Board of County Commissioners Work Session",
+    title: "Board of County Commissioners Special Meeting",
     type: "bocc",
     location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
     civicClerkId: 870,
-    note: null
+    note: null,
+    special: true
   },
   {
     date: "September 24, 2026",
@@ -148,6 +149,15 @@ const COUNTY_CACHED_DATA = [
     type: "other",
     location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
     civicClerkId: 1057,
+    note: null
+  },
+  {
+    date: "September 30, 2026",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Work Session",
+    type: "bocc",
+    location: "333 West Colorado Ave, 2nd Floor, Telluride, CO 81435",
+    civicClerkId: 1073,
     note: null
   },
   {

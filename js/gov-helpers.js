@@ -336,7 +336,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-09-24|Planning & Zoning Commission - Sep 24 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104","sv":4,"ph":"62adcd3b9f83c037"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/pvzPtHtIRZmah22XUU2xLg","meetingId":"846 6324 0731","passcode":"464545","phone":"301-715-8592"},
 
   "telluride|2026-09-24|Planning & Zoning Commission Chair - Sep 24 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8103","sv":4,"ph":"313a820643e5b960"},
@@ -411,10 +411,10 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"49e704e3c3bab858"},
 
   "telluride|2026-10-08|Special Meeting - Planning & Zoning Commission - Oct 08 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8311","sv":4,"ph":"8fb47750538763cf"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8311","sv":4,"ph":"4318f9c666b0b315"},
 
   "county|2026-10-08|Planning Commission Meeting":
-    {"sv":4,"ph":"b7c74705fcca6b2f"},
+    {"sv":4,"ph":"0a81341859740545"},
 
   "telluride|2026-09-10|San Miguel Authority for Regional Transportation - Sep 10 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8314","zoomUrl":"https://us02web.zoom.us/j/89045288089?pwd=b1Gfa5STKy8Wstoqdc8oBxCCs1s6pg.1","sv":4},
@@ -462,7 +462,16 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "airport|2026-10-15|TRAA Board of Commissioners Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"}
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "med|2026-09-17|Regular Board Meeting":
+    {"agendaUrl":"https://www.tellmed.org/files/61309e97c/THD+Special+Bd+Mtg+Agenda+9.17.26.pdf","zoomUrl":"https://us02web.zoom.us/j/81133887855?from=addon","meetingId":"811 3388 7855","sv":4},
+
+  "county|2026-09-23|Board of County Commissioners Special Meeting":
+    {"sv":4,"ph":"7751bc604656aec0"},
+
+  "county|2026-09-30|Board of County Commissioners Work Session":
+    {"sv":4,"ph":"babd88802ce87b3a"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -833,7 +842,16 @@ const MEETING_PREVIEWS = {
     "The Telluride Liquor Licensing Authority is expected to review liquor license applications or modifications requiring local approval. Both the Authority and the Colorado Department of Revenue must consent before any license is issued or amended. New licenses and appeals are handled separately by the Town Council.",
 
   "county|2026-10-14|Board of County Commissioners Work Session":
-    "Board will consider matters including material hauling services, construction of a fuel island canopy, jail painting, a Lawson Hill Connector Trail project, and an update to the county's multi-jurisdictional all-hazard mitigation plan. Procurement opportunities across these areas suggest a focus on infrastructure maintenance and emergency planning."
+    "Board will consider matters including material hauling services, construction of a fuel island canopy, jail painting, a Lawson Hill Connector Trail project, and an update to the county's multi-jurisdictional all-hazard mitigation plan. Procurement opportunities across these areas suggest a focus on infrastructure maintenance and emergency planning.",
+
+  "med|2026-09-17|Regular Board Meeting":
+    "Board will consider interim leadership for the Telluride Regional Medical Center, including a closed executive session to discuss the personnel matter, followed by a potential board action on the appointment.",
+
+  "county|2026-09-23|Board of County Commissioners Special Meeting":
+    "Board will consider matters related to San Miguel County operations, potentially including procurement items such as material hauling, trail construction, fuel island canopy work, and jail repainting contracts. Additional context from related legal notices suggests ongoing county administrative and financial activity in the surrounding area.",
+
+  "county|2026-09-30|Board of County Commissioners Work Session":
+    "Commissioners are expected to discuss county procurement matters, including material hauling, trail construction for the Lawson Hill Connector, fuel island canopy construction, and jail painting projects. Additional administrative and operational items may also be addressed during the work session."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1285,7 +1303,7 @@ const MANUAL_SUMMARIES = {
     "The September 24, 2026 MED Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-09-24|Planning & Zoning Commission - Sep 24 2026":
-    "The September 24, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "Two work sessions anchor the September 24 P&Z meeting. First up: a proposed employee housing project at the northwest corner of Telluride Middle-High School (725 W Colorado), brought by the Telluride School District R1 under an Intergovernmental Agreement with the Town — this is still early-stage, a work session rather than a formal application. Second: continued discussion of potential amendments to Land Use Code sections covering landscaping requirements (LUC 3-502) and tree maintenance, removal, and relocation (LUC 3-505). The Shandoka Lot Redevelopment preliminary PUD — a proposal to increase dimensional limits and provide public benefits on Town-owned land at 860 Black Bear Rd — was scheduled for a public hearing but has been continued without discussion to the October 22 meeting due to staff capacity.",
 
   "telluride|2026-09-24|Planning & Zoning Commission Chair - Sep 24 2026":
     "The September 24, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
@@ -1363,7 +1381,7 @@ const MANUAL_SUMMARIES = {
     "The October 8, 2026 Special Meeting - Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "county|2026-10-08|Planning Commission Meeting":
-    "The October 8, 2026 Planning Commission agenda hasn't been posted yet.",
+    "The October 8 Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-09-10|San Miguel Authority for Regional Transportation - Sep 10 2026":
     "SMART's board meets virtually on September 10th with a full slate of financial and operational business. The board will act on the FY25 audit report and accept those financials — a routine but consequential step in closing out a fiscal year. More forward-looking: the board votes on hiring PFM Asset Management as SMART's investment advisor and entering the CSIP investment pool, which determines how the authority manages what is now a significant revenue stream. FY27 budget development goes to discussion, an early but important moment given the scale of spending the gondola program has put in motion. The gondola project itself gets a verbal update — the one item everyone in the valley is watching. September operations round out the agenda, along with an executive session on personnel matters.",
@@ -1411,7 +1429,16 @@ const MANUAL_SUMMARIES = {
     "The October 15, 2026 Mountain Village Town Council Meeting agenda hasn't been posted yet.",
 
   "airport|2026-10-15|TRAA Board of Commissioners Meeting":
-    "The October 15, 2026 TRAA Board of Commissioners Meeting agenda hasn't been posted yet."
+    "The October 15, 2026 TRAA Board of Commissioners Meeting agenda hasn't been posted yet.",
+
+  "med|2026-09-17|Regular Board Meeting":
+    "A short special meeting — just an hour — with one real item on the table: the interim leadership of Telluride Regional Medical Center. The board will go into executive session under the personnel exemption, then come back out to take public action on who's running the hospital in the near term. That's the whole meeting. Public comment is open at the top, via Zoom.",
+
+  "county|2026-09-23|Board of County Commissioners Special Meeting":
+    "The September 23 Board of County Commissioners Special Meeting agenda hasn't been posted yet.",
+
+  "county|2026-09-30|Board of County Commissioners Work Session":
+    "The September 30, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1777,6 +1804,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Full circle connection",
+    source: "Telluride Times",
+    date: "September 15, 2026",
+    firstSeen: "2026-09-15",
+    newsTopic: "community",
+    copy: "Dodi Darrow — longtime local trainer and co-founder of Box Canyon Booties — now runs the Women's Wellness Circle, weekly group sessions blending breathwork, discussion, and somatic massage for 8–12 women. The goal is connection and community rooting. A few spots remain in upcoming sessions; reach her at dodidarrow@gmail.com.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/business/article_e109193c-8529-4c9d-9d4d-f165b9a34db0.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/37/237c3ac0-5d37-49ca-a5d1-457db860c1b3/6aa3a2d54201c.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "County Public Health introduces ‘Free Care Boxes’ at local libraries",
     source: "Telluride Times",
@@ -2767,6 +2806,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
   },
   {
+    title: "Town of Telluride Downgrades to Stage 1 Fire Restrictions",
+    source: "Town of Telluride",
+    date: "August 26, 2026",
+    newsTopic: "public-safety",
+    copy: "(August 25, 2026) – Following improved fire conditions across the region, Town Manager Zoe Dohnal has downgraded fire restrictions within the Town of Telluride from Stage 2 to Stage 1, effective 12:01 a.m. MT on Wednesday, August 26, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=403",
+    img: ""
+  },
+  {
     title: "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
     source: "San Miguel County",
     date: "September 10, 2026",
@@ -2783,6 +2831,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
+  },
+  {
+    title: "Waste Tire Collection Event",
+    source: "San Miguel County",
+    date: "August 24, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
   },
   {
     title: "Tomboy Road Closed Intermittently Tuesday 9/15 - Friday 9/18",
@@ -2809,6 +2866,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "community",
     copy: "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=45",
+    img: ""
+  },
+  {
+    title: "Stage 1 Fire Restrictions In Effect",
+    source: "Town of Telluride",
+    date: "August 26, 2026",
+    newsTopic: "public-safety",
+    copy: "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=65",
     img: ""
   },
   {
@@ -3448,39 +3514,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Tennis Clinic 3.0-4.0",
-    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-15/",
-    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-15T09:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Tennis Clinic 4.0+",
-    link: "https://koto.org/event/tennis-clinic-4-0/2026-09-15/",
-    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-15T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Online Author Talk with Priya Parker",
-    link: "https://koto.org/event/online-author-talk-with-priya-parker/",
-    description: "Join us for a paradigm-shifting, essential event as we sit down with world-renowned master facilitator Priya Parker to discuss her groundbreaking new book, The Art of Fighting: The Transformative Power of Conflict. In The Art of Fighting, Priya Parker explains that we can’t form and grow effective relationships without a fight. She rejects the idea that conflict is abnormal or that good groups don’t fight. All groups change and evolve; indeed, it’s because people disagree that good groups flourish. As she did in the now-classic The Art of Gathering, Parker draws on her far-reaching experience as a conflict facilitator, her own detailed research, and real-world examples to lay out the ways that people can identify disputes, determine how to address them, and what to do if they are insurmountable. …",
-    pubDate: "2026-09-15T14:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
   {
     title: "Spanish Happy Hour at La Cocina",
     link: "https://koto.org/event/spanish-happy-hour-at-la-cocina/",
@@ -5184,7 +5217,7 @@ const OURAY_RIDGWAY_EVENTS = [
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Ironton Park \"Staging Area\"",
-    imageUrl: "https://localist-images.azureedge.net/photos/53737767968998/huge/e72d7dc21b85f92782e5ed31ef6a68173f7066be.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53737767968998/huge/f469c4e09781c79bce197b5a4faceba56bdbed65.jpg"
   },
   {
     title: "Exceptional Women of Ouray County",
@@ -5392,6 +5425,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/happy-little-trees-classes-the-wright-6743",
     description: "\"ARIZONA SPLENDOR\" Join Emma Kalff for a morning of coffee and painting at the Wright Opera House Community Room. Participants will follow along with a classic Bob Ross episode and create their own Bob Ross–style landscape painting. All supplies are included, and no prior painting experience is necessary. Just bring your curiosity and enjoy a relaxed, creative morning inspired by the joy of painting. FULL SCHEDULE April 11 — Horizons West May 9 — Barn at Sunset June 13 — LIttle House by the Road July 11 — Mountain Splendor August 8 — Quiet Woods September 12 — Arizona Splendor October 3 — Meadow Stream November 14 — Lonely Retreat December 12 — Snow Trail Part of Classes @ the Wright, bringing creativity, learning, and community together in downtown Ouray since Letitia Wright first dreamed it up. View on site | Email this event",
     pubDate: "2026-10-03T16:30:00.000Z",
+    endDate: "2026-11-14",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5452,7 +5486,7 @@ const OURAY_RIDGWAY_EVENTS = [
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53976969820438/huge/596930aaaab7842412da6bae07ce1b11adcfa7f8.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53983238349831/huge/7d761122bc0d275db26bc59a1c4db709cbac5e7a.jpg"
   },
   {
     title: "CORAL SKYE",
@@ -5854,6 +5888,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-2026",
     description: "November 13 – November 15 12 Years of Fierce, Fearless, Independent Film The Ridgway Independent Film Festival (RIFF) returns in 2026 with its 12th year of celebrating bold storytelling, emerging filmmakers, and the power of community through the lens of independent film. Rooted in a volunteer-driven, grassroots effort born shortly after Ridgway became one of Colorado’s first Certified Creative Districts, RIFF continues to evolve while honoring its origins. This year, RIFF returns to its longtime home in November, taking place November 13–15, 2026, with a refreshed structure designed to create deeper connection and conversation. RIFF 2026 will open with a Friday night kickoff event, followed by two full days of film screenings on Saturday and Sunday at the historic Sherbino Theater in downtown Ridgway. …",
     pubDate: "2026-11-13T23:00:00.000Z",
+    endDate: "2026-11-14",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6740,6 +6775,17 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/61644/img_7366.800x533.webp"
   },
   {
+    title: "Blues Brunch",
+    link: "https://www.telluride.com/event/blues-brunch/",
+    description: "Gather at Black Iron Kitchen + Bar for a Sunday brunch where mountain mornings and live music set the tone. From 7:00AM …",
+    pubDate: "2026-09-20",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63527/blues_brunch.800x533.webp"
+  },
+  {
     title: "Wine Tasting 101",
     link: "https://www.telluride.com/event/wine-tasting-101/",
     description: "Head to Communion for a beyond-the-basics wine tasting class! The event is limited to 25 participants, so sign-up is …",
@@ -7446,6 +7492,25 @@ const LEGAL_NOTICES = [
     address: "San Juan Vista Subdivision, Filing No. 1, SE1/4SE1/4 Section 12, S1/2, S1/2N1/2 and N1/2NE1/4 Section 13, Township 44 North, Range 10 West, N.M.P.M., San Miguel County, Colorado",
     noticeKey: "26CW3039",
     caseNumber: "26CW3039"
+  },
+  {
+    title: "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominium (Sale No. 202605)",
+    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "Public Trustee Brandi R. Hatfield of San Miguel County is conducting a foreclosure sale on a deed of trust originally granted by Ryan Pfaff, with the current debt holder being Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust. The property is Condominium Unit 7 at Double Diamond Condominium, commonly known as 350 S Mahoney Dr Unit 7, Telluride, CO 81435, with an outstanding principal balance of approximately $1,199,032.37. The public auction will be held at 10:00 A.M. on September 3, 2026, at 305 W. Colorado Avenue, East entry, Telluride, CO.",
+    deadline: "2026-09-03",
+    expires: "2026-09-03",
+    dates: "8/13",
+    papers: ["ttimes_0813"],
+    url: "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
+    address: "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
+    noticeKey: "foreclosure-sale-202605",
+    caseNumber: "202605"
   }
 ];
 
@@ -8857,10 +8922,11 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "September 24, 2026",
     title: "Planning & Zoning Commission",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
-    civicwebId: 8104
+    civicwebId: 8104,
+    packetUrl: "https://telluride-co.civicweb.net/document/444920/"
   },
   {
     date: "September 30, 2026",

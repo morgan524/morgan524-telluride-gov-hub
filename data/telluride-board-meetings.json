@@ -42,10 +42,11 @@
     "date": "September 24, 2026",
     "title": "Planning & Zoning Commission",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104",
-    "hasAgenda": false,
+    "hasAgenda": true,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "",
-    "civicwebId": 8104
+    "civicwebId": 8104,
+    "packetUrl": "https://telluride-co.civicweb.net/document/444920/"
   },
   {
     "date": "September 30, 2026",
