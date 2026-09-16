@@ -497,6 +497,14 @@ const DEEP_DIVE_UPDATES = [
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-09-16",
+    title: "Two bucks a month — that's the fight?",
+    body: "San Miguel Power Association is adding a $2.00 monthly fee for paper billing, set to kick in October 29, 2026. Small number, real disagreement. Some folks will say it's a nudge toward going paperless that saves everyone money in the long run. Others — especially residents without reliable internet, or those who just want a paper record — will say a utility shouldn't be penalizing customers for how they receive a bill. So: is a $2.00 paper billing fee a reasonable efficiency move, or a quiet burden on the wrong people?",
+    choices: ["Fair nudge, go paperless", "Wrong way to push people", "Two bucks isn't the point", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-09-15",
     title: "A trail, some hauling, and a foreclosure — busy week for the county",
     body: "The Board of County Commissioners has a full plate September 16: procurement on material hauling, a trail connector project, and a fuel island canopy. That's routine enough. But tucked into the same meeting is a federal environmental assessment for hazardous fuels management in the Uncompahgre and Gunnison National Forests — and a foreclosure sale in Telluride Mountain Village.\n\nThe trail connector could be a genuine community win. The federal fuels work is already on the recent radar up here. But a foreclosure in Mountain Village, landing quietly in a procurement agenda — does that deserve more public attention than it's getting?",
@@ -727,14 +735,6 @@ const DAILY_QUESTIONS = [
     choices: ["Protects legitimate projects", "Ties the community's hands", "Depends on the project", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-08-17",
-    title: "Foreclosure on Stonegate — what does it signal?",
-    body: "A vacant lot on Stonegate Drive and a Double Diamond condominium unit are both headed to foreclosure sale, according to notices tied to the upcoming CWAB meeting. Up here, distressed properties don't stay quiet — they tend to surface bigger questions. Some neighbors see foreclosures as a market correction that could open doors for locals. Others worry that the buyers who show up at these sales make affordability harder, not easier.\n\nWhen a property in Telluride or Mountain Village goes to foreclosure, who actually benefits?",
-    choices: ["Opens doors for locals", "Usually helps outside buyers", "Depends on the property", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -833,10 +833,7 @@ const MEETING_PREVIEWS = {
     "Board will consider matters related to San Miguel County operations, potentially including procurement items such as material hauling, trail construction, fuel island canopy work, and jail repainting contracts. Additional context from related legal notices suggests ongoing county administrative and financial activity in the surrounding area.",
 
   "county|2026-09-30|Board of County Commissioners Work Session":
-    "Commissioners are expected to discuss county procurement matters, including material hauling, trail construction for the Lawson Hill Connector, fuel island canopy construction, and jail painting projects. Additional administrative and operational items may also be addressed during the work session.",
-
-  "county|2026-09-16|Board of County Commissioners Meeting":
-    "Board will consider adopting the 2024 International Building Code and Colorado Low Energy & Carbon Code. Additional business may include routine county updates, public comment periods, and administrative matters. The meeting takes place September 16, 2026, at 9:30 AM in Telluride, with hybrid attendance options available."
+    "Commissioners are expected to discuss county procurement matters, including material hauling, trail construction for the Lawson Hill Connector, fuel island canopy construction, and jail painting projects. Additional administrative and operational items may also be addressed during the work session."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1770,6 +1767,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Commissioners approve AMI increase for some Pinion Park units",
+    source: "Telluride Times",
+    date: "September 16, 2026",
+    firstSeen: "2026-09-16",
+    newsTopic: "government",
+    copy: "The San Miguel Board of County Commissioners (BOCC), acting as the San Miguel County Housing Authority, voted to increase the area median income (AMI) eligibility for certain units in Pinion Park during a regular meeting on Wednesday, Sept. 9.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/article_2f591495-4a27-44e9-8d84-3fbb62a91ae8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/bd/9bd60221-b2e7-408d-ba91-2b111679ca3b/6aa4836131e45.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Endorsement for Dan Couvault",
     source: "Telluride Times",
     date: "September 15, 2026",
@@ -1778,7 +1787,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A crisis clinician with 30+ years in mental health work endorses Sheriff Dan Covault, citing his focus on crisis response training for deputies and collaboration with mental health responders. The letter notes four suicides in four months and flags that a prior administration ordered deputies not to respond to mental health calls. Readers are directed to the April 22 commissioners meeting recording for both candidates' interviews.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_d34e163d-3fdf-45ad-8736-88087204fe0e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     letterAuthor: "Melissa King LAC",
     isLetter: true,
     imgHiRes: true
@@ -1792,7 +1801,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A Telluride resident is pointing to San Rafael, CA, where multiple developers competed to house affordable units on a single 2.5-acre site — giving the public real cost and density tradeoffs to weigh. The letter questions why Telluride is moving forward with a single town-developed plan before costs are known. Worth watching how council responds.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_9823f845-c4a0-4cf8-afe5-28cb216da161.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     letterAuthor: "Madelaine Whiteman",
     isLetter: true,
     imgHiRes: true
@@ -4022,81 +4031,70 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/17514627?hs=a",
-    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    pubDate: "2026-09-15T16:30:00.000Z",
+    title: "Beans & Books",
+    link: "https://telluridelibrary.libcal.com/event/16249443?hs=a",
+    description: "8:30 AM – 9:30 AM · What better way to start out your day than by sipping on a hot cup of coffee while chatting with other bibliophiles about books? It&#39;s a chance to talk about whatever you have been reading (or listening to) and hear about what other folks have been reading (or listening to). Drop in anytime at the beautiful Coffee Cowboy General Store on the corner of Pacific and Willow the third Wednesday of every month!",
+    pubDate: "2026-09-16T14:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+    location: "Coffee Cowboy General Store",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1762980178.jpg"
   },
   {
-    title: "Teen Cook",
-    link: "https://telluridelibrary.libcal.com/event/17486115?hs=a",
-    description: "2:00 PM – 3:00 PM · Join the WPL Every Tuesday after school for Teen Cook. We will cook a different recipe from scratch, and have enough to share with those around!",
-    pubDate: "2026-09-15T20:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_27_00.png"
-  },
-  {
-    title: "The Art of Fighting with Priya Parker (Online Author Talk)",
-    link: "https://telluridelibrary.libcal.com/event/17358146?hs=a",
-    description: "2:00 PM – 3:00 PM · Join us for a paradigm-shifting, essential event as we sit down with world-renowned master facilitator Priya Parker to discuss her groundbreaking new book, The Art of Fighting: The Transformative Power of Conflict . In The Art of Fighting , Priya Parker explains that we can't form and grow effective relationships without a fight. She rejects the idea that conflict is abnormal or that good groups don't fight. All groups change and evolve; indeed, it's because people disagree that good groups flourish. As she did in the now-classic The Art of Gathering , Parker draws on her far-reaching experience as a conflict facilitator, her own detailed research, and real-world examples to lay out the ways that people can identify disputes, determine how to address them, and what to do if they are insurmountable. …",
-    pubDate: "2026-09-15T20:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_07_16_02_03.jpg"
-  },
-  {
-    title: "I Heart Art",
-    link: "https://telluridelibrary.libcal.com/event/17292101?hs=a",
-    description: "2:30 PM – 4:00 PM · Looking for a fun and enriching way to spend your afternoons? Join us Tuesdays for I Heart Art, designed especially for kids aged 5-12!  &iquest;Buscas una manera divertida de pasar tus tardes? &iexcl;Unete a nuestro programa extracurricular, dise&ntilde;ado especialmente para ni&ntilde;os de 5 a 12 a&ntilde;os!",
-    pubDate: "2026-09-15T20:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_39_32.png"
-  },
-  {
-    title: "Talking Gourds Presents: Stories and Poems",
-    link: "https://telluridelibrary.libcal.com/event/15798227?hs=a",
-    description: "5:15 PM – 7:00 PM · The Telluride Institute's Talking Gourds Poetry Program is hosting a live Stories & Poems series at the Wilkinson Public Library magazine room on the third Tuesday of every month at 5:15 pm. Following the featured poet&#39;s or story teller&#39;s reading we will hold a Talking Gourds sharing circle going around the room to let everyone speak. Attendees are encouraged to bring their own work or someone else's that they like to share. For more information, visit the Telluride Institute Talking Gourds website: tellurideinstitute.org/talking-gourds Jan. 20 / Tanya Ishikawa of Montrose Feb. 17 / Karen Bellerose of Lawson Mar. 17 / Mary Hearding of Rico Apr 21 / Joan Shapiro of Ridgway May 19 / Danny Rosen of Fruita June 16 / Paulo Munguia of Montrose July 21 / Peter Waldor of Trout Lake Aug. …",
-    pubDate: "2026-09-15T23:15:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_04_15_58_44.jpg"
-  },
-  {
-    title: "Spanish Happy Hour",
-    link: "https://telluridelibrary.libcal.com/event/16008003?hs=a",
-    description: "5:30 PM – 6:30 PM · Practice your Spanish skills with other Spanish speakers at La Cocina. The Library will provide appetizers, and the bar will be available for you to purchase a beverage of your choice. Registration is not required, but it helps us have an idea of how many people will be in attendance, and therefore how much food to order.  All levels welcome!",
-    pubDate: "2026-09-15T23:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "La Cocina de Luz Restaurant",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715701794.jpg"
-  },
-  {
-    title: "Zumba with Marlen",
-    link: "https://telluridelibrary.libcal.com/event/17477072?hs=a",
-    description: "5:30 PM – 6:30 PM · Ditch the workout and join the party! Zumba&reg; is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. &iexcl;Olvida el entrenamiento y &uacute;nete a la fiesta! Zumba&reg; es una clase de fitness de baile de alta energ&iacute;a que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calor&iacute;as. …",
-    pubDate: "2026-09-15T23:30:00.000Z",
+    title: "Baby Bop",
+    link: "https://telluridelibrary.libcal.com/event/17544521?hs=a",
+    description: "9:00 AM – 10:00 AM · Baby Bop is a fun, upbeat babywearing dance class designed for caregivers and little ones to move together through easy-to-follow routines. Expect feel-good music, simple choreography, and a supportive atmosphere focused on bonding, movement, and joy — no dance experience required! Baby Bop es una clase de baile divertida y animada, dise&ntilde;ada para que cuidadores y peque&ntilde;os se muevan juntos mediante rutinas f&aacute;ciles de seguir. Te espera m&uacute;sica alegre, coreograf&iacute;as sencillas y un ambiente de apoyo centrado en el v&iacute;nculo, el movimiento y la alegr&iacute;a; &iexcl;no se requiere experiencia previa en baile!",
+    pubDate: "2026-09-16T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_15_42_33.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_45_45.png"
+  },
+  {
+    title: "Mahjongg for Independent Players",
+    link: "https://telluridelibrary.libcal.com/event/17457128?hs=a",
+    description: "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-09-16T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg"
+  },
+  {
+    title: "Kids Cook",
+    link: "https://telluridelibrary.libcal.com/event/17292119?hs=a",
+    description: "3:30 PM – 4:30 PM · Join us every Wednesday for a fun and tasty adventure in the kitchen! Learn how to make delicious and creative snacks using safe cooking tools alongside other young chefs. Free and open to kids ages 5-12.  &Uuml;nete a nosotros todos los mi&eacute;rcoles para una divertida y sabrosa aventura en la cocina. Aprende a hacer bocadillos deliciosos y creativos usando herramientas de cocina seguras junto a otros j&oacute;venes chefs. Gratis y abierto para ni&ntilde;os de 5 a 12 a&ntilde;os.",
+    pubDate: "2026-09-16T21:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_40_36.png"
+  },
+  {
+    title: "Harry Potter Watch Party",
+    link: "https://telluridelibrary.libcal.com/event/17486056?hs=a",
+    description: "4:00 PM – 6:30 PM · Join the WPL every Wednesday after school in September and October, where we will sequentially watch all 8 of the original Harry Potter movies. This event is for teens/youth.",
+    pubDate: "2026-09-16T22:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_22_52.jpg"
+  },
+  {
+    title: "Songs of the Season: Fall!",
+    link: "https://telluridelibrary.libcal.com/event/16258347?hs=a",
+    description: "5:30 PM – 6:30 PM · Join Oliver & Jackson in a Seasonal Sing Along event, focusing on songs relevant to each coming season. Bring an instrument, just your voice, or even dancing shoes. All are invited. Chords and lyrics will be displayed.",
+    pubDate: "2026-09-16T23:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Magazine Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1769024121.jpg"
   }
 ];
 
@@ -4604,22 +4602,21 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "Functional Fitness - Strength & Mobility Training For Women",
-    link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
-    description: "Welcome to Ridgway's strength and mobility training + YOGA! Functional Strength & Mobility Training (for women): Tuesday & Thursday 8:15-9 am Vinyasa Yoga: Wednesday 8:15-9:15 am Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Class Structure: 5 minute warm up / 30 minute circuit workout / 10 minute cooldown stretch & mobility Vinyasa Yoga: This is a dynamic practice that will challenge, strengthen, and uplift you both physically and mentally. …",
-    pubDate: "2026-09-15T14:15:00.000Z",
-    endDate: "2026-11-12",
+    title: "Ouray HS Volleyball vs De Beque",
+    link: "https://events.ourayridgwayevents.com/event/ouray-hs-volleyball-vs-de-beque",
+    description: "Ouray High School Volleyball will be playing De Beque @ Ouray HS View on site | Email this event",
+    pubDate: "2026-09-16T10:30:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
-    location: "Weehawken Ridgway (Old Schoolhouse)",
-    imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/d76b2fb7534e91f8369b0dace133058cd22fa783.jpg"
+    location: "Ouray School",
+    imageUrl: "https://localist-images.azureedge.net/photos/53861825122366/huge/bd563b6fd4c272468a52f44be10f353adfc067ae.jpg"
   },
   {
     title: "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
     link: "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
     description: "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the International Quilt Museum in Lincoln, Nebraska. Bonnie’s work has been shown in numerous exhibits in the United States. In 2015, Bonnie’s work was in a year-long solo exhibition at the Portland Oregon International Airport. She was a solo artist at the Visions Museum of Textile Art, San Diego, in 2019. Internationally, Bonnie’s work has appeared in the Haus der Wirtschaft museum in Stuttgart, Germany, the Museum of Modern Art in Verona, Italy, and other venues in Germany, England, Ireland, France, Japan, Brazil, and the Netherlands. Bonnie’s work Tangle is part of the permanent collection of the Tuch + Technik Textilmuseum, Neumunster, Germany. …",
-    pubDate: "2026-09-15T16:00:00.000Z",
+    pubDate: "2026-09-16T16:00:00.000Z",
     endDate: "2026-09-25",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4631,116 +4628,13 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Ongoing Exhibition: BIG BOX-Big New Work By T-Bone",
     link: "https://events.ourayridgwayevents.com/event/ongoing-exhibition-big-box-big-new-work-by-t-bone",
     description: "The Big Box Show! Bigger, better and more. This groundbreaking local art won't last long! Ridgway's own T-Bone and his quintessential colorful cardboard paintings take on new life and meaning in the Decker where they have room to stretch out and really TALK to you! Come and be delighted by the playful T-Bone experience. Stay to cool off, craft, co-work, hang out. or plan your own future exhibition or event in the space! The Decker is a unique community rental-art gallery hybrid, incubated and managed by the Town of Ridgway, in cooperation with our sister ARTSpace gallery next door. View on site | Email this event",
-    pubDate: "2026-09-15T16:00:00.000Z",
+    pubDate: "2026-09-16T16:00:00.000Z",
     endDate: "2026-09-25",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Decker Community Room",
     imageUrl: "https://localist-images.azureedge.net/photos/53736310463128/huge/ce8867efeba0934913913ee401aff4479a074ba5.jpg"
-  },
-  {
-    title: "Ongoing: Social Justice Travel Exhibition",
-    link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-social-justice-travel-exhibition",
-    description: "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote wellness. This exhibition features new works by artists who recieved a Social Justice Grant from Telluride Arts to create work for this traveling exhibit. View on site | Email this event",
-    pubDate: "2026-09-15T16:00:00.000Z",
-    endDate: "2026-09-29",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53764349683288/huge/471bb8c36dc067ddd9b229c9e31032260184eb5e.jpg"
-  },
-  {
-    title: "Woman's Club of Ouray County monthly meeting",
-    link: "https://events.ourayridgwayevents.com/event/womans-club-of-ouray-county-monthly-meeting-3004",
-    description: "All Ouray County women are invited to attend the monthly meeting for the Woman's Club of Ouray County (WCOC). The WCOC, created in 1897, is a local philanthropic and community focused nonprofit organization. Monthly meetings include local speakers, a social hour and discussion regarding events to volunteer in and around Ouray County. For more information about the monthly meeting and the WCOC, please visit the organization's website. View on site | Email this event",
-    pubDate: "2026-09-15T19:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Community Center",
-    imageUrl: "https://localist-images.azureedge.net/photos/52338847179921/huge/a804a495547d393d16494cf6fdbbd49572b64a68.jpg"
-  },
-  {
-    title: "LIVE MUSIC IN THE GARDEN! Zan Waller & Stefan Davenport",
-    link: "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
-    description: "LIVE MUSIC IN THE GARDEN! 🎶 Sunday, September 13th, from 4:00–6:00 p.m., let us introduce you to Chloe’s Secret Garden! 🌿✨ Enjoy live music with Zan Waller & Stefan Davenport, the perfect wine, and scrumptious charcuterie in our cozy garden setting. Sip, savor, and settle in for a relaxed afternoon of music and Colorado magic! 🍷🧀💛 We can’t wait to see you there! Join us! 🎵 View on site | Email this event",
-    pubDate: "2026-09-15T22:00:00.000Z",
-    endDate: "2026-09-20",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Chloe's Charcuterie & Wine",
-    imageUrl: "https://localist-images.azureedge.net/photos/53950055817938/huge/3077cd853add6591f360f983328f1ee7e3ed78cd.jpg"
-  },
-  {
-    title: "Middle School Volleyball: Ouray vs Centennial",
-    link: "https://events.ourayridgwayevents.com/event/middle-school-volleyball-ouray-vs-centennial",
-    description: "Ouray Middle School plays Centennial Middle School @ Ouray View on site | Email this event",
-    pubDate: "2026-09-15T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray School",
-    imageUrl: "https://localist-images.azureedge.net/photos/53861527126164/huge/f25eb4c3e140a86cc61c64c128fd96a5d907b670.jpg"
-  },
-  {
-    title: "TYLER SIMMONS",
-    link: "https://events.ourayridgwayevents.com/event/tyler-simmons-8192",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
-    pubDate: "2026-09-15T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Decker Room New Volunteer Orientation",
-    link: "https://events.ourayridgwayevents.com/event/decker-room-new-volunteer-orientation",
-    description: "Join our wonderful volunteer team at the Decker! If you would like to help with Gallery Sitting during open hours, events, and more, please attend a New Volunteer Orientation to get started! You'll learn about the Decker Room and the events and programs that take place here. Volunteers should be able to commit to consistent volunteer hours each month! Email decker@ridgwayfuse.org for info and to RSVP. View on site | Email this event",
-    pubDate: "2026-09-15T22:30:00.000Z",
-    endDate: "2026-10-20",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/52568082541214/huge/49b7c4c5e83ca4147b872fdb5be7fe87b78551c5.jpg"
-  },
-  {
-    title: "Ridgway FUSE Creative Main Street - Committee Meeting",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-fuse-creative-main-street-committee-meeting",
-    description: "Ridgway FUSE, a Creative District & Main Street Program, nurtures the cultural and economic vitality of Ridgway, Colorado All Ridgway FUSE Committee Meetings are open to the public. Click here for agendas and notes. Interested residents may apply to serve on the FUSE committee here. Email Tera Wick at twick@town.ridgway.co.us or call 970-626-5308 x 215 with questions. View on site | Email this event",
-    pubDate: "2026-09-15T23:30:00.000Z",
-    endDate: "2026-10-20",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/52305506266326/huge/6e40de5340fac46ca9bf9f33e9c31ed9ab5985ce.jpg"
-  },
-  {
-    title: "Native Rhythms, Native Jazz: R. Carlos Nakai, AmoChip Dabney, & Will Clipman – at the Montrose Pavilion",
-    link: "https://events.ourayridgwayevents.com/event/native-rhythms-native-jazz-r-carlos-nakai-amochip-dabney-will-clipman-at-the-montrose-pavilion",
-    description: "Doors at 6:00 PM; show at 6:30 PM. The Sherbino and Weehawken Creative Arts present R. Carlos Nakai, AmoChip Dabney and Will Clipman at the Montrose Pavilion. The trio brings Native American flute together with jazz, world percussion and contemporary soundscapes in a genre-crossing performance rooted in tradition and improvisation. Nakai is an acclaimed Native American flutist and 11-time Grammy nominee; Dabney and Clipman add multi-instrumental and percussion artistry. Tickets: $25 advance general admission, $30 advance reserved seating, $32 general admission day of show. View on site | Email this event",
-    pubDate: "2026-09-16T00:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Montrose Pavilion",
-    imageUrl: "https://localist-images.azureedge.net/photos/53693235946239/huge/0f1ea37ac1cf168d15be34057cbc7d78b1368e42.jpg"
-  },
-  {
-    title: "Ouray HS Volleyball vs De Beque",
-    link: "https://events.ourayridgwayevents.com/event/ouray-hs-volleyball-vs-de-beque",
-    description: "Ouray High School Volleyball will be playing De Beque @ Ouray HS View on site | Email this event",
-    pubDate: "2026-09-16T10:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray School",
-    imageUrl: "https://localist-images.azureedge.net/photos/53861825122366/huge/bd563b6fd4c272468a52f44be10f353adfc067ae.jpg"
   },
   {
     title: "TODDLER STORYTIME ART FOR AGES 2.5-5",
@@ -4777,6 +4671,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Annex on Cora",
     imageUrl: "https://localist-images.azureedge.net/photos/53780624349826/huge/2ad5a3657f19d47b14c7833f838ac040c0836f38.jpg"
+  },
+  {
+    title: "LIVE MUSIC IN THE GARDEN! Zan Waller & Stefan Davenport",
+    link: "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
+    description: "LIVE MUSIC IN THE GARDEN! 🎶 Sunday, September 13th, from 4:00–6:00 p.m., let us introduce you to Chloe’s Secret Garden! 🌿✨ Enjoy live music with Zan Waller & Stefan Davenport, the perfect wine, and scrumptious charcuterie in our cozy garden setting. Sip, savor, and settle in for a relaxed afternoon of music and Colorado magic! 🍷🧀💛 We can’t wait to see you there! Join us! 🎵 View on site | Email this event",
+    pubDate: "2026-09-16T22:00:00.000Z",
+    endDate: "2026-09-20",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Chloe's Charcuterie & Wine",
+    imageUrl: "https://localist-images.azureedge.net/photos/53950055817938/huge/3077cd853add6591f360f983328f1ee7e3ed78cd.jpg"
   },
   {
     title: "Zumba Fitness with Tamra",
@@ -4845,6 +4751,30 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg"
+  },
+  {
+    title: "Functional Fitness - Strength & Mobility Training For Women",
+    link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
+    description: "Welcome to Ridgway's strength and mobility training + YOGA! Functional Strength & Mobility Training (for women): Tuesday & Thursday 8:15-9 am Vinyasa Yoga: Wednesday 8:15-9:15 am Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Class Structure: 5 minute warm up / 30 minute circuit workout / 10 minute cooldown stretch & mobility Vinyasa Yoga: This is a dynamic practice that will challenge, strengthen, and uplift you both physically and mentally. …",
+    pubDate: "2026-09-17T14:15:00.000Z",
+    endDate: "2026-11-12",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Ridgway (Old Schoolhouse)",
+    imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/d76b2fb7534e91f8369b0dace133058cd22fa783.jpg"
+  },
+  {
+    title: "Ongoing: Social Justice Travel Exhibition",
+    link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-social-justice-travel-exhibition",
+    description: "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote wellness. This exhibition features new works by artists who recieved a Social Justice Grant from Telluride Arts to create work for this traveling exhibit. View on site | Email this event",
+    pubDate: "2026-09-17T16:00:00.000Z",
+    endDate: "2026-09-29",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53764349683288/huge/471bb8c36dc067ddd9b229c9e31032260184eb5e.jpg"
   },
   {
     title: "AFTER SCHOOL ART FOR AGES 5-8",
@@ -5801,6 +5731,28 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Decker Room New Volunteer Orientation",
+    link: "https://events.ourayridgwayevents.com/event/decker-room-new-volunteer-orientation",
+    description: "Join our wonderful volunteer team at the Decker! If you would like to help with Gallery Sitting during open hours, events, and more, please attend a New Volunteer Orientation to get started! You'll learn about the Decker Room and the events and programs that take place here. Volunteers should be able to commit to consistent volunteer hours each month! Email decker@ridgwayfuse.org for info and to RSVP. View on site | Email this event",
+    pubDate: "2026-10-20T22:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/52568082541214/huge/49b7c4c5e83ca4147b872fdb5be7fe87b78551c5.jpg"
+  },
+  {
+    title: "Ridgway FUSE Creative Main Street - Committee Meeting",
+    link: "https://events.ourayridgwayevents.com/event/ridgway-fuse-creative-main-street-committee-meeting",
+    description: "Ridgway FUSE, a Creative District & Main Street Program, nurtures the cultural and economic vitality of Ridgway, Colorado All Ridgway FUSE Committee Meetings are open to the public. Click here for agendas and notes. Interested residents may apply to serve on the FUSE committee here. Email Tera Wick at twick@town.ridgway.co.us or call 970-626-5308 x 215 with questions. View on site | Email this event",
+    pubDate: "2026-10-20T23:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/52305506266326/huge/6e40de5340fac46ca9bf9f33e9c31ed9ab5985ce.jpg"
   },
   {
     title: "TODDLER STORYTIME ART FOR AGES 2.5-5",
@@ -7552,25 +7504,6 @@ const LEGAL_NOTICES = [
     address: "San Juan Vista Subdivision, Filing No. 1, SE1/4SE1/4 Section 12, S1/2, S1/2N1/2 and N1/2NE1/4 Section 13, Township 44 North, Range 10 West, N.M.P.M., San Miguel County, Colorado",
     noticeKey: "26CW3039",
     caseNumber: "26CW3039"
-  },
-  {
-    title: "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominium (Sale No. 202605)",
-    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "Public Trustee Brandi R. Hatfield of San Miguel County has scheduled a public auction foreclosure sale for Condominium Unit 7, Double Diamond Condominium, located at 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor Ryan Pfaff failed to pay principal and interest on a $1,200,000 deed of trust (original beneficiary: Mortgage Electronic Registration Systems, Inc. as nominee for Deephaven Mortgage LLC; current holder: Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust). The property will be sold at public auction on September 3, 2026 at 10:00 A.M. at 305 W. Colorado Avenue, East entry, Telluride, CO.",
-    deadline: "2026-09-03",
-    expires: "2026-09-03",
-    dates: "8/13",
-    papers: ["ttimes_0813"],
-    url: "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
-    address: "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
-    noticeKey: "foreclosure-sale-202605",
-    caseNumber: "202605"
   }
 ];
 
