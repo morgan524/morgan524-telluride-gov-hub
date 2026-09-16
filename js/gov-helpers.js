@@ -897,16 +897,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "Parish Bulletin/Last Call for Parish Mission",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "September 12, 2026",
-    newsTopic: "community",
-    copy: "Attached is the Parish Bulletin for September 13. As a reminder, always check the parish calendar for the most updated information. REMINDER: Due to a Diocese of Pueblo Clergy Retreat the week of September 14-18, there will be no Holy ...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-last-call-for-parish-mission/",
-    img: ""
-  },
-  {
     title: "A barrel of fun on Labor Day",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
@@ -1004,16 +994,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "infrastructure",
     copy: "Last month Colorado celebrated its 150th anniversary of statehood. Many of us assume that statehood was inevitable for this place we love. However, the 17-year quest was met with significant resistance from residents and national officials. Long before President Ulysses S. Grant signed Proclamation ",
     href: "https://www.ouraynews.com/2026/09/09/colorados-rocky-road-statehood/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Parish Bulletin for September 6",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "September 6, 2026",
-    newsTopic: "community",
-    copy: "Attached is this week's parish bulletin. Please check the parish calendar for all updated schedule of events. *Holy Adoration begins at 8:30 am before Sunday's Holy Mass-September 6. *Immediately after Holy Mass, join us for...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-september-6/",
     img: ""
   },
   {
@@ -3553,17 +3533,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Beans and Books at Coffee Cowboy",
-    link: "https://koto.org/event/beans-and-books-at-coffee-cowboy/",
-    description: "What better way to start out your day than by sipping on a hot cup of coffee while chatting with other bibliophiles about books? It's a chance to talk about whatever you have been reading (or listening to) and hear about what other folks have been reading (or listening to). Drop in anytime at the beautiful Coffee Cowboy General Store on the corner of Pacific and Willow the third Wednesday of every month!",
-    pubDate: "2026-09-16T08:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Coffee Cowboy General Store, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/beans-books-5.png"
-  },
-  {
     title: "Tennis Clinic 3.0-4.0",
     link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-16/",
     description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
@@ -5927,7 +5896,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-2026",
     description: "November 13 – November 15 12 Years of Fierce, Fearless, Independent Film The Ridgway Independent Film Festival (RIFF) returns in 2026 with its 12th year of celebrating bold storytelling, emerging filmmakers, and the power of community through the lens of independent film. Rooted in a volunteer-driven, grassroots effort born shortly after Ridgway became one of Colorado’s first Certified Creative Districts, RIFF continues to evolve while honoring its origins. This year, RIFF returns to its longtime home in November, taking place November 13–15, 2026, with a refreshed structure designed to create deeper connection and conversation. RIFF 2026 will open with a Friday night kickoff event, followed by two full days of film screenings on Saturday and Sunday at the historic Sherbino Theater in downtown Ridgway. …",
     pubDate: "2026-11-13T23:00:00.000Z",
-    endDate: "2026-11-14",
+    endDate: "2026-11-15",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5937,17 +5906,6 @@ const OURAY_RIDGWAY_EVENTS = [
 ];
 
 const NORWOOD_EVENTS = [
-  {
-    title: "Board Of Trustees Meeting",
-    link: "https://www.norwoodtown.com/2026-09-09-board-of-trustees-meeting",
-    description: "",
-    pubDate: "2026-09-09T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Government Meeting",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-09-10-norwood-sanitation-district-meeting-meeting",
@@ -6478,6 +6436,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    title: "Live Music at Alloy Kitchen",
+    link: "https://townofmountainvillage.com/explore/events/all-events/live-music-at-alloy-kitchen-1/",
+    description: "Free live music four nights a week, all season long. Alloy Kitchen at Mountain Lodge Telluride hosts a rotating lineup of local favorites — Apres Nova,",
+    pubDate: "2026-10-16T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49132/alloy-live-music-1800x900.jpg"
   }
 ];
 

@@ -268,19 +268,6 @@
     "type": "Arts & Film"
   },
   {
-    "title": "Beans and Books at Coffee Cowboy",
-    "href": "https://koto.org/event/beans-and-books-at-coffee-cowboy/",
-    "date": "2026-09-16",
-    "time": "8:30 AM",
-    "location": "Coffee Cowboy General Store, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/08/beans-books-5.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "What better way to start out your day than by sipping on a hot cup of coffee while chatting with other bibliophiles about books? It's a chance to talk about whatever you have been reading (or listening to) and hear about what other folks…",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "Beans & Books",
     "href": "https://telluridelibrary.libcal.com/event/16249443?hs=a",
     "date": "2026-09-16",
@@ -3017,6 +3004,19 @@
     "type": "Music"
   },
   {
+    "title": "Live Music at Alloy Kitchen",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/live-music-at-alloy-kitchen-1/",
+    "date": "2026-10-16",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49132/alloy-live-music-1800x900.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Free live music four nights a week, all season long. Alloy Kitchen at Mountain Lodge Telluride hosts a rotating lineup of local favorites — Apres Nova,",
+    "type": "Music"
+  },
+  {
     "title": "No Kings Afterparty in the Garden",
     "href": "https://events.ourayridgwayevents.com/event/no-kings-afterparty-in-the-garden",
     "date": "2026-10-17",
@@ -3385,7 +3385,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "November 13 – November 15 12 Years of Fierce, Fearless, Independent Film The Ridgway Independent Film Festival (RIFF) returns in 2026 with its 12th year of celebrating bold storytelling, emerging filmmakers, and the power of community…",
     "type": "Arts & Film",
-    "endDate": "2026-11-14"
+    "endDate": "2026-11-15"
   },
   {
     "title": "KOTO Ski Swap",

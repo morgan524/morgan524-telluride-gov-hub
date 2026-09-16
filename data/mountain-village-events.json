@@ -361,5 +361,16 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    "title": "Live Music at Alloy Kitchen",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/live-music-at-alloy-kitchen-1/",
+    "description": "Free live music four nights a week, all season long. Alloy Kitchen at Mountain Lodge Telluride hosts a rotating lineup of local favorites — Apres Nova,",
+    "pubDate": "2026-10-16T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49132/alloy-live-music-1800x900.jpg"
   }
 ]
