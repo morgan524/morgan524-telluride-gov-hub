@@ -187,32 +187,6 @@
     "type": "Community"
   },
   {
-    "title": "Spanish Happy Hour at La Cocina",
-    "href": "https://koto.org/event/spanish-happy-hour-at-la-cocina/",
-    "date": "2026-09-15",
-    "time": "5:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-3.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Practice your Spanish skills with other Spanish speakers at La Cocina. The Library will provide appetizers, and the bar will be available for you to purchase a beverage of your choice. Registration is not required, but it helps us have an…",
-    "type": "Talks & Classes"
-  },
-  {
-    "title": "Zumba with Marlen",
-    "href": "https://koto.org/event/zumba-with-marlen/",
-    "date": "2026-09-15",
-    "time": "5:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/08/zumba-marlen.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa,…",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "Spanish Happy Hour",
     "href": "https://telluridelibrary.libcal.com/event/16008003?hs=a",
     "date": "2026-09-15",
@@ -223,6 +197,19 @@
     "category": "Library Event",
     "source": "Wilkinson Public Library",
     "desc": "5:30 PM – 6:30 PM · Practice your Spanish skills with other Spanish speakers at La Cocina. The Library will provide appetizers, and the bar will be available for you to purchase a beverage of your choice. Registration is not required, but…",
+    "type": "Talks & Classes"
+  },
+  {
+    "title": "Zumba with Marlen",
+    "href": "https://telluridelibrary.libcal.com/event/17477072?hs=a",
+    "date": "2026-09-15",
+    "time": "5:30 PM",
+    "location": "Program Room",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_15_42_33.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "5:30 PM – 6:30 PM · Ditch the workout and join the party! Zumba is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international…",
     "type": "Talks & Classes"
   },
   {
@@ -519,6 +506,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "Red Mountain Revival",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=red-mountain-revival",
+    "date": "2026-09-16",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/9c822bd9-a0aa-4a17-b6ab-34a40f24e62e/-/crop/1537x1536/597,0/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Red Mountain Revival is a San Juan Range based Blues and Rock band hailing from ...",
+    "type": "Music"
+  },
+  {
     "title": "Tennis Clinic 3.0-4.0",
     "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-16/",
     "date": "2026-09-16",
@@ -795,6 +795,19 @@
     "type": "Wellness"
   },
   {
+    "title": "DJ HARRY",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=dj-harry",
+    "date": "2026-09-17",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/7a37cc41-545b-4d73-82c0-3012343c172b/-/crop/1294x1295/0,213/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Originating in Boulder, Colorado, DJ Harry issued his first album, The String Ch...",
+    "type": "Music"
+  },
+  {
     "title": "Tennis Clinic 3.0-4.0",
     "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-17/",
     "date": "2026-09-17",
@@ -831,6 +844,19 @@
     "category": "Community Event",
     "source": "KOTO Community Calendar",
     "desc": "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every…",
+    "type": "Music"
+  },
+  {
+    "title": "DJ WOMBAT",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=dj-wombat-4",
+    "date": "2026-09-18",
+    "time": "10:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/46f14e2f-0397-4682-a048-d911457f02c9/-/crop/1199x1200/41,0/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "ringing a deep passionate knowledge of sound, blending reggae, breakbeat, Phish,...",
     "type": "Music"
   },
   {
@@ -1056,6 +1082,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "",
+    "type": "Community"
+  },
+  {
+    "title": "CASTLE w/ Sound Shepherd",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=castle-8",
+    "date": "2026-09-19",
+    "time": "10:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/f213094a-1e6c-4006-a482-991f1efae50e/-/crop/1294x1295/0,114/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Having began his journey in Telluride as a ski coach, CASTLE has transitioned to...",
     "type": "Community"
   },
   {
@@ -1465,6 +1504,19 @@
     "type": "Family & Kids"
   },
   {
+    "title": "Telluride R-1 School District Board Regular Meeting",
+    "href": "https://koto.org/event/telluride-r-1-school-district-board-regular-meeting/",
+    "date": "2026-09-22",
+    "time": "5:15 PM",
+    "location": "Telluride Middle/High School, TELLURIDE",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Telluride R-1 School District Board of Education holds a regular meeting on Tuesday, September 22nd, at 5:15 p.m. in the Bridal Veil Conference Room at TMHS and via Zoom. The meeting agenda & Zoom link can be found at…",
+    "type": "Community"
+  },
+  {
     "title": "Tourism Advisory Committee",
     "href": "https://events.ourayridgwayevents.com/event/tourism-advisory-committee",
     "date": "2026-09-22",
@@ -1541,6 +1593,19 @@
     "category": "Community Event",
     "source": "KOTO Community Calendar",
     "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Tennis Clinic 4.0+",
+    "href": "https://koto.org/event/tennis-clinic-4-0/2026-09-23/",
+    "date": "2026-09-23",
+    "time": "11:00 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
     "type": "Outdoors & Sports"
   },
   {
@@ -1647,6 +1712,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-23/",
+    "date": "2026-09-23",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "High School Volleyball Ouray vs Nucla",
@@ -2041,6 +2119,19 @@
     "source": "Mountain Village",
     "desc": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
     "type": "Community"
+  },
+  {
+    "title": "The Past, Present, and Future of the Telluride Climbing Community",
+    "href": "https://www.telluride.com/event/the-past-present-and-future-of-the-telluride-climbing-community/",
+    "date": "2026-09-27",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63600/climbing_1.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "WPL and Telluride Mountain Club present a night storytelling and conversation with Rock Guide of Telluride author …",
+    "type": "Talks & Classes"
   },
   {
     "title": "Slap Dragon",

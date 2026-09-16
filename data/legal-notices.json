@@ -383,26 +383,6 @@
     "noticeKey": "pz-shandoka-lot-pud-2026"
   },
   {
-    "title": "Ordinance -- Adoption of Colorado Low Energy and Carbon Code, Ophir (Ordinance #2026-06) (COL-000228)",
-    "entity": "Town of Ophir",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "📋",
-    "iconClass": "type-hearing",
-    "type": "Ordinance",
-    "filterTag": "ordinance",
-    "summary": "The Town of Ophir General Assembly will hold a public hearing on September 15, 2026, at 7:00 PM at Ophir Town Hall, 36 Porphyry Street, to consider Ordinance #2026-06 on second reading, which proposes adoption of the Colorado Low Energy and Carbon Code (LECC). The applicant is the Town of Ophir. More complete information is available at Ophir Town Hall.",
-    "deadline": "2026-09-15",
-    "expires": "2026-09-15",
-    "dates": "9/3",
-    "papers": [
-      "ttimes_0903"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
-    "address": "36 Porphyry Street, Ophir, CO 81426",
-    "noticeKey": "ord-2026-06-ophir-lecc"
-  },
-  {
     "title": "Water Court Application -- Finding of Reasonable Diligence, Telluride Pines Alder Creek Pump and Pipeline (26CW3043)",
     "entity": "Colorado District Court, Water Division No. 4",
     "entityClass": "ent-county",
@@ -453,7 +433,7 @@
     "iconClass": "type-tax",
     "type": "Tax & Finance",
     "filterTag": "tax-finance",
-    "summary": "Public Trustee Brandi R. Hatfield of San Miguel County is conducting a foreclosure sale on a deed of trust originally granted by Ryan Pfaff, with the current debt holder being Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust. The property is Condominium Unit 7 at Double Diamond Condominium, commonly known as 350 S Mahoney Dr Unit 7, Telluride, CO 81435, with an outstanding principal balance of approximately $1,199,032.37. The public auction will be held at 10:00 A.M. on September 3, 2026, at 305 W. Colorado Avenue, East entry, Telluride, CO.",
+    "summary": "Public Trustee Brandi R. Hatfield of San Miguel County has scheduled a public auction foreclosure sale for Condominium Unit 7, Double Diamond Condominium, located at 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor Ryan Pfaff failed to pay principal and interest on a $1,200,000 deed of trust (original beneficiary: Mortgage Electronic Registration Systems, Inc. as nominee for Deephaven Mortgage LLC; current holder: Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust). The property will be sold at public auction on September 3, 2026 at 10:00 A.M. at 305 W. Colorado Avenue, East entry, Telluride, CO.",
     "deadline": "2026-09-03",
     "expires": "2026-09-03",
     "dates": "8/13",

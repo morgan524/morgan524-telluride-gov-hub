@@ -745,18 +745,6 @@ const DAILY_QUESTIONS = [
 // target, and these seeds let the data start landing again. No page renders
 // them yet — restoring (or retiring) the reader UIs is tracked separately.
 const MEETING_PREVIEWS = {
-  "telluride|2026-09-16|Historic & Architectural Review Commission Chair - Sep 16 2026":
-    "The Historic & Architectural Review Commission is expected to convene its regular monthly session to review applications related to historic preservation and architectural standards within Telluride. Specific agenda items were not detailed in the available text, but the commission typically evaluates proposed changes to structures within the town's historic district.",
-
-  "telluride|2026-09-16|Historic & Architectural Review Commission - Sep 16 2026":
-    "The Historic and Architectural Review Commission is expected to review applications for Certificates of Appropriateness related to proposed construction, renovation, alteration, or demolition of structures within Telluride. The commission may also address historic designation recommendations, preservation policies, or updates to inventories of historically and architecturally significant propertie",
-
-  "telluride|2026-09-16|Parks & Recreation Commission - Sep 16 2026":
-    "The Parks & Recreation Commission is expected to meet on September 16, 2026, to address community recreation and parks services matters. Specific agenda items were not detailed in the available text, but the commission typically interprets community needs regarding parks and recreation programming and services.",
-
-  "county|2026-09-16|Board of County Commissioners Meeting":
-    "Board will consider procurement matters including material hauling, a trail connector project, and fuel island canopy construction. Related legal notices involve estate creditor claims, a foreclosure sale in Telluride Mountain Village, and a federal environmental assessment for a hazardous fuels management project in the Uncompahgre and Gunnison National Forests.",
-
   "telluride|2026-09-17|Liquor Licensing Authority - Sep 17 2026":
     "The Telluride Liquor Licensing Authority is expected to review and act on liquor license applications or modifications submitted to the town. Both local approval and Colorado Department of Revenue consent are required for any license to be issued or amended.",
 
@@ -796,9 +784,6 @@ const MEETING_PREVIEWS = {
   "county|2026-10-01|Lodging Tax Panel Meeting":
     "The Lodging Tax Panel is expected to discuss matters related to the administration and allocation of lodging tax revenues in San Miguel County. No additional agenda details or directly relevant legal notices are available to indicate specific items beyond the panel's standard oversight responsibilities.",
 
-  "ouray|2026-09-16|, 1-4:00 PM (@ OURAY COURTHOUSE!) - The PC will hold 2 public hearings; Curry Regular PUD, and an Exemption application from Clifford Pastor to subdivide his parcel into 2 lots. (Packet materials are under media TV icon)":
-    "The Planning Commission is expected to hold two public hearings on September 16 at the Ouray Courthouse. Members will review the Curry Regular PUD proposal and consider an exemption application from Clifford Pastor seeking to subdivide his parcel into two lots.",
-
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026":
     "The Open Space Commission is expected to discuss matters related to open space acquisition, management, and planning priorities. The meeting may also address implications of Ordinance #1640, which amended Telluride's Land Use Code to implement the Colorado Wildfire Resiliency Code, passed by Town Council in August 2026.",
 
@@ -829,9 +814,6 @@ const MEETING_PREVIEWS = {
   "telluride|2026-09-24|Resident Advisory Committee - Sep 24 2026":
     "The Resident Advisory Committee is expected to discuss the recently passed Colorado Wildfire Resiliency Code amendment to the Town's Land Use Code, as well as a new $2.00 monthly paper billing fee approved by San Miguel Power Association, set to take effect October 29, 2026.",
 
-  "telluride|2026-09-16|CANCELED - Parks & Recreation Commission - Sep 16 2026":
-    "The September 16, 2026 Parks & Recreation Commission meeting has been canceled. No agenda items will be discussed. The commission typically meets the third Wednesday of each month to address community parks and recreation needs.",
-
   "mv|2026-09-17|Town Council Meeting":
     "Council is expected to introduce new lift maintenance staff, consider a proclamation declaring September as Suicide Prevention Month, and act on several consent agenda items including meeting minutes, a condominium maintenance agreement, winter parking policies, and a Telluride Foundation agreement.",
 
@@ -851,7 +833,10 @@ const MEETING_PREVIEWS = {
     "Board will consider matters related to San Miguel County operations, potentially including procurement items such as material hauling, trail construction, fuel island canopy work, and jail repainting contracts. Additional context from related legal notices suggests ongoing county administrative and financial activity in the surrounding area.",
 
   "county|2026-09-30|Board of County Commissioners Work Session":
-    "Commissioners are expected to discuss county procurement matters, including material hauling, trail construction for the Lawson Hill Connector, fuel island canopy construction, and jail painting projects. Additional administrative and operational items may also be addressed during the work session."
+    "Commissioners are expected to discuss county procurement matters, including material hauling, trail construction for the Lawson Hill Connector, fuel island canopy construction, and jail painting projects. Additional administrative and operational items may also be addressed during the work session.",
+
+  "county|2026-09-16|Board of County Commissioners Meeting":
+    "Board will consider adopting the 2024 International Building Code and Colorado Low Energy & Carbon Code. Additional business may include routine county updates, public comment periods, and administrative matters. The meeting takes place September 16, 2026, at 9:30 AM in Telluride, with hybrid attendance options available."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1053,26 +1038,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "TABOR Election Notice: Invitation for Pro/Con Statements on November 2026 Ballot Issue",
     href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=961",
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22931"
-  },
-  {
-    title: "Sheriff Rescinds Stage 2 Fire Restrictions",
-    source: "Ouray County",
-    sourceKey: "ouray-county",
-    date: "September 1, 2026",
-    newsTopic: "public-safety",
-    copy: "Ouray County RESCINDS Stage 2 Fire Restrictions, reinstates Stage 1 Fire Restrictions effective 12:01AM Thursday, September 3",
-    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=960",
-    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22895"
-  },
-  {
-    title: "No Women’s Group Tomorrow",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "September 1, 2026",
-    newsTopic: "community",
-    copy: "With many women out of town this week, there will be no 'official' women's Rosary and fellowship. However, if you are in town, you are still encouraged to lead a Rosary at 7:30 before Holy Mass. Reminder: It is not too late to join our Women's Vir...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/no-womens-group-tomorrow/",
-    img: ""
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
@@ -1110,7 +1075,7 @@ const ENGAGE_MEETINGS = [
   }
 ];         // Engage Telluride project key dates
 const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-15';
-const LEGAL_NOTICES_CACHE_DATE = '2026-09-15';
+const LEGAL_NOTICES_CACHE_DATE = '2026-09-16';
 
 const MANUAL_SUMMARIES = {
   "rico|2026-08-19|Rico Board of Trustees Regular Meeting":
@@ -1805,6 +1770,144 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Endorsement for Dan Couvault",
+    source: "Telluride Times",
+    date: "September 15, 2026",
+    firstSeen: "2026-09-16",
+    newsTopic: "health",
+    copy: "A crisis clinician with 30+ years in mental health work endorses Sheriff Dan Covault, citing his focus on crisis response training for deputies and collaboration with mental health responders. The letter notes four suicides in four months and flags that a prior administration ordered deputies not to respond to mental health calls. Readers are directed to the April 22 commissioners meeting recording for both candidates' interviews.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_d34e163d-3fdf-45ad-8736-88087204fe0e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Melissa King LAC",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Another view of housing",
+    source: "Telluride Times",
+    date: "September 15, 2026",
+    firstSeen: "2026-09-16",
+    newsTopic: "housing",
+    copy: "A Telluride resident is pointing to San Rafael, CA, where multiple developers competed to house affordable units on a single 2.5-acre site — giving the public real cost and density tradeoffs to weigh. The letter questions why Telluride is moving forward with a single town-developed plan before costs are known. Worth watching how council responds.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_9823f845-c4a0-4cf8-afe5-28cb216da161.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Madelaine Whiteman",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Celebrating 'The Wonderment'",
+    source: "Telluride Times",
+    date: "September 15, 2026",
+    firstSeen: "2026-09-16",
+    newsTopic: "arts-culture",
+    copy: "Telluride poet Rosemerry Wahtola Trommer celebrates her 16th book, *The Wonderment*, Thursday, Sept. 24, 5–7:30 p.m. at Telluride Arts. The evening includes piano by Travis West, readings by two local high schoolers, and a book signing. Between the Covers will have copies available.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_e1610aab-c1b5-4a5b-8588-234c1f41ac24.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/bf/7bf1f45c-232b-4baa-a1b6-cd1e934d4c1a/6aa9cc1c718af.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Jack Johnson and our empty nest",
+    source: "Telluride Times",
+    date: "September 15, 2026",
+    firstSeen: "2026-09-16",
+    newsTopic: "education",
+    copy: "A Telluride-area mom writes about sending both teenagers off within the same week — one to Western Colorado University, one to Idaho's Alzar School — leaving her and her husband in a suddenly quiet house. Jack Johnson concerts in New Hampshire and Denver framed the summer as the family's last big stretch together before the nest emptied.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_121f5970-51df-4aab-8a80-9bcfccbd322c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/da/1da99551-bfb8-4ef8-b460-2cf8f15a8174/6aa9ca58efdda.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Mountain Village to auction off 10 refurbished gondola cabins",
+    source: "Telluride Times",
+    date: "September 15, 2026",
+    firstSeen: "2026-09-16",
+    newsTopic: "infrastructure",
+    copy: "Mountain Village is auctioning 10 refurbished gondola cabins — six red, two yellow, two blue — with starting bids at $4,000 each. Proceeds go to Mountain Munchkins, the town's infant and toddler childcare facility. Bids are due Sept. 30; buyers must haul by Nov. 1.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_b492da27-f2cd-4396-8dd0-2c3698a058fe.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/0c/90cdcd18-1dc5-454f-84a5-656785b7c04d/6aa9cb353625b.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Everyday choices can impact brain health, cognitive decline",
+    source: "Telluride Times",
+    date: "September 15, 2026",
+    firstSeen: "2026-09-16",
+    newsTopic: "health",
+    copy: "A free public talk on brain health and dementia prevention is set for Wednesday, Sept. 24 at 6:30 p.m. at the Telluride Innovation Center. Dr. Melissa Sundermann will cover how daily habits — sleep, movement, diet, and time outdoors — may reduce cognitive decline risk. RSVP required at brain-health-telluride.eventbrite.com.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_54cdc3aa-a363-428f-beda-90da6cb01f69.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/34/d34ab218-21a3-4724-a71e-a186160fafbc/6aa9c87edc0c3.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Library hosts book talk, signing for 'Plastic Shaman'",
+    source: "Telluride Times",
+    date: "September 15, 2026",
+    firstSeen: "2026-09-16",
+    newsTopic: "community",
+    copy: "Annette McGivney brings her new book \"Plastic Shaman\" to Wilkinson Public Library on Sept. 30 at 5:30 p.m. The book investigates a 2009 wellness retreat where three people died in a fake sweat lodge ceremony. Between the Covers will be selling copies at the event.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_e08810f3-b5ae-40d9-80c7-45045cb72eb1.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/45/d45d4ea6-eab6-48b0-b4eb-80db8c7e29de/6aa9c73910c65.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "Bella's Story",
+    source: "Telluride Times",
+    date: "September 15, 2026",
+    firstSeen: "2026-09-16",
+    newsTopic: "public-safety",
+    copy: "A 13-year-old dog named Bella was hit by a car and brought to Second Chance Delta with a broken leg and dislocated hip. She got emergency surgery — and her family found her through a social media post before she even needed a foster home. Second Chance is now raising $2,500 for their Emergency Vet Care Fund for cases like hers.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_903653ab-1362-4b7a-8799-380bb4493f6a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/d9/bd91fc52-70ea-4ade-a5dd-6aa890aaa38c/6aa9c6a1e2b15.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "A good long hike",
+    source: "Telluride Times",
+    date: "September 15, 2026",
+    firstSeen: "2026-09-16",
+    newsTopic: "recreation",
+    copy: "A local writer reflects on how backcountry hiking with a group of women follows the same structure as any ritual — intention, movement, shared food, and gratitude at trail's end. The piece walks through their routine, from the opening text to the summit selfie to the drive home with windows down. It's a quiet reminder that the mountains have always offered that kind of thing to people paying attention.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_8700fc95-6c39-4e37-893a-864e17a9b62f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/ee/deeb6695-f5b8-49f6-bb42-b6e2c8c34baa/6aa9c50e9382e.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "County Public Health introduces 'Free Care Boxes' at local libraries",
+    source: "Telluride Times",
+    date: "September 15, 2026",
+    firstSeen: "2026-09-16",
+    newsTopic: "health",
+    copy: "San Miguel County Public Health installed \"Free Care Boxes\" at Wilkinson Public Library and Lone Cone Library on Sept. 1, stocked with Narcan, diapers, menstrual products, oral-hygiene supplies, and QR codes linking to local health resources. The locally built cabinets are walk-up, no-appointment access points inspired by Telluride's Free Box tradition.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_ec915534-53b6-4dfd-86d1-1b23be35cd20.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/82/d822ea16-2a05-4e30-a041-6d35143153fd/6aa9c5b4ece51.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Telluride earns its first Michelin restaurant recognition",
+    source: "Telluride Times",
+    date: "September 15, 2026",
+    firstSeen: "2026-09-16",
+    newsTopic: "community",
+    copy: "The National, a Telluride restaurant led by Chef Chris Thompson, has earned a Michelin Recommended distinction in the 2026 Michelin Guide — the first such recognition for a Telluride restaurant. Thompson, who grew up here and returned in 2023, runs the spot with his wife Kate. Several local hotels have previously earned Michelin Keys.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_838f41b1-5648-4571-8617-a4fd2cbda665.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/77/1773e62a-bae3-4761-8c7d-5487067cd7de/6aa9c3ecb25cd.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Full circle connection",
     source: "Telluride Times",
     date: "September 15, 2026",
@@ -1814,18 +1917,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/business/article_e109193c-8529-4c9d-9d4d-f165b9a34db0.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/37/237c3ac0-5d37-49ca-a5d1-457db860c1b3/6aa3a2d54201c.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "County Public Health introduces ‘Free Care Boxes’ at local libraries",
-    source: "Telluride Times",
-    date: "September 15, 2026",
-    firstSeen: "2026-09-15",
-    newsTopic: "health",
-    copy: "San Miguel County Public Health installed \"Free Care Boxes\" at Wilkinson Public Library and Lone Cone Library on Sept. 1, stocked with Narcan, diapers, menstrual products, oral-hygiene supplies, and QR codes linking to local health resources. The cabinets are walk-up, no appointment needed. Usage will be tracked to help shape future offerings.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_2028bfb0-d8b6-412b-bfdb-dcd6d88b72df.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/73/4734af0f-135b-4e8a-ac19-393d27167eb0/6aa954a6cacc8.image.jpg",
     imgHiRes: true
   },
   {
@@ -2701,90 +2792,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Wizard of ahhs",
-    source: "Telluride Times",
-    date: "September 2, 2026",
-    firstSeen: "2026-09-02",
-    newsTopic: "community",
-    copy: "Deb Pera D'Angelo, a fifth-generation Telluride local, was appointed director of the Spa at the Peaks in January after three years on staff. Her family roots here go back to hardrock mining days, and her parents founded Timberline Hardware in 1969. The spa offers full fitness and wellness facilities, with locals-only discounts available in fall and spring.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/business/article_443da1a7-6b36-4452-8aec-2ae38803c952.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/9b/39b979aa-e5aa-4bfa-96b4-cc26b5bf0217/6a977d4ccd816.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "What to know about the AP/FRONTLINE investigation into scam victims",
-    source: "Telluride Times",
-    date: "September 2, 2026",
-    firstSeen: "2026-09-02",
-    newsTopic: "government",
-    copy: "U.S. scam losses hit a record $15.9 billion reported to the FTC last year — with estimated real losses near $200 billion. An AP/FRONTLINE investigation found victims have little recourse: banks rarely reimburse them, tax law can leave them owing the IRS, and U.S. consumer protections trail those in the UK, EU, and Australia.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_3757ef5c-d08d-57f0-9fd8-efb2b8fa2c49.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/a4/da4a0746-8139-55ed-b225-3edb81392787/6a98142ce1efb.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Energetic responsibilities",
-    source: "Telluride Times",
-    date: "September 2, 2026",
-    firstSeen: "2026-09-02",
-    newsTopic: "education",
-    copy: "Karen O'Dell runs Ancient Arts Health and Wellness in Norwood, offering energy healing that draws on her background as a combat medic, EMT, hospice worker, and certified psychotherapist. She uses a device called Bio-Well to show clients visual maps of their energy patterns, alongside hands-on Healing Touch techniques. She also teaches energy awareness locally, including at Norwood School and community events.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_e9289e3f-50ef-4896-95d0-92c07610b6ba.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/da/2da5af3d-6fab-4bd6-8c41-617cada772df/6a9879164037e.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Scams in the US are at a record high. Yet most victims get no help and some end up losing even more",
-    source: "Telluride Times",
-    date: "September 2, 2026",
-    firstSeen: "2026-09-02",
-    newsTopic: "government",
-    copy: "US scam losses hit a record $15.9 billion reported to the FTC last year — likely a fraction of the real total, estimated near $200 billion. Victims often face dismissal from banks, law enforcement, and even additional taxes on lost funds. Recovery is rare, and some lose even more chasing it.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_bf60538d-c978-520d-8adf-5fd4490f3f41.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/91/39174b17-dbe4-50d9-8b75-331a65f90676/6a9811dceac84.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "PHOTO ESSAY: Inside a detention center where scam workers wait for their return home",
-    source: "Telluride Times",
-    date: "September 2, 2026",
-    firstSeen: "2026-09-02",
-    newsTopic: "community",
-    copy: "Hundreds of workers caught up in large-scale cyberscam operations in the Philippines are being held at a seized six-story building in Pasay while they wait to be repatriated home — a process that can take months or years. Some were trafficked, others came voluntarily, and many describe beatings and being sold between operations. The facility once held over 900 people; around 70 remain.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_fd288a9b-e8a1-5542-8f62-6f16579cc761.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/db/3dbc6793-b30b-5e5c-9478-016b67c9f70f/6a98143d4c9c4.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "The one that got away",
-    source: "Telluride Times",
-    date: "September 2, 2026",
-    firstSeen: "2026-09-02",
-    newsTopic: "arts-culture",
-    copy: "The Telluride Bluegrass Festival's 50th anniversary film was pulled from a planned Film Festival premiere after undisclosed AI-generated animation was discovered in the footage — a problem given the film celebrates the world's top acoustic artists. Director Craig Ferguson hopes to reschedule the premiere at the Sheridan Opera House.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_36a7635f-d51e-438c-a8df-fc1ee5f21baf.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/71/771852d0-1ebe-4728-b85b-beb00e2cdbd5/6a93173fc54bc.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Court dismisses ‘deficient’ Telski lawsuit against Fee, Prohaska, Wisor",
-    source: "Telluride Times",
-    date: "September 2, 2026",
-    firstSeen: "2026-09-02",
-    newsTopic: "recreation",
-    copy: "A Colorado district court dismissed Telski's lawsuit against three former local officials who had approached resort owner Chuck Horning last winter with a $127.5M purchase offer during the ski patrol strike. Judge Harvell found Telski failed to allege any actual improper regulatory action that caused its losses during the strike.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_92d9c402-8e98-4024-a175-c65ad71164a5.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/d3/0d3fe29a-2ad3-42ae-892f-65bb217ad88d/6a977391d4972.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Breaking news: Plane crashes southwest of Telluride",
     source: "Telluride Times",
     date: "September 4, 2026",
@@ -2911,17 +2918,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Ridgway Rescinds Stage 2 Fire Restrictions, Reinstates Stage 1 Fire Restrictions effective 12:01am on Thursday, Sept. 3rd",
-    source: "Town of Ridgway",
-    date: "September 2, 2026",
-    firstSeen: "2026-09-09",
-    newsTopic: "public-safety",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Rescind-Stage-2%2C-Reinstate-Stage-1-Fire-Restrictions-Press-Release-2026-09-02.pdf",
-    img: ""
-  },
-  {
     title: "Ridgway Planning Commission Meeting Agenda Revised",
     source: "Town of Ridgway",
     date: "September 16, 2026",
@@ -2935,7 +2931,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Public Hearing Notice Wed., Sept. 16, 2026 at 5:30pm - 1) Site Plan and Conditional Use Permit for Riverbend Townhomes (TBD Liddell Dr.); 2) Plat Amendment of Lot 4 and Outlot of Riverview Business Park Subdivision (TBD Liddell Dr.); 3) PUD Amendment Lena Street Commons Planned Unit Development (TBD N. Lena Street) - Sept. 2, 2026",
     source: "Town of Ridgway",
-    date: "September 15, 2026",
+    date: "September 16, 2026",
     firstSeen: "2026-09-09",
     newsTopic: "land-use",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2946,7 +2942,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "September 15, 2026",
+    date: "September 16, 2026",
     firstSeen: "2026-09-11",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2957,7 +2953,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "September 15, 2026",
+    date: "September 16, 2026",
     firstSeen: "2026-09-14",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2974,6 +2970,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Youth-Advisory-Council-Press-Release-2026-09-11.pdf",
+    img: ""
+  },
+  {
+    title: "Ridgway Rescinds Stage 2 Fire Restrictions, Reinstates Stage 1 Fire Restrictions effective 12:01am on Thursday, Sept. 3rd - Sept. 2, 2026",
+    source: "Town of Ridgway",
+    date: "September 16, 2026",
+    firstSeen: "2026-09-09",
+    newsTopic: "public-safety",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Rescind-Stage-2%2C-Reinstate-Stage-1-Fire-Restrictions-Press-Release-2026-09-02.pdf",
     img: ""
   }
 ];
@@ -3075,6 +3082,19 @@ const KOTO_FEATURED_STORIES = [
 // page over the coming weeks, the bot will add them with firstSeen=today
 // and the array will naturally shed the sentinels via the same logic.
 const SMB_FORUM_ARTICLES = [
+  {
+    title: "Hughes climbs Lizard Head",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "September 16, 2026",
+    firstSeen: "2026-09-16",
+    dateSource: "article",
+    newsTopic: "recreation",
+    copy: "Norwood native Wyatt Hughes — who summited Everest earlier this year — climbed Lizard Head, Colorado's hardest 13er, on Labor Day weekend with Eric Ahlstedt of Durango. The volcanic spire south of Telluride is considered unstable and very advanced; the pair took the Mark of Zorro summit pitch and were back down in six or seven hours. Hughes has now completed Colorado's Centennial list and has K2 in his sights for 2028.",
+    claudeSummary: true,
+    href: "https://www.sanmiguelbasinforum.com/stories/hughes-climbs-lizard-head,129262",
+    img: "https://zeta.creativecirclecdn.com/smb/original/20260914-145938-24a-F1%20-%20lizard%20head.jpg"
+  },
   {
     title: "OJT calls for Idea Factory applications from West End",
     source: "San Miguel Basin Forum",
@@ -3515,28 +3535,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Spanish Happy Hour at La Cocina",
-    link: "https://koto.org/event/spanish-happy-hour-at-la-cocina/",
-    description: "Practice your Spanish skills with other Spanish speakers at La Cocina. The Library will provide appetizers, and the bar will be available for you to purchase a beverage of your choice. Registration is not required, but it helps us have an idea of how many people will be in attendance, and therefore how much food to order. All levels welcome!",
-    pubDate: "2026-09-15T17:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Zumba with Marlen",
-    link: "https://koto.org/event/zumba-with-marlen/",
-    description: "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. ¡Olvida el entrenamiento y únete a la fiesta! Zumba® es una clase de fitness de baile de alta energía que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calorías. …",
-    pubDate: "2026-09-15T17:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/zumba-marlen.png"
-  },
-  {
     title: "Beans and Books at Coffee Cowboy",
     link: "https://koto.org/event/beans-and-books-at-coffee-cowboy/",
     description: "What better way to start out your day than by sipping on a hot cup of coffee while chatting with other bibliophiles about books? It's a chance to talk about whatever you have been reading (or listening to) and hear about what other folks have been reading (or listening to). Drop in anytime at the beautiful Coffee Cowboy General Store on the corner of Pacific and Willow the third Wednesday of every month!",
@@ -3975,6 +3973,50 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2026/08/lunch-10.png"
+  },
+  {
+    title: "Telluride R-1 School District Board Work Session",
+    link: "https://koto.org/event/telluride-r-1-school-district-board-work-session/",
+    description: "The Telluride R-1 School District Board of Education holds a work session on Tuesday, September 22nd, at 3:30 p.m. in the Bridal Veil conference room at TMHS and via Zoom. Meeting agenda & Zoom link can be found at koto.org.",
+    pubDate: "2026-09-22T15:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Middle/High School, TELLURIDE",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride R-1 School District Board Regular Meeting",
+    link: "https://koto.org/event/telluride-r-1-school-district-board-regular-meeting/",
+    description: "The Telluride R-1 School District Board of Education holds a regular meeting on Tuesday, September 22nd, at 5:15 p.m. in the Bridal Veil Conference Room at TMHS and via Zoom. The meeting agenda & Zoom link can be found at tellurideschool.org.",
+    pubDate: "2026-09-22T17:15:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Middle/High School, TELLURIDE",
+    imageUrl: ""
+  },
+  {
+    title: "Tennis Clinic 3.0-4.0",
+    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-23/",
+    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-09-23T09:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Tennis Clinic 4.0+",
+    link: "https://koto.org/event/tennis-clinic-4-0/2026-09-23/",
+    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-09-23T11:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
   }
 ];
 
@@ -4075,6 +4117,54 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
+  {
+    title: "Red Mountain Revival",
+    link: "https://www.alibitelluride.com/calendar#eca-event=red-mountain-revival",
+    description: "Red Mountain Revival is a San Juan Range based Blues and Rock band hailing from ...",
+    pubDate: "2026-09-16",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/9c822bd9-a0aa-4a17-b6ab-34a40f24e62e/-/crop/1537x1536/597,0/-/preview/"
+  },
+  {
+    title: "DJ HARRY",
+    link: "https://www.alibitelluride.com/calendar#eca-event=dj-harry",
+    description: "Originating in Boulder, Colorado, DJ Harry issued his first album, The String Ch...",
+    pubDate: "2026-09-17",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/7a37cc41-545b-4d73-82c0-3012343c172b/-/crop/1294x1295/0,213/-/preview/"
+  },
+  {
+    title: "DJ WOMBAT",
+    link: "https://www.alibitelluride.com/calendar#eca-event=dj-wombat-4",
+    description: "ringing a deep passionate knowledge of sound, blending reggae, breakbeat, Phish,...",
+    pubDate: "2026-09-18",
+    time: "10:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/46f14e2f-0397-4682-a048-d911457f02c9/-/crop/1199x1200/41,0/-/preview/"
+  },
+  {
+    title: "CASTLE w/ Sound Shepherd",
+    link: "https://www.alibitelluride.com/calendar#eca-event=castle-8",
+    description: "Having began his journey in Telluride as a ski coach, CASTLE has transitioned to...",
+    pubDate: "2026-09-19",
+    time: "10:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/f213094a-1e6c-4006-a482-991f1efae50e/-/crop/1294x1295/0,114/-/preview/"
+  },
   {
     title: "Photon",
     link: "https://www.alibitelluride.com/calendar#eca-event=photon",
@@ -5039,18 +5129,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray Community Center",
     imageUrl: "https://localist-images.azureedge.net/photos/52092171660517/huge/0e628304026c92db25e8df01849c962ac902a3b4.jpg"
-  },
-  {
-    title: "Postponed: Sep 22, 2026: Community Meditation",
-    link: "https://events.ourayridgwayevents.com/event/community-meditation",
-    description: "Meditation night on July 14 has been postponed. The rescheduled July date will be posted here when it is known. Thank you for your understanding. Join us for a peer-led weekly meditation series at the Decker Community Room. Free and open to the public! We meet every 1st, 2nd, and 4th Tuesday of the month (all but the 3rd Tuesday!) View on site | Email this event",
-    pubDate: "2026-09-23T00:30:00.000Z",
-    endDate: "2026-10-28",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/52338340283147/huge/582622671001d9ab20f8c25a5d229c9ecbbba165.jpg"
   },
   {
     title: "Middle School Volleyball: Ouray vs Mancos",
@@ -6078,17 +6156,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Bike & Brewery Tour",
-    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
-    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
-    pubDate: "2026-09-14T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
-  },
-  {
     title: "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
     link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
     description: "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
@@ -6911,6 +6978,17 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/63481/screenshot_2026-09-02_at_12_41_29_pm.800x533.webp"
   },
   {
+    title: "The Past, Present, and Future of the Telluride Climbing Community",
+    link: "https://www.telluride.com/event/the-past-present-and-future-of-the-telluride-climbing-community/",
+    description: "WPL and Telluride Mountain Club present a night storytelling and conversation with Rock Guide of Telluride author …",
+    pubDate: "2026-09-27",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63600/climbing_1.800x533.webp"
+  },
+  {
     title: "Original Thinkers",
     link: "https://www.telluride.com/event/original-thinkers/",
     description: "Original Thinkers is a boutique festival of film, ideas, art, performance, and conversation held annually in Telluride, …",
@@ -7438,24 +7516,6 @@ const LEGAL_NOTICES = [
     noticeKey: "pz-shandoka-lot-pud-2026"
   },
   {
-    title: "Ordinance -- Adoption of Colorado Low Energy and Carbon Code, Ophir (Ordinance #2026-06) (COL-000228)",
-    entity: "Town of Ophir",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "The Town of Ophir General Assembly will hold a public hearing on September 15, 2026, at 7:00 PM at Ophir Town Hall, 36 Porphyry Street, to consider Ordinance #2026-06 on second reading, which proposes adoption of the Colorado Low Energy and Carbon Code (LECC). The applicant is the Town of Ophir. More complete information is available at Ophir Town Hall.",
-    deadline: "2026-09-15",
-    expires: "2026-09-15",
-    dates: "9/3",
-    papers: ["ttimes_0903"],
-    url: "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
-    address: "36 Porphyry Street, Ophir, CO 81426",
-    noticeKey: "ord-2026-06-ophir-lecc"
-  },
-  {
     title: "Water Court Application -- Finding of Reasonable Diligence, Telluride Pines Alder Creek Pump and Pipeline (26CW3043)",
     entity: "Colorado District Court, Water Division No. 4",
     entityClass: "ent-county",
@@ -7502,7 +7562,7 @@ const LEGAL_NOTICES = [
     iconClass: "type-tax",
     type: "Tax & Finance",
     filterTag: "tax-finance",
-    summary: "Public Trustee Brandi R. Hatfield of San Miguel County is conducting a foreclosure sale on a deed of trust originally granted by Ryan Pfaff, with the current debt holder being Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust. The property is Condominium Unit 7 at Double Diamond Condominium, commonly known as 350 S Mahoney Dr Unit 7, Telluride, CO 81435, with an outstanding principal balance of approximately $1,199,032.37. The public auction will be held at 10:00 A.M. on September 3, 2026, at 305 W. Colorado Avenue, East entry, Telluride, CO.",
+    summary: "Public Trustee Brandi R. Hatfield of San Miguel County has scheduled a public auction foreclosure sale for Condominium Unit 7, Double Diamond Condominium, located at 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor Ryan Pfaff failed to pay principal and interest on a $1,200,000 deed of trust (original beneficiary: Mortgage Electronic Registration Systems, Inc. as nominee for Deephaven Mortgage LLC; current holder: Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust). The property will be sold at public auction on September 3, 2026 at 10:00 A.M. at 305 W. Colorado Avenue, East entry, Telluride, CO.",
     deadline: "2026-09-03",
     expires: "2026-09-03",
     dates: "8/13",
@@ -9080,6 +9140,15 @@ const TELLURIDE_BOARD_MEETINGS = [
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
     civicwebId: 8051
+  },
+  {
+    date: "December 15, 2026",
+    title: "Town Council",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8047",
+    hasAgenda: false,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: "",
+    civicwebId: 8047
   }
 ];
 
