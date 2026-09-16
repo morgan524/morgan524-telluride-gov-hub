@@ -1,5 +1,19 @@
 [
   {
+    "title": "Another view of housing",
+    "source": "Telluride Times",
+    "sourceKey": "ttimes",
+    "date": "September 15, 2026",
+    "summary": "In a letter to the editor, Madelaine Whiteman contrasts Telluride's single-plan approach to its Town-led workforce housing project with San Rafael, California, where five developers competed for an affordable-housing site and three finalists presented distinct proposals on cost, density, and public benefit. She asks why Telluride taxpayers are being asked to move forward on a Town-developed project without competing bids or a known final cost, and questions whether housing development, management, and rental should be a core municipal responsibility at all.",
+    "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_9823f845-c4a0-4cf8-afe5-28cb216da161.html",
+    "category": "Opinion",
+    "newsTopic": "housing",
+    "isLetter": true,
+    "letterAuthor": "Madelaine Whiteman",
+    "featured": true,
+    "expires": "2026-09-17"
+  },
+  {
     "title": "New medicine for a vulnerable economy",
     "source": "Telluride Times",
     "sourceKey": "ttimes",
