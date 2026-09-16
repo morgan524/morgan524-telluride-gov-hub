@@ -1,30 +1,34 @@
 {
-  "hash": "2b196a607d3d3571f06f8dbf4c218b157d9d8a18",
-  "lede": "The biggest thing on the calendar this week is a public board meeting where Telluride Regional Medical Center's board will take action — in public, after executive session — on who leads the hospital in the near term; if you care about local healthcare, that's the meeting to watch. Mountain Village is also moving an ordinance that would shift affordable housing fee-setting authority out of the municipal code, a structural change worth understanding. On top of that, HARC takes up a work session on potentially demolishing and replacing Rebekah Hall, the Town-owned building where it actually meets, and the BOCC continues discussions on constitutional amendments and a long-standing view-plain MOU involving Mountain Village.",
+  "hash": "3c076885f0ac8a87005bceaeadca9fa98d060f7e",
+  "lede": "The biggest thing on the civic calendar this week is the Telluride Regional Medical Center board's special meeting Wednesday, where they'll go into executive session and then vote publicly on who's running the hospital in the near term — that's not a routine item. Alongside that, Mountain Village takes up a first reading on shifting affordable housing fees out of municipal code, HARC looks at a potential demolition and new construction at Rebekah Hall, and the county commissioners weigh in on constitutional amendments and a view-plain MOU with Mountain Village. Blues & Brews kicks off Thursday, so the valley's about to get busy.",
   "notable": [
     {
       "id": 11,
-      "stake": "Board votes publicly on interim hospital leadership after executive session."
+      "stake": "Board votes publicly on who leads the hospital after executive session."
+    },
+    {
+      "id": 13,
+      "stake": "Same medical center leadership vote — public comment open via Zoom."
     },
     {
       "id": 7,
-      "stake": "Ordinance would move affordable housing fee-setting out of municipal code permanently."
+      "stake": "First reading: ordinance would move affordable housing fees outside municipal code."
     },
     {
       "id": 2,
-      "stake": "Work session on demolishing and rebuilding Town-owned Rebekah Hall; public should track."
+      "stake": "HARC work session on potential demolition of historic, Town-owned Rebekah Hall."
     },
     {
       "id": 4,
-      "stake": "BOCC weighs constitutional amendments and a view-plain MOU with Mountain Village."
+      "stake": "BOCC weighs constitutional amendments and a Mountain Village view-plain MOU."
     },
     {
       "id": 5,
-      "stake": "Two public hearings: a PUD application and a parcel subdivision in Ouray County."
+      "stake": "Two public hearings: Curry PUD and a parcel subdivision in Ouray County."
     },
     {
       "id": 10,
-      "stake": "Comp Plan update check-in shapes long-range land use and density for Telluride."
+      "stake": "Comp Plan update presented — long-range framework for town land use and density."
     }
   ]
 }

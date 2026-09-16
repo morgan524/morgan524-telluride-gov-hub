@@ -390,7 +390,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://www.norwoodtown.com/files/5f8304a63/09.08.2026+RESCHEDULED+NWC+Agenda.pdf","zoomUrl":"https://us02web.zoom.us/j/88274908233","meetingId":"882 7490 8233","passcode":"997236","phone":"346-248-7799","sv":4},
 
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132","sv":4,"ph":"71ddd589523e78ab"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132","sv":4,"ph":"8f57e5c3d0f3d416"},
 
   "telluride|2026-10-06|Town Council - Oct 06 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044","sv":4,"ph":"276ac1e5db35b48f"},
@@ -471,7 +471,10 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"7751bc604656aec0"},
 
   "county|2026-09-30|Board of County Commissioners Work Session":
-    {"sv":4,"ph":"babd88802ce87b3a"}
+    {"sv":4,"ph":"babd88802ce87b3a"},
+
+  "telluride|2026-09-17|Open Space Commission Site Walk - Sep 17 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8317","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -833,7 +836,10 @@ const MEETING_PREVIEWS = {
     "Board will consider matters related to San Miguel County operations, potentially including procurement items such as material hauling, trail construction, fuel island canopy work, and jail repainting contracts. Additional context from related legal notices suggests ongoing county administrative and financial activity in the surrounding area.",
 
   "county|2026-09-30|Board of County Commissioners Work Session":
-    "Commissioners are expected to discuss county procurement matters, including material hauling, trail construction for the Lawson Hill Connector, fuel island canopy construction, and jail painting projects. Additional administrative and operational items may also be addressed during the work session."
+    "Commissioners are expected to discuss county procurement matters, including material hauling, trail construction for the Lawson Hill Connector, fuel island canopy construction, and jail painting projects. Additional administrative and operational items may also be addressed during the work session.",
+
+  "telluride|2026-09-17|Open Space Commission Site Walk - Sep 17 2026":
+    "The Open Space Commission will conduct a site walk at Bear Creek Preserve to review the Blues & Brews Festival camping area designated as Zone 1. The meeting begins at 4:00 PM at the Town Park Vehicle Bridge, 500 E. Colorado Ave."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -894,6 +900,26 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "Celebration of local history and pioneers.",
     href: "https://norwoodcolorado.com/event/pioneer-day-2/",
+    img: ""
+  },
+  {
+    title: "Sheriff Rescinds Fire Restrictions",
+    source: "Ouray County",
+    sourceKey: "ouray-county",
+    date: "September 16, 2026",
+    newsTopic: "public-safety",
+    copy: "Ouray County rescinds all fire restrictions for unincorporated areas",
+    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=963",
+    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22895"
+  },
+  {
+    title: "Parish Bulletin/Last Call for Parish Mission",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "September 12, 2026",
+    newsTopic: "community",
+    copy: "Attached is the Parish Bulletin for September 13. As a reminder, always check the parish calendar for the most updated information. REMINDER: Due to a Diocese of Pueblo Clergy Retreat the week of September 14-18, there will be no Holy ...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-last-call-for-parish-mission/",
     img: ""
   },
   {
@@ -997,6 +1023,16 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Parish Bulletin for September 6",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "September 6, 2026",
+    newsTopic: "community",
+    copy: "Attached is this week's parish bulletin. Please check the parish calendar for all updated schedule of events. *Holy Adoration begins at 8:30 am before Sunday's Holy Mass-September 6. *Immediately after Holy Mass, join us for...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-september-6/",
+    img: ""
+  },
+  {
     title: "FEMA Public Assistance Approved for Colorado’s Major Disaster Declaration",
     source: "Ouray County",
     sourceKey: "ouray-county",
@@ -1051,7 +1087,7 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#42052"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-15';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-16';
 const LEGAL_NOTICES_CACHE_DATE = '2026-09-16';
 
 const MANUAL_SUMMARIES = {
@@ -1380,7 +1416,10 @@ const MANUAL_SUMMARIES = {
     "The September 23 Board of County Commissioners Special Meeting agenda hasn't been posted yet.",
 
   "county|2026-09-30|Board of County Commissioners Work Session":
-    "The September 30, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet."
+    "The September 30, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+
+  "telluride|2026-09-17|Open Space Commission Site Walk - Sep 17 2026":
+    "The Open Space Commission heads out on foot Thursday at 4:00 PM, meeting at the Town Park vehicle bridge on East Colorado Avenue. The sole work item is a site walk through Zone 1 of Bear Creek Preserve to review the Blues & Brews Festival camping area. No votes are scheduled — this is a ground-level look before any formal action."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1756,13 +1795,37 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Come celebrate young scientists",
+    source: "Telluride Times",
+    date: "September 16, 2026",
+    firstSeen: "2026-09-16",
+    newsTopic: "education",
+    copy: "Pinhead Institute sent 28 local high school juniors on six-week research internships this summer, covering fields from astrophysics to history. They'll share what they learned at the Sheridan Opera House on Sept. 22, starting with a 5:30 p.m. reception. Pinhead covers all costs for families earning under $100,000.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_d2c38a22-8231-4c90-a3f7-43d30d2759b8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/d5/fd5558a2-6e05-4e80-acff-08cda1def8f3/6aa64d555a161.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Telluride earns its first Michelin restaurant recognition",
+    source: "Telluride Times",
+    date: "September 15, 2026",
+    firstSeen: "2026-09-16",
+    newsTopic: "community",
+    copy: "The National, a Telluride restaurant led by Chef Chris Thompson, has earned a Michelin Recommended distinction in the 2026 Michelin Guide — the first such recognition for a Telluride restaurant. Thompson, who grew up here and returned in 2023, runs the spot with his wife Kate. Several local hotels have previously earned Michelin Keys.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_838f41b1-5648-4571-8617-a4fd2cbda665.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/77/1773e62a-bae3-4761-8c7d-5487067cd7de/6aa9c3ecb25cd.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Commissioners approve AMI increase for some Pinion Park units",
     source: "Telluride Times",
     date: "September 16, 2026",
     firstSeen: "2026-09-16",
-    newsTopic: "government",
-    copy: "The San Miguel Board of County Commissioners (BOCC), acting as the San Miguel County Housing Authority, voted to increase the area median income (AMI) eligibility for certain units in Pinion Park during a regular meeting on Wednesday, Sept. 9.",
-    claudeSummary: false,
+    newsTopic: "housing",
+    copy: "Five of Pinion Park's 24 affordable units in Norwood sit unsold despite the housing shortage. The county raised income eligibility on some units from 80% to 100% AMI — sellers must drop to original purchase price first. High interest rates are the core problem: at 6%, few 80% AMI earners can qualify for a mortgage.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_2f591495-4a27-44e9-8d84-3fbb62a91ae8.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/bd/9bd60221-b2e7-408d-ba91-2b111679ca3b/6aa4836131e45.image.jpg",
     imgHiRes: true
@@ -1891,18 +1954,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_ec915534-53b6-4dfd-86d1-1b23be35cd20.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/82/d822ea16-2a05-4e30-a041-6d35143153fd/6aa9c5b4ece51.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride earns its first Michelin restaurant recognition",
-    source: "Telluride Times",
-    date: "September 15, 2026",
-    firstSeen: "2026-09-16",
-    newsTopic: "community",
-    copy: "The National, a Telluride restaurant led by Chef Chris Thompson, has earned a Michelin Recommended distinction in the 2026 Michelin Guide — the first such recognition for a Telluride restaurant. Thompson, who grew up here and returned in 2023, runs the spot with his wife Kate. Several local hotels have previously earned Michelin Keys.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_838f41b1-5648-4571-8617-a4fd2cbda665.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/77/1773e62a-bae3-4761-8c7d-5487067cd7de/6aa9c3ecb25cd.image.jpg",
     imgHiRes: true
   },
   {
@@ -2811,6 +2862,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
   },
   {
+    title: "Town of Telluride Downgrades to Stage 1 Fire Restrictions",
+    source: "Town of Telluride",
+    date: "August 26, 2026",
+    newsTopic: "public-safety",
+    copy: "(August 25, 2026) – Following improved fire conditions across the region, Town Manager Zoe Dohnal has downgraded fire restrictions within the Town of Telluride from Stage 2 to Stage 1, effective 12:01 a.m. MT on Wednesday, August 26, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=403",
+    img: ""
+  },
+  {
     title: "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
     source: "San Miguel County",
     date: "September 10, 2026",
@@ -2827,6 +2887,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
+  },
+  {
+    title: "Waste Tire Collection Event",
+    source: "San Miguel County",
+    date: "August 24, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
   },
   {
     title: "Tomboy Road Closed Intermittently Tuesday 9/15 - Friday 9/18",
@@ -2853,6 +2922,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "community",
     copy: "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=45",
+    img: ""
+  },
+  {
+    title: "Stage 1 Fire Restrictions In Effect",
+    source: "Town of Telluride",
+    date: "August 26, 2026",
+    newsTopic: "public-safety",
+    copy: "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=65",
     img: ""
   },
   {
@@ -3519,39 +3597,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Tennis Clinic 3.0-4.0",
-    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-16/",
-    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-16T09:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Tennis Clinic 4.0+",
-    link: "https://koto.org/event/tennis-clinic-4-0/2026-09-16/",
-    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-16T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Mahjongg for Independent Players",
-    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-09-16/",
-    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
-    pubDate: "2026-09-16T13:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
-  },
   {
     title: "Songs of the Season: Fall",
     link: "https://koto.org/event/songs-of-the-season-fall/",
@@ -4754,18 +4799,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53780725919104/huge/846566299e8e325221de54dd5a54a0fd6427fbf5.jpg"
   },
   {
-    title: "Trivia Night",
-    link: "https://events.ourayridgwayevents.com/event/floating-lotus-trivia-night",
-    description: "Trivia Night at Floating Lotus Brewery! Join us on the 1st & 3rd Thursdays from 6-9 PM for a lively night of questions, drinks, and friendly competition. Grab a table, bring your team, and learn more at floatinglotusbrewery.com. View on site | Email this event",
-    pubDate: "2026-09-18T00:00:00.000Z",
-    endDate: "2026-11-06",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53790516346797/huge/599d1a7013ddde307592e7dfc9b892fe265527e0.jpg"
-  },
-  {
     title: "Stillhouse Junkies: Live Music @ the Wright",
     link: "https://events.ourayridgwayevents.com/event/stillhouse-junkies-live-music-the-wright",
     description: "The Wright Opera House welcomes Stillhouse Junkies, the acclaimed Durango-based trio explore the worlds between roots, bluegrass, Texas swing, blues, and rock. Their free-flowing musical interplay and improvisation make every show unique as the trio weave through high-energy, intricately composed original songs, never taking the same path twice. Formed in 2017, the band consists of Fred Kosak (guitar, mandolin), Alissa Wolf (fiddle), and Jeanette Adams (bass). Part of programming at the Wright Opera House, bringing arts, conversation, and community to downtown Ouray since 1889. View on site | Email this event",
@@ -4901,18 +4934,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53861933199264/huge/a6b3ed3547c7583cd9c727f1be07b81f6be27814.jpg"
   },
   {
-    title: "Floating Lotus Fall Cornhole League",
-    link: "https://events.ourayridgwayevents.com/event/floating-lotus-fall-cornhole-league",
-    description: "Join the Floating Lotus Fall Cornhole League for six Saturdays of friendly competition. League play runs September 19 through October 24 from 2–5 PM, followed by the championship on October 31. Register a two-person team or sign up solo to find a teammate. All players must be 21+. Outdoor play only. Full details and registration are available at floatinglotusbrewery.com/cornhole-league/. View on site | Email this event",
-    pubDate: "2026-09-19T20:00:00.000Z",
-    endDate: "2026-10-31",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/51579997965478/huge/4984f693db71ca30a33ee066346909a44bc0987f.jpg"
-  },
-  {
     title: "Colona Community Church’s Annual Harvest Dinner",
     link: "https://events.ourayridgwayevents.com/event/colona-community-churchs-annual-harvest-dinner-6308",
     description: "Live Music. Come join us for Fun, Food, & Fellowship. Celebrating 114 years! Free to All. 😀 View on site | Email this event",
@@ -5026,6 +5047,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52092171660517/huge/0e628304026c92db25e8df01849c962ac902a3b4.jpg"
   },
   {
+    title: "Postponed: Sep 22, 2026: Community Meditation",
+    link: "https://events.ourayridgwayevents.com/event/community-meditation",
+    description: "Join us for a peer-led weekly meditation series at the Decker Community Room. Free and open to the public! We meet every 1st, 2nd, and 4th Tuesday of the month (all but the 3rd Tuesday!) View on site | Email this event",
+    pubDate: "2026-09-23T00:30:00.000Z",
+    endDate: "2026-10-28",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/52338340283147/huge/582622671001d9ab20f8c25a5d229c9ecbbba165.jpg"
+  },
+  {
     title: "Middle School Volleyball: Ouray vs Mancos",
     link: "https://events.ourayridgwayevents.com/event/middle-school-volleyball-ouray-vs-mancos",
     description: "Ouray Middle School plays Mancos Middle School at Ouray. Times are approximate depending on legth of the previous games A Team: 4:00pm B Team: 5:00-6:00pm C Team: 6:00-6:30pm View on site | Email this event",
@@ -5091,18 +5124,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "636 Main Street",
     imageUrl: "https://localist-images.azureedge.net/photos/53799978983659/huge/ea52c8e358b57e26f19a76695d4ac28e6c8ed0a3.jpg"
-  },
-  {
-    title: "Music Bingo",
-    link: "https://events.ourayridgwayevents.com/event/music-bingo",
-    description: "Music Bingo at Floating Lotus Brewery! Join us on the 2nd & 4th Thursdays from 6-9 PM for a high-energy night of music, drinks, and bingo-style fun. Listen, mark your card, and sing along. Learn more at floatinglotusbrewery.com. View on site | Email this event",
-    pubDate: "2026-09-25T00:00:00.000Z",
-    endDate: "2026-11-13",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53790449536989/huge/a7181e9d298980d4c2377db45d06d26bb81e0b12.jpg"
   },
   {
     title: "Watercolor & Wine with Katey Fetch: \"Paint the Peaks\"",
@@ -7469,6 +7490,25 @@ const LEGAL_NOTICES = [
     address: "San Juan Vista Subdivision, Filing No. 1, SE1/4SE1/4 Section 12, S1/2, S1/2N1/2 and N1/2NE1/4 Section 13, Township 44 North, Range 10 West, N.M.P.M., San Miguel County, Colorado",
     noticeKey: "26CW3039",
     caseNumber: "26CW3039"
+  },
+  {
+    title: "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominium (Sale No. 202605)",
+    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "Public Trustee Brandi R. Hatfield of San Miguel County has scheduled a public foreclosure auction for Condominium Unit 7 at Double Diamond Condominium, located at 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor Ryan Pfaff defaulted on a $1,200,000 deed of trust dated May 23, 2022, with an outstanding balance of approximately $1,199,032.37. The property will be sold to the highest cash bidder at 305 W. Colorado Avenue (East entry), Telluride, CO on September 3, 2026 at 10:00 A.M.",
+    deadline: "2026-09-03",
+    expires: "2026-09-03",
+    dates: "8/13",
+    papers: ["ttimes_0813"],
+    url: "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
+    address: "350 S Mahoney Dr Unit 7, Telluride, CO 81435",
+    noticeKey: "foreclosure-sale-202605",
+    caseNumber: "202605"
   }
 ];
 

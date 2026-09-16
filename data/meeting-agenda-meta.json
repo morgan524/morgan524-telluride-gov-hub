@@ -467,7 +467,7 @@
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132",
     "sv": 4,
-    "ph": "71ddd589523e78ab"
+    "ph": "8f57e5c3d0f3d416"
   },
   "telluride|2026-10-06|Town Council - Oct 06 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044",
@@ -595,5 +595,9 @@
   "county|2026-09-30|Board of County Commissioners Work Session": {
     "sv": 4,
     "ph": "babd88802ce87b3a"
+  },
+  "telluride|2026-09-17|Open Space Commission Site Walk - Sep 17 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8317",
+    "sv": 4
   }
 }

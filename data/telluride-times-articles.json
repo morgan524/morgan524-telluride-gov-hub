@@ -1,12 +1,36 @@
 [
   {
+    "title": "Come celebrate young scientists",
+    "source": "Telluride Times",
+    "date": "September 16, 2026",
+    "firstSeen": "2026-09-16",
+    "newsTopic": "education",
+    "copy": "Pinhead Institute sent 28 local high school juniors on six-week research internships this summer, covering fields from astrophysics to history. They'll share what they learned at the Sheridan Opera House on Sept. 22, starting with a 5:30 p.m. reception. Pinhead covers all costs for families earning under $100,000.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_d2c38a22-8231-4c90-a3f7-43d30d2759b8.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/d5/fd5558a2-6e05-4e80-acff-08cda1def8f3/6aa64d555a161.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Telluride earns its first Michelin restaurant recognition",
+    "source": "Telluride Times",
+    "date": "September 15, 2026",
+    "firstSeen": "2026-09-16",
+    "newsTopic": "community",
+    "copy": "The National, a Telluride restaurant led by Chef Chris Thompson, has earned a Michelin Recommended distinction in the 2026 Michelin Guide — the first such recognition for a Telluride restaurant. Thompson, who grew up here and returned in 2023, runs the spot with his wife Kate. Several local hotels have previously earned Michelin Keys.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news_release/article_838f41b1-5648-4571-8617-a4fd2cbda665.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/77/1773e62a-bae3-4761-8c7d-5487067cd7de/6aa9c3ecb25cd.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Commissioners approve AMI increase for some Pinion Park units",
     "source": "Telluride Times",
     "date": "September 16, 2026",
     "firstSeen": "2026-09-16",
-    "newsTopic": "government",
-    "copy": "The San Miguel Board of County Commissioners (BOCC), acting as the San Miguel County Housing Authority, voted to increase the area median income (AMI) eligibility for certain units in Pinion Park during a regular meeting on Wednesday, Sept. 9.",
-    "claudeSummary": false,
+    "newsTopic": "housing",
+    "copy": "Five of Pinion Park's 24 affordable units in Norwood sit unsold despite the housing shortage. The county raised income eligibility on some units from 80% to 100% AMI — sellers must drop to original purchase price first. High interest rates are the core problem: at 6%, few 80% AMI earners can qualify for a mortgage.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/news/article_2f591495-4a27-44e9-8d84-3fbb62a91ae8.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/bd/9bd60221-b2e7-408d-ba91-2b111679ca3b/6aa4836131e45.image.jpg",
     "imgHiRes": true
@@ -135,18 +159,6 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/news_release/article_ec915534-53b6-4dfd-86d1-1b23be35cd20.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/82/d822ea16-2a05-4e30-a041-6d35143153fd/6aa9c5b4ece51.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "Telluride earns its first Michelin restaurant recognition",
-    "source": "Telluride Times",
-    "date": "September 15, 2026",
-    "firstSeen": "2026-09-16",
-    "newsTopic": "community",
-    "copy": "The National, a Telluride restaurant led by Chef Chris Thompson, has earned a Michelin Recommended distinction in the 2026 Michelin Guide — the first such recognition for a Telluride restaurant. Thompson, who grew up here and returned in 2023, runs the spot with his wife Kate. Several local hotels have previously earned Michelin Keys.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news_release/article_838f41b1-5648-4571-8617-a4fd2cbda665.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/77/1773e62a-bae3-4761-8c7d-5487067cd7de/6aa9c3ecb25cd.image.jpg",
     "imgHiRes": true
   },
   {
@@ -1055,6 +1067,15 @@
     "img": "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
   },
   {
+    "title": "Town of Telluride Downgrades to Stage 1 Fire Restrictions",
+    "source": "Town of Telluride",
+    "date": "August 26, 2026",
+    "newsTopic": "public-safety",
+    "copy": "(August 25, 2026) – Following improved fire conditions across the region, Town Manager Zoe Dohnal has downgraded fire restrictions within the Town of Telluride from Stage 2 to Stage 1, effective 12:01 a.m. MT on Wednesday, August 26, 2026.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=403",
+    "img": ""
+  },
+  {
     "title": "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
     "source": "San Miguel County",
     "date": "September 10, 2026",
@@ -1071,6 +1092,15 @@
     "copy": "",
     "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
+  },
+  {
+    "title": "Waste Tire Collection Event",
+    "source": "San Miguel County",
+    "date": "August 24, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
   },
   {
     "title": "Tomboy Road Closed Intermittently Tuesday 9/15 - Friday 9/18",
@@ -1097,6 +1127,15 @@
     "newsTopic": "community",
     "copy": "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
     "href": "https://www.telluride.gov/AlertCenter.aspx?AID=45",
+    "img": ""
+  },
+  {
+    "title": "Stage 1 Fire Restrictions In Effect",
+    "source": "Town of Telluride",
+    "date": "August 26, 2026",
+    "newsTopic": "public-safety",
+    "copy": "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
+    "href": "https://www.telluride.gov/AlertCenter.aspx?AID=65",
     "img": ""
   },
   {
