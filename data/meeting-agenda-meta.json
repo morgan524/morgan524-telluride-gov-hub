@@ -45,10 +45,6 @@
     "zoomUrl": "https://us06web.zoom.us/webinar/register/WN_ndaN3Xr5TWe9uANpXwY42w",
     "phone": "970-369-6429"
   },
-  "norwood|2026-08-17|Planning and Zoning Commission Meeting": {
-    "sv": 4,
-    "ph": "b858cb282617fb09"
-  },
   "ophir|2026-08-18|General Assembly Meeting": {
     "sv": 4,
     "ph": "b858cb282617fb09"
@@ -218,14 +214,6 @@
     "agendaUrl": "https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1015",
     "sv": 4
   },
-  "norwood|2026-08-17|Planning and Zoning Commission Cancelled": {
-    "agendaUrl": "https://www.norwoodtown.com/files/39acf0aed/08.17.2026+P%26Z+BOA+Agenda+-+Cancel.pdf",
-    "zoomUrl": "https://us02web.zoom.us/j/85001344971",
-    "meetingId": "850 0134 4971",
-    "passcode": "8142302",
-    "phone": "970-327-4288",
-    "sv": 4
-  },
   "smart|2026-09-10|SMART Board of Directors": {
     "sv": 4,
     "ph": "b858cb282617fb09"
@@ -237,10 +225,6 @@
     "meetingId": "894 7506 0147",
     "passcode": "314276.",
     "phone": "719) 359-4580"
-  },
-  "telluride|2026-08-17|Open Space Commission Site Walk - Aug 17 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8302",
-    "sv": 4
   },
   "school|2026-08-24|Telluride Board of Education Work Session": {
     "sv": 4,
@@ -513,7 +497,7 @@
   },
   "county|2026-09-24|5 x 5 County Meeting - San Miguel County Hosts": {
     "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1071/files/agenda/2001",
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1071/files/agenda/2005",
     "zoomUrl": "https://us02web.zoom.us/meeting/register/MPkylS4iTRCn1ZOARSNRPQ",
     "meetingId": "867 6377 9971",
     "passcode": "898059.",

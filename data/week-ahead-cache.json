@@ -1,34 +1,26 @@
 {
-  "hash": "3c076885f0ac8a87005bceaeadca9fa98d060f7e",
-  "lede": "The biggest thing on the civic calendar this week is the Telluride Regional Medical Center board's special meeting Wednesday, where they'll go into executive session and then vote publicly on who's running the hospital in the near term — that's not a routine item. Alongside that, Mountain Village takes up a first reading on shifting affordable housing fees out of municipal code, HARC looks at a potential demolition and new construction at Rebekah Hall, and the county commissioners weigh in on constitutional amendments and a view-plain MOU with Mountain Village. Blues & Brews kicks off Thursday, so the valley's about to get busy.",
+  "hash": "110806a8aa14691ec898fa309a83d012352c78b7",
+  "lede": "The biggest thing on the civic calendar this week is a public vote on who leads Telluride Regional Medical Center — the board goes into executive session and then takes public action on interim hospital leadership, and public comment is open via Zoom. Right behind that, Town Council takes up a deed-restriction amendment that would remove the sale-price cap on two affordable units at 215 East Colorado Avenue, which is the kind of structural housing change that's hard to undo. Mountain Village is also moving a first reading that shifts how affordable housing fees get set, and the Telluride P&Z holds a work session on the Comprehensive Plan update with a second community survey in play.",
   "notable": [
     {
+      "id": 6,
+      "stake": "Board votes publicly on who runs the hospital; public comment open."
+    },
+    {
       "id": 11,
-      "stake": "Board votes publicly on who leads the hospital after executive session."
-    },
-    {
-      "id": 13,
-      "stake": "Same medical center leadership vote — public comment open via Zoom."
-    },
-    {
-      "id": 7,
-      "stake": "First reading: ordinance would move affordable housing fees outside municipal code."
-    },
-    {
-      "id": 2,
-      "stake": "HARC work session on potential demolition of historic, Town-owned Rebekah Hall."
-    },
-    {
-      "id": 4,
-      "stake": "BOCC weighs constitutional amendments and a Mountain Village view-plain MOU."
-    },
-    {
-      "id": 5,
-      "stake": "Two public hearings: Curry PUD and a parcel subdivision in Ouray County."
+      "stake": "Vote could remove price cap on two affordable units, shrinking protected stock."
     },
     {
       "id": 10,
-      "stake": "Comp Plan update presented — long-range framework for town land use and density."
+      "stake": "Resolution converts two ownership units to EDUs, removing maximum sale price."
+    },
+    {
+      "id": 0,
+      "stake": "First reading shifts affordable housing fee-setting authority out of municipal code."
+    },
+    {
+      "id": 3,
+      "stake": "Comp Plan update shapes long-term land use and density; Survey 2 presented."
     }
   ]
 }

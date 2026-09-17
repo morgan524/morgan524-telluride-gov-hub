@@ -136,16 +136,16 @@
     "type": "Community"
   },
   {
-    "title": "Songs of the Season: Fall",
-    "href": "https://koto.org/event/songs-of-the-season-fall/",
+    "title": "Songs of the Season: Fall!",
+    "href": "https://telluridelibrary.libcal.com/event/16258347?hs=a",
     "date": "2026-09-16",
     "time": "5:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
+    "location": "Magazine Room",
     "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/08/Songs-of-the-season-5.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join Oliver & Jackson in a Seasonal Sing Along event, focusing on songs relevant to each coming season. Bring an instrument, just your voice, or even dancing shoes. All are invited. Chords and lyrics will be displayed.",
+    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1769024121.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "5:30 PM – 6:30 PM · Join Oliver & Jackson in a Seasonal Sing Along event, focusing on songs relevant to each coming season. Bring an instrument, just your voice, or even dancing shoes. All are invited. Chords and lyrics will be displayed.",
     "type": "Community"
   },
   {
@@ -1358,6 +1358,19 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Mahjongg for Independent Players",
+    "href": "https://koto.org/event/mahjongg-for-independent-players-4/2026-09-23/",
+    "date": "2026-09-23",
+    "time": "1:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have…",
+    "type": "Community"
+  },
+  {
     "title": "Tennis Clinic 4.0+",
     "href": "https://koto.org/event/tennis-clinic-4-0/2026-09-23/",
     "date": "2026-09-23",
@@ -1397,6 +1410,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "Plant Party: Ornery Orchids w/Brandon Griep",
+    "href": "https://koto.org/event/plant-party-ornery-orchids-w-brandon-griep/",
+    "date": "2026-09-23",
+    "time": "5:15 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/ornery-orchids-2.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Brandon is back! How are your orchids doing? Bring your orchid and chat with Brandon to get the latest and greatest information on all the Ornery Orchids. We will also have some pots and soil available for your orchids.",
+    "type": "Community"
+  },
+  {
     "title": "Market on the Plaza",
     "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     "date": "2026-09-23",
@@ -1408,19 +1434,6 @@
     "source": "Mountain Village",
     "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
     "type": "Community"
-  },
-  {
-    "title": "Optimize Your Brain Health with Lifestyle Medicine",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/optimize-your-brain-health-with-lifestyle-medicine/",
-    "date": "2026-09-23",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49783/tomv.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Can up to half of dementia cases be prevented? Emerging evidence suggests the answer is yes. In this engaging and evidence-based presentation, Dr.",
-    "type": "Talks & Classes"
   },
   {
     "title": "Fireside Chats: Aldasoro Sisters",
@@ -1436,20 +1449,6 @@
     "type": "Talks & Classes"
   },
   {
-    "title": "Creative Space: Artist Salon Series",
-    "href": "https://events.ourayridgwayevents.com/event/creative-space-artist-salon-series",
-    "date": "2026-09-23",
-    "time": "6:00 PM",
-    "location": "Decker Community Room",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53738040069217/huge/449549e29368908fd534c31a53bcd1a1adc7b887.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "AUGUST EDITION: MAKING YOUR MARK WITH JULIA REID (re)discover your own creativity with this hands-on artist talk and demonstration. Mark making without expectation or ego frees the latent artist in all of us. Join us in welcoming Julia…",
-    "type": "Arts & Film",
-    "endDate": "2026-10-29"
-  },
-  {
     "title": "Trout-A-Palooza",
     "href": "https://www.telluride.com/event/troutapalooza/",
     "date": "2026-09-23",
@@ -1461,6 +1460,19 @@
     "source": "Telluride.com",
     "desc": "Troutapalooza is the premier fundraiser for Gunnison Gorge Anglers and the San Miguel Valley Floor project. The event …",
     "type": "Community"
+  },
+  {
+    "title": "Optimize Your Brain Health with Lifestyle Medicine",
+    "href": "https://koto.org/event/optimize-your-brain-health-with-lifestyle-medicine/",
+    "date": "2026-09-23",
+    "time": "6:30 PM",
+    "location": "Telluride Science &#038; Innovation Center, TELLURIDE",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/Brain-Health_tdotcom-2200x1237-1-scaled.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Can up to half of dementia cases be prevented? Emerging evidence suggests the answer is yes. In this engaging and evidence-based presentation, Dr. Melissa Sundermann, a double board-certified Lifestyle Medicine physician known as Doctor…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Ouray: Echoes in the Canyon",
@@ -1595,6 +1607,32 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Coffee and Climate Conversations",
+    "href": "https://koto.org/event/coffee-and-climate-conversations-3/",
+    "date": "2026-09-24",
+    "time": "8:30 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/coffee-and-climate-7.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Coffee & Climate Conversations: Where Recreation Meets Resilience From big adventures to spending time with family and friends, recreation is often at the heart of our experiences on public lands. Join Sheep Mountain Alliance and EcoAction…",
+    "type": "Family & Kids"
+  },
+  {
+    "title": "Yin Yang Yoga with Miriah",
+    "href": "https://koto.org/event/yin-yang-yoga-with-miriah-2/2026-09-24/",
+    "date": "2026-09-24",
+    "time": "9:00 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/MIRIAH-2.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses. We'll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds.…",
+    "type": "Wellness"
+  },
+  {
     "title": "Photon",
     "href": "https://www.alibitelluride.com/calendar#eca-event=photon",
     "date": "2026-09-24",
@@ -1606,6 +1644,19 @@
     "source": "The Alibi",
     "desc": "What started as a passion project dedicated to the late and great Stephen Hawkin...",
     "type": "Community"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-24/",
+    "date": "2026-09-24",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Telluride Farmers Market",
@@ -3184,7 +3235,8 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Grab your friends and take over the Ouray Hot Springs Pool for an evening of swimming, games, food, music, and hanging out. Activities include high-energy games, basketball, races on the Wibit, music, and more. Middle School Takeover |…",
-    "type": "Outdoors & Sports"
+    "type": "Outdoors & Sports",
+    "endDate": "2026-11-16"
   },
   {
     "title": "Sherb Literary Living Room featuring Pam Houston with her new book: \"Animals Taught Me Everything\"",

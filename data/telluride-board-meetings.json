@@ -1,14 +1,5 @@
 [
   {
-    "date": "September 16, 2026",
-    "title": "CANCELED - Parks & Recreation Commission",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082",
-    "hasAgenda": false,
-    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
-    "civicwebId": 8082
-  },
-  {
     "date": "September 17, 2026",
     "title": "Special Meeting - Planning & Zoning Commission",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8310",
@@ -209,5 +200,14 @@
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "",
     "civicwebId": 8047
+  },
+  {
+    "date": "December 16, 2026",
+    "title": "Parks & Recreation Commission",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8085",
+    "hasAgenda": false,
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "time": "",
+    "civicwebId": 8085
   }
 ]

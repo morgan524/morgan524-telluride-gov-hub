@@ -229,26 +229,6 @@
     "caseNumber": "260700207"
   },
   {
-    "title": "Public Hearing -- Adoption of 2024 International Building Code and Colorado Low Energy & Carbon Code",
-    "entity": "San Miguel County Board of Commissioners",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "The San Miguel County Board of Commissioners will hold a public hearing on September 16, 2026 at 9:00 AM in Telluride to consider adopting the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Written comments must be received by noon on September 10, 2026, limited to one page. Proposed amendments are available in the meeting agenda packet at the county website.",
-    "deadline": "2026-09-10T12:00:00 (written comments); hearing 2026-09-16T09:00:00",
-    "expires": "2026-09-16",
-    "dates": "8/27",
-    "papers": [
-      "ttimes_0827"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
-    "address": "Telluride, Colorado (San Miguel County)",
-    "noticeKey": "COL-000222-ibc-2024-hearing"
-  },
-  {
     "title": "RFP -- San Miguel County Jail Repainting, Illium (COL-000224)",
     "entity": "San Miguel County Fleet & Facilities Department",
     "entityClass": "ent-county",
@@ -425,15 +405,15 @@
     "caseNumber": "26CW3039"
   },
   {
-    "title": "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominium (Sale No. 202605)",
-    "entity": "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust",
+    "title": "Foreclosure Sale -- Deed of Trust Default, Condominium Unit 7, Double Diamond (Sale No. 202605)",
+    "entity": "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB",
     "entityClass": "ent-county",
     "entityLogo": "assessor",
     "icon": "💰",
     "iconClass": "type-tax",
     "type": "Tax & Finance",
     "filterTag": "tax-finance",
-    "summary": "Public Trustee Brandi R. Hatfield of San Miguel County has scheduled a public foreclosure auction for Condominium Unit 7 at Double Diamond Condominium, located at 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor Ryan Pfaff defaulted on a $1,200,000 deed of trust dated May 23, 2022, with an outstanding balance of approximately $1,199,032.37. The property will be sold to the highest cash bidder at 305 W. Colorado Avenue (East entry), Telluride, CO on September 3, 2026 at 10:00 A.M.",
+    "summary": "The San Miguel County Public Trustee has scheduled a foreclosure auction for Condominium Unit 7, Double Diamond Condominium, located at 350 S Mahoney Dr Unit 7, Telluride, CO 81435. The original grantor Ryan Pfaff defaulted on a deed of trust dated May 23, 2022 with an outstanding principal balance of approximately $1,199,032.37, now held by Wilmington Savings Fund Society, FSB as trustee. The public auction will be held at 10:00 A.M. on September 3, 2026, at 305 W. Colorado Avenue, East entry, Telluride, CO.",
     "deadline": "2026-09-03",
     "expires": "2026-09-03",
     "dates": "8/13",
