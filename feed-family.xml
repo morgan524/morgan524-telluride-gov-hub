@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-family.xml" rel="self" type="application/rss+xml" />
     <description>Storytime, youth programs, and all-ages activities — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Sep 2026 04:18:45 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 11:22:44 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>⚡ [Meeting] Town Council Meeting — 2026-09-17</title>
@@ -17,7 +17,7 @@
 
 A full agenda for Mountain Village this September, with several items worth tracking. The most consequential: first reading of an ordinance that would shift Mountain Village Housing Authority fees out of the municipal code and into an annually updated MVHA fee schedule — a structural change to how affordable housing costs get set and adjusted. Also on the legislative side, second reading and a public hearing on changes to the Public Art Commission's municipal code chapter, followed by a resolution adopting that commission's bylaws. The quasi-judicial portion involves a conditional use permit for a temporary food truck, seating, and tent at Lot OSP-35-C — modest in scope but going through the full CUP process. Council will also get a presentation on the draft 2027 budget and a pond improvements plan update covering conceptual designs and the entitlement path forward. Routine consent items include winter parking policies and rates, a Cortina Land condo association maintenance agreement, and the Telluride Foundation agency fund agreement.
 
-⚡ Why it matters: First reading shifts affordable housing fee-setting authority out of municipal code.]]></description>
+⚡ Why it matters: First reading shifts MVHA affordable housing fees out of municipal code, changing how costs get set.]]></description>
       <category>Meeting</category>
       <category>Mountain Village</category>
     </item>
@@ -52,7 +52,7 @@ A routine session for the Liquor Licensing Authority. The main action item is a 
 
 A special P&Z work session covering two tracks. First, the ongoing Comprehensive Plan update — consultants and staff will walk through the Existing Conditions StoryMap, review where Phase 2 community engagement stands, and present Survey #2. The Comp Plan process sets the long-range framework for land use, density, and character across town, so these check-ins matter. Second, the commission continues its discussion of potential Land Use Code amendments to LUC 3-502 (landscaping requirements) and LUC 3-505 (maintenance, removal, or relocation of trees) — code language that quietly shapes how development projects are reviewed and conditioned. No votes are expected; this is a working session.
 
-⚡ Why it matters: Comp Plan update shapes long-term land use and density; Survey 2 presented.]]></description>
+⚡ Why it matters: Comp Plan Phase 2 engagement review shapes long-range land use and density decisions for Telluride.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -87,9 +87,35 @@ The Open Space Commission heads out on foot Thursday at 4:00 PM, meeting at the 
 
 A short special meeting — just an hour — with one real item on the table: the interim leadership of Telluride Regional Medical Center. The board will go into executive session under the personnel exemption, then come back out to take public action on who's running the hospital in the near term. That's the whole meeting. Public comment is open at the top, via Zoom.
 
-⚡ Why it matters: Board votes publicly on who runs the hospital; public comment open.]]></description>
+⚡ Why it matters: Board votes publicly on who leads the regional medical center.]]></description>
       <category>Meeting</category>
       <category>Medical Center</category>
+    </item>
+    <item>
+      <title>[Thu, Sep 17] Storytime / Hora de Cuentos</title>
+      <link>https://telluridelibrary.libcal.com/event/17514628?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/storytime%20hora%20de%20cuentos%7C2026-09-17</guid>
+      <pubDate>Thu, 17 Sep 2026 16:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Kids Area
+
+10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Thu, Sep 17] Littles On the Move</title>
+      <link>https://telluridelibrary.libcal.com/event/13960361?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/littles%20on%20the%20move%7C2026-09-17</guid>
+      <pubDate>Thu, 17 Sep 2026 21:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Thu, Sep 17] West End Trail Running</title>
@@ -112,19 +138,6 @@ Learn the fundamentals of trail running while exploring trails in the West End. 
 
 We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!]]></description>
       <media:content url="https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Sat, Sep 19] Crystal Festival – A Rock, Mineral, Gem, &amp; Crystal Show</title>
-      <link>https://koto.org/event/crystal-festival-a-rock-mineral-gem-crystal-show/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/crystal%20festival%20a%20rock%7C2026-09-19</guid>
-      <pubDate>Sat, 19 Sep 2026 06:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/09/bozeman-Crystal-Festival-.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Telluride Conference Center, Mountain Village
-
-Join us for two incredible days celebrating rocks, minerals, fossils, gems, crystals, jewelry, and more at the Crystal Festival! 📅 September 19th and 20th, 2026 🕰️10am to 8pm both days 📍 Telluride Conference Center – Mountain Village, Colorado Whether you’re a seasoned collector, a crystal enthusiast, a geology lover, or simply looking for a fun family outing, there’s something for everyone! ✨ Shop from amazing vendors featuring: • Crystals & Minerals • Fossils & Dinosaur Fossils • Gemstones & Jewelry • Meteorites • Handmade Art & Gifts • Metaphysical Items • Home Décor • Much More! 🔨 Enjoy hands-on activities, educational displays, and discover the fascinating stories behind Earth’s natural treasures. Meet knowledgeable vendors, learn about geology, and find unique pieces to add to your collection. 👨‍👩‍👧‍👦 Family-friendly fun for all ages! …]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/09/bozeman-Crystal-Festival-.jpg" medium="image" />
       <category>Community Event</category>
       <category>KOTO</category>
     </item>
@@ -170,7 +183,7 @@ The September 22, 2026 Telluride Board of Education Monthly Meeting agenda hasn'
 
 Three substantive items at Rebekah Hall. First: a resolution to amend deed restrictions on two town-constructed units at 215 East Colorado Avenue — FINO 1A and 2A — converting them from affordable ownership units to Employee Dwelling Units and removing the maximum sale price, a structural change that rewrites how those units function in the housing stock. Second: a policy statement on §1002.3 AMI updates, with the board weighing whether to hold 2027 rental rates flat or allow only a partial increase — a direct response to the affordability squeeze that has defined local housing politics for years. Third: a review of waitlist policies under §105 of the Employee Rental Housing Policies, which governs who gets access and in what order. Consent calendar includes July meeting minutes and ratification of Resident Advisory Committee members.
 
-⚡ Why it matters: Resolution converts two ownership units to EDUs, removing maximum sale price.]]></description>
+⚡ Why it matters: Resolution converts two deed-restricted ownership units to employee dwelling units, removing sale price limits.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -183,7 +196,7 @@ Three substantive items at Rebekah Hall. First: a resolution to amend deed restr
 
 The most consequential action is a deed-restriction amendment for two units at 215 East Colorado Avenue (FINO II Units 1A and 2A) that would convert them from designated affordable units with a maximum sale price to employee dwelling units — effectively removing the price cap. That conversion question sets the table for three public hearings on second reading: the sale of Spruce House Unit H at 226 East Pacific Avenue, and both FINO II units 1A and 2A. All three sales move toward final approval if Council votes yes. On the code side, first reading of an ordinance amending the Ethics Guidelines (Municipal Code Chapter 2, Article 4, Section 2-4-30) is on the afternoon agenda. The Telluride Housing Authority holds its own session concurrently. Council will also introduce four new staff members across Finance and Human Resources.
 
-⚡ Why it matters: Vote could remove price cap on two affordable units, shrinking protected stock.]]></description>
+⚡ Why it matters: Vote to remove price caps on two affordable units; three public hearings on second reading.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>

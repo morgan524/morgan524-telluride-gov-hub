@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T04:18:35.682Z",
+ "generated": "2026-09-17T11:22:34.171Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -18,7 +18,14 @@
      "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
     }
    ],
-   "recent": [],
+   "recent": [
+    {
+     "source": "telluride",
+     "date": "2026-09-16",
+     "title": "Historic & Architectural Review Commission - Sep 16 2026",
+     "snippet": "Two items stand out on this HARC agenda. First, a work session on a potential demolition and new construction application for Rebekah Hall itself — 113 W Columbia, the very building where HARC meets…"
+    }
+   ],
    "developments": [
     {
      "topic": "carhenge",
@@ -32,6 +39,7 @@
     }
    ],
    "stale": [
+    "Carhenge / Shandoka: telluride discussed it on 2026-09-16 (\"Historic & Architectural Review Commission - Sep 16 2026\") but the deep dive was last edited 2026-08-17.",
     "Carhenge / Shandoka: timeline entry \"HARC hears Shandoka's four buildings; Carhenge slips to…\" (Aug 19, 2026) is still marked upcoming but the date has passed."
    ]
   },
@@ -83,6 +91,12 @@
    "recent": [
     {
      "source": "county",
+     "date": "2026-09-16",
+     "title": "Board of County Commissioners Meeting",
+     "snippet": "A full agenda for the September 16 BOCC. The commissioners continue their discussion of Constitutional Amendments 81 and 86 — touching immigration enforcement communication and congressional…"
+    },
+    {
+     "source": "county",
      "date": "2026-09-15",
      "title": "Housing Code Update SSR",
      "snippet": "The Stakeholder Strategic Roundtable (SSR) working group convenes for its eighth session on the San Miguel County Housing Code Update — a Proposition 123-funded effort to strip out Land Use Code…"
@@ -96,6 +110,7 @@
    ],
    "developments": [],
    "stale": [
+    "Code Changes & Accelerated Review: county discussed it on 2026-09-16 (\"Board of County Commissioners Meeting\") but the deep dive was last edited 2026-07-19.",
     "Code Changes & Accelerated Review: county discussed it on 2026-09-15 (\"Housing Code Update SSR\") but the deep dive was last edited 2026-07-19.",
     "Code Changes & Accelerated Review: county discussed it on 2026-09-10 (\"Planning Commission Meeting\") but the deep dive was last edited 2026-07-19."
    ]

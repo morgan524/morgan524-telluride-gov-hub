@@ -1,26 +1,26 @@
 {
-  "hash": "110806a8aa14691ec898fa309a83d012352c78b7",
-  "lede": "The biggest thing on the civic calendar this week is a public vote on who leads Telluride Regional Medical Center — the board goes into executive session and then takes public action on interim hospital leadership, and public comment is open via Zoom. Right behind that, Town Council takes up a deed-restriction amendment that would remove the sale-price cap on two affordable units at 215 East Colorado Avenue, which is the kind of structural housing change that's hard to undo. Mountain Village is also moving a first reading that shifts how affordable housing fees get set, and the Telluride P&Z holds a work session on the Comprehensive Plan update with a second community survey in play.",
+  "hash": "ee5fa2e0492e717b4bbe67a522dc258c461cca12",
+  "lede": "The biggest thing this week is a public vote on who leads Telluride Regional Medical Center — the board meets in special session, takes public comment, and comes out of executive session to name interim leadership, which is about as consequential as a single meeting gets. Alongside that, Telluride Town Council takes up a deed-restriction conversion that would remove the price cap on two affordable units at 215 East Colorado Avenue, Mountain Village considers shifting housing authority fees out of municipal code into an annually updated schedule, and the Comprehensive Plan update gets a Phase 2 community engagement check-in. Blues & Brews kicks off Thursday and runs through the weekend.",
   "notable": [
     {
       "id": 6,
-      "stake": "Board votes publicly on who runs the hospital; public comment open."
+      "stake": "Board votes publicly on who leads the regional medical center."
     },
     {
       "id": 11,
-      "stake": "Vote could remove price cap on two affordable units, shrinking protected stock."
+      "stake": "Vote to remove price caps on two affordable units; three public hearings on second reading."
     },
     {
       "id": 10,
-      "stake": "Resolution converts two ownership units to EDUs, removing maximum sale price."
+      "stake": "Resolution converts two deed-restricted ownership units to employee dwelling units, removing sale price limits."
     },
     {
       "id": 0,
-      "stake": "First reading shifts affordable housing fee-setting authority out of municipal code."
+      "stake": "First reading shifts MVHA affordable housing fees out of municipal code, changing how costs get set."
     },
     {
       "id": 3,
-      "stake": "Comp Plan update shapes long-term land use and density; Survey 2 presented."
+      "stake": "Comp Plan Phase 2 engagement review shapes long-range land use and density decisions for Telluride."
     }
   ]
 }
