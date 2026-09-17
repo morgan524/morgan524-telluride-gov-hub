@@ -1767,8 +1767,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "September 17, 2026",
     firstSeen: "2026-09-17",
     newsTopic: "public-safety",
-    copy: "",
-    claudeSummary: false,
+    copy: "Heather King, formerly NFPD's deputy chief of EMS and a Norwood local since her military days, was appointed interim fire chief in a 3-1 board vote on Sept. 1 — the first woman to hold that role in San Miguel County. She steps in following John Bockrath's resignation and is expected to serve six to nine months while the board searches for a permanent chief.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/norwood_post/article_a9784aa0-4dec-4e29-97b7-ae1562fd3025.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/62/96225222-0ba8-4eb3-a7d9-ba18606d3422/6aa955498d9ed.image.jpg",
     imgHiRes: true
@@ -1790,9 +1790,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Telluride Times",
     date: "September 17, 2026",
     firstSeen: "2026-09-17",
-    newsTopic: "community",
-    copy: "Daniel Donato is coming home to a place he’d never been before.",
-    claudeSummary: false,
+    newsTopic: "arts-culture",
+    copy: "Nashville guitarist Daniel Donato makes his Telluride debut Thursday at the Sheridan Opera House as part of the Bal De Maison kickoff for the 32nd Blues & Brews Festival. Donato's band Cosmic Country blends psychedelic, country, and jam styles, rooted in years playing honky-tonk at Robert's Western World. He recently released a live double-venue album, \"Ryman to Robert's.\"",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/arts_and_entertainment/article_6b9c33cc-4984-451b-8a5f-9330d85ade94.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/09/a09bff13-ad6c-423a-8d36-2b9933773923/6aa8f22024187.image.jpg",
     imgHiRes: true
@@ -1806,7 +1806,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "San Miguel County Commissioner Anne Brown has publicly endorsed Sheriff Dan Covault for the November election, saying she now wants to be fully transparent after holding back some of her reasoning when commissioners appointed him in April 2025. She favors Covault over challenger Lane Masters, citing his decades of local law enforcement experience and collaborative leadership style.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_4dbaa9ca-00a2-4b40-87d4-3e7100abdbf8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     letterAuthor: "Anne Brown San Miguel County Commissioner, District 1",
     isLetter: true,
     imgHiRes: true
@@ -2824,6 +2824,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "public-safety",
     copy: "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=65",
+    img: ""
+  },
+  {
+    title: "Fire Restrictions Lifted in Ridgway - September, 17, 2026",
+    source: "Town of Ridgway",
+    date: "September 17, 2026",
+    firstSeen: "2026-09-17",
+    newsTopic: "public-safety",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Fire-Restrictions-Lifted-in-Ridgway-2026-09-17.pdf",
     img: ""
   },
   {
@@ -5792,28 +5803,6 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "Norwood Sanitation District Meeting",
-    link: "https://www.norwoodtown.com/2026-09-10-norwood-sanitation-district-meeting-meeting",
-    description: "",
-    pubDate: "2026-09-10T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Government Meeting",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
-    title: "Senior Lunch",
-    link: "https://www.norwoodtown.com/2026-09-10-senior-lunch",
-    description: "",
-    pubDate: "2026-09-10T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Community Event",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "Office Closed For Training 1 3pm",
     link: "https://www.norwoodtown.com/2026-09-14-office-closed-for-training-1-3pm",
     description: "",
@@ -5959,17 +5948,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Public Art Commission Meeting",
-    link: "https://townofmountainvillage.com/explore/events/all-events/public-art-commission-meeting/",
-    description: "The Public Art Commission meets on an as-needed basis. Please join the meeting from your computer, tablet or smartphone through this link.",
-    pubDate: "2026-09-16T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49288/2.jpg"
-  },
   {
     title: "Market on the Plaza",
     link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
@@ -6321,6 +6299,28 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49132/alloy-live-music-1800x900.jpg"
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    pubDate: "2026-10-17T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
+  {
+    title: "Mind Blown Telluride",
+    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    pubDate: "2026-10-17T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
   }
 ];
 
