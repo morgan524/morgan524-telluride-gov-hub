@@ -342,7 +342,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1055/files/agenda/1977","zoomUrl":"https://us06web.zoom.us/j/84507830944?pwd=dB15RuiMh7QbzfkYiaiomIXqFXJmd7.1","meetingId":"845 0783 0944","passcode":"633618","phone":"970-728-3174","sv":4},
 
   "telluride|2026-09-23|Vending Subcommittee - Sep 23 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8308","sv":4,"ph":"1ddd1637fea52e35"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8308","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/l3rAiIuyRgyVFu2-92kJZw","meetingId":"835 9480 9571","passcode":"960386"},
 
   "county|2026-09-15|Housing Code Update SSR":
     {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1069/files/agenda/1990","zoomUrl":"https://us06web.zoom.us/j/88053660816?pwd=n7qJTXvayoEO5RY4eo8koGmh4nHHai.1","meetingId":"880 5366 0816","passcode":"616389"},
@@ -879,6 +879,16 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Local briefs: Ridgway appoints two to sustainability board, updates marshal overtime policy",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "September 17, 2026",
+    newsTopic: "government",
+    copy: "New members appointed to sustainability board The Ridgway Town Council appointed Terry Schuyler and Christiane Frischmuth to the Ridgway Sustainability Advisory Board after brief interviews at the Sept. 9 council meeting. Schuyler was a founding member of the advisory board and served as the town co",
+    href: "https://www.ouraynews.com/2026/09/17/local-briefs-ridgway-appoints-two-sustainability-board-updates-marshal-overtime-policy/",
+    img: ""
+  },
+  {
     title: "County: Layoffs likely",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
@@ -929,16 +939,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "Looking Back",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "September 17, 2026",
-    newsTopic: "community",
-    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago September 15, 1966 A Ouray County man, Rodney Adkins, accidentally shot himself while hunting small game near the Idarado Mine last Tuesday afternoon. He is listed in fair condition at ",
-    href: "https://www.ouraynews.com/2026/09/16/looking-back-20260917-0329-400378/?ta_paidstory",
-    img: ""
-  },
-  {
     title: "With water shortage, recreation shouldn’t trump irrigators",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
@@ -959,23 +959,23 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "Good for you!",
+    title: "County won’t fill deputy emergency manager job",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "September 17, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.ouraynews.com/2026/09/16/good-for-you-20260917-0331-258051/?ta_paidstory",
+    newsTopic: "government",
+    copy: "Ouray County Manager Antonio Mendez will recommend county commissioners not rehire a deputy emergency manager in order to save costs, he told staff at a meeting about budget cuts Tuesday morning at the Ouray County 4-H Event Center. Deputy Emergency Manager Daniel Harris resigned after being on paid",
+    href: "https://www.ouraynews.com/2026/09/16/county-wont-fill-deputy-emergency-manager-job/?ta_paidstory",
     img: ""
   },
   {
-    title: "Good for you!",
+    title: "Calendar & Events",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "September 17, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.ouraynews.com/2026/09/16/good-for-you-20260917-0332-056622/?ta_paidstory",
+    newsTopic: "arts-culture",
+    copy: "Thursday, September 17 Stillhouse Junkies live music, doors open at 6 p.m. at the Wright Opera House, 472 Main St. in Ouray. Advance tickets $20 at thewrightoperahouse.org, $25 day of show, $35 reserved seating. Friday, September 18 Fourth Annual San Juan Slam Tournament at the Ridgway Athletic Park",
+    href: "https://www.ouraynews.com/2026/09/16/calendar-events-20260917-0335-162911/?ta_paidstory",
     img: ""
   },
   {
@@ -1263,7 +1263,7 @@ const MANUAL_SUMMARIES = {
     "San Miguel County's Citizens Weed Advisory Board meets August 27 via Zoom at 4:30 p.m. The main business is a 2025 season update from Vegetation Control and Management Manager Julie Kolb — covering which treatments were applied and where, USFS and ATB coordination, and landowner response to the Noxious Weed Fund Grant. The board will also take up enforcement considerations and approve the May 2026 minutes. Noxious weed management is one of those unglamorous but persistent responsibilities in a county where invasive species pressure on rangeland and open space doesn't let up.",
 
   "telluride|2026-09-23|Vending Subcommittee - Sep 23 2026":
-    "The September 23, 2026 Vending Subcommittee agenda hasn't been posted yet.",
+    "The Vending Subcommittee meets September 23 to handle two items: appointing a new chairperson and selecting vendors for the 2026-2027 winter season at Gondola Plaza. One application is on the table — PhilAm, LLC dba Mini Deli, a returning vendor with eleven consecutive seasons at Gondola Plaza East, applying again for breakfast and lunch service. Staff recommends granting the permit. Gondola Plaza West has no applicant on record. The subcommittee will also approve draft minutes from April 2.",
 
   "county|2026-09-15|Housing Code Update SSR":
     "The Stakeholder Strategic Roundtable (SSR) working group convenes for its eighth session on the San Miguel County Housing Code Update — a Proposition 123-funded effort to strip out Land Use Code provisions that slow workforce and affordable housing production in unincorporated areas of the county. The two-hour working session zeroes in on the proposed Community Housing Zone, refining draft code recommendations that will eventually go to the BOCC and Planning Commission as formal redlines. Earlier sessions produced a handful of majority-consensus positions: allowing multiple ADUs on larger lots when the bonus unit is deed-restricted for workforce housing; reducing side setbacks to 10 feet in Medium and High Density zones; and preserving by-right density at 1 DU/35 acres while routing additional density exclusively through a workforce housing bonus track — with free-market development required to go through PUD. A range of other ideas, including RV/camper housing, parking reductions, and a TDR program, were set aside for now.",
@@ -1761,6 +1761,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Miners pinch Panthers, break Bulldogs",
+    source: "Telluride Times",
+    date: "September 17, 2026",
+    firstSeen: "2026-09-17",
+    newsTopic: "community",
+    copy: "Telluride boys soccer beat Delta 4-3 on a late first-half header by Miles Silbergeld, then rolled past Moffat County 7-1 two days later — their fourth straight win. Abi Clarke scored a hat trick and Henry Raible added three assists in the Moffat game. The Miners (5-1-0) open league play Thursday at Crested Butte.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_94b68265-db9d-4d05-82d1-9d493a4b1ec5.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/ee/1eec3443-4cc2-487c-aad4-3cf9b0688ddb/6aab7493af712.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Mountain Village Town Council selects finalists for town manager",
+    source: "Telluride Times",
+    date: "September 17, 2026",
+    firstSeen: "2026-09-17",
+    newsTopic: "government",
+    copy: "Four finalists are in the running for Mountain Village town manager: William Bell (Montrose), Michael Bouchard (Denver), Candace Bryans (Buena Vista), and Mark Sohaney (Boca Raton). Interviews are Sept. 24–25, with a public Meet & Greet Thursday evening, 6–7:30 p.m., at Town Hall Council Chambers.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_4769a005-65fd-4c02-930d-b7e6c900c7ed.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/a1/aa1a2513-c768-4604-b40b-7b12ed1d906b/6aac355bf32b5.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Heather King is Norwood Fire’s interim chief",
     source: "Telluride Times",
@@ -2746,6 +2770,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Town Council Proclaims September 7-11 Black Bear Safety Week",
+    source: "Town of Telluride",
+    date: "September 3, 2026",
+    newsTopic: "government",
+    copy: "(September 3, 2026) — Town Council on Tuesday proclaimed September 7-11 Black Bear Safety Week, arriving in a year when a dry spring and summer have left black bears across Colorado with far less to eat in the wild.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=404",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
+  },
+  {
+    title: "Town of Telluride Downgrades to Stage 1 Fire Restrictions",
+    source: "Town of Telluride",
+    date: "August 26, 2026",
+    newsTopic: "public-safety",
+    copy: "(August 25, 2026) – Following improved fire conditions across the region, Town Manager Zoe Dohnal has downgraded fire restrictions within the Town of Telluride from Stage 2 to Stage 1, effective 12:01 a.m. MT on Wednesday, August 26, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=403",
+    img: ""
+  },
+  {
     title: "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
     source: "San Miguel County",
     date: "September 10, 2026",
@@ -2753,6 +2795,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1409",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
+  },
+  {
+    title: "Two Domestic Pets in San Miguel County Test Positive for the Plague",
+    source: "San Miguel County",
+    date: "September 3, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
+  },
+  {
+    title: "Waste Tire Collection Event",
+    source: "San Miguel County",
+    date: "August 24, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
   },
   {
     title: "Tomboy Road Closed Intermittently Tuesday 9/15 - Friday 9/18",
@@ -2779,6 +2839,26 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "community",
     copy: "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=45",
+    img: ""
+  },
+  {
+    title: "Stage 1 Fire Restrictions In Effect",
+    source: "Town of Telluride",
+    date: "August 26, 2026",
+    newsTopic: "public-safety",
+    copy: "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=65",
+    img: ""
+  },
+  {
+    title: "Sidewalk Repair Work Planned Near Ridgway Post Office",
+    source: "Town of Ridgway",
+    date: "September 17, 2026",
+    firstSeen: "2026-09-17",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Sidewalk-Repair-Work-Press-Release-2026-09-17.pdf",
     img: ""
   },
   {
@@ -4270,7 +4350,8 @@ const SHERBINO_EVENTS = [
     endDate: "2026-10-13 12:00:00",
     location: "Ridgway, CO",
     copy: "",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png"
+    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
+    description: "A recurring monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The event offers a casual space for veterans to connect with one another and with community support."
   }
 ];
 
@@ -4498,7 +4579,7 @@ const OURAY_COUNTY_EVENTS = [
   {
     title: "Ballot Issue Briefing (hosted by ROCC and LWV-UV)",
     link: "https://ouraycountyco.gov/Calendar.aspx?EID=3784",
-    description: "https://ouraycountyco.gov/calendar.aspx?EID=3784",
+    description: "A joint briefing hosted by ROCC and the League of Women Voters of the Upper Valley covering statewide measures on the November 2026 ballot. The event takes place in the Decker Room at 675 Clinton Street in Ridgway, with notice that two or more county commissioners may attend and participate.",
     pubDate: "2026-10-05T17:30:00.000Z",
     source: "ouraycounty",
     sourceLabel: "Ouray County",
@@ -4787,7 +4868,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
     description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
     pubDate: "2026-09-21T18:00:00.000Z",
-    endDate: "2026-11-09",
+    endDate: "2026-11-16",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4805,6 +4886,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Bee True You Wellness and Creative Studio",
     imageUrl: "https://localist-images.azureedge.net/photos/53197444379202/huge/26813502ab1ba3ae9f231b0cd774d101f4f32f02.jpg"
+  },
+  {
+    title: "Guided Tour: Historic Beaumont Hotel & Spa",
+    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
+    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour. View on site | Email this event",
+    pubDate: "2026-09-22T19:30:00.000Z",
+    endDate: "2026-11-14",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Beaumont Hotel & Spa",
+    imageUrl: "https://localist-images.azureedge.net/photos/54002564456834/huge/1c893556af04e1767e7f3bd0564190789254a928.jpg"
   },
   {
     title: "ALPINE JAM",
@@ -5724,7 +5817,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-film-stills-ridgway-independent-film-fest",
     description: "The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In coordination with the annual Independent Film Festival (November 13-15) this show is both a preview and a celebration of the art of short filmmaking. View on site | Email this event",
     pubDate: "2026-11-07T00:00:00.000Z",
-    endDate: "2026-11-12",
+    endDate: "2026-11-16",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5760,7 +5853,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Office Closed For Training 1 3pm",
     link: "https://www.norwoodtown.com/2026-09-14-office-closed-for-training-1-3pm",
-    description: "",
+    description: "The Town of Norwood offices will be closed for staff training on the afternoon of September 14, 2026, beginning at 3 p.m. Residents should plan accordingly for any town business that may need to be addressed before or after the closure.",
     pubDate: "2026-09-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5771,7 +5864,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-17-senior-lunch",
-    description: "",
+    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
     pubDate: "2026-09-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5782,8 +5875,19 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-09-21-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "The Town of Norwood's Planning and Zoning Commission will hold a regular meeting to review and discuss land use, development, and zoning matters within the community. Members of the public are welcome to attend and observe the proceedings.",
     pubDate: "2026-09-21T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Government Meeting",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "NWC Amended",
+    link: "https://www.norwoodtown.com/2026-09-22-nwc-amended",
+    description: "A Town of Norwood government meeting, with an amended agenda, scheduled for September 22, 2026. The meeting is hosted by the Town of Norwood and takes place in Norwood, Colorado.",
+    pubDate: "2026-09-22T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
     category: "Government Meeting",
@@ -5793,7 +5897,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-24-senior-lunch",
-    description: "",
+    description: "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
     pubDate: "2026-09-24T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5804,7 +5908,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "",
+    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5815,7 +5919,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Meals",
     link: "https://www.norwoodtown.com/2026-10-01-senior-meals",
-    description: "",
+    description: "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
     pubDate: "2026-10-01T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5826,7 +5930,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Meals",
     link: "https://www.norwoodtown.com/2026-10-08-senior-meals",
-    description: "",
+    description: "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
     pubDate: "2026-10-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5837,7 +5941,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5848,7 +5952,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Meals",
     link: "https://www.norwoodtown.com/2026-10-15-senior-meals",
-    description: "",
+    description: "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather, share a meal, and connect with neighbors. This recurring community event takes place in Norwood and is organized through local town services.",
     pubDate: "2026-10-15T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5859,7 +5963,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Meals",
     link: "https://www.norwoodtown.com/2026-10-22-senior-meals",
-    description: "",
+    description: "A midday community meal program for seniors, hosted by the Town of Norwood. It offers older residents a chance to gather, share a meal, and connect with neighbors in a welcoming setting.",
     pubDate: "2026-10-22T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5870,7 +5974,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Meals",
     link: "https://www.norwoodtown.com/2026-10-29-senior-meals",
-    description: "",
+    description: "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather and share a meal together. This recurring community event provides both nourishment and social connection for Norwood's senior residents.",
     pubDate: "2026-10-29T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5881,7 +5985,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Veterans Day",
     link: "https://www.norwoodtown.com/2026-11-11-closed-for-veterans-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Veterans Day. Municipal offices and services will be unavailable on this federal holiday honoring those who have served in the United States armed forces.",
     pubDate: "2026-11-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5892,7 +5996,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Thanksgiving",
     link: "https://www.norwoodtown.com/2026-11-26-closed-for-thanksgiving",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Thanksgiving Day. Municipal offices and services will be unavailable, with normal operations expected to resume following the holiday.",
     pubDate: "2026-11-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6827,6 +6931,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/49427/2019-lamplight-cemetery-tours-website-header.800x533.webp"
+  },
+  {
+    title: "Pumpkins & Peaks",
+    link: "https://www.telluride.com/event/pumpkins-peaks/",
+    description: "Celebrate fall in the mountains at Pumpkins & Peaks! Join TMVOA in Mountain Village for a day of free, …",
+    pubDate: "2026-10-24",
+    endDate: "2026-10-26",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63613/p_pttbbanner.800x533.webp"
   },
   {
     title: "KOTO Ski Swap",
@@ -7891,6 +8007,18 @@ const RIDGWAY_AGENDA_MAP = {
 // content-refresh.js) regenerates this map from the page every 6h, so
 // new agendas/packets/minutes appear automatically as Rico posts them.
 const RICO_AGENDA_MAP = {
+  "September 2026":
+    {"agenda":"https://townofrico.colorado.gov/sites/g/files/lrnvjt3111/files/documents/Board-of-Trustees-September-2026-Agenda.pdf"},
+
+  "September 2026 Meeting":
+    {"packet":"https://townofrico.colorado.gov/sites/g/files/lrnvjt3111/files/documents/Board-of-Trustees-September-2026-Packet.pdf"},
+
+  "September 2026 Special Meeting":
+    {"agenda":"https://townofrico.colorado.gov/sites/g/files/lrnvjt3111/files/documents/Board-of-Trustees-September-2-2026-Agenda.pdf","packet":"https://townofrico.colorado.gov/sites/g/files/lrnvjt3111/files/documents/Board-of-Trustees-September-2-2026-Packet.pdf"},
+
+  "August 2026":
+    {"agenda":"https://townofrico.colorado.gov/sites/g/files/lrnvjt3111/files/documents/Board-of-Trustees-August-2026-Agenda.pdf","packet":"https://townofrico.colorado.gov/sites/g/files/lrnvjt3111/files/documents/Board-of-Trustees-August-2026-Packet.pdf"},
+
   "July 2026 Work Session":
     {"agenda":"https://townofrico.colorado.gov/sites/g/files/lrnvjt3111/files/documents/Board%20of%20Trustees%20July%202026%20Agenda%20Work%20Session.pdf","packet":"https://townofrico.colorado.gov/sites/g/files/lrnvjt3111/files/documents/Board%20of%20Trustees%20July%202026%20Pakcet%20Work%20Session_0.pdf"},
 

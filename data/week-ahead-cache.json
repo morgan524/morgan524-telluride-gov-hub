@@ -1,26 +1,26 @@
 {
-  "hash": "ee5fa2e0492e717b4bbe67a522dc258c461cca12",
-  "lede": "The biggest thing this week is a public vote on who leads Telluride Regional Medical Center — the board meets in special session, takes public comment, and comes out of executive session to name interim leadership, which is about as consequential as a single meeting gets. Alongside that, Telluride Town Council takes up a deed-restriction conversion that would remove the price cap on two affordable units at 215 East Colorado Avenue, Mountain Village considers shifting housing authority fees out of municipal code into an annually updated schedule, and the Comprehensive Plan update gets a Phase 2 community engagement check-in. Blues & Brews kicks off Thursday and runs through the weekend.",
+  "hash": "23efff887df77978dec1a5c497d5d11596548aab",
+  "lede": "The biggest thing on the calendar this week is a public vote on who leads Telluride Regional Medical Center — the hospital board meets Wednesday in a special session, takes public comment, then comes out of executive session to name interim leadership. That same packed Wednesday also brings a Telluride Town Council meeting where two affordable units at 215 East Colorado Avenue could lose their price caps and convert to employee dwelling units, plus a Housing Authority vote on the same deed-restriction change. Blues & Brews kicks off Thursday and runs through the weekend.",
   "notable": [
     {
       "id": 6,
-      "stake": "Board votes publicly on who leads the regional medical center."
-    },
-    {
-      "id": 11,
-      "stake": "Vote to remove price caps on two affordable units; three public hearings on second reading."
-    },
-    {
-      "id": 10,
-      "stake": "Resolution converts two deed-restricted ownership units to employee dwelling units, removing sale price limits."
+      "stake": "Board votes publicly on who leads the hospital in the near term."
     },
     {
       "id": 0,
-      "stake": "First reading shifts MVHA affordable housing fees out of municipal code, changing how costs get set."
+      "stake": "Ordinance would move MVHA affordable housing fees out of municipal code, changing how costs get set."
     },
     {
       "id": 3,
-      "stake": "Comp Plan Phase 2 engagement review shapes long-range land use and density decisions for Telluride."
+      "stake": "Comp Plan update shapes long-range land use and density for all of Telluride — public engagement phase active."
+    },
+    {
+      "id": 10,
+      "stake": "Resolution would remove price caps on two town-built affordable units, converting them to employee dwellings."
+    },
+    {
+      "id": 11,
+      "stake": "Council votes on deed-restriction conversion and holds three public hearings on related ordinances second reading."
     }
   ]
 }

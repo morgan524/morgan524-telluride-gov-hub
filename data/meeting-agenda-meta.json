@@ -380,7 +380,9 @@
   "telluride|2026-09-23|Vending Subcommittee - Sep 23 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8308",
     "sv": 4,
-    "ph": "1ddd1637fea52e35"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/l3rAiIuyRgyVFu2-92kJZw",
+    "meetingId": "835 9480 9571",
+    "passcode": "960386"
   },
   "county|2026-09-15|Housing Code Update SSR": {
     "sv": 4,
