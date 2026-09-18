@@ -45,10 +45,6 @@
     "zoomUrl": "https://us06web.zoom.us/webinar/register/WN_ndaN3Xr5TWe9uANpXwY42w",
     "phone": "970-369-6429"
   },
-  "ophir|2026-08-18|General Assembly Meeting": {
-    "sv": 4,
-    "ph": "b858cb282617fb09"
-  },
   "telluride|2026-08-20|Planning & Zoning Commission - Aug 20 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8102",
     "sv": 4,
@@ -142,10 +138,6 @@
   "tmvoa|2026-09-08|Mountain Village Merchant Meeting": {
     "sv": 4,
     "ph": "b858cb282617fb09"
-  },
-  "fire|2026-08-18|Board of Directors Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://www.telluridefire.com/files/5257dafba/Agenda+-August+18th%2C+2026.pdf"
   },
   "airport|2026-08-20|TRAA Board of Commissioners Meeting": {
     "sv": 4,
@@ -314,7 +306,11 @@
   },
   "norwood|2026-09-21|Planning and Zoning Commission Meeting": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://www.norwoodtown.com/files/d3a7e2221/09.21.2026+P%26Z+BOA+AGENDA.pdf",
+    "zoomUrl": "https://us02web.zoom.us/j/85001344971",
+    "meetingId": "850 0134 4971",
+    "passcode": "8142302",
+    "phone": "970-327-4288"
   },
   "county|2026-08-24|Open Space Commission Meeting": {
     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1056/files/agenda/1967",
@@ -584,6 +580,19 @@
   },
   "telluride|2026-09-17|Open Space Commission Site Walk - Sep 17 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8317",
+    "sv": 4
+  },
+  "norwood|2026-09-22|NWC Amended": {
+    "agendaUrl": "https://www.norwoodtown.com/files/677a3380f/09.22.2026+NWC+Amended+Agenda.pdf",
+    "zoomUrl": "https://us02web.zoom.us/j/88274908233",
+    "meetingId": "882 7490 8233",
+    "passcode": "997236",
+    "phone": "346-248-7799",
+    "sv": 4
+  },
+  "telluride|2026-09-21|Gondola Subcommittee - Sep 21 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8318",
+    "zoomUrl": "https://gbsm.zoom.us/j/82559576086",
     "sv": 4
   }
 }

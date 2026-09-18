@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T21:11:30.671Z",
+ "generated": "2026-09-18T04:04:25.383Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -63,18 +63,6 @@
    "label": "Code Changes & Accelerated Review",
    "lastUpdated": "2026-07-19",
    "upcoming": [
-    {
-     "source": "telluride",
-     "sourceLabel": "Town of Telluride",
-     "title": "Special Meeting - Planning & Zoning Commission",
-     "date": "2026-09-17",
-     "time": "",
-     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8310",
-     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8310",
-     "zoomLink": "https://us06web.zoom.us/j/85992668350?pwd=R89oLHvfdFJZrpNb6yzGqqHUrl3phe.1",
-     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
-    },
     {
      "source": "telluride",
      "sourceLabel": "Town of Telluride",
@@ -143,6 +131,18 @@
    "label": "Norwood Water",
    "lastUpdated": "2026-07-23",
    "upcoming": [
+    {
+     "source": "norwood",
+     "sourceLabel": "Town of Norwood",
+     "title": "NWC Amended",
+     "date": "2026-09-22",
+     "time": "",
+     "location": "1670 Naturita St, Norwood CO 81423",
+     "agendaUrl": "https://www.norwoodtown.com/files/677a3380f/09.22.2026+NWC+Amended+Agenda.pdf",
+     "link": "https://www.norwoodtown.com/files/677a3380f/09.22.2026+NWC+Amended+Agenda.pdf",
+     "zoomLink": "https://us02web.zoom.us/j/88274908233",
+     "livestream": ""
+    },
     {
      "source": "norwood",
      "sourceLabel": "Town of Norwood",

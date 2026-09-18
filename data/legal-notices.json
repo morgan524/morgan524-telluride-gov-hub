@@ -283,26 +283,6 @@
     "smcBidID": "210"
   },
   {
-    "title": "Ordinance -- Amending Chapter 2.18 Municipal Code re: Public Art Commission (COL-000226)",
-    "entity": "Town of Mountain Village",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "📋",
-    "iconClass": "type-hearing",
-    "type": "Ordinance",
-    "filterTag": "ordinance",
-    "summary": "The Town of Mountain Village Town Council passed on first reading an ordinance amending Chapter 2.18 of the Municipal Code regarding the Public Art Commission at its August 20, 2026 meeting. The second reading, public hearing, and final vote are scheduled for September 17, 2026, at 2:00 p.m. at Mountain Village Town Hall and via Zoom. The ordinance is available for review at the Town Clerk's office at 455 Mountain Village Blvd, Suite A, or on the town website.",
-    "deadline": "2026-09-17",
-    "expires": "2026-09-17",
-    "dates": "9/3",
-    "papers": [
-      "ttimes_0903"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
-    "address": "455 Mountain Village Blvd, Suite A, Mountain Village, CO",
-    "noticeKey": "ord-ch218-public-art-commission-2026"
-  },
-  {
     "title": "Utility Notice -- Paper Billing Fee Effective October 29, 2026 (COL-000225)",
     "entity": "San Miguel Power Association (SMPA)",
     "entityClass": "ent-county",
@@ -403,5 +383,106 @@
     "address": "San Juan Vista Subdivision, Filing No. 1, SE1/4SE1/4 Section 12, S1/2, S1/2N1/2 and N1/2NE1/4 Section 13, Township 44 North, Range 10 West, N.M.P.M., San Miguel County, Colorado",
     "noticeKey": "26CW3039",
     "caseNumber": "26CW3039"
+  },
+  {
+    "title": "ITB -- Snow Removal / Public Works Services, Town of Mountain Village",
+    "entity": "Town of Mountain Village",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "The Town of Mountain Village is soliciting bids for public works services (referenced at the top of the text). Bid documents are available at www.townofmountainvillage.com or at the TMV Public Works Dept. office at 411 Mountain Village Blvd, 2nd Floor. All bids must be emailed to kbatchelder@mtnvillage.org by 5:00 p.m. on September 30, 2026.",
+    "deadline": "2026-09-30",
+    "expires": "2026-09-30",
+    "dates": "9/17",
+    "papers": [
+      "ttimes_0917"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_6e1025d7-5ad7-45a9-8530-2bda61ea94b8.html",
+    "address": "411 Mountain Village Blvd, 2nd Floor, Mountain Village, CO 81435",
+    "noticeKey": "itb-tmv-pubworks-COL000241"
+  },
+  {
+    "title": "Public Hearing -- Proposed 2027 Budget, Telluride Hospital District (COL-000243)",
+    "entity": "Telluride Hospital District",
+    "entityClass": "ent-county",
+    "entityLogo": "assessor",
+    "icon": "💰",
+    "iconClass": "type-tax",
+    "type": "Tax & Finance",
+    "filterTag": "tax-finance",
+    "summary": "The Telluride Hospital District has submitted its proposed 2027 budget to its Board of Directors and is making it available for public inspection at 500 W. Pacific Avenue, Telluride, CO. A public hearing to consider the budget will be held at 8:30 a.m. on September 24, 2026, both in person and via Zoom. Any district elector may inspect the budget and file objections prior to final adoption.",
+    "deadline": "2026-09-24",
+    "expires": "2026-09-24",
+    "dates": "9/17",
+    "papers": [
+      "ttimes_0917"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_6e1025d7-5ad7-45a9-8530-2bda61ea94b8.html",
+    "address": "500 W. Pacific Avenue (Annex), Telluride, CO",
+    "noticeKey": "budget-telluride-hospital-district-2027-COL000243"
+  },
+  {
+    "title": "RFP -- Defensive Space Forestry / Wildfire Mitigation, Village Court Apartments (COL-000229)",
+    "entity": "Town of Mountain Village",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "The Town of Mountain Village is seeking proposals for defensive space forestry work at Village Court Apartments for wildfire mitigation, with work expected to begin October 2026. A mandatory site walk must be completed between September 28–30, 2026 as a condition of proposal eligibility. Proposals are due by October 4, 2026 at 11:59 p.m.; RFP packets are available from Town Forester Rodney Walters.",
+    "deadline": "2026-10-04",
+    "expires": "2026-10-04",
+    "dates": "9/17",
+    "papers": [
+      "ttimes_0917"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_6e1025d7-5ad7-45a9-8530-2bda61ea94b8.html",
+    "address": "Village Court Apartments, 455 Mountain Village Blvd, Suite A, Mountain Village, CO 81435",
+    "noticeKey": "rfp-village-court-forestry-COL000229"
+  },
+  {
+    "title": "Foreclosure Sale Notice -- 619 W Columbia Ave D303, Telluride (Sale No. 202606)",
+    "entity": "Brandi R. Hatfield, Public Trustee, San Miguel County / Deutsche Bank National Trust Company",
+    "entityClass": "ent-county",
+    "entityLogo": "assessor",
+    "icon": "💰",
+    "iconClass": "type-tax",
+    "type": "Tax & Finance",
+    "filterTag": "tax-finance",
+    "summary": "The San Miguel County Public Trustee has scheduled a foreclosure auction for Unit 303, Building D1, The Tomboy Lodge (619 W Columbia Ave D303, Telluride, CO 81435) following a default on a deed of trust originally granted by J. Ascenzo DiGiacomo to Long Beach Mortgage Company, now held by Deutsche Bank National Trust Company. The outstanding principal balance is $187,007.81 on an original loan of $209,000. The public auction will be held at 10:00 a.m. on November 12, 2026, at 305 W. Colorado Avenue, East entry, Telluride, CO; notice of intent to cure must be filed at least 15 calendar days before the sale date.",
+    "deadline": "2026-11-12",
+    "expires": "2026-11-12",
+    "dates": "9/17",
+    "papers": [
+      "ttimes_0917"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_6e1025d7-5ad7-45a9-8530-2bda61ea94b8.html",
+    "address": "619 W Columbia Ave, Unit D303 (Tomboy Lodge), Telluride, CO 81435",
+    "noticeKey": "foreclosure-sale-202606-COL000242",
+    "caseNumber": "202606"
+  },
+  {
+    "title": "Public Hearing -- Subdivision Exemption / Lot Line Adjustment, Lawson Hill PUD Lots 320A & 320B (COL-000239)",
+    "entity": "San Miguel County Board of Commissioners / James Pierce (applicant) on behalf of John and Dianna Reams",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County is considering an application by James Pierce on behalf of property owners John and Dianna Reams to adjust the lot line between Parcels #456532416079 and #456532416080 at Lots 320A and 320B, Lawson Hill PUD, to correct an error in the placement of a duplex foundation. A public hearing before the Board of County Commissioners is scheduled for October 7, 2026 at 9:30 a.m. at 333 West Colorado Avenue, Telluride, CO, both in person and online. Written comments should be submitted to the San Miguel County Planning Department by September 28, 2026.",
+    "deadline": "2026-10-07",
+    "expires": "2026-10-07",
+    "dates": "9/17",
+    "papers": [
+      "ttimes_0917"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_6e1025d7-5ad7-45a9-8530-2bda61ea94b8.html",
+    "address": "Lots 320A & 320B, Lawson Hill PUD, San Miguel County, CO (Parcels #456532416079 & #456532416080)",
+    "noticeKey": "lot-line-adj-lawson-hill-320A-320B-COL000239"
   }
 ]

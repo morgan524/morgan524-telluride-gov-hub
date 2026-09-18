@@ -1,26 +1,26 @@
 {
- "generated": "2026-09-17T21:11:30.672Z",
+ "generated": "2026-09-18T04:04:25.385Z",
  "pinned": false,
- "topic": "code",
- "topicLabel": "Code Changes & Accelerated Review",
- "headline": "Code Changes & Accelerated Review goes before Special Meeting - Planning & Zoning Commission on Thursday, September 17",
- "blurb": "A special P&Z work session covering two tracks. First, the ongoing Comprehensive Plan update — consultants and staff will walk through the Existing Conditions StoryMap, review where Phase 2 community engagement stands, and present Survey #2. The Comp Plan process sets the long-range framework for land use, density, and character across town, so these check-ins matter.",
+ "topic": "norwoodwater",
+ "topicLabel": "Norwood Water",
+ "headline": "Norwood Water goes before NWC Amended on Tuesday, September 22",
+ "blurb": "The Norwood Water Commission meets September 22 with a full plate of water-related business. Six leak forgiveness requests are on the table — a recurring item for any small-system water utility, where a neighbor's faulty line can mean a bill that doesn't reflect actual use. The Commission will also take up a possible leak check fee, which would formalize how the system handles these situations going forward.",
  "images": [],
  "deepDive": {
-  "label": "Code Changes & Accelerated Review",
-  "href": "/deep-dive-code.html"
+  "label": "Norwood Water",
+  "href": "/deep-dive-norwoodwater.html"
  },
  "meeting": {
-  "title": "Special Meeting - Planning & Zoning Commission",
-  "sourceLabel": "Town of Telluride",
-  "date": "2026-09-17",
-  "humanDate": "Thursday, September 17",
+  "title": "NWC Amended",
+  "sourceLabel": "Town of Norwood",
+  "date": "2026-09-22",
+  "humanDate": "Tuesday, September 22",
   "time": "",
-  "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8310",
+  "location": "1670 Naturita St, Norwood CO 81423",
+  "agendaUrl": "https://www.norwoodtown.com/files/677a3380f/09.22.2026+NWC+Amended+Agenda.pdf",
   "hasAgenda": true,
-  "packetUrl": "https://telluride-co.civicweb.net/document/444543/",
-  "zoomLink": "https://us06web.zoom.us/j/85992668350?pwd=R89oLHvfdFJZrpNb6yzGqqHUrl3phe.1",
-  "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+  "packetUrl": "",
+  "zoomLink": "https://us02web.zoom.us/j/88274908233",
+  "livestream": ""
  }
 }

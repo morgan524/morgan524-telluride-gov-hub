@@ -1,26 +1,26 @@
 {
-  "hash": "23efff887df77978dec1a5c497d5d11596548aab",
-  "lede": "The biggest thing on the calendar this week is a public vote on who leads Telluride Regional Medical Center — the hospital board meets Wednesday in a special session, takes public comment, then comes out of executive session to name interim leadership. That same packed Wednesday also brings a Telluride Town Council meeting where two affordable units at 215 East Colorado Avenue could lose their price caps and convert to employee dwelling units, plus a Housing Authority vote on the same deed-restriction change. Blues & Brews kicks off Thursday and runs through the weekend.",
+  "hash": "d309c17a13f2c98042ff8f860ef3c18bea1ddcd3",
+  "lede": "The biggest item this week is at Telluride Town Council on Monday the 22nd, where a vote on converting two affordable ownership units at 215 East Colorado into employee dwelling units — removing their price caps — could permanently reshape how that housing functions for locals. The Housing Authority takes up the same question earlier that day. Meanwhile, Norwood's Planning and Zoning Commission moves on a first-phase Land Use Code rewrite that will set development rules for that community for years to come, and the Gondola Subcommittee digs into the fundamental question of who controls and funds the gondola project.",
   "notable": [
     {
-      "id": 6,
-      "stake": "Board votes publicly on who leads the hospital in the near term."
+      "id": 5,
+      "stake": "Vote to remove price caps on two affordable units, changing their status permanently."
+    },
+    {
+      "id": 4,
+      "stake": "Resolution to convert deed-restricted ownership units to employee dwelling units."
     },
     {
       "id": 0,
-      "stake": "Ordinance would move MVHA affordable housing fees out of municipal code, changing how costs get set."
+      "stake": "Ordinance to adopt Phase I Land Use Code changes affecting Norwood development rules."
     },
     {
-      "id": 3,
-      "stake": "Comp Plan update shapes long-range land use and density for all of Telluride — public engagement phase active."
+      "id": 1,
+      "stake": "Key decision on who controls gondola project funding and direction."
     },
     {
-      "id": 10,
-      "stake": "Resolution would remove price caps on two town-built affordable units, converting them to employee dwellings."
-    },
-    {
-      "id": 11,
-      "stake": "Council votes on deed-restriction conversion and holds three public hearings on related ordinances second reading."
+      "id": 6,
+      "stake": "Commission votes on leak forgiveness requests and a new leak-check fee."
     }
   ]
 }
