@@ -318,11 +318,17 @@
   },
   "school|2026-09-22|Telluride Board of Education Work Session": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://files.smartsites.parentsquare.com/3403/92226_ws_packet.pdf",
+    "zoomUrl": "https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09",
+    "meetingId": "865 8512 4120",
+    "passcode": "468668"
   },
   "school|2026-09-22|Telluride Board of Education Monthly Meeting": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://files.smartsites.parentsquare.com/3403/92226_mm_packet.pdf",
+    "zoomUrl": "https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09",
+    "meetingId": "865 8512 4120",
+    "passcode": "468668"
   },
   "telluride|2026-09-22|Telluride Housing Authority - Sep 22 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303",
@@ -411,7 +417,10 @@
   "telluride|2026-09-30|Special Town Council - Sep 30 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313",
     "sv": 4,
-    "ph": "aa45589c1f4c4a4e"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/ZR3DDUQ0S8mhIKRt4KiuYg",
+    "meetingId": "872 6396 2426",
+    "passcode": "044233.",
+    "phone": "719) 359-4580"
   },
   "mv|2026-10-01|Design Review Board": {
     "sv": 4,
@@ -420,7 +429,7 @@
   "telluride|2026-10-01|Town Council Budget - Oct 01 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8053",
     "sv": 4,
-    "ph": "521165b2c958b221"
+    "ph": "8c8b45a8ccf4ac16"
   },
   "county|2026-10-01|Lodging Tax Panel Meeting": {
     "sv": 4,
@@ -454,7 +463,7 @@
   "telluride|2026-10-06|Town Council - Oct 06 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044",
     "sv": 4,
-    "ph": "276ac1e5db35b48f"
+    "ph": "fc4bf58424de11fa"
   },
   "mv|2026-10-07|Town Council Meeting": {
     "sv": 4,
@@ -537,7 +546,7 @@
   "telluride|2026-10-13|Special Town Council Budget - Oct 13 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8307",
     "sv": 4,
-    "ph": "69e6b564095609ef"
+    "ph": "afa732ff2d5df79f"
   },
   "norwood|2026-10-14|Board of Trustees Meeting": {
     "sv": 4,
@@ -550,7 +559,7 @@
   "telluride|2026-10-14|Liquor Licensing Authority - Oct 14 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8146",
     "sv": 4,
-    "ph": "2da552ba438b348e"
+    "ph": "28ddc62878422962"
   },
   "county|2026-10-14|Board of County Commissioners Work Session": {
     "sv": 4,
@@ -572,7 +581,11 @@
   },
   "county|2026-09-23|Board of County Commissioners Special Meeting": {
     "sv": 4,
-    "ph": "7751bc604656aec0"
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/870/files/agenda/2006",
+    "zoomUrl": "https://us02web.zoom.us/meeting/register/n4e7ZSbqRwm-OmsZjc_8vg",
+    "meetingId": "835 4898 8890",
+    "passcode": "669213",
+    "phone": "719-359-4580"
   },
   "county|2026-09-30|Board of County Commissioners Work Session": {
     "sv": 4,

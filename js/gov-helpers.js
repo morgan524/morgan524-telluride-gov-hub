@@ -303,10 +303,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1056/files/agenda/1967","sv":4},
 
   "school|2026-09-22|Telluride Board of Education Work Session":
-    {"sv":4,"ph":"b858cb282617fb09"},
+    {"sv":4,"agendaUrl":"https://files.smartsites.parentsquare.com/3403/92226_ws_packet.pdf","zoomUrl":"https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09","meetingId":"865 8512 4120","passcode":"468668"},
 
   "school|2026-09-22|Telluride Board of Education Monthly Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"},
+    {"sv":4,"agendaUrl":"https://files.smartsites.parentsquare.com/3403/92226_mm_packet.pdf","zoomUrl":"https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09","meetingId":"865 8512 4120","passcode":"468668"},
 
   "telluride|2026-09-22|Telluride Housing Authority - Sep 22 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303","sv":4},
@@ -354,13 +354,13 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8310","sv":4,"zoomUrl":"https://us06web.zoom.us/j/85992668350?pwd=R89oLHvfdFJZrpNb6yzGqqHUrl3phe.1","meetingId":"859 9266 8350","passcode":"503877","phone":"301-715-8592"},
 
   "telluride|2026-09-30|Special Town Council - Sep 30 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313","sv":4,"ph":"aa45589c1f4c4a4e"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/ZR3DDUQ0S8mhIKRt4KiuYg","meetingId":"872 6396 2426","passcode":"044233.","phone":"719) 359-4580"},
 
   "mv|2026-10-01|Design Review Board":
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-10-01|Town Council Budget - Oct 01 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8053","sv":4,"ph":"521165b2c958b221"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8053","sv":4,"ph":"8c8b45a8ccf4ac16"},
 
   "county|2026-10-01|Lodging Tax Panel Meeting":
     {"sv":4,"ph":"1f577e951aaf55d2"},
@@ -378,7 +378,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132","sv":4,"ph":"8f57e5c3d0f3d416"},
 
   "telluride|2026-10-06|Town Council - Oct 06 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044","sv":4,"ph":"276ac1e5db35b48f"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044","sv":4,"ph":"fc4bf58424de11fa"},
 
   "mv|2026-10-07|Town Council Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -429,7 +429,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-10-13|Special Town Council Budget - Oct 13 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8307","sv":4,"ph":"69e6b564095609ef"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8307","sv":4,"ph":"afa732ff2d5df79f"},
 
   "norwood|2026-10-14|Board of Trustees Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -438,7 +438,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-10-14|Liquor Licensing Authority - Oct 14 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8146","sv":4,"ph":"2da552ba438b348e"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8146","sv":4,"ph":"28ddc62878422962"},
 
   "county|2026-10-14|Board of County Commissioners Work Session":
     {"sv":4,"ph":"307e0c7b19e4ff5b"},
@@ -453,7 +453,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://www.tellmed.org/files/61309e97c/THD+Special+Bd+Mtg+Agenda+9.17.26.pdf","zoomUrl":"https://us02web.zoom.us/j/81133887855?from=addon","meetingId":"811 3388 7855","sv":4},
 
   "county|2026-09-23|Board of County Commissioners Special Meeting":
-    {"sv":4,"ph":"7751bc604656aec0"},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/870/files/agenda/2006","zoomUrl":"https://us02web.zoom.us/meeting/register/n4e7ZSbqRwm-OmsZjc_8vg","meetingId":"835 4898 8890","passcode":"669213","phone":"719-359-4580"},
 
   "county|2026-09-30|Board of County Commissioners Work Session":
     {"sv":4,"ph":"babd88802ce87b3a"},
@@ -824,7 +824,13 @@ const MEETING_PREVIEWS = {
     "The Norwood Water Commission will consider multiple leak forgiveness requests from residential and commercial customers, review a final draft report on raw water delivery and storage alternatives, discuss implementing a leak check fee, and address a code of conduct complaint involving an executive legal session.",
 
   "telluride|2026-09-21|Gondola Subcommittee - Sep 21 2026":
-    "The Gondola Advisory Committee will consider approving the August 17 meeting summary and receive updates on SMART progress. Members will also hear a presentation comparing CIG versus locally-led project evaluation approaches and preview items for the upcoming September Leadership Committee meeting."
+    "The Gondola Advisory Committee will consider approving the August 17 meeting summary and receive updates on SMART progress. Members will also hear a presentation comparing CIG versus locally-led project evaluation approaches and preview items for the upcoming September Leadership Committee meeting.",
+
+  "school|2026-09-22|Telluride Board of Education Work Session":
+    "Board members are expected to discuss CASB planning, staff and student lunch schedules, Telluride Education Foundation magnet grants, a housing update, and the timeline for appointing a 2026 student Board of Education representative.",
+
+  "school|2026-09-22|Telluride Board of Education Monthly Meeting":
+    "Board will consider approval of minutes from three August sessions, hear results of 2026 state assessments, and review administrative and Policy Governance Monitoring reports. The consent agenda includes personnel updates and a cash summary. Public comment periods are scheduled."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -894,7 +900,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "September 17, 2026",
     newsTopic: "government",
     copy: "New members appointed to sustainability board The Ridgway Town Council appointed Terry Schuyler and Christiane Frischmuth to the Ridgway Sustainability Advisory Board after brief interviews at the Sept. 9 council meeting. Schuyler was a founding member of the advisory board and served as the town co",
-    href: "https://www.ouraynews.com/2026/09/17/local-briefs-ridgway-appoints-two-sustainability-board-updates-marshal-overtime-policy/",
+    href: "https://www.ouraynews.com/2026/09/17/local-briefs-ridgway-appoints-two-sustainability-board-updates-marshal-overtime-policy/?ta_paidstory",
     img: ""
   },
   {
@@ -1202,10 +1208,10 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission meets August 24 for a broad status check across several ongoing projects. Staff will give updates on Mill Creek Park (recently grass-seeded), the East End Connector Trail at Idarado, Galloping Goose Park, the Placerville Schoolhouse masonry and painting work, and a position posting for a Parks + Open Space Manager. The one item with sharper public interest is new: citizen concerns about water flow diversion and the Bridal Veil conservation easement connected to Black Swift habitat. The commission also notes the 25th anniversary of Down Valley Park — and a retirement party for Rich — on September 12.",
 
   "school|2026-09-22|Telluride Board of Education Work Session":
-    "The September 22, 2026 Telluride Board of Education Work Session agenda hasn't been posted yet.",
+    "A work session, so no votes — just board conversation. The September 22 agenda covers CASB planning, a housing update for district staff, Telluride Education Foundation magnet grants, and the timeline for appointing a 2026 student Board of Education representative. The board will also walk through the schedule for staff and student lunches at each school and the KOTO access rotation for the coming year. Routine coordination, but the housing update is worth noting — staff housing has been a persistent pressure point for the district.",
 
   "school|2026-09-22|Telluride Board of Education Monthly Meeting":
-    "The September 22, 2026 Telluride Board of Education Monthly Meeting agenda hasn't been posted yet.",
+    "The September 22 monthly meeting is where the board moves from discussion to decision on two items that were still open last month: resolutions supporting Proposition NN and Amendment 87 (Initiative 195), and second-reading approval of board policies EL-11 and JKA. EL-11 was updated after the senior prank incident at the end of last school year; JKA went through CASB legal review following the legislative session. The board will also hear the 2026 state assessment results from the DAC, get an MLO campaign update, and work through the routine consent agenda — personnel, August cash summary, and contract awards. A board self-assessment (GP-4E) is on at the end.",
 
   "telluride|2026-09-22|Telluride Housing Authority - Sep 22 2026":
     "Three substantive items at Rebekah Hall. First: a resolution to amend deed restrictions on two town-constructed units at 215 East Colorado Avenue — FINO 1A and 2A — converting them from affordable ownership units to Employee Dwelling Units and removing the maximum sale price, a structural change that rewrites how those units function in the housing stock. Second: a policy statement on §1002.3 AMI updates, with the board weighing whether to hold 2027 rental rates flat or allow only a partial increase — a direct response to the affordability squeeze that has defined local housing politics for years. Third: a review of waitlist policies under §105 of the Employee Rental Housing Policies, which governs who gets access and in what order. Consent calendar includes July meeting minutes and ratification of Resident Advisory Committee members.",
@@ -1253,7 +1259,7 @@ const MANUAL_SUMMARIES = {
     "A special P&Z work session covering two tracks. First, the ongoing Comprehensive Plan update — consultants and staff will walk through the Existing Conditions StoryMap, review where Phase 2 community engagement stands, and present Survey #2. The Comp Plan process sets the long-range framework for land use, density, and character across town, so these check-ins matter. Second, the commission continues its discussion of potential Land Use Code amendments to LUC 3-502 (landscaping requirements) and LUC 3-505 (maintenance, removal, or relocation of trees) — code language that quietly shapes how development projects are reviewed and conditioned. No votes are expected; this is a working session.",
 
   "telluride|2026-09-30|Special Town Council - Sep 30 2026":
-    "The September 30, 2026 Special Town Council agenda hasn't been posted yet.",
+    "This special session is entirely devoted to one thing: a Town Council appeal hearing on the Carhenge lot subdivision. On July 23, 2026, P&Z unanimously approved consolidating Lots 34 and 34B at 700 W. Pacific Avenue into a single parcel — a preliminary step the Town needs before any redevelopment can move forward on that open-space site. Within two weeks, Sphere Law Firm filed an appeal on behalf of two neighboring property owners and the Chair 7 Community Coalition, which represents nearly 200 Backman Village area residents. The appellants raise several distinct legal challenges: that P&Z adopted staff findings wholesale without addressing contested issues (including recorded Backman Village covenants and owner-consent questions); that the approval's conditions contradict the very findings that supported it; and that P&Z waived seventeen of twenty-three subdivision design criteria by labeling them 'inapplicable' — a move the appellants argue the Land Use Code only permits through a PUD variation, which no longer exists here because the conceptual PUD application was withdrawn before the July 23 hearing. Town Council now sits as the appellate body, confined to the record compiled below.",
 
   "mv|2026-10-01|Design Review Board":
     "The October 1, 2026 Mountain Village Design Review Board agenda hasn't been posted yet.",
@@ -1328,7 +1334,7 @@ const MANUAL_SUMMARIES = {
     "The October 13 Mountain Village Merchant Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-10-13|Special Town Council Budget - Oct 13 2026":
-    "The October 13, 2026 Special Town Council Budget agenda hasn't been posted yet.",
+    "The October 13 Special Town Council Budget meeting agenda hasn't been posted yet.",
 
   "norwood|2026-10-14|Board of Trustees Meeting":
     "The October 14, 2026 Norwood Board of Trustees Meeting agenda hasn't been posted yet.",
@@ -1352,7 +1358,7 @@ const MANUAL_SUMMARIES = {
     "A short special meeting — just an hour — with one real item on the table: the interim leadership of Telluride Regional Medical Center. The board will go into executive session under the personnel exemption, then come back out to take public action on who's running the hospital in the near term. That's the whole meeting. Public comment is open at the top, via Zoom.",
 
   "county|2026-09-23|Board of County Commissioners Special Meeting":
-    "The September 23 Board of County Commissioners Special Meeting agenda hasn't been posted yet.",
+    "A full day of business for the BOCC. The most consequential item is the continued public hearing on adopting the 2024 International Codes (I-Codes) and Colorado's Model Low Energy and Carbon Code — building standards that will shape what gets built here and how. The commissioners will also take up 2027 nonprofit funding allocations, with a final proposal coming October 7. A shared-funding discussion for an intercept/bike path connector trail with Lawson Hill Property Owners is on the table, with a motion expected. The county's housing specialist delivers an update on community housing projects. The afternoon includes a follow-up on a personnel policy conflict mitigation plan for the Treasurer's Office — a thread carried over from September 19. CDOT's annual review of county roads opens the morning.",
 
   "county|2026-09-30|Board of County Commissioners Work Session":
     "The September 30, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet.",
@@ -1748,6 +1754,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "County to amend forestry and geothermal guidelines",
+    source: "Telluride Times",
+    date: "September 18, 2026",
+    firstSeen: "2026-09-18",
+    newsTopic: "land-use",
+    copy: "San Miguel County's Planning Commission is updating its Land Use Code to add clearer rules for forestry, deep geothermal, and oil and gas operations. Logging here is mostly wildfire mitigation work now, and the new forestry rules will require impact studies and mitigation plans. Deep geothermal gets its own regulations for the first time, including 1,000-foot setbacks from homes.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_1b88d130-afc4-4d6a-8e61-b2cd08f17dde.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/9f/79f7f561-8405-42c3-a401-743ee2563b25/6aa9ec6c74d7b.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Many hands made Wright’s work",
     source: "Telluride Times",
@@ -8728,10 +8746,11 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "September 30, 2026",
     title: "Special Town Council",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
-    civicwebId: 8313
+    civicwebId: 8313,
+    packetUrl: "https://telluride-co.civicweb.net/document/445210/"
   },
   {
     date: "October 1, 2026",

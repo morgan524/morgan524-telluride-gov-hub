@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-18T20:43:42.379Z",
+ "generated": "2026-09-18T23:13:22.514Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -15,6 +15,18 @@
      "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104",
      "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104",
      "zoomLink": "https://us06web.zoom.us/meeting/register/pvzPtHtIRZmah22XUU2xLg",
+     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+    },
+    {
+     "source": "telluride",
+     "sourceLabel": "Town of Telluride",
+     "title": "Special Town Council",
+     "date": "2026-09-30",
+     "time": "",
+     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313",
+     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313",
+     "zoomLink": "https://us06web.zoom.us/meeting/register/ZR3DDUQ0S8mhIKRt4KiuYg",
      "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
     }
    ],
@@ -73,6 +85,18 @@
      "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104",
      "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104",
      "zoomLink": "https://us06web.zoom.us/meeting/register/pvzPtHtIRZmah22XUU2xLg",
+     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+    },
+    {
+     "source": "telluride",
+     "sourceLabel": "Town of Telluride",
+     "title": "Special Town Council",
+     "date": "2026-09-30",
+     "time": "",
+     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313",
+     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313",
+     "zoomLink": "https://us06web.zoom.us/meeting/register/ZR3DDUQ0S8mhIKRt4KiuYg",
      "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
     }
    ],

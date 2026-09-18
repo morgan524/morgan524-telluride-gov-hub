@@ -1,26 +1,30 @@
 {
-  "hash": "58c6ed7827ebc52f42f31f8bece0aa83808e700e",
-  "lede": "The biggest item this week is Tuesday's Town Council meeting, where three public hearings on second reading include a deed-restriction amendment that would convert two affordable ownership units at 215 East Colorado Avenue into employee dwelling units and remove the maximum sale price — a structural change to how those units work in our housing stock. The Telluride Housing Authority takes up the same question Monday. Norwood's Planning and Zoning Commission also meets Sunday to review and potentially adopt Phase I of a Land Use Code rewrite, the kind of thing that shapes development rules for years to come.",
+  "hash": "c98a65efbf9f8aa3a6681b062bd01930903c04ca",
+  "lede": "The biggest decision point this week comes Monday and Tuesday, when Norwood's Planning and Zoning Commission takes up Phase I of a full Land Use Code rewrite — the kind of thing that quietly sets the rules for development and density for years to come — while Telluride's Town Council holds public hearings on converting two affordable ownership units at 215 East Colorado Avenue into employee dwelling units and removing their price caps. The school board also votes Tuesday on resolutions backing Proposition NN and Amendment 87, and the County commissioners continue a public hearing on adopting new International Building Codes on Wednesday.",
   "notable": [
     {
       "id": 0,
-      "stake": "Vote to adopt Norwood Land Use Code amendments sets long-term development rules."
+      "stake": "Norwood votes to adopt Land Use Code amendments shaping local development rules."
     },
     {
-      "id": 1,
-      "stake": "Key decision on who drives and funds the gondola project — CIG vs. local control."
+      "id": 3,
+      "stake": "Board votes on state ballot measure resolutions and second-reading policy changes."
     },
     {
       "id": 4,
-      "stake": "Resolution would convert two affordable units, removing their maximum sale price."
+      "stake": "Resolution would convert two affordable ownership units, removing maximum sale price."
     },
     {
       "id": 5,
-      "stake": "Three public hearings including vote on removing price cap from affordable ownership units."
+      "stake": "Public hearings on deed-restriction conversion that removes price caps on two units."
     },
     {
       "id": 6,
-      "stake": "Commission may set new leak check fee affecting Norwood water customers."
+      "stake": "Commission considers new leak check fee and rules on six leak forgiveness requests."
+    },
+    {
+      "id": 10,
+      "stake": "Continued public hearing on new building codes that will govern future construction countywide."
     }
   ]
 }

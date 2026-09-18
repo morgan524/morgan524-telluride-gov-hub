@@ -339,11 +339,10 @@ const MV_CACHED_DATA = [
     time: "10:00 AM - 3:00 PM",
     title: "Design Review Board",
     board: "drb",
-    agendaUrl: null,
+    agendaUrl: "https://townofmountainvillage.com/site/assets/files/49956/october_1-_2026_design_review_board_meeting_agenda.pdf",
     packetUrl: null,
     special: false,
-    location: "Town Hall, 455 Mountain Village Blvd, Suite A",
-    note: "Agenda typically posted the Friday before."
+    location: "Town Hall, 455 Mountain Village Blvd, Suite A"
   },
   {
     date: "October 7, 2026",
