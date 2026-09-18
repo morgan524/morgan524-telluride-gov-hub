@@ -1,26 +1,22 @@
 {
-  "hash": "d309c17a13f2c98042ff8f860ef3c18bea1ddcd3",
-  "lede": "The biggest item this week is at Telluride Town Council on Monday the 22nd, where a vote on converting two affordable ownership units at 215 East Colorado into employee dwelling units — removing their price caps — could permanently reshape how that housing functions for locals. The Housing Authority takes up the same question earlier that day. Meanwhile, Norwood's Planning and Zoning Commission moves on a first-phase Land Use Code rewrite that will set development rules for that community for years to come, and the Gondola Subcommittee digs into the fundamental question of who controls and funds the gondola project.",
+  "hash": "ee616bac254879c868ebc3afe3b5d31cec682b2e",
+  "lede": "The biggest thing on the civic calendar this week is Monday's Town Council meeting, where a deed-restriction amendment for two units at 215 East Colorado Avenue — converting them from capped affordable ownership units to employee dwelling units — goes to a public hearing on second reading, a structural change to how those homes function in Telluride's housing stock. The Telluride Housing Authority takes up the same question a day earlier, on Monday the 22nd, along with a separate policy item. Norwood's Planning and Zoning Commission also meets Sunday to review and potentially adopt Phase I of a full Land Use Code rewrite — the kind of change that sets development rules for years to come.",
   "notable": [
     {
-      "id": 5,
-      "stake": "Vote to remove price caps on two affordable units, changing their status permanently."
+      "id": 0,
+      "stake": "Norwood could formally adopt Phase I Land Use Code changes governing density and development."
     },
     {
       "id": 4,
-      "stake": "Resolution to convert deed-restricted ownership units to employee dwelling units."
+      "stake": "Resolution to convert two affordable ownership units, removing their maximum sale price cap."
     },
     {
-      "id": 0,
-      "stake": "Ordinance to adopt Phase I Land Use Code changes affecting Norwood development rules."
-    },
-    {
-      "id": 1,
-      "stake": "Key decision on who controls gondola project funding and direction."
+      "id": 5,
+      "stake": "Public hearing on deed-restriction conversion that removes price cap from two town housing units."
     },
     {
       "id": 6,
-      "stake": "Commission votes on leak forgiveness requests and a new leak-check fee."
+      "stake": "Norwood Water Commission weighing leak forgiveness requests and a possible new leak-check fee."
     }
   ]
 }

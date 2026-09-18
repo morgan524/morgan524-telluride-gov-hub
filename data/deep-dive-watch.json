@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-18T04:04:25.383Z",
+ "generated": "2026-09-18T10:56:32.921Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -78,6 +78,12 @@
    ],
    "recent": [
     {
+     "source": "telluride",
+     "date": "2026-09-17",
+     "title": "Special Meeting - Planning & Zoning Commission - Sep 17 2026",
+     "snippet": "A special P&Z work session covering two tracks. First, the ongoing Comprehensive Plan update — consultants and staff will walk through the Existing Conditions StoryMap, review where Phase 2 community…"
+    },
+    {
      "source": "county",
      "date": "2026-09-16",
      "title": "Board of County Commissioners Meeting",
@@ -98,6 +104,7 @@
    ],
    "developments": [],
    "stale": [
+    "Code Changes & Accelerated Review: telluride discussed it on 2026-09-17 (\"Special Meeting - Planning & Zoning Commission - Sep 17 2026\") but the deep dive was last edited 2026-07-19.",
     "Code Changes & Accelerated Review: county discussed it on 2026-09-16 (\"Board of County Commissioners Meeting\") but the deep dive was last edited 2026-07-19.",
     "Code Changes & Accelerated Review: county discussed it on 2026-09-15 (\"Housing Code Update SSR\") but the deep dive was last edited 2026-07-19.",
     "Code Changes & Accelerated Review: county discussed it on 2026-09-10 (\"Planning Commission Meeting\") but the deep dive was last edited 2026-07-19."

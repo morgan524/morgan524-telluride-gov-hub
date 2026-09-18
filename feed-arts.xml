@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Sep 2026 04:04:34 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 10:56:42 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Fri, Sep 18] Blues &amp; Brews Beer Pairing Dinner</title>
@@ -22,6 +22,19 @@ As Telluride settles into Blues & Brews weekend, gather around the table for an 
       <category>KOTO</category>
     </item>
     <item>
+      <title>[Fri, Sep 18] Telluride Blues &amp; Brews Juke Joint</title>
+      <link>https://sheridanoperahouse.com/events/telluride-blues-brews-juke-joint-2/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20blues%20and%20brews%7C2026-09-18</guid>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://sheridanoperahouse.com/wp-content/uploads/2021/06/Blues-and-Brews.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Sheridan Opera House
+📍 Sheridan Opera House • Telluride, CO
+
+A blues-focused concert held at the historic Sheridan Opera House as part of the Telluride Blues & Brews festival weekend, the Juke Joint brings an intimate live music experience to one of Telluride's most storied venues. The setting channels the informal, soulful atmosphere of a traditional juke joint within the Opera House's intimate interior.]]></description>
+      <media:content url="https://sheridanoperahouse.com/wp-content/uploads/2021/06/Blues-and-Brews.png" medium="image" />
+      <category>Community Event</category>
+      <category>Sheridan Opera House</category>
+    </item>
+    <item>
       <title>[Fri, Sep 18] DJ WOMBAT</title>
       <link>https://www.alibitelluride.com/calendar#eca-event=dj-wombat-4</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/dj%20wombat%7C2026-09-18</guid>
@@ -34,19 +47,6 @@ ringing a deep passionate knowledge of sound, blending reggae, breakbeat, Phish,
       <media:content url="https://ucarecdn.com/46f14e2f-0397-4682-a048-d911457f02c9/-/crop/1199x1200/41,0/-/preview/" medium="image" />
       <category>Community Event</category>
       <category>The Alibi</category>
-    </item>
-    <item>
-      <title>[Fri, Sep 18] Telluride Blues &amp; Brews Festival</title>
-      <link>https://www.telluride.com/event/telluride-blues-brews-festival/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20blues%20and%20brews%7C2026-09-18</guid>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/32823/bluesandbrewsperformer-medium.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Renowned as one of the most scenic and intimate music festivals in the country, Telluride Blues & Brews Festival is …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/32823/bluesandbrewsperformer-medium.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
     </item>
     <item>
       <title>[Fri, Sep 18] Emergency Kit Assembly at the Telluride Brews and Blues Festival</title>
@@ -72,6 +72,19 @@ Just A Bunch of Roadies is the humanitarian arm of the live-events industry. Aft
 The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sat, Sep 19] Telluride Blues &amp; Brews Juke Joint</title>
+      <link>https://sheridanoperahouse.com/events/telluride-blues-brews-juke-joint-3/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20blues%20and%20brews%7C2026-09-19</guid>
+      <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://sheridanoperahouse.com/wp-content/uploads/2021/06/Blues-and-Brews.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Sheridan Opera House
+📍 Sheridan Opera House • Telluride, CO
+
+A blues-focused concert event at the historic Sheridan Opera House, part of the Telluride Blues & Brews Festival weekend. The intimate Juke Joint setting brings live blues music to one of Telluride's most storied performance venues.]]></description>
+      <media:content url="https://sheridanoperahouse.com/wp-content/uploads/2021/06/Blues-and-Brews.png" medium="image" />
+      <category>Community Event</category>
+      <category>Sheridan Opera House</category>
     </item>
     <item>
       <title>[Sat, Sep 19] Zumba with Gise</title>
@@ -132,20 +145,18 @@ Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Br
 
 The main event at this September 21st meeting is the first phase of Norwood's Land Use Code update. The commission will review draft code amendments under Phase I and take up Ordinance No. ___ Series 2026, which would formally adopt those changes. Land Use Code rewrites don't happen often — when they do, they set the rules that govern development, density, and use for years to come. Consent agenda covers minutes from July. This is an active legislative moment for Norwood's planning framework.
 
-⚡ Why it matters: Ordinance to adopt Phase I Land Use Code changes affecting Norwood development rules.]]></description>
+⚡ Why it matters: Norwood could formally adopt Phase I Land Use Code changes governing density and development.]]></description>
       <category>Meeting</category>
       <category>Town of Norwood</category>
     </item>
     <item>
-      <title>⚡ [Meeting] Gondola Subcommittee - Sep 21 2026 — 2026-09-21</title>
+      <title>[Meeting] Gondola Subcommittee - Sep 21 2026 — 2026-09-21</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-09-21%7CGondola%20Subcommittee%20-%20Sep%2021%202026</guid>
       <pubDate>Mon, 21 Sep 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-09-21
 
-The Gondola Advisory Committee meets virtually on September 21 at 3:00 PM. The bulk of the session — 45 minutes — goes to a comparison of the CIG (Capital Investment Grant) approach versus a locally-led project evaluation, presented by Ed Parks and Pete Williams. That's the live question underneath this whole effort: who drives the gondola project and how it gets funded. Amber Blake will give a SMART updates briefing, and Miles Graham will preview what's coming to the September Leadership Committee. The August 17 meeting summary is up for approval. Public comment is open.
-
-⚡ Why it matters: Key decision on who controls gondola project funding and direction.]]></description>
+The Gondola Advisory Committee meets virtually on September 21 at 3:00 PM. The bulk of the session — 45 minutes — goes to a comparison of the CIG (Capital Investment Grant) approach versus a locally-led project evaluation, presented by Ed Parks and Pete Williams. That's the live question underneath this whole effort: who drives the gondola project and how it gets funded. Amber Blake will give a SMART updates briefing, and Miles Graham will preview what's coming to the September Leadership Committee. The August 17 meeting summary is up for approval. Public comment is open.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -180,7 +191,7 @@ The September 22, 2026 Telluride Board of Education Monthly Meeting agenda hasn'
 
 Three substantive items at Rebekah Hall. First: a resolution to amend deed restrictions on two town-constructed units at 215 East Colorado Avenue — FINO 1A and 2A — converting them from affordable ownership units to Employee Dwelling Units and removing the maximum sale price, a structural change that rewrites how those units function in the housing stock. Second: a policy statement on §1002.3 AMI updates, with the board weighing whether to hold 2027 rental rates flat or allow only a partial increase — a direct response to the affordability squeeze that has defined local housing politics for years. Third: a review of waitlist policies under §105 of the Employee Rental Housing Policies, which governs who gets access and in what order. Consent calendar includes July meeting minutes and ratification of Resident Advisory Committee members.
 
-⚡ Why it matters: Resolution to convert deed-restricted ownership units to employee dwelling units.]]></description>
+⚡ Why it matters: Resolution to convert two affordable ownership units, removing their maximum sale price cap.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -193,7 +204,7 @@ Three substantive items at Rebekah Hall. First: a resolution to amend deed restr
 
 The most consequential action is a deed-restriction amendment for two units at 215 East Colorado Avenue (FINO II Units 1A and 2A) that would convert them from designated affordable units with a maximum sale price to employee dwelling units — effectively removing the price cap. That conversion question sets the table for three public hearings on second reading: the sale of Spruce House Unit H at 226 East Pacific Avenue, and both FINO II units 1A and 2A. All three sales move toward final approval if Council votes yes. On the code side, first reading of an ordinance amending the Ethics Guidelines (Municipal Code Chapter 2, Article 4, Section 2-4-30) is on the afternoon agenda. The Telluride Housing Authority holds its own session concurrently. Council will also introduce four new staff members across Finance and Human Resources.
 
-⚡ Why it matters: Vote to remove price caps on two affordable units, changing their status permanently.]]></description>
+⚡ Why it matters: Public hearing on deed-restriction conversion that removes price cap from two town housing units.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -206,7 +217,7 @@ The most consequential action is a deed-restriction amendment for two units at 2
 
 The Norwood Water Commission meets September 22 with a full plate of water-related business. Six leak forgiveness requests are on the table — a recurring item for any small-system water utility, where a neighbor's faulty line can mean a bill that doesn't reflect actual use. The Commission will also take up a possible leak check fee, which would formalize how the system handles these situations going forward. The evening's weightiest technical item is the Final Draft of the Raw Water Delivery and Storage Alternatives Analysis Report from SGM — a planning document that shapes how Norwood thinks about its long-term water supply. The Commission will also go into executive session on the Cossey Code of Conduct Complaint for legal advice. Consent items include August financials, meeting minutes, and a budget-to-actuals review.
 
-⚡ Why it matters: Commission votes on leak forgiveness requests and a new leak-check fee.]]></description>
+⚡ Why it matters: Norwood Water Commission weighing leak forgiveness requests and a possible new leak-check fee.]]></description>
       <category>Meeting</category>
       <category>Town of Norwood</category>
     </item>
