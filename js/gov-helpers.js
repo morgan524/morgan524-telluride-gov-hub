@@ -2728,24 +2728,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Town Council Proclaims September 7-11 Black Bear Safety Week",
-    source: "Town of Telluride",
-    date: "September 3, 2026",
-    newsTopic: "government",
-    copy: "(September 3, 2026) — Town Council on Tuesday proclaimed September 7-11 Black Bear Safety Week, arriving in a year when a dry spring and summer have left black bears across Colorado with far less to eat in the wild.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=404",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
-  },
-  {
-    title: "Town of Telluride Downgrades to Stage 1 Fire Restrictions",
-    source: "Town of Telluride",
-    date: "August 26, 2026",
-    newsTopic: "public-safety",
-    copy: "(August 25, 2026) – Following improved fire conditions across the region, Town Manager Zoe Dohnal has downgraded fire restrictions within the Town of Telluride from Stage 2 to Stage 1, effective 12:01 a.m. MT on Wednesday, August 26, 2026.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=403",
-    img: ""
-  },
-  {
     title: "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
     source: "San Miguel County",
     date: "September 10, 2026",
@@ -2753,24 +2735,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1409",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
-  },
-  {
-    title: "Two Domestic Pets in San Miguel County Test Positive for the Plague",
-    source: "San Miguel County",
-    date: "September 3, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
-  },
-  {
-    title: "Waste Tire Collection Event",
-    source: "San Miguel County",
-    date: "August 24, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
   },
   {
     title: "Tomboy Road Closed Intermittently Tuesday 9/15 - Friday 9/18",
@@ -2797,15 +2761,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "community",
     copy: "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=45",
-    img: ""
-  },
-  {
-    title: "Stage 1 Fire Restrictions In Effect",
-    source: "Town of Telluride",
-    date: "August 26, 2026",
-    newsTopic: "public-safety",
-    copy: "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
-    href: "https://www.telluride.gov/AlertCenter.aspx?AID=65",
     img: ""
   },
   {
@@ -2968,14 +2923,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "community",
     copy: "On this week’s Regional Roundup, we hear about efforts to repeal the Roadless Rule, which protects national forests, and reaction from public lands advocates in Wyoming. Then, we hear from the Southern Ute Tribe about its objections to a proposed mine in the La Plata Mountains. We’ll also hear about the challenges of recycling in rural Colorado, an",
     href: "https://koto.org/news/newscast-9-4-26/"
-  },
-  {
-    title: "Newscast 9-3-26",
-    source: "KOTO Community Radio",
-    date: "September 4, 2026",
-    newsTopic: "community",
-    copy: "Welcome Back, Eliza Dunn; West End Roundup with the San Miguel Basin Forum; Telluride Library Opens New Youth Area",
-    href: "https://koto.org/news/newscast-9-3-26/"
   }
 ];
 
