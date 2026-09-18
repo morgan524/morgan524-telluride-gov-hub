@@ -335,16 +335,6 @@ const MV_CACHE_DATE = '2026-09-18';
 
 const MV_CACHED_DATA = [
   {
-    date: "September 17, 2026",
-    time: "2:00 PM - 7:45 PM",
-    title: "Town Council Meeting",
-    board: "tc",
-    agendaUrl: "https://townofmountainvillage.com/site/assets/files/49907/september_17-_2026_town_council_meeting_agenda.pdf",
-    packetUrl: "https://townofmountainvillage.com/site/assets/files/49908/september_17-_2026_town_council_meeting_packet.pdf",
-    special: false,
-    location: "Town Hall, 455 Mountain Village Blvd, Suite A"
-  },
-  {
     date: "October 1, 2026",
     time: "10:00 AM - 3:00 PM",
     title: "Design Review Board",
@@ -378,6 +368,17 @@ const MV_CACHED_DATA = [
     note: "Agenda typically posted the Friday before."
   },
   {
+    date: "November 19, 2026",
+    time: "2:00 PM - 7:00 PM",
+    title: "Town Council Meeting",
+    board: "tc",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Town Hall, 455 Mountain Village Blvd, Suite A",
+    note: "Agenda typically posted the Friday before."
+  },
+  {
     date: "December 3, 2026",
     time: "10:00 AM - 3:00 PM",
     title: "Design Review Board",
@@ -397,23 +398,21 @@ const SCHOOL_CACHE_DATE = '2026-09-18';
 const SCHOOL_CACHED_DATA = [
   {
     date: "September 22, 2026",
-    time: "3:30 PM",
+    time: null,
     title: "Telluride Board of Education Work Session",
-    agendaUrl: null,
+    agendaUrl: "https://files.smartsites.parentsquare.com/3403/92226_ws_packet.pdf",
     packetUrl: null,
     special: false,
-    location: "Bridal Veil District Conference Room / Zoom",
-    note: "Scheduled meeting -- agenda posted closer to the date."
+    location: "Bridal Veil District Conference Room / Zoom"
   },
   {
     date: "September 22, 2026",
-    time: "5:15 PM",
+    time: null,
     title: "Telluride Board of Education Monthly Meeting",
-    agendaUrl: null,
+    agendaUrl: "https://files.smartsites.parentsquare.com/3403/92226_mm_packet.pdf",
     packetUrl: null,
     special: false,
-    location: "Bridal Veil District Conference Room / Zoom",
-    note: "Scheduled meeting -- agenda posted closer to the date."
+    location: "Bridal Veil District Conference Room / Zoom"
   },
   {
     date: "October 20, 2026",

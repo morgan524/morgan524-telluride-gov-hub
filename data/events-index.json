@@ -125,12 +125,12 @@
     "time": "4:00 PM",
     "location": "Chloe's Charcuterie & Wine",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53950055817938/huge/3077cd853add6591f360f983328f1ee7e3ed78cd.jpg",
+    "img": "https://localist-images.azureedge.net/photos/53950055817938/huge/4924d3606a12c233af2b47a380c304869dfaf267.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "LIVE MUSIC IN THE GARDEN! 🎶 Sunday, September 13th, from 4:00–6:00 p.m., let us introduce you to Chloe’s Secret Garden! 🌿✨ Enjoy live music with Zan Waller & Stefan Davenport, the perfect wine, and scrumptious charcuterie in our cozy…",
     "type": "Music",
-    "endDate": "2026-09-20"
+    "endDate": "2026-11-08"
   },
   {
     "title": "OLD MAN POLLY",
@@ -397,16 +397,16 @@
     "type": "Arts & Film"
   },
   {
-    "title": "Kipori Woods Live at Floating Lotus Brewery",
-    "href": "https://events.ourayridgwayevents.com/event/kipori-woods-live-at-floating-lotus-brewery",
+    "title": "Kipori Woods – Live at Floating Lotus Brewery",
+    "href": "https://events.ourayridgwayevents.com/event/kipori-woods-live-at-floating-lotus-brewery-8834",
     "date": "2026-09-19",
     "time": "6:00 PM",
     "location": "Floating Lotus Brewery",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53913854366205/huge/5098caf43f4189a9977ecc7eca3dca010a4284d5.jpg",
+    "img": "https://localist-images.azureedge.net/photos/53994391258988/huge/042189528b794ad128abe8ffca169b44651df0b2.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "New Orleans-raised guitarist, vocalist and songwriter Kipori Woods performs live at Floating Lotus Brewery in Ridgway. Kipori’s expressive guitar work and remarkable musical range cross blues, jazz, soul, country and Southern rock. This…",
+    "desc": "Kipori Woods brings the soul and musical range of New Orleans to Floating Lotus Brewery. The guitarist, vocalist and songwriter blends blues, jazz, country and Southern rock, shaped by mentorship from Ellis Marsalis and Walter “Wolfman”…",
     "type": "Food & Drink"
   },
   {
@@ -710,7 +710,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
     "type": "Community",
-    "endDate": "2026-11-14"
+    "endDate": "2026-11-17"
   },
   {
     "title": "Tennis Clinic 4.0+",
@@ -1150,6 +1150,19 @@
     "type": "Community"
   },
   {
+    "title": "Town Manager Finalists Meet and Greet",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/town-manager-finalists-meet-and-greet/",
+    "date": "2026-09-24",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49917/event.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "The Mountain Village Town Council has narrowed its search for a new Town Manager to four finalists: William Bell, of Montrose, CO; Michael Bouchard of Denver,",
+    "type": "Community"
+  },
+  {
     "title": "Watercolor & Wine with Katey Fetch: \"Paint the Peaks\"",
     "href": "https://events.ourayridgwayevents.com/event/watercolor-wine-with-katey-fetch-paint-the-peaks",
     "date": "2026-09-24",
@@ -1216,6 +1229,34 @@
     "desc": "Brazilian studio jeweler Sandra Frias will be visiting Telluride with a new collection of handmade jewelry. Her truly …",
     "type": "Community",
     "endDate": "2026-09-27"
+  },
+  {
+    "title": "What the Constitution Means to Me",
+    "href": "https://www.telluride.com/event/what-the-constitution-means-to-me/",
+    "date": "2026-09-24",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63630/screenshot_2026-09-18_at_1_42_31_pm.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "WPL and Telluride Theatre present playwright Heidi Schreck’s boundary-breaking, Obie Award-winning play that breathes …",
+    "type": "Arts & Film",
+    "endDate": "2026-09-25"
+  },
+  {
+    "title": "Music Bingo",
+    "href": "https://events.ourayridgwayevents.com/event/music-bingo",
+    "date": "2026-09-24",
+    "time": "7:00 PM",
+    "location": "Floating Lotus Brewery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53790449536989/huge/a7181e9d298980d4c2377db45d06d26bb81e0b12.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Music Bingo at Floating Lotus Brewery! Join us on the 2nd & 4th Thursdays from 7–9 PM for a high-energy night of music, drinks, and bingo-style fun. Listen, mark your card, and sing along. Learn more at floatinglotusbrewery.com. View on…",
+    "type": "Food & Drink",
+    "endDate": "2026-11-13"
   },
   {
     "title": "Pickleball Nights",
@@ -1335,6 +1376,19 @@
     "type": "Community"
   },
   {
+    "title": "The Fabulous Blues Tones – Live at Floating Lotus Brewery",
+    "href": "https://events.ourayridgwayevents.com/event/the-fabulous-blues-tones-live-at-floating-lotus-brewery",
+    "date": "2026-09-25",
+    "time": "6:00 PM",
+    "location": "Floating Lotus Brewery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53994404540968/huge/8559f0c793437d136bf809f090605fa7bce3ce70.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The Fabulous Blues Tones return with house-rocking blues, timeless standards and deep cuts from the blues vault. Greg Jacobs and Tony Kovacic lead on vocals and guitars, while Tim Brennan and Dave Underwood keep the rhythm tight on drums…",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Exploring Cyanotype with Angela LeClair",
     "href": "https://events.ourayridgwayevents.com/event/exploring-cyanotype-with-angela-leclair",
     "date": "2026-09-26",
@@ -1437,6 +1491,19 @@
     "source": "Mountain Village",
     "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
     "type": "Community"
+  },
+  {
+    "title": "The Poppletons – Live at Floating Lotus Brewery",
+    "href": "https://events.ourayridgwayevents.com/event/the-poppletons-live-at-floating-lotus-brewery",
+    "date": "2026-09-26",
+    "time": "6:00 PM",
+    "location": "Floating Lotus Brewery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53994410727494/huge/f6588be01fec66ad36a98e73e2759b741bfa6bdd.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Doc, Rock, Chef, and Mint Chip Poppleton — The Poppletons — bring high-energy, all-original psychedelic rock and extended jams from Durango, Colorado. Come experience the magic of Poppletonia! Saturday, September 26, 6–9 PM at Floating…",
+    "type": "Food & Drink"
   },
   {
     "title": "Mountains to the Desert Classic",
@@ -1555,6 +1622,19 @@
     "source": "Telluride.com",
     "desc": "WPL and Telluride Mountain Club present a night storytelling and conversation with Rock Guide of Telluride author …",
     "type": "Talks & Classes"
+  },
+  {
+    "title": "Walk for Hope",
+    "href": "https://www.telluride.com/event/walk-for-hope/",
+    "date": "2026-09-27",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63627/img_8447.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Part of suicide prevention awareness month, the Walk for Hope is an opportunity to gather and honor those we have lost …",
+    "type": "Community"
   },
   {
     "title": "Slap Dragon",
@@ -1725,6 +1805,20 @@
     "desc": "Original Thinkers is a boutique festival of film, ideas, art, performance, and conversation held annually in Telluride, …",
     "type": "Arts & Film",
     "endDate": "2026-10-05"
+  },
+  {
+    "title": "Trivia Night",
+    "href": "https://events.ourayridgwayevents.com/event/floating-lotus-trivia-night",
+    "date": "2026-10-01",
+    "time": "7:00 PM",
+    "location": "Floating Lotus Brewery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53790516346797/huge/599d1a7013ddde307592e7dfc9b892fe265527e0.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Trivia Night at Floating Lotus Brewery! Join us on the 1st & 3rd Thursdays from 7–9 PM for a lively night of questions, drinks, and friendly competition. Grab a table, bring your team, and learn more at floatinglotusbrewery.com. View on…",
+    "type": "Food & Drink",
+    "endDate": "2026-11-06"
   },
   {
     "title": "Pickleball Nights",
@@ -2401,6 +2495,19 @@
     "type": "Community"
   },
   {
+    "title": "Lupita's Parking Lot Sale",
+    "href": "https://events.ourayridgwayevents.com/event/lupitas-parking-lot-sale",
+    "date": "2026-10-10",
+    "time": "8:00 AM",
+    "location": "Ridgway Public Library",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53994378997204/huge/989a12812632d48454c8f52334ff01e5dc03a008.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "A revival of Lupita's Parking Lot Sale A REVIVAL OF LUPITA'S PARKING LOT SALE! OCT. 10, 2026 • 8 AM–3 PM Ridgway Public Library, Ridgway $20 PER 10'×10' View on site | Email this event",
+    "type": "Community"
+  },
+  {
     "title": "Nature in Four Seasons: Growing Dormant",
     "href": "https://events.ourayridgwayevents.com/event/nature-in-four-seasons-growing-dormant",
     "date": "2026-10-10",
@@ -3019,7 +3126,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In…",
     "type": "Arts & Film",
-    "endDate": "2026-11-16"
+    "endDate": "2026-11-17"
   },
   {
     "title": "Teeth to the Wind: fundraiser for George & Michael Gardner Fund",

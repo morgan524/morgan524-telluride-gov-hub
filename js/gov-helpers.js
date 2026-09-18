@@ -396,7 +396,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"49e704e3c3bab858"},
 
   "telluride|2026-10-08|Special Meeting - Planning & Zoning Commission - Oct 08 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8311","sv":4,"ph":"fbff66c5a313b83d"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8311","sv":4,"ph":"4318f9c666b0b315"},
 
   "county|2026-10-08|Planning Commission Meeting":
     {"sv":4,"ph":"0a81341859740545"},
@@ -438,7 +438,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-10-14|Liquor Licensing Authority - Oct 14 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8146","sv":4,"ph":"28ddc62878422962"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8146","sv":4,"ph":"2da552ba438b348e"},
 
   "county|2026-10-14|Board of County Commissioners Work Session":
     {"sv":4,"ph":"307e0c7b19e4ff5b"},
@@ -894,7 +894,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "September 17, 2026",
     newsTopic: "government",
     copy: "New members appointed to sustainability board The Ridgway Town Council appointed Terry Schuyler and Christiane Frischmuth to the Ridgway Sustainability Advisory Board after brief interviews at the Sept. 9 council meeting. Schuyler was a founding member of the advisory board and served as the town co",
-    href: "https://www.ouraynews.com/2026/09/17/local-briefs-ridgway-appoints-two-sustainability-board-updates-marshal-overtime-policy/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/09/17/local-briefs-ridgway-appoints-two-sustainability-board-updates-marshal-overtime-policy/",
     img: ""
   },
   {
@@ -1016,49 +1016,18 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Attached is this week's parish bulletin. Please check the parish calendar for all updated schedule of events. *Holy Adoration begins at 8:30 am before Sunday's Holy Mass-September 6. *Immediately after Holy Mass, join us for...",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-september-6/",
     img: ""
-  },
-  {
-    title: "FEMA Public Assistance Approved for Colorado’s Major Disaster Declaration",
-    source: "Ouray County",
-    sourceKey: "ouray-county",
-    date: "September 4, 2026",
-    newsTopic: "community",
-    copy: "Public Assistance Approved for Colorado’s Major Disaster Declaration",
-    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=962",
-    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22932"
-  },
-  {
-    title: "TABOR Election Notice: Invitation for Pro/Con Statements on November 2026 Ballot Issue",
-    source: "Ouray County",
-    sourceKey: "ouray-county",
-    date: "September 4, 2026",
-    newsTopic: "government",
-    copy: "TABOR Election Notice: Invitation for Pro/Con Statements on November 2026 Ballot Issue",
-    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=961",
-    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22931"
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
   {
-    title: "Tomboy Road Closed Intermittently Tuesday 9/15 - Friday 9/18",
+    title: "Tomboy Road Now Open",
     source: "San Miguel County",
     sourceLabel: "San Miguel County",
     category: "Alert",
-    date: "2026-09-14",
-    pubDate: "2026-09-14T19:22:27.000Z",
-    copy: "Tomboy Road will be closed Tues 9/15 - Fri 9/18 to accommodate waterline work being performed by the Town of Telluride. Times are not exact, motorists should avoid the area or prepare for extended delays and possibly being turned away.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=545",
-    img: ""
-  },
-  {
-    title: "Tomboy Road Closed Intermittently Tuesday 9/15 - Friday 9/18",
-    source: "San Miguel County",
-    sourceLabel: "San Miguel County",
-    category: "Alert",
-    date: "2026-09-11",
-    pubDate: "2026-09-11T18:11:45.000Z",
-    copy: "Tomboy Road will be closed Tues 9/15 - Fri 9/18 to accommodate waterline work being performed by the Town of Telluride. Times are not exact, motorists should avoid the area or prepare for extended delays and possibly being turned away.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=544",
+    date: "2026-09-18",
+    pubDate: "2026-09-18T17:34:01.000Z",
+    copy: "The Town of Telluride has completed their project that necessitated the closure of Lower Tomboy Road. The road is now open again.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=546",
     img: ""
   }
 ];              // SMC AlertCenter items
@@ -1326,7 +1295,7 @@ const MANUAL_SUMMARIES = {
     "The October 7, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-10-08|Special Meeting - Planning & Zoning Commission - Oct 08 2026":
-    "The October 8, 2026 Special Meeting – Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The October 8, 2026 Special Meeting - Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "county|2026-10-08|Planning Commission Meeting":
     "The October 8 Planning Commission agenda hasn't been posted yet.",
@@ -2728,6 +2697,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Town Council Proclaims September 7-11 Black Bear Safety Week",
+    source: "Town of Telluride",
+    date: "September 3, 2026",
+    newsTopic: "government",
+    copy: "(September 3, 2026) — Town Council on Tuesday proclaimed September 7-11 Black Bear Safety Week, arriving in a year when a dry spring and summer have left black bears across Colorado with far less to eat in the wild.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=404",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
+  },
+  {
+    title: "Town of Telluride Downgrades to Stage 1 Fire Restrictions",
+    source: "Town of Telluride",
+    date: "August 26, 2026",
+    newsTopic: "public-safety",
+    copy: "(August 25, 2026) – Following improved fire conditions across the region, Town Manager Zoe Dohnal has downgraded fire restrictions within the Town of Telluride from Stage 2 to Stage 1, effective 12:01 a.m. MT on Wednesday, August 26, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=403",
+    img: ""
+  },
+  {
     title: "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
     source: "San Miguel County",
     date: "September 10, 2026",
@@ -2737,21 +2724,30 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
   },
   {
-    title: "Tomboy Road Closed Intermittently Tuesday 9/15 - Friday 9/18",
+    title: "Two Domestic Pets in San Miguel County Test Positive for the Plague",
     source: "San Miguel County",
-    date: "September 14, 2026",
-    newsTopic: "infrastructure",
-    copy: "Tomboy Road will be closed Tues 9/15 - Fri 9/18 to accommodate waterline work being performed by the Town of Telluride. Times are not exact, motorists should avoid the area or prepare for extended delays and possibly being turned away.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=545",
-    img: ""
+    date: "September 3, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
   },
   {
-    title: "Tomboy Road Closed Intermittently Tuesday 9/15 - Friday 9/18",
+    title: "Waste Tire Collection Event",
     source: "San Miguel County",
-    date: "September 11, 2026",
+    date: "August 24, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
+  },
+  {
+    title: "Tomboy Road Now Open",
+    source: "San Miguel County",
+    date: "September 18, 2026",
     newsTopic: "infrastructure",
-    copy: "Tomboy Road will be closed Tues 9/15 - Fri 9/18 to accommodate waterline work being performed by the Town of Telluride. Times are not exact, motorists should avoid the area or prepare for extended delays and possibly being turned away.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=544",
+    copy: "The Town of Telluride has completed their project that necessitated the closure of Lower Tomboy Road. The road is now open again.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=546",
     img: ""
   },
   {
@@ -2761,6 +2757,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "community",
     copy: "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=45",
+    img: ""
+  },
+  {
+    title: "Stage 1 Fire Restrictions In Effect",
+    source: "Town of Telluride",
+    date: "August 26, 2026",
+    newsTopic: "public-safety",
+    copy: "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=65",
     img: ""
   },
   {
@@ -4457,12 +4462,12 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
     description: "LIVE MUSIC IN THE GARDEN! 🎶 Sunday, September 13th, from 4:00–6:00 p.m., let us introduce you to Chloe’s Secret Garden! 🌿✨ Enjoy live music with Zan Waller & Stefan Davenport, the perfect wine, and scrumptious charcuterie in our cozy garden setting. Sip, savor, and settle in for a relaxed afternoon of music and Colorado magic! 🍷🧀💛 We can’t wait to see you there! Join us! 🎵 View on site | Email this event",
     pubDate: "2026-09-18T22:00:00.000Z",
-    endDate: "2026-09-20",
+    endDate: "2026-11-08",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Chloe's Charcuterie & Wine",
-    imageUrl: "https://localist-images.azureedge.net/photos/53950055817938/huge/3077cd853add6591f360f983328f1ee7e3ed78cd.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53950055817938/huge/4924d3606a12c233af2b47a380c304869dfaf267.jpg"
   },
   {
     title: "OLD MAN POLLY",
@@ -4565,15 +4570,15 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53722349858154/huge/934ef243440a192b17a6d756428b9bac45537d94.jpg"
   },
   {
-    title: "Kipori Woods Live at Floating Lotus Brewery",
-    link: "https://events.ourayridgwayevents.com/event/kipori-woods-live-at-floating-lotus-brewery",
-    description: "New Orleans-raised guitarist, vocalist and songwriter Kipori Woods performs live at Floating Lotus Brewery in Ridgway. Kipori’s expressive guitar work and remarkable musical range cross blues, jazz, soul, country and Southern rock. This lively, audience-driven performance is built to get people on their feet and into the groove while carrying the musicianship, genuine personality and flavor of New Orleans into the room. The performance is planned for the Outdoor Stage, weather permitting, with an indoor alternative available. View on site | Email this event",
+    title: "Kipori Woods – Live at Floating Lotus Brewery",
+    link: "https://events.ourayridgwayevents.com/event/kipori-woods-live-at-floating-lotus-brewery-8834",
+    description: "Kipori Woods brings the soul and musical range of New Orleans to Floating Lotus Brewery. The guitarist, vocalist and songwriter blends blues, jazz, country and Southern rock, shaped by mentorship from Ellis Marsalis and Walter “Wolfman” Washington. Join us Saturday, September 19, 6–9 PM for a solo guitar-and-vocals performance on the Outdoor Stage, weather permitting, with an indoor taproom alternative. Tickets: $10 in advance or at the door. Online service fees may apply. View on site | Email this event",
     pubDate: "2026-09-20T00:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53913854366205/huge/5098caf43f4189a9977ecc7eca3dca010a4284d5.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53994391258988/huge/042189528b794ad128abe8ffca169b44651df0b2.jpg"
   },
   {
     title: "BRITLEY & MATT",
@@ -4661,7 +4666,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour. View on site | Email this event",
     pubDate: "2026-09-22T19:30:00.000Z",
-    endDate: "2026-11-14",
+    endDate: "2026-11-17",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4701,18 +4706,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray Community Center",
     imageUrl: "https://localist-images.azureedge.net/photos/52092171660517/huge/0e628304026c92db25e8df01849c962ac902a3b4.jpg"
-  },
-  {
-    title: "Postponed: Sep 22, 2026: Community Meditation",
-    link: "https://events.ourayridgwayevents.com/event/community-meditation",
-    description: "Join us for a peer-led weekly meditation series at the Decker Community Room. Free and open to the public! We meet every 1st, 2nd, and 4th Tuesday of the month (all but the 3rd Tuesday!) View on site | Email this event",
-    pubDate: "2026-09-23T00:30:00.000Z",
-    endDate: "2026-10-28",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/52338340283147/huge/582622671001d9ab20f8c25a5d229c9ecbbba165.jpg"
   },
   {
     title: "TODDLER STORYTIME ART FOR AGES 2.5-5",
@@ -4853,6 +4846,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53780354578802/huge/20de7f4389a6dc490aa55564b6fb62fa7b8e05b8.jpg"
   },
   {
+    title: "Music Bingo",
+    link: "https://events.ourayridgwayevents.com/event/music-bingo",
+    description: "Music Bingo at Floating Lotus Brewery! Join us on the 2nd & 4th Thursdays from 7–9 PM for a high-energy night of music, drinks, and bingo-style fun. Listen, mark your card, and sing along. Learn more at floatinglotusbrewery.com. View on site | Email this event",
+    pubDate: "2026-09-25T01:00:00.000Z",
+    endDate: "2026-11-13",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53790449536989/huge/a7181e9d298980d4c2377db45d06d26bb81e0b12.jpg"
+  },
+  {
     title: "JEAN SANDOVAL AND THE TOWNKIDS",
     link: "https://events.ourayridgwayevents.com/event/jean-sandoval-and-the-townkids",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
@@ -4873,6 +4878,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Voyager Basecamp",
     imageUrl: "https://localist-images.azureedge.net/photos/53877561898327/huge/3c4f8faf5039f048816e418ec7b92c64bface9d0.jpg"
+  },
+  {
+    title: "The Fabulous Blues Tones – Live at Floating Lotus Brewery",
+    link: "https://events.ourayridgwayevents.com/event/the-fabulous-blues-tones-live-at-floating-lotus-brewery",
+    description: "The Fabulous Blues Tones return with house-rocking blues, timeless standards and deep cuts from the blues vault. Greg Jacobs and Tony Kovacic lead on vocals and guitars, while Tim Brennan and Dave Underwood keep the rhythm tight on drums and bass. Come get your mojo working with a band that loves playing the Lotus. Friday, September 25, 6–9 PM at Floating Lotus Brewery. FREE. View on site | Email this event",
+    pubDate: "2026-09-26T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53994404540968/huge/8559f0c793437d136bf809f090605fa7bce3ce70.jpg"
   },
   {
     title: "Ouray County Railroad Days: 9/26-9/27, 2026",
@@ -4963,6 +4979,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53171933807100/huge/679f562aa1680a2f20f8ffd0a78d921293437057.jpg"
   },
   {
+    title: "The Poppletons – Live at Floating Lotus Brewery",
+    link: "https://events.ourayridgwayevents.com/event/the-poppletons-live-at-floating-lotus-brewery",
+    description: "Doc, Rock, Chef, and Mint Chip Poppleton — The Poppletons — bring high-energy, all-original psychedelic rock and extended jams from Durango, Colorado. Come experience the magic of Poppletonia! Saturday, September 26, 6–9 PM at Floating Lotus Brewery. $10 cover at the door. Outdoor performance weather permitting, with an indoor alternative. View on site | Email this event",
+    pubDate: "2026-09-27T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53994410727494/huge/f6588be01fec66ad36a98e73e2759b741bfa6bdd.jpg"
+  },
+  {
     title: "Ouray Ridgway Young Life Banquet",
     link: "https://events.ourayridgwayevents.com/event/ouray-ridgway-young-life-banquet",
     description: "A fun evening to celebrate with local Young Life staff, leaders, committee and guests that God is on the move in our community, and one vehicle is Young Life. An opportunity to learn about and financially support the clear sharing of the gospel, changed lives, and laughter in our county's youth. Guest speaker is Dr. Tanita Maddox, an expert in Gen Z, that will speak about how to connect with the next generation with compassion, urgency and action. RSVP with ddowdy@vsiok.com View on site | Email this event",
@@ -5027,6 +5054,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg"
+  },
+  {
+    title: "Trivia Night",
+    link: "https://events.ourayridgwayevents.com/event/floating-lotus-trivia-night",
+    description: "Trivia Night at Floating Lotus Brewery! Join us on the 1st & 3rd Thursdays from 7–9 PM for a lively night of questions, drinks, and friendly competition. Grab a table, bring your team, and learn more at floatinglotusbrewery.com. View on site | Email this event",
+    pubDate: "2026-10-02T01:00:00.000Z",
+    endDate: "2026-11-06",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53790516346797/huge/599d1a7013ddde307592e7dfc9b892fe265527e0.jpg"
   },
   {
     title: "COUSIN CURTISS",
@@ -5277,6 +5316,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Lupita's Parking Lot Sale",
+    link: "https://events.ourayridgwayevents.com/event/lupitas-parking-lot-sale",
+    description: "A revival of Lupita's Parking Lot Sale A REVIVAL OF LUPITA'S PARKING LOT SALE! OCT. 10, 2026 • 8 AM–3 PM Ridgway Public Library, Ridgway $20 PER 10'×10' View on site | Email this event",
+    pubDate: "2026-10-10T14:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ridgway Public Library",
+    imageUrl: "https://localist-images.azureedge.net/photos/53994378997204/huge/989a12812632d48454c8f52334ff01e5dc03a008.jpg"
   },
   {
     title: "Nature in Four Seasons: Growing Dormant",
@@ -5598,7 +5648,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-film-stills-ridgway-independent-film-fest",
     description: "The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In coordination with the annual Independent Film Festival (November 13-15) this show is both a preview and a celebration of the art of short filmmaking. View on site | Email this event",
     pubDate: "2026-11-07T00:00:00.000Z",
-    endDate: "2026-11-16",
+    endDate: "2026-11-17",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5864,6 +5914,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49783/tomv.jpg"
+  },
+  {
+    title: "Town Manager Finalists Meet and Greet",
+    link: "https://townofmountainvillage.com/explore/events/all-events/town-manager-finalists-meet-and-greet/",
+    description: "The Mountain Village Town Council has narrowed its search for a new Town Manager to four finalists: William Bell, of Montrose, CO; Michael Bouchard of Denver,",
+    pubDate: "2026-09-24T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49917/event.png"
   },
   {
     title: "Movies Under the Stars",
@@ -6555,6 +6616,18 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/63618/screenshot_2026-09-17_at_3_10_59_pm.800x533.webp"
   },
   {
+    title: "What the Constitution Means to Me",
+    link: "https://www.telluride.com/event/what-the-constitution-means-to-me/",
+    description: "WPL and Telluride Theatre present playwright Heidi Schreck’s boundary-breaking, Obie Award-winning play that breathes …",
+    pubDate: "2026-09-24",
+    endDate: "2026-09-25",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63630/screenshot_2026-09-18_at_1_42_31_pm.800x533.webp"
+  },
+  {
     title: "Mountains to the Desert Classic",
     link: "https://www.telluride.com/event/mountains-to-the-desert-classic/",
     description: "The Mountains to the Desert Classic (M2D) is celebrating its 22 Anniversary as the primary fundraising event for the …",
@@ -6598,6 +6671,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/63600/climbing_1.800x533.webp"
+  },
+  {
+    title: "Walk for Hope",
+    link: "https://www.telluride.com/event/walk-for-hope/",
+    description: "Part of suicide prevention awareness month, the Walk for Hope is an opportunity to gather and honor those we have lost …",
+    pubDate: "2026-09-27",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63627/img_8447.800x533.webp"
   },
   {
     title: "Original Thinkers",
