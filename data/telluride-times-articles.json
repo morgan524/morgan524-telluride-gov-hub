@@ -1,12 +1,24 @@
 [
   {
+    "title": "‘A festival can do more than entertain a community’",
+    "source": "Telluride Times",
+    "date": "September 19, 2026",
+    "firstSeen": "2026-09-19",
+    "newsTopic": "arts-culture",
+    "copy": "At Blues & Brews this weekend, a group called JABOR — live event professionals who've been doing disaster relief for 20 years — will assemble 200 emergency go-kits at the festival grounds. The kits, valued around $115 each, go free to low-income and vulnerable households in Ouray, San Miguel, and Montrose counties. Festivalgoers can help pack them on-site.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_d0c68d7d-8248-4a0b-b3c0-b8fd7c358896.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/e8/4e8d00b4-ee8e-4338-9671-4c240f5350af/6aab776376769.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "3 killed in Navajo Nation flood include 7-year-old preparing for her birthday",
     "source": "Telluride Times",
     "date": "September 19, 2026",
     "firstSeen": "2026-09-19",
     "newsTopic": "public-safety",
-    "copy": "Flash flooding across the Navajo Nation has damaged roads, forced evacuations and claimed three lives as a late-season surge of monsoon moisture brings heavy rain to the Four Corners region. Family members say Friday that Elsie Begay, her granddaughter Lucy…",
-    "claudeSummary": false,
+    "copy": "Three people died Tuesday near Newcomb on the Navajo Nation after floodwaters swept them away during monsoon storms — a grandmother, her 7-year-old granddaughter, and a friend who came to help. Roads across the region remain closed, families are stranded, and the Navajo Nation President has declared a state of emergency.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/news/state/article_62cb8205-ca33-5541-a01a-9abe1724cb7e.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/ea/bea76aa0-ed02-5d11-a6f7-813fb81d7d72/6aaddfad8cd47.image.jpg",
     "imgHiRes": true
