@@ -229,26 +229,6 @@
     "caseNumber": "260700207"
   },
   {
-    "title": "RFP -- San Miguel County Jail Repainting, Illium (COL-000224)",
-    "entity": "San Miguel County Fleet & Facilities Department",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "San Miguel County is requesting proposals from contractors to repaint the San Miguel County Jail located at 684 County Road 63L, Telluride (Illium), CO. RFP documents are available on the county website or from the Fleet & Facilities Department at 333 W. Colorado Ave, 2nd Floor, Telluride. Proposals are due by 5:00 PM on Friday, September 18, 2026, submitted via email or delivered in person.",
-    "deadline": "2026-09-18T17:00:00",
-    "expires": "2026-09-18",
-    "dates": "8/27",
-    "papers": [
-      "ttimes_0827"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
-    "address": "684 County Road 63L, Telluride, CO 81435",
-    "noticeKey": "COL-000224-jail-repaint-illium"
-  },
-  {
     "title": "Request for Proposal -- Painting of the San Miguel County Jail",
     "entity": "San Miguel County",
     "entityClass": "ent-county",
@@ -301,26 +281,6 @@
     "url": "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
     "address": "San Miguel County, CO (SMPA service area)",
     "noticeKey": "smpa-paper-billing-fee-2026"
-  },
-  {
-    "title": "RFP -- San Miguel County Jail Repainting, Illium (COL-000224)",
-    "entity": "San Miguel County",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "San Miguel County is requesting proposals from contractors to repaint the San Miguel County Jail located at 684 County Road 63L in Illium (Telluride), CO. RFP documents are available on the county's bids webpage or from the Fleet & Facilities Department at 333 W. Colorado Ave, 2nd Floor, Telluride. Proposals must be submitted by 5:00 PM on Friday, September 18, 2026, either via email or in person at the Fleet & Facilities Department.",
-    "deadline": "2026-09-18",
-    "expires": "2026-09-18",
-    "dates": "9/3",
-    "papers": [
-      "ttimes_0903"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
-    "address": "684 County Road 63L, Telluride (Illium), CO 81435",
-    "noticeKey": "rfp-smco-jail-repaint-2026"
   },
   {
     "title": "Public Hearing -- Shandoka Lot Redevelopment Preliminary PUD, Telluride Planning & Zoning (COL-000227)",

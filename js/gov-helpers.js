@@ -146,21 +146,6 @@ function resolveEventImage(e, opts) {
 // stays current automatically; the static config is the fallback for
 // sources without a PDF agenda.
 const MEETING_AGENDA_META = {
-  "rico|2026-08-19|Rico Board of Trustees Regular Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"},
-
-  "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8021","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/dRjdHtmeTB6DmemBLALAFw","meetingId":"854 0207 9752","passcode":"775535","phone":"301-715-8592"},
-
-  "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA","meetingId":"812 9136 3866","passcode":"440860.","phone":"301-715-8592"},
-
-  "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/tZIufu6srzwsH9X0sfxgA_In-LUt0azBIi8Z"},
-
-  "county|2026-08-19|Board of County Commissioners Meeting":
-    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/899/files/agenda/1960","zoomUrl":"https://us02web.zoom.us/meeting/register/HQG-1W5yTEyLa2v5rWoq-g","passcode":"557341","phone":"719-359-4580"},
-
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8291","sv":4,"zoomUrl":"https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1","meetingId":"861 6987 1704","passcode":"281002.","phone":"346-248-7799"},
 
@@ -241,12 +226,6 @@ const MEETING_AGENDA_META = {
 
   "telluride|2026-08-25|Ethics Commission - Aug 25 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8301","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/qlFJ6Tx-TZ6zLK8GdTvb4Q","meetingId":"813 8122 0495","passcode":"909304","phone":"719) 359-4580"},
-
-  "telluride|2026-08-19|Ecology Commission - Aug 19 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8117","zoomUrl":"https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1","phone":"970-728-3071","sv":4},
-
-  "ouray|2026-08-19|, 1-4:00 PM (@ OURAY COURTHOUSE!) - The PC will hold 3 public hearings; Repeal of Sec.16, Colona Restaurant SUP Amend., and an Exception application for Elk Meadows (Packet materials are attached to the agenda)":
-    {"agendaUrl":"https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1015","sv":4},
 
   "smart|2026-09-10|SMART Board of Directors":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -357,7 +336,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/ZR3DDUQ0S8mhIKRt4KiuYg","meetingId":"872 6396 2426","passcode":"044233.","phone":"719) 359-4580"},
 
   "mv|2026-10-01|Design Review Board":
-    {"sv":4,"ph":"b858cb282617fb09"},
+    {"sv":4,"agendaUrl":"https://townofmountainvillage.com/site/assets/files/49956/october_1-_2026_design_review_board_meeting_agenda.pdf","zoomUrl":"https://us06web.zoom.us/j/86570635291?pwd=l2jamcgTZa6TyCpzPj1jMBiQSaSNw4.1","meetingId":"865 7063 5291"},
 
   "telluride|2026-10-01|Town Council Budget - Oct 01 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8053","sv":4,"ph":"8c8b45a8ccf4ac16"},
@@ -375,7 +354,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://www.norwoodtown.com/files/5f8304a63/09.08.2026+RESCHEDULED+NWC+Agenda.pdf","zoomUrl":"https://us02web.zoom.us/j/88274908233","meetingId":"882 7490 8233","passcode":"997236","phone":"346-248-7799","sv":4},
 
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132","sv":4,"ph":"8f57e5c3d0f3d416"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132","sv":4,"ph":"b2e198717ae40e47"},
 
   "telluride|2026-10-06|Town Council - Oct 06 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044","sv":4,"ph":"fc4bf58424de11fa"},
@@ -465,7 +444,13 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://www.norwoodtown.com/files/677a3380f/09.22.2026+NWC+Amended+Agenda.pdf","zoomUrl":"https://us02web.zoom.us/j/88274908233","meetingId":"882 7490 8233","passcode":"997236","phone":"346-248-7799","sv":4},
 
   "telluride|2026-09-21|Gondola Subcommittee - Sep 21 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8318","zoomUrl":"https://gbsm.zoom.us/j/82559576086","sv":4}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8318","zoomUrl":"https://gbsm.zoom.us/j/82559576086","sv":4},
+
+  "norwood|2026-10-19|Planning and Zoning Commission Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "telluride|2026-09-21|Open Space Commission Site Walk - Sep 21 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8319","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -830,7 +815,13 @@ const MEETING_PREVIEWS = {
     "Board members are expected to discuss CASB planning, staff and student lunch schedules, Telluride Education Foundation magnet grants, a housing update, and the timeline for appointing a 2026 student Board of Education representative.",
 
   "school|2026-09-22|Telluride Board of Education Monthly Meeting":
-    "Board will consider approval of minutes from three August sessions, hear results of 2026 state assessments, and review administrative and Policy Governance Monitoring reports. The consent agenda includes personnel updates and a cash summary. Public comment periods are scheduled."
+    "Board will consider approval of minutes from three August sessions, hear results of 2026 state assessments, and review administrative and Policy Governance Monitoring reports. The consent agenda includes personnel updates and a cash summary. Public comment periods are scheduled.",
+
+  "mv|2026-10-01|Design Review Board":
+    "Board will consider final architecture review for a 15-unit employee apartment building at 306 Adams Ranch Road, continued from September. Members will also receive a voting procedure update and approve meeting summaries from August and September sessions.",
+
+  "telluride|2026-09-21|Open Space Commission Site Walk - Sep 21 2026":
+    "The Open Space Commission will conduct a site walk to discuss restoration planning for Zone 1 of the Bear Creek Preserve and review the Reach 3 River Restoration Project at the Mill Creek Confluence on the Valley Floor Open Space, with input from environmental consultants."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -900,7 +891,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "September 17, 2026",
     newsTopic: "government",
     copy: "New members appointed to sustainability board The Ridgway Town Council appointed Terry Schuyler and Christiane Frischmuth to the Ridgway Sustainability Advisory Board after brief interviews at the Sept. 9 council meeting. Schuyler was a founding member of the advisory board and served as the town co",
-    href: "https://www.ouraynews.com/2026/09/17/local-briefs-ridgway-appoints-two-sustainability-board-updates-marshal-overtime-policy/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/09/17/local-briefs-ridgway-appoints-two-sustainability-board-updates-marshal-overtime-policy/",
     img: ""
   },
   {
@@ -1047,25 +1038,10 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#42052"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-18';
-const LEGAL_NOTICES_CACHE_DATE = '2026-09-18';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-19';
+const LEGAL_NOTICES_CACHE_DATE = '2026-09-19';
 
 const MANUAL_SUMMARIES = {
-  "rico|2026-08-19|Rico Board of Trustees Regular Meeting":
-    "The August 19, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet.",
-
-  "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026":
-    "The August 19 HARC agenda has one item: a pergola at 472 W Pacific Ave, the Elks Lodge property. The structure was built without a permit and is currently in violation — HARC will consider whether to approve it after the fact as a minor-scale alteration within the Telluride Historic Landmark District.",
-
-  "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
-    "A full slate at HARC on August 19, dominated by two projects that have been in the room before and will be again. The Shandoka Lot Redevelopment at 860 Black Bear Rd comes in for preliminary large-scale review — Buildings 1 and 2 as one hearing, Buildings 3 and 4 as another — with a 3:00 PM site walk preceding the evening session. Both applications involve new construction of more than 5,000 sq ft in the Accommodations 2 zone district, with the Town of Telluride as owner and Design Workshop as applicant. A work session covers proposed new construction and shed work at 335 W Colorado — the County/Town Facilities project, now in its second HARC work session. Also on the public hearing list: a final large-scale application for 208 S Fir Street (5,000+ sq ft, Commercial zone), and smaller-scale items at 461 Dakota Ave and 734 Primrose Lane involving steep-slope construction.",
-
-  "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026":
-    "The Commission takes up two substantive items. First, staff is recommending 2027 fee increases for the Town Park Campground and showers — nightly rates would rise roughly 8%, with premium vehicle sites moving from $55 to $60 and walk-in sites from $32 to $35; shower tokens would jump from $4 to $5 for five minutes, a 25% increase, partly to offset a new credit-card payment machine. Senior discount eligibility also creeps up, from age 63 toward the eventual target of 65. The campground is running at near-capacity through the summer — 97–99% occupancy on most site types in June and July — which gives the fee increases some market support. Second, the Commission holds a work session on the 5-year Capital Improvement Fund, setting priorities for 2027–2031 in advance of the August budget submittal. On the table: pool resurfacing, Oval redesign work (directed last meeting toward the alternate concept #2), Warner Field netting, river corridor improvements, and festival site upgrades. Staff flags 10% annual cost escalation as a budgeting reality. There's also a brief staff update on the River Trail re-alignment near the Public Works facility.",
-
-  "county|2026-08-19|Board of County Commissioners Meeting":
-    "The BOCC's August 19 meeting has two items worth tracking. First, the Board — sitting as the San Miguel County Housing Authority — will spend 45 minutes on San Miguel Regional Housing Authority compliance procedures, a discussion that lands at a moment when affordable housing finances across the region are under real strain. Second, a public hearing on an insubstantial PUD amendment to the Lawson Hill PUD would update the development plan matrix to allow fences and yards within the setback. On the administrative side, the Board will consider Resolution 2026-33, updating the employee handbook on overtime comp time and the 457b retirement benefit. A housing specialist will also provide a general affordable housing update, and the Natural Resources & Climate Resilience director will check in. Consent agenda covers the June road report, July vendor and payroll payments, and minutes from three July meetings.",
-
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     "Four public hearings on special event liquor permits fill this meeting. Palm Arts Inc. is seeking one permit for an Evening with Ken Burns — a fundraiser for the Telluride Historical Museum — at the Palm Theatre on August 30, with an anticipated 500 attendees. KOTO Radio is up next with a permit for its Live @ the Drive block party on N. Pine Street, August 27 from 2:00 to 9:30 pm. The Telluride Blues Society has two separate requests: one permit for Blisters and Brews at Elks Park on the morning of September 19, and three permits covering all three days of the Telluride Blues and Brews Festival at Town Park (September 18–20, running late into the night). Staff recommends approval on all four. The authority will also approve minutes from the July 16 meeting.",
 
@@ -1146,12 +1122,6 @@ const MANUAL_SUMMARIES = {
 
   "telluride|2026-08-25|Ethics Commission - Aug 25 2026":
     "The Ethics Commission meets August 25 to handle two items of real consequence. First, the routine: electing a new chair and vice-chair. Second, and more substantive: developing a recommendation to Town Council on whether — and how — to establish a formal Code of Conduct for Telluride officials. That recommendation traces directly to the Commission's May 18 finding in the Julia Fallman complaint against Councilperson Kristen Permakoff. The Commission found no ethics violation, but only because the current code's 'above reproach' standard lacks the behavioral specificity to support one. Staff has laid out two main paths: integrate explicit conduct language into the existing Ethics Code (Chapter 2, Article 4), where the Ethics Commission already has enforcement authority, or strengthen the Council's own Rules of Conduct, which currently has no formal penalty mechanism. The Commission can also draft its own hybrid approach. Whatever they recommend goes to Town Council for action.",
-
-  "telluride|2026-08-19|Ecology Commission - Aug 19 2026":
-    "The Ecology Commission meets August 19 to continue work on the 2027 Climate Action Plan update — two work sessions are on the docket, one covering the update broadly and one focused specifically on the Materials & Consumption focus area. The commission will also plan Black Bear Safety Week. Minutes from the July 8 meeting are up for approval; that session covered transportation, land use, and materials focus areas of the CAP, and appointed Ruthie Boyd and Kristen Rosenbaum to the Green Grants selection subcommittee.",
-
-  "ouray|2026-08-19|, 1-4:00 PM (@ OURAY COURTHOUSE!) - The PC will hold 3 public hearings; Repeal of Sec.16, Colona Restaurant SUP Amend., and an Exception application for Elk Meadows (Packet materials are attached to the agenda)":
-    "Ouray County Planning Commission meets August 19 at the Ouray Courthouse for three public hearings. First up: a repeal of Section 16 of the county's land use regulations — a code change worth watching closely, since repealing an entire section rewrites the rules in ways that can ripple across future applications. Second, an amendment to an existing Special Use Permit for a restaurant in Colona. Third, an Exception application for Elk Meadows. Packet materials are attached to the posted agenda for anyone who wants the details before showing up.",
 
   "smart|2026-09-10|SMART Board of Directors":
     "The September 10, 2026 SMART Board of Directors agenda hasn't been posted yet.",
@@ -1262,7 +1232,7 @@ const MANUAL_SUMMARIES = {
     "This special session is entirely devoted to one thing: a Town Council appeal hearing on the Carhenge lot subdivision. On July 23, 2026, P&Z unanimously approved consolidating Lots 34 and 34B at 700 W. Pacific Avenue into a single parcel — a preliminary step the Town needs before any redevelopment can move forward on that open-space site. Within two weeks, Sphere Law Firm filed an appeal on behalf of two neighboring property owners and the Chair 7 Community Coalition, which represents nearly 200 Backman Village area residents. The appellants raise several distinct legal challenges: that P&Z adopted staff findings wholesale without addressing contested issues (including recorded Backman Village covenants and owner-consent questions); that the approval's conditions contradict the very findings that supported it; and that P&Z waived seventeen of twenty-three subdivision design criteria by labeling them 'inapplicable' — a move the appellants argue the Land Use Code only permits through a PUD variation, which no longer exists here because the conceptual PUD application was withdrawn before the July 23 hearing. Town Council now sits as the appellate body, confined to the record compiled below.",
 
   "mv|2026-10-01|Design Review Board":
-    "The October 1, 2026 Mountain Village Design Review Board agenda hasn't been posted yet.",
+    "Two multi-family projects are the main event at this October 1 DRB meeting. First up is a continued final architecture review for 15 employee apartments at 306 Adams Ranch Rd (Lot 640A) — workforce housing that's been working its way through the process since at least September. Next is a fresh final architecture review for four new multifamily units at 100 Pennington Pl. The board also takes up a conditional use permit renewal for the Wok of Joy food trailer at Conference Center Plaza, and considers a general easement encroachment at 113 Palmyra Dr. Two single-family homes are on the agenda but headed for continuance — one to December, one to February. Administrative items include a voting procedure update, approval of meeting minutes from August and September, a lighting update, and adoption of the 2027 DRB meeting schedule.",
 
   "telluride|2026-10-01|Town Council Budget - Oct 01 2026":
     "The October 1, 2026 Town Council Budget agenda hasn't been posted yet.",
@@ -1370,7 +1340,13 @@ const MANUAL_SUMMARIES = {
     "The Norwood Water Commission meets September 22 with a full plate of water-related business. Six leak forgiveness requests are on the table — a recurring item for any small-system water utility, where a neighbor's faulty line can mean a bill that doesn't reflect actual use. The Commission will also take up a possible leak check fee, which would formalize how the system handles these situations going forward. The evening's weightiest technical item is the Final Draft of the Raw Water Delivery and Storage Alternatives Analysis Report from SGM — a planning document that shapes how Norwood thinks about its long-term water supply. The Commission will also go into executive session on the Cossey Code of Conduct Complaint for legal advice. Consent items include August financials, meeting minutes, and a budget-to-actuals review.",
 
   "telluride|2026-09-21|Gondola Subcommittee - Sep 21 2026":
-    "The Gondola Advisory Committee meets virtually on September 21 at 3:00 PM. The bulk of the session — 45 minutes — goes to a comparison of the CIG (Capital Investment Grant) approach versus a locally-led project evaluation, presented by Ed Parks and Pete Williams. That's the live question underneath this whole effort: who drives the gondola project and how it gets funded. Amber Blake will give a SMART updates briefing, and Miles Graham will preview what's coming to the September Leadership Committee. The August 17 meeting summary is up for approval. Public comment is open."
+    "The Gondola Advisory Committee meets virtually on September 21 at 3:00 PM. The bulk of the session — 45 minutes — goes to a comparison of the CIG (Capital Investment Grant) approach versus a locally-led project evaluation, presented by Ed Parks and Pete Williams. That's the live question underneath this whole effort: who drives the gondola project and how it gets funded. Amber Blake will give a SMART updates briefing, and Miles Graham will preview what's coming to the September Leadership Committee. The August 17 meeting summary is up for approval. Public comment is open.",
+
+  "norwood|2026-10-19|Planning and Zoning Commission Meeting":
+    "The October 19, 2026 Norwood Planning and Zoning Commission Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-09-21|Open Space Commission Site Walk - Sep 21 2026":
+    "The Open Space Commission heads into the field for this one — no chambers, no screen-share. The group meets at the Bear Creek Preserve Zone 1 entrance (south of Imagination Station Playground, Town Park) at 4:00 PM to work through restoration planning for that zone with consultants Matt Tobler of Blue Mountain Environmental Consulting and David Blauch of Ecological Resource Consultants. At 4:15 PM the walk shifts to the Eider Creek Trailhead on West Highway 145 Spur for a review of the Reach 3 River Restoration Project at the Mill Creek Confluence on the Valley Floor Open Space — again with Blauch. Both items are worksession-level; no votes are expected."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1754,6 +1730,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "3 killed in Navajo Nation flood include 7-year-old preparing for her birthday",
+    source: "Telluride Times",
+    date: "September 19, 2026",
+    firstSeen: "2026-09-19",
+    newsTopic: "public-safety",
+    copy: "Flash flooding across the Navajo Nation has damaged roads, forced evacuations and claimed three lives as a late-season surge of monsoon moisture brings heavy rain to the Four Corners region. Family members say Friday that Elsie Begay, her granddaughter Lucy…",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/state/article_62cb8205-ca33-5541-a01a-9abe1724cb7e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/ea/bea76aa0-ed02-5d11-a6f7-813fb81d7d72/6aaddfad8cd47.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "County to amend forestry and geothermal guidelines",
     source: "Telluride Times",
@@ -2670,42 +2658,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Ravel, Brahms and a journey to the stars",
-    source: "Telluride Times",
-    date: "September 5, 2026",
-    firstSeen: "2026-09-05",
-    newsTopic: "education",
-    copy: "The Balourdet Quartet — formed at the Taos School of Music in 2018 and named after a French chef — plays their first Telluride show at the Sheridan Opera House on Sept. 13. Program includes Ravel, Brahms, and a 2024 premiere by Nicky Sohn inspired by a spiral galaxy named for the composer. Presented by Telluride Chamber Music.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_776e4f82-fc7b-492a-bab7-a22d750a0ae8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/73/d73f2a5c-057a-4a27-8718-5efa337a5e7d/6a96589721071.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "‘Coming of age film disguised as a skateboarding film’",
-    source: "Telluride Times",
-    date: "September 5, 2026",
-    firstSeen: "2026-09-05",
-    newsTopic: "arts-culture",
-    copy: "Local filmmaker Brett Schreckengost and Telluride High School mentee Charlie Raible spent two years creating \"Entrada,\" a documentary following the Graves brothers — competitive skateboarders from Ridgway — skating slickrock in Moab and their backyard half-pipe. Schreckengost calls it a coming-of-age film about family and brotherhood in skateboarding's clothing.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_526d2ea1-1ee3-492e-8e16-e37eb2ffbd76.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/93/5934b017-8846-41d0-831b-1c05398da1b3/6a9781ad403ae.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Court dismisses ‘deficient’ Telski lawsuit against Fee, Prohaska, Wisor",
-    source: "Telluride Times",
-    date: "September 5, 2026",
-    firstSeen: "2026-09-05",
-    newsTopic: "recreation",
-    copy: "A judge dismissed Telski's lawsuit against three former local officials — Meehan Fee, Marti Prohaska, and Paul Wisor — who had approached resort owner Chuck Horning with a $127.5M buyout offer during last winter's ski patrol strike. The court found Telski failed to allege any improper regulatory action that caused its losses, ruling the strike itself caused the damages.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_9a0c040a-80d1-4915-85ad-6a7719bd024a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/db/3db7d153-55d2-4772-bcc2-80b522ff6e2a/6a9b708f63ada.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride to Lift All Fire Restrictions",
     source: "Town of Telluride",
     date: "September 17, 2026",
@@ -2811,7 +2763,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Fire Restrictions Lifted in Ridgway - September, 17, 2026",
     source: "Town of Ridgway",
-    date: "September 18, 2026",
+    date: "September 19, 2026",
     firstSeen: "2026-09-17",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2855,7 +2807,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "September 18, 2026",
+    date: "September 19, 2026",
     firstSeen: "2026-09-11",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2866,7 +2818,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "September 18, 2026",
+    date: "September 19, 2026",
     firstSeen: "2026-09-14",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2888,7 +2840,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Ridgway Rescinds Stage 2 Fire Restrictions, Reinstates Stage 1 Fire Restrictions effective 12:01am on Thursday, Sept. 3rd - Sept. 2, 2026",
     source: "Town of Ridgway",
-    date: "September 18, 2026",
+    date: "September 19, 2026",
     firstSeen: "2026-09-09",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -5507,6 +5459,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/decker-room-new-volunteer-orientation",
     description: "Join our wonderful volunteer team at the Decker! If you would like to help with Gallery Sitting during open hours, events, and more, please attend a New Volunteer Orientation to get started! You'll learn about the Decker Room and the events and programs that take place here. Volunteers should be able to commit to consistent volunteer hours each month! Email decker@ridgwayfuse.org for info and to RSVP. View on site | Email this event",
     pubDate: "2026-10-20T22:30:00.000Z",
+    endDate: "2026-11-17",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5518,6 +5471,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/ridgway-fuse-creative-main-street-committee-meeting",
     description: "Ridgway FUSE, a Creative District & Main Street Program, nurtures the cultural and economic vitality of Ridgway, Colorado All Ridgway FUSE Committee Meetings are open to the public. Click here for agendas and notes. Interested residents may apply to serve on the FUSE committee here. Email Tera Wick at twick@town.ridgway.co.us or call 970-626-5308 x 215 with questions. View on site | Email this event",
     pubDate: "2026-10-20T23:30:00.000Z",
+    endDate: "2026-11-18",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6439,39 +6393,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/63515/screenshot_2026-09-05_at_11_00_00_am.800x533.webp"
   },
   {
-    title: "TASP Bob Miller Memorial Golf Classic",
-    link: "https://www.telluride.com/event/tasp-bob-miller-memorial-golf-classic/",
-    description: "Tee off for a cause at 9,500 feet! Join the Telluride Adaptive Sports Program for the 28th Annual Bob Miller Memorial …",
-    pubDate: "2026-09-17",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/55141/download_13.800x533.webp"
-  },
-  {
-    title: "Local Legends Blues & Brews Kick-Off",
-    link: "https://www.telluride.com/event/local-legends-blues-brews-kick-off/",
-    description: "Join Ah Haa School for the Arts in partnership with Telluride Blues & Brews Festival for Local Legends, a beer …",
-    pubDate: "2026-09-17",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63467/screenshot_2026-09-01_at_9_12_39_am.800x533.webp"
-  },
-  {
-    title: "Blues & Brews Beer Pairing Dinner",
-    link: "https://www.telluride.com/event/blues-brews-beer-pairing-dinner-1/",
-    description: "As Telluride settles into Blues & Brews weekend, gather around the table for an evening devoted to the art of craft …",
-    pubDate: "2026-09-17",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63525/blues_dinner.800x533.webp"
-  },
-  {
     title: "Volunteer Trail Work Day",
     link: "https://www.telluride.com/event/volunteer-trail-work-day/",
     description: "Join the Telluride Mountain Club for their volunteer trail work day! Spend time with friends, get your hands dirty, and …",
@@ -7099,24 +7020,6 @@ const LEGAL_NOTICES = [
     caseNumber: "260700207"
   },
   {
-    title: "RFP -- San Miguel County Jail Repainting, Illium (COL-000224)",
-    entity: "San Miguel County Fleet & Facilities Department",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County is requesting proposals from contractors to repaint the San Miguel County Jail located at 684 County Road 63L, Telluride (Illium), CO. RFP documents are available on the county website or from the Fleet & Facilities Department at 333 W. Colorado Ave, 2nd Floor, Telluride. Proposals are due by 5:00 PM on Friday, September 18, 2026, submitted via email or delivered in person.",
-    deadline: "2026-09-18T17:00:00",
-    expires: "2026-09-18",
-    dates: "8/27",
-    papers: ["ttimes_0827"],
-    url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
-    address: "684 County Road 63L, Telluride, CO 81435",
-    noticeKey: "COL-000224-jail-repaint-illium"
-  },
-  {
     title: "Request for Proposal -- Painting of the San Miguel County Jail",
     entity: "San Miguel County",
     entityClass: "ent-county",
@@ -7167,24 +7070,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
     address: "San Miguel County, CO (SMPA service area)",
     noticeKey: "smpa-paper-billing-fee-2026"
-  },
-  {
-    title: "RFP -- San Miguel County Jail Repainting, Illium (COL-000224)",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County is requesting proposals from contractors to repaint the San Miguel County Jail located at 684 County Road 63L in Illium (Telluride), CO. RFP documents are available on the county's bids webpage or from the Fleet & Facilities Department at 333 W. Colorado Ave, 2nd Floor, Telluride. Proposals must be submitted by 5:00 PM on Friday, September 18, 2026, either via email or in person at the Fleet & Facilities Department.",
-    deadline: "2026-09-18",
-    expires: "2026-09-18",
-    dates: "9/3",
-    papers: ["ttimes_0903"],
-    url: "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
-    address: "684 County Road 63L, Telluride (Illium), CO 81435",
-    noticeKey: "rfp-smco-jail-repaint-2026"
   },
   {
     title: "Public Hearing -- Shandoka Lot Redevelopment Preliminary PUD, Telluride Planning & Zoning (COL-000227)",

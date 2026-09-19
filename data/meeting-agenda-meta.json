@@ -1,36 +1,4 @@
 {
-  "rico|2026-08-19|Rico Board of Trustees Regular Meeting": {
-    "sv": 4,
-    "ph": "b858cb282617fb09"
-  },
-  "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8021",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/dRjdHtmeTB6DmemBLALAFw",
-    "meetingId": "854 0207 9752",
-    "passcode": "775535",
-    "phone": "301-715-8592"
-  },
-  "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA",
-    "meetingId": "812 9136 3866",
-    "passcode": "440860.",
-    "phone": "301-715-8592"
-  },
-  "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/tZIufu6srzwsH9X0sfxgA_In-LUt0azBIi8Z"
-  },
-  "county|2026-08-19|Board of County Commissioners Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/899/files/agenda/1960",
-    "zoomUrl": "https://us02web.zoom.us/meeting/register/HQG-1W5yTEyLa2v5rWoq-g",
-    "passcode": "557341",
-    "phone": "719-359-4580"
-  },
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8291",
     "sv": 4,
@@ -195,16 +163,6 @@
     "meetingId": "813 8122 0495",
     "passcode": "909304",
     "phone": "719) 359-4580"
-  },
-  "telluride|2026-08-19|Ecology Commission - Aug 19 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8117",
-    "zoomUrl": "https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1",
-    "phone": "970-728-3071",
-    "sv": 4
-  },
-  "ouray|2026-08-19|, 1-4:00 PM (@ OURAY COURTHOUSE!) - The PC will hold 3 public hearings; Repeal of Sec.16, Colona Restaurant SUP Amend., and an Exception application for Elk Meadows (Packet materials are attached to the agenda)": {
-    "agendaUrl": "https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1015",
-    "sv": 4
   },
   "smart|2026-09-10|SMART Board of Directors": {
     "sv": 4,
@@ -424,7 +382,9 @@
   },
   "mv|2026-10-01|Design Review Board": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/49956/october_1-_2026_design_review_board_meeting_agenda.pdf",
+    "zoomUrl": "https://us06web.zoom.us/j/86570635291?pwd=l2jamcgTZa6TyCpzPj1jMBiQSaSNw4.1",
+    "meetingId": "865 7063 5291"
   },
   "telluride|2026-10-01|Town Council Budget - Oct 01 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8053",
@@ -458,7 +418,7 @@
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132",
     "sv": 4,
-    "ph": "8f57e5c3d0f3d416"
+    "ph": "b2e198717ae40e47"
   },
   "telluride|2026-10-06|Town Council - Oct 06 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044",
@@ -606,6 +566,14 @@
   "telluride|2026-09-21|Gondola Subcommittee - Sep 21 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8318",
     "zoomUrl": "https://gbsm.zoom.us/j/82559576086",
+    "sv": 4
+  },
+  "norwood|2026-10-19|Planning and Zoning Commission Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "telluride|2026-09-21|Open Space Commission Site Walk - Sep 21 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8319",
     "sv": 4
   }
 }

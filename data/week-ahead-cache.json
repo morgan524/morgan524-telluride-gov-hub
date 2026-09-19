@@ -1,30 +1,26 @@
 {
-  "hash": "c98a65efbf9f8aa3a6681b062bd01930903c04ca",
-  "lede": "The biggest decision point this week comes Monday and Tuesday, when Norwood's Planning and Zoning Commission takes up Phase I of a full Land Use Code rewrite — the kind of thing that quietly sets the rules for development and density for years to come — while Telluride's Town Council holds public hearings on converting two affordable ownership units at 215 East Colorado Avenue into employee dwelling units and removing their price caps. The school board also votes Tuesday on resolutions backing Proposition NN and Amendment 87, and the County commissioners continue a public hearing on adopting new International Building Codes on Wednesday.",
+  "hash": "b909d33ce0161e02026e6ad05246fa1c3aa81990",
+  "lede": "The biggest decision this week lands Monday in Norwood, where the Planning and Zoning Commission takes up Phase I of a full Land Use Code rewrite — the kind of vote that quietly sets the rules for development and density for years to come. In town, Tuesday's Council meeting has a public hearing on converting two Colorado Avenue affordable units to employee dwelling units by removing the price cap, and the School Board votes the same night on resolutions backing Proposition NN and Amendment 87. The County commissioners also hold a continued public hearing Wednesday on adopting new International Building Codes.",
   "notable": [
     {
       "id": 0,
-      "stake": "Norwood votes to adopt Land Use Code amendments shaping local development rules."
-    },
-    {
-      "id": 3,
-      "stake": "Board votes on state ballot measure resolutions and second-reading policy changes."
+      "stake": "Norwood's Land Use Code rewrite up for formal adoption — shapes future development rules."
     },
     {
       "id": 4,
-      "stake": "Resolution would convert two affordable ownership units, removing maximum sale price."
+      "stake": "Board votes on resolutions backing Proposition NN and Amendment 87, plus policy second readings."
     },
     {
       "id": 5,
-      "stake": "Public hearings on deed-restriction conversion that removes price caps on two units."
+      "stake": "Resolution would convert two affordable ownership units, removing their maximum sale price cap."
     },
     {
       "id": 6,
-      "stake": "Commission considers new leak check fee and rules on six leak forgiveness requests."
+      "stake": "Public hearings on deed-restriction conversion and affordable-unit price-cap removal for FINO II."
     },
     {
-      "id": 10,
-      "stake": "Continued public hearing on new building codes that will govern future construction countywide."
+      "id": 11,
+      "stake": "Continued public hearing on adopting new building codes that govern all future county construction."
     }
   ]
 }

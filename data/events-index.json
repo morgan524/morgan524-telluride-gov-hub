@@ -2832,7 +2832,8 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Join our wonderful volunteer team at the Decker! If you would like to help with Gallery Sitting during open hours, events, and more, please attend a New Volunteer Orientation to get started! You'll learn about the Decker Room and the…",
-    "type": "Arts & Film"
+    "type": "Arts & Film",
+    "endDate": "2026-11-17"
   },
   {
     "title": "Ridgway FUSE Creative Main Street - Committee Meeting",
@@ -2845,7 +2846,8 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Ridgway FUSE, a Creative District & Main Street Program, nurtures the cultural and economic vitality of Ridgway, Colorado All Ridgway FUSE Committee Meetings are open to the public. Click here for agendas and notes. Interested residents…",
-    "type": "Community"
+    "type": "Community",
+    "endDate": "2026-11-18"
   },
   {
     "title": "Weekly Young Adult Gathering",
@@ -3168,5 +3170,18 @@
     "desc": "Get prepped for the winter season ahead at the annual KOTO Ski Swap at the Wilkinson Public Library. Donate your used …",
     "type": "Community",
     "endDate": "2026-11-16"
+  },
+  {
+    "title": "Telluride Rotary Club Meeting",
+    "href": "https://portal.clubrunner.ca/3291",
+    "date": "2026-11-18",
+    "time": "6:00 PM (social at 5:30)",
+    "location": "Announced Telluride location",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-9.jpg",
+    "category": "",
+    "source": "Telluride Rotary",
+    "desc": "Telluride Rotary Club meets the 1st & 3rd Wednesdays at 6:00 PM (gathering at 5:30) — 1st Wednesday at Mountain Lodge in Mountain Village, 3rd Wednesday at an announced Telluride location. A service club supporting scholarships, Youth…",
+    "type": "Family & Kids"
   }
 ]
