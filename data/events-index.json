@@ -75,7 +75,7 @@
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_16_06_00.png",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "A screening of the beloved Studio Ghibli animated film *Howl's Moving Castle* at Wilkinson Public Library's Program Room. This free library event runs from 2:00 to 4:00 PM.",
+    "desc": "2:00 PM – 4:00 PM",
     "type": "Arts & Film"
   },
   {
@@ -577,7 +577,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "A Town of Norwood government meeting, with an amended agenda, scheduled for September 22, 2026. The meeting is hosted by the Town of Norwood and takes place in Norwood, Colorado.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -922,8 +922,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
-    "type": "Food & Drink"
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Town Manager Finalists Meet and Greet",
@@ -1266,7 +1266,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1579,7 +1579,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1951,7 +1951,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/voting-1.jpg",
     "category": "Community Event",
     "source": "Ouray County",
-    "desc": "A joint briefing hosted by ROCC and the League of Women Voters of the Upper Valley covering statewide measures on the November 2026 ballot. The event takes place in the Decker Room at 675 Clinton Street in Ridgway, with notice that two or…",
+    "desc": "https://ouraycountyco.gov/calendar.aspx?EID=3784",
     "type": "Community"
   },
   {
@@ -2110,7 +2110,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2491,7 +2491,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather, share a meal, and connect with neighbors. This recurring community event takes place in Norwood and is organized through…",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2625,6 +2625,19 @@
     "type": "Community"
   },
   {
+    "title": "Bike & Brewery Tour",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    "date": "2026-10-19",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    "type": "Outdoors & Sports"
+  },
+  {
     "title": "Decker Room New Volunteer Orientation",
     "href": "https://events.ourayridgwayevents.com/event/decker-room-new-volunteer-orientation",
     "date": "2026-10-20",
@@ -2730,7 +2743,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday community meal program for seniors, hosted by the Town of Norwood. It offers older residents a chance to gather, share a meal, and connect with neighbors in a welcoming setting.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2850,7 +2863,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather and share a meal together. This recurring community event provides both nourishment and social connection for Norwood's…",
+    "desc": "",
     "type": "Community"
   },
   {
