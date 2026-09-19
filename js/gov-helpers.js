@@ -1731,6 +1731,30 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Paint My Mailbox Blues & Brews",
+    source: "Telluride Times",
+    date: "September 19, 2026",
+    firstSeen: "2026-09-19",
+    newsTopic: "arts-culture",
+    copy: "TajMo — the Grammy-winning duo of Taj Mahal and Keb' Mo' — headlines Blues & Brews Saturday night, touring behind their second album together, \"Room on the Porch.\" The two play a wide range of instruments and may strip it down to just the two of them at points during the set.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/gallery/article_881bdba9-49c1-41dc-8373-907e9e7a5962.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/27/62721eee-e618-43d3-9838-d8ee38bcd4a3/6aaeb69dc331b.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Telluride Town Council to hold work session on Flock cameras",
+    source: "Telluride Times",
+    date: "September 19, 2026",
+    firstSeen: "2026-09-19",
+    newsTopic: "government",
+    copy: "Two Flock ALPR cameras have been operating in Telluride since 2024, recording license plates and basic vehicle details — no facial recognition, no individual identification. Town Council will hold a formal work session Oct. 6 to weigh the technology's benefits against concerns about third-party data access and potential misuse beyond local law enforcement.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_7ba356ab-7312-41be-9b1d-108220d2f7c4.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/9f/89f9e69a-70b8-481a-8e25-c00185d17852/6aac0965627f0.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "‘A festival can do more than entertain a community’",
     source: "Telluride Times",
     date: "September 19, 2026",
@@ -4560,7 +4584,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour. View on site | Email this event",
     pubDate: "2026-09-22T19:30:00.000Z",
-    endDate: "2026-11-17",
+    endDate: "2026-11-18",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
