@@ -24,18 +24,6 @@
     "imgHiRes": true
   },
   {
-    "title": "Paint My Mailbox Blues & Brews",
-    "source": "Telluride Times",
-    "date": "September 19, 2026",
-    "firstSeen": "2026-09-19",
-    "newsTopic": "arts-culture",
-    "copy": "TajMo — the Grammy-winning duo of Taj Mahal and Keb' Mo' — headlines Blues & Brews Saturday night, touring behind their second album together, \"Room on the Porch.\" The two play a wide range of instruments and may strip it down to just the two of them at points during the set.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/gallery/article_881bdba9-49c1-41dc-8373-907e9e7a5962.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/27/62721eee-e618-43d3-9838-d8ee38bcd4a3/6aaeb69dc331b.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Telluride Town Council to hold work session on Flock cameras",
     "source": "Telluride Times",
     "date": "September 19, 2026",
@@ -45,6 +33,18 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/news/article_7ba356ab-7312-41be-9b1d-108220d2f7c4.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/9f/89f9e69a-70b8-481a-8e25-c00185d17852/6aac0965627f0.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Paint My Mailbox Blues & Brews",
+    "source": "Telluride Times",
+    "date": "September 19, 2026",
+    "firstSeen": "2026-09-19",
+    "newsTopic": "arts-culture",
+    "copy": "TajMo — the Grammy-winning duo of Taj Mahal and Keb' Mo' — headlines Blues & Brews Saturday night, touring behind their second album together, \"Room on the Porch.\" The two play a wide range of instruments and may strip it down to just the two of them at points during the set.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/gallery/article_881bdba9-49c1-41dc-8373-907e9e7a5962.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/27/62721eee-e618-43d3-9838-d8ee38bcd4a3/6aaeb69dc331b.image.jpg",
     "imgHiRes": true
   },
   {
@@ -960,6 +960,24 @@
     "img": ""
   },
   {
+    "title": "Town Council Proclaims September 7-11 Black Bear Safety Week",
+    "source": "Town of Telluride",
+    "date": "September 3, 2026",
+    "newsTopic": "government",
+    "copy": "(September 3, 2026) — Town Council on Tuesday proclaimed September 7-11 Black Bear Safety Week, arriving in a year when a dry spring and summer have left black bears across Colorado with far less to eat in the wild.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=404",
+    "img": "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
+  },
+  {
+    "title": "Town of Telluride Downgrades to Stage 1 Fire Restrictions",
+    "source": "Town of Telluride",
+    "date": "August 26, 2026",
+    "newsTopic": "public-safety",
+    "copy": "(August 25, 2026) – Following improved fire conditions across the region, Town Manager Zoe Dohnal has downgraded fire restrictions within the Town of Telluride from Stage 2 to Stage 1, effective 12:01 a.m. MT on Wednesday, August 26, 2026.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=403",
+    "img": ""
+  },
+  {
     "title": "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
     "source": "San Miguel County",
     "date": "September 10, 2026",
@@ -967,6 +985,24 @@
     "copy": "",
     "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1409",
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
+  },
+  {
+    "title": "Two Domestic Pets in San Miguel County Test Positive for the Plague",
+    "source": "San Miguel County",
+    "date": "September 3, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
+  },
+  {
+    "title": "Waste Tire Collection Event",
+    "source": "San Miguel County",
+    "date": "August 24, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
   },
   {
     "title": "Tomboy Road Now Open",
@@ -984,6 +1020,15 @@
     "newsTopic": "community",
     "copy": "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
     "href": "https://www.telluride.gov/AlertCenter.aspx?AID=45",
+    "img": ""
+  },
+  {
+    "title": "Stage 1 Fire Restrictions In Effect",
+    "source": "Town of Telluride",
+    "date": "August 26, 2026",
+    "newsTopic": "public-safety",
+    "copy": "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
+    "href": "https://www.telluride.gov/AlertCenter.aspx?AID=65",
     "img": ""
   },
   {

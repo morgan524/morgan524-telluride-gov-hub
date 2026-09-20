@@ -438,7 +438,10 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "ophir|2026-10-20|General Assembly Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"}
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "telluride|2026-10-01|Special Meeting - Planning & Zoning Commission - Oct 01 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8311","sv":4,"ph":"2fd1b49da7dccc7b"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -809,7 +812,10 @@ const MEETING_PREVIEWS = {
     "Board will consider final architecture review for a 15-unit employee apartment building at 306 Adams Ranch Road, continued from September. Members will also receive a voting procedure update and approve meeting summaries from August and September sessions.",
 
   "telluride|2026-09-21|Open Space Commission Site Walk - Sep 21 2026":
-    "The Open Space Commission will conduct a site walk to discuss restoration planning for Zone 1 of the Bear Creek Preserve and review the Reach 3 River Restoration Project at the Mill Creek Confluence on the Valley Floor Open Space, with input from environmental consultants."
+    "The Open Space Commission will conduct a site walk to discuss restoration planning for Zone 1 of the Bear Creek Preserve and review the Reach 3 River Restoration Project at the Mill Creek Confluence on the Valley Floor Open Space, with input from environmental consultants.",
+
+  "telluride|2026-10-01|Special Meeting - Planning & Zoning Commission - Oct 01 2026":
+    "The Planning & Zoning Commission is expected to discuss the Colorado Wildfire Resiliency Code amendment to Telluride's Land Use Code, following Town Council's passage of Ordinance #1640 on August 11, 2026, which amended Chapter 18 of the Municipal Code to implement wildfire resiliency standards."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1322,7 +1328,10 @@ const MANUAL_SUMMARIES = {
     "The October 20, 2026 Telluride Board of Education Monthly Meeting agenda hasn't been posted yet.",
 
   "ophir|2026-10-20|General Assembly Meeting":
-    "The October 20, 2026 Ophir General Assembly Meeting agenda hasn't been posted yet."
+    "The October 20, 2026 Ophir General Assembly Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-10-01|Special Meeting - Planning & Zoning Commission - Oct 01 2026":
+    "The October 1, 2026 Special Meeting — Planning & Zoning Commission agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1740,18 +1749,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Paint My Mailbox Blues & Brews",
-    source: "Telluride Times",
-    date: "September 19, 2026",
-    firstSeen: "2026-09-19",
-    newsTopic: "arts-culture",
-    copy: "TajMo — the Grammy-winning duo of Taj Mahal and Keb' Mo' — headlines Blues & Brews Saturday night, touring behind their second album together, \"Room on the Porch.\" The two play a wide range of instruments and may strip it down to just the two of them at points during the set.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/gallery/article_881bdba9-49c1-41dc-8373-907e9e7a5962.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/27/62721eee-e618-43d3-9838-d8ee38bcd4a3/6aaeb69dc331b.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Telluride Town Council to hold work session on Flock cameras",
     source: "Telluride Times",
     date: "September 19, 2026",
@@ -1761,6 +1758,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_7ba356ab-7312-41be-9b1d-108220d2f7c4.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/9f/89f9e69a-70b8-481a-8e25-c00185d17852/6aac0965627f0.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Paint My Mailbox Blues & Brews",
+    source: "Telluride Times",
+    date: "September 19, 2026",
+    firstSeen: "2026-09-19",
+    newsTopic: "arts-culture",
+    copy: "TajMo — the Grammy-winning duo of Taj Mahal and Keb' Mo' — headlines Blues & Brews Saturday night, touring behind their second album together, \"Room on the Porch.\" The two play a wide range of instruments and may strip it down to just the two of them at points during the set.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/gallery/article_881bdba9-49c1-41dc-8373-907e9e7a5962.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/27/62721eee-e618-43d3-9838-d8ee38bcd4a3/6aaeb69dc331b.image.jpg",
     imgHiRes: true
   },
   {
@@ -2676,6 +2685,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Town Council Proclaims September 7-11 Black Bear Safety Week",
+    source: "Town of Telluride",
+    date: "September 3, 2026",
+    newsTopic: "government",
+    copy: "(September 3, 2026) — Town Council on Tuesday proclaimed September 7-11 Black Bear Safety Week, arriving in a year when a dry spring and summer have left black bears across Colorado with far less to eat in the wild.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=404",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
+  },
+  {
+    title: "Town of Telluride Downgrades to Stage 1 Fire Restrictions",
+    source: "Town of Telluride",
+    date: "August 26, 2026",
+    newsTopic: "public-safety",
+    copy: "(August 25, 2026) – Following improved fire conditions across the region, Town Manager Zoe Dohnal has downgraded fire restrictions within the Town of Telluride from Stage 2 to Stage 1, effective 12:01 a.m. MT on Wednesday, August 26, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=403",
+    img: ""
+  },
+  {
     title: "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
     source: "San Miguel County",
     date: "September 10, 2026",
@@ -2683,6 +2710,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1409",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
+  },
+  {
+    title: "Two Domestic Pets in San Miguel County Test Positive for the Plague",
+    source: "San Miguel County",
+    date: "September 3, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
+  },
+  {
+    title: "Waste Tire Collection Event",
+    source: "San Miguel County",
+    date: "August 24, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
   },
   {
     title: "Tomboy Road Now Open",
@@ -2700,6 +2745,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "community",
     copy: "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=45",
+    img: ""
+  },
+  {
+    title: "Stage 1 Fire Restrictions In Effect",
+    source: "Town of Telluride",
+    date: "August 26, 2026",
+    newsTopic: "public-safety",
+    copy: "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=65",
     img: ""
   },
   {
@@ -4455,12 +4509,12 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour. View on site | Email this event",
     pubDate: "2026-09-22T19:30:00.000Z",
-    endDate: "2026-11-18",
+    endDate: "2026-11-19",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Beaumont Hotel & Spa",
-    imageUrl: "https://localist-images.azureedge.net/photos/54002564456834/huge/1c893556af04e1767e7f3bd0564190789254a928.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
   },
   {
     title: "ALPINE JAM",
@@ -5462,7 +5516,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-film-stills-ridgway-independent-film-fest",
     description: "The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In coordination with the annual Independent Film Festival (November 13-15) this show is both a preview and a celebration of the art of short filmmaking. View on site | Email this event",
     pubDate: "2026-11-07T00:00:00.000Z",
-    endDate: "2026-11-17",
+    endDate: "2026-11-19",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -8491,6 +8545,15 @@ const TELLURIDE_BOARD_MEETINGS = [
   },
   {
     date: "October 1, 2026",
+    title: "Special Meeting - Planning & Zoning Commission",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8311",
+    hasAgenda: false,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: "",
+    civicwebId: 8311
+  },
+  {
+    date: "October 1, 2026",
     title: "Town Council Budget",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8053",
     hasAgenda: false,
@@ -8515,15 +8578,6 @@ const TELLURIDE_BOARD_MEETINGS = [
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
     civicwebId: 8164
-  },
-  {
-    date: "October 8, 2026",
-    title: "Special Meeting - Planning & Zoning Commission",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8311",
-    hasAgenda: false,
-    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: "",
-    civicwebId: 8311
   },
   {
     date: "October 13, 2026",
