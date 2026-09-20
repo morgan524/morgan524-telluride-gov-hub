@@ -464,6 +464,14 @@ const DEEP_DIVE_UPDATES = [
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-09-20",
+    title: "Old buildings, new fire rules — something's got to give",
+    body: "The Historic and Architectural Review Commission has a special meeting September 30 to work out how Ordinance #1640 — the wildfire resiliency code passed August 11 — applies when issuing Certificates of Appropriateness for structures in Telluride. That's where the rub is. Historic preservation and wildfire resiliency don't always want the same thing from a building. Fire-resistant materials, updated assemblies, vegetation setbacks — they can conflict with what HARC exists to protect. Neither concern is frivolous. So how do you weigh them when they pull in opposite directions on the same structure?",
+    choices: ["Fire safety has to come first", "Historic character shouldn't bend", "Find middle ground case by case", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-09-19",
     title: "The Lawson Hill connector — shortcut or something else?",
     body: "The Open Space Commission is set to discuss the Lawson Hill Connector Trail Project, along with material hauling needs and other land management questions in San Miguel County. A connector trail sounds straightforward — until it isn't. Proponents see better access and a more connected network. Skeptics worry about what more foot traffic does to the land, the neighborhood, and the character of open space that people moved here to protect. Nothing's been decided yet. So: when it comes to new trail connections up here, where do you land?",
@@ -694,14 +702,6 @@ const DAILY_QUESTIONS = [
     choices: ["Committees get things done", "It's just more process", "Depends on who's on it", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-08-21",
-    title: "A new committee for rental housing — what will it actually do?",
-    body: "Telluride's new Resident Advisory Committee holds its inaugural meeting this week. The first order of business is organizing itself — officers, procedures, purpose. But the substantive item is a review of the Town's Employee Rental Housing Policies.\n\nSome will see this as a real seat at the table: residents with skin in the game finally helping shape how workforce housing gets managed. Others will wonder whether an advisory body with no binding authority changes much at all.\n\nSo — is a resident advisory committee the right lever for housing policy up here, or is it window dressing?",
-    choices: ["Real seat at the table", "Advisory only — too weak", "Depends what power it gets", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -879,7 +879,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "September 17, 2026",
     newsTopic: "government",
     copy: "New members appointed to sustainability board The Ridgway Town Council appointed Terry Schuyler and Christiane Frischmuth to the Ridgway Sustainability Advisory Board after brief interviews at the Sept. 9 council meeting. Schuyler was a founding member of the advisory board and served as the town co",
-    href: "https://www.ouraynews.com/2026/09/17/local-briefs-ridgway-appoints-two-sustainability-board-updates-marshal-overtime-policy/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/09/17/local-briefs-ridgway-appoints-two-sustainability-board-updates-marshal-overtime-policy/",
     img: ""
   },
   {
@@ -1696,6 +1696,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "THS volleyball unlucky in tight losses",
+    source: "Telluride Times",
+    date: "September 20, 2026",
+    firstSeen: "2026-09-20",
+    newsTopic: "education",
+    copy: "Telluride High School volleyball dropped two close matches in non-league play, falling to North Fork 0-3 and Pagosa Springs 0-3, with four of the six sets decided by two points or fewer. The Lady Miners rallied from 17-12 down in Set 3 against North Fork before narrowly losing 24-26. Now 4-6 overall, they face ranked Dolores and Ignacio over the next two weeks.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_b71b52bc-98b9-47da-878d-8bbd47b91139.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/e5/7e5e5bc5-834a-445d-83f6-648803cdf591/6aab7a505d9a2.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Paint My Mailbox Blues & Brews",
     source: "Telluride Times",
@@ -3845,26 +3857,37 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Zumba with Gise",
-    link: "https://telluridelibrary.libcal.com/event/17470021?hs=a",
-    description: "10:00 AM – 11:00 AM · Ditch the workout and join the party! Zumba&reg; is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. &iexcl;Olvida el entrenamiento y &uacute;nete a la fiesta! Zumba&reg; es una clase de fitness de baile de alta energ&iacute;a que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calor&iacute;as. …",
-    pubDate: "2026-09-19T16:00:00.000Z",
+    title: "Gentle Yoga with Kristen Milord",
+    link: "https://telluridelibrary.libcal.com/event/16536459?hs=a",
+    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
+    pubDate: "2026-09-20T17:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_11_20_18.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
   },
   {
-    title: "Studio Ghibli Movie Matinee: Howl&#039;s Moving Castle",
-    link: "https://telluridelibrary.libcal.com/event/17413269?hs=a",
-    description: "2:00 PM – 4:00 PM",
-    pubDate: "2026-09-19T20:00:00.000Z",
+    title: "Glow with the Flow, with Britt Bradford",
+    link: "https://telluridelibrary.libcal.com/event/17424383?hs=a",
+    description: "1:00 PM – 3:00 PM · Britt Bradford is a botanical skin care formulator,That will show and share how to make a botanical skin care solution that works with wherever we are right now. Do you have a baby, do you have a teen, are you experiencing peri-menopause symptoms, there is something for everyone so you can glow with the flow.",
+    pubDate: "2026-09-20T19:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_16_06_00.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_12_40_34.jpg"
+  },
+  {
+    title: "CANCELLEDTea and Tarot",
+    link: "https://telluridelibrary.libcal.com/event/17029773?hs=a",
+    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
+    pubDate: "2026-09-20T20:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
   }
 ];
 
@@ -3885,18 +3908,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "CASTLE w/ Sound Shepherd",
-    link: "https://www.alibitelluride.com/calendar#eca-event=castle-8",
-    description: "Having began his journey in Telluride as a ski coach, CASTLE has transitioned to...",
-    pubDate: "2026-09-19",
-    time: "10:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/f213094a-1e6c-4006-a482-991f1efae50e/-/crop/1294x1295/0,114/-/preview/"
-  },
   {
     title: "Photon",
     link: "https://www.alibitelluride.com/calendar#eca-event=photon",
@@ -4326,22 +4337,10 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "Ouray Mountain Trail Run",
-    link: "https://events.ourayridgwayevents.com/event/ouray-mountain-trail-run",
-    description: "13-mile trail run around the perimeter of Ouray. With approx 4000 ft of total elevation gain, runners will run past the dinosaur tracks, across the box canyon, past the ice park & via feratta, up into the amphitheater, and past the Cascade Canyon Falls to finish up in historic Fellin Park. This is a fundraiser for the Ouray School, hosted by the school's parent and teacher organization, PATT, and the high school Outdoor Education Class. We support teachers by providing funding for activities that get students out of the classroom and into the wider world. View on site | Email this event",
-    pubDate: "2026-09-19T13:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Fellin Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/53845081366165/huge/81169ec498ed88b72ba4159faa91cff1827d17f7.jpg"
-  },
-  {
     title: "4th Annual San Juan Slam Pickleball Tournament",
     link: "https://events.ourayridgwayevents.com/event/4th-annual-san-juan-slam-pickleball-tournament",
     description: "The 4th Annual San Juan Slam, a Western Slope regional pickleball tournament hosted by the Ridgway Pickleball Club (RPC) with Presenting/Title Sponsor Citizens State Bank. The San Juan Slam, a family friendly event and free for spectators, takes place at the Ridgway Athletic Field from September 18-20. Sept. 18 Women's Doubles, Sept. 19 Mixed Doubles, and Sept. 20 Men's Doubles. This year's tournament will follow a Team Round-Robin pool play format with medal rounds at every skill and age level, providing participants and spectators plenty of gameplay. Our 4-legged friends (on leashes of course) are welcome to get their photo taken for inclusion in the World Famous 'Dogs of the San Juan Slam'. View on site | Email this event",
-    pubDate: "2026-09-19T15:00:00.000Z",
-    endDate: "2026-09-20",
+    pubDate: "2026-09-20T15:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4349,60 +4348,16 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53613028091683/huge/89356c844c3d4e996774f5c668ba438226be20a1.jpg"
   },
   {
-    title: "\"llumination! Learning to Use Light, Shadow & Color in Acrylic Landscapes\" with Wayne McKinzie",
-    link: "https://events.ourayridgwayevents.com/event/llumination-learning-to-use-light-shadow-color-in-acrylic-landscapeswith-wayne-mckinzie",
-    description: "\"llumination! Learning to Use Light, Shadow & Color in Acrylic Landscapes\" with Wayne McKinzie September 19th, 10:00am-2:30pm (incl. a 30min. lunch break) Cora Annex, Ridgway Tuition: $70 Registration: www.weehawkenarts.org Join acclaimed landscape artist Wayne McKinzie for a unique \"Paint with Wayne\" experience. Rather than a traditional painting class, everyone will paint the same landscape alongside Wayne, giving you a front-row seat to his creative process from start to finish. Each participant will receive an 8\" x 10\" primed panel and will work step-by-step with Wayne as he demonstrates how he uses light, shadow, color, brushwork, and composition to bring a landscape to life. Throughout the class, students are encouraged to ask questions, observe his techniques in real time, and gain insight into the artistic decisions that go into creating an original painting. …",
-    pubDate: "2026-09-19T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Annex on Cora",
-    imageUrl: "https://localist-images.azureedge.net/photos/53780308794900/huge/41691d46e1e475e3b5f20b3e40f3c8218e5b1c84.jpg"
-  },
-  {
     title: "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
     link: "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
     description: "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the International Quilt Museum in Lincoln, Nebraska. Bonnie’s work has been shown in numerous exhibits in the United States. In 2015, Bonnie’s work was in a year-long solo exhibition at the Portland Oregon International Airport. She was a solo artist at the Visions Museum of Textile Art, San Diego, in 2019. Internationally, Bonnie’s work has appeared in the Haus der Wirtschaft museum in Stuttgart, Germany, the Museum of Modern Art in Verona, Italy, and other venues in Germany, England, Ireland, France, Japan, Brazil, and the Netherlands. Bonnie’s work Tangle is part of the permanent collection of the Tuch + Technik Textilmuseum, Neumunster, Germany. …",
-    pubDate: "2026-09-19T16:00:00.000Z",
+    pubDate: "2026-09-20T16:00:00.000Z",
     endDate: "2026-09-25",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "The 610 Arts Collective",
     imageUrl: "https://localist-images.azureedge.net/photos/53551302433703/huge/07561f7b06b24999f21e6be2347e5102b9b92cc3.jpg"
-  },
-  {
-    title: "Ouray HS Volleyball vs Mancos",
-    link: "https://events.ourayridgwayevents.com/event/ouray-hs-volleyball-vs-mancos",
-    description: "Ouray highschool will be playing Mancos @ Ouray View on site | Email this event",
-    pubDate: "2026-09-19T17:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray School",
-    imageUrl: "https://localist-images.azureedge.net/photos/53861933199264/huge/a6b3ed3547c7583cd9c727f1be07b81f6be27814.jpg"
-  },
-  {
-    title: "Colona Community Church’s Annual Harvest Dinner",
-    link: "https://events.ourayridgwayevents.com/event/colona-community-churchs-annual-harvest-dinner-6308",
-    description: "Live Music. Come join us for Fun, Food, & Fellowship. Celebrating 114 years! Free to All. 😀 View on site | Email this event",
-    pubDate: "2026-09-19T21:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Colona Stockyard across from the church",
-    imageUrl: "https://localist-images.azureedge.net/photos/53722349858154/huge/934ef243440a192b17a6d756428b9bac45537d94.jpg"
-  },
-  {
-    title: "Kipori Woods – Live at Floating Lotus Brewery",
-    link: "https://events.ourayridgwayevents.com/event/kipori-woods-live-at-floating-lotus-brewery-8834",
-    description: "Kipori Woods brings the soul and musical range of New Orleans to Floating Lotus Brewery. The guitarist, vocalist and songwriter blends blues, jazz, country and Southern rock, shaped by mentorship from Ellis Marsalis and Walter “Wolfman” Washington. Join us Saturday, September 19, 6–9 PM for a solo guitar-and-vocals performance on the Outdoor Stage, weather permitting, with an indoor taproom alternative. Tickets: $10 in advance or at the door. Online service fees may apply. View on site | Email this event",
-    pubDate: "2026-09-20T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53994391258988/huge/042189528b794ad128abe8ffca169b44651df0b2.jpg"
   },
   {
     title: "BRITLEY & MATT",
