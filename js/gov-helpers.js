@@ -873,13 +873,23 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Parish Bulletin for September 20",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "September 20, 2026",
+    newsTopic: "community",
+    copy: "This week's bulletin is attached, but please check the Parish Calendar for the most updated information of parish events.For those who have signed up, a reminder that the St. Patrick Parish Mission begins this Friday, September 25.Sign up for a Bible S...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-september-20/",
+    img: ""
+  },
+  {
     title: "Local briefs: Ridgway appoints two to sustainability board, updates marshal overtime policy",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "September 17, 2026",
     newsTopic: "government",
     copy: "New members appointed to sustainability board The Ridgway Town Council appointed Terry Schuyler and Christiane Frischmuth to the Ridgway Sustainability Advisory Board after brief interviews at the Sept. 9 council meeting. Schuyler was a founding member of the advisory board and served as the town co",
-    href: "https://www.ouraynews.com/2026/09/17/local-briefs-ridgway-appoints-two-sustainability-board-updates-marshal-overtime-policy/",
+    href: "https://www.ouraynews.com/2026/09/17/local-briefs-ridgway-appoints-two-sustainability-board-updates-marshal-overtime-policy/?ta_paidstory",
     img: ""
   },
   {
@@ -1705,6 +1715,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Colorado State apologizes to BYU for derogatory chants as 11th-ranked Cougars beat Rams 41-23",
+    source: "Telluride Times",
+    date: "September 20, 2026",
+    firstSeen: "2026-09-20",
+    newsTopic: "education",
+    copy: "BYU beat Colorado State 41-23 Saturday, but the bigger story was CSU issuing a formal apology for anti-Mormon chants from its student section. It's the second straight season CSU has faced this issue with BYU — Colorado was fined $50,000 last year for similar incidents.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_d20c50fb-f0ea-5bea-8b4c-6ca662740676.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/aa/2aaaf492-aa72-588a-90ab-789e8f3e0580/6aaffd3669b82.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "THS volleyball unlucky in tight losses",
     source: "Telluride Times",
@@ -4466,7 +4488,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
     description: "Welcome to Ridgway's strength and mobility training + YOGA! Functional Strength & Mobility Training (for women): Tuesday & Thursday 8:15-9 am Vinyasa Yoga: Wednesday 8:15-9:15 am Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Class Structure: 5 minute warm up / 30 minute circuit workout / 10 minute cooldown stretch & mobility Vinyasa Yoga: This is a dynamic practice that will challenge, strengthen, and uplift you both physically and mentally. …",
     pubDate: "2026-09-22T14:15:00.000Z",
-    endDate: "2026-11-17",
+    endDate: "2026-11-19",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6048,6 +6070,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
+  },
+  {
+    title: "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
+    link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
+    description: "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
+    pubDate: "2026-10-20T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
   }
 ];
 
