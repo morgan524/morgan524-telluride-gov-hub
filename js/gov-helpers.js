@@ -1725,6 +1725,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "High fashion and higher ideals",
+    source: "Telluride Times",
+    date: "September 20, 2026",
+    firstSeen: "2026-09-20",
+    newsTopic: "government",
+    copy: "Two Skirts on Main Street has been around since 2001, and owner Kristin Holbrook has quietly built something beyond a boutique — hiring up to 12 young women each summer and running a THS mentorship program focused on life skills, confidence, and professionalism. She's also logged years on local boards and earned the Telluride Foundation's Outstanding Citizen award in 2014.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/business/article_3c8053da-d008-4adf-a5e3-48a8c554270a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/fd/8fd5b822-283d-4b0a-b5bf-6e29d98b3748/6aab7f699d8e2.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Colorado State apologizes to BYU for derogatory chants as 11th-ranked Cougars beat Rams 41-23",
     source: "Telluride Times",
     date: "September 20, 2026",
