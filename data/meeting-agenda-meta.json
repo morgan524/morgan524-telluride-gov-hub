@@ -1,34 +1,4 @@
 {
-  "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8291",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1",
-    "meetingId": "861 6987 1704",
-    "passcode": "281002.",
-    "phone": "346-248-7799"
-  },
-  "mv|2026-08-20|Town Council Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/49695/august_20-_2026_town_council_meeting_agenda.pdf",
-    "zoomUrl": "https://us06web.zoom.us/webinar/register/WN_ndaN3Xr5TWe9uANpXwY42w",
-    "phone": "970-369-6429"
-  },
-  "telluride|2026-08-20|Planning & Zoning Commission - Aug 20 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8102",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/tZ0qd-GsrDwuGtGVXN_cveUy9V0AT2ZawXEW",
-    "meetingId": "897 0842 7405",
-    "passcode": "430134",
-    "phone": "301-715-8592"
-  },
-  "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8101",
-    "sv": 4
-  },
-  "tmvoa|2026-08-20|TMVOA Investment Committee Meeting": {
-    "sv": 4,
-    "ph": "b858cb282617fb09"
-  },
   "county|2026-08-26|Board of County Commissioners Work Session": {
     "sv": 4,
     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/869/files/agenda/1971",
@@ -95,19 +65,11 @@
     "sv": 4,
     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1055/files/agenda/1973"
   },
-  "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026 - Cancelled": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8101",
-    "sv": 4
-  },
   "norwood|2026-09-08|Norwood Water Commission Meeting": {
     "sv": 4,
     "ph": "b858cb282617fb09"
   },
   "tmvoa|2026-09-08|Mountain Village Merchant Meeting": {
-    "sv": 4,
-    "ph": "b858cb282617fb09"
-  },
-  "airport|2026-08-20|TRAA Board of Commissioners Meeting": {
     "sv": 4,
     "ph": "b858cb282617fb09"
   },
@@ -575,5 +537,17 @@
   "telluride|2026-09-21|Open Space Commission Site Walk - Sep 21 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8319",
     "sv": 4
+  },
+  "fire|2026-10-20|Board of Directors Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "school|2026-10-20|Telluride Board of Education Monthly Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "ophir|2026-10-20|General Assembly Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   }
 }

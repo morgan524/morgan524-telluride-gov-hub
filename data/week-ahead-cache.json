@@ -1,30 +1,34 @@
 {
-  "hash": "4c3aed93cea96684a1e96db70463e7116d13ee8c",
-  "lede": "The biggest thing on the table this week is Monday's Norwood Planning and Zoning meeting, where commissioners are set to vote on adopting Phase I of a full Land Use Code rewrite — the kind of decision that quietly sets the rules for development and density for years to come. Tuesday brings a heavy Town Council agenda, including public hearings on converting two affordable units at 215 East Colorado from price-capped ownership to employee dwelling units. The county also holds a continued public hearing Tuesday on adopting new International Building Codes and a low-carbon energy code that would affect every construction project in San Miguel County.",
+  "hash": "fbf6b77f5539d612fd99b6ed23df9a3e192f040e",
+  "lede": "The biggest decision of the week lands Monday at Norwood's Planning and Zoning Commission, where the first phase of a full Land Use Code rewrite goes to a vote — the kind of foundational change that sets development rules for years to come. Closer to home, Telluride Town Council meets Monday evening with three public hearings on second reading, including a deed-restriction conversion that would remove the price cap on two affordable units at 215 East Colorado. The County Commissioners continue a public hearing Tuesday on adopting updated international building codes, and the Housing Authority takes up that same deed-restriction question plus other structural housing changes.",
   "notable": [
     {
       "id": 0,
-      "stake": "Vote on Ordinance adopting Norwood's Land Use Code rewrite — sets future development rules."
+      "stake": "Vote on Norwood's Land Use Code rewrite — sets development rules valley-wide."
     },
     {
       "id": 4,
-      "stake": "Board votes on resolutions supporting Prop NN and Amendment 87, plus second-reading policy approvals."
+      "stake": "Board votes on state ballot resolutions and second-reading policy approvals."
     },
     {
       "id": 5,
-      "stake": "Resolution to convert two affordable ownership units to EDUs, removing the maximum sale price cap."
+      "stake": "Resolution would remove price caps on two affordable units, changing their status permanently."
     },
     {
       "id": 6,
-      "stake": "Public hearings on deed-restriction conversion removing price caps on two town affordable units."
+      "stake": "Three second-reading public hearings, including deed-restriction conversion removing affordable price cap."
     },
     {
       "id": 7,
-      "stake": "Commission weighing six leak forgiveness requests and a new leak-check fee for Norwood water customers."
+      "stake": "Commission considers leak check fee and six leak forgiveness requests affecting water bills."
     },
     {
       "id": 11,
-      "stake": "Continued public hearing on adopting new International Building Codes countywide; 2027 nonprofit funding."
+      "stake": "Continued public hearing on new building codes that will govern all future construction here."
+    },
+    {
+      "id": 13,
+      "stake": "Early work session on school-site employee housing — public's first real look at the proposal."
     }
   ]
 }

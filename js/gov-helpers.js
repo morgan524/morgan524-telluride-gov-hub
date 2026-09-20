@@ -146,21 +146,6 @@ function resolveEventImage(e, opts) {
 // stays current automatically; the static config is the fallback for
 // sources without a PDF agenda.
 const MEETING_AGENDA_META = {
-  "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8291","sv":4,"zoomUrl":"https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1","meetingId":"861 6987 1704","passcode":"281002.","phone":"346-248-7799"},
-
-  "mv|2026-08-20|Town Council Meeting":
-    {"sv":4,"agendaUrl":"https://townofmountainvillage.com/site/assets/files/49695/august_20-_2026_town_council_meeting_agenda.pdf","zoomUrl":"https://us06web.zoom.us/webinar/register/WN_ndaN3Xr5TWe9uANpXwY42w","phone":"970-369-6429"},
-
-  "telluride|2026-08-20|Planning & Zoning Commission - Aug 20 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8102","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/tZ0qd-GsrDwuGtGVXN_cveUy9V0AT2ZawXEW","meetingId":"897 0842 7405","passcode":"430134","phone":"301-715-8592"},
-
-  "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8101","sv":4},
-
-  "tmvoa|2026-08-20|TMVOA Investment Committee Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"},
-
   "county|2026-08-26|Board of County Commissioners Work Session":
     {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/869/files/agenda/1971","zoomUrl":"https://us02web.zoom.us/meeting/register/9OtfsijQQWSJMrVmAUrDCw","meetingId":"858 7914 5422","passcode":"509931","phone":"719-359-4580"},
 
@@ -191,16 +176,10 @@ const MEETING_AGENDA_META = {
   "county|2026-08-27|CWAB":
     {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1055/files/agenda/1973"},
 
-  "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026 - Cancelled":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8101","sv":4},
-
   "norwood|2026-09-08|Norwood Water Commission Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "tmvoa|2026-09-08|Mountain Village Merchant Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"},
-
-  "airport|2026-08-20|TRAA Board of Commissioners Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "norwood|2026-09-09|Board of Trustees Meeting":
@@ -450,7 +429,16 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-09-21|Open Space Commission Site Walk - Sep 21 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8319","sv":4}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8319","sv":4},
+
+  "fire|2026-10-20|Board of Directors Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "school|2026-10-20|Telluride Board of Education Monthly Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "ophir|2026-10-20|General Assembly Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -891,7 +879,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "September 17, 2026",
     newsTopic: "government",
     copy: "New members appointed to sustainability board The Ridgway Town Council appointed Terry Schuyler and Christiane Frischmuth to the Ridgway Sustainability Advisory Board after brief interviews at the Sept. 9 council meeting. Schuyler was a founding member of the advisory board and served as the town co",
-    href: "https://www.ouraynews.com/2026/09/17/local-briefs-ridgway-appoints-two-sustainability-board-updates-marshal-overtime-policy/",
+    href: "https://www.ouraynews.com/2026/09/17/local-briefs-ridgway-appoints-two-sustainability-board-updates-marshal-overtime-policy/?ta_paidstory",
     img: ""
   },
   {
@@ -1003,16 +991,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Attached is the Parish Bulletin for September 13. As a reminder, always check the parish calendar for the most updated information. REMINDER: Due to a Diocese of Pueblo Clergy Retreat the week of September 14-18, there will be no Holy ...",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-last-call-for-parish-mission/",
     img: ""
-  },
-  {
-    title: "Parish Bulletin for September 6",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "September 6, 2026",
-    newsTopic: "community",
-    copy: "Attached is this week's parish bulletin. Please check the parish calendar for all updated schedule of events. *Holy Adoration begins at 8:30 am before Sunday's Holy Mass-September 6. *Immediately after Holy Mass, join us for...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-september-6/",
-    img: ""
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
@@ -1038,25 +1016,10 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#42052"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-19';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-20';
 const LEGAL_NOTICES_CACHE_DATE = '2026-09-19';
 
 const MANUAL_SUMMARIES = {
-  "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
-    "Four public hearings on special event liquor permits fill this meeting. Palm Arts Inc. is seeking one permit for an Evening with Ken Burns — a fundraiser for the Telluride Historical Museum — at the Palm Theatre on August 30, with an anticipated 500 attendees. KOTO Radio is up next with a permit for its Live @ the Drive block party on N. Pine Street, August 27 from 2:00 to 9:30 pm. The Telluride Blues Society has two separate requests: one permit for Blisters and Brews at Elks Park on the morning of September 19, and three permits covering all three days of the Telluride Blues and Brews Festival at Town Park (September 18–20, running late into the night). Staff recommends approval on all four. The authority will also approve minutes from the July 16 meeting.",
-
-  "mv|2026-08-20|Town Council Meeting":
-    "A full agenda for Mountain Village this Thursday. The most consequential action item is a resolution setting a sale price appreciation cap under Municipal Code Section 16.02.070 — the kind of deed-restriction mechanics that determine whether affordable units actually stay affordable over time. Council also takes up a 2026 budget appropriation amendment and a conditional use permit for temporary office space on Lot 68R. On first reading: an ordinance amending the Public Art Commission's chapter in the municipal code, with a public hearing to be set. The SMART gondola gets a progress update — forty minutes of council time, which signals there's real ground to cover. Additional informational items include a pond improvements conceptual design update, a Chamber of Commerce formation work session, a Telluride School District mill levy override preview for November 2026, and a presentation from Thrive Community Health Network and Raices Sin Fronteras on a Workers Protection Ordinance. The meeting closes with an executive session on Town Manager recruitment.",
-
-  "telluride|2026-08-20|Planning & Zoning Commission - Aug 20 2026":
-    "The August 20 P&Z meeting has two work sessions and one public hearing worth following. The school district's employee housing proposal gets its first formal look — a work session on new construction at the northwest corner of the Telluride Middle-High School site at 725 W Colorado, governed by an intergovernmental agreement between the Town and Telluride School District R1. The 238 N Pine Street minor subdivision — a proposal to split a 7,500-square-foot Historic Residential parcel into two lots — comes back for a public hearing after a long string of continuances dating to February. Two additional work sessions cover a Comprehensive Plan status update and a Land Use Code revision to Section 3-505 governing tree maintenance, removal, and relocation.",
-
-  "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026":
-    "The August 20, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
-
-  "tmvoa|2026-08-20|TMVOA Investment Committee Meeting":
-    "The August 20, 2026 TMVOA Investment Committee Meeting agenda hasn't been posted yet.",
-
   "county|2026-08-26|Board of County Commissioners Work Session":
     "A Special Meeting with a mix of routine approvals and one item worth watching closely: a 40-minute discussion on Colorado Child Care Assistance Program (CCAP) funding and what its budget implications mean for the county. Human Services Director Linnea Edwards will also present the Core Services Plan for FY 2026-2027. On the administrative side, the Board takes up a fee adjustment for the Green Grants program — bumped from $10,000 to $15,000, or 10% of total grant funding — plus authorization for the Black Bear Pass in Reverse event on September 12, and interviews two applicants for the Telluride Regional Airport Authority Board. Consent items include a board reappointment and the 2026 Abstract of Assessment.",
 
@@ -1087,17 +1050,11 @@ const MANUAL_SUMMARIES = {
   "county|2026-08-27|CWAB":
     "The Citizens' Weed Advisory Board meets August 27 at 4:30 PM via Zoom for its regular session. Julie Kolb presents on vegetation control and management — treatments applied and areas covered — along with a report on U.S. Forest Service and ATB treatment work from 2025. The board also takes up landowner response to the Noxious Weed Fund Grant and approves May meeting minutes.",
 
-  "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026 - Cancelled":
-    "The August 20, 2026 Planning & Zoning Commission meeting has been cancelled.",
-
   "norwood|2026-09-08|Norwood Water Commission Meeting":
     "The September 8, 2026 Norwood Water Commission Meeting agenda hasn't been posted yet.",
 
   "tmvoa|2026-09-08|Mountain Village Merchant Meeting":
     "The September 8, 2026 Mountain Village Merchant Meeting agenda hasn't been posted yet.",
-
-  "airport|2026-08-20|TRAA Board of Commissioners Meeting":
-    "The August 20, 2026 TRAA Board of Commissioners Meeting agenda hasn't been posted yet.",
 
   "norwood|2026-09-09|Board of Trustees Meeting":
     "The September 9, 2026 Norwood Board of Trustees Meeting agenda hasn't been posted yet.",
@@ -1346,7 +1303,16 @@ const MANUAL_SUMMARIES = {
     "The October 19, 2026 Norwood Planning and Zoning Commission Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-09-21|Open Space Commission Site Walk - Sep 21 2026":
-    "The Open Space Commission heads into the field for this one — no chambers, no screen-share. The group meets at the Bear Creek Preserve Zone 1 entrance (south of Imagination Station Playground, Town Park) at 4:00 PM to work through restoration planning for that zone with consultants Matt Tobler of Blue Mountain Environmental Consulting and David Blauch of Ecological Resource Consultants. At 4:15 PM the walk shifts to the Eider Creek Trailhead on West Highway 145 Spur for a review of the Reach 3 River Restoration Project at the Mill Creek Confluence on the Valley Floor Open Space — again with Blauch. Both items are worksession-level; no votes are expected."
+    "The Open Space Commission heads into the field for this one — no chambers, no screen-share. The group meets at the Bear Creek Preserve Zone 1 entrance (south of Imagination Station Playground, Town Park) at 4:00 PM to work through restoration planning for that zone with consultants Matt Tobler of Blue Mountain Environmental Consulting and David Blauch of Ecological Resource Consultants. At 4:15 PM the walk shifts to the Eider Creek Trailhead on West Highway 145 Spur for a review of the Reach 3 River Restoration Project at the Mill Creek Confluence on the Valley Floor Open Space — again with Blauch. Both items are worksession-level; no votes are expected.",
+
+  "fire|2026-10-20|Board of Directors Meeting":
+    "The October 20, 2026 fire Board of Directors Meeting agenda hasn't been posted yet.",
+
+  "school|2026-10-20|Telluride Board of Education Monthly Meeting":
+    "The October 20, 2026 Telluride Board of Education Monthly Meeting agenda hasn't been posted yet.",
+
+  "ophir|2026-10-20|General Assembly Meeting":
+    "The October 20, 2026 Ophir General Assembly Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2658,42 +2624,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Council discusses hiring consultants to review Telluride housing policies",
-    source: "Telluride Times",
-    date: "September 6, 2026",
-    firstSeen: "2026-09-06",
-    newsTopic: "housing",
-    copy: "The Town of Telluride is drafting an RFP to hire outside consultants to review its housing policies ahead of potential 2027 amendments, with council members acknowledging the current system became overly complex. The review will examine rent structures, AMI alternatives, and how Telluride's rules compare to other mountain resort communities.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_faa3af4b-23c1-445b-a6c6-80541f470b37.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/aa/9aa78593-c376-4eac-a2c4-87d5361f9bcd/6a9a4883ebe55.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Chef Graeme Charles focuses on fresh, regional",
-    source: "Telluride Times",
-    date: "September 6, 2026",
-    firstSeen: "2026-09-06",
-    newsTopic: "arts-culture",
-    copy: "Graeme Charles has been cooking in Telluride for 19 years, splitting his time between Telluride Sleighs and Wagons, private cheffing, and community events like the Telluride Theatre's Burlesque Buffet. At Sleighs and Wagons, his menu leans into the Aldasoro family's Basque ranching roots — think paella with foraged mushrooms, elk sausage, and handmade juniper oil. He's a two-time local Top Chef champion and has competed at the World Food Championships.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/business/article_d6aae682-c944-4be8-82e7-2e8fc9b2cac2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/d9/7d97140d-0109-435a-a563-e3d7c1ef2f2c/6a97b78525f74.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Plane crash victims named",
-    source: "Telluride Times",
-    date: "September 6, 2026",
-    firstSeen: "2026-09-06",
-    newsTopic: "public-safety",
-    copy: "Randy Ramirez, 34, of Jupiter, FL and Belen, NM, and Blake Klobuchar, 20, of Peralta, NM, died when their Cessna T206 struck the north face of Dolores Peak on Sept. 3. They were returning from aerial survey work in Grand Junction. The NTSB and FAA are investigating.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_1f23f083-9184-4c92-9452-d9b89e9e0ef6.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/fb/3fb6cf5f-4f86-4e93-90f4-677776411493/6a9cd2bd4e5f5.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride to Lift All Fire Restrictions",
     source: "Town of Telluride",
     date: "September 17, 2026",
@@ -2799,7 +2729,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Fire Restrictions Lifted in Ridgway - September, 17, 2026",
     source: "Town of Ridgway",
-    date: "September 19, 2026",
+    date: "September 20, 2026",
     firstSeen: "2026-09-17",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2843,7 +2773,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "September 19, 2026",
+    date: "September 20, 2026",
     firstSeen: "2026-09-11",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2854,7 +2784,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "September 19, 2026",
+    date: "September 20, 2026",
     firstSeen: "2026-09-14",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2876,7 +2806,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Ridgway Rescinds Stage 2 Fire Restrictions, Reinstates Stage 1 Fire Restrictions effective 12:01am on Thursday, Sept. 3rd - Sept. 2, 2026",
     source: "Town of Ridgway",
-    date: "September 19, 2026",
+    date: "September 20, 2026",
     firstSeen: "2026-09-09",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -4688,7 +4618,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/zumba-fitness-with-tamra",
     description: "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn calories, and tone muscles. Classes are often described as a \"fitness party\" that reduces stress. All levels of fitness and dance experience are welcome. Classes are $12 to drop in. Class packs are available for purchase (5 classes for $50, 10 classes for $95). For more information, check out the instructor's website: https://zumba.com/p/zumbafitnesswithTamra or email Tamra at tamra.nichols@icloud.com . For updated class information, including last-minute changes or cancellations, follow the instructor's Zumba Facebook page at https://www.facebook.com/ZumbaFitnesswithTamra . View on site | Email this event",
     pubDate: "2026-09-23T23:30:00.000Z",
-    endDate: "2026-11-12",
+    endDate: "2026-11-19",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4700,7 +4630,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/open-mic-jam-night-w-host-dj-strong",
     description: "Join us every Wednesday at 6 PM for Open Mic Night with DJ Strong at Floating Lotus Brewery. Bring an original song, play a favorite cover, meet other local musicians, or jump into one of our full-band jam sessions. Solo performers, groups, and musicians looking to collaborate are all welcome. Open Mic is also where we discover artists for Floating Lotus Mainstage. Standout performers may be invited back to play a full featured set, creating a path from Open Mic to the Mainstage. Come perform, connect, experiment, or simply enjoy an evening of live local music. Every Wednesday at 6 PM Floating Lotus Brewery View on site | Email this event",
     pubDate: "2026-09-24T00:00:00.000Z",
-    endDate: "2026-11-12",
+    endDate: "2026-11-19",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6193,18 +6123,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62111/screenshot_2026-04-01_at_2_21_59_pm.800x533.webp"
-  },
-  {
-    title: "Music on the Green Summer Concert Series",
-    link: "https://www.telluride.com/event/music-on-the-green-summer-concert-series/",
-    description: "The Telluride Mountain Village Owners Association (TMVOA) and Beyond the Groove Productions Present Music on the Green …",
-    pubDate: "2026-05-29",
-    endDate: "2026-09-18",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/44414/16c6ff81-d87c-823e-1bd2-8a66b859eb9d.800x533.webp"
   },
   {
     title: "Telluride Farmers&#039; Market",
