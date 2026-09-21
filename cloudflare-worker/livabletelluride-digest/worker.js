@@ -519,7 +519,7 @@ function denverParts(d) {
   return { weekday: parts.weekday, hour: parseInt(parts.hour, 10) % 24 };
 }
 
-async function scheduledSend(env) {
+async function scheduledSend(env, dry) {
   const { weekday, hour } = denverParts(new Date());
   const key = weekday === "Mon" ? "weekly" : weekday === "Fri" ? "weekend" : null;
   if (!key) return { skipped: "not Mon/Fri in Denver (" + weekday + ")" };
@@ -546,6 +546,7 @@ async function scheduledSend(env) {
   if (html.includes("data:image")) throw new Error(d.file + " contains inline data:image payloads — re-approve at the Review Desk");
   if (html.length > 120000) throw new Error(d.file + " is " + html.length + " bytes — over the 120 KB clip limit");
 
+  if (dry) return { wouldSend: true, key, subject, bytes: html.length };
   const r = await send({ emailHtml: html, subject, key, test: false }, env);
   if (!r || !r.ok) throw new Error("send failed: " + JSON.stringify(r).slice(0, 300));
   return { sent: true, key, subject, blog: r.blog };
@@ -566,6 +567,13 @@ export default {
         // not at Approve time. No secret is exposed, only whether it still works.
         github: await ghTokenStatus(env),
       }, 200, origin);
+    }
+    // Dry run of the cron send's gates (no auth, nothing sent, no secrets):
+    // proves the scheduled() path works in production without waiting for
+    // Monday. Reports the same skip reasons the cron would log.
+    if (url.pathname === "/cron-check") {
+      try { return json({ ok: true, dry: true, ...(await scheduledSend(env, true)) }, 200, origin); }
+      catch (e) { return json({ ok: false, dry: true, error: String((e && e.message) || e) }, 200, origin); }
     }
     if (request.method !== "POST") return json({ error: "POST only" }, 405, origin);
 
