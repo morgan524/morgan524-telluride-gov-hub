@@ -1464,7 +1464,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Trivia Night at Floating Lotus Brewery! Join us on the 1st & 3rd Thursdays from 7–9 PM for a lively night of questions, drinks, and friendly competition. Grab a table, bring your team, and learn more at floatinglotusbrewery.com. View on…",
     "type": "Food & Drink",
-    "endDate": "2026-11-06"
+    "endDate": "2026-11-20"
   },
   {
     "title": "Pickleball Nights",
@@ -2308,7 +2308,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "A recurring monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The event offers a casual space for veterans to connect with one another and with community support.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2348,6 +2348,19 @@
     "category": "Community Event",
     "source": "Beacon",
     "desc": "Thursday night pickleball with no experience necessary. All supplies provided.",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Talk: The Sherbino Presents: India Wood's HIKING THE COLORADO X",
+    "href": "https://sherbino.org/event/talk-the-sherbino-presents-india-woods-hiking-the-colorado-x/",
+    "date": "2026-10-15",
+    "time": "",
+    "location": "The Sherbino, Ridgway",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2026/09/India-Wood-Talk-Banner-Oct-15.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
     "type": "Outdoors & Sports"
   },
   {
@@ -2465,6 +2478,19 @@
     "category": "Community Event",
     "source": "Mountain Village",
     "desc": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
+    "type": "Community"
+  },
+  {
+    "title": "Mountainfilm on Tour – Montrose",
+    "href": "https://sherbino.org/event/mountainfilm-on-tour-montrose-adventure-shorts/",
+    "date": "2026-10-18",
+    "time": "",
+    "location": "The Sherbino, Ridgway",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2026/09/sherb-and-wca-EVENT-BANNERS-3.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
     "type": "Community"
   },
   {

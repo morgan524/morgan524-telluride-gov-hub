@@ -1,26 +1,30 @@
 {
-  "hash": "c2e17e0ab317d5f2b9baa99b3dba47bea9ab4b14",
-  "lede": "The biggest item this week is Monday's Norwood Planning and Zoning meeting, where the commission takes up Ordinance No. ___ Series 2026 to formally adopt Phase I of Norwood's Land Use Code rewrite — the kind of foundational change that sets development rules for years to come. Monday also brings the Gondola Subcommittee's deep dive into how the gondola project gets funded and who drives it. Tuesday is a full day: Town Council holds three public hearings on second reading, the Housing Authority considers converting two affordable ownership units at 215 East Colorado to employee dwelling units with no price cap, and the School Board votes on resolutions backing Proposition NN and Amendment 87. Wednesday, the County Commissioners continue a public hearing on adopting updated International Building Codes for San Miguel County.",
+  "hash": "a6c1499cdd3e9bbc365606cb7580093a7e1ab4c5",
+  "lede": "The biggest thing on the civic calendar this week is Monday's Norwood Planning and Zoning meeting, where commissioners are set to formally adopt Phase I of a Land Use Code rewrite — the kind of decision that quietly shapes development for years to come. Telluride Town Council meets Monday and Tuesday with a full plate: a deed-restriction conversion at 215 East Colorado that would remove the price cap on two affordable units, plus public hearings on related ordinances. The County commissioners take up a continued public hearing on adopting updated international building codes and will hear a preview of 2027 nonprofit funding allocations.",
   "notable": [
     {
       "id": 0,
-      "stake": "Commission votes to adopt Norwood's Land Use Code rewrite, reshaping local development rules."
+      "stake": "Ordinance vote could rewrite Norwood's development rules for years ahead."
     },
     {
       "id": 4,
-      "stake": "Board votes on resolutions backing Proposition NN and Amendment 87, and approves revised policies."
+      "stake": "Board votes on state ballot measure resolutions and two board policy second readings."
     },
     {
       "id": 5,
-      "stake": "Resolution would convert two affordable ownership units to employee dwellings, removing price caps."
+      "stake": "Resolution would convert two affordable ownership units, removing their maximum sale price."
     },
     {
       "id": 6,
-      "stake": "Three public hearings on second reading, including the 215 E. Colorado deed-restriction conversion."
+      "stake": "Public hearings and vote on converting deed-restricted affordable units at 215 E. Colorado."
+    },
+    {
+      "id": 7,
+      "stake": "Commission decides on leak check fee and six leak forgiveness requests affecting water bills."
     },
     {
       "id": 11,
-      "stake": "Continued public hearing on adopting new county building codes affecting all future construction."
+      "stake": "Continued public hearing on new building codes plus 2027 nonprofit funding allocations."
     }
   ]
 }

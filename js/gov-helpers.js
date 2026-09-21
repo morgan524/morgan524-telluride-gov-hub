@@ -441,7 +441,19 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-10-01|Special Meeting - Planning & Zoning Commission - Oct 01 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8311","sv":4,"ph":"2fd1b49da7dccc7b"}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8311","sv":4,"ph":"2fd1b49da7dccc7b"},
+
+  "rico|2026-10-21|Rico Board of Trustees Regular Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "telluride|2026-10-21|Historic & Architectural Review Commission Chair - Oct 21 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8025","sv":4,"ph":"c951089001cb45c2"},
+
+  "telluride|2026-10-21|Historic & Architectural Review Commission - Oct 21 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024","sv":4,"ph":"daa04abd52ac6b2a"},
+
+  "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083","sv":4,"ph":"bd74d669e41a67a8"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -793,14 +805,8 @@ const MEETING_PREVIEWS = {
   "county|2026-09-30|Board of County Commissioners Work Session":
     "Commissioners are expected to discuss county procurement matters, including material hauling, trail construction for the Lawson Hill Connector, fuel island canopy construction, and jail painting projects. Additional administrative and operational items may also be addressed during the work session.",
 
-  "norwood|2026-09-21|Planning and Zoning Commission Meeting":
-    "The commission is expected to discuss and consider adopting Phase 1 of the Land Use Code updates, including reviewing draft code amendments outlined in Ordinance No. ___ Series 2026. Members will also approve minutes from the July 20 meeting.",
-
   "norwood|2026-09-22|NWC Amended":
     "The Norwood Water Commission will consider multiple leak forgiveness requests from residential and commercial customers, review a final draft report on raw water delivery and storage alternatives, discuss implementing a leak check fee, and address a code of conduct complaint involving an executive legal session.",
-
-  "telluride|2026-09-21|Gondola Subcommittee - Sep 21 2026":
-    "The Gondola Advisory Committee will consider approving the August 17 meeting summary and receive updates on SMART progress. Members will also hear a presentation comparing CIG versus locally-led project evaluation approaches and preview items for the upcoming September Leadership Committee meeting.",
 
   "school|2026-09-22|Telluride Board of Education Work Session":
     "Board members are expected to discuss CASB planning, staff and student lunch schedules, Telluride Education Foundation magnet grants, a housing update, and the timeline for appointing a 2026 student Board of Education representative.",
@@ -811,11 +817,17 @@ const MEETING_PREVIEWS = {
   "mv|2026-10-01|Design Review Board":
     "Board will consider final architecture review for a 15-unit employee apartment building at 306 Adams Ranch Road, continued from September. Members will also receive a voting procedure update and approve meeting summaries from August and September sessions.",
 
-  "telluride|2026-09-21|Open Space Commission Site Walk - Sep 21 2026":
-    "The Open Space Commission will conduct a site walk to discuss restoration planning for Zone 1 of the Bear Creek Preserve and review the Reach 3 River Restoration Project at the Mill Creek Confluence on the Valley Floor Open Space, with input from environmental consultants.",
-
   "telluride|2026-10-01|Special Meeting - Planning & Zoning Commission - Oct 01 2026":
-    "The Planning & Zoning Commission is expected to discuss the Colorado Wildfire Resiliency Code amendment to Telluride's Land Use Code, following Town Council's passage of Ordinance #1640 on August 11, 2026, which amended Chapter 18 of the Municipal Code to implement wildfire resiliency standards."
+    "The Planning & Zoning Commission is expected to discuss the Colorado Wildfire Resiliency Code amendment to Telluride's Land Use Code, following Town Council's passage of Ordinance #1640 on August 11, 2026, which amended Chapter 18 of the Municipal Code to implement wildfire resiliency standards.",
+
+  "telluride|2026-10-21|Historic & Architectural Review Commission Chair - Oct 21 2026":
+    "The Historic & Architectural Review Commission is expected to convene its regular October 2026 meeting. Specific agenda items are not detailed in available materials, but the commission typically reviews applications related to historic preservation and architectural standards within the Town of Telluride.",
+
+  "telluride|2026-10-21|Historic & Architectural Review Commission - Oct 21 2026":
+    "The Historic and Architectural Review Commission is expected to review applications for Certificates of Appropriateness related to proposed construction, renovation, demolition, or alterations to structures within Telluride. The commission may also address matters related to historic designation and preservation standards under its regular oversight responsibilities.",
+
+  "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026":
+    "The Telluride Parks & Recreation Commission is expected to meet on October 21, 2026, to address community recreation and parks needs. Specific agenda items have not been publicly detailed, but the Commission typically interprets community desires for parks services and guides related municipal planning decisions."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1032,8 +1044,8 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#42052"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-20';
-const LEGAL_NOTICES_CACHE_DATE = '2026-09-19';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-21';
+const LEGAL_NOTICES_CACHE_DATE = '2026-09-21';
 
 const MANUAL_SUMMARIES = {
   "county|2026-08-26|Board of County Commissioners Work Session":
@@ -1331,7 +1343,19 @@ const MANUAL_SUMMARIES = {
     "The October 20, 2026 Ophir General Assembly Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-10-01|Special Meeting - Planning & Zoning Commission - Oct 01 2026":
-    "The October 1, 2026 Special Meeting — Planning & Zoning Commission agenda hasn't been posted yet."
+    "The October 1, 2026 Special Meeting — Planning & Zoning Commission agenda hasn't been posted yet.",
+
+  "rico|2026-10-21|Rico Board of Trustees Regular Meeting":
+    "The October 21, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-10-21|Historic & Architectural Review Commission Chair - Oct 21 2026":
+    "The October 21, 2026 HARC Chair agenda hasn't been posted yet.",
+
+  "telluride|2026-10-21|Historic & Architectural Review Commission - Oct 21 2026":
+    "The October 21, 2026 HARC agenda hasn't been posted yet.",
+
+  "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026":
+    "The October 21, 2026 Parks & Recreation Commission agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2652,42 +2676,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Community laces up for Imogene Pass Run",
-    source: "Telluride Times",
-    date: "September 7, 2026",
-    firstSeen: "2026-09-07",
-    newsTopic: "health",
-    copy: "The 53rd Imogene Pass Run heads out from Ouray on Sept. 12, covering 17.1 miles over 13,114-foot Imogene Pass into Telluride. The nonprofit race has run every year since 1974, including through COVID, with Alpine Bank as its sole sponsor. An 85-year-old from Austria is among this year's field; volunteers still needed at the Telluride finish line.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_e087c8fa-7441-4774-8cfa-07a104664708.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/c4/9c4098ac-9c48-4da0-9c30-ec5528347595/6a9f138c04687.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "The poorest in the US can't find housing even as low-income units sit empty",
-    source: "Telluride Times",
-    date: "September 7, 2026",
-    firstSeen: "2026-09-07",
-    newsTopic: "housing",
-    copy: "Units labeled \"affordable\" are sitting empty across the U.S. because they're priced for people earning 50% or more of area median income — not the truly destitute. Only about 4 million units exist for 11 million extremely low-income households. The math just doesn't pencil out for the poorest renters.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_1c74a971-d601-50d1-99f0-2dfea295d81c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/69/469a56a3-19f3-57b6-9da3-2fe2321495f1/6a9ea2100b599.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "A ‘chill’ send-off to summer",
-    source: "Telluride Times",
-    date: "September 7, 2026",
-    firstSeen: "2026-09-07",
-    newsTopic: "recreation",
-    copy: "The Meditations, the legendary Jamaican reggae group formed in the 1970s, play the Sheridan Opera House on Sept. 11 at 8 p.m. Then on Sept. 24, Grand Junction's Mariachi San Jose wraps up the outdoor season with a free 5–7 p.m. show on the SHOW Bar patio at Oak St. Park.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_77351a5e-1b32-4f69-8a4e-e0d4abf6dfbe.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/0d/80dfeded-ab3d-4daa-8da9-41643d803bd3/6a9b20d38ee5f.image.png",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride to Lift All Fire Restrictions",
     source: "Town of Telluride",
     date: "September 17, 2026",
@@ -2793,7 +2781,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Fire Restrictions Lifted in Ridgway - September, 17, 2026",
     source: "Town of Ridgway",
-    date: "September 20, 2026",
+    date: "September 21, 2026",
     firstSeen: "2026-09-17",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2837,7 +2825,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "September 20, 2026",
+    date: "September 21, 2026",
     firstSeen: "2026-09-11",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2848,7 +2836,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "September 20, 2026",
+    date: "September 21, 2026",
     firstSeen: "2026-09-14",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2870,7 +2858,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Ridgway Rescinds Stage 2 Fire Restrictions, Reinstates Stage 1 Fire Restrictions effective 12:01am on Thursday, Sept. 3rd - Sept. 2, 2026",
     source: "Town of Ridgway",
-    date: "September 20, 2026",
+    date: "September 21, 2026",
     firstSeen: "2026-09-09",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -4061,24 +4049,6 @@ const CLUB_RED_SHOWS = [];
 const FRESH_FOOD_HUB_EVENTS = [];
 const SHERBINO_EVENTS = [
   {
-    title: "Native Rhythms, Native Jazz: R. Carlos Nakai, AmoChip Dabney, & Will Clipman – at the Montrose Pavilion",
-    href: "https://sherbino.org/event/native-rhythms-native-jazz-r-carlos-nakai-at-the-montrose-pavilion/",
-    date: "2026-09-15 18:30:00",
-    endDate: "2026-09-15 20:30:00",
-    location: "montrose pavilion, Montrose",
-    copy: "@ BUY TICKETS Doors: 6:00 PM ||  Show: 6:30 PM – This show is at the Montrose Pavilion, brought to you in partnership by The Sherbino and Weehawken Creative Arts Native Rhythms, Native Jazz: The Genre-Bending Journey of R. Carlos Nakai, AmoChip Dabney, and Will Clipman  $25 in advance General Admission (GA) Seats || $30 in advance for reserved section seats (no longer available day-of-show) || $32 GA day of show || $21 GA SENIOR (65 or older) || (you will select the actual seat in the diagram below to purchase reserved section seats. If you want GA seats, just scroll below the map to buy GA seats) Where Tradition Meets Innovation, and Boundaries Dissolve in Sound Amidst the vast tapestry of American music, few collaborations illustrate the spirit of genre-bending innovation as vividly as that of R. Carlos Nakai, AmoChip Dabney, and Will Clipman. …",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/04/R-Carlos-Native-Rythms-Native-Jazz-banner.png"
-  },
-  {
-    title: "The Sherbino Presents: \"Out There, a National Park Story\" film celebrating the National Park Service's 110th birthday",
-    href: "https://sherbino.org/event/the-sherbino-presents-out-there-a-national-park-story-film-celebrating-the-national-park-services-110th-birthday/",
-    date: "2026-09-16 18:30:00",
-    endDate: "2026-09-16 20:30:00",
-    location: "The Sherbino, Ridgway",
-    copy: "Celebrate America's public lands with Out There: A National Parks Story. Join us at the Sherbino Theatre on Wednesday, September 16, 2026, for this award-winning documentary. Doors open at 6:00 p.m., the 75-minute film begins at 6:30 p.m. Tickets are $10. @ Doors: 6:00 PM || Film: 6:30 PM || Tickets: $10 in advance || $12 at the doorSetting: Seated at The Sherbino What does real, large-scale ecosystem restoration look like? In the centennial year of the U.S. National Park Service, a young filmmaker and his childhood friend set off on a 10,000-mile journey through America’s national parks, leaving home with little more than a camera and a desire to understand what connects people to these wild places. What begins as a summer road trip becomes a seven-year odyssey, capturing untold stories of those who protect, visit, and find healing in the parks. …",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/07/2026-sherb-event-banners-46.png"
-  },
-  {
     title: "The Courtyard at 610 Presents: Alex Dunn & Mimi Genheimer",
     href: "https://sherbino.org/event/the-courtyard-at-610-presents-alex-dunn/",
     date: "2026-09-20 18:30:00",
@@ -4102,7 +4072,7 @@ const SHERBINO_EVENTS = [
     date: "2026-09-29 18:30:00",
     endDate: "2026-09-29 20:00:00",
     location: "The Sherbino, Ridgway",
-    copy: "Join us at the Sherbino Theatre on Tuesday, September 29, 2026, for Episode 1 of this award-wining docuseries on our watersheds. Doors open at 6:00 p.m., the film begins at 6:30 p.m., a panel discussion follows. Tickets are $10. @ Doors: 6:00 PM || Film: 6:30 PM || Tickets: $10 in advance Setting: Seated at The Sherbino Doors: 6:00 Film: 6:30 followed by a discussion with the filmmaker Renea Roberts, and Jake Kurzweil, PH.D., Hydrologist with the Mountain Studies Institute & Uncompahgre Watershed Partnership.Part biography, part how-to, “Water Wizard” Bill Zeedyk and his allies illustrate a proven toolbox of simple low-tech, low-cost methods to restore degraded lands. They work with Nature, rather than against her, to gird against the extremes of drought and flood while fostering climate resiliency. We’ll be screening: Episode 1: “Willing to Try Things\"  Today, “water wizard” Bill Zeedyk is a legend in the ecological restoration community. …",
+    copy: "Join us at the Sherbino Theatre on Tuesday, September 29, 2026, for Episode 1 of this award-wining docuseries on our watersheds. Doors open at 6:00 p.m., the film begins at 6:30 p.m., a panel discussion follows. Tickets are $10. @ Doors: 6:00 PM || Film: 6:30 PM || Tickets: $10 in advance Setting: Seated at The Sherbino Doors: 6:00 Film: 6:30 followed by a panel discussion with Amanda Clements, Uncompahgre Watershed Partnership – Board Chair; Ecology background and 20 years with BLM || Tanner Banks, Trout Unlimited – Restoration Program Manager || Fred Phillips, Fred Phillips Consulting – Landscape Architect, Plans-Designs-Implements wetland, habitat and stream restoration projects || & Renea Roberts, Filmmaker/ModeratorPart biography, part how-to, “Water Wizard” Bill Zeedyk and his allies illustrate a proven toolbox of simple low-tech, low-cost methods to restore degraded lands. …",
     imageUrl: "https://sherbino.org/wp-content/uploads/2026/08/Thinking-like-water-banner.png"
   },
   {
@@ -4148,8 +4118,25 @@ const SHERBINO_EVENTS = [
     endDate: "2026-10-13 12:00:00",
     location: "Ridgway, CO",
     copy: "",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
-    description: "A recurring monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The event offers a casual space for veterans to connect with one another and with community support."
+    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png"
+  },
+  {
+    title: "Talk: The Sherbino Presents: India Wood's HIKING THE COLORADO X",
+    href: "https://sherbino.org/event/talk-the-sherbino-presents-india-woods-hiking-the-colorado-x/",
+    date: "2026-10-15 18:30:00",
+    endDate: "2026-10-15 20:00:00",
+    location: "The Sherbino, Ridgway",
+    copy: "🏔️ Join us at the Sherbino on Thursday, October 15th for an inspiring talk with India Wood on her 1,500 mile journey. Doors at 6 pm | Talk at 6:30 pm | $10 @ Doors open at 6:00 PM | Talk begins at 6:30 PM | $10 Join India Wood for wild stories about backpacking her own route along a 1,500-mile X across Colorado. Be inspired by one woman’s solo adventure and hear her observations of this state as a square sample of our planet. ********************************************* Join India for a showing of the short “Diagonal” documentary, slide show, and stories about backpacking the Colorado X, a walk no one else had ever done. She was a 50-something empty nester, unfit, her career and marriage falling apart when she decided to learn to stand on her own two feet again. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/India-Wood-Talk-Banner-Oct-15.png"
+  },
+  {
+    title: "Mountainfilm on Tour – Montrose",
+    href: "https://sherbino.org/event/mountainfilm-on-tour-montrose-adventure-shorts/",
+    date: "2026-10-18 15:00:00",
+    endDate: "2026-10-18 17:00:00",
+    location: "The Sherbino, Ridgway",
+    copy: "@ Doors: 2:30 PM || Films: 3 PM || General Admission in advance: $15 student/senior / $20 adult || GA at door: $18 student/senior / $23 adultSetting and Location: Seated at the Montrose PavilionLimited Bar Available (cards only) Mountainfilm on Tour: Adventure Shorts Mountainfilm on Tour returns to Montrose with an afternoon of inspiring, action-packed short films celebrating adventure, exploration, resilience, and the people who push the boundaries of what is possible. This year’s program is themed Adventure and features a handpicked collection of documentary shorts from the renowned Mountainfilm Festival in Telluride, Colorado. Expect incredible landscapes, remarkable athletes, bold expeditions, and stories that capture the indomitable spirit at the heart of outdoor adventure. Whether the films take us climbing, skiing, biking, paddling, running, or exploring far beyond the familiar, the Adventure Shorts program is designed to leave audiences energized, inspired, and ready to dream a little bigger. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/sherb-and-wca-EVENT-BANNERS-3.png"
   }
 ];
 
@@ -4938,7 +4925,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/floating-lotus-trivia-night",
     description: "Trivia Night at Floating Lotus Brewery! Join us on the 1st & 3rd Thursdays from 7–9 PM for a lively night of questions, drinks, and friendly competition. Grab a table, bring your team, and learn more at floatinglotusbrewery.com. View on site | Email this event",
     pubDate: "2026-10-02T01:00:00.000Z",
-    endDate: "2026-11-06",
+    endDate: "2026-11-20",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5718,28 +5705,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Movies Under the Stars",
-    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    pubDate: "2026-09-19T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
-  },
-  {
-    title: "Mind Blown Telluride",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
-    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
-    pubDate: "2026-09-19T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
-  },
   {
     title: "Sunday Rehab at Alloy Kitchen",
     link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
@@ -6847,24 +6812,6 @@ const LEGAL_NOTICES = [
     url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=159",
     address: "",
     smcBidID: "159"
-  },
-  {
-    title: "Notice of Opportunity to Object -- South Uncompahgre Hazardous Fuels and Ecological Resiliency Project (SUHFER)",
-    entity: "USDA Forest Service, Grand Mesa, Uncompahgre and Gunnison National Forests",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The USDA Forest Service Grand Mesa, Uncompahgre and Gunnison National Forests (Norwood and Ouray Ranger Districts) has prepared a Final Environmental Assessment and Draft Decision Notice for the 267,300-acre SUHFER Project on the Uncompahgre Plateau. The project establishes a 20-year Condition-Based Management framework for silvicultural treatments, hazardous fuels reduction, and wildlife habitat improvements to increase forest resilience against wildfire, insects, and disease. Eligible parties who previously submitted written comments may file a pre-decisional objection within 45 calendar days of the August 6, 2026 publication date.",
-    deadline: "2026-09-20",
-    expires: "2026-09-20",
-    dates: "8/6",
-    papers: ["ttimes_0806"],
-    url: "https://www.telluridenews.com/news/legals/article_509a3235-e766-47bd-b880-643207e48e0f.html",
-    address: "Uncompahgre Plateau, Norwood and Ouray Ranger Districts, Grand Mesa, Uncompahgre and Gunnison National Forests, Colorado",
-    noticeKey: "SUHFER-objection-2026"
   },
   {
     title: "Request for Proposal -- Lawson Hill Connector Trail Project",

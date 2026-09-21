@@ -134,26 +134,6 @@
     "smcBidID": "159"
   },
   {
-    "title": "Notice of Opportunity to Object -- South Uncompahgre Hazardous Fuels and Ecological Resiliency Project (SUHFER)",
-    "entity": "USDA Forest Service, Grand Mesa, Uncompahgre and Gunnison National Forests",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "The USDA Forest Service Grand Mesa, Uncompahgre and Gunnison National Forests (Norwood and Ouray Ranger Districts) has prepared a Final Environmental Assessment and Draft Decision Notice for the 267,300-acre SUHFER Project on the Uncompahgre Plateau. The project establishes a 20-year Condition-Based Management framework for silvicultural treatments, hazardous fuels reduction, and wildlife habitat improvements to increase forest resilience against wildfire, insects, and disease. Eligible parties who previously submitted written comments may file a pre-decisional objection within 45 calendar days of the August 6, 2026 publication date.",
-    "deadline": "2026-09-20",
-    "expires": "2026-09-20",
-    "dates": "8/6",
-    "papers": [
-      "ttimes_0806"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_509a3235-e766-47bd-b880-643207e48e0f.html",
-    "address": "Uncompahgre Plateau, Norwood and Ouray Ranger Districts, Grand Mesa, Uncompahgre and Gunnison National Forests, Colorado",
-    "noticeKey": "SUHFER-objection-2026"
-  },
-  {
     "title": "Request for Proposal -- Lawson Hill Connector Trail Project",
     "entity": "San Miguel County",
     "entityClass": "ent-county",
