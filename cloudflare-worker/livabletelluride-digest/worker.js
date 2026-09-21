@@ -471,6 +471,86 @@ async function saveDigest(body, env) {
   return { ok: true, locked: true, weekStart };
 }
 
+
+// ── Scheduled send (Cloudflare Cron Trigger) ────────────────────────────────
+// The approved digest used to go out ONLY from digest-scheduled-send.yml on a
+// GitHub Actions cron — and GitHub's scheduler drops or delays top-of-hour
+// crons by hours (documented in that workflow; the 2026-09-21 Week Ahead had
+// zero runs by 9:17 AM and went out by hand). Cloudflare cron triggers fire on
+// the minute, so the Worker now owns the 9:00 AM MT send and the GitHub
+// workflow is the backup — both apply the same gates, and whichever runs
+// second is a no-op thanks to the duplicate gate. (Morgan, 2026-09-21: "fix
+// this issue for all future ones.")
+//
+// Gates, identical to the workflow: right weekday (Mon → weekly, Fri →
+// weekend) at/after 09:00 America/Denver; an approval lock whose weekStart
+// matches the manifest; the subject not already in data/sent-broadcasts.json;
+// the HTML neither tiny, bloated (>120 KB) nor carrying data:image payloads.
+// Everything is read from the repo's main branch via the Contents API so a
+// CDN-cached copy can never send a stale file.
+async function ghGetText(env, path) {
+  const repo = (env.GITHUB_REPO || "morgan524/morgan524-telluride-gov-hub").trim();
+  const r = await fetch("https://api.github.com/repos/" + repo + "/contents/" + path + "?ref=main", {
+    headers: { "Authorization": "Bearer " + env.GITHUB_TOKEN, "Accept": "application/vnd.github+json", "User-Agent": "livabletelluride-digest-worker" },
+  });
+  if (r.status === 404) return null;
+  if (!r.ok) throw new Error("GitHub " + r.status + " reading " + path);
+  const j = await r.json();
+  return fromB64(j.content);
+}
+
+// Tripwire: a failed or skipped-when-due scheduled send must be LOUD. Opens (or
+// comments on) a GitHub issue so it lands in the same place the other bots report.
+async function ghRaiseIssue(env, title, body) {
+  const repo = (env.GITHUB_REPO || "morgan524/morgan524-telluride-gov-hub").trim();
+  const headers = { "Authorization": "Bearer " + env.GITHUB_TOKEN, "Accept": "application/vnd.github+json", "User-Agent": "livabletelluride-digest-worker", "Content-Type": "application/json" };
+  const q = await fetch("https://api.github.com/search/issues?q=" + encodeURIComponent('repo:' + repo + ' is:issue is:open in:title "' + title + '"'), { headers });
+  const found = q.ok ? (await q.json()) : null;
+  const num = found && found.items && found.items[0] && found.items[0].number;
+  const r = num
+    ? await fetch("https://api.github.com/repos/" + repo + "/issues/" + num + "/comments", { method: "POST", headers, body: JSON.stringify({ body }) })
+    : await fetch("https://api.github.com/repos/" + repo + "/issues", { method: "POST", headers, body: JSON.stringify({ title, body }) });
+  if (!r.ok) console.warn("ghRaiseIssue: GitHub " + r.status + " (does the Worker's GITHUB_TOKEN have Issues: write?)");
+}
+
+function denverParts(d) {
+  const f = new Intl.DateTimeFormat("en-US", { timeZone: "America/Denver", weekday: "short", hour: "numeric", hour12: false });
+  const parts = Object.fromEntries(f.formatToParts(d).map(p => [p.type, p.value]));
+  return { weekday: parts.weekday, hour: parseInt(parts.hour, 10) % 24 };
+}
+
+async function scheduledSend(env) {
+  const { weekday, hour } = denverParts(new Date());
+  const key = weekday === "Mon" ? "weekly" : weekday === "Fri" ? "weekend" : null;
+  if (!key) return { skipped: "not Mon/Fri in Denver (" + weekday + ")" };
+  if (hour < 9) return { skipped: "before 09:00 Denver (hour " + hour + ")" };
+  if (!env.GITHUB_TOKEN) throw new Error("GITHUB_TOKEN not configured on the Worker");
+
+  const man = JSON.parse(await ghGetText(env, "digest/manifest.json") || "{}");
+  const d = man.digests && man.digests[key];
+  if (!d) throw new Error("manifest has no '" + key + "' digest");
+  const subject = d.subject, weekStart = d.weekStart || "";
+
+  const lockText = await ghGetText(env, "digest/" + key + ".lock.json");
+  if (!lockText) return { skipped: "no approval lock for " + key + " — nothing was approved on the Review Desk", due: true };
+  const lock = JSON.parse(lockText);
+  if (lock.weekStart && weekStart && lock.weekStart !== weekStart) {
+    return { skipped: "stale approval lock (lock " + lock.weekStart + " vs manifest " + weekStart + ")", due: true };
+  }
+  let sent = [];
+  try { sent = JSON.parse(await ghGetText(env, "data/sent-broadcasts.json") || "[]"); } catch (e) {}
+  if (sent.some(x => x && x.subject === subject)) return { skipped: "already sent (duplicate gate): " + subject };
+
+  const html = await ghGetText(env, d.file);
+  if (!html || html.length < 2000) throw new Error(d.file + " looks too small (" + (html ? html.length : 0) + " bytes)");
+  if (html.includes("data:image")) throw new Error(d.file + " contains inline data:image payloads — re-approve at the Review Desk");
+  if (html.length > 120000) throw new Error(d.file + " is " + html.length + " bytes — over the 120 KB clip limit");
+
+  const r = await send({ emailHtml: html, subject, key, test: false }, env);
+  if (!r || !r.ok) throw new Error("send failed: " + JSON.stringify(r).slice(0, 300));
+  return { sent: true, key, subject, blog: r.blog };
+}
+
 export default {
   async fetch(request, env) {
     const origin = request.headers.get("Origin") || "";
@@ -504,6 +584,25 @@ export default {
       return json({ error: "not found" }, 404, origin);
     } catch (e) {
       return json({ error: String((e && e.message) || e) }, 500, origin);
+    }
+  },
+
+  // Cron Triggers (wrangler.toml [triggers]). Runs the gated scheduled send.
+  async scheduled(event, env, ctx) {
+    const stamp = new Date().toISOString();
+    try {
+      const out = await scheduledSend(env);
+      console.log("scheduled send " + stamp + ": " + JSON.stringify(out));
+      if (out.skipped && out.due) {
+        ctx.waitUntil(ghRaiseIssue(env, "🚨 Digest did not send (Worker cron)",
+          "The scheduled send window passed at " + stamp + " but nothing went out.\n\nReason: " + out.skipped +
+          "\n\nApprove the digest on the Review Desk, then run `gh workflow run digest-scheduled-send.yml -f digest=" + (out.key || "weekly") + " -f confirm=SEND` or wait for the next cron."));
+      }
+    } catch (e) {
+      const msg = String((e && e.message) || e);
+      console.error("scheduled send " + stamp + " FAILED: " + msg);
+      ctx.waitUntil(ghRaiseIssue(env, "🚨 Digest scheduled send failed (Worker cron)",
+        "The Worker's cron send threw at " + stamp + ":\n\n```\n" + msg + "\n```\nThe GitHub backup (digest-scheduled-send.yml) may still send it; otherwise run it with confirm=SEND."));
     }
   },
 };

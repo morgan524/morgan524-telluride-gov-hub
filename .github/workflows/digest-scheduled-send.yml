@@ -1,5 +1,13 @@
 name: Digest Scheduled Send
 
+# BACKUP path since 2026-09-21. The PRIMARY 9:00 AM MT send now runs from a
+# Cloudflare Cron Trigger on the digest Worker (cloudflare-worker/
+# livabletelluride-digest — scheduled() in worker.js, [triggers] in
+# wrangler.toml), which fires on the minute; this workflow's GitHub crons were
+# being dropped or delayed by hours (see below). Both apply the same gates, so
+# whichever runs second is a no-op via the duplicate gate. Keep this workflow:
+# it is the retry if the Worker send fails, and confirm=SEND is the manual path.
+#
 # Sends an APPROVED digest at 9:00 AM America/Denver:
 #   - Monday → the "Week Ahead" (weekly) digest
 #   - Friday → the "Weekend Ahead" (weekend) digest (events only)

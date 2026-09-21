@@ -8,3 +8,14 @@ account_id = "8f020e73de4e9956f0e3ad7dce070ef4"
 # Worker secrets (ANTHROPIC_API_KEY, CUSTOMERIO_APP_API_KEY,
 # CUSTOMERIO_BROADCAST_ID, DIGEST_KEY) from the same-named GitHub Actions secrets.
 # URL after deploy: https://livabletelluride-digest.morgan-8f0.workers.dev
+
+# Scheduled send — 9:00 AM America/Denver on Monday (Week Ahead) and Friday
+# (Weekend Ahead). Cloudflare crons are UTC with no DST, so both the MDT and
+# MST candidates are listed; the Worker's scheduled() handler checks the Denver
+# hour (skips before 09:00) and the sent ledger (a second firing after a send
+# is a no-op), so exactly one broadcast goes out per approved digest. 15:30 is
+# a same-morning retry if the 9:00 attempt hit a transient error. Moved here
+# from digest-scheduled-send.yml's GitHub cron (kept as backup) on 2026-09-21
+# because GitHub's scheduler drops/delays top-of-hour crons by hours.
+[triggers]
+crons = ["0 15 * * 1,5", "30 15 * * 1,5", "0 16 * * 1,5"]
