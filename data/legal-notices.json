@@ -424,5 +424,65 @@
     "url": "https://www.telluridenews.com/news/legals/article_6e1025d7-5ad7-45a9-8530-2bda61ea94b8.html",
     "address": "Lots 320A & 320B, Lawson Hill PUD, San Miguel County, CO (Parcels #456532416079 & #456532416080)",
     "noticeKey": "lot-line-adj-lawson-hill-320A-320B-COL000239"
+  },
+  {
+    "title": "Public Hearing -- Adoption of 2024 International Building Code & Colorado Low Energy & Carbon Code (COL-000222)",
+    "entity": "San Miguel County Board of Commissioners",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "The San Miguel County Board of Commissioners will hold a public hearing on September 16, 2026 at 9:00 AM in Telluride to consider adopting the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Written comments must be received by noon on September 10, 2026 and should be limited to one page. Proposed amendments are available in the meeting agenda packet at www.sanmiguelcountyco.gov.",
+    "deadline": "2026-09-10T12:00:00 (written comments); Hearing: 2026-09-16T09:00:00",
+    "expires": "2026-09-16",
+    "dates": "8/27",
+    "papers": [
+      "ttimes_0827"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    "address": "Telluride, Colorado (San Miguel County)",
+    "noticeKey": "COL-000222"
+  },
+  {
+    "title": "RFP -- Fuel Island Canopy Construction, Norwood Road & Bridge Maintenance Yard (COL-000219)",
+    "entity": "San Miguel County Road & Bridge Department",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County Road & Bridge is seeking qualified contractors to design, engineer, permit, and construct a fuel island canopy at the Norwood Road & Bridge Maintenance Yard located at 39595 Highway 145, Norwood, CO. A pre-proposal site meeting was held August 24, 2026; written questions were due August 26, 2026. Proposals must be submitted electronically by September 3, 2026 at 4:00 PM, with contractor selection notification on September 7, 2026.",
+    "deadline": "2026-09-03T16:00:00",
+    "expires": "2026-09-03",
+    "dates": "8/27",
+    "papers": [
+      "ttimes_0827"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    "address": "39595 Highway 145, Norwood, CO 81423",
+    "noticeKey": "COL-000219"
+  },
+  {
+    "title": "RFP -- San Miguel County Jail Repainting, Illium (COL-000224)",
+    "entity": "San Miguel County Fleet & Facilities Department",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County is requesting proposals from contractors to repaint the San Miguel County Jail located at 684 County Road 63L, Telluride (Illium), CO. RFP documents are available at the county website or the Fleet & Facilities Department at 333 W. Colorado Ave, 2nd Floor, Telluride. Proposals are due by 5:00 PM on Friday, September 18, 2026, submitted either by email or in person at the Fleet & Facilities Department.",
+    "deadline": "2026-09-18T17:00:00",
+    "expires": "2026-09-18",
+    "dates": "8/27",
+    "papers": [
+      "ttimes_0827"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    "address": "684 County Road 63L, Telluride, CO 81435",
+    "noticeKey": "COL-000224"
   }
 ]

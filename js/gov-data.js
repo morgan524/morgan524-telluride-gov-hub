@@ -153,7 +153,7 @@ const COUNTY_CACHED_DATA = [
   },
   {
     date: "October 7, 2026",
-    time: "10:00 AM",
+    time: "9:30 AM",
     title: "Board of County Commissioners Meeting",
     type: "bocc",
     location: "5634 Cty Road H1, Egnar Fire Station, Egnar, CO 81325",
