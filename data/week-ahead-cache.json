@@ -1,14 +1,14 @@
 {
-  "hash": "a6c1499cdd3e9bbc365606cb7580093a7e1ab4c5",
-  "lede": "The biggest thing on the civic calendar this week is Monday's Norwood Planning and Zoning meeting, where commissioners are set to formally adopt Phase I of a Land Use Code rewrite — the kind of decision that quietly shapes development for years to come. Telluride Town Council meets Monday and Tuesday with a full plate: a deed-restriction conversion at 215 East Colorado that would remove the price cap on two affordable units, plus public hearings on related ordinances. The County commissioners take up a continued public hearing on adopting updated international building codes and will hear a preview of 2027 nonprofit funding allocations.",
+  "hash": "c9a6127a2a6a3334b5ca79572eb19495e3edfce7",
+  "lede": "The biggest thing on the calendar this week is Monday's Norwood Planning and Zoning Commission meeting, where the town takes up Phase I of its Land Use Code rewrite — the kind of foundational change that sets the rules on development and density for years to come. Alongside that, Tuesday is dense with decisions: Town Council holds public hearings on converting two affordable units at 215 East Colorado from price-capped ownership to employee dwelling units, the School Board votes on resolutions backing Proposition NN and Amendment 87 plus second-reading policy approvals, and the Housing Authority takes up the same deed-restriction conversion. Tuesday the BOCC continues its public hearing on adopting updated international building codes and hashes out 2027 nonprofit funding allocations.",
   "notable": [
     {
       "id": 0,
-      "stake": "Ordinance vote could rewrite Norwood's development rules for years ahead."
+      "stake": "Phase I Land Use Code amendments up for formal adoption — sets Norwood's development rules."
     },
     {
       "id": 4,
-      "stake": "Board votes on state ballot measure resolutions and two board policy second readings."
+      "stake": "Board votes on ballot measure resolutions and second-reading policy approvals."
     },
     {
       "id": 5,
@@ -16,15 +16,15 @@
     },
     {
       "id": 6,
-      "stake": "Public hearings and vote on converting deed-restricted affordable units at 215 E. Colorado."
+      "stake": "Public hearings on deed-restriction conversion stripping price caps from two town housing units."
     },
     {
       "id": 7,
-      "stake": "Commission decides on leak check fee and six leak forgiveness requests affecting water bills."
+      "stake": "Commission weighs leak forgiveness requests and a new fee that formalizes system cost recovery."
     },
     {
       "id": 11,
-      "stake": "Continued public hearing on new building codes plus 2027 nonprofit funding allocations."
+      "stake": "Continued public hearing on new building codes and 2027 nonprofit funding allocation decisions."
     }
   ]
 }

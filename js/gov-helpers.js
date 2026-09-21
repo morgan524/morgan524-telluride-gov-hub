@@ -336,7 +336,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132","sv":4,"ph":"b2e198717ae40e47"},
 
   "telluride|2026-10-06|Town Council - Oct 06 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044","sv":4,"ph":"fc4bf58424de11fa"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044","sv":4,"ph":"2eb252493dc57431"},
 
   "mv|2026-10-07|Town Council Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -453,7 +453,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024","sv":4,"ph":"daa04abd52ac6b2a"},
 
   "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083","sv":4,"ph":"bd74d669e41a67a8"}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083","sv":4,"ph":"bd74d669e41a67a8"},
+
+  "county|2026-10-21|Board of County Commissioners Meeting":
+    {"sv":4,"ph":"49e704e3c3bab858"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -478,6 +481,14 @@ const DEEP_DIVE_UPDATES = [
 //   sourceUrl, topics: [] }. Rendered by hub-bub.html from the JSON mirror
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
+  {
+    date: "2026-09-21",
+    title: "Historic district meets wildfire code — now what?",
+    body: "The Historic and Architectural Review Commission has a special meeting September 30 to work out how Ordinance #1640 — the wildfire resiliency code Town Council passed August 11 — applies when someone needs a Certificate of Appropriateness for a structure in Telluride's historic district. That's where the tension lives. Wildfire resiliency standards can mean different materials, different landscaping, different design choices. Historic preservation rules often push the other direction. Neither goal is wrong. So how does a commission square them when they collide on the same property?",
+    choices: ["Safety standards have to come first", "Find a middle ground case by case", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
   {
     date: "2026-09-20",
     title: "Old buildings, new fire rules — something's got to give",
@@ -709,14 +720,6 @@ const DAILY_QUESTIONS = [
     choices: ["Wildlife protection comes first", "Public safety comes first", "We can balance both", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-08-22",
-    title: "Mountain Village weighing a workforce housing committee",
-    body: "The TMVOA Board is looking at forming a Workforce Housing Committee. Up here, that kind of body can mean real policy momentum — or it can mean a long runway before anything changes on the ground. People who think Mountain Village isn't moving fast enough on housing will see a new committee as a start. People skeptical of process will wonder whether another committee is action or a substitute for it. The board is also taking up a grant request for the TMV Ice Pad and updates on a Pond Improvement Plan — but it's the housing committee question that tends to split a room. So: does a new committee move the needle, or not?",
-    choices: ["Committees get things done", "It's just more process", "Depends on who's on it", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -827,7 +830,10 @@ const MEETING_PREVIEWS = {
     "The Historic and Architectural Review Commission is expected to review applications for Certificates of Appropriateness related to proposed construction, renovation, demolition, or alterations to structures within Telluride. The commission may also address matters related to historic designation and preservation standards under its regular oversight responsibilities.",
 
   "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026":
-    "The Telluride Parks & Recreation Commission is expected to meet on October 21, 2026, to address community recreation and parks needs. Specific agenda items have not been publicly detailed, but the Commission typically interprets community desires for parks services and guides related municipal planning decisions."
+    "The Telluride Parks & Recreation Commission is expected to meet on October 21, 2026, to address community recreation and parks needs. Specific agenda items have not been publicly detailed, but the Commission typically interprets community desires for parks services and guides related municipal planning decisions.",
+
+  "county|2026-10-21|Board of County Commissioners Meeting":
+    "Board will consider procurement matters including material hauling, trail construction, fuel island canopy, jail painting, and a multi-jurisdictional hazard mitigation plan update. Related legal notices include several probate estate creditor notices and a foreclosure sale in Telluride. An ECMC violation order against American Helium Operating LLC is also noted."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1355,7 +1361,10 @@ const MANUAL_SUMMARIES = {
     "The October 21, 2026 HARC agenda hasn't been posted yet.",
 
   "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026":
-    "The October 21, 2026 Parks & Recreation Commission agenda hasn't been posted yet."
+    "The October 21, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+
+  "county|2026-10-21|Board of County Commissioners Meeting":
+    "The October 21, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1748,6 +1757,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Council vote allows dogs on section of new River Trail",
+    source: "Telluride Times",
+    date: "September 21, 2026",
+    firstSeen: "2026-09-21",
+    newsTopic: "government",
+    copy: "Town Council voted to allow dogs on a small section of the River Trail being relocated onto the Valley Floor open space near the Public Works Facility. The trail move — about 1,000 linear feet — follows the old river channel and is meant to improve safety and winter grooming. Dogs were already allowed on the current trail, so most users won't notice a change.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_05fec48f-5e1e-482e-bd1f-8b1e2673ce60.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/6e/26e8b916-530b-4b76-b271-92afa9dc4c2c/6aacf1c7298fa.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "High fashion and higher ideals",
     source: "Telluride Times",
@@ -3897,37 +3918,70 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Gentle Yoga with Kristen Milord",
-    link: "https://telluridelibrary.libcal.com/event/16536459?hs=a",
-    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
-    pubDate: "2026-09-20T17:00:00.000Z",
+    title: "Book Buzz with the Pour Over Pedaler",
+    link: "https://telluridelibrary.libcal.com/event/16760151?hs=a",
+    description: "9:00 AM – 10:00 AM · Get the scoop on the hottest new titles at the library during Book Buzz ! Discover upcoming releases, hidden gems, and staff favorites while enjoying a complimentary handcrafted coffee from Luke of The Pour Over Pedaler . Come sip, socialize, and leave with your next great read!",
+    pubDate: "2026-09-21T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
+    location: "Lower Terrace - outdoors",
+    imageUrl: ""
   },
   {
-    title: "Glow with the Flow, with Britt Bradford",
-    link: "https://telluridelibrary.libcal.com/event/17424383?hs=a",
-    description: "1:00 PM – 3:00 PM · Britt Bradford is a botanical skin care formulator,That will show and share how to make a botanical skin care solution that works with wherever we are right now. Do you have a baby, do you have a teen, are you experiencing peri-menopause symptoms, there is something for everyone so you can glow with the flow.",
-    pubDate: "2026-09-20T19:00:00.000Z",
+    title: "Halloween Costume Swap for Kids and Adults",
+    link: "https://telluridelibrary.libcal.com/event/17677128?hs=a",
+    description: "9:00 AM – 10:00 AM · Drop your gently used costumes off in the children's area starting Sun, Sept 20th. Come grab new-to-you costumes from 4:00-6:00 Thursday, October 1st! Deje sus disfraces en buen estado en ecritorio pricipal a partir del domingo 20 de septiembre &iexcl;Ven a buscar disfraces nuevos para ti de 4:00 a 6:00 pm el jueves 1 de octubre!",
+    pubDate: "2026-09-21T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_12_40_34.jpg"
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_25_16_43_32.jpg"
   },
   {
-    title: "CANCELLEDTea and Tarot",
-    link: "https://telluridelibrary.libcal.com/event/17029773?hs=a",
-    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
-    pubDate: "2026-09-20T20:30:00.000Z",
+    title: "Musik 4 Kinders",
+    link: "https://telluridelibrary.libcal.com/event/17515441?hs=a",
+    description: "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. &iexcl;M&uacute;sica, Movimiento, y Aprendizaje Alegre para ni&ntilde;os! Este programa ser&aacute; en la sala de programas.",
+    pubDate: "2026-09-21T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png"
+  },
+  {
+    title: "Savvy Seniors-Open Tech",
+    link: "https://telluridelibrary.libcal.com/event/17029828?hs=a",
+    description: "1:30 PM – 2:30 PM · Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone.",
+    pubDate: "2026-09-21T19:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Meeting Room #6 - large",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_12_54_05.png"
+  },
+  {
+    title: "Silent Trivia / Trivia Silenciosa",
+    link: "https://telluridelibrary.libcal.com/event/17514736?hs=a",
+    description: "4:00 PM – 5:00 PM · Trivia, riddles, puzzles, and prizes! &iexcl;Trivia, adivinanzas, rompecabezas, y premios!",
+    pubDate: "2026-09-21T22:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Teen Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_25_16_07_34.png"
+  },
+  {
+    title: "America 250/Colorado 150 Book Club: The Survivors of the Clotilda",
+    link: "https://telluridelibrary.libcal.com/event/17306751?hs=a",
+    description: "5:30 PM – 7:00 PM · Join the Telluride Historical Museum and Wilkinson Public Library for a deep dive into some of the threads that make up the tapestry of Colorado&#39;s and the United States of America&#39;s history as we celebrate Colorado&#39;s 150th year as state and USA&#39;s 250th year as an independent country. This month the book discussion will be lead by Kiernan Lannon, Telluride Historical Museum Director on Monday, September 21st at 5:30 pm! The featured book is The Survivors of the Clotilda : The Lost Stories of the Last Captives of the American Slave Trade by Hannah Durkin. You can check out the book from the library or purchase to book from Between the Covers Bookstore for 10% off! …",
+    pubDate: "2026-09-21T23:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Magazine Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_31_15_52_39.jpg"
   }
 ];
 
@@ -4376,72 +4430,16 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "4th Annual San Juan Slam Pickleball Tournament",
-    link: "https://events.ourayridgwayevents.com/event/4th-annual-san-juan-slam-pickleball-tournament",
-    description: "The 4th Annual San Juan Slam, a Western Slope regional pickleball tournament hosted by the Ridgway Pickleball Club (RPC) with Presenting/Title Sponsor Citizens State Bank. The San Juan Slam, a family friendly event and free for spectators, takes place at the Ridgway Athletic Field from September 18-20. Sept. 18 Women's Doubles, Sept. 19 Mixed Doubles, and Sept. 20 Men's Doubles. This year's tournament will follow a Team Round-Robin pool play format with medal rounds at every skill and age level, providing participants and spectators plenty of gameplay. Our 4-legged friends (on leashes of course) are welcome to get their photo taken for inclusion in the World Famous 'Dogs of the San Juan Slam'. View on site | Email this event",
-    pubDate: "2026-09-20T15:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway Athletic Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/53613028091683/huge/89356c844c3d4e996774f5c668ba438226be20a1.jpg"
-  },
-  {
     title: "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
     link: "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
     description: "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the International Quilt Museum in Lincoln, Nebraska. Bonnie’s work has been shown in numerous exhibits in the United States. In 2015, Bonnie’s work was in a year-long solo exhibition at the Portland Oregon International Airport. She was a solo artist at the Visions Museum of Textile Art, San Diego, in 2019. Internationally, Bonnie’s work has appeared in the Haus der Wirtschaft museum in Stuttgart, Germany, the Museum of Modern Art in Verona, Italy, and other venues in Germany, England, Ireland, France, Japan, Brazil, and the Netherlands. Bonnie’s work Tangle is part of the permanent collection of the Tuch + Technik Textilmuseum, Neumunster, Germany. …",
-    pubDate: "2026-09-20T16:00:00.000Z",
+    pubDate: "2026-09-21T16:00:00.000Z",
     endDate: "2026-09-25",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "The 610 Arts Collective",
     imageUrl: "https://localist-images.azureedge.net/photos/53551302433703/huge/07561f7b06b24999f21e6be2347e5102b9b92cc3.jpg"
-  },
-  {
-    title: "BRITLEY & MATT",
-    link: "https://events.ourayridgwayevents.com/event/britley-matt-9126",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
-    pubDate: "2026-09-20T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "LIVE MUSIC IN THE GARDEN! Zan Waller & Stefan Davenport",
-    link: "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
-    description: "LIVE MUSIC IN THE GARDEN! 🎶 Sunday, September 13th, from 4:00–6:00 p.m., let us introduce you to Chloe’s Secret Garden! 🌿✨ Enjoy live music with Zan Waller & Stefan Davenport, the perfect wine, and scrumptious charcuterie in our cozy garden setting. Sip, savor, and settle in for a relaxed afternoon of music and Colorado magic! 🍷🧀💛 We can’t wait to see you there! Join us! 🎵 View on site | Email this event",
-    pubDate: "2026-09-20T22:00:00.000Z",
-    endDate: "2026-11-08",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Chloe's Charcuterie & Wine",
-    imageUrl: "https://localist-images.azureedge.net/photos/53950055817938/huge/4924d3606a12c233af2b47a380c304869dfaf267.jpg"
-  },
-  {
-    title: "Fall Equinox Candlelit Event",
-    link: "https://events.ourayridgwayevents.com/event/fall-equinox-candlelit-event",
-    description: "Celebrate the transition to fall during a Festive, Sacred Candle Lit Event with all levels yoga, chanting with harmonium, breathwork, guided meditation, SOUND BATH and optional essential oils. Move, sweat, breath, chant and release what no longer serves you. Optional: bring a quote, brief poem or intention to share. Set intentions for fall with support during a sacred evening. View on site | Email this event",
-    pubDate: "2026-09-20T23:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Bee True You Wellness & Creative Studio",
-    imageUrl: "https://localist-images.azureedge.net/photos/53940112365937/huge/f610ca8c034ecac5aef2e4563f4b2f9b908573f9.jpg"
-  },
-  {
-    title: "The Courtyard at 610 Presents: Alex Dunn & Mimi Genheimer at The Courtyard",
-    link: "https://events.ourayridgwayevents.com/event/the-courtyard-at-610-presents-alex-dunn-mimi-genheimer",
-    description: "Gates: 6:00 || Show: 6:30 pm || $20 Advance / $25 day of show || Enter via the alleyway behind the Sherbino and 610 Arts Collective || Outdoor Venue || Setting: seated || Limited bar onsite **Due to the local Gold Mountain Fire – Poor air quality or rain location will be inside on The Sherbino main stage for Courtyard shows** The Courtyard at 610 is a unique little venue behind our gallery space, the 610 Arts Collective, on Clinton St. The entrance is through the alleyway between N Cora St. and N Laura St behind the gallery and The Sherbino Theater. Likely to be our last Courtyard Show of the season! Join us for an intimate evening with Alex Dunn and Mimi Genheimer! …",
-    pubDate: "2026-09-21T00:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "610",
-    imageUrl: "https://localist-images.azureedge.net/photos/53551756644415/huge/29fa27ed4c25e649a1da5d91ff6dd2fe89cb9a74.jpg"
   },
   {
     title: "Ongoing Exhibition: BIG BOX-Big New Work By T-Bone",
@@ -4855,6 +4853,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53994410727494/huge/f6588be01fec66ad36a98e73e2759b741bfa6bdd.jpg"
   },
   {
+    title: "LIVE MUSIC IN THE GARDEN! Zan Waller & Stefan Davenport",
+    link: "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
+    description: "LIVE MUSIC IN THE GARDEN! 🎶 Sunday, September 13th, from 4:00–6:00 p.m., let us introduce you to Chloe’s Secret Garden! 🌿✨ Enjoy live music with Zan Waller & Stefan Davenport, the perfect wine, and scrumptious charcuterie in our cozy garden setting. Sip, savor, and settle in for a relaxed afternoon of music and Colorado magic! 🍷🧀💛 We can’t wait to see you there! Join us! 🎵 View on site | Email this event",
+    pubDate: "2026-09-27T22:00:00.000Z",
+    endDate: "2026-11-08",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Chloe's Charcuterie & Wine",
+    imageUrl: "https://localist-images.azureedge.net/photos/53950055817938/huge/4924d3606a12c233af2b47a380c304869dfaf267.jpg"
+  },
+  {
     title: "Ouray Ridgway Young Life Banquet",
     link: "https://events.ourayridgwayevents.com/event/ouray-ridgway-young-life-banquet",
     description: "A fun evening to celebrate with local Young Life staff, leaders, committee and guests that God is on the move in our community, and one vehicle is Young Life. An opportunity to learn about and financially support the clear sharing of the gospel, changed lives, and laughter in our county's youth. Guest speaker is Dr. Tanita Maddox, an expert in Gen Z, that will speak about how to connect with the next generation with compassion, urgency and action. RSVP with ddowdy@vsiok.com View on site | Email this event",
@@ -5149,6 +5159,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/51579968896083/huge/c4cfc0e9259666342735abc334be44580e4c7198.jpg"
   },
   {
+    title: "A Monster Calls: Movie Night @ the Wright",
+    link: "https://events.ourayridgwayevents.com/event/a-monster-calls-movie-night-the-wright",
+    description: "A Monster Calls: Movie Night @ the Wright WHEN? Wednesday, October 7 Doors at 6:30 PM | Movie at 7:00 PM WHERE? Wright Opera House472 Main St., Ouray, Colorado RUN TIME: 1 hour, 48 minutes RATING: PG-13 ROTTEN TOMATOES SCORE: 86% ABOUT THE FILM A Monster Calls (2016) follows Conor, a young boy whose life is upended by his mother’s illness. Then, at 12:07 each night, a towering monster begins to visit—bringing three stories, and asking Conor to tell the one truth he is most afraid to face. A beautiful, dark, and deeply human film about grief, imagination, and finding the courage to say what hurts. Because sometimes the monster is not there to scare us. Sometimes it arrives to help us survive the truth. …",
+    pubDate: "2026-10-08T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Wright Opera House",
+    imageUrl: "https://localist-images.azureedge.net/photos/54035168674889/huge/e9ceccb298885365bd331332c49a520baa2a17ca.jpg"
+  },
+  {
     title: "Ouray Economic Development Committee",
     link: "https://events.ourayridgwayevents.com/event/ouray-economic-development-committee",
     description: "The Ouray Economic Development Committee (OEDC) works as the liaison between the City and the local business community. This includes creating and implementing an Economic Development Plan and economic development incentives to best serve the business community and to align with programs that induce private investment enterprises and commerce. The committee also explores regional economic development efforts with the Town of Ridgway and Ouray County as well as is tasked with developing a Business Expansion and Retention (BEAR) program, participating in policy discussions and revisions to community planning documents, and making recommendations to the City Council about economic incentive requests. View on site | Email this event",
@@ -5181,6 +5202,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Music Bingo @ the Wright",
+    link: "https://events.ourayridgwayevents.com/event/music-bingo-the-wright-4807",
+    description: "Music Bingo @ the Wright WHEN? Doors at 6:30 pm • Event at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT It’s bingo. But louder. And somehow emotionally complicated. Battle for glory using songs, questionable music knowledge, accidental dancing, and the sudden realization that one hit from 2007 still lives in your head rent-free. Expect singalongs, dramatic betrayals, nostalgic bangers, deep cuts, and at least one person absolutely convinced they should have won three rounds ago. Whether you’re a human jukebox or someone who confidently calls every song “that one TikTok song,” Music Bingo welcomes all skill levels and levels of chaos. Free to attend In-person event at the historic Wright Opera House Part of programming at the Wright Opera House, bringing arts, conversation, and community to downtown Ouray since 1889. View on site | Email this event",
+    pubDate: "2026-10-10T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Wright Opera House",
+    imageUrl: "https://localist-images.azureedge.net/photos/54035210282619/huge/8e50fda6bb1e6a9598c14bbf7e7f3e0f7ecbd56b.jpg"
   },
   {
     title: "Lupita's Parking Lot Sale",
@@ -5295,6 +5327,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
+    title: "Obsession: Movie Night @ the Wright",
+    link: "https://events.ourayridgwayevents.com/event/obsession-movie-night-the-wright",
+    description: "Obsession: Movie Night @ the Wright WHEN?Wednesday, October 14 Doors at 6:30 PM | Movie at 7:00 PM WHERE?Wright Opera House 472 Main St., Ouray, Colorado RUN TIME: 1 hour, 49 minutes RATING: R ABOUT THE FILM Obsession (2025) is a supernatural horror film about Bear, a music-store employee whose wish for his childhood friend Nikki to fall in love with him becomes something far darker—and far more dangerous—than he imagined. A twisted, bloody, and sharply funny nightmare about desire, control, and the terrible things that happen when getting exactly what you want turns out to be the worst possible outcome. WHY SEE IT?Because a love story with a monkey’s-paw problem is never just a love story. …",
+    pubDate: "2026-10-15T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Wright Opera House",
+    imageUrl: "https://localist-images.azureedge.net/photos/54035246928726/huge/df8435a1f9605f9b27f285c37e3bb1d44a375465.jpg"
+  },
+  {
     title: "ALPINE JAM",
     link: "https://events.ourayridgwayevents.com/event/alpine-jam-3576",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
@@ -5398,6 +5441,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53780624349826/huge/2ad5a3657f19d47b14c7833f838ac040c0836f38.jpg"
   },
   {
+    title: "Hoppers: Movie Night @ the Wright",
+    link: "https://events.ourayridgwayevents.com/event/hoppers-movie-night-the-wright",
+    description: "Hoppers: Movie Night @ the Wright WHEN? Wednesday, October 21 Doors at 6:30 PM | Movie at 7:00 PM WHERE? Wright Opera House 472 Main St., Ouray, Colorado RUN TIME: 1 hour, 44 minutes RATING: PG ROTTEN TOMATOES SCORE: 94% ABOUT THE FILM Disney and Pixar’s Hoppers follows Mabel, an animal-loving young woman who uses new technology to transfer her consciousness into a lifelike robotic beaver. Her mission: communicate with the animals and help protect their habitat from human development. What begins as a strange little experiment becomes a big, funny, warm-hearted adventure about nature, friendship, and finding out what the world looks like from somebody else’s point of view. WHY SEE IT? Because Pixar has finally answered the question no one knew they were asking: what if you could become a beaver for a good cause? HOW? …",
+    pubDate: "2026-10-22T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Wright Opera House",
+    imageUrl: "https://localist-images.azureedge.net/photos/54035264266437/huge/4f123a55b3d2309817e574335281ca0e9129f0c9.jpg"
+  },
+  {
     title: "AFTER SCHOOL ART FOR AGES 5-8",
     link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-5-8-6970",
     description: "AFTER SCHOOL ART FOR AGES 5-8 Thursdays, 3:15–4:30 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 17 – October 8Session 2 (4 weeks • $85): October 22 – November 12Session 3 (3 weeks • $70): December 3 – December 17Each week, students will explore exciting themes and projects while experimenting with a wide variety of art materials—such as watercolor and acrylic paints, oil and chalk pastels, clay, collage, printmaking, and more. Through open-ended projects, students are encouraged to explore their creativity, make artistic choices, take creative risks, and discover their unique artistic voice. Our classes nurture imaginative thinking and storytelling, helping children express big ideas and emotions through visual narratives and personal creations. In addition to sparking imagination, our signature art projects support the development of fine motor skills, confidence, and social-emotional development in a fun group environment. …",
@@ -5466,6 +5520,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53693236517688/huge/5e1d72eeca9295c11775fe98c87711a043b81570.jpg"
   },
   {
+    title: "Weapons: Movie Night @ the Wright.",
+    link: "https://events.ourayridgwayevents.com/event/weapons-movie-night-the-wright",
+    description: "Weapons: Movie Night @ the Wright. WHEN? Wednesday, October 28 Doors at 6:30 PM | Movie at 7:00 PM WHERE? Wright Opera House 472 Main St., Ouray, Colorado RUN TIME: 2 hours, 8 minutes RATING: R ROTTEN TOMATOES SCORE: 95% ABOUT THE FILM When every child in the same elementary-school class disappears from their homes at exactly 2:17 a.m., a small town is left searching for answers—and somebody to blame. From Zach Cregger, the writer-director of Barbarian, Weapons is a strange, frightening, darkly funny horror mystery that follows the people caught in the fallout as the truth slowly comes into focus. WHY SEE IT? Because the fewer details you know going in, the better. Just know that bedtime in Maybrook is not going well. HOW? Tickets: $5 In-person screening at the historic Wright Opera House. …",
+    pubDate: "2026-10-29T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Wright Opera House",
+    imageUrl: "https://localist-images.azureedge.net/photos/54035284357305/huge/c0b13b236a6cb245075f76963685929bd6a42793.jpg"
+  },
+  {
     title: "\"Hello to Golden Autumn\" Acrylic Painting Workshop",
     link: "https://events.ourayridgwayevents.com/event/hello-to-golden-autumn-acrylic-painting-workshop",
     description: "“Hello to Golden Autumn” Acrylic Painting Workshop with Mary Pat Ettinger October 30, 9:30 AM–1:30 PM Studio 4, Montrose Tuition: $75 inc. all supplies Registration: www.weehawkenarts.org Painting with acrylics in a watercolor style, students will enjoy exploring either landscape fall scenes or flowers and pumpkins scenes. Mary Pat will provide images for students to work from, or students may bring their own reference photos. Mary Pat will work with students to achieve a good composition and will help understand how various colors work well to create a vibrant painting. Students may expect to enjoy a delightful painting time filled with learning and laughter. All supplies included! About Mary Pat Ettinger – Artist & Instructor Mary Pat Ettinger’s work is often described as peaceful and uplifting. Having lived much of her life in rural settings, she draws daily inspiration from solitude, natural beauty, and the simple joys around her. …",
@@ -5488,6 +5553,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
+    title: "Minions and Monsters: Movie Night @ the Wright",
+    link: "https://events.ourayridgwayevents.com/event/minions-and-monsters-movie-night-the-wright",
+    description: "WHEN? Friday, October 30 Doors at 6:30 PM | Movie at 7:00 PM WHERE? Wright Opera House 472 Main St., Ouray, Colorado RUN TIME: 1 hour, 30 minutes RATING: PG ABOUT THE FILM The Minions are back—and this time they are headed to 1920s Hollywood with dreams of becoming movie stars. After discovering that the arrival of sound means Minionese is not exactly the language of leading men, the Minions decide to make a monster movie of their own. What could possibly go wrong? Quite a lot, naturally. A big-screen comedy full of old-Hollywood chaos, monster-movie mayhem, and the tiny yellow beings who have never once been trusted with a plan. WHY SEE IT? Because it is almost Halloween, and a Minion-made monster movie is exactly the kind of nonsense the season deserves. HOW? …",
+    pubDate: "2026-10-31T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Wright Opera House",
+    imageUrl: "https://localist-images.azureedge.net/photos/54035307723339/huge/023d6c0350f30b116080d9dd9507ac6801c8703a.jpg"
+  },
+  {
     title: "Easy Jim ~ 2 Night Halloween Run at The Sherbino",
     link: "https://events.ourayridgwayevents.com/event/easy-jim-2-night-halloween-run-at-the-sherbino",
     description: "Easy Jim Halloween Run Brings Two Nights of Grateful Dead Celebrations to the Sherbino! October 30 & 31, 2026 • 8:00 p.m. nightly Sherbino Theatre | Ridgway, Colorado Some concerts are just concerts. This is a Run! The Sherbino and Pickin’ Productions invite Deadheads, music lovers, Halloween enthusiasts, and anyone looking for an unforgettable weekend to join us for the Easy Jim Halloween Run—a special two-night celebration of the music, community, and spirit of the Grateful Dead on Friday, October 30 and Saturday, October 31. Both performances begin at 8:00 p.m. Within Grateful Dead and jam-band culture, Halloween shows have become legendary. Alongside New Year’s Eve, they’re among the most anticipated performances of the year—filled with costumes, surprises, dancing, and the kind of musical spontaneity that has kept fans traveling from show to show for generations. That’s exactly what makes a Run so special. …",
@@ -5498,6 +5574,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/53551962688679/huge/530cd950230f451d84a4795936d5b7a904b733f2.jpg"
+  },
+  {
+    title: "Trick or Treat: Witches @ the Wright",
+    link: "https://events.ourayridgwayevents.com/event/trick-or-treat-witches-the-wright",
+    description: "WHEN? Saturday, October 31 4:00–7:00 PM WHERE? Wright Opera House 472 Main St., Ouray, Colorado ABOUT THE EVENT The Spooky Witches and Warlocks are taking over the Wright Opera House for Halloween. Bring the family downtown for Trick or Treat: Witches at the Wright. Stop by for candy, a little friendly fright, and Halloween fun inside one of Ouray’s most historic buildings. HOW? Free and open to the public Family-friendly trick-or-treating Candy while supplies last Halloween fun at the historic Wright Opera House in downtown Ouray. View on site | Email this event",
+    pubDate: "2026-10-31T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Wright Opera House",
+    imageUrl: "https://localist-images.azureedge.net/photos/54035396754488/huge/0ff17d6c525d45e896d55bfebccad3217d6391db.jpg"
   },
   {
     title: "November - Art Opening: Film Stills-Ridgway Independent Film Fest",
@@ -5548,17 +5635,6 @@ const OURAY_RIDGWAY_EVENTS = [
 ];
 
 const NORWOOD_EVENTS = [
-  {
-    title: "Office Closed For Training 1 3pm",
-    link: "https://www.norwoodtown.com/2026-09-14-office-closed-for-training-1-3pm",
-    description: "",
-    pubDate: "2026-09-14T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Town Closure",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-17-senior-lunch",
@@ -6067,6 +6143,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
+  },
+  {
+    title: "Market on the Plaza",
+    link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    pubDate: "2026-10-21T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   }
 ];
 
@@ -7082,6 +7169,60 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_6e1025d7-5ad7-45a9-8530-2bda61ea94b8.html",
     address: "Lots 320A & 320B, Lawson Hill PUD, San Miguel County, CO (Parcels #456532416079 & #456532416080)",
     noticeKey: "lot-line-adj-lawson-hill-320A-320B-COL000239"
+  },
+  {
+    title: "Public Hearing -- Adoption of 2024 International Building Code & Colorado Low Energy & Carbon Code",
+    entity: "San Miguel County Board of Commissioners",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "The San Miguel County Board of Commissioners will hold a public hearing on September 16, 2026 at 9:00 AM in Telluride to consider adopting the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Written comments must be received by noon on September 10, 2026, and proposed amendments are available in the meeting agenda packet at the county website.",
+    deadline: "2026-09-10T12:00:00",
+    expires: "2026-09-16",
+    dates: "8/27",
+    papers: ["ttimes_0827"],
+    url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    address: "Telluride, Colorado (San Miguel County)",
+    noticeKey: "COL-000222-ibc-hearing"
+  },
+  {
+    title: "RFP -- Fuel Island Canopy Construction, Norwood Road & Bridge Maintenance Yard (COL-000219)",
+    entity: "San Miguel County Road & Bridge Department",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "San Miguel County Road & Bridge is seeking proposals from qualified contractors for the design, engineering, permitting assistance, and construction of a fuel island canopy at the Norwood Road & Bridge Maintenance Yard at 39595 Highway 145, Norwood. A pre-proposal site meeting was held August 24, 2026, and written questions were due by August 26, 2026. Proposals must be submitted electronically by September 3, 2026 at 4:00 PM, with contractor selection notification on September 7, 2026.",
+    deadline: "2026-09-03T16:00:00",
+    expires: "2026-09-07",
+    dates: "8/27",
+    papers: ["ttimes_0827"],
+    url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    address: "39595 Highway 145, Norwood, CO 81423",
+    noticeKey: "COL-000219-fuel-island-canopy-rfp"
+  },
+  {
+    title: "RFP -- San Miguel County Jail Repainting, Illium (COL-000224)",
+    entity: "San Miguel County Fleet & Facilities Department",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "San Miguel County is requesting proposals from contractors to repaint the San Miguel County Jail located at 684 County Road 63L, Telluride (Illium). RFP documents are available on the county website or through the Fleet & Facilities Department at 333 W. Colorado Ave, 2nd Floor, Telluride. Proposals are due by 5:00 PM on Friday, September 18, 2026, submitted either by email or dropped off at the Fleet & Facilities Department.",
+    deadline: "2026-09-18T17:00:00",
+    expires: "2026-09-18",
+    dates: "8/27",
+    papers: ["ttimes_0827"],
+    url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    address: "684 County Road 63L, Telluride, CO 81435",
+    noticeKey: "COL-000224-jail-repaint-rfp"
   }
 ];
 
