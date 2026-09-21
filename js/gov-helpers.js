@@ -4161,48 +4161,12 @@ const BEACON_EVENTS = [
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
     description: "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
-    date: "2026-09-15",
-    time: "6:00 PM",
-    source: "beacon",
-    sourceLabel: "Beacon",
-    category: "Community Event",
-    location: "The Well, 122 S Aspen",
-    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
-  },
-  {
-    title: "Pickleball Nights",
-    link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night pickleball with no experience necessary. All supplies provided.",
-    date: "2026-09-17",
-    time: "7:00-9:00 PM",
-    source: "beacon",
-    sourceLabel: "Beacon",
-    category: "Community Event",
-    location: "Telluride Racket Club",
-    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
-  },
-  {
-    title: "Weekly Young Adult Gathering",
-    link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
     date: "2026-09-22",
     time: "6:00 PM",
     source: "beacon",
     sourceLabel: "Beacon",
     category: "Community Event",
-    location: "The Well, 122 S Aspen",
-    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
-  },
-  {
-    title: "Pickleball Nights",
-    link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night pickleball with no experience necessary. All supplies provided.",
-    date: "2026-09-24",
-    time: "7:00-9:00 PM",
-    source: "beacon",
-    sourceLabel: "Beacon",
-    category: "Community Event",
-    location: "Telluride Racket Club",
+    location: "The Well, 122 S Aspen, Telluride",
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
@@ -4214,19 +4178,7 @@ const BEACON_EVENTS = [
     source: "beacon",
     sourceLabel: "Beacon",
     category: "Community Event",
-    location: "The Well, 122 S Aspen",
-    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
-  },
-  {
-    title: "Pickleball Nights",
-    link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night pickleball with no experience necessary. All supplies provided.",
-    date: "2026-10-01",
-    time: "7:00-9:00 PM",
-    source: "beacon",
-    sourceLabel: "Beacon",
-    category: "Community Event",
-    location: "Telluride Racket Club",
+    location: "The Well, 122 S Aspen, Telluride",
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
@@ -4238,19 +4190,7 @@ const BEACON_EVENTS = [
     source: "beacon",
     sourceLabel: "Beacon",
     category: "Community Event",
-    location: "The Well, 122 S Aspen",
-    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
-  },
-  {
-    title: "Pickleball Nights",
-    link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night pickleball with no experience necessary. All supplies provided.",
-    date: "2026-10-08",
-    time: "7:00-9:00 PM",
-    source: "beacon",
-    sourceLabel: "Beacon",
-    category: "Community Event",
-    location: "Telluride Racket Club",
+    location: "The Well, 122 S Aspen, Telluride",
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
@@ -4262,19 +4202,7 @@ const BEACON_EVENTS = [
     source: "beacon",
     sourceLabel: "Beacon",
     category: "Community Event",
-    location: "The Well, 122 S Aspen",
-    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
-  },
-  {
-    title: "Pickleball Nights",
-    link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night pickleball with no experience necessary. All supplies provided.",
-    date: "2026-10-15",
-    time: "7:00-9:00 PM",
-    source: "beacon",
-    sourceLabel: "Beacon",
-    category: "Community Event",
-    location: "Telluride Racket Club",
+    location: "The Well, 122 S Aspen, Telluride",
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
@@ -4286,19 +4214,19 @@ const BEACON_EVENTS = [
     source: "beacon",
     sourceLabel: "Beacon",
     category: "Community Event",
-    location: "The Well, 122 S Aspen",
+    location: "The Well, 122 S Aspen, Telluride",
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
-    title: "Pickleball Nights",
+    title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night pickleball with no experience necessary. All supplies provided.",
-    date: "2026-10-22",
-    time: "7:00-9:00 PM",
+    description: "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
+    date: "2026-10-27",
+    time: "6:00 PM",
     source: "beacon",
     sourceLabel: "Beacon",
     category: "Community Event",
-    location: "Telluride Racket Club",
+    location: "The Well, 122 S Aspen, Telluride",
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   }
 ];

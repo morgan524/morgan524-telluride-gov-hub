@@ -90,7 +90,7 @@
     "img": "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
+    "desc": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
     "type": "Community",
     "endDate": "2026-11-16"
   },
@@ -143,7 +143,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. The route runs Jurassic Trail to Meadows Trail, ending at Telluride Brewing Co. for a complimentary beer.",
     "type": "Outdoors & Sports"
   },
   {
@@ -262,7 +262,7 @@
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "desc": "Live music at the Colorado Boy Depot in Ridgway — check the venue's calendar for the night's lineup and set times.",
     "type": "Music"
   },
   {
@@ -275,7 +275,7 @@
     "img": "https://localist-images.azureedge.net/photos/53879311682989/huge/6f8aa554a36ad64daa06ec94d85b3b980a8c0a3f.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Join us at the Ouray Library from 4:00 p.m. to 4:45 p.m. to listen to some fantastic stories read by a Mountain Rescue volunteer! Ages: Elementary View on site | Email this event",
+    "desc": "Join us at the Ouray Library from 4:00 p.m. to 4:45 p.m. to listen to some fantastic stories read by a Mountain Rescue volunteer! Ages: Elementary",
     "type": "Family & Kids"
   },
   {
@@ -306,7 +306,7 @@
     "endDate": "2026-10-27"
   },
   {
-    "title": "NWC Amended",
+    "title": "Norwood Water Commission Meeting",
     "href": "https://www.norwoodtown.com/2026-09-22-nwc-amended",
     "date": "2026-09-22",
     "time": "6:00 AM",
@@ -336,8 +336,8 @@
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-09-22",
     "time": "6:00 PM",
-    "location": "The Well, 122 S Aspen",
-    "town": "",
+    "location": "The Well, 122 S Aspen, Telluride",
+    "town": "Telluride",
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
@@ -434,8 +434,8 @@
     "img": "https://localist-images.azureedge.net/photos/53887699628224/huge/dec56b594a12eb9537121495212b009fe9b63184.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Join water aerobics weekly Wednesdays from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy the positive atmosphere! Water aerobics is free for pool members, and non-members can join for just $5 per…",
-    "type": "Community",
+    "desc": "Join water aerobics weekly Wednesdays from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy the positive atmosphere! Water aerobics is free for pool members, and non-members can join for just $5 per class.",
+    "type": "Talks & Classes",
     "endDate": "2026-11-18"
   },
   {
@@ -475,7 +475,7 @@
     "img": "https://localist-images.azureedge.net/photos/53950003853299/huge/afb35ff2c92eb3767e07e95a9ae999c66567049c.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Ouray Middle School plays Mancos Middle School at Ouray. Times are approximate depending on legth of the previous games A Team: 4:00pm B Team: 5:00-6:00pm C Team: 6:00-6:30pm View on site | Email this event",
+    "desc": "Ouray Middle School plays Mancos Middle School at Ouray. Times are approximate depending on legth of the previous games A Team: 4:00pm B Team: 5:00-6:00pm C Team: 6:00-6:30pm",
     "type": "Community"
   },
   {
@@ -488,7 +488,7 @@
     "img": "https://localist-images.azureedge.net/photos/53764141935106/huge/5fea0efc9d4b56f2aa50cae11c356177b92bea0e.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Join us on Wednesday, September 23rd at 5:00 p.m. to discuss our September Book Club Book, The Constant Gardener, by John le Carré. View on site | Email this event",
+    "desc": "Join us on Wednesday, September 23rd at 5:00 p.m. to discuss our September Book Club Book, The Constant Gardener, by John le Carré.",
     "type": "Talks & Classes"
   },
   {
@@ -634,7 +634,7 @@
     "img": "https://localist-images.azureedge.net/photos/53950094911567/huge/429ff9e951ad2f9afdae3f84931b848106aa4614.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Ouray High School will be hosting Nucla High School JV: 4:30pm - 5:30pm Varsity: 5:30pm View on site | Email this event",
+    "desc": "Ouray High School will be hosting Nucla High School JV: 4:30pm - 5:30pm Varsity: 5:30pm",
     "type": "Community"
   },
   {
@@ -768,22 +768,9 @@
     "img": "https://localist-images.azureedge.net/photos/53790449536989/huge/a7181e9d298980d4c2377db45d06d26bb81e0b12.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Music Bingo at Floating Lotus Brewery! Join us on the 2nd & 4th Thursdays from 7–9 PM for a high-energy night of music, drinks, and bingo-style fun. Listen, mark your card, and sing along. Learn more at floatinglotusbrewery.com. View on…",
+    "desc": "Music Bingo at Floating Lotus Brewery! Join us on the 2nd & 4th Thursdays from 7–9 PM for a high-energy night of music, drinks, and bingo-style fun. Listen, mark your card, and sing along. Learn more at floatinglotusbrewery.com.",
     "type": "Food & Drink",
     "endDate": "2026-11-13"
-  },
-  {
-    "title": "Pickleball Nights",
-    "href": "https://www.beacontelluride.com/upcoming-events",
-    "date": "2026-09-24",
-    "time": "7:00-9:00 PM",
-    "location": "Telluride Racket Club",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
-    "category": "Community Event",
-    "source": "Beacon",
-    "desc": "Thursday night pickleball with no experience necessary. All supplies provided.",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "Coffee and Climate Conversations",
@@ -821,7 +808,7 @@
     "img": "https://ucarecdn.com/05381074-07b4-41a7-a955-cd6eb787e77e/-/crop/7952x3975/0,0/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "What started as a passion project dedicated to the late and great Stephen Hawkin...",
+    "desc": "What started as a passion project dedicated to the late and great Stephen Hawking has evolved into a serious deep-space-inspired electronic act. Photon brings an immersive audiovisual show to The Alibi.",
     "type": "Community"
   },
   {
@@ -887,7 +874,7 @@
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "desc": "Live music at the Colorado Boy Depot in Ridgway — check the venue's calendar for the night's lineup and set times.",
     "type": "Music"
   },
   {
@@ -926,7 +913,7 @@
     "img": "https://localist-images.azureedge.net/photos/53142698527493/huge/db3a6ef58a79b18eea8c70a4d583bbf3d9498404.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM Every Friday Night View on site | Email this event",
+    "desc": "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM Every Friday Night",
     "type": "Community"
   },
   {
@@ -978,7 +965,7 @@
     "img": "https://localist-images.azureedge.net/photos/53799469848261/huge/e6d1ccd4114025feaf8eb83d7e37cd545eb81420.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Let's celebrate Fall! Join us for live music, good times and fresh local art! Walter St. Clair will be playing tunes on the porch and the vibes will be high. View on site | Email this event",
+    "desc": "Let's celebrate Fall! Join us for live music, good times and fresh local art! Walter St. Clair will be playing tunes on the porch and the vibes will be high.",
     "type": "Arts & Film"
   },
   {
@@ -991,7 +978,7 @@
     "img": "https://localist-images.azureedge.net/photos/53171933807100/huge/679f562aa1680a2f20f8ffd0a78d921293437057.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Watch historical Jeep Parade come through town as part of Jeep Jamboree. View on site | Email this event",
+    "desc": "Watch historical Jeep Parade come through town as part of Jeep Jamboree.",
     "type": "Festivals"
   },
   {
@@ -1122,7 +1109,7 @@
     "img": "https://localist-images.azureedge.net/photos/52594260880730/huge/9b3f82c821e5f84eb57dee6af0b87a07ecd09517.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "This weekend event includes a Museum open house, opportunity to ride Motor No. 1 as well as Goose No. 4 on Saturday and Sunday. There will be a talk on \"TBA\" on Saturday at 7:00 pm View on site | Email this event",
+    "desc": "This weekend event includes a Museum open house, opportunity to ride Motor No. 1 as well as Goose No. 4 on Saturday and Sunday. There will be a talk on \"TBA\" on Saturday at 7:00 pm",
     "type": "Talks & Classes"
   },
   {
@@ -1214,7 +1201,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. The route runs Jurassic Trail to Meadows Trail, ending at Telluride Brewing Co. for a complimentary beer.",
     "type": "Outdoors & Sports"
   },
   {
@@ -1227,7 +1214,7 @@
     "img": "https://localist-images.azureedge.net/photos/53816408650430/huge/03e52865d13accd44bfe2d41810a8a214024c424.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Join us in the Ouray School APAC at 1:30 p.m. to listen to a poetry reading by the Colorado Poet Laureate, Crisosto Apache! Open to the Public View on site | Email this event",
+    "desc": "Join us in the Ouray School APAC at 1:30 p.m. to listen to a poetry reading by the Colorado Poet Laureate, Crisosto Apache! Open to the Public",
     "type": "Talks & Classes"
   },
   {
@@ -1240,7 +1227,7 @@
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/",
     "type": "Music"
   },
   {
@@ -1261,8 +1248,8 @@
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-09-29",
     "time": "6:00 PM",
-    "location": "The Well, 122 S Aspen",
-    "town": "",
+    "location": "The Well, 122 S Aspen, Telluride",
+    "town": "Telluride",
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
@@ -1371,22 +1358,9 @@
     "img": "https://localist-images.azureedge.net/photos/53790516346797/huge/599d1a7013ddde307592e7dfc9b892fe265527e0.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Trivia Night at Floating Lotus Brewery! Join us on the 1st & 3rd Thursdays from 7–9 PM for a lively night of questions, drinks, and friendly competition. Grab a table, bring your team, and learn more at floatinglotusbrewery.com. View on…",
+    "desc": "Trivia Night at Floating Lotus Brewery! Join us on the 1st & 3rd Thursdays from 7–9 PM for a lively night of questions, drinks, and friendly competition. Grab a table, bring your team, and learn more at floatinglotusbrewery.com.",
     "type": "Food & Drink",
     "endDate": "2026-11-20"
-  },
-  {
-    "title": "Pickleball Nights",
-    "href": "https://www.beacontelluride.com/upcoming-events",
-    "date": "2026-10-01",
-    "time": "7:00-9:00 PM",
-    "location": "Telluride Racket Club",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
-    "category": "Community Event",
-    "source": "Beacon",
-    "desc": "Thursday night pickleball with no experience necessary. All supplies provided.",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "Ken Gentry & the Companions",
@@ -1411,7 +1385,7 @@
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/",
     "type": "Music"
   },
   {
@@ -1442,7 +1416,7 @@
     "endDate": "2026-11-07"
   },
   {
-    "title": "First Friday at Rootwings Art at Rootwings Art",
+    "title": "First Friday at Rootwings Art",
     "href": "https://events.ourayridgwayevents.com/event/first-friday-at-rootwings-art-1540",
     "date": "2026-10-02",
     "time": "5:00 PM",
@@ -1469,7 +1443,7 @@
     "type": "Arts & Film"
   },
   {
-    "title": "Ongiong: Space Cowboy by Dundee & Lee",
+    "title": "Ongoing: Space Cowboy by Dundee & Lee",
     "href": "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
     "date": "2026-10-02",
     "time": "5:00 PM",
@@ -1544,7 +1518,7 @@
     "img": "https://localist-images.azureedge.net/photos/52278219322548/huge/0e7cc3a05f960a6d1c77d69eb8423134dfed7fa4.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Basic identification of hand samples of minerals from the San Juan Mountian Region with Robert Stoufer View on site | Email this event",
+    "desc": "Basic identification of hand samples of minerals from the San Juan Mountian Region with Robert Stoufer",
     "type": "Family & Kids"
   },
   {
@@ -1743,7 +1717,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. The route runs Jurassic Trail to Meadows Trail, ending at Telluride Brewing Co. for a complimentary beer.",
     "type": "Outdoors & Sports"
   },
   {
@@ -1756,7 +1730,7 @@
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/",
     "type": "Music"
   },
   {
@@ -1777,8 +1751,8 @@
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-10-06",
     "time": "6:00 PM",
-    "location": "The Well, 122 S Aspen",
-    "town": "",
+    "location": "The Well, 122 S Aspen, Telluride",
+    "town": "Telluride",
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
@@ -1893,19 +1867,6 @@
     "endDate": "2026-10-12"
   },
   {
-    "title": "Pickleball Nights",
-    "href": "https://www.beacontelluride.com/upcoming-events",
-    "date": "2026-10-08",
-    "time": "7:00-9:00 PM",
-    "location": "Telluride Racket Club",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
-    "category": "Community Event",
-    "source": "Beacon",
-    "desc": "Thursday night pickleball with no experience necessary. All supplies provided.",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "Ouray County MAC Group Meeting",
     "href": "https://ouraycountyco.gov/Calendar.aspx?EID=2379",
     "date": "2026-10-08",
@@ -1942,7 +1903,7 @@
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/",
     "type": "Music"
   },
   {
@@ -1955,7 +1916,7 @@
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/",
     "type": "Music"
   },
   {
@@ -1981,7 +1942,7 @@
     "img": "https://localist-images.azureedge.net/photos/52462667793124/huge/857907efd93056a1ba298d906bd6d5231a5f9d13.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Tour of Dallas Park Cemetery Tour, led by Coleen McElroy. $20.00 Per Person. $15.00 OCHS Members. Call 970-325-4576 to RSVP/Pre Pay View on site | Email this event",
+    "desc": "Tour of Dallas Park Cemetery Tour, led by Coleen McElroy. $20.00 Per Person. $15.00 OCHS Members. Call 970-325-4576 to RSVP/Pre Pay",
     "type": "Community"
   },
   {
@@ -1994,7 +1955,7 @@
     "img": "https://localist-images.azureedge.net/photos/52278239272831/huge/3ace3fbbfa379d963003cda93eba859d285b4dcd.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Basic identification of minerals from the San Juan Mountains with Robert Stoufer View on site | Email this event",
+    "desc": "Basic identification of minerals from the San Juan Mountains with Robert Stoufer",
     "type": "Talks & Classes"
   },
   {
@@ -2085,7 +2046,7 @@
     "img": "https://localist-images.azureedge.net/photos/53994378997204/huge/989a12812632d48454c8f52334ff01e5dc03a008.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "A revival of Lupita's Parking Lot Sale A REVIVAL OF LUPITA'S PARKING LOT SALE! OCT. 10, 2026 • 8 AM–3 PM Ridgway Public Library, Ridgway $20 PER 10'×10' View on site | Email this event",
+    "desc": "A revival of Lupita's Parking Lot Sale A REVIVAL OF LUPITA'S PARKING LOT SALE! OCT. 10, 2026 • 8 AM–3 PM Ridgway Public Library, Ridgway $20 PER 10'×10'",
     "type": "Community"
   },
   {
@@ -2137,7 +2098,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. The route runs Jurassic Trail to Meadows Trail, ending at Telluride Brewing Co. for a complimentary beer.",
     "type": "Outdoors & Sports"
   },
   {
@@ -2150,7 +2111,7 @@
     "img": "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "View on site | Email this event",
+    "desc": "",
     "type": "Community",
     "endDate": "2026-10-16"
   },
@@ -2178,7 +2139,7 @@
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/",
     "type": "Music"
   },
   {
@@ -2212,8 +2173,8 @@
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-10-13",
     "time": "6:00 PM",
-    "location": "The Well, 122 S Aspen",
-    "town": "",
+    "location": "The Well, 122 S Aspen, Telluride",
+    "town": "Telluride",
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
@@ -2286,19 +2247,6 @@
     "type": "Community"
   },
   {
-    "title": "Pickleball Nights",
-    "href": "https://www.beacontelluride.com/upcoming-events",
-    "date": "2026-10-15",
-    "time": "7:00-9:00 PM",
-    "location": "Telluride Racket Club",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
-    "category": "Community Event",
-    "source": "Beacon",
-    "desc": "Thursday night pickleball with no experience necessary. All supplies provided.",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "Talk: The Sherbino Presents: India Wood's HIKING THE COLORADO X",
     "href": "https://sherbino.org/event/talk-the-sherbino-presents-india-woods-hiking-the-colorado-x/",
     "date": "2026-10-15",
@@ -2321,7 +2269,7 @@
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "desc": "Live music at the Colorado Boy Depot in Ridgway — check the venue's calendar for the night's lineup and set times.",
     "type": "Music"
   },
   {
@@ -2347,7 +2295,7 @@
     "img": "https://localist-images.azureedge.net/photos/51579855188578/huge/de5019ffbfacf4a9f5e85d8a14961584c70e7873.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Details forthcoming View on site | Email this event",
+    "desc": "Details forthcoming",
     "type": "Community"
   },
   {
@@ -2412,7 +2360,7 @@
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/",
     "type": "Music"
   },
   {
@@ -2451,7 +2399,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. The route runs Jurassic Trail to Meadows Trail, ending at Telluride Brewing Co. for a complimentary beer.",
     "type": "Outdoors & Sports"
   },
   {
@@ -2500,8 +2448,8 @@
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-10-20",
     "time": "6:00 PM",
-    "location": "The Well, 122 S Aspen",
-    "town": "",
+    "location": "The Well, 122 S Aspen, Telluride",
+    "town": "Telluride",
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
@@ -2616,19 +2564,6 @@
     "type": "Talks & Classes"
   },
   {
-    "title": "Pickleball Nights",
-    "href": "https://www.beacontelluride.com/upcoming-events",
-    "date": "2026-10-22",
-    "time": "7:00-9:00 PM",
-    "location": "Telluride Racket Club",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
-    "category": "Community Event",
-    "source": "Beacon",
-    "desc": "Thursday night pickleball with no experience necessary. All supplies provided.",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "Lamplight Cemetery Tour",
     "href": "https://www.telluride.com/event/lamplight-cemetery-tour/",
     "date": "2026-10-23",
@@ -2697,6 +2632,19 @@
     "endDate": "2026-11-16"
   },
   {
+    "title": "Weekly Young Adult Gathering",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-10-27",
+    "time": "6:00 PM",
+    "location": "The Well, 122 S Aspen, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Sherb Literary Living Room featuring Pam Houston with her new book: \"Animals Taught Me Everything\"",
     "href": "https://events.ourayridgwayevents.com/event/sherb-literary-living-room-featuring-pam-houston-with-her-new-book-animals-taught-me-everything",
     "date": "2026-10-27",
@@ -2745,7 +2693,7 @@
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/",
     "type": "Music"
   },
   {
