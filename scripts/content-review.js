@@ -341,6 +341,16 @@ function checkCrossSourceDateConflict(ctx) {
           perArrayDates.get(g.array).add(g.iso);
         }
         if ([...perArrayDates.values()].some(s => s.size > 1)) continue;
+        // Same weekday exactly one week apart is the other shape a weekly
+        // series takes: each source carries ONE occurrence, from different
+        // weeks (KOTO the 18th, Ouray/Ridgway the 25th — both Fridays). A real
+        // typo lands a day or a digit off, not a clean seven. Also trust the
+        // copy when it says so ("every Friday", "each Sat", "weekly").
+        // (2026-09-21: Ridgway Farmer's Market and Gaiascope Saturday
+        // Sessions were both flagged High for exactly this.)
+        if (dates.length === 2 && daysBetweenIso(sorted[0], sorted[1]) === 7) continue;
+        const RECURRING_RE = /\b(every|each)\s+(mon|tues|wednes|thurs|fri|satur|sun)(?:day)?s?\b|\bweekly\b|\bevery\s+(?:other\s+)?week\b/i;
+        if (group.some(g => RECURRING_RE.test((g.obj && (g.obj.description || g.obj.copy)) || ''))) continue;
 
         const r = group[0];
         add('High', 'Conflicting event dates',

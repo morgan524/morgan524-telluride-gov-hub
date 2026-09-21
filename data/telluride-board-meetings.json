@@ -1,5 +1,25 @@
 [
   {
+    "date": "September 24, 2026",
+    "title": "Resident Advisory Committee",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8315",
+    "hasAgenda": false,
+    "location": "Rebekah Hall, 113 W Columbia Ave",
+    "time": "",
+    "civicwebId": 8315,
+    "packetUrl": null
+  },
+  {
+    "date": "October 5, 2026",
+    "title": "Open Space Commission",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132",
+    "hasAgenda": false,
+    "location": "Rebekah Hall, 113 W Columbia Ave",
+    "time": "",
+    "civicwebId": 8132,
+    "packetUrl": null
+  },
+  {
     "date": "September 22, 2026",
     "title": "Telluride Housing Authority",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303",

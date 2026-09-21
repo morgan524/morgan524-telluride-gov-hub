@@ -681,7 +681,7 @@ const NORWOOD_CACHED_DATA = [
   {
     date: "September 22, 2026",
     time: null,
-    title: "NWC Amended",
+    title: "Norwood Water Commission Meeting",
     agendaUrl: "https://www.norwoodtown.com/files/677a3380f/09.22.2026+NWC+Amended+Agenda.pdf",
     packetUrl: null,
     special: false,

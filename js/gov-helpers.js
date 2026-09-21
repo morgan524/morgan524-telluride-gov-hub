@@ -419,7 +419,7 @@ const MEETING_AGENDA_META = {
   "telluride|2026-09-17|Open Space Commission Site Walk - Sep 17 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8317","sv":4},
 
-  "norwood|2026-09-22|NWC Amended":
+  "norwood|2026-09-22|Norwood Water Commission Meeting":
     {"agendaUrl":"https://www.norwoodtown.com/files/677a3380f/09.22.2026+NWC+Amended+Agenda.pdf","zoomUrl":"https://us02web.zoom.us/j/88274908233","meetingId":"882 7490 8233","passcode":"997236","phone":"346-248-7799","sv":4},
 
   "telluride|2026-09-21|Gondola Subcommittee - Sep 21 2026":
@@ -808,7 +808,7 @@ const MEETING_PREVIEWS = {
   "county|2026-09-30|Board of County Commissioners Work Session":
     "Commissioners are expected to discuss county procurement matters, including material hauling, trail construction for the Lawson Hill Connector, fuel island canopy construction, and jail painting projects. Additional administrative and operational items may also be addressed during the work session.",
 
-  "norwood|2026-09-22|NWC Amended":
+  "norwood|2026-09-22|Norwood Water Commission Meeting":
     "The Norwood Water Commission will consider multiple leak forgiveness requests from residential and commercial customers, review a final draft report on raw water delivery and storage alternatives, discuss implementing a leak check fee, and address a code of conduct complaint involving an executive legal session.",
 
   "school|2026-09-22|Telluride Board of Education Work Session":
@@ -1327,7 +1327,7 @@ const MANUAL_SUMMARIES = {
   "telluride|2026-09-17|Open Space Commission Site Walk - Sep 17 2026":
     "The Open Space Commission heads out on foot Thursday at 4:00 PM, meeting at the Town Park vehicle bridge on East Colorado Avenue. The sole work item is a site walk through Zone 1 of Bear Creek Preserve to review the Blues & Brews Festival camping area. No votes are scheduled — this is a ground-level look before any formal action.",
 
-  "norwood|2026-09-22|NWC Amended":
+  "norwood|2026-09-22|Norwood Water Commission Meeting":
     "The Norwood Water Commission meets September 22 with a full plate of water-related business. Six leak forgiveness requests are on the table — a recurring item for any small-system water utility, where a neighbor's faulty line can mean a bill that doesn't reflect actual use. The Commission will also take up a possible leak check fee, which would formalize how the system handles these situations going forward. The evening's weightiest technical item is the Final Draft of the Raw Water Delivery and Storage Alternatives Analysis Report from SGM — a planning document that shapes how Norwood thinks about its long-term water supply. The Commission will also go into executive session on the Cossey Code of Conduct Complaint for legal advice. Consent items include August financials, meeting minutes, and a budget-to-actuals review.",
 
   "telluride|2026-09-21|Gondola Subcommittee - Sep 21 2026":
@@ -4977,7 +4977,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52941247100302/huge/24aa8ce412f9817ce04becd51e5d1cc5b8db2cad.jpg"
   },
   {
-    title: "First Friday at Rootwings Art at Rootwings Art",
+    title: "First Friday at Rootwings Art",
     link: "https://events.ourayridgwayevents.com/event/first-friday-at-rootwings-art-1540",
     description: "Rootwings Art will be open for Ridgway's First Friday Art Walk, featuring local ceramic sculptures and large vessels by artist Andy Nasisse, original oils by Emma Kalff, Bruce Backer's Ravens & Crows, Taos artist Fred Burns fantasy nudes and one of a kind jewelry and ceramics by Vanessa Backer.",
     pubDate: "2026-10-02T23:00:00.000Z",
@@ -5000,7 +5000,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53975454573398/huge/fed6f5172fe765abe1cd1b3f3447b64e3cd83d27.jpg"
   },
   {
-    title: "Ongiong: Space Cowboy by Dundee & Lee",
+    title: "Ongoing: Space Cowboy by Dundee & Lee",
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
     description: "Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado artists Emilie Odeile and Ken Chapin of Dundee & Lee, the exhibition centers on a 10-foot-tall fiber rocket topped with a cowboy hat and Mission Control consoles that gather images, voices, stories, and discoveries as Space Cowboy travels from community to community. Throughout October, the exhibition comes alive with special events and programming, including appearances by Colorado Poet Laureate Crisosto Apache, community conversations, and opportunities for Ridgway residents to become part of the continuing Space Cowboy story. Space Cowboy travels with a simple idea: Colorado is the teacher and Space Cowboy is the learner. Every community adds something new to the mission. …",
     pubDate: "2026-10-02T23:00:00.000Z",
@@ -5658,7 +5658,7 @@ const NORWOOD_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "NWC Amended",
+    title: "Norwood Water Commission Meeting",
     link: "https://www.norwoodtown.com/2026-09-22-nwc-amended",
     description: "",
     pubDate: "2026-09-22T12:00:00.000Z",
@@ -8603,6 +8603,26 @@ function getTownAgendaLink(title, eventDate) {
 // MeetingsService (HARC stays in TELLURIDE_CACHED_DATA above). Empty until the
 // next content-refresh run. Each entry: {date,title,agendaUrl,hasAgenda,location,time}.
 const TELLURIDE_BOARD_MEETINGS = [
+  {
+    date: "September 24, 2026",
+    title: "Resident Advisory Committee",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8315",
+    hasAgenda: false,
+    location: "Rebekah Hall, 113 W Columbia Ave",
+    time: "",
+    civicwebId: 8315,
+    packetUrl: null
+  },
+  {
+    date: "October 5, 2026",
+    title: "Open Space Commission",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132",
+    hasAgenda: false,
+    location: "Rebekah Hall, 113 W Columbia Ave",
+    time: "",
+    civicwebId: 8132,
+    packetUrl: null
+  },
   {
     date: "September 22, 2026",
     title: "Telluride Housing Authority",

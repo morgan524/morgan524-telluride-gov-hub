@@ -3945,6 +3945,12 @@ async function syncOurayRidgwayEvents() {
     let location = '';
     const lastAt = title.lastIndexOf(' at ');
     if (lastAt > 0) { location = title.slice(lastAt + 4).trim(); title = title.slice(0, lastAt).trim(); }
+    // An organizer title that already ends "at <Venue>" gets Localist's own
+    // " at <Venue>" appended on top → "First Friday at Rootwings Art at
+    // Rootwings Art". Collapse a repeated trailing " at X" to one.
+    title = title.replace(/^(.*?)( at [^,]+?)\2+$/i, '$1$2').trim();
+    // Organizer typos that would otherwise ship verbatim ("Ongiong: …").
+    title = title.replace(/^on(?:gi|gio|goi)ng\b/i, 'Ongoing');
     if (!title) continue;
 
     if (GOV_MEETING_PATTERN_NODE.test(title)) { skippedGov++; continue; }
@@ -4941,6 +4947,27 @@ async function syncOurayMeetings() {
 // ══════════════════════════════════════════════════════════════
 // ── Task N: Sync Norwood Meetings from HTML pages ──
 // ══════════════════════════════════════════════════════════════
+// Norwood titles its calendar entries the way staff talk ("NWC Meeting",
+// "NWC Amended", "BOT Special") — an acronym plus a note about the AGENDA
+// ("Amended" means a revised agenda was posted, not a different meeting).
+// Spell the body out and drop the agenda qualifier so a card never reads as
+// an internal note. Shared by syncNorwoodMeetings() (NORWOOD_CACHED_DATA) and
+// syncNorwoodEvents() (NORWOOD_EVENTS) so both arrays carry the same title —
+// the content review flagged "NWC Amended" appearing in both on 2026-09-22.
+function norwoodMeetingTitle(raw) {
+  let t = String(raw || '').trim();
+  const expanded = t
+    .replace(/^NWC\b/i, 'Norwood Water Commission')
+    .replace(/^BOT\b/i, 'Board of Trustees')
+    .replace(/^P\s*&\s*Z\b/i, 'Planning and Zoning Commission');
+  if (expanded === t && !/\b(meeting|commission|trustees|board)\b/i.test(t)) return t; // not a meeting title
+  t = expanded
+    .replace(/\b(amended|revised|updated|agenda)\b/gi, ' ')
+    .replace(/\s+/g, ' ').trim();
+  if (!/\b(meeting|session|hearing|workshop|retreat)\b/i.test(t)) t += ' Meeting';
+  return t;
+}
+
 async function syncNorwoodMeetings() {
   console.log('\n🏘️  Syncing Norwood meetings from meeting pages...');
   const now = new Date();
@@ -4986,9 +5013,7 @@ async function syncNorwoodMeetings() {
 
       let vm;
       while ((vm = viewRe.exec(html)) !== null) {
-        // The town titles these "NWC Meeting" — spell it out so cards don't
-        // ask readers to know the acronym.
-        const title = vm[1].replace(/^NWC Meeting$/i, 'Norwood Water Commission Meeting');
+        const title = norwoodMeetingTitle(vm[1]);
         const dateStr = vm[2];
         const mDate = new Date(dateStr + 'T12:00:00'); // noon local to avoid tz
         if (mDate < pruneDate || mDate.getTime() > horizon) continue;
@@ -5840,7 +5865,12 @@ async function syncTellurideBoardMeetings() {
   // County-side joint sessions need no equivalent change: COUNTY_CACHED_DATA is
   // rebuilt from every CivicClerk event, so "Planning Commission and Board of
   // County Commissioners Joint Work Session" already flows through.
-  const KEEP = /town council|planning\s*(?:&|and)\s*zoning|\bp&z\b|housing authority|ethics commission|parks?\s*(?:&|and)\s*rec|intergovernmental|\bjoint\b/i;
+  // OPEN SPACE / RESIDENT ADVISORY / ECOLOGY added 2026-09-21: refreshSummaries()
+  // summarizes every CivicWeb body, so a summary for a body missing here has
+  // no list row to render on — the content review flagged the Oct 5 2026 Open
+  // Space Commission as exactly that orphan. Open Space is the Chair 7 body;
+  // the Resident Advisory Committee is the Town's employee-housing tenants.
+  const KEEP = /town council|planning\s*(?:&|and)\s*zoning|\bp&z\b|housing authority|ethics commission|parks?\s*(?:&|and)\s*rec|open space commission|resident advisory committee|ecology commission|intergovernmental|\bjoint\b/i;
   const out = [];
   const seen = new Set();
   for (const m of items) {
@@ -6260,8 +6290,8 @@ async function syncNorwoodEvents() {
     if (seen.has(key)) continue;
     seen.add(key);
 
-    const title = slugToTitle(slug);
     const category = classifySlug(slug);
+    const title = category === 'Government Meeting' ? norwoodMeetingTitle(slugToTitle(slug)) : slugToTitle(slug);
     const link = 'https://www.norwoodtown.com/' + dateStr + '-' + slug;
 
     events.push({
