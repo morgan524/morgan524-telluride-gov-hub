@@ -1,0 +1,181 @@
+name: Content Review → Claude Fix
+
+# Hands the daily content review's "needs your judgment" items to Claude Code
+# to fix at the source, instead of emailing them to a person to fix by hand.
+# (Morgan, 2026-09-21: "have the bot run this issue to you for fixing for all
+# issues in the future.")
+#
+# Runs after EACH successful Daily Content Review (4x/day). It reads that run's
+# content-review-actionable.log artifact and exits quietly when it is empty
+# (the normal case) or when a fix PR from a previous run is still open, so a
+# finding is worked at most once until a human merges or closes the PR.
+#
+# Claude edits the working tree; the commit + PR + issue comment happen in
+# plain shell steps afterwards so the PR body is under our control. Judgment
+# fixes land as a PR, never straight on main — same tier split as
+# content-autofix.yml. Merge it and the next content-refresh re-renders.
+
+on:
+  workflow_run:
+    workflows: ["Daily Content Review"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  actions: read
+
+concurrency:
+  group: content-review-claude-fix
+  cancel-in-progress: false
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    if: >-
+      github.event_name != 'workflow_run' ||
+      github.event.workflow_run.conclusion == 'success'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+
+      # The review run's logs. On a manual dispatch there is no upstream run,
+      # so regenerate the actionable log locally instead.
+      - name: Fetch the review's findings (workflow_run)
+        if: github.event_name == 'workflow_run'
+        uses: actions/download-artifact@v6
+        with:
+          name: content-review-logs-${{ github.event.workflow_run.id }}
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: review-logs
+
+      - name: Regenerate findings (manual dispatch)
+        if: github.event_name != 'workflow_run'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          mkdir -p review-logs
+          node scripts/content-review.js > /dev/null 2>&1 || true
+          cp content-review-actionable.log content-review-findings.log review-logs/ 2>/dev/null || true
+          git checkout -- . 2>/dev/null || true
+
+      - name: Decide whether there is anything to fix
+        id: gate
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "run=false" >> "$GITHUB_OUTPUT"
+          # The artifact mixes /tmp and repo-root paths, so the files may land
+          # nested under their original directories — flatten them.
+          for f in content-review-actionable.log content-review-findings.log content-review-findings.json; do
+            SRC=$(find review-logs -name "$f" -type f | head -1)
+            [ -n "$SRC" ] && [ "$SRC" != "review-logs/$f" ] && cp "$SRC" "review-logs/$f"
+          done
+          if [ ! -s review-logs/content-review-actionable.log ]; then
+            echo "No actionable findings — nothing for Claude to do."; exit 0
+          fi
+          OPEN=$(gh pr list --state open --json headRefName --jq '[.[] | select(.headRefName | startswith("claude/content-review-fix"))] | length')
+          if [ "${OPEN:-0}" != "0" ]; then
+            echo "A content-review fix PR is still open — waiting for it to be merged/closed before working new findings."; exit 0
+          fi
+          echo "run=true" >> "$GITHUB_OUTPUT"
+          echo "----- actionable findings -----"; cat review-logs/content-review-actionable.log
+
+      - name: Claude fixes the findings at the source
+        if: steps.gate.outputs.run == 'true'
+        uses: anthropics/claude-code-action@main
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          claude_args: |
+            --allowedTools "Bash,Read,Edit,Write,Glob,Grep"
+            --max-turns 60
+          prompt: |
+            You are working in the Livable Telluride / Telluride Gov Hub repo. The
+            daily content review found items that need judgment. Fix them AT THE
+            SOURCE so they stay fixed. Read CLAUDE.md and docs/content-review.md
+            first. The findings are in review-logs/content-review-actionable.log
+            (full context in review-logs/content-review-findings.log).
+
+            HARD RULES
+            - js/gov-helpers.js event/meeting arrays and most *_CACHED_DATA are
+              re-scraped every 6 hours. A bare hand-edit there is gone by the
+              next refresh. Every fix needs a durable half: a scraper/normalizer
+              change in scripts/content-refresh.js, an entry in
+              data/content-corrections.json (kinds: event-date, clear-link,
+              set-link, drop-event — see scripts/lib/content-corrections.js), or a
+              detector fix in scripts/content-review.js when the finding is a
+              false positive. You MAY also patch the current data so the site is
+              right today, but never as the only fix.
+            - Hand-curated config in js/gov-data.js (TELLURIDE_FESTIVALS,
+              LOCAL_ORGS, etc.) and MANUAL_SUMMARIES text can be edited directly.
+            - If you rename a meeting title, rename its
+              "source|date|title" keys in MANUAL_SUMMARIES, MEETING_PREVIEWS and
+              MEETING_AGENDA_META too, or the summary orphans.
+            - Never invent facts. For a date conflict, check the organizer's own
+              page (curl it); if you cannot verify which date is right, leave the
+              data alone and say so in the summary. Two dates on the same weekday
+              exactly 7 days apart are a weekly series, not a conflict.
+            - Never link to an agenda that doesn't exist; never feature an
+              obituary; a summary must never explain why it can't summarize.
+            - After editing: `node --check` every .js you touched, run
+              `node scripts/mirror-json.js` if you changed js/gov-data.js or
+              js/gov-helpers.js, then run
+              `ANTHROPIC_API_KEY= node scripts/content-review.js` and confirm the
+              items you fixed no longer appear in content-review-actionable.log.
+              Then `git checkout -- scripts/source-baselines.json` (bot-owned).
+            - Do NOT git commit, push, or open a PR — a later step does that.
+
+            FINISH by writing /tmp/claude-fix-summary.md: one bullet per finding
+            with what you changed and why (file paths), and a final
+            "Not fixed" list for anything you left alone and the reason.
+
+      - name: Commit to a branch and open a PR
+        if: steps.gate.outputs.run == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_TITLE: '🧭 Daily content review findings'
+        run: |
+          set -e
+          git config user.name  "Gov Hub Bot"
+          git config user.email "bot@livabletelluride.org"
+          git checkout -- scripts/source-baselines.json 2>/dev/null || true
+          rm -f content-review-findings.log content-review-findings.json content-review-actionable.log
+          if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard | grep -v '^review-logs/')" ]; then
+            echo "Claude made no changes."; exit 0
+          fi
+          BRANCH="claude/content-review-fix-$(date -u +%Y%m%d-%H%M)"
+          git checkout -b "$BRANCH"
+          git add -A -- . ':!review-logs'
+          git commit -m "Content review fixes $(date -u +%F) (Claude)" -m "$(cat /tmp/claude-fix-summary.md 2>/dev/null || echo 'See PR body.')"
+          git push -u origin "$BRANCH"
+          {
+            echo "Claude worked the content review's actionable findings from $(date -u +'%Y-%m-%d %H:%M UTC')."
+            echo
+            echo "## What changed"
+            cat /tmp/claude-fix-summary.md 2>/dev/null || echo "(no summary written)"
+            echo
+            echo "## Findings worked"
+            echo '```'; cat review-logs/content-review-actionable.log; echo '```'
+            echo
+            echo "Merge to apply. content-refresh re-renders within the hour; the next content review confirms."
+            echo
+            echo "🤖 Generated with [Claude Code](https://claude.com/claude-code)"
+          } > /tmp/pr-body.md
+          PR_URL=$(gh pr create --title "Content review fixes $(date -u +%F) (Claude)" --body-file /tmp/pr-body.md --base main --head "$BRANCH")
+          echo "PR: $PR_URL"
+          NUM=$(gh issue list --state open --search "$ISSUE_TITLE in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$NUM" ]; then
+            gh issue comment "$NUM" --body "🤖 Claude opened a fix PR for the actionable findings: $PR_URL"
+          fi

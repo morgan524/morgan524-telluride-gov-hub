@@ -23,6 +23,18 @@ Complements, does not replace: `weekly-review.yml` (infra/security/liveness) and
     secrets via `dawidd6/action-send-mail`; if unset, email is skipped and the
     issue remains the channel.
 
+**Claude works the actionable items (added 2026-09-21).**
+`.github/workflows/content-review-claude-fix.yml` runs after every successful
+review, downloads that run's `content-review-actionable.log`, and — only when
+it is non-empty and no earlier fix PR is still open — runs Claude Code
+(`anthropics/claude-code-action`) with a self-contained brief: fix each item at
+the source (scraper/normalizer change, `data/content-corrections.json`, or a
+detector fix for a false positive), verify with a local review run, then a
+shell step commits to `claude/content-review-fix-<stamp>`, opens a PR, and
+comments the link on the findings issue. Judgment fixes land as a **PR, never
+on main** (same tier split as `content-autofix.yml`); merge it and the next
+content-refresh re-renders. The morning email still goes out as a paper trail.
+
 **Severity → action:** `Critical`/`High`/`Medium` = actionable (emailed when
 present). `Low` = advisory (issue + weekly digest only, never an action email).
 Auto-fixable categories don't reach email at all — they're fixed at the source
