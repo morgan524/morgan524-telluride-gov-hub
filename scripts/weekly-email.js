@@ -446,9 +446,18 @@ const getMeetingSummary = G('getMeetingSummary');
 // links out to the relevant Deep Dive. We mirror that exact treatment here so
 // the Week Ahead email flags the same consequential meetings the same way.
 const WHY_THIS_MATTERS = G('WHY_THIS_MATTERS') || [];
+// A topic that is named only to say it was continued / pulled / tabled is NOT
+// on this agenda, and must not light up the panel. Matching is per sentence:
+// the entry fires only if some sentence mentions the topic WITHOUT one of
+// these deferral words. (2026-09-21: the Sep 24 P&Z summary said the Shandoka
+// PUD "has been continued without discussion to October 22" and the card still
+// carried the Shandoka/Carhenge "Why This Matters" callout.)
+const WTM_DEFERRED_RE = /\b(?:continued|postponed|tabled|deferred|pulled|withdrawn|removed from|rescheduled|bumped|carried over|not (?:on|be|being) (?:the agenda|discussed|heard|taken up)|without discussion|no discussion|off the agenda)\b/i;
 function getWTMEntry(text) {
+  const sentences = String(text || '').split(/(?<=[.!?])\s+|\s*\|\s*/).filter(Boolean);
   for (const entry of WHY_THIS_MATTERS) {
-    if (entry && entry.match && entry.match.test(text)) return entry;
+    if (!entry || !entry.match) continue;
+    if (sentences.some((s) => entry.match.test(s) && !WTM_DEFERRED_RE.test(s))) return entry;
   }
   return null;
 }
@@ -654,6 +663,11 @@ const boardName = (n, s) => (String(s).replace(/^town of /i, '') + ' ' + String(
 
 // ── Render ──
 const esc = (s) => String(s == null ? '' : s).replace(/&#0?39;/g, "'").replace(/[<>"]/g, (c) => ({ '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])).replace(/&(?!amp;|lt;|gt;|quot;)/g, '&amp;');
+// Minimal markdown-lite for the lede only: **word** -> <strong>word</strong>,
+// applied AFTER esc() so a raw "**" in AI or human-written lede text can never
+// inject real markup — the ** markers pass through escaping unchanged as
+// plain asterisks, then this turns matched pairs into real emphasis.
+const escBold = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
 
 // ── Emphasize proper-noun names & standalone addresses in meeting summaries ──
 // Ported from gov-hub.html's emphasizeNames so the weekly digest bolds the SAME
@@ -1063,7 +1077,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
     </tr></table></td></tr>
   <tr><td class="sec-pad" style="padding:22px 34px 4px;">
     <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#2f7a5f;background:rgba(47,122,95,.1);padding:3px 10px;border-radius:999px;">📅 ${esc(EMAIL_TITLE)}</span>
-    <p style="margin:11px 0 0;font-size:15.5px;line-height:1.65;color:#2c3b35;">${esc(LEDE)}</p></td></tr>
+    <p style="margin:11px 0 0;font-size:15.5px;line-height:1.65;color:#2c3b35;">${escBold(LEDE)}</p></td></tr>
   ${WEEKEND ? '' : section('Public Meetings This Week', mh)}
   ${festivalHero}
   ${section(EVENTS_HEADING, eh)}${WEEKEND ? '' : topicHtml}

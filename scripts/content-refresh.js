@@ -3967,6 +3967,9 @@ async function syncOurayRidgwayEvents() {
       continue;
     }
     let desc = decodeXmlText(field(it, 'description')).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    // Localist appends its own "View on site | Email this event" nav footer to
+    // every feed description — site chrome, not event copy.
+    desc = desc.replace(/\s*View on site\s*\|?\s*Email this event\s*$/i, '').trim();
     if (/^https?:\/\/\S+$/.test(desc)) desc = '';
     desc = smartTruncate(stripDescPreamble(desc), EVENT_DESC_MAX);
     const img = it.match(/<media:content[^>]*url=['"]([^'"]+)['"]/);
