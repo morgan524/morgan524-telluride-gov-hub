@@ -1437,7 +1437,7 @@ const TELLURIDE_FESTIVALS = [
     url: 'https://www.tellurideyogafestival.com/', ticketUrl: 'https://www.tellurideyogafestival.com/passes', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: 'June 25–28, 2026 — festival passes available now' },
   { name: 'Telluride Autumn Classic', month: 8, dayStart: 24, dayEnd: 27, icon: '🏎️',
     logo: 'https://tellurideautumnclassic.com/wp-content/uploads/2021/03/logo-1024x293.webp',
-    url: 'https://tellurideautumnclassic.com/', ticketUrl: 'https://registration.guidebook.com/91911f23-f9fc-11f0-8e6b-af6ca49d39b1', ticketLabel: 'Register Now', ticketStatus: 'on-sale', promo: 'Sept 24–27, 2026 — cars, motorcycles, aircraft & fine arts' }
+    url: 'https://tellurideautumnclassic.com/', ticketUrl: 'https://registration.guidebook.com/91911f23-f9fc-11f0-8e6b-af6ca49d39b1', ticketLabel: 'Register Now', ticketStatus: 'on-sale', promo: 'Cars, motorcycles, aircraft & fine arts — a concours competition, road rallies, and an arts festival set against peak aspen color in the San Juans' }
 ];
 
 

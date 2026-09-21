@@ -1163,7 +1163,7 @@ const MANUAL_SUMMARIES = {
     "The Board is spending a full day at a retreat — held at the Wilkinson Public Library rather than the usual meeting room — focused almost entirely on how the Board itself governs, rather than on any specific district program or decision. The morning centers on Policy Governance, the structured framework that defines the Board's role as setting ends (outcomes) while leaving means to the Superintendent. The Board will review survey results showing directors want simpler metrics and clearer accountability evidence. A significant part of the day is devoted to reformatting how the Superintendent's monitoring reports are presented — shifting from narrative summaries to explicit compliance determinations tied to measurable standards. The afternoon covers community engagement, inclusive school systems, strategic financial planning, and board continuity and succession. No action items are on the agenda; this is a working session meant to sharpen how the Board does its job.",
 
   "norwood|2026-09-21|Planning and Zoning Commission Meeting":
-    "The main event at this September 21st meeting is the first phase of Norwood's Land Use Code update. The commission will review draft code amendments under Phase I and take up Ordinance No. ___ Series 2026, which would formally adopt those changes. Land Use Code rewrites don't happen often — when they do, they set the rules that govern development, density, and use for years to come. Consent agenda covers minutes from July. This is an active legislative moment for Norwood's planning framework.",
+    "The main event at this September 21st meeting is the first phase of Norwood's Land Use Code update. The commission will review draft code amendments under Phase I and take up a Series 2026 ordinance that would formally adopt those changes — the ordinance number itself hasn't been assigned yet in the posted agenda. Land Use Code rewrites don't happen often — when they do, they set the rules that govern development, density, and use for years to come. Consent agenda covers minutes from July. This is an active legislative moment for Norwood's planning framework.",
 
   "county|2026-08-24|Open Space Commission Meeting":
     "The Open Space Commission meets August 24 for a broad status check across several ongoing projects. Staff will give updates on Mill Creek Park (recently grass-seeded), the East End Connector Trail at Idarado, Galloping Goose Park, the Placerville Schoolhouse masonry and painting work, and a position posting for a Parks + Open Space Manager. The one item with sharper public interest is new: citizen concerns about water flow diversion and the Bridal Veil conservation easement connected to Black Swift habitat. The commission also notes the 25th anniversary of Down Valley Park — and a retirement party for Rich — on September 12.",
@@ -4005,7 +4005,7 @@ const ALIBI_EVENTS = [
   {
     title: "Photon",
     link: "https://www.alibitelluride.com/calendar#eca-event=photon",
-    description: "What started as a passion project dedicated to the late and great Stephen Hawkin...",
+    description: "What started as a passion project dedicated to the late and great Stephen Hawking has evolved into a serious deep-space-inspired electronic act. Photon brings an immersive audiovisual show to The Alibi.",
     pubDate: "2026-09-24",
     time: "9:00 PM",
     source: "alibi",
@@ -4117,7 +4117,7 @@ const SHERBINO_EVENTS = [
     date: "2026-09-27 19:30:00",
     endDate: "2026-09-27 21:00:00",
     location: "The Sherbino, Ridgway",
-    copy: "@ Sunday || Doors at 7 pm || Show at 7:30 pm || Dancehall-style show with limited seating || Tickets:  $28 advance / $32 day of show || A limited number of reserved tables are available.  GA Tickets can be found under the venue diagram.  Reserved tables are found by hovering over the diagram.  GA seats are available in the bar area. The Sherbino and Pickin’ Productions welcome Slap Dragon, a Nashville-based band serving up a joyful, hard-to-define blend of acoustic funk, bluegrass instincts, R&B soul, disco energy, improvisation, and seriously sharp songwriting. Slap Dragon began as something of a half-joke—an acoustic funk band—but once bassist and songwriter Scott Mulvahill and vocalist Laura Berens began making music together, the idea quickly became something real. …",
+    copy: "The Sherbino and Pickin' Productions welcome Slap Dragon, a Nashville-based band serving up a joyful, hard-to-define blend of acoustic funk, bluegrass instincts, R&B soul, disco energy, improvisation, and seriously sharp songwriting. Doors at 7 pm, show at 7:30 — a dancehall-style show with limited seating. Tickets $28 advance / $32 day of show.",
     imageUrl: "https://sherbino.org/wp-content/uploads/2026/08/2026-sherb-event-banners-12.jpg"
   },
   {
@@ -4516,7 +4516,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "ALPINE JAM",
     link: "https://events.ourayridgwayevents.com/event/alpine-jam-8336",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    description: "Live music at the Colorado Boy Depot in Ridgway — check the venue's calendar for the night's lineup and set times.",
     pubDate: "2026-09-22T22:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4712,7 +4712,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "JEAN SANDOVAL AND THE TOWNKIDS",
     link: "https://events.ourayridgwayevents.com/event/jean-sandoval-and-the-townkids",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    description: "Live music at the Colorado Boy Depot in Ridgway — check the venue's calendar for the night's lineup and set times.",
     pubDate: "2026-09-25T22:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5340,7 +5340,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "ALPINE JAM",
     link: "https://events.ourayridgwayevents.com/event/alpine-jam-3576",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    description: "Live music at the Colorado Boy Depot in Ridgway — check the venue's calendar for the night's lineup and set times.",
     pubDate: "2026-10-16T22:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5795,7 +5795,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Bike & Brewery Tour",
     link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
-    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    description: "A guided two-brewery ride from the Mountain Lodge down to town. The route runs Jurassic Trail to Meadows Trail, ending at Telluride Brewing Co. for a complimentary beer.",
     pubDate: "2026-09-21T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -5883,7 +5883,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Bike & Brewery Tour",
     link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
-    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    description: "A guided two-brewery ride from the Mountain Lodge down to town. The route runs Jurassic Trail to Meadows Trail, ending at Telluride Brewing Co. for a complimentary beer.",
     pubDate: "2026-09-28T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -5960,7 +5960,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Bike & Brewery Tour",
     link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
-    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    description: "A guided two-brewery ride from the Mountain Lodge down to town. The route runs Jurassic Trail to Meadows Trail, ending at Telluride Brewing Co. for a complimentary beer.",
     pubDate: "2026-10-05T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -6026,7 +6026,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Bike & Brewery Tour",
     link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
-    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    description: "A guided two-brewery ride from the Mountain Lodge down to town. The route runs Jurassic Trail to Meadows Trail, ending at Telluride Brewing Co. for a complimentary beer.",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -6125,7 +6125,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Bike & Brewery Tour",
     link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
-    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    description: "A guided two-brewery ride from the Mountain Lodge down to town. The route runs Jurassic Trail to Meadows Trail, ending at Telluride Brewing Co. for a complimentary beer.",
     pubDate: "2026-10-19T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",

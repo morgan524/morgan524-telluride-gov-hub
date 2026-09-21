@@ -7058,6 +7058,21 @@ function eventNeedsSummary(e) {
   if (desc.length < 80) return true;
   if (/^show at the/i.test(desc)) return true;
   if (/see the .* page for tickets and details/i.test(desc)) return true;
+  // Raw Localist scrape chrome (Ouray/Ridgway calendar) — "View on site |
+  // Email this event" is the site's own nav footer, not event content, and
+  // it's long enough to slip past the length check above.
+  if (/view on site\s*\|?\s*email this event/i.test(desc)) return true;
+  // Raw Sherbino "copy" field ticket-info header ("@ Gates: 6:00 || Show:
+  // 6:30 pm || ..." or "@ Sunday || Doors at 7 pm || ..."). Real prose never
+  // starts with a bare "@".
+  if (/^@\s*\S/.test(desc)) return true;
+  // Source-truncated mid-word/mid-sentence (Alibi's ECA API shortDescription
+  // field ends in a literal "..." wherever it happens to cut off — distinct
+  // from our own smartTruncate's " …" single-ellipsis marker below).
+  if (/\.\.\.\s*$/.test(desc)) return true;
+  // No terminal punctuation at all — a raw og:description/meta snippet that
+  // got cut off (Mountain Village, some KOTO listings) without any ellipsis.
+  if (!/[.!?…"”'’)\]]\s*$/.test(desc)) return true;
   return false;
 }
 
@@ -7084,6 +7099,7 @@ async function syncEventDescriptions(eventArrays) {
     const key = eventSummaryCacheKey(ev);
     if (cache[key]) {
       ev.description = cache[key];
+      if (ev.copy !== undefined) ev.copy = cache[key];
       cacheHits++;
       continue;
     }
@@ -7092,6 +7108,10 @@ async function syncEventDescriptions(eventArrays) {
       const text = await callClaudeRaw(RICK_EVENT_USER_PROMPT_TEMPLATE(ev));
       if (text && text.length >= 40) {
         ev.description = text;
+        // Some sources (Sherbino) key off `copy` instead of `description` —
+        // patch both so every renderer picks up the clean text regardless
+        // of which field it reads first.
+        if (ev.copy !== undefined) ev.copy = text;
         cache[key] = text;
         generated++;
       } else {
@@ -7959,7 +7979,7 @@ async function main() {
     'ALIBI_EVENTS', 'SHERBINO_EVENTS', 'NUCLA_NATURITA_EVENTS',
     'CLUB_RED_SHOWS', 'FRESH_FOOD_HUB_EVENTS',
     'MUSIC_ON_THE_GREEN', 'COMMUNITY_EVENTS', 'TELLURIDE_COM_EVENTS',
-    'OURAY_COUNTY_EVENTS', 'MOUNTAIN_VILLAGE_EVENTS', 'NORWOOD_EVENTS',
+    'OURAY_COUNTY_EVENTS', 'OURAY_RIDGWAY_EVENTS', 'MOUNTAIN_VILLAGE_EVENTS', 'NORWOOD_EVENTS',
   ];
   const arraySnapshot = {};
   for (const name of eventArrayNames) {
