@@ -65,9 +65,14 @@ function ledePrompt({ meetings, events, cadence }) {
   const windowLine = weekend
     ? 'Below are the notable community events for THIS COMING WEEKEND (Friday through Sunday) across the Telluride region.'
     : 'Below are the UPCOMING government meetings and community events for the coming week (Friday through Thursday) across the Telluride region.';
+  // HOUSE STYLE (Morgan, 2026-09-21 — "save that style for all future
+  // digests"): cover MORE of the window, put the DAY OF THE WEEK on every item,
+  // and wrap each body / event name in **double asterisks**. weekly-email.js
+  // renders **…** as bold (escBold); nothing else is markup.
+  const style = ' Every meeting or event you mention MUST carry its day of the week (e.g. "Tuesday", "on Saturday"). Wrap the NAME of each governing body and each event in double asterisks for bold, exactly like **Town Council** or **Slap Dragon** — the name only, not the day or the venue. No other markup.';
   const spec = weekend
-    ? 'a 2-3 sentence (40-70 word) plain-prose intro to the weekend. LEAD with the single best or biggest thing happening, then briefly fold in a couple of the others. Warm and grounded — like a local telling a friend what is worth getting out for.'
-    : 'a 2-4 sentence (50-90 word) plain-prose intro that orients a busy local. LEAD with the single biggest or most important thing this week, then briefly fold in the rest.';
+    ? 'a 3-4 sentence (60-100 word) plain-prose intro to the weekend. LEAD with the single best or biggest thing happening, then fold in three or four of the others so the reader gets a real sense of the whole weekend. Warm and grounded — like a local telling a friend what is worth getting out for.' + style
+    : 'a 4-6 sentence (110-170 word) plain-prose intro that orients a busy local. LEAD with the single biggest or most important meeting this week, then cover the other consequential meetings, then close "on the lighter side" with three or so of the events. Aim to name most of the meetings and several events, not just one or two.' + style;
   const parts = [
     RICK_VOICE,
     '',
@@ -100,6 +105,9 @@ function ledeInputFingerprint({ meetings, events, cadence } = {}) {
   // Hash the prompt inputs, not the prompt string: prompt wording can be
   // edited without invalidating every cached lede in the file.
   const payload = JSON.stringify({
+    // Bump when the HOUSE STYLE in ledePrompt changes so every cached lede
+    // written under the old style is regenerated (v2 = bold names + weekdays).
+    style: 2,
     cadence: cadence === 'weekend' ? 'weekend' : 'week',
     // Weekend ledes are events-only (see ledePrompt), so meetings must not
     // enter the key there — otherwise a meeting change would bust a cache
