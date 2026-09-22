@@ -1,30 +1,34 @@
 {
-  "hash": "4a538a7e182642408348fc9644c7e54668ec179d",
-  "lede": "Monday's Town Council meeting is the one to watch this week — they're voting on whether to convert two affordable ownership units at 215 East Colorado Avenue into employee dwelling units with no maximum sale price, a structural change to how that housing works for the community. The School Board's monthly meeting tackles second-reading votes on board policies and resolutions backing Proposition NN and Amendment 87, while the County Commissioners continue a public hearing on adopting new statewide building codes that will shape construction across the valley for years.",
+  "hash": "6c30c611a7e43d7dc80ad9e3a5d0722ce4d5a58e",
+  "lede": "The biggest item this week is Monday's Town Council meeting, where a vote on converting two affordable ownership units at 215 East Colorado Avenue into employee dwelling units — removing the price cap entirely — will reshape how that housing stock works for locals. The School Board meets the same night to vote on resolutions backing Proposition NN and Amendment 87, plus second-reading approval of updated board policies. The County Commissioners hold a continued public hearing Tuesday on adopting new international building codes that will set construction standards across San Miguel County for years to come.",
   "notable": [
     {
       "id": 1,
-      "stake": "Board votes on Prop NN, Amendment 87 resolutions and two revised policies."
+      "stake": "Board votes on state ballot resolutions and second-reading approval of two revised policies."
     },
     {
       "id": 2,
-      "stake": "Resolution could remove price cap on two affordable ownership units, changing their status permanently."
+      "stake": "Resolution would remove price caps on two town-built affordable units, changing their housing-stock role."
     },
     {
       "id": 3,
-      "stake": "Council votes on deed-restriction conversion removing sale-price cap from two affordable units."
+      "stake": "Council votes on deed-restriction conversion removing affordable price cap from two town units."
     },
     {
       "id": 4,
-      "stake": "Commission weighing new leak-check fee and six leak-forgiveness requests affecting ratepayers."
+      "stake": "Commission weighs leak forgiveness requests and a new fee that formalizes leak-check costs for ratepayers."
+    },
+    {
+      "id": 7,
+      "stake": "Subcommittee selects winter vendors for Gondola Plaza and appoints a new chairperson."
     },
     {
       "id": 8,
-      "stake": "Continued public hearing on new building codes that set construction standards countywide."
+      "stake": "Continued public hearing on new building codes that will govern all future construction in the county."
     },
     {
       "id": 10,
-      "stake": "Early review of school-district employee housing project and ongoing land-use discussion — public eyes needed."
+      "stake": "P&Z reviews early-stage employee housing proposal at the high school site under an IGA with the Town."
     }
   ]
 }
