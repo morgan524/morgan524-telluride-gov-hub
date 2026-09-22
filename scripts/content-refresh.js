@@ -6292,6 +6292,13 @@ async function syncNorwoodEvents() {
 
     const category = classifySlug(slug);
     const title = category === 'Government Meeting' ? norwoodMeetingTitle(slugToTitle(slug)) : slugToTitle(slug);
+    // The three boards syncNorwoodMeetings() scrapes (BOT, P&Z, NWC) already
+    // reach the site from NORWOOD_CACHED_DATA, with their agenda links — the
+    // sitemap copy only duplicated them (content review, 2026-09-22: P&Z 9/21
+    // and NWC 9/22 in both arrays). Skip them here, as Mountain Village does
+    // with MV_GOV_SLUG_RE; any other government body still comes through.
+    if (category === 'Government Meeting' &&
+        /^(Board of Trustees|Planning and Zoning Commission|Norwood Water Commission)\b/i.test(title)) continue;
     const link = 'https://www.norwoodtown.com/' + dateStr + '-' + slug;
 
     events.push({
