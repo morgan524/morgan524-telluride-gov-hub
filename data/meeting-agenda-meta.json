@@ -441,7 +441,10 @@
   "telluride|2026-09-24|Resident Advisory Committee - Sep 24 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8315",
     "sv": 4,
-    "ph": "bbdf287f962aba89"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/HZo2uN-sQUesPZ2bJze9pQ",
+    "meetingId": "864 1732 3408",
+    "passcode": "709234",
+    "phone": "970-728-3071"
   },
   "telluride|2026-09-16|CANCELED - Parks & Recreation Commission - Sep 16 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082",

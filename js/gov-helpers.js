@@ -369,7 +369,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-09-24|Resident Advisory Committee - Sep 24 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8315","sv":4,"ph":"bbdf287f962aba89"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8315","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/HZo2uN-sQUesPZ2bJze9pQ","meetingId":"864 1732 3408","passcode":"709234","phone":"970-728-3071"},
 
   "telluride|2026-09-16|CANCELED - Parks & Recreation Commission - Sep 16 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082","sv":4},
@@ -1286,7 +1286,7 @@ const MANUAL_SUMMARIES = {
     "The September 29, 2026 TMVOA Board of Directors Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-09-24|Resident Advisory Committee - Sep 24 2026":
-    "The September 24, 2026 Resident Advisory Committee agenda hasn't been posted yet.",
+    "The Resident Advisory Committee meets Thursday, September 24 at noon in the Green Room. The working session covers three items worth watching: a tenant survey discussion, a look at unit vacancies, and a policies informational session — all squarely in the territory of how the Town manages its deed-restricted and municipal housing stock. The committee will also review RAC action items and responsibilities. Rounding out the agenda: updates from Town staff and committee members, public comment, and setting the next meeting date.",
 
   "telluride|2026-09-16|CANCELED - Parks & Recreation Commission - Sep 16 2026":
     "The September 16, 2026 Parks & Recreation Commission meeting is canceled.",
@@ -2745,6 +2745,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Ridgway Reminds Property Owners about Backflow Prevention and Cross Connection Control",
+    source: "Town of Ridgway",
+    date: "September 22, 2026",
+    firstSeen: "2026-09-22",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Backflow-Testing-Reminder-Press-Release-2026-09-22.pdf",
+    img: ""
+  },
+  {
     title: "Town of Ridgway Water Supply Element Draft Now Available for Review and Comment",
     source: "Town of Ridgway",
     date: "September 21, 2026",
@@ -2841,17 +2852,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Youth-Advisory-Council-Press-Release-2026-09-11.pdf",
-    img: ""
-  },
-  {
-    title: "Ridgway Rescinds Stage 2 Fire Restrictions, Reinstates Stage 1 Fire Restrictions effective 12:01am on Thursday, Sept. 3rd - Sept. 2, 2026",
-    source: "Town of Ridgway",
-    date: "September 22, 2026",
-    firstSeen: "2026-09-09",
-    newsTopic: "public-safety",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Rescind-Stage-2%2C-Reinstate-Stage-1-Fire-Restrictions-Press-Release-2026-09-02.pdf",
     img: ""
   }
 ];
@@ -3985,37 +3985,38 @@ const ALIBI_EVENTS = [
  * Bot overwrites this on first run. */
 const SHERIDAN_EVENTS = [
   {
-    title: "Telluride Blues & Brews Bal De Maison",
-    link: "https://sheridanoperahouse.com/events/telluride-blues-brews-juke-joint/",
-    description: "A special evening of blues music presented by Telluride Blues & Brews Festival, hosted at the historic Sheridan Opera House. The intimate indoor setting offers a more up-close experience than the festival's main outdoor stages, bringing live blues performance into one of Telluride's most beloved venues.",
-    pubDate: "2026-09-17",
+    title: "FREE Oak Street Park SummerSHOW Series: MARIACHI SAN JOSE",
+    link: "https://sheridanoperahouse.com/events/oak-street-park-summershow-series-4/",
+    description: "A free outdoor concert at Oak Street Park featuring Mariachi San Jose, part of the SummerSHOW Series. The performance brings the lively sounds of mariachi music to the Telluride community for an evening of live entertainment in an open-air setting.",
+    pubDate: "2026-09-24",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
     category: "Concert / Performance",
     location: "Sheridan Opera House • Telluride, CO",
-    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2021/06/Blues-and-Brews.png"
+    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/03/dsc01583lr-1-.733x412.webp"
   },
   {
-    title: "Telluride Blues & Brews Juke Joint",
-    link: "https://sheridanoperahouse.com/events/telluride-blues-brews-juke-joint-2/",
-    description: "A blues-focused concert held at the historic Sheridan Opera House as part of the Telluride Blues & Brews festival weekend, the Juke Joint brings an intimate live music experience to one of Telluride's most storied venues. The setting channels the informal, soulful atmosphere of a traditional juke joint within the Opera House's intimate interior.",
-    pubDate: "2026-09-18",
+    title: "Pink Talking Fish | A Fusion of Pink Floyd, Talking Heads and Phish",
+    link: "https://sheridanoperahouse.com/events/pink-talking-fish-a-fusion-of-pink-floyd-talking-heads-and-phish/",
+    description: "Pink Talking Fish is a live band that performs a fusion of music from Pink Floyd, Talking Heads, and Phish, blending the catalogs of all three iconic acts into a single, seamless show. The group performs at the historic Sheridan Opera House in Telluride.",
+    pubDate: "2026-10-02",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
     category: "Concert / Performance",
     location: "Sheridan Opera House • Telluride, CO",
-    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2021/06/Blues-and-Brews.png"
+    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/05/unnamed-file-2.png"
   },
   {
-    title: "Telluride Blues & Brews Juke Joint",
-    link: "https://sheridanoperahouse.com/events/telluride-blues-brews-juke-joint-3/",
-    description: "A blues-focused concert event at the historic Sheridan Opera House, part of the Telluride Blues & Brews Festival weekend. The intimate Juke Joint setting brings live blues music to one of Telluride's most storied performance venues.",
-    pubDate: "2026-09-19",
+    title: "Not-So-Young People's Theater: Shrek The Musical",
+    link: "https://sheridanoperahouse.com/events/not-so-young-peoples-theater/",
+    description: "A production of Shrek The Musical performed at the Sheridan Opera House, bringing the beloved fairy-tale story to life on a Telluride stage. The show features the classic characters and songs from the hit musical based on the DreamWorks animated film.",
+    pubDate: "2026-10-08",
+    endDate: "2026-10-11",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
     category: "Concert / Performance",
     location: "Sheridan Opera House • Telluride, CO",
-    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2021/06/Blues-and-Brews.png"
+    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2025/10/16-5H0A3038.jpg"
   }
 ];
 
@@ -8511,10 +8512,11 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "September 24, 2026",
     title: "Resident Advisory Committee",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8315",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Green Room",
     time: "",
-    civicwebId: 8315
+    civicwebId: 8315,
+    packetUrl: "https://telluride-co.civicweb.net/document/445347/"
   },
   {
     date: "September 24, 2026",
@@ -8688,6 +8690,15 @@ const TELLURIDE_BOARD_MEETINGS = [
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
     civicwebId: 8084
+  },
+  {
+    date: "November 19, 2026",
+    title: "Resident Advisory Committee",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8320",
+    hasAgenda: false,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: "",
+    civicwebId: 8320
   },
   {
     date: "November 19, 2026",

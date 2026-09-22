@@ -1,35 +1,36 @@
 [
   {
-    "title": "Telluride Blues & Brews Bal De Maison",
-    "link": "https://sheridanoperahouse.com/events/telluride-blues-brews-juke-joint/",
-    "description": "A special evening of blues music presented by Telluride Blues & Brews Festival, hosted at the historic Sheridan Opera House. The intimate indoor setting offers a more up-close experience than the festival's main outdoor stages, bringing live blues performance into one of Telluride's most beloved venues.",
-    "pubDate": "2026-09-17",
+    "title": "FREE Oak Street Park SummerSHOW Series: MARIACHI SAN JOSE",
+    "link": "https://sheridanoperahouse.com/events/oak-street-park-summershow-series-4/",
+    "description": "A free outdoor concert at Oak Street Park featuring Mariachi San Jose, part of the SummerSHOW Series. The performance brings the lively sounds of mariachi music to the Telluride community for an evening of live entertainment in an open-air setting.",
+    "pubDate": "2026-09-24",
     "source": "sheridan",
     "sourceLabel": "Sheridan Opera House",
     "category": "Concert / Performance",
     "location": "Sheridan Opera House • Telluride, CO",
-    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2021/06/Blues-and-Brews.png"
+    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/03/dsc01583lr-1-.733x412.webp"
   },
   {
-    "title": "Telluride Blues & Brews Juke Joint",
-    "link": "https://sheridanoperahouse.com/events/telluride-blues-brews-juke-joint-2/",
-    "description": "A blues-focused concert held at the historic Sheridan Opera House as part of the Telluride Blues & Brews festival weekend, the Juke Joint brings an intimate live music experience to one of Telluride's most storied venues. The setting channels the informal, soulful atmosphere of a traditional juke joint within the Opera House's intimate interior.",
-    "pubDate": "2026-09-18",
+    "title": "Pink Talking Fish | A Fusion of Pink Floyd, Talking Heads and Phish",
+    "link": "https://sheridanoperahouse.com/events/pink-talking-fish-a-fusion-of-pink-floyd-talking-heads-and-phish/",
+    "description": "Pink Talking Fish is a live band that performs a fusion of music from Pink Floyd, Talking Heads, and Phish, blending the catalogs of all three iconic acts into a single, seamless show. The group performs at the historic Sheridan Opera House in Telluride.",
+    "pubDate": "2026-10-02",
     "source": "sheridan",
     "sourceLabel": "Sheridan Opera House",
     "category": "Concert / Performance",
     "location": "Sheridan Opera House • Telluride, CO",
-    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2021/06/Blues-and-Brews.png"
+    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/05/unnamed-file-2.png"
   },
   {
-    "title": "Telluride Blues & Brews Juke Joint",
-    "link": "https://sheridanoperahouse.com/events/telluride-blues-brews-juke-joint-3/",
-    "description": "A blues-focused concert event at the historic Sheridan Opera House, part of the Telluride Blues & Brews Festival weekend. The intimate Juke Joint setting brings live blues music to one of Telluride's most storied performance venues.",
-    "pubDate": "2026-09-19",
+    "title": "Not-So-Young People's Theater: Shrek The Musical",
+    "link": "https://sheridanoperahouse.com/events/not-so-young-peoples-theater/",
+    "description": "A production of Shrek The Musical performed at the Sheridan Opera House, bringing the beloved fairy-tale story to life on a Telluride stage. The show features the classic characters and songs from the hit musical based on the DreamWorks animated film.",
+    "pubDate": "2026-10-08",
+    "endDate": "2026-10-11",
     "source": "sheridan",
     "sourceLabel": "Sheridan Opera House",
     "category": "Concert / Performance",
     "location": "Sheridan Opera House • Telluride, CO",
-    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2021/06/Blues-and-Brews.png"
+    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2025/10/16-5H0A3038.jpg"
   }
 ]

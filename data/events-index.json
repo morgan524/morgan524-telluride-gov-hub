@@ -571,6 +571,19 @@
     "type": "Community"
   },
   {
+    "title": "FREE Oak Street Park SummerSHOW Series: MARIACHI SAN JOSE",
+    "href": "https://sheridanoperahouse.com/events/oak-street-park-summershow-series-4/",
+    "date": "2026-09-24",
+    "time": "6:00 PM",
+    "location": "Sheridan Opera House • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/03/dsc01583lr-1-.733x412.webp",
+    "category": "Concert / Performance",
+    "source": "Sheridan Opera House",
+    "desc": "A free outdoor concert at Oak Street Park featuring Mariachi San Jose, part of the SummerSHOW Series. The performance brings the lively sounds of mariachi music to the Telluride community for an evening of live entertainment in an open-air…",
+    "type": "Music"
+  },
+  {
     "title": "Watercolor & Wine with Katey Fetch: \"Paint the Peaks\"",
     "href": "https://events.ourayridgwayevents.com/event/watercolor-wine-with-katey-fetch-paint-the-peaks",
     "date": "2026-09-24",
@@ -1364,6 +1377,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Pink Talking Fish | A Fusion of Pink Floyd, Talking Heads and Phish",
+    "href": "https://sheridanoperahouse.com/events/pink-talking-fish-a-fusion-of-pink-floyd-talking-heads-and-phish/",
+    "date": "2026-10-02",
+    "time": "6:00 PM",
+    "location": "Sheridan Opera House • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/05/unnamed-file-2.png",
+    "category": "Concert / Performance",
+    "source": "Sheridan Opera House",
+    "desc": "Pink Talking Fish is a live band that performs a fusion of music from Pink Floyd, Talking Heads, and Phish, blending the catalogs of all three iconic acts into a single, seamless show. The group performs at the historic Sheridan Opera…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Roma Ransom – Live at Floating Lotus Brewery",
     "href": "https://events.ourayridgwayevents.com/event/roma-ransom-live-at-floating-lotus-brewery",
     "date": "2026-10-02",
@@ -1757,6 +1783,20 @@
     "source": "Town of Norwood",
     "desc": "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
     "type": "Community"
+  },
+  {
+    "title": "Not-So-Young People's Theater: Shrek The Musical",
+    "href": "https://sheridanoperahouse.com/events/not-so-young-peoples-theater/",
+    "date": "2026-10-08",
+    "time": "6:00 PM",
+    "location": "Sheridan Opera House • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://sheridanoperahouse.com/wp-content/uploads/2025/10/16-5H0A3038.jpg",
+    "category": "Concert / Performance",
+    "source": "Sheridan Opera House",
+    "desc": "A production of Shrek The Musical performed at the Sheridan Opera House, bringing the beloved fairy-tale story to life on a Telluride stage. The show features the classic characters and songs from the hit musical based on the DreamWorks…",
+    "type": "Arts & Film",
+    "endDate": "2026-10-11"
   },
   {
     "title": "Shrek the Musical",

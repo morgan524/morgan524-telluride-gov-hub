@@ -23,10 +23,11 @@
     "date": "September 24, 2026",
     "title": "Resident Advisory Committee",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8315",
-    "hasAgenda": false,
+    "hasAgenda": true,
     "location": "Green Room",
     "time": "",
-    "civicwebId": 8315
+    "civicwebId": 8315,
+    "packetUrl": "https://telluride-co.civicweb.net/document/445347/"
   },
   {
     "date": "September 24, 2026",
@@ -200,6 +201,15 @@
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "",
     "civicwebId": 8084
+  },
+  {
+    "date": "November 19, 2026",
+    "title": "Resident Advisory Committee",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8320",
+    "hasAgenda": false,
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "time": "",
+    "civicwebId": 8320
   },
   {
     "date": "November 19, 2026",
