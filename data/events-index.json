@@ -11,7 +11,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
     "type": "Community",
-    "endDate": "2026-11-20"
+    "endDate": "2026-11-21"
   },
   {
     "title": "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
@@ -437,6 +437,19 @@
     "source": "Telluride.com",
     "desc": "A free weekly lecture by scholars, writers, storytellers, and experts of Telluride's history, hosted by the Telluride Historical Museum and located at the Madeline Hotel.",
     "type": "Talks & Classes"
+  },
+  {
+    "title": "\"Stoke the Vote\" Event w/ ROCC & Protect Our Winters (POW)",
+    "href": "https://events.ourayridgwayevents.com/event/stoke-the-vote-event-w-rocc-protect-our-winters-pow",
+    "date": "2026-09-23",
+    "time": "6:00 PM",
+    "location": "Decker Community Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54046556397776/huge/e98d1f31961253790d636336c25c1f624c198f3b.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "ROCC and Protect Our Winters (POW) are hosting an evening gathering, tomorrow, Sept 23rd from 6-8PM at the Decker Room to \"Stoke the Vote\" for this year's midterm elections. Come watch a couple short films and listen to a panel discussion…",
+    "type": "Community"
   },
   {
     "title": "OPEN MIC / JAM NIGHT w/ host DJ Strong",
@@ -950,7 +963,7 @@
     "img": "https://www.telluride.com/site/assets/files/48458/m2dlogonob_g.800x533.webp",
     "category": "Community Event",
     "source": "Telluride.com",
-    "desc": "The Mountains to the Desert Classic (M2D) is celebrating its 22 Anniversary as the primary fundraising event for the …",
+    "desc": "The Mountains to the Desert Classic (M2D) is celebrating its 23rd Anniversary as the primary fundraising event for the …",
     "type": "Community"
   },
   {
@@ -1375,6 +1388,20 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Opening Reception Schedule - Part of Ridgway's First Friday Art Walk Gallery Open 5-8PM Artist Talk and Poetry Reading 630-7:30 Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry,…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Ongoing: Space Cowboy by Dundee & Lee",
+    "href": "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
+    "date": "2026-10-02",
+    "time": "5:00 PM",
+    "location": "Decker Community Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53975670057489/huge/75be37bbb2b6bd7ba17f7754e11da5a0eaf5930c.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado…",
+    "type": "Community",
+    "endDate": "2026-10-29"
   },
   {
     "title": "Pink Talking Fish | A Fusion of Pink Floyd, Talking Heads and Phish",
@@ -2152,6 +2179,19 @@
     "category": "",
     "source": "Sherbino Theater",
     "desc": "A recurring monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The event offers a casual space for veterans to connect with one another and with community support.",
+    "type": "Community"
+  },
+  {
+    "title": "Plaza Vending Committee Meeting",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/plaza-vending-committee-meeting/",
+    "date": "2026-10-14",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/34834/mplantz-19-a7v07134.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "The Mountain Village Plaza Vending Committee will meet to review winter 2026/27 plaza vending applications. The meeting will be held in Mountain Village and is also accessible remotely via Zoom.",
     "type": "Community"
   },
   {

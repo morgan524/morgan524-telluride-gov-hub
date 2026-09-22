@@ -1,5 +1,17 @@
 [
   {
+    "title": "‘A reflection of place’",
+    "source": "Telluride Times",
+    "date": "September 22, 2026",
+    "firstSeen": "2026-09-22",
+    "newsTopic": "arts-culture",
+    "copy": "Many art installations that interact with the landscape remain in one setting.",
+    "claudeSummary": false,
+    "href": "https://www.telluridenews.com/news/article_1e344649-7938-4755-ba52-0c0e859a9553.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/f2/5f2b2227-5a1a-43d9-a863-93c4e98a1f5c/6ab247a3a9fe4.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "County commissioners make November ballot measure recommendations",
     "source": "Telluride Times",
     "date": "September 22, 2026",
@@ -900,6 +912,42 @@
     "img": ""
   },
   {
+    "title": "Town Council Proclaims September 7-11 Black Bear Safety Week",
+    "source": "Town of Telluride",
+    "date": "September 3, 2026",
+    "newsTopic": "government",
+    "copy": "(September 3, 2026) — Town Council on Tuesday proclaimed September 7-11 Black Bear Safety Week, arriving in a year when a dry spring and summer have left black bears across Colorado with far less to eat in the wild.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=404",
+    "img": "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
+  },
+  {
+    "title": "Town of Telluride Downgrades to Stage 1 Fire Restrictions",
+    "source": "Town of Telluride",
+    "date": "August 26, 2026",
+    "newsTopic": "public-safety",
+    "copy": "(August 25, 2026) – Following improved fire conditions across the region, Town Manager Zoe Dohnal has downgraded fire restrictions within the Town of Telluride from Stage 2 to Stage 1, effective 12:01 a.m. MT on Wednesday, August 26, 2026.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=403",
+    "img": ""
+  },
+  {
+    "title": "Safe Festivals - A Public Health Approach to Harm Reduction",
+    "source": "San Miguel County",
+    "date": "September 22, 2026",
+    "newsTopic": "health",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1411",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14815"
+  },
+  {
+    "title": "Commissioners Finalize Deed Restriction Reversion Process",
+    "source": "San Miguel County",
+    "date": "September 22, 2026",
+    "newsTopic": "housing",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1410",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14812"
+  },
+  {
     "title": "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
     "source": "San Miguel County",
     "date": "September 10, 2026",
@@ -907,6 +955,15 @@
     "copy": "",
     "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1409",
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
+  },
+  {
+    "title": "Two Domestic Pets in San Miguel County Test Positive for the Plague",
+    "source": "San Miguel County",
+    "date": "September 3, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
   },
   {
     "title": "Tomboy Road Now Open",
@@ -924,6 +981,15 @@
     "newsTopic": "community",
     "copy": "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
     "href": "https://www.telluride.gov/AlertCenter.aspx?AID=45",
+    "img": ""
+  },
+  {
+    "title": "Stage 1 Fire Restrictions In Effect",
+    "source": "Town of Telluride",
+    "date": "August 26, 2026",
+    "newsTopic": "public-safety",
+    "copy": "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
+    "href": "https://www.telluride.gov/AlertCenter.aspx?AID=65",
     "img": ""
   },
   {
