@@ -456,7 +456,19 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083","sv":4,"ph":"bd74d669e41a67a8"},
 
   "county|2026-10-21|Board of County Commissioners Meeting":
-    {"sv":4,"ph":"49e704e3c3bab858"}
+    {"sv":4,"ph":"49e704e3c3bab858"},
+
+  "med|2026-10-22|Regular Board Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "tmvoa|2026-10-22|TMVOA Board of Directors Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "telluride|2026-10-22|Planning & Zoning Commission - Oct 22 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8106","sv":4,"ph":"dd3b724a6b5c0e5e"},
+
+  "telluride|2026-10-22|Planning & Zoning Commission Chair - Oct 22 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8105","sv":4,"ph":"d0e0554de56351fb"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -730,12 +742,6 @@ const DAILY_QUESTIONS = [
 // target, and these seeds let the data start landing again. No page renders
 // them yet — restoring (or retiring) the reader UIs is tracked separately.
 const MEETING_PREVIEWS = {
-  "telluride|2026-09-22|Telluride Housing Authority - Sep 22 2026":
-    "The Telluride Housing Authority is expected to meet on September 22, 2026. Related legal notices reference Ordinance #1640, which amended the Land Use Code to implement the Colorado Wildfire Resiliency Code, potentially informing housing-related discussions. Specific agenda items are not fully detailed in available materials.",
-
-  "telluride|2026-09-22|Town Council - Sep 22 2026":
-    "Council is expected to revisit matters related to Ordinance #1640, which amended Telluride's Land Use Code to implement the Colorado Wildfire Resiliency Code. The meeting may address follow-up actions or implementation details stemming from the ordinance passed on August 11, 2026.",
-
   "county|2026-09-23|Board of County Commissioners Work Session":
     "Board will consider matters including a request for quote for material hauling, proposals for a Lawson Hill Connector Trail Project and fuel island canopy construction, and related county procurement items. Additional context includes local probate proceedings, a foreclosure sale, and a federal environmental assessment for a hazardous fuels project in the region.",
 
@@ -808,15 +814,6 @@ const MEETING_PREVIEWS = {
   "county|2026-09-30|Board of County Commissioners Work Session":
     "Commissioners are expected to discuss county procurement matters, including material hauling, trail construction for the Lawson Hill Connector, fuel island canopy construction, and jail painting projects. Additional administrative and operational items may also be addressed during the work session.",
 
-  "norwood|2026-09-22|Norwood Water Commission Meeting":
-    "The Norwood Water Commission will consider multiple leak forgiveness requests from residential and commercial customers, review a final draft report on raw water delivery and storage alternatives, discuss implementing a leak check fee, and address a code of conduct complaint involving an executive legal session.",
-
-  "school|2026-09-22|Telluride Board of Education Work Session":
-    "Board members are expected to discuss CASB planning, staff and student lunch schedules, Telluride Education Foundation magnet grants, a housing update, and the timeline for appointing a 2026 student Board of Education representative.",
-
-  "school|2026-09-22|Telluride Board of Education Monthly Meeting":
-    "Board will consider approval of minutes from three August sessions, hear results of 2026 state assessments, and review administrative and Policy Governance Monitoring reports. The consent agenda includes personnel updates and a cash summary. Public comment periods are scheduled.",
-
   "mv|2026-10-01|Design Review Board":
     "Board will consider final architecture review for a 15-unit employee apartment building at 306 Adams Ranch Road, continued from September. Members will also receive a voting procedure update and approve meeting summaries from August and September sessions.",
 
@@ -833,69 +830,15 @@ const MEETING_PREVIEWS = {
     "The Telluride Parks & Recreation Commission is expected to meet on October 21, 2026, to address community recreation and parks needs. Specific agenda items have not been publicly detailed, but the Commission typically interprets community desires for parks services and guides related municipal planning decisions.",
 
   "county|2026-10-21|Board of County Commissioners Meeting":
-    "Board will consider procurement matters including material hauling, trail construction, fuel island canopy, jail painting, and a multi-jurisdictional hazard mitigation plan update. Related legal notices include several probate estate creditor notices and a foreclosure sale in Telluride. An ECMC violation order against American Helium Operating LLC is also noted."
+    "Board will consider procurement matters including material hauling, trail construction, fuel island canopy, jail painting, and a multi-jurisdictional hazard mitigation plan update. Related legal notices include several probate estate creditor notices and a foreclosure sale in Telluride. An ECMC violation order against American Helium Operating LLC is also noted.",
+
+  "telluride|2026-10-22|Planning & Zoning Commission - Oct 22 2026":
+    "The Planning & Zoning Commission is expected to discuss matters related to the Colorado Wildfire Resiliency Code amendment recently adopted by Town Council, alongside potential Land Use Code updates. The commission may also address employee rental housing policy reviews and related development or zoning considerations affecting the Town of Telluride.",
+
+  "telluride|2026-10-22|Planning & Zoning Commission Chair - Oct 22 2026":
+    "The Planning & Zoning Commission Chair is expected to meet on October 22, 2026. While a detailed agenda was not available, recent related matters include implementation of the Colorado Wildfire Resiliency Code amendment to the Land Use Code, adopted by Town Council in August 2026."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
-  {
-    title: "2026 Chamber Meeting, December",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 8, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
-    img: ""
-  },
-  {
-    title: "Noel Night",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 4, 2026",
-    newsTopic: "community",
-    copy: "Community shopping event and celebration.",
-    href: "https://norwoodcolorado.com/event/noel-night-3/",
-    img: ""
-  },
-  {
-    title: "West End Parade of Lights & Elfin Eve",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 3, 2026",
-    newsTopic: "arts-culture",
-    copy: "Holiday parade and festival.",
-    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, November",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "November 10, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, October",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "October 13, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
-    img: ""
-  },
-  {
-    title: "Pioneer Day",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "September 26, 2026",
-    newsTopic: "community",
-    copy: "Celebration of local history and pioneers.",
-    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
-    img: ""
-  },
   {
     title: "Parish Bulletin for September 20",
     source: "St. Patrick's Catholic Church",
@@ -1050,7 +993,7 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#42052"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-21';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-22';
 const LEGAL_NOTICES_CACHE_DATE = '2026-09-21';
 
 const MANUAL_SUMMARIES = {
@@ -1364,7 +1307,19 @@ const MANUAL_SUMMARIES = {
     "The October 21, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-10-21|Board of County Commissioners Meeting":
-    "The October 21, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet."
+    "The October 21, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+
+  "med|2026-10-22|Regular Board Meeting":
+    "The October 22, 2026 Mountain Village Metropolitan District Regular Board Meeting agenda hasn't been posted yet.",
+
+  "tmvoa|2026-10-22|TMVOA Board of Directors Meeting":
+    "The October 22, 2026 TMVOA Board of Directors Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-10-22|Planning & Zoning Commission - Oct 22 2026":
+    "The October 22, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+
+  "telluride|2026-10-22|Planning & Zoning Commission Chair - Oct 22 2026":
+    "The October 22, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2637,78 +2592,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Judge increases bond to $10M for Colorado man charged with killing his wife",
-    source: "Telluride Times",
-    date: "September 8, 2026",
-    firstSeen: "2026-09-08",
-    newsTopic: "government",
-    copy: "Barry Morphew, charged with killing his wife Suzanne — whose remains were found off a dirt road in southern Colorado in 2023 — had his bond raised to $10 million cash after he fled a Denver car crash following an airport pickup, raising flight risk concerns. He's been in and out of prosecution for six years and faces trial next summer.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_8cd9c589-c5ae-58cb-8424-a5ebf797d65c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/99/d99d62fe-515a-5896-bc8c-42932a0e5d33/6a9b482624f9a.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Ballots discounted for late postmarks surged in Washington and Oregon after Postal Service changes",
-    source: "Telluride Times",
-    date: "September 8, 2026",
-    firstSeen: "2026-09-08",
-    newsTopic: "government",
-    copy: "Postal Service consolidation changes are leading to more mail ballots being rejected for late postmarks in Washington and Oregon — thousands during this year's primaries alone. Rural areas are seeing some of the highest rejection rates. Officials are adding drop boxes and urging voters to mail ballots at least a week early or request a manual postmark at the post office.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_74fe784a-ca86-5f20-a621-23ea082650d4.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/40/340ce52b-bfb9-5c99-b9ac-bdffacb4c511/6aa09490ce94e.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Former Colorado crime analyst gets 10-year prison sentence for manipulating DNA data",
-    source: "Telluride Times",
-    date: "September 8, 2026",
-    firstSeen: "2026-09-08",
-    newsTopic: "community",
-    copy: "A former Colorado Bureau of Investigation forensic analyst was sentenced to 10 years in prison for manipulating DNA data across hundreds of criminal cases, including homicides and sexual assaults. At least one murder conviction has been overturned, and the fallout may cost the state over $11 million. Concerns about her work apparently surfaced as far back as 2014.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_ac6d3c1b-7c33-50eb-a730-0d430f84bfd4.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Sensational 6",
-    source: "Telluride Times",
-    date: "September 8, 2026",
-    firstSeen: "2026-09-08",
-    newsTopic: "community",
-    copy: "Telluride boys soccer rolled to a 6-0 home win over Bayfield on Sept. 5, with junior Henry Raible and senior Obi Clarke each scoring twice. The Miners move to 3-1 overall and host Delta on Thursday, Sept. 10, then Moffat County on Saturday the 12th at 11 a.m.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_d003c883-119f-40e1-ae46-459ed2dc976c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/53/2537c15d-e631-42f2-9a19-0c83ab66f02a/6aa0704349bc0.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Parched summer in the Rockies sends hungry bears into urban areas and confrontations with people",
-    source: "Telluride Times",
-    date: "September 8, 2026",
-    firstSeen: "2026-09-08",
-    newsTopic: "recreation",
-    copy: "Drought across the Rockies has pushed hungry black bears into towns, cars, and campgrounds at record rates this summer. Colorado reports twice the normal bear conflicts, with animals showing up on the eastern plains where they rarely venture. Unsecured trash is the leading cause — and bears that learn to associate people with food often end up euthanized.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_e68ae67b-39e9-5426-86ad-61cdcf862698.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/f4/8f4c268f-a4ab-5d2e-89d9-d8970952f631/6a9f8c57d4ec2.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "A fundraiser that keeps growing",
-    source: "Telluride Times",
-    date: "September 8, 2026",
-    firstSeen: "2026-09-08",
-    newsTopic: "public-safety",
-    copy: "The Telluride Humane Society — a shelter-free, all-volunteer operation that has rescued over 1,000 animals — is publishing two new coffee-table dog books, *Dogs of Colorado* and *Dogs of Colorado: Legends*, to cover mounting rescue and medical costs through 2026. The effort expands on last year's successful *Dogs of Telluride*. Submissions open to any Colorado dog owner.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_7e57cb83-a757-4baf-b9a5-08097944c89d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/f7/4f759951-daa8-4c30-bd44-3d7bf65d8ff1/6a9f4e339f5de.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride to Lift All Fire Restrictions",
     source: "Town of Telluride",
     date: "September 17, 2026",
@@ -2845,20 +2728,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Town Manager's Report",
-    source: "Town of Ridgway",
-    date: "September 8, 2026",
-    firstSeen: "2026-09-09",
-    newsTopic: "community",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Manager%27s-Report---September-8%2C-2026.pdf",
-    img: ""
-  },
-  {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "September 21, 2026",
+    date: "September 22, 2026",
     firstSeen: "2026-09-11",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2869,7 +2741,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "September 21, 2026",
+    date: "September 22, 2026",
     firstSeen: "2026-09-14",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2902,7 +2774,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Ridgway Rescinds Stage 2 Fire Restrictions, Reinstates Stage 1 Fire Restrictions effective 12:01am on Thursday, Sept. 3rd - Sept. 2, 2026",
     source: "Town of Ridgway",
-    date: "September 21, 2026",
+    date: "September 22, 2026",
     firstSeen: "2026-09-09",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3064,19 +2936,6 @@ const SMB_FORUM_ARTICLES = [
     claudeSummary: true,
     href: "https://www.sanmiguelbasinforum.com/stories/untitled,127312",
     img: ""
-  },
-  {
-    title: "Bockrath resigns as chief, confesses errors",
-    source: "San Miguel Basin Forum",
-    sourceKey: "smb",
-    date: "August 23, 2026",
-    firstSeen: "2026-08-23",
-    dateSource: "article",
-    newsTopic: "public-safety",
-    copy: "Norwood Fire and EMS Chief John Bockrath is stepping down Sept. 30 after admitting he repeatedly bent SOPs — administering narcotics and other treatments without required transports or call-ins, citing the disconnect between Denver Metro protocols and rural realities. Authorities ruled the violations procedural, not criminal. The district's future leadership remains unsettled.",
-    claudeSummary: true,
-    href: "https://www.sanmiguelbasinforum.com/stories/bockrath-resigns-as-chief-confesses-errors,127202",
-    img: "https://zeta.creativecirclecdn.com/smb/original/20260824-154413-efb-att.xeahuViXb-eb7tNtZoEzB5n87D_s2drnOQxiyw41AvA.JPG"
   }
 ];
 
@@ -4455,7 +4314,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
     pubDate: "2026-09-22T19:30:00.000Z",
-    endDate: "2026-11-19",
+    endDate: "2026-11-20",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4465,7 +4324,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "ALPINE JAM",
     link: "https://events.ourayridgwayevents.com/event/alpine-jam-8336",
-    description: "Alpine Jam is a live music event taking place at 687 N Cora Street in Ridgway. The gathering brings together music fans in the Ouray County area for an evening of live performances.",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
     pubDate: "2026-09-22T22:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4476,7 +4335,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Storytime with a Hero",
     link: "https://events.ourayridgwayevents.com/event/storytime-with-a-hero",
-    description: "A storytime program at the Ouray Public Library featuring stories read aloud by a Mountain Rescue volunteer. The event is geared toward elementary-aged children and runs from 4:00 to 4:45 p.m.",
+    description: "Join us at the Ouray Library from 4:00 p.m. to 4:45 p.m. to listen to some fantastic stories read by a Mountain Rescue volunteer! Ages: Elementary",
     pubDate: "2026-09-22T22:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4535,7 +4394,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Middle School Volleyball: Ouray vs Mancos",
     link: "https://events.ourayridgwayevents.com/event/middle-school-volleyball-ouray-vs-mancos",
-    description: "A middle school volleyball matchup between Ouray and Mancos, hosted at Ouray, with A, B, and C team games scheduled sequentially starting around 4:00 p.m. Game times are approximate and may shift depending on the length of preceding matches.",
+    description: "Ouray Middle School plays Mancos Middle School at Ouray. Times are approximate depending on legth of the previous games A Team: 4:00pm B Team: 5:00-6:00pm C Team: 6:00-6:30pm",
     pubDate: "2026-09-23T22:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4569,7 +4428,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
     link: "https://events.ourayridgwayevents.com/event/open-mic-jam-night-w-host-dj-strong",
-    description: "A weekly open mic and jam night hosted by DJ Strong at Floating Lotus Brewery, welcoming solo performers, groups, and musicians of all kinds. Attendees can share original songs, play covers, or join collaborative jam sessions alongside other local musicians.",
+    description: "Join us every Wednesday at 6 PM for Open Mic Night with DJ Strong at Floating Lotus Brewery. Bring an original song, play a favorite cover, meet other local musicians, or jump into one of our full-band jam sessions. Solo performers, groups, and musicians looking to collaborate are all welcome. Open Mic is also where we discover artists for Floating Lotus Mainstage. Standout performers may be invited back to play a full featured set, creating a path from Open Mic to the Mainstage. Come perform, connect, experiment, or simply enjoy an evening of live local music. Every Wednesday at 6 PM Floating Lotus Brewery",
     pubDate: "2026-09-24T00:00:00.000Z",
     endDate: "2026-11-19",
     source: "oray",
@@ -4604,7 +4463,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "High School Volleyball Ouray vs Nucla",
     link: "https://events.ourayridgwayevents.com/event/high-school-volleyball-ouray-vs-nucla",
-    description: "Ouray High School hosts Nucla High School for a volleyball matchup at Ouray School, with the JV game scheduled from 4:30 to 5:30 p.m. and varsity play beginning at 5:30 p.m.",
+    description: "Ouray High School will be hosting Nucla High School JV: 4:30pm - 5:30pm Varsity: 5:30pm",
     pubDate: "2026-09-24T22:30:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4661,7 +4520,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "JEAN SANDOVAL AND THE TOWNKIDS",
     link: "https://events.ourayridgwayevents.com/event/jean-sandoval-and-the-townkids",
-    description: "Jean Sandoval and the Townkids perform a live music show at a venue on North Cora Street in Ridgway. The event is listed through the Ouray Ridgway community calendar.",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
     pubDate: "2026-09-25T22:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4694,7 +4553,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Steps Tavern Presents Karaoke Night",
     link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
-    description: "Steps Tavern hosts a weekly karaoke night every Friday, with doors opening at 8:00 PM. It's a recurring community gathering at the Ouray-area bar where attendees can take the mic and sing along to their favorite songs.",
+    description: "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM Every Friday Night",
     pubDate: "2026-09-26T02:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4705,7 +4564,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Ouray County Railroad Days: 9/26-9/27, 2026",
     link: "https://events.ourayridgwayevents.com/event/ouray-county-railroad-days-926-927-2026",
-    description: "Ouray County Railroad Days is a weekend celebration at the Ridgway Railroad Museum featuring an open house alongside rides on Motor No. 1 and Goose No. 4 on both Saturday and Sunday. The event also includes a Saturday evening talk, with the topic to be announced.",
+    description: "This weekend event includes a Museum open house, opportunity to ride Motor No. 1 as well as Goose No. 4 on Saturday and Sunday. There will be a talk on \"TBA\" on Saturday at 7:00 pm",
     pubDate: "2026-09-26T06:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4716,7 +4575,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Ouray High School Volleyball: Round Robin",
     link: "https://events.ourayridgwayevents.com/event/ouray-high-school-volleyball-round-robin",
-    description: "Ouray High School Volleyball is hosting a round robin tournament featuring Ouray, Creede, Crested Butte, and Sierra Grande. Matches run throughout the day in a best-of-five-sets format, with six matchups scheduled across the full day at Ouray High School.",
+    description: "Ouray High School Volleyball will be hosting a Round Robin Schedule: best of 5 sets 8:00 am: Ouray vs Creede 10:00 am: Crested Butte vs SIerra Grande 12:00 pm: Ouray vs Sierra Grande 2:00 pm: Creede vs Crested Butte 4:00 pm: Creede vs Sierra Grande 6:00 pm: Ouray vs Crested Butte",
     pubDate: "2026-09-26T14:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4727,7 +4586,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Geology Tour",
     link: "https://events.ourayridgwayevents.com/event/geology-tour-1061",
-    description: "A guided geology tour departing from the Ouray Visitor Center, led by a local geologist exploring the rock formations and geological forces that shaped the surrounding landscape. Participants can expect to examine a range of formations, from sandstone to quartzite, while gaining a deeper understanding of the region's natural history.",
+    description: "Join a local geologist for a guided tour exploring the fascinating geology that shapes our landscape. You’ll gain a deeper understanding of the forces that built this incredible region, while exploring the range of rock formations, from sandstone to quartzite. REGISTER HERE This activity is sponsored by Ouray's Parks and Recreation Department. For questions, contact Sean Hart at 970-318-1003 or seanhart@cityofouray.com",
     pubDate: "2026-09-26T15:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4782,7 +4641,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Jeep Jamboree Historical Parade",
     link: "https://events.ourayridgwayevents.com/event/jeep-jamboree-historical-parade",
-    description: "A historical Jeep parade winds through downtown Ouray as part of the larger Jeep Jamboree celebration. The procession showcases a collection of historic Jeeps and is open for the public to watch along the route.",
+    description: "Watch historical Jeep Parade come through town as part of Jeep Jamboree.",
     pubDate: "2026-09-26T23:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4804,7 +4663,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "LIVE MUSIC IN THE GARDEN! Zan Waller & Stefan Davenport",
     link: "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
-    description: "Zan Waller and Stefan Davenport perform live at Chloe's Charcuterie & Wine in what the venue calls its Secret Garden, an outdoor setting designed for relaxed afternoon enjoyment. The event pairs live music with wine and charcuterie in a cozy garden atmosphere.",
+    description: "LIVE MUSIC IN THE GARDEN! 🎶 Sunday, September 13th, from 4:00–6:00 p.m., let us introduce you to Chloe’s Secret Garden! 🌿✨ Enjoy live music with Zan Waller & Stefan Davenport, the perfect wine, and scrumptious charcuterie in our cozy garden setting. Sip, savor, and settle in for a relaxed afternoon of music and Colorado magic! 🍷🧀💛 We can’t wait to see you there! Join us! 🎵",
     pubDate: "2026-09-27T22:00:00.000Z",
     endDate: "2026-11-08",
     source: "oray",
@@ -4816,7 +4675,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Ouray Ridgway Young Life Banquet",
     link: "https://events.ourayridgwayevents.com/event/ouray-ridgway-young-life-banquet",
-    description: "The Ouray Ridgway Young Life Banquet is an evening gathering at the Ridgway Christian Center bringing together Young Life staff, leaders, committee members, and guests to celebrate the organization's work with local youth. The event highlights stories of changed lives and provides an opportunity for attendees to learn about and financially support Young Life's ministry in the community.",
+    description: "A fun evening to celebrate with local Young Life staff, leaders, committee and guests that God is on the move in our community, and one vehicle is Young Life. An opportunity to learn about and financially support the clear sharing of the gospel, changed lives, and laughter in our county's youth. Guest speaker is Dr. Tanita Maddox, an expert in Gen Z, that will speak about how to connect with the next generation with compassion, urgency and action. RSVP with ddowdy@vsiok.com",
     pubDate: "2026-09-27T23:30:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4838,7 +4697,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Colorado Poet Laureate: Crisosto Apache Reading",
     link: "https://events.ourayridgwayevents.com/event/colorado-poet-laureate-crisosto-apache-reading",
-    description: "Crisosto Apache, Colorado's Poet Laureate, will give a poetry reading at Ouray School's APAC. The event is free and open to the public.",
+    description: "Join us in the Ouray School APAC at 1:30 p.m. to listen to a poetry reading by the Colorado Poet Laureate, Crisosto Apache! Open to the Public",
     pubDate: "2026-09-29T19:30:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4849,7 +4708,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "ETHAN PERRY",
     link: "https://events.ourayridgwayevents.com/event/ethan-perry",
-    description: "Ethan Perry performs a live music show at a venue on North Cora Street in Ridgway. The event is listed through the Ouray Ridgway community calendar.",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
     pubDate: "2026-09-29T22:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4894,7 +4753,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "COUSIN CURTISS",
     link: "https://events.ourayridgwayevents.com/event/cousin-curtis",
-    description: "Cousin Curtiss performs a live music show at a venue on North Cora Street in Ridgway. The event is listed through the Ouray Ridgway community calendar.",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
     pubDate: "2026-10-02T22:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4905,7 +4764,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Containment",
     link: "https://events.ourayridgwayevents.com/event/containment",
-    description: "Containment is a mixed-media exhibition of clay sculptures and assemblage by Ridgway-based artist Michelle Montague, on display at The 610 Arts Collective. The work explores themes of vulnerability, perspective, angst, and hope through tactile forms, layered materials, and carefully constructed scenes.",
+    description: "Containment is an exhibition of mixed-media clay sculptures and assemblage by Michelle Montague of Ridgway, Colorado. Through tactile forms, layered materials, and carefully constructed scenes, Montague explores themes of vulnerability, perspective, angst, and hope. ARTIST RECEPTION: FIRST FRIDAY, OCTOBER 2ND • 5–7 PM On Display: SEPTEMBER 29 – OCTOBER 30, 2026",
     pubDate: "2026-10-02T23:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4916,7 +4775,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "First Friday Art Walk",
     link: "https://events.ourayridgwayevents.com/event/first-friday-art-walk",
-    description: "First Friday Art Walk is a monthly community event in downtown Ridgway where galleries, studios, and local businesses open their doors to showcase art and connect visitors with artists. It's a welcoming occasion for both dedicated art enthusiasts and casual browsers to explore the local creative scene.",
+    description: "Discover new work, celebrate openings, and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month, galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits, live music and special programming — perfect for art lovers and casual browsers alike. NEW! 🎨🛍️ Shop local. Win local. Celebrate local. 🎶🍷 New this summer, your First Friday stroll through Ridgway could score you a $100 gift card to your favorite local business. 👀 Follow the link for more details. First Friday Map & Offer Details",
     pubDate: "2026-10-02T23:00:00.000Z",
     endDate: "2026-11-07",
     source: "oray",
@@ -4985,7 +4844,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Mineral Identification Workshop For Kids",
     link: "https://events.ourayridgwayevents.com/event/mineral-identification-workshop-for-kids",
-    description: "A hands-on workshop for kids focused on identifying mineral hand samples from the San Juan Mountain region, led by Robert Stoufer. The program takes place at the Ouray County Historical Society Research Center & Archive.",
+    description: "Basic identification of hand samples of minerals from the San Juan Mountian Region with Robert Stoufer",
     pubDate: "2026-10-03T16:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5019,7 +4878,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Ridgway 1K ~ Rally thru the Alley",
     link: "https://events.ourayridgwayevents.com/event/ridgway-1k",
-    description: "Ridgway 1K ~ Rally Through The Alley: Colorado’s Most Entertaining Fun Run Presented by Citizens State Bank Event Date: October 4, 2026 In-person Registration Opens: 12:15 PM Race Starts: 12:45 PM Last Call for Runners: 1:15 PM (all runners must be checked-in by 1:15 pm). Downtown Ridgway, Colorado Join the most hilarious costumed fun run in Colorado! The Ridgway 1K Rally Through The Alley is a family-friendly, costume-themed, 1K race in downtown Ridgway. But don’t be fooled—this 6-block, downhill “race” is all about fun, food, and funky vibes, not speed. Why It’s a Must-Do Event: Open to all ages and fitness levelsCostumes are encouraged (and rewarded!)8 unique aid stations featuring outrageous snacks like bacon, donuts, and hot dogsThe race ends with live music in Hartwell Park for San Juan OktoberfestSan Juan Oktoberfest features Okotberfest fare, games, and live music from Polka band Blue Camoose Pro Tip: In the Ridgway 1K, …",
+    description: "Ridgway 1K ~ Rally Through The Alley: Colorado’s Most Entertaining Fun Run Presented by Citizens State Bank In-person Registration Opens: 12:15 PM Race Starts: 12:45 PM Last Call for Runners: 1:15 PM (all runners must be checked in by 1:15 pm). Join the most hilarious costumed fun run in Colorado! The Ridgway 1K Rally Through The Alley is a family-friendly, costume-themed, 1K race in downtown Ridgway. But don’t be fooled—this 6-block, downhill “race” is all about fun, food, and funky vibes, not speed. Why It’s a Must-Do Event: Open to all ages and fitness levelsCostumes are encouraged (and rewarded!)8 unique aid stations featuring outrageous snacks like bacon, donuts, and hot dogsThe race ends with live music in Hartwell Park for San Juan OktoberfestSan Juan Oktoberfest features Oktoberfest fare, games, and live music from Polka band Blue Camoose Pro Tip: In the Ridgway 1K, if you’re first… you’re last! …",
     pubDate: "2026-10-04T18:45:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5053,7 +4912,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Ballot Issue Briefing with the League of Women Voters",
     link: "https://events.ourayridgwayevents.com/event/ballot-issue-briefing-with-the-league-of-women-voters",
-    description: "The League of Women Voters of the Uncompahgre Valley is hosting a briefing at the Decker Community Room to help voters understand the statewide measures appearing on the November ballot. The presentation is nonpartisan and focused on providing clear, accessible information about complex ballot issues affecting Colorado.",
+    description: "The League of Women Voter's (LWV) mission is to ensure that every voter is an informed voter. The statewide measures on the November ballot are important and complex, shaping the future of Colorad on issues that matter to every voter. LWV of the Uncompahgre Valley will provide clear, nonpartisan, plain-language information so voters can understand each measure before casting their vote. Sponsored by the Ridgway Ouray Community Council. Doors open at 5:00pm",
     pubDate: "2026-10-05T23:30:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5064,7 +4923,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "CORAL SKYE",
     link: "https://events.ourayridgwayevents.com/event/coral-skye-7671",
-    description: "Coral Skye performs a live music show at a venue on N Cora Street in Ridgway. The event takes place in the evening and is listed through the Ouray Ridgway community calendar.",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
     pubDate: "2026-10-06T22:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5099,7 +4958,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Ice Park Advisory Team",
     link: "https://events.ourayridgwayevents.com/event/ice-park-advisory-team",
-    description: "The Ice Park Advisory Team (IPAT) meets at the Ouray Community Center to provide an open forum for discussion about the future and ongoing management of the Ouray Ice Park. Community members are welcome to join the conversation alongside participating parties to talk through topics related to the park's operations and direction.",
+    description: "The Ice Park Advisory Team (IPAT) Opens in new window was created to provide an informal, good-faith forum for discussion about the future and ongoing management of the Ouray Ice Park. IPAT serves as a space for the Parties and any interested community members to come together and talk through topics that impact the Ice Park, including: Management and operationsPark usage and recreational interestsCommercial interests and guiding considerationsCapital planning and long-term strategic planningSuccession planning and sustainabilityMission, vision, and valuesEconomic impact to the communityUnforeseen issues as they arise",
     pubDate: "2026-10-07T23:30:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5133,7 +4992,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "FLANNEL FEEDBACK",
     link: "https://events.ourayridgwayevents.com/event/flannel-feedback-5281",
-    description: "Flannel Feedback is a live music event taking place at a venue on North Cora Street in Ridgway. The evening promises a night of music in a community setting just outside Telluride.",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
     pubDate: "2026-10-09T22:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5144,7 +5003,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "WOWZERS",
     link: "https://events.ourayridgwayevents.com/event/wowzers",
-    description: "WOWZERS is a live music event taking place at 687 N Cora Street in Ridgway. The event is listed through the Ouray Ridgway community calendar, offering an evening of live music for attendees in the area.",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
     pubDate: "2026-10-09T23:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5188,7 +5047,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Dallas Park Cemetery Tour",
     link: "https://events.ourayridgwayevents.com/event/dallas-park-cemetery-tour",
-    description: "A guided tour of Dallas Park Cemetery led by Coleen McElroy, offered through the Ouray County Historical Society. Admission is $20 per person, with a discounted rate of $15 for OCHS members; reservations and prepayment are required by calling 970-325-4576.",
+    description: "Tour of Dallas Park Cemetery Tour, led by Coleen McElroy. $20.00 Per Person. $15.00 OCHS Members. Call 970-325-4576 to RSVP/Pre Pay",
     pubDate: "2026-10-10T16:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5199,7 +5058,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Mineral Identification Workshop for Adults",
     link: "https://events.ourayridgwayevents.com/event/mineral-identification-workshop-for-adults",
-    description: "A hands-on workshop for adults at the Ouray County Historical Society Research Center and Archive, focused on the basic identification of minerals found in the San Juan Mountains. The session is led by Robert Stoufer.",
+    description: "Basic identification of minerals from the San Juan Mountains with Robert Stoufer",
     pubDate: "2026-10-10T16:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5243,7 +5102,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Fall Break - Ridgway Schools",
     link: "https://events.ourayridgwayevents.com/event/fall-break-ridgway-schools",
-    description: "Fall Break for Ridgway Schools begins on this date, giving students in the Ridgway district a scheduled pause from the academic calendar. The break is a planned recess coordinated through the Ouray-Ridgway area school calendar.",
+    description: "",
     pubDate: "2026-10-12T06:00:00.000Z",
     endDate: "2026-10-16",
     source: "oray",
@@ -5255,7 +5114,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
     link: "https://events.ourayridgwayevents.com/event/monthly-welcome-home-alliance-veterans-coffee-the-sherbino",
-    description: "A monthly veterans' gathering hosted by the Welcome Home Alliance at The Sherbino, offering coffee, donuts, and camaraderie for veterans of every branch, era, and ability. Mike Trickey and April Heard will be on hand to share information on topics including navigating the VA, housing, jobs, volunteer opportunities, and community resources.",
+    description: "MONTHLY WELCOME HOME ALLIANCE VETERAN’S COFFEE @ THE SHERBINO Every Branch. Every Era. Every Ability. Offering coffee, donuts and camaraderie. Mike Trickey and April Heard will be there bringing information to you on topics such as: Navigating the VA, Housing, Jobs, Volunteer Opportunities, community resources, VA benefits, recreation and mental health. For more information or to offer support (products or monetary), call 970-765-2210 or visit https://www.whafv.org/ Occurs the 2nd Tuesday of Every Month || 10 am - Noon || Free to attend || Vets Only, Please",
     pubDate: "2026-10-13T16:00:00.000Z",
     endDate: "2026-11-10",
     source: "oray",
@@ -5267,7 +5126,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "TYLER SIMMONS",
     link: "https://events.ourayridgwayevents.com/event/tyler-simmons-4776",
-    description: "Tyler Simmons performs live at a venue on North Cora Street in Ridgway. The event is listed on the Ouray Ridgway community calendar as a live music performance.",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
     pubDate: "2026-10-13T22:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5289,7 +5148,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "ALPINE JAM",
     link: "https://events.ourayridgwayevents.com/event/alpine-jam-3576",
-    description: "Alpine Jam is a live music event taking place in Ridgway, Colorado. The evening gathering brings together music fans for a night of live performances in the mountain community.",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
     pubDate: "2026-10-16T22:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5311,7 +5170,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "No Kings Afterparty in the Garden",
     link: "https://events.ourayridgwayevents.com/event/no-kings-afterparty-in-the-garden",
-    description: "A late-night afterparty held in the garden at Chloe's Charcuterie & Wine, following the No Kings event on October 17th. The gathering offers a festive outdoor setting at one of the area's well-known wine and charcuterie spots.",
+    description: "Details forthcoming",
     pubDate: "2026-10-17T21:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5333,7 +5192,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "THE YOUNG FABLES",
     link: "https://events.ourayridgwayevents.com/event/the-young-fables",
-    description: "The Young Fables will perform a live music show at a venue on North Cora Street in Ridgway. The event is listed through the Ouray Ridgway community calendar.",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
     pubDate: "2026-10-18T22:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5448,7 +5307,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Teen Takeover at Ouray Hot Springs Pool",
     link: "https://events.ourayridgwayevents.com/event/teen-takeover-at-ouray-hot-springs-pool",
-    description: "Teen Takeover at Ouray Hot Springs Pool is an evening event giving middle and high school students dedicated time to enjoy the pool facility with swimming, basketball, races on the Wibit, games, music, and food. The event runs in two separate sessions — one for middle schoolers and one for high schoolers — and is free for Ouray Hot Springs members.",
+    description: "Grab your friends and take over the Ouray Hot Springs Pool for an evening of swimming, games, food, music, and hanging out. Activities include high-energy games, basketball, races on the Wibit, music, and more. Middle School Takeover | 5–6:45 PM High School Takeover | 7–9 PM FREE for Ouray Hot Springs Pool members $5 for everyone else All participants must: Have a waiver signed by a parent/guardian (Link to Waiver)Show a valid school ID at entry LOCAL BUSINESSES Some of our Local businesses are providing local discounts for parents so they can enjoy time together without the kids. The Tavern - 20% off Ouray Brewery - 15% off of all meals and drinks Interested in being a business partner? Contact Zach Root | zroot@cityofouray.com",
     pubDate: "2026-10-25T23:00:00.000Z",
     endDate: "2026-11-16",
     source: "oray",
@@ -5493,7 +5352,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "JELLY BOWL BAND",
     link: "https://events.ourayridgwayevents.com/event/jelly-bowl-band",
-    description: "The Jelly Bowl Band performs a live music show at a venue on N Cora Street in Ridgway. The event takes place in the evening on October 30th, offering a night of live music the day before Halloween.",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
     pubDate: "2026-10-30T22:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5538,7 +5397,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Casper: Movie Night @ the Wright",
     link: "https://events.ourayridgwayevents.com/event/casper-movie-night-the-wright",
-    description: "A Halloween screening of the 1995 PG film *Casper* at the Wright Opera House in Ouray, with doors opening at 6:30 PM and the movie beginning at 7:00 PM. The film runs approximately one hour and forty minutes and follows a young girl and her paranormal-therapist father as they encounter the friendly ghost Casper.",
+    description: "Casper: Movie Night @ the Wright WHEN? Saturday, October 31 Doors at 6:30 PM | Movie at 7:00 PM WHERE? Wright Opera House 472 Main St., Ouray, Colorado RUN TIME: 1 hour, 40 minutes RATING: PG ABOUT THE FILM It is Halloween. A ghost story is required. Casper (1995) follows Kat and her paranormal-therapist father as they move into a long-abandoned mansion. There they meet Casper, the friendliest ghost in the house—and his three much less friendly uncles. A sweet, funny, spooky-not-scary Halloween classic with Christina Ricci, Bill Pullman, and a mansion full of ghosts who are trying their best. Or at least Casper is. WHY SEE IT? Because Halloween at a historic opera house is exactly where a friendly ghost belongs. HOW? Tickets: $5 In-person screening at the historic Wright Opera House",
     pubDate: "2026-11-01T01:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5570,9 +5429,20 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53048306784001/huge/b4907ccb0dd0b51c0bd862f76e556e669e3684c2.jpg"
   },
   {
+    title: "OuROCK! 2026 Climbing Festival",
+    link: "https://events.ourayridgwayevents.com/event/ourock-2026-climbing-festival",
+    description: "Annual local climbing community festival open to the public. This year’s event will feature: Walk-up guided climbing wall for adults and children (gear included) Live DJ Music with DJ Straylight Climbing Competition (open to all ages) Silent Auction Raffle Hand-tossed fresh baked pizza* Beer (must be 21 years and older) and other beverages* Event is free to the public, but you are invited to join Ouray Climbers Alliance as a member at the event (members get free beer and pizza plus one raffle ticket). We strive to be a minimal waste event and encourage you to bring your own cup/plate/utensil. Please show them at the kiosk to get a free raffle ticket.",
+    pubDate: "2026-11-08T19:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Rotary Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/54012851240466/huge/36d4a8cb84eeb694d62a49aae6146ab5257a6e9f.jpg"
+  },
+  {
     title: "Teeth to the Wind: fundraiser for George & Michael Gardner Fund",
     link: "https://events.ourayridgwayevents.com/event/teeth-to-the-wind",
-    description: "A fundraiser at the Ouray County 4-H Center featuring a screening of *Teeth to the Wind*, a film by alpinist Michael Gardner and his partner Sam Hennessey documenting their seasons in the Tetons — described by Gardner himself as something other than a traditional climbing film. Proceeds benefit the George and Michael Gardner Fund.",
+    description: "Join the George and Michael Gardner Fund for the showing of Teeth to the Wind. \"It's not going to be a climbing film\" Michael Gardner claimed in his original film pitch. \"More like a rom-com?\" Along with his partner and fellow alpinist, Sam Hennessey, the pair documented their seasons in the Tetons, Alaska, and Nepal. The film holds to its original vision: a lighthearted and unassuming glimpse into what Michael and Sam lovingly referred to as \"the spirit.\" A silent auction begins at 6:00 pm; movie at 7:00",
     pubDate: "2026-11-10T13:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5741,17 +5611,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Sunday Rehab at Alloy Kitchen",
-    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
-    description: "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
-    pubDate: "2026-09-20T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
-  },
   {
     title: "Bike & Brewery Tour",
     link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
@@ -8580,16 +8439,6 @@ function getTownAgendaLink(title, eventDate) {
 // MeetingsService (HARC stays in TELLURIDE_CACHED_DATA above). Empty until the
 // next content-refresh run. Each entry: {date,title,agendaUrl,hasAgenda,location,time}.
 const TELLURIDE_BOARD_MEETINGS = [
-  {
-    date: "September 21, 2026",
-    title: "Open Space Commission Site Walk",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8319",
-    hasAgenda: true,
-    location: "Meet at Entrance to Bear Creek Preserve Zone 1 (south of Imagination Station Playground, Telluride Town Park, 500 E. Colorado Ave., Telluride, CO",
-    time: "",
-    civicwebId: 8319,
-    packetUrl: "https://telluride-co.civicweb.net/document/445249/"
-  },
   {
     date: "September 22, 2026",
     title: "Telluride Housing Authority",

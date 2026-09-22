@@ -579,5 +579,23 @@
   "county|2026-10-21|Board of County Commissioners Meeting": {
     "sv": 4,
     "ph": "49e704e3c3bab858"
+  },
+  "med|2026-10-22|Regular Board Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "tmvoa|2026-10-22|TMVOA Board of Directors Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "telluride|2026-10-22|Planning & Zoning Commission - Oct 22 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8106",
+    "sv": 4,
+    "ph": "dd3b724a6b5c0e5e"
+  },
+  "telluride|2026-10-22|Planning & Zoning Commission Chair - Oct 22 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8105",
+    "sv": 4,
+    "ph": "d0e0554de56351fb"
   }
 }
