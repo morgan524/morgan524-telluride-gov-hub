@@ -6292,6 +6292,13 @@ async function syncNorwoodEvents() {
 
     const category = classifySlug(slug);
     const title = category === 'Government Meeting' ? norwoodMeetingTitle(slugToTitle(slug)) : slugToTitle(slug);
+    // Board of Trustees / P&Z / Water Commission meetings are already scraped
+    // from each board's own page into NORWOOD_CACHED_DATA (with agenda links)
+    // and render on Gov-Hub. Carrying them here too double-listed them — the
+    // Water Commission even surfaced as a card on the events page. The
+    // content review flagged both on 2026-09-22.
+    if (category === 'Government Meeting' &&
+        /^(board of trustees|planning and zoning commission|norwood water commission)\b/i.test(title)) continue;
     const link = 'https://www.norwoodtown.com/' + dateStr + '-' + slug;
 
     events.push({

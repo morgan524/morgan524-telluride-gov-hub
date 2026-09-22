@@ -604,6 +604,25 @@ async function checkAI(ctx) {
     date: r.rawDate, end: r.endRaw || undefined, source: r.source
   }));
 
+  // Collapse same-kind copies of one item carried by several source arrays
+  // into a single entry listing every array. An aggregator ingesting the same
+  // event from KOTO, Telluride.com, MV and Telluride Science is normal; the
+  // events index merges them into one card and checkDuplicates already rolls
+  // them up as a Low spot-check. Handing the AI the raw copies made it report
+  // each as a Medium "duplicate across sources" (2026-09-22, "Optimize Your
+  // Brain Health…" ×4). Kind stays in the key so an event copy of a MEETING —
+  // which the render-time dedup does not merge — is still visible to it.
+  const merged = new Map();
+  for (const u of upcoming) {
+    const key = [u.kind, String(u.title || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(),
+      isoOf(ctx.localDate, u.date) || u.date].join('|');
+    const prev = merged.get(key);
+    if (!prev) { merged.set(key, { ...u }); continue; }
+    if (!String(prev.array).split(', ').includes(u.array)) prev.array += ', ' + u.array;
+  }
+  upcoming.length = 0;
+  upcoming.push(...merged.values());
+
   if (!upcoming.length) { console.log('  ℹ AI pass: no upcoming items in window'); return; }
 
   const prompt =
@@ -620,6 +639,12 @@ async function checkAI(ctx) {
     // own schedule page, so flagging it burns a Medium every single month.
     `Do NOT flag a Board of Education Work Session and a Board of Education regular/monthly meeting ` +
     `sharing a date — that board routinely holds the work session and then the meeting on the same day. ` +
+    `An entry whose "array" lists several arrays is ONE item already merged across sources — not a duplicate. ` +
+    // 2026-09-22: flagged the Sheridan's "Oak Street Park SummerSHOW Series"
+    // as a date/title contradiction because Sep 24 falls after the equinox.
+    // That's the organizer's series name, not a claim about the date.
+    `A season word inside a series or brand name (e.g. "SummerSHOW Series", "Winter Film Series") is the ` +
+    `organizer's name for the series, not a date claim — do not flag it against the calendar season. ` +
     `Be conservative — no speculation. Return STRICT JSON only, an array of ` +
     `{"severity":"High|Medium|Low","category":"...","item":"<title> (<date>)","problem":"...","suggestedFix":"..."} ` +
     `(empty array [] if nothing is clearly wrong).\n\nDATA:\n` +

@@ -77,6 +77,11 @@ AI semantic pass (optional, needs `ANTHROPIC_API_KEY`; model
 - Fuzzy near-duplicates, dates that contradict the title, mislabeled/garbled
   items, internal inconsistencies. Conservative prompt; failures are swallowed
   (`Low` "AI pass error") so they never break the deterministic run.
+- Same-kind copies of one item across source arrays are collapsed into a single
+  entry (with every array listed) before they reach the AI. The deterministic
+  cross-source check already covers those, and the events index merges them.
+  An event copy of a *meeting* is deliberately left un-collapsed, because the
+  render dedup doesn't merge events with meetings.
 
 ## Design decisions
 
