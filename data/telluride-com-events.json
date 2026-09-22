@@ -252,17 +252,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/61644/img_7366.800x533.webp"
   },
   {
-    "title": "Blues Brunch",
-    "link": "https://www.telluride.com/event/blues-brunch/",
-    "description": "Gather at Black Iron Kitchen + Bar for a Sunday brunch where mountain mornings and live music set the tone. From 7:00AM …",
-    "pubDate": "2026-09-20",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63527/blues_brunch.800x533.webp"
-  },
-  {
     "title": "Wine Tasting 101",
     "link": "https://www.telluride.com/event/wine-tasting-101/",
     "description": "Head to Communion for a beyond-the-basics wine tasting class! The event is limited to 25 participants, so sign-up is …",
@@ -468,16 +457,15 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/62634/2025_ptf_fall_r4_gen_600x400.800x533.webp"
   },
   {
-    "title": "Artabout",
+    "title": "ArtAbout",
     "link": "https://www.telluride.com/event/artabout/",
-    "description": "For visitors and residents alike, you can Telluride the first week of October with Ah Haa as your guide. Artabout …",
+    "description": "Artabout provides the rare glimpse into local artist studios! Organized by Ah Haa School for the Arts, this is a free, …",
     "pubDate": "2026-10-03",
-    "endDate": "2026-10-05",
     "source": "telluride-com",
     "sourceLabel": "Telluride.com",
     "category": "Community Event",
     "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/62618/art-about-draft-768x369.800x533.webp"
+    "imageUrl": "https://www.telluride.com/site/assets/files/62618/artabout.800x533.webp"
   },
   {
     "title": "Telluride Leadership Summit",
@@ -506,8 +494,9 @@
   {
     "title": "Oktoberfest",
     "link": "https://www.telluride.com/event/oktoberfest/",
-    "description": "Save the date: Steins up, Mountain Village! On Saturday, October 10, 2026, we're transforming Mountain Village Center …",
-    "pubDate": "2026-10-10",
+    "description": "Steins up, Mountain Village! From Friday, October 9 - 11, 2026, Mountain Village Center will be transformed into a …",
+    "pubDate": "2026-10-09",
+    "endDate": "2026-10-12",
     "source": "telluride-com",
     "sourceLabel": "Telluride.com",
     "category": "Community Event",
@@ -560,5 +549,16 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/28871/464865559_570687275405719_3117454875494611862_n.800x533.webp"
+  },
+  {
+    "title": "Gondola Re-Opens for Winter",
+    "link": "https://www.telluride.com/event/gondola-reopens-for-the-season/",
+    "description": "The gondola, which closes temporarily for maintenance during the off-season, re-opens on Friday, November 20 for the …",
+    "pubDate": "2026-11-20",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/42687/winter_gondola_telluride.800x533.webp"
   }
 ]

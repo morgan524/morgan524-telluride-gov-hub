@@ -143,7 +143,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided bike ride through Mountain Village, traveling the Jurassic Trail and Meadows Trail routes down to Telluride Brewing Co., where participants receive a complimentary beer. The tour departs from the Mountain Lodge and offers a scenic…",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
   },
   {
@@ -315,7 +315,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "The Norwood Water Commission will hold a regular meeting to conduct official business related to the town's water services and infrastructure. This is a public government meeting hosted by the Town of Norwood.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -328,7 +328,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A community workshop held in Mountain Village bringing together Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library to explore the emotional and psychological dimensions of living…",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
     "type": "Talks & Classes"
   },
   {
@@ -528,7 +528,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Mountain Village's Heritage Plaza hosts its weekly outdoor market, bringing together vendors with fresh produce, local goods, and handmade wares in the heart of the pedestrian-friendly town center. The Wednesday series runs through the…",
+    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
     "type": "Community"
   },
   {
@@ -660,8 +660,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday meal gathering hosted by the Town of Norwood for senior community members. It takes place at noon and offers older residents an opportunity to come together for food and fellowship.",
-    "type": "Food & Drink"
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Town Manager Finalists Meet and Greet",
@@ -673,7 +673,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49917/event.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "The Mountain Village Town Council has narrowed its search for a new Town Manager to four finalists, and this meet-and-greet gives community members a chance to meet the candidates in person. The event offers residents an opportunity to…",
+    "desc": "The Mountain Village Town Council has narrowed its search for a new Town Manager to four finalists: William Bell, of Montrose, CO; Michael Bouchard of Denver,",
     "type": "Community"
   },
   {
@@ -808,8 +808,8 @@
     "img": "https://ucarecdn.com/05381074-07b4-41a7-a955-cd6eb787e77e/-/crop/7952x3975/0,0/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Photon is a live music act performing at The Alibi in Telluride, with roots in a passion project inspired by the late Stephen Hawking. The show begins at 9:00 PM.",
-    "type": "Music"
+    "desc": "What started as a passion project dedicated to the late and great Stephen Hawkin...",
+    "type": "Community"
   },
   {
     "title": "Tennis Clinic 3.0-4.0",
@@ -991,7 +991,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1004,8 +1004,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars is a recurring outdoor film series held at the Conference Center Plaza in Mountain Village, screening movies on Saturday evenings at dusk. The series runs from June 13 through August 15.",
-    "type": "Arts & Film"
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -1096,7 +1096,7 @@
     "img": "https://ucarecdn.com/edc6f077-88d6-4e3a-abc9-b6b9c482cfcf/-/crop/4032x2017/0,0/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "YOPE is a rock, funk, jam, and fusion band based out of Durango, Colorado. They perform at The Alibi in Telluride for a late-night live music set.",
+    "desc": "Yope is a Durango, CO based rock/funk/jam/fusion band that has been making waves...",
     "type": "Music"
   },
   {
@@ -1149,7 +1149,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Sunday Rehab is a recurring Sunday event at Alloy Kitchen in Mountain Village, running weekly through October 11, 2026. It offers a laid-back way to ease into the day in Mountain Village style.",
+    "desc": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
     "type": "Community"
   },
   {
@@ -1201,7 +1201,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided bicycle tour departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route offers a scenic descent…",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
   },
   {
@@ -1240,7 +1240,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A community workshop hosted by Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library, exploring the emotional and psychological weight of environmental loss and change. The event…",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
     "type": "Talks & Classes"
   },
   {
@@ -1305,7 +1305,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Mountain Village's Heritage Plaza hosts its weekly outdoor market, bringing together vendors with fresh produce, local goods, and handmade wares in the heart of the pedestrian-friendly town center. The Wednesday market runs throughout the…",
+    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
     "type": "Community"
   },
   {
@@ -1318,7 +1318,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1372,8 +1372,8 @@
     "img": "https://ucarecdn.com/5503e0b2-6da7-415a-b118-18a9e65ed3e4/-/crop/816x408/0,37/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Ken Gentry & the Companions perform live at The Alibi in Telluride. The evening features a night of live music from this ensemble at one of Telluride's familiar local venues.",
-    "type": "Music"
+    "desc": "Rooted in the soulful grit of a St. Louis upbringing and refined by the clarity ...",
+    "type": "Community"
   },
   {
     "title": "COUSIN CURTISS",
@@ -1558,8 +1558,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars is an outdoor film series held at the Conference Center Plaza in Mountain Village, screening movies on Saturday evenings at dusk. The series runs on a recurring seasonal schedule, offering a community gathering…",
-    "type": "Arts & Film"
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -1575,18 +1575,17 @@
     "type": "Community"
   },
   {
-    "title": "Artabout",
+    "title": "ArtAbout",
     "href": "https://www.telluride.com/event/artabout/",
     "date": "2026-10-03",
     "time": "6:00 PM",
     "location": "Telluride, CO",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/62618/art-about-draft-768x369.800x533.webp",
+    "img": "https://www.telluride.com/site/assets/files/62618/artabout.800x533.webp",
     "category": "Community Event",
     "source": "Telluride.com",
-    "desc": "For visitors and residents alike, you can Telluride the first week of October with Ah Haa as your guide. Artabout …",
-    "type": "Community",
-    "endDate": "2026-10-05"
+    "desc": "Artabout provides the rare glimpse into local artist studios! Organized by Ah Haa School for the Arts, this is a free, …",
+    "type": "Arts & Film"
   },
   {
     "title": "Ridgway 1K ~ Rally thru the Alley",
@@ -1624,7 +1623,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Sunday Rehab is a recurring Sunday event at Alloy Kitchen in Mountain Village, running through October 11, 2026. It offers a laid-back way to spend Sunday afternoons in Mountain Village style.",
+    "desc": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
     "type": "Community"
   },
   {
@@ -1677,7 +1676,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/voting-1.jpg",
     "category": "Community Event",
     "source": "Ouray County",
-    "desc": "A joint briefing hosted by ROCC and the League of Women Voters of the Upper Valley covering statewide measures on the November 2026 ballot. The event takes place in the Decker Room at 675 Clinton Street in Ridgway, with notice that two or…",
+    "desc": "https://ouraycountyco.gov/calendar.aspx?EID=3784",
     "type": "Community"
   },
   {
@@ -1717,7 +1716,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided bicycle ride departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where participants receive a complimentary beer. The route offers a scenic…",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
   },
   {
@@ -1743,7 +1742,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A community workshop held in Mountain Village that brings together participants to explore eco-grief — the emotional weight of loss tied to environmental change — alongside gratitude and love as complementary responses. Led by Lauren…",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
     "type": "Talks & Classes"
   },
   {
@@ -1796,7 +1795,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Mountain Village's Heritage Plaza hosts an outdoor market featuring local vendors. The weekly gathering brings together a variety of goods in the pedestrian-friendly plaza setting.",
+    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
     "type": "Community"
   },
   {
@@ -1849,7 +1848,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1876,7 +1875,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Ouray County",
-    "desc": "A meeting of the Ouray County MAC (Montrose-area Advisory Committee or similar advisory group), held at the 4-H Event Center in Ridgway. Two or more Ouray County Commissioners may be in attendance and participating.",
+    "desc": "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=2379",
     "type": "Community"
   },
   {
@@ -1918,6 +1917,20 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "WOWZERS is a live music event taking place at 687 N Cora Street in Ridgway. The event is listed through the Ouray Ridgway community calendar, offering an evening of live music for attendees in the area.",
     "type": "Music"
+  },
+  {
+    "title": "Oktoberfest",
+    "href": "https://www.telluride.com/event/oktoberfest/",
+    "date": "2026-10-09",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/49157/mv_oktoberfest26_std_2200x1237.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Steins up, Mountain Village! From Friday, October 9 - 11, 2026, Mountain Village Center will be transformed into a …",
+    "type": "Community",
+    "endDate": "2026-10-12"
   },
   {
     "title": "Music Bingo @ the Wright",
@@ -1981,8 +1994,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars is a recurring outdoor film series held at the Conference Center Plaza in Mountain Village, screening movies at dusk on Saturday evenings. The series runs throughout the summer months, offering a communal gathering…",
-    "type": "Arts & Film"
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -2008,19 +2021,6 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Montrose Paint & Sip with Nicole 6:00pm-8:00pm $49 incl. all supplies and an adult beverage Sat, Oct 10th: Golden Aspens Sat, Nov 14th: Morning Peaks Sat, Dec 5th: Snow Topped Treeline Unwind, sip, and create! Join us for a relaxed…",
-    "type": "Community"
-  },
-  {
-    "title": "Oktoberfest",
-    "href": "https://www.telluride.com/event/oktoberfest/",
-    "date": "2026-10-10",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/49157/mv_oktoberfest26_std_2200x1237.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Save the date: Steins up, Mountain Village! On Saturday, October 10, 2026, we're transforming Mountain Village Center …",
     "type": "Community"
   },
   {
@@ -2085,7 +2085,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Sunday Rehab is a recurring Sunday gathering at Alloy Kitchen in Mountain Village, running through October 11, 2026. It's a laid-back way to spend a Sunday in Mountain Village, hosted at the Alloy Kitchen venue.",
+    "desc": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
     "type": "Community"
   },
   {
@@ -2098,7 +2098,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided bicycle ride departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where participants receive a complimentary beer. The route offers a scenic way to…",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
   },
   {
@@ -2152,7 +2152,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/27556/merchant_event-1.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A monthly gathering for Mountain Village merchants, held on the second Tuesday of each month from 10 to 11 a.m. The meeting is offered in a hybrid format, allowing participants to attend either in person or remotely.",
+    "desc": "Join us for the monthly Mountain Village Merchant Meeting to be held on the second Tuesday of each month from 10 to 11 a.m. The meeting will be hybrid with",
     "type": "Community"
   },
   {
@@ -2165,7 +2165,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A community workshop bringing together local guides from Through the Woods Doula, EcoAction Partners, and the Wilkinson Public Library to explore the emotional dimensions of living through environmental change. The gathering offers space…",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
     "type": "Talks & Classes"
   },
   {
@@ -2217,7 +2217,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Mountain Village's Heritage Plaza hosts a community market featuring local vendors. The pedestrian-friendly plaza welcomes shoppers browsing goods from area farmers, artisans, and small businesses.",
+    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
     "type": "Community"
   },
   {
@@ -2243,7 +2243,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather, share a meal, and connect with neighbors. This recurring community event takes place in Norwood and is organized through…",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2282,7 +2282,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49132/alloy-live-music-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Free live music at Alloy Kitchen in Mountain Lodge Telluride, featuring a rotating lineup of local artists including Apres Nova and others throughout the season. Performances are offered four nights a week at no charge, making it a…",
+    "desc": "Free live music four nights a week, all season long. Alloy Kitchen at Mountain Lodge Telluride hosts a rotating lineup of local favorites — Apres Nova,",
     "type": "Music"
   },
   {
@@ -2308,8 +2308,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars is an outdoor film screening series hosted by Mountain Village at the Conference Center Plaza. The series runs on Saturdays at dusk during the summer months, offering a communal cinema experience under the open sky.",
-    "type": "Arts & Film"
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -2373,7 +2373,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Sunday Rehab is a recurring weekly event at Alloy Kitchen in Mountain Village, offering a laid-back Sunday gathering. The series runs through October 2026, providing a local spot to wind down and recharge at the end of the weekend.",
+    "desc": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
     "type": "Community"
   },
   {
@@ -2399,7 +2399,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided bicycle tour departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route offers a scenic descent…",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
   },
   {
@@ -2440,7 +2440,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A workshop hosted by Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library exploring the emotional intersection of grief and gratitude in response to environmental change. The event…",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
     "type": "Talks & Classes"
   },
   {
@@ -2494,7 +2494,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Mountain Village's Heritage Plaza hosts a community market featuring local vendors. The pedestrian-friendly plaza welcomes shoppers browsing a variety of goods from area sellers.",
+    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
     "type": "Community"
   },
   {
@@ -2547,7 +2547,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday community meal program for seniors, hosted by the Town of Norwood. It offers older residents a chance to gather, share a meal, and connect with neighbors in a welcoming setting.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2680,7 +2680,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather and share a meal together. This recurring community event provides both nourishment and social connection for Norwood's…",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2855,5 +2855,18 @@
     "source": "Telluride Rotary",
     "desc": "Telluride Rotary Club meets the 1st & 3rd Wednesdays at 6:00 PM (gathering at 5:30) — 1st Wednesday at Mountain Lodge in Mountain Village, 3rd Wednesday at an announced Telluride location. A service club supporting scholarships, Youth…",
     "type": "Family & Kids"
+  },
+  {
+    "title": "Gondola Re-Opens for Winter",
+    "href": "https://www.telluride.com/event/gondola-reopens-for-the-season/",
+    "date": "2026-11-20",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/42687/winter_gondola_telluride.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "The gondola, which closes temporarily for maintenance during the off-season, re-opens on Friday, November 20 for the …",
+    "type": "Community"
   }
 ]

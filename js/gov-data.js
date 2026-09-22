@@ -666,7 +666,7 @@ const NORWOOD_NWC_URL = 'https://www.norwoodtown.com/nwc-meetings';
 
 const NORWOOD_SAN_URL = 'https://www.norwoodtown.com/norwood-sanitation-district-meeting';
 
-const NORWOOD_CACHE_DATE = '2026-09-21';
+const NORWOOD_CACHE_DATE = '2026-09-22';
 
 const NORWOOD_CACHED_DATA = [
   {
@@ -735,6 +735,16 @@ const NORWOOD_CACHED_DATA = [
     packetUrl: null,
     special: false,
     board: "bot",
+    note: "Next scheduled meeting -- agenda posted before the meeting."
+  },
+  {
+    date: "November 16, 2026",
+    time: null,
+    title: "Planning and Zoning Commission Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    board: "pz",
     note: "Next scheduled meeting -- agenda posted before the meeting."
   }
 ];
