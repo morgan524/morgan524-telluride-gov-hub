@@ -75,7 +75,10 @@ Deterministic (no API):
 AI semantic pass (optional, needs `ANTHROPIC_API_KEY`; model
 `claude-sonnet-4-6`, override via `CONTENT_REVIEW_MODEL`):
 - Fuzzy near-duplicates, dates that contradict the title, mislabeled/garbled
-  items, internal inconsistencies. Conservative prompt; failures are swallowed
+  items, internal inconsistencies. Events that `build-events-index.js` already
+  merges into one card (same `dedupTitle()` + date) are sent once, so a
+  cross-source copy isn't re-reported as a duplicate; a pair the builder does
+  NOT merge still reaches the AI. Conservative prompt; failures are swallowed
   (`Low` "AI pass error") so they never break the deterministic run.
 
 ## Design decisions

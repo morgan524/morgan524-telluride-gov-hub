@@ -100,6 +100,14 @@ its own, so the builder is the only place to change this.
   trailing `live at <venue>`, so `DARRELL SCOTT - Live at The Sherbino`
   matches `DARRELL SCOTT`. It is deliberately not a general "strip trailing
   at X" — that would merge `Yoga at Hartwell Park` into a plain `Yoga`.
+- A second narrow `dedupTitle()` rule (2026-09-23): strip a trailing
+  ` - <presenter>` (dash/en-dash/em-dash/pipe) when the presenter is one of
+  the `SOURCES` labels (except the generic `Community`), so the Alibi's
+  `Hanneke Cassel Trio - Telluride Chamber Music` matches Chamber Music's own
+  `Hanneke Cassel Trio`. Adding a source to `SOURCES` extends this list.
+- `scripts/content-review.js` imports `dedupTitle` + `SOURCES` and sends the AI
+  pass only one copy of each event the builder already merges, so it stops
+  flagging cross-source pairs that never render twice (e.g. `YOPE`/`Yope`).
 
 Two other title normalizers must stay in step with `normTitle()`, and both
 missed the farmers-market duplicate until 2026-08-18:

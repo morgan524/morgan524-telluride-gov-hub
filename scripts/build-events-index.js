@@ -264,7 +264,20 @@ const normTitle = (t) => String(t || '')
 // "DARRELL SCOTT - Live at The Sherbino" (Ouray Ridgway) vs "DARRELL SCOTT"
 // (Sherbino Theater). Deliberately narrow -- a general "strip trailing at X"
 // would wrongly merge "Yoga at Hartwell Park" into a plain "Yoga" the same day.
-const dedupTitle = (t) => normTitle(t).replace(/\s+live at\s+.*$/, '').trim();
+//
+// Second narrow rule (2026-09-23): strip a trailing " - <presenter>" when the
+// presenter is one of OUR event sources. The Alibi lists "Hanneke Cassel Trio -
+// Telluride Chamber Music" while Chamber Music's own feed says "Hanneke Cassel
+// Trio", and the two published side by side. Only a dash/pipe separator and
+// only a known source label, so "Jazz - Live Music Night" is untouched. The
+// generic "Community" label is left out -- "Potluck - Community" is a title.
+const PRESENTER_SUFFIX = new RegExp(
+  '\\s+[-\u2013\u2014|]\\s+(?:' +
+  Object.values(SOURCES).filter((l) => l && l !== 'Community')
+    .map((l) => l.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') +
+  ')\\s*$', 'i');
+const dedupTitle = (t) => normTitle(String(t || '').replace(PRESENTER_SUFFIX, ''))
+  .replace(/\s+live at\s+.*$/, '').trim();
 
 // Read recurring-acts.json (repo root, { _comment, series: [...] }). Missing or
 // malformed is non-fatal — the rest of the index is worth building.
@@ -407,4 +420,4 @@ function run(repoRoot) {
 }
 
 if (require.main === module) run();
-module.exports = { buildEventsIndex, run, actSuppressionIndex, isActSuppressed, normTitle, dedupTitle, dateKeyOf };
+module.exports = { buildEventsIndex, run, actSuppressionIndex, isActSuppressed, normTitle, dedupTitle, dateKeyOf, SOURCES };

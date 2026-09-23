@@ -45,6 +45,7 @@ const https = require('https');
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const eventsIndex = require('./build-events-index.js');   // dedupTitle + SOURCES for the AI pass
 
 const REPO_ROOT = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
 const GOV_DATA_JS = path.join(REPO_ROOT, 'js', 'gov-data.js');
@@ -592,6 +593,22 @@ async function checkAI(ctx) {
     console.log('  ℹ ANTHROPIC_API_KEY not set — skipping AI semantic pass');
     return;
   }
+  // Events the events-index builder already merges into ONE card (same
+  // dedupTitle + date, both arrays in its SOURCES) are sent once. Otherwise the
+  // AI re-reports every cross-source copy as a duplicate — "YOPE" (Alibi) vs
+  // "Yope" (Telluride.com) burned a Medium on 2026-09-23 despite never
+  // rendering twice. A pair the builder does NOT merge still reaches the AI.
+  const indexed = new Set(Object.keys(eventsIndex.SOURCES));
+  const merged = new Set();
+  const firstIndexCopy = (r) => {
+    if (r.kind !== 'event' || !indexed.has(String(r.array).toLowerCase().replace(/_/g, '-'))) return true;
+    const iso = isoOf(ctx.localDate, r.rawDate);
+    if (!iso) return true;
+    const key = eventsIndex.dedupTitle(r.title).slice(0, 60) + '|' + iso;
+    if (merged.has(key)) return false;
+    merged.add(key);
+    return true;
+  };
   // Build a compact digest of upcoming events + meetings only.
   const upcoming = ctx.records.filter(r => {
     if (!['event', 'meeting'].includes(r.kind)) return false;
@@ -599,7 +616,7 @@ async function checkAI(ctx) {
     if (!iso) return true; // include unparseable so the AI can comment
     const d = daysBetweenIso(TODAY, iso);
     return d >= -PAST_GRACE_DAYS && d <= AI_LOOKAHEAD_DAYS;
-  }).map(r => ({
+  }).filter(firstIndexCopy).map(r => ({
     kind: r.kind, array: r.array, title: r.title,
     date: r.rawDate, end: r.endRaw || undefined, source: r.source
   }));
