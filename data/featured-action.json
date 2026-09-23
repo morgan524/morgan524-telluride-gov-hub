@@ -1,26 +1,26 @@
 {
- "generated": "2026-09-22T21:08:00.345Z",
+ "generated": "2026-09-23T04:08:36.412Z",
  "pinned": false,
- "topic": "norwoodwater",
- "topicLabel": "Norwood Water",
- "headline": "Norwood Water goes before Norwood Water Commission Meeting on Tuesday, September 22",
- "blurb": "The Norwood Water Commission meets September 22 with a full plate of water-related business. Six leak forgiveness requests are on the table — a recurring item for any small-system water utility, where a neighbor's faulty line can mean a bill that doesn't reflect actual use. The Commission will also take up a possible leak check fee, which would formalize how the system handles these situations going forward.",
+ "topic": "carhenge",
+ "topicLabel": "Carhenge / Shandoka",
+ "headline": "Carhenge / Shandoka goes before Planning & Zoning Commission on Thursday, September 24",
+ "blurb": "Two work sessions anchor the September 24 P&Z meeting. First up: a proposed employee housing project at the northwest corner of Telluride Middle-High School (725 W Colorado), brought by the Telluride School District R1 under an Intergovernmental Agreement with the Town — this is still early-stage, a work session rather than a formal application.",
  "images": [],
  "deepDive": {
-  "label": "Norwood Water",
-  "href": "/deep-dive-norwoodwater.html"
+  "label": "Carhenge / Shandoka",
+  "href": "/deep-dive-carhenge.html"
  },
  "meeting": {
-  "title": "Norwood Water Commission Meeting",
-  "sourceLabel": "Town of Norwood",
-  "date": "2026-09-22",
-  "humanDate": "Tuesday, September 22",
+  "title": "Planning & Zoning Commission",
+  "sourceLabel": "Town of Telluride",
+  "date": "2026-09-24",
+  "humanDate": "Thursday, September 24",
   "time": "",
-  "location": "1670 Naturita St, Norwood CO 81423",
-  "agendaUrl": "https://www.norwoodtown.com/files/677a3380f/09.22.2026+NWC+Amended+Agenda.pdf",
+  "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104",
   "hasAgenda": true,
-  "packetUrl": "",
-  "zoomLink": "https://us02web.zoom.us/j/88274908233",
-  "livestream": ""
+  "packetUrl": "https://telluride-co.civicweb.net/document/444920/",
+  "zoomLink": "https://us06web.zoom.us/meeting/register/pvzPtHtIRZmah22XUU2xLg",
+  "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
  }
 }

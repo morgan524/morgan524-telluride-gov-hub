@@ -1,30 +1,18 @@
 {
-  "hash": "113809d342a2048b3bb48a563238be03e50034a1",
-  "lede": "The biggest thing on the calendar this week is Monday's Town Council meeting, where a vote on converting two units at 215 East Colorado Avenue from price-capped affordable ownership to employee dwelling units will effectively rewrite how those homes function in Telluride's housing stock — and that same deed-restriction question carries through a Housing Authority meeting and public hearings on the same day. The County Commissioners also have a continued public hearing Tuesday on adopting new international building codes and a low-carbon energy code that will shape what gets built here for years to come. Elsewhere, P&Z gets an early look at a proposed employee housing project at the middle-high school site, and the School Board moves to formal votes on two state ballot measures and updated board policies.",
+  "hash": "7ec6da0acfa2b903197a8fb632ce4ca473a3052d",
+  "lede": "The biggest thing on the calendar this week is Tuesday's BOCC Special Meeting, where commissioners continue a public hearing on adopting the 2024 International Building Codes along with Colorado's new low-energy and carbon standards — rules that will directly shape what gets built in this county for years to come. Town P&Z also meets Wednesday to take an early look at a proposed School District employee housing project near the middle-high school, and the Resident Advisory Committee digs into tenant surveys, unit vacancies, and housing policies. Plenty of community life fills out the week, from Mariachi San Jose at Oak Street Park to the Telluride Autumn Classic.",
   "notable": [
     {
       "id": 2,
-      "stake": "Vote to strip price caps from two affordable units, changing them to EDUs."
-    },
-    {
-      "id": 3,
-      "stake": "Public hearings and vote on removing affordable price caps at 215 E. Colorado."
-    },
-    {
-      "id": 1,
-      "stake": "Board votes on state ballot measure resolutions and second-reading policy changes."
-    },
-    {
-      "id": 8,
-      "stake": "Continued public hearing on new building codes shaping future county construction."
+      "stake": "Public hearing on new building codes will set construction standards countywide."
     },
     {
       "id": 4,
-      "stake": "Commission weighs new leak-check fee and six forgiveness requests affecting water bills."
+      "stake": "Early review of School District employee housing project near middle-high school."
     },
     {
-      "id": 10,
-      "stake": "Early public look at proposed employee housing on school district land."
+      "id": 7,
+      "stake": "Town housing committee reviews tenant surveys, vacancies, and deed-restricted unit policies."
     }
   ]
 }

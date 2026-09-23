@@ -471,7 +471,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8105","sv":4,"ph":"d0e0554de56351fb"},
 
   "county|2026-10-22|Board of Adjustment Meeting":
-    {"sv":4,"ph":"9fed4623122d2e3a"}
+    {"sv":4,"ph":"9fed4623122d2e3a"},
+
+  "school|2026-10-19|Telluride Board of Education Work Session":
+    {"sv":4,"ph":"b858cb282617fb09"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -745,17 +748,11 @@ const DAILY_QUESTIONS = [
 // target, and these seeds let the data start landing again. No page renders
 // them yet — restoring (or retiring) the reader UIs is tracked separately.
 const MEETING_PREVIEWS = {
-  "county|2026-09-23|Board of County Commissioners Work Session":
-    "Board will consider matters including a request for quote for material hauling, proposals for a Lawson Hill Connector Trail Project and fuel island canopy construction, and related county procurement items. Additional context includes local probate proceedings, a foreclosure sale, and a federal environmental assessment for a hazardous fuels project in the region.",
-
   "telluride|2026-09-24|Planning & Zoning Commission - Sep 24 2026":
     "The Planning & Zoning Commission is expected to discuss implementation of the Colorado Wildfire Resiliency Code (CWRC), following Town Council's passage of Ordinance #1640 in August 2026, which amended Chapter 18 of the Telluride Municipal Code to incorporate wildfire resiliency standards into the Land Use Code.",
 
   "telluride|2026-09-24|Planning & Zoning Commission Chair - Sep 24 2026":
     "The Planning & Zoning Commission Chair is expected to discuss the Colorado Wildfire Resiliency Code amendments to Telluride's Land Use Code, following Town Council's passage of Ordinance #1640 on August 11, 2026, which updated Chapter 18 of the Municipal Code to incorporate wildfire resiliency standards.",
-
-  "telluride|2026-09-23|Vending Subcommittee - Sep 23 2026":
-    "The Telluride Vending Subcommittee is expected to review vending permit applications, as is typical for its seasonal meetings held at Rebekah Hall. No specific agenda items were publicly detailed for this session.",
 
   "county|2026-09-28|Open Space Commission Meeting":
     "The Open Space Commission is expected to discuss land and trail-related matters, potentially including the Lawson Hill Connector Trail Project, material hauling needs, and other open space management topics in San Miguel County.",
@@ -811,9 +808,6 @@ const MEETING_PREVIEWS = {
   "county|2026-10-14|Board of County Commissioners Work Session":
     "Board will consider matters including material hauling services, construction of a fuel island canopy, jail painting, a Lawson Hill Connector Trail project, and an update to the county's multi-jurisdictional all-hazard mitigation plan. Procurement opportunities across these areas suggest a focus on infrastructure maintenance and emergency planning.",
 
-  "county|2026-09-23|Board of County Commissioners Special Meeting":
-    "Board will consider matters related to San Miguel County operations, potentially including procurement items such as material hauling, trail construction, fuel island canopy work, and jail repainting contracts. Additional context from related legal notices suggests ongoing county administrative and financial activity in the surrounding area.",
-
   "county|2026-09-30|Board of County Commissioners Work Session":
     "Commissioners are expected to discuss county procurement matters, including material hauling, trail construction for the Lawson Hill Connector, fuel island canopy construction, and jail painting projects. Additional administrative and operational items may also be addressed during the work session.",
 
@@ -842,7 +836,10 @@ const MEETING_PREVIEWS = {
     "The Planning & Zoning Commission Chair is expected to meet on October 22, 2026. While a detailed agenda was not available, recent related matters include implementation of the Colorado Wildfire Resiliency Code amendment to the Land Use Code, adopted by Town Council in August 2026.",
 
   "county|2026-10-22|Board of Adjustment Meeting":
-    "The Board of Adjustment is expected to hear variance or land use appeals for San Miguel County. Related notices include procurement requests for trail construction, jail painting, a fuel island canopy, material hauling, and a multi-jurisdictional hazard mitigation plan update, suggesting county infrastructure and planning matters may be discussed."
+    "The Board of Adjustment is expected to hear variance or land use appeals for San Miguel County. Related notices include procurement requests for trail construction, jail painting, a fuel island canopy, material hauling, and a multi-jurisdictional hazard mitigation plan update, suggesting county infrastructure and planning matters may be discussed.",
+
+  "county|2026-09-23|Board of County Commissioners Special Meeting":
+    "Board will consider agenda items at a special meeting on September 23, 2026, in Telluride. The session includes standard procedural items such as roll call, agenda review, and public comment. Specific action items were not fully detailed in the available agenda excerpt."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1059,8 +1056,8 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#42052"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-22';
-const LEGAL_NOTICES_CACHE_DATE = '2026-09-22';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-23';
+const LEGAL_NOTICES_CACHE_DATE = '2026-09-23';
 
 const MANUAL_SUMMARIES = {
   "county|2026-08-26|Board of County Commissioners Work Session":
@@ -1388,7 +1385,10 @@ const MANUAL_SUMMARIES = {
     "The October 22, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
 
   "county|2026-10-22|Board of Adjustment Meeting":
-    "The agenda for the October 22 Board of Adjustment meeting hasn't been posted yet."
+    "The agenda for the October 22 Board of Adjustment meeting hasn't been posted yet.",
+
+  "school|2026-10-19|Telluride Board of Education Work Session":
+    "The October 19, 2026 Telluride Board of Education Work Session agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1787,8 +1787,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "September 22, 2026",
     firstSeen: "2026-09-22",
     newsTopic: "arts-culture",
-    copy: "Many art installations that interact with the landscape remain in one setting.",
-    claudeSummary: false,
+    copy: "Telluride artist Brooke Einbender's interactive installation *Gaiascope* — three mirrored, kaleidoscopic sculptures filled with locally inspired video art — is up at Heritage Plaza through around Oct. 23. Viewers can adjust colors and patterns from a pad outside each chamber; best seen lit up at night. The piece previously showed at the San Jose World Cup before landing here in the San Juans.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_1e344649-7938-4755-ba52-0c0e859a9553.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/f2/5f2b2227-5a1a-43d9-a863-93c4e98a1f5c/6ab247a3a9fe4.image.jpg",
     imgHiRes: true
@@ -2498,193 +2498,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Democratic state rep. candidate Alec Lindeman denied ballot access",
-    source: "Telluride Times",
-    date: "September 9, 2026",
-    firstSeen: "2026-09-09",
-    newsTopic: "government",
-    copy: "Democratic candidate Alec Lindeman won't appear on the November ballot for HD58 after the party's vacancy committee failed to submit required paperwork on time following a candidate swap. Incumbent Larry Don Suckla, who won the seat in 2024 with 54.6% of the vote, will run unopposed. Lindeman says he plans to try again in 2028.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_66c482ec-a629-45c6-9c83-f27714615f16.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/35/c356cdc8-fb2a-4785-9021-77ebe994c2e0/6aa1b60cd24a2.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "A Dem for Dan",
-    source: "Telluride Times",
-    date: "September 9, 2026",
-    firstSeen: "2026-09-09",
-    newsTopic: "public-safety",
-    copy: "A letter-to-the-editor from a self-identified Democrat endorsing independent Sheriff Dan Covault in San Miguel County this November. The writer highlights Covault's collaborative work with the San Miguel Resource Center and Telluride Marshal's Office on Safe Festivals. She encourages voters of all affiliations to evaluate the candidate on record and relationships, not party label.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_ca8bb1a4-a7cc-4a0d-904f-e1845df60af1.html",
-    img: "",
-    letterAuthor: "Erin Ries",
-    isLetter: true,
-    imgHiRes: true
-  },
-  {
-    title: "Applications open for Angel Baskets",
-    source: "Telluride Times",
-    date: "September 9, 2026",
-    firstSeen: "2026-09-09",
-    newsTopic: "community",
-    copy: "Angel Baskets is accepting applications for its Holiday Gifting Program at tellurideangelbaskets.org through Sept. 30. They deliver food, household items, toys, and gift cards to hundreds of San Miguel County and West End families each year — delivery set for Dec. 12. Libraries in Telluride, Norwood, Naturita, and Nucla can help with applications.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_6ac21b15-444b-4a25-b0a4-0889dabe97d5.html",
-    img: "",
-    isLetter: true,
-    imgHiRes: true
-  },
-  {
-    title: "Local news can bring communities together",
-    source: "Telluride Times",
-    date: "September 9, 2026",
-    firstSeen: "2026-09-09",
-    newsTopic: "community",
-    copy: "David Hoffmann, founder and chairman of the company that owns this paper, wrote to introduce himself and explain his commitment to local journalism. He says local news has weakened in many communities and he wants to help reverse that. His stated goal is coverage that serves the whole community, not any particular side.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/editorials/article_5a7d5ff2-95ef-4cc4-abdf-7088fee1eec6.html",
-    img: "",
-    isLetter: true,
-    imgHiRes: true
-  },
-  {
-    title: "Why we have fewer animals",
-    source: "Telluride Times",
-    date: "September 9, 2026",
-    firstSeen: "2026-09-09",
-    newsTopic: "community",
-    copy: "Second Chance Humane Society in Ridgway has intentionally reduced its shelter population — from 20–25 cats and 10–15 dogs down to roughly half that — to better match the small local population of Ouray County. Keeping fewer animals shortens shelter stays and reduces stress-related behavior problems that make adoption harder.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_1730f867-ebb6-4097-ab2e-87c24ef991b3.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/e9/4e9b4d67-8864-4f46-9b58-50c8933037e0/6aa19a686e477.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Speak up now to save the Roadless Rule",
-    source: "Telluride Times",
-    date: "September 9, 2026",
-    firstSeen: "2026-09-09",
-    newsTopic: "infrastructure",
-    copy: "The Trump administration has proposed eliminating the 2001 National Roadless Rule, which currently shields 58.5 million acres of national forest from roads, logging, and extraction. Colorado's own 2012 Roadless Rule would still protect local areas like Wilson Mesa and Lizard Head. A public comment period is open now.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/editorials/article_356fa282-8f5c-4806-9c7a-a504c679b107.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/0d/30dbd0a0-812a-499d-a705-cf002df5929c/6aa19b407c84b.image.jpg",
-    isLetter: true,
-    imgHiRes: true
-  },
-  {
-    title: "Authors discuss their newest book, 'Beyond Honor'",
-    source: "Telluride Times",
-    date: "September 9, 2026",
-    firstSeen: "2026-09-09",
-    newsTopic: "arts-culture",
-    copy: "Part-time locals Karen and Bill Brodsky, who write together as K.B. Brodsky, are presenting their debut spy thriller \"Beyond Honor\" at Wilkinson Public Library on Thursday, Sept. 17 at 5:30 p.m. The event is a joint effort between the library and Between the Covers bookstore.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_ac06b02b-b3d6-4253-9f74-89de7552c350.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/f4/5f4032e1-7af8-461a-9b3a-7d9b48d3f5c5/6aa19753bace9.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "Wake",
-    source: "Telluride Times",
-    date: "September 9, 2026",
-    firstSeen: "2026-09-09",
-    newsTopic: "community",
-    copy: "A habituated black bear was trapped and removed near a Silver Creek neighborhood after charging residents, chasing a woman and her dog, and repeatedly breaking into vehicles. Colorado's black bear population has nearly doubled in a decade while drought has shrunk wild food sources, pushing more bears into town.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_486697e1-cddb-46b1-94ce-1b42472061df.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/c5/9c5534b2-ffcd-43cc-b279-be1f3a76f04e/6aa196a31fa05.image.jpg",
-    isLetter: true,
-    imgHiRes: true
-  },
-  {
-    title: "With every season",
-    source: "Telluride Times",
-    date: "September 9, 2026",
-    firstSeen: "2026-09-09",
-    newsTopic: "recreation",
-    copy: "A local trail through the valley gets a seasonal checkup — eroded sidehills, muddy dips after rain, and a new engineered switchback where a rough V-notch used to be. After the ride, firewood splitting fills the afternoon, maul swinging to a Tigers game on the radio.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_665f07eb-e707-4cf8-9a0e-09131218c888.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/33/c3314947-c732-4520-a208-53b4b82d608c/6aa19559d186d.image.jpg",
-    isLetter: true,
-    imgHiRes: true
-  },
-  {
-    title: "What a film fest it was",
-    source: "Telluride Times",
-    date: "September 9, 2026",
-    firstSeen: "2026-09-09",
-    newsTopic: "arts-culture",
-    copy: "The 53rd Telluride Film Festival ran Sept. 4–7, featuring premieres from Simon Stone, Jesse Eisenberg, and Mike Leigh, with Julianne Moore and Andrew Scott drawing strong praise. Mountain-themed films and an Elizabeth Holmes documentary rounded out the lineup, alongside tributes to Sandra Hüller and John Malkovich.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_9dab5370-584e-4b82-b447-58e1110f044f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/70/f70d0030-8464-48c2-9d24-7bedcb4bf19c/6aa0d2f386ee8.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "In North Carolina, a race is on to restore critical peatland before it dries up or is destroyed",
-    source: "Telluride Times",
-    date: "September 9, 2026",
-    firstSeen: "2026-09-09",
-    newsTopic: "community",
-    copy: "A 23-square-mile peatland in North Carolina — drained decades ago for a failed farming venture — is now the target of a major restoration effort. A Colorado company plans to block old drainage ditches, replant native species, and sell carbon credits to fund preservation of up to a million acres along the Eastern Seaboard.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_f706d4bc-85b2-5a14-8d3e-58d383f8414a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c7/ec78a45d-b020-57a7-8032-fd3c642dc44d/6aa1598030477.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "A love affair with local food",
-    source: "Telluride Times",
-    date: "September 9, 2026",
-    firstSeen: "2026-09-09",
-    newsTopic: "community",
-    copy: "A free community conversation on local food resilience is set for Sept. 10 at 6 p.m. at the Naturita Community Library, part of the monthly West End Stories & Poems series. Melanie Eggers and Bodie Johansson, both with years in regenerative agriculture, will discuss rebuilding food systems in the West End.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_00b4bae1-ca6f-40f8-8a14-9afefff78b5a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/e0/5e0f6aef-e58d-4ae2-a198-9aefe9f0b5c3/6aa16e62f380c.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Join Norwood School’s District Accountability Committee",
-    source: "Telluride Times",
-    date: "September 9, 2026",
-    firstSeen: "2026-09-09",
-    newsTopic: "education",
-    copy: "Norwood School District is looking for staff and parents to join its District Accountability Committee, a legally required advisory group that weighs in on budget priorities, improvement plans, and family engagement. The DAC meets four times during the 2026–2027 school year, starting September 9. Contact Superintendent Todd Bissell at todd.bissell@norwoodk12.org or 970-729-9131.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_73fe7573-55ad-4091-a3ee-b782586b14d9.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/e5/5e5b6cd6-1a6f-43fc-ad6f-ea150ecb022f/6aa16cdc2dd45.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "Takeaways from AP story on a major effort to restore peatland in North Carolina",
-    source: "Telluride Times",
-    date: "September 9, 2026",
-    firstSeen: "2026-09-09",
-    newsTopic: "community",
-    copy: "A Colorado company is working to restore 23 square miles of drained peatland in North Carolina by plugging old drainage ditches and replanting native species. The site currently releases 130,000 tons of CO₂ annually — peatlands hold roughly a third of Earth's stored carbon despite covering just 3% of its surface. Pantheon Regeneration plans to fund the work through carbon credit sales.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_5fbd3ade-b429-540c-8b7c-136954b19a74.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/23/92313ae5-8476-599d-866a-500524e468bf/6aa15c4ea0c60.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "A send-off for Suss",
-    source: "Telluride Times",
-    date: "September 9, 2026",
-    firstSeen: "2026-09-09",
-    newsTopic: "government",
-    copy: "TASP is throwing a farewell party for David \"Suss\" Sussman — board president, instructor, and adaptive athlete — Sunday, Sept. 13, 4–6 p.m. at Oak. After 12 years and 948 ski days here, he's heading to San Diego to be near family and manage ongoing spinal health needs.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_a784609b-fec1-4128-8dac-561f422e7d30.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/52/d5273b0a-6975-4612-a2a9-c9256d6185fe/6aa0c231575bc.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride to Lift All Fire Restrictions",
     source: "Town of Telluride",
     date: "September 17, 2026",
@@ -2710,6 +2523,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "(August 25, 2026) – Following improved fire conditions across the region, Town Manager Zoe Dohnal has downgraded fire restrictions within the Town of Telluride from Stage 2 to Stage 1, effective 12:01 a.m. MT on Wednesday, August 26, 2026.",
     href: "https://www.telluride.gov/CivicAlerts.aspx?aid=403",
     img: ""
+  },
+  {
+    title: "Chief Deputy Clerk Receives Excellence in Election Service Award",
+    source: "San Miguel County",
+    date: "September 22, 2026",
+    newsTopic: "government",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1413",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14817"
+  },
+  {
+    title: "SMC Expands Crisis Intervention Services with Paragon Behavioral Health Connections",
+    source: "San Miguel County",
+    date: "September 22, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1412",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14816"
   },
   {
     title: "Safe Festivals - A Public Health Approach to Harm Reduction",
@@ -2843,7 +2674,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "September 22, 2026",
+    date: "September 23, 2026",
     firstSeen: "2026-09-11",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2854,7 +2685,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "September 22, 2026",
+    date: "September 23, 2026",
     firstSeen: "2026-09-14",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2974,6 +2805,19 @@ const KOTO_FEATURED_STORIES = [
 // page over the coming weeks, the bot will add them with firstSeen=today
 // and the array will naturally shed the sentinels via the same logic.
 const SMB_FORUM_ARTICLES = [
+  {
+    title: "Nucla volleyball girls make memories on, off court",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "September 23, 2026",
+    firstSeen: "2026-09-23",
+    dateSource: "article",
+    newsTopic: "education",
+    copy: "Nucla's girls volleyball team is 4-6 on the season with 23 players and six seniors leading the roster under coach Debbie Wytulka, now in her 28th year. The team has shown improvement in tournaments and recently launched a Big Sister–Little Sister mentorship program connecting high school and middle school players. Games continue through October, with a league tournament on Halloween weekend and Regionals set for Nov. 8.",
+    claudeSummary: true,
+    href: "https://www.sanmiguelbasinforum.com/stories/nucla-volleyball-girls-make-memories-on-off-court,130194",
+    img: "https://zeta.creativecirclecdn.com/smb/original/20260921-165714-8ef-youth%20vball.jpeg"
+  },
   {
     title: "Hughes climbs Lizard Head",
     source: "San Miguel Basin Forum",
@@ -3953,7 +3797,20 @@ const WILKINSON_EVENTS = [
 // none of which are advertised as adoptable. The sync filters those out, so
 // this repopulates automatically when THS posts genuinely-available pets.
 const HUMANE_SOCIETY_ANIMALS = [
-
+  {
+    id: "TEL-A-202",
+    name: "Auggie",
+    species: "Dog",
+    breed: "Pyrenees, Great / Shepherd",
+    ageGroup: "Puppy",
+    sex: "Male",
+    photo: "https://new-s3.shelterluv.com/profile-pictures/639c974c5db024bfb2a68ed6291fd880/e42532c8a8f47e22cea8b0d8cbf176e0.jpg",
+    profileUrl: "https://www.shelterluv.com/embed/animal/214602469",
+    summary: "Puppy • Pyrenees, Great / Shepherd • Male",
+    firstSeen: "2026-09-23",
+    revealDate: "2026-09-23",
+    lastSeen: "2026-09-23"
+  }
 ];
 
 /* The Alibi events — refreshed by syncAlibiEvents() every 6 hours.
@@ -3999,6 +3856,18 @@ const ALIBI_EVENTS = [
     category: "Live Music",
     location: "The Alibi • Telluride, CO",
     imageUrl: "https://ucarecdn.com/5503e0b2-6da7-415a-b118-18a9e65ed3e4/-/crop/816x408/0,37/-/preview/"
+  },
+  {
+    title: "Hanneke Cassel Trio - Telluride Chamber Music",
+    link: "https://www.alibitelluride.com/calendar#eca-event=hanneke-cassel-trio-telluride-chamber-music",
+    description: "The Hanneke Cassel Trio brings an evening of chamber music to The Alibi as part of Telluride Chamber Music's programming. The performance is described as a distinctive take on the chamber music tradition.",
+    pubDate: "2026-10-13",
+    time: "7:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/621f88b8-3a58-4663-89e9-6138fd350587/-/crop/792x317/0,907/-/preview/"
   }
 ];
 
@@ -5714,17 +5583,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Bike & Brewery Tour",
-    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
-    description: "A guided bike ride through Mountain Village, traveling the Jurassic Trail and Meadows Trail routes down to Telluride Brewing Co., where participants receive a complimentary beer. The tour departs from the Mountain Lodge and offers a scenic way to explore the area's trails while visiting local breweries.",
-    pubDate: "2026-09-21T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
-  },
-  {
     title: "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
     link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
     description: "A community workshop held in Mountain Village bringing together Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library to explore the emotional and psychological dimensions of living through environmental change. The gathering offers space to process eco-grief alongside feelings of gratitude and love for the natural world.",
@@ -6305,30 +6163,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/63536/vol-trail-work--499x624.800x533.webp"
-  },
-  {
-    title: "Emergency Kit Assembly at the Telluride Brews and Blues Festival",
-    link: "https://www.telluride.com/event/emergency-kit-assembly-at-the-telluride-brews-and-blues-festival/",
-    description: "Just A Bunch of Roadies is the humanitarian arm of the live-events industry. After years responding to disasters, they …",
-    pubDate: "2026-09-18",
-    endDate: "2026-09-21",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63457/final_b_b_town_poster_work.800x533.webp"
-  },
-  {
-    title: "Crystal Festival - A Rock, Mineral, Gem, & Crystal Show",
-    link: "https://www.telluride.com/event/crystal-festival-a-rock-mineral-gem-crystal-show-1/",
-    description: "Head to Telluride for the Crystal Festival, an educational and vendor event featuring rocks, minerals, fossils, …",
-    pubDate: "2026-09-19",
-    endDate: "2026-09-21",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/61644/img_7366.800x533.webp"
   },
   {
     title: "Wine Tasting 101",
@@ -7106,60 +6940,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluride.gov/bids.aspx?bidID=132",
     address: "",
     totBidID: "132"
-  },
-  {
-    title: "Public Hearing -- Adoption of 2024 International Building Code & Colorado Low Energy & Carbon Code",
-    entity: "San Miguel County Board of Commissioners",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The San Miguel County Board of Commissioners will hold a public hearing on September 16, 2026 at 9:00 AM in Telluride to consider adopting the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Written comments must be received by noon on September 10, 2026. Proposed amendments are available in the meeting agenda packet at www.sanmiguelcountyco.gov.",
-    deadline: "2026-09-10T12:00:00 (written comments); hearing 2026-09-16 at 9:00 AM",
-    expires: "2026-09-16",
-    dates: "8/27",
-    papers: ["ttimes_0827"],
-    url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
-    address: "Telluride, Colorado (San Miguel County)",
-    noticeKey: "COL-000222-ibc-hearing"
-  },
-  {
-    title: "RFP -- Fuel Island Canopy Construction, Norwood Road & Bridge Maintenance Yard (COL-000219)",
-    entity: "San Miguel County Road & Bridge Department",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County Road & Bridge is soliciting proposals from qualified contractors for the design, engineering, permitting assistance, and construction of a fuel island canopy at the Norwood Road & Bridge Maintenance Yard at 39595 Highway 145, Norwood. A pre-proposal onsite meeting was held August 24, 2026, and written questions were due August 26, 2026. Proposals must be submitted electronically by September 3, 2026 at 4:00 PM; notification of selection is expected September 7, 2026.",
-    deadline: "2026-09-03T16:00:00",
-    expires: "2026-09-07",
-    dates: "8/27",
-    papers: ["ttimes_0827"],
-    url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
-    address: "39595 Highway 145, Norwood, CO 81423",
-    noticeKey: "COL-000219-fuel-island-canopy-rfp"
-  },
-  {
-    title: "RFP -- San Miguel County Jail Repainting, Illium (COL-000224)",
-    entity: "San Miguel County Fleet & Facilities Department",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County is requesting proposals from contractors to repaint the San Miguel County Jail located at 684 County Road 63L, Telluride (Illium area). RFP documents are available at www.sanmiguelcountyco.gov/bids.aspx or through the Fleet & Facilities Department at 333 W. Colorado Ave, 2nd Floor, Telluride. Proposals are due by 5:00 PM on Friday, September 18, 2026, submitted via email or dropped off at the Fleet & Facilities Department.",
-    deadline: "2026-09-18T17:00:00",
-    expires: "2026-09-18",
-    dates: "8/27",
-    papers: ["ttimes_0827"],
-    url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
-    address: "684 County Road 63L, Telluride, CO 81435",
-    noticeKey: "COL-000224-jail-repainting-rfp"
   }
 ];
 
@@ -8540,26 +8320,6 @@ function getTownAgendaLink(title, eventDate) {
 // MeetingsService (HARC stays in TELLURIDE_CACHED_DATA above). Empty until the
 // next content-refresh run. Each entry: {date,title,agendaUrl,hasAgenda,location,time}.
 const TELLURIDE_BOARD_MEETINGS = [
-  {
-    date: "September 22, 2026",
-    title: "Telluride Housing Authority",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303",
-    hasAgenda: true,
-    location: "Rebekah Hall, 113 W Columbia Ave",
-    time: "",
-    civicwebId: 8303,
-    packetUrl: "https://telluride-co.civicweb.net/document/444864/"
-  },
-  {
-    date: "September 22, 2026",
-    title: "Town Council",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043",
-    hasAgenda: true,
-    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: "",
-    civicwebId: 8043,
-    packetUrl: "https://telluride-co.civicweb.net/document/444860/"
-  },
   {
     date: "September 24, 2026",
     title: "Resident Advisory Committee",

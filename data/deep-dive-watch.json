@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-22T21:08:00.342Z",
+ "generated": "2026-09-23T04:08:36.411Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -174,18 +174,6 @@
    "label": "Norwood Water",
    "lastUpdated": "2026-07-23",
    "upcoming": [
-    {
-     "source": "norwood",
-     "sourceLabel": "Town of Norwood",
-     "title": "Norwood Water Commission Meeting",
-     "date": "2026-09-22",
-     "time": "",
-     "location": "1670 Naturita St, Norwood CO 81423",
-     "agendaUrl": "https://www.norwoodtown.com/files/677a3380f/09.22.2026+NWC+Amended+Agenda.pdf",
-     "link": "https://www.norwoodtown.com/files/677a3380f/09.22.2026+NWC+Amended+Agenda.pdf",
-     "zoomLink": "https://us02web.zoom.us/j/88274908233",
-     "livestream": ""
-    },
     {
      "source": "norwood",
      "sourceLabel": "Town of Norwood",
