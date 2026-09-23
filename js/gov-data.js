@@ -231,6 +231,15 @@ const COUNTY_CACHED_DATA = [
     location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
     civicClerkId: 1059,
     note: null
+  },
+  {
+    date: "December 9, 2026",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Regular Meeting",
+    type: "bocc",
+    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    civicClerkId: 980,
+    note: null
   }
 ];
 
