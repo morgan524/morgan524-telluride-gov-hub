@@ -77,7 +77,7 @@ const SOURCES = {
 // content-refresh.js; keep all three in sync.
 const EXCLUDED = /wright opera house guided tour|ridgway railroad museum|free train ride|summer bingo|ultimate frisbee/i;
 // Government meetings live on Gov-Hub, not the events page.
-const GOV_MEETING = /\b(town council|board of (county )?commissioners|planning (and zoning|commission)|p&z|board of directors|general assembly|HARC|historic & architectural|work session|board of trustees|school board|board of education)\b/i;
+const GOV_MEETING = /\b(town council|board of (county )?commissioners|planning (and zoning|commission)|p&z|board of directors|general assembly|water commission|HARC|historic & architectural|work session|board of trustees|school board|board of education)\b/i;
 const CLOSURE = /\b(closed|closure|holiday hours|office closed)\b/i;
 
 // Venues that are ALWAYS in Telluride regardless of the record's location.

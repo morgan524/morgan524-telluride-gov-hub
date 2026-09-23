@@ -4967,6 +4967,8 @@ function norwoodMeetingTitle(raw) {
   if (!/\b(meeting|session|hearing|workshop|retreat)\b/i.test(t)) t += ' Meeting';
   return t;
 }
+// The boards syncNorwoodMeetings() tracks, as norwoodMeetingTitle() spells them.
+const NORWOOD_TRACKED_BOARD_RE = /^(norwood water commission|board of trustees|planning and zoning commission)\b/i;
 
 async function syncNorwoodMeetings() {
   console.log('\n🏘️  Syncing Norwood meetings from meeting pages...');
@@ -6292,6 +6294,11 @@ async function syncNorwoodEvents() {
 
     const category = classifySlug(slug);
     const title = category === 'Government Meeting' ? norwoodMeetingTitle(slugToTitle(slug)) : slugToTitle(slug);
+    // Water Commission / Trustees / P&Z meetings are already carried (with
+    // agendas and summaries) by syncNorwoodMeetings() in NORWOOD_CACHED_DATA.
+    // Keeping them here too double-listed them — the content review flagged
+    // "Norwood Water Commission Meeting" in both arrays on 2026-09-23.
+    if (category === 'Government Meeting' && NORWOOD_TRACKED_BOARD_RE.test(title)) continue;
     const link = 'https://www.norwoodtown.com/' + dateStr + '-' + slug;
 
     events.push({
