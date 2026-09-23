@@ -1,22 +1,26 @@
 {
-  "hash": "1cc99b5f748736b62271a0c7fb8f65ff9013b8be",
-  "lede": "The biggest thing on the calendar this week is Tuesday's BOCC Special Meeting, where commissioners are continuing a public hearing on adopting the 2024 International Codes and Colorado's new low-energy building standards — rules that will directly shape what gets built in this county for years to come. The BOCC will also take up 2027 nonprofit funding. Elsewhere, Town P&Z holds work sessions on a school-district employee housing proposal at the middle-high school site and another ongoing topic, while the Resident Advisory Committee digs into tenant surveys, vacancies, and housing policy.",
+  "hash": "66e987d940f361e73a2f0d3bf5d07ae4735126b5",
+  "lede": "The biggest item this week is Tuesday's BOCC Special Meeting, where commissioners are holding a continued public hearing on adopting the 2024 International Codes and Colorado's new low-energy and carbon building standards — rules that will directly shape what gets built in this county for years to come. Alongside that, the Gondola Leadership Committee takes up a real fork-in-the-road decision on whether to pursue federally funded or locally led project delivery. Town P&Z also holds work sessions on a School District employee housing proposal and other ongoing matters.",
   "notable": [
     {
       "id": 2,
-      "stake": "Public hearing on new building codes that will define how and what gets built countywide."
+      "stake": "Public hearing on new county building and energy codes — shapes all future construction."
     },
     {
-      "id": 4,
-      "stake": "Early-stage school-district employee housing project and continued zoning discussion up for review."
-    },
-    {
-      "id": 7,
-      "stake": "Town housing committee reviews tenant surveys, vacancies, and deed-restricted unit policies."
+      "id": 9,
+      "stake": "Vote on federal vs. local financing for gondola project — consequential for local control."
     },
     {
       "id": 1,
-      "stake": "Subcommittee selects winter vendors for Gondola Plaza and appoints a new chairperson."
+      "stake": "Subcommittee selects Gondola Plaza winter vendors and appoints new chairperson."
+    },
+    {
+      "id": 4,
+      "stake": "Early review of School District employee housing proposal at West Colorado site."
+    },
+    {
+      "id": 7,
+      "stake": "Town housing committee reviews tenant survey, vacancies, and deed-restricted unit policies."
     }
   ]
 }

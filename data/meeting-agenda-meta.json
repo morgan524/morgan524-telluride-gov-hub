@@ -608,5 +608,10 @@
   "school|2026-10-19|Telluride Board of Education Work Session": {
     "sv": 4,
     "ph": "b858cb282617fb09"
+  },
+  "telluride|2026-09-28|Gondola Leadership Committee - Sep 28 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8321",
+    "zoomUrl": "https://gbsm.zoom.us/j/83597933306",
+    "sv": 4
   }
 }
