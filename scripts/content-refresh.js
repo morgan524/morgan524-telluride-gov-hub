@@ -4951,9 +4951,8 @@ async function syncOurayMeetings() {
 // "NWC Amended", "BOT Special") — an acronym plus a note about the AGENDA
 // ("Amended" means a revised agenda was posted, not a different meeting).
 // Spell the body out and drop the agenda qualifier so a card never reads as
-// an internal note. Shared by syncNorwoodMeetings() (NORWOOD_CACHED_DATA) and
-// syncNorwoodEvents() (NORWOOD_EVENTS) so both arrays carry the same title —
-// the content review flagged "NWC Amended" appearing in both on 2026-09-22.
+// an internal note. Used by syncNorwoodMeetings() (NORWOOD_CACHED_DATA);
+// syncNorwoodEvents() no longer carries board meetings at all (2026-09-24).
 function norwoodMeetingTitle(raw) {
   let t = String(raw || '').trim();
   const expanded = t
@@ -6278,6 +6277,7 @@ async function syncNorwoodEvents() {
   const dateSlugRe = /https?:\/\/www\.norwoodtown\.com\/(\d{4}-\d{2}-\d{2})-([a-z0-9][^<\s"]+)/gi;
   const seen = new Set();
   const events = [];
+  let skippedMeetings = 0;
   let match;
 
   while ((match = dateSlugRe.exec(xml)) !== null) {
@@ -6291,7 +6291,12 @@ async function syncNorwoodEvents() {
     seen.add(key);
 
     const category = classifySlug(slug);
-    const title = category === 'Government Meeting' ? norwoodMeetingTitle(slugToTitle(slug)) : slugToTitle(slug);
+    // Board meetings already come from syncNorwoodMeetings() into
+    // NORWOOD_CACHED_DATA (with agenda links) and render on Gov-Hub. Carrying
+    // them here too double-listed every NWC/BOT/P&Z meeting — the content
+    // review flagged the Sep 22 2026 Water Commission meeting in both arrays.
+    if (category === 'Government Meeting') { skippedMeetings++; continue; }
+    const title = slugToTitle(slug);
     const link = 'https://www.norwoodtown.com/' + dateStr + '-' + slug;
 
     events.push({
@@ -6308,7 +6313,7 @@ async function syncNorwoodEvents() {
   }
 
   events.sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
-  console.log(`  Norwood: ${events.length} events/notices from sitemap`);
+  console.log(`  Norwood: ${events.length} events/notices from sitemap (${skippedMeetings} board meetings left to NORWOOD_CACHED_DATA)`);
   return applyEventOverrides(events);
 }
 
@@ -6321,7 +6326,9 @@ async function syncNorwoodEvents() {
 // and parse the human-readable "When" section to generate per-
 // occurrence Date objects within the 60-day window.
 
-const MV_GOV_SLUG_RE = /town-council|council-meeting|planning-commission|special-meeting|executive-session|work-session|advisory|certification|training|food-safety|food-protection|business-development|board-of/i;
+// merchant-meeting: TMVOA's monthly Merchant Meeting is already scraped into
+// TMVOA_CACHED_DATA and shown on Gov-Hub; the MV calendar copy double-listed it.
+const MV_GOV_SLUG_RE = /merchant-meeting|town-council|council-meeting|planning-commission|special-meeting|executive-session|work-session|advisory|certification|training|food-safety|food-protection|business-development|board-of/i;
 
 function parseMVWhenText(whenText, fromMs, toMs) {
   const dates = [];
