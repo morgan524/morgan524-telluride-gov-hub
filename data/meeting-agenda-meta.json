@@ -346,7 +346,7 @@
   },
   "county|2026-10-01|Lodging Tax Panel Meeting": {
     "sv": 4,
-    "ph": "1f577e951aaf55d2"
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1070/files/agenda/2014"
   },
   "county|2026-09-09|Board of County Commissioners Special Meeting": {
     "sv": 4,
@@ -607,5 +607,9 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8146",
     "sv": 4,
     "ph": "65b7901f622f722e"
+  },
+  "mv|2026-09-25|Town Council Meeting": {
+    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/49970/september_25-_2026_special_town_council_meeting_agenda.pdf",
+    "sv": 4
   }
 }

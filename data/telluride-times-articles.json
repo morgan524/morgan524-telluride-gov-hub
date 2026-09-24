@@ -1,12 +1,36 @@
 [
   {
+    "title": "Energy Department will spend $2 billion to squeeze more electricity from the aging power grid",
+    "source": "Telluride Times",
+    "date": "September 24, 2026",
+    "firstSeen": "2026-09-24",
+    "newsTopic": "infrastructure",
+    "copy": "The Energy Department is putting nearly $2 billion toward 31 grid upgrade projects across 26 states, using sensor technology and fiber optics to safely push more electricity through existing transmission lines. The goal is to add over 23 gigawatts of capacity and improve reliability for roughly 100 million Americans as AI data centers drive up demand fast. Funding comes from the bipartisan infrastructure law, matched by over $3 billion from project recipients.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/state/article_55a83654-a2e6-5abd-8c5c-43a14a65dd54.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/de/ddedd793-ebec-5560-b0e9-0e8ba991e0b1/6ab56ab025303.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "THS volleyball riding unlucky slide",
+    "source": "Telluride Times",
+    "date": "September 24, 2026",
+    "firstSeen": "2026-09-24",
+    "newsTopic": "community",
+    "copy": "Telluride volleyball dropped its fourth straight match, falling to No. 8-ranked Dolores 27-25, 25-13, 25-13 on Sept. 17. The Lady Miners sit at 4-7 overall, 1-1 in league play. Up next: Ignacio on Sept. 26 and Norwood on Sept. 29.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/sports/article_a7e679a2-0834-4e75-9f4f-b57edcd0d345.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/9d/79d0bec4-b8ce-407b-8c1b-10990ca9a956/6ab552be11cc1.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "San Miguel County sheriff talks license plate readers",
     "source": "Telluride Times",
     "date": "September 24, 2026",
     "firstSeen": "2026-09-24",
     "newsTopic": "public-safety",
-    "copy": "San Miguel County Sheriff Dan Covault spoke with community members on Thursday, Sept. 17, at the Lone Cone Library about the agency’s use of automated license plate readers (LPRs) and concerns surrounding the technology.",
-    "claudeSummary": false,
+    "copy": "Sheriff Dan Covault held a public meeting to explain how the county's Motorola license plate readers work — one is active in Norwood, three are on hold pending more community input. Data is stored 90 days, access is limited to two administrators, and there's no live feed or video.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/norwood_post/article_042cb003-b85f-484e-bb6c-a2a321f63f4f.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/0f/30f270d0-337a-486d-9605-5f0a4a6fbf3b/6ab5462a2302e.image.jpg",
     "imgHiRes": true
@@ -871,6 +895,33 @@
     "img": ""
   },
   {
+    "title": "Town Council Proclaims September 7-11 Black Bear Safety Week",
+    "source": "Town of Telluride",
+    "date": "September 3, 2026",
+    "newsTopic": "government",
+    "copy": "(September 3, 2026) — Town Council on Tuesday proclaimed September 7-11 Black Bear Safety Week, arriving in a year when a dry spring and summer have left black bears across Colorado with far less to eat in the wild.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=404",
+    "img": "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
+  },
+  {
+    "title": "Town of Telluride Downgrades to Stage 1 Fire Restrictions",
+    "source": "Town of Telluride",
+    "date": "August 26, 2026",
+    "newsTopic": "public-safety",
+    "copy": "(August 25, 2026) – Following improved fire conditions across the region, Town Manager Zoe Dohnal has downgraded fire restrictions within the Town of Telluride from Stage 2 to Stage 1, effective 12:01 a.m. MT on Wednesday, August 26, 2026.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=403",
+    "img": ""
+  },
+  {
+    "title": "San Miguel County Adds Genasys Protect to Emergency Alerting Ecosystem",
+    "source": "San Miguel County",
+    "date": "September 24, 2026",
+    "newsTopic": "public-safety",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1414",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14820"
+  },
+  {
     "title": "Safe Festivals - A Public Health Approach to Harm Reduction",
     "source": "San Miguel County",
     "date": "September 23, 2026",
@@ -907,6 +958,24 @@
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14812"
   },
   {
+    "title": "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
+    "source": "San Miguel County",
+    "date": "September 10, 2026",
+    "newsTopic": "health",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1409",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
+  },
+  {
+    "title": "Two Domestic Pets in San Miguel County Test Positive for the Plague",
+    "source": "San Miguel County",
+    "date": "September 3, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
+  },
+  {
     "title": "Tomboy Road Now Open",
     "source": "San Miguel County",
     "date": "September 18, 2026",
@@ -922,6 +991,26 @@
     "newsTopic": "community",
     "copy": "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
     "href": "https://www.telluride.gov/AlertCenter.aspx?AID=45",
+    "img": ""
+  },
+  {
+    "title": "Stage 1 Fire Restrictions In Effect",
+    "source": "Town of Telluride",
+    "date": "August 26, 2026",
+    "newsTopic": "public-safety",
+    "copy": "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
+    "href": "https://www.telluride.gov/AlertCenter.aspx?AID=65",
+    "img": ""
+  },
+  {
+    "title": "Ridgway Seeking Volunteers for Ad Hoc Review Committee",
+    "source": "Town of Ridgway",
+    "date": "September 24, 2026",
+    "firstSeen": "2026-09-24",
+    "newsTopic": "community",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/CGP-Review-Committee-Press-Release-2026-09-24.pdf",
     "img": ""
   },
   {
