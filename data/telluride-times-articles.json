@@ -1,5 +1,53 @@
 [
   {
+    "title": "Scottsdale's water recycling program hits election-year backlash",
+    "source": "Telluride Times",
+    "date": "September 24, 2026",
+    "firstSeen": "2026-09-24",
+    "newsTopic": "government",
+    "copy": "Scottsdale shelved a plan to add highly treated recycled wastewater directly to drinking supplies by 2027, after election-season opponents called it \"poop water\" — claims city water officials say misrepresent the science. The city has run its recycling program since 1998 and gets 70% of its water from the Colorado River. The council swapped dedicated program funding for a vague $100M \"new sources\" allocation.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/state/article_39f582ef-b92c-5835-8bb3-e4d7b9ef565a.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/5a/95a1e298-d2f4-5df9-9974-78448b94a610/6ab4f3002e442.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "‘It’s a celebration of anything that rolls’",
+    "source": "Telluride Times",
+    "date": "September 24, 2026",
+    "firstSeen": "2026-09-24",
+    "newsTopic": "arts-culture",
+    "copy": "The Telluride Autumn Classic runs Sept. 24–27 across Telluride, Mountain Village, and the Regional Airport, with free public car displays on Colorado Ave., a Silverton Poker Run, Concours show, fine arts festival, and casino night. Organizers describe it as a festival, not just a car show.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_37d8c5cb-aa16-4a41-b810-c532c1528446.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/8a/88ae1670-c975-4bef-a035-020fdb1cfc44/6ab4009043090.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Val Kin Maltese",
+    "source": "Telluride Times",
+    "date": "September 24, 2026",
+    "firstSeen": "2026-09-24",
+    "newsTopic": "community",
+    "copy": "",
+    "claudeSummary": false,
+    "href": "https://www.telluridenews.com/obituaries/article_efbdd619-cd80-46ef-84da-1637874601dc.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/f7/cf76a5fd-9946-44df-8b21-66e5805c82bf/6ab3da4483284.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Legals and Public Notices for Sept. 24-30, 2026",
+    "source": "Telluride Times",
+    "date": "September 24, 2026",
+    "firstSeen": "2026-09-24",
+    "newsTopic": "infrastructure",
+    "copy": "Mountain Village is accepting bids for a gondola cabin auction, with submissions due by 5 p.m. Sept. 30 via email. Separately, a unit at Tomboy Lodge (619 W. Columbia Ave.) is headed to foreclosure auction Nov. 12 after missed mortgage payments on a 2004 loan.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/legals/article_87c1dedd-06e4-4678-a68d-6a0116434245.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Miners elevated",
     "source": "Telluride Times",
     "date": "September 24, 2026",
@@ -16,11 +64,12 @@
     "source": "Telluride Times",
     "date": "September 23, 2026",
     "firstSeen": "2026-09-24",
-    "newsTopic": "public-safety",
-    "copy": "Supporting Dan Covault for sheriff",
-    "claudeSummary": false,
+    "newsTopic": "government",
+    "copy": "A Western Slope prosecutor writes in support of Sheriff Dan Covault, citing 26 years of local law enforcement experience and firsthand collaboration on serious cases. Covault was appointed by county commissioners in 2025 to succeed Bill Masters and has helped develop a rural behavioral-health transport program in Norwood.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_a280a12c-27c8-4c87-a107-1441f5826d5c.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "letterAuthor": "Rob T. Zentner",
     "isLetter": true,
     "imgHiRes": true
   },
@@ -33,7 +82,7 @@
     "copy": "A local coach and educator writes in to make the case for keeping school sports funded, drawing on his own story of being a struggling student who turned things around through athletics. He also shares an example of a quiet, disconnected student who blossomed after one basketball season. The letter is a straightforward personal account, not a budget proposal.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_dd4abced-ec52-4be2-8007-ada51ea7b8bf.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "letterAuthor": "Daniel Keith Davenport TM",
     "isLetter": true,
     "imgHiRes": true
@@ -47,7 +96,7 @@
     "copy": "The Lindsey O. Graham Sanctioning Russia Act passed the Senate 86–11 and the House 262–159, then was signed into law Sept. 18. The bill imposes tough new sanctions on Russia's defense and financial sectors, officials, and oligarchs, plus tariffs up to 100% on major buyers of Russian energy. CD-3 Rep. Jeff Hurd voted yes.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_58c54c4d-98d0-48bd-b1d4-992e0ae3adcb.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "letterAuthor": "Neonila Martyniuk Montrose",
     "isLetter": true,
     "imgHiRes": true
@@ -74,10 +123,11 @@
     "copy": "Telluride School District's Measure 5A would raise roughly $2.6M annually to offset a projected $3M+ revenue loss driven by state funding formula changes — not local property values. A district teacher and parent notes that enrollment is declining 11% through 2032, but funding is dropping 17%, with fixed costs like transportation and facilities unchanged. The district has already cut classroom budgets and left teacher vacancies unfilled.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_d96b5959-75ce-4d67-af00-d6e914c83c48.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "letterAuthor": "Caitlin",
     "isLetter": true,
-    "imgHiRes": true
+    "imgHiRes": true,
+    "authorChecked": true
   },
   {
     "title": "Rolling with it",
@@ -85,8 +135,8 @@
     "date": "September 23, 2026",
     "firstSeen": "2026-09-24",
     "newsTopic": "community",
-    "copy": "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
-    "claudeSummary": false,
+    "copy": "A personal essay from the Telluride Times reflects on life with a wheelchair-using friend — the daily navigation of ramps, doors, and public spaces, and how attitudes from strangers ranged from pity to genuine kindness. The writer notes that over time, frustration gave way to gratitude and stoicism. A quiet, human look at accessibility and resilience.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/columnists/article_156b3c62-1adc-4103-a497-f24cb20d1de5.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/e5/8e5310a1-c9b5-4693-9950-ca8589667ed8/6ab45be3940e4.image.jpg",
     "isLetter": true,

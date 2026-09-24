@@ -1,22 +1,22 @@
 {
-  "hash": "f05a76cc415764bf5d1044d5373121c762fb57ee",
-  "lede": "The biggest thing on the civic calendar this week is Tuesday's special Town Council hearing on the Carhenge lot subdivision appeal — someone challenged P&Z's unanimous approval of consolidating those parcels at 700 W. Pacific, and Council now has to sort it out before any redevelopment can move forward. That same day, HARC holds its own special meeting to dig into the Carhenge redevelopment itself, reviewing three separate preliminary applications for the proposed new construction there. Meanwhile, the Gondola Leadership Committee faces a real decision point Sunday on whether to pursue federal funding or go the local-control route — a choice with long-term consequences for how that infrastructure gets built and managed.",
+  "hash": "2191b352e917005d0238d9e9b7d3ba8650ab5aef",
+  "lede": "The biggest thing on the calendar this week is a pair of September 30 sessions on the Carhenge redevelopment at 700 W. Pacific — Town Council convenes a special appeal hearing on the lot subdivision that was challenged after P&Z approved it in July, while HARC holds a dedicated special meeting to review three separate Preliminary Large-Scale applications covering the project's building clusters. Alongside that, the Gondola Leadership Committee takes up a consequential choice on September 28: whether to pursue federally funded or locally led project delivery — federal dollars versus local control. P&Z also holds a work session September 24 on an early-stage employee housing proposal tied to the school district.",
   "notable": [
     {
+      "id": 1,
+      "stake": "Early look at school-district employee housing proposal near middle-high school."
+    },
+    {
       "id": 6,
-      "stake": "Council must choose federal funding vs. local control for gondola project delivery."
+      "stake": "Council weighs federal funding vs. local control for gondola project delivery."
     },
     {
       "id": 8,
-      "stake": "HARC reviews three preliminary large-scale applications for the Carhenge redevelopment."
+      "stake": "HARC reviews three large-scale Carhenge building applications in a single session."
     },
     {
       "id": 9,
-      "stake": "Council hears appeal of P&Z's Carhenge lot consolidation approval — redevelopment hinges on outcome."
-    },
-    {
-      "id": 1,
-      "stake": "Early look at school-district employee housing project and another unresolved planning item."
+      "stake": "Town Council hears appeal that could block or reshape Carhenge lot consolidation."
     }
   ]
 }
