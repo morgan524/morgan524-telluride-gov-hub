@@ -3486,6 +3486,84 @@ async function fetchHtml(url, ms = 12000) {
   finally { clearTimeout(t); }
 }
 
+// ── One-off newsletters (digest/one-off/*.html) ───────────────────────────────
+// One-offs are published straight to the site and never pass through the digest
+// Worker's /send path, so they never land in data/sent-broadcasts.json — which
+// is why "Déjà VooDoo" (Jul 2026) and "Last Call on the Shandoka Survey" (Aug
+// 2026) had to be hand-added to BLOG_POSTS. This scans the directory instead of
+// the broadcast archive, so any one-off is picked up however it was published.
+// Idempotent: keyed on href, then title, then the date in the filename.
+const MONTHS_ABBR = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+// htmlToText leaves named entities other than the five it handles; one-off
+// bodies are Georgia-serif prose full of &rsquo;/&mdash;, so decode the common
+// ones here rather than changing htmlToText (which feeds other excerpts too).
+function decodeCommonEntities(s) {
+  const map = { rsquo: '’', lsquo: '‘', ldquo: '“', rdquo: '”',
+                mdash: '—', ndash: '–', hellip: '…', apos: "'",
+                middot: '·', bull: '•', deg: '°', times: '×' };
+  return String(s || '')
+    .replace(/&(rsquo|lsquo|ldquo|rdquo|mdash|ndash|hellip|apos|middot|bull|deg|times);/g,
+      (_, n) => map[n])
+    // Numeric entities (&#8217; / &#x2019;) — email editors emit both forms.
+    .replace(/&#(\d{2,6});/g, (_, d) => String.fromCodePoint(Number(d)))
+    .replace(/&#x([0-9a-f]{2,6});/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)));
+}
+
+function syncOneOffBlog(posts) {
+  const dir = path.join(REPO_ROOT, 'digest', 'one-off');
+  let files = [];
+  try { files = fs.readdirSync(dir).filter((f) => f.endsWith('.html')); }
+  catch (e) { return []; }
+
+  const norm       = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  const haveHref   = new Set(posts.map((p) => p && p.href).filter(Boolean));
+  const haveTitle  = new Set(posts.map((p) => norm(p && p.title)).filter(Boolean));
+  // Dates already represented by SOME post, so a one-off that is just the
+  // archive copy of an already-listed newsletter (e.g. carhenge-2026-07-22.html
+  // vs archive/2026-07-22-weekly.html) is not added twice.
+  const haveDate   = new Set();
+  for (const p of posts) {
+    const m = String((p && p.href) || '').match(/(\d{4}-\d{2}-\d{2})/);
+    if (m) haveDate.add(m[1]);
+  }
+
+  const additions = [];
+  for (const file of files.sort()) {          // oldest → newest; prepended below
+    const dm = file.match(/(\d{4})-(\d{2})-(\d{2})\.html$/);
+    if (!dm) { console.log(`  Skipping undated one-off: ${file}`); continue; }
+    const iso  = `${dm[1]}-${dm[2]}-${dm[3]}`;
+    const href = `https://livabletelluride.org/digest/one-off/${file}`;
+    if (haveHref.has(href)) continue;
+
+    let html = '';
+    try { html = fs.readFileSync(path.join(dir, file), 'utf8'); } catch (e) { continue; }
+
+    // Title: <title> minus the site suffix, else the first <h1>.
+    let title = decodeCommonEntities(((html.match(/<title>([\s\S]*?)<\/title>/i) || [])[1] || '').trim())
+      .replace(/\s*[—–-]\s*Livable Telluride.*$/i, '').trim();
+    if (!title) {
+      title = decodeCommonEntities(htmlToText((html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i) || [])[1] || '')).trim();
+    }
+    if (!title) { console.log(`  Skipping untitled one-off: ${file}`); continue; }
+    if (isDigestTitle(title)) { console.log(`  Skipping digest one-off: ${title}`); continue; }
+    if (haveTitle.has(norm(title)) || haveDate.has(iso)) continue;
+
+    additions.push({
+      title,
+      date:     `${MONTHS_ABBR[Number(dm[2]) - 1]} ${Number(dm[3])}, ${dm[1]}`,
+      href,
+      image:    firstImageFromHtml(html) || 'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png',
+      excerpt:  decodeCommonEntities(htmlToText(html)).slice(0, 400),
+      category: 'Newsletter',
+      source:   'one-off',
+    });
+    haveHref.add(href); haveTitle.add(norm(title)); haveDate.add(iso);
+    console.log(`  One-off newsletter added to blog: ${title}`);
+  }
+  return additions;
+}
+
 async function syncBroadcastBlog(existingPosts) {
   // 1. Prune any digest-titled post regardless of source — keeps the blog to
   //    real newsletters (removes the weekly "Week Ahead" / "Weekend" digests,
@@ -3518,6 +3596,22 @@ async function syncBroadcastBlog(existingPosts) {
       haveHref.add(b.href);
     }
     posts = [...additions, ...posts];  // sent-broadcasts.json is newest-first
+  }
+
+  // 2b. Add any one-off newsletter published to digest/one-off/ that the
+  //     broadcast archive never saw, then re-sort newest-first so one-offs land
+  //     in date order rather than at the top. Only sorts when every date parses,
+  //     so an unparseable date can never silently reshuffle the blog.
+  const oneOffs = syncOneOffBlog(posts);
+  if (oneOffs.length) {
+    posts = [...oneOffs, ...posts];
+    const stamped = posts.map((p) => ({ p, t: Date.parse(p && p.date) }));
+    if (stamped.every((s) => Number.isFinite(s.t))) {
+      stamped.sort((a, b) => b.t - a.t);
+      posts = stamped.map((s) => s.p);
+    } else {
+      console.warn('  BLOG_POSTS: unparseable date(s) — leaving blog order as-is');
+    }
   }
 
   // 3. Enrich: for posts whose card image is the logo (or missing), pull the first
