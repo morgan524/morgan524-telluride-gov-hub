@@ -2653,24 +2653,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Town Council Proclaims September 7-11 Black Bear Safety Week",
-    source: "Town of Telluride",
-    date: "September 3, 2026",
-    newsTopic: "government",
-    copy: "(September 3, 2026) — Town Council on Tuesday proclaimed September 7-11 Black Bear Safety Week, arriving in a year when a dry spring and summer have left black bears across Colorado with far less to eat in the wild.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=404",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
-  },
-  {
-    title: "Town of Telluride Downgrades to Stage 1 Fire Restrictions",
-    source: "Town of Telluride",
-    date: "August 26, 2026",
-    newsTopic: "public-safety",
-    copy: "(August 25, 2026) – Following improved fire conditions across the region, Town Manager Zoe Dohnal has downgraded fire restrictions within the Town of Telluride from Stage 2 to Stage 1, effective 12:01 a.m. MT on Wednesday, August 26, 2026.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=403",
-    img: ""
-  },
-  {
     title: "Safe Festivals - A Public Health Approach to Harm Reduction",
     source: "San Miguel County",
     date: "September 23, 2026",
@@ -2707,24 +2689,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14812"
   },
   {
-    title: "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
-    source: "San Miguel County",
-    date: "September 10, 2026",
-    newsTopic: "health",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1409",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
-  },
-  {
-    title: "Two Domestic Pets in San Miguel County Test Positive for the Plague",
-    source: "San Miguel County",
-    date: "September 3, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
-  },
-  {
     title: "Tomboy Road Now Open",
     source: "San Miguel County",
     date: "September 18, 2026",
@@ -2740,15 +2704,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "community",
     copy: "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=45",
-    img: ""
-  },
-  {
-    title: "Stage 1 Fire Restrictions In Effect",
-    source: "Town of Telluride",
-    date: "August 26, 2026",
-    newsTopic: "public-safety",
-    copy: "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
-    href: "https://www.telluride.gov/AlertCenter.aspx?AID=65",
     img: ""
   },
   {
@@ -2906,14 +2861,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "public-safety",
     copy: "West End Round Up with the San Miguel Basin Forum; Two Pets Test Positive for the Plague; Heather King Appointed Interim Fire Chief in Norwood",
     href: "https://koto.org/news/newscast-9-10-26/"
-  },
-  {
-    title: "Newscast 9-9-26",
-    source: "KOTO Community Radio",
-    date: "September 10, 2026",
-    newsTopic: "public-safety",
-    copy: "Two Die in Plane Crash Outside of Telluride; The Season of Voracity",
-    href: "https://koto.org/news/newscast-9-9-26/"
   }
 ];
 
@@ -7150,60 +7097,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_87c1dedd-06e4-4678-a68d-6a0116434245.html",
     address: "San Miguel County, Colorado (various oil and gas well locations)",
     noticeKey: "delinquent-oilgas-taxes-2025-american-helium"
-  },
-  {
-    title: "Public Hearing -- Adoption of 2024 International Building Code & Colorado Low Energy & Carbon Code",
-    entity: "San Miguel County Board of Commissioners",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County Board of Commissioners will hold a public hearing on September 16, 2026 at 9:00 AM in Telluride to consider adopting the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Written comments must be received by noon on September 10, 2026, and proposed amendments are available in the meeting agenda packet at the county website. This applies countywide in San Miguel County, Colorado.",
-    deadline: "2026-09-10T12:00:00",
-    expires: "2026-09-16",
-    dates: "8/27",
-    papers: ["ttimes_0827"],
-    url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
-    address: "Telluride, Colorado (San Miguel County)",
-    noticeKey: "COL-000222-ibc-hearing"
-  },
-  {
-    title: "RFP -- Fuel Island Canopy Construction, Norwood Road & Bridge Maintenance Yard (COL-000219)",
-    entity: "San Miguel County Road & Bridge Department",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County Road & Bridge Department is seeking proposals from qualified contractors for the design, engineering, permitting assistance, and construction of a fuel island canopy at the Norwood Road & Bridge Maintenance Yard. A pre-proposal site meeting was held August 24, 2026; written questions were due August 26, 2026. Proposals must be submitted electronically by September 3, 2026 at 4:00 PM, with contractor selection notification on September 7, 2026.",
-    deadline: "2026-09-03T16:00:00",
-    expires: "2026-09-07",
-    dates: "8/27",
-    papers: ["ttimes_0827"],
-    url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
-    address: "39595 Highway 145, Norwood, CO 81423",
-    noticeKey: "COL-000219-fuel-island-canopy-rfp"
-  },
-  {
-    title: "RFP -- San Miguel County Jail Repainting, Illium (COL-000224)",
-    entity: "San Miguel County Fleet & Facilities Department",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County is requesting proposals from contractors to repaint the San Miguel County Jail located at 684 County Road 63L in Illium/Telluride. RFP documents are available on the county website or through the Fleet & Facilities Department at 333 W. Colorado Ave, 2nd Floor, Telluride. Proposals are due by 5:00 PM on Friday, September 18, 2026, submitted either by email or in person at the Fleet & Facilities Department.",
-    deadline: "2026-09-18T17:00:00",
-    expires: "2026-09-18",
-    dates: "8/27",
-    papers: ["ttimes_0827"],
-    url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
-    address: "684 County Road 63L, Telluride, CO 81435",
-    noticeKey: "COL-000224-jail-repaint-rfp"
   }
 ];
 
