@@ -240,6 +240,15 @@ const COUNTY_CACHED_DATA = [
     location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
     civicClerkId: 980,
     note: null
+  },
+  {
+    date: "December 16, 2026",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Meeting",
+    type: "bocc",
+    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    civicClerkId: 1037,
+    note: null
   }
 ];
 
@@ -327,6 +336,16 @@ const MV_CACHE_DATE = '2026-09-24';
 
 const MV_CACHED_DATA = [
   {
+    date: "September 25, 2026",
+    time: "8:00 AM - 3:00 PM",
+    title: "Town Council Meeting",
+    board: "tc",
+    agendaUrl: "https://townofmountainvillage.com/site/assets/files/49970/september_25-_2026_special_town_council_meeting_agenda.pdf",
+    packetUrl: null,
+    special: true,
+    location: "Town Hall, 455 Mountain Village Blvd, Suite A"
+  },
+  {
     date: "October 1, 2026",
     time: "10:00 AM - 3:00 PM",
     title: "Design Review Board",
@@ -350,17 +369,6 @@ const MV_CACHED_DATA = [
   {
     date: "October 15, 2026",
     time: "2:00 PM - 6:45 PM",
-    title: "Town Council Meeting",
-    board: "tc",
-    agendaUrl: null,
-    packetUrl: null,
-    special: false,
-    location: "Town Hall, 455 Mountain Village Blvd, Suite A",
-    note: "Agenda typically posted the Friday before."
-  },
-  {
-    date: "November 19, 2026",
-    time: "2:00 PM - 7:00 PM",
     title: "Town Council Meeting",
     board: "tc",
     agendaUrl: null,

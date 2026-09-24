@@ -1,5 +1,17 @@
 [
   {
+    "title": "San Miguel County sheriff talks license plate readers",
+    "source": "Telluride Times",
+    "date": "September 24, 2026",
+    "firstSeen": "2026-09-24",
+    "newsTopic": "public-safety",
+    "copy": "San Miguel County Sheriff Dan Covault spoke with community members on Thursday, Sept. 17, at the Lone Cone Library about the agency’s use of automated license plate readers (LPRs) and concerns surrounding the technology.",
+    "claudeSummary": false,
+    "href": "https://www.telluridenews.com/norwood_post/article_042cb003-b85f-484e-bb6c-a2a321f63f4f.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/0f/30f270d0-337a-486d-9605-5f0a4a6fbf3b/6ab5462a2302e.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Scottsdale's water recycling program hits election-year backlash",
     "source": "Telluride Times",
     "date": "September 24, 2026",
@@ -29,8 +41,8 @@
     "date": "September 24, 2026",
     "firstSeen": "2026-09-24",
     "newsTopic": "community",
-    "copy": "",
-    "claudeSummary": false,
+    "copy": "Val Kin Maltese, a Telluride community member, passed away August 28, 2026, at his home in Las Cruces, NM. He is survived by his wife Anne, son Cory, three stepchildren, and his cat Nugget. A celebration of life is planned in Telluride in late October.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/obituaries/article_efbdd619-cd80-46ef-84da-1637874601dc.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/f7/cf76a5fd-9946-44df-8b21-66e5805c82bf/6ab3da4483284.image.jpg",
     "imgHiRes": true
@@ -68,7 +80,7 @@
     "copy": "A Western Slope prosecutor writes in support of Sheriff Dan Covault, citing 26 years of local law enforcement experience and firsthand collaboration on serious cases. Covault was appointed by county commissioners in 2025 to succeed Bill Masters and has helped develop a rural behavioral-health transport program in Norwood.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_a280a12c-27c8-4c87-a107-1441f5826d5c.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "letterAuthor": "Rob T. Zentner",
     "isLetter": true,
     "imgHiRes": true

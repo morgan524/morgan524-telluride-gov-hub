@@ -11,17 +11,6 @@
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   },
   {
-    "title": "Optimize Your Brain Health with Lifestyle Medicine",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/optimize-your-brain-health-with-lifestyle-medicine/",
-    "description": "Can up to half of dementia cases be prevented? Emerging evidence suggests the answer is yes. In this engaging and evidence-based presentation, Dr.",
-    "pubDate": "2026-09-23T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49783/tomv.jpg"
-  },
-  {
     "title": "Town Manager Finalists Meet and Greet",
     "link": "https://townofmountainvillage.com/explore/events/all-events/town-manager-finalists-meet-and-greet/",
     "description": "The Mountain Village Town Council has narrowed its search for a new Town Manager to four finalists, and this meet-and-greet gives community members a chance to meet the candidates in person. The event offers residents an opportunity to engage with the finalists before the Council makes its final selection.",
@@ -350,5 +339,38 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    "title": "Movies Under the Stars",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    "description": "Movies Under the Stars is a recurring outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening movies at dusk on select evenings. The October 24 event brings the community together for an open-air cinema experience in the mountain setting.",
+    "pubDate": "2026-10-24T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
+  {
+    "title": "Mind Blown Telluride",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    "description": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    "pubDate": "2026-10-24T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
+  },
+  {
+    "title": "Gaiascope",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/gaiascope/",
+    "description": "Brooke Einbender's nighttime immersive public artwork, Gaiascope, comes to Mountain Village following its presentation during the 2026 World Cup in downtown San José, California. The community is invited to experience this large-scale installation in an outdoor setting.",
+    "pubDate": "2026-10-24T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49531/akb_1557.jpeg"
   }
 ]

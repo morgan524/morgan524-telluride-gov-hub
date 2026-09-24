@@ -471,7 +471,10 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-09-28|Gondola Leadership Committee - Sep 28 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8321","zoomUrl":"https://gbsm.zoom.us/j/83597933306","sv":4}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8321","zoomUrl":"https://gbsm.zoom.us/j/83597933306","sv":4},
+
+  "telluride|2026-10-14|Special Liquor Licensing Authority - Oct 14 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8146","sv":4,"ph":"65b7901f622f722e"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -826,8 +829,8 @@ const MEETING_PREVIEWS = {
   "telluride|2026-09-28|Gondola Leadership Committee - Sep 28 2026":
     "The Gondola Leadership Committee is expected to review updates from the previous meeting, evaluate and potentially act on a comparison between federally funded and locally-led project approaches, and discuss a communications plan. The committee will also hear partner jurisdiction updates and take public comment.",
 
-  "county|2026-09-24|5 x 5 County Meeting - San Miguel County Hosts":
-    "Commissioners from San Miguel, Archuleta, Montezuma, La Plata, and Dolores counties are expected to share regional updates and discuss a gas enterprise pipeline spill with the Southern Ute Indian Council. Federal and state representatives will also provide updates. No formal decisions will be made at this informal meeting."
+  "telluride|2026-10-14|Special Liquor Licensing Authority - Oct 14 2026":
+    "The Telluride Liquor Licensing Authority will consider liquor license applications or modifications requiring local approval. Both the Authority and the Colorado Department of Revenue must consent before any license is issued or amended. New licenses and appeals are typically referred to the Town Council for final approval or denial."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1045,7 +1048,7 @@ const ENGAGE_MEETINGS = [
   }
 ];         // Engage Telluride project key dates
 const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-24';
-const LEGAL_NOTICES_CACHE_DATE = '2026-09-23';
+const LEGAL_NOTICES_CACHE_DATE = '2026-09-24';
 
 const MANUAL_SUMMARIES = {
   "county|2026-08-26|Board of County Commissioners Work Session":
@@ -1373,7 +1376,10 @@ const MANUAL_SUMMARIES = {
     "The October 19, 2026 Telluride Board of Education Work Session agenda hasn't been posted yet.",
 
   "telluride|2026-09-28|Gondola Leadership Committee - Sep 28 2026":
-    "The Gondola Leadership Committee meets September 28 at 3:00 PM — hybrid, with in-person at Ah Haa School's Launchpad Room. The centerpiece is a 60-minute action item: a comparative evaluation of federally funded versus locally-led project delivery. That choice — federal dollars with federal strings versus local control with local financing — is one of the more consequential forks the gondola effort has faced. The committee will also hear SMART program updates and a recap of the July Leadership Committee meeting, then take up a communications plan before closing with partner jurisdiction updates and public comment."
+    "The Gondola Leadership Committee meets September 28 at 3:00 PM — hybrid, with in-person at Ah Haa School's Launchpad Room. The centerpiece is a 60-minute action item: a comparative evaluation of federally funded versus locally-led project delivery. That choice — federal dollars with federal strings versus local control with local financing — is one of the more consequential forks the gondola effort has faced. The committee will also hear SMART program updates and a recap of the July Leadership Committee meeting, then take up a communications plan before closing with partner jurisdiction updates and public comment.",
+
+  "telluride|2026-10-14|Special Liquor Licensing Authority - Oct 14 2026":
+    "The October 14, 2026 Special Liquor Licensing Authority agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1776,6 +1782,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "San Miguel County sheriff talks license plate readers",
+    source: "Telluride Times",
+    date: "September 24, 2026",
+    firstSeen: "2026-09-24",
+    newsTopic: "public-safety",
+    copy: "San Miguel County Sheriff Dan Covault spoke with community members on Thursday, Sept. 17, at the Lone Cone Library about the agency’s use of automated license plate readers (LPRs) and concerns surrounding the technology.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/norwood_post/article_042cb003-b85f-484e-bb6c-a2a321f63f4f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/0f/30f270d0-337a-486d-9605-5f0a4a6fbf3b/6ab5462a2302e.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Scottsdale's water recycling program hits election-year backlash",
     source: "Telluride Times",
     date: "September 24, 2026",
@@ -1805,8 +1823,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "September 24, 2026",
     firstSeen: "2026-09-24",
     newsTopic: "community",
-    copy: "",
-    claudeSummary: false,
+    copy: "Val Kin Maltese, a Telluride community member, passed away August 28, 2026, at his home in Las Cruces, NM. He is survived by his wife Anne, son Cory, three stepchildren, and his cat Nugget. A celebration of life is planned in Telluride in late October.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/obituaries/article_efbdd619-cd80-46ef-84da-1637874601dc.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/f7/cf76a5fd-9946-44df-8b21-66e5805c82bf/6ab3da4483284.image.jpg",
     imgHiRes: true
@@ -1844,7 +1862,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A Western Slope prosecutor writes in support of Sheriff Dan Covault, citing 26 years of local law enforcement experience and firsthand collaboration on serious cases. Covault was appointed by county commissioners in 2025 to succeed Bill Masters and has helped develop a rural behavioral-health transport program in Norwood.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_a280a12c-27c8-4c87-a107-1441f5826d5c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     letterAuthor: "Rob T. Zentner",
     isLetter: true,
     imgHiRes: true
@@ -5585,17 +5603,6 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "Senior Lunch",
-    link: "https://www.norwoodtown.com/2026-09-17-senior-lunch",
-    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
-    pubDate: "2026-09-17T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Community Event",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-09-21-planning-and-zoning-commission-meeting",
     description: "The Town of Norwood's Planning and Zoning Commission will hold a regular meeting to review and discuss land use, development, and zoning matters within the community. Members of the public are welcome to attend and observe the proceedings.",
@@ -5740,17 +5747,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
-  },
-  {
-    title: "Optimize Your Brain Health with Lifestyle Medicine",
-    link: "https://townofmountainvillage.com/explore/events/all-events/optimize-your-brain-health-with-lifestyle-medicine/",
-    description: "Can up to half of dementia cases be prevented? Emerging evidence suggests the answer is yes. In this engaging and evidence-based presentation, Dr.",
-    pubDate: "2026-09-23T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49783/tomv.jpg"
   },
   {
     title: "Town Manager Finalists Meet and Greet",
@@ -6081,6 +6077,39 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    description: "Movies Under the Stars is a recurring outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening movies at dusk on select evenings. The October 24 event brings the community together for an open-air cinema experience in the mountain setting.",
+    pubDate: "2026-10-24T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
+  {
+    title: "Mind Blown Telluride",
+    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    pubDate: "2026-10-24T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
+  },
+  {
+    title: "Gaiascope",
+    link: "https://townofmountainvillage.com/explore/events/all-events/gaiascope/",
+    description: "Brooke Einbender's nighttime immersive public artwork, Gaiascope, comes to Mountain Village following its presentation during the 2026 World Cup in downtown San José, California. The community is invited to experience this large-scale installation in an outdoor setting.",
+    pubDate: "2026-10-24T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49531/akb_1557.jpeg"
   }
 ];
 
@@ -7066,6 +7095,115 @@ const LEGAL_NOTICES = [
     url: "https://www.telluride.gov/bids.aspx?bidID=132",
     address: "",
     totBidID: "132"
+  },
+  {
+    title: "ITB -- Construction/Services Bid Solicitation (L-000241)",
+    entity: "Town of Mountain Village",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "The Town of Mountain Village is soliciting bids for a project, with all submissions required to be emailed to kbatchelder@mtnvillage.org by 5:00 p.m. on September 30, 2026. The notice references work overseen by Scott Pittenger and Kris Batchelder on behalf of Mountain Village. Prospective bidders may contact either representative for additional project details.",
+    deadline: "2026-09-30",
+    expires: "2026-09-30",
+    dates: "9/24",
+    papers: ["ttimes_0924"],
+    url: "https://www.telluridenews.com/news/legals/article_87c1dedd-06e4-4678-a68d-6a0116434245.html",
+    address: "2nd Floor, Mountain Village Town Hall, Mountain Village, CO",
+    noticeKey: "itb-mtnvillage-L000241"
+  },
+  {
+    title: "Foreclosure Sale -- 619 W Columbia Ave D-303, Telluride (2026-06)",
+    entity: "Deutsche Bank National Trust Company / San Miguel County Public Trustee",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "The San Miguel County Public Trustee has scheduled a public auction foreclosure sale for Unit 303, Building D-1, The Tomboy Lodge at 619 W Columbia Ave D-303, Telluride, CO 81435, following a default on a 2004 deed of trust originally granted by J. Ascenzo DiGiacomo to Long Beach Mortgage Company (now held by Deutsche Bank National Trust Company). The outstanding principal balance is $187,007.81 on an original loan of $209,000. The auction will be held at 10:00 a.m. on Thursday, November 12, 2026, at 305 W. Colorado Avenue, East entry, Telluride, CO.",
+    deadline: "2026-11-12",
+    expires: "2026-11-12",
+    dates: "9/24",
+    papers: ["ttimes_0924"],
+    url: "https://www.telluridenews.com/news/legals/article_87c1dedd-06e4-4678-a68d-6a0116434245.html",
+    address: "619 W Columbia Ave D-303, Telluride, CO 81435",
+    noticeKey: "foreclosure-2026-06-tomboy-lodge-d303",
+    caseNumber: "2026-06"
+  },
+  {
+    title: "Tax Notice -- Delinquent Oil & Gas Personal Property Taxes (2025)",
+    entity: "San Miguel County Treasurer / American Helium Colorado LLC",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "San Miguel County Treasurer Brandi R. Hatfield has published a list dated September 14, 2026, of delinquent 2025 personal property (oil and gas) taxes owed by American Helium Colorado LLC across numerous API-numbered well parcels in San Miguel County, with total amounts due ranging from approximately $950 to over $41,000 per parcel. All delinquent taxes, interest, and penalties must be paid in full on or before September 30, 2026, or the county will take collection action as provided under Colorado Revised Statutes. The list covers dozens of individual well API numbers associated with American Helium Colorado LLC.",
+    deadline: "2026-09-30",
+    expires: "2026-09-30",
+    dates: "9/24",
+    papers: ["ttimes_0924"],
+    url: "https://www.telluridenews.com/news/legals/article_87c1dedd-06e4-4678-a68d-6a0116434245.html",
+    address: "San Miguel County, Colorado (various oil and gas well locations)",
+    noticeKey: "delinquent-oilgas-taxes-2025-american-helium"
+  },
+  {
+    title: "Public Hearing -- Adoption of 2024 International Building Code & Colorado Low Energy & Carbon Code",
+    entity: "San Miguel County Board of Commissioners",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "San Miguel County Board of Commissioners will hold a public hearing on September 16, 2026 at 9:00 AM in Telluride to consider adopting the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Written comments must be received by noon on September 10, 2026, and proposed amendments are available in the meeting agenda packet at the county website. This applies countywide in San Miguel County, Colorado.",
+    deadline: "2026-09-10T12:00:00",
+    expires: "2026-09-16",
+    dates: "8/27",
+    papers: ["ttimes_0827"],
+    url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    address: "Telluride, Colorado (San Miguel County)",
+    noticeKey: "COL-000222-ibc-hearing"
+  },
+  {
+    title: "RFP -- Fuel Island Canopy Construction, Norwood Road & Bridge Maintenance Yard (COL-000219)",
+    entity: "San Miguel County Road & Bridge Department",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "San Miguel County Road & Bridge Department is seeking proposals from qualified contractors for the design, engineering, permitting assistance, and construction of a fuel island canopy at the Norwood Road & Bridge Maintenance Yard. A pre-proposal site meeting was held August 24, 2026; written questions were due August 26, 2026. Proposals must be submitted electronically by September 3, 2026 at 4:00 PM, with contractor selection notification on September 7, 2026.",
+    deadline: "2026-09-03T16:00:00",
+    expires: "2026-09-07",
+    dates: "8/27",
+    papers: ["ttimes_0827"],
+    url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    address: "39595 Highway 145, Norwood, CO 81423",
+    noticeKey: "COL-000219-fuel-island-canopy-rfp"
+  },
+  {
+    title: "RFP -- San Miguel County Jail Repainting, Illium (COL-000224)",
+    entity: "San Miguel County Fleet & Facilities Department",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "San Miguel County is requesting proposals from contractors to repaint the San Miguel County Jail located at 684 County Road 63L in Illium/Telluride. RFP documents are available on the county website or through the Fleet & Facilities Department at 333 W. Colorado Ave, 2nd Floor, Telluride. Proposals are due by 5:00 PM on Friday, September 18, 2026, submitted either by email or in person at the Fleet & Facilities Department.",
+    deadline: "2026-09-18T17:00:00",
+    expires: "2026-09-18",
+    dates: "8/27",
+    papers: ["ttimes_0827"],
+    url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    address: "684 County Road 63L, Telluride, CO 81435",
+    noticeKey: "COL-000224-jail-repaint-rfp"
   }
 ];
 

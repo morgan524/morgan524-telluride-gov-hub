@@ -441,5 +441,126 @@
     "url": "https://www.telluride.gov/bids.aspx?bidID=132",
     "address": "",
     "totBidID": "132"
+  },
+  {
+    "title": "ITB -- Construction/Services Bid Solicitation (L-000241)",
+    "entity": "Town of Mountain Village",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "The Town of Mountain Village is soliciting bids for a project, with all submissions required to be emailed to kbatchelder@mtnvillage.org by 5:00 p.m. on September 30, 2026. The notice references work overseen by Scott Pittenger and Kris Batchelder on behalf of Mountain Village. Prospective bidders may contact either representative for additional project details.",
+    "deadline": "2026-09-30",
+    "expires": "2026-09-30",
+    "dates": "9/24",
+    "papers": [
+      "ttimes_0924"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_87c1dedd-06e4-4678-a68d-6a0116434245.html",
+    "address": "2nd Floor, Mountain Village Town Hall, Mountain Village, CO",
+    "noticeKey": "itb-mtnvillage-L000241"
+  },
+  {
+    "title": "Foreclosure Sale -- 619 W Columbia Ave D-303, Telluride (2026-06)",
+    "entity": "Deutsche Bank National Trust Company / San Miguel County Public Trustee",
+    "entityClass": "ent-county",
+    "entityLogo": "assessor",
+    "icon": "💰",
+    "iconClass": "type-tax",
+    "type": "Tax & Finance",
+    "filterTag": "tax-finance",
+    "summary": "The San Miguel County Public Trustee has scheduled a public auction foreclosure sale for Unit 303, Building D-1, The Tomboy Lodge at 619 W Columbia Ave D-303, Telluride, CO 81435, following a default on a 2004 deed of trust originally granted by J. Ascenzo DiGiacomo to Long Beach Mortgage Company (now held by Deutsche Bank National Trust Company). The outstanding principal balance is $187,007.81 on an original loan of $209,000. The auction will be held at 10:00 a.m. on Thursday, November 12, 2026, at 305 W. Colorado Avenue, East entry, Telluride, CO.",
+    "deadline": "2026-11-12",
+    "expires": "2026-11-12",
+    "dates": "9/24",
+    "papers": [
+      "ttimes_0924"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_87c1dedd-06e4-4678-a68d-6a0116434245.html",
+    "address": "619 W Columbia Ave D-303, Telluride, CO 81435",
+    "noticeKey": "foreclosure-2026-06-tomboy-lodge-d303",
+    "caseNumber": "2026-06"
+  },
+  {
+    "title": "Tax Notice -- Delinquent Oil & Gas Personal Property Taxes (2025)",
+    "entity": "San Miguel County Treasurer / American Helium Colorado LLC",
+    "entityClass": "ent-county",
+    "entityLogo": "assessor",
+    "icon": "💰",
+    "iconClass": "type-tax",
+    "type": "Tax & Finance",
+    "filterTag": "tax-finance",
+    "summary": "San Miguel County Treasurer Brandi R. Hatfield has published a list dated September 14, 2026, of delinquent 2025 personal property (oil and gas) taxes owed by American Helium Colorado LLC across numerous API-numbered well parcels in San Miguel County, with total amounts due ranging from approximately $950 to over $41,000 per parcel. All delinquent taxes, interest, and penalties must be paid in full on or before September 30, 2026, or the county will take collection action as provided under Colorado Revised Statutes. The list covers dozens of individual well API numbers associated with American Helium Colorado LLC.",
+    "deadline": "2026-09-30",
+    "expires": "2026-09-30",
+    "dates": "9/24",
+    "papers": [
+      "ttimes_0924"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_87c1dedd-06e4-4678-a68d-6a0116434245.html",
+    "address": "San Miguel County, Colorado (various oil and gas well locations)",
+    "noticeKey": "delinquent-oilgas-taxes-2025-american-helium"
+  },
+  {
+    "title": "Public Hearing -- Adoption of 2024 International Building Code & Colorado Low Energy & Carbon Code",
+    "entity": "San Miguel County Board of Commissioners",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County Board of Commissioners will hold a public hearing on September 16, 2026 at 9:00 AM in Telluride to consider adopting the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Written comments must be received by noon on September 10, 2026, and proposed amendments are available in the meeting agenda packet at the county website. This applies countywide in San Miguel County, Colorado.",
+    "deadline": "2026-09-10T12:00:00",
+    "expires": "2026-09-16",
+    "dates": "8/27",
+    "papers": [
+      "ttimes_0827"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    "address": "Telluride, Colorado (San Miguel County)",
+    "noticeKey": "COL-000222-ibc-hearing"
+  },
+  {
+    "title": "RFP -- Fuel Island Canopy Construction, Norwood Road & Bridge Maintenance Yard (COL-000219)",
+    "entity": "San Miguel County Road & Bridge Department",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County Road & Bridge Department is seeking proposals from qualified contractors for the design, engineering, permitting assistance, and construction of a fuel island canopy at the Norwood Road & Bridge Maintenance Yard. A pre-proposal site meeting was held August 24, 2026; written questions were due August 26, 2026. Proposals must be submitted electronically by September 3, 2026 at 4:00 PM, with contractor selection notification on September 7, 2026.",
+    "deadline": "2026-09-03T16:00:00",
+    "expires": "2026-09-07",
+    "dates": "8/27",
+    "papers": [
+      "ttimes_0827"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    "address": "39595 Highway 145, Norwood, CO 81423",
+    "noticeKey": "COL-000219-fuel-island-canopy-rfp"
+  },
+  {
+    "title": "RFP -- San Miguel County Jail Repainting, Illium (COL-000224)",
+    "entity": "San Miguel County Fleet & Facilities Department",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County is requesting proposals from contractors to repaint the San Miguel County Jail located at 684 County Road 63L in Illium/Telluride. RFP documents are available on the county website or through the Fleet & Facilities Department at 333 W. Colorado Ave, 2nd Floor, Telluride. Proposals are due by 5:00 PM on Friday, September 18, 2026, submitted either by email or in person at the Fleet & Facilities Department.",
+    "deadline": "2026-09-18T17:00:00",
+    "expires": "2026-09-18",
+    "dates": "8/27",
+    "papers": [
+      "ttimes_0827"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    "address": "684 County Road 63L, Telluride, CO 81435",
+    "noticeKey": "COL-000224-jail-repaint-rfp"
   }
 ]

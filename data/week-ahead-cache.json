@@ -1,22 +1,22 @@
 {
-  "hash": "2191b352e917005d0238d9e9b7d3ba8650ab5aef",
-  "lede": "The biggest thing on the calendar this week is a pair of September 30 sessions on the Carhenge redevelopment at 700 W. Pacific — Town Council convenes a special appeal hearing on the lot subdivision that was challenged after P&Z approved it in July, while HARC holds a dedicated special meeting to review three separate Preliminary Large-Scale applications covering the project's building clusters. Alongside that, the Gondola Leadership Committee takes up a consequential choice on September 28: whether to pursue federally funded or locally led project delivery — federal dollars versus local control. P&Z also holds a work session September 24 on an early-stage employee housing proposal tied to the school district.",
+  "hash": "1db1b5b874a9d4a34d823556b33b1deb7cfb80c8",
+  "lede": "The biggest thing on the docket this week is the Carhenge redevelopment, which hits two separate hearings on September 30 — HARC takes up the preliminary large-scale design review for all three building clusters at 700 W. Pacific, while a special Town Council session hears the appeal of the lot subdivision that P&Z approved back in July. Meanwhile, the Gondola Leadership Committee meets September 28 to weigh a consequential choice between federally funded and locally controlled project delivery, and P&Z holds a work session Wednesday on a proposed School District employee housing project at the middle-high school site.",
   "notable": [
     {
       "id": 1,
-      "stake": "Early look at school-district employee housing proposal near middle-high school."
+      "stake": "Early look at School District employee housing proposal at 725 W Colorado."
     },
     {
-      "id": 6,
-      "stake": "Council weighs federal funding vs. local control for gondola project delivery."
-    },
-    {
-      "id": 8,
-      "stake": "HARC reviews three large-scale Carhenge building applications in a single session."
+      "id": 7,
+      "stake": "Council votes on federal vs. local financing path for gondola replacement."
     },
     {
       "id": 9,
-      "stake": "Town Council hears appeal that could block or reshape Carhenge lot consolidation."
+      "stake": "HARC reviews all three Carhenge building clusters in a single special session."
+    },
+    {
+      "id": 10,
+      "stake": "Town Council hears appeal that could block or reshape the Carhenge redevelopment."
     }
   ]
 }

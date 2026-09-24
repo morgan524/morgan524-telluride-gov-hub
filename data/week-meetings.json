@@ -80,6 +80,26 @@
     "hook": ""
   },
   {
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "title": "Town Council Meeting -- Special Meeting",
+    "date": "2026-09-25",
+    "time": "",
+    "location": "Town Hall, 455 Mountain Village Blvd, Suite A",
+    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/49970/september_25-_2026_special_town_council_meeting_agenda.pdf",
+    "packetUrl": "",
+    "link": "https://townofmountainvillage.com/site/assets/files/49970/september_25-_2026_special_town_council_meeting_agenda.pdf",
+    "hasAgenda": true,
+    "summary": "",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "https://media.avcaptureall.cloud/?customerGuid=f6f590a7-5acc-4d32-9928-ad9ae0d02e06",
+    "commentEmail": "council@mtnvillage.org",
+    "hook": ""
+  },
+  {
     "source": "county",
     "sourceLabel": "San Miguel County",
     "title": "Open Space Commission Meeting",

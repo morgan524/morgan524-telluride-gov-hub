@@ -602,5 +602,10 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8321",
     "zoomUrl": "https://gbsm.zoom.us/j/83597933306",
     "sv": 4
+  },
+  "telluride|2026-10-14|Special Liquor Licensing Authority - Oct 14 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8146",
+    "sv": 4,
+    "ph": "65b7901f622f722e"
   }
 }
