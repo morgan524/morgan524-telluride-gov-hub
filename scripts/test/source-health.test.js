@@ -106,3 +106,22 @@ test('orphan summaries: a _BOARD_MEETINGS row counts as a list row', () => {
   assert.ok(!/2026-09-01/.test(f[0].message),
     'Sept 1 IS listed in TELLURIDE_BOARD_MEETINGS and must not be called an orphan');
 });
+
+test('detectAnomalies: an array emptied by an active drop-event correction is Low, not a broken scraper', () => {
+  const baseline = { sources: { TJC_EVENTS: { dailyMax: { '2026-08-20': 3 } },
+                                KOTO_EVENTS: { dailyMax: { '2026-08-20': 9 } } } };
+  const arrays = { TJC_EVENTS: [], KOTO_EVENTS: [] };
+
+  // Without the map, both look like broken scrapers.
+  const plain = sh.detectAnomalies(arrays, baseline);
+  assert.equal(plain.length, 2);
+  assert.ok(plain.every(a => a.severity === 'High'));
+
+  // With it, only the genuinely-broken one stays High.
+  const out = sh.detectAnomalies(arrays, baseline, { TJC_EVENTS: 'drop-tjc-shabbat-2026-08-16' });
+  const tjc = out.find(a => a.name === 'TJC_EVENTS');
+  const koto = out.find(a => a.name === 'KOTO_EVENTS');
+  assert.equal(tjc.severity, 'Low');
+  assert.match(tjc.message, /drop-tjc-shabbat-2026-08-16/);
+  assert.equal(koto.severity, 'High');
+});

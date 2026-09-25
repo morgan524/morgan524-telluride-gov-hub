@@ -132,3 +132,29 @@ test('recordDate reads the key each source happens to use', () => {
   assert.equal(recordDate({ pubDate: '2026-08-12T00:00:00-06:00' }), '2026-08-12');
   assert.equal(recordDate({}), null);
 });
+
+test('fix-title renames only the exact garbled title, and only on the wrong date', () => {
+  const rows = [
+    { title: 'Ongiong: Space Cowboy by Dundee & Lee', pubDate: '2026-10-02T23:00:00.000Z' },
+    { title: 'Ongiong: Space Cowboy by Dundee & Lee', pubDate: '2026-11-05T23:00:00.000Z' },
+    { title: 'Space Cowboy by Dundee & Lee', pubDate: '2026-10-02T23:00:00.000Z' },
+  ];
+  const c = {
+    id: 'fix-title-x', kind: 'fix-title', array: 'OURAY_RIDGWAY_EVENTS',
+    titleMatch: 'Ongiong: Space Cowboy by Dundee & Lee',
+    correctTitle: 'Ongoing: Space Cowboy by Dundee & Lee',
+    wrongDate: '2026-10-02', expiresOn: '2026-11-21',
+  };
+  const { arrays, applied } = applyCorrections({ OURAY_RIDGWAY_EVENTS: rows }, [c], '2026-08-26');
+  assert.equal(applied.length, 1);
+  assert.equal(arrays.OURAY_RIDGWAY_EVENTS[0].title, 'Ongoing: Space Cowboy by Dundee & Lee');
+  assert.equal(arrays.OURAY_RIDGWAY_EVENTS[1].title, 'Ongiong: Space Cowboy by Dundee & Lee'); // other date
+  assert.equal(arrays.OURAY_RIDGWAY_EVENTS[2].title, 'Space Cowboy by Dundee & Lee');          // other title
+});
+
+test('fix-title without correctTitle leaves the record alone rather than blanking it', () => {
+  const rows = [{ title: 'Typo Event', date: '2026-10-02' }];
+  const c = { id: 'x', kind: 'fix-title', array: 'A', titleMatch: 'Typo Event', expiresOn: '2026-12-01' };
+  const { arrays } = applyCorrections({ A: rows }, [c], '2026-08-26');
+  assert.equal(arrays.A[0].title, 'Typo Event');
+});

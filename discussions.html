@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discussions — Livable Telluride</title>
+<meta name="description" content="Livable Telluride Discussions — a Polis conversation where you vote on your neighbors' statements and the map shows where the community actually agrees.">
+<!-- PREVIEW PAGE — not launched, not in the nav, not in sitemap.xml.
+     Remove the noindex line and add a nav entry in site.js when it goes live. -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="lt.css?v=8">
+<link rel="icon" href="/logo/icon-192.png?v=2">
+<link rel="apple-touch-icon" href="/logo/apple-touch-icon.png?v=2">
+<link rel="manifest" href="/manifest.json">
+<style>
+  .dw { max-width: var(--maxw); margin: 0 auto; padding: 34px var(--pad-x) 0; }
+  .d-intro { max-width: 760px; font: 400 17px/1.7 var(--sans); color: var(--body2); }
+  .d-h { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+         border-bottom: 2px solid var(--forest); padding-bottom: 12px; margin: 46px 0 6px; }
+  .d-h h2 { margin: 0; }
+  .d-h .sub { font: 400 15px/1.5 var(--sans); color: var(--muted); }
+
+  /* How it works — four steps */
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 20px; }
+  .step { padding: 22px; background: var(--card); border: 1px solid var(--hairline); border-radius: 12px; }
+  .step .n { font: 700 30px/1 var(--serif); color: var(--gold); }
+  .step h3 { font: 600 19px/1.25 var(--serif); margin: 10px 0 6px; }
+  .step p { font: 400 14.5px/1.6 var(--sans); color: var(--body2); margin: 0; }
+
+  /* Vote-button mimic, so the buttons are recognizable before the embed loads */
+  .votes { display: flex; gap: 8px; margin-top: 12px; }
+  .vote { flex: 1; text-align: center; padding: 7px 4px; border-radius: 7px;
+          font: 600 12.5px/1 var(--sans); border: 1px solid var(--hairline); }
+  .vote.ag { background: #e4efe4; color: #2c5c3a; border-color: rgba(44,92,58,.3); }
+  .vote.di { background: #f6e7e0; color: #93471f; border-color: rgba(147,71,31,.3); }
+  .vote.ps { background: #eceae4; color: var(--muted); }
+
+  /* Embed panel */
+  .conv { margin-top: 22px; background: var(--card); border: 1px solid var(--hairline);
+          border-radius: 12px; box-shadow: var(--shadow-card); overflow: hidden; }
+  .conv-bar { display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+              padding: 16px 22px; border-bottom: 1px solid var(--hairline); background: var(--sage2); }
+  .conv-bar h3 { font: 600 20px/1.25 var(--serif); margin: 0; flex: 1; min-width: 220px; }
+  .conv-bar .meta { font: 400 13.5px/1.4 var(--sans); color: var(--muted); }
+  .conv-bar .id { font: 500 12.5px/1 var(--sans); color: var(--muted);
+                  background: var(--sage); border-radius: 5px; padding: 5px 8px; }
+  .conv-body { padding: 0; min-height: 620px; position: relative; }
+  .conv-body .polis { min-height: 620px; }
+  .conv-body iframe { display: block; width: 100%; border: 0; }
+  .conv-load { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+               flex-direction: column; gap: 12px; text-align: center; padding: 40px 24px;
+               font: 400 15px/1.6 var(--sans); color: var(--muted); }
+  .conv-load b { display: block; font: 600 18px/1.3 var(--serif); color: var(--forest); }
+  /* Fallback path: the same node, un-overlaid and parked under the iframe. */
+  .conv-load.is-note { position: static; inset: auto; display: block; padding: 16px 22px;
+                       text-align: left; background: #f6efe2; border-top: 1px solid var(--hairline);
+                       font: 400 14px/1.6 var(--sans); }
+  .conv-load.is-note b { display: inline; font: 600 14px/1.6 var(--sans); color: var(--forest); }
+  .conv-foot { padding: 14px 22px; border-top: 1px solid var(--hairline);
+               font: 400 13.5px/1.6 var(--sans); color: var(--muted); }
+
+  /* Two-column prose */
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; margin-top: 20px; }
+  .cols h3 { font: 600 20px/1.25 var(--serif); margin: 0 0 8px; }
+  .cols p { font: 400 15.5px/1.7 var(--sans); color: var(--body2); margin: 0 0 14px; }
+  .cols ul { margin: 0 0 14px; padding-left: 20px; }
+  .cols li { font: 400 15.5px/1.7 var(--sans); color: var(--body2); margin-bottom: 7px; }
+
+  /* Internal notes */
+  .ops { margin: 46px 0 0; padding: 26px 28px; background: var(--sage2);
+         border: 1.5px dashed var(--forest); border-radius: 12px; }
+  .ops h2 { font: 600 24px/1.2 var(--serif); margin: 0 0 4px; }
+  .ops .why { font: 400 14.5px/1.6 var(--sans); color: var(--muted); margin: 0 0 18px; }
+  .ops h3 { font: 600 17px/1.3 var(--serif); margin: 20px 0 6px; }
+  .ops p, .ops li { font: 400 14.5px/1.65 var(--sans); color: var(--body2); margin: 0 0 8px; }
+  .ops ul { margin: 0 0 8px; padding-left: 20px; }
+  .ops code, .ops pre { font: 400 13px/1.55 ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .ops code { background: #fff; border: 1px solid var(--hairline); border-radius: 4px; padding: 2px 5px; }
+  .ops pre { background: #fff; border: 1px solid var(--hairline); border-radius: 8px;
+             padding: 14px 16px; overflow-x: auto; margin: 8px 0 14px; color: var(--ink); }
+  .ops pre code { background: none; border: 0; padding: 0; }
+  .d-cta { text-align: center; padding: 46px 0 10px; }
+
+  @media (max-width: 900px) {
+    .steps { grid-template-columns: 1fr 1fr; }
+    .cols { grid-template-columns: 1fr; gap: 8px; }
+  }
+  @media (max-width: 560px) { .steps { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div id="lt-header"></div>
+
+<header class="masthead">
+  <img class="masthead-art" src="uploads/wilson-peak.png" alt="" aria-hidden="true">
+  <div class="masthead-fade"></div>
+  <div class="masthead-inner">
+    <div class="crumb">Home <span class="sep">&rsaquo;</span> Discussions</div>
+    <h1>Community Discussions</h1>
+    <p class="sub">Not a comment section. You vote on your neighbors' statements, and the results show where this town actually agrees &mdash; including on things nobody expected.</p>
+  </div>
+</header>
+
+<div class="dw">
+  <p class="d-intro">Public comment rewards whoever shows up loudest and stays latest. A Livable Telluride Discussion works the other way around: everyone reads the same short statements, votes agree / disagree / pass on each one, and can add a statement of their own. Software called <a href="https://pol.is" target="_blank" rel="noopener">Pol.is</a> then groups people by how they voted &mdash; and, more usefully, surfaces the statements that win across every group. It takes about three minutes and there is nothing to argue with.</p>
+
+  <div class="d-h"><h2 class="section-h">How it works</h2><span class="sub">Four steps, about three minutes.</span></div>
+  <div class="steps">
+    <div class="step">
+      <div class="n">1</div>
+      <h3>Read a statement</h3>
+      <p>One short sentence at a time, written by a neighbor. No threads, no replies, nobody to argue with in the margins.</p>
+    </div>
+    <div class="step">
+      <div class="n">2</div>
+      <h3>Vote on it</h3>
+      <p>Agree, disagree, or pass. Pass is a real answer &mdash; it means unsure or not my lane, and it counts.</p>
+      <div class="votes"><span class="vote ag">Agree</span><span class="vote di">Disagree</span><span class="vote ps">Pass</span></div>
+    </div>
+    <div class="step">
+      <div class="n">3</div>
+      <h3>Add your own</h3>
+      <p>Say the thing you think is missing, in one sentence. Everyone after you votes on it, so a good point spreads on its merits, not on volume.</p>
+    </div>
+    <div class="step">
+      <div class="n">4</div>
+      <h3>See the map</h3>
+      <p>As votes come in, the conversation sorts participants into opinion groups and flags the statements that hold up across all of them.</p>
+    </div>
+  </div>
+
+  <div class="d-h"><h2 class="section-h">Open discussion</h2><span class="sub">Live &mdash; anyone can vote, no account needed.</span></div>
+
+  <div class="conv">
+    <div class="conv-bar">
+      <h3 data-conv-title>Livable Telluride &mdash; sample discussion</h3>
+      <span class="meta">No sign-in &middot; anonymous &middot; ~3 min</span>
+      <span class="id">2acdmfvwwz</span>
+      <a class="btn btn-outline" href="https://pol.is/2acdmfvwwz" target="_blank" rel="noopener">Open on pol.is</a>
+    </div>
+    <div class="conv-body">
+      <!-- Pol.is embed. embed.js finds this div by class + data-conversation_id,
+           swaps in an iframe, and postMessages its height back for auto-resize. -->
+      <div class="polis" data-conversation_id="2acdmfvwwz"></div>
+      <div class="conv-load" data-conv-load>
+        <b>Loading the discussion&hellip;</b>
+        <span>It's hosted by pol.is. If it doesn't appear, a privacy blocker or a network filter is probably blocking the script &mdash; the <a href="https://pol.is/2acdmfvwwz" target="_blank" rel="noopener">direct link</a> always works.</span>
+      </div>
+    </div>
+    <div class="conv-foot">Your votes are anonymous. Pol.is is an independent open-source platform &mdash; Livable Telluride can see the aggregate results and moderate statements, not who voted which way.</div>
+  </div>
+
+  <div class="d-h"><h2 class="section-h">Reading the results</h2><span class="sub">What the report is actually telling you.</span></div>
+  <div class="cols">
+    <div>
+      <h3>Opinion groups</h3>
+      <p>Once enough people vote, participants get sorted into two to five groups by voting pattern &mdash; not by neighborhood, party, or how long they've lived here. The groups are drawn from the data, so they usually cut across the lines everyone assumes are the real ones.</p>
+      <p>Each group gets a plain-language summary: what its members agreed on that others didn't, and where they broke from the pack.</p>
+    </div>
+    <div>
+      <h3>The part that matters</h3>
+      <ul>
+        <li><b>Consensus statements</b> &mdash; the ones that won a majority in <i>every</i> group. This is the short list worth bringing to a council meeting.</li>
+        <li><b>Divisive statements</b> &mdash; the real fault lines, separated from the noise. Useful for knowing what still needs to be worked out.</li>
+        <li><b>Group-defining statements</b> &mdash; what makes each cluster distinct.</li>
+      </ul>
+      <p>A statement that only 40% agree with isn't a loss. Knowing it's 40% &mdash; and which 40% &mdash; is the point.</p>
+    </div>
+  </div>
+
+  <div class="d-h"><h2 class="section-h">Ground rules</h2><span class="sub">Same as everywhere else on this site.</span></div>
+  <div class="cols">
+    <div>
+      <h3>Write statements, not comments</h3>
+      <ul>
+        <li>One idea per statement. Two ideas force people to pass.</li>
+        <li>Keep it short enough to vote on without re-reading.</li>
+        <li>Say it as a position &mdash; &ldquo;Short-term rentals should be capped by neighborhood&rdquo; &mdash; not as a question.</li>
+        <li>Don't restate someone else's statement; vote on theirs instead.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Moderation</h3>
+      <p>Submitted statements are reviewed before they circulate. We remove personal attacks, statements about named private individuals, and anything off-topic &mdash; the same standard as our <a href="community-guidelines.html">community guidelines</a>. We do not remove statements for being unpopular or for disagreeing with us; that's the entire point of the exercise.</p>
+      <p>Questions or a topic you want opened up? <a href="mailto:info@livabletelluride.org">info@livabletelluride.org</a>.</p>
+    </div>
+  </div>
+
+  <!-- ===== INTERNAL — remove this whole block before launch ===== -->
+  <section class="ops">
+    <h2>Internal notes &mdash; not for launch</h2>
+    <p class="why">Everything below is operator reference while we evaluate Polis. Delete this <code>&lt;section class="ops"&gt;</code> before the page ships.</p>
+
+    <h3>The conversation</h3>
+    <ul>
+      <li>Conversation ID: <code>2acdmfvwwz</code> &middot; share link: <a href="https://pol.is/2acdmfvwwz" target="_blank" rel="noopener">pol.is/2acdmfvwwz</a></li>
+      <li>Admin/moderation and the report live at <a href="https://pol.is/m/2acdmfvwwz" target="_blank" rel="noopener">pol.is/m/2acdmfvwwz</a> (owner login required).</li>
+      <li>XID export (owner-only, one-time link from the admin panel): <code>https://pol.is/api/v3/xid/5d0aaa8f-…-xid.csv</code>. XIDs only matter if we start passing our own user IDs into the embed; anonymous participants have none. <b>Treat that URL as a credential &mdash; do not commit the full one or the CSV to this repo.</b></li>
+    </ul>
+
+    <h3>Embed contract</h3>
+    <p>Polis ships one snippet per conversation:</p>
+    <pre><code>&lt;div class='polis' data-conversation_id='2acdmfvwwz'&gt;&lt;/div&gt;
+&lt;script async src='https://pol.is/embed.js'&gt;&lt;/script&gt;</code></pre>
+    <p><code>embed.js</code> scans for <code>div.polis[data-conversation_id]</code>, replaces each with an iframe, and postMessages the content height back for auto-resize. To host more than one conversation on a site they point you at <a href="https://pol.is/integrate" target="_blank" rel="noopener">pol.is/integrate</a> &mdash; but in practice one div per conversation on one page works, so a future list of open discussions can just stack them.</p>
+
+    <h3>Open questions before this goes live</h3>
+    <ul>
+      <li>Nav placement &mdash; <b>Connect</b> is the natural home; it'd be the third item alongside Local Orgs and Housing. Add it to <code>NAV</code> in <code>site.js</code>, then bump the <code>site.js?v=</code> cache-buster on every page.</li>
+      <li>Seed statements: a conversation opened with fewer than ~15 seeds tends to stall. Worth drafting those before we announce.</li>
+      <li>Privacy policy &mdash; the embed is a third-party iframe setting its own cookies. <code>privacy-policy.html</code> should name Pol.is before launch.</li>
+      <li>Reporting cadence &mdash; who reads the report, and does a summary land in the weekly digest?</li>
+      <li>This page is <code>noindex</code> and absent from <code>sitemap.xml</code> and the nav. All three need changing at launch.</li>
+    </ul>
+  </section>
+  <!-- ===== END INTERNAL ===== -->
+
+  <div class="d-cta">
+    <a class="btn btn-forest" href="https://pol.is/2acdmfvwwz" target="_blank" rel="noopener">Join the discussion</a>
+    <a class="btn btn-outline" href="index.html#explore">Explore the hub</a>
+  </div>
+</div>
+
+<div id="lt-footer"></div>
+<script async src="https://pol.is/embed.js"></script>
+<script>
+/* Fallback: if embed.js is blocked (privacy extension, network filter, pol.is
+   down) it never swaps the placeholder div for an iframe. Give it 5s, then
+   build the iframe ourselves — same URL embed.js uses. If that's blocked too,
+   the loading card stays put and points at the direct link. */
+(function () {
+  'use strict';
+  var host = document.querySelector('.polis[data-conversation_id]');
+  var card = document.querySelector('[data-conv-load]');
+  if (!host) return;
+
+  function settled() {
+    var f = document.querySelector('.conv-body iframe');
+    if (!f) return false;
+    if (card) card.style.display = 'none';
+    return true;
+  }
+
+  var tries = 0;
+  var poll = setInterval(function () {
+    if (settled() || ++tries > 10) clearInterval(poll);   // 10 × 500ms = 5s
+    if (tries > 10 && !document.querySelector('.conv-body iframe')) {
+      var id = host.getAttribute('data-conversation_id');
+      var f = document.createElement('iframe');
+      f.src = 'https://pol.is/' + encodeURIComponent(id) +
+              '?parent_url=' + encodeURIComponent(location.href) + '&build=preview';
+      f.height = '740';
+      f.title = 'Livable Telluride discussion';
+      f.setAttribute('allow', 'clipboard-write');
+      host.appendChild(f);
+      /* Don't hide the card on the iframe's load event — a blocked iframe fires
+         load for its error page too, which would leave an unexplained blank box.
+         Demote it to a static notice under the frame instead: harmless if the
+         fallback renders, and the only explanation the reader gets if it can't. */
+      if (card) {
+        card.className = 'conv-load is-note';
+        card.innerHTML = '<b>Not seeing the discussion?</b> A privacy blocker or a network ' +
+          'filter is blocking pol.is on this device. ' +
+          '<a href="https://pol.is/' + encodeURIComponent(id) + '" target="_blank" ' +
+          'rel="noopener">Open it directly</a> instead.';
+        host.parentNode.appendChild(card);
+      }
+    }
+  }, 500);
+
+  /* Polis posts its content height up for auto-resize; honor it either way. */
+  window.addEventListener('message', function (e) {
+    var origin;
+    try { origin = new URL(e.origin).hostname; } catch (err) { return; }
+    if (!/(^|\.)pol\.is$/.test(origin)) return;
+    var h = (e.data && (e.data.height || e.data.iframeHeight)) ||
+            (typeof e.data === 'string' && /^\d+$/.test(e.data) ? +e.data : 0);
+    var f = document.querySelector('.conv-body iframe');
+    if (f && h > 300) f.style.height = h + 'px';
+  });
+})();
+</script>
+<script src="site.js?v=12"></script>
+</body>
+</html>

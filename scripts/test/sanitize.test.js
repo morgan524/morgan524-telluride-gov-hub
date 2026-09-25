@@ -75,3 +75,17 @@ test('filterMvConflicts drops off-by-1 MV copy, keeps same-date + unknown', () =
   assert.equal(dropped[0].title, 'Town Talk: Tau');
   assert.equal(kept.length, 2);
 });
+
+test('sanitizeRecords: collapses a repeated trailing venue phrase, keeps real doublings', () => {
+  const t = (title) => sanitizeRecords([{ title, date: '2026-09-04' }])[0].title;
+  // The Ouray/Ridgway Localist feed appends the venue to a title that already
+  // ends with it.
+  assert.equal(t('First Friday at Rootwings Art at Rootwings Art'), 'First Friday at Rootwings Art');
+  assert.equal(t('Yoga in the Park in the Park'), 'Yoga in the Park');
+  assert.equal(t('Trivia at Brown Dog at Brown Dog at Brown Dog'), 'Trivia at Brown Dog');
+  // Legitimately repeated names have no " at "/" in " pivot and must survive.
+  assert.equal(t('New York, New York'), 'New York, New York');
+  assert.equal(t('Bye Bye Birdie'), 'Bye Bye Birdie');
+  assert.equal(t('Jazz at Lincoln Center'), 'Jazz at Lincoln Center');
+  assert.equal(t('Concert at The Palm'), 'Concert at The Palm');
+});

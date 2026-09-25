@@ -36,6 +36,14 @@ function sanitizeRecords(arr) {
     if (typeof o.title === 'string') {
       o.title = o.title
         .replace(/\b(Meeting|Event|Concert|Workshop|Festival|Show|Session|Class|Gathering|Service|Market|Forum)\s+\1\b/gi, '$1')
+        // (1a) Collapse a repeated trailing venue phrase. The Ouray/Ridgway
+        //      Localist feed appends the venue to a title that already ends
+        //      with it: "First Friday at Rootwings Art at Rootwings Art".
+        //      Anchored on a leading preposition and required to run to the end
+        //      of the string, so a legitimately doubled name is untouched --
+        //      "New York, New York" and "Bye Bye Birdie" have no " at "/" in "
+        //      to match, and "Jazz at Lincoln Center" has nothing repeated.
+        .replace(/(\s+(?:at|@|in)\s+\S[^]*?)\1+$/i, '$1')
         .replace(/\s{2,}/g, ' ').trim();
     }
 
