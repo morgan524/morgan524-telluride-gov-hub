@@ -351,6 +351,18 @@ function checkCrossSourceDateConflict(ctx) {
         if (dates.length === 2 && daysBetweenIso(sorted[0], sorted[1]) === 7) continue;
         const RECURRING_RE = /\b(every|each)\s+(mon|tues|wednes|thurs|fri|satur|sun)(?:day)?s?\b|\bweekly\b|\bevery\s+(?:other\s+)?week\b/i;
         if (group.some(g => RECURRING_RE.test((g.obj && (g.obj.description || g.obj.copy)) || ''))) continue;
+        // A MULTI-NIGHT RUN listed as a range in one source and as a single
+        // night in another is not a disagreement. Telluride.com carries
+        // "What the Constitution Means to Me" as Sep 24 → endDate Sep 25;
+        // Wilkinson carries only the Sep 25 performance once the 24th has
+        // passed. If one record's start–endDate span covers every date the
+        // group asserts, all the sources agree. (2026-09-25.)
+        const covered = group.some(g => {
+          const end = g.obj && g.obj.endDate ? isoOf(ctx.localDate, g.obj.endDate) : null;
+          if (!end || end <= g.iso || daysBetweenIso(g.iso, end) > 14) return false;
+          return dates.every(d => d >= g.iso && d <= end);
+        });
+        if (covered) continue;
 
         const r = group[0];
         add('High', 'Conflicting event dates',
