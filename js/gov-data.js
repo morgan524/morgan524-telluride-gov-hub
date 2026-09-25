@@ -118,10 +118,10 @@ const COUNTY_CACHED_DATA = [
   {
     date: "September 28, 2026",
     time: "4:00 PM",
-    title: "Open Space Commission Meeting",
+    title: "Open Space Commission",
     type: "other",
-    location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
-    civicClerkId: 1057,
+    location: "333 W Colorado Ave, Second Floor, Telluride, CO 81435",
+    civicClerkId: 1074,
     note: null
   },
   {
@@ -351,7 +351,7 @@ const MV_CACHED_DATA = [
     title: "Design Review Board",
     board: "drb",
     agendaUrl: "https://townofmountainvillage.com/site/assets/files/49956/october_1-_2026_design_review_board_meeting_agenda.pdf",
-    packetUrl: null,
+    packetUrl: "https://townofmountainvillage.com/site/assets/files/49988/october_1-_2026_design_review_board_meeting_packet.pdf",
     special: false,
     location: "Town Hall, 455 Mountain Village Blvd, Suite A"
   },

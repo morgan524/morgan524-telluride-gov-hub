@@ -1,5 +1,17 @@
 [
   {
+    "title": "House committee investigates environmental groups",
+    "source": "Telluride Times",
+    "date": "September 25, 2026",
+    "firstSeen": "2026-09-25",
+    "newsTopic": "community",
+    "copy": "The House Committee on Natural Resources launched an investigation into 19 environmental nonprofits, claiming they profit from taxpayer-funded legal fee reimbursements. Several groups with ties to the San Juans are on the list, including San Juans Citizens Alliance and The Wilderness Society. Responses are currently voluntary, but subpoenas are possible.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_dede5e34-6180-4331-8bc9-ef5fbe565ffa.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/6d/46dd0e1b-3c9a-4c8b-94c5-74ebab72d786/6ab2eee5c1c60.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Meeting the community’s needs",
     "source": "Telluride Times",
     "date": "September 25, 2026",
@@ -186,19 +198,6 @@
     "imgHiRes": true
   },
   {
-    "title": "Why I've dedicated three decades to our schools",
-    "source": "Telluride Times",
-    "date": "September 23, 2026",
-    "firstSeen": "2026-09-24",
-    "newsTopic": "education",
-    "copy": "Telluride School District has earned Accreditation with Distinction — top 10% in Colorado — every year since the program began. A state funding formula change now threatens to cut spending by up to 30%, beyond adjustments for enrollment decline, potentially eliminating teachers and programs. Voters are being asked to approve Measure 5A as the only available local remedy.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/opinion/columnists/article_63ddf08b-7f52-494c-93c3-5d1fbcb3b726.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/46/d469bdfc-73ff-4055-a8b0-c3efb2c9e4b2/6ab45c78deec8.image.jpg",
-    "isLetter": true,
-    "imgHiRes": true
-  },
-  {
     "title": "Parent and taxpayer supports TSD ballot measure",
     "source": "Telluride Times",
     "date": "September 23, 2026",
@@ -212,6 +211,19 @@
     "isLetter": true,
     "imgHiRes": true,
     "authorChecked": true
+  },
+  {
+    "title": "Why I've dedicated three decades to our schools",
+    "source": "Telluride Times",
+    "date": "September 23, 2026",
+    "firstSeen": "2026-09-24",
+    "newsTopic": "education",
+    "copy": "Telluride School District has earned Accreditation with Distinction — top 10% in Colorado — every year since the program began. A state funding formula change now threatens to cut spending by up to 30%, beyond adjustments for enrollment decline, potentially eliminating teachers and programs. Voters are being asked to approve Measure 5A as the only available local remedy.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/opinion/columnists/article_63ddf08b-7f52-494c-93c3-5d1fbcb3b726.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/46/d469bdfc-73ff-4055-a8b0-c3efb2c9e4b2/6ab45c78deec8.image.jpg",
+    "isLetter": true,
+    "imgHiRes": true
   },
   {
     "title": "Rolling with it",
@@ -895,6 +907,51 @@
     "img": ""
   },
   {
+    "title": "Town Council Proclaims September 7-11 Black Bear Safety Week",
+    "source": "Town of Telluride",
+    "date": "September 3, 2026",
+    "newsTopic": "government",
+    "copy": "(September 3, 2026) — Town Council on Tuesday proclaimed September 7-11 Black Bear Safety Week, arriving in a year when a dry spring and summer have left black bears across Colorado with far less to eat in the wild.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=404",
+    "img": "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
+  },
+  {
+    "title": "Chief Deputy Clerk Receives Excellence in Election Service Award",
+    "source": "San Miguel County",
+    "date": "September 25, 2026",
+    "newsTopic": "government",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1413",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14817"
+  },
+  {
+    "title": "Planning Director Kaye Simonson Retires After Nearly Eight Years with the County",
+    "source": "San Miguel County",
+    "date": "September 25, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1418",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14827"
+  },
+  {
+    "title": "Another San Miguel Basin Fair in the Books",
+    "source": "San Miguel County",
+    "date": "September 25, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1416",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14822"
+  },
+  {
+    "title": "New Faces and a Fond Farewell for Parks + Open Space",
+    "source": "San Miguel County",
+    "date": "September 25, 2026",
+    "newsTopic": "recreation",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1417",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14826"
+  },
+  {
     "title": "County Housing Efforts Continue on Multiple Fronts",
     "source": "San Miguel County",
     "date": "September 24, 2026",
@@ -922,15 +979,6 @@
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14818"
   },
   {
-    "title": "Chief Deputy Clerk Receives Excellence in Election Service Award",
-    "source": "San Miguel County",
-    "date": "September 22, 2026",
-    "newsTopic": "government",
-    "copy": "",
-    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1413",
-    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14817"
-  },
-  {
     "title": "SMC Expands Crisis Intervention Services with Paragon Behavioral Health Connections",
     "source": "San Miguel County",
     "date": "September 22, 2026",
@@ -949,12 +997,39 @@
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14812"
   },
   {
+    "title": "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
+    "source": "San Miguel County",
+    "date": "September 10, 2026",
+    "newsTopic": "health",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1409",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
+  },
+  {
+    "title": "Two Domestic Pets in San Miguel County Test Positive for the Plague",
+    "source": "San Miguel County",
+    "date": "September 3, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
+  },
+  {
     "title": "Tomboy Road Now Open",
     "source": "San Miguel County",
     "date": "September 18, 2026",
     "newsTopic": "infrastructure",
     "copy": "The Town of Telluride has completed their project that necessitated the closure of Lower Tomboy Road. The road is now open again.",
     "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=546",
+    "img": ""
+  },
+  {
+    "title": "Water Restrictions in Place",
+    "source": "Town of Telluride",
+    "date": "September 11, 2026",
+    "newsTopic": "community",
+    "copy": "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
+    "href": "https://www.telluride.gov/AlertCenter.aspx?AID=45",
     "img": ""
   },
   {

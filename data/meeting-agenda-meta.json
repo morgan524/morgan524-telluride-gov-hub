@@ -602,5 +602,13 @@
   "mv|2026-09-25|Town Council Meeting": {
     "agendaUrl": "https://townofmountainvillage.com/site/assets/files/49970/september_25-_2026_special_town_council_meeting_agenda.pdf",
     "sv": 4
+  },
+  "county|2026-09-28|Open Space Commission": {
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1074/files/agenda/2017",
+    "zoomUrl": "https://us02web.zoom.us/j/86049358611",
+    "meetingId": "860 4935 8611",
+    "passcode": "048535",
+    "phone": "970-728-3174",
+    "sv": 4
   }
 }

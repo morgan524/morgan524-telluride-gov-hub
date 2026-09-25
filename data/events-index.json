@@ -11,7 +11,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
     "type": "Community",
-    "endDate": "2026-11-21"
+    "endDate": "2026-11-24"
   },
   {
     "title": "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
@@ -145,6 +145,19 @@
     "type": "Community"
   },
   {
+    "title": "DJ Phoenix",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=dj-phoenix",
+    "date": "2026-09-25",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/a2ec640e-cbff-4c2b-8343-ffc0d117584a/-/crop/1294x1295/0,316/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "DJ Phoenix takes the stage at The Alibi for a late-night DJ set. It's an evening of music at one of Telluride's familiar local venues, with doors likely drawing night-owl crowds looking to close out the week on a lively note.",
+    "type": "Music"
+  },
+  {
     "title": "Exploring Cyanotype with Angela LeClair",
     "href": "https://events.ourayridgwayevents.com/event/exploring-cyanotype-with-angela-leclair",
     "date": "2026-09-26",
@@ -182,6 +195,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "The Fortuna Tierra Club has created the Exceptional Women awards to recognize outstanding women who demonstrate leadership, commitment and service to the nonprofit organizations operating in Ouray County. The immeasurable contributions of…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Chloe’s Verse & Wine Saturday! with \"Ordinary Two\" Live After Party!",
+    "href": "https://events.ourayridgwayevents.com/event/chloes-verse-wine-saturday-with-ordinary-two-live-after-party",
+    "date": "2026-09-26",
+    "time": "4:00 PM",
+    "location": "Chloe’s Charcuterie & Wine Bar",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54073709178231/huge/44282f169600e0a3c66ad795fb7630eadfc14d3d.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "A Saturday evening at Chloe's Charcuterie & Wine Bar in Ridgway combines a poetry gathering with live music from Ordinary Two. The event pairs an intimate verse session with an after-party performance, all set against the backdrop of wine…",
+    "type": "Food & Drink"
   },
   {
     "title": "Mountain Girl Gallery Fall Fiesta",
@@ -550,7 +576,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Welcome to Ridgway's strength and mobility training + YOGA! Functional Strength & Mobility Training (for women): Tuesday & Thursday 8:15-9 am Vinyasa Yoga: Wednesday 8:15-9:15 am Functional means we focus on movements that mimic everyday…",
     "type": "Talks & Classes",
-    "endDate": "2026-11-19"
+    "endDate": "2026-11-24"
   },
   {
     "title": "The Sherbino Presents: \"Thinking Like Water\", a DIY look at watershed restoration",
@@ -2366,7 +2392,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In…",
     "type": "Arts & Film",
-    "endDate": "2026-11-23"
+    "endDate": "2026-11-24"
   },
   {
     "title": "Introduction to Copper Jewelry with Emily Knickerbocker",

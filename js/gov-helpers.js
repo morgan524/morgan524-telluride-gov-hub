@@ -471,7 +471,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8146","sv":4,"ph":"65b7901f622f722e"},
 
   "mv|2026-09-25|Town Council Meeting":
-    {"agendaUrl":"https://townofmountainvillage.com/site/assets/files/49970/september_25-_2026_special_town_council_meeting_agenda.pdf","sv":4}
+    {"agendaUrl":"https://townofmountainvillage.com/site/assets/files/49970/september_25-_2026_special_town_council_meeting_agenda.pdf","sv":4},
+
+  "county|2026-09-28|Open Space Commission":
+    {"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1074/files/agenda/2017","zoomUrl":"https://us02web.zoom.us/j/86049358611","meetingId":"860 4935 8611","passcode":"048535","phone":"970-728-3174","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -827,9 +830,82 @@ const MEETING_PREVIEWS = {
     "The Gondola Leadership Committee is expected to review updates from the previous meeting, evaluate and potentially act on a comparison between federally funded and locally-led project approaches, and discuss a communications plan. The committee will also hear partner jurisdiction updates and take public comment.",
 
   "telluride|2026-10-14|Special Liquor Licensing Authority - Oct 14 2026":
-    "The Telluride Liquor Licensing Authority will consider liquor license applications or modifications requiring local approval. Both the Authority and the Colorado Department of Revenue must consent before any license is issued or amended. New licenses and appeals are typically referred to the Town Council for final approval or denial."
+    "The Telluride Liquor Licensing Authority will consider liquor license applications or modifications requiring local approval. Both the Authority and the Colorado Department of Revenue must consent before any license is issued or amended. New licenses and appeals are typically referred to the Town Council for final approval or denial.",
+
+  "county|2026-09-28|Open Space Commission":
+    "The Open Space Commission is expected to review August meeting minutes, receive updates on the organizational chart and budget, discuss joint focus areas, and prioritize projects for the 2026 work plan ahead of a November 9 budget deadline. The commission will also select a date for a meet-and-greet with county leadership."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
+  {
+    title: "2026 Chamber Meeting, December",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
+    img: ""
+  },
+  {
+    title: "Noel Night",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 4, 2026",
+    newsTopic: "community",
+    copy: "Community shopping event and celebration.",
+    href: "https://norwoodcolorado.com/event/noel-night-3/",
+    img: ""
+  },
+  {
+    title: "West End Parade of Lights & Elfin Eve",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "Holiday parade and festival.",
+    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, November",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "November 10, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, October",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "October 13, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
+    img: ""
+  },
+  {
+    title: "Pioneer Day",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 26, 2026",
+    newsTopic: "community",
+    copy: "Celebration of local history and pioneers.",
+    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
+    img: ""
+  },
+  {
+    title: "Parish Bulletin for September 27",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "September 25, 2026",
+    newsTopic: "community",
+    copy: "Attached is this week's parish bulletin. Please check our Parish Calendar for the updated schedule of events.1. Parish Mission Retreat (for those signed up) begins tonight at 6:15 pm and Saturday at 9:30 am. 2. Mission Appeal at this weekend...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-september-27/",
+    img: ""
+  },
   {
     title: "Popular trail needs new steward",
     source: "Ouray County Plaindealer",
@@ -1306,7 +1382,10 @@ const MANUAL_SUMMARIES = {
     "The October 14, 2026 Special Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "mv|2026-09-25|Town Council Meeting":
-    "A special Friday session — just one item: an executive session to discuss selecting and setting employment terms for a new Town Manager. The personnel discussion is closed to the public under Colorado's open meetings law, which permits closed sessions for this kind of hiring negotiation. Council convenes at 8:00 AM and adjourns at 3:00 PM, suggesting a lengthy deliberation behind closed doors."
+    "A special Friday session — just one item: an executive session to discuss selecting and setting employment terms for a new Town Manager. The personnel discussion is closed to the public under Colorado's open meetings law, which permits closed sessions for this kind of hiring negotiation. Council convenes at 8:00 AM and adjourns at 3:00 PM, suggesting a lengthy deliberation behind closed doors.",
+
+  "county|2026-09-28|Open Space Commission":
+    "A working session for the San Miguel County Open Space Commission. The main business: an org chart presentation from County Administrator Mike Bordogna, a budget update, follow-up on joint focus areas, and a hard conversation about what to cut from the 2026 work plan ahead of the November 9 budget deadline. The commission will also pick a date for a meet-and-greet with the BOCC, commission members, staff, and the incoming Parks & Open Space Manager and Parks Supervisor."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1709,6 +1788,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "House committee investigates environmental groups",
+    source: "Telluride Times",
+    date: "September 25, 2026",
+    firstSeen: "2026-09-25",
+    newsTopic: "community",
+    copy: "The House Committee on Natural Resources launched an investigation into 19 environmental nonprofits, claiming they profit from taxpayer-funded legal fee reimbursements. Several groups with ties to the San Juans are on the list, including San Juans Citizens Alliance and The Wilderness Society. Responses are currently voluntary, but subpoenas are possible.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_dede5e34-6180-4331-8bc9-ef5fbe565ffa.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/6d/46dd0e1b-3c9a-4c8b-94c5-74ebab72d786/6ab2eee5c1c60.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Meeting the community’s needs",
     source: "Telluride Times",
     date: "September 25, 2026",
@@ -1895,19 +1986,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Why I've dedicated three decades to our schools",
-    source: "Telluride Times",
-    date: "September 23, 2026",
-    firstSeen: "2026-09-24",
-    newsTopic: "education",
-    copy: "Telluride School District has earned Accreditation with Distinction — top 10% in Colorado — every year since the program began. A state funding formula change now threatens to cut spending by up to 30%, beyond adjustments for enrollment decline, potentially eliminating teachers and programs. Voters are being asked to approve Measure 5A as the only available local remedy.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_63ddf08b-7f52-494c-93c3-5d1fbcb3b726.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/46/d469bdfc-73ff-4055-a8b0-c3efb2c9e4b2/6ab45c78deec8.image.jpg",
-    isLetter: true,
-    imgHiRes: true
-  },
-  {
     title: "Parent and taxpayer supports TSD ballot measure",
     source: "Telluride Times",
     date: "September 23, 2026",
@@ -1921,6 +1999,19 @@ const TELLURIDE_TIMES_ARTICLES = [
     isLetter: true,
     imgHiRes: true,
     authorChecked: true
+  },
+  {
+    title: "Why I've dedicated three decades to our schools",
+    source: "Telluride Times",
+    date: "September 23, 2026",
+    firstSeen: "2026-09-24",
+    newsTopic: "education",
+    copy: "Telluride School District has earned Accreditation with Distinction — top 10% in Colorado — every year since the program began. A state funding formula change now threatens to cut spending by up to 30%, beyond adjustments for enrollment decline, potentially eliminating teachers and programs. Voters are being asked to approve Measure 5A as the only available local remedy.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_63ddf08b-7f52-494c-93c3-5d1fbcb3b726.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/46/d469bdfc-73ff-4055-a8b0-c3efb2c9e4b2/6ab45c78deec8.image.jpg",
+    isLetter: true,
+    imgHiRes: true
   },
   {
     title: "Rolling with it",
@@ -2604,6 +2695,51 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Town Council Proclaims September 7-11 Black Bear Safety Week",
+    source: "Town of Telluride",
+    date: "September 3, 2026",
+    newsTopic: "government",
+    copy: "(September 3, 2026) — Town Council on Tuesday proclaimed September 7-11 Black Bear Safety Week, arriving in a year when a dry spring and summer have left black bears across Colorado with far less to eat in the wild.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=404",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
+  },
+  {
+    title: "Chief Deputy Clerk Receives Excellence in Election Service Award",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "government",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1413",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14817"
+  },
+  {
+    title: "Planning Director Kaye Simonson Retires After Nearly Eight Years with the County",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1418",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14827"
+  },
+  {
+    title: "Another San Miguel Basin Fair in the Books",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1416",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14822"
+  },
+  {
+    title: "New Faces and a Fond Farewell for Parks + Open Space",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "recreation",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1417",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14826"
+  },
+  {
     title: "County Housing Efforts Continue on Multiple Fronts",
     source: "San Miguel County",
     date: "September 24, 2026",
@@ -2631,15 +2767,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14818"
   },
   {
-    title: "Chief Deputy Clerk Receives Excellence in Election Service Award",
-    source: "San Miguel County",
-    date: "September 22, 2026",
-    newsTopic: "government",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1413",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14817"
-  },
-  {
     title: "SMC Expands Crisis Intervention Services with Paragon Behavioral Health Connections",
     source: "San Miguel County",
     date: "September 22, 2026",
@@ -2658,12 +2785,39 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14812"
   },
   {
+    title: "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
+    source: "San Miguel County",
+    date: "September 10, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1409",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
+  },
+  {
+    title: "Two Domestic Pets in San Miguel County Test Positive for the Plague",
+    source: "San Miguel County",
+    date: "September 3, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
+  },
+  {
     title: "Tomboy Road Now Open",
     source: "San Miguel County",
     date: "September 18, 2026",
     newsTopic: "infrastructure",
     copy: "The Town of Telluride has completed their project that necessitated the closure of Lower Tomboy Road. The road is now open again.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=546",
+    img: ""
+  },
+  {
+    title: "Water Restrictions in Place",
+    source: "Town of Telluride",
+    date: "September 11, 2026",
+    newsTopic: "community",
+    copy: "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=45",
     img: ""
   },
   {
@@ -3807,20 +3961,7 @@ const WILKINSON_EVENTS = [
 // none of which are advertised as adoptable. The sync filters those out, so
 // this repopulates automatically when THS posts genuinely-available pets.
 const HUMANE_SOCIETY_ANIMALS = [
-  {
-    id: "TEL-A-202",
-    name: "Auggie",
-    species: "Dog",
-    breed: "Pyrenees, Great / Shepherd",
-    ageGroup: "Puppy",
-    sex: "Male",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/639c974c5db024bfb2a68ed6291fd880/e42532c8a8f47e22cea8b0d8cbf176e0.jpg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/214602469",
-    summary: "Puppy • Pyrenees, Great / Shepherd • Male",
-    firstSeen: "2026-09-23",
-    revealDate: "2026-09-23",
-    lastSeen: "2026-09-25"
-  }
+
 ];
 
 /* The Alibi events — refreshed by syncAlibiEvents() every 6 hours.
@@ -3831,6 +3972,18 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
+  {
+    title: "DJ Phoenix",
+    link: "https://www.alibitelluride.com/calendar#eca-event=dj-phoenix",
+    description: "DJ Phoenix takes the stage at The Alibi for a late-night DJ set. It's an evening of music at one of Telluride's familiar local venues, with doors likely drawing night-owl crowds looking to close out the week on a lively note.",
+    pubDate: "2026-09-25",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/a2ec640e-cbff-4c2b-8343-ffc0d117584a/-/crop/1294x1295/0,316/-/preview/"
+  },
   {
     title: "YOPE",
     link: "https://www.alibitelluride.com/calendar#eca-event=yope-1",
@@ -4224,7 +4377,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
     pubDate: "2026-09-25T19:30:00.000Z",
-    endDate: "2026-11-21",
+    endDate: "2026-11-24",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4342,6 +4495,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52870214849883/huge/5e53b01264b1462c471681c9d99491d9c8c589d6.jpg"
   },
   {
+    title: "Chloe’s Verse & Wine Saturday! with \"Ordinary Two\" Live After Party!",
+    link: "https://events.ourayridgwayevents.com/event/chloes-verse-wine-saturday-with-ordinary-two-live-after-party",
+    description: "A Saturday evening at Chloe's Charcuterie & Wine Bar in Ridgway combines a poetry gathering with live music from Ordinary Two. The event pairs an intimate verse session with an after-party performance, all set against the backdrop of wine and charcuterie.",
+    pubDate: "2026-09-26T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Chloe’s Charcuterie & Wine Bar",
+    imageUrl: "https://localist-images.azureedge.net/photos/54073709178231/huge/44282f169600e0a3c66ad795fb7630eadfc14d3d.jpg"
+  },
+  {
     title: "Mountain Girl Gallery Fall Fiesta",
     link: "https://events.ourayridgwayevents.com/event/mountain-girl-gallery-fall-fiesta",
     description: "Let's celebrate Fall! Join us for live music, good times and fresh local art! Walter St. Clair will be playing tunes on the porch and the vibes will be high.",
@@ -4448,7 +4612,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
     description: "Welcome to Ridgway's strength and mobility training + YOGA! Functional Strength & Mobility Training (for women): Tuesday & Thursday 8:15-9 am Vinyasa Yoga: Wednesday 8:15-9:15 am Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Class Structure: 5 minute warm up / 30 minute circuit workout / 10 minute cooldown stretch & mobility Vinyasa Yoga: This is a dynamic practice that will challenge, strengthen, and uplift you both physically and mentally. …",
     pubDate: "2026-09-29T14:15:00.000Z",
-    endDate: "2026-11-19",
+    endDate: "2026-11-24",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5356,7 +5520,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-film-stills-ridgway-independent-film-fest",
     description: "The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In coordination with the annual Independent Film Festival (November 13-15) this show is both a preview and a celebration of the art of short filmmaking.",
     pubDate: "2026-11-07T00:00:00.000Z",
-    endDate: "2026-11-23",
+    endDate: "2026-11-24",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
