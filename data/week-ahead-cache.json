@@ -1,26 +1,30 @@
 {
-  "hash": "4fd4478d655bec126e3c48904befef48925967a6",
-  "lede": "The biggest thing on the docket this week is Carhenge — the proposed redevelopment at 700 W. Pacific Ave gets two separate hearings on Tuesday, September 30: a special HARC session reviewing preliminary architecture for multiple building clusters, and a Town Council appeal hearing on the lot subdivision that a law firm challenged after P&Z approved it in July. Alongside that, the Gondola Leadership Committee takes up a consequential choice Monday between federal funding and local project delivery, and the County commissioners workshop a proposed Employee Housing Impact Fee on Tuesday. It's a full week.",
+  "hash": "f02a89af08a16e5b7c3284751bfd8a1af897a100",
+  "lede": "The biggest thing on the docket this week is Carhenge — the proposed redevelopment at 700 W. Pacific Ave gets two separate hearings on September 30: a special HARC session reviewing preliminary architecture for multiple building clusters, and a Town Council appeal hearing on the lot subdivision that a law firm challenged after P&Z approved it in July. Meanwhile, the Gondola Leadership Committee takes up a consequential choice between federal funding and local project delivery on the 28th, and the County floats a proposed Employee Housing Impact Fee at a work session the same day.",
   "notable": [
     {
       "id": 2,
-      "stake": "Council decides federal vs. local funding path for gondola replacement."
+      "stake": "Council weighs federal vs. local funding model for gondola rebuild."
     },
     {
       "id": 4,
-      "stake": "HARC reviews three preliminary building clusters in Carhenge redevelopment."
+      "stake": "HARC reviews three preliminary building clusters for Carhenge redevelopment."
     },
     {
       "id": 5,
-      "stake": "Council hears appeal that could block the Carhenge lot consolidation entirely."
+      "stake": "Council hears appeal that could block or reshape the Carhenge lot consolidation."
     },
     {
       "id": 6,
-      "stake": "County workshopping a new Employee Housing Impact Fee — watch this closely."
+      "stake": "County considers new Employee Housing Impact Fee — early shaping of policy."
     },
     {
       "id": 7,
-      "stake": "Final architecture review for 15 employee apartments and 4 new multifamily units."
+      "stake": "Final architecture review for 15 employee apartments and 4 multifamily units."
+    },
+    {
+      "id": 8,
+      "stake": "2027 General and Capital Fund priorities take shape before formal adoption."
     }
   ]
 }

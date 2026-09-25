@@ -22,10 +22,11 @@
     "date": "October 1, 2026",
     "title": "Town Council Budget",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8053",
-    "hasAgenda": false,
+    "hasAgenda": true,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "",
-    "civicwebId": 8053
+    "civicwebId": 8053,
+    "packetUrl": "https://telluride-co.civicweb.net/document/445473/"
   },
   {
     "date": "October 5, 2026",
