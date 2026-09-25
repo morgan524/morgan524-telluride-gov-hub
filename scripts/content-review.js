@@ -351,6 +351,16 @@ function checkCrossSourceDateConflict(ctx) {
         if (dates.length === 2 && daysBetweenIso(sorted[0], sorted[1]) === 7) continue;
         const RECURRING_RE = /\b(every|each)\s+(mon|tues|wednes|thurs|fri|satur|sun)(?:day)?s?\b|\bweekly\b|\bevery\s+(?:other\s+)?week\b/i;
         if (group.some(g => RECURRING_RE.test((g.obj && (g.obj.description || g.obj.copy)) || ''))) continue;
+        // A MULTI-DAY RUN is not a disagreement either. If one source lists the
+        // event as a span (start + endDate) and every other date falls inside
+        // that span, the sources agree — the single-date copy is just one
+        // night of the run. (2026-09-25: "What the Constitution Means to Me",
+        // Telluride.com Sep 24–25 vs Wilkinson's Sep 25 performance, was
+        // flagged High for exactly this.)
+        const spans = group
+          .map(g => ({ s: g.iso, e: g.endRaw ? isoOf(ctx.localDate, g.endRaw) : null }))
+          .filter(x => x.e && x.e > x.s);
+        if (spans.length && dates.every(d => spans.some(x => d >= x.s && d <= x.e))) continue;
 
         const r = group[0];
         add('High', 'Conflicting event dates',
