@@ -263,26 +263,6 @@
     "noticeKey": "smpa-paper-billing-fee-2026"
   },
   {
-    "title": "Public Hearing -- Shandoka Lot Redevelopment Preliminary PUD, Telluride Planning & Zoning (COL-000227)",
-    "entity": "Town of Telluride / Design Workshop",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "The Town of Telluride Planning and Zoning Commission will hold a public hearing on September 24, 2026, at 5:30 p.m. (hybrid/Zoom) to consider a Preliminary Planned Unit Development (PUD) application for the Shandoka Lot Redevelopment Project at 860 Black Bear Rd. The application, submitted by Design Workshop on behalf of the Town of Telluride (property owner), seeks to increase certain dimensional limitations and provide public benefits on town property pursuant to LUC 6-309.F. The property is Lot L Backman Village (4.07 acres) in the Accommodations 2 zone district.",
-    "deadline": "2026-09-24",
-    "expires": "2026-09-24",
-    "dates": "9/3",
-    "papers": [
-      "ttimes_0903"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
-    "address": "860 Black Bear Rd (Shandoka Lot), Telluride, CO",
-    "noticeKey": "pz-shandoka-lot-pud-2026"
-  },
-  {
     "title": "Water Court Application -- Finding of Reasonable Diligence, Telluride Pines Alder Creek Pump and Pipeline (26CW3043)",
     "entity": "Colorado District Court, Water Division No. 4",
     "entityClass": "ent-county",
@@ -343,26 +323,6 @@
     "url": "https://www.telluridenews.com/news/legals/article_6e1025d7-5ad7-45a9-8530-2bda61ea94b8.html",
     "address": "411 Mountain Village Blvd, 2nd Floor, Mountain Village, CO 81435",
     "noticeKey": "itb-tmv-pubworks-COL000241"
-  },
-  {
-    "title": "Public Hearing -- Proposed 2027 Budget, Telluride Hospital District (COL-000243)",
-    "entity": "Telluride Hospital District",
-    "entityClass": "ent-county",
-    "entityLogo": "assessor",
-    "icon": "💰",
-    "iconClass": "type-tax",
-    "type": "Tax & Finance",
-    "filterTag": "tax-finance",
-    "summary": "The Telluride Hospital District has submitted its proposed 2027 budget to its Board of Directors and is making it available for public inspection at 500 W. Pacific Avenue, Telluride, CO. A public hearing to consider the budget will be held at 8:30 a.m. on September 24, 2026, both in person and via Zoom. Any district elector may inspect the budget and file objections prior to final adoption.",
-    "deadline": "2026-09-24",
-    "expires": "2026-09-24",
-    "dates": "9/17",
-    "papers": [
-      "ttimes_0917"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_6e1025d7-5ad7-45a9-8530-2bda61ea94b8.html",
-    "address": "500 W. Pacific Avenue (Annex), Telluride, CO",
-    "noticeKey": "budget-telluride-hospital-district-2027-COL000243"
   },
   {
     "title": "RFP -- Defensive Space Forestry / Wildfire Mitigation, Village Court Apartments (COL-000229)",
@@ -504,7 +464,7 @@
     "noticeKey": "delinquent-oilgas-taxes-2025-american-helium"
   },
   {
-    "title": "Public Hearing -- Adoption of 2024 International Building Code & Colorado Low Energy & Carbon Code",
+    "title": "Public Hearing -- Adoption of 2024 International Building Code and Colorado Low Energy & Carbon Code (COL-000222)",
     "entity": "San Miguel County Board of Commissioners",
     "entityClass": "ent-county",
     "entityLogo": "county",
@@ -512,7 +472,7 @@
     "iconClass": "type-rfp",
     "type": "Public Notice",
     "filterTag": "public-entity",
-    "summary": "San Miguel County Board of Commissioners will hold a public hearing on September 16, 2026 at 9:00 AM in Telluride to consider adopting the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Community members may submit written comments (limited to one page) to the Board of Commissioners by noon on September 10, 2026. Proposed amendments are available in the meeting agenda packet at www.sanmiguelcountyco.gov.",
+    "summary": "The San Miguel County Board of Commissioners will hold a public hearing on September 16, 2026, at 9:00 AM in Telluride to consider adopting the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Community members may submit written comments, but they must be received by noon on September 10, 2026, and limited to one page. Proposed amendments are available in the meeting agenda packet at sanmiguelcountyco.gov.",
     "deadline": "2026-09-10T12:00:00 (written comments); Hearing: 2026-09-16T09:00:00",
     "expires": "2026-09-16",
     "dates": "8/27",
@@ -521,18 +481,18 @@
     ],
     "url": "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
     "address": "Telluride, Colorado (San Miguel County)",
-    "noticeKey": "COL-000222-ibc-hearing"
+    "noticeKey": "COL-000222-ibc-adoption-hearing"
   },
   {
     "title": "RFP -- Fuel Island Canopy Construction, Norwood Road & Bridge Maintenance Yard (COL-000219)",
-    "entity": "San Miguel County Road & Bridge Department",
+    "entity": "San Miguel County Road & Bridge",
     "entityClass": "ent-county",
     "entityLogo": "county",
     "icon": "🏛️",
     "iconClass": "type-rfp",
     "type": "Public Notice",
     "filterTag": "public-entity",
-    "summary": "San Miguel County Road & Bridge is seeking proposals from qualified contractors to design, engineer, permit, and construct a fuel island canopy at the Norwood Road & Bridge Maintenance Yard located at 39595 Highway 145, Norwood, CO 81423. A pre-proposal site meeting was held August 24, 2026, and written questions were due by August 26, 2026. Proposals must be submitted electronically by September 3, 2026 at 4:00 PM, with selection notification on September 7, 2026.",
+    "summary": "San Miguel County Road & Bridge is seeking proposals from qualified contractors to design, engineer, permit, and construct a fuel island canopy at the Norwood Road & Bridge Maintenance Yard located at 39595 Highway 145, Norwood, CO. A pre-proposal site meeting was held August 24, 2026; written questions were due August 26, 2026. Proposals must be submitted electronically by September 3, 2026, at 4:00 PM, with selection notification expected September 7, 2026.",
     "deadline": "2026-09-03T16:00:00",
     "expires": "2026-09-03",
     "dates": "8/27",
@@ -552,7 +512,7 @@
     "iconClass": "type-rfp",
     "type": "Public Notice",
     "filterTag": "public-entity",
-    "summary": "San Miguel County is requesting proposals from contractors to repaint the San Miguel County Jail located at 684 County Road 63L, Telluride, CO 81435. RFP documents are available at the county website or through the Fleet & Facilities Department at 333 W. Colorado Ave, 2nd Floor, Telluride. Proposals are due by 5:00 PM on Friday, September 18, 2026, submitted either by email or in person at the Fleet & Facilities Department.",
+    "summary": "San Miguel County is requesting proposals from contractors to repaint the San Miguel County Jail located at 684 County Road 63L, Telluride (Illium), CO. RFP documents are available at sanmiguelcountyco.gov/bids.aspx or through the Fleet & Facilities Department in Telluride. Proposals are due by 5:00 PM on Friday, September 18, 2026, submitted either by email or in person at the Fleet & Facilities Department.",
     "deadline": "2026-09-18T17:00:00",
     "expires": "2026-09-18",
     "dates": "8/27",
@@ -561,6 +521,6 @@
     ],
     "url": "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
     "address": "684 County Road 63L, Telluride, CO 81435",
-    "noticeKey": "COL-000224-jail-repaint-rfp"
+    "noticeKey": "COL-000224-jail-repainting-rfp"
   }
 ]

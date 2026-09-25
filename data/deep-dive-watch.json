@@ -1,22 +1,10 @@
 {
- "generated": "2026-09-24T21:24:32.741Z",
+ "generated": "2026-09-25T04:18:44.904Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
    "lastUpdated": "2026-08-17",
    "upcoming": [
-    {
-     "source": "telluride",
-     "sourceLabel": "Town of Telluride",
-     "title": "Planning & Zoning Commission",
-     "date": "2026-09-24",
-     "time": "",
-     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104",
-     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104",
-     "zoomLink": "https://us06web.zoom.us/meeting/register/pvzPtHtIRZmah22XUU2xLg",
-     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
-    },
     {
      "source": "telluride",
      "sourceLabel": "Town of Telluride",
@@ -87,18 +75,6 @@
    "label": "Code Changes & Accelerated Review",
    "lastUpdated": "2026-07-19",
    "upcoming": [
-    {
-     "source": "telluride",
-     "sourceLabel": "Town of Telluride",
-     "title": "Planning & Zoning Commission",
-     "date": "2026-09-24",
-     "time": "",
-     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104",
-     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104",
-     "zoomLink": "https://us06web.zoom.us/meeting/register/pvzPtHtIRZmah22XUU2xLg",
-     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
-    },
     {
      "source": "telluride",
      "sourceLabel": "Town of Telluride",

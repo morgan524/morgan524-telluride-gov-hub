@@ -1273,6 +1273,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "Pumpkin Palooza at Ridgway 1k Finish Line",
+    "href": "https://events.ourayridgwayevents.com/event/pumpkin-palooza-at-ridgway-1k-finish-line",
+    "date": "2026-10-04",
+    "time": "2:00 PM",
+    "location": "Hartwell Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54066523071640/huge/1f1e3f6787481a187fccaa2be86460032f20773f.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Voyager Youth Program presents a free, family-friendly afternoon of fall fun with pumpkin painting, face painting, games, prize opportunities and more. Pumpkin Palooza takes place in Hartwell Park alongside the Ridgway 1K and San Juan…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "San Juan Oktoberfest 2026",
     "href": "https://events.ourayridgwayevents.com/event/san-juan-oktoberfest-2026",
     "date": "2026-10-04",
@@ -1437,7 +1450,7 @@
     "time": "6:00 PM",
     "location": "Ouray Community Center",
     "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/51579968896083/huge/c4cfc0e9259666342735abc334be44580e4c7198.jpg",
+    "img": "https://localist-images.azureedge.net/photos/51579968896083/huge/3675d004ddb2baf273430453088287837487e0f2.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "The Parks and Recreation Committee (PARC) is made up of community members who volunteer their time to support and enhance recreational opportunities in Ouray. PARC organizes safe, family-friendly events that bring the community together.…",
@@ -1451,7 +1464,7 @@
     "time": "5:30 PM",
     "location": "Ouray Community Center",
     "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/51579968896083/huge/c4cfc0e9259666342735abc334be44580e4c7198.jpg",
+    "img": "https://localist-images.azureedge.net/photos/51579968896083/huge/3675d004ddb2baf273430453088287837487e0f2.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "The Ice Park Advisory Team (IPAT) Opens in new window was created to provide an informal, good-faith forum for discussion about the future and ongoing management of the Ouray Ice Park. IPAT serves as a space for the Parties and any…",
@@ -2302,6 +2315,20 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "Rocky Horror Picture Show Live Shadow Cast Edition",
+    "href": "https://events.ourayridgwayevents.com/event/rocky-horror-picture-show-live-shadow-cast-edition",
+    "date": "2026-10-22",
+    "time": "8:00 PM",
+    "location": "The Sherbino",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54066524682512/huge/e95bf2e6509f8e2bf351e2781dcc132332bdb7c2.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Doors open at 7:30 PM; shows begin at 8:00 PM. The Rocky Horror Picture Show returns with a live local shadow cast performing alongside the film, plus audience callbacks, singing, dancing and an included venue-approved participation prop…",
+    "type": "Arts & Film",
+    "endDate": "2026-10-25"
+  },
+  {
     "title": "STEAM Art Explorers for Ages 5–8 in Montrose",
     "href": "https://events.ourayridgwayevents.com/event/steam-art-explorers-for-ages-58-in-montrose",
     "date": "2026-10-23",
@@ -2607,6 +2634,32 @@
     "endDate": "2026-11-23"
   },
   {
+    "title": "Introduction to Copper Jewelry with Emily Knickerbocker",
+    "href": "https://events.ourayridgwayevents.com/event/introduction-to-copper-jewelry-with-emily-knickerbocker-2661",
+    "date": "2026-11-07",
+    "time": "10:00 AM",
+    "location": "Weehawken Montrose",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54066522411096/huge/885e72b708524a41760d36b4ecda6d7b31bbbc06.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Learn the basics of handcrafted copper jewelry with Emily Knickerbocker. Students will work with copper wire and sheet metal while practicing sawing, filing, shaping, texturing and stamping, finishing with patinas, and introductory copper…",
+    "type": "Community"
+  },
+  {
+    "title": "Watercolor with Anita Winter: “Still Waters”",
+    "href": "https://events.ourayridgwayevents.com/event/watercolor-with-anita-winter-still-waters",
+    "date": "2026-11-07",
+    "time": "10:00 AM",
+    "location": "The Annex on Cora",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54066522649708/huge/a35808b29295063770a1a017fa3e070e4b7d2146.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Learn to create reflections and still-water effects in watercolor with Anita Winter through demonstrations, guided exercises and individualized instruction. Participants will practice several techniques and apply them to a finished…",
+    "type": "Community"
+  },
+  {
     "title": "OuROCK! 2026 Climbing Festival",
     "href": "https://events.ourayridgwayevents.com/event/ourock-2026-climbing-festival",
     "date": "2026-11-08",
@@ -2633,6 +2686,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Watercolor & Wine with Katey Fetch: Moonlight & Mountains",
+    "href": "https://events.ourayridgwayevents.com/event/watercolor-wine-with-katey-fetch-moonlight-mountains",
+    "date": "2026-11-12",
+    "time": "6:00 PM",
+    "location": "The Annex on Cora",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54066522860674/huge/ec6044316283ccc798d207fc858154d0421bc0ff.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Create a moonlit mountain watercolor with Katey Fetch in a relaxed paint-and-sip class. Designed for beginners and welcoming to all experience levels, the class includes step-by-step guidance, one beverage and all art supplies.",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Ridgway Independent Film Fest 2026",
     "href": "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-2026",
     "date": "2026-11-13",
@@ -2647,6 +2713,19 @@
     "endDate": "2026-11-15"
   },
   {
+    "title": "Ridgway Independent Film Fest: Begin Where You Are ~ Opening Night Shorts",
+    "href": "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-begin-where-you-are-opening-night-shorts",
+    "date": "2026-11-13",
+    "time": "5:00 PM",
+    "location": "The Sherbino",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54066525035817/huge/fc713b45b42bb680b2b3330e3f10c55c6faed8bf.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Doors open at 4:30 PM; films begin at 5:00 PM. Opening night gathers animated and live-action short films that are local and far-flung, strange and familiar—a preview of the stories and perspectives that unfold across the festival weekend.",
+    "type": "Arts & Film"
+  },
+  {
     "title": "KOTO Ski Swap",
     "href": "https://www.telluride.com/event/koto-ski-swap/",
     "date": "2026-11-13",
@@ -2659,6 +2738,71 @@
     "desc": "Get prepped for the winter season ahead at the annual KOTO Ski Swap at the Wilkinson Public Library. Donate your used …",
     "type": "Community",
     "endDate": "2026-11-16"
+  },
+  {
+    "title": "Ridgway Independent Film Fest ~ The Mountains Knew Our Names",
+    "href": "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-the-mountains-knew-our-names",
+    "date": "2026-11-14",
+    "time": "1:00 PM",
+    "location": "The Sherbino",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54066525467985/huge/aeb14558baf2ca7e09ccf2907f91417a1c740cce.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Doors open at 12:45 PM; films begin at 1:00 PM. A documentary block rooted across Colorado, exploring ties between people and place, inherited histories, traditions, communities and the paths people choose.",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Ridgway Independent Film Fest ~ Something Was Calling Us",
+    "href": "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-something-was-calling-us",
+    "date": "2026-11-14",
+    "time": "10:00 AM",
+    "location": "The Sherbino",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54066525250878/huge/c444a33b9b713c7618425dcb61e02494cc6de407.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Doors open at 9:45 AM; films begin at 10:00 AM. A short-film block about the quiet pull of love, loss, identity and change, and the unexpected paths people take toward what is missing.",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Ridgway Independent Film Fest ~ We Gathered Around the Fire",
+    "href": "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-we-gathered-around-the-fire",
+    "date": "2026-11-14",
+    "time": "6:30 PM",
+    "location": "The Sherbino",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54066525679973/huge/f8057aa570bb204f74619d3965a1591f3a36c571.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Doors open at 6:15 PM; films begin at 6:30 PM. A short-film block about community and connection in ordinary places, shared spaces, small gestures and the things people build together.",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Ridgway Independent Film Fest ~ We Invited the Monsters In",
+    "href": "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-we-invited-the-monsters-in",
+    "date": "2026-11-15",
+    "time": "10:00 AM",
+    "location": "The Sherbino",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54066525898104/huge/ab6fc9df31e535f3ce3ce4e1afaa3862ce728901.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Doors open at 9:45 AM; films begin at 10:00 AM. A short-film block mixing gothic, gruesome, funny and occasionally sweet stories, pairing tenderness with terror and vengeance with very dark humor.",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Ridgway Independent Film Fest ~ We Wandered Beyond the Firelight",
+    "href": "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-we-wandered-beyond-the-firelight",
+    "date": "2026-11-15",
+    "time": "2:00 PM",
+    "location": "The Sherbino",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54066526099851/huge/343172cafea91a01a42c75bb4bf61e850480fd58.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Doors open at 1:45 PM; films begin at 2:00 PM. A short-film block exploring truth and memory, expectation and identity, and the lives people are given versus the lives they make.",
+    "type": "Arts & Film"
   },
   {
     "title": "Telluride Rotary Club Meeting",

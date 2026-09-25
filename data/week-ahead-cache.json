@@ -1,26 +1,26 @@
 {
-  "hash": "1fdc253fee6a94674d856450f6711143fc6a1192",
-  "lede": "The biggest thing on the calendar this week is the Carhenge redevelopment — it hits two separate bodies on Tuesday, September 30: HARC takes up preliminary large-scale applications for the proposed new construction at 700 W. Pacific, and Town Council holds a special appeal hearing on the lot subdivision that P&Z approved back in July. Meanwhile, Mountain Village Council convenes Friday in an all-day executive session to work out terms for a new Town Manager, and the Gondola Leadership Committee meets Sunday to weigh a consequential choice between federally funded and locally-led project delivery.",
+  "hash": "9d0d4d27b509451ef6c9a2b714e12d29b93aa799",
+  "lede": "The biggest thing on the calendar this week is Carhenge — the proposed redevelopment at 700 W. Pacific Ave gets two separate hearings on Tuesday, September 30: a special HARC session reviewing preliminary architecture for multiple building clusters, and a Town Council appeal hearing on the lot subdivision that a law firm challenged after P&Z approved it in July. Meanwhile, the Gondola Leadership Committee takes up a consequential choice Monday between federal funding and local control for gondola delivery, and the County commissioners dig into a proposed Employee Housing Impact Fee Tuesday as well.",
   "notable": [
     {
-      "id": 1,
-      "stake": "School District's early-stage employee housing proposal at 725 W Colorado gets first P&Z look."
+      "id": 2,
+      "stake": "Council votes on federal vs. local financing path for gondola replacement."
+    },
+    {
+      "id": 4,
+      "stake": "HARC reviews three preliminary large-scale Carhenge building applications."
     },
     {
       "id": 5,
-      "stake": "Mountain Village Council selects and sets employment terms for a new Town Manager."
+      "stake": "Council hears appeal that could reverse the approved Carhenge lot subdivision."
+    },
+    {
+      "id": 6,
+      "stake": "Commissioners discuss new Employee Housing Impact Fee for unincorporated county."
     },
     {
       "id": 7,
-      "stake": "Committee votes on federal vs. local delivery model for gondola — major financing and control decision."
-    },
-    {
-      "id": 9,
-      "stake": "HARC reviews three preliminary large-scale applications for the Carhenge redevelopment project."
-    },
-    {
-      "id": 10,
-      "stake": "Council hears appeal of P&Z-approved lot consolidation — outcome shapes entire Carhenge redevelopment."
+      "stake": "DRB considers final architecture for 15 employee apartments and 4 multifamily units."
     }
   ]
 }

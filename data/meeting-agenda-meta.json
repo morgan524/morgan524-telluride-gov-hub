@@ -118,14 +118,6 @@
     "passcode": "097542",
     "phone": "970) 728-1904"
   },
-  "telluride|2026-08-25|Ethics Commission - Aug 25 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8301",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/qlFJ6Tx-TZ6zLK8GdTvb4Q",
-    "meetingId": "813 8122 0495",
-    "passcode": "909304",
-    "phone": "719) 359-4580"
-  },
   "smart|2026-09-10|SMART Board of Directors": {
     "sv": 4,
     "ph": "b858cb282617fb09"
@@ -137,14 +129,6 @@
     "meetingId": "894 7506 0147",
     "passcode": "314276.",
     "phone": "719) 359-4580"
-  },
-  "school|2026-08-25|Telluride Board of Education Monthly Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://files.smartsites.parentsquare.com/3403/82526_mm_packet.pdf",
-    "zoomUrl": "https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09",
-    "meetingId": "865 8512 4120",
-    "passcode": "468668",
-    "phone": "970-728-6617"
   },
   "fire|2026-09-15|Board of Directors Meeting": {
     "sv": 4,
@@ -505,7 +489,11 @@
   },
   "county|2026-09-30|Board of County Commissioners Work Session": {
     "sv": 4,
-    "ph": "babd88802ce87b3a"
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1073/files/agenda/2015",
+    "zoomUrl": "https://us02web.zoom.us/meeting/register/axK-J57IQayv9QHf2lIksg",
+    "meetingId": "875 8192 6670",
+    "passcode": "036006",
+    "phone": "719-359-4580"
   },
   "telluride|2026-09-17|Open Space Commission Site Walk - Sep 17 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8317",

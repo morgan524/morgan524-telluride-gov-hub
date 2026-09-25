@@ -203,17 +203,11 @@ const MEETING_AGENDA_META = {
   "tmvoa|2026-08-27|TMVOA Board of Directors Meeting":
     {"sv":4,"agendaUrl":"https://tmvoa.org/site/assets/files/4851/tmvoa_board_meeting_agenda_8_27_26_revised.pdf","zoomUrl":"https://us02web.zoom.us/meeting/register/N4y5Yn2FSqCtz42k2HzXYg","meetingId":"822 1299 4362","passcode":"097542","phone":"970) 728-1904"},
 
-  "telluride|2026-08-25|Ethics Commission - Aug 25 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8301","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/qlFJ6Tx-TZ6zLK8GdTvb4Q","meetingId":"813 8122 0495","passcode":"909304","phone":"719) 359-4580"},
-
   "smart|2026-09-10|SMART Board of Directors":
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-09-14|Open Space Commission - Sep 14 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8131","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/ePrh_CzmTLKqp0syEbUesw","meetingId":"894 7506 0147","passcode":"314276.","phone":"719) 359-4580"},
-
-  "school|2026-08-25|Telluride Board of Education Monthly Meeting":
-    {"sv":4,"agendaUrl":"https://files.smartsites.parentsquare.com/3403/82526_mm_packet.pdf","zoomUrl":"https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09","meetingId":"865 8512 4120","passcode":"468668","phone":"970-728-6617"},
 
   "fire|2026-09-15|Board of Directors Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -408,7 +402,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/870/files/agenda/2008","zoomUrl":"https://us02web.zoom.us/meeting/register/n4e7ZSbqRwm-OmsZjc_8vg","meetingId":"835 4898 8890","passcode":"669213","phone":"719-359-4580"},
 
   "county|2026-09-30|Board of County Commissioners Work Session":
-    {"sv":4,"ph":"babd88802ce87b3a"},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1073/files/agenda/2015","zoomUrl":"https://us02web.zoom.us/meeting/register/axK-J57IQayv9QHf2lIksg","meetingId":"875 8192 6670","passcode":"036006","phone":"719-359-4580"},
 
   "telluride|2026-09-17|Open Space Commission Site Walk - Sep 17 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8317","sv":4},
@@ -833,10 +827,7 @@ const MEETING_PREVIEWS = {
     "The Gondola Leadership Committee is expected to review updates from the previous meeting, evaluate and potentially act on a comparison between federally funded and locally-led project approaches, and discuss a communications plan. The committee will also hear partner jurisdiction updates and take public comment.",
 
   "telluride|2026-10-14|Special Liquor Licensing Authority - Oct 14 2026":
-    "The Telluride Liquor Licensing Authority will consider liquor license applications or modifications requiring local approval. Both the Authority and the Colorado Department of Revenue must consent before any license is issued or amended. New licenses and appeals are typically referred to the Town Council for final approval or denial.",
-
-  "mv|2026-09-25|Town Council Meeting":
-    "Council is expected to convene for a special meeting on September 25, 2026, in Mountain Village, Colorado. The agenda excerpt does not detail specific action items, but members of the public may attend in person or via Zoom to offer comment on matters before the council."
+    "The Telluride Liquor Licensing Authority will consider liquor license applications or modifications requiring local approval. Both the Authority and the Colorado Department of Revenue must consent before any license is issued or amended. New licenses and appeals are typically referred to the Town Council for final approval or denial."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1044,17 +1035,10 @@ const SMC_ALERTS = [
   }
 ];              // SMC AlertCenter items
 const ENGAGE_MEETINGS = [
-  {
-    projectName: "Shandoka Lot Redevelopment Project",
-    projectUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project",
-    title: "P&Z | Public Hearing Shandoka Lot Redevelopment Project – Preliminary PUD",
-    date: "2026-09-24",
-    board: "pz",
-    dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#42052"
-  }
+
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-24';
-const LEGAL_NOTICES_CACHE_DATE = '2026-09-24';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-25';
+const LEGAL_NOTICES_CACHE_DATE = '2026-09-25';
 
 const MANUAL_SUMMARIES = {
   "county|2026-08-26|Board of County Commissioners Work Session":
@@ -1114,17 +1098,11 @@ const MANUAL_SUMMARIES = {
   "tmvoa|2026-08-27|TMVOA Board of Directors Meeting":
     "The TMVOA Board meets August 27 with several consequential items on a fairly packed agenda. The headline action is forming a Workforce Housing Committee — a signal that Mountain Village's affordable housing pressures are pushing the association toward a more structured response. The board will also vote to adopt updated policies and act on a grant request for the TMV Ice Pad. On the informational side: the dissolving of the FAB (Finance Advisory Board), a background briefing on 161CR public benefits, and an update on the Pond Improvement Plan. The 161CR item is worth watching — public benefits discussions tied to major development agreements tend to carry long tails in this valley.",
 
-  "telluride|2026-08-25|Ethics Commission - Aug 25 2026":
-    "The Ethics Commission meets August 25 to handle two items of real consequence. First, the routine: electing a new chair and vice-chair. Second, and more substantive: developing a recommendation to Town Council on whether — and how — to establish a formal Code of Conduct for Telluride officials. That recommendation traces directly to the Commission's May 18 finding in the Julia Fallman complaint against Councilperson Kristen Permakoff. The Commission found no ethics violation, but only because the current code's 'above reproach' standard lacks the behavioral specificity to support one. Staff has laid out two main paths: integrate explicit conduct language into the existing Ethics Code (Chapter 2, Article 4), where the Ethics Commission already has enforcement authority, or strengthen the Council's own Rules of Conduct, which currently has no formal penalty mechanism. The Commission can also draft its own hybrid approach. Whatever they recommend goes to Town Council for action.",
-
   "smart|2026-09-10|SMART Board of Directors":
     "The September 10, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "telluride|2026-09-14|Open Space Commission - Sep 14 2026":
     "The Open Space Commission meets Monday to work through a busy stretch of site-walk debriefs and planning. First up: a debrief from the August 10th walk that covered a potential trail alignment connecting the Bear Creek Trailhead to Firecracker Hill, beaver activity in Zone 3 of the Bear Creek Preserve, and restoration planning in Zone 1. Then a debrief from the August 17th walk on sign sizes and placements — non-content — for the Telluride Valley Floor Open Space. The commission will also prepare for two September 21st site walks: Zone 1's restoration plan and the Reach 3/USFS River Restoration Project at the Mill Creek Confluence on the Valley Floor. Rounding it out: scheduling future site walks for the ST-1 Project and wetland connectivity, the Cornet to Jud Wiebe Trail/Mill Placer CE, and High Country areas.",
-
-  "school|2026-08-25|Telluride Board of Education Monthly Meeting":
-    "The August 25 Board of Education meeting carries real weight. The most consequential item is a flood-related budget appropriation for FY 2026-27 — the board will discuss and then vote on adjusting the district's spending plan to account for flood damage, a reminder that the canyon's geography extracts its own costs. Also on the action list: approving a custodial contract, an IGA for a school housing site (a recurring pressure point for any institution trying to keep staff in this valley), and revised MLO ballot language — the mill levy override question that the district has been building toward. Policy updates get a first reading, including EL-11 and JKA. The board's annual self-assessment is on the 'Other' docket, and a full-day retreat follows the next morning at Wilkinson Public Library.",
 
   "fire|2026-09-15|Board of Directors Meeting":
     "The September 15, 2026 fire Board of Directors Meeting agenda hasn't been posted yet.",
@@ -1319,7 +1297,7 @@ const MANUAL_SUMMARIES = {
     "A full day of business for the BOCC. The most consequential item is the continued public hearing on adopting the 2024 International Codes (I-Codes) and Colorado's Model Low Energy and Carbon Code — building standards that will shape what gets built here and how. The commissioners will also take up 2027 nonprofit funding allocations, with a final proposal coming October 7. A shared-funding discussion for an intercept/bike path connector trail with Lawson Hill Property Owners is on the table, with a motion expected. The county's housing specialist delivers an update on community housing projects. The afternoon includes a follow-up on a personnel policy conflict mitigation plan for the Treasurer's Office — a thread carried over from September 19. CDOT's annual review of county roads opens the morning.",
 
   "county|2026-09-30|Board of County Commissioners Work Session":
-    "The September 30, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+    "This work session—where commissioners can discuss but not take formal action—centers on one consequential item: a proposed Employee Housing Impact Fee for San Miguel County. That's worth watching closely. The afternoon fills out with a Recreation Ranger District update from the Forest Service, a review of 13 legislative proposals Colorado Counties, Inc. is weighing for the 2027 state session, and a continued discussion on Community Support Funding for four local organizations: the Telluride Historical Museum, the Telluride Environmental Science and Engineering Laboratory (TESEL), the Telluride Institute, and the Telluride Junior Nordic Ski Program.",
 
   "telluride|2026-09-17|Open Space Commission Site Walk - Sep 17 2026":
     "The Open Space Commission heads out on foot Thursday at 4:00 PM, meeting at the Town Park vehicle bridge on East Colorado Avenue. The sole work item is a site walk through Zone 1 of Bear Creek Preserve to review the Blues & Brews Festival camping area. No votes are scheduled — this is a ground-level look before any formal action.",
@@ -1790,6 +1768,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Trump administration moves to limit fixes for systemic racism in schools",
+    source: "Telluride Times",
+    date: "September 25, 2026",
+    firstSeen: "2026-09-25",
+    newsTopic: "education",
+    copy: "The Trump administration has rolled back federal tools used to address systemic racism in schools, including rescinding a rule that let schools compare outcomes across racial groups and pulling back from dozens of school desegregation cases. The Justice Department says it has closed more than 50 such cases since January. Critics say the changes remove accountability for racial disparities in discipline and school resources.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_acb2a7b2-b8af-566a-997e-4bc32694ef79.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/bd/fbd622a4-3853-5651-8dae-e4129b0db302/6ab5f3a82bf86.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Young voices ring out",
+    source: "Telluride Times",
+    date: "September 25, 2026",
+    firstSeen: "2026-09-25",
+    newsTopic: "community",
+    copy: "The Telluride Choral Society's youth choir, the Choristers, is pushing rehearsal start to Oct. 23 this year — deliberately waiting for soccer season to wrap up so kids don't have to choose. Enrollment has grown steadily under director Tagen Kaestner, from as few as six singers to a expected dozen or more for WinterSing 2026. Grades 2–12 can register at telluridechoralsociety.org.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_875f0297-d2ac-46b4-ac8d-458cebb007cc.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/19/51924723-f468-4f33-bb7d-edd8d6028af4/6ab1303435b06.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Energy Department will spend $2 billion to squeeze more electricity from the aging power grid",
     source: "Telluride Times",
@@ -2629,54 +2631,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Federal court rejects Trump order keeping Michigan coal plant open",
-    source: "Telluride Times",
-    date: "September 11, 2026",
-    firstSeen: "2026-09-11",
-    newsTopic: "public-safety",
-    copy: "A federal appeals court ruled the Energy Department overstepped its authority by forcing Michigan's 64-year-old J.H. Campbell coal plant to stay open past its planned retirement. The court found no legitimate emergency under the law. The plant has cost roughly $259M to keep running, with those losses expected to fall on Midwest ratepayers.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_2afc4519-e9cb-5284-9705-a5d96dc6541c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/d8/7d8d2864-a91c-548a-8576-4547df4817d3/6aa4676990b4a.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "A sublime century ride returns",
-    source: "Telluride Times",
-    date: "September 11, 2026",
-    firstSeen: "2026-09-11",
-    newsTopic: "infrastructure",
-    copy: "The Mountains to the Desert Classic century ride returns September 26, raising money for the Just for Kids Foundation, which has distributed over $2.5 million to San Miguel Watershed youth programs since 2002. The fully supported, 100-mile ride runs on low-traffic paved roads from Telluride, Ridgway, or Norwood down to Gateway Canyons Resort. Registration is capped near 200 riders.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_bb880243-0caf-48b5-a24e-73e67aa3a355.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/10/910ceaf4-877f-456a-a988-456b85399991/6a9f04eb9efb5.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Reviving community and self",
-    source: "Telluride Times",
-    date: "September 11, 2026",
-    firstSeen: "2026-09-11",
-    newsTopic: "arts-culture",
-    copy: "Norwood's Wild Roots Revival returns to The Livery on Sept. 19–20, offering yoga, workshops, music, art, and whole food over equinox weekend. Now in its fourth year under organizer Julie Maynard, the event draws around 30 attendees annually and features local wellness practitioners leading sessions on movement, vision boarding, kids' crafts, and more.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_c00d23e9-e7ad-481f-9fd4-f8b7a27650dc.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/e1/4e11112d-77ee-46fa-a335-49f89fe50b11/6aa16d4ea40ef.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "‘Every river needs a champion’",
-    source: "Telluride Times",
-    date: "September 11, 2026",
-    firstSeen: "2026-09-11",
-    newsTopic: "community",
-    copy: "The San Miguel and Upper Dolores are among the last free-flowing, undammed rivers in the Rockies. Telluride ~utside hosts Trout-a-palooza annually to support Gunnison Gorge Anglers; since 2016 it's helped generate over $9M for Valley Floor river restoration. This year's event is Sept. 23 at the Sheridan ~pera House.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_e28dacce-a143-48e3-ae52-bf263e9e875b.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/c6/fc61604e-5208-49b0-9422-9e843b8b02bf/6a9779bbc08fb.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride to Lift All Fire Restrictions",
     source: "Town of Telluride",
     date: "September 17, 2026",
@@ -2695,13 +2649,13 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
   },
   {
-    title: "Town of Telluride Downgrades to Stage 1 Fire Restrictions",
-    source: "Town of Telluride",
-    date: "August 26, 2026",
-    newsTopic: "public-safety",
-    copy: "(August 25, 2026) – Following improved fire conditions across the region, Town Manager Zoe Dohnal has downgraded fire restrictions within the Town of Telluride from Stage 2 to Stage 1, effective 12:01 a.m. MT on Wednesday, August 26, 2026.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=403",
-    img: ""
+    title: "County Housing Efforts Continue on Multiple Fronts",
+    source: "San Miguel County",
+    date: "September 24, 2026",
+    newsTopic: "housing",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1415",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14821"
   },
   {
     title: "San Miguel County Adds Genasys Protect to Emergency Alerting Ecosystem",
@@ -2782,15 +2736,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "community",
     copy: "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=45",
-    img: ""
-  },
-  {
-    title: "Stage 1 Fire Restrictions In Effect",
-    source: "Town of Telluride",
-    date: "August 26, 2026",
-    newsTopic: "public-safety",
-    copy: "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 12:01 a.m. MT on Wednesday, August 25, 2026.",
-    href: "https://www.telluride.gov/AlertCenter.aspx?AID=65",
     img: ""
   },
   {
@@ -2884,7 +2829,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "September 24, 2026",
+    date: "September 25, 2026",
     firstSeen: "2026-09-11",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2895,7 +2840,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "September 24, 2026",
+    date: "September 25, 2026",
     firstSeen: "2026-09-14",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2912,17 +2857,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Fire-Restrictions-Lifted-in-Ridgway-2026-09-17.pdf",
-    img: ""
-  },
-  {
-    title: "Ridgway Seeking Candidates for 2026-2027 Youth Advisory Council",
-    source: "Town of Ridgway",
-    date: "September 11, 2026",
-    firstSeen: "2026-09-11",
-    newsTopic: "government",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Youth-Advisory-Council-Press-Release-2026-09-11.pdf",
     img: ""
   }
 ];
@@ -4053,7 +3987,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Puppy • Pyrenees, Great / Shepherd • Male",
     firstSeen: "2026-09-23",
     revealDate: "2026-09-23",
-    lastSeen: "2026-09-24"
+    lastSeen: "2026-09-25"
   }
 ];
 
@@ -5013,6 +4947,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53552021295591/huge/f421ae960369bfd1aa6d541e0eaa130654abfd6b.jpg"
   },
   {
+    title: "Pumpkin Palooza at Ridgway 1k Finish Line",
+    link: "https://events.ourayridgwayevents.com/event/pumpkin-palooza-at-ridgway-1k-finish-line",
+    description: "Voyager Youth Program presents a free, family-friendly afternoon of fall fun with pumpkin painting, face painting, games, prize opportunities and more. Pumpkin Palooza takes place in Hartwell Park alongside the Ridgway 1K and San Juan Oktoberfest. No registration is required; donations are welcome.",
+    pubDate: "2026-10-04T20:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Hartwell Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/54066523071640/huge/1f1e3f6787481a187fccaa2be86460032f20773f.jpg"
+  },
+  {
     title: "San Juan Oktoberfest 2026",
     link: "https://events.ourayridgwayevents.com/event/san-juan-oktoberfest-2026",
     description: "San Juan Oktoberfest with Live Music by Ridgway Band (opening) and BLUE CAMOOSE polka! Sunday, October 4, 2026 | Hartwell Park | Ridgway, Colorado There’s nothing quite like Ridgway in early October — bright blue skies, golden aspens and cottonwoods glowing on the hillsides, and the irresistible scent of bratwursts sizzling in Hartwell Park. That can only mean one thing: Oktoberfest has arrived! This year marks the inaugural San Juan Oktoberfest, happening Sunday, October 4, immediately following the wildly fun Ridgway 1K Rally Through the Alley. After the costumes, laughter, and downhill dash through town, the celebration continues in the park with a festival that blends Austrian tradition with Rocky Mountain charm. Picture lederhosen and dirndls, frothy steins clinking together, live music filling the autumn air, and kids laughing just as much as the adults. …",
@@ -5067,7 +5012,7 @@ const OURAY_RIDGWAY_EVENTS = [
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Ouray Community Center",
-    imageUrl: "https://localist-images.azureedge.net/photos/51579968896083/huge/c4cfc0e9259666342735abc334be44580e4c7198.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/51579968896083/huge/3675d004ddb2baf273430453088287837487e0f2.jpg"
   },
   {
     title: "Beautification Committee (OBC)",
@@ -5090,7 +5035,7 @@ const OURAY_RIDGWAY_EVENTS = [
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Ouray Community Center",
-    imageUrl: "https://localist-images.azureedge.net/photos/51579968896083/huge/c4cfc0e9259666342735abc334be44580e4c7198.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/51579968896083/huge/3675d004ddb2baf273430453088287837487e0f2.jpg"
   },
   {
     title: "A Monster Calls: Movie Night @ the Wright",
@@ -5294,6 +5239,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54035246928726/huge/df8435a1f9605f9b27f285c37e3bb1d44a375465.jpg"
   },
   {
+    title: "Talk: The Sherbino Presents: India Wood’s HIKING THE COLORADO X",
+    link: "https://events.ourayridgwayevents.com/event/talk-the-sherbino-presents-india-woods-hiking-the-colorado-x",
+    description: "Doors open at 6:00 PM; the talk begins at 6:30 PM. India Wood shares a short documentary, slide show and stories from her self-designed 1,500-mile hiking route across Colorado, including observations on the San Juan Mountains, ranching communities, public and private lands, and the challenges of a solo journey.",
+    pubDate: "2026-10-16T00:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/54066524162274/huge/48a226597b3ea784c96c139544da72ad35653f54.jpg"
+  },
+  {
     title: "ALPINE JAM",
     link: "https://events.ourayridgwayevents.com/event/alpine-jam-3576",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/",
@@ -5336,6 +5292,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Bee True You Wellness & Creative Studio",
     imageUrl: "https://localist-images.azureedge.net/photos/53940133685119/huge/12d87bcb7ab37fac8b109f8ddf888685a78d34d4.jpg"
+  },
+  {
+    title: "Mountainfilm on Tour – Montrose",
+    link: "https://events.ourayridgwayevents.com/event/mountainfilm-on-tour-montrose",
+    description: "Doors open at 2:30 PM; films begin at 3:00 PM. Mountainfilm on Tour brings an afternoon of documentary shorts about adventure, exploration, resilience and people who push the boundaries of what is possible. The Adventure Shorts program includes climbing, skiing, biking, paddling, running and other outdoor stories. Family-friendly.",
+    pubDate: "2026-10-18T21:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Montrose Pavilion",
+    imageUrl: "https://localist-images.azureedge.net/photos/54066524437755/huge/a340c3c7b6d6a9c5b6783370893f454ec37fd082.jpg"
   },
   {
     title: "THE YOUNG FABLES",
@@ -5429,6 +5396,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Adobe Inn",
     imageUrl: "https://localist-images.azureedge.net/photos/53853672137353/huge/8b0ef433dfa6ed38ee66e112e97c6806157e5e49.jpg"
+  },
+  {
+    title: "Rocky Horror Picture Show Live Shadow Cast Edition",
+    link: "https://events.ourayridgwayevents.com/event/rocky-horror-picture-show-live-shadow-cast-edition",
+    description: "Doors open at 7:30 PM; shows begin at 8:00 PM. The Rocky Horror Picture Show returns with a live local shadow cast performing alongside the film, plus audience callbacks, singing, dancing and an included venue-approved participation prop kit. Ages 18+; minors require parental permission or an accompanying parent.",
+    pubDate: "2026-10-23T02:00:00.000Z",
+    endDate: "2026-10-25",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/54066524682512/huge/e95bf2e6509f8e2bf351e2781dcc132332bdb7c2.jpg"
   },
   {
     title: "STEAM Art Explorers for Ages 5–8 in Montrose",
@@ -5600,6 +5579,28 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53048306784001/huge/b4907ccb0dd0b51c0bd862f76e556e669e3684c2.jpg"
   },
   {
+    title: "Introduction to Copper Jewelry with Emily Knickerbocker",
+    link: "https://events.ourayridgwayevents.com/event/introduction-to-copper-jewelry-with-emily-knickerbocker-2661",
+    description: "Learn the basics of handcrafted copper jewelry with Emily Knickerbocker. Students will work with copper wire and sheet metal while practicing sawing, filing, shaping, texturing and stamping, finishing with patinas, and introductory copper enameling. No prior experience is necessary; tools and materials are provided.",
+    pubDate: "2026-11-07T17:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Montrose",
+    imageUrl: "https://localist-images.azureedge.net/photos/54066522411096/huge/885e72b708524a41760d36b4ecda6d7b31bbbc06.jpg"
+  },
+  {
+    title: "Watercolor with Anita Winter: “Still Waters”",
+    link: "https://events.ourayridgwayevents.com/event/watercolor-with-anita-winter-still-waters",
+    description: "Learn to create reflections and still-water effects in watercolor with Anita Winter through demonstrations, guided exercises and individualized instruction. Participants will practice several techniques and apply them to a finished painting. A reference image is provided; participants should bring their own watercolor supplies.",
+    pubDate: "2026-11-07T17:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Annex on Cora",
+    imageUrl: "https://localist-images.azureedge.net/photos/54066522649708/huge/a35808b29295063770a1a017fa3e070e4b7d2146.jpg"
+  },
+  {
     title: "OuROCK! 2026 Climbing Festival",
     link: "https://events.ourayridgwayevents.com/event/ourock-2026-climbing-festival",
     description: "Annual local climbing community festival open to the public. This year’s event will feature: Walk-up guided climbing wall for adults and children (gear included) Live DJ Music with DJ Straylight Climbing Competition (open to all ages) Silent Auction Raffle Hand-tossed fresh baked pizza* Beer (must be 21 years and older) and other beverages* Event is free to the public, but you are invited to join Ouray Climbers Alliance as a member at the event (members get free beer and pizza plus one raffle ticket). We strive to be a minimal waste event and encourage you to bring your own cup/plate/utensil. Please show them at the kiosk to get a free raffle ticket.",
@@ -5622,6 +5623,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53897046880484/huge/13cfa3523d07ba3e5c34401b1895f185c1c548d9.jpg"
   },
   {
+    title: "Watercolor & Wine with Katey Fetch: Moonlight & Mountains",
+    link: "https://events.ourayridgwayevents.com/event/watercolor-wine-with-katey-fetch-moonlight-mountains",
+    description: "Create a moonlit mountain watercolor with Katey Fetch in a relaxed paint-and-sip class. Designed for beginners and welcoming to all experience levels, the class includes step-by-step guidance, one beverage and all art supplies.",
+    pubDate: "2026-11-13T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Annex on Cora",
+    imageUrl: "https://localist-images.azureedge.net/photos/54066522860674/huge/ec6044316283ccc798d207fc858154d0421bc0ff.jpg"
+  },
+  {
     title: "Ridgway Independent Film Fest 2026",
     link: "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-2026",
     description: "November 13 – November 15 12 Years of Fierce, Fearless, Independent Film The Ridgway Independent Film Festival (RIFF) returns in 2026 with its 12th year of celebrating bold storytelling, emerging filmmakers, and the power of community through the lens of independent film. Rooted in a volunteer-driven, grassroots effort born shortly after Ridgway became one of Colorado’s first Certified Creative Districts, RIFF continues to evolve while honoring its origins. This year, RIFF returns to its longtime home in November, taking place November 13–15, 2026, with a refreshed structure designed to create deeper connection and conversation. RIFF 2026 will open with a Friday night kickoff event, followed by two full days of film screenings on Saturday and Sunday at the historic Sherbino Theater in downtown Ridgway. …",
@@ -5632,6 +5644,72 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/52598272968905/huge/c44b2640e412b36de53d91eef3c5e204dac6a8b4.jpg"
+  },
+  {
+    title: "Ridgway Independent Film Fest: Begin Where You Are ~ Opening Night Shorts",
+    link: "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-begin-where-you-are-opening-night-shorts",
+    description: "Doors open at 4:30 PM; films begin at 5:00 PM. Opening night gathers animated and live-action short films that are local and far-flung, strange and familiar—a preview of the stories and perspectives that unfold across the festival weekend.",
+    pubDate: "2026-11-14T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/54066525035817/huge/fc713b45b42bb680b2b3330e3f10c55c6faed8bf.jpg"
+  },
+  {
+    title: "Ridgway Independent Film Fest ~ Something Was Calling Us",
+    link: "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-something-was-calling-us",
+    description: "Doors open at 9:45 AM; films begin at 10:00 AM. A short-film block about the quiet pull of love, loss, identity and change, and the unexpected paths people take toward what is missing.",
+    pubDate: "2026-11-14T17:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/54066525250878/huge/c444a33b9b713c7618425dcb61e02494cc6de407.jpg"
+  },
+  {
+    title: "Ridgway Independent Film Fest ~ The Mountains Knew Our Names",
+    link: "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-the-mountains-knew-our-names",
+    description: "Doors open at 12:45 PM; films begin at 1:00 PM. A documentary block rooted across Colorado, exploring ties between people and place, inherited histories, traditions, communities and the paths people choose.",
+    pubDate: "2026-11-14T20:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/54066525467985/huge/aeb14558baf2ca7e09ccf2907f91417a1c740cce.jpg"
+  },
+  {
+    title: "Ridgway Independent Film Fest ~ We Gathered Around the Fire",
+    link: "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-we-gathered-around-the-fire",
+    description: "Doors open at 6:15 PM; films begin at 6:30 PM. A short-film block about community and connection in ordinary places, shared spaces, small gestures and the things people build together.",
+    pubDate: "2026-11-15T01:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/54066525679973/huge/f8057aa570bb204f74619d3965a1591f3a36c571.jpg"
+  },
+  {
+    title: "Ridgway Independent Film Fest ~ We Invited the Monsters In",
+    link: "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-we-invited-the-monsters-in",
+    description: "Doors open at 9:45 AM; films begin at 10:00 AM. A short-film block mixing gothic, gruesome, funny and occasionally sweet stories, pairing tenderness with terror and vengeance with very dark humor.",
+    pubDate: "2026-11-15T17:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/54066525898104/huge/ab6fc9df31e535f3ce3ce4e1afaa3862ce728901.jpg"
+  },
+  {
+    title: "Ridgway Independent Film Fest ~ We Wandered Beyond the Firelight",
+    link: "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-we-wandered-beyond-the-firelight",
+    description: "Doors open at 1:45 PM; films begin at 2:00 PM. A short-film block exploring truth and memory, expectation and identity, and the lives people are given versus the lives they make.",
+    pubDate: "2026-11-15T21:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/54066526099851/huge/343172cafea91a01a42c75bb4bf61e850480fd58.jpg"
   },
   {
     title: "Thanksgiving Break - Ridgway Schools",
@@ -5782,17 +5860,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Market on the Plaza",
-    link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
-    description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
-    pubDate: "2026-09-23T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
-  },
   {
     title: "Town Manager Finalists Meet and Greet",
     link: "https://townofmountainvillage.com/explore/events/all-events/town-manager-finalists-meet-and-greet/",
@@ -6280,18 +6347,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/46449/mvwmplanetpic2.800x533.webp"
   },
   {
-    title: "Telluride Gold Kings",
-    link: "https://www.telluride.com/event/telluride-gold-kings/",
-    description: "Dance and sing along with the Telluride Gold Kings every Thursday this summer. Free admission!",
-    pubDate: "2026-06-11",
-    endDate: "2026-09-24",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/58285/download_9.800x533.webp"
-  },
-  {
     title: "Live Music at Alloy Kitchen",
     link: "https://www.telluride.com/event/live-music-at-alloy-kitchen/",
     description: "Free live music, four nights a week, all season long. Alloy Kitchen at Mountain Lodge Telluride hosts a rotating lineup …",
@@ -6386,28 +6441,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/49419/fireside_chat.800x533.webp"
-  },
-  {
-    title: "Trout-A-Palooza",
-    link: "https://www.telluride.com/event/troutapalooza/",
-    description: "Troutapalooza is the premier fundraiser for Gunnison Gorge Anglers and the San Miguel Valley Floor project. The event …",
-    pubDate: "2026-09-23",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/53749/download_14.800x533.webp"
-  },
-  {
-    title: "Optimize Your Brain Health With Lifestyle Medicine",
-    link: "https://www.telluride.com/event/optimize-your-brain-health-with-lifestyle-medicine/",
-    description: "Can up to half of dementia cases be prevented? Emerging evidence suggests the answer is yes. In this engaging and …",
-    pubDate: "2026-09-23",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63441/brain-health_tdotcom-2200x1237.800x533.webp"
   },
   {
     title: "Telluride Autumn Classic",
@@ -6978,24 +7011,6 @@ const LEGAL_NOTICES = [
     noticeKey: "smpa-paper-billing-fee-2026"
   },
   {
-    title: "Public Hearing -- Shandoka Lot Redevelopment Preliminary PUD, Telluride Planning & Zoning (COL-000227)",
-    entity: "Town of Telluride / Design Workshop",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The Town of Telluride Planning and Zoning Commission will hold a public hearing on September 24, 2026, at 5:30 p.m. (hybrid/Zoom) to consider a Preliminary Planned Unit Development (PUD) application for the Shandoka Lot Redevelopment Project at 860 Black Bear Rd. The application, submitted by Design Workshop on behalf of the Town of Telluride (property owner), seeks to increase certain dimensional limitations and provide public benefits on town property pursuant to LUC 6-309.F. The property is Lot L Backman Village (4.07 acres) in the Accommodations 2 zone district.",
-    deadline: "2026-09-24",
-    expires: "2026-09-24",
-    dates: "9/3",
-    papers: ["ttimes_0903"],
-    url: "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
-    address: "860 Black Bear Rd (Shandoka Lot), Telluride, CO",
-    noticeKey: "pz-shandoka-lot-pud-2026"
-  },
-  {
     title: "Water Court Application -- Finding of Reasonable Diligence, Telluride Pines Alder Creek Pump and Pipeline (26CW3043)",
     entity: "Colorado District Court, Water Division No. 4",
     entityClass: "ent-county",
@@ -7050,24 +7065,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_6e1025d7-5ad7-45a9-8530-2bda61ea94b8.html",
     address: "411 Mountain Village Blvd, 2nd Floor, Mountain Village, CO 81435",
     noticeKey: "itb-tmv-pubworks-COL000241"
-  },
-  {
-    title: "Public Hearing -- Proposed 2027 Budget, Telluride Hospital District (COL-000243)",
-    entity: "Telluride Hospital District",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "The Telluride Hospital District has submitted its proposed 2027 budget to its Board of Directors and is making it available for public inspection at 500 W. Pacific Avenue, Telluride, CO. A public hearing to consider the budget will be held at 8:30 a.m. on September 24, 2026, both in person and via Zoom. Any district elector may inspect the budget and file objections prior to final adoption.",
-    deadline: "2026-09-24",
-    expires: "2026-09-24",
-    dates: "9/17",
-    papers: ["ttimes_0917"],
-    url: "https://www.telluridenews.com/news/legals/article_6e1025d7-5ad7-45a9-8530-2bda61ea94b8.html",
-    address: "500 W. Pacific Avenue (Annex), Telluride, CO",
-    noticeKey: "budget-telluride-hospital-district-2027-COL000243"
   },
   {
     title: "RFP -- Defensive Space Forestry / Wildfire Mitigation, Village Court Apartments (COL-000229)",
@@ -7197,7 +7194,7 @@ const LEGAL_NOTICES = [
     noticeKey: "delinquent-oilgas-taxes-2025-american-helium"
   },
   {
-    title: "Public Hearing -- Adoption of 2024 International Building Code & Colorado Low Energy & Carbon Code",
+    title: "Public Hearing -- Adoption of 2024 International Building Code and Colorado Low Energy & Carbon Code (COL-000222)",
     entity: "San Miguel County Board of Commissioners",
     entityClass: "ent-county",
     entityLogo: "county",
@@ -7205,25 +7202,25 @@ const LEGAL_NOTICES = [
     iconClass: "type-rfp",
     type: "Public Notice",
     filterTag: "public-entity",
-    summary: "San Miguel County Board of Commissioners will hold a public hearing on September 16, 2026 at 9:00 AM in Telluride to consider adopting the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Community members may submit written comments (limited to one page) to the Board of Commissioners by noon on September 10, 2026. Proposed amendments are available in the meeting agenda packet at www.sanmiguelcountyco.gov.",
+    summary: "The San Miguel County Board of Commissioners will hold a public hearing on September 16, 2026, at 9:00 AM in Telluride to consider adopting the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Community members may submit written comments, but they must be received by noon on September 10, 2026, and limited to one page. Proposed amendments are available in the meeting agenda packet at sanmiguelcountyco.gov.",
     deadline: "2026-09-10T12:00:00 (written comments); Hearing: 2026-09-16T09:00:00",
     expires: "2026-09-16",
     dates: "8/27",
     papers: ["ttimes_0827"],
     url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
     address: "Telluride, Colorado (San Miguel County)",
-    noticeKey: "COL-000222-ibc-hearing"
+    noticeKey: "COL-000222-ibc-adoption-hearing"
   },
   {
     title: "RFP -- Fuel Island Canopy Construction, Norwood Road & Bridge Maintenance Yard (COL-000219)",
-    entity: "San Miguel County Road & Bridge Department",
+    entity: "San Miguel County Road & Bridge",
     entityClass: "ent-county",
     entityLogo: "county",
     icon: "🏛️",
     iconClass: "type-rfp",
     type: "Public Notice",
     filterTag: "public-entity",
-    summary: "San Miguel County Road & Bridge is seeking proposals from qualified contractors to design, engineer, permit, and construct a fuel island canopy at the Norwood Road & Bridge Maintenance Yard located at 39595 Highway 145, Norwood, CO 81423. A pre-proposal site meeting was held August 24, 2026, and written questions were due by August 26, 2026. Proposals must be submitted electronically by September 3, 2026 at 4:00 PM, with selection notification on September 7, 2026.",
+    summary: "San Miguel County Road & Bridge is seeking proposals from qualified contractors to design, engineer, permit, and construct a fuel island canopy at the Norwood Road & Bridge Maintenance Yard located at 39595 Highway 145, Norwood, CO. A pre-proposal site meeting was held August 24, 2026; written questions were due August 26, 2026. Proposals must be submitted electronically by September 3, 2026, at 4:00 PM, with selection notification expected September 7, 2026.",
     deadline: "2026-09-03T16:00:00",
     expires: "2026-09-03",
     dates: "8/27",
@@ -7241,14 +7238,14 @@ const LEGAL_NOTICES = [
     iconClass: "type-rfp",
     type: "Public Notice",
     filterTag: "public-entity",
-    summary: "San Miguel County is requesting proposals from contractors to repaint the San Miguel County Jail located at 684 County Road 63L, Telluride, CO 81435. RFP documents are available at the county website or through the Fleet & Facilities Department at 333 W. Colorado Ave, 2nd Floor, Telluride. Proposals are due by 5:00 PM on Friday, September 18, 2026, submitted either by email or in person at the Fleet & Facilities Department.",
+    summary: "San Miguel County is requesting proposals from contractors to repaint the San Miguel County Jail located at 684 County Road 63L, Telluride (Illium), CO. RFP documents are available at sanmiguelcountyco.gov/bids.aspx or through the Fleet & Facilities Department in Telluride. Proposals are due by 5:00 PM on Friday, September 18, 2026, submitted either by email or in person at the Fleet & Facilities Department.",
     deadline: "2026-09-18T17:00:00",
     expires: "2026-09-18",
     dates: "8/27",
     papers: ["ttimes_0827"],
     url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
     address: "684 County Road 63L, Telluride, CO 81435",
-    noticeKey: "COL-000224-jail-repaint-rfp"
+    noticeKey: "COL-000224-jail-repainting-rfp"
   }
 ];
 
@@ -8629,26 +8626,6 @@ function getTownAgendaLink(title, eventDate) {
 // MeetingsService (HARC stays in TELLURIDE_CACHED_DATA above). Empty until the
 // next content-refresh run. Each entry: {date,title,agendaUrl,hasAgenda,location,time}.
 const TELLURIDE_BOARD_MEETINGS = [
-  {
-    date: "September 24, 2026",
-    title: "Resident Advisory Committee",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8315",
-    hasAgenda: true,
-    location: "Green Room",
-    time: "",
-    civicwebId: 8315,
-    packetUrl: "https://telluride-co.civicweb.net/document/445347/"
-  },
-  {
-    date: "September 24, 2026",
-    title: "Planning & Zoning Commission",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104",
-    hasAgenda: true,
-    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: "",
-    civicwebId: 8104,
-    packetUrl: "https://telluride-co.civicweb.net/document/444920/"
-  },
   {
     date: "September 30, 2026",
     title: "Special Town Council",

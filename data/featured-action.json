@@ -1,26 +1,26 @@
 {
- "generated": "2026-09-24T21:24:32.743Z",
+ "generated": "2026-09-25T04:18:44.906Z",
  "pinned": false,
  "topic": "carhenge",
  "topicLabel": "Carhenge / Shandoka",
- "headline": "Carhenge / Shandoka goes before Planning & Zoning Commission on Thursday, September 24",
- "blurb": "Two work sessions anchor the September 24 P&Z meeting. First up: a proposed employee housing project at the northwest corner of Telluride Middle-High School (725 W Colorado), brought by the Telluride School District R1 under an Intergovernmental Agreement with the Town — this is still early-stage, a work session rather than a formal application.",
+ "headline": "Carhenge / Shandoka goes before HARC Meeting on Wednesday, September 30",
+ "blurb": "HARC holds a special meeting dedicated entirely to the Carhenge Redevelopment Project — the proposed new construction at 700 W Pacific Ave that has been working its way through review since at least July. Three separate Preliminary Large-Scale applications are on the table, each covering a different building cluster: Buildings A, B, and C; Buildings D1 and D2; and Buildings E1, E2, and E3.",
  "images": [],
  "deepDive": {
   "label": "Carhenge / Shandoka",
   "href": "/deep-dive-carhenge.html"
  },
  "meeting": {
-  "title": "Planning & Zoning Commission",
+  "title": "HARC Meeting",
   "sourceLabel": "Town of Telluride",
-  "date": "2026-09-24",
-  "humanDate": "Thursday, September 24",
+  "date": "2026-09-30",
+  "humanDate": "Wednesday, September 30",
   "time": "",
-  "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104",
+  "location": "Rebekah Hall, 113 W Columbia Ave",
+  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309",
   "hasAgenda": true,
-  "packetUrl": "https://telluride-co.civicweb.net/document/444920/",
-  "zoomLink": "https://us06web.zoom.us/meeting/register/pvzPtHtIRZmah22XUU2xLg",
+  "packetUrl": "",
+  "zoomLink": "",
   "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
  }
 }
