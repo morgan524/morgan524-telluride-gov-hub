@@ -497,6 +497,14 @@ const DEEP_DIVE_UPDATES = [
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-09-25",
+    title: "Federal money or local control — pick one?",
+    body: "The Gondola Leadership Committee is weighing two approaches: a federally funded path versus a locally-led one. Those aren't the same thing. Federal dollars usually come with federal strings — timelines, requirements, oversight. A locally-led project keeps more control up here but means finding the money some other way. Reasonable people land in different places on that trade. The committee is also working on a communications plan, which suggests this is still very much in motion, not decided.\n\nSo — when it comes to a project like this, which matters more to you: the funding source or who's running the show?",
+    choices: ["Keep local control", "Take the federal money", "Need more info"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-09-24",
     title: "15 units on Adams Ranch Road — enough, or not enough?",
     body: "The Design Review Board is taking up final architecture review for a 15-unit employee apartment building at 306 Adams Ranch Road. The case was continued from September, so this one's been in the room before.\n\nThe tension is familiar up here: workforce housing is badly needed, and purpose-built employee apartments are one of the few tools that actually house workers. But neighbors and design boards weigh density, scale, and fit against that need every time. Fifteen units is not nothing.\n\nSo — is 15 units at that address the right call, or does the design need more work before it moves forward?",
@@ -725,14 +733,6 @@ const DAILY_QUESTIONS = [
     title: "Child care money — how much is the county on the hook for?",
     body: "The Board of County Commissioners has a 40-minute work session item on Colorado Child Care Assistance Program funding and what its budget implications mean for San Miguel County. Child care is already scarce up here, and CCAP helps working families afford what little exists. The tension: county budgets are finite, and a deeper funding commitment means tradeoffs somewhere else. Some residents will say child care access is essential infrastructure for a workforce community. Others will want to know exactly what the county can sustain before making promises. Nothing's been decided yet — this is a discussion, not a vote.\n\nSo where do you come down: should the county lean in on child care funding, or is this a state responsibility the county shouldn't absorb?",
     choices: ["County should lean in", "State's job, not ours", "Depends on the numbers"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
-  },
-  {
-    date: "2026-08-26",
-    title: "A tent, a food truck, and 15 apartments walk into Adams Ranch Road",
-    body: "Two very different proposals are landing at 306 and 332 Adams Ranch Rd. One is a conditional use permit for a temporary tent and food truck. The other — a 15-unit employee apartment building — is big enough that its architecture review got pushed to October.\n\nPeople who want more workforce housing will say the apartments can't come fast enough. Others will want a hard look at what 15 units does to that stretch of road before anything gets approved. The tent and food truck raise their own questions about what belongs where.\n\nWhat matters most to you as these two proposals move forward?",
-    choices: ["Get the apartments built", "Slow down, look closer", "Fine with the tent, not the building", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
   }
@@ -1768,6 +1768,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Meeting the community’s needs",
+    source: "Telluride Times",
+    date: "September 25, 2026",
+    firstSeen: "2026-09-25",
+    newsTopic: "community",
+    copy: "Lone Cone Library in Norwood landed a $10,000 ALA grant — one of 836 awarded nationwide — to expand services for the deaf community, including ASL books, videos, and online resources. They've also added Hoopla for e-books and a new youth services coordinator. Community input continues at monthly meetings, next one Sept. 24 at 6 p.m.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_c5dcb27d-e944-47b0-bb05-691f64e94d53.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/75/d7564083-56c3-4dda-8b2d-31ec3c75244a/6ab546ae3ff77.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Upside in Mountain Village: Record summer revenue stirs optimism",
+    source: "Telluride Times",
+    date: "September 25, 2026",
+    firstSeen: "2026-09-25",
+    newsTopic: "government",
+    copy: "Mountain Village is heading into 2027 budget talks with some good news — revenues are projected up 8.6% year-over-year (excluding one-time contributions), driven by stronger property and sales taxes, while operating expenses rose just 2.4%. May through July marked a record summer, continuing a trend of growth since 2022. A full budget work session is set for Oct. 7.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_6ce4ab42-099e-4380-ac77-5a566cf1b4e5.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/3c/53cf51bd-4ba6-4642-b33b-e35bad85cc2b/6ab55821ed4dd.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Trump administration moves to limit fixes for systemic racism in schools",
     source: "Telluride Times",
@@ -3869,103 +3893,15 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Coffee and Climate Conversation",
-    link: "https://telluridelibrary.libcal.com/event/17502438?hs=a",
-    description: "8:30 AM – 9:30 AM · Coffee & Climate Conversations: Where Recreation Meets Resilience From big adventures to spending time with family and friends, recreation is often at the heart of our experiences on public lands. Join Sheep Mountain Alliance and EcoAction Partners for a discussion about recreation on our public lands alongside Telluride Mountain Club and Rico Trails Alliance. Learn more about what&#39;s next for trails in our region, and join us as we ask the questions: How do recreation and conservation intersect, and where do they diverge? How does recreation shape our community and values? And most importantly, how can you be a strong steward and advocate for public lands and climate across our region? Coffee, tea and pastries kindly provided.",
-    pubDate: "2026-09-24T14:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_31_13_42_00.png"
-  },
-  {
-    title: "Yin Yang Yoga with Miriah",
-    link: "https://telluridelibrary.libcal.com/event/17497568?hs=a",
-    description: "9:00 AM – 10:00 AM · Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses.  We&#39;ll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome.  Miriah has been local to Telluride area for over ten years and have been teaching yoga for six years. She owns her own herbal business, makes herbal products and co-hosts a weekly podcast. She also is an avid snowboarder, photographer, sticker artist and comedian.",
-    pubDate: "2026-09-24T15:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_08_13_53_35.jpg"
-  },
-  {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/17514630?hs=a",
-    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    pubDate: "2026-09-24T16:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
-  },
-  {
-    title: "Pilates for All Bodies",
-    link: "https://telluridelibrary.libcal.com/event/16536346?hs=a",
-    description: "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-09-24T18:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg"
-  },
-  {
-    title: "Littles On the Move",
-    link: "https://telluridelibrary.libcal.com/event/13960362?hs=a",
-    description: "3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.",
-    pubDate: "2026-09-24T21:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png"
-  },
-  {
-    title: "The Spark Lab with Telluride Theatre",
-    link: "https://telluridelibrary.libcal.com/event/17292168?hs=a",
-    description: "3:30 PM – 4:30 PM · Each week we will do a fun activity! First thursdays: Tinker Time with Pinhead Second Thursdays with EcoAction partners Third Thursday: Thursday Creativos at Ah Haa * registration required * Fourth Thursdays with Telluride Theatre",
-    pubDate: "2026-09-24T21:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_50_13.png"
-  },
-  {
-    title: "Where the Paletero Man Goes with Lucky Diaz (Online Author Talk)",
-    link: "https://telluridelibrary.libcal.com/event/17358151?hs=a",
-    description: "5:00 PM – 5:30 PM · Grab a pocketful of change and get ready to dance down the street! Join us for an energetic conversation as we celebrate the joy of community and summer fun with Latin GRAMMY-winning musician Lucky Diaz, author of the sensational bilingual picture book, Paletero Man . What's the best way to cool off on a hot summer day? Run quick and find Paletero Jos&eacute;! Follow along with our narrator as he passes through his busy neighborhood in search of the Paletero Man. But when he finally catches up with him, our narrator's pockets are empty. Oh no! What happened to his dinero? It will take the help of the entire community to get the tasty treat now. …",
-    pubDate: "2026-09-24T23:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_07_16_07_22.jpg"
-  },
-  {
-    title: "Paletero Man con Lucky Diaz (una charla con el autor en línea)",
-    link: "https://telluridelibrary.libcal.com/event/17358157?hs=a",
-    description: "6:00 PM – 6:30 PM · Agarra un pu&ntilde;ado de monedas y prep&aacute;rate para bailar por la calle. &Uacute;nete a nosotros para una en&eacute;rgica conversaci&oacute;n mientras celebramos la alegr&iacute;a de la comunidad y la diversi&oacute;n del verano con Lucky Diaz, m&uacute;sico ganador del premio Latin GRAMMY y autor del sensacional libro ilustrado biling&uuml;e, Paletero Man . &iquest;Cu&aacute;l es la mejor manera de refrescarse en un caluroso d&iacute;a de verano? &iexcl;Corre r&aacute;pido y encuentra al Paletero Jos&eacute;! Sigue a nuestro narrador mientras recorre su ajetreado vecindario en busca del Paletero Man. Pero cuando finalmente lo alcanza, los bolsillos de nuestro narrador est&aacute;n vac&iacute;os. &iexcl;Oh no! &iquest;Qu&eacute; pas&oacute; con su dinero? Se necesitar&aacute; la ayuda de toda la comunidad para conseguir la sabrosa golosina ahora. …",
-    pubDate: "2026-09-25T00:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_07_16_12_04.jpg"
-  },
-  {
     title: "What the Constitution Means to Me",
-    link: "https://telluridelibrary.libcal.com/event/17244378?hs=a",
+    link: "https://telluridelibrary.libcal.com/event/17244377?hs=a",
     description: "7:00 PM – 8:30 PM · WPL and Telluride Theatre present playwright Heidi Schreck's boundary-breaking, Obie Award-winning play that breathes new life into the United States Constitution and imagines how it can shape the next generation of Americans. Fifteen-year-old Heidi competed for college scholarships by participating in Constitutional debate competitions across the country. In this hilarious, hopeful, and achingly human play, Heidi recalls the profound relationship between four generations of women and the founding document that shaped their lives. This Tony-nominated and Pulitzer Prize finalist offers a powerful, humor-filled, and thought-provoking performance. Starring Telluride&#39;s own Julia Caulfield. Free and open to the public! Seats are not reservable. Doors at 6:30, show at 7:00 for both performances. Special thanks to Friends of the Library for supporting this free two night engagement. Their financial committment made it possible.. …",
-    pubDate: "2026-09-25T01:00:00.000Z",
+    pubDate: "2026-09-26T01:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_25_15_58_04.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_25_15_58_24.jpg"
   }
 ];
 
@@ -3999,18 +3935,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "Photon",
-    link: "https://www.alibitelluride.com/calendar#eca-event=photon",
-    description: "What started as a passion project dedicated to the late and great Stephen Hawkin...",
-    pubDate: "2026-09-24",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/05381074-07b4-41a7-a955-cd6eb787e77e/-/crop/7952x3975/0,0/-/preview/"
-  },
   {
     title: "YOPE",
     link: "https://www.alibitelluride.com/calendar#eca-event=yope-1",
@@ -4366,23 +4290,10 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "Functional Fitness - Strength & Mobility Training For Women",
-    link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
-    description: "Welcome to Ridgway's strength and mobility training + YOGA! Functional Strength & Mobility Training (for women): Tuesday & Thursday 8:15-9 am Vinyasa Yoga: Wednesday 8:15-9:15 am Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Class Structure: 5 minute warm up / 30 minute circuit workout / 10 minute cooldown stretch & mobility Vinyasa Yoga: This is a dynamic practice that will challenge, strengthen, and uplift you both physically and mentally. …",
-    pubDate: "2026-09-24T14:15:00.000Z",
-    endDate: "2026-11-19",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Weehawken Ridgway (Old Schoolhouse)",
-    imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/d76b2fb7534e91f8369b0dace133058cd22fa783.jpg"
-  },
-  {
     title: "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
     link: "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
     description: "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the International Quilt Museum in Lincoln, Nebraska. Bonnie’s work has been shown in numerous exhibits in the United States. In 2015, Bonnie’s work was in a year-long solo exhibition at the Portland Oregon International Airport. She was a solo artist at the Visions Museum of Textile Art, San Diego, in 2019. Internationally, Bonnie’s work has appeared in the Haus der Wirtschaft museum in Stuttgart, Germany, the Museum of Modern Art in Verona, Italy, and other venues in Germany, England, Ireland, France, Japan, Brazil, and the Netherlands. Bonnie’s work Tangle is part of the permanent collection of the Tuch + Technik Textilmuseum, Neumunster, Germany. …",
-    pubDate: "2026-09-24T16:00:00.000Z",
-    endDate: "2026-09-25",
+    pubDate: "2026-09-25T16:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4393,94 +4304,12 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Ongoing Exhibition: BIG BOX-Big New Work By T-Bone",
     link: "https://events.ourayridgwayevents.com/event/ongoing-exhibition-big-box-big-new-work-by-t-bone",
     description: "The Big Box Show! Bigger, better and more. This groundbreaking local art won't last long! Ridgway's own T-Bone and his quintessential colorful cardboard paintings take on new life and meaning in the Decker where they have room to stretch out and really TALK to you! Come and be delighted by the playful T-Bone experience. Stay to cool off, craft, co-work, hang out. or plan your own future exhibition or event in the space! The Decker is a unique community rental-art gallery hybrid, incubated and managed by the Town of Ridgway, in cooperation with our sister ARTSpace gallery next door.",
-    pubDate: "2026-09-24T16:00:00.000Z",
-    endDate: "2026-09-25",
+    pubDate: "2026-09-25T16:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Decker Community Room",
     imageUrl: "https://localist-images.azureedge.net/photos/53736310463128/huge/ce8867efeba0934913913ee401aff4479a074ba5.jpg"
-  },
-  {
-    title: "Ongoing: Social Justice Travel Exhibition",
-    link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-social-justice-travel-exhibition",
-    description: "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote wellness. This exhibition features new works by artists who recieved a Social Justice Grant from Telluride Arts to create work for this traveling exhibit.",
-    pubDate: "2026-09-24T16:00:00.000Z",
-    endDate: "2026-09-29",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53764349683288/huge/471bb8c36dc067ddd9b229c9e31032260184eb5e.jpg"
-  },
-  {
-    title: "Guided Tour: Historic Beaumont Hotel & Spa",
-    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
-    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
-    pubDate: "2026-09-24T19:30:00.000Z",
-    endDate: "2026-11-21",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Beaumont Hotel & Spa",
-    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
-  },
-  {
-    title: "AFTER SCHOOL ART FOR AGES 5-8",
-    link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-5-8",
-    description: "AFTER SCHOOL ART FOR AGES 5-8 Thursdays, 3:15–4:30 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 17 – October 8Session 2 (4 weeks • $85): October 22 – November 12Session 3 (3 weeks • $70): December 3 – December 17Each week, students will explore exciting themes and projects while experimenting with a wide variety of art materials—such as watercolor and acrylic paints, oil and chalk pastels, clay, collage, printmaking, and more. Through open-ended projects, students are encouraged to explore their creativity, make artistic choices, take creative risks, and discover their unique artistic voice. Our classes nurture imaginative thinking and storytelling, helping children express big ideas and emotions through visual narratives and personal creations. In addition to sparking imagination, our signature art projects support the development of fine motor skills, confidence, and social-emotional development in a fun group environment. …",
-    pubDate: "2026-09-24T21:15:00.000Z",
-    endDate: "2026-10-08",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Annex on Cora",
-    imageUrl: "https://localist-images.azureedge.net/photos/53780725919104/huge/846566299e8e325221de54dd5a54a0fd6427fbf5.jpg"
-  },
-  {
-    title: "High School Volleyball Ouray vs Nucla",
-    link: "https://events.ourayridgwayevents.com/event/high-school-volleyball-ouray-vs-nucla",
-    description: "Ouray High School will be hosting Nucla High School JV: 4:30pm - 5:30pm Varsity: 5:30pm",
-    pubDate: "2026-09-24T22:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray School",
-    imageUrl: "https://localist-images.azureedge.net/photos/53950094911567/huge/429ff9e951ad2f9afdae3f84931b848106aa4614.jpg"
-  },
-  {
-    title: "Ouray Chamber Business After Hours",
-    link: "https://events.ourayridgwayevents.com/event/ouray-chamber-business-after-hours-9080",
-    description: "IT'S BEEN A HECK OF A SUMMER! After taking a break over the summer months, the Ouray Chamber invites you to join us for our September Business After Hours! Isabella Geyer will be hosting in her home, on behalf of her business Ouray Counseling and Chantelle's business High Country Helpers! It will be great to have the community back together to share stories, hang out, and enjoy a bite and a beverage! There will be multiple giveaways, so don't miss out!",
-    pubDate: "2026-09-24T23:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "636 Main Street",
-    imageUrl: "https://localist-images.azureedge.net/photos/53799978983659/huge/ea52c8e358b57e26f19a76695d4ac28e6c8ed0a3.jpg"
-  },
-  {
-    title: "Watercolor & Wine with Katey Fetch: \"Paint the Peaks\"",
-    link: "https://events.ourayridgwayevents.com/event/watercolor-wine-with-katey-fetch-paint-the-peaks",
-    description: "Watercolor & Wine with Katey Fetch: Paint the Peaks Date: Thursday, September 24 Time: 6:00–8:00 PM Location: Cora Annex, Ridgway Tuition: $49 incl. a beverage and all supplies Registration: www.weehawkenarts.org Whether you’ve never picked up a paintbrush or you’re looking to sharpen your skills, you’ll learn basic watercolor techniques, color flowing, layering, and tips and tricks while enjoying your favorite beverage. There are no mistakes here—just creativity, laughter, and a chance to slow down and make something uniquely your own. A beverage and all supplies are included. About the Instructor: Katey Fetch Katey Fetch hails from a small town in Colorado, where she continues to learn how to be an artist. Though she went to art school, she took a long hiatus from art and is in the midst of rediscovering what art means to her. Her favorite mediums are graphite pencil and watercolor. …",
-    pubDate: "2026-09-25T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Annex on Cora",
-    imageUrl: "https://localist-images.azureedge.net/photos/53780354578802/huge/20de7f4389a6dc490aa55564b6fb62fa7b8e05b8.jpg"
-  },
-  {
-    title: "Music Bingo",
-    link: "https://events.ourayridgwayevents.com/event/music-bingo",
-    description: "Music Bingo at Floating Lotus Brewery! Join us on the 2nd & 4th Thursdays from 7–9 PM for a high-energy night of music, drinks, and bingo-style fun. Listen, mark your card, and sing along. Learn more at floatinglotusbrewery.com.",
-    pubDate: "2026-09-25T01:00:00.000Z",
-    endDate: "2026-11-13",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53790449536989/huge/a7181e9d298980d4c2377db45d06d26bb81e0b12.jpg"
   },
   {
     title: "Ridgway Farmers Market",
@@ -4493,6 +4322,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Hartwell Park",
     imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
+  },
+  {
+    title: "Guided Tour: Historic Beaumont Hotel & Spa",
+    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
+    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
+    pubDate: "2026-09-25T19:30:00.000Z",
+    endDate: "2026-11-21",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Beaumont Hotel & Spa",
+    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
   },
   {
     title: "JEAN SANDOVAL AND THE TOWNKIDS",
@@ -4672,6 +4513,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53693260359887/huge/4d3201be3b01f5eb6d9920a6793bf0d6b3b4400c.jpg"
   },
   {
+    title: "Ongoing: Social Justice Travel Exhibition",
+    link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-social-justice-travel-exhibition",
+    description: "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote wellness. This exhibition features new works by artists who recieved a Social Justice Grant from Telluride Arts to create work for this traveling exhibit.",
+    pubDate: "2026-09-28T16:00:00.000Z",
+    endDate: "2026-09-29",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53764349683288/huge/471bb8c36dc067ddd9b229c9e31032260184eb5e.jpg"
+  },
+  {
     title: "Senior Lunch by Neighbor to Neighbor",
     link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
     description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
@@ -4693,6 +4546,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Bee True You Wellness and Creative Studio",
     imageUrl: "https://localist-images.azureedge.net/photos/53197444379202/huge/26813502ab1ba3ae9f231b0cd774d101f4f32f02.jpg"
+  },
+  {
+    title: "Functional Fitness - Strength & Mobility Training For Women",
+    link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
+    description: "Welcome to Ridgway's strength and mobility training + YOGA! Functional Strength & Mobility Training (for women): Tuesday & Thursday 8:15-9 am Vinyasa Yoga: Wednesday 8:15-9:15 am Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Class Structure: 5 minute warm up / 30 minute circuit workout / 10 minute cooldown stretch & mobility Vinyasa Yoga: This is a dynamic practice that will challenge, strengthen, and uplift you both physically and mentally. …",
+    pubDate: "2026-09-29T14:15:00.000Z",
+    endDate: "2026-11-19",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Ridgway (Old Schoolhouse)",
+    imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/d76b2fb7534e91f8369b0dace133058cd22fa783.jpg"
   },
   {
     title: "Colorado Poet Laureate: Crisosto Apache Reading",
@@ -4797,6 +4662,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Floating Lotus Brewery",
     imageUrl: "https://localist-images.azureedge.net/photos/52523630382868/huge/8fc500326eed5dc630e7e4235909efe3b2751086.jpg"
+  },
+  {
+    title: "AFTER SCHOOL ART FOR AGES 5-8",
+    link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-5-8",
+    description: "AFTER SCHOOL ART FOR AGES 5-8 Thursdays, 3:15–4:30 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 17 – October 8Session 2 (4 weeks • $85): October 22 – November 12Session 3 (3 weeks • $70): December 3 – December 17Each week, students will explore exciting themes and projects while experimenting with a wide variety of art materials—such as watercolor and acrylic paints, oil and chalk pastels, clay, collage, printmaking, and more. Through open-ended projects, students are encouraged to explore their creativity, make artistic choices, take creative risks, and discover their unique artistic voice. Our classes nurture imaginative thinking and storytelling, helping children express big ideas and emotions through visual narratives and personal creations. In addition to sparking imagination, our signature art projects support the development of fine motor skills, confidence, and social-emotional development in a fun group environment. …",
+    pubDate: "2026-10-01T21:15:00.000Z",
+    endDate: "2026-10-08",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Annex on Cora",
+    imageUrl: "https://localist-images.azureedge.net/photos/53780725919104/huge/846566299e8e325221de54dd5a54a0fd6427fbf5.jpg"
   },
   {
     title: "Trivia Night",
@@ -5059,6 +4936,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray Community Center",
     imageUrl: "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg"
+  },
+  {
+    title: "Music Bingo",
+    link: "https://events.ourayridgwayevents.com/event/music-bingo",
+    description: "Music Bingo at Floating Lotus Brewery! Join us on the 2nd & 4th Thursdays from 7–9 PM for a high-energy night of music, drinks, and bingo-style fun. Listen, mark your card, and sing along. Learn more at floatinglotusbrewery.com.",
+    pubDate: "2026-10-09T01:00:00.000Z",
+    endDate: "2026-11-13",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53790449536989/huge/a7181e9d298980d4c2377db45d06d26bb81e0b12.jpg"
   },
   {
     title: "FLANNEL FEEDBACK",
@@ -5716,6 +5605,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/thanksgiving-break-ridgway-schools",
     description: "",
     pubDate: "2026-11-23T07:00:00.000Z",
+    endDate: "2026-11-24",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -7192,60 +7082,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_87c1dedd-06e4-4678-a68d-6a0116434245.html",
     address: "San Miguel County, Colorado (various oil and gas well locations)",
     noticeKey: "delinquent-oilgas-taxes-2025-american-helium"
-  },
-  {
-    title: "Public Hearing -- Adoption of 2024 International Building Code and Colorado Low Energy & Carbon Code (COL-000222)",
-    entity: "San Miguel County Board of Commissioners",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The San Miguel County Board of Commissioners will hold a public hearing on September 16, 2026, at 9:00 AM in Telluride to consider adopting the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Community members may submit written comments, but they must be received by noon on September 10, 2026, and limited to one page. Proposed amendments are available in the meeting agenda packet at sanmiguelcountyco.gov.",
-    deadline: "2026-09-10T12:00:00 (written comments); Hearing: 2026-09-16T09:00:00",
-    expires: "2026-09-16",
-    dates: "8/27",
-    papers: ["ttimes_0827"],
-    url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
-    address: "Telluride, Colorado (San Miguel County)",
-    noticeKey: "COL-000222-ibc-adoption-hearing"
-  },
-  {
-    title: "RFP -- Fuel Island Canopy Construction, Norwood Road & Bridge Maintenance Yard (COL-000219)",
-    entity: "San Miguel County Road & Bridge",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County Road & Bridge is seeking proposals from qualified contractors to design, engineer, permit, and construct a fuel island canopy at the Norwood Road & Bridge Maintenance Yard located at 39595 Highway 145, Norwood, CO. A pre-proposal site meeting was held August 24, 2026; written questions were due August 26, 2026. Proposals must be submitted electronically by September 3, 2026, at 4:00 PM, with selection notification expected September 7, 2026.",
-    deadline: "2026-09-03T16:00:00",
-    expires: "2026-09-03",
-    dates: "8/27",
-    papers: ["ttimes_0827"],
-    url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
-    address: "39595 Highway 145, Norwood, CO 81423",
-    noticeKey: "COL-000219-fuel-island-canopy-rfp"
-  },
-  {
-    title: "RFP -- San Miguel County Jail Repainting, Illium (COL-000224)",
-    entity: "San Miguel County Fleet & Facilities Department",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County is requesting proposals from contractors to repaint the San Miguel County Jail located at 684 County Road 63L, Telluride (Illium), CO. RFP documents are available at sanmiguelcountyco.gov/bids.aspx or through the Fleet & Facilities Department in Telluride. Proposals are due by 5:00 PM on Friday, September 18, 2026, submitted either by email or in person at the Fleet & Facilities Department.",
-    deadline: "2026-09-18T17:00:00",
-    expires: "2026-09-18",
-    dates: "8/27",
-    papers: ["ttimes_0827"],
-    url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
-    address: "684 County Road 63L, Telluride, CO 81435",
-    noticeKey: "COL-000224-jail-repainting-rfp"
   }
 ];
 

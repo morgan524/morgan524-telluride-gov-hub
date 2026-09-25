@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-25T04:18:44.904Z",
+ "generated": "2026-09-25T11:33:40.629Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -33,6 +33,12 @@
    "recent": [
     {
      "source": "telluride",
+     "date": "2026-09-24",
+     "title": "Planning & Zoning Commission - Sep 24 2026",
+     "snippet": "Two work sessions anchor the September 24 P&Z meeting. First up: a proposed employee housing project at the northwest corner of Telluride Middle-High School (725 W Colorado), brought by the Telluride…"
+    },
+    {
+     "source": "telluride",
      "date": "2026-09-16",
      "title": "Historic & Architectural Review Commission - Sep 16 2026",
      "snippet": "Two items stand out on this HARC agenda. First, a work session on a potential demolition and new construction application for Rebekah Hall itself — 113 W Columbia, the very building where HARC meets…"
@@ -51,6 +57,7 @@
     }
    ],
    "stale": [
+    "Carhenge / Shandoka: telluride discussed it on 2026-09-24 (\"Planning & Zoning Commission - Sep 24 2026\") but the deep dive was last edited 2026-08-17.",
     "Carhenge / Shandoka: telluride discussed it on 2026-09-16 (\"Historic & Architectural Review Commission - Sep 16 2026\") but the deep dive was last edited 2026-08-17.",
     "Carhenge / Shandoka: timeline entry \"HARC hears Shandoka's four buildings; Carhenge slips to…\" (Aug 19, 2026) is still marked upcoming but the date has passed."
    ]
@@ -91,6 +98,12 @@
    "recent": [
     {
      "source": "telluride",
+     "date": "2026-09-24",
+     "title": "Planning & Zoning Commission - Sep 24 2026",
+     "snippet": "Two work sessions anchor the September 24 P&Z meeting. First up: a proposed employee housing project at the northwest corner of Telluride Middle-High School (725 W Colorado), brought by the Telluride…"
+    },
+    {
+     "source": "telluride",
      "date": "2026-09-17",
      "title": "Special Meeting - Planning & Zoning Commission - Sep 17 2026",
      "snippet": "A special P&Z work session covering two tracks. First, the ongoing Comprehensive Plan update — consultants and staff will walk through the Existing Conditions StoryMap, review where Phase 2 community…"
@@ -106,20 +119,14 @@
      "date": "2026-09-15",
      "title": "Housing Code Update SSR",
      "snippet": "The Stakeholder Strategic Roundtable (SSR) working group convenes for its eighth session on the San Miguel County Housing Code Update — a Proposition 123-funded effort to strip out Land Use Code…"
-    },
-    {
-     "source": "county",
-     "date": "2026-09-10",
-     "title": "Planning Commission Meeting",
-     "snippet": "Three Land Use Code amendments are on the table for the Planning Commission's recommendation — covering forestry practices, oil and gas, and geothermal energy. All three are code-change items,…"
     }
    ],
    "developments": [],
    "stale": [
+    "Code Changes & Accelerated Review: telluride discussed it on 2026-09-24 (\"Planning & Zoning Commission - Sep 24 2026\") but the deep dive was last edited 2026-07-19.",
     "Code Changes & Accelerated Review: telluride discussed it on 2026-09-17 (\"Special Meeting - Planning & Zoning Commission - Sep 17 2026\") but the deep dive was last edited 2026-07-19.",
     "Code Changes & Accelerated Review: county discussed it on 2026-09-16 (\"Board of County Commissioners Meeting\") but the deep dive was last edited 2026-07-19.",
-    "Code Changes & Accelerated Review: county discussed it on 2026-09-15 (\"Housing Code Update SSR\") but the deep dive was last edited 2026-07-19.",
-    "Code Changes & Accelerated Review: county discussed it on 2026-09-10 (\"Planning Commission Meeting\") but the deep dive was last edited 2026-07-19."
+    "Code Changes & Accelerated Review: county discussed it on 2026-09-15 (\"Housing Code Update SSR\") but the deep dive was last edited 2026-07-19."
    ]
   },
   "wildfire": {
