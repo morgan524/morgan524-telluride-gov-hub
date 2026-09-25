@@ -43,6 +43,67 @@ people only until we're satisfied.
 > ⚠️ The Track key was visible in screenshots during setup — regenerate it in
 > Customer.io when convenient and re-set the secret.
 
+## New-subscriber notifications (Worker-side)
+
+Customer.io has **no built-in "email me when someone subscribes" setting** —
+its notification features are all audience-facing (subscription center, topics,
+in-app inbox) or account/billing mail to workspace members. The equivalent of
+Mailchimp's *Audience → Settings → Notifications* has to be built.
+
+Rather than depend on a Customer.io campaign (which needs a template, and
+delivers nothing at all while the workspace is in test mode), the notification
+is raised **at the source**, in the RSS-proxy Worker's `/update-profile`
+handler — the endpoint every signup and preference edit posts to.
+
+**It fires only on a `sub_*` attribute going FALSE → TRUE.** Re-saving a
+profile, editing a name, toggling a `topic_*` interest, or opting out are all
+silent. A person Customer.io has never seen (404 on the prior-state read)
+counts as newly subscribed on every list they tick.
+
+### Configuration (Worker vars — all optional, feature is off by default)
+
+| Var | Purpose |
+| --- | --- |
+| `SIGNUP_NOTIFY_WEBHOOK` | POST target. **Recommended.** The payload carries a `text` field, so a Slack incoming webhook renders it as-is; Zapier/Make and anything else get the structured fields alongside. |
+| `SIGNUP_NOTIFY_EMAIL` | Address for the email path. Requires the next var too. |
+| `SIGNUP_NOTIFY_TRANSACTIONAL_ID` | Customer.io **transactional message** id. Both this and `SIGNUP_NOTIFY_EMAIL` must be set, and the sending domain must be verified — an unverified workspace is in test mode and delivers nothing. |
+
+With none of them set, nothing runs — and the handler skips the extra
+prior-state read entirely, so signup pays no latency for a feature that's off.
+
+`CUSTOMERIO_APP_API_KEY` is required either way: the false→true diff needs the
+prior attributes, and that read is an App API call. Without it, no
+notifications fire.
+
+### Payload
+
+```json
+{
+  "text": "New Livable Telluride subscriber: ada@example.com (Ada) -- Weekly Update, Newsletter",
+  "event": "new_subscription",
+  "email": "ada@example.com",
+  "newly_subscribed": ["sub_weekly_update", "sub_newsletter"],
+  "first_name": "Ada",
+  "region": "",
+  "at": "2026-08-23T15:10:33.069Z"
+}
+```
+
+### Guarantees
+
+- **A notification can never break a signup.** Every failure path is swallowed,
+  and the send runs in `ctx.waitUntil()` so it adds no latency to the response.
+  Verified: with the webhook host throwing, `/update-profile` still returns
+  `200 {ok:true}`.
+- **It never fires on a failed save** — the send is gated on `cioIdentify`
+  returning `ok`.
+- **It never guesses.** If the prior-state read fails for any reason other than
+  a clean 404, `newlyOn` stays empty and nothing is sent. Silence is preferred
+  to a false alarm.
+
+The payload contains a subscriber's email address, so point
+`SIGNUP_NOTIFY_WEBHOOK` only at an endpoint you control.
+
 ## Attribute schema (trial source of truth)
 
 People are identified by **email** (lowercased). Each interest is a boolean
