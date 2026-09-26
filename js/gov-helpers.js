@@ -1780,6 +1780,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "The Patio is open",
+    source: "Telluride Times",
+    date: "September 26, 2026",
+    firstSeen: "2026-09-26",
+    newsTopic: "housing",
+    copy: "A new restaurant called The Patio has opened in the outdoor space above O'Bannon's on Spruce Street, where The Bistro used to be. It's aiming for affordable, approachable food — think smash burgers and draft beer for around $20 — with kitchen hours running 11 a.m. to 11 p.m. The ownership group also plans to take over the O'Bannon's space after January 1st and eventually open a New York-style deli in the adjacent Kamruz gallery storefront.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/business/article_bd4b50e9-3f70-42ff-a0e9-bd9259f061ee.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/82/1829827b-0a30-4901-ba35-44decc9ecd84/6ab44cb105703.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Sheridan Opera House announces holiday acts",
     source: "Telluride Times",
     date: "September 26, 2026",
@@ -5598,6 +5610,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
+  },
+  {
+    title: "NEW With Weehawken: Beat & Step: West African Dance, Drum & Body Percussion ~ with performances in The Nutcracker Remixed!",
+    link: "https://events.ourayridgwayevents.com/event/new-with-weehawken-beat-step-west-african-dance-drum-body-percussion-with-performances-in-the-nutcracker-remixed",
+    description: "Beat & Step: West African Dance, Drum & Body Percussion is an energetic and interactive class that combines traditional West African dance, drumming, and body percussion into one exciting experience. Students will learn dance combinations, explore traditional drumming rhythms that tell stories, and create music using their hands, feet, body, drums, and voice. Along the way, they'll develop coordination, rhythm, musicality, focus, memory, confidence, and teamwork while experiencing the rich cultural traditions of West Africa. No previous dance or music experience is required—just curiosity, energy, and a willingness to learn. Students enrolled in this performance class will showcase what they've learned in our winter production. Dress Code: Students should wear comfortable clothing that allows for plenty of movement. Athletic clothing such as T-shirts, leggings, athletic pants, or shorts is recommended. Please avoid jeans or restrictive clothing. Wear comfortable athletic shoes or sneakers that are clean and reserved for class. …",
+    pubDate: "2026-11-25T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Montrose",
+    imageUrl: "https://localist-images.azureedge.net/photos/53483890616270/huge/dd89f2f9028ca228db911b8e16c50dc39897358f.jpg"
   }
 ];
 
