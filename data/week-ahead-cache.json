@@ -1,26 +1,30 @@
 {
-  "hash": "9e174d5a7a52c459006112b21f38f84a8743f85a",
-  "lede": "The biggest thing on the calendar this week is Carhenge — the proposed redevelopment at 700 W. Pacific Avenue hits two separate hearings on September 30: a special HARC session reviewing preliminary architecture for all building clusters, and a Town Council appeal hearing on the lot subdivision that a law firm challenged just two weeks after P&Z approved it. Alongside that, the Gondola Leadership Committee takes up a genuinely consequential choice between federal funding and local project control, and the County Commissioners dig into a proposed Employee Housing Impact Fee in a work session Tuesday.",
+  "hash": "f9cc1443103a318abc236fc52a963b72a0166111",
+  "lede": "The biggest thing on the calendar this week is a pair of back-to-back hearings on the Carhenge redevelopment at 700 W. Pacific — a special HARC session reviewing preliminary architecture for the proposed multi-building project, followed immediately by a Town Council appeal of the lot subdivision that has to get settled before any of it can move forward. The Gondola Leadership Committee also faces a genuine fork in the road on September 28th, weighing federal funding against local financing for project delivery. Woven into the week are the Original Thinkers festival and a watershed restoration talk at the Sherbino.",
   "notable": [
     {
       "id": 1,
-      "stake": "Council decides: federal dollars with strings or local financing for the gondola."
+      "stake": "Council chooses between federal dollars or local control for gondola delivery."
     },
     {
       "id": 5,
-      "stake": "HARC reviews three preliminary large-scale applications for the Carhenge redevelopment."
+      "stake": "HARC reviews three separate Preliminary Large-Scale applications for Carhenge redevelopment."
     },
     {
       "id": 6,
-      "stake": "Town Council hears appeal that could block the Carhenge lot consolidation entirely."
+      "stake": "Council decides appeal that controls whether Carhenge lot subdivision stands."
     },
     {
       "id": 7,
-      "stake": "County could advance a new Employee Housing Impact Fee affecting future development."
+      "stake": "Commissioners discuss proposed Employee Housing Impact Fee for unincorporated county."
     },
     {
       "id": 8,
-      "stake": "Final architecture review for 15 employee apartments and 4 new multifamily units."
+      "stake": "Final architecture review for 15 workforce apartments and four new multifamily units."
+    },
+    {
+      "id": 9,
+      "stake": "2027 General Fund and Capital Fund contours take shape before formal adoption."
     }
   ]
 }
