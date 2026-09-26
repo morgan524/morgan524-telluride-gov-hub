@@ -341,6 +341,16 @@ function checkCrossSourceDateConflict(ctx) {
           perArrayDates.get(g.array).add(g.iso);
         }
         if ([...perArrayDates.values()].some(s => s.size > 1)) continue;
+        // A MULTI-DAY RUN is not a disagreement either. When one source lists
+        // the event as a span (start + endDate) that contains every date the
+        // other sources carry, they're naming different nights of the same
+        // engagement. (2026-09-25: "What the Constitution Means to Me" —
+        // Telluride.com lists Sep 24–25, Wilkinson carries only the second
+        // night, Sep 25 — was flagged High.)
+        const spans = group
+          .map(g => ({ s: g.iso, e: g.endRaw ? isoOf(ctx.localDate, g.endRaw) : null }))
+          .filter(x => x.e && x.e > x.s);
+        if (spans.some(sp => dates.every(d => d >= sp.s && d <= sp.e))) continue;
         // Same weekday exactly one week apart is the other shape a weekly
         // series takes: each source carries ONE occurrence, from different
         // weeks (KOTO the 18th, Ouray/Ridgway the 25th — both Fridays). A real
@@ -620,6 +630,11 @@ async function checkAI(ctx) {
     // own schedule page, so flagging it burns a Medium every single month.
     `Do NOT flag a Board of Education Work Session and a Board of Education regular/monthly meeting ` +
     `sharing a date — that board routinely holds the work session and then the meeting on the same day. ` +
+    // 2026-09-25: the reviewer called Sheridan's "Oak Street Park SummerSHOW
+    // Series" mislabeled for a Sep 24 date. It's the organizer's own series
+    // name (it runs into late September); we can't and shouldn't rename it.
+    `Do NOT flag an organizer's series or program name for not matching the calendar season or month ` +
+    `(e.g. a "SummerSHOW Series" or "Summer Concert" date in late September is fine) — that is the name the organizer uses. ` +
     `Be conservative — no speculation. Return STRICT JSON only, an array of ` +
     `{"severity":"High|Medium|Low","category":"...","item":"<title> (<date>)","problem":"...","suggestedFix":"..."} ` +
     `(empty array [] if nothing is clearly wrong).\n\nDATA:\n` +
