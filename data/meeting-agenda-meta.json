@@ -1,12 +1,4 @@
 {
-  "county|2026-08-26|Board of County Commissioners Work Session": {
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/869/files/agenda/1971",
-    "zoomUrl": "https://us02web.zoom.us/meeting/register/9OtfsijQQWSJMrVmAUrDCw",
-    "meetingId": "858 7914 5422",
-    "passcode": "509931",
-    "phone": "719-359-4580"
-  },
   "med|2026-09-11|Board Work Session": {
     "sv": 4,
     "agendaUrl": null,
@@ -102,14 +94,6 @@
     "passcode": "704358",
     "phone": "970-728-3844"
   },
-  "telluride|2026-08-26|Public Art Commission - Aug 26 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8300",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/j/84265567776?pwd=P1j50JyBNUh3Yh0s6i573T4slkNZR9.1",
-    "meetingId": "842 6556 7776",
-    "passcode": "392496.",
-    "phone": "301-715-8592"
-  },
   "tmvoa|2026-08-27|TMVOA Board of Directors Meeting": {
     "sv": 4,
     "agendaUrl": "https://tmvoa.org/site/assets/files/4851/tmvoa_board_meeting_agenda_8_27_26_revised.pdf",
@@ -188,18 +172,6 @@
     "meetingId": "861 6987 1704",
     "passcode": "281002.",
     "phone": "346-248-7799"
-  },
-  "telluride|2026-08-26|Resident Advisory Committee - Aug 26 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8304",
-    "zoomUrl": "https://us06web.zoom.us/j/83515721292?pwd=UWdbpZwQcmiOOtH3Ktbdarl9CZyHjm.1",
-    "meetingId": "835 1572 1292",
-    "passcode": "983442",
-    "phone": "970-728-2496",
-    "sv": 4
-  },
-  "school|2026-08-26|Telluride Board of Education Monthly Meeting": {
-    "agendaUrl": "https://files.smartsites.parentsquare.com/3403/82626_board_retreat_packet.pdf",
-    "sv": 4
   },
   "norwood|2026-09-21|Planning and Zoning Commission Meeting": {
     "sv": 4,
@@ -358,7 +330,7 @@
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132",
     "sv": 4,
-    "ph": "b2e198717ae40e47"
+    "ph": "606a000116078bce"
   },
   "telluride|2026-10-06|Town Council - Oct 06 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044",
@@ -609,6 +581,10 @@
     "meetingId": "860 4935 8611",
     "passcode": "048535",
     "phone": "970-728-3174",
+    "sv": 4
+  },
+  "telluride|2026-09-28|Open Space Commission Site Walk - Sep 28 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8322",
     "sv": 4
   }
 }

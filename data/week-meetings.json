@@ -1,25 +1,5 @@
 [
   {
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "title": "Town Council Meeting -- Special Meeting",
-    "date": "2026-09-25",
-    "time": "",
-    "location": "Town Hall, 455 Mountain Village Blvd, Suite A",
-    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/49970/september_25-_2026_special_town_council_meeting_agenda.pdf",
-    "packetUrl": "",
-    "link": "https://townofmountainvillage.com/site/assets/files/49970/september_25-_2026_special_town_council_meeting_agenda.pdf",
-    "hasAgenda": true,
-    "summary": "A special Friday session — just one item: an executive session to discuss selecting and setting employment terms for a new Town Manager. The personnel discussion is closed to the public under Colorado's open meetings law, which permits closed sessions for this kind of hiring negotiation. Council convenes at 8:00 AM and adjourns at 3:00 PM, suggesting a lengthy deliberation behind closed doors.",
-    "zoomLink": "",
-    "zoomMeetingId": "",
-    "zoomPasscode": "",
-    "zoomPhone": "",
-    "livestream": "https://media.avcaptureall.cloud/?customerGuid=f6f590a7-5acc-4d32-9928-ad9ae0d02e06",
-    "commentEmail": "council@mtnvillage.org",
-    "hook": ""
-  },
-  {
     "source": "county",
     "sourceLabel": "San Miguel County",
     "title": "Open Space Commission",
@@ -37,6 +17,26 @@
     "zoomPhone": "970-728-3174",
     "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams",
     "commentEmail": "bocc@sanmiguelcountyco.gov",
+    "hook": ""
+  },
+  {
+    "source": "telluride",
+    "sourceLabel": "Town of Telluride",
+    "title": "Open Space Commission Site Walk",
+    "date": "2026-09-28",
+    "time": "",
+    "location": "Meet at Rebekah Hall, 113 W Columbia Ave",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8322",
+    "packetUrl": "https://telluride-co.civicweb.net/document/445557/",
+    "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8322",
+    "hasAgenda": true,
+    "summary": "The Open Space Commission is trading the meeting room for the mountain on September 28th — a site walk up Tomboy Road, meeting first at Rebekah Hall on West Columbia before heading out. No formal votes or approvals are on the agenda; this is a worksession in the field, giving commissioners a ground-level look at the high country terrain along that corridor.",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams",
+    "commentEmail": "townclerk@telluride.gov",
     "hook": ""
   },
   {
@@ -777,6 +777,26 @@
     "zoomPhone": "",
     "livestream": "",
     "commentEmail": "",
+    "hook": ""
+  },
+  {
+    "source": "county",
+    "sourceLabel": "San Miguel County",
+    "title": "Open Space Commission Meeting",
+    "date": "2026-10-26",
+    "time": "",
+    "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1058/files",
+    "packetUrl": "",
+    "link": "https://sanmiguelcoco.portal.civicclerk.com/event/1058/files",
+    "hasAgenda": true,
+    "summary": "",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams",
+    "commentEmail": "bocc@sanmiguelcountyco.gov",
     "hook": ""
   }
 ]
