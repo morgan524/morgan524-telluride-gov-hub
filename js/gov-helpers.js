@@ -3108,6 +3108,15 @@ const LOCAL_NEWS_FEATURED = [
 
 const BLOG_POSTS = [
   {
+    title: "The Town Wrote the Rules, and Apparently, They’re for Everyone Else",
+    date: "Sep 27, 2026",
+    href: "https://livabletelluride.org/digest/one-off/carhenge-rules-2026-09-27.html",
+    image: "https://livabletelluride.org/assets/Carhenge/carhenge-lots-aerial.png?v=20260927",
+    excerpt: "The Town’s own plan for Carhenge is 220 units. The 1979 agreements the Town signed allow 157. HARC hears it Wednesday. On September 30, the Town’s design proposal for Carhenge goes before HARC, and the Town of Telluride remains the applicant, asking the Town of Telluride for permission. Erase the line between Lots 34 and 34B and you have a single 4.1-acre parcel — and the contract the Town signed in 1979 says what happens to the density when you do.",
+    category: "Newsletter",
+    source: "one-off"
+  },
+  {
     title: "Last Call on the Shandoka Survey",
     date: "Aug 17, 2026",
     href: "https://livabletelluride.org/digest/one-off/shandoka-survey-2026-08-17.html",
