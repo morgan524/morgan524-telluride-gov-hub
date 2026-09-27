@@ -798,5 +798,25 @@
     "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams",
     "commentEmail": "bocc@sanmiguelcountyco.gov",
     "hook": ""
+  },
+  {
+    "source": "telluride",
+    "sourceLabel": "Town of Telluride",
+    "title": "Town Council",
+    "date": "2026-10-27",
+    "time": "",
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045",
+    "packetUrl": "",
+    "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045",
+    "hasAgenda": false,
+    "summary": "The October 27, 2026 Town Council agenda hasn't been posted yet.",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams",
+    "commentEmail": "townclerk@telluride.gov",
+    "hook": ""
   }
 ]

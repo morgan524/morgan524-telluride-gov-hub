@@ -1,18 +1,18 @@
 {
-  "hash": "f9cc1443103a318abc236fc52a963b72a0166111",
-  "lede": "The biggest thing on the calendar this week is a pair of back-to-back hearings on the Carhenge redevelopment at 700 W. Pacific — a special HARC session reviewing preliminary architecture for the proposed multi-building project, followed immediately by a Town Council appeal of the lot subdivision that has to get settled before any of it can move forward. The Gondola Leadership Committee also faces a genuine fork in the road on September 28th, weighing federal funding against local financing for project delivery. Woven into the week are the Original Thinkers festival and a watershed restoration talk at the Sherbino.",
+  "hash": "c87506a9aff257a2e317200cd697ae596868e72b",
+  "lede": "The biggest thing on the docket this week is Carhenge — the proposed redevelopment at 700 W. Pacific Avenue gets two separate hearings on September 30: HARC takes up the preliminary architecture review for the full building cluster, while a special Town Council session hears an appeal of the P&Z-approved lot subdivision that has to hold before any of it moves forward. Alongside that, the Gondola Leadership Committee weighs a genuinely consequential delivery choice on federal-versus-local project control, the County commissioners dig into a proposed Employee Housing Impact Fee, and the Town kicks off its 2027 budget work sessions.",
   "notable": [
     {
       "id": 1,
-      "stake": "Council chooses between federal dollars or local control for gondola delivery."
+      "stake": "Committee votes on federal vs. local control for gondola project delivery."
     },
     {
       "id": 5,
-      "stake": "HARC reviews three separate Preliminary Large-Scale applications for Carhenge redevelopment."
+      "stake": "HARC reviews three preliminary large-scale applications for Carhenge redevelopment buildings."
     },
     {
       "id": 6,
-      "stake": "Council decides appeal that controls whether Carhenge lot subdivision stands."
+      "stake": "Council hears appeal that could block or advance the Carhenge lot consolidation entirely."
     },
     {
       "id": 7,
@@ -20,11 +20,11 @@
     },
     {
       "id": 8,
-      "stake": "Final architecture review for 15 workforce apartments and four new multifamily units."
+      "stake": "Final architecture review vote on 15 employee apartments and 4 new multifamily units."
     },
     {
       "id": 9,
-      "stake": "2027 General Fund and Capital Fund contours take shape before formal adoption."
+      "stake": "2027 General and Capital Fund priorities take shape before formal adoption begins."
     }
   ]
 }
