@@ -748,16 +748,6 @@ const NORWOOD_CACHED_DATA = [
     note: "Next scheduled meeting -- agenda posted before the meeting."
   },
   {
-    date: "November 11, 2026",
-    time: null,
-    title: "Board of Trustees Meeting",
-    agendaUrl: null,
-    packetUrl: null,
-    special: false,
-    board: "bot",
-    note: "Next scheduled meeting -- agenda posted before the meeting."
-  },
-  {
     date: "November 16, 2026",
     time: null,
     title: "Planning and Zoning Commission Meeting",
