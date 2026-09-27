@@ -1,9 +1,9 @@
 {
- "generated": "2026-09-27T16:45:51.495Z",
+ "generated": "2026-09-27T21:11:18.551Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
-   "lastUpdated": "2026-08-17",
+   "lastUpdated": "2026-09-27",
    "upcoming": [
     {
      "source": "telluride",
@@ -57,8 +57,6 @@
     }
    ],
    "stale": [
-    "Carhenge / Shandoka: telluride discussed it on 2026-09-24 (\"Planning & Zoning Commission - Sep 24 2026\") but the deep dive was last edited 2026-08-17.",
-    "Carhenge / Shandoka: telluride discussed it on 2026-09-16 (\"Historic & Architectural Review Commission - Sep 16 2026\") but the deep dive was last edited 2026-08-17.",
     "Carhenge / Shandoka: timeline entry \"HARC hears Shandoka's four buildings; Carhenge slips to…\" (Aug 19, 2026) is still marked upcoming but the date has passed."
    ]
   },
