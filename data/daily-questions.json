@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-09-27",
+    "title": "Wildlife and wildfire — same meeting, same town",
+    "body": "The Ecology Commission meets October 7th with two things on the table: human-wildlife interactions and the ripple effects of Ordinance #1640, Telluride's new wildfire resiliency code amendment. Those two topics aren't as unrelated as they sound. Wildfire mitigation — clearing vegetation, hardening structures — changes habitat. Some residents see that as a necessary trade for fire safety. Others worry about what gets lost ecologically when you engineer the landscape for human protection. Neither concern is wrong. So which should drive the decisions up here when they pull in opposite directions?",
+    "choices": [
+      "Fire safety has to come first",
+      "Ecology can't be an afterthought",
+      "They can be balanced",
+      "It's complicated"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-09-26",
     "title": "The county wants to haul material and build trails — at the same time",
     "body": "The Board of County Commissioners has a work session coming up that lumps together trail construction for the Lawson Hill Connector, material hauling, a fuel island canopy, and jail painting — all in one procurement conversation. Some will see efficient government: bundle the work, move faster. Others will wonder whether pairing a trail project with jail maintenance and fuel infrastructure is the right way to weigh priorities or spend public money. Nothing's been decided yet — this is a work session.\n\nWhen county projects get bundled like this, does that make the process smoother, or does it make it harder to scrutinize what's actually being approved?",
@@ -421,21 +436,6 @@
       "Keep it all under one commission",
       "Split arts and assistance funding",
       "Open the process up more",
-      "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-08-28",
-    "title": "One hospital, two sites — or just one?",
-    "body": "The Telluride Hospital District board is taking up a Two Site Model for the new facility — meaning what gets built could be split between locations rather than consolidated in one place. They're also weighing a Letter of Intent with CommonSpirit Health, a large Catholic health system, which could shape the whole partnership framework going forward. Neither item is a final vote yet. Some residents will like the flexibility of two sites; others will worry about cost, coordination, or what a Catholic health system partnership might mean for certain services. So — one site or two, and does the partner matter to you?",
-    "choices": [
-      "One site, keep it simple",
-      "Two sites makes sense",
-      "The partner matters most",
       "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",
