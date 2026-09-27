@@ -1,8 +1,4 @@
 {
- "27badac59cdbfd3f": {
-  "lede": "Blues & Brews takes over Town Park this weekend, which means the valley is loud and alive in the best way — and if you're heading to the festival, take fifteen minutes to help assemble Emergency Go Kits for vulnerable families across San Miguel, Ouray, and Montrose Counties right there on-site. Over in Ridgway, Old Man Polly plays live Saturday, and Colona Community Church is throwing its 114th Annual Harvest Dinner — free to all, out at the Colona Stockyard.",
-  "at": "2026-09-12"
- },
  "3b2f52cb032e70a6": {
   "lede": "The biggest thing on the calendar this week is the Telluride Housing Authority Subcommittee's special meeting Monday, where members will wrestle with what to do about subpar bedrooms in mitigation units — including windowless rooms at Element 52 — a question that gets at how far written policy has drifted from conditions on the ground. Wednesday is the heavier day for meetings: HARC takes up a work session on potentially demolishing and rebuilding Rebekah Hall, the very building where they meet; the BOCC tackles a view plain MOU with Mountain Village and seed funding for a new Chamber; and the SSR working group holds its eighth session on the county Housing Code Update. Mountain Village's Town Council meets Thursday on a structural change to how MVHA fees get set, and Stillhouse Junkies play the Wright Opera House in Ouray that same evening.",
   "at": "2026-09-12"
@@ -158,5 +154,9 @@
  "897bb26b76f9f601": {
   "lede": "The big pull this weekend is Friday night at the **Sheridan Opera House**, where **Pink Talking Fish** weaves Pink Floyd, Talking Heads, and Phish into one seamless show — a rare kind of night for a venue that size. Over in Ouray, the town's 150th birthday hits its stride with a free Saturday concert at **Fellin Park** featuring **Big Head Todd and the Monsters** with **Hazel Miller & The Collective** backed by the San Juans. Friday in Ridgway, the **First Friday Art Walk** rolls through downtown with galleries open and a free opening reception for Michelle Montague's show **Containment** at **The Sherbino** from 5 to 7 PM. Then Sunday, pull on a costume and run — or rather stumble — downhill through six blocks at the **Ridgway 1K** before **San Juan Oktoberfest** and polka band **Blue Camoose** close it out in Hartwell Park.",
   "at": "2026-09-26"
+ },
+ "dbc9cd0db102495f": {
+  "lede": "Friday night, **Pink Talking Fish** brings their fusion of Pink Floyd, Talking Heads, and Phish to the **Sheridan Opera House** — that alone is worth circling on the calendar. Over in Ouray, the town's sesquicentennial is hitting its stride with a black-tie gala at the **Beaumont Hotel** on Friday and a free Saturday afternoon concert in **Fellin Park** headlined by **Big Head Todd and the Monsters** with **Hazel Miller & The Collective** opening up. Sunday in Ridgway, the **Ridgway 1K Rally Through the Alley** turns a six-block downhill run into a costumed, bacon-and-donut-fueled party that rolls right into **San Juan Oktoberfest** — a fine way to close out the weekend.",
+  "at": "2026-09-27"
  }
 }
