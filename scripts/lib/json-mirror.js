@@ -82,7 +82,7 @@ const MIRROR_GOVDATA_ARRAYS = [
 // the bot arrays these change only by human edit — after editing gov-data.js,
 // run `node scripts/mirror-json.js` and commit, or the json-mirror CI test
 // fails. content-refresh also re-mirrors them each run as a self-heal.
-const MIRROR_GOVDATA_OBJECTS = ['LAND_USE_ISSUES', 'GONDOLA_DATA'];
+const MIRROR_GOVDATA_OBJECTS = ['LAND_USE_ISSUES', 'GONDOLA_DATA', 'MEETING_LINKS'];
 
 // BLOG_POSTS -> blog-posts.json
 function mirrorFileName(varName) {

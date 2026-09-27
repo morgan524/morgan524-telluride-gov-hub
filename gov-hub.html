@@ -161,6 +161,7 @@
   if (!window.LTData) { list.innerHTML = '<div class="lt-data-error">This section failed to load. Please refresh in a minute.</div>'; return; }
   var esc = LTData.esc, safe = LTData.safeUrl;
   var MON = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+  var MEETING_LINKS = {};   // hand-curated extra doc buttons, keyed source|date|title
   var meetings = [], srcFilter = '', govShowAll = false;
   // ISO date 5 business days (Mon–Fri) ahead of today — the initial cutoff;
   // "Show more" reveals everything past it (Morgan 2026-07-23).
@@ -268,6 +269,12 @@
       acts += m.packetUrl
         ? '<a class="abtn primary" href="' + esc(safe(m.packetUrl)) + '" download target="_blank" rel="noopener">&#128230; Agenda Packet &darr;</a>'
         : '<span class="abtn empty" title="Agenda packet not yet posted" aria-disabled="true">&#128230; Agenda Packet</span>';
+      // Hand-curated extra documents for this meeting (gov-data MEETING_LINKS,
+      // keyed source|date|title). Rendered as outline buttons so they read as
+      // supporting material, not as the Town's own agenda.
+      (MEETING_LINKS[m.source + '|' + m.date + '|' + m.title] || []).forEach(function (d) {
+        if (d && d.href && d.label) acts += '<a class="abtn" href="' + esc(safe(d.href)) + '" target="_blank" rel="noopener">&#128196; ' + esc(d.label) + '</a>';
+      });
       if (m.livestream) acts += '<a class="abtn live" href="' + esc(safe(m.livestream)) + '" target="_blank" rel="noopener">&#9654; Livestream</a>';
       if (!m.hasAgenda && (m.agendaUrl || m.link)) acts += '<a class="abtn" href="' + esc(safe(m.agendaUrl || m.link)) + '" target="_blank" rel="noopener">Meeting info</a>';
       // Add-to-calendar (.ics) — Morgan 2026-07-23. Meetings without a time
@@ -330,7 +337,8 @@
     });
   }
 
-  LTData.load(['week-meetings']).then(function (data) {
+  LTData.load(['week-meetings', 'meeting-links']).then(function (data) {
+    MEETING_LINKS = data['meeting-links'] || {};
     meetings = (data['week-meetings'] || []).filter(function (m) { return m.date >= LTData.todayMT(); });
     renderEntityFilter();
     render();

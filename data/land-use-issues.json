@@ -1,14 +1,14 @@
 {
   "carhenge": {
-    "lastUpdated": "2026-08-17",
+    "lastUpdated": "2026-09-27",
     "label": "Carhenge / Shandoka",
     "heroImage": "https://ehq-production-us-california.imgix.net/6b1af98643c2eb1d96ea48d001eba309fb722ec3/original/1773791842/3923590257fa65a36b9b6893f6d1adc5_Carhenge-Lot-Header.png?auto=compress%2Cformat&w=1200",
     "heroAlt": "Carhenge Lot Redevelopment site plan showing building layout, green spaces, and pedestrian connections",
     "heroCredit": "Image: Town of Telluride / Engage Telluride",
     "intro": "Two of the most significant in-town redevelopment projects are advancing simultaneously: Carhenge (700 W Pacific) and Shandoka (Lot L). Both propose replacing surface parking with mixed-use neighborhoods combining housing, community space, and structured parking through the PUD and subdivision process.",
-    "statusTitle": "Shandoka is the main item this week: HARC takes up Preliminary Large Scale hearings on all four buildings on August 19, with a 3:00 PM site walk on the lot beforehand. Carhenge has been continued to September.",
-    "statusCopy": "The two projects have swapped places. Shandoka has moved from a July 15 work session to formal Preliminary Large Scale review, split across two hearings: Buildings 1 and 2, then Buildings 3 and 4, on Town-owned Lot L at 860 Black Bear Rd, in the Accommodations 2 zone, with Design Workshop as applicant. Carhenge is not being heard: its Preliminary Large-Scale hearing on Buildings A, B and C, already continued from July 15, is continued again to a date in September still to be set. Story poles stood on the Shandoka lot in mid-August, and the drawings in the August 19 packet are substantially updated from what the public saw earlier. The open questions are unchanged: density, height and massing, what the units will actually cost, parking, traffic, and flood and groundwater.",
-    "nextStep": "HARC, Wednesday August 19: a site walk at 3:00 PM at 860 Black Bear Rd (the Shandoka Lot), then the hearing at 5:30 PM at Rebekah Hall, 113 W Columbia Ave, and on Zoom. Both are open to everyone. HARC reviews design: height, mass, scale, materials and context. Those are exactly the things still movable at this stage. We encourage you to share your thoughts on this parking garage and housing project with the Town Council as well, since Council makes the final call.",
+    "statusTitle": "Two Carhenge hearings on the same day: Town Council takes up the appeal of the lot line vacation at 10:00 AM on September 30, and HARC reviews the design that evening at 5:30 PM. Both are at Rebekah Hall.",
+    "statusCopy": "The appeal, filed August 6 by Sphere Law Firm for Karen Stratman, Lu Holland and the Chair 7 Community Coalition, challenges the July 23 P&Z approval consolidating Lots 34 and 34B. The Appellants' Pre-Hearing Brief argues that LUC 5-202.C.3 required the Town Attorney to determine the applicant's right to submit before the application ever reached P&Z, and that no such determination appears anywhere in the record. That evening HARC takes up the design itself, split across three applications covering eight buildings. The September packet requests no PUD variations and reports compliance on every dimensional line — a change from the spring, when the Town sought relief from the 30,000 sq ft per-structure limit for Buildings D and E. The underlying questions are unchanged: density against the 1979 Backman Village limits, height and massing, parking, traffic, and flood and groundwater.",
+    "nextStep": "Wednesday, September 30, at Rebekah Hall, 113 W Columbia Ave. Town Council hears the appeal at 10:00 AM; HARC considers the development application at 5:30 PM. Both are open to the public and both take written comment at townclerk@telluride.gov. Council reviews only the record compiled before P&Z; HARC reviews design — height, mass, scale, materials and context.",
     "metrics": [
       {
         "label": "What to follow",
@@ -65,6 +65,18 @@
       }
     ],
     "docs": [
+      {
+        "title": "Appellants' Pre-Hearing Brief — Carhenge Appeal (Sep 25, 2026)",
+        "copy": "Filed by Sphere Law Firm for Karen Stratman, Lu Holland and the Chair 7 Community Coalition in the appeal of the July 23 P&Z approval. Argues LUC 5-202.C.3 required the Town Attorney to determine the applicant's right to submit before the application reached P&Z, and that the record contains no such determination. Asks Council to reverse or remand, and to leave the validity of the Backman Village Plat and Covenants to the courts.",
+        "tag": "C7CC",
+        "href": "https://livabletelluride.org/assets/Carhenge/appellants-pre-hearing-brief-2026-09-25.pdf"
+      },
+      {
+        "title": "HARC Agenda Packet: Carhenge Preliminary Large Scale (Sep 30, 2026)",
+        "copy": "The full 170-page packet for the September 30 HARC hearing, covering all eight buildings across three separate applications. The applicant reports compliance on every dimensional line and requests no PUD variations.",
+        "tag": "Carhenge",
+        "href": "https://telluride-co.civicweb.net/document/445284/"
+      },
       {
         "title": "HARC Agenda Packet: Shandoka Preliminary Large Scale (Aug 19, 2026)",
         "copy": "The full packet for the August 19 hearing, including the substantially updated Shandoka drawings for Buildings 1 and 2 and Buildings 3 and 4. This is the current design of record. The earlier Alternative 2 concept below is what it replaced.",
@@ -152,29 +164,21 @@
     ],
     "meetings": [
       {
-        "date": "Aug 19, 2026",
-        "time": "3:00 PM",
-        "title": "Site Walk: Shandoka Lot, open to the public",
+        "date": "Sep 30, 2026",
+        "time": "10:00 AM",
+        "title": "Town Council: appeal of the Carhenge lot line vacation",
         "source": "Town of Telluride",
-        "location": "860 Black Bear Rd (the Shandoka Lot)",
-        "href": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020",
+        "location": "Hybrid / Rebekah Hall, 113 W Columbia Ave",
+        "href": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313",
         "zoom": ""
       },
       {
-        "date": "Aug 19, 2026",
+        "date": "Sep 30, 2026",
         "time": "5:30 PM",
-        "title": "HARC: Shandoka Preliminary Large Scale, Buildings 1-4",
+        "title": "HARC: Carhenge Preliminary Large Scale, all eight buildings",
         "source": "Town of Telluride",
         "location": "Hybrid / Rebekah Hall, 113 W Columbia Ave",
-        "href": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020",
-        "zoom": ""
-      },
-      {
-        "date": "Aug 27, 2026",
-        "title": "Planning & Zoning Commission, next regular meeting",
-        "source": "Town of Telluride",
-        "location": "Hybrid / Rebekah Hall, 113 W Columbia Ave",
-        "href": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8102",
+        "href": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309",
         "zoom": ""
       }
     ],
