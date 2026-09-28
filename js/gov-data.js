@@ -690,15 +690,6 @@ const NORWOOD_CACHE_DATE = '2026-09-28';
 
 const NORWOOD_CACHED_DATA = [
   {
-    date: "September 21, 2026",
-    time: null,
-    title: "Planning and Zoning Commission Meeting",
-    agendaUrl: "https://www.norwoodtown.com/files/d3a7e2221/09.21.2026+P%26Z+BOA+AGENDA.pdf",
-    packetUrl: null,
-    special: false,
-    board: "pz"
-  },
-  {
     date: "September 22, 2026",
     time: null,
     title: "Norwood Water Commission Meeting",

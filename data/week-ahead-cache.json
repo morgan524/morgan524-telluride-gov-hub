@@ -1,26 +1,26 @@
 {
-  "hash": "346436c6ac782974236a716ac50c6b66db210027",
-  "lede": "The biggest thing on the calendar this week is a pair of special meetings on Tuesday, September 30th that put the Carhenge redevelopment at 700 W. Pacific Avenue front and center — HARC takes up the preliminary architecture review for the project's multiple building clusters while Town Council holds an appeal hearing on the underlying lot subdivision that makes any of it possible. The Gondola Leadership Committee meets Sunday to weigh federal funding versus local financing for the gondola project, and the County commissioners dig into a proposed Employee Housing Impact Fee on Tuesday. On the lighter side, Original Thinkers kicks off Thursday and First Friday brings live music and gallery openings to close out the week.",
+  "hash": "d0104e5e752151cf4d62d87d8920ae1cec65603e",
+  "lede": "The biggest thing on the calendar this week is the Carhenge redevelopment, which hits two separate bodies in one day — September 30 — when HARC reviews three preliminary large-scale building applications for 700 W. Pacific Ave and the Town Council simultaneously holds an appeal hearing on the lot subdivision that underlies the whole project. Elsewhere, the Gondola Leadership Committee faces a real fork in the road on September 28, choosing between federal funding with federal strings or local financing with local control. The County's work session on September 30 also takes up a proposed Employee Housing Impact Fee, which could have broad consequences for how growth gets paid for across San Miguel County.",
   "notable": [
     {
       "id": 1,
-      "stake": "Council weighs federal strings vs. local control for gondola financing."
+      "stake": "Committee votes on federal vs. local financing model for the gondola project."
     },
     {
       "id": 5,
-      "stake": "HARC reviews three Carhenge building clusters in preliminary large-scale hearing."
+      "stake": "HARC reviews three preliminary large-scale building applications for Carhenge redevelopment."
     },
     {
       "id": 6,
-      "stake": "Council appeal could overturn P&Z's lot consolidation, stalling Carhenge redevelopment."
+      "stake": "Council hears appeal of P&Z's lot consolidation approval — Carhenge project hangs on outcome."
     },
     {
       "id": 7,
-      "stake": "County discussing new Employee Housing Impact Fee — a major workforce housing policy decision."
+      "stake": "Commissioners weigh proposed Employee Housing Impact Fee for unincorporated San Miguel County."
     },
     {
       "id": 8,
-      "stake": "Final architecture review for 15 employee apartments and 4 new multifamily units."
+      "stake": "Final architecture reviews for 15 employee apartments and four new multifamily units."
     }
   ]
 }
