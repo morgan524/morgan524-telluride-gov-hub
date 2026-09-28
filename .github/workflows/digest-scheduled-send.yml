@@ -43,7 +43,26 @@ name: Digest Scheduled Send
 # exactly 09 — the approval-lock + duplicate-sent-broadcast checks are what
 # actually keep this safe, so a late (or repeated) firing that day is just a
 # normal send, or a no-op if one already went out.
+# 2026-09-28: BOTH cron layers failed on the same morning. None of this
+# workflow's four Monday crons ran at all (0 runs recorded), and the Worker's
+# Cloudflare crons did not fire either — /cron-check confirmed every gate
+# would have passed, no send happened, and scheduled() raised none of the
+# issues it raises on skip or failure. A Cloudflare API audit
+# (worker-cron-audit.yml) confirms all three triggers ARE registered, so the
+# schedulers themselves are the unreliable part, not the configuration.
+#
+# The fix is to stop depending on a cron firing in a particular minute. The
+# workflow_run trigger below runs this job after every Content Refresh (which
+# fires 8x a day and demonstrably does run, even when delayed). A workflow_run
+# is an event, not a scheduler slot. It falls through to the same guard as a
+# scheduled run, so every gate still applies: before 09:00 Denver or a non
+# Mon/Fri weekday exits immediately, an unapproved digest still never sends,
+# and the duplicate gate makes every run after a send a no-op that records
+# sent=true (so the tripwire closes rather than fires).
 on:
+  workflow_run:
+    workflows: ["Content Refresh"]
+    types: [completed]
   schedule:
     - cron: '0 15 * * 1'    # Mon 15:00 UTC = 09:00 MDT (summer) — primary
     - cron: '12 15 * * 1'   # Mon 15:12 UTC — backup #1
@@ -96,7 +115,7 @@ jobs:
             echo "override=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          # Scheduled: proceed once it's on or after 09:00 America/Denver (a
+          # Scheduled OR workflow_run: proceed once it's on or after 09:00 America/Denver (a
           # delayed cron firing later the same morning/afternoon still counts —
           # see the REDUNDANT TRIGGERS note above), and map the weekday to a digest.
           HOUR="$(TZ='America/Denver' date +%H)"
