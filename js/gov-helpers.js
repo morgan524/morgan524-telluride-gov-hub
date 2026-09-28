@@ -297,7 +297,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132","sv":4,"ph":"606a000116078bce"},
 
   "telluride|2026-10-06|Town Council - Oct 06 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044","sv":4,"ph":"b1a5735b6973c790"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/FzTNzG02TT6y-M9RZcn60w","meetingId":"818 0787 9405","passcode":"424441.","phone":"719) 359-4580"},
 
   "mv|2026-10-07|Town Council Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -309,7 +309,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8067","sv":4,"ph":"b351f6bb6fbe13ad"},
 
   "telluride|2026-10-07|Telluride Housing Authority Subcommittee - Oct 07 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8164","sv":4,"ph":"fbf369f84f691ffa"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8164","sv":4,"ph":"b7e0282d7f4ed4f5"},
 
   "county|2026-10-07|Board of County Commissioners Meeting":
     {"sv":4,"ph":"a12dfd2ce826475e"},
@@ -348,7 +348,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-10-13|Special Town Council Budget - Oct 13 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8307","sv":4,"ph":"379522c5b474925d"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8307","sv":4,"ph":"6a080e4b265b9c85"},
 
   "norwood|2026-10-14|Board of Trustees Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -456,7 +456,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"1ff606174e68cca5"},
 
   "telluride|2026-10-27|Town Council - Oct 27 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045","sv":4,"ph":"cb806a618bfc61da"}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045","sv":4,"ph":"32e2fb93c90d2ccb"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -815,10 +815,10 @@ const MEETING_PREVIEWS = {
     "Council is expected to meet for a regular session on October 27, 2026. Key related matters include a new $2.00 monthly paper billing fee from San Miguel Power Association and a request for proposals for consulting services to review Telluride's employee rental housing policies.",
 
   "county|2026-09-28|Open Space Commission Meeting":
-    "The Open Space Commission is expected to discuss the Lawson Hill Connector Trail Project, for which the county has issued a request for proposals. Commissioners may also review a pending lot line adjustment application for Lawson Hill PUD Lots 320A and 320B submitted on behalf of property owners John and Dianna Reams.",
+    "The Open Space Commission is expected to discuss the Lawson Hill Connector Trail Project, for which the county has issued a request for proposals. Commissioners may also address related land use matters, including a pending lot line adjustment application for Lawson Hill PUD Lots 320A and 320B.",
 
   "county|2026-09-28|Open Space Commission":
-    "The Open Space Commission is expected to review meeting minutes, receive updates on the organizational chart and budget, discuss joint focus areas, and identify priority project cuts ahead of a November 9 budget deadline. Members will also select a date for a meet-and-greet with the county Board of County Commissioners."
+    "The Open Space Commission is expected to review August meeting minutes, receive updates on the organizational chart and budget, discuss joint focus areas, and prioritize projects for the 2026 work plan ahead of the November 9 budget deadline. The commission will also select a date for a meet-and-greet with county leadership."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1018,7 +1018,7 @@ const SMC_ALERTS = [
 const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-27';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-28';
 const LEGAL_NOTICES_CACHE_DATE = '2026-09-27';
 
 const MANUAL_SUMMARIES = {
@@ -1173,7 +1173,7 @@ const MANUAL_SUMMARIES = {
     "The October 5, 2026 Open Space Commission agenda hasn't been posted yet.",
 
   "telluride|2026-10-06|Town Council - Oct 06 2026":
-    "The October 6, 2026 Town Council agenda hasn't been posted yet.",
+    "The morning work session takes up automated license plate reader cameras — the Flock Safety system — with Chief Marshal Josh Comte presenting. That's a conversation worth watching; ALPR technology tends to generate real debate about privacy and public safety wherever it lands. On the formal agenda, Council holds a public hearing on extending the vesting period for property rights at 221 W Colorado, a project whose Certificate of Appropriateness expires October 18. Second reading of an ethics code amendment (Municipal Code Chapter 2, Article 4) is also up for a vote. Board appointments fill seats on both the Planning and Zoning Commission and HARC. The afternoon closes with the Town Attorney evaluation in executive session.",
 
   "mv|2026-10-07|Town Council Meeting":
     "The October 7, 2026 Mountain Village Town Council Meeting agenda hasn't been posted yet.",
@@ -1224,7 +1224,7 @@ const MANUAL_SUMMARIES = {
     "The October 13 Mountain Village Merchant Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-10-13|Special Town Council Budget - Oct 13 2026":
-    "The October 13 Special Town Council Budget meeting agenda hasn't been posted yet.",
+    "The October 13, 2026 Special Town Council Budget agenda hasn't been posted yet.",
 
   "norwood|2026-10-14|Board of Trustees Meeting":
     "The October 14, 2026 Norwood Board of Trustees Meeting agenda hasn't been posted yet.",
@@ -4552,6 +4552,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53975670057489/huge/75be37bbb2b6bd7ba17f7754e11da5a0eaf5930c.jpg"
   },
   {
+    title: "First Friday at The Sherbino: Donny Morales + Cody Russell",
+    link: "https://events.ourayridgwayevents.com/event/first-friday-at-the-sherbino-donny-morales-cody-russell",
+    description: "Make The Sherbino one of your stops during Ridgway’s First Friday Art Walk on Friday, October 2! We’re opening the doors for a FREE evening of live music featuring Donny Morales, joined by special guest Cody Russell. Come downtown, wander the galleries, grab dinner or a drink, and settle in for some great live music at The Sherbino. LIVE MUSIC SCHEDULE 5:30–6:30 PM — Set 1 Break — Perfect timing to catch the talk + reading happening at the Decker Room as part of First Friday 7:15–8:15 PM — Set 2 The Sherbino Ridgway, Colorado FREE EVENT, thanks to support from Ridgway FUSE Come for one set, stay for both, or make an evening of it and explore everything happening around Ridgway for First Friday Art Walk. No ticket needed — just show up, bring some friends, and enjoy a great night of live music in downtown Ridgway. …",
+    pubDate: "2026-10-02T23:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/54093107883137/huge/2e66d4460f0e5494a62c56da6fdce5859934120a.jpg"
+  },
+  {
     title: "Roma Ransom – Live at Floating Lotus Brewery",
     link: "https://events.ourayridgwayevents.com/event/roma-ransom-live-at-floating-lotus-brewery",
     description: "Great music should do three things: connect us to the past, inspire us to envision the future, and root us fully in the present. Roma Ransom does all three. The duo blends old-time traditional ballads with European influences—particularly Romanian music—while creating a sound distinctly their own. Grace Easley’s sultry, sweet vocals and the duo’s wide instrumental palette move naturally from intimate listening-room moments to lively festival energy. Over the past decade, Roma Ransom has toured throughout North America, performing more than 200 shows a year and appearing at festivals alongside acts including Larry & His Flask and Leftover Salmon.",
@@ -4935,6 +4946,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
+    title: "Teen Top Rope Climbing",
+    link: "https://events.ourayridgwayevents.com/event/teen-top-rope-climbing",
+    description: "A guided top rope climbing program for teens, led by Basecamp Ouray Mountain Guides at a local outdoor site. Participants will meet at the gazebo across from the library, with details, a schedule, and a packing list sent to registrants by email in advance.",
+    pubDate: "2026-10-14T15:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/54082874930523/huge/077cb77cd39e2cbb06ed46053a13ccc07c5611ce.jpg"
+  },
+  {
     title: "Obsession: Movie Night @ the Wright",
     link: "https://events.ourayridgwayevents.com/event/obsession-movie-night-the-wright",
     description: "Obsession: Movie Night @ the Wright WHEN?Wednesday, October 14 Doors at 6:30 PM | Movie at 7:00 PM WHERE?Wright Opera House 472 Main St., Ouray, Colorado RUN TIME: 1 hour, 49 minutes RATING: R ABOUT THE FILM Obsession (2025) is a supernatural horror film about Bear, a music-store employee whose wish for his childhood friend Nikki to fall in love with him becomes something far darker—and far more dangerous—than he imagined. A twisted, bloody, and sharply funny nightmare about desire, control, and the terrible things that happen when getting exactly what you want turns out to be the worst possible outcome. WHY SEE IT?Because a love story with a monkey’s-paw problem is never just a love story. HOW?Tickets: $5 In-person screening at the historic Wright Opera House Concessions available Part of Movie Night @ the historic Wright Opera House — bringing film, community, and conversation to downtown Ouray since 1909.",
@@ -5162,6 +5184,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53860846025163/huge/937b6538c82ba8eff32aac54b7325895b4cde3f4.jpg"
   },
   {
+    title: "Solkattu Workshop",
+    link: "https://events.ourayridgwayevents.com/event/solkattu-workshop",
+    description: "Learn an ancient rhythmic vocalization system with experts David and Arlyn Alderdice. Step, clap, and vocalize together using this fun and accessible method to deepen your relationship with music and life.",
+    pubDate: "2026-10-25T20:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "United Church of the San Juans",
+    imageUrl: "https://localist-images.azureedge.net/photos/53020661090978/huge/40ac3b3b0cbad4ea627f2474983b044d7e46f15a.jpg"
+  },
+  {
     title: "Teen Takeover at Ouray Hot Springs Pool",
     link: "https://events.ourayridgwayevents.com/event/teen-takeover-at-ouray-hot-springs-pool",
     description: "Teen Takeover at Ouray Hot Springs Pool is an evening event giving middle and high school students dedicated time to enjoy the pool facility with swimming, basketball, races on the Wibit, games, music, and food. The event runs in two separate sessions — one for middle schoolers and one for high schoolers — and is free for Ouray Hot Springs members.",
@@ -5197,15 +5230,15 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52092171660517/huge/0e628304026c92db25e8df01849c962ac902a3b4.jpg"
   },
   {
-    title: "Sherb Literary Living Room featuring Pam Houston with her new book: \"Animals Taught Me Everything\"",
-    link: "https://events.ourayridgwayevents.com/event/sherb-literary-living-room-featuring-pam-houston-with-her-new-book-animals-taught-me-everything",
-    description: "Doors at 6:00 PM; talk at 6:30 PM. Join the Sherbino Literary Living Room for author Pam Houston and her new book, Animals Taught Me Everything. Drawing on encounters with horses, dogs, elephants, big cats and other animals, Houston reflects on what animals can teach us about presence, joy, love, rest, death and our relationship with the living world. Houston is the award-winning author of Deep Creek, Cowboys Are My Weakness and other works. Seated event. Tickets: $15.",
+    title: "Sherb Literary Living Room featuring Pam Houston with her new book: “Animals Taught Me Everything”",
+    link: "https://events.ourayridgwayevents.com/event/sherb-literary-living-room-featuring-pam-houston-with-her-new-book-animals-taught-me-everything-7659",
+    description: "Doors: 6:00 PM || Talk starts: 6:30 PM || $15 entry Setting: Seated Join us for our Literary Living Room as Pam Houston features her just-published book, Animals Taught Me Everything. What can a wagging tail and soaring wings teach us about a life well lived? From Icelandic mares and Irish wolfhounds to elephants, leopards, hyenas, and a desert-adapted lioness named Charlie, Pam Houston has learned life’s most important lessons from animals. How to play. How to rest. How to love. How to die. How to be present with the dying. How to be present with the living and with the Earth. How to find joy in the least likely places. How to find joy, literally, everywhere. With playful sincerity, Houston finds power and promise in the teachings of our fellow creatures and reminds us that animals are here for us, every day and everywhere. …",
     pubDate: "2026-10-28T00:30:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "The Sherbino",
-    imageUrl: "https://localist-images.azureedge.net/photos/53693236517688/huge/5e1d72eeca9295c11775fe98c87711a043b81570.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/54093161228645/huge/7e89b3abffd49ff677ff84078f716777d776bb9b.jpg"
   },
   {
     title: "Weapons: Movie Night @ the Wright.",
@@ -8272,10 +8305,11 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "October 6, 2026",
     title: "Town Council",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
-    civicwebId: 8044
+    civicwebId: 8044,
+    packetUrl: "https://telluride-co.civicweb.net/document/445576/"
   },
   {
     date: "October 7, 2026",

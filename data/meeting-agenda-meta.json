@@ -305,7 +305,10 @@
   "telluride|2026-10-06|Town Council - Oct 06 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044",
     "sv": 4,
-    "ph": "b1a5735b6973c790"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/FzTNzG02TT6y-M9RZcn60w",
+    "meetingId": "818 0787 9405",
+    "passcode": "424441.",
+    "phone": "719) 359-4580"
   },
   "mv|2026-10-07|Town Council Meeting": {
     "sv": 4,
@@ -324,7 +327,7 @@
   "telluride|2026-10-07|Telluride Housing Authority Subcommittee - Oct 07 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8164",
     "sv": 4,
-    "ph": "fbf369f84f691ffa"
+    "ph": "b7e0282d7f4ed4f5"
   },
   "county|2026-10-07|Board of County Commissioners Meeting": {
     "sv": 4,
@@ -391,7 +394,7 @@
   "telluride|2026-10-13|Special Town Council Budget - Oct 13 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8307",
     "sv": 4,
-    "ph": "379522c5b474925d"
+    "ph": "6a080e4b265b9c85"
   },
   "norwood|2026-10-14|Board of Trustees Meeting": {
     "sv": 4,
@@ -564,6 +567,6 @@
   "telluride|2026-10-27|Town Council - Oct 27 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045",
     "sv": 4,
-    "ph": "cb806a618bfc61da"
+    "ph": "32e2fb93c90d2ccb"
   }
 }

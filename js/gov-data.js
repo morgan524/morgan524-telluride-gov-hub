@@ -147,7 +147,7 @@ const COUNTY_CACHED_DATA = [
     time: "9:30 AM",
     title: "Board of County Commissioners Meeting",
     type: "bocc",
-    location: "5634 Cty Road H1, Egnar Fire Station, Egnar, CO 81325",
+    location: "333 West Colorado Ave, 2nd Floor, Telluride, CO 81423",
     civicClerkId: 888,
     note: null
   },
@@ -165,7 +165,7 @@ const COUNTY_CACHED_DATA = [
     time: "9:30 AM",
     title: "Board of County Commissioners Work Session",
     type: "bocc",
-    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    location: "5634 Cty Road H1, Egnar Fire Station, Egnar, CO 81325",
     civicClerkId: 858,
     note: null
   },
