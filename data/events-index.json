@@ -189,8 +189,8 @@
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-09-29",
     "time": "6:00 PM",
-    "location": "The Well, 122 S Aspen, Telluride",
-    "town": "Telluride",
+    "location": "The Well, 122 S Aspen",
+    "town": "",
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
@@ -400,6 +400,19 @@
     "desc": "Trivia Night at Floating Lotus Brewery! Join us on the 1st & 3rd Thursdays from 7–9 PM for a lively night of questions, drinks, and friendly competition. Grab a table, bring your team, and learn more at floatinglotusbrewery.com.",
     "type": "Food & Drink",
     "endDate": "2026-11-20"
+  },
+  {
+    "title": "Pickleball Nights",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-10-01",
+    "time": "7:00-9:00 PM",
+    "location": "Telluride Racket Club",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "Thursday night pickleball, no experience necessary. All supplies provided.",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Ken Gentry & the Companions",
@@ -869,8 +882,8 @@
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-10-06",
     "time": "6:00 PM",
-    "location": "The Well, 122 S Aspen, Telluride",
-    "town": "Telluride",
+    "location": "The Well, 122 S Aspen",
+    "town": "",
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
@@ -1011,6 +1024,19 @@
     "desc": "Music Bingo at Floating Lotus Brewery! Join us on the 2nd & 4th Thursdays from 7–9 PM for a high-energy night of music, drinks, and bingo-style fun. Listen, mark your card, and sing along. Learn more at floatinglotusbrewery.com.",
     "type": "Food & Drink",
     "endDate": "2026-11-13"
+  },
+  {
+    "title": "Pickleball Nights",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-10-08",
+    "time": "7:00-9:00 PM",
+    "location": "Telluride Racket Club",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "Thursday night pickleball, no experience necessary. All supplies provided.",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Ouray County MAC Group Meeting",
@@ -1359,8 +1385,8 @@
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-10-13",
     "time": "6:00 PM",
-    "location": "The Well, 122 S Aspen, Telluride",
-    "town": "Telluride",
+    "location": "The Well, 122 S Aspen",
+    "town": "",
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
@@ -1470,6 +1496,19 @@
     "source": "Town of Norwood",
     "desc": "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather, share a meal, and connect with neighbors. This recurring community event takes place in Norwood and is organized through…",
     "type": "Community"
+  },
+  {
+    "title": "Pickleball Nights",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-10-15",
+    "time": "7:00-9:00 PM",
+    "location": "Telluride Racket Club",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "Thursday night pickleball, no experience necessary. All supplies provided.",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Talk: The Sherbino Presents: India Wood's HIKING THE COLORADO X",
@@ -1686,8 +1725,8 @@
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-10-20",
     "time": "6:00 PM",
-    "location": "The Well, 122 S Aspen, Telluride",
-    "town": "Telluride",
+    "location": "The Well, 122 S Aspen",
+    "town": "",
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
@@ -1800,6 +1839,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "An evening of Pumpkins & Flowers at The Adobe Inn! Kick off fall with a little hands-on flower arranging. Join San Juan Blooms for our Pumpkins + Flowers Workshop, where you’ll sip a cocktail, enjoy delicious appetizers, and build your own…",
     "type": "Talks & Classes"
+  },
+  {
+    "title": "Pickleball Nights",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-10-22",
+    "time": "7:00-9:00 PM",
+    "location": "Telluride Racket Club",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "Thursday night pickleball, no experience necessary. All supplies provided.",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Rocky Horror Picture Show Live Shadow Cast Edition",
@@ -2020,8 +2072,8 @@
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-10-27",
     "time": "6:00 PM",
-    "location": "The Well, 122 S Aspen, Telluride",
-    "town": "Telluride",
+    "location": "The Well, 122 S Aspen",
+    "town": "",
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
@@ -2079,6 +2131,19 @@
     "source": "Town of Norwood",
     "desc": "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather and share a meal together. This recurring community event provides both nourishment and social connection for Norwood's…",
     "type": "Community"
+  },
+  {
+    "title": "Pickleball Nights",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-10-29",
+    "time": "7:00-9:00 PM",
+    "location": "Telluride Racket Club",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "Thursday night pickleball, no experience necessary. All supplies provided.",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "JELLY BOWL BAND",
@@ -2160,6 +2225,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Weekly Young Adult Gathering",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-11-03",
+    "time": "6:00 PM",
+    "location": "The Well, 122 S Aspen",
+    "town": "",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Telluride Rotary Club Meeting",
     "href": "https://portal.clubrunner.ca/3291",
     "date": "2026-11-04",
@@ -2171,6 +2249,19 @@
     "source": "Telluride Rotary",
     "desc": "Telluride Rotary Club meets the 1st & 3rd Wednesdays at 6:00 PM (gathering at 5:30) — 1st Wednesday at Mountain Lodge in Mountain Village, 3rd Wednesday at an announced Telluride location. A service club supporting scholarships, Youth…",
     "type": "Family & Kids"
+  },
+  {
+    "title": "Pickleball Nights",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-11-05",
+    "time": "7:00-9:00 PM",
+    "location": "Telluride Racket Club",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "Thursday night pickleball, no experience necessary. All supplies provided.",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "November - Art Opening: Film Stills-Ridgway Independent Film Fest",
