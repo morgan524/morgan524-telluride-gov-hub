@@ -198,7 +198,7 @@ const COUNTY_CACHED_DATA = [
   },
   {
     date: "October 28, 2026",
-    time: "4:00 PM",
+    time: "5:30 PM",
     title: "Board of County Commissioners Work Session",
     type: "bocc",
     location: "Placerville School House, Placerville",
@@ -290,8 +290,8 @@ const TMVOA_CACHED_DATA = [
     date: "September 29, 2026",
     title: "TMVOA Board of Directors Meeting",
     board: "board",
-    agendaUrl: null,
-    packetUrl: null,
+    agendaUrl: "https://tmvoa.org/site/assets/files/4867/tmvoa_board_meeting_agenda_9_29_26.pdf",
+    packetUrl: "https://tmvoa.org/site/assets/files/4867/tmvoa_board_meeting_packet_9_29_26.pdf",
     location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
