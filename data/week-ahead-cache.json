@@ -1,30 +1,26 @@
 {
-  "hash": "a52dc50a6a18e0cf934234f8dd4297254d23321e",
-  "lede": "The biggest thing on the calendar this week is Carhenge — the proposed redevelopment of 700 W. Pacific Avenue gets two separate hearings on September 30: a special HARC session reviewing preliminary architecture for multiple building clusters, and a special Town Council hearing on the lot-subdivision appeal that Sphere Law filed after P&Z's July approval. While that plays out, the Gondola Leadership Committee takes up a consequential choice between federal funding and local project delivery, and county commissioners work-session a proposed Employee Housing Impact Fee that could reshape how San Miguel County funds workforce housing.",
+  "hash": "346436c6ac782974236a716ac50c6b66db210027",
+  "lede": "The biggest thing on the calendar this week is a pair of special meetings on Tuesday, September 30th that put the Carhenge redevelopment at 700 W. Pacific Avenue front and center — HARC takes up the preliminary architecture review for the project's multiple building clusters while Town Council holds an appeal hearing on the underlying lot subdivision that makes any of it possible. The Gondola Leadership Committee meets Sunday to weigh federal funding versus local financing for the gondola project, and the County commissioners dig into a proposed Employee Housing Impact Fee on Tuesday. On the lighter side, Original Thinkers kicks off Thursday and First Friday brings live music and gallery openings to close out the week.",
   "notable": [
     {
       "id": 1,
-      "stake": "Council must weigh federal funding strings against local control for gondola delivery."
+      "stake": "Council weighs federal strings vs. local control for gondola financing."
     },
     {
       "id": 5,
-      "stake": "HARC votes on preliminary architecture for multiple Carhenge building clusters."
+      "stake": "HARC reviews three Carhenge building clusters in preliminary large-scale hearing."
     },
     {
       "id": 6,
-      "stake": "Town Council hears appeal that could block or reshape the Carhenge lot consolidation."
+      "stake": "Council appeal could overturn P&Z's lot consolidation, stalling Carhenge redevelopment."
     },
     {
       "id": 7,
-      "stake": "Commissioners discuss proposed Employee Housing Impact Fee — could affect development costs countywide."
+      "stake": "County discussing new Employee Housing Impact Fee — a major workforce housing policy decision."
     },
     {
       "id": 8,
-      "stake": "Final architecture review for 15 employee apartments and 4 multifamily units in Mountain Village."
-    },
-    {
-      "id": 9,
-      "stake": "2027 General Fund and Capital Fund contours take shape before formal budget adoption."
+      "stake": "Final architecture review for 15 employee apartments and 4 new multifamily units."
     }
   ]
 }

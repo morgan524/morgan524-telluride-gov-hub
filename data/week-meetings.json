@@ -818,5 +818,25 @@
     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams",
     "commentEmail": "townclerk@telluride.gov",
     "hook": ""
+  },
+  {
+    "source": "county",
+    "sourceLabel": "San Miguel County",
+    "title": "Board of County Commissioners Work Session",
+    "date": "2026-10-28",
+    "time": "",
+    "location": "Placerville School House, Placerville",
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1036/files",
+    "packetUrl": "",
+    "link": "https://sanmiguelcoco.portal.civicclerk.com/event/1036/files",
+    "hasAgenda": true,
+    "summary": "",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams",
+    "commentEmail": "bocc@sanmiguelcountyco.gov",
+    "hook": ""
   }
 ]

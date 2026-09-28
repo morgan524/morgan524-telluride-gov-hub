@@ -29,6 +29,16 @@
     "description": "The 610 Arts Collective at The Sherbino in Ridgway hosts an opening reception for *Containment*, a new exhibition by Ridgway artist Michelle Montague, on the first Friday of October. The free reception runs from 5:00 to 7:00 PM, with the show remaining on view through October 30, 2026."
   },
   {
+    "title": "First Friday at The Sherbino: Donny Morales & Cody Russell",
+    "href": "https://sherbino.org/event/first-friday-at-the-sherbino-donny-morales-cody-russell/",
+    "date": "2026-10-02 17:30:00",
+    "endDate": "2026-10-02 20:00:00",
+    "location": "The Sherbino, Ridgway",
+    "copy": "First Friday at The Sherbino brings a free live music performance by Donny Morales and Cody Russell to the Ridgway venue, with a cash bar and tips encouraged for the musicians. During the set break, attendees are invited to step into the Decker Room for the Space Cowboy exhibition, an artist talk, and words from Colorado Poet Laureate Crisosto Apache.",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/09/Donny-morales-banner-Oct-2.png",
+    "description": "First Friday at The Sherbino brings a free live music performance by Donny Morales and Cody Russell to the Ridgway venue, with a cash bar and tips encouraged for the musicians. During the set break, attendees are invited to step into the Decker Room for the Space Cowboy exhibition, an artist talk, and words from Colorado Poet Laureate Crisosto Apache."
+  },
+  {
     "title": "Ridgway 1k 2026",
     "href": "https://sherbino.org/event/ridgway-1k-2026/",
     "date": "2026-10-04 12:15:00",
@@ -86,5 +96,24 @@
     "copy": "Mountainfilm on Tour brings a curated selection of short films from the acclaimed Telluride-based Mountainfilm festival to The Sherbino in Ridgway. The traveling program features the documentary and adventure storytelling the festival is known for, presented in a seated screening format with a limited bar available.",
     "imageUrl": "https://sherbino.org/wp-content/uploads/2026/09/sherb-and-wca-EVENT-BANNERS-3.png",
     "description": "Mountainfilm on Tour brings a curated selection of short films from the acclaimed Telluride-based Mountainfilm festival to The Sherbino in Ridgway. The traveling program features the documentary and adventure storytelling the festival is known for, presented in a seated screening format with a limited bar available."
+  },
+  {
+    "title": "Rocky Horror Picture Show Live Shadow Cast Edition",
+    "href": "https://sherbino.org/event/rocky-horror-picture-show-live-shadow-cast-edition-9/",
+    "date": "2026-10-22 20:00:00",
+    "endDate": "2026-10-25 15:00:00",
+    "location": "The Sherbino, Ridgway",
+    "copy": "The Rocky Horror Picture Show Live Shadow Cast at the Sherbino – October 22–25, 2026 @ TICKETS The Rocky Horror Picture Show — Shadow Cast Edition Thursday, Friday, & Saturday Performances:  Doors: 7:30pm || Show:  8:00pm (Oct. 22-24) Sunday Matinee: Doors: 2:30pm || Show: 3:00pm (Oct. 25)Directed by Erin Cawley Ages 18+ (under 18 with parental permission or parent is accompanying minor) Tickets: $15 + $15 required prop/supply fee Don’t dream it… be it. Get ready to do the Time Warp again as The Rocky Horror Picture Show returns to the Sherbino in full shadow-cast style! Part movie screening, part live theater, and completely outrageous, this cult-classic experience features a live local cast performing along with the film on stage—lip-syncing, dancing, and bringing your favorite characters and scenes to life right in front of the screen. And at Rocky Horror, the audience isn’t just watching. …",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2025/11/RHPS-event-banner-1.png"
+  },
+  {
+    "title": "Sherb Literary Living Room featuring Pam Houston with her new book: \"Animals Taught Me Everything\"",
+    "href": "https://sherbino.org/event/sherb-literary-living-room-featuring-pam-houston-with-her-new-book-animals-taught-me-everything/",
+    "date": "2026-10-27 18:30:00",
+    "endDate": "2026-10-27 19:30:00",
+    "location": "The Sherbino, Ridgway",
+    "copy": "Pam Houston visits The Sherbino in Ridgway for a Literary Living Room evening centered on her newly published book *Animals Taught Me Everything*, exploring what animals — from horses to wolfhounds — can reveal about living well. The seated event begins at 6:30 PM with doors opening at 6:00 PM, and admission is $15.",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/08/Pam-Houston-Banner-Oct-27.png",
+    "description": "Pam Houston visits The Sherbino in Ridgway for a Literary Living Room evening centered on her newly published book *Animals Taught Me Everything*, exploring what animals — from horses to wolfhounds — can reveal about living well. The seated event begins at 6:30 PM with doors opening at 6:00 PM, and admission is $15."
   }
 ]
