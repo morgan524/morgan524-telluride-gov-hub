@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-27T21:11:18.551Z",
+ "generated": "2026-09-28T00:03:17.770Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -60,19 +60,18 @@
     "Carhenge / Shandoka: timeline entry \"HARC hears Shandoka's four buildings; Carhenge slips to…\" (Aug 19, 2026) is still marked upcoming but the date has passed."
    ]
   },
-  "skigate": {
-   "label": "Ski-Gate: Telski v. Former Officials",
-   "lastUpdated": "2026-07-21",
+  "medcenter": {
+   "label": "Telluride Medical Center",
+   "lastUpdated": "2026-09-27",
    "upcoming": [],
-   "recent": [],
-   "developments": [],
-   "stale": []
-  },
-  "society": {
-   "label": "Society Turn / Valley Floor Entrance",
-   "lastUpdated": "2026-06-01",
-   "upcoming": [],
-   "recent": [],
+   "recent": [
+    {
+     "source": "med",
+     "date": "2026-09-17",
+     "title": "Regular Board Meeting",
+     "snippet": "A short special meeting — just an hour — with one real item on the table: the interim leadership of Telluride Regional Medical Center. The board will go into executive session under the personnel…"
+    }
+   ],
    "developments": [],
    "stale": []
   },

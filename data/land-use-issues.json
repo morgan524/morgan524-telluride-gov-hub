@@ -261,104 +261,189 @@
       "href": "/projects-map/cost-tracker.html?project=Carhenge"
     }
   },
-  "society": {
-    "lastUpdated": "2026-06-01",
-    "label": "Society Turn / Valley Floor Entrance",
+  "medcenter": {
+    "lastUpdated": "2026-09-27",
+    "label": "Telluride Medical Center",
     "heroImage": "https://img1.wsimg.com/isteam/ip/3f388f66-602e-4c3d-940c-27e48680fdb9/Society%20Turn%20Aerial.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1200,cg:true",
-    "heroAlt": "Aerial view of the Society Turn development site along Highway 145 between Telluride and Mountain Village",
+    "heroAlt": "Aerial view of the Society Turn parcel along Highway 145, the site secured for a new Telluride medical facility",
     "heroCredit": "Image: societyturn.info",
-    "intro": "A 19.7-acre mixed-use PUD by Genesee Properties along Highway 145, west of the Society Turn Roundabout. The project bundles a regional hospital site, wastewater expansion, employee housing, medical offices, retail, hotel, and conference facilities -- raising questions about total scale, traffic, wildfire evacuation, and whether one project is being used to justify a broader build-out at the valley entrance.",
-    "statusTitle": "Society Turn remains a high-consequence regional development issue.",
-    "statusCopy": "Even when framed around public-serving uses, the project raises larger questions about total scale, traffic, wildfire evacuation, environmental limits, and whether one project is being used to justify a much broader build-out.",
-    "nextStep": "Track BOCC, Town Council, and any hospital-district discussions that tie facility needs to the larger site plan.",
+    "intro": "The Telluride Hospital District spent years planning to leave its current clinic and build a new regional medical center at Society Turn. Then the landowner of the existing site reopened the door. The district is now weighing two futures at once — in the middle of a leadership change, partnership talks with a large multi-state health system, and a land deal that makes it the public face of a development it does not control. Almost none of it has been decided in public.",
+    "statusTitle": "Two sites, one budget, and a board in transition. The landowner of the current clinic has offered to extend a lease that was supposed to end in 2032, while the Society Turn relocation plan continues on its own track.",
+    "statusCopy": "For most of the planning process the premise was simple: the lease on the current building runs out and the district moves to Society Turn. On March 31, 2026, Board Chair Dr. Thomas Crabtree told the community that premise had changed — the owners \"are now open to discussing our continuing use of the property in some fashion for decades to come.\" The board said it would gather more information, canvass stakeholders, price a remodel, and decide whether to \"proceed with both sites in some fashion or proceed with the plan to relocate all services to Society Turn.\" Since then two other things have moved. On September 11 the board took a presentation from CommonSpirit Health on a potential partnership, with Letter of Intent talks already underway on the new facility. On September 17 it held a one-hour special meeting whose only substantive item was the interim leadership of the medical center — executive session under the personnel exemption, then public action. No packet was posted for either meeting.",
+    "nextStep": "Watch the Telluride Hospital District board. The decisions that matter — whether to keep the current clinic, what a CommonSpirit partnership would commit the district to, and who runs the organization — are being made at board meetings, most of which post no materials in advance. Meetings are held in person and on Zoom, and public comment comes at the top of the agenda.",
     "metrics": [
       {
-        "label": "Primary tension",
-        "value": "Public benefit vs. total development scale",
-        "sub": "The public-facing rationale and the full project footprint may not be the same thing."
+        "label": "The hospital's share of the project",
+        "value": "About 10%",
+        "sub": "The medical facility is roughly 44,000 sq ft of a mixed-use PUD of about 400,000 sq ft. The district receives about 2.6 acres essentially free — valued at $1–2 million — and in exchange becomes the public justification for a project it does not control."
       },
       {
-        "label": "Regional concern",
-        "value": "Traffic and emergency access",
-        "sub": "The site sits at a sensitive gateway for movement in and out of the valley."
+        "label": "The rent on the current clinic",
+        "value": "$10 a year",
+        "sub": "The district leases roughly 10,000 sq ft — a remodeled residential building — from Newmont Mining, successor to Idarado Mining Co. The lease had been set to end in 2032."
       },
       {
-        "label": "Best source",
-        "value": "Full packets and development summaries",
-        "sub": "Do not rely on summary language alone; the details matter."
+        "label": "How the new building is to be paid for",
+        "value": "Philanthropy, not taxes",
+        "sub": "The district says construction is \"expected to be fully funded through philanthropy,\" through a phased capital campaign, without increasing the existing mill levy. No public cost estimate has been released."
       }
     ],
     "timeline": [
       {
+        "date": "2019",
+        "title": "District and landowner begin looking for a new home",
+        "copy": "The hospital district and the private landowner of the current clinic site start exploring a relocation, and the district begins evaluating candidate sites for a new facility."
+      },
+      {
         "date": "2021",
-        "title": "Sketch PUD approved by County Commissioners",
-        "copy": "Planning Commission reviewed and recommended approval of the Sketch PUD for the 19.7-acre Genesee Properties parcel. BOCC approved."
+        "title": "County approves the Society Turn Sketch PUD",
+        "copy": "San Miguel County Commissioners approve the Sketch PUD for the 19.7-acre Genesee Properties parcel along Highway 145 west of the Society Turn roundabout — a mixed-use project that bundles a regional hospital site with wastewater expansion, employee housing, medical offices, retail, hotel and conference space."
       },
       {
-        "date": "Recent",
-        "title": "Preliminary PUD/Subdivision phase begins; public scrutiny grows",
-        "copy": "The project advances toward Preliminary PUD while residents focus on total build-out scale, traffic at the roundabout, and wildfire evacuation concerns."
+        "date": "2025",
+        "title": "Planning task force reports; land secured at Society Turn",
+        "copy": "A district task force working with healthcare planning firm Jensen Partners completes about six months of analysis. Land at Society Turn — about 2.6 acres, conveyed essentially free and valued at $1–2 million — is secured through an MOU with Genesee Partners. The plan forecasts roughly 15,000 primary care visits and 4,500 emergency visits a year, with an on-site helipad, space for mobile MRI, and facilities for telehealth and visiting specialists."
       },
       {
-        "date": "Now",
-        "title": "The issue is no longer just one project",
-        "copy": "It has become a referendum on development scale, sequencing, and whether infrastructure and environmental analysis are keeping up."
+        "date": "Nov 2025",
+        "title": "Question 300 fails",
+        "copy": "Telluride voters reject the citizens' charter amendment that would have required a public vote on Town projects costing $10 million or more, 62.80% to 37.20%. Opponents campaigned in part on the delay it would cause the Society Turn medical facility — one of several projects the measure would have sent back to the ballot."
       },
       {
-        "date": "Next",
-        "title": "Watch for hearings, revised site materials, and hospital-related tie-ins",
-        "copy": "The most important developments may come through linked public bodies, not just one jurisdiction.",
-        "future": true
+        "date": "Late 2025",
+        "title": "Society Turn PUD advances toward final county approval",
+        "copy": "The Preliminary PUD and subdivision process moves through San Miguel County, with the project reported as having completed four of five approval steps. Residents press on total build-out scale, on traffic studies that relied on March 2020 data taken during the COVID lockdown, and on the absence of any wildfire evacuation analysis for a site at the valley's single entry and exit point."
+      },
+      {
+        "date": "Mar 31, 2026",
+        "title": "The landowner reopens the current site",
+        "copy": "Board Chair Dr. Thomas Crabtree tells the community that the owners of the existing clinic property, rather than ending the lease as planned, \"are now open to discussing our continuing use of the property in some fashion for decades to come.\" The board commits to canvassing stakeholders, pricing a remodel, and deciding whether to pursue both sites or relocate entirely."
+      },
+      {
+        "date": "Sep 11, 2026",
+        "title": "CommonSpirit Health presents to the board",
+        "copy": "A single-item work session: a presentation from CommonSpirit Health on a potential partnership with the district, with Letter of Intent talks already underway on the new facility project. No packet or supporting materials were posted in advance, so the scope and terms are not public. Discussion only; no board action scheduled."
+      },
+      {
+        "date": "Sep 17, 2026",
+        "title": "Special meeting on interim leadership",
+        "copy": "A one-hour special board meeting with a single substantive item: the interim leadership of Telluride Regional Medical Center. The board went into executive session under the personnel exemption and then returned to take public action on who runs the organization in the near term.",
+        "future": false
       }
     ],
     "docs": [
       {
+        "title": "Facility Planning Update from Dr. Thomas Crabtree, THD Board Chair (Mar 31, 2026)",
+        "copy": "The update in which the board chair discloses that the owners of the current clinic property are open to extending the district's use \"for decades to come,\" and sets out the choice between keeping both sites and relocating entirely to Society Turn.",
+        "tag": "Hospital District",
+        "href": "https://www.tellmed.org/2026-03-31-facility-planning-update-from-dr-thomas-crabtree-thd-board-chair"
+      },
+      {
+        "title": "Planning Advances for the Future of Healthcare in Telluride (Mar 26, 2026)",
+        "copy": "The district's own account of the task force work with Jensen Partners: projected visit volumes, the helipad and mobile MRI, the phased capital campaign, and the commitment to fund construction through philanthropy without raising the mill levy.",
+        "tag": "Hospital District",
+        "href": "https://www.tellmed.org/2026-03-26-planning-advances-for-the-future-of-healthcare-in-telluride"
+      },
+      {
+        "title": "Telluride Hospital District Board Meetings",
+        "copy": "Agendas, packets and Zoom links for the board that is making these decisions. Many meetings post no materials in advance — the agenda itself is often the only notice of what will be taken up.",
+        "tag": "Hospital District",
+        "href": "https://www.tellmed.org/board-meetings"
+      },
+      {
+        "title": "Telluride Hospital District Board of Directors",
+        "copy": "Who sits on the elected board of the special district, and how to reach them.",
+        "tag": "Hospital District",
+        "href": "https://www.tellmed.org/board-of-directors"
+      },
+      {
         "title": "Society Turn PUD Information",
-        "copy": "Developer site with aerial imagery, project features, community benefits, and mixed-use development details.",
-        "tag": "Developer",
+        "copy": "The developer's information site for the 19.7-acre Genesee Properties mixed-use PUD at the valley entrance, which contains the parcel secured for the medical facility.",
+        "tag": "Society Turn",
         "href": "https://societyturn.info/"
       },
       {
         "title": "San Miguel County CivicClerk Portal",
-        "copy": "Best place to look for county-side packets, work sessions, and supporting development materials.",
-        "tag": "County Record",
+        "copy": "County agendas and packets — the venue for the Society Turn PUD approvals and any further land-use action at the site.",
+        "tag": "County",
         "href": "https://sanmiguelcoco.portal.civicclerk.com/"
       },
       {
-        "title": "County Commissioners Page",
-        "copy": "Track BOCC agendas and board-level movement on major regional items.",
-        "tag": "BOCC",
+        "title": "San Miguel County Board of County Commissioners",
+        "copy": "The body that approved the Sketch PUD in 2021 and the PUD in late 2025.",
+        "tag": "County",
         "href": "https://sanmiguelcountyco.gov/192/Board-of-County-Commissioners"
-      },
-      {
-        "title": "Telluride Medical Center Board Meetings",
-        "copy": "Useful when hospital facility planning overlaps with Society Turn discussions.",
-        "tag": "Hospital",
-        "href": "https://www.tellmed.org/board-meetings"
       }
     ],
+    "meetings": [],
     "players": [
       {
-        "icon": "🏗️",
-        "title": "Project sponsors and consultants",
-        "copy": "Control project framing, phasing, and how public benefits are presented."
-      },
-      {
-        "icon": "🌲",
-        "title": "County decision-makers",
-        "copy": "Central to land-use approval, code fit, and regional public process."
-      },
-      {
         "icon": "🏥",
-        "title": "Hospital district leadership",
-        "copy": "Their participation can heavily influence how the project is perceived and justified."
+        "title": "Telluride Hospital District Board",
+        "copy": "An elected special-district board. It controls the facility decision, the partnership talks, and the leadership of the medical center. Most of its consequential discussion happens in work sessions and executive session."
+      },
+      {
+        "icon": "⛏️",
+        "title": "Newmont Mining (successor to Idarado)",
+        "copy": "Owns the land under the current clinic and leases it to the district for $10 a year. Its willingness to extend past 2032 is what reopened the two-site question."
       },
       {
         "icon": "🚗",
-        "title": "Regional commuters and residents",
-        "copy": "They bear the real-world consequences of traffic, access, and gateway-scale growth."
+        "title": "Regional residents and commuters",
+        "copy": "Surveys cited during the Measure 300 campaign found most residents did not know the hospital was only about 10% of the Society Turn footprint, or that the full project ran to roughly 400,000 sq ft. Traffic, access and evacuation at the valley entrance land on them."
+      },
+      {
+        "icon": "🏗️",
+        "title": "Genesee Partners",
+        "copy": "Developer of the 19.7-acre Society Turn PUD. The district's land there is held through an MOU, so the medical facility's site sits inside someone else's larger mixed-use project."
+      },
+      {
+        "icon": "🩺",
+        "title": "CommonSpirit Health",
+        "copy": "A large multi-state health system in Letter of Intent talks with the district over a partnership tied to the new facility. Terms have not been made public."
+      },
+      {
+        "icon": "🗳️",
+        "title": "Voters and donors",
+        "copy": "The district is funded by an existing mill levy and says the building will be paid for by philanthropy. That makes donors, not taxpayers, the decisive constituency for the new facility — and leaves voters with the board election as their main lever."
       }
-    ]
+    ],
+    "news": [
+      {
+        "source": "Telluride Hospital District",
+        "date": "Mar 31, 2026",
+        "title": "Facility Planning Update from Dr. Thomas Crabtree",
+        "copy": "The board chair discloses the landowner's reversal and the resulting choice between one site and two.",
+        "href": "https://www.tellmed.org/2026-03-31-facility-planning-update-from-dr-thomas-crabtree-thd-board-chair"
+      },
+      {
+        "source": "Telluride Daily Planet",
+        "date": "Nov 2025",
+        "title": "The people decided: Question 300 goes down in Election Night landslide",
+        "copy": "Voters reject the $10 million project-vote charter amendment 62.80% to 37.20%; the Society Turn medical facility was among the projects opponents said it would delay.",
+        "href": "https://www.telluridenews.com/news/article_35dd1724-f906-4f32-872f-b1199ef798a6.html"
+      },
+      {
+        "source": "Telluride Daily Planet",
+        "date": "Mar 2026",
+        "title": "Planning advances for the future of healthcare in Telluride",
+        "copy": "The district's task force findings, the Society Turn site, and the plan to fund construction through philanthropy.",
+        "href": "https://www.telluridenews.com/news_release/article_eedf4291-aaa6-4adf-af75-0e0f69427e05.html"
+      },
+      {
+        "source": "Telluride Daily Planet",
+        "date": "2019",
+        "title": "Med center may have new site",
+        "copy": "Early coverage of the district and the landowner exploring a relocation from the clinic the district leases for $10 a year.",
+        "href": "https://www.telluridenews.com/business/article_2c4377f2-6deb-11e9-af87-77fcdf281f89.html"
+      }
+    ],
+    "sideBox": {
+      "title": "What we could not confirm",
+      "copy": "The district has not published minutes for the September 11 work session or the September 17 special meeting on interim leadership, has not released a cost estimate for the new facility, and has not said whether a CommonSpirit letter of intent was signed or whether the current lease has actually been extended. If you have those documents, we would like to see them.",
+      "label": "Send us a document",
+      "href": "mailto:info@livabletelluride.org?subject=Telluride%20Medical%20Center%20deep%20dive"
+    }
   },
   "code": {
     "lastUpdated": "2026-07-19",
@@ -1079,242 +1164,6 @@
         "copy": "Formal review begins on the application to convert protected open space into high-density housing, prompting immediate concern from Deep Creek Mesa residents."
       }
     ]
-  },
-  "skigate": {
-    "ctaTitle": "Follow the case",
-    "ctaCopy": "This fight is in the courts, not at a public hearing — the best way to follow it is the filings themselves. Start with the operative complaint, then the dueling dismissal briefs.",
-    "ctaLabel": "Read the complaint",
-    "ctaHref": "/assets/Ski-Gate/first-amended-complaint-2026-05-08.pdf",
-    "lastUpdated": "2026-07-21",
-    "category": "Governance",
-    "label": "Ski-Gate: Telski v. Former Officials",
-    "heroImage": "assets/Ski-Gate/telluride-ski-resort-hero.jpg",
-    "heroAlt": "Winter view over the Mountain Village base area of Telluride Ski Resort, seen from the gondola",
-    "heroCredit": "Photo: Murray Foubister via Wikimedia Commons, CC BY-SA 2.0",
-    "intro": "In late December 2025, at the height of a ski patrol strike that closed the resort during the holiday peak, two sitting elected officials — Telluride's mayor pro tem and Mountain Village's mayor — traveled to California and presented Telski owner Chuck Horning with a signed offer to buy a 51% controlling stake in the resort for $127.5 million on behalf of undisclosed investors. When the trip became public in January, both resigned, both towns commissioned independent investigations, and Telski sued the two former officials and Mountain Village's former town manager. The case the community has dubbed “Ski-Gate” now turns on a hard question: where is the line between public office and private dealmaking?",
-    "statusTitle": "Where it stands now",
-    "statusCopy": "Three motions are fully briefed and awaiting a ruling in San Miguel County District Court (case 2026CV30011). All three defendants have moved to dismiss, arguing the amended complaint does not plausibly allege they did anything to prolong the strike — pointing to the meeting transcript itself, which they say shows the proposed deal would have ended it. Fee has separately moved to strike the secretly recorded meeting transcript, arguing the recording violated California's all-party-consent law. Telski responds that the signed offer's own terms — official acts listed as “Additional Consideration” — plausibly plead an abuse of public office.",
-    "nextStep": "The court's ruling on the motions to dismiss and the motion to strike. If the case survives, it moves into discovery; if it is dismissed, Telski can seek leave to amend or appeal.",
-    "metrics": [
-      {
-        "label": "The offer",
-        "value": "$127.5M for 51%",
-        "sub": "Signed “Offer to Purchase” presented to Telski's owner on Dec 29, 2025, on behalf of the “Telluride Ski Resort Fund”"
-      },
-      {
-        "label": "The strike",
-        "value": "Dec 27 – Jan 7",
-        "sub": "Ski patrol strike closed the resort at the height of the 2025–26 holiday season; Telski estimates losses of several million dollars"
-      },
-      {
-        "label": "Officials out",
-        "value": "3",
-        "sub": "Two resigned in January 2026; the former town manager separated from employment May 1"
-      },
-      {
-        "label": "Investigations",
-        "value": "2",
-        "sub": "Independent reports commissioned by Mountain Village (309 pages) and Telluride"
-      }
-    ],
-    "legalIssuesTitle": "The legal questions in play",
-    "legalIssues": [
-      {
-        "title": "Tortious interference",
-        "copy": "Telski alleges the defendants interfered with its business by representing they could end — and by implication prolong — the strike unless Horning sold a controlling stake. The defendants counter that the complaint alleges no act that prolonged the strike, and that the transcript shows the deal was framed as a way to end it."
-      },
-      {
-        "title": "Civil conspiracy",
-        "copy": "The complaint alleges the three coordinated on the offer and related documents, including a draft NDA that Telluride's own CORA production shows was authored by Wisor on January 3, 2026. The defense calls the conspiracy claim derivative and unsupported by any unlawful agreement or overt act."
-      },
-      {
-        "title": "The secret recording",
-        "copy": "Telski's key exhibit is a partial transcript of the Newport Beach meeting, recorded by a Telski representative without the officials' knowledge. Fee argues California's all-party-consent law (Cal. Penal Code § 632) makes the recording unlawful and inadmissible; Telski opposes striking it."
-      },
-      {
-        "title": "Public office vs. private gain",
-        "copy": "The signed offer's Appendix B listed official public acts — brokering an end to the strike, holding snowmaking water prices, town housing partnerships, regional flight spending — as “Additional Consideration.” Both towns' ethics codes restrict officials from trading on their offices; the two independent investigations reached nuanced conclusions about whether lines were crossed."
-      }
-    ],
-    "timeline": [
-      {
-        "date": "Dec 26, 2025",
-        "title": "A meeting is arranged",
-        "copy": "One day before the ski patrol strike begins, Fee and Prohaska contact Telski owner Chuck Horning to arrange a California meeting, saying they have something that could resolve the looming patrol impasse."
-      },
-      {
-        "date": "Dec 27, 2025",
-        "title": "Ski patrol strike closes the resort",
-        "copy": "The Telluride Ski Patrol strike shuts the mountain at the height of the holiday season. The closure runs through January 7 and, by Telski's estimate, costs the resort and local businesses millions."
-      },
-      {
-        "date": "Dec 28–29, 2025",
-        "title": "The Newport Beach offer",
-        "copy": "Fee and Prohaska meet Telski representatives, then Horning. They sign an “Offer to Purchase”: 51% of Telski's assets for $127.5 million via the “Telluride Ski Resort Fund,” with both officials as managing partners. Appendix B lists “Additional Consideration” — official acts including brokering an end to the strike, holding water prices, housing partnerships, and flight spending. Telski does not accept. A Telski representative records the meeting without the officials' knowledge."
-      },
-      {
-        "date": "Jan 7, 2026",
-        "title": "The strike ends",
-        "copy": "Ski patrol and Telski reach agreement; the resort reopens after roughly ten days dark."
-      },
-      {
-        "date": "Jan 13–14, 2026",
-        "title": "The story breaks",
-        "copy": "Telski files a CORA request. A Mountain Village executive session about the trip is accidentally livestreamed, and town manager Paul Wisor reveals previously undisclosed details. Prohaska resigns within hours of learning the town wants an outside investigation."
-      },
-      {
-        "date": "Jan 20–26, 2026",
-        "title": "Investigations open; Fee resigns",
-        "copy": "Telluride's council votes to investigate Fee; Mountain Village hires an independent investigator. Fee resigns as mayor pro tem and councilmember on January 26, writing that “it is impossible to ignore the rift that this episode has caused in our community.”"
-      },
-      {
-        "date": "Feb 24, 2026",
-        "title": "Telski sues",
-        "copy": "TSG Ski and Golf, LLC files suit in San Miguel County District Court against Fee, Prohaska, and Wisor, claiming tortious interference and civil conspiracy and seeking damages estimated at several million dollars."
-      },
-      {
-        "date": "May 1, 2026",
-        "title": "Wisor separates from the town",
-        "copy": "After an investigation into his behind-the-scenes role — including drafting transaction documents — Wisor's employment as Mountain Village town manager ends. “Though difficult, this decision is being made in what I believe is the best interest of the organization and the community as a whole,” he says."
-      },
-      {
-        "date": "May 8, 2026",
-        "title": "Amended complaint adds the receipts",
-        "copy": "Telski files a First Amended Complaint attaching the signed Offer to Purchase, a partial transcript of the recorded Newport Beach meeting, and the Wisor-drafted NDA produced under CORA."
-      },
-      {
-        "date": "Jun 2, 2026",
-        "title": "Mountain Village's investigation reports",
-        "copy": "The town releases a 309-page independent report: Prohaska “technically” violated no ethics-code provision, but her conduct was “inconsistent with her ethical obligations”; Wisor did not act contrary to code and had negotiated a clause requiring his termination if the deal closed."
-      },
-      {
-        "date": "Jun 10, 2026",
-        "title": "Telluride's investigation reports",
-        "copy": "The ILG report finds Fee “failed to maintain the line between personal and governmental roles” — noting she used her official email and title to obtain a flight voucher for the trip — while crediting that she may have believed she was acting personally."
-      },
-      {
-        "date": "Jun 5 – Jul 6, 2026",
-        "title": "Dismissal fight fully briefed",
-        "copy": "All three defendants move to dismiss; Fee also moves to strike the recorded transcript under California's all-party-consent law. Telski responds; the defendants reply. The motions now await the court's ruling."
-      }
-    ],
-    "docs": [
-      {
-        "title": "Defendants' Joint Reply in Support of Motions to Dismiss (Jul 6, 2026)",
-        "copy": "The defense's last word on dismissal: the complaint pleads no act that prolonged the strike, and its own exhibits contradict it.",
-        "tag": "Defense",
-        "href": "/assets/Ski-Gate/joint-reply-iso-dismissal-2026-07-06.pdf"
-      },
-      {
-        "title": "Fee's Reply in Support of Motion to Strike (Jul 6, 2026)",
-        "copy": "Closing brief on whether the secretly recorded meeting transcript should be struck from the case.",
-        "tag": "Defense",
-        "href": "/assets/Ski-Gate/fee-reply-iso-strike-2026-07-06.pdf"
-      },
-      {
-        "title": "Telski's Combined Response to Motions to Dismiss (Jun 26, 2026)",
-        "copy": "Telski's counter: the signed offer's own terms plausibly plead that public powers were leveraged for a private acquisition.",
-        "tag": "Telski",
-        "href": "/assets/Ski-Gate/telski-combined-response-2026-06-26.pdf"
-      },
-      {
-        "title": "Telski's Opposition to the Motion to Strike (Jun 26, 2026)",
-        "copy": "Why Telski says the transcript of the Newport Beach meeting should stay in the record.",
-        "tag": "Telski",
-        "href": "/assets/Ski-Gate/telski-opposition-to-strike-2026-06-26.pdf"
-      },
-      {
-        "title": "Fee's Motion to Dismiss (Jun 5, 2026)",
-        "copy": "Fee's separate dismissal motion directed at the First Amended Complaint.",
-        "tag": "Defense",
-        "href": "/assets/Ski-Gate/fee-motion-to-dismiss-2026-06-05.pdf"
-      },
-      {
-        "title": "Fee's Motion to Strike the Recording (Jun 5, 2026)",
-        "copy": "Argues the meeting was recorded without consent in violation of Cal. Penal Code § 632, an all-party-consent state, and the transcript is inadmissible and scandalous.",
-        "tag": "Defense",
-        "href": "/assets/Ski-Gate/fee-motion-to-strike-2026-06-05.pdf"
-      },
-      {
-        "title": "Prohaska & Wisor's Motion to Dismiss (Jun 5, 2026)",
-        "copy": "Argues the transcript shows the proposed deal would have ended the strike, not prolonged it, and no plausible claim is stated under Colorado's Twombly/Iqbal standard.",
-        "tag": "Defense",
-        "href": "/assets/Ski-Gate/prohaska-wisor-motion-to-dismiss-2026-06-05.pdf"
-      },
-      {
-        "title": "First Amended Complaint (May 8, 2026)",
-        "copy": "The operative complaint — the $127.5M offer, Appendix B's “Additional Consideration,” the recorded-meeting transcript excerpts, and the two claims for relief.",
-        "tag": "Telski",
-        "href": "/assets/Ski-Gate/first-amended-complaint-2026-05-08.pdf"
-      }
-    ],
-    "players": [
-      {
-        "title": "TSG Ski and Golf, LLC (Telski)",
-        "copy": "The independently owned resort operator, and the plaintiff. Owner Chuck Horning received — and declined — the offer; a Telski representative recorded the December meeting."
-      },
-      {
-        "title": "Julie Meehan Fee",
-        "copy": "Former Telluride mayor pro tem and councilmember; resigned January 26, 2026. Maintains she acted as a private citizen and that the offer's terms were aspirational; her motions argue the claims fail as a matter of law."
-      },
-      {
-        "title": "Martinique “Marti” Prohaska",
-        "copy": "Former Mountain Village mayor (and ski patroller); resigned January 14, 2026. MV's independent report found no technical code violation but conduct “inconsistent with her ethical obligations.”"
-      },
-      {
-        "title": "Paul Wisor",
-        "copy": "Former Mountain Village town manager; drafted transaction documents including an NDA. Separated from town employment May 1, 2026. MV's report found he did not act contrary to code."
-      },
-      {
-        "title": "The two towns",
-        "copy": "Telluride and Mountain Village are not parties to the lawsuit. Each commissioned an independent investigation and released its report in June 2026."
-      }
-    ],
-    "news": [
-      {
-        "source": "Telluride Daily Planet",
-        "date": "Jul 21, 2026",
-        "title": "Telski amends lawsuit against Prohaska, Wisor and Fee",
-        "href": "https://www.telluridenews.com/news/article_fdd6316f-fb0f-4629-87d0-6ae9800e4251.html"
-      },
-      {
-        "source": "Telluride Daily Planet",
-        "date": "Jun 10, 2026",
-        "title": "Fee failed to maintain line between personal, governmental roles",
-        "href": "https://www.telluridenews.com/news/article_7f2f7f97-cfba-4bba-8e22-5cedb5539f85.html"
-      },
-      {
-        "source": "Telluride Daily Planet",
-        "date": "Jun 2, 2026",
-        "title": "Investigation finds Prohaska 'technically' free of ethics violations",
-        "href": "https://www.telluridenews.com/news/article_2fcca626-62fb-459c-9c24-a3ca6915d695.html"
-      },
-      {
-        "source": "Telluride Daily Planet",
-        "date": "May 1, 2026",
-        "title": "Wisor resigns as Mountain Village town manager",
-        "href": "https://www.telluridenews.com/news/article_2c1cc16d-5e4a-4543-86bd-1faadf9f7028.html"
-      },
-      {
-        "source": "Telluride Daily Planet",
-        "date": "Mar 6, 2026",
-        "title": "Telski lawsuit claims 'civil conspiracy' in 'self-serving scheme'",
-        "href": "https://www.telluridenews.com/news/article_dfa5dfbb-25c4-44af-a45f-91b182c88ee0.html"
-      },
-      {
-        "source": "Telluride Daily Planet",
-        "date": "Jan 26, 2026",
-        "title": "Telluride Mayor Pro Tem Meehan Fee resigns",
-        "href": "https://www.telluridenews.com/news/article_ed2fc3f8-8a43-480e-9183-84ea4db0d28c.html"
-      },
-      {
-        "source": "Telluride Daily Planet",
-        "date": "Jan 25, 2026",
-        "title": "MV opens investigation into former Mayor Marti Prohaska's resignation",
-        "href": "https://www.telluridenews.com/news/article_a76bcdfd-ee6f-4be7-b849-c0bc84c01ecc.html"
-      }
-    ],
-    "meetings": []
   },
   "norwoodwater": {
     "lastUpdated": "2026-07-23",

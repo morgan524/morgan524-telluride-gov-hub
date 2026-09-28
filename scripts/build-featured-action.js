@@ -23,7 +23,7 @@ const HORIZON_DAYS = 14;
 // Importance tie-break when two topics meet the same day (most contested
 // land-use fights first). Topics absent from this list rank last, in watch
 // order.
-const TOPIC_PRIORITY = ['carhenge', 'society', 'diamond', 'gondola', 'code', 'wildfire', 'skigate'];
+const TOPIC_PRIORITY = ['carhenge', 'medcenter', 'diamond', 'gondola', 'code', 'wildfire'];
 
 // Topic key → deep-dive page. Default is deep-dive-<key>.html; anything
 // off-pattern is listed here.

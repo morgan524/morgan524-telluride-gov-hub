@@ -40,16 +40,12 @@ const TOPICS = {
     keywords: ['carhenge', 'shandoka', 'lot l', 'chair 7', 'c7cc',
                '700 w pacific', 'lift 7 neighborhood', 'southwest area plan', 'swap'],
   },
-  skigate: {
-    label: 'Ski-Gate: Telski v. Former Officials',
-    keywords: ['ski-gate', 'skigate', 'telski.*investigation', 'horning',
-               'resort.*purchase offer', 'controlling stake.*resort',
-               'independent investigation.*resign', 'mayor pro tem.*resign'],
-  },
-  society: {
-    label: 'Society Turn / Valley Floor Entrance',
-    keywords: ['society turn', 'valley floor', 'genesee', 'roundabout.*develop',
-               'highway 145.*project', 'valley entrance', '19.7.*acre'],
+  medcenter: {
+    label: 'Telluride Medical Center',
+    keywords: ['telluride medical center', 'telluride regional medical',
+               'hospital district', 'tellmed', 'commonspirit', 'jensen partners',
+               'society turn', 'genesee', 'valley entrance', '19.7.*acre',
+               'idarado.*lease', 'newmont.*lease', 'regional hospital'],
   },
   code: {
     label: 'Code Changes & Accelerated Review',

@@ -466,7 +466,7 @@ function getWTMEntry(text) {
 function deepDiveFor(entry) {
   const src = (entry && entry.match && entry.match.source || '').toLowerCase();
   if (/carhenge|shandoka|chair\s*7/.test(src))                 return SITE + '/deep-dive-carhenge.html';
-  if (/society|jensen|healthcare|facility|hospital/.test(src)) return SITE + '/deep-dive-society.html';
+  if (/society|jensen|healthcare|facility|hospital/.test(src)) return SITE + '/deep-dive-medcenter.html';
   if (/accelerated|comprehensive|forestry/.test(src))          return SITE + '/deep-dive-code.html';
   if (/wildfire|wui/.test(src))                                return SITE + '/deep-dive-wildfire.html';
   if (/gondola|smart/.test(src))                               return SITE + '/deep-dive-gondola.html';
