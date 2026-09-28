@@ -5398,7 +5398,16 @@ function assembleBoardStubs(scraped, cadence, opts, now = new Date()) {
   }
   if (cadence) {
     const placeholders = opts.placeholders == null ? 2 : opts.placeholders;
-    for (const occ of _nextOccurrences(cadence, now, placeholders, opts.skipMonths || [])) {
+    // skipDates: 'Month D, YYYY' dates the body's own site says it's closed
+    // (e.g. Norwood's "Closed For Veterans Day" notice on the 2nd-Wednesday
+    // BoT date, 2026-11-11). We don't know where such a meeting moves, so we
+    // project no placeholder there — the real date appears when the agenda posts.
+    const skipDates = new Set(opts.skipDates || []);
+    let projected = 0;
+    for (const occ of _nextOccurrences(cadence, now, placeholders + skipDates.size, opts.skipMonths || [])) {
+      if (projected >= placeholders) break;
+      if (skipDates.has(occ.date)) continue;
+      projected++;
       const key = occ.date + '|' + (opts.board || '');
       if (byDate.has(key)) continue;
       const stub = {
@@ -8001,15 +8010,22 @@ async function main() {
     console.warn('  Norwood: fetch failed — preserving existing NORWOOD_CACHED_DATA');
   } else {
     const norwoodNote = 'Next scheduled meeting -- agenda posted before the meeting.';
+    // Town-closure days from the town's own sitemap (NORWOOD_EVENTS, synced
+    // above in Task 17). A cadence placeholder on a day Town Hall is closed
+    // contradicts the town's notice (content review, 2026-09-28: BoT projected
+    // on Veterans Day 2026-11-11), so those dates are never projected.
+    const norwoodClosures = (extractJsArray(govHubSrc, 'NORWOOD_EVENTS') || [])
+      .filter(e => e && e.category === 'Town Closure' && e.pubDate)
+      .map(e => _fmtScheduleDate(new Date(String(e.pubDate).slice(0, 10) + 'T12:00:00')));
     const botStubs = assembleBoardStubs(newNorwoodData.filter(e => e.board === 'bot'),
       { nth: 2, weekday: 3 },
-      { title: 'Board of Trustees Meeting', board: 'bot', placeholders: 2, note: norwoodNote });
+      { title: 'Board of Trustees Meeting', board: 'bot', placeholders: 2, note: norwoodNote, skipDates: norwoodClosures });
     const pzStubs = assembleBoardStubs(newNorwoodData.filter(e => e.board === 'pz'),
       { nth: 3, weekday: 1 },
-      { title: 'Planning and Zoning Commission Meeting', board: 'pz', placeholders: 2, note: norwoodNote });
+      { title: 'Planning and Zoning Commission Meeting', board: 'pz', placeholders: 2, note: norwoodNote, skipDates: norwoodClosures });
     const nwcStubs = assembleBoardStubs(newNorwoodData.filter(e => e.board === 'nwc'),
       { nth: 2, weekday: 2 },
-      { title: 'Norwood Water Commission Meeting', board: 'nwc', placeholders: 2, note: norwoodNote });
+      { title: 'Norwood Water Commission Meeting', board: 'nwc', placeholders: 2, note: norwoodNote, skipDates: norwoodClosures });
     const norwoodStubs = [...(botStubs || []), ...(pzStubs || []), ...(nwcStubs || [])]
       .sort((a, b) => new Date(a.date) - new Date(b.date));
     if (norwoodStubs.length) {
