@@ -15,6 +15,17 @@
   // those alongside http(s) (LTData.safeUrl is absolute-only).
   function safe(u) { return /^(https?:\/\/|\/(?!\/)|mailto:)/i.test(u || '') ? u : '#'; }
 
+  // Long prose fields may carry blank lines to mark paragraph breaks. Escape
+  // each paragraph and emit its own <p>; a single-paragraph string renders
+  // exactly as it did before.
+  function paras(text) {
+    return String(text || '').split(/\n\s*\n/).map(function (t) {
+      return t.trim();
+    }).filter(Boolean).map(function (t) {
+      return '<p>' + esc(t) + '</p>';
+    }).join('');
+  }
+
   function section(label, inner) {
     return '<section class="dd-sect"><div class="eyebrow" style="margin-bottom:10px">' + esc(label) + '</div>' + inner + '</section>';
   }
@@ -121,7 +132,7 @@
     if (issue.intro) body += '<p class="dd-lead">' + esc(issue.intro) + '</p>';
     if (issue.statusTitle || issue.statusCopy || issue.nextStep) {
       body += '<div class="dd-status card"><h3>' + esc(issue.statusTitle || 'Where it stands now') + '</h3>' +
-        (issue.statusCopy ? '<p>' + esc(issue.statusCopy) + '</p>' : '') +
+        (issue.statusCopy ? paras(issue.statusCopy) : '') +
         (issue.nextStep ? '<div class="dd-watch"><strong>Watch for:</strong> ' + esc(issue.nextStep) + '</div>' : '') + '</div>';
     }
     // Optional data chart right under the status card (e.g. Norwood Water's
