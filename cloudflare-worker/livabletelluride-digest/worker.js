@@ -280,6 +280,16 @@ async function ghAppendJson(env, path, entry) {
 // a lock whose weekStart no longer matches the coming Monday/Friday).
 const DIGEST_FILES = { weekly: "digest/week.html", weekend: "digest/weekend.html" };
 
+// Hex SHA-256 of a string's UTF-8 bytes. The approval lock records this for
+// the digest body so the send can prove the HTML going out is byte-for-byte
+// what the reviewer approved — digest-refresh.yml already refuses to re-render
+// a locked digest, but nothing stopped a direct commit or a stray script from
+// editing digest/week.html under a still-valid approval.
+async function sha256Hex(str) {
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
 // UTF-8-safe base64 (GitHub Contents API wants base64 file content).
 function b64(str) {
   const bytes = new TextEncoder().encode(str);
@@ -465,7 +475,7 @@ async function saveDigest(body, env) {
   const subject = String(body.subject || "");
   const weekStart = String(body.weekStart || "");
   if (!/^\d{4}-\d{2}-\d{2}$/.test(weekStart)) return { error: "Missing/invalid weekStart (YYYY-MM-DD)." };
-  const lock = JSON.stringify({ weekStart, subject, lockedAt: new Date().toISOString() }, null, 2) + "\n";
+  const lock = JSON.stringify({ weekStart, subject, sha256: await sha256Hex(html), lockedAt: new Date().toISOString() }, null, 2) + "\n";
   await ghPutFile(env, file, html, "Digest: lock approved " + key + " for " + weekStart);
   await ghPutFile(env, "digest/" + key + ".lock.json", lock, "Digest: lock marker " + key + " " + weekStart);
   return { ok: true, locked: true, weekStart };
@@ -546,7 +556,18 @@ async function scheduledSend(env, dry) {
   if (html.includes("data:image")) throw new Error(d.file + " contains inline data:image payloads — re-approve at the Review Desk");
   if (html.length > 120000) throw new Error(d.file + " is " + html.length + " bytes — over the 120 KB clip limit");
 
-  if (dry) return { wouldSend: true, key, subject, bytes: html.length };
+  // Integrity gate: the body must still be what was approved. Locks written
+  // before this field existed carry no hash — those still send (unverified)
+  // rather than blocking the next digest on an upgrade.
+  if (lock.sha256) {
+    const actual = await sha256Hex(html);
+    if (actual !== lock.sha256) {
+      return { skipped: "content changed since approval (" + d.file + " is " + actual.slice(0, 12) +
+        ", approved " + lock.sha256.slice(0, 12) + ") — re-approve on the Review Desk", due: true };
+    }
+  }
+
+  if (dry) return { wouldSend: true, key, subject, bytes: html.length, verified: !!lock.sha256 };
   const r = await send({ emailHtml: html, subject, key, test: false }, env);
   if (!r || !r.ok) throw new Error("send failed: " + JSON.stringify(r).slice(0, 300));
   return { sent: true, key, subject, blog: r.blog };

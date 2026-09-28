@@ -144,7 +144,7 @@ jobs:
           set -eo pipefail
           test -n "$DIGEST_KEY" || { echo "DIGEST_KEY secret is empty"; exit 1; }
           python3 - <<'PY'
-          import json, os, sys, urllib.request, urllib.error
+          import hashlib, json, os, sys, urllib.request, urllib.error
 
           # Record the outcome for the tripwire step below (2026-07-22 audit
           # P0-5): a gate-skip used to exit 0 with only a log line — the
@@ -185,6 +185,18 @@ jobs:
               if lock.get("weekStart") and week_start and lock["weekStart"] != week_start:
                   outcome(False, f"stale approval lock (lock weekStart {lock.get('weekStart')} vs manifest {week_start})")
                   print(f"Approval lock is for weekStart {lock.get('weekStart')} but manifest is {week_start} — stale approval. Skipping."); sys.exit(0)
+              # 1b) Integrity gate: the body must be byte-for-byte what was
+              # approved. digest-refresh.yml already refuses to re-render a
+              # locked digest, but nothing stopped a direct commit or a stray
+              # script from editing the file under a still-valid approval.
+              # Locks written before this field existed carry no hash — those
+              # still send (unverified) rather than blocking on an upgrade.
+              lock_sha = lock.get("sha256")
+              if lock_sha:
+                  actual = hashlib.sha256(html.encode("utf-8")).hexdigest()
+                  if actual != lock_sha:
+                      outcome(False, f"content changed since approval ({fpath} is {actual[:12]}, approved {lock_sha[:12]})")
+                      print(f"{fpath} is not what was approved (sha256 {actual[:12]} vs locked {lock_sha[:12]}) — re-approve on the Review Desk. Skipping."); sys.exit(0)
               # 2) Duplicate gate: never send a subject already in the sent archive.
               try:
                   sent = json.load(open("data/sent-broadcasts.json"))
