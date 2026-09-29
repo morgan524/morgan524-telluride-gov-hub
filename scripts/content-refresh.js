@@ -6102,15 +6102,26 @@ function patchAgendaUrls(govDataSrc, arrayName, agendaMap, field = 'agendaUrl') 
     if (!url) return;
     const escDate = dateKey.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
-    // Pass 1: update existing `<field>: null` or `<field>: '<old>'`.
+    // Entries come in two quote styles: hand-typed rows use 'single', but
+    // arrays the bot REBUILDS (TELLURIDE_CACHED_DATA via the HARC rebuild) are
+    // re-serialized with "double" quotes. Both regexes used to require single
+    // quotes, so on rebuilt arrays nothing ever matched and every patch was
+    // silently dropped — the Sep 30 2026 HARC packet (CivicWeb doc 445284) was
+    // found every run and never written (Morgan 2026-09-29). Accept either.
+    const Q = `(?:'${escDate}'|"${escDate}")`;
+    const VAL = `(?:'(?:[^'\\\\]|\\\\.)*'|"(?:[^"\\\\]|\\\\.)*"|null|true|false|\\d+)`;
+    const quoteFor = (entry) => (/date:\s*"/.test(entry) ? '"' : "'");
+
+    // Pass 1: update an existing `<field>: null` / `<field>: '<old>'` / "<old>".
     const updateRe = new RegExp(
-      "(\\{[^{}]*date:\\s*'" + escDate + "'[^{}]*?" + field + ":\\s*)(null|'[^']*')",
+      "(\\{[^{}]*date:\\s*" + Q + "[^{}]*?" + field + ":\\s*)(null|'[^']*'|\"[^\"]*\")",
       'g'
     );
     let matched = false;
     body = body.replace(updateRe, (full, prefix, current) => {
       matched = true;
-      const newVal = "'" + url + "'";
+      const q = quoteFor(prefix);
+      const newVal = q + url + q;
       if (current === newVal) return full;
       changed++;
       return prefix + newVal;
@@ -6124,15 +6135,16 @@ function patchAgendaUrls(govDataSrc, arrayName, agendaMap, field = 'agendaUrl') 
     // inserted agendaUrl near the end of the field list instead of awkwardly
     // squeezed between `time:` and `title:`.
     const insertRe = new RegExp(
-      "(\\{[^{}]*date:\\s*'" + escDate + "'[^{}]*)(\\b(?:note|location|civicClerkId|type|time)\\s*:\\s*(?:'(?:[^'\\\\]|\\\\.)*'|null|true|false|\\d+))",
+      "(\\{[^{}]*date:\\s*" + Q + "[^{}]*)(\\b(?:note|location|civicClerkId|civicWebId|board|type|time)\\s*:\\s*" + VAL + ")",
       'g'
     );
     body = body.replace(insertRe, (full, before, lastField) => {
       // Indent the new line to match surrounding fields (look back for indent).
       const m = before.match(/\n(\s+)[^\n]*$/);
       const indent = m ? m[1] : '    ';
+      const q = quoteFor(before);
       changed++;
-      return before + lastField + ',\n' + indent + field + ": '" + url + "'";
+      return before + lastField + ',\n' + indent + field + ': ' + q + url + q;
     });
   });
 

@@ -163,11 +163,14 @@
   var MON = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
   var MEETING_LINKS = {};   // hand-curated extra doc buttons, keyed source|date|title
   var meetings = [], srcFilter = '', govShowAll = false;
-  // ISO date 5 business days (Mon–Fri) ahead of today — the initial cutoff;
-  // "Show more" reveals everything past it (Morgan 2026-07-23).
+  // ISO date GOV_BUSINESS_DAYS business days (Mon–Fri) ahead of today — the
+  // initial cutoff; "Show more" reveals everything past it (Morgan 2026-07-23).
+  // 10, not 5 (Morgan 2026-09-29): the small towns meet monthly, and a 5-day
+  // window hid Norwood / Ridgway / Ophir / Rico behind "Show more".
+  var GOV_BUSINESS_DAYS = 10;
   function businessCutoff() {
     var d = LTData.parseDateKey(LTData.todayMT()), n = 0;
-    while (n < 5) { d.setDate(d.getDate() + 1); var wd = d.getDay(); if (wd !== 0 && wd !== 6) n++; }
+    while (n < GOV_BUSINESS_DAYS) { d.setDate(d.getDate() + 1); var wd = d.getDay(); if (wd !== 0 && wd !== 6) n++; }
     var pad = function (x) { return String(x).padStart(2, '0'); };
     return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
   }
@@ -235,7 +238,7 @@
       list.innerHTML = '<p class="meta" style="padding:18px 0">No meetings scheduled for ' + esc(name) + ' in the next two weeks.</p>';
       return;
     }
-    // Limit to the next 5 business days unless "Show more" was clicked.
+    // Limit to the next GOV_BUSINESS_DAYS business days unless "Show more" was clicked.
     var cutoff = businessCutoff();
     var hiddenCount = govShowAll ? 0 : rows.filter(function (m) { return m.date > cutoff; }).length;
     var shown = govShowAll ? rows : rows.filter(function (m) { return m.date <= cutoff; });
