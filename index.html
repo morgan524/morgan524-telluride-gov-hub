@@ -136,22 +136,17 @@
   </div>
 </section>
 
-<!-- The four task-based newcomer cards took over the hero-overlap slot from
-     the old Learn/Connect/Act pillar boxes (Morgan, 2026-07-23) — every link
-     the pillars carried lives in the nav dropdowns. White + forest stroke. -->
+<!-- The four task-based newcomer cards (New here? / What's happening? /
+     Want to speak up? / Need housing?) were removed from the home page
+     (Morgan, 2026-09-29) so the "Not sure where to look?" search box sits in
+     the hero-overlap slot. Every page they linked to is in the nav. -->
 <section class="overlap" id="explore">
-  <div class="mini-grid four">
-    <a class="mini mini-link" href="start-here.html"><span class="ico">&#129517;</span><h4>New here?</h4><p>Who decides what, the big issues, and how to plug in &mdash; the ten-minute orientation.</p><span class="meta" style="color:var(--rust)">Start here &rarr;</span></a>
-    <a class="mini mini-link" href="events.html"><span class="ico">&#127914;</span><h4>What's happening?</h4><p>Concerts, films, markets, and talks &mdash; the whole region's calendar in one place.</p><span class="meta" style="color:var(--rust)">See events &rarr;</span></a>
-    <a class="mini mini-link" href="gov-hub.html"><span class="ico">&#128227;</span><h4>Want to speak up?</h4><p>Find the meeting, read the plain-English agenda, comment or join by Zoom.</p><span class="meta" style="color:var(--rust)">Make your voice heard &rarr;</span></a>
-    <a class="mini mini-link" href="housing.html"><span class="ico">&#127968;</span><h4>Need housing?</h4><p>Deed-restricted listings, lotteries, and the data behind the housing crunch.</p><span class="meta" style="color:var(--rust)">Browse housing &rarr;</span></a>
-  </div>
 
-  <!-- Full-width "search anything" box under the newcomer cards (Morgan,
-       2026-07-23). A REAL inline input (not the header pop-up) with a live
+  <!-- Full-width "search anything" box in the hero-overlap slot (Morgan,
+       2026-07-23; moved up 2026-09-29). A REAL inline input (not the header pop-up) with a live
        typeahead dropdown, reusing site.js's window.LTSearch index + ranking. -->
   <style>
-    .home-search { position: relative; margin-top: 18px; display: flex; align-items: center; gap: 22px;
+    .home-search { position: relative; margin-top: 0; display: flex; align-items: center; gap: 22px;
       background: #fff; border: 1px solid var(--forest); border-radius: 12px; padding: 20px 26px;
       box-shadow: var(--shadow-media, 0 8px 24px rgba(26,46,41,.08)); }
     .home-search .hs-arrow { flex: 0 0 auto; color: var(--forest); }
