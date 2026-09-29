@@ -5,7 +5,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313",
     "hasAgenda": true,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "10:00 AM",
     "civicwebId": 8313,
     "packetUrl": "https://telluride-co.civicweb.net/document/445210/"
   },
@@ -15,7 +15,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8311",
     "hasAgenda": true,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "5:30 PM",
     "civicwebId": 8311,
     "packetUrl": "https://telluride-co.civicweb.net/document/445599/"
   },
@@ -25,7 +25,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8053",
     "hasAgenda": true,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "9:00 AM",
     "civicwebId": 8053,
     "packetUrl": "https://telluride-co.civicweb.net/document/445473/"
   },
@@ -35,7 +35,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "4:00 PM",
     "civicwebId": 8132
   },
   {
@@ -44,7 +44,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044",
     "hasAgenda": true,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "10:00 AM",
     "civicwebId": 8044,
     "packetUrl": "https://telluride-co.civicweb.net/document/445576/"
   },
@@ -54,7 +54,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8119",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "4:00 PM",
     "civicwebId": 8119
   },
   {
@@ -63,7 +63,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8164",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "9:00 AM",
     "civicwebId": 8164
   },
   {
@@ -72,7 +72,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8307",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "9:00 AM",
     "civicwebId": 8307
   },
   {
@@ -81,7 +81,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "12:00 PM",
     "civicwebId": 8083
   },
   {
@@ -90,7 +90,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8106",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "5:30 PM",
     "civicwebId": 8106
   },
   {
@@ -99,7 +99,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "10:00 AM",
     "civicwebId": 8045
   },
   {
@@ -108,7 +108,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8120",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "4:00 PM",
     "civicwebId": 8120
   },
   {
@@ -117,7 +117,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8165",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "9:00 AM",
     "civicwebId": 8165
   },
   {
@@ -126,7 +126,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "5:30 PM",
     "civicwebId": 8312
   },
   {
@@ -135,7 +135,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "9:00 AM",
     "civicwebId": 8054
   },
   {
@@ -144,7 +144,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8133",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "4:00 PM",
     "civicwebId": 8133
   },
   {
@@ -153,7 +153,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8046",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "10:00 AM",
     "civicwebId": 8046
   },
   {
@@ -162,7 +162,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8084",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "12:00 PM",
     "civicwebId": 8084
   },
   {
@@ -171,7 +171,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8320",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "4:00 PM",
     "civicwebId": 8320
   },
   {
@@ -180,7 +180,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8108",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "5:30 PM",
     "civicwebId": 8108
   },
   {
@@ -189,7 +189,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8166",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "9:00 AM",
     "civicwebId": 8166
   },
   {
@@ -198,7 +198,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8051",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "9:00 AM",
     "civicwebId": 8051
   },
   {
@@ -207,7 +207,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8134",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "4:00 PM",
     "civicwebId": 8134
   },
   {
@@ -216,7 +216,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8047",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "10:00 AM",
     "civicwebId": 8047
   },
   {
@@ -225,7 +225,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8085",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "12:00 PM",
     "civicwebId": 8085
   },
   {
@@ -234,7 +234,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8110",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
+    "time": "5:30 PM",
     "civicwebId": 8110
   }
 ]
