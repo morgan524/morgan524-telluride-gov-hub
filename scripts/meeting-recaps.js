@@ -557,9 +557,22 @@ async function draftVotes(entityKey, isoDate, title, transcript, videoUrl, recap
       // record Yes, not Voice (Morgan, 2026-09-29 — Voice left the heatmap blank
       // for plainly unanimous BOCC votes). A 5-0 on a 6-member board stays Voice:
       // we can't tell who didn't vote.
+      // Best effort (Morgan, 2026-09-29: "accept that it might have some
+      // error"): a motion that passed/failed with no recorded dissent credits
+      // every REGULAR member with Yes (No if it failed). Alternates (config
+      // `alternates`) only sit in for an absent member, so they're left blank.
+      // A split tally (5-1, 4-2) stays Voice — we can't tell who dissented.
       const t = parseTally(v.tally);
-      const all = t && t[1] === 0 && t[0] === roster.length ? 'Yes' : 'Voice';
-      for (const id of roster) votes[id] = all;
+      const alts = new Set(entity.alternates || []);
+      const regular = roster.filter((id) => !alts.has(id));
+      const noDissent = t ? (t[1] === 0 && (t[0] === regular.length || t[0] === roster.length))
+        : /^(|unknown|unanimous(ly)?|voice)$/i.test(String(v.tally || '').trim());
+      if (noDissent) {
+        const val = /failed/i.test(v.outcome || '') ? 'No' : 'Yes';
+        for (const id of (t && t[0] === roster.length ? roster : regular)) votes[id] = val;
+      } else {
+        for (const id of roster) votes[id] = 'Voice';
+      }
     }
     // A vote carrying named dissent is the one case we will NOT auto-publish.
     // Voice votes make no claim about individuals, so they are safe. Split
