@@ -48,6 +48,12 @@ const CHANNELS = [
   { sourceKey: 'telluride', sourceLabel: 'Town of Telluride', url: 'https://www.youtube.com/@townoftelluridecolorado8739/streams' },
   { sourceKey: 'county',    sourceLabel: 'San Miguel County', url: 'https://www.youtube.com/@sanmiguelcountyco/streams' },
   { sourceKey: 'rico',      sourceLabel: 'Rico',              url: 'https://www.youtube.com/@townofrico/streams' },
+  // Ridgway posts finished recordings to /videos (no /streams tab), titled
+  // "Town Council Regular Meeting – September 9, 2026". It also posts advisory
+  // boards (Sustainability, etc.) — `include` keeps Council + Planning
+  // Commission only. Added 2026-09-29.
+  { sourceKey: 'ridgway',   sourceLabel: 'Town of Ridgway',   url: 'https://www.youtube.com/@townofridgwaycolorado2070/videos',
+    include: /town council|planning commission/i },
   // Mountain Village does NOT use YouTube — it publishes to an AV Capture All
   // portal that exposes, per meeting, a direct .mp4 AND a .vtt caption file.
   // The .vtt is a ready-made transcript (no yt-dlp, no download, no
@@ -587,6 +593,7 @@ async function main() {
     for (const v of vids) {
       if (ONLY_VIDEO && v.id !== ONLY_VIDEO) continue;
       if (!FORCE && SKIP_TITLE.test(v.title)) continue;
+      if (ch.include && !ch.include.test(v.title)) continue;
       const videoUrl = isAv
         ? `https://media.avcaptureall.cloud/meeting/${v.id}`
         : `https://www.youtube.com/watch?v=${v.id}`;
