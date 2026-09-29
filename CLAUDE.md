@@ -248,6 +248,12 @@ If no time was published, show none.
   `"YYYY-MM-DD HH:MM"` with a **space**, not a `T`.
 - Rico's 7:00 PM is its standing third-Wednesday schedule (the dates are
   projected the same way), not a guess.
+- **Order within a day = start time, earliest first** (Morgan 2026-09-29);
+  no published time goes last in its day. This is enforced in three places,
+  so keep all three if you touch any of them: the `out.sort` in
+  `scripts/build-week-meetings.js` (the JSON every page reads),
+  `gov-hub.html`'s load-time sort, and the `meetings.sort` in
+  `scripts/weekly-email.js` (the digest).
 
 ## City of Ouray source; agenda-packet patching
 
