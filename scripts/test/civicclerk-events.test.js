@@ -209,3 +209,26 @@ test('describePublishedFiles says what the API actually returned', () => {
     describePublishedFiles([{ type: 'Packet', name: 'x.pdf', fileId: 5 }, { type: null, name: null, fileId: 6 }]),
     'Packet:x.pdf#5 | ?:?#6');
 });
+
+test('pickPacketFile finds the "Agenda Packet" file, never the plain agenda or minutes', () => {
+  const { pickPacketFile } = require('../lib/civicclerk-events.js');
+  const files = [
+    { fileId: 2015, type: 'Agenda', name: '20260930-BOCC-Agenda' },
+    { fileId: 2019, type: 'Agenda Packet', name: '20260930-BOCC-Packet' },
+  ];
+  assert.equal(pickPacketFile(files).fileId, 2019);
+  assert.equal(pickPacketFile([{ fileId: 1, type: 'Agenda', name: 'Agenda' }]), null);
+  assert.equal(pickPacketFile([{ fileId: 3, type: '', name: 'Packet and Minutes' }]), null);
+  assert.equal(pickPacketFile([{ fileId: 4, type: '', name: 'Full Packet' }]).fileId, 4);
+});
+
+test('countyRowsFromEvents sets packetUrl only from a real packet file', () => {
+  const { countyRowsFromEvents } = require('../lib/civicclerk-events.js');
+  const rows = countyRowsFromEvents([
+    { id: 1073, eventName: 'Board of County Commissioners Work Session', startDateTime: '2026-09-30T09:30:00Z',
+      publishedFiles: [{ fileId: 2015, type: 'Agenda' }, { fileId: 2019, type: 'Agenda Packet' }] },
+    { id: 888, eventName: 'Board of County Commissioners Meeting', startDateTime: '2026-10-07T09:30:00Z', publishedFiles: [] },
+  ]);
+  assert.equal(rows[0].packetUrl, 'https://sanmiguelcoco.portal.civicclerk.com/event/1073/files/agenda/2019');
+  assert.equal(rows[1].packetUrl, undefined);
+});

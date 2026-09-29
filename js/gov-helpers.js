@@ -7646,7 +7646,8 @@ function getCountyCachedMeetings() {
       hasAgenda: !!(m.agendaUrl || m.civicClerkId),
       agendaLink: m.agendaUrl
         ? m.agendaUrl
-        : (m.civicClerkId ? COUNTY_CIVICCLERK_BASE + m.civicClerkId + '/files' : null)
+        : (m.civicClerkId ? COUNTY_CIVICCLERK_BASE + m.civicClerkId + '/files' : null),
+      packetUrl: m.packetUrl || null
     };
   });
 

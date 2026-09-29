@@ -83,6 +83,8 @@ function formatEventLocation(loc) {
 // doesn't exist") the URL must come from the real published file, which
 // syncCountyAgendas() resolves and patchAgendaUrls() folds in afterwards. A row
 // with `civicClerkId` still gets a working portal link at render time.
+const COUNTY_PORTAL_BASE = 'https://sanmiguelcoco.portal.civicclerk.com';
+
 function countyRowsFromEvents(events) {
   const rows = [];
   for (const e of events || []) {
@@ -103,6 +105,11 @@ function countyRowsFromEvents(events) {
       note: null,
     };
     if (/\bspecial\b/i.test(title)) row.special = true;
+    // Packet: taken straight from THIS event's published files (keyed by the
+    // event, so two meetings on one day can't swap links — the date-keyed
+    // agenda patch can). Only set when the file really exists.
+    const pkt = Number.isFinite(e.id) ? pickPacketFile(e.publishedFiles) : null;
+    if (pkt) row.packetUrl = `${COUNTY_PORTAL_BASE}/event/${e.id}/files/agenda/${pkt.fileId}`;
     rows.push(row);
   }
   return rows;
@@ -188,6 +195,20 @@ function pickAgendaFile(publishedFiles) {
       || null;
 }
 
+// The full agenda PACKET (type "Agenda Packet", or a file named "…Packet").
+// Separate from pickAgendaFile: the County posts both, and the Gov-Hub card has
+// a separate "Agenda Packet" button. Packets were never read before 2026-09-29,
+// so every County card showed a grey packet button even when one was posted.
+function pickPacketFile(publishedFiles) {
+  const files = (Array.isArray(publishedFiles) ? publishedFiles : [])
+    .filter((f) => f && f.fileId != null);
+  const typeOf = (f) => String(f.type || '').trim().toLowerCase();
+  const nameOf = (f) => String(f.name || '').trim().toLowerCase();
+  return files.find((f) => /packet/.test(typeOf(f)))
+      || files.find((f) => /packet/.test(nameOf(f)) && !/minutes/.test(nameOf(f)))
+      || null;
+}
+
 // One-line summary of what the API DID publish for an event, for the log we
 // print when pickAgendaFile comes back empty. Without this, a miss is
 // invisible and the only way to notice is a reader complaining that a card
@@ -203,5 +224,5 @@ function describePublishedFiles(publishedFiles) {
 module.exports = {
   wallParts, fmtMeetingDate, fmtMeetingTime, countyTypeOf, formatEventLocation,
   countyRowsFromEvents, mergeCountyRows, MONTHS,
-  pickAgendaFile, describePublishedFiles,
+  pickAgendaFile, pickPacketFile, describePublishedFiles, COUNTY_PORTAL_BASE,
 };
