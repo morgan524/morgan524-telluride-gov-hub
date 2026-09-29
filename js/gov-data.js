@@ -863,28 +863,32 @@ const TELLURIDE_CACHED_DATA = [
     title: "HARC Meeting",
     board: "harc",
     location: "Rebekah Hall, 113 W Columbia Ave",
-    civicWebId: 8309
+    civicWebId: 8309,
+    time: "5:30 PM"
   },
   {
     date: "October 21, 2026",
     title: "HARC Meeting",
     board: "harc",
     location: "Rebekah Hall, 113 W Columbia Ave",
-    civicWebId: 8024
+    civicWebId: 8024,
+    time: "5:30 PM"
   },
   {
     date: "November 18, 2026",
     title: "HARC Meeting",
     board: "harc",
     location: "Rebekah Hall, 113 W Columbia Ave",
-    civicWebId: 8026
+    civicWebId: 8026,
+    time: "5:30 PM"
   },
   {
     date: "December 16, 2026",
     title: "HARC Meeting",
     board: "harc",
     location: "Rebekah Hall, 113 W Columbia Ave",
-    civicWebId: 8028
+    civicWebId: 8028,
+    time: "5:30 PM"
   }
 ];
 
