@@ -132,7 +132,8 @@ const COUNTY_CACHED_DATA = [
     location: "333 West Colorado Ave, 2nd Floor, Telluride, CO 81435",
     civicClerkId: 1073,
     note: null,
-    agendaUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/1073/files/agenda/2015"
+    agendaUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/1073/files/agenda/2015",
+    packetUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/1073/files/agenda/2019"
   },
   {
     date: "October 1, 2026",
@@ -141,7 +142,8 @@ const COUNTY_CACHED_DATA = [
     type: "other",
     location: "",
     civicClerkId: 1070,
-    note: null
+    note: null,
+    packetUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/1070/files/agenda/2013"
   },
   {
     date: "October 7, 2026",
@@ -1157,7 +1159,7 @@ const AIRPORT_CACHED_DATA = [
     time: "12:00 PM",
     title: "TRAA Board of Commissioners Meeting",
     agendaUrl: null,
-    packetUrl: null,
+    packetUrl: "https://tellurideairport.com/wp-content/uploads/2026/09/TRAA-Board-Packet-091726.pdf",
     special: false,
     location: "Terminal Observation Lounge, Telluride Regional Airport"
   },

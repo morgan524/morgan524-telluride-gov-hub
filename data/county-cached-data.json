@@ -72,7 +72,8 @@
     "location": "333 West Colorado Ave, 2nd Floor, Telluride, CO 81435",
     "civicClerkId": 1073,
     "note": null,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1073/files/agenda/2015"
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1073/files/agenda/2015",
+    "packetUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1073/files/agenda/2019"
   },
   {
     "date": "October 1, 2026",
@@ -81,7 +82,8 @@
     "type": "other",
     "location": "",
     "civicClerkId": 1070,
-    "note": null
+    "note": null,
+    "packetUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1070/files/agenda/2013"
   },
   {
     "date": "October 7, 2026",

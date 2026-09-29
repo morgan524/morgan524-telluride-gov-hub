@@ -577,5 +577,13 @@
   "ouraycity|2026-09-30|Ouray City Council Work Session": {
     "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=769742",
     "sv": 4
+  },
+  "ouray|2026-09-29|Board of County Commissioners Special Work Session": {
+    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/2149/files/agenda/7544",
+    "zoomUrl": "https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1",
+    "meetingId": "876 0637 5697",
+    "passcode": "946299",
+    "phone": "346-248-7799",
+    "sv": 4
   }
 }
