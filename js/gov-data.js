@@ -896,8 +896,8 @@ const TELLURIDE_CACHED_DATA = [
     location: "Rebekah Hall, 113 W Columbia Ave",
     civicWebId: 8309,
     time: "5:30 PM",
-    packetUrl: "https://telluride-co.civicweb.net/document/445284/",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309"
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309",
+    packetUrl: "https://telluride-co.civicweb.net/document/445284/"
   },
   {
     date: "October 21, 2026",

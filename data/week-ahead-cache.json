@@ -1,26 +1,26 @@
 {
-  "hash": "c0270fa76678d71f7fefa3652e9659133af3839a",
-  "lede": "The biggest thing on the calendar this week is a pair of special meetings on Tuesday, September 30th, both centered on the Carhenge redevelopment at 700 W. Pacific Ave — HARC takes up the preliminary architecture review for the proposed new buildings, while Town Council hears an appeal of the lot consolidation that has to clear before any of it can move forward. Meanwhile, the County commissioners are workshopping a proposed Employee Housing Impact Fee, and the town kicks off its 2027 budget work session on Thursday. Somewhere in between, the San Miguel River Cleanup on Saturday and the watershed restoration talk at the Sherbino on Tuesday are worth your time.",
+  "hash": "8a63b010029062208117c8cc0b6d4c054fb3eb19",
+  "lede": "The biggest thing on the calendar this week is actually two back-to-back hearings on the same project: Tuesday, September 30 brings a special HARC session reviewing preliminary architecture for the Carhenge redevelopment at 700 W. Pacific Ave, followed immediately by a special Town Council session to hear a legal appeal of the lot consolidation that has to happen before any of that construction can move forward. Also worth knowing: county commissioners take up a proposed Employee Housing Impact Fee on the 30th, and the Town sits down Thursday to sketch out the 2027 General Fund budget.",
   "notable": [
     {
       "id": 1,
-      "stake": "HARC votes on preliminary architecture for all Carhenge building clusters."
+      "stake": "HARC reviews three building clusters in the contested Carhenge redevelopment."
     },
     {
       "id": 2,
-      "stake": "Council decides appeal that controls whether Carhenge redevelopment can proceed."
+      "stake": "Council hears appeal that could block or greenlight the Carhenge lot consolidation."
     },
     {
       "id": 3,
-      "stake": "Commissioners workshop a new employee housing impact fee affecting county development."
-    },
-    {
-      "id": 4,
-      "stake": "Final architecture review for 15 employee apartments and 4 new multifamily units."
+      "stake": "Commissioners discuss a new Employee Housing Impact Fee for San Miguel County."
     },
     {
       "id": 5,
-      "stake": "2027 General Fund and Capital Fund contours set before formal budget adoption begins."
+      "stake": "Final architecture review for 15 employee apartments could advance workforce housing."
+    },
+    {
+      "id": 6,
+      "stake": "2027 General Fund and Capital budget contours take shape before formal adoption."
     }
   ]
 }
