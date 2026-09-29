@@ -1619,15 +1619,6 @@
           <input type="password" id="hbSignupPassword" autocomplete="new-password" placeholder="At least 8 characters">
         </div>
 
-        <div class="hb-modal-field">
-          <label for="hbSignupRegion">Your region</label>
-          <select id="hbSignupRegion">
-            <option value="">— Select your region —</option>
-            <option value="East End">East End (Telluride, Mountain Village, Ophir)</option>
-            <option value="West End">West End (Norwood, Nucla, Naturita)</option>
-            <option value="Ridgway/Ouray">Ridgway / Ouray</option>
-          </select>
-        </div>
 
         <div class="hb-freq-group">
           <span class="hb-freq-label">Stay informed — choose what you'd like to receive</span>
@@ -1649,46 +1640,7 @@
           </div>
         </div>
 
-        <div class="hb-freq-group" id="hbTopicGroup">
-          <span class="hb-freq-label">Event topics — added to your weekly email (optional)</span>
-          <div id="hbTopicGateNote" style="display:none;font-size:0.82rem;line-height:1.45;color:#7a5a2a;background:#fdf3e7;border:1px solid #e8c9a0;border-radius:8px;padding:9px 12px;margin:2px 0 10px;">
-            ⚠ Event topics are delivered inside the <strong>Weekly look-ahead</strong> email. Re-check it above to choose topics — without the weekly summary, we have no email in which to send your event notices.
-          </div>
-          <div class="hb-freq-options">
-            <label class="hb-freq-opt">
-              <input type="checkbox" class="hb-topic-cb" value="arts">
-              <div class="hb-freq-opt-text">
-                <strong>Music, Arts &amp; Festivals</strong>
-                <span>Concerts, film, theater, gallery openings, and festivals.</span>
-              </div>
-            </label>
-            <label class="hb-freq-opt">
-              <input type="checkbox" class="hb-topic-cb" value="civic">
-              <div class="hb-freq-opt-text">
-                <strong>Government Meetings</strong>
-                <span>Council, commission, and board meetings — with comment deadlines.</span>
-              </div>
-            </label>
-            <label class="hb-freq-opt">
-              <input type="checkbox" class="hb-topic-cb" value="family">
-              <div class="hb-freq-opt-text">
-                <strong>Family &amp; Kids</strong>
-                <span>Storytime, youth programs, and all-ages activities.</span>
-              </div>
-            </label>
-            <label class="hb-freq-opt">
-              <input type="checkbox" class="hb-topic-cb" value="outdoors">
-              <div class="hb-freq-opt-text">
-                <strong>Outdoors &amp; Recreation</strong>
-                <span>Hikes, races, ski events, and stewardship days.</span>
-              </div>
-            </label>
-          </div>
-        </div>
 
-        <div class="hb-modal-notice">
-          🔒 A free account lets you post and comment on Hub-Bub.
-        </div>
 
         <button class="hb-modal-submit" id="hbSignupSubmit" type="button">Sign me up</button>
         <div class="hb-modal-switch">Already have an account? <a id="hbSwitchToLogin">Log in instead</a></div>
@@ -1697,7 +1649,7 @@
 
       <!-- ── LOGIN panel ── -->
       <div id="hbLoginPanel" style="display:none;">
-        <h2>Log in to Hub-Bub</h2>
+        <h2>Log in</h2>
         <p class="hb-modal-sub">Use the email and password you set when you created your account.</p>
 
         <div id="hbLoginFields">
@@ -1933,7 +1885,9 @@
       // Daily digest retired 2026-05-25; only 'weekly' or '' (none) now.
       const digestFreq = document.getElementById('hbFreqWeekly').checked ? 'weekly' : '';
       const includeNewsletter = document.getElementById('hbFreqNewsletter').checked;
-      const region = document.getElementById('hbSignupRegion').value;
+      // Region + Event Topics were removed from the form 2026-09-29 (Morgan: not
+      // used yet). The profile page still lets people set them.
+      const region = '';
       // Event Topics opt-ins (arts/civic/family/outdoors) — set via the Worker
       // (name-based) AFTER the member is created, since the JSONP form-embed
       // path would need each group's numeric web ID.
@@ -1996,13 +1950,13 @@
               })
               .then(() => {
                 btn.disabled = false;
-                btn.textContent = 'Create account & join Hub-Bub';
-                showMsg('hbSignupMsg', '✓ Account created! You can now post and comment on Hub-Bub.', 'success');
+                btn.textContent = 'Sign me up';
+                showMsg('hbSignupMsg', '✓ You’re signed up! Watch your inbox for the next weekly email.', 'success');
                 setTimeout(closeModal, 2200);
               })
               .catch(err => {
                 btn.disabled = false;
-                btn.textContent = 'Create account & join Hub-Bub';
+                btn.textContent = 'Sign me up';
                 const friendly = err.code === 'auth/email-already-in-use'
                   ? 'An account with this email already exists. Try logging in instead.'
                   : err.message;
@@ -2015,13 +1969,13 @@
                 .then(cred => m.updateProfile(cred.user, { displayName: firstName + ' ' + lastName }))
                 .then(() => {
                   btn.disabled = false;
-                  btn.textContent = 'Create account & join Hub-Bub';
-                  showMsg('hbSignupMsg', '✓ Account created! You can now post and comment on Hub-Bub.', 'success');
+                  btn.textContent = 'Sign me up';
+                  showMsg('hbSignupMsg', '✓ You’re signed up! Watch your inbox for the next weekly email.', 'success');
                   setTimeout(closeModal, 2200);
                 })
                 .catch(err => {
                   btn.disabled = false;
-                  btn.textContent = 'Create account & join Hub-Bub';
+                  btn.textContent = 'Sign me up';
                   const friendly = err.code === 'auth/email-already-in-use'
                     ? 'An account with this email already exists. Try logging in instead.'
                     : err.message;
