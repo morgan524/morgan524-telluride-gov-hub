@@ -456,6 +456,11 @@ function rosterForDate(entity, isoDate) {
 // motion's own subject. (2026-07-23)
 const PROCEDURAL_RE = /\b(?:go into|enter|convene in|adjourn(?:ment)?|recess)\b|\bexecutive session\b|\bconsent calendar\b|\bapprove (?:the )?(?:minutes|agenda)\b|\bminutes approval\b|\bapproval of (?:the )?(?:minutes|agenda)\b/i;
 function isProcedural(title) { return PROCEDURAL_RE.test(String(title || '')); }
+// Recap summaries never list votes to enter/convene in executive session
+// (Morgan, 2026-09-29). The prompt already says to exclude them, but the model
+// still returned five ("Enter executive session", "Executive session — lot 9
+// block 20…"), so enforce it in code.
+const EXEC_SESSION_RE = /\bexecutive session\b/i;
 
 // Guard #1 — cross-check the two independent LLM passes over the same
 // transcript. The recap pass and the vote pass each report a tally; where both
@@ -564,7 +569,16 @@ async function draftVotes(entityKey, isoDate, title, transcript, videoUrl, recap
     const tallyDisagrees = !!(voteTally && recapTally &&
       (voteTally[0] !== recapTally[0] || voteTally[1] !== recapTally[1]));
     const reviewReasons = [];
-    if (!isVoice && Object.keys(votes).length > 0) reviewReasons.push('split-vote attribution (caption names are unreliable)');
+    // A UNANIMOUS vote makes no claim about any one person that the tally
+    // doesn't already make: if every named member is 'Yes' and that count equals
+    // the tally's ayes with zero nays, nothing needs checking. This rule used to
+    // hold ANY vote with per-member entries — every 7-0 too — so from July 2026
+    // not a single Telluride vote reached the tracker (Morgan, 2026-09-29).
+    // Held: any No/Abstain/Recused/Absent, or a Yes count that disagrees.
+    const vals = Object.values(votes);
+    const unanimousAsTallied = !!voteTally && voteTally[1] === 0 && vals.length > 0 &&
+      vals.every((x) => x === 'Yes') && vals.length === voteTally[0];
+    if (!isVoice && vals.length > 0 && !unanimousAsTallied) reviewReasons.push('split-vote attribution (caption names are unreliable)');
     if (tallyDisagrees) reviewReasons.push(`tally disagreement: vote pass ${voteTally.join('-')} vs recap pass ${recapTally.join('-')}`);
     return {
       needsReview: reviewReasons.length > 0,
@@ -685,7 +699,7 @@ async function main() {
       catch (e) { console.log(`      ✗ recap failed: ${e.message}`); continue; }
       if (!out || !out.recap) { console.log('      ✗ empty recap'); continue; }
 
-      added.push({ sourceKey: ch.sourceKey, sourceLabel: ch.sourceLabel, date, title: (out.title || v.title).trim(), recap: out.recap.trim(), votes: Array.isArray(out.votes) ? out.votes.slice(0, 8) : [], videoUrl });
+      added.push({ sourceKey: ch.sourceKey, sourceLabel: ch.sourceLabel, date, title: (out.title || v.title).trim(), recap: out.recap.trim(), votes: Array.isArray(out.votes) ? out.votes.filter((x) => !EXEC_SESSION_RE.test(String((x && (x.item || x.title)) || ''))).slice(0, 8) : [], videoUrl });
       seenVideo.add(videoUrl); seenMeeting.add(meetKey);
       console.log(`      ✓ ${out.title}`);
 
