@@ -953,8 +953,9 @@ async function fetchUpcomingMeetings() {
 
   // Ouray County — CivicPlus AgendaCenter RSS (both boards)
   try {
+    // BOCC moved to CivicClerk (handled right below); only the Planning
+    // Commission is still on AgendaCenter.
     const feeds = [
-      { url: AGENDA_SOURCES.ouray.boccRss, board: 'bocc' },
       { url: AGENDA_SOURCES.ouray.pcRss,   board: 'pc' }
     ];
     for (const feed of feeds) {
@@ -985,6 +986,25 @@ async function fetchUpcomingMeetings() {
       }
     }
   } catch (e) { console.warn('  Ouray County RSS error:', e.message); }
+
+  // Ouray County BOCC — CivicClerk (ouraycoco). Title matches the card
+  // (ourayTitle) so the summary key source|date|title lines up.
+  try {
+    const evs = await fetchOurayCountyEvents(now) || [];
+    for (const ev of evs) {
+      const ag = pickAgendaFile(ev.publishedFiles);
+      const p = wallParts(ev.startDateTime || ev.eventDate);
+      if (!ag || !p) continue;
+      const d = new Date(p.y, p.mo - 1, p.d);
+      if (d < new Date(now.getFullYear(), now.getMonth(), now.getDate()) || d > horizon) continue;
+      meetings.push({
+        source: 'ouray',
+        date: `${p.y}-${String(p.mo).padStart(2, '0')}-${String(p.d).padStart(2, '0')}`,
+        title: ourayTitle(ev.eventName),
+        agendaUrl: `${OURAY_CC_PORTAL}/event/${ev.id}/files/agenda/${ag.fileId}`,
+      });
+    }
+  } catch (e) { console.warn('  Ouray County CivicClerk error:', e.message); }
 
   // City of Ouray — BoardBook (see syncOurayCityMeetings). Only meetings whose
   // agenda has posted; the BoardBook agenda page is plain HTML with the full
@@ -1321,6 +1341,27 @@ function countyAgendaFor(ev, label) {
   return { url: '', name: '' };
 }
 
+// CivicClerk's Events API silently returns at most 15 events per request —
+// $top is ignored and there is no @odata.nextLink — so every "next 90 days"
+// query was truncated to the first 15 (found 2026-09-29: Ouray County had 21,
+// San Miguel's 90-day rebuild was capped too). Page with $skip (needs
+// $orderby for a stable order) until a short page comes back. Returns the same
+// {status, text} shape as fetch() so call sites don't change.
+async function fetchCivicClerkAll(url) {
+  const all = [];
+  let pageSize = 0;
+  for (let page = 0; page < 20; page++) {
+    const r = await fetch(url + (url.includes('$orderby') ? '' : '&$orderby=startDateTime') + '&$skip=' + all.length);
+    if (r.status !== 200) return page === 0 ? r : { status: 200, text: JSON.stringify({ value: all }) };
+    let v;
+    try { v = JSON.parse(r.text).value || []; } catch (e) { return page === 0 ? r : { status: 200, text: JSON.stringify({ value: all }) }; }
+    all.push(...v);
+    if (page === 0) pageSize = v.length;
+    if (!v.length || v.length < pageSize) break;
+  }
+  return { status: 200, text: JSON.stringify({ value: all }) };
+}
+
 /**
  * Fetch upcoming San Miguel County meetings from the CivicClerk OData API.
  *
@@ -1354,7 +1395,7 @@ async function fetchSmcCountyMeetings(now, horizon) {
     `$filter=${encodeURIComponent(filter)}` +
     `&$orderby=startDateTime` +
     `&$top=100`;
-  const resp = await fetch(url);
+  const resp = await fetchCivicClerkAll(url);
   if (resp.status !== 200) {
     console.warn(`  CivicClerk API returned HTTP ${resp.status}`);
     return out;
@@ -3346,7 +3387,7 @@ const { extractJsArray, extractJsObject } = require('./lib/extract.js');
 // JS→JSON migration (Phase 1): dual-write mirrored arrays to data/<name>.json.
 const { mirrorAll } = require('./lib/json-mirror.js');
 const {
-  countyRowsFromEvents, mergeCountyRows, pickAgendaFile, describePublishedFiles,
+  countyRowsFromEvents, mergeCountyRows, pickAgendaFile, describePublishedFiles, wallParts,
 } = require('./lib/civicclerk-events.js');
 const { stripDescPreamble } = require('./lib/clean-text.js');
 
@@ -5021,6 +5062,52 @@ async function enrichRecurringActsPosters() {
 // ══════════════════════════════════════════════════════════════
 // ── Task N: Sync Ouray County Meetings from CivicPlus RSS ──
 // ══════════════════════════════════════════════════════════════
+// Ouray County moved its Board of County Commissioners off CivicPlus
+// AgendaCenter (the RSS feeds went empty in July 2025) onto CivicClerk, tenant
+// "ouraycoco" — the same system San Miguel uses. Rebuilds OURAY_COUNTY_CACHED_DATA
+// from its Events API: real start time, location, and the Agenda + Agenda Packet
+// files per event. null on any failure so the committed list is kept. The
+// Planning Commission is still on AgendaCenter and keeps its old path.
+// (Morgan, 2026-09-29: Ouray County showed no upcoming meetings.)
+const OURAY_CC_API = 'https://ouraycoco.api.civicclerk.com/v1';
+const OURAY_CC_PORTAL = 'https://ouraycoco.portal.civicclerk.com';
+// "Board of County Commissioners - Event Center" → the body name; the location
+// is shown separately on the card.
+const ourayTitle = (t) => String(t || '').replace(/\s+-\s+(?:Event Center|Courthouse|[A-Z][\w .'-]{0,24})\s*$/, '').trim();
+let _ourayEventsOnce = null;
+function fetchOurayCountyEvents(now = new Date()) {
+  if (_ourayEventsOnce) return _ourayEventsOnce;
+  _ourayEventsOnce = (async () => {
+    const from = new Date(now.getTime() - 7 * 86400000).toISOString().slice(0, 10);
+    const to = new Date(now.getTime() + 120 * 86400000).toISOString().slice(0, 10);
+    const url = `${OURAY_CC_API}/Events?$filter=` + encodeURIComponent(`startDateTime ge ${from}T00:00:00Z and startDateTime le ${to}T23:59:59Z`);
+    let resp;
+    try { resp = await fetchCivicClerkAll(url + '&$orderby=startDateTime'); } catch (e) { console.warn(`  Ouray CivicClerk fetch error: ${e.message}`); return null; }
+    if (resp.status !== 200) { console.warn(`  Ouray CivicClerk HTTP ${resp.status}`); return null; }
+    try { return (JSON.parse(resp.text).value || []).filter((e) => e && !e.isDeleted); }
+    catch (e) { console.warn(`  Ouray CivicClerk JSON error: ${e.message}`); return null; }
+  })();
+  return _ourayEventsOnce;
+}
+async function rebuildOurayCountyMeetings(now = new Date()) {
+  console.log('\n🏔️  Rebuilding Ouray County meetings from CivicClerk (ouraycoco)...');
+  const events = await fetchOurayCountyEvents(now);
+  if (!events || !events.length) { console.warn('  Ouray CivicClerk returned no events — preserving existing OURAY_COUNTY_CACHED_DATA'); return null; }
+  const byId = new Map(events.map((e) => [e.id, e]));
+  const rows = countyRowsFromEvents(events, { portalBase: OURAY_CC_PORTAL }).map((r) => {
+    const ev = byId.get(r.civicClerkId) || {};
+    const ag = pickAgendaFile(ev.publishedFiles);
+    const out = { ...r, title: ourayTitle(r.title), board: /planning/i.test(r.title) ? 'pc' : 'bocc' };
+    delete out.type;
+    if (ag && !/packet/i.test(ag.type || '')) out.agendaUrl = `${OURAY_CC_PORTAL}/event/${r.civicClerkId}/files/agenda/${ag.fileId}`;
+    return out;
+  });
+  const mins = (t) => { const x = String(t || '').match(/(\d{1,2}):(\d{2})\s*([AP])M/i); return x ? ((+x[1] % 12) + (/p/i.test(x[3]) ? 12 : 0)) * 60 + +x[2] : 0; };
+  rows.sort((a, b) => new Date(a.date) - new Date(b.date) || mins(a.time) - mins(b.time));
+  console.log(`  ${rows.length} Ouray County meeting(s); ${rows.filter((r) => r.agendaUrl).length} with agenda, ${rows.filter((r) => r.packetUrl).length} with packet`);
+  return rows;
+}
+
 async function syncOurayMeetings() {
   console.log('\n🏔️  Syncing Ouray County meetings from AgendaCenter RSS...');
   const now = new Date();
@@ -5583,7 +5670,7 @@ async function rebuildCountyMeetings(existing, now = new Date()) {
     `$filter=${encodeURIComponent(filter)}&$orderby=startDateTime&$top=100`;
 
   let resp;
-  try { resp = await fetch(url); }
+  try { resp = await fetchCivicClerkAll(url); }
   catch (e) { console.warn(`  CivicClerk fetch error: ${e.message} — preserving existing COUNTY_CACHED_DATA`); return null; }
   if (resp.status !== 200) {
     console.warn(`  CivicClerk API returned HTTP ${resp.status} — preserving existing COUNTY_CACHED_DATA`);
@@ -5940,7 +6027,7 @@ async function syncCountyAgendas() {
   const map = {};
   let resp;
   try {
-    resp = await fetch(url);
+    resp = await fetchCivicClerkAll(url);
   } catch (e) {
     console.warn(`  CivicClerk fetch error: ${e.message}`);
     return map;
@@ -7718,6 +7805,17 @@ async function main() {
       govDataChanged = true;
     }
   } catch (e) { console.warn(`  Ridgway rebuild error: ${e.message}`); }
+
+  // ── 0a5a. Ouray County: rebuild OURAY_COUNTY_CACHED_DATA from CivicClerk ──
+  try {
+    const existing = extractJsArray(govDataSrc, 'OURAY_COUNTY_CACHED_DATA') || [];
+    const rows = await rebuildOurayCountyMeetings();
+    if (rows && JSON.stringify(rows) !== JSON.stringify(existing)) {
+      govDataSrc = replaceJsValue(govDataSrc, 'OURAY_COUNTY_CACHED_DATA', rows, false);
+      govDataChanged = true;
+      console.log(`  OURAY_COUNTY_CACHED_DATA: rebuilt (${rows.length} meetings)`);
+    }
+  } catch (e) { console.warn(`  Ouray County rebuild error: ${e.message}`); }
 
   // ── 0a5b. City of Ouray: rebuild OURAY_CITY_CACHED_DATA from BoardBook ──
   //   Projected regular meetings are generated at render time by

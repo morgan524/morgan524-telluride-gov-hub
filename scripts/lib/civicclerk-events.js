@@ -85,7 +85,10 @@ function formatEventLocation(loc) {
 // with `civicClerkId` still gets a working portal link at render time.
 const COUNTY_PORTAL_BASE = 'https://sanmiguelcoco.portal.civicclerk.com';
 
-function countyRowsFromEvents(events) {
+function countyRowsFromEvents(events, opts = {}) {
+  // opts.portalBase: the tenant's reader-facing portal. Default San Miguel;
+  // Ouray County (tenant ouraycoco) passes its own (2026-09-29).
+  const portalBase = opts.portalBase || COUNTY_PORTAL_BASE;
   const rows = [];
   for (const e of events || []) {
     if (!e || !e.eventName) continue;
@@ -109,7 +112,7 @@ function countyRowsFromEvents(events) {
     // event, so two meetings on one day can't swap links — the date-keyed
     // agenda patch can). Only set when the file really exists.
     const pkt = Number.isFinite(e.id) ? pickPacketFile(e.publishedFiles) : null;
-    if (pkt) row.packetUrl = `${COUNTY_PORTAL_BASE}/event/${e.id}/files/agenda/${pkt.fileId}`;
+    if (pkt) row.packetUrl = `${portalBase}/event/${e.id}/files/agenda/${pkt.fileId}`;
     rows.push(row);
   }
   return rows;

@@ -8231,9 +8231,35 @@ function getRicoMeetings() {
 // those summary keys (the bot keeps them fresh): the board is inferred from the
 // agenda text and the generated summary rides along as the description.
 function getOurayMeetings() {
-  if (typeof MANUAL_SUMMARIES === 'undefined' || !MANUAL_SUMMARIES) return [];
   const out = [];
   const seen = {};
+  // BOCC: real CivicClerk rows (OURAY_COUNTY_CACHED_DATA — time, location,
+  // agenda + packet). Added 2026-09-29; before that Ouray County only showed
+  // meetings that had a summary, and the summaries' source feed had gone dry.
+  const rows = (typeof OURAY_COUNTY_CACHED_DATA !== 'undefined') ? OURAY_COUNTY_CACHED_DATA : [];
+  for (const m of rows) {
+    const eventDate = localDate(m.date);
+    if (!eventDate || isNaN(eventDate.getTime())) continue;
+    seen[localDateKey(eventDate) + '|' + (m.board === 'pc' ? 'pc' : 'bocc')] = 1;
+    out.push({
+      title: m.title,
+      link: m.agendaUrl || (m.civicClerkId ? 'https://ouraycoco.portal.civicclerk.com/event/' + m.civicClerkId + '/files' : 'https://ouraycoco.portal.civicclerk.com/'),
+      description: m.note || '',
+      eventDate,
+      eventDates: '',
+      eventTimes: m.time || '',
+      location: m.location || 'Ouray County, CO',
+      source: 'ouray',
+      sourceLabel: 'Ouray County',
+      category: m.board === 'pc' ? 'Planning Commission' : (/work session/i.test(m.title) ? 'Work Session' : 'Board of County Commissioners'),
+      canceled: false,
+      hasAgenda: !!m.agendaUrl,
+      agendaLink: m.agendaUrl || null,
+      packetUrl: m.packetUrl || null
+    });
+  }
+  // Planning Commission (still on AgendaCenter): summary-derived, as before.
+  if (typeof MANUAL_SUMMARIES === 'undefined' || !MANUAL_SUMMARIES) return out;
   for (const key of Object.keys(MANUAL_SUMMARIES)) {
     if (key.slice(0, 6).toLowerCase() !== 'ouray|') continue;
     const parts = key.split('|');
@@ -8246,8 +8272,10 @@ function getOurayMeetings() {
     // Board-only title; the "Ouray County" entity rides on sourceLabel (consumers
     // that build a heading prefix it with the source — e.g. weekly-email.js).
     const title = isPC ? 'Planning Commission' : isBOCC ? 'Board of County Commissioners' : 'Meeting';
+    // BOCC now comes from CivicClerk above; only fall back for PC / other.
+    if (!isPC && rows.length) continue;
     const dk = date + '|' + title;
-    if (seen[dk]) continue; seen[dk] = 1;
+    if (seen[dk] || seen[date + '|' + (isPC ? 'pc' : 'bocc')]) continue; seen[dk] = 1;
     out.push({
       title,
       link: 'https://ouraycountyco.gov/AgendaCenter',

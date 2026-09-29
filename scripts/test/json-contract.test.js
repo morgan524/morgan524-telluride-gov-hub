@@ -72,6 +72,7 @@ const CONTRACTS = {
   'ophir-cached-data.json': MEETING_SEED,
   'ridgway-cached-data.json': MEETING_SEED,
   'ouray-city-cached-data.json': { required: ['title', 'date'], minCount: 0 },  // BOT-REBUILT each run
+  'ouray-county-cached-data.json': { required: ['title', 'date'], minCount: 0 },  // BOT-REBUILT each run
   'smart-cached-data.json': { required: ['title', 'date'], minCount: 0 },  // BOT-REBUILT each run
   'airport-cached-data.json': { required: ['title', 'date'], minCount: 0 },
   // — other page data —
