@@ -7771,8 +7771,11 @@ function getSchoolMeetings() {
   // Map each entry to a card object first
   const cards = SCHOOL_CACHED_DATA.map(m => {
     const eventDate = localDate(m.date);
-    const hasAgenda = !!m.agendaUrl;
-    const link = m.agendaUrl || SCHOOL_BOARD_URL;
+    // ParentSquare hrefs are protocol-relative ("//files.smartsites…") — a bare
+    // "//" link breaks in email clients and the .ics, so force https.
+    const agendaUrl = m.agendaUrl ? String(m.agendaUrl).replace(/^\/\//, 'https://') : null;
+    const hasAgenda = !!agendaUrl;
+    const link = agendaUrl || SCHOOL_BOARD_URL;
 
     let description = '';
     if (m.note) {
@@ -7794,7 +7797,8 @@ function getSchoolMeetings() {
       category: m.special ? 'Special Meeting' : 'Board Meeting',
       canceled: false,
       hasAgenda,
-      packetUrl: m.packetUrl || null,
+      // The district's posted file IS the full packet (…_mm_packet.pdf).
+      packetUrl: m.packetUrl || (/packet/i.test(agendaUrl || '') ? agendaUrl : null),
       _rawTime: m.time || ''
     };
   });
@@ -7935,7 +7939,8 @@ function getNorwoodMeetings() {
       sourceLabel: 'Norwood',
       category: 'Meeting',
       canceled: false,
-      hasAgenda
+      hasAgenda,
+      packetUrl: m.packetUrl || null
     };
   });
 }
@@ -7964,7 +7969,9 @@ function getOphirMeetings() {
       sourceLabel: 'Ophir',
       category: 'Meeting',
       canceled: false,
-      hasAgenda
+      hasAgenda,
+      // Ophir posts one combined 'GA Meeting Packet'; show it as the packet too.
+      packetUrl: m.packetUrl || (/packet/i.test(m.agendaUrl || '') ? m.agendaUrl : null)
     };
   });
 }
@@ -7974,7 +7981,7 @@ function getAirportMeetings() {
     const eventDate = localDate(m.date);
     return {
       title: m.title,
-      link: AIRPORT_BOARD_URL,
+      link: m.packetUrl || AIRPORT_BOARD_URL,
       description: m.note || 'Regular board meeting of the Telluride Regional Airport Authority.',
       eventDate,
       eventDates: '',
@@ -7984,7 +7991,9 @@ function getAirportMeetings() {
       sourceLabel: 'TEX',
       category: 'Meeting',
       canceled: false,
-      hasAgenda: false
+      // TRAA posts one packet PDF (agenda included) per meeting.
+      hasAgenda: !!m.packetUrl,
+      packetUrl: m.packetUrl || null
     };
   });
 }
@@ -8158,7 +8167,8 @@ function getRidgwayMeetings() {
       category: /special/i.test(m.title) ? 'Special Meeting' : (isPC ? 'Planning Commission' : 'Town Council'),
       canceled: false,
       hasAgenda,
-      packetUrl: null
+      // Ridgway posts ONE combined 'Agenda & Packet' PDF — it is the packet.
+      packetUrl: agendaUrl || null
     };
   });
 }

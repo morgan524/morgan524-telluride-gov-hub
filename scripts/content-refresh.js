@@ -5226,6 +5226,14 @@ async function syncNorwoodMeetings() {
 
       // Build agenda map by date
       const agendaMap = {};
+      // Packet: Norwood posts it as "<date> … Supporting Documents.pdf" (or a
+      // "…Packet.pdf") attachment on the same row. Never read before 2026-09-29.
+      const packetRe = /<a href="([^"]+)" aria-label="[^"]*(?:Supporting Documents|Packet)[^"]*attachment for (\d{4}-\d{2}-\d{2})/gi;
+      const packetMap = {};
+      let pm;
+      while ((pm = packetRe.exec(html)) !== null) {
+        if (!packetMap[pm[2]]) packetMap[pm[2]] = 'https://www.norwoodtown.com' + pm[1];
+      }
       let am;
       while ((am = agendaRe.exec(html)) !== null) {
         if (!agendaMap[am[1]]) agendaMap[am[1]] = 'https://www.norwoodtown.com' + am[2];
@@ -5241,8 +5249,9 @@ async function syncNorwoodMeetings() {
         const mDate = new Date(dateStr + 'T12:00:00'); // noon local to avoid tz
         if (mDate < pruneDate || mDate.getTime() > horizon) continue;
         const agendaUrl = agendaMap[dateStr] || null;
+        const packetUrl = packetMap[dateStr] || null;
         const humanDate = mDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-        entries.push({ date: humanDate, title, board: pageDef.board, agendaUrl });
+        entries.push({ date: humanDate, title, board: pageDef.board, agendaUrl, packetUrl });
       }
     } catch (e) {
       console.warn('  Norwood scrape error:', e.message);
@@ -5570,6 +5579,30 @@ async function rebuildMedMeetings() {
 //     so the board meets monthly, not bimonthly.
 // The hand-kept list only ever recorded odd months, so it was missing half the
 // meetings — this projection is more complete than what it replaces, not less.
+// Telluride Regional Airport Authority posts one board packet PDF per meeting
+// (no separate agenda) as WordPress media: TRAA-Board-Packet-MMDDYY.pdf. The
+// public WP REST API lists them, so map filename date → packet URL for
+// patchAgendaUrls(..., 'packetUrl'). Added 2026-09-29 (packets were never read).
+async function syncAirportPackets() {
+  const map = {};
+  let resp;
+  try { resp = await fetch('https://tellurideairport.com/wp-json/wp/v2/media?search=Board-Packet&per_page=30&_fields=source_url'); }
+  catch (e) { console.warn(`  Airport packets fetch error: ${e.message}`); return map; }
+  if (resp.status !== 200) { console.warn(`  Airport packets HTTP ${resp.status}`); return map; }
+  let items = [];
+  try { items = JSON.parse(resp.text) || []; } catch (e) { return map; }
+  const MONTHS_FULL = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  for (const it of items) {
+    const u = String((it && it.source_url) || '');
+    const m = u.match(/Board-Packet-(\d{2})(\d{2})(\d{2})\.pdf$/i);
+    if (!m) continue;
+    const key = `${MONTHS_FULL[+m[1] - 1]} ${+m[2]}, 20${m[3]}`;
+    if (!map[key]) map[key] = u;
+  }
+  console.log(`  Airport: ${Object.keys(map).length} board packet(s) on the WP media API`);
+  return map;
+}
+
 function rebuildAirportMeetings(existing, now = new Date()) {
   return assembleBoardStubs(existing, { nth: 3, weekday: 4 }, {
     title: 'TRAA Board of Commissioners Meeting',
@@ -7711,6 +7744,15 @@ async function main() {
       console.warn(`  ${arrName} agenda sync error: ${e.message}`);
     }
   }
+
+  // Airport board packets → packetUrl on AIRPORT_CACHED_DATA (2026-09-29).
+  try {
+    const airportPackets = await syncAirportPackets();
+    if (Object.keys(airportPackets).length) {
+      const { src, changed: n } = patchAgendaUrls(govDataSrc, 'AIRPORT_CACHED_DATA', airportPackets, 'packetUrl');
+      if (n > 0) { govDataSrc = src; govDataChanged = true; console.log(`  AIRPORT_CACHED_DATA: patched ${n} packetUrl field(s)`); }
+    }
+  } catch (e) { console.warn('  Airport packet sync failed:', e.message); }
 
   // HARC agenda PACKAGES (DocumentType 4) → packetUrl on TELLURIDE_CACHED_DATA
   // (green "Agenda Packet" button; requested 2026-07-21).
