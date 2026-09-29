@@ -264,7 +264,23 @@ const normTitle = (t) => String(t || '')
 // "DARRELL SCOTT - Live at The Sherbino" (Ouray Ridgway) vs "DARRELL SCOTT"
 // (Sherbino Theater). Deliberately narrow -- a general "strip trailing at X"
 // would wrongly merge "Yoga at Hartwell Park" into a plain "Yoga" the same day.
-const dedupTitle = (t) => normTitle(t).replace(/\s+live at\s+.*$/, '').trim();
+//
+// Second narrow rule: strip a trailing " - <presenting org>" when the org is one
+// of our own event sources. A venue re-lists a partner's show with the presenter
+// appended, e.g. "Hanneke Cassel Trio - Telluride Chamber Music" (The Alibi) vs
+// "Hanneke Cassel Trio" (Telluride Chamber Music, Mountain Village, Telluride.com)
+// — without this the Alibi copy published as a second card. Only a separator
+// (- – — |) followed by a KNOWN org name is stripped, so a subtitle like
+// "Hamlet - A Reading" is left alone.
+const PRESENTER_SUFFIXES = () => new Set(Object.values(SOURCES).filter(Boolean).map(normTitle));
+let presenterSet = null;
+const stripPresenter = (t) => {
+  const m = String(t || '').match(/^(.+?)\s+[-–—|]\s+([^-–—|]+)$/);
+  if (!m) return t;
+  if (!presenterSet) presenterSet = PRESENTER_SUFFIXES();
+  return presenterSet.has(normTitle(m[2])) ? m[1] : t;
+};
+const dedupTitle = (t) => normTitle(stripPresenter(t)).replace(/\s+live at\s+.*$/, '').trim();
 
 // Read recurring-acts.json (repo root, { _comment, series: [...] }). Missing or
 // malformed is non-fatal — the rest of the index is worth building.
@@ -407,4 +423,4 @@ function run(repoRoot) {
 }
 
 if (require.main === module) run();
-module.exports = { buildEventsIndex, run, actSuppressionIndex, isActSuppressed, normTitle, dedupTitle, dateKeyOf };
+module.exports = { buildEventsIndex, run, actSuppressionIndex, isActSuppressed, normTitle, dedupTitle, stripPresenter, dateKeyOf };

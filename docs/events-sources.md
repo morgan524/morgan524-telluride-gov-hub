@@ -100,6 +100,11 @@ its own, so the builder is the only place to change this.
   trailing `live at <venue>`, so `DARRELL SCOTT - Live at The Sherbino`
   matches `DARRELL SCOTT`. It is deliberately not a general "strip trailing
   at X" — that would merge `Yoga at Hartwell Park` into a plain `Yoga`.
+- A second narrow rule (`stripPresenter()`, 2026-09-29): strip a trailing
+  ` - <org>` (or `–`, `—`, `|`) only when `<org>` normalizes to one of the
+  `SOURCES` labels, so The Alibi's `Hanneke Cassel Trio - Telluride Chamber
+  Music` matches the bare `Hanneke Cassel Trio`. `Hamlet - A Reading` is left
+  alone. `tkey()` in `scripts/weekly-email.js` imports the same function.
 
 Two other title normalizers must stay in step with `normTitle()`, and both
 missed the farmers-market duplicate until 2026-08-18:

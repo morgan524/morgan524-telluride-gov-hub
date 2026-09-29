@@ -22,6 +22,7 @@ const { execSync } = require('child_process');
 const { stripDescPreamble } = require('./lib/clean-text.js');
 const { generateRickLede } = require('./lib/rick-lede.js');
 const { meetingDisplayName } = require('./lib/meeting-title.js');
+const { stripPresenter } = require('./build-events-index.js');
 const GD = process.argv[2], GH = process.argv[3];
 const WEEK_START = process.argv[4] || new Date().toISOString().slice(0, 10);
 const LABEL = process.argv[5] || 'This Week';
@@ -243,7 +244,9 @@ let chosen = []; const usedTitles = new Set();
 // only the first-day pick survives.
 const TKEY_STOPWORDS = new Set(['gala','fundraiser','presents','featuring','annual','event','show','live','from','with','this']);
 const tkey = (t) => {
-  const cleaned = String(t || '')
+  // "Hanneke Cassel Trio - Telluride Chamber Music" (The Alibi) is the same show
+  // as "Hanneke Cassel Trio" — same presenter-suffix rule as the events index.
+  const cleaned = String(stripPresenter(t) || '')
     // "<show> With Special Guest <name>" is the SAME show as "<show>" — a common
     // cross-source title variant (e.g. KOTO vs telluride.com both list the Randy
     // Houser concert). Drop the tail so the two collapse to one card.
