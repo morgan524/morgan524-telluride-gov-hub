@@ -626,7 +626,10 @@ for (const fn of MEETING_FNS) {
       time: m.eventTimes || '', location: m.location || '' });
   }
 }
-meetings.sort((a, b) => a.date < b.date ? -1 : a.date > b.date ? 1 : 0);
+// Date, then start time within the day (now that the badge shows the hour,
+// 4:00 PM listed above 9:00 AM reads as a mistake). No time sorts last.
+const startMin = (t) => { const x = String(t || '').match(/(\d{1,2}):(\d{2})\s*([AP])M/i); return x ? ((+x[1] % 12) + (/p/i.test(x[3]) ? 12 : 0)) * 60 + +x[2] : 24 * 60; };
+meetings.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0) || (startMin(a.time) - startMin(b.time)));
 
 // ── "Actions You Can Take This Week" support. The Comment button opens the
 // reader's mail client with the subject + a starter body pre-filled, addressed
