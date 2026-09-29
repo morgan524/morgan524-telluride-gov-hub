@@ -1,26 +1,26 @@
 {
-  "hash": "8a63b010029062208117c8cc0b6d4c054fb3eb19",
-  "lede": "The biggest thing on the calendar this week is actually two back-to-back hearings on the same project: Tuesday, September 30 brings a special HARC session reviewing preliminary architecture for the Carhenge redevelopment at 700 W. Pacific Ave, followed immediately by a special Town Council session to hear a legal appeal of the lot consolidation that has to happen before any of that construction can move forward. Also worth knowing: county commissioners take up a proposed Employee Housing Impact Fee on the 30th, and the Town sits down Thursday to sketch out the 2027 General Fund budget.",
+  "hash": "8eb0354db78e31a8b98eaed66be4ed13439a8964",
+  "lede": "The biggest thing happening this week is actually a pair of back-to-back proceedings on Tuesday, September 30: HARC holds a special meeting to review the Carhenge redevelopment at 700 W. Pacific — three separate large-scale building clusters all up for preliminary review at once — and right alongside it, Town Council convenes a special appeal hearing on the lot subdivision that has to happen before any of that development can move forward. The county also opens a work session on a proposed Employee Housing Impact Fee, the town's 2027 General Fund budget gets its first real public sketch-out on Thursday, and the San Miguel River Cleanup is Saturday.",
   "notable": [
     {
       "id": 1,
-      "stake": "HARC reviews three building clusters in the contested Carhenge redevelopment."
+      "stake": "HARC reviews all three Carhenge building clusters — a major redevelopment decision."
     },
     {
       "id": 2,
-      "stake": "Council hears appeal that could block or greenlight the Carhenge lot consolidation."
+      "stake": "Council hears appeal of Carhenge lot subdivision; outcome shapes whether project proceeds."
     },
     {
       "id": 3,
-      "stake": "Commissioners discuss a new Employee Housing Impact Fee for San Miguel County."
+      "stake": "Commissioners discuss a new Employee Housing Impact Fee — watch for the policy direction."
     },
     {
       "id": 5,
-      "stake": "Final architecture review for 15 employee apartments could advance workforce housing."
+      "stake": "Final architecture review for 15 employee apartments and 4 new multifamily units."
     },
     {
       "id": 6,
-      "stake": "2027 General Fund and Capital budget contours take shape before formal adoption."
+      "stake": "2027 General Fund, revenue, and capital priorities get shaped before formal adoption."
     }
   ]
 }

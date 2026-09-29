@@ -459,7 +459,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045","sv":4,"ph":"32e2fb93c90d2ccb"},
 
   "county|2026-10-28|Board of County Commissioners Work Session":
-    {"sv":4}
+    {"sv":4},
+
+  "ouraycity|2026-09-30|Ouray City Council Work Session":
+    {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=769742","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -818,7 +821,10 @@ const MEETING_PREVIEWS = {
     "Council is expected to meet for a regular session on October 27, 2026. Key related matters include a new $2.00 monthly paper billing fee from San Miguel Power Association and a request for proposals for consulting services to review Telluride's employee rental housing policies.",
 
   "county|2026-10-28|Board of County Commissioners Work Session":
-    "Board is expected to discuss county procurement activity, including requests for proposals on a trail connector project, fuel island canopy construction, jail painting, and a multi-hazard mitigation plan update, as well as a materials hauling quote. Additional related legal and financial notices may be referenced during the session."
+    "Board is expected to discuss county procurement activity, including requests for proposals on a trail connector project, fuel island canopy construction, jail painting, and a multi-hazard mitigation plan update, as well as a materials hauling quote. Additional related legal and financial notices may be referenced during the session.",
+
+  "ouraycity|2026-09-30|Ouray City Council Work Session":
+    "Council is expected to review capital improvement plans and fund-by-fund budget details, then discuss Fourth of July entertainment, an in-town shuttle program, and OurWay transit service. Members will also consider nonprofit funding requests totaling approximately $195,000 from nine local organizations before taking council questions."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1018,7 +1024,7 @@ const SMC_ALERTS = [
 const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-28';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-29';
 const LEGAL_NOTICES_CACHE_DATE = '2026-09-27';
 
 const MANUAL_SUMMARIES = {
@@ -1335,7 +1341,10 @@ const MANUAL_SUMMARIES = {
     "The October 27, 2026 Town Council agenda hasn't been posted yet.",
 
   "county|2026-10-28|Board of County Commissioners Work Session":
-    "The October 28 BOCC Work Session in Placerville has been posted, but no agenda detail beyond the meeting name and location has been provided. There's no way to know what's on the table until the full agenda drops."
+    "The October 28 BOCC Work Session in Placerville has been posted, but no agenda detail beyond the meeting name and location has been provided. There's no way to know what's on the table until the full agenda drops.",
+
+  "ouraycity|2026-09-30|Ouray City Council Work Session":
+    "A full-day budget work session for the Ouray City Council — the kind of meeting where the year's priorities actually get set, even if the formal votes come later. The morning runs through the Capital Improvement Fund and a fund-by-fund budget review. The afternoon shifts to operations and community: Fourth of July entertainment funding, the free in-town shuttle, and OurWay/All-Points Transit. Then comes the non-profit funding round, with nine organizations on the list — Home Trust leading at $45,000, Ouray Library at $100,000, Mountain Air Music and Voyager each at $10,000, OCSAP at $5,000, Mountain Rescue at $10,000, and smaller asks from EcoAction Partners, ROCC, and UWP."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
