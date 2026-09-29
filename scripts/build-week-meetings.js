@@ -170,7 +170,10 @@ function buildWeekMeetings(repoRoot) {
       });
     }
   }
-  out.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : a.title.localeCompare(b.title)));
+  // Date, then START TIME within the day (Morgan 2026-09-29: first in the
+  // morning to last), then title. No published time sorts last in its day.
+  const startMin = (t) => { const x = String(t || '').match(/(\d{1,2}):(\d{2})\s*([AP])M/i); return x ? ((+x[1] % 12) + (/p/i.test(x[3]) ? 12 : 0)) * 60 + +x[2] : 24 * 60; };
+  out.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : (startMin(a.time) - startMin(b.time)) || a.title.localeCompare(b.title)));
   return out;
 }
 

@@ -343,7 +343,12 @@
 
   LTData.load(['week-meetings', 'meeting-links']).then(function (data) {
     MEETING_LINKS = data['meeting-links'] || {};
-    meetings = (data['week-meetings'] || []).filter(function (m) { return m.date >= LTData.todayMT(); });
+    // Date, then start time (earliest first); no published time goes last in
+    // its day (Morgan 2026-09-29). The JSON is sorted this way too — this
+    // keeps the page right even with an older cached file.
+    function startMin(t) { var x = String(t || '').match(/(\d{1,2}):(\d{2})\s*([AP])M/i); return x ? ((+x[1] % 12) + (/p/i.test(x[3]) ? 12 : 0)) * 60 + +x[2] : 24 * 60; }
+    meetings = (data['week-meetings'] || []).filter(function (m) { return m.date >= LTData.todayMT(); })
+      .sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : (startMin(a.time) - startMin(b.time)) || String(a.title).localeCompare(String(b.title)); });
     renderEntityFilter();
     render();
   }).catch(function (err) { LTData.showError(list, err); });
