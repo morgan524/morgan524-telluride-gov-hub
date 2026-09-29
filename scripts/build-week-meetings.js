@@ -134,7 +134,10 @@ function buildWeekMeetings(repoRoot) {
         sourceLabel: sourceLabel,   // the canonical entity label (GETTERS), not per-record variants — filters group on it
         title: title,
         date: date,
-        time: String(m.time || '').trim(),
+        // Every get*Meetings() getter emits the hour as `eventTimes` (m.time was
+        // never set, so week-meetings shipped time:'' for every meeting and the
+        // site's time label never rendered).
+        time: String(m.eventTimes || m.time || '').trim(),
         location: String(m.location || '').trim(),
         agendaUrl: m.agendaLink || meta.agendaUrl || '',
         packetUrl: m.packetUrl || meta.packetUrl || '',

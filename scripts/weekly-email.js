@@ -812,7 +812,11 @@ const mh = meetings.map((m) => {
     : 'padding:13px 0;border-top:1px solid #eef1ee;';
   // Comment button first, then Add to calendar, then the View-agenda link.
   const acts = [commentBtn, calendarBtn, link].filter(Boolean).join(ACT_SEP);
-  return `<tr><td style="${tdStyle}"><span style="display:inline-block;background:#21443c;color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(m.date)).toUpperCase()}</span><span style="font-size:12px;color:#7a8a85;margin-left:8px;">${esc(m.src)}</span><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:5px;">${esc(meetingDisplayName(m.name, m.src))}</div><div style="font-size:15.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${renderSummary(m.summary)}</div>${wtmBlock}${acts}</td></tr>`;
+  // Start time rides in the date badge ("WED, OCT 7 · 4:00 PM") — Morgan
+  // 2026-09-29: every meeting should show its time in the digest, same as the
+  // site. Bodies that publish no hour keep the bare date.
+  const when = wd(m.date) + (m.time ? ' · ' + String(m.time).replace(/\s*-\s*/, '–') : '');
+  return `<tr><td style="${tdStyle}"><span style="display:inline-block;background:#21443c;color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(when).toUpperCase()}</span><span style="font-size:12px;color:#7a8a85;margin-left:8px;">${esc(m.src)}</span><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:5px;">${esc(meetingDisplayName(m.name, m.src))}</div><div style="font-size:15.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${renderSummary(m.summary)}</div>${wtmBlock}${acts}</td></tr>`;
 }).join('');
 const EV_ACCENT = '#a0531f'; // rust (toned down from the redder #a8401f) — complements the forest-green meeting badge
 // Town/area label for an event card. Prefers the scraped venue string when one

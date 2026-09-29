@@ -5991,9 +5991,15 @@ async function syncTellurideBoardMeetings() {
     const dedup = dateKey + '|' + title.toLowerCase();
     if (seen.has(dedup)) continue;
     seen.add(dedup);
+    // CivicWeb sends MeetingDateTime as "2026-10-07 16:00" (space, not "T") plus
+    // a ready-made MeetingTime "04:00 PM". The old /T(\d{2}):/ match never hit
+    // the space form, so every Town meeting shipped with no time (Morgan
+    // 2026-09-29: "I don't see the meeting times"). Accept either separator and
+    // fall back to MeetingTime; drop the leading zero ("4:00 PM").
     let time = '';
-    const tm = String(m.MeetingDateTime || '').match(/T(\d{2}):(\d{2})/);
+    const tm = String(m.MeetingDateTime || '').match(/[T ](\d{2}):(\d{2})/);
     if (tm) { const h = parseInt(tm[1], 10); time = `${((h + 11) % 12) + 1}:${tm[2]} ${h >= 12 ? 'PM' : 'AM'}`; }
+    else if (/^\d{1,2}:\d{2}\s*[AP]M$/i.test(String(m.MeetingTime || '').trim())) time = String(m.MeetingTime).trim().replace(/^0/, '').toUpperCase();
     out.push({
       date: dateKey,
       title,
