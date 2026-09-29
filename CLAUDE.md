@@ -248,6 +248,20 @@ If no time was published, show none.
 - Rico's 7:00 PM is its standing third-Wednesday schedule (the dates are
   projected the same way), not a guess.
 
+## City of Ouray source; agenda-packet patching
+
+- **City of Ouray** (source `ouraycity`, separate from `ouray` = Ouray County)
+  comes from BoardBook Premier org 2503. There's no feed, so
+  `syncOurayCityMeetings()` scrapes the public list table into
+  `OURAY_CITY_CACHED_DATA`. `getOurayCityMeetings()` adds the published regular
+  schedule (Council 1st/3rd Monday 6 PM, Monday holiday → Tuesday; Planning
+  Commission 2nd Tuesday 4 PM) until BoardBook posts the real row.
+- **`patchAgendaUrls()` must handle both quote styles.** Rebuilt arrays like
+  `TELLURIDE_CACHED_DATA` are serialized with `"double"` quotes. The patcher
+  used to match only `'single'`, which silently dropped every HARC packet
+  (fixed 2026-09-29). If a packet or agenda is found in the log but never shows
+  up on the site, check this first.
+
 ## Featured organization rotation is week-anchored
 
 `featuredOrgIndex()` (duplicated in `scripts/weekly-email.js` and
