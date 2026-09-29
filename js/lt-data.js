@@ -256,8 +256,17 @@
 
     let acts = '';
     if (fa.deepDive && fa.deepDive.href) acts += '<a class="fa-dive" href="' + esc(fa.deepDive.href) + '">Read the ' + esc(fa.deepDive.label) + ' deep dive &rarr;</a>';
-    if (m.agendaUrl) acts += '<a class="fa-plain" href="' + esc(safeUrl(m.agendaUrl)) + '" target="_blank" rel="noopener">View Agenda</a>';
-    if (m.packetUrl) acts += '<a class="fa-plain" href="' + esc(safeUrl(m.packetUrl)) + '" target="_blank" rel="noopener">Agenda Packet</a>';
+    // Same two-state rule as the regular Gov-Hub cards: View Agenda and
+    // Agenda Packet are always present — live link when posted, grey
+    // non-clickable ghost when not yet. A meeting PAGE that isn't an agenda
+    // shows as "Meeting info" instead of masquerading as one.
+    acts += (m.hasAgenda && m.agendaUrl)
+      ? '<a class="fa-plain" href="' + esc(safeUrl(m.agendaUrl)) + '" target="_blank" rel="noopener">View Agenda</a>'
+      : '<span class="fa-empty" title="Agenda not yet posted" aria-disabled="true">View Agenda</span>';
+    acts += m.packetUrl
+      ? '<a class="fa-plain" href="' + esc(safeUrl(m.packetUrl)) + '" download target="_blank" rel="noopener">Agenda Packet</a>'
+      : '<span class="fa-empty" title="Agenda packet not yet posted" aria-disabled="true">Agenda Packet</span>';
+    if (!m.hasAgenda && (m.agendaUrl || m.link)) acts += '<a class="fa-plain" href="' + esc(safeUrl(m.agendaUrl || m.link)) + '" target="_blank" rel="noopener">Meeting info</a>';
     if (m.zoomLink) acts += '<a class="fa-plain" href="' + esc(safeUrl(m.zoomLink)) + '" target="_blank" rel="noopener">Join Zoom</a>';
     byId('fa-acts').innerHTML = acts;
     card.style.display = 'block';
