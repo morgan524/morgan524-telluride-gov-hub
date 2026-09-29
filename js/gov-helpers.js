@@ -408,7 +408,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-10-21|Historic & Architectural Review Commission Chair - Oct 21 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8025","sv":4,"ph":"c951089001cb45c2"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8025","sv":4,"ph":"1574cfb4766d5b57"},
 
   "telluride|2026-10-21|Historic & Architectural Review Commission - Oct 21 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024","sv":4,"ph":"0edc39a9264b1248"},
@@ -1760,9 +1760,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Telluride Times",
     date: "September 28, 2026",
     firstSeen: "2026-09-28",
-    newsTopic: "community",
-    copy: "Parents now have the option to restrict their children’s use of iPads and laptops while at the Wilkinson Public Library.",
-    claudeSummary: false,
+    newsTopic: "arts-culture",
+    copy: "Wilkinson Public Library now lets parents opt their kids out of iPad and laptop access in the Youth Services area by completing a form on the library's website. Staff will hold devices behind the circulation desk and check each child's status before handing them out. The library still offers plenty for kids to do, including a newly remodeled children's space, tween area, and programming like story time and art classes.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_dd2cb151-2594-4730-bd3f-4469bde3f332.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/80/280c3cfe-f8bb-4a6d-a868-7bb7ecb9e02f/6abad1828f35d.image.jpg",
     imgHiRes: true
@@ -2432,18 +2432,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Telluride earns its first Michelin restaurant recognition",
-    source: "Telluride Times",
-    date: "September 15, 2026",
-    firstSeen: "2026-09-16",
-    newsTopic: "community",
-    copy: "The National, a Telluride restaurant led by Chef Chris Thompson, has earned a Michelin Recommended distinction in the 2026 Michelin Guide — the first such recognition for a Telluride restaurant. Thompson, who grew up here and returned in 2023, runs the spot with his wife Kate. Several local hotels have previously earned Michelin Keys.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_838f41b1-5648-4571-8617-a4fd2cbda665.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/77/1773e62a-bae3-4761-8c7d-5487067cd7de/6aa9c3ecb25cd.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Commissioners approve AMI increase for some Pinion Park units",
     source: "Telluride Times",
     date: "September 16, 2026",
@@ -2453,168 +2441,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_2f591495-4a27-44e9-8d84-3fbb62a91ae8.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/bd/9bd60221-b2e7-408d-ba91-2b111679ca3b/6aa4836131e45.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Endorsement for Dan Couvault",
-    source: "Telluride Times",
-    date: "September 15, 2026",
-    firstSeen: "2026-09-16",
-    newsTopic: "health",
-    copy: "A crisis clinician with 30+ years in mental health work endorses Sheriff Dan Covault, citing his focus on crisis response training for deputies and collaboration with mental health responders. The letter notes four suicides in four months and flags that a prior administration ordered deputies not to respond to mental health calls. Readers are directed to the April 22 commissioners meeting recording for both candidates' interviews.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_d34e163d-3fdf-45ad-8736-88087204fe0e.html",
-    img: "",
-    letterAuthor: "Melissa King LAC",
-    isLetter: true,
-    imgHiRes: true
-  },
-  {
-    title: "Another view of housing",
-    source: "Telluride Times",
-    date: "September 15, 2026",
-    firstSeen: "2026-09-16",
-    newsTopic: "housing",
-    copy: "A Telluride resident is pointing to San Rafael, CA, where multiple developers competed to house affordable units on a single 2.5-acre site — giving the public real cost and density tradeoffs to weigh. The letter questions why Telluride is moving forward with a single town-developed plan before costs are known. Worth watching how council responds.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_9823f845-c4a0-4cf8-afe5-28cb216da161.html",
-    img: "",
-    letterAuthor: "Madelaine Whiteman",
-    isLetter: true,
-    imgHiRes: true
-  },
-  {
-    title: "Celebrating 'The Wonderment'",
-    source: "Telluride Times",
-    date: "September 15, 2026",
-    firstSeen: "2026-09-16",
-    newsTopic: "arts-culture",
-    copy: "Telluride poet Rosemerry Wahtola Trommer celebrates her 16th book, *The Wonderment*, Thursday, Sept. 24, 5–7:30 p.m. at Telluride Arts. The evening includes piano by Travis West, readings by two local high schoolers, and a book signing. Between the Covers will have copies available.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_e1610aab-c1b5-4a5b-8588-234c1f41ac24.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/bf/7bf1f45c-232b-4baa-a1b6-cd1e934d4c1a/6aa9cc1c718af.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Jack Johnson and our empty nest",
-    source: "Telluride Times",
-    date: "September 15, 2026",
-    firstSeen: "2026-09-16",
-    newsTopic: "education",
-    copy: "A Telluride-area mom writes about sending both teenagers off within the same week — one to Western Colorado University, one to Idaho's Alzar School — leaving her and her husband in a suddenly quiet house. Jack Johnson concerts in New Hampshire and Denver framed the summer as the family's last big stretch together before the nest emptied.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_121f5970-51df-4aab-8a80-9bcfccbd322c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/da/1da99551-bfb8-4ef8-b460-2cf8f15a8174/6aa9ca58efdda.image.jpg",
-    isLetter: true,
-    imgHiRes: true
-  },
-  {
-    title: "Mountain Village to auction off 10 refurbished gondola cabins",
-    source: "Telluride Times",
-    date: "September 15, 2026",
-    firstSeen: "2026-09-16",
-    newsTopic: "infrastructure",
-    copy: "Mountain Village is auctioning 10 refurbished gondola cabins — six red, two yellow, two blue — with starting bids at $4,000 each. Proceeds go to Mountain Munchkins, the town's infant and toddler childcare facility. Bids are due Sept. 30; buyers must haul by Nov. 1.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_b492da27-f2cd-4396-8dd0-2c3698a058fe.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/0c/90cdcd18-1dc5-454f-84a5-656785b7c04d/6aa9cb353625b.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Everyday choices can impact brain health, cognitive decline",
-    source: "Telluride Times",
-    date: "September 15, 2026",
-    firstSeen: "2026-09-16",
-    newsTopic: "health",
-    copy: "A free public talk on brain health and dementia prevention is set for Wednesday, Sept. 24 at 6:30 p.m. at the Telluride Innovation Center. Dr. Melissa Sundermann will cover how daily habits — sleep, movement, diet, and time outdoors — may reduce cognitive decline risk. RSVP required at brain-health-telluride.eventbrite.com.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_54cdc3aa-a363-428f-beda-90da6cb01f69.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/34/d34ab218-21a3-4724-a71e-a186160fafbc/6aa9c87edc0c3.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Library hosts book talk, signing for 'Plastic Shaman'",
-    source: "Telluride Times",
-    date: "September 15, 2026",
-    firstSeen: "2026-09-16",
-    newsTopic: "community",
-    copy: "Annette McGivney brings her new book \"Plastic Shaman\" to Wilkinson Public Library on Sept. 30 at 5:30 p.m. The book investigates a 2009 wellness retreat where three people died in a fake sweat lodge ceremony. Between the Covers will be selling copies at the event.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_e08810f3-b5ae-40d9-80c7-45045cb72eb1.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/45/d45d4ea6-eab6-48b0-b4eb-80db8c7e29de/6aa9c73910c65.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "Bella's Story",
-    source: "Telluride Times",
-    date: "September 15, 2026",
-    firstSeen: "2026-09-16",
-    newsTopic: "public-safety",
-    copy: "A 13-year-old dog named Bella was hit by a car and brought to Second Chance Delta with a broken leg and dislocated hip. She got emergency surgery — and her family found her through a social media post before she even needed a foster home. Second Chance is now raising $2,500 for their Emergency Vet Care Fund for cases like hers.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_903653ab-1362-4b7a-8799-380bb4493f6a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/d9/bd91fc52-70ea-4ade-a5dd-6aa890aaa38c/6aa9c6a1e2b15.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "A good long hike",
-    source: "Telluride Times",
-    date: "September 15, 2026",
-    firstSeen: "2026-09-16",
-    newsTopic: "recreation",
-    copy: "A local writer reflects on how backcountry hiking with a group of women follows the same structure as any ritual — intention, movement, shared food, and gratitude at trail's end. The piece walks through their routine, from the opening text to the summit selfie to the drive home with windows down. It's a quiet reminder that the mountains have always offered that kind of thing to people paying attention.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_8700fc95-6c39-4e37-893a-864e17a9b62f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/ee/deeb6695-f5b8-49f6-bb42-b6e2c8c34baa/6aa9c50e9382e.image.jpg",
-    isLetter: true,
-    imgHiRes: true
-  },
-  {
-    title: "County Public Health introduces 'Free Care Boxes' at local libraries",
-    source: "Telluride Times",
-    date: "September 15, 2026",
-    firstSeen: "2026-09-16",
-    newsTopic: "health",
-    copy: "San Miguel County Public Health installed \"Free Care Boxes\" at Wilkinson Public Library and Lone Cone Library on Sept. 1, stocked with Narcan, diapers, menstrual products, oral-hygiene supplies, and QR codes linking to local health resources. The locally built cabinets are walk-up, no-appointment access points inspired by Telluride's Free Box tradition.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_ec915534-53b6-4dfd-86d1-1b23be35cd20.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/82/d822ea16-2a05-4e30-a041-6d35143153fd/6aa9c5b4ece51.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Full circle connection",
-    source: "Telluride Times",
-    date: "September 15, 2026",
-    firstSeen: "2026-09-15",
-    newsTopic: "community",
-    copy: "Dodi Darrow — longtime local trainer and co-founder of Box Canyon Booties — now runs the Women's Wellness Circle, weekly group sessions blending breathwork, discussion, and somatic massage for 8–12 women. The goal is connection and community rooting. A few spots remain in upcoming sessions; reach her at dodidarrow@gmail.com.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/business/article_e109193c-8529-4c9d-9d4d-f165b9a34db0.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/37/237c3ac0-5d37-49ca-a5d1-457db860c1b3/6aa3a2d54201c.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Alpine Wellness lawsuit: It ain’t over ‘til it’s over",
-    source: "Telluride Times",
-    date: "September 15, 2026",
-    firstSeen: "2026-09-15",
-    newsTopic: "community",
-    copy: "Mike Grady has appealed San Miguel County Court's dismissal of the lawsuit he and co-owner Nolan Murphy filed against the Town of Telluride over Alpine Wellness losing its local marijuana license. Grady disputes Town Attorney Kevin Geiger's claim that the ruling \"reaffirmed the Town did nothing incorrect,\" pointing out the case was dismissed on procedural grounds — the court never weighed in on the Town's actual conduct. Alpine Wellness, which operated in Telluride for 15 years, has since surrendered its cultivation license and is also pursuing a federal constitutional damages claim.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_30f38d8f-dea1-4688-ad3c-816504265d6e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/69/169b8f5d-4c79-4128-a1e7-eafd8e2a9ee6/6aa479d340e19.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Taylor Swift skips the Emmys for Arrowhead, cheering on hubby Travis Kelce alongside Tom Cruise",
-    source: "Telluride Times",
-    date: "September 15, 2026",
-    firstSeen: "2026-09-15",
-    newsTopic: "arts-culture",
-    copy: "Taylor Swift skipped the Emmys to watch Travis Kelce and the Chiefs open the season against Denver at Arrowhead, sitting alongside Tom Cruise. It was her first time seeing Kelce play since their July 3 wedding at Madison Square Garden, where Adam Sandler officiated and Stevie Nicks performed.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_c45f3b25-7218-5add-8efd-89c04ac20dd3.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/ad/0ad1e233-00e2-5286-8d54-778b9eca277d/6aa89d0409c00.image.jpg",
     imgHiRes: true
   },
   {
@@ -2832,7 +2658,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "September 28, 2026",
+    date: "September 29, 2026",
     firstSeen: "2026-09-11",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2843,7 +2669,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "September 28, 2026",
+    date: "September 29, 2026",
     firstSeen: "2026-09-14",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3990,7 +3816,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Pink Talking Fish | A Fusion of Pink Floyd, Talking Heads and Phish",
     link: "https://sheridanoperahouse.com/events/pink-talking-fish-a-fusion-of-pink-floyd-talking-heads-and-phish/",
-    description: "Pink Talking Fish is a live band that performs a fusion of music from Pink Floyd, Talking Heads, and Phish, blending the catalogs of all three iconic acts into a single, seamless show. The group performs at the historic Sheridan Opera House in Telluride.",
+    description: "",
     pubDate: "2026-10-02",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -4001,7 +3827,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Not-So-Young People's Theater: Shrek The Musical",
     link: "https://sheridanoperahouse.com/events/not-so-young-peoples-theater/",
-    description: "A production of Shrek The Musical performed at the Sheridan Opera House, bringing the beloved fairy-tale story to life on a Telluride stage. The show features the classic characters and songs from the hit musical based on the DreamWorks animated film.",
+    description: "",
     pubDate: "2026-10-08",
     endDate: "2026-10-11",
     source: "sheridan",
@@ -4587,7 +4413,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "First Friday Art Walk",
     link: "https://events.ourayridgwayevents.com/event/first-friday-art-walk",
-    description: "Discover new work, celebrate openings, and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month, galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits, live music and special programming — perfect for art lovers and casual browsers alike. NEW! 🎨🛍️ Shop local. Win local. Celebrate local. 🎶🍷 New this summer, your First Friday stroll through Ridgway could score you a $100 gift card to your favorite local business. 👀 Follow the link for more details. First Friday Map & Offer Details",
+    description: "First Friday is back! Spend the evening exploring downtown Ridgway, where galleries, studios, shops and gathering spaces come alive with new exhibitions, artist receptions, live music, pop-ups and special programming. Each month brings something different, so take a stroll, discover what’s new and make a night of it. 🎨🛍️ Shop local. Win local. Celebrate local. 🎶🍷 Visit participating businesses during First Friday for a chance to win a $100 gift card to a local business of your choice. 👀 Follow the link for this month’s map, featured stops and giveaway details. First Friday Map & Offer Details",
     pubDate: "2026-10-02T23:00:00.000Z",
     endDate: "2026-11-07",
     source: "oray",
@@ -4611,7 +4437,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "October - Art Opening: Space Cowboy by Dundee & Lee - special reading by Poet Laureate Crisosto Apache",
     link: "https://events.ourayridgwayevents.com/event/art-opening-space-cowboy-by-dundee-lee",
-    description: "Opening Reception Schedule - Part of Ridgway's First Friday Art Walk Gallery Open 5-8PM Artist Talk and Poetry Reading 630-7:30 Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado artists Emilie Odeile and Ken Chapin of Dundee & Lee, the exhibition centers on a 10-foot-tall fiber rocket topped with a cowboy hat and Mission Control consoles that gather images, voices, stories, and discoveries as Space Cowboy travels from community to community. Throughout October, the exhibition comes alive with special events and programming, including appearances by Colorado Poet Laureate Crisosto Apache, community conversations, and opportunities for Ridgway residents to become part of the continuing Space Cowboy story. …",
+    description: "Opening Reception Schedule - Part of Ridgway's First Friday Art Walk Gallery Open 5-8PM Artist Talk and Poetry Reading 630-7:30 Free refreshments provided by Chloe's Charcuterie and Wine Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado artists Emilie Odeile and Ken Chapin of Dundee & Lee, the exhibition centers on a 10-foot-tall fiber rocket topped with a cowboy hat and Mission Control consoles that gather images, voices, stories, and discoveries as Space Cowboy travels from community to community. Throughout October, the exhibition comes alive with special events and programming, including appearances by Colorado Poet Laureate Crisosto Apache, community conversations, and opportunities for Ridgway residents to become part of the continuing Space Cowboy story. …",
     pubDate: "2026-10-02T23:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4734,7 +4560,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "LIVE MUSIC IN THE GARDEN! Zan Waller & Stefan Davenport",
     link: "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
-    description: "LIVE MUSIC IN THE GARDEN! 🎶 Sunday, September 13th, from 4:00–6:00 p.m., let us introduce you to Chloe’s Secret Garden! 🌿✨ Enjoy live music with Zan Waller & Stefan Davenport, the perfect wine, and scrumptious charcuterie in our cozy garden setting. Sip, savor, and settle in for a relaxed afternoon of music and Colorado magic! 🍷🧀💛 We can’t wait to see you there! Join us! 🎵",
+    description: "LIVE MUSIC IN THE GARDEN! 🎶 Sundays from 4:00–6:00 p.m., let us introduce you to Chloe’s Secret Garden! 🌿✨ Enjoy live music with Zan Waller & Stefan Davenport, the perfect wine, and scrumptious charcuterie in our cozy garden setting. Sip, savor, and settle in for a relaxed afternoon of music and Colorado magic! 🍷🧀💛 We can’t wait to see you there! Join us! 🎵",
     pubDate: "2026-10-04T22:00:00.000Z",
     endDate: "2026-11-08",
     source: "oray",
@@ -5089,7 +4915,7 @@ const OURAY_RIDGWAY_EVENTS = [
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Chloe's Charcuterie & Wine",
-    imageUrl: "https://localist-images.azureedge.net/photos/51579855188578/huge/de5019ffbfacf4a9f5e85d8a14961584c70e7873.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53853125631578/huge/4d4b1a2e3ca65db2f52fab5279671e0107a58dc9.jpg"
   },
   {
     title: "Posture: The Joy of Alignment",
@@ -5271,8 +5097,8 @@ const OURAY_RIDGWAY_EVENTS = [
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
-    location: "United Church of the San Juans",
-    imageUrl: "https://localist-images.azureedge.net/photos/53020661090978/huge/40ac3b3b0cbad4ea627f2474983b044d7e46f15a.jpg"
+    location: "United Church Of The San Juans",
+    imageUrl: "https://localist-images.azureedge.net/photos/52492056342544/huge/bfe9154ac1ba36fc2f3a845ca66d6a96dd9905ba.jpg"
   },
   {
     title: "Teen Takeover at Ouray Hot Springs Pool",
@@ -5727,17 +5553,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Sunday Rehab at Alloy Kitchen",
-    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
-    description: "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
-    pubDate: "2026-09-27T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
-  },
-  {
     title: "Bike & Brewery Tour",
     link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
@@ -5758,6 +5573,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
+  },
+  {
+    title: "Public Art Commission Meeting",
+    link: "https://townofmountainvillage.com/explore/events/all-events/public-art-commission-meeting/",
+    description: "The Public Art Commission meets on an as-needed basis. Please join the meeting from your computer, tablet or smartphone using the below instructions.",
+    pubDate: "2026-09-30T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49288/2.jpg"
   },
   {
     title: "Market on the Plaza",
@@ -6104,18 +5930,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
 
 const TELLURIDE_COM_EVENTS = [
   {
-    title: "Gondola Closed for Maintenance",
-    link: "https://www.telluride.com/event/gondola-closes-for-maintenance/",
-    description: "The gondola will be closed for maintenance starting October 26 and will re-open for winter at 6:30 a.m. on November 20, …",
-    pubDate: "2026-04-06",
-    endDate: "2026-11-20",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/45301/gondola-rainbow-2-high-res-2100x1401-f18dd3a9-0d2b-4ff7-b99c-2c162daf4e94.800x533.webp"
-  },
-  {
     title: "Telluride Arts Salon Night",
     link: "https://www.telluride.com/event/telluride-arts-salon-night/",
     description: "Salon Nights are inspired by the legendary Parisian salons - those lively gatherings where artists, thinkers, and …",
@@ -6284,18 +6098,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/48115/2023_corvettes_and_colors.800x533.webp"
   },
   {
-    title: "Sandra Frias Jewelry Show",
-    link: "https://www.telluride.com/event/sandra-frias-jewelry-show/",
-    description: "Brazilian studio jeweler Sandra Frias will be visiting Telluride with a new collection of handmade jewelry. Her truly …",
-    pubDate: "2026-09-24",
-    endDate: "2026-09-27",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63618/screenshot_2026-09-17_at_3_10_59_pm.800x533.webp"
-  },
-  {
     title: "Hike Into History",
     link: "https://www.telluride.com/event/hike-into-history/",
     description: "Join the Telluride Historical Museum for their summer monthly Hike Into History series! \n\nSchedule:\n\n\n\tSeptember 26 - …",
@@ -6306,28 +6108,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/53479/screenshot_2025-07-02_at_11_06_15_am.800x533.webp"
-  },
-  {
-    title: "The Past, Present, and Future of the Telluride Climbing Community",
-    link: "https://www.telluride.com/event/the-past-present-and-future-of-the-telluride-climbing-community/",
-    description: "WPL and Telluride Mountain Club present a night storytelling and conversation with Rock Guide of Telluride author …",
-    pubDate: "2026-09-27",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63600/climbing_1.800x533.webp"
-  },
-  {
-    title: "Walk for Hope",
-    link: "https://www.telluride.com/event/walk-for-hope/",
-    description: "Part of suicide prevention awareness month, the Walk for Hope is an opportunity to gather and honor those we have lost …",
-    pubDate: "2026-09-27",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63627/img_8447.800x533.webp"
   },
   {
     title: "Original Thinkers",
@@ -6362,6 +6142,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62634/2025_ptf_fall_r4_gen_600x400.800x533.webp"
+  },
+  {
+    title: "Annual San Miguel River Cleanup",
+    link: "https://www.telluride.com/event/annual-san-miguel-river-cleanup/",
+    description: "Join the San Miguel Watershed Coalition, BLM, Telluride Outside and RIGS for the 5th annual San Miguel River cleanup …",
+    pubDate: "2026-10-03",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/59547/0345d607-8ad3-d3f3-b8b6-2c39b6657a12.800x533.webp"
   },
   {
     title: "ArtAbout",
@@ -6412,7 +6203,7 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Oktoberfest",
     link: "https://www.telluride.com/event/oktoberfest/",
-    description: "Steins up, Mountain Village! From Friday, October 9 - 11, 2026, Mountain Village Center will be transformed into a …",
+    description: "Grab your lederhosen and dirndls and join the Town of Mountain Village for the return of Oktoberfest, expanding this …",
     pubDate: "2026-10-09",
     endDate: "2026-10-12",
     source: "telluride-com",
@@ -6455,6 +6246,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/63613/p_pttbbanner.800x533.webp"
+  },
+  {
+    title: "Gondola Closed for Maintenance",
+    link: "https://www.telluride.com/event/gondola-closes-for-maintenance/",
+    description: "The gondola will be closed for maintenance starting October 26 and will re-open for winter at 6:30 a.m. on November 20, …",
+    pubDate: "2026-10-26",
+    endDate: "2027-05-20",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/45301/gondola-rainbow-2-high-res-2100x1401-f18dd3a9-0d2b-4ff7-b99c-2c162daf4e94.800x533.webp"
   },
   {
     title: "KOTO Ski Swap",
@@ -8344,16 +8147,6 @@ function getTownAgendaLink(title, eventDate) {
 // MeetingsService (HARC stays in TELLURIDE_CACHED_DATA above). Empty until the
 // next content-refresh run. Each entry: {date,title,agendaUrl,hasAgenda,location,time}.
 const TELLURIDE_BOARD_MEETINGS = [
-  {
-    date: "September 28, 2026",
-    title: "Open Space Commission Site Walk",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8322",
-    hasAgenda: true,
-    location: "Meet at Rebekah Hall, 113 W Columbia Ave",
-    time: "",
-    civicwebId: 8322,
-    packetUrl: "https://telluride-co.civicweb.net/document/445557/"
-  },
   {
     date: "September 30, 2026",
     title: "Special Town Council",

@@ -1,17 +1,5 @@
 [
   {
-    "title": "Gondola Closed for Maintenance",
-    "link": "https://www.telluride.com/event/gondola-closes-for-maintenance/",
-    "description": "The gondola will be closed for maintenance starting October 26 and will re-open for winter at 6:30 a.m. on November 20, …",
-    "pubDate": "2026-04-06",
-    "endDate": "2026-11-20",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/45301/gondola-rainbow-2-high-res-2100x1401-f18dd3a9-0d2b-4ff7-b99c-2c162daf4e94.800x533.webp"
-  },
-  {
     "title": "Telluride Arts Salon Night",
     "link": "https://www.telluride.com/event/telluride-arts-salon-night/",
     "description": "Salon Nights are inspired by the legendary Parisian salons - those lively gatherings where artists, thinkers, and …",
@@ -180,18 +168,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/48115/2023_corvettes_and_colors.800x533.webp"
   },
   {
-    "title": "Sandra Frias Jewelry Show",
-    "link": "https://www.telluride.com/event/sandra-frias-jewelry-show/",
-    "description": "Brazilian studio jeweler Sandra Frias will be visiting Telluride with a new collection of handmade jewelry. Her truly …",
-    "pubDate": "2026-09-24",
-    "endDate": "2026-09-27",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63618/screenshot_2026-09-17_at_3_10_59_pm.800x533.webp"
-  },
-  {
     "title": "Hike Into History",
     "link": "https://www.telluride.com/event/hike-into-history/",
     "description": "Join the Telluride Historical Museum for their summer monthly Hike Into History series! \n\nSchedule:\n\n\n\tSeptember 26 - …",
@@ -202,28 +178,6 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/53479/screenshot_2025-07-02_at_11_06_15_am.800x533.webp"
-  },
-  {
-    "title": "The Past, Present, and Future of the Telluride Climbing Community",
-    "link": "https://www.telluride.com/event/the-past-present-and-future-of-the-telluride-climbing-community/",
-    "description": "WPL and Telluride Mountain Club present a night storytelling and conversation with Rock Guide of Telluride author …",
-    "pubDate": "2026-09-27",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63600/climbing_1.800x533.webp"
-  },
-  {
-    "title": "Walk for Hope",
-    "link": "https://www.telluride.com/event/walk-for-hope/",
-    "description": "Part of suicide prevention awareness month, the Walk for Hope is an opportunity to gather and honor those we have lost …",
-    "pubDate": "2026-09-27",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63627/img_8447.800x533.webp"
   },
   {
     "title": "Original Thinkers",
@@ -258,6 +212,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/62634/2025_ptf_fall_r4_gen_600x400.800x533.webp"
+  },
+  {
+    "title": "Annual San Miguel River Cleanup",
+    "link": "https://www.telluride.com/event/annual-san-miguel-river-cleanup/",
+    "description": "Join the San Miguel Watershed Coalition, BLM, Telluride Outside and RIGS for the 5th annual San Miguel River cleanup …",
+    "pubDate": "2026-10-03",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/59547/0345d607-8ad3-d3f3-b8b6-2c39b6657a12.800x533.webp"
   },
   {
     "title": "ArtAbout",
@@ -308,7 +273,7 @@
   {
     "title": "Oktoberfest",
     "link": "https://www.telluride.com/event/oktoberfest/",
-    "description": "Steins up, Mountain Village! From Friday, October 9 - 11, 2026, Mountain Village Center will be transformed into a …",
+    "description": "Grab your lederhosen and dirndls and join the Town of Mountain Village for the return of Oktoberfest, expanding this …",
     "pubDate": "2026-10-09",
     "endDate": "2026-10-12",
     "source": "telluride-com",
@@ -351,6 +316,18 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63613/p_pttbbanner.800x533.webp"
+  },
+  {
+    "title": "Gondola Closed for Maintenance",
+    "link": "https://www.telluride.com/event/gondola-closes-for-maintenance/",
+    "description": "The gondola will be closed for maintenance starting October 26 and will re-open for winter at 6:30 a.m. on November 20, …",
+    "pubDate": "2026-10-26",
+    "endDate": "2027-05-20",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/45301/gondola-rainbow-2-high-res-2100x1401-f18dd3a9-0d2b-4ff7-b99c-2c162daf4e94.800x533.webp"
   },
   {
     "title": "KOTO Ski Swap",

@@ -307,6 +307,19 @@
     "endDate": "2026-11-19"
   },
   {
+    "title": "Public Art Commission Meeting",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/public-art-commission-meeting/",
+    "date": "2026-09-30",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49288/2.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "The Public Art Commission meets on an as-needed basis. Please join the meeting from your computer, tablet or smartphone using the below instructions.",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Market on the Plaza",
     "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     "date": "2026-09-30",
@@ -477,7 +490,7 @@
     "img": "https://localist-images.azureedge.net/photos/52941247100302/huge/24aa8ce412f9817ce04becd51e5d1cc5b8db2cad.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Discover new work, celebrate openings, and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month, galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits, live music and…",
+    "desc": "First Friday is back! Spend the evening exploring downtown Ridgway, where galleries, studios, shops and gathering spaces come alive with new exhibitions, artist receptions, live music, pop-ups and special programming. Each month brings…",
     "type": "Arts & Film",
     "endDate": "2026-11-07"
   },
@@ -505,7 +518,7 @@
     "img": "https://localist-images.azureedge.net/photos/53975454573398/huge/fed6f5172fe765abe1cd1b3f3447b64e3cd83d27.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Opening Reception Schedule - Part of Ridgway's First Friday Art Walk Gallery Open 5-8PM Artist Talk and Poetry Reading 630-7:30 Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry,…",
+    "desc": "Opening Reception Schedule - Part of Ridgway's First Friday Art Walk Gallery Open 5-8PM Artist Talk and Poetry Reading 630-7:30 Free refreshments provided by Chloe's Charcuterie and Wine Space Cowboy Lands in Ridgway This October Space…",
     "type": "Arts & Film"
   },
   {
@@ -545,8 +558,8 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/05/unnamed-file-2.png",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "Pink Talking Fish is a live band that performs a fusion of music from Pink Floyd, Talking Heads, and Phish, blending the catalogs of all three iconic acts into a single, seamless show. The group performs at the historic Sheridan Opera…",
-    "type": "Arts & Film"
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Roma Ransom – Live at Floating Lotus Brewery",
@@ -680,6 +693,19 @@
     "type": "Community"
   },
   {
+    "title": "Annual San Miguel River Cleanup",
+    "href": "https://www.telluride.com/event/annual-san-miguel-river-cleanup/",
+    "date": "2026-10-03",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/59547/0345d607-8ad3-d3f3-b8b6-2c39b6657a12.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Join the San Miguel Watershed Coalition, BLM, Telluride Outside and RIGS for the 5th annual San Miguel River cleanup …",
+    "type": "Community"
+  },
+  {
     "title": "ArtAbout",
     "href": "https://www.telluride.com/event/artabout/",
     "date": "2026-10-03",
@@ -741,7 +767,7 @@
     "img": "https://localist-images.azureedge.net/photos/53950055817938/huge/4924d3606a12c233af2b47a380c304869dfaf267.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "LIVE MUSIC IN THE GARDEN! 🎶 Sunday, September 13th, from 4:00–6:00 p.m., let us introduce you to Chloe’s Secret Garden! 🌿✨ Enjoy live music with Zan Waller & Stefan Davenport, the perfect wine, and scrumptious charcuterie in our cozy…",
+    "desc": "LIVE MUSIC IN THE GARDEN! 🎶 Sundays from 4:00–6:00 p.m., let us introduce you to Chloe’s Secret Garden! 🌿✨ Enjoy live music with Zan Waller & Stefan Davenport, the perfect wine, and scrumptious charcuterie in our cozy garden setting.…",
     "type": "Music",
     "endDate": "2026-11-08"
   },
@@ -1006,7 +1032,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2025/10/16-5H0A3038.jpg",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "A production of Shrek The Musical performed at the Sheridan Opera House, bringing the beloved fairy-tale story to life on a Telluride stage. The show features the classic characters and songs from the hit musical based on the DreamWorks…",
+    "desc": "",
     "type": "Arts & Film",
     "endDate": "2026-10-11"
   },
@@ -1127,7 +1153,7 @@
     "img": "https://www.telluride.com/site/assets/files/49157/mv_oktoberfest26_std_2200x1237.800x533.webp",
     "category": "Community Event",
     "source": "Telluride.com",
-    "desc": "Steins up, Mountain Village! From Friday, October 9 - 11, 2026, Mountain Village Center will be transformed into a …",
+    "desc": "Grab your lederhosen and dirndls and join the Town of Mountain Village for the return of Oktoberfest, expanding this …",
     "type": "Community",
     "endDate": "2026-10-12"
   },
@@ -1569,7 +1595,7 @@
     "time": "3:00 PM",
     "location": "Chloe's Charcuterie & Wine",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/51579855188578/huge/de5019ffbfacf4a9f5e85d8a14961584c70e7873.jpg",
+    "img": "https://localist-images.azureedge.net/photos/53853125631578/huge/4d4b1a2e3ca65db2f52fab5279671e0107a58dc9.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Details forthcoming",
@@ -1992,9 +2018,9 @@
     "href": "https://events.ourayridgwayevents.com/event/solkattu-workshop",
     "date": "2026-10-25",
     "time": "2:00 PM",
-    "location": "United Church of the San Juans",
+    "location": "United Church Of The San Juans",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53020661090978/huge/40ac3b3b0cbad4ea627f2474983b044d7e46f15a.jpg",
+    "img": "https://localist-images.azureedge.net/photos/52492056342544/huge/bfe9154ac1ba36fc2f3a845ca66d6a96dd9905ba.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Learn an ancient rhythmic vocalization system with experts David and Arlyn Alderdice. Step, clap, and vocalize together using this fun and accessible method to deepen your relationship with music and life.",
