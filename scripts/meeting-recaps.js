@@ -83,7 +83,7 @@ const DAYS = parseInt(val('--days', '21'), 10);
 const LIMIT = parseInt(val('--limit', '5'), 10);
 const ONLY_ENTITY = val('--entity', null);
 const ONLY_VIDEO = val('--video', null);
-const KEEP = 50;   // cap MEETING_RECAPS length after prepending
+const KEEP = 150;  // cap MEETING_RECAPS length after prepending (50 → 150 on 2026-09-29: with 6 entities, 50 dropped Mountain Village recaps within a day)
 
 const MONTHS = { jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11 };
 
