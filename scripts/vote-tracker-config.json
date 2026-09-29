@@ -129,9 +129,50 @@
     "label": "San Miguel County Planning Commission",
     "meetingPrefix": "SMC Planning Commission",
     "idPrefix": "pv",
-    "rosters": [],
-    "_warning": "Roster intentionally empty — fill from v2/vote-tracker.html PC_*_ALL_MEMBERS before using.",
-    "_idPrefixNote": "Was 'pc' — corrected 2026-07-23 to match the ids actually used in v2/vote-tracker.html (pv2024-01 …) and insert-votes.mjs ENTITY_ID_PREFIX."
+    "rosters": [
+      {
+        "start": "2024-01-01",
+        "end": "2024-12-31",
+        "members": [
+          "taylor",
+          "liftonzoline",
+          "bayma",
+          "bald",
+          "gleason",
+          "schillaci",
+          "simpson"
+        ],
+        "_note": "PC_2024 in v2/vote-tracker.html"
+      },
+      {
+        "start": "2025-01-01",
+        "end": "2026-01-31",
+        "members": [
+          "taylor",
+          "liftonzoline",
+          "bayma",
+          "bald",
+          "simpson",
+          "vangelder"
+        ],
+        "_note": "PC_2025; Van Gelder junior alternate through Jan 2026"
+      },
+      {
+        "start": "2026-02-01",
+        "end": null,
+        "members": [
+          "taylor",
+          "liftonzoline",
+          "bayma",
+          "bald",
+          "simpson",
+          "otwell"
+        ],
+        "_note": "PC_2026; Otwell replaced Van Gelder Feb 2026"
+      }
+    ],
+    "_idPrefixNote": "Was 'pc' — corrected 2026-07-23 to match the ids actually used in v2/vote-tracker.html (pv2024-01 …) and insert-votes.mjs ENTITY_ID_PREFIX.",
+    "_rosterNote": "Filled 2026-09-29 from PC_2024/PC_2025/PC_2026 in v2/vote-tracker.html — keep in sync."
   },
   "telluride": {
     "label": "Telluride Town Council",

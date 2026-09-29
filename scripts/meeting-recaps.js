@@ -425,7 +425,9 @@ const VT_CONFIG = (() => {
   catch (e) { return {}; }
 })();
 function trackerEntityFor(sourceKey, title) {
-  if (sourceKey === 'county' && /county commissioners|BOCC/i.test(title)) return 'bocc';
+  // 'commissioners?' — the County's own titles vary: "Board of County Commissioner
+  // Meeting" (singular) matched nothing, so Sep 9 & 23 2026 got no vote draft.
+  if (sourceKey === 'county' && /county commissioners?\b|\bBOCC\b/i.test(title)) return 'bocc';
   if (sourceKey === 'county' && /planning commission/i.test(title)) return 'pc';
   if (sourceKey === 'mv' && /design review/i.test(title)) return 'drb';
   if (sourceKey === 'mv' && /town council/i.test(title)) return 'tomv';
