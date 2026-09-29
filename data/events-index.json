@@ -1562,6 +1562,19 @@
     "type": "Music"
   },
   {
+    "title": "Love Your Gorge",
+    "href": "https://ouraycountyco.gov/Calendar.aspx?EID=3786",
+    "date": "2026-10-17",
+    "time": "3:00 AM",
+    "location": "Ouray Ice Park - Ouray CO 81427",
+    "town": "Ouray",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "Ouray County",
+    "desc": "A community event hosted at the Ouray Ice Park, with potential attendance and participation from Ouray County Commissioners. The event celebrates the iconic river gorge and surrounding natural area in and around Ouray.",
+    "type": "Community"
+  },
+  {
     "title": "No Kings Afterparty in the Garden",
     "href": "https://events.ourayridgwayevents.com/event/no-kings-afterparty-in-the-garden",
     "date": "2026-10-17",
@@ -1598,19 +1611,6 @@
     "category": "Community Event",
     "source": "Mountain Village",
     "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
-    "type": "Community"
-  },
-  {
-    "title": "Love Your Gorge",
-    "href": "https://events.ourayridgwayevents.com/event/love-your-gorge-2026",
-    "date": "2026-10-17",
-    "time": "9:00 AM",
-    "location": "Ouray Ice Park",
-    "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/53950572424037/huge/aa74aed14780ee99117533d3ad6303db0ccf191b.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "The Uncompahgre Watershed Partnership and Ouray Ice Park invite volunteers to Love Your Gorge – a fun day of hard work to cleanup and maintain infrastructure and the environment around the Uncompahgre Gorge in Ouray. Our 2026 work plan in…",
     "type": "Community"
   },
   {
@@ -2351,7 +2351,7 @@
     "img": "https://localist-images.azureedge.net/photos/54012851240466/huge/36d4a8cb84eeb694d62a49aae6146ab5257a6e9f.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Annual local climbing community festival open to the public. This year’s event will feature: Walk-up guided climbing wall for adults and children (gear included) Live DJ Music with DJ Straylight Climbing Competition (open to all ages)…",
+    "desc": "The Annual Ouray Climbers Alliance Fundraiser & Membership Drive is back! Come join our local climbing community for a free, all-ages festival! Climb, compete, eat, drink and hang out while supporting the work that keeps Ouray’s climbing…",
     "type": "Festivals"
   },
   {

@@ -1,27 +1,27 @@
 {
- "generated": "2026-09-29T18:17:31.072Z",
+ "generated": "2026-09-29T19:56:35.176Z",
  "pinned": false,
  "topic": "carhenge",
  "topicLabel": "Carhenge / Shandoka",
- "headline": "Carhenge / Shandoka goes before HARC Meeting on Wednesday, September 30",
- "blurb": "HARC holds a special meeting dedicated entirely to the Carhenge Redevelopment Project — the proposed new construction at 700 W Pacific Ave that has been working its way through review since at least July. Three separate Preliminary Large-Scale applications are on the table, each covering a different building cluster: Buildings A, B, and C; Buildings D1 and D2; and Buildings E1, E2, and E3.",
+ "headline": "Carhenge / Shandoka goes before Special Town Council on Wednesday, September 30",
+ "blurb": "This special session is entirely devoted to one thing: a Town Council appeal hearing on the Carhenge lot subdivision. On July 23, 2026, P&Z unanimously approved consolidating Lots 34 and 34B at 700 W. Pacific Avenue into a single parcel — a preliminary step the Town needs before any redevelopment can move forward on that open-space site.",
  "images": [],
  "deepDive": {
   "label": "Carhenge / Shandoka",
   "href": "/deep-dive-carhenge.html"
  },
  "meeting": {
-  "title": "HARC Meeting",
+  "title": "Special Town Council",
   "sourceLabel": "Town of Telluride",
   "date": "2026-09-30",
   "humanDate": "Wednesday, September 30",
-  "time": "5:30 PM",
-  "location": "Rebekah Hall, 113 W Columbia Ave",
-  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309",
+  "time": "10:00 AM",
+  "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313",
   "hasAgenda": true,
-  "packetUrl": "https://telluride-co.civicweb.net/document/445284/",
-  "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309",
-  "zoomLink": "",
+  "packetUrl": "https://telluride-co.civicweb.net/document/445210/",
+  "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313",
+  "zoomLink": "https://us06web.zoom.us/meeting/register/ZR3DDUQ0S8mhIKRt4KiuYg",
   "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
  }
 }

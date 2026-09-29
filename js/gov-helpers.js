@@ -830,7 +830,7 @@ const MEETING_PREVIEWS = {
     "Council is expected to review capital improvement plans and fund-by-fund budget details, then discuss Fourth of July entertainment, an in-town shuttle program, and OurWay transit service. Members will also consider nonprofit funding requests totaling approximately $195,000 from nine local organizations before taking council questions.",
 
   "ouray|2026-09-29|Board of County Commissioners Special Work Session":
-    "Commissioners are expected to spend the day reviewing 2027 budget presentations from multiple county departments, including the Assessor, Land Use, Clerk and Recorder, Treasurer, IT/GIS, EMS, Road and Bridge, Public Health, and Human Services, followed by a recap discussion with the County Manager and Finance Director on preliminary budget preparation next steps."
+    "Commissioners are expected to spend the day reviewing 2027 budget presentations from multiple county departments, including the Assessor, Land Use, Clerk and Recorder, Treasurer, IT/GIS, EMS, Road and Bridge, Public Health, and Human Services, followed by a discussion and recap on next steps for preliminary budget preparation."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1015,6 +1015,17 @@ const REGIONAL_NEWS_ARTICLES = [
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
+  {
+    title: "DMV Services available in Egnar 11/18",
+    source: "San Miguel County",
+    sourceLabel: "San Miguel County",
+    category: "Alert",
+    date: "2026-09-29",
+    pubDate: "2026-09-29T19:56:25.000Z",
+    copy: "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
+    img: ""
+  },
   {
     title: "Tomboy Road Now Open",
     source: "San Miguel County",
@@ -3093,6 +3104,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Town Council Proclaims September 7-11 Black Bear Safety Week",
+    source: "Town of Telluride",
+    date: "September 3, 2026",
+    newsTopic: "government",
+    copy: "(September 3, 2026) — Town Council on Tuesday proclaimed September 7-11 Black Bear Safety Week, arriving in a year when a dry spring and summer have left black bears across Colorado with far less to eat in the wild.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=404",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
+  },
+  {
     title: "Chief Deputy Clerk Receives Excellence in Election Service Award",
     source: "San Miguel County",
     date: "September 25, 2026",
@@ -3174,12 +3194,158 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14812"
   },
   {
+    title: "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
+    source: "San Miguel County",
+    date: "September 10, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1409",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
+  },
+  {
+    title: "Two Domestic Pets in San Miguel County Test Positive for the Plague",
+    source: "San Miguel County",
+    date: "September 3, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
+  },
+  {
+    title: "DMV Services available in Egnar 11/18",
+    source: "San Miguel County",
+    date: "September 29, 2026",
+    newsTopic: "community",
+    copy: "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
+  },
+  {
     title: "Tomboy Road Now Open",
     source: "San Miguel County",
     date: "September 18, 2026",
     newsTopic: "infrastructure",
     copy: "The Town of Telluride has completed their project that necessitated the closure of Lower Tomboy Road. The road is now open again.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=546",
+    img: ""
+  },
+  {
+    title: "Water Restrictions in Place",
+    source: "Town of Telluride",
+    date: "September 11, 2026",
+    newsTopic: "community",
+    copy: "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=45",
+    img: ""
+  },
+  {
+    title: "Ridgway Urges Motorists to Slow Down and Stay Alert",
+    source: "Town of Ridgway",
+    date: "September 28, 2026",
+    firstSeen: "2026-09-29",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Slow-Down-Press-Release-2026-09-28.pdf",
+    img: ""
+  },
+  {
+    title: "Ridgway Seeking Volunteers for Ad Hoc Review Committee",
+    source: "Town of Ridgway",
+    date: "September 24, 2026",
+    firstSeen: "2026-09-29",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/CGP-Review-Committee-Press-Release-2026-09-24.pdf",
+    img: ""
+  },
+  {
+    title: "Repair Work on Clinton Street to Take Place This Week and Next",
+    source: "Town of Ridgway",
+    date: "September 23, 2026",
+    firstSeen: "2026-09-29",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Clinton-road-work-9-23-2026.pdf",
+    img: ""
+  },
+  {
+    title: "Ridgway Reminds Property Owners about Backflow Prevention and Cross Connection Control",
+    source: "Town of Ridgway",
+    date: "September 22, 2026",
+    firstSeen: "2026-09-29",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Backflow-Testing-Reminder-Press-Release-2026-09-22.pdf",
+    img: ""
+  },
+  {
+    title: "Town of Ridgway Water Supply Element Draft Now Available for Review and Comment",
+    source: "Town of Ridgway",
+    date: "September 21, 2026",
+    firstSeen: "2026-09-29",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/CO-Ridgway-Water-Supply-Element-Draft-091826.pdf",
+    img: ""
+  },
+  {
+    title: "New Compost Collection Service Offered",
+    source: "Town of Ridgway",
+    date: "September 18, 2026",
+    firstSeen: "2026-09-29",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Compost-Service-Press-Release-2026-09-18.pdf",
+    img: ""
+  },
+  {
+    title: "Sidewalk Repair Work Planned Near Ridgway Post Office",
+    source: "Town of Ridgway",
+    date: "September 17, 2026",
+    firstSeen: "2026-09-29",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Sidewalk-Repair-Work-Press-Release-2026-09-17.pdf",
+    img: ""
+  },
+  {
+    title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
+    source: "Town of Ridgway",
+    date: "September 29, 2026",
+    firstSeen: "2026-09-29",
+    newsTopic: "government",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Budget-meetings-notice-2026.pdf",
+    img: ""
+  },
+  {
+    title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
+    source: "Town of Ridgway",
+    date: "September 29, 2026",
+    firstSeen: "2026-09-29",
+    newsTopic: "government",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Change-of-meeting-date-Council-notice.pdf",
+    img: ""
+  },
+  {
+    title: "Fire Restrictions Lifted in Ridgway",
+    source: "Town of Ridgway",
+    date: "September 17, 2026",
+    firstSeen: "2026-09-29",
+    newsTopic: "public-safety",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Fire-Restrictions-Lifted-in-Ridgway-2026-09-17.pdf",
     img: ""
   }
 ];
@@ -4626,6 +4792,17 @@ const TELLURIDE_FOUNDATION_EVENTS = [
 
 const OURAY_COUNTY_EVENTS = [
   {
+    title: "Love Your Gorge",
+    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3786",
+    description: "A community event hosted at the Ouray Ice Park, with potential attendance and participation from Ouray County Commissioners. The event celebrates the iconic river gorge and surrounding natural area in and around Ouray.",
+    pubDate: "2026-10-17T09:00:00.000Z",
+    source: "ouraycounty",
+    sourceLabel: "Ouray County",
+    category: "Community Event",
+    location: "Ouray Ice Park - Ouray CO 81427",
+    imageUrl: ""
+  },
+  {
     title: "Ouray County MAC Group Meeting",
     link: "https://ouraycountyco.gov/Calendar.aspx?EID=2379",
     description: "A meeting of the Ouray County MAC (Montrose-area Advisory Committee or similar advisory group), held at the 4-H Event Center in Ridgway. Two or more Ouray County Commissioners may be in attendance and participating.",
@@ -5754,7 +5931,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "OuROCK! 2026 Climbing Festival",
     link: "https://events.ourayridgwayevents.com/event/ourock-2026-climbing-festival",
-    description: "Annual local climbing community festival open to the public. This year’s event will feature: Walk-up guided climbing wall for adults and children (gear included) Live DJ Music with DJ Straylight Climbing Competition (open to all ages) Silent Auction Raffle Hand-tossed fresh baked pizza* Beer (must be 21 years and older) and other beverages* Event is free to the public, but you are invited to join Ouray Climbers Alliance as a member at the event (members get free beer and pizza plus one raffle ticket). We strive to be a minimal waste event and encourage you to bring your own cup/plate/utensil. Please show them at the kiosk to get a free raffle ticket.",
+    description: "The Annual Ouray Climbers Alliance Fundraiser & Membership Drive is back! Come join our local climbing community for a free, all-ages festival! Climb, compete, eat, drink and hang out while supporting the work that keeps Ouray’s climbing areas accessible, maintained, and thriving. This year we’ll feature: 🧗 Walk-up guided climbing wall for adults & kids, with gear provided 🎶 Live DJ music with DJ Straylight 🏆 Climbing competition open to all ages 🍕 Fresh-baked, hand-tossed pizza* 🍺 Beer & other beverages* 🎟️ Silent auction & raffle *Members receive free beer and pizza, plus one raffle ticket. Beer is 21+. Food and beverages are available while supplies last. The event is free and open to everyone, and you’re invited to join OCA as a member at the event. …",
     pubDate: "2026-11-08T19:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -6530,6 +6707,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/49105/scott-rodgerson-zlhbjxbccec-unsplash.800x533.webp"
+  },
+  {
+    title: "Gaiascope Saturday Sessions",
+    link: "https://www.telluride.com/event/gaiascope-saturday-sessions/",
+    description: "Gaiascope Saturday Sessions is a recurring weekly event featuring live music and kaleidoscope art. Taking place each Saturday, the event brings together sound and visual art in a community gathering format in Telluride.",
+    pubDate: "2026-09-12",
+    endDate: "2026-10-03",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63515/screenshot_2026-09-05_at_11_00_00_am.800x533.webp"
   },
   {
     title: "Volunteer Trail Work Day",

@@ -709,6 +709,15 @@
     "img": ""
   },
   {
+    "title": "Town Council Proclaims September 7-11 Black Bear Safety Week",
+    "source": "Town of Telluride",
+    "date": "September 3, 2026",
+    "newsTopic": "government",
+    "copy": "(September 3, 2026) — Town Council on Tuesday proclaimed September 7-11 Black Bear Safety Week, arriving in a year when a dry spring and summer have left black bears across Colorado with far less to eat in the wild.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=404",
+    "img": "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
+  },
+  {
     "title": "Chief Deputy Clerk Receives Excellence in Election Service Award",
     "source": "San Miguel County",
     "date": "September 25, 2026",
@@ -790,12 +799,158 @@
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14812"
   },
   {
+    "title": "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
+    "source": "San Miguel County",
+    "date": "September 10, 2026",
+    "newsTopic": "health",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1409",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
+  },
+  {
+    "title": "Two Domestic Pets in San Miguel County Test Positive for the Plague",
+    "source": "San Miguel County",
+    "date": "September 3, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
+  },
+  {
+    "title": "DMV Services available in Egnar 11/18",
+    "source": "San Miguel County",
+    "date": "September 29, 2026",
+    "newsTopic": "community",
+    "copy": "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
+  },
+  {
     "title": "Tomboy Road Now Open",
     "source": "San Miguel County",
     "date": "September 18, 2026",
     "newsTopic": "infrastructure",
     "copy": "The Town of Telluride has completed their project that necessitated the closure of Lower Tomboy Road. The road is now open again.",
     "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=546",
+    "img": ""
+  },
+  {
+    "title": "Water Restrictions in Place",
+    "source": "Town of Telluride",
+    "date": "September 11, 2026",
+    "newsTopic": "community",
+    "copy": "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
+    "href": "https://www.telluride.gov/AlertCenter.aspx?AID=45",
+    "img": ""
+  },
+  {
+    "title": "Ridgway Urges Motorists to Slow Down and Stay Alert",
+    "source": "Town of Ridgway",
+    "date": "September 28, 2026",
+    "firstSeen": "2026-09-29",
+    "newsTopic": "community",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Slow-Down-Press-Release-2026-09-28.pdf",
+    "img": ""
+  },
+  {
+    "title": "Ridgway Seeking Volunteers for Ad Hoc Review Committee",
+    "source": "Town of Ridgway",
+    "date": "September 24, 2026",
+    "firstSeen": "2026-09-29",
+    "newsTopic": "community",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/CGP-Review-Committee-Press-Release-2026-09-24.pdf",
+    "img": ""
+  },
+  {
+    "title": "Repair Work on Clinton Street to Take Place This Week and Next",
+    "source": "Town of Ridgway",
+    "date": "September 23, 2026",
+    "firstSeen": "2026-09-29",
+    "newsTopic": "community",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Clinton-road-work-9-23-2026.pdf",
+    "img": ""
+  },
+  {
+    "title": "Ridgway Reminds Property Owners about Backflow Prevention and Cross Connection Control",
+    "source": "Town of Ridgway",
+    "date": "September 22, 2026",
+    "firstSeen": "2026-09-29",
+    "newsTopic": "community",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Backflow-Testing-Reminder-Press-Release-2026-09-22.pdf",
+    "img": ""
+  },
+  {
+    "title": "Town of Ridgway Water Supply Element Draft Now Available for Review and Comment",
+    "source": "Town of Ridgway",
+    "date": "September 21, 2026",
+    "firstSeen": "2026-09-29",
+    "newsTopic": "community",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/CO-Ridgway-Water-Supply-Element-Draft-091826.pdf",
+    "img": ""
+  },
+  {
+    "title": "New Compost Collection Service Offered",
+    "source": "Town of Ridgway",
+    "date": "September 18, 2026",
+    "firstSeen": "2026-09-29",
+    "newsTopic": "community",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Compost-Service-Press-Release-2026-09-18.pdf",
+    "img": ""
+  },
+  {
+    "title": "Sidewalk Repair Work Planned Near Ridgway Post Office",
+    "source": "Town of Ridgway",
+    "date": "September 17, 2026",
+    "firstSeen": "2026-09-29",
+    "newsTopic": "community",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Sidewalk-Repair-Work-Press-Release-2026-09-17.pdf",
+    "img": ""
+  },
+  {
+    "title": "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
+    "source": "Town of Ridgway",
+    "date": "September 29, 2026",
+    "firstSeen": "2026-09-29",
+    "newsTopic": "government",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Budget-meetings-notice-2026.pdf",
+    "img": ""
+  },
+  {
+    "title": "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
+    "source": "Town of Ridgway",
+    "date": "September 29, 2026",
+    "firstSeen": "2026-09-29",
+    "newsTopic": "government",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Change-of-meeting-date-Council-notice.pdf",
+    "img": ""
+  },
+  {
+    "title": "Fire Restrictions Lifted in Ridgway",
+    "source": "Town of Ridgway",
+    "date": "September 17, 2026",
+    "firstSeen": "2026-09-29",
+    "newsTopic": "public-safety",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Fire-Restrictions-Lifted-in-Ridgway-2026-09-17.pdf",
     "img": ""
   }
 ]
