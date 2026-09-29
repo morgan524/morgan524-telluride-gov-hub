@@ -194,6 +194,19 @@ function listChannel(url) {
   return out.split('\n').filter(Boolean).map((l) => { const i = l.indexOf('\t'); return { id: l.slice(0, i), title: l.slice(i + 1) }; });
 }
 
+// The date a YouTube video streamed/was published, as YYYY-MM-DD ('' if
+// unknown). --flat-playlist listings carry no date, and some channels title
+// meetings without one — Rico posts "Board of Trustees September Meeting" — so
+// parseDateFromTitle() found nothing and EVERY Rico video was skipped (zero
+// Rico recaps ever; found 2026-09-29). One extra yt-dlp call per undated video.
+function streamDate(videoId) {
+  let out = '';
+  try { out = yt(['--skip-download', '--print', '%(release_date)s %(upload_date)s', `https://www.youtube.com/watch?v=${videoId}`]); }
+  catch (e) { return ''; }
+  const m = String(out).match(/\b(20\d{2})(\d{2})(\d{2})\b/);
+  return m ? `${m[1]}-${m[2]}-${m[3]}` : '';
+}
+
 // Pull the transcript for one video via yt-dlp auto/manual captions (json3).
 function fetchTranscript(videoId) {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'recap-'));
@@ -577,7 +590,8 @@ async function main() {
       const videoUrl = isAv
         ? `https://media.avcaptureall.cloud/meeting/${v.id}`
         : `https://www.youtube.com/watch?v=${v.id}`;
-      const date = v.date || parseDateFromTitle(v.title);
+      if (!FORCE && seenVideo.has(videoUrl)) continue;   // before any extra date lookup
+      const date = v.date || parseDateFromTitle(v.title) || (isAv ? '' : streamDate(v.id));
       if (!date) { continue; }
       const age = daysSince(date);
       if (!FORCE && (age > DAYS || age < 0)) continue;
