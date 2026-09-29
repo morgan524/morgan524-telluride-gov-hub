@@ -1397,6 +1397,174 @@ const SCHOOL_ZOOM_LINK = 'https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A
 // constant passcode is derived from SCHOOL_ZOOM_LINK by getMeetingPasscode().
 const MEETING_PASSCODES = {};
 
+// ── Civic EVENTS on the Gov Hub (not meetings) ─────────────────────────────
+// Hand-curated, strict JSON. Open houses, pop-ups, focus groups and similar
+// engagement sessions a public body hosts that are not formal meetings (no
+// agenda, packet or public-comment inbox). build-week-meetings.js merges them
+// into data/week-meetings.json with kind:'event' so they list on their own
+// day; gov-hub.html renders them as event cards. They are kept OUT of the
+// homepage "Top priorities" meetings list, the deep-dive watch / Featured
+// Action, and the Haiku hook batch. Past entries drop off by date on their
+// own; prune them here whenever convenient.
+// Fields: source (GETTERS key), date YYYY-MM-DD, time, title, location,
+// summary, links [{label, href}].
+const GOV_EVENTS = [
+  {
+    "date": "2026-09-29",
+    "time": "5:30 PM - 7:30 PM",
+    "title": "Comprehensive Plan Open House: Land Use Opportunity Lab",
+    "location": "Ah Haa School for the Arts, 3rd Floor Launchpad",
+    "summary": "The Town's Comprehensive Plan update moves into Phase 2. Review the revised Vision Statement, weigh in on the opportunities that matter most over the next 10 to 20 years, and help identify where they could take shape. Drop in for whatever interests you; no need to stay the whole time.",
+    "source": "telluride",
+    "links": [
+      {
+        "label": "Community Questionnaire",
+        "href": "https://survey.alchemer.com/s3/9003580/Telluride-Comprehensive-Plan-Phase-2-Questionnaire"
+      },
+      {
+        "label": "Project page",
+        "href": "https://engagetelluride.org/2025-comprehensive-plan"
+      },
+      {
+        "label": "Sign up for updates",
+        "href": "https://telluride.us21.list-manage.com/subscribe?u=bc4726f5d81aa18f63733d8c8&id=2366054da1"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-30",
+    "time": "8:30 AM - 9:30 AM",
+    "title": "Comprehensive Plan Pop-Up",
+    "location": "Elks Park",
+    "summary": "Comprehensive Plan Phase 2 pop-up. No presentation and no formal meeting: stop by for a few minutes or stay and chat about the revised Vision Statement and where you see opportunities for change, investment or preservation.",
+    "source": "telluride",
+    "links": [
+      {
+        "label": "Community Questionnaire",
+        "href": "https://survey.alchemer.com/s3/9003580/Telluride-Comprehensive-Plan-Phase-2-Questionnaire"
+      },
+      {
+        "label": "Project page",
+        "href": "https://engagetelluride.org/2025-comprehensive-plan"
+      },
+      {
+        "label": "Sign up for updates",
+        "href": "https://telluride.us21.list-manage.com/subscribe?u=bc4726f5d81aa18f63733d8c8&id=2366054da1"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-30",
+    "time": "1:30 PM - 3:00 PM",
+    "title": "Comprehensive Plan Focus Group: Economy",
+    "location": "Ah Haa School for the Arts, 3rd Floor Launchpad",
+    "summary": "Comprehensive Plan Phase 2 focus group on the draft goals and objectives for the economy. Join one or more sessions on the topics you care about.",
+    "source": "telluride",
+    "links": [
+      {
+        "label": "Community Questionnaire",
+        "href": "https://survey.alchemer.com/s3/9003580/Telluride-Comprehensive-Plan-Phase-2-Questionnaire"
+      },
+      {
+        "label": "Project page",
+        "href": "https://engagetelluride.org/2025-comprehensive-plan"
+      },
+      {
+        "label": "Sign up for updates",
+        "href": "https://telluride.us21.list-manage.com/subscribe?u=bc4726f5d81aa18f63733d8c8&id=2366054da1"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-30",
+    "time": "3:00 PM - 4:30 PM",
+    "title": "Comprehensive Plan Focus Group: Environment & Recreation",
+    "location": "Ah Haa School for the Arts, 3rd Floor Launchpad",
+    "summary": "Comprehensive Plan Phase 2 focus group on the draft goals and objectives for environment and recreation. Join one or more sessions on the topics you care about.",
+    "source": "telluride",
+    "links": [
+      {
+        "label": "Community Questionnaire",
+        "href": "https://survey.alchemer.com/s3/9003580/Telluride-Comprehensive-Plan-Phase-2-Questionnaire"
+      },
+      {
+        "label": "Project page",
+        "href": "https://engagetelluride.org/2025-comprehensive-plan"
+      },
+      {
+        "label": "Sign up for updates",
+        "href": "https://telluride.us21.list-manage.com/subscribe?u=bc4726f5d81aa18f63733d8c8&id=2366054da1"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-01",
+    "time": "8:30 AM - 9:30 AM",
+    "title": "Comprehensive Plan Pop-Up",
+    "location": "Oak Street Gondola Plaza",
+    "summary": "Comprehensive Plan Phase 2 pop-up. No presentation and no formal meeting: stop by for a few minutes or stay and chat about the revised Vision Statement and where you see opportunities for change, investment or preservation.",
+    "source": "telluride",
+    "links": [
+      {
+        "label": "Community Questionnaire",
+        "href": "https://survey.alchemer.com/s3/9003580/Telluride-Comprehensive-Plan-Phase-2-Questionnaire"
+      },
+      {
+        "label": "Project page",
+        "href": "https://engagetelluride.org/2025-comprehensive-plan"
+      },
+      {
+        "label": "Sign up for updates",
+        "href": "https://telluride.us21.list-manage.com/subscribe?u=bc4726f5d81aa18f63733d8c8&id=2366054da1"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-01",
+    "time": "12:30 PM - 2:00 PM",
+    "title": "Comprehensive Plan Focus Group: Community & Livability",
+    "location": "Rebekah Hall, Council Chambers",
+    "summary": "Comprehensive Plan Phase 2 focus group on the draft goals and objectives for community and livability. Join one or more sessions on the topics you care about.",
+    "source": "telluride",
+    "links": [
+      {
+        "label": "Community Questionnaire",
+        "href": "https://survey.alchemer.com/s3/9003580/Telluride-Comprehensive-Plan-Phase-2-Questionnaire"
+      },
+      {
+        "label": "Project page",
+        "href": "https://engagetelluride.org/2025-comprehensive-plan"
+      },
+      {
+        "label": "Sign up for updates",
+        "href": "https://telluride.us21.list-manage.com/subscribe?u=bc4726f5d81aa18f63733d8c8&id=2366054da1"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-01",
+    "time": "2:00 PM - 3:30 PM",
+    "title": "Comprehensive Plan Focus Group: Housing & Infrastructure",
+    "location": "Rebekah Hall, Council Chambers",
+    "summary": "Comprehensive Plan Phase 2 focus group on the draft goals and objectives for housing and infrastructure. Join one or more sessions on the topics you care about.",
+    "source": "telluride",
+    "links": [
+      {
+        "label": "Community Questionnaire",
+        "href": "https://survey.alchemer.com/s3/9003580/Telluride-Comprehensive-Plan-Phase-2-Questionnaire"
+      },
+      {
+        "label": "Project page",
+        "href": "https://engagetelluride.org/2025-comprehensive-plan"
+      },
+      {
+        "label": "Sign up for updates",
+        "href": "https://telluride.us21.list-manage.com/subscribe?u=bc4726f5d81aa18f63733d8c8&id=2366054da1"
+      }
+    ]
+  }
+];
+
 // ── Extra document buttons on a Gov Hub meeting card ──────────────────────────
 // Hand-curated. Keyed "source|date|title" exactly as those fields appear in
 // data/week-meetings.json, so a key survives only while the bot keeps naming

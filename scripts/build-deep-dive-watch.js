@@ -120,6 +120,7 @@ function run(repoRoot) {
 
   // ── Upcoming: this week's meetings whose visible text mentions a topic ──
   for (const m of weekMeetings) {
+    if (m.kind === 'event') continue;   // civic events aren't meetings (GOV_EVENTS)
     const text = [m.title, m.summary, m.hook].filter(Boolean).join(' ');
     for (const key of matchTopics(regexes, text, m.source)) {
       topics[key].upcoming.push({

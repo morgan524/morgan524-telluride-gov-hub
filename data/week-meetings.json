@@ -20,6 +20,41 @@
     "hook": ""
   },
   {
+    "kind": "event",
+    "source": "telluride",
+    "sourceLabel": "Town of Telluride",
+    "title": "Comprehensive Plan Open House: Land Use Opportunity Lab",
+    "date": "2026-09-29",
+    "time": "5:30 PM - 7:30 PM",
+    "location": "Ah Haa School for the Arts, 3rd Floor Launchpad",
+    "summary": "The Town's Comprehensive Plan update moves into Phase 2. Review the revised Vision Statement, weigh in on the opportunities that matter most over the next 10 to 20 years, and help identify where they could take shape. Drop in for whatever interests you; no need to stay the whole time.",
+    "links": [
+      {
+        "label": "Community Questionnaire",
+        "href": "https://survey.alchemer.com/s3/9003580/Telluride-Comprehensive-Plan-Phase-2-Questionnaire"
+      },
+      {
+        "label": "Project page",
+        "href": "https://engagetelluride.org/2025-comprehensive-plan"
+      },
+      {
+        "label": "Sign up for updates",
+        "href": "https://telluride.us21.list-manage.com/subscribe?u=bc4726f5d81aa18f63733d8c8&id=2366054da1"
+      }
+    ],
+    "agendaUrl": "",
+    "packetUrl": "",
+    "link": "",
+    "hasAgenda": false,
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "",
+    "commentEmail": "",
+    "hook": ""
+  },
+  {
     "source": "tmvoa",
     "sourceLabel": "TMVOA",
     "title": "TMVOA Board of Directors Meeting",
@@ -31,6 +66,41 @@
     "link": "https://tmvoa.org/site/assets/files/4867/tmvoa_board_meeting_agenda_9_29_26_revised.pdf",
     "hasAgenda": false,
     "summary": "The September 29, 2026 TMVOA Board of Directors Meeting agenda hasn't been posted yet.",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "",
+    "commentEmail": "",
+    "hook": ""
+  },
+  {
+    "kind": "event",
+    "source": "telluride",
+    "sourceLabel": "Town of Telluride",
+    "title": "Comprehensive Plan Pop-Up",
+    "date": "2026-09-30",
+    "time": "8:30 AM - 9:30 AM",
+    "location": "Elks Park",
+    "summary": "Comprehensive Plan Phase 2 pop-up. No presentation and no formal meeting: stop by for a few minutes or stay and chat about the revised Vision Statement and where you see opportunities for change, investment or preservation.",
+    "links": [
+      {
+        "label": "Community Questionnaire",
+        "href": "https://survey.alchemer.com/s3/9003580/Telluride-Comprehensive-Plan-Phase-2-Questionnaire"
+      },
+      {
+        "label": "Project page",
+        "href": "https://engagetelluride.org/2025-comprehensive-plan"
+      },
+      {
+        "label": "Sign up for updates",
+        "href": "https://telluride.us21.list-manage.com/subscribe?u=bc4726f5d81aa18f63733d8c8&id=2366054da1"
+      }
+    ],
+    "agendaUrl": "",
+    "packetUrl": "",
+    "link": "",
+    "hasAgenda": false,
     "zoomLink": "",
     "zoomMeetingId": "",
     "zoomPasscode": "",
@@ -100,6 +170,76 @@
     "hook": ""
   },
   {
+    "kind": "event",
+    "source": "telluride",
+    "sourceLabel": "Town of Telluride",
+    "title": "Comprehensive Plan Focus Group: Economy",
+    "date": "2026-09-30",
+    "time": "1:30 PM - 3:00 PM",
+    "location": "Ah Haa School for the Arts, 3rd Floor Launchpad",
+    "summary": "Comprehensive Plan Phase 2 focus group on the draft goals and objectives for the economy. Join one or more sessions on the topics you care about.",
+    "links": [
+      {
+        "label": "Community Questionnaire",
+        "href": "https://survey.alchemer.com/s3/9003580/Telluride-Comprehensive-Plan-Phase-2-Questionnaire"
+      },
+      {
+        "label": "Project page",
+        "href": "https://engagetelluride.org/2025-comprehensive-plan"
+      },
+      {
+        "label": "Sign up for updates",
+        "href": "https://telluride.us21.list-manage.com/subscribe?u=bc4726f5d81aa18f63733d8c8&id=2366054da1"
+      }
+    ],
+    "agendaUrl": "",
+    "packetUrl": "",
+    "link": "",
+    "hasAgenda": false,
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "",
+    "commentEmail": "",
+    "hook": ""
+  },
+  {
+    "kind": "event",
+    "source": "telluride",
+    "sourceLabel": "Town of Telluride",
+    "title": "Comprehensive Plan Focus Group: Environment & Recreation",
+    "date": "2026-09-30",
+    "time": "3:00 PM - 4:30 PM",
+    "location": "Ah Haa School for the Arts, 3rd Floor Launchpad",
+    "summary": "Comprehensive Plan Phase 2 focus group on the draft goals and objectives for environment and recreation. Join one or more sessions on the topics you care about.",
+    "links": [
+      {
+        "label": "Community Questionnaire",
+        "href": "https://survey.alchemer.com/s3/9003580/Telluride-Comprehensive-Plan-Phase-2-Questionnaire"
+      },
+      {
+        "label": "Project page",
+        "href": "https://engagetelluride.org/2025-comprehensive-plan"
+      },
+      {
+        "label": "Sign up for updates",
+        "href": "https://telluride.us21.list-manage.com/subscribe?u=bc4726f5d81aa18f63733d8c8&id=2366054da1"
+      }
+    ],
+    "agendaUrl": "",
+    "packetUrl": "",
+    "link": "",
+    "hasAgenda": false,
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "",
+    "commentEmail": "",
+    "hook": ""
+  },
+  {
     "source": "telluride",
     "sourceLabel": "Town of Telluride",
     "title": "HARC Meeting",
@@ -117,6 +257,41 @@
     "zoomPhone": "301-715-8592",
     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams",
     "commentEmail": "dcandelaria@telluride.gov",
+    "hook": ""
+  },
+  {
+    "kind": "event",
+    "source": "telluride",
+    "sourceLabel": "Town of Telluride",
+    "title": "Comprehensive Plan Pop-Up",
+    "date": "2026-10-01",
+    "time": "8:30 AM - 9:30 AM",
+    "location": "Oak Street Gondola Plaza",
+    "summary": "Comprehensive Plan Phase 2 pop-up. No presentation and no formal meeting: stop by for a few minutes or stay and chat about the revised Vision Statement and where you see opportunities for change, investment or preservation.",
+    "links": [
+      {
+        "label": "Community Questionnaire",
+        "href": "https://survey.alchemer.com/s3/9003580/Telluride-Comprehensive-Plan-Phase-2-Questionnaire"
+      },
+      {
+        "label": "Project page",
+        "href": "https://engagetelluride.org/2025-comprehensive-plan"
+      },
+      {
+        "label": "Sign up for updates",
+        "href": "https://telluride.us21.list-manage.com/subscribe?u=bc4726f5d81aa18f63733d8c8&id=2366054da1"
+      }
+    ],
+    "agendaUrl": "",
+    "packetUrl": "",
+    "link": "",
+    "hasAgenda": false,
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "",
+    "commentEmail": "",
     "hook": ""
   },
   {
@@ -160,6 +335,41 @@
     "hook": ""
   },
   {
+    "kind": "event",
+    "source": "telluride",
+    "sourceLabel": "Town of Telluride",
+    "title": "Comprehensive Plan Focus Group: Community & Livability",
+    "date": "2026-10-01",
+    "time": "12:30 PM - 2:00 PM",
+    "location": "Rebekah Hall, Council Chambers",
+    "summary": "Comprehensive Plan Phase 2 focus group on the draft goals and objectives for community and livability. Join one or more sessions on the topics you care about.",
+    "links": [
+      {
+        "label": "Community Questionnaire",
+        "href": "https://survey.alchemer.com/s3/9003580/Telluride-Comprehensive-Plan-Phase-2-Questionnaire"
+      },
+      {
+        "label": "Project page",
+        "href": "https://engagetelluride.org/2025-comprehensive-plan"
+      },
+      {
+        "label": "Sign up for updates",
+        "href": "https://telluride.us21.list-manage.com/subscribe?u=bc4726f5d81aa18f63733d8c8&id=2366054da1"
+      }
+    ],
+    "agendaUrl": "",
+    "packetUrl": "",
+    "link": "",
+    "hasAgenda": false,
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "",
+    "commentEmail": "",
+    "hook": ""
+  },
+  {
     "source": "county",
     "sourceLabel": "San Miguel County",
     "title": "Lodging Tax Panel Meeting",
@@ -177,6 +387,41 @@
     "zoomPhone": "",
     "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams",
     "commentEmail": "bocc@sanmiguelcountyco.gov",
+    "hook": ""
+  },
+  {
+    "kind": "event",
+    "source": "telluride",
+    "sourceLabel": "Town of Telluride",
+    "title": "Comprehensive Plan Focus Group: Housing & Infrastructure",
+    "date": "2026-10-01",
+    "time": "2:00 PM - 3:30 PM",
+    "location": "Rebekah Hall, Council Chambers",
+    "summary": "Comprehensive Plan Phase 2 focus group on the draft goals and objectives for housing and infrastructure. Join one or more sessions on the topics you care about.",
+    "links": [
+      {
+        "label": "Community Questionnaire",
+        "href": "https://survey.alchemer.com/s3/9003580/Telluride-Comprehensive-Plan-Phase-2-Questionnaire"
+      },
+      {
+        "label": "Project page",
+        "href": "https://engagetelluride.org/2025-comprehensive-plan"
+      },
+      {
+        "label": "Sign up for updates",
+        "href": "https://telluride.us21.list-manage.com/subscribe?u=bc4726f5d81aa18f63733d8c8&id=2366054da1"
+      }
+    ],
+    "agendaUrl": "",
+    "packetUrl": "",
+    "link": "",
+    "hasAgenda": false,
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "",
+    "commentEmail": "",
     "hook": ""
   },
   {

@@ -60,6 +60,8 @@
   .m-card .acts .abtn.zoom:hover { background: #eef3fa; }
   .m-card .acts .abtn.live { border-color: #a0463d; color: #a0463d; }
   .m-card .acts .abtn.live:hover { background: #f9efee; }
+  .m-card .ev-badge { display: inline-block; font: 700 11px/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; color: #fff; background: var(--rust); padding: 4px 8px; border-radius: 4px; margin-left: 8px; vertical-align: middle; }
+  .m-card.m-event { border-left: 4px solid var(--rust); }
   .zoomline { font: 500 15px/1.6 var(--sans); color: var(--muted); margin-top: 8px; }
   /* Zoom row under the button row: Join button + Meeting ID/Passcode inline */
   .m-card .acts.zoomrow { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
@@ -261,6 +263,22 @@
       // calendar page; Agenda Packet is always present — solid green download
       // when posted, grey non-clickable ghost when not yet.
       var acts = '';
+      if (m.kind === 'event') {
+        // Civic EVENT (gov-data GOV_EVENTS) — not a meeting: no agenda/packet
+        // ghosts, no comment inbox. Its own links + add-to-calendar only.
+        (m.links || []).forEach(function (l) {
+          if (l && l.href && l.label) acts += '<a class="abtn" href="' + esc(safe(l.href)) + '" target="_blank" rel="noopener">' + esc(l.label) + '</a>';
+        });
+        acts += '<a class="abtn" href="' + LTData.icsDataUri({ title: m.title + ' — ' + m.sourceLabel, date: m.date, time: m.time, location: m.location, description: m.summary, url: (m.links && m.links[0] && m.links[0].href) || '' }) + '" download="' + esc(LTData.icsFilename(m.title, m.date)) + '">&#128197; Add to calendar</a>';
+        html += '<article class="m-card m-event">' +
+          '<div class="m-date"><div class="m">' + MON[d.getMonth()] + '</div><div class="d">' + d.getDate() + '</div>' + logo + '</div>' +
+          '<div><span class="tag">' + esc(m.sourceLabel) + '</span><span class="ev-badge">Community Event</span>' + (m.time ? '<span class="src">' + esc(m.time) + '</span>' : '') +
+          '<h3>' + esc(m.title) + '</h3>' +
+          (m.summary ? '<p class="summ">' + emphasizeNames(m.summary) + '</p>' : '') +
+          (m.location ? '<div class="meta" style="margin-bottom:6px">&#128205; ' + esc(m.location) + '</div>' : '') +
+          '<div class="acts" style="margin-top:10px">' + acts + '</div></div></article>';
+        return;
+      }
       if (m.commentEmail) acts += '<a class="cbtn" href="' + esc(commentMailto(m)) + '">&#9993;&#65039; Submit Comment</a>';
       // View Agenda mirrors the packet button's two states (per Morgan
       // 2026-07-23): solid green ONLY when an agenda is actually posted

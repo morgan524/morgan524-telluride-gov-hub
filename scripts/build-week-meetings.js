@@ -170,6 +170,31 @@ function buildWeekMeetings(repoRoot) {
       });
     }
   }
+  // Hand-curated civic EVENTS (gov-data GOV_EVENTS): open houses, pop-ups,
+  // focus groups — listed on their day but flagged kind:'event' so the page
+  // renders an event card and meeting-only consumers can skip them.
+  const todayKey = today.getFullYear() + '-' + pad(today.getMonth() + 1) + '-' + pad(today.getDate());
+  const endKey = end.getFullYear() + '-' + pad(end.getMonth() + 1) + '-' + pad(end.getDate());
+  const labelFor = Object.fromEntries(GETTERS.map(([k, label]) => [k, label]));
+  for (const e of (Array.isArray(captured.GOV_EVENTS) ? captured.GOV_EVENTS : [])) {
+    if (!e || !e.title || !/^\d{4}-\d{2}-\d{2}$/.test(e.date || '')) continue;
+    if (e.date < todayKey || e.date > endKey) continue;
+    const source = e.source || 'telluride';
+    out.push({
+      kind: 'event',
+      source: source,
+      sourceLabel: labelFor[source] || e.sourceLabel || source,
+      title: String(e.title).trim(),
+      date: e.date,
+      time: String(e.time || '').trim(),
+      location: String(e.location || '').trim(),
+      summary: String(e.summary || '').trim(),
+      links: (Array.isArray(e.links) ? e.links : []).filter((l) => l && l.label && /^https:\/\//.test(l.href || '')),
+      agendaUrl: '', packetUrl: '', link: '', hasAgenda: false,
+      zoomLink: '', zoomMeetingId: '', zoomPasscode: '', zoomPhone: '',
+      livestream: '', commentEmail: '',
+    });
+  }
   // Date, then START TIME within the day (Morgan 2026-09-29: first in the
   // morning to last), then title. No published time sorts last in its day.
   const startMin = (t) => { const x = String(t || '').match(/(\d{1,2}):(\d{2})\s*([AP])M/i); return x ? ((+x[1] % 12) + (/p/i.test(x[3]) ? 12 : 0)) * 60 + +x[2] : 24 * 60; };
@@ -202,6 +227,7 @@ function saveHookCache(dataDir, cache) {
 function applyCachedHooks(meetings, cache) {
   const misses = [];
   for (const m of meetings) {
+    if (m.kind === 'event') { m.hook = ''; continue; }   // events: no agenda to hook
     const c = cache[hookKey(m)];
     if (c && c.sig === summarySig(m.summary) && c.hook) m.hook = c.hook;
     else { m.hook = ''; misses.push(m); }

@@ -413,6 +413,7 @@
     var rows = [];
     (data['week-meetings'] || []).forEach(function (m) {
       if (!m || !m.title || !m.date) return;
+      if (m.kind === 'event') return;   // meetings only — civic events live on Gov Hub
       if (m.date < today || m.date > end) return;
       rows.push({ key: m.date, d: LTData.parseDateKey(m.date), title: m.title, srcKey: m.source, hook: m.hook || '',
         time: (m.time || '').split('-')[0].trim(), loc: m.location || '', src: m.sourceLabel || m.source });
