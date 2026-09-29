@@ -128,7 +128,7 @@ const add = (level, source, key, what, detail = '') => findings.push({ id: `${so
   // ── 3. Config drift ─────────────────────────────────────────────────────────
   const tracker = fs.readFileSync(path.join(ROOT, 'v2', 'vote-tracker.html'), 'utf8');
   const members = (name) => { const i = tracker.indexOf(`const ${name} = [`); if (i < 0) return null; const blk = tracker.slice(i, tracker.indexOf('];', i)); return new Set([...blk.matchAll(/id\s*:\s*'([^']+)'/g)].map((m) => m[1])); };
-  const MEMBER_CONST = { telluride: 'ALL_MEMBERS', bocc: 'BOCC_ALL_MEMBERS', rico: 'RICO_ALL_MEMBERS', pc: 'PC_ALL_MEMBERS', tomv: 'TOMV_ALL_MEMBERS', drb: 'DRB_ALL_MEMBERS' };
+  const MEMBER_CONST = { telluride: 'ALL_MEMBERS', bocc: 'BOCC_ALL_MEMBERS', rico: 'RICO_ALL_MEMBERS', pc: 'PC_ALL_MEMBERS', tomv: 'TOMV_ALL_MEMBERS', drb: 'DRB_ALL_MEMBERS' };   // SMART builds its members from the minutes (smart-votes.js) — no config roster
   const vtc = JSON.parse(fs.readFileSync(path.join(__dirname, 'vote-tracker-config.json'), 'utf8'));
   for (const [ent, cfg] of Object.entries(vtc)) {
     if (!cfg || typeof cfg !== 'object' || !Array.isArray(cfg.rosters)) continue;

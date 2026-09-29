@@ -1375,15 +1375,6 @@ const MEETING_RECAPS = [
     videoUrl: "https://media.avcaptureall.cloud/meeting/f0518ee8-8370-4a16-9138-d66835eaf7cd"
   },
   {
-    sourceKey: "county",
-    sourceLabel: "San Miguel County",
-    date: "2026-09-24",
-    title: "San Miguel County 5x5 Meeting — Sep 24, 2026",
-    recap: "San Miguel County hosted the regional 5x5 meeting, bringing together commissioners and staff from Archuleta, Dolores, Montezuma, La Plata, and San Miguel counties, along with state and federal legislative representatives.\n\nWildfire dominated the discussion. Counties shared experiences from a brutal season — a 1,700-acre fire in Archuleta, the roughly 90,000-acre Ferris fire in Dolores — and compared strategies including water-storage tanks, Pano AI detection cameras, and defensible-space funding gaps. Montezuma County announced it is using Title III SRS funds to install two Pano cameras at Park Point in partnership with Mesa Verde National Park. San Miguel noted its cameras have already enabled early response. Pitkin County is reportedly developing legislation for statewide Pano funding; Proposition 137 on the November ballot would direct sporting-goods sales tax toward wildfire prevention and watershed restoration.\n\nSan Miguel County reported an 870-unit housing deficit projected to exceed 1,000 units by 2030. A citizen stakeholder group has completed a package of land-use code changes for planning commission and commissioner review. The county also adopted the Colorado model low-energy and carbon building code. A CDOT partnership at the Draco shop site targets 12 initial workforce-housing units, expandable to 46 if a wastewater plant is built. The county is re-advertising for a planning director after the first round yielded no suitable hire.\n\nLa Plata County updated two Urban Renewal Authority projects: up to 135 housing units with a childcare facility on Florida Road, and a redevelopment study of the Durango Mall area. A Region 9 broadband grant of $823,000 was approved for the Wolf Creek fiber project, adding redundant connectivity for Archuleta County. La Plata and Archuleta counties jointly filed a complaint with the PUC over repeated fiber cuts by Lumen Technologies that knock out 911 services.\n\nState Representative Stewart highlighted a new treatment-in-place law allowing EMS reimbursement under Medicaid without hospital transport, effective January 1, 2027, with commercial-plan expansion under study. Senator Hickenlooper's office flagged the Fix Our Forest Act (passed Senate committee), the 340B rural hospital prescription drug bill, and concern over a proposed OMB rule that would let agencies terminate federal grants without notice. The group agreed by consensus to extend standing invitations to the Southern Ute Indian Council and Ute Mountain Ute Tribe for future 5x5 meetings.",
-    votes: [],
-    videoUrl: "https://www.youtube.com/watch?v=wPoEdes-hkU"
-  },
-  {
     sourceKey: "telluride",
     sourceLabel: "Town of Telluride",
     date: "2026-09-24",
@@ -1391,6 +1382,15 @@ const MEETING_RECAPS = [
     recap: "The commission held a work session on a proposed Telluride R-1 School District employee housing project at the northwest corner of the Telluride Middle-High School site (725 West Colorado). The IGA between the town and the school district, already executed and effective, frames P&Z's review as limited to density, parking, and traffic. The proposal calls for four duplex buildings — eight one-bedroom units on a 0.91-acre site — which is within both the IGA's cap of ten units and the zone district's density limits. Staff noted that converting existing commuter parking spaces to resident parking produces no net parking loss and no added traffic.\n\nThe Shandoka Lot preliminary PUD public hearing was continued to the October 22, 2026 P&Z meeting at staff's request due to staff capacity.\n\nThe commission continued its work session on potential amendments to land use code sections 3-502 and 3-505 (landscaping and tree removal). Staff presented a peer-review of Aspen, Crested Butte, Boulder, and Breckenridge codes. Discussion centered on protection zones, damage definitions, replacement standards, and enforcement. The commission directed staff to convene a small working group — including arborists, a HARC member, and public works representation — to identify specific code problems before a draft amendment comes forward, likely in November.",
     votes: [{"item":"Shandoka Lot preliminary PUD — continued to Oct 22","outcome":"Continued","tally":""}],
     videoUrl: "https://www.youtube.com/watch?v=B2bYEedrpbo"
+  },
+  {
+    sourceKey: "county",
+    sourceLabel: "San Miguel County",
+    date: "2026-09-24",
+    title: "San Miguel County 5x5 Meeting — Sep 24, 2026",
+    recap: "San Miguel County hosted the regional 5x5 meeting, bringing together commissioners and staff from Archuleta, Dolores, Montezuma, La Plata, and San Miguel counties, along with state and federal legislative representatives.\n\nWildfire dominated the discussion. Counties shared experiences from a brutal season — a 1,700-acre fire in Archuleta, the roughly 90,000-acre Ferris fire in Dolores — and compared strategies including water-storage tanks, Pano AI detection cameras, and defensible-space funding gaps. Montezuma County announced it is using Title III SRS funds to install two Pano cameras at Park Point in partnership with Mesa Verde National Park. San Miguel noted its cameras have already enabled early response. Pitkin County is reportedly developing legislation for statewide Pano funding; Proposition 137 on the November ballot would direct sporting-goods sales tax toward wildfire prevention and watershed restoration.\n\nSan Miguel County reported an 870-unit housing deficit projected to exceed 1,000 units by 2030. A citizen stakeholder group has completed a package of land-use code changes for planning commission and commissioner review. The county also adopted the Colorado model low-energy and carbon building code. A CDOT partnership at the Draco shop site targets 12 initial workforce-housing units, expandable to 46 if a wastewater plant is built. The county is re-advertising for a planning director after the first round yielded no suitable hire.\n\nLa Plata County updated two Urban Renewal Authority projects: up to 135 housing units with a childcare facility on Florida Road, and a redevelopment study of the Durango Mall area. A Region 9 broadband grant of $823,000 was approved for the Wolf Creek fiber project, adding redundant connectivity for Archuleta County. La Plata and Archuleta counties jointly filed a complaint with the PUC over repeated fiber cuts by Lumen Technologies that knock out 911 services.\n\nState Representative Stewart highlighted a new treatment-in-place law allowing EMS reimbursement under Medicaid without hospital transport, effective January 1, 2027, with commercial-plan expansion under study. Senator Hickenlooper's office flagged the Fix Our Forest Act (passed Senate committee), the 340B rural hospital prescription drug bill, and concern over a proposed OMB rule that would let agencies terminate federal grants without notice. The group agreed by consensus to extend standing invitations to the Southern Ute Indian Council and Ute Mountain Ute Tribe for future 5x5 meetings.",
+    votes: [],
+    videoUrl: "https://www.youtube.com/watch?v=wPoEdes-hkU"
   },
   {
     sourceKey: "county",
@@ -1420,15 +1420,6 @@ const MEETING_RECAPS = [
     videoUrl: "https://www.youtube.com/watch?v=cuSYCwY9lMA"
   },
   {
-    sourceKey: "mv",
-    sourceLabel: "Mountain Village",
-    date: "2026-09-17",
-    title: "Mountain Village Town Council — Sep 17, 2026",
-    recap: "Council approved two proclamations: one designating September 2026 as Suicide Prevention Month, and a second — added from the dais after a resident's comment — proclaiming September 11th as Patriot Day and Day of Remembrance.\n\nOn the consent agenda, minutes and the Telluride Foundation agency funding agreement passed without discussion. An improvement and maintenance agreement with the Cortina Land Condominium Owners Association — settling a dispute over road and utility responsibility — was pulled for discussion and passed 5-1. Winter parking policies and rates were approved unchanged from last year.\n\nJennifer Vogel was appointed to a four-year term on the Telluride Regional Airport Authority through September 2030. Patrick Latcham was appointed as the TMVOA representative to the Plaza Vending Committee.\n\nCouncil passed second reading of an ordinance amending the municipal code governing the Public Art Commission, moving operational details from code into bylaws. A companion resolution adopting those bylaws — replacing a staff seat with a business-community appointee — also passed.\n\nTelski's conditional use permit for a temporary food truck and outdoor seating at OSP-35-C (the Big Billy's meadow area) was approved for one ski season, expiring April 4, 2027, with conditions: regular snow removal, maintenance in a clean and attractive condition, no tent structure, and a long-term plan presented to council upon expiration. Council sentiment leaned toward the improvement for ski school children but was broadly skeptical of the tent and food-truck aesthetic.\n\nA first reading passed on an ordinance amending housing code sections 16.01 and 16.02 to replace fixed fee amounts with a reference to the annually adopted MVHA fee schedule; a public hearing was set for October 15.\n\nDesign Workshop presented three conceptual designs for pond plaza improvements. Council provided direction favoring elements from multiple concepts — particularly stairs to the water's edge, wetland enhancement, snow melt, and integration with Four Seasons retail — and supported expanding the scope to include the adjacent conference center plaza. No vote was taken; staff will develop a preferred alternative and bring a formal resolution to initiate the entitlement process.\n\nThe Telluride Tourism Board presented a contract-renewal update. The existing three-year agreement auto-renews October 1; council directed staff to place an agenda item at a special meeting to extend the deadline, with a goal of voting on a new multi-year agreement by the October 15 meeting.\n\nA draft 2027 budget was presented at a high level as required by the town charter. Revenues are projected up roughly 8.6% excluding joint-project contributions; operating expenses up about 2.4%. The 2026 general fund swung from an $880,000 projected deficit to an estimated $390,000 surplus. A detailed budget presentation, including a new ten-year capital plan, is scheduled for October 8.",
-    votes: [{"item":"Suicide Prevention Month proclamation","outcome":"Passed","tally":""}, {"item":"Patriot Day / 9-11 proclamation","outcome":"Passed","tally":""}, {"item":"Consent agenda items A, B, E (minutes + Telluride Foundation agreement)","outcome":"Passed","tally":""}, {"item":"Cortina Land COA maintenance agreement","outcome":"Passed","tally":"5-1"}, {"item":"Winter 2026-27 parking policies and rates","outcome":"Passed","tally":""}, {"item":"Jennifer Vogel appointment to TRAA (4-year term)","outcome":"Passed","tally":""}, {"item":"Patrick Latcham appointment to Plaza Vending Committee","outcome":"Passed","tally":""}, {"item":"Ordinance amending Ch. 2.18 — Public Art Commission (2nd reading)","outcome":"Passed","tally":""}],
-    videoUrl: "https://media.avcaptureall.cloud/meeting/cccbf5e1-eca4-4a46-b8b3-2ee4452ed273"
-  },
-  {
     sourceKey: "rico",
     sourceLabel: "Rico",
     date: "2026-09-17",
@@ -1438,13 +1429,13 @@ const MEETING_RECAPS = [
     videoUrl: "https://www.youtube.com/watch?v=8RfRG5-CKhs"
   },
   {
-    sourceKey: "county",
-    sourceLabel: "San Miguel County",
-    date: "2026-09-16",
-    title: "Board of County Commissioners — Sep 16, 2026",
-    recap: "Commissioners took opposed positions on Amendment 81 (law enforcement/ICE communication), citing Sheriff Kovalt's memo that it circumvents existing statute, is vague, and raises due process concerns. On Amendment 86 (congressional redistricting), commissioners took no position, viewing it as redundant with existing safeguards.\n\nCommissioners approved a memorandum of understanding with the Town of Mountain Village and the Ridge at Telluride HOA clarifying that the 1999 Coonskin viewplane restriction uses a continuously sloped rather than stepped interpretation — with staff authorized to finalize details.\n\nThe 2025 county audit received a clean (unmodified) opinion on financial statements and federal single-audit compliance. Auditors flagged best-practice recommendations around communication between the finance and treasurer's offices, including joint reconciliation schedules and cross-training.\n\nA housing authority exception was approved for a deed-restricted property owner to rent his unit to qualified employees for another year, with conditions carried forward from the prior agreement plus a new prohibition on subleasing. The 2024 International Building Code and Low Energy Code adoption was continued to September 23. An IGA with Ouray County for veterans medical transportation was approved, as was a new part-time driver position to support the program. A year-round 32-hour fairgrounds maintenance position was also approved. Commissioners directed staff to update a resolution raising the assessor's authority to settle abatements to $20,000 (from $10,000) per new state law.",
-    votes: [{"item":"MOU with Mountain Village on viewplane interpretation","outcome":"Passed","tally":"3-0"}, {"item":"Housing exception — David Whitlaw, annual leave","outcome":"Passed","tally":"3-0"}, {"item":"Continue 2024 IBC/Low Energy Code to Sep 23","outcome":"Continued","tally":"3-0"}, {"item":"IGA with Ouray County — veterans transportation","outcome":"Passed","tally":"3-0"}, {"item":"New veteran transportation driver position","outcome":"Passed","tally":"3-0"}, {"item":"New 32-hr year-round fairgrounds maintenance position","outcome":"Passed","tally":"3-0"}],
-    videoUrl: "https://www.youtube.com/watch?v=VR6L_qdCyz4"
+    sourceKey: "mv",
+    sourceLabel: "Mountain Village",
+    date: "2026-09-17",
+    title: "Mountain Village Town Council — Sep 17, 2026",
+    recap: "Council approved two proclamations: one designating September 2026 as Suicide Prevention Month, and a second — added from the dais after a resident's comment — proclaiming September 11th as Patriot Day and Day of Remembrance.\n\nOn the consent agenda, minutes and the Telluride Foundation agency funding agreement passed without discussion. An improvement and maintenance agreement with the Cortina Land Condominium Owners Association — settling a dispute over road and utility responsibility — was pulled for discussion and passed 5-1. Winter parking policies and rates were approved unchanged from last year.\n\nJennifer Vogel was appointed to a four-year term on the Telluride Regional Airport Authority through September 2030. Patrick Latcham was appointed as the TMVOA representative to the Plaza Vending Committee.\n\nCouncil passed second reading of an ordinance amending the municipal code governing the Public Art Commission, moving operational details from code into bylaws. A companion resolution adopting those bylaws — replacing a staff seat with a business-community appointee — also passed.\n\nTelski's conditional use permit for a temporary food truck and outdoor seating at OSP-35-C (the Big Billy's meadow area) was approved for one ski season, expiring April 4, 2027, with conditions: regular snow removal, maintenance in a clean and attractive condition, no tent structure, and a long-term plan presented to council upon expiration. Council sentiment leaned toward the improvement for ski school children but was broadly skeptical of the tent and food-truck aesthetic.\n\nA first reading passed on an ordinance amending housing code sections 16.01 and 16.02 to replace fixed fee amounts with a reference to the annually adopted MVHA fee schedule; a public hearing was set for October 15.\n\nDesign Workshop presented three conceptual designs for pond plaza improvements. Council provided direction favoring elements from multiple concepts — particularly stairs to the water's edge, wetland enhancement, snow melt, and integration with Four Seasons retail — and supported expanding the scope to include the adjacent conference center plaza. No vote was taken; staff will develop a preferred alternative and bring a formal resolution to initiate the entitlement process.\n\nThe Telluride Tourism Board presented a contract-renewal update. The existing three-year agreement auto-renews October 1; council directed staff to place an agenda item at a special meeting to extend the deadline, with a goal of voting on a new multi-year agreement by the October 15 meeting.\n\nA draft 2027 budget was presented at a high level as required by the town charter. Revenues are projected up roughly 8.6% excluding joint-project contributions; operating expenses up about 2.4%. The 2026 general fund swung from an $880,000 projected deficit to an estimated $390,000 surplus. A detailed budget presentation, including a new ten-year capital plan, is scheduled for October 8.",
+    votes: [{"item":"Suicide Prevention Month proclamation","outcome":"Passed","tally":""}, {"item":"Patriot Day / 9-11 proclamation","outcome":"Passed","tally":""}, {"item":"Consent agenda items A, B, E (minutes + Telluride Foundation agreement)","outcome":"Passed","tally":""}, {"item":"Cortina Land COA maintenance agreement","outcome":"Passed","tally":"5-1"}, {"item":"Winter 2026-27 parking policies and rates","outcome":"Passed","tally":""}, {"item":"Jennifer Vogel appointment to TRAA (4-year term)","outcome":"Passed","tally":""}, {"item":"Patrick Latcham appointment to Plaza Vending Committee","outcome":"Passed","tally":""}, {"item":"Ordinance amending Ch. 2.18 — Public Art Commission (2nd reading)","outcome":"Passed","tally":""}],
+    videoUrl: "https://media.avcaptureall.cloud/meeting/cccbf5e1-eca4-4a46-b8b3-2ee4452ed273"
   },
   {
     sourceKey: "ridgway",
@@ -1454,6 +1445,15 @@ const MEETING_RECAPS = [
     recap: "The commission approved two linked applications for the Riverbend Town Homes project on Liddell Drive. A site plan for a five-unit, three-story townhome development was recommended to town council unanimously, with conditions including recordation of a 20-foot drainage and utility easement, approval of the related amended plat, and a revised geotech report before any building permit. The commission also unanimously approved a conditional use permit — within its own authority — for the building's size in the historic business zone.\n\nA companion amended plat for nearby parcels in the Riverview Business Park subdivision was recommended unanimously to town council. The plat vacates two existing 10-foot drainage easements that dead-end at a neighboring property line and replaces them with a new 20-foot easement connecting to the Uncompahgre River, establishing a public stormwater outfall that could eventually serve a broader drainage problem area.\n\nA third item — an amended plat and PUD amendment for Lena Street Commons — was continued to October 21 at the applicant's request.",
     votes: [{"item":"Riverbend Town Homes site plan — recommend to council","outcome":"Passed","tally":""}, {"item":"Riverbend Town Homes conditional use permit","outcome":"Passed","tally":""}, {"item":"Amended plat, Riverview Business Park — recommend to council","outcome":"Passed","tally":""}, {"item":"Lena Street Commons amended plat/PUD — continued to Oct 21","outcome":"Continued","tally":""}],
     videoUrl: "https://www.youtube.com/watch?v=A2zrmObL01E"
+  },
+  {
+    sourceKey: "county",
+    sourceLabel: "San Miguel County",
+    date: "2026-09-16",
+    title: "Board of County Commissioners — Sep 16, 2026",
+    recap: "Commissioners took opposed positions on Amendment 81 (law enforcement/ICE communication), citing Sheriff Kovalt's memo that it circumvents existing statute, is vague, and raises due process concerns. On Amendment 86 (congressional redistricting), commissioners took no position, viewing it as redundant with existing safeguards.\n\nCommissioners approved a memorandum of understanding with the Town of Mountain Village and the Ridge at Telluride HOA clarifying that the 1999 Coonskin viewplane restriction uses a continuously sloped rather than stepped interpretation — with staff authorized to finalize details.\n\nThe 2025 county audit received a clean (unmodified) opinion on financial statements and federal single-audit compliance. Auditors flagged best-practice recommendations around communication between the finance and treasurer's offices, including joint reconciliation schedules and cross-training.\n\nA housing authority exception was approved for a deed-restricted property owner to rent his unit to qualified employees for another year, with conditions carried forward from the prior agreement plus a new prohibition on subleasing. The 2024 International Building Code and Low Energy Code adoption was continued to September 23. An IGA with Ouray County for veterans medical transportation was approved, as was a new part-time driver position to support the program. A year-round 32-hour fairgrounds maintenance position was also approved. Commissioners directed staff to update a resolution raising the assessor's authority to settle abatements to $20,000 (from $10,000) per new state law.",
+    votes: [{"item":"MOU with Mountain Village on viewplane interpretation","outcome":"Passed","tally":"3-0"}, {"item":"Housing exception — David Whitlaw, annual leave","outcome":"Passed","tally":"3-0"}, {"item":"Continue 2024 IBC/Low Energy Code to Sep 23","outcome":"Continued","tally":"3-0"}, {"item":"IGA with Ouray County — veterans transportation","outcome":"Passed","tally":"3-0"}, {"item":"New veteran transportation driver position","outcome":"Passed","tally":"3-0"}, {"item":"New 32-hr year-round fairgrounds maintenance position","outcome":"Passed","tally":"3-0"}],
+    videoUrl: "https://www.youtube.com/watch?v=VR6L_qdCyz4"
   },
   {
     sourceKey: "county",
@@ -1474,13 +1474,13 @@ const MEETING_RECAPS = [
     videoUrl: "https://www.youtube.com/watch?v=7ZuqrWyORbE"
   },
   {
-    sourceKey: "ridgway",
-    sourceLabel: "Town of Ridgway",
+    sourceKey: "county",
+    sourceLabel: "San Miguel County",
     date: "2026-09-09",
-    title: "Ridgway Town Council — Sep 9, 2026",
-    recap: "Council unanimously approved a proclamation declaring September 2026 National Suicide Prevention Awareness Month. Two community events were approved: a parking-lot sale at the library on October 10th and a trunk-or-treat event at the same location on October 30th.\n\nTwo applicants were appointed to the Sustainability Advisory Board, filling vacancies left by three departing members. The board now has five members, still below its seven-member cap.\n\nCouncil authorized staff to issue an RFP for a consultant to develop 100% construction-level documents for the Ridgway Athletic Park Bike Park, drawing on $125,000 in previously earmarked athletic-park reserves. The move is aimed at making the coalition's application for a GO Colorado grant competitive.\n\nA contract with Surf Structures LLC (not to exceed $50,000) was approved for post-office-area sidewalk and Clinton Street valley-pan repairs, with Mesa Concrete as a named backup. Council also awarded a professional-services agreement to 2757 Design Co. to develop four pre-approved ADU plan sets, largely offset by a DOLA grant leaving the town's share just over $7,000.\n\nThe revised Marshal's Office overtime policy — lowering the overtime threshold from 86 to 80 hours in a 14-day pay period — was adopted. Resolution 26-07 formally accepted completion of the ductile-iron pipe replacement project. Stage Two fire restrictions were rescinded in favor of Stage One, and mandatory water restrictions were lifted entirely.",
-    votes: [{"item":"Suicide Prevention Awareness Month proclamation","outcome":"Passed","tally":""}, {"item":"Library parking lot use — Oct 10 community sale","outcome":"Passed","tally":""}, {"item":"Sustainability Advisory Board appointments","outcome":"Passed","tally":""}, {"item":"Award ADU plans contract to 2757 Design Co.","outcome":"Passed","tally":""}, {"item":"Sidewalk/valley-pan repairs — Surf Structures LLC","outcome":"Passed","tally":""}, {"item":"Library parking lot use — Oct 30 trunk-or-treat","outcome":"Passed","tally":""}, {"item":"Authorize RFP for Bike Park construction docs","outcome":"Passed","tally":""}, {"item":"Revised Marshal's Office overtime policy","outcome":"Passed","tally":""}],
-    videoUrl: "https://www.youtube.com/watch?v=O0WD-MM9NfQ"
+    title: "Board of County Commissioners — Sep 9, 2026",
+    recap: "Commissioners reviewed Colorado's November ballot measures and staked out positions. They agreed to oppose the constitutional right to natural gas (formerly Initiative 177), oppose the income tax rate cap, support the graduated income tax amendment (Amendment 87), support the TABOR revenue cap increase for K-12 education (Prop NN), and oppose the mandatory life-without-parole sentencing for human trafficking of a minor — taking an abstain position on the latter instead. Commissioners also agreed to oppose Amendment 84 (mail ballot ID requirement), oppose the constitutional right to hunt and fish, and oppose Prop 132 (mandatory fentanyl sentencing), with Sheriff Kovalt detailing the unfunded-mandate burden on rural jails. Amendment 85 (plain-language ballot requirement) drew initial interest but ended in an oppose position after staff flagged conflicts with existing constitutional ballot language. Amendment 81 (law enforcement/federal immigration communication) was held pending the sheriff's further research.\n\nCommissioners, sitting as the San Miguel County Housing Authority, approved Resolution 2026-34 amending the area median income limitations for certain Pinion Park deed-restricted properties — raising qualifying units from 80% AMI to 100% AMI, with the third \"whereas\" clause corrected to reflect AMI limits ranging from 80% to 180%.\n\nThe board held a lengthy work session on potential amendments to the county's deed-restriction covenant. Commissioners coalesced around a 4% annual appreciation cap (excluding Lawson Hill due to HOA declaration conflicts), dropping the \"subject to market forces\" language, maintaining the 1,200-hour employment standard, removing the option-to-purchase provision in favor of ensuring deed restrictions survive foreclosure via recording-order instructions, and tightening trust/estate provisions. Questions around qualifying income and remote workers were tabled for a follow-up session by end of October.\n\nOn staffing and capital matters, the county manager reported the Illium housing project (five sheriff's office units) came in at a $3.3 million GMP — roughly $1 million over initial estimates — and the project will be rebid rather than contracted at current figures. A new parks and open space manager, JD Wise, was hired and starts October 19. The planning director search was relaunched after the first round of interviews did not yield a hire.",
+    votes: [{"item":"Consent agenda","outcome":"Passed","tally":"3-0"}, {"item":"Resolution 2026-34: Pinion Park AMI limit change (80% to 100%)","outcome":"Passed","tally":"3-0"}, {"item":"Appoint Commissioner Gleason as CCI alternate for 2027 legislative priorities vote","outcome":"Passed","tally":"3-0"}],
+    videoUrl: "https://www.youtube.com/watch?v=i1grtO2SwzE"
   },
   {
     sourceKey: "ouray",
@@ -1492,13 +1492,13 @@ const MEETING_RECAPS = [
     videoUrl: "https://vimeo.com/1225421786"
   },
   {
-    sourceKey: "county",
-    sourceLabel: "San Miguel County",
+    sourceKey: "ridgway",
+    sourceLabel: "Town of Ridgway",
     date: "2026-09-09",
-    title: "Board of County Commissioners — Sep 9, 2026",
-    recap: "Commissioners reviewed Colorado's November ballot measures and staked out positions. They agreed to oppose the constitutional right to natural gas (formerly Initiative 177), oppose the income tax rate cap, support the graduated income tax amendment (Amendment 87), support the TABOR revenue cap increase for K-12 education (Prop NN), and oppose the mandatory life-without-parole sentencing for human trafficking of a minor — taking an abstain position on the latter instead. Commissioners also agreed to oppose Amendment 84 (mail ballot ID requirement), oppose the constitutional right to hunt and fish, and oppose Prop 132 (mandatory fentanyl sentencing), with Sheriff Kovalt detailing the unfunded-mandate burden on rural jails. Amendment 85 (plain-language ballot requirement) drew initial interest but ended in an oppose position after staff flagged conflicts with existing constitutional ballot language. Amendment 81 (law enforcement/federal immigration communication) was held pending the sheriff's further research.\n\nCommissioners, sitting as the San Miguel County Housing Authority, approved Resolution 2026-34 amending the area median income limitations for certain Pinion Park deed-restricted properties — raising qualifying units from 80% AMI to 100% AMI, with the third \"whereas\" clause corrected to reflect AMI limits ranging from 80% to 180%.\n\nThe board held a lengthy work session on potential amendments to the county's deed-restriction covenant. Commissioners coalesced around a 4% annual appreciation cap (excluding Lawson Hill due to HOA declaration conflicts), dropping the \"subject to market forces\" language, maintaining the 1,200-hour employment standard, removing the option-to-purchase provision in favor of ensuring deed restrictions survive foreclosure via recording-order instructions, and tightening trust/estate provisions. Questions around qualifying income and remote workers were tabled for a follow-up session by end of October.\n\nOn staffing and capital matters, the county manager reported the Illium housing project (five sheriff's office units) came in at a $3.3 million GMP — roughly $1 million over initial estimates — and the project will be rebid rather than contracted at current figures. A new parks and open space manager, JD Wise, was hired and starts October 19. The planning director search was relaunched after the first round of interviews did not yield a hire.",
-    votes: [{"item":"Consent agenda","outcome":"Passed","tally":"3-0"}, {"item":"Resolution 2026-34: Pinion Park AMI limit change (80% to 100%)","outcome":"Passed","tally":"3-0"}, {"item":"Appoint Commissioner Gleason as CCI alternate for 2027 legislative priorities vote","outcome":"Passed","tally":"3-0"}],
-    videoUrl: "https://www.youtube.com/watch?v=i1grtO2SwzE"
+    title: "Ridgway Town Council — Sep 9, 2026",
+    recap: "Council unanimously approved a proclamation declaring September 2026 National Suicide Prevention Awareness Month. Two community events were approved: a parking-lot sale at the library on October 10th and a trunk-or-treat event at the same location on October 30th.\n\nTwo applicants were appointed to the Sustainability Advisory Board, filling vacancies left by three departing members. The board now has five members, still below its seven-member cap.\n\nCouncil authorized staff to issue an RFP for a consultant to develop 100% construction-level documents for the Ridgway Athletic Park Bike Park, drawing on $125,000 in previously earmarked athletic-park reserves. The move is aimed at making the coalition's application for a GO Colorado grant competitive.\n\nA contract with Surf Structures LLC (not to exceed $50,000) was approved for post-office-area sidewalk and Clinton Street valley-pan repairs, with Mesa Concrete as a named backup. Council also awarded a professional-services agreement to 2757 Design Co. to develop four pre-approved ADU plan sets, largely offset by a DOLA grant leaving the town's share just over $7,000.\n\nThe revised Marshal's Office overtime policy — lowering the overtime threshold from 86 to 80 hours in a 14-day pay period — was adopted. Resolution 26-07 formally accepted completion of the ductile-iron pipe replacement project. Stage Two fire restrictions were rescinded in favor of Stage One, and mandatory water restrictions were lifted entirely.",
+    votes: [{"item":"Suicide Prevention Awareness Month proclamation","outcome":"Passed","tally":""}, {"item":"Library parking lot use — Oct 10 community sale","outcome":"Passed","tally":""}, {"item":"Sustainability Advisory Board appointments","outcome":"Passed","tally":""}, {"item":"Award ADU plans contract to 2757 Design Co.","outcome":"Passed","tally":""}, {"item":"Sidewalk/valley-pan repairs — Surf Structures LLC","outcome":"Passed","tally":""}, {"item":"Library parking lot use — Oct 30 trunk-or-treat","outcome":"Passed","tally":""}, {"item":"Authorize RFP for Bike Park construction docs","outcome":"Passed","tally":""}, {"item":"Revised Marshal's Office overtime policy","outcome":"Passed","tally":""}],
+    videoUrl: "https://www.youtube.com/watch?v=O0WD-MM9NfQ"
   },
   {
     sourceKey: "ouray",
@@ -1528,15 +1528,6 @@ const MEETING_RECAPS = [
     videoUrl: "https://www.youtube.com/watch?v=I1B3OGB1XzE"
   },
   {
-    sourceKey: "telluride",
-    sourceLabel: "Town of Telluride",
-    date: "2026-08-20",
-    title: "Planning & Zoning — Aug 20, 2026",
-    recap: "Two items were continued without discussion. The Telluride School District R-1 employee housing work session — proposed new construction at the middle school site — was continued to September 24, pending the town's intergovernmental agreement with the district, which awaits the school board's signature. A minor subdivision application for 238 North Pine Street was continued to October 22, with staff noting it will be recommended for withdrawal if the applicant is not ready to proceed at that meeting.\n\nThe commission held a comprehensive plan status update with consultants Logan Simpson. Phase one outreach reached roughly 480 in-person contacts and 357 questionnaire responses; top themes were housing and affordability, sustainability, and community equity. Commissioners flagged concerns about census data understating the Hispanic population, the absence of natural-hazard topics (wildfire, flood, mudslide) from phase-one findings, and the need for higher engagement numbers. The team is targeting a major community outreach push in late September through October, with a follow-up work session tentatively set for September 17.\n\nThe commission then took up a discussion on Land Use Code Section 3-505 governing tree maintenance, removal, and relocation. Two local arborists addressed the commission, raising concerns about inconsistent permitting, the lack of a clear hazard-tree definition, mitigation fees that discourage removal of genuinely dangerous trees, and staff turnover creating unpredictable reviews. Key themes included the need for a formal hazard-tree definition, a public tree inventory, streamlined site-visit protocols, and the long-term possibility of a municipal arborist position. No code amendments were adopted; next steps include a community info session for contractors on August 25 and a follow-up work session at the September 24 regular meeting.",
-    votes: [{"item":"Continue R-1 employee housing work session to Sep 24","outcome":"Continued","tally":""}, {"item":"Continue 238 N Pine St minor subdivision to Oct 22","outcome":"Continued","tally":""}],
-    videoUrl: "https://www.youtube.com/watch?v=owcOgLJ1Qto"
-  },
-  {
     sourceKey: "mv",
     sourceLabel: "Mountain Village",
     date: "2026-08-20",
@@ -1548,11 +1539,30 @@ const MEETING_RECAPS = [
   {
     sourceKey: "telluride",
     sourceLabel: "Town of Telluride",
+    date: "2026-08-20",
+    title: "Planning & Zoning — Aug 20, 2026",
+    recap: "Two items were continued without discussion. The Telluride School District R-1 employee housing work session — proposed new construction at the middle school site — was continued to September 24, pending the town's intergovernmental agreement with the district, which awaits the school board's signature. A minor subdivision application for 238 North Pine Street was continued to October 22, with staff noting it will be recommended for withdrawal if the applicant is not ready to proceed at that meeting.\n\nThe commission held a comprehensive plan status update with consultants Logan Simpson. Phase one outreach reached roughly 480 in-person contacts and 357 questionnaire responses; top themes were housing and affordability, sustainability, and community equity. Commissioners flagged concerns about census data understating the Hispanic population, the absence of natural-hazard topics (wildfire, flood, mudslide) from phase-one findings, and the need for higher engagement numbers. The team is targeting a major community outreach push in late September through October, with a follow-up work session tentatively set for September 17.\n\nThe commission then took up a discussion on Land Use Code Section 3-505 governing tree maintenance, removal, and relocation. Two local arborists addressed the commission, raising concerns about inconsistent permitting, the lack of a clear hazard-tree definition, mitigation fees that discourage removal of genuinely dangerous trees, and staff turnover creating unpredictable reviews. Key themes included the need for a formal hazard-tree definition, a public tree inventory, streamlined site-visit protocols, and the long-term possibility of a municipal arborist position. No code amendments were adopted; next steps include a community info session for contractors on August 25 and a follow-up work session at the September 24 regular meeting.",
+    votes: [{"item":"Continue R-1 employee housing work session to Sep 24","outcome":"Continued","tally":""}, {"item":"Continue 238 N Pine St minor subdivision to Oct 22","outcome":"Continued","tally":""}],
+    videoUrl: "https://www.youtube.com/watch?v=owcOgLJ1Qto"
+  },
+  {
+    sourceKey: "telluride",
+    sourceLabel: "Town of Telluride",
     date: "2026-08-19",
     title: "HARC — Aug 19, 2026",
     recap: "HARC held its second work session on a proposed new county-town municipal building at 335 West Colorado. The applicant presented revisions responding to earlier feedback, including additional third-floor setbacks, simplified massing along Aspen Street, and reduced glazing. Commissioners offered eight areas for further refinement: better differentiation between the new building and the adjacent Miramonte building, increased third-floor setbacks from Colorado Avenue and Aspen Street, material changes on the west elevation, corner redesign at Aspen and Colorado, improved alley-facing windows, relief near the historic shed, more street-level perspectives, and a clearer main entry. The question of where to relocate a second historic shed — the applicant proposes a nearby county pocket park — remains unresolved; several commissioners and public commenters said it belongs on an alley.\n\nHARC then held preliminary public hearings on the Shandoka Lot redevelopment (860 Black Bear Road), a four-building mixed-use project combining affordable housing, underground parking, transit infrastructure, and neighborhood commercial uses on town-owned land. After extensive public comment — nearly universally critical of mass and scale — commissioners voted to continue both applications to October 21, 2026, with conditions requiring substantial reductions: all corners capped at two stories, elimination of the fifth floor of Building One, Building Two reduced to two stories and broken into two or three separate structures, east and west setbacks increased by at least 20 feet on each end, no unbroken three-story wall planes, revised rooftop treatment replacing the large green space with landscape islands, and completion of a hydrostatic study before the next hearing. The motion on Buildings One and Two passed 4-1; Buildings Three and Four passed 5-0, with an added condition to increase the setback on Building Three's west side for pedestrian access.\n\nFive additional applications — the Carhenge redevelopment (Buildings A–E, three separate items) and two items at 238 North Pine — were continued without discussion, Carhenge to September 30 and North Pine to November 18. Three further individual-property items were continued to the September 16 regular meeting.",
     votes: [{"item":"335 W Colorado work session (no formal vote)","outcome":"Tabled","tally":""}, {"item":"Shandoka Lot Bldgs 1&2 — continue to Oct 21","outcome":"Continued","tally":"4-1"}, {"item":"Shandoka Lot Bldgs 3&4 — continue to Oct 21","outcome":"Continued","tally":"5-0"}, {"item":"Carhenge Bldgs A-E (3 items) — continue to Sep 30","outcome":"Continued","tally":""}, {"item":"238 North Pine (2 items) — continue to Nov 18","outcome":"Continued","tally":""}],
     videoUrl: "https://www.youtube.com/watch?v=5Nuo30i3vGk"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2026-08-13",
+    title: "SMART Board of Directors — Aug 13, 2026",
+    recap: "The SMART Board held its August 13, 2026 regular meeting with directors from Telluride, Mountain Village, and San Miguel County. The board unanimously approved four resolutions: adopting the agenda and July 23 minutes; restructuring the Gondola Advisory Committee based on a recommendation from the Gondola Leadership Committee; reassigning general counsel Paul Taddune's professional services contract to the law firm JF AM, PLLC; and amending the FY26 Budget and Capital Spending Plan to reflect updated funding needs for gondola and bus projects.\n\nThe board also provided direction for FY27 budget development, instructing staff to assume flat sales and lodging tax revenues relative to FY26, a modest property tax increase within the statutory cap, reduced rental income, and higher grant revenue from anticipated SB230 funding. Executive Director Averill updated the board on gondola project activities — including structural analysis, Buy America compliance, FTA coordination, and vendor procurement — while Operations Director Distefano discussed potential off-season schedule modifications and facilities planning. The meeting concluded with an executive session on personnel matters.",
+    votes: [{"item":"Resolution 2026-15 — Gondola Advisory Committee restructuring","outcome":"Passed","tally":""}, {"item":"Resolution 2026-16 — Assignment of Professional Services Contract to JF AM, PLLC","outcome":"Passed","tally":""}, {"item":"Resolution 2026-17 — Amendment to the FY26 Budget and Capital Spending Plan","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-Meeting-Packet_September-10th-2026.pdf#minutes-2026-08-13",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-Meeting-Packet_September-10th-2026.pdf"
   },
   {
     sourceKey: "telluride",
@@ -1576,19 +1586,19 @@ const MEETING_RECAPS = [
     sourceKey: "mv",
     sourceLabel: "Mountain Village",
     date: "2026-08-06",
-    title: "Mountain Village Town Council — Jul 16, 2025",
-    recap: "Council approved a rezone and density transfer at 306 Adams Ranch Road (Lot 640A), allowing Telluride Ski & Golf to add 15 deed-restricted employee apartments to an existing 30-unit complex. The vote was 4-3, with the dissenting members preferring to continue the application until a formal use-and-maintenance agreement for the adjacent open-space lawn was secured as a condition. The majority chose to approve without that condition, expressing trust that a park agreement would follow.\n\nCouncil also approved a variance allowing the existing 1,716-square-foot accessory dwelling unit at 500 Benchmark Drive to exceed the CDC's 1,500-square-foot ADU limit, resolving a pre-purchase discrepancy.\n\nA lighting-code amendment (CDC Section 17.5.12) passed on second reading, with a last-minute addition exempting wall-mounted sconces and soffit fixtures on existing structures from mandatory replacement — provided bulbs meet a 2,700 Kelvin-or-below color temperature. Staff was directed to develop an incentive program proposal for the 2027 budget.\n\nCouncil also approved Q2 2026 financials, appointed three members to the VCA Residents Committee for two-year terms, adopted a resolution correcting application types in the Prop 123 expedited-review policy, and extended the Stage 2 fire restrictions.",
-    votes: [{"item":"Rezone & density transfer — 306 Adams Ranch Rd","outcome":"Passed","tally":"4-3"}, {"item":"ADU floor-area variance — 500 Benchmark Dr","outcome":"Passed","tally":""}, {"item":"Lighting code amendment — 2nd reading","outcome":"Passed","tally":""}, {"item":"Q2 2026 financials approval","outcome":"Passed","tally":""}, {"item":"VCA Residents Committee — 3 appointments","outcome":"Passed","tally":""}, {"item":"Prop 123 resolution correction","outcome":"Passed","tally":""}, {"item":"Extend Stage 2 fire restrictions","outcome":"Passed","tally":""}],
-    videoUrl: "https://media.avcaptureall.cloud/meeting/400b4a0e-0d7e-40d9-b64d-71fca2f808aa"
+    title: "Design Review Board — Aug 6, 2026",
+    recap: "The board approved an initial architecture and site review for a new four-unit multi-family condominium building at Lot 726-R1 on Pennington Place. The J-shaped, three-level structure will complement the existing six-unit Pennington Lodge, stepping down the hillside at well under the 48-foot height limit. A specific approval was granted for a secondary curb cut off Pennington Place, supported by both the public works director and fire marshal. A required fire-truck turnaround condition was dropped after staff confirmed the driveway falls under the 150-foot trigger length.\n\nThe board approved a final architecture review for Belvedere 3, a 19-condominium and two employee-unit multi-family building at Lot 27A on Lost Creek Lane. The vote was not unanimous; one member dissented, citing concerns about the scope of encroachments into the general easements — including a pool and spa — and unresolved lighting plan compliance. Conditions added include: stone cladding raised to 35% (with staff and chair sign-off on revised elevations), full ADA parking compliance, a lighting plan with foot-candle study reviewed by staff and one board member, and a blanket requirement that the applicant secure all necessary easements before construction.\n\nThe board voted to recommend denial to Town Council of a conditional use permit that would have allowed Telluride Ski & Golf to lease the vacant former Wells Fargo ground-floor space in the Palmyra Building as temporary office space for up to three years. Members broadly agreed the use conflicts with long-standing goals for ground-floor retail vitality on a primary pedestrian route in the village core.",
+    votes: [{"item":"Initial arch/site review — 4 units, Pennington Place","outcome":"Passed","tally":""}, {"item":"Final arch review — Belvedere 3, Lost Creek Lane","outcome":"Passed","tally":""}, {"item":"CUP recommendation — office space, 620 MV Blvd 1A","outcome":"Failed","tally":""}],
+    videoUrl: "https://media.avcaptureall.cloud/meeting/8ba62c5e-4012-4c9d-881e-7f6940944abd"
   },
   {
     sourceKey: "mv",
     sourceLabel: "Mountain Village",
     date: "2026-08-06",
-    title: "Design Review Board — Aug 6, 2026",
-    recap: "The board approved an initial architecture and site review for a new four-unit multi-family condominium building at Lot 726-R1 on Pennington Place. The J-shaped, three-level structure will complement the existing six-unit Pennington Lodge, stepping down the hillside at well under the 48-foot height limit. A specific approval was granted for a secondary curb cut off Pennington Place, supported by both the public works director and fire marshal. A required fire-truck turnaround condition was dropped after staff confirmed the driveway falls under the 150-foot trigger length.\n\nThe board approved a final architecture review for Belvedere 3, a 19-condominium and two employee-unit multi-family building at Lot 27A on Lost Creek Lane. The vote was not unanimous; one member dissented, citing concerns about the scope of encroachments into the general easements — including a pool and spa — and unresolved lighting plan compliance. Conditions added include: stone cladding raised to 35% (with staff and chair sign-off on revised elevations), full ADA parking compliance, a lighting plan with foot-candle study reviewed by staff and one board member, and a blanket requirement that the applicant secure all necessary easements before construction.\n\nThe board voted to recommend denial to Town Council of a conditional use permit that would have allowed Telluride Ski & Golf to lease the vacant former Wells Fargo ground-floor space in the Palmyra Building as temporary office space for up to three years. Members broadly agreed the use conflicts with long-standing goals for ground-floor retail vitality on a primary pedestrian route in the village core.",
-    votes: [{"item":"Initial arch/site review — 4 units, Pennington Place","outcome":"Passed","tally":""}, {"item":"Final arch review — Belvedere 3, Lost Creek Lane","outcome":"Passed","tally":""}, {"item":"CUP recommendation — office space, 620 MV Blvd 1A","outcome":"Failed","tally":""}],
-    videoUrl: "https://media.avcaptureall.cloud/meeting/8ba62c5e-4012-4c9d-881e-7f6940944abd"
+    title: "Mountain Village Town Council — Jul 16, 2025",
+    recap: "Council approved a rezone and density transfer at 306 Adams Ranch Road (Lot 640A), allowing Telluride Ski & Golf to add 15 deed-restricted employee apartments to an existing 30-unit complex. The vote was 4-3, with the dissenting members preferring to continue the application until a formal use-and-maintenance agreement for the adjacent open-space lawn was secured as a condition. The majority chose to approve without that condition, expressing trust that a park agreement would follow.\n\nCouncil also approved a variance allowing the existing 1,716-square-foot accessory dwelling unit at 500 Benchmark Drive to exceed the CDC's 1,500-square-foot ADU limit, resolving a pre-purchase discrepancy.\n\nA lighting-code amendment (CDC Section 17.5.12) passed on second reading, with a last-minute addition exempting wall-mounted sconces and soffit fixtures on existing structures from mandatory replacement — provided bulbs meet a 2,700 Kelvin-or-below color temperature. Staff was directed to develop an incentive program proposal for the 2027 budget.\n\nCouncil also approved Q2 2026 financials, appointed three members to the VCA Residents Committee for two-year terms, adopted a resolution correcting application types in the Prop 123 expedited-review policy, and extended the Stage 2 fire restrictions.",
+    votes: [{"item":"Rezone & density transfer — 306 Adams Ranch Rd","outcome":"Passed","tally":"4-3"}, {"item":"ADU floor-area variance — 500 Benchmark Dr","outcome":"Passed","tally":""}, {"item":"Lighting code amendment — 2nd reading","outcome":"Passed","tally":""}, {"item":"Q2 2026 financials approval","outcome":"Passed","tally":""}, {"item":"VCA Residents Committee — 3 appointments","outcome":"Passed","tally":""}, {"item":"Prop 123 resolution correction","outcome":"Passed","tally":""}, {"item":"Extend Stage 2 fire restrictions","outcome":"Passed","tally":""}],
+    videoUrl: "https://media.avcaptureall.cloud/meeting/400b4a0e-0d7e-40d9-b64d-71fca2f808aa"
   },
   {
     sourceKey: "telluride",
@@ -1609,13 +1619,14 @@ const MEETING_RECAPS = [
     videoUrl: "https://www.youtube.com/watch?v=INMRfOP1TEs"
   },
   {
-    sourceKey: "telluride",
-    sourceLabel: "Town of Telluride",
-    date: "2026-07-21",
-    title: "Town Council — Jul 21, 2026",
-    recap: "Council swore in two new members, Maria Stark and Charles Dalton, bringing the body to full seven-member strength.\n\nA work session covered an East Colorado Avenue speed study by KLJ Engineering, focusing on the Gold Run corridor between North Alder Street and Liberty Bell Lane. Staff found that segment two has the worst speeding problem, with 20–30% of vehicles exceeding the 15 mph limit. No votes were taken; council discussion centered on raised crosswalks, edge-line striping, a possible speed limit reduction, and a mini-roundabout near the Galloping Goose turnaround. Recommendations will feed into 2027 budget discussions.\n\nOn the Colorado Wildfire Resiliency Code, council approved second reading of the land use code amendments 6-1 (Charles Dalton dissenting), with an amendment stripping mitigation requirements for trees removed pursuant to the CWRC. A third reading is set for August 11.\n\nCouncil approved a temporary-structure permit for three patio tents at 221 South Oak Street (restaurant use), 180 days per year for three consecutive years, unanimously. A contested appeal involving a North Aspen Street property was continued to September 1 at 10 a.m., unanimously.\n\nLily Acres was appointed to a regular seat on the Ecology Commission for a two-year term, unanimously. Council reassigned board and commission liaisons to incorporate the two new members, approved unanimously.\n\nSitting as the Telluride Housing Authority, council reappointed Ellen Leven as chair, Dan Enright as co-chair, and Kristen Permacoff as secretary (unanimously), and adopted a policy statement on primary residency for dependents of multiple custodial parents — setting a 20% custody threshold and covering children through age 18 — on a 4-3 vote. The wait-list suspension was extended through September 30, unanimously.\n\nSitting as Block 23 Housing Corporation, officers were retained and authorized signers updated, unanimously.",
-    votes: [{"item":"CWRC land use code amendments — 2nd reading","outcome":"Passed","tally":"6-1"}, {"item":"Temp structure — 221 South Oak patio tents","outcome":"Passed","tally":"7-0"}, {"item":"Stender Residence appeal — continued to Sep 1","outcome":"Continued","tally":"7-0"}, {"item":"Appoint Lily Acres — Ecology Commission","outcome":"Passed","tally":"7-0"}, {"item":"Council board/commission appointments","outcome":"Passed","tally":"7-0"}, {"item":"THA officer certifications","outcome":"Passed","tally":"7-0"}, {"item":"THA custody/primary residency policy statement","outcome":"Passed","tally":"4-3"}],
-    videoUrl: "https://www.youtube.com/watch?v=UTOwo9BuR88"
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2026-07-23",
+    title: "SMART Board of Directors — Jul 23, 2026",
+    recap: "At its July 23 regular meeting, the SMART Board took action on two gondola-related procurement items, selecting SCJ Alliance to conduct a structural analysis of the gondola system and the Gondola Shop to perform a separate structural analysis of the gondola cabins. Both awards followed a competitive RFP process. The board also approved routine housekeeping items including the upcoming August 13 agenda and the current meeting's minutes.\n\nBeyond the votes, the board discussed a proposed restructuring of the Gondola Advisory (Subcommittee) composition, expressing general support for changes that would remove Telluride Ski and Golf and San Miguel County as voting members, and directing staff to communicate the rationale to Telluride Ski and Golf. Staff provided a gondola project update covering Buy America requirements, FTA coordination, and a planned FY27 cost-sharing IGA supplement. Executive Director Averill introduced a forthcoming FY26 budget amendment driven by changes in revenue and expenses—including lower-than-anticipated Lodging Tax receipts—to be formally considered at the August meeting. The board also received a second-quarter 2026 performance report before entering executive session on personnel matters.",
+    votes: [{"item":"Resolution 2026-12 — Selection of SCJ Alliance for Gondola Structural Analysis","outcome":"Passed","tally":""}, {"item":"Resolution 2026-13 — Selection of the Gondola Shop for Gondola Cabin Structural Analysis","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-meeting-packet_August-13th-2026.pdf#minutes-2026-07-23",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-meeting-packet_August-13th-2026.pdf"
   },
   {
     sourceKey: "mv",
@@ -1627,13 +1638,13 @@ const MEETING_RECAPS = [
     videoUrl: "https://media.avcaptureall.cloud/meeting/cd3f90c7-4db2-46f9-a23e-94cd069ced43"
   },
   {
-    sourceKey: "county",
-    sourceLabel: "San Miguel County",
-    date: "2026-07-16",
-    title: "Strategic Stakeholders Roundtable — Jul 16, 2026",
-    recap: "San Miguel County's Strategic Stakeholders Roundtable held its sixth session focused on proposed land use code changes tied to workforce housing. The group reached informal consensus on two density questions: by-right density in both the low-density and medium-density zone districts will remain at one dwelling unit per 35 acres, with any additional density available only through affordable-housing bonuses.\n\nA side setback reduction from 12.5 to 10 feet in medium and high-density zones was approved by a show of hands with one dissent.\n\nDiscussion on high-density zones and the structure of density-bonus tiers was left unresolved; staff will develop bonus scenarios for a follow-up session scheduled for the morning of Monday, July 28. A joint planning commission and Board of County Commissioners work session is set for July 29.",
-    videoUrl: "https://www.youtube.com/watch?v=T8SXtsAOB70",
-    votes: []
+    sourceKey: "telluride",
+    sourceLabel: "Town of Telluride",
+    date: "2026-07-21",
+    title: "Town Council — Jul 21, 2026",
+    recap: "Council swore in two new members, Maria Stark and Charles Dalton, bringing the body to full seven-member strength.\n\nA work session covered an East Colorado Avenue speed study by KLJ Engineering, focusing on the Gold Run corridor between North Alder Street and Liberty Bell Lane. Staff found that segment two has the worst speeding problem, with 20–30% of vehicles exceeding the 15 mph limit. No votes were taken; council discussion centered on raised crosswalks, edge-line striping, a possible speed limit reduction, and a mini-roundabout near the Galloping Goose turnaround. Recommendations will feed into 2027 budget discussions.\n\nOn the Colorado Wildfire Resiliency Code, council approved second reading of the land use code amendments 6-1 (Charles Dalton dissenting), with an amendment stripping mitigation requirements for trees removed pursuant to the CWRC. A third reading is set for August 11.\n\nCouncil approved a temporary-structure permit for three patio tents at 221 South Oak Street (restaurant use), 180 days per year for three consecutive years, unanimously. A contested appeal involving a North Aspen Street property was continued to September 1 at 10 a.m., unanimously.\n\nLily Acres was appointed to a regular seat on the Ecology Commission for a two-year term, unanimously. Council reassigned board and commission liaisons to incorporate the two new members, approved unanimously.\n\nSitting as the Telluride Housing Authority, council reappointed Ellen Leven as chair, Dan Enright as co-chair, and Kristen Permacoff as secretary (unanimously), and adopted a policy statement on primary residency for dependents of multiple custodial parents — setting a 20% custody threshold and covering children through age 18 — on a 4-3 vote. The wait-list suspension was extended through September 30, unanimously.\n\nSitting as Block 23 Housing Corporation, officers were retained and authorized signers updated, unanimously.",
+    votes: [{"item":"CWRC land use code amendments — 2nd reading","outcome":"Passed","tally":"6-1"}, {"item":"Temp structure — 221 South Oak patio tents","outcome":"Passed","tally":"7-0"}, {"item":"Stender Residence appeal — continued to Sep 1","outcome":"Continued","tally":"7-0"}, {"item":"Appoint Lily Acres — Ecology Commission","outcome":"Passed","tally":"7-0"}, {"item":"Council board/commission appointments","outcome":"Passed","tally":"7-0"}, {"item":"THA officer certifications","outcome":"Passed","tally":"7-0"}, {"item":"THA custody/primary residency policy statement","outcome":"Passed","tally":"4-3"}],
+    videoUrl: "https://www.youtube.com/watch?v=UTOwo9BuR88"
   },
   {
     sourceKey: "mv",
@@ -1643,6 +1654,15 @@ const MEETING_RECAPS = [
     recap: "Council approved the second reading of an ordinance rezoning and transferring density at Lot 640A, 306 Adams Ranch Road, allowing Telluride Ski & Golf to add 15 employee apartment units to the existing Mountain View workforce housing complex. The vote was 4-2. Conditions require completion of the Class 3 design review by the DRB and approval of a minor subdivision plat. Several councilmembers had pushed for an additional condition tying approval to a formal use-and-maintenance agreement for the adjacent open-space field; that condition was not included in the motion that passed.\n\nCouncil also approved on second reading an ordinance amending the Community Development Code's lighting regulations. A last-minute amendment exempts existing wall-mounted sconces and soffit/covered-roof/under-deck fixtures from mandatory replacement, provided bulbs are 2,700 Kelvin or below; staff was directed to explore an incentive program for the 2027 budget. The vote appeared unanimous.\n\nCouncil approved a resolution correcting application types in a previously adopted Proposition 123 affordable-housing expedited-review resolution, and approved a resolution extending the Stage 2 fire restrictions. Three members were appointed to the VCA Resident Advisory Committee for two-year terms. Q2 2026 financials were approved; the town is roughly $500,000 behind in sales tax year-to-date.",
     votes: [{"item":"Rezone & density transfer — 306 Adams Ranch Rd","outcome":"Passed","tally":"4-2"}, {"item":"Lighting regulations CDC amendment — 2nd reading","outcome":"Passed","tally":""}, {"item":"ADU floor-area variance — 500 Benchmark Dr","outcome":"Passed","tally":""}, {"item":"Prop 123 expedited-review resolution correction","outcome":"Passed","tally":""}, {"item":"Stage 2 fire restrictions extension","outcome":"Passed","tally":""}, {"item":"Q2 2026 financials approval","outcome":"Passed","tally":""}, {"item":"VCA Resident Advisory Committee appointments (3)","outcome":"Passed","tally":""}],
     videoUrl: "https://media.avcaptureall.cloud/meeting/912ff751-d475-434d-ac8f-dd55087c180e"
+  },
+  {
+    sourceKey: "county",
+    sourceLabel: "San Miguel County",
+    date: "2026-07-16",
+    title: "Strategic Stakeholders Roundtable — Jul 16, 2026",
+    recap: "San Miguel County's Strategic Stakeholders Roundtable held its sixth session focused on proposed land use code changes tied to workforce housing. The group reached informal consensus on two density questions: by-right density in both the low-density and medium-density zone districts will remain at one dwelling unit per 35 acres, with any additional density available only through affordable-housing bonuses.\n\nA side setback reduction from 12.5 to 10 feet in medium and high-density zones was approved by a show of hands with one dissent.\n\nDiscussion on high-density zones and the structure of density-bonus tiers was left unresolved; staff will develop bonus scenarios for a follow-up session scheduled for the morning of Monday, July 28. A joint planning commission and Board of County Commissioners work session is set for July 29.",
+    videoUrl: "https://www.youtube.com/watch?v=T8SXtsAOB70",
+    votes: []
   },
   {
     sourceKey: "telluride",
@@ -1681,6 +1701,15 @@ const MEETING_RECAPS = [
     votes: [{"item":"Tree-removal LUC amendment (recommend)","outcome":"Passed","tally":""}]
   },
   {
+    sourceKey: "mv",
+    sourceLabel: "Mountain Village",
+    date: "2026-06-17",
+    title: "Mountain Village Town Council — Jun 17, 2026",
+    recap: "The council approved two special-event liquor permits: one for the San Miguel Resource Center's Play It Forward event at the Telluride Racquet Club (June 28) and one for the Jaman Family Foundation/Telluride Reserve event (July 31). Mayor Pearson recused himself from those votes.\n\nThe council approved a license agreement with the Telluride Racquet Club for seasonal pickleball use of the town's platform paddle courts, and approved a 2026 sponsorship agreement with the Telluride Film Festival authorizing staff to negotiate a lease of the council chambers as a screening venue during Bluegrass and Film Festival season.\n\nThe council approved a resolution establishing an expedited review policy for affordable housing projects to maintain eligibility for Proposition 123 state funds — potentially unlocking up to $45,000 for the Ilium workforce housing project if adopted before July. The council also authorized the interim town manager to execute a Trout Lake water augmentation lease (~$3,000/year) to secure legal water rights for the Ilium development. Two agenda items — a lighting code amendment and a separate item — were continued to the July 16 meeting.\n\nA work session covered findings of an independent investigation into actions by the former mayor and town manager, with the investigator stating unequivocally that no ethics-code violations, corruption, embezzlement, or personal gain were found, and that the full council had no knowledge of or involvement in the events. A second work session segment reviewed draft recommendations for strengthening the ethics code and procurement procedures; no votes were taken, with council directing staff to return revised language emphasizing clear, fact-based conflict standards over subjective \"appearance\" tests.",
+    votes: [{"item":"Special event permit — San Miguel Resource Center","outcome":"Passed","tally":""}, {"item":"Special event permit — Jaman Family Foundation/Telluride Reserve","outcome":"Passed","tally":""}, {"item":"License agreement — Telluride Racquet Club pickleball","outcome":"Passed","tally":""}, {"item":"Sponsorship/lease agreement — Telluride Film Festival","outcome":"Passed","tally":""}, {"item":"Resolution — Prop 123 expedited affordable housing review","outcome":"Passed","tally":""}, {"item":"Trout Lake water augmentation lease — Ilium project","outcome":"Passed","tally":""}, {"item":"Lighting code amendment — continued to Jul 16","outcome":"Continued","tally":""}],
+    videoUrl: "https://media.avcaptureall.cloud/meeting/978b9375-97e0-4500-82ac-b73e839a14a6"
+  },
+  {
     sourceKey: "telluride",
     sourceLabel: "Town of Telluride",
     date: "2026-06-17",
@@ -1690,13 +1719,14 @@ const MEETING_RECAPS = [
     votes: [{"item":"208 S Fir commercial — preliminary approval","outcome":"Passed","tally":"4-1"}]
   },
   {
-    sourceKey: "mv",
-    sourceLabel: "Mountain Village",
-    date: "2026-06-17",
-    title: "Mountain Village Town Council — Jun 17, 2026",
-    recap: "The council approved two special-event liquor permits: one for the San Miguel Resource Center's Play It Forward event at the Telluride Racquet Club (June 28) and one for the Jaman Family Foundation/Telluride Reserve event (July 31). Mayor Pearson recused himself from those votes.\n\nThe council approved a license agreement with the Telluride Racquet Club for seasonal pickleball use of the town's platform paddle courts, and approved a 2026 sponsorship agreement with the Telluride Film Festival authorizing staff to negotiate a lease of the council chambers as a screening venue during Bluegrass and Film Festival season.\n\nThe council approved a resolution establishing an expedited review policy for affordable housing projects to maintain eligibility for Proposition 123 state funds — potentially unlocking up to $45,000 for the Ilium workforce housing project if adopted before July. The council also authorized the interim town manager to execute a Trout Lake water augmentation lease (~$3,000/year) to secure legal water rights for the Ilium development. Two agenda items — a lighting code amendment and a separate item — were continued to the July 16 meeting.\n\nA work session covered findings of an independent investigation into actions by the former mayor and town manager, with the investigator stating unequivocally that no ethics-code violations, corruption, embezzlement, or personal gain were found, and that the full council had no knowledge of or involvement in the events. A second work session segment reviewed draft recommendations for strengthening the ethics code and procurement procedures; no votes were taken, with council directing staff to return revised language emphasizing clear, fact-based conflict standards over subjective \"appearance\" tests.",
-    votes: [{"item":"Special event permit — San Miguel Resource Center","outcome":"Passed","tally":""}, {"item":"Special event permit — Jaman Family Foundation/Telluride Reserve","outcome":"Passed","tally":""}, {"item":"License agreement — Telluride Racquet Club pickleball","outcome":"Passed","tally":""}, {"item":"Sponsorship/lease agreement — Telluride Film Festival","outcome":"Passed","tally":""}, {"item":"Resolution — Prop 123 expedited affordable housing review","outcome":"Passed","tally":""}, {"item":"Trout Lake water augmentation lease — Ilium project","outcome":"Passed","tally":""}, {"item":"Lighting code amendment — continued to Jul 16","outcome":"Continued","tally":""}],
-    videoUrl: "https://media.avcaptureall.cloud/meeting/978b9375-97e0-4500-82ac-b73e839a14a6"
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2026-06-11",
+    title: "SMART Board of Directors — Jun 11, 2026",
+    recap: "The SMART Board held its June 2026 regular meeting virtually, approving its agenda and prior meeting minutes and renewing a lease with the Telluride Gymnastics Academy at 137 Society Drive. Board members discussed the implications of the lease renewal for SMART's longer-term plans for the building, though no objections were raised. The board also heard an informational report from Director Ashley Story Von Spreecken on a trip to view Leitner Poma of America gondola installations in Europe, covering technology, station design, and operations.\n\nStaff provided several updates: Gondola Project Manager Amber Blake reported on Buy America requirements, website updates, and procurement for a Gondola Structural Assessment. Transit Director Kari Distefano presented the deferred First Quarter 2026 Performance Report—covering ridership trends, cost per rider, and other metrics—as well as the June Operations Report, which addressed NTD reporting, bad-weather policy development, and SMART's carbon emissions footprint. Executive Director David Averill updated the board on the Lawson Intercept Lot enforcement strategy, grant activities, and a potential CDOT site visit later in 2026.",
+    votes: [{"item":"Resolution 2026-10 — Renewal of Lease with Telluride Gymnastics Academy","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-meeting-packet_July-23rd-2026.pdf#minutes-2026-06-11",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-meeting-packet_July-23rd-2026.pdf"
   },
   {
     sourceKey: "telluride",
@@ -1780,6 +1810,16 @@ const MEETING_RECAPS = [
     votes: [{"item":"Illium climbing-gym PUD amendment (rec.)","outcome":"Passed","tally":""}, {"item":"Footprint / ADU-size code amendment (rec.)","outcome":"Passed","tally":""}, {"item":"Accelerated affordable-housing review (rec.)","outcome":"Passed","tally":""}]
   },
   {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2026-05-14",
+    title: "SMART Board of Directors — May 14, 2026",
+    recap: "At the May 14, 2026 regular meeting, the SMART Board handled two formal votes. First, the Board approved the meeting agenda and the minutes from the March 12, 2026 meeting. Second, the Board appointed Director Marya Stark to the SMART Investment Committee, with Executive Director Averill providing background on why her appointment was needed.\n\nThe Board received a gondola project update covering Build/Buy America strategy, structural analysis, Capital Investments Grant (CIG) Program preparation, and an economic benefits white paper in progress. Due to time constraints, the 1st Quarter 2026 Performance Report and the May 2026 Operations Report were both deferred to the June meeting. Averill also reported on current finances, year-to-date revenues and expenses, fund balances, grant activity, and the status of an Investment Services RFP. The Board then convened a brief executive session regarding the Masson vs. San Miguel County BOCC litigation, after which no action was taken.",
+    votes: [{"item":"Resolution 2026-8 — Appointment of Marya Stark to the SMART Investment Committee","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-Meeting-Packet_June-11th-2026.pdf#minutes-2026-05-14",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-Meeting-Packet_June-11th-2026.pdf"
+  },
+  {
     sourceKey: "county",
     sourceLabel: "San Miguel County",
     date: "2026-05-13",
@@ -1825,6 +1865,16 @@ const MEETING_RECAPS = [
     videoUrl: "https://media.avcaptureall.cloud/meeting/3a0cfc44-92da-4f39-9281-58a16e13f84c"
   },
   {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2026-03-12",
+    title: "SMART Board of Directors — Mar 12, 2026",
+    recap: "At the March 12, 2026 regular meeting, the SMART Board addressed several operational and governance matters. The board approved the January 8, 2026 meeting minutes (with Marya Stark recused), adopted an intergovernmental agreement with the Town of Mountain Village to pass through 2A lift tax revenue to SMART, and elected a new Vice-Chair to fill a board vacancy. The board also discussed enforcement at the Lawson Hill Intercept Lot, agreeing on a staged approach beginning with tickets from the San Miguel County Sheriff's Office and escalating to towing; staff was directed to develop a formal plan and timeline.\n\nOn longer-range planning, the board discussed scoping a Regional Transportation Plan but decided to defer a broad regional visioning effort by one to two years so it can align with the next 5-Year Strategic Operating Plan cycle. In the near term, staff was directed to explore a collaborative, facility-specific planning effort focused on sites such as the Spur. The board also received the Q4 2025/Annual Performance Report covering ridership and cost-per-passenger metrics, heard the March 2026 Operations Report, and received an Executive Director update on grants and retreat follow-up items. The meeting concluded with a closed executive session regarding Masson vs. San Miguel County BOCC, with no action taken.",
+    votes: [{"item":"Resolution 2026-5 — Intergovernmental Agreement with Town of Mountain Village for 2A Tax Revenue Pass-Through","outcome":"Passed","tally":"6-0"}, {"item":"Resolution 2026-6 — SMART Board of Directors Vice-Chair Election","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Meeting%20Packet%20May%2014th%202026.pdf#minutes-2026-03-12",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Meeting%20Packet%20May%2014th%202026.pdf"
+  },
+  {
     sourceKey: "mv",
     sourceLabel: "Mountain Village",
     date: "2026-03-05",
@@ -1859,6 +1909,476 @@ const MEETING_RECAPS = [
     recap: "The council's main business was filling two vacancies left by Mayor Prohaska's resignation. Town attorney Hayley Carmer walked through the Home Rule Charter provisions requiring the seats be filled by council majority vote within 30 days. Scott Pearson was unanimously appointed mayor and Tucker Maggot was unanimously appointed mayor pro tem; both took their oaths of office. Applications for the vacant council seat are open through February 11.\n\nStaff presented an economic recovery update. December sales tax came in roughly 35.6% below the prior year, with in-town retailers down about 46%. Gondola ridership for January is down 27% year-over-year, though the gap has narrowed week by week since the resort reopened. A $100,000 business assistance grant program is being drafted in coordination with TMVOA, which has not yet committed matching funds.\n\nOn the ongoing investigation into recent town management events, the new mayor reported that the town's attorneys are compiling a list of outside law firms to hire. A firm could be selected by end of the following week, with a hoped-for four-week investigation timeline. The council noted the investigation cannot compel outside parties to cooperate. The meeting closed with a move into executive session on Colorado Open Records Act matters.",
     votes: [{"item":"Appoint Scott Pearson as mayor","outcome":"Passed","tally":""}, {"item":"Appoint Tucker Maggot as mayor pro tem","outcome":"Passed","tally":""}],
     videoUrl: "https://media.avcaptureall.cloud/meeting/66650890-1548-4443-97e0-9ec4f350fd9d"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2026-01-08",
+    title: "SMART Board of Directors — Jan 8, 2026",
+    recap: "At its January 8, 2026 regular meeting, the SMART Board of Directors handled several organizational and policy matters. After receiving public comment from six members of the public and holding a closed executive session regarding the Masson vs. San Miguel County BOCC litigation (with no action taken), the Board approved the meeting agenda, amended December 2025 minutes, and adopted a new SMART Investment Policy (Resolution 2026-2) with five votes in favor and one abstention from Rico representative Gregg Anderson.\n\nThe Board also elected Gregg Anderson as SMART Board Secretary and appointed Anderson and Ashley Story Von Sprecken to the newly established Investment Committee. Directors discussed how SMART might respond to ongoing regional economic uncertainty tied to a potential extended ski area closure. Staff presented the January 2026 Operations Report, highlighting parking at the Lawson Hill Intercept lot and ridership trends. Executive Director David Averill announced the hiring of TJ Burr as a new SMART staff member.",
+    votes: [{"item":"Resolution 2026-2 — Adoption of the SMART Investment Policy","outcome":"Passed","tally":"5-0"}, {"item":"Resolution 2026-3 — Board Secretary Election and Investment Committee Appointments","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_March%2012th%202026.pdf#minutes-2026-01-08",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_March%2012th%202026.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2025-12-09",
+    title: "SMART Board of Directors — Dec 9, 2025",
+    recap: "At its December 9, 2025 regular meeting, the SMART Board of Directors took action on several key year-end items. The Board certified the FY26 mill levy at an effective rate of 1.989 mills, reflecting a temporary credit of 0.097 mills required by the state-mandated cap on property tax revenue growth. The Board also unanimously adopted the FY26 budget and capital plan, which had been developed over the preceding four months and includes pending capital projects. Additionally, the Board approved the 2026 regular meeting schedule, adjusting the December 2026 meeting to a 10:00 a.m. start time.\n\nThe Board discussed but did not vote on the proposed SMART Investment Policy, directing staff to return with a revised version in January 2026 that clarifies the Investment Committee's directive role over the Executive Director's investment decisions, transitions committee membership to at-large Board appointments rather than officer positions, and removes a voting role from the portfolio manager. Staff also reported on operations at the Society Drive properties, ridership trends, and parking at the Lawson Hill Intercept lot. The meeting concluded with a closed executive session for the Executive Director's performance review, after which no action was taken.",
+    votes: [{"item":"Resolution 2025-22 — FY26 Mill Levy Certification","outcome":"Passed","tally":""}, {"item":"Resolution 2025-23 — FY26 Budget and Capital Plan Adoption and Appropriations Certification","outcome":"Passed","tally":""}, {"item":"Resolution 2025-24 — 2026 Regular Board Meeting Date Schedule","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_January%208th%202026.pdf#minutes-2025-12-09",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_January%208th%202026.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2025-11-13",
+    title: "SMART Board of Directors — Nov 13, 2025",
+    recap: "At its November 13, 2025 regular meeting, the SMART Board of Directors approved two resolutions. The board unanimously adopted Resolution 2025-19 to approve the meeting agenda and the September 11, 2025 minutes. It then unanimously adopted Resolution 2025-20, authorizing the FY25 Gondola Project Development Intergovernmental Agreement. Staff presented details on the IGA budget and how it connects to the 2026 workplan; board members emphasized the need for transparency and increasing detail as the gondola project budget grows over time.\n\nThe board also held a substantive discussion on the FY26 budget and capital plan. The key remaining question was the mill levy rate, and the board opted for the scenario incorporating the state-mandated 5.25% revenue growth cap, directing staff to bring a final recommended budget to the December meeting for adoption. Staff also presented the 3rd Quarter 2025 Performance Report covering ridership trends and costs, and the Executive Director provided updates on hiring for a Business and Communications Manager, PlacerAI data tools, and pending grant applications. Commissioner Gleason raised the topic of workforce housing impacts from major construction projects on west end communities and SMART's potential role in addressing them.",
+    votes: [{"item":"Resolution 2025-20 — FY25 Gondola Project Development IGA","outcome":"Passed","tally":"5-0"}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Meeting%20Packet_December%209th%202025.pdf#minutes-2025-11-13",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Meeting%20Packet_December%209th%202025.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2025-09-11",
+    title: "SMART Board of Directors — Sep 11, 2025",
+    recap: "At its September 11, 2025 regular meeting, the SMART Board of Directors took action on four resolutions. The board unanimously adopted the FY25 Budget Amendment (Resolution 2025-16), formalizing adjustments to the current fiscal year budget after discussions held over the August and September meetings. The board also unanimously accepted the FY24 Audit Report (Resolution 2025-17), which included a review of the Single Audit process, and updated its Public Comment Policy (Resolution 2025-18) to give the Board Chair discretion to extend individual speaking time when the situation calls for it.\n\nThe board also held a preliminary discussion on the FY26 budget, reviewing forecasted revenues, anticipated costs, and proposed special projects. A key topic was the mill levy rate for FY26; the board concluded it needs additional information from the Department of Revenue and wants to see what other special districts are doing before making a decision. Staff also presented the September 2025 Operations Report, which prompted brief discussion before the meeting adjourned.",
+    votes: [{"item":"Resolution 2025-16 — FY25 Budget Amendment Adoption","outcome":"Passed","tally":"5-0"}, {"item":"Resolution 2025-17 — FY24 Audit Report and Acceptance","outcome":"Passed","tally":"5-0"}, {"item":"Resolution 2025-18 — Public Comment Policy modification","outcome":"Passed","tally":"5-0"}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/Packet2025.11.13_r.pdf#minutes-2025-09-11",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/Packet2025.11.13_r.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2025-08-14",
+    title: "SMART Board of Directors — Aug 14, 2025",
+    recap: "At its August 14, 2025 regular meeting, the SMART Board approved its agenda and prior meeting minutes, then turned to several financial and operational discussions. Staff introduced a draft Investment Policy modeled on the Roaring Fork Transportation Authority's policy, covering topics such as segregating gondola fund investments, forming a SMART Investment Committee, and permissible investment types; a revised draft will return at a future meeting. The Board also reviewed a proposed FY25 Budget Amendment reflecting unanticipated savings, interest income, and expenditures including bus purchases and gondola project development costs, with formal adoption expected in September.\n\nFor the FY26 preliminary budget, the Board directed staff to assume declining sales tax revenue (−3%), declining lodging tax revenue (−2%), and a 5.25% cap on property tax growth, while also anticipating lower rental income and increased grant revenue from anticipated SB230 funding. Staff presented the 2nd Quarter 2025 Performance Report and the July 2025 Operations Report without significant concerns. The meeting closed with an executive session regarding the legal matter of Masson vs. San Miguel County BOCC.",
+    votes: [],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_September%2011th%202025.pdf#minutes-2025-08-14",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_September%2011th%202025.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2025-07-10",
+    title: "SMART Board of Directors — Jul 10, 2025",
+    recap: "At its July 10, 2025 regular meeting, the SMART Board of Directors unanimously approved the meeting agenda and June 12 meeting minutes. Board member J. Meehan Fee then presented a debrief from a technical gondola tour she participated in across several European systems, covering ropeway technology types, drive systems, cabin design options, station layouts, and a factory visit. Board discussion emphasized that a cabin storage and maintenance facility is a top priority for any new gondola system SMART pursues.\n\nThe Board also received the July 2025 operations report from staff, which flagged an unusual decline in ridership on the Norwood route that falls outside typical seasonal patterns — staff will investigate further. Executive Director David Averill provided updates on CDOT grant opportunities, the ongoing FY2024 financial audit, and the status of pending bus orders. No public comment or roundtable updates were offered, and the meeting adjourned at 4:44 p.m.",
+    votes: [],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_August%2014th%202025.pdf#minutes-2025-07-10",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_August%2014th%202025.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2025-06-12",
+    title: "SMART Board of Directors — Jun 12, 2025",
+    recap: "At its June 12, 2025 virtual regular meeting, the SMART Board of Directors approved the agenda and prior meeting minutes, then turned to a wide-ranging finance discussion. Executive Director Averill reported on revenues received from the voter-approved 3A measure and noted that the board may want to revisit investment strategies beyond the current high-interest money market account; Mogenson and Averill agreed to bring alternative low-risk investment options back to a future meeting. The board also discussed FY26 property tax projections, noting that significantly higher assessed valuations are driving larger tax bills for district residents, and expressed broad support for exploring some degree of property tax relief in the FY26 budget, while acknowledging new state legislation that caps future property tax revenue growth at 5% beginning in FY26.\n\nOperations Manager Distefano presented the June 2025 operations report, covering the rollout of Token Transit for fare payment, a tabletop mass emergency evacuation exercise hosted by San Miguel County, and off-season ridership trends. Averill also updated the board on ongoing legal proceedings related to the 3A election complaint and current CDOT grant activities. No public comment or roundtable updates were offered, and the meeting adjourned at 4:25 p.m.",
+    votes: [],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/Packet2025.07.10_r.pdf#minutes-2025-06-12",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/Packet2025.07.10_r.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2025-05-08",
+    title: "SMART Board of Directors — May 8, 2025",
+    recap: "At its May 8, 2025 regular meeting, the SMART Board unanimously approved the agenda, consent items, and April 10 meeting minutes, with a clarifying amendment specifying that any new percentage fare discount must be evaluated in total rather than stacked on top of existing discounts. The Board also unanimously passed Resolution 2025-11 in support of the Town of Mountain Village's lift tax question, which is headed to the June 2025 municipal ballot. Several directors voiced disappointment that a SMART agreement with TSG had not come to fruition, making the lift tax question all the more significant.\n\nThe Board received the Q1 2025 Performance Report and the May 2025 Operations Report without discussion. The Executive Director's Report focused primarily on the potential hire of a deputy gondola project manager; staff shared a draft job description and collected board input, with further discussions planned for upcoming meetings. No public comments or roundtable updates were offered, and the meeting adjourned at 4:14 p.m.",
+    votes: [{"item":"Resolution 2025-11 — Support for Town of Mountain Village lift tax ballot question","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_June%2012th%202025.pdf#minutes-2025-05-08",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_June%2012th%202025.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2025-04-10",
+    title: "SMART Board of Directors — Apr 10, 2025",
+    recap: "At the April 10, 2025 regular meeting, the SMART Board of Directors — with representatives from the Town of Telluride and Town of Mountain Village — took up several transit operations matters. The main discussion centered on new pass products to be offered through the Token Transit app. After some debate about annual and biannual options, the Board settled on discounted monthly passes as the preferred offering, approving a 20% discount off the standard fare. The Board also agreed to provide a deeper 25% discount for seniors and students.\n\nBoard members received updates on March 2025 ridership and operations, and Executive Director Averill briefed the Board on preliminary formula funding from the Clean Transit Enterprise, a conversation with Representative Hurd's office, and vehicle replacement planning. The Board held two executive sessions — one on the Executive Director's work plan and one for legal consultation regarding the Masson vs. San Miguel County BOCC lawsuit — taking no action from either session before adjourning at 5:10 p.m.",
+    votes: [{"item":"SMART Pass — 20% discount on monthly passes","outcome":"Passed","tally":""}, {"item":"SMART Pass — 25% discount for seniors and students","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_May%208th%202025.pdf#minutes-2025-04-10",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_May%208th%202025.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2025-03-13",
+    title: "SMART Board of Directors — Mar 13, 2025",
+    recap: "At the March 13, 2025 regular meeting, the SMART Board of Directors first heard public comment from Rico's Town Manager about crowding on the Rico bus route, prompting a discussion about expanding the mid-sized bus fleet to meet growing ridership demand. The board then approved its agenda and the prior meeting's minutes without dissent.\n\nThe most significant action of the meeting concerned a proposed funding agreement with Telluride Ski and Golf (TSG). A last-minute modified offer from TSG arrived too late for inclusion in the meeting packet, leading the board to enter a closed Executive Session with legal counsel to review negotiating options. After returning from Executive Session and reviewing TSG's revised proposal, the board unanimously voted to deny Resolution 2025-9, rejecting ratification of the agreement. In other business, staff reported on February ridership figures, the newly launched Montrose–Telluride route, the Transit Royale rollout, and ongoing research into bus Wi-Fi. The Executive Director also provided updates on gondola station area planning efforts in the Towns and the status of current state and federal grant applications.",
+    votes: [{"item":"Resolution 2025-9 — Ratification of funding agreement with Telluride Ski and Golf","outcome":"Failed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Meeting%20Packet_April%2010th%202025.pdf#minutes-2025-03-13",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Meeting%20Packet_April%2010th%202025.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2025-03-03",
+    title: "SMART Board of Directors Special — Mar 3, 2025",
+    recap: "The March 3 special meeting was called primarily to allow the SMART Board to convene in executive session on two separate matters. The first executive session, held from 3:04 to 3:50 p.m., addressed negotiating positions and strategy related to the TSG funding agreement. The second executive session, held from 3:51 to 4:31 p.m., concerned pending litigation in the matter of Masson vs. BOCC et al. No action was taken coming out of either executive session.\n\nThe only formal vote of the meeting was the unanimous approval of the special meeting agenda (Resolution 2025-7). There were no public comments, no operational or project updates, and no round table reports offered. The meeting adjourned at 4:33 p.m.",
+    votes: [],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Meeting%20Packet_March%2013th%202025.pdf#minutes-2025-03-03",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Meeting%20Packet_March%2013th%202025.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2025-02-13",
+    title: "SMART Board of Directors — Feb 13, 2025",
+    recap: "At the February 13 regular meeting, the SMART Board took action on five resolutions. The board approved an extension of the lease for Telluride Crossfit and Gymnastics Academy at 137 Society Drive, contingent on CDOT approval, and adopted a Memorandum of Understanding with San Miguel County covering emergency services. The board also approved an amendment to the Intergovernmental Agreement for the Gondola Project Development and adopted SMART's Strategic Operating Plan, a comprehensive document developed with consultant Fehr and Peers that outlines bus and vanpool service expansion recommendations and associated capital needs. The board discussed how to publicize the final plan and noted minor edits needed to reflect current conditions.\n\nStaff also presented the 4th Quarter 2024 and full-year 2024 performance summaries, as well as the January 2025 operations report, which included updates on the Montrose route and spring off-season preparations. No significant concerns were raised on either report. The board then entered executive session to discuss negotiating positions and strategy, exiting with no action taken. All five resolutions passed unanimously.",
+    votes: [{"item":"Resolution 2025-3 — Extension of Lease for Telluride Crossfit and Gymnastics Academy","outcome":"Passed","tally":""}, {"item":"Resolution 2025-4 — Emergency Services MOU with San Miguel County","outcome":"Passed","tally":""}, {"item":"Resolution 2025-5 — Gondola Project Development IGA Amendment","outcome":"Passed","tally":""}, {"item":"Resolution 2025-6 — SMART Strategic Operating Plan Adoption","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Meeting%20Packet_March%2013th%202025.pdf#minutes-2025-02-13",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Meeting%20Packet_March%2013th%202025.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2025-01-09",
+    title: "SMART Board of Directors — Jan 9, 2025",
+    recap: "At its January 9, 2025 regular meeting, the SMART Board took up several key items. The only formal vote was the approval of the meeting agenda, consent items, and prior meeting minutes, which passed without objection. Two resolutions were deferred: Resolution 2025-2, an Emergency Services Agreement with San Miguel County, was tabled pending minor County-requested revisions and will return at the February meeting. Similarly, the Board discussed SMART's potential financial participation in the Gondola Project Development IGA and reached consensus that SMART should contribute financially, directing staff to amend the IGA accordingly for consideration at the February meeting.\n\nThe Board also received the December 2024 Operations Report without significant concerns. An Executive Session was held for the Executive Director's performance review, lasting from 4:35 p.m. to 5:31 p.m. A second agendized Executive Session on negotiations strategy was tabled by the Board. Public comment was offered by Lee Zeller regarding lodging tax implementation and a request for a special meeting on that subject. The meeting adjourned at 5:32 p.m.",
+    votes: [],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-Packet_February-13th-2025.pdf#minutes-2025-01-09",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-Packet_February-13th-2025.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2024-12-12",
+    title: "SMART Board of Directors — Dec 12, 2024",
+    recap: "At the December 12, 2024 regular meeting, the SMART Board unanimously approved five resolutions covering routine governance and financial matters. The board certified FY24 mill levies, adopted the 2025 budget and capital spending plan, set meeting dates for 2025 (with a possible July cancellation to be decided later), and elected board officers for 2025–2026: Mogenson as Chair, Fee as Vice-Chair, Brown as Treasurer, and Dillsworth as Secretary.\n\nThe board also held a discussion on fares for out-of-district routes, as all in-district services are now fare-free following the passage of Ballot Question 3A. Fares for the Norwood and Nucla/Naturita routes were left unchanged for now, and staff was directed to explore automatic fare collection options. For the new Montrose route, the board agreed on a $5.00 one-way fare ($10.00 round trip) from Montrose to Telluride and a $4.00 one-way fare ($8.00 round trip) from Ridgway to Telluride. The board also held two executive sessions covering contract negotiations and a personnel matter (Executive Director performance review).",
+    votes: [{"item":"Resolution 2024-21 — FY24 Mill Levy Certifications","outcome":"Passed","tally":"5-0"}, {"item":"Resolution 2024-22 — Approval of FY25 Budget, Capital Plan and Spending","outcome":"Passed","tally":"5-0"}, {"item":"Resolution 2024-23 — 2025 Meeting Dates","outcome":"Passed","tally":"5-0"}, {"item":"Resolution 2024-24 — 2025–2026 Board Officer Elections","outcome":"Passed","tally":"5-0"}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_January%209th%202025.pdf#minutes-2024-12-12",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_January%209th%202025.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2024-11-14",
+    title: "SMART Board of Directors — Nov 14, 2024",
+    recap: "The SMART Board of Directors held its November 2024 regular meeting, addressing several policy and budget topics. Following the passage of Ballot Question 3A, the Board briefly debriefed on next steps with no concerns raised. Staff presented a fare policy discussion, with the Board agreeing to make routes within the SMART district — including Rico and Down Valley — free, potentially effective December 1, 2024, since annual budget targets had already been met. Discussion of a proposed Montrose route prompted questions about farebox recovery at a $4.00 fare and how to handle riders from non-contributing communities like Nucla, Naturita, and Redvale; staff was directed to analyze appropriate subsidy levels for out-of-district riders.\n\nThe Board also reviewed the draft FY25 budget and capital plan. After minimal discussion, directors instructed staff to increase a proposed 0.5 FTE position to a full 1.0 FTE and to plan for hiring a financial or business manager in FY25. The 3rd Quarter 2024 Performance Report and the October 2024 Operations Report were presented without significant questions. The Board then entered a brief executive session related to negotiating positions and strategy before adjourning.",
+    votes: [],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_December%2012th%202024.pdf#minutes-2024-11-14",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_December%2012th%202024.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2024-10-10",
+    title: "SMART Board of Directors — Oct 10, 2024",
+    recap: "At its October 10, 2024 regular meeting, the SMART Board of Directors took up several significant topics. The board unanimously approved the meeting agenda and the prior month's minutes. Staff provided an update on the pending TSG Agreement, discussing key terms such as fees, local exemptions, funding flexibility, and the urgency of getting the agreement executed. The board also received a presentation from consultant Sydney Provan of Fehr and Peers on the finalized Strategic Operating Plan, which outlined two sets of service expansion recommendations depending on whether the ballot measure (3A) passed or failed. If passed, improvements would be phased, with fare-free service within the SMART district potentially available immediately upon board approval.\n\nDirector Joe Dillsworth advocated for an additional round trip between Rico and Telluride, while other board members discussed the balance between capital investments and service improvements and the need for additional buses with expanded service. Provan agreed to include estimated capital costs in the final report. Staff also presented two draft FY25 budget scenarios accounting for the outcome of the 3A vote, incorporating new contract rates and a potential 0.5 FTE staff addition. The board then entered executive session to discuss negotiation strategy before adjourning.",
+    votes: [],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_November%2014th%202024.pdf#minutes-2024-10-10",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_November%2014th%202024.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2024-09-05",
+    title: "SMART Board of Directors — Sep 5, 2024",
+    recap: "At its September 5, 2024 regular meeting, the SMART Board of Directors took action on three resolutions. The board unanimously approved the meeting agenda and August 8 minutes, then turned its attention to a significant governance matter: referring a ballot question to registered SMART electors for the November 2024 election. Executive Director Averill provided background on the importance of the November timing, and the board discussed the process for developing the ballot package and finalizing ballot language. A member of the public, Douglas Tooley, offered comment during the public hearing on the gondola planning process and ballot question development before the board voted unanimously to approve Resolution 2024-15.\n\nThe board also unanimously accepted the FY2023 audited financial statements under Resolution 2024-16, with no concerns raised. Staff presented the September 2024 Operations Report without significant board questions. The board then entered a nearly one-hour executive session related to negotiation positions and strategy, after which no further public business was conducted and the meeting adjourned at 4:42 p.m.",
+    votes: [{"item":"Resolution 2024-15 — Referring a Ballot Question to Registered Electors of SMART","outcome":"Passed","tally":""}, {"item":"Resolution 2024-16 — FY23 Audit Report and Acceptance","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_October%2010th%202024.pdf#minutes-2024-09-05",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_October%2010th%202024.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2024-08-08",
+    title: "SMART Board of Directors — Aug 8, 2024",
+    recap: "At its August 8, 2024 regular meeting, the SMART Board of Directors handled several items of business. The board unanimously approved the meeting agenda and the prior month's minutes, then turned its attention to Resolution 2024-13, which authorizes SMART to move forward with a November 2024 ballot question. As part of that discussion, the board designated Director Harvey Mogenson to serve as the Designated Election Official responsible for referring the question to voters. The board also received a brief update on gondola planning activities, with staff previewing topics scheduled for the August 19th Gondola Subcommittee meeting.\n\nStaff also presented the August 2024 Operations Report and the 2024 Second Quarter Performance Report, covering year-to-date ridership, service delivery, and cost measures; the board raised no significant concerns with either report. The meeting included an executive session lasting approximately one hour, held pursuant to Colorado's Open Meetings Law, for the purpose of negotiation strategy and instructing negotiators. No public roundtable updates were offered and the meeting adjourned at 4:42 p.m.",
+    votes: [{"item":"Resolution 2024-13 — Preparing SMART for a November 2024 Ballot Question","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet%20for%20September%205th%202024.pdf#minutes-2024-08-08",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet%20for%20September%205th%202024.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2024-07-11",
+    title: "SMART Board of Directors — Jul 11, 2024",
+    recap: "At its July 11, 2024 regular meeting, the SMART Board unanimously adopted Resolution 2024-11 amending the SMART Governing Intergovernmental Agreement (IGA), noting that all member jurisdictions had already approved the change. The Board also heard a brief update on gondola planning activities, with a preview of topics slated for the July 15 Gondola Subcommittee meeting.\n\nThe Board discussed route alternatives as part of the SMART Strategic Operating Plan, with Fehr and Peers presenting service change options informed by a Board survey and public input. Key directions included a preference for an incremental approach to combining the Lawson Hill and Mountain Village routes, follow-up with the Telluride R1 School District on Rico route service, potential service agreement talks with the Town of Norwood for expanded Down Valley service, and a request for financial scenarios tied to an upcoming election outcome. Staff was directed to plan a retreat to finalize next steps. The Board also received the July 2024 Operations Report before entering Executive Session.",
+    votes: [{"item":"Resolution 2024-11 — Amendment to the SMART Governing IGA","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_August%208th%202024.pdf#minutes-2024-07-11",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_August%208th%202024.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2024-06-13",
+    title: "SMART Board of Directors — Jun 13, 2024",
+    recap: "At its June 13, 2024 regular meeting, the SMART Board of Directors received a brief update on gondola planning activities, including a preview of topics scheduled for the June 17th Gondola Subcommittee meeting. Staff and consultants from Fehr & Peers presented an analysis of peer agency fare structures and potential alternatives for SMART's own fare model. While no formal decision was reached, the Board expressed a general preference for a fare-free model within the SMART district taxing boundary, paired with a zonal fare structure for the broader service area; refined alternatives are to be presented at a future meeting.\n\nThe Board also received the May 2024 Operations Report and an Executive Director's update covering the FY24 financial audit process, rolling stock, grants, and outside meetings. The meeting included an executive session related to negotiations strategy, as authorized under Colorado's Open Meetings Law and SMART Bylaws. The sole recorded vote was unanimous approval of the agenda and the May 9, 2024 meeting minutes.",
+    votes: [],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Meeting%20Packet_July%2011th%202024.pdf#minutes-2024-06-13",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Meeting%20Packet_July%2011th%202024.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2024-05-09",
+    title: "SMART Board of Directors — May 9, 2024",
+    recap: "At its May 9, 2024 regular meeting, the SMART Board of Directors approved the meeting agenda and prior meeting minutes unanimously. Executive Director David Averill provided updates on gondola planning activities, including legislative matters, a potential tax mix for a November 2024 ballot question, and revised cost estimates, which generated no significant board concerns.\n\nOperations Manager Kari Distefano presented several potential service changes and enhancements under the SMART Strategic Operating Plan project; the board requested a follow-up workshop to continue that discussion. Distefano also presented the 1st Quarter 2024 Performance Report and the May 2024 Operations Report, both without significant board concern. Averill updated the board on rolling stock, grants, and outside appointments. The board then convened an executive session regarding negotiating positions and strategy before adjourning at 4:40 p.m.",
+    votes: [],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_061324.pdf#minutes-2024-05-09",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_061324.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2024-04-11",
+    title: "SMART Board of Directors — Apr 11, 2024",
+    recap: "At its April 11, 2024 regular meeting, the SMART Board of Directors unanimously approved the meeting agenda and the prior month's minutes (Resolution 2024-6), then unanimously adopted an amendment to the Gondola Intergovernmental Agreement (Resolution 2024-7) with no substantive questions or concerns raised.\n\nThe board also received informational updates on several ongoing matters: the status of the SMART Governing IGA amendment being considered by local governments; gondola planning activities, including campaign timeline, revenue scenarios, potential ballot language, and a legislative update; the April 2024 operations report from staff; and the Executive Director's report covering rolling stock, grants, outside meetings, and the upcoming CASTA conference in Fort Collins. No public comment was offered and no roundtable updates were provided.",
+    votes: [{"item":"Resolution 2024-7 — Gondola IGA Amendment","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Meeting%20Packet_May%209th%202024.pdf#minutes-2024-04-11",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Meeting%20Packet_May%209th%202024.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2024-03-14",
+    title: "SMART Board of Directors — Mar 14, 2024",
+    recap: "At the March 14, 2024 regular meeting, the SMART Board of Directors unanimously approved the meeting agenda and the prior month's minutes under Resolution 2024-5. Staff presented a progress report on the Strategic Operating Plan, outlining activities completed to date and the next steps ahead. The board also received an update on the ongoing SMART Governing IGA amendment process, with the Executive Director noting that no substantive changes beyond those previously identified would be brought forward for consideration.\n\nThe board heard updates on gondola planning activities, including a pending grant amendment, a shift in grant strategy, highlights from recent gondola tours, and an overview of the campaign timeline. Kari Distefano presented the March 2024 Operations Report, and Executive Director David Averill reported on rolling stock matters, grant pursuits, the legislative session, and outside meetings attended on behalf of SMART. No public comment or roundtable updates were offered, and the meeting adjourned at 4:23 p.m.",
+    votes: [],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Packet_April%2011th%202024.pdf#minutes-2024-03-14",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Packet_April%2011th%202024.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2024-02-08",
+    title: "SMART Board of Directors — Feb 8, 2024",
+    recap: "At its February 8, 2024 regular meeting, the SMART Board of Directors unanimously approved Resolution 2024-4, adopting the meeting agenda and the January 5, 2024 minutes with a minor name correction for alternate director Rick Gomez. Staff then provided informational presentations on two topics: an introductory discussion on the need to update SMART's Intergovernmental Agreement (IGA) to reflect changes in Colorado State Statute, and the 4th Quarter 2023 Performance Report, which covered ridership trends compared to Q3 2023, incidents and complaints, and on-time performance metrics.\n\nThe board also received the February 2024 Operations Report, which included updates on the Strategic Operating Plan and monthly ridership figures. Following the public portion of the meeting, the board convened an executive session under Colorado's Open Meetings Law to discuss negotiating positions and strategy, adjourning the session after approximately 53 minutes with no formal action taken. No public comment was offered, and no roundtable updates were provided.",
+    votes: [],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-Meeting-Packet-March-14-2024.pdf#minutes-2024-02-08",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-Meeting-Packet-March-14-2024.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2024-01-05",
+    title: "SMART Board of Directors — Jan 5, 2024",
+    recap: "At its January 5, 2024 regular meeting, the SMART Board of Directors unanimously approved three resolutions in a short 36-minute session. The board first approved the meeting agenda and the prior meeting's minutes, then certified the mill levies needed to fund SMART's operations for fiscal year 2024. Finally, the board adopted the full fiscal year 2024 budget, capital plan, and appropriations after Executive Director David Averill recapped prior discussions on the budget's development; no concerns or questions were raised on any of the financial items.\n\nOn the operations side, Deputy Director Kari Distefano presented the January 2024 operations report, which included an update on planning for a new Montrose route and a monthly ridership summary. No public comments were received, and no round-table updates were offered by board members. The meeting adjourned at 3:37 p.m.",
+    votes: [{"item":"Resolution 2024-2 — Mill Levy Certification for FY24","outcome":"Passed","tally":""}, {"item":"Resolution 2024-3 — Adoption of Fiscal Year 2024 Budget, Capital Plan, and Appropriations","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_020824.pdf#minutes-2024-01-05",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_020824.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2023-12-14",
+    title: "SMART Board of Directors — Dec 14, 2023",
+    recap: "At its December 14, 2023 regular meeting, the SMART Board of Directors handled three action items and received informational reports. The board unanimously selected a consultant team—AECOM, Design Workshop, Iron Mountain Engineering, and PST Engineering—to provide on-call services for gondola work and smaller SMART capital projects. The board also unanimously approved the 2024 meeting calendar, adjusting the January date forward by one week to accommodate the State's budget filing deadlines.\n\nIn addition to the votes, staff presented the 3rd Quarter FY2023 Performance Report, covering ridership, on-time performance, complaint monitoring, and cost per rider, as well as the December 2023 Operations Report, which included updates on Montrose route planning, the Strategic Operating Plan, and monthly ridership figures. The board then went into executive session for just over an hour to conduct the Executive Director's performance review, after which the meeting adjourned.",
+    votes: [{"item":"Resolution 2023-27 — Consultant team selection for On-Call Services RFQ","outcome":"Passed","tally":""}, {"item":"Resolution 2023-28 — Establishing SMART Board of Directors Meeting Dates for 2024","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Meeting%20Packet_January%205th%202024.pdf#minutes-2023-12-14",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Meeting%20Packet_January%205th%202024.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2023-11-09",
+    title: "SMART Board of Directors — Nov 9, 2023",
+    recap: "At its November 9, 2023 regular meeting, the SMART Board unanimously approved the agenda and October meeting minutes, then turned to two significant gondola-related items. The board approved an Intergovernmental Agreement (Resolution 2023-24) formalizing cost-sharing among participating jurisdictions for the planning and development phase of the regional Gondola Project. The board also established the Gondola Advisory Committee (Resolution 2023-25), adjusting its membership composition following discussion to include a designated 'Mountain Village Entity' category.\n\nThe board also received informational reports on third-quarter FY2024 financials and the October 2023 operations update, which included planning progress on a new Montrose route, off-season service details, a paired ridership analysis examining regional origin-destination patterns, and current ridership figures. The board then convened a brief executive session related to negotiation strategy, after which no action was taken. The meeting adjourned at 4:26 p.m.",
+    votes: [{"item":"Resolution 2023-24 — Intergovernmental Agreement for Cost-Sharing of the Gondola Project Planning and Development Phase","outcome":"Passed","tally":""}, {"item":"Resolution 2023-25 — Establishing the Gondola Advisory Committee (with modified membership)","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_December%2014th%202023.pdf#minutes-2023-11-09",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_December%2014th%202023.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2023-10-12",
+    title: "SMART Board of Directors — Oct 12, 2023",
+    recap: "At the October 12, 2023 regular meeting, the SMART Board unanimously approved the agenda and prior meeting minutes, then unanimously voted to award a new transit operations and maintenance contract to San Juan Mountain Ventures, doing business as Telluride Express. Staff noted that the company's proposal responded fully to RFP 2023-2 requirements and that proposed pricing was consistent with comparable transit agencies across Colorado.\n\nThe board also reviewed a draft FY2024 budget incorporating updated contract rates, the possibility of adding a 0.5 FTE staff position, and funding for special projects, though little discussion took place. Staff provided an operations update covering the Meadows Trail underpass design project, the Strategic Operating Plan, the upcoming Fall 2024 off-season schedule, and monthly ridership figures. The meeting adjourned at 3:47 p.m.",
+    votes: [{"item":"Resolution 2023-22 — Selection of San Juan Mountain Ventures (DBA Telluride Express) for Contracted Transit Operations","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-Packet_November-9th-2023.pdf#minutes-2023-10-12",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-Packet_November-9th-2023.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2023-09-14",
+    title: "SMART Board of Directors — Sep 14, 2023",
+    recap: "At the September 14, 2023 regular meeting, the SMART Board unanimously approved the agenda, prior meeting minutes, and the FY22 financial audit report. Executive Director David Averill presented the audited financial statements without any questions or concerns raised by directors. The board also held a preliminary discussion on the FY24 budget, covering topics such as sales tax revenue forecasting, anticipated increases in property tax revenues, and RETA contributions; a draft FY24 budget will be brought forward at the October meeting.\n\nOperations Manager Kari Distefano provided updates on the Meadows Trail underpass design project, a transit propensity analysis for Montrose and Ridgway, and monthly ridership figures. Averill additionally briefed the board on gondola transition planning activities, an employee housing opportunity under consideration, and an upcoming vehicle delivery. The meeting adjourned at 3:55 p.m.",
+    votes: [{"item":"Resolution 2023-20 — Acceptance of FY22 Financial Audit and Report","outcome":"Passed","tally":"5-0"}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/October%2012th%202023%20SMART%20Board%20Meeting%20packet_101223.pdf#minutes-2023-09-14",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/October%2012th%202023%20SMART%20Board%20Meeting%20packet_101223.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2023-08-10",
+    title: "SMART Board of Directors — Aug 10, 2023",
+    recap: "At its August 10, 2023 regular meeting, the SMART Board of Directors unanimously approved the meeting agenda and the prior month's minutes under Resolution 2023-18. The board then received informational reports from staff: Executive Director David Averill presented the FY23 Second Quarter Performance Report, covering key metrics such as ridership, cost per passenger, and passenger complaints, as well as the Second Quarter Financials Report, which reviewed year-to-date revenues and expenses and prompted discussion about facility repair and maintenance costs.\n\nOperations Manager Kari Distefano provided the August Operations Report, including a recap of a recent Community Advisory Committee meeting, ridership updates, and off-season service performance. Averill also shared executive updates on gondola transition planning, a potential Ilium property purchase, grant opportunities, and a possible employee housing opportunity. No public comment was offered, and the meeting adjourned at 3:41 p.m.",
+    votes: [],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_%20September%2014th%202023.pdf#minutes-2023-08-10",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_%20September%2014th%202023.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2023-06-08",
+    title: "SMART Board of Directors — Jun 8, 2023",
+    recap: "At the June 8, 2023 regular meeting, the SMART Board of Directors approved its agenda and the prior month's meeting minutes without dissent. The board then heard a presentation from Executive Director David Averill on a draft mid-year FY23 budget and capital plan amendment, which addressed both unanticipated expenses and unanticipated revenues requiring appropriation. Much of the discussion centered on mandated accessibility updates to the SMART website and their associated costs; the board directed staff to provide additional detail on the scope of the work and to explore cost-reduction options.\n\nThe board also received the June 2023 Operations Report from Kari Distefano, which generated no discussion. Averill provided updates during his Executive Director's report on the FY22 audit, gondola subcommittee activities, a pending property purchase, and upcoming personal travel. The meeting adjourned at 3:47 p.m.",
+    votes: [],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Packet_July%2013th%202023.pdf#minutes-2023-06-08",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Packet_July%2013th%202023.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2023-05-11",
+    title: "SMART Board of Directors — May 11, 2023",
+    recap: "At the May 11, 2023 regular meeting, the SMART Board of Directors approved two resolutions. The board unanimously adopted Resolution 2023-13, approving the meeting agenda and the April 13, 2023 meeting minutes. They also unanimously adopted Resolution 2023-14, selecting Fehr and Peers as the consultant team to assist with developing a new Strategic Operating Plan following an RFP and review process.\n\nExecutive Director David Averill provided Q1 2023 performance and financial reports, which prompted no concerns from the board. Averill also gave updates on House Bill 1101, ongoing property purchase negotiations, and gondola subcommittee activities, and introduced Amber Kyle-Blake as the new gondola senior project manager. The board discussed elements of a pending intergovernmental agreement (IGA) for cost sharing during the project development and planning phase, in anticipation of a potential November 2024 ballot question related to the gondola project.",
+    votes: [{"item":"Resolution 2023-14 — Selection of Fehr and Peers for Strategic Operating Plan","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_June%208th%202023.pdf#minutes-2023-05-11",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_June%208th%202023.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2023-04-13",
+    title: "SMART Board of Directors — Apr 13, 2023",
+    recap: "At its April 13, 2023 regular meeting, the SMART Board of Directors received operational updates from staff, including progress on the Swiftly real-time bus app, Spring Offseason service adjustments, a new online payment feature for vanpool customers, and ongoing marketing efforts. Executive Director David Averill also briefed the Board on the status of HB1101, vehicle orders, and gondola subcommittee activities.\n\nThe Board held two executive sessions: the first addressed matters related to the Mountain Village Gondola, and the second focused on strategy for a potential real estate acquisition. Following those closed sessions, the Board adopted Resolution 2023-10 concerning the gondola and Resolution 2023-12 authorizing SMART to enter into a contract for the purchase of real property. All motions passed without recorded dissent, and the meeting adjourned at 3:42 p.m.",
+    votes: [{"item":"Resolution 2023-12 — Authorization to enter into contract for purchase of real property","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Packet_May%2011th%202023.pdf#minutes-2023-04-13",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Packet_May%2011th%202023.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2023-03-09",
+    title: "SMART Board of Directors — Mar 9, 2023",
+    recap: "At the March 9, 2023 regular meeting, the SMART Board of Directors approved four resolutions. The board unanimously extended Telluride Crossfit and Gymnastics' lease at 137 Society Drive for another 12 months, and voted to opt out of Colorado's new paid Family and Medical Leave Insurance (FAMLI) program, noting that SMART already provides comparable paid leave to its employees. The board also adopted the final Specialized Transit Roadmap, a planning document developed with consultant Fehr and Peers to improve service for older adults and people with disabilities, with an emphasis on building regional partnerships to carry out the plan's recommendations.\n\nBeyond the formal votes, the board discussed SMART's investment strategy for its cash reserves. Staff presented options including placing funds with the Colorado Trust, but the board directed staff to continue using Alpine Bank's money market account, which has recently seen stronger interest earnings, while continuing exploratory conversations with the Colorado Trust. The Executive Director also briefed the board on active grant pursuits, state legislative efforts related to RTA property tax authority and sales tax cap increases, and the upcoming Southwest Transit Association annual meeting in Denver.",
+    votes: [{"item":"Resolution 2023-8 — Lease extension for 137 Society Drive with Telluride Crossfit and Gymnastics","outcome":"Passed","tally":""}, {"item":"Resolution 2023-9 — Opt out of Colorado's paid Family and Medical Leave Insurance (FAMLI) Program","outcome":"Passed","tally":""}, {"item":"Resolution 2023-10 — Adoption of Specialized Transit Road Map for older adults and people with disabilities","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_April%2013th%202023.pdf#minutes-2023-03-09",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_April%2013th%202023.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2023-02-09",
+    title: "SMART Board of Directors — Feb 9, 2023",
+    recap: "At its February 9, 2023 regular meeting, the SMART Board of Directors unanimously approved all three resolutions brought before it. The board selected Blair and Associates as SMART's new independent auditor (Resolution 2023-5) following a staff-led review of candidates. The board also adopted a Gondola Resolution of Intent (Resolution 2023-6), affirming the agency's continued commitment to the gondola planning process and directing Executive Director Averill to negotiate an agreement with regional partners that clarifies roles and responsibilities going forward, including the creation of a project manager position.\n\nIn addition to the votes, the board received informational updates on fourth-quarter 2022 performance measures and financials, which highlighted positive ridership trends alongside rising maintenance costs. Staff also presented the December 2022 operations report and an executive director's update covering recent grant activity, state legislative developments affecting Colorado RTAs — including potential property tax authority and a higher sales tax cap — and rolling stock matters. No public comment was offered and no roundtable items were raised.",
+    votes: [{"item":"Resolution 2023-5 — Selection of Blair and Associates for outside auditing services","outcome":"Passed","tally":""}, {"item":"Resolution 2023-6 — Gondola Resolution of Intent","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_March%209th%202023.pdf#minutes-2023-02-09",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_March%209th%202023.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2022-12-08",
+    title: "SMART Board of Directors — Dec 8, 2022",
+    recap: "At its December 8, 2022 regular meeting, the SMART Board of Directors addressed several end-of-year administrative and financial items. The board approved its agenda and the prior month's minutes with a note that Joe Dillsworth was in attendance, then unanimously certified the fiscal year 2023 mill levies and adopted the FY 2023 budget, capital plan, and spending appropriations. The board also set its 2023 meeting schedule, continuing the tradition of holding meetings on the second Thursday of each month at 3 p.m.\n\nThe board elected officers for 2023/2024, notably splitting the previously combined Secretary/Treasurer role into two positions: Joe Dillsworth as Chair, Patrick Berry as Vice-Chair, Meehan Fee as Treasurer, and Lance Waring as Secretary. Staff provided the October 2022 operations update, and board member Patrick Berry offered a brief update on the Chondola project. All five resolutions passed unanimously, and the meeting adjourned at 9:40 a.m.",
+    votes: [{"item":"Resolution 2022-20 — Fiscal Year 2023 Mill Levy Certifications","outcome":"Passed","tally":""}, {"item":"Resolution 2022-21 — Fiscal Year 2023 Budget, Capital Plan, and Spending Appropriations","outcome":"Passed","tally":""}, {"item":"Resolution 2022-22 — 2023 Board Meeting Dates","outcome":"Passed","tally":""}, {"item":"Resolution 2022-23 — Election of Board Officers for 2023/2024","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_%20January%2012th%202023.pdf#minutes-2022-12-08",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_%20January%2012th%202023.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2022-11-10",
+    title: "SMART Board of Directors — Nov 10, 2022",
+    recap: "At its November 10, 2022 regular meeting, the SMART Board unanimously approved the agenda, consent items, and prior meeting minutes, then unanimously approved Resolution 2022-18 authorizing a Memorandum of Understanding with Continuum of Colorado Inc. and the Colorado Department of Transportation to transfer a transit vehicle into SMART's fleet. Executive Director David Averill walked the board through the vehicle transfer process and next steps needed to put the vehicle into service.\n\nThe board also received several informational presentations: the 3rd Quarter 2022 Performance Report (highlighting increased ridership and lower costs per passenger trip, though with some upticks in road calls and passenger complaints), the 3rd Quarter 2022 Financials Report, a draft FY23 Capital Plan with project descriptions and grant funding options, and an October 2022 Operations Update. Averill additionally reported on grant statuses and vehicle procurement progress. The meeting concluded with two closed executive sessions covering a potential real estate transaction and the Executive Director's performance review; no action was taken in either session.",
+    votes: [{"item":"Resolution 2022-18 — MOU with Continuum of Colorado Inc. and CDOT for Transit Vehicle Transfer","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Packet_%20December%208th%202022.pdf#minutes-2022-11-10",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Packet_%20December%208th%202022.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2022-10-13",
+    title: "SMART Board of Directors — Oct 13, 2022",
+    recap: "At its October 13, 2022 virtual regular meeting, the SMART Board of Directors unanimously approved the September 8 consent agenda and the August 11 meeting minutes. The board then heard several informational updates: a presentation on the Older Adults and Disabled Mobility Gaps Study, a draft FY23 operating budget that accounts for rising fuel, labor, and maintenance costs while remaining balanced, and a September operations report covering the upcoming fall off-season schedule, household access to SMART routes, planning for new Lawson Hill–Mountain Village service, marketing efforts, and ridership figures.\n\nExecutive Director Averill also briefed the board on the Meadows Underpass design project, recent outside meetings and conferences, vehicle procurement progress, and follow-up on the FY21 financial audit. The board then entered executive session to discuss a potential real estate transaction, but no action was taken. No public comment was offered and no round-table updates were provided. The meeting adjourned at 4:45 p.m.",
+    votes: [],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/1-SMART-Board-Packet_%20November%2010th%202022.pdf#minutes-2022-10-13",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/1-SMART-Board-Packet_%20November%2010th%202022.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2022-09-08",
+    title: "SMART Board of Directors — Sep 8, 2022",
+    recap: "At its September 8, 2022 regular meeting, the SMART Board of Directors unanimously approved the meeting agenda and August minutes, then unanimously accepted the FY21 Audit Report after discussion of the audit process and Single Audit findings. The board also received a preliminary overview of FY23 budget revenue assumptions and expected expenditure changes, directing staff to bring a draft FY23 Budget and Capital Plan to the October meeting.\n\nThe board discussed SMART's potential expanded role in the regional gondola planning process, noting the Leadership Committee's desire for greater SMART involvement. Staff was asked to return with a proposed resolution of intent clarifying SMART's commitments before any enhanced role is assumed. Additional topics included a strategic plan update—with a new planning grant effort targeting a 2023 launch and 2024 completion—an August operations report covering the Zero Fare campaign, the Lawson Hill to Mountain Village pilot route, and ridership data, as well as executive director updates on grants and the CIRSA risk audit. The meeting concluded with an executive session regarding a potential real estate transaction.",
+    votes: [{"item":"Resolution 2022-15 — Acceptance of FY21 Audit Report","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-meeting-packet_October-13th-2022.pdf#minutes-2022-09-08",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-meeting-packet_October-13th-2022.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2022-08-11",
+    title: "SMART Board of Directors — Aug 11, 2022",
+    recap: "At its August 11, 2022 regular meeting, the SMART Board of Directors unanimously approved the agenda, consent items, and the June 9, 2022 meeting minutes. The board received a second-quarter FY22 performance report covering ridership trends, cost-per-passenger metrics, and the impact of rising fuel costs, as well as a financial update showing strong revenues and a favorable overall fiscal position for SMART.\n\nThe board also heard an operations update for June and July, including progress on the Older Adults and Disabled Mobility Gaps Study and marketing and ridership efforts. Executive Director David Averill reported on grant activity, the Meadows Underpass design project, and the status of the FY21 fiscal audit. The meeting concluded with an executive session to discuss a potential real estate transaction, including negotiation positions and strategy regarding possible property acquisition.",
+    votes: [],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20packet_September%208%202022.pdf#minutes-2022-08-11",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20packet_September%208%202022.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2022-06-09",
+    title: "SMART Board of Directors — Jun 9, 2022",
+    recap: "At its June 9, 2022 regular meeting, the SMART Board unanimously approved three resolutions. The board extended the lease for Telluride Gymnastics, LLC at the 137 Society Drive property and adopted a supplemental FY22 Budget along with a revised FY22 Capital Plan, building on discussion from the previous month's meeting.\n\nStaff provided several informational updates. Operations Director Kari Distefano reported on the Older Adults and Disabled Mobility Gaps Study, schedule adjustments for the Lawson Hill and Norwood routes following the off-season, and ridership figures for May. Executive Director David Averill updated the board on grant progress, repairs at the Lawson facility, the Meadows Underpass design project, and the status of the FY21 fiscal audit. The meeting adjourned at 3:39 p.m.",
+    votes: [{"item":"Resolution 2022-11 — Lease Amendment at 137 Society Drive with Telluride Gymnastics, LLC","outcome":"Passed","tally":""}, {"item":"Resolution 2022-12 — Supplemental FY22 Budget and Capital Plan","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-Packet_August-11th-2022.pdf#minutes-2022-06-09",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-Packet_August-11th-2022.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2022-05-12",
+    title: "SMART Board of Directors — May 12, 2022",
+    recap: "At its May 12, 2022 virtual regular meeting, the SMART Board of Directors unanimously approved the meeting agenda and prior meeting minutes, and then unanimously approved an intergovernmental agreement with San Miguel County and the Telluride Library District to install a drop-off kiosk at the Lawson Hill Intercept Lot. The board also received first-quarter 2022 performance and financial reports, with staff noting strong ridership growth, rising fuel costs, and an overall strong fiscal position.\n\nThe board reviewed a draft amended FY22 budget and capital plan, which proposes increasing projected revenues by $220,000 to reflect better-than-expected receipts while also accounting for higher operational expenses and capital purchases; formal action on the amendment is planned for the June meeting. Staff also provided operations updates covering off-season service changes to the Lawson Hill and Norwood schedules, a passenger app in development, facility repairs, the Meadows Underpass design project, and progress on the FY21 fiscal audit. The meeting concluded with an executive session regarding a potential real estate transaction.",
+    votes: [{"item":"Resolution 2022-9 — Intergovernmental Agreement with San Miguel County and Telluride Library District for Lawson Hill Intercept Lot Drop Off Kiosk","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Packet_%20June%202022.pdf#minutes-2022-05-12",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Packet_%20June%202022.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2022-03-10",
+    title: "SMART Board of Directors — Mar 10, 2022",
+    recap: "At the March 10, 2022 virtual meeting, the SMART Board of Directors unanimously approved all three resolutions on the agenda. The board adopted its agenda and the prior month's minutes, then approved an amended agreement with the Town of Mountain Village governing maintenance of SMART's vanpool vehicles. The board also committed local matching funds via a Letter of Commitment to support a grant application for the Meadows Trail Underpass construction project.\n\nIn informational updates, staff reported on February ridership figures and flagged potential schedule changes for the Off-Season and Lawson Hill routes, as well as ongoing development of a passenger app. Executive Director David Averill briefed the board on grant activity, repairs at the Lawson facility, progress on the Meadows Underpass design, and the status of the FY2021 fiscal audit. The meeting adjourned at 4:03 p.m.",
+    votes: [{"item":"Resolution 2022-6 — Amended Memorandum of Agreement with Town of Mountain Village for SMART vanpool vehicle maintenance","outcome":"Passed","tally":""}, {"item":"Resolution 2022-7 — Letter of Commitment for local grant matching funds for the Meadows Trail Underpass project","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-meeting-packet_%20May%202022.pdf#minutes-2022-03-10",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-meeting-packet_%20May%202022.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2022-02-10",
+    title: "SMART Board of Directors — Feb 10, 2022",
+    recap: "At its February 10, 2022 regular meeting, the SMART Board unanimously approved the meeting agenda, consented to the January 13 minutes, and formally designated Patrick Berry as the Board's Secretary/Treasurer. No public comment was received.\n\nThe Board received informational updates on several fronts: Executive Director Averill reviewed the 4th Quarter 2021 financial and performance reports, noting ridership figures and cost-per-passenger variances. Operations Manager Distefano reported on potential Off-Season and Lawson Hill schedule changes, progress toward a passenger app, and January ridership. Averill also updated the Board on grant activities, repairs at the Lawson facility, the Meadows Underpass design project, and the status of the FY21 fiscal audit. The meeting adjourned just after 4:00 p.m.",
+    votes: [{"item":"Resolution 2022-4 — Designation of Patrick Berry as SMART Board Secretary/Treasurer","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Meeting%20Packet_%20March%2010th%202022.pdf#minutes-2022-02-10",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Meeting%20Packet_%20March%2010th%202022.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2022-01-13",
+    title: "SMART Board of Directors — Jan 13, 2022",
+    recap: "At the January 13, 2022 regular meeting, the SMART Board of Directors took care of housekeeping items by unanimously approving the meeting agenda and the minutes from the December 9, 2021 meeting. The board then unanimously approved Resolution 2022-2, selecting Fehr and Peers as the lead planning consultant for the FY22 Seniors and Disabled Mobility Gaps Study, following a competitive RFP process. Executive Director Averill was authorized to move forward with contract negotiations and execution.\n\nBeyond the votes, staff provided operational updates covering the SPOT project, the vanpool transition, and the Nucla/Naturita route extension, along with a review of December 2021 ridership trends and marketing efforts. Executive Director Averill also briefed the board on active grant pursuits, facility work, upcoming vehicle deliveries, and the status of the FY21 audit. The meeting adjourned at 4:06 p.m.",
+    votes: [{"item":"Resolution 2022-2 — FY22 Selection of Planning Consultant for the Seniors and Disabled Mobility Gaps Study","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20packet_February%202022.pdf#minutes-2022-01-13",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20packet_February%202022.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2022-01-12",
+    title: "SMART Board of Directors — Jan 12, 2022",
+    recap: "At its January 12, 2022 regular meeting, the SMART Board unanimously approved three resolutions. The board adopted the meeting agenda and the December 9, 2022 minutes, authorized an extension of a rental lease with Proset Construction, and approved a cooperative purchasing agreement with the Washington State Department of Transportation to acquire large, heavy-duty transit buses recently funded through a federal 5339 grant.\n\nBeyond the votes, staff presented the December 2022 operations report and the Executive Director provided updates on grants, an Audit RFP, the gondola subcommittee, legislative matters affecting SMART, and rolling stock. Board members also held a roundtable discussion touching on Park City Transit's electrification efforts, the Town of Telluride's own electrification planning, and gondola crowding during peak periods — including how SMART might help ease that congestion in the future.",
+    votes: [{"item":"Resolution 2023-2 — Extension of rental lease with Proset Construction","outcome":"Passed","tally":""}, {"item":"Resolution 2023-3 — Cooperative Purchase Agreement with Washington State DOT for heavy-duty transit buses","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_February%209th%202023.pdf#minutes-2022-01-12",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20meeting%20packet_February%209th%202023.pdf"
+  },
+  {
+    sourceKey: "smart",
+    sourceLabel: "SMART",
+    date: "2021-12-09",
+    title: "SMART Board of Directors — Dec 9, 2021",
+    recap: "At its December 9, 2021 regular meeting, the SMART Board of Directors unanimously approved all four resolutions on the agenda. The board certified the FY22 mill levy amounts (Resolution 2021-18) and formally adopted the FY22 budget, capital plan, and appropriations (Resolution 2021-19), with Executive Director David Averill noting meaningful changes in both revenues and expenses compared to the prior fiscal year. The board also set the 2022 board meeting schedule (Resolution 2021-20).\n\nBeyond the formal votes, staff provided informational updates on several ongoing initiatives. Transit Director Kari Distefano reported on November ridership trends, marketing efforts, the SPOT project, and the Nucla/Naturita service expansion. Averill followed with updates on active grants, facility improvements, pending vehicle deliveries, the Meadows Underpass Project, and various interagency meetings. No public comment was received, and the meeting adjourned at 4:12 p.m.",
+    votes: [{"item":"Resolution 2021-18 — FY22 Mill Levy Certifications","outcome":"Passed","tally":""}, {"item":"Resolution 2021-19 — FY22 Budget/Capital Plan and Appropriations","outcome":"Passed","tally":""}, {"item":"Resolution 2021-20 — 2022 SMART Board Meeting Dates","outcome":"Passed","tally":""}],
+    videoUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Packet_%20January%202022.pdf#minutes-2021-12-09",
+    minutesUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART%20Board%20Packet_%20January%202022.pdf"
   }
 ];
 

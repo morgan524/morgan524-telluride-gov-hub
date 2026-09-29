@@ -42,6 +42,11 @@ const ENTITIES = {
   drb:       { label: 'MV Design Review Board',        idPrefix: 'drb',  sourceKey: 'mv' },
   pc:        { label: 'SMC Planning Commission',       idPrefix: 'pv',   sourceKey: 'county' },
   rico:      { label: 'Rico Board of Trustees',        idPrefix: 'rico', sourceKey: 'rico' },
+  // SMART votes come from the MINUTES inside each board packet
+  // (scripts/smart-votes.js), not a recap channel — so it's "watched" by
+  // definition. A meeting's minutes only appear in the NEXT month's packet,
+  // so the newest vote is routinely 6–10 weeks old: allow 80 days.
+  smart:     { label: 'SMART Board of Directors',      idPrefix: 'smart', sourceKey: 'smart', minutesSource: true, maxAgeDays: 80 },
 };
 
 // Channels meeting-recaps.js actually pulls. Read from the script itself so
@@ -54,7 +59,7 @@ function watchedSourceKeys() {
 
 // Same routing meeting-recaps.js uses, so "recapped" and "tracked" line up.
 function trackerEntityFor(sourceKey, title) {
-  if (sourceKey === 'county' && /county commissioners|BOCC/i.test(title)) return 'bocc';
+  if (sourceKey === 'county' && /county commissioners?\b|\bBOCC\b/i.test(title)) return 'bocc';
   if (sourceKey === 'county' && /planning commission/i.test(title)) return 'pc';
   if (sourceKey === 'mv' && /design review/i.test(title)) return 'drb';
   if (sourceKey === 'mv' && /town council/i.test(title)) return 'tomv';
@@ -99,7 +104,7 @@ for (const [key, meta] of Object.entries(ENTITIES)) {
     latestVote: latest,
     latestVoteAgeDays: latest ? ageDays(latest) : null,
     recappedButMissing: missing,
-    watched: watched.has(meta.sourceKey),
+    watched: !!meta.minutesSource || watched.has(meta.sourceKey),
   };
   // Order matters. UNWATCHED is checked FIRST because it's the failure that
   // hides: with no recap channel there is nothing to compare against, so
@@ -112,7 +117,7 @@ for (const [key, meta] of Object.entries(ENTITIES)) {
     stale = true;
   } else if (missing.length) {
     row.status = 'BEHIND'; stale = true;
-  } else if (latest && ageDays(latest) > MAX_AGE) {
+  } else if (latest && ageDays(latest) > (meta.maxAgeDays || MAX_AGE)) {
     // Watched but nothing landed in a long time. Not proof of a bug (a board
     // may genuinely not have met), but it is NOT "fine" — surface it.
     row.status = 'STALE'; stale = true;

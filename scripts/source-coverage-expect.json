@@ -24,7 +24,7 @@
     "probe": { "url": "https://ouraycoco.api.civicclerk.com/v1/Events?$filter=startDateTime%20ge%20{today}T00:00:00Z%20and%20startDateTime%20le%20{plus30}T23:59:59Z", "api": true } },
   "ouraycity": { "packets": true, "times": true,
     "probe": { "url": "https://meetings.boardbook.org/Public/Organization/2503", "match": "PublicMeetingsTable" } },
-  "smart": { "packets": true, "times": true,
+  "smart": { "packets": true, "times": true, "votes": ["smart"],
     "probe": { "url": "https://smarttelluride.colorado.gov/board-meetings", "match": "Board[- ](?:Agenda|Packet|Meeting)" } },
   "airport": { "packets": true, "times": true, "packetOnly": true,
     "probe": { "url": "https://tellurideairport.com/wp-json/wp/v2/media?search=Board-Packet&per_page=30&_fields=source_url", "api": true } },

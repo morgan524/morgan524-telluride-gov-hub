@@ -152,6 +152,7 @@
     if (r.sourceKey === 'mv' && /design review/i.test(t)) return 'drb';
     if (r.sourceKey === 'mv') return 'tomv';
     if (r.sourceKey === 'rico') return 'rico';
+    if (r.sourceKey === 'smart') return 'smart';
     return '';
   }
 
@@ -166,8 +167,11 @@
       var logo = LOGO_BY_KEY[r.sourceKey]
         ? '<div class="e-logo"><img src="' + esc(LOGO_BY_KEY[r.sourceKey]) + '" alt="' + esc(r.sourceLabel || '') + '" loading="lazy"></div>' : '';
       var vt = voteTrackerFor(r);
-      var acts = vt
-        ? '<div class="acts"><a class="abtn" href="/v2/vote-tracker.html" target="_blank" rel="noopener">&#128499;&#65039; See the votes &mdash; Vote Tracker</a></div>' : '';
+      // SMART recaps are written from the minutes inside the board packet —
+      // link the source document (other entities' recaps come from video).
+      var minutesBtn = r.minutesUrl ? '<a class="abtn" href="' + esc(r.minutesUrl) + '" target="_blank" rel="noopener">&#128196; Minutes (in the board packet)</a>' : '';
+      var vtBtn = vt ? '<a class="abtn" href="/v2/vote-tracker.html" target="_blank" rel="noopener">&#128499;&#65039; See the votes &mdash; Vote Tracker</a>' : '';
+      var acts = (vtBtn || minutesBtn) ? '<div class="acts">' + vtBtn + minutesBtn + '</div>' : '';
       var paras = String(r.recap || '').split(/\n{2,}/).filter(Boolean)
         .map(function (t) { return '<p>' + emphasizeNames(t) + '</p>'; }).join('');
       var tally = '';

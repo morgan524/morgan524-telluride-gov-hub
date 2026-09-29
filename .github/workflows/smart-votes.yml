@@ -1,0 +1,51 @@
+name: SMART votes from packet minutes
+
+# Morgan (2026-09-29): build the SMART Board of Directors vote tracker — and a
+# Past Meetings recap per meeting — from the minutes inside each board packet on smarttelluride.colorado.gov/board-meetings.
+# scripts/smart-votes.js only parses packets it hasn't seen (data/smart-votes.json),
+# so a weekly run is cheap: most weeks it finds nothing new. SMART meets monthly
+# and posts the packet (with the previous meeting's minutes) a few days ahead.
+#
+# Runs on GitHub (not the Mac) — it reads PDFs, not video captions. SMART's
+# CloudFront 403s GitHub IPs, so fetches fall back through the site Worker
+# (RSS_PROXY_URL), the same way content-refresh reaches SMART.
+
+on:
+  schedule:
+    - cron: '30 14 * * 5'     # Fridays 14:30 UTC = 8:30am MT
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: smart-votes
+  cancel-in-progress: false
+
+jobs:
+  smart:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+      - name: Install dependencies
+        run: |
+          cd scripts
+          npm install
+      - name: Parse new packets
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RSS_PROXY_URL: ${{ secrets.RSS_PROXY_URL }}
+        run: |
+          node scripts/smart-votes.js
+          node scripts/mirror-json.js
+      - name: Commit
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/smart-votes.json v2/vote-tracker.html js/gov-helpers.js data/meeting-recaps.json
+          if git diff --cached --quiet; then echo "No new SMART votes"; exit 0; fi
+          git commit -m "🚌 SMART votes from packet minutes $(date -u +%Y-%m-%d)"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done

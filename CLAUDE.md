@@ -269,6 +269,18 @@ If no time was published, show none.
   (fixed 2026-09-29). If a packet or agenda is found in the log but never shows
   up on the site, check this first.
 
+## SMART votes + recaps come from packet minutes
+
+`scripts/smart-votes.js` (weekly, `.github/workflows/smart-votes.yml`) reads the
+MINUTES inside each SMART board packet (smarttelluride.colorado.gov/board-meetings;
+each packet carries the previous meeting's draft minutes). It regenerates the
+`SMART-BEGIN … SMART-END` block in `v2/vote-tracker.html` and the SMART cards in
+`MEETING_RECAPS`. Parsed packets are cached in `data/smart-votes.json`, so only
+new packets cost an AI call; `--reparse` redoes everything. Director spelling
+variants are merged in its `ALIAS`/`CANON` maps; alternate status is per meeting,
+and an alternate only votes when their town is short a regular director.
+SMART's CloudFront blocks GitHub IPs, so fetches fall back to the site Worker proxy.
+
 ## Featured organization rotation is week-anchored
 
 `featuredOrgIndex()` (duplicated in `scripts/weekly-email.js` and
