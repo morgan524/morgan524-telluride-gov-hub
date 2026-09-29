@@ -141,7 +141,7 @@
         <div class="row">
           <label for="pEmail">Email <span class="hint">— the address you subscribed with</span></label>
           <input id="pEmail" type="email" autocomplete="email" required placeholder="you@example.com">
-          <span class="help">Want to use a different email address? Just <a href="https://livabletelluride.org/hub-bub.html#signup">sign up with the new one</a> — that creates your new profile.</span>
+          <span class="help">Want to use a different email address? Just <a href="https://livabletelluride.org/subscribe.html">sign up with the new one</a> — that creates your new profile.</span>
         </div>
 
         <div class="row">
@@ -383,7 +383,7 @@
   // returns the record for the email tied to that token, so no one can read
   // anyone else's data.
   (function initProfileLoad(){
-    const loginHint = 'Have an account? <a href="/hub-bub.html#login">Log in</a> and your saved info loads here automatically.';
+    const loginHint = 'Have an account? <a href="/subscribe.html#login">Log in</a> and your saved info loads here automatically.';
     subsUnknown(true);   // assume unknown until a profile-read proves otherwise
     if (!window.firebase || !firebase.initializeApp) { loadMsg(loginHint, 'info'); return; }
     try {

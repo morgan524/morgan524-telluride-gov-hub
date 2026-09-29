@@ -47,7 +47,7 @@
   // (Log In left the nav 2026-07-23 — Hub-Bub, the only login surface, has its own.)
   // Hub-Bub left the nav 2026-08-05 (Morgan: not getting traction). The PAGE
   // stays and is NOT orphaned — it is still the one signup surface, reached by
-  // the Subscribe pill (hub-bub.html#signup) in both the nav CTA and the mobile
+  // the Subscribe pill (subscribe.html) in both the nav CTA and the mobile
   // drawer, and it keeps its own hbShowAuth login. Do not delete the page or
   // repoint Subscribe when tidying up.
 
@@ -88,7 +88,7 @@
         g.items.map(function (it) { return '<a href="' + esc(resolveHref(it)) + '">' + esc(it.label) + '</a>'; }).join('');
     }).join('') +
       '<div class="drawer-cta">' +
-      '<a class="lt-pill-subscribe" href="' + esc(ROOT + 'hub-bub.html') + '#signup">' +
+      '<a class="lt-pill-subscribe" href="' + esc(ROOT + 'subscribe.html') + '">' +
       '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"></rect><path d="M3 6.5l9 6.5 9-6.5"></path></svg>' +
       'Subscribe</a>' +
       '<button class="lt-pill-search" type="button" data-search-open aria-label="Search">' +
@@ -107,10 +107,10 @@
       // login surface is Hub-Bub, which has its own. Search takes the
       // prominent slot; Español stays.
       // Subscribe added 2026-08-11 (per Morgan). Points at the ONE signup
-      // surface — /hub-bub.html#signup, which auto-opens the signup modal on
+      // surface — /subscribe.html, which opens the signup form on
       // that hash. Don't add a second signup form anywhere; see the unified
       // signup workflow (everything routes through the Worker /update-profile).
-      '<a class="lt-pill-subscribe" href="' + esc(ROOT + 'hub-bub.html') + '#signup" title="Get the weekly email">' +
+      '<a class="lt-pill-subscribe" href="' + esc(ROOT + 'subscribe.html') + '" title="Get the weekly email">' +
       '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"></rect><path d="M3 6.5l9 6.5 9-6.5"></path></svg>' +
       'Subscribe</a>' +
       '<button class="lt-pill-search" type="button" data-search-open title="Search the site ( / )" aria-label="Search">' +
