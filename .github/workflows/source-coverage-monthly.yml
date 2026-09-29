@@ -1,0 +1,69 @@
+name: Source coverage — monthly review
+
+# Morgan (2026-09-29): once a month, review every public-entity source for
+# information that isn't coming in as expected, and how to fix it.
+#
+# The daily/weekly checks catch a source that suddenly breaks. This catches
+# the slow and never-worked gaps (a feed that went empty a year ago, a silent
+# 15-result API cap, packets never read, roster ids that don't match the
+# tracker). See scripts/source-coverage-audit.js for what is checked and
+# scripts/source-coverage-expect.json for what each source SHOULD provide.
+#
+# Always posts the month's report as an issue (label: source-coverage) so the
+# review happens even when everything is green; red items are marked NEW or
+# "open since", with a Claude diagnosis for any source whose page changed.
+
+on:
+  schedule:
+    - cron: '20 15 1 * *'     # 1st of each month, 15:20 UTC = 9:20am MT (8:20am MST)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: source-coverage
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+
+      - name: Run the audit
+        id: audit
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          set +e
+          node scripts/source-coverage-audit.js --update-baseline --out /tmp/coverage.md > /tmp/coverage.log 2>&1
+          echo "red=$?" >> "$GITHUB_OUTPUT"
+          set -e
+          head -3 /tmp/coverage.md || cat /tmp/coverage.log
+
+      - name: Save the baseline
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts/source-coverage-baseline.json
+          if git diff --cached --quiet; then echo "baseline unchanged"; exit 0; fi
+          git commit -m "📋 Source coverage baseline $(date -u +%Y-%m-%d)"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
+
+      - name: Post the monthly report
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITLE="📋 Source coverage review — $(date -u +%B\ %Y)"
+          [ "${{ steps.audit.outputs.red }}" = "1" ] && TITLE="$TITLE (action needed)"
+          gh label create source-coverage --color 1d76db --description "Monthly source coverage review" 2>/dev/null || true
+          # Close last month's review — this one supersedes it.
+          for n in $(gh issue list --label source-coverage --state open --json number --jq '.[].number'); do
+            gh issue close "$n" --comment "Superseded by this month's review." || true
+          done
+          gh issue create --title "$TITLE" --label source-coverage --body-file /tmp/coverage.md

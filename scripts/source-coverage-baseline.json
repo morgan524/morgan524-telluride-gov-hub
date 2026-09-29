@@ -1,0 +1,20 @@
+{
+  "updated": "2026-09-29",
+  "items": {
+    "telluride:summaries": {
+      "level": "YELLOW",
+      "since": "2026-09-29",
+      "what": "Town of Telluride: 1 meeting(s) this week have an agenda but no summary"
+    },
+    "tmvoa:summaries": {
+      "level": "YELLOW",
+      "since": "2026-09-29",
+      "what": "TMVOA: 1 meeting(s) this week have an agenda but no summary"
+    },
+    "votes:freshness": {
+      "level": "YELLOW",
+      "since": "2026-09-29",
+      "what": "Vote Tracker: at least one body is behind (see below)"
+    }
+  }
+}
