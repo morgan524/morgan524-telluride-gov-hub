@@ -112,18 +112,29 @@
     "idPrefix": "bv",
     "rosters": [
       {
+        "start": "2024-01-01",
+        "end": "2024-12-31",
+        "members": [
+          "brown",
+          "waring",
+          "holstrom"
+        ],
+        "_note": "BOCC_2024 in v2/vote-tracker.html"
+      },
+      {
         "start": "2025-01-01",
         "end": null,
         "members": [
-          "caton",
-          "schillaci",
-          "craighead"
+          "brown",
+          "waring",
+          "gleason"
         ],
-        "_note": "Standard 3-commissioner board. Adjust if a seat changed mid-term."
+        "_note": "BOCC_2025 in v2/vote-tracker.html (Gleason District 3 from 2025)"
       }
     ],
     "_warning": "Roster is a placeholder — verify against the actual *_ALL_MEMBERS array in vote-tracker.html before relying on it for backfill.",
-    "_idPrefixNote": "Was 'bocc' — corrected 2026-07-23 to match the ids actually used in v2/vote-tracker.html (bv2024-01 …) and insert-votes.mjs ENTITY_ID_PREFIX."
+    "_idPrefixNote": "Was 'bocc' — corrected 2026-07-23 to match the ids actually used in v2/vote-tracker.html (bv2024-01 …) and insert-votes.mjs ENTITY_ID_PREFIX.",
+    "_rosterNote": "Fixed 2026-09-29: was caton/schillaci/craighead, ids the tracker doesn't have, so every auto-drafted BOCC vote rendered as empty cells."
   },
   "pc": {
     "label": "San Miguel County Planning Commission",

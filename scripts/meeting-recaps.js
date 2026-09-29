@@ -553,7 +553,13 @@ async function draftVotes(entityKey, isoDate, title, transcript, videoUrl, recap
     // voted. Only applied when the model reported NO per-member votes at all;
     // if it named even one, that evidence is kept as-is.
     if (!Object.keys(votes).length && /passed|failed|carried/i.test(v.outcome || '')) {
-      for (const id of roster) votes[id] = 'Voice';
+      // Unanimous by the WHOLE board ("3-0" on a 3-member board) names everyone:
+      // record Yes, not Voice (Morgan, 2026-09-29 — Voice left the heatmap blank
+      // for plainly unanimous BOCC votes). A 5-0 on a 6-member board stays Voice:
+      // we can't tell who didn't vote.
+      const t = parseTally(v.tally);
+      const all = t && t[1] === 0 && t[0] === roster.length ? 'Yes' : 'Voice';
+      for (const id of roster) votes[id] = all;
     }
     // A vote carrying named dissent is the one case we will NOT auto-publish.
     // Voice votes make no claim about individuals, so they are safe. Split
