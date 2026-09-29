@@ -52,6 +52,16 @@ const CHANNELS = [
   // "Town Council Regular Meeting – September 9, 2026". It also posts advisory
   // boards (Sustainability, etc.) — `include` keeps Council + Planning
   // Commission only. Added 2026-09-29.
+  // Ouray County posts Board of County Commissioners recordings to a Vimeo
+  // showcase (linked from ouraycountyco.gov/417/BOCC-Meeting-Recordings), with
+  // English auto-captions. Vimeo's bot check rejects yt-dlp/curl on the player
+  // page (401 "couldn't verify the security of your connection") even with TLS
+  // impersonation, but a real browser loads it, and the signed captions URL it
+  // exposes downloads fine with a plain fetch. So: list via yt-dlp + oEmbed,
+  // captions via Playwright. The showcase id changes yearly — update it here.
+  // Added 2026-09-29.
+  { sourceKey: 'ouray',     sourceLabel: 'Ouray County', kind: 'vimeo',
+    url: 'https://vimeo.com/showcase/12061870', referer: 'https://ouraycountyco.gov/' },
   { sourceKey: 'ridgway',   sourceLabel: 'Town of Ridgway',   url: 'https://www.youtube.com/@townofridgwaycolorado2070/videos',
     include: /town council|planning commission/i },
   // Mountain Village does NOT use YouTube — it publishes to an AV Capture All
@@ -198,6 +208,59 @@ function listChannel(url) {
   try { out = yt(['--flat-playlist', '--playlist-end', '15', '--print', '%(id)s\t%(title)s', url]); }
   catch (e) { console.warn(`  ⚠ could not list ${url}: ${String(e.message || e).slice(0, 80)}`); return []; }
   return out.split('\n').filter(Boolean).map((l) => { const i = l.indexOf('\t'); return { id: l.slice(0, i), title: l.slice(i + 1) }; });
+}
+
+// Vimeo showcase → [{id, title, date}]. yt-dlp can list a showcase's ids
+// (titles come back NA), and Vimeo's public oEmbed endpoint — not behind the
+// bot check — gives each title and upload date.
+async function listVimeo(url) {
+  let out = '';
+  try { out = yt(['--flat-playlist', '--playlist-end', '12', '--print', '%(id)s', url]); }
+  catch (e) { console.warn(`  ⚠ could not list ${url}: ${String(e.message || e).slice(0, 80)}`); return []; }
+  const vids = [];
+  for (const id of out.split('\n').map((x) => x.trim()).filter((x) => /^\d+$/.test(x))) {
+    try {
+      const r = await fetch(`https://vimeo.com/api/oembed.json?url=https://vimeo.com/${id}`);
+      if (!r.ok) continue;
+      const j = await r.json();
+      const title = String(j.title || '').trim();
+      const date = parseDateFromTitle(title) || String(j.upload_date || '').slice(0, 10);
+      if (title) vids.push({ id, title, date: /^\d{4}-\d{2}-\d{2}$/.test(date) ? date : '' });
+    } catch (e) { /* skip this video */ }
+  }
+  return vids;
+}
+
+// Vimeo captions: load the player in a real (headless) browser, read the
+// signed captions.vimeo.com .vtt URL off the <track>/playerConfig, then fetch
+// it plainly. '' when the video has no English track.
+async function fetchVimeoTranscript(id, referer) {
+  const { chromium } = require('playwright');
+  // channel:'chrome' = the real Google Chrome installed on this Mac. Vimeo's bot
+  // check 401s Playwright's bundled Chromium but lets real Chrome through
+  // (verified 2026-09-29). Fall back to bundled if Chrome isn't installed.
+  let browser;
+  try { browser = await chromium.launch({ channel: 'chrome' }); }
+  catch (e) { browser = await chromium.launch(); }
+  try {
+    const page = await browser.newPage({
+      userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+      extraHTTPHeaders: referer ? { Referer: referer } : {},
+    });
+    await page.goto(`https://player.vimeo.com/video/${id}`, { waitUntil: 'domcontentloaded', timeout: 90000 });
+    await page.waitForFunction(() => !!(window.playerConfig && window.playerConfig.request), null, { timeout: 60000 }).catch(() => {});
+    const vtt = await page.evaluate(() => {
+      const tracks = (window.playerConfig && window.playerConfig.request && window.playerConfig.request.text_tracks) || [];
+      const t = tracks.find((x) => /^en/i.test(x.lang || '')) || tracks[0];
+      if (t && t.url) return new URL(t.url, location.origin).href;
+      const el = document.querySelector('track');
+      return el ? el.src : '';
+    });
+    return vtt ? await fetchVtt(vtt) : '';
+  } catch (e) {
+    console.warn(`      ⚠ Vimeo player ${id}: ${String(e.message || e).split('\n')[0]}`);
+    return '';
+  } finally { await browser.close(); }
 }
 
 // The date a YouTube video streamed/was published, as YYYY-MM-DD ('' if
@@ -560,6 +623,7 @@ async function main() {
   let channelFailures = 0;
   for (const ch of channels) {
     const isAv = ch.kind === 'avcapture';
+    const isVimeo = ch.kind === 'vimeo';
     // One source must not be able to take down the others. On 2026-08-06 the
     // Mountain Village listing threw MODULE_NOT_FOUND (playwright absent from
     // the bot checkout's scripts/node_modules) and the uncaught rejection
@@ -567,7 +631,7 @@ async function main() {
     // listed, so nothing was recapped at all that day.
     let vids;
     try {
-      vids = isAv ? await listAvCapture(ch.url) : listChannel(ch.url);
+      vids = isAv ? await listAvCapture(ch.url) : isVimeo ? await listVimeo(ch.url) : listChannel(ch.url);
     } catch (e) {
       channelFailures++;
       console.warn(`  ⚠ ${ch.sourceKey}: could not list meetings (${e.message.split('\n')[0]}) — continuing with other sources`);
@@ -596,9 +660,10 @@ async function main() {
       if (ch.include && !ch.include.test(v.title)) continue;
       const videoUrl = isAv
         ? `https://media.avcaptureall.cloud/meeting/${v.id}`
+        : isVimeo ? `https://vimeo.com/${v.id}`
         : `https://www.youtube.com/watch?v=${v.id}`;
       if (!FORCE && seenVideo.has(videoUrl)) continue;   // before any extra date lookup
-      const date = v.date || parseDateFromTitle(v.title) || (isAv ? '' : streamDate(v.id));
+      const date = v.date || parseDateFromTitle(v.title) || (isAv || isVimeo ? '' : streamDate(v.id));
       if (!date) { continue; }
       const age = daysSince(date);
       if (!FORCE && (age > DAYS || age < 0)) continue;
@@ -609,7 +674,7 @@ async function main() {
       console.log(`  ★ ${ch.sourceKey}  ${date}  ${v.title}`);
       if (DRY) { added.push({ sourceKey: ch.sourceKey, date, title: v.title, videoUrl }); continue; }
 
-      const transcript = isAv ? await fetchVtt(v.vtt) : fetchTranscript(v.id);
+      const transcript = isAv ? await fetchVtt(v.vtt) : isVimeo ? await fetchVimeoTranscript(v.id, ch.referer) : fetchTranscript(v.id);
       if (!transcript || transcript.length < 500) { console.log(`      ⚠ no usable transcript (${transcript.length} chars) — skipping`); continue; }
       const fromCache = recapIsCached(ch, date, v.title, transcript);
       console.log(fromCache
