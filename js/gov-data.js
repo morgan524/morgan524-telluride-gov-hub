@@ -131,7 +131,8 @@ const COUNTY_CACHED_DATA = [
     type: "bocc",
     location: "333 West Colorado Ave, 2nd Floor, Telluride, CO 81435",
     civicClerkId: 1073,
-    note: null
+    note: null,
+    agendaUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/1073/files/agenda/2015"
   },
   {
     date: "October 1, 2026",
@@ -864,7 +865,9 @@ const TELLURIDE_CACHED_DATA = [
     board: "harc",
     location: "Rebekah Hall, 113 W Columbia Ave",
     civicWebId: 8309,
-    time: "5:30 PM"
+    time: "5:30 PM",
+    packetUrl: "https://telluride-co.civicweb.net/document/445284/",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309"
   },
   {
     date: "October 21, 2026",
