@@ -111,7 +111,7 @@
     ophir:     LOGO_BASE + 'Ophir.jpeg',
     rico:      LOGO_BASE + 'Rico%20Town.png',
     ridgway:   LOGO_BASE + 'Ridgway%20Town.png',
-    ouray:     LOGO_BASE + 'Ouray%20Town.png',
+    ouray:     LOGO_BASE + 'Ouray%20County%20logo.png',
     ouraycity: LOGO_BASE + 'City%20of%20Ouray%20Logo.webp',
     airport:   LOGO_BASE + 'Airport.png',
     ttimes:    LOGO_BASE + 'TT%20Logo.png',

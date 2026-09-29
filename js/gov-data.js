@@ -1523,6 +1523,7 @@ const ENTITY_LOGOS = {
   norwood: '<img src="/logo/Norwood%20Town.jpeg" alt="Town of Norwood" style="width:100%;height:100%;object-fit:contain;">',
   ophir: '<img src="/logo/Ophir.jpeg" alt="Town of Ophir" style="width:100%;height:100%;object-fit:contain;">',
   rico: '<img src="/logo/Rico%20Town.png" alt="Town of Rico" style="width:100%;height:100%;object-fit:contain;">',
+  ouray: '<img src="/logo/Ouray%20County%20logo.png" alt="Ouray County" style="width:100%;height:100%;object-fit:contain;">',
   ouraycity: '<img src="/logo/City%20of%20Ouray%20Logo.webp" alt="City of Ouray" style="width:100%;height:100%;object-fit:contain;">',
   ttimes: '<img src="/logo/TT%20Logo.png" alt="The Telluride Times" style="width:100%;height:100%;object-fit:contain;">',
   tjc: '<img src="/logo/Telluride%20Jewish.webp" alt="Telluride Jewish Community" style="width:100%;height:100%;object-fit:contain;">',
@@ -1554,7 +1555,7 @@ const TOWN_IMAGES = {
   rico: '/logo/Rico%20Town.png',
   ouraycity: '/logo/City%20of%20Ouray%20Logo.webp',
   placerville: '/logo/Placerville.png',
-  ouray: '/logo/Ouray%20Town.png',
+  ouray: '/logo/Ouray%20County%20logo.png',
   nucla: '/logo/Nucla%20Town.png',
   naturita: '/logo/Naturita%20Town.png'
 };
