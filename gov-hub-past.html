@@ -67,6 +67,16 @@
     .r-card { grid-template-columns: 72px 1fr; }
     .r-date .e-logo { width: 64px; height: 64px; }
   }
+  /* Phones: date + logo become a single row ON TOP of the card so the title
+     and summary run full width (per Morgan 2026-09-29). */
+  @media (max-width: 600px) {
+    .r-card { grid-template-columns: 1fr; gap: 10px; }
+    .r-date { display: flex; align-items: center; gap: 8px; text-align: left; }
+    .r-date .e-logo { order: -1; width: 44px; height: 44px; margin: 0 6px 0 0; padding: 4px; border-radius: 8px; }
+    .r-date .m { font-size: 12px; }
+    .r-date .d { font-size: 24px; line-height: 1; }
+    .r-date .y { font-size: 12px; }
+  }
 </style>
 </head>
 <body>
