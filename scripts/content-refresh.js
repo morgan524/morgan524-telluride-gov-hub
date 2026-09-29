@@ -5702,7 +5702,14 @@ function rebuildOphirMeetings(existing, now = new Date()) {
 // any fetch/parse failure (a transient error never wipes the committed list).
 // Added 2026-09-29 (Morgan): "I am not seeing listings for … Ouray".
 const OURAY_CITY_BOARDBOOK = 'https://meetings.boardbook.org/Public/Organization/2503';
-async function syncOurayCityMeetings(now = new Date()) {
+// One BoardBook fetch per run: the rebuild step and fetchUpcomingMeetings()
+// (called by two tasks) all share this promise.
+let _ourayCityOnce = null;
+function syncOurayCityMeetings(now = new Date()) {
+  if (!_ourayCityOnce) _ourayCityOnce = _syncOurayCityMeetings(now);
+  return _ourayCityOnce;
+}
+async function _syncOurayCityMeetings(now) {
   console.log('\n🏔  Syncing City of Ouray meetings from BoardBook...');
   let resp;
   try { resp = await fetch(OURAY_CITY_BOARDBOOK); }
