@@ -580,6 +580,8 @@ async function draftVotes(entityKey, isoDate, title, transcript, videoUrl, recap
       vals.every((x) => x === 'Yes') && vals.length === voteTally[0];
     if (!isVoice && vals.length > 0 && !unanimousAsTallied) reviewReasons.push('split-vote attribution (caption names are unreliable)');
     if (tallyDisagrees) reviewReasons.push(`tally disagreement: vote pass ${voteTally.join('-')} vs recap pass ${recapTally.join('-')}`);
+    // needsReview is informational now: insert-votes.mjs publishes these
+    // best-effort and prints the reasons (Morgan, 2026-09-29).
     return {
       needsReview: reviewReasons.length > 0,
       reviewReasons,

@@ -19,7 +19,7 @@
  * before committing.
  */
 
-import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, renameSync, mkdirSync } from 'node:fs';
 import { resolve, dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -47,6 +47,17 @@ const pending = allFiles.map(f => ({
 }));
 pending.sort((a, b) => a.data.date.localeCompare(b.data.date));
 console.log(`Loaded ${pending.length} pending files`);
+
+// Once a draft's votes are in the tracker, move it to pending/done/ so a later
+// run never re-reads it. With per-motion dedup (below), a vote whose title was
+// later edited by hand would otherwise look "new" and be inserted twice.
+function archivePending() {
+  if (DRY_RUN) return;
+  const doneDir = join(PENDING_DIR, 'done');
+  mkdirSync(doneDir, { recursive: true });
+  for (const p of pending) renameSync(join(PENDING_DIR, p.file), join(doneDir, p.file));
+  if (pending.length) console.log(`  archived ${pending.length} draft(s) → scripts/pending/done/`);
+}
 
 // ─────── Identify dates already committed in tracker ─────────────
 // Scope by ID prefix so Town of MV (mv) doesn't get confused with
@@ -79,31 +90,51 @@ const committedDates = new Set(
   [...tracker.matchAll(entityEntryRe)].map(m => m[1])
 );
 
-// Entries flagged needsReview (split votes with per-member attributions) are
-// never auto-published: caption-derived attribution of a NAMED person's vote is
-// the highest-consequence error this tool can make. They stay in
-// scripts/pending/ for a human to confirm and insert deliberately.
+// Entries flagged needsReview (split votes, abstentions, a named-member count
+// that doesn't match the tally) USED to be held here for a human. Morgan
+// (2026-09-29): publish best-effort instead and accept some caption-attribution
+// error — nobody will be confirming them, and holding them left the tracker
+// months behind. The reasons are still printed so the run log shows them.
 for (const p of pending) {
-  const all = p.data.entries || [];
-  const held = all.filter((e) => e.needsReview);
-  if (held.length) {
-    p.data.entries = all.filter((e) => !e.needsReview);
-    console.log(`  HOLD ${p.data.date}: ${held.length} vote(s) need human confirmation:`);
-    for (const h of held) {
+  const noted = (p.data.entries || []).filter((e) => e.needsReview);
+  if (noted.length) {
+    console.log(`  NOTE ${p.data.date}: publishing ${noted.length} best-effort vote(s) with review notes:`);
+    for (const h of noted) {
       console.log(`         - ${h.tally} ${h.title.slice(0, 64)}`);
       for (const r of (h.reviewReasons || ['flagged'])) console.log(`             · ${r}`);
     }
   }
 }
 
+// Per-MOTION dedup. Skipping a whole date once any of its votes was committed
+// stranded every vote that was held on the first pass — they could never be
+// added later. Instead, drop only the entries whose (date, title) is already in
+// the tracker, and insert the rest.
+const normTitle = (t) => String(t || '').toLowerCase().replace(/&[a-z#0-9]+;/g, ' ').replace(/[^a-z0-9]+/g, ' ').trim();
+const committedTitles = new Map();   // date → Set(normalized titles)
+{
+  const entryRe = new RegExp(
+    `["']?id["']?\\s*:\\s*['"]${idPrefix}\\d+-[^'"]+['"][^}]*?["']?date["']?\\s*:\\s*['"](\\d{4}-\\d{2}-\\d{2})['"][^}]*?["']?title["']?\\s*:\\s*(?:'((?:[^'\\\\]|\\\\.)*)'|"((?:[^"\\\\]|\\\\.)*)")`,
+    'gs'
+  );
+  for (const m of tracker.matchAll(entryRe)) {
+    const d = m[1], t = normTitle((m[2] || m[3] || '').replace(/\\(.)/g, '$1'));
+    if (!committedTitles.has(d)) committedTitles.set(d, new Set());
+    committedTitles.get(d).add(t);
+  }
+}
+for (const p of pending) {
+  const have = committedTitles.get(p.data.date);
+  if (!have) continue;
+  const before = p.data.entries.length;
+  p.data.entries = p.data.entries.filter((e) => !have.has(normTitle(e.title)));
+  if (before !== p.data.entries.length) console.log(`  ${p.data.date}: ${before - p.data.entries.length} of ${before} already in the tracker`);
+}
+
 // ─────── Filter pending: skip committed dates, skip empty meetings ─
 const toInsert = pending.filter(p => {
   if (p.data.entries.length === 0) {
-    console.log(`  SKIP ${p.data.date}: 0 entries (likely all Exec Session)`);
-    return false;
-  }
-  if (committedDates.has(p.data.date)) {
-    console.log(`  SKIP ${p.data.date}: already committed (${p.data.entries.length} extracted entries not added)`);
+    console.log(`  SKIP ${p.data.date}: nothing new (already in the tracker, or all procedural)`);
     return false;
   }
   return true;
@@ -111,6 +142,7 @@ const toInsert = pending.filter(p => {
 
 if (toInsert.length === 0) {
   console.log('\nNothing new to insert.');
+  archivePending();
   process.exit(0);
 }
 
@@ -347,5 +379,6 @@ if (DRY_RUN) {
 } else {
   writeFileSync(TRACKER_PATH, merged);
   console.log(`\n✓ Wrote ${merged.length - tracker.length} new chars to v2/vote-tracker.html`);
+  archivePending();
   console.log('Next: review with `git diff v2/vote-tracker.html` then commit.');
 }
