@@ -8391,7 +8391,9 @@ function getTellurideMeetings() {
       description,
       eventDate,
       eventDates: '',
-      eventTimes: m.time || '5:00 PM',
+      // Real CivicWeb time only. The old '5:00 PM' default showed the wrong
+      // hour for specials (Sep 30 2026 HARC was 5:30 PM) — blank beats wrong.
+      eventTimes: m.time || '',
       location: m.location || 'Rebekah Hall, 201 N. Pine Street, Telluride',
       source: 'telluride',
       sourceLabel: 'Town of Telluride',

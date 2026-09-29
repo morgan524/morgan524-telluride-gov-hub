@@ -1173,6 +1173,19 @@ function parseZoomFromAgenda(text, urls) {
  * that page; extractAgendaText can scrape it because it's static HTML
  * (no SPA shell, unlike CivicClerk).
  */
+// Start time of a CivicWeb meeting record, as "4:00 PM" ('' when absent).
+// CivicWeb sends MeetingDateTime as "2026-10-07 16:00" (space, not "T") plus a
+// ready-made MeetingTime "04:00 PM". The old /T(\d{2}):/ match never hit the
+// space form, so every Town meeting shipped with no time, and HARC fell back to
+// a hard-coded "5:00 PM" that was wrong for the Sep 30 2026 5:30 PM special
+// (Morgan 2026-09-29). Accept either separator; fall back to MeetingTime.
+function civicWebTime(m) {
+  const tm = String((m && m.MeetingDateTime) || '').match(/[T ](\d{2}):(\d{2})/);
+  if (tm) { const h = parseInt(tm[1], 10); return `${((h + 11) % 12) + 1}:${tm[2]} ${h >= 12 ? 'PM' : 'AM'}`; }
+  const t = String((m && m.MeetingTime) || '').trim();
+  return /^\d{1,2}:\d{2}\s*[AP]M$/i.test(t) ? t.replace(/^0/, '').toUpperCase() : '';
+}
+
 async function fetchTownTellurideMeetings(now, horizon) {
   const out = [];
   const fromStr = now.toISOString().split('T')[0];                // YYYY-MM-DD
@@ -1224,6 +1237,7 @@ async function fetchTownTellurideMeetings(now, horizon) {
       agendaUrl,
       hasAgenda: !!agendaUrl && m.Published === true,
       agendaSeedText: seedParts.join('\n'),
+      time: civicWebTime(m),
     });
   }
   return out;
@@ -5504,6 +5518,7 @@ async function rebuildTellurideHarcMeetings(existing, now = new Date()) {
       location: 'Rebekah Hall, 113 W Columbia Ave',
     };
     if (id) row.civicWebId = Number(id);
+    if (m.time) row.time = m.time;   // the Town's own start time — never a guess
     // A packet URL already patched in, and any hand-written note, outlive the
     // rebuild — syncTellurideAgendas would re-patch the URL, but not the note.
     const prior = priorByDate.get(date);
@@ -5991,15 +6006,7 @@ async function syncTellurideBoardMeetings() {
     const dedup = dateKey + '|' + title.toLowerCase();
     if (seen.has(dedup)) continue;
     seen.add(dedup);
-    // CivicWeb sends MeetingDateTime as "2026-10-07 16:00" (space, not "T") plus
-    // a ready-made MeetingTime "04:00 PM". The old /T(\d{2}):/ match never hit
-    // the space form, so every Town meeting shipped with no time (Morgan
-    // 2026-09-29: "I don't see the meeting times"). Accept either separator and
-    // fall back to MeetingTime; drop the leading zero ("4:00 PM").
-    let time = '';
-    const tm = String(m.MeetingDateTime || '').match(/[T ](\d{2}):(\d{2})/);
-    if (tm) { const h = parseInt(tm[1], 10); time = `${((h + 11) % 12) + 1}:${tm[2]} ${h >= 12 ? 'PM' : 'AM'}`; }
-    else if (/^\d{1,2}:\d{2}\s*[AP]M$/i.test(String(m.MeetingTime || '').trim())) time = String(m.MeetingTime).trim().replace(/^0/, '').toUpperCase();
+    const time = civicWebTime(m);
     out.push({
       date: dateKey,
       title,
