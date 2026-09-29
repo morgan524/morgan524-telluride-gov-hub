@@ -1,12 +1,4 @@
 {
- "4f163d247e06b3c5": {
-  "lede": "Blues & Brews takes over Town Park this weekend, and if you're heading down for the music, carve out fifteen minutes to help assemble Emergency Go Kits at the festival — free preparedness supplies headed to vulnerable families across San Miguel, Ouray, and Montrose Counties, which feels like the right thing to do in the middle of a good time. Over in Norwood, the Wild Roots Revival gathers at the Livery on Saturday for a full day of community and inner exploration tied to the Fall Equinox, and up in Ouray, the Mountain Trail Run loops the whole perimeter of town to raise money for the school.",
-  "at": "2026-09-12"
- },
- "4c91d23dd4bb9be6": {
-  "lede": "The biggest thing on the calendar this week is a Telluride Housing Authority Subcommittee special meeting Monday that digs into a problem people don't talk about enough: mitigation units — including some at Element 52 — that don't meet current standards, with a few that have no windows at all. That same Tuesday, the county's housing code working group holds its eighth session refining the proposed Community Housing Zone, while Wednesday brings a HARC work session on a possible demolition and rebuild of Rebekah Hall — the Town-owned building where HARC itself meets — and the BOCC takes up everything from a 1999 view plain settlement to seed funding for a new Chamber of Commerce.",
-  "at": "2026-09-13"
- },
  "88aa8c9e12f1b617": {
   "lede": "The biggest thing on the calendar this week is Tuesday, when both the Telluride Housing Authority and Town Council take up the same consequential question: whether to strip the maximum sale price from two town-constructed units at 215 East Colorado Avenue — FINO 1A and 2A — converting them from affordable ownership units to employee dwelling units, a structural change to how those homes work in the local housing stock. Council also holds public hearings on the sale of Spruce House Unit H. On Thursday, San Miguel County hosts a cross-jurisdictional 5x5 meeting at Wilkinson Public Library, with a conversation about a Southern Ute gas enterprise pipeline spill on the agenda — the kind of regional environmental issue that doesn't often get this kind of room.",
   "at": "2026-09-15"
@@ -158,5 +150,13 @@
  "2ab7b3d4da23c78c": {
   "lede": "The big one this Saturday is Ouray's **150th Anniversary Concert** — **Big Head Todd and the Monsters** with **Hazel Miller & The Collective** playing free at **Fellin Park** from 4 to 8 PM, set right against those San Juan peaks, and it's hard to imagine a better way to mark 150 years of this town. Friday night has plenty going on too: **Pink Talking Fish** brings their Pink Floyd–Talking Heads–Phish fusion to the **Sheridan Opera House** in Telluride, while down in Ridgway the **First Friday Art Walk** and a set by **Roma Ransom** at **Floating Lotus Brewery** give you good reason to head down-valley. Then Sunday, Ridgway closes out the weekend with the **Ridgway 1K ~ Rally thru the Alley** — a costumed, downhill, six-block fun run where finishing first means finishing last, capped off with Oktoberfest and polka from **Blue Camoose**.",
   "at": "2026-09-28"
+ },
+ "aefbc3c833c72424": {
+  "lede": "The meeting to put on your radar this week is **Town Council** on Tuesday, which opens with a work session on automated license plate reader cameras — the Flock Safety system — with Chief Marshal Josh Comte presenting; wherever ALPR technology lands it tends to split a room, so that conversation is worth showing up for or at least following closely. Tuesday also brings a public hearing on extending the vesting period for property rights at 221 W Colorado, a project whose Certificate of Appropriateness expires October 18. Also on Wednesday, the **Telluride Housing Authority Subcommittee**, the **Board of County Commissioners**, and Mountain Village's **Town Council** all meet, with agendas still pending, and the **SMART Board of Directors** and **Planning Commission** convene on Thursday. Monday's **Open Space Commission** and Wednesday's **Ecology Commission** round out a genuinely full week of public business. On the lighter side, **Not-So-Young People's Theater: Shrek The Musical** hits the **Sheridan Opera House** on Thursday, **A Monster Calls: Movie Night @ the Wright** screens in Ouray on Wednesday, and **Alysha Brilla** brings her JUNO-nominated sound to The Sherbino in Ridgway on Saturday.",
+  "at": "2026-09-29"
+ },
+ "f0265dd341c418ac": {
+  "lede": "The big draw this Friday is **Pink Talking Fish** at the **Sheridan Opera House**, weaving Pink Floyd, Talking Heads, and Phish into one seamless show — a rare night for this historic room. Over in Ouray, the town's 150th anniversary is the real centerpiece of the whole weekend: Friday brings a black-tie gala at the **Beaumont Hotel**, and Saturday **Big Head Todd and the Monsters** headline a free concert in **Fellin Park** with **Hazel Miller & The Collective** opening against those San Juan peaks. Then on Sunday, Ridgway closes it out with the first-ever **San Juan Oktoberfest** in Hartwell Park, polka band and all.",
+  "at": "2026-09-29"
  }
 }
