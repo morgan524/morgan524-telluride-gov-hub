@@ -230,6 +230,24 @@ Note `MANUAL_SUMMARIES` and `MEETING_PREVIEWS` live in **`js/gov-helpers.js`**
 (~lines 940 and 503), not `gov-data.js`. `AI_SUMMARIES` is Firestore-backed and
 inlined ONLY on `gov-hub.html`, so it's empty in any node-side render.
 
+## Meeting start times: real times only, shown everywhere
+
+**Rule (Morgan, 2026-09-29):** every meeting shows its start time on Gov-Hub,
+the homepage and both digests, and the time must come from the body's own
+calendar. **Never default a guessed hour.** HARC used to fall back to a
+hard-coded "5:00 PM", which was wrong for the Sep 30 2026 5:30 PM special.
+If no time was published, show none.
+
+- Getters emit the hour as `eventTimes`. `build-week-meetings.js` maps it to
+  `time` in `data/week-meetings.json`, which Gov-Hub and the homepage render.
+  `scripts/weekly-email.js` puts it in the meeting date badge
+  ("WED, OCT 7 · 4:00 PM").
+- Town of Telluride times come from CivicWeb through `civicWebTime()` in
+  `scripts/content-refresh.js`. CivicWeb's `MeetingDateTime` is
+  `"YYYY-MM-DD HH:MM"` with a **space**, not a `T`.
+- Rico's 7:00 PM is its standing third-Wednesday schedule (the dates are
+  projected the same way), not a guess.
+
 ## Featured organization rotation is week-anchored
 
 `featuredOrgIndex()` (duplicated in `scripts/weekly-email.js` and
