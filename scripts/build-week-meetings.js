@@ -159,10 +159,12 @@ function buildWeekMeetings(repoRoot) {
           ? !isPlaceholderSummary(summary)
           : !!m.hasAgenda,
         summary: String(summary || '').trim(),
-        zoomLink: String(meta.zoomUrl || zoomLink || ''),
-        zoomMeetingId: String(meta.meetingId || ''),
-        zoomPasscode: String(meta.passcode || zoomPasscode || ''),
-        zoomPhone: String(meta.phone || ''),
+        // Last fallback: a getter's own standing room (m.zoomUrl etc. — e.g.
+        // City of Ouray's published Council / Planning Commission Zoom).
+        zoomLink: String(meta.zoomUrl || zoomLink || m.zoomUrl || ''),
+        zoomMeetingId: String(meta.meetingId || m.zoomMeetingId || ''),
+        zoomPasscode: String(meta.passcode || zoomPasscode || m.zoomPasscode || ''),
+        zoomPhone: String(meta.phone || m.zoomPhone || ''),
         livestream: (remote[source] && remote[source].livestream) || '',
         commentEmail: commentEmailFor(source, title),
       });

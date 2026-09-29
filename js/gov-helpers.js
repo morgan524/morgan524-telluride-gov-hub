@@ -8023,6 +8023,15 @@ function getOurayCityMeetings() {
     }
     project('pc', nth(y, mo, 2, 2), '4:00 PM', 'Ouray Planning Commission Regular Meeting');
   }
+  // Standing Zoom (OURAY_CITY_ZOOM, from the City's own pages). Council's room
+  // is published for REGULAR meetings only; the Planning Commission's for all.
+  const zoomCfg = (typeof OURAY_CITY_ZOOM !== 'undefined') ? OURAY_CITY_ZOOM : {};
+  for (const m of out) {
+    const z = m.category === 'Planning Commission' ? zoomCfg.pc
+      : (/regular/i.test(m.title || '') ? zoomCfg.council : null);
+    if (!z) continue;
+    m.zoomUrl = z.zoomUrl; m.zoomMeetingId = z.meetingId; m.zoomPasscode = z.passcode; m.zoomPhone = z.phone;
+  }
   return out.sort((a, b) => a.eventDate - b.eventDate);
 }
 

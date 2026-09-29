@@ -808,6 +808,15 @@ const RIDGWAY_COUNCIL_URL = 'https://townofridgway.colorado.gov/i-want-to/ridgwa
 // adds the regular Council / Planning Commission meetings from the City's
 // published schedule until BoardBook posts them (~a week ahead).
 const OURAY_CITY_URL = 'https://meetings.boardbook.org/Public/Organization/2503';
+// Standing Zoom rooms, copied from the City's own pages (verified 2026-09-29):
+// cityofouray.com/city_offices/city_council/ ("Join the City Council Regular
+// Meetings via Zoom") and …/committees___boards/planning_commission.php.
+// BoardBook agendas carry no Zoom info, so getOurayCityMeetings() attaches
+// these: Council → REGULAR meetings only (as the City states); PC → all.
+const OURAY_CITY_ZOOM = {
+  council: { zoomUrl: 'https://zoom.us/j/9349389230',  meetingId: '934 938 9230',  passcode: '491878', phone: '408-638-0968' },
+  pc:      { zoomUrl: 'https://zoom.us/j/98645657434', meetingId: '986 4565 7434', passcode: '788405', phone: '346-248-7799' },
+};
 const OURAY_CITY_CACHED_DATA = [
   {
     date: "September 21, 2026",

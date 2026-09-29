@@ -986,6 +986,25 @@ async function fetchUpcomingMeetings() {
     }
   } catch (e) { console.warn('  Ouray County RSS error:', e.message); }
 
+  // City of Ouray — BoardBook (see syncOurayCityMeetings). Only meetings whose
+  // agenda has posted; the BoardBook agenda page is plain HTML with the full
+  // numbered item list, which extractAgendaText reads directly. Title is the
+  // card title verbatim so the summary key (source|date|title) matches exactly.
+  try {
+    const rows = await syncOurayCityMeetings(now) || [];
+    const pad = (n) => String(n).padStart(2, '0');
+    for (const r of rows) {
+      const d = new Date(r.date);
+      if (!r.agendaUrl || isNaN(d) || d < new Date(now.getFullYear(), now.getMonth(), now.getDate()) || d > horizon) continue;
+      meetings.push({
+        source: 'ouraycity',
+        date: d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()),
+        title: r.title,
+        agendaUrl: r.agendaUrl,
+      });
+    }
+  } catch (e) { console.warn('  City of Ouray BoardBook error:', e.message); }
+
   return meetings;
 }
 
@@ -1097,6 +1116,15 @@ async function extractAgendaText(url) {
       .replace(/&gt;/g, '>')
       .replace(/\s+/g, ' ')
       .trim();
+    // BoardBook (City of Ouray) agenda pages wrap the item list in menu /
+    // help / footer chrome — keep only "<Month D, YYYY at …> Agenda … Web Viewer".
+    if (/meetings\.boardbook\.org\/Public\/Agenda\//i.test(url)) {
+      const m = text.match(/(?:[A-Z][a-z]+ \d{1,2}, \d{4} at [^A]*?)?Agenda Agenda ([\s\S]*?)(?:Web Viewer|<< Back to the Public Page|$)/);
+      if (m && m[1] && m[1].length > 40) {
+        const head = (text.match(/Hide Everything (.+?) Agenda Agenda/) || [])[1] || '';
+        text = (head ? head + '. ' : '') + 'Agenda: ' + m[1].trim();
+      }
+    }
     return { text: text.slice(0, MAX_AGENDA_TEXT), urls };
   } catch (e) {
     console.warn('  Agenda extract error:', e.message);
