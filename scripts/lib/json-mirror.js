@@ -68,6 +68,7 @@ const MIRROR_GOVDATA_ARRAYS = [
   'COUNTY_CACHED_DATA', 'NORWOOD_CACHED_DATA', 'OPHIR_CACHED_DATA', 'SCHOOL_CACHED_DATA',
   'TELLURIDE_CACHED_DATA', 'MV_CACHED_DATA', 'MED_CACHED_DATA', 'SMART_CACHED_DATA',
   'FIRE_CACHED_DATA', 'RIDGWAY_CACHED_DATA', 'AIRPORT_CACHED_DATA',
+  'OURAY_CITY_CACHED_DATA',   // BOT-REBUILT from BoardBook each run
   // deep-dive page index (hand-edited config; redesign reads the JSON)
   'DEEP_DIVE_PAGES',
   // local orgs directory (hand-edited config; redesign local-orgs reads the JSON)

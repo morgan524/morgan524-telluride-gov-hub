@@ -39,6 +39,7 @@ const GETTERS = [
   ['ridgway',   'Town of Ridgway',                  'getRidgwayMeetings'],
   ['rico',      'Town of Rico',                     'getRicoMeetings'],
   ['ouray',     'Ouray County',                     'getOurayMeetings'],
+  ['ouraycity', 'City of Ouray',                    'getOurayCityMeetings'],
   ['smart',     'SMART Transit',                    'getSmartMeetings'],
   ['airport',   'Telluride Regional Airport',       'getAirportMeetings'],
   ['tmvoa',     'TMVOA',                            'getTMVOAMeetings'],
@@ -59,6 +60,8 @@ const COMMENT_MAP = {
   norwood:            'cross@norwoodtown.com',
   ophir:              'clerk@ophir.us',
   rico:               'townclerk@ricocolorado.gov',
+  ouraycity:          'clerk@cityofouray.com',
+  'ouraycity-planning': 'planning@cityofouray.com',
   airport:            'info@tellurideairport.com',
 };
 function commentEmailFor(source, title) {
@@ -66,6 +69,7 @@ function commentEmailFor(source, title) {
   const t = String(title || '').toLowerCase();
   if (key === 'county' && /planning/.test(t)) key = 'county-planning';
   if (key === 'mv' && /planning|design review/.test(t)) key = 'mv-planning';
+  if (key === 'ouraycity' && /planning/.test(t)) key = 'ouraycity-planning';
   if (key === 'telluride' && /harc|historic|architectural review/.test(t)) key = 'telluride-harc';
   return COMMENT_MAP[key] || '';
 }

@@ -801,6 +801,36 @@ const RICO_BOARD_URL = 'https://townofrico.colorado.gov/government/board-of-trus
 
 const RIDGWAY_COUNCIL_URL = 'https://townofridgway.colorado.gov/i-want-to/ridgway-town-council';
 
+// City of Ouray (the city government, not Ouray County): City Council and
+// Planning Commission, from BoardBook Premier org 2503. OURAY_CITY_CACHED_DATA
+// is REBUILT every content refresh by syncOurayCityMeetings() in
+// scripts/content-refresh.js — hand edits are overwritten. getOurayCityMeetings()
+// adds the regular Council / Planning Commission meetings from the City's
+// published schedule until BoardBook posts them (~a week ahead).
+const OURAY_CITY_URL = 'https://meetings.boardbook.org/Public/Organization/2503';
+const OURAY_CITY_CACHED_DATA = [
+  {
+    date: "September 21, 2026",
+    time: "6:00 PM",
+    title: "Ouray City Council Regular Meeting",
+    board: "council",
+    location: "Ouray Community Center, 320 6th Ave, Ouray, CO 81427",
+    boardbookId: 765213,
+    agendaUrl: "https://meetings.boardbook.org/Public/Agenda/2503?meeting=765213",
+    packetUrl: "https://meetings.boardbook.org/Public/DownloadAgenda/2503?meeting=765213"
+  },
+  {
+    date: "September 30, 2026",
+    time: "9:00 AM",
+    title: "Ouray City Council Work Session",
+    board: "council",
+    location: "Ouray Community Center, 320 6th Ave, Ouray, CO 81427",
+    boardbookId: 769742,
+    agendaUrl: "https://meetings.boardbook.org/Public/Agenda/2503?meeting=769742",
+    packetUrl: "https://meetings.boardbook.org/Public/DownloadAgenda/2503?meeting=769742"
+  }
+];
+
 const RIDGWAY_CACHE_DATE = '2026-09-29';
 
 // Ridgway meeting stubs. Town Council = 2nd Wednesday @ 6:00 PM; Planning
@@ -1269,6 +1299,7 @@ const ENTITY_LOGOS = {
   norwood: '<img src="/logo/Norwood%20Town.jpeg" alt="Town of Norwood" style="width:100%;height:100%;object-fit:contain;">',
   ophir: '<img src="/logo/Ophir.jpeg" alt="Town of Ophir" style="width:100%;height:100%;object-fit:contain;">',
   rico: '<img src="/logo/Rico%20Town.png" alt="Town of Rico" style="width:100%;height:100%;object-fit:contain;">',
+  ouraycity: '<img src="/logo/Ouray%20Town.png" alt="City of Ouray" style="width:100%;height:100%;object-fit:contain;">',
   ttimes: '<img src="/logo/TT%20Logo.png" alt="The Telluride Times" style="width:100%;height:100%;object-fit:contain;">',
   tjc: '<img src="/logo/Telluride%20Jewish.webp" alt="Telluride Jewish Community" style="width:100%;height:100%;object-fit:contain;">',
   tf: '<img src="/logo/Telluride%20Foundation.png" alt="Telluride Foundation" style="width:100%;height:100%;object-fit:contain;">',
@@ -1297,6 +1328,7 @@ const TOWN_IMAGES = {
   ridgway: '/logo/Ridgway%20Town.png',
   ophir: '/logo/Ophir.jpeg',
   rico: '/logo/Rico%20Town.png',
+  ouraycity: '/logo/Ouray%20Town.png',
   placerville: '/logo/Placerville.png',
   ouray: '/logo/Ouray%20Town.png',
   nucla: '/logo/Nucla%20Town.png',
@@ -1315,6 +1347,7 @@ const SOURCE_SHORT_NAME = {
   smb: 'Basin Forum',
   ophir: 'Ophir',
   rico: 'Rico',
+  ouraycity: 'Ouray',
   airport: 'TEX',
   wilkinson: 'Wilkinson',
   tmvoa: 'TMVOA'
@@ -1359,6 +1392,7 @@ const ENTITY_ADDRESS = {
   norwood:   'Town of Norwood, 1670 Naturita St, Norwood, CO 81423',
   ophir:     'Town of Ophir, CO 81426',
   rico:      'Rico Town Hall, 2 Commercial St, Rico, CO 81332',
+  ouraycity: 'Ouray Community Center, 320 6th Ave, Ouray, CO 81427',
   airport:   'Terminal Observation Lounge, Telluride Regional Airport, Telluride, CO 81435',
   ttimes:    'Telluride, CO',
   tmvoa:     'Mountain Village, CO 81435'

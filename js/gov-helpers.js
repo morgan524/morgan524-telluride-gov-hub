@@ -7964,6 +7964,68 @@ function getTMVOAMeetings() {
 // stubs (each tagged board:'council'|'pc') and pulls the agenda/packet PDF
 // from RIDGWAY_AGENDA_MAP by date (the bot refreshes that map from the two
 // colorado.gov board pages every 6h). Same single "Town of Ridgway" entity.
+// City of Ouray (the city government; Ouray County is getOurayMeetings()).
+// Real rows come from BoardBook (OURAY_CITY_CACHED_DATA, rebuilt every refresh)
+// with the actual start time, address and agenda/packet PDF. BoardBook lists a
+// meeting only once its agenda posts (~a week out), so the City's published
+// regular schedule fills the weeks beyond: City Council 1st & 3rd Monday at
+// 6:00 PM (a Monday holiday moves it to Tuesday — Labor Day 2026 → Tue Sep 8,
+// which BoardBook confirms) and Planning Commission 2nd Tuesday at 4:00 PM.
+// A projected meeting is dropped as soon as BoardBook has that body within
+// two days of it.
+function getOurayCityMeetings() {
+  const rows = (typeof OURAY_CITY_CACHED_DATA !== 'undefined') ? OURAY_CITY_CACHED_DATA : [];
+  const listUrl = (typeof OURAY_CITY_URL !== 'undefined') ? OURAY_CITY_URL : 'https://meetings.boardbook.org/Public/Organization/2503';
+  const LOC = 'Ouray Community Center, 320 6th Ave, Ouray, CO 81427';
+  const base = (m) => ({
+    eventDates: '', source: 'ouraycity', sourceLabel: 'City of Ouray', canceled: false,
+    category: m.board === 'pc' ? 'Planning Commission' : (/work session/i.test(m.title || '') ? 'Work Session' : 'City Council'),
+  });
+  const out = rows.map(m => Object.assign(base(m), {
+    title: m.title,
+    link: m.agendaUrl || listUrl,
+    description: m.note || '',
+    eventDate: localDate(m.date),
+    eventTimes: m.time || '',
+    location: m.location || LOC,
+    hasAgenda: !!m.agendaUrl,
+    agendaLink: m.agendaUrl || null,
+    packetUrl: m.packetUrl || null,
+  }));
+
+  const pad = (n) => String(n).padStart(2, '0');
+  const key = (d) => d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+  const nth = (y, mo, dow, n) => { const f = new Date(y, mo, 1).getDay(); return new Date(y, mo, 1 + ((dow - f + 7) % 7) + 7 * (n - 1)); };
+  const lastMon = (y, mo) => { const d = new Date(y, mo + 1, 0); d.setDate(d.getDate() - ((d.getDay() + 6) % 7)); return d; };
+  const holidays = (y) => new Set([nth(y, 0, 1, 3), nth(y, 1, 1, 3), lastMon(y, 4), nth(y, 8, 1, 1),
+    new Date(y, 0, 1), new Date(y, 6, 4), new Date(y, 10, 11), new Date(y, 11, 25)].map(key));
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const horizon = new Date(today.getTime() + 60 * 86400000);
+  // Only a REGULAR meeting stands in for a projected one — a work session or
+  // special at 4 PM must not hide the 6 PM regular meeting the same day.
+  const posted = (board, d) => rows.some(m => (m.board || 'council') === board && !/work session|special|joint/i.test(m.title || '') && Math.abs(localDate(m.date) - d) <= 2 * 86400000);
+  const project = (board, d, time, title) => {
+    if (d < today || d > horizon || posted(board, d)) return;
+    out.push(Object.assign(base({ board, title }), {
+      title, link: listUrl,
+      description: "Regular meeting on the City of Ouray's published schedule. The agenda is usually posted on BoardBook about a week ahead.",
+      eventDate: d, eventTimes: time, location: LOC,
+      hasAgenda: false, agendaLink: null, packetUrl: null,
+    }));
+  };
+  for (let i = 0; i <= 2; i++) {
+    const b = new Date(today.getFullYear(), today.getMonth() + i, 1);
+    const y = b.getFullYear(), mo = b.getMonth(), hol = holidays(y);
+    for (const n of [1, 3]) {
+      let d = nth(y, mo, 1, n);
+      if (hol.has(key(d))) d = new Date(y, mo, d.getDate() + 1);
+      project('council', d, '6:00 PM', 'Ouray City Council Regular Meeting');
+    }
+    project('pc', nth(y, mo, 2, 2), '4:00 PM', 'Ouray Planning Commission Regular Meeting');
+  }
+  return out.sort((a, b) => a.eventDate - b.eventDate);
+}
+
 function getRidgwayMeetings() {
   if (typeof RIDGWAY_CACHED_DATA === 'undefined') return [];
   const amap = (typeof RIDGWAY_AGENDA_MAP !== 'undefined') ? RIDGWAY_AGENDA_MAP : {};

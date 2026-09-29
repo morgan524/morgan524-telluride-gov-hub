@@ -5665,6 +5665,60 @@ function rebuildOphirMeetings(existing, now = new Date()) {
 // ("second Wednesday of the month", per the town's own page). Planning
 // Commission is as-needed (no placeholder). Agenda URLs resolve from
 // RIDGWAY_AGENDA_MAP by date at render time, so placeholders need none here.
+// City of Ouray (the CITY government — Ouray County is a separate source) posts
+// City Council and Planning Commission meetings on BoardBook Premier, org 2503.
+// There is no feed; the public list page is a plain HTML table
+// (#PublicMeetingsTable), one <tr> per meeting, whose first cell reads
+// "September 30, 2026 at 9:00 AM - Ouray City Council Work Session". Returns
+// [{date,time,title,board,location,boardbookId,agendaUrl,packetUrl}] or null on
+// any fetch/parse failure (a transient error never wipes the committed list).
+// Added 2026-09-29 (Morgan): "I am not seeing listings for … Ouray".
+const OURAY_CITY_BOARDBOOK = 'https://meetings.boardbook.org/Public/Organization/2503';
+async function syncOurayCityMeetings(now = new Date()) {
+  console.log('\n🏔  Syncing City of Ouray meetings from BoardBook...');
+  let resp;
+  try { resp = await fetch(OURAY_CITY_BOARDBOOK); }
+  catch (e) { console.warn(`  BoardBook fetch error: ${e.message}`); return null; }
+  const html = (resp && resp.text) || '';
+  if (resp.status !== 200 || !/PublicMeetingsTable/.test(html)) {
+    console.warn(`  BoardBook HTTP ${resp && resp.status} / no meetings table — preserving existing OURAY_CITY_CACHED_DATA`);
+    return null;
+  }
+  const dec = (s) => String(s || '').replace(/&amp;/g, '&').replace(/&#39;|&#x27;/g, "'")
+    .replace(/&quot;/g, '"').replace(/&nbsp;/g, ' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+  const lookback = new Date(now.getTime() - 21 * 86400000);
+  const horizon = new Date(now.getTime() + 120 * 86400000);
+  const out = [];
+  const table = html.slice(html.indexOf('PublicMeetingsTable'));
+  for (const row of table.split(/<tr[\s>]/).slice(1)) {
+    const head = row.match(/<td>\s*<div>([\s\S]*?)<\/div>/);
+    if (!head) continue;
+    const mm = dec(head[1]).match(/^([A-Z][a-z]+ \d{1,2}, \d{4}) at (\d{1,2}:\d{2} [AP]M) - (.+)$/);
+    if (!mm) continue;
+    const [, date, time, rawTitle] = mm;
+    if (/^cancell?ed\b/i.test(rawTitle)) continue;              // "CANCELLED - Ouray Planning Commission…"
+    const when = new Date(date);
+    if (isNaN(when) || when < lookback || when > horizon) continue;
+    const title = rawTitle.trim();
+    const id = (row.match(/meeting=(\d+)/) || [])[1];
+    const span = (k) => { const x = row.match(new RegExp(`id='location[\\d-]+-${k}'>([^<]*)<`)); return x ? dec(x[1]) : ''; };
+    const location = [span('description'), span('line1'), span('csz')].filter(Boolean).join(', ');
+    const rec = { date, time, title, board: /planning/i.test(title) ? 'pc' : 'council' };
+    if (location) rec.location = location;
+    if (id) rec.boardbookId = Number(id);
+    // BoardBook lists a meeting only once its agenda posts. DownloadAgenda is
+    // the full agenda + attachments PDF (the packet).
+    if (id && /\/Public\/Agenda\/2503\?meeting=/.test(row)) {
+      rec.agendaUrl = `https://meetings.boardbook.org/Public/Agenda/2503?meeting=${id}`;
+      rec.packetUrl = `https://meetings.boardbook.org/Public/DownloadAgenda/2503?meeting=${id}`;
+    }
+    out.push(rec);
+  }
+  out.sort((a, b) => new Date(a.date) - new Date(b.date) || a.time.localeCompare(b.time));
+  console.log(`  ${out.length} City of Ouray meeting(s) in the window`);
+  return out.length ? out : null;
+}
+
 function rebuildRidgwayMeetings(existing, now = new Date()) {
   return assembleBoardStubs(existing, { nth: 2, weekday: 3 }, {
     title: 'Ridgway Town Council Regular Meeting', board: 'council', time: '6:00 PM',
@@ -7629,6 +7683,19 @@ async function main() {
       govDataChanged = true;
     }
   } catch (e) { console.warn(`  Ridgway rebuild error: ${e.message}`); }
+
+  // ── 0a5b. City of Ouray: rebuild OURAY_CITY_CACHED_DATA from BoardBook ──
+  //   Projected regular meetings are generated at render time by
+  //   getOurayCityMeetings(); only real BoardBook rows are stored here.
+  try {
+    const existing = extractJsArray(govDataSrc, 'OURAY_CITY_CACHED_DATA') || [];
+    const rows = await syncOurayCityMeetings();
+    if (rows && JSON.stringify(rows) !== JSON.stringify(existing)) {
+      govDataSrc = replaceJsValue(govDataSrc, 'OURAY_CITY_CACHED_DATA', rows, false);
+      govDataChanged = true;
+      console.log(`  OURAY_CITY_CACHED_DATA: rebuilt (${rows.length} meetings)`);
+    }
+  } catch (e) { console.warn(`  City of Ouray rebuild error: ${e.message}`); }
 
   // ── 0a6. TMVOA: rebuild TMVOA_CACHED_DATA from the live meeting-materials page ──
   try {

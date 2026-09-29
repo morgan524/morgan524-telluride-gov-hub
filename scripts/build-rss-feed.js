@@ -300,7 +300,7 @@ const MEETING_FNS = [
   'getTellurideMeetings', 'getCountyCachedMeetings', 'getMVMeetings',
   'getSchoolMeetings', 'getFireMeetings', 'getMedMeetings',
   'getRidgwayMeetings', 'getNorwoodMeetings', 'getOphirMeetings',
-  'getSmartMeetings', 'getAirportMeetings', 'getRicoMeetings',
+  'getSmartMeetings', 'getAirportMeetings', 'getRicoMeetings', 'getOurayCityMeetings',
 ];
 
 function buildMeetingItemsFromFns(sandbox) {

@@ -112,6 +112,7 @@
     rico:      LOGO_BASE + 'Rico%20Town.png',
     ridgway:   LOGO_BASE + 'Ridgway%20Town.png',
     ouray:     LOGO_BASE + 'Ouray%20Town.png',
+    ouraycity: LOGO_BASE + 'Ouray%20Town.png',
     airport:   LOGO_BASE + 'Airport.png',
     ttimes:    LOGO_BASE + 'TT%20Logo.png',
     smb:       LOGO_BASE + 'San%20Miguel%20Basin.png',

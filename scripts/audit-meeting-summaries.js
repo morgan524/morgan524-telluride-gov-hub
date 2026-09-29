@@ -25,7 +25,7 @@ const sandbox = (0, eval)(
 );
 const G = (n) => sandbox.get(n);
 
-const MEETING_FNS = ['getTellurideMeetings','getCountyCachedMeetings','getMVMeetings','getSchoolMeetings','getFireMeetings','getMedMeetings','getRidgwayMeetings','getNorwoodMeetings','getOphirMeetings','getSmartMeetings','getAirportMeetings','getRicoMeetings','getOurayMeetings'];
+const MEETING_FNS = ['getTellurideMeetings','getCountyCachedMeetings','getMVMeetings','getSchoolMeetings','getFireMeetings','getMedMeetings','getRidgwayMeetings','getNorwoodMeetings','getOphirMeetings','getSmartMeetings','getAirportMeetings','getRicoMeetings','getOurayMeetings','getOurayCityMeetings'];
 const getMeetingSummary = G('getMeetingSummary');
 const MANUAL = G('MANUAL_SUMMARIES') || {};
 const PREVIEWS = G('MEETING_PREVIEWS') || {};

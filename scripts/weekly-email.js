@@ -435,7 +435,7 @@ const topicSections = (SHOW_TOPIC_SECTIONS ? TOPIC_DEFS : []).map((td) => {
   .filter((td) => activeTopicGroups instanceof Set && activeTopicGroups.has(td.group));
 
 // ── Collect meetings (with real agenda links) ──
-const MEETING_FNS = ['getTellurideMeetings','getCountyCachedMeetings','getMVMeetings','getSchoolMeetings','getFireMeetings','getMedMeetings','getRidgwayMeetings','getNorwoodMeetings','getOphirMeetings','getSmartMeetings','getAirportMeetings','getRicoMeetings','getOurayMeetings'];
+const MEETING_FNS = ['getTellurideMeetings','getCountyCachedMeetings','getMVMeetings','getSchoolMeetings','getFireMeetings','getMedMeetings','getRidgwayMeetings','getNorwoodMeetings','getOphirMeetings','getSmartMeetings','getAirportMeetings','getRicoMeetings','getOurayMeetings','getOurayCityMeetings'];
 const getMeetingSummary = G('getMeetingSummary');
 
 // ── "Why This Matters" highlighting (ported from gov-hub.html) ──
@@ -650,6 +650,8 @@ const COMMENT_MAP = {
   norwood:            'cross@norwoodtown.com',
   ophir:              'clerk@ophir.us',
   rico:               'townclerk@ricocolorado.gov',
+  ouraycity:          'clerk@cityofouray.com',
+  'ouraycity-planning': 'planning@cityofouray.com',
   airport:            'info@tellurideairport.com',
   smrha:              'admin@smrha.org',
 };
@@ -658,6 +660,7 @@ const commentEmailFor = (name, srcKey) => {
   let key = srcKey;
   if (key === 'county'    && /planning|design review/.test(title)) key = 'county-planning';
   if (key === 'mv'        && /planning|design review/.test(title)) key = 'mv-planning';
+  if (key === 'ouraycity' && /planning/.test(title)) key = 'ouraycity-planning';
   if (key === 'telluride' && /harc|historic|architectural review/.test(title)) key = 'telluride-harc';
   return COMMENT_MAP[key] || '';
 };
