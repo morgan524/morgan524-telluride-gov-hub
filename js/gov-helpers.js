@@ -267,7 +267,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"1ff606174e68cca5"},
 
   "telluride|2026-09-30|Special Meeting - Historic & Architectural Review Commission - Sep 30 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309","sv":4,"meetingId":"822 7800 9621","passcode":"976053.","phone":"301-715-8592"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/gyjcfvLBT_6qgGte72mOHw","meetingId":"822 7800 9621","passcode":"976053","phone":"301-715-8592"},
 
   "telluride|2026-09-17|Special Meeting - Planning & Zoning Commission - Sep 17 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8310","sv":4,"zoomUrl":"https://us06web.zoom.us/j/85992668350?pwd=R89oLHvfdFJZrpNb6yzGqqHUrl3phe.1","meetingId":"859 9266 8350","passcode":"503877","phone":"301-715-8592"},

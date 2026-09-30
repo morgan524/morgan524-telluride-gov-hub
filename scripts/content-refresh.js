@@ -1236,7 +1236,16 @@ function civicWebTime(m) {
 
 async function fetchTownTellurideMeetings(now, horizon) {
   const out = [];
-  const fromStr = now.toISOString().split('T')[0];                // YYYY-MM-DD
+  // Compare CALENDAR DAYS in Mountain time, never instants. CivicWeb's
+  // MeetingDate is a bare "YYYY-MM-DD", which new Date() reads as UTC
+  // midnight = 6 PM MT the evening BEFORE. The old `mDate < now` test
+  // therefore dropped every same-day meeting from the 00:00 UTC run onward
+  // (6 PM MT the day before) — on 2026-09-30 the 5:30 PM HARC special
+  // (Carhenge) vanished from Gov Hub the evening before it met.
+  const mtDay = (d) => d.toLocaleDateString('en-CA', { timeZone: 'America/Denver' });
+  const todayMT = mtDay(now);
+  const horizonMT = mtDay(horizon);
+  const fromStr = todayMT;                                          // YYYY-MM-DD (MT)
   const url = `${AGENDA_SOURCES.telluride.meetingsApiBase}` +
     `?from=${encodeURIComponent(fromStr)}` +
     `&to=${encodeURIComponent('9999-12-31')}`;
@@ -1257,7 +1266,9 @@ async function fetchTownTellurideMeetings(now, horizon) {
     if (!m) continue;
     const mDate = new Date(m.MeetingDate || m.MeetingDateTime || '');
     if (isNaN(mDate)) continue;
-    if (mDate < now || mDate > horizon) continue;
+    const mDay = String(m.MeetingDate || m.MeetingDateTime || '').slice(0, 10);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(mDay)) continue;
+    if (mDay < todayMT || mDay > horizonMT) continue;   // today's meetings stay all day
 
     // Filter out cancelled meetings — they're in the feed with names
     // like "CANCELLED: Planning & Zoning Commission Chair - May 28 2026"
@@ -1280,7 +1291,7 @@ async function fetchTownTellurideMeetings(now, horizon) {
 
     out.push({
       source: 'telluride',
-      date: mDate.toISOString().split('T')[0],
+      date: mDay,
       title: (m.Name || 'Town of Telluride Meeting').trim(),
       agendaUrl,
       hasAgenda: !!agendaUrl && m.Published === true,

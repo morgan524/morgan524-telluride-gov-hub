@@ -165,6 +165,26 @@
     "hook": ""
   },
   {
+    "source": "telluride",
+    "sourceLabel": "Town of Telluride",
+    "title": "HARC Meeting",
+    "date": "2026-09-30",
+    "time": "5:30 PM",
+    "location": "Rebekah Hall, 113 W Columbia Ave",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309",
+    "packetUrl": "https://telluride-co.civicweb.net/document/445284/",
+    "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309",
+    "hasAgenda": true,
+    "summary": "HARC holds a special meeting dedicated entirely to the Carhenge Redevelopment Project — the proposed new construction at 700 W Pacific Ave that has been working its way through review since at least July. Three separate Preliminary Large-Scale applications are on the table, each covering a different building cluster: Buildings A, B, and C; Buildings D1 and D2; and Buildings E1, E2, and E3. All are new construction outside the Telluride Historic Landmark District but exceed 5,000 square feet of floor area, triggering large-scale review under LUC 7-203.B.2.a.1. The property is Town-owned, zoned Accommodations 2, and Design Workshop is the applicant. Both the July and August HARC meetings passed without substantive discussion on these items — this special session signals that the review is finally moving forward in earnest.",
+    "zoomLink": "https://us06web.zoom.us/meeting/register/gyjcfvLBT_6qgGte72mOHw",
+    "zoomMeetingId": "822 7800 9621",
+    "zoomPasscode": "976053",
+    "zoomPhone": "301-715-8592",
+    "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams",
+    "commentEmail": "dcandelaria@telluride.gov",
+    "hook": ""
+  },
+  {
     "kind": "event",
     "source": "telluride",
     "sourceLabel": "Town of Telluride",
