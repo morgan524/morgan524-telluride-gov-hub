@@ -303,7 +303,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-10-07|Ecology Commission - Oct 07 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8119","sv":4,"ph":"da447f60ebca4a9c"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8119","sv":4,"zoomUrl":"https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1","phone":"970-728-2496"},
 
   "telluride|2026-10-07|Commission for Community Assistance, Arts & Special Events - Oct 07 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8067","sv":4,"ph":"b351f6bb6fbe13ad"},
@@ -818,7 +818,7 @@ const MEETING_PREVIEWS = {
     "Board is expected to discuss county procurement activity, including requests for proposals on a trail connector project, fuel island canopy construction, jail painting, and a multi-hazard mitigation plan update, as well as a materials hauling quote. Additional related legal and financial notices may be referenced during the session.",
 
   "ouraycity|2026-09-30|Ouray City Council Work Session":
-    "Council is expected to review capital improvement funding and discuss budgets across multiple funds. Additional topics include Fourth of July entertainment planning, a free in-town shuttle program, OurWay transit service, and nonprofit funding requests totaling over $195,000 from nine organizations."
+    "Council is expected to spend most of this work session reviewing the proposed 2027 budget, including capital improvements and fund-by-fund breakdowns. Additional topics include Fourth of July entertainment, a free in-town shuttle, OurWay transit service, and nonprofit funding requests totaling $195,000 from nine organizations."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1038,7 +1038,22 @@ const SMC_ALERTS = [
   }
 ];              // SMC AlertCenter items
 const ENGAGE_MEETINGS = [
-
+  {
+    projectName: "2025 Comprehensive Plan",
+    projectUrl: "https://engagetelluride.org/2025-comprehensive-plan",
+    title: "Environment & Recreation Focus Group | Phase II",
+    date: "2026-09-30",
+    board: "other",
+    dateUrl: "https://engagetelluride.org/2025-comprehensive-plan/widgets/101864/key_dates#42439"
+  },
+  {
+    projectName: "2025 Comprehensive Plan",
+    projectUrl: "https://engagetelluride.org/2025-comprehensive-plan",
+    title: "Housing & Infrastructure Focus Group | Phase II",
+    date: "2026-10-01",
+    board: "other",
+    dateUrl: "https://engagetelluride.org/2025-comprehensive-plan/widgets/101864/key_dates#42441"
+  }
 ];         // Engage Telluride project key dates
 const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-30';
 const LEGAL_NOTICES_CACHE_DATE = '2026-09-30';
@@ -1201,7 +1216,7 @@ const MANUAL_SUMMARIES = {
     "The October 7, 2026 Mountain Village Town Council Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-10-07|Ecology Commission - Oct 07 2026":
-    "The October 7, 2026 Ecology Commission agenda hasn't been posted yet.",
+    "The October 7 Ecology Commission meeting has one substantive item: a work session on the Community Resilience & Wellbeing focus area of Telluride's 2022 Climate Action Plan. The CAP — adopted in April 2022, the third iteration after plans in 2006 and 2014 — sets a goal of carbon neutrality by 2040. This session picks up where September left off, when the Commission also floated 2027 workplan ideas including a dark sky initiative, a fuel-burning landscaping equipment ban, an e-waste depot, and research into geothermal and thermal energy networks. Routine minutes approval from the September 2 meeting is also on the agenda.",
 
   "telluride|2026-10-07|Commission for Community Assistance, Arts & Special Events - Oct 07 2026":
     "The October 7, 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
@@ -2403,6 +2418,113 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "What a weekend",
+    source: "Telluride Times",
+    date: "September 30, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "community",
+    copy: "In Telluride and Mountain Village, the weekend of Sept. 25-27 had something for everyone. There was the Telluride Autumn Classic, with vintage and specialty cars on display throughout. Mountains to Desert Classic riders headed off first thing Saturday morning for…",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/gallery/featured/article_500c554b-92ca-4a9e-8d55-7b1ff9f92f16.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/9d/89d42b1a-90ac-4393-ba2f-2feb94652608/6abd4766f23fa.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "School board support for prop NN",
+    source: "Telluride Times",
+    date: "September 30, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "government",
+    copy: "The Telluride R-1 School Board voted September 22 to formally endorse Colorado's Proposition NN, a November statewide ballot measure aimed at increasing K-12 funding. Colorado currently spends about $1,600 less per pupil than the national average, and starting teacher salaries rank 41st nationally. The board also authorized members to speak publicly in support of the measure.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_66443fb8-af57-4c53-becd-8acee30bf116.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Cheryl Carstens Miller David Lavender Telluride, School Board",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "School board supports Amendment 87",
+    source: "Telluride Times",
+    date: "September 30, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "government",
+    copy: "The Telluride R-1 School Board voted September 22 to formally endorse Amendment 87, a state ballot measure that would establish a graduated income tax. The district estimates it would bring in around $643,000 annually for local schools, with statewide projections of $2–2.7 billion for K-12, healthcare, and early childhood programs.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_c947791e-f3af-4787-8f6d-1922d28e1b68.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Cheryl Carstens Miller David Lavender Telluride, School Board",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Vote for Dylan Brooks",
+    source: "Telluride Times",
+    date: "September 30, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "community",
+    copy: "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_e642e612-9237-4696-b28c-7debb9aad5e9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Thank you, Telluride",
+    source: "Telluride Times",
+    date: "September 30, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "public-safety",
+    copy: "Two hundred emergency go kits were assembled over two days at the Telluride Blues & Brews Festival through a project run by the nonprofit Just A Bunch of Roadies (JAB~R). The kits — designed to help households through the first 72 hours of an evacuation — will be distributed free to lower-income and vulnerable residents across San Miguel, Montrose, and ~uray counties. Sponsors, volunteers, festival crew, and local businesses all pitched in to make it happen.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_a27c227c-87fd-4dd8-ab74-5fd3b209d0e6.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Jeff Pryor Alexandra Mitchell Just, A Bunch of Roadies Ridgway",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Vote for Lane Masters",
+    source: "Telluride Times",
+    date: "September 30, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "government",
+    copy: "A letter from former San Miguel County Commissioner Art Goodtimes endorses Lane Masters for sheriff, citing Masters' roots here and understanding of the full county — from longtime locals to immigrant communities to Down Valley towns. Goodtimes wants a sheriff who sees this place as a year-round home, not just a resort economy.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_355197e9-bb5d-4661-bf57-b562d3fbb75d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Art Goodtimes Norwood",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "'Right' to natural gas protects industry",
+    source: "Telluride Times",
+    date: "September 30, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "government",
+    copy: "Amendment 82, on the Colorado ballot, would enshrine natural gas access in the state constitution — framed as consumer choice, but critics say it shields pipeline infrastructure and strips local communities of energy planning authority. Two-thirds of the average Colorado gas bill already goes to pipeline costs, not the gas itself. Heat pump installs across major state utilities more than doubled in 2025.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_cbc1f5fa-f090-4630-94c2-e79e7b74a553.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Siobhan Lavender Montoya EcoAction Partners",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Mountain Village wins Sunset Concert Series condemnation appeal",
+    source: "Telluride Times",
+    date: "September 30, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "arts-culture",
+    copy: "Despite a full season with the Sunset Concert Series back in Sunset Plaza, the potential condemnation of Telluride Ski and Golf (TSG) land and the creation of an easement where the series takes place is still working through the courts.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/article_c6b05c79-cb1e-4b5e-89f0-bcee12dbc79d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/87/587ca587-8161-4923-926b-852b4dad0c81/6abb368f3e74c.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Town council discusses housing waitlist, rental rates",
     source: "Telluride Times",
     date: "September 30, 2026",
@@ -3468,6 +3590,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Sidewalk-Repair-Work-Press-Release-2026-09-17.pdf",
+    img: ""
+  },
+  {
+    title: "Notice of Public Hearing Wed., Oct. 14, 2026 at 5:30pm - 1) Site Plan and Conditional Use Permit for Riverbend Townhomes (TBD Liddell Dr.); 2) Amended Plat of Lot 4 and Outlot of Riverview Busines Park Subdivision (TBD Liddell Dr.)",
+    source: "Town of Ridgway",
+    date: "September 30, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "land-use",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.09.30_public-hearing-notice.pdf",
     img: ""
   },
   {
@@ -5030,85 +5163,6 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "Functional Fitness - Strength & Mobility Training For Women",
-    link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
-    description: "Welcome to Ridgway's strength and mobility training + YOGA! Functional Strength & Mobility Training (for women): Tuesday & Thursday 8:15-9 am Vinyasa Yoga: Wednesday 8:15-9:15 am Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Class Structure: 5 minute warm up / 30 minute circuit workout / 10 minute cooldown stretch & mobility Vinyasa Yoga: This is a dynamic practice that will challenge, strengthen, and uplift you both physically and mentally. …",
-    pubDate: "2026-09-29T14:15:00.000Z",
-    endDate: "2026-11-26",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Weehawken Ridgway (Old Schoolhouse)",
-    imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/d76b2fb7534e91f8369b0dace133058cd22fa783.jpg"
-  },
-  {
-    title: "Ongoing: Social Justice Travel Exhibition",
-    link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-social-justice-travel-exhibition",
-    description: "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote wellness. This exhibition features new works by artists who recieved a Social Justice Grant from Telluride Arts to create work for this traveling exhibit.",
-    pubDate: "2026-09-29T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53764349683288/huge/471bb8c36dc067ddd9b229c9e31032260184eb5e.jpg"
-  },
-  {
-    title: "Colorado Poet Laureate: Crisosto Apache Reading",
-    link: "https://events.ourayridgwayevents.com/event/colorado-poet-laureate-crisosto-apache-reading",
-    description: "Crisosto Apache, Colorado's Poet Laureate, will give a poetry reading at Ouray School's APAC. The event is free and open to the public.",
-    pubDate: "2026-09-29T19:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray School",
-    imageUrl: "https://localist-images.azureedge.net/photos/53816408650430/huge/03e52865d13accd44bfe2d41810a8a214024c424.jpg"
-  },
-  {
-    title: "Guided Tour: Historic Beaumont Hotel & Spa",
-    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
-    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
-    pubDate: "2026-09-29T19:30:00.000Z",
-    endDate: "2026-11-28",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Beaumont Hotel & Spa",
-    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
-  },
-  {
-    title: "ETHAN PERRY",
-    link: "https://events.ourayridgwayevents.com/event/ethan-perry",
-    description: "Ethan Perry performs a live music show at a venue on North Cora Street in Ridgway. The event is listed through the Ouray Ridgway community calendar.",
-    pubDate: "2026-09-29T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Taco Tuesday w/ Corey Hooker and Friends",
-    link: "https://events.ourayridgwayevents.com/event/taco-tuesday-w-corey-hooker-and-friends",
-    description: "Taco Tuesday returns to The Adobe Inn with live music from Corey Hooker and Friends. A casual evening combining food and local live entertainment in a community gathering atmosphere.",
-    pubDate: "2026-09-29T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Adobe Inn",
-    imageUrl: "https://localist-images.azureedge.net/photos/51579855188578/huge/de5019ffbfacf4a9f5e85d8a14961584c70e7873.jpg"
-  },
-  {
-    title: "Thinking Like Water film screening – a DIY look at watershed restoration",
-    link: "https://events.ourayridgwayevents.com/event/thinking-like-water-film-screening",
-    description: "Doors: 6:00pm Film: 6:30pm followed by a discussion with the filmmaker Renea Roberts; Amanda Clements, Uncompaghre Watershed Partnership - Board Chair/Friends of the River Uncompahgre- Vice Chair; Tanner Banks, Trout Unlimited - Restoration Program Manager; and Fred Phillips, Fred Phillips Consulting and Uncompahgre Multibenefit Project. Tickets $10. Part biography, part how-to, “Water Wizard” Bill Zeedyk and his allies illustrate a proven toolbox of simple low-tech, low-cost methods to restore degraded lands. They work with Nature, rather than against her, to gird against the extremes of drought and flood while fostering climate resiliency. We’ll be screening: Episode 1: “Willing to Try Things” Today, “Water Wizard” Bill Zeedyk is a legend in the ecological restoration community. But when he began this work over 25 years ago, after retiring from the U.S. Forest Service, his ideas were considered almost heretical. …",
-    pubDate: "2026-09-30T00:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Sherbino",
-    imageUrl: "https://localist-images.azureedge.net/photos/53974512668640/huge/967df9dc1194b18c21883098a7e7e490a2507260.jpg"
-  },
-  {
     title: "TODDLER STORYTIME ART FOR AGES 2.5-5",
     link: "https://events.ourayridgwayevents.com/event/toddler-storytime-art-for-ages-25-5",
     description: "TODDLER STORYTIME ART FOR AGES 2.5-5 Wednesdays, 10:00am–11:00am Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $70): September 16 – October 7 Session 2 (4 weeks • $70): October 21 – November 11 Session 3 (3 weeks • $55): December 2 – December 16 * Multi-session discount: Sign up for multiple fall semester sessions at once and receive $10 off each session! Come join us for Storytime + Art! Each week, your child will enjoy story time with songs and finger rhymes, a process‑art project, and a variety of creative sensory play. We end with a quick cleanup, circle time, and movement songs. This class gently supports preschool prep and helps your child develop important school‑readiness skills—such as fine‑motor coordination, independence, and the ability to listen and follow directions—in a warm, supportive setting. …",
@@ -5142,6 +5196,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/7ffe1cd27be1a5cd638b2680c89d4a608bd062a4.jpg"
+  },
+  {
+    title: "Guided Tour: Historic Beaumont Hotel & Spa",
+    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
+    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
+    pubDate: "2026-09-30T19:30:00.000Z",
+    endDate: "2026-11-28",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Beaumont Hotel & Spa",
+    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
   },
   {
     title: "AFTER SCHOOL ART FOR AGES 8-12",
@@ -5178,6 +5244,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Floating Lotus Brewery",
     imageUrl: "https://localist-images.azureedge.net/photos/52523630382868/huge/8fc500326eed5dc630e7e4235909efe3b2751086.jpg"
+  },
+  {
+    title: "Functional Fitness - Strength & Mobility Training For Women",
+    link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
+    description: "Welcome to Ridgway's strength and mobility training + YOGA! Functional Strength & Mobility Training (for women): Tuesday & Thursday 8:15-9 am Vinyasa Yoga: Wednesday 8:15-9:15 am Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Class Structure: 5 minute warm up / 30 minute circuit workout / 10 minute cooldown stretch & mobility Vinyasa Yoga: This is a dynamic practice that will challenge, strengthen, and uplift you both physically and mentally. …",
+    pubDate: "2026-10-01T14:15:00.000Z",
+    endDate: "2026-11-26",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Ridgway (Old Schoolhouse)",
+    imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/d76b2fb7534e91f8369b0dace133058cd22fa783.jpg"
   },
   {
     title: "AFTER SCHOOL ART FOR AGES 5-8",
@@ -5225,6 +5303,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Artist's Reception: SUSAN CLARK",
+    link: "https://events.ourayridgwayevents.com/event/artists-reception-susan-clark",
+    description: "Chloe's is so excited to feature works by local artist Susan Clark through December. Her opening reception will be hosted by Susan from 5pm on Friday, October 2nd.",
+    pubDate: "2026-10-02T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Chloe's Charcuterie & Wine",
+    imageUrl: "https://localist-images.azureedge.net/photos/54108852054354/huge/9aa30758db54a4946be690e7eadd89f04b1d9760.jpg"
   },
   {
     title: "Containment",
@@ -5331,13 +5420,13 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "150th Concert: Big Head Todd & the Monsters w/ Hazel Miller & The Collective",
     link: "https://events.ourayridgwayevents.com/event/150th-concert-big-head-todd",
-    description: "🎶 Ouray 150th Anniversary Concert 🎶 Join us for an unforgettable evening of live music as we celebrate 150 years of Ouray with a FREE community concert in the park! 📅 October 3, 2026 ⏰ 4–8 PM 📍 Fellin Park Headlining the celebration are Colorado rock legends Big Head Todd and the Monsters, known for their blues-infused sound and iconic hits like “Bittersweet,” “Broken Hearted Savior,” and “Circle.” Opening the evening is the powerhouse Hazel Miller & The Collective, bringing their signature mix of soul, jazz, and blues led by legendary vocalist Hazel Miller. Set against the dramatic peaks of the San Juan Mountains, this special concert is the centerpiece of Ouray’s sesquicentennial celebration, honoring the people, stories, and history that shaped our mountain town. …",
+    description: "🎶 Ouray 150th Anniversary Concert 🎶 Join us for an unforgettable evening of live music as we celebrate 150 years of Ouray with a FREE community concert in the park! 📅 October 3, 2026 ⏰ 4–8 PM 📍 Fellin Park Schedule Details: 3 PM - Gates 4 PM - Hazel Miller & The Collective 6 PM - Big Head Todd & The Monsters Headlining the celebration are Colorado rock legends Big Head Todd and the Monsters, known for their blues-infused sound and iconic hits like “Bittersweet,” “Broken Hearted Savior,” and “Circle.” Opening the evening is the powerhouse Hazel Miller & The Collective, bringing their signature mix of soul, jazz, and blues led by legendary vocalist Hazel Miller. Set against the dramatic peaks of the San Juan Mountains, this special concert is the centerpiece of Ouray’s sesquicentennial celebration, honoring the people, stories, and history that shaped our mountain town. …",
     pubDate: "2026-10-03T22:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Fellin Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/52364674023264/huge/f98fd45e49189eebaa22894d39eb7c241c2e49a9.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/52364674023264/huge/ccc92983f4e24e7ff2fc2c99d07eeba60cd60b34.jpg"
   },
   {
     title: "Ridgway 1K ~ Rally thru the Alley",
@@ -6075,6 +6164,39 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54109990596297/huge/ff02999ed014c36a19d03a5e04130f621d1212a6.jpg"
   },
   {
+    title: "Pumpkin Float",
+    link: "https://events.ourayridgwayevents.com/event/pumpkin-float",
+    description: "From 12:30 - 2 pm at the Ouray Hot Springs we will have the annual pumpkin float! Free with entry and there will be times for different age groups. There will also be an area for a fun fall photo backdrop. Be sure to take your pumpkin to Fellin Park afterward to do some fun decorating!",
+    pubDate: "2026-10-31T18:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Hot Springs",
+    imageUrl: "https://localist-images.azureedge.net/photos/54116712387130/huge/d0c1ca486ffed76cfb726c15e726bc9bd6cfaeb5.jpg"
+  },
+  {
+    title: "Pumpkin Decorating",
+    link: "https://events.ourayridgwayevents.com/event/pumpkin-decorating",
+    description: "Join us in Fellin Park from 1 pm - 4:30 pm for pumpkin decorating! Whether you get your pumpkin from the pumpkin float at the Ouray Hot Springs from 12:30 - 2:00 pm or you bring your own, we will have fun decorating supplies for the pumpkins. If you would like to bring your own carving supplies, you are more than welcome.",
+    pubDate: "2026-10-31T19:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Fellin Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/54116757876412/huge/0765e06098445336f8065bfe4b16b8c9ed0a7462.jpg"
+  },
+  {
+    title: "Halloween Costume Contest",
+    link: "https://events.ourayridgwayevents.com/event/halloween-costume-contest",
+    description: "Join us in Fellin Park to show off your Halloween spirit from 3:30 - 4 PM | Costume Contest (Prizes for 1st, 2nd, and 3rd place) in Fellin Park Little Ghouls: Ages 0–5 1st: $50 Gift Card 2nd: $20 Gift Card 3rd: $10 Gift Card Kids & Teens: Ages 6–17 1st: $50 Gift Card 2nd: $20 Gift Card 3rd: $10 Gift Card Adults: Ages 18+ 1st: $50 Gift Card + 10 Punch Pass to the Ouray Hot Springs 2nd: $20 Gift Card 3rd: $10 Gift Card Show up a little before 3:30 pm to line up in your group and we will do a parade in the park for the judges to pick the top costumes for the winners.",
+    pubDate: "2026-10-31T21:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Fellin Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/54116796135497/huge/c0d44c94cd761974941f4777c2aa7195fb9577a6.jpg"
+  },
+  {
     title: "Trick or Treat: Witches @ the Wright",
     link: "https://events.ourayridgwayevents.com/event/trick-or-treat-witches-the-wright",
     description: "WHEN? Saturday, October 31 4:00–7:00 PM WHERE? Wright Opera House 472 Main St., Ouray, Colorado ABOUT THE EVENT The Spooky Witches and Warlocks are taking over the Wright Opera House for Halloween. Bring the family downtown for Trick or Treat: Witches at the Wright. Stop by for candy, a little friendly fright, and Halloween fun inside one of Ouray’s most historic buildings. HOW? Free and open to the public Family-friendly trick-or-treating Candy while supplies last Halloween fun at the historic Wright Opera House in downtown Ouray.",
@@ -6084,6 +6206,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Wright Opera House",
     imageUrl: "https://localist-images.azureedge.net/photos/54035396754488/huge/0ff17d6c525d45e896d55bfebccad3217d6391db.jpg"
+  },
+  {
+    title: "Trick-or-Treat Street",
+    link: "https://events.ourayridgwayevents.com/event/trick-or-treat-street",
+    description: "Trick-or-Treat Street is a Halloween community event on Main Street in Ouray, where local businesses open their doors to trick-or-treaters. It's a festive neighborhood tradition welcoming families and kids to celebrate the holiday in downtown Ouray.",
+    pubDate: "2026-10-31T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray, Colorado",
+    imageUrl: "https://localist-images.azureedge.net/photos/54116843513915/huge/8506e24761ad8734bd1aa94d1daa32c49e44a0c9.jpg"
   },
   {
     title: "Casper: Movie Night @ the Wright",
@@ -6155,9 +6288,8 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Teeth to the Wind: fundraiser for George & Michael Gardner Fund",
     link: "https://events.ourayridgwayevents.com/event/teeth-to-the-wind",
-    description: "A fundraiser at the Ouray County 4-H Center featuring a screening of *Teeth to the Wind*, a film by alpinist Michael Gardner and his partner Sam Hennessey documenting their seasons in the Tetons — described by Gardner himself as something other than a traditional climbing film. Proceeds benefit the George and Michael Gardner Fund.",
-    pubDate: "2026-11-10T13:00:00.000Z",
-    endDate: "2026-11-11",
+    description: "A fundraiser screening of *Teeth to the Wind*, a documentary following alpinists Michael Gardner and Sam Hennessey through their seasons in the Tetons, described by Gardner himself as something closer to a rom-com than a traditional climbing film. The event benefits the George and Michael Gardner Fund and takes place at the Ouray County 4-H Center.",
+    pubDate: "2026-11-11T01:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -9213,10 +9345,11 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "October 7, 2026",
     title: "Ecology Commission",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8119",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "4:00 PM",
-    civicwebId: 8119
+    civicwebId: 8119,
+    packetUrl: "https://telluride-co.civicweb.net/document/445712/"
   },
   {
     date: "October 7, 2026",

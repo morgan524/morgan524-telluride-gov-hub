@@ -832,6 +832,16 @@ const OURAY_COUNTY_CACHED_DATA = [
     agendaUrl: "https://ouraycoco.portal.civicclerk.com/event/2149/files/agenda/7544"
   },
   {
+    date: "October 5, 2026",
+    time: "4:00 PM",
+    title: "Board of County Commissioners Special Joint Work Session",
+    location: "Ouray City Hall, 320 6th Ave, Ouray, CO 81427",
+    civicClerkId: 2151,
+    note: null,
+    special: true,
+    board: "bocc"
+  },
+  {
     date: "October 6, 2026",
     time: "9:00 AM",
     title: "Board of County Commissioners Special Work Session",
