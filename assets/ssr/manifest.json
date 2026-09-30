@@ -1,6 +1,16 @@
 {
   "documents": [
     {
+      "id": "14834",
+      "title": "San Miguel County Prioritized Housing Review Resolution No. 2026-22",
+      "slug": "493661-BOCC-Resolution-2026-22-Prioritized-Housing-Review-updated-LUCA-RECORDED-1",
+      "sourceUrl": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/14834/493661-BOCC-Resolution-2026-22-Prioritized-Housing-Review-updated-LUCA-RECORDED-1",
+      "localPath": "assets/ssr/14834-493661-BOCC-Resolution-2026-22-Prioritized-Housing-Review-updated-LUCA-RECORDED-1.pdf",
+      "contentType": "application/pdf",
+      "bytes": 343017,
+      "firstSeen": "2026-09-30T22:17:53.490Z"
+    },
+    {
       "id": "14789",
       "title": "September SSR No. 8 Meeting Packet",
       "slug": "SSR-No-8-September-Meeting-Packet",
@@ -191,5 +201,5 @@
       "firstSeen": "2026-04-27T17:16:56.032Z"
     }
   ],
-  "lastChecked": "2026-09-30T12:37:38.413Z"
+  "lastChecked": "2026-09-30T22:17:53.490Z"
 }
