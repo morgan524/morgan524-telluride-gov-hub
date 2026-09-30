@@ -191,16 +191,22 @@ async function generateRickLede({ meetings, events, apiKey, cadence, cacheFile }
   const key = apiKey || process.env.ANTHROPIC_API_KEY;
   if (!key) { console.log('  i No ANTHROPIC_API_KEY — skipping Rick lede (using fallback)'); return null; }
   try {
-    const parse = (raw) => { const m = raw.match(/\{[\s\S]*\}/); return String(JSON.parse(m ? m[0] : raw).lede || '').trim(); };
+    // Tolerate a stray markdown fence and a raw line break inside the string
+    // (the day-by-day intro asks for newline-separated paragraphs).
+    const parse = (raw) => {
+      const m = raw.match(/\{[\s\S]*\}/); const j = m ? m[0] : raw;
+      let o; try { o = JSON.parse(j); } catch (e) { o = JSON.parse(j.replace(/\r?\n/g, '\\n')); }
+      return String(o.lede || '').trim();
+    };
     const prompt = ledePrompt({ meetings: mtg, events: ev, cadence });
-    let lede = parse(await callClaude(key, prompt, 500));
+    let lede = parse(await callClaude(key, prompt, 1200));
     // One corrective retry when a bare "Town Council" / "Council" slips through.
     const bad = bareCouncilRefs(lede);
     if (lede && bad.length) {
       console.log('  ! Rick lede named a council without its town (' + bad.join(' | ') + ') — retrying');
       const fixed = parse(await callClaude(key, prompt + '\n\nYour previous draft was:\n' + lede +
         '\n\nIt used a bare council name here: ' + bad.map((b) => '"' + b + '"').join(', ') +
-        '. Rewrite it so EVERY mention of a council or board names its town or county (e.g. **Telluride Town Council**). Same JSON format.', 500));
+        '. Rewrite it so EVERY mention of a council or board names its town or county (e.g. **Telluride Town Council**). Same JSON format.', 1200));
       const stillBad = bareCouncilRefs(fixed);
       if (fixed && stillBad.length < bad.length) lede = fixed;
       if (stillBad.length) console.log('  ! Rick lede still has a bare council reference after retry: ' + stillBad.join(' | '));
