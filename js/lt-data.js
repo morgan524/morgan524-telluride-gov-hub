@@ -256,18 +256,19 @@
 
     let acts = '';
     if (fa.deepDive && fa.deepDive.href) acts += '<a class="fa-dive" href="' + esc(fa.deepDive.href) + '">Read the ' + esc(fa.deepDive.label) + ' deep dive &rarr;</a>';
-    // Same two-state rule as the regular Gov-Hub cards: View Agenda and
-    // Agenda Packet are always present — live link when posted, grey
-    // non-clickable ghost when not yet. A meeting PAGE that isn't an agenda
-    // shows as "Meeting info" instead of masquerading as one.
+    // Same buttons, labels and colours as the regular Gov-Hub cards: View
+    // Agenda and Agenda Packet are always present — solid green (fa-live,
+    // = .abtn.primary) when posted, grey non-clickable ghost when not yet.
+    // A meeting PAGE that isn't an agenda shows as "Meeting info" (outline)
+    // instead of masquerading as one; Join Zoom is the cards' blue outline.
     acts += (m.hasAgenda && m.agendaUrl)
-      ? '<a class="fa-plain" href="' + esc(safeUrl(m.agendaUrl)) + '" target="_blank" rel="noopener">View Agenda</a>'
+      ? '<a class="fa-live" href="' + esc(safeUrl(m.agendaUrl)) + '" target="_blank" rel="noopener">View Agenda &rarr;</a>'
       : '<span class="fa-empty" title="Agenda not yet posted" aria-disabled="true">View Agenda</span>';
     acts += m.packetUrl
-      ? '<a class="fa-plain" href="' + esc(safeUrl(m.packetUrl)) + '" download target="_blank" rel="noopener">Agenda Packet</a>'
-      : '<span class="fa-empty" title="Agenda packet not yet posted" aria-disabled="true">Agenda Packet</span>';
+      ? '<a class="fa-live" href="' + esc(safeUrl(m.packetUrl)) + '" download target="_blank" rel="noopener">&#128230; Agenda Packet &darr;</a>'
+      : '<span class="fa-empty" title="Agenda packet not yet posted" aria-disabled="true">&#128230; Agenda Packet</span>';
     if (!m.hasAgenda && (m.agendaUrl || m.link)) acts += '<a class="fa-plain" href="' + esc(safeUrl(m.agendaUrl || m.link)) + '" target="_blank" rel="noopener">Meeting info</a>';
-    if (m.zoomLink) acts += '<a class="fa-plain" href="' + esc(safeUrl(m.zoomLink)) + '" target="_blank" rel="noopener">Join Zoom</a>';
+    if (m.zoomLink) acts += '<a class="fa-zoom" href="' + esc(safeUrl(m.zoomLink)) + '" target="_blank" rel="noopener">&#128249; Join Zoom</a>';
     byId('fa-acts').innerHTML = acts;
     card.style.display = 'block';
     return true;
