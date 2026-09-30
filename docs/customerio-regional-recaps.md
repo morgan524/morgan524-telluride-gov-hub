@@ -33,41 +33,70 @@ The mapping lives in `scripts/lib/recap-regions.js` (`RECAP_REGIONS`).
 
 ## How the email carries it
 
-The broadcast template does **not** render Liquid inside `trigger.body`, so the
-email ships every variant and the template picks one. Each regional section is
-
-```
-<!--LT-RGN--> ALL <!--LT-RGN--> East (hidden) <!--LT-RGN--> West (hidden) <!--LT-RGN--> Ridgway/Ouray (hidden) <!--LT-RGN-->
-```
-
-so an email with k regional sections splits on `<!--LT-RGN-->` into 5k+1
-parts: part *i* is shared email content when *i* mod 5 = 0, otherwise the ALL
-(1), East End (2), West End (3) or Ridgway/Ouray (4) copy of a section.
-
-The regional copies are wrapped in
+The email file ships each regional section as an ALL copy plus hidden East
+End / West End / Ridgway/Ouray copies between `<!--LT-RGN-->` markers
+(`scripts/lib/recap-regions.js`). The regional copies are wrapped in
 `<!--[if !mso]><!--><tbody style="display:none;">` … `</tbody><!--<![endif]-->`,
-so anything that renders the body as-is (direct test sends, the Review Desk
-preview, the blog archive, or a template without the region logic) shows only
-the ALL copies.
+so anything that renders the file as-is (Review Desk preview, blog archive)
+shows only the ALL copies.
 
-## One-time Customer.io template change
+## How it is sent (digest Worker)
 
-Paste this over the whole body of the **Weekly Digest Email** action, first in
-**Weekly Digest TEST** (broadcast 2), then **Weekly Digest** (broadcast 1).
-It keeps the existing merge-tag replacements unchanged and picks the reader's copy of every regional section:
+Customer.io caps a broadcast trigger's `data` at **50 KB**, and an email
+carrying every regional copy is 110 KB+ (the 422 "data exceeds the 50KB
+limit", 2026-09-30). So `ltSendBroadcast()` in
+`cloudflare-worker/livabletelluride-digest/worker.js` splits a regional email
+into four one-region emails and sends each as its own trigger of the same
+broadcast, with a `recipients` filter:
+
+| Send | Recipients |
+|---|---|
+| East End | broadcast audience AND `region` = "East End" |
+| West End | broadcast audience AND `region` = "West End" |
+| Ridgway/Ouray | broadcast audience AND `region` = "Ridgway/Ouray" |
+| everyone else | broadcast audience AND NOT any of the three |
+
+API recipients **replace** the audience set in the UI, so the Worker restates
+it, looking the segments up by name: Weekly Digest = "Weekly Update
+subscribers" AND NOT "Yahoo & AOL Recipients"; Weekly Digest TEST = "Me Only".
+If those segments are renamed, set `CUSTOMERIO_WEEKLY_AUDIENCE` /
+`CUSTOMERIO_TEST_AUDIENCE` (a JSON recipients filter) on the Worker.
+
+Customer.io allows one broadcast trigger every 10 seconds, so a regional send
+takes about 35 seconds. Every version is size-checked before the first send, so
+an oversized email is refused whole rather than half-sent. Emails without
+regional sections (one-off newsletters) still go out as one trigger to the
+broadcast's UI audience.
+
+**Style compression.** Each regional email is 30–53 KB raw. With
+`CIO_TEMPLATE_DICT = "1"` (wrangler.toml `[vars]`), the Worker replaces every
+repeated long inline style / site URL prefix / UTM string with a short `§n§`
+token and sends the originals once in `trigger.dict`; the template below
+expands them. That brings the largest version to ~36 KB. Only turn it on once
+**both** broadcasts carry the template below — otherwise readers see raw
+`§n§` codes.
+
+## Customer.io template (both broadcasts)
+
+Paste this over the whole body of the **Weekly Digest Email** action in
+**Weekly Digest TEST** (broadcast 2) and **Weekly Digest** (broadcast 1). It
+expands `trigger.dict` (a no-op when there is none) and keeps the existing
+merge-tag replacements. Its output is byte-identical to the original template
+for uncompressed emails (verified with liquidjs), so it is safe to paste before
+compression is switched on.
 
 ```liquid
-{% assign region_value = customer.region | default: "" %}{% capture unsub %}{% unsubscribe_url %}{% endcapture %}{% assign lt_body = trigger.body | replace: '*|UNSUB|*', unsub | replace: '*|EMAIL|*', customer.email | replace: '*|FNAME|*', customer.first_name | replace: '*|MMERGE6|*', region_value %}{% assign lt_parts = lt_body | split: "<!--LT-RGN-->" %}{% assign lt_extra = lt_parts.size | modulo: 5 %}{% if lt_parts.size > 1 and lt_extra == 1 %}{% assign lt_region = region_value | strip %}{% assign lt_off = 1 %}{% if lt_region == "East End" %}{% assign lt_off = 2 %}{% elsif lt_region == "West End" %}{% assign lt_off = 3 %}{% elsif lt_region == "Ridgway/Ouray" %}{% assign lt_off = 4 %}{% endif %}{% for lt_p in lt_parts %}{% assign lt_m = forloop.index0 | modulo: 5 %}{% if lt_m == 0 %}{{ lt_p }}{% elsif lt_m == lt_off %}{{ lt_p | remove: '<!--[if !mso]><!--><tbody style="display:none;">' | remove: '</tbody><!--<![endif]-->' }}{% endif %}{% endfor %}{% else %}{{ lt_body }}{% endif %}
+{% assign region_value = customer.region | default: "" %}{% capture unsub %}{% unsubscribe_url %}{% endcapture %}{% assign lt_body = trigger.body %}{% for lt_d in trigger.dict %}{% assign lt_body = lt_body | replace: lt_d.k, lt_d.v %}{% endfor %}{{ lt_body | replace: '*|UNSUB|*', unsub | replace: '*|EMAIL|*', customer.email | replace: '*|FNAME|*', customer.first_name | replace: '*|MMERGE6|*', region_value }}
 ```
 
-The template it replaces (as of 2026-09-30), for rollback:
+The original template, for rollback:
 
 ```liquid
 {% assign region_value = customer.region | default: "" %}{% capture unsub %}{% unsubscribe_url %}{% endcapture %}{{ trigger.body | replace: '*|UNSUB|*', unsub | replace: '*|EMAIL|*', customer.email | replace: '*|FNAME|*', customer.first_name | replace: '*|MMERGE6|*', region_value }}
 ```
 
-An email without markers takes the `else` branch and is sent exactly as before
-(verified against the original template with liquidjs).
+The subject field's "undefined variable: trigger" warning in the editor is a
+preview artifact (no trigger data loaded) and does not affect sending.
 
-Test it with the Review Desk's **full-process test** (the test broadcast),
-setting your own profile's region to each value in turn.
+Test with the Review Desk's **full-process test**: the TEST broadcast then
+sends four emails, and you receive the one for your own `region`.

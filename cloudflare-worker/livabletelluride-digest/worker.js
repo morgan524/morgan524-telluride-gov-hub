@@ -152,6 +152,133 @@ async function chat(body, env) {
   };
 }
 
+
+// ── Regional digests + payload size ─────────────────────────────────────────
+// weekly-email.js ships regional sections as an ALL copy plus hidden East End /
+// West End / Ridgway/Ouray copies between <!--LT-RGN--> markers
+// (scripts/lib/recap-regions.js). Customer.io caps a broadcast trigger's data
+// at 50 KB, and carrying every copy blew past it (the 422 "data exceeds the
+// 50KB limit", 2026-09-30). So the Worker splits the email: one trigger per
+// region, each carrying only that region's copy and a recipients filter on
+// customer.region, plus one for everyone else (blank/other region → ALL copy).
+// Customer.io allows one broadcast trigger every 10 s, so a regional send
+// takes ~35 s.
+const LT_REGION_MARK = "<!--LT-RGN-->";
+const LT_HIDE_OPEN = '<!--[if !mso]><!--><tbody style="display:none;">';
+const LT_HIDE_CLOSE = "</tbody><!--<![endif]-->";
+const LT_REGIONS = ["East End", "West End", "Ridgway/Ouray"];
+
+function ltHasRegions(html) {
+  const n = String(html || "").split(LT_REGION_MARK).length;
+  return n >= 6 && n % 5 === 1;
+}
+// off: 1 = ALL copy, 2/3/4 = East End / West End / Ridgway/Ouray.
+function ltRegionVariant(html, off) {
+  if (!ltHasRegions(html)) return String(html || "");
+  return String(html).split(LT_REGION_MARK).map((p, i) => {
+    if (i % 5 === 0) return p;
+    if (i % 5 !== off) return "";
+    return off === 1 ? p : p.split(LT_HIDE_OPEN).join("").split(LT_HIDE_CLOSE).join("");
+  }).join("");
+}
+
+// Shrink the trigger payload: every repeated long inline style / site URL
+// prefix / UTM string is sent once in `dict` and replaced in the body by a
+// short §n§ token; the Weekly Digest template expands them (see
+// docs/customerio-regional-recaps.md). Only used when CIO_TEMPLATE_DICT = "1"
+// (i.e. once the template carries the expansion loop). Bodies are pure ASCII,
+// so § never occurs naturally; if it does, or the round trip isn't exact, the
+// body is sent uncompressed.
+function ltCompress(html) {
+  const src = String(html || "");
+  if (src.includes("§")) return { body: src, dict: [] };
+  const counts = new Map();
+  const add = (k) => counts.set(k, (counts.get(k) || 0) + 1);
+  for (const m of src.matchAll(/ style="[^"]{24,}"/g)) add(m[0]);
+  for (const m of src.matchAll(/https:\/\/livabletelluride\.org\/[a-z0-9\/-]*\.html\?/g)) add(m[0]);
+  for (const m of src.matchAll(/utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=[a-z-]+/g)) add(m[0]);
+  const keys = [...counts].filter(([k, c]) => c >= 2 && k.length * (c - 1) > 60)
+    .map(([k]) => k).sort((a, b) => b.length - a.length);
+  let body = src; const dict = [];
+  keys.forEach((k, i) => { const t = "§" + i.toString(36) + "§"; body = body.split(k).join(t); dict.push({ k: t, v: k }); });
+  let back = body; for (const d of dict) back = back.split(d.k).join(d.v);
+  return back === src ? { body, dict } : { body: src, dict: [] };
+}
+
+function ltPayload(subject, html, env) {
+  const c = String(env.CIO_TEMPLATE_DICT || "") === "1" ? ltCompress(html) : { body: String(html), dict: [] };
+  const data = c.dict.length ? { subject, body: c.body, dict: c.dict } : { subject, body: c.body };
+  return { data, bytes: new TextEncoder().encode(JSON.stringify(data)).length };
+}
+
+// The broadcast's audience, restated for API-defined recipients (they REPLACE
+// the audience set in the Customer.io UI). Env JSON overrides; otherwise the
+// segments are looked up by name — the same ones the broadcasts use in the UI.
+async function ltAudience(appKey, env, isTest) {
+  const override = String((isTest ? env.CUSTOMERIO_TEST_AUDIENCE : env.CUSTOMERIO_WEEKLY_AUDIENCE) || "").trim();
+  if (override) return JSON.parse(override);
+  const r = await fetch("https://api.customer.io/v1/segments", { headers: { Authorization: "Bearer " + appKey } });
+  if (!r.ok) throw new Error("couldn't list Customer.io segments (" + r.status + ")");
+  const segs = (await r.json()).segments || [];
+  const id = (name) => {
+    const s = segs.find((x) => String(x.name || "").trim().toLowerCase() === name.toLowerCase());
+    if (!s) throw new Error('Customer.io segment "' + name + '" not found');
+    return s.id;
+  };
+  if (isTest) return { segment: { id: id(env.CUSTOMERIO_TEST_SEGMENT || "Me Only") } };
+  return { and: [{ segment: { id: id("Weekly Update subscribers") } }, { not: { segment: { id: id("Yahoo & AOL Recipients") } } }] };
+}
+
+const ltSleep = (ms) => new Promise((res) => setTimeout(res, ms));
+
+async function ltTrigger(bid, appKey, payload) {
+  for (let attempt = 0; attempt < 4; attempt++) {
+    const r = await fetch("https://api.customer.io/v1/campaigns/" + bid + "/triggers", {
+      method: "POST",
+      headers: { Authorization: "Bearer " + appKey, "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    const t = await r.text();
+    if (r.status === 429) { await ltSleep(11000); continue; }   // one trigger per 10 s
+    return r.ok ? { ok: true } : { ok: false, status: r.status, detail: t.slice(0, 300) };
+  }
+  return { ok: false, status: 429, detail: "rate limited after retries" };
+}
+
+// Send a digest through an API-triggered broadcast. Regional emails go out as
+// four triggers (East End, West End, Ridgway/Ouray, everyone else); anything
+// else is one trigger to the broadcast's own UI audience, as before.
+async function ltSendBroadcast(bid, subject, html, appKey, env, isTest) {
+  const LIMIT = 49000;
+  if (!ltHasRegions(html)) {
+    const { data, bytes } = ltPayload(subject, html, env);
+    if (bytes > LIMIT) return { error: "Email is " + Math.round(bytes / 1024) + " KB — over Customer.io's 50 KB limit for broadcast data." };
+    const r = await ltTrigger(bid, appKey, { data });
+    return r.ok ? { ok: true, sends: ["all"] } : { error: "Customer.io " + r.status, detail: r.detail };
+  }
+  const audience = await ltAudience(appKey, env, isTest);
+  const eq = (g) => ({ attribute: { field: "region", operator: "eq", value: g } });
+  const plan = LT_REGIONS.map((g, i) => ({ name: g, off: i + 2, filter: { and: [audience, eq(g)] } }));
+  plan.push({ name: "everyone else", off: 1, filter: { and: [audience, { not: { or: LT_REGIONS.map(eq) } }] } });
+  // Size-check every variant BEFORE sending any, so a too-big email never
+  // leaves some regions sent and others not.
+  for (const p of plan) {
+    p.payload = ltPayload(subject, ltRegionVariant(html, p.off), env);
+    if (p.payload.bytes > LIMIT) return { error: "The " + p.name + " email is " + Math.round(p.payload.bytes / 1024) + " KB — over Customer.io's 50 KB limit for broadcast data." + (String(env.CIO_TEMPLATE_DICT || "") === "1" ? "" : " (Style compression is off — see docs/customerio-regional-recaps.md.)") };
+  }
+  const sent = [];
+  for (let i = 0; i < plan.length; i++) {
+    if (i) await ltSleep(10500);
+    const p = plan[i];
+    const r = await ltTrigger(bid, appKey, { data: p.payload.data, recipients: p.filter });
+    if (!r.ok) {
+      return { error: "Customer.io " + r.status + " on the " + p.name + " send" + (sent.length ? " — already sent: " + sent.join(", ") + ". Do NOT resend those." : ""), detail: r.detail, sent };
+    }
+    sent.push(p.name);
+  }
+  return { ok: true, sends: sent };
+}
+
 async function send(body, env) {
   const appKey = (env.CUSTOMERIO_APP_API_KEY || "").trim();
   if (!appKey) return { error: "Customer.io App API key not configured on the Worker." };
@@ -165,7 +292,7 @@ async function send(body, env) {
     // Liquid ({% unsubscribe_url %}, {{ customer.* }}) only renders on the real
     // broadcast path (the CIO template render_liquid's trigger.body), plus any
     // legacy Mailchimp merge tags.
-    const testHtml = html
+    const testHtml = ltRegionVariant(html, 1)
       .replace(/\{\{\s*unsubscribe_url\s*\}\}/g, "#")
       .replace(/\{\{\s*customer\.[^}]*\}\}/g, "")
       .replace(/\*\|UNSUB\|\*/g, "#").replace(/\*\|[A-Z0-9_]+\|\*/g, "");
@@ -186,13 +313,8 @@ async function send(body, env) {
     if (!tbid) {
       return { pending: true, error: "No test broadcast configured yet. Create an API-triggered test broadcast pointed at a one-person test segment, then set CUSTOMERIO_TEST_BROADCAST_ID." };
     }
-    const r = await fetch("https://api.customer.io/v1/campaigns/" + tbid + "/triggers", {
-      method: "POST",
-      headers: { Authorization: "Bearer " + appKey, "Content-Type": "application/json" },
-      body: JSON.stringify({ data: { subject, body: html } }),
-    });
-    const t = await r.text();
-    return r.ok ? { ok: true, mode: "test-broadcast" } : { error: "Customer.io " + r.status, detail: t.slice(0, 400) };
+    const r = await ltSendBroadcast(tbid, subject, html, appKey, env, true);
+    return r.ok ? { ok: true, mode: "test-broadcast", sends: r.sends } : r;
   }
 
   // Approve & Send → API-triggered broadcast to the segment.
@@ -203,19 +325,15 @@ async function send(body, env) {
       error: "Customer.io broadcast not finalized yet. Create the API-triggered broadcast in the Customer.io UI, target the Weekly Update segment, and set CUSTOMERIO_BROADCAST_ID — then this goes live. (Send test works now.)",
     };
   }
-  const r = await fetch("https://api.customer.io/v1/campaigns/" + bid + "/triggers", {
-    method: "POST",
-    headers: { Authorization: "Bearer " + appKey, "Content-Type": "application/json" },
-    body: JSON.stringify({ data: { subject, body: html } }),
-  });
-  const t = await r.text();
-  if (!r.ok) return { error: "Customer.io " + r.status, detail: t.slice(0, 400) };
+  const r = await ltSendBroadcast(bid, subject, html, appKey, env, false);
+  if (!r.ok) return r;
   // Sent — archive the exact HTML and record it so the next content-refresh run
   // turns this newsletter into a blog post. Best-effort: a blog hiccup must never
   // report the send as failed (it already went out).
   let blog = "skipped";
-  if (env.GITHUB_TOKEN) { try { blog = await archiveBroadcast(env, body); } catch (e) { blog = "archive-error: " + String((e && e.message) || e).slice(0, 120); } }
-  return { ok: true, mode: "broadcast", blog };
+  // Archive the everyone (ALL) version — not the raw body with hidden copies.
+  if (env.GITHUB_TOKEN) { try { blog = await archiveBroadcast(env, Object.assign({}, body, { emailHtml: ltRegionVariant(html, 1) })); } catch (e) { blog = "archive-error: " + String((e && e.message) || e).slice(0, 120); } }
+  return { ok: true, mode: "broadcast", sends: r.sends, blog };
 }
 
 // Archive a just-sent broadcast: commit the exact HTML to digest/archive/ and
@@ -555,7 +673,10 @@ async function scheduledSend(env, dry) {
   const html = await ghGetText(env, d.file);
   if (!html || html.length < 2000) throw new Error(d.file + " looks too small (" + (html ? html.length : 0) + " bytes)");
   if (html.includes("data:image")) throw new Error(d.file + " contains inline data:image payloads — re-approve at the Review Desk");
-  if (html.length > 120000) throw new Error(d.file + " is " + html.length + " bytes — over the 120 KB clip limit");
+  // Clip check on what readers actually get: a regional digest carries hidden
+  // copies, but each reader receives only one version (see ltSendBroadcast).
+  const biggest = Math.max(...[1, 2, 3, 4].map((o) => ltRegionVariant(html, o).length));
+  if (biggest > 120000) throw new Error(d.file + " renders to " + biggest + " bytes — over the 120 KB clip limit");
 
   // Integrity gate: the body must still be what was approved. Locks written
   // before this field existed carry no hash — those still send (unverified)

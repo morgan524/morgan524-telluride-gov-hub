@@ -19,3 +19,9 @@ account_id = "8f020e73de4e9956f0e3ad7dce070ef4"
 # because GitHub's scheduler drops/delays top-of-hour crons by hours.
 [triggers]
 crons = ["0 15 * * 1,5", "30 15 * * 1,5", "0 16 * * 1,5"]
+
+# Style compression for broadcast trigger data (see ltCompress in worker.js and
+# docs/customerio-regional-recaps.md). "1" ONLY once both Weekly Digest
+# broadcasts' templates expand trigger.dict — otherwise readers see §n§ codes.
+[vars]
+CIO_TEMPLATE_DICT = "0"
