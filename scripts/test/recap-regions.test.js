@@ -63,3 +63,10 @@ test('upcoming-meeting regions add Rico to the East End; recaps do not', () => {
   assert.ok(!RR.RECAP_REGIONS['East End'].includes('rico'));
   assert.deepStrictEqual(RR.MEETING_REGIONS['West End'], RR.RECAP_REGIONS['West End']);
 });
+
+test('intro check flags bare council names, passes full ones', () => {
+  const { bareCouncilRefs } = require('../lib/rick-lede.js');
+  assert.strictEqual(bareCouncilRefs('The big one is **Town Council** on Tuesday.').length, 1);
+  assert.strictEqual(bareCouncilRefs('**Telluride Town Council** on Tuesday; then Council takes up X.').length, 1);
+  assert.strictEqual(bareCouncilRefs('**Telluride Town Council**, **Mountain Village Town Council**, **Ouray City Council** and **Ridgway Town Council** all meet.').length, 0);
+});

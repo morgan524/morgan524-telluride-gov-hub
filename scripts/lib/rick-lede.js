@@ -69,10 +69,17 @@ function ledePrompt({ meetings, events, cadence }) {
   // digests"): cover MORE of the window, put the DAY OF THE WEEK on every item,
   // and wrap each body / event name in **double asterisks**. weekly-email.js
   // renders **…** as bold (escBold); nothing else is markup.
-  const style = ' Every meeting or event you mention MUST carry its day of the week (e.g. "Tuesday", "on Saturday"). Wrap the NAME of each governing body and each event in double asterisks for bold, exactly like **Town Council** or **Slap Dragon** — the name only, not the day or the venue. No other markup.';
+  const style = ' Every meeting or event you mention MUST carry its day of the week (e.g. "Tuesday", "on Saturday"). Wrap the NAME of each governing body and each event in double asterisks for bold, exactly like **Telluride Town Council** or **Slap Dragon** — the name only, not the day or the venue. No other markup.' +
+    // Morgan 2026-09-30: the region has many town councils, so a bare
+    // "Town Council" is ambiguous. Every mention names its town.
+    ' ALWAYS name a governing body with its town or county, every time you mention it — use the "body" name given for each meeting, e.g. **Telluride Town Council**, **Mountain Village Town Council**, **Ridgway Town Council**, **Ouray City Council**, **San Miguel County Board of County Commissioners**. NEVER write a bare "Town Council", "City Council", "Council", or "the Board" — not even on a second reference in the same paragraph.';
+  // Morgan 2026-09-30: a line break after each summarized day. The paragraphs
+  // are separated by a newline inside the JSON string; weekly-email.js renders
+  // each one on its own line.
+  const byDay = ' Separate the day paragraphs with a single newline character (\\n) inside the "lede" string; do not put two days in one paragraph.';
   const spec = weekend
-    ? 'a 3-4 sentence (60-100 word) plain-prose intro to the weekend. LEAD with the single best or biggest thing happening, then fold in three or four of the others so the reader gets a real sense of the whole weekend. Warm and grounded — like a local telling a friend what is worth getting out for.' + style
-    : 'a 4-6 sentence (110-170 word) plain-prose intro that orients a busy local. LEAD with the single biggest or most important meeting this week, then cover the other consequential meetings, then close "on the lighter side" with three or so of the events. Aim to name most of the meetings and several events, not just one or two.' + style;
+    ? 'a plain-prose intro to the weekend (70-120 words), written DAY BY DAY: one short paragraph per day that has something worth doing (Friday, then Saturday, then Sunday), each opening with that day. Give the single best or biggest thing the most weight within its day, and fold in three or four of the others across the weekend. Warm and grounded — like a local telling a friend what is worth getting out for.' + style + byDay
+    : 'a plain-prose intro that orients a busy local (120-200 words), written DAY BY DAY in date order: one short paragraph per day that has a meeting or event worth mentioning, each opening with that day (e.g. "Monday, …"). Give the single biggest or most important meeting of the week the most weight within its day, cover the other consequential meetings on their days, and fold in three or so events "on the lighter side" on theirs. Aim to name most of the meetings and several events, not just one or two.' + style + byDay;
   const parts = [
     RICK_VOICE,
     '',
@@ -106,8 +113,10 @@ function ledeInputFingerprint({ meetings, events, cadence } = {}) {
   // edited without invalidating every cached lede in the file.
   const payload = JSON.stringify({
     // Bump when the HOUSE STYLE in ledePrompt changes so every cached lede
-    // written under the old style is regenerated (v2 = bold names + weekdays).
-    style: 2,
+    // written under the old style is regenerated (v2 = bold names + weekdays,
+    // v3 = every body named with its town — no bare "Town Council",
+    // v4 = one paragraph per day, line break between days).
+    style: 4,
     cadence: cadence === 'weekend' ? 'weekend' : 'week',
     // Weekend ledes are events-only (see ledePrompt), so meetings must not
     // enter the key there — otherwise a meeting change would bust a cache
@@ -139,6 +148,25 @@ function saveLedeCache(cacheFile, cache) {
   catch (e) { /* best-effort: a read-only FS must not fail the render */ }
 }
 
+// Places that make a council name unambiguous. Anything else in front of
+// "Council" (or nothing) is a bare reference.
+const PLACE_RE = /(telluride|mountain village|ridgway|norwood|ophir|rico|ouray|nucla|naturita|sawpit|placerville|montrose|dolores|san miguel)\s*(town|city)?\s*$/i;
+
+// Bare council references in a lede: "Town Council", "City Council" or
+// "Council" not directly preceded by a place name. Returns the offending
+// snippets (empty when the lede is fine).
+function bareCouncilRefs(lede) {
+  const out = [];
+  const t = String(lede || '').replace(/\*\*/g, '');
+  const re = /\b(?:(?:Town|City)\s+)?Council\b/g;
+  let m;
+  while ((m = re.exec(t))) {
+    const before = t.slice(Math.max(0, m.index - 40), m.index) + (/^(town|city)/i.test(m[0]) ? m[0].split(/\s+/)[0] : '');
+    if (!PLACE_RE.test(before.replace(/\s+$/, '') + ' ') && !PLACE_RE.test(before)) out.push(t.slice(Math.max(0, m.index - 20), m.index + m[0].length));
+  }
+  return out;
+}
+
 // Generate the Rick-voice lede from the ACTUAL meetings + events in the window.
 // Best-effort: returns null (never throws) when there is no API key, nothing to
 // write about, or the call/parse fails — so the caller keeps its fallback lede.
@@ -163,10 +191,20 @@ async function generateRickLede({ meetings, events, apiKey, cadence, cacheFile }
   const key = apiKey || process.env.ANTHROPIC_API_KEY;
   if (!key) { console.log('  i No ANTHROPIC_API_KEY — skipping Rick lede (using fallback)'); return null; }
   try {
-    const raw = await callClaude(key, ledePrompt({ meetings: mtg, events: ev, cadence }), 500);
-    const m = raw.match(/\{[\s\S]*\}/);          // tolerate a stray markdown fence
-    const parsed = JSON.parse(m ? m[0] : raw);
-    const lede = String(parsed.lede || '').trim();
+    const parse = (raw) => { const m = raw.match(/\{[\s\S]*\}/); return String(JSON.parse(m ? m[0] : raw).lede || '').trim(); };
+    const prompt = ledePrompt({ meetings: mtg, events: ev, cadence });
+    let lede = parse(await callClaude(key, prompt, 500));
+    // One corrective retry when a bare "Town Council" / "Council" slips through.
+    const bad = bareCouncilRefs(lede);
+    if (lede && bad.length) {
+      console.log('  ! Rick lede named a council without its town (' + bad.join(' | ') + ') — retrying');
+      const fixed = parse(await callClaude(key, prompt + '\n\nYour previous draft was:\n' + lede +
+        '\n\nIt used a bare council name here: ' + bad.map((b) => '"' + b + '"').join(', ') +
+        '. Rewrite it so EVERY mention of a council or board names its town or county (e.g. **Telluride Town Council**). Same JSON format.', 500));
+      const stillBad = bareCouncilRefs(fixed);
+      if (fixed && stillBad.length < bad.length) lede = fixed;
+      if (stillBad.length) console.log('  ! Rick lede still has a bare council reference after retry: ' + stillBad.join(' | '));
+    }
     if (lede) { cache[fp] = { lede, at: new Date().toISOString().slice(0, 10) }; saveLedeCache(cacheFile, cache); }
     return lede || null;
   } catch (e) {
@@ -175,4 +213,4 @@ async function generateRickLede({ meetings, events, apiKey, cadence, cacheFile }
   }
 }
 
-module.exports = { generateRickLede, ledePrompt, RICK_VOICE, ledeInputFingerprint };
+module.exports = { generateRickLede, ledePrompt, RICK_VOICE, ledeInputFingerprint, bareCouncilRefs };

@@ -21,7 +21,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 const { stripDescPreamble } = require('./lib/clean-text.js');
 const { generateRickLede } = require('./lib/rick-lede.js');
-const { meetingDisplayName } = require('./lib/meeting-title.js');
+const { meetingDisplayName, SELF_IDENTIFYING } = require('./lib/meeting-title.js');
 const RR = require('./lib/recap-regions.js');
 const GD = process.argv[2], GH = process.argv[3];
 const WEEK_START = process.argv[4] || new Date().toISOString().slice(0, 10);
@@ -682,6 +682,9 @@ const esc = (s) => String(s == null ? '' : s).replace(/&#0?39;/g, "'").replace(/
 // inject real markup — the ** markers pass through escaping unchanged as
 // plain asterisks, then this turns matched pairs into real emphasis.
 const escBold = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+// The intro goes day by day (Morgan 2026-09-30): each newline-separated day
+// paragraph on its own line, with a blank line between days.
+const ledeHtml = (s) => String(s || '').split(/\s*\n+\s*/).filter(Boolean).map(escBold).join('<br><br>');
 
 // ── Emphasize proper-noun names & standalone addresses in meeting summaries ──
 // Ported from gov-hub.html's emphasizeNames so the weekly digest bolds the SAME
@@ -1114,10 +1117,20 @@ const festivalHero = festivalsThisWeek.map(festCard).join('');
 // meetings + events — unless a human pinned a dated intro in the lede JSON
 // (that override always wins). Best-effort: generateRickLede returns null when
 // there's no ANTHROPIC_API_KEY or the call fails, and we keep the fallback.
+// The intro must name every body with its town ("Telluride Town Council", not
+// "Town Council" — Morgan 2026-09-30), so hand the writer that full name:
+// "Town of Telluride" + "Town Council" → "Telluride Town Council";
+// "City of Ouray" + "City Council Regular Meeting" → "Ouray City Council Regular Meeting".
+function ledeBodyName(name, src) {
+  const place = String(src || '').replace(/^(town|city) of\s+/i, '').trim();
+  let n = String(name || '').replace(/^(town|city) of\s+/i, '').trim();
+  if (!place || SELF_IDENTIFYING.test(n) || n.toLowerCase().startsWith(place.toLowerCase())) return n || place;
+  return place + ' ' + n;
+}
 if (!LEDE_IS_OVERRIDE) {
   const rickLede = await generateRickLede({
     cadence: WEEKEND ? 'weekend' : 'week',
-    meetings: WEEKEND ? [] : meetings.map((m) => ({ title: m.name, date: m.date, summary: m.summary })),
+    meetings: WEEKEND ? [] : meetings.map((m) => ({ body: ledeBodyName(m.name, m.src), title: m.name, date: m.date, summary: m.summary })),
     events: chosen.map((e) => ({ title: e.title, date: e.date, location: townLabel(e), summary: e.summary })),
     apiKey: process.env.ANTHROPIC_API_KEY,
     // Content-addressed so re-rendering an UNCHANGED window is free and
@@ -1166,7 +1179,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
     </tr></table></td></tr>
   <tr><td class="sec-pad" style="padding:22px 34px 4px;">
     <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#2f7a5f;background:rgba(47,122,95,.1);padding:3px 10px;border-radius:999px;">📅 ${esc(EMAIL_TITLE)}</span>
-    <p style="margin:11px 0 0;font-size:15.5px;line-height:1.65;color:#2c3b35;">${escBold(LEDE)}</p></td></tr>
+    <p style="margin:11px 0 0;font-size:15.5px;line-height:1.65;color:#2c3b35;">${ledeHtml(LEDE)}</p></td></tr>
   ${meetingsBlock}${recapBlock}
   ${festivalHero}
   ${eventsBlock}${WEEKEND ? '' : topicHtml}
