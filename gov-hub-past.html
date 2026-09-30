@@ -77,6 +77,7 @@
     .r-date .d { font-size: 24px; line-height: 1; }
     .r-date .y { font-size: 12px; }
   }
+  .r-card.r-target { outline: 3px solid var(--forest); outline-offset: 4px; border-radius: 6px; scroll-margin-top: 90px; }
 </style>
 </head>
 <body>
@@ -166,6 +167,31 @@
     return '';
   }
 
+  // Anchor for each recap — MUST match recapId() in scripts/lib/recap-regions.js
+  // (the weekly email's "Read the full summary" links point here).
+  function recapId(r) {
+    var slug = String(r.title || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 48);
+    return 'r-' + (r.sourceKey || 'x') + '-' + (r.date || '') + (slug ? '-' + slug : '');
+  }
+  // Arriving from an email link (#r-…): scroll to that recap and highlight it.
+  function showHashTarget() {
+    var id = decodeURIComponent((location.hash || '').slice(1));
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.classList.add('r-target');
+    // Clear the sticky site nav. Re-run after load: the header injection and
+    // late layout shifts otherwise leave the page at the top.
+    function go() {
+      var hdr = document.querySelector('.lt-nav');
+      var off = (hdr ? hdr.getBoundingClientRect().height : 110) + 16;
+      window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - off, behavior: 'auto' });
+    }
+    go();
+    setTimeout(go, 400);
+    if (document.readyState !== 'complete') window.addEventListener('load', function () { setTimeout(go, 50); });
+  }
+
   function render() {
     var rows = recaps.filter(function (r) { return !srcFilter || r.sourceKey === srcFilter; });
     if (!rows.length) { list.innerHTML = '<p class="meta" style="padding:18px 0">No recaps for this filter yet.</p>'; return; }
@@ -192,7 +218,7 @@
             ' &mdash; <span class="oc">' + esc(oc) + '</span></span>';
         }).join('') + '</div>';
       }
-      html += '<article class="r-card">' +
+      html += '<article class="r-card" id="' + esc(recapId(r)) + '">' +
         '<div class="r-date"><div class="m">' + MON[d.getMonth()] + '</div><div class="d">' + d.getDate() + '</div><div class="y">' + d.getFullYear() + '</div>' + logo + '</div>' +
         '<div><span class="tag">' + esc(r.sourceLabel || '') + '</span>' +
         '<h3>' + esc(r.title || '') + '</h3>' +
@@ -220,6 +246,7 @@
       render();
     });
     render();
+    showHashTarget();
   }).catch(function (err) { LTData.showError(list, err); });
 })();
 </script>

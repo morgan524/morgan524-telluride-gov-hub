@@ -22,6 +22,7 @@ const { execSync } = require('child_process');
 const { stripDescPreamble } = require('./lib/clean-text.js');
 const { generateRickLede } = require('./lib/rick-lede.js');
 const { meetingDisplayName } = require('./lib/meeting-title.js');
+const RR = require('./lib/recap-regions.js');
 const GD = process.argv[2], GH = process.argv[3];
 const WEEK_START = process.argv[4] || new Date().toISOString().slice(0, 10);
 const LABEL = process.argv[5] || 'This Week';
@@ -227,10 +228,7 @@ for (const name of EVENT_ARRAYS) {
     });
   }
 }
-// One per day: top featuredScore (tie → earlier start). Skip days with nothing.
-const byDay = {};
-for (const e of evts) { (byDay[e.date] = byDay[e.date] || []).push(e); }
-let chosen = []; const usedTitles = new Set();
+let chosen = [];
 // Cross-day dedup key: alphabetise the distinctive 4+-char tokens of the title
 // after dropping common stopwords. This is intentionally fuzzy so the same
 // event listed under varying titles across sources collapses to one card.
@@ -294,6 +292,25 @@ function recentlyMailedHrefs() {
       }
     }
   } catch (e) { /* best-effort — leave the set empty */ }
+  return out;
+}
+
+// Weekly "What to Attend": the best event per day from `pool` (top
+// featuredScore, tie → earlier start), one DISTINCT event per day — skip an
+// event whose title already ran earlier this week (e.g. a multi-day festival)
+// and take the next-best instead. Runs once for everyone and once per region.
+function pickOnePerDay(pool) {
+  const byD = {};
+  for (const e of pool) { (byD[e.date] = byD[e.date] || []).push(e); }
+  const used = new Set(); const out = [];
+  for (const day of days) {
+    const list = (byD[day] || []).slice().sort((a, b) => (featuredScore(b) - featuredScore(a)) || ((featuredStartHour(a.time) || 99) - (featuredStartHour(b.time) || 99)));
+    const ov = FEATURED_OVERRIDES[day];
+    let pick = ov ? list.find((e) => ov.match.test(e.title) && !used.has(tkey(e.title))) : null;
+    if (pick && ov.link) pick = Object.assign({}, pick, { href: ov.link });
+    if (!pick) pick = list.find((e) => !used.has(tkey(e.title))) || list[0];
+    if (pick) { out.push(pick); used.add(tkey(pick.title)); }
+  }
   return out;
 }
 
@@ -361,16 +378,7 @@ if (WEEKEND) {
   fillToCap(5);   // pass 2: top up to the cap, allowing event-rich towns more
   chosen.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0) || ((featuredStartHour(a.time) || 99) - (featuredStartHour(b.time) || 99)));
 } else {
-  for (const day of days) {
-    const list = (byDay[day] || []).sort((a, b) => (featuredScore(b) - featuredScore(a)) || ((featuredStartHour(a.time) || 99) - (featuredStartHour(b.time) || 99)));
-    // One DISTINCT event per day: skip an event whose title already ran earlier
-    // this week (e.g. a multi-day festival) and take the next-best instead.
-    const ov = FEATURED_OVERRIDES[day];
-    let pick = ov ? list.find((e) => ov.match.test(e.title) && !usedTitles.has(tkey(e.title))) : null;
-    if (pick && ov.link) pick = Object.assign({}, pick, { href: ov.link });
-    if (!pick) pick = list.find((e) => !usedTitles.has(tkey(e.title))) || list[0];
-    if (pick) { chosen.push(pick); usedTitles.add(tkey(pick.title)); }
-  }
+  chosen = pickOnePerDay(evts);
 }
 
 // ── Topic extras: events NOT already in the universal one-per-day list, grouped
@@ -782,7 +790,7 @@ const calBtn = (ev) => {
   return u ? `<a href="${esc(u)}" style="display:inline-block;background:#f1ece1;color:#a0531f;text-decoration:none;font-size:10.5px;font-weight:600;padding:3px 10px;border-radius:4px;vertical-align:middle;">&#128197; Add to calendar</a>` : '';
 };
 const ACT_SEP = ' &nbsp;&nbsp; ';
-const mh = meetings.map((m) => {
+const meetingRow = (m) => {
   // No agenda → no link. The old fallback ("Meeting info →") pointed at the
   // body's agenda index, which is exactly the decoy the rule above exists to
   // prevent; the card's own text already says the agenda hasn't posted yet.
@@ -823,7 +831,8 @@ const mh = meetings.map((m) => {
   // site. Bodies that publish no hour keep the bare date.
   const when = wd(m.date) + (m.time ? ' · ' + String(m.time).replace(/\s*-\s*/, '–') : '');
   return `<tr><td style="${tdStyle}"><span style="display:inline-block;background:#21443c;color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(when).toUpperCase()}</span><span style="font-size:12px;color:#7a8a85;margin-left:8px;">${esc(m.src)}</span><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:5px;">${esc(meetingDisplayName(m.name, m.src))}</div><div style="font-size:15.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${renderSummary(m.summary)}</div>${wtmBlock}${acts}</td></tr>`;
-}).join('');
+};
+const mh = meetings.map(meetingRow).join('');
 const EV_ACCENT = '#a0531f'; // rust (toned down from the redder #a8401f) — complements the forest-green meeting badge
 // Town/area label for an event card. Prefers the scraped venue string when one
 // is present (e.g. "Sheridan Opera House · Telluride"); otherwise falls back to
@@ -869,6 +878,30 @@ const evRow = (e) => {
   return `<tr><td style="padding:13px 0;border-top:1px solid #eef1ee;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>${img}<td class="ev-text-cell" valign="top">${text}</td></tr></table></td></tr>`;
 };
 const eh = chosen.map(evRow).join('');
+// Regional "What to Attend" (weekly only): each region's best event per day,
+// with a fallback pick filling any day that region has nothing — so the
+// section stays a full week. Shipped as hidden copies; the Customer.io template
+// shows the reader's region (scripts/lib/recap-regions.js).
+const regionalEvents = {};
+if (!WEEKEND) {
+  for (const g of RR.REGION_ORDER) {
+    const local = pickOnePerDay(evts.filter((e) => RR.eventRegion(e) === g));
+    const byD = {}; local.forEach((e) => { byD[e.date] = e; });
+    const seenT = new Set(local.map((e) => tkey(e.title)));
+    const merged = [];
+    for (const day of days) {
+      if (byD[day]) { merged.push(byD[day]); continue; }
+      // West End readers are nearer Telluride than Ridgway, so their empty
+      // days take the East End pick first; everyone else takes the all-area pick.
+      const fbPool = (g === 'West End' && regionalEvents['East End']) ? regionalEvents['East End'].concat(chosen) : chosen;
+      const fb = fbPool.find((e) => e.date === day && !seenT.has(tkey(e.title)));
+      if (fb) { merged.push(fb); seenT.add(tkey(fb.title)); }
+    }
+    regionalEvents[g] = merged;
+  }
+  console.log('  regional What to Attend (local picks / total): ' + RR.REGION_ORDER.map((g) =>
+    g + ' ' + regionalEvents[g].filter((e) => RR.eventRegion(e) === g).length + '/' + regionalEvents[g].length).join(', '));
+}
 // A single closing note in Rick's voice at the very end of the email: civic
 // engagement is valuable in every form — weighing in on a meeting, or simply
 // turning out for a concert or a gallery opening. Replaces the old per-meeting
@@ -987,6 +1020,52 @@ const whatsLookingForBox = `<tr><td class="callout-wrap" style="padding:26px 34p
 // fallback when no featured org resolves (and the recruitment ad is opt-in).
 const calloutBox = SHOW_LOOKING_FOR ? whatsLookingForBox : (featuredOrgBox || whatsReadingBox);
 const section = (label, rows) => rows ? `<tr><td class="sec-pad" style="padding:24px 34px 0;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;border-bottom:1px solid #d4c9b0;padding-bottom:8px;">→ ${label}</div><table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}</table></td></tr>` : '';
+
+// ── Past meetings, recapped (weekly only) ──────────────────────────────────
+// Short teasers of last week's meeting recaps (the five business days before
+// WEEK_START), each linking to
+// its full recap on gov-hub-past.html. Ships an ALL list plus one hidden list
+// per region; the Customer.io template shows the reader's region (see
+// scripts/lib/recap-regions.js). Rico and TMVOA stay off the email lists.
+const RECAP_MAX = 14;
+const PAST_PAGE = SITE + '/gov-hub-past.html';
+let recapBlock = '';
+if (!WEEKEND) {
+  let allRecaps = [];
+  try { allRecaps = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'meeting-recaps.json'), 'utf8')); }
+  catch (e) { console.error('meeting-recaps.json unreadable — past-meetings section skipped:', e.message); }
+  const weekRecaps = RR.recapsForWeek(allRecaps, WEEK_START);
+  const recapRow = (r) => `<tr><td style="padding:12px 0;border-top:1px solid #eef1ee;"><span style="display:inline-block;background:#e9efe9;color:#21443c;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(r.date)).toUpperCase()}</span><span style="font-size:12px;color:#7a8a85;margin-left:8px;">${esc(r.sourceLabel || '')}</span><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:5px;">${esc(r.title || '')}</div><div style="font-size:14.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${esc(RR.shortRecap(r.recap))}</div><a href="${esc(PAST_PAGE + '#' + RR.recapId(r))}" style="color:#a0531f;text-decoration:underline;font-size:12.5px;font-weight:600;">Read the full summary →</a></td></tr>`;
+  const moreRow = `<tr><td style="padding:10px 0 0;border-top:1px solid #eef1ee;"><a href="${esc(PAST_PAGE)}" style="color:#21443c;font-size:12.5px;font-weight:700;text-decoration:underline;">See every meeting recap on the Past Meetings page →</a></td></tr>`;
+  const listFor = (rows, label, emptyMsg) => {
+    const body = rows.length ? rows.slice(0, RECAP_MAX).map(recapRow).join('') : `<tr><td style="padding:12px 0;font-size:14px;color:#5a6b64;">${emptyMsg}</td></tr>`;
+    return section(label, body + moreRow);
+  };
+  if (weekRecaps.length) {
+    const byRegion = {};
+    for (const g of RR.REGION_ORDER) byRegion[g] = listFor(RR.recapsForRegion(weekRecaps, g),
+      'Last Week&rsquo;s Meetings, Recapped &middot; ' + esc(g), 'No meetings in your area were recapped last week.');
+    recapBlock = RR.regionBlock(listFor(weekRecaps, 'Last Week&rsquo;s Meetings, Recapped', ''), byRegion);
+  }
+  console.log(`  past-meeting recaps (${RR.priorBusinessWeek(WEEK_START).join(' to ')}): all ${weekRecaps.length}; ` +
+    Object.keys(RR.RECAP_REGIONS).map((g) => g + ' ' + RR.recapsForRegion(weekRecaps, g).length).join(', '));
+}
+// Regional "Public Meetings This Week": MEETING_REGIONS (the recap map plus
+// Rico in the East End). Bodies in no region (e.g. TMVOA) stay in the
+// all-area list only.
+const meetingsBlock = WEEKEND ? '' : (mh
+  ? RR.regionBlock(section('Public Meetings This Week', mh), Object.fromEntries(RR.REGION_ORDER.map((g) => {
+      const rows = meetings.filter((m) => (RR.MEETING_REGIONS[g] || []).includes(m.srcKey)).map(meetingRow).join('');
+      return [g, section('Public Meetings This Week &middot; ' + esc(g), rows ||
+        '<tr><td style="padding:12px 0;font-size:14px;color:#5a6b64;">No public meetings in your area are scheduled this week. <a href="' + SITE + '/gov-hub.html" style="color:#a0531f;text-decoration:underline;">See every upcoming meeting &rarr;</a></td></tr>')];
+    })))
+  : '');
+if (!WEEKEND) console.log('  regional Public Meetings: all ' + meetings.length + '; ' + RR.REGION_ORDER.map((g) =>
+  g + ' ' + meetings.filter((m) => (RR.MEETING_REGIONS[g] || []).includes(m.srcKey)).length).join(', '));
+const eventsBlock = (!WEEKEND && eh)
+  ? RR.regionBlock(section(EVENTS_HEADING, eh), Object.fromEntries(RR.REGION_ORDER.map((g) =>
+      [g, section(EVENTS_HEADING + ' &middot; ' + esc(g), regionalEvents[g].map(evRow).join('') || eh)])))
+  : section(EVENTS_HEADING, eh);
 // Conditional per-interest extras — each block renders only for subscribers in
 // that Mailchimp "Event Topics" group. The *|INTERESTED|* tags are raw (NOT
 // html-escaped) so Mailchimp matches the literal group name including its "&".
@@ -1088,9 +1167,9 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
   <tr><td class="sec-pad" style="padding:22px 34px 4px;">
     <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#2f7a5f;background:rgba(47,122,95,.1);padding:3px 10px;border-radius:999px;">📅 ${esc(EMAIL_TITLE)}</span>
     <p style="margin:11px 0 0;font-size:15.5px;line-height:1.65;color:#2c3b35;">${escBold(LEDE)}</p></td></tr>
-  ${WEEKEND ? '' : section('Public Meetings This Week', mh)}
+  ${meetingsBlock}${recapBlock}
   ${festivalHero}
-  ${section(EVENTS_HEADING, eh)}${WEEKEND ? '' : topicHtml}
+  ${eventsBlock}${WEEKEND ? '' : topicHtml}
   ${calloutBox}
   ${donateBlock}
   <tr><td class="sec-pad" style="padding:24px 34px 30px;border-top:1px solid #ddd6c8;">
