@@ -74,26 +74,14 @@
   {
     "title": "Live Music at Alloy Kitchen",
     "link": "https://www.telluride.com/event/live-music-at-alloy-kitchen/",
-    "description": "Free live music, four nights a week, all season long. Alloy Kitchen at Mountain Lodge Telluride hosts a rotating lineup …",
+    "description": "Free live music all season long. Alloy Kitchen at Mountain Lodge Telluride hosts a rotating lineup of local favorites - …",
     "pubDate": "2026-06-11",
-    "endDate": "2026-10-17",
+    "endDate": "2026-10-16",
     "source": "telluride-com",
     "sourceLabel": "Telluride.com",
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/62862/alloy-live-music-pool-deck.800x533.webp"
-  },
-  {
-    "title": "Sunday Rehab",
-    "link": "https://www.telluride.com/event/sunday-rehab/",
-    "description": "Sunday Rehab brings the Mountain Lodge pool deck to life every Sunday with brunch, a Bloody Mary and juice bar, food …",
-    "pubDate": "2026-06-14",
-    "endDate": "2026-10-11",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/62769/sunday-rehab-event-image-2200x1237.800x533.webp"
   },
   {
     "title": "Weird Wine Wednesdays at The National",
@@ -234,6 +222,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63023/summit_one_pager.800x533.webp"
+  },
+  {
+    "title": "Build Your Own Kaleidoscope",
+    "link": "https://www.telluride.com/event/build-your-own-kaleidoscope/",
+    "description": "Join Brooke Einbender for a Build Your Own Kaleidoscope Workshop at Tracks in Mountain Village. This is a free event, …",
+    "pubDate": "2026-10-04",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63682/screenshot_2026-09-29_at_8_16_46_pm.800x533.webp"
   },
   {
     "title": "Stoke the Vote",

@@ -1,5 +1,17 @@
 [
   {
+    "title": "Town council discusses housing waitlist, rental rates",
+    "source": "Telluride Times",
+    "date": "September 30, 2026",
+    "firstSeen": "2026-09-30",
+    "newsTopic": "housing",
+    "copy": "Town Council voted to extend the housing waitlist suspension through January and hold rental rates steady for 2027, despite a 9.7% rise in regional AMI. Vacancy rates have dropped since the waitlist was suspended in April. A third-party policy review is underway before any bigger changes are made.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_b7fa0418-02ee-459b-9e4b-887c52b9737d.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/79/7796f851-3091-4324-921e-36eccfbee341/6aba2cc145efe.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Silver",
     "source": "Telluride Times",
     "date": "September 29, 2026",
@@ -93,8 +105,8 @@
     "date": "September 29, 2026",
     "firstSeen": "2026-09-30",
     "newsTopic": "community",
-    "copy": "",
-    "claudeSummary": false,
+    "copy": "Black cats get a bad reputation around Halloween, but studies show they face no greater risk of harm this time of year than any other. What is real: they're adopted less often and euthanized more — Second Chance in Ridgway has several waiting right now, including Maple, who's been there over half her life.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/news_release/article_c00656e3-474f-439c-a5f7-6b919dcb0653.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/02/9029e65d-ab7d-40b8-826e-b634ce05c129/6abc487807a3f.image.jpg",
     "imgHiRes": true
@@ -108,7 +120,7 @@
     "copy": "San Miguel County's Stakeholder Strategic Roundtable — a 22-member advisory group of local builders, brokers, planners, and agency reps — has completed a review of the Land Use Code aimed at easing housing development without eroding community character. Their recommendations are posted at bit.ly/smcssr. A public work session is scheduled Oct. 8, 9 a.m., at the Miramonte building in Telluride, also available via Zoom.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/columnists/article_778d0a27-3bf6-4399-b7a6-f16bb87aed4f.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "letterAuthor": "Colorado Ave",
     "isLetter": true,
     "imgHiRes": true
@@ -143,8 +155,8 @@
     "date": "September 29, 2026",
     "firstSeen": "2026-09-30",
     "newsTopic": "arts-culture",
-    "copy": "Telluride offers an abundance of options for viewing art.",
-    "claudeSummary": false,
+    "copy": "Ah Haa School for the Arts is hosting Artabout on Oct. 3, 10 a.m.–4 p.m. — a free, one-day studio tour with 27 artists opening workshops in homes, garages, and shops across Telluride, Lawson Hill, Ilium, and Deep Creek. Pick up a map at Ah Haa (155 W. Pacific) to start.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/arts_and_entertainment/article_e9ca6422-b719-416e-a248-574d8ab9dba5.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/4c/84c111ad-e4b3-4fce-b279-5aa3f568b568/6abb3cce67b31.image.jpg",
     "imgHiRes": true

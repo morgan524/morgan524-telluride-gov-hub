@@ -303,7 +303,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-10-07|Ecology Commission - Oct 07 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8119","sv":4,"ph":"82b6deaef9451b0e"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8119","sv":4,"ph":"da447f60ebca4a9c"},
 
   "telluride|2026-10-07|Commission for Community Assistance, Arts & Special Events - Oct 07 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8067","sv":4,"ph":"b351f6bb6fbe13ad"},
@@ -490,6 +490,14 @@ const DEEP_DIVE_UPDATES = [
 //   sourceUrl, topics: [] }. Rendered by hub-bub.html from the JSON mirror
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
+  {
+    date: "2026-09-30",
+    title: "Budget season, wildfire code — same room",
+    body: "Town Council's October 1 budget meeting is also expected to revisit Ordinance #1640 — the wildfire resiliency code amendment passed in August 2026. That pairing matters. New wildfire standards can mean real costs for property owners and the town itself, and a budget session is exactly where those costs start to feel concrete. Some residents will want the standards enforced fully, whatever they cost. Others will push back if compliance burdens land on homeowners or slow things down. Nothing's been decided yet on the budget side.\n\nWhat should Council prioritize if wildfire code compliance and other budget needs end up competing for the same dollars?",
+    choices: ["Wildfire code costs come first", "Balance it with other needs", "Owners should carry the cost", "Need more info"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
   {
     date: "2026-09-29",
     title: "Arts money and wildfire code — same meeting",
@@ -721,14 +729,6 @@ const DAILY_QUESTIONS = [
     choices: ["Sign of opportunity for locals", "Sign of deeper trouble", "Just routine legal process", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-08-31",
-    title: "Wildfire rules are now town law — now what?",
-    body: "Ordinance #1640 passed on August 11, 2026, writing the Colorado Wildfire Resiliency Code into Telluride's Land Use Code. Now council is circling back to it at a rescheduled budget session. Some residents will see this as overdue — up here, the fire risk is real and defensible space matters. Others may worry that new code requirements mean new costs and new hurdles for property owners already navigating a tough market. The ordinance is passed, but how it gets implemented is still an open conversation.\n\nSo: do you think folding wildfire resiliency rules into the Land Use Code is the right tool for the job?",
-    choices: ["Yes — code it in", "Too much burden on owners", "Depends on enforcement", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -817,11 +817,8 @@ const MEETING_PREVIEWS = {
   "county|2026-10-28|Board of County Commissioners Work Session":
     "Board is expected to discuss county procurement activity, including requests for proposals on a trail connector project, fuel island canopy construction, jail painting, and a multi-hazard mitigation plan update, as well as a materials hauling quote. Additional related legal and financial notices may be referenced during the session.",
 
-  "county|2026-09-30|Board of County Commissioners Work Session":
-    "Board will consider routine county business at a work session in Telluride. Key related matters include a subdivision exemption and lot line adjustment for Lawson Hill PUD, active procurement solicitations for trail construction and other county projects, and ongoing foreclosure and probate proceedings in San Miguel County.",
-
   "ouraycity|2026-09-30|Ouray City Council Work Session":
-    "Council is expected to review capital improvement funding and departmental budgets during a daylong work session. Additional topics include Fourth of July entertainment planning, a free in-town shuttle program, OurWay transit service, and nine nonprofit funding requests totaling roughly $195,000."
+    "Council is expected to review capital improvement funding and discuss budgets across multiple funds. Additional topics include Fourth of July entertainment planning, a free in-town shuttle program, OurWay transit service, and nonprofit funding requests totaling over $195,000 from nine organizations."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1044,7 +1041,7 @@ const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
 const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-30';
-const LEGAL_NOTICES_CACHE_DATE = '2026-09-27';
+const LEGAL_NOTICES_CACHE_DATE = '2026-09-30';
 
 const MANUAL_SUMMARIES = {
   "med|2026-09-11|Board Work Session":
@@ -2397,6 +2394,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Town council discusses housing waitlist, rental rates",
+    source: "Telluride Times",
+    date: "September 30, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "housing",
+    copy: "Town Council voted to extend the housing waitlist suspension through January and hold rental rates steady for 2027, despite a 9.7% rise in regional AMI. Vacancy rates have dropped since the waitlist was suspended in April. A third-party policy review is underway before any bigger changes are made.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_b7fa0418-02ee-459b-9e4b-887c52b9737d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/79/7796f851-3091-4324-921e-36eccfbee341/6aba2cc145efe.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Silver",
     source: "Telluride Times",
     date: "September 29, 2026",
@@ -2490,8 +2499,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "September 29, 2026",
     firstSeen: "2026-09-30",
     newsTopic: "community",
-    copy: "",
-    claudeSummary: false,
+    copy: "Black cats get a bad reputation around Halloween, but studies show they face no greater risk of harm this time of year than any other. What is real: they're adopted less often and euthanized more — Second Chance in Ridgway has several waiting right now, including Maple, who's been there over half her life.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_c00656e3-474f-439c-a5f7-6b919dcb0653.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/02/9029e65d-ab7d-40b8-826e-b634ce05c129/6abc487807a3f.image.jpg",
     imgHiRes: true
@@ -2505,7 +2514,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "San Miguel County's Stakeholder Strategic Roundtable — a 22-member advisory group of local builders, brokers, planners, and agency reps — has completed a review of the Land Use Code aimed at easing housing development without eroding community character. Their recommendations are posted at bit.ly/smcssr. A public work session is scheduled Oct. 8, 9 a.m., at the Miramonte building in Telluride, also available via Zoom.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_778d0a27-3bf6-4399-b7a6-f16bb87aed4f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     letterAuthor: "Colorado Ave",
     isLetter: true,
     imgHiRes: true
@@ -2540,8 +2549,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "September 29, 2026",
     firstSeen: "2026-09-30",
     newsTopic: "arts-culture",
-    copy: "Telluride offers an abundance of options for viewing art.",
-    claudeSummary: false,
+    copy: "Ah Haa School for the Arts is hosting Artabout on Oct. 3, 10 a.m.–4 p.m. — a free, one-day studio tour with 27 artists opening workshops in homes, garages, and shops across Telluride, Lawson Hill, Ilium, and Deep Creek. Pick up a map at Ah Haa (155 W. Pacific) to start.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/arts_and_entertainment/article_e9ca6422-b719-416e-a248-574d8ab9dba5.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/4c/84c111ad-e4b3-4fce-b279-5aa3f568b568/6abb3cce67b31.image.jpg",
     imgHiRes: true
@@ -3544,6 +3553,19 @@ const KOTO_FEATURED_STORIES = [
 // and the array will naturally shed the sentinels via the same logic.
 const SMB_FORUM_ARTICLES = [
   {
+    title: "West End trail system nears construction approval",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "September 30, 2026",
+    firstSeen: "2026-09-30",
+    dateSource: "article",
+    newsTopic: "recreation",
+    copy: "The West End Trail Alliance is working toward BLM approval to build roughly 32 miles of new single-track trail near Naturita and Sawtooth, with construction hoped to begin spring 2027. The project, driven by longtime local trail builders, will cost over $1 million — funding is being pursued through a Colorado Parks and Wildlife grant due this fall.",
+    claudeSummary: true,
+    href: "https://www.sanmiguelbasinforum.com/stories/untitled,131085",
+    img: "https://zeta.creativecirclecdn.com/smb/original/20260928-133623-65b-F3%20-%20biking.jpg"
+  },
+  {
     title: "Nucla volleyball girls make memories on, off court",
     source: "San Miguel Basin Forum",
     sourceKey: "smb",
@@ -4480,37 +4502,59 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/17514632?hs=a",
-    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    pubDate: "2026-09-29T16:30:00.000Z",
+    title: "Radio Biblioteca",
+    link: "https://telluridelibrary.libcal.com/event/17472042?hs=a",
+    description: "Radio Biblioteca is a bilingual radio program broadcast on KOTO 91.7 FM, presented in partnership with Wilkinson Public Library. The program shares community news and upcoming events in both English and Spanish, airing on alternating Wednesdays at midday.",
+    pubDate: "2026-09-30T18:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "KOTO Radio Station",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_11_00_33.png"
+  },
+  {
+    title: "Mahjongg for Independent Players",
+    link: "https://telluridelibrary.libcal.com/event/17457130?hs=a",
+    description: "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-09-30T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg"
+  },
+  {
+    title: "Kids Cook",
+    link: "https://telluridelibrary.libcal.com/event/17292123?hs=a",
+    description: "3:30 PM – 4:30 PM · Join us every Wednesday for a fun and tasty adventure in the kitchen! Learn how to make delicious and creative snacks using safe cooking tools alongside other young chefs. Free and open to kids ages 5-12.  &Uuml;nete a nosotros todos los mi&eacute;rcoles para una divertida y sabrosa aventura en la cocina. Aprende a hacer bocadillos deliciosos y creativos usando herramientas de cocina seguras junto a otros j&oacute;venes chefs. Gratis y abierto para ni&ntilde;os de 5 a 12 a&ntilde;os.",
+    pubDate: "2026-09-30T21:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_42_33.png"
   },
   {
-    title: "Teen Cook",
-    link: "https://telluridelibrary.libcal.com/event/17486117?hs=a",
-    description: "2:00 PM – 3:00 PM · Join the WPL Every Tuesday after school for Teen Cook. We will cook a different recipe from scratch, and have enough to share with those around!",
-    pubDate: "2026-09-29T20:00:00.000Z",
+    title: "Harry Potter Watch Party",
+    link: "https://telluridelibrary.libcal.com/event/17486058?hs=a",
+    description: "4:00 PM – 6:30 PM · Join the WPL every Wednesday after school in September and October, where we will sequentially watch all 8 of the original Harry Potter movies. This event is for teens/youth.",
+    pubDate: "2026-09-30T22:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_27_00.png"
+    location: "Magazine Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_22_52.jpg"
   },
   {
-    title: "I Heart Art",
-    link: "https://telluridelibrary.libcal.com/event/17292103?hs=a",
-    description: "2:30 PM – 4:00 PM · Looking for a fun and enriching way to spend your afternoons? Join us Tuesdays for I Heart Art, designed especially for kids aged 5-12!  &iquest;Buscas una manera divertida de pasar tus tardes? &iexcl;Unete a nuestro programa extracurricular, dise&ntilde;ado especialmente para ni&ntilde;os de 5 a 12 a&ntilde;os!",
-    pubDate: "2026-09-29T20:30:00.000Z",
+    title: "Annette McGivney Author Talk: Plastic Shaman",
+    link: "https://telluridelibrary.libcal.com/event/17001051?hs=a",
+    description: "5:30 PM – 7:00 PM · Join us for a talk and signing with Annette McGivney on Wednesday, September 30th at 5:30 pm! She&#39;ll be presenting her new book, Plastc Shaman: The True Story of a Deadly Self-Help Retreat and America&#39;s Misguided Quest for Wellness . Between the Covers Bookstore will be at the event selling books. A spiritual quest turns into a fatal disaster in this gripping true crime investigation. In October 2009, more than fifty people attended a $10,000-per-person wellness retreat led by a celebrity self-help guru. For these enlightenment seekers, their time in Sedona, Arizona, culminated in a fake Native American sweat lodge ceremony. Three of them would not make it out alive. This tragedy exposes the dangerous truth about the booming two-trillion-dollar wellness sector, where promises of spiritual awakening and financial success often mask shocking practices underpinned by cultural appropriation and the commodification of nature. …",
+    pubDate: "2026-09-30T23:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_39_32.png"
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_18_16_03_54.jpg"
   }
 ];
 
@@ -6813,26 +6857,14 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Live Music at Alloy Kitchen",
     link: "https://www.telluride.com/event/live-music-at-alloy-kitchen/",
-    description: "Free live music, four nights a week, all season long. Alloy Kitchen at Mountain Lodge Telluride hosts a rotating lineup …",
+    description: "Free live music all season long. Alloy Kitchen at Mountain Lodge Telluride hosts a rotating lineup of local favorites - …",
     pubDate: "2026-06-11",
-    endDate: "2026-10-17",
+    endDate: "2026-10-16",
     source: "telluride-com",
     sourceLabel: "Telluride.com",
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62862/alloy-live-music-pool-deck.800x533.webp"
-  },
-  {
-    title: "Sunday Rehab",
-    link: "https://www.telluride.com/event/sunday-rehab/",
-    description: "Sunday Rehab brings the Mountain Lodge pool deck to life every Sunday with brunch, a Bloody Mary and juice bar, food …",
-    pubDate: "2026-06-14",
-    endDate: "2026-10-11",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62769/sunday-rehab-event-image-2200x1237.800x533.webp"
   },
   {
     title: "Weird Wine Wednesdays at The National",
@@ -6973,6 +7005,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/63023/summit_one_pager.800x533.webp"
+  },
+  {
+    title: "Build Your Own Kaleidoscope",
+    link: "https://www.telluride.com/event/build-your-own-kaleidoscope/",
+    description: "Join Brooke Einbender for a Build Your Own Kaleidoscope Workshop at Tracks in Mountain Village. This is a free event, …",
+    pubDate: "2026-10-04",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63682/screenshot_2026-09-29_at_8_16_46_pm.800x533.webp"
   },
   {
     title: "Stoke the Vote",
@@ -7564,6 +7607,60 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_87c1dedd-06e4-4678-a68d-6a0116434245.html",
     address: "San Miguel County, Colorado (various oil and gas well locations)",
     noticeKey: "delinquent-oilgas-taxes-2025-american-helium"
+  },
+  {
+    title: "Public Hearing -- Adoption of 2024 International Building Code and Colorado Low Energy & Carbon Code",
+    entity: "San Miguel County Board of Commissioners",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "The San Miguel County Board of Commissioners will hold a public hearing on September 16, 2026, at 9:00 AM in Telluride to consider adopting the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Community members may submit written comments, but they must be received by noon on September 10, 2026. Proposed amendments are available in the meeting agenda packet at the county website.",
+    deadline: "2026-09-10T12:00:00",
+    expires: "2026-09-16",
+    dates: "8/27",
+    papers: ["ttimes_0827"],
+    url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    address: "Telluride, Colorado (San Miguel County)",
+    noticeKey: "COL-000222-ibc-2024-hearing"
+  },
+  {
+    title: "RFP -- Fuel Island Canopy Construction, Norwood Road & Bridge Maintenance Yard (COL-000219)",
+    entity: "San Miguel County Road & Bridge Department",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "San Miguel County Road & Bridge is seeking proposals from qualified contractors to design, engineer, permit, and construct a fuel island canopy at the Norwood Road & Bridge Maintenance Yard at 39595 Highway 145, Norwood. A pre-proposal site meeting was held August 24, 2026, and written questions were due by August 26, 2026. Proposals must be submitted electronically by September 3, 2026, at 4:00 PM, with contractor selection announced September 7, 2026.",
+    deadline: "2026-09-03T16:00:00",
+    expires: "2026-09-07",
+    dates: "8/27",
+    papers: ["ttimes_0827"],
+    url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    address: "39595 Highway 145, Norwood, CO 81423",
+    noticeKey: "COL-000219-fuel-island-canopy-rfp"
+  },
+  {
+    title: "RFP -- San Miguel County Jail Repainting, Illium (COL-000224)",
+    entity: "San Miguel County Fleet & Facilities Department",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "San Miguel County is requesting proposals from contractors to repaint the San Miguel County Jail located at 684 County Road 63L in Illium (Telluride area). RFP documents are available on the county website or through the Fleet & Facilities Department at 333 W. Colorado Ave, 2nd Floor, Telluride. Proposals are due by 5:00 PM on Friday, September 18, 2026, either via email or in person at the Fleet & Facilities Department.",
+    deadline: "2026-09-18T17:00:00",
+    expires: "2026-09-18",
+    dates: "8/27",
+    papers: ["ttimes_0827"],
+    url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    address: "684 County Road 63L, Telluride, CO 81435",
+    noticeKey: "COL-000224-jail-repaint-rfp"
   }
 ];
 
