@@ -5505,7 +5505,12 @@ async function syncMedAgendas() {
 //
 //   scraped: [{ date:'Month D, YYYY', agendaUrl?, packetUrl?, title?, board?, time?, special? }]
 //   cadence: { nth, weekday } | null   (null ⇒ scraped-only, no placeholder)
-//   opts:    { title, location, time?, board?, note?, placeholders=2, skipMonths=[], lookbackDays=21 }
+//   opts:    { title, location, time?, board?, note?, placeholders=2, skipMonths=[], skipDates=[], lookbackDays=21 }
+//            skipDates: 'Month D, YYYY' dates the body's own calendar marks as
+//            closed — a projected placeholder never lands on one (Norwood's
+//            2nd-Wednesday BOT projected onto its "Closed For Veterans Day",
+//            Nov 11 2026). Only placeholders are skipped; a real posted meeting
+//            on that date still wins.
 // Returns a sorted stub array, or null when there's nothing to publish (so the
 // caller preserves the existing array rather than blanking the section).
 const { nextOccurrences: _nextOccurrences, fmtDate: _fmtScheduleDate } = require('./lib/schedule.js');
@@ -5536,9 +5541,10 @@ function assembleBoardStubs(scraped, cadence, opts, now = new Date()) {
   }
   if (cadence) {
     const placeholders = opts.placeholders == null ? 2 : opts.placeholders;
+    const skipDates = new Set(opts.skipDates || []);
     for (const occ of _nextOccurrences(cadence, now, placeholders, opts.skipMonths || [])) {
       const key = occ.date + '|' + (opts.board || '');
-      if (byDate.has(key)) continue;
+      if (byDate.has(key) || skipDates.has(occ.date)) continue;
       const stub = {
         date: occ.date, time: opts.time || null, title: opts.title,
         agendaUrl: null, packetUrl: null, special: false, location: opts.location
@@ -8268,15 +8274,26 @@ async function main() {
     console.warn('  Norwood: fetch failed — preserving existing NORWOOD_CACHED_DATA');
   } else {
     const norwoodNote = 'Next scheduled meeting -- agenda posted before the meeting.';
+    // Days the town's own calendar lists as closed ("Closed For Veterans Day")
+    // — never project a placeholder meeting onto one. We don't guess where the
+    // meeting moved; the real agenda fills it in when it posts.
+    const norwoodEvtsForClosures = newNorwoodEvts || extractJsArray(govHubSrc, 'NORWOOD_EVENTS') || [];
+    const norwoodClosed = norwoodEvtsForClosures
+      .filter(e => e && (e.category === 'Town Closure' || /\bclosed\b/i.test(e.title || '')))
+      .map(e => {
+        const m = String(e.pubDate || '').match(/^(\d{4})-(\d{2})-(\d{2})/);
+        return m ? _fmtScheduleDate(new Date(+m[1], +m[2] - 1, +m[3])) : null;
+      })
+      .filter(Boolean);
     const botStubs = assembleBoardStubs(newNorwoodData.filter(e => e.board === 'bot'),
       { nth: 2, weekday: 3 },
-      { title: 'Board of Trustees Meeting', board: 'bot', placeholders: 2, note: norwoodNote });
+      { title: 'Board of Trustees Meeting', board: 'bot', placeholders: 2, note: norwoodNote, skipDates: norwoodClosed });
     const pzStubs = assembleBoardStubs(newNorwoodData.filter(e => e.board === 'pz'),
       { nth: 3, weekday: 1 },
-      { title: 'Planning and Zoning Commission Meeting', board: 'pz', placeholders: 2, note: norwoodNote });
+      { title: 'Planning and Zoning Commission Meeting', board: 'pz', placeholders: 2, note: norwoodNote, skipDates: norwoodClosed });
     const nwcStubs = assembleBoardStubs(newNorwoodData.filter(e => e.board === 'nwc'),
       { nth: 2, weekday: 2 },
-      { title: 'Norwood Water Commission Meeting', board: 'nwc', placeholders: 2, note: norwoodNote });
+      { title: 'Norwood Water Commission Meeting', board: 'nwc', placeholders: 2, note: norwoodNote, skipDates: norwoodClosed });
     const norwoodStubs = [...(botStubs || []), ...(pzStubs || []), ...(nwcStubs || [])]
       .sort((a, b) => new Date(a.date) - new Date(b.date));
     if (norwoodStubs.length) {
