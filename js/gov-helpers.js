@@ -818,7 +818,7 @@ const MEETING_PREVIEWS = {
     "Board is expected to discuss county procurement activity, including requests for proposals on a trail connector project, fuel island canopy construction, jail painting, and a multi-hazard mitigation plan update, as well as a materials hauling quote. Additional related legal and financial notices may be referenced during the session.",
 
   "ouraycity|2026-09-30|Ouray City Council Work Session":
-    "Council is expected to spend most of this work session reviewing the proposed 2027 budget, including capital improvements and fund-by-fund breakdowns. Additional topics include Fourth of July entertainment, a free in-town shuttle, OurWay transit service, and nonprofit funding requests totaling $195,000 from nine organizations."
+    "Council is expected to review the proposed 2027 budget, including capital improvements and fund-by-fund breakdowns. Additional topics include Fourth of July entertainment, a free in-town shuttle, OurWay transit service, and nonprofit funding requests totaling approximately $195,000 from nine organizations."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -990,16 +990,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "This week's bulletin is attached, but please check the Parish Calendar for the most updated information of parish events.For those who have signed up, a reminder that the St. Patrick Parish Mission begins this Friday, September 25.Sign up for a Bible S...",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-september-20/",
     img: ""
-  },
-  {
-    title: "Sheriff Rescinds Fire Restrictions",
-    source: "Ouray County",
-    sourceKey: "ouray-county",
-    date: "September 16, 2026",
-    newsTopic: "public-safety",
-    copy: "Ouray County rescinds all fire restrictions for unincorporated areas",
-    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=963",
-    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22895"
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
@@ -2418,6 +2408,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Tropical Pacific moisture drenches central US as another Pacific hurricane forms",
+    source: "Telluride Times",
+    date: "September 30, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "community",
+    copy: "Remnants of Hurricane Polo pushed tropical moisture across the Southwest and into the Plains this week, dropping heavy rain from New Mexico to Iowa. In New Mexico, the Rio Grande overflowed after running dry for months, but the flooding hit chile farmers hard at harvest time, with some growers losing entire crops. A new hurricane, Rachel, is now threatening Mexico's Pacific coast.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_de3f4275-868c-5973-b2c2-4abcb102e5b3.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/e7/6e70466a-a577-5991-84da-fc73462ce5b7/6abd6eba7c2de.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "What a weekend",
     source: "Telluride Times",
     date: "September 30, 2026",
@@ -2438,7 +2440,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The Telluride R-1 School Board voted September 22 to formally endorse Colorado's Proposition NN, a November statewide ballot measure aimed at increasing K-12 funding. Colorado currently spends about $1,600 less per pupil than the national average, and starting teacher salaries rank 41st nationally. The board also authorized members to speak publicly in support of the measure.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_66443fb8-af57-4c53-becd-8acee30bf116.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     letterAuthor: "Cheryl Carstens Miller David Lavender Telluride, School Board",
     isLetter: true,
     imgHiRes: true
@@ -2452,7 +2454,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The Telluride R-1 School Board voted September 22 to formally endorse Amendment 87, a state ballot measure that would establish a graduated income tax. The district estimates it would bring in around $643,000 annually for local schools, with statewide projections of $2–2.7 billion for K-12, healthcare, and early childhood programs.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_c947791e-f3af-4787-8f6d-1922d28e1b68.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     letterAuthor: "Cheryl Carstens Miller David Lavender Telluride, School Board",
     isLetter: true,
     imgHiRes: true
@@ -2462,11 +2464,12 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Telluride Times",
     date: "September 30, 2026",
     firstSeen: "2026-09-30",
-    newsTopic: "community",
-    copy: "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
-    claudeSummary: false,
+    newsTopic: "government",
+    copy: "A letter to the editor endorses Dylan Brooks for San Miguel County Commissioner, citing his financial expertise, community roots, and collaborative nature. The writer contrasts him favorably with opponent Paul Reich, calling Brooks better suited to handle the county's wide-ranging decisions.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_e642e612-9237-4696-b28c-7debb9aad5e9.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Rick Silverman",
     isLetter: true,
     imgHiRes: true
   },
@@ -2479,7 +2482,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Two hundred emergency go kits were assembled over two days at the Telluride Blues & Brews Festival through a project run by the nonprofit Just A Bunch of Roadies (JAB~R). The kits — designed to help households through the first 72 hours of an evacuation — will be distributed free to lower-income and vulnerable residents across San Miguel, Montrose, and ~uray counties. Sponsors, volunteers, festival crew, and local businesses all pitched in to make it happen.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_a27c227c-87fd-4dd8-ab74-5fd3b209d0e6.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     letterAuthor: "Jeff Pryor Alexandra Mitchell Just, A Bunch of Roadies Ridgway",
     isLetter: true,
     imgHiRes: true
@@ -2493,7 +2496,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A letter from former San Miguel County Commissioner Art Goodtimes endorses Lane Masters for sheriff, citing Masters' roots here and understanding of the full county — from longtime locals to immigrant communities to Down Valley towns. Goodtimes wants a sheriff who sees this place as a year-round home, not just a resort economy.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_355197e9-bb5d-4661-bf57-b562d3fbb75d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     letterAuthor: "Art Goodtimes Norwood",
     isLetter: true,
     imgHiRes: true
@@ -2507,7 +2510,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Amendment 82, on the Colorado ballot, would enshrine natural gas access in the state constitution — framed as consumer choice, but critics say it shields pipeline infrastructure and strips local communities of energy planning authority. Two-thirds of the average Colorado gas bill already goes to pipeline costs, not the gas itself. Heat pump installs across major state utilities more than doubled in 2025.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_cbc1f5fa-f090-4630-94c2-e79e7b74a553.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     letterAuthor: "Siobhan Lavender Montoya EcoAction Partners",
     isLetter: true,
     imgHiRes: true
@@ -2518,8 +2521,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "September 30, 2026",
     firstSeen: "2026-09-30",
     newsTopic: "arts-culture",
-    copy: "Despite a full season with the Sunset Concert Series back in Sunset Plaza, the potential condemnation of Telluride Ski and Golf (TSG) land and the creation of an easement where the series takes place is still working through the courts.",
-    claudeSummary: false,
+    copy: "The Colorado Court of Appeals unanimously overturned a district court ruling that had dismissed Mountain Village's bid to condemn TSG land for the Sunset Concert Series, sending the case back to district court for further proceedings. The appeals court found the district court erred by dismissing without a hearing or adequate record. Meanwhile, the concerts ran in Sunset Plaza this summer under a separate license agreement between TSG and TMV~A — though that agreement can be canceled by either party at any time.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_c6b05c79-cb1e-4b5e-89f0-bcee12dbc79d.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/87/587ca587-8161-4923-926b-852b4dad0c81/6abb368f3e74c.image.jpg",
     imgHiRes: true
@@ -3372,6 +3375,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Town Council Proclaims September 7-11 Black Bear Safety Week",
+    source: "Town of Telluride",
+    date: "September 3, 2026",
+    newsTopic: "government",
+    copy: "(September 3, 2026) — Town Council on Tuesday proclaimed September 7-11 Black Bear Safety Week, arriving in a year when a dry spring and summer have left black bears across Colorado with far less to eat in the wild.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=404",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
+  },
+  {
     title: "Chief Deputy Clerk Receives Excellence in Election Service Award",
     source: "San Miguel County",
     date: "September 25, 2026",
@@ -3453,6 +3465,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14812"
   },
   {
+    title: "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
+    source: "San Miguel County",
+    date: "September 10, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1409",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
+  },
+  {
+    title: "Two Domestic Pets in San Miguel County Test Positive for the Plague",
+    source: "San Miguel County",
+    date: "September 3, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
+  },
+  {
     title: "Courthouse Office Closures Tuesday 9/29 - Friday 10/2",
     source: "San Miguel County",
     date: "September 29, 2026",
@@ -3480,6 +3510,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Water Restrictions in Place",
+    source: "Town of Telluride",
+    date: "September 11, 2026",
+    newsTopic: "community",
+    copy: "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=45",
+    img: ""
+  },
+  {
     title: "Ridgway Urges Motorists to Slow Down and Stay Alert",
     source: "Town of Ridgway",
     date: "September 28, 2026",
@@ -3499,28 +3538,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/CGP-Review-Committee-Press-Release-2026-09-24.pdf",
-    img: ""
-  },
-  {
-    title: "Repair Work on Clinton Street to Take Place This Week and Next",
-    source: "Town of Ridgway",
-    date: "September 23, 2026",
-    firstSeen: "2026-09-29",
-    newsTopic: "community",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Clinton-road-work-9-23-2026.pdf",
-    img: ""
-  },
-  {
-    title: "Ridgway Reminds Property Owners about Backflow Prevention and Cross Connection Control",
-    source: "Town of Ridgway",
-    date: "September 22, 2026",
-    firstSeen: "2026-09-29",
-    newsTopic: "community",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Backflow-Testing-Reminder-Press-Release-2026-09-22.pdf",
     img: ""
   },
   {
@@ -3587,6 +3604,28 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Change-of-meeting-date-Council-notice.pdf",
+    img: ""
+  },
+  {
+    title: "Repair Work on Clinton Street to Take Place This Week and Next",
+    source: "Town of Ridgway",
+    date: "September 23, 2026",
+    firstSeen: "2026-09-29",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Clinton-road-work-9-23-2026.pdf",
+    img: ""
+  },
+  {
+    title: "Ridgway Reminds Property Owners about Backflow Prevention and Cross Connection Control",
+    source: "Town of Ridgway",
+    date: "September 22, 2026",
+    firstSeen: "2026-09-29",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Backflow-Testing-Reminder-Press-Release-2026-09-22.pdf",
     img: ""
   },
   {
@@ -6497,6 +6536,17 @@ const NORWOOD_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Noel Night",
+    link: "https://www.norwoodtown.com/2026-12-04-noel-night",
+    description: "Noel Night is a community holiday event hosted by the Town of Norwood, bringing residents together to celebrate the season. Held in early December, it offers a festive evening for families and neighbors in the Norwood area.",
+    pubDate: "2026-12-04T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Community Event",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
     title: "Closed For Christmas Eve",
     link: "https://www.norwoodtown.com/2026-12-24-closed-for-christmas-eve",
     description: "The Town of Norwood will be closed on Christmas Eve in observance of the holiday. Municipal offices and services will be unavailable that day.",
@@ -7712,6 +7762,60 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_87c1dedd-06e4-4678-a68d-6a0116434245.html",
     address: "San Miguel County, Colorado (various oil and gas well locations)",
     noticeKey: "delinquent-oilgas-taxes-2025-american-helium"
+  },
+  {
+    title: "Public Hearing -- Adoption of 2024 International Building Code & Colorado Low Energy & Carbon Code",
+    entity: "San Miguel County Board of Commissioners",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "The San Miguel County Board of Commissioners will hold a public hearing on September 16, 2026 at 9:00 AM in Telluride to consider adopting the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Written comments must be received by noon on September 10, 2026, and should be limited to one page. Proposed amendments are available in the meeting agenda packet at www.sanmiguelcountyco.gov.",
+    deadline: "2026-09-10T12:00:00 (written comments); hearing 2026-09-16 at 9:00 AM",
+    expires: "2026-09-16",
+    dates: "8/27",
+    papers: ["ttimes_0827"],
+    url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    address: "Telluride, Colorado (San Miguel County)",
+    noticeKey: "COL-000222-ibc-adoption-hearing"
+  },
+  {
+    title: "RFP -- Fuel Island Canopy Construction, Norwood Road & Bridge Maintenance Yard (COL-000219)",
+    entity: "San Miguel County Road & Bridge Department",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "San Miguel County Road & Bridge is soliciting proposals from qualified contractors for the design, engineering, permitting assistance, and construction of a fuel island canopy at the Norwood Road & Bridge Maintenance Yard at 39595 Highway 145, Norwood. A pre-proposal site meeting was held August 24, 2026, and written questions were due August 26, 2026. Proposals are due by 4:00 PM on September 3, 2026, submitted electronically to roadbridge@sanmiguelcountyco.gov.",
+    deadline: "2026-09-03T16:00:00",
+    expires: "2026-09-03",
+    dates: "8/27",
+    papers: ["ttimes_0827"],
+    url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    address: "39595 Highway 145, Norwood, CO 81423",
+    noticeKey: "COL-000219-fuel-island-canopy-rfp"
+  },
+  {
+    title: "RFP -- San Miguel County Jail Repainting, Illium (COL-000224)",
+    entity: "San Miguel County Fleet & Facilities Department",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "San Miguel County is requesting proposals from contractors to repaint the San Miguel County Jail located at 684 County Road 63L, Telluride (Illium). RFP documents are available on the county's bids page or through the Fleet & Facilities Department at 333 W. Colorado Ave, 2nd Floor, Telluride. Proposals are due by 5:00 PM on Friday, September 18, 2026, either by email or dropped off at the Fleet & Facilities Department.",
+    deadline: "2026-09-18T17:00:00",
+    expires: "2026-09-18",
+    dates: "8/27",
+    papers: ["ttimes_0827"],
+    url: "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
+    address: "684 County Road 63L, Telluride, CO 81435",
+    noticeKey: "COL-000224-jail-repaint-rfp"
   }
 ];
 
