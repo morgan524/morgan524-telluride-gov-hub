@@ -340,7 +340,11 @@
   },
   "county|2026-10-08|Planning Commission Meeting": {
     "sv": 4,
-    "ph": "0a81341859740545"
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/924/files/agenda/2025",
+    "zoomUrl": "https://us06web.zoom.us/j/86224076240?pwd=dg8IrMwtLfHLkcZ1Y3JKlGs8IpYz0Q.1",
+    "meetingId": "862 2407 6240",
+    "passcode": "691404",
+    "phone": "970-728-3844"
   },
   "telluride|2026-09-10|San Miguel Authority for Regional Transportation - Sep 10 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8314",

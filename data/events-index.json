@@ -24,7 +24,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
     "type": "Community",
-    "endDate": "2026-11-27"
+    "endDate": "2026-11-28"
   },
   {
     "title": "Ongoing: Social Justice Travel Exhibition",
@@ -204,11 +204,11 @@
     "time": "10:00 AM",
     "location": "Ouray Hot Springs",
     "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/53887699628224/huge/dec56b594a12eb9537121495212b009fe9b63184.jpg",
+    "img": "https://localist-images.azureedge.net/photos/53887699628224/huge/262efc04b203189edcde410b9973aac1ca778195.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Join water aerobics weekly Wednesdays from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy the positive atmosphere! Water aerobics is free for pool members, and non-members can join for just $5 per class.",
-    "type": "Talks & Classes",
+    "desc": "Join water aerobics weekly Wednesdays (Sometimes Tuesdays and Thursdays too!) from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy the positive atmosphere! Water aerobics is free for pool members, and…",
+    "type": "Community",
     "endDate": "2026-11-25"
   },
   {
@@ -1523,6 +1523,19 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Seven Teller",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=seven-teller",
+    "date": "2026-10-15",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/d112b5c7-3ca5-4823-8475-b543672fa388/-/crop/3078x3075/0,455/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Seven Teller is an art-rock project from Baltimore musician and songwriter Sam, performing a late-night show at The Alibi. This live music set begins at 9:00 PM.",
+    "type": "Music"
+  },
+  {
     "title": "Talk: The Sherbino Presents: India Wood's HIKING THE COLORADO X",
     "href": "https://sherbino.org/event/talk-the-sherbino-presents-india-woods-hiking-the-colorado-x/",
     "date": "2026-10-15",
@@ -2224,6 +2237,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Happy Halloween",
+    "href": "https://events.ourayridgwayevents.com/event/happy-halloween",
+    "date": "2026-10-31",
+    "time": "12:30 PM",
+    "location": "Ouray, Colorado",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/54109990596297/huge/ff02999ed014c36a19d03a5e04130f621d1212a6.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray's Halloween celebration includes a pumpkin float and fall photo opportunity at the Ouray Hot Springs, pumpkin decorating in Fellin Park, and a costume contest with gift card prizes awarded across multiple age categories. The…",
+    "type": "Community"
+  },
+  {
     "title": "Trick or Treat: Witches @ the Wright",
     "href": "https://events.ourayridgwayevents.com/event/trick-or-treat-witches-the-wright",
     "date": "2026-10-31",
@@ -2365,7 +2391,8 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "A fundraiser at the Ouray County 4-H Center featuring a screening of *Teeth to the Wind*, a film by alpinist Michael Gardner and his partner Sam Hennessey documenting their seasons in the Tetons — described by Gardner himself as something…",
-    "type": "Arts & Film"
+    "type": "Arts & Film",
+    "endDate": "2026-11-11"
   },
   {
     "title": "Watercolor & Wine with Katey Fetch: Moonlight & Mountains",

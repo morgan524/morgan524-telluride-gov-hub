@@ -38,7 +38,7 @@
     "link": "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     "description": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
     "pubDate": "2026-09-29T19:30:00.000Z",
-    "endDate": "2026-11-27",
+    "endDate": "2026-11-28",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
     "category": "Community Event",
@@ -93,14 +93,14 @@
   {
     "title": "Water Aerobics",
     "link": "https://events.ourayridgwayevents.com/event/water-aerobics",
-    "description": "Join water aerobics weekly Wednesdays from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy the positive atmosphere! Water aerobics is free for pool members, and non-members can join for just $5 per class.",
+    "description": "Join water aerobics weekly Wednesdays (Sometimes Tuesdays and Thursdays too!) from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy the positive atmosphere! Water aerobics is free for pool members, and non-members can join for just $5 per class.",
     "pubDate": "2026-09-30T16:00:00.000Z",
     "endDate": "2026-11-25",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
     "category": "Community Event",
     "location": "Ouray Hot Springs",
-    "imageUrl": "https://localist-images.azureedge.net/photos/53887699628224/huge/dec56b594a12eb9537121495212b009fe9b63184.jpg"
+    "imageUrl": "https://localist-images.azureedge.net/photos/53887699628224/huge/262efc04b203189edcde410b9973aac1ca778195.jpg"
   },
   {
     "title": "Ouray: Echoes in the Canyon",
@@ -1034,6 +1034,17 @@
     "imageUrl": "https://localist-images.azureedge.net/photos/53551962688679/huge/530cd950230f451d84a4795936d5b7a904b733f2.jpg"
   },
   {
+    "title": "Happy Halloween",
+    "link": "https://events.ourayridgwayevents.com/event/happy-halloween",
+    "description": "Ouray's Halloween celebration includes a pumpkin float and fall photo opportunity at the Ouray Hot Springs, pumpkin decorating in Fellin Park, and a costume contest with gift card prizes awarded across multiple age categories. The festivities run throughout the afternoon on October 31st.",
+    "pubDate": "2026-10-31T18:30:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Ouray, Colorado",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54109990596297/huge/ff02999ed014c36a19d03a5e04130f621d1212a6.jpg"
+  },
+  {
     "title": "Trick or Treat: Witches @ the Wright",
     "link": "https://events.ourayridgwayevents.com/event/trick-or-treat-witches-the-wright",
     "description": "WHEN? Saturday, October 31 4:00–7:00 PM WHERE? Wright Opera House 472 Main St., Ouray, Colorado ABOUT THE EVENT The Spooky Witches and Warlocks are taking over the Wright Opera House for Halloween. Bring the family downtown for Trick or Treat: Witches at the Wright. Stop by for candy, a little friendly fright, and Halloween fun inside one of Ouray’s most historic buildings. HOW? Free and open to the public Family-friendly trick-or-treating Candy while supplies last Halloween fun at the historic Wright Opera House in downtown Ouray.",
@@ -1116,6 +1127,7 @@
     "link": "https://events.ourayridgwayevents.com/event/teeth-to-the-wind",
     "description": "A fundraiser at the Ouray County 4-H Center featuring a screening of *Teeth to the Wind*, a film by alpinist Michael Gardner and his partner Sam Hennessey documenting their seasons in the Tetons — described by Gardner himself as something other than a traditional climbing film. Proceeds benefit the George and Michael Gardner Fund.",
     "pubDate": "2026-11-10T13:00:00.000Z",
+    "endDate": "2026-11-11",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
     "category": "Community Event",

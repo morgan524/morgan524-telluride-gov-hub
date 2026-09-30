@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-29T19:56:35.174Z",
+ "generated": "2026-09-30T00:16:09.967Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -15,18 +15,6 @@
      "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313",
      "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313",
      "zoomLink": "https://us06web.zoom.us/meeting/register/ZR3DDUQ0S8mhIKRt4KiuYg",
-     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
-    },
-    {
-     "source": "telluride",
-     "sourceLabel": "Town of Telluride",
-     "title": "HARC Meeting",
-     "date": "2026-09-30",
-     "time": "5:30 PM",
-     "location": "Rebekah Hall, 113 W Columbia Ave",
-     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309",
-     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309",
-     "zoomLink": "",
      "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
     }
    ],
@@ -90,6 +78,18 @@
      "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313",
      "zoomLink": "https://us06web.zoom.us/meeting/register/ZR3DDUQ0S8mhIKRt4KiuYg",
      "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+    },
+    {
+     "source": "county",
+     "sourceLabel": "San Miguel County",
+     "title": "Planning Commission Meeting",
+     "date": "2026-10-08",
+     "time": "9:00 AM",
+     "location": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
+     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/924/files/agenda/2025",
+     "link": "https://sanmiguelcoco.portal.civicclerk.com/event/924/files/agenda/2025",
+     "zoomLink": "https://us06web.zoom.us/j/86224076240?pwd=dg8IrMwtLfHLkcZ1Y3JKlGs8IpYz0Q.1",
+     "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
     }
    ],
    "recent": [

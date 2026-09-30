@@ -318,7 +318,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8311","sv":4,"ph":"4318f9c666b0b315"},
 
   "county|2026-10-08|Planning Commission Meeting":
-    {"sv":4,"ph":"0a81341859740545"},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/924/files/agenda/2025","zoomUrl":"https://us06web.zoom.us/j/86224076240?pwd=dg8IrMwtLfHLkcZ1Y3JKlGs8IpYz0Q.1","meetingId":"862 2407 6240","passcode":"691404","phone":"970-728-3844"},
 
   "telluride|2026-09-10|San Miguel Authority for Regional Transportation - Sep 10 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8314","zoomUrl":"https://us02web.zoom.us/j/89045288089?pwd=b1Gfa5STKy8Wstoqdc8oBxCCs1s6pg.1","sv":4},
@@ -739,12 +739,6 @@ const DAILY_QUESTIONS = [
 // target, and these seeds let the data start landing again. No page renders
 // them yet — restoring (or retiring) the reader UIs is tracked separately.
 const MEETING_PREVIEWS = {
-  "telluride|2026-09-30|Special Meeting - Historic & Architectural Review Commission - Sep 30 2026":
-    "The Historic and Architectural Review Commission is expected to discuss the implementation of Ordinance #1640, which amended the Land Use Code to incorporate the Colorado Wildfire Resiliency Code, and how its requirements apply to the review and approval of Certificates of Appropriateness for structures within Telluride.",
-
-  "telluride|2026-09-30|Special Town Council - Sep 30 2026":
-    "Council is expected to discuss matters related to Ordinance #1640, which amended Telluride's Land Use Code to implement the Colorado Wildfire Resiliency Code. The ordinance was originally passed on August 11, 2026, and this special session may address follow-up actions or implementation details related to wildfire resiliency standards.",
-
   "telluride|2026-10-01|Town Council Budget - Oct 01 2026":
     "Council is expected to focus on budget discussions for the Town of Telluride. Members may also revisit matters related to Ordinance #1640, which amended the Land Use Code to implement the Colorado Wildfire Resiliency Code, following its passage on August 11, 2026.",
 
@@ -783,9 +777,6 @@ const MEETING_PREVIEWS = {
 
   "county|2026-10-14|Board of County Commissioners Work Session":
     "Board will consider matters including material hauling services, construction of a fuel island canopy, jail painting, a Lawson Hill Connector Trail project, and an update to the county's multi-jurisdictional all-hazard mitigation plan. Procurement opportunities across these areas suggest a focus on infrastructure maintenance and emergency planning.",
-
-  "county|2026-09-30|Board of County Commissioners Work Session":
-    "Commissioners are expected to discuss county procurement matters, including material hauling, trail construction for the Lawson Hill Connector, fuel island canopy construction, and jail painting projects. Additional administrative and operational items may also be addressed during the work session.",
 
   "mv|2026-10-01|Design Review Board":
     "Board will consider final architecture review for a 15-unit employee apartment building at 306 Adams Ranch Road, continued from September. Members will also receive a voting procedure update and approve meeting summaries from August and September sessions.",
@@ -826,11 +817,11 @@ const MEETING_PREVIEWS = {
   "county|2026-10-28|Board of County Commissioners Work Session":
     "Board is expected to discuss county procurement activity, including requests for proposals on a trail connector project, fuel island canopy construction, jail painting, and a multi-hazard mitigation plan update, as well as a materials hauling quote. Additional related legal and financial notices may be referenced during the session.",
 
-  "ouraycity|2026-09-30|Ouray City Council Work Session":
-    "Council is expected to review capital improvement plans and fund-by-fund budget details, then discuss Fourth of July entertainment, an in-town shuttle program, and OurWay transit service. Members will also consider nonprofit funding requests totaling approximately $195,000 from nine local organizations before taking council questions.",
+  "county|2026-09-30|Board of County Commissioners Work Session":
+    "Board will consider routine county business at a work session in Telluride. Key related matters include a subdivision exemption and lot line adjustment for Lawson Hill PUD, active procurement solicitations for trail construction and other county projects, and ongoing foreclosure and probate proceedings in San Miguel County.",
 
-  "ouray|2026-09-29|Board of County Commissioners Special Work Session":
-    "Commissioners are expected to spend the day reviewing 2027 budget presentations from multiple county departments, including the Assessor, Land Use, Clerk and Recorder, Treasurer, IT/GIS, EMS, Road and Bridge, Public Health, and Human Services, followed by a discussion and recap on next steps for preliminary budget preparation."
+  "ouraycity|2026-09-30|Ouray City Council Work Session":
+    "Council is expected to review capital improvement funding and departmental budgets during a daylong work session. Additional topics include Fourth of July entertainment planning, a free in-town shuttle program, OurWay transit service, and nine nonprofit funding requests totaling roughly $195,000."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1016,6 +1007,17 @@ const REGIONAL_NEWS_ARTICLES = [
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
   {
+    title: "Courthouse Office Closures Tuesday 9/29 - Friday 10/2",
+    source: "San Miguel County",
+    sourceLabel: "San Miguel County",
+    category: "Alert",
+    date: "2026-09-29",
+    pubDate: "2026-09-29T22:41:23.000Z",
+    copy: "The Clerk + Recorder closes Weds 9/30 at 1:30 p.m. and reopens Thurs at 7:30 a.m. They will be closed Friday. The Treasurer's Office has closed early and will remain closed Weds 9/30 - Friday 10/2. They reopen at 7:30 a.m. on Monday, 10/5.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=548",
+    img: ""
+  },
+  {
     title: "DMV Services available in Egnar 11/18",
     source: "San Miguel County",
     sourceLabel: "San Miguel County",
@@ -1041,7 +1043,7 @@ const SMC_ALERTS = [
 const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-29';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-30';
 const LEGAL_NOTICES_CACHE_DATE = '2026-09-27';
 
 const MANUAL_SUMMARIES = {
@@ -1217,7 +1219,7 @@ const MANUAL_SUMMARIES = {
     "The October 8, 2026 Special Meeting - Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "county|2026-10-08|Planning Commission Meeting":
-    "The October 8 Planning Commission agenda hasn't been posted yet.",
+    "The San Miguel County Planning Commission meets October 8 for a session that spans most of the day. The morning opens with a joint work session with the BOCC on an Affordable Housing Code Update — a signal that the county is still actively trying to write policy fast enough to keep pace with a housing situation that hasn't gotten easier. After lunch, the commission takes up a Land Use Code amendment covering Subdivisions and Condominium Plats, which would change the rules governing how land gets divided and how ownership gets structured across unincorporated county. Both items sit at the code-change tier — the kind of amendments that quietly shape what gets built, where, and for whom, long after the meeting is over.",
 
   "telluride|2026-09-10|San Miguel Authority for Regional Transportation - Sep 10 2026":
     "SMART's board meets virtually on September 10th with a full slate of financial and operational business. The board will act on the FY25 audit report and accept those financials — a routine but consequential step in closing out a fiscal year. More forward-looking: the board votes on hiring PFM Asset Management as SMART's investment advisor and entering the CSIP investment pool, which determines how the authority manages what is now a significant revenue stream. FY27 budget development goes to discussion, an early but important moment given the scale of spending the gondola program has put in motion. The gondola project itself gets a verbal update — the one item everyone in the valley is watching. September operations round out the agenda, along with an executive session on personnel matters.",
@@ -2395,6 +2397,156 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Silver",
+    source: "Telluride Times",
+    date: "September 29, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "education",
+    copy: "A couple at Natural Grocers in Montrose recognized the columnist's husband Travis — a fixture in her writing — prompting her to reflect on their 36-year relationship, which began when she spotted him on a playground in Winslow, Maine, in fourth grade. She traces their on-again-off-again childhood connection through to a nervous high school overture in 1990 that finally stuck.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_1a5ffac7-15d0-409a-aa6f-a13142a17381.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/ea/fea219ba-b46c-43f0-afea-cbf0ea9c9f34/6abc4da1e7a84.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "That'll do, Donkey",
+    source: "Telluride Times",
+    date: "September 29, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "education",
+    copy: "Not-So-Young People's Theatre brings Shrek The Musical to the Sheridan Opera House Oct. 8–11 for their sixth annual production. Locals' night is Thursday the 8th with tickets at $15 for students and $25 for adults; Friday through Sunday runs $20/$30 plus fees.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_860c6c87-9eb0-4c87-b8ae-bab0433c35aa.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/78/9782a2d8-940f-4b0b-878f-2bb4c469178b/6abc4cfad7810.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "A class of her own",
+    source: "Telluride Times",
+    date: "September 29, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "education",
+    copy: "Telluride Elementary PE teacher Erin Murray has been named SHAPE Colorado's 2026 Young Professional Physical Education Teacher. A Telluride native and THS grad, Murray is known for playful, skill-building classes and popular Parent Play Days. She'll be recognized at the SHAPE Colorado Convention on Oct. 16.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/gallery/news/article_032bdae8-f1ff-4933-af97-5dae6bcba696.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/25/52523dd3-4a7d-4ec1-86f3-f61fec80cecf/6abc4b8d52a64.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "A guide to measures on the November state ballot",
+    source: "Telluride Times",
+    date: "September 29, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "government",
+    copy: "Colorado voters will see 14 statewide measures this November — seven constitutional amendments and seven statutory propositions. The amendments cover topics ranging from immigration reporting and natural gas rights to hunting, fishing, and mail ballot ID requirements. San Miguel County commissioners have weighed in with positions on several of them.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_e9486d75-07a6-41b0-9929-42885e96774c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/46/a46a5646-5b5e-4df7-8029-9d528386492e/6abc4c643dac5.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Keen on cars (and The Times)",
+    source: "Telluride Times",
+    date: "September 29, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "community",
+    copy: "Four-year-old Wyatt Yarnall made the most of last week — catching the Telluride Times one day and the Autumn Classic car show the next. His mom says he's got a serious thing for Corvettes and Porsches, which tracks — engineers and car people run in the family.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/gallery/featured/article_25898589-13e7-46c8-9c84-49401444e5d2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/38/b38418f0-cb5d-4237-9b8a-d66bf6ebe521/6abc4adb4b898.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "A little buzz",
+    source: "Telluride Times",
+    date: "September 29, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "community",
+    copy: "A local writer shares her longtime interest in sound and vibration therapy, crediting a gong bath session with possibly dislodging a salivary stone her doctor said didn't exist. She's now using a 128 Hz tuning fork for nervous system calming. Anecdotal, but worth knowing these tools are out there.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_ae5fb453-1c72-445d-b9f5-2158c12e5b08.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/b2/8b2b8d3c-d28d-4bba-8059-73abec4eecc7/6abc492648e24.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "The 13-year investment behind every graduate",
+    source: "Telluride Times",
+    date: "September 29, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "education",
+    copy: "Colorado's new school funding formula would cut Telluride School District's per-pupil revenue by 17%. Measure 5A asks voters to raise the local mill levy override to partially offset that loss — even if it passes, the district would still have about 4% less per student than today. The district has already cut 13 positions over three years and families are paying more in fees.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_cfc9d5da-e2e3-424e-96f7-d3df77ceda5d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/a4/fa4c6e89-2d9b-46ae-93e5-75958321df1d/6abc49fd75314.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Black cats aren't scary",
+    source: "Telluride Times",
+    date: "September 29, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "community",
+    copy: "",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news_release/article_c00656e3-474f-439c-a5f7-6b919dcb0653.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/02/9029e65d-ab7d-40b8-826e-b634ce05c129/6abc487807a3f.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "The Strategic Stakeholders Roundtable: a community effort",
+    source: "Telluride Times",
+    date: "September 29, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "housing",
+    copy: "San Miguel County's Stakeholder Strategic Roundtable — a 22-member advisory group of local builders, brokers, planners, and agency reps — has completed a review of the Land Use Code aimed at easing housing development without eroding community character. Their recommendations are posted at bit.ly/smcssr. A public work session is scheduled Oct. 8, 9 a.m., at the Miramonte building in Telluride, also available via Zoom.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_778d0a27-3bf6-4399-b7a6-f16bb87aed4f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Colorado Ave",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Mountain Village Housing Authority to hold tiered lottery for two Meadowlark units",
+    source: "Telluride Times",
+    date: "September 29, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "housing",
+    copy: "Two deed-restricted units at Meadowlark in Mountain Village are up for lottery — a 3BD/2.5BA at $839,728 and a 3BD/3BA at $1.1M, both with a 4% appreciation cap. Applications are due Oct. 12; drawing is Oct. 22. Essential workers and Mountain Village employers get first priority.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_99a7922f-ae49-4651-b206-20c24ad1e89f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/e8/0e803acf-6ec9-402b-81fa-75231869a2df/6abc47415ecf0.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Military academies won't give tenure to civilian faculty, Hegseth says",
+    source: "Telluride Times",
+    date: "September 29, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "community",
+    copy: "The Defense Department has decided to stop appointing civilians as tenured faculty at U.S. military academies. Secretary Pete Hegseth signed a memo Tuesday outlining the change, saying he wanted to refocus these institutions on warfighting. Hegseth argues that “civilian academic…",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/state/article_3af82977-09a9-57f6-8e08-00e635bf2cfb.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/5f/05fc27db-b757-5f93-9bfd-3ab2f9184bf3/6abc2507ee7c3.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "See ‘the hidden Telluride’ during Artabout",
+    source: "Telluride Times",
+    date: "September 29, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "arts-culture",
+    copy: "Telluride offers an abundance of options for viewing art.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_e9ca6422-b719-416e-a248-574d8ab9dba5.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/4c/84c111ad-e4b3-4fce-b279-5aa3f568b568/6abb3cce67b31.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Big Billie’s food truck approved despite council, public objections",
     source: "Telluride Times",
     date: "September 29, 2026",
@@ -3071,30 +3223,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Come celebrate young scientists",
-    source: "Telluride Times",
-    date: "September 16, 2026",
-    firstSeen: "2026-09-16",
-    newsTopic: "education",
-    copy: "Pinhead Institute sent 28 local high school juniors on six-week research internships this summer, covering fields from astrophysics to history. They'll share what they learned at the Sheridan Opera House on Sept. 22, starting with a 5:30 p.m. reception. Pinhead covers all costs for families earning under $100,000.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_d2c38a22-8231-4c90-a3f7-43d30d2759b8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/d5/fd5558a2-6e05-4e80-acff-08cda1def8f3/6aa64d555a161.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Commissioners approve AMI increase for some Pinion Park units",
-    source: "Telluride Times",
-    date: "September 16, 2026",
-    firstSeen: "2026-09-16",
-    newsTopic: "housing",
-    copy: "Five of Pinion Park's 24 affordable units in Norwood sit unsold despite the housing shortage. The county raised income eligibility on some units from 80% to 100% AMI — sellers must drop to original purchase price first. High interest rates are the core problem: at 6%, few 80% AMI earners can qualify for a mortgage.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_2f591495-4a27-44e9-8d84-3fbb62a91ae8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/bd/9bd60221-b2e7-408d-ba91-2b111679ca3b/6aa4836131e45.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride to Lift All Fire Restrictions",
     source: "Town of Telluride",
     date: "September 17, 2026",
@@ -3212,6 +3340,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
   },
   {
+    title: "Courthouse Office Closures Tuesday 9/29 - Friday 10/2",
+    source: "San Miguel County",
+    date: "September 29, 2026",
+    newsTopic: "community",
+    copy: "The Clerk + Recorder closes Weds 9/30 at 1:30 p.m. and reopens Thurs at 7:30 a.m. They will be closed Friday. The Treasurer's Office has closed early and will remain closed Weds 9/30 - Friday 10/2. They reopen at 7:30 a.m. on Monday, 10/5.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=548",
+    img: ""
+  },
+  {
     title: "DMV Services available in Egnar 11/18",
     source: "San Miguel County",
     date: "September 29, 2026",
@@ -3318,7 +3455,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "September 29, 2026",
+    date: "September 30, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3329,7 +3466,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "September 29, 2026",
+    date: "September 30, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -4417,6 +4554,18 @@ const ALIBI_EVENTS = [
     category: "Live Music",
     location: "The Alibi • Telluride, CO",
     imageUrl: "https://ucarecdn.com/621f88b8-3a58-4663-89e9-6138fd350587/-/crop/792x317/0,907/-/preview/"
+  },
+  {
+    title: "Seven Teller",
+    link: "https://www.alibitelluride.com/calendar#eca-event=seven-teller",
+    description: "Seven Teller is an art-rock project from Baltimore musician and songwriter Sam, performing a late-night show at The Alibi. This live music set begins at 9:00 PM.",
+    pubDate: "2026-10-15",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/d112b5c7-3ca5-4823-8475-b543672fa388/-/crop/3078x3075/0,455/-/preview/"
   }
 ];
 
@@ -4866,7 +5015,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
     pubDate: "2026-09-29T19:30:00.000Z",
-    endDate: "2026-11-27",
+    endDate: "2026-11-28",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4921,14 +5070,14 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Water Aerobics",
     link: "https://events.ourayridgwayevents.com/event/water-aerobics",
-    description: "Join water aerobics weekly Wednesdays from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy the positive atmosphere! Water aerobics is free for pool members, and non-members can join for just $5 per class.",
+    description: "Join water aerobics weekly Wednesdays (Sometimes Tuesdays and Thursdays too!) from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy the positive atmosphere! Water aerobics is free for pool members, and non-members can join for just $5 per class.",
     pubDate: "2026-09-30T16:00:00.000Z",
     endDate: "2026-11-25",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Ouray Hot Springs",
-    imageUrl: "https://localist-images.azureedge.net/photos/53887699628224/huge/dec56b594a12eb9537121495212b009fe9b63184.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53887699628224/huge/262efc04b203189edcde410b9973aac1ca778195.jpg"
   },
   {
     title: "Ouray: Echoes in the Canyon",
@@ -5862,6 +6011,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53551962688679/huge/530cd950230f451d84a4795936d5b7a904b733f2.jpg"
   },
   {
+    title: "Happy Halloween",
+    link: "https://events.ourayridgwayevents.com/event/happy-halloween",
+    description: "Ouray's Halloween celebration includes a pumpkin float and fall photo opportunity at the Ouray Hot Springs, pumpkin decorating in Fellin Park, and a costume contest with gift card prizes awarded across multiple age categories. The festivities run throughout the afternoon on October 31st.",
+    pubDate: "2026-10-31T18:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray, Colorado",
+    imageUrl: "https://localist-images.azureedge.net/photos/54109990596297/huge/ff02999ed014c36a19d03a5e04130f621d1212a6.jpg"
+  },
+  {
     title: "Trick or Treat: Witches @ the Wright",
     link: "https://events.ourayridgwayevents.com/event/trick-or-treat-witches-the-wright",
     description: "WHEN? Saturday, October 31 4:00–7:00 PM WHERE? Wright Opera House 472 Main St., Ouray, Colorado ABOUT THE EVENT The Spooky Witches and Warlocks are taking over the Wright Opera House for Halloween. Bring the family downtown for Trick or Treat: Witches at the Wright. Stop by for candy, a little friendly fright, and Halloween fun inside one of Ouray’s most historic buildings. HOW? Free and open to the public Family-friendly trick-or-treating Candy while supplies last Halloween fun at the historic Wright Opera House in downtown Ouray.",
@@ -5944,6 +6104,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/teeth-to-the-wind",
     description: "A fundraiser at the Ouray County 4-H Center featuring a screening of *Teeth to the Wind*, a film by alpinist Michael Gardner and his partner Sam Hennessey documenting their seasons in the Tetons — described by Gardner himself as something other than a traditional climbing film. Proceeds benefit the George and Michael Gardner Fund.",
     pubDate: "2026-11-10T13:00:00.000Z",
+    endDate: "2026-11-11",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6200,17 +6361,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Bike & Brewery Tour",
-    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
-    description: "A guided bicycle tour departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route offers a scenic descent connecting Mountain Village to town.",
-    pubDate: "2026-09-28T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
-  },
   {
     title: "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
     link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
@@ -6743,30 +6893,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/49419/fireside_chat.800x533.webp"
-  },
-  {
-    title: "Telluride Autumn Classic",
-    link: "https://www.telluride.com/event/telluride-autumn-classic/",
-    description: "A Colorful Car Show in the Mountains\n\nHeld September 24–27, 2026, in Telluride, Colorado, the Telluride Autumn …",
-    pubDate: "2026-09-24",
-    endDate: "2026-09-28",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/37495/download.800x533.webp"
-  },
-  {
-    title: "Corvettes & Colors",
-    link: "https://www.telluride.com/event/corvettes-colors/",
-    description: "Corvettes, and their owners, are invited to celebrate the Rocky Mountain Fall colors, the crisp San Juan Mountain air …",
-    pubDate: "2026-09-24",
-    endDate: "2026-09-28",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/48115/2023_corvettes_and_colors.800x533.webp"
   },
   {
     title: "Hike Into History",
