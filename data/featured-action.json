@@ -1,27 +1,27 @@
 {
- "generated": "2026-09-30T22:07:53.153Z",
+ "generated": "2026-10-01T05:09:31.806Z",
  "pinned": false,
- "topic": "carhenge",
- "topicLabel": "Carhenge / Shandoka",
- "headline": "Carhenge / Shandoka goes before Special Town Council on Wednesday, September 30",
- "blurb": "This special session is entirely devoted to one thing: a Town Council appeal hearing on the Carhenge lot subdivision. On July 23, 2026, P&Z unanimously approved consolidating Lots 34 and 34B at 700 W. Pacific Avenue into a single parcel — a preliminary step the Town needs before any redevelopment can move forward on that open-space site.",
+ "topic": "code",
+ "topicLabel": "Code Changes & Accelerated Review",
+ "headline": "Code Changes & Accelerated Review goes before Planning Commission Meeting on Thursday, October 8",
+ "blurb": "The San Miguel County Planning Commission meets October 8 for a session that spans most of the day. The morning opens with a joint work session with the BOCC on an Affordable Housing Code Update — a signal that the county is still actively trying to write policy fast enough to keep pace with a housing situation that hasn't gotten easier.",
  "images": [],
  "deepDive": {
-  "label": "Carhenge / Shandoka",
-  "href": "/deep-dive-carhenge.html"
+  "label": "Code Changes & Accelerated Review",
+  "href": "/deep-dive-code.html"
  },
  "meeting": {
-  "title": "Special Town Council",
-  "sourceLabel": "Town of Telluride",
-  "date": "2026-09-30",
-  "humanDate": "Wednesday, September 30",
-  "time": "10:00 AM",
-  "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313",
+  "title": "Planning Commission Meeting",
+  "sourceLabel": "San Miguel County",
+  "date": "2026-10-08",
+  "humanDate": "Thursday, October 8",
+  "time": "9:00 AM",
+  "location": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
+  "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/924/files/agenda/2025",
   "hasAgenda": true,
-  "packetUrl": "https://telluride-co.civicweb.net/document/445210/",
-  "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313",
-  "zoomLink": "https://us06web.zoom.us/meeting/register/ZR3DDUQ0S8mhIKRt4KiuYg",
-  "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+  "packetUrl": "",
+  "link": "https://sanmiguelcoco.portal.civicclerk.com/event/924/files/agenda/2025",
+  "zoomLink": "https://us06web.zoom.us/j/86224076240?pwd=dg8IrMwtLfHLkcZ1Y3JKlGs8IpYz0Q.1",
+  "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
  }
 }
