@@ -115,6 +115,25 @@ function calDay(localDate, v) {
   return `${y}-${m}-${da}`;
 }
 
+// Some getters project a body's published regular schedule until the real row
+// is scraped (getOurayCityMeetings: Council 1st/3rd Monday, PC 2nd Tuesday), so
+// a cached list with no future row still renders upcoming meetings. When the
+// sole getter built on THIS list (one that references no other *_CACHED_DATA)
+// returns a row dated today or later, the section is not empty — don't alarm.
+// (2026-10-01: OURAY_CITY_CACHED_DATA flagged "run dry" the day after its last
+// BoardBook row while Gov-Hub showed the projected Oct 5 Council meeting.)
+function getterProjectsUpcoming(captured, listName, localDate, today) {
+  for (const [fname, fn] of Object.entries(captured)) {
+    if (!/^get\w*Meetings$/.test(fname) || typeof fn !== 'function') continue;
+    const lists = new Set(fn.toString().match(/\b[A-Z][A-Z0-9_]*_CACHED_DATA\b/g) || []);
+    if (lists.size !== 1 || !lists.has(listName)) continue;
+    let rows;
+    try { rows = fn(); } catch (_) { continue; }
+    if (Array.isArray(rows) && rows.some(r => { const d = calDay(localDate, r && (r.eventDate || r.date)); return d && d >= today; })) return true;
+  }
+  return false;
+}
+
 function detectStaleData(captured, localDate, today) {
   const out = [];
   if (!captured || typeof captured !== 'object') return out;
@@ -167,6 +186,7 @@ function detectStaleData(captured, localDate, today) {
     if (days.some(d => d >= today)) continue;        // has an upcoming row → fine
     const token = name.replace(/_CACHED_DATA$/, '').toLowerCase();
     if (futureSummaryTokens.has(token)) continue;    // renders upcoming via MANUAL_SUMMARIES
+    if (getterProjectsUpcoming(captured, name, localDate, today)) continue; // getter fills the schedule
     const newest = days.sort().slice(-1)[0];
     const age = Math.round((todayMs - Date.parse(newest + 'T00:00:00Z')) / 86400000);
     out.push({ name, severity: 'High',

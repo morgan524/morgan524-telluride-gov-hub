@@ -146,9 +146,20 @@ const NEWS_FEEDS = [
 // /gallery/news/ and never reached the feed. Gallery volume is tiny (~1 item
 // per 50) and the local-news.html relevance filters still apply downstream.
 const TELLURIDE_TIMES_RSS = 'https://www.telluridenews.com/search/?f=rss&t=article&c=news,news/*,news_release,news_release/*,business,business/*,sports,sports/*,opinion,opinion/*,obituaries,norwood_post,norwood_post/*,the_norwood_post,the_norwood_post/*,arts_and_entertainment,arts_and_entertainment/*,gallery,gallery/*&l=50&s=start_time&sd=desc';
-// KOTO uses two category-specific feeds; the catch-all /feed/ misses some posts.
-const KOTO_NEWSCASTS_RSS = 'https://koto.org/news-category/newscasts/feed/';
-const KOTO_FEATURED_RSS = 'https://koto.org/news-category/featured-stories/feed/';
+// KOTO uses two category-specific feeds; the catch-all /feed/ misses some posts
+// (newscasts are a custom `news` post type). Since ~2026-09-17 koto.org's
+// Cloudflare serves a "Just a moment..." JS challenge on the pretty
+// /news-category/<slug>/feed/ paths — even via the Worker — while the
+// equivalent query-string feed still returns RSS. Try the query form first,
+// fall back to the pretty path in case KOTO ever flips it.
+const KOTO_NEWSCASTS_RSS = [
+  'https://koto.org/feed/?post_type=news&news-category=newscasts',
+  'https://koto.org/news-category/newscasts/feed/',
+];
+const KOTO_FEATURED_RSS = [
+  'https://koto.org/feed/?post_type=news&news-category=featured-stories',
+  'https://koto.org/news-category/featured-stories/feed/',
+];
 const COLORADO_SUN_RSS = 'https://coloradosun.com/feed/';
 // Keywords that make a Colorado Sun article relevant to the Telluride region
 const COLORADO_SUN_KEYWORDS = /telluride|san\s+miguel\s+county|mountain\s+village|ridgway|telski|chuck\s+horning/i;
@@ -2329,15 +2340,32 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
   const kotoNewscasts = [];
   const kotoFeatured = [];
 
-  async function pullKotoFeed(url, bucket) {
+  async function pullKotoFeed(urls, bucket) {
+    for (const url of urls) {
+      if (await pullKotoFeedUrl(url, bucket)) return;
+    }
+    console.warn(`  KOTO feed: no usable RSS from any of ${urls.join(', ')}`);
+  }
+
+  // Returns true when the URL answered with a real RSS channel (even an empty
+  // one), false on HTTP error / Cloudflare challenge page / parse failure.
+  async function pullKotoFeedUrl(url, bucket) {
     try {
       const resp = await fetch(url);
       if (resp.status !== 200) {
         console.warn(`  KOTO feed (${url}) HTTP ${resp.status}`);
-        return;
+        return false;
+      }
+      if (/<title>Just a moment\.\.\.<\/title>/i.test(resp.text || '')) {
+        console.warn(`  KOTO feed (${url}) returned a Cloudflare challenge page`);
+        return false;
       }
       const xml = await parseXml(resp.text);
-      const items = xml?.rss?.channel?.item;
+      if (!xml?.rss?.channel) {
+        console.warn(`  KOTO feed (${url}) is not RSS`);
+        return false;
+      }
+      const items = xml.rss.channel.item;
       const arr = Array.isArray(items) ? items : (items ? [items] : []);
       for (const item of arr) {
         const pubDate = new Date(item.pubDate || '');
@@ -2360,8 +2388,10 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
           href: (item.link || '').trim()
         });
       }
+      return true;
     } catch (e) {
       console.warn(`  KOTO RSS error (${url}): ${e.message}`);
+      return false;
     }
   }
 
@@ -6459,12 +6489,29 @@ function dropEngageDuplicates(engageRows) {
   const taken = new Set(
     cached.filter(m => m && m.date).map(m => String(m.date) + '|' + _meetingTitleKey(m.title))
   );
+  // Hand-curated GOV_EVENTS (gov-data.js) list Town civic events — Comp Plan
+  // focus groups, open houses — with time, room and links that Engage lacks.
+  // Engage words them differently ("Housing & Infrastructure Focus Group |
+  // Phase II" vs "Comprehensive Plan Focus Group: Housing & Infrastructure",
+  // 2026-10-01), so exact token keys miss. Same date AND every content word of
+  // the Engage title appearing in the curated title (min 3 words) = same event.
+  let govEvents = [];
+  try { govEvents = extractJsArray(readJsFile(GOV_DATA_JS), 'GOV_EVENTS') || []; }
+  catch (e) { govEvents = []; }
+  const ENGAGE_NOISE = new Set(['phase', 'i', 'ii', 'iii', 'iv', 'the', 'and', 'of', 'a', 'an', 'for', 'to', 'in', 'on', 'at']);
+  const words = (t) => (String(t || '').toLowerCase().match(/[a-z]+/g) || []).filter(w => !ENGAGE_NOISE.has(w));
+  const inGovEvents = (r) => {
+    const want = words(r.title);
+    if (want.length < 3) return false;
+    return govEvents.some(e => e && String(e.date) === String(r.date) &&
+      (have => want.every(w => have.has(w)))(new Set(words(e.title))));
+  };
   const kept = rows.filter(r => {
     if (!r || !r.date) return true;
-    return !taken.has(String(r.date) + '|' + _meetingTitleKey(r.title));
+    return !taken.has(String(r.date) + '|' + _meetingTitleKey(r.title)) && !inGovEvents(r);
   });
   const dropped = rows.length - kept.length;
-  if (dropped) console.log(`  Engage: dropped ${dropped} meeting(s) already in TELLURIDE_CACHED_DATA`);
+  if (dropped) console.log(`  Engage: dropped ${dropped} meeting(s) already in TELLURIDE_CACHED_DATA / GOV_EVENTS`);
   return kept;
 }
 

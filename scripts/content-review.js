@@ -92,7 +92,12 @@ function loadData() {
   const constNames = [...new Set(
     [...combined.matchAll(/^const\s+([A-Z][A-Z0-9_]*)\s*=/gm)].map(m => m[1])
   )];
-  const helperNames = ['localDate', 'isBadSummary', 'truncate'];
+  // Plus every get*Meetings getter, so source-health's empty-upcoming check can
+  // credit getters that project a published schedule (getOurayCityMeetings).
+  const getterNames = [...new Set(
+    [...combined.matchAll(/^function\s+(get\w*Meetings)\s*\(/gm)].map(m => m[1])
+  )];
+  const helperNames = ['localDate', 'isBadSummary', 'truncate', ...getterNames];
   const captureNames = [...constNames, ...helperNames];
 
   const epilogue =
