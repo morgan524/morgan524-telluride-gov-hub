@@ -269,7 +269,7 @@ If no time was published, show none.
   (fixed 2026-09-29). If a packet or agenda is found in the log but never shows
   up on the site, check this first.
 
-## SMART votes + recaps come from packet minutes
+## SMART votes + recaps come from packet minutes (and YouTube)
 
 `scripts/smart-votes.js` (weekly, `.github/workflows/smart-votes.yml`) reads the
 MINUTES inside each SMART board packet (smarttelluride.colorado.gov/board-meetings;
@@ -280,6 +280,16 @@ new packets cost an AI call; `--reparse` redoes everything. Director spelling
 variants are merged in its `ALIAS`/`CANON` maps; alternate status is per meeting,
 and an alternate only votes when their town is short a regular director.
 SMART's CloudFront blocks GitHub IPs, so fetches fall back to the site Worker proxy.
+
+SMART also posts recordings to youtube.com/@SMART-Transit (`/videos`, no
+`/streams` tab), titled "9-10-26 SMART Board Meeting" (M-D-YY), plus the Gondola
+Leadership and Gondola Advisory committees. `meeting-recaps.js` recaps these
+like any other channel, with a 60-day look-back (`days: 60`) because SMART
+uploads weeks after the meeting. `smart-votes.js` keeps those YouTube recaps
+and replaces one only when a minutes-based card exists for the same date, so
+the Board card switches to the minutes version once the next packet arrives.
+Uploads can sit without auto-captions for a day or more; the recap job skips
+a 0-char transcript and retries on later runs.
 
 ## Featured organization rotation is week-anchored
 

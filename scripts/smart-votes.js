@@ -167,9 +167,12 @@ function makeRawResolver(members) {
   };
 }
 
-// Past Meetings & Recaps: one card per SMART meeting, written from the minutes
-// (SMART has no recordings we can transcribe). SMART cards are replaced
-// wholesale each run; every other entity's recaps are left untouched.
+// Past Meetings & Recaps: one card per SMART meeting, written from the minutes.
+// Minutes-based SMART cards are rebuilt each run. Video-based SMART recaps
+// (meeting-recaps.js, from youtube.com/@SMART-Transit) are kept unless a
+// minutes card exists for the same date — the minutes win once they arrive,
+// and committee meetings with no minutes keep their video recap. Every other
+// entity's recaps are left untouched.
 // `videoUrl` doubles as the dedup key in meeting-recaps.js, so it must be
 // unique per meeting: the packet URL + #minutes-<date>.
 const GOV_HELPERS = path.join(ROOT, 'js', 'gov-helpers.js');
@@ -195,7 +198,9 @@ function buildRecaps(store) {
     });
   }
   if (!smart.length) return null;
-  const final = [...smart, ...existing.filter((r) => r.sourceKey !== 'smart')].sort((a, b) => (a.date < b.date ? 1 : -1));
+  const minutesDates = new Set(smart.map((r) => r.date));
+  const keepVideo = (r) => r.sourceKey === 'smart' && /youtube\.com|youtu\.be/.test(r.videoUrl || '') && !minutesDates.has(r.date);
+  const final = [...smart, ...existing.filter((r) => r.sourceKey !== 'smart' || keepVideo(r))].sort((a, b) => (a.date < b.date ? 1 : -1));
   const mm = /const\s+MEETING_RECAPS\s*=\s*\[/.exec(src);
   let depth = 0, i = mm.index + mm[0].length - 1, end = -1;
   for (; i < src.length; i++) { if (src[i] === '[') depth++; else if (src[i] === ']') { if (--depth === 0) { end = i; break; } } }

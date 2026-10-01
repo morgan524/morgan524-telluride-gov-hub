@@ -72,6 +72,14 @@ const CHANNELS = [
   // Vote Tracker with NO ingest path at all since March.
   { sourceKey: 'mv', sourceLabel: 'Mountain Village', kind: 'avcapture',
     url: 'https://media.avcaptureall.cloud/?customerGuid=f6f590a7-5acc-4d32-9928-ad9ae0d02e06&target=foo&view=thumbs&tabs=past%7Ctoday%7Cupcoming' },
+  // SMART posts finished recordings to /videos (no /streams tab), titled
+  // "9-10-26 SMART Board Meeting", plus its Gondola Leadership and Gondola
+  // Advisory committees. These video recaps are timely; smart-votes.js later
+  // replaces a Board recap with the minutes-based one once the next packet
+  // carries that meeting's minutes. Added 2026-10-01.
+  // SMART uploads weeks after the meeting (9/10 Board → posted 9/30), so it
+  // gets a longer look-back than the global --days window.
+  { sourceKey: 'smart',     sourceLabel: 'SMART',             url: 'https://www.youtube.com/@SMART-Transit/videos', days: 60 },
 ];
 
 const args = process.argv.slice(2);
@@ -94,6 +102,8 @@ function parseDateFromTitle(title) {
   const t = String(title || '');
   let m;
   if ((m = t.match(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/))) return iso(m[3], m[1], m[2]);
+  // "9-10-26" / "9-10-2026" (SMART). Two-digit years are 20xx.
+  if ((m = t.match(/\b(\d{1,2})-(\d{1,2})-(\d{4}|\d{2})\b/))) return iso(m[3].length === 2 ? '20' + m[3] : m[3], m[1], m[2]);
   if ((m = t.match(/\b([A-Za-z]{3,9})\.?\s+(\d{1,2}),?\s+(\d{4})\b/))) {
     const mo = MONTHS[m[1].slice(0, 3).toLowerCase()];
     if (mo != null) return iso(m[3], mo + 1, m[2]);
@@ -118,6 +128,7 @@ function daysSince(isoDate) {
 function bodyToken(title) {
   return String(title || '')
     .replace(/\b\d{1,2}\/\d{1,2}\/\d{4}\b/g, '')
+    .replace(/\b\d{1,2}-\d{1,2}-(\d{4}|\d{2})\b/g, '')
     .replace(/\b[A-Za-z]{3,9}\.?\s+\d{1,2},?\s+\d{4}\b/g, '')
     .replace(/\b\d{8}\b/g, '')
     .replace(/\b(regular|special|chair|work\s*session|meeting|board|of|directors|the)\b/gi, '')
@@ -703,7 +714,7 @@ async function main() {
       const date = v.date || parseDateFromTitle(v.title) || (isAv || isVimeo ? '' : streamDate(v.id));
       if (!date) { continue; }
       const age = daysSince(date);
-      if (!FORCE && (age > DAYS || age < 0)) continue;
+      if (!FORCE && (age > Math.max(DAYS, ch.days || 0) || age < 0)) continue;
       const meetKey = `${ch.sourceKey}|${date}|${bodyToken(v.title)}`;
       if (!FORCE && (seenVideo.has(videoUrl) || seenMeeting.has(meetKey))) continue;
       if (added.length >= LIMIT) { console.log(`  (reached --limit ${LIMIT})`); break; }
@@ -788,4 +799,4 @@ if (require.main === module) {
   main().catch((e) => { console.error(e); process.exit(1); });
 }
 
-module.exports = { RESPONSE_CACHE, recapRequestBody, recapIsCached, callClaude };
+module.exports = { RESPONSE_CACHE, recapRequestBody, recapIsCached, callClaude, parseDateFromTitle, bodyToken };
