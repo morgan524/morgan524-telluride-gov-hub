@@ -510,7 +510,7 @@
   "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083",
     "sv": 4,
-    "ph": "bd74d669e41a67a8"
+    "ph": "3ff9e0390a939e92"
   },
   "county|2026-10-21|Board of County Commissioners Meeting": {
     "sv": 4,
@@ -590,6 +590,10 @@
     "meetingId": "876 0637 5697",
     "passcode": "946299",
     "phone": "346-248-7799",
+    "sv": 4
+  },
+  "ouray|2026-10-07|PM - Note: to be held at the 4-H Event Center! The PC will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (packet materials are attached to the agenda)": {
+    "agendaUrl": "https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1019",
     "sv": 4
   }
 }

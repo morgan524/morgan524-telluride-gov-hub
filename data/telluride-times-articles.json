@@ -5,8 +5,8 @@
     "date": "October 1, 2026",
     "firstSeen": "2026-10-01",
     "newsTopic": "government",
-    "copy": "Political power in state legislatures and governors’ offices is at stake in the November elections in more than one-third of the states. Democrats and Republicans are spending millions to control closely divided legislatures in several states. The races could be…",
-    "claudeSummary": false,
+    "copy": "November elections across 46 states will decide control of legislatures and governors' offices, with supermajorities and trifectas in play. The outcomes could shape state policy on immigration, voting rules, and social programs — and either support or push back on federal direction from Washington. About 6,100 legislative seats are on the ballot.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/news/state/article_5d7b5b1b-0260-5dec-b64b-ca0603f81f50.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/3c/93cce18e-e064-5180-9715-47ad192d8f0a/6abe3065c34f2.image.jpg",
     "imgHiRes": true
@@ -53,8 +53,8 @@
     "date": "October 1, 2026",
     "firstSeen": "2026-10-01",
     "newsTopic": "arts-culture",
-    "copy": "The Original Thinkers (OT) Festival opens doors in Telluride this weekend, creating positive community through an alchemy of authentic stories and new ideas, activities that include films, talks, women’s and men’s circles, cacao and tea ceremonies and creative, civic fun.",
-    "claudeSummary": false,
+    "copy": "Original Thinkers Festival runs this weekend in Telluride, bringing films, talks, ceremonies, and community events across three full days. Denver group Warm Cookies of the Revolution joins as full partners this year alongside founders David Holbrooke and Jennifer Turner. The weekend closes Sunday with a picnic at Lone Tree Cemetery.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/news/article_255bd56f-6a36-4611-acdc-1808894bc28c.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/8f/a8fa1709-3ca1-4759-a999-0f56f010903c/6aba2ec4853a8.image.jpg",
     "imgHiRes": true
@@ -920,6 +920,33 @@
     "imgHiRes": true
   },
   {
+    "title": "Town of Telluride to Lift All Fire Restrictions",
+    "source": "Town of Telluride",
+    "date": "September 17, 2026",
+    "newsTopic": "public-safety",
+    "copy": "(September 16, 2026) – Following improved fire conditions across the region and in alignment with San Miguel County, the Town of Telluride will lift all fire restrictions effective at 12:01 a.m. MT on Friday, September 18, 2026.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=405",
+    "img": ""
+  },
+  {
+    "title": "Town Council Proclaims September 7-11 Black Bear Safety Week",
+    "source": "Town of Telluride",
+    "date": "September 3, 2026",
+    "newsTopic": "government",
+    "copy": "(September 3, 2026) — Town Council on Tuesday proclaimed September 7-11 Black Bear Safety Week, arriving in a year when a dry spring and summer have left black bears across Colorado with far less to eat in the wild.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=404",
+    "img": "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
+  },
+  {
+    "title": "San Miguel County Public Health Announces Fall Vaccine Availability",
+    "source": "San Miguel County",
+    "date": "October 1, 2026",
+    "newsTopic": "health",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1419",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14836"
+  },
+  {
     "title": "Chief Deputy Clerk Receives Excellence in Election Service Award",
     "source": "San Miguel County",
     "date": "September 25, 2026",
@@ -1001,6 +1028,24 @@
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14812"
   },
   {
+    "title": "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
+    "source": "San Miguel County",
+    "date": "September 10, 2026",
+    "newsTopic": "health",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1409",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
+  },
+  {
+    "title": "Two Domestic Pets in San Miguel County Test Positive for the Plague",
+    "source": "San Miguel County",
+    "date": "September 3, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
+  },
+  {
     "title": "Courthouse Office Closures Tuesday 9/29 - Friday 10/2",
     "source": "San Miguel County",
     "date": "September 29, 2026",
@@ -1025,6 +1070,37 @@
     "newsTopic": "infrastructure",
     "copy": "The Town of Telluride has completed their project that necessitated the closure of Lower Tomboy Road. The road is now open again.",
     "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=546",
+    "img": ""
+  },
+  {
+    "title": "Water Restrictions in Place",
+    "source": "Town of Telluride",
+    "date": "September 11, 2026",
+    "newsTopic": "community",
+    "copy": "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
+    "href": "https://www.telluride.gov/AlertCenter.aspx?AID=45",
+    "img": ""
+  },
+  {
+    "title": "What to do in Colorado this week: TED Talks in Breckenridge, Original Thinkers in Telluride and free music in Denver",
+    "source": "Colorado Sun",
+    "date": "October 1, 2026",
+    "firstSeen": "2026-10-01",
+    "newsTopic": "arts-culture",
+    "copy": "Plus: Original Thinkers festival in Telluride, free music in Denver and a mural festival in Superior",
+    "claudeSummary": false,
+    "href": "https://coloradosun.com/2026/10/01/what-to-do-in-colorado-ted-talk-breckenridge/",
+    "img": "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2026/09/54345907509_bb40a361b1_o-scaled.jpg?fit=1024%2C683&amp;ssl=1"
+  },
+  {
+    "title": "Small Business Administration Economic Injury Disaster Loan Data Collection Form Now Available (due Oct. 13)",
+    "source": "Town of Ridgway",
+    "date": "October 1, 2026",
+    "firstSeen": "2026-10-01",
+    "newsTopic": "community",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/SBA-Economic-Injury-Disaster-Loan-Data-Collection-Form-2026-10-01.pdf",
     "img": ""
   },
   {

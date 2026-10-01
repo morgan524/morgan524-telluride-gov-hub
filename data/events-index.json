@@ -398,6 +398,19 @@
     "type": "Festivals"
   },
   {
+    "title": "Corey Hooker",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=corey-hooker",
+    "date": "2026-10-02",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-6.jpg",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Corey Hooker takes the stage at The Alibi for a night of live music. The show begins at 9:00 PM.",
+    "type": "Music"
+  },
+  {
     "title": "First Friday Opening Reception: Michelle Montague",
     "href": "https://sherbino.org/event/containment-michelle-montague-610-arts-collective-meta-description/",
     "date": "2026-10-02",
@@ -582,19 +595,6 @@
     "type": "Festivals"
   },
   {
-    "title": "Sunday Rehab at Alloy Kitchen",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
-    "date": "2026-10-04",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Sunday Rehab is a recurring Sunday event at Alloy Kitchen in Mountain Village, running through October 11, 2026. It offers a laid-back way to spend Sunday afternoons in Mountain Village style.",
-    "type": "Community"
-  },
-  {
     "title": "Telluride Leadership Summit",
     "href": "https://www.telluride.com/event/telluride-leadership-summit/",
     "date": "2026-10-04",
@@ -686,7 +686,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
     "type": "Community",
-    "endDate": "2026-11-23"
+    "endDate": "2026-11-30"
   },
   {
     "title": "Monthly Karate in Ouray County",
@@ -1167,6 +1167,19 @@
     "type": "Community"
   },
   {
+    "title": "Ridgway Star Party",
+    "href": "https://events.ourayridgwayevents.com/event/ridgway-star-party",
+    "date": "2026-10-10",
+    "time": "7:30 PM",
+    "location": "Frontier Field / Ridgway Athletic Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54121032080521/huge/68c22ecc0cc229a1ff81decc49ac443e2daf1fdc.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "A Celebration of Dark Skies in our community with the Black Canyon Astronomical Society, 7:30 p.m. at the Ridgway Athletic Park. Weather permitting, free and open to the public. Please park at the soccer field with headlights pointing…",
+    "type": "Community"
+  },
+  {
     "title": "Lupita's Parking Lot Sale",
     "href": "https://events.ourayridgwayevents.com/event/lupitas-parking-lot-sale",
     "date": "2026-10-10",
@@ -1216,19 +1229,6 @@
     "category": "",
     "source": "Sherbino Theater",
     "desc": "Alysha Brilla performs live at The Sherbino in Ridgway, presented in partnership with Pickin' Productions. The show is primarily a dancehall-style setup with limited open seating, and some reserved section seats are available in advance.",
-    "type": "Community"
-  },
-  {
-    "title": "Sunday Rehab at Alloy Kitchen",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
-    "date": "2026-10-11",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Sunday Rehab is a recurring Sunday gathering at Alloy Kitchen in Mountain Village, running through October 11, 2026. It's a laid-back way to spend a Sunday in Mountain Village, hosted at the Alloy Kitchen venue.",
     "type": "Community"
   },
   {
@@ -1596,19 +1596,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "The Young Fables will perform a live music show at a venue on North Cora Street in Ridgway. The event is listed through the Ouray Ridgway community calendar.",
     "type": "Music"
-  },
-  {
-    "title": "Sunday Rehab at Alloy Kitchen",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
-    "date": "2026-10-18",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Sunday Rehab is a recurring weekly event at Alloy Kitchen in Mountain Village, offering a laid-back Sunday gathering. The series runs through October 2026, providing a local spot to wind down and recharge at the end of the weekend.",
-    "type": "Community"
   },
   {
     "title": "Mountainfilm on Tour – Montrose",
@@ -1999,19 +1986,6 @@
     "endDate": "2026-11-16"
   },
   {
-    "title": "Sunday Rehab at Alloy Kitchen",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
-    "date": "2026-10-25",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Sunday Rehab is a recurring Sunday gathering at Alloy Kitchen in Mountain Village, offering a laid-back way to ease into the week. The event runs through late October 2026, giving locals and visitors a consistent weekend hangout spot at…",
-    "type": "Community"
-  },
-  {
     "title": "Bike & Brewery Tour",
     "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     "date": "2026-10-26",
@@ -2376,7 +2350,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In…",
     "type": "Arts & Film",
-    "endDate": "2026-11-26"
+    "endDate": "2026-11-30"
   },
   {
     "title": "Introduction to Copper Jewelry with Emily Knickerbocker",

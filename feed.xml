@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Oct 2026 12:51:18 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 20:21:50 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Oct 1–7</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-39</guid>
-      <pubDate>Thu, 01 Oct 2026 12:51:18 GMT</pubDate>
-      <description><![CDATA[The biggest thing on the civic calendar this week is Tuesday's Telluride Town Council meeting, where a public hearing is scheduled on extending a project's vesting period — a real land-use decision with a public comment window. Alongside that, the Council's Wednesday work session takes up automated license plate reader cameras, a privacy-versus-public-safety question worth paying attention to. On the community side, the Annual San Miguel River Cleanup is Saturday, and the week opens with Original Thinkers Thursday.]]></description>
+      <pubDate>Thu, 01 Oct 2026 20:21:50 GMT</pubDate>
+      <description><![CDATA[The biggest thing to track this week is Tuesday's Telluride Town Council meeting, where a public hearing is scheduled on extending a project's vesting period — a real land-use decision with a public comment opportunity. The same morning, Council takes up automated license plate reader cameras, a privacy-versus-public-safety conversation worth paying attention to. Elsewhere, the town's 2027 General Fund and Capital budget get their first serious shape in a Wednesday work session, and the Ouray County Planning Commission digs into possible Land Use Code definition changes at the 4-H Event Center on Tuesday.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -25,7 +25,7 @@
 
 Two multi-family projects are the main event at this October 1 DRB meeting. First up is a continued final architecture review for 15 employee apartments at 306 Adams Ranch Rd (Lot 640A) — workforce housing that's been working its way through the process since at least September. Next is a fresh final architecture review for four new multifamily units at 100 Pennington Pl. The board also takes up a conditional use permit renewal for the Wok of Joy food trailer at Conference Center Plaza, and considers a general easement encroachment at 113 Palmyra Dr. Two single-family homes are on the agenda but headed for continuance — one to December, one to February. Administrative items include a voting procedure update, approval of meeting minutes from August and September, a lighting update, and adoption of the 2027 DRB meeting schedule.
 
-⚡ Why it matters: Final architecture reviews for 15 workforce apartments and 4 new multifamily units.]]></description>
+⚡ Why it matters: Final architecture review votes on 15 workforce apartments and four new multifamily units.]]></description>
       <category>Meeting</category>
       <category>Mountain Village</category>
     </item>
@@ -38,7 +38,7 @@ Two multi-family projects are the main event at this October 1 DRB meeting. Firs
 
 A three-hour work session dedicated entirely to the 2027 budget — specifically the General Fund, revenue projections, fee structures, and Capital Fund. No votes are scheduled; this is the kind of session where the contours of next year's spending get sketched out before the formal adoption process begins. Anyone watching the town's fiscal trajectory — a budget that has grown dramatically over the past decade — will want to pay attention to where the numbers are heading.
 
-⚡ Why it matters: 2027 General Fund, revenues, fees, and capital spending take shape before formal adoption.]]></description>
+⚡ Why it matters: 2027 General Fund and Capital budget contours set here before formal adoption.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -209,6 +209,19 @@ Pink Talking Fish is a live band that performs a fusion of music from Pink Floyd
       <category>Sheridan Opera House</category>
     </item>
     <item>
+      <title>[Fri, Oct 2] Corey Hooker</title>
+      <link>https://www.alibitelluride.com/calendar#eca-event=corey-hooker</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/corey%20hooker%7C2026-10-02</guid>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 The Alibi
+📍 The Alibi • Telluride, CO
+🕒 9:00 PM
+
+Corey Hooker takes the stage at The Alibi for a night of live music. The show begins at 9:00 PM.]]></description>
+      <category>Community Event</category>
+      <category>The Alibi</category>
+    </item>
+    <item>
       <title>[Fri, Oct 2] Pink Talking Fish</title>
       <link>https://www.telluride.com/event/pink-talking-fish/</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/pink%20talking%20fish%7C2026-10-02</guid>
@@ -348,7 +361,7 @@ Regular meeting on the City of Ouray's published schedule. The agenda is usually
 
 The morning work session takes up automated license plate reader cameras — the Flock Safety system — with Chief Marshal Josh Comte presenting. That's a conversation worth watching; ALPR technology tends to generate real debate about privacy and public safety wherever it lands. On the formal agenda, Council holds a public hearing on extending the vesting period for property rights at 221 W Colorado, a project whose Certificate of Appropriateness expires October 18. Second reading of an ethics code amendment (Municipal Code Chapter 2, Article 4) is also up for a vote. Board appointments fill seats on both the Planning and Zoning Commission and HARC. The afternoon closes with the Town Attorney evaluation in executive session.
 
-⚡ Why it matters: Public hearing on project vesting extension; ALPR camera surveillance policy up for discussion.]]></description>
+⚡ Why it matters: Public hearing on project vesting extension; ALPR camera debate raises privacy questions.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -406,6 +419,19 @@ The October 7, 2026 Telluride Housing Authority Subcommittee agenda hasn't been 
 The October 7, 2026 Board of County Commissioners meeting agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>⚡ [Meeting] PM - Note: to be held at the 4-H Event Center! The PC will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (packet materials are attached to the agenda) — 2026-10-07</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/ouray%7C2026-10-07%7CPM%20-%20Note%3A%20to%20be%20held%20at%20the%204-H%20Event%20Center!%20The%20PC%20will%20conduct%20a%20work%20sessio</guid>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[ouray • 2026-10-07
+
+The Ouray County Planning Commission holds a work session on October 7 at the 4-H Event Center — note the change of venue — to review and discuss possible changes to the Land Use Code's Section 2, the Definitions chapter. Work sessions like this are where the real shaping happens: before any formal amendments are drafted, the Commission talks through what words mean and how those meanings ripple through everything else in the code. The packet materials are attached to the agenda for anyone who wants to dig in ahead of time.
+
+⚡ Why it matters: Proposed Land Use Code definition changes could reshape how county rules are interpreted.]]></description>
+      <category>Meeting</category>
+      <category>ouray</category>
     </item>
     <item>
       <title>[Wed, Oct 7] Stoke the Vote</title>

@@ -414,7 +414,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024","sv":4,"ph":"0edc39a9264b1248"},
 
   "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083","sv":4,"ph":"bd74d669e41a67a8"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083","sv":4,"ph":"3ff9e0390a939e92"},
 
   "county|2026-10-21|Board of County Commissioners Meeting":
     {"sv":4,"ph":"a12dfd2ce826475e"},
@@ -465,7 +465,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=769742","sv":4},
 
   "ouray|2026-09-29|Board of County Commissioners Special Work Session":
-    {"agendaUrl":"https://ouraycoco.portal.civicclerk.com/event/2149/files/agenda/7544","zoomUrl":"https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1","meetingId":"876 0637 5697","passcode":"946299","phone":"346-248-7799","sv":4}
+    {"agendaUrl":"https://ouraycoco.portal.civicclerk.com/event/2149/files/agenda/7544","zoomUrl":"https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1","meetingId":"876 0637 5697","passcode":"946299","phone":"346-248-7799","sv":4},
+
+  "ouray|2026-10-07|PM - Note: to be held at the 4-H Event Center! The PC will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (packet materials are attached to the agenda)":
+    {"agendaUrl":"https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1019","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -806,13 +809,13 @@ const MEETING_PREVIEWS = {
     "Board is expected to discuss county procurement activity, including requests for proposals on a trail connector project, fuel island canopy construction, jail painting, and a multi-hazard mitigation plan update, as well as a materials hauling quote. Additional related legal and financial notices may be referenced during the session.",
 
   "telluride|2026-10-01|Special Meeting - Planning & Zoning Commission - Oct 01 2026":
-    "The Planning & Zoning Commission will hold a work session focused on Telluride's Comprehensive Plan, facilitated by consulting staff. The session will gather commissioner input and share updates, concluding a week of community engagement activities related to the plan's development.",
+    "The Planning & Zoning Commission will hold a work session on the Town's Comprehensive Plan, facilitated by consultants and staff. The session aims to gather input from commissioners and share updates, concluding a week of community engagement activities related to the Comprehensive Plan's development.",
 
   "telluride|2026-10-01|Town Council Budget - Oct 01 2026":
-    "Council is expected to review the Town of Telluride's 2027 budget during a work session, focusing on the General Fund, revenues, fees, and Capital Fund priorities for the upcoming fiscal year.",
+    "Council is expected to review the Town of Telluride's proposed 2027 budget during a morning work session, focusing on the General Fund, revenue and fees, and Capital Fund priorities for the upcoming fiscal year.",
 
-  "county|2026-10-01|Lodging Tax Panel Meeting":
-    "The San Miguel County Lodging Tax Board will convene via Zoom to approve minutes from its June 18, 2026 meeting, review available lodging tax reports, and determine the date of its next meeting."
+  "ouray|2026-10-07|PM - Note: to be held at the 4-H Event Center! The PC will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (packet materials are attached to the agenda)":
+    "The Planning Commission is expected to hold a work session to review and discuss possible changes to the Ouray County Land Use Code, specifically Section 2, which covers definitions. The meeting will be held at the 4-H Event Center on October 7, 2026."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -864,6 +867,16 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Monthly Chamber of Commerce meeting open to all.",
     href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
     img: ""
+  },
+  {
+    title: "News Release: County Hires Recovery Manager",
+    source: "Ouray County",
+    sourceKey: "ouray-county",
+    date: "October 1, 2026",
+    newsTopic: "public-safety",
+    copy: "Ouray County is pleased to announce the recent hiring of Henry Mitchell as Recovery Manager. Henry brings over a decade of expertise in emergency management, preparedness, response, and recovery at both local and state levels.",
+    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=964",
+    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22847"
   },
   {
     title: "A Skyway show worth seeing",
@@ -926,16 +939,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "This sketchbook illustration",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 1, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.ouraynews.com/2026/09/30/this-sketchbook-illustration/?ta_paidstory",
-    img: ""
-  },
-  {
     title: "Looking Back",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
@@ -963,6 +966,16 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "public-safety",
     copy: "Don’t be alarmed. The Log Hill Mesa Fire Protection District plans to install an emergency siren system on Log Hill and is exploring possible locations on public property. The siren would alert residents to major incidents like wildfire. Sentry Siren, a Penrose-based company that provides outdoor wa",
     href: "https://www.ouraynews.com/2026/09/30/log-hill-tests-emergency-siren-locations/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Ouray runners compete in Delta",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 1, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.ouraynews.com/2026/09/30/ouray-runners-compete-delta/?ta_paidstory",
     img: ""
   },
   {
@@ -1041,7 +1054,7 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/2025-comprehensive-plan/widgets/101864/key_dates#42441"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-09-30';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-10-01';
 const LEGAL_NOTICES_CACHE_DATE = '2026-10-01';
 
 const MANUAL_SUMMARIES = {
@@ -1364,7 +1377,10 @@ const MANUAL_SUMMARIES = {
     "A full-day budget work session for the Ouray City Council — the kind of meeting where the year's priorities actually get set, even if the formal votes come later. The morning runs through the Capital Improvement Fund and a fund-by-fund budget review. The afternoon shifts to operations and community: Fourth of July entertainment funding, the free in-town shuttle, and OurWay/All-Points Transit. Then comes the non-profit funding round, with nine organizations on the list — Home Trust leading at $45,000, Ouray Library at $100,000, Mountain Air Music and Voyager each at $10,000, OCSAP at $5,000, Mountain Rescue at $10,000, and smaller asks from EcoAction Partners, ROCC, and UWP.",
 
   "ouray|2026-09-29|Board of County Commissioners Special Work Session":
-    "The Ouray County BOCC spends the full day on 2027 budget work sessions — no formal votes, but this is where the shape of next year's spending gets sketched out. Morning departments include the Assessor, Land Use, Clerk and Recorder, Treasurer, and IT/GIS. After lunch, the focus shifts to EMS, Road and Bridge, Public Health, and Human Services, closing with a recap discussion between the commissioners, the County Manager, and the Finance Director on preliminary budget preparation and next steps. Work sessions like this are where direction gets given before the numbers harden into formal proposals."
+    "The Ouray County BOCC spends the full day on 2027 budget work sessions — no formal votes, but this is where the shape of next year's spending gets sketched out. Morning departments include the Assessor, Land Use, Clerk and Recorder, Treasurer, and IT/GIS. After lunch, the focus shifts to EMS, Road and Bridge, Public Health, and Human Services, closing with a recap discussion between the commissioners, the County Manager, and the Finance Director on preliminary budget preparation and next steps. Work sessions like this are where direction gets given before the numbers harden into formal proposals.",
+
+  "ouray|2026-10-07|PM - Note: to be held at the 4-H Event Center! The PC will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (packet materials are attached to the agenda)":
+    "The Ouray County Planning Commission holds a work session on October 7 at the 4-H Event Center — note the change of venue — to review and discuss possible changes to the Land Use Code's Section 2, the Definitions chapter. Work sessions like this are where the real shaping happens: before any formal amendments are drafted, the Commission talks through what words mean and how those meanings ripple through everything else in the code. The packet materials are attached to the agenda for anyone who wants to dig in ahead of time."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2454,8 +2470,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "October 1, 2026",
     firstSeen: "2026-10-01",
     newsTopic: "government",
-    copy: "Political power in state legislatures and governors’ offices is at stake in the November elections in more than one-third of the states. Democrats and Republicans are spending millions to control closely divided legislatures in several states. The races could be…",
-    claudeSummary: false,
+    copy: "November elections across 46 states will decide control of legislatures and governors' offices, with supermajorities and trifectas in play. The outcomes could shape state policy on immigration, voting rules, and social programs — and either support or push back on federal direction from Washington. About 6,100 legislative seats are on the ballot.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_5d7b5b1b-0260-5dec-b64b-ca0603f81f50.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/3c/93cce18e-e064-5180-9715-47ad192d8f0a/6abe3065c34f2.image.jpg",
     imgHiRes: true
@@ -2502,8 +2518,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "October 1, 2026",
     firstSeen: "2026-10-01",
     newsTopic: "arts-culture",
-    copy: "The Original Thinkers (OT) Festival opens doors in Telluride this weekend, creating positive community through an alchemy of authentic stories and new ideas, activities that include films, talks, women’s and men’s circles, cacao and tea ceremonies and creative, civic fun.",
-    claudeSummary: false,
+    copy: "Original Thinkers Festival runs this weekend in Telluride, bringing films, talks, ceremonies, and community events across three full days. Denver group Warm Cookies of the Revolution joins as full partners this year alongside founders David Holbrooke and Jennifer Turner. The weekend closes Sunday with a picnic at Lone Tree Cemetery.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_255bd56f-6a36-4611-acdc-1808894bc28c.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/8f/a8fa1709-3ca1-4759-a999-0f56f010903c/6aba2ec4853a8.image.jpg",
     imgHiRes: true
@@ -3369,6 +3385,33 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Town of Telluride to Lift All Fire Restrictions",
+    source: "Town of Telluride",
+    date: "September 17, 2026",
+    newsTopic: "public-safety",
+    copy: "(September 16, 2026) – Following improved fire conditions across the region and in alignment with San Miguel County, the Town of Telluride will lift all fire restrictions effective at 12:01 a.m. MT on Friday, September 18, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=405",
+    img: ""
+  },
+  {
+    title: "Town Council Proclaims September 7-11 Black Bear Safety Week",
+    source: "Town of Telluride",
+    date: "September 3, 2026",
+    newsTopic: "government",
+    copy: "(September 3, 2026) — Town Council on Tuesday proclaimed September 7-11 Black Bear Safety Week, arriving in a year when a dry spring and summer have left black bears across Colorado with far less to eat in the wild.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=404",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
+  },
+  {
+    title: "San Miguel County Public Health Announces Fall Vaccine Availability",
+    source: "San Miguel County",
+    date: "October 1, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1419",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14836"
+  },
+  {
     title: "Chief Deputy Clerk Receives Excellence in Election Service Award",
     source: "San Miguel County",
     date: "September 25, 2026",
@@ -3450,6 +3493,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14812"
   },
   {
+    title: "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
+    source: "San Miguel County",
+    date: "September 10, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1409",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
+  },
+  {
+    title: "Two Domestic Pets in San Miguel County Test Positive for the Plague",
+    source: "San Miguel County",
+    date: "September 3, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
+  },
+  {
     title: "Courthouse Office Closures Tuesday 9/29 - Friday 10/2",
     source: "San Miguel County",
     date: "September 29, 2026",
@@ -3474,6 +3535,37 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "infrastructure",
     copy: "The Town of Telluride has completed their project that necessitated the closure of Lower Tomboy Road. The road is now open again.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=546",
+    img: ""
+  },
+  {
+    title: "Water Restrictions in Place",
+    source: "Town of Telluride",
+    date: "September 11, 2026",
+    newsTopic: "community",
+    copy: "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=45",
+    img: ""
+  },
+  {
+    title: "What to do in Colorado this week: TED Talks in Breckenridge, Original Thinkers in Telluride and free music in Denver",
+    source: "Colorado Sun",
+    date: "October 1, 2026",
+    firstSeen: "2026-10-01",
+    newsTopic: "arts-culture",
+    copy: "Plus: Original Thinkers festival in Telluride, free music in Denver and a mural festival in Superior",
+    claudeSummary: false,
+    href: "https://coloradosun.com/2026/10/01/what-to-do-in-colorado-ted-talk-breckenridge/",
+    img: "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2026/09/54345907509_bb40a361b1_o-scaled.jpg?fit=1024%2C683&amp;ssl=1"
+  },
+  {
+    title: "Small Business Administration Economic Injury Disaster Loan Data Collection Form Now Available (due Oct. 13)",
+    source: "Town of Ridgway",
+    date: "October 1, 2026",
+    firstSeen: "2026-10-01",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/SBA-Economic-Injury-Disaster-Loan-Data-Collection-Form-2026-10-01.pdf",
     img: ""
   },
   {
@@ -4688,6 +4780,18 @@ const ALIBI_EVENTS = [
     imageUrl: "https://ucarecdn.com/5503e0b2-6da7-415a-b118-18a9e65ed3e4/-/crop/816x408/0,37/-/preview/"
   },
   {
+    title: "Corey Hooker",
+    link: "https://www.alibitelluride.com/calendar#eca-event=corey-hooker",
+    description: "Corey Hooker takes the stage at The Alibi for a night of live music. The show begins at 9:00 PM.",
+    pubDate: "2026-10-02",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: ""
+  },
+  {
     title: "Hanneke Cassel Trio - Telluride Chamber Music",
     link: "https://www.alibitelluride.com/calendar#eca-event=hanneke-cassel-trio-telluride-chamber-music",
     description: "The Hanneke Cassel Trio brings an evening of chamber music to The Alibi as part of Telluride Chamber Music's programming. The performance is described as a distinctive take on the chamber music tradition.",
@@ -5388,7 +5492,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
     description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
     pubDate: "2026-10-05T18:00:00.000Z",
-    endDate: "2026-11-23",
+    endDate: "2026-11-30",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5676,6 +5780,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/53426461193935/huge/60b2d5b995c4ae4774c5f6a3f12d2d813ef7162b.jpg"
+  },
+  {
+    title: "Ridgway Star Party",
+    link: "https://events.ourayridgwayevents.com/event/ridgway-star-party",
+    description: "A Celebration of Dark Skies in our community with the Black Canyon Astronomical Society, 7:30 p.m. at the Ridgway Athletic Park. Weather permitting, free and open to the public. Please park at the soccer field with headlights pointing east. Professional telescopes provided for viewing, with laser-guided constellation tours.",
+    pubDate: "2026-10-11T01:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Frontier Field / Ridgway Athletic Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/54121032080521/huge/68c22ecc0cc229a1ff81decc49ac443e2daf1fdc.jpg"
   },
   {
     title: "Try Pickleball for Teens!",
@@ -6201,7 +6316,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-film-stills-ridgway-independent-film-fest",
     description: "The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In coordination with the annual Independent Film Festival (November 13-15) this show is both a preview and a celebration of the art of short filmmaking.",
     pubDate: "2026-11-07T00:00:00.000Z",
-    endDate: "2026-11-26",
+    endDate: "2026-11-30",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6558,17 +6673,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
   },
   {
-    title: "Sunday Rehab at Alloy Kitchen",
-    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
-    description: "Sunday Rehab is a recurring Sunday event at Alloy Kitchen in Mountain Village, running through October 11, 2026. It offers a laid-back way to spend Sunday afternoons in Mountain Village style.",
-    pubDate: "2026-10-04T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
-  },
-  {
     title: "Bike & Brewery Tour",
     link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     description: "A guided bicycle ride departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where participants receive a complimentary beer. The route offers a scenic two-brewery experience connecting Mountain Village to town.",
@@ -6622,17 +6726,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
-  },
-  {
-    title: "Sunday Rehab at Alloy Kitchen",
-    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
-    description: "Sunday Rehab is a recurring Sunday gathering at Alloy Kitchen in Mountain Village, running through October 11, 2026. It's a laid-back way to spend a Sunday in Mountain Village, hosted at the Alloy Kitchen venue.",
-    pubDate: "2026-10-11T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
   },
   {
     title: "Bike & Brewery Tour",
@@ -6734,17 +6827,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
   },
   {
-    title: "Sunday Rehab at Alloy Kitchen",
-    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
-    description: "Sunday Rehab is a recurring weekly event at Alloy Kitchen in Mountain Village, offering a laid-back Sunday gathering. The series runs through October 2026, providing a local spot to wind down and recharge at the end of the weekend.",
-    pubDate: "2026-10-18T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
-  },
-  {
     title: "Bike & Brewery Tour",
     link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     description: "A guided bicycle tour departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route offers a scenic descent connecting Mountain Village to town.",
@@ -6809,17 +6891,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49531/akb_1557.jpeg"
-  },
-  {
-    title: "Sunday Rehab at Alloy Kitchen",
-    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
-    description: "Sunday Rehab is a recurring Sunday gathering at Alloy Kitchen in Mountain Village, offering a laid-back way to ease into the week. The event runs through late October 2026, giving locals and visitors a consistent weekend hangout spot at the Mountain Lodge venue.",
-    pubDate: "2026-10-25T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
   },
   {
     title: "Bike & Brewery Tour",
