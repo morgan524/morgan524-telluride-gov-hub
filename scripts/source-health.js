@@ -115,6 +115,26 @@ function calDay(localDate, v) {
   return `${y}-${m}-${da}`;
 }
 
+// Some getters render more than their cached list: getOurayCityMeetings()
+// stores only real BoardBook rows (which appear ~a week out) and projects the
+// City's published regular schedule for the weeks beyond. Between a BoardBook
+// meeting passing and the next agenda posting, the array has nothing upcoming
+// while the section still shows the projected meetings — so the empty-upcoming
+// check asks the getter before reporting a list as run dry. A missing getter
+// (or one that throws) falls through to the array-only check.
+const SCHEDULE_GETTERS = {
+  OURAY_CITY_CACHED_DATA: 'getOurayCityMeetings',
+};
+function getterHasUpcoming(captured, name, localDate, today) {
+  const fn = captured[SCHEDULE_GETTERS[name]];
+  if (typeof fn !== 'function') return false;
+  try {
+    // Getters emit eventDate as a Date; localDate() only parses strings.
+    const asDay = (v) => v instanceof Date ? calDay(x => x, v) : calDay(localDate, v);
+    return (fn() || []).some(m => { const d = asDay(m && (m.eventDate || m.date)); return d && d >= today; });
+  } catch { return false; }
+}
+
 function detectStaleData(captured, localDate, today) {
   const out = [];
   if (!captured || typeof captured !== 'object') return out;
@@ -167,6 +187,7 @@ function detectStaleData(captured, localDate, today) {
     if (days.some(d => d >= today)) continue;        // has an upcoming row → fine
     const token = name.replace(/_CACHED_DATA$/, '').toLowerCase();
     if (futureSummaryTokens.has(token)) continue;    // renders upcoming via MANUAL_SUMMARIES
+    if (getterHasUpcoming(captured, name, localDate, today)) continue;  // getter projects the schedule
     const newest = days.sort().slice(-1)[0];
     const age = Math.round((todayMs - Date.parse(newest + 'T00:00:00Z')) / 86400000);
     out.push({ name, severity: 'High',

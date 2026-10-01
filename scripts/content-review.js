@@ -83,7 +83,7 @@ function add(severity, category, title, detail, extra = {}) {
 // gov-data.js and gov-helpers.js declare disjoint top-level `const`s
 // (verified — no name overlap), so we can concatenate and evaluate them
 // in one sandboxed Function body, then capture every UPPER_SNAKE const
-// plus the three helper fns we reuse (localDate, isBadSummary, truncate).
+// plus the helper fns we reuse (localDate, isBadSummary, truncate, getOurayCityMeetings).
 function loadData() {
   const dataSrc = fs.readFileSync(GOV_DATA_JS, 'utf8');
   const helpersSrc = fs.readFileSync(GOV_HELPERS_JS, 'utf8');
@@ -92,7 +92,9 @@ function loadData() {
   const constNames = [...new Set(
     [...combined.matchAll(/^const\s+([A-Z][A-Z0-9_]*)\s*=/gm)].map(m => m[1])
   )];
-  const helperNames = ['localDate', 'isBadSummary', 'truncate'];
+  // getOurayCityMeetings: source-health's empty-upcoming check asks it for the
+  // projected regular schedule (see SCHEDULE_GETTERS in source-health.js).
+  const helperNames = ['localDate', 'isBadSummary', 'truncate', 'getOurayCityMeetings'];
   const captureNames = [...constNames, ...helperNames];
 
   const epilogue =
