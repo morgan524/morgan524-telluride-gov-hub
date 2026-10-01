@@ -115,6 +115,29 @@ function calDay(localDate, v) {
   return `${y}-${m}-${da}`;
 }
 
+// *_CACHED_DATA lists that hold ONLY rows the body has actually posted, whose
+// getter projects the published regular schedule on top until the real row
+// appears. Between postings the array has nothing upcoming by design while the
+// section still renders the next meetings, so judge these by the getter.
+// (2026-10-01: OURAY_CITY_CACHED_DATA tripped "run dry" the day after its last
+// BoardBook row although getOurayCityMeetings() showed Oct 5 / Oct 13.)
+const SCHEDULE_GETTERS = {
+  OURAY_CITY_CACHED_DATA: 'getOurayCityMeetings',
+};
+function getterHasUpcoming(captured, getterName, today) {
+  const fn = getterName && captured[getterName];
+  if (typeof fn !== 'function') return false;
+  let rows;
+  try { rows = fn(); } catch { return false; }
+  if (!Array.isArray(rows)) return false;
+  const pad = n => String(n).padStart(2, '0');
+  return rows.some(m => {
+    const d = m && m.eventDate;
+    if (!(d instanceof Date) || isNaN(d) || m.canceled) return false;
+    return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}` >= today;
+  });
+}
+
 function detectStaleData(captured, localDate, today) {
   const out = [];
   if (!captured || typeof captured !== 'object') return out;
@@ -167,6 +190,7 @@ function detectStaleData(captured, localDate, today) {
     if (days.some(d => d >= today)) continue;        // has an upcoming row → fine
     const token = name.replace(/_CACHED_DATA$/, '').toLowerCase();
     if (futureSummaryTokens.has(token)) continue;    // renders upcoming via MANUAL_SUMMARIES
+    if (getterHasUpcoming(captured, SCHEDULE_GETTERS[name], today)) continue;
     const newest = days.sort().slice(-1)[0];
     const age = Math.round((todayMs - Date.parse(newest + 'T00:00:00Z')) / 86400000);
     out.push({ name, severity: 'High',
@@ -210,7 +234,7 @@ function detectStaleData(captured, localDate, today) {
   return out;
 }
 
-module.exports = { readBaseline, writeBaseline, updateBaseline, detectAnomalies, detectStaleData, baselineFile, EXCLUDE };
+module.exports = { readBaseline, writeBaseline, updateBaseline, detectAnomalies, detectStaleData, baselineFile, EXCLUDE, SCHEDULE_GETTERS };
 
 // ── CLI: update + persist the baseline (run by content-refresh.yml) ──
 if (require.main === module) {

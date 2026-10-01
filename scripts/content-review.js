@@ -92,7 +92,10 @@ function loadData() {
   const constNames = [...new Set(
     [...combined.matchAll(/^const\s+([A-Z][A-Z0-9_]*)\s*=/gm)].map(m => m[1])
   )];
-  const helperNames = ['localDate', 'isBadSummary', 'truncate'];
+  const helperNames = ['localDate', 'isBadSummary', 'truncate',
+    // Getters the stale-data check consults for lists whose upcoming meetings
+    // are projected from a published schedule (source-health SCHEDULE_GETTERS).
+    ...Object.values(require('./source-health.js').SCHEDULE_GETTERS)];
   const captureNames = [...constNames, ...helperNames];
 
   const epilogue =

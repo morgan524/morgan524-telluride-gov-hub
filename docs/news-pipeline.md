@@ -108,6 +108,13 @@ Important behaviors:
   the gotcha but the bug persisted; now fixed.)
   - newscasts: `https://koto.org/news-category/newscasts/feed/`
   - featured:  `https://koto.org/news-category/featured-stories/feed/`
+  - **Fallback (2026-10-01):** since ~Sep 17 2026 both category feeds
+    return a Cloudflare "Just a moment..." challenge (HTTP 403), even
+    through the Worker. When a category feed fails, `refreshNews()` reads
+    `KOTO_NEWS_ARCHIVE_RSS` (`https://koto.org/feed/?post_type=news`) and
+    splits it by title: "Newscast …" → newscasts; anything not a recurring
+    series (Newscast / Noticias / "Off the Record") → featured. Look for
+    "category feed blocked" in the refresh log.
 - **14-day cutoff:** `NEWS_MAX_AGE_DAYS = 14`. Anything older than 14 days is
   filtered out at fetch time. Don't be surprised when older items disappear
   from the live site — it's intentional pruning, not a bug. Adjust the

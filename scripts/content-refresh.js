@@ -149,6 +149,16 @@ const TELLURIDE_TIMES_RSS = 'https://www.telluridenews.com/search/?f=rss&t=artic
 // KOTO uses two category-specific feeds; the catch-all /feed/ misses some posts.
 const KOTO_NEWSCASTS_RSS = 'https://koto.org/news-category/newscasts/feed/';
 const KOTO_FEATURED_RSS = 'https://koto.org/news-category/featured-stories/feed/';
+// Fallback (2026-10-01): since ~Sep 17 2026 koto.org serves a Cloudflare
+// "Just a moment..." challenge (HTTP 403) on the /news-category/*/feed/ URLs,
+// even through the Worker, while the post-type archive feed below still
+// returns real RSS. It carries every news post with no category tags, so
+// refreshNews() splits it by title (see KOTO_SERIES_RE).
+const KOTO_NEWS_ARCHIVE_RSS = 'https://koto.org/feed/?post_type=news';
+// Recurring KOTO series in the archive feed. "Newscast M-D-YY" is the
+// newscasts bucket; Noticias / "Off the Record" were never in either bucket.
+const KOTO_NEWSCAST_TITLE_RE = /^newscast\b/i;
+const KOTO_SERIES_RE = /^(newscast|noticias)\b|^(?:&#\d+;|\W)*off the record/i;
 const COLORADO_SUN_RSS = 'https://coloradosun.com/feed/';
 // Keywords that make a Colorado Sun article relevant to the Telluride region
 const COLORADO_SUN_KEYWORDS = /telluride|san\s+miguel\s+county|mountain\s+village|ridgway|telski|chuck\s+horning/i;
@@ -2329,20 +2339,27 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
   const kotoNewscasts = [];
   const kotoFeatured = [];
 
-  async function pullKotoFeed(url, bucket) {
+  // Returns true when the feed answered with real RSS (even if empty), so a
+  // Cloudflare challenge page can be told apart from a quiet week.
+  async function pullKotoFeed(url, bucket, keep = () => true) {
     try {
       const resp = await fetch(url);
       if (resp.status !== 200) {
         console.warn(`  KOTO feed (${url}) HTTP ${resp.status}`);
-        return;
+        return false;
       }
       const xml = await parseXml(resp.text);
-      const items = xml?.rss?.channel?.item;
+      if (!xml?.rss?.channel) {
+        console.warn(`  KOTO feed (${url}) returned non-RSS content`);
+        return false;
+      }
+      const items = xml.rss.channel.item;
       const arr = Array.isArray(items) ? items : (items ? [items] : []);
       for (const item of arr) {
         const pubDate = new Date(item.pubDate || '');
         if (pubDate < cutoff) continue;
         const title = (item.title || '').trim();
+        if (!keep(title)) continue;
         // Clean the RSS description: strip HTML, drop the canonical
         // "The post <link>X</link> appeared first on <link>KOTO FM</link>" trailer.
         let copy = (item.description || '').replace(/<[^>]+>/g, ' ');
@@ -2360,13 +2377,23 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
           href: (item.link || '').trim()
         });
       }
+      return true;
     } catch (e) {
       console.warn(`  KOTO RSS error (${url}): ${e.message}`);
+      return false;
     }
   }
 
-  await pullKotoFeed(KOTO_NEWSCASTS_RSS, kotoNewscasts);
-  await pullKotoFeed(KOTO_FEATURED_RSS, kotoFeatured);
+  const newscastsOk = await pullKotoFeed(KOTO_NEWSCASTS_RSS, kotoNewscasts);
+  const featuredOk = await pullKotoFeed(KOTO_FEATURED_RSS, kotoFeatured);
+  if (!newscastsOk) {
+    console.warn('  KOTO newscasts category feed blocked — falling back to the news archive feed');
+    await pullKotoFeed(KOTO_NEWS_ARCHIVE_RSS, kotoNewscasts, t => KOTO_NEWSCAST_TITLE_RE.test(t));
+  }
+  if (!featuredOk) {
+    console.warn('  KOTO featured-stories category feed blocked — falling back to the news archive feed');
+    await pullKotoFeed(KOTO_NEWS_ARCHIVE_RSS, kotoFeatured, t => !KOTO_SERIES_RE.test(t));
+  }
 
   // Colorado Sun — filtered to Telluride/San Miguel County local coverage
   const csSunArticles = [];
