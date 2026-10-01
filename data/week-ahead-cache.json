@@ -1,18 +1,18 @@
 {
-  "hash": "ab5c35436006b6832e09caa6c190c84b175fc898",
-  "lede": "The biggest thing on the civic calendar this week is Tuesday's Telluride Town Council meeting, where Council holds a public hearing on a vesting period extension for a development project and takes up the Flock Safety automated license plate reader system — two items that touch land use and civil liberties in ways worth paying attention to. Wednesday's budget work session lays the groundwork for the 2027 General and Capital funds, and the Comp Plan consulting team meets with P&Z on Thursday as that long-range planning process moves forward. On the community side, Pink Talking Fish plays the Sheridan Friday night, the annual San Miguel River Cleanup is Saturday, and ArtAbout runs the same day.",
+  "hash": "08c867ca619b27cb83cc46946bf5787c21459e9d",
+  "lede": "The biggest thing on the civic calendar this week is Tuesday's Telluride Town Council meeting, where a public hearing is scheduled on extending a project's vesting period — a real land-use decision with a public comment window. Alongside that, the Council's Wednesday work session takes up automated license plate reader cameras, a privacy-versus-public-safety question worth paying attention to. On the community side, the Annual San Miguel River Cleanup is Saturday, and the week opens with Original Thinkers Thursday.",
   "notable": [
     {
+      "id": 6,
+      "stake": "Public hearing on project vesting extension; ALPR camera surveillance policy up for discussion."
+    },
+    {
       "id": 0,
-      "stake": "Final architecture review for 15 workforce apartments and 4 new multifamily units."
+      "stake": "Final architecture reviews for 15 workforce apartments and 4 new multifamily units."
     },
     {
       "id": 1,
-      "stake": "2027 General and Capital Fund contours being shaped before formal adoption begins."
-    },
-    {
-      "id": 6,
-      "stake": "Public hearing on development vesting extension; ALPR surveillance cameras up for debate."
+      "stake": "2027 General Fund, revenues, fees, and capital spending take shape before formal adoption."
     }
   ]
 }

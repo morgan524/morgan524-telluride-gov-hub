@@ -404,63 +404,83 @@
     "caseNumber": "2026-06"
   },
   {
-    "title": "Public Hearing -- Adoption of 2024 International Building Code & Colorado Low Energy & Carbon Code",
-    "entity": "San Miguel County Board of Commissioners",
+    "title": "Ordinance -- Amending Fees and Costs Provisions (Chapters 16.01 & 16.02) (COL-000256)",
+    "entity": "Town of Mountain Village",
     "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "The San Miguel County Board of Commissioners will hold a public hearing on September 16, 2026 at 9:00 AM in Telluride to consider adopting the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Community members may submit written comments (limited to one page) to the Board at P.O. Box 1170, Telluride, CO 81435 or bocc@sanmiguelcountyco.gov. Written comments must be received by noon on September 10, 2026; proposed amendments are available in the meeting agenda packet at www.sanmiguelcountyco.gov.",
-    "deadline": "2026-09-10T12:00:00",
-    "expires": "2026-09-16",
-    "dates": "8/27",
+    "entityLogo": "telluride",
+    "icon": "📋",
+    "iconClass": "type-hearing",
+    "type": "Ordinance",
+    "filterTag": "ordinance",
+    "summary": "The Town of Mountain Village passed on first reading an ordinance amending Chapters 16.01 and 16.02 of its Municipal Code concerning fees and costs. The second reading, public hearing, and final Council vote will be held on October 15, 2026 at 2:00 p.m. at Mountain Village Town Hall and via Zoom. The ordinance is available for review at the Town Clerk's office or on the town website.",
+    "deadline": "2026-10-15",
+    "expires": "2026-10-15",
+    "dates": "10/1",
     "papers": [
-      "ttimes_0827"
+      "ttimes_1001"
     ],
-    "url": "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
-    "address": "Telluride, Colorado (San Miguel County)",
-    "noticeKey": "COL-000222-ibc-2024-hearing"
+    "url": "https://www.telluridenews.com/news/legals/article_792d96c0-09c8-479f-83f8-bdf3681b49ae.html",
+    "address": "455 Mountain Village Blvd, Suite A, Mountain Village, CO",
+    "noticeKey": "ord-mv-fees-16.01-16.02-COL-000256"
   },
   {
-    "title": "RFP -- Fuel Island Canopy Construction, Norwood Road & Bridge Maintenance Yard (COL-000219)",
-    "entity": "San Miguel County Road & Bridge Department",
+    "title": "Public Meeting -- San Miguel County Planning Commission Regular Meeting (COL-000261)",
+    "entity": "San Miguel County Planning Commission",
     "entityClass": "ent-county",
     "entityLogo": "county",
     "icon": "🏛️",
     "iconClass": "type-rfp",
     "type": "Public Notice",
     "filterTag": "public-entity",
-    "summary": "San Miguel County Road & Bridge is requesting proposals from qualified contractors for the design, engineering, permitting assistance, and construction of a fuel island canopy at the Norwood Road & Bridge Maintenance Yard, 39595 Highway 145, Norwood, CO 81423. A pre-proposal onsite meeting was held August 24, 2026; written questions were due August 26, 2026. Proposals must be submitted electronically to roadbridge@sanmiguelcountyco.gov by September 3, 2026 at 4:00 PM, with contractor selection notification expected September 7, 2026.",
-    "deadline": "2026-09-03T16:00:00",
-    "expires": "2026-09-03",
-    "dates": "8/27",
+    "summary": "The San Miguel County Planning Commission will hold its regular monthly meeting on October 8, 2026 at 9:00 a.m. at 333 West Colorado Ave., Second Floor, Telluride, and via Zoom. Agenda items include a work session with the BOCC on an Affordable Housing Code Update and a Land Use Code Amendment recommendation regarding Subdivisions and Condominium Plats. The public may participate in person or via Zoom using the provided meeting link.",
+    "deadline": "2026-10-08",
+    "expires": "2026-10-08",
+    "dates": "10/1",
     "papers": [
-      "ttimes_0827"
+      "ttimes_1001"
     ],
-    "url": "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
-    "address": "39595 Highway 145, Norwood, CO 81423",
-    "noticeKey": "COL-000219-fuel-island-canopy-rfp"
+    "url": "https://www.telluridenews.com/news/legals/article_792d96c0-09c8-479f-83f8-bdf3681b49ae.html",
+    "address": "333 West Colorado Ave., Second Floor, Telluride, CO 81435",
+    "noticeKey": "planning-commission-meeting-oct8-2026-COL-000261"
   },
   {
-    "title": "RFP -- San Miguel County Jail Repainting, Illium (COL-000224)",
-    "entity": "San Miguel County Fleet & Facilities Department",
+    "title": "Public Hearing -- Land Use Code Amendment: Deep Geothermal Operations (COL-000263)",
+    "entity": "San Miguel County Board of County Commissioners",
     "entityClass": "ent-county",
     "entityLogo": "county",
     "icon": "🏛️",
     "iconClass": "type-rfp",
     "type": "Public Notice",
     "filterTag": "public-entity",
-    "summary": "San Miguel County is seeking proposals from contractors to repaint the San Miguel County Jail located at 684 County Road 63L, Telluride, CO 81435. RFP documents are available at www.sanmiguelcountyco.gov/bids.aspx or through the Fleet & Facilities Department at 333 W. Colorado Ave, 2nd Floor, Telluride; contact Greg Pollio at (970) 729-9451 or Gregp@sanmiguelcountyco.gov. Proposals are due by 5:00 PM on Friday, September 18, 2026, submitted via email or dropped off at the Fleet & Facilities Department in Telluride.",
-    "deadline": "2026-09-18T17:00:00",
-    "expires": "2026-09-18",
-    "dates": "8/27",
+    "summary": "The San Miguel County Board of County Commissioners will hold a public hearing on October 21, 2026 at 9:30 a.m. or later to consider a Land Use Code amendment adding a new Section 6-6 governing Deep Geothermal Operations, along with related amendments. This is the second step of a two-step process following Planning Commission review. Written comments must be received by October 13, 2026, and may be submitted to the San Miguel County Planning Department.",
+    "deadline": "2026-10-21",
+    "expires": "2026-10-21",
+    "dates": "10/1",
     "papers": [
-      "ttimes_0827"
+      "ttimes_1001"
     ],
-    "url": "https://www.telluridenews.com/news/legals/article_8614d722-2a45-49a3-805d-0d517e7701cb.html",
-    "address": "684 County Road 63L, Telluride, CO 81435",
-    "noticeKey": "COL-000224-jail-repainting-rfp"
+    "url": "https://www.telluridenews.com/news/legals/article_792d96c0-09c8-479f-83f8-bdf3681b49ae.html",
+    "address": "333 W Colorado Ave, 2nd Floor, Telluride, CO 81435",
+    "noticeKey": "luc-amendment-deep-geothermal-COL-000263"
+  },
+  {
+    "title": "Tax Lien Sale -- 2025 Delinquent Real Property Tax Lien Sale, San Miguel County",
+    "entity": "San Miguel County Treasurer (Brandi R. Hatfield)",
+    "entityClass": "ent-county",
+    "entityLogo": "assessor",
+    "icon": "💰",
+    "iconClass": "type-tax",
+    "type": "Tax & Finance",
+    "filterTag": "tax-finance",
+    "summary": "San Miguel County Treasurer Brandi R. Hatfield has announced the 2025 Delinquent Tax Publication and Real Property Tax Lien Sale, to be held online at www.govease.com on Monday, October 26, 2026 at 10:00 a.m. Property owners with delinquent 2025 (and earlier) real estate taxes must pay in full at the Treasurer's office by noon on October 22, 2026 to avoid having a tax lien sold on their property. The interest rate on Tax Lien Certificates sold in 2026 is 13% per year. Properties listed include parcels throughout San Miguel County.",
+    "deadline": "2026-10-22",
+    "expires": "2026-10-26",
+    "dates": "10/1",
+    "papers": [
+      "ttimes_1001"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_792d96c0-09c8-479f-83f8-bdf3681b49ae.html",
+    "address": "San Miguel County, Colorado (various parcels countywide)",
+    "noticeKey": "delinquent-tax-lien-sale-2025-san-miguel"
   }
 ]

@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-10-01",
+    "title": "The comp plan gets a work session — who shapes what comes next?",
+    "body": "The Planning & Zoning Commission is holding a work session on Telluride's Comprehensive Plan, with consulting staff facilitating and commissioner input being gathered. It's wrapping up a week of community engagement on the plan's direction. Comp plans set the vision that guides land use, development, and priorities for years. Some residents see these processes as a real chance to steer growth and protect what makes up here livable. Others worry the outcome reflects whoever shows up — or whoever was hired to facilitate. So — do you trust this kind of planning process to reflect what the community actually wants?",
+    "choices": [
+      "Yes, these processes work",
+      "Too easy to steer outcomes",
+      "Depends on who participates",
+      "It's complicated"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-09-30",
     "title": "Budget season, wildfire code — same room",
     "body": "Town Council's October 1 budget meeting is also expected to revisit Ordinance #1640 — the wildfire resiliency code amendment passed in August 2026. That pairing matters. New wildfire standards can mean real costs for property owners and the town itself, and a budget session is exactly where those costs start to feel concrete. Some residents will want the standards enforced fully, whatever they cost. Others will push back if compliance burdens land on homeowners or slow things down. Nothing's been decided yet on the budget side.\n\nWhat should Council prioritize if wildfire code compliance and other budget needs end up competing for the same dollars?",
@@ -421,21 +436,6 @@
       "Approve it — a roof is basic upkeep",
       "Hold the line on deed restrictions",
       "Fix the policy first, then decide",
-      "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-09-01",
-    "title": "Foreclosures on the agenda — twice",
-    "body": "The Board of County Commissioners meets September 2 with two foreclosure sales on the docket — one involving a property in Telluride, another in Mountain Village. Foreclosures up here don't happen in a vacuum. Some residents see them as a market correction that could open doors for locals who've been priced out. Others worry they signal deeper financial stress in the community — or that the properties will simply flip to the next highest bidder and nothing changes.\n\nWhat do foreclosures in this market actually mean to you?",
-    "choices": [
-      "Sign of opportunity for locals",
-      "Sign of deeper trouble",
-      "Just routine legal process",
       "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",
