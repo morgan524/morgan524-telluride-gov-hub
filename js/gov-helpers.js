@@ -3369,24 +3369,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Town of Telluride to Lift All Fire Restrictions",
-    source: "Town of Telluride",
-    date: "September 17, 2026",
-    newsTopic: "public-safety",
-    copy: "(September 16, 2026) – Following improved fire conditions across the region and in alignment with San Miguel County, the Town of Telluride will lift all fire restrictions effective at 12:01 a.m. MT on Friday, September 18, 2026.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=405",
-    img: ""
-  },
-  {
-    title: "Town Council Proclaims September 7-11 Black Bear Safety Week",
-    source: "Town of Telluride",
-    date: "September 3, 2026",
-    newsTopic: "government",
-    copy: "(September 3, 2026) — Town Council on Tuesday proclaimed September 7-11 Black Bear Safety Week, arriving in a year when a dry spring and summer have left black bears across Colorado with far less to eat in the wild.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=404",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
-  },
-  {
     title: "Chief Deputy Clerk Receives Excellence in Election Service Award",
     source: "San Miguel County",
     date: "September 25, 2026",
@@ -3468,24 +3450,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14812"
   },
   {
-    title: "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
-    source: "San Miguel County",
-    date: "September 10, 2026",
-    newsTopic: "health",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1409",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
-  },
-  {
-    title: "Two Domestic Pets in San Miguel County Test Positive for the Plague",
-    source: "San Miguel County",
-    date: "September 3, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
-  },
-  {
     title: "Courthouse Office Closures Tuesday 9/29 - Friday 10/2",
     source: "San Miguel County",
     date: "September 29, 2026",
@@ -3510,15 +3474,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "infrastructure",
     copy: "The Town of Telluride has completed their project that necessitated the closure of Lower Tomboy Road. The road is now open again.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=546",
-    img: ""
-  },
-  {
-    title: "Water Restrictions in Place",
-    source: "Town of Telluride",
-    date: "September 11, 2026",
-    newsTopic: "community",
-    copy: "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
-    href: "https://www.telluride.gov/AlertCenter.aspx?AID=45",
     img: ""
   },
   {
@@ -3623,25 +3578,11 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
-  {
-    title: "Newscast 9-16-26",
-    source: "KOTO Community Radio",
-    date: "September 17, 2026",
-    newsTopic: "arts-culture",
-    copy: "Mountain Village Announces Finalists for New Town Manager; Telluride Opens Flock Camera Discussion; Cowboy Heritage and Poetry Shine in the West End",
-    href: "https://koto.org/news/newscast-9-16-26/"
-  }
+
 ];
 
 const KOTO_FEATURED_STORIES = [
-  {
-    title: "Cowboy Heritage and Poetry Shine in the West End",
-    source: "KOTO Community Radio",
-    date: "September 17, 2026",
-    newsTopic: "arts-culture",
-    copy: "Cowboy poets and songwriters took the stage at the 10th Annual West End Cowboy Gathering. Performers from across the southwest flocked to Nucla to share their work with the community.",
-    href: "https://koto.org/news/cowboy-heritage-and-poetry-shine-in-the-west-end/"
-  }
+
 ];
 
 // San Miguel Basin Forum (West End — Norwood, Nucla, Naturita, Paradox).
