@@ -92,7 +92,9 @@ function loadData() {
   const constNames = [...new Set(
     [...combined.matchAll(/^const\s+([A-Z][A-Z0-9_]*)\s*=/gm)].map(m => m[1])
   )];
-  const helperNames = ['localDate', 'isBadSummary', 'truncate'];
+  // + getters that project a published schedule over a scrape-only list —
+  // source-health's detectStaleData asks them before calling a list "run dry".
+  const helperNames = ['localDate', 'isBadSummary', 'truncate', 'getOurayCityMeetings'];
   const captureNames = [...constNames, ...helperNames];
 
   const epilogue =

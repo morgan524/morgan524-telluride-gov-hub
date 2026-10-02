@@ -158,6 +158,22 @@ function detectStaleData(captured, localDate, today) {
       }
     }
   }
+  // Some lists hold ONLY real scraped rows by design and their getter adds the
+  // body's published regular schedule on top (getOurayCityMeetings projects
+  // Council 1st/3rd Monday + PC 2nd Tuesday until BoardBook posts the row).
+  // The array running dry between postings is then expected, not a failure —
+  // what residents see is the getter's output, so ask the getter. Flagged as a
+  // false positive by the 2026-10-02 content review (OURAY_CITY_CACHED_DATA).
+  const GETTER_FOR = {
+    OURAY_CITY_CACHED_DATA: 'getOurayCityMeetings',
+  };
+  const getterHasUpcoming = (name) => {
+    const fn = captured[GETTER_FOR[name]];
+    if (typeof fn !== 'function') return false;
+    try {
+      return (fn() || []).some(m => { const d = calDay(localDate, m && m.eventDate); return d && d >= today; });
+    } catch (_) { return false; }
+  };
   for (const [name, val] of Object.entries(captured)) {
     if (!/_CACHED_DATA$/.test(name) || !Array.isArray(val) || val.length === 0) continue;
     const days = val
@@ -167,6 +183,7 @@ function detectStaleData(captured, localDate, today) {
     if (days.some(d => d >= today)) continue;        // has an upcoming row → fine
     const token = name.replace(/_CACHED_DATA$/, '').toLowerCase();
     if (futureSummaryTokens.has(token)) continue;    // renders upcoming via MANUAL_SUMMARIES
+    if (getterHasUpcoming(name)) continue;           // getter projects the published schedule
     const newest = days.sort().slice(-1)[0];
     const age = Math.round((todayMs - Date.parse(newest + 'T00:00:00Z')) / 86400000);
     out.push({ name, severity: 'High',
