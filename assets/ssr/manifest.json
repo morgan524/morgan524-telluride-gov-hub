@@ -1,6 +1,16 @@
 {
   "documents": [
     {
+      "id": "14841",
+      "title": "Affordable Housing Land Use Code Update",
+      "slug": "document-14841",
+      "sourceUrl": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/14841",
+      "localPath": "assets/ssr/14841-document-14841.pdf",
+      "contentType": "application/pdf",
+      "bytes": 7519604,
+      "firstSeen": "2026-10-02T22:15:56.906Z"
+    },
+    {
       "id": "14834",
       "title": "San Miguel County Prioritized Housing Review Resolution No. 2026-22",
       "slug": "493661-BOCC-Resolution-2026-22-Prioritized-Housing-Review-updated-LUCA-RECORDED-1",
@@ -201,5 +211,5 @@
       "firstSeen": "2026-04-27T17:16:56.032Z"
     }
   ],
-  "lastChecked": "2026-10-02T12:38:40.627Z"
+  "lastChecked": "2026-10-02T22:15:56.907Z"
 }
