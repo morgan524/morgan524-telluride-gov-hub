@@ -146,9 +146,20 @@ const NEWS_FEEDS = [
 // /gallery/news/ and never reached the feed. Gallery volume is tiny (~1 item
 // per 50) and the local-news.html relevance filters still apply downstream.
 const TELLURIDE_TIMES_RSS = 'https://www.telluridenews.com/search/?f=rss&t=article&c=news,news/*,news_release,news_release/*,business,business/*,sports,sports/*,opinion,opinion/*,obituaries,norwood_post,norwood_post/*,the_norwood_post,the_norwood_post/*,arts_and_entertainment,arts_and_entertainment/*,gallery,gallery/*&l=50&s=start_time&sd=desc';
-// KOTO uses two category-specific feeds; the catch-all /feed/ misses some posts.
-const KOTO_NEWSCASTS_RSS = 'https://koto.org/news-category/newscasts/feed/';
-const KOTO_FEATURED_RSS = 'https://koto.org/news-category/featured-stories/feed/';
+// KOTO uses two category-specific feeds; the catch-all /feed/ misses some posts
+// (newscasts + featured stories are the `news` post type, not regular posts).
+// Since ~2026-09-17 koto.org's Cloudflare serves a "Just a moment..." challenge
+// for the pretty /news-category/<slug>/feed/ paths — even through the Worker —
+// while the query-string form of the SAME feed still answers 200. Query form
+// first; the pretty path stays as a fallback in case the WAF rule flips.
+const KOTO_NEWSCASTS_RSS = [
+  'https://koto.org/feed/?post_type=news&news-category=newscasts',
+  'https://koto.org/news-category/newscasts/feed/',
+];
+const KOTO_FEATURED_RSS = [
+  'https://koto.org/feed/?post_type=news&news-category=featured-stories',
+  'https://koto.org/news-category/featured-stories/feed/',
+];
 const COLORADO_SUN_RSS = 'https://coloradosun.com/feed/';
 // Keywords that make a Colorado Sun article relevant to the Telluride region
 const COLORADO_SUN_KEYWORDS = /telluride|san\s+miguel\s+county|mountain\s+village|ridgway|telski|chuck\s+horning/i;
@@ -2365,8 +2376,9 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
     }
   }
 
-  await pullKotoFeed(KOTO_NEWSCASTS_RSS, kotoNewscasts);
-  await pullKotoFeed(KOTO_FEATURED_RSS, kotoFeatured);
+  // Try each URL for a feed until one yields items (see KOTO_*_RSS above).
+  for (const url of KOTO_NEWSCASTS_RSS) { await pullKotoFeed(url, kotoNewscasts); if (kotoNewscasts.length) break; }
+  for (const url of KOTO_FEATURED_RSS) { await pullKotoFeed(url, kotoFeatured); if (kotoFeatured.length) break; }
 
   // Colorado Sun — filtered to Telluride/San Miguel County local coverage
   const csSunArticles = [];
@@ -5520,6 +5532,10 @@ async function syncMedAgendas() {
 // Returns a sorted stub array, or null when there's nothing to publish (so the
 // caller preserves the existing array rather than blanking the section).
 const { nextOccurrences: _nextOccurrences, fmtDate: _fmtScheduleDate } = require('./lib/schedule.js');
+function _isoDay(d) {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+
 function assembleBoardStubs(scraped, cadence, opts, now = new Date()) {
   const lookbackDays = opts.lookbackDays == null ? 21 : opts.lookbackDays;
   const lookback = new Date(now.getTime() - lookbackDays * 86400000);
@@ -5550,6 +5566,12 @@ function assembleBoardStubs(scraped, cadence, opts, now = new Date()) {
     for (const occ of _nextOccurrences(cadence, now, placeholders, opts.skipMonths || [])) {
       const key = occ.date + '|' + (opts.board || '');
       if (byDate.has(key)) continue;
+      // A projected date the body's own calendar marks as an office closure
+      // (Norwood "Closed For Veterans Day" on a 2nd-Wednesday Trustees date)
+      // isn't a meeting we can vouch for — the body reschedules (Norwood moved
+      // NWC from Nov 11 to Nov 18 in 2025) and the real agenda shows the new
+      // date when it posts. Skip the placeholder rather than guess.
+      if (opts.closedDates && opts.closedDates.has(_isoDay(occ.jsDate))) continue;
       const stub = {
         date: occ.date, time: opts.time || null, title: opts.title,
         agendaUrl: null, packetUrl: null, special: false, location: opts.location
@@ -8279,15 +8301,20 @@ async function main() {
     console.warn('  Norwood: fetch failed — preserving existing NORWOOD_CACHED_DATA');
   } else {
     const norwoodNote = 'Next scheduled meeting -- agenda posted before the meeting.';
+    // Town-office closure days from the town's own calendar (NORWOOD_EVENTS,
+    // refreshed above): a cadence placeholder never lands on one.
+    const norwoodClosed = new Set((extractJsArray(govHubSrc, 'NORWOOD_EVENTS') || [])
+      .filter(e => /\bclosed\b/i.test(e.title || '') && e.pubDate)
+      .map(e => String(e.pubDate).slice(0, 10)));
     const botStubs = assembleBoardStubs(newNorwoodData.filter(e => e.board === 'bot'),
       { nth: 2, weekday: 3 },
-      { title: 'Board of Trustees Meeting', board: 'bot', placeholders: 2, note: norwoodNote });
+      { title: 'Board of Trustees Meeting', board: 'bot', placeholders: 2, note: norwoodNote, closedDates: norwoodClosed });
     const pzStubs = assembleBoardStubs(newNorwoodData.filter(e => e.board === 'pz'),
       { nth: 3, weekday: 1 },
-      { title: 'Planning and Zoning Commission Meeting', board: 'pz', placeholders: 2, note: norwoodNote });
+      { title: 'Planning and Zoning Commission Meeting', board: 'pz', placeholders: 2, note: norwoodNote, closedDates: norwoodClosed });
     const nwcStubs = assembleBoardStubs(newNorwoodData.filter(e => e.board === 'nwc'),
       { nth: 2, weekday: 2 },
-      { title: 'Norwood Water Commission Meeting', board: 'nwc', placeholders: 2, note: norwoodNote });
+      { title: 'Norwood Water Commission Meeting', board: 'nwc', placeholders: 2, note: norwoodNote, closedDates: norwoodClosed });
     const norwoodStubs = [...(botStubs || []), ...(pzStubs || []), ...(nwcStubs || [])]
       .sort((a, b) => new Date(a.date) - new Date(b.date));
     if (norwoodStubs.length) {

@@ -92,7 +92,10 @@ function loadData() {
   const constNames = [...new Set(
     [...combined.matchAll(/^const\s+([A-Z][A-Z0-9_]*)\s*=/gm)].map(m => m[1])
   )];
-  const helperNames = ['localDate', 'isBadSummary', 'truncate'];
+  // + the meeting getters source-health asks before calling a list dry
+  // (RENDER_GETTERS — getters that project a published schedule at render time).
+  const helperNames = ['localDate', 'isBadSummary', 'truncate',
+    ...Object.values(require('./source-health.js').RENDER_GETTERS)];
   const captureNames = [...constNames, ...helperNames];
 
   const epilogue =

@@ -3676,11 +3676,81 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
-
+  {
+    title: "Newscast 10-1-26",
+    source: "KOTO Community Radio",
+    date: "October 2, 2026",
+    newsTopic: "community",
+    copy: "West End Roundup with the San Miguel Basin Forum; Watershed Coalition Stands Up for Public Lands; \"This Haunted Land\" Explores America’s Ghosts",
+    href: "https://koto.org/news/newscast-10-1-26/"
+  },
+  {
+    title: "Newscast 9-30-26",
+    source: "KOTO Community Radio",
+    date: "October 1, 2026",
+    newsTopic: "government",
+    copy: "Gondola Project Will Pursue Federal Funding; Town Council Upholds Planning and Zoning Decision on Carhenge Lot Lines; The Fig Keeps Theatre Funky",
+    href: "https://koto.org/news/newscast-9-30-26/"
+  },
+  {
+    title: "Newscast 9-28-26",
+    source: "KOTO Community Radio",
+    date: "September 29, 2026",
+    newsTopic: "community",
+    copy: "Mountain Village Reimagines Pond Plaza; Original Thinkers Looks to Spark Creative Humanity",
+    href: "https://koto.org/news/newscast-9-28-26/"
+  },
+  {
+    title: "Newscast 9-25-26",
+    source: "KOTO Community Radio",
+    date: "September 26, 2026",
+    newsTopic: "public-safety",
+    copy: "San Miguel County Expands Emergency Alert System; A Telluride Climbing Guide Keeps History Alive; Milton Visits the Listening Club",
+    href: "https://koto.org/news/newscast-9-25-26/"
+  },
+  {
+    title: "Newscast 9-24-26",
+    source: "KOTO Community Radio",
+    date: "September 25, 2026",
+    newsTopic: "community",
+    copy: "West End Round Up with the San Miguel Basin Forum; Pioneer Day Celebrates 90 Years; Geothermal Energy is Piping Hot in Rico",
+    href: "https://koto.org/news/newscast-9-24-26/"
+  },
+  {
+    title: "Newscast 9-23-26",
+    source: "KOTO Community Radio",
+    date: "September 24, 2026",
+    newsTopic: "housing",
+    copy: "A Telluride Rental Housing Update; County Endorses Lawson Hill Connector Trail; The Wonderment Marvels in the Ordinary",
+    href: "https://koto.org/news/newscast-9-23-26/"
+  },
+  {
+    title: "Newscast 9-21-26",
+    source: "KOTO Community Radio",
+    date: "September 22, 2026",
+    newsTopic: "community",
+    copy: "Coming Up Next, Telluride; Yom Kippur Brings Atonement and Remembrance",
+    href: "https://koto.org/news/newscast-9-21-26/"
+  }
 ];
 
 const KOTO_FEATURED_STORIES = [
-
+  {
+    title: "“This Haunted Land” Explores America’s Ghosts",
+    source: "KOTO Community Radio",
+    date: "October 2, 2026",
+    newsTopic: "arts-culture",
+    copy: "Author Betsy Gaines Quammen typically writes about extremism, Christian nationalism and white supremacy, so for her latest book, she wanted a lighter subject, something less scary and more fun. So she turned to ghosts. In her new book, \"This Haunted Land: Reckoning With Ghosts and the Stories That Shape America\", Gaines Quammen explores the trauma ",
+    href: "https://koto.org/news/this-haunted-land-betsy-gaines-quammen/"
+  },
+  {
+    title: "Geothermal Energy Is Piping Hot in Rico",
+    source: "KOTO Community Radio",
+    date: "September 25, 2026",
+    newsTopic: "community",
+    copy: "Rico's hot springs could hold a potent and untapped source of geothermal energy. A local group is working to bring that energy to the town.",
+    href: "https://koto.org/news/geothermal-energy-piping-hot-rico-colorado/"
+  }
 ];
 
 // San Miguel Basin Forum (West End — Norwood, Nucla, Naturita, Paradox).

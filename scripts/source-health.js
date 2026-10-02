@@ -115,6 +115,26 @@ function calDay(localDate, v) {
   return `${y}-${m}-${da}`;
 }
 
+// Some getters project a body's published regular schedule at render time on
+// top of the scraped rows (getOurayCityMeetings: Council 1st/3rd Monday, PC 2nd
+// Tuesday), so the raw *_CACHED_DATA array can hold only past meetings while the
+// section still shows upcoming ones. Ask the getter — what residents see — before
+// calling the list dry. Map only the arrays whose getter is that array's renderer.
+const RENDER_GETTERS = {
+  OURAY_CITY_CACHED_DATA: 'getOurayCityMeetings',
+};
+
+function getterShowsUpcoming(captured, name, localDate, today) {
+  const fn = captured[RENDER_GETTERS[name]];
+  if (typeof fn !== 'function') return false;
+  try {
+    const rows = fn() || [];
+    return rows.some(r => { const d = calDay(localDate, r && r.eventDate); return d && d >= today; });
+  } catch (_) {
+    return false;   // a throwing getter is no evidence the section has content
+  }
+}
+
 function detectStaleData(captured, localDate, today) {
   const out = [];
   if (!captured || typeof captured !== 'object') return out;
@@ -167,6 +187,7 @@ function detectStaleData(captured, localDate, today) {
     if (days.some(d => d >= today)) continue;        // has an upcoming row → fine
     const token = name.replace(/_CACHED_DATA$/, '').toLowerCase();
     if (futureSummaryTokens.has(token)) continue;    // renders upcoming via MANUAL_SUMMARIES
+    if (getterShowsUpcoming(captured, name, localDate, today)) continue; // getter projects the schedule
     const newest = days.sort().slice(-1)[0];
     const age = Math.round((todayMs - Date.parse(newest + 'T00:00:00Z')) / 86400000);
     out.push({ name, severity: 'High',
@@ -210,7 +231,7 @@ function detectStaleData(captured, localDate, today) {
   return out;
 }
 
-module.exports = { readBaseline, writeBaseline, updateBaseline, detectAnomalies, detectStaleData, baselineFile, EXCLUDE };
+module.exports = { readBaseline, writeBaseline, updateBaseline, detectAnomalies, detectStaleData, baselineFile, EXCLUDE, RENDER_GETTERS };
 
 // ── CLI: update + persist the baseline (run by content-refresh.yml) ──
 if (require.main === module) {
