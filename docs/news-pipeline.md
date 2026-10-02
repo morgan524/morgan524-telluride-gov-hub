@@ -108,6 +108,16 @@ Important behaviors:
   the gotcha but the bug persisted; now fixed.)
   - newscasts: `https://koto.org/news-category/newscasts/feed/`
   - featured:  `https://koto.org/news-category/featured-stories/feed/`
+  - **Newscast fallback (2026-10-02):** since ~2026-09-17 koto.org's
+    Cloudflare returns 403 to the Worker proxy too (the newscast/featured
+    feeds AND the Tribe events API). When the koto.org newscast feed yields
+    nothing, `refreshNews()` falls back to KOTO's own SoundCloud podcast
+    feed (`KOTO_NEWSCASTS_SOUNDCLOUD_RSS`,
+    `feeds.soundcloud.com/users/soundcloud:users:187800186/sounds.rss`),
+    keeping only `^Newscast` titles (it also carries Off the Record and
+    Noticias). Links then point at SoundCloud, not koto.org. Featured
+    stories and the KOTO calendar have no such fallback; they stay empty
+    or stale until koto.org stops blocking the Worker.
 - **14-day cutoff:** `NEWS_MAX_AGE_DAYS = 14`. Anything older than 14 days is
   filtered out at fetch time. Don't be surprised when older items disappear
   from the live site — it's intentional pruning, not a bug. Adjust the

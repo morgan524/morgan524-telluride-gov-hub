@@ -149,6 +149,12 @@ const TELLURIDE_TIMES_RSS = 'https://www.telluridenews.com/search/?f=rss&t=artic
 // KOTO uses two category-specific feeds; the catch-all /feed/ misses some posts.
 const KOTO_NEWSCASTS_RSS = 'https://koto.org/news-category/newscasts/feed/';
 const KOTO_FEATURED_RSS = 'https://koto.org/news-category/featured-stories/feed/';
+// Fallback for newscasts: KOTO's own SoundCloud podcast feed (the "KOTO
+// Community Radio News" show in Apple Podcasts). Since ~2026-09-17 koto.org's
+// Cloudflare returns 403 to the Worker proxy too, so the koto.org feeds come
+// back empty; SoundCloud carries every "Newscast M-D-YY" with the same bullet
+// description. It also carries Off the Record / Noticias, filtered out by title.
+const KOTO_NEWSCASTS_SOUNDCLOUD_RSS = 'https://feeds.soundcloud.com/users/soundcloud:users:187800186/sounds.rss';
 const COLORADO_SUN_RSS = 'https://coloradosun.com/feed/';
 // Keywords that make a Colorado Sun article relevant to the Telluride region
 const COLORADO_SUN_KEYWORDS = /telluride|san\s+miguel\s+county|mountain\s+village|ridgway|telski|chuck\s+horning/i;
@@ -2329,7 +2335,7 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
   const kotoNewscasts = [];
   const kotoFeatured = [];
 
-  async function pullKotoFeed(url, bucket) {
+  async function pullKotoFeed(url, bucket, titleFilter) {
     try {
       const resp = await fetch(url);
       if (resp.status !== 200) {
@@ -2343,6 +2349,7 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
         const pubDate = new Date(item.pubDate || '');
         if (pubDate < cutoff) continue;
         const title = (item.title || '').trim();
+        if (titleFilter && !titleFilter.test(title)) continue;
         // Clean the RSS description: strip HTML, drop the canonical
         // "The post <link>X</link> appeared first on <link>KOTO FM</link>" trailer.
         let copy = (item.description || '').replace(/<[^>]+>/g, ' ');
@@ -2366,6 +2373,10 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
   }
 
   await pullKotoFeed(KOTO_NEWSCASTS_RSS, kotoNewscasts);
+  if (kotoNewscasts.length === 0) {
+    await pullKotoFeed(KOTO_NEWSCASTS_SOUNDCLOUD_RSS, kotoNewscasts, /^Newscast\b/i);
+    if (kotoNewscasts.length > 0) console.log(`  KOTO newscasts: ${kotoNewscasts.length} from SoundCloud fallback`);
+  }
   await pullKotoFeed(KOTO_FEATURED_RSS, kotoFeatured);
 
   // Colorado Sun — filtered to Telluride/San Miguel County local coverage
