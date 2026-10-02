@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-10-02",
+    "title": "County cops for the city — whose call is it?",
+    "body": "Ouray County and Ouray City are sitting down together to work through a draft Intergovernmental Agreement that would hand full law enforcement services for the city over to the county — with a proposed compensation schedule attached — starting January 1, 2027. Nothing's signed yet; this is a joint work session. Some will see consolidation as smart, lean government. Others will ask what the city gives up when it no longer runs its own policing. So: is merging city law enforcement into the county a practical move, or does it cost the city something harder to get back?",
+    "choices": [
+      "Smart consolidation",
+      "City loses too much",
+      "Depends on the price tag",
+      "It's complicated"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-10-01",
     "title": "The comp plan gets a work session — who shapes what comes next?",
     "body": "The Planning & Zoning Commission is holding a work session on Telluride's Comprehensive Plan, with consulting staff facilitating and commissioner input being gathered. It's wrapping up a week of community engagement on the plan's direction. Comp plans set the vision that guides land use, development, and priorities for years. Some residents see these processes as a real chance to steer growth and protect what makes up here livable. Others worry the outcome reflects whoever shows up — or whoever was hired to facilitate. So — do you trust this kind of planning process to reflect what the community actually wants?",
@@ -421,21 +436,6 @@
       "Reasonable step",
       "Overreach",
       "Fine idea, timeline's too fast",
-      "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-09-02",
-    "title": "When a roof doesn't fit the rules — but they approve it anyway",
-    "body": "Lela and Jon Martin need a new roof on their deed-restricted unit at Gold Run. The bid came in at $47,743.86 — roughly 17% of their original purchase price. Their deed restriction caps staff-approvable capital improvements at 5% of that price, or about $13,960, and allows exceptions only when work increases the unit's capacity to house additional occupants. Staff acknowledges the roof doesn't meet that standard. They're recommending approval anyway.\n\nSome will say the restriction exists for a reason and bending it sets a precedent. Others will say a roof is a roof — you can't let a deed-restricted unit fall apart over a technicality. Where do you come down?",
-    "choices": [
-      "Approve it — a roof is basic upkeep",
-      "Hold the line on deed restrictions",
-      "Fix the policy first, then decide",
       "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",

@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Oct 2026 00:41:29 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 09:35:03 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Fri, Oct 2] Corey Hooker</title>
@@ -44,6 +44,19 @@ First Friday at The Sherbino brings a free live music performance by Donny Moral
       <category>Community Event</category>
     </item>
     <item>
+      <title>[Fri, Oct 2] This Haunted Land with Betsy Quammen</title>
+      <link>https://telluridelibrary.libcal.com/event/17694673?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/this%20haunted%20land%20with%7C2026-10-02</guid>
+      <pubDate>Fri, 02 Oct 2026 22:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_22_17_38_18.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Lower Terrace - outdoors
+
+4:00 PM – 5:00 PM · Why do humans need ghosts? And what do ghosts have to teach us? Join us for an author talk and signing with Betsy Gaines Quammen for her new book, THIS HAUNTED LAND: Reckoning with Ghosts and the Stories that Shape America at 4:00 on the lower terrace. This event is part of the Original Thinkers Festival , but it is free and open to the public, as are all OT events held at the library. No pass needed. This Haunted Land investigates some of America's most enduring legends and uncovers how ghost stories can illuminate some of the most unsettling parts of history. With curiosity, a touch of skepticism, and an open-hearted willingness to learn from the living and the dead, Betsy Gaines Quammen takes readers on a journey into haunted towns, forgotten lives, and abandoned places. …]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_22_17_38_18.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
       <title>[Sat, Oct 3] ArtAbout</title>
       <link>https://www.telluride.com/event/artabout/</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/artabout%7C2026-10-03</guid>
@@ -76,7 +89,7 @@ The October 5, 2026 Open Space Commission agenda hasn't been posted yet.]]></des
 
 The Ouray County BOCC and Ouray City Council are sitting down together to work through a draft Intergovernmental Agreement that would have the County take over full law enforcement services for the City — starting January 1, 2027. The session runs through presentations, Q&A, public comment, and deliberations. A compensation schedule is attached as Exhibit A. No formal action comes out of a work session, but the direction set here will shape whatever formal vote follows.
 
-⚡ Why it matters: County could absorb city policing under a new IGA starting Jan. 2027.]]></description>
+⚡ Why it matters: Draft IGA could shift all Ouray City law enforcement to the County by Jan 2027.]]></description>
       <category>Meeting</category>
       <category>ouray</category>
     </item>
@@ -100,7 +113,7 @@ Regular meeting on the City of Ouray's published schedule. The agenda is usually
 
 The morning work session takes up automated license plate reader cameras — the Flock Safety system — with Chief Marshal Josh Comte presenting. That's a conversation worth watching; ALPR technology tends to generate real debate about privacy and public safety wherever it lands. On the formal agenda, Council holds a public hearing on extending the vesting period for property rights at 221 W Colorado, a project whose Certificate of Appropriateness expires October 18. Second reading of an ethics code amendment (Municipal Code Chapter 2, Article 4) is also up for a vote. Board appointments fill seats on both the Planning and Zoning Commission and HARC. The afternoon closes with the Town Attorney evaluation in executive session.
 
-⚡ Why it matters: Public hearing on development vesting extension; ALPR camera policy debated.]]></description>
+⚡ Why it matters: Public hearing on development vesting extension; ALPR camera policy up for council discussion.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -179,7 +192,7 @@ The October 7, 2026 Board of County Commissioners meeting agenda hasn't been pos
 
 The Ouray County Planning Commission holds a work session on October 7 at the 4-H Event Center — note the change of venue — to review and discuss possible changes to the Land Use Code's Section 2, the Definitions chapter. Work sessions like this are where the real shaping happens: before any formal amendments are drafted, the Commission talks through what words mean and how those meanings ripple through everything else in the code. The packet materials are attached to the agenda for anyone who wants to dig in ahead of time.
 
-⚡ Why it matters: Land Use Code definitions are being reshaped — early stage, real consequences.]]></description>
+⚡ Why it matters: Land Use Code definition changes being shaped here before formal amendments are drafted.]]></description>
       <category>Meeting</category>
       <category>ouray</category>
     </item>
@@ -229,7 +242,7 @@ The October 8, 2026 Special Meeting - Planning & Zoning Commission agenda hasn't
 
 The San Miguel County Planning Commission meets October 8 for a session that spans most of the day. The morning opens with a joint work session with the BOCC on an Affordable Housing Code Update — a signal that the county is still actively trying to write policy fast enough to keep pace with a housing situation that hasn't gotten easier. After lunch, the commission takes up a Land Use Code amendment covering Subdivisions and Condominium Plats, which would change the rules governing how land gets divided and how ownership gets structured across unincorporated county. Both items sit at the code-change tier — the kind of amendments that quietly shape what gets built, where, and for whom, long after the meeting is over.
 
-⚡ Why it matters: County affordable housing code update moves forward in joint BOCC work session.]]></description>
+⚡ Why it matters: Joint BOCC session on Affordable Housing Code Update could reshape county housing policy.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
