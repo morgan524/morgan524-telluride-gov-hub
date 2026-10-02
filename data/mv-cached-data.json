@@ -4,11 +4,10 @@
     "time": "10:00 AM - 5:00 PM",
     "title": "Town Council Meeting",
     "board": "tc",
-    "agendaUrl": null,
+    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/50049/october_7-_2026_special_town_council_meeting_agenda.pdf",
     "packetUrl": null,
     "special": false,
-    "location": "Town Hall, 455 Mountain Village Blvd, Suite A",
-    "note": "Agenda typically posted the Friday before."
+    "location": "Town Hall, 455 Mountain Village Blvd, Suite A"
   },
   {
     "date": "October 15, 2026",

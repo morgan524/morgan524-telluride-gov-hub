@@ -325,7 +325,10 @@
   },
   "county|2026-10-07|Board of County Commissioners Meeting": {
     "sv": 4,
-    "ph": "a12dfd2ce826475e"
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/888/files/agenda/2028",
+    "meetingId": "872 8126 1249",
+    "passcode": "508225",
+    "phone": "719-359-4580"
   },
   "telluride|2026-10-08|Special Meeting - Planning & Zoning Commission - Oct 08 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8311",
@@ -606,6 +609,10 @@
   },
   "ouraycity|2026-10-05|Ouray City Council Work Session": {
     "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=768776",
+    "sv": 4
+  },
+  "ouraycity|2026-10-05|Ouray City Council Regular Meeting": {
+    "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=761785",
     "sv": 4
   }
 }

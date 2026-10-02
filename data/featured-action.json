@@ -1,27 +1,27 @@
 {
- "generated": "2026-10-02T17:44:34.502Z",
+ "generated": "2026-10-02T22:03:50.523Z",
  "pinned": false,
- "topic": "code",
- "topicLabel": "Code Changes & Accelerated Review",
- "headline": "Code Changes & Accelerated Review goes before Planning Commission Meeting on Thursday, October 8",
- "blurb": "The San Miguel County Planning Commission meets October 8 for a session that spans most of the day. The morning opens with a joint work session with the BOCC on an Affordable Housing Code Update — a signal that the county is still actively trying to write policy fast enough to keep pace with a housing situation that hasn't gotten easier.",
+ "topic": "carhenge",
+ "topicLabel": "Carhenge / Shandoka",
+ "headline": "Carhenge / Shandoka goes before Board of County Commissioners Meeting on Wednesday, October 7",
+ "blurb": "A full day for the BOCC. On the planning side, two public hearings: one on waiving land use application fees for the Town of Mountain Village's affordable housing project in the Ilium Valley — a question that signals how seriously the county is willing to subsidize the process, not just the construction — and a lot line adjustment for Lots 320A and 320B in the Lawson Hill PUD.",
  "images": [],
  "deepDive": {
-  "label": "Code Changes & Accelerated Review",
-  "href": "/deep-dive-code.html"
+  "label": "Carhenge / Shandoka",
+  "href": "/deep-dive-carhenge.html"
  },
  "meeting": {
-  "title": "Planning Commission Meeting",
+  "title": "Board of County Commissioners Meeting",
   "sourceLabel": "San Miguel County",
-  "date": "2026-10-08",
-  "humanDate": "Thursday, October 8",
-  "time": "9:00 AM",
-  "location": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
-  "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/924/files/agenda/2025",
+  "date": "2026-10-07",
+  "humanDate": "Wednesday, October 7",
+  "time": "9:30 AM",
+  "location": "333 West Colorado Ave, 2nd Floor, Telluride, CO 81423",
+  "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/888/files/agenda/2028",
   "hasAgenda": true,
-  "packetUrl": "",
-  "link": "https://sanmiguelcoco.portal.civicclerk.com/event/924/files/agenda/2025",
-  "zoomLink": "https://us06web.zoom.us/j/86224076240?pwd=dg8IrMwtLfHLkcZ1Y3JKlGs8IpYz0Q.1",
+  "packetUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/888/files/agenda/2029",
+  "link": "https://sanmiguelcoco.portal.civicclerk.com/event/888/files/agenda/2028",
+  "zoomLink": "",
   "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
  }
 }

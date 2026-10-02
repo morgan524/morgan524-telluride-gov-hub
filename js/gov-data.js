@@ -133,7 +133,9 @@ const COUNTY_CACHED_DATA = [
     type: "bocc",
     location: "333 West Colorado Ave, 2nd Floor, Telluride, CO 81423",
     civicClerkId: 888,
-    note: null
+    note: null,
+    agendaUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/888/files/agenda/2028",
+    packetUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/888/files/agenda/2029"
   },
   {
     date: "October 8, 2026",
@@ -143,7 +145,8 @@ const COUNTY_CACHED_DATA = [
     location: "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
     civicClerkId: 924,
     note: null,
-    agendaUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/924/files/agenda/2025"
+    agendaUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/924/files/agenda/2025",
+    packetUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/924/files/agenda/2027"
   },
   {
     date: "October 14, 2026",
@@ -326,11 +329,10 @@ const MV_CACHED_DATA = [
     time: "10:00 AM - 5:00 PM",
     title: "Town Council Meeting",
     board: "tc",
-    agendaUrl: null,
+    agendaUrl: "https://townofmountainvillage.com/site/assets/files/50049/october_7-_2026_special_town_council_meeting_agenda.pdf",
     packetUrl: null,
     special: false,
-    location: "Town Hall, 455 Mountain Village Blvd, Suite A",
-    note: "Agenda typically posted the Friday before."
+    location: "Town Hall, 455 Mountain Village Blvd, Suite A"
   },
   {
     date: "October 15, 2026",
@@ -1017,6 +1019,16 @@ const OURAY_CITY_CACHED_DATA = [
     boardbookId: 768776,
     agendaUrl: "https://meetings.boardbook.org/Public/Agenda/2503?meeting=768776",
     packetUrl: "https://meetings.boardbook.org/Public/DownloadAgenda/2503?meeting=768776"
+  },
+  {
+    date: "October 5, 2026",
+    time: "6:00 PM",
+    title: "Ouray City Council Regular Meeting",
+    board: "council",
+    location: "Ouray Community Center, 320 6th Ave, Ouray, CO 81427",
+    boardbookId: 761785,
+    agendaUrl: "https://meetings.boardbook.org/Public/Agenda/2503?meeting=761785",
+    packetUrl: "https://meetings.boardbook.org/Public/DownloadAgenda/2503?meeting=761785"
   }
 ];
 

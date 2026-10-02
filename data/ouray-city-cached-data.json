@@ -28,5 +28,15 @@
     "boardbookId": 768776,
     "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=768776",
     "packetUrl": "https://meetings.boardbook.org/Public/DownloadAgenda/2503?meeting=768776"
+  },
+  {
+    "date": "October 5, 2026",
+    "time": "6:00 PM",
+    "title": "Ouray City Council Regular Meeting",
+    "board": "council",
+    "location": "Ouray Community Center, 320 6th Ave, Ouray, CO 81427",
+    "boardbookId": 761785,
+    "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=761785",
+    "packetUrl": "https://meetings.boardbook.org/Public/DownloadAgenda/2503?meeting=761785"
   }
 ]

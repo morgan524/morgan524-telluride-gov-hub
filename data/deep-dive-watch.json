@@ -1,10 +1,23 @@
 {
- "generated": "2026-10-02T17:44:34.499Z",
+ "generated": "2026-10-02T22:03:50.521Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
    "lastUpdated": "2026-09-27",
-   "upcoming": [],
+   "upcoming": [
+    {
+     "source": "county",
+     "sourceLabel": "San Miguel County",
+     "title": "Board of County Commissioners Meeting",
+     "date": "2026-10-07",
+     "time": "9:30 AM",
+     "location": "333 West Colorado Ave, 2nd Floor, Telluride, CO 81423",
+     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/888/files/agenda/2028",
+     "link": "https://sanmiguelcoco.portal.civicclerk.com/event/888/files/agenda/2028",
+     "zoomLink": "",
+     "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
+    }
+   ],
    "recent": [
     {
      "source": "telluride",
@@ -91,7 +104,20 @@
   "wildfire": {
    "label": "Wildfire Resiliency",
    "lastUpdated": "2026-06-01",
-   "upcoming": [],
+   "upcoming": [
+    {
+     "source": "county",
+     "sourceLabel": "San Miguel County",
+     "title": "Board of County Commissioners Meeting",
+     "date": "2026-10-07",
+     "time": "9:30 AM",
+     "location": "333 West Colorado Ave, 2nd Floor, Telluride, CO 81423",
+     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/888/files/agenda/2028",
+     "link": "https://sanmiguelcoco.portal.civicclerk.com/event/888/files/agenda/2028",
+     "zoomLink": "",
+     "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
+    }
+   ],
    "recent": [],
    "developments": [],
    "stale": []

@@ -1,12 +1,24 @@
 [
   {
+    "title": "Mountain Village appoints Michael Bouchard as new town manager",
+    "source": "Telluride Times",
+    "date": "October 2, 2026",
+    "firstSeen": "2026-10-02",
+    "newsTopic": "community",
+    "copy": "Mountain Village has named Michael Bouchard as its next town manager, filling the role left vacant when Paul Wisor resigned May 1. Bouchard brings nearly 14 years with Denver, including leading a $1.6B redevelopment at the National Western Center. He starts January 1, 2027; Michelle Bulson continues as interim until then.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_7e8970c0-2e74-4ff2-adc8-2561cd2133f7.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/48/a489f08c-afe1-4ef3-adea-5071eeac0459/6ac014f4a3cb4.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "THS puts Ignacio to the test",
     "source": "Telluride Times",
     "date": "October 2, 2026",
     "firstSeen": "2026-10-02",
-    "newsTopic": "infrastructure",
-    "copy": "After a road win at Ridgway High School on Sept. 23, Ignacio High School senior outside/right-side hitter Reggi Gustafson described the common denominator underpinning IHS’s eight victories in nine matches.",
-    "claudeSummary": false,
+    "newsTopic": "community",
+    "copy": "Ignacio came into the MinerDome ranked 7th in 2A and left with a 25-23, 25-15, 25-12 sweep over Telluride, though the Lady Miners made them work for set one before the 'Cats pulled away. THS, short three varsity players, hung close behind strong serving from Hazel Noel and kills from Teagan O'Dell. Ignacio moves to 9-1; Telluride falls to 4-9.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/sports/article_b685286f-f994-48bd-ad2a-0dc8a37eebd9.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/fe/1fe81519-215f-455e-a870-271de856d3d9/6abcc353bef7b.image.jpg",
     "imgHiRes": true
@@ -932,6 +944,24 @@
     "imgHiRes": true
   },
   {
+    "title": "Town of Telluride to Lift All Fire Restrictions",
+    "source": "Town of Telluride",
+    "date": "September 17, 2026",
+    "newsTopic": "public-safety",
+    "copy": "(September 16, 2026) – Following improved fire conditions across the region and in alignment with San Miguel County, the Town of Telluride will lift all fire restrictions effective at 12:01 a.m. MT on Friday, September 18, 2026.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=405",
+    "img": ""
+  },
+  {
+    "title": "Town Council Proclaims September 7-11 Black Bear Safety Week",
+    "source": "Town of Telluride",
+    "date": "September 3, 2026",
+    "newsTopic": "government",
+    "copy": "(September 3, 2026) — Town Council on Tuesday proclaimed September 7-11 Black Bear Safety Week, arriving in a year when a dry spring and summer have left black bears across Colorado with far less to eat in the wild.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=404",
+    "img": "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
+  },
+  {
     "title": "San Miguel County Public Health Announces Fall Vaccine Availability",
     "source": "San Miguel County",
     "date": "October 1, 2026",
@@ -1022,6 +1052,24 @@
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14812"
   },
   {
+    "title": "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
+    "source": "San Miguel County",
+    "date": "September 10, 2026",
+    "newsTopic": "health",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1409",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
+  },
+  {
+    "title": "Two Domestic Pets in San Miguel County Test Positive for the Plague",
+    "source": "San Miguel County",
+    "date": "September 3, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1407",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14762"
+  },
+  {
     "title": "Courthouse Office Closures Tuesday 9/29 - Friday 10/2",
     "source": "San Miguel County",
     "date": "September 29, 2026",
@@ -1038,6 +1086,24 @@
     "copy": "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
     "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
+  },
+  {
+    "title": "Tomboy Road Now Open",
+    "source": "San Miguel County",
+    "date": "September 18, 2026",
+    "newsTopic": "infrastructure",
+    "copy": "The Town of Telluride has completed their project that necessitated the closure of Lower Tomboy Road. The road is now open again.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=546",
+    "img": ""
+  },
+  {
+    "title": "Water Restrictions in Place",
+    "source": "Town of Telluride",
+    "date": "September 11, 2026",
+    "newsTopic": "community",
+    "copy": "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
+    "href": "https://www.telluride.gov/AlertCenter.aspx?AID=45",
+    "img": ""
   },
   {
     "title": "Small Business Administration Economic Injury Disaster Loan Data Collection Form Now Available (due Oct. 13)",
