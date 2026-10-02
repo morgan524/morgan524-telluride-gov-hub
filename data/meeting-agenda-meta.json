@@ -316,7 +316,7 @@
   "telluride|2026-10-07|Commission for Community Assistance, Arts & Special Events - Oct 07 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8067",
     "sv": 4,
-    "ph": "b351f6bb6fbe13ad"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/tZ0pc-ChqDwsGNFpPigfqqLQptmoMmpJdiOx"
   },
   "telluride|2026-10-07|Telluride Housing Authority Subcommittee - Oct 07 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8164",
@@ -602,6 +602,10 @@
     "meetingId": "876 0637 5697",
     "passcode": "946299",
     "phone": "346-248-7799",
+    "sv": 4
+  },
+  "ouraycity|2026-10-05|Ouray City Council Work Session": {
+    "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=768776",
     "sv": 4
   }
 }

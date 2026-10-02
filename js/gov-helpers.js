@@ -303,7 +303,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8119","sv":4,"zoomUrl":"https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1","phone":"970-728-2496"},
 
   "telluride|2026-10-07|Commission for Community Assistance, Arts & Special Events - Oct 07 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8067","sv":4,"ph":"b351f6bb6fbe13ad"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8067","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/tZ0pc-ChqDwsGNFpPigfqqLQptmoMmpJdiOx"},
 
   "telluride|2026-10-07|Telluride Housing Authority Subcommittee - Oct 07 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8164","sv":4,"ph":"fbf369f84f691ffa"},
@@ -471,7 +471,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://ouraycoco.portal.civicclerk.com/event/2151/files/agenda/7554","zoomUrl":"https://zoom.us/j/9349389230?omn=99931366635","meetingId":"934 938 9230","passcode":"491878","phone":"346-248-7799","sv":4},
 
   "ouray|2026-10-06|Board of County Commissioners Special Work Session":
-    {"agendaUrl":"https://ouraycoco.portal.civicclerk.com/event/2150/files/agenda/7556","zoomUrl":"https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1","meetingId":"876 0637 5697","passcode":"946299","phone":"346-248-7799","sv":4}
+    {"agendaUrl":"https://ouraycoco.portal.civicclerk.com/event/2150/files/agenda/7556","zoomUrl":"https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1","meetingId":"876 0637 5697","passcode":"946299","phone":"346-248-7799","sv":4},
+
+  "ouraycity|2026-10-05|Ouray City Council Work Session":
+    {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=768776","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -818,7 +821,10 @@ const MEETING_PREVIEWS = {
     "The Ouray County Board of County Commissioners and Ouray City Council will jointly discuss a draft Intergovernmental Agreement under which the County would provide full law enforcement services to the City beginning January 1, 2027, including a proposed compensation schedule.",
 
   "ouray|2026-10-06|Board of County Commissioners Special Work Session":
-    "Commissioners are expected to discuss the 2027 county budget, with a focus on the Sheriff's Office and broader budget considerations. No formal action will be taken, but commissioners may provide direction to staff on budgetary matters for future action."
+    "Commissioners are expected to discuss the 2027 county budget, with a focus on the Sheriff's Office and broader budget considerations. No formal action will be taken, but commissioners may provide direction to staff on budgetary matters for future action.",
+
+  "ouraycity|2026-10-05|Ouray City Council Work Session":
+    "Council is expected to discuss a proposed intergovernmental agreement with the Ouray County Sheriff's Office for full law enforcement services, including a review of associated cost estimates. The session will include presentations, public comment, and joint deliberations with county commissioners on potential next steps."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1211,7 +1217,7 @@ const MANUAL_SUMMARIES = {
     "The October 7 Ecology Commission meeting has one substantive item: a work session on the Community Resilience & Wellbeing focus area of Telluride's 2022 Climate Action Plan. The CAP — adopted in April 2022, the third iteration after plans in 2006 and 2014 — sets a goal of carbon neutrality by 2040. This session picks up where September left off, when the Commission also floated 2027 workplan ideas including a dark sky initiative, a fuel-burning landscaping equipment ban, an e-waste depot, and research into geothermal and thermal energy networks. Routine minutes approval from the September 2 meeting is also on the agenda.",
 
   "telluride|2026-10-07|Commission for Community Assistance, Arts & Special Events - Oct 07 2026":
-    "The October 7, 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "CCAASE meets Wednesday at noon in Rebekah Hall to handle a mix of calendar logistics and one organization interview. In worksession, the board will hear from Rainbow Preschool as part of the ongoing 2026 grant-cycle organization interviews. On the action side: the San Miguel County Democrats are requesting a calendar date for Dem-a-Palooza — a Democratic candidate meet-and-greet at Elks Park on October 17 — though that date overlaps with the Telluride Horror Show already on the calendar. The Telluride Booster Club is asking for a calendar date and Colorado Avenue banner for High School Homecoming Week, October 18–25. Looking ahead to 2027, Ah Haa School for the Arts wants to shift the Ah Haa HAHA to July 14–18 (expanded from July 16–18), and the Just For Kids Foundation is requesting a new calendar date for the Mountains to the Desert Classic on September 25, 2027. Staff will also present a report on the 2027 grant process and special event policies.",
 
   "telluride|2026-10-07|Telluride Housing Authority Subcommittee - Oct 07 2026":
     "The October 7, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
@@ -1379,7 +1385,10 @@ const MANUAL_SUMMARIES = {
     "The Ouray County BOCC and Ouray City Council are sitting down together to work through a draft Intergovernmental Agreement that would have the County take over full law enforcement services for the City — starting January 1, 2027. The session runs through presentations, Q&A, public comment, and deliberations. A compensation schedule is attached as Exhibit A. No formal action comes out of a work session, but the direction set here will shape whatever formal vote follows.",
 
   "ouray|2026-10-06|Board of County Commissioners Special Work Session":
-    "A single item on the table: the 2027 budget, with the Sheriff's Office getting dedicated time before a broader budget discussion. Work sessions don't produce formal votes — commissioners listen, ask questions, and give staff direction. But the choices shaped here tend to stick when the formal budget process runs its course later."
+    "A single item on the table: the 2027 budget, with the Sheriff's Office getting dedicated time before a broader budget discussion. Work sessions don't produce formal votes — commissioners listen, ask questions, and give staff direction. But the choices shaped here tend to stick when the formal budget process runs its course later.",
+
+  "ouraycity|2026-10-05|Ouray City Council Work Session":
+    "The October 5 work session has one item on the table: a proposed intergovernmental agreement under which the Ouray County Sheriff would take over full law enforcement services for the City. The session is structured as a joint meeting with county commissioners — presentations at 4:00 PM, questions at 4:30, public comment at 5:00, and deliberations at 5:30. Two attachments are in play: a draft IGA and a revised cost estimate dated October 1. Contracting out municipal policing to the county is the kind of structural decision that tends to look purely financial on the surface but carries longer implications for local control and service levels."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2508,6 +2517,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "THS puts Ignacio to the test",
+    source: "Telluride Times",
+    date: "October 2, 2026",
+    firstSeen: "2026-10-02",
+    newsTopic: "infrastructure",
+    copy: "After a road win at Ridgway High School on Sept. 23, Ignacio High School senior outside/right-side hitter Reggi Gustafson described the common denominator underpinning IHS’s eight victories in nine matches.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/sports/article_b685286f-f994-48bd-ad2a-0dc8a37eebd9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/fe/1fe81519-215f-455e-a870-271de856d3d9/6abcc353bef7b.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Bring on the night",
     source: "Telluride Times",
@@ -6568,17 +6589,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Telluride Art Walk",
-    link: "https://townofmountainvillage.com/explore/events/all-events/telluride-art-walk-2/",
-    description: "The Telluride Art Walk is a lively monthly celebration of art, community, and creativity in downtown Telluride and Mountain Village.",
-    pubDate: "2026-10-01T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48372/artwalk-1800x900.jpg"
-  },
   {
     title: "Pink Talking Fish Live in Concert",
     link: "https://townofmountainvillage.com/explore/events/all-events/pink-talking-fish-live-in-concert/",

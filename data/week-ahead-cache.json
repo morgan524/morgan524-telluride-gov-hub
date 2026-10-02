@@ -1,22 +1,26 @@
 {
-  "hash": "10a2fedd5206b100e1282f30f4d69b698cade5e7",
-  "lede": "The biggest thing to track this week is Telluride Town Council on October 6, where a public hearing on a development vesting extension sits on the formal agenda and a morning work session on Flock Safety's automated license plate reader cameras is set to generate real conversation about surveillance in a small town. San Miguel County's Planning Commission follows on October 8 with a joint BOCC work session on an Affordable Housing Code Update — still the most consequential policy lever the county has. Over in Ouray County, commissioners and city leaders are working through a draft intergovernmental agreement that could hand full law enforcement for the City of Ouray to the County starting next year.",
+  "hash": "89ae0a50b94308061d825ab94bab7f5f9d62f378",
+  "lede": "The biggest thing on the public calendar this week is a joint session in Ouray where the City Council and County Commissioners will sit down together — with public comment open at 5:00 PM — to work through a draft intergovernmental agreement that would hand full law enforcement for the City of Ouray to the County Sheriff starting January 1, 2027. Closer to home, Telluride Town Council meets Tuesday with a public hearing on a vesting-period extension and a work session on Flock Safety license plate reader cameras — a conversation about surveillance technology that rarely stays quiet. San Miguel County's Planning Commission spends Thursday on an Affordable Housing Code Update in a joint session with the BOCC, which is about as consequential as land-use work gets right now.",
   "notable": [
     {
       "id": 1,
-      "stake": "Draft IGA could shift all Ouray City law enforcement to the County by Jan 2027."
+      "stake": "Public comment open on IGA transferring Ouray city policing to County Sheriff."
     },
     {
-      "id": 3,
-      "stake": "Public hearing on development vesting extension; ALPR camera policy up for council discussion."
+      "id": 2,
+      "stake": "Residents can weigh in on dissolving Ouray's city police department entirely."
     },
     {
-      "id": 10,
-      "stake": "Land Use Code definition changes being shaped here before formal amendments are drafted."
+      "id": 4,
+      "stake": "Public hearing on vesting extension; ALPR surveillance cameras up for council discussion."
     },
     {
-      "id": 12,
-      "stake": "Joint BOCC session on Affordable Housing Code Update could reshape county housing policy."
+      "id": 11,
+      "stake": "Land Use Code definitions rewrite shapes every future zoning decision in Ouray County."
+    },
+    {
+      "id": 13,
+      "stake": "County affordable housing code update — active policy being written that affects workforce housing."
     }
   ]
 }

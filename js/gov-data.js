@@ -322,16 +322,6 @@ const MV_CACHE_DATE = '2026-10-02';
 
 const MV_CACHED_DATA = [
   {
-    date: "October 1, 2026",
-    time: "10:00 AM - 3:00 PM",
-    title: "Design Review Board",
-    board: "drb",
-    agendaUrl: "https://townofmountainvillage.com/site/assets/files/49956/october_1-_2026_design_review_board_meeting_agenda.pdf",
-    packetUrl: "https://townofmountainvillage.com/site/assets/files/49988/october_1-_2026_design_review_board_meeting_packet.pdf",
-    special: false,
-    location: "Town Hall, 455 Mountain Village Blvd, Suite A"
-  },
-  {
     date: "October 7, 2026",
     time: "10:00 AM - 5:00 PM",
     title: "Town Council Meeting",
@@ -1017,6 +1007,16 @@ const OURAY_CITY_CACHED_DATA = [
     boardbookId: 769742,
     agendaUrl: "https://meetings.boardbook.org/Public/Agenda/2503?meeting=769742",
     packetUrl: "https://meetings.boardbook.org/Public/DownloadAgenda/2503?meeting=769742"
+  },
+  {
+    date: "October 5, 2026",
+    time: "4:00 PM",
+    title: "Ouray City Council Work Session",
+    board: "council",
+    location: "Ouray Community Center, 320 6th Ave, Ouray, CO 81427",
+    boardbookId: 768776,
+    agendaUrl: "https://meetings.boardbook.org/Public/Agenda/2503?meeting=768776",
+    packetUrl: "https://meetings.boardbook.org/Public/DownloadAgenda/2503?meeting=768776"
   }
 ];
 
