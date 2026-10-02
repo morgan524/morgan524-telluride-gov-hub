@@ -60,18 +60,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/36708/artwalk-2200x1237.800x533.webp"
   },
   {
-    "title": "Free Wine Tasting",
-    "link": "https://www.telluride.com/event/free-wine-tasting/",
-    "description": "Join the Mountain Village Wine Merchant every Wednesday for a free wine tasting of three different wines.",
-    "pubDate": "2026-06-10",
-    "endDate": "2026-09-30",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/46449/mvwmplanetpic2.800x533.webp"
-  },
-  {
     "title": "Live Music at Alloy Kitchen",
     "link": "https://www.telluride.com/event/live-music-at-alloy-kitchen/",
     "description": "Free live music all season long. Alloy Kitchen at Mountain Lodge Telluride hosts a rotating lineup of local favorites - …",
@@ -82,18 +70,6 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/62862/alloy-live-music-pool-deck.800x533.webp"
-  },
-  {
-    "title": "Weird Wine Wednesdays at The National",
-    "link": "https://www.telluride.com/event/weird-wine-wednesdays-at-the-national/",
-    "description": "Elevate your evening on the rooftop at The National with Weird Wine Wednesdays, a laid-back, weekly tasting experience …",
-    "pubDate": "2026-06-17",
-    "endDate": "2026-09-30",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/62830/the_national_wine.800x533.webp"
   },
   {
     "title": "Lone Tree Cemetery Tours",
@@ -110,7 +86,7 @@
   {
     "title": "Gaiascope Saturday Sessions",
     "link": "https://www.telluride.com/event/gaiascope-saturday-sessions/",
-    "description": "Gaiascope Saturday Sessions is a recurring weekly event featuring live music and kaleidoscope art. Taking place each Saturday, the event brings together sound and visual art in a community gathering format in Telluride.",
+    "description": "Gaiascope Saturday Sessions Live music + Kaleidoscope art every Saturday.",
     "pubDate": "2026-09-12",
     "endDate": "2026-10-03",
     "source": "telluride-com",
@@ -338,5 +314,16 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/42687/winter_gondola_telluride.800x533.webp"
+  },
+  {
+    "title": "Girl Winter Film Tour",
+    "link": "https://www.telluride.com/event/girl-winter-film-tour/",
+    "description": "You’ve heard of “Girl Dinner” – the perfectly chaotic spread of favorite snacks, little treats, and whatever …",
+    "pubDate": "2026-11-20",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63705/gwft-banner-16x9-horizontal-2048x1152.800x533.webp"
   }
 ]

@@ -1,5 +1,29 @@
 [
   {
+    "title": "States and cities sue over Trump's EPA eliminating rule that limits emissions from power plants",
+    "source": "Telluride Times",
+    "date": "October 1, 2026",
+    "firstSeen": "2026-10-02",
+    "newsTopic": "health",
+    "copy": "Twenty-one states and several cities, including Denver, have filed suit against the EPA for repealing Biden-era limits on greenhouse gas emissions from coal and natural gas power plants. The EPA says the repeal saves industry over $300 billion; the coalition argues it abandons major health and climate protections unlawfully.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/state/article_a91ffdff-d576-530b-b84f-8e6be875dafe.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Blurring the lines",
+    "source": "Telluride Times",
+    "date": "October 1, 2026",
+    "firstSeen": "2026-10-02",
+    "newsTopic": "arts-culture",
+    "copy": "Pink Talking Fish plays the Sheridan Opera House on Friday, Oct. 2 — a four-piece band that blends Pink Floyd, Talking Heads, and Phish into mashups and whole-album tributes while adding their own improvisational twists. Bassist Eric Gould founded the project over a decade ago. Details at sheridanoperahouse.com.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/arts_and_entertainment/article_322975f8-e44f-4916-9395-d66ffb87cc05.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/27/f275854a-191a-42cd-b8ce-64c63cfec4c8/6abcbdf50c2b8.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "A high-stakes fight for state political power heats up, with Trump's agenda on the line",
     "source": "Telluride Times",
     "date": "October 1, 2026",
@@ -884,42 +908,6 @@
     "imgHiRes": true
   },
   {
-    "title": "County to amend forestry and geothermal guidelines",
-    "source": "Telluride Times",
-    "date": "September 18, 2026",
-    "firstSeen": "2026-09-18",
-    "newsTopic": "land-use",
-    "copy": "San Miguel County's Planning Commission is updating its Land Use Code to add clearer rules for forestry, deep geothermal, and oil and gas operations. Logging here is mostly wildfire mitigation work now, and the new forestry rules will require impact studies and mitigation plans. Deep geothermal gets its own regulations for the first time, including 1,000-foot setbacks from homes.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/article_1b88d130-afc4-4d6a-8e61-b2cd08f17dde.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/9f/79f7f561-8405-42c3-a401-743ee2563b25/6aa9ec6c74d7b.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "Many hands made Wright’s work",
-    "source": "Telluride Times",
-    "date": "September 18, 2026",
-    "firstSeen": "2026-09-18",
-    "newsTopic": "arts-culture",
-    "copy": "Norwood's Pioneer Day falls on Sept. 26, with Jeanne and Gary Yamnitz serving as queen and king. Jeanne's family, the Jacobs, are among the original homesteaders on Wright's Mesa, and the day's theme honors the generations who built the area. Events run from the morning parade and coronation through a chuckwagon dinner, car show, and evening dance at The Livery.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/norwood_post/article_bf1f0b44-8c66-4cf4-b367-cf0922201fcd.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/8d/48dcb000-7d10-476a-afa2-f96d79e31a52/6aa95900a826f.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "‘BluesKites’ take flight",
-    "source": "Telluride Times",
-    "date": "September 18, 2026",
-    "firstSeen": "2026-09-18",
-    "newsTopic": "arts-culture",
-    "copy": "Kite artist Terry Zee Lee and the Music Maker Foundation have partnered again to bring \"BluesKites\" to Telluride's Brews & Blues Festival — 13 rokkaku-style kites, each honoring a blues musician, moving from the Wilkinson Library to the festival's main stage and Hanley Rink. MMF has attended Blues & Brews for over a decade, this year bringing Albert White, Terry \"Harmonica\" Bean, and Little Willie Farmer to perform.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/arts_and_entertainment/article_44067934-4416-4e1c-8f55-74561270b8d3.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/aa/0aa5e7c0-79b8-46f7-8557-ac57a208d70f/6aa907518c55d.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Town of Telluride to Lift All Fire Restrictions",
     "source": "Town of Telluride",
     "date": "September 17, 2026",
@@ -1082,17 +1070,6 @@
     "img": ""
   },
   {
-    "title": "What to do in Colorado this week: TED Talks in Breckenridge, Original Thinkers in Telluride and free music in Denver",
-    "source": "Colorado Sun",
-    "date": "October 1, 2026",
-    "firstSeen": "2026-10-01",
-    "newsTopic": "arts-culture",
-    "copy": "Plus: Original Thinkers festival in Telluride, free music in Denver and a mural festival in Superior",
-    "claudeSummary": false,
-    "href": "https://coloradosun.com/2026/10/01/what-to-do-in-colorado-ted-talk-breckenridge/",
-    "img": "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2026/09/54345907509_bb40a361b1_o-scaled.jpg?fit=1024%2C683&amp;ssl=1"
-  },
-  {
     "title": "Small Business Administration Economic Injury Disaster Loan Data Collection Form Now Available (due Oct. 13)",
     "source": "Town of Ridgway",
     "date": "October 1, 2026",
@@ -1137,14 +1114,14 @@
     "img": ""
   },
   {
-    "title": "New Compost Collection Service Offered",
+    "title": "Ridgway Sustainability Advisory Board Meeting Agenda",
     "source": "Town of Ridgway",
-    "date": "September 18, 2026",
-    "firstSeen": "2026-09-29",
-    "newsTopic": "community",
+    "date": "October 6, 2026",
+    "firstSeen": "2026-10-02",
+    "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
     "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Compost-Service-Press-Release-2026-09-18.pdf",
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/SAB-Meeting-Packet---October-6%2C-2026.pdf",
     "img": ""
   },
   {
@@ -1161,7 +1138,7 @@
   {
     "title": "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     "source": "Town of Ridgway",
-    "date": "October 1, 2026",
+    "date": "October 2, 2026",
     "firstSeen": "2026-09-29",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1172,7 +1149,7 @@
   {
     "title": "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     "source": "Town of Ridgway",
-    "date": "October 1, 2026",
+    "date": "October 2, 2026",
     "firstSeen": "2026-09-29",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",

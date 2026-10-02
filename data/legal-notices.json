@@ -75,27 +75,6 @@
     "caseNumber": "26PR30005"
   },
   {
-    "title": "Foreclosure Sale Notice -- Lot 166AR2, Telluride Mountain Village (Sale No. 202604)",
-    "entity": "Federal Holding Realty / Two Stonegate LLC",
-    "entityClass": "ent-county",
-    "entityLogo": "assessor",
-    "icon": "💰",
-    "iconClass": "type-tax",
-    "type": "Tax & Finance",
-    "filterTag": "tax-finance",
-    "summary": "The San Miguel County Public Trustee has recorded a Notice of Election and Demand for foreclosure on a Deed of Trust dated April 22, 2022, involving original grantor Two Stonegate LLC and beneficiary Federal Holding Realty, with an outstanding principal balance of $500,000. The property subject to foreclosure is Lot 166AR2, Telluride Mountain Village, located on Stonegate Drive, Mountain Village, CO 81435. The foreclosure is proceeding under CRS §38-38-103, and the lien foreclosed may not be a first lien.",
-    "deadline": "",
-    "expires": "2026-10-01",
-    "dates": "7/2",
-    "papers": [
-      "ttimes_0702"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_d2ca136e-7993-4d52-abfc-0e8f243974dd.html",
-    "address": "TBD (Vacant) Stonegate Drive, Mountain Village, CO 81435 (Lot 166AR2, Telluride Mountain Village)",
-    "noticeKey": "foreclosure-sale-202604-lot166ar2-mountain-village",
-    "caseNumber": "202604"
-  },
-  {
     "title": "Notice to Creditors -- Estate of Lawrence de Bivort (Case No. 2026PR30008)",
     "entity": "Estate of Lawrence de Bivort",
     "entityClass": "ent-county",

@@ -1,22 +1,22 @@
 {
-  "hash": "56b19757fa5c30f7e84fea55b151fd023e54e1d3",
-  "lede": "The biggest thing to track this week is Tuesday's Telluride Town Council meeting, where a public hearing is scheduled on extending a project's vesting period — a real land-use decision with a public comment opportunity. The same morning, Council takes up automated license plate reader cameras, a privacy-versus-public-safety conversation worth paying attention to. Elsewhere, the town's 2027 General Fund and Capital budget get their first serious shape in a Wednesday work session, and the Ouray County Planning Commission digs into possible Land Use Code definition changes at the 4-H Event Center on Tuesday.",
+  "hash": "8730b011ded1711da3ee4e692d7b9ffd01a5727a",
+  "lede": "The biggest thing to watch this week is Telluride Town Council's Tuesday meeting, where a public hearing on a development vesting extension is on the formal agenda and a work session on automated license plate reader cameras — the Flock Safety system — opens the morning. Across the region, San Miguel County's Planning Commission spends most of October 8 on an Affordable Housing Code Update in a joint session with the BOCC, and Ouray County kicks off its own consequential week with a joint City-County work session on a proposed intergovernmental agreement that would shift full law enforcement for the City of Ouray to the County starting January 2027.",
   "notable": [
     {
-      "id": 6,
-      "stake": "Public hearing on project vesting extension; ALPR camera debate raises privacy questions."
-    },
-    {
       "id": 1,
-      "stake": "2027 General Fund and Capital budget contours set here before formal adoption."
+      "stake": "County could absorb city policing under a new IGA starting Jan. 2027."
     },
     {
-      "id": 0,
-      "stake": "Final architecture review votes on 15 workforce apartments and four new multifamily units."
+      "id": 3,
+      "stake": "Public hearing on development vesting extension; ALPR camera policy debated."
+    },
+    {
+      "id": 10,
+      "stake": "Land Use Code definitions are being reshaped — early stage, real consequences."
     },
     {
       "id": 12,
-      "stake": "Proposed Land Use Code definition changes could reshape how county rules are interpreted."
+      "stake": "County affordable housing code update moves forward in joint BOCC work session."
     }
   ]
 }

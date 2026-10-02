@@ -19,7 +19,9 @@
     "civicClerkId": 2151,
     "note": null,
     "special": true,
-    "board": "bocc"
+    "packetUrl": "https://ouraycoco.portal.civicclerk.com/event/2151/files/agenda/7555",
+    "board": "bocc",
+    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/2151/files/agenda/7554"
   },
   {
     "date": "October 6, 2026",
@@ -29,7 +31,9 @@
     "civicClerkId": 2150,
     "note": null,
     "special": true,
-    "board": "bocc"
+    "packetUrl": "https://ouraycoco.portal.civicclerk.com/event/2150/files/agenda/7557",
+    "board": "bocc",
+    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/2150/files/agenda/7556"
   },
   {
     "date": "October 13, 2026",
