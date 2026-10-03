@@ -1,26 +1,30 @@
 {
-  "hash": "a2957319060149bcac1c98b34a5651b24087aedc",
-  "lede": "The biggest thing to track this week is Telluride Town Council's Tuesday meeting, where a public hearing is scheduled on extending a vesting period for an existing project — the kind of land-use decision that tends to matter more than it sounds. Ouray is also deep in consequential territory, with a joint city-county session Monday on a proposed intergovernmental agreement that would hand full law enforcement for the City of Ouray to the County Sheriff starting January 2027. Meanwhile, San Miguel County's BOCC and Planning Commission both have affordable housing items up — including a public hearing on waiving fees for Mountain Village's Ilium Valley project — and the county's Planning Commission is in a joint work session on an affordable housing code update Thursday.",
+  "hash": "201ec754efd35702c42453621627a8a4eca0154b",
+  "lede": "The biggest thing on the board this week is San Miguel County's Planning Commission sitting down Wednesday with the BOCC for a joint work session on an Affordable Housing Code Update — policy still being written in real time, with a lot at stake for how and where housing gets built here. That same day, the County BOCC holds public hearings on waiving land use fees for Mountain Village's Ilium Valley affordable housing project and a lot line adjustment in Lawson Hill. Telluride Town Council meets Tuesday with a public hearing on a vesting period extension and a work session on automated license plate reader cameras — a conversation that tends to matter more than it sounds.",
   "notable": [
     {
-      "id": 1,
-      "stake": "County could take over Ouray City policing starting January 2027; public comment open."
-    },
-    {
-      "id": 2,
-      "stake": "Ouray City weighs handing law enforcement to County Sheriff; public comment at 5 PM."
-    },
-    {
       "id": 4,
-      "stake": "Council holds public hearing on project vesting extension and takes up ALPR camera policy."
+      "stake": "Public hearing on vesting extension; ALPR surveillance cameras up for council debate."
     },
     {
       "id": 10,
-      "stake": "Public hearing on waiving county fees for Mountain Village's affordable housing project."
+      "stake": "Public hearings on fee waiver for affordable housing project and a Lawson Hill lot adjustment."
     },
     {
       "id": 13,
-      "stake": "Joint BOCC-Planning Commission work session actively shaping county affordable housing code."
+      "stake": "Joint BOCC-Planning Commission work session actively shaping affordable housing code policy."
+    },
+    {
+      "id": 1,
+      "stake": "Public comment open on IGA shifting full Ouray City law enforcement to County Sheriff by 2027."
+    },
+    {
+      "id": 2,
+      "stake": "Ouray residents can weigh in at 5 PM on county takeover of city police services."
+    },
+    {
+      "id": 11,
+      "stake": "Land Use Code definitions being rewritten — early shaping with outsized long-term impact."
     }
   ]
 }

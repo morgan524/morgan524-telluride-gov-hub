@@ -488,6 +488,14 @@ const DEEP_DIVE_UPDATES = [
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-10-03",
+    title: "Budget day — and a new power bill fee in the mix",
+    body: "Town Council is holding a special budget session on October 13. Two things are already in the room before anyone sits down: the wildfire resiliency code changes passed in August, which may carry implementation costs, and an upcoming paper billing fee from San Miguel Power Association that could affect town finances.\n\nSome residents will say plan around it — it's a small fee and the resiliency work is overdue. Others will ask why outside charges get folded into a town budget without a harder look. Neither position is unreasonable.\n\nSo: when outside costs land on the town's plate during budget season, how should Council handle them?",
+    choices: ["Fold them in and move on", "Push back before budgeting", "Depends on the cost", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-10-02",
     title: "County cops for the city — whose call is it?",
     body: "Ouray County and Ouray City are sitting down together to work through a draft Intergovernmental Agreement that would hand full law enforcement services for the city over to the county — with a proposed compensation schedule attached — starting January 1, 2027. Nothing's signed yet; this is a joint work session. Some will see consolidation as smart, lean government. Others will ask what the city gives up when it no longer runs its own policing. So: is merging city law enforcement into the county a practical move, or does it cost the city something harder to get back?",
@@ -716,14 +724,6 @@ const DAILY_QUESTIONS = [
     title: "New building code — does it fit up here?",
     body: "The county is holding a public hearing on whether to adopt the 2024 International Building Code and the Colorado Low Energy & Carbon Code. Those who favor adoption say updated codes mean safer buildings and lower carbon footprints — reasonable goals anywhere. Those who push back say modern energy codes can drive up construction costs in a place where building is already expensive, and that standards written for the Front Range don't always translate to a mountain county with a short construction season and a thin contractor pool. Nothing is adopted yet — this is a public hearing. So: do updated building codes make sense for San Miguel County right now, or is the timing wrong?",
     choices: ["Adopt them — overdue", "Too costly for here", "Phase them in slowly", "Not sure yet"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
-  },
-  {
-    date: "2026-09-03",
-    title: "Gas-powered leaf blowers — gone by 2028?",
-    body: "The Ecology Commission is working toward recommending a full phase-out of combustion-powered lawn and garden equipment in Town. Leaf blowers would go first, banned by January 1, 2028. Everything else covered by the ordinance would follow by January 1, 2030. The case for it: air quality, noise, and emissions. The case against: cost, even with rebates the draft says could offset roughly half of replacement. No vote was taken — this is still a recommendation in progress. So: is this a reasonable step, or an overreach?\n\nWhere do you land?",
-    choices: ["Reasonable step", "Overreach", "Fine idea, timeline's too fast", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
   }
@@ -2499,6 +2499,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Southwestern counties talk wildfire mitigation",
+    source: "Telluride Times",
+    date: "October 3, 2026",
+    firstSeen: "2026-10-03",
+    newsTopic: "public-safety",
+    copy: "Five southwestern Colorado counties met in late September to share wildfire mitigation strategies as federal funding shrinks and fire seasons grow more demanding. Pano AI cameras are showing real results locally — San Miguel credits early detection with stopping several fires from spreading, and Montezuma is now installing the same system near Mesa Verde. Funding gaps remain the central problem, with rural fire districts short on staff and money while covering vast, hard-to-reach terrain.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_1d1ccf3a-8034-42ef-a9a9-0912412c4dec.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/1e/81e35b70-700e-48ee-8879-88addc8d83aa/6abccd2a4f27f.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Meet the air traffic controller who flies himself to work",
+    source: "Telluride Times",
+    date: "October 3, 2026",
+    firstSeen: "2026-10-03",
+    newsTopic: "housing",
+    copy: "A Colorado air traffic controller commutes to work once a week by paramotor — running down the road outside his apartment until he's airborne, then radioing his own tower to let colleagues track his progress. No license is required to fly one, and the setup costs a fraction of a traditional pilot's license. Takes a little longer than driving, but he seems to think that's a fair trade.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_4ab207bd-b561-5232-a333-d1cc382be283.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/65/7650c311-0367-573e-972f-142072bc8eee/6ac0e1bf4e513.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "FTC settles with Southern Glazer's over claim it discriminated against smaller alcohol sellers",
     source: "Telluride Times",
@@ -4660,48 +4684,15 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Yoga for ALL with Jane & Jay",
-    link: "https://telluridelibrary.libcal.com/event/17721819?hs=a",
-    description: "8:30 AM – 9:45 AM · Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
-    pubDate: "2026-10-02T14:30:00.000Z",
+    title: "Authors Uncovered with Chris Jennings: End of Days",
+    link: "https://telluridelibrary.libcal.com/event/17044432?hs=a",
+    description: "3:00 PM – 4:30 PM · Join us for this free author event as part of Original Thinkers Festival programming. In End of Days , Chris Jennings explains the significance of this historic siege by setting the story of the Weaver family within the long history of apocalyptic Christianity in the United States, illuminating the ways in which that faith has gradually transformed the nation. The strain of doomsday Christianity that gripped the Weavers, he shows, was grounded in a particular reading of biblical prophecy that can be traced back to the 1870s and up through the twentieth-century rise of Christian fundamentalism to the right-wing conspiracism that now defines American society and politics. The events at Ruby Ridge acted as an accelerant for this spreading worldview, and are essential to understanding the crisis that our nation confronts today. …",
+    pubDate: "2026-10-03T21:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg"
-  },
-  {
-    title: "You & Me / Tu y Yo",
-    link: "https://telluridelibrary.libcal.com/event/17742610?hs=a",
-    description: "10:30 AM – 11:00 AM · Join us every Friday for a fun and engaging parent-child program designed for preschoolers! Each week, we explore a new theme through hands-on activities that spark creativity.    &iexcl;Acomp&aacute;&ntilde;enos todos los viernes en un programa divertido y din&aacute;mico para padres e hijos, dise&ntilde;ado para ni&ntilde;os en edad preescolar! Cada semana exploramos un tema nuevo a trav&eacute;s de actividades pr&aacute;cticas que estimulan la creatividad.",
-    pubDate: "2026-10-02T16:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_30_13_07_23.png"
-  },
-  {
-    title: "This Haunted Land with Betsy Quammen",
-    link: "https://telluridelibrary.libcal.com/event/17694673?hs=a",
-    description: "4:00 PM – 5:00 PM · Why do humans need ghosts? And what do ghosts have to teach us? Join us for an author talk and signing with Betsy Gaines Quammen for her new book, THIS HAUNTED LAND: Reckoning with Ghosts and the Stories that Shape America at 4:00 on the lower terrace. This event is part of the Original Thinkers Festival , but it is free and open to the public, as are all OT events held at the library. No pass needed. This Haunted Land investigates some of America's most enduring legends and uncovers how ghost stories can illuminate some of the most unsettling parts of history. With curiosity, a touch of skepticism, and an open-hearted willingness to learn from the living and the dead, Betsy Gaines Quammen takes readers on a journey into haunted towns, forgotten lives, and abandoned places. …",
-    pubDate: "2026-10-02T22:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_22_17_38_18.webp"
-  },
-  {
-    title: "Learn Dungeons and Dragons",
-    link: "https://telluridelibrary.libcal.com/event/17694772?hs=a",
-    description: "4:00 PM – 6:00 PM · Have you ever been curious about learning how to play Dungeons and Dragons? This is your opportunity! Join local Dungeon Master Kase in a one day campaign that is open to both experienced DND players, and folks who have never played once. This is a chance for folks to learn how DND works and jump right into a fun campaign. This is open to teens and adults.",
-    pubDate: "2026-10-02T22:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_28_16_43_19.png"
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_29_16_20_54.webp"
   }
 ];
 
@@ -4722,18 +4713,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "Corey Hooker",
-    link: "https://www.alibitelluride.com/calendar#eca-event=corey-hooker",
-    description: "Corey Hooker takes the stage at The Alibi for a night of live music. The show begins at 9:00 PM.",
-    pubDate: "2026-10-02",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/1ed1174f-d5a2-4564-a7e3-776e6846870c/-/crop/1294x1295/0,93/-/preview/"
-  },
   {
     title: "DYNAMIC (YAK + FLOWMATIC B2B)",
     link: "https://www.alibitelluride.com/calendar#eca-event=dynamic-yak-flowmatic-b2b",
@@ -5168,131 +5147,6 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "Ridgway Farmers Market",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
-    description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here.",
-    pubDate: "2026-10-02T16:00:00.000Z",
-    endDate: "2026-10-16",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Hartwell Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
-  },
-  {
-    title: "Guided Tour: Historic Beaumont Hotel & Spa",
-    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
-    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
-    pubDate: "2026-10-02T19:30:00.000Z",
-    endDate: "2026-12-01",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Beaumont Hotel & Spa",
-    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
-  },
-  {
-    title: "COUSIN CURTISS",
-    link: "https://events.ourayridgwayevents.com/event/cousin-curtis",
-    description: "Cousin Curtiss performs a live music show at a venue on North Cora Street in Ridgway. The event is listed through the Ouray Ridgway community calendar.",
-    pubDate: "2026-10-02T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Artist's Reception: SUSAN CLARK",
-    link: "https://events.ourayridgwayevents.com/event/artists-reception-susan-clark",
-    description: "Chloe's is so excited to feature works by local artist Susan Clark through December. Her opening reception will be hosted by Susan from 5pm on Friday, October 2nd.",
-    pubDate: "2026-10-02T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Chloe's Charcuterie & Wine",
-    imageUrl: "https://localist-images.azureedge.net/photos/54108852054354/huge/9aa30758db54a4946be690e7eadd89f04b1d9760.jpg"
-  },
-  {
-    title: "Containment",
-    link: "https://events.ourayridgwayevents.com/event/containment",
-    description: "Containment is a mixed-media exhibition of clay sculptures and assemblage by Ridgway-based artist Michelle Montague, on display at The 610 Arts Collective. The work explores themes of vulnerability, perspective, angst, and hope through tactile forms, layered materials, and carefully constructed scenes.",
-    pubDate: "2026-10-02T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The 610 Arts Collective",
-    imageUrl: "https://localist-images.azureedge.net/photos/53693053505919/huge/8a780ff6c8312fd2ff43dfb21dd65bcccea56d49.jpg"
-  },
-  {
-    title: "First Friday Art Walk",
-    link: "https://events.ourayridgwayevents.com/event/first-friday-art-walk",
-    description: "First Friday Art Walk is a monthly community event in downtown Ridgway where galleries, studios, and local businesses open their doors to showcase art and connect visitors with artists. It's a welcoming occasion for both dedicated art enthusiasts and casual browsers to explore the local creative scene.",
-    pubDate: "2026-10-02T23:00:00.000Z",
-    endDate: "2026-11-07",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Downtown Ridgway, CO",
-    imageUrl: "https://localist-images.azureedge.net/photos/52941247100302/huge/24aa8ce412f9817ce04becd51e5d1cc5b8db2cad.jpg"
-  },
-  {
-    title: "First Friday at Rootwings Art",
-    link: "https://events.ourayridgwayevents.com/event/first-friday-at-rootwings-art-1540",
-    description: "Rootwings Art will be open for Ridgway's First Friday Art Walk, featuring local ceramic sculptures and large vessels by artist Andy Nasisse, original oils by Emma Kalff, Bruce Backer's Ravens & Crows, Taos artist Fred Burns fantasy nudes and one of a kind jewelry and ceramics by Vanessa Backer.",
-    pubDate: "2026-10-02T23:00:00.000Z",
-    endDate: "2026-11-07",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Herran House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53312391289791/huge/00a6a9e1834a357256b5925d35f6a6525ff06493.jpg"
-  },
-  {
-    title: "October - Art Opening: Space Cowboy by Dundee & Lee - special reading by Poet Laureate Crisosto Apache",
-    link: "https://events.ourayridgwayevents.com/event/art-opening-space-cowboy-by-dundee-lee",
-    description: "Opening Reception Schedule - Part of Ridgway's First Friday Art Walk Gallery Open 5-8PM Artist Talk and Poetry Reading 630-7:30 Free refreshments provided by Chloe's Charcuterie and Wine Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado artists Emilie Odeile and Ken Chapin of Dundee & Lee, the exhibition centers on a 10-foot-tall fiber rocket topped with a cowboy hat and Mission Control consoles that gather images, voices, stories, and discoveries as Space Cowboy travels from community to community. Throughout October, the exhibition comes alive with special events and programming, including appearances by Colorado Poet Laureate Crisosto Apache, community conversations, and opportunities for Ridgway residents to become part of the continuing Space Cowboy story. …",
-    pubDate: "2026-10-02T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53975454573398/huge/fed6f5172fe765abe1cd1b3f3447b64e3cd83d27.jpg"
-  },
-  {
-    title: "First Friday at The Sherbino: Donny Morales + Cody Russell",
-    link: "https://events.ourayridgwayevents.com/event/first-friday-at-the-sherbino-donny-morales-cody-russell",
-    description: "Make The Sherbino one of your stops during Ridgway’s First Friday Art Walk on Friday, October 2! We’re opening the doors for a FREE evening of live music featuring Donny Morales, joined by special guest Cody Russell. Come downtown, wander the galleries, grab dinner or a drink, and settle in for some great live music at The Sherbino. LIVE MUSIC SCHEDULE 5:30–6:30 PM — Set 1 Break — Perfect timing to catch the talk + reading happening at the Decker Room as part of First Friday 7:15–8:15 PM — Set 2 The Sherbino Ridgway, Colorado FREE EVENT, thanks to support from Ridgway FUSE Come for one set, stay for both, or make an evening of it and explore everything happening around Ridgway for First Friday Art Walk. No ticket needed — just show up, bring some friends, and enjoy a great night of live music in downtown Ridgway. …",
-    pubDate: "2026-10-02T23:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Sherbino",
-    imageUrl: "https://localist-images.azureedge.net/photos/54093107883137/huge/2e66d4460f0e5494a62c56da6fdce5859934120a.jpg"
-  },
-  {
-    title: "Roma Ransom – Live at Floating Lotus Brewery",
-    link: "https://events.ourayridgwayevents.com/event/roma-ransom-live-at-floating-lotus-brewery",
-    description: "Great music should do three things: connect us to the past, inspire us to envision the future, and root us fully in the present. Roma Ransom does all three. The duo blends old-time traditional ballads with European influences—particularly Romanian music—while creating a sound distinctly their own. Grace Easley’s sultry, sweet vocals and the duo’s wide instrumental palette move naturally from intimate listening-room moments to lively festival energy. Over the past decade, Roma Ransom has toured throughout North America, performing more than 200 shows a year and appearing at festivals alongside acts including Larry & His Flask and Leftover Salmon.",
-    pubDate: "2026-10-03T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/52352007922073/huge/6e1d6344c68fc21891f3b86ca94c989690337619.jpg"
-  },
-  {
-    title: "Ouray 150th Gala",
-    link: "https://events.ourayridgwayevents.com/event/ouray-150th-gala",
-    description: "Join us for an unforgettable evening as we celebrate 150 years of Ouray's rich history, vibrant community, and enduring spirit. Held in the elegant ballroom of the historic Beaumont Hotel, the Ouray 150th Gala will bring together residents, visitors, and history enthusiasts for a night of music, food, dancing, and celebration. Guests are invited to honor the era that shaped Ouray by dressing in black-tie attire or historical period clothing reminiscent of the late 1800s. Step back in time and experience the charm, elegance, and excitement of a bygone era while commemorating this once-in-a-generation milestone. Raise a glass to 150 years of adventure, resilience, and community as we celebrate Ouray's past, present, and future. …",
-    pubDate: "2026-10-03T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Beaumont Hotel & Spa",
-    imageUrl: "https://localist-images.azureedge.net/photos/53056912759532/huge/aa016e5f576b545feeba24a39e7ee32221da7c4a.jpg"
-  },
-  {
     title: "Mineral Identification Workshop For Kids",
     link: "https://events.ourayridgwayevents.com/event/mineral-identification-workshop-for-kids",
     description: "A hands-on workshop for kids focused on identifying mineral hand samples from the San Juan Mountain region, led by Robert Stoufer. The program takes place at the Ouray County Historical Society Research Center & Archive.",
@@ -5325,6 +5179,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Wright Opera House",
     imageUrl: "https://localist-images.azureedge.net/photos/53644731506912/huge/89ae9ae8e058db83a936dd643f6af477841cd019.jpg"
+  },
+  {
+    title: "Guided Tour: Historic Beaumont Hotel & Spa",
+    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
+    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
+    pubDate: "2026-10-03T19:30:00.000Z",
+    endDate: "2026-12-01",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Beaumont Hotel & Spa",
+    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
   },
   {
     title: "150th Concert: Big Head Todd & the Monsters w/ Hazel Miller & The Collective",
@@ -5468,7 +5334,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/parks-and-recreation-committee-parc",
     description: "The Parks and Recreation Committee (PARC) is made up of community members who volunteer their time to support and enhance recreational opportunities in Ouray. PARC organizes safe, family-friendly events that bring the community together. Events include Broomball, Cabin Fever Days, Dodgeball, Softball, and Game Night, among others. The committee works closely with local organizations, businesses, and other City committees to carry out its mission. Community partners include the Ouray Hot Springs Pool & Fitness Center, the Beautification Committee, and the Ouray School District. PARC also plays an important role in developing and implementing master plans for the City’s park system, helping ensure that Ouray’s parks and recreational spaces serve residents and visitors for years to come. Members of the public are welcome to attend these meetings. Meetings: PARC meets monthly on the first Tuesday at 6:00 p.m. …",
     pubDate: "2026-10-07T00:00:00.000Z",
-    endDate: "2026-11-04",
+    endDate: "2026-12-02",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5589,6 +5455,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Floating Lotus Brewery",
     imageUrl: "https://localist-images.azureedge.net/photos/53790449536989/huge/a7181e9d298980d4c2377db45d06d26bb81e0b12.jpg"
+  },
+  {
+    title: "Ridgway Farmers Market",
+    link: "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
+    description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here.",
+    pubDate: "2026-10-09T16:00:00.000Z",
+    endDate: "2026-10-16",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Hartwell Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
   },
   {
     title: "FLANNEL FEEDBACK",
@@ -6263,6 +6141,28 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Wright Opera House",
     imageUrl: "https://localist-images.azureedge.net/photos/54035420061248/huge/d9483f91f6cbf291d9c98abc718e1ec3869ac8ae.jpg"
+  },
+  {
+    title: "First Friday Art Walk",
+    link: "https://events.ourayridgwayevents.com/event/first-friday-art-walk",
+    description: "A monthly community art walk through downtown Ridgway, where local galleries, studios, shops, and gathering spaces open their doors for new exhibitions, artist receptions, live music, and pop-up programming. Each edition offers a different mix of art and activity from the area's creative community.",
+    pubDate: "2026-11-07T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Downtown Ridgway, CO",
+    imageUrl: "https://localist-images.azureedge.net/photos/52941247100302/huge/24aa8ce412f9817ce04becd51e5d1cc5b8db2cad.jpg"
+  },
+  {
+    title: "First Friday at Rootwings Art",
+    link: "https://events.ourayridgwayevents.com/event/first-friday-at-rootwings-art-1540",
+    description: "Rootwings Art will be open for Ridgway's First Friday Art Walk, featuring local ceramic sculptures and large vessels by artist Andy Nasisse, original oils by Emma Kalff, Bruce Backer's Ravens & Crows, Taos artist Fred Burns fantasy nudes and one of a kind jewelry and ceramics by Vanessa Backer.",
+    pubDate: "2026-11-07T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Herran House",
+    imageUrl: "https://localist-images.azureedge.net/photos/53312391289791/huge/00a6a9e1834a357256b5925d35f6a6525ff06493.jpg"
   },
   {
     title: "November - Art Opening: Film Stills-Ridgway Independent Film Fest",
