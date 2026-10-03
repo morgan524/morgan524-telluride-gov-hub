@@ -158,7 +158,7 @@ your own admin login — not something Claude can do for you):**
 - **KOTO featured stories** publish less often than newscasts. If
   `KOTO_FEATURED_STORIES` is empty or has only one entry, that's usually
   KOTO's posting cadence, not a scraping bug. Confirm by hitting
-  `/proxy?url=https://koto.org/news-category/featured-stories/feed/` and
+  `/proxy?url=https%3A%2F%2Fkoto.org%2Ffeed%2F%3Fnews-category%3Dfeatured-stories` and
   checking item dates.
 - **Telluride Times article images** — RSS doesn't always include the
   `<enclosure>`. The script tolerates a missing `img`. If many cards on the

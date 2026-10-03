@@ -106,8 +106,14 @@ Important behaviors:
   helper inside `refreshNews()`. (Pre-2026-05-01 the script used a single
   `KOTO_RSS = 'https://koto.org/feed/'`, which is why CLAUDE.md flagged
   the gotcha but the bug persisted; now fixed.)
-  - newscasts: `https://koto.org/news-category/newscasts/feed/`
-  - featured:  `https://koto.org/news-category/featured-stories/feed/`
+  - newscasts: `https://koto.org/feed/?news-category=newscasts`
+  - featured:  `https://koto.org/feed/?news-category=featured-stories`
+  - Each constant is an ordered list; `pullKotoFeed` tries the next URL on a
+    non-200 / non-RSS response. **Since ~2026-09-17 KOTO's Cloudflare
+    challenges the pretty `/news-category/<x>/feed/` paths (HTTP 403 "Just a
+    moment...") even through the Worker**, while the query-string form returns
+    the same feed. Those path URLs are kept only as fallbacks. If KOTO news
+    goes empty again, curl both forms through `/proxy?url=` first.
 - **14-day cutoff:** `NEWS_MAX_AGE_DAYS = 14`. Anything older than 14 days is
   filtered out at fetch time. Don't be surprised when older items disappear
   from the live site — it's intentional pruning, not a bug. Adjust the

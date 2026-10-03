@@ -620,6 +620,11 @@ async function checkAI(ctx) {
     // own schedule page, so flagging it burns a Medium every single month.
     `Do NOT flag a Board of Education Work Session and a Board of Education regular/monthly meeting ` +
     `sharing a date — that board routinely holds the work session and then the meeting on the same day. ` +
+    // 2026-10-03: "DYNAMIC (YAK + FLOWMATIC B2B)" (The Alibi) was flagged High as
+    // an "internal tag". It is the venue's own billing: DJ/artist names in caps,
+    // "B2B" = back-to-back DJ set. The reviewer only sees titles, so say so.
+    `Do NOT flag music/nightlife titles as garbled or placeholder for using all-caps act names, artist names ` +
+    `in parentheses, "+" between acts, or DJ jargon like "B2B" (back-to-back set) — that is how venues bill shows. ` +
     `Be conservative — no speculation. Return STRICT JSON only, an array of ` +
     `{"severity":"High|Medium|Low","category":"...","item":"<title> (<date>)","problem":"...","suggestedFix":"..."} ` +
     `(empty array [] if nothing is clearly wrong).\n\nDATA:\n` +

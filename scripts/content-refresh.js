@@ -147,8 +147,19 @@ const NEWS_FEEDS = [
 // per 50) and the local-news.html relevance filters still apply downstream.
 const TELLURIDE_TIMES_RSS = 'https://www.telluridenews.com/search/?f=rss&t=article&c=news,news/*,news_release,news_release/*,business,business/*,sports,sports/*,opinion,opinion/*,obituaries,norwood_post,norwood_post/*,the_norwood_post,the_norwood_post/*,arts_and_entertainment,arts_and_entertainment/*,gallery,gallery/*&l=50&s=start_time&sd=desc';
 // KOTO uses two category-specific feeds; the catch-all /feed/ misses some posts.
-const KOTO_NEWSCASTS_RSS = 'https://koto.org/news-category/newscasts/feed/';
-const KOTO_FEATURED_RSS = 'https://koto.org/news-category/featured-stories/feed/';
+// Query-string form first: since ~2026-09-17 KOTO's Cloudflare serves a
+// "Just a moment..." challenge (HTTP 403) on the pretty /news-category/<x>/feed/
+// paths even through our Worker, while /feed/?news-category=<x> returns the
+// same RSS. KOTO_NEWSCASTS went to 0 when the last pre-block item aged out.
+// The path form stays as a fallback in case the rule flips.
+const KOTO_NEWSCASTS_RSS = [
+  'https://koto.org/feed/?news-category=newscasts',
+  'https://koto.org/news-category/newscasts/feed/',
+];
+const KOTO_FEATURED_RSS = [
+  'https://koto.org/feed/?news-category=featured-stories',
+  'https://koto.org/news-category/featured-stories/feed/',
+];
 const COLORADO_SUN_RSS = 'https://coloradosun.com/feed/';
 // Keywords that make a Colorado Sun article relevant to the Telluride region
 const COLORADO_SUN_KEYWORDS = /telluride|san\s+miguel\s+county|mountain\s+village|ridgway|telski|chuck\s+horning/i;
@@ -2329,15 +2340,29 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
   const kotoNewscasts = [];
   const kotoFeatured = [];
 
-  async function pullKotoFeed(url, bucket) {
+  async function pullKotoFeed(urls, bucket) {
+    for (const url of urls) {
+      if (await pullKotoFeedUrl(url, bucket)) return;
+    }
+    console.warn(`  KOTO feed: every URL failed (${urls.join(' , ')})`);
+  }
+
+  // Returns true when the URL yielded a real RSS document (even one with no
+  // in-window items), false on HTTP error / Cloudflare challenge / bad XML.
+  async function pullKotoFeedUrl(url, bucket) {
     try {
       const resp = await fetch(url);
       if (resp.status !== 200) {
-        console.warn(`  KOTO feed (${url}) HTTP ${resp.status}`);
-        return;
+        console.warn(`  KOTO feed (${url}) HTTP ${resp.status}` +
+          (/Just a moment/i.test(resp.text || '') ? ' (Cloudflare challenge)' : ''));
+        return false;
       }
       const xml = await parseXml(resp.text);
-      const items = xml?.rss?.channel?.item;
+      if (!xml?.rss?.channel) {
+        console.warn(`  KOTO feed (${url}) returned no RSS channel`);
+        return false;
+      }
+      const items = xml.rss.channel.item;
       const arr = Array.isArray(items) ? items : (items ? [items] : []);
       for (const item of arr) {
         const pubDate = new Date(item.pubDate || '');
@@ -2360,8 +2385,10 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
           href: (item.link || '').trim()
         });
       }
+      return true;
     } catch (e) {
       console.warn(`  KOTO RSS error (${url}): ${e.message}`);
+      return false;
     }
   }
 
