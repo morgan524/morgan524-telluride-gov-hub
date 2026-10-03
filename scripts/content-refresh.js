@@ -149,6 +149,7 @@ const TELLURIDE_TIMES_RSS = 'https://www.telluridenews.com/search/?f=rss&t=artic
 // KOTO uses two category-specific feeds; the catch-all /feed/ misses some posts.
 const KOTO_NEWSCASTS_RSS = 'https://koto.org/news-category/newscasts/feed/';
 const KOTO_FEATURED_RSS = 'https://koto.org/news-category/featured-stories/feed/';
+const KOTO_HOME = 'https://koto.org/';   // HTML fallback when the feeds are bot-challenged
 const COLORADO_SUN_RSS = 'https://coloradosun.com/feed/';
 // Keywords that make a Colorado Sun article relevant to the Telluride region
 const COLORADO_SUN_KEYWORDS = /telluride|san\s+miguel\s+county|mountain\s+village|ridgway|telski|chuck\s+horning/i;
@@ -2367,6 +2368,51 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
 
   await pullKotoFeed(KOTO_NEWSCASTS_RSS, kotoNewscasts);
   await pullKotoFeed(KOTO_FEATURED_RSS, kotoFeatured);
+
+  // Fallback (2026-10-03): since ~Sep 19 KOTO's Cloudflare challenges every
+  // /feed/ and /wp-json/ path ("Just a moment…", HTTP 403) even through the
+  // Worker, so both feeds came back empty and KOTO_NEWSCASTS aged out to 0.
+  // The homepage is still served, and its "Recent News" card grid lists the
+  // latest posts as <a class="fusion-column-anchor" href=".../news/<slug>/"
+  // aria-label="<title>"> followed by "<title> <Month D, YYYY> <excerpt>".
+  // Only titles starting "Newscast" are taken — the grid mixes categories and
+  // nothing on the card says which, so features stay with the RSS path.
+  if (kotoNewscasts.length === 0) {
+    try {
+      const resp = await fetch(KOTO_HOME);
+      if (resp.status !== 200) {
+        console.warn(`  KOTO homepage fallback HTTP ${resp.status}`);
+      } else {
+        const seen = new Set();
+        const cardRe = /<a class="fusion-column-anchor" href="(https:\/\/koto\.org\/news\/[^"]+)" aria-label="([^"]*)">([\s\S]*?)<\/li>/g;
+        let m;
+        while ((m = cardRe.exec(resp.text))) {
+          const href = m[1].trim();
+          const title = decodeHtmlEntities(m[2]).trim();
+          if (seen.has(href) || !/^Newscast\b/i.test(title)) continue;
+          const text = decodeHtmlEntities(m[3].replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+          const dm = text.match(/\b(January|February|March|April|May|June|July|August|September|October|November|December) \d{1,2}, \d{4}\b/);
+          if (!dm) continue;               // the "RECENT NEWSCAST" banner card has no date
+          const pubDate = new Date(dm[0]);
+          if (isNaN(pubDate) || pubDate < cutoff) continue;
+          seen.add(href);
+          const copy = text.slice(text.indexOf(dm[0]) + dm[0].length).trim()
+            .replace(/^[-•]\s*/g, '').replace(/\s*[-•]\s+/g, '; ').slice(0, 350);
+          kotoNewscasts.push({
+            title,
+            source: 'KOTO Community Radio',
+            date: formatDate(pubDate),
+            newsTopic: classifyNewsTopic(title, copy),
+            copy,
+            href
+          });
+        }
+        console.log(`  KOTO homepage fallback: ${kotoNewscasts.length} newscast(s)`);
+      }
+    } catch (e) {
+      console.warn(`  KOTO homepage fallback error: ${e.message}`);
+    }
+  }
 
   // Colorado Sun — filtered to Telluride/San Miguel County local coverage
   const csSunArticles = [];

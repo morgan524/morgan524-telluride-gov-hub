@@ -620,6 +620,13 @@ async function checkAI(ctx) {
     // own schedule page, so flagging it burns a Medium every single month.
     `Do NOT flag a Board of Education Work Session and a Board of Education regular/monthly meeting ` +
     `sharing a date — that board routinely holds the work session and then the meeting on the same day. ` +
+    // 2026-10-03: the reviewer flagged Norwood's and Ridgway's 2nd-Wednesday
+    // boards on Nov 11 (Veterans Day) because Norwood posts "Closed For
+    // Veterans Day". A town-office closure doesn't cancel an evening board
+    // meeting — Ridgway held its regular council meeting on Veterans Day
+    // 2020 (Nov 11, 2020 minutes on townofridgway.colorado.gov).
+    `Do NOT flag a meeting merely because its date is a public holiday or because a town-office ` +
+    `closure notice falls on the same date — office closures don't cancel evening board meetings. ` +
     `Be conservative — no speculation. Return STRICT JSON only, an array of ` +
     `{"severity":"High|Medium|Low","category":"...","item":"<title> (<date>)","problem":"...","suggestedFix":"..."} ` +
     `(empty array [] if nothing is clearly wrong).\n\nDATA:\n` +

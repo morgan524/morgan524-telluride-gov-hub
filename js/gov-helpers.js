@@ -3719,7 +3719,22 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
-
+  {
+    title: "Newscast 10-2-26",
+    source: "KOTO Community Radio",
+    date: "October 2, 2026",
+    newsTopic: "arts-culture",
+    copy: "Mountain Village Names New Town Manager; All About Art About; Cat Movie Fisher with Risho Unda",
+    href: "https://koto.org/news/newscast-10-2-26/"
+  },
+  {
+    title: "Newscast 10-1-26",
+    source: "KOTO Community Radio",
+    date: "October 1, 2026",
+    newsTopic: "community",
+    copy: "West End Roundup with the San Miguel Basin Forum; Watershed Coalition Stands Up for Public Lands; \"This Haunted Land\" Explores America’s Ghosts",
+    href: "https://koto.org/news/newscast-10-1-26/"
+  }
 ];
 
 const KOTO_FEATURED_STORIES = [

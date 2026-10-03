@@ -108,6 +108,14 @@ Important behaviors:
   the gotcha but the bug persisted; now fixed.)
   - newscasts: `https://koto.org/news-category/newscasts/feed/`
   - featured:  `https://koto.org/news-category/featured-stories/feed/`
+  - **Homepage fallback (2026-10-03):** since ~2026-09-19 KOTO's Cloudflare
+    serves a "Just a moment…" challenge (HTTP 403) on every `/feed/`,
+    `/wp-json/` and category page, *even through the Worker*. The homepage
+    `https://koto.org/` still loads, so when the newscasts feed yields
+    nothing `refreshNews()` scrapes the homepage "Recent News" cards and
+    keeps the ones titled `Newscast …`. Featured stories have no fallback
+    (the cards don't say which category a post is in), so
+    `KOTO_FEATURED_STORIES` stays empty while the block lasts.
 - **14-day cutoff:** `NEWS_MAX_AGE_DAYS = 14`. Anything older than 14 days is
   filtered out at fetch time. Don't be surprised when older items disappear
   from the live site — it's intentional pruning, not a bug. Adjust the
