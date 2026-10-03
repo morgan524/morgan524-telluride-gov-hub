@@ -2333,7 +2333,13 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
     try {
       const resp = await fetch(url);
       if (resp.status !== 200) {
-        console.warn(`  KOTO feed (${url}) HTTP ${resp.status}`);
+        // Since ~2026-09-17 koto.org answers the category feeds (and the Tribe
+        // events API) with a Cloudflare "Just a moment..." managed challenge,
+        // even via the Worker. No UA gets through; it needs KOTO to exempt
+        // the feeds. Name it so the log doesn't read as a transient error.
+        const cf = /Just a moment|challenges\.cloudflare\.com/i.test(resp.text || '');
+        console.warn(`  KOTO feed (${url}) HTTP ${resp.status}` +
+          (cf ? ' — Cloudflare bot challenge (KOTO must allowlist the feed); keeping existing items' : ''));
         return;
       }
       const xml = await parseXml(resp.text);

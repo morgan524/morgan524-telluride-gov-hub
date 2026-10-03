@@ -210,6 +210,15 @@ function isoOf(localDate, raw) {
   const p = n => String(n).padStart(2, '0');
   return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
 }
+// "2026-11-06 (Friday)" — the resolved Mountain day plus its weekday, so the
+// AI pass never has to do timezone or calendar arithmetic itself. Falls back
+// to the raw string when it can't be parsed (the AI may comment on that).
+function displayDate(localDate, raw) {
+  const d = localDate(raw);
+  if (!d || isNaN(d)) return raw;
+  const wd = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][d.getDay()];
+  return `${isoOf(localDate, raw)} (${wd})`;
+}
 function todayDenverIso() {
   // en-CA yields YYYY-MM-DD; pin to the site's timezone so "past" matches
   // what a Telluride reader sees, not the CI runner's UTC clock.
@@ -600,8 +609,13 @@ async function checkAI(ctx) {
     const d = daysBetweenIso(TODAY, iso);
     return d >= -PAST_GRACE_DAYS && d <= AI_LOOKAHEAD_DAYS;
   }).map(r => ({
+    // Send the Mountain calendar day the site actually renders (via
+    // localDate), not the raw string. Feeds like Ouray/Ridgway stamp a 5 PM
+    // MST event as "...T00:00:00Z" the NEXT day, so the raw value made the
+    // AI call every "First Friday" a Saturday (false positive, 2026-10-03).
     kind: r.kind, array: r.array, title: r.title,
-    date: r.rawDate, end: r.endRaw || undefined, source: r.source
+    date: displayDate(ctx.localDate, r.rawDate),
+    end: r.endRaw ? displayDate(ctx.localDate, r.endRaw) : undefined, source: r.source
   }));
 
   if (!upcoming.length) { console.log('  ℹ AI pass: no upcoming items in window'); return; }
@@ -620,6 +634,11 @@ async function checkAI(ctx) {
     // own schedule page, so flagging it burns a Medium every single month.
     `Do NOT flag a Board of Education Work Session and a Board of Education regular/monthly meeting ` +
     `sharing a date — that board routinely holds the work session and then the meeting on the same day. ` +
+    // 2026-10-03: the Alibi's "DYNAMIC (YAK + FLOWMATIC B2B)" (verbatim from
+    // the venue's own calendar) was flagged as a garbled pipeline label.
+    `Venue titles often use music-billing shorthand — all caps, "B2B" (DJs playing back-to-back), ` +
+    `"w/", "+", "feat." — that is the real event name, not garbled data. ` +
+    `Each date is already the Mountain-time calendar day the site displays, with its weekday in parentheses — trust it. ` +
     `Be conservative — no speculation. Return STRICT JSON only, an array of ` +
     `{"severity":"High|Medium|Low","category":"...","item":"<title> (<date>)","problem":"...","suggestedFix":"..."} ` +
     `(empty array [] if nothing is clearly wrong).\n\nDATA:\n` +
