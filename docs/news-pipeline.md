@@ -108,6 +108,14 @@ Important behaviors:
   the gotcha but the bug persisted; now fixed.)
   - newscasts: `https://koto.org/news-category/newscasts/feed/`
   - featured:  `https://koto.org/news-category/featured-stories/feed/`
+  - **SoundCloud fallback (2026-10-03):** since mid-September 2026 koto.org
+    answers every request, Worker proxy included, with a Cloudflare managed
+    challenge (`403`, `cf-mitigated: challenge`). When the newscasts feed
+    gives 0 items, `refreshNews()` pulls KOTO's own podcast feed
+    `KOTO_NEWSCASTS_SOUNDCLOUD_RSS` (feeds.soundcloud.com, fetched direct)
+    and keeps only `Newscast …` episodes, so links point to SoundCloud.
+    Featured stories and the Tribe events API (`KOTO_COMMUNITY_EVENTS`)
+    have no fallback and stay frozen until KOTO lets the Worker through.
 - **14-day cutoff:** `NEWS_MAX_AGE_DAYS = 14`. Anything older than 14 days is
   filtered out at fetch time. Don't be surprised when older items disappear
   from the live site — it's intentional pruning, not a bug. Adjust the

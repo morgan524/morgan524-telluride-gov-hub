@@ -149,6 +149,13 @@ const TELLURIDE_TIMES_RSS = 'https://www.telluridenews.com/search/?f=rss&t=artic
 // KOTO uses two category-specific feeds; the catch-all /feed/ misses some posts.
 const KOTO_NEWSCASTS_RSS = 'https://koto.org/news-category/newscasts/feed/';
 const KOTO_FEATURED_RSS = 'https://koto.org/news-category/featured-stories/feed/';
+// KOTO's own podcast feed on SoundCloud (the "KOTO Community Radio News"
+// show listed in Apple Podcasts). Fallback for KOTO_NEWSCASTS when koto.org
+// is unreachable: since mid-September 2026 koto.org serves a site-wide Cloudflare
+// managed challenge (403 "Just a moment...") to both GitHub runners and the
+// Worker proxy. Same daily "Newscast M-D-YY" episodes with the same bullet
+// descriptions; links go to the SoundCloud episode page.
+const KOTO_NEWSCASTS_SOUNDCLOUD_RSS = 'https://feeds.soundcloud.com/users/soundcloud:users:187800186/sounds.rss';
 const COLORADO_SUN_RSS = 'https://coloradosun.com/feed/';
 // Keywords that make a Colorado Sun article relevant to the Telluride region
 const COLORADO_SUN_KEYWORDS = /telluride|san\s+miguel\s+county|mountain\s+village|ridgway|telski|chuck\s+horning/i;
@@ -2329,7 +2336,7 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
   const kotoNewscasts = [];
   const kotoFeatured = [];
 
-  async function pullKotoFeed(url, bucket) {
+  async function pullKotoFeed(url, bucket, titleFilter) {
     try {
       const resp = await fetch(url);
       if (resp.status !== 200) {
@@ -2343,6 +2350,7 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
         const pubDate = new Date(item.pubDate || '');
         if (pubDate < cutoff) continue;
         const title = (item.title || '').trim();
+        if (titleFilter && !titleFilter.test(title)) continue;
         // Clean the RSS description: strip HTML, drop the canonical
         // "The post <link>X</link> appeared first on <link>KOTO FM</link>" trailer.
         let copy = (item.description || '').replace(/<[^>]+>/g, ' ');
@@ -2366,6 +2374,13 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
   }
 
   await pullKotoFeed(KOTO_NEWSCASTS_RSS, kotoNewscasts);
+  if (kotoNewscasts.length === 0) {
+    // English newscasts only — the podcast also carries "Noticias" (Spanish)
+    // and "Off the Record" episodes, which koto.org's newscasts category
+    // didn't put in this array.
+    await pullKotoFeed(KOTO_NEWSCASTS_SOUNDCLOUD_RSS, kotoNewscasts, /^Newscast\b/i);
+    if (kotoNewscasts.length > 0) console.log(`  KOTO newscasts: koto.org unavailable, used SoundCloud podcast feed (${kotoNewscasts.length})`);
+  }
   await pullKotoFeed(KOTO_FEATURED_RSS, kotoFeatured);
 
   // Colorado Sun — filtered to Telluride/San Miguel County local coverage
