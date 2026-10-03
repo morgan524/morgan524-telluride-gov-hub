@@ -1,17 +1,5 @@
 [
   {
-    "title": "Southwestern counties talk wildfire mitigation",
-    "source": "Telluride Times",
-    "date": "October 3, 2026",
-    "firstSeen": "2026-10-03",
-    "newsTopic": "public-safety",
-    "copy": "Five southwestern Colorado counties met in late September to share wildfire mitigation strategies as federal funding shrinks and fire seasons grow more demanding. Pano AI cameras are showing real results locally — San Miguel credits early detection with stopping several fires from spreading, and Montezuma is now installing the same system near Mesa Verde. Funding gaps remain the central problem, with rural fire districts short on staff and money while covering vast, hard-to-reach terrain.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/article_1d1ccf3a-8034-42ef-a9a9-0912412c4dec.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/1e/81e35b70-700e-48ee-8879-88addc8d83aa/6abccd2a4f27f.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Meet the air traffic controller who flies himself to work",
     "source": "Telluride Times",
     "date": "October 3, 2026",
@@ -21,6 +9,30 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/news/state/article_4ab207bd-b561-5232-a333-d1cc382be283.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/65/7650c311-0367-573e-972f-142072bc8eee/6ac0e1bf4e513.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "The Supreme Court will hear a major climate change case involving a devastating Colorado wildfire",
+    "source": "Telluride Times",
+    "date": "October 3, 2026",
+    "firstSeen": "2026-10-03",
+    "newsTopic": "public-safety",
+    "copy": "Boulder County and the city of Boulder sued Suncor and ExxonMobil back in 2018 over climate-related damages — and now the Supreme Court is taking it up. The 2021 Marshall Fire, which wiped out whole neighborhoods and cost an estimated $2 billion, added real weight to what had been an abstract legal argument. How the court rules could determine whether dozens of similar state-level suits around the country move forward or get shut down.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/state/article_61ff3e6e-6c22-5511-b813-1cf65bab7064.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/91/191b3d77-0eba-5b38-82c4-38644391c097/6ac0ef1d4b6f0.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Southwestern counties talk wildfire mitigation",
+    "source": "Telluride Times",
+    "date": "October 3, 2026",
+    "firstSeen": "2026-10-03",
+    "newsTopic": "public-safety",
+    "copy": "Five southwestern Colorado counties met in late September to share wildfire mitigation strategies as federal funding shrinks and fire seasons grow more demanding. Pano AI cameras are showing real results locally — San Miguel credits early detection with stopping several fires from spreading, and Montezuma is now installing the same system near Mesa Verde. Funding gaps remain the central problem, with rural fire districts short on staff and money while covering vast, hard-to-reach terrain.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_1d1ccf3a-8034-42ef-a9a9-0912412c4dec.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/1e/81e35b70-700e-48ee-8879-88addc8d83aa/6abccd2a4f27f.image.jpg",
     "imgHiRes": true
   },
   {

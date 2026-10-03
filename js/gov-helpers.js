@@ -438,7 +438,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"1ff606174e68cca5"},
 
   "telluride|2026-10-27|Town Council - Oct 27 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045","sv":4,"ph":"32e2fb93c90d2ccb"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045","sv":4,"ph":"0187c3afb264086f"},
 
   "county|2026-10-28|Board of County Commissioners Work Session":
     {"sv":4},
@@ -1346,7 +1346,7 @@ const MANUAL_SUMMARIES = {
     "The October 26 Open Space Commission agenda hasn't been posted yet.",
 
   "telluride|2026-10-27|Town Council - Oct 27 2026":
-    "The October 27, 2026 Town Council agenda hasn't been posted yet.",
+    "The Oct 27 2026 Town Council agenda hasn't been posted yet.",
 
   "county|2026-10-28|Board of County Commissioners Work Session":
     "The October 28 BOCC Work Session in Placerville has been posted, but no agenda detail beyond the meeting name and location has been provided. There's no way to know what's on the table until the full agenda drops.",
@@ -2500,18 +2500,6 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "Southwestern counties talk wildfire mitigation",
-    source: "Telluride Times",
-    date: "October 3, 2026",
-    firstSeen: "2026-10-03",
-    newsTopic: "public-safety",
-    copy: "Five southwestern Colorado counties met in late September to share wildfire mitigation strategies as federal funding shrinks and fire seasons grow more demanding. Pano AI cameras are showing real results locally — San Miguel credits early detection with stopping several fires from spreading, and Montezuma is now installing the same system near Mesa Verde. Funding gaps remain the central problem, with rural fire districts short on staff and money while covering vast, hard-to-reach terrain.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_1d1ccf3a-8034-42ef-a9a9-0912412c4dec.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/1e/81e35b70-700e-48ee-8879-88addc8d83aa/6abccd2a4f27f.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Meet the air traffic controller who flies himself to work",
     source: "Telluride Times",
     date: "October 3, 2026",
@@ -2521,6 +2509,30 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_4ab207bd-b561-5232-a333-d1cc382be283.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/65/7650c311-0367-573e-972f-142072bc8eee/6ac0e1bf4e513.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "The Supreme Court will hear a major climate change case involving a devastating Colorado wildfire",
+    source: "Telluride Times",
+    date: "October 3, 2026",
+    firstSeen: "2026-10-03",
+    newsTopic: "public-safety",
+    copy: "Boulder County and the city of Boulder sued Suncor and ExxonMobil back in 2018 over climate-related damages — and now the Supreme Court is taking it up. The 2021 Marshall Fire, which wiped out whole neighborhoods and cost an estimated $2 billion, added real weight to what had been an abstract legal argument. How the court rules could determine whether dozens of similar state-level suits around the country move forward or get shut down.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_61ff3e6e-6c22-5511-b813-1cf65bab7064.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/91/191b3d77-0eba-5b38-82c4-38644391c097/6ac0ef1d4b6f0.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Southwestern counties talk wildfire mitigation",
+    source: "Telluride Times",
+    date: "October 3, 2026",
+    firstSeen: "2026-10-03",
+    newsTopic: "public-safety",
+    copy: "Five southwestern Colorado counties met in late September to share wildfire mitigation strategies as federal funding shrinks and fire seasons grow more demanding. Pano AI cameras are showing real results locally — San Miguel credits early detection with stopping several fires from spreading, and Montezuma is now installing the same system near Mesa Verde. Funding gaps remain the central problem, with rural fire districts short on staff and money while covering vast, hard-to-reach terrain.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_1d1ccf3a-8034-42ef-a9a9-0912412c4dec.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/1e/81e35b70-700e-48ee-8879-88addc8d83aa/6abccd2a4f27f.image.jpg",
     imgHiRes: true
   },
   {
@@ -5330,6 +5342,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
+    title: "Ouray MS Volleyball VS Ridgway",
+    link: "https://events.ourayridgwayevents.com/event/ouray-ms-volleyball-vs-ridgway",
+    description: "Ouray Middle School volleyball takes on Ridgway in a matchup between these neighboring mountain community teams. The game is hosted at Ouray School.",
+    pubDate: "2026-10-06T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray School",
+    imageUrl: "https://localist-images.azureedge.net/photos/53950094911567/huge/d5ee345c89849bce3200fa3413a281abd46154f5.jpg"
+  },
+  {
     title: "Parks and Recreation Committee (PARC)",
     link: "https://events.ourayridgwayevents.com/event/parks-and-recreation-committee-parc",
     description: "The Parks and Recreation Committee (PARC) is made up of community members who volunteer their time to support and enhance recreational opportunities in Ouray. PARC organizes safe, family-friendly events that bring the community together. Events include Broomball, Cabin Fever Days, Dodgeball, Softball, and Game Night, among others. The committee works closely with local organizations, businesses, and other City committees to carry out its mission. Community partners include the Ouray Hot Springs Pool & Fitness Center, the Beautification Committee, and the Ouray School District. PARC also plays an important role in developing and implementing master plans for the City’s park system, helping ensure that Ouray’s parks and recreational spaces serve residents and visitors for years to come. Members of the public are welcome to attend these meetings. Meetings: PARC meets monthly on the first Tuesday at 6:00 p.m. …",
@@ -5346,7 +5369,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/beautification-committee",
     description: "The Beautification Committee (OBC) works on projects to help beautify the community. The committee oversees the installation of all the flower gardens in the City as well as all the hanging baskets and plantings on Main Street. They have also worked hard over the years to acquire many historic mining pieces and equipment that are displayed throughout the community to recognize Ouray's mining heritage. The committee has also provided direction on signage, light poles, and benches on the public rights of way. The Beautification Committee also plays an important role in developing and implementing master plans for the City’s park system. The committee makes recommendations to the City Council on these many beautification projects as well as the use of dollars from the Beautification Fund. This fund is supported by a portion of the Lodging Occupation Tax and is used exclusively for projects that help beautify the community. …",
     pubDate: "2026-10-07T14:00:00.000Z",
-    endDate: "2026-11-04",
+    endDate: "2026-12-02",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5680,6 +5703,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54035246928726/huge/df8435a1f9605f9b27f285c37e3bb1d44a375465.jpg"
   },
   {
+    title: "Ouray High School Volleyball vs Dove Creek",
+    link: "https://events.ourayridgwayevents.com/event/ouray-high-school-volleyball-vs-dove-creek",
+    description: "Ouray High School hosts Dove Creek for a home volleyball matchup at Ouray School, with junior varsity taking the court first followed by the varsity squad. It's a chance for the community to cheer on the local team in what promises to be a competitive evening of high school athletics.",
+    pubDate: "2026-10-15T22:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray School",
+    imageUrl: "https://localist-images.azureedge.net/photos/53950094911567/huge/d5ee345c89849bce3200fa3413a281abd46154f5.jpg"
+  },
+  {
     title: "Talk: The Sherbino Presents: India Wood’s HIKING THE COLORADO X",
     link: "https://events.ourayridgwayevents.com/event/talk-the-sherbino-presents-india-woods-hiking-the-colorado-x",
     description: "Doors open at 6:00 PM; the talk begins at 6:30 PM. India Wood shares a short documentary, slide show and stories from her self-designed 1,500-mile hiking route across Colorado, including observations on the San Juan Mountains, ranching communities, public and private lands, and the challenges of a solo journey.",
@@ -5801,6 +5835,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Decker Community Room",
     imageUrl: "https://localist-images.azureedge.net/photos/52568082541214/huge/49b7c4c5e83ca4147b872fdb5be7fe87b78551c5.jpg"
+  },
+  {
+    title: "Ouray HS Volleyball VS Norwood",
+    link: "https://events.ourayridgwayevents.com/event/ouray-hs-volleyball-vs-norwood",
+    description: "Ouray High School's volleyball team hosts Norwood in a match at Ouray High School, with JV play scheduled from 4:30 to 5:30 p.m. and varsity action expected to follow around 5:30 p.m.",
+    pubDate: "2026-10-20T22:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray High School",
+    imageUrl: "https://localist-images.azureedge.net/photos/53950094911567/huge/d5ee345c89849bce3200fa3413a281abd46154f5.jpg"
   },
   {
     title: "Ridgway FUSE Creative Main Street - Committee Meeting",
@@ -6358,17 +6403,6 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "Norwood Pioneer Days And Car Show",
-    link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
-    pubDate: "2026-09-26T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Community Event",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "Senior Meals",
     link: "https://www.norwoodtown.com/2026-10-01-senior-meals",
     description: "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
@@ -6481,17 +6515,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Pink Talking Fish Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/pink-talking-fish-live-in-concert/",
-    description: "Pink Talking Fish is a hybrid tribute fusion act combining the music of Pink Floyd, Talking Heads, and Phish into a single live performance experience. The band comes to Mountain Village for a concert celebrating the catalogs of three iconic and beloved bands.",
-    pubDate: "2026-10-02T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49993/pink_talking_fish_mv.jpg"
-  },
   {
     title: "Movies Under the Stars",
     link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
@@ -6788,6 +6811,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
+  },
+  {
+    title: "Bike & Brewery Tour",
+    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    description: "A guided bike ride through Mountain Village, traveling the Jurassic and Meadows Trails down to Telluride Brewing Co. for a complimentary beer. The tour departs from the Mountain Lodge and offers a scenic route connecting Mountain Village to town.",
+    pubDate: "2026-11-02T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   }
 ];
 

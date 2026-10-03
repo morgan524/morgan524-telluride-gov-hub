@@ -358,6 +358,19 @@
     "type": "Music"
   },
   {
+    "title": "Ouray MS Volleyball VS Ridgway",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-ms-volleyball-vs-ridgway",
+    "date": "2026-10-06",
+    "time": "4:00 PM",
+    "location": "Ouray School",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53950094911567/huge/d5ee345c89849bce3200fa3413a281abd46154f5.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray Middle School volleyball takes on Ridgway in a matchup between these neighboring mountain community teams. The game is hosted at Ouray School.",
+    "type": "Community"
+  },
+  {
     "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
     "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
     "date": "2026-10-06",
@@ -542,7 +555,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "The Beautification Committee (OBC) works on projects to help beautify the community. The committee oversees the installation of all the flower gardens in the City as well as all the hanging baskets and plantings on Main Street. They have…",
     "type": "Community",
-    "endDate": "2026-11-04"
+    "endDate": "2026-12-02"
   },
   {
     "title": "AFTER SCHOOL ART FOR AGES 5-8",
@@ -1086,6 +1099,19 @@
     "type": "Community"
   },
   {
+    "title": "Ouray High School Volleyball vs Dove Creek",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-high-school-volleyball-vs-dove-creek",
+    "date": "2026-10-15",
+    "time": "4:30 PM",
+    "location": "Ouray School",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53950094911567/huge/d5ee345c89849bce3200fa3413a281abd46154f5.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray High School hosts Dove Creek for a home volleyball matchup at Ouray School, with junior varsity taking the court first followed by the varsity squad. It's a chance for the community to cheer on the local team in what promises to be a…",
+    "type": "Community"
+  },
+  {
     "title": "Senior Meals",
     "href": "https://www.norwoodtown.com/2026-10-15-senior-meals",
     "date": "2026-10-15",
@@ -1307,6 +1333,19 @@
     "desc": "Join our wonderful volunteer team at the Decker! If you would like to help with Gallery Sitting during open hours, events, and more, please attend a New Volunteer Orientation to get started! You'll learn about the Decker Room and the…",
     "type": "Arts & Film",
     "endDate": "2026-11-17"
+  },
+  {
+    "title": "Ouray HS Volleyball VS Norwood",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-hs-volleyball-vs-norwood",
+    "date": "2026-10-20",
+    "time": "4:30 PM",
+    "location": "Ouray High School",
+    "town": "Norwood",
+    "img": "https://localist-images.azureedge.net/photos/53950094911567/huge/d5ee345c89849bce3200fa3413a281abd46154f5.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray High School's volleyball team hosts Norwood in a match at Ouray High School, with JV play scheduled from 4:30 to 5:30 p.m. and varsity action expected to follow around 5:30 p.m.",
+    "type": "Arts & Film"
   },
   {
     "title": "Ridgway FUSE Creative Main Street - Committee Meeting",
@@ -1956,6 +1995,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "A Halloween screening of the 1995 PG film *Casper* at the Wright Opera House in Ouray, with doors opening at 6:30 PM and the movie beginning at 7:00 PM. The film runs approximately one hour and forty minutes and follows a young girl and…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Bike & Brewery Tour",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    "date": "2026-11-02",
+    "time": "5:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "A guided bike ride through Mountain Village, traveling the Jurassic and Meadows Trails down to Telluride Brewing Co. for a complimentary beer. The tour departs from the Mountain Lodge and offers a scenic route connecting Mountain Village…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Weekly Young Adult Gathering",
