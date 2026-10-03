@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02 22:04 UTC",
+  "generated": "2026-10-03 04:41 UTC",
   "digests": {
     "weekly": {
       "name": "The Week Ahead Outlook",
@@ -11,9 +11,9 @@
     },
     "weekend": {
       "name": "The Weekend Ahead Outlook",
-      "subject": "The Weekend Ahead Outlook - October 2 - October 4, 2026",
-      "covers": "Fri Oct 2 to Sun Oct 4, 2026",
-      "weekStart": "2026-10-02",
+      "subject": "The Weekend Ahead Outlook - October 9 - October 11, 2026",
+      "covers": "Fri Oct 9 to Sun Oct 11, 2026",
+      "weekStart": "2026-10-09",
       "audience": "Weekly Update",
       "file": "digest/weekend.html"
     }
