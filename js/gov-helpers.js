@@ -149,18 +149,6 @@ const MEETING_AGENDA_META = {
   "med|2026-09-11|Board Work Session":
     {"sv":4,"agendaUrl":null,"zoomUrl":"https://us02web.zoom.us/j/83975455041?pwd=JFP4C7xMrNnAn93sWUhROdSuVzQbeq.1","meetingId":"839 7545 5041","passcode":"388003"},
 
-  "telluride|2026-09-02|Ecology Commission - Sep 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118","sv":4,"zoomUrl":"https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1","phone":"970-728-3071"},
-
-  "telluride|2026-09-02|Commission for Community Assistance, Arts & Special Events - Sep 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/tZ0pc-ChqDwsGNFpPigfqqLQptmoMmpJdiOx"},
-
-  "telluride|2026-09-02|Telluride Housing Authority Subcommittee - Sep 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163","sv":4,"zoomUrl":"https://us06web.zoom.us/j/83022451705?pwd=Lj8jkLF9GQny7CWBqvP8IYkQhviQBb.1","meetingId":"830 2245 1705","passcode":"229528.","phone":"719) 359-4580"},
-
-  "county|2026-09-02|Board of County Commissioners Meeting":
-    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/887/files/agenda/1980","zoomUrl":"https://us02web.zoom.us/meeting/register/Yn2gLRVBQmaLhCboss4rJw","meetingId":"874 3946 5050","passcode":"885643","phone":"719-359-4580"},
-
   "mv|2026-09-03|Design Review Board":
     {"sv":4,"agendaUrl":"https://townofmountainvillage.com/site/assets/files/49787/september_3-_2026_design_review_board_meeting_agenda.pdf","zoomUrl":"https://us06web.zoom.us/j/83949014976?pwd=oze6zDkOSb0a8fjpvluaHR1zcyO0XN.1","meetingId":"839 4901 4976"},
 
@@ -257,9 +245,6 @@ const MEETING_AGENDA_META = {
   "county|2026-09-15|Housing Code Update SSR":
     {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1069/files/agenda/1990","zoomUrl":"https://us06web.zoom.us/j/88053660816?pwd=n7qJTXvayoEO5RY4eo8koGmh4nHHai.1","meetingId":"880 5366 0816","passcode":"616389"},
 
-  "ouray|2026-09-02|PM - Note: Virtual/Zoom meeting only!  The Planning Commission will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (packet materials are attached to the agenda)":
-    {"agendaUrl":"https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1016","sv":4},
-
   "county|2026-09-28|Open Space Commission Meeting":
     {"sv":4,"ph":"1ff606174e68cca5"},
 
@@ -291,13 +276,13 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://www.norwoodtown.com/files/5f8304a63/09.08.2026+RESCHEDULED+NWC+Agenda.pdf","zoomUrl":"https://us02web.zoom.us/j/88274908233","meetingId":"882 7490 8233","passcode":"997236","phone":"346-248-7799","sv":4},
 
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132","sv":4,"ph":"606a000116078bce"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/ePrh_CzmTLKqp0syEbUesw","meetingId":"894 7506 0147","passcode":"314276.","phone":"719) 359-4580"},
 
   "telluride|2026-10-06|Town Council - Oct 06 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/FzTNzG02TT6y-M9RZcn60w","meetingId":"818 0787 9405","passcode":"424441.","phone":"719) 359-4580"},
 
   "mv|2026-10-07|Town Council Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"},
+    {"sv":4,"agendaUrl":"https://townofmountainvillage.com/site/assets/files/50049/october_7-_2026_special_town_council_meeting_agenda.pdf","zoomUrl":"https://us06web.zoom.us/webinar/register/WN_xT2roTghSA6GOZPQ43l6pw"},
 
   "telluride|2026-10-07|Ecology Commission - Oct 07 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8119","sv":4,"zoomUrl":"https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1","phone":"970-728-2496"},
@@ -830,7 +815,10 @@ const MEETING_PREVIEWS = {
     "Council is expected to discuss a proposed intergovernmental agreement with the Ouray County Sheriff's Office for full law enforcement services, including a review of associated cost estimates. The session will include presentations, public comment, and joint deliberations with county commissioners on potential next steps.",
 
   "ouraycity|2026-10-05|Ouray City Council Regular Meeting":
-    "Council is expected to receive a final report on the city's 150th celebration, hear an update on a South Ouray erosion control project, and consider resolutions related to a CDOT agreement and the Revitalizing Main Street project. Budget publication authorization and liquor license renewals are also on the agenda."
+    "Council is expected to receive a final report on the city's 150th celebration, hear an update on a South Ouray erosion control project, and consider resolutions related to a CDOT agreement and the Revitalizing Main Street project. Budget publication authorization and liquor license renewals are also on the agenda.",
+
+  "mv|2026-10-07|Town Council Meeting":
+    "Council is expected to review the 2027 budget during a special session, covering general fund revenues, administration, capital planning, public safety, child development, economic development, tourism, transportation, parking, gondola services, and community grants."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1062,24 +1050,12 @@ const SMC_ALERTS = [
 const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-10-02';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-10-03';
 const LEGAL_NOTICES_CACHE_DATE = '2026-10-02';
 
 const MANUAL_SUMMARIES = {
   "med|2026-09-11|Board Work Session":
     "A single-item work session: a presentation from CommonSpirit Health on a potential partnership with the Telluride Hospital District. No packet or supporting materials are posted ahead of the session, so the scope and terms of what's being discussed aren't yet public -- worth watching given the board's ongoing Letter of Intent talks with CommonSpirit on the new facility project. No board action is scheduled; this is a discussion-only session, held in person and by Zoom.",
-
-  "telluride|2026-09-02|Ecology Commission - Sep 02 2026":
-    "The Ecology Commission takes up three substantive items at this work session. The headliner is a draft ordinance proposing a full phase-out of combustion-powered lawn and garden equipment within Town limits — leaf blowers banned by January 1, 2028, all other covered equipment by January 1, 2030. The draft ordinance cites air quality, noise, and greenhouse gas goals, and points to existing state and utility rebates that could offset roughly half the replacement cost. The Commission is working toward a formal recommendation to Town Council; no vote is taken tonight. Also on the table: initial discussion of the 2027 workplan and a progress review of the 2027 Climate Action Plan update, which serves as the policy backbone for the equipment ban and other upcoming proposals.",
-
-  "telluride|2026-09-02|Commission for Community Assistance, Arts & Special Events - Sep 02 2026":
-    "A working meeting for CCAASE, the Town's grant and events commission. The board continues its 2026 organization interview series — this round brings in Telluride Youth Lacrosse Association, Ah Haa School for the Arts, and the Telluride Council for the Arts and Humanities, each getting five minutes to present before questions. On the action side: a calendar and banner date request from Telluride Chamber Music for the Hanneke Cassel Trio at The Alibi on October 13; banner design approvals for Bear Safety Week and Ah Haa's Artabout; and a letter to Town Council formalizing the commission's 2027 grant budget request. That last item follows the board's August 5 vote — held flat at $696,750 total ($277,415 arts and special events, $419,335 community support) in recognition of the Town's decreased revenue projections.",
-
-  "telluride|2026-09-02|Telluride Housing Authority Subcommittee - Sep 02 2026":
-    "Three months of draft minutes — June, July, and August — come up for approval together, which is itself a small sign of how thinly stretched these oversight bodies can run. The substantive work: the Martin exception request returns after being continued from August 5. Lela and Jon Martin own a deed-restricted unit at Gold Run and need a new roof — bid at $47,743.86, or about 17% of their original purchase price. Their deed restriction caps staff-approvable capital improvements at 5% of OPP (~$13,960), and allows more only if the work 'increases the unit's capacity to house additional occupants' — a standard staff acknowledges the roof replacement doesn't meet, even while recommending approval. The subcommittee will work through that tension. A worksession on 'subpar bedroom' occupancy exceptions follows. Most consequentially, the group will set a date for a special meeting on housing waitlist policies and the recent suspension of the waitlist — that last item touches something a lot of people in this valley are watching closely.",
-
-  "county|2026-09-02|Board of County Commissioners Meeting":
-    "A short meeting with two substantive items. On the housing side, the BOCC — sitting as the San Miguel County Housing Authority — will ratify a policy change at Pinion Park that adjusts income eligibility to 80% AMI. That kind of threshold shift quietly determines who qualifies for a unit, which matters a great deal in a valley where the gap between market rate and what workers can actually pay keeps widening. On the administrative side, the board will consider appointing Commissioner Anne Brown as the county's voting representative for the Colorado Counties Inc. 2027 Legislative Agenda — a routine designation, but one that shapes how county priorities get carried to the Capitol. There's also a proclamation declaring September Suicide Prevention Month through Thrive Community Health Network.",
 
   "mv|2026-09-03|Design Review Board":
     "One item worth noting on this September 3rd Design Review Board agenda: a conditional-use permit review for a temporary tent and food truck at 332 Adams Ranch Rd (Lots OSP-35-B & OSP-35-C), which goes to the DRB for a recommendation to Town Council. There's also a general easement encroachment review at 140 Cortina Dr and an informational session on Pond Plaza with staff and Design Workshop. The 15-unit employee apartment building at 306 Adams Ranch Rd — the one item of broader housing consequence — is being continued to the October 1st meeting. The remainder of the agenda is single-family and detached condominium architecture reviews.",
@@ -1177,9 +1153,6 @@ const MANUAL_SUMMARIES = {
   "county|2026-09-15|Housing Code Update SSR":
     "The Stakeholder Strategic Roundtable (SSR) working group convenes for its eighth session on the San Miguel County Housing Code Update — a Proposition 123-funded effort to strip out Land Use Code provisions that slow workforce and affordable housing production in unincorporated areas of the county. The two-hour working session zeroes in on the proposed Community Housing Zone, refining draft code recommendations that will eventually go to the BOCC and Planning Commission as formal redlines. Earlier sessions produced a handful of majority-consensus positions: allowing multiple ADUs on larger lots when the bonus unit is deed-restricted for workforce housing; reducing side setbacks to 10 feet in Medium and High Density zones; and preserving by-right density at 1 DU/35 acres while routing additional density exclusively through a workforce housing bonus track — with free-market development required to go through PUD. A range of other ideas, including RV/camper housing, parking reductions, and a TDR program, were set aside for now.",
 
-  "ouray|2026-09-02|PM - Note: Virtual/Zoom meeting only!  The Planning Commission will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (packet materials are attached to the agenda)":
-    "Ouray County's Planning Commission meets virtually on September 2 for a work session on possible changes to the Land Use Code, Section 2 — Definitions. Work sessions like this one are where the real shaping happens, before anything goes to a public hearing. The specific definition changes under discussion aren't detailed in the posted notice, but packet materials are attached to the agenda for anyone who wants to dig in ahead of the meeting.",
-
   "county|2026-09-28|Open Space Commission Meeting":
     "The September 28, 2026 Open Space Commission Meeting agenda hasn't been posted yet.",
 
@@ -1211,13 +1184,13 @@ const MANUAL_SUMMARIES = {
     "The September 8th Norwood Water Commission meeting has been rescheduled to Tuesday, September 22, 2026, at 6:30 p.m. at Norwood Town Hall.",
 
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026":
-    "The October 5, 2026 Open Space Commission agenda hasn't been posted yet.",
+    "The Open Space Commission meets October 5 at 4:00 PM in hybrid format at Rebekah Hall. Three substantive items are on the table: a discussion with the Town Manager about the 2027 municipal budget as it relates to open space; an update on the Valley Floor Signage Project's first phase implementation and next steps; and a debrief following the Bear Creek Preserve Zone 1 Restoration Plan site walk. The Valley Floor and Bear Creek are two of the town's most consequential public lands — how they're maintained, signed, and restored touches questions that surface at nearly every open space meeting.",
 
   "telluride|2026-10-06|Town Council - Oct 06 2026":
     "The morning work session takes up automated license plate reader cameras — the Flock Safety system — with Chief Marshal Josh Comte presenting. That's a conversation worth watching; ALPR technology tends to generate real debate about privacy and public safety wherever it lands. On the formal agenda, Council holds a public hearing on extending the vesting period for property rights at 221 W Colorado, a project whose Certificate of Appropriateness expires October 18. Second reading of an ethics code amendment (Municipal Code Chapter 2, Article 4) is also up for a vote. Board appointments fill seats on both the Planning and Zoning Commission and HARC. The afternoon closes with the Town Attorney evaluation in executive session.",
 
   "mv|2026-10-07|Town Council Meeting":
-    "The October 7, 2026 Mountain Village Town Council Meeting agenda hasn't been posted yet.",
+    "This all-day special meeting is Mountain Village's annual budget work session — a deep dive into the 2027 budget across every department before formal adoption later in the year. The morning covers general fund revenues, administration, and the capital plan. After lunch, the focus shifts to economic development, the Tourism Fund, the Telluride Conference Center, and planning and development services. Transportation and parking — including gondola and chondola operations — get their own block, as do community grants and parks and recreation. The final stretch is the one to watch: Public Works runs through roads, water, and sewer, and then the Mountain Village Housing Authority walks through the Affordable Housing Development Fund, the Mortgage Assistance Fund, and Village Court Apartments. The session closes with the council acting as board for the dissolved Mountain Village Metropolitan District to address its debt service.",
 
   "telluride|2026-10-07|Ecology Commission - Oct 07 2026":
     "The October 7 Ecology Commission meeting has one substantive item: a work session on the Community Resilience & Wellbeing focus area of Telluride's 2022 Climate Action Plan. The CAP — adopted in April 2022, the third iteration after plans in 2006 and 2014 — sets a goal of carbon neutrality by 2040. This session picks up where September left off, when the Commission also floated 2027 workplan ideas including a dark sky initiative, a fuel-burning landscaping equipment ban, an e-waste depot, and research into geothermal and thermal energy networks. Routine minutes approval from the September 2 meeting is also on the agenda.",
@@ -2527,6 +2500,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "FTC settles with Southern Glazer's over claim it discriminated against smaller alcohol sellers",
+    source: "Telluride Times",
+    date: "October 2, 2026",
+    firstSeen: "2026-10-03",
+    newsTopic: "community",
+    copy: "The FTC settled with Southern Glazer's — which distributes one in three bottles of wine and spirits sold in the U.S. — over claims it gave better pricing to big chains like Total Wine and Walmart than to smaller nearby stores. Under the deal, Southern Glazer's must compensate smaller retailers when a monitor finds they paid more than a competing chain for the same products. An independent monitor will oversee compliance for six years; Southern Glazer's admitted no wrongdoing.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_ffcc3d8c-796c-53fc-a554-ca9a7fb99d80.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Mountain Village appoints Michael Bouchard as new town manager",
     source: "Telluride Times",
     date: "October 2, 2026",
@@ -3423,54 +3408,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Telluride Town Council to hold work session on Flock cameras",
-    source: "Telluride Times",
-    date: "September 19, 2026",
-    firstSeen: "2026-09-19",
-    newsTopic: "government",
-    copy: "Two Flock ALPR cameras have been operating in Telluride since 2024, recording license plates and basic vehicle details — no facial recognition, no individual identification. Town Council will hold a formal work session Oct. 6 to weigh the technology's benefits against concerns about third-party data access and potential misuse beyond local law enforcement.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_7ba356ab-7312-41be-9b1d-108220d2f7c4.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/9f/89f9e69a-70b8-481a-8e25-c00185d17852/6aac0965627f0.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Paint My Mailbox Blues & Brews",
-    source: "Telluride Times",
-    date: "September 19, 2026",
-    firstSeen: "2026-09-19",
-    newsTopic: "arts-culture",
-    copy: "TajMo — the Grammy-winning duo of Taj Mahal and Keb' Mo' — headlines Blues & Brews Saturday night, touring behind their second album together, \"Room on the Porch.\" The two play a wide range of instruments and may strip it down to just the two of them at points during the set.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/gallery/article_881bdba9-49c1-41dc-8373-907e9e7a5962.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/27/62721eee-e618-43d3-9838-d8ee38bcd4a3/6aaeb69dc331b.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "‘A festival can do more than entertain a community’",
-    source: "Telluride Times",
-    date: "September 19, 2026",
-    firstSeen: "2026-09-19",
-    newsTopic: "arts-culture",
-    copy: "At Blues & Brews this weekend, a group called JABOR — live event professionals who've been doing disaster relief for 20 years — will assemble 200 emergency go-kits at the festival grounds. The kits, valued around $115 each, go free to low-income and vulnerable households in Ouray, San Miguel, and Montrose counties. Festivalgoers can help pack them on-site.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_d0c68d7d-8248-4a0b-b3c0-b8fd7c358896.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/e8/4e8d00b4-ee8e-4338-9671-4c240f5350af/6aab776376769.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "3 killed in Navajo Nation flood include 7-year-old preparing for her birthday",
-    source: "Telluride Times",
-    date: "September 19, 2026",
-    firstSeen: "2026-09-19",
-    newsTopic: "public-safety",
-    copy: "Three people died Tuesday near Newcomb on the Navajo Nation after floodwaters swept them away during monsoon storms — a grandmother, her 7-year-old granddaughter, and a friend who came to help. Roads across the region remain closed, families are stranded, and the Navajo Nation President has declared a state of emergency.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_62cb8205-ca33-5541-a01a-9abe1724cb7e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/ea/bea76aa0-ed02-5d11-a6f7-813fb81d7d72/6aaddfad8cd47.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride to Lift All Fire Restrictions",
     source: "Town of Telluride",
     date: "September 17, 2026",
@@ -3701,7 +3638,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "October 2, 2026",
+    date: "October 3, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3712,7 +3649,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "October 2, 2026",
+    date: "October 3, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -4795,7 +4732,19 @@ const ALIBI_EVENTS = [
     sourceLabel: "The Alibi",
     category: "Live Music",
     location: "The Alibi • Telluride, CO",
-    imageUrl: ""
+    imageUrl: "https://ucarecdn.com/1ed1174f-d5a2-4564-a7e3-776e6846870c/-/crop/1294x1295/0,93/-/preview/"
+  },
+  {
+    title: "DYNAMIC (YAK + FLOWMATIC B2B)",
+    link: "https://www.alibitelluride.com/calendar#eca-event=dynamic-yak-flowmatic-b2b",
+    description: "DYNAMIC is a late-night DJ event at The Alibi featuring a back-to-back set from YAK and Flowmatic. The B2B format puts two DJs sharing the decks together for an extended collaborative performance.",
+    pubDate: "2026-10-03",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/2bec99f8-344b-4a8a-a334-78b218c93ed1/-/crop/1080x1081/0,234/-/preview/"
   },
   {
     title: "Hanneke Cassel Trio - Telluride Chamber Music",
@@ -6980,30 +6929,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/44554/img_0071.800x533.webp"
   },
   {
-    title: "Historic Walking Tour",
-    link: "https://www.telluride.com/event/historic-walking-tour/",
-    description: "Take a historic tour of Telluride on foot! These historic walking tours are led by historian Ashley Boling, and leave …",
-    pubDate: "2026-06-02",
-    endDate: "2026-10-01",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/48069/walkingtour_tabloidsize_2021.800x533.webp"
-  },
-  {
-    title: "Telluride Art Walk",
-    link: "https://www.telluride.com/event/telluride-art-walk/",
-    description: "The Telluride Art Walk is a lively monthly celebration of art, community, and creativity in downtown Telluride and …",
-    pubDate: "2026-06-04",
-    endDate: "2026-10-01",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/36708/artwalk-2200x1237.800x533.webp"
-  },
-  {
     title: "Live Music at Alloy Kitchen",
     link: "https://www.telluride.com/event/live-music-at-alloy-kitchen/",
     description: "Free live music all season long. Alloy Kitchen at Mountain Lodge Telluride hosts a rotating lineup of local favorites - …",
@@ -7086,17 +7011,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/28484/download_1.800x533.webp"
-  },
-  {
-    title: "Ken Gentry & the Companions",
-    link: "https://www.telluride.com/event/ken-gentry-the-companions/",
-    description: "Rooted in the soulful grit of a St. Louis upbringing and refined by the clarity of Colorado's Western Slope, Ken Gentry …",
-    pubDate: "2026-10-01",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63484/screenshot_2026-09-02_at_12_42_42_pm.800x533.webp"
   },
   {
     title: "Pink Talking Fish",
@@ -9248,10 +9162,11 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "October 5, 2026",
     title: "Open Space Commission",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "4:00 PM",
-    civicwebId: 8132
+    civicwebId: 8132,
+    packetUrl: "https://telluride-co.civicweb.net/document/445813/"
   },
   {
     date: "October 6, 2026",

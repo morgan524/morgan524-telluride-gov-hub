@@ -6,33 +6,6 @@
     "meetingId": "839 7545 5041",
     "passcode": "388003"
   },
-  "telluride|2026-09-02|Ecology Commission - Sep 02 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1",
-    "phone": "970-728-3071"
-  },
-  "telluride|2026-09-02|Commission for Community Assistance, Arts & Special Events - Sep 02 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/tZ0pc-ChqDwsGNFpPigfqqLQptmoMmpJdiOx"
-  },
-  "telluride|2026-09-02|Telluride Housing Authority Subcommittee - Sep 02 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/j/83022451705?pwd=Lj8jkLF9GQny7CWBqvP8IYkQhviQBb.1",
-    "meetingId": "830 2245 1705",
-    "passcode": "229528.",
-    "phone": "719) 359-4580"
-  },
-  "county|2026-09-02|Board of County Commissioners Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/887/files/agenda/1980",
-    "zoomUrl": "https://us02web.zoom.us/meeting/register/Yn2gLRVBQmaLhCboss4rJw",
-    "meetingId": "874 3946 5050",
-    "passcode": "885643",
-    "phone": "719-359-4580"
-  },
   "mv|2026-09-03|Design Review Board": {
     "sv": 4,
     "agendaUrl": "https://townofmountainvillage.com/site/assets/files/49787/september_3-_2026_design_review_board_meeting_agenda.pdf",
@@ -220,10 +193,6 @@
     "meetingId": "880 5366 0816",
     "passcode": "616389"
   },
-  "ouray|2026-09-02|PM - Note: Virtual/Zoom meeting only!  The Planning Commission will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (packet materials are attached to the agenda)": {
-    "agendaUrl": "https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1016",
-    "sv": 4
-  },
   "county|2026-09-28|Open Space Commission Meeting": {
     "sv": 4,
     "ph": "1ff606174e68cca5"
@@ -293,7 +262,10 @@
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132",
     "sv": 4,
-    "ph": "606a000116078bce"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/ePrh_CzmTLKqp0syEbUesw",
+    "meetingId": "894 7506 0147",
+    "passcode": "314276.",
+    "phone": "719) 359-4580"
   },
   "telluride|2026-10-06|Town Council - Oct 06 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044",
@@ -305,7 +277,8 @@
   },
   "mv|2026-10-07|Town Council Meeting": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/50049/october_7-_2026_special_town_council_meeting_agenda.pdf",
+    "zoomUrl": "https://us06web.zoom.us/webinar/register/WN_xT2roTghSA6GOZPQ43l6pw"
   },
   "telluride|2026-10-07|Ecology Commission - Oct 07 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8119",
