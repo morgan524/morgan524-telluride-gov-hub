@@ -60,7 +60,11 @@ const WATCH_OVERRIDES = {
                'gondola.*(funding|ballot|iga|agreement|lawsuit|appeal|extension|study|mountain village)',
                'smart.*(gondola|appeal|ballot)']
   },
-  code: { sources: ['telluride', 'county'] } // the dive covers Telluride + SMC code reform, not other towns'
+  code: { sources: ['telluride', 'county'] }, // the dive covers Telluride + SMC code reform, not other towns'
+  carhenge: { // bare 'lot l' matched "lot line adjustment" on a County agenda (Lawson Hill, 2026-10-07)
+    keywords: ['carhenge', 'shandoka', '\\blot l\\b', 'chair 7', 'c7cc',
+               '700 w pacific', 'lift 7 neighborhood', 'southwest area plan', 'swap']
+  }
 };
 
 function topicRegexes() {
@@ -182,7 +186,7 @@ function run(repoRoot) {
   return out;
 }
 
-module.exports = { run };
+module.exports = { run, topicRegexes, matchTopics };
 
 if (require.main === module) {
   run(process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..'));
