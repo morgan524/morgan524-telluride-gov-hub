@@ -2510,6 +2510,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "‘We’re there if you need us’",
+    source: "Telluride Times",
+    date: "October 3, 2026",
+    firstSeen: "2026-10-03",
+    newsTopic: "public-safety",
+    copy: "In 2021, my then 14-year-old son Hudson was in a serious mountain biking accident in Telluride. Care from first responders saved his life. Weeks after the accident, I met with one of the EMTs who had helped Hudson and he…",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/article_8300070c-703f-4284-8dc3-a175629e04b7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/ef/9efb2edd-c0c2-488e-b768-14145689cba0/6abccaa99388e.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Meet the air traffic controller who flies himself to work",
     source: "Telluride Times",
     date: "October 3, 2026",
@@ -3461,15 +3473,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "(September 16, 2026) – Following improved fire conditions across the region and in alignment with San Miguel County, the Town of Telluride will lift all fire restrictions effective at 12:01 a.m. MT on Friday, September 18, 2026.",
     href: "https://www.telluride.gov/CivicAlerts.aspx?aid=405",
     img: ""
-  },
-  {
-    title: "Town Council Proclaims September 7-11 Black Bear Safety Week",
-    source: "Town of Telluride",
-    date: "September 3, 2026",
-    newsTopic: "government",
-    copy: "(September 3, 2026) — Town Council on Tuesday proclaimed September 7-11 Black Bear Safety Week, arriving in a year when a dry spring and summer have left black bears across Colorado with far less to eat in the wild.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=404",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15663"
   },
   {
     title: "San Miguel County Public Health Announces Fall Vaccine Availability",
@@ -6383,6 +6386,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/new-with-weehawken-beat-step-west-african-dance-drum-body-percussion-with-performances-in-the-nutcracker-remixed",
     description: "Beat & Step: West African Dance, Drum & Body Percussion is an energetic and interactive class that combines traditional West African dance, drumming, and body percussion into one exciting experience. Students will learn dance combinations, explore traditional drumming rhythms that tell stories, and create music using their hands, feet, body, drums, and voice. Along the way, they'll develop coordination, rhythm, musicality, focus, memory, confidence, and teamwork while experiencing the rich cultural traditions of West Africa. No previous dance or music experience is required—just curiosity, energy, and a willingness to learn. Students enrolled in this performance class will showcase what they've learned in our winter production. Dress Code: Students should wear comfortable clothing that allows for plenty of movement. Athletic clothing such as T-shirts, leggings, athletic pants, or shorts is recommended. Please avoid jeans or restrictive clothing. Wear comfortable athletic shoes or sneakers that are clean and reserved for class. …",
     pubDate: "2026-11-25T23:00:00.000Z",
+    endDate: "2026-12-02",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6410,6 +6414,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Annex on Cora",
     imageUrl: "https://localist-images.azureedge.net/photos/53780434962919/huge/3aff831f26d7f9d4824893f89d8fd88416047a44.jpg"
+  },
+  {
+    title: "AFTER SCHOOL ART FOR AGES 8-12",
+    link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-8-12-7427",
+    description: "AFTER SCHOOL ART FOR AGES 8-12 Wednesdays, 3:15–4:45 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 16 – October 7Session 2 (4 weeks • $85): October 21 – November 11Session 3 (3 weeks • $70): December 2 – December 16Each week, students will explore an exciting theme while experimenting with a wide range of materials and techniques. Drawing inspiration from well-known artists and design styles, young artists will be supported in discovering their own unique creative voice in a fun, nurturing, studio-like setting. These classes are designed to foster a love of the arts through hands-on exploration, age-appropriate projects, and a focus on the joy of the creative process. A student art reception will be held in December. Students will take home their collected works in the days following the event. …",
+    pubDate: "2026-12-02T22:15:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Annex on Cora",
+    imageUrl: "https://localist-images.azureedge.net/photos/53780624349826/huge/2ad5a3657f19d47b14c7833f838ac040c0836f38.jpg"
   }
 ];
 

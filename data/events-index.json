@@ -2336,7 +2336,8 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Beat & Step: West African Dance, Drum & Body Percussion is an energetic and interactive class that combines traditional West African dance, drumming, and body percussion into one exciting experience. Students will learn dance combinations,…",
-    "type": "Music"
+    "type": "Music",
+    "endDate": "2026-12-02"
   },
   {
     "title": "Floating Lotus Music Bingo – November & December 2026",
@@ -2362,6 +2363,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "TODDLER STORYTIME ART FOR AGES 2.5-5 Wednesdays, 10:00am–11:00am Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $70): September 16 – October 7Session 2 (4 weeks • $70): October 21 – November…",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "AFTER SCHOOL ART FOR AGES 8-12",
+    "href": "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-8-12-7427",
+    "date": "2026-12-02",
+    "time": "3:15 PM",
+    "location": "The Annex on Cora",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53780624349826/huge/2ad5a3657f19d47b14c7833f838ac040c0836f38.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "AFTER SCHOOL ART FOR AGES 8-12 Wednesdays, 3:15–4:45 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 16 – October 7Session 2 (4 weeks • $85): October 21 – November 11Session 3…",
     "type": "Arts & Film"
   },
   {
