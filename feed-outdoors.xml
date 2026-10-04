@@ -6,20 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-outdoors.xml" rel="self" type="application/rss+xml" />
     <description>Hikes, races, ski events, and stewardship days — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Oct 2026 14:48:41 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2026 18:37:56 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Sun, Oct 4] Telluride Leadership Summit</title>
-      <link>https://koto.org/event/telluride-leadership-summit/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20leadership%20summit%7C2026-10-04</guid>
-      <pubDate>Sun, 04 Oct 2026 06:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/09/Picture1.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-
-A multi-day leadership summit hosted by Leadership Landing, running October 4–6 at the Madeline Hotel in Telluride. Full program details and registration information are available at TellurideLeadershipSummit.com.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/09/Picture1.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
     <item>
       <title>[Sun, Oct 4] Nature Nurture-Fall Colors</title>
       <link>https://telluridelibrary.libcal.com/event/17482295?hs=a</link>
@@ -213,18 +201,6 @@ The San Miguel County Planning Commission meets October 8 for a session that spa
 The October 8, 2026 SMART Board of Directors agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>SMART Transit</category>
-    </item>
-    <item>
-      <title>[Fri, Oct 9] Ridgway Farmer&apos;s Market</title>
-      <link>https://koto.org/event/ridgway-farmers-market/2026-10-09/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/ridgway%20farmer%20s%20market%7C2026-10-09</guid>
-      <pubDate>Fri, 09 Oct 2026 16:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Hartwell Park Ridgway
-
-The Ridgway Farmers Market is a weekly Friday outdoor market held at Hartwell Park in downtown Ridgway, running from late May through mid-October, 10 a.m. to 2 p.m. The market features local produce, artisan vendors, and live music on the last Friday of each month.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
   </channel>
 </rss>

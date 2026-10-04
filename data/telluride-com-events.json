@@ -62,7 +62,7 @@
   {
     "title": "Gaiascope Saturday Sessions",
     "link": "https://www.telluride.com/event/gaiascope-saturday-sessions/",
-    "description": "Gaiascope Saturday Sessions is a recurring weekly event featuring live music and kaleidoscope art. Taking place each Saturday, the event brings together sound and visual art in a community gathering format in Telluride.",
+    "description": "Gaiascope Saturday Sessions Live music + Kaleidoscope art every Saturday.",
     "pubDate": "2026-09-12",
     "endDate": "2026-10-03",
     "source": "telluride-com",
@@ -209,6 +209,18 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63340/hanneke_cassel.800x533.webp"
+  },
+  {
+    "title": "Telluride Horror Show",
+    "link": "https://www.telluride.com/event/telluride-horror-show/",
+    "description": "The Telluride Horror Show, Colorado's first and largest horror film festival, returns for its 17th edition October 16 - …",
+    "pubDate": "2026-10-16",
+    "endDate": "2026-10-19",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/28873/152294600242caf78680.800x533.webp"
   },
   {
     "title": "Lamplight Cemetery Tour",
