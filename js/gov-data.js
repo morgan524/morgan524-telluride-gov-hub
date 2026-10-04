@@ -1237,7 +1237,7 @@ const WHY_THIS_MATTERS = [
 
   // ── Gondola / SMART ──
   {
-    match: /gondola|smart\s*board|smart\s*transit/i,
+    match: /gondola(?!\s+plaza)|smart\s*board|smart\s*transit/i,   // not Gondola Plaza vending items
     decision: 'SMART Board decisions regarding gondola operations, maintenance, capital planning, or the future of the free gondola connecting Telluride and Mountain Village.',
     who: 'Every commuter, worker, and visitor who uses the gondola, plus all property taxpayers in the SMART district.',
     stage: 'Check agenda for specific action items.',
@@ -1834,9 +1834,9 @@ const TELLURIDE_FESTIVALS = [
   { name: 'Telluride Food + Vine', month: 5, dayStart: 12, dayEnd: 14, icon: '🍷',
     logo: 'https://cdn.prod.website-files.com/63e3b404578d3e63abef7364/69b1ded759adc5521903fd3e_TFV%20Logo%20Full%E2%84%A2.svg',
     url: 'https://www.telluridefoodandvine.com/', ticketUrl: 'https://www.telluridefoodandvine.com/events', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: '2026 Weekend Pass and featured events available' },
-  { name: 'Telluride Horror Show', month: 9, dayStart: 9, dayEnd: 12, icon: '🎃',
+  { name: 'Telluride Horror Show', month: 9, dayStart: 16, dayEnd: 18, icon: '🎃',   // Oct 16–18, 2026 per telluridehorrorshow.com (checked 2026-10-04; was 9–12)
     logo: 'https://images.squarespace-cdn.com/content/v1/635aaf48434dcc204d4bfb34/762ca493-d7d2-459e-86a2-214c641c3695/HorrorShowLogoColor_STRAIGHT.png',
-    url: 'https://www.telluridehorrorshow.com/', ticketUrl: 'https://www.telluridehorrorshow.com/', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: '3-day passes on sale Mar 25 — 6-packs on sale Jul 1, 2026' },
+    url: 'https://www.telluridehorrorshow.com/', ticketUrl: 'https://www.telluridehorrorshow.com/', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: 'Passes and 6-packs on sale now' },
   { name: 'Telluride Jazz Festival', month: 7, dayStart: 7, dayEnd: 10, icon: '🎷',
     logo: 'https://images.squarespace-cdn.com/content/v1/583db0c9d1758e46ff3221e9/821ecb11-5000-415a-a970-87b539036111/2026-ebony-color-logo-png-for-website-no-dates.png?format=1500w',
     url: 'https://www.telluridejazz.org/', ticketUrl: 'https://www.telluridejazz.org/tickets', ticketLabel: 'Buy Tickets', ticketStatus: 'on-sale', promo: 'Tickets on sale now — Tier 1 pricing until July 15' },

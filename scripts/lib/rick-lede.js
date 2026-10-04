@@ -68,7 +68,11 @@ function ledePrompt({ meetings, events }) {
   // Morgan 2026-09-30: a line break after each summarized day. The paragraphs
   // are separated by a newline inside the JSON string; weekly-email.js renders
   // each one on its own line.
-  const byDay = ' Separate the day paragraphs with a single newline character (\\n) inside the "lede" string; do not put two days in one paragraph.';
+  // 2026-10-04: "the curtain goes up on Not-So-Young People's Theater presents
+  // Shrek The Musical" — an event title of the form "X presents Y" read as a
+  // broken sentence when dropped into prose.
+  const titles = ' When an event title has the form "X presents Y", write it as "X\'s Y" or "Y from X" so the sentence reads naturally (e.g. **Shrek The Musical** from Not-So-Young People\'s Theater).';
+  const byDay = titles + ' Separate the day paragraphs with a single newline character (\\n) inside the "lede" string; do not put two days in one paragraph.';
   const spec = 'a plain-prose intro that orients a busy local (120-200 words), written DAY BY DAY in date order: one short paragraph per day that has a meeting or event worth mentioning, each opening with that day (e.g. "Monday, …"). Give the single biggest or most important meeting of the week the most weight within its day, cover the other consequential meetings on their days, and fold in three or so events "on the lighter side" on theirs. Aim to name most of the meetings and several events, not just one or two.' + style + byDay;
   const parts = [
     RICK_VOICE,

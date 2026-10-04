@@ -35,3 +35,28 @@ test('variant keeps one region copy and unhides it', () => {
   assert.strictEqual(variant(html, 1), 'aALLz');
   assert.strictEqual(variant(html, 3), 'aWz');
 });
+
+const { applyTextFixes, textOf } = require('../digest-review.js');
+
+test('a text fix is applied inside text nodes, to every copy, never to markup', () => {
+  const html = '<div>WHEN? Doors at 6:30</div><a href="x">WHEN? Doors at 6:30</a><style>.WHEN{}</style>';
+  const issues = [{ fix: { find: 'WHEN? Doors', replace: 'Doors' } }];
+  const out = applyTextFixes(html, issues);
+  assert.strictEqual(out, '<div>Doors at 6:30</div><a href="x">Doors at 6:30</a><style>.WHEN{}</style>');
+  assert.ok(issues[0].fixed);
+});
+
+test('a fix that is not found exactly, or would add markup, is left alone', () => {
+  const issues = [{ fix: { find: 'not here at all', replace: 'x' } }, { fix: { find: 'Doors at', replace: '<b>Doors</b> at' } }];
+  assert.strictEqual(applyTextFixes('<p>Doors at 6:30</p>', issues), '<p>Doors at 6:30</p>');
+  assert.ok(!issues[0].fixed && !issues[1].fixed);
+});
+
+test('non-ASCII text survives a fix as numeric entities', () => {
+  const out = applyTextFixes('<p>Theater&#8217;s show &#8212; tonight</p>', [{ fix: { find: 'show', replace: 'musical' } }]);
+  assert.strictEqual(out, '<p>Theater&#8217;s musical &#8212; tonight</p>');
+});
+
+test('text extraction joins a word bolded in two pieces', () => {
+  assert.ok(textOf('<div>Restoration <strong>Pl</strong>an site walk</div>').includes('Restoration Plan site walk'));
+});

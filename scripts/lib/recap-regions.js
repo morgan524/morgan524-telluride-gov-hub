@@ -57,7 +57,10 @@ function shortRecap(text, max = 230) {
     out += s;
   }
   out = out.trim() || t;
-  if (out.length > max + 30) out = out.slice(0, max).replace(/\s+\S*$/, '') + '…';
+  // A long first sentence is kept whole up to ~320 characters rather than cut
+  // mid-phrase ("…into a single parcel at…", 2026-10-04); past that, cut at a
+  // word boundary.
+  if (out.length > Math.max(max + 30, 320)) out = out.slice(0, max).replace(/\s+\S*$/, '') + '…';
   return out;
 }
 

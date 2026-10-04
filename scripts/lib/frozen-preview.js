@@ -29,12 +29,12 @@ let html;
 try { html = read(d.file); } catch { console.error(`[frozen-preview] missing ${d.file}`); process.exit(3); }
 
 let issues = [];
-try { const rep = JSON.parse(read('digest/review.json')); issues = ((rep.digests || []).find((x) => x.key === key) || {}).issues || []; } catch (_) {}
+try { const rep = JSON.parse(read('digest/review.json')); issues = (((rep.digests || []).find((x) => x.key === key) || {}).issues || []).filter((x) => !x.fixed); } catch (_) {}
 const esc = (s) => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const list = issues.length
-  ? '<br><span style="font-weight:400;">The early-morning review found ' + issues.length + ' item' + (issues.length === 1 ? '' : 's') + ' to check:</span><ul style="margin:6px 0 0;padding-left:18px;font-weight:400;">' +
+  ? '<br><span style="font-weight:400;">The early-morning review fixed what it could; ' + issues.length + ' item' + (issues.length === 1 ? ' needs' : 's need') + ' your judgment:</span><ul style="margin:6px 0 0;padding-left:18px;font-weight:400;">' +
     issues.slice(0, 12).map((x) => `<li>${esc(x.severity.toUpperCase())}: ${esc(x.where)} &mdash; ${esc(x.problem)}</li>`).join('') + '</ul>'
-  : '<br><span style="font-weight:400;">The early-morning review found no issues.</span>';
+  : '<br><span style="font-weight:400;">The early-morning review left nothing for you to check.</span>';
 const banner = `  <tr><td style="background:#a8401f;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;color:#fff;line-height:1.5;">REVIEWED DRAFT &mdash; ${esc(d.name)}, sending Monday 9:00 AM once approved. The bot will not change it before then.${list}<br><a href="https://livabletelluride.org/digest/review.html" style="color:#ffe4c4;font-weight:700;text-decoration:underline;">Full review report</a> &middot; <a href="https://livabletelluride.org/digest-review.html" style="color:#ffe4c4;font-weight:700;text-decoration:underline;">Edit or approve at the Review Desk &rarr;</a></td></tr>\n`;
 
 // Show only the everyone copy (hidden regional copies stay hidden in mail

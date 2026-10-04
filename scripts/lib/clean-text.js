@@ -59,8 +59,25 @@ function placeholderIsCurrent(isPlaceholder, priorFingerprint, currentFingerprin
   return !!isPlaceholder && !!priorFingerprint && priorFingerprint === currentFingerprint;
 }
 
+// Event pages built as a labeled form ("WHEN? Wednesday… WHERE? Wright Opera
+// House… RUN TIME: … ABOUT THE FILM A Monster Calls follows…") came through
+// with the raw labels as the card text (2026-10-04 Week Ahead). When there is
+// an "ABOUT …" section, that is the description; otherwise drop the labels.
+// Only applies when a WHEN?/WHERE? label is present, so ordinary prose is
+// never touched.
+function stripFormLabels(s) {
+  s = String(s == null ? '' : s);
+  if (!/\b(?:WHEN|WHERE)\?(?:\s|$)/.test(s)) return s;
+  const about = s.match(/\bABOUT(?: THE (?:FILM|MOVIE|EVENT|SHOW|PROGRAM|CONCERT|PERFORMANCE))?\s+(?=[A-Z])/);
+  if (about && s.length - (about.index + about[0].length) > 40) return s.slice(about.index + about[0].length).trim();
+  return s.replace(/\b(?:WHEN|WHERE|WHO|WHAT|COST|TICKETS)\?\s*/g, '')
+    .replace(/\b(?:RUN TIME|RATING|ROTTEN TOMATOES SCORE|COST|TICKETS|ADMISSION):\s*/g, '')
+    .replace(/\s+/g, ' ').trim();
+}
+
 module.exports = {
   stripDescPreamble,
+  stripFormLabels,
   isPlaceholderSummary,
   summaryInputFingerprint,
   placeholderIsCurrent,

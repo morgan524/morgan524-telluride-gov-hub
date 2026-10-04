@@ -5,14 +5,15 @@ name: Digest Sunday Review
 #   1. render both digests fresh from the latest data (digest-refresh.yml),
 #   2. review them with scripts/digest-review.js — every link fetched, every
 #      date badge checked against its weekday and window, recap links checked,
-#      plus an editorial read by Claude — and commit the report to
-#      digest/review.{md,html,json},
+#      plus an editorial read by Claude — and APPLY the exact text fixes it
+#      proposes (typos, wrong words, leftover labels). Anything that needs
+#      judgment stays in the report at digest/review.{md,html,json}, which the
+#      Sunday preview banner lists. No report email (Morgan, 2026-10-04),
 #   3. write digest/freeze.json: until Monday 21:00 UTC (3 PM MDT / 2 PM MST)
 #      digest-refresh.yml will not re-render either digest, so what Morgan
 #      reviews Sunday afternoon is what was reviewed. Review Desk edits and
 #      approvals still save (they go through the digest Worker, not the bot),
-#   4. email the report to info@.
-# Report only: it never edits a digest. Fix findings at the Review Desk.
+# Only text inside the emails is changed; layout and links are never touched.
 on:
   schedule:
     - cron: '0 11 * * 0'   # Sun 11:00 UTC = 5:00 AM MDT (summer)
@@ -21,10 +22,6 @@ on:
     inputs:
       freeze:
         description: 'Freeze the digests until Monday afternoon after reviewing (true/false)'
-        required: false
-        default: 'true'
-      email:
-        description: 'Email the report to info@ (true/false)'
         required: false
         default: 'true'
 
@@ -60,8 +57,6 @@ jobs:
   review:
     needs: render
     runs-on: ubuntu-latest
-    env:
-      PREVIEW_SMTP_PASS: ${{ secrets.PREVIEW_SMTP_PASS }}
     steps:
       - uses: actions/checkout@v5
         with:
@@ -80,6 +75,7 @@ jobs:
       - name: Review both digests
         id: review
         env:
+          APPLY_FIXES: '1'
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           RSS_PROXY_URL: ${{ secrets.RSS_PROXY_URL }}   # link checks for hosts that block GitHub IPs
           FROZEN_UNTIL: ${{ (github.event.inputs.freeze || 'true') == 'true' && 'Monday afternoon (3 PM MT)' || 'not frozen (manual test run)' }}
@@ -108,25 +104,12 @@ jobs:
         run: |
           git config user.name "Gov Hub Bot"
           git config user.email "bot@livabletelluride.org"
-          git add digest/review.md digest/review.html digest/review.json
+          git add digest/review.md digest/review.html digest/review.json digest/week.html
+          [ -f digest/past.html ] && git add digest/past.html
           [ -f digest/freeze.json ] && git add digest/freeze.json
           if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
-          git commit -m "Sunday digest review ${{ steps.win.outputs.week }}: ${{ steps.review.outputs.issues }} issue(s)"
+          git commit -m "Sunday digest review ${{ steps.win.outputs.week }}: ${{ steps.review.outputs.issues }} left to check"
           for i in 1 2 3; do git pull --rebase origin main && git push && break || { echo "push attempt $i failed; retrying"; sleep 10; }; done
-
-      - name: Email the report to info@livabletelluride.org
-        if: env.PREVIEW_SMTP_PASS != '' && (github.event.inputs.email || 'true') == 'true'
-        uses: dawidd6/action-send-mail@v18
-        with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          secure: true
-          username: ${{ secrets.PREVIEW_SMTP_USER }}
-          password: ${{ secrets.PREVIEW_SMTP_PASS }}
-          subject: "Digest review for ${{ steps.win.outputs.week }}: ${{ steps.review.outputs.issues }} issue(s), ${{ steps.review.outputs.high }} high"
-          to: info@livabletelluride.org
-          from: Livable Telluride <${{ secrets.PREVIEW_SMTP_USER }}>
-          html_body: file://digest/review.html
 
       - name: CI health issue
         if: always()

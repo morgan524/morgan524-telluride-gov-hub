@@ -19,7 +19,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-const { stripDescPreamble } = require('./lib/clean-text.js');
+const { stripDescPreamble, stripFormLabels } = require('./lib/clean-text.js');
 const { generateRickLede } = require('./lib/rick-lede.js');
 const { meetingDisplayName, SELF_IDENTIFYING } = require('./lib/meeting-title.js');
 const RR = require('./lib/recap-regions.js');
@@ -212,7 +212,7 @@ for (const name of EVENT_ARRAYS) {
     evts.push({
       title: e.title, date,
       href: e.link || e.href || e.url || '',
-      summary: stripDescPreamble((e.summary || e.copy || e.description || '').replace(/<[^>]+>/g, ' ').replace(/https?:\/\/\S+/g, '').replace(/\*+/g, '').replace(/[\\|]/g, ' ').replace(/\s+/g, ' ').trim()),
+      summary: stripFormLabels(stripDescPreamble((e.summary || e.copy || e.description || '').replace(/<[^>]+>/g, ' ').replace(/https?:\/\/\S+/g, '').replace(/\*+/g, '').replace(/[\\|]/g, ' ').replace(/\s+/g, ' ').trim())),
       time: e.time || '', location: e.location || '', img: resolveEmailImg(e),
       isFestival: !!e.isFestival, source: e.sourceLabel || e.source || name,
     });
@@ -525,8 +525,22 @@ for (const fn of MEETING_FNS) {
     // Match the meeting against WHY_THIS_MATTERS (title + summary + description),
     // exactly like gov-hub.html's getWTMEntry(), so the same land-use / code
     // meetings get the "Why This Matters" highlight in the email.
-    const wtm = getWTMEntry(name + ' | ' + sm + ' | ' + (m.description || ''));
-    meetings.push({ name, date, src, srcKey: m.source || '', summary: trunc(sm, 520), agenda, link: m.link || (SITE + '/gov-hub.html'), hasAgenda: !!agenda, wtm,
+    let wtm = getWTMEntry(name + ' | ' + sm + ' | ' + (m.description || ''));
+    // The card shows ~520 characters of the summary. If the sentence that
+    // triggered the "Why This Matters" box falls past that cut, the reader sees
+    // the box with no visible reason for it (2026-10-04: the gondola box on a
+    // Mountain Village budget session whose gondola line was cut off). Show the
+    // summary through that sentence when it's close enough; otherwise drop the
+    // box.
+    let shown = trunc(sm, 520);
+    if (wtm && !wtm.match.test(name + ' ' + shown)) {
+      const hit = sm.search(wtm.match), end = hit >= 0 ? sm.slice(hit).search(/[.!?](\s|$)/) : -1;
+      const upTo = end >= 0 ? hit + end + 1 : -1;
+      if (upTo > 0 && upTo <= 900) shown = trunc(sm, upTo + 1);
+      // Still not visible (cut off, or only in the raw agenda text) → no box.
+      if (!wtm.match.test(name + ' ' + shown)) wtm = null;
+    }
+    meetings.push({ name, date, src, srcKey: m.source || '', summary: shown, agenda, link: m.link || (SITE + '/gov-hub.html'), hasAgenda: !!agenda, wtm,
       // Carried for the "Add to calendar" button only. eventTimes is the field
       // every get*Meetings() source populates ('' when the body publishes no
       // hour → the calendar entry lands as all-day).
@@ -537,6 +551,32 @@ for (const fn of MEETING_FNS) {
 // 4:00 PM listed above 9:00 AM reads as a mistake). No time sorts last.
 const startMin = (t) => { const x = String(t || '').match(/(\d{1,2}):(\d{2})\s*([AP])M/i); return x ? ((+x[1] % 12) + (/p/i.test(x[3]) ? 12 : 0)) * 60 + +x[2] : 24 * 60; };
 meetings.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0) || (startMin(a.time) - startMin(b.time)));
+
+// A joint session posted by each body it joins (2026-10-05: Ouray County's
+// "Board of County Commissioners Special Joint Work Session" and the City of
+// Ouray's "Ouray City Council Work Session", both 4:00 PM) is one meeting, not
+// two. Same date and start time, different bodies, and one listing says
+// "joint" → keep that one, name the partner, and borrow its agenda if needed.
+for (let i = 0; i < meetings.length; i++) {
+  const a = meetings[i]; if (!a || !/\bjoint\b/i.test(a.name) || startMin(a.time) === 24 * 60) continue;
+  for (let j = 0; j < meetings.length; j++) {
+    const b = meetings[j];
+    if (!b || j === i || b.date !== a.date || startMin(b.time) !== startMin(a.time) || b.srcKey === a.srcKey) continue;
+    // Same start time alone is not enough (a Telluride board also met at 4:00
+    // PM that day): the partner must be in the same region, and its town must
+    // be named in the joint meeting's own title or summary.
+    const sameRegion = RR.REGION_ORDER.some((g) => (RR.MEETING_REGIONS[g] || []).includes(a.srcKey) && (RR.MEETING_REGIONS[g] || []).includes(b.srcKey));
+    const town = String(b.src).replace(/^(?:city|town|county) of\s+/i, '').trim();
+    if (!sameRegion || !town || !new RegExp('\\b' + town.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i').test(a.name + ' ' + a.summary)) continue;
+    const partner = /^(?:city|town|county) of\s/i.test(b.src) ? 'the ' + b.src : b.src;
+    a.name = a.name + ' with ' + partner;
+    if (!a.agenda && b.agenda) { a.agenda = b.agenda; a.hasAgenda = true; }
+    if (!a.wtm && b.wtm) a.wtm = b.wtm;
+    meetings[j] = null;
+    console.log(`  joint session merged: "${a.name}" (dropped duplicate "${b.name}")`);
+  }
+}
+for (let i = meetings.length - 1; i >= 0; i--) if (!meetings[i]) meetings.splice(i, 1);
 
 // ── "Actions You Can Take This Week" support. The Comment button opens the
 // reader's mail client with the subject + a starter body pre-filled, addressed
@@ -602,7 +642,7 @@ const NAME_STOP = new Set(('The A An On In At As It This That These Those Its Th
   + 'Section Stage Phase Article Item Step Unit No Yes '
   + 'Accommodations Building Buildings Preliminary Large Scale').split(/\s+/));
 const _ADDR_DIR = '(?:N|S|E|W|NE|NW|SE|SW|North|South|East|West)\\.?';
-const _ADDR_SUF = '(?:Ave|Avenue|St|Street|Rd|Road|Dr|Drive|Blvd|Boulevard|Ln|Lane|Way|Ct|Court|Pl|Place|Cir|Circle|Trail|Trl|Pkwy|Parkway|Hwy|Highway)';
+const _ADDR_SUF = '(?:Ave|Avenue|St|Street|Rd|Road|Dr|Drive|Blvd|Boulevard|Ln|Lane|Way|Ct|Court|Pl|Place|Cir|Circle|Trail|Trl|Pkwy|Parkway|Hwy|Highway)(?![A-Za-z])';
 const _ADDR_W = "[A-Z][A-Za-z'’]*";
 const _ADDR_SRC = '\\d+\\s+(?:' + _ADDR_DIR + '\\s+' + _ADDR_W + '(?:\\s+' + _ADDR_W + ')*(?:\\s+' + _ADDR_SUF + ')?|' + _ADDR_W + '(?:\\s+' + _ADDR_W + ')*\\s+' + _ADDR_SUF + ')';
 const _RUN_SRC = "[A-Z][a-z]+(?:['’][A-Za-z]+)?(?:\\s+(?:of|the|[A-Z][a-z]+(?:['’][A-Za-z]+)?))*";

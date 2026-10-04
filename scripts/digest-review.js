@@ -52,6 +52,9 @@ function textOf(html) {
     // the meeting title is on the next line; keep them apart so the reader of
     // this text doesn't see "Town of Telluride Town of Telluride …".
     .replace(/<\/span>(?=<div)/gi, ' · ')
+    // Inline tags join their neighbors as the reader sees them: a word bolded
+    // in two pieces ("<strong>Pl</strong>an") is "Plan", not "Pl an".
+    .replace(/<\/?(?:strong|b|em|i|a|u|span)\b[^>]*>/gi, '')
     .replace(/<\/(p|div|tr|td|h\d)>/gi, '\n').replace(/<br\s*\/?>/gi, '\n')
     .replace(/<[^>]+>/g, ' ')).replace(/[ \t]+/g, ' ').replace(/\n\s*/g, '\n').trim();
 }
@@ -185,7 +188,8 @@ async function editorialRead(key, d, text, apiKey) {
     'Look for: a weekday that does not match its date; times or dates that contradict each other; an upcoming meeting described in the past tense or a past one described as upcoming; an item listed in the wrong section; the same meeting or event listed twice; a governing body named without its town (a bare "Town Council", "City Council", "the Board"); an intro paragraph that mentions something not in the body or gets a detail wrong; "agenda not posted" wording next to an item that does have an agenda link; misspellings, broken sentences, and leftover placeholder text.',
     'Do NOT flag: style preferences, the length of summaries, the order of sections, or links (they are checked separately). Do not invent problems; if the email is clean, return an empty list.',
     'Report each problem once. Do your checking silently: include only confirmed problems, never items you checked and found fine, and keep each "problem" to one or two sentences.',
-    'Return ONLY a JSON object, no markdown fence: {"issues":[{"severity":"high|medium|low","where":"the section or item name","quote":"the exact words, under 20 words","problem":"what is wrong","suggestion":"how to fix it"}]}',
+    'When changing words would fix a problem (a typo, a wrong word, an awkward phrase, leftover label text), include "fix": {"find": "the exact text as it appears in the email, copied character for character, at least a few words so it is unique", "replace": "the corrected text"}. The fix is applied automatically, so keep it minimal and certain. Leave "fix" out when the problem needs judgment or a structural change (removing a section, merging listings, checking an outside fact).',
+    'Return ONLY a JSON object, no markdown fence: {"issues":[{"severity":"high|medium|low","where":"the section or item name","quote":"the exact words, under 20 words","problem":"what is wrong","suggestion":"how to fix it","fix":{"find":"…","replace":"…"}}]}',
     '', 'EMAIL TEXT:', text.slice(0, 60000),
   ].join('\n');
   // Take the JSON object even if the model wraps it in prose; retry once.
@@ -202,16 +206,40 @@ async function editorialRead(key, d, text, apiKey) {
     .map((x) => Object.assign({ check: 'editorial' }, x));
 }
 
+// ── Applying text fixes ─────────────────────────────────────────────────────
+// Each fix is an exact find → replace inside a single text node (never across
+// tags, never touching markup), applied to every copy (regional variants
+// carry the same text). A fix that isn't found exactly stays in the report.
+const encode = (t) => Array.from(String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'))
+  .map((ch) => { const cp = ch.codePointAt(0); return cp > 127 ? '&#' + cp + ';' : ch; }).join('');
+function applyTextFixes(html, issues) {
+  const fixes = issues.filter((x) => x.fix && typeof x.fix.find === 'string' && typeof x.fix.replace === 'string' &&
+    x.fix.find.trim().length >= 4 && x.fix.find !== x.fix.replace && !/[<>]/.test(x.fix.replace));
+  const parts = html.split(/(<[^>]+>)/);
+  let inStyle = false;
+  for (let i = 0; i < parts.length; i++) {
+    const seg = parts[i];
+    if (seg.startsWith('<')) { if (/^<style\b/i.test(seg)) inStyle = true; else if (/^<\/style>/i.test(seg)) inStyle = false; continue; }
+    if (inStyle || !seg.trim()) continue;
+    let text = decode(seg), changed = false;
+    for (const x of fixes) {
+      if (text.includes(x.fix.find)) { text = text.split(x.fix.find).join(x.fix.replace); x.fixed = true; changed = true; }
+    }
+    if (changed) parts[i] = encode(text);
+  }
+  return parts.join('');
+}
+
 // ── Report ──────────────────────────────────────────────────────────────────
 const SEV = { high: 0, medium: 1, low: 2 };
 const NO_KEY = 'ANTHROPIC_API_KEY not set — editorial read skipped; mechanical checks only';
 function toMarkdown(rep) {
-  const L = [`# Digest review: ${rep.weekStart}`, '', `Reviewed ${rep.reviewedAt} (UTC). ${rep.total} issue(s) found; ${rep.linksChecked} links checked.`, ''];
+  const L = [`# Digest review: ${rep.weekStart}`, '', `Reviewed ${rep.reviewedAt} (UTC). Fixed ${rep.fixed || 0}; ${rep.total} left to check; ${rep.linksChecked} links checked.`, ''];
   for (const dg of rep.digests) {
     L.push(`## ${dg.name}`, `*${dg.subject}*`, '');
     if (!dg.issues.length) { L.push('No issues found.', ''); continue; }
     for (const x of dg.issues) {
-      L.push(`- **${x.severity.toUpperCase()}** · ${x.check} · ${x.where || ''}${x.quote ? ` · "${x.quote}"` : ''}`);
+      L.push(`- ${x.fixed ? '**FIXED** · ' : ''}**${x.severity.toUpperCase()}** · ${x.check} · ${x.where || ''}${x.quote ? ` · "${x.quote}"` : ''}`);
       L.push(`  ${x.problem}${x.suggestion ? ` *Fix:* ${x.suggestion}` : ''}${x.url ? ` (${x.url})` : ''}`);
     }
     L.push('');
@@ -224,9 +252,9 @@ function toHtml(rep) {
   const esc = (s) => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   const color = { high: '#a8401f', medium: '#b58a2c', low: '#5a6b64' };
   const sec = rep.digests.map((dg) => `<h2 style="font-family:Georgia,serif;color:#21443c;margin:22px 0 4px;">${esc(dg.name)}</h2><div style="color:#5a6b64;font-size:13px;margin-bottom:8px;">${esc(dg.subject)}</div>` +
-    (dg.issues.length ? '<ul style="padding-left:18px;margin:0;">' + dg.issues.map((x) => `<li style="margin:0 0 10px;line-height:1.5;"><span style="font-weight:700;color:${color[x.severity] || '#333'};">${esc(x.severity.toUpperCase())}</span> &middot; ${esc(x.check)} &middot; ${esc(x.where)}${x.quote ? ` &middot; &ldquo;${esc(x.quote)}&rdquo;` : ''}<br>${esc(x.problem)}${x.suggestion ? ` <em>Fix:</em> ${esc(x.suggestion)}` : ''}${x.url ? `<br><a href="${esc(x.url)}">${esc(x.url)}</a>` : ''}</li>`).join('') + '</ul>'
+    (dg.issues.length ? '<ul style="padding-left:18px;margin:0;">' + dg.issues.map((x) => `<li style="margin:0 0 10px;line-height:1.5;">${x.fixed ? '<span style="font-weight:700;color:#2f7a5f;">FIXED</span> &middot; ' : ''}<span style="font-weight:700;color:${color[x.severity] || '#333'};">${esc(x.severity.toUpperCase())}</span> &middot; ${esc(x.check)} &middot; ${esc(x.where)}${x.quote ? ` &middot; &ldquo;${esc(x.quote)}&rdquo;` : ''}<br>${esc(x.problem)}${x.suggestion ? ` <em>Fix:</em> ${esc(x.suggestion)}` : ''}${x.url ? `<br><a href="${esc(x.url)}">${esc(x.url)}</a>` : ''}</li>`).join('') + '</ul>'
       : '<p style="margin:0;">No issues found.</p>')).join('');
-  return `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Digest review ${esc(rep.weekStart)}</title></head><body style="margin:0;background:#f0ece3;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#2c3b35;"><div style="max-width:640px;margin:0 auto;background:#fdfbf6;padding:24px 28px;"><div style="font-family:Georgia,serif;font-size:11px;color:#b58a2c;letter-spacing:.18em;text-transform:uppercase;">Livable Telluride &middot; Sunday digest review</div><h1 style="font-family:Georgia,serif;font-size:22px;margin:6px 0 4px;">${rep.total} issue${rep.total === 1 ? '' : 's'} for the ${esc(rep.weekStart)} send</h1><div style="font-size:13px;color:#5a6b64;">Reviewed ${esc(rep.reviewedAt)} UTC &middot; ${rep.linksChecked} links checked &middot; the bot will not re-render these digests until ${esc(rep.frozenUntil || 'Monday afternoon')}.</div>${sec}${rep.errors.length ? '<h2 style="font-family:Georgia,serif;">Review problems</h2><ul>' + rep.errors.map((e) => `<li>${esc(e)}</li>`).join('') + '</ul>' : ''}<p style="margin-top:22px;"><a href="https://livabletelluride.org/digest-review.html" style="color:#a0531f;font-weight:700;">Edit or approve at the Review Desk &rarr;</a></p></div></body></html>`;
+  return `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Digest review ${esc(rep.weekStart)}</title></head><body style="margin:0;background:#f0ece3;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#2c3b35;"><div style="max-width:640px;margin:0 auto;background:#fdfbf6;padding:24px 28px;"><div style="font-family:Georgia,serif;font-size:11px;color:#b58a2c;letter-spacing:.18em;text-transform:uppercase;">Livable Telluride &middot; Sunday digest review</div><h1 style="font-family:Georgia,serif;font-size:22px;margin:6px 0 4px;">${rep.fixed || 0} fixed &middot; ${rep.total} left to check for the ${esc(rep.weekStart)} send</h1><div style="font-size:13px;color:#5a6b64;">Reviewed ${esc(rep.reviewedAt)} UTC &middot; ${rep.linksChecked} links checked &middot; the bot will not re-render these digests until ${esc(rep.frozenUntil || 'Monday afternoon')}.</div>${sec}${rep.errors.length ? '<h2 style="font-family:Georgia,serif;">Review problems</h2><ul>' + rep.errors.map((e) => `<li>${esc(e)}</li>`).join('') + '</ul>' : ''}<p style="margin-top:22px;"><a href="https://livabletelluride.org/digest-review.html" style="color:#a0531f;font-weight:700;">Edit or approve at the Review Desk &rarr;</a></p></div></body></html>`;
 }
 
 async function main() {
@@ -252,19 +280,24 @@ async function main() {
       try { issues = issues.concat(await editorialRead(key, d, textOf(allVariant(html)), apiKey)); }
       catch (e) { rep.errors.push(`${key}: editorial read failed (${e.message}); mechanical checks still ran`); }
     } else if (!rep.errors.includes(NO_KEY)) rep.errors.push(NO_KEY);
-    issues.sort((a, b) => (SEV[a.severity] ?? 3) - (SEV[b.severity] ?? 3));
+    if (process.env.APPLY_FIXES === '1') {
+      const fixedHtml = applyTextFixes(html, issues);
+      if (fixedHtml !== html) fs.writeFileSync(path.join(ROOT, d.file), fixedHtml);
+    }
+    issues.sort((a, b) => (!!a.fixed - !!b.fixed) || ((SEV[a.severity] ?? 3) - (SEV[b.severity] ?? 3)));
     rep.digests.push({ key, name: d.name, subject: d.subject, issues });
-    rep.total += issues.length;
+    rep.total += issues.filter((x) => !x.fixed).length;
+    rep.fixed = (rep.fixed || 0) + issues.filter((x) => x.fixed).length;
   }
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, 'review.json'), JSON.stringify(rep, null, 2) + '\n');
   fs.writeFileSync(path.join(OUT_DIR, 'review.md'), toMarkdown(rep) + '\n');
   fs.writeFileSync(path.join(OUT_DIR, 'review.html'), toHtml(rep));
-  const high = rep.digests.reduce((n, dg) => n + dg.issues.filter((x) => x.severity === 'high').length, 0);
-  console.log(`digest-review: ${rep.total} issue(s) (${high} high) across ${rep.digests.length} digest(s); ${rep.linksChecked} links checked`);
+  const high = rep.digests.reduce((n, dg) => n + dg.issues.filter((x) => x.severity === 'high' && !x.fixed).length, 0);
+  console.log(`digest-review: fixed ${rep.fixed || 0}; ${rep.total} left (${high} high) across ${rep.digests.length} digest(s); ${rep.linksChecked} links checked`);
   console.log('ISSUES=' + rep.total);
   console.log('HIGH=' + high);
 }
 
-module.exports = { checkDates, allVariant, variant, textOf };
+module.exports = { checkDates, allVariant, variant, textOf, applyTextFixes };
 if (require.main === module) main().catch((e) => { console.error('digest-review FATAL', e.message); process.exit(1); });
