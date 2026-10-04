@@ -1,16 +1,5 @@
 [
   {
-    "title": "Pink Talking Fish | A Fusion of Pink Floyd, Talking Heads and Phish",
-    "link": "https://sheridanoperahouse.com/events/pink-talking-fish-a-fusion-of-pink-floyd-talking-heads-and-phish/",
-    "description": "Pink Talking Fish is a live band that performs a fusion of music from Pink Floyd, Talking Heads, and Phish, blending the catalogs of all three iconic acts into a single, seamless show. The group performs at the historic Sheridan Opera House in Telluride.",
-    "pubDate": "2026-10-02",
-    "source": "sheridan",
-    "sourceLabel": "Sheridan Opera House",
-    "category": "Concert / Performance",
-    "location": "Sheridan Opera House • Telluride, CO",
-    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/05/unnamed-file-2.png"
-  },
-  {
     "title": "Not-So-Young People's Theater: Shrek The Musical",
     "link": "https://sheridanoperahouse.com/events/not-so-young-peoples-theater/",
     "description": "A production of Shrek The Musical performed at the Sheridan Opera House, bringing the beloved fairy-tale story to life on a Telluride stage. The show features the classic characters and songs from the hit musical based on the DreamWorks animated film.",
@@ -21,5 +10,16 @@
     "category": "Concert / Performance",
     "location": "Sheridan Opera House • Telluride, CO",
     "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2025/10/16-5H0A3038.jpg"
+  },
+  {
+    "title": "Adventures in Acting: The Legend of Sleepy Hollow / The Little Ghost Who Was a Quilt",
+    "link": "https://sheridanoperahouse.com/events/adventures-in-acting-the-legend-of-sleepy-hollow/",
+    "description": "A theatrical performance at the Sheridan Opera House presenting two spooky-season stories: Washington Irving's classic *The Legend of Sleepy Hollow* and *The Little Ghost Who Was a Quilt*. The production is part of the Adventures in Acting series, making it a fitting event for the Halloween season.",
+    "pubDate": "2026-10-28",
+    "source": "sheridan",
+    "sourceLabel": "Sheridan Opera House",
+    "category": "Concert / Performance",
+    "location": "Sheridan Opera House • Telluride, CO",
+    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2022/08/VendorBadge_AsSeenOnWeb.png"
   }
 ]

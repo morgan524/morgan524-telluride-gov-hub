@@ -1,34 +1,38 @@
 {
-  "hash": "050355bc5bc8eb133012c9477804737d8083cd4b",
-  "lede": "The biggest thing on the table this week is Tuesday's Telluride Town Council meeting, where a public hearing on extending a development vesting period sits alongside a work session on automated license plate reader cameras — two issues that touch property rights and civil liberties in ways worth showing up for. Across the valley, Ouray is wrestling with whether to hand its city police function over to the county sheriff starting January 1, and San Miguel County's Planning Commission kicks off a joint work session with the BOCC on an affordable housing code update. Shrek the Musical opens Thursday at the Sheridan, and Stoke the Vote lands Wednesday if you need a reason to get out mid-week.",
+  "hash": "8677d4d2c2d7918066eef90561f678aeed6adf9c",
+  "lede": "The biggest thing on the board this week is the Ouray joint session Monday where county commissioners and city council will hear public comment on a proposed intergovernmental agreement to hand all of Ouray's law enforcement over to the Sheriff's Office starting January 1 — a structural change that doesn't happen quietly. Closer to home, Telluride Town Council meets Tuesday with a public hearing on a development vesting extension and a work session on automated license plate reader cameras, while San Miguel County's BOCC and Planning Commission both take up affordable housing policy in separate sessions Wednesday and Thursday.",
   "notable": [
     {
-      "id": 4,
-      "stake": "Public hearing on development vesting extension; ALPR camera privacy debate."
-    },
-    {
       "id": 1,
-      "stake": "County may absorb Ouray city policing — public comment open before deliberations."
+      "stake": "Public comment open on county taking over Ouray City law enforcement Jan 2027."
     },
     {
       "id": 2,
-      "stake": "Ouray residents can weigh in on sheriff takeover of city law enforcement at 5 PM."
-    },
-    {
-      "id": 10,
-      "stake": "Public hearings on affordable housing fee waivers and land adjustments in San Miguel County."
-    },
-    {
-      "id": 13,
-      "stake": "Joint BOCC-Planning Commission session actively rewriting county affordable housing code."
-    },
-    {
-      "id": 11,
-      "stake": "Land Use Code definitions rewrite — early stage shaping with real downstream consequences."
+      "stake": "Ouray City Council hears IGA to dissolve city police in favor of Sheriff coverage."
     },
     {
       "id": 3,
-      "stake": "Ouray 2027 budget noticed; erosion control project and council action items on table."
+      "stake": "Ouray 2027 budget noticed; council takes action items including erosion control project."
+    },
+    {
+      "id": 4,
+      "stake": "Public hearing on development vesting extension; ALPR surveillance cameras debated."
+    },
+    {
+      "id": 6,
+      "stake": "Mountain Village shapes its full 2027 budget before formal adoption."
+    },
+    {
+      "id": 10,
+      "stake": "Public hearings on fee waiver for affordable housing and lot line adjustment."
+    },
+    {
+      "id": 11,
+      "stake": "Ouray County Land Use Code definitions under review — shapes future zoning rules."
+    },
+    {
+      "id": 13,
+      "stake": "Joint BOCC-Planning session on Affordable Housing Code Update; policy being written now."
     }
   ]
 }
