@@ -46,7 +46,11 @@ function recapId(r) {
 function shortRecap(text, max = 230) {
   const t = String(text || '').replace(/\s+/g, ' ').trim();
   if (!t) return '';
-  const sents = t.match(/[^.!?]+[.!?]+(?=\s|$)/g) || [t];
+  // A sentence may contain . ! ? that aren't followed by a space ("$1.5–1.6
+  // million", "U.S."); only punctuation followed by a space or the end ends
+  // it. The old [^.!?]+ form skipped any sentence with a decimal in it, so the
+  // teaser began mid-figure ("6 million general fund deficit." — 2026-10-04).
+  const sents = t.match(/(?:[^.!?]|[.!?](?!\s|$))+[.!?]+(?=\s|$)/g) || [t];
   let out = '';
   for (const s of sents) {
     if (out && (out + s).length > max) break;

@@ -70,3 +70,12 @@ test('intro check flags bare council names, passes full ones', () => {
   assert.strictEqual(bareCouncilRefs('**Telluride Town Council** on Tuesday; then Council takes up X.').length, 1);
   assert.strictEqual(bareCouncilRefs('**Telluride Town Council**, **Mountain Village Town Council**, **Ouray City Council** and **Ridgway Town Council** all meet.').length, 0);
 });
+
+// 2026-10-04: a first sentence containing a decimal ("$1.5–1.6 million") was
+// skipped, so the teaser began mid-figure.
+test('shortRecap keeps a first sentence that contains decimals', () => {
+  const RR2 = require('../lib/recap-regions.js');
+  const t = 'Ouray County worked on closing a roughly $1.5–1.6 million general fund deficit. No formal votes were taken.';
+  assert.ok(RR2.shortRecap(t).startsWith('Ouray County worked on closing a roughly $1.5–1.6 million'));
+  assert.ok(RR2.shortRecap('The U.S. Forest Service spoke. Then a vote.').startsWith('The U.S. Forest Service spoke.'));
+});
