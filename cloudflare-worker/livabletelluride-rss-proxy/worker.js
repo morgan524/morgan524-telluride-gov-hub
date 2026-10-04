@@ -212,11 +212,13 @@ const PROFILE_MERGE_FIELDS = ["FNAME", "LNAME", "MMERGE6", "MMERGE10", "MMERGE11
 
 // Customer.io is the system of record. Maps the signup/profile inputs onto the
 // Customer.io attribute schema (also used by the one-time import). subs[] keys
-// are the name-based subscription keys the site sends (weekly/newsletter + the
-// four Event Topics); fields[] are the profile field names the form posts.
+// are the name-based subscription keys the site sends (weekly/newsletter/past +
+// the four Event Topics); fields[] are the profile field names the form posts.
+// `past` = the Monday "Past Meetings" recap email (opt-in, added 2026-10-04).
 const CIO_SUBS_TO_ATTR = {
   weekly:     "sub_weekly_update",
   newsletter: "sub_newsletter",
+  past:       "sub_past_meetings",
   arts:       "topic_music_arts",
   civic:      "topic_gov_meetings",
   family:     "topic_family_kids",
@@ -279,7 +281,7 @@ async function handleInterests(request, env) {
   const cors = profileCorsHeaders(request.headers.get("Origin") || "");
   const json = (obj, status) => new Response(JSON.stringify(obj), { status: status || 200, headers: cors });
   if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
-  return json({ ok: true, available: { weekly: true, newsletter: true, arts: true, civic: true, family: true, outdoors: true } });
+  return json({ ok: true, available: { weekly: true, newsletter: true, past: true, arts: true, civic: true, family: true, outdoors: true } });
 }
 
 // POST /profile-read { idToken } — returns the signed-in user's own Customer.io
@@ -326,6 +328,7 @@ async function handleProfileRead(request, env) {
       // suppresses delivery regardless of what these say.
       weekly:     !globallyUnsubscribed && truthy(a.sub_weekly_update),
       newsletter: !globallyUnsubscribed && truthy(a.sub_newsletter),
+      past:       !globallyUnsubscribed && truthy(a.sub_past_meetings),
       arts:       !globallyUnsubscribed && truthy(a.topic_music_arts),
       civic:      !globallyUnsubscribed && truthy(a.topic_gov_meetings),
       family:     !globallyUnsubscribed && truthy(a.topic_family_kids),

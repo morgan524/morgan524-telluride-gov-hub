@@ -35,8 +35,9 @@
   // silently thrown away while the name/region still saved (making the request
   // look successful). Never reintroduce numeric ids here.
   var SUBSCRIPTIONS = [
-    { key: 'weekly',     label: 'Weekly Update', desc: 'The Friday look-ahead — upcoming meetings & events.' },
+    { key: 'weekly',     label: 'Weekly Update', desc: 'The Monday look-ahead — upcoming meetings & events.' },
     { key: 'newsletter', label: 'Newsletter',    desc: 'Long-form posts when we publish them.' },
+    { key: 'past',       label: 'Past Meetings', desc: 'Monday recaps of last week’s public meetings, each linked to the full summary.' },
   ];
 
   function qp(name) {

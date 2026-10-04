@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 /**
- * Customer.io — READ-ONLY audit of segments vs. the six subscriptions the
+ * Customer.io — READ-ONLY audit of segments vs. the seven subscriptions the
  * website actually offers (profile.html / hub-bub.html signup).
  *
  * Answers three questions:
  *   1. Which segments exist in the workspace right now, and how big are they?
- *   2. For each of our six subscription attributes, how many people have it
+ *   2. For each of our seven subscription attributes, how many people have it
  *      set to "true" — i.e. how big SHOULD each segment be?
- *   3. Which of the six has no matching segment yet (the gap to close).
+ *   3. Which of the seven has no matching segment yet (the gap to close).
  *
  * Writes nothing and sends nothing. Run from customerio-segments.yml so the
  * App API key stays a GitHub Actions secret.
@@ -25,12 +25,13 @@ if (!APP_KEY) { console.error('Missing CUSTOMERIO_APP_API_KEY'); process.exit(1)
 const API = 'https://api.customer.io';
 const H = { Authorization: 'Bearer ' + APP_KEY, 'Content-Type': 'application/json' };
 
-// The six subscriptions the site offers → the Customer.io attribute behind each.
+// The seven subscriptions the site offers → the Customer.io attribute behind each.
 // Must stay in step with CIO_SUBS_TO_ATTR in the Worker (worker.js) and with
 // the .tog[data-sub] rows in profile.html.
 const SUBS = [
   { key: 'weekly',     attr: 'sub_weekly_update', label: 'Weekly Update (the digest)' },
   { key: 'newsletter', attr: 'sub_newsletter',    label: 'Newsletter (long-form posts)' },
+  { key: 'past',       attr: 'sub_past_meetings', label: 'Past Meetings (Monday recaps)' },
   { key: 'arts',       attr: 'topic_music_arts',  label: 'Topic — Music, Arts & Festivals' },
   { key: 'civic',      attr: 'topic_gov_meetings',label: 'Topic — Government Meetings' },
   { key: 'family',     attr: 'topic_family_kids', label: 'Topic — Family & Kids' },
@@ -111,6 +112,7 @@ async function countWhereTrue(attr) {
   const HINTS = {
     weekly:     ['weeklyupdate', 'weekly', 'digest'],
     newsletter: ['newsletter'],
+    past:       ['pastmeetings', 'recap'],
     arts:       ['musicarts', 'arts', 'festival'],
     civic:      ['governmentmeetings', 'govmeetings', 'civic'],
     family:     ['familykids', 'family'],
@@ -130,6 +132,6 @@ async function countWhereTrue(attr) {
     console.log('  Segments → Create Segment → Data-driven → Attributes →');
     console.log('  "<attribute>" · "is" · "true"   ← the STRING true, not a boolean toggle');
   } else {
-    console.log('All six subscriptions have a matching segment.');
+    console.log('All seven subscriptions have a matching segment.');
   }
 })();

@@ -6,23 +6,19 @@
 // Two callers use this:
 //   • scripts/build-rss-feed.js — the weekly Mailchimp RSS digest (imports
 //     RICK_VOICE so its lede+notable prompt shares the exact persona).
-//   • scripts/weekly-email.js   — the weekly AND weekend digest-desk emails
-//     (calls generateRickLede() to write the intro from the real events).
+//   • scripts/weekly-email.js   — the weekly digest-desk email (calls
+//     generateRickLede() to write the intro from the real meetings and events).
 //
-// Before this module existed, only the RSS path had a Rick lede; the
-// digest-desk weekend email fell back to a hand-maintained JSON that defaulted
-// to a generic canned line whenever nobody typed a dated entry — which is why
-// the "Weekend Ahead Outlook" intro was never in Rick's voice. Keeping the
-// persona here means the two paths can't drift.
+// Keeping the persona here means the two paths can't drift. (The Friday
+// "Weekend Ahead" email that also used it was retired 2026-10-04.)
 // ──────────────────────────────────────────────────────────────────────────
 const https = require('https');
 const fs = require('fs');
 const crypto = require('crypto');
 const { SONNET } = require('./claude-model.js');
 
-// The persona line. Cadence-neutral ("community email", not "weekly") so it
-// reads correctly for both the weekly and the weekend send; the window line in
-// the prompt below establishes which one.
+// The persona line. Cadence-neutral ("community email", not "weekly"); the
+// window line in the prompt below establishes the period.
 const RICK_VOICE = 'You are "Rick" — a long-time Telluride local writing the one-paragraph intro to Livable Telluride\'s community email. You\'ve seen it all, you love this valley, and you\'re not cynical but you pay attention when something real is at stake. Voice: warm, plain-spoken, grounded.';
 
 function callClaude(apiKey, prompt, maxTokens) {
@@ -58,13 +54,9 @@ function callClaude(apiKey, prompt, maxTokens) {
   });
 }
 
-// Build the lede-only prompt. `cadence` is 'weekend' (Fri–Sun, events only) or
-// 'week' (Fri–Thu, meetings + events).
-function ledePrompt({ meetings, events, cadence }) {
-  const weekend = cadence === 'weekend';
-  const windowLine = weekend
-    ? 'Below are the notable community events for THIS COMING WEEKEND (Friday through Sunday) across the Telluride region.'
-    : 'Below are the UPCOMING government meetings and community events for the coming week (Friday through Thursday) across the Telluride region.';
+// Build the lede-only prompt for the weekly (meetings + events).
+function ledePrompt({ meetings, events }) {
+  const windowLine = 'Below are the UPCOMING government meetings and community events for the coming week (Friday through Thursday) across the Telluride region.';
   // HOUSE STYLE (Morgan, 2026-09-21 — "save that style for all future
   // digests"): cover MORE of the window, put the DAY OF THE WEEK on every item,
   // and wrap each body / event name in **double asterisks**. weekly-email.js
@@ -77,9 +69,7 @@ function ledePrompt({ meetings, events, cadence }) {
   // are separated by a newline inside the JSON string; weekly-email.js renders
   // each one on its own line.
   const byDay = ' Separate the day paragraphs with a single newline character (\\n) inside the "lede" string; do not put two days in one paragraph.';
-  const spec = weekend
-    ? 'a plain-prose intro to the weekend (70-120 words), written DAY BY DAY: one short paragraph per day that has something worth doing (Friday, then Saturday, then Sunday), each opening with that day. Give the single best or biggest thing the most weight within its day, and fold in three or four of the others across the weekend. Warm and grounded — like a local telling a friend what is worth getting out for.' + style + byDay
-    : 'a plain-prose intro that orients a busy local (120-200 words), written DAY BY DAY in date order: one short paragraph per day that has a meeting or event worth mentioning, each opening with that day (e.g. "Monday, …"). Give the single biggest or most important meeting of the week the most weight within its day, cover the other consequential meetings on their days, and fold in three or so events "on the lighter side" on theirs. Aim to name most of the meetings and several events, not just one or two.' + style + byDay;
+  const spec = 'a plain-prose intro that orients a busy local (120-200 words), written DAY BY DAY in date order: one short paragraph per day that has a meeting or event worth mentioning, each opening with that day (e.g. "Monday, …"). Give the single biggest or most important meeting of the week the most weight within its day, cover the other consequential meetings on their days, and fold in three or so events "on the lighter side" on theirs. Aim to name most of the meetings and several events, not just one or two.' + style + byDay;
   const parts = [
     RICK_VOICE,
     '',
@@ -88,7 +78,7 @@ function ledePrompt({ meetings, events, cadence }) {
     'Return ONLY a JSON object (no markdown fence) with exactly one field, "lede": ' + spec + ' Be specific and grounded — only use what is in the lists below; never invent times, prices, lineups, vote outcomes, or details you were not given. No greeting, no sign-off, no "Rick here", no calls to action, no emoji.',
     '',
   ];
-  if (!weekend) { parts.push('MEETINGS:', JSON.stringify(meetings || [], null, 1), ''); }
+  parts.push('MEETINGS:', JSON.stringify(meetings || [], null, 1), '');
   parts.push('EVENTS:', JSON.stringify(events || [], null, 1));
   return parts.join('\n');
 }
@@ -117,11 +107,10 @@ function ledeInputFingerprint({ meetings, events, cadence } = {}) {
     // v3 = every body named with its town — no bare "Town Council",
     // v4 = one paragraph per day, line break between days).
     style: 4,
-    cadence: cadence === 'weekend' ? 'weekend' : 'week',
-    // Weekend ledes are events-only (see ledePrompt), so meetings must not
-    // enter the key there — otherwise a meeting change would bust a cache
-    // entry whose text can't possibly depend on it.
-    meetings: cadence === 'weekend' ? [] : (meetings || []),
+    // Always 'week' now (Weekend Ahead retired 2026-10-04). Kept in the
+    // payload so every existing cache key stays valid.
+    cadence: 'week',
+    meetings: meetings || [],
     events: events || [],
   });
   return crypto.createHash('sha1').update(payload).digest('hex').slice(0, 16);

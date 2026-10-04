@@ -3563,7 +3563,11 @@ function isDigestTitle(t) {
          /Daily Digest|Weekly Digest|Daily Update|Weekly Update/i.test(t) ||
          /\bWeek(?:end)?\b[\s\w]*\bOutlook\b/i.test(t) ||
          /\bWeek(?:end)?\s+Ahead\b/i.test(t) ||
-         /\bWeekend\s+(Update|Outlook|Digest)\b/i.test(t);
+         /\bWeekend\s+(Update|Outlook|Digest)\b/i.test(t) ||
+         // The Monday "Past Meetings" recap email (2026-10-04): subject is
+         // "Past Meetings - <week>". Anchored so an editorial post that merely
+         // mentions past meetings still reaches the blog.
+         /^Past Meetings\s+-\s+/i.test(t);
 }
 
 const BLOG_UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15';

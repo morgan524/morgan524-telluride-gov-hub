@@ -33,19 +33,6 @@ test('fingerprint changes when a meeting summary changes', () => {
   );
 });
 
-test('weekend fingerprint ignores meetings (the weekend prompt has none)', () => {
-  const withMeetings = ledeInputFingerprint({ meetings: MEETINGS, events: EVENTS, cadence: 'weekend' });
-  const without = ledeInputFingerprint({ meetings: [], events: EVENTS, cadence: 'weekend' });
-  assert.equal(withMeetings, without);
-});
-
-test('the two cadences do not share a cache entry', () => {
-  assert.notEqual(
-    ledeInputFingerprint({ meetings: [], events: EVENTS, cadence: 'week' }),
-    ledeInputFingerprint({ meetings: [], events: EVENTS, cadence: 'weekend' }),
-  );
-});
-
 test('a cache hit returns the stored lede with NO api key', async () => {
   // The load-bearing property: re-rendering an unchanged window neither calls
   // Claude nor needs credentials, so the output is byte-identical every run.

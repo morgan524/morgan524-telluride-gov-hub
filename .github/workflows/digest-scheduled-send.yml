@@ -8,11 +8,12 @@ name: Digest Scheduled Send
 # whichever runs second is a no-op via the duplicate gate. Keep this workflow:
 # it is the retry if the Worker send fails, and confirm=SEND is the manual path.
 #
-# Sends an APPROVED digest at 9:00 AM America/Denver:
-#   - Monday → the "Week Ahead" (weekly) digest
-#   - Friday → the "Weekend Ahead" (weekend) digest (events only)
-#     (moved from Thursday 2026-07-23 per Morgan; the weekStart is anchored to
-#      "the coming Friday, today if Friday" so an approved lock still matches.)
+# Sends APPROVED digests at 9:00 AM America/Denver on Monday:
+#   - the "Week Ahead" (weekly) digest
+#   - the "Past Meetings" (past) recap email, its own opt-in list (2026-10-04)
+# Each runs as its own matrix job with its own gates and tripwire, one at a time
+# so their sent-broadcasts.json appends never race. The Friday "Weekend Ahead"
+# was retired 2026-10-04.
 #
 # "Approved" means a human clicked Approve & Schedule on the Digest Review Desk,
 # which writes digest/<key>.lock.json. This job sends ONLY when that lock exists
@@ -56,7 +57,7 @@ name: Digest Scheduled Send
 # fires 8x a day and demonstrably does run, even when delayed). A workflow_run
 # is an event, not a scheduler slot. It falls through to the same guard as a
 # scheduled run, so every gate still applies: before 09:00 Denver or a non
-# Mon/Fri weekday exits immediately, an unapproved digest still never sends,
+# Monday weekday exits immediately, an unapproved digest still never sends,
 # and the duplicate gate makes every run after a send a no-op that records
 # sent=true (so the tripwire closes rather than fires).
 on:
@@ -72,18 +73,10 @@ on:
     - cron: '12 16 * * 1'   # Mon 16:12 UTC — backup #1
     - cron: '27 16 * * 1'   # Mon 16:27 UTC — backup #2
     - cron: '45 16 * * 1'   # Mon 16:45 UTC — backup #3
-    - cron: '0 15 * * 5'    # Fri 15:00 UTC = 09:00 MDT (summer) — primary
-    - cron: '12 15 * * 5'   # Fri 15:12 UTC — backup #1
-    - cron: '27 15 * * 5'   # Fri 15:27 UTC — backup #2
-    - cron: '45 15 * * 5'   # Fri 15:45 UTC — backup #3
-    - cron: '0 16 * * 5'    # Fri 16:00 UTC = 09:00 MST (winter) — primary
-    - cron: '12 16 * * 5'   # Fri 16:12 UTC — backup #1
-    - cron: '27 16 * * 5'   # Fri 16:27 UTC — backup #2
-    - cron: '45 16 * * 5'   # Fri 16:45 UTC — backup #3
   workflow_dispatch:
     inputs:
       digest:
-        description: 'Which digest to send (weekly or weekend)'
+        description: 'Which digest to send (weekly or past)'
         required: true
         default: 'weekly'
       confirm:
@@ -96,12 +89,14 @@ permissions:
   issues: write   # ci-health-issue failure tracker
 
 jobs:
-  send:
+  plan:
     runs-on: ubuntu-latest
+    outputs:
+      go: ${{ steps.guard.outputs.go }}
+      digests: ${{ steps.guard.outputs.digests }}
+      override: ${{ steps.guard.outputs.override }}
     steps:
-      - uses: actions/checkout@v5
-
-      - name: Decide whether to run + which digest
+      - name: Decide whether to run + which digests
         id: guard
         run: |
           set -eo pipefail
@@ -111,35 +106,45 @@ jobs:
             fi
             echo "manual override — digest=${{ github.event.inputs.digest }}"
             echo "go=true"   >> "$GITHUB_OUTPUT"
-            echo "digest=${{ github.event.inputs.digest }}" >> "$GITHUB_OUTPUT"
+            echo 'digests=["${{ github.event.inputs.digest }}"]' >> "$GITHUB_OUTPUT"
             echo "override=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           # Scheduled OR workflow_run: proceed once it's on or after 09:00 America/Denver (a
           # delayed cron firing later the same morning/afternoon still counts —
-          # see the REDUNDANT TRIGGERS note above), and map the weekday to a digest.
+          # see the REDUNDANT TRIGGERS note above), and map the weekday to its digests.
           HOUR="$(TZ='America/Denver' date +%H)"
           DOW="$(TZ='America/Denver' date +%u)"   # 1=Mon … 7=Sun
           HOUR10=$((10#$HOUR))   # strip any leading zero so bash doesn't read it as octal
           if [ "$HOUR10" -lt 9 ]; then echo "Denver hour=$HOUR (before 09:00) — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           case "$DOW" in
-            1) DIGEST=weekly ;;
-            5) DIGEST=weekend ;;
-            *) echo "Denver weekday=$DOW (not Mon/Fri) — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0 ;;
+            1) DIGESTS='["weekly","past"]' ;;
+            *) echo "Denver weekday=$DOW (not Monday) — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0 ;;
           esac
-          echo "scheduled send — digest=$DIGEST (Denver hour=$HOUR, >= 09:00)"
+          echo "scheduled send — digests=$DIGESTS (Denver hour=$HOUR, >= 09:00)"
           echo "go=true" >> "$GITHUB_OUTPUT"
-          echo "digest=$DIGEST" >> "$GITHUB_OUTPUT"
+          echo "digests=$DIGESTS" >> "$GITHUB_OUTPUT"
           echo "override=false" >> "$GITHUB_OUTPUT"
+
+  send:
+    needs: plan
+    if: needs.plan.outputs.go == 'true'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        digest: ${{ fromJson(needs.plan.outputs.digests) }}
+    steps:
+      - uses: actions/checkout@v5
 
       - name: Send the approved digest to its broadcast
         id: send
-        if: steps.guard.outputs.go == 'true'
         env:
           DIGEST_KEY: ${{ secrets.DIGEST_KEY }}
           WORKER_BASE: https://livabletelluride-digest.morgan-8f0.workers.dev
-          DIGEST_KIND: ${{ steps.guard.outputs.digest }}
-          OVERRIDE: ${{ steps.guard.outputs.override }}
+          DIGEST_KIND: ${{ matrix.digest }}
+          OVERRIDE: ${{ needs.plan.outputs.override }}
         run: |
           set -eo pipefail
           test -n "$DIGEST_KEY" || { echo "DIGEST_KEY secret is empty"; exit 1; }
@@ -148,7 +153,7 @@ jobs:
 
           # Record the outcome for the tripwire step below (2026-07-22 audit
           # P0-5): a gate-skip used to exit 0 with only a log line — the
-          # Thursday Weekend digest silently never went out for weeks because
+          # Thursday Weekend digest (since retired) silently never went out for weeks because
           # no one ever approved it and nothing said so.
           def outcome(sent, reason=""):
               with open(os.environ["GITHUB_OUTPUT"], "a") as f:
@@ -157,9 +162,14 @@ jobs:
 
           key = os.environ["DIGEST_KIND"]
           override = os.environ.get("OVERRIDE") == "true"
-          if key not in ("weekly", "weekend"):
+          if key not in ("weekly", "past"):
               raise SystemExit(f"Unknown digest kind: {key!r}")
           man = json.load(open("digest/manifest.json"))
+          if key == "past" and "past" not in man.get("digests", {}):
+              # Past Meetings is rendered only when last week has recaps; no
+              # manifest entry means nothing to send, not a missed window.
+              outcome(True, "no Past Meetings digest this week (no recaps)")
+              print("No Past Meetings digest this week — nothing to send."); sys.exit(0)
           d = man["digests"][key]
           subject, fpath, week_start = d["subject"], d["file"], d.get("weekStart", "")
           html = open(fpath, encoding="utf-8").read()
@@ -240,10 +250,10 @@ jobs:
       # time that digest kind actually goes out. Hard failures are covered by
       # the CI health step below; this catches the silent-skip class.
       - name: Tripwire — send window passed without a send
-        if: always() && steps.guard.outputs.go == 'true' && steps.send.outcome == 'success'
+        if: always() && steps.send.outcome == 'success'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DIGEST_KIND: ${{ steps.guard.outputs.digest }}
+          DIGEST_KIND: ${{ matrix.digest }}
           SENT: ${{ steps.send.outputs.sent }}
           SKIP_REASON: ${{ steps.send.outputs.skip-reason }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
@@ -274,7 +284,7 @@ jobs:
           exit 0
 
       - name: CI health issue
-        if: always() && steps.guard.outputs.go == 'true'
+        if: always()
         uses: ./.github/actions/ci-health-issue
         with:
           title: '🚨 Digest scheduled send failed'

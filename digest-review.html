@@ -124,7 +124,7 @@ let KEY = sessionStorage.getItem("digestKey") || "";
 let manifest = null, cur = "weekly";
 const state = {};   // key -> { name, subject, covers, audience, baseHtml, html, history:[] }
 // When each approved digest auto-sends (the scheduled job fires at 9:00 AM MT).
-const SEND_WHEN = { weekly: "Monday 9:00 AM", weekend: "Friday 9:00 AM" };
+const SEND_WHEN = { weekly: "Monday 9:00 AM", past: "Monday 9:00 AM" };
 const sendWhen = () => SEND_WHEN[cur] || "its scheduled time";
 
 // ---- auth gate ----
@@ -279,7 +279,7 @@ $("lockbtn").onclick=lockDigest;
 // change was invisible until it arrived in a test email — the reviewer's whole
 // reason for distrusting the preview. Now: remember the scroll, and when the
 // Worker tells us what text it changed, scroll straight to it and flash it.
-// Applies to both the Week Ahead and the Weekend Ahead (shared code path).
+// Applies to every digest on the desk (Week Ahead, Past Meetings — shared code path).
 let _lastScroll = 0;
 function stampUpdated(note){
   const el=$("upd"); if(!el) return;

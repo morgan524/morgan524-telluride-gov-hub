@@ -32,7 +32,7 @@ Optional args: `capture.js <out-dir> [weekStart] [label]` (default week
 
 | File | What |
 |------|------|
-| `digest-weekly.html` / `digest-weekend.html` | the full rendered emails (end-to-end, via the real `weekly-email.js`) |
+| `digest-weekly.html` / `digest-past.html` | the full rendered emails (end-to-end, via the real `weekly-email.js` and `past-meetings-email.js`; no Past Meetings file in a week without recaps) |
 | `getCountyCachedMeetings.json` | normalized county meeting list (title, date, category, hasAgenda, agendaLink, description length) |
 | `getTellurideMeetings.json` | same, for the Telluride source |
 | `getMeetingSummary.json` | the resolved summary per county meeting (length + first 80 chars) |

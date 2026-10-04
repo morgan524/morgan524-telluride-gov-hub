@@ -1637,6 +1637,13 @@
                 <span>Longer-form posts and analysis, sent when published.</span>
               </div>
             </label>
+            <label class="hb-freq-opt">
+              <input type="checkbox" id="hbFreqPast" value="past">
+              <div class="hb-freq-opt-text">
+                <strong>Past Meetings</strong>
+                <span>Monday recaps of last week's public meetings, each linked to the full summary.</span>
+              </div>
+            </label>
           </div>
         </div>
 
@@ -1924,6 +1931,7 @@
         const subs = {
           weekly: digestFreq === 'weekly',
           newsletter: includeNewsletter,
+          past: document.getElementById('hbFreqPast').checked,   // opt-in, unchecked by default
         };
         if (digestFreq === 'weekly') topics.forEach(function (t) { subs[t] = true; });
         // Name + region ride along as fields → Customer.io first_name / last_name

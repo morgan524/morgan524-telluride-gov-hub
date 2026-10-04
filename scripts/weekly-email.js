@@ -28,24 +28,16 @@ const WEEK_START = process.argv[4] || new Date().toISOString().slice(0, 10);
 const LABEL = process.argv[5] || 'This Week';
 const OUT = process.argv[6] || 'weekly-email.html';
 const PREVIEW = !!process.env.WEEKLY_PREVIEW;   // render an info@ review draft (banner + topic sections shown inline, merge tags neutralised) instead of the paste-ready Mailchimp HTML
-// WEEKEND mode (WEEKEND=1): render the Friday "Weekend Ahead" events email
-// instead of the Monday "Week Ahead". Same data/render machinery, but a shorter
-// 3-day window (Fri–Sun; Thursday excluded), NO meetings section, and a curated best-of-the-weekend
-// events list (top events by featuredScore, not one-per-day). WEEK_START is the
-// Thursday the email covers. Everything below is unchanged for the weekly path.
-const WEEKEND = !!process.env.WEEKEND;
-const WINDOW_DAYS = WEEKEND ? 3 : 7;   // weekend email covers Fri–Sun (sent Friday)
-const EMAIL_TITLE = WEEKEND ? 'The Weekend Ahead Outlook' : 'The Week Ahead Outlook';
-const KICKER = WEEKEND ? 'Livable Telluride · Weekend Ahead Outlook' : 'Livable Telluride · Weekly Update';
-const EVENTS_HEADING = WEEKEND ? 'Good Events This Weekend' : 'What to Attend';
+const WINDOW_DAYS = 7;
+const EMAIL_TITLE = 'The Week Ahead Outlook';
+const KICKER = 'Livable Telluride · Weekly Update';
+const EVENTS_HEADING = 'What to Attend';
 
 // ── Week Ahead lede — edit data/week-ahead-lede.json (no code change needed).
 // That file is a map keyed by week-start (the Monday the email covers,
 // YYYY-MM-DD), with a "default" fallback. WEEK_START is computed by the Saturday
 // workflow. If the file is missing/unreadable, fall back to a built-in string.
-const FALLBACK_LEDE = WEEKEND
-  ? "A few of the best things happening around the box canyon this weekend — pick one and get out there."
-  : "A fresh week across the box canyon — public meetings, community events, and a few ways to get involved are all below.";
+const FALLBACK_LEDE = "A fresh week across the box canyon — public meetings, community events, and a few ways to get involved are all below.";
 // Precedence (resolved below): a HUMAN-pinned dated entry in the lede JSON
 // always wins; otherwise the intro DEFAULTS to a fresh Rick-voice summary of
 // this window's real events (generated in the async block near the end, once
@@ -54,14 +46,12 @@ const FALLBACK_LEDE = WEEKEND
 let LEDE = FALLBACK_LEDE;
 let LEDE_IS_OVERRIDE = false;   // a person deliberately set the intro for this date
 try {
-  const ledeFile = WEEKEND ? 'weekend-ahead-lede.json' : 'week-ahead-lede.json';
-  const ledeMap = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', ledeFile), 'utf8'));
+  const ledeMap = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'week-ahead-lede.json'), 'utf8'));
   if (ledeMap[WEEK_START]) { LEDE = ledeMap[WEEK_START]; LEDE_IS_OVERRIDE = true; }
   else { LEDE = ledeMap.default || FALLBACK_LEDE; }
 } catch (e) { console.error('lede json not read (' + e.message + ') — using fallback lede'); }
 
-// Window [WEEK_START, WEEK_START + WINDOW_DAYS-1]: 7 days for the weekly,
-// 4 days (Thu–Sun) for the weekend email.
+// Window [WEEK_START, WEEK_START + 6]: the week the email covers.
 const startD = new Date(WEEK_START + 'T00:00:00');
 const days = []; for (let i = 0; i < WINDOW_DAYS; i++) { const d = new Date(startD); d.setDate(d.getDate() + i); days.push(d.toISOString().slice(0, 10)); }
 const dEnd = days[days.length - 1];
@@ -269,32 +259,6 @@ const FEATURED_OVERRIDES = {
   '2026-07-04': { match: /rundola/i, link: 'https://telluridefoundation.org/rundola/' },  // Telluride Foundation Rundola — Run for Good
 };
 
-// The Weekend edition prefers events NOT already in the prior mailing(s): it
-// sends Thursday, a few days after the Monday "Week Ahead" (which covers the
-// same weekend), so a straight best-of would just replay Monday's picks. We
-// read the last couple of sent broadcasts' archived HTML, collect their event
-// links, and rank matching events AFTER the fresh ones — they still fill in if
-// nothing fresher is worthy. Best-effort: no archive (e.g. a local /tmp run) →
-// no preference applied.
-const normHref = (u) => String(u || '').toLowerCase().trim().split('#')[0].split('?')[0].replace(/\/+$/, '');
-function recentlyMailedHrefs() {
-  const out = new Set();
-  try {
-    const rec = JSON.parse(fs.readFileSync('data/sent-broadcasts.json', 'utf8'));
-    for (const r of rec.slice(-2)) {                              // prior Week Ahead + prior Weekend
-      const m = String(r.href || '').match(/digest\/archive\/[^"'#?]+\.html/);
-      if (!m || !fs.existsSync(m[0])) continue;
-      const html = fs.readFileSync(m[0], 'utf8');
-      for (const mm of html.matchAll(/href="(https?:\/\/[^"]+)"/gi)) {
-        const h = normHref(mm[1].replace(/&amp;/g, '&'));
-        if (/livabletelluride\.org|buy\.stripe\.com|list-manage\.com/.test(h)) continue;  // site chrome, not events
-        out.add(h);
-      }
-    }
-  } catch (e) { /* best-effort — leave the set empty */ }
-  return out;
-}
-
 // Weekly "What to Attend": the best event per day from `pool` (top
 // featuredScore, tie → earlier start), one DISTINCT event per day — skip an
 // event whose title already ran earlier this week (e.g. a multi-day festival)
@@ -314,72 +278,7 @@ function pickOnePerDay(pool) {
   return out;
 }
 
-if (WEEKEND) {
-  const MAILED = recentlyMailedHrefs();
-  const wasMailed = (e) => MAILED.size > 0 && MAILED.has(normHref(e.href || e.link || e.url || ''));
-  // Weekend Outlook: a curated "best of the weekend" list across the Fri–Sun
-  // window. Two goals: quality (rank by featuredScore; drop the penalized
-  // drop-in/class/clinic items) and GEOGRAPHIC SPREAD — a regional roundup
-  // shouldn't be a dozen Telluride events. So we fill town-diverse first (≤2
-  // per town, by score, which guarantees the smaller towns' happenings — e.g.
-  // a Norwood or Ouray 4th-of-July event — surface), then top up to the cap
-  // allowing event-rich towns more.
-  const CAP = 12;
-  // Lightweight town bucket for diversity only (display still uses townLabel).
-  // Prefer location/title; the OURAY_RIDGWAY source name carries both towns, so
-  // never infer town from it — fall through to the per-source names below.
-  const evTown = (e) => {
-    const lt = ((e.location || '') + ' ' + (e.title || '')).toLowerCase();
-    if (/mountain village/.test(lt)) return 'mountain village';
-    if (/norwood/.test(lt)) return 'norwood';
-    if (/ridgway/.test(lt)) return 'ridgway';
-    if (/ouray/.test(lt)) return 'ouray';
-    if (/nucla|naturita/.test(lt)) return 'nucla';
-    if (/\brico\b/.test(lt)) return 'rico';
-    if (/ophir/.test(lt)) return 'ophir';
-    if (/telluride/.test(lt)) return 'telluride';
-    const src = (e.source || '').toLowerCase();
-    if (/mountain village/.test(src)) return 'mountain village';
-    if (/norwood/.test(src)) return 'norwood';
-    if (/telluride/.test(src)) return 'telluride';
-    return 'other';
-  };
-  // Always-include "pins": marquee Telluride 4th-of-July happenings readers
-  // expect — the Parade and the Rundola — guaranteed in regardless of the
-  // per-town diversity cap. The best-scored (usually photo-bearing) match for
-  // each is taken; the fill then skips ALL pin-matching events so a second
-  // parade/rundola feed can't double up. Dormant outside early July (no match).
-  const PINS = [
-    /\btelluride\b.*\bparade\b|telluride.*(?:fourth|4th|july).*parade/i,
-    /\brundola\b/i,
-  ];
-  const isPinned = (e) => PINS.some((re) => re.test(e.title || ''));
-  const seen = new Set();
-  const uniq = evts
-    .filter((e) => inWeek(e.date) && featuredScore(e) >= 0)   // drop penalized classes/clinics
-    .filter((e) => { const k = tkey(e.title); if (seen.has(k)) return false; seen.add(k); return true; })
-    // Fresh (not in the prior mailing) events first — ranked by score among
-    // themselves — then the already-mailed ones as fill (also by score).
-    .sort((a, b) =>
-      (wasMailed(a) - wasMailed(b)) ||
-      (featuredScore(b) - featuredScore(a)) ||
-      (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
-  for (const re of PINS) { const hit = uniq.find((e) => re.test(e.title) && !chosen.includes(e)); if (hit) chosen.push(hit); }
-  const fillToCap = (maxPerTown) => {
-    const perTown = {}; chosen.forEach((e) => { const t = evTown(e); perTown[t] = (perTown[t] || 0) + 1; });
-    for (const e of uniq) {
-      if (chosen.includes(e) || isPinned(e)) continue;   // pinned events (and their near-dupes) already represented
-      const t = evTown(e); if ((perTown[t] || 0) >= maxPerTown) continue;
-      perTown[t] = (perTown[t] || 0) + 1; chosen.push(e);
-      if (chosen.length >= CAP) return;
-    }
-  };
-  fillToCap(2);   // pass 1: ≤2 per town → smaller towns' events surface
-  fillToCap(5);   // pass 2: top up to the cap, allowing event-rich towns more
-  chosen.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0) || ((featuredStartHour(a.time) || 99) - (featuredStartHour(b.time) || 99)));
-} else {
-  chosen = pickOnePerDay(evts);
-}
+chosen = pickOnePerDay(evts);
 
 // ── Topic extras: events NOT already in the universal one-per-day list, grouped
 // by the Event Topics interest groups. Rendered inside Mailchimp *|INTERESTED|*
@@ -886,25 +785,23 @@ const eh = chosen.map(evRow).join('');
 // section stays a full week. Shipped as hidden copies; the Customer.io template
 // shows the reader's region (scripts/lib/recap-regions.js).
 const regionalEvents = {};
-if (!WEEKEND) {
-  for (const g of RR.REGION_ORDER) {
-    const local = pickOnePerDay(evts.filter((e) => RR.eventRegion(e) === g));
-    const byD = {}; local.forEach((e) => { byD[e.date] = e; });
-    const seenT = new Set(local.map((e) => tkey(e.title)));
-    const merged = [];
-    for (const day of days) {
-      if (byD[day]) { merged.push(byD[day]); continue; }
-      // West End readers are nearer Telluride than Ridgway, so their empty
-      // days take the East End pick first; everyone else takes the all-area pick.
-      const fbPool = (g === 'West End' && regionalEvents['East End']) ? regionalEvents['East End'].concat(chosen) : chosen;
-      const fb = fbPool.find((e) => e.date === day && !seenT.has(tkey(e.title)));
-      if (fb) { merged.push(fb); seenT.add(tkey(fb.title)); }
-    }
-    regionalEvents[g] = merged;
+for (const g of RR.REGION_ORDER) {
+  const local = pickOnePerDay(evts.filter((e) => RR.eventRegion(e) === g));
+  const byD = {}; local.forEach((e) => { byD[e.date] = e; });
+  const seenT = new Set(local.map((e) => tkey(e.title)));
+  const merged = [];
+  for (const day of days) {
+    if (byD[day]) { merged.push(byD[day]); continue; }
+    // West End readers are nearer Telluride than Ridgway, so their empty
+    // days take the East End pick first; everyone else takes the all-area pick.
+    const fbPool = (g === 'West End' && regionalEvents['East End']) ? regionalEvents['East End'].concat(chosen) : chosen;
+    const fb = fbPool.find((e) => e.date === day && !seenT.has(tkey(e.title)));
+    if (fb) { merged.push(fb); seenT.add(tkey(fb.title)); }
   }
-  console.log('  regional What to Attend (local picks / total): ' + RR.REGION_ORDER.map((g) =>
-    g + ' ' + regionalEvents[g].filter((e) => RR.eventRegion(e) === g).length + '/' + regionalEvents[g].length).join(', '));
+  regionalEvents[g] = merged;
 }
+console.log('  regional What to Attend (local picks / total): ' + RR.REGION_ORDER.map((g) =>
+  g + ' ' + regionalEvents[g].filter((e) => RR.eventRegion(e) === g).length + '/' + regionalEvents[g].length).join(', '));
 // A single closing note in Rick's voice at the very end of the email: civic
 // engagement is valuable in every form — weighing in on a meeting, or simply
 // turning out for a concert or a gallery opening. Replaces the old per-meeting
@@ -967,8 +864,8 @@ const whatsReadingBox = WHATS_READING ? `<tr><td class="callout-wrap" style="pad
 // Keying off WEEK_START makes the pick a property of the week the email
 // covers, so it is identical whenever the render happens to run.
 //
-// The Friday "Weekend Ahead" digest snaps back to the Monday of its own week,
-// so the Monday and Friday emails in a given week feature the same org.
+// Any date snaps back to the Monday of its week, so every render for a given
+// week features the same org.
 // local-orgs.html carries a byte-for-byte equivalent of this function — change
 // one, change the other.
 const FEATURED_EPOCH_MONDAY = Date.UTC(2026, 7, 3);   // Mon Aug 3, 2026, 00:00 UTC
@@ -1024,48 +921,26 @@ const whatsLookingForBox = `<tr><td class="callout-wrap" style="padding:26px 34p
 const calloutBox = SHOW_LOOKING_FOR ? whatsLookingForBox : (featuredOrgBox || whatsReadingBox);
 const section = (label, rows) => rows ? `<tr><td class="sec-pad" style="padding:24px 34px 0;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;border-bottom:1px solid #d4c9b0;padding-bottom:8px;">→ ${label}</div><table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}</table></td></tr>` : '';
 
-// ── Past meetings, recapped (weekly only) ──────────────────────────────────
-// Short teasers of last week's meeting recaps (the five business days before
-// WEEK_START), each linking to
-// its full recap on gov-hub-past.html. Ships an ALL list plus one hidden list
-// per region; the Customer.io template shows the reader's region (see
-// scripts/lib/recap-regions.js). Rico and TMVOA stay off the email lists.
-const RECAP_MAX = 14;
+// ── Past meetings pointer ───────────────────────────────────────────────────
+// Meeting recaps moved to their own Monday email, "Past Meetings" (2026-10-04,
+// scripts/past-meetings-email.js), which readers add on their profile. The
+// weekly keeps one line pointing there so nobody wonders where they went.
 const PAST_PAGE = SITE + '/gov-hub-past.html';
-let recapBlock = '';
-if (!WEEKEND) {
-  let allRecaps = [];
-  try { allRecaps = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'meeting-recaps.json'), 'utf8')); }
-  catch (e) { console.error('meeting-recaps.json unreadable — past-meetings section skipped:', e.message); }
-  const weekRecaps = RR.recapsForWeek(allRecaps, WEEK_START);
-  const recapRow = (r) => `<tr><td style="padding:12px 0;border-top:1px solid #eef1ee;"><span style="display:inline-block;background:#e9efe9;color:#21443c;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(r.date)).toUpperCase()}</span><span style="font-size:12px;color:#7a8a85;margin-left:8px;">${esc(r.sourceLabel || '')}</span><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:5px;">${esc(r.title || '')}</div><div style="font-size:14.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${esc(RR.shortRecap(r.recap))}</div><a href="${esc(PAST_PAGE + '#' + RR.recapId(r))}" style="color:#a0531f;text-decoration:underline;font-size:12.5px;font-weight:600;">Read the full summary →</a></td></tr>`;
-  const moreRow = `<tr><td style="padding:10px 0 0;border-top:1px solid #eef1ee;"><a href="${esc(PAST_PAGE)}" style="color:#21443c;font-size:12.5px;font-weight:700;text-decoration:underline;">See every meeting recap on the Past Meetings page →</a></td></tr>`;
-  const listFor = (rows, label, emptyMsg) => {
-    const body = rows.length ? rows.slice(0, RECAP_MAX).map(recapRow).join('') : `<tr><td style="padding:12px 0;font-size:14px;color:#5a6b64;">${emptyMsg}</td></tr>`;
-    return section(label, body + moreRow);
-  };
-  if (weekRecaps.length) {
-    const byRegion = {};
-    for (const g of RR.REGION_ORDER) byRegion[g] = listFor(RR.recapsForRegion(weekRecaps, g),
-      'Last Week&rsquo;s Meetings, Recapped &middot; ' + esc(g), 'No meetings in your area were recapped last week.');
-    recapBlock = RR.regionBlock(listFor(weekRecaps, 'Last Week&rsquo;s Meetings, Recapped', ''), byRegion);
-  }
-  console.log(`  past-meeting recaps (${RR.priorBusinessWeek(WEEK_START).join(' to ')}): all ${weekRecaps.length}; ` +
-    Object.keys(RR.RECAP_REGIONS).map((g) => g + ' ' + RR.recapsForRegion(weekRecaps, g).length).join(', '));
-}
+const PROFILE_URL = SITE + '/profile.html?email=*|EMAIL|*&amp;fname=*|FNAME|*&amp;town=*|MMERGE6|*';
+const pastPointer = section('Last Week&rsquo;s Meetings', `<tr><td style="padding:12px 0;font-size:14.5px;color:#5a6b64;line-height:1.55;">Meeting recaps now have their own Monday email, <strong>Past Meetings</strong>. <a href="${PROFILE_URL}" style="color:#a0531f;text-decoration:underline;font-weight:600;">Add it on your profile &rarr;</a> Or browse every recap on the <a href="${esc(PAST_PAGE)}" style="color:#a0531f;text-decoration:underline;">Past Meetings page</a>.</td></tr>`);
 // Regional "Public Meetings This Week": MEETING_REGIONS (the recap map plus
 // Rico in the East End). Bodies in no region (e.g. TMVOA) stay in the
 // all-area list only.
-const meetingsBlock = WEEKEND ? '' : (mh
+const meetingsBlock = mh
   ? RR.regionBlock(section('Public Meetings This Week', mh), Object.fromEntries(RR.REGION_ORDER.map((g) => {
       const rows = meetings.filter((m) => (RR.MEETING_REGIONS[g] || []).includes(m.srcKey)).map(meetingRow).join('');
       return [g, section('Public Meetings This Week &middot; ' + esc(g), rows ||
         '<tr><td style="padding:12px 0;font-size:14px;color:#5a6b64;">No public meetings in your area are scheduled this week. <a href="' + SITE + '/gov-hub.html" style="color:#a0531f;text-decoration:underline;">See every upcoming meeting &rarr;</a></td></tr>')];
     })))
-  : '');
-if (!WEEKEND) console.log('  regional Public Meetings: all ' + meetings.length + '; ' + RR.REGION_ORDER.map((g) =>
+  : '';
+console.log('  regional Public Meetings: all ' + meetings.length + '; ' + RR.REGION_ORDER.map((g) =>
   g + ' ' + meetings.filter((m) => (RR.MEETING_REGIONS[g] || []).includes(m.srcKey)).length).join(', '));
-const eventsBlock = (!WEEKEND && eh)
+const eventsBlock = eh
   ? RR.regionBlock(section(EVENTS_HEADING, eh), Object.fromEntries(RR.REGION_ORDER.map((g) =>
       [g, section(EVENTS_HEADING + ' &middot; ' + esc(g), regionalEvents[g].map(evRow).join('') || eh)])))
   : section(EVENTS_HEADING, eh);
@@ -1129,8 +1004,8 @@ function ledeBodyName(name, src) {
 }
 if (!LEDE_IS_OVERRIDE) {
   const rickLede = await generateRickLede({
-    cadence: WEEKEND ? 'weekend' : 'week',
-    meetings: WEEKEND ? [] : meetings.map((m) => ({ body: ledeBodyName(m.name, m.src), title: m.name, date: m.date, summary: m.summary })),
+    cadence: 'week',
+    meetings: meetings.map((m) => ({ body: ledeBodyName(m.name, m.src), title: m.name, date: m.date, summary: m.summary })),
     events: chosen.map((e) => ({ title: e.title, date: e.date, location: townLabel(e), summary: e.summary })),
     apiKey: process.env.ANTHROPIC_API_KEY,
     // Content-addressed so re-rendering an UNCHANGED window is free and
@@ -1180,9 +1055,9 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
   <tr><td class="sec-pad" style="padding:22px 34px 4px;">
     <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#2f7a5f;background:rgba(47,122,95,.1);padding:3px 10px;border-radius:999px;">📅 ${esc(EMAIL_TITLE)}</span>
     <p style="margin:11px 0 0;font-size:15.5px;line-height:1.65;color:#2c3b35;">${ledeHtml(LEDE)}</p></td></tr>
-  ${meetingsBlock}${recapBlock}
+  ${meetingsBlock}${pastPointer}
   ${festivalHero}
-  ${eventsBlock}${WEEKEND ? '' : topicHtml}
+  ${eventsBlock}${topicHtml}
   ${calloutBox}
   ${donateBlock}
   <tr><td class="sec-pad" style="padding:24px 34px 30px;border-top:1px solid #ddd6c8;">
@@ -1203,9 +1078,7 @@ if (PREVIEW) {
   // real subscriber send (the non-preview HTML has no banner at all).
   const EDIT_URL = 'https://livabletelluride.org/digest-review.html';
   const editLink = `<br><a href="${EDIT_URL}" style="color:#ffe4c4;font-weight:700;text-decoration:underline;">Edit or send this draft at the Review Desk &rarr;</a>`;
-  const banner = WEEKEND
-    ? `  <tr><td style="background:#a8401f;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;color:#fff;line-height:1.5;">REVIEW DRAFT — this Friday's "Weekend Outlook" events email. Look it over, then approve to send.<br><span style="font-weight:400;">The intro is auto-written in Rick&rsquo;s voice from this weekend&rsquo;s events. To pin a specific intro instead, add a "${WEEK_START}" entry to data/weekend-ahead-lede.json and re-run the workflow.</span>${editLink}</td></tr>\n`
-    : `  <tr><td style="background:#a8401f;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;color:#fff;line-height:1.5;">REVIEW DRAFT — the upcoming weekly email. Look it over, then send the saved copy through Mailchimp. The topic sections below show in full here; each subscriber only sees the ones they opted into.<br><span style="font-weight:400;">The intro is auto-written in Rick&rsquo;s voice from this week&rsquo;s meetings and events. To override it, reply with the new text (week-key ${WEEK_START}).</span>${editLink}</td></tr>\n`;
+  const banner = `  <tr><td style="background:#a8401f;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;color:#fff;line-height:1.5;">REVIEW DRAFT — the upcoming weekly email. Look it over, then send the saved copy through Mailchimp. The topic sections below show in full here; each subscriber only sees the ones they opted into.<br><span style="font-weight:400;">The intro is auto-written in Rick&rsquo;s voice from this week&rsquo;s meetings and events. To override it, reply with the new text (week-key ${WEEK_START}).</span>${editLink}</td></tr>\n`;
   out = out.replace('  <tr><td class="sec-pad" style="background:#21443c;padding:26px 34px;">', banner + '  <tr><td class="sec-pad" style="background:#21443c;padding:26px 34px;">')
            .replace(/\*\|INTERESTED:[^|]*\|\*/g, '').replace(/\*\|END:INTERESTED\|\*/g, '')
            .replace(/\*\|UNSUB\|\*/g, '#').replace(/\*\|[A-Z0-9_]+\|\*/g, '')
@@ -1216,7 +1089,7 @@ if (PREVIEW) {
 // visits are attributable in Cloudflare Web Analytics (shows the ?utm_ pages) and
 // any future analytics. External links (event sources, agenda hosts, Stripe) are
 // left untouched. Anchors (#…) are preserved; existing query strings get "&amp;".
-const utmCampaign = WEEKEND ? 'weekend-outlook' : 'week-ahead';
+const utmCampaign = 'week-ahead';
 out = out.replace(/href="(https:\/\/livabletelluride\.org[^"]*)"/g, (m, url) => {
   const h = url.indexOf('#'); const base = h >= 0 ? url.slice(0, h) : url; const frag = h >= 0 ? url.slice(h) : '';
   const sep = base.includes('?') ? '&amp;' : '?';

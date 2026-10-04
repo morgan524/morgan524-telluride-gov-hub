@@ -6,7 +6,9 @@ name: Weekly Email Preview
 # Mountain (moved from Saturday 2026-07-12 per Morgan — the draft arrives for
 # review/edits the morning before the Monday 6:00 AM send, with anything
 # posted Friday/Saturday picked up). The run also saves the paste-ready
-# Mailchimp HTML (weekly-mailchimp.html) as an artifact.
+# Mailchimp HTML (weekly-mailchimp.html) as an artifact. Since 2026-10-04 it
+# also emails a review copy of Monday's "Past Meetings" email
+# (scripts/past-meetings-email.js), when last week has recaps.
 # Edit the "Week Ahead" lede before the send in the LEDE const of
 # scripts/weekly-email.js.
 on:
@@ -91,6 +93,9 @@ jobs:
           WEEKLY_PREVIEW=1 node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WS" "$LABEL" weekly-preview.html 2>&1 | tee /tmp/wp.log
           node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WS" "$LABEL" weekly-mailchimp.html
           echo "subject=$(grep '^SUBJECT=' /tmp/wp.log | sed 's/^SUBJECT=//')" >> "$GITHUB_OUTPUT"
+          # Past Meetings review copy (no file when last week had no recaps).
+          WEEKLY_PREVIEW=1 node scripts/past-meetings-email.js "$WS" past-preview.html | tee /tmp/pp.log
+          echo "past_subject=$(grep '^SUBJECT=' /tmp/pp.log | sed 's/^SUBJECT=//')" >> "$GITHUB_OUTPUT"
 
       - name: Email preview to info@livabletelluride.org
         if: env.PREVIEW_SMTP_PASS != ''
@@ -106,6 +111,20 @@ jobs:
           from: Livable Telluride <${{ secrets.PREVIEW_SMTP_USER }}>
           html_body: file://weekly-preview.html
 
+      - name: Email Past Meetings preview to info@livabletelluride.org
+        if: env.PREVIEW_SMTP_PASS != '' && steps.render.outputs.past_subject != ''
+        uses: dawidd6/action-send-mail@v18
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.PREVIEW_SMTP_USER }}
+          password: ${{ secrets.PREVIEW_SMTP_PASS }}
+          subject: ${{ steps.render.outputs.past_subject }}
+          to: info@livabletelluride.org
+          from: Livable Telluride <${{ secrets.PREVIEW_SMTP_USER }}>
+          html_body: file://past-preview.html
+
       - name: Note when email isn't configured
         if: env.PREVIEW_SMTP_PASS == ''
         run: echo "::warning::PREVIEW_SMTP_PASS secret not set — rendered weekly-preview.html (see artifact) but did not email. Add PREVIEW_SMTP_USER + PREVIEW_SMTP_PASS to enable the Sunday email."
@@ -118,6 +137,7 @@ jobs:
           path: |
             weekly-preview.html
             weekly-mailchimp.html
+            past-preview.html
           retention-days: 14
           if-no-files-found: ignore
 

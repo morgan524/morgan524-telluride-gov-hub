@@ -13,7 +13,7 @@
  *
  * Usage:
  *   node scripts/lib/approved-preview.js <key> <weekStart> <outPath>
- *     key       'weekend' | 'weekly'
+ *     key       'weekly' | 'past'
  *     weekStart YYYY-MM-DD the preview is for
  *     outPath   where to write the banner-injected preview HTML
  *
@@ -47,7 +47,7 @@ try { html = fs.readFileSync(htmlPath, 'utf8'); }
 catch { console.error(`[approved-preview] missing ${htmlPath}`); process.exit(3); }
 if (html.length < 2000) { console.error(`[approved-preview] ${htmlPath} too small`); process.exit(3); }
 
-const sendDay = key === 'weekend' ? 'Friday' : 'Monday';
+const sendDay = 'Monday';   // every digest sends Monday since Weekend Ahead was retired (2026-10-04)
 const DESK = 'https://livabletelluride.org/digest-review.html';
 const banner =
   `  <tr><td style="background:#1f5130;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;` +
@@ -60,5 +60,5 @@ const anchor = '  <tr><td class="sec-pad" style="background:#21443c;padding:26px
 const out = html.includes(anchor) ? html.replace(anchor, banner + anchor) : banner + html;
 
 fs.writeFileSync(outPath, out);
-console.log(`SUBJECT=${lock.subject || 'The ' + (key === 'weekend' ? 'Weekend' : 'Week') + ' Ahead Outlook'}`);
+console.log(`SUBJECT=${lock.subject || (key === 'past' ? 'Past Meetings' : 'The Week Ahead Outlook')}`);
 console.error(`[approved-preview] wrote ${outPath} from the approved ${htmlPath} (${out.length} bytes)`);

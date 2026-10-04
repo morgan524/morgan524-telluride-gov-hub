@@ -41,7 +41,7 @@ function json(obj, status, origin) {
   });
 }
 
-const SYSTEM = `You are the editor's assistant for "Livable Telluride", a community newsletter for Telluride, Mountain Village, and the surrounding San Miguel County towns. A reviewer is looking at a ready-to-send HTML email digest (a "Weekend Outlook" or "Week Ahead") and may ask you to edit it or answer questions about it.
+const SYSTEM = `You are the editor's assistant for "Livable Telluride", a community newsletter for Telluride, Mountain Village, and the surrounding San Miguel County towns. A reviewer is looking at a ready-to-send HTML email digest (a "Week Ahead" or "Past Meetings") and may ask you to edit it or answer questions about it.
 
 You receive the FULL current email as HTML. When the reviewer asks for a change, DO NOT return the whole email — return a small set of precise find/replace EDITS via the "respond" tool. This keeps you fast and safe. Rules:
 - Each edit has "find" (an EXACT substring copied VERBATIM from the current email HTML — identical text, whitespace, tags, and &#...; entities) and "replace" (the new text). Keep "find" as SHORT as possible while still matching the intended spot EXACTLY ONCE; if a short snippet would be ambiguous, include just enough surrounding markup to make it unique. Order edits top-to-bottom.
@@ -317,12 +317,19 @@ async function send(body, env) {
     return r.ok ? { ok: true, mode: "test-broadcast", sends: r.sends } : r;
   }
 
-  // Approve & Send → API-triggered broadcast to the segment.
-  const bid = (env.CUSTOMERIO_BROADCAST_ID || "").trim();
+  // Approve & Send → API-triggered broadcast to the segment. Each digest has
+  // its own broadcast (its audience is set in the Customer.io UI): the weekly
+  // goes to Weekly Update subscribers, Past Meetings to its own opt-in segment.
+  // Never fall back to the weekly broadcast for another key — that would mail
+  // the wrong email to the whole Weekly list.
+  const isPast = body.key === "past";
+  const bid = ((isPast ? env.CUSTOMERIO_PAST_BROADCAST_ID : env.CUSTOMERIO_BROADCAST_ID) || "").trim();
   if (!bid) {
     return {
       pending: true,
-      error: "Customer.io broadcast not finalized yet. Create the API-triggered broadcast in the Customer.io UI, target the Weekly Update segment, and set CUSTOMERIO_BROADCAST_ID — then this goes live. (Send test works now.)",
+      error: isPast
+        ? "Past Meetings broadcast not configured. Create the API-triggered \"Past Meetings\" broadcast in the Customer.io UI (audience: Past Meetings subscribers), then set CUSTOMERIO_PAST_BROADCAST_ID. (Send test works now.)"
+        : "Customer.io broadcast not finalized yet. Create the API-triggered broadcast in the Customer.io UI, target the Weekly Update segment, and set CUSTOMERIO_BROADCAST_ID — then this goes live. (Send test works now.)",
     };
   }
   const r = await ltSendBroadcast(bid, subject, html, appKey, env, false);
@@ -340,7 +347,7 @@ async function send(body, env) {
 // append a record to data/sent-broadcasts.json (content-refresh turns those into
 // BLOG_POSTS). Reuses the /save GitHub token.
 async function archiveBroadcast(env, body) {
-  const key = body.key === "weekend" ? "weekend" : "weekly";
+  const key = body.key === "past" ? "past" : "weekly";
   const html = String(body.emailHtml || "");
   const subject = String(body.subject || "Livable Telluride");
   const now = new Date();
@@ -396,8 +403,8 @@ async function ghAppendJson(env, path, entry) {
 // the lock and stops re-rendering that digest, so the daily bot can no longer
 // change the lede or swap events — Monday's Approve & Send goes out exactly as
 // approved. The lock auto-expires when the week rolls over (the workflow deletes
-// a lock whose weekStart no longer matches the coming Monday/Friday).
-const DIGEST_FILES = { weekly: "digest/week.html", weekend: "digest/weekend.html" };
+// a lock whose weekStart no longer matches the coming Monday).
+const DIGEST_FILES = { weekly: "digest/week.html", past: "digest/past.html" };
 
 // Hex SHA-256 of a string's UTF-8 bytes. The approval lock records this for
 // the digest body so the send can prove the HTML going out is byte-for-byte
@@ -611,8 +618,8 @@ async function saveDigest(body, env) {
 // second is a no-op thanks to the duplicate gate. (Morgan, 2026-09-21: "fix
 // this issue for all future ones.")
 //
-// Gates, identical to the workflow: right weekday (Mon → weekly, Fri →
-// weekend) at/after 09:00 America/Denver; an approval lock whose weekStart
+// Gates, identical to the workflow: right weekday (Monday → the weekly and
+// Past Meetings, each checked and sent on its own) at/after 09:00 America/Denver; an approval lock whose weekStart
 // matches the manifest; the subject not already in data/sent-broadcasts.json;
 // the HTML neither tiny, bloated (>120 KB) nor carrying data:image payloads.
 // Everything is read from the repo's main branch via the Contents API so a
@@ -648,16 +655,33 @@ function denverParts(d) {
   return { weekday: parts.weekday, hour: parseInt(parts.hour, 10) % 24 };
 }
 
+// Digests due each Denver weekday, sent in this order.
+const SEND_DAYS = { Mon: ["weekly", "past"] };
+
 async function scheduledSend(env, dry) {
   const { weekday, hour } = denverParts(new Date());
-  const key = weekday === "Mon" ? "weekly" : weekday === "Fri" ? "weekend" : null;
-  if (!key) return { skipped: "not Mon/Fri in Denver (" + weekday + ")" };
-  if (hour < 9) return { skipped: "before 09:00 Denver (hour " + hour + ")" };
+  const keys = SEND_DAYS[weekday];
+  if (!keys) return { skipped: "not a send day in Denver (" + weekday + ")", results: [] };
+  if (hour < 9) return { skipped: "before 09:00 Denver (hour " + hour + ")", results: [] };
   if (!env.GITHUB_TOKEN) throw new Error("GITHUB_TOKEN not configured on the Worker");
-
   const man = JSON.parse(await ghGetText(env, "digest/manifest.json") || "{}");
+  // One digest's failure must not stop the other from going out.
+  const results = [];
+  for (const key of keys) {
+    try { results.push(Object.assign({ key }, await scheduledSendKey(env, man, key, dry))); }
+    catch (e) { results.push({ key, error: String((e && e.message) || e) }); }
+  }
+  return { results };
+}
+
+async function scheduledSendKey(env, man, key, dry) {
   const d = man.digests && man.digests[key];
-  if (!d) throw new Error("manifest has no '" + key + "' digest");
+  if (!d) {
+    // Past Meetings is only rendered when last week has recaps; no entry means
+    // nothing to send this week, which is not a missed send.
+    if (key === "past") return { skipped: "no Past Meetings digest this week (no recaps)" };
+    throw new Error("manifest has no '" + key + "' digest");
+  }
   const subject = d.subject, weekStart = d.weekStart || "";
 
   const lockText = await ghGetText(env, "digest/" + key + ".lock.json");
@@ -689,10 +713,10 @@ async function scheduledSend(env, dry) {
     }
   }
 
-  if (dry) return { wouldSend: true, key, subject, bytes: html.length, verified: !!lock.sha256 };
+  if (dry) return { wouldSend: true, subject, bytes: html.length, verified: !!lock.sha256 };
   const r = await send({ emailHtml: html, subject, key, test: false }, env);
   if (!r || !r.ok) throw new Error("send failed: " + JSON.stringify(r).slice(0, 300));
-  return { sent: true, key, subject, blog: r.blog };
+  return { sent: true, subject, blog: r.blog };
 }
 
 export default {
@@ -705,6 +729,7 @@ export default {
         ok: true,
         broadcast: !!(env.CUSTOMERIO_BROADCAST_ID || "").trim(),
         testBroadcast: !!(env.CUSTOMERIO_TEST_BROADCAST_ID || "").trim(),
+        pastBroadcast: !!(env.CUSTOMERIO_PAST_BROADCAST_ID || "").trim(),
         // "ok" | "bad" | "missing" | "forbidden" | "unknown" — the Desk warns on
         // load so an expired token surfaces before the reviewer does the work,
         // not at Approve time. No secret is exposed, only whether it still works.
@@ -744,10 +769,16 @@ export default {
     try {
       const out = await scheduledSend(env);
       console.log("scheduled send " + stamp + ": " + JSON.stringify(out));
-      if (out.skipped && out.due) {
-        ctx.waitUntil(ghRaiseIssue(env, "🚨 Digest did not send (Worker cron)",
-          "The scheduled send window passed at " + stamp + " but nothing went out.\n\nReason: " + out.skipped +
-          "\n\nApprove the digest on the Review Desk, then run `gh workflow run digest-scheduled-send.yml -f digest=" + (out.key || "weekly") + " -f confirm=SEND` or wait for the next cron."));
+      for (const r of out.results || []) {
+        if (r.error) {
+          console.error("scheduled send " + stamp + " " + r.key + " FAILED: " + r.error);
+          ctx.waitUntil(ghRaiseIssue(env, "🚨 Digest scheduled send failed (Worker cron)",
+            "The Worker's cron send of the " + r.key + " digest threw at " + stamp + ":\n\n```\n" + r.error + "\n```\nThe GitHub backup (digest-scheduled-send.yml) may still send it; otherwise run it with -f digest=" + r.key + " -f confirm=SEND."));
+        } else if (r.skipped && r.due) {
+          ctx.waitUntil(ghRaiseIssue(env, "🚨 Digest did not send (Worker cron)",
+            "The scheduled send window for the " + r.key + " digest passed at " + stamp + " but nothing went out.\n\nReason: " + r.skipped +
+            "\n\nApprove the digest on the Review Desk, then run `gh workflow run digest-scheduled-send.yml -f digest=" + r.key + " -f confirm=SEND` or wait for the next cron."));
+        }
       }
     } catch (e) {
       const msg = String((e && e.message) || e);
