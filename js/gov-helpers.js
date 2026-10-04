@@ -149,9 +149,6 @@ const MEETING_AGENDA_META = {
   "med|2026-09-11|Board Work Session":
     {"sv":4,"agendaUrl":null,"zoomUrl":"https://us02web.zoom.us/j/83975455041?pwd=JFP4C7xMrNnAn93sWUhROdSuVzQbeq.1","meetingId":"839 7545 5041","passcode":"388003"},
 
-  "mv|2026-09-03|Design Review Board":
-    {"sv":4,"agendaUrl":"https://townofmountainvillage.com/site/assets/files/49787/september_3-_2026_design_review_board_meeting_agenda.pdf","zoomUrl":"https://us06web.zoom.us/j/83949014976?pwd=oze6zDkOSb0a8fjpvluaHR1zcyO0XN.1","meetingId":"839 4901 4976"},
-
   "norwood|2026-09-08|Norwood Water Commission Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
 
@@ -1060,15 +1057,12 @@ const SMC_ALERTS = [
 const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-10-03';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-10-04';
 const LEGAL_NOTICES_CACHE_DATE = '2026-10-02';
 
 const MANUAL_SUMMARIES = {
   "med|2026-09-11|Board Work Session":
     "A single-item work session: a presentation from CommonSpirit Health on a potential partnership with the Telluride Hospital District. No packet or supporting materials are posted ahead of the session, so the scope and terms of what's being discussed aren't yet public -- worth watching given the board's ongoing Letter of Intent talks with CommonSpirit on the new facility project. No board action is scheduled; this is a discussion-only session, held in person and by Zoom.",
-
-  "mv|2026-09-03|Design Review Board":
-    "One item worth noting on this September 3rd Design Review Board agenda: a conditional-use permit review for a temporary tent and food truck at 332 Adams Ranch Rd (Lots OSP-35-B & OSP-35-C), which goes to the DRB for a recommendation to Town Council. There's also a general easement encroachment review at 140 Cortina Dr and an informational session on Pond Plaza with staff and Design Workshop. The 15-unit employee apartment building at 306 Adams Ranch Rd — the one item of broader housing consequence — is being continued to the October 1st meeting. The remainder of the agenda is single-family and detached condominium architecture reviews.",
 
   "norwood|2026-09-08|Norwood Water Commission Meeting":
     "The September 8, 2026 Norwood Water Commission Meeting agenda hasn't been posted yet.",
@@ -2515,8 +2509,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "October 3, 2026",
     firstSeen: "2026-10-03",
     newsTopic: "public-safety",
-    copy: "In 2021, my then 14-year-old son Hudson was in a serious mountain biking accident in Telluride. Care from first responders saved his life. Weeks after the accident, I met with one of the EMTs who had helped Hudson and he…",
-    claudeSummary: false,
+    copy: "Telluride Fire Protection District launched a Peer Support Team in January 2026 — seven trained volunteer first responders who check in with colleagues after hard calls, following a structured 3-day, 3-week, 3-month model. The program is confidential and overseen by a licensed clinical social worker. It's a quiet but meaningful step for a small department that handles serious trauma regularly.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_8300070c-703f-4284-8dc3-a175629e04b7.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/ef/9efb2edd-c0c2-488e-b768-14145689cba0/6abccaa99388e.image.jpg",
     imgHiRes: true
@@ -3430,42 +3424,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "High fashion and higher ideals",
-    source: "Telluride Times",
-    date: "September 20, 2026",
-    firstSeen: "2026-09-20",
-    newsTopic: "government",
-    copy: "Two Skirts on Main Street has been around since 2001, and owner Kristin Holbrook has quietly built something beyond a boutique — hiring up to 12 young women each summer and running a THS mentorship program focused on life skills, confidence, and professionalism. She's also logged years on local boards and earned the Telluride Foundation's Outstanding Citizen award in 2014.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/business/article_3c8053da-d008-4adf-a5e3-48a8c554270a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/fd/8fd5b822-283d-4b0a-b5bf-6e29d98b3748/6aab7f699d8e2.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Colorado State apologizes to BYU for derogatory chants as 11th-ranked Cougars beat Rams 41-23",
-    source: "Telluride Times",
-    date: "September 20, 2026",
-    firstSeen: "2026-09-20",
-    newsTopic: "education",
-    copy: "BYU beat Colorado State 41-23 Saturday, but the bigger story was CSU issuing a formal apology for anti-Mormon chants from its student section. It's the second straight season CSU has faced this issue with BYU — Colorado was fined $50,000 last year for similar incidents.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_d20c50fb-f0ea-5bea-8b4c-6ca662740676.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/aa/2aaaf492-aa72-588a-90ab-789e8f3e0580/6aaffd3669b82.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "THS volleyball unlucky in tight losses",
-    source: "Telluride Times",
-    date: "September 20, 2026",
-    firstSeen: "2026-09-20",
-    newsTopic: "education",
-    copy: "Telluride High School volleyball dropped two close matches in non-league play, falling to North Fork 0-3 and Pagosa Springs 0-3, with four of the six sets decided by two points or fewer. The Lady Miners rallied from 17-12 down in Set 3 against North Fork before narrowly losing 24-26. Now 4-6 overall, they face ranked Dolores and Ignacio over the next two weeks.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_b71b52bc-98b9-47da-878d-8bbd47b91139.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/e5/7e5e5bc5-834a-445d-83f6-648803cdf591/6aab7a505d9a2.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride to Lift All Fire Restrictions",
     source: "Town of Telluride",
     date: "September 17, 2026",
@@ -3678,7 +3636,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "October 3, 2026",
+    date: "October 4, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3689,7 +3647,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "October 3, 2026",
+    date: "October 4, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -6972,17 +6930,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/28484/download_1.800x533.webp"
-  },
-  {
-    title: "Pink Talking Fish",
-    link: "https://www.telluride.com/event/pink-talking-fish/",
-    description: "Pink Talking Fish is a Hybrid Tribute Fusion Act that takes the music from three of the world's most beloved bands and …",
-    pubDate: "2026-10-02",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62634/2025_ptf_fall_r4_gen_600x400.800x533.webp"
   },
   {
     title: "Annual San Miguel River Cleanup",
