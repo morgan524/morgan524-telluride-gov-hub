@@ -3,6 +3,16 @@ main = "worker.js"
 compatibility_date = "2025-01-01"
 account_id = "8f020e73de4e9956f0e3ad7dce070ef4"
 
+# Run the Worker near the Mountain West instead of next to whoever calls it.
+# 2026-10-04: KOTO's Cloudflare began returning 403 to every proxied fetch the
+# content-refresh Action made (GitHub runners sit on the East Coast, so the
+# Worker ran in an East Coast data center), while the same proxy called from
+# Colorado (the DEN data center) still got 200. Pinning placement to Salt Lake
+# City makes the Action's fetches leave from the same part of the network.
+# Check with the cf-placement response header; revert by deleting this block.
+[placement]
+region = "gcp:us-west3"
+
 # Per-day, per-endpoint token + cost counters for the three Anthropic calls this
 # Worker makes (flyer summary, letter copyedit, Hub-Bub moderation). These are
 # visitor-triggered, so they're the one AI surface that appears in no repo log —
