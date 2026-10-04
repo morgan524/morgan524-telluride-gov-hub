@@ -81,6 +81,7 @@ jobs:
         id: review
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RSS_PROXY_URL: ${{ secrets.RSS_PROXY_URL }}   # link checks for hosts that block GitHub IPs
           FROZEN_UNTIL: ${{ (github.event.inputs.freeze || 'true') == 'true' && 'Monday afternoon (3 PM MT)' || 'not frozen (manual test run)' }}
         run: |
           set -o pipefail

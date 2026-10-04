@@ -48,6 +48,10 @@ function variant(html, off) {
 const allVariant = (html) => variant(html, 1);
 function textOf(html) {
   return decode(html.replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    // The gray source tag ("Town of Telluride") sits beside the date badge and
+    // the meeting title is on the next line; keep them apart so the reader of
+    // this text doesn't see "Town of Telluride Town of Telluride …".
+    .replace(/<\/span>(?=<div)/gi, ' · ')
     .replace(/<\/(p|div|tr|td|h\d)>/gi, '\n').replace(/<br\s*\/?>/gi, '\n')
     .replace(/<[^>]+>/g, ' ')).replace(/[ \t]+/g, ' ').replace(/\n\s*/g, '\n').trim();
 }
@@ -97,7 +101,23 @@ function checkRecapAnchors(html, recaps) {
   return issues;
 }
 
+// Hosts on the RSS proxy's allow-list block GitHub runner IPs (KOTO's 403s,
+// timeouts); check those through the proxy so a blocked runner isn't reported
+// as a dead link.
+const PROXY = (process.env.RSS_PROXY_URL || '').replace(/\/$/, '');
+let proxyHosts = null;
+async function viaProxy(url) {
+  if (!PROXY) return url;
+  if (!proxyHosts) {
+    try { proxyHosts = new Set((await (await fetch(PROXY + '/health')).json()).allowed || []); } catch (_) { proxyHosts = new Set(); }
+  }
+  const host = new URL(url).hostname;
+  const ok = [...proxyHosts].some((h) => host === h || host.endsWith('.' + h));
+  return ok ? PROXY + '/proxy?url=' + encodeURIComponent(url) : url;
+}
+
 async function fetchStatus(url) {
+  url = await viaProxy(url);
   const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), 20000);
   try {
     const r = await fetch(url, { method: 'GET', redirect: 'follow', signal: ctl.signal, headers: { 'User-Agent': UA, Accept: 'text/html,application/pdf,*/*' } });
@@ -129,8 +149,11 @@ async function checkLinks(htmlByKey) {
   for (const [u, st] of results) {
     const where = [...urls.get(u)].join(', ');
     if (typeof st === 'number' && st < 400) continue;
-    // 401/403/429 from big sites usually means "bots not welcome", not a dead link.
-    const soft = st === 401 || st === 403 || st === 429 || st === 'timeout';
+    // 401/403/429 from big sites usually means "bots not welcome", and a
+    // timeout or reset is usually the network; only a 404/410/5xx or a host
+    // that doesn't exist is reported as broken.
+    const soft = st === 401 || st === 403 || st === 429 || st === 'timeout' ||
+      (typeof st === 'string' && !/ENOTFOUND|EAI_AGAIN/.test(st));
     issues.push({ severity: soft ? 'low' : 'high', check: 'link', where, url: u,
       problem: soft ? `Could not verify (${st}); the site may block automated checks. Click it once to be sure.` : `Link is broken (${st}).` });
   }
@@ -163,9 +186,18 @@ async function editorialRead(key, d, text, apiKey) {
     'Return ONLY a JSON object, no markdown fence: {"issues":[{"severity":"high|medium|low","where":"the section or item name","quote":"the exact words, under 20 words","problem":"what is wrong","suggestion":"how to fix it"}]}',
     '', 'EMAIL TEXT:', text.slice(0, 60000),
   ].join('\n');
-  const raw = await callClaude(apiKey, prompt);
-  const json = JSON.parse(raw.replace(/^```(?:json)?\s*|\s*```$/g, ''));
-  return (json.issues || []).map((x) => Object.assign({ check: 'editorial' }, x));
+  // Take the JSON object even if the model wraps it in prose; retry once.
+  let json = null, lastErr = null;
+  for (let attempt = 0; attempt < 2 && !json; attempt++) {
+    const raw = await callClaude(apiKey, attempt ? prompt + '\n\nReply with the JSON object only.' : prompt);
+    const a = raw.indexOf('{'), b = raw.lastIndexOf('}');
+    try { json = JSON.parse(raw.slice(a, b + 1)); } catch (e) { lastErr = e; }
+  }
+  if (!json) throw lastErr || new Error('no JSON in reply');
+  // Drop items the model itself withdrew ("no change needed").
+  return (json.issues || [])
+    .filter((x) => !/\bwithdrawn\b|no concrete error/i.test(x.problem || '') && !/^no change needed\.?$/i.test(String(x.suggestion || '').trim()))
+    .map((x) => Object.assign({ check: 'editorial' }, x));
 }
 
 // ── Report ──────────────────────────────────────────────────────────────────
