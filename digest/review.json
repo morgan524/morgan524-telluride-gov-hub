@@ -1,0 +1,176 @@
+{
+  "reviewedAt": "2026-10-04 16:11",
+  "weekStart": "2026-10-05",
+  "frozenUntil": "Monday afternoon (3 PM MT)",
+  "digests": [
+    {
+      "key": "weekly",
+      "name": "The Week Ahead Outlook",
+      "subject": "The Week Ahead Outlook - October 5 - October 11, 2026",
+      "issues": [
+        {
+          "severity": "high",
+          "check": "link",
+          "where": "https://events.ourayridgwayevents.com/event/a-monster-calls-movie-night-the-wright",
+          "url": "https://events.ourayridgwayevents.com/event/a-monster-calls-movie-night-the-wright",
+          "problem": "Link is broken (error: ETIMEDOUT)."
+        },
+        {
+          "check": "editorial",
+          "severity": "high",
+          "where": "★ Festival This Week — Telluride Horror Show",
+          "quote": "October 9–12, 2026",
+          "problem": "October 9–12 is four days, but the festival is labeled a '3-day passes' event, implying it is a 3-day festival. The dates span four days (Thu–Sun), contradicting '3-day' labeling — or the dates themselves are wrong.",
+          "suggestion": "Verify whether the festival runs 3 or 4 days and correct either the date range or the pass description accordingly."
+        },
+        {
+          "check": "editorial",
+          "severity": "high",
+          "where": "WED, OCT 7 · 10:00 AM–5:00 PM Mountain Village Town Council Meeting — ℹ Why This Matters box",
+          "quote": "The gondola (built 1996) is critical regional infrastructure…",
+          "problem": "The 'Why This Matters' gondola blurb appears under the Mountain Village Town Council budget work session but is unrelated to that meeting's agenda; the same blurb also appears under the SMART Board item, where it belongs. It is misplaced here.",
+          "suggestion": "Remove the gondola 'Why This Matters' box from the Mountain Village Town Council item; it belongs only under the SMART Board entry."
+        },
+        {
+          "check": "editorial",
+          "severity": "high",
+          "where": "Intro paragraph — Tuesday",
+          "quote": "the Telluride Town Council takes up two genuinely consequential items",
+          "problem": "The item listed under TUE, OCT 6 is headed 'Town of Telluride Town Council', not 'Telluride Town Council' — more importantly, the intro drops the town name and calls it just 'the Telluride Town Council', which is acceptable, but the body listing header reads 'Town of Telluride Town Council' with a redundant 'Town of Telluride' prefix repeated twice: 'Town of Telluride Town of Telluride Town Council' appears on the Monday Open Space Commission item, indicating a systemic duplication error.",
+          "suggestion": "Fix the header 'Town of Telluride Town of Telluride Open Space Commission' to read 'Town of Telluride Open Space Commission'."
+        },
+        {
+          "check": "editorial",
+          "severity": "high",
+          "where": "MON, OCT 5 · 4:00 PM — header",
+          "quote": "Town of Telluride Town of Telluride Open Space Commission",
+          "problem": "The jurisdiction label 'Town of Telluride' is duplicated in the header, producing 'Town of Telluride Town of Telluride Open Space Commission'.",
+          "suggestion": "Remove the duplicate: 'Town of Telluride Open Space Commission'."
+        },
+        {
+          "check": "editorial",
+          "severity": "medium",
+          "where": "WED, OCT 7 · 4:00 PM Town of Telluride Ecology Commission",
+          "quote": "the agenda posts closer to the date on the Gov - Hub",
+          "problem": "The item says 'agenda not posted' in effect, but the Wednesday Ecology Commission meeting has a 'View agenda →' link absent — this is fine on its own — however the phrasing 'Gov - Hub' contains an erroneous space mid-word; it should be 'GovHub' or 'Gov-Hub'.",
+          "suggestion": "Correct 'Gov - Hub' to 'GovHub' (or the platform's correct styled name)."
+        },
+        {
+          "check": "editorial",
+          "severity": "medium",
+          "where": "MON, OCT 5 · 4:00 PM Open Space Commission body text",
+          "quote": "Bear Creek Preserve Zone 1 Restoration Pl an site walk",
+          "problem": "'Pl an' contains an erroneous mid-word space; should be 'Plan'.",
+          "suggestion": "Change 'Restoration Pl an' to 'Restoration Plan'."
+        },
+        {
+          "check": "editorial",
+          "severity": "medium",
+          "where": "Intro paragraph — Wednesday",
+          "quote": "The Telluride Housing Authority Subcommittee meets to catch up on draft minutes from the summer",
+          "problem": "The intro says 'draft minutes from the summer' but the body listing specifies three months: June, July, and August — the intro is vague but not wrong; however the intro omits the Telluride Ecology Commission entirely despite it appearing in the body listings for Wednesday.",
+          "suggestion": "Add a mention of the Telluride Ecology Commission meeting to the Wednesday intro paragraph."
+        },
+        {
+          "check": "editorial",
+          "severity": "medium",
+          "where": "THU, OCT 8 · 4:00 PM SMART Board — agenda note vs. link",
+          "quote": "The agenda hasn't been posted yet — details will follow closer to the meeting",
+          "problem": "The item includes a 'View agenda →' link immediately after the header, contradicting the body text that says the agenda hasn't been posted.",
+          "suggestion": "If the agenda is genuinely not yet posted, remove the 'View agenda →' link; if it has been posted, remove the 'hasn't been posted yet' sentence."
+        },
+        {
+          "check": "editorial",
+          "severity": "medium",
+          "where": "Intro paragraph — Thursday",
+          "quote": "the curtain goes up on Not-So-Young People's Theater presents Shrek The Musical at the Sheridan Opera House in Telluride, running through Sunday",
+          "problem": "(Withdrawn — no concrete error found on closer reading.)",
+          "suggestion": "No change needed."
+        },
+        {
+          "severity": "low",
+          "check": "link",
+          "where": "https://koto.org/event/not-so-young-peoples-theater-presents-shrek-the-musical/2026-10-08/",
+          "url": "https://koto.org/event/not-so-young-peoples-theater-presents-shrek-the-musical/2026-10-08/",
+          "problem": "Could not verify (403); the site may block automated checks. Click it once to be sure."
+        },
+        {
+          "severity": "low",
+          "check": "link",
+          "where": "https://koto.org/event/ridgway-farmers-market/2026-10-09/",
+          "url": "https://koto.org/event/ridgway-farmers-market/2026-10-09/",
+          "problem": "Could not verify (403); the site may block automated checks. Click it once to be sure."
+        },
+        {
+          "severity": "low",
+          "check": "link",
+          "where": "https://koto.org/event/volunteer-trail-work-day-cross-mountain-trailhead/",
+          "url": "https://koto.org/event/volunteer-trail-work-day-cross-mountain-trailhead/",
+          "problem": "Could not verify (403); the site may block automated checks. Click it once to be sure."
+        },
+        {
+          "severity": "low",
+          "check": "link",
+          "where": "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-10-06/",
+          "url": "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-10-06/",
+          "problem": "Could not verify (403); the site may block automated checks. Click it once to be sure."
+        },
+        {
+          "severity": "low",
+          "check": "link",
+          "where": "https://koto.org/event/telluride-farmers-market/2026-10-09/",
+          "url": "https://koto.org/event/telluride-farmers-market/2026-10-09/",
+          "problem": "Could not verify (403); the site may block automated checks. Click it once to be sure."
+        },
+        {
+          "severity": "low",
+          "check": "link",
+          "where": "https://koto.org/event/facing-the-mourning/2026-10-08/",
+          "url": "https://koto.org/event/facing-the-mourning/2026-10-08/",
+          "problem": "Could not verify (403); the site may block automated checks. Click it once to be sure."
+        },
+        {
+          "severity": "low",
+          "check": "link",
+          "where": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-10-09/",
+          "url": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-10-09/",
+          "problem": "Could not verify (403); the site may block automated checks. Click it once to be sure."
+        },
+        {
+          "severity": "low",
+          "check": "link",
+          "where": "https://koto.org/event/lone-cone-legacy-trust-annual-harvest-dinner/",
+          "url": "https://koto.org/event/lone-cone-legacy-trust-annual-harvest-dinner/",
+          "problem": "Could not verify (403); the site may block automated checks. Click it once to be sure."
+        },
+        {
+          "check": "editorial",
+          "severity": "low",
+          "where": "→ Last Week's Meetings — THU, OCT 1 Mountain Village Design Review Board",
+          "quote": "Mountain Village Design Review Board — Oct 1, 2026",
+          "problem": "This recap item has no governing-body jurisdiction prefix (unlike all other recap items which include 'Town of Telluride', 'San Miguel County', etc.), leaving 'Mountain Village' ambiguous as to whether it is the Town of Mountain Village body.",
+          "suggestion": "Add 'Town of Mountain Village' as the jurisdiction label to match the formatting of other recap items."
+        },
+        {
+          "check": "editorial",
+          "severity": "low",
+          "where": "Intro paragraph — Monday",
+          "quote": "In Ouray, the big one is a joint work session where the Ouray County Board of County Commissioners Special Joint Work Session and Ouray City Council Work Session sit down together",
+          "problem": "The sentence structure is awkward and misleading: it names the meeting titles as if they are the entities sitting down ('the Ouray County Board of County Commissioners Special Joint Work Session…sit down together'), rather than the bodies themselves.",
+          "suggestion": "Rewrite to name the bodies: 'the Ouray County Board of County Commissioners and the Ouray City Council sit down together in a joint work session…'"
+        }
+      ]
+    },
+    {
+      "key": "past",
+      "name": "Past Meetings",
+      "subject": "Past Meetings - September 28 - October 2, 2026",
+      "issues": []
+    }
+  ],
+  "errors": [
+    "past: editorial read failed (Unexpected token 'I', \"I need to \"... is not valid JSON); mechanical checks still ran"
+  ],
+  "total": 20,
+  "linksChecked": 70
+}
