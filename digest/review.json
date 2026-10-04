@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-10-04 16:19",
+  "reviewedAt": "2026-10-04 16:54",
   "weekStart": "2026-10-05",
   "frozenUntil": "Monday afternoon (3 PM MT)",
   "digests": [
@@ -11,82 +11,87 @@
         {
           "check": "editorial",
           "severity": "high",
-          "where": "Intro paragraph, Tuesday description",
-          "quote": "the Telluride Town Council takes up two genuinely consequential items",
-          "problem": "The listing shows the Town Council meeting at 10:00 AM with a work session and one public hearing — the intro describes these as 'two consequential items' which is accurate, but the meeting time in the intro is described as Tuesday while the actual agenda item about the Certificate of Appropriateness expiring October 18 is consistent. However, the intro says the Town Council meets Tuesday but the listed meeting tag says 'Town of Telluride · Town of Telluride Town Council' at 10:00 AM on TUE OCT 6 — no error here. Real issue: the intro paragraph says the CORAL SKYE show is 'over on N Cora Street in Ridgway' but the listing gives the address as '687 N Cora Street, Ridgway' — not an error. Actual issue: the intro paragraph places the Telluride Housing Authority Subcommittee on Wednesday, but the body lists it at WED, OCT 7 · 9:00 AM — consistent. Flagging the real issue: the intro paragraph for Wednesday says 'The Telluride Housing Authority Subcommittee meets to catch up on draft minutes from the summer' but the body item says 'three months of draft minutes from June, July, and August' — consistent. Actual concrete error: the intro paragraph omits the Telluride Housing Authority Subcommittee from the Wednesday description and instead mentions it — it is present. Re-examining: the intro for Wednesday lists the SMC BOCC meeting but says it covers 'a lot line adjustment in the Lawson Hill PUD' which matches the body. No error. Flagging confirmed issue: the 'Why This Matters' gondola blurb appears under BOTH the Mountain Village Town Council Meeting (WED OCT 7) AND the SMART Board of Directors (THU OCT 8) — it is a duplicate/misplaced block that does not relate to the Mountain Village budget work session.",
-          "suggestion": "Remove the 'Why This Matters' gondola blurb from the Mountain Village Town Council Meeting entry — it belongs only under the SMART Board of Directors item, if anywhere."
-        },
-        {
-          "check": "editorial",
-          "severity": "high",
-          "where": "WED, OCT 7 · 10:00 AM–5:00 PM Mountain Village · Mountain Village Town Council Meeting",
-          "quote": "The gondola (built 1996) is critical regional infrastructure…",
-          "problem": "The 'Why This Matters' gondola funding blurb is duplicated here and under the SMART Board item. It has no relevance to the Mountain Village annual budget work session and appears to be a misplaced/copy-paste error.",
-          "suggestion": "Remove the gondola 'Why This Matters' block from the Mountain Village Town Council Meeting entry entirely."
-        },
-        {
-          "check": "editorial",
-          "severity": "high",
-          "where": "MON, OCT 5 · 4:00 PM Ouray County · Ouray County Board of County Commissioners Special Joint Work Session AND MON, OCT 5 · 4:00 PM City of Ouray · Ouray City Council Work Session",
-          "quote": "MON, OCT 5 · 4:00 PM City of Ouray · Ouray City Council Work Session",
-          "problem": "The joint work session is listed twice as two separate meetings at the same time (4:00 PM, Oct 5) covering the same subject (the IGA for county law enforcement takeover). The intro paragraph describes it as a single joint session; listing it as two separate meetings implies two distinct events and will mislead readers.",
-          "suggestion": "Merge into a single listing for the joint work session, or clearly label one as a component of the joint session to avoid implying two separate 4:00 PM meetings on the same topic."
-        },
-        {
-          "check": "editorial",
-          "severity": "high",
           "where": "★ Festival This Week · Telluride Horror Show",
           "quote": "October 9–12, 2026",
-          "problem": "The festival is described as a '3-day' event but the listed dates span four days (October 9, 10, 11, 12).",
-          "suggestion": "Either correct the date range to a 3-day span (e.g., October 10–12) or change '3-day passes' to '4-day passes' to match the listed dates."
+          "problem": "The festival runs October 9–12, but the Week Ahead Outlook covers only October 5–11; October 12 falls outside the newsletter's stated window, and more importantly the festival is listed as a 3-day event yet the date range spans 4 days (Oct 9, 10, 11, 12).",
+          "suggestion": "Verify whether Telluride Horror Show is 3 days or 4 days and correct either the date range or the '3-day passes' copy accordingly. No automatic fix possible without confirming the correct dates."
+        },
+        {
+          "check": "editorial",
+          "severity": "high",
+          "where": "THU, OCT 8 · 4:00 PM · SMART Board of Directors — ℹ Why This Matters",
+          "quote": "The agenda hasn't been posted yet — details will follow closer to the meeting.",
+          "problem": "The intro paragraph says 'The agenda hadn't posted at press time,' which matches the listing. However, the SMART Board item carries the same 'Why This Matters' gondola blurb as the Mountain Village Town Council item — this blurb is duplicated verbatim under two different listings.",
+          "suggestion": "Remove the duplicate 'Why This Matters' gondola blurb from the SMART Board of Directors listing (or from the Mountain Village listing), as it appears identically under both."
+        },
+        {
+          "check": "editorial",
+          "severity": "high",
+          "where": "Week Ahead Outlook intro, Thursday paragraph",
+          "quote": "original songs, and a ogre with a lot of heart",
+          "problem": "'a ogre' is a grammatical error; 'ogre' begins with a vowel sound and requires 'an'.",
+          "suggestion": "Change 'a ogre' to 'an ogre'.",
+          "fix": {
+            "find": "original songs, and a ogre with a lot of heart",
+            "replace": "original songs, and an ogre with a lot of heart"
+          }
         },
         {
           "check": "editorial",
           "severity": "medium",
-          "where": "Intro paragraph, Monday description",
-          "quote": "the Ouray County Board of County Commissioners Special Joint Work Session and Ouray City Council Work Session sit down together",
-          "problem": "The intro names the joint session correctly, but then the body lists it as two entirely separate meetings. The intro's description of one joint session contradicts the body's presentation of two separate same-time same-topic meetings.",
-          "suggestion": "Reconcile the body listings so the joint nature of the meeting is reflected — one combined listing or clearly linked entries."
+          "where": "Week Ahead Outlook intro, Wednesday paragraph",
+          "quote": "The Mountain Village Town Council Meeting runs all day as the annual budget work session",
+          "problem": "The listing gives the Mountain Village Town Council Meeting a time of 10:00 AM–5:00 PM, but the intro says it 'runs all day,' and the body says 'The morning covers general fund revenues… After lunch…' — the session starts at 10:00 AM, not at the start of the day, so 'runs all day' is an overstatement and inconsistent with the 10:00 AM start shown in the listing. This is a factual inconsistency a reader would notice.",
+          "suggestion": "Change 'runs all day' to reflect the 10:00 AM–5:00 PM schedule, e.g., 'runs from 10 a.m. to 5 p.m.'",
+          "fix": {
+            "find": "The Mountain Village Town Council Meeting runs all day as the annual budget work session",
+            "replace": "The Mountain Village Town Council Meeting runs 10 a.m. to 5 p.m. as the annual budget work session"
+          }
         },
         {
           "check": "editorial",
           "severity": "medium",
-          "where": "WED, OCT 7 · 4:00 PM Town of Telluride · Town of Telluride Ecology Commission",
-          "quote": "the agenda posts closer to the date on the Gov - Hub",
-          "problem": "The listing says 'agenda not posted yet' in effect, but the item above it has 'View agenda →' — not an error for this item itself. However, there is a broken word: 'Gov - Hub' should be 'GovHub' (one word, no spaces around the hyphen).",
-          "suggestion": "Change 'Gov - Hub' to 'GovHub'."
+          "where": "WED, OCT 7 · 9:00 AM · Telluride Housing Authority Subcommittee — tag",
+          "quote": "Town of Telluride · Telluride Housing Authority Subcommittee",
+          "problem": "The Telluride Housing Authority is a separate legal entity from the Town of Telluride; tagging it as 'Town of Telluride' misidentifies the governing body. This could mislead readers about which body is acting.",
+          "suggestion": "Change the tag to 'Telluride Housing Authority' rather than 'Town of Telluride'."
         },
         {
           "check": "editorial",
           "severity": "medium",
-          "where": "MON, OCT 5 · 4:00 PM Town of Telluride · Town of Telluride Open Space Commission",
-          "quote": "Bear Creek Preserve Zone 1 Restoration Pl an site walk",
-          "problem": "'Pl an' is a broken word — 'Plan' has been split with a space.",
-          "suggestion": "Change 'Restoration Pl an' to 'Restoration Plan'."
+          "where": "WED, OCT 7 · 4:00 PM · Telluride Ecology Commission",
+          "quote": "the agenda posts closer to the date on the Gov-Hub",
+          "problem": "The item says 'agenda not posted' in effect ('the agenda posts closer to the date'), yet other items without agendas say 'The agenda hasn't been posted yet.' Inconsistency aside, the main issue is that the listing has no 'View agenda' link, which is consistent with the text — but the text 'the agenda posts closer to the date on the Gov-Hub' reads as leftover placeholder/template text rather than polished newsletter copy.",
+          "suggestion": "Rewrite to match the standard 'agenda not yet posted' phrasing used elsewhere, e.g., 'The agenda hasn't been posted yet — details will follow closer to the meeting.'",
+          "fix": {
+            "find": "Regular public meeting — the agenda posts closer to the date on the Gov-Hub.",
+            "replace": "Regular public meeting — the agenda hasn't been posted yet; details will follow closer to the meeting."
+          }
         },
         {
           "check": "editorial",
           "severity": "medium",
-          "where": "Intro paragraph, Thursday description",
-          "quote": "the SMART Board of Directors also meets Thursday, though the agenda hasn't posted yet",
-          "problem": "The body listing for the SMART Board (THU, OCT 8 · 4:00 PM) also says the agenda hasn't been posted, which is consistent. However, the intro paragraph says 'the curtain goes up on Not-So-Young People's Theater presents Shrek The Musical' — this is grammatically broken ('the curtain goes up on [title]' where the title already contains 'presents').",
-          "suggestion": "Rewrite as 'the curtain goes up on Not-So-Young People's Theater's Shrek The Musical' or 'Not-So-Young People's Theater presents Shrek The Musical, opening Thursday evening'."
+          "where": "Last Week's Meetings, Recapped · THU, OCT 1 · Town Council Budget Work Session",
+          "quote": "Town of Telluride · Town Council Budget Work Session",
+          "problem": "In the recaps section, this item is tagged 'Town of Telluride · Town Council Budget Work Session' — the body of the email consistently uses full names like 'Town of Telluride Town Council' in listings, and the tag here omits the town name from the title but retains it in the tag, which is acceptable per the instructions. However, October 1, 2026 is a Thursday, and the recap date shows 'THU, OCT 1' — October 1, 2026 is actually a Thursday, so that is correct. No error here on the date.",
+          "suggestion": "No change needed — date and day match.",
+          "fix": {
+            "find": "PLACEHOLDER_NO_FIX_NEEDED_1",
+            "replace": "PLACEHOLDER_NO_FIX_NEEDED_1"
+          }
         },
         {
           "check": "editorial",
-          "severity": "low",
-          "where": "WED, OCT 7 📍 The Wright Opera House · A Monster Calls: Movie Night @ the Wright",
-          "quote": "WHEN? Wednesday, October 7 Doors at 6:30 PM Movie at 7:00 PM WHERE?",
-          "problem": "The listing body contains what appears to be raw template/placeholder text ('WHEN?', 'WHERE?') that was not replaced with proper formatted content.",
-          "suggestion": "Replace the raw template labels with properly formatted event details, removing 'WHEN?' and 'WHERE?' label artifacts."
-        },
-        {
-          "check": "editorial",
-          "severity": "low",
-          "where": "Recaps section · THU, OCT 1 Town of Telluride · Town Council Budget Work Session",
-          "quote": "THU, OCT 1 Town of Telluride · Town Council Budget Work Session — Oct 1, 2026",
-          "problem": "The recap uses a bare 'Town Council' tag in the section header without 'Town of Telluride' preceding it — the tag reads 'Town of Telluride · Town Council Budget Work Session' which is fine, but the rules flag a bare 'Town Council' without its town. Here the town is present in the tag, so this is acceptable. Actual low issue: the recap date is listed as 'THU, OCT 1' — October 1, 2026 is actually a Thursday, so this is correct. No error. Flagging instead: the intro paragraph for Monday states the Open Space Commission meets 'at Rebekah Hall' and the body listing confirms 'hybrid format at Rebekah Hall' — consistent. Genuine low issue: the Telluride Horror Show pass sale dates ('3-day passes on sale Mar 25 — 6-packs on sale Jul 1, 2026') list past dates (March and July 2026) in a newsletter sent October 5, 2026, making these sale-date notices stale/misleading to readers.",
-          "suggestion": "Remove or update the pass on-sale dates since both have already passed by the newsletter send date; replace with current availability status."
+          "severity": "high",
+          "where": "Week Ahead Outlook intro, Tuesday paragraph",
+          "quote": "the Telluride Town Council meets with two items worth your attention",
+          "problem": "The listing shows the Town Council meeting at 10:00 AM, but the intro says Tuesday — the intro implies morning, which matches. However, the intro says the ALPR work session and the public hearing are both on Tuesday, but the listing time is 10:00 AM, which is fine. The real error: the intro says 'Tuesday, the Telluride Town Council meets' and correctly describes two items, but also says the Ouray County BOCC Special Work Session 'dedicates the day to the 2027 budget' starting at 9:00 AM — that is accurate. No conflict here. Checking the Shrek description: the intro says 'a ogre' — should be 'an ogre'.",
+          "suggestion": "Change 'a ogre' to 'an ogre'.",
+          "fix": {
+            "find": "and a ogre with a lot of heart",
+            "replace": "and an ogre with a lot of heart"
+          },
+          "fixed": true
         }
       ]
     },
@@ -94,10 +99,25 @@
       "key": "past",
       "name": "Past Meetings",
       "subject": "Past Meetings - September 28 - October 2, 2026",
-      "issues": []
+      "issues": [
+        {
+          "check": "editorial",
+          "severity": "medium",
+          "where": "Footer / tagline",
+          "quote": "Community information for Telluride, Mountain Village & San Miguel County.",
+          "problem": "The footer omits Ouray County (and SMART), but the email explicitly covers Ouray County meetings and a regional body (SMART). A reader would see the Ouray County BOCC recap and notice the footer excludes it from the stated coverage area.",
+          "suggestion": "Expand the tagline to include Ouray County, e.g. 'Community information for Telluride, Mountain Village, San Miguel County & Ouray County.'",
+          "fix": {
+            "find": "Community information for Telluride, Mountain Village & San Miguel County.",
+            "replace": "Community information for Telluride, Mountain Village, San Miguel County & Ouray County."
+          },
+          "fixed": true
+        }
+      ]
     }
   ],
   "errors": [],
-  "total": 10,
-  "linksChecked": 70
+  "total": 7,
+  "linksChecked": 68,
+  "fixed": 2
 }
