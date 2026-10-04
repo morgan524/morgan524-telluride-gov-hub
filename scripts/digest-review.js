@@ -202,7 +202,7 @@ async function editorialRead(key, d, text, apiKey) {
   if (!json) throw lastErr || new Error('no JSON in reply');
   // Drop items the model itself withdrew ("no change needed").
   return (json.issues || [])
-    .filter((x) => !/\bwithdrawn\b|no concrete error/i.test(x.problem || '') && !/^no change needed\.?$/i.test(String(x.suggestion || '').trim()))
+    .filter((x) => !/\bwithdrawn\b|no concrete error|no error here/i.test(x.problem || '') && !/^\s*no (?:change|fix) (?:is )?needed/i.test(String(x.suggestion || '')))
     .map((x) => Object.assign({ check: 'editorial' }, x));
 }
 

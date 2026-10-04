@@ -395,7 +395,7 @@ function bodyDesc(name, src) {
   if (/school|education/.test(n)) return 'The school district board — policy, budget, and schools.';
   if (/airport/.test(n)) return 'The regional airport authority board.';
   if (/housing/.test(n)) return 'The regional housing authority — deed-restricted housing and applications.';
-  return 'Regular public meeting — the agenda posts closer to the date on the Gov-Hub.';
+  return 'Regular public meeting. The agenda hasn’t been posted yet — details will follow closer to the meeting.';
 }
 const isWeak = (s) => !s || s.length < 32 || /agenda (tbd|not available|not yet|not posted)|hasn.t been posted|isn.t available|not available yet|no agenda|list of past meetings|meeting scheduled for|^regular meeting agenda/i.test(s);
 // URLs that are an agenda *index*, not an agenda: CivicPlus AgendaCenter, a
@@ -1129,7 +1129,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
   ${pastPromoBlock}
   <tr><td class="sec-pad" style="padding:24px 34px 30px;border-top:1px solid #ddd6c8;">
     <div style="font-family:Georgia,serif;font-size:13px;font-weight:700;color:#21443c;">Livable Telluride</div>
-    <div style="font-size:12px;color:#7a8a85;line-height:1.6;margin-top:4px;">Community information for Telluride, Mountain Village &amp; San Miguel County.<br>
+    <div style="font-size:12px;color:#7a8a85;line-height:1.6;margin-top:4px;">Community information for Telluride, Mountain Village, San Miguel County &amp; Ouray County.<br>
     <a href="https://livabletelluride.org" style="color:#7a8a85;">livabletelluride.org</a> &nbsp;·&nbsp; <a href="*|UNSUB|*" style="color:#7a8a85;">Unsubscribe</a> &nbsp;·&nbsp; <a href="https://livabletelluride.org/profile.html?email=*|EMAIL|*&amp;fname=*|FNAME|*&amp;town=*|MMERGE6|*" style="color:#7a8a85;">Update preferences</a></div></td></tr>
 </table></td></tr></table></body></html>`;
 

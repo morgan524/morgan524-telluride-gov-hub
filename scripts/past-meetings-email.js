@@ -76,7 +76,7 @@ function render(recaps, weekStart, preview) {
   <tr><td class="sec-pad" style="padding:24px 34px 0;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;border-bottom:1px solid #d4c9b0;padding-bottom:8px;">&rarr; Last Week&rsquo;s Meetings, Recapped</div><table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}${moreRow}</table></td></tr>
   <tr><td class="sec-pad" style="padding:24px 34px 30px;border-top:1px solid #ddd6c8;margin-top:24px;">
     <div style="font-family:Georgia,serif;font-size:13px;font-weight:700;color:#21443c;">Livable Telluride</div>
-    <div style="font-size:12px;color:#7a8a85;line-height:1.6;margin-top:4px;">Community information for Telluride, Mountain Village &amp; San Miguel County.<br>
+    <div style="font-size:12px;color:#7a8a85;line-height:1.6;margin-top:4px;">Community information for Telluride, Mountain Village, San Miguel County &amp; Ouray County.<br>
     <a href="https://livabletelluride.org" style="color:#7a8a85;">livabletelluride.org</a> &nbsp;·&nbsp; <a href="*|UNSUB|*" style="color:#7a8a85;">Unsubscribe</a> &nbsp;·&nbsp; <a href="https://livabletelluride.org/profile.html?email=*|EMAIL|*&amp;fname=*|FNAME|*&amp;town=*|MMERGE6|*" style="color:#7a8a85;">Update preferences</a></div></td></tr>
 </table></td></tr></table></body></html>`;
 

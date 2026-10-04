@@ -331,7 +331,7 @@ function buildMeetingItemsFromFns(sandbox) {
       try { summary = (getMeetingSummary && getMeetingSummary(m)) || ''; } catch (e) { /* no summary */ }
       summary = summary || m.description || '';
       if (!summary || (isBad && isBad(summary))) {
-        summary = `Upcoming ${sourceLabel} meeting — the agenda posts closer to the date on the Gov-Hub.`;
+        summary = `Upcoming ${sourceLabel} meeting. The agenda hasn’t been posted yet — details will follow closer to the meeting.`;
       }
       items.push({
         title: `[Meeting] ${name} — ${dateStr}`,
