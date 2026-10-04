@@ -39,19 +39,6 @@
     "type": "Wellness"
   },
   {
-    "title": "Ridgway 1k 2026",
-    "href": "https://koto.org/event/ridgway-1k-2026/",
-    "date": "2026-10-04",
-    "time": "12:30 PM",
-    "location": "Downtown Ridgway &amp; Hartwell Park",
-    "town": "Ridgway",
-    "img": "https://koto.org/wp-content/uploads/2026/09/1k-banner.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "October 4 @ 12:15 pm – 1:30 pm Ridgway 1K ~ Rally Through The Alley: Colorado’s Most Entertaining Fun Run 🗓 Event Date: October 4, 2026 ⏰ In-person Registration Opens: 12:15 PM 🏁 Race Starts: 12:45 PM 📣 Last Call for Runners: 1:15 PM…",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "Ridgway 1K ~ Rally thru the Alley",
     "href": "https://events.ourayridgwayevents.com/event/ridgway-1k",
     "date": "2026-10-04",
@@ -63,19 +50,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Ridgway 1K ~ Rally Through The Alley: Colorado’s Most Entertaining Fun Run Presented by Citizens State Bank In-person Registration Opens: 12:15 PM Race Starts: 12:45 PM Last Call for Runners: 1:15 PM (all runners must be checked in by 1:15…",
     "type": "Talks & Classes"
-  },
-  {
-    "title": "San Juan Oktoberfest",
-    "href": "https://koto.org/event/san-juan-oktoberfest/",
-    "date": "2026-10-04",
-    "time": "2:00 PM",
-    "location": "Hartwell Park Ridgway",
-    "town": "Ridgway",
-    "img": "https://koto.org/wp-content/uploads/2026/09/oktoberfest-banner.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "October 4 @ 2:00 pm – 5:00 pm San Juan Oktoberfest Sunday, October 4, 2026 | Hartwell Park | Ridgway, Colorado There’s nothing quite like Ridgway in early October — bright blue skies, golden aspens and cottonwoods glowing on the hillsides,…",
-    "type": "Community"
   },
   {
     "title": "Pumpkin Palooza at Ridgway 1k Finish Line",
@@ -105,15 +79,15 @@
   },
   {
     "title": "Tea and Tarot",
-    "href": "https://koto.org/event/tea-and-tarot/2026-10-04/",
+    "href": "https://telluridelibrary.libcal.com/event/17029775?hs=a",
     "date": "2026-10-04",
     "time": "2:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
+    "location": "Telluride Room",
     "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance. Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in…",
     "type": "Community"
   },
   {
@@ -181,6 +155,32 @@
     "source": "KOTO Community Calendar",
     "desc": "Local management training and development company Leadership Landing hosts The Telluride Leadership Summit, starting October 4th through October 6th up at the Madeline. The event website is TellurideLeadershipSummit.com and the entire…",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Ridgway 1k 2026",
+    "href": "https://sherbino.org/event/ridgway-1k-2026/",
+    "date": "2026-10-04",
+    "time": "",
+    "location": "Ridgway, CO",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2025/11/sherb-2025-EVENT-BANNERS-1920-x-1080-px-45.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "The Ridgway 1K is a short, fun run billed as Colorado's most entertaining race, winding through downtown Ridgway. In-person registration opens at 12:15 PM, with the race starting at 12:45 PM and a final check-in deadline of 1:15 PM.",
+    "type": "Talks & Classes"
+  },
+  {
+    "title": "San Juan Oktoberfest",
+    "href": "https://sherbino.org/event/san-juan-oktoberfest-ridgway-colorado-2026/",
+    "date": "2026-10-04",
+    "time": "",
+    "location": "Ridgway, CO",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2026/04/sherb-and-wca-EVENT-BANNERS-2-e1788900662419.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "San Juan Oktoberfest is an annual fall celebration held at Hartwell Park in Ridgway, taking place amid the area's peak autumn colors. The event features classic Oktoberfest fare including bratwursts, set against a backdrop of golden aspens…",
+    "type": "Community"
   },
   {
     "title": "Ongoing: Space Cowboy by Dundee & Lee",
@@ -288,7 +288,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
     "type": "Community",
-    "endDate": "2026-12-02"
+    "endDate": "2026-12-03"
   },
   {
     "title": "CORAL SKYE",
@@ -630,7 +630,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2025/10/16-5H0A3038.jpg",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "A production of Shrek The Musical performed at the Sheridan Opera House, bringing the beloved fairy-tale story to life on a Telluride stage. The show features the classic characters and songs from the hit musical based on the DreamWorks…",
+    "desc": "",
     "type": "Arts & Film",
     "endDate": "2026-10-11"
   },
@@ -1423,17 +1423,17 @@
   },
   {
     "title": "Telluride Horror Show",
-    "href": "https://www.telluride.com/event/telluride-horror-show/",
+    "href": "https://sheridanoperahouse.com/events/telluride-horror-show/",
     "date": "2026-10-16",
     "time": "6:00 PM",
-    "location": "Telluride, CO",
+    "location": "Sheridan Opera House • Telluride, CO",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/28873/152294600242caf78680.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "The Telluride Horror Show, Colorado's first and largest horror film festival, returns for its 17th edition October 16 - …",
-    "type": "Arts & Film",
-    "endDate": "2026-10-19"
+    "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/03/1_5E4MOKWkGhdychJNhXWeZw.jpg",
+    "category": "Concert / Performance",
+    "source": "Sheridan Opera House",
+    "desc": "",
+    "type": "Community",
+    "endDate": "2026-10-18"
   },
   {
     "title": "Love Your Gorge",
@@ -2159,8 +2159,8 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2022/08/VendorBadge_AsSeenOnWeb.png",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "A theatrical performance at the Sheridan Opera House presenting two spooky-season stories: Washington Irving's classic *The Legend of Sleepy Hollow* and *The Little Ghost Who Was a Quilt*. The production is part of the Adventures in Acting…",
-    "type": "Arts & Film"
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Weapons: Movie Night @ the Wright.",

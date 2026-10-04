@@ -2494,6 +2494,30 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Family & community",
+    source: "Telluride Times",
+    date: "October 4, 2026",
+    firstSeen: "2026-10-04",
+    newsTopic: "community",
+    copy: "Soto's, a new food truck run by Angel and Roxana Soto, opened in early September in the parking lot east of Camel's Garden on San Juan Avenue. They're serving tacos, burritos, quesadillas, and weekend quesabirria, with meats like asada, pastor, lengua, and tripa. Hours are 10:30 a.m.–4 p.m. daily, with Sunday/Monday closures in the off-season.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/business/article_f52896e5-2504-49f4-8b45-95ab29771390.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/ff/9ff1deef-f701-474b-a528-e2067a2b4ed5/6abcc60180b3f.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Familia y comunidad",
+    source: "Telluride Times",
+    date: "October 4, 2026",
+    firstSeen: "2026-10-04",
+    newsTopic: "community",
+    copy: "Angel and Roxana Soto opened Soto's food truck in early September, parked on San Juan Avenue near Camel's Garden. They serve tacos, quesadillas, and burritos — tongue tacos and Tuesday quesabirria are the standouts. Hours are 10:30am–4pm daily, with Sunday/Monday closures in the off-season.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/business/article_da3b3d71-e551-4e22-8d7e-093dbc70e554.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/6b/46b67b81-a7aa-418a-a0ae-593c1258b278/6abcc8f5e8f46.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "A stronger safety net for when disaster strikes",
     source: "Telluride Times",
     date: "October 4, 2026",
@@ -4262,39 +4286,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/09/Picture1.jpg"
   },
   {
-    title: "Ridgway 1k 2026",
-    link: "https://koto.org/event/ridgway-1k-2026/",
-    description: "October 4 @ 12:15 pm – 1:30 pm Ridgway 1K ~ Rally Through The Alley: Colorado’s Most Entertaining Fun Run 🗓 Event Date: October 4, 2026 ⏰ In-person Registration Opens: 12:15 PM 🏁 Race Starts: 12:45 PM 📣 Last Call for Runners: 1:15 PM (all runners must be checked-in by 1:15 pm). 📍 Downtown Ridgway, Colorado New this year – Registered racers can pick up their Bibs at Packet Pickup: Friday, October 2nd, 3:00-6:00pm @ The Sherbino Join the most hilarious costumed fun run in Colorado! The Ridgway 1K Rally Through The Alley is a family-friendly, costume-themed, 1K race in downtown Ridgway. But don’t be fooled—this 6-block, downhill “race” is all about fun, food, and funky vibes, not speed. …",
-    pubDate: "2026-10-04T12:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Downtown Ridgway &amp; Hartwell Park",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/09/1k-banner.png"
-  },
-  {
-    title: "San Juan Oktoberfest",
-    link: "https://koto.org/event/san-juan-oktoberfest/",
-    description: "October 4 @ 2:00 pm – 5:00 pm San Juan Oktoberfest Sunday, October 4, 2026 | Hartwell Park | Ridgway, Colorado There’s nothing quite like Ridgway in early October — bright blue skies, golden aspens and cottonwoods glowing on the hillsides, and the irresistible scent of bratwursts sizzling in Hartwell Park. That can only mean one thing: Oktoberfest has arrived! This year marks the inaugural San Juan Oktoberfest, happening Sunday, October 4, immediately following the wildly fun Ridgway 1K Rally Through the Alley. After the costumes, laughter, and downhill dash through town, the celebration continues in the park with a festival that blends Austrian tradition with Rocky Mountain charm. LIVE MUSIC by RHS Band members and leaders to kick things off — followed by POLKA MUSIC BY POLKA POYO of Paonia! …",
-    pubDate: "2026-10-04T14:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Hartwell Park Ridgway",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/09/oktoberfest-banner.png"
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-10-04/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-10-04T14:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
     title: "Ballot Measure 5A Information Meeting",
     link: "https://koto.org/event/ballot-measure-5a-information-meeting/2026-10-05/",
     description: "Find out why voting yes on ballot measure 5A keps Telluride schools strong and how the measure affects you. Lite refreshments provided!",
@@ -4851,7 +4842,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Not-So-Young People's Theater: Shrek The Musical",
     link: "https://sheridanoperahouse.com/events/not-so-young-peoples-theater/",
-    description: "A production of Shrek The Musical performed at the Sheridan Opera House, bringing the beloved fairy-tale story to life on a Telluride stage. The show features the classic characters and songs from the hit musical based on the DreamWorks animated film.",
+    description: "",
     pubDate: "2026-10-08",
     endDate: "2026-10-11",
     source: "sheridan",
@@ -4861,9 +4852,21 @@ const SHERIDAN_EVENTS = [
     imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2025/10/16-5H0A3038.jpg"
   },
   {
+    title: "Telluride Horror Show",
+    link: "https://sheridanoperahouse.com/events/telluride-horror-show/",
+    description: "",
+    pubDate: "2026-10-16",
+    endDate: "2026-10-18",
+    source: "sheridan",
+    sourceLabel: "Sheridan Opera House",
+    category: "Concert / Performance",
+    location: "Sheridan Opera House • Telluride, CO",
+    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/03/1_5E4MOKWkGhdychJNhXWeZw.jpg"
+  },
+  {
     title: "Adventures in Acting: The Legend of Sleepy Hollow / The Little Ghost Who Was a Quilt",
     link: "https://sheridanoperahouse.com/events/adventures-in-acting-the-legend-of-sleepy-hollow/",
-    description: "A theatrical performance at the Sheridan Opera House presenting two spooky-season stories: Washington Irving's classic *The Legend of Sleepy Hollow* and *The Little Ghost Who Was a Quilt*. The production is part of the Adventures in Acting series, making it a fitting event for the Halloween season.",
+    description: "",
     pubDate: "2026-10-28",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -5363,7 +5366,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
     pubDate: "2026-10-06T19:30:00.000Z",
-    endDate: "2026-12-02",
+    endDate: "2026-12-03",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
