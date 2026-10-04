@@ -266,6 +266,23 @@ const normTitle = (t) => String(t || '')
 // would wrongly merge "Yoga at Hartwell Park" into a plain "Yoga" the same day.
 const dedupTitle = (t) => normTitle(t).replace(/\s+live at\s+.*$/, '').trim();
 
+// Dedup keys for one listing. Besides the full title, a title of the form
+// "Head - Presenter" (a venue appending the presenting group) also claims its
+// head, so it merges with the presenter's own bare listing the same day:
+// "Hanneke Cassel Trio - Telluride Chamber Music" (The Alibi) vs "Hanneke
+// Cassel Trio" (Telluride Chamber Music), 2026-10-13. The split needs a spaced
+// dash, and the head must be 12+ characters, so "Yoga - Beginners" never
+// absorbs a plain "Yoga".
+const dedupKeys = (t, date) => {
+  const keys = [dedupTitle(t).slice(0, 60) + '|' + date];
+  const parts = String(t || '').split(/\s+[-\u2013\u2014]\s+/);
+  if (parts.length > 1) {
+    const head = dedupTitle(parts[0]);
+    if (head.length >= 12) keys.push(head.slice(0, 60) + '|' + date);
+  }
+  return keys;
+};
+
 // Read recurring-acts.json (repo root, { _comment, series: [...] }). Missing or
 // malformed is non-fatal — the rest of the index is worth building.
 function readActs(repoRoot) {
@@ -346,8 +363,8 @@ function buildEventsIndex(repoRoot) {
       if (!date || date < todayKey || date > horizonKey) continue;
       // A generic series entry loses to the specific act on the same day.
       if (file !== ACTS_FILE && isActSuppressed(suppressed, title, date)) continue;
-      const key = dedupTitle(title).slice(0, 60) + '|' + date;
-      if (seen.has(key)) continue;
+      const keys = dedupKeys(title, date);
+      if (keys.some((k) => seen.has(k))) continue;
       const href = e.link || e.href || '';
       const rawImg = e.imageUrl || e.img || '';
       // Short description for the events page cards: strip any HTML, collapse
@@ -383,7 +400,7 @@ function buildEventsIndex(repoRoot) {
       if (/^\d{4}-\d{2}-\d{2}/.test(e.endDate || '') && String(e.endDate).slice(0, 10) > date) {
         rec.endDate = String(e.endDate).slice(0, 10);   // multi-day: listed on first day only
       }
-      seen.set(key, rec);
+      for (const k of keys) seen.set(k, rec);
       out.push(rec);
     }
   }
@@ -407,4 +424,4 @@ function run(repoRoot) {
 }
 
 if (require.main === module) run();
-module.exports = { buildEventsIndex, run, actSuppressionIndex, isActSuppressed, normTitle, dedupTitle, dateKeyOf };
+module.exports = { buildEventsIndex, run, actSuppressionIndex, isActSuppressed, normTitle, dedupTitle, dedupKeys, dateKeyOf };

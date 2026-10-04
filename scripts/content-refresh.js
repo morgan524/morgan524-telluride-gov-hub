@@ -5519,7 +5519,7 @@ async function syncMedAgendas() {
 //   opts:    { title, location, time?, board?, note?, placeholders=2, skipMonths=[], lookbackDays=21 }
 // Returns a sorted stub array, or null when there's nothing to publish (so the
 // caller preserves the existing array rather than blanking the section).
-const { nextOccurrences: _nextOccurrences, fmtDate: _fmtScheduleDate } = require('./lib/schedule.js');
+const { nextOccurrences: _nextOccurrences, fmtDate: _fmtScheduleDate, federalHoliday: _federalHoliday } = require('./lib/schedule.js');
 function assembleBoardStubs(scraped, cadence, opts, now = new Date()) {
   const lookbackDays = opts.lookbackDays == null ? 21 : opts.lookbackDays;
   const lookback = new Date(now.getTime() - lookbackDays * 86400000);
@@ -5556,6 +5556,8 @@ function assembleBoardStubs(scraped, cadence, opts, now = new Date()) {
       };
       if (opts.board) stub.board = opts.board;
       if (opts.note) stub.note = opts.note;
+      const holiday = _federalHoliday(occ.jsDate);
+      if (holiday) stub.note = `Projected date falls on ${holiday}; the board may reschedule. Confirm when the agenda posts.`;
       byDate.set(key, stub);
     }
   }
