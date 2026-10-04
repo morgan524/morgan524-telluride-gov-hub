@@ -30,6 +30,18 @@ on:
     workflows: ['Content Refresh']
     types: [completed]
   workflow_dispatch:
+    inputs:
+      force:
+        description: 'Re-render even while the Sunday review freeze is active (true/false)'
+        required: false
+        default: 'false'
+  # Called by digest-sunday-review.yml to render fresh right before it reviews.
+  workflow_call:
+    inputs:
+      force:
+        type: string
+        required: false
+        default: 'false'
 
 permissions:
   contents: write
@@ -52,8 +64,23 @@ jobs:
       - name: Render digests + manifest from live data
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # Rick-voice lede generation
+          FORCE: ${{ inputs.force || github.event.inputs.force || 'false' }}
         run: |
           set -eo pipefail
+          # ── Sunday review freeze (Morgan 2026-10-04) ──
+          # digest-sunday-review.yml reviews both digests early Sunday and then
+          # writes digest/freeze.json; until its "until" time (Monday afternoon)
+          # the bot leaves the digests exactly as reviewed. Edits and approvals
+          # on the Review Desk go through the digest Worker's /save, not this
+          # workflow, so they still work. force=true overrides; an expired freeze
+          # file is removed here.
+          if [ -f digest/freeze.json ]; then
+            UNTIL="$(python3 -c "import json;print(json.load(open('digest/freeze.json')).get('until',''))" 2>/dev/null || true)"
+            if [ -n "$UNTIL" ] && [ "$(date -u +%s)" -lt "$(date -u -d "$UNTIL" +%s)" ] && [ "${FORCE:-false}" != "true" ]; then
+              echo "digests FROZEN until $UNTIL (Sunday review) — not re-rendering"; exit 0
+            fi
+            if [ -z "$UNTIL" ] || [ "$(date -u +%s)" -ge "$(date -u -d "$UNTIL" +%s)" ]; then echo "freeze expired ($UNTIL) — removing"; rm -f digest/freeze.json; fi
+          fi
           # Cache-bust (?t=timestamp) so we always get the freshest data, not a
           # CDN-cached copy, and -f so a site outage fails the run loudly instead
           # of feeding an error page to node.

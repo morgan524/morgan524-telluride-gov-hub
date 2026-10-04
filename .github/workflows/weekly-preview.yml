@@ -90,11 +90,25 @@ jobs:
           fi
           LABEL="$(date -u -d "$WS" '+%B %-d') – $(date -u -d "$WS +6 days" '+%B %-d, %Y')"
           echo "Week start: $WS  ·  Label: $LABEL"
-          WEEKLY_PREVIEW=1 node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WS" "$LABEL" weekly-preview.html 2>&1 | tee /tmp/wp.log
-          node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WS" "$LABEL" weekly-mailchimp.html
+          # While the Sunday review freeze is active (digest-sunday-review.yml),
+          # preview the EXACT reviewed files with the review's findings, not a
+          # fresh render that could differ from what was reviewed.
+          if node scripts/lib/frozen-preview.js weekly weekly-preview.html > /tmp/wp.log; then
+            echo "weekly: previewing the frozen, reviewed digest"
+            cp digest/week.html weekly-mailchimp.html
+          else
+            WEEKLY_PREVIEW=1 node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WS" "$LABEL" weekly-preview.html 2>&1 | tee /tmp/wp.log
+            node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WS" "$LABEL" weekly-mailchimp.html
+          fi
           echo "subject=$(grep '^SUBJECT=' /tmp/wp.log | sed 's/^SUBJECT=//')" >> "$GITHUB_OUTPUT"
           # Past Meetings review copy (no file when last week had no recaps).
-          WEEKLY_PREVIEW=1 node scripts/past-meetings-email.js "$WS" past-preview.html | tee /tmp/pp.log
+          if node scripts/lib/frozen-preview.js past past-preview.html > /tmp/pp.log; then
+            echo "past: previewing the frozen, reviewed digest"
+          elif [ -f digest/freeze.json ] && node -e "process.exit(Date.now() < Date.parse(require('./digest/freeze.json').until) ? 0 : 1)"; then
+            echo "past: frozen with no Past Meetings digest this week" > /tmp/pp.log
+          else
+            WEEKLY_PREVIEW=1 node scripts/past-meetings-email.js "$WS" past-preview.html | tee /tmp/pp.log
+          fi
           echo "past_subject=$(grep '^SUBJECT=' /tmp/pp.log | sed 's/^SUBJECT=//')" >> "$GITHUB_OUTPUT"
 
       - name: Email preview to info@livabletelluride.org
