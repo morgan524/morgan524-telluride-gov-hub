@@ -4,8 +4,10 @@
  * summary of each public meeting recapped from last week's five business days,
  * each linking to its full recap on gov-hub-past.html.
  *
- * Its own opt-in subscription (sub_past_meetings), split out of the weekly
- * digest's "Last Week's Meetings, Recapped" section on 2026-10-04 (Morgan).
+ * Its own opt-in subscription (sub_past_meetings), added 2026-10-04 (Morgan).
+ * Same rows as the weekly digest's "Last Week's Meetings, Recapped" section,
+ * which the weekly still carries for now; the weekly's bottom box invites
+ * readers to sign up for this one.
  * One list for everyone: no regional variants, so the digest Worker sends it as
  * a single broadcast trigger to the Past Meetings audience.
  *

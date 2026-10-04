@@ -812,6 +812,13 @@ const closingNote = `<tr><td class="callout-wrap" style="padding:28px 34px 6px;"
 // Donate ask — bottom of the email, just above the footer. A gentle, polite
 // request to support the 501(c)(3); links straight to the Stripe checkout.
 const donateBlock = `<tr><td class="sec-pad" style="padding:26px 34px 6px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="background:#21443c;border-radius:8px;padding:27px 26px;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#e3c87a;margin-bottom:9px;">Keep This Going</div><p style="margin:0 0 17px;font-size:14.5px;line-height:1.7;color:#e7efe9;">Livable Telluride is a reader-funded <strong>501(c)(3) nonprofit</strong> — no ads, no paywall. If this is useful to you, a gift of any size keeps it coming.</p><a href="https://buy.stripe.com/7sY7sD2TZ2MV5Vudf40Ba00" style="display:inline-block;background:#b58a2c;color:#ffffff;text-decoration:none;font-weight:700;font-size:15px;padding:13px 32px;border-radius:999px;">&#9829; Donate</a><div style="font-size:11.5px;color:#9fbcb0;margin-top:13px;">Secure checkout via Stripe &middot; Your gift is tax-deductible to the extent allowed by law.</div></td></tr></table></td></tr>`;
+// "Past Meetings" sign-up box (2026-10-04, Morgan): takes the donate box's
+// slot at the bottom of the weekly to announce the new opt-in Monday email
+// (scripts/past-meetings-email.js). Readers must turn it on themselves, so the
+// button goes to their profile, pre-filled the same way as the footer's
+// "Update preferences" link. donateBlock above is kept for when this retires.
+const PAST_SIGNUP_URL = 'https://livabletelluride.org/profile.html?email=*|EMAIL|*&amp;fname=*|FNAME|*&amp;town=*|MMERGE6|*#subt-past';
+const pastPromoBlock = `<tr><td class="sec-pad" style="padding:26px 34px 6px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="background:#21443c;border-radius:8px;padding:27px 26px;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#e3c87a;margin-bottom:9px;">New &middot; Past Meetings</div><p style="margin:0 0 17px;font-size:14.5px;line-height:1.7;color:#e7efe9;">A new Monday email with a short summary of every public meeting held across the region the week before, each linking to the full recap. It&rsquo;s <strong>sign-up only</strong>, so turn it on in your preferences if you&rsquo;d like it.</p><a href="${PAST_SIGNUP_URL}" style="display:inline-block;background:#b58a2c;color:#ffffff;text-decoration:none;font-weight:700;font-size:15px;padding:13px 32px;border-radius:999px;">Sign up for Past Meetings &rarr;</a><div style="font-size:11.5px;color:#9fbcb0;margin-top:13px;">Opens your Livable Telluride profile &middot; you can turn it off anytime.</div></td></tr></table></td></tr>`;
 
 // "What We're Reading" box. Two sources, in priority order:
 //   1. A manual editorial pick for a specific week (WHATS_READING_MANUAL, keyed
@@ -921,13 +928,33 @@ const whatsLookingForBox = `<tr><td class="callout-wrap" style="padding:26px 34p
 const calloutBox = SHOW_LOOKING_FOR ? whatsLookingForBox : (featuredOrgBox || whatsReadingBox);
 const section = (label, rows) => rows ? `<tr><td class="sec-pad" style="padding:24px 34px 0;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;border-bottom:1px solid #d4c9b0;padding-bottom:8px;">→ ${label}</div><table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}</table></td></tr>` : '';
 
-// ── Past meetings pointer ───────────────────────────────────────────────────
-// Meeting recaps moved to their own Monday email, "Past Meetings" (2026-10-04,
-// scripts/past-meetings-email.js), which readers add on their profile. The
-// weekly keeps one line pointing there so nobody wonders where they went.
+// ── Past meetings, recapped ──────────────────────────────────
+// Short teasers of last week's meeting recaps (the five business days before
+// WEEK_START), each linking to
+// its full recap on gov-hub-past.html. Ships an ALL list plus one hidden list
+// per region; the Customer.io template shows the reader's region (see
+// scripts/lib/recap-regions.js). Rico and TMVOA stay off the email lists.
+const RECAP_MAX = 14;
 const PAST_PAGE = SITE + '/gov-hub-past.html';
-const PROFILE_URL = SITE + '/profile.html?email=*|EMAIL|*&amp;fname=*|FNAME|*&amp;town=*|MMERGE6|*';
-const pastPointer = section('Last Week&rsquo;s Meetings', `<tr><td style="padding:12px 0;font-size:14.5px;color:#5a6b64;line-height:1.55;">Meeting recaps now have their own Monday email, <strong>Past Meetings</strong>. <a href="${PROFILE_URL}" style="color:#a0531f;text-decoration:underline;font-weight:600;">Add it on your profile &rarr;</a> Or browse every recap on the <a href="${esc(PAST_PAGE)}" style="color:#a0531f;text-decoration:underline;">Past Meetings page</a>.</td></tr>`);
+let recapBlock = '';
+let allRecaps = [];
+try { allRecaps = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'meeting-recaps.json'), 'utf8')); }
+catch (e) { console.error('meeting-recaps.json unreadable — past-meetings section skipped:', e.message); }
+const weekRecaps = RR.recapsForWeek(allRecaps, WEEK_START);
+const recapRow = (r) => `<tr><td style="padding:12px 0;border-top:1px solid #eef1ee;"><span style="display:inline-block;background:#e9efe9;color:#21443c;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(r.date)).toUpperCase()}</span><span style="font-size:12px;color:#7a8a85;margin-left:8px;">${esc(r.sourceLabel || '')}</span><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:5px;">${esc(r.title || '')}</div><div style="font-size:14.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${esc(RR.shortRecap(r.recap))}</div><a href="${esc(PAST_PAGE + '#' + RR.recapId(r))}" style="color:#a0531f;text-decoration:underline;font-size:12.5px;font-weight:600;">Read the full summary →</a></td></tr>`;
+const moreRow = `<tr><td style="padding:10px 0 0;border-top:1px solid #eef1ee;"><a href="${esc(PAST_PAGE)}" style="color:#21443c;font-size:12.5px;font-weight:700;text-decoration:underline;">See every meeting recap on the Past Meetings page →</a></td></tr>`;
+const listFor = (rows, label, emptyMsg) => {
+  const body = rows.length ? rows.slice(0, RECAP_MAX).map(recapRow).join('') : `<tr><td style="padding:12px 0;font-size:14px;color:#5a6b64;">${emptyMsg}</td></tr>`;
+  return section(label, body + moreRow);
+};
+if (weekRecaps.length) {
+  const byRegion = {};
+  for (const g of RR.REGION_ORDER) byRegion[g] = listFor(RR.recapsForRegion(weekRecaps, g),
+    'Last Week&rsquo;s Meetings, Recapped &middot; ' + esc(g), 'No meetings in your area were recapped last week.');
+  recapBlock = RR.regionBlock(listFor(weekRecaps, 'Last Week&rsquo;s Meetings, Recapped', ''), byRegion);
+}
+console.log(`  past-meeting recaps (${RR.priorBusinessWeek(WEEK_START).join(' to ')}): all ${weekRecaps.length}; ` +
+  Object.keys(RR.RECAP_REGIONS).map((g) => g + ' ' + RR.recapsForRegion(weekRecaps, g).length).join(', '));
 // Regional "Public Meetings This Week": MEETING_REGIONS (the recap map plus
 // Rico in the East End). Bodies in no region (e.g. TMVOA) stay in the
 // all-area list only.
@@ -1055,11 +1082,11 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
   <tr><td class="sec-pad" style="padding:22px 34px 4px;">
     <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#2f7a5f;background:rgba(47,122,95,.1);padding:3px 10px;border-radius:999px;">📅 ${esc(EMAIL_TITLE)}</span>
     <p style="margin:11px 0 0;font-size:15.5px;line-height:1.65;color:#2c3b35;">${ledeHtml(LEDE)}</p></td></tr>
-  ${meetingsBlock}${pastPointer}
+  ${meetingsBlock}${recapBlock}
   ${festivalHero}
   ${eventsBlock}${topicHtml}
   ${calloutBox}
-  ${donateBlock}
+  ${pastPromoBlock}
   <tr><td class="sec-pad" style="padding:24px 34px 30px;border-top:1px solid #ddd6c8;">
     <div style="font-family:Georgia,serif;font-size:13px;font-weight:700;color:#21443c;">Livable Telluride</div>
     <div style="font-size:12px;color:#7a8a85;line-height:1.6;margin-top:4px;">Community information for Telluride, Mountain Village &amp; San Miguel County.<br>

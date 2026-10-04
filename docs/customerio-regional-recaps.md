@@ -1,13 +1,16 @@
 # Regional sections in the weekly email
 
-**Moved 2026-10-04:** meeting recaps are no longer a section of the weekly
-email. They go out as their own Monday email, **Past Meetings**
-(`scripts/past-meetings-email.js`): one non-regional list of the recaps from the
-five business days (Mon–Fri) before the send, each linking to the full recap on
-`gov-hub-past.html#r-…`, to the opt-in `sub_past_meetings` audience through its
-own broadcast (`CUSTOMERIO_PAST_BROADCAST_ID`). Rico and TMVOA recaps still never
-appear in email (they stay on the website). The weekly keeps a one-line pointer.
-The regional machinery below now applies to the weekly's other sections.
+The weekly email (`scripts/weekly-email.js`) includes **Last Week's Meetings,
+Recapped**: short teasers of the meeting recaps from the five business days
+(Mon–Fri) before the email's week, each linking to the full recap on
+`gov-hub-past.html#r-…`. Rico and TMVOA recaps never appear in the email (they
+stay on the website).
+
+**Since 2026-10-04** the same recaps also go out as their own opt-in Monday
+email, **Past Meetings** (`scripts/past-meetings-email.js`): one non-regional
+list to the `sub_past_meetings` audience through its own broadcast
+(`CUSTOMERIO_PAST_BROADCAST_ID`, broadcast 5). The weekly's bottom box (where
+the donate box was) invites readers to sign up.
 
 **Public Meetings This Week** is regional too, using the same body map
 plus **Rico in the East End** (`MEETING_REGIONS`; Ophir is already East End).
