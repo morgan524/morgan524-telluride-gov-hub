@@ -651,7 +651,7 @@ const MED_CACHED_DATA = [
     packetUrl: null,
     special: false,
     location: "333 W Colorado Ave (2nd Floor), Telluride / Zoom",
-    note: "Next scheduled meeting -- agenda posted before the meeting."
+    note: "Projected date falls on Thanksgiving; the board may reschedule. Confirm when the agenda posts."
   }
 ];
 
@@ -714,7 +714,7 @@ const NORWOOD_CACHED_DATA = [
     packetUrl: null,
     special: false,
     board: "bot",
-    note: "Next scheduled meeting -- agenda posted before the meeting."
+    note: "Projected date falls on Veterans Day; the board may reschedule. Confirm when the agenda posts."
   },
   {
     date: "November 16, 2026",

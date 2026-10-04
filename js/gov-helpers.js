@@ -1007,16 +1007,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Attached is this week's parish bulletin. Please check our Parish Calendar for the updated schedule of events.1. Parish Mission Retreat (for those signed up) begins tonight at 6:15 pm and Saturday at 9:30 am. 2. Mission Appeal at this weekend...",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-september-27/",
     img: ""
-  },
-  {
-    title: "Parish Bulletin for September 20",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "September 20, 2026",
-    newsTopic: "community",
-    copy: "This week's bulletin is attached, but please check the Parish Calendar for the most updated information of parish events.For those who have signed up, a reminder that the St. Patrick Parish Mission begins this Friday, September 25.Sign up for a Bible S...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-september-20/",
-    img: ""
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
@@ -3692,11 +3682,89 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
-
+  {
+    title: "Newscast 10-2-26",
+    source: "KOTO Community Radio",
+    date: "October 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "Mountain Village Names New Town Manager; All About Art About; Cat Movie Fisher with Risho Unda",
+    href: "https://koto.org/news/newscast-10-2-26/"
+  },
+  {
+    title: "Newscast 10-1-26",
+    source: "KOTO Community Radio",
+    date: "October 2, 2026",
+    newsTopic: "community",
+    copy: "West End Roundup with the San Miguel Basin Forum; Watershed Coalition Stands Up for Public Lands; \"This Haunted Land\" Explores America’s Ghosts",
+    href: "https://koto.org/news/newscast-10-1-26/"
+  },
+  {
+    title: "Newscast 9-30-26",
+    source: "KOTO Community Radio",
+    date: "October 1, 2026",
+    newsTopic: "government",
+    copy: "Gondola Project Will Pursue Federal Funding; Town Council Upholds Planning and Zoning Decision on Carhenge Lot Lines; The Fig Keeps Theatre Funky",
+    href: "https://koto.org/news/newscast-9-30-26/"
+  },
+  {
+    title: "Newscast 9-28-26",
+    source: "KOTO Community Radio",
+    date: "September 29, 2026",
+    newsTopic: "community",
+    copy: "Mountain Village Reimagines Pond Plaza; Original Thinkers Looks to Spark Creative Humanity",
+    href: "https://koto.org/news/newscast-9-28-26/"
+  },
+  {
+    title: "Newscast 9-25-26",
+    source: "KOTO Community Radio",
+    date: "September 26, 2026",
+    newsTopic: "public-safety",
+    copy: "San Miguel County Expands Emergency Alert System; A Telluride Climbing Guide Keeps History Alive; Milton Visits the Listening Club",
+    href: "https://koto.org/news/newscast-9-25-26/"
+  },
+  {
+    title: "Newscast 9-24-26",
+    source: "KOTO Community Radio",
+    date: "September 25, 2026",
+    newsTopic: "community",
+    copy: "West End Round Up with the San Miguel Basin Forum; Pioneer Day Celebrates 90 Years; Geothermal Energy is Piping Hot in Rico",
+    href: "https://koto.org/news/newscast-9-24-26/"
+  },
+  {
+    title: "Newscast 9-23-26",
+    source: "KOTO Community Radio",
+    date: "September 24, 2026",
+    newsTopic: "housing",
+    copy: "A Telluride Rental Housing Update; County Endorses Lawson Hill Connector Trail; The Wonderment Marvels in the Ordinary",
+    href: "https://koto.org/news/newscast-9-23-26/"
+  },
+  {
+    title: "Newscast 9-21-26",
+    source: "KOTO Community Radio",
+    date: "September 22, 2026",
+    newsTopic: "community",
+    copy: "Coming Up Next, Telluride; Yom Kippur Brings Atonement and Remembrance",
+    href: "https://koto.org/news/newscast-9-21-26/"
+  }
 ];
 
 const KOTO_FEATURED_STORIES = [
-
+  {
+    title: "“This Haunted Land” Explores America’s Ghosts",
+    source: "KOTO Community Radio",
+    date: "October 2, 2026",
+    newsTopic: "arts-culture",
+    copy: "Author Betsy Gaines Quammen typically writes about extremism, Christian nationalism and white supremacy, so for her latest book, she wanted a lighter subject, something less scary and more fun. So she turned to ghosts. In her new book, \"This Haunted Land: Reckoning With Ghosts and the Stories That Shape America\", Gaines Quammen explores the trauma ",
+    href: "https://koto.org/news/this-haunted-land-betsy-gaines-quammen/"
+  },
+  {
+    title: "Geothermal Energy Is Piping Hot in Rico",
+    source: "KOTO Community Radio",
+    date: "September 25, 2026",
+    newsTopic: "community",
+    copy: "Rico's hot springs could hold a potent and untapped source of geothermal energy. A local group is working to bring that energy to the town.",
+    href: "https://koto.org/news/geothermal-energy-piping-hot-rico-colorado/"
+  }
 ];
 
 // San Miguel Basin Forum (West End — Norwood, Nucla, Naturita, Paradox).
@@ -4183,76 +4251,76 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Yin Yang Yoga with Miriah",
-    link: "https://koto.org/event/yin-yang-yoga-with-miriah-2/2026-09-17/",
-    description: "Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses. We'll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome. Miriah has been local to Telluride area for over ten years and have been teaching yoga for six years. She owns her own herbal business, makes herbal products and co-hosts a weekly podcast. She also is an avid snowboarder, photographer, sticker artist and comedian.",
-    pubDate: "2026-09-17T09:00:00-06:00",
+    title: "Telluride Leadership Summit",
+    link: "https://koto.org/event/telluride-leadership-summit/",
+    description: "A multi-day leadership summit hosted by Leadership Landing, running October 4–6 at the Madeline Hotel in Telluride. Full program details and registration information are available at TellurideLeadershipSummit.com.",
+    pubDate: "2026-10-04T00:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/09/Picture1.jpg"
+  },
+  {
+    title: "Gentle Yoga with Kristen Milord",
+    link: "https://koto.org/event/gentle-yoga-with-kristen-milord/2026-10-04/",
+    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
+    pubDate: "2026-10-04T11:00:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/MIRIAH-2.png"
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/gentle-yoga-kristen.png"
   },
   {
-    title: "Tennis Clinic 3.0-4.0",
-    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-17/",
-    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-17T09:30:00-06:00",
+    title: "Ridgway 1k 2026",
+    link: "https://koto.org/event/ridgway-1k-2026/",
+    description: "October 4 @ 12:15 pm – 1:30 pm Ridgway 1K ~ Rally Through The Alley: Colorado’s Most Entertaining Fun Run 🗓 Event Date: October 4, 2026 ⏰ In-person Registration Opens: 12:15 PM 🏁 Race Starts: 12:45 PM 📣 Last Call for Runners: 1:15 PM (all runners must be checked-in by 1:15 pm). 📍 Downtown Ridgway, Colorado New this year – Registered racers can pick up their Bibs at Packet Pickup: Friday, October 2nd, 3:00-6:00pm @ The Sherbino Join the most hilarious costumed fun run in Colorado! The Ridgway 1K Rally Through The Alley is a family-friendly, costume-themed, 1K race in downtown Ridgway. But don’t be fooled—this 6-block, downhill “race” is all about fun, food, and funky vibes, not speed. …",
+    pubDate: "2026-10-04T12:30:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
+    location: "Downtown Ridgway &amp; Hartwell Park",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/09/1k-banner.png"
   },
   {
-    title: "Tennis Clinic 4.0+",
-    link: "https://koto.org/event/tennis-clinic-4-0/2026-09-17/",
-    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-17T11:00:00-06:00",
+    title: "San Juan Oktoberfest",
+    link: "https://koto.org/event/san-juan-oktoberfest/",
+    description: "October 4 @ 2:00 pm – 5:00 pm San Juan Oktoberfest Sunday, October 4, 2026 | Hartwell Park | Ridgway, Colorado There’s nothing quite like Ridgway in early October — bright blue skies, golden aspens and cottonwoods glowing on the hillsides, and the irresistible scent of bratwursts sizzling in Hartwell Park. That can only mean one thing: Oktoberfest has arrived! This year marks the inaugural San Juan Oktoberfest, happening Sunday, October 4, immediately following the wildly fun Ridgway 1K Rally Through the Alley. After the costumes, laughter, and downhill dash through town, the celebration continues in the park with a festival that blends Austrian tradition with Rocky Mountain charm. LIVE MUSIC by RHS Band members and leaders to kick things off — followed by POLKA MUSIC BY POLKA POYO of Paonia! …",
+    pubDate: "2026-10-04T14:00:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
+    location: "Hartwell Park Ridgway",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/09/oktoberfest-banner.png"
   },
   {
-    title: "Pilates for All Bodies with Laura",
-    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-09-17/",
-    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-09-17T12:30:00-06:00",
+    title: "Tea and Tarot",
+    link: "https://koto.org/event/tea-and-tarot/2026-10-04/",
+    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    pubDate: "2026-10-04T14:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "Ballot Measure 5A Information Meeting",
+    link: "https://koto.org/event/ballot-measure-5a-information-meeting/2026-10-05/",
+    description: "Find out why voting yes on ballot measure 5A keps Telluride schools strong and how the measure affects you. Lite refreshments provided!",
+    pubDate: "2026-10-05T12:00:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
-  },
-  {
-    title: "TRC Men's Tennis Singles",
-    link: "https://koto.org/event/trc-mens-tennis-singles/2026-09-17/",
-    description: "The 1st TRC Men's Singles League! Sign up on a week-to-week basis. No long-term commitment.",
-    pubDate: "2026-09-17T16:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Local Legends Blues & Brews Kick Off",
-    link: "https://koto.org/event/local-legends-blues-brews-kick-off/",
-    description: "Join Ah Haa School for the Arts in partnership with Telluride Blues & Brews Festival for Local Legends, a beer tasting and food pairing on Ah Haa's Sky Deck! Telluride's own local legends, Telluride Brewing Co will host iconic breweries for a special tasting paired with delicious bites! Sample seasonal styles while hearing from the makers and learning about craft beer straight from the source! Guests will enjoy live music from Nigel Wearne, the 2025 Telluride Blues Challenge Winner! Get your tickets at ahhaa.org – all proceeds benefit Ah Haa!",
-    pubDate: "2026-09-17T17:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Ah Haa School for the Arts, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/09/Local-legends-poster-26sm.png"
   },
   {
     title: "West End Trail Running",
-    link: "https://koto.org/event/west-end-trail-running-2/2026-09-17/",
+    link: "https://koto.org/event/west-end-trail-running/2026-10-06/",
     description: "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens & adults 15 and older are welcome to participate. Contact director Alicia O'Connel at montrosewestrec@gmail.com or text her at 302-690-0160 for more information, including a nominal registration fee.",
-    pubDate: "2026-09-17T17:00:00-06:00",
+    pubDate: "2026-10-06T08:15:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
@@ -4260,43 +4328,54 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "Volunteer Trail Work Day: Deep Creek Trail",
-    link: "https://koto.org/event/volunteer-trail-work-day-deep-creek-trail/",
-    description: "Join Telluride Mountain Club for a day of maintaining trails! Spend time with friends, get your hands dirty, and help care for the trails we all love. Projects may include clearing debris, improving drainage, and general maintenance to keep our trails safe and sustainable. Please bring water, a snack, closed-toed shoes, sunglasses, a long-sleeved shirt, and pants.",
-    pubDate: "2026-09-17T17:15:00-06:00",
+    title: "Bardic Trails Online Poetry Night",
+    link: "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-10-06/",
+    description: "The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit to get the zoom link each month, Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. Jan. 6 / Euro-American poet Dane Cervine of California Feb. …",
+    pubDate: "2026-10-06T19:00:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/09/Vol-Trail-Work-499x624-1.png"
+    imageUrl: "https://koto.org/wp-content/uploads/2026/03/Bardic-Trails-2026.jpg"
   },
   {
-    title: "Salon Night at Telluride Arts HQ",
-    link: "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-09-17/",
-    description: "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it here in Telluride. These are evenings for conversation and connection, not lectures or formal programming. They are casual, open, and intentionally unstructured, designed to create the atmosphere where ideas can collide, new friendships form, and creativity sparks. Imagine an evening where musicians talk with writers, painters meet photographers, filmmakers share stories with ceramicists—and the unexpected happens!",
-    pubDate: "2026-09-17T17:30:00-06:00",
+    title: "Stoke the Vote",
+    link: "https://koto.org/event/stoke-the-vote/",
+    description: "Join us at Patagonia Telluride with POW (Protect Our Winters), Telluride Mountain Club, Sheep Mountain Alliance, and EcoAction Partners for an evening of learning and conversation about how recreation intersects with the protection of public lands, conservation, and climate action. We'll write postcards to prospective voters, watch POW short films, and host a panel conversation with our partners — plus a giveaway, food, and a chance to earn a $100 credit at Patagonia.",
+    pubDate: "2026-10-07T17:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Patagonia Telluride, Telluride Retail",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/09/Stoke-the-VOTE-final-flyer.png"
+  },
+  {
+    title: "Pilates for All Bodies with Laura",
+    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-10-08/",
+    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-10-08T12:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "The Creative Exchange at Telluride Arts HQ",
+    link: "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-10-08/",
+    description: "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories that fuel their work. Think of it as an open source model for creativity—where we learn from each other, swap ideas, and help strengthen one another’s practice. Each session is hosted by local artists and creative leaders who bring their own perspectives, techniques, and creative journeys into the room. Topics may span everything from the business of art and professional development, to creative process, storytelling, collaboration, and the philosophical underpinnings of making art. Whether you’re a full-time working artist, an educator, a student, a maker, or simply someone curious about creative expression, the Creative Exchange is open to you. …",
+    pubDate: "2026-10-08T17:30:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Arts HQ, TELLURIDE",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
-  },
-  {
-    title: "Authors Uncovered: K.B. Brodsky",
-    link: "https://koto.org/event/authors-uncovered-k-b-brodsky/",
-    description: "Join Karen and Bill Brodsky part-time locals and husband & wife author duo (K.B. Brodsky) as they discuss their newest novel, Beyond Honor at the library on Thursday, September 17th at 5:30pm. A paramilitary operative confronting his grief on a path of retribution. A CIA analyst hunting a conspiracy that leads to the Oval Office. A Russian agent hiding in plain sight. Jason Matthews’s Red Sparrow meets Jack Carr’s The Terminal List in Beyond Honor, a debut political thriller that plunges readers into a world of international espionage, where loyalty and duty are tested.",
-    pubDate: "2026-09-17T17:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/Brodsky-Beyond-Honor.png"
+    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png"
   },
   {
     title: "Facing the Mourning",
-    link: "https://koto.org/event/facing-the-mourning/2026-09-17/",
+    link: "https://koto.org/event/facing-the-mourning/2026-10-08/",
     description: "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit from additional support while navigating grief and loss. Please feel free to share this information with others who may be interested.",
-    pubDate: "2026-09-17T18:00:00-06:00",
+    pubDate: "2026-10-08T18:00:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
@@ -4304,32 +4383,32 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "Blues & Brews Beer Pairing Dinner",
-    link: "https://koto.org/event/blues-brews-beer-pairing-dinner/",
-    description: "As Telluride settles into Blues & Brews weekend, gather around the table for an evening devoted to the art of craft brewing. On Thursday, September 17, 2026, enjoy a five-course dinner paired with exceptional beers from featured breweries, beginning with a festival-exclusive welcome pour. Between courses, brewers share the inspiration and process behind each selection, offering a rare opportunity to experience the festival through the people who shape it. Accompanied by the soulful sounds of Myron Elkins, whose honest songwriting draws from the traditions of country, blues, and American roots music, the evening unfolds at an unhurried pace—one meant for lingering conversations, shared discoveries, and raising a glass to the weekend ahead.",
-    pubDate: "2026-09-17T18:00:00-06:00",
+    title: "Not-So-Young People's Theater presents Shrek The Musical",
+    link: "https://koto.org/event/not-so-young-peoples-theater-presents-shrek-the-musical/2026-10-08/",
+    description: "The Sheridan Arts Foundation's Not-So-Young People's Theater (NSYPT) invites audiences to experience the hilarious, heartwarming fairytale adventure Shrek The Musical this fall at the historic Sheridan Opera House from Thursday, October 8 through Sunday, October 11, 2026. Featuring a mixed-age cast made up of local performers, Shrek The Musical brings the beloved DreamWorks Animation characters to life with unforgettable original songs, outrageous comedy, and a powerful message about friendship, acceptance, and celebrating what makes each of us unique. The cast features : Elijah Aumiller, Jennifer Birrittella, Eric Borchers, Rachel Brand (as Fiona), Dylan Brooks (as Lord Farquaad), Theo Brooks, Jack Caruso, Kevin Douglas (as Shrek), Arthur Forsythe, Elizabeth Guest, Simon Guest, Karen Gugliomone, Ryan Heidenreich, Elizabeth Hinkley, Tagen Kaestner, Meghan Knowles, Bryce Laney, Jennifer Laney, Andrew Murphy, Megan Murphy, Niko Pantovich-Gonzalez (as Donkey), Yana Pollard, Lily Reed, Stella Reed, Susa Smith, Pepper Tyson, and James Van Hooser. …",
+    pubDate: "2026-10-08T18:00:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
-    location: "The Madeline Hotel, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/09/blues-dinner-1.png"
-  },
-  {
-    title: "Tennis Clinic 3.0-4.0",
-    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-18/",
-    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-18T09:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
+    location: "Sheridan Opera House, Telluride",
     imageUrl: ""
   },
   {
+    title: "Cliff Allred featured at West End Stories & Poems at the Naturita Library Oct. 8th",
+    link: "https://koto.org/event/cliff-allred-featured-at-west-end-stories-poems-at-the-naturita-library-oct-8th/",
+    description: "Leslie Ament of Naturita and Art Goodtimes of Wrights Mesa will be hosting Cliff Allred discussing all things paranormal Thursday, Oct. 8 th , at 6 pm MDT at the Naturita Community Library. “We will be talking about near death experiences, ghosts, unexplained encounters and other mysterious experiences,” said Allred, a Naturita resident and library employee. “Come share your stories with us.” Cliff was born in Craig, Colorado, and his parents moved to Naturita when he was in kindergarten. He went to college at Embry-Riddle Aeronautical University in Prescott, Arizona, in 2001, the same year he was diagnosed with cancer and underwent treatment. He graduated from college in 2006, moved to Phoenix, and worked there as a drafter for twelve years. In 2018 he moved back to Naturita and helped his parents build a house, then found a job at the library in 2020. …",
+    pubDate: "2026-10-08T18:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Naturita Community Library",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/AllredFlyWESPoct26.png"
+  },
+  {
     title: "Up-off Gymnastics, Dance, and Spanish",
-    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-09-18/",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-10-09/",
     description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
-    pubDate: "2026-09-18T10:00:00-06:00",
+    pubDate: "2026-10-09T10:00:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
@@ -4338,9 +4417,9 @@ const KOTO_COMMUNITY_EVENTS = [
   },
   {
     title: "Ridgway Farmer's Market",
-    link: "https://koto.org/event/ridgway-farmers-market/2026-09-18/",
-    description: "A weekly outdoor market held Fridays from May through mid-October at Hartwell Park in downtown Ridgway, featuring local produce, artisan vendors, and live music on the last Friday of each month. The September 19th market runs from 10 a.m. to 2 p.m.\n\n---\n**Note:** The date in the event data (September 18, 2026) is a Friday, so I used the series details as provided — but double-check the specific date, as the existing description's pattern and the listed date should be confirmed to align.",
-    pubDate: "2026-09-18T10:00:00-06:00",
+    link: "https://koto.org/event/ridgway-farmers-market/2026-10-09/",
+    description: "The Ridgway Farmers Market is a weekly Friday outdoor market held at Hartwell Park in downtown Ridgway, running from late May through mid-October, 10 a.m. to 2 p.m. The market features local produce, artisan vendors, and live music on the last Friday of each month.",
+    pubDate: "2026-10-09T10:00:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
@@ -4349,9 +4428,9 @@ const KOTO_COMMUNITY_EVENTS = [
   },
   {
     title: "Telluride Farmer's Market",
-    link: "https://koto.org/event/telluride-farmers-market/2026-09-18/",
+    link: "https://koto.org/event/telluride-farmers-market/2026-10-09/",
     description: "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.",
-    pubDate: "2026-09-18T10:30:00-06:00",
+    pubDate: "2026-10-09T10:30:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
@@ -4359,109 +4438,65 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "Tennis Clinic 4.0+",
-    link: "https://koto.org/event/tennis-clinic-4-0/2026-09-18/",
-    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-18T11:00:00-06:00",
+    title: "Not-So-Young People's Theater presents Shrek The Musical",
+    link: "https://koto.org/event/not-so-young-peoples-theater-presents-shrek-the-musical/2026-10-09/",
+    description: "The Sheridan Arts Foundation's Not-So-Young People's Theater (NSYPT) invites audiences to experience the hilarious, heartwarming fairytale adventure Shrek The Musical this fall at the historic Sheridan Opera House from Thursday, October 8 through Sunday, October 11, 2026. Featuring a mixed-age cast made up of local performers, Shrek The Musical brings the beloved DreamWorks Animation characters to life with unforgettable original songs, outrageous comedy, and a powerful message about friendship, acceptance, and celebrating what makes each of us unique. The cast features : Elijah Aumiller, Jennifer Birrittella, Eric Borchers, Rachel Brand (as Fiona), Dylan Brooks (as Lord Farquaad), Theo Brooks, Jack Caruso, Kevin Douglas (as Shrek), Arthur Forsythe, Elizabeth Guest, Simon Guest, Karen Gugliomone, Ryan Heidenreich, Elizabeth Hinkley, Tagen Kaestner, Meghan Knowles, Bryce Laney, Jennifer Laney, Andrew Murphy, Megan Murphy, Niko Pantovich-Gonzalez (as Donkey), Yana Pollard, Lily Reed, Stella Reed, Susa Smith, Pepper Tyson, and James Van Hooser. …",
+    pubDate: "2026-10-09T18:00:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
+    location: "Sheridan Opera House, Telluride",
     imageUrl: ""
   },
   {
-    title: "Crystal Festival – A Rock, Mineral, Gem, & Crystal Show",
-    link: "https://koto.org/event/crystal-festival-a-rock-mineral-gem-crystal-show/",
-    description: "Join us for two incredible days celebrating rocks, minerals, fossils, gems, crystals, jewelry, and more at the Crystal Festival! 📅 September 19th and 20th, 2026 🕰️10am to 8pm both days 📍 Telluride Conference Center – Mountain Village, Colorado Whether you’re a seasoned collector, a crystal enthusiast, a geology lover, or simply looking for a fun family outing, there’s something for everyone! ✨ Shop from amazing vendors featuring: • Crystals & Minerals • Fossils & Dinosaur Fossils • Gemstones & Jewelry • Meteorites • Handmade Art & Gifts • Metaphysical Items • Home Décor • Much More! 🔨 Enjoy hands-on activities, educational displays, and discover the fascinating stories behind Earth’s natural treasures. Meet knowledgeable vendors, learn about geology, and find unique pieces to add to your collection. 👨‍👩‍👧‍👦 Family-friendly fun for all ages! …",
-    pubDate: "2026-09-19T00:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Conference Center, Mountain Village",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/09/bozeman-Crystal-Festival-.jpg"
-  },
-  {
-    title: "Wild Roots Revival",
-    link: "https://koto.org/event/wild-roots-revival/",
-    description: "The Wild Roots Revival is a gathering highlighting the interconnection between mind, body, spirit, and nature. A mini-retreat on the west end centered around setting intentions for the Fall Equinox. Join us Saturday at the Livery in Norwood for a full day of deep community and inner exploration. On Sunday we will ground down our experience by hiking together and exploring poetry in the surrounding wilderness of Busted Arm Draw, a 20 min drive outside of Norwood. Presenters include Marie Green, Annika Kristianson, Julie Maynard, Wolf Nentwich, Ellen Metrick, Ian Wilson, Kristi Allred, and Erin Dann.",
-    pubDate: "2026-09-19T08:00:00-06:00",
+    title: "Lone Cone Legacy Trust annual Harvest Dinner",
+    link: "https://koto.org/event/lone-cone-legacy-trust-annual-harvest-dinner/",
+    description: "One of the biggest nights in Norwood, the Lone Cone Legacy Trust's annual Harvest Dinner, takes place on Saturday, October 10th, at 5:30 p.m. at The Livery. Live music from Telluride Gold Kings, a fabulous buffet dinner, dancing and a cash bar! Tickets are available at the door, or in advance at loneconelegacy.org.",
+    pubDate: "2026-10-10T17:30:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "The Livery Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/09/Wild-Roots-Revival-Meadowlark.jpg"
-  },
-  {
-    title: "Zumba with Gise",
-    link: "https://koto.org/event/zumba-with-gise/2026-09-19/",
-    description: "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. ¡Olvida el entrenamiento y únete a la fiesta! Zumba® es una clase de fitness de baile de alta energía que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calorías. …",
-    pubDate: "2026-09-19T10:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/zumba-gise.png"
-  },
-  {
-    title: "Gaiascope Saturday Sessions",
-    link: "https://koto.org/event/gaiascope-saturday-sessions/2026-09-19/",
-    description: "Experience artist Brooke Einbender's Gaiascope installation in Mountain Village's Heritage Plaza every Saturday evening in September, with live DJ sets from 7-10 p.m. presented by Telluride Arts, TMVOA and Mindbender Studio.",
-    pubDate: "2026-09-19T19:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Heritage Plaza, Mountain Village",
     imageUrl: ""
   },
   {
-    title: "Blues Brunch",
-    link: "https://koto.org/event/blues-brunch/",
-    description: "Gather at Black Iron Kitchen + Bar for a Sunday brunch where mountain mornings and live music set the tone. From 7:00AM to 3:00PM, enjoy a specialty à la carte brunch menu, accompanied by a live performance by Ken Valdez from 10:00AM to 12:00PM. Originally from Santa Fe, Valdez brings a soulful voice and expressive guitar style shaped by blues, rock, funk, and Latin influences. It's an easygoing morning of seasonal flavors, meaningful conversation, and music that carries the spirit of Blues & Brews beyond the festival stage.",
-    pubDate: "2026-09-20T10:00:00-06:00",
+    title: "Not-So-Young People's Theater presents Shrek The Musical",
+    link: "https://koto.org/event/not-so-young-peoples-theater-presents-shrek-the-musical/2026-10-10/",
+    description: "The Sheridan Arts Foundation's Not-So-Young People's Theater (NSYPT) invites audiences to experience the hilarious, heartwarming fairytale adventure Shrek The Musical this fall at the historic Sheridan Opera House from Thursday, October 8 through Sunday, October 11, 2026. Featuring a mixed-age cast made up of local performers, Shrek The Musical brings the beloved DreamWorks Animation characters to life with unforgettable original songs, outrageous comedy, and a powerful message about friendship, acceptance, and celebrating what makes each of us unique. The cast features : Elijah Aumiller, Jennifer Birrittella, Eric Borchers, Rachel Brand (as Fiona), Dylan Brooks (as Lord Farquaad), Theo Brooks, Jack Caruso, Kevin Douglas (as Shrek), Arthur Forsythe, Elizabeth Guest, Simon Guest, Karen Gugliomone, Ryan Heidenreich, Elizabeth Hinkley, Tagen Kaestner, Meghan Knowles, Bryce Laney, Jennifer Laney, Andrew Murphy, Megan Murphy, Niko Pantovich-Gonzalez (as Donkey), Yana Pollard, Lily Reed, Stella Reed, Susa Smith, Pepper Tyson, and James Van Hooser. …",
+    pubDate: "2026-10-10T18:00:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
-    location: "Black Iron Kitchen + Bar, TELLURIDE",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/09/blues-brunch.png"
-  },
-  {
-    title: "Gentle Yoga with Kristen Milord",
-    link: "https://koto.org/event/gentle-yoga-with-kristen-milord/2026-09-20/",
-    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
-    pubDate: "2026-09-20T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/gentle-yoga-kristen.png"
-  },
-  {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-09-20/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    pubDate: "2026-09-20T13:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
+    location: "Sheridan Opera House, Telluride",
     imageUrl: ""
   },
   {
-    title: "Glow with the Flow",
-    link: "https://koto.org/event/glow-with-the-flow/",
-    description: "Skin Care through Life's Stages: Britt Bradford is a botanical skin care formulator,That will show and share how to make a botanical skin care solution that works with wherever we are right now. Do you have a baby, do you have a teen, are you experiencing peri-menopause symptoms, there is something for everyone so you can glow with the flow.",
-    pubDate: "2026-09-20T13:00:00-06:00",
+    title: "Volunteer Trail Work Day: Cross Mountain Trailhead",
+    link: "https://koto.org/event/volunteer-trail-work-day-cross-mountain-trailhead/",
+    description: "Join us this fall for our final trail work day! Spend time with friends, get your hands dirty, and help care for the trails we all love. Projects may include clearing debris, improving drainage, and general maintenance to keep our trails safe and sustainable. Please bring water, a snack, closed-toed shoes, sunglasses, a long-sleeved shirt, and pants.",
+    pubDate: "2026-10-11T09:00:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/glow.jpg"
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/09/October-11-Trailwork.jpg"
+  },
+  {
+    title: "Not-So-Young People's Theater presents Shrek The Musical",
+    link: "https://koto.org/event/not-so-young-peoples-theater-presents-shrek-the-musical/2026-10-11/",
+    description: "The Sheridan Arts Foundation's Not-So-Young People's Theater (NSYPT) invites audiences to experience the hilarious, heartwarming fairytale adventure Shrek The Musical this fall at the historic Sheridan Opera House from Thursday, October 8 through Sunday, October 11, 2026. Featuring a mixed-age cast made up of local performers, Shrek The Musical brings the beloved DreamWorks Animation characters to life with unforgettable original songs, outrageous comedy, and a powerful message about friendship, acceptance, and celebrating what makes each of us unique. The cast features : Elijah Aumiller, Jennifer Birrittella, Eric Borchers, Rachel Brand (as Fiona), Dylan Brooks (as Lord Farquaad), Theo Brooks, Jack Caruso, Kevin Douglas (as Shrek), Arthur Forsythe, Elizabeth Guest, Simon Guest, Karen Gugliomone, Ryan Heidenreich, Elizabeth Hinkley, Tagen Kaestner, Meghan Knowles, Bryce Laney, Jennifer Laney, Andrew Murphy, Megan Murphy, Niko Pantovich-Gonzalez (as Donkey), Yana Pollard, Lily Reed, Stella Reed, Susa Smith, Pepper Tyson, and James Van Hooser. …",
+    pubDate: "2026-10-11T14:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Sheridan Opera House, Telluride",
+    imageUrl: ""
   },
   {
     title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-09-20/",
+    link: "https://koto.org/event/tea-and-tarot/2026-10-11/",
     description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-09-20T14:30:00-06:00",
+    pubDate: "2026-10-11T14:30:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
@@ -4469,54 +4504,21 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   },
   {
-    title: "Book Buzz w/The Pour Over Pedaler",
-    link: "https://koto.org/event/book-buzz-w-the-pour-over-pedaler/",
-    description: "Get the scoop on the hottest new titles at the library during Book Buzz! Discover upcoming releases, hidden gems, and staff favorites while enjoying a complimentary handcrafted coffee from Luke of The Pour Over Pedaler. Come sip, socialize, and leave with your next great read!",
-    pubDate: "2026-09-21T09:00:00-06:00",
+    title: "Ballor Measure 5A Information Meeting",
+    link: "https://koto.org/event/ballor-measure-5a-information-meeting/",
+    description: "Find out why voting yes on 5A keeps Telluride schools stroung and how the measure affects you.",
+    pubDate: "2026-10-12T08:30:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/book-buzz-13-1.png"
-  },
-  {
-    title: "Tennis Clinic 3.0-4.0",
-    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-21/",
-    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-21T09:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
+    location: "Coffee Cowboy General Store, Telluride",
     imageUrl: ""
   },
   {
-    title: "Tennis Clinic 4.0+",
-    link: "https://koto.org/event/tennis-clinic-4-0/2026-09-21/",
-    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-21T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Book Talk: Clotilda",
-    link: "https://koto.org/event/book-talk-clotilda/",
-    description: "Join the Telluride Historical Museum and Wilkinson Public Library for a deep dive into some of the threads that make up the tapestry of Colorado's and the United States of America's history as we celebrate Colorado's 150th year as state and USA's 250th year as an independent country. This month the book discussion will be lead by Kiernan Lannon, Telluride Historical Museum Director on Monday, September 21st at 5:30 pm! The featured book is The Survivors of the Clotilda: The Lost Stories of the Last Captives of the American Slave Trade by Hannah Durkin. You can check out the book from the library or purchase to book from Between the Covers Bookstore for 10% off!",
-    pubDate: "2026-09-21T17:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "West End Trail Running",
-    link: "https://koto.org/event/west-end-trail-running/2026-09-22/",
-    description: "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens & adults 15 and older are welcome to participate. Contact director Alicia O'Connel at montrosewestrec@gmail.com or text her at 302-690-0160 for more information, including a nominal registration fee.",
-    pubDate: "2026-09-22T08:15:00-06:00",
+    title: "Free Legal Clinic – Clínica Jurídica Gratuita",
+    link: "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-10-13/",
+    description: "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. Abogados voluntarios responderán a preguntas, ayudarán a llenar formularios y explicarán el proceso y el procedimiento de cuestiones jurídicas. Los abogados voluntarios no te representan y esta clínica es sólo informativa. CON CITA PREVIA. Llame a 970-728-4519 para más información y para registrarse.",
+    pubDate: "2026-10-13T16:00:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
@@ -4524,147 +4526,235 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "Tennis Clinic 3.0-4.0",
-    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-22/",
-    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-22T09:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Tennis Clinic 4.0+",
-    link: "https://koto.org/event/tennis-clinic-4-0/2026-09-22/",
-    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-22T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Lunch and Learn: Colorado Historic Newspapers",
-    link: "https://koto.org/event/lunch-and-learn-colorado-historic-newspapers/",
-    description: "A midday program at Wilkinson Public Library in which librarian Alison Farnham will guide attendees through the Colorado Historic Newspaper Collection and share her digitization project focused on local newspapers from the mid-1900s, including the San Miguel Journal and Deep Creek Review. Lunch will be provided, and advance registration is available at telluridelibrary.org.",
-    pubDate: "2026-09-22T12:00:00-06:00",
+    title: "Sewing 101 with Melissa",
+    link: "https://koto.org/event/sewing-101-with-melissa/2026-10-14/",
+    description: "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.",
+    pubDate: "2026-10-14T17:00:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/lunch-10.png"
+    imageUrl: "https://koto.org/wp-content/uploads/2026/02/sewing.jpg"
   },
   {
-    title: "Telluride R-1 School District Board Work Session",
-    link: "https://koto.org/event/telluride-r-1-school-district-board-work-session/",
-    description: "The Telluride R-1 School District Board of Education holds a work session on Tuesday, September 22nd, at 3:30 p.m. in the Bridal Veil conference room at TMHS and via Zoom. Meeting agenda & Zoom link can be found at koto.org.",
-    pubDate: "2026-09-22T15:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Middle/High School, TELLURIDE",
-    imageUrl: ""
-  },
-  {
-    title: "Telluride R-1 School District Board Regular Meeting",
-    link: "https://koto.org/event/telluride-r-1-school-district-board-regular-meeting/",
-    description: "The Telluride R-1 School District Board of Education holds a regular meeting on Tuesday, September 22nd, at 5:15 p.m. in the Bridal Veil Conference Room at TMHS and via Zoom. The meeting agenda & Zoom link can be found at tellurideschool.org.",
-    pubDate: "2026-09-22T17:15:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Middle/High School, TELLURIDE",
-    imageUrl: ""
-  },
-  {
-    title: "Tennis Clinic 3.0-4.0",
-    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-23/",
-    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-23T09:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Tennis Clinic 4.0+",
-    link: "https://koto.org/event/tennis-clinic-4-0/2026-09-23/",
-    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-23T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Mahjongg for Independent Players",
-    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-09-23/",
-    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
-    pubDate: "2026-09-23T13:00:00-06:00",
+    title: "Pilates for All Bodies with Laura",
+    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-10-15/",
+    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-10-15T12:30:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
-  },
-  {
-    title: "Plant Party: Ornery Orchids w/Brandon Griep",
-    link: "https://koto.org/event/plant-party-ornery-orchids-w-brandon-griep/",
-    description: "Brandon is back! How are your orchids doing? Bring your orchid and chat with Brandon to get the latest and greatest information on all the Ornery Orchids. We will also have some pots and soil available for your orchids.",
-    pubDate: "2026-09-23T17:15:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/ornery-orchids-2.png"
-  },
-  {
-    title: "Optimize Your Brain Health with Lifestyle Medicine",
-    link: "https://koto.org/event/optimize-your-brain-health-with-lifestyle-medicine/",
-    description: "A lecture at the Telluride Science & Innovation Center featuring Dr. Melissa Sundermann, a double board-certified Lifestyle Medicine physician, exploring the evidence-based connection between everyday lifestyle choices and brain health. The presentation addresses emerging research suggesting that a significant proportion of dementia cases may be preventable through lifestyle interventions.",
-    pubDate: "2026-09-23T18:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Science &#038; Innovation Center, TELLURIDE",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/Brain-Health_tdotcom-2200x1237-1-scaled.jpg"
-  },
-  {
-    title: "Coffee and Climate Conversations",
-    link: "https://koto.org/event/coffee-and-climate-conversations-3/",
-    description: "Coffee & Climate Conversations: Where Recreation Meets Resilience From big adventures to spending time with family and friends, recreation is often at the heart of our experiences on public lands. Join Sheep Mountain Alliance and EcoAction Partners for a discussion about recreation on our public lands alongside Telluride Mountain Club and Rico Trails Alliance. Learn more about what's next for trails in our region, and join us as we ask the questions: How do recreation and conservation intersect, and where do they diverge? How does recreation shape our community and values? And most importantly, how can you be a strong steward and advocate for public lands and climate across our region? Coffee, tea and pastries kindly provided.",
-    pubDate: "2026-09-24T08:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/coffee-and-climate-7.png"
-  },
-  {
-    title: "Yin Yang Yoga with Miriah",
-    link: "https://koto.org/event/yin-yang-yoga-with-miriah-2/2026-09-24/",
-    description: "Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses. We'll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome. Miriah has been local to Telluride area for over ten years and have been teaching yoga for six years. She owns her own herbal business, makes herbal products and co-hosts a weekly podcast. She also is an avid snowboarder, photographer, sticker artist and comedian.",
-    pubDate: "2026-09-24T09:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/MIRIAH-2.png"
-  },
-  {
-    title: "Tennis Clinic 3.0-4.0",
-    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-09-24/",
-    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-09-24T09:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "Salon Night at Telluride Arts HQ",
+    link: "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-10-15/",
+    description: "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it here in Telluride. These are evenings for conversation and connection, not lectures or formal programming. They are casual, open, and intentionally unstructured, designed to create the atmosphere where ideas can collide, new friendships form, and creativity sparks. Imagine an evening where musicians talk with writers, painters meet photographers, filmmakers share stories with ceramicists—and the unexpected happens!",
+    pubDate: "2026-10-15T17:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Arts HQ, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
+  },
+  {
+    title: "Facing the Mourning",
+    link: "https://koto.org/event/facing-the-mourning/2026-10-15/",
+    description: "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit from additional support while navigating grief and loss. Please feel free to share this information with others who may be interested.",
+    pubDate: "2026-10-15T18:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Redvale Community Center",
+    imageUrl: ""
+  },
+  {
+    title: "Up-off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-10-16/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-10-16T10:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "Ridgway Farmer's Market",
+    link: "https://koto.org/event/ridgway-farmers-market/2026-10-16/",
+    description: "The Ridgway Farmer's Market returns to Hartwell Park in downtown Ridgway for its final market of the season, running from 10 a.m. to 2 p.m. The weekly Friday market features local produce, artisan vendors, and live music.",
+    pubDate: "2026-10-16T10:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Hartwell Park Ridgway",
+    imageUrl: ""
+  },
+  {
+    title: "9th annual Love Your Gorge",
+    link: "https://koto.org/event/9th-annual-love-your-gorge/",
+    description: "Love Your Gorge is an annual volunteer event at the Ouray Ice Park, organized by the Uncompahgre Watershed Partnership and Ouray Ice Park, with support from local sponsors including the City of Ouray, Alpine Bank, Ouray Grocery, and Ouray Brewery. Now in its ninth year, the community gathering includes lunch, giveaways, and a raffle for participants.",
+    pubDate: "2026-10-17T09:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Ouray Ice Park",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/09/2026-banner-with-2025-Love-Your-Gorge-group.jpeg"
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://koto.org/event/tea-and-tarot/2026-10-18/",
+    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    pubDate: "2026-10-18T14:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "Telluride Mountain School Open House",
+    link: "https://koto.org/event/telluride-mountain-school-open-house/",
+    description: "Telluride Mountain School is hosting an open house where visitors can step directly into the learning environment rather than sit through a formal presentation. Guests are invited to visit classrooms, meet teachers and students, and explore the campus to see the school's hands-on, curiosity-driven approach to education in action.",
+    pubDate: "2026-10-20T09:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Mountain School",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/09/Screenshot-2026-09-18-at-2.04.12-PM.png"
+  },
+  {
+    title: "Stories & Poems Telluride",
+    link: "https://koto.org/event/stories-poems-telluride-2/",
+    description: "Famed writer and nascent poet Rob Schultheis of Lawson Hill will join poet performer and writer Elle Metrick of Wrights Mesa for the October 20 th session of Stories &amp; Poems at the Wilkinson Public Library at 5:15 pm. MDT “I have been a fan of Rob’s work since I moved to Telluride in the early ‘80s,” said Art Goodtimes, Talking Gourds director. “Elle has been a poet performer colleague and Norwood area friend for over 20 years. It should be a delightful evening.” Schultheis is an author and journalist who lives in Lawson Hill. He has written books about the wars in Afghanistan (both with the Soviet Union and the U.S.) and the 2003 Iraq War, as well as books about Colorado, the Western United States, and extreme sports such as mountain climbing. …",
+    pubDate: "2026-10-20T17:15:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Pilates for All Bodies with Laura",
+    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-10-22/",
+    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-10-22T12:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Facing the Mourning",
+    link: "https://koto.org/event/facing-the-mourning/2026-10-22/",
+    description: "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit from additional support while navigating grief and loss. Please feel free to share this information with others who may be interested.",
+    pubDate: "2026-10-22T18:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Redvale Community Center",
+    imageUrl: ""
+  },
+  {
+    title: "Up-off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-10-23/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-10-23T10:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://koto.org/event/tea-and-tarot/2026-10-25/",
+    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    pubDate: "2026-10-25T14:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "Blood Drive hosted by Telluride Fire & Vitalant",
+    link: "https://koto.org/event/blood-drive-hosted-by-telluride-fire-vitalant/",
+    description: "Telluride Fire and Vitalant are hosting a blood drive at Telluride Fire Station 1 on Tuesday, October 27, running from 10:45 AM to 2:30 PM. Community members can sign up to donate at vitalant.org.",
+    pubDate: "2026-10-27T10:45:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Fire Station 1",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/09/Blood-Drive-IG-POST-7.png"
+  },
+  {
+    title: "Social Media for Nonprofits: Myth-Busting, Strategy & Practical Tips for Making Social Media Work for You",
+    link: "https://koto.org/event/social-media-for-nonprofits-myth-busting-strategy-practical-tips-for-making-social-media-work-for-you/",
+    description: "A workshop at Wilkinson Public Library addressing social media strategies for nonprofits, cutting through common myths and misconceptions about algorithms, posting frequency, and trends. The session aims to offer practical, grounded guidance on what actually matters when using social media effectively in a nonprofit context.",
+    pubDate: "2026-10-27T11:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/09/Social-Media-Workshop-Poster.png"
+  },
+  {
+    title: "7th Judicial District FREE Attorney Consultations for Pro Bono Week",
+    link: "https://koto.org/event/7th-judicial-district-free-attorney-consultations-for-pro-bono-week/",
+    description: "7 th Judicial District is pleased to announce, that in recognition of the national celebration of pro bono week, we will be hosting free attorney consultations and mediation sessions during the week of October 26 th -30 th , 2026. Free classes and presentations offered: Wednesday, October the 28 th 9:00 a.m. Parenting Education Workshop – offered by: CASA 1:00 p.m. Child Support Presentation – presented by: Attorney Adriana Hartley Thursday, October 29 th 10:00 a.m. Complete Eviction Process – presented by Colorado Legal Services 1:00 p.m. Contested Family Law Cases – presented by Colorado Legal Services 2:30 p.m. Evidence – presented by Colorado Legal Services Spanish Interpretation available. Availability for mediators and attorneys is limited so participants are encouraged to pre-register early. Local community resource agencies will be present on site to offer information with regard to the services and resources they offer. …",
+    pubDate: "2026-10-28T00:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/7th-2026-LRD-Flyer-English.jpg"
+  },
+  {
+    title: "Pilates for All Bodies with Laura",
+    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-10-29/",
+    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-10-29T12:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Facing the Mourning",
+    link: "https://koto.org/event/facing-the-mourning/2026-10-29/",
+    description: "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit from additional support while navigating grief and loss. Please feel free to share this information with others who may be interested.",
+    pubDate: "2026-10-29T18:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Redvale Community Center",
+    imageUrl: ""
+  },
+  {
+    title: "Up-off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-10-30/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-10-30T10:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://koto.org/event/tea-and-tarot/2026-11-01/",
+    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    pubDate: "2026-11-01T14:30:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   }
 ];
 
