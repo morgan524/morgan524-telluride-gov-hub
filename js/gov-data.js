@@ -1241,7 +1241,7 @@ const WHY_THIS_MATTERS = [
     decision: 'SMART Board decisions regarding gondola operations, maintenance, capital planning, or the future of the free gondola connecting Telluride and Mountain Village.',
     who: 'Every commuter, worker, and visitor who uses the gondola, plus all property taxpayers in the SMART district.',
     stage: 'Check agenda for specific action items.',
-    impact: 'The gondola (built 1996) is critical regional infrastructure. The current funding agreement expires in 2027. Ballot Issue 3A approved ~$8.2M/year in new tax revenue, but a replacement gondola is estimated at $120-150M+ -- leaving a significant funding gap.',
+    impact: 'The gondola (built 1996) is important regional infrastructure. The replacement gondola is estimated at $120-150M+ -- leaving a significant funding gap.',
     context: 'CORA records revealed roughly $125K in campaign consulting before the ballot was referred. The campaign marketed the measure as funding a "new gondola" but the actual revenue only covers a fraction of replacement cost.'
   },
 
