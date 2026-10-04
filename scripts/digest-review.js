@@ -184,6 +184,7 @@ async function editorialRead(key, d, text, apiKey) {
     scope,
     'Look for: a weekday that does not match its date; times or dates that contradict each other; an upcoming meeting described in the past tense or a past one described as upcoming; an item listed in the wrong section; the same meeting or event listed twice; a governing body named without its town (a bare "Town Council", "City Council", "the Board"); an intro paragraph that mentions something not in the body or gets a detail wrong; "agenda not posted" wording next to an item that does have an agenda link; misspellings, broken sentences, and leftover placeholder text.',
     'Do NOT flag: style preferences, the length of summaries, the order of sections, or links (they are checked separately). Do not invent problems; if the email is clean, return an empty list.',
+    'Report each problem once. Do your checking silently: include only confirmed problems, never items you checked and found fine, and keep each "problem" to one or two sentences.',
     'Return ONLY a JSON object, no markdown fence: {"issues":[{"severity":"high|medium|low","where":"the section or item name","quote":"the exact words, under 20 words","problem":"what is wrong","suggestion":"how to fix it"}]}',
     '', 'EMAIL TEXT:', text.slice(0, 60000),
   ].join('\n');
