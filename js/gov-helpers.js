@@ -459,7 +459,19 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=768776","sv":4},
 
   "ouraycity|2026-10-05|Ouray City Council Regular Meeting":
-    {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=761785","sv":4}
+    {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=761785","sv":4},
+
+  "telluride|2026-11-04|Ecology Commission - Nov 04 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8120","sv":4,"ph":"f7fa71ad7c369cd5"},
+
+  "telluride|2026-11-04|Commission for Community Assistance, Arts & Special Events - Nov 04 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8068","sv":4,"ph":"08f639f85583f1c4"},
+
+  "telluride|2026-11-04|Telluride Housing Authority Subcommittee - Nov 04 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8165","sv":4,"ph":"89b54e4a61932908"},
+
+  "county|2026-11-04|Board of County Commissioners Meeting":
+    {"sv":4,"ph":"49e704e3c3bab858"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -484,6 +496,14 @@ const DEEP_DIVE_UPDATES = [
 //   sourceUrl, topics: [] }. Rendered by hub-bub.html from the JSON mirror
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
+  {
+    date: "2026-10-05",
+    title: "Bears, people, and where to draw the line",
+    body: "The Ecology Commission is taking up human-wildlife interactions and public safety. Up here that's not an abstract topic — it usually means bears, and it usually means someone got too close or something got into something. The tension is real: some residents want stricter intervention to protect people; others worry that \"public safety\" becomes a reason to remove or harm animals that are just doing what they do. Neither side is wrong to care. So where do you land — whose safety comes first when the two conflict?",
+    choices: ["People have to come first", "Protect the wildlife", "Find a middle ground", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
   {
     date: "2026-10-04",
     title: "Two keys to every liquor license — is that the right setup?",
@@ -715,14 +735,6 @@ const DAILY_QUESTIONS = [
     choices: ["Community input should lead", "Let the experts set priorities", "Depends on the parcel", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-09-05",
-    title: "Blue Lakes wants a fee. Ridgway's about to weigh in.",
-    body: "Ridgway Town Council is expected to authorize a mayoral letter supporting a proposed recreation fee structure at Blue Lakes. That's not a final vote — it's the town putting its name behind a position.\n\nSome will say fees are overdue. Popular spots take a beating, and money for upkeep has to come from somewhere. Others will push back: public lands have always been free to access, and fees can quietly price out the people who live closest to them.\n\nWhere do you stand on charging for access to Blue Lakes?",
-    choices: ["Fees make sense", "Keep it free", "Depends on the amount", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -805,14 +817,29 @@ const MEETING_PREVIEWS = {
   "mv|2026-10-07|Town Council Meeting":
     "Council is expected to review the 2027 budget during a special session, covering general fund revenues, administration, capital planning, public safety, child development, economic development, tourism, transportation, parking, gondola services, and community grants.",
 
+  "telluride|2026-11-04|Ecology Commission - Nov 04 2026":
+    "The Telluride Ecology Commission is expected to meet on November 4, 2026. The agenda details are limited, but the Commission typically addresses human-wildlife interactions and related public safety concerns. A related proposal seeking consulting services for a review of employee rental housing policies has also been noted.",
+
+  "telluride|2026-11-04|Commission for Community Assistance, Arts & Special Events - Nov 04 2026":
+    "The Commission for Community Assistance, Arts & Special Events is expected to address funding allocations for community support, arts organizations, and special events. The meeting may also touch on a proposed consulting review of Telluride's employee rental housing policies, alongside routine consideration of special event applications and the events calendar.",
+
+  "telluride|2026-11-04|Telluride Housing Authority Subcommittee - Nov 04 2026":
+    "The Telluride Housing Authority Subcommittee is expected to discuss a request for proposals for consulting services to conduct a comprehensive review of the Town of Telluride's employee rental housing policies.",
+
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026":
-    "The Open Space Commission is expected to discuss the 2027 Town of Telluride budget, review progress on the first phase of Valley Floor signage implementation, and debrief on a site walk related to the Bear Creek Preserve Zone 1 Restoration Plan.",
+    "The Open Space Commission is expected to discuss the 2027 Town of Telluride budget, review updates on the first phase of Valley Floor signage implementation, and debrief on a site walk related to the Bear Creek Preserve Zone 1 Restoration Plan.",
+
+  "county|2026-11-04|Board of County Commissioners Meeting":
+    "Board will consider procurement matters including material hauling, trail construction, fuel island canopy, jail painting, and a multi-jurisdictional hazard mitigation plan update. Related legal notices include a probate matter for the estate of Lawrence de Bivort and foreclosure proceedings for a Telluride condominium unit.",
+
+  "ouray|2026-10-05|Board of County Commissioners Special Joint Work Session":
+    "The Ouray County Board of County Commissioners and Ouray City Council will jointly discuss a draft Intergovernmental Agreement under which the County would provide full law enforcement services to the City beginning January 1, 2027, including reviewing a proposed compensation schedule.",
 
   "ouraycity|2026-10-05|Ouray City Council Work Session":
-    "Council is expected to discuss a proposed intergovernmental agreement with the Ouray County Sheriff for full law enforcement services, including a review of estimated costs. The session will include presentations, public comment, and joint deliberations with county commissioners on potential next steps.",
+    "Council is expected to discuss a proposed intergovernmental agreement with the Ouray County Sheriff for full law enforcement services, including a review of estimated costs. The session will include presentations, questions from council members and commissioners, public comment, and deliberations on next steps.",
 
   "ouraycity|2026-10-05|Ouray City Council Regular Meeting":
-    "Council is expected to receive a final report on the city's 150th celebration, hear updates on a South Ouray erosion control project, and consider amendments to a CDOT agreement tied to the Revitalizing Main Street project. Budget notices and liquor license renewals are also on the agenda."
+    "Council is expected to receive a final report on the city's 150th celebration, review a South Ouray erosion control project, and begin the 2027 budget process. Action items include amendments to a CDOT road agreement, a Main Street revitalization project match, and several liquor license renewals."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1044,7 +1071,7 @@ const SMC_ALERTS = [
 const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-10-04';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-10-05';
 const LEGAL_NOTICES_CACHE_DATE = '2026-10-05';
 
 const MANUAL_SUMMARIES = {
@@ -1361,7 +1388,19 @@ const MANUAL_SUMMARIES = {
     "The October 5 work session has one item on the table: a proposed intergovernmental agreement under which the Ouray County Sheriff would take over full law enforcement services for the City. The session is structured as a joint meeting with county commissioners — presentations at 4:00 PM, questions at 4:30, public comment at 5:00, and deliberations at 5:30. Two attachments are in play: a draft IGA and a revised cost estimate dated October 1. Contracting out municipal policing to the county is the kind of structural decision that tends to look purely financial on the surface but carries longer implications for local control and service levels.",
 
   "ouraycity|2026-10-05|Ouray City Council Regular Meeting":
-    "The October 5 Ouray City Council meeting opens with a final report on the city's 150th celebration, then moves to a presentation on the Upper Uncompahgre Watershed South Ouray Erosion Control Project — a land-stability concern that's been on the canyon's radar for some time. The 2027 proposed budget gets a brief informational notice under state statute. On the action side, council will consider two resolutions tied to CDOT's Revitalizing Main Streets program: one amending the existing agreement and one authorizing a 20% local match via supplemental appropriation — real money committed to Main Street infrastructure. The budget publication authorization moves the 2027 budget process into its formal public notice phase. Consent items include liquor license renewals for the Beaumont Grill and Gold Belt Bar & Grill, plus an MOU with Ouray County for victim services. Council will also weigh in on a Colorado Municipal League Executive Board endorsement."
+    "The October 5 Ouray City Council meeting opens with a final report on the city's 150th celebration, then moves to a presentation on the Upper Uncompahgre Watershed South Ouray Erosion Control Project — a land-stability concern that's been on the canyon's radar for some time. The 2027 proposed budget gets a brief informational notice under state statute. On the action side, council will consider two resolutions tied to CDOT's Revitalizing Main Streets program: one amending the existing agreement and one authorizing a 20% local match via supplemental appropriation — real money committed to Main Street infrastructure. The budget publication authorization moves the 2027 budget process into its formal public notice phase. Consent items include liquor license renewals for the Beaumont Grill and Gold Belt Bar & Grill, plus an MOU with Ouray County for victim services. Council will also weigh in on a Colorado Municipal League Executive Board endorsement.",
+
+  "telluride|2026-11-04|Ecology Commission - Nov 04 2026":
+    "The November 4, 2026 Ecology Commission agenda hasn't been posted yet.",
+
+  "telluride|2026-11-04|Commission for Community Assistance, Arts & Special Events - Nov 04 2026":
+    "The November 4, 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+
+  "telluride|2026-11-04|Telluride Housing Authority Subcommittee - Nov 04 2026":
+    "The November 4, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+
+  "county|2026-11-04|Board of County Commissioners Meeting":
+    "The November 4, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2490,6 +2529,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Willkommen once again",
+    source: "Telluride Times",
+    date: "October 5, 2026",
+    firstSeen: "2026-10-05",
+    newsTopic: "arts-culture",
+    copy: "Mountain Village is expanding Oktoberfest to three days this year — Oct. 9–11 — after a one-day run last year. Heritage Plaza becomes the hub Saturday, with a beer garden, festival tent, oompah bands, family activities, and a Bavarian Market. It wraps Sunday with brunch at Lumière and an adult beverage tasting.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_bd3cd2ca-13b5-47f1-8b0f-d094f7739adf.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/46/94662297-53dd-413a-bf02-05443ee52103/6ac14f7299195.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Familia y comunidad",
     source: "Telluride Times",
@@ -4713,59 +4764,48 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Gentle Yoga with Kristen Milord",
-    link: "https://telluridelibrary.libcal.com/event/16536461?hs=a",
-    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
-    pubDate: "2026-10-04T17:00:00.000Z",
+    title: "Musik 4 Kinders",
+    link: "https://telluridelibrary.libcal.com/event/17515443?hs=a",
+    description: "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. &iexcl;M&uacute;sica, Movimiento, y Aprendizaje Alegre para ni&ntilde;os! Este programa ser&aacute; en la sala de programas.",
+    pubDate: "2026-10-05T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png"
   },
   {
-    title: "Drop-In Tech Time with Oliver",
-    link: "https://telluridelibrary.libcal.com/event/15970394?hs=a",
-    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
-    pubDate: "2026-10-04T19:00:00.000Z",
+    title: "Savvy Seniors-Open Tech",
+    link: "https://telluridelibrary.libcal.com/event/17029830?hs=a",
+    description: "1:30 PM – 2:30 PM · Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone.",
+    pubDate: "2026-10-05T19:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "2nd Floor Desk",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
+    location: "Meeting Room #6 - large",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_29_14_06_45.jpg"
   },
   {
-    title: "Nature Nurture-Fall Colors",
-    link: "https://telluridelibrary.libcal.com/event/17482295?hs=a",
-    description: "1:00 PM – 3:00 PM · Join us for a rejuvenating, multisensory journey into the Fall foliage on Sunday, October 4th, from 1:00 PM to 3:00 PM. Participants will enjoy gentle yoga exercises and light hiking as we explore the serene beauty of nearby woodlands. Your guide, Lauren Norton, will emphasize mindfulness and relaxation, allowing you to fully immerse yourself in the calming embrace of nature while engaging all of your senses. Whether you're looking to reduce stress, enhance your well-being, or simply take a peaceful break from the everyday hustle, Nature Nurture offers the perfect opportunity to nourish your body and soul. Lauren Norton is a certified doula and yoga teacher. She specializes in trauma-informed support and advocacy, mindfulness experiences in nature, and doula services for beginning, middle, and end of life care. Find out more by visiting her website at www.throughthewoodsdoula.com . …",
-    pubDate: "2026-10-04T19:00:00.000Z",
+    title: "Melt and Make: Perler Bead Art",
+    link: "https://telluridelibrary.libcal.com/event/17732306?hs=a",
+    description: "A library program at Wilkinson Public Library where participants create art using Perler beads, the colorful plastic beads that are arranged into patterns and fused together with heat. The session runs Monday afternoon from 4:00 to 5:00 PM.",
+    pubDate: "2026-10-05T22:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Lobby",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_11_08_15.jpg"
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_29_12_15_23.png"
   },
   {
-    title: "Tea and Tarot",
-    link: "https://telluridelibrary.libcal.com/event/17029775?hs=a",
-    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
-    pubDate: "2026-10-04T20:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
-  },
-  {
-    title: "Comparsa screening/proyección",
-    link: "https://telluridelibrary.libcal.com/event/17668694?hs=a",
-    description: "3:00 PM – 5:00 PM · &iexcl;Conoce a las protagonistas de Comparsa ! Los invitamos a una proyecci&oacute;n especial de Comparsa el domingo 4 de octubre a las 3:00 PM en el cuarto de programas. Lesli y Lupe, las hermanas protagonistas de la pel&iacute;cula, viajar&aacute;n desde Guatemala y estar&aacute;n presentes para compartir su historia y conversar con el p&uacute;blico. Ser&aacute; una oportunidad &uacute;nica para conocerlas. Comparsa sigue a dos jovenes, Lesli y Lupe Canela P&eacute;rez, que impulsan un movimiento juvenil en su comunidad, en las afueras de la Ciudad de Guatemala, utilizando el arte para enfrentar la violencia contra las mujeres y sanar despu&eacute;s de la tragedia que cobr&oacute; la vida de 41 ni&ntilde;as. La pel&iacute;cula ha recibido 29 premios en m&aacute;s de 67 festivales alrededor del mundo. …",
-    pubDate: "2026-10-04T21:00:00.000Z",
+    title: "Conoces el Fondo de Recuperación de Beneficios?",
+    link: "https://telluridelibrary.libcal.com/event/17278976?hs=a",
+    description: "5:30 PM – 7:00 PM · Este programa vamos a dar informaci&oacute;n sober el Fondo de Recuperaci&oacute;n de Beneficios.  Acerca del programa El Fondo de Recuperaci&oacute;n de Beneficios es un programa en Colorado para trabajadores indocumentados que reciben un formulario W-2 y tienen impuestos retenidos de sus cheques de pago, pero carecen de autorizaci&oacute;n de trabajo. El Fondo proporciona beneficios monetarios cuando pierden su trabajo sin culpa propia.",
+    pubDate: "2026-10-05T23:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_24_11_49_56.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_16_13_10_07.jpg"
   }
 ];
 
@@ -4864,26 +4904,6 @@ const NUCLA_NATURITA_EVENTS = [];
 const CLUB_RED_SHOWS = [];
 const FRESH_FOOD_HUB_EVENTS = [];
 const SHERBINO_EVENTS = [
-  {
-    title: "Ridgway 1k 2026",
-    href: "https://sherbino.org/event/ridgway-1k-2026/",
-    date: "2026-10-04 12:15:00",
-    endDate: "2026-10-04 13:30:00",
-    location: "Ridgway, CO",
-    copy: "The Ridgway 1K is a short, fun run billed as Colorado's most entertaining race, winding through downtown Ridgway. In-person registration opens at 12:15 PM, with the race starting at 12:45 PM and a final check-in deadline of 1:15 PM.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2025/11/sherb-2025-EVENT-BANNERS-1920-x-1080-px-45.png",
-    description: "The Ridgway 1K is a short, fun run billed as Colorado's most entertaining race, winding through downtown Ridgway. In-person registration opens at 12:15 PM, with the race starting at 12:45 PM and a final check-in deadline of 1:15 PM."
-  },
-  {
-    title: "San Juan Oktoberfest",
-    href: "https://sherbino.org/event/san-juan-oktoberfest-ridgway-colorado-2026/",
-    date: "2026-10-04 14:00:00",
-    endDate: "2026-10-04 17:00:00",
-    location: "Ridgway, CO",
-    copy: "San Juan Oktoberfest is an annual fall celebration held at Hartwell Park in Ridgway, taking place amid the area's peak autumn colors. The event features classic Oktoberfest fare including bratwursts, set against a backdrop of golden aspens and the surrounding San Juan Mountains.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/04/sherb-and-wca-EVENT-BANNERS-2-e1788900662419.png",
-    description: "San Juan Oktoberfest is an annual fall celebration held at Hartwell Park in Ridgway, taking place amid the area's peak autumn colors. The event features classic Oktoberfest fare including bratwursts, set against a backdrop of golden aspens and the surrounding San Juan Mountains."
-  },
   {
     title: "Alysha Brilla",
     href: "https://sherbino.org/event/alysha-brilla/",
@@ -5210,62 +5230,6 @@ const OURAY_COUNTY_EVENTS = [
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "Ridgway 1K ~ Rally thru the Alley",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-1k",
-    description: "Ridgway 1K ~ Rally Through The Alley: Colorado’s Most Entertaining Fun Run Presented by Citizens State Bank In-person Registration Opens: 12:15 PM Race Starts: 12:45 PM Last Call for Runners: 1:15 PM (all runners must be checked in by 1:15 pm). Join the most hilarious costumed fun run in Colorado! The Ridgway 1K Rally Through The Alley is a family-friendly, costume-themed, 1K race in downtown Ridgway. But don’t be fooled—this 6-block, downhill “race” is all about fun, food, and funky vibes, not speed. Why It’s a Must-Do Event: Open to all ages and fitness levelsCostumes are encouraged (and rewarded!)8 unique aid stations featuring outrageous snacks like bacon, donuts, and hot dogsThe race ends with live music in Hartwell Park for San Juan OktoberfestSan Juan Oktoberfest features Oktoberfest fare, games, and live music from Polka band Blue Camoose Pro Tip: In the Ridgway 1K, if you’re first… you’re last! …",
-    pubDate: "2026-10-04T18:45:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Weehawken Ridgway (Old Schoolhouse)",
-    imageUrl: "https://localist-images.azureedge.net/photos/53552021295591/huge/f421ae960369bfd1aa6d541e0eaa130654abfd6b.jpg"
-  },
-  {
-    title: "Pumpkin Palooza at Ridgway 1k Finish Line",
-    link: "https://events.ourayridgwayevents.com/event/pumpkin-palooza-at-ridgway-1k-finish-line",
-    description: "Voyager Youth Program presents a free, family-friendly afternoon of fall fun with pumpkin painting, face painting, games, prize opportunities and more. Pumpkin Palooza takes place in Hartwell Park alongside the Ridgway 1K and San Juan Oktoberfest. No registration is required; donations are welcome.",
-    pubDate: "2026-10-04T20:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Hartwell Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/54066523071640/huge/1f1e3f6787481a187fccaa2be86460032f20773f.jpg"
-  },
-  {
-    title: "San Juan Oktoberfest 2026",
-    link: "https://events.ourayridgwayevents.com/event/san-juan-oktoberfest-2026",
-    description: "San Juan Oktoberfest with Live Music by Ridgway Band (opening) and BLUE CAMOOSE polka! Sunday, October 4, 2026 | Hartwell Park | Ridgway, Colorado There’s nothing quite like Ridgway in early October — bright blue skies, golden aspens and cottonwoods glowing on the hillsides, and the irresistible scent of bratwursts sizzling in Hartwell Park. That can only mean one thing: Oktoberfest has arrived! This year marks the inaugural San Juan Oktoberfest, happening Sunday, October 4, immediately following the wildly fun Ridgway 1K Rally Through the Alley. After the costumes, laughter, and downhill dash through town, the celebration continues in the park with a festival that blends Austrian tradition with Rocky Mountain charm. Picture lederhosen and dirndls, frothy steins clinking together, live music filling the autumn air, and kids laughing just as much as the adults. …",
-    pubDate: "2026-10-04T20:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Hartwell Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/52595045386518/huge/f5138926bb27495f4ce42292fa805810d8db023d.jpg"
-  },
-  {
-    title: "LIVE MUSIC IN THE GARDEN! Zan Waller & Stefan Davenport",
-    link: "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
-    description: "Zan Waller and Stefan Davenport perform live at Chloe's Charcuterie & Wine, set against the backdrop of the venue's garden. It's an opportunity to enjoy an afternoon of music paired with wine and charcuterie in a relaxed outdoor setting.",
-    pubDate: "2026-10-04T22:00:00.000Z",
-    endDate: "2026-11-08",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Chloe's Charcuterie & Wine",
-    imageUrl: "https://localist-images.azureedge.net/photos/53950055817938/huge/4924d3606a12c233af2b47a380c304869dfaf267.jpg"
-  },
-  {
-    title: "Ridgway Revival Music Festival",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-revival-music-festival",
-    description: "RIDGWAY REVIVAL — OCTOBER 4, 2026 A full day of ORIGINAL local and regional music, food, vendors and community at one of Ridgway’s coolest little spots — Tiny Town.THIS ONE IS ABOUT THE ARTISTS Ridgway Revival was created to showcase the incredible original music being made right here in our region — and to make sure the people creating it are actually supported.Every artist on the lineup is guaranteed pay, with the opportunity to earn more through sponsorships and donations. Because if we want a thriving local music scene, we have to invest in the people making the music. Joint Point The Black Canyon Boys Britley Red & Matt Palamar Straylight M2 Opening ceremony with Clarke & Rebecca Poos Hosted by Corey Hooker — Deputy Mayor Sheriff of Tiny Town! …",
-    pubDate: "2026-10-04T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Tiny Town Ridgway, CO (Between Floating Lotus Brewery and the river***",
-    imageUrl: "https://localist-images.azureedge.net/photos/53950008750168/huge/5b9d7038734815954c00863023567480d024e0d0.jpg"
-  },
   {
     title: "Ongoing: Space Cowboy by Dundee & Lee",
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
@@ -5609,6 +5573,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53967883969496/huge/d2428dc5e6782e6f1e062e79f5d622145108e918.jpg"
   },
   {
+    title: "Paint Your Dog Bowl Party",
+    link: "https://events.ourayridgwayevents.com/event/paint-your-dog-bowl-party",
+    description: "Celebrate your beloved fur baby in a most creative way while sipping on your favorite seasonal wine! Paints and Brushes will be provided. Bring your own bowl or purchase from an eclectic variety, large or small. No cover charge, but a food and/or beverage purchase is required to participate.",
+    pubDate: "2026-10-10T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Chloe's Charcuterie & Wine",
+    imageUrl: "https://localist-images.azureedge.net/photos/54147770686972/huge/c35a4dd4a10a3aa44e286f4f00cb0cd4f45a37ff.jpg"
+  },
+  {
     title: "PAINT AND SIP WITH NICOLE GREENFIELD: “GOLDEN ASPENS“",
     link: "https://events.ourayridgwayevents.com/event/paint-and-sip-with-nicole-greenfield-golden-aspens",
     description: "Montrose Paint & Sip with Nicole 6:00pm-8:00pm $49 incl. all supplies and an adult beverage Sat, Oct 10th: Golden Aspens Sat, Nov 14th: Morning Peaks Sat, Dec 5th: Snow Topped Treeline Unwind, sip, and create! Join us for a relaxed painting session designed for all skill levels—no experience needed. Nicole will guide you through the featured painting while you enjoy a beverage of your choice! All art supplies and one adult beverage are included; just bring your creativity! About Nicole Greenfield: Nicole Greenfield is a painter based in Ridgway, Colorado. Working primarily in acrylic and oil, she creates expressive portraits and atmospheric landscapes that explore the quiet intimacy found in observing people and the natural world. Nicole is a self-taught artist who has developed her skills through years of dedicated practice and online learning. …",
@@ -5651,6 +5626,30 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ridgway Pickleball Courts",
     imageUrl: "https://localist-images.azureedge.net/photos/54055901310640/huge/f2f678de5fd28531ae3232aa7992196215b95d6d.jpg"
+  },
+  {
+    title: "LIVE MUSIC IN THE GARDEN! Zan Waller & Stefan Davenport",
+    link: "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
+    description: "Zan Waller and Stefan Davenport perform live in the garden at Chloe's Charcuterie & Wine, a recurring Sunday series running from 4:00 to 6:00 p.m. The outdoor setting pairs live music with wine and charcuterie in a relaxed, intimate atmosphere.",
+    pubDate: "2026-10-11T22:00:00.000Z",
+    endDate: "2026-11-08",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Chloe's Charcuterie & Wine",
+    imageUrl: "https://localist-images.azureedge.net/photos/53950055817938/huge/4924d3606a12c233af2b47a380c304869dfaf267.jpg"
+  },
+  {
+    title: "Live Jazz Sundays at Chloe's: Standard Alchemy",
+    link: "https://events.ourayridgwayevents.com/event/live-jazz-sundays-at-chloes-standard-alchemy",
+    description: "Standard Alchemy, featuring trumpet and guitar, performs swing, cocktail jazz, and Great American Songbook standards during this recurring Sunday evening series at Chloe's Charcuterie & Wine in Ridgway. The intimate setting pairs live music with wine and charcuterie, with occasional special guest vocalists joining the duo.",
+    pubDate: "2026-10-11T22:00:00.000Z",
+    endDate: "2026-11-29",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Chloe's Charcuterie & Wine",
+    imageUrl: "https://localist-images.azureedge.net/photos/54144911614780/huge/22c44d81c469fa2adc455f744fd16304554bc766.jpg"
   },
   {
     title: "Fall Break - Ridgway Schools",
@@ -6863,6 +6862,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
+  },
+  {
+    title: "Market on the Plaza",
+    link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    description: "Mountain Village's Heritage Plaza hosts a weekly outdoor market featuring vendors with tents set up throughout the pedestrian-friendly space. The market brings together local and regional sellers offering goods to the Mountain Village community.",
+    pubDate: "2026-11-04T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   }
 ];
 

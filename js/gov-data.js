@@ -56,7 +56,7 @@ const COUNTY_CIVICCLERK_AGENDA_FILES = {
   919:  1705,  // Planning Commission May 14 2026
 };
 
-const COUNTY_CACHE_DATE = '2026-10-04';
+const COUNTY_CACHE_DATE = '2026-10-05';
 
 const COUNTY_CACHED_DATA = [
   {

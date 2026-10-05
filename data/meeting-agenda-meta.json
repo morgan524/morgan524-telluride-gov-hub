@@ -584,5 +584,24 @@
   "ouraycity|2026-10-05|Ouray City Council Regular Meeting": {
     "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=761785",
     "sv": 4
+  },
+  "telluride|2026-11-04|Ecology Commission - Nov 04 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8120",
+    "sv": 4,
+    "ph": "f7fa71ad7c369cd5"
+  },
+  "telluride|2026-11-04|Commission for Community Assistance, Arts & Special Events - Nov 04 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8068",
+    "sv": 4,
+    "ph": "08f639f85583f1c4"
+  },
+  "telluride|2026-11-04|Telluride Housing Authority Subcommittee - Nov 04 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8165",
+    "sv": 4,
+    "ph": "89b54e4a61932908"
+  },
+  "county|2026-11-04|Board of County Commissioners Meeting": {
+    "sv": 4,
+    "ph": "49e704e3c3bab858"
   }
 }

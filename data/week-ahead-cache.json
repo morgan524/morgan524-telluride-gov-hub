@@ -1,18 +1,18 @@
 {
-  "hash": "dae473ad66bd56758f85d8caf4bc98d65570b7be",
-  "lede": "The biggest thing on the calendar this week is the Ouray joint work session Monday where city and county officials will hash out a proposed intergovernmental agreement to hand full law enforcement for the City of Ouray over to the Sheriff's Office — starting January 1, 2027 — with public comment built into the session. Closer to home, Telluride Town Council meets Tuesday with a public hearing on a vesting period extension and a work session on automated license plate reader cameras, while San Miguel County's BOCC and Planning Commission both take up affordable housing policy and a public hearing on fee waivers for Mountain Village's Ilium Valley project. There's also a Ballot Measure 5A information meeting Monday on KOTO if you want to get up to speed before November.",
+  "hash": "b77dcb22a34025ab6731f72c6d7b7fc9d4aa4074",
+  "lede": "The biggest thing on the table this week is Ouray's joint work session Monday where county commissioners and city council sit down together to hash out a draft intergovernmental agreement that would hand full law enforcement for the City of Ouray to the Sheriff's Office starting January 1 — a structural change that includes a public comment period at 5:00 PM. Closer to home, Telluride Town Council meets Tuesday with a public hearing on a vesting period extension and a work session on automated license plate reader cameras, while San Miguel County's BOCC and Planning Commission both take up affordable housing policy and a public hearing on fee waivers for Mountain Village's Ilium Valley project.",
   "notable": [
     {
       "id": 1,
-      "stake": "Public comment open on county takeover of Ouray City law enforcement Jan. 2027."
+      "stake": "County could absorb Ouray city policing; public comment open at 5 PM."
     },
     {
       "id": 2,
-      "stake": "Ouray residents can weigh in on Sheriff absorbing city police services."
+      "stake": "Ouray residents can weigh in on Sheriff takeover of city law enforcement."
     },
     {
       "id": 3,
-      "stake": "Council takes action items and hears 2027 budget notice; erosion project presented."
+      "stake": "Council takes action items; 2027 budget formally noticed under state statute."
     },
     {
       "id": 4,
@@ -20,15 +20,15 @@
     },
     {
       "id": 10,
-      "stake": "Public hearings on affordable housing fee waiver and lot line adjustment."
+      "stake": "Public hearings on affordable housing fee waiver and a lot line adjustment."
     },
     {
       "id": 11,
-      "stake": "Land Use Code definitions being rewritten — shapes what gets built in Ouray County."
+      "stake": "Land use code definitions under review — shapes future zoning decisions."
     },
     {
       "id": 13,
-      "stake": "Joint BOCC-Planning work session actively rewriting county affordable housing code."
+      "stake": "Joint BOCC session on affordable housing code update; policy being written now."
     }
   ]
 }
