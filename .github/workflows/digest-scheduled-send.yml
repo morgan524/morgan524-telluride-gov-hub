@@ -186,8 +186,19 @@ jobs:
           # instead — re-approve at the Review Desk to regenerate a clean file.
           if "data:image" in html:
               raise SystemExit(f"{fpath} contains inline data:image payloads — aborting (re-approve at the Review Desk)")
-          if len(html) > 120_000:
-              raise SystemExit(f"{fpath} is {len(html):,} bytes — over the 120 KB clip limit, aborting")
+          # Measure what a reader actually receives: a regional digest carries
+          # hidden per-region copies, but each reader gets one (same split as
+          # the Worker's ltRegionVariant). The raw file size wrongly blocked
+          # the 2026-10-05 Week Ahead (136,901 bytes on disk).
+          MARK = "<!--LT-RGN-->"
+          def variant(h, off):
+              if MARK not in h: return h
+              parts = h.split(MARK)
+              v = "".join(p for i, p in enumerate(parts) if i % 5 == 0 or i % 5 == off)
+              return v.replace('<!--[if !mso]><!--><tbody style="display:none;">', "").replace("</tbody><!--<![endif]-->", "")
+          biggest = max(len(variant(html, o)) for o in (1, 2, 3, 4))
+          if biggest > 120_000:
+              raise SystemExit(f"{fpath}: the largest copy a reader gets is {biggest:,} bytes — over the 120 KB clip limit, aborting")
 
           if not override:
               # 1) Approval gate: the human must have approved (locked) THIS week's digest.
