@@ -29,7 +29,7 @@ let html;
 try { html = read(d.file); } catch { console.error(`[frozen-preview] missing ${d.file}`); process.exit(3); }
 
 let issues = [];
-try { const rep = JSON.parse(read('digest/review.json')); issues = (((rep.digests || []).find((x) => x.key === key) || {}).issues || []).filter((x) => !x.fixed); } catch (_) {}
+try { const rep = JSON.parse(read('digest/review.json')); issues = (((rep.digests || []).find((x) => x.key === key) || {}).issues || []).filter((x) => !x.fixed && !x.resolved); } catch (_) {}   // resolved = handled by the Mini's Sunday follow-up
 const esc = (s) => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const list = issues.length
   ? '<br><span style="font-weight:400;">The early-morning review fixed what it could; ' + issues.length + ' item' + (issues.length === 1 ? ' needs' : 's need') + ' your judgment:</span><ul style="margin:6px 0 0;padding-left:18px;font-weight:400;">' +
