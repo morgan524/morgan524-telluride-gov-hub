@@ -353,7 +353,8 @@
       }
     });
     const note=document.getElementById('profTopicGate');
-    if(note) note.style.display = on ? 'none' : '';
+    const anyTopicShown = !!document.querySelector('.sub.topic-row.show');
+    if(note) note.style.display = (on || !anyTopicShown) ? 'none' : '';
   }
 
   // Pre-fill from the email "Update your info" link
@@ -375,8 +376,12 @@
     });
   });
 
+  // Event Topics are hidden for now (Morgan 2026-10-05: no email uses them yet).
+  // Hidden rows are never sent on save, so each person's topic_* attributes in
+  // Customer.io stay exactly as they are. Set to true to bring the rows back.
+  const SHOW_TOPICS = false;
   // Reveal each Event Topic row only if its Customer.io topic actually exists.
-  fetch(AVAIL_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body:'{}' })
+  if (SHOW_TOPICS) fetch(AVAIL_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body:'{}' })
     .then(r=>r.json()).then(function(resp){
       const avail = (resp && resp.available) || {};
       document.querySelectorAll('.sub.topic-row .tog[data-sub]').forEach(function(tog){
