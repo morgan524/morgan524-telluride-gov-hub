@@ -48,10 +48,11 @@ catch { console.error(`[approved-preview] missing ${htmlPath}`); process.exit(3)
 if (html.length < 2000) { console.error(`[approved-preview] ${htmlPath} too small`); process.exit(3); }
 
 const sendDay = 'Monday';   // every digest sends Monday since Weekend Ahead was retired (2026-10-04)
+const sendTime = key === 'past' ? '10:00 AM' : '9:00 AM';   // Past Meetings an hour after the Week Ahead (2026-10-05)
 const DESK = 'https://livabletelluride.org/digest-review.html';
 const banner =
   `  <tr><td style="background:#1f5130;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;` +
-  `font-size:13px;font-weight:700;color:#fff;line-height:1.5;">APPROVED &mdash; this is the exact version that sends ${sendDay} 9:00 AM.` +
+  `font-size:13px;font-weight:700;color:#fff;line-height:1.5;">APPROVED &mdash; this is the exact version that sends ${sendDay} ${sendTime}.` +
   `<br><span style="font-weight:400;">Your edits are already saved and frozen; the daily bot will not change it. To change anything, edit and re-approve at the Review Desk.</span>` +
   `<br><a href="${DESK}" style="color:#cfe8d8;font-weight:700;text-decoration:underline;">Open the Review Desk &rarr;</a></td></tr>\n`;
 

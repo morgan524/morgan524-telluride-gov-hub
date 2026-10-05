@@ -655,14 +655,16 @@ function denverParts(d) {
   return { weekday: parts.weekday, hour: parseInt(parts.hour, 10) % 24 };
 }
 
-// Digests due each Denver weekday, sent in this order.
-const SEND_DAYS = { Mon: ["weekly", "past"] };
+// Digests due each Denver weekday, and the Denver hour each one goes out
+// (Morgan 2026-10-05: the Week Ahead at 9:00, Past Meetings an hour later).
+const SEND_DAYS = { Mon: [["weekly", 9], ["past", 10]] };
 
 async function scheduledSend(env, dry) {
   const { weekday, hour } = denverParts(new Date());
-  const keys = SEND_DAYS[weekday];
-  if (!keys) return { skipped: "not a send day in Denver (" + weekday + ")", results: [] };
-  if (hour < 9) return { skipped: "before 09:00 Denver (hour " + hour + ")", results: [] };
+  const slots = SEND_DAYS[weekday];
+  if (!slots) return { skipped: "not a send day in Denver (" + weekday + ")", results: [] };
+  const keys = slots.filter(([, h]) => hour >= h).map(([k]) => k);
+  if (!keys.length) return { skipped: "before the first send hour in Denver (hour " + hour + ")", results: [] };
   if (!env.GITHUB_TOKEN) throw new Error("GITHUB_TOKEN not configured on the Worker");
   const man = JSON.parse(await ghGetText(env, "digest/manifest.json") || "{}");
   // One digest's failure must not stop the other from going out.

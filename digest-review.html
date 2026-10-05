@@ -124,7 +124,7 @@ let KEY = sessionStorage.getItem("digestKey") || "";
 let manifest = null, cur = "weekly";
 const state = {};   // key -> { name, subject, covers, audience, baseHtml, html, history:[] }
 // When each approved digest auto-sends (the scheduled job fires at 9:00 AM MT).
-const SEND_WHEN = { weekly: "Monday 9:00 AM", past: "Monday 9:00 AM" };
+const SEND_WHEN = { weekly: "Monday 9:00 AM", past: "Monday 10:00 AM" };
 const sendWhen = () => SEND_WHEN[cur] || "its scheduled time";
 
 // ---- auth gate ----

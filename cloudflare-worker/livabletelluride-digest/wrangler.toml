@@ -10,8 +10,10 @@ account_id = "8f020e73de4e9956f0e3ad7dce070ef4"
 # same-named GitHub Actions secrets.
 # URL after deploy: https://livabletelluride-digest.morgan-8f0.workers.dev
 
-# Scheduled send — 9:00 AM America/Denver on Monday: the Week Ahead and the
-# Past Meetings email (each gated on its own approval). Weekend Ahead (Friday)
+# Scheduled send on Monday (America/Denver): the Week Ahead at 9:00 AM and the
+# Past Meetings email at 10:00 AM, each gated on its own approval. UTC slots:
+# 15:00/15:30 = 9 MDT, 16:00/16:30 = 10 MDT or 9 MST, 17:00 = 10 MST. Five is
+# the free plan's per-account cron limit (no other Worker uses crons). Weekend Ahead (Friday)
 # was retired 2026-10-04. Cloudflare crons are UTC with no DST, so both the MDT
 # and MST candidates are listed; the Worker's scheduled() handler checks the
 # Denver hour (skips before 09:00) and the sent ledger (a second firing after a
@@ -20,7 +22,7 @@ account_id = "8f020e73de4e9956f0e3ad7dce070ef4"
 # from digest-scheduled-send.yml's GitHub cron (kept as backup) on 2026-09-21
 # because GitHub's scheduler drops/delays top-of-hour crons by hours.
 [triggers]
-crons = ["0 15 * * 1", "30 15 * * 1", "0 16 * * 1"]
+crons = ["0 15 * * 1", "30 15 * * 1", "0 16 * * 1", "30 16 * * 1", "0 17 * * 1"]
 
 # Style compression for broadcast trigger data (see ltCompress in worker.js and
 # docs/customerio-regional-recaps.md). "1" ONLY once both Weekly Digest
