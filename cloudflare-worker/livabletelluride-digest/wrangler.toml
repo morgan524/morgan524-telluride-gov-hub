@@ -28,4 +28,4 @@ crons = ["0 15 * * 1", "30 15 * * 1", "0 16 * * 1", "30 16 * * 1", "0 17 * * 1"]
 # docs/customerio-regional-recaps.md). "1" ONLY once both Weekly Digest
 # broadcasts' templates expand trigger.dict — otherwise readers see §n§ codes.
 [vars]
-CIO_TEMPLATE_DICT = "0"
+CIO_TEMPLATE_DICT = "1"   # on 2026-10-05: Weekly Digest template now expands trigger.dict (the Week Ahead hit the 50 KB trigger cap)
