@@ -291,7 +291,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8164","sv":4,"zoomUrl":"https://us06web.zoom.us/j/83022451705?pwd=Lj8jkLF9GQny7CWBqvP8IYkQhviQBb.1","meetingId":"830 2245 1705","passcode":"229528.","phone":"719) 359-4580"},
 
   "county|2026-10-07|Board of County Commissioners Meeting":
-    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/888/files/agenda/2028","meetingId":"872 8126 1249","passcode":"508225","phone":"719-359-4580"},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/888/files/agenda/2030","meetingId":"872 8126 1249","passcode":"508225","phone":"719-359-4580"},
 
   "telluride|2026-10-08|Special Meeting - Planning & Zoning Commission - Oct 08 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8311","sv":4,"ph":"4318f9c666b0b315"},
@@ -471,7 +471,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8165","sv":4,"ph":"89b54e4a61932908"},
 
   "county|2026-11-04|Board of County Commissioners Meeting":
-    {"sv":4,"ph":"49e704e3c3bab858"}
+    {"sv":4,"ph":"a12dfd2ce826475e"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -826,20 +826,20 @@ const MEETING_PREVIEWS = {
   "telluride|2026-11-04|Telluride Housing Authority Subcommittee - Nov 04 2026":
     "The Telluride Housing Authority Subcommittee is expected to discuss a request for proposals for consulting services to conduct a comprehensive review of the Town of Telluride's employee rental housing policies.",
 
-  "telluride|2026-10-05|Open Space Commission - Oct 05 2026":
-    "The Open Space Commission is expected to discuss the 2027 Town of Telluride budget, review updates on the first phase of Valley Floor signage implementation, and debrief on a site walk related to the Bear Creek Preserve Zone 1 Restoration Plan.",
-
   "county|2026-11-04|Board of County Commissioners Meeting":
     "Board will consider procurement matters including material hauling, trail construction, fuel island canopy, jail painting, and a multi-jurisdictional hazard mitigation plan update. Related legal notices include a probate matter for the estate of Lawrence de Bivort and foreclosure proceedings for a Telluride condominium unit.",
+
+  "telluride|2026-10-05|Open Space Commission - Oct 05 2026":
+    "The Open Space Commission is expected to discuss the 2027 Town of Telluride budget, review the first phase of Valley Floor signage implementation and next steps, and debrief on a site walk related to the Bear Creek Preserve Zone 1 Restoration Plan.",
 
   "ouray|2026-10-05|Board of County Commissioners Special Joint Work Session":
     "The Ouray County Board of County Commissioners and Ouray City Council will jointly discuss a draft Intergovernmental Agreement under which the County would provide full law enforcement services to the City beginning January 1, 2027, including reviewing a proposed compensation schedule.",
 
   "ouraycity|2026-10-05|Ouray City Council Work Session":
-    "Council is expected to discuss a proposed intergovernmental agreement with the Ouray County Sheriff for full law enforcement services, including a review of estimated costs. The session will include presentations, questions from council members and commissioners, public comment, and deliberations on next steps.",
+    "Council is expected to discuss a proposed intergovernmental agreement with the Ouray County Sheriff for full law enforcement services, including a review of estimated costs. The session will include presentations, public comment, and joint deliberations with county commissioners to determine next steps.",
 
   "ouraycity|2026-10-05|Ouray City Council Regular Meeting":
-    "Council is expected to receive a final report on the city's 150th celebration, review a South Ouray erosion control project, and begin the 2027 budget process. Action items include amendments to a CDOT road agreement, a Main Street revitalization project match, and several liquor license renewals."
+    "Council is expected to receive a final report on the city's 150th celebration, review a South Ouray erosion control project, and discuss the proposed 2027 budget. Action items include amendments to a CDOT agreement tied to the Main Street revitalization project and authorization to publish a budget notice."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1034,17 +1034,6 @@ const REGIONAL_NEWS_ARTICLES = [
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
-  {
-    title: "Courthouse Office Closures Tuesday 9/29 - Friday 10/2",
-    source: "San Miguel County",
-    sourceLabel: "San Miguel County",
-    category: "Alert",
-    date: "2026-09-29",
-    pubDate: "2026-09-29T22:41:23.000Z",
-    copy: "The Clerk + Recorder closes Weds 9/30 at 1:30 p.m. and reopens Thurs at 7:30 a.m. They will be closed Friday. The Treasurer's Office has closed early and will remain closed Weds 9/30 - Friday 10/2. They reopen at 7:30 a.m. on Monday, 10/5.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=548",
-    img: ""
-  },
   {
     title: "DMV Services available in Egnar 11/18",
     source: "San Miguel County",
@@ -2530,6 +2519,43 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Town council upholds Carhenge lot consolidation",
+    source: "Telluride Times",
+    date: "October 5, 2026",
+    firstSeen: "2026-10-05",
+    newsTopic: "government",
+    copy: "Town council voted 3-1 to uphold P&Z's approval of combining two Backman Village lots into a single 4.1-acre parcel for the Carhenge site. The lot consolidation alone doesn't greenlight any development — future proposals still go through standard review. Neighboring residents and the Chair 7 Coalition had appealed the decision.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_1bede84b-c2a5-4187-b2df-cc1ecc5303eb.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/1d/81dc0fe8-44e2-4e9a-b9c1-2c5e8b7d384d/6ac13875e5cfe.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "Supreme Court weighs local governments' climate change lawsuits against oil and gas companies",
+    source: "Telluride Times",
+    date: "October 5, 2026",
+    firstSeen: "2026-10-05",
+    newsTopic: "community",
+    copy: "The Supreme Court heard arguments over whether Boulder, Colorado can sue Suncor and ExxonMobil in state court for climate-related damages — part of a wave of similar suits nationwide. Justices seemed divided, with a possible tie given Alito's recusal. A deadlock would leave Colorado's ruling standing, letting the Boulder case proceed.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_495e992b-c852-5ed9-941b-59245e405214.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/64/8645da72-d0ca-58e5-b483-b3ce14f48d75/6ac3eab48f1dd.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "A guide to measures on the November state ballot",
+    source: "Telluride Times",
+    date: "September 29, 2026",
+    firstSeen: "2026-09-30",
+    newsTopic: "government",
+    copy: "Colorado voters will see 14 statewide measures this November — seven constitutional amendments and seven statutory propositions. The amendments cover topics ranging from immigration reporting and natural gas rights to hunting, fishing, and mail ballot ID requirements. San Miguel County commissioners have weighed in with positions on several of them.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_e9486d75-07a6-41b0-9929-42885e96774c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/46/a46a5646-5b5e-4df7-8029-9d528386492e/6abc4c643dac5.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
     title: "Willkommen once again",
     source: "Telluride Times",
     date: "October 5, 2026",
@@ -2912,19 +2938,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/gallery/news/article_032bdae8-f1ff-4933-af97-5dae6bcba696.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/25/52523dd3-4a7d-4ec1-86f3-f61fec80cecf/6abc4b8d52a64.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "A guide to measures on the November state ballot",
-    source: "Telluride Times",
-    date: "September 29, 2026",
-    firstSeen: "2026-09-30",
-    newsTopic: "government",
-    copy: "Colorado voters will see 14 statewide measures this November — seven constitutional amendments and seven statutory propositions. The amendments cover topics ranging from immigration reporting and natural gas rights to hunting, fishing, and mail ballot ID requirements. San Miguel County commissioners have weighed in with positions on several of them.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_e9486d75-07a6-41b0-9929-42885e96774c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/46/a46a5646-5b5e-4df7-8029-9d528386492e/6abc4c643dac5.image.jpg",
-    isLetter: true,
     imgHiRes: true
   },
   {
@@ -3474,6 +3487,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Town of Telluride to Lift All Fire Restrictions",
+    source: "Town of Telluride",
+    date: "September 17, 2026",
+    newsTopic: "public-safety",
+    copy: "(September 16, 2026) – Following improved fire conditions across the region and in alignment with San Miguel County, the Town of Telluride will lift all fire restrictions effective at 12:01 a.m. MT on Friday, September 18, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=405",
+    img: ""
+  },
+  {
     title: "San Miguel County Public Health Announces Fall Vaccine Availability",
     source: "San Miguel County",
     date: "October 1, 2026",
@@ -3564,13 +3586,13 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14812"
   },
   {
-    title: "Courthouse Office Closures Tuesday 9/29 - Friday 10/2",
+    title: "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
     source: "San Miguel County",
-    date: "September 29, 2026",
-    newsTopic: "community",
-    copy: "The Clerk + Recorder closes Weds 9/30 at 1:30 p.m. and reopens Thurs at 7:30 a.m. They will be closed Friday. The Treasurer's Office has closed early and will remain closed Weds 9/30 - Friday 10/2. They reopen at 7:30 a.m. on Monday, 10/5.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=548",
-    img: ""
+    date: "September 10, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1409",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
   },
   {
     title: "DMV Services available in Egnar 11/18",
@@ -3580,6 +3602,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
+  },
+  {
+    title: "Tomboy Road Now Open",
+    source: "San Miguel County",
+    date: "September 18, 2026",
+    newsTopic: "infrastructure",
+    copy: "The Town of Telluride has completed their project that necessitated the closure of Lower Tomboy Road. The road is now open again.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=546",
+    img: ""
+  },
+  {
+    title: "Water Restrictions in Place",
+    source: "Town of Telluride",
+    date: "September 11, 2026",
+    newsTopic: "community",
+    copy: "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=45",
+    img: ""
   },
   {
     title: "Small Business Administration Economic Injury Disaster Loan Data Collection Form Now Available (due Oct. 13)",
@@ -4263,17 +4303,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/09/Picture1.jpg"
   },
   {
-    title: "Ballot Measure 5A Information Meeting",
-    link: "https://koto.org/event/ballot-measure-5a-information-meeting/2026-10-05/",
-    description: "Find out why voting yes on ballot measure 5A keps Telluride schools strong and how the measure affects you. Lite refreshments provided!",
-    pubDate: "2026-10-05T12:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "West End Trail Running",
     link: "https://koto.org/event/west-end-trail-running/2026-10-06/",
     description: "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens & adults 15 and older are welcome to participate. Contact director Alicia O'Connel at montrosewestrec@gmail.com or text her at 302-690-0160 for more information, including a nominal registration fee.",
@@ -4305,6 +4334,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Patagonia Telluride, Telluride Retail",
     imageUrl: "https://koto.org/wp-content/uploads/2026/09/Stoke-the-VOTE-final-flyer.png"
+  },
+  {
+    title: "Tellluride Rotary Club Meeting",
+    link: "https://koto.org/event/tellluride-rotary-club-meeting/",
+    description: "Telluride Rotary Club meets Wednesday, October 7, at 6 p.m. at the Mountain Lodge in Mountain Village. Come at 5:30PM to socialize before the meeting. Meetings feature guest speakers and discussion of club projects. Anyone with an interest in networking and service is welcome to drop in as a guest. Email telluriderotary@gmail.com for info or to rsvp.",
+    pubDate: "2026-10-07T18:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Mountain Lodge Telluride, Mountain Village",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/Telluride-Rotary-Logo-White.jpg"
   },
   {
     title: "Pilates for All Bodies with Laura",
@@ -4527,6 +4567,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "17th Telluride Horror Show",
+    link: "https://koto.org/event/17th-telluride-horror-show/",
+    description: "The Telluride Horror Show returns for its 17th edition October 16-18, 2026. One of the highest-attended genre film fests in the world, the Horror Show attracts the latest & best genre films from around the globe and attendees from all over the country for an incredible gathering of die-hard horror fans in the world-famous mountain resort town of Telluride, Colorado. For three packed days, experience an exciting mix of horror, suspense, thriller, dark fantasy & sci-fi and dark comedy in Telluride’s unique theaters. The festival line-up showcases feature films & short films from new and established talent, special programs, guests, and events. If you love horror, then don't miss Colorado's first and longest-running horror film festival!",
+    pubDate: "2026-10-16T00:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
+  },
+  {
     title: "Up-off Gymnastics, Dance, and Spanish",
     link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-10-16/",
     description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
@@ -4593,6 +4644,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Telluride Rotary Club Meeting",
+    link: "https://koto.org/event/telluride-rotary-club-meeting-3/",
+    description: "Telluride Rotary Club meets Wednesday, October 21, at 6:00 p.m. at the MountainFilm location, 122 S Oak Street, Telluride. Meetings feature guest speakers and discussion of club projects. Anyone with an interest in networking and service is welcome to drop in as a guest. Email telluriderotary@gmail.com for info or to rsvp.",
+    pubDate: "2026-10-21T18:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/Telluride-Rotary-Logo-White-1.jpg"
+  },
+  {
     title: "Pilates for All Bodies with Laura",
     link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-10-22/",
     description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
@@ -4602,6 +4664,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
+  },
+  {
+    title: "Water in the West: The Southwest's last, best rivers and how to protect them",
+    link: "https://koto.org/event/water-in-the-west-the-southwests-last-best-rivers-and-how-to-protect-them/",
+    description: "Across the Southwest, aridification and challenging politics are impacting our watersheds and threatening our rivers. Join Mike Fiebig, Director of the Southwest River Protection Program at American Rivers, to learn what we can do to protect our local watersheds in the face of a changing climate. Drinks and snacks will be provided! Thanks to our event partners for making this happen: Patagonia Telluride, American Rivers, Dolores River Boating Advocates, and San Juan Citizens Alliance.",
+    pubDate: "2026-10-22T17:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Patagonia Telluride, Telluride Retail",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/Water-in-the-West-Instagram-1.png"
   },
   {
     title: "Facing the Mourning",
@@ -4670,6 +4743,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/10/7th-2026-LRD-Flyer-English.jpg"
   },
   {
+    title: "Coffee and Climate Conversations: The Super El Niño is here",
+    link: "https://koto.org/event/coffee-and-climate-conversations-the-super-el-nino-is-here/",
+    description: "Across our community, Super El Niño rumors are building hope and excitement that a snowy winter full of powder days is on the horizon. This year's El Niño is shaping up to be the strongest ever recorded, and is already driving changes in weather patterns, precipitation, and temperatures around the globe. Join us for a conversation with Emily Laidlaw, a social scientist at NOAA, to learn more about what the Super El Niño could mean for the San Juans and beyond, and how communities like ours could think about and prepare for its impacts.",
+    pubDate: "2026-10-29T08:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/October-Coffee-Chat-Instagram-Post-45.png"
+  },
+  {
     title: "Pilates for All Bodies with Laura",
     link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-10-29/",
     description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
@@ -4692,37 +4776,15 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "Up-off Gymnastics, Dance, and Spanish",
-    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-10-30/",
-    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
-    pubDate: "2026-10-30T10:00:00-06:00",
+    title: "YOUNG FRANKENSTEIN – THE MUSICAL (a TMHS & Telluride Theatre Co-Production)",
+    link: "https://koto.org/event/young-frankenstein-the-musical-a-tmhs-telluride-theatre-co-production/2026-10-29/",
+    description: "It's okay to LAUGH during spooky season&#8230; we invite you to join us for Mel Brooks' classic comedy: YOUNG FRANKENSTEIN – THE MUSICAL! Based on the film starring Gene Wilder, this musical pokes fun at Mary Shelly's \"Frankenstein,\" along with other classic monster movies. This production is performed and designed by our very own students at Telluride Middle-High School, under the mentorship of Telluride Theatre and the R-1 School District. Grandson of the infamous Victor Frankenstein, Frederick Frankenstein (pronounced \"Fronk-en-steen\") inherits his family's estate in Transylvania. With the help of a hunchbacked sidekick, Igor, and a yodeling lab assistant, Inga, Frederick finds himself in the mad scientist shoes of his ancestors. \"It's alive!\" he exclaims as he brings to life a creature to rival his grandfather's. Eventually, of course, the monster escapes, and hilarity ensues. Have a laugh this Halloween & support our local students. Costumes encouraged! …",
+    pubDate: "2026-10-29T18:00:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
-    location: "Lone Cone Library Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-11-01/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-11-01T14:30:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
-    title: "Bardic Trails Online Poetry Night",
-    link: "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-11-03/",
-    description: "The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit to get the zoom link each month, Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. Jan. 6 / Euro-American poet Dane Cervine of California Feb. …",
-    pubDate: "2026-11-03T19:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/03/Bardic-Trails-2026.jpg"
+    location: "Michael D. Palm Theater, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/YF-thundertix.png"
   }
 ];
 
@@ -4945,6 +5007,16 @@ const SHERBINO_EVENTS = [
     copy: "Easy Jim brings a two-night Halloween run to The Sherbino in Ridgway, performing across October 30 and 31, 2026, with shows starting at 8:00 p.m. each night. The run centers on Grateful Dead music, offering two evenings of celebration for Deadheads and live music fans in the region.",
     imageUrl: "https://sherbino.org/wp-content/uploads/2026/07/easy-jim2.png",
     description: "Easy Jim brings a two-night Halloween run to The Sherbino in Ridgway, performing across October 30 and 31, 2026, with shows starting at 8:00 p.m. each night. The run centers on Grateful Dead music, offering two evenings of celebration for Deadheads and live music fans in the region."
+  },
+  {
+    title: "The Sherbino Presents: Warren Miller's \"Days Off\"",
+    href: "https://sherbino.org/event/the-sherbino-presents-warren-millers-days-off/",
+    date: "2026-11-04 18:30:00",
+    endDate: "2026-11-04 20:00:00",
+    location: "The Sherbino, Ridgway",
+    copy: "The Sherbino in Ridgway hosts a screening of *Days Off*, Warren Miller's 77th ski and snowboard film, hosted by Katie Burrell. Advance tickets are available at a discount, with general admission and student pricing, and doors open at 6:00 p.m. ahead of the 6:30 p.m. showing.",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/Warren-Miller-Days-Off-Banner.png",
+    description: "The Sherbino in Ridgway hosts a screening of *Days Off*, Warren Miller's 77th ski and snowboard film, hosted by Katie Burrell. Advance tickets are available at a discount, with general admission and student pricing, and doors open at 6:00 p.m. ahead of the 6:30 p.m. showing."
   }
 ];
 
@@ -5179,17 +5251,6 @@ const OURAY_COUNTY_EVENTS = [
     category: "Community Event",
     location: "4-H Event Center - 22739 Highway 550 Ridgway CO 81432",
     imageUrl: ""
-  },
-  {
-    title: "Ballot Issue Briefing (hosted by ROCC and LWV-UV)",
-    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3784",
-    description: "A joint briefing hosted by ROCC and the League of Women Voters of the Upper Valley covering statewide measures on the November 2026 ballot. The event takes place in the Decker Room at 675 Clinton Street in Ridgway, with notice that two or more county commissioners may attend and participate.",
-    pubDate: "2026-10-05T17:30:00.000Z",
-    source: "ouraycounty",
-    sourceLabel: "Ouray County",
-    category: "Community Event",
-    location: "***Two or more county commissioners may attend and participate at this event*** Presentation of statewide measures on the November 2026 ballot.&nbsp; 675 Clinton Street, Ridgway, CO (Decker Room) https://www.lwv-uv.org/ - Ouray CO 81427",
-    imageUrl: ""
   }
 ];
 
@@ -5227,13 +5288,13 @@ const OURAY_RIDGWAY_EVENTS = [
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
-    location: "Weehawken Ridgway (Old Schoolhouse)",
+    location: "Decker Community Room",
     imageUrl: "https://localist-images.azureedge.net/photos/52253033564264/huge/ef12b5792bac47932752278d68230c7704389412.jpg"
   },
   {
     title: "Ballot Issue Briefing with the League of Women Voters",
     link: "https://events.ourayridgwayevents.com/event/ballot-issue-briefing-with-the-league-of-women-voters",
-    description: "The League of Women Voters of the Uncompahgre Valley is hosting a briefing at the Decker Community Room to help voters understand the statewide measures appearing on the November ballot. The presentation is nonpartisan and focused on providing clear, accessible information about complex ballot issues affecting Colorado.",
+    description: "THIS EVENT HAS MOVED TO THE SHERBINO THEATER. The League of Women Voter's (LWV) mission is to ensure that every voter is an informed voter. The statewide measures on the November ballot are important and complex, shaping the future of Colorad on issues that matter to every voter. LWV of the Uncompahgre Valley will provide clear, nonpartisan, plain-language information so voters can understand each measure before casting their vote. Sponsored by the Ridgway Ouray Community Council. Doors open at 5:00pm.",
     pubDate: "2026-10-05T23:30:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5258,7 +5319,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
     pubDate: "2026-10-06T19:30:00.000Z",
-    endDate: "2026-12-03",
+    endDate: "2026-12-04",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6429,6 +6490,17 @@ const NORWOOD_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Norwood Sanitation District Meeting",
+    link: "https://www.norwoodtown.com/2026-10-08-norwood-sanitation-district-meeting-meeting",
+    description: "A regularly scheduled meeting of the Norwood Sanitation District, held in Norwood, Colorado under the Town of Norwood. These public government meetings address sanitation district business and are open to community members.",
+    pubDate: "2026-10-08T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Government Meeting",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
     title: "Senior Meals",
     link: "https://www.norwoodtown.com/2026-10-08-senior-meals",
     description: "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
@@ -6451,6 +6523,17 @@ const NORWOOD_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Board Of Trustees Meeting",
+    link: "https://www.norwoodtown.com/2026-10-14-board-of-trustees-meeting",
+    description: "A regular meeting of the Town of Norwood Board of Trustees, where elected officials gather to conduct municipal business and make decisions on community matters. The meeting is open to the public and takes place in Norwood, Colorado.",
+    pubDate: "2026-10-14T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Government Meeting",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
     title: "Senior Meals",
     link: "https://www.norwoodtown.com/2026-10-15-senior-meals",
     description: "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather, share a meal, and connect with neighbors. This recurring community event takes place in Norwood and is organized through local town services.",
@@ -6458,6 +6541,17 @@ const NORWOOD_EVENTS = [
     source: "norwood",
     sourceLabel: "Town of Norwood",
     category: "Community Event",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Planning And Zoning Commission Meeting",
+    link: "https://www.norwoodtown.com/2026-10-19-planning-and-zoning-commission-meeting",
+    description: "The Town of Norwood's Planning and Zoning Commission will hold a regular meeting to review and act on land use, development, and zoning matters affecting the community. The meeting is open to the public and provides an opportunity for residents to observe local planning decisions.",
+    pubDate: "2026-10-19T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Government Meeting",
     location: "Norwood, CO",
     imageUrl: ""
   },

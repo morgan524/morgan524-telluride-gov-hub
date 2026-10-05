@@ -40,32 +40,6 @@
     "type": "Family & Kids"
   },
   {
-    "title": "Ballot Issue Briefing (hosted by ROCC and LWV-UV)",
-    "href": "https://ouraycountyco.gov/Calendar.aspx?EID=3784",
-    "date": "2026-10-05",
-    "time": "11:30 AM",
-    "location": "***Two or more county commissioners may attend and participate at this event*** Presentation of statewide measures on the November 2026 ballot.&nbsp; 675 Clinton Street, Ridgway, CO (Decker Room) https://www.lwv-uv.org/ - Ouray CO 81427",
-    "town": "Ridgway",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/voting-1.jpg",
-    "category": "Community Event",
-    "source": "Ouray County",
-    "desc": "A joint briefing hosted by ROCC and the League of Women Voters of the Upper Valley covering statewide measures on the November 2026 ballot. The event takes place in the Decker Room at 675 Clinton Street in Ridgway, with notice that two or…",
-    "type": "Community"
-  },
-  {
-    "title": "Ballot Measure 5A Information Meeting",
-    "href": "https://koto.org/event/ballot-measure-5a-information-meeting/2026-10-05/",
-    "date": "2026-10-05",
-    "time": "12:00 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/voting-2.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Find out why voting yes on ballot measure 5A keps Telluride schools strong and how the measure affects you. Lite refreshments provided!",
-    "type": "Community"
-  },
-  {
     "title": "Senior Lunch by Neighbor to Neighbor",
     "href": "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
     "date": "2026-10-05",
@@ -97,8 +71,8 @@
     "href": "https://events.ourayridgwayevents.com/event/monthly-karate-in-ouray-county",
     "date": "2026-10-05",
     "time": "5:00 PM",
-    "location": "Weehawken Ridgway (Old Schoolhouse)",
-    "town": "Ridgway",
+    "location": "Decker Community Room",
+    "town": "Ouray",
     "img": "https://localist-images.azureedge.net/photos/52253033564264/huge/ef12b5792bac47932752278d68230c7704389412.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
@@ -129,7 +103,7 @@
     "img": "https://localist-images.azureedge.net/photos/53983238349831/huge/7d761122bc0d275db26bc59a1c4db709cbac5e7a.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "The League of Women Voters of the Uncompahgre Valley is hosting a briefing at the Decker Community Room to help voters understand the statewide measures appearing on the November ballot. The presentation is nonpartisan and focused on…",
+    "desc": "THIS EVENT HAS MOVED TO THE SHERBINO THEATER. The League of Women Voter's (LWV) mission is to ensure that every voter is an informed voter. The statewide measures on the November ballot are important and complex, shaping the future of…",
     "type": "Community"
   },
   {
@@ -157,7 +131,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
     "type": "Community",
-    "endDate": "2026-12-03"
+    "endDate": "2026-12-04"
   },
   {
     "title": "CORAL SKYE",
@@ -345,6 +319,19 @@
     "type": "Community"
   },
   {
+    "title": "Tellluride Rotary Club Meeting",
+    "href": "https://koto.org/event/tellluride-rotary-club-meeting/",
+    "date": "2026-10-07",
+    "time": "6:00 PM",
+    "location": "Mountain Lodge Telluride, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://koto.org/wp-content/uploads/2026/10/Telluride-Rotary-Logo-White.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Telluride Rotary Club meets Wednesday, October 7, at 6 p.m. at the Mountain Lodge in Mountain Village. Come at 5:30PM to socialize before the meeting. Meetings feature guest speakers and discussion of club projects. Anyone with an interest…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "OPEN MIC / JAM NIGHT w/ host DJ Strong",
     "href": "https://events.ourayridgwayevents.com/event/open-mic-jam-night-w-host-dj-strong",
     "date": "2026-10-07",
@@ -435,6 +422,19 @@
     "category": "Community Event",
     "source": "KOTO Community Calendar",
     "desc": "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories…",
+    "type": "Community"
+  },
+  {
+    "title": "Norwood Sanitation District Meeting",
+    "href": "https://www.norwoodtown.com/2026-10-08-norwood-sanitation-district-meeting-meeting",
+    "date": "2026-10-08",
+    "time": "6:00 AM",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Government Meeting",
+    "source": "Town of Norwood",
+    "desc": "A regularly scheduled meeting of the Norwood Sanitation District, held in Norwood, Colorado under the Town of Norwood. These public government meetings address sanitation district business and are open to community members.",
     "type": "Community"
   },
   {
@@ -1346,6 +1346,19 @@
     "endDate": "2026-10-18"
   },
   {
+    "title": "17th Telluride Horror Show",
+    "href": "https://koto.org/event/17th-telluride-horror-show/",
+    "date": "2026-10-16",
+    "time": "",
+    "location": "",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Telluride Horror Show returns for its 17th edition October 16-18, 2026. One of the highest-attended genre film fests in the world, the Horror Show attracts the latest & best genre films from around the globe and attendees from all over…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Love Your Gorge",
     "href": "https://ouraycountyco.gov/Calendar.aspx?EID=3786",
     "date": "2026-10-17",
@@ -1688,6 +1701,19 @@
     "desc": "AFTER SCHOOL ART FOR AGES 5-8 Thursdays, 3:15–4:30 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 17 – October 8Session 2 (4 weeks • $85): October 22 – November 12Session 3 (3…",
     "type": "Arts & Film",
     "endDate": "2026-11-12"
+  },
+  {
+    "title": "Water in the West: The Southwest's last, best rivers and how to protect them",
+    "href": "https://koto.org/event/water-in-the-west-the-southwests-last-best-rivers-and-how-to-protect-them/",
+    "date": "2026-10-22",
+    "time": "5:30 PM",
+    "location": "Patagonia Telluride, Telluride Retail",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/10/Water-in-the-West-Instagram-1.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Across the Southwest, aridification and challenging politics are impacting our watersheds and threatening our rivers. Join Mike Fiebig, Director of the Southwest River Protection Program at American Rivers, to learn what we can do to…",
+    "type": "Community"
   },
   {
     "title": "Senior Meals",
@@ -2138,6 +2164,19 @@
     "type": "Community"
   },
   {
+    "title": "YOUNG FRANKENSTEIN – THE MUSICAL (a TMHS & Telluride Theatre Co-Production)",
+    "href": "https://koto.org/event/young-frankenstein-the-musical-a-tmhs-telluride-theatre-co-production/2026-10-29/",
+    "date": "2026-10-29",
+    "time": "6:00 PM",
+    "location": "Michael D. Palm Theater, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/10/YF-thundertix.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "It's okay to LAUGH during spooky season we invite you to join us for Mel Brooks' classic comedy: YOUNG FRANKENSTEIN – THE MUSICAL! Based on the film starring Gene Wilder, this musical pokes fun at Mary Shelly's \"Frankenstein,\" along with…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Pickleball Nights",
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-10-29",
@@ -2151,17 +2190,17 @@
     "type": "Outdoors & Sports"
   },
   {
-    "title": "Up-off Gymnastics, Dance, and Spanish",
-    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-10-30/",
-    "date": "2026-10-30",
-    "time": "10:00 AM",
-    "location": "Lone Cone Library Norwood",
-    "town": "Norwood",
-    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
+    "title": "Coffee and Climate Conversations: The Super El Niño is here",
+    "href": "https://koto.org/event/coffee-and-climate-conversations-the-super-el-nino-is-here/",
+    "date": "2026-10-29",
+    "time": "8:30 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/10/October-Coffee-Chat-Instagram-Post-45.png",
     "category": "Community Event",
     "source": "KOTO Community Calendar",
-    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
-    "type": "Music"
+    "desc": "Across our community, Super El Niño rumors are building hope and excitement that a snowy winter full of powder days is on the horizon. This year's El Niño is shaping up to be the strongest ever recorded, and is already driving changes in…",
+    "type": "Community"
   },
   {
     "title": "JELLY BOWL BAND",
@@ -2360,19 +2399,6 @@
     "type": "Community"
   },
   {
-    "title": "Tea and Tarot",
-    "href": "https://koto.org/event/tea-and-tarot/2026-11-01/",
-    "date": "2026-11-01",
-    "time": "2:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    "type": "Community"
-  },
-  {
     "title": "Bike & Brewery Tour",
     "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     "date": "2026-11-02",
@@ -2412,19 +2438,6 @@
     "type": "Food & Drink"
   },
   {
-    "title": "Bardic Trails Online Poetry Night",
-    "href": "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-11-03/",
-    "date": "2026-11-03",
-    "time": "7:00 PM",
-    "location": "",
-    "town": "",
-    "img": "https://koto.org/wp-content/uploads/2026/03/Bardic-Trails-2026.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for…",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "Market on the Plaza",
     "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     "date": "2026-11-04",
@@ -2449,6 +2462,19 @@
     "source": "Telluride Rotary",
     "desc": "Telluride Rotary Club meets the 1st & 3rd Wednesdays at 6:00 PM (gathering at 5:30) — 1st Wednesday at Mountain Lodge in Mountain Village, 3rd Wednesday at an announced Telluride location. A service club supporting scholarships, Youth…",
     "type": "Family & Kids"
+  },
+  {
+    "title": "The Sherbino Presents: Warren Miller's \"Days Off\"",
+    "href": "https://sherbino.org/event/the-sherbino-presents-warren-millers-days-off/",
+    "date": "2026-11-04",
+    "time": "",
+    "location": "The Sherbino, Ridgway",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2026/09/Warren-Miller-Days-Off-Banner.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "The Sherbino in Ridgway hosts a screening of *Days Off*, Warren Miller's 77th ski and snowboard film, hosted by Katie Burrell. Advance tickets are available at a discount, with general admission and student pricing, and doors open at 6:00…",
+    "type": "Arts & Film"
   },
   {
     "title": "Pickleball Nights",

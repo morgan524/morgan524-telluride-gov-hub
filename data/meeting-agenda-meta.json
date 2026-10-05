@@ -295,7 +295,7 @@
   },
   "county|2026-10-07|Board of County Commissioners Meeting": {
     "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/888/files/agenda/2028",
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/888/files/agenda/2030",
     "meetingId": "872 8126 1249",
     "passcode": "508225",
     "phone": "719-359-4580"
@@ -602,6 +602,6 @@
   },
   "county|2026-11-04|Board of County Commissioners Meeting": {
     "sv": 4,
-    "ph": "49e704e3c3bab858"
+    "ph": "a12dfd2ce826475e"
   }
 }

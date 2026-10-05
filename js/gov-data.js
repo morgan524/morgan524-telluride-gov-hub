@@ -134,8 +134,8 @@ const COUNTY_CACHED_DATA = [
     location: "333 West Colorado Ave, 2nd Floor, Telluride, CO 81423",
     civicClerkId: 888,
     note: null,
-    agendaUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/888/files/agenda/2028",
-    packetUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/888/files/agenda/2029"
+    agendaUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/888/files/agenda/2030",
+    packetUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/888/files/agenda/2031"
   },
   {
     date: "October 8, 2026",
@@ -150,7 +150,7 @@ const COUNTY_CACHED_DATA = [
   },
   {
     date: "October 14, 2026",
-    time: "9:30 AM",
+    time: "10:00 AM",
     title: "Board of County Commissioners Work Session",
     type: "bocc",
     location: "5634 Cty Road H1, Egnar Fire Station, Egnar, CO 81325",

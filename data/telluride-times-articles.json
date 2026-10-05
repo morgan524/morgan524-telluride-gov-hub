@@ -1,5 +1,42 @@
 [
   {
+    "title": "Town council upholds Carhenge lot consolidation",
+    "source": "Telluride Times",
+    "date": "October 5, 2026",
+    "firstSeen": "2026-10-05",
+    "newsTopic": "government",
+    "copy": "Town council voted 3-1 to uphold P&Z's approval of combining two Backman Village lots into a single 4.1-acre parcel for the Carhenge site. The lot consolidation alone doesn't greenlight any development — future proposals still go through standard review. Neighboring residents and the Chair 7 Coalition had appealed the decision.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_1bede84b-c2a5-4187-b2df-cc1ecc5303eb.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/1d/81dc0fe8-44e2-4e9a-b9c1-2c5e8b7d384d/6ac13875e5cfe.image.png",
+    "imgHiRes": true
+  },
+  {
+    "title": "Supreme Court weighs local governments' climate change lawsuits against oil and gas companies",
+    "source": "Telluride Times",
+    "date": "October 5, 2026",
+    "firstSeen": "2026-10-05",
+    "newsTopic": "community",
+    "copy": "The Supreme Court heard arguments over whether Boulder, Colorado can sue Suncor and ExxonMobil in state court for climate-related damages — part of a wave of similar suits nationwide. Justices seemed divided, with a possible tie given Alito's recusal. A deadlock would leave Colorado's ruling standing, letting the Boulder case proceed.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/state/article_495e992b-c852-5ed9-941b-59245e405214.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/64/8645da72-d0ca-58e5-b483-b3ce14f48d75/6ac3eab48f1dd.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "A guide to measures on the November state ballot",
+    "source": "Telluride Times",
+    "date": "September 29, 2026",
+    "firstSeen": "2026-09-30",
+    "newsTopic": "government",
+    "copy": "Colorado voters will see 14 statewide measures this November — seven constitutional amendments and seven statutory propositions. The amendments cover topics ranging from immigration reporting and natural gas rights to hunting, fishing, and mail ballot ID requirements. San Miguel County commissioners have weighed in with positions on several of them.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/opinion/columnists/article_e9486d75-07a6-41b0-9929-42885e96774c.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/46/a46a5646-5b5e-4df7-8029-9d528386492e/6abc4c643dac5.image.jpg",
+    "isLetter": true,
+    "imgHiRes": true
+  },
+  {
     "title": "Willkommen once again",
     "source": "Telluride Times",
     "date": "October 5, 2026",
@@ -382,19 +419,6 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/gallery/news/article_032bdae8-f1ff-4933-af97-5dae6bcba696.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/25/52523dd3-4a7d-4ec1-86f3-f61fec80cecf/6abc4b8d52a64.image.png",
-    "imgHiRes": true
-  },
-  {
-    "title": "A guide to measures on the November state ballot",
-    "source": "Telluride Times",
-    "date": "September 29, 2026",
-    "firstSeen": "2026-09-30",
-    "newsTopic": "government",
-    "copy": "Colorado voters will see 14 statewide measures this November — seven constitutional amendments and seven statutory propositions. The amendments cover topics ranging from immigration reporting and natural gas rights to hunting, fishing, and mail ballot ID requirements. San Miguel County commissioners have weighed in with positions on several of them.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/opinion/columnists/article_e9486d75-07a6-41b0-9929-42885e96774c.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/46/a46a5646-5b5e-4df7-8029-9d528386492e/6abc4c643dac5.image.jpg",
-    "isLetter": true,
     "imgHiRes": true
   },
   {
@@ -944,6 +968,15 @@
     "imgHiRes": true
   },
   {
+    "title": "Town of Telluride to Lift All Fire Restrictions",
+    "source": "Town of Telluride",
+    "date": "September 17, 2026",
+    "newsTopic": "public-safety",
+    "copy": "(September 16, 2026) – Following improved fire conditions across the region and in alignment with San Miguel County, the Town of Telluride will lift all fire restrictions effective at 12:01 a.m. MT on Friday, September 18, 2026.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=405",
+    "img": ""
+  },
+  {
     "title": "San Miguel County Public Health Announces Fall Vaccine Availability",
     "source": "San Miguel County",
     "date": "October 1, 2026",
@@ -1034,13 +1067,13 @@
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14812"
   },
   {
-    "title": "Courthouse Office Closures Tuesday 9/29 - Friday 10/2",
+    "title": "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
     "source": "San Miguel County",
-    "date": "September 29, 2026",
-    "newsTopic": "community",
-    "copy": "The Clerk + Recorder closes Weds 9/30 at 1:30 p.m. and reopens Thurs at 7:30 a.m. They will be closed Friday. The Treasurer's Office has closed early and will remain closed Weds 9/30 - Friday 10/2. They reopen at 7:30 a.m. on Monday, 10/5.",
-    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=548",
-    "img": ""
+    "date": "September 10, 2026",
+    "newsTopic": "health",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1409",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
   },
   {
     "title": "DMV Services available in Egnar 11/18",
@@ -1050,6 +1083,24 @@
     "copy": "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
     "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
+  },
+  {
+    "title": "Tomboy Road Now Open",
+    "source": "San Miguel County",
+    "date": "September 18, 2026",
+    "newsTopic": "infrastructure",
+    "copy": "The Town of Telluride has completed their project that necessitated the closure of Lower Tomboy Road. The road is now open again.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=546",
+    "img": ""
+  },
+  {
+    "title": "Water Restrictions in Place",
+    "source": "Town of Telluride",
+    "date": "September 11, 2026",
+    "newsTopic": "community",
+    "copy": "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
+    "href": "https://www.telluride.gov/AlertCenter.aspx?AID=45",
+    "img": ""
   },
   {
     "title": "Small Business Administration Economic Injury Disaster Loan Data Collection Form Now Available (due Oct. 13)",

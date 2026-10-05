@@ -11,6 +11,17 @@
     "imageUrl": ""
   },
   {
+    "title": "Norwood Sanitation District Meeting",
+    "link": "https://www.norwoodtown.com/2026-10-08-norwood-sanitation-district-meeting-meeting",
+    "description": "A regularly scheduled meeting of the Norwood Sanitation District, held in Norwood, Colorado under the Town of Norwood. These public government meetings address sanitation district business and are open to community members.",
+    "pubDate": "2026-10-08T12:00:00.000Z",
+    "source": "norwood",
+    "sourceLabel": "Town of Norwood",
+    "category": "Government Meeting",
+    "location": "Norwood, CO",
+    "imageUrl": ""
+  },
+  {
     "title": "Senior Meals",
     "link": "https://www.norwoodtown.com/2026-10-08-senior-meals",
     "description": "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
@@ -33,6 +44,17 @@
     "imageUrl": ""
   },
   {
+    "title": "Board Of Trustees Meeting",
+    "link": "https://www.norwoodtown.com/2026-10-14-board-of-trustees-meeting",
+    "description": "A regular meeting of the Town of Norwood Board of Trustees, where elected officials gather to conduct municipal business and make decisions on community matters. The meeting is open to the public and takes place in Norwood, Colorado.",
+    "pubDate": "2026-10-14T12:00:00.000Z",
+    "source": "norwood",
+    "sourceLabel": "Town of Norwood",
+    "category": "Government Meeting",
+    "location": "Norwood, CO",
+    "imageUrl": ""
+  },
+  {
     "title": "Senior Meals",
     "link": "https://www.norwoodtown.com/2026-10-15-senior-meals",
     "description": "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather, share a meal, and connect with neighbors. This recurring community event takes place in Norwood and is organized through local town services.",
@@ -40,6 +62,17 @@
     "source": "norwood",
     "sourceLabel": "Town of Norwood",
     "category": "Community Event",
+    "location": "Norwood, CO",
+    "imageUrl": ""
+  },
+  {
+    "title": "Planning And Zoning Commission Meeting",
+    "link": "https://www.norwoodtown.com/2026-10-19-planning-and-zoning-commission-meeting",
+    "description": "The Town of Norwood's Planning and Zoning Commission will hold a regular meeting to review and act on land use, development, and zoning matters affecting the community. The meeting is open to the public and provides an opportunity for residents to observe local planning decisions.",
+    "pubDate": "2026-10-19T12:00:00.000Z",
+    "source": "norwood",
+    "sourceLabel": "Town of Norwood",
+    "category": "Government Meeting",
     "location": "Norwood, CO",
     "imageUrl": ""
   },
