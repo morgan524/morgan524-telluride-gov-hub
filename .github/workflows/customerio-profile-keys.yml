@@ -1,0 +1,47 @@
+name: Customer.io profile-link codes
+
+# Gives every Customer.io person their profile-link code (profile_key), so the
+# "Update preferences" link in each email can show that person's current
+# switches. See scripts/customerio-profile-keys.js. Writes only profile_key,
+# never sends anything, and logs counts only (this repo is public).
+# The profile Worker stamps the code on every signup/profile save, so this is a
+# one-time backfill plus a weekly safety net for people added another way
+# (e.g. a Customer.io CSV import).
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Count only, write nothing (true/false)'
+        required: false
+        default: 'false'
+  schedule:
+    - cron: '30 12 * * 0'   # Sundays 12:30 UTC, after imports during the week
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  keys:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+      - name: Set missing or stale codes
+        env:
+          CUSTOMERIO_APP_API_KEY: ${{ secrets.CUSTOMERIO_APP_API_KEY }}
+          CUSTOMERIO_SITE_ID: ${{ secrets.CUSTOMERIO_SITE_ID }}
+          CUSTOMERIO_TRACK_API_KEY: ${{ secrets.CUSTOMERIO_TRACK_API_KEY }}
+          PROFILE_LINK_SECRET: ${{ secrets.PROFILE_LINK_SECRET }}
+          DRY_RUN: ${{ github.event.inputs.dry_run == 'true' && '1' || '' }}
+        run: node scripts/customerio-profile-keys.js
+      - name: CI health issue
+        if: always()
+        uses: ./.github/actions/ci-health-issue
+        with:
+          title: '🚨 Customer.io profile-link codes workflow is failing'
+          status: ${{ job.status }}
+          run-url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}

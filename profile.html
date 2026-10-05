@@ -397,34 +397,50 @@
   (function initProfileLoad(){
     const loginHint = 'Have an account? <a href="/subscribe.html#login">Log in</a> and your saved info loads here automatically.';
     subsUnknown(true);   // assume unknown until a profile-read proves otherwise
-    if (!window.firebase || !firebase.initializeApp) { loadMsg(loginHint, 'info'); return; }
+    function applyRead(resp, viaLink){
+      if (resp && resp.ok && resp.found) {
+        const fl = resp.fields || {};
+        if (fl.FNAME) setVal('pFirst', fl.FNAME); if (fl.LNAME) setVal('pLast', fl.LNAME); if (fl.MMERGE6) setRegion(fl.MMERGE6);
+        if (fl.MMERGE10) setVal('pAddr', fl.MMERGE10); if (fl.MMERGE11) setVal('pRadius', fl.MMERGE11);
+        flagMissing();
+        if (resp.subs) { Object.keys(resp.subs).forEach(function(k){ setSubStatus(k, resp.subs[k]); }); subsUnknown(false); }
+        // A global opt-out (Customer.io's own footer unsubscribe) suppresses
+        // every send regardless of the per-list attributes, so say so plainly
+        // rather than showing switches that imply mail is on its way.
+        globalUnsub(resp.unsubscribed === true);
+        loadMsg('✓ Loaded your '+(viaLink ? 'current settings' : 'saved info')+' for <strong>'+resp.email+'</strong>. The switches below show what you’re on right now.'+(viaLink ? '' : ' Empty boxes are details we don’t have yet.'), 'ok');
+        return true;
+      }
+      if (resp && resp.ok && !resp.found) {
+        loadMsg('We don’t have a subscription for <strong>'+resp.email+'</strong> yet. Fill in your info below to get started.', 'info');
+        return true;
+      }
+      return false;
+    }
+    // From an email's "Update preferences" link: ?email=…&key=… (the personal
+    // code is checked by the Worker, so an address alone shows nothing).
+    function tryEmailLink(){
+      const e = qp('email'), k = qp('key');
+      if (!e || !k || /\*\|/.test(k)) return false;   // missing, or an unfilled merge tag
+      fetch(READ_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ email: e, key: k }) })
+        .then(function(r){ return r.json(); })
+        .then(function(resp){ if (!applyRead(resp, true)) loadMsg(loginHint, 'info'); })
+        .catch(function(){ loadMsg('Couldn’t load your settings just now — you can still update anything below.', 'info'); });
+      return true;
+    }
+    if (!window.firebase || !firebase.initializeApp) { if (!tryEmailLink()) loadMsg(loginHint, 'info'); return; }
     try {
       firebase.initializeApp(SITE_CONFIG.FIREBASE);
     } catch(e) { /* already initialized */ }
     try { _db = firebase.firestore(); _storage = firebase.storage(); } catch(e) {}
     firebase.auth().onAuthStateChanged(function(user){
-      if (!user || !user.email) { loadMsg(loginHint, 'info'); return; }
+      if (!user || !user.email) { if (!tryEmailLink()) loadMsg(loginHint, 'info'); return; }
       setVal('pEmail', user.email);
       initAvatar(user);
       user.getIdToken().then(function(token){
         return fetch(READ_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ idToken: token }) });
       }).then(function(r){ return r.json(); }).then(function(resp){
-        if (resp && resp.ok && resp.found) {
-          const fl = resp.fields || {};
-          setVal('pFirst', fl.FNAME); setVal('pLast', fl.LNAME); setRegion(fl.MMERGE6);
-          setVal('pAddr', fl.MMERGE10); setVal('pRadius', fl.MMERGE11);
-          flagMissing();
-          if (resp.subs) { Object.keys(resp.subs).forEach(function(k){ setSubStatus(k, resp.subs[k]); }); subsUnknown(false); }
-          // A global opt-out (Customer.io's own footer unsubscribe) suppresses
-          // every send regardless of the per-list attributes, so say so plainly
-          // rather than showing switches that imply mail is on its way.
-          globalUnsub(resp.unsubscribed === true);
-          loadMsg('✓ Loaded your saved info for <strong>'+resp.email+'</strong>. The switches below show what you’re on right now. Empty boxes are details we don’t have yet.', 'ok');
-        } else if (resp && resp.ok && !resp.found) {
-          loadMsg('You’re signed in as <strong>'+resp.email+'</strong>, but we don’t have a subscription for that address yet. Fill in your info below to get started.', 'info');
-        } else {
-          loadMsg(loginHint, 'info');
-        }
+        if (!applyRead(resp, false)) loadMsg(loginHint, 'info');
       }).catch(function(){ loadMsg('Couldn’t load your saved info just now — you can still update anything below.', 'info'); });
     });
   })();

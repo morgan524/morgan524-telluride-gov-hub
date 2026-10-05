@@ -288,6 +288,29 @@ async function handleInterests(request, env) {
 // attributes (name, region, subscription flags) so the profile page can pre-fill.
 // Token-verified; the email comes from the verified token, never from input. A
 // contact Customer.io doesn't have yet returns { ok:true, found:false }.
+// Personal profile-link code (2026-10-05). Each subscriber's emails carry
+// "&key=<code>" on the "Update preferences" link; the code is an HMAC of their
+// lowercased email under PROFILE_LINK_SECRET, stored on the person as the
+// Customer.io attribute `profile_key` (backfilled by scripts/customerio-
+// profile-keys.js, stamped on every /update-profile) and inserted by the
+// broadcast templates as *|PKEY|*. Email + matching code lets /profile-read
+// show that person's switches without a Hub-Bub sign-in, and nobody can look
+// up someone else by typing their address. 128 bits, base64url.
+async function profileKey(env, email) {
+  const secret = env.PROFILE_LINK_SECRET || "";
+  if (!secret) return "";
+  const key = await crypto.subtle.importKey("raw", new TextEncoder().encode(secret),
+    { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+  const mac = new Uint8Array(await crypto.subtle.sign("HMAC", key, new TextEncoder().encode(String(email).trim().toLowerCase())));
+  return btoa(String.fromCharCode(...mac.slice(0, 16))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+function sameString(a, b) {   // constant-time compare
+  a = String(a); b = String(b);
+  if (a.length !== b.length) return false;
+  let d = 0; for (let i = 0; i < a.length; i++) d |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  return d === 0;
+}
+
 async function handleProfileRead(request, env) {
   const cors = profileCorsHeaders(request.headers.get("Origin") || "");
   const json = (obj, status) => new Response(JSON.stringify(obj), { status: status || 200, headers: cors });
@@ -296,10 +319,20 @@ async function handleProfileRead(request, env) {
   if (!env.CUSTOMERIO_APP_API_KEY) return json({ ok: false, msg: "Profile lookup isn't configured yet." }, 500);
 
   let data; try { data = await request.json(); } catch { return json({ ok: false, msg: "Bad request." }, 400); }
-  const idToken = data && data.idToken;
-  if (!idToken) return json({ ok: false, msg: "Not signed in." }, 401);
-  const email = await verifyFirebaseEmail(idToken);
-  if (!email) return json({ ok: false, msg: "We couldn't verify your sign-in." }, 401);
+  // Either a Hub-Bub sign-in (Firebase ID token) or an email plus its personal
+  // link code from one of our emails.
+  let email = null;
+  if (data && data.idToken) {
+    email = await verifyFirebaseEmail(data.idToken);
+    if (!email) return json({ ok: false, msg: "We couldn't verify your sign-in." }, 401);
+  } else if (data && data.email && data.key) {
+    const e = String(data.email).trim().toLowerCase();
+    const expect = await profileKey(env, e);
+    if (!expect || !sameString(expect, String(data.key).trim())) return json({ ok: false, msg: "This link can't show your settings." }, 401);
+    email = e;
+  } else {
+    return json({ ok: false, msg: "Not signed in." }, 401);
+  }
 
   // Read the contact's attributes from Customer.io (App API; contact id == email).
   let resp;
@@ -382,6 +415,9 @@ async function handleUpdateProfile(request, env) {
   // cleared by an explicit opt-in action; turning everything off does NOT set it
   // (attribute-level off is enough).
   if (optingIn) cioAttrs.unsubscribed = false;
+  // Keep the person's profile-link code current (new signups get theirs here).
+  const pk = await profileKey(env, email);
+  if (pk) cioAttrs.profile_key = pk;
   if (!Object.keys(cioAttrs).length) return json({ ok: false, msg: "Nothing to update." }, 400);
 
   const cioStatus = await cioIdentify(env, email, cioAttrs);

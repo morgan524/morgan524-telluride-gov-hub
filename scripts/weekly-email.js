@@ -857,7 +857,7 @@ const donateBlock = `<tr><td class="sec-pad" style="padding:26px 34px 6px;"><tab
 // (scripts/past-meetings-email.js). Readers must turn it on themselves, so the
 // button goes to their profile, pre-filled the same way as the footer's
 // "Update preferences" link. donateBlock above is kept for when this retires.
-const PAST_SIGNUP_URL = 'https://livabletelluride.org/profile.html?email=*|EMAIL|*&amp;fname=*|FNAME|*&amp;town=*|MMERGE6|*#subt-past';
+const PAST_SIGNUP_URL = 'https://livabletelluride.org/profile.html?email=*|EMAIL|*&amp;fname=*|FNAME|*&amp;town=*|MMERGE6|*&amp;key=*|PKEY|*#subt-past';
 const pastPromoBlock = `<tr><td class="sec-pad" style="padding:26px 34px 6px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="background:#21443c;border-radius:8px;padding:27px 26px;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#e3c87a;margin-bottom:9px;">New &middot; Past Meetings</div><p style="margin:0 0 17px;font-size:14.5px;line-height:1.7;color:#e7efe9;">A new Monday email with a short summary of every public meeting held across the region the week before, each linking to the full recap. It&rsquo;s <strong>sign-up only</strong>, so turn it on in your preferences if you&rsquo;d like it.</p><a href="${PAST_SIGNUP_URL}" style="display:inline-block;background:#b58a2c;color:#ffffff;text-decoration:none;font-weight:700;font-size:15px;padding:13px 32px;border-radius:999px;">Sign up for Past Meetings &rarr;</a><div style="font-size:11.5px;color:#9fbcb0;margin-top:13px;">Opens your Livable Telluride profile &middot; you can turn it off anytime.</div></td></tr></table></td></tr>`;
 
 // "What We're Reading" box. Two sources, in priority order:
@@ -1130,7 +1130,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
   <tr><td class="sec-pad" style="padding:24px 34px 30px;border-top:1px solid #ddd6c8;">
     <div style="font-family:Georgia,serif;font-size:13px;font-weight:700;color:#21443c;">Livable Telluride</div>
     <div style="font-size:12px;color:#7a8a85;line-height:1.6;margin-top:4px;">Community information for Telluride, Mountain Village, San Miguel County &amp; Ouray County.<br>
-    <a href="https://livabletelluride.org" style="color:#7a8a85;">livabletelluride.org</a> &nbsp;·&nbsp; <a href="*|UNSUB|*" style="color:#7a8a85;">Unsubscribe</a> &nbsp;·&nbsp; <a href="https://livabletelluride.org/profile.html?email=*|EMAIL|*&amp;fname=*|FNAME|*&amp;town=*|MMERGE6|*" style="color:#7a8a85;">Update preferences</a></div></td></tr>
+    <a href="https://livabletelluride.org" style="color:#7a8a85;">livabletelluride.org</a> &nbsp;·&nbsp; <a href="*|UNSUB|*" style="color:#7a8a85;">Unsubscribe</a> &nbsp;·&nbsp; <a href="https://livabletelluride.org/profile.html?email=*|EMAIL|*&amp;fname=*|FNAME|*&amp;town=*|MMERGE6|*&amp;key=*|PKEY|*" style="color:#7a8a85;">Update preferences</a></div></td></tr>
 </table></td></tr></table></body></html>`;
 
 // In preview mode, render an info@ review copy: a banner at the top, every topic
