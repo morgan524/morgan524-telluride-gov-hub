@@ -1,17 +1,5 @@
 [
   {
-    "title": "Family & community",
-    "source": "Telluride Times",
-    "date": "October 4, 2026",
-    "firstSeen": "2026-10-04",
-    "newsTopic": "community",
-    "copy": "Soto's, a new food truck run by Angel and Roxana Soto, opened in early September in the parking lot east of Camel's Garden on San Juan Avenue. They're serving tacos, burritos, quesadillas, and weekend quesabirria, with meats like asada, pastor, lengua, and tripa. Hours are 10:30 a.m.–4 p.m. daily, with Sunday/Monday closures in the off-season.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/business/article_f52896e5-2504-49f4-8b45-95ab29771390.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/ff/9ff1deef-f701-474b-a528-e2067a2b4ed5/6abcc60180b3f.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Familia y comunidad",
     "source": "Telluride Times",
     "date": "October 4, 2026",
@@ -21,6 +9,18 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/business/article_da3b3d71-e551-4e22-8d7e-093dbc70e554.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/6b/46b67b81-a7aa-418a-a0ae-593c1258b278/6abcc8f5e8f46.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Family & community",
+    "source": "Telluride Times",
+    "date": "October 4, 2026",
+    "firstSeen": "2026-10-04",
+    "newsTopic": "community",
+    "copy": "Soto's, a new food truck run by Angel and Roxana Soto, opened in early September in the parking lot east of Camel's Garden on San Juan Avenue. They're serving tacos, burritos, quesadillas, and weekend quesabirria, with meats like asada, pastor, lengua, and tripa. Hours are 10:30 a.m.–4 p.m. daily, with Sunday/Monday closures in the off-season.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/business/article_f52896e5-2504-49f4-8b45-95ab29771390.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/ff/9ff1deef-f701-474b-a528-e2067a2b4ed5/6abcc60180b3f.image.jpg",
     "imgHiRes": true
   },
   {
@@ -932,30 +932,6 @@
     "imgHiRes": true
   },
   {
-    "title": "Heidi Hoff brings personalized healthcare into the home",
-    "source": "Telluride Times",
-    "date": "September 21, 2026",
-    "firstSeen": "2026-09-21",
-    "newsTopic": "health",
-    "copy": "Heidi Hoff launched Telluride Concierge Nursing in 2025, bringing licensed RN care directly into homes for post-op recovery, senior support, and medication infusions — services that otherwise often require a drive to Montrose. She spent 11 years at Telluride Regional Medical Center before starting the business. The county has no hospice service, and she's looking at palliative care as a next step.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/business/article_0a389e52-237a-4ed7-bcb3-d10c0e1b36fa.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/49/04952f13-a30a-4004-a9ed-4a07e516efa2/6aae9505826df.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "Council vote allows dogs on section of new River Trail",
-    "source": "Telluride Times",
-    "date": "September 21, 2026",
-    "firstSeen": "2026-09-21",
-    "newsTopic": "government",
-    "copy": "Town Council voted to allow dogs on a small section of the River Trail being relocated onto the Valley Floor open space near the Public Works Facility. The trail move — about 1,000 linear feet — follows the old river channel and is meant to improve safety and winter grooming. Dogs were already allowed on the current trail, so most users won't notice a change.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/article_05fec48f-5e1e-482e-bd1f-8b1e2673ce60.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/6e/26e8b916-530b-4b76-b271-92afa9dc4c2c/6aacf1c7298fa.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Town of Telluride to Lift All Fire Restrictions",
     "source": "Town of Telluride",
     "date": "September 17, 2026",
@@ -1133,17 +1109,6 @@
     "img": ""
   },
   {
-    "title": "Town of Ridgway Water Supply Element Draft Now Available for Review and Comment",
-    "source": "Town of Ridgway",
-    "date": "September 21, 2026",
-    "firstSeen": "2026-09-29",
-    "newsTopic": "community",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/CO-Ridgway-Water-Supply-Element-Draft-091826.pdf",
-    "img": ""
-  },
-  {
     "title": "Ridgway Sustainability Advisory Board Meeting Agenda",
     "source": "Town of Ridgway",
     "date": "October 6, 2026",
@@ -1168,7 +1133,7 @@
   {
     "title": "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     "source": "Town of Ridgway",
-    "date": "October 4, 2026",
+    "date": "October 5, 2026",
     "firstSeen": "2026-09-29",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1179,7 +1144,7 @@
   {
     "title": "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     "source": "Town of Ridgway",
-    "date": "October 4, 2026",
+    "date": "October 5, 2026",
     "firstSeen": "2026-09-29",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",

@@ -60,18 +60,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/49105/scott-rodgerson-zlhbjxbccec-unsplash.800x533.webp"
   },
   {
-    "title": "Gaiascope Saturday Sessions",
-    "link": "https://www.telluride.com/event/gaiascope-saturday-sessions/",
-    "description": "Gaiascope Saturday Sessions Live music + Kaleidoscope art every Saturday.",
-    "pubDate": "2026-09-12",
-    "endDate": "2026-10-03",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63515/screenshot_2026-09-05_at_11_00_00_am.800x533.webp"
-  },
-  {
     "title": "Volunteer Trail Work Day",
     "link": "https://www.telluride.com/event/volunteer-trail-work-day/",
     "description": "Join the Telluride Mountain Club for their volunteer trail work day! Spend time with friends, get your hands dirty, and …",
@@ -96,18 +84,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/49419/fireside_chat.800x533.webp"
   },
   {
-    "title": "Hike Into History",
-    "link": "https://www.telluride.com/event/hike-into-history/",
-    "description": "Join the Telluride Historical Museum for their summer monthly Hike Into History series! \n\nSchedule:\n\n\n\tSeptember 26 - …",
-    "pubDate": "2026-09-26",
-    "endDate": "2026-10-03",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/53479/screenshot_2025-07-02_at_11_06_15_am.800x533.webp"
-  },
-  {
     "title": "Original Thinkers",
     "link": "https://www.telluride.com/event/original-thinkers/",
     "description": "Original Thinkers is a boutique festival of film, ideas, art, performance, and conversation held annually in Telluride, …",
@@ -118,28 +94,6 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/28484/download_1.800x533.webp"
-  },
-  {
-    "title": "Annual San Miguel River Cleanup",
-    "link": "https://www.telluride.com/event/annual-san-miguel-river-cleanup/",
-    "description": "Join the San Miguel Watershed Coalition, BLM, Telluride Outside and RIGS for the 5th annual San Miguel River cleanup …",
-    "pubDate": "2026-10-03",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/59547/0345d607-8ad3-d3f3-b8b6-2c39b6657a12.800x533.webp"
-  },
-  {
-    "title": "ArtAbout",
-    "link": "https://www.telluride.com/event/artabout/",
-    "description": "Artabout provides the rare glimpse into local artist studios! Organized by Ah Haa School for the Arts, this is a free, …",
-    "pubDate": "2026-10-03",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/62618/artabout.800x533.webp"
   },
   {
     "title": "Telluride Leadership Summit",
@@ -291,5 +245,29 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63705/gwft-banner-16x9-horizontal-2048x1152.800x533.webp"
+  },
+  {
+    "title": "Holiday Arts Bazaar",
+    "link": "https://www.telluride.com/event/holiday-arts-bazaar/",
+    "description": "A LOCAL HOLIDAY TRADITION SINCE 1983 Shop local. Find something one-of-a-kind. Give handmade this holiday season. The …",
+    "pubDate": "2026-12-04",
+    "endDate": "2026-12-07",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/36627/hab-2026-2200x1237.800x533.webp"
+  },
+  {
+    "title": "Spongebob the Musical",
+    "link": "https://www.telluride.com/event/spongebob-the-musical/",
+    "description": "Local 6th–8th graders dive into a singing, dancing adventure under the sea! When the citizens of Bikini Bottom …",
+    "pubDate": "2026-12-04",
+    "endDate": "2026-12-07",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63715/spongebobthemusical-ezgif_com-webp-to-jpg-converter.800x533.webp"
   }
 ]
