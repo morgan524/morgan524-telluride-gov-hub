@@ -89,6 +89,17 @@ jobs:
           if [ "${OPEN:-0}" != "0" ]; then
             echo "A content-review fix PR is still open — waiting for it to be merged/closed before working new findings."; exit 0
           fi
+          # Also wait on a fix BRANCH that never became a PR. From 2026-09-28 the
+          # PR step failed ("GitHub Actions is not permitted to create or approve
+          # pull requests"), so the open-PR check above never tripped and every
+          # review run (3–4 a day) paid ~$0.90 to redo the same fixes, leaving 34
+          # orphan branches. Any claude/content-review-fix-* branch not yet merged
+          # into main means a fix is already waiting for a human.
+          git fetch -q origin '+refs/heads/claude/content-review-fix-*:refs/remotes/origin/claude/content-review-fix-*' 2>/dev/null || true
+          PENDING=$(git branch -r --no-merged origin/main 2>/dev/null | grep -c 'origin/claude/content-review-fix-' || true)
+          if [ "${PENDING:-0}" != "0" ]; then
+            echo "$PENDING unmerged content-review fix branch(es) already waiting — not paying to redo them."; exit 0
+          fi
           echo "run=true" >> "$GITHUB_OUTPUT"
           echo "----- actionable findings -----"; cat review-logs/content-review-actionable.log
 
