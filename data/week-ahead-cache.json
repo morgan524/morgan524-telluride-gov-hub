@@ -1,22 +1,18 @@
 {
-  "hash": "3434d6e927e106c05b9c36e4e19f7f9fa151ff59",
-  "lede": "The biggest thing on the boards this week is a public hearing at the San Miguel County BOCC on whether to waive land use fees for Mountain Village's Ilium Valley affordable housing project — a real signal of how much the county is willing to put behind housing, not just talk about it. Telluride Town Council also holds a public hearing Tuesday on a vesting period extension and takes up the Flock Safety license plate reader system in a morning work session. Meanwhile, both Mountain Village and the county are deep in 2027 budget season, and the San Miguel County Planning Commission spends Thursday in a joint session with the BOCC on an affordable housing code update.",
+  "hash": "c5d11a65b9b54425a5460d41f87b03e528d5bfef",
+  "lede": "The biggest thing on the docket this week is a public hearing at Tuesday's Telluride Town Council meeting on extending a vesting period — worth showing up for if you care how development rights get locked in — alongside a work session on Flock Safety's automated license plate reader cameras, a technology that tends to split communities fast. Wednesday is heavy with budget work sessions in both Mountain Village and San Miguel County, where the real spending priorities get shaped before any formal votes. Shrek the Musical opens Thursday at the Sheridan Opera House if you need a reason to get out of the house.",
   "notable": [
     {
       "id": 0,
-      "stake": "Public hearing on vesting extension; ALPR camera system up for scrutiny."
+      "stake": "Public hearing on vesting extension; ALPR camera surveillance policy up for debate."
     },
     {
       "id": 6,
-      "stake": "Public hearing on fee waivers for Ilium Valley affordable housing project."
+      "stake": "Public hearings on affordable housing fee waiver and lot line adjustment in the county."
     },
     {
       "id": 9,
-      "stake": "Joint BOCC session on affordable housing code update shapes county policy."
-    },
-    {
-      "id": 5,
-      "stake": "Vote on mortgage exception affecting a deed-restricted homeowner's rights."
+      "stake": "Joint BOCC-Planning work session on Affordable Housing Code Update could shape county policy."
     }
   ]
 }
