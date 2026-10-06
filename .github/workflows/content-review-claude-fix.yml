@@ -11,9 +11,17 @@ name: Content Review → Claude Fix
 # finding is worked at most once until a human merges or closes the PR.
 #
 # Claude edits the working tree; the commit + PR + issue comment happen in
-# plain shell steps afterwards so the PR body is under our control. Judgment
-# fixes land as a PR, never straight on main — same tier split as
-# content-autofix.yml. Merge it and the next content-refresh re-renders.
+# plain shell steps afterwards so the PR body is under our control.
+#
+# Two tiers (Morgan, 2026-10-06: "fix errors that are easy to identify and fix"):
+#   EASY → committed straight to main. Claude must call the whole batch easy
+#          (typos, garbled text, a verified-dead link cleared/replaced, an exact
+#          duplicate dropped) AND a mechanical gate must agree: only content-data
+#          files touched (data/*.json, js/gov-helpers.js, js/gov-data.js), a
+#          small diff, syntax + unit tests + JSON mirrors all pass.
+#   REVIEW → a PR for Morgan, as before: anything touching code, dates,
+#          meeting facts or what a summary says, or failing any gate check.
+# Merge (or the easy commit) and the next content-refresh re-renders.
 
 on:
   workflow_run:
@@ -148,12 +156,76 @@ jobs:
               Then `git checkout -- scripts/source-baselines.json` (bot-owned).
             - Do NOT git commit, push, or open a PR — a later step does that.
 
+            TIER — decide whether this batch can go live without a human.
+            Write exactly `easy` or `review` to /tmp/claude-fix-tier.txt.
+            `easy` ONLY if EVERY change is one of these, with no doubt:
+              • a spelling/typo fix in a title or text where the right spelling
+                is obvious from the record itself or its source page;
+              • removing garbled characters/markup from text;
+              • clearing a link you confirmed is dead (curl), or replacing it
+                with a URL you confirmed works and is the same page;
+              • dropping an exact duplicate entry;
+              plus the data/content-corrections.json rows that make those durable.
+            Write `review` for anything else: any code change (scripts/, a
+            detector or scraper fix), any date/time/location change, adding or
+            removing a real event or meeting, changing what a summary says,
+            anything you had to judge or could not verify. When unsure: review.
+
             FINISH by writing /tmp/claude-fix-summary.md: one bullet per finding
             with what you changed and why (file paths), and a final
             "Not fixed" list for anything you left alone and the reason.
 
-      - name: Commit to a branch and open a PR
+      # Mechanical check on Claude's "easy" call — the bot never self-certifies.
+      - name: Easy-fix gate
+        id: tier
         if: steps.gate.outputs.run == 'true'
+        run: |
+          echo "easy=false" >> "$GITHUB_OUTPUT"
+          git checkout -- scripts/source-baselines.json 2>/dev/null || true
+          rm -f content-review-findings.log content-review-findings.json content-review-actionable.log
+          TIER=$(tr -d '[:space:]' < /tmp/claude-fix-tier.txt 2>/dev/null || echo review)
+          [ "$TIER" = "easy" ] || { echo "Claude rated this batch '$TIER' → PR."; exit 0; }
+          NEW=$(git ls-files --others --exclude-standard | grep -v '^review-logs/' || true)
+          [ -z "$NEW" ] || { echo "New files added → PR: $NEW"; exit 0; }
+          CHANGED=$(git diff --name-only)
+          [ -n "$CHANGED" ] || { echo "No changes."; exit 0; }
+          BAD=$(echo "$CHANGED" | grep -vE '^(data/[^/]+\.json|js/gov-helpers\.js|js/gov-data\.js)$' || true)
+          [ -z "$BAD" ] || { echo "Touches more than content data → PR: $BAD"; exit 0; }
+          LINES=$(git diff --numstat | awk '{n+=$1+$2} END {print n+0}')
+          [ "$LINES" -le 60 ] || { echo "Diff is $LINES lines (limit 60) → PR."; exit 0; }
+          node --check js/gov-helpers.js && node --check js/gov-data.js || { echo "Syntax check failed → PR."; exit 0; }
+          for j in $(echo "$CHANGED" | grep '^data/' || true); do
+            node -e "JSON.parse(require('fs').readFileSync(process.argv[1],'utf8'))" "$j" || { echo "$j is not valid JSON → PR."; exit 0; }
+          done
+          # Mirrors must already be in sync: re-running mirror-json may not change anything new.
+          node scripts/mirror-json.js >/dev/null 2>&1 || { echo "mirror-json failed → PR."; exit 0; }
+          [ "$(git diff --name-only)" = "$CHANGED" ] || { echo "JSON mirrors were out of sync → PR."; git checkout -- $(git diff --name-only | grep -vxF "$CHANGED"); exit 0; }
+          (cd scripts && npm ci --silent >/dev/null 2>&1 && npm test --silent >/dev/null 2>&1) || { echo "Unit tests failed → PR."; exit 0; }
+          git checkout -- scripts/source-baselines.json 2>/dev/null || true
+          echo "Easy fix: $(echo "$CHANGED" | wc -l | tr -d ' ') file(s), $LINES lines — passes every check."
+          echo "easy=true" >> "$GITHUB_OUTPUT"
+
+      - name: Apply easy fixes to main
+        if: steps.gate.outputs.run == 'true' && steps.tier.outputs.easy == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_TITLE: '🧭 Daily content review findings'
+        run: |
+          set -e
+          git config user.name  "Gov Hub Bot"
+          git config user.email "bot@livabletelluride.org"
+          git add -A -- . ':!review-logs' ':!scripts/node_modules'
+          git commit -m "Content review easy fixes $(date -u +%F) (Claude, auto-applied)" -m "$(cat /tmp/claude-fix-summary.md 2>/dev/null || echo 'No summary written.')"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          SHA=$(git rev-parse --short HEAD)
+          NUM=$(gh issue list --state open --search "$ISSUE_TITLE in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$NUM" ]; then
+            gh issue comment "$NUM" --body "$(printf '🤖 Claude applied easy fixes directly (commit %s). Revert that commit to undo.\n\n%s' "$SHA" "$(cat /tmp/claude-fix-summary.md 2>/dev/null)")"
+          fi
+
+      - name: Commit to a branch and open a PR
+        if: steps.gate.outputs.run == 'true' && steps.tier.outputs.easy != 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_TITLE: '🧭 Daily content review findings'
