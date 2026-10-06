@@ -1,16 +1,5 @@
 [
   {
-    "title": "West End Trail Running",
-    "link": "https://koto.org/event/west-end-trail-running/2026-10-06/",
-    "description": "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens & adults 15 and older are welcome to participate. Contact director Alicia O'Connel at montrosewestrec@gmail.com or text her at 302-690-0160 for more information, including a nominal registration fee.",
-    "pubDate": "2026-10-06T08:15:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "",
-    "imageUrl": ""
-  },
-  {
     "title": "Bardic Trails Online Poetry Night",
     "link": "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-10-06/",
     "description": "The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit to get the zoom link each month, Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. Jan. 6 / Euro-American poet Dane Cervine of California Feb. …",
@@ -31,6 +20,17 @@
     "category": "Community Event",
     "location": "Patagonia Telluride, Telluride Retail",
     "imageUrl": "https://koto.org/wp-content/uploads/2026/09/Stoke-the-VOTE-final-flyer.png"
+  },
+  {
+    "title": "Banned Book BINGO at the Stronghouse",
+    "link": "https://koto.org/event/banned-book-bingo-at-the-stronghouse/",
+    "description": "It’s Banned Book Week, and the Wilkinson Public Library is celebrating the Freedom to Read at the Stronghouse Brew Pub on Wednesday at 5:30pm with a free BINGO night! Come early to grab a seat and a bite to eat. We’ll have banned books and WPL merch as prizes. Come solo or bring your friends. Hope to see you there!",
+    "pubDate": "2026-10-07T17:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Stronghouse Brewpub, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/BINGO.jpg"
   },
   {
     "title": "Tellluride Rotary Club Meeting",
@@ -112,7 +112,7 @@
   {
     "title": "Ridgway Farmer's Market",
     "link": "https://koto.org/event/ridgway-farmers-market/2026-10-09/",
-    "description": "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday",
+    "description": "The Ridgway Farmers Market is a weekly Friday outdoor market held at Hartwell Park in downtown Ridgway, running from late May through mid-October, 10 a.m. to 2 p.m. The market features local produce, artisan vendors, and live music on the last Friday of each month.",
     "pubDate": "2026-10-09T10:00:00-06:00",
     "source": "koto",
     "sourceLabel": "KOTO",
@@ -288,7 +288,7 @@
   {
     "title": "Ridgway Farmer's Market",
     "link": "https://koto.org/event/ridgway-farmers-market/2026-10-16/",
-    "description": "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday",
+    "description": "The Ridgway Farmer's Market returns to Hartwell Park in downtown Ridgway for its final market of the season, running from 10 a.m. to 2 p.m. The weekly Friday market features local produce, artisan vendors, and live music.",
     "pubDate": "2026-10-16T10:00:00-06:00",
     "source": "koto",
     "sourceLabel": "KOTO",
@@ -299,7 +299,7 @@
   {
     "title": "9th annual Love Your Gorge",
     "link": "https://koto.org/event/9th-annual-love-your-gorge/",
-    "description": "Love Your Gorge volunteer event with lunch, giveaways and raffle, Ouray Ice Park, organized by Uncompahgre Watershed Partnership and Ouray Ice Park with funding support from City of Ouray, Alpine Bank, Ouray Grocery, and Ouray Brewery. Info & signup: https://www.uncompahgrewatershed.org/love-your-gorge-volunteer-form/",
+    "description": "Love Your Gorge is an annual volunteer event at the Ouray Ice Park, organized by the Uncompahgre Watershed Partnership and Ouray Ice Park, with support from local sponsors including the City of Ouray, Alpine Bank, Ouray Grocery, and Ouray Brewery. Now in its ninth year, the community gathering includes lunch, giveaways, and a raffle for participants.",
     "pubDate": "2026-10-17T09:00:00-06:00",
     "source": "koto",
     "sourceLabel": "KOTO",
@@ -321,7 +321,7 @@
   {
     "title": "Telluride Mountain School Open House",
     "link": "https://koto.org/event/telluride-mountain-school-open-house/",
-    "description": "School In Action Open House! Come experience what learning looks like at Telluride Mountain School. Instead of a presentation about our school, step into the learning. Visit classrooms, meet teachers and students, explore our campus, and see firsthand how curiosity, connection, and real-world experiences shape the TMS experience. Come see: Learning in action – inquiry, hands-on projects, and interdisciplinary exploration Students known and supported – small classes and meaningful relationships School without walls – place-based and outdoor learning woven throughout the experience The TMS difference – a Preschool-8 education designed to cultivate confident, curious, capable learners Our community – meet the people who make TMS such a special place to learn",
+    "description": "Telluride Mountain School is hosting an open house where visitors can step directly into the learning environment rather than sit through a formal presentation. Guests are invited to visit classrooms, meet teachers and students, and explore the campus to see the school's hands-on, curiosity-driven approach to education in action.",
     "pubDate": "2026-10-20T09:00:00-06:00",
     "source": "koto",
     "sourceLabel": "KOTO",
@@ -409,7 +409,7 @@
   {
     "title": "Blood Drive hosted by Telluride Fire & Vitalant",
     "link": "https://koto.org/event/blood-drive-hosted-by-telluride-fire-vitalant/",
-    "description": "Blood Drive hosted by Telluride Fire & Vitalant Tuesday, October 27 10:45 AM – 2:30 PM Telluride Fire Station 1 – 131 W Columbia Ave, Telluride Sign up to donate at vitalant.org",
+    "description": "Telluride Fire and Vitalant are hosting a blood drive at Telluride Fire Station 1 on Tuesday, October 27, running from 10:45 AM to 2:30 PM. Community members can sign up to donate at vitalant.org.",
     "pubDate": "2026-10-27T10:45:00-06:00",
     "source": "koto",
     "sourceLabel": "KOTO",
@@ -420,7 +420,7 @@
   {
     "title": "Social Media for Nonprofits: Myth-Busting, Strategy & Practical Tips for Making Social Media Work for You",
     "link": "https://koto.org/event/social-media-for-nonprofits-myth-busting-strategy-practical-tips-for-making-social-media-work-for-you/",
-    "description": "Social media can be a valuable tool for nonprofits, but there’s also a lot of pressure and misinformation about how to use it effectively. With changing algorithms, constant trends, and the expectation to post regularly, it can be difficult to know what really matters. This workshop will bust common social media myths, explore how these platforms can serve nonprofits differently than businesses, and share practical strategies for using social media as a tool for connection, storytelling, and community engagement without adding unnecessary pressure to your organization. Led by: Malarie Clark, Director of Marketing & Communications, Ah Haa School for the Arts & Shae LaPlace, Programming & Communications Manager, TMVOA Held at the Wilkinson Public Library Program Room -or- via Zoom Please register: https://forms.gle/BXfpSayGbNXPQDy2A",
+    "description": "A workshop at Wilkinson Public Library addressing social media strategies for nonprofits, cutting through common myths and misconceptions about algorithms, posting frequency, and trends. The session aims to offer practical, grounded guidance on what actually matters when using social media effectively in a nonprofit context.",
     "pubDate": "2026-10-27T11:00:00-06:00",
     "source": "koto",
     "sourceLabel": "KOTO",
@@ -526,16 +526,5 @@
     "category": "Community Event",
     "location": "The Alibi, Telluride",
     "imageUrl": "https://koto.org/wp-content/uploads/2026/10/KOTO-Halloween-RADO-poster-9.23-1-scaled.jpg"
-  },
-  {
-    "title": "Tea and Tarot",
-    "link": "https://koto.org/event/tea-and-tarot/2026-11-01/",
-    "description": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    "pubDate": "2026-11-01T14:30:00-07:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   }
 ]

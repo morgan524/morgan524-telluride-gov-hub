@@ -470,7 +470,7 @@
   "telluride|2026-10-21|Historic & Architectural Review Commission - Oct 21 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024",
     "sv": 4,
-    "ph": "0ac507ef16d61e15"
+    "ph": "0edc39a9264b1248"
   },
   "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083",
@@ -613,5 +613,9 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054",
     "sv": 4,
     "ph": "04f76b11b9fb29bf"
+  },
+  "telluride|2026-10-21|CANCELED - Historic & Architectural Review Commission Chair - Oct 21 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8025",
+    "sv": 4
   }
 }
