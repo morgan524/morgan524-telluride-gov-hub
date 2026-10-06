@@ -1,16 +1,5 @@
 [
   {
-    "title": "Telluride Leadership Summit",
-    "link": "https://koto.org/event/telluride-leadership-summit/",
-    "description": "A multi-day leadership summit hosted by Leadership Landing, running October 4–6 at the Madeline Hotel in Telluride. Full program details and registration information are available at TellurideLeadershipSummit.com.",
-    "pubDate": "2026-10-04T00:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/09/Picture1.jpg"
-  },
-  {
     "title": "West End Trail Running",
     "link": "https://koto.org/event/west-end-trail-running/2026-10-06/",
     "description": "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens & adults 15 and older are welcome to participate. Contact director Alicia O'Connel at montrosewestrec@gmail.com or text her at 302-690-0160 for more information, including a nominal registration fee.",
@@ -493,5 +482,60 @@
     "category": "Community Event",
     "location": "Michael D. Palm Theater, Telluride",
     "imageUrl": "https://koto.org/wp-content/uploads/2026/10/YF-thundertix.png"
+  },
+  {
+    "title": "Up-off Gymnastics, Dance, and Spanish",
+    "link": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-10-30/",
+    "description": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    "pubDate": "2026-10-30T10:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Lone Cone Library Norwood",
+    "imageUrl": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    "title": "YOUNG FRANKENSTEIN – THE MUSICAL (a TMHS & Telluride Theatre Co-Production)",
+    "link": "https://koto.org/event/young-frankenstein-the-musical-a-tmhs-telluride-theatre-co-production/2026-10-30/",
+    "description": "It's okay to LAUGH during spooky season&#8230; we invite you to join us for Mel Brooks' classic comedy: YOUNG FRANKENSTEIN – THE MUSICAL! Based on the film starring Gene Wilder, this musical pokes fun at Mary Shelly's \"Frankenstein,\" along with other classic monster movies. This production is performed and designed by our very own students at Telluride Middle-High School, under the mentorship of Telluride Theatre and the R-1 School District. Grandson of the infamous Victor Frankenstein, Frederick Frankenstein (pronounced \"Fronk-en-steen\") inherits his family's estate in Transylvania. With the help of a hunchbacked sidekick, Igor, and a yodeling lab assistant, Inga, Frederick finds himself in the mad scientist shoes of his ancestors. \"It's alive!\" he exclaims as he brings to life a creature to rival his grandfather's. Eventually, of course, the monster escapes, and hilarity ensues. Have a laugh this Halloween & support our local students. Costumes encouraged! …",
+    "pubDate": "2026-10-30T18:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Michael D. Palm Theater, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/YF-thundertix.png"
+  },
+  {
+    "title": "YOUNG FRANKENSTEIN – THE MUSICAL (a TMHS & Telluride Theatre Co-Production)",
+    "link": "https://koto.org/event/young-frankenstein-the-musical-a-tmhs-telluride-theatre-co-production/2026-10-31/",
+    "description": "It's okay to LAUGH during spooky season&#8230; we invite you to join us for Mel Brooks' classic comedy: YOUNG FRANKENSTEIN – THE MUSICAL! Based on the film starring Gene Wilder, this musical pokes fun at Mary Shelly's \"Frankenstein,\" along with other classic monster movies. This production is performed and designed by our very own students at Telluride Middle-High School, under the mentorship of Telluride Theatre and the R-1 School District. Grandson of the infamous Victor Frankenstein, Frederick Frankenstein (pronounced \"Fronk-en-steen\") inherits his family's estate in Transylvania. With the help of a hunchbacked sidekick, Igor, and a yodeling lab assistant, Inga, Frederick finds himself in the mad scientist shoes of his ancestors. \"It's alive!\" he exclaims as he brings to life a creature to rival his grandfather's. Eventually, of course, the monster escapes, and hilarity ensues. Have a laugh this Halloween & support our local students. Costumes encouraged! …",
+    "pubDate": "2026-10-31T14:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Michael D. Palm Theater, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/YF-thundertix.png"
+  },
+  {
+    "title": "KOTO Halloween Bash",
+    "link": "https://koto.org/event/koto-halloween-bash/",
+    "description": "It's spooky season and that means it's time for the greatest off-season tradition in Telluride history – THE KOTO HALLOWEEN BASH! This year, we're letting our freak flags fly at The Alibi on Saturday, October 31st! Live music from Rado starts at 9 p.m. Costume Contest with cash prizes! Tickets are $20 in advance at alibitelluride.com and $25 at the door.",
+    "pubDate": "2026-10-31T21:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "The Alibi, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/KOTO-Halloween-RADO-poster-9.23-1-scaled.jpg"
+  },
+  {
+    "title": "Tea and Tarot",
+    "link": "https://koto.org/event/tea-and-tarot/2026-11-01/",
+    "description": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    "pubDate": "2026-11-01T14:30:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   }
 ]

@@ -1,38 +1,22 @@
 {
-  "hash": "14e7a44d02acc1b04a475f16fcf0a96c6a1ef558",
-  "lede": "The biggest thing on the calendar this week is the joint Ouray County-City of Telluride Town Council session Tuesday, where a public hearing opens on extending a development vesting period — and separately, Ouray City and County sit down together Monday to work through a proposed intergovernmental agreement that would hand full law enforcement for the City over to the County Sheriff starting January 1, 2027, with public comment scheduled at 5:00 PM. San Miguel County's BOCC and Planning Commission also have public hearings on affordable housing fees and a code update, and Mountain Village spends all day Wednesday on its 2027 budget.",
+  "hash": "3434d6e927e106c05b9c36e4e19f7f9fa151ff59",
+  "lede": "The biggest thing on the boards this week is a public hearing at the San Miguel County BOCC on whether to waive land use fees for Mountain Village's Ilium Valley affordable housing project — a real signal of how much the county is willing to put behind housing, not just talk about it. Telluride Town Council also holds a public hearing Tuesday on a vesting period extension and takes up the Flock Safety license plate reader system in a morning work session. Meanwhile, both Mountain Village and the county are deep in 2027 budget season, and the San Miguel County Planning Commission spends Thursday in a joint session with the BOCC on an affordable housing code update.",
   "notable": [
     {
-      "id": 1,
-      "stake": "Public comment open on county taking over Ouray City law enforcement Jan. 2027."
-    },
-    {
-      "id": 2,
-      "stake": "Ouray City residents can weigh in on dissolving their own police department."
-    },
-    {
-      "id": 3,
-      "stake": "2027 budget introduced; council takes action items affecting city services."
-    },
-    {
-      "id": 4,
-      "stake": "Public hearing on development vesting extension; ALPR surveillance cameras discussed."
+      "id": 0,
+      "stake": "Public hearing on vesting extension; ALPR camera system up for scrutiny."
     },
     {
       "id": 6,
-      "stake": "Mountain Village shapes its entire 2027 budget before formal adoption."
+      "stake": "Public hearing on fee waivers for Ilium Valley affordable housing project."
     },
     {
-      "id": 10,
-      "stake": "Public hearings on affordable housing fee waiver and land adjustments in county."
+      "id": 9,
+      "stake": "Joint BOCC session on affordable housing code update shapes county policy."
     },
     {
-      "id": 11,
-      "stake": "Land use code definitions under review — early stage shapes future zoning rules."
-    },
-    {
-      "id": 13,
-      "stake": "Joint BOCC-Planning session on Affordable Housing Code Update; public input likely."
+      "id": 5,
+      "stake": "Vote on mortgage exception affecting a deed-restricted homeowner's rights."
     }
   ]
 }

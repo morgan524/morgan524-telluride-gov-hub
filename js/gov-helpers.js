@@ -408,7 +408,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8106","sv":4,"ph":"3ad5aa7f9ebe51be"},
 
   "telluride|2026-10-22|Planning & Zoning Commission Chair - Oct 22 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8105","sv":4,"ph":"d0e0554de56351fb"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8105","sv":4,"ph":"49c78abecdeebb31"},
 
   "county|2026-10-22|Board of Adjustment Meeting":
     {"sv":4,"ph":"9fed4623122d2e3a"},
@@ -745,9 +745,6 @@ const DAILY_QUESTIONS = [
 // target, and these seeds let the data start landing again. No page renders
 // them yet — restoring (or retiring) the reader UIs is tracked separately.
 const MEETING_PREVIEWS = {
-  "telluride|2026-10-06|Town Council - Oct 06 2026":
-    "Council is expected to discuss matters related to the Colorado Wildfire Resiliency Code amendment to Telluride's Land Use Code (Ordinance #1640), which was previously passed in August 2026 to update Chapter 18 of the Municipal Code with new wildfire resiliency standards.",
-
   "telluride|2026-10-07|Ecology Commission - Oct 07 2026":
     "The Ecology Commission is expected to discuss human-wildlife interactions and related public safety concerns. The meeting may also address the recently passed Ordinance #1640, which amended Telluride's Land Use Code to implement the Colorado Wildfire Resiliency Code, reflecting the town's broader environmental and ecological priorities.",
 
@@ -811,9 +808,6 @@ const MEETING_PREVIEWS = {
   "ouray|2026-10-07|PM - Note: to be held at the 4-H Event Center! The PC will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (packet materials are attached to the agenda)":
     "The Planning Commission is expected to hold a work session to review and discuss possible changes to the Ouray County Land Use Code, specifically Section 2, which covers definitions. The meeting will be held at the 4-H Event Center on October 7, 2026.",
 
-  "ouray|2026-10-06|Board of County Commissioners Special Work Session":
-    "Commissioners are expected to discuss the 2027 county budget, with a focus on the Sheriff's Office and broader budget considerations. No formal action will be taken, but commissioners may provide direction to staff on budgetary matters for future action.",
-
   "mv|2026-10-07|Town Council Meeting":
     "Council is expected to review the 2027 budget during a special session, covering general fund revenues, administration, capital planning, public safety, child development, economic development, tourism, transportation, parking, gondola services, and community grants.",
 
@@ -829,17 +823,14 @@ const MEETING_PREVIEWS = {
   "county|2026-11-04|Board of County Commissioners Meeting":
     "Board will consider procurement matters including material hauling, trail construction, fuel island canopy, jail painting, and a multi-jurisdictional hazard mitigation plan update. Related legal notices include a probate matter for the estate of Lawrence de Bivort and foreclosure proceedings for a Telluride condominium unit.",
 
+  "telluride|2026-10-06|Town Council - Oct 06 2026":
+    "Council is expected to discuss the potential use of Automated License Plate Reader (ALPR) cameras and a partnership with Flock Safety, led by Chief Marshal Josh Comte. The meeting will be held as a hybrid session at Rebekah Hall, with public comment accepted on non-agenda items.",
+
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026":
-    "The Open Space Commission is expected to discuss the 2027 Town of Telluride budget, review the first phase of Valley Floor signage implementation and next steps, and debrief on a site walk related to the Bear Creek Preserve Zone 1 Restoration Plan.",
+    "The Open Space Commission is expected to discuss the 2027 Town of Telluride budget, review the first phase of Valley Floor signage implementation, and debrief on a site walk related to the Bear Creek Preserve Zone 1 Restoration Plan.",
 
-  "ouray|2026-10-05|Board of County Commissioners Special Joint Work Session":
-    "The Ouray County Board of County Commissioners and Ouray City Council will jointly discuss a draft Intergovernmental Agreement under which the County would provide full law enforcement services to the City beginning January 1, 2027, including reviewing a proposed compensation schedule.",
-
-  "ouraycity|2026-10-05|Ouray City Council Work Session":
-    "Council is expected to discuss a proposed intergovernmental agreement with the Ouray County Sheriff for full law enforcement services, including a review of estimated costs. The session will include presentations, public comment, and joint deliberations with county commissioners to determine next steps.",
-
-  "ouraycity|2026-10-05|Ouray City Council Regular Meeting":
-    "Council is expected to receive a final report on the city's 150th celebration, review a South Ouray erosion control project, and discuss the proposed 2027 budget. Action items include amendments to a CDOT agreement tied to the Main Street revitalization project and authorization to publish a budget notice."
+  "ouray|2026-10-06|Board of County Commissioners Special Work Session":
+    "Commissioners are expected to discuss the 2027 budget during this work session, with focus on the Sheriff's Office budget and broader budget deliberations. No formal action will be taken, but commissioners may provide direction to staff on budgetary matters ahead of future formal decisions."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -3463,30 +3454,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "‘A reflection of place’",
-    source: "Telluride Times",
-    date: "September 22, 2026",
-    firstSeen: "2026-09-22",
-    newsTopic: "arts-culture",
-    copy: "Telluride artist Brooke Einbender's interactive installation *Gaiascope* — three mirrored, kaleidoscopic sculptures filled with locally inspired video art — is up at Heritage Plaza through around Oct. 23. Viewers can adjust colors and patterns from a pad outside each chamber; best seen lit up at night. The piece previously showed at the San Jose World Cup before landing here in the San Juans.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_1e344649-7938-4755-ba52-0c0e859a9553.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/f2/5f2b2227-5a1a-43d9-a863-93c4e98a1f5c/6ab247a3a9fe4.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "County commissioners make November ballot measure recommendations",
-    source: "Telluride Times",
-    date: "September 22, 2026",
-    firstSeen: "2026-09-22",
-    newsTopic: "government",
-    copy: "San Miguel County commissioners reviewed 15 November ballot measures at their September meetings and issued formal recommendations on each. They supported Amendment 87 (graduated income tax) and opposed several Advance Colorado-backed initiatives, including measures on natural gas rights, immigration enforcement, mail ballot ID requirements, and congressional redistricting. The R-1 school district question is also on the ballot.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_abf6f7ea-c0d4-42d5-9f95-07606fc94bef.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/9f/79f9455e-8fa9-4356-bc76-d49a0106e719/6ab02a46c4d5a.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride to Lift All Fire Restrictions",
     source: "Town of Telluride",
     date: "September 17, 2026",
@@ -3679,7 +3646,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "October 5, 2026",
+    date: "October 6, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3690,7 +3657,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "October 5, 2026",
+    date: "October 6, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3708,21 +3675,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Clinton-road-work-9-23-2026.pdf",
     img: ""
-  },
-  {
-    title: "Ridgway Reminds Property Owners about Backflow Prevention and Cross Connection Control",
-    source: "Town of Ridgway",
-    date: "September 22, 2026",
-    firstSeen: "2026-09-29",
-    newsTopic: "community",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Backflow-Testing-Reminder-Press-Release-2026-09-22.pdf",
-    img: ""
   }
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 10-5-26",
+    source: "KOTO Community Radio",
+    date: "October 6, 2026",
+    newsTopic: "housing",
+    copy: "County Talks Housing Fees; Coming Up Next, Telluride",
+    href: "https://koto.org/news/newscast-10-5-26/"
+  },
   {
     title: "Newscast 10-2-26",
     source: "KOTO Community Radio",
@@ -3778,14 +3742,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "housing",
     copy: "A Telluride Rental Housing Update; County Endorses Lawson Hill Connector Trail; The Wonderment Marvels in the Ordinary",
     href: "https://koto.org/news/newscast-9-23-26/"
-  },
-  {
-    title: "Newscast 9-21-26",
-    source: "KOTO Community Radio",
-    date: "September 22, 2026",
-    newsTopic: "community",
-    copy: "Coming Up Next, Telluride; Yom Kippur Brings Atonement and Remembrance",
-    href: "https://koto.org/news/newscast-9-21-26/"
   }
 ];
 
@@ -4292,17 +4248,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Telluride Leadership Summit",
-    link: "https://koto.org/event/telluride-leadership-summit/",
-    description: "A multi-day leadership summit hosted by Leadership Landing, running October 4–6 at the Madeline Hotel in Telluride. Full program details and registration information are available at TellurideLeadershipSummit.com.",
-    pubDate: "2026-10-04T00:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/09/Picture1.jpg"
-  },
-  {
     title: "West End Trail Running",
     link: "https://koto.org/event/west-end-trail-running/2026-10-06/",
     description: "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens & adults 15 and older are welcome to participate. Contact director Alicia O'Connel at montrosewestrec@gmail.com or text her at 302-690-0160 for more information, including a nominal registration fee.",
@@ -4785,6 +4730,61 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Michael D. Palm Theater, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2026/10/YF-thundertix.png"
+  },
+  {
+    title: "Up-off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-10-30/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-10-30T10:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "YOUNG FRANKENSTEIN – THE MUSICAL (a TMHS & Telluride Theatre Co-Production)",
+    link: "https://koto.org/event/young-frankenstein-the-musical-a-tmhs-telluride-theatre-co-production/2026-10-30/",
+    description: "It's okay to LAUGH during spooky season&#8230; we invite you to join us for Mel Brooks' classic comedy: YOUNG FRANKENSTEIN – THE MUSICAL! Based on the film starring Gene Wilder, this musical pokes fun at Mary Shelly's \"Frankenstein,\" along with other classic monster movies. This production is performed and designed by our very own students at Telluride Middle-High School, under the mentorship of Telluride Theatre and the R-1 School District. Grandson of the infamous Victor Frankenstein, Frederick Frankenstein (pronounced \"Fronk-en-steen\") inherits his family's estate in Transylvania. With the help of a hunchbacked sidekick, Igor, and a yodeling lab assistant, Inga, Frederick finds himself in the mad scientist shoes of his ancestors. \"It's alive!\" he exclaims as he brings to life a creature to rival his grandfather's. Eventually, of course, the monster escapes, and hilarity ensues. Have a laugh this Halloween & support our local students. Costumes encouraged! …",
+    pubDate: "2026-10-30T18:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Michael D. Palm Theater, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/YF-thundertix.png"
+  },
+  {
+    title: "YOUNG FRANKENSTEIN – THE MUSICAL (a TMHS & Telluride Theatre Co-Production)",
+    link: "https://koto.org/event/young-frankenstein-the-musical-a-tmhs-telluride-theatre-co-production/2026-10-31/",
+    description: "It's okay to LAUGH during spooky season&#8230; we invite you to join us for Mel Brooks' classic comedy: YOUNG FRANKENSTEIN – THE MUSICAL! Based on the film starring Gene Wilder, this musical pokes fun at Mary Shelly's \"Frankenstein,\" along with other classic monster movies. This production is performed and designed by our very own students at Telluride Middle-High School, under the mentorship of Telluride Theatre and the R-1 School District. Grandson of the infamous Victor Frankenstein, Frederick Frankenstein (pronounced \"Fronk-en-steen\") inherits his family's estate in Transylvania. With the help of a hunchbacked sidekick, Igor, and a yodeling lab assistant, Inga, Frederick finds himself in the mad scientist shoes of his ancestors. \"It's alive!\" he exclaims as he brings to life a creature to rival his grandfather's. Eventually, of course, the monster escapes, and hilarity ensues. Have a laugh this Halloween & support our local students. Costumes encouraged! …",
+    pubDate: "2026-10-31T14:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Michael D. Palm Theater, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/YF-thundertix.png"
+  },
+  {
+    title: "KOTO Halloween Bash",
+    link: "https://koto.org/event/koto-halloween-bash/",
+    description: "It's spooky season and that means it's time for the greatest off-season tradition in Telluride history – THE KOTO HALLOWEEN BASH! This year, we're letting our freak flags fly at The Alibi on Saturday, October 31st! Live music from Rado starts at 9 p.m. Costume Contest with cash prizes! Tickets are $20 in advance at alibitelluride.com and $25 at the door.",
+    pubDate: "2026-10-31T21:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "The Alibi, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/KOTO-Halloween-RADO-poster-9.23-1-scaled.jpg"
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://koto.org/event/tea-and-tarot/2026-11-01/",
+    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    pubDate: "2026-11-01T14:30:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   }
 ];
 
@@ -5734,6 +5734,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54035246928726/huge/df8435a1f9605f9b27f285c37e3bb1d44a375465.jpg"
   },
   {
+    title: "The Life of a Ballot-What Happens After You Turn in Your Ballot",
+    link: "https://events.ourayridgwayevents.com/event/the-life-of-a-ballot-what-happens-after-you-turn-in-your-ballot",
+    description: "Overview of the Ouray County Voting Process from mailing, collecting, verifying, counting to auditing.",
+    pubDate: "2026-10-15T21:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray County Fairgrounds and 4H Events Center",
+    imageUrl: "https://localist-images.azureedge.net/photos/54162788961427/huge/628421ef90b3752edd42c5eb9d25b0edbc85c798.jpg"
+  },
+  {
     title: "Ouray High School Volleyball vs Dove Creek",
     link: "https://events.ourayridgwayevents.com/event/ouray-high-school-volleyball-vs-dove-creek",
     description: "Ouray High School hosts Dove Creek for a home volleyball matchup at Ouray School, with junior varsity taking the court first followed by the varsity squad. It's a chance for the community to cheer on the local team in what promises to be a competitive evening of high school athletics.",
@@ -6223,6 +6234,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/first-friday-art-walk",
     description: "A monthly community art walk through downtown Ridgway, where local galleries, studios, shops, and gathering spaces open their doors for new exhibitions, artist receptions, live music, and pop-up programming. Each edition offers a different mix of art and activity from the area's creative community.",
     pubDate: "2026-11-07T00:00:00.000Z",
+    endDate: "2026-12-05",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6234,6 +6246,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/first-friday-at-rootwings-art-1540",
     description: "Rootwings Art will be open for Ridgway's First Friday Art Walk, featuring local ceramic sculptures and large vessels by artist Andy Nasisse, original oils by Emma Kalff, Bruce Backer's Ravens & Crows, Taos artist Fred Burns fantasy nudes and one of a kind jewelry and ceramics by Vanessa Backer.",
     pubDate: "2026-11-07T00:00:00.000Z",
+    endDate: "2026-12-05",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6474,6 +6487,28 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Floating Lotus Brewery",
     imageUrl: "https://localist-images.azureedge.net/photos/51579855188578/huge/de5019ffbfacf4a9f5e85d8a14961584c70e7873.jpg"
+  },
+  {
+    title: "23rd Annual Holiday Art & Gift Sale",
+    link: "https://events.ourayridgwayevents.com/event/23rd-annual-holiday-art-gift-sale",
+    description: "The 23rd Annual Holiday Art & Gift Sale returns to the Decker Community Room, offering handmade work from local artisans and craftspeople. This long-running community tradition provides an opportunity to find one-of-a-kind, locally made gifts during the holiday season.",
+    pubDate: "2026-12-05T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/54139018107075/huge/dc77ec311ce3e3367f9e9d6c47ed459172ad9558.jpg"
+  },
+  {
+    title: "Noel Night Gift to the Community! THE HIP SNACKS",
+    link: "https://events.ourayridgwayevents.com/event/noel-night-gift-to-the-community-the-hip-snacks",
+    description: "Doors open at 8:00 PM; music begins at 8:30 PM. The Sherbino’s annual Noel Night gift to the community features Denver rock-n-soul band The Hip Snacks for a free, high-energy evening of live music. Admission is free, with donations gratefully accepted to support Sherbino programming.",
+    pubDate: "2026-12-05T03:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/54066526309790/huge/ff0b5de590db048d92f439a0e7d952640d0c3de9.jpg"
   }
 ];
 
@@ -7042,17 +7077,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/63023/summit_one_pager.800x533.webp"
-  },
-  {
-    title: "Build Your Own Kaleidoscope",
-    link: "https://www.telluride.com/event/build-your-own-kaleidoscope/",
-    description: "Join Brooke Einbender for a Build Your Own Kaleidoscope Workshop at Tracks in Mountain Village. This is a free event, …",
-    pubDate: "2026-10-04",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63682/screenshot_2026-09-29_at_8_16_46_pm.800x533.webp"
   },
   {
     title: "Stoke the Vote",
@@ -9162,16 +9186,6 @@ function getTownAgendaLink(title, eventDate) {
 // MeetingsService (HARC stays in TELLURIDE_CACHED_DATA above). Empty until the
 // next content-refresh run. Each entry: {date,title,agendaUrl,hasAgenda,location,time}.
 const TELLURIDE_BOARD_MEETINGS = [
-  {
-    date: "October 5, 2026",
-    title: "Open Space Commission",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132",
-    hasAgenda: true,
-    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: "4:00 PM",
-    civicwebId: 8132,
-    packetUrl: "https://telluride-co.civicweb.net/document/445813/"
-  },
   {
     date: "October 6, 2026",
     title: "Town Council",

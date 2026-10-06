@@ -478,6 +478,17 @@
     "imageUrl": "https://localist-images.azureedge.net/photos/54035246928726/huge/df8435a1f9605f9b27f285c37e3bb1d44a375465.jpg"
   },
   {
+    "title": "The Life of a Ballot-What Happens After You Turn in Your Ballot",
+    "link": "https://events.ourayridgwayevents.com/event/the-life-of-a-ballot-what-happens-after-you-turn-in-your-ballot",
+    "description": "Overview of the Ouray County Voting Process from mailing, collecting, verifying, counting to auditing.",
+    "pubDate": "2026-10-15T21:00:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Ouray County Fairgrounds and 4H Events Center",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54162788961427/huge/628421ef90b3752edd42c5eb9d25b0edbc85c798.jpg"
+  },
+  {
     "title": "Ouray High School Volleyball vs Dove Creek",
     "link": "https://events.ourayridgwayevents.com/event/ouray-high-school-volleyball-vs-dove-creek",
     "description": "Ouray High School hosts Dove Creek for a home volleyball matchup at Ouray School, with junior varsity taking the court first followed by the varsity squad. It's a chance for the community to cheer on the local team in what promises to be a competitive evening of high school athletics.",
@@ -967,6 +978,7 @@
     "link": "https://events.ourayridgwayevents.com/event/first-friday-art-walk",
     "description": "A monthly community art walk through downtown Ridgway, where local galleries, studios, shops, and gathering spaces open their doors for new exhibitions, artist receptions, live music, and pop-up programming. Each edition offers a different mix of art and activity from the area's creative community.",
     "pubDate": "2026-11-07T00:00:00.000Z",
+    "endDate": "2026-12-05",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
     "category": "Community Event",
@@ -978,6 +990,7 @@
     "link": "https://events.ourayridgwayevents.com/event/first-friday-at-rootwings-art-1540",
     "description": "Rootwings Art will be open for Ridgway's First Friday Art Walk, featuring local ceramic sculptures and large vessels by artist Andy Nasisse, original oils by Emma Kalff, Bruce Backer's Ravens & Crows, Taos artist Fred Burns fantasy nudes and one of a kind jewelry and ceramics by Vanessa Backer.",
     "pubDate": "2026-11-07T00:00:00.000Z",
+    "endDate": "2026-12-05",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
     "category": "Community Event",
@@ -1218,5 +1231,27 @@
     "category": "Community Event",
     "location": "Floating Lotus Brewery",
     "imageUrl": "https://localist-images.azureedge.net/photos/51579855188578/huge/de5019ffbfacf4a9f5e85d8a14961584c70e7873.jpg"
+  },
+  {
+    "title": "23rd Annual Holiday Art & Gift Sale",
+    "link": "https://events.ourayridgwayevents.com/event/23rd-annual-holiday-art-gift-sale",
+    "description": "The 23rd Annual Holiday Art & Gift Sale returns to the Decker Community Room, offering handmade work from local artisans and craftspeople. This long-running community tradition provides an opportunity to find one-of-a-kind, locally made gifts during the holiday season.",
+    "pubDate": "2026-12-05T00:00:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Decker Community Room",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54139018107075/huge/dc77ec311ce3e3367f9e9d6c47ed459172ad9558.jpg"
+  },
+  {
+    "title": "Noel Night Gift to the Community! THE HIP SNACKS",
+    "link": "https://events.ourayridgwayevents.com/event/noel-night-gift-to-the-community-the-hip-snacks",
+    "description": "Doors open at 8:00 PM; music begins at 8:30 PM. The Sherbino’s annual Noel Night gift to the community features Denver rock-n-soul band The Hip Snacks for a free, high-energy evening of live music. Admission is free, with donations gratefully accepted to support Sherbino programming.",
+    "pubDate": "2026-12-05T03:30:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "The Sherbino",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54066526309790/huge/ff0b5de590db048d92f439a0e7d952640d0c3de9.jpg"
   }
 ]

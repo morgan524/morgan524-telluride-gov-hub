@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 10-5-26",
+    "source": "KOTO Community Radio",
+    "date": "October 6, 2026",
+    "newsTopic": "housing",
+    "copy": "County Talks Housing Fees; Coming Up Next, Telluride",
+    "href": "https://koto.org/news/newscast-10-5-26/"
+  },
+  {
     "title": "Newscast 10-2-26",
     "source": "KOTO Community Radio",
     "date": "October 3, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "housing",
     "copy": "A Telluride Rental Housing Update; County Endorses Lawson Hill Connector Trail; The Wonderment Marvels in the Ordinary",
     "href": "https://koto.org/news/newscast-9-23-26/"
-  },
-  {
-    "title": "Newscast 9-21-26",
-    "source": "KOTO Community Radio",
-    "date": "September 22, 2026",
-    "newsTopic": "community",
-    "copy": "Coming Up Next, Telluride; Yom Kippur Brings Atonement and Remembrance",
-    "href": "https://koto.org/news/newscast-9-21-26/"
   }
 ]
