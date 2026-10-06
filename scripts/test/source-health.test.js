@@ -75,6 +75,18 @@ test('detectStaleData: flags a *_CACHED_DATA list with 0 upcoming, not one with 
     'a list that renders upcoming via a future summary must not be flagged');
 });
 
+test('detectStaleData: a schedule-projecting list is quiet between postings, loud once the scrape stalls', () => {
+  // getOurayCityMeetings() projects Council/PC dates from the published
+  // schedule, so a cached list with no future row still renders upcoming
+  // meetings — until the newest scraped row is old enough to mean BoardBook
+  // stopped being read.
+  const localDate = v => { const d = new Date(v); return isNaN(d) ? null : d; };
+  const run = (newest) => sh.detectStaleData({ OURAY_CITY_CACHED_DATA: [{ date: newest }] }, localDate, '2026-10-06')
+    .filter(f => /0 upcoming meetings/.test(f.message));
+  assert.equal(run('October 5, 2026').length, 0, 'yesterday\'s meeting + projected schedule → not empty');
+  assert.equal(run('August 3, 2026').length, 1, 'two months with no new row → the scrape has stalled');
+});
+
 test('orphan summaries: a _BOARD_MEETINGS row counts as a list row', () => {
   // Telluride's boards do not live in a *_CACHED_DATA array — Town Council is
   // in TELLURIDE_BOARD_MEETINGS. Only scanning _CACHED_DATA reported the Sept 1

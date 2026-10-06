@@ -108,6 +108,19 @@ function detectAnomalies(arrays, baseline) {
 //      summary but no list row" bug class).
 const STALE_DAYS = 30;
 
+// Meeting lists whose getter in js/gov-helpers.js PROJECTS the body's published
+// regular schedule on top of the cached rows, so an array with no upcoming row
+// still renders upcoming meetings. getOurayCityMeetings() adds Council (1st/3rd
+// Monday 6 PM) and Planning Commission (2nd Tuesday 4 PM) until BoardBook posts
+// the real row ~a week ahead — so OURAY_CITY_CACHED_DATA routinely sits with no
+// future row between postings (flagged as "run dry" 2026-10-06 while the page
+// showed Oct 13 / Oct 19 / Nov 2). The exemption only holds while the newest
+// scraped row is recent: the body meets at least twice a month, so a newest row
+// older than PROJECTED_MAX_GAP_DAYS means the scrape itself has stopped and the
+// "run dry" finding fires as before.
+const SCHEDULE_PROJECTED_LISTS = new Set(['OURAY_CITY_CACHED_DATA']);
+const PROJECTED_MAX_GAP_DAYS = 21;
+
 function calDay(localDate, v) {
   const d = localDate ? localDate(v) : null;
   if (!d || isNaN(d)) return null;
@@ -169,6 +182,7 @@ function detectStaleData(captured, localDate, today) {
     if (futureSummaryTokens.has(token)) continue;    // renders upcoming via MANUAL_SUMMARIES
     const newest = days.sort().slice(-1)[0];
     const age = Math.round((todayMs - Date.parse(newest + 'T00:00:00Z')) / 86400000);
+    if (SCHEDULE_PROJECTED_LISTS.has(name) && age <= PROJECTED_MAX_GAP_DAYS) continue; // getter projects the schedule
     out.push({ name, severity: 'High',
       message: `${name}: 0 upcoming meetings — newest entry is ${newest} (${age}d ago). ` +
         `The list has run dry: whatever feeds it (its rebuild in content-refresh.js, or a hand-added ` +

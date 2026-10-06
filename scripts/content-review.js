@@ -601,7 +601,12 @@ async function checkAI(ctx) {
     return d >= -PAST_GRACE_DAYS && d <= AI_LOOKAHEAD_DAYS;
   }).map(r => ({
     kind: r.kind, array: r.array, title: r.title,
-    date: r.rawDate, end: r.endRaw || undefined, source: r.source
+    date: r.rawDate, end: r.endRaw || undefined, source: r.source,
+    // The caveat the site already shows next to a projected meeting date
+    // (e.g. "Projected date falls on Veterans Day…" from assembleBoardStubs).
+    // Without it the reviewer sees a bare meeting on a closed-office holiday
+    // and flags a conflict the page has already disclosed.
+    note: (r.kind === 'meeting' && r.obj && r.obj.note) || undefined
   }));
 
   if (!upcoming.length) { console.log('  ℹ AI pass: no upcoming items in window'); return; }
@@ -620,6 +625,12 @@ async function checkAI(ctx) {
     // own schedule page, so flagging it burns a Medium every single month.
     `Do NOT flag a Board of Education Work Session and a Board of Education regular/monthly meeting ` +
     `sharing a date — that board routinely holds the work session and then the meeting on the same day. ` +
+    // Norwood Board of Trustees on Veterans Day 2026-11-11 (flagged 2026-10-06):
+    // a cadence placeholder, not a published meeting, and the site already
+    // tells readers the board may reschedule. The real date replaces it when
+    // the town posts the agenda.
+    `Do NOT flag a meeting whose "note" says its projected date falls on a holiday — that is a ` +
+    `cadence placeholder the site already labels as possibly rescheduled, even if another feed lists the office as closed that day. ` +
     `Be conservative — no speculation. Return STRICT JSON only, an array of ` +
     `{"severity":"High|Medium|Low","category":"...","item":"<title> (<date>)","problem":"...","suggestedFix":"..."} ` +
     `(empty array [] if nothing is clearly wrong).\n\nDATA:\n` +
