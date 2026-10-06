@@ -27,7 +27,10 @@ const FILE = 'content-corrections.json';
 //   clear-link  — the link 404s; keep the event, drop the dead href
 //   set-link    — the link 404s but a working one is known; point it at newLink
 //   drop-event  — the entry is phantom/cancelled; remove it entirely
-const KINDS = new Set(['event-date', 'clear-link', 'set-link', 'drop-event']);
+//   set-title   — the source's title has a typo; replace it with newTitle.
+//                 Matches on the WRONG title, so it goes inert once the
+//                 source fixes its own spelling.
+const KINDS = new Set(['event-date', 'clear-link', 'set-link', 'drop-event', 'set-title']);
 
 // The semantic identity of a correction — what it does, to which record, on the
 // strength of which evidence. NOT the id: auto-written ids embed the date they
@@ -106,6 +109,7 @@ function applyCorrections(arraysByName, corrections, todayISO) {
 
   for (const c of corrections || []) {
     if (!c || !KINDS.has(c.kind) || !c.array || !c.titleMatch) { skipped.push({ c, why: 'malformed' }); continue; }
+    if (c.kind === 'set-title' && !String(c.newTitle || '').trim()) { skipped.push({ c, why: 'set-title without newTitle' }); continue; }
     if (isExpired(c, todayISO)) continue;                       // pruned separately
     const arr = arrays[c.array];
     if (!arr) { skipped.push({ c, why: `array ${c.array} not loaded` }); continue; }
@@ -132,6 +136,7 @@ function applyCorrections(arraysByName, corrections, todayISO) {
         else out.date = c.correctDate;
         return out;
       }
+      if (c.kind === 'set-title') return { ...r, title: c.newTitle };
       // set-link: the dead href has a known-good replacement.
       if (c.kind === 'set-link') return { ...r, link: c.newLink || '' };
       // clear-link: keep the event, drop the dead href.

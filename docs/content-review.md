@@ -193,7 +193,10 @@ pruned automatically) — a permanent override silently distorts data long after
 the source fixed its mistake, and nobody remembers it exists.
 
 Kinds: `event-date` (rewrite the date), `clear-link` (drop a dead href, **keep
-the event**), `drop-event` (remove a phantom entry).
+the event**), `set-link` (swap a dead href for a known-good one), `drop-event`
+(remove a phantom entry), `set-title` (fix a source's typo in a title —
+`newTitle`; matches on the misspelled title, so it goes inert once the source
+corrects itself).
 
 ### Two tiers
 

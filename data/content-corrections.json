@@ -1,5 +1,5 @@
 {
-  "_comment": "Durable editorial corrections, re-applied on EVERY content refresh (content-refresh.js Task 21d, via scripts/lib/content-corrections.js). They exist because the arrays they fix are re-scraped from scratch every 6 hours, so editing js/gov-helpers.js directly fixes nothing. Rows are written by scripts/content-autofix.js -- deterministic ones automatically, judgment ones via a pull request -- and can be hand-edited or deleted at any time. kind: event-date | clear-link | drop-event. A row matches on array + normalized title + the date the SOURCE currently publishes (wrongDate), so it goes inert the moment the source corrects itself. EVERY ROW EXPIRES: expiresOn is required and pruned automatically, because a permanent override silently distorts data long after the source fixed its own mistake.",
+  "_comment": "Durable editorial corrections, re-applied on EVERY content refresh (content-refresh.js Task 21d, via scripts/lib/content-corrections.js). They exist because the arrays they fix are re-scraped from scratch every 6 hours, so editing js/gov-helpers.js directly fixes nothing. Rows are written by scripts/content-autofix.js -- deterministic ones automatically, judgment ones via a pull request -- and can be hand-edited or deleted at any time. kind: event-date | clear-link | set-link | drop-event | set-title. A row matches on array + normalized title + the date the SOURCE currently publishes (wrongDate), so it goes inert the moment the source corrects itself. EVERY ROW EXPIRES: expiresOn is required and pruned automatically, because a permanent override silently distorts data long after the source fixed its own mistake.",
   "corrections": [
     {
       "id": "deadlink-shabbat-2026-08-16",
@@ -11,6 +11,32 @@
       "addedBy": "content-autofix",
       "addedOn": "2026-08-16",
       "expiresOn": "2026-10-15"
+    },
+    {
+      "id": "typo-tellluride-rotary-2026-10-06",
+      "kind": "set-title",
+      "array": "KOTO_COMMUNITY_EVENTS",
+      "titleMatch": "Tellluride Rotary Club Meeting",
+      "wrongDate": "2026-10-07",
+      "newTitle": "Telluride Rotary Club Meeting",
+      "reason": "KOTO's calendar title has a triple-l typo ('Tellluride'); the event's own description says 'Telluride Rotary Club'.",
+      "evidence": "https://koto.org/event/tellluride-rotary-club-meeting/",
+      "addedBy": "claude-content-review-fix",
+      "addedOn": "2026-10-06",
+      "expiresOn": "2026-11-06"
+    },
+    {
+      "id": "typo-ballor-measure-5a-2026-10-06",
+      "kind": "set-title",
+      "array": "KOTO_COMMUNITY_EVENTS",
+      "titleMatch": "Ballor Measure 5A Information Meeting",
+      "wrongDate": "2026-10-12",
+      "newTitle": "Ballot Measure 5A Information Meeting",
+      "reason": "KOTO's calendar title reads 'Ballor Measure'; the description is about voting yes on ballot measure 5A.",
+      "evidence": "https://koto.org/event/ballor-measure-5a-information-meeting/",
+      "addedBy": "claude-content-review-fix",
+      "addedOn": "2026-10-06",
+      "expiresOn": "2026-11-11"
     }
   ]
 }
