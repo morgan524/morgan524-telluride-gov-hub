@@ -9,16 +9,17 @@ name: Daily Content Review
 # turned into ONE auto-refreshing GitHub issue that auto-closes on a clean run,
 # mirroring the maintenance.yml / content-refresh.yml issue pattern.
 #
-# Runs 1 hour after EACH 6-hour content-refresh (which runs at 0,6,12,18 UTC
-# and completes in ~6-9 min) so every refresh's output gets reviewed, not just
-# the morning's. EXCEPTION-ONLY email: the owner is emailed (info@) only when a
-# finding needs a human decision, evaluated once a day on the 13:00 run — plus a
-# light Monday weekly digest as a paper trail. Auto-fixable issues never become
-# email; content-refresh.js fixes them at the source (sanitizeRecords +
-# filterMvConflicts). The other three runs just keep the GitHub issue current.
+# Runs ONCE a day, early morning, 30 min after the 12:00 UTC content-refresh
+# (6:30 AM MDT / 5:30 AM MST), so any Claude Fix PR is waiting by breakfast.
+# Was 4x/day (after every 6-hour refresh); cut to daily 2026-10-06 to save on
+# the Claude pass (Morgan). EXCEPTION-ONLY email: the owner is emailed (info@)
+# only when a finding needs a human decision — plus a light Monday weekly
+# digest as a paper trail. Auto-fixable issues never become email;
+# content-refresh.js fixes them at the source (sanitizeRecords +
+# filterMvConflicts).
 on:
   schedule:
-    - cron: '0 1,7,13,19 * * *'   # 1h after each content-refresh (00/06/12/18 UTC); 13:00 = morning email run
+    - cron: '30 12 * * *'   # daily 12:30 UTC = 6:30 AM MDT / 5:30 AM MST, after the 12:00 content-refresh
   workflow_dispatch:
 
 permissions:
@@ -78,8 +79,7 @@ jobs:
           exit 0
 
       # EXCEPTION-ONLY email policy. The owner is emailed only when something
-      # needs them. Decision (evaluated once a day, on the 13:00 UTC run or a
-      # manual dispatch — the other three runs just refresh the issue):
+      # needs them. Decision (every run — there is one scheduled run a day):
       #   • action items present (content-review-actionable.log non-empty)
       #       → send an "action needed" email.
       #   • else if Monday → send a light weekly digest (status + paper trail).
@@ -92,11 +92,8 @@ jobs:
         env:
           EVENT_NAME: ${{ github.event_name }}
         run: |
-          HOUR=$(date -u +%H); DOW=$(date -u +%u); NOW=$(date -u +'%Y-%m-%d %H:%M UTC')
+          DOW=$(date -u +%u); NOW=$(date -u +'%Y-%m-%d %H:%M UTC')
           echo "send=false" >> "$GITHUB_OUTPUT"
-          if [ "$HOUR" != "13" ] && [ "$EVENT_NAME" != "workflow_dispatch" ]; then
-            echo "Not the 13:00 decision run ($HOUR:00 UTC) — issue refreshed, no email."; exit 0
-          fi
           ISSUE_LINK=$(printf '<p><a href="%s/%s/issues?q=is%%3Aissue+is%%3Aopen+content+review">Open the findings issue →</a></p>' "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY")
           if [ -s content-review-actionable.log ]; then
             N=$(sed -n '2p' content-review-actionable.log | grep -oE '^[0-9]+' || echo '')

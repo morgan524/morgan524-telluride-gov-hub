@@ -5,7 +5,7 @@ name: Content Review → Claude Fix
 # (Morgan, 2026-09-21: "have the bot run this issue to you for fixing for all
 # issues in the future.")
 #
-# Runs after EACH successful Daily Content Review (4x/day). It reads that run's
+# Runs after EACH successful Daily Content Review (once a day, 12:30 UTC). It reads that run's
 # content-review-actionable.log artifact and exits quietly when it is empty
 # (the normal case) or when a fix PR from a previous run is still open, so a
 # finding is worked at most once until a human merges or closes the PR.
