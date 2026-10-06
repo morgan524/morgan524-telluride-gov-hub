@@ -799,6 +799,14 @@ export default {
     try {
       const out = await scheduledSend(env);
       console.log("scheduled send " + stamp + ": " + JSON.stringify(out));
+      // Every cron in wrangler.toml targets a send day, so landing on any other
+      // day means the schedule itself is wrong (2026-10-06: Cloudflare reads
+      // weekday 1 as Sunday, and the "Monday" crons fired on Sundays for weeks).
+      if (out.skipped && /^not a send day/.test(out.skipped)) {
+        ctx.waitUntil(ghRaiseIssue(env, "🚨 Digest Worker cron fired on the wrong day",
+          "Cron `" + (event && event.cron) + "` fired at " + stamp + ", but " + out.skipped +
+          ". The Monday sends will not happen from the Worker — check the weekday in cloudflare-worker/livabletelluride-digest/wrangler.toml (use names like MON; Cloudflare numbers 1 = Sunday)."));
+      }
       for (const r of out.results || []) {
         if (r.error) {
           console.error("scheduled send " + stamp + " " + r.key + " FAILED: " + r.error);
