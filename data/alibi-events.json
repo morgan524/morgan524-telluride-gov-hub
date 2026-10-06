@@ -1,5 +1,41 @@
 [
   {
+    "title": "DJ DOM",
+    "link": "https://www.alibitelluride.com/calendar#eca-event=dj-dom",
+    "description": "DJ Dom Lester, a Cleveland-born DJ now based in the area, takes the decks at The Alibi for a late-night set. The show begins at 9:00 PM.",
+    "pubDate": "2026-10-08",
+    "time": "9:00 PM",
+    "source": "alibi",
+    "sourceLabel": "The Alibi",
+    "category": "Live Music",
+    "location": "The Alibi • Telluride, CO",
+    "imageUrl": "https://ucarecdn.com/97ecd184-2437-4477-9198-9be27a2b7aba/-/crop/1159x1159/0,15/-/preview/"
+  },
+  {
+    "title": "DJ Flowmatic",
+    "link": "https://www.alibitelluride.com/calendar#eca-event=dj-flowmatic",
+    "description": "DJ Flowmatic is a late-night DJ set at The Alibi in Telluride, featuring sound, light, and live visuals. The event is billed around the persona of Flowmatic as Hank Williams, suggesting a blend of electronic music with live visual elements.",
+    "pubDate": "2026-10-09",
+    "time": "9:00 PM",
+    "source": "alibi",
+    "sourceLabel": "The Alibi",
+    "category": "Live Music",
+    "location": "The Alibi • Telluride, CO",
+    "imageUrl": ""
+  },
+  {
+    "title": "CASTLE",
+    "link": "https://www.alibitelluride.com/calendar#eca-event=castle-9",
+    "description": "CASTLE is a live music performance at The Alibi in Telluride. The artist has roots in the Telluride community, having begun a journey here as a ski coach before transitioning to a career in music.",
+    "pubDate": "2026-10-10",
+    "time": "9:00 PM",
+    "source": "alibi",
+    "sourceLabel": "The Alibi",
+    "category": "Live Music",
+    "location": "The Alibi • Telluride, CO",
+    "imageUrl": ""
+  },
+  {
     "title": "Hanneke Cassel Trio - Telluride Chamber Music",
     "link": "https://www.alibitelluride.com/calendar#eca-event=hanneke-cassel-trio-telluride-chamber-music",
     "description": "The Hanneke Cassel Trio brings an evening of chamber music to The Alibi as part of Telluride Chamber Music's programming. The performance is described as a distinctive take on the chamber music tradition.",

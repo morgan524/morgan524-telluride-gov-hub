@@ -497,7 +497,7 @@
   "telluride|2026-10-22|Planning & Zoning Commission Chair - Oct 22 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8105",
     "sv": 4,
-    "ph": "49c78abecdeebb31"
+    "ph": "d0e0554de56351fb"
   },
   "county|2026-10-22|Board of Adjustment Meeting": {
     "sv": 4,
@@ -603,5 +603,19 @@
   "county|2026-11-04|Board of County Commissioners Meeting": {
     "sv": 4,
     "ph": "a12dfd2ce826475e"
+  },
+  "telluride|2026-11-05|Special Meeting - Planning & Zoning Commission - Nov 05 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312",
+    "sv": 4,
+    "ph": "55957c280b6936c1"
+  },
+  "telluride|2026-11-05|Town Council Budget - Nov 05 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054",
+    "sv": 4,
+    "ph": "04f76b11b9fb29bf"
+  },
+  "telluride|2026-10-21|CANCELED - Historic & Architectural Review Commission Chair - Oct 21 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8025",
+    "sv": 4
   }
 }

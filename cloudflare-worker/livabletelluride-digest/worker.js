@@ -460,6 +460,32 @@ async function ghTokenStatus(env) {
   return status;
 }
 
+// Can the token open the cron tripwire's GitHub issues? A token with only
+// Contents access sends fine but fails ghRaiseIssue silently — a missed Monday
+// send then raises no alert at all. Probe with a deliberately empty POST: GitHub
+// validates permission before the body, so 422 (missing title) means allowed
+// and 403/404 means not. Nothing is ever created.
+let _ghIssuesCache = { at: 0, status: "unknown" };
+async function ghIssuesStatus(env) {
+  if (!env.GITHUB_TOKEN) return "missing";
+  const now = Date.now();
+  if (_ghIssuesCache.status !== "unknown" && now - _ghIssuesCache.at < 600000) return _ghIssuesCache.status;
+  const repo = (env.GITHUB_REPO || "morgan524/morgan524-telluride-gov-hub").trim();
+  let status = "unknown";
+  try {
+    const r = await fetch("https://api.github.com/repos/" + repo + "/issues", {
+      method: "POST",
+      headers: { "Authorization": "Bearer " + env.GITHUB_TOKEN, "Accept": "application/vnd.github+json", "User-Agent": "livabletelluride-digest-worker", "Content-Type": "application/json" },
+      body: "{}",
+    });
+    if (r.status === 422) status = "ok";
+    else if (r.status === 401) status = "bad";
+    else if (r.status === 403 || r.status === 404) status = "forbidden";
+  } catch (e) { status = "unknown"; }
+  _ghIssuesCache = { at: now, status };
+  return status;
+}
+
 const GH_TOKEN_HELP =
   "The Worker's GitHub token has expired, so nothing can be committed. " +
   "Create a new fine-grained token (Contents: Read and write on the site repo), " +
@@ -646,7 +672,7 @@ async function ghRaiseIssue(env, title, body) {
   const r = num
     ? await fetch("https://api.github.com/repos/" + repo + "/issues/" + num + "/comments", { method: "POST", headers, body: JSON.stringify({ body }) })
     : await fetch("https://api.github.com/repos/" + repo + "/issues", { method: "POST", headers, body: JSON.stringify({ title, body }) });
-  if (!r.ok) console.warn("ghRaiseIssue: GitHub " + r.status + " (does the Worker's GITHUB_TOKEN have Issues: write?)");
+  if (!r.ok) console.error("ghRaiseIssue: GitHub " + r.status + " — ALERT NOT RAISED: " + title + " (the Worker's GITHUB_TOKEN needs Issues: Read and write)");
 }
 
 function denverParts(d) {
@@ -736,6 +762,8 @@ export default {
         // load so an expired token surfaces before the reviewer does the work,
         // not at Approve time. No secret is exposed, only whether it still works.
         github: await ghTokenStatus(env),
+        // Whether a failed/missed cron send can open its 🚨 GitHub issue.
+        alerts: await ghIssuesStatus(env),
       }, 200, origin);
     }
     // Dry run of the cron send's gates (no auth, nothing sent, no secrets):
@@ -771,6 +799,14 @@ export default {
     try {
       const out = await scheduledSend(env);
       console.log("scheduled send " + stamp + ": " + JSON.stringify(out));
+      // Every cron in wrangler.toml targets a send day, so landing on any other
+      // day means the schedule itself is wrong (2026-10-06: Cloudflare reads
+      // weekday 1 as Sunday, and the "Monday" crons fired on Sundays for weeks).
+      if (out.skipped && /^not a send day/.test(out.skipped)) {
+        ctx.waitUntil(ghRaiseIssue(env, "🚨 Digest Worker cron fired on the wrong day",
+          "Cron `" + (event && event.cron) + "` fired at " + stamp + ", but " + out.skipped +
+          ". The Monday sends will not happen from the Worker — check the weekday in cloudflare-worker/livabletelluride-digest/wrangler.toml (use names like MON; Cloudflare numbers 1 = Sunday)."));
+      }
       for (const r of out.results || []) {
         if (r.error) {
           console.error("scheduled send " + stamp + " " + r.key + " FAILED: " + r.error);

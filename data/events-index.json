@@ -1,125 +1,5 @@
 [
   {
-    "title": "Savvy Seniors-Open Tech",
-    "href": "https://telluridelibrary.libcal.com/event/17029830?hs=a",
-    "date": "2026-10-05",
-    "time": "1:30 PM",
-    "location": "Meeting Room #6 - large",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_29_14_06_45.jpg",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "1:30 PM – 2:30 PM · Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide…",
-    "type": "Talks & Classes"
-  },
-  {
-    "title": "Ongoing: Space Cowboy by Dundee & Lee",
-    "href": "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
-    "date": "2026-10-05",
-    "time": "10:00 AM",
-    "location": "Decker Community Room",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53975670057489/huge/75be37bbb2b6bd7ba17f7754e11da5a0eaf5930c.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado…",
-    "type": "Community",
-    "endDate": "2026-10-29"
-  },
-  {
-    "title": "Musik 4 Kinders",
-    "href": "https://telluridelibrary.libcal.com/event/17515443?hs=a",
-    "date": "2026-10-05",
-    "time": "10:30 AM",
-    "location": "Kids Area",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. M sica, Movimiento, y Aprendizaje Alegre para ni os! Este programa ser en la sala de programas.",
-    "type": "Family & Kids"
-  },
-  {
-    "title": "Senior Lunch by Neighbor to Neighbor",
-    "href": "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
-    "date": "2026-10-05",
-    "time": "12:00 PM",
-    "location": "",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
-    "type": "Community",
-    "endDate": "2026-11-30"
-  },
-  {
-    "title": "Melt and Make: Perler Bead Art",
-    "href": "https://telluridelibrary.libcal.com/event/17732306?hs=a",
-    "date": "2026-10-05",
-    "time": "4:00 PM",
-    "location": "Wilkinson Public Library",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_29_12_15_23.png",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "A library program at Wilkinson Public Library where participants create art using Perler beads, the colorful plastic beads that are arranged into patterns and fused together with heat. The session runs Monday afternoon from 4:00 to 5:00 PM.",
-    "type": "Arts & Film"
-  },
-  {
-    "title": "Monthly Karate in Ouray County",
-    "href": "https://events.ourayridgwayevents.com/event/monthly-karate-in-ouray-county",
-    "date": "2026-10-05",
-    "time": "5:00 PM",
-    "location": "Decker Community Room",
-    "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/52253033564264/huge/ef12b5792bac47932752278d68230c7704389412.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month.…",
-    "type": "Talks & Classes",
-    "endDate": "2026-11-03"
-  },
-  {
-    "title": "Conoces el Fondo de Recuperación de Beneficios?",
-    "href": "https://telluridelibrary.libcal.com/event/17278976?hs=a",
-    "date": "2026-10-05",
-    "time": "5:30 PM",
-    "location": "Program Room",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_16_13_10_07.jpg",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "5:30 PM – 7:00 PM · Este programa vamos a dar informaci n sober el Fondo de Recuperaci n de Beneficios. Acerca del programa El Fondo de Recuperaci n de Beneficios es un programa en Colorado para trabajadores indocumentados que reciben un…",
-    "type": "Community"
-  },
-  {
-    "title": "Ballot Issue Briefing with the League of Women Voters",
-    "href": "https://events.ourayridgwayevents.com/event/ballot-issue-briefing-with-the-league-of-women-voters",
-    "date": "2026-10-05",
-    "time": "5:30 PM",
-    "location": "The Sherbino",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53983238349831/huge/7d761122bc0d275db26bc59a1c4db709cbac5e7a.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "THIS EVENT HAS MOVED TO THE SHERBINO THEATER. The League of Women Voter's (LWV) mission is to ensure that every voter is an informed voter. The statewide measures on the November ballot are important and complex, shaping the future of…",
-    "type": "Community"
-  },
-  {
-    "title": "Bike & Brewery Tour",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
-    "date": "2026-10-05",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "A guided bicycle ride departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where participants receive a complimentary beer. The route offers a scenic…",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "Guided Tour: Historic Beaumont Hotel & Spa",
     "href": "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     "date": "2026-10-06",
@@ -132,6 +12,59 @@
     "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
     "type": "Community",
     "endDate": "2026-12-04"
+  },
+  {
+    "title": "Ongoing: Space Cowboy by Dundee & Lee",
+    "href": "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
+    "date": "2026-10-06",
+    "time": "10:00 AM",
+    "location": "Decker Community Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53975670057489/huge/75be37bbb2b6bd7ba17f7754e11da5a0eaf5930c.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado…",
+    "type": "Community",
+    "endDate": "2026-10-29"
+  },
+  {
+    "title": "Storytime / Hora de Cuentos",
+    "href": "https://telluridelibrary.libcal.com/event/17514634?hs=a",
+    "date": "2026-10-06",
+    "time": "10:30 AM",
+    "location": "Kids Area",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi n en ingl s para ni os de todas las edades y sus padres o cuidadores.",
+    "type": "Family & Kids"
+  },
+  {
+    "title": "Teen Cook",
+    "href": "https://telluridelibrary.libcal.com/event/17486118?hs=a",
+    "date": "2026-10-06",
+    "time": "2:00 PM",
+    "location": "Teen Area",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_27_00.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "2:00 PM – 3:00 PM · Join the WPL Every Tuesday after school for Teen Cook. We will cook a different recipe from scratch, and have enough to share with those around!",
+    "type": "Community"
+  },
+  {
+    "title": "I Heart Art",
+    "href": "https://telluridelibrary.libcal.com/event/17292104?hs=a",
+    "date": "2026-10-06",
+    "time": "2:30 PM",
+    "location": "Kids Area",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_39_32.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "2:30 PM – 4:00 PM · Looking for a fun and enriching way to spend your afternoons? Join us Tuesdays for I Heart Art, designed especially for kids aged 5-12! Buscas una manera divertida de pasar tus tardes? Unete a nuestro programa…",
+    "type": "Arts & Film"
   },
   {
     "title": "CORAL SKYE",
@@ -158,6 +91,32 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Ouray Middle School volleyball takes on Ridgway in a matchup between these neighboring mountain community teams. The game is hosted at Ouray School.",
     "type": "Community"
+  },
+  {
+    "title": "Taco Tuesday with Corey Hooker and Friends",
+    "href": "https://events.ourayridgwayevents.com/event/taco-tuesday-with-corey-hooker-and-friends",
+    "date": "2026-10-06",
+    "time": "5:00 PM",
+    "location": "The Adobe Inn",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53888467422235/huge/f256b058d12c444dee76fbf1c905276c3e76b084.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "A weekly Taco Tuesday gathering at The Adobe Inn featuring tacos, cocktails, and live music from Corey Hooker and friends. It's a relaxed community night combining good food and drink with local musical entertainment.",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Let&#039;s Get Witchy-Make Your Own Besom (Herb Broom)",
+    "href": "https://telluridelibrary.libcal.com/event/17471800?hs=a",
+    "date": "2026-10-06",
+    "time": "5:30 PM",
+    "location": "Program Room",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_15_14_54_55.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "5:30 PM – 6:30 PM · Join Kate Newell in making an herb broom to hang above your door, or keep on your altar for the upcoming Samhain. You can use these to smudge and cleanse your altar or meditation space. Or simply hang them above your…",
+    "type": "Wellness"
   },
   {
     "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
@@ -213,17 +172,17 @@
     "type": "Talks & Classes"
   },
   {
-    "title": "West End Trail Running",
-    "href": "https://koto.org/event/west-end-trail-running/2026-10-06/",
+    "title": "Bardic Trails Online Poetry Night: Claire Blotter",
+    "href": "https://telluridelibrary.libcal.com/event/15970604?hs=a",
     "date": "2026-10-06",
-    "time": "8:15 AM",
-    "location": "",
-    "town": "",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/hiking.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens &…",
-    "type": "Outdoors & Sports"
+    "time": "7:00 PM",
+    "location": "Wilkinson Public Library",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_29_15_45_27.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "7:00 PM – 8:30 PM · The Telluride Institute s Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet's work and inspirations, with time…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Functional Fitness - Strength & Mobility Training For Women",
@@ -290,6 +249,19 @@
     "category": "Community Event",
     "source": "KOTO Community Calendar",
     "desc": "Join us at Patagonia Telluride with POW (Protect Our Winters), Telluride Mountain Club, Sheep Mountain Alliance, and EcoAction Partners for an evening of learning and conversation about how recreation intersects with the protection of…",
+    "type": "Community"
+  },
+  {
+    "title": "Banned Book BINGO at the Stronghouse",
+    "href": "https://koto.org/event/banned-book-bingo-at-the-stronghouse/",
+    "date": "2026-10-07",
+    "time": "5:30 PM",
+    "location": "Stronghouse Brewpub, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/10/BINGO.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "It’s Banned Book Week, and the Wilkinson Public Library is celebrating the Freedom to Read at the Stronghouse Brew Pub on Wednesday at 5:30pm with a free BINGO night! Come early to grab a seat and a bite to eat. We’ll have banned books and…",
     "type": "Community"
   },
   {
@@ -572,6 +544,19 @@
     "endDate": "2026-11-12"
   },
   {
+    "title": "DJ DOM",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=dj-dom",
+    "date": "2026-10-08",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/97ecd184-2437-4477-9198-9be27a2b7aba/-/crop/1159x1159/0,15/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "DJ Dom Lester, a Cleveland-born DJ now based in the area, takes the decks at The Alibi for a late-night set. The show begins at 9:00 PM.",
+    "type": "Music"
+  },
+  {
     "title": "Up-off Gymnastics, Dance, and Spanish",
     "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-10-09/",
     "date": "2026-10-09",
@@ -688,6 +673,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Music Bingo @ the Wright WHEN? Doors at 6:30 pm • Event at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT It’s bingo. But louder. And somehow emotionally complicated. Battle for glory using songs,…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "DJ Flowmatic",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=dj-flowmatic",
+    "date": "2026-10-09",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "DJ Flowmatic is a late-night DJ set at The Alibi in Telluride, featuring sound, light, and live visuals. The event is billed around the persona of Flowmatic as Hank Williams, suggesting a blend of electronic music with live visual elements.",
+    "type": "Music"
   },
   {
     "title": "Dallas Park Cemetery Tour",
@@ -859,6 +857,19 @@
     "type": "Festivals"
   },
   {
+    "title": "CASTLE",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=castle-9",
+    "date": "2026-10-10",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-1.jpg",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "CASTLE is a live music performance at The Alibi in Telluride. The artist has roots in the Telluride community, having begun a journey here as a ski coach before transitioning to a career in music.",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Alysha Brilla",
     "href": "https://sherbino.org/event/alysha-brilla/",
     "date": "2026-10-10",
@@ -898,7 +909,7 @@
     "type": "Community"
   },
   {
-    "title": "LIVE MUSIC IN THE GARDEN! Zan Waller & Stefan Davenport",
+    "title": "LIVE JAZZ IN THE GARDEN! Zan Waller & Stefan Davenport",
     "href": "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
     "date": "2026-10-11",
     "time": "4:00 PM",
@@ -907,23 +918,9 @@
     "img": "https://localist-images.azureedge.net/photos/53950055817938/huge/4924d3606a12c233af2b47a380c304869dfaf267.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Zan Waller and Stefan Davenport perform live in the garden at Chloe's Charcuterie & Wine, a recurring Sunday series running from 4:00 to 6:00 p.m. The outdoor setting pairs live music with wine and charcuterie in a relaxed, intimate…",
+    "desc": "Zan Waller on trumpet and Stefan Davenport on guitar perform as Standard Alchemy, playing swing, cocktail jazz, and Great American Songbook standards in Chloe's Secret Garden. The outdoor Sunday series runs from 4:00 to 6:00 p.m. at…",
     "type": "Music",
     "endDate": "2026-11-08"
-  },
-  {
-    "title": "Live Jazz Sundays at Chloe's: Standard Alchemy",
-    "href": "https://events.ourayridgwayevents.com/event/live-jazz-sundays-at-chloes-standard-alchemy",
-    "date": "2026-10-11",
-    "time": "4:00 PM",
-    "location": "Chloe's Charcuterie & Wine",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/54144911614780/huge/22c44d81c469fa2adc455f744fd16304554bc766.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Standard Alchemy, featuring trumpet and guitar, performs swing, cocktail jazz, and Great American Songbook standards during this recurring Sunday evening series at Chloe's Charcuterie & Wine in Ridgway. The intimate setting pairs live…",
-    "type": "Music",
-    "endDate": "2026-11-29"
   },
   {
     "title": "Volunteer Trail Work Day: Cross Mountain Trailhead",
@@ -950,6 +947,20 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "A beginner-friendly pickleball session for teens at the Ridgway Pickleball Courts, led by coaches from the Ridgway Pickleball Club. Participants receive one-on-one instruction that builds toward group gameplay, following the coaches' \"I…",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Senior Lunch by Neighbor to Neighbor",
+    "href": "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
+    "date": "2026-10-12",
+    "time": "12:00 PM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
+    "type": "Community",
+    "endDate": "2026-11-30"
   },
   {
     "title": "Bike & Brewery Tour",
@@ -1768,6 +1779,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "Water in the West",
+    "href": "https://www.telluride.com/event/water-in-the-west-the-american-southwests-last-best-rivers-and-how-to-protect-them/",
+    "date": "2026-10-22",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63728/water_in_the_west_instagram_1.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Across the Southwest, aridification and challenging politics are impacting our watersheds and threatening our rivers. …",
+    "type": "Community"
+  },
+  {
     "title": "Pickleball Nights",
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-10-22",
@@ -2190,6 +2214,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Coffee & Climate Conversations",
+    "href": "https://www.telluride.com/event/coffee-climate-conversations/",
+    "date": "2026-10-29",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/57231/screenshot_2026-10-06_at_9_14_18_am.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "From big adventures to spending time with family and friends, recreation is often at the heart of our experiences on …",
+    "type": "Family & Kids"
+  },
+  {
     "title": "Pickleball Nights",
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-10-29",
@@ -2464,19 +2501,6 @@
     "type": "Community"
   },
   {
-    "title": "Tea and Tarot",
-    "href": "https://koto.org/event/tea-and-tarot/2026-11-01/",
-    "date": "2026-11-01",
-    "time": "2:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    "type": "Community"
-  },
-  {
     "title": "Bike & Brewery Tour",
     "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     "date": "2026-11-02",
@@ -2488,6 +2512,19 @@
     "source": "Mountain Village",
     "desc": "A guided bike ride through Mountain Village, traveling the Jurassic and Meadows Trails down to Telluride Brewing Co. for a complimentary beer. The tour departs from the Mountain Lodge and offers a scenic route connecting Mountain Village…",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Monthly Karate in Ouray County",
+    "href": "https://events.ourayridgwayevents.com/event/monthly-karate-in-ouray-county",
+    "date": "2026-11-02",
+    "time": "5:00 PM",
+    "location": "Decker Community Room",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/52253033564264/huge/ef12b5792bac47932752278d68230c7704389412.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month.…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
@@ -3030,5 +3067,18 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Doors open at 8:00 PM; music begins at 8:30 PM. The Sherbino’s annual Noel Night gift to the community features Denver rock-n-soul band The Hip Snacks for a free, high-energy evening of live music. Admission is free, with donations…",
     "type": "Music"
+  },
+  {
+    "title": "Yule Day",
+    "href": "https://events.ourayridgwayevents.com/event/yule-day",
+    "date": "2026-12-05",
+    "time": "",
+    "location": "Main Street Ouray",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/52384238613262/huge/9e160cecd96f5b9cd4eba427774e315371414373.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Celebrate Yule Day in Ouray and Ridgway with a magical winter festival for the whole family. Stroll a twinkling village of artisan booths, savor hot cocoa and seasonal treats, enjoy live carolers, and meet Santa in a snowy alpine setting.…",
+    "type": "Family & Kids"
   }
 ]

@@ -5,15 +5,23 @@ name: Content Review → Claude Fix
 # (Morgan, 2026-09-21: "have the bot run this issue to you for fixing for all
 # issues in the future.")
 #
-# Runs after EACH successful Daily Content Review (4x/day). It reads that run's
+# Runs after EACH successful Daily Content Review (once a day, 12:30 UTC). It reads that run's
 # content-review-actionable.log artifact and exits quietly when it is empty
 # (the normal case) or when a fix PR from a previous run is still open, so a
 # finding is worked at most once until a human merges or closes the PR.
 #
 # Claude edits the working tree; the commit + PR + issue comment happen in
-# plain shell steps afterwards so the PR body is under our control. Judgment
-# fixes land as a PR, never straight on main — same tier split as
-# content-autofix.yml. Merge it and the next content-refresh re-renders.
+# plain shell steps afterwards so the PR body is under our control.
+#
+# Two tiers (Morgan, 2026-10-06: "fix errors that are easy to identify and fix"):
+#   EASY → committed straight to main. Claude must call the whole batch easy
+#          (typos, garbled text, a verified-dead link cleared/replaced, an exact
+#          duplicate dropped) AND a mechanical gate must agree: only content-data
+#          files touched (data/*.json, js/gov-helpers.js, js/gov-data.js), a
+#          small diff, syntax + unit tests + JSON mirrors all pass.
+#   REVIEW → a PR for Morgan, as before: anything touching code, dates,
+#          meeting facts or what a summary says, or failing any gate check.
+# Merge (or the easy commit) and the next content-refresh re-renders.
 
 on:
   workflow_run:
@@ -89,6 +97,17 @@ jobs:
           if [ "${OPEN:-0}" != "0" ]; then
             echo "A content-review fix PR is still open — waiting for it to be merged/closed before working new findings."; exit 0
           fi
+          # Also wait on a fix BRANCH that never became a PR. From 2026-09-28 the
+          # PR step failed ("GitHub Actions is not permitted to create or approve
+          # pull requests"), so the open-PR check above never tripped and every
+          # review run (3–4 a day) paid ~$0.90 to redo the same fixes, leaving 34
+          # orphan branches. Any claude/content-review-fix-* branch not yet merged
+          # into main means a fix is already waiting for a human.
+          git fetch -q origin '+refs/heads/claude/content-review-fix-*:refs/remotes/origin/claude/content-review-fix-*' 2>/dev/null || true
+          PENDING=$(git branch -r --no-merged origin/main 2>/dev/null | grep -c 'origin/claude/content-review-fix-' || true)
+          if [ "${PENDING:-0}" != "0" ]; then
+            echo "$PENDING unmerged content-review fix branch(es) already waiting — not paying to redo them."; exit 0
+          fi
           echo "run=true" >> "$GITHUB_OUTPUT"
           echo "----- actionable findings -----"; cat review-logs/content-review-actionable.log
 
@@ -137,11 +156,39 @@ jobs:
               Then `git checkout -- scripts/source-baselines.json` (bot-owned).
             - Do NOT git commit, push, or open a PR — a later step does that.
 
-            FINISH by writing /tmp/claude-fix-summary.md: one bullet per finding
-            with what you changed and why (file paths), and a final
-            "Not fixed" list for anything you left alone and the reason.
+            WORK IN TWO PHASES so the human PR stays as small as possible.
 
-      - name: Commit to a branch and open a PR
+            PHASE 1 — EASY fixes only (these go live without a human). A fix is
+            easy ONLY if it is one of these, with no doubt, AND it edits only
+            data/*.json, js/gov-helpers.js or js/gov-data.js:
+              • a spelling/typo fix in a title or text where the right spelling
+                is obvious from the record itself or its source page;
+              • removing garbled characters/markup from text;
+              • clearing a link you confirmed is dead (curl), or replacing it
+                with a URL you confirmed works and is the same page;
+              • dropping an exact duplicate entry;
+              plus the data/content-corrections.json rows (existing kinds only)
+              that make those durable.
+            Do every easy fix, run the checks above, then — before touching
+            anything else — run `git diff > /tmp/claude-easy.patch` and write
+            /tmp/claude-easy-summary.md (one bullet per easy fix). If there are
+            no easy fixes, skip both files.
+
+            PHASE 2 — everything else (goes to a PR for Morgan): any code change
+            (scripts/, a new correction kind, a detector or scraper fix), any
+            date/time/location change, adding or removing a real event or
+            meeting, changing what a summary says, anything you had to judge or
+            could not verify. When unsure, it belongs here. Keep these changes
+            minimal — only what the finding needs. Do not undo phase 1 edits.
+
+            FINISH by writing /tmp/claude-fix-summary.md covering PHASE 2 only:
+            one bullet per finding with what you changed and why (file paths),
+            and a final "Not fixed" list for anything you left alone and why.
+
+      # Split Claude's work: phase 1 (easy) goes straight to main if a
+      # mechanical gate agrees — the bot never self-certifies — and only the
+      # remainder becomes a PR, so the PR carries just what needs judgment.
+      - name: Apply easy fixes to main, PR the rest
         if: steps.gate.outputs.run == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -152,12 +199,62 @@ jobs:
           git config user.email "bot@livabletelluride.org"
           git checkout -- scripts/source-baselines.json 2>/dev/null || true
           rm -f content-review-findings.log content-review-findings.json content-review-actionable.log
-          if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard | grep -v '^review-logs/')" ]; then
-            echo "Claude made no changes."; exit 0
+          git add -A -- . ':!review-logs' ':!scripts/node_modules'
+          if git diff --cached --quiet; then echo "Claude made no changes."; exit 0; fi
+          BASE=$(git rev-parse HEAD)
+          git commit -q -m "tmp: everything Claude changed"
+          FULL=$(git rev-parse HEAD)
+          git reset -q --hard "$BASE"
+
+          # Gate: every check must pass for the easy patch to go live.
+          easy_gate() {
+            CHANGED=$(git diff --name-only)
+            [ -n "$CHANGED" ] || { echo "Easy patch is empty."; return 1; }
+            BAD=$(echo "$CHANGED" | grep -vE '^(data/[^/]+\.json|js/gov-helpers\.js|js/gov-data\.js)$' || true)
+            [ -z "$BAD" ] || { echo "Easy patch touches more than content data: $BAD"; return 1; }
+            LINES=$(git diff --numstat | awk '{n+=$1+$2} END {print n+0}')
+            [ "$LINES" -le 60 ] || { echo "Easy patch is $LINES lines (limit 60)."; return 1; }
+            node --check js/gov-helpers.js && node --check js/gov-data.js || { echo "Syntax check failed."; return 1; }
+            for j in $(echo "$CHANGED" | grep '^data/' || true); do
+              node -e "JSON.parse(require('fs').readFileSync(process.argv[1],'utf8'))" "$j" || { echo "$j is not valid JSON."; return 1; }
+            done
+            # Mirrors must already be in sync: re-running mirror-json may change nothing new.
+            node scripts/mirror-json.js >/dev/null 2>&1 || { echo "mirror-json failed."; return 1; }
+            [ "$(git diff --name-only)" = "$CHANGED" ] || { echo "JSON mirrors were out of sync."; return 1; }
+            (cd scripts && npm ci --silent >/dev/null 2>&1 && npm test --silent >/dev/null 2>&1) || { echo "Unit tests failed."; return 1; }
+            git checkout -- scripts/source-baselines.json 2>/dev/null || true
+            echo "Easy patch: $(echo "$CHANGED" | wc -l | tr -d ' ') file(s), $LINES lines — passes every check."
+          }
+
+          EASY_SHA=""; SPLIT="$BASE"
+          if [ -s /tmp/claude-easy.patch ] && git apply --exclude=scripts/source-baselines.json /tmp/claude-easy.patch 2>/dev/null; then
+            if easy_gate; then
+              git add -A -- . ':!review-logs' ':!scripts/node_modules'
+              git commit -q -m "Content review easy fixes $(date -u +%F) (Claude, auto-applied)" -m "$(cat /tmp/claude-easy-summary.md 2>/dev/null || echo 'No summary written.')"
+              SPLIT=$(git rev-parse HEAD)
+              git pull -q --rebase origin main
+              git push -q origin HEAD:main
+              EASY_SHA=$(git rev-parse --short HEAD)
+              echo "Easy fixes live on main: $EASY_SHA"
+            else
+              echo "Easy patch failed the gate — it goes in the PR instead."
+              git reset -q --hard "$BASE"
+            fi
           fi
+          git clean -fdq -e review-logs -e scripts/node_modules
+
+          NUM=$(gh issue list --state open --search "$ISSUE_TITLE in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$EASY_SHA" ] && [ -n "$NUM" ]; then
+            gh issue comment "$NUM" --body "$(printf '🤖 Claude applied easy fixes directly (commit %s). Revert that commit to undo.\n\n%s' "$EASY_SHA" "$(cat /tmp/claude-easy-summary.md 2>/dev/null)")"
+          fi
+
+          # The PR gets only what is left: everything Claude changed minus what went live.
+          git diff --binary "$SPLIT" "$FULL" > /tmp/claude-review.patch
+          if [ ! -s /tmp/claude-review.patch ]; then echo "Nothing left for review — no PR."; exit 0; fi
           BRANCH="claude/content-review-fix-$(date -u +%Y%m%d-%H%M)"
-          git checkout -b "$BRANCH"
-          git add -A -- . ':!review-logs'
+          git checkout -q -b "$BRANCH"
+          git apply --3way /tmp/claude-review.patch
+          git add -A -- . ':!review-logs' ':!scripts/node_modules'
           git commit -m "Content review fixes $(date -u +%F) (Claude)" -m "$(cat /tmp/claude-fix-summary.md 2>/dev/null || echo 'See PR body.')"
           git push -u origin "$BRANCH"
           {
@@ -169,6 +266,10 @@ jobs:
             echo "## Findings worked"
             echo '```'; cat review-logs/content-review-actionable.log; echo '```'
             echo
+            if [ -n "$EASY_SHA" ]; then
+              echo "Easy fixes from this run already went live in $EASY_SHA — this PR holds only the rest."
+              echo
+            fi
             echo "Merge to apply. content-refresh re-renders within the hour; the next content review confirms."
             echo
             echo "🤖 Generated with [Claude Code](https://claude.com/claude-code)"

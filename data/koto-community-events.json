@@ -1,16 +1,5 @@
 [
   {
-    "title": "West End Trail Running",
-    "link": "https://koto.org/event/west-end-trail-running/2026-10-06/",
-    "description": "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens & adults 15 and older are welcome to participate. Contact director Alicia O'Connel at montrosewestrec@gmail.com or text her at 302-690-0160 for more information, including a nominal registration fee.",
-    "pubDate": "2026-10-06T08:15:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "",
-    "imageUrl": ""
-  },
-  {
     "title": "Bardic Trails Online Poetry Night",
     "link": "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-10-06/",
     "description": "The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit to get the zoom link each month, Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. Jan. 6 / Euro-American poet Dane Cervine of California Feb. …",
@@ -31,6 +20,17 @@
     "category": "Community Event",
     "location": "Patagonia Telluride, Telluride Retail",
     "imageUrl": "https://koto.org/wp-content/uploads/2026/09/Stoke-the-VOTE-final-flyer.png"
+  },
+  {
+    "title": "Banned Book BINGO at the Stronghouse",
+    "link": "https://koto.org/event/banned-book-bingo-at-the-stronghouse/",
+    "description": "It’s Banned Book Week, and the Wilkinson Public Library is celebrating the Freedom to Read at the Stronghouse Brew Pub on Wednesday at 5:30pm with a free BINGO night! Come early to grab a seat and a bite to eat. We’ll have banned books and WPL merch as prizes. Come solo or bring your friends. Hope to see you there!",
+    "pubDate": "2026-10-07T17:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Stronghouse Brewpub, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/BINGO.jpg"
   },
   {
     "title": "Telluride Rotary Club Meeting",
@@ -526,16 +526,5 @@
     "category": "Community Event",
     "location": "The Alibi, Telluride",
     "imageUrl": "https://koto.org/wp-content/uploads/2026/10/KOTO-Halloween-RADO-poster-9.23-1-scaled.jpg"
-  },
-  {
-    "title": "Tea and Tarot",
-    "link": "https://koto.org/event/tea-and-tarot/2026-11-01/",
-    "description": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    "pubDate": "2026-11-01T14:30:00-07:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   }
 ]

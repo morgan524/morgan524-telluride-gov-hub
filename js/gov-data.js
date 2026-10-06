@@ -320,8 +320,8 @@ const MV_CACHED_DATA = [
     time: "10:00 AM - 5:00 PM",
     title: "Town Council Meeting",
     board: "tc",
-    agendaUrl: "https://townofmountainvillage.com/site/assets/files/50052/october_7-_2026_special_town_council_meeting_agenda.pdf",
-    packetUrl: "https://townofmountainvillage.com/site/assets/files/50053/october_7-_2026_special_town_council_meeting_packet.pdf",
+    agendaUrl: "https://townofmountainvillage.com/site/assets/files/50062/october_7-_2026_special_town_council_meeting_agenda.pdf",
+    packetUrl: "https://townofmountainvillage.com/site/assets/files/50063/october_7-_2026_special_town_council_meeting_packet.pdf",
     special: false,
     location: "Town Hall, 455 Mountain Village Blvd, Suite A"
   },
@@ -797,15 +797,6 @@ const OURAY_COUNTY_CACHED_DATA = [
     title: "Board of County Commissioners",
     location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
     civicClerkId: 1069,
-    note: null,
-    board: "bocc"
-  },
-  {
-    date: "October 13, 2026",
-    time: "3:30 PM",
-    title: "Board of County Commissioners Work Session",
-    location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
-    civicClerkId: 1093,
     note: null,
     board: "bocc"
   },

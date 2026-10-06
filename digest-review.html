@@ -172,7 +172,7 @@ function setPill(h){
   if(h && h.ok && h.broadcast){ p.innerHTML='<span class="dot ok"></span>Customer.io — live'; }
   else if(h && h.ok){ p.innerHTML='<span class="dot"></span>Customer.io — test only (broadcast pending)'; }
   else { p.innerHTML='<span class="dot"></span>Worker offline'; }
-  showGhWarning(h && h.github);
+  showGhWarning(h && h.github, h && h.alerts);
 }
 // An expired GitHub token used to announce itself only when Approve failed —
 // after all the editing was done, minutes before a send window. Now the Desk
@@ -181,9 +181,18 @@ const GH_FIX =
   'Fix: create a fine-grained GitHub token with <b>Contents: Read and write</b> on the site repo, then run '
   + '<code>npx wrangler secret put GITHUB_TOKEN</code> in <code>cloudflare-worker/livabletelluride-digest</code> '
   + '(or update the secret in the Cloudflare dashboard). Editing here still works — only Approve and photo upload need it.';
-function showGhWarning(status){
+function showGhWarning(status, alerts){
   const el=$("ghwarn"); if(!el) return;
-  if(!status || status==="ok" || status==="unknown"){ el.style.display="none"; el.innerHTML=""; return; }
+  if(!status || status==="ok" || status==="unknown"){
+    // Token works for Approve but can't open issues: a failed Monday send would
+    // go unannounced (what happened 2026-10-05).
+    if(alerts==="forbidden"){
+      el.innerHTML='⚠ <b>Missed-send alerts are off</b> — the Worker\'s GitHub token can\'t open issues, so a failed Monday send raises no alarm.<br>'
+        +'Fix: edit the fine-grained token and add <b>Issues: Read and write</b> on the site repo (same token — no secret change needed).';
+      el.style.display="block"; return;
+    }
+    el.style.display="none"; el.innerHTML=""; return;
+  }
   const head = status==="missing"
     ? "⚠ <b>Approve is not configured</b> — the Worker has no GitHub token."
     : status==="forbidden"

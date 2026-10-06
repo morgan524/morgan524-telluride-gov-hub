@@ -408,7 +408,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8106","sv":4,"ph":"3ad5aa7f9ebe51be"},
 
   "telluride|2026-10-22|Planning & Zoning Commission Chair - Oct 22 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8105","sv":4,"ph":"49c78abecdeebb31"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8105","sv":4,"ph":"d0e0554de56351fb"},
 
   "county|2026-10-22|Board of Adjustment Meeting":
     {"sv":4,"ph":"9fed4623122d2e3a"},
@@ -471,7 +471,16 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8165","sv":4,"ph":"89b54e4a61932908"},
 
   "county|2026-11-04|Board of County Commissioners Meeting":
-    {"sv":4,"ph":"a12dfd2ce826475e"}
+    {"sv":4,"ph":"a12dfd2ce826475e"},
+
+  "telluride|2026-11-05|Special Meeting - Planning & Zoning Commission - Nov 05 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312","sv":4,"ph":"55957c280b6936c1"},
+
+  "telluride|2026-11-05|Town Council Budget - Nov 05 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054","sv":4,"ph":"04f76b11b9fb29bf"},
+
+  "telluride|2026-10-21|CANCELED - Historic & Architectural Review Commission Chair - Oct 21 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8025","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -496,6 +505,14 @@ const DEEP_DIVE_UPDATES = [
 //   sourceUrl, topics: [] }. Rendered by hub-bub.html from the JSON mirror
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
+  {
+    date: "2026-10-06",
+    title: "Wildfire code is law — now what does P&Z do with it?",
+    body: "Town Council passed Ordinance #1640 on August 11, 2026, amending Chapter 18 of the Municipal Code to bring the Colorado Wildfire Resiliency Code into Telluride's Land Use Code. Now the Planning & Zoning Commission is holding a special meeting to dig into it. Some will see tighter wildfire standards as long overdue — the terrain up here doesn't forgive much. Others will worry the new rules add cost and friction to building and remodeling in a town already short on housing. Nothing before the commission is a final vote yet.\n\nSo where do you land — necessary protection, or another barrier?",
+    choices: ["Necessary — fire risk is real", "Adds too much burden to builders", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
   {
     date: "2026-10-05",
     title: "Bears, people, and where to draw the line",
@@ -727,14 +744,6 @@ const DAILY_QUESTIONS = [
     choices: ["Trail investment is worth it", "Scrutinize the spending first", "Depends what it connects", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-09-06",
-    title: "What should open space cost us — and why",
-    body: "The Open Space Commission meets September 14 to work through priorities and criteria for acquiring, managing, and maintaining open space — and to shape what it recommends to Town Council.\n\nThat's where the tension lives. Some residents see open space acquisition as the clearest thing a mountain town can do to protect what's left. Others wonder whether the criteria and priorities get set in a way that reflects the whole community, not just those who show up. Neither side is wrong.\n\nSo: who should be driving open space priorities up here — and what should the criteria actually be?",
-    choices: ["Community input should lead", "Let the experts set priorities", "Depends on the parcel", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -823,14 +832,20 @@ const MEETING_PREVIEWS = {
   "county|2026-11-04|Board of County Commissioners Meeting":
     "Board will consider procurement matters including material hauling, trail construction, fuel island canopy, jail painting, and a multi-jurisdictional hazard mitigation plan update. Related legal notices include a probate matter for the estate of Lawrence de Bivort and foreclosure proceedings for a Telluride condominium unit.",
 
-  "telluride|2026-10-06|Town Council - Oct 06 2026":
-    "Council is expected to discuss the potential use of Automated License Plate Reader (ALPR) cameras and a partnership with Flock Safety, led by Chief Marshal Josh Comte. The meeting will be held as a hybrid session at Rebekah Hall, with public comment accepted on non-agenda items.",
+  "telluride|2026-11-05|Special Meeting - Planning & Zoning Commission - Nov 05 2026":
+    "The Planning & Zoning Commission is expected to discuss consulting services for a comprehensive review of Telluride's employee rental housing policies, as the town seeks qualified respondents through a Request for Proposal to evaluate and potentially update its existing workforce housing regulations.",
 
-  "telluride|2026-10-05|Open Space Commission - Oct 05 2026":
-    "The Open Space Commission is expected to discuss the 2027 Town of Telluride budget, review the first phase of Valley Floor signage implementation, and debrief on a site walk related to the Bear Creek Preserve Zone 1 Restoration Plan.",
+  "telluride|2026-11-05|Town Council Budget - Nov 05 2026":
+    "Council is expected to discuss the town's budget during this November 2026 session. Related matters may include a review of the Town of Telluride's employee rental housing policies, as the town is currently seeking consulting services to conduct a comprehensive evaluation of those programs.",
+
+  "telluride|2026-10-21|CANCELED - Historic & Architectural Review Commission Chair - Oct 21 2026":
+    "This meeting of the Telluride Historic & Architectural Review Commission has been canceled. No agenda items will be addressed. Related legal notices reference a wildfire resiliency code amendment, a new paper billing fee from San Miguel Power Association, and a request for proposals on employee rental housing policy review.",
+
+  "telluride|2026-10-06|Town Council - Oct 06 2026":
+    "Council is expected to discuss the potential implementation of Automated License Plate Reader (ALPR) cameras through Flock Safety, led by Chief Marshal Josh Comte. The meeting will be held in hybrid format at Rebekah Hall and streamed online, with public comment accepted on non-agenda items.",
 
   "ouray|2026-10-06|Board of County Commissioners Special Work Session":
-    "Commissioners are expected to discuss the 2027 budget during this work session, with focus on the Sheriff's Office budget and broader budget deliberations. No formal action will be taken, but commissioners may provide direction to staff on budgetary matters ahead of future formal decisions."
+    "Commissioners are expected to discuss the 2027 budget during this work session, with focus on the Sheriff's Office budget and broader budget deliberations. No formal action will be taken, though commissioners may provide direction to staff on budgetary matters for future consideration."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1051,7 +1066,7 @@ const SMC_ALERTS = [
 const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-10-05';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-10-06';
 const LEGAL_NOTICES_CACHE_DATE = '2026-10-05';
 
 const MANUAL_SUMMARIES = {
@@ -1380,7 +1395,16 @@ const MANUAL_SUMMARIES = {
     "The November 4, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-11-04|Board of County Commissioners Meeting":
-    "The November 4, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet."
+    "The November 4, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-11-05|Special Meeting - Planning & Zoning Commission - Nov 05 2026":
+    "The November 5, 2026 Special Meeting - Planning & Zoning Commission agenda hasn't been posted yet.",
+
+  "telluride|2026-11-05|Town Council Budget - Nov 05 2026":
+    "The November 5, 2026 Town Council Budget agenda hasn't been posted yet.",
+
+  "telluride|2026-10-21|CANCELED - Historic & Architectural Review Commission Chair - Oct 21 2026":
+    "The October 21, 2026 HARC Chair meeting has been canceled."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2510,6 +2534,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "SOS: ‘Help us protect the quality of our schools’",
+    source: "Telluride Times",
+    date: "October 6, 2026",
+    firstSeen: "2026-10-06",
+    newsTopic: "government",
+    copy: "Telluride R-1 faces a 17% state budget cut starting in 2027-28, and Question 5A on the November ballot would offset that loss through a local mill levy increase costing about $115 per $1M of assessed property value. Programs like Dual Immersion, AP courses, ski PE, and athletics could be reduced without it. Not everyone agrees — at least one local official argues enrollment has dropped enough that staffing cuts could cover the gap instead.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/election/article_7cc100a3-a096-4078-8505-f4a344f99523.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/74/d74832bf-60b2-4236-a3a3-3ee1081281f2/6abe80c5a0033.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Town council upholds Carhenge lot consolidation",
     source: "Telluride Times",
     date: "October 5, 2026",
@@ -3589,6 +3625,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Ridgway Reminds Pet Owners of Responsibilities",
+    source: "Town of Ridgway",
+    date: "October 6, 2027",
+    firstSeen: "2026-10-06",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-reminds-pet-owners-of-responsibilities-2026-10-06.pdf",
+    img: ""
+  },
+  {
     title: "Small Business Administration Economic Injury Disaster Loan Data Collection Form Now Available (due Oct. 13)",
     source: "Town of Ridgway",
     date: "October 1, 2026",
@@ -4248,17 +4295,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "West End Trail Running",
-    link: "https://koto.org/event/west-end-trail-running/2026-10-06/",
-    description: "Learn the fundamentals of trail running while exploring trails in the West End. The course is offered Sept. 8 through October 30th. The practice schedule is 8:15 to 9 a.m. on Tuesdays and 5 to 6 p.m. on Thursdays. Ages 10-14 and teens & adults 15 and older are welcome to participate. Contact director Alicia O'Connel at montrosewestrec@gmail.com or text her at 302-690-0160 for more information, including a nominal registration fee.",
-    pubDate: "2026-10-06T08:15:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
     title: "Bardic Trails Online Poetry Night",
     link: "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-10-06/",
     description: "The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit to get the zoom link each month, Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. Jan. 6 / Euro-American poet Dane Cervine of California Feb. …",
@@ -4279,6 +4315,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Patagonia Telluride, Telluride Retail",
     imageUrl: "https://koto.org/wp-content/uploads/2026/09/Stoke-the-VOTE-final-flyer.png"
+  },
+  {
+    title: "Banned Book BINGO at the Stronghouse",
+    link: "https://koto.org/event/banned-book-bingo-at-the-stronghouse/",
+    description: "It’s Banned Book Week, and the Wilkinson Public Library is celebrating the Freedom to Read at the Stronghouse Brew Pub on Wednesday at 5:30pm with a free BINGO night! Come early to grab a seat and a bite to eat. We’ll have banned books and WPL merch as prizes. Come solo or bring your friends. Hope to see you there!",
+    pubDate: "2026-10-07T17:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Stronghouse Brewpub, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/BINGO.jpg"
   },
   {
     title: "Telluride Rotary Club Meeting",
@@ -4774,64 +4821,64 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "The Alibi, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2026/10/KOTO-Halloween-RADO-poster-9.23-1-scaled.jpg"
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-11-01/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-11-01T14:30:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   }
 ];
 
 const WILKINSON_EVENTS = [
   {
-    title: "Musik 4 Kinders",
-    link: "https://telluridelibrary.libcal.com/event/17515443?hs=a",
-    description: "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. &iexcl;M&uacute;sica, Movimiento, y Aprendizaje Alegre para ni&ntilde;os! Este programa ser&aacute; en la sala de programas.",
-    pubDate: "2026-10-05T16:30:00.000Z",
+    title: "Storytime / Hora de Cuentos",
+    link: "https://telluridelibrary.libcal.com/event/17514634?hs=a",
+    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
+    pubDate: "2026-10-06T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
   },
   {
-    title: "Savvy Seniors-Open Tech",
-    link: "https://telluridelibrary.libcal.com/event/17029830?hs=a",
-    description: "1:30 PM – 2:30 PM · Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone.",
-    pubDate: "2026-10-05T19:30:00.000Z",
+    title: "Teen Cook",
+    link: "https://telluridelibrary.libcal.com/event/17486118?hs=a",
+    description: "2:00 PM – 3:00 PM · Join the WPL Every Tuesday after school for Teen Cook. We will cook a different recipe from scratch, and have enough to share with those around!",
+    pubDate: "2026-10-06T20:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Meeting Room #6 - large",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_29_14_06_45.jpg"
+    location: "Teen Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_27_00.png"
   },
   {
-    title: "Melt and Make: Perler Bead Art",
-    link: "https://telluridelibrary.libcal.com/event/17732306?hs=a",
-    description: "A library program at Wilkinson Public Library where participants create art using Perler beads, the colorful plastic beads that are arranged into patterns and fused together with heat. The session runs Monday afternoon from 4:00 to 5:00 PM.",
-    pubDate: "2026-10-05T22:00:00.000Z",
+    title: "I Heart Art",
+    link: "https://telluridelibrary.libcal.com/event/17292104?hs=a",
+    description: "2:30 PM – 4:00 PM · Looking for a fun and enriching way to spend your afternoons? Join us Tuesdays for I Heart Art, designed especially for kids aged 5-12!  &iquest;Buscas una manera divertida de pasar tus tardes? &iexcl;Unete a nuestro programa extracurricular, dise&ntilde;ado especialmente para ni&ntilde;os de 5 a 12 a&ntilde;os!",
+    pubDate: "2026-10-06T20:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_29_12_15_23.png"
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_39_32.png"
   },
   {
-    title: "Conoces el Fondo de Recuperación de Beneficios?",
-    link: "https://telluridelibrary.libcal.com/event/17278976?hs=a",
-    description: "5:30 PM – 7:00 PM · Este programa vamos a dar informaci&oacute;n sober el Fondo de Recuperaci&oacute;n de Beneficios.  Acerca del programa El Fondo de Recuperaci&oacute;n de Beneficios es un programa en Colorado para trabajadores indocumentados que reciben un formulario W-2 y tienen impuestos retenidos de sus cheques de pago, pero carecen de autorizaci&oacute;n de trabajo. El Fondo proporciona beneficios monetarios cuando pierden su trabajo sin culpa propia.",
-    pubDate: "2026-10-05T23:30:00.000Z",
+    title: "Let&#039;s Get Witchy-Make Your Own Besom (Herb Broom)",
+    link: "https://telluridelibrary.libcal.com/event/17471800?hs=a",
+    description: "5:30 PM – 6:30 PM · Join Kate Newell in making an herb broom to hang above your door, or keep on your altar for the upcoming Samhain. You can use these to smudge and cleanse your altar or meditation space. Or simply hang them above your door to clear negative energy when walking into your home. We will have sticks, bundles of herbs, ropes and ribbons and some other fun adornments. This program is free and open to the public, yet space is limited so be sure to sign up ASAP. All supplies will be provided, but feel free to bring any additional things found in nature or trinkets to add to your besom if you&#39;d like. Kate will also have her new Wheel of the Year Planner, Earth Rhythms, on hand if participants would like to purchase one to help guide their own spiritual/traditional journeys. …",
+    pubDate: "2026-10-06T23:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_16_13_10_07.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_15_14_54_55.png"
+  },
+  {
+    title: "Bardic Trails Online Poetry Night: Claire Blotter",
+    link: "https://telluridelibrary.libcal.com/event/15970604?hs=a",
+    description: "7:00 PM – 8:30 PM · The Telluride Institute&#39;s Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet's work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit < https://www. tellurideinstitute.org/ western-slope-calendar > to get the zoom link each month , Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. Jan. 6 / Euro-American poet Dane Cervine of Santa Cruz (CA)* Feb. …",
+    pubDate: "2026-10-07T01:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_29_15_45_27.jpg"
   }
 ];
 
@@ -4852,6 +4899,42 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
+  {
+    title: "DJ DOM",
+    link: "https://www.alibitelluride.com/calendar#eca-event=dj-dom",
+    description: "DJ Dom Lester, a Cleveland-born DJ now based in the area, takes the decks at The Alibi for a late-night set. The show begins at 9:00 PM.",
+    pubDate: "2026-10-08",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/97ecd184-2437-4477-9198-9be27a2b7aba/-/crop/1159x1159/0,15/-/preview/"
+  },
+  {
+    title: "DJ Flowmatic",
+    link: "https://www.alibitelluride.com/calendar#eca-event=dj-flowmatic",
+    description: "DJ Flowmatic is a late-night DJ set at The Alibi in Telluride, featuring sound, light, and live visuals. The event is billed around the persona of Flowmatic as Hank Williams, suggesting a blend of electronic music with live visual elements.",
+    pubDate: "2026-10-09",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: ""
+  },
+  {
+    title: "CASTLE",
+    link: "https://www.alibitelluride.com/calendar#eca-event=castle-9",
+    description: "CASTLE is a live music performance at The Alibi in Telluride. The artist has roots in the Telluride community, having begun a journey here as a ski coach before transitioning to a career in music.",
+    pubDate: "2026-10-10",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: ""
+  },
   {
     title: "Hanneke Cassel Trio - Telluride Chamber Music",
     link: "https://www.alibitelluride.com/calendar#eca-event=hanneke-cassel-trio-telluride-chamber-music",
@@ -5256,53 +5339,6 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "Ongoing: Space Cowboy by Dundee & Lee",
-    link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
-    description: "Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado artists Emilie Odeile and Ken Chapin of Dundee & Lee, the exhibition centers on a 10-foot-tall fiber rocket topped with a cowboy hat and Mission Control consoles that gather images, voices, stories, and discoveries as Space Cowboy travels from community to community. Throughout October, the exhibition comes alive with special events and programming, including appearances by Colorado Poet Laureate Crisosto Apache, community conversations, and opportunities for Ridgway residents to become part of the continuing Space Cowboy story. Space Cowboy travels with a simple idea: Colorado is the teacher and Space Cowboy is the learner. Every community adds something new to the mission. …",
-    pubDate: "2026-10-05T16:00:00.000Z",
-    endDate: "2026-10-29",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53975670057489/huge/75be37bbb2b6bd7ba17f7754e11da5a0eaf5930c.jpg"
-  },
-  {
-    title: "Senior Lunch by Neighbor to Neighbor",
-    link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
-    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
-    pubDate: "2026-10-05T18:00:00.000Z",
-    endDate: "2026-11-30",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
-  },
-  {
-    title: "Monthly Karate in Ouray County",
-    link: "https://events.ourayridgwayevents.com/event/monthly-karate-in-ouray-county",
-    description: "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month. Karate class is a great way to learn skills to keep you safe, stay in shape and strong core movements. Karate believes in using it only to protect self and is taught accordingly. Whether you are new to Karate or a seasoned student, the Sensei will work with your level. Taught in the kyokushin kai-kan style, similar shotokan style of karate, we welcome new students to try this exceptional experience for your mind and body! Mixed ages --- Ages 7 through Adult (extended time for more experience) Mondays in Ouray: St. …",
-    pubDate: "2026-10-05T23:00:00.000Z",
-    endDate: "2026-11-03",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/52253033564264/huge/ef12b5792bac47932752278d68230c7704389412.jpg"
-  },
-  {
-    title: "Ballot Issue Briefing with the League of Women Voters",
-    link: "https://events.ourayridgwayevents.com/event/ballot-issue-briefing-with-the-league-of-women-voters",
-    description: "THIS EVENT HAS MOVED TO THE SHERBINO THEATER. The League of Women Voter's (LWV) mission is to ensure that every voter is an informed voter. The statewide measures on the November ballot are important and complex, shaping the future of Colorad on issues that matter to every voter. LWV of the Uncompahgre Valley will provide clear, nonpartisan, plain-language information so voters can understand each measure before casting their vote. Sponsored by the Ridgway Ouray Community Council. Doors open at 5:00pm.",
-    pubDate: "2026-10-05T23:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Sherbino",
-    imageUrl: "https://localist-images.azureedge.net/photos/53983238349831/huge/7d761122bc0d275db26bc59a1c4db709cbac5e7a.jpg"
-  },
-  {
     title: "Functional Fitness - Strength & Mobility Training For Women",
     link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
     description: "Welcome to Ridgway's strength and mobility training + YOGA! Functional Strength & Mobility Training (for women): Tuesday & Thursday 8:15-9 am Vinyasa Yoga: Wednesday 8:15-9:15 am Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Class Structure: 5 minute warm up / 30 minute circuit workout / 10 minute cooldown stretch & mobility Vinyasa Yoga: This is a dynamic practice that will challenge, strengthen, and uplift you both physically and mentally. …",
@@ -5313,6 +5349,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Weehawken Ridgway (Old Schoolhouse)",
     imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/d76b2fb7534e91f8369b0dace133058cd22fa783.jpg"
+  },
+  {
+    title: "Ongoing: Space Cowboy by Dundee & Lee",
+    link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
+    description: "Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado artists Emilie Odeile and Ken Chapin of Dundee & Lee, the exhibition centers on a 10-foot-tall fiber rocket topped with a cowboy hat and Mission Control consoles that gather images, voices, stories, and discoveries as Space Cowboy travels from community to community. Throughout October, the exhibition comes alive with special events and programming, including appearances by Colorado Poet Laureate Crisosto Apache, community conversations, and opportunities for Ridgway residents to become part of the continuing Space Cowboy story. Space Cowboy travels with a simple idea: Colorado is the teacher and Space Cowboy is the learner. Every community adds something new to the mission. …",
+    pubDate: "2026-10-06T16:00:00.000Z",
+    endDate: "2026-10-29",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53975670057489/huge/75be37bbb2b6bd7ba17f7754e11da5a0eaf5930c.jpg"
   },
   {
     title: "Guided Tour: Historic Beaumont Hotel & Spa",
@@ -5347,6 +5395,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray School",
     imageUrl: "https://localist-images.azureedge.net/photos/53950094911567/huge/d5ee345c89849bce3200fa3413a281abd46154f5.jpg"
+  },
+  {
+    title: "Taco Tuesday with Corey Hooker and Friends",
+    link: "https://events.ourayridgwayevents.com/event/taco-tuesday-with-corey-hooker-and-friends",
+    description: "A weekly Taco Tuesday gathering at The Adobe Inn featuring tacos, cocktails, and live music from Corey Hooker and friends. It's a relaxed community night combining good food and drink with local musical entertainment.",
+    pubDate: "2026-10-06T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Adobe Inn",
+    imageUrl: "https://localist-images.azureedge.net/photos/53888467422235/huge/f256b058d12c444dee76fbf1c905276c3e76b084.jpg"
   },
   {
     title: "Parks and Recreation Committee (PARC)",
@@ -5653,9 +5712,9 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54055901310640/huge/f2f678de5fd28531ae3232aa7992196215b95d6d.jpg"
   },
   {
-    title: "LIVE MUSIC IN THE GARDEN! Zan Waller & Stefan Davenport",
+    title: "LIVE JAZZ IN THE GARDEN! Zan Waller & Stefan Davenport",
     link: "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
-    description: "Zan Waller and Stefan Davenport perform live in the garden at Chloe's Charcuterie & Wine, a recurring Sunday series running from 4:00 to 6:00 p.m. The outdoor setting pairs live music with wine and charcuterie in a relaxed, intimate atmosphere.",
+    description: "Zan Waller on trumpet and Stefan Davenport on guitar perform as Standard Alchemy, playing swing, cocktail jazz, and Great American Songbook standards in Chloe's Secret Garden. The outdoor Sunday series runs from 4:00 to 6:00 p.m. at Chloe's Charcuterie & Wine, with occasional special guest vocalists joining the duo.",
     pubDate: "2026-10-11T22:00:00.000Z",
     endDate: "2026-11-08",
     source: "oray",
@@ -5663,18 +5722,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Chloe's Charcuterie & Wine",
     imageUrl: "https://localist-images.azureedge.net/photos/53950055817938/huge/4924d3606a12c233af2b47a380c304869dfaf267.jpg"
-  },
-  {
-    title: "Live Jazz Sundays at Chloe's: Standard Alchemy",
-    link: "https://events.ourayridgwayevents.com/event/live-jazz-sundays-at-chloes-standard-alchemy",
-    description: "Standard Alchemy, featuring trumpet and guitar, performs swing, cocktail jazz, and Great American Songbook standards during this recurring Sunday evening series at Chloe's Charcuterie & Wine in Ridgway. The intimate setting pairs live music with wine and charcuterie, with occasional special guest vocalists joining the duo.",
-    pubDate: "2026-10-11T22:00:00.000Z",
-    endDate: "2026-11-29",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Chloe's Charcuterie & Wine",
-    imageUrl: "https://localist-images.azureedge.net/photos/54144911614780/huge/22c44d81c469fa2adc455f744fd16304554bc766.jpg"
   },
   {
     title: "Fall Break - Ridgway Schools",
@@ -5687,6 +5734,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
+  },
+  {
+    title: "Senior Lunch by Neighbor to Neighbor",
+    link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
+    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
+    pubDate: "2026-10-12T18:00:00.000Z",
+    endDate: "2026-11-30",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
   },
   {
     title: "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
@@ -6230,6 +6289,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54035420061248/huge/d9483f91f6cbf291d9c98abc718e1ec3869ac8ae.jpg"
   },
   {
+    title: "Monthly Karate in Ouray County",
+    link: "https://events.ourayridgwayevents.com/event/monthly-karate-in-ouray-county",
+    description: "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month. Karate class is a great way to learn skills to keep you safe, stay in shape and strong core movements. Karate believes in using it only to protect self and is taught accordingly. Whether you are new to Karate or a seasoned student, the Sensei will work with your level. Taught in the kyokushin kai-kan style, similar shotokan style of karate, we welcome new students to try this exceptional experience for your mind and body! Mixed ages --- Ages 7 through Adult (extended time for more experience) Mondays in Ouray: St. …",
+    pubDate: "2026-11-03T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/52253033564264/huge/ef12b5792bac47932752278d68230c7704389412.jpg"
+  },
+  {
     title: "First Friday Art Walk",
     link: "https://events.ourayridgwayevents.com/event/first-friday-art-walk",
     description: "A monthly community art walk through downtown Ridgway, where local galleries, studios, shops, and gathering spaces open their doors for new exhibitions, artist receptions, live music, and pop-up programming. Each edition offers a different mix of art and activity from the area's creative community.",
@@ -6509,6 +6579,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/54066526309790/huge/ff0b5de590db048d92f439a0e7d952640d0c3de9.jpg"
+  },
+  {
+    title: "Yule Day",
+    link: "https://events.ourayridgwayevents.com/event/yule-day",
+    description: "Celebrate Yule Day in Ouray and Ridgway with a magical winter festival for the whole family. Stroll a twinkling village of artisan booths, savor hot cocoa and seasonal treats, enjoy live carolers, and meet Santa in a snowy alpine setting. Kids’ crafts, a community tree-lighting, and cozy fireside storytelling make this a heartwarming holiday tradition—join neighbors and visitors for a sparkling evening of cheer and small-town charm. More Info to come!",
+    pubDate: "2026-12-05T07:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Main Street Ouray",
+    imageUrl: "https://localist-images.azureedge.net/photos/52384238613262/huge/9e160cecd96f5b9cd4eba427774e315371414373.jpg"
   }
 ];
 
@@ -7137,6 +7218,17 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/28873/152294600242caf78680.800x533.webp"
   },
   {
+    title: "Water in the West",
+    link: "https://www.telluride.com/event/water-in-the-west-the-american-southwests-last-best-rivers-and-how-to-protect-them/",
+    description: "Across the Southwest, aridification and challenging politics are impacting our watersheds and threatening our rivers. …",
+    pubDate: "2026-10-22",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63728/water_in_the_west_instagram_1.800x533.webp"
+  },
+  {
     title: "Lamplight Cemetery Tour",
     link: "https://www.telluride.com/event/lamplight-cemetery-tour/",
     description: "Explore the historic Lone Tree Cemetery by the eeriness of lamplight. This tour takes place in the evening and recounts …",
@@ -7171,6 +7263,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/45301/gondola-rainbow-2-high-res-2100x1401-f18dd3a9-0d2b-4ff7-b99c-2c162daf4e94.800x533.webp"
+  },
+  {
+    title: "Coffee & Climate Conversations",
+    link: "https://www.telluride.com/event/coffee-climate-conversations/",
+    description: "From big adventures to spending time with family and friends, recreation is often at the heart of our experiences on …",
+    pubDate: "2026-10-29",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/57231/screenshot_2026-10-06_at_9_14_18_am.800x533.webp"
   },
   {
     title: "KOTO Ski Swap",

@@ -1,5 +1,17 @@
 [
   {
+    "title": "SOS: ‘Help us protect the quality of our schools’",
+    "source": "Telluride Times",
+    "date": "October 6, 2026",
+    "firstSeen": "2026-10-06",
+    "newsTopic": "government",
+    "copy": "Telluride R-1 faces a 17% state budget cut starting in 2027-28, and Question 5A on the November ballot would offset that loss through a local mill levy increase costing about $115 per $1M of assessed property value. Programs like Dual Immersion, AP courses, ski PE, and athletics could be reduced without it. Not everyone agrees — at least one local official argues enrollment has dropped enough that staffing cuts could cover the gap instead.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/election/article_7cc100a3-a096-4078-8505-f4a344f99523.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/74/d74832bf-60b2-4236-a3a3-3ee1081281f2/6abe80c5a0033.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Town council upholds Carhenge lot consolidation",
     "source": "Telluride Times",
     "date": "October 5, 2026",
@@ -1076,6 +1088,17 @@
     "newsTopic": "community",
     "copy": "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
     "href": "https://www.telluride.gov/AlertCenter.aspx?AID=45",
+    "img": ""
+  },
+  {
+    "title": "Ridgway Reminds Pet Owners of Responsibilities",
+    "source": "Town of Ridgway",
+    "date": "October 6, 2027",
+    "firstSeen": "2026-10-06",
+    "newsTopic": "community",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-reminds-pet-owners-of-responsibilities-2026-10-06.pdf",
     "img": ""
   },
   {
