@@ -1,0 +1,39 @@
+name: Digest Worker cron history
+
+# Did the digest Worker's Cloudflare cron triggers actually fire, and how did
+# each run end? Reads Cloudflare's analytics for the Worker's scheduled
+# invocations (time, cron, status only — no message content, no addresses), so
+# a silent Monday can be diagnosed without dashboard access.
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: 'How many days back to look (max 30)'
+        required: false
+        default: '30'
+
+permissions:
+  contents: read
+
+jobs:
+  history:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Query scheduled invocations
+        env:
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_WORKER || secrets.CLOUDFLAIR_WORKER }}
+          ACCOUNT: 8f020e73de4e9956f0e3ad7dce070ef4
+          DAYS: ${{ github.event.inputs.days || '30' }}
+        run: |
+          SINCE=$(date -u -d "-${DAYS} days" +%Y-%m-%dT%H:%M:%SZ)
+          NOW=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          Q=$(jq -n --arg a "$ACCOUNT" --arg s "$SINCE" --arg n "$NOW" '{query: "query($a:String!,$s:Time!,$n:Time!){viewer{accounts(filter:{accountTag:$a}){workersInvocationsScheduled(limit:200,filter:{scriptName:\"livabletelluride-digest\",datetime_geq:$s,datetime_leq:$n},orderBy:[datetime_ASC]){datetime cron status cpuTimeUs}}}}", variables: {a:$a,s:$s,n:$n}}')
+          curl -s https://api.cloudflare.com/client/v4/graphql -H "Authorization: Bearer $CF_TOKEN" -H 'Content-Type: application/json' -d "$Q" > out.json
+          if jq -e '.errors and (.errors|length>0)' out.json >/dev/null; then echo "Cloudflare refused:"; jq -r '.errors[].message' out.json; exit 1; fi
+          N=$(jq '.data.viewer.accounts[0].workersInvocationsScheduled|length' out.json)
+          echo "Scheduled invocations since $SINCE: $N"
+          jq -r '.data.viewer.accounts[0].workersInvocationsScheduled[]|"\(.datetime)  \(.cron)  \(.status)"' out.json
+          {
+            echo "### Digest Worker cron runs since $SINCE: $N"
+            jq -r '.data.viewer.accounts[0].workersInvocationsScheduled[]|"- \(.datetime) — `\(.cron)` — \(.status)"' out.json
+          } >> "$GITHUB_STEP_SUMMARY"
