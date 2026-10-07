@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-07T00:33:55.301Z",
+ "generated": "2026-10-07T10:05:04.267Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -25,18 +25,7 @@
      "snippet": "Two work sessions anchor the September 24 P&Z meeting. First up: a proposed employee housing project at the northwest corner of Telluride Middle-High School (725 W Colorado), brought by the Telluride…"
     }
    ],
-   "developments": [
-    {
-     "topic": "carhenge",
-     "type": "news",
-     "source": "Town of Telluride",
-     "articleDate": "Aug 8, 2026",
-     "title": "Shandoka and Carhenge Lots Closed Aug 11–21",
-     "copy": "Both the Shandoka and Carhenge commuter parking lots will close temporarily from August 11 through 21. The reason for the closure was not specified in the notice.",
-     "href": "https://www.telluride.gov/AlertCenter.aspx?AID=71",
-     "addedDate": "2026-08-08"
-    }
-   ],
+   "developments": [],
    "stale": [
     "Carhenge / Shandoka: telluride discussed it on 2026-09-30 (\"Special Meeting - Historic & Architectural Review…\") but the deep dive was last edited 2026-09-27.",
     "Carhenge / Shandoka: telluride discussed it on 2026-09-30 (\"Special Town Council - Sep 30 2026\") but the deep dive was last edited 2026-09-27.",
@@ -142,18 +131,9 @@
      "livestream": ""
     }
    ],
-   "recent": [
-    {
-     "source": "norwood",
-     "date": "2026-09-22",
-     "title": "Norwood Water Commission Meeting",
-     "snippet": "The Norwood Water Commission meets September 22 with a full plate of water-related business. Six leak forgiveness requests are on the table — a recurring item for any small-system water utility,…"
-    }
-   ],
+   "recent": [],
    "developments": [],
-   "stale": [
-    "Norwood Water: norwood discussed it on 2026-09-22 (\"Norwood Water Commission Meeting\") but the deep dive was last edited 2026-07-23."
-   ]
+   "stale": []
   },
   "fieldpaving": {
    "label": "Field Paving at Town Park",
