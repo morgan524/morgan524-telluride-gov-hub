@@ -220,6 +220,17 @@
     "imageUrl": "https://koto.org/wp-content/uploads/2026/02/sewing.jpg"
   },
   {
+    "title": "OPEN AUDITIONS: Elf The Musical",
+    "link": "https://koto.org/event/open-auditions-elf-the-musical/2026-10-14/",
+    "description": "Telluride Theatre wants YOU to audition for our Holiday Musical at the Sheridan Opera House. This year, we are performing ELF THE MUSICAL, based on the beloved film starring Will Ferrell. Actors of all ages and skill levels are encouraged to audition. Telluride Theatre is an educational theatre, from never-evers to seasoned professionals. This laugh-out-loud comedy performs on the Opera House stage December 17 – 23rd, plus an extra-special Christmas Eve matinee on the 24th. Don't know where to start? Don't worry, we’ll provide you what you need for the audition. Auditions will be held October 14 & 15 at Telluride Middle-High School, or you can submit a video audition if you’re out of town. To learn more and sign up for auditions, go to www.telluridetheatre.org/holiday.",
+    "pubDate": "2026-10-14T17:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Middle/High School, TELLURIDE",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/elf-auditions-social.png"
+  },
+  {
     "title": "Pilates for All Bodies with Laura",
     "link": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-10-15/",
     "description": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
@@ -240,6 +251,17 @@
     "category": "Community Event",
     "location": "Telluride Arts HQ, TELLURIDE",
     "imageUrl": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
+  },
+  {
+    "title": "OPEN AUDITIONS: Elf The Musical",
+    "link": "https://koto.org/event/open-auditions-elf-the-musical/2026-10-15/",
+    "description": "Telluride Theatre wants YOU to audition for our Holiday Musical at the Sheridan Opera House. This year, we are performing ELF THE MUSICAL, based on the beloved film starring Will Ferrell. Actors of all ages and skill levels are encouraged to audition. Telluride Theatre is an educational theatre, from never-evers to seasoned professionals. This laugh-out-loud comedy performs on the Opera House stage December 17 – 23rd, plus an extra-special Christmas Eve matinee on the 24th. Don't know where to start? Don't worry, we’ll provide you what you need for the audition. Auditions will be held October 14 & 15 at Telluride Middle-High School, or you can submit a video audition if you’re out of town. To learn more and sign up for auditions, go to www.telluridetheatre.org/holiday.",
+    "pubDate": "2026-10-15T17:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Middle/High School, TELLURIDE",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/elf-auditions-social.png"
   },
   {
     "title": "Facing the Mourning",
@@ -504,27 +526,5 @@
     "category": "Community Event",
     "location": "Michael D. Palm Theater, Telluride",
     "imageUrl": "https://koto.org/wp-content/uploads/2026/10/YF-thundertix.png"
-  },
-  {
-    "title": "KOTO Halloween Bash",
-    "link": "https://koto.org/event/koto-halloween-bash/",
-    "description": "It's spooky season and that means it's time for the greatest off-season tradition in Telluride history – THE KOTO HALLOWEEN BASH! This year, we're letting our freak flags fly at The Alibi on Saturday, October 31st! Live music from Rado starts at 9 p.m. Costume Contest with cash prizes! Tickets are $20 in advance at alibitelluride.com and $25 at the door.",
-    "pubDate": "2026-10-31T21:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "The Alibi, Telluride",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/KOTO-Halloween-RADO-poster-9.23-1-scaled.jpg"
-  },
-  {
-    "title": "Tea and Tarot",
-    "link": "https://koto.org/event/tea-and-tarot/2026-11-01/",
-    "description": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    "pubDate": "2026-11-01T14:30:00-07:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   }
 ]

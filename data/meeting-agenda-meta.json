@@ -365,7 +365,7 @@
   "telluride|2026-10-13|Special Town Council Budget - Oct 13 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8307",
     "sv": 4,
-    "ph": "6a080e4b265b9c85"
+    "ph": "cf30c3f8f11ffb4d"
   },
   "norwood|2026-10-14|Board of Trustees Meeting": {
     "sv": 4,
@@ -497,7 +497,7 @@
   "telluride|2026-10-22|Planning & Zoning Commission Chair - Oct 22 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8105",
     "sv": 4,
-    "ph": "d0e0554de56351fb"
+    "ph": "49c78abecdeebb31"
   },
   "county|2026-10-22|Board of Adjustment Meeting": {
     "sv": 4,
@@ -515,7 +515,10 @@
   "telluride|2026-10-14|Special Liquor Licensing Authority - Oct 14 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8146",
     "sv": 4,
-    "ph": "65b7901f622f722e"
+    "zoomUrl": "https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1",
+    "meetingId": "861 6987 1704",
+    "passcode": "281002.",
+    "phone": "346-248-7799"
   },
   "mv|2026-09-25|Town Council Meeting": {
     "agendaUrl": "https://townofmountainvillage.com/site/assets/files/49970/september_25-_2026_special_town_council_meeting_agenda.pdf",

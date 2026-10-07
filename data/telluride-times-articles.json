@@ -1,5 +1,92 @@
 [
   {
+    "title": "Clarity",
+    "source": "Telluride Times",
+    "date": "October 7, 2026",
+    "firstSeen": "2026-10-07",
+    "newsTopic": "community",
+    "copy": "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
+    "claudeSummary": false,
+    "href": "https://www.telluridenews.com/opinion/columnists/article_b4952554-72a9-4533-92e2-89679aba6414.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/6a/66aa48d0-b783-4b89-b2cf-1ba28693a14a/6ac690f3b8b1f.image.jpg",
+    "isLetter": true,
+    "imgHiRes": true
+  },
+  {
+    "title": "A county to come home to",
+    "source": "Telluride Times",
+    "date": "October 7, 2026",
+    "firstSeen": "2026-10-07",
+    "newsTopic": "community",
+    "copy": "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
+    "claudeSummary": false,
+    "href": "https://www.telluridenews.com/opinion/columnists/article_4ac8e900-0e05-463e-8af4-391d3eb19ee8.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/d8/9d8dee4a-d594-4e79-b40a-f06edd7469dc/6ac691d279c2d.image.jpg",
+    "isLetter": true,
+    "imgHiRes": true
+  },
+  {
+    "title": "Telluride Foundation to host social media workshop",
+    "source": "Telluride Times",
+    "date": "October 7, 2026",
+    "firstSeen": "2026-10-07",
+    "newsTopic": "community",
+    "copy": "",
+    "claudeSummary": false,
+    "href": "https://www.telluridenews.com/news_release/article_e0768ffe-b88b-49b7-a89b-77e3844a23e4.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/80/68027577-a37e-4fd1-b829-580168e1b64e/6ac690335edcb.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "A guide to measures on the November state ballot",
+    "source": "Telluride Times",
+    "date": "October 7, 2026",
+    "firstSeen": "2026-10-07",
+    "newsTopic": "government",
+    "copy": "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
+    "claudeSummary": false,
+    "href": "https://www.telluridenews.com/opinion/columnists/article_2be2344c-53a2-431b-b548-bc04d20ab35c.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/43/44339ca0-cfa2-409e-85e6-7ea9d3ae89ca/6ac68f923e968.image.jpg",
+    "isLetter": true,
+    "imgHiRes": true
+  },
+  {
+    "title": "Residential composting now available in Mountain Village",
+    "source": "Telluride Times",
+    "date": "October 7, 2026",
+    "firstSeen": "2026-10-07",
+    "newsTopic": "community",
+    "copy": "Mountain Village residents can now add composting to their Bruin Waste pickup — food scraps and organics diverted from the landfill. Sign up by calling (970) 864-7531 or at bruinwaste.com/compost.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news_release/article_5704b8c3-a3ac-4316-85bb-1dd2471444f0.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/95/f959ee3b-f6f6-4f20-8646-0e2b50f9dabf/6ac68d96442fe.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Did you know that puppies grow?",
+    "source": "Telluride Times",
+    "date": "October 7, 2026",
+    "firstSeen": "2026-10-07",
+    "newsTopic": "community",
+    "copy": "",
+    "claudeSummary": false,
+    "href": "https://www.telluridenews.com/news_release/article_d8a6793d-4abd-42ca-8b13-921dc888af49.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/ba/aba09e2e-2b2b-4af6-a409-d292390dbe9f/6ac68e1397976.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Boomin’ and broomin’",
+    "source": "Telluride Times",
+    "date": "October 7, 2026",
+    "firstSeen": "2026-10-07",
+    "newsTopic": "infrastructure",
+    "copy": "Telluride's volleyball team swept Dove Creek 25-10, 25-22, 25-21 on the road October 2nd, following a Tuesday win at Norwood. The Lady Miners won all three sets, with strong serving and kills from Noel, Fenton, and both Aplins. Telluride moves to 6-9 overall, 3-3 in San Juan Basin play.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/sports/article_8cac9099-4a77-4923-b18d-5edda3f68fdd.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/10/31019d4e-a1ad-4eca-bb5c-fb42b29af8a1/6ac5f9fd60ab6.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Let your freak flag fly",
     "source": "Telluride Times",
     "date": "October 7, 2026",
@@ -974,17 +1061,6 @@
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
     "claudeSummary": false,
     "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/CGP-Review-Committee-Press-Release-2026-09-24.pdf",
-    "img": ""
-  },
-  {
-    "title": "Ridgway Sustainability Advisory Board Meeting Agenda",
-    "source": "Town of Ridgway",
-    "date": "October 6, 2026",
-    "firstSeen": "2026-10-02",
-    "newsTopic": "government",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/SAB-Meeting-Packet---October-6%2C-2026.pdf",
     "img": ""
   },
   {

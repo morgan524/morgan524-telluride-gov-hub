@@ -327,7 +327,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-10-13|Special Town Council Budget - Oct 13 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8307","sv":4,"ph":"6a080e4b265b9c85"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8307","sv":4,"ph":"cf30c3f8f11ffb4d"},
 
   "norwood|2026-10-14|Board of Trustees Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -408,7 +408,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8106","sv":4,"ph":"c3a3df604a3fce63"},
 
   "telluride|2026-10-22|Planning & Zoning Commission Chair - Oct 22 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8105","sv":4,"ph":"d0e0554de56351fb"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8105","sv":4,"ph":"49c78abecdeebb31"},
 
   "county|2026-10-22|Board of Adjustment Meeting":
     {"sv":4,"ph":"9fed4623122d2e3a"},
@@ -420,7 +420,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8321","zoomUrl":"https://gbsm.zoom.us/j/83597933306","sv":4},
 
   "telluride|2026-10-14|Special Liquor Licensing Authority - Oct 14 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8146","sv":4,"ph":"65b7901f622f722e"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8146","sv":4,"zoomUrl":"https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1","meetingId":"861 6987 1704","passcode":"281002.","phone":"346-248-7799"},
 
   "mv|2026-09-25|Town Council Meeting":
     {"agendaUrl":"https://townofmountainvillage.com/site/assets/files/49970/september_25-_2026_special_town_council_meeting_agenda.pdf","sv":4},
@@ -819,13 +819,13 @@ const MEETING_PREVIEWS = {
     "Board will consider a resolution amending the Gondola Project Development IGA for FY27 and discuss FY27 budget development. Members will also receive updates on gondola project progress and September operations. The meeting will include an executive session on personnel matters and pending litigation.",
 
   "telluride|2026-10-07|Ecology Commission - Oct 07 2026":
-    "The Telluride Ecology Commission is expected to review and approve minutes from its September 2 meeting and hold a work session discussing the Community Resilience and Wellbeing focus area of the town's 2022 Climate Action Plan.",
+    "The Telluride Ecology Commission is expected to review and approve minutes from its September 2 meeting and hold a worksession discussing the 2022 Climate Action Plan, focusing on the Community Resilience and Wellbeing Focus Area.",
 
   "telluride|2026-10-07|Commission for Community Assistance, Arts & Special Events - Oct 07 2026":
-    "The Commission for Community Assistance, Arts & Special Events will conduct 2026 organization interviews and consider several calendar and banner requests, including events for the San Miguel County Democrats, Telluride High School Homecoming Week, Ah Haa School for the Arts, and Just For Kids Foundation.",
+    "The Commission for Community Assistance, Arts & Special Events will conduct 2026 organization interviews and consider several calendar and banner requests, including events from the San Miguel County Democrats, Telluride Booster Club, Ah Haa School for the Arts, and Just For Kids Foundation.",
 
   "telluride|2026-10-07|Telluride Housing Authority Subcommittee - Oct 07 2026":
-    "The Telluride Housing Authority Subcommittee will consider approving minutes from three prior meetings and review a request from Justice Logan James and Mariana Teresa Pereira Vargas for an exception to Telluride's housing authority policies. Public comment will also be accepted."
+    "The Telluride Housing Authority Subcommittee is expected to approve minutes from three prior meetings and consider a request from Justice Logan James and Mariana Teresa Pereira Vargas for an exception to Telluride's housing authority policies. Public comment will also be accepted."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1324,7 +1324,7 @@ const MANUAL_SUMMARIES = {
     "The Gondola Leadership Committee meets September 28 at 3:00 PM — hybrid, with in-person at Ah Haa School's Launchpad Room. The centerpiece is a 60-minute action item: a comparative evaluation of federally funded versus locally-led project delivery. That choice — federal dollars with federal strings versus local control with local financing — is one of the more consequential forks the gondola effort has faced. The committee will also hear SMART program updates and a recap of the July Leadership Committee meeting, then take up a communications plan before closing with partner jurisdiction updates and public comment.",
 
   "telluride|2026-10-14|Special Liquor Licensing Authority - Oct 14 2026":
-    "The October 14, 2026 Special Liquor Licensing Authority agenda hasn't been posted yet.",
+    "One item of substance: a public hearing on three special event permits for Palm Arts Inc. to serve alcohol at the Palm Theatre (721 W. Colorado Ave.) during the Telluride Horror Show, October 16–18, 2026. Projected attendance runs 600 on Friday evening and 1,400 each on Saturday and Sunday. Staff recommends approval — the Marshal's Department has no concerns, and the applicant's paperwork checks out. The board will also approve minutes from the September 17 meeting.",
 
   "mv|2026-09-25|Town Council Meeting":
     "A special Friday session — just one item: an executive session to discuss selecting and setting employment terms for a new Town Manager. The personnel discussion is closed to the public under Colorado's open meetings law, which permits closed sessions for this kind of hiring negotiation. Council convenes at 8:00 AM and adjourns at 3:00 PM, suggesting a lengthy deliberation behind closed doors.",
@@ -2526,6 +2526,93 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Clarity",
+    source: "Telluride Times",
+    date: "October 7, 2026",
+    firstSeen: "2026-10-07",
+    newsTopic: "community",
+    copy: "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/opinion/columnists/article_b4952554-72a9-4533-92e2-89679aba6414.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/6a/66aa48d0-b783-4b89-b2cf-1ba28693a14a/6ac690f3b8b1f.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "A county to come home to",
+    source: "Telluride Times",
+    date: "October 7, 2026",
+    firstSeen: "2026-10-07",
+    newsTopic: "community",
+    copy: "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/opinion/columnists/article_4ac8e900-0e05-463e-8af4-391d3eb19ee8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/d8/9d8dee4a-d594-4e79-b40a-f06edd7469dc/6ac691d279c2d.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Telluride Foundation to host social media workshop",
+    source: "Telluride Times",
+    date: "October 7, 2026",
+    firstSeen: "2026-10-07",
+    newsTopic: "community",
+    copy: "",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news_release/article_e0768ffe-b88b-49b7-a89b-77e3844a23e4.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/80/68027577-a37e-4fd1-b829-580168e1b64e/6ac690335edcb.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "A guide to measures on the November state ballot",
+    source: "Telluride Times",
+    date: "October 7, 2026",
+    firstSeen: "2026-10-07",
+    newsTopic: "government",
+    copy: "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/opinion/columnists/article_2be2344c-53a2-431b-b548-bc04d20ab35c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/43/44339ca0-cfa2-409e-85e6-7ea9d3ae89ca/6ac68f923e968.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Residential composting now available in Mountain Village",
+    source: "Telluride Times",
+    date: "October 7, 2026",
+    firstSeen: "2026-10-07",
+    newsTopic: "community",
+    copy: "Mountain Village residents can now add composting to their Bruin Waste pickup — food scraps and organics diverted from the landfill. Sign up by calling (970) 864-7531 or at bruinwaste.com/compost.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_5704b8c3-a3ac-4316-85bb-1dd2471444f0.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/95/f959ee3b-f6f6-4f20-8646-0e2b50f9dabf/6ac68d96442fe.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Did you know that puppies grow?",
+    source: "Telluride Times",
+    date: "October 7, 2026",
+    firstSeen: "2026-10-07",
+    newsTopic: "community",
+    copy: "",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news_release/article_d8a6793d-4abd-42ca-8b13-921dc888af49.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/ba/aba09e2e-2b2b-4af6-a409-d292390dbe9f/6ac68e1397976.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Boomin’ and broomin’",
+    source: "Telluride Times",
+    date: "October 7, 2026",
+    firstSeen: "2026-10-07",
+    newsTopic: "infrastructure",
+    copy: "Telluride's volleyball team swept Dove Creek 25-10, 25-22, 25-21 on the road October 2nd, following a Tuesday win at Norwood. The Lady Miners won all three sets, with strong serving and kills from Noel, Fenton, and both Aplins. Telluride moves to 6-9 overall, 3-3 in San Juan Basin play.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_8cac9099-4a77-4923-b18d-5edda3f68fdd.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/10/31019d4e-a1ad-4eca-bb5c-fb42b29af8a1/6ac5f9fd60ab6.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Let your freak flag fly",
     source: "Telluride Times",
     date: "October 7, 2026",
@@ -3503,17 +3590,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Ridgway Sustainability Advisory Board Meeting Agenda",
-    source: "Town of Ridgway",
-    date: "October 6, 2026",
-    firstSeen: "2026-10-02",
-    newsTopic: "government",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/SAB-Meeting-Packet---October-6%2C-2026.pdf",
-    img: ""
-  },
-  {
     title: "Notice of Public Hearing Wed., Oct. 14, 2026 at 5:30pm - 1) Site Plan and Conditional Use Permit for Riverbend Townhomes (TBD Liddell Dr.); 2) Amended Plat of Lot 4 and Outlot of Riverview Busines Park Subdivision (TBD Liddell Dr.)",
     source: "Town of Ridgway",
     date: "September 30, 2026",
@@ -4338,6 +4414,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/02/sewing.jpg"
   },
   {
+    title: "OPEN AUDITIONS: Elf The Musical",
+    link: "https://koto.org/event/open-auditions-elf-the-musical/2026-10-14/",
+    description: "Telluride Theatre wants YOU to audition for our Holiday Musical at the Sheridan Opera House. This year, we are performing ELF THE MUSICAL, based on the beloved film starring Will Ferrell. Actors of all ages and skill levels are encouraged to audition. Telluride Theatre is an educational theatre, from never-evers to seasoned professionals. This laugh-out-loud comedy performs on the Opera House stage December 17 – 23rd, plus an extra-special Christmas Eve matinee on the 24th. Don't know where to start? Don't worry, we’ll provide you what you need for the audition. Auditions will be held October 14 & 15 at Telluride Middle-High School, or you can submit a video audition if you’re out of town. To learn more and sign up for auditions, go to www.telluridetheatre.org/holiday.",
+    pubDate: "2026-10-14T17:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Middle/High School, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/elf-auditions-social.png"
+  },
+  {
     title: "Pilates for All Bodies with Laura",
     link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-10-15/",
     description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
@@ -4358,6 +4445,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Arts HQ, TELLURIDE",
     imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
+  },
+  {
+    title: "OPEN AUDITIONS: Elf The Musical",
+    link: "https://koto.org/event/open-auditions-elf-the-musical/2026-10-15/",
+    description: "Telluride Theatre wants YOU to audition for our Holiday Musical at the Sheridan Opera House. This year, we are performing ELF THE MUSICAL, based on the beloved film starring Will Ferrell. Actors of all ages and skill levels are encouraged to audition. Telluride Theatre is an educational theatre, from never-evers to seasoned professionals. This laugh-out-loud comedy performs on the Opera House stage December 17 – 23rd, plus an extra-special Christmas Eve matinee on the 24th. Don't know where to start? Don't worry, we’ll provide you what you need for the audition. Auditions will be held October 14 & 15 at Telluride Middle-High School, or you can submit a video audition if you’re out of town. To learn more and sign up for auditions, go to www.telluridetheatre.org/holiday.",
+    pubDate: "2026-10-15T17:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Middle/High School, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/elf-auditions-social.png"
   },
   {
     title: "Facing the Mourning",
@@ -4622,28 +4720,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Michael D. Palm Theater, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2026/10/YF-thundertix.png"
-  },
-  {
-    title: "KOTO Halloween Bash",
-    link: "https://koto.org/event/koto-halloween-bash/",
-    description: "It's spooky season and that means it's time for the greatest off-season tradition in Telluride history – THE KOTO HALLOWEEN BASH! This year, we're letting our freak flags fly at The Alibi on Saturday, October 31st! Live music from Rado starts at 9 p.m. Costume Contest with cash prizes! Tickets are $20 in advance at alibitelluride.com and $25 at the door.",
-    pubDate: "2026-10-31T21:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "The Alibi, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/10/KOTO-Halloween-RADO-poster-9.23-1-scaled.jpg"
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-11-01/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-11-01T14:30:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   }
 ];
 
@@ -4769,6 +4845,18 @@ const ALIBI_EVENTS = [
     category: "Live Music",
     location: "The Alibi • Telluride, CO",
     imageUrl: "https://ucarecdn.com/621f88b8-3a58-4663-89e9-6138fd350587/-/crop/792x317/0,907/-/preview/"
+  },
+  {
+    title: "Nattali Rize",
+    link: "https://www.alibitelluride.com/calendar#eca-event=nattali-rize",
+    description: "Nattali Rize is a conscious artist, lyricist, and musician known for her ever-evolving sound and message-driven music. She performs live at The Alibi in Telluride.",
+    pubDate: "2026-10-17",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://1v09t9hszk.ucarecd.net/b1964748-70d2-4a7e-9996-5d4148ee589d/-/crop/1701x851/0,143/-/preview/"
   }
 ];
 
@@ -9103,7 +9191,7 @@ const TELLURIDE_BOARD_MEETINGS = [
     title: "Special Town Council Budget",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8307",
     hasAgenda: false,
-    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    location: "Rebekah Hall, 113 W Columbia Ave",
     time: "9:00 AM",
     civicwebId: 8307
   },
@@ -9232,6 +9320,15 @@ const TELLURIDE_BOARD_MEETINGS = [
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "9:00 AM",
     civicwebId: 8051
+  },
+  {
+    date: "December 4, 2026",
+    title: "Special Town Council",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324",
+    hasAgenda: false,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: "10:00 AM",
+    civicwebId: 8324
   },
   {
     date: "December 7, 2026",
