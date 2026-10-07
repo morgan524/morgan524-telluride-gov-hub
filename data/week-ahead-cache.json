@@ -1,22 +1,22 @@
 {
-  "hash": "01210015cb40e9e836b3113d208a5213e285f143",
-  "lede": "The biggest thing happening this week in local government is a Tuesday public hearing at Telluride Town Council on a vesting period extension for a development project — that's a vote worth showing up for. The same morning, Council takes up the Flock Safety automated license plate reader system, a privacy-versus-public-safety conversation that rarely stays quiet for long. Meanwhile, both San Miguel County and Mountain Village are deep in 2027 budget season, and a Wednesday BOCC session includes public hearings on affordable housing fee waivers in the Ilium Valley and a joint Planning Commission work session on affordable housing code updates.",
+  "hash": "c1533d6cb40afa2e643737d6f03ef787fca008d2",
+  "lede": "The heaviest lift this week is Wednesday's all-day Mountain Village budget work session, where staff and council will go line by line through the 2027 general fund, capital plan, and Tourism Fund — the decisions made in rooms like that one shape everything from road maintenance to what gets built next. The same day, the BOCC holds two public hearings, including one on whether to waive land-use fees for Mountain Village's Ilium Valley affordable housing project — a real question about how much the county is willing to put its thumb on the scale for workforce housing. Wednesday evening there's also a Ballot Measure 5A information meeting at KOTO on Monday, and Oktoberfest kicks off Friday if you need a reason to come up for air.",
   "notable": [
     {
       "id": 0,
-      "stake": "Public hearing on development vesting extension; ALPR camera privacy debate with public input."
+      "stake": "2027 budget shaped here before formal adoption — every department on the table."
     },
     {
-      "id": 6,
-      "stake": "Public hearings on affordable housing fee waivers and a lot line adjustment affecting county land use."
+      "id": 4,
+      "stake": "Public hearings on affordable housing fee waiver and a lot line adjustment."
+    },
+    {
+      "id": 7,
+      "stake": "Joint BOCC work session on Affordable Housing Code Update; afternoon action items pending."
     },
     {
       "id": 9,
-      "stake": "Joint BOCC-Planning Commission work session actively shaping county affordable housing code policy."
-    },
-    {
-      "id": 5,
-      "stake": "Vote on mortgage exception for deed-restricted homeowner — sets precedent for housing rules."
+      "stake": "Vote on gondola IGA amendment and FY27 budget shaping $5.2M in annual tax revenue."
     }
   ]
 }

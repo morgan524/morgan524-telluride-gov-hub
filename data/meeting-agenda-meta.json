@@ -470,7 +470,7 @@
   "telluride|2026-10-21|Historic & Architectural Review Commission - Oct 21 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024",
     "sv": 4,
-    "ph": "0edc39a9264b1248"
+    "ph": "de0b11ad24d73f99"
   },
   "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083",
@@ -492,7 +492,7 @@
   "telluride|2026-10-22|Planning & Zoning Commission - Oct 22 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8106",
     "sv": 4,
-    "ph": "3ad5aa7f9ebe51be"
+    "ph": "c3a3df604a3fce63"
   },
   "telluride|2026-10-22|Planning & Zoning Commission Chair - Oct 22 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8105",
@@ -607,7 +607,7 @@
   "telluride|2026-11-05|Special Meeting - Planning & Zoning Commission - Nov 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312",
     "sv": 4,
-    "ph": "55957c280b6936c1"
+    "ph": "65b9bd7a7d287f9a"
   },
   "telluride|2026-11-05|Town Council Budget - Nov 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054",
@@ -616,6 +616,11 @@
   },
   "telluride|2026-10-21|CANCELED - Historic & Architectural Review Commission Chair - Oct 21 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8025",
+    "sv": 4
+  },
+  "telluride|2026-10-08|San Miguel Authority for Regional Transportation - Oct 08 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8323",
+    "zoomUrl": "https://www.google.com/url?q=https://us02web.zoom.us/j/86722451498?pwd%3D7BgRYT2yt0O3KF5fCqes3oftgNSi6U.1&sa=D&source=calendar&ust=1791663141829276&usg=AOvVaw3s6jFtWFQYVpUDFpY9yqLe",
     "sv": 4
   }
 }
