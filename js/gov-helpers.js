@@ -390,7 +390,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8025","sv":4,"ph":"c951089001cb45c2"},
 
   "telluride|2026-10-21|Historic & Architectural Review Commission - Oct 21 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024","sv":4,"ph":"de0b11ad24d73f99"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024","sv":4,"ph":"a30d6dbb7de45f56"},
 
   "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083","sv":4,"ph":"bd74d669e41a67a8"},
@@ -810,7 +810,7 @@ const MEETING_PREVIEWS = {
     "This meeting of the Telluride Historic & Architectural Review Commission has been canceled. No agenda items will be addressed. Related legal notices reference a wildfire resiliency code amendment, a new paper billing fee from San Miguel Power Association, and a request for proposals on employee rental housing policy review.",
 
   "telluride|2026-10-08|San Miguel Authority for Regional Transportation - Oct 08 2026":
-    "Board will consider a resolution amending the Gondola Project Development IGA for FY27 and discuss FY27 budget development. Members will also receive updates on gondola project progress and September operations. The meeting will conclude with an executive session addressing personnel matters and pending litigation."
+    "Board will consider a resolution amending the Gondola Project Development IGA for FY27 and discuss FY27 budget development. Updates on gondola project progress and September operations will be presented. The board will also enter executive session regarding personnel matters and pending litigation."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -870,7 +870,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "October 8, 2026",
     newsTopic: "community",
     copy: "",
-    href: "https://www.ouraynews.com/2026/10/07/a-monster-celebration/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/10/07/a-monster-celebration/",
     img: ""
   },
   {
@@ -2529,6 +2529,30 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Old school: County commissioner candidate Dylan Brooks",
+    source: "Telluride Times",
+    date: "October 8, 2026",
+    firstSeen: "2026-10-08",
+    newsTopic: "government",
+    copy: "Nearly lifelong Telluride resident Dylan Brooks, 54, is running for San Miguel County Commissioner, leaning on 50 years in the valley, a background in financial planning, and two terms on the school board. His main focus is housing — he notes his childhood street now has just two occupied homes. He favors property tax incentives for full-time occupancy and points to Lawson Hill as a model worth building on.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/elections/article_1e38ddfa-44b4-43ea-b1fd-eac5653fee3c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/b0/4b06bb2a-8662-42f8-ab09-d8d51f3feaf9/6ac7cb3a854f7.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "Fixing a hole: county commissioner candidate Paul Reich",
+    source: "Telluride Times",
+    date: "October 8, 2026",
+    firstSeen: "2026-10-08",
+    newsTopic: "government",
+    copy: "Paul Reich is running for San Miguel County commissioner with housing affordability as his central focus, motivated in part by watching his five adult children struggle to build lives here. He brings 25-plus years of local public and private sector experience, including board work with the Telluride Hospital District and Telluride School District. The Nov. 3 election will determine if he gets the chance to test his ideas.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/elections/article_e4291c55-591b-4316-9a20-b90f407839d0.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/5d/25d9ba56-ff95-4c14-8020-2da45edaa84d/6ac74479d5f34.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Legals and Public Notices for Oct. 8-14, 2026",
     source: "Telluride Times",
     date: "October 8, 2026",
@@ -2687,19 +2711,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "A county to come home to",
-    source: "Telluride Times",
-    date: "October 7, 2026",
-    firstSeen: "2026-10-07",
-    newsTopic: "government",
-    copy: "A San Miguel County commissioner candidate lays out his platform ahead of October ballots: housing production, shoulder-season economic diversification, growth paying its own way, and better coordination between the county, towns, and districts. Paul Reich is the Democratic candidate for District 2.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_4ac8e900-0e05-463e-8af4-391d3eb19ee8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/d8/9d8dee4a-d594-4e79-b40a-f06edd7469dc/6ac691d279c2d.image.jpg",
-    isLetter: true,
-    imgHiRes: true
-  },
-  {
     title: "Telluride Foundation to host social media workshop",
     source: "Telluride Times",
     date: "October 7, 2026",
@@ -2781,6 +2792,19 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/election/article_7cc100a3-a096-4078-8505-f4a344f99523.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/74/d74832bf-60b2-4236-a3a3-3ee1081281f2/6abe80c5a0033.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "A county to come home to",
+    source: "Telluride Times",
+    date: "October 7, 2026",
+    firstSeen: "2026-10-07",
+    newsTopic: "government",
+    copy: "A San Miguel County commissioner candidate lays out his platform ahead of October ballots: housing production, shoulder-season economic diversification, growth paying its own way, and better coordination between the county, towns, and districts. Paul Reich is the Democratic candidate for District 2.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_4ac8e900-0e05-463e-8af4-391d3eb19ee8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/d8/9d8dee4a-d594-4e79-b40a-f06edd7469dc/6ac691d279c2d.image.jpg",
+    isLetter: true,
     imgHiRes: true
   },
   {
@@ -4779,7 +4803,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Pilates for All Bodies",
     link: "https://telluridelibrary.libcal.com/event/16536348?hs=a",
-    description: "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    description: "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can. Minimum two students to run the class.",
     pubDate: "2026-10-08T18:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -5331,17 +5355,6 @@ const OURAY_COUNTY_EVENTS = [
     sourceLabel: "Ouray County",
     category: "Community Event",
     location: "Ouray Ice Park - Ouray CO 81427",
-    imageUrl: ""
-  },
-  {
-    title: "Ouray County MAC Group Meeting",
-    link: "https://ouraycountyco.gov/Calendar.aspx?EID=2379",
-    description: "A meeting of the Ouray County MAC (Montrose-area Advisory Committee or similar advisory group), held at the 4-H Event Center in Ridgway. Two or more Ouray County Commissioners may be in attendance and participating.",
-    pubDate: "2026-10-08T14:00:00.000Z",
-    source: "ouraycounty",
-    sourceLabel: "Ouray County",
-    category: "Community Event",
-    location: "4-H Event Center - 22739 Highway 550 Ridgway CO 81432",
     imageUrl: ""
   }
 ];
@@ -6615,17 +6628,6 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "Senior Meals",
-    link: "https://www.norwoodtown.com/2026-10-01-senior-meals",
-    description: "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
-    pubDate: "2026-10-01T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Community Event",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-10-08-norwood-sanitation-district-meeting-meeting",
     description: "A regularly scheduled meeting of the Norwood Sanitation District, held in Norwood, Colorado under the Town of Norwood. These public government meetings address sanitation district business and are open to community members.",
@@ -7045,6 +7047,39 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    description: "Movies Under the Stars is a recurring outdoor film series held at the Conference Center Plaza in Mountain Village, screening movies on Saturday evenings at dusk throughout the summer. The series runs weekly from June 13 through August 15, 2026.",
+    pubDate: "2026-11-07T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
+  {
+    title: "Mind Blown Telluride",
+    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    pubDate: "2026-11-07T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
+  },
+  {
+    title: "Stoke the Vote",
+    link: "https://townofmountainvillage.com/explore/events/all-events/stoke-the-vote/",
+    description: "A community gathering in Mountain Village bringing together Patagonia Telluride, Protect Our Winters (POW), Telluride Mountain Club, Sheep Mountain Alliance, and EcoAction Partners around the theme of civic engagement and environmental advocacy. The event unites local and national organizations with a shared interest in protecting outdoor spaces through the democratic process.",
+    pubDate: "2026-11-07T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49989/stoke_the_vote_final_instagram_post_45.png"
   }
 ];
 
@@ -7214,6 +7249,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/28873/152294600242caf78680.800x533.webp"
+  },
+  {
+    title: "Dem-a-Palooza!",
+    link: "https://www.telluride.com/event/dem-a-palooza/",
+    description: "A family friendly fall festival celebrating democracy! Hear from our local Democratic candidates. There will be kids' …",
+    pubDate: "2026-10-17",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63738/bus_tour_graphics_1200_x_630_px_20261003041104444632.800x533.webp"
   },
   {
     title: "Water in the West",

@@ -290,19 +290,6 @@
     "type": "Outdoors & Sports"
   },
   {
-    "title": "Ouray County MAC Group Meeting",
-    "href": "https://ouraycountyco.gov/Calendar.aspx?EID=2379",
-    "date": "2026-10-08",
-    "time": "8:00 AM",
-    "location": "4-H Event Center - 22739 Highway 550 Ridgway CO 81432",
-    "town": "Ridgway",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "Ouray County",
-    "desc": "A meeting of the Ouray County MAC (Montrose-area Advisory Committee or similar advisory group), held at the 4-H Event Center in Ridgway. Two or more Ouray County Commissioners may be in attendance and participating.",
-    "type": "Community"
-  },
-  {
     "title": "Functional Fitness - Strength & Mobility Training For Women",
     "href": "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
     "date": "2026-10-08",
@@ -1259,6 +1246,19 @@
     "source": "Mountain Village",
     "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
     "type": "Community"
+  },
+  {
+    "title": "Dem-a-Palooza!",
+    "href": "https://www.telluride.com/event/dem-a-palooza/",
+    "date": "2026-10-17",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63738/bus_tour_graphics_1200_x_630_px_20261003041104444632.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "A family friendly fall festival celebrating democracy! Hear from our local Democratic candidates. There will be kids' …",
+    "type": "Family & Kids"
   },
   {
     "title": "OCSAP Grand Opening",
@@ -2574,6 +2574,45 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Learn to create reflections and still-water effects in watercolor with Anita Winter through demonstrations, guided exercises and individualized instruction. Participants will practice several techniques and apply them to a finished…",
+    "type": "Community"
+  },
+  {
+    "title": "Movies Under the Stars",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    "date": "2026-11-07",
+    "time": "5:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Movies Under the Stars is a recurring outdoor film series held at the Conference Center Plaza in Mountain Village, screening movies on Saturday evenings at dusk throughout the summer. The series runs weekly from June 13 through August 15,…",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Mind Blown Telluride",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    "date": "2026-11-07",
+    "time": "5:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    "type": "Community"
+  },
+  {
+    "title": "Stoke the Vote",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/stoke-the-vote/",
+    "date": "2026-11-07",
+    "time": "5:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49989/stoke_the_vote_final_instagram_post_45.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "A community gathering in Mountain Village bringing together Patagonia Telluride, Protect Our Winters (POW), Telluride Mountain Club, Sheep Mountain Alliance, and EcoAction Partners around the theme of civic engagement and environmental…",
     "type": "Community"
   },
   {

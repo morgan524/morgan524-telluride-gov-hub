@@ -274,9 +274,57 @@ const TMVOA_CACHED_DATA = [
     location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
+    date: "October 20, 2026",
+    title: "TMVOA Audit &amp; Compliance Committee",
+    board: "other",
+    agendaUrl: null,
+    packetUrl: null,
+    location: "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    date: "October 20, 2026",
+    title: "TMVOA Finance &amp; Budget Committee",
+    board: "other",
+    agendaUrl: null,
+    packetUrl: null,
+    location: "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
     date: "October 22, 2026",
     title: "TMVOA Board of Directors Meeting",
     board: "board",
+    agendaUrl: null,
+    packetUrl: null,
+    location: "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    date: "November 6, 2026",
+    title: "TMVOA Board of Directors Budget Meeting #1",
+    board: "board",
+    agendaUrl: null,
+    packetUrl: null,
+    location: "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    date: "November 19, 2026",
+    title: "TMVOA Board of Directors Budget Meeting #2",
+    board: "board",
+    agendaUrl: null,
+    packetUrl: null,
+    location: "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    date: "December 3, 2026",
+    title: "TMVOA Board of Directors Budget Meeting #3",
+    board: "board",
+    agendaUrl: null,
+    packetUrl: null,
+    location: "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    date: "December 17, 2026",
+    title: "TMVOA Members Budget Meeting",
+    board: "other",
     agendaUrl: null,
     packetUrl: null,
     location: "Mountain Village, CO (see agenda for Zoom link)"
@@ -311,7 +359,7 @@ const MV_CACHED_DATA = [
   },
   {
     date: "November 19, 2026",
-    time: "2:00 PM - 7:00 PM",
+    time: "3:00 PM - 8:00 PM",
     title: "Town Council Meeting",
     board: "tc",
     agendaUrl: null,
@@ -322,7 +370,7 @@ const MV_CACHED_DATA = [
   },
   {
     date: "December 3, 2026",
-    time: "10:00 AM - 3:00 PM",
+    time: "11:00 AM - 4:00 PM",
     title: "Design Review Board",
     board: "drb",
     agendaUrl: null,
@@ -333,7 +381,7 @@ const MV_CACHED_DATA = [
   },
   {
     date: "December 10, 2026",
-    time: "2:00 PM - 7:00 PM",
+    time: "3:00 PM - 8:00 PM",
     title: "Town Council Meeting",
     board: "tc",
     agendaUrl: null,

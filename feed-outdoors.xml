@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-outdoors.xml" rel="self" type="application/rss+xml" />
     <description>Hikes, races, ski events, and stewardship days — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Oct 2026 10:18:49 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 18:43:47 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Special Meeting - Planning &amp; Zoning Commission - Oct 08 2026 — 2026-10-08</title>
@@ -55,6 +55,19 @@ SMART's board meets virtually October 8th with two consequential action items. R
 ⚡ Why it matters: SMART votes on Gondola IGA amendment and sets course for $5.2M FY27 budget.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
+    </item>
+    <item>
+      <title>[Thu, Oct 8] Pilates for All Bodies</title>
+      <link>https://telluridelibrary.libcal.com/event/16536348?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/pilates%20for%20all%20bodies%7C2026-10-08</guid>
+      <pubDate>Thu, 08 Oct 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can. Minimum two students to run the class.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Fri, Oct 9] Ridgway Farmer&apos;s Market</title>
