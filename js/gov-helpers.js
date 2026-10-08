@@ -7822,19 +7822,34 @@ const LEGAL_NOTICES = [
 
 const HOUSING_LISTINGS = [
   {
+    title: "🏠 Spruce House H",
+    type: "deed-sale",
+    address: "226 East Pacific Avenue, Unit H, Telluride, CO 81435",
+    lat: 37.9375,
+    lng: -107.8123,
+    org: "telluride",
+    beds: "3 Bedroom, 2 Bath, ~1116 sq ft",
+    price: "",
+    source: "SMRHA",
+    contact: { phone: "(970) 728-3034", email: "admin@smrha.org" },
+    url: "https://smrha.org/spruce-house-h/",
+    smrhaSlug: "spruce-house-h",
+    note: "Tier 2 Town Constructed Unit. HOA $650.36/mo. Contact SMRHA for eligibility and application details."
+  },
+  {
     title: "🏠 Element 52 SW-102",
     type: "deed-sale",
     address: "398 South Davis Street, Unit SW-102, Telluride, CO 81435",
     lat: 37.93676,
     lng: -107.81787,
+    org: "telluride",
     beds: "2 Bedroom, 1 Bath, ~988 sq ft",
     price: "$352,529 (deed-restricted)",
     source: "SMRHA",
     contact: { phone: "(970) 728-3034", email: "admin@smrha.org" },
     url: "https://smrha.org/element-52-sw-102/",
     smrhaSlug: "element-52-sw-102",
-    note: "Tier 2 Mitigation Unit. HOA $420.28/mo. Contact SMRHA for eligibility and application details.",
-    org: "telluride"
+    note: "Tier 2 Mitigation Unit. HOA $420.28/mo. Contact SMRHA for eligibility and application details."
   },
   {
     title: "🏠 Silver Jack 202",
@@ -7842,14 +7857,14 @@ const HOUSING_LISTINGS = [
     address: "155 West Pacific Avenue, Unit 202, Telluride, CO 81435",
     lat: 37.93658,
     lng: -107.81173,
+    org: "telluride",
     beds: "3 Bedroom, 2 Bath, ~1330 sq ft",
     price: "$405,507 (deed-restricted)",
     source: "SMRHA",
     contact: { phone: "(970) 728-3034", email: "admin@smrha.org" },
     url: "https://smrha.org/silver-jack-202/",
     smrhaSlug: "silver-jack-202",
-    note: "Tier 1 Town Constructed Unit. HOA $307.64/mo. Contact SMRHA for eligibility and application details.",
-    org: "telluride"
+    note: "Tier 1 Town Constructed Unit. HOA $307.64/mo. Contact SMRHA for eligibility and application details."
   },
   {
     title: "🏠 Silver Jack 205",
@@ -7857,14 +7872,14 @@ const HOUSING_LISTINGS = [
     address: "155 West Pacific Avenue, Unit 205, Telluride, CO 81435",
     lat: 37.93658,
     lng: -107.81173,
+    org: "telluride",
     beds: "2 Bedroom, 1 Bath, ~935 sq ft",
     price: "$368,620 (deed-restricted)",
     source: "SMRHA",
     contact: { phone: "(970) 728-3034", email: "admin@smrha.org" },
     url: "https://smrha.org/silver-jack-205/",
     smrhaSlug: "silver-jack-205",
-    note: "Tier 1 Town Constructed Unit. HOA $218.42/mo. Contact SMRHA for eligibility and application details.",
-    org: "telluride"
+    note: "Tier 1 Town Constructed Unit. HOA $218.42/mo. Contact SMRHA for eligibility and application details."
   },
   {
     title: "Room for Rent — In-Town 2BR Condo",
