@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-10-08",
+    "title": "Cameras on every plate — worth it up here?",
+    "body": "Town Council is taking up the Flock Safety automated license plate reader system in a work session, with Chief Marshal Josh Comte presenting. The pitch is public safety — ALPRs can flag stolen vehicles and help solve crimes fast. The pushback is just as predictable: the cameras log where your car is, when, and how often. That's a record most people don't know exists. A small town with one road in and one road out makes that data unusually revealing. So where do you land?\n\nIs the safety case strong enough to accept that kind of surveillance in a place this size?",
+    "choices": [
+      "Safety wins here",
+      "Too much surveillance",
+      "Depends on the policy",
+      "It's complicated"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-10-07",
     "title": "The gondola IGA gets a rewrite — again",
     "body": "START is set to vote on a resolution amending the Gondola Project Development IGA for FY27, and they'll also dig into the FY27 budget. Amending a major intergovernmental agreement mid-project raises real questions. Supporters will say adjustments are normal as a project this complex evolves. Critics may wonder whether the changes signal cost creep, shifting commitments, or something the public hasn't been told yet — especially with litigation in executive session on the same agenda. So: does an IGA amendment mid-project concern you, or is that just how big projects work up here?",
@@ -420,21 +435,6 @@
       "Get it done — overdue",
       "Need more details first",
       "Depends on the scope",
-      "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-09-08",
-    "title": "Wildfire code is law — now what?",
-    "body": "Town Council passed Ordinance #1640 on August 11, 2026, amending the Land Use Code to implement the Colorado Wildfire Resiliency Code. Now a rescheduled budget session may revisit it. Some residents will see the code as overdue — the fire risk up here is real and the old rules didn't account for it. Others will push back on what new resiliency requirements cost property owners, or whether state-level rules translate cleanly to a tight canyon town. Nothing's been undone yet. So where do you stand — was folding a wildfire code into the Land Use Code the right call?",
-    "choices": [
-      "Right call, long overdue",
-      "Wrong fit for this town",
-      "Depends on the cost",
       "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",

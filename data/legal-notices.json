@@ -421,5 +421,86 @@
     "url": "https://www.telluridenews.com/news/legals/article_792d96c0-09c8-479f-83f8-bdf3681b49ae.html",
     "address": "San Miguel County, Colorado (various parcels countywide)",
     "noticeKey": "delinquent-tax-lien-sale-2025-san-miguel"
+  },
+  {
+    "title": "Liquor License Hearing -- New Tavern License Application (El Rhino / T Karn LLC)",
+    "entity": "Town of Mountain Village / T Karn LLC dba El Rhino",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "📋",
+    "iconClass": "type-hearing",
+    "type": "Ordinance",
+    "filterTag": "ordinance",
+    "summary": "T Karn, LLC, doing business as El Rhino, has applied for a new Tavern Liquor License from the Town of Mountain Village. A public hearing will be held at Mountain Village Town Hall on October 15, 2026, at 2:00 PM. The license would apply to 456 Mountain Village Boulevard, Unit E, Mountain Village, CO.",
+    "deadline": "2026-10-15",
+    "expires": "2026-10-15",
+    "dates": "10/8",
+    "papers": [
+      "ttimes_1008"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_5970564f-79b2-404e-8d86-38ffc649e835.html",
+    "address": "456 Mountain Village Boulevard, Unit E, Mountain Village, CO 81435",
+    "noticeKey": "liquor-el-rhino-mountain-village-2026"
+  },
+  {
+    "title": "Housing Lottery -- Master Lease Rental Lottery, The Boarding House (1100 W Black Bear Rd)",
+    "entity": "Telluride Housing Authority / Town of Telluride Housing Division",
+    "entityClass": "ent-county",
+    "entityLogo": "smrha",
+    "icon": "🏠",
+    "iconClass": "type-hearing",
+    "type": "Housing Notice",
+    "filterTag": "housing",
+    "summary": "The Telluride Housing Authority and Town of Telluride Housing Division are offering up to one double-occupancy room and one single-occupancy room at the Boarding House (1100 W Black Bear Road) for a two-year master lease via lottery. Local businesses, governmental, or non-profit organizations may apply. Applications are accepted October 9–28, 2026, at 11:00 AM each day, available at www.telluride-co.gov/735/Rental-Housing or in person at 820 Black Bear Rd G-17.",
+    "deadline": "2026-10-28",
+    "expires": "2026-10-28",
+    "dates": "10/8",
+    "papers": [
+      "ttimes_1008"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_5970564f-79b2-404e-8d86-38ffc649e835.html",
+    "address": "1100 W Black Bear Road, Telluride, CO (The Boarding House)",
+    "noticeKey": "housing-lottery-boarding-house-2026"
+  },
+  {
+    "title": "Foreclosure Sale -- Deed of Trust, 40697 State Highway 145 Norwood (Sale No. 2026-07)",
+    "entity": "San Miguel County Public Trustee / National Loan Acquisitions Company",
+    "entityClass": "ent-county",
+    "entityLogo": "assessor",
+    "icon": "💰",
+    "iconClass": "type-tax",
+    "type": "Tax & Finance",
+    "filterTag": "tax-finance",
+    "summary": "Public Trustee Brandi R. Hatfield of San Miguel County will sell a tract of land in the NW¼ NW¼ of Section 26, Township 45 North, Range 13 West (commonly 40697 State Highway 145, Norwood, CO) at public auction on November 19, 2026, at 10:00 AM, at 305 W. Colorado Avenue, Telluride. The foreclosure was initiated by National Loan Acquisitions Company due to failure to pay installments on the original $216,000 deed of trust granted by Sandra G. Esch. The outstanding principal balance is $101,421.78.",
+    "deadline": "2026-11-19",
+    "expires": "2026-11-19",
+    "dates": "10/8",
+    "papers": [
+      "ttimes_1008"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_5970564f-79b2-404e-8d86-38ffc649e835.html",
+    "address": "40697 State Highway 145, Norwood, CO 81423 (NW¼ NW¼ Section 26, Township 45 North, Range 13 West, N.M.P.M., San Miguel County)",
+    "noticeKey": "foreclosure-2026-07-norwood-hwy145",
+    "caseNumber": "2026-07"
+  },
+  {
+    "title": "RFP -- Consulting Services for Telluride Employee Rental Housing Policies Review (THA)",
+    "entity": "Telluride Housing Authority (THA) / Town of Telluride Community Services Department",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "The Telluride Housing Authority (THA), in partnership with the Town of Telluride Community Services Department, is seeking qualified consultants to conduct a comprehensive independent review, benchmarking, and streamlining of the Telluride Employee Rental Housing Policies. Proposals must be submitted electronically in PDF format to Community Services Director DeLanie Tapson at dtapson@telluride.gov no later than 12:00 PM MT on October 14, 2026. The full RFP including scope of work is available from the THA.",
+    "deadline": "2026-10-14",
+    "expires": "2026-10-14",
+    "dates": "10/8",
+    "papers": [
+      "ttimes_1008"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_5970564f-79b2-404e-8d86-38ffc649e835.html",
+    "address": "Telluride, CO (Town of Telluride employee rental housing program)",
+    "noticeKey": "rfp-tha-rental-housing-policies-review-2026"
   }
 ]

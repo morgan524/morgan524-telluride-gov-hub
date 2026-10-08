@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-08T00:55:43.966Z",
+ "generated": "2026-10-08T10:18:42.413Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -81,9 +81,18 @@
    "label": "Wildfire Resiliency",
    "lastUpdated": "2026-06-01",
    "upcoming": [],
-   "recent": [],
+   "recent": [
+    {
+     "source": "county",
+     "date": "2026-10-07",
+     "title": "Board of County Commissioners Meeting",
+     "snippet": "A full day for the BOCC. On the planning side, two public hearings: one on waiving land use application fees for the Town of Mountain Village's affordable housing project in the Ilium Valley — a…"
+    }
+   ],
    "developments": [],
-   "stale": []
+   "stale": [
+    "Wildfire Resiliency: county discussed it on 2026-10-07 (\"Board of County Commissioners Meeting\") but the deep dive was last edited 2026-06-01."
+   ]
   },
   "diamond": {
    "label": "Diamond Ridge",

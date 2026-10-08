@@ -498,6 +498,14 @@ const DEEP_DIVE_UPDATES = [];
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-10-08",
+    title: "Cameras on every plate — worth it up here?",
+    body: "Town Council is taking up the Flock Safety automated license plate reader system in a work session, with Chief Marshal Josh Comte presenting. The pitch is public safety — ALPRs can flag stolen vehicles and help solve crimes fast. The pushback is just as predictable: the cameras log where your car is, when, and how often. That's a record most people don't know exists. A small town with one road in and one road out makes that data unusually revealing. So where do you land?\n\nIs the safety case strong enough to accept that kind of surveillance in a place this size?",
+    choices: ["Safety wins here", "Too much surveillance", "Depends on the policy", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-10-07",
     title: "The gondola IGA gets a rewrite — again",
     body: "START is set to vote on a resolution amending the Gondola Project Development IGA for FY27, and they'll also dig into the FY27 budget. Amending a major intergovernmental agreement mid-project raises real questions. Supporters will say adjustments are normal as a project this complex evolves. Critics may wonder whether the changes signal cost creep, shifting commitments, or something the public hasn't been told yet — especially with litigation in executive session on the same agenda. So: does an IGA amendment mid-project concern you, or is that just how big projects work up here?",
@@ -728,14 +736,6 @@ const DAILY_QUESTIONS = [
     choices: ["Get it done — overdue", "Need more details first", "Depends on the scope", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-09-08",
-    title: "Wildfire code is law — now what?",
-    body: "Town Council passed Ordinance #1640 on August 11, 2026, amending the Land Use Code to implement the Colorado Wildfire Resiliency Code. Now a rescheduled budget session may revisit it. Some residents will see the code as overdue — the fire risk up here is real and the old rules didn't account for it. Others will push back on what new resiliency requirements cost property owners, or whether state-level rules translate cleanly to a tight canyon town. Nothing's been undone yet. So where do you stand — was folding a wildfire code into the Land Use Code the right call?",
-    choices: ["Right call, long overdue", "Wrong fit for this town", "Depends on the cost", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -810,19 +810,7 @@ const MEETING_PREVIEWS = {
     "This meeting of the Telluride Historic & Architectural Review Commission has been canceled. No agenda items will be addressed. Related legal notices reference a wildfire resiliency code amendment, a new paper billing fee from San Miguel Power Association, and a request for proposals on employee rental housing policy review.",
 
   "telluride|2026-10-08|San Miguel Authority for Regional Transportation - Oct 08 2026":
-    "Board will consider a resolution amending the FY27 Gondola Project Development IGA and discuss FY27 budget development. Updates on gondola project progress and September operations will be presented. The board will also enter executive session regarding personnel matters and pending litigation.",
-
-  "telluride|2026-10-07|Ecology Commission - Oct 07 2026":
-    "The Telluride Ecology Commission is expected to review and approve minutes from its September 2 meeting and discuss an update to the 2022 Climate Action Plan, focusing on the Community Resilience and Wellbeing Focus Area.",
-
-  "telluride|2026-10-07|Commission for Community Assistance, Arts & Special Events - Oct 07 2026":
-    "The Commission for Community Assistance, Arts & Special Events will conduct 2026 organization interviews and consider several calendar and banner requests, including events from the San Miguel County Democrats, Telluride Booster Club, Ah Haa School for the Arts, and Just For Kids Foundation.",
-
-  "telluride|2026-10-07|Telluride Housing Authority Subcommittee - Oct 07 2026":
-    "The Telluride Housing Authority Subcommittee will consider approving minutes from three prior meetings and review a request from Justice Logan James and Mariana Teresa Pereira Vargas for an exception to Telluride's housing authority guidelines. Public comment will also be accepted during the hybrid meeting.",
-
-  "county|2026-10-08|Planning Commission Meeting":
-    "The San Miguel County Planning Commission will meet October 8, 2026 to review September minutes, hold a joint work session with the Board of County Commissioners on an affordable housing code update, and consider a recommendation on a land use code amendment related to subdivisions and condominium plats."
+    "Board will consider a resolution amending the Gondola Project Development IGA for FY27 and discuss FY27 budget development. Members will also receive updates on gondola project progress and September operations. The meeting will conclude with an executive session addressing personnel matters and pending litigation."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -876,6 +864,106 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "A Monster celebration",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 8, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.ouraynews.com/2026/10/07/a-monster-celebration/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "City, county near pact on police services",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 8, 2026",
+    newsTopic: "public-safety",
+    copy: "Ouray County and the city of Ouray are hammering out the details of an agreement that would enlist the Ouray County Sheriff’s Office to provide full law enforcement services to the city for potentially the next several years. Under a draft contract discussed during a joint city-county work session M",
+    href: "https://www.ouraynews.com/2026/10/07/city-county-near-pact-police-services/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Reservoir transfer bill clears Senate",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 8, 2026",
+    newsTopic: "community",
+    copy: "Federal legislation to transfer ownership of Crystal Reservoir to the city of Ouray cleared the U.S. Senate last week, sending the bill to the House of Representatives as the clock winds down for Congress to finish the deal. After moving out of committee earlier this summer, senators passed the Crys",
+    href: "https://www.ouraynews.com/2026/10/07/reservoir-transfer-bill-clears-senate/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "SMPA plans Four Corners solar project",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 8, 2026",
+    newsTopic: "infrastructure",
+    copy: "San Miguel Power Association has joined three other southwest Colorado electricity providers in throwing their weight behind a sprawling solar facility near Cortez that could meet up to 40% of their consumer power needs, the utility announced Monday. Partnering with Empire Electric Association, Gunn",
+    href: "https://www.ouraynews.com/2026/10/07/smpa-plans-four-corners-solar-project/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Council not on board with transit funding next year",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 8, 2026",
+    newsTopic: "government",
+    copy: "The Ouray City Council dropped funding from the proposed 2027 budget for the city’s free in-town shuttle and contributions to the OurWay bus that runs between Montrose and Ouray. The in-town Ouray shuttle bus, operated by Ridgway-based TelluRides, struggled with lower-than-expected ridership since i",
+    href: "https://www.ouraynews.com/2026/10/07/council-not-board-transit-funding-next-year/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Ouray proposes flat budget in 2027",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 8, 2026",
+    newsTopic: "government",
+    copy: "The Ouray City Council got its first glimpse of the draft 2027 budget last week, a plan that projects little or no growth in city revenue. The budget doesn’t include pay raises for staff, paving projects in the city limits or a plan for law enforcement to serve the city. It does include paying for a",
+    href: "https://www.ouraynews.com/2026/10/07/ouray-proposes-flat-budget-2027/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Oppose road to nowhere",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 8, 2026",
+    newsTopic: "public-safety",
+    copy: "Dear Editor: The town planning commission just approved a road to one house to be built in the river overlay district, an area next to the Uncompahgre River. They approved widening the driveway that goes to 301 Liddell Drive and making it a street. The Ridgway Volunteer Fire Department doesn’t need ",
+    href: "https://www.ouraynews.com/2026/10/07/oppose-road-nowhere/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "County’s short-term rental policy ineffective",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 8, 2026",
+    newsTopic: "housing",
+    copy: "Dear Editor: I wanted to express my appreciation for Ouray County land use planner Dan Hughes. Dan has been been tireless in helping me navigate the Ouray County short-term rental computer issues. We are lucky to have him. I also want to opine on Ouray County’s counterproductive policy regarding STR",
+    href: "https://www.ouraynews.com/2026/10/07/countys-short-term-rental-policy-ineffective/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Perhaps the MTN Lodge should paint it pink",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 8, 2026",
+    newsTopic: "community",
+    copy: "Dear Editor: There is an old saying that you can’t fight City Hall. In Ouray County, history suggests another option: If you can’t fight City Hall, close the hotel and paint it pink. In the mid-1960s, the historic Beaumont Hotel in Ouray came into the hands of Wayland Phillips. Before long, Ms. Phil",
+    href: "https://www.ouraynews.com/2026/10/07/perhaps-mtn-lodge-paint-pink/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Looking Back",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 8, 2026",
+    newsTopic: "community",
+    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago October 6, 1966 Five young Denver toughs appeared in court Monday in Ouray. The boys, Matthew McQueary, Gary Dean Mc-Queary, Sherman E. Beck, Richard J.L. Severn and Johnny Fred Watts, ",
+    href: "https://www.ouraynews.com/2026/10/07/looking-back-20261008-0413-269998/?ta_paidstory",
+    img: ""
+  },
+  {
     title: "Parish Bulletin for October 4",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -883,16 +971,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "Here is this week's parish bulletin. Please check the Parish Calendar for all updated parish events. Reminder--There will be 30 minutes of Holy Adoration before each Holy Mass this week. Interested in a pilgrimage to Poland June 8...",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-october-4/",
-    img: ""
-  },
-  {
-    title: "Crystal Reservoir transfer bill clears Senate, but clock’s ticking",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 2, 2026",
-    newsTopic: "community",
-    copy: "Federal legislation to transfer ownership of Crystal Reservoir to the city of Ouray cleared the U.S. Senate this week, sending the bill to the House of Representatives as the clock winds down for Congress to finish the deal. After moving out of committee earlier this summer, senators passed the Crys",
-    href: "https://www.ouraynews.com/2026/10/02/crystal-reservoir-transfer-bill-clears-senate-clocks-ticking/",
     img: ""
   },
   {
@@ -904,96 +982,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Ouray County is pleased to announce the recent hiring of Henry Mitchell as Recovery Manager. Henry brings over a decade of expertise in emergency management, preparedness, response, and recovery at both local and state levels.",
     href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=964",
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22847"
-  },
-  {
-    title: "A Skyway show worth seeing",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 1, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.ouraynews.com/2026/09/30/skyway-show-worth-seeing/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Budget slashing begins",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 1, 2026",
-    newsTopic: "government",
-    copy: "Department by department, piece by piece, Ouray County commissioners worked toward cutting $1.5 million from the county’s draft budget at all-day budget sessions Sept. 23 and 29. Commissioners set a 15% cut target per department, though some departments made more or less than that amount. Finance Di",
-    href: "https://www.ouraynews.com/2026/09/30/budget-slashing-begins/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Ouray sergeant’s job? It’s unclear",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 1, 2026",
-    newsTopic: "public-safety",
-    copy: "What does the only remaining police employee do for work? Nobody — including Matt Troxell — will say Each weekday, the Ouray Police Department’s sole full-time employee hops in an unmarked black and white SUV for the 15-minute commute from his home in Ridgway to his job in Ouray. Sgt. Matt Troxell b",
-    href: "https://www.ouraynews.com/2026/09/30/ouray-sergeants-job-unclear/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "More squeeze, less juice: How proposed disaster relief sales tax compares with other communities",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 1, 2026",
-    newsTopic: "government",
-    copy: "Ouray County’s proposed sales tax hike to fund future disaster relief would take more out of residents’ and visitors’ pockets to provide a substantially less plush fiscal cushion than other Colorado locales that have pursued similar measures. Thanks in large part to a smaller tax base, the county wi",
-    href: "https://www.ouraynews.com/2026/09/30/squeeze-less-juice-proposed-disaster-relief-sales-tax-compares-communities/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Bear breaks into restaurant, leaves",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 1, 2026",
-    newsTopic: "community",
-    copy: "A large bear broke into Full Tilt restaurant and was found the morning of Sept. 23. Those passing by the restaurant at 515 Main St. filmed the confused-looking bear standing tall and looking out the front window by a Pac-Man arcade video game machine. Photos also captured what the bear left behind —",
-    href: "https://www.ouraynews.com/2026/09/30/bear-breaks-restaurant-leaves/",
-    img: ""
-  },
-  {
-    title: "City eyes legal action on sewer plant",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 1, 2026",
-    newsTopic: "infrastructure",
-    copy: "The city of Ouray has taken the first step toward seeking a legal remedy for its troubled wastewater treatment plant, filing notices of claims with four contractors who designed, built and provided services to the $17 million facility. The Sept. 24 notices to these contractors allege “significant de",
-    href: "https://www.ouraynews.com/2026/09/30/city-eyes-legal-action-sewer-plant/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Looking Back",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 1, 2026",
-    newsTopic: "government",
-    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago October 6, 1966 At a special meeting of the Ouray City Council on Oct. 4, the mayor of Ouray was instructed to sign a contract with the engineering firm of Nelson, Haley, Patterson and ",
-    href: "https://www.ouraynews.com/2026/09/30/looking-back-20261001-0343-347984/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "County considers veteran transport program",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 1, 2026",
-    newsTopic: "government",
-    copy: "Ouray County commissioners want to have more discussions with San Miguel County before partnering on a program that would transport veterans to medical appointments in Montrose and Grand Junction. Mikael Madsen, who is the veteran service officer for both counties, presented the program to commissio",
-    href: "https://www.ouraynews.com/2026/09/30/county-considers-veteran-transport-program/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Log Hill tests emergency siren locations",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 1, 2026",
-    newsTopic: "public-safety",
-    copy: "Don’t be alarmed. The Log Hill Mesa Fire Protection District plans to install an emergency siren system on Log Hill and is exploring possible locations on public property. The siren would alert residents to major incidents like wildfire. Sentry Siren, a Penrose-based company that provides outdoor wa",
-    href: "https://www.ouraynews.com/2026/09/30/log-hill-tests-emergency-siren-locations/?ta_paidstory",
-    img: ""
   },
   {
     title: "Thursday and Friday Schedule Changes",
@@ -2523,6 +2511,30 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Legals and Public Notices for Oct. 8-14, 2026",
+    source: "Telluride Times",
+    date: "October 8, 2026",
+    firstSeen: "2026-10-08",
+    newsTopic: "housing",
+    copy: "The Telluride Housing Authority is holding a lottery for master lease opportunities at two employee housing properties — Virginia Placer IIA and the Boarding House — with applications open October 9–28 at telluride-co.gov. A foreclosure notice has also been filed on a Tomboy Lodge unit. Mountain Village is considering a new tavern liquor license for El Rhino, with a hearing October 15.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/legals/article_5970564f-79b2-404e-8d86-38ffc649e835.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Commissioners discuss housing impact fees",
+    source: "Telluride Times",
+    date: "October 8, 2026",
+    firstSeen: "2026-10-08",
+    newsTopic: "housing",
+    copy: "San Miguel County commissioners reviewed the Employee Housing Impact Fee, which applies to new residential construction in unincorporated areas within the R-1 School District. With single-family homes averaging over $2,500/sq ft, the market-affordability gap sits at $1,112/sq ft. Some locals and a banker raised concerns that the fees aren't spurring deed-restricted units and may be squeezing out mid-range construction.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_0c65535e-eecc-4d83-815f-8db8c742fd6b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/30/130b39d3-c949-409e-8350-131385db5cf3/6ac14b3077339.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Dylan Brooks for commissioner",
     source: "Telluride Times",
     date: "October 7, 2026",
@@ -2531,7 +2543,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Art Goodtimes, a former San Miguel County commissioner of 20 years, is vouching for Dylan Brooks in the current commissioner race. Brooks grew up in Telluride.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_dadd172f-80c5-4421-8ff1-25b8419c8286.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     letterAuthor: "Art Goodtimes",
     isLetter: true,
     imgHiRes: true
@@ -2545,7 +2557,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Dan Covault is running for re-election as San Miguel County Sheriff against Lane Masters. Covault worked his way up through the department — dispatcher, jail, deputy, investigator, under-sheriff — and received statewide recognition for a major criminal investigation near Norwood. A local letter-writer endorses him based on experience and community knowledge.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_40bd991c-df3a-4f9b-ab7b-242fe76cd9e3.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     isLetter: true,
     imgHiRes: true
   },
@@ -2558,7 +2570,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The Town of Telluride is moving forward on two large development proposals — roughly 220–240 units at Carhenge and a 900-space underground parking structure with 50–60 units at Lot L — while consultant fees have reached approximately $2.2 million. A community member is raising questions about whether full feasibility, financing, and construction cost analyses have been publicly presented before further commitments are made.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_c65200ac-39ab-415f-9b1c-8dba79670440.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     letterAuthor: "Michael Saftler",
     isLetter: true,
     imgHiRes: true
@@ -2572,7 +2584,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "This is an opinion letter urging a \"No\" vote on Colorado Propositions 134 and 135. The writer, who identifies as a nurse and mother, argues the measures would shift medical and sports-participation decisions away from families and toward government oversight.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_87df11c3-1bff-4402-bb8c-39e8f9a7c2d1.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     letterAuthor: "Ximena Rebolledo Le",
     isLetter: true,
     imgHiRes: true
@@ -2586,8 +2598,21 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Ballot issue 5A would raise about $2.7 million a year for Telluride schools — roughly 13% of district revenue — at a cost of $117 per year per $1 million of home value. The district has already cut 11% of its staff; if 5A fails, cuts could reach 38–66%. Colorado's funding formula changes, not local decisions, created the shortfall.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_c5db02d1-b5e7-4965-ba88-220812ad90ff.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     letterAuthor: "Colby Barrett",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "A guide to measures on the November state ballot",
+    source: "Telluride Times",
+    date: "October 7, 2026",
+    firstSeen: "2026-10-07",
+    newsTopic: "government",
+    copy: "Colorado voters face 14 statewide ballot measures this November, including seven propositions that would establish new state law if passed by a simple majority. A San Miguel County official breaks down four of them — covering fentanyl penalties, human trafficking sentencing, school sports eligibility, and gender-affirming surgery for minors — noting where the County Commissioners took formal positions.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_2be2344c-53a2-431b-b548-bc04d20ab35c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/43/44339ca0-cfa2-409e-85e6-7ea9d3ae89ca/6ac68f923e968.image.jpg",
     isLetter: true,
     imgHiRes: true
   },
@@ -2597,8 +2622,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "October 7, 2026",
     firstSeen: "2026-10-08",
     newsTopic: "community",
-    copy: "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
-    claudeSummary: false,
+    copy: "The Brown family — whose parents Scott and Karen founded the Telluride Times 45 years ago — have shared a tribute to their sister Anna Brown, who passed away July 10. Anna grew up in a household defined by an open door, a full table, and deep roots in this valley's early days. She returned to Telluride not out of habit but because what was here was genuinely hers.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_fbcb4ca9-6258-43dc-afe6-1e3dd532b506.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/64/b64fddcd-b9a8-4737-b431-7914817b6c77/6ac696868f6ba.image.jpg",
     isLetter: true,
@@ -2648,9 +2673,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Telluride Times",
     date: "October 7, 2026",
     firstSeen: "2026-10-07",
-    newsTopic: "community",
-    copy: "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
-    claudeSummary: false,
+    newsTopic: "government",
+    copy: "A San Miguel County commissioner candidate lays out his platform ahead of October ballots: housing production, shoulder-season economic diversification, growth paying its own way, and better coordination between the county, towns, and districts. Paul Reich is the Democratic candidate for District 2.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_4ac8e900-0e05-463e-8af4-391d3eb19ee8.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/d8/9d8dee4a-d594-4e79-b40a-f06edd7469dc/6ac691d279c2d.image.jpg",
     isLetter: true,
@@ -2666,19 +2691,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_e0768ffe-b88b-49b7-a89b-77e3844a23e4.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/80/68027577-a37e-4fd1-b829-580168e1b64e/6ac690335edcb.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "A guide to measures on the November state ballot",
-    source: "Telluride Times",
-    date: "October 7, 2026",
-    firstSeen: "2026-10-07",
-    newsTopic: "government",
-    copy: "Colorado voters face 14 statewide ballot measures this November, including seven propositions that would establish new state law if passed by a simple majority. A San Miguel County official breaks down four of them — covering fentanyl penalties, human trafficking sentencing, school sports eligibility, and gender-affirming surgery for minors — noting where the County Commissioners took formal positions.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_2be2344c-53a2-431b-b548-bc04d20ab35c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/43/44339ca0-cfa2-409e-85e6-7ea9d3ae89ca/6ac68f923e968.image.jpg",
-    isLetter: true,
     imgHiRes: true
   },
   {
@@ -3743,6 +3755,19 @@ const KOTO_FEATURED_STORIES = [
 // and the array will naturally shed the sentinels via the same logic.
 const SMB_FORUM_ARTICLES = [
   {
+    title: "Chiles family welcomes students to learn about regenerative agriculture",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "October 7, 2026",
+    firstSeen: "2026-10-07",
+    dateSource: "article",
+    newsTopic: "education",
+    copy: "Rosella Chiles brought 21 Nucla sixth-graders out to Rimrocker Ranch in September to learn soil health firsthand — picking turnips, radishes, and sunflowers instead of sitting through a slideshow. The ranch operates as a regenerative, multi-crop operation and has partnered with the Shavano Conservation District for 4.5 years. Students will now use the visit as inspiration for a poster contest themed \"Soil: Where it all Begins,\" with winners announced in early November.",
+    claudeSummary: true,
+    href: "https://www.sanmiguelbasinforum.com/stories/chiles-family-welcomes-students-to-learn-about-regenerative-agriculture,132133",
+    img: ""
+  },
+  {
     title: "West End trail system nears construction approval",
     source: "San Miguel Basin Forum",
     sourceKey: "smb",
@@ -4191,39 +4216,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Stoke the Vote",
-    link: "https://koto.org/event/stoke-the-vote/",
-    description: "Join us at Patagonia Telluride with POW (Protect Our Winters), Telluride Mountain Club, Sheep Mountain Alliance, and EcoAction Partners for an evening of learning and conversation about how recreation intersects with the protection of public lands, conservation, and climate action. We'll write postcards to prospective voters, watch POW short films, and host a panel conversation with our partners — plus a giveaway, food, and a chance to earn a $100 credit at Patagonia.",
-    pubDate: "2026-10-07T17:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Patagonia Telluride, Telluride Retail",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/09/Stoke-the-VOTE-final-flyer.png"
-  },
-  {
-    title: "Banned Book BINGO at the Stronghouse",
-    link: "https://koto.org/event/banned-book-bingo-at-the-stronghouse/",
-    description: "It’s Banned Book Week, and the Wilkinson Public Library is celebrating the Freedom to Read at the Stronghouse Brew Pub on Wednesday at 5:30pm with a free BINGO night! Come early to grab a seat and a bite to eat. We’ll have banned books and WPL merch as prizes. Come solo or bring your friends. Hope to see you there!",
-    pubDate: "2026-10-07T17:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Stronghouse Brewpub, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/10/BINGO.jpg"
-  },
-  {
-    title: "Telluride Rotary Club Meeting",
-    link: "https://koto.org/event/tellluride-rotary-club-meeting/",
-    description: "Telluride Rotary Club meets Wednesday, October 7, at 6 p.m. at the Mountain Lodge in Mountain Village. Come at 5:30PM to socialize before the meeting. Meetings feature guest speakers and discussion of club projects. Anyone with an interest in networking and service is welcome to drop in as a guest. Email telluriderotary@gmail.com for info or to rsvp.",
-    pubDate: "2026-10-07T18:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Mountain Lodge Telluride, Mountain Village",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/10/Telluride-Rotary-Logo-White.jpg"
-  },
   {
     title: "Pilates for All Bodies with Laura",
     link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-10-08/",
@@ -4745,59 +4737,92 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Mahjongg for Independent Players",
-    link: "https://telluridelibrary.libcal.com/event/17622567?hs=a",
-    description: "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
-    pubDate: "2026-10-07T19:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_10_13_36_20.jpg"
-  },
-  {
-    title: "Kids Cook",
-    link: "https://telluridelibrary.libcal.com/event/17292124?hs=a",
-    description: "3:30 PM – 4:30 PM · Join us every Wednesday for a fun and tasty adventure in the kitchen! Learn how to make delicious and creative snacks using safe cooking tools alongside other young chefs. Free and open to kids ages 5-12.  &Uuml;nete a nosotros todos los mi&eacute;rcoles para una divertida y sabrosa aventura en la cocina. Aprende a hacer bocadillos deliciosos y creativos usando herramientas de cocina seguras junto a otros j&oacute;venes chefs. Gratis y abierto para ni&ntilde;os de 5 a 12 a&ntilde;os.",
-    pubDate: "2026-10-07T21:30:00.000Z",
+    title: "Storytime / Hora de Cuentos",
+    link: "https://telluridelibrary.libcal.com/event/17514635?hs=a",
+    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
+    pubDate: "2026-10-08T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_42_33.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
   },
   {
-    title: "Harry Potter Watch Party",
-    link: "https://telluridelibrary.libcal.com/event/17486059?hs=a",
-    description: "4:00 PM – 6:30 PM · Join the WPL every Wednesday after school in September and October, where we will sequentially watch all 8 of the original Harry Potter movies. This event is for teens/youth.",
-    pubDate: "2026-10-07T22:00:00.000Z",
+    title: "Art in Flight: Reinventing Postmodernism with Smithsonian Curator Carolyn Russo - Online Talk",
+    link: "https://telluridelibrary.libcal.com/event/17639342?hs=a",
+    description: "12:00 PM – 1:00 PM · Join us for a captivating online conversation with acclaimed author and Smithsonian curator Carolyn Russo as we dive into her fascinating book, The Ascent of Rauschenberg . Explore the towering legacy, unexpected inspirations, and creative heights of one of America&#39;s most influential artistic icons. Most famous for his groundbreaking \"Combines\"—painting and sculpture hybrids that often incorporated everyday objects—American artist Robert Rauschenberg (1925-2008) created within a range of mediums, including collage, performance, photography, and printmaking. But a connective tissue through it all was his fascination with flight. The Ascent of Rauschenberg explores the flight motif across his work, spanning birds, insects, aviation, spaceflight, sensory experiences, and metaphors for his own life. …",
+    pubDate: "2026-10-08T18:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_22_52.jpg"
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_14_11_57_38.jpg"
   },
   {
-    title: "Parenting Workshop",
-    link: "https://telluridelibrary.libcal.com/event/16949891?hs=a",
-    description: "5:00 PM – 6:30 PM · Learn tools to establish schedules and routines that help your family operate more smoothly.  Aprende herramientas para establecer horarios y rutinas que ayuden a tu familia a funcionar con mayor fluidez.",
-    pubDate: "2026-10-07T23:00:00.000Z",
+    title: "Pilates for All Bodies",
+    link: "https://telluridelibrary.libcal.com/event/16536348?hs=a",
+    description: "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-10-08T18:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_21_16_32_14.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg"
   },
   {
-    title: "Banned Book Bingo Night at the Stronghouse",
-    link: "https://telluridelibrary.libcal.com/event/17621337?hs=a",
-    description: "5:30 PM – 7:00 PM · Join Wilkinson Public Library for a lively evening of Banned Book Bingo at the Stronghouse Brew Pub! Test your luck and celebrate the freedom to read with a night full of laughter, community, and prizes-this year with a horror twist! Winners will take home unique prizes, including banned horror books  and exclusive Wilkinson Public Library hats and socks you can't get anywhere else. Come for the Bingo, stay for the books, and raise a glass to the stories that spark thought, challenge ideas, and connect us all. Come early to grab your seat and a bit to eat!",
-    pubDate: "2026-10-07T23:30:00.000Z",
+    title: "Littles On the Move",
+    link: "https://telluridelibrary.libcal.com/event/13960364?hs=a",
+    description: "3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.",
+    pubDate: "2026-10-08T21:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Stronghouse Brew Pub",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_14_10_24_33.jpg"
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png"
+  },
+  {
+    title: "The Spark Lab with EcoAction Partners",
+    link: "https://telluridelibrary.libcal.com/event/17292170?hs=a",
+    description: "The Spark Lab is a recurring children's program at Wilkinson Public Library's Kids Area, featuring hands-on activities led by rotating community partners. This session is hosted by EcoAction Partners, part of a monthly Thursday series that also includes collaborations with Pinhead Institute, Ah Haa School, and Telluride Theatre.",
+    pubDate: "2026-10-08T21:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_50_13.png"
+  },
+  {
+    title: "Manualidades y Conversaciones",
+    link: "https://telluridelibrary.libcal.com/event/17706673?hs=a",
+    description: "5:00 PM – 6:30 PM · Haremos un proyecto entretenido y nos informaremos sobre las noticias de la comunidad. El invitado especial de este mes ser&aacute; Andr&eacute;s Jacinto, de Salud P&uacute;blica, quien nos compartir&aacute; acerca de las pr&oacute;ximas fechas de vacunaci&oacute;n y clases de Protecci&oacute;n de Alimentos para Cocineros, adem&aacute;s de muchas otras noticias, y tambi&eacute;n tendremos papel picado para hacer en familia!",
+    pubDate: "2026-10-08T23:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_27_16_20_48.png"
+  },
+  {
+    title: "Booze and Books",
+    link: "https://telluridelibrary.libcal.com/event/16963784?hs=a",
+    description: "5:15 PM – 6:30 PM · Sip on a libation while chatting with other bibliophiles about books you have read recently. It&#39;s totally open ended and open to everyone! 5:15 the second Thursday of every month. The library will get some apps for the table; you purchase your own beverage.   Please sign up in advance . Meet at  Liz  at 200 W. Colorado Ave. in Telluride. (Entrance is on Fir St.)",
+    pubDate: "2026-10-08T23:15:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Liz",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_15_54_25.jpg"
+  },
+  {
+    title: "Stargazing Night at the Library: Draconid Meteor Shower",
+    link: "https://telluridelibrary.libcal.com/event/17501609?hs=a",
+    description: "6:30 PM – 8:00 PM · Come join us October 8th for a night under the stars as we watch for the Draconid meteor shower with our guide, Jamie Salem! Bring a blanket or lawn chair, dress for the weather, and come enjoy an evening of stars, stories, and good company. Don't worry about the weather! If the skies aren't clear, we'll bring the fun indoors. ***The Draconid shower is a real oddity, in that the radiant point stands highest in the sky as darkness falls. That means that, unlike many meteor showers, more Draconids are likely to fly in the evening hours than in the morning hours after midnight. This shower is usually a sleeper, producing only a handful of languid meteors per hour in most years. But watch out if the Dragon awakes! …",
+    pubDate: "2026-10-09T00:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_08_11_36_34.png"
   }
 ];
 
@@ -7736,6 +7761,79 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_792d96c0-09c8-479f-83f8-bdf3681b49ae.html",
     address: "San Miguel County, Colorado (various parcels countywide)",
     noticeKey: "delinquent-tax-lien-sale-2025-san-miguel"
+  },
+  {
+    title: "Liquor License Hearing -- New Tavern License Application (El Rhino / T Karn LLC)",
+    entity: "Town of Mountain Village / T Karn LLC dba El Rhino",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "T Karn, LLC, doing business as El Rhino, has applied for a new Tavern Liquor License from the Town of Mountain Village. A public hearing will be held at Mountain Village Town Hall on October 15, 2026, at 2:00 PM. The license would apply to 456 Mountain Village Boulevard, Unit E, Mountain Village, CO.",
+    deadline: "2026-10-15",
+    expires: "2026-10-15",
+    dates: "10/8",
+    papers: ["ttimes_1008"],
+    url: "https://www.telluridenews.com/news/legals/article_5970564f-79b2-404e-8d86-38ffc649e835.html",
+    address: "456 Mountain Village Boulevard, Unit E, Mountain Village, CO 81435",
+    noticeKey: "liquor-el-rhino-mountain-village-2026"
+  },
+  {
+    title: "Housing Lottery -- Master Lease Rental Lottery, The Boarding House (1100 W Black Bear Rd)",
+    entity: "Telluride Housing Authority / Town of Telluride Housing Division",
+    entityClass: "ent-county",
+    entityLogo: "smrha",
+    icon: "🏠",
+    iconClass: "type-hearing",
+    type: "Housing Notice",
+    filterTag: "housing",
+    summary: "The Telluride Housing Authority and Town of Telluride Housing Division are offering up to one double-occupancy room and one single-occupancy room at the Boarding House (1100 W Black Bear Road) for a two-year master lease via lottery. Local businesses, governmental, or non-profit organizations may apply. Applications are accepted October 9–28, 2026, at 11:00 AM each day, available at www.telluride-co.gov/735/Rental-Housing or in person at 820 Black Bear Rd G-17.",
+    deadline: "2026-10-28",
+    expires: "2026-10-28",
+    dates: "10/8",
+    papers: ["ttimes_1008"],
+    url: "https://www.telluridenews.com/news/legals/article_5970564f-79b2-404e-8d86-38ffc649e835.html",
+    address: "1100 W Black Bear Road, Telluride, CO (The Boarding House)",
+    noticeKey: "housing-lottery-boarding-house-2026"
+  },
+  {
+    title: "Foreclosure Sale -- Deed of Trust, 40697 State Highway 145 Norwood (Sale No. 2026-07)",
+    entity: "San Miguel County Public Trustee / National Loan Acquisitions Company",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "Public Trustee Brandi R. Hatfield of San Miguel County will sell a tract of land in the NW¼ NW¼ of Section 26, Township 45 North, Range 13 West (commonly 40697 State Highway 145, Norwood, CO) at public auction on November 19, 2026, at 10:00 AM, at 305 W. Colorado Avenue, Telluride. The foreclosure was initiated by National Loan Acquisitions Company due to failure to pay installments on the original $216,000 deed of trust granted by Sandra G. Esch. The outstanding principal balance is $101,421.78.",
+    deadline: "2026-11-19",
+    expires: "2026-11-19",
+    dates: "10/8",
+    papers: ["ttimes_1008"],
+    url: "https://www.telluridenews.com/news/legals/article_5970564f-79b2-404e-8d86-38ffc649e835.html",
+    address: "40697 State Highway 145, Norwood, CO 81423 (NW¼ NW¼ Section 26, Township 45 North, Range 13 West, N.M.P.M., San Miguel County)",
+    noticeKey: "foreclosure-2026-07-norwood-hwy145",
+    caseNumber: "2026-07"
+  },
+  {
+    title: "RFP -- Consulting Services for Telluride Employee Rental Housing Policies Review (THA)",
+    entity: "Telluride Housing Authority (THA) / Town of Telluride Community Services Department",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "The Telluride Housing Authority (THA), in partnership with the Town of Telluride Community Services Department, is seeking qualified consultants to conduct a comprehensive independent review, benchmarking, and streamlining of the Telluride Employee Rental Housing Policies. Proposals must be submitted electronically in PDF format to Community Services Director DeLanie Tapson at dtapson@telluride.gov no later than 12:00 PM MT on October 14, 2026. The full RFP including scope of work is available from the THA.",
+    deadline: "2026-10-14",
+    expires: "2026-10-14",
+    dates: "10/8",
+    papers: ["ttimes_1008"],
+    url: "https://www.telluridenews.com/news/legals/article_5970564f-79b2-404e-8d86-38ffc649e835.html",
+    address: "Telluride, CO (Town of Telluride employee rental housing program)",
+    noticeKey: "rfp-tha-rental-housing-policies-review-2026"
   }
 ];
 
