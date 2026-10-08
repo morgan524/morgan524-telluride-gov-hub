@@ -305,26 +305,6 @@
     "caseNumber": "202606"
   },
   {
-    "title": "Public Hearing -- Subdivision Exemption / Lot Line Adjustment, Lawson Hill PUD Lots 320A & 320B (COL-000239)",
-    "entity": "San Miguel County Board of Commissioners / James Pierce (applicant) on behalf of John and Dianna Reams",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "San Miguel County is considering an application by James Pierce on behalf of property owners John and Dianna Reams to adjust the lot line between Parcels #456532416079 and #456532416080 at Lots 320A and 320B, Lawson Hill PUD, to correct an error in the placement of a duplex foundation. A public hearing before the Board of County Commissioners is scheduled for October 7, 2026 at 9:30 a.m. at 333 West Colorado Avenue, Telluride, CO, both in person and online. Written comments should be submitted to the San Miguel County Planning Department by September 28, 2026.",
-    "deadline": "2026-10-07",
-    "expires": "2026-10-07",
-    "dates": "9/17",
-    "papers": [
-      "ttimes_0917"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_6e1025d7-5ad7-45a9-8530-2bda61ea94b8.html",
-    "address": "Lots 320A & 320B, Lawson Hill PUD, San Miguel County, CO (Parcels #456532416079 & #456532416080)",
-    "noticeKey": "lot-line-adj-lawson-hill-320A-320B-COL000239"
-  },
-  {
     "title": "Request for Proposal -- Consulting Services for a Comprehensive Review of the Telluride Employee Rental Housing Policies",
     "entity": "Town of Telluride",
     "entityClass": "ent-county",

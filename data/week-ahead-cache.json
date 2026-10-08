@@ -1,22 +1,18 @@
 {
-  "hash": "252ed9e66ac8dd66e163981f166309b85ba9bbbc",
-  "lede": "The biggest thing on the calendar this week is a public hearing at the San Miguel County BOCC on whether to waive land use fees for Mountain Village's affordable housing project in the Ilium Valley — a small procedural question that says a lot about how much the county is willing to put behind its housing commitments. The same day, Mountain Village opens its all-day 2027 budget work session, and the county's Planning Commission follows Wednesday with a joint BOCC work session on an Affordable Housing Code Update. SMART's board also meets to vote on amending the Gondola Project IGA for FY27 and kicks off budget talks for the $5.2M/year the authority collects in tax revenue.",
+  "hash": "9aea86f7d4da190659ee0459bf43676abdfd4f51",
+  "lede": "The biggest item this week is the San Miguel County Planning Commission's all-day meeting on October 8, which opens with a joint BOCC work session on an Affordable Housing Code Update — about as close to the root of this valley's housing crisis as any single agenda gets. SMART's board also meets virtually that same day to vote on amending the Gondola Project Development IGA for FY27 and to kick off budget talks over how to allocate $5.2 million a year in tax revenue. Elsewhere, a public hearing on special event liquor permits for the Telluride Horror Show lands October 14, and the Ballot Measure 5A Information Meeting on Monday is worth your time if you haven't sorted out where you stand on that one yet.",
   "notable": [
     {
-      "id": 4,
-      "stake": "Public hearing on waiving fees for Ilium Valley affordable housing project."
+      "id": 1,
+      "stake": "Joint BOCC work session on Affordable Housing Code Update; public comment opportunity."
     },
     {
-      "id": 0,
-      "stake": "Mountain Village shapes every 2027 department budget before formal adoption."
+      "id": 3,
+      "stake": "Vote on Gondola IGA amendment and FY27 budget direction for $5.2M in tax revenue."
     },
     {
-      "id": 7,
-      "stake": "County rewrites affordable housing code; joint BOCC work session signals urgency."
-    },
-    {
-      "id": 9,
-      "stake": "Vote to amend Gondola IGA and set FY27 budget for $5.2M transit authority."
+      "id": 12,
+      "stake": "Public hearing on Horror Show alcohol permits; 1,400-person weekend crowds at stake."
     }
   ]
 }

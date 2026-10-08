@@ -265,6 +265,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Ballot Discussion at the Burro",
+    "href": "https://events.ourayridgwayevents.com/event/ballot-discussion-at-the-burro",
+    "date": "2026-10-08",
+    "time": "5:00 PM",
+    "location": "The Burro",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54178445440469/huge/9cc32c847f55b0532c7a80c0c95a7f617606b9a2.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "If you'd like to join in a discussion of the 14 statewide measures and the Ouray County 1A measure to build a disaster fund, please join us at the Burro on Thursday, October 8th, from 5:00 to 6:30. Please bring food or drink to share if…",
+    "type": "Community"
+  },
+  {
     "title": "The Creative Exchange at Telluride Arts HQ",
     "href": "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-10-08/",
     "date": "2026-10-08",
@@ -758,7 +771,7 @@
     "time": "9:00 PM",
     "location": "The Alibi • Telluride, CO",
     "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-1.jpg",
+    "img": "https://1v09t9hszk.ucarecd.net/72b993f2-f313-4b6b-b298-6d9e4830c384/-/crop/1294x1295/0,77/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
     "desc": "CASTLE is a live music performance at The Alibi in Telluride. The artist has roots in the Telluride community, having begun a journey here as a ski coach before transitioning to a career in music.",
@@ -1304,6 +1317,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Grand Opening of OCSAP Office",
+    "href": "https://events.ourayridgwayevents.com/event/grand-opening-of-ocsap-office",
+    "date": "2026-10-17",
+    "time": "1:00 PM",
+    "location": "OCSAP office in the REMAX building",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54170098067739/huge/4826066a20a04fe739c1d0fc053ce5c0b55ec66f.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Stop in at the Ouray County Support and Advocacy Project's new office between 1 and 4pm on Saturday, October 17, to show you care about victims/survivors of sexual and/or intimate partner violence here. Learn more about this new nonprofit…",
+    "type": "Community"
+  },
+  {
     "title": "Love Your Gorge",
     "href": "https://ouraycountyco.gov/Calendar.aspx?EID=3786",
     "date": "2026-10-17",
@@ -1353,6 +1379,19 @@
     "category": "Community Event",
     "source": "Mountain Village",
     "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    "type": "Community"
+  },
+  {
+    "title": "OCSAP Grand Opening",
+    "href": "https://ouraycountyco.gov/Calendar.aspx?EID=3790",
+    "date": "2026-10-17",
+    "time": "7:00 AM",
+    "location": "- 112 Village Square W. Suite 220 Ridgway CO 81432",
+    "town": "Ridgway",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
+    "category": "Community Event",
+    "source": "Ouray County",
+    "desc": "The Ouray County Sexual Assault Program (OCSAP) will celebrate its grand opening at 112 Village Square West, Suite 220 in Ridgway. This community event marks the launch of the program and may include attendance from Ouray County…",
     "type": "Community"
   },
   {
@@ -2395,6 +2434,32 @@
     "type": "Arts & Film"
   },
   {
+    "title": "KOTO Halloween Bash",
+    "href": "https://koto.org/event/koto-halloween-bash/",
+    "date": "2026-10-31",
+    "time": "9:00 PM",
+    "location": "The Alibi, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/10/KOTO-Halloween-RADO-poster-9.23-1-scaled.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "It's spooky season and that means it's time for the greatest off-season tradition in Telluride history – THE KOTO HALLOWEEN BASH! This year, we're letting our freak flags fly at The Alibi on Saturday, October 31st! Live music from Rado…",
+    "type": "Music"
+  },
+  {
+    "title": "RADO - KOTO Halloween Party",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=rado-koto-halloween-party",
+    "date": "2026-10-31",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://1v09t9hszk.ucarecd.net/171ebd27-ef27-4cb9-9825-5cc5e465beb4/-/crop/3300x3301/0,74/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "A Halloween party and live music event at The Alibi featuring RADO, a Denver-based band, and KOTO. The show begins at 9:00 PM on Halloween night.",
+    "type": "Music"
+  },
+  {
     "title": "Easy Jim ~ 2 Night Halloween Run",
     "href": "https://sherbino.org/event/easy-jim-2-night-halloween-run-4/",
     "date": "2026-10-31",
@@ -2405,6 +2470,19 @@
     "category": "",
     "source": "Sherbino Theater",
     "desc": "Easy Jim brings a two-night Halloween run to The Sherbino in Ridgway, performing across October 30 and 31, 2026, with shows starting at 8:00 p.m. each night. The run centers on Grateful Dead music, offering two evenings of celebration for…",
+    "type": "Community"
+  },
+  {
+    "title": "Tea and Tarot",
+    "href": "https://koto.org/event/tea-and-tarot/2026-11-01/",
+    "date": "2026-11-01",
+    "time": "2:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
     "type": "Community"
   },
   {
@@ -2579,6 +2657,19 @@
     "desc": "The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In…",
     "type": "Arts & Film",
     "endDate": "2026-11-30"
+  },
+  {
+    "title": "Adult Spelling Bee - Telluride Library",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=adult-spelling-bee-telluride-library",
+    "date": "2026-11-06",
+    "time": "6:30 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://1v09t9hszk.ucarecd.net/81532fb8-7b72-4529-9249-3d41062e15ff/-/crop/1174x1175/58,0/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "An adult spelling bee hosted at The Alibi, offering teams of two the chance to compete for bragging rights and a $100 prize, with additional prizes also up for grabs. The event brings a playful, competitive twist to a weeknight evening at…",
+    "type": "Community"
   },
   {
     "title": "Introduction to Copper Jewelry with Emily Knickerbocker",

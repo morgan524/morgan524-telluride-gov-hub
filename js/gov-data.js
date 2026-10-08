@@ -56,7 +56,7 @@ const COUNTY_CIVICCLERK_AGENDA_FILES = {
   919:  1705,  // Planning Commission May 14 2026
 };
 
-const COUNTY_CACHE_DATE = '2026-10-07';
+const COUNTY_CACHE_DATE = '2026-10-08';
 
 const COUNTY_CACHED_DATA = [
   {
@@ -233,7 +233,7 @@ const COUNTY_CACHED_DATA = [
 
 const SMART_BOARD_URL = 'https://smarttelluride.colorado.gov/board-meetings';
 
-const SMART_CACHE_DATE = '2026-10-07';
+const SMART_CACHE_DATE = '2026-10-08';
 
 const SMART_CACHED_DATA = [
   {
@@ -248,7 +248,7 @@ const SMART_CACHED_DATA = [
 
 const TMVOA_URL = 'https://tmvoa.org/meetings-events/meeting-materials/';
 
-const TMVOA_CACHE_DATE = '2026-10-07';
+const TMVOA_CACHE_DATE = '2026-10-08';
 
 // TMVOA (Telluride Mountain Village Owners Association) — a private HOA, not
 // a government body, but its Gondola Leadership/Subcommittee meetings and
@@ -257,14 +257,6 @@ const TMVOA_CACHE_DATE = '2026-10-07';
 // every run by syncTMVOAAgendas() from the live meeting-materials page —
 // see that function for the robots.txt-aware scraping note.
 const TMVOA_CACHED_DATA = [
-  {
-    date: "September 8, 2026",
-    title: "Mountain Village Merchant Meeting",
-    board: "merchant",
-    agendaUrl: null,
-    packetUrl: null,
-    location: "Mountain Village, CO (see agenda for Zoom link)"
-  },
   {
     date: "September 29, 2026",
     title: "TMVOA Board of Directors Meeting",
@@ -303,7 +295,7 @@ const MV_TC_URL = 'https://townofmountainvillage.com/government/town-council/tow
 
 const MV_DRB_URL = 'https://townofmountainvillage.com/business/planning/design-review-board/';
 
-const MV_CACHE_DATE = '2026-10-07';
+const MV_CACHE_DATE = '2026-10-08';
 
 const MV_CACHED_DATA = [
   {
@@ -353,7 +345,7 @@ const MV_CACHED_DATA = [
 
 const SCHOOL_BOARD_URL = 'https://www.tellurideschool.org/agendasandminutes';
 
-const SCHOOL_CACHE_DATE = '2026-10-07';
+const SCHOOL_CACHE_DATE = '2026-10-08';
 
 const SCHOOL_CACHED_DATA = [
   {
@@ -558,7 +550,7 @@ const SCHOOL_CACHED_DATA = [
 
 const FIRE_BOARD_URL = 'https://www.telluridefire.com/board-meetings';
 
-const FIRE_CACHE_DATE = '2026-10-07';
+const FIRE_CACHE_DATE = '2026-10-08';
 
 const FIRE_CACHED_DATA = [
   {
@@ -585,18 +577,9 @@ const FIRE_CACHED_DATA = [
 
 const MED_BOARD_URL = 'https://www.tellmed.org/board-meetings';
 
-const MED_CACHE_DATE = '2026-10-07';
+const MED_CACHE_DATE = '2026-10-08';
 
 const MED_CACHED_DATA = [
-  {
-    date: "September 17, 2026",
-    time: "10:30 AM",
-    title: "Regular Board Meeting",
-    agendaUrl: "https://www.tellmed.org/files/61309e97c/THD+Special+Bd+Mtg+Agenda+9.17.26.pdf",
-    packetUrl: null,
-    special: true,
-    location: "333 W Colorado Ave (2nd Floor), Telluride / Zoom"
-  },
   {
     date: "September 24, 2026",
     time: "8:30 AM - 11:30 AM",
@@ -636,7 +619,7 @@ const NORWOOD_NWC_URL = 'https://www.norwoodtown.com/nwc-meetings';
 
 const NORWOOD_SAN_URL = 'https://www.norwoodtown.com/norwood-sanitation-district-meeting';
 
-const NORWOOD_CACHE_DATE = '2026-10-07';
+const NORWOOD_CACHE_DATE = '2026-10-08';
 
 const NORWOOD_CACHED_DATA = [
   {
@@ -705,7 +688,7 @@ const OPHIR_GA_URL = 'https://townofophir.colorado.gov/general-assembly-2';
 
 const OPHIR_PZ_URL = 'https://townofophir.colorado.gov/planning-and-zoning';
 
-const OPHIR_CACHE_DATE = '2026-10-07';
+const OPHIR_CACHE_DATE = '2026-10-08';
 
 const OPHIR_CACHED_DATA = [
   {
@@ -975,7 +958,7 @@ const OURAY_CITY_CACHED_DATA = [
   }
 ];
 
-const RIDGWAY_CACHE_DATE = '2026-10-07';
+const RIDGWAY_CACHE_DATE = '2026-10-08';
 
 // Ridgway meeting stubs. Town Council = 2nd Wednesday @ 6:00 PM; Planning
 // Commission = 3rd Wednesday @ 5:30 PM. The agenda/packet PDF for each date is
@@ -1021,7 +1004,7 @@ const TOWN_CIVICWEB_IDS = {
 
 const TELLURIDE_HARC_URL = 'https://telluride.gov/100/Historic-and-Architectural-Review-Commis';
 
-const TELLURIDE_CACHE_DATE = '2026-10-07';
+const TELLURIDE_CACHE_DATE = '2026-10-08';
 
 const TELLURIDE_CACHED_DATA = [
   {
@@ -1052,18 +1035,9 @@ const TELLURIDE_CACHED_DATA = [
 
 const AIRPORT_BOARD_URL = 'https://tellurideairport.com/traa-board-information/';
 
-const AIRPORT_CACHE_DATE = '2026-10-07';
+const AIRPORT_CACHE_DATE = '2026-10-08';
 
 const AIRPORT_CACHED_DATA = [
-  {
-    date: "September 17, 2026",
-    time: "12:00 PM",
-    title: "TRAA Board of Commissioners Meeting",
-    agendaUrl: null,
-    packetUrl: "https://tellurideairport.com/wp-content/uploads/2026/09/TRAA-Board-Packet-091726.pdf",
-    special: false,
-    location: "Terminal Observation Lounge, Telluride Regional Airport"
-  },
   {
     date: "October 15, 2026",
     time: "12:00 PM",

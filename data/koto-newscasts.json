@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 10-7-26",
+    "source": "KOTO Community Radio",
+    "date": "October 8, 2026",
+    "newsTopic": "community",
+    "copy": "Telluride Tells ALPRs to Flock Off; County Awards Community Grants; Sheridan Opera House Heads to the Swamp",
+    "href": "https://koto.org/news/newscast-10-7-26/"
+  },
+  {
     "title": "Newscast 10-5-26",
     "source": "KOTO Community Radio",
     "date": "October 6, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "community",
     "copy": "West End Round Up with the San Miguel Basin Forum; Pioneer Day Celebrates 90 Years; Geothermal Energy is Piping Hot in Rico",
     "href": "https://koto.org/news/newscast-9-24-26/"
-  },
-  {
-    "title": "Newscast 9-23-26",
-    "source": "KOTO Community Radio",
-    "date": "September 24, 2026",
-    "newsTopic": "housing",
-    "copy": "A Telluride Rental Housing Update; County Endorses Lawson Hill Connector Trail; The Wonderment Marvels in the Ordinary",
-    "href": "https://koto.org/news/newscast-9-23-26/"
   }
 ]

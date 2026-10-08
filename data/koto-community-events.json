@@ -526,5 +526,27 @@
     "category": "Community Event",
     "location": "Michael D. Palm Theater, Telluride",
     "imageUrl": "https://koto.org/wp-content/uploads/2026/10/YF-thundertix.png"
+  },
+  {
+    "title": "KOTO Halloween Bash",
+    "link": "https://koto.org/event/koto-halloween-bash/",
+    "description": "It's spooky season and that means it's time for the greatest off-season tradition in Telluride history – THE KOTO HALLOWEEN BASH! This year, we're letting our freak flags fly at The Alibi on Saturday, October 31st! Live music from Rado starts at 9 p.m. Costume Contest with cash prizes! Tickets are $20 in advance at alibitelluride.com and $25 at the door.",
+    "pubDate": "2026-10-31T21:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "The Alibi, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/KOTO-Halloween-RADO-poster-9.23-1-scaled.jpg"
+  },
+  {
+    "title": "Tea and Tarot",
+    "link": "https://koto.org/event/tea-and-tarot/2026-11-01/",
+    "description": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    "pubDate": "2026-11-01T14:30:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   }
 ]

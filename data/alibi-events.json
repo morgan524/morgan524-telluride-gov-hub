@@ -33,7 +33,7 @@
     "sourceLabel": "The Alibi",
     "category": "Live Music",
     "location": "The Alibi • Telluride, CO",
-    "imageUrl": ""
+    "imageUrl": "https://1v09t9hszk.ucarecd.net/72b993f2-f313-4b6b-b298-6d9e4830c384/-/crop/1294x1295/0,77/-/preview/"
   },
   {
     "title": "Hanneke Cassel Trio - Telluride Chamber Music",
@@ -58,5 +58,29 @@
     "category": "Live Music",
     "location": "The Alibi • Telluride, CO",
     "imageUrl": "https://1v09t9hszk.ucarecd.net/b1964748-70d2-4a7e-9996-5d4148ee589d/-/crop/1701x851/0,143/-/preview/"
+  },
+  {
+    "title": "RADO - KOTO Halloween Party",
+    "link": "https://www.alibitelluride.com/calendar#eca-event=rado-koto-halloween-party",
+    "description": "A Halloween party and live music event at The Alibi featuring RADO, a Denver-based band, and KOTO. The show begins at 9:00 PM on Halloween night.",
+    "pubDate": "2026-10-31",
+    "time": "9:00 PM",
+    "source": "alibi",
+    "sourceLabel": "The Alibi",
+    "category": "Live Music",
+    "location": "The Alibi • Telluride, CO",
+    "imageUrl": "https://1v09t9hszk.ucarecd.net/171ebd27-ef27-4cb9-9825-5cc5e465beb4/-/crop/3300x3301/0,74/-/preview/"
+  },
+  {
+    "title": "Adult Spelling Bee - Telluride Library",
+    "link": "https://www.alibitelluride.com/calendar#eca-event=adult-spelling-bee-telluride-library",
+    "description": "An adult spelling bee hosted at The Alibi, offering teams of two the chance to compete for bragging rights and a $100 prize, with additional prizes also up for grabs. The event brings a playful, competitive twist to a weeknight evening at one of Telluride's favorite local bars.",
+    "pubDate": "2026-11-06",
+    "time": "6:30 PM",
+    "source": "alibi",
+    "sourceLabel": "The Alibi",
+    "category": "Live Music",
+    "location": "The Alibi • Telluride, CO",
+    "imageUrl": "https://1v09t9hszk.ucarecd.net/81532fb8-7b72-4529-9249-3d41062e15ff/-/crop/1174x1175/58,0/-/preview/"
   }
 ]
