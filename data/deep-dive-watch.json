@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-09T01:09:52.490Z",
+ "generated": "2026-10-09T10:19:41.921Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -30,12 +30,6 @@
      "date": "2026-09-30",
      "title": "Special Town Council - Sep 30 2026",
      "snippet": "This special session is entirely devoted to one thing: a Town Council appeal hearing on the Carhenge lot subdivision. On July 23, 2026, P&Z unanimously approved consolidating Lots 34 and 34B at 700…"
-    },
-    {
-     "source": "telluride",
-     "date": "2026-09-24",
-     "title": "Planning & Zoning Commission - Sep 24 2026",
-     "snippet": "Two work sessions anchor the September 24 P&Z meeting. First up: a proposed employee housing project at the northwest corner of Telluride Middle-High School (725 W Colorado), brought by the Telluride…"
     }
    ],
    "developments": [],
@@ -59,22 +53,22 @@
    "upcoming": [],
    "recent": [
     {
+     "source": "county",
+     "date": "2026-10-08",
+     "title": "Planning Commission Meeting",
+     "snippet": "The San Miguel County Planning Commission meets October 8 for a session that spans most of the day. The morning opens with a joint work session with the BOCC on an Affordable Housing Code Update — a…"
+    },
+    {
      "source": "telluride",
      "date": "2026-09-30",
      "title": "Special Town Council - Sep 30 2026",
      "snippet": "This special session is entirely devoted to one thing: a Town Council appeal hearing on the Carhenge lot subdivision. On July 23, 2026, P&Z unanimously approved consolidating Lots 34 and 34B at 700…"
-    },
-    {
-     "source": "telluride",
-     "date": "2026-09-24",
-     "title": "Planning & Zoning Commission - Sep 24 2026",
-     "snippet": "Two work sessions anchor the September 24 P&Z meeting. First up: a proposed employee housing project at the northwest corner of Telluride Middle-High School (725 W Colorado), brought by the Telluride…"
     }
    ],
    "developments": [],
    "stale": [
-    "Code Changes & Accelerated Review: telluride discussed it on 2026-09-30 (\"Special Town Council - Sep 30 2026\") but the deep dive was last edited 2026-07-19.",
-    "Code Changes & Accelerated Review: telluride discussed it on 2026-09-24 (\"Planning & Zoning Commission - Sep 24 2026\") but the deep dive was last edited 2026-07-19."
+    "Code Changes & Accelerated Review: county discussed it on 2026-10-08 (\"Planning Commission Meeting\") but the deep dive was last edited 2026-07-19.",
+    "Code Changes & Accelerated Review: telluride discussed it on 2026-09-30 (\"Special Town Council - Sep 30 2026\") but the deep dive was last edited 2026-07-19."
    ]
   },
   "wildfire": {
@@ -106,9 +100,18 @@
    "label": "Gondola 3A",
    "lastUpdated": "2026-07-20",
    "upcoming": [],
-   "recent": [],
+   "recent": [
+    {
+     "source": "telluride",
+     "date": "2026-10-08",
+     "title": "San Miguel Authority for Regional Transportation - Oct 08 2026",
+     "snippet": "SMART's board meets virtually October 8th with two consequential action items. Resolution 2026-22 would amend the Gondola Project Development IGA for FY27 — another formal step in the long-running…"
+    }
+   ],
    "developments": [],
-   "stale": []
+   "stale": [
+    "Gondola 3A: telluride discussed it on 2026-10-08 (\"San Miguel Authority for Regional Transportation - Oct 08…\") but the deep dive was last edited 2026-07-20."
+   ]
   },
   "norwoodwater": {
    "label": "Norwood Water",
@@ -121,9 +124,9 @@
      "date": "2026-10-13",
      "time": "",
      "location": "1670 Naturita St, Norwood CO 81423",
-     "agendaUrl": "",
+     "agendaUrl": "https://www.norwoodtown.com/files/4a41c8cfc/10.13.2026+NWC+Agenda.pdf",
      "link": "https://www.norwoodtown.com/files/4a41c8cfc/10.13.2026+NWC+Agenda.pdf",
-     "zoomLink": "",
+     "zoomLink": "https://us02web.zoom.us/j/88274908233",
      "livestream": ""
     }
    ],

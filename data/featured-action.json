@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-09T01:09:52.491Z",
+ "generated": "2026-10-09T10:19:41.923Z",
  "pinned": false,
  "topic": "norwoodwater",
  "topicLabel": "Norwood Water",
  "headline": "Norwood Water goes before Norwood Water Commission Meeting on Tuesday, October 13",
- "blurb": "The October 13 Norwood Water Commission Meeting agenda hasn't been posted yet.",
+ "blurb": "A full agenda for the Norwood Water Commission's October 13 meeting. The biggest items center on the Cossey Complaint — the Commission will hold the hearing itself, consider a request to extend its date, and go into executive session twice for legal advice on that matter and separately on the Jubilee/Valentine Easement.",
  "images": [],
  "deepDive": {
   "label": "Norwood Water",
@@ -17,11 +17,11 @@
   "humanDate": "Tuesday, October 13",
   "time": "",
   "location": "1670 Naturita St, Norwood CO 81423",
-  "agendaUrl": "",
-  "hasAgenda": false,
+  "agendaUrl": "https://www.norwoodtown.com/files/4a41c8cfc/10.13.2026+NWC+Agenda.pdf",
+  "hasAgenda": true,
   "packetUrl": "https://www.norwoodtown.com/files/39e79e6fc/10.13.2026+NWC+Supporting+Documents.pdf",
   "link": "https://www.norwoodtown.com/files/4a41c8cfc/10.13.2026+NWC+Agenda.pdf",
-  "zoomLink": "",
+  "zoomLink": "https://us02web.zoom.us/j/88274908233",
   "livestream": ""
  }
 }

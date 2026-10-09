@@ -1,18 +1,26 @@
 {
-  "hash": "0ef641a95172e4add0569754f57e652bdac9b626",
-  "lede": "The biggest thing on the government calendar this week is Ouray County's commissioners taking up a Special Use Permit amendment, a Proposition 123 affordable housing commitment for 2027–2029, and a new law enforcement intergovernmental agreement — a full plate with real consequences for the region. Closer to home, Telluride's Town Council spends three hours on the 2027 budget, working through enterprise funds, open space, and affordable housing dollars before formal adoption. There's also a public hearing on alcohol permits for the Telluride Horror Show at the Palm, and a community information meeting on Ballot Measure 5A on Monday.",
+  "hash": "a385de729fb31dd3bac890172aabc780f4fc5098",
+  "lede": "The biggest thing on the calendar this week is the Telluride Town Council's three-hour budget work session Monday, where they'll grind through the 2027 numbers on enterprise funds, open space, and affordable housing — no formal votes yet, but this is where priorities get shaped. Ouray County commissioners also have a full agenda Tuesday, including a vote on opting into Proposition 123's affordable housing commitment cycle and a new intergovernmental law enforcement agreement. Norwood's Water Commission tackles the Cossey Complaint hearing and contract approvals the same day, and the Horror Show weekend is coming up fast.",
   "notable": [
     {
-      "id": 3,
-      "stake": "County votes on SUP, Prop 123 housing commitment, and new law enforcement IGA."
+      "id": 0,
+      "stake": "Water rights hearing, contract vote, and dual executive sessions on legal matters."
     },
     {
       "id": 2,
-      "stake": "Council shapes 2027 budget priorities for housing, open space, and enterprise funds."
+      "stake": "Council shapes 2027 spending on housing, open space, and enterprise funds."
+    },
+    {
+      "id": 3,
+      "stake": "County votes on Prop 123 affordable housing commitment and new law enforcement IGA."
+    },
+    {
+      "id": 6,
+      "stake": "Home Trust reports on regional housing progress; council direction likely follows."
     },
     {
       "id": 9,
-      "stake": "Public hearing on Horror Show alcohol permits; 1,400-person weekend crowds at stake."
+      "stake": "Public hearing on alcohol permits for 1,400-person Horror Show weekend events."
     }
   ]
 }

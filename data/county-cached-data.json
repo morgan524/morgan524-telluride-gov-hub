@@ -170,5 +170,14 @@
     "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
     "civicClerkId": 1060,
     "note": null
+  },
+  {
+    "date": "January 7, 2027",
+    "time": "9:00 AM",
+    "title": "Lodging Tax Panel",
+    "type": "other",
+    "location": "333 W Colorado Ave, Second Floor, Telluride, CO 81435",
+    "civicClerkId": 1076,
+    "note": null
   }
 ]

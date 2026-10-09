@@ -340,7 +340,11 @@
   },
   "norwood|2026-10-13|Norwood Water Commission Meeting": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://www.norwoodtown.com/files/4a41c8cfc/10.13.2026+NWC+Agenda.pdf",
+    "zoomUrl": "https://us02web.zoom.us/j/88274908233",
+    "meetingId": "882 7490 8233",
+    "passcode": "997236",
+    "phone": "346-248-7799"
   },
   "tmvoa|2026-10-13|Mountain Village Merchant Meeting": {
     "sv": 4,
@@ -360,7 +364,11 @@
   },
   "ridgway|2026-10-14|Ridgway Town Council Regular Meeting": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Workforce-%26-Affordable-Housing-Committee-Meeting-Packet---October-14%2C-2026.pdf",
+    "zoomUrl": "https://us02web.zoom.us/j/86099482328?pwd=mlhYCUDObNpU8FLRgTKoSJmuljfclB.1",
+    "meetingId": "860 9948 2328",
+    "passcode": "019813",
+    "phone": "346 248 7799"
   },
   "telluride|2026-10-14|Liquor Licensing Authority - Oct 14 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8146",
@@ -605,7 +613,7 @@
   "telluride|2026-11-05|Special Meeting - Planning & Zoning Commission - Nov 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312",
     "sv": 4,
-    "ph": "65b9bd7a7d287f9a"
+    "ph": "948968cb5b9c7565"
   },
   "telluride|2026-11-05|Town Council Budget - Nov 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054",

@@ -230,6 +230,15 @@ const COUNTY_CACHED_DATA = [
     location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
     civicClerkId: 1060,
     note: null
+  },
+  {
+    date: "January 7, 2027",
+    time: "9:00 AM",
+    title: "Lodging Tax Panel",
+    type: "other",
+    location: "333 W Colorado Ave, Second Floor, Telluride, CO 81435",
+    civicClerkId: 1076,
+    note: null
   }
 ];
 
@@ -1068,8 +1077,8 @@ const TELLURIDE_CACHED_DATA = [
     location: "Rebekah Hall, 113 W Columbia Ave",
     civicWebId: 8024,
     time: "5:30 PM",
-    packetUrl: "https://telluride-co.civicweb.net/document/446165/",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024"
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024",
+    packetUrl: "https://telluride-co.civicweb.net/document/446165/"
   },
   {
     date: "November 18, 2026",

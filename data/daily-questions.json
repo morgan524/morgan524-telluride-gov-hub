@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-09",
+    "title": "Should Ridgway buy the house on Frederick Street?",
+    "body": "The Ridgway Town Council's Workforce & Affordable Housing Committee is looking at whether to exercise a Right of First Refusal to purchase a property at 683 Frederick Street — at its maximum sale price. The Home Trust of Ouray County is also presenting a quarterly report at the same meeting.\n\nThe case for stepping in: it's a rare chance to control a property for workforce or affordable housing before the open market takes it. The case against: paying maximum sale price is not a bargain, and committing public funds to a single address is a real trade-off.\n\nIs a right of first refusal worth exercising when the price is already at its ceiling?",
+    "choices": [
+      "Exercise it — secure the unit",
+      "Pass — max price is too much",
+      "Need more details first"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-10-08",
     "title": "Cameras on every plate — worth it up here?",
     "body": "Town Council is taking up the Flock Safety automated license plate reader system in a work session, with Chief Marshal Josh Comte presenting. The pitch is public safety — ALPRs can flag stolen vehicles and help solve crimes fast. The pushback is just as predictable: the cameras log where your car is, when, and how often. That's a record most people don't know exists. A small town with one road in and one road out makes that data unusually revealing. So where do you land?\n\nIs the safety case strong enough to accept that kind of surveillance in a place this size?",
@@ -420,21 +434,6 @@
       "Landowner's call to make",
       "Too much pressure on rural land",
       "Depends on the specifics",
-      "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-09-09",
-    "title": "The county's got a fuel island project. Worth asking about.",
-    "body": "The Board of County Commissioners is set to consider several procurement items — material hauling, a trail connector, and fuel island canopy construction. Tucked alongside those is a federal environmental assessment for a hazardous fuels management project in the Uncompahgre and Gunnison National Forests. Some folks will see federal fuels work on nearby forest lands as overdue and necessary. Others will want to know exactly what that means on the ground — and who has a say. Nothing's final yet; this is still at the consideration stage.\n\nSo where do you stand: is federal hazardous fuels work on our neighboring forests a straightforward win, or do you want more details before you're comfortable?",
-    "choices": [
-      "Get it done — overdue",
-      "Need more details first",
-      "Depends on the scope",
       "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",
