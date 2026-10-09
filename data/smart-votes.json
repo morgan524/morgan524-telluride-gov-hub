@@ -5,14 +5,14 @@
    "first": "ashley",
    "jurisdiction": "Town of Telluride",
    "alternate": false,
-   "seen": 23
+   "seen": 24
   },
   "stark": {
    "name": "Marya Stark",
    "first": "marya",
    "jurisdiction": "Town of Telluride",
    "alternate": false,
-   "seen": 4
+   "seen": 5
   },
   "permakoff": {
    "name": "Kristen Permakoff",
@@ -26,28 +26,28 @@
    "first": "harvey",
    "jurisdiction": "Town of Mountain Village",
    "alternate": false,
-   "seen": 44
+   "seen": 45
   },
   "waring": {
    "name": "Lance Waring",
    "first": "lance",
    "jurisdiction": "San Miguel County",
    "alternate": false,
-   "seen": 37
+   "seen": 38
   },
   "magid": {
    "name": "Tucker Magid",
    "first": "tucker",
    "jurisdiction": "Town of Mountain Village",
    "alternate": false,
-   "seen": 30
+   "seen": 31
   },
   "brown": {
    "name": "Anne Brown",
    "first": "anne",
    "jurisdiction": "San Miguel County",
    "alternate": false,
-   "seen": 19
+   "seen": 20
   },
   "gleason": {
    "name": "Galena Gleason",
@@ -61,7 +61,7 @@
    "first": "gregg",
    "jurisdiction": "Town of Rico",
    "alternate": false,
-   "seen": 4
+   "seen": 5
   },
   "fee": {
    "name": "Meehan Fee",
@@ -2664,6 +2664,60 @@
        "outcome": "Passed",
        "tally": "",
        "detail": "Established the official SMART Board meeting dates for calendar year 2022.",
+       "noIds": [],
+       "abstainIds": [],
+       "recusedIds": []
+      }
+     ]
+    }
+   ]
+  },
+  "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-Meeting-Packet_October-8th-2026.pdf": {
+   "url": "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-Meeting-Packet_October-8th-2026.pdf",
+   "label": "October 8, 2026 Board Packet",
+   "parsedAt": "2026-10-09",
+   "meetings": [
+    {
+     "date": "2026-09-10",
+     "type": "Regular",
+     "presentIds": [
+      "storyvonspreecken",
+      "stark",
+      "mogenson",
+      "magid",
+      "brown",
+      "waring",
+      "anderson"
+     ],
+     "altIds": [],
+     "recap": "At its September 10, 2026 regular meeting, the SMART Board accepted the FY25 financial audit report, which contained no findings, and noted that the auditor reviewed the agency's first-year 3A sales tax revenue allocations without concern. The Board also selected PFM Asset Management as SMART's investment advisor and approved joining the CSIP Investment Pool to better manage the agency's growing reserves.\n\nThe Board spent significant time on FY27 budget development, directing staff to refine how overhead costs are allocated between the operating and gondola funds before presenting a revised draft in October. Staff also updated the Board on gondola project activities — including a structural analysis, Buy America compliance, and the development of a 2027 cost-sharing intergovernmental agreement — as well as proposed off-season transit schedule changes and potential cost-sharing with other jurisdictions to expand the Montrose Route. A brief executive session on personnel matters closed out the meeting.",
+     "motions": [
+      {
+       "title": "Resolution 2026-18 — Approval of September 10, 2026 Agenda and August 13, 2026 Meeting Minutes",
+       "category": "Governance",
+       "outcome": "Passed",
+       "tally": "7-0",
+       "detail": "Approved the September 10, 2026 meeting agenda and the August 13, 2026 meeting minutes.",
+       "noIds": [],
+       "abstainIds": [],
+       "recusedIds": []
+      },
+      {
+       "title": "Resolution 2026-19 — FY25 Financials Audit Report and Acceptance",
+       "category": "Budget & Finance",
+       "outcome": "Passed",
+       "tally": "7-0",
+       "detail": "Accepted the FY25 financials audit report, which contained no findings and included a clean review of the first-year 3A tax revenue allocation methodology.",
+       "noIds": [],
+       "abstainIds": [],
+       "recusedIds": []
+      },
+      {
+       "title": "Resolution 2026-20 — Selection of PFM Asset Management for Investment Advisory Services and Approval of Entry into CSIP Investment Pool",
+       "category": "Budget & Finance",
+       "outcome": "Passed",
+       "tally": "7-0",
+       "detail": "Selected PFM Asset Management as SMART's investment advisor and authorized SMART's entry into the CSIP Investment Pool.",
        "noIds": [],
        "abstainIds": [],
        "recusedIds": []
