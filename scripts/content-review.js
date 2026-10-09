@@ -587,6 +587,32 @@ function anthropic(model, messages, maxTokens) {
   });
 }
 
+// America/Denver's UTC offset at an instant, as "-06:00"/"-07:00".
+function denverOffset(ms) {
+  const part = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Denver', timeZoneName: 'longOffset' })
+    .formatToParts(new Date(ms)).find(p => p.type === 'timeZoneName');
+  const m = part && part.value.match(/GMT([+-]\d{2}:\d{2})/);
+  return m ? m[1] : null;
+}
+// The model miscounts DST (2026-10-09 it put the Nov switch on the 7th, not
+// the 1st, and flagged correct -07:00 stamps). Tell it the real dates…
+function dstNote() {
+  const y = Number(TODAY.slice(0, 4));
+  const firstSun = (m) => { const d = new Date(Date.UTC(y, m, 1)); return 1 + (7 - d.getUTCDay()) % 7; };
+  const p = n => String(n).padStart(2, '0');
+  return `In ${y}, Mountain Daylight Time (-06:00) runs from ${y}-03-${p(firstSun(2) + 7)} to ${y}-11-${p(firstSun(10))} ` +
+    `(both switches at 2:00 AM); Mountain Standard Time (-07:00) applies otherwise.`;
+}
+// …and drop any timezone-offset finding whose timestamp is already right.
+function isCorrectTzOffsetClaim(it) {
+  const txt = `${it.category || ''} ${it.problem || ''}`;
+  if (!/offset|time ?zone|DST|daylight|standard time/i.test(txt)) return false;
+  const m = String(it.item || '').match(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2})?([+-]\d{2}:\d{2})/);
+  if (!m) return false;
+  const ms = Date.parse(m[0]);
+  return Number.isFinite(ms) && denverOffset(ms) === m[1];
+}
+
 async function checkAI(ctx) {
   if (!ANTHROPIC_API_KEY) {
     console.log('  ℹ ANTHROPIC_API_KEY not set — skipping AI semantic pass');
@@ -631,6 +657,12 @@ async function checkAI(ctx) {
     // the town posts the agenda.
     `Do NOT flag a meeting whose "note" says its projected date falls on a holiday — that is a ` +
     `cadence placeholder the site already labels as possibly rescheduled, even if another feed lists the office as closed that day. ` +
+    // Ouray County BOCC (flagged 2026-10-09): CivicClerk publishes a regular
+    // meeting + 1:30 PM work session and then a separate 9:00 AM work session
+    // the next morning (events 1105/1129, 1106/1130) — real, distinct events.
+    `Do NOT flag a Board of County Commissioners Work Session on the day after another BOCC meeting/work session ` +
+    `when the times differ — Ouray County publishes those as separate sessions on its own calendar. ` +
+    `${dstNote()} ` +
     `Be conservative — no speculation. Return STRICT JSON only, an array of ` +
     `{"severity":"High|Medium|Low","category":"...","item":"<title> (<date>)","problem":"...","suggestedFix":"..."} ` +
     `(empty array [] if nothing is clearly wrong).\n\nDATA:\n` +
@@ -654,6 +686,10 @@ async function checkAI(ctx) {
   }
   if (!Array.isArray(items)) return;
   for (const it of items.slice(0, 25)) {
+    if (isCorrectTzOffsetClaim(it)) {
+      console.log(`  ℹ AI pass: dropped timezone-offset claim on "${it.item}" — offset matches America/Denver`);
+      continue;
+    }
     const sev = ['High', 'Medium', 'Low'].includes(it.severity) ? it.severity : 'Low';
     add(sev, 'AI: ' + (it.category || 'content'), it.item || '(unspecified item)',
       `${it.problem || ''}${it.suggestedFix ? '\n    Suggested fix: ' + it.suggestedFix : ''}`,
