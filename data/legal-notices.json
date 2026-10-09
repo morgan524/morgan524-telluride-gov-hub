@@ -363,26 +363,6 @@
     "noticeKey": "ord-mv-fees-16.01-16.02-COL-000256"
   },
   {
-    "title": "Public Meeting -- San Miguel County Planning Commission Regular Meeting (COL-000261)",
-    "entity": "San Miguel County Planning Commission",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "The San Miguel County Planning Commission will hold its regular monthly meeting on October 8, 2026 at 9:00 a.m. at 333 West Colorado Ave., Second Floor, Telluride, and via Zoom. Agenda items include a work session with the BOCC on an Affordable Housing Code Update and a Land Use Code Amendment recommendation regarding Subdivisions and Condominium Plats. The public may participate in person or via Zoom using the provided meeting link.",
-    "deadline": "2026-10-08",
-    "expires": "2026-10-08",
-    "dates": "10/1",
-    "papers": [
-      "ttimes_1001"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_792d96c0-09c8-479f-83f8-bdf3681b49ae.html",
-    "address": "333 West Colorado Ave., Second Floor, Telluride, CO 81435",
-    "noticeKey": "planning-commission-meeting-oct8-2026-COL-000261"
-  },
-  {
     "title": "Public Hearing -- Land Use Code Amendment: Deep Geothermal Operations (COL-000263)",
     "entity": "San Miguel County Board of County Commissioners",
     "entityClass": "ent-county",

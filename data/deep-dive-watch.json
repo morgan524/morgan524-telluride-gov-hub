@@ -1,10 +1,23 @@
 {
- "generated": "2026-10-08T18:43:47.868Z",
+ "generated": "2026-10-09T01:09:52.490Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
    "lastUpdated": "2026-09-27",
-   "upcoming": [],
+   "upcoming": [
+    {
+     "source": "telluride",
+     "sourceLabel": "Town of Telluride",
+     "title": "HARC Meeting",
+     "date": "2026-10-21",
+     "time": "5:30 PM",
+     "location": "Rebekah Hall, 113 W Columbia Ave",
+     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024",
+     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024",
+     "zoomLink": "https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA",
+     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+    }
+   ],
    "recent": [
     {
      "source": "telluride",
@@ -43,20 +56,7 @@
   "code": {
    "label": "Code Changes & Accelerated Review",
    "lastUpdated": "2026-07-19",
-   "upcoming": [
-    {
-     "source": "county",
-     "sourceLabel": "San Miguel County",
-     "title": "Planning Commission Meeting",
-     "date": "2026-10-08",
-     "time": "9:00 AM",
-     "location": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
-     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/924/files/agenda/2025",
-     "link": "https://sanmiguelcoco.portal.civicclerk.com/event/924/files/agenda/2025",
-     "zoomLink": "https://us06web.zoom.us/j/86224076240?pwd=dg8IrMwtLfHLkcZ1Y3JKlGs8IpYz0Q.1",
-     "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
-    }
-   ],
+   "upcoming": [],
    "recent": [
     {
      "source": "telluride",
@@ -122,7 +122,7 @@
      "time": "",
      "location": "1670 Naturita St, Norwood CO 81423",
      "agendaUrl": "",
-     "link": "https://www.norwoodtown.com/nwc-meetings",
+     "link": "https://www.norwoodtown.com/files/4a41c8cfc/10.13.2026+NWC+Agenda.pdf",
      "zoomLink": "",
      "livestream": ""
     }

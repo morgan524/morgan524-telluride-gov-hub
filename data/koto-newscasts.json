@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 10-8-26",
+    "source": "KOTO Community Radio",
+    "date": "October 9, 2026",
+    "newsTopic": "recreation",
+    "copy": "Harvest Dinner Brings a Night Out for a Good Cause; West End Roundup with the San Miguel Basin Forum; New Bike Track Gets the West End Rolling",
+    "href": "https://koto.org/news/newscast-10-8-26/"
+  },
+  {
     "title": "Newscast 10-7-26",
     "source": "KOTO Community Radio",
     "date": "October 8, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "public-safety",
     "copy": "San Miguel County Expands Emergency Alert System; A Telluride Climbing Guide Keeps History Alive; Milton Visits the Listening Club",
     "href": "https://koto.org/news/newscast-9-25-26/"
-  },
-  {
-    "title": "Newscast 9-24-26",
-    "source": "KOTO Community Radio",
-    "date": "September 25, 2026",
-    "newsTopic": "community",
-    "copy": "West End Round Up with the San Miguel Basin Forum; Pioneer Day Celebrates 90 Years; Geothermal Energy is Piping Hot in Rico",
-    "href": "https://koto.org/news/newscast-9-24-26/"
   }
 ]

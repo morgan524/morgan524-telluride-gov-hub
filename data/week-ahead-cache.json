@@ -1,18 +1,18 @@
 {
-  "hash": "741cc41ce8758123b47ab0a38ec8d03d4ec6bfb0",
-  "lede": "The biggest thing on the government calendar this week is San Miguel County's Planning Commission session on October 8, where the commission holds a joint work session with the BOCC on an Affordable Housing Code Update — a policy push that directly shapes who can live here long-term. Also Thursday, SMART's board takes up a resolution amending the Gondola Project IGA and opens FY27 budget talks covering $5.2M in annual tax revenue. On the community side, Oktoberfest kicks off Friday and the Telluride Horror Show is right around the corner.",
+  "hash": "0ef641a95172e4add0569754f57e652bdac9b626",
+  "lede": "The biggest thing on the government calendar this week is Ouray County's commissioners taking up a Special Use Permit amendment, a Proposition 123 affordable housing commitment for 2027–2029, and a new law enforcement intergovernmental agreement — a full plate with real consequences for the region. Closer to home, Telluride's Town Council spends three hours on the 2027 budget, working through enterprise funds, open space, and affordable housing dollars before formal adoption. There's also a public hearing on alcohol permits for the Telluride Horror Show at the Palm, and a community information meeting on Ballot Measure 5A on Monday.",
   "notable": [
     {
-      "id": 1,
-      "stake": "County and BOCC jointly updating affordable housing code — policy with real local impact."
-    },
-    {
       "id": 3,
-      "stake": "SMART votes on Gondola IGA amendment and sets course for $5.2M FY27 budget."
+      "stake": "County votes on SUP, Prop 123 housing commitment, and new law enforcement IGA."
     },
     {
-      "id": 12,
-      "stake": "Public hearing on alcohol permits for Horror Show events drawing up to 1,400 people."
+      "id": 2,
+      "stake": "Council shapes 2027 budget priorities for housing, open space, and enterprise funds."
+    },
+    {
+      "id": 9,
+      "stake": "Public hearing on Horror Show alcohol permits; 1,400-person weekend crowds at stake."
     }
   ]
 }

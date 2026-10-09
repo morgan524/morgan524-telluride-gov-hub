@@ -5,7 +5,9 @@
     "board": "harc",
     "location": "Rebekah Hall, 113 W Columbia Ave",
     "civicWebId": 8024,
-    "time": "5:30 PM"
+    "time": "5:30 PM",
+    "packetUrl": "https://telluride-co.civicweb.net/document/446165/",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024"
   },
   {
     "date": "November 18, 2026",

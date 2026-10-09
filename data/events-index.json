@@ -40,19 +40,6 @@
     "type": "Arts & Film"
   },
   {
-    "title": "Pilates for All Bodies with Laura",
-    "href": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-10-08/",
-    "date": "2026-10-08",
-    "time": "12:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/wellness.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    "type": "Wellness"
-  },
-  {
     "title": "Pilates for All Bodies",
     "href": "https://telluridelibrary.libcal.com/event/16536348?hs=a",
     "date": "2026-10-08",
@@ -135,25 +122,12 @@
     "href": "https://telluridelibrary.libcal.com/event/16963784?hs=a",
     "date": "2026-10-08",
     "time": "5:15 PM",
-    "location": "Liz",
+    "location": "123 Tacos Restaurant",
     "town": "Telluride",
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_15_54_25.jpg",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
     "desc": "5:15 PM – 6:30 PM · Sip on a libation while chatting with other bibliophiles about books you have read recently. It s totally open ended and open to everyone! 5:15 the second Thursday of every month. The library will get some apps for the…",
-    "type": "Community"
-  },
-  {
-    "title": "The Creative Exchange at Telluride Arts HQ",
-    "href": "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-10-08/",
-    "date": "2026-10-08",
-    "time": "5:30 PM",
-    "location": "Telluride Arts HQ, TELLURIDE",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories…",
     "type": "Community"
   },
   {
@@ -183,19 +157,6 @@
     "type": "Community"
   },
   {
-    "title": "Facing the Mourning",
-    "href": "https://koto.org/event/facing-the-mourning/2026-10-08/",
-    "date": "2026-10-08",
-    "time": "6:00 PM",
-    "location": "Redvale Community Center",
-    "town": "",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit…",
-    "type": "Community"
-  },
-  {
     "title": "Not-So-Young People's Theater presents Shrek The Musical",
     "href": "https://koto.org/event/not-so-young-peoples-theater-presents-shrek-the-musical/2026-10-08/",
     "date": "2026-10-08",
@@ -207,19 +168,6 @@
     "source": "KOTO Community Calendar",
     "desc": "The Sheridan Arts Foundation's Not-So-Young People's Theater (NSYPT) invites audiences to experience the hilarious, heartwarming fairytale adventure Shrek The Musical this fall at the historic Sheridan Opera House from Thursday, October 8…",
     "type": "Arts & Film"
-  },
-  {
-    "title": "Cliff Allred featured at West End Stories & Poems at the Naturita Library Oct. 8th",
-    "href": "https://koto.org/event/cliff-allred-featured-at-west-end-stories-poems-at-the-naturita-library-oct-8th/",
-    "date": "2026-10-08",
-    "time": "6:00 PM",
-    "location": "Naturita Community Library",
-    "town": "West End",
-    "img": "https://koto.org/wp-content/uploads/2026/10/AllredFlyWESPoct26.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Leslie Ament of Naturita and Art Goodtimes of Wrights Mesa will be hosting Cliff Allred discussing all things paranormal Thursday, Oct. 8 th , at 6 pm MDT at the Naturita Community Library. “We will be talking about near death experiences,…",
-    "type": "Community"
   },
   {
     "title": "Not-So-Young People's Theater: Shrek The Musical",
@@ -817,6 +765,19 @@
     "type": "Music"
   },
   {
+    "title": "Norwood Water Commission Meeting",
+    "href": "https://www.norwoodtown.com/2026-10-13-nwc-meeting",
+    "date": "2026-10-13",
+    "time": "6:00 AM",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Government Meeting",
+    "source": "Town of Norwood",
+    "desc": "The Norwood Water Commission will hold a regular meeting on October 13, 2026, hosted by the Town of Norwood. This is an official government meeting where water commission business for the Norwood area will be addressed.",
+    "type": "Community"
+  },
+  {
     "title": "Mountain Village Merchant Meeting",
     "href": "https://townofmountainvillage.com/explore/events/all-events/merchant-meeting/",
     "date": "2026-10-13",
@@ -983,6 +944,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Overview of the Ouray County Voting Process from mailing, collecting, verifying, counting to auditing.",
+    "type": "Community"
+  },
+  {
+    "title": "Wash Party",
+    "href": "https://koto.org/event/wash-party/",
+    "date": "2026-10-15",
+    "time": "4:00 PM",
+    "location": "Telluride Brewing Company Lawson Hill Taproom",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/10/Wash-Party-Flyer-final.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "It's time to Wash Party with Patagonia Telluride! Thursday, October 15th, 4pm to 7:30pm we'll be at The Laundromat and Telluride Brewing Company in the Society Turn Business Center, Lawson Hill. Drop your winter gear off to us at The…",
     "type": "Community"
   },
   {
@@ -2065,6 +2039,20 @@
     "type": "Family & Kids"
   },
   {
+    "title": "Young Frankenstein the Musical",
+    "href": "https://www.telluride.com/event/young-frankenstein-the-musical/",
+    "date": "2026-10-29",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63749/yf_thundertix-ezgif_com-webp-to-jpg-converter.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Book by Mel Brooks & Thomas Meehan Music & Lyrics by Mel Brooks Directed by Sasha Cucciniello PLEASE NOTE - …",
+    "type": "Arts & Film",
+    "endDate": "2026-11-01"
+  },
+  {
     "title": "Pickleball Nights",
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-10-29",
@@ -2431,6 +2419,19 @@
     "endDate": "2026-12-02"
   },
   {
+    "title": "Bardic Trails Online Poetry Night",
+    "href": "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-11-03/",
+    "date": "2026-11-03",
+    "time": "7:00 PM",
+    "location": "",
+    "town": "",
+    "img": "https://koto.org/wp-content/uploads/2026/03/Bardic-Trails-2026.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Market on the Plaza",
     "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     "date": "2026-11-04",
@@ -2468,6 +2469,19 @@
     "source": "Sherbino Theater",
     "desc": "The Sherbino in Ridgway hosts a screening of *Days Off*, Warren Miller's 77th ski and snowboard film, hosted by Katie Burrell. Advance tickets are available at a discount, with general admission and student pricing, and doors open at 6:00…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Pilates for All Bodies with Laura",
+    "href": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-11-05/",
+    "date": "2026-11-05",
+    "time": "12:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/wellness.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    "type": "Wellness"
   },
   {
     "title": "Pickleball Nights",

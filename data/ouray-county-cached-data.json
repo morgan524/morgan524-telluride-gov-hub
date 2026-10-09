@@ -30,7 +30,9 @@
     "location": "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
     "civicClerkId": 1069,
     "note": null,
-    "board": "bocc"
+    "packetUrl": "https://ouraycoco.portal.civicclerk.com/event/1069/files/agenda/7568",
+    "board": "bocc",
+    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/1069/files/agenda/7559"
   },
   {
     "date": "October 14, 2026",
@@ -39,7 +41,9 @@
     "location": "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
     "civicClerkId": 1117,
     "note": null,
-    "board": "bocc"
+    "packetUrl": "https://ouraycoco.portal.civicclerk.com/event/1117/files/agenda/7566",
+    "board": "bocc",
+    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/1117/files/agenda/7564"
   },
   {
     "date": "October 27, 2026",

@@ -1,27 +1,27 @@
 {
- "generated": "2026-10-08T18:43:47.870Z",
+ "generated": "2026-10-09T01:09:52.491Z",
  "pinned": false,
- "topic": "code",
- "topicLabel": "Code Changes & Accelerated Review",
- "headline": "Code Changes & Accelerated Review goes before Planning Commission Meeting on Thursday, October 8",
- "blurb": "The San Miguel County Planning Commission meets October 8 for a session that spans most of the day. The morning opens with a joint work session with the BOCC on an Affordable Housing Code Update — a signal that the county is still actively trying to write policy fast enough to keep pace with a housing situation that hasn't gotten easier.",
+ "topic": "norwoodwater",
+ "topicLabel": "Norwood Water",
+ "headline": "Norwood Water goes before Norwood Water Commission Meeting on Tuesday, October 13",
+ "blurb": "The October 13 Norwood Water Commission Meeting agenda hasn't been posted yet.",
  "images": [],
  "deepDive": {
-  "label": "Code Changes & Accelerated Review",
-  "href": "/deep-dive-code.html"
+  "label": "Norwood Water",
+  "href": "/deep-dive-norwoodwater.html"
  },
  "meeting": {
-  "title": "Planning Commission Meeting",
-  "sourceLabel": "San Miguel County",
-  "date": "2026-10-08",
-  "humanDate": "Thursday, October 8",
-  "time": "9:00 AM",
-  "location": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
-  "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/924/files/agenda/2025",
-  "hasAgenda": true,
-  "packetUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/924/files/agenda/2027",
-  "link": "https://sanmiguelcoco.portal.civicclerk.com/event/924/files/agenda/2025",
-  "zoomLink": "https://us06web.zoom.us/j/86224076240?pwd=dg8IrMwtLfHLkcZ1Y3JKlGs8IpYz0Q.1",
-  "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
+  "title": "Norwood Water Commission Meeting",
+  "sourceLabel": "Town of Norwood",
+  "date": "2026-10-13",
+  "humanDate": "Tuesday, October 13",
+  "time": "",
+  "location": "1670 Naturita St, Norwood CO 81423",
+  "agendaUrl": "",
+  "hasAgenda": false,
+  "packetUrl": "https://www.norwoodtown.com/files/39e79e6fc/10.13.2026+NWC+Supporting+Documents.pdf",
+  "link": "https://www.norwoodtown.com/files/4a41c8cfc/10.13.2026+NWC+Agenda.pdf",
+  "zoomLink": "",
+  "livestream": ""
  }
 }

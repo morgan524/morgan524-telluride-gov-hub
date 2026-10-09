@@ -6,14 +6,6 @@
     "meetingId": "839 7545 5041",
     "passcode": "388003"
   },
-  "norwood|2026-09-08|Norwood Water Commission Meeting": {
-    "sv": 4,
-    "ph": "b858cb282617fb09"
-  },
-  "tmvoa|2026-09-08|Mountain Village Merchant Meeting": {
-    "sv": 4,
-    "ph": "b858cb282617fb09"
-  },
   "norwood|2026-09-09|Board of Trustees Meeting": {
     "sv": 4,
     "ph": "b858cb282617fb09"
@@ -245,14 +237,6 @@
     "agendaUrl": "https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1017",
     "sv": 4
   },
-  "norwood|2026-09-08|NWC Rescheduled to 09/22/2026": {
-    "agendaUrl": "https://www.norwoodtown.com/files/5f8304a63/09.08.2026+RESCHEDULED+NWC+Agenda.pdf",
-    "zoomUrl": "https://us02web.zoom.us/j/88274908233",
-    "meetingId": "882 7490 8233",
-    "passcode": "997236",
-    "phone": "346-248-7799",
-    "sv": 4
-  },
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132",
     "sv": 4,
@@ -365,7 +349,10 @@
   "telluride|2026-10-13|Special Town Council Budget - Oct 13 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8307",
     "sv": 4,
-    "ph": "cf30c3f8f11ffb4d"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/mVScqdyoRYeFZH2oN6LOWw",
+    "meetingId": "890 0211 8679",
+    "passcode": "774841.",
+    "phone": "719) 359-4580"
   },
   "norwood|2026-10-14|Board of Trustees Meeting": {
     "sv": 4,
@@ -381,7 +368,12 @@
     "ph": "28ddc62878422962"
   },
   "county|2026-10-14|Board of County Commissioners Work Session": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/858/files/agenda/2038",
+    "zoomUrl": "https://us02web.zoom.us/meeting/register/qTt5CFcNRD-N6Bld7DWwkA",
+    "meetingId": "848 3404 4273",
+    "passcode": "251572",
+    "phone": "719-359-4580"
   },
   "mv|2026-10-15|Town Council Meeting": {
     "sv": 4,
@@ -470,7 +462,10 @@
   "telluride|2026-10-21|Historic & Architectural Review Commission - Oct 21 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024",
     "sv": 4,
-    "ph": "a30d6dbb7de45f56"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA",
+    "meetingId": "812 9136 3866",
+    "passcode": "440860.",
+    "phone": "301-715-8592"
   },
   "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083",
@@ -543,7 +538,7 @@
   "telluride|2026-10-27|Town Council - Oct 27 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045",
     "sv": 4,
-    "ph": "32e2fb93c90d2ccb"
+    "ph": "503b66ccc1b69729"
   },
   "county|2026-10-28|Board of County Commissioners Work Session": {
     "sv": 4
@@ -615,7 +610,7 @@
   "telluride|2026-11-05|Town Council Budget - Nov 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054",
     "sv": 4,
-    "ph": "04f76b11b9fb29bf"
+    "ph": "dc6fd5ab4a1c2e97"
   },
   "telluride|2026-10-21|CANCELED - Historic & Architectural Review Commission Chair - Oct 21 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8025",
@@ -624,6 +619,34 @@
   "telluride|2026-10-08|San Miguel Authority for Regional Transportation - Oct 08 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8323",
     "zoomUrl": "https://www.google.com/url?q=https://us02web.zoom.us/j/86722451498?pwd%3D7BgRYT2yt0O3KF5fCqes3oftgNSi6U.1&sa=D&source=calendar&ust=1791663141829276&usg=AOvVaw3s6jFtWFQYVpUDFpY9yqLe",
+    "sv": 4
+  },
+  "tmvoa|2026-10-20|TMVOA Audit &amp; Compliance Committee": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "tmvoa|2026-10-20|TMVOA Finance &amp; Budget Committee": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "tmvoa|2026-11-06|TMVOA Board of Directors Budget Meeting #1": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "ouray|2026-10-13|Board of County Commissioners": {
+    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/1069/files/agenda/7559",
+    "zoomUrl": "https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1",
+    "meetingId": "876 0637 5697",
+    "passcode": "946299",
+    "phone": "346-248-7799",
+    "sv": 4
+  },
+  "ouray|2026-10-14|Board of County Commissioners Work Session": {
+    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/1117/files/agenda/7564",
+    "zoomUrl": "https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1",
+    "meetingId": "876 0637 5697",
+    "passcode": "946299",
+    "phone": "346-248-7799",
     "sv": 4
   }
 }

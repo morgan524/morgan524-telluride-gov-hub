@@ -84,41 +84,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/63536/vol-trail-work--499x624.800x533.webp"
   },
   {
-    "title": "Fireside Chats",
-    "link": "https://www.telluride.com/event/fireside-chats/",
-    "description": "A series of free weekly lectures on Wednesdays this fall by scholars, writers, storytellers, and experts of Telluride's …",
-    "pubDate": "2026-09-23",
-    "endDate": "2026-10-07",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/49419/fireside_chat.800x533.webp"
-  },
-  {
-    "title": "Telluride Leadership Summit",
-    "link": "https://www.telluride.com/event/telluride-leadership-summit/",
-    "description": "Where limits end, leadership begins. Welcome to the Telluride Leadership Summit - A mountain destination experience …",
-    "pubDate": "2026-10-04",
-    "endDate": "2026-10-07",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63023/summit_one_pager.800x533.webp"
-  },
-  {
-    "title": "Stoke the Vote",
-    "link": "https://www.telluride.com/event/stoke-the-vote/",
-    "description": "Join Patagonia Telluride and POW (Protect Our Winters), Telluride Mountain Club, Sheep Mountain Alliance, and EcoAction …",
-    "pubDate": "2026-10-07",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63659/stoke_the_vote_-_final_flyer.800x533.webp"
-  },
-  {
     "title": "Shrek the Musical",
     "link": "https://www.telluride.com/event/shrek-the-musical/",
     "description": "The Sheridan Arts Foundation’s 6th annual Not- So Young People’s Theater production! NYSPT presents Shrek The …",
@@ -152,6 +117,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63340/hanneke_cassel.800x533.webp"
+  },
+  {
+    "title": "Wash Party",
+    "link": "https://www.telluride.com/event/wash-party/",
+    "description": "It's time to Wash Party with Patagonia Telluride! Drop your winter gear off at The Laundromat, including shell jackets, …",
+    "pubDate": "2026-10-15",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63746/wash_party_flyer_final.800x533.webp"
   },
   {
     "title": "Telluride Horror Show",
@@ -233,6 +209,18 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/57231/screenshot_2026-10-06_at_9_14_18_am.800x533.webp"
+  },
+  {
+    "title": "Young Frankenstein the Musical",
+    "link": "https://www.telluride.com/event/young-frankenstein-the-musical/",
+    "description": "Book by Mel Brooks & Thomas Meehan\n\nMusic & Lyrics by Mel Brooks\n\nDirected by Sasha Cucciniello\n\nPLEASE NOTE - …",
+    "pubDate": "2026-10-29",
+    "endDate": "2026-11-01",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63749/yf_thundertix-ezgif_com-webp-to-jpg-converter.800x533.webp"
   },
   {
     "title": "KOTO Ski Swap",
