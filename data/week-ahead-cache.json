@@ -1,26 +1,26 @@
 {
-  "hash": "a385de729fb31dd3bac890172aabc780f4fc5098",
-  "lede": "The biggest thing on the calendar this week is the Telluride Town Council's three-hour budget work session Monday, where they'll grind through the 2027 numbers on enterprise funds, open space, and affordable housing — no formal votes yet, but this is where priorities get shaped. Ouray County commissioners also have a full agenda Tuesday, including a vote on opting into Proposition 123's affordable housing commitment cycle and a new intergovernmental law enforcement agreement. Norwood's Water Commission tackles the Cossey Complaint hearing and contract approvals the same day, and the Horror Show weekend is coming up fast.",
+  "hash": "902c1a0d38e5c7e8bb9972d3f9d0e4e00bd525a0",
+  "lede": "The Telluride Town Council spends three hours Tuesday working through the 2027 budget — enterprise funds, open space, and affordable housing dollars all on the table, no votes yet but this is where the numbers get shaped. Ouray County commissioners are also moving real business Tuesday, including a Special Use Permit amendment and a vote on opting into Proposition 123's affordable housing commitment cycle. Norwood's Water Commission holds its Cossey Complaint hearing the same day, with two executive sessions and a contract vote in the mix. The Horror Show lands at the Palm Theatre this weekend, and a Ballot Measure 5A information meeting happens Monday for anyone trying to get straight on that one before it counts.",
   "notable": [
     {
       "id": 0,
-      "stake": "Water rights hearing, contract vote, and dual executive sessions on legal matters."
+      "stake": "Water commission votes on contract and holds formal Cossey Complaint hearing."
     },
     {
       "id": 2,
-      "stake": "Council shapes 2027 spending on housing, open space, and enterprise funds."
+      "stake": "Council shapes 2027 spending on housing and open space before formal adoption."
     },
     {
       "id": 3,
-      "stake": "County votes on Prop 123 affordable housing commitment and new law enforcement IGA."
+      "stake": "County votes on Prop 123 affordable housing opt-in and a Special Use Permit amendment."
     },
     {
-      "id": 6,
-      "stake": "Home Trust reports on regional housing progress; council direction likely follows."
+      "id": 4,
+      "stake": "Proposed ordinance would regulate psilocybin businesses in Ouray — public discussion open."
     },
     {
       "id": 9,
-      "stake": "Public hearing on alcohol permits for 1,400-person Horror Show weekend events."
+      "stake": "Public hearing on Horror Show alcohol permits for crowds up to 1,400."
     }
   ]
 }

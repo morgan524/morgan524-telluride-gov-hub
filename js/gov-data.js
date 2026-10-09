@@ -1018,6 +1018,16 @@ const OURAY_CITY_CACHED_DATA = [
     boardbookId: 761785,
     agendaUrl: "https://meetings.boardbook.org/Public/Agenda/2503?meeting=761785",
     packetUrl: "https://meetings.boardbook.org/Public/DownloadAgenda/2503?meeting=761785"
+  },
+  {
+    date: "October 13, 2026",
+    time: "4:00 PM",
+    title: "Ouray Planning Commission Regular Meeting",
+    board: "pc",
+    location: "Ouray Community Center, 320 6th Ave, Ouray, CO 81427",
+    boardbookId: 766038,
+    agendaUrl: "https://meetings.boardbook.org/Public/Agenda/2503?meeting=766038",
+    packetUrl: "https://meetings.boardbook.org/Public/DownloadAgenda/2503?meeting=766038"
   }
 ];
 

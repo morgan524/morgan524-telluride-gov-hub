@@ -478,7 +478,7 @@
   "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083",
     "sv": 4,
-    "ph": "bd74d669e41a67a8"
+    "ph": "ed7fc0197972b8f8"
   },
   "county|2026-10-21|Board of County Commissioners Meeting": {
     "sv": 4,
@@ -613,7 +613,7 @@
   "telluride|2026-11-05|Special Meeting - Planning & Zoning Commission - Nov 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312",
     "sv": 4,
-    "ph": "948968cb5b9c7565"
+    "ph": "65b9bd7a7d287f9a"
   },
   "telluride|2026-11-05|Town Council Budget - Nov 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054",
@@ -655,6 +655,10 @@
     "meetingId": "876 0637 5697",
     "passcode": "946299",
     "phone": "346-248-7799",
+    "sv": 4
+  },
+  "ouraycity|2026-10-13|Ouray Planning Commission Regular Meeting": {
+    "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=766038",
     "sv": 4
   }
 }
