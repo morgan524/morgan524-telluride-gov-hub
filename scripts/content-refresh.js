@@ -3652,7 +3652,8 @@ function syncOneOffBlog(posts) {
       date:     `${MONTHS_ABBR[Number(dm[2]) - 1]} ${Number(dm[3])}, ${dm[1]}`,
       href,
       image:    firstImageFromHtml(html) || 'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png',
-      excerpt:  decodeCommonEntities(htmlToText(html)).slice(0, 400),
+      // Skip <head>: its <title> would otherwise open every excerpt.
+      excerpt:  decodeCommonEntities(htmlToText(html.replace(/<head[\s\S]*?<\/head>/i, ''))).slice(0, 400),
       category: 'Newsletter',
       source:   'one-off',
     });
