@@ -307,6 +307,22 @@ function checkDuplicates(ctx) {
   }
 }
 
+const VALLEY_TOWNS = ['mountain village', 'telluride', 'norwood', 'ridgway', 'ouray', 'rico',
+  'placerville', 'ophir', 'sawpit', 'nucla', 'naturita', 'redvale', 'egnar', 'montrose', 'silverton'];
+// The town an event record says it's in (location first, then source label),
+// or '' when it doesn't say. "Mountain Village" is listed before "Telluride"
+// so "Telluride Mountain Village" resolves to the more specific town.
+function townOf(o) {
+  if (!o) return '';
+  for (const field of [o.location, o.town, o.sourceLabel]) {
+    const v = String(field || '').toLowerCase();
+    if (!v) continue;
+    const t = VALLEY_TOWNS.find(name => v.includes(name));
+    if (t) return t;
+  }
+  return '';
+}
+
 function checkCrossSourceDateConflict(ctx) {
   // Same event title in 2+ arrays but on DIFFERENT dates → one source has the
   // wrong date (the Mountain-Village-publishes-wrong-dates trap).
@@ -351,6 +367,13 @@ function checkCrossSourceDateConflict(ctx) {
         if (dates.length === 2 && daysBetweenIso(sorted[0], sorted[1]) === 7) continue;
         const RECURRING_RE = /\b(every|each)\s+(mon|tues|wednes|thurs|fri|satur|sun)(?:day)?s?\b|\bweekly\b|\bevery\s+(?:other\s+)?week\b/i;
         if (group.some(g => RECURRING_RE.test((g.obj && (g.obj.description || g.obj.copy)) || ''))) continue;
+        // DIFFERENT TOWNS, DIFFERENT EVENTS. Several valley towns run an event
+        // under the same name: Norwood's "Noel Night" (Dec 4) and Telluride's
+        // (Dec 9, Ski Tree lighting) were flagged High on 2026-10-10 though
+        // both organizers' pages confirm their own date. If every copy names a
+        // town and they don't all name the same one, it isn't a conflict.
+        const towns = group.map(g => townOf(g.obj));
+        if (towns.every(Boolean) && new Set(towns).size > 1) continue;
 
         const r = group[0];
         add('High', 'Conflicting event dates',
@@ -629,6 +652,17 @@ async function checkAI(ctx) {
     // a cadence placeholder, not a published meeting, and the site already
     // tells readers the board may reschedule. The real date replaces it when
     // the town posts the agenda.
+    // Verified against Ouray County's CivicClerk 2026-10-10: events 1105/1129
+    // (Oct 27 1:30 PM / Oct 28 9 AM) and 1106/1130 (Nov 17/18) are separate
+    // published work sessions with separate agendas. Same shape as Oct 13/14.
+    `Do NOT flag Ouray County (array/source "ouray") holding a Board of County Commissioners Work Session ` +
+    `on the afternoon of its regular Tuesday meeting AND another the next morning — the county schedules both, each with its own agenda. ` +
+    // Rotary flagged three times on 2026-10-10: same title, same date, one
+    // copy each in TELLURIDE_ROTARY_MEETINGS and KOTO_COMMUNITY_EVENTS. The
+    // events index already merges those into one card, and the deterministic
+    // "Cross-source same-date events" check covers verifying that.
+    `Do NOT flag the SAME title on the SAME date appearing in two different arrays — that is normal for an aggregator ` +
+    `and the site merges them into one listing at build time. Only flag cross-array duplicates whose titles DIFFER enough that they would not merge. ` +
     `Do NOT flag a meeting whose "note" says its projected date falls on a holiday — that is a ` +
     `cadence placeholder the site already labels as possibly rescheduled, even if another feed lists the office as closed that day. ` +
     `Be conservative — no speculation. Return STRICT JSON only, an array of ` +

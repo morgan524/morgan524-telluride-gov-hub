@@ -229,6 +229,11 @@ function dateKeyOf(e) {
 function timeOf(e) {
   if (e.time) return String(e.time).trim();
   // RSS pubDate often carries a real start time; surface it when non-midnight.
+  // Exactly noon UTC is a DATE ANCHOR, not a start time: the Norwood and
+  // Mountain Village scrapers store date-only events as "YYYY-MM-DDT12:00:00Z"
+  // so the day survives any timezone. Converted to MT it rendered as a bogus
+  // "5:00 AM"/"6:00 AM" on every such card (Norwood's Noel Night, 2026-10-10).
+  if (e.pubDate && /T12:00(?::00(?:\.0+)?)?Z$/.test(String(e.pubDate).trim())) return '';
   if (e.pubDate) {
     const d = new Date(e.pubDate);
     if (!isNaN(d)) {

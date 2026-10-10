@@ -105,32 +105,6 @@
     "type": "Food & Drink"
   },
   {
-    "title": "Movies Under the Stars",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    "date": "2026-10-10",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Movies Under the Stars is a recurring outdoor film series held at the Conference Center Plaza in Mountain Village, screening movies at dusk on Saturday evenings. The series runs throughout the summer months, offering a communal gathering…",
-    "type": "Arts & Film"
-  },
-  {
-    "title": "Mind Blown Telluride",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
-    "date": "2026-10-10",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
-    "type": "Community"
-  },
-  {
     "title": "Not-So-Young People's Theater presents Shrek The Musical",
     "href": "https://koto.org/event/not-so-young-peoples-theater-presents-shrek-the-musical/2026-10-10/",
     "date": "2026-10-10",
@@ -232,6 +206,32 @@
     "category": "",
     "source": "Sherbino Theater",
     "desc": "Alysha Brilla performs live at The Sherbino in Ridgway, presented in partnership with Pickin' Productions. The show is primarily a dancehall-style setup with limited open seating, and some reserved section seats are available in advance.",
+    "type": "Community"
+  },
+  {
+    "title": "Movies Under the Stars",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    "date": "2026-10-10",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Movies Under the Stars is a recurring outdoor film series held at the Conference Center Plaza in Mountain Village, screening movies at dusk on Saturday evenings. The series runs throughout the summer months, offering a communal gathering…",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Mind Blown Telluride",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    "date": "2026-10-10",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
     "type": "Community"
   },
   {
@@ -356,19 +356,6 @@
     "endDate": "2026-12-07"
   },
   {
-    "title": "Bike & Brewery Tour",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
-    "date": "2026-10-12",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "A guided bicycle ride departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where participants receive a complimentary beer. The route offers a scenic way to…",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "Ballot Measure 5A Information Meeting",
     "href": "https://koto.org/event/ballor-measure-5a-information-meeting/",
     "date": "2026-10-12",
@@ -394,6 +381,19 @@
     "desc": "Fall Break for Ridgway Schools begins on this date, giving students in the Ridgway district a scheduled pause from the academic calendar. The break is a planned recess coordinated through the Ouray-Ridgway area school calendar.",
     "type": "Community",
     "endDate": "2026-10-16"
+  },
+  {
+    "title": "Bike & Brewery Tour",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    "date": "2026-10-12",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "A guided bicycle ride departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where participants receive a complimentary beer. The route offers a scenic way to…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
@@ -434,45 +434,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Tyler Simmons performs live at a venue on North Cora Street in Ridgway. The event is listed on the Ouray Ridgway community calendar as a live music performance.",
     "type": "Music"
-  },
-  {
-    "title": "Norwood Water Commission Meeting",
-    "href": "https://www.norwoodtown.com/2026-10-13-nwc-meeting",
-    "date": "2026-10-13",
-    "time": "6:00 AM",
-    "location": "Norwood, CO",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Government Meeting",
-    "source": "Town of Norwood",
-    "desc": "The Norwood Water Commission will hold a regular meeting on October 13, 2026, hosted by the Town of Norwood. This is an official government meeting where water commission business for the Norwood area will be addressed.",
-    "type": "Community"
-  },
-  {
-    "title": "Mountain Village Merchant Meeting",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/merchant-meeting/",
-    "date": "2026-10-13",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/27556/merchant_event-1.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "A monthly gathering for Mountain Village merchants, held on the second Tuesday of each month from 10 to 11 a.m. The meeting is offered in a hybrid format, allowing participants to attend either in person or remotely.",
-    "type": "Community"
-  },
-  {
-    "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
-    "date": "2026-10-13",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "A community workshop bringing together local guides from Through the Woods Doula, EcoAction Partners, and the Wilkinson Public Library to explore the emotional dimensions of living through environmental change. The gathering offers space…",
-    "type": "Talks & Classes"
   },
   {
     "title": "Weekly Young Adult Gathering",
@@ -541,6 +502,45 @@
     "type": "Community"
   },
   {
+    "title": "Norwood Water Commission Meeting",
+    "href": "https://www.norwoodtown.com/2026-10-13-nwc-meeting",
+    "date": "2026-10-13",
+    "time": "",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Government Meeting",
+    "source": "Town of Norwood",
+    "desc": "The Norwood Water Commission will hold a regular meeting on October 13, 2026, hosted by the Town of Norwood. This is an official government meeting where water commission business for the Norwood area will be addressed.",
+    "type": "Community"
+  },
+  {
+    "title": "Mountain Village Merchant Meeting",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/merchant-meeting/",
+    "date": "2026-10-13",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/27556/merchant_event-1.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "A monthly gathering for Mountain Village merchants, held on the second Tuesday of each month from 10 to 11 a.m. The meeting is offered in a hybrid format, allowing participants to attend either in person or remotely.",
+    "type": "Community"
+  },
+  {
+    "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
+    "date": "2026-10-13",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "A community workshop bringing together local guides from Through the Woods Doula, EcoAction Partners, and the Wilkinson Public Library to explore the emotional dimensions of living through environmental change. The gathering offers space…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Water Aerobics",
     "href": "https://events.ourayridgwayevents.com/event/water-aerobics",
     "date": "2026-10-14",
@@ -581,32 +581,6 @@
     "type": "Arts & Film"
   },
   {
-    "title": "Plaza Vending Committee Meeting",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/plaza-vending-committee-meeting/",
-    "date": "2026-10-14",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/34834/mplantz-19-a7v07134.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "The Mountain Village Plaza Vending Committee will meet to review winter 2026/27 plaza vending applications. The meeting will be held in Mountain Village and is also accessible remotely via Zoom.",
-    "type": "Community"
-  },
-  {
-    "title": "Market on the Plaza",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
-    "date": "2026-10-14",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Mountain Village's Heritage Plaza hosts a community market featuring local vendors. The pedestrian-friendly plaza welcomes shoppers browsing goods from area farmers, artisans, and small businesses.",
-    "type": "Community"
-  },
-  {
     "title": "OPEN MIC / JAM NIGHT w/ host DJ Strong",
     "href": "https://events.ourayridgwayevents.com/event/open-mic-jam-night-w-host-dj-strong",
     "date": "2026-10-14",
@@ -644,6 +618,32 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "A guided top rope climbing program for teens, led by Basecamp Ouray Mountain Guides at a local outdoor site. Participants will meet at the gazebo across from the library, with details, a schedule, and a packing list sent to registrants by…",
+    "type": "Community"
+  },
+  {
+    "title": "Plaza Vending Committee Meeting",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/plaza-vending-committee-meeting/",
+    "date": "2026-10-14",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/34834/mplantz-19-a7v07134.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "The Mountain Village Plaza Vending Committee will meet to review winter 2026/27 plaza vending applications. The meeting will be held in Mountain Village and is also accessible remotely via Zoom.",
+    "type": "Community"
+  },
+  {
+    "title": "Market on the Plaza",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    "date": "2026-10-14",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Mountain Village's Heritage Plaza hosts a community market featuring local vendors. The pedestrian-friendly plaza welcomes shoppers browsing goods from area farmers, artisans, and small businesses.",
     "type": "Community"
   },
   {
@@ -725,19 +725,6 @@
     "type": "Arts & Film"
   },
   {
-    "title": "Senior Meals",
-    "href": "https://www.norwoodtown.com/2026-10-15-senior-meals",
-    "date": "2026-10-15",
-    "time": "6:00 AM",
-    "location": "Norwood, CO",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "Town of Norwood",
-    "desc": "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather, share a meal, and connect with neighbors. This recurring community event takes place in Norwood and is organized through…",
-    "type": "Community"
-  },
-  {
     "title": "Facing the Mourning",
     "href": "https://koto.org/event/facing-the-mourning/2026-10-15/",
     "date": "2026-10-15",
@@ -789,6 +776,19 @@
     "source": "Sherbino Theater",
     "desc": "",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Senior Meals",
+    "href": "https://www.norwoodtown.com/2026-10-15-senior-meals",
+    "date": "2026-10-15",
+    "time": "",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "Town of Norwood",
+    "desc": "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather, share a meal, and connect with neighbors. This recurring community event takes place in Norwood and is organized through…",
+    "type": "Community"
   },
   {
     "title": "Up-off Gymnastics, Dance, and Spanish",
@@ -843,19 +843,6 @@
     "type": "Music"
   },
   {
-    "title": "Live Music at Alloy Kitchen",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/live-music-at-alloy-kitchen-1/",
-    "date": "2026-10-16",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49132/alloy-live-music-1800x900.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Free live music at Alloy Kitchen in Mountain Lodge Telluride, featuring a rotating lineup of local artists including Apres Nova and others throughout the season. Performances are offered four nights a week at no charge, making it a…",
-    "type": "Music"
-  },
-  {
     "title": "Telluride Horror Show",
     "href": "https://sheridanoperahouse.com/events/telluride-horror-show/",
     "date": "2026-10-16",
@@ -881,6 +868,19 @@
     "source": "KOTO Community Calendar",
     "desc": "The Telluride Horror Show returns for its 17th edition October 16-18, 2026. One of the highest-attended genre film fests in the world, the Horror Show attracts the latest & best genre films from around the globe and attendees from all over…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Live Music at Alloy Kitchen",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/live-music-at-alloy-kitchen-1/",
+    "date": "2026-10-16",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49132/alloy-live-music-1800x900.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Free live music at Alloy Kitchen in Mountain Lodge Telluride, featuring a rotating lineup of local artists including Apres Nova and others throughout the season. Performances are offered four nights a week at no charge, making it a…",
+    "type": "Music"
   },
   {
     "title": "Grand Opening of OCSAP Office",
@@ -935,32 +935,6 @@
     "type": "Food & Drink"
   },
   {
-    "title": "Movies Under the Stars",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    "date": "2026-10-17",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Movies Under the Stars is an outdoor film screening series hosted by Mountain Village at the Conference Center Plaza. The series runs on Saturdays at dusk during the summer months, offering a communal cinema experience under the open sky.",
-    "type": "Arts & Film"
-  },
-  {
-    "title": "Mind Blown Telluride",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
-    "date": "2026-10-17",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
-    "type": "Community"
-  },
-  {
     "title": "Dem-a-Palooza!",
     "href": "https://www.telluride.com/event/dem-a-palooza/",
     "date": "2026-10-17",
@@ -1011,6 +985,32 @@
     "source": "The Alibi",
     "desc": "Nattali Rize is a conscious artist, lyricist, and musician known for her ever-evolving sound and message-driven music. She performs live at The Alibi in Telluride.",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Movies Under the Stars",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    "date": "2026-10-17",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Movies Under the Stars is an outdoor film screening series hosted by Mountain Village at the Conference Center Plaza. The series runs on Saturdays at dusk during the summer months, offering a communal cinema experience under the open sky.",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Mind Blown Telluride",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    "date": "2026-10-17",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    "type": "Community"
   },
   {
     "title": "Posture: The Joy of Alignment",
@@ -1068,7 +1068,7 @@
     "title": "Bike & Brewery Tour",
     "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     "date": "2026-10-19",
-    "time": "6:00 AM",
+    "time": "",
     "location": "Mountain Village, CO",
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
@@ -1131,19 +1131,6 @@
     "type": "Community"
   },
   {
-    "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
-    "date": "2026-10-20",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "A workshop hosted by Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library exploring the emotional intersection of grief and gratitude in response to environmental change. The event…",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "Weekly Young Adult Gathering",
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-10-20",
@@ -1167,6 +1154,19 @@
     "category": "Community Event",
     "source": "KOTO Community Calendar",
     "desc": "Telluride Mountain School is hosting an open house where visitors can step directly into the learning environment rather than sit through a formal presentation. Guests are invited to visit classrooms, meet teachers and students, and…",
+    "type": "Talks & Classes"
+  },
+  {
+    "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
+    "date": "2026-10-20",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "A workshop hosted by Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library exploring the emotional intersection of grief and gratitude in response to environmental change. The event…",
     "type": "Talks & Classes"
   },
   {
@@ -1212,19 +1212,6 @@
     "endDate": "2026-12-03"
   },
   {
-    "title": "Market on the Plaza",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
-    "date": "2026-10-21",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Mountain Village's Heritage Plaza hosts a community market featuring local vendors. The pedestrian-friendly plaza welcomes shoppers browsing a variety of goods from area sellers.",
-    "type": "Community"
-  },
-  {
     "title": "Telluride Rotary Club Meeting",
     "href": "https://portal.clubrunner.ca/3291",
     "date": "2026-10-21",
@@ -1249,6 +1236,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Hoppers: Movie Night @ the Wright WHEN? Wednesday, October 21 Doors at 6:30 PM | Movie at 7:00 PM WHERE? Wright Opera House 472 Main St., Ouray, Colorado RUN TIME: 1 hour, 44 minutes RATING: PG ROTTEN TOMATOES SCORE: 94% ABOUT THE FILM…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Market on the Plaza",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    "date": "2026-10-21",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Mountain Village's Heritage Plaza hosts a community market featuring local vendors. The pedestrian-friendly plaza welcomes shoppers browsing a variety of goods from area sellers.",
+    "type": "Community"
   },
   {
     "title": "Pilates for All Bodies with Laura",
@@ -1301,19 +1301,6 @@
     "category": "Community Event",
     "source": "KOTO Community Calendar",
     "desc": "Across the Southwest, aridification and challenging politics are impacting our watersheds and threatening our rivers. Join Mike Fiebig, Director of the Southwest River Protection Program at American Rivers, to learn what we can do to…",
-    "type": "Community"
-  },
-  {
-    "title": "Senior Meals",
-    "href": "https://www.norwoodtown.com/2026-10-22-senior-meals",
-    "date": "2026-10-22",
-    "time": "6:00 AM",
-    "location": "Norwood, CO",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "Town of Norwood",
-    "desc": "A midday community meal program for seniors, hosted by the Town of Norwood. It offers older residents a chance to gather, share a meal, and connect with neighbors in a welcoming setting.",
     "type": "Community"
   },
   {
@@ -1410,6 +1397,19 @@
     "endDate": "2026-10-25"
   },
   {
+    "title": "Senior Meals",
+    "href": "https://www.norwoodtown.com/2026-10-22-senior-meals",
+    "date": "2026-10-22",
+    "time": "",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "Town of Norwood",
+    "desc": "A midday community meal program for seniors, hosted by the Town of Norwood. It offers older residents a chance to gather, share a meal, and connect with neighbors in a welcoming setting.",
+    "type": "Community"
+  },
+  {
     "title": "Up-off Gymnastics, Dance, and Spanish",
     "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-10-23/",
     "date": "2026-10-23",
@@ -1477,45 +1477,6 @@
     "type": "Community"
   },
   {
-    "title": "Movies Under the Stars",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    "date": "2026-10-24",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Movies Under the Stars is a recurring outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening movies at dusk on select evenings. The October 24 event brings the community together for an open-air cinema…",
-    "type": "Arts & Film"
-  },
-  {
-    "title": "Mind Blown Telluride",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
-    "date": "2026-10-24",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
-    "type": "Community"
-  },
-  {
-    "title": "Gaiascope",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/gaiascope/",
-    "date": "2026-10-24",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49531/akb_1557.jpeg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Brooke Einbender's nighttime immersive public artwork, Gaiascope, comes to Mountain Village following its presentation during the 2026 World Cup in downtown San José, California. The community is invited to experience this large-scale…",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "Pumpkins & Peaks",
     "href": "https://www.telluride.com/event/pumpkins-peaks/",
     "date": "2026-10-24",
@@ -1541,6 +1502,45 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Get ready for the 4th Annual Boo-Mont Halloween Ball at the historic Beaumont Hotel in Ouray, Colorado! Come dressed to impress, scare, or simply make a statement! The evening will feature a costume contest with prizes, a DJ, spooky drink…",
     "type": "Music"
+  },
+  {
+    "title": "Movies Under the Stars",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    "date": "2026-10-24",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Movies Under the Stars is a recurring outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening movies at dusk on select evenings. The October 24 event brings the community together for an open-air cinema…",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Mind Blown Telluride",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    "date": "2026-10-24",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    "type": "Community"
+  },
+  {
+    "title": "Gaiascope",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/gaiascope/",
+    "date": "2026-10-24",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49531/akb_1557.jpeg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Brooke Einbender's nighttime immersive public artwork, Gaiascope, comes to Mountain Village following its presentation during the 2026 World Cup in downtown San José, California. The community is invited to experience this large-scale…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Solkattu Workshop",
@@ -1586,7 +1586,7 @@
     "title": "Bike & Brewery Tour",
     "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     "date": "2026-10-26",
-    "time": "6:00 AM",
+    "time": "",
     "location": "Mountain Village, CO",
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
@@ -1649,19 +1649,6 @@
     "endDate": "2026-11-25"
   },
   {
-    "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
-    "date": "2026-10-27",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "A community workshop held in Mountain Village bringing together participants to explore eco-grief — the emotional weight of loss tied to environmental change — alongside gratitude and love as responses to a shifting world. The program is a…",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "Weekly Young Adult Gathering",
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-10-27",
@@ -1688,6 +1675,19 @@
     "type": "Community"
   },
   {
+    "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
+    "date": "2026-10-27",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "A community workshop held in Mountain Village bringing together participants to explore eco-grief — the emotional weight of loss tied to environmental change — alongside gratitude and love as responses to a shifting world. The program is a…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "OPL October Book Club- \"Mexican Gothic\"",
     "href": "https://events.ourayridgwayevents.com/event/opl-october-book-club-mexican-gothic",
     "date": "2026-10-28",
@@ -1711,19 +1711,6 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Come out and join. your friends and neighbors for an evening of camaraderie and fun! Timber Ridge Lodge will be the place to be on October 28th from 5-7 pm. Enjoy s'mores around the firepit and tour some of the cozy accommodations and…",
-    "type": "Community"
-  },
-  {
-    "title": "Market on the Plaza",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
-    "date": "2026-10-28",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Mountain Village's Heritage Plaza hosts a weekly outdoor market featuring vendors and tents in the heart of the pedestrian-friendly town center. The Market on the Plaza brings together local sellers for a community gathering in the scenic…",
     "type": "Community"
   },
   {
@@ -1766,6 +1753,19 @@
     "type": "Community"
   },
   {
+    "title": "Market on the Plaza",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    "date": "2026-10-28",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Mountain Village's Heritage Plaza hosts a weekly outdoor market featuring vendors and tents in the heart of the pedestrian-friendly town center. The Market on the Plaza brings together local sellers for a community gathering in the scenic…",
+    "type": "Community"
+  },
+  {
     "title": "Pilates for All Bodies with Laura",
     "href": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-10-29/",
     "date": "2026-10-29",
@@ -1777,19 +1777,6 @@
     "source": "KOTO Community Calendar",
     "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
     "type": "Wellness"
-  },
-  {
-    "title": "Senior Meals",
-    "href": "https://www.norwoodtown.com/2026-10-29-senior-meals",
-    "date": "2026-10-29",
-    "time": "6:00 AM",
-    "location": "Norwood, CO",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "Town of Norwood",
-    "desc": "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather and share a meal together. This recurring community event provides both nourishment and social connection for Norwood's…",
-    "type": "Community"
   },
   {
     "title": "Facing the Mourning",
@@ -1868,6 +1855,19 @@
     "category": "Community Event",
     "source": "KOTO Community Calendar",
     "desc": "Across our community, Super El Niño rumors are building hope and excitement that a snowy winter full of powder days is on the horizon. This year's El Niño is shaping up to be the strongest ever recorded, and is already driving changes in…",
+    "type": "Community"
+  },
+  {
+    "title": "Senior Meals",
+    "href": "https://www.norwoodtown.com/2026-10-29-senior-meals",
+    "date": "2026-10-29",
+    "time": "",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "Town of Norwood",
+    "desc": "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather and share a meal together. This recurring community event provides both nourishment and social connection for Norwood's…",
     "type": "Community"
   },
   {
@@ -2054,32 +2054,6 @@
     "type": "Family & Kids"
   },
   {
-    "title": "Movies Under the Stars",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    "date": "2026-10-31",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Movies Under the Stars is a recurring outdoor film series held at the Conference Center Plaza in Mountain Village, taking place on Saturday evenings at dusk. The series runs from June 13 through August 15.",
-    "type": "Arts & Film"
-  },
-  {
-    "title": "Mind Blown Telluride",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
-    "date": "2026-10-31",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
-    "type": "Community"
-  },
-  {
     "title": "Casper: Movie Night @ the Wright",
     "href": "https://events.ourayridgwayevents.com/event/casper-movie-night-the-wright",
     "date": "2026-10-31",
@@ -2145,6 +2119,32 @@
     "type": "Community"
   },
   {
+    "title": "Movies Under the Stars",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    "date": "2026-10-31",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Movies Under the Stars is a recurring outdoor film series held at the Conference Center Plaza in Mountain Village, taking place on Saturday evenings at dusk. The series runs from June 13 through August 15.",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Mind Blown Telluride",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    "date": "2026-10-31",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    "type": "Community"
+  },
+  {
     "title": "Tea and Tarot",
     "href": "https://koto.org/event/tea-and-tarot/2026-11-01/",
     "date": "2026-11-01",
@@ -2156,19 +2156,6 @@
     "source": "KOTO Community Calendar",
     "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
     "type": "Community"
-  },
-  {
-    "title": "Bike & Brewery Tour",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
-    "date": "2026-11-02",
-    "time": "5:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "A guided bike ride through Mountain Village, traveling the Jurassic and Meadows Trails down to Telluride Brewing Co. for a complimentary beer. The tour departs from the Mountain Lodge and offers a scenic route connecting Mountain Village…",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "Monthly Karate in Ouray County",
@@ -2185,17 +2172,17 @@
     "endDate": "2026-12-08"
   },
   {
-    "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
-    "date": "2026-11-03",
-    "time": "5:00 AM",
+    "title": "Bike & Brewery Tour",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    "date": "2026-11-02",
+    "time": "",
     "location": "Mountain Village, CO",
     "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
+    "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A community workshop hosted in Mountain Village, bringing together Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library to explore the emotional landscape of ecological grief and…",
-    "type": "Talks & Classes"
+    "desc": "A guided bike ride through Mountain Village, traveling the Jurassic and Meadows Trails down to Telluride Brewing Co. for a complimentary beer. The tour departs from the Mountain Lodge and offers a scenic route connecting Mountain Village…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Weekly Young Adult Gathering",
@@ -2238,17 +2225,17 @@
     "type": "Talks & Classes"
   },
   {
-    "title": "Market on the Plaza",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
-    "date": "2026-11-04",
-    "time": "5:00 AM",
+    "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
+    "date": "2026-11-03",
+    "time": "",
     "location": "Mountain Village, CO",
     "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
+    "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Mountain Village's Heritage Plaza hosts a weekly outdoor market featuring vendors with tents set up throughout the pedestrian-friendly space. The market brings together local and regional sellers offering goods to the Mountain Village…",
-    "type": "Community"
+    "desc": "A community workshop hosted in Mountain Village, bringing together Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library to explore the emotional landscape of ecological grief and…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Telluride Rotary Club Meeting",
@@ -2289,6 +2276,19 @@
     "source": "Sherbino Theater",
     "desc": "The Sherbino in Ridgway hosts a screening of *Days Off*, Warren Miller's 77th ski and snowboard film, hosted by Katie Burrell. Advance tickets are available at a discount, with general admission and student pricing, and doors open at 6:00…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Market on the Plaza",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    "date": "2026-11-04",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Mountain Village's Heritage Plaza hosts a weekly outdoor market featuring vendors with tents set up throughout the pedestrian-friendly space. The market brings together local and regional sellers offering goods to the Mountain Village…",
+    "type": "Community"
   },
   {
     "title": "Pilates for All Bodies with Laura",
@@ -2453,7 +2453,7 @@
     "title": "Movies Under the Stars",
     "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     "date": "2026-11-07",
-    "time": "5:00 AM",
+    "time": "",
     "location": "Mountain Village, CO",
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
@@ -2466,7 +2466,7 @@
     "title": "Mind Blown Telluride",
     "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
     "date": "2026-11-07",
-    "time": "5:00 AM",
+    "time": "",
     "location": "Mountain Village, CO",
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg",
@@ -2479,7 +2479,7 @@
     "title": "Stoke the Vote",
     "href": "https://townofmountainvillage.com/explore/events/all-events/stoke-the-vote/",
     "date": "2026-11-07",
-    "time": "5:00 AM",
+    "time": "",
     "location": "Mountain Village, CO",
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49989/stoke_the_vote_final_instagram_post_45.png",
@@ -2505,7 +2505,7 @@
     "title": "Bike & Brewery Tour",
     "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     "date": "2026-11-09",
-    "time": "5:00 AM",
+    "time": "",
     "location": "Mountain Village, CO",
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
@@ -2844,19 +2844,6 @@
     "type": "Food & Drink"
   },
   {
-    "title": "Noel Night",
-    "href": "https://www.norwoodtown.com/2026-12-04-noel-night",
-    "date": "2026-12-04",
-    "time": "5:00 AM",
-    "location": "Norwood, CO",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "Town of Norwood",
-    "desc": "Noel Night is a community holiday event hosted by the Town of Norwood, bringing residents together to celebrate the season. Held in early December, it offers a festive evening for families and neighbors in the Norwood area.",
-    "type": "Community"
-  },
-  {
     "title": "23rd Annual Holiday Art & Gift Sale",
     "href": "https://events.ourayridgwayevents.com/event/23rd-annual-holiday-art-gift-sale",
     "date": "2026-12-04",
@@ -2909,6 +2896,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Doors open at 8:00 PM; music begins at 8:30 PM. The Sherbino’s annual Noel Night gift to the community features Denver rock-n-soul band The Hip Snacks for a free, high-energy evening of live music. Admission is free, with donations…",
     "type": "Music"
+  },
+  {
+    "title": "Noel Night",
+    "href": "https://www.norwoodtown.com/2026-12-04-noel-night",
+    "date": "2026-12-04",
+    "time": "",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "Town of Norwood",
+    "desc": "Noel Night is a community holiday event hosted by the Town of Norwood, bringing residents together to celebrate the season. Held in early December, it offers a festive evening for families and neighbors in the Norwood area.",
+    "type": "Community"
   },
   {
     "title": "Yule Day",

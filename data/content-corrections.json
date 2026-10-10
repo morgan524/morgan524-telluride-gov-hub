@@ -37,6 +37,18 @@
       "addedBy": "claude-content-review-fix",
       "addedOn": "2026-10-06",
       "expiresOn": "2026-11-11"
+    },
+    {
+      "id": "dup-rado-koto-halloween-2026-10-10",
+      "kind": "drop-event",
+      "array": "ALIBI_EVENTS",
+      "titleMatch": "RADO - KOTO Halloween Party",
+      "wrongDate": "2026-10-31",
+      "reason": "Same event as KOTO's 'KOTO Halloween Bash' (Oct 31, 9 PM, at The Alibi). KOTO's own page says 'Live music from Rado starts at 9 p.m.' The titles differ too much for the events-index dedup to merge them, so the Alibi copy is dropped and KOTO's fuller listing stays.",
+      "evidence": "https://koto.org/event/koto-halloween-bash/",
+      "addedBy": "claude-content-review-fix",
+      "addedOn": "2026-10-10",
+      "expiresOn": "2026-11-02"
     }
   ]
 }

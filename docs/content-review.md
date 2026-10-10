@@ -60,6 +60,8 @@ Deterministic (no API):
 - **Conflicting dates** — same event title in 2+ sources on *different* dates
   within 7 days → `High` (the Mountain-Village-wrong-dates trap; see the
   `mv-calendar-wrong-dates` memory note).
+  Skipped when the copies name different towns (Norwood's and Telluride's
+  "Noel Night" are two events — 2026-10-10).
 - **Bad dates** — unparseable (`localDate()` → null), wrong-year typos,
   far-future (>400d), `endDate` before start.
 - **Past events still in data** → `Low` (usually hidden by the rolling render
