@@ -2570,8 +2570,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "October 10, 2026",
     firstSeen: "2026-10-10",
     newsTopic: "education",
-    copy: "Evergreen High School has introduced two Labradors, Norene and Polenta, to help students cope with stress after a school shooting. The dogs, part of a program by Canine Companions, provide a calming presence as students heal. Principal Skylar Artes decided…",
-    claudeSummary: false,
+    copy: "Two golden Labs, Norene and Polenta, are now permanent fixtures at Evergreen High School near Denver, helping students recover from a September 2024 shooting that wounded two students. The dogs, provided free through the nonprofit Canine Companions, walk the halls and visit classrooms daily. Students took to them quickly — the pair were even crowned prince and princess at homecoming.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_459c9d3a-082e-578e-af5b-afd74bf89e75.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c0/ec0ce6f7-712b-5eb5-b4b8-cab6ccaf7cc0/6ac9ce581c95d.image.jpg",
     imgHiRes: true
@@ -7069,6 +7069,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49989/stoke_the_vote_final_instagram_post_45.png"
+  },
+  {
+    title: "Bike & Brewery Tour",
+    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    description: "A guided bicycle ride through Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where participants receive a complimentary beer. The tour departs from the Mountain Lodge and offers a scenic route connecting the village to town.",
+    pubDate: "2026-11-09T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   }
 ];
 
