@@ -361,7 +361,9 @@
   },
   "mv|2026-10-15|Town Council Meeting": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/50073/october_15-_2026_town_council_meeting_agenda.pdf",
+    "zoomUrl": "https://us06web.zoom.us/webinar/register/WN_umHST1CvS4e9rjqoKXLYAQ",
+    "phone": "970-369-6429"
   },
   "airport|2026-10-15|TRAA Board of Commissioners Meeting": {
     "sv": 4,
@@ -640,5 +642,10 @@
   "telluride|2026-10-12|Open Space Commission Site Walk - Oct 12 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8325",
     "sv": 4
+  },
+  "telluride|2026-11-09|Open Space Commission - Nov 09 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8133",
+    "sv": 4,
+    "ph": "410853eec5221d83"
   }
 }

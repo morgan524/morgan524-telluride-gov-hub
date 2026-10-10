@@ -1,73 +1,5 @@
 [
   {
-    "title": "Ridgway Farmers Market",
-    "link": "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
-    "description": "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here.",
-    "pubDate": "2026-10-09T16:00:00.000Z",
-    "endDate": "2026-10-16",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "Hartwell Park",
-    "imageUrl": "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
-  },
-  {
-    "title": "Guided Tour: Historic Beaumont Hotel & Spa",
-    "link": "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
-    "description": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
-    "pubDate": "2026-10-09T19:30:00.000Z",
-    "endDate": "2026-12-05",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "Beaumont Hotel & Spa",
-    "imageUrl": "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
-  },
-  {
-    "title": "FLANNEL FEEDBACK",
-    "link": "https://events.ourayridgwayevents.com/event/flannel-feedback-5281",
-    "description": "Live Music\\ https://coloradoboydepot.com/calendar/",
-    "pubDate": "2026-10-09T22:00:00.000Z",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "687 N Cora Street, Ridgway, CO 81432",
-    "imageUrl": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    "title": "WOWZERS",
-    "link": "https://events.ourayridgwayevents.com/event/wowzers",
-    "description": "Live Music\\ https://coloradoboydepot.com/calendar/",
-    "pubDate": "2026-10-09T23:00:00.000Z",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "687 N Cora Street, Ridgway, CO 81432",
-    "imageUrl": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    "title": "Crystal Creek Band – Live at Floating Lotus Brewery",
-    "link": "https://events.ourayridgwayevents.com/event/crystal-creek-band-live-at-floating-lotus-brewery",
-    "description": "Crystal Creek Band brings its electric/acoustic fusion to Floating Lotus for a Friday night of live music. The North Fork Valley quartet blends folk, rock, bluegrass, jazz, funk, and alternative, pairing original songs with tasteful covers. The lineup features Trevor Storm on mandolin, electric guitar, fiddle, and vocals; Logan Wise on electric/acoustic guitar and vocals; Doug Gallob on electric bass and vocals; and Bron Hodges on drums and percussion. Friday, October 9, 6–9 PM at Floating Lotus Brewery. $10 cover at the door; no advance ticket sales.",
-    "pubDate": "2026-10-10T00:00:00.000Z",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "Floating Lotus Brewery",
-    "imageUrl": "https://localist-images.azureedge.net/photos/54056449502750/huge/f7619bf718d9b9b1e1f609d4d7979a4c6bb38e54.jpg"
-  },
-  {
-    "title": "Music Bingo @ the Wright",
-    "link": "https://events.ourayridgwayevents.com/event/music-bingo-the-wright-4807",
-    "description": "Music Bingo @ the Wright WHEN? Doors at 6:30 pm • Event at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT It’s bingo. But louder. And somehow emotionally complicated. Battle for glory using songs, questionable music knowledge, accidental dancing, and the sudden realization that one hit from 2007 still lives in your head rent-free. Expect singalongs, dramatic betrayals, nostalgic bangers, deep cuts, and at least one person absolutely convinced they should have won three rounds ago. Whether you’re a human jukebox or someone who confidently calls every song “that one TikTok song,” Music Bingo welcomes all skill levels and levels of chaos. Free to attend In-person event at the historic Wright Opera House Part of programming at the Wright Opera House, bringing arts, conversation, and community to downtown Ouray since 1889.",
-    "pubDate": "2026-10-10T01:00:00.000Z",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "The Wright Opera House",
-    "imageUrl": "https://localist-images.azureedge.net/photos/54035210282619/huge/8e50fda6bb1e6a9598c14bbf7e7f3e0f7ecbd56b.jpg"
-  },
-  {
     "title": "Lupita's Parking Lot Sale",
     "link": "https://events.ourayridgwayevents.com/event/lupitas-parking-lot-sale",
     "description": "A revival of Lupita's Parking Lot Sale A REVIVAL OF LUPITA'S PARKING LOT SALE! OCT. 10, 2026 • 8 AM–3 PM Ridgway Public Library, Ridgway $20 PER 10'×10'",
@@ -92,7 +24,7 @@
   {
     "title": "Ouray Library Fall Book Fair",
     "link": "https://events.ourayridgwayevents.com/event/ouray-library-fall-book-fair",
-    "description": "Library book sale, tech sale, merchandise, and more! See details at https://ouraylibraryfoundation.org/pages/support",
+    "description": "The Ouray Library Foundation's fall fundraiser brings together a book sale, technology sale, and merchandise at the Ouray Community Center. Proceeds benefit the local library, with additional details available through the Ouray Library Foundation website.",
     "pubDate": "2026-10-10T15:00:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
@@ -103,7 +35,7 @@
   {
     "title": "Dallas Park Cemetery Tour",
     "link": "https://events.ourayridgwayevents.com/event/dallas-park-cemetery-tour",
-    "description": "Tour of Dallas Park Cemetery Tour, led by Coleen McElroy. $20.00 Per Person. $15.00 OCHS Members. Call 970-325-4576 to RSVP/Pre Pay",
+    "description": "A guided tour of Dallas Park Cemetery led by Coleen McElroy, offered through the Ouray County Historical Society. Admission is $20 per person, with a discounted rate of $15 for OCHS members; reservations and prepayment are required by calling 970-325-4576.",
     "pubDate": "2026-10-10T16:00:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
@@ -114,7 +46,7 @@
   {
     "title": "Mineral Identification Workshop for Adults",
     "link": "https://events.ourayridgwayevents.com/event/mineral-identification-workshop-for-adults",
-    "description": "Basic identification of minerals from the San Juan Mountains with Robert Stoufer",
+    "description": "A hands-on workshop for adults at the Ouray County Historical Society Research Center and Archive, focused on the basic identification of minerals found in the San Juan Mountains. The session is led by Robert Stoufer.",
     "pubDate": "2026-10-10T16:00:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
@@ -132,6 +64,18 @@
     "category": "Community Event",
     "location": "The Annex on Cora",
     "imageUrl": "https://localist-images.azureedge.net/photos/53967883969496/huge/d2428dc5e6782e6f1e062e79f5d622145108e918.jpg"
+  },
+  {
+    "title": "Guided Tour: Historic Beaumont Hotel & Spa",
+    "link": "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
+    "description": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
+    "pubDate": "2026-10-10T19:30:00.000Z",
+    "endDate": "2026-12-08",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Beaumont Hotel & Spa",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
   },
   {
     "title": "Paint Your Dog Bowl Party",
@@ -180,7 +124,7 @@
   {
     "title": "Try Pickleball for Teens!",
     "link": "https://events.ourayridgwayevents.com/event/try-pickleball-for-teens",
-    "description": "Come play Pickleball with coaches from the Ridgway Pickleball Club. The coaches' motto is \"I do, you do, we do.\" Teens will get one on one coaching that builds up to group games! You must register for this event to attend. This program will be from 9 am to 3 pm meeting at the gazebo across from the library. We will send an email with details, schedule, and packing list a week before the trip. Questions? Email Jazzmin at jazzmin@voyageryouth.org",
+    "description": "A beginner-friendly pickleball session for teens at the Ridgway Pickleball Courts, led by coaches from the Ridgway Pickleball Club. Participants receive one-on-one instruction that builds toward group gameplay, following the coaches' \"I do, you do, we do\" teaching approach — registration is required to attend.",
     "pubDate": "2026-10-11T15:00:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
@@ -191,7 +135,7 @@
   {
     "title": "LIVE JAZZ IN THE GARDEN! Zan Waller & Stefan Davenport",
     "link": "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
-    "description": "LIVE MUSIC IN THE GARDEN! 🎶 Sundays from 4:00–6:00 p.m., let us introduce you to Chloe’s Secret Garden! 🌿✨ Standard Alchemy (Zan Waller on trumpet, Stefan Davenport on guitar) plays swing, cocktail jazz and Great American Songbook standards, with occasional special guest vocalists. Enjoy live cocktail jazz with the perfect wine and scrumptious charcuterie in our cozy garden setting. Sip, savor, and settle in for a relaxed afternoon of music and Colorado magic! 🍷🧀💛 We can’t wait to see you there! Join us! 🎵",
+    "description": "Zan Waller on trumpet and Stefan Davenport on guitar perform as Standard Alchemy, playing swing, cocktail jazz, and Great American Songbook standards in Chloe's Secret Garden. The outdoor Sunday series runs from 4:00 to 6:00 p.m. at Chloe's Charcuterie & Wine, with occasional special guest vocalists joining the duo.",
     "pubDate": "2026-10-11T22:00:00.000Z",
     "endDate": "2026-11-08",
     "source": "oray",
@@ -214,7 +158,7 @@
   {
     "title": "Fall Break - Ridgway Schools",
     "link": "https://events.ourayridgwayevents.com/event/fall-break-ridgway-schools",
-    "description": "",
+    "description": "Fall Break for Ridgway Schools begins on this date, giving students in the Ridgway district a scheduled pause from the academic calendar. The break is a planned recess coordinated through the Ouray-Ridgway area school calendar.",
     "pubDate": "2026-10-12T06:00:00.000Z",
     "endDate": "2026-10-16",
     "source": "oray",
@@ -285,7 +229,7 @@
   {
     "title": "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
     "link": "https://events.ourayridgwayevents.com/event/monthly-welcome-home-alliance-veterans-coffee-the-sherbino",
-    "description": "MONTHLY WELCOME HOME ALLIANCE VETERAN’S COFFEE @ THE SHERBINO Every Branch. Every Era. Every Ability. Offering coffee, donuts and camaraderie. Mike Trickey and April Heard will be there bringing information to you on topics such as: Navigating the VA, Housing, Jobs, Volunteer Opportunities, community resources, VA benefits, recreation and mental health. For more information or to offer support (products or monetary), call 970-765-2210 or visit https://www.whafv.org/ Occurs the 2nd Tuesday of Every Month || 10 am - Noon || Free to attend || Vets Only, Please",
+    "description": "A monthly veterans' gathering hosted by the Welcome Home Alliance at The Sherbino, offering coffee, donuts, and camaraderie for veterans of every branch, era, and ability. Mike Trickey and April Heard will be on hand to share information on topics including navigating the VA, housing, jobs, volunteer opportunities, and community resources.",
     "pubDate": "2026-10-13T16:00:00.000Z",
     "endDate": "2026-12-08",
     "source": "oray",
@@ -297,7 +241,7 @@
   {
     "title": "TYLER SIMMONS",
     "link": "https://events.ourayridgwayevents.com/event/tyler-simmons-4776",
-    "description": "Live Music\\ https://coloradoboydepot.com/calendar/",
+    "description": "Tyler Simmons performs live at a venue on North Cora Street in Ridgway. The event is listed on the Ouray Ridgway community calendar as a live music performance.",
     "pubDate": "2026-10-13T22:00:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
@@ -308,7 +252,7 @@
   {
     "title": "Teen Top Rope Climbing",
     "link": "https://events.ourayridgwayevents.com/event/teen-top-rope-climbing",
-    "description": "Come climb with Basecamp Ouray Mountain Guides! They will set up a local top rope for the Teens to climb for the day. This program will be from 9 am to 3 pm meeting at the gazebo across from the library. We will send an email with details, schedule, and packing list a week before the trip. Questions? Email Jazzmin at jazzmin@voyageryouth.org",
+    "description": "A guided top rope climbing program for teens, led by Basecamp Ouray Mountain Guides at a local outdoor site. Participants will meet at the gazebo across from the library, with details, a schedule, and a packing list sent to registrants by email in advance.",
     "pubDate": "2026-10-14T15:00:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
@@ -331,7 +275,7 @@
   {
     "title": "OPEN MIC / JAM NIGHT w/ host DJ Strong",
     "link": "https://events.ourayridgwayevents.com/event/open-mic-jam-night-w-host-dj-strong",
-    "description": "Join us every Wednesday at 6 PM for Open Mic Night with DJ Strong at Floating Lotus Brewery. Bring an original song, play a favorite cover, meet other local musicians, or jump into one of our full-band jam sessions. Solo performers, groups, and musicians looking to collaborate are all welcome. Open Mic is also where we discover artists for Floating Lotus Mainstage. Standout performers may be invited back to play a full featured set, creating a path from Open Mic to the Mainstage. Come perform, connect, experiment, or simply enjoy an evening of live local music. Every Wednesday at 6 PM Floating Lotus Brewery",
+    "description": "A weekly open mic and jam night hosted by DJ Strong at Floating Lotus Brewery, welcoming solo performers, groups, and musicians looking to collaborate. Attendees can share original songs, play covers, or join in on group jam sessions.",
     "pubDate": "2026-10-15T00:00:00.000Z",
     "endDate": "2026-12-03",
     "source": "oray",
@@ -365,7 +309,7 @@
   {
     "title": "Ouray High School Volleyball vs Dove Creek",
     "link": "https://events.ourayridgwayevents.com/event/ouray-high-school-volleyball-vs-dove-creek",
-    "description": "Come support the Ouray High School Volleyball team as they play Dove Creek at home! JV: 4:30 - 5:30 Varsity Appx. 5:30",
+    "description": "Ouray High School hosts Dove Creek for a home volleyball matchup at Ouray School, with junior varsity taking the court first followed by the varsity squad. It's a chance for the community to cheer on the local team in what promises to be a competitive evening of high school athletics.",
     "pubDate": "2026-10-15T22:30:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
@@ -397,9 +341,20 @@
     "imageUrl": "https://localist-images.azureedge.net/photos/53790516346797/huge/599d1a7013ddde307592e7dfc9b892fe265527e0.jpg"
   },
   {
+    "title": "Ridgway Farmers Market",
+    "link": "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
+    "description": "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here.",
+    "pubDate": "2026-10-16T16:00:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Hartwell Park",
+    "imageUrl": "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
+  },
+  {
     "title": "ALPINE JAM",
     "link": "https://events.ourayridgwayevents.com/event/alpine-jam-3576",
-    "description": "Live Music\\ https://coloradoboydepot.com/calendar/",
+    "description": "Alpine Jam is a live music event taking place in Ridgway, Colorado. The evening gathering brings together music fans for a night of live performances in the mountain community.",
     "pubDate": "2026-10-16T22:00:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
@@ -410,7 +365,7 @@
   {
     "title": "COLORADO SWITCHGRASS",
     "link": "https://events.ourayridgwayevents.com/event/colorado-switchgrass",
-    "description": "Live Music\\ https://coloradoboydepot.com/calendar/",
+    "description": "Colorado Switchgrass is a live music event taking place at a venue on North Cora Street in Ridgway. The performance features the Colorado Switchgrass act in an evening show hosted through the Ouray Ridgway area community calendar.",
     "pubDate": "2026-10-16T22:00:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
@@ -443,7 +398,7 @@
   {
     "title": "No Kings Afterparty in the Garden",
     "link": "https://events.ourayridgwayevents.com/event/no-kings-afterparty-in-the-garden",
-    "description": "Details forthcoming",
+    "description": "A late-night afterparty held in the garden at Chloe's Charcuterie & Wine, following the No Kings event on October 17th. The gathering offers a festive outdoor setting at one of the area's well-known wine and charcuterie spots.",
     "pubDate": "2026-10-17T21:00:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
@@ -476,7 +431,7 @@
   {
     "title": "THE YOUNG FABLES",
     "link": "https://events.ourayridgwayevents.com/event/the-young-fables",
-    "description": "Live Music\\ https://coloradoboydepot.com/calendar/",
+    "description": "The Young Fables will perform a live music show at a venue on North Cora Street in Ridgway. The event is listed through the Ouray Ridgway community calendar.",
     "pubDate": "2026-10-18T22:00:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
@@ -487,7 +442,7 @@
   {
     "title": "BRITLEY & MATT",
     "link": "https://events.ourayridgwayevents.com/event/britley-matt-7185",
-    "description": "Live Music\\ https://coloradoboydepot.com/calendar/",
+    "description": "Britley & Matt are performing live at a venue on North Cora Street in Ridgway. The event is an evening music performance hosted in the Ouray-Ridgway area.",
     "pubDate": "2026-10-20T22:00:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
@@ -510,7 +465,7 @@
   {
     "title": "Ouray HS Volleyball VS Norwood",
     "link": "https://events.ourayridgwayevents.com/event/ouray-hs-volleyball-vs-norwood",
-    "description": "Come support Ouray High School Volleyball while they take on Norwood JV: 4:30 - 5:30 Varsity apprx. 5:30",
+    "description": "Ouray High School's volleyball team hosts Norwood in a match at Ouray High School, with JV play scheduled from 4:30 to 5:30 p.m. and varsity action expected to follow around 5:30 p.m.",
     "pubDate": "2026-10-20T22:30:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
@@ -650,7 +605,7 @@
   {
     "title": "AIDAN SWEENEY",
     "link": "https://events.ourayridgwayevents.com/event/aidan-sweeney",
-    "description": "Live Music\\ https://coloradoboydepot.com/calendar/",
+    "description": "Aidan Sweeney performs live music at a venue on North Cora Street in Ridgway. The event is listed on the Ouray Ridgway community calendar.",
     "pubDate": "2026-10-23T22:00:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
@@ -689,12 +644,12 @@
     "sourceLabel": "Ouray Ridgway Calendar",
     "category": "Community Event",
     "location": "United Church Of The San Juans",
-    "imageUrl": "https://localist-images.azureedge.net/photos/52492056342544/huge/bfe9154ac1ba36fc2f3a845ca66d6a96dd9905ba.jpg"
+    "imageUrl": "https://localist-images.azureedge.net/photos/54198017321990/huge/d93984b7fe9a19865c0b6e69091253a2e299077c.jpg"
   },
   {
     "title": "Teen Takeover at Ouray Hot Springs Pool",
     "link": "https://events.ourayridgwayevents.com/event/teen-takeover",
-    "description": "Grab your friends and take over the Ouray Hot Springs Pool for an evening of swimming, games, food, music, and hanging out. Activities include high-energy games, basketball, races on the Wibit, music, and more. Middle School Takeover | 5–6:45 PM High School Takeover | 7–9 PM FREE for Ouray Hot Springs Pool members $5 for everyone else All participants must: Have a waiver signed by a parent/guardian (Link to Waiver)Show a valid school ID at entry LOCAL BUSINESS DISCOUNTS Parents, when you drop off your teen, sign the waiver and bring your receipt to one of these local businesses for a discount! Cahoots Tavern (10% off)Cassidy’s Cafe (15% off)Goldbelt (10% off)Maggie’s Kitchen (free drink)Ouray Brewery (15% off)St. Elmo Tavern (15% off)The Tavern (20% off) Interested in being a business partner? Contact Zach Root | zroot@cityofouray.com",
+    "description": "Teen Takeover at Ouray Hot Springs Pool is an evening event giving middle and high school students dedicated time to enjoy the pool facility with swimming, basketball, races on the Wibit, games, music, and food. The event runs in two separate sessions — one for middle schoolers and one for high schoolers — and is free for Ouray Hot Springs members.",
     "pubDate": "2026-10-25T23:00:00.000Z",
     "endDate": "2026-11-16",
     "source": "oray",
@@ -706,7 +661,7 @@
   {
     "title": "BRITLEY & MATT",
     "link": "https://events.ourayridgwayevents.com/event/britley-matt-7748",
-    "description": "Live Music\\ https://coloradoboydepot.com/calendar/",
+    "description": "Britley & Matt perform live at a venue on North Cora Street in Ridgway. The event is an evening of live music hosted at what appears to be the Colorado Boy Depot.",
     "pubDate": "2026-10-27T22:00:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
@@ -784,7 +739,7 @@
   {
     "title": "JELLY BOWL BAND",
     "link": "https://events.ourayridgwayevents.com/event/jelly-bowl-band",
-    "description": "Live Music\\ https://coloradoboydepot.com/calendar/",
+    "description": "The Jelly Bowl Band performs a live music show at a venue on N Cora Street in Ridgway. The event takes place in the evening on October 30th, offering a night of live music the day before Halloween.",
     "pubDate": "2026-10-30T22:00:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
@@ -873,7 +828,7 @@
   {
     "title": "Trick-or-Treat Street",
     "link": "https://events.ourayridgwayevents.com/event/trick-or-treat-street",
-    "description": "Come on up to Main Street in Ouray to go trick-or-treating with our businesses!",
+    "description": "Trick-or-Treat Street is a Halloween community event on Main Street in Ouray, where local businesses open their doors to trick-or-treaters. It's a festive neighborhood tradition welcoming families and kids to celebrate the holiday in downtown Ouray.",
     "pubDate": "2026-10-31T22:00:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
@@ -884,7 +839,7 @@
   {
     "title": "Casper: Movie Night @ the Wright",
     "link": "https://events.ourayridgwayevents.com/event/casper-movie-night-the-wright",
-    "description": "Casper: Movie Night @ the Wright WHEN? Saturday, October 31 Doors at 6:30 PM | Movie at 7:00 PM WHERE? Wright Opera House 472 Main St., Ouray, Colorado RUN TIME: 1 hour, 40 minutes RATING: PG ABOUT THE FILM It is Halloween. A ghost story is required. Casper (1995) follows Kat and her paranormal-therapist father as they move into a long-abandoned mansion. There they meet Casper, the friendliest ghost in the house—and his three much less friendly uncles. A sweet, funny, spooky-not-scary Halloween classic with Christina Ricci, Bill Pullman, and a mansion full of ghosts who are trying their best. Or at least Casper is. WHY SEE IT? Because Halloween at a historic opera house is exactly where a friendly ghost belongs. HOW? Tickets: $5 In-person screening at the historic Wright Opera House",
+    "description": "A Halloween screening of the 1995 PG film *Casper* at the Wright Opera House in Ouray, with doors opening at 6:30 PM and the movie beginning at 7:00 PM. The film runs approximately one hour and forty minutes and follows a young girl and her paranormal-therapist father as they encounter the friendly ghost Casper.",
     "pubDate": "2026-11-01T01:00:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
@@ -942,7 +897,7 @@
   {
     "title": "First Friday Art Walk",
     "link": "https://events.ourayridgwayevents.com/event/first-friday-art-walk",
-    "description": "First Friday is back! Spend the evening exploring downtown Ridgway, where galleries, studios, shops and gathering spaces come alive with new exhibitions, artist receptions, live music, pop-ups and special programming. Each month brings something different, so take a stroll, discover what’s new and make a night of it. 🎨🛍️ Shop local. Win local. Celebrate local. 🎶🍷 Visit participating businesses during First Friday for a chance to win a $100 gift card to a local business of your choice. 👀 Follow the link for this month’s map, featured stops and giveaway details. First Friday Map & Offer Details",
+    "description": "A monthly community art walk through downtown Ridgway, where local galleries, studios, shops, and gathering spaces open their doors for new exhibitions, artist receptions, live music, and pop-up programming. Each edition offers a different mix of art and activity from the area's creative community.",
     "pubDate": "2026-11-07T00:00:00.000Z",
     "endDate": "2026-12-05",
     "source": "oray",
@@ -1022,7 +977,7 @@
   {
     "title": "Teeth to the Wind: fundraiser for George & Michael Gardner Fund",
     "link": "https://events.ourayridgwayevents.com/event/teeth-to-the-wind",
-    "description": "Join the George and Michael Gardner Fund for the showing of Teeth to the Wind. \"It's not going to be a climbing film\" Michael Gardner claimed in his original film pitch. \"More like a rom-com?\" Along with his partner and fellow alpinist, Sam Hennessey, the pair documented their seasons in the Tetons, Alaska, and Nepal. The film holds to its original vision: a lighthearted and unassuming glimpse into what Michael and Sam lovingly referred to as \"the spirit.\" A silent auction begins at 6:00 pm; movie at 7:00",
+    "description": "A fundraiser screening of *Teeth to the Wind*, a documentary following alpinists Michael Gardner and Sam Hennessey through their seasons in the Tetons, described by Gardner himself as something closer to a rom-com than a traditional climbing film. The event benefits the George and Michael Gardner Fund and takes place at the Ouray County 4-H Center.",
     "pubDate": "2026-11-11T01:00:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
@@ -1122,7 +1077,7 @@
   {
     "title": "Meet the Herd",
     "link": "https://events.ourayridgwayevents.com/event/meet-the-herd",
-    "description": "Come meet the herd at Metaphorse Growth and Healing Center in Montrose! They have thirty horses and two donkeys, from mini to massive! Teens will have the opportunity to interact with horses and get to know them! We can walk them, brush them, or just get used to knowing them! This program will be from 9 am to 3 pm, meeting at the picnic shelter across from the library. We will send an email with details, schedule, and packing list a week before the trip. Questions? Email Jazzmin at jazzmin@voyageryouth.org",
+    "description": "A community program at Hartwell Park inviting teens to interact with horses and donkeys from Metaphorse Growth and Healing Center in Montrose. Participants can walk, brush, and spend time getting acquainted with the animals in a relaxed, hands-on setting.",
     "pubDate": "2026-11-15T16:00:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
@@ -1155,7 +1110,7 @@
   {
     "title": "Thanksgiving Break - Ridgway Schools",
     "link": "https://events.ourayridgwayevents.com/event/thanksgiving-break-ridgway-schools",
-    "description": "",
+    "description": "Ridgway Schools will be closed for Thanksgiving break during this period. Students, staff, and families can expect the district to be on holiday recess in observance of the Thanksgiving holiday.",
     "pubDate": "2026-11-23T07:00:00.000Z",
     "endDate": "2026-11-27",
     "source": "oray",
@@ -1223,7 +1178,7 @@
   {
     "title": "23rd Annual Holiday Art & Gift Sale",
     "link": "https://events.ourayridgwayevents.com/event/23rd-annual-holiday-art-gift-sale",
-    "description": "Shop local this holiday season at the 23rd Annual Holiday Art & Gift Sale! Browse one-of-a-kind gifts handmade by local artisans and craftspeople and find something special for everyone on your list. Come support local makers, discover unique handmade work, and enjoy a festive holiday shopping tradition in Ridgway. Questions? Ruth Higdon: elrutho@aol.com Nina Rea: nina.rea@icloud.com",
+    "description": "The 23rd Annual Holiday Art & Gift Sale returns to the Decker Community Room, offering handmade work from local artisans and craftspeople. This long-running community tradition provides an opportunity to find one-of-a-kind, locally made gifts during the holiday season.",
     "pubDate": "2026-12-05T00:00:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",

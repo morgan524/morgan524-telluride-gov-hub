@@ -1,30 +1,30 @@
 {
-  "hash": "e67be76be11f1191c157e2cba66f7d155935e027",
-  "lede": "The week's most consequential meeting is the San Miguel County Board of County Commissioners work session Tuesday, where Ouray County takes up Proposition 123's affordable housing commitment cycle and a Special Use Permit amendment in Colona — real decisions with regional reach. Norwood's Water Commission also has a packed Tuesday, including a formal complaint hearing and two executive sessions on legal matters. The Town of Telluride holds a three-hour budget work session Tuesday focused on housing, open space, and enterprise funds, and the Telluride Horror Show rolls in Friday with a public hearing on its alcohol permits already on the books.",
+  "hash": "9a44524c9d3d395a94109867a666731bd81b9ed2",
+  "lede": "The Mountain Village Town Council meets October 15 for a consequential housing session — second reading of an ordinance overhauling how MVHA fees are set in the Municipal Code, plus a resolution adopting the actual 2027 fee schedules for Village Court and beyond. That's the week's sharpest decision point, but it's a full stretch of government activity: Telluride's Council digs into 2027 budget numbers on October 13, Ouray County votes on its Proposition 123 affordable housing commitment, and the Norwood Water Commission holds a formal hearing on the Cossey Complaint.",
   "notable": [
     {
       "id": 1,
-      "stake": "Formal complaint hearing and contract votes on Norwood's water future."
+      "stake": "Formal hearing on Cossey Complaint and contract approval vote."
     },
     {
       "id": 3,
-      "stake": "Council works through 2027 budget including housing and open space spending."
+      "stake": "Council shapes 2027 spending on housing and open space before formal adoption."
     },
     {
       "id": 4,
-      "stake": "County votes on Prop 123 housing commitment and a Colona Special Use Permit."
+      "stake": "County votes on Prop 123 affordable housing commitment and new law enforcement IGA."
     },
     {
       "id": 5,
       "stake": "Proposed ordinance would regulate psilocybin businesses in Ouray city limits."
     },
     {
-      "id": 7,
-      "stake": "Home Trust housing update and affordable housing committee action in Ridgway."
+      "id": 10,
+      "stake": "Public hearing on alcohol permits for Horror Show crowds up to 1,400."
     },
     {
-      "id": 10,
-      "stake": "Public hearing on alcohol permits for Horror Show with 1,400-person attendance days."
+      "id": 12,
+      "stake": "Second reading of MVHA fee ordinance and adoption of 2027 housing fee schedules."
     }
   ]
 }
