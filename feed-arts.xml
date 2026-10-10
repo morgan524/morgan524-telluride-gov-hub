@@ -6,33 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Oct 2026 18:14:40 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2026 00:40:47 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Fri, Oct 9] DJ Flowmatic</title>
-      <link>https://www.alibitelluride.com/calendar#eca-event=dj-flowmatic</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/dj%20flowmatic%7C2026-10-09</guid>
-      <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 The Alibi
-📍 The Alibi • Telluride, CO
-🕒 9:00 PM
-
-Flowmatic is Hank Williams. Sound, light and live visuals for rooms, decks and f...]]></description>
-      <category>Community Event</category>
-      <category>The Alibi</category>
-    </item>
-    <item>
-      <title>[Fri, Oct 9] Ridgway Farmer&apos;s Market</title>
-      <link>https://koto.org/event/ridgway-farmers-market/2026-10-09/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/ridgway%20farmer%20s%20market%7C2026-10-09</guid>
-      <pubDate>Fri, 09 Oct 2026 16:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Hartwell Park Ridgway
-
-The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
     <item>
       <title>[Sat, Oct 10] Not-So-Young People&apos;s Theater presents Shrek The Musical</title>
       <link>https://koto.org/event/not-so-young-peoples-theater-presents-shrek-the-musical/2026-10-09/</link>
@@ -70,6 +45,17 @@ The Sheridan Arts Foundation's Not-So-Young People's Theater (NSYPT) invites aud
       <category>KOTO</category>
     </item>
     <item>
+      <title>[Meeting] Open Space Commission Site Walk - Oct 12 2026 — 2026-10-12</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-10-12%7COpen%20Space%20Commission%20Site%20Walk%20-%20Oct%2012%202026</guid>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-10-12
+
+The Open Space Commission skips the conference room this month — members and the public will meet at Rebekah Hall on West Columbia at 4:00 PM, then head up Tomboy Road for a High Country site walk. No formal votes are on the agenda; this is a work session in the field, the kind of firsthand look that tends to inform decisions made later indoors.]]></description>
+      <category>Meeting</category>
+      <category>Town of Telluride</category>
+    </item>
+    <item>
       <title>[Tue, Oct 13] Hanneke Cassel Trio - Telluride Chamber Music</title>
       <link>https://www.alibitelluride.com/calendar#eca-event=hanneke-cassel-trio-telluride-chamber-music</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/hanneke%20cassel%20trio%20telluride%7C2026-10-13</guid>
@@ -105,7 +91,7 @@ Chamber music that hits a little differently! Join Telluride Chamber Music for t
 
 A full agenda for the Norwood Water Commission's October 13 meeting. The biggest items center on the Cossey Complaint — the Commission will hold the hearing itself, consider a request to extend its date, and go into executive session twice for legal advice on that matter and separately on the Jubilee/Valentine Easement. Contract approval with Land Right and a review of SGM's Draft Environmental Assessment and Cultural Resources Report for the Redundant Line Project round out the infrastructure business. Four leak forgiveness requests are on the table for residential customers on Hwy 145, Summit St, Juniper, and Grand Ave. The Commission also takes up the 2027 Draft Budget and the 2025 Audit — both worth watching as water system costs continue to climb.
 
-⚡ Why it matters: Water commission votes on contract and holds formal Cossey Complaint hearing.]]></description>
+⚡ Why it matters: Formal complaint hearing and contract votes on Norwood's water future.]]></description>
       <category>Meeting</category>
       <category>Town of Norwood</category>
     </item>
@@ -129,7 +115,7 @@ The October 13 Mountain Village Merchant Meeting agenda hasn't been posted yet.]
 
 A three-hour work session dedicated to the 2027 budget — specifically the enterprise funds, open space, affordable housing, and all remaining funds. No votes are on the table; this is the Town Council working through the numbers before formal adoption. Budget season in Telluride tends to surface the same underlying tensions: how much to spend on housing programs, how to sustain open space commitments, and how the enterprise funds — water, sewer, and the like — are holding up. Worth watching if you want to see where the priorities are before they get locked in.
 
-⚡ Why it matters: Council shapes 2027 spending on housing and open space before formal adoption.]]></description>
+⚡ Why it matters: Council works through 2027 budget including housing and open space spending.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -142,7 +128,7 @@ A three-hour work session dedicated to the 2027 budget — specifically the ente
 
 A full day at the courthouse. The morning opens with consent items and a handful of proclamations before getting into substantive business: a Special Use Permit amendment for a restaurant in Colona, Ouray County's opt-in to Proposition 123's 2027-2029 affordable housing commitment cycle, a new intergovernmental agreement covering full law enforcement services between the county and the City of Ouray, and a veterans' medical transportation program with a new position request under the austerity resolution. The 2027 preliminary budget gets its public presentation at 10:45 — the first formal look at where the county's finances are headed next year. After lunch, the 2025 county audit is presented. The afternoon moves into two related public hearings before the Board of Adjustment and then the full BOCC sitting as itself: a variance application and an Exception application, both involving 13 applicants and 29 parcels in the Elk Meadows subdivision, seeking to ratify lot mergers that were recorded by deed but never formally approved by the county.
 
-⚡ Why it matters: County votes on Prop 123 affordable housing opt-in and a Special Use Permit amendment.]]></description>
+⚡ Why it matters: County votes on Prop 123 housing commitment and a Colona Special Use Permit.]]></description>
       <category>Meeting</category>
       <category>ouray</category>
     </item>
@@ -155,7 +141,7 @@ A full day at the courthouse. The morning opens with consent items and a handful
 
 One item drives this meeting: a proposed ordinance regulating natural medicine businesses in Ouray. Staff presenter Harper Powell brings two attachments — a clean draft ordinance and a supporting memo — suggesting this is still in the discussion phase rather than a vote. Colorado's legalization of natural medicine (psilocybin and related substances) under Proposition 122 left municipalities to figure out their own land-use and licensing frameworks, and Ouray is now working through what that looks like inside city limits. This is the kind of regulatory groundwork that tends to be quiet when it happens and consequential once it's done.
 
-⚡ Why it matters: Proposed ordinance would regulate psilocybin businesses in Ouray — public discussion open.]]></description>
+⚡ Why it matters: Proposed ordinance would regulate psilocybin businesses in Ouray city limits.]]></description>
       <category>Meeting</category>
       <category>ouraycity</category>
     </item>
@@ -171,13 +157,15 @@ The October 14, 2026 Norwood Board of Trustees Meeting agenda hasn't been posted
       <category>Town of Norwood</category>
     </item>
     <item>
-      <title>[Meeting] Ridgway Town Council Regular Meeting — 2026-10-14</title>
+      <title>⚡ [Meeting] Ridgway Town Council Regular Meeting — 2026-10-14</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/ridgway%7C2026-10-14%7CRidgway%20Town%20Council%20Regular%20Meeting</guid>
       <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[ridgway • 2026-10-14
 
-The Ridgway Workforce & Affordable Housing Committee meets the evening of October 14 — after the regular Council meeting — to take up two items from Home Trust of Ouray County. First, Housing Services Director Eva Henson delivers the Q3 2026 quarterly report: one year into the regional administrator arrangement, milestones include a rehabilitated rental unit returned to service at 835 2nd Street, the first deed-restriction resale at Riverfront Village (Unit 201, $395,000), and a $145,000 supplemental DOLA grant secured with no local match. The report also flags that Ridgway is expected to consider its Proposition 123 opt-in resolution at this same meeting, committing to add 13 deed-restricted units in the 2027–2029 cycle. Second, the committee will weigh whether to exercise the Town's Right of First Refusal on 683 Frederickson Street — a deed-restricted, two-bedroom/three-bath unit at the Wetterhorn Community with a maximum resale price of $429,659 — after Rural Homes, LLC declined to purchase. The Housing Services Administrator contract expires December 31, 2026; 2027 renewal planning is already underway.]]></description>
+The Ridgway Workforce & Affordable Housing Committee meets the evening of October 14 — after the regular Council meeting — to take up two items from Home Trust of Ouray County. First, Housing Services Director Eva Henson delivers the Q3 2026 quarterly report: one year into the regional administrator arrangement, milestones include a rehabilitated rental unit returned to service at 835 2nd Street, the first deed-restriction resale at Riverfront Village (Unit 201, $395,000), and a $145,000 supplemental DOLA grant secured with no local match. The report also flags that Ridgway is expected to consider its Proposition 123 opt-in resolution at this same meeting, committing to add 13 deed-restricted units in the 2027–2029 cycle. Second, the committee will weigh whether to exercise the Town's Right of First Refusal on 683 Frederickson Street — a deed-restricted, two-bedroom/three-bath unit at the Wetterhorn Community with a maximum resale price of $429,659 — after Rural Homes, LLC declined to purchase. The Housing Services Administrator contract expires December 31, 2026; 2027 renewal planning is already underway.
+
+⚡ Why it matters: Home Trust housing update and affordable housing committee action in Ridgway.]]></description>
       <category>Meeting</category>
       <category>ridgway</category>
     </item>
@@ -212,7 +200,7 @@ The Board of County Commissioners is holding a work session in Egnar — the far
 
 One item of substance: a public hearing on three special event permits for Palm Arts Inc. to serve alcohol at the Palm Theatre (721 W. Colorado Ave.) during the Telluride Horror Show, October 16–18, 2026. Projected attendance runs 600 on Friday evening and 1,400 each on Saturday and Sunday. Staff recommends approval — the Marshal's Department has no concerns, and the applicant's paperwork checks out. The board will also approve minutes from the September 17 meeting.
 
-⚡ Why it matters: Public hearing on Horror Show alcohol permits for crowds up to 1,400.]]></description>
+⚡ Why it matters: Public hearing on alcohol permits for Horror Show with 1,400-person attendance days.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -248,6 +236,31 @@ The October 15, 2026 Mountain Village Town Council Meeting agenda hasn't been po
 The October 15, 2026 TRAA Board of Commissioners Meeting agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>airport</category>
+    </item>
+    <item>
+      <title>[Fri, Oct 16] Telluride Horror Show</title>
+      <link>https://sheridanoperahouse.com/events/telluride-horror-show/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20horror%20show%7C2026-10-16</guid>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://sheridanoperahouse.com/wp-content/uploads/2026/03/1_5E4MOKWkGhdychJNhXWeZw.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Sheridan Opera House
+📍 Sheridan Opera House • Telluride, CO
+
+Telluride Horror Show is a horror-themed event at the Sheridan Opera House. Taking place in mid-October, the event aligns with the Halloween season and is hosted at one of Telluride's most storied performance venues.]]></description>
+      <media:content url="https://sheridanoperahouse.com/wp-content/uploads/2026/03/1_5E4MOKWkGhdychJNhXWeZw.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Sheridan Opera House</category>
+    </item>
+    <item>
+      <title>[Fri, Oct 16] Ridgway Farmer&apos;s Market</title>
+      <link>https://koto.org/event/ridgway-farmers-market/2026-10-16/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/ridgway%20farmer%20s%20market%7C2026-10-16</guid>
+      <pubDate>Fri, 16 Oct 2026 16:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Hartwell Park Ridgway
+
+The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
   </channel>
 </rss>

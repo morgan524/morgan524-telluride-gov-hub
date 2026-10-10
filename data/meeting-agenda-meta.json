@@ -6,22 +6,6 @@
     "meetingId": "839 7545 5041",
     "passcode": "388003"
   },
-  "norwood|2026-09-09|Board of Trustees Meeting": {
-    "sv": 4,
-    "ph": "b858cb282617fb09"
-  },
-  "ridgway|2026-09-09|Ridgway Town Council Regular Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---September-9%2C-2026.pdf",
-    "zoomUrl": "https://us02web.zoom.us/j/81840930273?pwd=2OkbQtAHo5WBatJ59jd6UlvLRe6R88.1",
-    "meetingId": "818 4093 0273",
-    "passcode": "837340",
-    "phone": "346 248 7799"
-  },
-  "county|2026-09-09|Board of County Commissioners Work Session": {
-    "sv": 4,
-    "ph": "5bee59f208152c68"
-  },
   "telluride|2026-09-10|Town Council Budget - Sep 10 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052",
     "sv": 4,
@@ -225,14 +209,6 @@
     "sv": 4,
     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1070/files/agenda/2014"
   },
-  "county|2026-09-09|Board of County Commissioners Special Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/857/files/agenda/1988",
-    "zoomUrl": "https://us02web.zoom.us/meeting/register/Jxg2WRQ2SEKGwI4gi2zyAg",
-    "meetingId": "867 2008 8025",
-    "passcode": "755642",
-    "phone": "719-359-4580"
-  },
   "ouray|2026-09-16|, 1-4:00 PM (@ OURAY COURTHOUSE!) - The PC will hold 2 public hearings; Curry Regular PUD, and an Exemption application from Clifford Pastor to subdivide his parcel into 2 lots. (Packet materials are under media TV icon)": {
     "agendaUrl": "https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1017",
     "sv": 4
@@ -364,7 +340,7 @@
   },
   "ridgway|2026-10-14|Ridgway Town Council Regular Meeting": {
     "sv": 4,
-    "agendaUrl": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Workforce-%26-Affordable-Housing-Committee-Meeting-Packet---October-14%2C-2026.pdf",
+    "agendaUrl": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---October-14%2C-2026.pdf",
     "zoomUrl": "https://us02web.zoom.us/j/86099482328?pwd=mlhYCUDObNpU8FLRgTKoSJmuljfclB.1",
     "meetingId": "860 9948 2328",
     "passcode": "019813",
@@ -478,7 +454,7 @@
   "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083",
     "sv": 4,
-    "ph": "ed7fc0197972b8f8"
+    "ph": "bd74d669e41a67a8"
   },
   "county|2026-10-21|Board of County Commissioners Meeting": {
     "sv": 4,
@@ -659,6 +635,10 @@
   },
   "ouraycity|2026-10-13|Ouray Planning Commission Regular Meeting": {
     "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=766038",
+    "sv": 4
+  },
+  "telluride|2026-10-12|Open Space Commission Site Walk - Oct 12 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8325",
     "sv": 4
   }
 }

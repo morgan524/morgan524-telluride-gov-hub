@@ -149,15 +149,6 @@ const MEETING_AGENDA_META = {
   "med|2026-09-11|Board Work Session":
     {"sv":4,"agendaUrl":null,"zoomUrl":"https://us02web.zoom.us/j/83975455041?pwd=JFP4C7xMrNnAn93sWUhROdSuVzQbeq.1","meetingId":"839 7545 5041","passcode":"388003"},
 
-  "norwood|2026-09-09|Board of Trustees Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"},
-
-  "ridgway|2026-09-09|Ridgway Town Council Regular Meeting":
-    {"sv":4,"agendaUrl":"https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---September-9%2C-2026.pdf","zoomUrl":"https://us02web.zoom.us/j/81840930273?pwd=2OkbQtAHo5WBatJ59jd6UlvLRe6R88.1","meetingId":"818 4093 0273","passcode":"837340","phone":"346 248 7799"},
-
-  "county|2026-09-09|Board of County Commissioners Work Session":
-    {"sv":4,"ph":"5bee59f208152c68"},
-
   "telluride|2026-09-10|Town Council Budget - Sep 10 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052","sv":4,"ph":"a2d452b639a44962"},
 
@@ -257,9 +248,6 @@ const MEETING_AGENDA_META = {
   "county|2026-10-01|Lodging Tax Panel Meeting":
     {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1070/files/agenda/2014"},
 
-  "county|2026-09-09|Board of County Commissioners Special Meeting":
-    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/857/files/agenda/1988","zoomUrl":"https://us02web.zoom.us/meeting/register/Jxg2WRQ2SEKGwI4gi2zyAg","meetingId":"867 2008 8025","passcode":"755642","phone":"719-359-4580"},
-
   "ouray|2026-09-16|, 1-4:00 PM (@ OURAY COURTHOUSE!) - The PC will hold 2 public hearings; Curry Regular PUD, and an Exemption application from Clifford Pastor to subdivide his parcel into 2 lots. (Packet materials are under media TV icon)":
     {"agendaUrl":"https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1017","sv":4},
 
@@ -324,7 +312,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "ridgway|2026-10-14|Ridgway Town Council Regular Meeting":
-    {"sv":4,"agendaUrl":"https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Workforce-%26-Affordable-Housing-Committee-Meeting-Packet---October-14%2C-2026.pdf","zoomUrl":"https://us02web.zoom.us/j/86099482328?pwd=mlhYCUDObNpU8FLRgTKoSJmuljfclB.1","meetingId":"860 9948 2328","passcode":"019813","phone":"346 248 7799"},
+    {"sv":4,"agendaUrl":"https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---October-14%2C-2026.pdf","zoomUrl":"https://us02web.zoom.us/j/86099482328?pwd=mlhYCUDObNpU8FLRgTKoSJmuljfclB.1","meetingId":"860 9948 2328","passcode":"019813","phone":"346 248 7799"},
 
   "telluride|2026-10-14|Liquor Licensing Authority - Oct 14 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8146","sv":4,"ph":"28ddc62878422962"},
@@ -384,7 +372,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA","meetingId":"812 9136 3866","passcode":"440860.","phone":"301-715-8592"},
 
   "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083","sv":4,"ph":"ed7fc0197972b8f8"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083","sv":4,"ph":"bd74d669e41a67a8"},
 
   "county|2026-10-21|Board of County Commissioners Meeting":
     {"sv":4,"ph":"a12dfd2ce826475e"},
@@ -492,7 +480,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://ouraycoco.portal.civicclerk.com/event/1117/files/agenda/7564","zoomUrl":"https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1","meetingId":"876 0637 5697","passcode":"946299","phone":"346-248-7799","sv":4},
 
   "ouraycity|2026-10-13|Ouray Planning Commission Regular Meeting":
-    {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=766038","sv":4}
+    {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=766038","sv":4},
+
+  "telluride|2026-10-12|Open Space Commission Site Walk - Oct 12 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8325","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -831,7 +822,10 @@ const MEETING_PREVIEWS = {
     "The Ridgway Workforce & Affordable Housing Committee will receive a quarterly report from the Home Trust of Ouray County's Housing Services Director and consider exercising a Right of First Refusal to purchase a property at 683 Frederick Street at its maximum sale price.",
 
   "ouraycity|2026-10-13|Ouray Planning Commission Regular Meeting":
-    "The Ouray Planning Commission will discuss proposed regulations governing natural medicine businesses operating within city limits, including review of a draft ordinance and accompanying staff memo outlining how such businesses would be regulated locally."
+    "The Ouray Planning Commission will discuss proposed regulations governing natural medicine businesses operating within city limits, including review of a draft ordinance and accompanying staff memo outlining how such businesses would be regulated locally.",
+
+  "telluride|2026-10-12|Open Space Commission Site Walk - Oct 12 2026":
+    "The Open Space Commission will conduct a site walk along Tomboy Road to the High Country area, meeting at Rebekah Hall at 4:00 PM. The session will also include an opportunity for public comment."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -891,7 +885,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "October 8, 2026",
     newsTopic: "community",
     copy: "",
-    href: "https://www.ouraynews.com/2026/10/07/a-monster-celebration/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/10/07/a-monster-celebration/",
     img: ""
   },
   {
@@ -1013,16 +1007,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Please note...due to meetings of Father Mariusz, the changes to this week's schedule. Thursday, October 1- 8:00 am Holy Mass. There will be no Holy Adoration after mass. Also no office hours.Friday, October 2: First Friday----7:30 am Holy Ad...",
     href: "https://stpatrickstelluride.com/2026/parish-news/thursday-and-friday-schedule-changes/",
     img: ""
-  },
-  {
-    title: "Parish Bulletin for September 27",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "September 25, 2026",
-    newsTopic: "community",
-    copy: "Attached is this week's parish bulletin. Please check our Parish Calendar for the updated schedule of events.1. Parish Mission Retreat (for those signed up) begins tonight at 6:15 pm and Saturday at 9:30 am. 2. Mission Appeal at this weekend...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-september-27/",
-    img: ""
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
@@ -1052,21 +1036,12 @@ const SMC_ALERTS = [
 const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-10-09';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-10-10';
 const LEGAL_NOTICES_CACHE_DATE = '2026-10-09';
 
 const MANUAL_SUMMARIES = {
   "med|2026-09-11|Board Work Session":
     "A single-item work session: a presentation from CommonSpirit Health on a potential partnership with the Telluride Hospital District. No packet or supporting materials are posted ahead of the session, so the scope and terms of what's being discussed aren't yet public -- worth watching given the board's ongoing Letter of Intent talks with CommonSpirit on the new facility project. No board action is scheduled; this is a discussion-only session, held in person and by Zoom.",
-
-  "norwood|2026-09-09|Board of Trustees Meeting":
-    "The September 9, 2026 Norwood Board of Trustees Meeting agenda hasn't been posted yet.",
-
-  "ridgway|2026-09-09|Ridgway Town Council Regular Meeting":
-    "A heavy agenda for a small-town council — and some of it carries real weight. The Council will ratify two letters already sent: one backing a federal Major Disaster Declaration for the Gold Mountain Fire, which has burned nearly 40,000 acres northeast of Ouray, severed Highway 550 repeatedly, and left communities like Ridgway isolated and facing years of post-fire debris flows; and one supporting proposed recreation fees at Blue Lakes in the Mount Sneffels Wilderness to address overcrowding. On the policy side: interviews and appointment of Sustainability Advisory Board members; a Notice of Award for pre-approved ADU architectural design plans; authorization of more than $25,000 for sidewalk repairs near the Post Office and Clinton Street; a request from the Athletic Park Coalition to fund professional design services for a bike park; proposed changes to the Marshal's Office overtime policy; acceptance of the completed ductile iron pipe replacement project; direction on Wastewater Treatment Plant siting options; and consideration of scaling back from Stage 2 to Stage 1 fire restrictions and rescinding Stage 2 mandatory water restrictions.",
-
-  "county|2026-09-09|Board of County Commissioners Work Session":
-    "The September 9, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet.",
 
   "telluride|2026-09-10|Town Council Budget - Sep 10 2026":
     "The September 10, 2026 Town Council Budget agenda hasn't been posted yet.",
@@ -1166,9 +1141,6 @@ const MANUAL_SUMMARIES = {
 
   "county|2026-10-01|Lodging Tax Panel Meeting":
     "A routine administrative session for the San Miguel County Lodging Tax Board — minutes from June 18 up for approval, and a review of lodging tax reports if they're available. No substantive funding decisions or grant awards are on the agenda.",
-
-  "county|2026-09-09|Board of County Commissioners Special Meeting":
-    "A short special meeting with two items worth watching. On the housing side, the BOCC — sitting as the San Miguel County Housing Authority — will consider Resolution 2026-34, which would authorize a change in Area Median Income limitations for certain deed-restricted properties in Pinion Park. That's a technical adjustment, but AMI thresholds are the fulcrum on which affordability restrictions actually turn. There's also an initial discussion on Covenant Amendment Provisions — early-stage, but covenant language is where deed restrictions either hold or erode over time. Separately, the Board will discuss Colorado State Ballot Measures and take up a procedural question about CCI Legislative Committee representation. Consent agenda covers the July Road Report and a subrecipient certification.",
 
   "ouray|2026-09-16|, 1-4:00 PM (@ OURAY COURTHOUSE!) - The PC will hold 2 public hearings; Curry Regular PUD, and an Exemption application from Clifford Pastor to subdivide his parcel into 2 lots. (Packet materials are under media TV icon)":
     "Ouray County's Planning Commission meets at the Ouray Courthouse for two public hearings. First up is the Curry Regular PUD — a formal planned unit development application that will get a full public hearing. Second is an exemption application from Clifford Pastor to subdivide his parcel into two lots. Both items require public hearings before the PC can make a recommendation, and packet materials are available through the county's agenda portal.",
@@ -1402,7 +1374,10 @@ const MANUAL_SUMMARIES = {
     "A full-day work session — no formal votes, but the direction set here tends to shape what comes next. The Ouray County Home Trust's Housing Services Administrator delivers a quarterly report, which means an update on where the county's affordable housing work actually stands. The Colorado River District gives its annual briefing, relevant given how water allocation questions shadow every land-use conversation in this region. Abram Herman presents on behalf of Friends of Youth and Nature. Midday shifts to County Manager performance feedback and commissioner reports. The afternoon gets substantive: Land Use takes up fee schedule updates — changes here affect what it costs to bring a development application — followed by a budget discussion with Ridgway Fire & EMS.",
 
   "ouraycity|2026-10-13|Ouray Planning Commission Regular Meeting":
-    "One item drives this meeting: a proposed ordinance regulating natural medicine businesses in Ouray. Staff presenter Harper Powell brings two attachments — a clean draft ordinance and a supporting memo — suggesting this is still in the discussion phase rather than a vote. Colorado's legalization of natural medicine (psilocybin and related substances) under Proposition 122 left municipalities to figure out their own land-use and licensing frameworks, and Ouray is now working through what that looks like inside city limits. This is the kind of regulatory groundwork that tends to be quiet when it happens and consequential once it's done."
+    "One item drives this meeting: a proposed ordinance regulating natural medicine businesses in Ouray. Staff presenter Harper Powell brings two attachments — a clean draft ordinance and a supporting memo — suggesting this is still in the discussion phase rather than a vote. Colorado's legalization of natural medicine (psilocybin and related substances) under Proposition 122 left municipalities to figure out their own land-use and licensing frameworks, and Ouray is now working through what that looks like inside city limits. This is the kind of regulatory groundwork that tends to be quiet when it happens and consequential once it's done.",
+
+  "telluride|2026-10-12|Open Space Commission Site Walk - Oct 12 2026":
+    "The Open Space Commission skips the conference room this month — members and the public will meet at Rebekah Hall on West Columbia at 4:00 PM, then head up Tomboy Road for a High Country site walk. No formal votes are on the agenda; this is a work session in the field, the kind of firsthand look that tends to inform decisions made later indoors."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2578,6 +2553,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Among the best at PantherFest",
+    source: "Telluride Times",
+    date: "October 9, 2026",
+    firstSeen: "2026-10-10",
+    newsTopic: "community",
+    copy: "Telluride junior Speck placed sixth at PantherFest in 20:08, finishing close to the Western Slope's top runners, while three San Juan Basin athletes cracked the overall top 10. The Lady Miners placed eighth as a team, with three juniors finishing nearly side by side in 83rd, 85th, and 87th. The boys' soccer team, ranked No. 1 in 2A, rolled to a 7-0 halftime lead over Caprock Academy.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_aca04d8a-c00f-4cdd-9611-e1945e7ee4b7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/1f/b1f7e029-66a7-41a5-a269-44f624277503/6ac6003a77787.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "EcoAction, SMPA bring energy updates to Norwood trustees",
     source: "Telluride Times",
     date: "October 9, 2026",
@@ -3523,36 +3510,21 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "The Patio is open",
-    source: "Telluride Times",
-    date: "September 26, 2026",
-    firstSeen: "2026-09-26",
-    newsTopic: "housing",
-    copy: "A new restaurant called The Patio has opened in the outdoor space above O'Bannon's on Spruce Street, where The Bistro used to be. It's aiming for affordable, approachable food — think smash burgers and draft beer for around $20 — with kitchen hours running 11 a.m. to 11 p.m. The ownership group also plans to take over the O'Bannon's space after January 1st and eventually open a New York-style deli in the adjacent Kamruz gallery storefront.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/business/article_bd4b50e9-3f70-42ff-a0e9-bd9259f061ee.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/82/1829827b-0a30-4901-ba35-44decc9ecd84/6ab44cb105703.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Sheridan Opera House announces holiday acts",
-    source: "Telluride Times",
-    date: "September 26, 2026",
-    firstSeen: "2026-09-26",
-    newsTopic: "arts-culture",
-    copy: "The Sheridan Opera House's Holiday Concert Series runs Dec. 28–Jan. 3, built around tribute acts spanning the '60s through '90s — John Denver, Beastie Boys, and a '60s revue on NYE among them. Andy Falco and Travis Book close things out Jan. 2–3 with a Jerry Garcia celebration.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_93ad97e9-5ec6-442a-b477-d54f29304abf.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/57/9574877a-ca2b-4786-918c-c7a99195af78/6ab23fb7bc780.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Applications Open for 2026/2027 Temporary Winter Community Housing Program",
     source: "Town of Telluride",
     date: "October 9, 2026",
     newsTopic: "housing",
     copy: "(October 8, 2026) – The Town of Telluride is accepting applications for its Temporary Winter Community Housing program for the 2026/2027 winter season. The program provides seasonal housing in Town Park for eligible workers employed in the Telluride area.",
     href: "https://www.telluride.gov/CivicAlerts.aspx?aid=406",
+    img: ""
+  },
+  {
+    title: "Town of Telluride to Lift All Fire Restrictions",
+    source: "Town of Telluride",
+    date: "September 17, 2026",
+    newsTopic: "public-safety",
+    copy: "(September 16, 2026) – Following improved fire conditions across the region and in alignment with San Miguel County, the Town of Telluride will lift all fire restrictions effective at 12:01 a.m. MT on Friday, September 18, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=405",
     img: ""
   },
   {
@@ -3565,6 +3537,96 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14836"
   },
   {
+    title: "Chief Deputy Clerk Receives Excellence in Election Service Award",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "government",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1413",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14817"
+  },
+  {
+    title: "Planning Director Kaye Simonson Retires After Nearly Eight Years with the County",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1418",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14827"
+  },
+  {
+    title: "Another San Miguel Basin Fair in the Books",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1416",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14822"
+  },
+  {
+    title: "New Faces and a Fond Farewell for Parks + Open Space",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "recreation",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1417",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14826"
+  },
+  {
+    title: "County Housing Efforts Continue on Multiple Fronts",
+    source: "San Miguel County",
+    date: "September 24, 2026",
+    newsTopic: "housing",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1415",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14821"
+  },
+  {
+    title: "San Miguel County Adds Genasys Protect to Emergency Alerting Ecosystem",
+    source: "San Miguel County",
+    date: "September 24, 2026",
+    newsTopic: "public-safety",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1414",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14820"
+  },
+  {
+    title: "Safe Festivals - A Public Health Approach to Harm Reduction",
+    source: "San Miguel County",
+    date: "September 23, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1411",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14818"
+  },
+  {
+    title: "SMC Expands Crisis Intervention Services with Paragon Behavioral Health Connections",
+    source: "San Miguel County",
+    date: "September 22, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1412",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14816"
+  },
+  {
+    title: "Commissioners Finalize Deed Restriction Reversion Process",
+    source: "San Miguel County",
+    date: "September 22, 2026",
+    newsTopic: "housing",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1410",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14812"
+  },
+  {
+    title: "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
+    source: "San Miguel County",
+    date: "September 10, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1409",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
+  },
+  {
     title: "DMV Services available in Egnar 11/18",
     source: "San Miguel County",
     date: "September 29, 2026",
@@ -3572,6 +3634,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
+  },
+  {
+    title: "Tomboy Road Now Open",
+    source: "San Miguel County",
+    date: "September 18, 2026",
+    newsTopic: "infrastructure",
+    copy: "The Town of Telluride has completed their project that necessitated the closure of Lower Tomboy Road. The road is now open again.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=546",
+    img: ""
+  },
+  {
+    title: "Water Restrictions in Place",
+    source: "Town of Telluride",
+    date: "September 11, 2026",
+    newsTopic: "community",
+    copy: "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=45",
+    img: ""
   },
   {
     title: "Ridgway Bank Building Officially Added to the National Register of Historic Places",
@@ -3653,7 +3733,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "October 9, 2026",
+    date: "October 10, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3664,7 +3744,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "October 9, 2026",
+    date: "October 10, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3675,6 +3755,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 10-9-26",
+    source: "KOTO Community Radio",
+    date: "October 10, 2026",
+    newsTopic: "government",
+    copy: "Budget Season at the Town of Telluride; Hanneke Cassel Trio Comes to Town; Cat Movie Fisher with Risho Unda",
+    href: "https://koto.org/news/newscast-10-9-26/"
+  },
   {
     title: "Newscast 10-8-26",
     source: "KOTO Community Radio",
@@ -3730,18 +3818,18 @@ const KOTO_NEWSCASTS = [
     newsTopic: "community",
     copy: "Mountain Village Reimagines Pond Plaza; Original Thinkers Looks to Spark Creative Humanity",
     href: "https://koto.org/news/newscast-9-28-26/"
-  },
-  {
-    title: "Newscast 9-25-26",
-    source: "KOTO Community Radio",
-    date: "September 26, 2026",
-    newsTopic: "public-safety",
-    copy: "San Miguel County Expands Emergency Alert System; A Telluride Climbing Guide Keeps History Alive; Milton Visits the Listening Club",
-    href: "https://koto.org/news/newscast-9-25-26/"
   }
 ];
 
 const KOTO_FEATURED_STORIES = [
+  {
+    title: "New Bike Track Gets the West End Rolling",
+    source: "KOTO Community Radio",
+    date: "October 9, 2026",
+    newsTopic: "recreation",
+    copy: "West End riders have already been flocking to Norwood's new pump track—and some have even bigger dreams for the town park.",
+    href: "https://koto.org/news/new-bike-track-gets-the-west-end-rolling/"
+  },
   {
     title: "“This Haunted Land” Explores America’s Ghosts",
     source: "KOTO Community Radio",
@@ -4281,28 +4369,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Ridgway Farmer's Market",
-    link: "https://koto.org/event/ridgway-farmers-market/2026-10-09/",
-    description: "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday",
-    pubDate: "2026-10-09T10:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Hartwell Park Ridgway",
-    imageUrl: ""
-  },
-  {
-    title: "Telluride Farmer's Market",
-    link: "https://koto.org/event/telluride-farmers-market/2026-10-09/",
-    description: "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.",
-    pubDate: "2026-10-09T10:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Oak Street Plaza, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Not-So-Young People's Theater presents Shrek The Musical",
     link: "https://koto.org/event/not-so-young-peoples-theater-presents-shrek-the-musical/2026-10-09/",
     description: "The Sheridan Arts Foundation's Not-So-Young People's Theater (NSYPT) invites audiences to experience the hilarious, heartwarming fairytale adventure Shrek The Musical this fall at the historic Sheridan Opera House from Thursday, October 8 through Sunday, October 11, 2026. Featuring a mixed-age cast made up of local performers, Shrek The Musical brings the beloved DreamWorks Animation characters to life with unforgettable original songs, outrageous comedy, and a powerful message about friendship, acceptance, and celebrating what makes each of us unique. The cast features : Elijah Aumiller, Jennifer Birrittella, Eric Borchers, Rachel Brand (as Fiona), Dylan Brooks (as Lord Farquaad), Theo Brooks, Jack Caruso, Kevin Douglas (as Shrek), Arthur Forsythe, Elizabeth Guest, Simon Guest, Karen Gugliomone, Ryan Heidenreich, Elizabeth Hinkley, Tagen Kaestner, Meghan Knowles, Bryce Laney, Jennifer Laney, Andrew Murphy, Megan Murphy, Niko Pantovich-Gonzalez (as Donkey), Yana Pollard, Lily Reed, Stella Reed, Susa Smith, Pepper Tyson, and James Van Hooser. …",
@@ -4600,6 +4666,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Placerville Community Annual Fall Potluck",
+    link: "https://koto.org/event/placerville-community-annual-fall-potluck/",
+    description: "Attention, Down Valley residents! Please join San Miguel County and the Schoolhouse Event Committee at the Placerville Community Annual Fall Potluck. The potluck will take place at the historic Placerville Schoolhouse on Thursday, October 22nd, from 6:00 p.m. to 8:00 p.m. Please bring a dish to share, your choice of beverage, and reusable table settings. See you there!",
+    pubDate: "2026-10-22T18:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Placerville Schoolhouse",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/PLACERVILLE-COMMUNITY-POTLUCK-8.5-X-11-FLYER-2026.docx.jpg"
+  },
+  {
     title: "Up-off Gymnastics, Dance, and Spanish",
     link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-10-23/",
     description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
@@ -4763,6 +4840,50 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://koto.org/wp-content/uploads/2026/03/Bardic-Trails-2026.jpg"
+  },
+  {
+    title: "Pilates for All Bodies with Laura",
+    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-11-05/",
+    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-11-05T12:30:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Art Walk Telluride",
+    link: "https://koto.org/event/art-walk-telluride/2026-11-05/",
+    description: "Join us the first Thursday of every month for Telluride's Art Walk. It will be an evening filled with inspiring exhibits, engaging receptions, and the chance to meet local and visiting artists. From 5–7 pm, participating venues will open their doors, showcasing new collections and inviting art lovers to explore the vibrant gallery scene. Find what's new on www.telluridearts.org Note: Special Edition Art Walk May 21st.",
+    pubDate: "2026-11-05T17:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.42-PM.png"
+  },
+  {
+    title: "Facing the Mourning",
+    link: "https://koto.org/event/facing-the-mourning/2026-11-05/",
+    description: "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit from additional support while navigating grief and loss. Please feel free to share this information with others who may be interested.",
+    pubDate: "2026-11-05T18:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Redvale Community Center",
+    imageUrl: ""
+  },
+  {
+    title: "Up-off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-11-06/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-11-06T10:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   }
 ];
 
@@ -7276,6 +7397,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/63715/spongebobthemusical-ezgif_com-webp-to-jpg-converter.800x533.webp"
+  },
+  {
+    title: "Noel Night",
+    link: "https://www.telluride.com/event/noel-night/",
+    description: "Noel Night marks the beginning of the holiday season with the lighting of the ceremonial Ski Tree, and shopping at …",
+    pubDate: "2026-12-09",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/28866/mainstholiday_rb.800x533.webp"
   }
 ];
 
@@ -9288,6 +9420,16 @@ function getTownAgendaLink(title, eventDate) {
 // MeetingsService (HARC stays in TELLURIDE_CACHED_DATA above). Empty until the
 // next content-refresh run. Each entry: {date,title,agendaUrl,hasAgenda,location,time}.
 const TELLURIDE_BOARD_MEETINGS = [
+  {
+    date: "October 12, 2026",
+    title: "Open Space Commission Site Walk",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8325",
+    hasAgenda: true,
+    location: "Meet at Rebekah Hall, 113 W Columbia Ave",
+    time: "4:00 PM",
+    civicwebId: 8325,
+    packetUrl: "https://telluride-co.civicweb.net/document/446206/"
+  },
   {
     date: "October 13, 2026",
     title: "Special Town Council Budget",
