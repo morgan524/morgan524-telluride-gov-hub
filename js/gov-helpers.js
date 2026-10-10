@@ -3543,15 +3543,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Town of Telluride to Lift All Fire Restrictions",
-    source: "Town of Telluride",
-    date: "September 17, 2026",
-    newsTopic: "public-safety",
-    copy: "(September 16, 2026) – Following improved fire conditions across the region and in alignment with San Miguel County, the Town of Telluride will lift all fire restrictions effective at 12:01 a.m. MT on Friday, September 18, 2026.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=405",
-    img: ""
-  },
-  {
     title: "San Miguel County Public Health Announces Fall Vaccine Availability",
     source: "San Miguel County",
     date: "October 1, 2026",
@@ -3561,96 +3552,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14836"
   },
   {
-    title: "Chief Deputy Clerk Receives Excellence in Election Service Award",
-    source: "San Miguel County",
-    date: "September 25, 2026",
-    newsTopic: "government",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1413",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14817"
-  },
-  {
-    title: "Planning Director Kaye Simonson Retires After Nearly Eight Years with the County",
-    source: "San Miguel County",
-    date: "September 25, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1418",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14827"
-  },
-  {
-    title: "Another San Miguel Basin Fair in the Books",
-    source: "San Miguel County",
-    date: "September 25, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1416",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14822"
-  },
-  {
-    title: "New Faces and a Fond Farewell for Parks + Open Space",
-    source: "San Miguel County",
-    date: "September 25, 2026",
-    newsTopic: "recreation",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1417",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14826"
-  },
-  {
-    title: "County Housing Efforts Continue on Multiple Fronts",
-    source: "San Miguel County",
-    date: "September 24, 2026",
-    newsTopic: "housing",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1415",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14821"
-  },
-  {
-    title: "San Miguel County Adds Genasys Protect to Emergency Alerting Ecosystem",
-    source: "San Miguel County",
-    date: "September 24, 2026",
-    newsTopic: "public-safety",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1414",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14820"
-  },
-  {
-    title: "Safe Festivals - A Public Health Approach to Harm Reduction",
-    source: "San Miguel County",
-    date: "September 23, 2026",
-    newsTopic: "health",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1411",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14818"
-  },
-  {
-    title: "SMC Expands Crisis Intervention Services with Paragon Behavioral Health Connections",
-    source: "San Miguel County",
-    date: "September 22, 2026",
-    newsTopic: "health",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1412",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14816"
-  },
-  {
-    title: "Commissioners Finalize Deed Restriction Reversion Process",
-    source: "San Miguel County",
-    date: "September 22, 2026",
-    newsTopic: "housing",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1410",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14812"
-  },
-  {
-    title: "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
-    source: "San Miguel County",
-    date: "September 10, 2026",
-    newsTopic: "health",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1409",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
-  },
-  {
     title: "DMV Services available in Egnar 11/18",
     source: "San Miguel County",
     date: "September 29, 2026",
@@ -3658,24 +3559,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
-  },
-  {
-    title: "Tomboy Road Now Open",
-    source: "San Miguel County",
-    date: "September 18, 2026",
-    newsTopic: "infrastructure",
-    copy: "The Town of Telluride has completed their project that necessitated the closure of Lower Tomboy Road. The road is now open again.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=546",
-    img: ""
-  },
-  {
-    title: "Water Restrictions in Place",
-    source: "Town of Telluride",
-    date: "September 11, 2026",
-    newsTopic: "community",
-    copy: "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
-    href: "https://www.telluride.gov/AlertCenter.aspx?AID=45",
-    img: ""
   },
   {
     title: "Ridgway Bank Building Officially Added to the National Register of Historic Places",
