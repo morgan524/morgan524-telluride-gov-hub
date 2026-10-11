@@ -1,26 +1,34 @@
 {
-  "hash": "76f852e38a69ef51a9ec29df3a1504cc80a96f81",
-  "lede": "Mountain Village Council meets October 15 with two housing authority items that actually matter — second reading of an ordinance changing how MVHA fees are set in the municipal code, paired with a resolution adopting the 2027 fee schedules for Village Court and beyond. Elsewhere, the Town of Telluride spends three hours Tuesday working through its 2027 budget, including affordable housing and open space funds, and the Ouray County Commissioners take up Proposition 123 affordable housing commitments and a Special Use Permit amendment on Tuesday as well. The Telluride Horror Show rolls in Friday through Sunday at the Sheridan, and Monday there's a Ballot Measure 5A information meeting worth knowing about.",
+  "hash": "c25cbe0ed9463599d25de6d25a307fb536f4f209",
+  "lede": "The Mountain Village Town Council meets October 15 for second reading of an ordinance that changes how MVHA housing fees are set — shifting from hardcoded figures in the Municipal Code to an annual fee schedule — and will also vote on adopting the actual 2027 fee schedules for Village Court and beyond, which makes this one worth watching if you care about workforce housing costs in the region. Ouray County commissioners are meanwhile voting on opting into Proposition 123's next affordable housing commitment cycle and approving a new law enforcement intergovernmental agreement, while Telluride's Town Council spends three hours on the 2027 budget — enterprise funds, open space, and housing programs all on the table. The Telluride Horror Show rolls in Friday through Sunday, and there's a Ballot Measure 5A information meeting Monday at KOTO.",
   "notable": [
     {
       "id": 1,
-      "stake": "Cossey Complaint hearing and contract approval could set water-rights precedent for Norwood."
+      "stake": "Commission holds Cossey Complaint hearing and considers contract approval."
+    },
+    {
+      "id": 3,
+      "stake": "Council reviews 2027 budget for housing, open space, and enterprise funds."
     },
     {
       "id": 4,
-      "stake": "County votes on Prop 123 housing commitment and a Colona restaurant Special Use Permit."
+      "stake": "County votes on Prop 123 housing commitment and new law enforcement IGA."
     },
     {
       "id": 5,
-      "stake": "Proposed ordinance would regulate psilocybin businesses operating in Ouray."
+      "stake": "Proposed ordinance would regulate psilocybin businesses in Ouray city limits."
+    },
+    {
+      "id": 7,
+      "stake": "Affordable housing committee takes up Home Trust regional administrator program."
     },
     {
       "id": 10,
-      "stake": "Public hearing on alcohol permits for Horror Show crowds up to 1,400 people."
+      "stake": "Public hearing on alcohol permits for Horror Show crowds up to 1,400."
     },
     {
       "id": 12,
-      "stake": "Second reading of ordinance and vote on 2027 MVHA fee schedules affecting workforce housing costs."
+      "stake": "Second reading vote on MVHA fee ordinance and adoption of 2027 fee schedules."
     }
   ]
 }
