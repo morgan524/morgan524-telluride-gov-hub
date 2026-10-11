@@ -92,32 +92,6 @@
     "type": "Food & Drink"
   },
   {
-    "title": "Lone Cone Legacy Trust annual Harvest Dinner",
-    "href": "https://koto.org/event/lone-cone-legacy-trust-annual-harvest-dinner/",
-    "date": "2026-10-10",
-    "time": "5:30 PM",
-    "location": "The Livery Norwood",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/food.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "One of the biggest nights in Norwood, the Lone Cone Legacy Trust's annual Harvest Dinner, takes place on Saturday, October 10th, at 5:30 p.m. at The Livery. Live music from Telluride Gold Kings, a fabulous buffet dinner, dancing and a cash…",
-    "type": "Food & Drink"
-  },
-  {
-    "title": "Not-So-Young People's Theater presents Shrek The Musical",
-    "href": "https://koto.org/event/not-so-young-peoples-theater-presents-shrek-the-musical/2026-10-10/",
-    "date": "2026-10-10",
-    "time": "6:00 PM",
-    "location": "Sheridan Opera House, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/theater.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Sheridan Arts Foundation's Not-So-Young People's Theater (NSYPT) invites audiences to experience the hilarious, heartwarming fairytale adventure Shrek The Musical this fall at the historic Sheridan Opera House from Thursday, October 8…",
-    "type": "Arts & Film"
-  },
-  {
     "title": "PAINT AND SIP WITH NICOLE GREENFIELD: “GOLDEN ASPENS“",
     "href": "https://events.ourayridgwayevents.com/event/paint-and-sip-with-nicole-greenfield-golden-aspens",
     "date": "2026-10-10",
@@ -2424,6 +2398,19 @@
     "type": "Community"
   },
   {
+    "title": "Wildbelly Fermentation Fest",
+    "href": "https://koto.org/event/wildbelly-fermentation-fest/",
+    "date": "2026-11-07",
+    "time": "",
+    "location": "Mancos Community Center, Mancos, CO",
+    "town": "",
+    "img": "https://koto.org/wp-content/uploads/2026/03/857CD970-C1BC-4A46-AA34-6D1D567DA5AB.jpeg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Wildbelly Fermentation Fest is bringing together fermentation enthusiasts and expert teachers for two days of classes in the Mancos Valley on Nov. 7th & 8th.",
+    "type": "Community"
+  },
+  {
     "title": "Movies Under the Stars",
     "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     "date": "2026-11-07",
@@ -2474,6 +2461,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "The Annual Ouray Climbers Alliance Fundraiser & Membership Drive is back! Come join our local climbing community for a free, all-ages festival! Climb, compete, eat, drink and hang out while supporting the work that keeps Ouray’s climbing…",
     "type": "Festivals"
+  },
+  {
+    "title": "Tea and Tarot",
+    "href": "https://koto.org/event/tea-and-tarot/2026-11-08/",
+    "date": "2026-11-08",
+    "time": "2:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    "type": "Community"
   },
   {
     "title": "Bike & Brewery Tour",

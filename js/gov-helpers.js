@@ -149,15 +149,6 @@ const MEETING_AGENDA_META = {
   "med|2026-09-11|Board Work Session":
     {"sv":4,"agendaUrl":null,"zoomUrl":"https://us02web.zoom.us/j/83975455041?pwd=JFP4C7xMrNnAn93sWUhROdSuVzQbeq.1","meetingId":"839 7545 5041","passcode":"388003"},
 
-  "telluride|2026-09-10|Town Council Budget - Sep 10 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052","sv":4,"ph":"a2d452b639a44962"},
-
-  "county|2026-09-10|Planning Commission Meeting":
-    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/923/files/agenda/1979","zoomUrl":"https://us06web.zoom.us/j/84540142300?pwd=kR3YU9IZBab43RLiNx0ox1gygbOI8C.1","meetingId":"845 4014 2300","passcode":"704358","phone":"970-728-3844"},
-
-  "smart|2026-09-10|SMART Board of Directors":
-    {"sv":4,"ph":"b858cb282617fb09"},
-
   "telluride|2026-09-14|Open Space Commission - Sep 14 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8131","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/ePrh_CzmTLKqp0syEbUesw","meetingId":"894 7506 0147","passcode":"314276.","phone":"719) 359-4580"},
 
@@ -218,9 +209,6 @@ const MEETING_AGENDA_META = {
   "telluride|2026-09-24|Planning & Zoning Commission Chair - Sep 24 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8103","sv":4,"ph":"313a820643e5b960"},
 
-  "telluride|2026-09-10|(Rescheduled to Oct 13th) Town Council Budget - Sep 10 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052","sv":4},
-
   "telluride|2026-09-23|Vending Subcommittee - Sep 23 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8308","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/l3rAiIuyRgyVFu2-92kJZw","meetingId":"835 9480 9571","passcode":"960386"},
 
@@ -277,9 +265,6 @@ const MEETING_AGENDA_META = {
 
   "county|2026-10-08|Planning Commission Meeting":
     {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/924/files/agenda/2025","zoomUrl":"https://us06web.zoom.us/j/86224076240?pwd=dg8IrMwtLfHLkcZ1Y3JKlGs8IpYz0Q.1","meetingId":"862 2407 6240","passcode":"691404","phone":"970-728-3844"},
-
-  "telluride|2026-09-10|San Miguel Authority for Regional Transportation - Sep 10 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8314","zoomUrl":"https://us02web.zoom.us/j/89045288089?pwd=b1Gfa5STKy8Wstoqdc8oBxCCs1s6pg.1","sv":4},
 
   "county|2026-09-24|5 x 5 County Meeting - San Miguel County Hosts":
     {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1071/files/agenda/2005","zoomUrl":"https://us02web.zoom.us/meeting/register/MPkylS4iTRCn1ZOARSNRPQ","meetingId":"867 6377 9971","passcode":"898059.","phone":"719-359-4580"},
@@ -486,7 +471,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8325","sv":4},
 
   "telluride|2026-11-09|Open Space Commission - Nov 09 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8133","sv":4,"ph":"410853eec5221d83"}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8133","sv":4,"ph":"410853eec5221d83"},
+
+  "norwood|2026-11-10|Norwood Water Commission Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -888,6 +876,16 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Parish bulletin for October 11",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "October 10, 2026",
+    newsTopic: "community",
+    copy: "This week's parish bulletin is attached. As always, please check the Parish Calendar for the most updated information.Reminders:8:30 am on Sundays--Come to pray the Holy Rosary before Mass.This weekend, please stop by the Parish Hall and help sup...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-october-11/",
+    img: ""
+  },
+  {
     title: "A Monster celebration",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
@@ -1045,21 +1043,12 @@ const SMC_ALERTS = [
 const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-10-10';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-10-11';
 const LEGAL_NOTICES_CACHE_DATE = '2026-10-09';
 
 const MANUAL_SUMMARIES = {
   "med|2026-09-11|Board Work Session":
     "A single-item work session: a presentation from CommonSpirit Health on a potential partnership with the Telluride Hospital District. No packet or supporting materials are posted ahead of the session, so the scope and terms of what's being discussed aren't yet public -- worth watching given the board's ongoing Letter of Intent talks with CommonSpirit on the new facility project. No board action is scheduled; this is a discussion-only session, held in person and by Zoom.",
-
-  "telluride|2026-09-10|Town Council Budget - Sep 10 2026":
-    "The September 10, 2026 Town Council Budget agenda hasn't been posted yet.",
-
-  "county|2026-09-10|Planning Commission Meeting":
-    "Three Land Use Code amendments are on the table for the Planning Commission's recommendation — covering forestry practices, oil and gas, and geothermal energy. All three are code-change items, meaning the Commission is being asked to weigh in before any revisions move forward to the BOCC. The agenda text doesn't detail the specific proposed changes within each amendment, but the pairing of oil & gas with geothermal in the same session signals the county is taking a broad look at how extraction and energy activities are regulated in unincorporated San Miguel County.",
-
-  "smart|2026-09-10|SMART Board of Directors":
-    "The September 10, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "telluride|2026-09-14|Open Space Commission - Sep 14 2026":
     "The Open Space Commission meets Monday to work through a busy stretch of site-walk debriefs and planning. First up: a debrief from the August 10th walk that covered a potential trail alignment connecting the Bear Creek Trailhead to Firecracker Hill, beaver activity in Zone 3 of the Bear Creek Preserve, and restoration planning in Zone 1. Then a debrief from the August 17th walk on sign sizes and placements — non-content — for the Telluride Valley Floor Open Space. The commission will also prepare for two September 21st site walks: Zone 1's restoration plan and the Reach 3/USFS River Restoration Project at the Mill Creek Confluence on the Valley Floor. Rounding it out: scheduling future site walks for the ST-1 Project and wetland connectivity, the Cornet to Jud Wiebe Trail/Mill Placer CE, and High Country areas.",
@@ -1121,9 +1110,6 @@ const MANUAL_SUMMARIES = {
   "telluride|2026-09-24|Planning & Zoning Commission Chair - Sep 24 2026":
     "The September 24, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
 
-  "telluride|2026-09-10|(Rescheduled to Oct 13th) Town Council Budget - Sep 10 2026":
-    "This September 10 budget session has been rescheduled to October 13th. No agenda has been posted yet.",
-
   "telluride|2026-09-23|Vending Subcommittee - Sep 23 2026":
     "The Vending Subcommittee meets September 23 to handle two items: appointing a new chairperson and selecting vendors for the 2026-2027 winter season at Gondola Plaza. One application is on the table — PhilAm, LLC dba Mini Deli, a returning vendor with eleven consecutive seasons at Gondola Plaza East, applying again for breakfast and lunch service. Staff recommends granting the permit. Gondola Plaza West has no applicant on record. The subcommittee will also approve draft minutes from April 2.",
 
@@ -1180,9 +1166,6 @@ const MANUAL_SUMMARIES = {
 
   "county|2026-10-08|Planning Commission Meeting":
     "The San Miguel County Planning Commission meets October 8 for a session that spans most of the day. The morning opens with a joint work session with the BOCC on an Affordable Housing Code Update — a signal that the county is still actively trying to write policy fast enough to keep pace with a housing situation that hasn't gotten easier. After lunch, the commission takes up a Land Use Code amendment covering Subdivisions and Condominium Plats, which would change the rules governing how land gets divided and how ownership gets structured across unincorporated county. Both items sit at the code-change tier — the kind of amendments that quietly shape what gets built, where, and for whom, long after the meeting is over.",
-
-  "telluride|2026-09-10|San Miguel Authority for Regional Transportation - Sep 10 2026":
-    "SMART's board meets virtually on September 10th with a full slate of financial and operational business. The board will act on the FY25 audit report and accept those financials — a routine but consequential step in closing out a fiscal year. More forward-looking: the board votes on hiring PFM Asset Management as SMART's investment advisor and entering the CSIP investment pool, which determines how the authority manages what is now a significant revenue stream. FY27 budget development goes to discussion, an early but important moment given the scale of spending the gondola program has put in motion. The gondola project itself gets a verbal update — the one item everyone in the valley is watching. September operations round out the agenda, along with an executive session on personnel matters.",
 
   "county|2026-09-24|5 x 5 County Meeting - San Miguel County Hosts":
     "This is an informal gathering — no votes, no decisions. San Miguel County is hosting commissioners from Archuleta, Montezuma, Dolores, and La Plata counties for a 5x5 regional discussion at the Wilkinson Public Library. The substantive item is a conversation with the Southern Ute Indian Council about a gas enterprise pipeline spill — the kind of cross-jurisdictional environmental matter that rarely surfaces in a single county's regular agenda. Each county will also share updates, and federal and state representatives are expected to weigh in.",
@@ -1389,7 +1372,10 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission skips the conference room this month — members and the public will meet at Rebekah Hall on West Columbia at 4:00 PM, then head up Tomboy Road for a High Country site walk. No formal votes are on the agenda; this is a work session in the field, the kind of firsthand look that tends to inform decisions made later indoors.",
 
   "telluride|2026-11-09|Open Space Commission - Nov 09 2026":
-    "The November 9, 2026 Open Space Commission agenda hasn't been posted yet."
+    "The November 9, 2026 Open Space Commission agenda hasn't been posted yet.",
+
+  "norwood|2026-11-10|Norwood Water Commission Meeting":
+    "The November 10, 2026 Norwood Water Commission Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2589,6 +2575,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Full interviews with both San Miguel County Commissioner candidates",
+    source: "Telluride Times",
+    date: "October 10, 2026",
+    firstSeen: "2026-10-11",
+    newsTopic: "government",
+    copy: "Two candidates — Paul Reich and Dylan Brooks — are vying for San Miguel County Commissioner, each focused on housing and affordability. Reich wants to reverse the livability decline before it's too late; Brooks favors vacant-home tax incentives modeled on Utah's approach. Both see the next four years as pivotal for the region's middle class.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/elections/article_6ceca736-3b81-4a23-b240-1f90c84b88fb.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/c5/dc52cf3e-43f1-4f53-8ac6-8d3149cb3802/6ac96872cc7d9.image.png",
+    imgHiRes: true
+  },
+  {
     title: "Among the best at PantherFest",
     source: "Telluride Times",
     date: "October 9, 2026",
@@ -3522,30 +3520,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "‘A place to mourn, grieve and reflect’",
-    source: "Telluride Times",
-    date: "September 27, 2026",
-    firstSeen: "2026-09-27",
-    newsTopic: "community",
-    copy: "Telluride Historical Museum docent-led tours of Lone Tree Cemetery run through Oct. 30, with daytime walks Fridays 1–2 p.m. and lamplight tours the final two Fridays at 6:30 p.m. More than 2,000 people are buried there since 1885, though 100+ graves have vanished. Call (970) 728-3344 or visit telluridemuseum.org for tickets.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_79195f13-ba5f-479d-8970-d5d187657d6c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/f9/5f926ce3-ba46-4789-8a5f-0f7b8f9cf067/6ab5b44a1bbdf.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Angels among us",
-    source: "Telluride Times",
-    date: "September 27, 2026",
-    firstSeen: "2026-09-27",
-    newsTopic: "community",
-    copy: "Telluride Angel Baskets is heading into its 45th year serving 200-plus families across San Miguel and western Montrose counties — and program director Peter Kenworthy expects a 20% jump in applicants this year, tied to rising costs, reduced federal funding, and a low snow season. The deadline to apply is September 30, and donations and volunteers are welcome at tellurideangelbaskets.org.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_b960593f-3db8-46df-9d62-a5d8dfcd833f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/f6/6f6775e1-80df-4569-b891-ac9f301a4133/6ab4b7b49ab7e.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Applications Open for 2026/2027 Temporary Winter Community Housing Program",
     source: "Town of Telluride",
     date: "October 9, 2026",
@@ -3654,15 +3628,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14812"
   },
   {
-    title: "San Miguel County Public Health Introduces “Free Care Boxes” at Local Libraries",
-    source: "San Miguel County",
-    date: "September 10, 2026",
-    newsTopic: "health",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1409",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14790"
-  },
-  {
     title: "DMV Services available in Egnar 11/18",
     source: "San Miguel County",
     date: "September 29, 2026",
@@ -3678,15 +3643,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "infrastructure",
     copy: "The Town of Telluride has completed their project that necessitated the closure of Lower Tomboy Road. The road is now open again.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=546",
-    img: ""
-  },
-  {
-    title: "Water Restrictions in Place",
-    source: "Town of Telluride",
-    date: "September 11, 2026",
-    newsTopic: "community",
-    copy: "The Town of Telluride implemented outdoor water restrictions effective Tuesday, March 31, 2026, in response to anticipated dry spring and summer conditions and below-average snowpack. The Town will continue to monitor conditions closely.",
-    href: "https://www.telluride.gov/AlertCenter.aspx?AID=45",
     img: ""
   },
   {
@@ -3769,7 +3725,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "October 10, 2026",
+    date: "October 11, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3780,7 +3736,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "October 10, 2026",
+    date: "October 11, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -4405,28 +4361,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Lone Cone Legacy Trust annual Harvest Dinner",
-    link: "https://koto.org/event/lone-cone-legacy-trust-annual-harvest-dinner/",
-    description: "One of the biggest nights in Norwood, the Lone Cone Legacy Trust's annual Harvest Dinner, takes place on Saturday, October 10th, at 5:30 p.m. at The Livery. Live music from Telluride Gold Kings, a fabulous buffet dinner, dancing and a cash bar! Tickets are available at the door, or in advance at loneconelegacy.org.",
-    pubDate: "2026-10-10T17:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "The Livery Norwood",
-    imageUrl: ""
-  },
-  {
-    title: "Not-So-Young People's Theater presents Shrek The Musical",
-    link: "https://koto.org/event/not-so-young-peoples-theater-presents-shrek-the-musical/2026-10-10/",
-    description: "The Sheridan Arts Foundation's Not-So-Young People's Theater (NSYPT) invites audiences to experience the hilarious, heartwarming fairytale adventure Shrek The Musical this fall at the historic Sheridan Opera House from Thursday, October 8 through Sunday, October 11, 2026. Featuring a mixed-age cast made up of local performers, Shrek The Musical brings the beloved DreamWorks Animation characters to life with unforgettable original songs, outrageous comedy, and a powerful message about friendship, acceptance, and celebrating what makes each of us unique. The cast features : Elijah Aumiller, Jennifer Birrittella, Eric Borchers, Rachel Brand (as Fiona), Dylan Brooks (as Lord Farquaad), Theo Brooks, Jack Caruso, Kevin Douglas (as Shrek), Arthur Forsythe, Elizabeth Guest, Simon Guest, Karen Gugliomone, Ryan Heidenreich, Elizabeth Hinkley, Tagen Kaestner, Meghan Knowles, Bryce Laney, Jennifer Laney, Andrew Murphy, Megan Murphy, Niko Pantovich-Gonzalez (as Donkey), Yana Pollard, Lily Reed, Stella Reed, Susa Smith, Pepper Tyson, and James Van Hooser. …",
-    pubDate: "2026-10-10T18:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Sheridan Opera House, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Volunteer Trail Work Day: Cross Mountain Trailhead",
     link: "https://koto.org/event/volunteer-trail-work-day-cross-mountain-trailhead/",
     description: "Join us this fall for our final trail work day! Spend time with friends, get your hands dirty, and help care for the trails we all love. Projects may include clearing debris, improving drainage, and general maintenance to keep our trails safe and sustainable. Please bring water, a snack, closed-toed shoes, sunglasses, a long-sleeved shirt, and pants.",
@@ -4909,6 +4843,28 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Lone Cone Library Norwood",
     imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "Wildbelly Fermentation Fest",
+    link: "https://koto.org/event/wildbelly-fermentation-fest/",
+    description: "The Wildbelly Fermentation Fest is bringing together fermentation enthusiasts and expert teachers for two days of classes in the Mancos Valley on Nov. 7th & 8th.",
+    pubDate: "2026-11-07T00:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Mancos Community Center, Mancos, CO",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/03/857CD970-C1BC-4A46-AA34-6D1D567DA5AB.jpeg"
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://koto.org/event/tea-and-tarot/2026-11-08/",
+    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    pubDate: "2026-11-08T14:30:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   }
 ];
 
@@ -7108,18 +7064,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62111/screenshot_2026-04-01_at_2_21_59_pm.800x533.webp"
-  },
-  {
-    title: "Telluride Farmers&#039; Market",
-    link: "https://www.telluride.com/event/telluride-farmers-market/",
-    description: "The Telluride Farmers' Market provides the highest quality produce, animal products, prepared food and more to …",
-    pubDate: "2026-05-29",
-    endDate: "2026-10-09",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/44554/img_0071.800x533.webp"
   },
   {
     title: "Live Music at Alloy Kitchen",

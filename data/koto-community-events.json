@@ -1,27 +1,5 @@
 [
   {
-    "title": "Lone Cone Legacy Trust annual Harvest Dinner",
-    "link": "https://koto.org/event/lone-cone-legacy-trust-annual-harvest-dinner/",
-    "description": "One of the biggest nights in Norwood, the Lone Cone Legacy Trust's annual Harvest Dinner, takes place on Saturday, October 10th, at 5:30 p.m. at The Livery. Live music from Telluride Gold Kings, a fabulous buffet dinner, dancing and a cash bar! Tickets are available at the door, or in advance at loneconelegacy.org.",
-    "pubDate": "2026-10-10T17:30:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "The Livery Norwood",
-    "imageUrl": ""
-  },
-  {
-    "title": "Not-So-Young People's Theater presents Shrek The Musical",
-    "link": "https://koto.org/event/not-so-young-peoples-theater-presents-shrek-the-musical/2026-10-10/",
-    "description": "The Sheridan Arts Foundation's Not-So-Young People's Theater (NSYPT) invites audiences to experience the hilarious, heartwarming fairytale adventure Shrek The Musical this fall at the historic Sheridan Opera House from Thursday, October 8 through Sunday, October 11, 2026. Featuring a mixed-age cast made up of local performers, Shrek The Musical brings the beloved DreamWorks Animation characters to life with unforgettable original songs, outrageous comedy, and a powerful message about friendship, acceptance, and celebrating what makes each of us unique. The cast features : Elijah Aumiller, Jennifer Birrittella, Eric Borchers, Rachel Brand (as Fiona), Dylan Brooks (as Lord Farquaad), Theo Brooks, Jack Caruso, Kevin Douglas (as Shrek), Arthur Forsythe, Elizabeth Guest, Simon Guest, Karen Gugliomone, Ryan Heidenreich, Elizabeth Hinkley, Tagen Kaestner, Meghan Knowles, Bryce Laney, Jennifer Laney, Andrew Murphy, Megan Murphy, Niko Pantovich-Gonzalez (as Donkey), Yana Pollard, Lily Reed, Stella Reed, Susa Smith, Pepper Tyson, and James Van Hooser. …",
-    "pubDate": "2026-10-10T18:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Sheridan Opera House, Telluride",
-    "imageUrl": ""
-  },
-  {
     "title": "Volunteer Trail Work Day: Cross Mountain Trailhead",
     "link": "https://koto.org/event/volunteer-trail-work-day-cross-mountain-trailhead/",
     "description": "Join us this fall for our final trail work day! Spend time with friends, get your hands dirty, and help care for the trails we all love. Projects may include clearing debris, improving drainage, and general maintenance to keep our trails safe and sustainable. Please bring water, a snack, closed-toed shoes, sunglasses, a long-sleeved shirt, and pants.",
@@ -504,5 +482,27 @@
     "category": "Community Event",
     "location": "Lone Cone Library Norwood",
     "imageUrl": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    "title": "Wildbelly Fermentation Fest",
+    "link": "https://koto.org/event/wildbelly-fermentation-fest/",
+    "description": "The Wildbelly Fermentation Fest is bringing together fermentation enthusiasts and expert teachers for two days of classes in the Mancos Valley on Nov. 7th & 8th.",
+    "pubDate": "2026-11-07T00:00:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Mancos Community Center, Mancos, CO",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/03/857CD970-C1BC-4A46-AA34-6D1D567DA5AB.jpeg"
+  },
+  {
+    "title": "Tea and Tarot",
+    "link": "https://koto.org/event/tea-and-tarot/2026-11-08/",
+    "description": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    "pubDate": "2026-11-08T14:30:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   }
 ]
