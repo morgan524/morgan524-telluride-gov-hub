@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-10-11",
+    "title": "The town wants to look at employee rental housing — again",
+    "body": "A canceled HARC meeting notice quietly mentions something worth talking about: a request for proposals on an employee rental housing policy review. That's a real fork in the road up here. Some residents will say it's past time — workforce housing has been squeezed for years and a policy review might finally produce something with teeth. Others will say another review just delays action, adds cost, and produces a report that sits on a shelf. Both read the same situation pretty differently.\n\nSo: does a formal housing policy review move the needle, or is it just process?",
+    "choices": [
+      "It could actually lead somewhere",
+      "Another study, same result",
+      "Depends what comes after",
+      "It's complicated"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-10-10",
     "title": "Psilocybin shops in Ouray — regulate or resist?",
     "body": "Ouray's Planning Commission is looking at a draft ordinance on how to regulate natural medicine businesses inside city limits. Colorado legalized these businesses at the state level, but local governments get to set their own rules on top of that. Some residents will say local oversight is exactly right — keep it controlled, keep the community in the loop. Others will argue that layering on local regulation makes it harder for a legal business to operate. The commission is still in draft-and-discussion mode; nothing is final. So where do you stand on Ouray writing its own rules here?",
@@ -419,21 +434,6 @@
       "They raise the floor for everyone",
       "More costs we can't afford",
       "Depends on what's in the fine print",
-      "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-09-11",
-    "title": "Hazardous fuels work in the national forests — your call?",
-    "body": "The Board of County Commissioners is taking up a federal environmental assessment for a hazardous fuels management project in the Uncompahgre and Gunnison National Forests. That means treatments — thinning, burning, clearing — on public land that surrounds this place. Some folks will say it's overdue and reduces real fire risk to communities up here. Others will push back on the scale, the methods, or whether a federal assessment process gives locals enough of a voice. Nothing's been decided locally yet.\n\nWhere do you stand — does aggressive hazardous fuels work on surrounding forest land make you feel safer, or does it raise more questions than it answers?",
-    "choices": [
-      "Feels like necessary risk reduction",
-      "Too many unknowns about the methods",
-      "Give locals more say first",
       "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",
