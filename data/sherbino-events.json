@@ -1,15 +1,5 @@
 [
   {
-    "title": "Alysha Brilla",
-    "href": "https://sherbino.org/event/alysha-brilla/",
-    "date": "2026-10-10 19:00:00",
-    "endDate": "2026-10-10 20:30:00",
-    "location": "The Sherbino, Ridgway",
-    "copy": "Alysha Brilla performs live at The Sherbino in Ridgway, presented in partnership with Pickin' Productions. The show is primarily a dancehall-style setup with limited open seating, and some reserved section seats are available in advance.",
-    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/07/alysha-1-e1783453241649.png",
-    "description": "Alysha Brilla performs live at The Sherbino in Ridgway, presented in partnership with Pickin' Productions. The show is primarily a dancehall-style setup with limited open seating, and some reserved section seats are available in advance."
-  },
-  {
     "title": "Monthly Welcome Home Alliance Veteran's Coffee at the Sherbino",
     "href": "https://sherbino.org/event/monthly-welcome-home-alliance-veterans-coffee-at-the-sherbino/2026-10-13/",
     "date": "2026-10-13 10:00:00",
@@ -54,7 +44,7 @@
     "endDate": "2026-10-27 19:30:00",
     "location": "The Sherbino, Ridgway",
     "copy": "Pam Houston visits The Sherbino in Ridgway for a Literary Living Room evening centered on her newly published book *Animals Taught Me Everything*, exploring what animals — from horses to wolfhounds — can reveal about living well. The seated event begins at 6:30 PM with doors opening at 6:00 PM, and admission is $15.",
-    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/08/Pam-Houston-Banner-Oct-27.png",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/08/Pam-Houston-Banner.png",
     "description": "Pam Houston visits The Sherbino in Ridgway for a Literary Living Room evening centered on her newly published book *Animals Taught Me Everything*, exploring what animals — from horses to wolfhounds — can reveal about living well. The seated event begins at 6:30 PM with doors opening at 6:00 PM, and admission is $15."
   },
   {
@@ -86,5 +76,25 @@
     "copy": "The Sherbino in Ridgway hosts a screening of *Days Off*, Warren Miller's 77th ski and snowboard film, hosted by Katie Burrell. Advance tickets are available at a discount, with general admission and student pricing, and doors open at 6:00 p.m. ahead of the 6:30 p.m. showing.",
     "imageUrl": "https://sherbino.org/wp-content/uploads/2026/09/Warren-Miller-Days-Off-Banner.png",
     "description": "The Sherbino in Ridgway hosts a screening of *Days Off*, Warren Miller's 77th ski and snowboard film, hosted by Katie Burrell. Advance tickets are available at a discount, with general admission and student pricing, and doors open at 6:00 p.m. ahead of the 6:30 p.m. showing."
+  },
+  {
+    "title": "The Sherbino & OCPAG Present: Heather & Doug – First Friday Show",
+    "href": "https://sherbino.org/event/first-friday-heather-douglas-november-6/",
+    "date": "2026-11-06 18:00:00",
+    "endDate": "2026-11-06 20:00:00",
+    "location": "The Sherbino, Ridgway",
+    "copy": "A free live music show presented by The Sherbino and the Ouray County Performing Arts Guild, featuring performers Heather and Doug in the Sherbino's intimate \"Living Room\" setting. The event runs from 6:00 to 8:00 p.m., with a cash bar available, donations to the performers and venue welcome, and additional support provided by FUSE.",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/09/heather-and-doug-nov-first-fri.png",
+    "description": "A free live music show presented by The Sherbino and the Ouray County Performing Arts Guild, featuring performers Heather and Doug in the Sherbino's intimate \"Living Room\" setting. The event runs from 6:00 to 8:00 p.m., with a cash bar available, donations to the performers and venue welcome, and additional support provided by FUSE."
+  },
+  {
+    "title": "Monthly Welcome Home Alliance Veteran's Coffee at the Sherbino",
+    "href": "https://sherbino.org/event/monthly-welcome-home-alliance-veterans-coffee-at-the-sherbino/2026-11-10/",
+    "date": "2026-11-10 10:00:00",
+    "endDate": "2026-11-10 12:00:00",
+    "location": "Ridgway, CO",
+    "copy": "A recurring monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The event offers a relaxed, community-oriented space for veterans to connect with one another.",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
+    "description": "A recurring monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The event offers a relaxed, community-oriented space for veterans to connect with one another."
   }
 ]
