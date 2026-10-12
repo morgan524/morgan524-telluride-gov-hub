@@ -354,7 +354,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA","meetingId":"812 9136 3866","passcode":"440860.","phone":"301-715-8592"},
 
   "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083","sv":4,"ph":"bd74d669e41a67a8"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083","sv":4,"ph":"57c355a4e98595b5"},
 
   "county|2026-10-21|Board of County Commissioners Meeting":
     {"sv":4,"ph":"a12dfd2ce826475e"},
@@ -477,7 +477,13 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "ridgway|2026-11-11|Ridgway Town Council Regular Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"}
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "telluride|2026-11-02|Rescheduled/Special Meeting - Planning & Zoning Commission Chair - Nov 02 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8326","zoomUrl":"https://us06web.zoom.us/meeting/register/m65fl_EfRuC-m1IoGX6uiQ","meetingId":"815 3599 7736","passcode":"769982.","phone":"312-626-6799","sv":4},
+
+  "telluride|2026-10-22|(Rescheduled to 11/2) Planning & Zoning Commission Chair - Oct 22 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8105","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -824,8 +830,14 @@ const MEETING_PREVIEWS = {
   "telluride|2026-11-09|Open Space Commission - Nov 09 2026":
     "The Open Space Commission is expected to discuss priorities and criteria related to open space acquisition, management, and maintenance in Telluride, and may review open-space elements of local plans. A separate municipal process is also underway seeking consulting services to review employee rental housing policies.",
 
+  "telluride|2026-11-02|Rescheduled/Special Meeting - Planning & Zoning Commission Chair - Nov 02 2026":
+    "The Planning & Zoning Commission Chair is expected to consider a minor subdivision application for 510 W Columbia Avenue, which would vacate the lot line between two existing parcels and consolidate them into a single approximately 5,625-square-foot lot known as Lot 40R.",
+
+  "telluride|2026-10-22|(Rescheduled to 11/2) Planning & Zoning Commission Chair - Oct 22 2026":
+    "The Planning & Zoning Commission meeting originally scheduled for October 22, 2026 has been rescheduled to November 2, 2026 at 9:00 a.m. at Rebekah Hall. No specific agenda items have been disclosed for the rescheduled session.",
+
   "telluride|2026-10-12|Open Space Commission Site Walk - Oct 12 2026":
-    "The Open Space Commission will conduct a site walk along Tomboy Road to the High County area, meeting at Rebekah Hall before heading out. The session is informational in nature, with public comment also on the agenda."
+    "The Open Space Commission will conduct a site walk up Tomboy Road, meeting at Rebekah Hall before heading to the High Country area. The session is expected to allow commissioners to assess open space conditions firsthand."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -876,6 +888,16 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "Monthly Chamber of Commerce meeting open to all.",
     href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
+    img: ""
+  },
+  {
+    title: "2026 Telluride Mountain Club Recap Report",
+    source: "Telluride Mountain Club",
+    sourceKey: "tmc",
+    date: "October 12, 2026",
+    newsTopic: "community",
+    copy: "The post 2026 Telluride Mountain Club Recap Report appeared first on Telluride Mountain Club .",
+    href: "https://www.telluridemountainclub.org/2026-telluride-mountain-club-recap-report/",
     img: ""
   },
   {
@@ -1381,7 +1403,13 @@ const MANUAL_SUMMARIES = {
     "The November 11, 2026 Norwood Board of Trustees Meeting agenda hasn't been posted yet.",
 
   "ridgway|2026-11-11|Ridgway Town Council Regular Meeting":
-    "The November 11, 2026 Ridgway Town Council Regular Meeting agenda hasn't been posted yet."
+    "The November 11, 2026 Ridgway Town Council Regular Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-11-02|Rescheduled/Special Meeting - Planning & Zoning Commission Chair - Nov 02 2026":
+    "This rescheduled P&Z Chair meeting — moved from October 22 to November 2 — has a single item on it: a minor subdivision at 510 W Columbia Avenue/129 N Townsend Street. The application asks to vacate the internal lot line between Lots 39 and 40 in the West Telluride Addition and merge them into one approximately 5,625-square-foot lot. It's a lot consolidation in the Historic Residential zone district, not a new development proposal.",
+
+  "telluride|2026-10-22|(Rescheduled to 11/2) Planning & Zoning Commission Chair - Oct 22 2026":
+    "This October 22 Planning & Zoning Commission meeting has been rescheduled to Monday, November 2nd at 9:00 a.m. at Rebekah Hall, 113 W Columbia Ave."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2557,15 +2585,15 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "Protect yourself from seasonal illness",
+    title: "Therapy dogs bring calm and joy to students following shooting at Colorado high school",
     source: "Telluride Times",
-    date: "October 12, 2026",
-    firstSeen: "2026-10-12",
-    newsTopic: "health",
-    copy: "Flu is coming in early and from the West this year, Covid just peaked locally, and mosquito risk stays low here until the first hard frost. San Miguel and Ouray counties are running vaccine clinics for flu, Covid, and RSV — clinics have been filling up fast. Shots are covered by most insurance, and uninsured residents can still get vaccinated.",
+    date: "October 10, 2026",
+    firstSeen: "2026-10-10",
+    newsTopic: "education",
+    copy: "Two golden Labs, Norene and Polenta, are now permanent fixtures at Evergreen High School near Denver, helping students recover from a September 2024 shooting that wounded two students. The dogs, provided free through the nonprofit Canine Companions, walk the halls and visit classrooms daily. Students took to them quickly — the pair were even crowned prince and princess at homecoming.",
     claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_266f88d5-1e01-45ea-a5a4-a3cce066ddf2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/14/214e241f-8784-4624-afee-ebb29a42e11d/6acc857dbe067.image.jpg",
+    href: "https://www.telluridenews.com/news/state/article_459c9d3a-082e-578e-af5b-afd74bf89e75.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c0/ec0ce6f7-712b-5eb5-b4b8-cab6ccaf7cc0/6ac9ce581c95d.image.jpg",
     imgHiRes: true
   },
   {
@@ -2578,6 +2606,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_f6154cf3-81d1-57ed-9730-79ba587c0033.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/9d/89d0501b-226f-5495-a68b-d3d88f0d0243/6acc634cc4db1.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Protect yourself from seasonal illness",
+    source: "Telluride Times",
+    date: "October 12, 2026",
+    firstSeen: "2026-10-12",
+    newsTopic: "health",
+    copy: "Flu is coming in early and from the West this year, Covid just peaked locally, and mosquito risk stays low here until the first hard frost. San Miguel and Ouray counties are running vaccine clinics for flu, Covid, and RSV — clinics have been filling up fast. Shots are covered by most insurance, and uninsured residents can still get vaccinated.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_266f88d5-1e01-45ea-a5a4-a3cce066ddf2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/14/214e241f-8784-4624-afee-ebb29a42e11d/6acc857dbe067.image.jpg",
     imgHiRes: true
   },
   {
@@ -2614,18 +2654,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_12069120-1845-4229-bd4c-ee20acd15612.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/91/891e2f02-e32d-4d5b-a96f-1f3077dad0e5/6ac979293c4b2.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Therapy dogs bring calm and joy to students following shooting at Colorado high school",
-    source: "Telluride Times",
-    date: "October 10, 2026",
-    firstSeen: "2026-10-10",
-    newsTopic: "education",
-    copy: "Two golden Labs, Norene and Polenta, are now permanent fixtures at Evergreen High School near Denver, helping students recover from a September 2024 shooting that wounded two students. The dogs, provided free through the nonprofit Canine Companions, walk the halls and visit classrooms daily. Students took to them quickly — the pair were even crowned prince and princess at homecoming.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_459c9d3a-082e-578e-af5b-afd74bf89e75.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c0/ec0ce6f7-712b-5eb5-b4b8-cab6ccaf7cc0/6ac9ce581c95d.image.jpg",
     imgHiRes: true
   },
   {
@@ -4380,17 +4408,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Ballot Measure 5A Information Meeting",
-    link: "https://koto.org/event/ballor-measure-5a-information-meeting/",
-    description: "Find out why voting yes on 5A keeps Telluride schools stroung and how the measure affects you.",
-    pubDate: "2026-10-12T08:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Coffee Cowboy General Store, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Free Legal Clinic – Clínica Jurídica Gratuita",
     link: "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-10-13/",
     description: "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. Abogados voluntarios responderán a preguntas, ayudarán a llenar formularios y explicarán el proceso y el procedimiento de cuestiones jurídicas. Los abogados voluntarios no te representan y esta clínica es sólo informativa. CON CITA PREVIA. Llame a 970-728-4519 para más información y para registrarse.",
@@ -5399,7 +5416,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
     pubDate: "2026-10-13T19:30:00.000Z",
-    endDate: "2026-12-10",
+    endDate: "2026-12-11",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5542,7 +5559,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
-    title: "Postponed: Oct 16, 2026: Ridgway Star Party",
+    title: "Ridgway Star Party",
     link: "https://events.ourayridgwayevents.com/event/ridgway-star-party",
     description: "UPDATE: Due to the remnants of Tropical Storm Rachel moving into Utah and Western Colorado later today and after consultation with my colleagues at the Black Canyon Astronomical Society I have decided to RESCHEDULE the Star Party to Friday October 16th - same time at 7:30pm and Place - the Soccer Field A Celebration of Dark Skies in our community with the Black Canyon Astronomical Society, 7:30 p.m. at the Ridgway Athletic Park. Weather permitting, free and open to the public. Please park at the soccer field with headlights pointing east. Professional telescopes provided for viewing, with laser-guided constellation tours.",
     pubDate: "2026-10-17T01:30:00.000Z",
@@ -6915,6 +6932,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
+  },
+  {
+    title: "Market on the Plaza",
+    link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    description: "Mountain Village's Heritage Plaza hosts a weekly outdoor market featuring local vendors. The market brings together a variety of goods in the pedestrian-friendly plaza setting.",
+    pubDate: "2026-11-11T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   }
 ];
 
@@ -7001,6 +7029,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/63340/hanneke_cassel.800x533.webp"
+  },
+  {
+    title: "The Fig: Improv Night",
+    link: "https://www.telluride.com/event/the-fig-improv-night/",
+    description: "Come play, laugh, and get creative with The FIG at a free improv class hosted at Telluride Arts HQ! The fabulous Mary …",
+    pubDate: "2026-10-13",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63763/be0e495a-c695-051b-99d2-185777cf009c.800x533.webp"
   },
   {
     title: "Wash Party",
@@ -7814,7 +7853,7 @@ const HOUSING_LISTINGS = [
 
 const RIDGWAY_AGENDA_MAP = {
   "October 14, 2026":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---October-14%2C-2026.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Updated-Town-Council-Regular-Meeting-Packet---October-14%2C-2026.pdf",
 
   "September 9, 2026":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---September-9%2C-2026_0.pdf",

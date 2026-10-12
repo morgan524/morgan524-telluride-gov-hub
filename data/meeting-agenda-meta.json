@@ -423,7 +423,7 @@
   "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083",
     "sv": 4,
-    "ph": "bd74d669e41a67a8"
+    "ph": "57c355a4e98595b5"
   },
   "county|2026-10-21|Board of County Commissioners Meeting": {
     "sv": 4,
@@ -626,5 +626,17 @@
   "ridgway|2026-11-11|Ridgway Town Council Regular Meeting": {
     "sv": 4,
     "ph": "b858cb282617fb09"
+  },
+  "telluride|2026-11-02|Rescheduled/Special Meeting - Planning & Zoning Commission Chair - Nov 02 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8326",
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/m65fl_EfRuC-m1IoGX6uiQ",
+    "meetingId": "815 3599 7736",
+    "passcode": "769982.",
+    "phone": "312-626-6799",
+    "sv": 4
+  },
+  "telluride|2026-10-22|(Rescheduled to 11/2) Planning & Zoning Commission Chair - Oct 22 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8105",
+    "sv": 4
   }
 }

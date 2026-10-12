@@ -42,19 +42,6 @@
     "endDate": "2026-12-07"
   },
   {
-    "title": "Ballot Measure 5A Information Meeting",
-    "href": "https://koto.org/event/ballor-measure-5a-information-meeting/",
-    "date": "2026-10-12",
-    "time": "8:30 AM",
-    "location": "Coffee Cowboy General Store, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/voting-2.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Find out why voting yes on 5A keeps Telluride schools stroung and how the measure affects you.",
-    "type": "Community"
-  },
-  {
     "title": "Fall Break - Ridgway Schools",
     "href": "https://events.ourayridgwayevents.com/event/fall-break-ridgway-schools",
     "date": "2026-10-12",
@@ -93,7 +80,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
     "type": "Community",
-    "endDate": "2026-12-10"
+    "endDate": "2026-12-11"
   },
   {
     "title": "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
@@ -147,6 +134,19 @@
     "source": "Beacon",
     "desc": "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
     "type": "Food & Drink"
+  },
+  {
+    "title": "The Fig: Improv Night",
+    "href": "https://www.telluride.com/event/the-fig-improv-night/",
+    "date": "2026-10-13",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63763/be0e495a-c695-051b-99d2-185777cf009c.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Come play, laugh, and get creative with The FIG at a free improv class hosted at Telluride Arts HQ! The fabulous Mary …",
+    "type": "Arts & Film"
   },
   {
     "title": "Ouray Planned Power Outage",
@@ -555,6 +555,19 @@
     "desc": "Telluride Horror Show is a horror-themed event at the Sheridan Opera House. Taking place in mid-October, the event aligns with the Halloween season and is hosted at one of Telluride's most storied performance venues.",
     "type": "Arts & Film",
     "endDate": "2026-10-18"
+  },
+  {
+    "title": "Ridgway Star Party",
+    "href": "https://events.ourayridgwayevents.com/event/ridgway-star-party",
+    "date": "2026-10-16",
+    "time": "7:30 PM",
+    "location": "Frontier Field / Ridgway Athletic Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54121032080521/huge/44c09ba6ec5c167f288df3253c6ade57ae99a24f.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "UPDATE: Due to the remnants of Tropical Storm Rachel moving into Utah and Western Colorado later today and after consultation with my colleagues at the Black Canyon Astronomical Society I have decided to RESCHEDULE the Star Party to Friday…",
+    "type": "Community"
   },
   {
     "title": "17th Telluride Horror Show",
@@ -2344,6 +2357,19 @@
     "source": "Mountain Village",
     "desc": "A community workshop hosted by Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library, exploring the emotional intersection of grief and gratitude in response to environmental change.…",
     "type": "Talks & Classes"
+  },
+  {
+    "title": "Market on the Plaza",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    "date": "2026-11-11",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Mountain Village's Heritage Plaza hosts a weekly outdoor market featuring local vendors. The market brings together a variety of goods in the pedestrian-friendly plaza setting.",
+    "type": "Community"
   },
   {
     "title": "Watercolor & Wine with Katey Fetch: Moonlight & Mountains",
