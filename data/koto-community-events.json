@@ -1,27 +1,5 @@
 [
   {
-    "title": "Not-So-Young People's Theater presents Shrek The Musical",
-    "link": "https://koto.org/event/not-so-young-peoples-theater-presents-shrek-the-musical/2026-10-11/",
-    "description": "The Sheridan Arts Foundation's Not-So-Young People's Theater (NSYPT) invites audiences to experience the hilarious, heartwarming fairytale adventure Shrek The Musical this fall at the historic Sheridan Opera House from Thursday, October 8 through Sunday, October 11, 2026. Featuring a mixed-age cast made up of local performers, Shrek The Musical brings the beloved DreamWorks Animation characters to life with unforgettable original songs, outrageous comedy, and a powerful message about friendship, acceptance, and celebrating what makes each of us unique. The cast features : Elijah Aumiller, Jennifer Birrittella, Eric Borchers, Rachel Brand (as Fiona), Dylan Brooks (as Lord Farquaad), Theo Brooks, Jack Caruso, Kevin Douglas (as Shrek), Arthur Forsythe, Elizabeth Guest, Simon Guest, Karen Gugliomone, Ryan Heidenreich, Elizabeth Hinkley, Tagen Kaestner, Meghan Knowles, Bryce Laney, Jennifer Laney, Andrew Murphy, Megan Murphy, Niko Pantovich-Gonzalez (as Donkey), Yana Pollard, Lily Reed, Stella Reed, Susa Smith, Pepper Tyson, and James Van Hooser. …",
-    "pubDate": "2026-10-11T14:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Sheridan Opera House, Telluride",
-    "imageUrl": ""
-  },
-  {
-    "title": "Tea and Tarot",
-    "link": "https://koto.org/event/tea-and-tarot/2026-10-11/",
-    "description": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    "pubDate": "2026-10-11T14:30:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
     "title": "Ballot Measure 5A Information Meeting",
     "link": "https://koto.org/event/ballor-measure-5a-information-meeting/",
     "description": "Find out why voting yes on 5A keeps Telluride schools stroung and how the measure affects you.",
@@ -493,5 +471,16 @@
     "category": "Community Event",
     "location": "Wilkinson Public Library, Telluride",
     "imageUrl": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    "title": "Free Legal Clinic – Clínica Jurídica Gratuita",
+    "link": "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-11-10/",
+    "description": "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. Abogados voluntarios responderán a preguntas, ayudarán a llenar formularios y explicarán el proceso y el procedimiento de cuestiones jurídicas. Los abogados voluntarios no te representan y esta clínica es sólo informativa. CON CITA PREVIA. Llame a 970-728-4519 para más información y para registrarse.",
+    "pubDate": "2026-11-10T16:00:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "",
+    "imageUrl": ""
   }
 ]

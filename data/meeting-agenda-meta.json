@@ -1,11 +1,4 @@
 {
-  "med|2026-09-11|Board Work Session": {
-    "sv": 4,
-    "agendaUrl": null,
-    "zoomUrl": "https://us02web.zoom.us/j/83975455041?pwd=JFP4C7xMrNnAn93sWUhROdSuVzQbeq.1",
-    "meetingId": "839 7545 5041",
-    "passcode": "388003"
-  },
   "telluride|2026-09-14|Open Space Commission - Sep 14 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8131",
     "sv": 4,
@@ -623,6 +616,14 @@
     "ph": "410853eec5221d83"
   },
   "norwood|2026-11-10|Norwood Water Commission Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "norwood|2026-11-11|Board of Trustees Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "ridgway|2026-11-11|Ridgway Town Council Regular Meeting": {
     "sv": 4,
     "ph": "b858cb282617fb09"
   }

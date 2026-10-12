@@ -12,18 +12,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/60890/download.800x533.webp"
   },
   {
-    "title": "Patagonia Telluride Coffee Club",
-    "link": "https://www.telluride.com/event/patagonia-telluride-coffee-club/",
-    "description": "Starting in April, Patagonia Telluride is teaming up with The Pour Over Pedaler once a month through October to bring …",
-    "pubDate": "2026-04-18",
-    "endDate": "2026-10-10",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/62111/screenshot_2026-04-01_at_2_21_59_pm.800x533.webp"
-  },
-  {
     "title": "Live Music at Alloy Kitchen",
     "link": "https://www.telluride.com/event/live-music-at-alloy-kitchen/",
     "description": "Free live music all season long. Alloy Kitchen at Mountain Lodge Telluride hosts a rotating lineup of local favorites - …",
@@ -46,18 +34,6 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/49105/scott-rodgerson-zlhbjxbccec-unsplash.800x533.webp"
-  },
-  {
-    "title": "Gaiascope Saturday Sessions",
-    "link": "https://www.telluride.com/event/gaiascope-saturday-sessions/",
-    "description": "Gaiascope Saturday Sessions Live music + Kaleidoscope art every Saturday.",
-    "pubDate": "2026-09-12",
-    "endDate": "2026-10-10",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63515/screenshot_2026-09-05_at_11_00_00_am.800x533.webp"
   },
   {
     "title": "Volunteer Trail Work Day",
@@ -278,5 +254,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/28866/mainstholiday_rb.800x533.webp"
+  },
+  {
+    "title": "WinterSing!",
+    "link": "https://www.telluride.com/event/telluride-choral-society-wintersing/",
+    "description": "Celebrate the joy of the season early this year with light-bearing, beautiful choral music presented by Hal Adler and …",
+    "pubDate": "2026-12-11",
+    "endDate": "2026-12-14",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/45744/download_7.800x533.webp"
   }
 ]
