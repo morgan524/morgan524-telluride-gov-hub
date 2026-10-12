@@ -5006,30 +5006,6 @@ const BEACON_EVENTS = [
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
     description: "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
-    date: "2026-10-06",
-    time: "6:00 PM",
-    source: "beacon",
-    sourceLabel: "Beacon",
-    category: "Community Event",
-    location: "The Well, 122 S Aspen, Telluride",
-    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
-  },
-  {
-    title: "Pickleball Nights",
-    link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night pickleball, no experience necessary. All supplies provided.",
-    date: "2026-10-08",
-    time: "7:00-9:00 PM",
-    source: "beacon",
-    sourceLabel: "Beacon",
-    category: "Community Event",
-    location: "Telluride Racket Club",
-    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
-  },
-  {
-    title: "Weekly Young Adult Gathering",
-    link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
     date: "2026-10-13",
     time: "6:00 PM",
     source: "beacon",
@@ -5041,7 +5017,7 @@ const BEACON_EVENTS = [
   {
     title: "Pickleball Nights",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night pickleball, no experience necessary. All supplies provided.",
+    description: "Thursday night pickleball with no experience necessary. All supplies provided.",
     date: "2026-10-15",
     time: "7:00-9:00 PM",
     source: "beacon",
@@ -5065,7 +5041,7 @@ const BEACON_EVENTS = [
   {
     title: "Pickleball Nights",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night pickleball, no experience necessary. All supplies provided.",
+    description: "Thursday night pickleball with no experience necessary. All supplies provided.",
     date: "2026-10-22",
     time: "7:00-9:00 PM",
     source: "beacon",
@@ -5089,7 +5065,7 @@ const BEACON_EVENTS = [
   {
     title: "Pickleball Nights",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night pickleball, no experience necessary. All supplies provided.",
+    description: "Thursday night pickleball with no experience necessary. All supplies provided.",
     date: "2026-10-29",
     time: "7:00-9:00 PM",
     source: "beacon",
@@ -5113,7 +5089,7 @@ const BEACON_EVENTS = [
   {
     title: "Pickleball Nights",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night pickleball, no experience necessary. All supplies provided.",
+    description: "Thursday night pickleball with no experience necessary. All supplies provided.",
     date: "2026-11-05",
     time: "7:00-9:00 PM",
     source: "beacon",
@@ -5137,8 +5113,32 @@ const BEACON_EVENTS = [
   {
     title: "Pickleball Nights",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Thursday night pickleball, no experience necessary. All supplies provided.",
+    description: "Thursday night pickleball with no experience necessary. All supplies provided.",
     date: "2026-11-12",
+    time: "7:00-9:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "Telluride Racket Club",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Weekly Young Adult Gathering",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
+    date: "2026-11-17",
+    time: "6:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "The Well, 122 S Aspen, Telluride",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Pickleball Nights",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Thursday night pickleball with no experience necessary. All supplies provided.",
+    date: "2026-11-19",
     time: "7:00-9:00 PM",
     source: "beacon",
     sourceLabel: "Beacon",
@@ -5155,7 +5155,7 @@ const CHAMBER_MUSIC_EVENTS = [
   {
     title: "Hanneke Cassel Trio",
     link: "https://telluridechambermusic.org/concert/hanneke-cassel-trio",
-    description: "Our \"Not Your Average Classical\" series is back!",
+    description: "Part of the \"Not Your Average Classical\" series. Performed at The Alibi.",
     date: "2026-10-13",
     time: "7:00 PM",
     source: "chamber-music",
@@ -5163,6 +5163,42 @@ const CHAMBER_MUSIC_EVENTS = [
     category: "Concert",
     location: "The Alibi",
     imageUrl: "https://telluridechambermusic.org/concerts/hanneke-cassel-trio.webp"
+  },
+  {
+    title: "Telluride Community Concert - January",
+    link: "https://telluridechambermusic.org/concert/telluride-community-concert--september",
+    description: "An hour of free chamber music for community.",
+    date: "2027-01-21",
+    time: "5:30 PM",
+    source: "chamber-music",
+    sourceLabel: "Telluride Chamber Music",
+    category: "Concert",
+    location: "Telluride Science and Innovation Center",
+    imageUrl: "https://telluridechambermusic.org/concerts/telluride-community-concert--september.webp"
+  },
+  {
+    title: "Chill with Chamber Music! — Norwood",
+    link: "https://telluridechambermusic.org/concert/norwood-aug",
+    description: "An hour of gorgeous music in the West End.",
+    date: "2027-01-28",
+    time: "6:00 PM",
+    source: "chamber-music",
+    sourceLabel: "Telluride Chamber Music",
+    category: "Concert",
+    location: "The Livery, Norwood, CO",
+    imageUrl: "https://telluridechambermusic.org/concerts/norwood-aug.webp"
+  },
+  {
+    title: "Stewart Goodyear",
+    link: "https://telluridechambermusic.org/concert/stewart-goodyear",
+    description: "One of the great pianists of this generation performing Beethoven, Ravel and Gershwin.",
+    date: "2027-02-03",
+    time: "7:00 PM",
+    source: "chamber-music",
+    sourceLabel: "Telluride Chamber Music",
+    category: "Concert",
+    location: "Michael D. Palm Theatre",
+    imageUrl: "https://telluridechambermusic.org/concerts/stewart-goodyear.webp"
   }
 ];
 
