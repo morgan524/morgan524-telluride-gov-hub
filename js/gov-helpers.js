@@ -828,13 +828,13 @@ const MEETING_PREVIEWS = {
     "The Planning & Zoning Commission meeting originally scheduled for October 22, 2026 has been rescheduled to November 2, 2026 at 9:00 a.m. at Rebekah Hall. No specific agenda items have been disclosed for the rescheduled session.",
 
   "telluride|2026-10-13|Special Town Council Budget - Oct 13 2026":
-    "Council is expected to review the Town of Telluride's 2027 budget during a work session covering enterprise funds, open space, affordable housing, and miscellaneous funds. Discussion will also include a water and sewer rate study, affordable housing finances, and a draft 2027 fee schedule and town goals.",
+    "Council is expected to review the Town of Telluride's 2027 budget during a special work session, covering enterprise funds, open space, affordable housing, water and wastewater rates, and a draft fee schedule, along with draft Town Council goals and objectives for the coming fiscal year.",
 
   "ouray|2026-10-13|Board of County Commissioners":
-    "Board will consider routine expenditure approvals, ratification of Commissioner Niece's designation to serve on CCI's Legislative Committee, and a Public Trustee report. The meeting also includes an open public comment period for community members to raise issues not otherwise on the agenda.",
+    "Board will consider routine expenditures, ratification of Commissioner Niece's designation to serve on CCI's Legislative Committee, and a Public Trustee report. The meeting also includes a public comment period for community members to raise concerns not otherwise on the agenda.",
 
   "ouraycity|2026-10-13|Ouray Planning Commission Regular Meeting":
-    "The Ouray Planning Commission will discuss proposed regulations governing natural medicine businesses operating within the city, with presenter Harper Powell leading the item. Commissioners will review a draft ordinance and accompanying staff memo related to the regulation framework."
+    "The Ouray Planning Commission will discuss proposed regulations governing natural medicine businesses operating within the city. Commissioners will review a draft ordinance and accompanying memo outlining how such businesses may be permitted or restricted under local law."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -2565,6 +2565,30 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "‘Deep-seated Telluride identity’: SMC Sheriff candidate Lane Masters",
+    source: "Telluride Times",
+    date: "October 13, 2026",
+    firstSeen: "2026-10-13",
+    newsTopic: "public-safety",
+    copy: "Lane Masters, 37, is running for San Miguel County Sheriff — a lifelong goal for the Telluride native and son of retiring 46-year Sheriff Bill Masters. He brings nine years with the Bismarck PD plus current local deputy and sergeant experience. He's focused on staffing and calls disaster preparedness the county's biggest public safety challenge.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/elections/article_fcaa44d8-c396-49b5-8f3c-362a90a459d3.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/e3/2e30d9d6-1276-4b5b-b378-2bdfe705d42c/6acdd259d2be5.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "A modern Mayberry: SMC Sheriff candidate Dan Covault",
+    source: "Telluride Times",
+    date: "October 13, 2026",
+    firstSeen: "2026-10-13",
+    newsTopic: "public-safety",
+    copy: "Dan Covault, appointed San Miguel County Sheriff 16 months ago after 20 years in the office, is now running his first public election. He's added water tanks for fire risk areas, expanded mental health programs, and built a corrections academy. Deep roots here — he's worked the region since his teens.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/elections/article_2c1a7889-a43c-4ab1-be1f-ee30552409b2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/22/a22f7d9f-2d4c-4f7f-9c15-45e4b7dbf910/6acdca94022ff.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Native athlete pride: Shiyazh Pete recognized on Indigenous Peoples Day",
     source: "Telluride Times",
     date: "October 12, 2026",
@@ -3577,6 +3601,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/SBA-Economic-Injury-Disaster-Loan-Data-Collection-Form-2026-10-01.pdf",
+    img: ""
+  },
+  {
+    title: "Public Hearing Notice Wednesday, October 21, 2026 at 5:30pm: Amendment to Master Plan considering adding an addendum \"Water Supply Element\"",
+    source: "Town of Ridgway",
+    date: "October 12, 2026",
+    firstSeen: "2026-10-13",
+    newsTopic: "land-use",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.10.21_public-hearing-notice.pdf",
     img: ""
   },
   {
@@ -6119,6 +6154,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54066522411096/huge/885e72b708524a41760d36b4ecda6d7b31bbbc06.jpg"
   },
   {
+    title: "Introduction to Copper Jewelry with Emily Knickerbocker",
+    link: "https://events.ourayridgwayevents.com/event/introduction-to-copper-jewelry-with-emily-knickerbocker-6777",
+    description: "Introduction to Copper Jewelry with Emily Knickerbocker November 7th, 2026 | 10:00 am – 2:00 pm Weehawken Montrose $75 includes all supplies Discover the creative possibilities of copper in this introductory jewelry making class! Whether you’re brand new to working with metal or looking to expand your artistic practice, this class will introduce you to the basics of creating handcrafted copper jewelry. Students will learn essential techniques for working with copper wire and sheet metal, including sawing, filing, shaping, and texturing/stamping. You’ll explore how to create wearable pieces such as earrings, pendants, and bracelets while experimenting with finishing methods, including patinas. The class will also introduce basic copper enameling processes, where powdered glass is fused to the metal using a torch or to add various colors and textures to your work. All tools and materials are provided, and no prior experience is necessary—just bring your creativity and enthusiasm! …",
+    pubDate: "2026-11-07T17:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Montrose",
+    imageUrl: "https://localist-images.azureedge.net/photos/54225765981546/huge/1c7a068a95bcbad17160b0d782b195f75460b1cd.jpg"
+  },
+  {
     title: "Watercolor with Anita Winter: “Still Waters”",
     link: "https://events.ourayridgwayevents.com/event/watercolor-with-anita-winter-still-waters",
     description: "Learn to create reflections and still-water effects in watercolor with Anita Winter through demonstrations, guided exercises and individualized instruction. Participants will practice several techniques and apply them to a finished painting. A reference image is provided; participants should bring their own watercolor supplies.",
@@ -6128,6 +6174,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Annex on Cora",
     imageUrl: "https://localist-images.azureedge.net/photos/54066522649708/huge/a35808b29295063770a1a017fa3e070e4b7d2146.jpg"
+  },
+  {
+    title: "Watercolor with Anita Winter: “Still Waters”",
+    link: "https://events.ourayridgwayevents.com/event/watercolor-with-anita-winter-still-waters-3074",
+    description: "Watercolor with Anita Winter: “Still Waters” Saturday, November 7 | 10:00 a.m.–3:00 p.m. Cora Annex, Ridgway Tuition: $85 Learn how to create beautiful reflections in watercolor through demonstrations, guided exercises, and individualized instruction. Students will practice a variety of techniques before applying what they’ve learned to complete a finished painting. A reference image will be provided. Please bring your own watercolor supplies, including a basic selection of paints (blues, greens, and primary colors), a palette, an assortment of brushes, and at least four sheets of 11″ × 14″ watercolor paper. For those who would like to expand their supplies, Anita Winters recommends the following materials (available from Blick.com): Palette Blick Palette (#A03036-1002) or similarPaper 11″ × 14″ professional-quality watercolor paper (140–200 lb), such as Saunders Waterford or ArchesPaints Quinacridone Burnt Orange – Daniel SmithCobalt Blue – Daniel SmithOpera – HolbeinNew Gamboge – Daniel SmithBright Violet – HolbeinTransparent Yellow – Winsor …",
+    pubDate: "2026-11-07T17:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Annex on Cora",
+    imageUrl: "https://localist-images.azureedge.net/photos/54225894464998/huge/40b45a6163c5f0a2e613c61175c30464ae416f5b.jpg"
   },
   {
     title: "Delusions and Grandeur",
@@ -6184,6 +6241,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Annex on Cora",
     imageUrl: "https://localist-images.azureedge.net/photos/54066522860674/huge/ec6044316283ccc798d207fc858154d0421bc0ff.jpg"
+  },
+  {
+    title: "Watercolor & Wine with Katey Fetch: Moonlight & Mountains",
+    link: "https://events.ourayridgwayevents.com/event/watercolor-wine-with-katey-fetch-moonlight-mountains-5914",
+    description: "Unwind, get creative, and discover the joy of watercolor in this relaxed paint-and-sip class! Designed for beginners but welcoming to artists of all experience levels, this class will guide you step by step through creating a beautiful watercolor painting in a fun, supportive environment. A beverage and all supplies are included. About the Instructor: Katey Fetch Katey Fetch hails from a small town in Colorado, where she continues to learn how to be an artist. Though she went to art school, she took a long hiatus from art and is in the midst of rediscovering what art means to her. Her favorite mediums are graphite pencil and watercolor. She draws inspiration from many talented artists, both past and present, nature, and the wonder of the three feral beasts she’s raising—aka, her daughters. Katey enjoys creating portraits, forlorn figures, and interesting compositions.",
+    pubDate: "2026-11-13T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Annex on Cora",
+    imageUrl: "https://localist-images.azureedge.net/photos/54226967465916/huge/f2b2a7765648f57e0960f267f5571df9510dfcd8.jpg"
   },
   {
     title: "Ridgway Independent Film Fest 2026",
@@ -6482,6 +6550,17 @@ const NORWOOD_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Board Of Trustees Public Hearing Resolution No 2026 0812",
+    link: "https://www.norwoodtown.com/2026-10-15-board-of-trustees-public-hearing-resolution-no-2026-0812",
+    description: "A public hearing hosted by the Town of Norwood's Board of Trustees regarding Resolution No. 2026-0812. The meeting is open to the public and provides an opportunity for community members to hear and weigh in on the resolution under consideration.",
+    pubDate: "2026-10-15T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Government Meeting",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
     title: "Senior Meals",
     link: "https://www.norwoodtown.com/2026-10-15-senior-meals",
     description: "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather, share a meal, and connect with neighbors. This recurring community event takes place in Norwood and is organized through local town services.",
@@ -6639,6 +6718,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   },
   {
+    title: "Wash Party",
+    link: "https://townofmountainvillage.com/explore/events/all-events/wash-party/",
+    description: "A community washing event hosted by Patagonia Telluride, where residents can bring winter gear — including shell jackets and insulated shells — to The Laundromat in Mountain Village for a group clean-up session. It's a practical way to refresh outdoor equipment ahead of the season.",
+    pubDate: "2026-10-15T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/50068/wash_party_flyer.png"
+  },
+  {
     title: "Live Music at Alloy Kitchen",
     link: "https://townofmountainvillage.com/explore/events/all-events/live-music-at-alloy-kitchen-1/",
     description: "Free live music at Alloy Kitchen in Mountain Lodge Telluride, featuring a rotating lineup of local artists including Apres Nova and others throughout the season. Performances are offered four nights a week at no charge, making it a recurring community gathering spot in Mountain Village.",
@@ -6769,6 +6859,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    title: "Coffee and Climate Conversations: Super El Niño",
+    link: "https://townofmountainvillage.com/explore/events/all-events/coffee-and-climate-conversations-super-el-nino/",
+    description: "Across our community, Super El Niño rumors are building hope and excitement that a snowy winter full of powder days is on the horizon.",
+    pubDate: "2026-10-29T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/50058/october_coffee_chat_instagram_post_45.jpg"
   },
   {
     title: "Movies Under the Stars",

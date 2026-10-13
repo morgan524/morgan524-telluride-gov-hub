@@ -1077,7 +1077,7 @@ const AIRPORT_CACHED_DATA = [
     time: "12:00 PM",
     title: "TRAA Board of Commissioners Meeting",
     agendaUrl: null,
-    packetUrl: null,
+    packetUrl: "https://tellurideairport.com/wp-content/uploads/2026/10/TRAA-Board-Packet-101526.pdf",
     special: false,
     location: "Terminal Observation Lounge, Telluride Regional Airport"
   },

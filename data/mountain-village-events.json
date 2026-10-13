@@ -66,6 +66,17 @@
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   },
   {
+    "title": "Wash Party",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/wash-party/",
+    "description": "A community washing event hosted by Patagonia Telluride, where residents can bring winter gear — including shell jackets and insulated shells — to The Laundromat in Mountain Village for a group clean-up session. It's a practical way to refresh outdoor equipment ahead of the season.",
+    "pubDate": "2026-10-15T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/50068/wash_party_flyer.png"
+  },
+  {
     "title": "Live Music at Alloy Kitchen",
     "link": "https://townofmountainvillage.com/explore/events/all-events/live-music-at-alloy-kitchen-1/",
     "description": "Free live music at Alloy Kitchen in Mountain Lodge Telluride, featuring a rotating lineup of local artists including Apres Nova and others throughout the season. Performances are offered four nights a week at no charge, making it a recurring community gathering spot in Mountain Village.",
@@ -196,6 +207,17 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    "title": "Coffee and Climate Conversations: Super El Niño",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/coffee-and-climate-conversations-super-el-nino/",
+    "description": "Across our community, Super El Niño rumors are building hope and excitement that a snowy winter full of powder days is on the horizon.",
+    "pubDate": "2026-10-29T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/50058/october_coffee_chat_instagram_post_45.jpg"
   },
   {
     "title": "Movies Under the Stars",
