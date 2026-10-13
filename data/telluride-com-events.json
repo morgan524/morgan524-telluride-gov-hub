@@ -36,18 +36,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/49105/scott-rodgerson-zlhbjxbccec-unsplash.800x533.webp"
   },
   {
-    "title": "Volunteer Trail Work Day",
-    "link": "https://www.telluride.com/event/volunteer-trail-work-day/",
-    "description": "Join the Telluride Mountain Club for their volunteer trail work day! Spend time with friends, get your hands dirty, and …",
-    "pubDate": "2026-09-17",
-    "endDate": "2026-10-11",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63536/vol-trail-work--499x624.800x533.webp"
-  },
-  {
     "title": "Shrek the Musical",
     "link": "https://www.telluride.com/event/shrek-the-musical/",
     "description": "The Sheridan Arts Foundation’s 6th annual Not- So Young People’s Theater production! NYSPT presents Shrek The …",
@@ -277,5 +265,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/45744/download_7.800x533.webp"
+  },
+  {
+    "title": "Mountain Village Holiday Prelude",
+    "link": "https://www.telluride.com/event/mountain-village-holiday-prelude/",
+    "description": "Mountain Village will once again be transformed into the North Pole for this year’s Holiday Prelude celebration on …",
+    "pubDate": "2026-12-12",
+    "endDate": "2026-12-14",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/35913/holidayprelude_webbnr_1900x1010.800x533.webp"
   }
 ]

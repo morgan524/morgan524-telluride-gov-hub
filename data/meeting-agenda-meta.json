@@ -307,7 +307,7 @@
   },
   "ridgway|2026-10-14|Ridgway Town Council Regular Meeting": {
     "sv": 4,
-    "agendaUrl": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---October-14%2C-2026.pdf",
+    "agendaUrl": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Updated-Town-Council-Regular-Meeting-Packet---October-14%2C-2026.pdf",
     "zoomUrl": "https://us02web.zoom.us/j/86099482328?pwd=mlhYCUDObNpU8FLRgTKoSJmuljfclB.1",
     "meetingId": "860 9948 2328",
     "passcode": "019813",
@@ -440,7 +440,10 @@
   "telluride|2026-10-22|Planning & Zoning Commission - Oct 22 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8106",
     "sv": 4,
-    "ph": "c3a3df604a3fce63"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/OC4r5SGcR6S0q5DBnXPh8Q",
+    "meetingId": "893 9320 2174",
+    "passcode": "963785.",
+    "phone": "301-715-8592"
   },
   "telluride|2026-10-22|Planning & Zoning Commission Chair - Oct 22 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8105",
@@ -558,7 +561,7 @@
   "telluride|2026-11-05|Special Meeting - Planning & Zoning Commission - Nov 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312",
     "sv": 4,
-    "ph": "65b9bd7a7d287f9a"
+    "ph": "930623a06e6efd7f"
   },
   "telluride|2026-11-05|Town Council Budget - Nov 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054",
@@ -638,5 +641,9 @@
   "telluride|2026-10-22|(Rescheduled to 11/2) Planning & Zoning Commission Chair - Oct 22 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8105",
     "sv": 4
+  },
+  "smart|2026-11-12|SMART Board of Directors": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   }
 }

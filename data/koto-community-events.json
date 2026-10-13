@@ -471,5 +471,16 @@
     "category": "Community Event",
     "location": "",
     "imageUrl": ""
+  },
+  {
+    "title": "Sewing 101 with Melissa",
+    "link": "https://koto.org/event/sewing-101-with-melissa/2026-11-11/",
+    "description": "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.",
+    "pubDate": "2026-11-11T17:00:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/02/sewing.jpg"
   }
 ]

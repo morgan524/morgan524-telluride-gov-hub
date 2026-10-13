@@ -2,50 +2,14 @@
   {
     "title": "Fall Break - Ridgway Schools",
     "link": "https://events.ourayridgwayevents.com/event/fall-break-ridgway-schools",
-    "description": "Fall Break for Ridgway Schools begins on this date, giving students in the Ridgway district a scheduled pause from the academic calendar. The break is a planned recess coordinated through the Ouray-Ridgway area school calendar.",
-    "pubDate": "2026-10-12T06:00:00.000Z",
+    "description": "Fall Break for Ridgway Schools is a scheduled school holiday period giving students and families time off from the regular academic calendar. This community calendar listing marks the break as observed by the Ridgway school district.",
+    "pubDate": "2026-10-13T06:00:00.000Z",
     "endDate": "2026-10-16",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
     "category": "Community Event",
     "location": "",
     "imageUrl": "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
-  },
-  {
-    "title": "OPL Read a Book - Get a Pumpkin",
-    "link": "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
-    "description": "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
-    "pubDate": "2026-10-12T16:00:00.000Z",
-    "endDate": "2026-10-31",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "Ouray Public Library",
-    "imageUrl": "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg"
-  },
-  {
-    "title": "Ongoing: Space Cowboy by Dundee & Lee",
-    "link": "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
-    "description": "Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado artists Emilie Odeile and Ken Chapin of Dundee & Lee, the exhibition centers on a 10-foot-tall fiber rocket topped with a cowboy hat and Mission Control consoles that gather images, voices, stories, and discoveries as Space Cowboy travels from community to community. Throughout October, the exhibition comes alive with special events and programming, including appearances by Colorado Poet Laureate Crisosto Apache, community conversations, and opportunities for Ridgway residents to become part of the continuing Space Cowboy story. Space Cowboy travels with a simple idea: Colorado is the teacher and Space Cowboy is the learner. Every community adds something new to the mission. …",
-    "pubDate": "2026-10-12T16:00:00.000Z",
-    "endDate": "2026-10-29",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "Decker Community Room",
-    "imageUrl": "https://localist-images.azureedge.net/photos/53975670057489/huge/75be37bbb2b6bd7ba17f7754e11da5a0eaf5930c.jpg"
-  },
-  {
-    "title": "Senior Lunch by Neighbor to Neighbor",
-    "link": "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
-    "description": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
-    "pubDate": "2026-10-12T18:00:00.000Z",
-    "endDate": "2026-12-07",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "",
-    "imageUrl": "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
   },
   {
     "title": "Ouray Planned Power Outage",
@@ -81,6 +45,30 @@
     "category": "Community Event",
     "location": "The Sherbino",
     "imageUrl": "https://localist-images.azureedge.net/photos/52236172073282/huge/134613035140f6c008febe657f2e7e23acc365e9.jpg"
+  },
+  {
+    "title": "OPL Read a Book - Get a Pumpkin",
+    "link": "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
+    "description": "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
+    "pubDate": "2026-10-13T16:00:00.000Z",
+    "endDate": "2026-10-31",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Ouray Public Library",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg"
+  },
+  {
+    "title": "Ongoing: Space Cowboy by Dundee & Lee",
+    "link": "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
+    "description": "Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado artists Emilie Odeile and Ken Chapin of Dundee & Lee, the exhibition centers on a 10-foot-tall fiber rocket topped with a cowboy hat and Mission Control consoles that gather images, voices, stories, and discoveries as Space Cowboy travels from community to community. Throughout October, the exhibition comes alive with special events and programming, including appearances by Colorado Poet Laureate Crisosto Apache, community conversations, and opportunities for Ridgway residents to become part of the continuing Space Cowboy story. Space Cowboy travels with a simple idea: Colorado is the teacher and Space Cowboy is the learner. Every community adds something new to the mission. …",
+    "pubDate": "2026-10-13T16:00:00.000Z",
+    "endDate": "2026-10-29",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Decker Community Room",
+    "imageUrl": "https://localist-images.azureedge.net/photos/53975670057489/huge/75be37bbb2b6bd7ba17f7754e11da5a0eaf5930c.jpg"
   },
   {
     "title": "Guided Tour: Historic Beaumont Hotel & Spa",
@@ -317,6 +305,18 @@
     "category": "Community Event",
     "location": "687 N Cora Street, Ridgway, CO 81432",
     "imageUrl": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    "title": "Senior Lunch by Neighbor to Neighbor",
+    "link": "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
+    "description": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
+    "pubDate": "2026-10-19T18:00:00.000Z",
+    "endDate": "2026-12-07",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "",
+    "imageUrl": "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
   },
   {
     "title": "BRITLEY & MATT",
@@ -854,6 +854,17 @@
     "imageUrl": "https://localist-images.azureedge.net/photos/54066522649708/huge/a35808b29295063770a1a017fa3e070e4b7d2146.jpg"
   },
   {
+    "title": "Delusions and Grandeur",
+    "link": "https://events.ourayridgwayevents.com/event/delusions-and-grandeur",
+    "description": "ABOUT THE PERFORMANCE “As irreverent as it is poignant” — Australian Arts Review Come for the music; stay for the existential crisis. Genre-blurring jester and cellist Karen Hall peels back the layers of concert-hall formality until only the humanity—and insanity—of the artist behind the instrument remains. And, perhaps, yourself. Featuring J. S. Bach’s Suite No. 1 in G Major alongside personal comedic pieces crafted in Idiot classes, Delusions and Grandeur fuses music, pathos, and foolery into a sharp, heartfelt performance about identity, expectations, and success. Karen Hall is an award-winning performer based in Los Angeles. Her work has appeared at Carnegie Hall and the Hollywood Bowl, in studio sessions and Emmy-nominated soundtracks, and for four seasons on camera as the cellist on Glee. She performs regularly with orchestras throughout greater Los Angeles and has worked with artists including Shawn Mendes, Geoff Emerick, and Yoshiki. …",
+    "pubDate": "2026-11-08T02:30:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "The Wright Opera House",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54225037316225/huge/c583582735f83f59b79ee5437328aee246069596.jpg"
+  },
+  {
     "title": "OuROCK! 2026 Climbing Festival",
     "link": "https://events.ourayridgwayevents.com/event/ourock-2026-climbing-festival",
     "description": "The Annual Ouray Climbers Alliance Fundraiser & Membership Drive is back! Come join our local climbing community for a free, all-ages festival! Climb, compete, eat, drink and hang out while supporting the work that keeps Ouray’s climbing areas accessible, maintained, and thriving. This year we’ll feature: 🧗 Walk-up guided climbing wall for adults & kids, with gear provided 🎶 Live DJ music with DJ Straylight 🏆 Climbing competition open to all ages 🍕 Fresh-baked, hand-tossed pizza* 🍺 Beer & other beverages* 🎟️ Silent auction & raffle *Members receive free beer and pizza, plus one raffle ticket. Beer is 21+. Food and beverages are available while supplies last. The event is free and open to everyone, and you’re invited to join OCA as a member at the event. …",
@@ -1129,7 +1140,7 @@
     "link": "https://events.ourayridgwayevents.com/event/weehawken-dance-presents-the-nutcracker-remixed",
     "description": "Weehawken Dance and America’s Mattress present The Nutcracker ~ Remixed, a large-scale community dance production blending classical ballet with contemporary movement, jazz, hip hop, aerial arts and other styles. More than 400 local dancers participate across six split-cast performances at the Montrose Pavilion. Live-stream tickets are expected to become available shortly before each performance.",
     "pubDate": "2026-12-10T01:00:00.000Z",
-    "endDate": "2026-12-11",
+    "endDate": "2026-12-12",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
     "category": "Community Event",

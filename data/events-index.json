@@ -1,74 +1,5 @@
 [
   {
-    "title": "OPL Read a Book - Get a Pumpkin",
-    "href": "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
-    "date": "2026-10-12",
-    "time": "10:00 AM",
-    "location": "Ouray Public Library",
-    "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
-    "type": "Family & Kids",
-    "endDate": "2026-10-31"
-  },
-  {
-    "title": "Ongoing: Space Cowboy by Dundee & Lee",
-    "href": "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
-    "date": "2026-10-12",
-    "time": "10:00 AM",
-    "location": "Decker Community Room",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53975670057489/huge/75be37bbb2b6bd7ba17f7754e11da5a0eaf5930c.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado…",
-    "type": "Community",
-    "endDate": "2026-10-29"
-  },
-  {
-    "title": "Senior Lunch by Neighbor to Neighbor",
-    "href": "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
-    "date": "2026-10-12",
-    "time": "12:00 PM",
-    "location": "",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
-    "type": "Community",
-    "endDate": "2026-12-07"
-  },
-  {
-    "title": "Fall Break - Ridgway Schools",
-    "href": "https://events.ourayridgwayevents.com/event/fall-break-ridgway-schools",
-    "date": "2026-10-12",
-    "time": "",
-    "location": "",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Fall Break for Ridgway Schools begins on this date, giving students in the Ridgway district a scheduled pause from the academic calendar. The break is a planned recess coordinated through the Ouray-Ridgway area school calendar.",
-    "type": "Community",
-    "endDate": "2026-10-16"
-  },
-  {
-    "title": "Bike & Brewery Tour",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
-    "date": "2026-10-12",
-    "time": "",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "A guided bicycle ride departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where participants receive a complimentary beer. The route offers a scenic way to…",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "Guided Tour: Historic Beaumont Hotel & Spa",
     "href": "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     "date": "2026-10-13",
@@ -97,6 +28,86 @@
     "endDate": "2026-12-08"
   },
   {
+    "title": "OPL Read a Book - Get a Pumpkin",
+    "href": "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
+    "date": "2026-10-13",
+    "time": "10:00 AM",
+    "location": "Ouray Public Library",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
+    "type": "Family & Kids",
+    "endDate": "2026-10-31"
+  },
+  {
+    "title": "Ongoing: Space Cowboy by Dundee & Lee",
+    "href": "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
+    "date": "2026-10-13",
+    "time": "10:00 AM",
+    "location": "Decker Community Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53975670057489/huge/75be37bbb2b6bd7ba17f7754e11da5a0eaf5930c.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado…",
+    "type": "Community",
+    "endDate": "2026-10-29"
+  },
+  {
+    "title": "Storytime / Hora de Cuentos",
+    "href": "https://telluridelibrary.libcal.com/event/17514636?hs=a",
+    "date": "2026-10-13",
+    "time": "10:30 AM",
+    "location": "Kids Area",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi n en ingl s para ni os de todas las edades y sus padres o cuidadores.",
+    "type": "Family & Kids"
+  },
+  {
+    "title": "The Power of Limits: How Constraints Drive Genius with David Epstein - Online Talk",
+    "href": "https://telluridelibrary.libcal.com/event/17639440?hs=a",
+    "date": "2026-10-13",
+    "time": "12:00 PM",
+    "location": "Wilkinson Public Library",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_14_12_03_47.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "12:00 PM – 1:00 PM · Join us for an inspiring virtual conversation with bestselling author David Epstein as we explore his latest book, Inside the Box , and redefine how to approach our greatest challenges! We are constantly told to \"think…",
+    "type": "Talks & Classes"
+  },
+  {
+    "title": "Teen Cook",
+    "href": "https://telluridelibrary.libcal.com/event/17486119?hs=a",
+    "date": "2026-10-13",
+    "time": "2:00 PM",
+    "location": "Teen Area",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_27_00.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "2:00 PM – 3:00 PM · Join the WPL Every Tuesday after school for Teen Cook. We will cook a different recipe from scratch, and have enough to share with those around!",
+    "type": "Community"
+  },
+  {
+    "title": "I Heart Art with Ah Haa",
+    "href": "https://telluridelibrary.libcal.com/event/17292105?hs=a",
+    "date": "2026-10-13",
+    "time": "2:30 PM",
+    "location": "Kids Area",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_39_32.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "2:30 PM – 4:00 PM · Looking for a fun and enriching way to spend your afternoons? Join us Tuesdays for I Heart Art, designed especially for kids aged 5-12! Buscas una manera divertida de pasar tus tardes? Unete a nuestro programa…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Free Legal Clinic – Clínica Jurídica Gratuita",
     "href": "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-10-13/",
     "date": "2026-10-13",
@@ -121,6 +132,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Tyler Simmons performs live at a venue on North Cora Street in Ridgway. The event is listed on the Ouray Ridgway community calendar as a live music performance.",
     "type": "Music"
+  },
+  {
+    "title": "Zumba with Marlen",
+    "href": "https://telluridelibrary.libcal.com/event/17477839?hs=a",
+    "date": "2026-10-13",
+    "time": "5:00 PM",
+    "location": "Program Room",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_16_11_46_58.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "5:00 PM – 6:00 PM · Ditch the workout and join the party! Zumba is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Weekly Young Adult Gathering",
@@ -200,6 +224,20 @@
     "source": "Sherbino Theater",
     "desc": "A recurring monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The event offers a casual space for veterans to connect with one another and with community support.",
     "type": "Community"
+  },
+  {
+    "title": "Fall Break - Ridgway Schools",
+    "href": "https://events.ourayridgwayevents.com/event/fall-break-ridgway-schools",
+    "date": "2026-10-13",
+    "time": "",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Fall Break for Ridgway Schools is a scheduled school holiday period giving students and families time off from the regular academic calendar. This community calendar listing marks the break as observed by the Ridgway school district.",
+    "type": "Community",
+    "endDate": "2026-10-16"
   },
   {
     "title": "Norwood Water Commission Meeting",
@@ -790,6 +828,20 @@
     "source": "Sherbino Theater",
     "desc": "Mountainfilm on Tour brings a curated selection of short films from the acclaimed Telluride-based Mountainfilm festival to The Sherbino in Ridgway. The traveling program features the documentary and adventure storytelling the festival is…",
     "type": "Community"
+  },
+  {
+    "title": "Senior Lunch by Neighbor to Neighbor",
+    "href": "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
+    "date": "2026-10-19",
+    "time": "12:00 PM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
+    "type": "Community",
+    "endDate": "2026-12-07"
   },
   {
     "title": "Bike & Brewery Tour",
@@ -2190,6 +2242,19 @@
     "type": "Community"
   },
   {
+    "title": "Delusions and Grandeur",
+    "href": "https://events.ourayridgwayevents.com/event/delusions-and-grandeur",
+    "date": "2026-11-07",
+    "time": "7:30 PM",
+    "location": "The Wright Opera House",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54225037316225/huge/c583582735f83f59b79ee5437328aee246069596.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "ABOUT THE PERFORMANCE “As irreverent as it is poignant” — Australian Arts Review Come for the music; stay for the existential crisis. Genre-blurring jester and cellist Karen Hall peels back the layers of concert-hall formality until only…",
+    "type": "Music"
+  },
+  {
     "title": "Wildbelly Fermentation Fest",
     "href": "https://koto.org/event/wildbelly-fermentation-fest/",
     "date": "2026-11-07",
@@ -2357,6 +2422,19 @@
     "source": "Mountain Village",
     "desc": "A community workshop hosted by Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library, exploring the emotional intersection of grief and gratitude in response to environmental change.…",
     "type": "Talks & Classes"
+  },
+  {
+    "title": "Sewing 101 with Melissa",
+    "href": "https://koto.org/event/sewing-101-with-melissa/2026-11-11/",
+    "date": "2026-11-11",
+    "time": "5:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/02/sewing.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll…",
+    "type": "Community"
   },
   {
     "title": "Market on the Plaza",
@@ -2835,7 +2913,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Weehawken Dance and America’s Mattress present The Nutcracker ~ Remixed, a large-scale community dance production blending classical ballet with contemporary movement, jazz, hip hop, aerial arts and other styles. More than 400 local…",
     "type": "Music",
-    "endDate": "2026-12-11"
+    "endDate": "2026-12-12"
   },
   {
     "title": "WinterSing!",
@@ -2848,6 +2926,20 @@
     "category": "Community Event",
     "source": "Telluride.com",
     "desc": "Celebrate the joy of the season early this year with light-bearing, beautiful choral music presented by Hal Adler and …",
+    "type": "Community",
+    "endDate": "2026-12-14"
+  },
+  {
+    "title": "Mountain Village Holiday Prelude",
+    "href": "https://www.telluride.com/event/mountain-village-holiday-prelude/",
+    "date": "2026-12-12",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
+    "town": "Mountain Village",
+    "img": "https://www.telluride.com/site/assets/files/35913/holidayprelude_webbnr_1900x1010.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Mountain Village will once again be transformed into the North Pole for this year’s Holiday Prelude celebration on …",
     "type": "Community",
     "endDate": "2026-12-14"
   }

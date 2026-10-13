@@ -1,15 +1,5 @@
 [
   {
-    "date": "October 12, 2026",
-    "title": "Open Space Commission Site Walk",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8325",
-    "hasAgenda": true,
-    "location": "Meet at Rebekah Hall, 113 W Columbia Ave",
-    "time": "4:00 PM",
-    "civicwebId": 8325,
-    "packetUrl": "https://telluride-co.civicweb.net/document/446206/"
-  },
-  {
     "date": "October 13, 2026",
     "title": "Special Town Council Budget",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8307",
@@ -32,10 +22,11 @@
     "date": "October 22, 2026",
     "title": "Planning & Zoning Commission",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8106",
-    "hasAgenda": false,
+    "hasAgenda": true,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "5:30 PM",
-    "civicwebId": 8106
+    "civicwebId": 8106,
+    "packetUrl": "https://telluride-co.civicweb.net/document/446322/"
   },
   {
     "date": "October 27, 2026",

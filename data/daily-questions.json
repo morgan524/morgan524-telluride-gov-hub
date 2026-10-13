@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-13",
+    "title": "The county's hazard plan is up for a rewrite — does yours match theirs?",
+    "body": "The Board of County Commissioners is taking up a multi-jurisdictional hazard mitigation plan update alongside procurement for trail construction, material hauling, a fuel island canopy, and jail painting. Hazard mitigation plans are meant to coordinate how different agencies respond when things go sideways — floods, fires, the usual up here. Some residents think regional coordination is exactly what's needed. Others wonder whether a multi-jurisdictional plan papers over the gaps between agencies more than it closes them. Nothing is final yet — this is still at the Board level. So: do coordinated regional hazard plans actually make communities safer, or do they spread responsibility thin?",
+    "choices": [
+      "More coordination makes us safer",
+      "Too diffuse to be effective",
+      "Depends on what's in it"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-10-12",
     "title": "A trail connector — or just another county project?",
     "body": "The Board of County Commissioners has a Lawson Hill Connector Trail project on its work session agenda alongside routine infrastructure items like a fuel island canopy and jail painting. A trail connector sounds simple enough — until you live near one. Some residents will see it as long-overdue infrastructure linking the community. Others will wonder about cost, maintenance, and who actually pushed it forward. It's a work session, so nothing is decided yet. Who benefits from a connector trail, and who ends up paying for it?",
@@ -419,21 +433,6 @@
       "Preservation has to come first",
       "Owners deserve more flexibility",
       "Depends on the structure",
-      "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-09-13",
-    "title": "Another liquor license — who gets to decide if that's too many?",
-    "body": "The Liquor Licensing Authority meets September 17 to review applications or modifications for liquor licenses. Under Colorado law, both the local authority and the state Department of Revenue have to sign off before anything moves.\n\nHere's the rub: some residents think more licensed establishments mean more vitality — jobs, tax revenue, a livelier town. Others figure up here we already tip the balance toward bars and away from the kind of place locals can actually live in. The licensing board weighs the application in front of it, not the big picture.\n\nSo — should the local authority be thinking about the cumulative effect, or is that the wrong question to put to them?",
-    "choices": [
-      "Count cumulative impact",
-      "Judge each app on its own",
-      "State rules cover it",
       "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",

@@ -294,7 +294,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "ridgway|2026-10-14|Ridgway Town Council Regular Meeting":
-    {"sv":4,"agendaUrl":"https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---October-14%2C-2026.pdf","zoomUrl":"https://us02web.zoom.us/j/86099482328?pwd=mlhYCUDObNpU8FLRgTKoSJmuljfclB.1","meetingId":"860 9948 2328","passcode":"019813","phone":"346 248 7799"},
+    {"sv":4,"agendaUrl":"https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Updated-Town-Council-Regular-Meeting-Packet---October-14%2C-2026.pdf","zoomUrl":"https://us02web.zoom.us/j/86099482328?pwd=mlhYCUDObNpU8FLRgTKoSJmuljfclB.1","meetingId":"860 9948 2328","passcode":"019813","phone":"346 248 7799"},
 
   "telluride|2026-10-14|Liquor Licensing Authority - Oct 14 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8146","sv":4,"ph":"28ddc62878422962"},
@@ -366,7 +366,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-10-22|Planning & Zoning Commission - Oct 22 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8106","sv":4,"ph":"c3a3df604a3fce63"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8106","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/OC4r5SGcR6S0q5DBnXPh8Q","meetingId":"893 9320 2174","passcode":"963785.","phone":"301-715-8592"},
 
   "telluride|2026-10-22|Planning & Zoning Commission Chair - Oct 22 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8105","sv":4,"ph":"d0e0554de56351fb"},
@@ -435,7 +435,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"a12dfd2ce826475e"},
 
   "telluride|2026-11-05|Special Meeting - Planning & Zoning Commission - Nov 05 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312","sv":4,"ph":"65b9bd7a7d287f9a"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312","sv":4,"ph":"930623a06e6efd7f"},
 
   "telluride|2026-11-05|Town Council Budget - Nov 05 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054","sv":4,"ph":"dc6fd5ab4a1c2e97"},
@@ -483,7 +483,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8326","zoomUrl":"https://us06web.zoom.us/meeting/register/m65fl_EfRuC-m1IoGX6uiQ","meetingId":"815 3599 7736","passcode":"769982.","phone":"312-626-6799","sv":4},
 
   "telluride|2026-10-22|(Rescheduled to 11/2) Planning & Zoning Commission Chair - Oct 22 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8105","sv":4}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8105","sv":4},
+
+  "smart|2026-11-12|SMART Board of Directors":
+    {"sv":4,"ph":"b858cb282617fb09"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -497,6 +500,14 @@ const DEEP_DIVE_UPDATES = [];
 //   sourceUrl, topics: [] }. Rendered by hub-bub.html from the JSON mirror
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
+  {
+    date: "2026-10-13",
+    title: "The county's hazard plan is up for a rewrite — does yours match theirs?",
+    body: "The Board of County Commissioners is taking up a multi-jurisdictional hazard mitigation plan update alongside procurement for trail construction, material hauling, a fuel island canopy, and jail painting. Hazard mitigation plans are meant to coordinate how different agencies respond when things go sideways — floods, fires, the usual up here. Some residents think regional coordination is exactly what's needed. Others wonder whether a multi-jurisdictional plan papers over the gaps between agencies more than it closes them. Nothing is final yet — this is still at the Board level. So: do coordinated regional hazard plans actually make communities safer, or do they spread responsibility thin?",
+    choices: ["More coordination makes us safer", "Too diffuse to be effective", "Depends on what's in it"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
   {
     date: "2026-10-12",
     title: "A trail connector — or just another county project?",
@@ -728,14 +739,6 @@ const DAILY_QUESTIONS = [
     choices: ["Preservation has to come first", "Owners deserve more flexibility", "Depends on the structure", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-09-13",
-    title: "Another liquor license — who gets to decide if that's too many?",
-    body: "The Liquor Licensing Authority meets September 17 to review applications or modifications for liquor licenses. Under Colorado law, both the local authority and the state Department of Revenue have to sign off before anything moves.\n\nHere's the rub: some residents think more licensed establishments mean more vitality — jobs, tax revenue, a livelier town. Others figure up here we already tip the balance toward bars and away from the kind of place locals can actually live in. The licensing board weighs the application in front of it, not the big picture.\n\nSo — should the local authority be thinking about the cumulative effect, or is that the wrong question to put to them?",
-    choices: ["Count cumulative impact", "Judge each app on its own", "State rules cover it", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -746,9 +749,6 @@ const DAILY_QUESTIONS = [
 // target, and these seeds let the data start landing again. No page renders
 // them yet — restoring (or retiring) the reader UIs is tracked separately.
 const MEETING_PREVIEWS = {
-  "telluride|2026-10-13|Special Town Council Budget - Oct 13 2026":
-    "Council is expected to focus on budget discussions for the Town of Telluride. Related matters include a previously passed wildfire resiliency land use code amendment and an upcoming paper billing fee from San Miguel Power Association, which may factor into financial planning considerations.",
-
   "telluride|2026-10-14|Liquor Licensing Authority - Oct 14 2026":
     "The Telluride Liquor Licensing Authority is expected to review liquor license applications or modifications requiring local approval. Both the Authority and the Colorado Department of Revenue must consent before any license is issued or amended. New licenses and appeals are handled separately by the Town Council.",
 
@@ -809,20 +809,11 @@ const MEETING_PREVIEWS = {
   "telluride|2026-10-21|CANCELED - Historic & Architectural Review Commission Chair - Oct 21 2026":
     "This meeting of the Telluride Historic & Architectural Review Commission has been canceled. No agenda items will be addressed. Related legal notices reference a wildfire resiliency code amendment, a new paper billing fee from San Miguel Power Association, and a request for proposals on employee rental housing policy review.",
 
-  "ouray|2026-10-13|Board of County Commissioners":
-    "Board will consider routine expenditure approvals, ratification of Commissioner Niece's designation to serve on CCI's Legislative Committee, and a Public Trustee report. The meeting also includes a public comment period and will be held in person and via Zoom.",
-
   "ouray|2026-10-14|Board of County Commissioners Work Session":
     "Commissioners are expected to receive quarterly housing updates from the Ouray County Home Trust, hear an annual update from the Colorado River District, and review land use fee schedule changes. Additional topics include a youth and nature presentation, Ridgway Fire & EMS budget discussion, and county manager performance feedback.",
 
-  "norwood|2026-10-13|Norwood Water Commission Meeting":
-    "The Norwood Water Commission will consider legal matters related to the Cossey Complaint, including a potential hearing date extension, and discuss the Jubilee/Valentine Easement. Additional items include a contract with Land Right, an environmental assessment for a redundant water line project, and a leak forgiveness request.",
-
   "ridgway|2026-10-14|Ridgway Town Council Regular Meeting":
     "The Ridgway Workforce & Affordable Housing Committee will receive a quarterly report from the Home Trust of Ouray County's Housing Services Director and consider exercising a Right of First Refusal to purchase a property at 683 Frederick Street at its maximum sale price.",
-
-  "ouraycity|2026-10-13|Ouray Planning Commission Regular Meeting":
-    "The Ouray Planning Commission will discuss proposed regulations governing natural medicine businesses operating within city limits, including review of a draft ordinance and accompanying staff memo outlining how such businesses would be regulated locally.",
 
   "mv|2026-10-15|Town Council Meeting":
     "Council is expected to consider a tavern liquor license application for El Rhino, approve a town manager employment agreement, and discuss expansion of the Munchkins Program. Members will also review a draft Beaver Management Plan and hold a legislative public hearing on a pending ordinance.",
@@ -836,8 +827,14 @@ const MEETING_PREVIEWS = {
   "telluride|2026-10-22|(Rescheduled to 11/2) Planning & Zoning Commission Chair - Oct 22 2026":
     "The Planning & Zoning Commission meeting originally scheduled for October 22, 2026 has been rescheduled to November 2, 2026 at 9:00 a.m. at Rebekah Hall. No specific agenda items have been disclosed for the rescheduled session.",
 
-  "telluride|2026-10-12|Open Space Commission Site Walk - Oct 12 2026":
-    "The Open Space Commission will conduct a site walk up Tomboy Road, meeting at Rebekah Hall before heading to the High Country area. The session is expected to allow commissioners to assess open space conditions firsthand."
+  "telluride|2026-10-13|Special Town Council Budget - Oct 13 2026":
+    "Council is expected to review the Town of Telluride's 2027 budget during a work session covering enterprise funds, open space, affordable housing, and miscellaneous funds. Discussion will also include a water and sewer rate study, affordable housing finances, and a draft 2027 fee schedule and town goals.",
+
+  "ouray|2026-10-13|Board of County Commissioners":
+    "Board will consider routine expenditure approvals, ratification of Commissioner Niece's designation to serve on CCI's Legislative Committee, and a Public Trustee report. The meeting also includes an open public comment period for community members to raise issues not otherwise on the agenda.",
+
+  "ouraycity|2026-10-13|Ouray Planning Commission Regular Meeting":
+    "The Ouray Planning Commission will discuss proposed regulations governing natural medicine businesses operating within the city, with presenter Harper Powell leading the item. Commissioners will review a draft ordinance and accompanying staff memo related to the regulation framework."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -878,26 +875,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "Monthly Chamber of Commerce meeting open to all.",
     href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, October",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "October 13, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
-    img: ""
-  },
-  {
-    title: "2026 Telluride Mountain Club Recap Report",
-    source: "Telluride Mountain Club",
-    sourceKey: "tmc",
-    date: "October 12, 2026",
-    newsTopic: "community",
-    copy: "The post 2026 Telluride Mountain Club Recap Report appeared first on Telluride Mountain Club .",
-    href: "https://www.telluridemountainclub.org/2026-telluride-mountain-club-recap-report/",
     img: ""
   },
   {
@@ -1068,7 +1045,7 @@ const SMC_ALERTS = [
 const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-10-12';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-10-13';
 const LEGAL_NOTICES_CACHE_DATE = '2026-10-09';
 
 const MANUAL_SUMMARIES = {
@@ -1292,7 +1269,7 @@ const MANUAL_SUMMARIES = {
     "The October 22, 2026 TMVOA Board of Directors Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-10-22|Planning & Zoning Commission - Oct 22 2026":
-    "The October 22, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The October 22 P&Z meeting carries two items of broader public consequence. First, the Shandoka Lot Redevelopment — a Preliminary PUD application for Town-owned property at 860 Black Bear Rd — finally gets its hearing after being continued from the September 24 meeting due to staff capacity. The proposal would increase certain dimensional limitations in exchange for public benefits on the 4.07-acre Accommodations 2-zoned parcel. Second, a Minor Subdivision at 238 North Pine Street has been making the rounds since February; the applicant now requests it be tabled another eight months. A work session on a proposed four-lot commercial subdivision at 216 & 222 W San Juan Avenue rounds out the evening.",
 
   "telluride|2026-10-22|Planning & Zoning Commission Chair - Oct 22 2026":
     "The October 22, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
@@ -1409,7 +1386,10 @@ const MANUAL_SUMMARIES = {
     "This rescheduled P&Z Chair meeting — moved from October 22 to November 2 — has a single item on it: a minor subdivision at 510 W Columbia Avenue/129 N Townsend Street. The application asks to vacate the internal lot line between Lots 39 and 40 in the West Telluride Addition and merge them into one approximately 5,625-square-foot lot. It's a lot consolidation in the Historic Residential zone district, not a new development proposal.",
 
   "telluride|2026-10-22|(Rescheduled to 11/2) Planning & Zoning Commission Chair - Oct 22 2026":
-    "This October 22 Planning & Zoning Commission meeting has been rescheduled to Monday, November 2nd at 9:00 a.m. at Rebekah Hall, 113 W Columbia Ave."
+    "This October 22 Planning & Zoning Commission meeting has been rescheduled to Monday, November 2nd at 9:00 a.m. at Rebekah Hall, 113 W Columbia Ave.",
+
+  "smart|2026-11-12|SMART Board of Directors":
+    "The November 12, 2026 SMART Board of Directors agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2585,18 +2565,6 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "Therapy dogs bring calm and joy to students following shooting at Colorado high school",
-    source: "Telluride Times",
-    date: "October 10, 2026",
-    firstSeen: "2026-10-10",
-    newsTopic: "education",
-    copy: "Two golden Labs, Norene and Polenta, are now permanent fixtures at Evergreen High School near Denver, helping students recover from a September 2024 shooting that wounded two students. The dogs, provided free through the nonprofit Canine Companions, walk the halls and visit classrooms daily. Students took to them quickly — the pair were even crowned prince and princess at homecoming.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_459c9d3a-082e-578e-af5b-afd74bf89e75.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c0/ec0ce6f7-712b-5eb5-b4b8-cab6ccaf7cc0/6ac9ce581c95d.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Native athlete pride: Shiyazh Pete recognized on Indigenous Peoples Day",
     source: "Telluride Times",
     date: "October 12, 2026",
@@ -2606,6 +2574,30 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_f6154cf3-81d1-57ed-9730-79ba587c0033.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/9d/89d0501b-226f-5495-a68b-d3d88f0d0243/6acc634cc4db1.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Council members hear housing updates",
+    source: "Telluride Times",
+    date: "October 12, 2026",
+    firstSeen: "2026-10-13",
+    newsTopic: "housing",
+    copy: "Telluride's Town-owned rental units sit at a 19% vacancy rate, with two units recently added at Sunnyside and Shandoka. The new Resident Advisory Committee flagged that rental applications are confusing, prompting two help sessions at Wilkinson Library on Oct. 21. The Shandoka redevelopment — 50-60 units plus a 900-vehicle parking structure — moves into HARC and P&Z review that same week.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_8724017f-7fab-4247-8d8e-2c7da8086c4d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/21/72179a9e-7c29-4021-bbe0-33ac3518b34e/6acd58814ce70.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Therapy dogs bring calm and joy to students following shooting at Colorado high school",
+    source: "Telluride Times",
+    date: "October 10, 2026",
+    firstSeen: "2026-10-10",
+    newsTopic: "education",
+    copy: "Two golden Labs, Norene and Polenta, are now permanent fixtures at Evergreen High School near Denver, helping students recover from a September 2024 shooting that wounded two students. The dogs, provided free through the nonprofit Canine Companions, walk the halls and visit classrooms daily. Students took to them quickly — the pair were even crowned prince and princess at homecoming.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_459c9d3a-082e-578e-af5b-afd74bf89e75.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c0/ec0ce6f7-712b-5eb5-b4b8-cab6ccaf7cc0/6ac9ce581c95d.image.jpg",
     imgHiRes: true
   },
   {
@@ -3429,161 +3421,21 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Silver",
-    source: "Telluride Times",
-    date: "September 29, 2026",
-    firstSeen: "2026-09-30",
-    newsTopic: "education",
-    copy: "A couple at Natural Grocers in Montrose recognized the columnist's husband Travis — a fixture in her writing — prompting her to reflect on their 36-year relationship, which began when she spotted him on a playground in Winslow, Maine, in fourth grade. She traces their on-again-off-again childhood connection through to a nervous high school overture in 1990 that finally stuck.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_1a5ffac7-15d0-409a-aa6f-a13142a17381.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/ea/fea219ba-b46c-43f0-afea-cbf0ea9c9f34/6abc4da1e7a84.image.jpg",
-    isLetter: true,
-    imgHiRes: true
-  },
-  {
-    title: "That'll do, Donkey",
-    source: "Telluride Times",
-    date: "September 29, 2026",
-    firstSeen: "2026-09-30",
-    newsTopic: "education",
-    copy: "Not-So-Young People's Theatre brings Shrek The Musical to the Sheridan Opera House Oct. 8–11 for their sixth annual production. Locals' night is Thursday the 8th with tickets at $15 for students and $25 for adults; Friday through Sunday runs $20/$30 plus fees.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_860c6c87-9eb0-4c87-b8ae-bab0433c35aa.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/78/9782a2d8-940f-4b0b-878f-2bb4c469178b/6abc4cfad7810.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "A class of her own",
-    source: "Telluride Times",
-    date: "September 29, 2026",
-    firstSeen: "2026-09-30",
-    newsTopic: "education",
-    copy: "Telluride Elementary PE teacher Erin Murray has been named SHAPE Colorado's 2026 Young Professional Physical Education Teacher. A Telluride native and THS grad, Murray is known for playful, skill-building classes and popular Parent Play Days. She'll be recognized at the SHAPE Colorado Convention on Oct. 16.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/gallery/news/article_032bdae8-f1ff-4933-af97-5dae6bcba696.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/25/52523dd3-4a7d-4ec1-86f3-f61fec80cecf/6abc4b8d52a64.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "Keen on cars (and The Times)",
-    source: "Telluride Times",
-    date: "September 29, 2026",
-    firstSeen: "2026-09-30",
-    newsTopic: "community",
-    copy: "Four-year-old Wyatt Yarnall made the most of last week — catching the Telluride Times one day and the Autumn Classic car show the next. His mom says he's got a serious thing for Corvettes and Porsches, which tracks — engineers and car people run in the family.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/gallery/featured/article_25898589-13e7-46c8-9c84-49401444e5d2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/38/b38418f0-cb5d-4237-9b8a-d66bf6ebe521/6abc4adb4b898.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "A little buzz",
-    source: "Telluride Times",
-    date: "September 29, 2026",
-    firstSeen: "2026-09-30",
-    newsTopic: "community",
-    copy: "A local writer shares her longtime interest in sound and vibration therapy, crediting a gong bath session with possibly dislodging a salivary stone her doctor said didn't exist. She's now using a 128 Hz tuning fork for nervous system calming. Anecdotal, but worth knowing these tools are out there.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_ae5fb453-1c72-445d-b9f5-2158c12e5b08.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/b2/8b2b8d3c-d28d-4bba-8059-73abec4eecc7/6abc492648e24.image.jpg",
-    isLetter: true,
-    imgHiRes: true
-  },
-  {
-    title: "The 13-year investment behind every graduate",
-    source: "Telluride Times",
-    date: "September 29, 2026",
-    firstSeen: "2026-09-30",
-    newsTopic: "education",
-    copy: "Colorado's new school funding formula would cut Telluride School District's per-pupil revenue by 17%. Measure 5A asks voters to raise the local mill levy override to partially offset that loss — even if it passes, the district would still have about 4% less per student than today. The district has already cut 13 positions over three years and families are paying more in fees.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_cfc9d5da-e2e3-424e-96f7-d3df77ceda5d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/a4/fa4c6e89-2d9b-46ae-93e5-75958321df1d/6abc49fd75314.image.jpg",
-    isLetter: true,
-    imgHiRes: true
-  },
-  {
-    title: "Black cats aren't scary",
-    source: "Telluride Times",
-    date: "September 29, 2026",
-    firstSeen: "2026-09-30",
-    newsTopic: "community",
-    copy: "Black cats get a bad reputation around Halloween, but studies show they face no greater risk of harm this time of year than any other. What is real: they're adopted less often and euthanized more — Second Chance in Ridgway has several waiting right now, including Maple, who's been there over half her life.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_c00656e3-474f-439c-a5f7-6b919dcb0653.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/02/9029e65d-ab7d-40b8-826e-b634ce05c129/6abc487807a3f.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "The Strategic Stakeholders Roundtable: a community effort",
-    source: "Telluride Times",
-    date: "September 29, 2026",
-    firstSeen: "2026-09-30",
-    newsTopic: "housing",
-    copy: "San Miguel County's Stakeholder Strategic Roundtable — a 22-member advisory group of local builders, brokers, planners, and agency reps — has completed a review of the Land Use Code aimed at easing housing development without eroding community character. Their recommendations are posted at bit.ly/smcssr. A public work session is scheduled Oct. 8, 9 a.m., at the Miramonte building in Telluride, also available via Zoom.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_778d0a27-3bf6-4399-b7a6-f16bb87aed4f.html",
-    img: "",
-    letterAuthor: "Colorado Ave",
-    isLetter: true,
-    imgHiRes: true
-  },
-  {
-    title: "Mountain Village Housing Authority to hold tiered lottery for two Meadowlark units",
-    source: "Telluride Times",
-    date: "September 29, 2026",
-    firstSeen: "2026-09-30",
-    newsTopic: "housing",
-    copy: "Two deed-restricted units at Meadowlark in Mountain Village are up for lottery — a 3BD/2.5BA at $839,728 and a 3BD/3BA at $1.1M, both with a 4% appreciation cap. Applications are due Oct. 12; drawing is Oct. 22. Essential workers and Mountain Village employers get first priority.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_99a7922f-ae49-4651-b206-20c24ad1e89f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/e8/0e803acf-6ec9-402b-81fa-75231869a2df/6abc47415ecf0.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Military academies won't give tenure to civilian faculty, Hegseth says",
-    source: "Telluride Times",
-    date: "September 29, 2026",
-    firstSeen: "2026-09-30",
-    newsTopic: "community",
-    copy: "Pentagon will no longer grant tenure to civilian faculty at U.S. military academies, per a memo from Defense Secretary Pete Hegseth. The move is framed as refocusing the academies on warfighting. Current tenured faculty appear unaffected for now.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_3af82977-09a9-57f6-8e08-00e635bf2cfb.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/5f/05fc27db-b757-5f93-9bfd-3ab2f9184bf3/6abc2507ee7c3.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "See ‘the hidden Telluride’ during Artabout",
-    source: "Telluride Times",
-    date: "September 29, 2026",
-    firstSeen: "2026-09-30",
-    newsTopic: "arts-culture",
-    copy: "Ah Haa School for the Arts is hosting Artabout on Oct. 3, 10 a.m.–4 p.m. — a free, one-day studio tour with 27 artists opening workshops in homes, garages, and shops across Telluride, Lawson Hill, Ilium, and Deep Creek. Pick up a map at Ah Haa (155 W. Pacific) to start.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_e9ca6422-b719-416e-a248-574d8ab9dba5.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/4c/84c111ad-e4b3-4fce-b279-5aa3f568b568/6abb3cce67b31.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Big Billie’s food truck approved despite council, public objections",
-    source: "Telluride Times",
-    date: "September 29, 2026",
-    firstSeen: "2026-09-29",
-    newsTopic: "government",
-    copy: "Mountain Village Town Council approved a conditional use permit for a Telski food truck, tent, and outdoor seating in front of Big Billie's, replacing what had been indoor public dining. Council members, the Design Review Board, and residents raised concerns about aesthetics, accessibility, lost seating capacity, and the absence of any long-term plan.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_dde388ee-d4f3-44aa-a20c-713a8381135a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/0b/f0b20d7d-7436-489b-bca7-d91db06c5634/6abac9173c5f8.image.png",
-    imgHiRes: true
-  },
-  {
     title: "Applications Open for 2026/2027 Temporary Winter Community Housing Program",
     source: "Town of Telluride",
     date: "October 9, 2026",
     newsTopic: "housing",
     copy: "(October 8, 2026) – The Town of Telluride is accepting applications for its Temporary Winter Community Housing program for the 2026/2027 winter season. The program provides seasonal housing in Town Park for eligible workers employed in the Telluride area.",
     href: "https://www.telluride.gov/CivicAlerts.aspx?aid=406",
+    img: ""
+  },
+  {
+    title: "Town of Telluride to Lift All Fire Restrictions",
+    source: "Town of Telluride",
+    date: "September 17, 2026",
+    newsTopic: "public-safety",
+    copy: "(September 16, 2026) – Following improved fire conditions across the region and in alignment with San Miguel County, the Town of Telluride will lift all fire restrictions effective at 12:01 a.m. MT on Friday, September 18, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=405",
     img: ""
   },
   {
@@ -3596,6 +3448,87 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14836"
   },
   {
+    title: "Chief Deputy Clerk Receives Excellence in Election Service Award",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "government",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1413",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14817"
+  },
+  {
+    title: "Planning Director Kaye Simonson Retires After Nearly Eight Years with the County",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1418",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14827"
+  },
+  {
+    title: "Another San Miguel Basin Fair in the Books",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1416",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14822"
+  },
+  {
+    title: "New Faces and a Fond Farewell for Parks + Open Space",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "recreation",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1417",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14826"
+  },
+  {
+    title: "County Housing Efforts Continue on Multiple Fronts",
+    source: "San Miguel County",
+    date: "September 24, 2026",
+    newsTopic: "housing",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1415",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14821"
+  },
+  {
+    title: "San Miguel County Adds Genasys Protect to Emergency Alerting Ecosystem",
+    source: "San Miguel County",
+    date: "September 24, 2026",
+    newsTopic: "public-safety",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1414",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14820"
+  },
+  {
+    title: "Safe Festivals - A Public Health Approach to Harm Reduction",
+    source: "San Miguel County",
+    date: "September 23, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1411",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14818"
+  },
+  {
+    title: "SMC Expands Crisis Intervention Services with Paragon Behavioral Health Connections",
+    source: "San Miguel County",
+    date: "September 22, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1412",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14816"
+  },
+  {
+    title: "Commissioners Finalize Deed Restriction Reversion Process",
+    source: "San Miguel County",
+    date: "September 22, 2026",
+    newsTopic: "housing",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1410",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14812"
+  },
+  {
     title: "DMV Services available in Egnar 11/18",
     source: "San Miguel County",
     date: "September 29, 2026",
@@ -3603,6 +3536,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
+  },
+  {
+    title: "Tomboy Road Now Open",
+    source: "San Miguel County",
+    date: "September 18, 2026",
+    newsTopic: "infrastructure",
+    copy: "The Town of Telluride has completed their project that necessitated the closure of Lower Tomboy Road. The road is now open again.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=546",
+    img: ""
   },
   {
     title: "Ridgway Bank Building Officially Added to the National Register of Historic Places",
@@ -3673,7 +3615,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "October 12, 2026",
+    date: "October 13, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3684,7 +3626,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "October 12, 2026",
+    date: "October 13, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3750,14 +3692,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "government",
     copy: "Gondola Project Will Pursue Federal Funding; Town Council Upholds Planning and Zoning Decision on Carhenge Lot Lines; The Fig Keeps Theatre Funky",
     href: "https://koto.org/news/newscast-9-30-26/"
-  },
-  {
-    title: "Newscast 9-28-26",
-    source: "KOTO Community Radio",
-    date: "September 29, 2026",
-    newsTopic: "community",
-    copy: "Mountain Village Reimagines Pond Plaza; Original Thinkers Looks to Spark Creative Humanity",
-    href: "https://koto.org/news/newscast-9-28-26/"
   }
 ];
 
@@ -4780,11 +4714,87 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: ""
+  },
+  {
+    title: "Sewing 101 with Melissa",
+    link: "https://koto.org/event/sewing-101-with-melissa/2026-11-11/",
+    description: "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.",
+    pubDate: "2026-11-11T17:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/02/sewing.jpg"
   }
 ];
 
 const WILKINSON_EVENTS = [
-
+  {
+    title: "Storytime / Hora de Cuentos",
+    link: "https://telluridelibrary.libcal.com/event/17514636?hs=a",
+    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
+    pubDate: "2026-10-13T16:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+  },
+  {
+    title: "The Power of Limits: How Constraints Drive Genius with David Epstein - Online Talk",
+    link: "https://telluridelibrary.libcal.com/event/17639440?hs=a",
+    description: "12:00 PM – 1:00 PM · Join us for an inspiring virtual conversation with bestselling author David Epstein as we explore his latest book, Inside the Box , and redefine how to approach our greatest challenges! We are constantly told to \"think outside the box\" to innovate, solve complex problems, and reach our goals. But what if the secret to true breakthrough creativity and peak performance actually lies in working within our limitations? In Inside the Box , David Epstein draws on science, research, and fascinating real-world case studies to demonstrate how constraints, boundaries, and structure can become powerful catalysts for ingenuity and mastery. Epstein challenges traditional ideas about skill acquisition, focus, and problem-solving, revealing how top performers and innovators across industries turn rigid limits into unmatched strengths. Register now to learn how to reframe everyday obstacles and apply science-backed performance strategies to your career and personal life. …",
+    pubDate: "2026-10-13T18:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_14_12_03_47.jpg"
+  },
+  {
+    title: "Teen Cook",
+    link: "https://telluridelibrary.libcal.com/event/17486119?hs=a",
+    description: "2:00 PM – 3:00 PM · Join the WPL Every Tuesday after school for Teen Cook. We will cook a different recipe from scratch, and have enough to share with those around!",
+    pubDate: "2026-10-13T20:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Teen Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_27_00.png"
+  },
+  {
+    title: "I Heart Art with Ah Haa",
+    link: "https://telluridelibrary.libcal.com/event/17292105?hs=a",
+    description: "2:30 PM – 4:00 PM · Looking for a fun and enriching way to spend your afternoons? Join us Tuesdays for I Heart Art, designed especially for kids aged 5-12!  &iquest;Buscas una manera divertida de pasar tus tardes? &iexcl;Unete a nuestro programa extracurricular, dise&ntilde;ado especialmente para ni&ntilde;os de 5 a 12 a&ntilde;os!",
+    pubDate: "2026-10-13T20:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_39_32.png"
+  },
+  {
+    title: "Free Legal Clinic - Clínica Jurídica Gratuita (Zoom)",
+    link: "https://telluridelibrary.libcal.com/event/16009654?hs=a",
+    description: "4:00 PM – 5:40 PM · A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only.  BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una cl&iacute;nica de asesoramiento jur&iacute;dico GRATUITO para las personas que notienen abogado. Abogados voluntarios responder&aacute;n a preguntas, ayudar&aacute;n a llenar formularios y explicar&aacute;n el proceso y el procedimiento de cuestiones jur&iacute;dicas. Los abogados voluntarios no te representan y esta cl&iacute;nica es s&oacute;lo informativa. CON CITA PREVIA. Llame a 970-728-4519 para m&aacute;s informaci&oacute;n y para registrarse.",
+    pubDate: "2026-10-13T22:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Meeting Room #5 - small",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1760996664.jpg"
+  },
+  {
+    title: "Zumba with Marlen",
+    link: "https://telluridelibrary.libcal.com/event/17477839?hs=a",
+    description: "5:00 PM – 6:00 PM · Ditch the workout and join the party! Zumba&reg; is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. &iexcl;Olvida el entrenamiento y &uacute;nete a la fiesta! Zumba&reg; es una clase de fitness de baile de alta energ&iacute;a que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calor&iacute;as. …",
+    pubDate: "2026-10-13T23:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_16_11_46_58.jpg"
+  }
 ];
 
 // Bot-managed by scripts/content-refresh.js Task 7 (syncHumaneSocietyAnimals).
@@ -5268,50 +5278,14 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Fall Break - Ridgway Schools",
     link: "https://events.ourayridgwayevents.com/event/fall-break-ridgway-schools",
-    description: "Fall Break for Ridgway Schools begins on this date, giving students in the Ridgway district a scheduled pause from the academic calendar. The break is a planned recess coordinated through the Ouray-Ridgway area school calendar.",
-    pubDate: "2026-10-12T06:00:00.000Z",
+    description: "Fall Break for Ridgway Schools is a scheduled school holiday period giving students and families time off from the regular academic calendar. This community calendar listing marks the break as observed by the Ridgway school district.",
+    pubDate: "2026-10-13T06:00:00.000Z",
     endDate: "2026-10-16",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
-  },
-  {
-    title: "OPL Read a Book - Get a Pumpkin",
-    link: "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
-    description: "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
-    pubDate: "2026-10-12T16:00:00.000Z",
-    endDate: "2026-10-31",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Public Library",
-    imageUrl: "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg"
-  },
-  {
-    title: "Ongoing: Space Cowboy by Dundee & Lee",
-    link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
-    description: "Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado artists Emilie Odeile and Ken Chapin of Dundee & Lee, the exhibition centers on a 10-foot-tall fiber rocket topped with a cowboy hat and Mission Control consoles that gather images, voices, stories, and discoveries as Space Cowboy travels from community to community. Throughout October, the exhibition comes alive with special events and programming, including appearances by Colorado Poet Laureate Crisosto Apache, community conversations, and opportunities for Ridgway residents to become part of the continuing Space Cowboy story. Space Cowboy travels with a simple idea: Colorado is the teacher and Space Cowboy is the learner. Every community adds something new to the mission. …",
-    pubDate: "2026-10-12T16:00:00.000Z",
-    endDate: "2026-10-29",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53975670057489/huge/75be37bbb2b6bd7ba17f7754e11da5a0eaf5930c.jpg"
-  },
-  {
-    title: "Senior Lunch by Neighbor to Neighbor",
-    link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
-    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
-    pubDate: "2026-10-12T18:00:00.000Z",
-    endDate: "2026-12-07",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
   },
   {
     title: "Ouray Planned Power Outage",
@@ -5347,6 +5321,30 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/52236172073282/huge/134613035140f6c008febe657f2e7e23acc365e9.jpg"
+  },
+  {
+    title: "OPL Read a Book - Get a Pumpkin",
+    link: "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
+    description: "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
+    pubDate: "2026-10-13T16:00:00.000Z",
+    endDate: "2026-10-31",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Public Library",
+    imageUrl: "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg"
+  },
+  {
+    title: "Ongoing: Space Cowboy by Dundee & Lee",
+    link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
+    description: "Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado artists Emilie Odeile and Ken Chapin of Dundee & Lee, the exhibition centers on a 10-foot-tall fiber rocket topped with a cowboy hat and Mission Control consoles that gather images, voices, stories, and discoveries as Space Cowboy travels from community to community. Throughout October, the exhibition comes alive with special events and programming, including appearances by Colorado Poet Laureate Crisosto Apache, community conversations, and opportunities for Ridgway residents to become part of the continuing Space Cowboy story. Space Cowboy travels with a simple idea: Colorado is the teacher and Space Cowboy is the learner. Every community adds something new to the mission. …",
+    pubDate: "2026-10-13T16:00:00.000Z",
+    endDate: "2026-10-29",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53975670057489/huge/75be37bbb2b6bd7ba17f7754e11da5a0eaf5930c.jpg"
   },
   {
     title: "Guided Tour: Historic Beaumont Hotel & Spa",
@@ -5583,6 +5581,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Senior Lunch by Neighbor to Neighbor",
+    link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
+    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
+    pubDate: "2026-10-19T18:00:00.000Z",
+    endDate: "2026-12-07",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
   },
   {
     title: "BRITLEY & MATT",
@@ -6120,6 +6130,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54066522649708/huge/a35808b29295063770a1a017fa3e070e4b7d2146.jpg"
   },
   {
+    title: "Delusions and Grandeur",
+    link: "https://events.ourayridgwayevents.com/event/delusions-and-grandeur",
+    description: "ABOUT THE PERFORMANCE “As irreverent as it is poignant” — Australian Arts Review Come for the music; stay for the existential crisis. Genre-blurring jester and cellist Karen Hall peels back the layers of concert-hall formality until only the humanity—and insanity—of the artist behind the instrument remains. And, perhaps, yourself. Featuring J. S. Bach’s Suite No. 1 in G Major alongside personal comedic pieces crafted in Idiot classes, Delusions and Grandeur fuses music, pathos, and foolery into a sharp, heartfelt performance about identity, expectations, and success. Karen Hall is an award-winning performer based in Los Angeles. Her work has appeared at Carnegie Hall and the Hollywood Bowl, in studio sessions and Emmy-nominated soundtracks, and for four seasons on camera as the cellist on Glee. She performs regularly with orchestras throughout greater Los Angeles and has worked with artists including Shawn Mendes, Geoff Emerick, and Yoshiki. …",
+    pubDate: "2026-11-08T02:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Wright Opera House",
+    imageUrl: "https://localist-images.azureedge.net/photos/54225037316225/huge/c583582735f83f59b79ee5437328aee246069596.jpg"
+  },
+  {
     title: "OuROCK! 2026 Climbing Festival",
     link: "https://events.ourayridgwayevents.com/event/ourock-2026-climbing-festival",
     description: "The Annual Ouray Climbers Alliance Fundraiser & Membership Drive is back! Come join our local climbing community for a free, all-ages festival! Climb, compete, eat, drink and hang out while supporting the work that keeps Ouray’s climbing areas accessible, maintained, and thriving. This year we’ll feature: 🧗 Walk-up guided climbing wall for adults & kids, with gear provided 🎶 Live DJ music with DJ Straylight 🏆 Climbing competition open to all ages 🍕 Fresh-baked, hand-tossed pizza* 🍺 Beer & other beverages* 🎟️ Silent auction & raffle *Members receive free beer and pizza, plus one raffle ticket. Beer is 21+. Food and beverages are available while supplies last. The event is free and open to everyone, and you’re invited to join OCA as a member at the event. …",
@@ -6395,7 +6416,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/weehawken-dance-presents-the-nutcracker-remixed",
     description: "Weehawken Dance and America’s Mattress present The Nutcracker ~ Remixed, a large-scale community dance production blending classical ballet with contemporary movement, jazz, hip hop, aerial arts and other styles. More than 400 local dancers participate across six split-cast performances at the Montrose Pavilion. Live-stream tickets are expected to become available shortly before each performance.",
     pubDate: "2026-12-10T01:00:00.000Z",
-    endDate: "2026-12-11",
+    endDate: "2026-12-12",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6921,18 +6942,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/49105/scott-rodgerson-zlhbjxbccec-unsplash.800x533.webp"
   },
   {
-    title: "Volunteer Trail Work Day",
-    link: "https://www.telluride.com/event/volunteer-trail-work-day/",
-    description: "Join the Telluride Mountain Club for their volunteer trail work day! Spend time with friends, get your hands dirty, and …",
-    pubDate: "2026-09-17",
-    endDate: "2026-10-11",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63536/vol-trail-work--499x624.800x533.webp"
-  },
-  {
     title: "Shrek the Musical",
     link: "https://www.telluride.com/event/shrek-the-musical/",
     description: "The Sheridan Arts Foundation’s 6th annual Not- So Young People’s Theater production! NYSPT presents Shrek The …",
@@ -7162,6 +7171,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/45744/download_7.800x533.webp"
+  },
+  {
+    title: "Mountain Village Holiday Prelude",
+    link: "https://www.telluride.com/event/mountain-village-holiday-prelude/",
+    description: "Mountain Village will once again be transformed into the North Pole for this year’s Holiday Prelude celebration on …",
+    pubDate: "2026-12-12",
+    endDate: "2026-12-14",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/35913/holidayprelude_webbnr_1900x1010.800x533.webp"
   }
 ];
 
@@ -9175,16 +9196,6 @@ function getTownAgendaLink(title, eventDate) {
 // next content-refresh run. Each entry: {date,title,agendaUrl,hasAgenda,location,time}.
 const TELLURIDE_BOARD_MEETINGS = [
   {
-    date: "October 12, 2026",
-    title: "Open Space Commission Site Walk",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8325",
-    hasAgenda: true,
-    location: "Meet at Rebekah Hall, 113 W Columbia Ave",
-    time: "4:00 PM",
-    civicwebId: 8325,
-    packetUrl: "https://telluride-co.civicweb.net/document/446206/"
-  },
-  {
     date: "October 13, 2026",
     title: "Special Town Council Budget",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8307",
@@ -9207,10 +9218,11 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "October 22, 2026",
     title: "Planning & Zoning Commission",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8106",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "5:30 PM",
-    civicwebId: 8106
+    civicwebId: 8106,
+    packetUrl: "https://telluride-co.civicweb.net/document/446322/"
   },
   {
     date: "October 27, 2026",
