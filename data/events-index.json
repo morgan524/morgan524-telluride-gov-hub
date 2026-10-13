@@ -11,7 +11,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
     "type": "Community",
-    "endDate": "2026-12-11"
+    "endDate": "2026-12-12"
   },
   {
     "title": "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
@@ -196,6 +196,19 @@
     "category": "Concert",
     "source": "Telluride Chamber Music",
     "desc": "Part of the \"Not Your Average Classical\" series. Performed at The Alibi.",
+    "type": "Community"
+  },
+  {
+    "title": "Stories & Poems Telluride",
+    "href": "https://koto.org/event/stories-poems-telluride-3/",
+    "date": "2026-10-13",
+    "time": "8:00 AM",
+    "location": "",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/10/SchultheisSPToct26.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Rob Schultheis of Lawson Hill and Elle Metrick of Wrights Mesa join forces for an October session of Stories & Poems, a recurring gathering featuring local writers sharing original work. Schultheis brings experience as an established…",
     "type": "Community"
   },
   {
@@ -634,6 +647,19 @@
     "type": "Music"
   },
   {
+    "title": "Dem-a-Palooza",
+    "href": "https://koto.org/event/dem-a-palooza/",
+    "date": "2026-10-17",
+    "time": "1:00 PM",
+    "location": "Elks Park, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-9.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "A family-friendly fall festival hosted by the San Miguel County Democrats at Elks Park, running from 1 to 3 p.m. The afternoon includes local Democratic candidates, lawn games, and a bonfire, with special guests also on the program.",
+    "type": "Family & Kids"
+  },
+  {
     "title": "Grand Opening of OCSAP Office",
     "href": "https://events.ourayridgwayevents.com/event/grand-opening-of-ocsap-office",
     "date": "2026-10-17",
@@ -684,19 +710,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "A late-night afterparty held in the garden at Chloe's Charcuterie & Wine, following the No Kings event on October 17th. The gathering offers a festive outdoor setting at one of the area's well-known wine and charcuterie spots.",
     "type": "Food & Drink"
-  },
-  {
-    "title": "Dem-a-Palooza!",
-    "href": "https://www.telluride.com/event/dem-a-palooza/",
-    "date": "2026-10-17",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63738/bus_tour_graphics_1200_x_630_px_20261003041104444632.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "A family friendly fall festival celebrating democracy! Hear from our local Democratic candidates. There will be kids' …",
-    "type": "Family & Kids"
   },
   {
     "title": "OCSAP Grand Opening",
@@ -977,6 +990,19 @@
     "endDate": "2026-11-11"
   },
   {
+    "title": "Freeski Film Night",
+    "href": "https://koto.org/event/freeski-film-night/",
+    "date": "2026-10-21",
+    "time": "5:30 PM",
+    "location": "Sheridan Opera House, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/10/ALTO_FilmStill_03-1-scaled.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join the Telluride Mountain Club for a winter kickoff in support of the PI Avy Fund! TMtC is bringing the ski community together at the Sheridan Opera House for a night of films celebrating the spirit of skiing! We’ll premiere new films…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Zumba Fitness with Tamra",
     "href": "https://events.ourayridgwayevents.com/event/zumba-fitness-with-tamra",
     "date": "2026-10-21",
@@ -1243,6 +1269,19 @@
     "endDate": "2026-10-30"
   },
   {
+    "title": "An Intimate Night With Favorite Local Musicians",
+    "href": "https://www.telluride.com/event/an-intimate-night-with-favorite-local-musicians/",
+    "date": "2026-10-23",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63789/screenshot_2026-10-13_at_3_51_53_pm.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Westside Western presents an Intimate Night at the Sheridan Opera House SHOW Bar featuring some of your favorite local …",
+    "type": "Arts & Film"
+  },
+  {
     "title": "PINE NEEDLE WEAVING: JEWELRY, BASKETS AND MORE! WITH EMILY KNICKERBOCKER",
     "href": "https://events.ourayridgwayevents.com/event/pine-needle-weaving-jewelry-baskets-and-more-with-emily-knickerbocker",
     "date": "2026-10-24",
@@ -1253,6 +1292,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "",
+    "type": "Community"
+  },
+  {
+    "title": "People's March",
+    "href": "https://koto.org/event/peoples-march-3/",
+    "date": "2026-10-24",
+    "time": "12:00 PM",
+    "location": "San Miguel County Courthouse, TELLURIDE",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/10/155B9CC1-4DC7-4302-BEF2-5156CCF153DD.jpeg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The next People's March is Saturday, October 24th, at 12 p.m. (noon) at the San Miguel County Courthouse. Speakers are Dr. Howard Kornfeld and Dylan Brooks. Singalong following the march! Bring your instruments! Bring your signs! All are…",
     "type": "Community"
   },
   {
@@ -1412,6 +1464,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Britley & Matt perform live at a venue on North Cora Street in Ridgway. The event is an evening of live music hosted at what appears to be the Colorado Boy Depot.",
     "type": "Music"
+  },
+  {
+    "title": "Telluride Remembrance Garden Dedication Ceremony",
+    "href": "https://koto.org/event/telluride-remembrance-garden-dedication-ceremony/",
+    "date": "2026-10-27",
+    "time": "4:30 PM",
+    "location": "Telluride Remembrance Garden",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/10/garden.jpeg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "A dedication ceremony for the Telluride Remembrance Garden, hosted by Thrive Community Health Network, at the garden's location on the river trail at the intersection of Colorado Avenue and Hemlock Street. The event honors those the…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Staying Grounded When the Ground Is Changing",
@@ -2570,6 +2635,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "“Art Journals for Life” with Michelle Curry-Wright",
+    "href": "https://events.ourayridgwayevents.com/event/art-journals-for-life-with-michelle-curry-wright",
+    "date": "2026-11-14",
+    "time": "10:00 AM",
+    "location": "The Annex on Cora",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54227002088014/huge/9506c19e10cedad721b6558e5b72a937526ca96f.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Happy Little Trees: Classes @ the Wright",
     "href": "https://events.ourayridgwayevents.com/event/happy-little-trees-classes-the-wright-6743",
     "date": "2026-11-14",
@@ -2580,6 +2658,20 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "\"ARIZONA SPLENDOR\" Join Emma Kalff for a morning of coffee and painting at the Wright Opera House Community Room. Participants will follow along with a classic Bob Ross episode and create their own Bob Ross–style landscape painting. All…",
+    "type": "Arts & Film",
+    "endDate": "2026-12-12"
+  },
+  {
+    "title": "Paint & Sip with Nicole: “Morning Peaks”",
+    "href": "https://events.ourayridgwayevents.com/event/paint-sip-with-nicole-morning-peaks-3696",
+    "date": "2026-11-14",
+    "time": "6:00 PM",
+    "location": "weehawken montrose",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54227039080140/huge/0ebdfee2599e5a864a9843516ebcfe3f4bdb80e3.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Paint & Sip with Nicole 6:00pm-8:00pm Weehawken Montrose $49 incl. all supplies and an adult beverage Unwind, sip, and create! Join us for a relaxed painting session designed for all skill levels—no experience needed. Nicole will guide you…",
     "type": "Arts & Film"
   },
   {
@@ -2863,6 +2955,19 @@
     "type": "Community"
   },
   {
+    "title": "Paint & Sip with Nicole: “Snow Topped Treeline\"",
+    "href": "https://events.ourayridgwayevents.com/event/paint-sip-with-nicole-snow-topped-treeline",
+    "date": "2026-12-05",
+    "time": "6:00 PM",
+    "location": "Weehawken Montrose",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54227072853717/huge/a0d50fe2ccd6f4a1fbad398eed543b67b571aef1.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Paint & Sip with Nicole 6:00pm-8:00pm Weehawken Montrose $49 incl. all supplies and an adult beverage Unwind, sip, and create! Join us for a relaxed painting session designed for all skill levels—no experience needed. Nicole will guide you…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Yule Day",
     "href": "https://events.ourayridgwayevents.com/event/yule-day",
     "date": "2026-12-05",
@@ -2955,5 +3060,18 @@
     "desc": "Mountain Village will once again be transformed into the North Pole for this year’s Holiday Prelude celebration on …",
     "type": "Community",
     "endDate": "2026-12-14"
+  },
+  {
+    "title": "Warren Miller&#039;s \"Days Off\"",
+    "href": "https://www.telluride.com/event/warren-millers-days-off/",
+    "date": "2026-12-12",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63712/1789488966-daysoff.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Celebrate the season with Warren Miller’s 77th annual ski and snowboard film, Days Off, coming to the Sheridan Opera …",
+    "type": "Arts & Film"
   }
 ]

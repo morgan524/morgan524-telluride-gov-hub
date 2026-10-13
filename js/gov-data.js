@@ -408,16 +408,6 @@ const SCHOOL_CACHE_DATE = '2026-10-13';
 
 const SCHOOL_CACHED_DATA = [
   {
-    date: "October 19, 2026",
-    time: "3:30 PM",
-    title: "Telluride Board of Education Work Session",
-    agendaUrl: null,
-    packetUrl: null,
-    special: false,
-    location: "Bridal Veil District Conference Room / Zoom",
-    note: "Scheduled meeting -- agenda posted closer to the date."
-  },
-  {
     date: "October 20, 2026",
     time: "5:15 PM",
     title: "Telluride Board of Education Monthly Meeting",
@@ -676,11 +666,19 @@ const NORWOOD_CACHED_DATA = [
     date: "October 14, 2026",
     time: null,
     title: "Board of Trustees Meeting",
-    agendaUrl: null,
+    agendaUrl: "https://www.norwoodtown.com/files/4a8e8713d/10.14.2026+Board+of+Trustee+Agenda+ADA.pdf",
+    packetUrl: "https://www.norwoodtown.com/files/ab18b4c37/10.14.2026+Board+of+Trustees+Supporting+Documents.pdf",
+    special: false,
+    board: "bot"
+  },
+  {
+    date: "October 15, 2026",
+    time: null,
+    title: "Board of Trustees Public Hearing - Resolution No. 2026-0812",
+    agendaUrl: "https://www.norwoodtown.com/files/3ac6a6aae/10.15.2026+Board+of+Trustee+Public+Hearing.pdf",
     packetUrl: null,
     special: false,
-    board: "bot",
-    note: "Next scheduled meeting -- agenda posted before the meeting."
+    board: "bot"
   },
   {
     date: "October 19, 2026",

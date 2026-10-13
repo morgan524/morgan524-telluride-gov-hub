@@ -828,13 +828,13 @@ const MEETING_PREVIEWS = {
     "The Planning & Zoning Commission meeting originally scheduled for October 22, 2026 has been rescheduled to November 2, 2026 at 9:00 a.m. at Rebekah Hall. No specific agenda items have been disclosed for the rescheduled session.",
 
   "telluride|2026-10-13|Special Town Council Budget - Oct 13 2026":
-    "Council is expected to review the Town of Telluride's 2027 budget during a special work session, covering enterprise funds, open space, affordable housing, water and wastewater rates, and a draft fee schedule, along with draft Town Council goals and objectives for the coming fiscal year.",
+    "Council is expected to review the Town of Telluride's 2027 budget during a work session covering enterprise funds, open space, affordable housing, and miscellaneous funds. Discussion will also include a water and sewer rate study, updated fee schedules, and draft Town Council goals and objectives for the coming fiscal year.",
 
   "ouray|2026-10-13|Board of County Commissioners":
-    "Board will consider routine expenditures, ratification of Commissioner Niece's designation to serve on CCI's Legislative Committee, and a Public Trustee report. The meeting also includes a public comment period for community members to raise concerns not otherwise on the agenda.",
+    "Board will consider routine expenditure approvals, ratification of Commissioner Niece's designation to serve on CCI's Legislative Committee, and a Public Trustee report. The meeting will also include a public comment period for community members to raise items not on the agenda.",
 
   "ouraycity|2026-10-13|Ouray Planning Commission Regular Meeting":
-    "The Ouray Planning Commission will discuss proposed regulations governing natural medicine businesses operating within the city. Commissioners will review a draft ordinance and accompanying memo outlining how such businesses may be permitted or restricted under local law."
+    "The Ouray Planning Commission will consider regulations governing natural medicine businesses operating within city limits. Presenter Harper Powell will lead discussion on a proposed ordinance, supported by a staff memo, outlining how such businesses may be permitted and regulated under local law."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -875,6 +875,16 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "Monthly Chamber of Commerce meeting open to all.",
     href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
+    img: ""
+  },
+  {
+    title: "2026 Telluride Mountain Club Recap Report",
+    source: "Telluride Mountain Club",
+    sourceKey: "tmc",
+    date: "October 12, 2026",
+    newsTopic: "community",
+    copy: "The post 2026 Telluride Mountain Club Recap Report appeared first on Telluride Mountain Club .",
+    href: "https://www.telluridemountainclub.org/2026-telluride-mountain-club-recap-report/",
     img: ""
   },
   {
@@ -1019,6 +1029,17 @@ const REGIONAL_NEWS_ARTICLES = [
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
+  {
+    title: "Ballot Delivery Delay",
+    source: "San Miguel County",
+    sourceLabel: "San Miguel County",
+    category: "Alert",
+    date: "2026-10-13",
+    pubDate: "2026-10-13T21:02:28.000Z",
+    copy: "Due to an error within the United States Postal Service, delivery of some election mail ballots has been delayed. We understand that receiving your ballot on time is important, and we apologize for the inconvenience and concern this delay may cause.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=549",
+    img: ""
+  },
   {
     title: "DMV Services available in Egnar 11/18",
     source: "San Miguel County",
@@ -2565,6 +2586,30 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Lady Miners win league XC title",
+    source: "Telluride Times",
+    date: "October 13, 2026",
+    firstSeen: "2026-10-13",
+    newsTopic: "education",
+    copy: "Telluride's girls cross country team claimed the San Juan Basin League title at Saturday's Chicken Creek Challenge north of Mancos, finishing third overall but first among league schools with 59 points. Senior Ruby Cieciuch led the way, placing eighth in 23:29. On the boys' side, junior Daniel Spinei was THS's top finisher at 48th overall.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_86518b0b-b02d-4650-a222-6ec3196caf80.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/64/f64ec0bd-ffe6-4281-abb7-044a5385fef0/6ace9e136141e.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Mountain club announces approval of new trail construction",
+    source: "Telluride Times",
+    date: "October 13, 2026",
+    firstSeen: "2026-10-13",
+    newsTopic: "recreation",
+    copy: "After nearly a decade of planning, the Telluride Mountain Club has received approval for ~8 miles of new trail and 5.5 miles of rehab, with a $2M price tag. First up: a Mountain Village–to–Valley Floor connector, targeting a late summer 2027 opening. A South Side route from Town Park to Bridal Veil Falls is also in the mix.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_d84a7299-bf5c-4e20-b9a7-1a412f5df2ff.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/a9/6a9ebbdd-4420-40f5-9deb-4b29b522e9a6/6ace9bb8a56af.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "‘Deep-seated Telluride identity’: SMC Sheriff candidate Lane Masters",
     source: "Telluride Times",
     date: "October 13, 2026",
@@ -3084,6 +3129,19 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "A guide to measures on the November state ballot (Part 1)",
+    source: "Telluride Times",
+    date: "October 5, 2026",
+    firstSeen: "2026-10-13",
+    newsTopic: "government",
+    copy: "Colorado's November ballot includes 14 statewide amendments and propositions, seven of them constitutional changes requiring 55% approval to pass. The first batch covers immigration reporting requirements, natural gas rights, hunting and fishing rights, and mail ballot ID rules. San Miguel County commissioners have weighed in on several measures — details and a full summary document are linked in the piece.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_e9486d75-07a6-41b0-9929-42885e96774c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/46/a46a5646-5b5e-4df7-8029-9d528386492e/6abc4c643dac5.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
     title: "Willkommen once again",
     source: "Telluride Times",
     date: "October 5, 2026",
@@ -3441,6 +3499,33 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Town of Telluride to Lift All Fire Restrictions",
+    source: "Town of Telluride",
+    date: "September 17, 2026",
+    newsTopic: "public-safety",
+    copy: "(September 16, 2026) – Following improved fire conditions across the region and in alignment with San Miguel County, the Town of Telluride will lift all fire restrictions effective at 12:01 a.m. MT on Friday, September 18, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=405",
+    img: ""
+  },
+  {
+    title: "Placerville Community Annual Fall Potluck",
+    source: "San Miguel County",
+    date: "October 13, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1421",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14854"
+  },
+  {
+    title: "East End Siren Testing Tuesday 10/20",
+    source: "San Miguel County",
+    date: "October 13, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1420",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14853"
+  },
+  {
     title: "San Miguel County Public Health Announces Fall Vaccine Availability",
     source: "San Miguel County",
     date: "October 1, 2026",
@@ -3448,6 +3533,125 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1419",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14836"
+  },
+  {
+    title: "Chief Deputy Clerk Receives Excellence in Election Service Award",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "government",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1413",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14817"
+  },
+  {
+    title: "Planning Director Kaye Simonson Retires After Nearly Eight Years with the County",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1418",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14827"
+  },
+  {
+    title: "Another San Miguel Basin Fair in the Books",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1416",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14822"
+  },
+  {
+    title: "New Faces and a Fond Farewell for Parks + Open Space",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "recreation",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1417",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14826"
+  },
+  {
+    title: "County Housing Efforts Continue on Multiple Fronts",
+    source: "San Miguel County",
+    date: "September 24, 2026",
+    newsTopic: "housing",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1415",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14821"
+  },
+  {
+    title: "San Miguel County Adds Genasys Protect to Emergency Alerting Ecosystem",
+    source: "San Miguel County",
+    date: "September 24, 2026",
+    newsTopic: "public-safety",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1414",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14820"
+  },
+  {
+    title: "Safe Festivals - A Public Health Approach to Harm Reduction",
+    source: "San Miguel County",
+    date: "September 23, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1411",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14818"
+  },
+  {
+    title: "SMC Expands Crisis Intervention Services with Paragon Behavioral Health Connections",
+    source: "San Miguel County",
+    date: "September 22, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1412",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14816"
+  },
+  {
+    title: "Commissioners Finalize Deed Restriction Reversion Process",
+    source: "San Miguel County",
+    date: "September 22, 2026",
+    newsTopic: "housing",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1410",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14812"
+  },
+  {
+    title: "Ballot Delivery Delay",
+    source: "San Miguel County",
+    date: "October 13, 2026",
+    newsTopic: "government",
+    copy: "Due to an error within the United States Postal Service, delivery of some election mail ballots has been delayed. We understand that receiving your ballot on time is important, and we apologize for the inconvenience and concern this delay may cause.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=549",
+    img: ""
+  },
+  {
+    title: "DMV Services available in Egnar 11/18",
+    source: "San Miguel County",
+    date: "September 29, 2026",
+    newsTopic: "community",
+    copy: "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
+  },
+  {
+    title: "Tomboy Road Now Open",
+    source: "San Miguel County",
+    date: "September 18, 2026",
+    newsTopic: "infrastructure",
+    copy: "The Town of Telluride has completed their project that necessitated the closure of Lower Tomboy Road. The road is now open again.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=546",
+    img: ""
+  },
+  {
+    title: "Town Manager's Report",
+    source: "Town of Ridgway",
+    date: "October 13, 2026",
+    firstSeen: "2026-10-13",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Manager%27s-Report---October-13%2C-2026.pdf",
+    img: ""
   },
   {
     title: "Ridgway Bank Building Officially Added to the National Register of Historic Places",
@@ -4157,6 +4361,17 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
+    title: "Stories & Poems Telluride",
+    link: "https://koto.org/event/stories-poems-telluride-3/",
+    description: "Rob Schultheis of Lawson Hill and Elle Metrick of Wrights Mesa join forces for an October session of Stories & Poems, a recurring gathering featuring local writers sharing original work. Schultheis brings experience as an established writer, while Metrick contributes as a poet, performer, and writer.",
+    pubDate: "2026-10-13T08:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/SchultheisSPToct26.png"
+  },
+  {
     title: "Free Legal Clinic – Clínica Jurídica Gratuita",
     link: "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-10-13/",
     description: "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. Abogados voluntarios responderán a preguntas, ayudarán a llenar formularios y explicarán el proceso y el procedimiento de cuestiones jurídicas. Los abogados voluntarios no te representan y esta clínica es sólo informativa. CON CITA PREVIA. Llame a 970-728-4519 para más información y para registrarse.",
@@ -4300,6 +4515,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Dem-a-Palooza",
+    link: "https://koto.org/event/dem-a-palooza/",
+    description: "A family-friendly fall festival hosted by the San Miguel County Democrats at Elks Park, running from 1 to 3 p.m. The afternoon includes local Democratic candidates, lawn games, and a bonfire, with special guests also on the program.",
+    pubDate: "2026-10-17T13:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Elks Park, Telluride",
+    imageUrl: ""
+  },
+  {
     title: "Tea and Tarot",
     link: "https://koto.org/event/tea-and-tarot/2026-10-18/",
     description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
@@ -4331,6 +4557,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
+  },
+  {
+    title: "Freeski Film Night",
+    link: "https://koto.org/event/freeski-film-night/",
+    description: "Join the Telluride Mountain Club for a winter kickoff in support of the PI Avy Fund! TMtC is bringing the ski community together at the Sheridan Opera House for a night of films celebrating the spirit of skiing! We’ll premiere new films from Faction Skis and projects from local pro athletes, including “Accumulation” from Bobby Brown and “ALTO” from Cody Cirillo. The bar will be open, and entry includes 1 prize drawing ticket. Additional drawing tickets will be available for purchase on-site. The drawing includes Faction Skis and other great prizes from Jagged Edge. From big mountain lines to creative missions and everything in between, it’s a chance to get inspired, reconnect with friends, and get fired up for winter. Thank you to our incredible event sponsor, Jagged Edge Mountain Gear! Films: Kicking Horse (2min) | Faction Skis – Ready to send? …",
+    pubDate: "2026-10-21T17:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Sheridan Opera House, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/ALTO_FilmStill_03-1-scaled.jpg"
   },
   {
     title: "Telluride Rotary Club Meeting",
@@ -4399,6 +4636,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   },
   {
+    title: "People's March",
+    link: "https://koto.org/event/peoples-march-3/",
+    description: "The next People's March is Saturday, October 24th, at 12 p.m. (noon) at the San Miguel County Courthouse. Speakers are Dr. Howard Kornfeld and Dylan Brooks. Singalong following the march! Bring your instruments! Bring your signs! All are welcome.",
+    pubDate: "2026-10-24T12:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "San Miguel County Courthouse, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/155B9CC1-4DC7-4302-BEF2-5156CCF153DD.jpeg"
+  },
+  {
     title: "Tea and Tarot",
     link: "https://koto.org/event/tea-and-tarot/2026-10-25/",
     description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
@@ -4430,6 +4678,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2026/09/Social-Media-Workshop-Poster.png"
+  },
+  {
+    title: "Telluride Remembrance Garden Dedication Ceremony",
+    link: "https://koto.org/event/telluride-remembrance-garden-dedication-ceremony/",
+    description: "A dedication ceremony for the Telluride Remembrance Garden, hosted by Thrive Community Health Network, at the garden's location on the river trail at the intersection of Colorado Avenue and Hemlock Street. The event honors those the community has loved and lost, marking the formal opening of this dedicated memorial space.",
+    pubDate: "2026-10-27T16:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Remembrance Garden",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/garden.jpeg"
   },
   {
     title: "7th Judicial District FREE Attorney Consultations for Pro Bono Week",
@@ -5265,7 +5524,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
     pubDate: "2026-10-13T19:30:00.000Z",
-    endDate: "2026-12-11",
+    endDate: "2026-12-12",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6167,10 +6426,22 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54066525250878/huge/c444a33b9b713c7618425dcb61e02494cc6de407.jpg"
   },
   {
+    title: "“Art Journals for Life” with Michelle Curry-Wright",
+    link: "https://events.ourayridgwayevents.com/event/art-journals-for-life-with-michelle-curry-wright",
+    description: "“Art Journals for Life” with Michelle Curry-Wright November 14th, 10:00am-2:30pm Cora Annex, Ridgway Tuition: $75 This workshop will help you kickstart a rich, enjoyable journaling practice. Loosely inspired by the The Bullet Journal Method—a flexible system that uses simple tools like lists, indexes, symbols, and collections to organize thoughts, goals, and daily life—we’ll expand the concept by adding visual and artistic elements. Together, we’ll combine practical organization with playful creativity to create “life books”: personal journals that capture everyday moments, meaningful memories, and the things we love. Art techniques will include collage, mark-making, painting, blind contour drawing, and handmade journal elements. Journaling techniques will include writing prompts, lists, indexes, subject pages, and personalized layouts designed to support your own unique practice. The goal is to discover a journaling method that feels natural and inspiring to you—one that brings joy, reflection, and creative discovery day by day. …",
+    pubDate: "2026-11-14T17:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Annex on Cora",
+    imageUrl: "https://localist-images.azureedge.net/photos/54227002088014/huge/9506c19e10cedad721b6558e5b72a937526ca96f.jpg"
+  },
+  {
     title: "Happy Little Trees: Classes @ the Wright",
     link: "https://events.ourayridgwayevents.com/event/happy-little-trees-classes-the-wright-6743",
     description: "\"ARIZONA SPLENDOR\" Join Emma Kalff for a morning of coffee and painting at the Wright Opera House Community Room. Participants will follow along with a classic Bob Ross episode and create their own Bob Ross–style landscape painting. All supplies are included, and no prior painting experience is necessary. Just bring your curiosity and enjoy a relaxed, creative morning inspired by the joy of painting. FULL SCHEDULE April 11 — Horizons West May 9 — Barn at Sunset June 13 — LIttle House by the Road July 11 — Mountain Splendor August 8 — Quiet Woods September 12 — Arizona Splendor October 3 — Meadow Stream November 14 — Lonely Retreat December 12 — Snow Trail Part of Classes @ the Wright, bringing creativity, learning, and community together in downtown Ouray since Letitia Wright first dreamed it up.",
     pubDate: "2026-11-14T17:30:00.000Z",
+    endDate: "2026-12-12",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6187,6 +6458,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/54066525467985/huge/aeb14558baf2ca7e09ccf2907f91417a1c740cce.jpg"
+  },
+  {
+    title: "Paint & Sip with Nicole: “Morning Peaks”",
+    link: "https://events.ourayridgwayevents.com/event/paint-sip-with-nicole-morning-peaks-3696",
+    description: "Paint & Sip with Nicole 6:00pm-8:00pm Weehawken Montrose $49 incl. all supplies and an adult beverage Unwind, sip, and create! Join us for a relaxed painting session designed for all skill levels—no experience needed. Nicole will guide you through the featured painting while you enjoy a beverage of your choice! All art supplies and one adult beverage are included; just bring your creativity! About Nicole Greenfield: Nicole Greenfield is a painter based in Ridgway, Colorado. Working primarily in acrylic and oil, she creates expressive portraits and atmospheric landscapes that explore the quiet intimacy found in observing people and the natural world. Nicole is a self-taught artist who has developed her skills through years of dedicated practice and online learning. …",
+    pubDate: "2026-11-15T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "weehawken montrose",
+    imageUrl: "https://localist-images.azureedge.net/photos/54227039080140/huge/0ebdfee2599e5a864a9843516ebcfe3f4bdb80e3.jpg"
   },
   {
     title: "Ridgway Independent Film Fest ~ We Gathered Around the Fire",
@@ -6335,6 +6617,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Main Street Ouray",
     imageUrl: "https://localist-images.azureedge.net/photos/52384238613262/huge/9e160cecd96f5b9cd4eba427774e315371414373.jpg"
+  },
+  {
+    title: "Paint & Sip with Nicole: “Snow Topped Treeline\"",
+    link: "https://events.ourayridgwayevents.com/event/paint-sip-with-nicole-snow-topped-treeline",
+    description: "Paint & Sip with Nicole 6:00pm-8:00pm Weehawken Montrose $49 incl. all supplies and an adult beverage Unwind, sip, and create! Join us for a relaxed painting session designed for all skill levels—no experience needed. Nicole will guide you through the featured painting while you enjoy a beverage of your choice! All art supplies and one adult beverage are included; just bring your creativity! About Nicole Greenfield: Nicole Greenfield is a painter based in Ridgway, Colorado. Working primarily in acrylic and oil, she creates expressive portraits and atmospheric landscapes that explore the quiet intimacy found in observing people and the natural world. Nicole is a self-taught artist who has developed her skills through years of dedicated practice and online learning. …",
+    pubDate: "2026-12-06T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Montrose",
+    imageUrl: "https://localist-images.azureedge.net/photos/54227072853717/huge/a0d50fe2ccd6f4a1fbad398eed543b67b571aef1.jpg"
   },
   {
     title: "Ouray Yule! Jeep Raffle • Tree Lighting • Holiday Parade",
@@ -7002,6 +7295,17 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/63738/bus_tour_graphics_1200_x_630_px_20261003041104444632.800x533.webp"
   },
   {
+    title: "Freeski Film Night",
+    link: "https://www.telluride.com/event/freeski-film-night/",
+    description: "Join the Telluride Mountain Club for a winter kickoff in support of the PI Avy Fund! TMtC is bringing the ski community …",
+    pubDate: "2026-10-21",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63768/alto_filmstill_03.800x533.webp"
+  },
+  {
     title: "Water in the West",
     link: "https://www.telluride.com/event/water-in-the-west-the-american-southwests-last-best-rivers-and-how-to-protect-them/",
     description: "Across the Southwest, aridification and challenging politics are impacting our watersheds and threatening our rivers. …",
@@ -7023,6 +7327,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/49427/2019-lamplight-cemetery-tours-website-header.800x533.webp"
+  },
+  {
+    title: "An Intimate Night With Favorite Local Musicians",
+    link: "https://www.telluride.com/event/an-intimate-night-with-favorite-local-musicians/",
+    description: "Westside Western presents an Intimate Night at the Sheridan Opera House SHOW Bar featuring some of your favorite local …",
+    pubDate: "2026-10-23",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63789/screenshot_2026-10-13_at_3_51_53_pm.800x533.webp"
   },
   {
     title: "Pumpkins & Peaks",
@@ -7047,6 +7362,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/45301/gondola-rainbow-2-high-res-2100x1401-f18dd3a9-0d2b-4ff7-b99c-2c162daf4e94.800x533.webp"
+  },
+  {
+    title: "Adventures in Acting: The Legend of Sleepy Hollow / The Little Ghost Who Was a Quilt",
+    link: "https://www.telluride.com/event/adventures-in-acting-the-legend-of-sleepy-hollow-the-little-ghost-who-was-a-quilt/",
+    description: "Kiddos from Adventures in Acting class (Grades K,1,2) present The Legend of Sleepy Hollow. This is a short, adorable …",
+    pubDate: "2026-10-28",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63792/16-5h0a3038-scaled.800x533.webp"
   },
   {
     title: "Coffee & Climate Conversations",
@@ -7163,6 +7489,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/35913/holidayprelude_webbnr_1900x1010.800x533.webp"
+  },
+  {
+    title: "Warren Miller&#039;s \"Days Off\"",
+    link: "https://www.telluride.com/event/warren-millers-days-off/",
+    description: "Celebrate the season with Warren Miller’s 77th annual ski and snowboard film, Days Off, coming to the Sheridan Opera …",
+    pubDate: "2026-12-12",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63712/1789488966-daysoff.800x533.webp"
   }
 ];
 

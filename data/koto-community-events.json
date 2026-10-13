@@ -1,5 +1,16 @@
 [
   {
+    "title": "Stories & Poems Telluride",
+    "link": "https://koto.org/event/stories-poems-telluride-3/",
+    "description": "Rob Schultheis of Lawson Hill and Elle Metrick of Wrights Mesa join forces for an October session of Stories & Poems, a recurring gathering featuring local writers sharing original work. Schultheis brings experience as an established writer, while Metrick contributes as a poet, performer, and writer.",
+    "pubDate": "2026-10-13T08:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/SchultheisSPToct26.png"
+  },
+  {
     "title": "Free Legal Clinic – Clínica Jurídica Gratuita",
     "link": "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-10-13/",
     "description": "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. Abogados voluntarios responderán a preguntas, ayudarán a llenar formularios y explicarán el proceso y el procedimiento de cuestiones jurídicas. Los abogados voluntarios no te representan y esta clínica es sólo informativa. CON CITA PREVIA. Llame a 970-728-4519 para más información y para registrarse.",
@@ -143,6 +154,17 @@
     "imageUrl": ""
   },
   {
+    "title": "Dem-a-Palooza",
+    "link": "https://koto.org/event/dem-a-palooza/",
+    "description": "A family-friendly fall festival hosted by the San Miguel County Democrats at Elks Park, running from 1 to 3 p.m. The afternoon includes local Democratic candidates, lawn games, and a bonfire, with special guests also on the program.",
+    "pubDate": "2026-10-17T13:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Elks Park, Telluride",
+    "imageUrl": ""
+  },
+  {
     "title": "Tea and Tarot",
     "link": "https://koto.org/event/tea-and-tarot/2026-10-18/",
     "description": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
@@ -174,6 +196,17 @@
     "category": "Community Event",
     "location": "Wilkinson Public Library, Telluride",
     "imageUrl": ""
+  },
+  {
+    "title": "Freeski Film Night",
+    "link": "https://koto.org/event/freeski-film-night/",
+    "description": "Join the Telluride Mountain Club for a winter kickoff in support of the PI Avy Fund! TMtC is bringing the ski community together at the Sheridan Opera House for a night of films celebrating the spirit of skiing! We’ll premiere new films from Faction Skis and projects from local pro athletes, including “Accumulation” from Bobby Brown and “ALTO” from Cody Cirillo. The bar will be open, and entry includes 1 prize drawing ticket. Additional drawing tickets will be available for purchase on-site. The drawing includes Faction Skis and other great prizes from Jagged Edge. From big mountain lines to creative missions and everything in between, it’s a chance to get inspired, reconnect with friends, and get fired up for winter. Thank you to our incredible event sponsor, Jagged Edge Mountain Gear! Films: Kicking Horse (2min) | Faction Skis – Ready to send? …",
+    "pubDate": "2026-10-21T17:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Sheridan Opera House, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/ALTO_FilmStill_03-1-scaled.jpg"
   },
   {
     "title": "Telluride Rotary Club Meeting",
@@ -242,6 +275,17 @@
     "imageUrl": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   },
   {
+    "title": "People's March",
+    "link": "https://koto.org/event/peoples-march-3/",
+    "description": "The next People's March is Saturday, October 24th, at 12 p.m. (noon) at the San Miguel County Courthouse. Speakers are Dr. Howard Kornfeld and Dylan Brooks. Singalong following the march! Bring your instruments! Bring your signs! All are welcome.",
+    "pubDate": "2026-10-24T12:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "San Miguel County Courthouse, TELLURIDE",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/155B9CC1-4DC7-4302-BEF2-5156CCF153DD.jpeg"
+  },
+  {
     "title": "Tea and Tarot",
     "link": "https://koto.org/event/tea-and-tarot/2026-10-25/",
     "description": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
@@ -273,6 +317,17 @@
     "category": "Community Event",
     "location": "Wilkinson Public Library, Telluride",
     "imageUrl": "https://koto.org/wp-content/uploads/2026/09/Social-Media-Workshop-Poster.png"
+  },
+  {
+    "title": "Telluride Remembrance Garden Dedication Ceremony",
+    "link": "https://koto.org/event/telluride-remembrance-garden-dedication-ceremony/",
+    "description": "A dedication ceremony for the Telluride Remembrance Garden, hosted by Thrive Community Health Network, at the garden's location on the river trail at the intersection of Colorado Avenue and Hemlock Street. The event honors those the community has loved and lost, marking the formal opening of this dedicated memorial space.",
+    "pubDate": "2026-10-27T16:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Remembrance Garden",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/garden.jpeg"
   },
   {
     "title": "7th Judicial District FREE Attorney Consultations for Pro Bono Week",

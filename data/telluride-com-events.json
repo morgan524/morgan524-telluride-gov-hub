@@ -116,6 +116,17 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/63738/bus_tour_graphics_1200_x_630_px_20261003041104444632.800x533.webp"
   },
   {
+    "title": "Freeski Film Night",
+    "link": "https://www.telluride.com/event/freeski-film-night/",
+    "description": "Join the Telluride Mountain Club for a winter kickoff in support of the PI Avy Fund! TMtC is bringing the ski community …",
+    "pubDate": "2026-10-21",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63768/alto_filmstill_03.800x533.webp"
+  },
+  {
     "title": "Water in the West",
     "link": "https://www.telluride.com/event/water-in-the-west-the-american-southwests-last-best-rivers-and-how-to-protect-them/",
     "description": "Across the Southwest, aridification and challenging politics are impacting our watersheds and threatening our rivers. …",
@@ -137,6 +148,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/49427/2019-lamplight-cemetery-tours-website-header.800x533.webp"
+  },
+  {
+    "title": "An Intimate Night With Favorite Local Musicians",
+    "link": "https://www.telluride.com/event/an-intimate-night-with-favorite-local-musicians/",
+    "description": "Westside Western presents an Intimate Night at the Sheridan Opera House SHOW Bar featuring some of your favorite local …",
+    "pubDate": "2026-10-23",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63789/screenshot_2026-10-13_at_3_51_53_pm.800x533.webp"
   },
   {
     "title": "Pumpkins & Peaks",
@@ -161,6 +183,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/45301/gondola-rainbow-2-high-res-2100x1401-f18dd3a9-0d2b-4ff7-b99c-2c162daf4e94.800x533.webp"
+  },
+  {
+    "title": "Adventures in Acting: The Legend of Sleepy Hollow / The Little Ghost Who Was a Quilt",
+    "link": "https://www.telluride.com/event/adventures-in-acting-the-legend-of-sleepy-hollow-the-little-ghost-who-was-a-quilt/",
+    "description": "Kiddos from Adventures in Acting class (Grades K,1,2) present The Legend of Sleepy Hollow. This is a short, adorable …",
+    "pubDate": "2026-10-28",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63792/16-5h0a3038-scaled.800x533.webp"
   },
   {
     "title": "Coffee & Climate Conversations",
@@ -277,5 +310,16 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/35913/holidayprelude_webbnr_1900x1010.800x533.webp"
+  },
+  {
+    "title": "Warren Miller&#039;s \"Days Off\"",
+    "link": "https://www.telluride.com/event/warren-millers-days-off/",
+    "description": "Celebrate the season with Warren Miller’s 77th annual ski and snowboard film, Days Off, coming to the Sheridan Opera …",
+    "pubDate": "2026-12-12",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63712/1789488966-daysoff.800x533.webp"
   }
 ]

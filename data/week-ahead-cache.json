@@ -1,18 +1,14 @@
 {
-  "hash": "d9521fb30aaca4d3114e825dfbe8fdc7b61f9168",
-  "lede": "The biggest thing on the civic calendar this week is Mountain Village Town Council's October 15 meeting, where second reading of an ordinance restructuring MVHA fees — and a resolution setting the actual 2027 fee schedules for Village Court and other deed-restricted housing — are both up for a vote. Tuesday is also packed: Telluride's Town Council runs a three-hour budget work session on enterprise funds, open space, and affordable housing, while the Ouray County Commissioners take up a Special Use Permit amendment, an affordable-housing commitment under Prop 123, and a new intergovernmental law-enforcement agreement. The Telluride Horror Show lands Friday at the Sheridan Opera House, with a public hearing on the alcohol permits for that already cleared earlier in the week.",
+  "hash": "431cbd8233149a746200e4cf5cf82868018cf41d",
+  "lede": "The biggest decision this week lands in Mountain Village on Wednesday the 15th, where Town Council takes up second reading of an ordinance that would change how MVHA fees are set — shifting from hardcoded figures to an annual schedule — alongside a resolution adopting the actual 2027 fee amounts for Village Court and other workforce housing. Elsewhere, Telluride's Town Council spends three hours Monday grinding through the 2027 budget covering enterprise funds, open space, and affordable housing — no votes yet, but the numbers being shaped now will matter. Ouray County commissioners meet Tuesday on a Prop 123 affordable housing commitment and a new law enforcement intergovernmental agreement, while the Telluride Horror Show kicks off Friday at the Sheridan Opera House.",
   "notable": [
     {
-      "id": 0,
-      "stake": "Commission holds Cossey Complaint hearing and votes on Land Right contract."
-    },
-    {
       "id": 2,
-      "stake": "Council shapes 2027 budget for housing, open space, and enterprise funds."
+      "stake": "2027 budget priorities for housing and open space are being shaped now."
     },
     {
       "id": 3,
-      "stake": "Commissioners vote on SUP amendment, Prop 123 housing commitment, and new law-enforcement IGA."
+      "stake": "County votes on Prop 123 housing commitment and new law enforcement IGA."
     },
     {
       "id": 4,
@@ -20,11 +16,15 @@
     },
     {
       "id": 9,
-      "stake": "Public hearing on Horror Show alcohol permits for crowds up to 1,400."
+      "stake": "Public hearing on alcohol permits for Horror Show crowds up to 1,400."
     },
     {
       "id": 11,
-      "stake": "Second reading vote on MVHA fee ordinance and adoption of 2027 fee schedules."
+      "stake": "Second reading vote on ordinance changing how MVHA workforce housing fees are set."
+    },
+    {
+      "id": 0,
+      "stake": "Water commission holds formal hearing on Cossey Complaint and votes on contract."
     }
   ]
 }
