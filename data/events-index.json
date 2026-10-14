@@ -13,6 +13,34 @@
     "type": "Community"
   },
   {
+    "title": "Guided Tour: Historic Beaumont Hotel & Spa",
+    "href": "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
+    "date": "2026-10-14",
+    "time": "1:30 PM",
+    "location": "Beaumont Hotel & Spa",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
+    "type": "Community",
+    "endDate": "2026-12-12"
+  },
+  {
+    "title": "OPL Read a Book - Get a Pumpkin",
+    "href": "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
+    "date": "2026-10-14",
+    "time": "10:00 AM",
+    "location": "Ouray Public Library",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
+    "type": "Family & Kids",
+    "endDate": "2026-10-31"
+  },
+  {
     "title": "Water Aerobics",
     "href": "https://events.ourayridgwayevents.com/event/water-aerobics",
     "date": "2026-10-14",
@@ -197,6 +225,20 @@
     "type": "Community"
   },
   {
+    "title": "Fall Break - Ridgway Schools",
+    "href": "https://events.ourayridgwayevents.com/event/fall-break-ridgway-schools",
+    "date": "2026-10-14",
+    "time": "",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Fall break for Ridgway Schools, a scheduled day off from classes for students in the Ridgway school district. This is a community calendar listing noting the break period for local families.",
+    "type": "Community",
+    "endDate": "2026-10-16"
+  },
+  {
     "title": "Plaza Vending Committee Meeting",
     "href": "https://townofmountainvillage.com/explore/events/all-events/plaza-vending-committee-meeting/",
     "date": "2026-10-14",
@@ -221,6 +263,20 @@
     "source": "Mountain Village",
     "desc": "Mountain Village's Heritage Plaza hosts a community market featuring local vendors. The pedestrian-friendly plaza welcomes shoppers browsing goods from area farmers, artisans, and small businesses.",
     "type": "Community"
+  },
+  {
+    "title": "Ongoing: Space Cowboy by Dundee & Lee",
+    "href": "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
+    "date": "2026-10-15",
+    "time": "10:00 AM",
+    "location": "Decker Community Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53975670057489/huge/75be37bbb2b6bd7ba17f7754e11da5a0eaf5930c.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado…",
+    "type": "Community",
+    "endDate": "2026-10-29"
   },
   {
     "title": "Pilates for All Bodies with Laura",
@@ -339,6 +395,20 @@
     "source": "Beacon",
     "desc": "Thursday night pickleball with no experience necessary. All supplies provided.",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Functional Fitness - Strength & Mobility Training For Women",
+    "href": "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women-8391",
+    "date": "2026-10-15",
+    "time": "8:15 AM",
+    "location": "Weehawken Ridgway (Old Schoolhouse)",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54236057466628/huge/10f1882bcc97fe1b7ad4209e2431edd0781a413f.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Welcome to Ridgway's functional strength and mobility training for women. Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups…",
+    "type": "Talks & Classes",
+    "endDate": "2026-12-10"
   },
   {
     "title": "Talk: The Sherbino Presents: India Wood's HIKING THE COLORADO X",
@@ -879,6 +949,20 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Hoppers: Movie Night @ the Wright WHEN? Wednesday, October 21 Doors at 6:30 PM | Movie at 7:00 PM WHERE? Wright Opera House 472 Main St., Ouray, Colorado RUN TIME: 1 hour, 44 minutes RATING: PG ROTTEN TOMATOES SCORE: 94% ABOUT THE FILM…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Vinyasa Yoga",
+    "href": "https://events.ourayridgwayevents.com/event/vinyasa-yoga",
+    "date": "2026-10-21",
+    "time": "8:15 AM",
+    "location": "Weehawken Ridgway (Old Schoolhouse)",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54236148198717/huge/7d1ebafc567aad82f67c7ba07e1225354b86622c.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Vinyasa Yoga: Wednesdays 8:15-9:15 am This is a dynamic practice that will challenge, strengthen, and uplift you both physically and mentally. This practice moves through seven doorways or stages, starting by creating sacred space and…",
+    "type": "Wellness",
+    "endDate": "2026-12-09"
   },
   {
     "title": "Market on the Plaza",
@@ -1880,6 +1964,19 @@
     "endDate": "2026-12-08"
   },
   {
+    "title": "Mountainfilm for Locals",
+    "href": "https://www.telluride.com/event/mountainfilm-for-locals/",
+    "date": "2026-11-02",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63808/mf26_for_locals_2200x1237.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Join Mountainfilm for Mountainfilm for Locals, a free screening for our local community, presented in partnership with …",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Bike & Brewery Tour",
     "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     "date": "2026-11-02",
@@ -2273,6 +2370,20 @@
     "source": "Mountain Village",
     "desc": "A guided bicycle ride through Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where participants receive a complimentary beer. The tour departs from the Mountain Lodge and offers a scenic…",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
+    "href": "https://events.ourayridgwayevents.com/event/monthly-welcome-home-alliance-veterans-coffee-the-sherbino",
+    "date": "2026-11-10",
+    "time": "10:00 AM",
+    "location": "The Sherbino",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52236172073282/huge/134613035140f6c008febe657f2e7e23acc365e9.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "A monthly veterans' gathering hosted by the Welcome Home Alliance at The Sherbino, offering coffee, donuts, and camaraderie for veterans of every branch, era, and ability. Representatives will be on hand to share information on topics…",
+    "type": "Community",
+    "endDate": "2026-12-08"
   },
   {
     "title": "Free Legal Clinic – Clínica Jurídica Gratuita",
