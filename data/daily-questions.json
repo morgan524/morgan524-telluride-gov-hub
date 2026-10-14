@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-10-14",
+    "title": "Beavers on the agenda",
+    "body": "Town Council is set to take up a draft Beaver Management Plan. Up here, that lands differently for different people. Beavers reshape water flow, build habitat, and can also flood irrigation ditches, damage culverts, and complicate infrastructure. Some residents see them as a net good — natural engineers in a drought-stressed landscape. Others want the town to manage them aggressively before the damage stacks up. A draft plan means choices are coming, but nothing is decided yet.\n\nWhere do you come down: let the beavers work, or get ahead of the problems they cause?",
+    "choices": [
+      "Let them work",
+      "Manage them now",
+      "Depends on the location",
+      "Need to see the plan"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-10-13",
     "title": "The county's hazard plan is up for a rewrite — does yours match theirs?",
     "body": "The Board of County Commissioners is taking up a multi-jurisdictional hazard mitigation plan update alongside procurement for trail construction, material hauling, a fuel island canopy, and jail painting. Hazard mitigation plans are meant to coordinate how different agencies respond when things go sideways — floods, fires, the usual up here. Some residents think regional coordination is exactly what's needed. Others wonder whether a multi-jurisdictional plan papers over the gaps between agencies more than it closes them. Nothing is final yet — this is still at the Board level. So: do coordinated regional hazard plans actually make communities safer, or do they spread responsibility thin?",
@@ -418,21 +433,6 @@
       "Trail project is the priority",
       "Foreclosure deserves more scrutiny",
       "Fuels work is what matters",
-      "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-09-14",
-    "title": "Old walls, new plans — who decides what fits?",
-    "body": "The Historic and Architectural Review Commission is meeting to consider Certificates of Appropriateness — the green light required before you can build, renovate, alter, or demolish a structure in Telluride. That process protects what makes the town look like itself. But it also means a board can say no to a property owner's plans, or reshape them considerably. Some folks see that as exactly the point. Others see it as a constraint that adds cost and friction — especially when housing pressure is real. Where's the line between preserving character and getting in the way of necessary change?",
-    "choices": [
-      "Preservation has to come first",
-      "Owners deserve more flexibility",
-      "Depends on the structure",
       "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",

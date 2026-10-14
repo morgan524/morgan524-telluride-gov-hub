@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-14T04:18:59.765Z",
+ "generated": "2026-10-14T11:33:31.676Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -142,9 +142,18 @@
      "livestream": ""
     }
    ],
-   "recent": [],
+   "recent": [
+    {
+     "source": "norwood",
+     "date": "2026-10-13",
+     "title": "Norwood Water Commission Meeting",
+     "snippet": "A full agenda for the Norwood Water Commission's October 13 meeting. The biggest items center on the Cossey Complaint — the Commission will hold the hearing itself, consider a request to extend its…"
+    }
+   ],
    "developments": [],
-   "stale": []
+   "stale": [
+    "Norwood Water: norwood discussed it on 2026-10-13 (\"Norwood Water Commission Meeting\") but the deep dive was last edited 2026-07-23."
+   ]
   },
   "fieldpaving": {
    "label": "Field Paving at Town Park",

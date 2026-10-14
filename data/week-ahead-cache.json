@@ -1,22 +1,18 @@
 {
-  "hash": "9273fa88d6b45d229189471ca4570dd9e8e8f13c",
-  "lede": "Mountain Village Council meets Thursday with real decisions on the table: a second-reading ordinance that rewires how the Mountain Village Housing Authority sets its fees — moving from hardcoded figures to an annual fee schedule — plus a companion resolution locking in the actual 2027 MVHA rates, including Village Court. Meanwhile, Norwood holds a public hearing Thursday on whether to remove a sitting Planning Commission member, which is rare enough in a small town to warrant attention. The Telluride Horror Show runs Friday through Sunday at the Sheridan Opera House, with a liquor licensing public hearing Tuesday for the Palm Theatre permits covering up to 1,400 attendees per day.",
+  "hash": "3a251b61cfffb371d3500429980ba54d97b40603",
+  "lede": "The most consequential meeting this week is Mountain Village Town Council on October 15, where a second-reading ordinance would change how MVHA fees are set going forward — shifting from hardcoded figures to an annual fee schedule — alongside a resolution adopting the actual 2027 fee schedules for Village Court and beyond. Norwood has its own unusual moment Thursday evening, with a public hearing on whether to formally remove a sitting Planning Commission member. The Horror Show opens Friday at the Sheridan Opera House and runs through Sunday, with a liquor public hearing Tuesday covering the Palm Theatre permits for the weekend.",
   "notable": [
     {
-      "id": 6,
-      "stake": "Vote on ordinance and resolution setting 2027 MVHA housing fees."
+      "id": 4,
+      "stake": "Public hearing on alcohol permits for Horror Show crowds up to 1,400."
     },
     {
-      "id": 4,
-      "stake": "Public hearing on alcohol permits for up to 1,400 daily Horror Show attendees."
+      "id": 6,
+      "stake": "Council votes on ordinance and resolution setting 2027 MVHA housing fee schedules."
     },
     {
       "id": 8,
       "stake": "Public hearing on potential removal of a sitting Norwood Planning Commission member."
-    },
-    {
-      "id": 1,
-      "stake": "Ridgway Housing Committee reviews one-year regional administrator report and new items."
     }
   ]
 }

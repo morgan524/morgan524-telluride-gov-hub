@@ -504,6 +504,14 @@ const DEEP_DIVE_UPDATES = [];
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-10-14",
+    title: "Beavers on the agenda",
+    body: "Town Council is set to take up a draft Beaver Management Plan. Up here, that lands differently for different people. Beavers reshape water flow, build habitat, and can also flood irrigation ditches, damage culverts, and complicate infrastructure. Some residents see them as a net good — natural engineers in a drought-stressed landscape. Others want the town to manage them aggressively before the damage stacks up. A draft plan means choices are coming, but nothing is decided yet.\n\nWhere do you come down: let the beavers work, or get ahead of the problems they cause?",
+    choices: ["Let them work", "Manage them now", "Depends on the location", "Need to see the plan"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-10-13",
     title: "The county's hazard plan is up for a rewrite — does yours match theirs?",
     body: "The Board of County Commissioners is taking up a multi-jurisdictional hazard mitigation plan update alongside procurement for trail construction, material hauling, a fuel island canopy, and jail painting. Hazard mitigation plans are meant to coordinate how different agencies respond when things go sideways — floods, fires, the usual up here. Some residents think regional coordination is exactly what's needed. Others wonder whether a multi-jurisdictional plan papers over the gaps between agencies more than it closes them. Nothing is final yet — this is still at the Board level. So: do coordinated regional hazard plans actually make communities safer, or do they spread responsibility thin?",
@@ -734,14 +742,6 @@ const DAILY_QUESTIONS = [
     choices: ["Trail project is the priority", "Foreclosure deserves more scrutiny", "Fuels work is what matters", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-09-14",
-    title: "Old walls, new plans — who decides what fits?",
-    body: "The Historic and Architectural Review Commission is meeting to consider Certificates of Appropriateness — the green light required before you can build, renovate, alter, or demolish a structure in Telluride. That process protects what makes the town look like itself. But it also means a board can say no to a property owner's plans, or reshape them considerably. Some folks see that as exactly the point. Others see it as a constraint that adds cost and friction — especially when housing pressure is real. Where's the line between preserving character and getting in the way of necessary change?",
-    choices: ["Preservation has to come first", "Owners deserve more flexibility", "Depends on the structure", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -819,16 +819,10 @@ const MEETING_PREVIEWS = {
     "The Board of Trustees will hold a public hearing to consider the removal for cause of a member of the Town Planning Commission, review the grounds for removal, and establish procedures for the hearing process.",
 
   "telluride|2026-10-14|Special Liquor Licensing Authority - Oct 14 2026":
-    "The Telluride Liquor Licensing Authority will consider approving minutes from its September 17 meeting and hold a public hearing on a request by Palm Arts Inc. for three special event liquor permits to support the Telluride Horror Show on October 16–18, 2026, at 721 W. Colorado Ave.",
-
-  "telluride|2026-10-13|Special Town Council Budget - Oct 13 2026":
-    "Council is expected to review the Town of Telluride's 2027 budget during a work session covering enterprise funds, open space, affordable housing, and miscellaneous funds. Discussion will include water and wastewater rates, a 2027 fee schedule, and draft Town Council goals and objectives.",
-
-  "county|2026-10-14|Board of County Commissioners Work Session":
-    "Commissioners will convene at the Egnar Fire Station for a special work session. The meeting will include a flu and COVID vaccine opportunity beginning at 9:30 a.m., followed by public comment and standard agenda review. Specific action items were not detailed in the available agenda excerpt.",
+    "The Telluride Liquor Licensing Authority will consider approving minutes from its September 17 meeting and hold a public hearing on three special event permit requests from Palm Arts Inc. for the Telluride Horror Show at 721 W. Colorado Ave. on October 16–18, 2026.",
 
   "ouray|2026-10-14|Board of County Commissioners Work Session":
-    "Commissioners are expected to receive a quarterly housing report from Ouray County Home Trust, hear an annual update from the Colorado River District, review a youth and nature presentation, discuss county manager performance, consider land use fee schedule updates, and hold a budget discussion with Ridgway Fire & EMS."
+    "Commissioners are expected to receive a quarterly housing services report from Ouray County Home Trust, hear an annual update from the Colorado River District, and review land use fee schedule updates. The board will also discuss the Ridgway Fire & EMS budget and provide county manager performance feedback."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -2582,6 +2576,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "County staff discusses housing code updates",
+    source: "Telluride Times",
+    date: "October 14, 2026",
+    firstSeen: "2026-10-14",
+    newsTopic: "housing",
+    copy: "San Miguel County held a joint work session to review proposed land use code updates aimed at removing regulatory barriers to housing development, including changes to density rules, new cottage and cohousing definitions, and a 3,000-square-foot cap on free-market homes. Streamlined approval processes would allow smaller projects to move faster through the planning commission.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_46fbb2d0-0db4-4311-9318-f96727dd7f91.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/a0/da076385-3ae2-432a-b902-0a156240c059/6acf4e92a540e.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Lady Miners win league XC title",
     source: "Telluride Times",
@@ -4744,70 +4750,114 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/17514636?hs=a",
-    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    pubDate: "2026-10-13T16:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
-  },
-  {
-    title: "The Power of Limits: How Constraints Drive Genius with David Epstein - Online Talk",
-    link: "https://telluridelibrary.libcal.com/event/17639440?hs=a",
-    description: "12:00 PM – 1:00 PM · Join us for an inspiring virtual conversation with bestselling author David Epstein as we explore his latest book, Inside the Box , and redefine how to approach our greatest challenges! We are constantly told to \"think outside the box\" to innovate, solve complex problems, and reach our goals. But what if the secret to true breakthrough creativity and peak performance actually lies in working within our limitations? In Inside the Box , David Epstein draws on science, research, and fascinating real-world case studies to demonstrate how constraints, boundaries, and structure can become powerful catalysts for ingenuity and mastery. Epstein challenges traditional ideas about skill acquisition, focus, and problem-solving, revealing how top performers and innovators across industries turn rigid limits into unmatched strengths. Register now to learn how to reframe everyday obstacles and apply science-backed performance strategies to your career and personal life. …",
-    pubDate: "2026-10-13T18:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_14_12_03_47.jpg"
-  },
-  {
-    title: "Teen Cook",
-    link: "https://telluridelibrary.libcal.com/event/17486119?hs=a",
-    description: "2:00 PM – 3:00 PM · Join the WPL Every Tuesday after school for Teen Cook. We will cook a different recipe from scratch, and have enough to share with those around!",
-    pubDate: "2026-10-13T20:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_27_00.png"
-  },
-  {
-    title: "I Heart Art with Ah Haa",
-    link: "https://telluridelibrary.libcal.com/event/17292105?hs=a",
-    description: "2:30 PM – 4:00 PM · Looking for a fun and enriching way to spend your afternoons? Join us Tuesdays for I Heart Art, designed especially for kids aged 5-12!  &iquest;Buscas una manera divertida de pasar tus tardes? &iexcl;Unete a nuestro programa extracurricular, dise&ntilde;ado especialmente para ni&ntilde;os de 5 a 12 a&ntilde;os!",
-    pubDate: "2026-10-13T20:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_39_32.png"
-  },
-  {
-    title: "Free Legal Clinic - Clínica Jurídica Gratuita (Zoom)",
-    link: "https://telluridelibrary.libcal.com/event/16009654?hs=a",
-    description: "4:00 PM – 5:40 PM · A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only.  BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una cl&iacute;nica de asesoramiento jur&iacute;dico GRATUITO para las personas que notienen abogado. Abogados voluntarios responder&aacute;n a preguntas, ayudar&aacute;n a llenar formularios y explicar&aacute;n el proceso y el procedimiento de cuestiones jur&iacute;dicas. Los abogados voluntarios no te representan y esta cl&iacute;nica es s&oacute;lo informativa. CON CITA PREVIA. Llame a 970-728-4519 para m&aacute;s informaci&oacute;n y para registrarse.",
-    pubDate: "2026-10-13T22:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Meeting Room #5 - small",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1760996664.jpg"
-  },
-  {
-    title: "Zumba with Marlen",
-    link: "https://telluridelibrary.libcal.com/event/17477839?hs=a",
-    description: "5:00 PM – 6:00 PM · Ditch the workout and join the party! Zumba&reg; is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. &iexcl;Olvida el entrenamiento y &uacute;nete a la fiesta! Zumba&reg; es una clase de fitness de baile de alta energ&iacute;a que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calor&iacute;as. …",
-    pubDate: "2026-10-13T23:00:00.000Z",
+    title: "Lite lunch-The Burning Side",
+    link: "https://telluridelibrary.libcal.com/event/17493869?hs=a",
+    description: "12:00 PM – 1:00 PM · The Burning Side by Sarah Damoff From the author of The Bright Years , the story of April and Leo, a couple on the brink of collapse. When their house goes up in flames, family secrets and thorny histories emerge as they are forced to decide what is worth salvaging. When April and Leo's house burns in the middle of the night, they escape with their two young children and the quiet knowledge that the fire is not the only thing threatening their family. They retreat to April's childhood home in Dallas, where her spirited parents and siblings provide both comfort and complication. As the family reckons with the aftermath—grief, guilt, logistics, and memories scorched and intact—the fire exposes the cracks already forming in April and Leo's marriage. …",
+    pubDate: "2026-10-14T18:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_16_11_46_58.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_29_10_20_27.png"
+  },
+  {
+    title: "Radio Biblioteca",
+    link: "https://telluridelibrary.libcal.com/event/17707363?hs=a",
+    description: "Radio Biblioteca is a bilingual library program broadcast on KOTO 91.7 FM, sharing community news and upcoming events in both English and Spanish. The program airs every other Wednesday and is presented in partnership between Wilkinson Public Library and KOTO Radio Station.",
+    pubDate: "2026-10-14T18:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "KOTO Radio Station",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_24_13_11_06.png"
+  },
+  {
+    title: "Mahjongg for Independent Players",
+    link: "https://telluridelibrary.libcal.com/event/17622568?hs=a",
+    description: "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-10-14T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Magazine Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_10_13_36_20.jpg"
+  },
+  {
+    title: "Movie and A Snack Club",
+    link: "https://telluridelibrary.libcal.com/event/17282938?hs=a",
+    description: "A recurring program at Wilkinson Public Library where participants gather in the Telluride Room to watch a movie and enjoy a snack together. It runs from 3:30 to 5:30 PM and is hosted by the library.",
+    pubDate: "2026-10-14T21:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_26_13_59_32.png"
+  },
+  {
+    title: "Teen Reimagine Our Community",
+    link: "https://telluridelibrary.libcal.com/event/17727012?hs=a",
+    description: "A teen program at Wilkinson Public Library's Teen Area focused on community conversation and reflection. The series uses fictional scenarios as a starting point for discussions around growth, healing, and difficult topics in a supported, safe-space setting.",
+    pubDate: "2026-10-14T22:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Teen Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_28_16_04_52.jpg"
+  },
+  {
+    title: "Harry Potter Watch Party",
+    link: "https://telluridelibrary.libcal.com/event/17486060?hs=a",
+    description: "4:00 PM – 6:30 PM · Join the WPL every Wednesday after school in September and October, where we will sequentially watch all 8 of the original Harry Potter movies. This event is for teens/youth.",
+    pubDate: "2026-10-14T22:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_22_52.jpg"
+  },
+  {
+    title: "Citizenship Support & Civic Practice/Apoyo Comunitario para la Ciudadanía",
+    link: "https://telluridelibrary.libcal.com/event/17637932?hs=a",
+    description: "A free community workshop at Wilkinson Public Library's Magazine Room focused on helping participants prepare for the USCIS citizenship interview and civics test. Attendees of all levels are welcome to practice civics questions and support one another on the path toward U.S. citizenship.",
+    pubDate: "2026-10-14T23:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Magazine Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_29_10_24_58.jpg"
+  },
+  {
+    title: "Sewing 101 with Melissa",
+    link: "https://telluridelibrary.libcal.com/event/15970622?hs=a",
+    description: "5:00 PM – 7:00 PM · Don&#39;t throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we&#39;ll provide the sewing materials.",
+    pubDate: "2026-10-14T23:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Meeting Room #6 - large",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1717100108.jpg"
+  },
+  {
+    title: "Dudes Who Read Book Club",
+    link: "https://telluridelibrary.libcal.com/event/17297334?hs=a",
+    description: "5:30 PM – 6:30 PM · Join us for  Dudes Who Read , led by our very own library bookworms, Dennis and Oliver. This month, the dudes will be discussing their epic summer reads. This month&#39;s meeting will be at the Stronghouse Brew Pub (283 S Fir St).  Seats are limited, so make sure to sign up to secure your spot.",
+    pubDate: "2026-10-14T23:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Stronghouse Brew Pub",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_30_12_10_12.jpg"
+  },
+  {
+    title: "Sensoria: Attending to the Wonder and Vitality of Nature",
+    link: "https://telluridelibrary.libcal.com/event/17291686?hs=a",
+    description: "5:30 PM – 7:00 PM · Join WPL and Talking Gourds for a conversation about Sensoria: Attending to the Wonder and Vitality of Nature , a new collection of writings that invites us to reconsider how we experience and understand the world through our senses. We'll explore what seeing, hearing, touching, tasting, and smelling can teach us about ourselves, other species, and our relationships with the living world around us. How might paying closer attention to our sensory experiences change the way we connect with one another and the non-human world that we are so enmeshed in and yet often think of as separate? Sensoria&#39;s editor, Gavin Van Horn, along with contributors Art Goodtimes, John Hausdoerffer, and others TBD will be reading. …",
+    pubDate: "2026-10-14T23:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_01_12_43_43.jpg"
   }
 ];
 
@@ -4879,15 +4929,26 @@ const SHERIDAN_EVENTS = [
     imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/03/1_5E4MOKWkGhdychJNhXWeZw.jpg"
   },
   {
-    title: "Adventures in Acting: The Legend of Sleepy Hollow / The Little Ghost Who Was a Quilt",
-    link: "https://sheridanoperahouse.com/events/adventures-in-acting-the-legend-of-sleepy-hollow/",
-    description: "A theatrical performance at the Sheridan Opera House presenting two spooky-season stories: Washington Irving's classic *The Legend of Sleepy Hollow* and *The Little Ghost Who Was a Quilt*. The production is part of the Adventures in Acting series, making it a fitting event for the Halloween season.",
-    pubDate: "2026-10-28",
+    title: "Freeski Film Night: Telluride Mountain Club",
+    link: "https://sheridanoperahouse.com/events/freeski-film-night-telluride-mountain-club/",
+    description: "Telluride Mountain Club hosts a freeski film night at the historic Sheridan Opera House, bringing together ski and snowboard enthusiasts for an evening of action-packed mountain film. The event celebrates freestyle skiing culture and the adventurous spirit of the surrounding San Juan peaks as the winter season approaches.",
+    pubDate: "2026-10-21",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
     category: "Concert / Performance",
     location: "Sheridan Opera House • Telluride, CO",
-    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2022/08/VendorBadge_AsSeenOnWeb.png"
+    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/10/Screenshot-2026-10-13-at-9.31.44-AM.png"
+  },
+  {
+    title: "SHOW Bar: An Intimate Night with Favorite Local Musicians",
+    link: "https://sheridanoperahouse.com/events/show-bar-singer-songwriter-night-with-britley-matt/",
+    description: "An intimate evening of live music at the Sheridan Opera House featuring favorite local musicians from the Telluride community. The historic venue provides an up-close setting for this locally focused concert celebrating the area's homegrown talent.",
+    pubDate: "2026-10-23",
+    source: "sheridan",
+    sourceLabel: "Sheridan Opera House",
+    category: "Concert / Performance",
+    location: "Sheridan Opera House • Telluride, CO",
+    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/10/Screenshot-2026-10-13-at-1.02.18-PM.png"
   }
 ];
 
