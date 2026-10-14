@@ -147,7 +147,8 @@ const COUNTY_CACHED_DATA = [
     type: "other",
     location: "333 West Colorado Avenue, 2nd floor meeting room, Telluride, Co 81435",
     civicClerkId: 1072,
-    note: null
+    note: null,
+    packetUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/1072/files/agenda/2047"
   },
   {
     date: "October 26, 2026",
@@ -581,8 +582,7 @@ const FIRE_CACHED_DATA = [
     agendaUrl: null,
     packetUrl: null,
     special: false,
-    location: "131 W Columbia Ave, Telluride, CO 81435",
-    note: "Next scheduled meeting -- agenda typically posted a few days before."
+    location: "131 W Columbia Ave, Telluride, CO 81435"
   },
   {
     date: "November 17, 2026",

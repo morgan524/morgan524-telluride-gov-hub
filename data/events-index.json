@@ -844,6 +844,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "San Miguel Watershed Forum – How to Fund Your Water Project",
+    "href": "https://koto.org/event/san-miguel-watershed-forum-how-to-fund-your-water-project/",
+    "date": "2026-10-20",
+    "time": "9:00 AM",
+    "location": "Telluride Science &#038; Innovation Center, TELLURIDE",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The San Miguel Watershed Coalition relies on engagement and support from our community to achieve our mission of promoting a healthy San Miguel River Basin, both environmentally and economically. The Coalition has the unique ability to…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
     "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
     "date": "2026-10-20",
@@ -1950,6 +1963,19 @@
     "type": "Community"
   },
   {
+    "title": "Mountainfilm for Locals",
+    "href": "https://koto.org/event/mountainfilm-for-locals/",
+    "date": "2026-11-02",
+    "time": "5:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/10/Mountainfilm-For-Locals-Poster-1-scaled.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Doors and pizza at 5 PM, films at 5:30 PM. Join us for Mountainfilm for Locals, a free screening for our local community, presented in partnership with Wilkinson Public Library. Catch a 90-minute program of short films from the 2026…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Monthly Karate in Ouray County",
     "href": "https://events.ourayridgwayevents.com/event/monthly-karate-in-ouray-county",
     "date": "2026-11-02",
@@ -1962,19 +1988,6 @@
     "desc": "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month.…",
     "type": "Talks & Classes",
     "endDate": "2026-12-08"
-  },
-  {
-    "title": "Mountainfilm for Locals",
-    "href": "https://www.telluride.com/event/mountainfilm-for-locals/",
-    "date": "2026-11-02",
-    "time": "5:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63808/mf26_for_locals_2200x1237.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Join Mountainfilm for Mountainfilm for Locals, a free screening for our local community, presented in partnership with …",
-    "type": "Arts & Film"
   },
   {
     "title": "Bike & Brewery Tour",
@@ -2464,19 +2477,6 @@
     "type": "Talks & Classes"
   },
   {
-    "title": "Sewing 101 with Melissa",
-    "href": "https://koto.org/event/sewing-101-with-melissa/2026-11-11/",
-    "date": "2026-11-11",
-    "time": "5:00 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/02/sewing.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll…",
-    "type": "Community"
-  },
-  {
     "title": "Market on the Plaza",
     "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     "date": "2026-11-11",
@@ -2488,19 +2488,6 @@
     "source": "Mountain Village",
     "desc": "Mountain Village's Heritage Plaza hosts a weekly outdoor market featuring local vendors. The market brings together a variety of goods in the pedestrian-friendly plaza setting.",
     "type": "Community"
-  },
-  {
-    "title": "Pilates for All Bodies with Laura",
-    "href": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-11-12/",
-    "date": "2026-11-12",
-    "time": "12:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/wellness.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    "type": "Wellness"
   },
   {
     "title": "Watercolor & Wine with Katey Fetch: Moonlight & Mountains",
@@ -3023,6 +3010,33 @@
     "endDate": "2026-12-14"
   },
   {
+    "title": "Easy Jim",
+    "href": "https://www.telluride.com/event/easy-jim/",
+    "date": "2026-12-11",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/52961/easy_jim_gotoheaven_eventbrite-ezgif_com-webp-to-jpg-converter.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "“Settle back, easy Jim…” The iconic lyric from Robert Hunter’s Althea captured the spirit of the band when it …",
+    "type": "Music",
+    "endDate": "2027-03-13"
+  },
+  {
+    "title": "Easy Jim Residency Night 1",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=easy-jim-residency",
+    "date": "2026-12-11",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://1v09t9hszk.ucarecd.net/5a0e2028-07e8-4974-b039-d62e8ab44ab4/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Easy Jim takes the stage at The Alibi for the first night of a residency engagement, bringing live music to this Telluride bar venue. The residency format promises multiple nights of performances in an intimate setting.",
+    "type": "Music"
+  },
+  {
     "title": "Mountain Village Holiday Prelude",
     "href": "https://www.telluride.com/event/mountain-village-holiday-prelude/",
     "date": "2026-12-12",
@@ -3048,5 +3062,18 @@
     "source": "Telluride.com",
     "desc": "Celebrate the season with Warren Miller’s 77th annual ski and snowboard film, Days Off, coming to the Sheridan Opera …",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Easy Jim Residency Night 2",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=easy-jim-residency-1",
+    "date": "2026-12-12",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://1v09t9hszk.ucarecd.net/5a0e2028-07e8-4974-b039-d62e8ab44ab4/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Easy Jim continues their residency at The Alibi with a late-night performance on the second of what appears to be a multi-night run at the beloved Telluride bar. The residency format promises an intimate, unhurried evening of live music in…",
+    "type": "Music"
   }
 ]

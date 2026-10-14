@@ -22,5 +22,29 @@
     "category": "Live Music",
     "location": "The Alibi • Telluride, CO",
     "imageUrl": "https://1v09t9hszk.ucarecd.net/81532fb8-7b72-4529-9249-3d41062e15ff/-/crop/1174x1175/58,0/-/preview/"
+  },
+  {
+    "title": "Easy Jim Residency Night 1",
+    "link": "https://www.alibitelluride.com/calendar#eca-event=easy-jim-residency",
+    "description": "Easy Jim takes the stage at The Alibi for the first night of a residency engagement, bringing live music to this Telluride bar venue. The residency format promises multiple nights of performances in an intimate setting.",
+    "pubDate": "2026-12-11",
+    "time": "9:00 PM",
+    "source": "alibi",
+    "sourceLabel": "The Alibi",
+    "category": "Live Music",
+    "location": "The Alibi • Telluride, CO",
+    "imageUrl": "https://1v09t9hszk.ucarecd.net/5a0e2028-07e8-4974-b039-d62e8ab44ab4/"
+  },
+  {
+    "title": "Easy Jim Residency Night 2",
+    "link": "https://www.alibitelluride.com/calendar#eca-event=easy-jim-residency-1",
+    "description": "Easy Jim continues their residency at The Alibi with a late-night performance on the second of what appears to be a multi-night run at the beloved Telluride bar. The residency format promises an intimate, unhurried evening of live music in one of the town's most familiar local venues.",
+    "pubDate": "2026-12-12",
+    "time": "9:00 PM",
+    "source": "alibi",
+    "sourceLabel": "The Alibi",
+    "category": "Live Music",
+    "location": "The Alibi • Telluride, CO",
+    "imageUrl": "https://1v09t9hszk.ucarecd.net/5a0e2028-07e8-4974-b039-d62e8ab44ab4/"
   }
 ]

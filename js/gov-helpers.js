@@ -372,7 +372,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8105","sv":4,"ph":"d0e0554de56351fb"},
 
   "county|2026-10-22|Board of Adjustment Meeting":
-    {"sv":4,"ph":"9fed4623122d2e3a"},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1072/files/agenda/2046","zoomUrl":"https://us06web.zoom.us/j/89983740568?pwd=Dl2LOcbcDvSP6Ifh2K09u2KB0cdBZH.1","meetingId":"899 8374 0568","passcode":"022414"},
 
   "school|2026-10-19|Telluride Board of Education Work Session":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -429,7 +429,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8068","sv":4,"ph":"08f639f85583f1c4"},
 
   "telluride|2026-11-04|Telluride Housing Authority Subcommittee - Nov 04 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8165","sv":4,"ph":"a7c1f22c4459aa3c"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8165","sv":4,"ph":"89b54e4a61932908"},
 
   "county|2026-11-04|Board of County Commissioners Meeting":
     {"sv":4,"ph":"a12dfd2ce826475e"},
@@ -819,10 +819,10 @@ const MEETING_PREVIEWS = {
     "The Board of Trustees will hold a public hearing to consider the removal for cause of a member of the Town Planning Commission, review the grounds for removal, and establish procedures for the hearing process.",
 
   "telluride|2026-10-14|Special Liquor Licensing Authority - Oct 14 2026":
-    "The Telluride Liquor Licensing Authority will consider a request by Palm Arts Inc. for three special event permits for the Telluride Horror Show at 721 W. Colorado Ave., covering October 16–18, 2026. Members will also approve minutes from the September 17 meeting.",
+    "The Telluride Liquor Licensing Authority will consider approving minutes from its September 17 meeting and hold a public hearing on a request by Palm Arts Inc. for three special event liquor permits to support the Telluride Horror Show on October 16–18, 2026, at 721 W. Colorado Ave.",
 
   "ouray|2026-10-14|Board of County Commissioners Work Session":
-    "Commissioners are expected to receive a quarterly housing report from Ouray County Home Trust, hear an annual update from the Colorado River District, and review land use fee schedule updates. Additional topics include a Friends of Youth and Nature presentation, county manager performance feedback, and a Ridgway Fire & EMS budget discussion."
+    "Commissioners are expected to receive quarterly housing services and Colorado River District updates, hear a presentation from Friends of Youth and Nature, review county manager performance feedback, discuss land use fee schedule updates, and review Ridgway Fire & EMS budget matters."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -863,6 +863,16 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "Monthly Chamber of Commerce meeting open to all.",
     href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
+    img: ""
+  },
+  {
+    title: "2026 Telluride Mountain Club Recap Report",
+    source: "Telluride Mountain Club",
+    sourceKey: "tmc",
+    date: "October 12, 2026",
+    newsTopic: "community",
+    copy: "The post 2026 Telluride Mountain Club Recap Report appeared first on Telluride Mountain Club .",
+    href: "https://www.telluridemountainclub.org/2026-telluride-mountain-club-recap-report/",
     img: ""
   },
   {
@@ -1274,7 +1284,7 @@ const MANUAL_SUMMARIES = {
     "The October 22, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
 
   "county|2026-10-22|Board of Adjustment Meeting":
-    "The agenda for the October 22 Board of Adjustment meeting hasn't been posted yet.",
+    "The San Miguel County Board of Adjustment meets October 22 with one substantive item: a variance request from a Mountain Village parcel (Parcel #456536200023) to reduce the required setback from County Road 63L right-of-way. Board members will visit the site — located across from the County Jail — at 9 a.m. before convening. Approval of October 2025 minutes is also on the agenda. The meeting opens with a moment of silence for Jim Botenhagen.",
 
   "school|2026-10-19|Telluride Board of Education Work Session":
     "The October 19, 2026 Telluride Board of Education Work Session agenda hasn't been posted yet.",
@@ -2567,6 +2577,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "A community hub",
+    source: "Telluride Times",
+    date: "October 14, 2026",
+    firstSeen: "2026-10-14",
+    newsTopic: "arts-culture",
+    copy: "Kelly and Will Dagostino took over the Sawpit Mercantile in July 2024 and spent their first six months just watching and listening before making changes. They've added espresso, sandwiches, a grab-and-go menu, and free live music while keeping the barbecue program going. When mudslides shut down Highway 145 in July, they kept the doors open, fed stranded travelers until the food ran out, and kept the band playing.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/business/article_570186a9-ebf9-49cd-80ff-b792d48b710a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/6f/06f4f619-32ab-49ec-9931-652f3233f17f/6acea2b512b4b.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "County staff discusses housing code updates",
     source: "Telluride Times",
     date: "October 14, 2026",
@@ -3360,6 +3382,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Town of Telluride to Lift All Fire Restrictions",
+    source: "Town of Telluride",
+    date: "September 17, 2026",
+    newsTopic: "public-safety",
+    copy: "(September 16, 2026) – Following improved fire conditions across the region and in alignment with San Miguel County, the Town of Telluride will lift all fire restrictions effective at 12:01 a.m. MT on Friday, September 18, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=405",
+    img: ""
+  },
+  {
     title: "Placerville Community Annual Fall Potluck",
     source: "San Miguel County",
     date: "October 13, 2026",
@@ -3387,12 +3418,111 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14836"
   },
   {
+    title: "Chief Deputy Clerk Receives Excellence in Election Service Award",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "government",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1413",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14817"
+  },
+  {
+    title: "Planning Director Kaye Simonson Retires After Nearly Eight Years with the County",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1418",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14827"
+  },
+  {
+    title: "Another San Miguel Basin Fair in the Books",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1416",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14822"
+  },
+  {
+    title: "New Faces and a Fond Farewell for Parks + Open Space",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "recreation",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1417",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14826"
+  },
+  {
+    title: "County Housing Efforts Continue on Multiple Fronts",
+    source: "San Miguel County",
+    date: "September 24, 2026",
+    newsTopic: "housing",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1415",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14821"
+  },
+  {
+    title: "San Miguel County Adds Genasys Protect to Emergency Alerting Ecosystem",
+    source: "San Miguel County",
+    date: "September 24, 2026",
+    newsTopic: "public-safety",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1414",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14820"
+  },
+  {
+    title: "Safe Festivals - A Public Health Approach to Harm Reduction",
+    source: "San Miguel County",
+    date: "September 23, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1411",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14818"
+  },
+  {
+    title: "SMC Expands Crisis Intervention Services with Paragon Behavioral Health Connections",
+    source: "San Miguel County",
+    date: "September 22, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1412",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14816"
+  },
+  {
+    title: "Commissioners Finalize Deed Restriction Reversion Process",
+    source: "San Miguel County",
+    date: "September 22, 2026",
+    newsTopic: "housing",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1410",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14812"
+  },
+  {
     title: "Ballot Delivery Delay",
     source: "San Miguel County",
     date: "October 13, 2026",
     newsTopic: "government",
     copy: "Due to an error within the United States Postal Service, delivery of some election mail ballots has been delayed. We understand that receiving your ballot on time is important, and we apologize for the inconvenience and concern this delay may cause.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=549",
+    img: ""
+  },
+  {
+    title: "DMV Services available in Egnar 11/18",
+    source: "San Miguel County",
+    date: "September 29, 2026",
+    newsTopic: "community",
+    copy: "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
+  },
+  {
+    title: "Tomboy Road Now Open",
+    source: "San Miguel County",
+    date: "September 18, 2026",
+    newsTopic: "infrastructure",
+    copy: "The Town of Telluride has completed their project that necessitated the closure of Lower Tomboy Road. The road is now open again.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=546",
     img: ""
   },
   {
@@ -3459,6 +3589,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/00-October-14-workforce-%26-affordable-housing-committee-agenda.pdf",
+    img: ""
+  },
+  {
+    title: "Notice of Public Hearing for Liquor License on Thursday, November 19, 2026 at 5:30pm - Chipeta Lodge Resort &amp; Spa, 304 S Lena Street - Notice dated October 13, 2026",
+    source: "Town of Ridgway",
+    date: "October 14, 2026",
+    firstSeen: "2026-10-14",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Notice-public-hearing-Chipeta_0.pdf",
     img: ""
   },
   {
@@ -4255,6 +4396,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/09/Screenshot-2026-09-18-at-2.04.12-PM.png"
   },
   {
+    title: "San Miguel Watershed Forum – How to Fund Your Water Project",
+    link: "https://koto.org/event/san-miguel-watershed-forum-how-to-fund-your-water-project/",
+    description: "The San Miguel Watershed Coalition relies on engagement and support from our community to achieve our mission of promoting a healthy San Miguel River Basin, both environmentally and economically. The Coalition has the unique ability to work across geographies and political boundaries, to partner and magnify the impact of individual stakeholders and projects, and to build watershed initiatives that are greater than the sum of their parts.To put it simply, the Watershed Coalition connects its partners to resources to fund projects. In the face of historic drought across the West, it has never been more important to stand together for the future of the San Miguel River. Please join us for the 2026 San Miguel Watershed Forum at 9:00 AM on October 20 at the Telluride Science and Innovation Center. Attendees will learn about the Coalition’s current work, funding opportunities for water projects, and collaboration opportunities. …",
+    pubDate: "2026-10-20T09:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Science &#038; Innovation Center, TELLURIDE",
+    imageUrl: ""
+  },
+  {
     title: "Stories & Poems Telluride",
     link: "https://koto.org/event/stories-poems-telluride-2/",
     description: "Famed writer and nascent poet Rob Schultheis of Lawson Hill will join poet performer and writer Elle Metrick of Wrights Mesa for the October 20 th session of Stories &amp; Poems at the Wilkinson Public Library at 5:15 pm. MDT “I have been a fan of Rob’s work since I moved to Telluride in the early ‘80s,” said Art Goodtimes, Talking Gourds director. “Elle has been a poet performer colleague and Norwood area friend for over 20 years. It should be a delightful evening.” Schultheis is an author and journalist who lives in Lawson Hill. He has written books about the wars in Afghanistan (both with the Soviet Union and the U.S.) and the 2003 Iraq War, as well as books about Colorado, the Western United States, and extreme sports such as mountain climbing. …",
@@ -4519,6 +4671,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   },
   {
+    title: "Mountainfilm for Locals",
+    link: "https://koto.org/event/mountainfilm-for-locals/",
+    description: "Doors and pizza at 5 PM, films at 5:30 PM. Join us for Mountainfilm for Locals, a free screening for our local community, presented in partnership with Wilkinson Public Library. Catch a 90-minute program of short films from the 2026 Mountainfilm Festival, including Best Documentary Short winner The Grandfather Puzzle and Evening in Chile, featuring Colorado freeskier Bobby Brown. Free pizza is first come, first served, so come hungry and come early!",
+    pubDate: "2026-11-02T17:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/Mountainfilm-For-Locals-Poster-1-scaled.jpg"
+  },
+  {
     title: "Bardic Trails Online Poetry Night",
     link: "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-11-03/",
     description: "The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit to get the zoom link each month, Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. Jan. 6 / Euro-American poet Dane Cervine of California Feb. …",
@@ -4604,28 +4767,6 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Sewing 101 with Melissa",
-    link: "https://koto.org/event/sewing-101-with-melissa/2026-11-11/",
-    description: "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.",
-    pubDate: "2026-11-11T17:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/02/sewing.jpg"
-  },
-  {
-    title: "Pilates for All Bodies with Laura",
-    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-11-12/",
-    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-11-12T12:30:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
   }
 ];
@@ -4783,6 +4924,30 @@ const ALIBI_EVENTS = [
     category: "Live Music",
     location: "The Alibi • Telluride, CO",
     imageUrl: "https://1v09t9hszk.ucarecd.net/81532fb8-7b72-4529-9249-3d41062e15ff/-/crop/1174x1175/58,0/-/preview/"
+  },
+  {
+    title: "Easy Jim Residency Night 1",
+    link: "https://www.alibitelluride.com/calendar#eca-event=easy-jim-residency",
+    description: "Easy Jim takes the stage at The Alibi for the first night of a residency engagement, bringing live music to this Telluride bar venue. The residency format promises multiple nights of performances in an intimate setting.",
+    pubDate: "2026-12-11",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://1v09t9hszk.ucarecd.net/5a0e2028-07e8-4974-b039-d62e8ab44ab4/"
+  },
+  {
+    title: "Easy Jim Residency Night 2",
+    link: "https://www.alibitelluride.com/calendar#eca-event=easy-jim-residency-1",
+    description: "Easy Jim continues their residency at The Alibi with a late-night performance on the second of what appears to be a multi-night run at the beloved Telluride bar. The residency format promises an intimate, unhurried evening of live music in one of the town's most familiar local venues.",
+    pubDate: "2026-12-12",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://1v09t9hszk.ucarecd.net/5a0e2028-07e8-4974-b039-d62e8ab44ab4/"
   }
 ];
 
@@ -7000,6 +7165,17 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/63738/bus_tour_graphics_1200_x_630_px_20261003041104444632.800x533.webp"
   },
   {
+    title: "Nattali Rize",
+    link: "https://www.telluride.com/event/nattali-rize/",
+    description: "The ever evolving Nattali Rize, lyricist, musician, conscious artist.\n\nMost notoriously fronts her full electric global …",
+    pubDate: "2026-10-17",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63822/screenshot_2026-10-14_at_11_27_28_am.800x533.webp"
+  },
+  {
     title: "Freeski Film Night",
     link: "https://www.telluride.com/event/freeski-film-night/",
     description: "Join the Telluride Mountain Club for a winter kickoff in support of the PI Avy Fund! TMtC is bringing the ski community …",
@@ -7103,6 +7279,17 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/63749/yf_thundertix-ezgif_com-webp-to-jpg-converter.800x533.webp"
   },
   {
+    title: "KOTO Halloween Bash",
+    link: "https://www.telluride.com/event/koto-halloween-bash/",
+    description: "In 2019 RADO formed and took up the cause in Denver’s prolific music scene. The band melds together ferocious …",
+    pubDate: "2026-10-31",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/45292/screenshot_2026-10-14_at_11_30_48_am.800x533.webp"
+  },
+  {
     title: "Mountainfilm for Locals",
     link: "https://www.telluride.com/event/mountainfilm-for-locals/",
     description: "Join Mountainfilm for Mountainfilm for Locals, a free screening for our local community, presented in partnership with …",
@@ -7112,6 +7299,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/63808/mf26_for_locals_2200x1237.800x533.webp"
+  },
+  {
+    title: "Adult Spelling Bee",
+    link: "https://www.telluride.com/event/adult-spelling-bee/",
+    description: "Words. Drinks. Bragging Rights (and $100!). For teams of 2. Extra prizes for clever team names and costumes! Show your …",
+    pubDate: "2026-11-06",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63826/screenshot_2026-10-14_at_11_32_08_am.800x533.webp"
   },
   {
     title: "KOTO Ski Swap",
@@ -7193,6 +7391,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/45744/download_7.800x533.webp"
+  },
+  {
+    title: "Easy Jim",
+    link: "https://www.telluride.com/event/easy-jim/",
+    description: "“Settle back, easy Jim…” The iconic lyric from Robert Hunter’s Althea captured the spirit of the band when it …",
+    pubDate: "2026-12-11",
+    endDate: "2027-03-13",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/52961/easy_jim_gotoheaven_eventbrite-ezgif_com-webp-to-jpg-converter.800x533.webp"
   },
   {
     title: "Mountain Village Holiday Prelude",

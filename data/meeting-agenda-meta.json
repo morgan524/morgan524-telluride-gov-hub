@@ -452,7 +452,10 @@
   },
   "county|2026-10-22|Board of Adjustment Meeting": {
     "sv": 4,
-    "ph": "9fed4623122d2e3a"
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1072/files/agenda/2046",
+    "zoomUrl": "https://us06web.zoom.us/j/89983740568?pwd=Dl2LOcbcDvSP6Ifh2K09u2KB0cdBZH.1",
+    "meetingId": "899 8374 0568",
+    "passcode": "022414"
   },
   "school|2026-10-19|Telluride Board of Education Work Session": {
     "sv": 4,
@@ -552,7 +555,7 @@
   "telluride|2026-11-04|Telluride Housing Authority Subcommittee - Nov 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8165",
     "sv": 4,
-    "ph": "a7c1f22c4459aa3c"
+    "ph": "89b54e4a61932908"
   },
   "county|2026-11-04|Board of County Commissioners Meeting": {
     "sv": 4,
