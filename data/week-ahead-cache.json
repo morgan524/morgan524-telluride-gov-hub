@@ -1,30 +1,22 @@
 {
-  "hash": "431cbd8233149a746200e4cf5cf82868018cf41d",
-  "lede": "The biggest decision this week lands in Mountain Village on Wednesday the 15th, where Town Council takes up second reading of an ordinance that would change how MVHA fees are set — shifting from hardcoded figures to an annual schedule — alongside a resolution adopting the actual 2027 fee amounts for Village Court and other workforce housing. Elsewhere, Telluride's Town Council spends three hours Monday grinding through the 2027 budget covering enterprise funds, open space, and affordable housing — no votes yet, but the numbers being shaped now will matter. Ouray County commissioners meet Tuesday on a Prop 123 affordable housing commitment and a new law enforcement intergovernmental agreement, while the Telluride Horror Show kicks off Friday at the Sheridan Opera House.",
+  "hash": "9273fa88d6b45d229189471ca4570dd9e8e8f13c",
+  "lede": "Mountain Village Council meets Thursday with real decisions on the table: a second-reading ordinance that rewires how the Mountain Village Housing Authority sets its fees — moving from hardcoded figures to an annual fee schedule — plus a companion resolution locking in the actual 2027 MVHA rates, including Village Court. Meanwhile, Norwood holds a public hearing Thursday on whether to remove a sitting Planning Commission member, which is rare enough in a small town to warrant attention. The Telluride Horror Show runs Friday through Sunday at the Sheridan Opera House, with a liquor licensing public hearing Tuesday for the Palm Theatre permits covering up to 1,400 attendees per day.",
   "notable": [
     {
-      "id": 2,
-      "stake": "2027 budget priorities for housing and open space are being shaped now."
-    },
-    {
-      "id": 3,
-      "stake": "County votes on Prop 123 housing commitment and new law enforcement IGA."
+      "id": 6,
+      "stake": "Vote on ordinance and resolution setting 2027 MVHA housing fees."
     },
     {
       "id": 4,
-      "stake": "Proposed ordinance would regulate psilocybin businesses in Ouray city limits."
+      "stake": "Public hearing on alcohol permits for up to 1,400 daily Horror Show attendees."
     },
     {
-      "id": 9,
-      "stake": "Public hearing on alcohol permits for Horror Show crowds up to 1,400."
+      "id": 8,
+      "stake": "Public hearing on potential removal of a sitting Norwood Planning Commission member."
     },
     {
-      "id": 11,
-      "stake": "Second reading vote on ordinance changing how MVHA workforce housing fees are set."
-    },
-    {
-      "id": 0,
-      "stake": "Water commission holds formal hearing on Cossey Complaint and votes on contract."
+      "id": 1,
+      "stake": "Ridgway Housing Committee reviews one-year regional administrator report and new items."
     }
   ]
 }

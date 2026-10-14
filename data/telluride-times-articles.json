@@ -24,18 +24,6 @@
     "imgHiRes": true
   },
   {
-    "title": "‘Deep-seated Telluride identity’: SMC Sheriff candidate Lane Masters",
-    "source": "Telluride Times",
-    "date": "October 13, 2026",
-    "firstSeen": "2026-10-13",
-    "newsTopic": "public-safety",
-    "copy": "Lane Masters, 37, is running for San Miguel County Sheriff — a lifelong goal for the Telluride native and son of retiring 46-year Sheriff Bill Masters. He brings nine years with the Bismarck PD plus current local deputy and sergeant experience. He's focused on staffing and calls disaster preparedness the county's biggest public safety challenge.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/elections/article_fcaa44d8-c396-49b5-8f3c-362a90a459d3.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/e3/2e30d9d6-1276-4b5b-b378-2bdfe705d42c/6acdd259d2be5.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "A modern Mayberry: SMC Sheriff candidate Dan Covault",
     "source": "Telluride Times",
     "date": "October 13, 2026",
@@ -45,6 +33,18 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/elections/article_2c1a7889-a43c-4ab1-be1f-ee30552409b2.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/22/a22f7d9f-2d4c-4f7f-9c15-45e4b7dbf910/6acdca94022ff.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "‘Deep-seated Telluride identity’: SMC Sheriff candidate Lane Masters",
+    "source": "Telluride Times",
+    "date": "October 13, 2026",
+    "firstSeen": "2026-10-13",
+    "newsTopic": "public-safety",
+    "copy": "Lane Masters, 37, is running for San Miguel County Sheriff — a lifelong goal for the Telluride native and son of retiring 46-year Sheriff Bill Masters. He brings nine years with the Bismarck PD plus current local deputy and sergeant experience. He's focused on staffing and calls disaster preparedness the county's biggest public safety challenge.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/elections/article_fcaa44d8-c396-49b5-8f3c-362a90a459d3.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/e3/2e30d9d6-1276-4b5b-b378-2bdfe705d42c/6acdd259d2be5.image.jpg",
     "imgHiRes": true
   },
   {
@@ -760,18 +760,6 @@
     "imgHiRes": true
   },
   {
-    "title": "Tropical Pacific moisture drenches central US as another Pacific hurricane forms",
-    "source": "Telluride Times",
-    "date": "September 30, 2026",
-    "firstSeen": "2026-09-30",
-    "newsTopic": "community",
-    "copy": "Remnants of Hurricane Polo pushed tropical moisture across the Southwest and into the Plains this week, dropping heavy rain from New Mexico to Iowa. In New Mexico, the Rio Grande overflowed after running dry for months, but the flooding hit chile farmers hard at harvest time, with some growers losing entire crops. A new hurricane, Rachel, is now threatening Mexico's Pacific coast.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/state/article_de3f4275-868c-5973-b2c2-4abcb102e5b3.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/e7/6e70466a-a577-5991-84da-fc73462ce5b7/6abd6eba7c2de.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Original Thinkers returns",
     "source": "Telluride Times",
     "date": "October 1, 2026",
@@ -781,126 +769,6 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/news/article_255bd56f-6a36-4611-acdc-1808894bc28c.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/8f/a8fa1709-3ca1-4759-a999-0f56f010903c/6aba2ec4853a8.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "What a weekend",
-    "source": "Telluride Times",
-    "date": "September 30, 2026",
-    "firstSeen": "2026-09-30",
-    "newsTopic": "recreation",
-    "copy": "Late September packed a lot into one weekend — vintage cars, a 100-mile charity bike ride, a history hike, the Walk for Hope for suicide prevention awareness, and a library talk on a new Telluride climbing guide. Mariachi San Jose and a Constitution-themed theatre production rounded things out earlier in the week.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/gallery/featured/article_500c554b-92ca-4a9e-8d55-7b1ff9f92f16.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/9d/89d42b1a-90ac-4393-ba2f-2feb94652608/6abd4766f23fa.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "School board support for prop NN",
-    "source": "Telluride Times",
-    "date": "September 30, 2026",
-    "firstSeen": "2026-09-30",
-    "newsTopic": "government",
-    "copy": "The Telluride R-1 School Board voted September 22 to formally endorse Colorado's Proposition NN, a November statewide ballot measure aimed at increasing K-12 funding. Colorado currently spends about $1,600 less per pupil than the national average, and starting teacher salaries rank 41st nationally. The board also authorized members to speak publicly in support of the measure.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_66443fb8-af57-4c53-becd-8acee30bf116.html",
-    "img": "",
-    "letterAuthor": "Cheryl Carstens Miller David Lavender Telluride, School Board",
-    "isLetter": true,
-    "imgHiRes": true
-  },
-  {
-    "title": "School board supports Amendment 87",
-    "source": "Telluride Times",
-    "date": "September 30, 2026",
-    "firstSeen": "2026-09-30",
-    "newsTopic": "government",
-    "copy": "The Telluride R-1 School Board voted September 22 to formally endorse Amendment 87, a state ballot measure that would establish a graduated income tax. The district estimates it would bring in around $643,000 annually for local schools, with statewide projections of $2–2.7 billion for K-12, healthcare, and early childhood programs.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_c947791e-f3af-4787-8f6d-1922d28e1b68.html",
-    "img": "",
-    "letterAuthor": "Cheryl Carstens Miller David Lavender Telluride, School Board",
-    "isLetter": true,
-    "imgHiRes": true
-  },
-  {
-    "title": "Vote for Dylan Brooks",
-    "source": "Telluride Times",
-    "date": "September 30, 2026",
-    "firstSeen": "2026-09-30",
-    "newsTopic": "government",
-    "copy": "A letter to the editor endorses Dylan Brooks for San Miguel County Commissioner, citing his financial expertise, community roots, and collaborative nature. The writer contrasts him favorably with opponent Paul Reich, calling Brooks better suited to handle the county's wide-ranging decisions.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_e642e612-9237-4696-b28c-7debb9aad5e9.html",
-    "img": "",
-    "letterAuthor": "Rick Silverman",
-    "isLetter": true,
-    "imgHiRes": true
-  },
-  {
-    "title": "Thank you, Telluride",
-    "source": "Telluride Times",
-    "date": "September 30, 2026",
-    "firstSeen": "2026-09-30",
-    "newsTopic": "public-safety",
-    "copy": "Two hundred emergency go kits were assembled over two days at the Telluride Blues & Brews Festival through a project run by the nonprofit Just A Bunch of Roadies (JAB~R). The kits — designed to help households through the first 72 hours of an evacuation — will be distributed free to lower-income and vulnerable residents across San Miguel, Montrose, and ~uray counties. Sponsors, volunteers, festival crew, and local businesses all pitched in to make it happen.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_a27c227c-87fd-4dd8-ab74-5fd3b209d0e6.html",
-    "img": "",
-    "letterAuthor": "Jeff Pryor Alexandra Mitchell Just, A Bunch of Roadies Ridgway",
-    "isLetter": true,
-    "imgHiRes": true
-  },
-  {
-    "title": "Vote for Lane Masters",
-    "source": "Telluride Times",
-    "date": "September 30, 2026",
-    "firstSeen": "2026-09-30",
-    "newsTopic": "government",
-    "copy": "A letter from former San Miguel County Commissioner Art Goodtimes endorses Lane Masters for sheriff, citing Masters' roots here and understanding of the full county — from longtime locals to immigrant communities to Down Valley towns. Goodtimes wants a sheriff who sees this place as a year-round home, not just a resort economy.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_355197e9-bb5d-4661-bf57-b562d3fbb75d.html",
-    "img": "",
-    "letterAuthor": "Art Goodtimes Norwood",
-    "isLetter": true,
-    "imgHiRes": true
-  },
-  {
-    "title": "'Right' to natural gas protects industry",
-    "source": "Telluride Times",
-    "date": "September 30, 2026",
-    "firstSeen": "2026-09-30",
-    "newsTopic": "government",
-    "copy": "Amendment 82, on the Colorado ballot, would enshrine natural gas access in the state constitution — framed as consumer choice, but critics say it shields pipeline infrastructure and strips local communities of energy planning authority. Two-thirds of the average Colorado gas bill already goes to pipeline costs, not the gas itself. Heat pump installs across major state utilities more than doubled in 2025.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_cbc1f5fa-f090-4630-94c2-e79e7b74a553.html",
-    "img": "",
-    "letterAuthor": "Siobhan Lavender Montoya EcoAction Partners",
-    "isLetter": true,
-    "imgHiRes": true
-  },
-  {
-    "title": "Mountain Village wins Sunset Concert Series condemnation appeal",
-    "source": "Telluride Times",
-    "date": "September 30, 2026",
-    "firstSeen": "2026-09-30",
-    "newsTopic": "arts-culture",
-    "copy": "The Colorado Court of Appeals unanimously overturned a district court ruling that had dismissed Mountain Village's bid to condemn TSG land for the Sunset Concert Series, sending the case back to district court for further proceedings. The appeals court found the district court erred by dismissing without a hearing or adequate record. Meanwhile, the concerts ran in Sunset Plaza this summer under a separate license agreement between TSG and TMV~A — though that agreement can be canceled by either party at any time.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/article_c6b05c79-cb1e-4b5e-89f0-bcee12dbc79d.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/87/587ca587-8161-4923-926b-852b4dad0c81/6abb368f3e74c.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "Town council discusses housing waitlist, rental rates",
-    "source": "Telluride Times",
-    "date": "September 30, 2026",
-    "firstSeen": "2026-09-30",
-    "newsTopic": "housing",
-    "copy": "Town Council voted to extend the housing waitlist suspension through January and hold rental rates steady for 2027, despite a 9.7% rise in regional AMI. Vacancy rates have dropped since the waitlist was suspended in April. A third-party policy review is underway before any bigger changes are made.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/article_b7fa0418-02ee-459b-9e4b-887c52b9737d.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/79/7796f851-3091-4324-921e-36eccfbee341/6aba2cc145efe.image.jpg",
     "imgHiRes": true
   },
   {
@@ -1134,20 +1002,9 @@
     "img": ""
   },
   {
-    "title": "Notice of Public Hearing Wed., Oct. 14, 2026 at 5:30pm - 1) Site Plan and Conditional Use Permit for Riverbend Townhomes (TBD Liddell Dr.); 2) Amended Plat of Lot 4 and Outlot of Riverview Busines Park Subdivision (TBD Liddell Dr.)",
-    "source": "Town of Ridgway",
-    "date": "September 30, 2026",
-    "firstSeen": "2026-09-30",
-    "newsTopic": "land-use",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.09.30_public-hearing-notice.pdf",
-    "img": ""
-  },
-  {
     "title": "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     "source": "Town of Ridgway",
-    "date": "October 13, 2026",
+    "date": "October 14, 2026",
     "firstSeen": "2026-09-29",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1158,7 +1015,7 @@
   {
     "title": "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     "source": "Town of Ridgway",
-    "date": "October 13, 2026",
+    "date": "October 14, 2026",
     "firstSeen": "2026-09-29",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",

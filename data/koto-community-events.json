@@ -1,27 +1,5 @@
 [
   {
-    "title": "Stories & Poems Telluride",
-    "link": "https://koto.org/event/stories-poems-telluride-3/",
-    "description": "Rob Schultheis of Lawson Hill and Elle Metrick of Wrights Mesa join forces for an October session of Stories & Poems, a recurring gathering featuring local writers sharing original work. Schultheis brings experience as an established writer, while Metrick contributes as a poet, performer, and writer.",
-    "pubDate": "2026-10-13T08:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/SchultheisSPToct26.png"
-  },
-  {
-    "title": "Free Legal Clinic – Clínica Jurídica Gratuita",
-    "link": "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-10-13/",
-    "description": "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. Abogados voluntarios responderán a preguntas, ayudarán a llenar formularios y explicarán el proceso y el procedimiento de cuestiones jurídicas. Los abogados voluntarios no te representan y esta clínica es sólo informativa. CON CITA PREVIA. Llame a 970-728-4519 para más información y para registrarse.",
-    "pubDate": "2026-10-13T16:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "",
-    "imageUrl": ""
-  },
-  {
     "title": "Sewing 101 with Melissa",
     "link": "https://koto.org/event/sewing-101-with-melissa/2026-10-14/",
     "description": "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.",
@@ -196,6 +174,17 @@
     "category": "Community Event",
     "location": "Wilkinson Public Library, Telluride",
     "imageUrl": ""
+  },
+  {
+    "title": "Stories & Poems Telluride",
+    "link": "https://koto.org/event/stories-poems-telluride-3/",
+    "description": "Rob Schultheis of Lawson Hill and Elle Metrick of Wrights Mesa join forces for the October 20th session of Stories & Poems at the Wilkinson Public Library, bringing together fiction, poetry, and spoken word performance. Schultheis is a writer and poet, while Metrick works as a poet, performer, and writer.",
+    "pubDate": "2026-10-20T17:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/SchultheisSPToct26.png"
   },
   {
     "title": "Freeski Film Night",
@@ -537,5 +526,16 @@
     "category": "Community Event",
     "location": "Wilkinson Public Library, Telluride",
     "imageUrl": "https://koto.org/wp-content/uploads/2026/02/sewing.jpg"
+  },
+  {
+    "title": "Pilates for All Bodies with Laura",
+    "link": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-11-12/",
+    "description": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    "pubDate": "2026-11-12T12:30:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
   }
 ]

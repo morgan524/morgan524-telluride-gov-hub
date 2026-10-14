@@ -1,27 +1,27 @@
 {
- "generated": "2026-10-13T22:31:18.742Z",
+ "generated": "2026-10-14T04:18:59.767Z",
  "pinned": false,
- "topic": "norwoodwater",
- "topicLabel": "Norwood Water",
- "headline": "Norwood Water goes before Norwood Water Commission Meeting on Tuesday, October 13",
- "blurb": "A full agenda for the Norwood Water Commission's October 13 meeting. The biggest items center on the Cossey Complaint — the Commission will hold the hearing itself, consider a request to extend its date, and go into executive session twice for legal advice on that matter and separately on the Jubilee/Valentine Easement.",
+ "topic": "carhenge",
+ "topicLabel": "Carhenge / Shandoka",
+ "headline": "Carhenge / Shandoka goes before HARC Meeting on Wednesday, October 21",
+ "blurb": "The October 21 HARC meeting is anchored by the Shandoka Lot Redevelopment Project — the Town of Telluride's own large-scale development at 860 Black Bear Rd, zoned Accommodations 2. HARC takes up Buildings 1 and 2 as one public hearing item and Buildings 3 and 4 as a second, both continued from August 19. Each application covers new construction outside the Telluride Historic Landmark District exceeding 5,000 square feet of floor area under LUC 7-203.B.2.a.1.",
  "images": [],
  "deepDive": {
-  "label": "Norwood Water",
-  "href": "/deep-dive-norwoodwater.html"
+  "label": "Carhenge / Shandoka",
+  "href": "/deep-dive-carhenge.html"
  },
  "meeting": {
-  "title": "Norwood Water Commission Meeting",
-  "sourceLabel": "Town of Norwood",
-  "date": "2026-10-13",
-  "humanDate": "Tuesday, October 13",
-  "time": "",
-  "location": "1670 Naturita St, Norwood CO 81423",
-  "agendaUrl": "https://www.norwoodtown.com/files/4a41c8cfc/10.13.2026+NWC+Agenda.pdf",
+  "title": "HARC Meeting",
+  "sourceLabel": "Town of Telluride",
+  "date": "2026-10-21",
+  "humanDate": "Wednesday, October 21",
+  "time": "5:30 PM",
+  "location": "Rebekah Hall, 113 W Columbia Ave",
+  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024",
   "hasAgenda": true,
-  "packetUrl": "https://www.norwoodtown.com/files/39e79e6fc/10.13.2026+NWC+Supporting+Documents.pdf",
-  "link": "https://www.norwoodtown.com/files/4a41c8cfc/10.13.2026+NWC+Agenda.pdf",
-  "zoomLink": "https://us02web.zoom.us/j/88274908233",
-  "livestream": ""
+  "packetUrl": "https://telluride-co.civicweb.net/document/446165/",
+  "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024",
+  "zoomLink": "https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA",
+  "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
  }
 }

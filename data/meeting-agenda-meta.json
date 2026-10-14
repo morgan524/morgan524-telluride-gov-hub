@@ -645,5 +645,13 @@
   "smart|2026-11-12|SMART Board of Directors": {
     "sv": 4,
     "ph": "b858cb282617fb09"
+  },
+  "norwood|2026-10-15|Board of Trustees Public Hearing - Resolution No. 2026-0812": {
+    "agendaUrl": "https://www.norwoodtown.com/files/3ac6a6aae/10.15.2026+Board+of+Trustee+Public+Hearing.pdf",
+    "zoomUrl": "https://us02web.zoom.us/j/86382307047",
+    "meetingId": "863 8230 7047",
+    "passcode": "081226",
+    "phone": "970-327-4288",
+    "sv": 4
   }
 }
