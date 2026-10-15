@@ -1,18 +1,18 @@
 {
-  "hash": "3a251b61cfffb371d3500429980ba54d97b40603",
-  "lede": "The most consequential meeting this week is Mountain Village Town Council on October 15, where a second-reading ordinance would change how MVHA fees are set going forward — shifting from hardcoded figures to an annual fee schedule — alongside a resolution adopting the actual 2027 fee schedules for Village Court and beyond. Norwood has its own unusual moment Thursday evening, with a public hearing on whether to formally remove a sitting Planning Commission member. The Horror Show opens Friday at the Sheridan Opera House and runs through Sunday, with a liquor public hearing Tuesday covering the Palm Theatre permits for the weekend.",
+  "hash": "abe90b2247ca67fcb5d3d1cddf4f2df9d42d6faa",
+  "lede": "Norwood's Board of Trustees holds a public hearing Thursday night on a resolution that could remove a sitting Planning Commission member — that's rare anywhere, and worth watching in a small town where these relationships run deep. Mountain Village Council is also meeting Thursday to take a second-reading vote on housing authority fee language and adopt the 2027 MVHA fee schedules. On the lighter side, the 17th Telluride Horror Show kicks off Friday at the Sheridan, and the San Miguel Watershed Forum on Tuesday is worth your time if you have a water project in the works.",
   "notable": [
     {
-      "id": 4,
-      "stake": "Public hearing on alcohol permits for Horror Show crowds up to 1,400."
+      "id": 0,
+      "stake": "Council votes to adopt 2027 MVHA fee schedules affecting housing authority residents."
     },
     {
-      "id": 6,
-      "stake": "Council votes on ordinance and resolution setting 2027 MVHA housing fee schedules."
+      "id": 2,
+      "stake": "Public hearing on formal removal of a sitting Norwood Planning Commission member."
     },
     {
-      "id": 8,
-      "stake": "Public hearing on potential removal of a sitting Norwood Planning Commission member."
+      "id": 13,
+      "stake": "Public hearings on new construction for Telluride's large Shandoka Lot redevelopment project."
     }
   ]
 }

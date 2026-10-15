@@ -120,19 +120,6 @@
     "type": "Family & Kids"
   },
   {
-    "title": "Sewing 101 with Melissa",
-    "href": "https://koto.org/event/sewing-101-with-melissa/2026-10-14/",
-    "date": "2026-10-14",
-    "time": "5:00 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/02/sewing.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll…",
-    "type": "Community"
-  },
-  {
     "title": "Citizenship Support & Civic Practice/Apoyo Comunitario para la Ciudadanía",
     "href": "https://telluridelibrary.libcal.com/event/17637932?hs=a",
     "date": "2026-10-14",
@@ -146,17 +133,17 @@
     "type": "Talks & Classes"
   },
   {
-    "title": "OPEN AUDITIONS: Elf The Musical",
-    "href": "https://koto.org/event/open-auditions-elf-the-musical/2026-10-14/",
+    "title": "Sewing 101 with Melissa",
+    "href": "https://telluridelibrary.libcal.com/event/15970622?hs=a",
     "date": "2026-10-14",
-    "time": "5:30 PM",
-    "location": "Telluride Middle/High School, TELLURIDE",
+    "time": "5:00 PM",
+    "location": "Meeting Room #6 - large",
     "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/10/elf-auditions-social.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Telluride Theatre wants YOU to audition for our Holiday Musical at the Sheridan Opera House. This year, we are performing ELF THE MUSICAL, based on the beloved film starring Will Ferrell. Actors of all ages and skill levels are encouraged…",
-    "type": "Arts & Film"
+    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1717100108.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "5:00 PM – 7:00 PM · Don t throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own…",
+    "type": "Community"
   },
   {
     "title": "Dudes Who Read Book Club",
@@ -223,6 +210,20 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "A guided top rope climbing program for teens, led by Basecamp Ouray Mountain Guides at a local outdoor site. Participants will meet at the gazebo across from the library, with details, a schedule, and a packing list sent to registrants by…",
     "type": "Community"
+  },
+  {
+    "title": "CELESTIAL BODIES - Olivia Ivy and Kane Scheidegger",
+    "href": "https://events.ourayridgwayevents.com/event/celestial-bodies-olivia-ivy-and-kane-scheidegger",
+    "date": "2026-10-14",
+    "time": "",
+    "location": "Space to Create Gallery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54241868374608/huge/121c2ab6c42c0a5364ce85a3ffe552e3b10fe9f0.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us at Space to Create Gallery in Ridgway for CELESTIAL BODIES, an exhibition exploring the connections between Body, Earth, and Cosmos through painting and photography. Featuring the work of Olivia Ivy and Kane Scheidegger, the…",
+    "type": "Arts & Film",
+    "endDate": "2026-11-02"
   },
   {
     "title": "Fall Break - Ridgway Schools",
@@ -467,7 +468,7 @@
     "href": "https://events.ourayridgwayevents.com/event/alpine-jam-3576",
     "date": "2026-10-16",
     "time": "4:00 PM",
-    "location": "687 N Cora Street, Ridgway, CO 81432",
+    "location": "Colorado Boy Depot",
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
@@ -487,6 +488,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Colorado Switchgrass is a live music event taking place at a venue on North Cora Street in Ridgway. The performance features the Colorado Switchgrass act in an evening show hosted through the Ouray Ridgway area community calendar.",
     "type": "Music"
+  },
+  {
+    "title": "Sound Bath & Meditation Event",
+    "href": "https://events.ourayridgwayevents.com/event/sound-bath-meditation-event",
+    "date": "2026-10-16",
+    "time": "5:30 PM",
+    "location": "Bee True You Wellness & Creative Studio",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54241391007422/huge/c283fa99b2569b75ea7f2f43d79ea304c87833e9.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "This session will begin with some brief gentle stretching, breathwork and guided meditation from Elisabeth, to help you drop into a meditative state as you enjoy Ian's sound healing. Meet Ian Wilson, who hails from Miami, lived for a stint…",
+    "type": "Wellness"
   },
   {
     "title": "Telluride Horror Show",
@@ -723,6 +737,20 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "The Young Fables will perform a live music show at a venue on North Cora Street in Ridgway. The event is listed through the Ouray Ridgway community calendar.",
     "type": "Music"
+  },
+  {
+    "title": "Healing Hearts Circle: Women Transcending Cancer/Chronic Illness",
+    "href": "https://events.ourayridgwayevents.com/event/healing-hearts-circle-women-transcending-cancerchronic-illness",
+    "date": "2026-10-18",
+    "time": "5:00 PM",
+    "location": "Bee True You Wellness & Creative Studio",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54241462626167/huge/7c0778035e072ff933b617f21809b1459dc84aca.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Healing Hearts Circle is a supportive gathering for women navigating cancer or chronic illness, held at Bee True You Wellness & Creative Studio. The circle offers a safe, inclusive space where participants can feel heard and connected as…",
+    "type": "Wellness",
+    "endDate": "2026-12-07"
   },
   {
     "title": "Mountainfilm on Tour – Montrose",
@@ -1124,17 +1152,16 @@
   },
   {
     "title": "Rocky Horror Picture Show Live Shadow Cast Edition",
-    "href": "https://sherbino.org/event/rocky-horror-picture-show-live-shadow-cast-edition-9/",
+    "href": "https://koto.org/event/rocky-horror-picture-show-live-shadow-cast-edition/2026-10-22/",
     "date": "2026-10-22",
-    "time": "",
+    "time": "7:30 PM",
     "location": "The Sherbino, Ridgway",
     "town": "Ridgway",
-    "img": "https://sherbino.org/wp-content/uploads/2025/11/RHPS-event-banner-1.png",
-    "category": "",
-    "source": "Sherbino Theater",
-    "desc": "",
-    "type": "Community",
-    "endDate": "2026-10-25"
+    "img": "https://koto.org/wp-content/uploads/2026/10/rocky-horror-shadow-cast-banner.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Rocky Horror Picture Show — Shadow Cast Edition Thursday, Friday, & Saturday Performances: Doors: 7:30pm || Show: 8:00pm (Oct. 22-24) Sunday Matinee: Doors: 2:30pm || Show: 3:00pm (Oct. 25) Directed by Erin Cawley Ages 18+ (under 18…",
+    "type": "Community"
   },
   {
     "title": "Senior Meals",
@@ -1230,6 +1257,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Rocky Horror Picture Show Live Shadow Cast Edition",
+    "href": "https://koto.org/event/rocky-horror-picture-show-live-shadow-cast-edition/2026-10-23/",
+    "date": "2026-10-23",
+    "time": "7:30 PM",
+    "location": "The Sherbino, Ridgway",
+    "town": "Ridgway",
+    "img": "https://koto.org/wp-content/uploads/2026/10/rocky-horror-shadow-cast-banner.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Rocky Horror Picture Show — Shadow Cast Edition Thursday, Friday, & Saturday Performances: Doors: 7:30pm || Show: 8:00pm (Oct. 22-24) Sunday Matinee: Doors: 2:30pm || Show: 3:00pm (Oct. 25) Directed by Erin Cawley Ages 18+ (under 18…",
+    "type": "Community"
+  },
+  {
     "title": "PINE NEEDLE WEAVING: JEWELRY, BASKETS AND MORE! WITH EMILY KNICKERBOCKER",
     "href": "https://events.ourayridgwayevents.com/event/pine-needle-weaving-jewelry-baskets-and-more-with-emily-knickerbocker",
     "date": "2026-10-24",
@@ -1268,6 +1308,19 @@
     "desc": "Celebrate fall in the mountains at Pumpkins & Peaks! Join TMVOA in Mountain Village for a day of free, …",
     "type": "Community",
     "endDate": "2026-10-26"
+  },
+  {
+    "title": "Rocky Horror Picture Show Live Shadow Cast Edition",
+    "href": "https://koto.org/event/rocky-horror-picture-show-live-shadow-cast-edition/2026-10-24/",
+    "date": "2026-10-24",
+    "time": "7:30 PM",
+    "location": "The Sherbino, Ridgway",
+    "town": "Ridgway",
+    "img": "https://koto.org/wp-content/uploads/2026/10/rocky-horror-shadow-cast-banner.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Rocky Horror Picture Show — Shadow Cast Edition Thursday, Friday, & Saturday Performances: Doors: 7:30pm || Show: 8:00pm (Oct. 22-24) Sunday Matinee: Doors: 2:30pm || Show: 3:00pm (Oct. 25) Directed by Erin Cawley Ages 18+ (under 18…",
+    "type": "Community"
   },
   {
     "title": "4th Annual Boo-Mont Halloween Ball",
@@ -1360,6 +1413,19 @@
     "desc": "Teen Takeover at Ouray Hot Springs Pool is an evening event giving middle and high school students dedicated time to enjoy the pool facility with swimming, basketball, races on the Wibit, games, music, and food. The event runs in two…",
     "type": "Outdoors & Sports",
     "endDate": "2026-11-16"
+  },
+  {
+    "title": "Rocky Horror Picture Show Live Shadow Cast Edition",
+    "href": "https://koto.org/event/rocky-horror-picture-show-live-shadow-cast-edition/2026-10-25/",
+    "date": "2026-10-25",
+    "time": "7:30 PM",
+    "location": "The Sherbino, Ridgway",
+    "town": "Ridgway",
+    "img": "https://koto.org/wp-content/uploads/2026/10/rocky-horror-shadow-cast-banner.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Rocky Horror Picture Show — Shadow Cast Edition Thursday, Friday, & Saturday Performances: Doors: 7:30pm || Show: 8:00pm (Oct. 22-24) Sunday Matinee: Doors: 2:30pm || Show: 3:00pm (Oct. 25) Directed by Erin Cawley Ages 18+ (under 18…",
+    "type": "Community"
   },
   {
     "title": "Bike & Brewery Tour",
@@ -2294,19 +2360,6 @@
     "type": "Music"
   },
   {
-    "title": "Wildbelly Fermentation Fest",
-    "href": "https://koto.org/event/wildbelly-fermentation-fest/",
-    "date": "2026-11-07",
-    "time": "",
-    "location": "Mancos Community Center, Mancos, CO",
-    "town": "",
-    "img": "https://koto.org/wp-content/uploads/2026/03/857CD970-C1BC-4A46-AA34-6D1D567DA5AB.jpeg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Wildbelly Fermentation Fest is bringing together fermentation enthusiasts and expert teachers for two days of classes in the Mancos Valley on Nov. 7th & 8th.",
-    "type": "Community"
-  },
-  {
     "title": "Movies Under the Stars",
     "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     "date": "2026-11-07",
@@ -2359,19 +2412,6 @@
     "type": "Festivals"
   },
   {
-    "title": "Tea and Tarot",
-    "href": "https://koto.org/event/tea-and-tarot/2026-11-08/",
-    "date": "2026-11-08",
-    "time": "2:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    "type": "Community"
-  },
-  {
     "title": "Bike & Brewery Tour",
     "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     "date": "2026-11-09",
@@ -2397,19 +2437,6 @@
     "desc": "A monthly veterans' gathering hosted by the Welcome Home Alliance at The Sherbino, offering coffee, donuts, and camaraderie for veterans of every branch, era, and ability. Representatives will be on hand to share information on topics…",
     "type": "Community",
     "endDate": "2026-12-08"
-  },
-  {
-    "title": "Free Legal Clinic – Clínica Jurídica Gratuita",
-    "href": "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-11-10/",
-    "date": "2026-11-10",
-    "time": "4:00 PM",
-    "location": "",
-    "town": "",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys…",
-    "type": "Talks & Classes"
   },
   {
     "title": "Weekly Young Adult Gathering",
@@ -2780,6 +2807,19 @@
     "desc": "Beat & Step: West African Dance, Drum & Body Percussion is an energetic and interactive class that combines traditional West African dance, drumming, and body percussion into one exciting experience. Students will learn dance combinations,…",
     "type": "Music",
     "endDate": "2026-12-02"
+  },
+  {
+    "title": "Telluride Ski Resort Opening Day 2026",
+    "href": "https://www.telluride.com/event/telluride-ski-resort-opening-day/",
+    "date": "2026-11-26",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/42692/telluride_skier.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Telluride Ski Resort is scheduled to open on Thursday, November 26. Join us for opening weekend with plenty to do on …",
+    "type": "Community"
   },
   {
     "title": "Floating Lotus Music Bingo – November & December 2026",

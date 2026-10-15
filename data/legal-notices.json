@@ -462,25 +462,5 @@
     "address": "40697 State Highway 145, Norwood, CO 81423 (NW¼ NW¼ Section 26, Township 45 North, Range 13 West, N.M.P.M., San Miguel County)",
     "noticeKey": "foreclosure-2026-07-norwood-hwy145",
     "caseNumber": "2026-07"
-  },
-  {
-    "title": "RFP -- Consulting Services for Telluride Employee Rental Housing Policies Review (THA)",
-    "entity": "Telluride Housing Authority (THA) / Town of Telluride Community Services Department",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "The Telluride Housing Authority (THA), in partnership with the Town of Telluride Community Services Department, is seeking qualified consultants to conduct a comprehensive independent review, benchmarking, and streamlining of the Telluride Employee Rental Housing Policies. Proposals must be submitted electronically in PDF format to Community Services Director DeLanie Tapson at dtapson@telluride.gov no later than 12:00 PM MT on October 14, 2026. The full RFP including scope of work is available from the THA.",
-    "deadline": "2026-10-14",
-    "expires": "2026-10-14",
-    "dates": "10/8",
-    "papers": [
-      "ttimes_1008"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_5970564f-79b2-404e-8d86-38ffc649e835.html",
-    "address": "Telluride, CO (Town of Telluride employee rental housing program)",
-    "noticeKey": "rfp-tha-rental-housing-policies-review-2026"
   }
 ]

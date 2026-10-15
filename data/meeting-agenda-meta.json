@@ -1,12 +1,4 @@
 {
-  "telluride|2026-09-14|Open Space Commission - Sep 14 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8131",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/ePrh_CzmTLKqp0syEbUesw",
-    "meetingId": "894 7506 0147",
-    "passcode": "314276.",
-    "phone": "719) 359-4580"
-  },
   "fire|2026-09-15|Board of Directors Meeting": {
     "sv": 4,
     "ph": "b858cb282617fb09"
@@ -269,14 +261,6 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082",
     "sv": 4
   },
-  "telluride|2026-09-14|Telluride Housing Authority Subcommittee Special Meeting - Sep 14 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8316",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/j/88002208411?pwd=ofXFpbWHXtGZcNFnjfWucOBrCmoYqU.1",
-    "meetingId": "880 0220 8411",
-    "passcode": "541637.",
-    "phone": "719) 359-4580"
-  },
   "smart|2026-10-08|SMART Board of Directors": {
     "sv": 4,
     "ph": "b858cb282617fb09"
@@ -423,7 +407,7 @@
   "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083",
     "sv": 4,
-    "ph": "57c355a4e98595b5"
+    "ph": "a4ac9ca990614023"
   },
   "county|2026-10-21|Board of County Commissioners Meeting": {
     "sv": 4,
@@ -497,7 +481,7 @@
   "telluride|2026-10-27|Town Council - Oct 27 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045",
     "sv": 4,
-    "ph": "503b66ccc1b69729"
+    "ph": "fe6dedc36e608232"
   },
   "county|2026-10-28|Board of County Commissioners Work Session": {
     "sv": 4

@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 10-14-26",
+    "source": "KOTO Community Radio",
+    "date": "October 15, 2026",
+    "newsTopic": "government",
+    "copy": "Telluride Ballots Arrive in PO Boxes; Mountain Club Brings More Trail to Telluride",
+    "href": "https://koto.org/news/newscast-10-14-26/"
+  },
+  {
     "title": "Newscast 10-9-26",
     "source": "KOTO Community Radio",
     "date": "October 10, 2026",
@@ -46,13 +54,5 @@
     "newsTopic": "community",
     "copy": "West End Roundup with the San Miguel Basin Forum; Watershed Coalition Stands Up for Public Lands; \"This Haunted Land\" Explores America’s Ghosts",
     "href": "https://koto.org/news/newscast-10-1-26/"
-  },
-  {
-    "title": "Newscast 9-30-26",
-    "source": "KOTO Community Radio",
-    "date": "October 1, 2026",
-    "newsTopic": "government",
-    "copy": "Gondola Project Will Pursue Federal Funding; Town Council Upholds Planning and Zoning Decision on Carhenge Lot Lines; The Fig Keeps Theatre Funky",
-    "href": "https://koto.org/news/newscast-9-30-26/"
   }
 ]

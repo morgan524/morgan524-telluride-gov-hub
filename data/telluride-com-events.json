@@ -36,28 +36,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/49105/scott-rodgerson-zlhbjxbccec-unsplash.800x533.webp"
   },
   {
-    "title": "Hanneke Cassel Trio",
-    "link": "https://www.telluride.com/event/hanneke-cassel-trio/",
-    "description": "Chamber music that hits a little differently! Join Telluride Chamber Music for their yearly \"Not Your Average …",
-    "pubDate": "2026-10-13",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63340/hanneke_cassel.800x533.webp"
-  },
-  {
-    "title": "The Fig: Improv Night",
-    "link": "https://www.telluride.com/event/the-fig-improv-night/",
-    "description": "Come play, laugh, and get creative with The FIG at a free improv class hosted at Telluride Arts HQ! The fabulous Mary …",
-    "pubDate": "2026-10-13",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63763/be0e495a-c695-051b-99d2-185777cf009c.800x533.webp"
-  },
-  {
     "title": "Wash Party",
     "link": "https://www.telluride.com/event/wash-party/",
     "description": "It's time to Wash Party with Patagonia Telluride! Drop your winter gear off at The Laundromat, including shell jackets, …",
@@ -271,6 +249,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63705/gwft-banner-16x9-horizontal-2048x1152.800x533.webp"
+  },
+  {
+    "title": "Telluride Ski Resort Opening Day 2026",
+    "link": "https://www.telluride.com/event/telluride-ski-resort-opening-day/",
+    "description": "Telluride Ski Resort is scheduled to open on Thursday, November 26. Join us for opening weekend with plenty to do on …",
+    "pubDate": "2026-11-26",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/42692/telluride_skier.800x533.webp"
   },
   {
     "title": "Holiday Arts Bazaar",
