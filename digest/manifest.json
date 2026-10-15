@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-15 11:11 UTC",
+  "generated": "2026-10-15 16:43 UTC",
   "digests": {
     "weekly": {
       "name": "The Week Ahead Outlook",
@@ -8,6 +8,14 @@
       "weekStart": "2026-10-19",
       "audience": "Weekly Update",
       "file": "digest/week.html"
+    },
+    "past": {
+      "name": "Past Meetings",
+      "subject": "Past Meetings - October 12 - October 16, 2026",
+      "covers": "Meetings Oct 12 to Oct 16, 2026",
+      "weekStart": "2026-10-19",
+      "audience": "Past Meetings",
+      "file": "digest/past.html"
     }
   }
 }
