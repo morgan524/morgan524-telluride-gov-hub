@@ -462,5 +462,65 @@
     "address": "40697 State Highway 145, Norwood, CO 81423 (NW¼ NW¼ Section 26, Township 45 North, Range 13 West, N.M.P.M., San Miguel County)",
     "noticeKey": "foreclosure-2026-07-norwood-hwy145",
     "caseNumber": "2026-07"
+  },
+  {
+    "title": "Notice -- First Amendment to Condominium Declaration, The Good Gargoyle Condominiums (COL-000272)",
+    "entity": "The Good Gargoyle Condominiums (via attorney Aaron J. Goodlock)",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "📋",
+    "iconClass": "type-hearing",
+    "type": "Ordinance",
+    "filterTag": "ordinance",
+    "summary": "Holders of first mortgages on units in The Good Gargoyle Condominiums are being notified of a proposed First Amendment to the Condominium Declaration originally recorded January 26, 1988. Notice was sent by certified mail to first mortgagees along with a consent form and a copy of the proposed amendment. Parties seeking a copy of the amendment or consent form may contact attorney Aaron J. Goodlock in Denver.",
+    "deadline": "2026-10-22",
+    "expires": "2026-11-14",
+    "dates": "10/15",
+    "papers": [
+      "ttimes_1015"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_2a67f0e2-7d5c-47a5-a0a6-a1635a6dda11.html",
+    "address": "The Good Gargoyle Condominiums, San Miguel County, Colorado (Declaration recorded Book 441, Pages 832-846, Reception No. 252464)",
+    "noticeKey": "good-gargoyle-condo-first-amendment-COL000272"
+  },
+  {
+    "title": "Utility Rule Change -- Proposed Amendment to SMPA Rules and Regulations (COL-000275)",
+    "entity": "San Miguel Power Association, Inc. (SMPA)",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "💧",
+    "iconClass": "type-hearing",
+    "type": "Utilities",
+    "filterTag": "utilities",
+    "summary": "The Board of Directors of San Miguel Power Association, Inc. (SMPA) is considering amendments to its Rules and Regulations, with proposed changes available for member review on the SMPA website. The Board will review and may adopt the changes at its November 17, 2026 virtual Board Meeting beginning at 9:00 a.m. Members may register to attend and provide public comment through the SMPA website.",
+    "deadline": "2026-11-17",
+    "expires": "2026-11-17",
+    "dates": "10/15",
+    "papers": [
+      "ttimes_1015"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_2a67f0e2-7d5c-47a5-a0a6-a1635a6dda11.html",
+    "address": "San Miguel Power Association service territory, San Miguel County, Colorado (meeting held virtually)",
+    "noticeKey": "smpa-rules-regulations-amendment-2026-COL000275"
+  },
+  {
+    "title": "Public Hearing -- Planning & Zoning Commission, 510 W Columbia Avenue Minor Subdivision",
+    "entity": "Town of Telluride Planning and Zoning Commission",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "The Town of Telluride Planning and Zoning Commission Chair will hold a public hearing on Monday, November 2, 2026 at 9:00 a.m. via hybrid meeting (in person and Zoom) to consider a Minor Subdivision application for 510 W Columbia Avenue. The notice was truncated but identifies the project as a Minor Subdivision at that address in Telluride. Members of the public may attend via Zoom (Meeting ID 815 3599 7736, Password: 769982) or by phone.",
+    "deadline": "2026-11-02",
+    "expires": "2026-11-02",
+    "dates": "10/15",
+    "papers": [
+      "ttimes_1015"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_2a67f0e2-7d5c-47a5-a0a6-a1635a6dda11.html",
+    "address": "510 W Columbia Avenue, Telluride, CO",
+    "noticeKey": "pz-hearing-510-w-columbia-minor-subdivision"
   }
 ]

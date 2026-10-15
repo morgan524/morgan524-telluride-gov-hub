@@ -1677,6 +1677,19 @@
     "type": "Music"
   },
   {
+    "title": "Mountain Sprouts Preschool Halloween Dance Disco",
+    "href": "https://koto.org/event/mountain-sprouts-preschool-halloween-dance-disco/",
+    "date": "2026-10-30",
+    "time": "4:00 PM",
+    "location": "",
+    "town": "",
+    "img": "https://koto.org/wp-content/uploads/2026/10/IMG_0833.jpeg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Mountain Sprouts Preschool is hosting a Halloween Dance Disco on October 30th, featuring a live DJ, dancing, a nature scavenger hunt, arts and crafts, and food and drinks. The drop-in community event takes place right after the school's…",
+    "type": "Music"
+  },
+  {
     "title": "JELLY BOWL BAND",
     "href": "https://events.ourayridgwayevents.com/event/jelly-bowl-band",
     "date": "2026-10-30",
@@ -1701,6 +1714,19 @@
     "source": "KOTO Community Calendar",
     "desc": "It's okay to LAUGH during spooky season we invite you to join us for Mel Brooks' classic comedy: YOUNG FRANKENSTEIN – THE MUSICAL! Based on the film starring Gene Wilder, this musical pokes fun at Mary Shelly's \"Frankenstein,\" along with…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Floating Lotus Halloween Pint Night supports Second Chance Humane Society",
+    "href": "https://events.ourayridgwayevents.com/event/floating-lotus-halloween-pint-night",
+    "date": "2026-10-30",
+    "time": "6:00 PM",
+    "location": "Floating Lotus Brewery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54248758224534/huge/5cdafa0f87d5382bb6c0951c8518b30a75c2d8f6.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us at Floating Lotus Brewery for a spooky night of good beer, good times, and good people! There will be a costume contest for fun prizes. Plus, $1 from every beer supports the animals at Second Chance Humane Society!",
+    "type": "Food & Drink"
   },
   {
     "title": "Minions and Monsters: Movie Night @ the Wright",
@@ -2134,19 +2160,6 @@
     "source": "Beacon",
     "desc": "Thursday night pickleball with no experience necessary. All supplies provided.",
     "type": "Outdoors & Sports"
-  },
-  {
-    "title": "Up-off Gymnastics, Dance, and Spanish",
-    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-11-06/",
-    "date": "2026-11-06",
-    "time": "10:00 AM",
-    "location": "Lone Cone Library Norwood",
-    "town": "Norwood",
-    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
-    "type": "Music"
   },
   {
     "title": "First Friday Art Walk",
@@ -2584,6 +2597,32 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Doors open at 6:15 PM; films begin at 6:30 PM. A short-film block about community and connection in ordinary places, shared spaces, small gestures and the things people build together.",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Movies Under the Stars",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    "date": "2026-11-14",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Movies Under the Stars is an outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening movies on Saturday evenings at dusk. The series runs on select Saturdays and offers a community gathering under the open…",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Mind Blown Telluride",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    "date": "2026-11-14",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    "type": "Community"
   },
   {
     "title": "Ridgway Independent Film Fest ~ We Invited the Monsters In",

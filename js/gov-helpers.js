@@ -868,6 +868,86 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "County OKs police deal",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 15, 2026",
+    newsTopic: "government",
+    copy: "Ouray County commissioners approved a revised contract Tuesday that would make the Ouray County Sheriff’s Office the full-time provider of police services in the city of Ouray — but at a higher cost to the city than discussed last week. The board unanimously signed off on a new intergovernmental agr",
+    href: "https://www.ouraynews.com/2026/10/14/county-oks-police-deal/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "In light of budget cuts, Padgett takes 10% salary reduction",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 15, 2026",
+    newsTopic: "government",
+    copy: "Ouray County Commissioner Lynn Padgett will take a voluntary 10% salary reduction next year in a show of solidarity with other departments that took cuts for the 2027 budget. Padgett said budget reductions for travel to trainings and membership in outside organizations have also resulted in at least",
+    href: "https://www.ouraynews.com/2026/10/14/light-budget-cuts-padgett-takes-10-salary-reduction/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "School district to sell workforce unit",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 15, 2026",
+    newsTopic: "housing",
+    copy: "The Ridgway School Board plans to sell the school district’s last affordable housing unit and rejected a land donation that could have been used to build more housing at a board meeting Oct. 8. No staff members are occupying the district’s deed-restricted property in the Wetterhorn Homes development",
+    href: "https://www.ouraynews.com/2026/10/14/school-district-sell-workforce-unit/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Runner’s strong season continues",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 15, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.ouraynews.com/2026/10/14/runners-strong-season-continues/",
+    img: ""
+  },
+  {
+    title: "Ridgway soccer falls to league rival Telluride",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 15, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.ouraynews.com/2026/10/14/ridgway-soccer-falls-league-rival-telluride/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "No, my mother didn’t paint Beaumont pink",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 15, 2026",
+    newsTopic: "community",
+    copy: "Dear Editor: Comparing MTN Lodge to the Beaumont Hotel is as absurd as comparing Ouray to Ridgway. John Kuijvenhoven s scurrilous, out-of-the-blue letter was an attempt to damage my mother s reputation and aggravate me. Let us be absolutely clear. My mother did not paint the Beaumont pink. The Ouray",
+    href: "https://www.ouraynews.com/2026/10/14/no-mother-didnt-paint-beaumont-pink/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Commissioners betray Log Hill Village",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 15, 2026",
+    newsTopic: "government",
+    copy: "Dear Editor: I saw this in the Plaindealer article regarding the Ouray County budget crisis: “Besides reductions, commissioners are considering a radical one-time revenue source that could make up a significant piece of the puzzle — sweeping $223,000 left over from a Log Hill Mesa local improvement ",
+    href: "https://www.ouraynews.com/2026/10/14/commissioners-betray-log-hill-village/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "CORRECTION",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 15, 2026",
+    newsTopic: "government",
+    copy: "An article in the Oct. 8-14 edition, “Ridgway seeks input on water supply plan,” misstated the date that the Ridgway Town Council is expected to vote on the water supply element of its master plan. The correct date is Nov. 19.",
+    href: "https://www.ouraynews.com/2026/10/14/correction-20261015-0258-189619/",
+    img: ""
+  },
+  {
     title: "Parish bulletin for October 11",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -875,86 +955,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "This week's parish bulletin is attached. As always, please check the Parish Calendar for the most updated information.Reminders:8:30 am on Sundays--Come to pray the Holy Rosary before Mass.This weekend, please stop by the Parish Hall and help sup...",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-october-11/",
-    img: ""
-  },
-  {
-    title: "A Monster celebration",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 8, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.ouraynews.com/2026/10/07/a-monster-celebration/",
-    img: ""
-  },
-  {
-    title: "City, county near pact on police services",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 8, 2026",
-    newsTopic: "public-safety",
-    copy: "Ouray County and the city of Ouray are hammering out the details of an agreement that would enlist the Ouray County Sheriff’s Office to provide full law enforcement services to the city for potentially the next several years. Under a draft contract discussed during a joint city-county work session M",
-    href: "https://www.ouraynews.com/2026/10/07/city-county-near-pact-police-services/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Reservoir transfer bill clears Senate",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 8, 2026",
-    newsTopic: "community",
-    copy: "Federal legislation to transfer ownership of Crystal Reservoir to the city of Ouray cleared the U.S. Senate last week, sending the bill to the House of Representatives as the clock winds down for Congress to finish the deal. After moving out of committee earlier this summer, senators passed the Crys",
-    href: "https://www.ouraynews.com/2026/10/07/reservoir-transfer-bill-clears-senate/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "SMPA plans Four Corners solar project",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 8, 2026",
-    newsTopic: "infrastructure",
-    copy: "San Miguel Power Association has joined three other southwest Colorado electricity providers in throwing their weight behind a sprawling solar facility near Cortez that could meet up to 40% of their consumer power needs, the utility announced Monday. Partnering with Empire Electric Association, Gunn",
-    href: "https://www.ouraynews.com/2026/10/07/smpa-plans-four-corners-solar-project/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Council not on board with transit funding next year",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 8, 2026",
-    newsTopic: "government",
-    copy: "The Ouray City Council dropped funding from the proposed 2027 budget for the city’s free in-town shuttle and contributions to the OurWay bus that runs between Montrose and Ouray. The in-town Ouray shuttle bus, operated by Ridgway-based TelluRides, struggled with lower-than-expected ridership since i",
-    href: "https://www.ouraynews.com/2026/10/07/council-not-board-transit-funding-next-year/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Ouray proposes flat budget in 2027",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 8, 2026",
-    newsTopic: "government",
-    copy: "The Ouray City Council got its first glimpse of the draft 2027 budget last week, a plan that projects little or no growth in city revenue. The budget doesn’t include pay raises for staff, paving projects in the city limits or a plan for law enforcement to serve the city. It does include paying for a",
-    href: "https://www.ouraynews.com/2026/10/07/ouray-proposes-flat-budget-2027/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Oppose road to nowhere",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 8, 2026",
-    newsTopic: "public-safety",
-    copy: "Dear Editor: The town planning commission just approved a road to one house to be built in the river overlay district, an area next to the Uncompahgre River. They approved widening the driveway that goes to 301 Liddell Drive and making it a street. The Ridgway Volunteer Fire Department doesn’t need ",
-    href: "https://www.ouraynews.com/2026/10/07/oppose-road-nowhere/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "County’s short-term rental policy ineffective",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 8, 2026",
-    newsTopic: "housing",
-    copy: "Dear Editor: I wanted to express my appreciation for Ouray County land use planner Dan Hughes. Dan has been been tireless in helping me navigate the Ouray County short-term rental computer issues. We are lucky to have him. I also want to opine on Ouray County’s counterproductive policy regarding STR",
-    href: "https://www.ouraynews.com/2026/10/07/countys-short-term-rental-policy-ineffective/?ta_paidstory",
     img: ""
   },
   {
@@ -966,39 +966,29 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Here is this week's parish bulletin. Please check the Parish Calendar for all updated parish events. Reminder--There will be 30 minutes of Holy Adoration before each Holy Mass this week. Interested in a pilgrimage to Poland June 8...",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-october-4/",
     img: ""
-  },
-  {
-    title: "News Release: County Hires Recovery Manager",
-    source: "Ouray County",
-    sourceKey: "ouray-county",
-    date: "October 1, 2026",
-    newsTopic: "public-safety",
-    copy: "Ouray County is pleased to announce the recent hiring of Henry Mitchell as Recovery Manager. Henry brings over a decade of expertise in emergency management, preparedness, response, and recovery at both local and state levels.",
-    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=964",
-    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22847"
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
-  {
-    title: "Ballot Delivery Delay",
-    source: "San Miguel County",
-    sourceLabel: "San Miguel County",
-    category: "Alert",
-    date: "2026-10-13",
-    pubDate: "2026-10-13T21:02:28.000Z",
-    copy: "Due to an error within the United States Postal Service, delivery of some election mail ballots has been delayed. We understand that receiving your ballot on time is important, and we apologize for the inconvenience and concern this delay may cause.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=549",
-    img: ""
-  },
   {
     title: "DMV Services available in Egnar 11/18",
     source: "San Miguel County",
     sourceLabel: "San Miguel County",
     category: "Alert",
-    date: "2026-09-29",
-    pubDate: "2026-09-29T19:56:25.000Z",
+    date: "2026-10-15",
+    pubDate: "2026-10-15T16:58:20.000Z",
     copy: "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
+    img: ""
+  },
+  {
+    title: "Ballot Delivery Delay",
+    source: "San Miguel County",
+    sourceLabel: "San Miguel County",
+    category: "Alert",
+    date: "2026-10-15",
+    pubDate: "2026-10-15T16:56:58.000Z",
+    copy: "Due to an error within the United States Postal Service, delivery of some election mail ballots has been delayed. We understand that receiving your ballot on time is important, and we apologize for the inconvenience and concern this delay may cause.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=549",
     img: ""
   },
   {
@@ -2560,6 +2550,30 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Green Grants program expands to the West End",
+    source: "Telluride Times",
+    date: "October 15, 2026",
+    firstSeen: "2026-10-15",
+    newsTopic: "infrastructure",
+    copy: "EcoAction Partners' Green Grants program has expanded into the West End of Montrose County, backed by roughly $85,000 from the Telluride Foundation. Grants typically run $5,000–$10,000 and can go toward heat pumps, windows, and EV infrastructure. The intent-to-apply deadline is October 30 at telluride-co.gosmart.org.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_b4c275f2-65d0-4961-b96e-1d2074d23b37.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/82/582ca34a-47bb-4209-a91e-70ad276263f8/6ad0f2217a207.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "Everyone has the same question in the midterms — where's the beef? (And how much does it cost?)",
+    source: "Telluride Times",
+    date: "October 15, 2026",
+    firstSeen: "2026-10-15",
+    newsTopic: "community",
+    copy: "Beef has become a recurring campaign theme in this midterm cycle, with candidates in Mississippi, Colorado, Iowa, Texas, and Arizona all fielding attacks or making moves around meat-eating and agricultural policy. Ground beef is running around $6.79 a pound nationally, up from $5.55 in January. Both parties are working the issue, though from different angles.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_c6f98b44-3fa8-59dc-a0ec-e9821804d43b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/db/ddbf8b34-faec-5dc0-a29c-c79cf13a1044/6ad051973b9a0.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "We're on the edge of our seats",
     source: "Telluride Times",
     date: "October 15, 2026",
@@ -2576,23 +2590,11 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Telluride Times",
     date: "October 15, 2026",
     firstSeen: "2026-10-15",
-    newsTopic: "community",
-    copy: "NOTICE OF PUBLIC HEARING",
-    claudeSummary: false,
+    newsTopic: "government",
+    copy: "Sawpit's Board of Trustees will review the town's proposed 2027 budget at a public meeting November 19 at 6:30PM. Separately, a Tomboy Lodge unit at 619 W Columbia Ave is headed to foreclosure sale in San Miguel County, and Good Gargoyle Condominiums mortgage holders are being notified of a proposed declaration amendment.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/legals/article_2a67f0e2-7d5c-47a5-a0a6-a1635a6dda11.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Everyone has the same question in the midterms — where's the beef? (And how much does it cost?)",
-    source: "Telluride Times",
-    date: "October 15, 2026",
-    firstSeen: "2026-10-15",
-    newsTopic: "community",
-    copy: "Beef has become a recurring campaign theme in this midterm cycle, with candidates in Mississippi, Colorado, Iowa, Texas, and Arizona all fielding attacks or making moves around meat-eating and agricultural policy. Ground beef is running around $6.79 a pound nationally, up from $5.55 in January. Both parties are working the issue, though from different angles.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_c6f98b44-3fa8-59dc-a0ec-e9821804d43b.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/db/ddbf8b34-faec-5dc0-a29c-c79cf13a1044/6ad051973b9a0.image.jpg",
     imgHiRes: true
   },
   {
@@ -3680,22 +3682,22 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14812"
   },
   {
-    title: "Ballot Delivery Delay",
-    source: "San Miguel County",
-    date: "October 13, 2026",
-    newsTopic: "government",
-    copy: "Due to an error within the United States Postal Service, delivery of some election mail ballots has been delayed. We understand that receiving your ballot on time is important, and we apologize for the inconvenience and concern this delay may cause.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=549",
-    img: ""
-  },
-  {
     title: "DMV Services available in Egnar 11/18",
     source: "San Miguel County",
-    date: "September 29, 2026",
+    date: "October 15, 2026",
     newsTopic: "community",
     copy: "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
+  },
+  {
+    title: "Ballot Delivery Delay",
+    source: "San Miguel County",
+    date: "October 15, 2026",
+    newsTopic: "government",
+    copy: "Due to an error within the United States Postal Service, delivery of some election mail ballots has been delayed. We understand that receiving your ballot on time is important, and we apologize for the inconvenience and concern this delay may cause.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=549",
+    img: ""
   },
   {
     title: "Tomboy Road Now Open",
@@ -3748,28 +3750,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.10.21_public-hearing-notice.pdf",
-    img: ""
-  },
-  {
-    title: "Ridgway Town Council Regular Meeting Agenda",
-    source: "Town of Ridgway",
-    date: "October 14, 2026",
-    firstSeen: "2026-10-09",
-    newsTopic: "government",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Oct-14-tc-agenda.pdf",
-    img: ""
-  },
-  {
-    title: "Ridgway Workforce &amp; Affordable Housing Committee Meeting Agenda",
-    source: "Town of Ridgway",
-    date: "October 14, 2026",
-    firstSeen: "2026-10-09",
-    newsTopic: "housing",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/00-October-14-workforce-%26-affordable-housing-committee-agenda.pdf",
     img: ""
   },
   {
@@ -4819,6 +4799,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   },
   {
+    title: "Mountain Sprouts Preschool Halloween Dance Disco",
+    link: "https://koto.org/event/mountain-sprouts-preschool-halloween-dance-disco/",
+    description: "Mountain Sprouts Preschool is hosting a Halloween Dance Disco on October 30th, featuring a live DJ, dancing, a nature scavenger hunt, arts and crafts, and food and drinks. The drop-in community event takes place right after the school's Halloween parade.",
+    pubDate: "2026-10-30T16:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/IMG_0833.jpeg"
+  },
+  {
     title: "YOUNG FRANKENSTEIN – THE MUSICAL (a TMHS & Telluride Theatre Co-Production)",
     link: "https://koto.org/event/young-frankenstein-the-musical-a-tmhs-telluride-theatre-co-production/2026-10-30/",
     description: "It's okay to LAUGH during spooky season&#8230; we invite you to join us for Mel Brooks' classic comedy: YOUNG FRANKENSTEIN – THE MUSICAL! Based on the film starring Gene Wilder, this musical pokes fun at Mary Shelly's \"Frankenstein,\" along with other classic monster movies. This production is performed and designed by our very own students at Telluride Middle-High School, under the mentorship of Telluride Theatre and the R-1 School District. Grandson of the infamous Victor Frankenstein, Frederick Frankenstein (pronounced \"Fronk-en-steen\") inherits his family's estate in Transylvania. With the help of a hunchbacked sidekick, Igor, and a yodeling lab assistant, Inga, Frederick finds himself in the mad scientist shoes of his ancestors. \"It's alive!\" he exclaims as he brings to life a creature to rival his grandfather's. Eventually, of course, the monster escapes, and hilarity ensues. Have a laugh this Halloween & support our local students. Costumes encouraged! …",
@@ -4916,17 +4907,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Redvale Community Center",
     imageUrl: ""
-  },
-  {
-    title: "Up-off Gymnastics, Dance, and Spanish",
-    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-11-06/",
-    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
-    pubDate: "2026-11-06T10:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Lone Cone Library Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   }
 ];
 
@@ -6141,6 +6121,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
+    title: "Floating Lotus Halloween Pint Night supports Second Chance Humane Society",
+    link: "https://events.ourayridgwayevents.com/event/floating-lotus-halloween-pint-night",
+    description: "Join us at Floating Lotus Brewery for a spooky night of good beer, good times, and good people! There will be a costume contest for fun prizes. Plus, $1 from every beer supports the animals at Second Chance Humane Society!",
+    pubDate: "2026-10-31T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/54248758224534/huge/5cdafa0f87d5382bb6c0951c8518b30a75c2d8f6.jpg"
+  },
+  {
     title: "Minions and Monsters: Movie Night @ the Wright",
     link: "https://events.ourayridgwayevents.com/event/minions-and-monsters-movie-night-the-wright",
     description: "WHEN? Friday, October 30 Doors at 6:30 PM | Movie at 7:00 PM WHERE? Wright Opera House 472 Main St., Ouray, Colorado RUN TIME: 1 hour, 30 minutes RATING: PG ABOUT THE FILM The Minions are back—and this time they are headed to 1920s Hollywood with dreams of becoming movie stars. After discovering that the arrival of sound means Minionese is not exactly the language of leading men, the Minions decide to make a monster movie of their own. What could possibly go wrong? Quite a lot, naturally. A big-screen comedy full of old-Hollywood chaos, monster-movie mayhem, and the tiny yellow beings who have never once been trusted with a plan. WHY SEE IT? Because it is almost Halloween, and a Minion-made monster movie is exactly the kind of nonsense the season deserves. HOW? …",
@@ -6733,28 +6724,6 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "Norwood Sanitation District Meeting",
-    link: "https://www.norwoodtown.com/2026-10-08-norwood-sanitation-district-meeting-meeting",
-    description: "A regularly scheduled meeting of the Norwood Sanitation District, held in Norwood, Colorado under the Town of Norwood. These public government meetings address sanitation district business and are open to community members.",
-    pubDate: "2026-10-08T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Government Meeting",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
-    title: "Senior Meals",
-    link: "https://www.norwoodtown.com/2026-10-08-senior-meals",
-    description: "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to share a meal and connect with neighbors in a welcoming, local setting.",
-    pubDate: "2026-10-08T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Community Event",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
     description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
@@ -6889,17 +6858,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Plaza Vending Committee Meeting",
-    link: "https://townofmountainvillage.com/explore/events/all-events/plaza-vending-committee-meeting/",
-    description: "The Mountain Village Plaza Vending Committee will meet to review winter 2026/27 plaza vending applications. The meeting will be held in Mountain Village and is also accessible remotely via Zoom.",
-    pubDate: "2026-10-14T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/34834/mplantz-19-a7v07134.jpg"
-  },
   {
     title: "Market on the Plaza",
     link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
@@ -7196,6 +7154,28 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    description: "Movies Under the Stars is an outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening movies on Saturday evenings at dusk. The series runs on select Saturdays and offers a community gathering under the open sky.",
+    pubDate: "2026-11-14T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
+  {
+    title: "Mind Blown Telluride",
+    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    pubDate: "2026-11-14T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
   }
 ];
 
@@ -8029,6 +8009,60 @@ const LEGAL_NOTICES = [
     address: "40697 State Highway 145, Norwood, CO 81423 (NW¼ NW¼ Section 26, Township 45 North, Range 13 West, N.M.P.M., San Miguel County)",
     noticeKey: "foreclosure-2026-07-norwood-hwy145",
     caseNumber: "2026-07"
+  },
+  {
+    title: "Notice -- First Amendment to Condominium Declaration, The Good Gargoyle Condominiums (COL-000272)",
+    entity: "The Good Gargoyle Condominiums (via attorney Aaron J. Goodlock)",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "Holders of first mortgages on units in The Good Gargoyle Condominiums are being notified of a proposed First Amendment to the Condominium Declaration originally recorded January 26, 1988. Notice was sent by certified mail to first mortgagees along with a consent form and a copy of the proposed amendment. Parties seeking a copy of the amendment or consent form may contact attorney Aaron J. Goodlock in Denver.",
+    deadline: "2026-10-22",
+    expires: "2026-11-14",
+    dates: "10/15",
+    papers: ["ttimes_1015"],
+    url: "https://www.telluridenews.com/news/legals/article_2a67f0e2-7d5c-47a5-a0a6-a1635a6dda11.html",
+    address: "The Good Gargoyle Condominiums, San Miguel County, Colorado (Declaration recorded Book 441, Pages 832-846, Reception No. 252464)",
+    noticeKey: "good-gargoyle-condo-first-amendment-COL000272"
+  },
+  {
+    title: "Utility Rule Change -- Proposed Amendment to SMPA Rules and Regulations (COL-000275)",
+    entity: "San Miguel Power Association, Inc. (SMPA)",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "💧",
+    iconClass: "type-hearing",
+    type: "Utilities",
+    filterTag: "utilities",
+    summary: "The Board of Directors of San Miguel Power Association, Inc. (SMPA) is considering amendments to its Rules and Regulations, with proposed changes available for member review on the SMPA website. The Board will review and may adopt the changes at its November 17, 2026 virtual Board Meeting beginning at 9:00 a.m. Members may register to attend and provide public comment through the SMPA website.",
+    deadline: "2026-11-17",
+    expires: "2026-11-17",
+    dates: "10/15",
+    papers: ["ttimes_1015"],
+    url: "https://www.telluridenews.com/news/legals/article_2a67f0e2-7d5c-47a5-a0a6-a1635a6dda11.html",
+    address: "San Miguel Power Association service territory, San Miguel County, Colorado (meeting held virtually)",
+    noticeKey: "smpa-rules-regulations-amendment-2026-COL000275"
+  },
+  {
+    title: "Public Hearing -- Planning & Zoning Commission, 510 W Columbia Avenue Minor Subdivision",
+    entity: "Town of Telluride Planning and Zoning Commission",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "The Town of Telluride Planning and Zoning Commission Chair will hold a public hearing on Monday, November 2, 2026 at 9:00 a.m. via hybrid meeting (in person and Zoom) to consider a Minor Subdivision application for 510 W Columbia Avenue. The notice was truncated but identifies the project as a Minor Subdivision at that address in Telluride. Members of the public may attend via Zoom (Meeting ID 815 3599 7736, Password: 769982) or by phone.",
+    deadline: "2026-11-02",
+    expires: "2026-11-02",
+    dates: "10/15",
+    papers: ["ttimes_1015"],
+    url: "https://www.telluridenews.com/news/legals/article_2a67f0e2-7d5c-47a5-a0a6-a1635a6dda11.html",
+    address: "510 W Columbia Avenue, Telluride, CO",
+    noticeKey: "pz-hearing-510-w-columbia-minor-subdivision"
   }
 ];
 
