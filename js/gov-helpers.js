@@ -348,7 +348,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA","meetingId":"812 9136 3866","passcode":"440860.","phone":"301-715-8592"},
 
   "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083","sv":4,"ph":"a4ac9ca990614023"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083","sv":4,"ph":"57c355a4e98595b5"},
 
   "county|2026-10-21|Board of County Commissioners Meeting":
     {"sv":4,"ph":"a12dfd2ce826475e"},
@@ -390,7 +390,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"1ff606174e68cca5"},
 
   "telluride|2026-10-27|Town Council - Oct 27 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045","sv":4,"ph":"fe6dedc36e608232"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045","sv":4,"ph":"503b66ccc1b69729"},
 
   "county|2026-10-28|Board of County Commissioners Work Session":
     {"sv":4},
@@ -497,6 +497,14 @@ const DEEP_DIVE_UPDATES = [];
 //   sourceUrl, topics: [] }. Rendered by hub-bub.html from the JSON mirror
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
+  {
+    date: "2026-10-15",
+    title: "Leak forgiveness — fair relief or a slippery slope?",
+    body: "The Norwood Water Commission has four residential leak forgiveness requests on its October 13 agenda — customers on Hwy 145, Summit St, Juniper, and Grand Ave asking for relief on their bills. The case for: leaks happen, the water's already gone, and a punishing bill doesn't undo it. The case against: forgiveness spreads the cost across everyone else on the system, and the 2027 budget and 2025 audit are both on the same agenda, with water system costs still climbing. Where's the line between neighbor helping neighbor and just shifting the tab?\n\nShould a water commission grant leak forgiveness, or is that a cost the customer has to own?",
+    choices: ["Grant it — leaks happen", "Customer owns the bill", "Case by case only", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
   {
     date: "2026-10-14",
     title: "Beavers on the agenda",
@@ -728,14 +736,6 @@ const DAILY_QUESTIONS = [
     choices: ["Fair nudge, go paperless", "Wrong way to push people", "Two bucks isn't the point", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-09-15",
-    title: "A trail, some hauling, and a foreclosure — busy week for the county",
-    body: "The Board of County Commissioners has a full plate September 16: procurement on material hauling, a trail connector project, and a fuel island canopy. That's routine enough. But tucked into the same meeting is a federal environmental assessment for hazardous fuels management in the Uncompahgre and Gunnison National Forests — and a foreclosure sale in Telluride Mountain Village.\n\nThe trail connector could be a genuine community win. The federal fuels work is already on the recent radar up here. But a foreclosure in Mountain Village, landing quietly in a procurement agenda — does that deserve more public attention than it's getting?",
-    choices: ["Trail project is the priority", "Foreclosure deserves more scrutiny", "Fuels work is what matters", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -804,10 +804,7 @@ const MEETING_PREVIEWS = {
     "The Planning & Zoning Commission Chair is expected to consider a minor subdivision application for 510 W Columbia Avenue, which would vacate the lot line between two existing parcels and consolidate them into a single approximately 5,625-square-foot lot known as Lot 40R.",
 
   "telluride|2026-10-22|(Rescheduled to 11/2) Planning & Zoning Commission Chair - Oct 22 2026":
-    "The Planning & Zoning Commission meeting originally scheduled for October 22, 2026 has been rescheduled to November 2, 2026 at 9:00 a.m. at Rebekah Hall. No specific agenda items have been disclosed for the rescheduled session.",
-
-  "telluride|2026-10-14|Special Liquor Licensing Authority - Oct 14 2026":
-    "The Telluride Liquor Licensing Authority will consider approving minutes from its September 17 meeting and hold a public hearing on a request by Palm Arts Inc. for three special event permits to serve alcohol during the Telluride Horror Show on October 16–18, 2026, at 721 W. Colorado Ave."
+    "The Planning & Zoning Commission meeting originally scheduled for October 22, 2026 has been rescheduled to November 2, 2026 at 9:00 a.m. at Rebekah Hall. No specific agenda items have been disclosed for the rescheduled session."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -871,86 +868,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "County OKs police deal",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 15, 2026",
-    newsTopic: "government",
-    copy: "Ouray County commissioners approved a revised contract Tuesday that would make the Ouray County Sheriff’s Office the full-time provider of police services in the city of Ouray — but at a higher cost to the city than discussed last week. The board unanimously signed off on a new intergovernmental agr",
-    href: "https://www.ouraynews.com/2026/10/14/county-oks-police-deal/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "In light of budget cuts, Padgett takes 10% salary reduction",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 15, 2026",
-    newsTopic: "government",
-    copy: "Ouray County Commissioner Lynn Padgett will take a voluntary 10% salary reduction next year in a show of solidarity with other departments that took cuts for the 2027 budget. Padgett said budget reductions for travel to trainings and membership in outside organizations have also resulted in at least",
-    href: "https://www.ouraynews.com/2026/10/14/light-budget-cuts-padgett-takes-10-salary-reduction/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "School district to sell workforce unit",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 15, 2026",
-    newsTopic: "housing",
-    copy: "The Ridgway School Board plans to sell the school district’s last affordable housing unit and rejected a land donation that could have been used to build more housing at a board meeting Oct. 8. No staff members are occupying the district’s deed-restricted property in the Wetterhorn Homes development",
-    href: "https://www.ouraynews.com/2026/10/14/school-district-sell-workforce-unit/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Voters to decide whether to put right to natural gas in constitution",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 15, 2026",
-    newsTopic: "community",
-    copy: "Amendment 82 would add a right to natural gas in the state constitution at a time when Colorado is pushing both in policy and legislation to cut the use of natural gas as part of the state’s goal to reduce climate- altering greenhouse gas emissions. The measure was brought by Advance Colorado, a con",
-    href: "https://www.ouraynews.com/2026/10/14/voters-decide-whether-put-right-natural-gas-constitution/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Runner’s strong season continues",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 15, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.ouraynews.com/2026/10/14/runners-strong-season-continues/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Ridgway soccer falls to league rival Telluride",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 15, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.ouraynews.com/2026/10/14/ridgway-soccer-falls-league-rival-telluride/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Measure would require personal info on ballots",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 15, 2026",
-    newsTopic: "government",
-    copy: "Colorado voters will decide in November whether to require that people provide partial Social Security or driver’s license numbers, in addition to their signature, when returning mail ballots in order to have their vote counted. Here’s what Amendment 84 would do, who is behind it and who is fighting",
-    href: "https://www.ouraynews.com/2026/10/14/measure-require-personal-info-ballots/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "No, my mother didn’t paint Beaumont pink",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 15, 2026",
-    newsTopic: "community",
-    copy: "Dear Editor: Comparing MTN Lodge to the Beaumont Hotel is as absurd as comparing Ouray to Ridgway. John Kuijvenhoven s scurrilous, out-of-the-blue letter was an attempt to damage my mother s reputation and aggravate me. Let us be absolutely clear. My mother did not paint the Beaumont pink. The Ouray",
-    href: "https://www.ouraynews.com/2026/10/14/no-mother-didnt-paint-beaumont-pink/?ta_paidstory",
-    img: ""
-  },
-  {
     title: "Parish bulletin for October 11",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -958,6 +875,86 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "This week's parish bulletin is attached. As always, please check the Parish Calendar for the most updated information.Reminders:8:30 am on Sundays--Come to pray the Holy Rosary before Mass.This weekend, please stop by the Parish Hall and help sup...",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-october-11/",
+    img: ""
+  },
+  {
+    title: "A Monster celebration",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 8, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.ouraynews.com/2026/10/07/a-monster-celebration/",
+    img: ""
+  },
+  {
+    title: "City, county near pact on police services",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 8, 2026",
+    newsTopic: "public-safety",
+    copy: "Ouray County and the city of Ouray are hammering out the details of an agreement that would enlist the Ouray County Sheriff’s Office to provide full law enforcement services to the city for potentially the next several years. Under a draft contract discussed during a joint city-county work session M",
+    href: "https://www.ouraynews.com/2026/10/07/city-county-near-pact-police-services/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Reservoir transfer bill clears Senate",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 8, 2026",
+    newsTopic: "community",
+    copy: "Federal legislation to transfer ownership of Crystal Reservoir to the city of Ouray cleared the U.S. Senate last week, sending the bill to the House of Representatives as the clock winds down for Congress to finish the deal. After moving out of committee earlier this summer, senators passed the Crys",
+    href: "https://www.ouraynews.com/2026/10/07/reservoir-transfer-bill-clears-senate/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "SMPA plans Four Corners solar project",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 8, 2026",
+    newsTopic: "infrastructure",
+    copy: "San Miguel Power Association has joined three other southwest Colorado electricity providers in throwing their weight behind a sprawling solar facility near Cortez that could meet up to 40% of their consumer power needs, the utility announced Monday. Partnering with Empire Electric Association, Gunn",
+    href: "https://www.ouraynews.com/2026/10/07/smpa-plans-four-corners-solar-project/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Council not on board with transit funding next year",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 8, 2026",
+    newsTopic: "government",
+    copy: "The Ouray City Council dropped funding from the proposed 2027 budget for the city’s free in-town shuttle and contributions to the OurWay bus that runs between Montrose and Ouray. The in-town Ouray shuttle bus, operated by Ridgway-based TelluRides, struggled with lower-than-expected ridership since i",
+    href: "https://www.ouraynews.com/2026/10/07/council-not-board-transit-funding-next-year/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Ouray proposes flat budget in 2027",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 8, 2026",
+    newsTopic: "government",
+    copy: "The Ouray City Council got its first glimpse of the draft 2027 budget last week, a plan that projects little or no growth in city revenue. The budget doesn’t include pay raises for staff, paving projects in the city limits or a plan for law enforcement to serve the city. It does include paying for a",
+    href: "https://www.ouraynews.com/2026/10/07/ouray-proposes-flat-budget-2027/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Oppose road to nowhere",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 8, 2026",
+    newsTopic: "public-safety",
+    copy: "Dear Editor: The town planning commission just approved a road to one house to be built in the river overlay district, an area next to the Uncompahgre River. They approved widening the driveway that goes to 301 Liddell Drive and making it a street. The Ridgway Volunteer Fire Department doesn’t need ",
+    href: "https://www.ouraynews.com/2026/10/07/oppose-road-nowhere/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "County’s short-term rental policy ineffective",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 8, 2026",
+    newsTopic: "housing",
+    copy: "Dear Editor: I wanted to express my appreciation for Ouray County land use planner Dan Hughes. Dan has been been tireless in helping me navigate the Ouray County short-term rental computer issues. We are lucky to have him. I also want to opine on Ouray County’s counterproductive policy regarding STR",
+    href: "https://www.ouraynews.com/2026/10/07/countys-short-term-rental-policy-ineffective/?ta_paidstory",
     img: ""
   },
   {
@@ -2536,6 +2533,54 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "We're on the edge of our seats",
+    source: "Telluride Times",
+    date: "October 15, 2026",
+    firstSeen: "2026-10-15",
+    newsTopic: "arts-culture",
+    copy: "The Telluride Horror Show runs October 16–18 for its 17th year, with headliners including Universal's upcoming slasher *River* and *Victorian Psycho*. Several films have local ties, including *The Cycle*, which features Telluride's own Jeb Berrier. Free screenings, campfire readings, and library films round out the weekend.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_03b74f4a-7cf3-4126-8b74-60372e7feda7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/be/6be0816f-4efa-4e74-93bc-d33beee29069/6acddbe142bd5.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Legals and Public Notices for Oct. 15-21, 2026",
+    source: "Telluride Times",
+    date: "October 15, 2026",
+    firstSeen: "2026-10-15",
+    newsTopic: "community",
+    copy: "NOTICE OF PUBLIC HEARING",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/legals/article_2a67f0e2-7d5c-47a5-a0a6-a1635a6dda11.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Everyone has the same question in the midterms — where's the beef? (And how much does it cost?)",
+    source: "Telluride Times",
+    date: "October 15, 2026",
+    firstSeen: "2026-10-15",
+    newsTopic: "community",
+    copy: "Beef has become a recurring campaign theme in this midterm cycle, with candidates in Mississippi, Colorado, Iowa, Texas, and Arizona all fielding attacks or making moves around meat-eating and agricultural policy. Ground beef is running around $6.79 a pound nationally, up from $5.55 in January. Both parties are working the issue, though from different angles.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_c6f98b44-3fa8-59dc-a0ec-e9821804d43b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/db/ddbf8b34-faec-5dc0-a29c-c79cf13a1044/6ad051973b9a0.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "With anger spreading over Iran war, Democrats hope to flip Republican seats with veterans' help",
+    source: "Telluride Times",
+    date: "October 15, 2026",
+    firstSeen: "2026-10-15",
+    newsTopic: "community",
+    copy: "Democrats are putting money into Colorado's heavily military 5th Congressional District for the first time in years, backing veteran Jessica Killin against Republican Rep. Jeff Crank. Some longtime Republican veterans in the district say the Iran war and Pentagon leadership have them reconsidering their usual vote.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_55341fa1-d41a-59d1-9c35-40231cb662bc.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/0b/e0b91090-2f29-5b79-b9cd-37074c9b54cf/6ad051933d611.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Amendment 83 is a trap, vote No",
     source: "Telluride Times",
     date: "October 14, 2026",
@@ -2544,7 +2589,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A Colorado veterinarian of 23 years is urging a No vote on Amendment 83, arguing that while it's framed as protecting hunting and fishing rights — already legal in Colorado — it would enshrine \"traditional methods\" in the state Constitution. She says supporters have acknowledged this language could revive steel-jawed traps, neck snares, and poisons that voters banned in 1996.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_f618bcae-e46f-4c8d-aceb-d728474d254f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     letterAuthor: "Christine Capaldo Veterinarian",
     isLetter: true,
     imgHiRes: true
@@ -2558,7 +2603,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Telluride schools are facing a double financial hit — declining enrollment means less state funding, and Colorado's new formula also cuts per-student dollars. Ballot Issue 5A would use local property taxes to partially offset those state reductions, though per-student funding would still drop even if it passes. Without it, programs like Dual Immersion, sports, and student support services are on the table.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_f8663b35-d8f8-4155-ad96-5b2a42482538.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     letterAuthor: "Ryan Robinson",
     isLetter: true,
     imgHiRes: true
@@ -2572,7 +2617,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Lane Masters, a Telluride native and Marine veteran, is running for San Miguel County Sheriff as a Democrat. He brings 13 years in law enforcement — including homicide and bomb squad work in Bismarck — plus a degree in emergency management. He opposes ALPRs and ICE cooperation; incumbent Dan supports both.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_79c0e6e1-c033-46a2-bf1d-1d7abcf62f74.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     letterAuthor: "Paul Savage",
     isLetter: true,
     imgHiRes: true
@@ -2586,7 +2631,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Telluride R-1's Ballot Issue 5A would raise property taxes roughly $117 per year per $1M assessed value to offset state funding cuts tied to a revised school finance formula. Under the new formula, the district could lose around 17% per-pupil funding — enough to threaten programs. The measure won't close the gap entirely, but would soften the impact.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_06867f0b-b913-436e-b65d-9240502acd50.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     letterAuthor: "Lance Waring",
     isLetter: true,
     imgHiRes: true
@@ -2600,7 +2645,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Telluride School District ranks in Colorado's top 10% and performs well nationally, but faces a funding squeeze — state per-student funding is down 17% and costs keep climbing. San Miguel County sits near the bottom in Colorado for property tax rates, around half the national average. Ballot Measure 5A would raise those rates to help close the gap.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_ab9b9d91-0a50-4837-bd04-e05339c80ac1.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     letterAuthor: "Tor Anderson and Sharon Grundy",
     isLetter: true,
     imgHiRes: true
@@ -2614,7 +2659,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A retired San Miguel County reserve deputy is raising concerns about staffing and morale at the sheriff's office, saying close to half the patrol deputies have resigned since Dan Covault was appointed interim sheriff in June 2025. The letter also questions the timing of license-plate-reader account cancellations the day before a public records request arrived. The writer backs Lane Masters for sheriff in November.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_ec6b9339-d0d9-461c-bac7-2ac57b2e4510.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     letterAuthor: "John Kirkendoll San Miguel County Reserve, Deputy Sheriff (Retired)",
     isLetter: true,
     imgHiRes: true
@@ -2628,7 +2673,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A local resident writes to oppose Amendment 81, which would permanently change the Colorado Constitution to require state and local law enforcement to notify ICE when someone is charged — before any conviction. The writer argues this conflicts with existing state laws limiting ICE authority and raises due process concerns.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_9e8c67e1-6ea8-4784-b610-c8cf508695db.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     isLetter: true,
     imgHiRes: true
   },
@@ -2654,7 +2699,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The Telluride Daily Planet, bought by Hoffmann Media Group in fall 2025 and renamed The Telluride Times, is now shifting to management under Lee Enterprises, which HMG's owner recently acquired. Starting with the Oct. 29 print edition, readers will notice some layout and sizing changes, though staff, coverage, and familiar features stay the same. The horoscope column is temporarily on hold due to an unrelated subscription issue.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_8bc7fc4b-4f56-43df-93c7-4c83fb3c9a62.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     letterAuthor: "Maureen Pelisson",
     isLetter: true,
     imgHiRes: true
@@ -2692,7 +2737,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Ballot Issue 5A would partially offset a projected $3 million annual drop in state school funding, which the district estimates could eliminate 33–65 positions over five years. The cost to property owners works out to roughly $115 a year per $1 million of assessed value. This guest commentary, written by a local parent and ROI professional, makes the financial case for passing the measure.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/editorials/article_38fad704-e58f-4a39-9766-da16b7d45ff1.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     isLetter: true,
     imgHiRes: true
   },
@@ -2742,7 +2787,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Pam Houston, author of *Animals Taught Me Everything*, speaks and signs at Wilkinson Public Library Monday, Oct. 26, at 5:30 p.m. The book draws on her experiences with horses, wolves, elephants, and other animals to explore how they model the essentials of living. Houston also wrote *Deep Creek: Finding Hope In The High Country* and lives on a homestead near the Rio Grande headwaters.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_75084210-01f7-4ad8-bbde-1bd85136ddf1.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/eb/7ebd5759-5d82-4b63-a4a8-8925bb24bcba/6acff6cf85d2c.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/eb/7ebd5759-5d82-4b63-a4a8-8925bb24bcba/6acff6cf85d2c.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Chipeta Lodge renews focus on lodging, wellness and community",
@@ -2753,7 +2799,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Chipeta Lodge in Ridgway is refocusing on lodging, spa, and wellness while converting its White Buffalo restaurant into a casual bar with grab-and-go options. Day passes to the pool and spa are now available to locals. Catering for events shifts to Grace & Grit, reviving a partnership from the lodge's 1990s bed-and-breakfast days.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_61f116a7-386e-45a0-9908-b3a37f9340f3.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/68/c682f65a-6577-4ccb-a54b-f4d60a7dcc9a/6acff796dab91.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/68/c682f65a-6577-4ccb-a54b-f4d60a7dcc9a/6acff796dab91.image.jpg",
+    imgHiRes: true
   },
   {
     title: "A community hub",
@@ -4858,114 +4905,81 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Lite lunch-The Burning Side",
-    link: "https://telluridelibrary.libcal.com/event/17493869?hs=a",
-    description: "12:00 PM – 1:00 PM · The Burning Side by Sarah Damoff From the author of The Bright Years , the story of April and Leo, a couple on the brink of collapse. When their house goes up in flames, family secrets and thorny histories emerge as they are forced to decide what is worth salvaging. When April and Leo's house burns in the middle of the night, they escape with their two young children and the quiet knowledge that the fire is not the only thing threatening their family. They retreat to April's childhood home in Dallas, where her spirited parents and siblings provide both comfort and complication. As the family reckons with the aftermath—grief, guilt, logistics, and memories scorched and intact—the fire exposes the cracks already forming in April and Leo's marriage. …",
-    pubDate: "2026-10-14T18:00:00.000Z",
+    title: "Storytime / Hora de Cuentos",
+    link: "https://telluridelibrary.libcal.com/event/17514637?hs=a",
+    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
+    pubDate: "2026-10-15T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_29_10_20_27.png"
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
   },
   {
-    title: "Radio Biblioteca",
-    link: "https://telluridelibrary.libcal.com/event/17707363?hs=a",
-    description: "Radio Biblioteca is a bilingual library program broadcast on KOTO 91.7 FM, sharing community news and upcoming events in both English and Spanish. The program airs every other Wednesday and is presented in partnership between Wilkinson Public Library and KOTO Radio Station.",
-    pubDate: "2026-10-14T18:00:00.000Z",
+    title: "Pup Meetup at the Gondola Plaza",
+    link: "https://telluridelibrary.libcal.com/event/17622512?hs=a",
+    description: "11:30 AM – 12:00 PM · Get ready to unleash the fun at our Pup Meetup! 🐶 Join us at the Gondola Plaza by the Coffee Cowboy Cart for a tail-wagging good time that's sure to leave both you and your furry friend feeling pawsitively delighted. Make sure to stick around for the raffle with prizes from local pet stores and free pup cups from the Coffee Cowboy! Marney Prince with My Pup&#39;s Remedy will be there with free treats for your furry friend as well! With the Wilkinson Public Library, anything is PAW-sible. Who knows...you may even make some new FUR-ever friends!",
+    pubDate: "2026-10-15T17:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "KOTO Radio Station",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_24_13_11_06.png"
+    location: "Gondola Plaza - Telluride",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_10_13_31_59.jpg"
   },
   {
-    title: "Mahjongg for Independent Players",
-    link: "https://telluridelibrary.libcal.com/event/17622568?hs=a",
-    description: "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
-    pubDate: "2026-10-14T19:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_10_13_36_20.jpg"
-  },
-  {
-    title: "Movie and A Snack Club",
-    link: "https://telluridelibrary.libcal.com/event/17282938?hs=a",
-    description: "A recurring program at Wilkinson Public Library where participants gather in the Telluride Room to watch a movie and enjoy a snack together. It runs from 3:30 to 5:30 PM and is hosted by the library.",
-    pubDate: "2026-10-14T21:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_26_13_59_32.png"
-  },
-  {
-    title: "Teen Reimagine Our Community",
-    link: "https://telluridelibrary.libcal.com/event/17727012?hs=a",
-    description: "A teen program at Wilkinson Public Library's Teen Area focused on community conversation and reflection. The series uses fictional scenarios as a starting point for discussions around growth, healing, and difficult topics in a supported, safe-space setting.",
-    pubDate: "2026-10-14T22:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_28_16_04_52.jpg"
-  },
-  {
-    title: "Harry Potter Watch Party",
-    link: "https://telluridelibrary.libcal.com/event/17486060?hs=a",
-    description: "4:00 PM – 6:30 PM · Join the WPL every Wednesday after school in September and October, where we will sequentially watch all 8 of the original Harry Potter movies. This event is for teens/youth.",
-    pubDate: "2026-10-14T22:00:00.000Z",
+    title: "Pilates for All Bodies",
+    link: "https://telluridelibrary.libcal.com/event/16536349?hs=a",
+    description: "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can. Minimum two students to run the class.",
+    pubDate: "2026-10-15T18:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_22_52.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg"
   },
   {
-    title: "Citizenship Support & Civic Practice/Apoyo Comunitario para la Ciudadanía",
-    link: "https://telluridelibrary.libcal.com/event/17637932?hs=a",
-    description: "A free community workshop at Wilkinson Public Library's Magazine Room focused on helping participants prepare for the USCIS citizenship interview and civics test. Attendees of all levels are welcome to practice civics questions and support one another on the path toward U.S. citizenship.",
-    pubDate: "2026-10-14T23:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_29_10_24_58.jpg"
-  },
-  {
-    title: "Sewing 101 with Melissa",
-    link: "https://telluridelibrary.libcal.com/event/15970622?hs=a",
-    description: "5:00 PM – 7:00 PM · Don&#39;t throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we&#39;ll provide the sewing materials.",
-    pubDate: "2026-10-14T23:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Meeting Room #6 - large",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1717100108.jpg"
-  },
-  {
-    title: "Dudes Who Read Book Club",
-    link: "https://telluridelibrary.libcal.com/event/17297334?hs=a",
-    description: "5:30 PM – 6:30 PM · Join us for  Dudes Who Read , led by our very own library bookworms, Dennis and Oliver. This month, the dudes will be discussing their epic summer reads. This month&#39;s meeting will be at the Stronghouse Brew Pub (283 S Fir St).  Seats are limited, so make sure to sign up to secure your spot.",
-    pubDate: "2026-10-14T23:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Stronghouse Brew Pub",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_30_12_10_12.jpg"
-  },
-  {
-    title: "Sensoria: Attending to the Wonder and Vitality of Nature",
-    link: "https://telluridelibrary.libcal.com/event/17291686?hs=a",
-    description: "5:30 PM – 7:00 PM · Join WPL and Talking Gourds for a conversation about Sensoria: Attending to the Wonder and Vitality of Nature , a new collection of writings that invites us to reconsider how we experience and understand the world through our senses. We'll explore what seeing, hearing, touching, tasting, and smelling can teach us about ourselves, other species, and our relationships with the living world around us. How might paying closer attention to our sensory experiences change the way we connect with one another and the non-human world that we are so enmeshed in and yet often think of as separate? Sensoria&#39;s editor, Gavin Van Horn, along with contributors Art Goodtimes, John Hausdoerffer, and others TBD will be reading. …",
-    pubDate: "2026-10-14T23:30:00.000Z",
+    title: "Littles On the Move",
+    link: "https://telluridelibrary.libcal.com/event/13960365?hs=a",
+    description: "3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.",
+    pubDate: "2026-10-15T21:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_01_12_43_43.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png"
+  },
+  {
+    title: "The Spark Lab: Thursdays Creativos at Ah Haa",
+    link: "https://telluridelibrary.libcal.com/event/17469328?hs=a",
+    description: "3:30 PM – 5:30 PM · Esta clase est&aacute; dise&ntilde;ada para introducir a los artistas en el mundo de los medios 2D y 3D. Se utiliza una amplia gama de materiales de arte, como pasteles al &oacute;leo, materiales reciclados, pintura acr&iacute;lica y mucho m&aacute;s. Los estudiantes aprender&aacute;n siguiendo al instructor mediante un m&eacute;todo paso a paso que les permitir&aacute; ver c&oacute;mo sus proyectos toman forma de principio a fin. Para inscripciones, cont&aacute;ctese con Domi 970.728.4519 Ext: 112 Edades: K-4&ordm; grado (5-10 a&ntilde;os)   This class is designed to introduce artists to the world of both 2D and 3D media. Using a wide range of art supplies, including recycled materials, oil pastels, acrylic paint, and more. Students will learn by following the teacher&#39;s step-by-step method, which allows them to see projects take shape from beginning to end. Ages: K-4th grade (5-10years old)",
+    pubDate: "2026-10-15T21:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Ahh Haa School of Arts",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_19_16_45_28.png"
+  },
+  {
+    title: "Cancer Support Group",
+    link: "https://telluridelibrary.libcal.com/event/16067715?hs=a",
+    description: "5:00 PM – 6:00 PM · Join us for a supportive and compassionate space at our Cancer Support Group held every 3rd Thursday of the month from 5:00 PM to 6:00 PM . This group is designed for individuals currently experiencing cancer and for those who are in remission, offering a safe and welcoming environment for sharing personal stories, experiences, and encouragement. Whether you&#39;re navigating your cancer journey or reflecting on the road to recovery, this group provides emotional support and the opportunity to connect with others who understand your unique challenges. Come and find strength in the community, share your experiences, and know you&#39;re not alone in your journey.",
+    pubDate: "2026-10-15T23:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Magazine Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_02_26_11_55_25.jpg"
+  },
+  {
+    title: "Painting Class/Clase de Pintura with/con Daniel Kanow",
+    link: "https://telluridelibrary.libcal.com/event/17635155?hs=a",
+    description: "5:00 PM – 7:30 PM · Daniel Kanow will lead a painting class in order to display the final pieces on the WPL Ofrenda for Dia de los Muertos. This program will be bilingual, please register in advance.  Daniel Kanow dirigir&aacute; una clase de pintura con el fin de mostrar las piezas finales de la Ofrenda WPL para el D&iacute;a de los Muertos. Este programa ser&aacute; biling&uuml;e, por favor reg&iacute;strese con anticipaci&oacute;n.",
+    pubDate: "2026-10-15T23:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Ahh Haa School of Arts",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_29_13_29_32.jpg"
   }
 ];
 
@@ -5471,98 +5485,16 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "CELESTIAL BODIES - Olivia Ivy and Kane Scheidegger",
-    link: "https://events.ourayridgwayevents.com/event/celestial-bodies-olivia-ivy-and-kane-scheidegger",
-    description: "Join us at Space to Create Gallery in Ridgway for CELESTIAL BODIES, an exhibition exploring the connections between Body, Earth, and Cosmos through painting and photography. Featuring the work of Olivia Ivy and Kane Scheidegger, the exhibition brings together feminine figures, celestial symbolism, and otherworldly landscapes to explore the boundaries between the intimate and the infinite. From constellations hidden within the human form to the vastness of the night sky reflected in the earthly landscape, these works invite us to look beyond the familiar and reconsider our place within the universe. Exhibition dates October 2nd to November 2.",
-    pubDate: "2026-10-14T06:00:00.000Z",
-    endDate: "2026-11-02",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Space to Create Gallery",
-    imageUrl: "https://localist-images.azureedge.net/photos/54241868374608/huge/121c2ab6c42c0a5364ce85a3ffe552e3b10fe9f0.jpg"
-  },
-  {
     title: "Fall Break - Ridgway Schools",
     link: "https://events.ourayridgwayevents.com/event/fall-break-ridgway-schools",
-    description: "Fall break for Ridgway Schools, a scheduled day off from classes for students in the Ridgway school district. This is a community calendar listing noting the break period for local families.",
-    pubDate: "2026-10-14T06:00:00.000Z",
+    description: "Fall Break for Ridgway Schools begins on this date, giving students and families a scheduled pause from the academic calendar. The break is a district-wide observance for the Ridgway school community in Ouray County.",
+    pubDate: "2026-10-15T06:00:00.000Z",
     endDate: "2026-10-16",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
-  },
-  {
-    title: "Teen Top Rope Climbing",
-    link: "https://events.ourayridgwayevents.com/event/teen-top-rope-climbing",
-    description: "A guided top rope climbing program for teens, led by Basecamp Ouray Mountain Guides at a local outdoor site. Participants will meet at the gazebo across from the library, with details, a schedule, and a packing list sent to registrants by email in advance.",
-    pubDate: "2026-10-14T15:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/54082874930523/huge/077cb77cd39e2cbb06ed46053a13ccc07c5611ce.jpg"
-  },
-  {
-    title: "OPL Read a Book - Get a Pumpkin",
-    link: "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
-    description: "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
-    pubDate: "2026-10-14T16:00:00.000Z",
-    endDate: "2026-10-31",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Public Library",
-    imageUrl: "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg"
-  },
-  {
-    title: "Water Aerobics",
-    link: "https://events.ourayridgwayevents.com/event/water-aerobics",
-    description: "Join water aerobics weekly Wednesdays (Sometimes Tuesdays and Thursdays too!) from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy the positive atmosphere! Water aerobics is free for pool members, and non-members can join for just $5 per class.",
-    pubDate: "2026-10-14T16:00:00.000Z",
-    endDate: "2026-12-09",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Hot Springs",
-    imageUrl: "https://localist-images.azureedge.net/photos/53887699628224/huge/262efc04b203189edcde410b9973aac1ca778195.jpg"
-  },
-  {
-    title: "Guided Tour: Historic Beaumont Hotel & Spa",
-    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
-    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
-    pubDate: "2026-10-14T19:30:00.000Z",
-    endDate: "2026-12-12",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Beaumont Hotel & Spa",
-    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
-  },
-  {
-    title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
-    link: "https://events.ourayridgwayevents.com/event/open-mic-jam-night-w-host-dj-strong",
-    description: "A weekly open mic and jam night hosted by DJ Strong at Floating Lotus Brewery, welcoming solo performers, groups, and musicians looking to collaborate. Attendees can share original songs, play covers, or join in on group jam sessions.",
-    pubDate: "2026-10-15T00:00:00.000Z",
-    endDate: "2026-12-10",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/52523630382868/huge/8fc500326eed5dc630e7e4235909efe3b2751086.jpg"
-  },
-  {
-    title: "Obsession: Movie Night @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/obsession-movie-night-the-wright",
-    description: "Obsession: Movie Night @ the Wright WHEN?Wednesday, October 14 Doors at 6:30 PM | Movie at 7:00 PM WHERE?Wright Opera House 472 Main St., Ouray, Colorado RUN TIME: 1 hour, 49 minutes RATING: R ABOUT THE FILM Obsession (2025) is a supernatural horror film about Bear, a music-store employee whose wish for his childhood friend Nikki to fall in love with him becomes something far darker—and far more dangerous—than he imagined. A twisted, bloody, and sharply funny nightmare about desire, control, and the terrible things that happen when getting exactly what you want turns out to be the worst possible outcome. WHY SEE IT?Because a love story with a monkey’s-paw problem is never just a love story. HOW?Tickets: $5 In-person screening at the historic Wright Opera House Concessions available Part of Movie Night @ the historic Wright Opera House — bringing film, community, and conversation to downtown Ouray since 1909.",
-    pubDate: "2026-10-15T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/54035246928726/huge/df8435a1f9605f9b27f285c37e3bb1d44a375465.jpg"
   },
   {
     title: "Functional Fitness - Strength & Mobility Training For Women",
@@ -5577,6 +5509,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54236057466628/huge/10f1882bcc97fe1b7ad4209e2431edd0781a413f.jpg"
   },
   {
+    title: "OPL Read a Book - Get a Pumpkin",
+    link: "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
+    description: "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
+    pubDate: "2026-10-15T16:00:00.000Z",
+    endDate: "2026-10-31",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Public Library",
+    imageUrl: "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg"
+  },
+  {
     title: "Ongoing: Space Cowboy by Dundee & Lee",
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
     description: "Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado artists Emilie Odeile and Ken Chapin of Dundee & Lee, the exhibition centers on a 10-foot-tall fiber rocket topped with a cowboy hat and Mission Control consoles that gather images, voices, stories, and discoveries as Space Cowboy travels from community to community. Throughout October, the exhibition comes alive with special events and programming, including appearances by Colorado Poet Laureate Crisosto Apache, community conversations, and opportunities for Ridgway residents to become part of the continuing Space Cowboy story. Space Cowboy travels with a simple idea: Colorado is the teacher and Space Cowboy is the learner. Every community adds something new to the mission. …",
@@ -5587,6 +5531,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Decker Community Room",
     imageUrl: "https://localist-images.azureedge.net/photos/53975670057489/huge/75be37bbb2b6bd7ba17f7754e11da5a0eaf5930c.jpg"
+  },
+  {
+    title: "Guided Tour: Historic Beaumont Hotel & Spa",
+    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
+    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
+    pubDate: "2026-10-15T19:30:00.000Z",
+    endDate: "2026-12-12",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Beaumont Hotel & Spa",
+    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
   },
   {
     title: "The Life of a Ballot-What Happens After You Turn in Your Ballot",
@@ -5632,6 +5588,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Floating Lotus Brewery",
     imageUrl: "https://localist-images.azureedge.net/photos/53790516346797/huge/599d1a7013ddde307592e7dfc9b892fe265527e0.jpg"
+  },
+  {
+    title: "CELESTIAL BODIES - Olivia Ivy and Kane Scheidegger",
+    link: "https://events.ourayridgwayevents.com/event/celestial-bodies-olivia-ivy-and-kane-scheidegger",
+    description: "Join us at Space to Create Gallery in Ridgway for CELESTIAL BODIES, an exhibition exploring the connections between Body, Earth, and Cosmos through painting and photography. Featuring the work of Olivia Ivy and Kane Scheidegger, the exhibition brings together feminine figures, celestial symbolism, and otherworldly landscapes to explore the boundaries between the intimate and the infinite. From constellations hidden within the human form to the vastness of the night sky reflected in the earthly landscape, these works invite us to look beyond the familiar and reconsider our place within the universe. Exhibition dates October 2nd to November 2.",
+    pubDate: "2026-10-16T06:00:00.000Z",
+    endDate: "2026-11-02",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create Gallery",
+    imageUrl: "https://localist-images.azureedge.net/photos/54241868374608/huge/121c2ab6c42c0a5364ce85a3ffe552e3b10fe9f0.jpg"
   },
   {
     title: "Ridgway Farmers Market",
@@ -5861,6 +5829,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53780434962919/huge/3aff831f26d7f9d4824893f89d8fd88416047a44.jpg"
   },
   {
+    title: "Water Aerobics",
+    link: "https://events.ourayridgwayevents.com/event/water-aerobics",
+    description: "Join water aerobics weekly Wednesdays (Sometimes Tuesdays and Thursdays too!) from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy the positive atmosphere! Water aerobics is free for pool members, and non-members can join for just $5 per class.",
+    pubDate: "2026-10-21T16:00:00.000Z",
+    endDate: "2026-12-09",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Hot Springs",
+    imageUrl: "https://localist-images.azureedge.net/photos/53887699628224/huge/262efc04b203189edcde410b9973aac1ca778195.jpg"
+  },
+  {
     title: "AFTER SCHOOL ART FOR AGES 8-12",
     link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-8-12-7963",
     description: "AFTER SCHOOL ART FOR AGES 8-12 Wednesdays, 3:15–4:45 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 16 – October 7Session 2 (4 weeks • $85): October 21 – November 11Session 3 (3 weeks • $70): December 2 – December 16Each week, students will explore an exciting theme while experimenting with a wide range of materials and techniques. Drawing inspiration from well-known artists and design styles, young artists will be supported in discovering their own unique creative voice in a fun, nurturing, studio-like setting. These classes are designed to foster a love of the arts through hands-on exploration, age-appropriate projects, and a focus on the joy of the creative process.. A student art reception will be held in December. Students will take home their collected works in the days following the event. …",
@@ -5883,6 +5863,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray Community Center",
     imageUrl: "https://localist-images.azureedge.net/photos/52277881680293/huge/aa29110a3c05049d073e03408632a25f10e17ba5.jpg"
+  },
+  {
+    title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
+    link: "https://events.ourayridgwayevents.com/event/open-mic-jam-night-w-host-dj-strong",
+    description: "A weekly open mic and jam night hosted by DJ Strong at Floating Lotus Brewery, welcoming solo performers, groups, and musicians of all kinds. Attendees can share original songs, play covers, or join collaborative jam sessions alongside other local musicians.",
+    pubDate: "2026-10-22T00:00:00.000Z",
+    endDate: "2026-12-10",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/52523630382868/huge/8fc500326eed5dc630e7e4235909efe3b2751086.jpg"
   },
   {
     title: "Hoppers: Movie Night @ the Wright",

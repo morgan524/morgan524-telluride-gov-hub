@@ -1,18 +1,18 @@
 {
-  "hash": "abe90b2247ca67fcb5d3d1cddf4f2df9d42d6faa",
-  "lede": "Norwood's Board of Trustees holds a public hearing Thursday night on a resolution that could remove a sitting Planning Commission member — that's rare anywhere, and worth watching in a small town where these relationships run deep. Mountain Village Council is also meeting Thursday to take a second-reading vote on housing authority fee language and adopt the 2027 MVHA fee schedules. On the lighter side, the 17th Telluride Horror Show kicks off Friday at the Sheridan, and the San Miguel Watershed Forum on Tuesday is worth your time if you have a water project in the works.",
+  "hash": "5b44f35984501d96b02d78a6240ec378d8a6b1af",
+  "lede": "The biggest civic moment this week is in Norwood, where the Board of Trustees holds a public hearing Thursday on a resolution that could remove a sitting Planning Commission member — something that rarely happens in a small town and worth watching. Mountain Village Council also meets Thursday to vote on second reading of an ordinance changing how MVHA fees are set in the municipal code, alongside a resolution adopting the actual 2027 fee schedules. And over in Telluride, HARC takes up the Shandoka redevelopment at 860 Black Bear Rd on Tuesday, with public hearings on four new buildings across two agenda items — both continued since August.",
   "notable": [
     {
-      "id": 0,
-      "stake": "Council votes to adopt 2027 MVHA fee schedules affecting housing authority residents."
+      "id": 2,
+      "stake": "Public hearing on formal removal of a sitting Planning Commission member."
     },
     {
-      "id": 2,
-      "stake": "Public hearing on formal removal of a sitting Norwood Planning Commission member."
+      "id": 0,
+      "stake": "Vote on MVHA fee ordinance and adoption of 2027 housing fee schedules."
     },
     {
       "id": 13,
-      "stake": "Public hearings on new construction for Telluride's large Shandoka Lot redevelopment project."
+      "stake": "Public hearings on four new buildings in the Town's own Shandoka redevelopment."
     }
   ]
 }

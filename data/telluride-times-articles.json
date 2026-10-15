@@ -1,5 +1,53 @@
 [
   {
+    "title": "We're on the edge of our seats",
+    "source": "Telluride Times",
+    "date": "October 15, 2026",
+    "firstSeen": "2026-10-15",
+    "newsTopic": "arts-culture",
+    "copy": "The Telluride Horror Show runs October 16–18 for its 17th year, with headliners including Universal's upcoming slasher *River* and *Victorian Psycho*. Several films have local ties, including *The Cycle*, which features Telluride's own Jeb Berrier. Free screenings, campfire readings, and library films round out the weekend.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/arts_and_entertainment/article_03b74f4a-7cf3-4126-8b74-60372e7feda7.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/be/6be0816f-4efa-4e74-93bc-d33beee29069/6acddbe142bd5.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Legals and Public Notices for Oct. 15-21, 2026",
+    "source": "Telluride Times",
+    "date": "October 15, 2026",
+    "firstSeen": "2026-10-15",
+    "newsTopic": "community",
+    "copy": "NOTICE OF PUBLIC HEARING",
+    "claudeSummary": false,
+    "href": "https://www.telluridenews.com/news/legals/article_2a67f0e2-7d5c-47a5-a0a6-a1635a6dda11.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Everyone has the same question in the midterms — where's the beef? (And how much does it cost?)",
+    "source": "Telluride Times",
+    "date": "October 15, 2026",
+    "firstSeen": "2026-10-15",
+    "newsTopic": "community",
+    "copy": "Beef has become a recurring campaign theme in this midterm cycle, with candidates in Mississippi, Colorado, Iowa, Texas, and Arizona all fielding attacks or making moves around meat-eating and agricultural policy. Ground beef is running around $6.79 a pound nationally, up from $5.55 in January. Both parties are working the issue, though from different angles.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/state/article_c6f98b44-3fa8-59dc-a0ec-e9821804d43b.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/db/ddbf8b34-faec-5dc0-a29c-c79cf13a1044/6ad051973b9a0.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "With anger spreading over Iran war, Democrats hope to flip Republican seats with veterans' help",
+    "source": "Telluride Times",
+    "date": "October 15, 2026",
+    "firstSeen": "2026-10-15",
+    "newsTopic": "community",
+    "copy": "Democrats are putting money into Colorado's heavily military 5th Congressional District for the first time in years, backing veteran Jessica Killin against Republican Rep. Jeff Crank. Some longtime Republican veterans in the district say the Iran war and Pentagon leadership have them reconsidering their usual vote.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/state/article_55341fa1-d41a-59d1-9c35-40231cb662bc.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/0b/e0b91090-2f29-5b79-b9cd-37074c9b54cf/6ad051933d611.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Amendment 83 is a trap, vote No",
     "source": "Telluride Times",
     "date": "October 14, 2026",
@@ -8,7 +56,7 @@
     "copy": "A Colorado veterinarian of 23 years is urging a No vote on Amendment 83, arguing that while it's framed as protecting hunting and fishing rights — already legal in Colorado — it would enshrine \"traditional methods\" in the state Constitution. She says supporters have acknowledged this language could revive steel-jawed traps, neck snares, and poisons that voters banned in 1996.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_f618bcae-e46f-4c8d-aceb-d728474d254f.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "letterAuthor": "Christine Capaldo Veterinarian",
     "isLetter": true,
     "imgHiRes": true
@@ -22,7 +70,7 @@
     "copy": "Telluride schools are facing a double financial hit — declining enrollment means less state funding, and Colorado's new formula also cuts per-student dollars. Ballot Issue 5A would use local property taxes to partially offset those state reductions, though per-student funding would still drop even if it passes. Without it, programs like Dual Immersion, sports, and student support services are on the table.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_f8663b35-d8f8-4155-ad96-5b2a42482538.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "letterAuthor": "Ryan Robinson",
     "isLetter": true,
     "imgHiRes": true
@@ -36,7 +84,7 @@
     "copy": "Lane Masters, a Telluride native and Marine veteran, is running for San Miguel County Sheriff as a Democrat. He brings 13 years in law enforcement — including homicide and bomb squad work in Bismarck — plus a degree in emergency management. He opposes ALPRs and ICE cooperation; incumbent Dan supports both.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_79c0e6e1-c033-46a2-bf1d-1d7abcf62f74.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "letterAuthor": "Paul Savage",
     "isLetter": true,
     "imgHiRes": true
@@ -50,7 +98,7 @@
     "copy": "Telluride R-1's Ballot Issue 5A would raise property taxes roughly $117 per year per $1M assessed value to offset state funding cuts tied to a revised school finance formula. Under the new formula, the district could lose around 17% per-pupil funding — enough to threaten programs. The measure won't close the gap entirely, but would soften the impact.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_06867f0b-b913-436e-b65d-9240502acd50.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "letterAuthor": "Lance Waring",
     "isLetter": true,
     "imgHiRes": true
@@ -64,7 +112,7 @@
     "copy": "Telluride School District ranks in Colorado's top 10% and performs well nationally, but faces a funding squeeze — state per-student funding is down 17% and costs keep climbing. San Miguel County sits near the bottom in Colorado for property tax rates, around half the national average. Ballot Measure 5A would raise those rates to help close the gap.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_ab9b9d91-0a50-4837-bd04-e05339c80ac1.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "letterAuthor": "Tor Anderson and Sharon Grundy",
     "isLetter": true,
     "imgHiRes": true
@@ -78,7 +126,7 @@
     "copy": "A retired San Miguel County reserve deputy is raising concerns about staffing and morale at the sheriff's office, saying close to half the patrol deputies have resigned since Dan Covault was appointed interim sheriff in June 2025. The letter also questions the timing of license-plate-reader account cancellations the day before a public records request arrived. The writer backs Lane Masters for sheriff in November.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_ec6b9339-d0d9-461c-bac7-2ac57b2e4510.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "letterAuthor": "John Kirkendoll San Miguel County Reserve, Deputy Sheriff (Retired)",
     "isLetter": true,
     "imgHiRes": true
@@ -92,7 +140,7 @@
     "copy": "A local resident writes to oppose Amendment 81, which would permanently change the Colorado Constitution to require state and local law enforcement to notify ICE when someone is charged — before any conviction. The writer argues this conflicts with existing state laws limiting ICE authority and raises due process concerns.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_9e8c67e1-6ea8-4784-b610-c8cf508695db.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "isLetter": true,
     "imgHiRes": true
   },
@@ -118,7 +166,7 @@
     "copy": "The Telluride Daily Planet, bought by Hoffmann Media Group in fall 2025 and renamed The Telluride Times, is now shifting to management under Lee Enterprises, which HMG's owner recently acquired. Starting with the Oct. 29 print edition, readers will notice some layout and sizing changes, though staff, coverage, and familiar features stay the same. The horoscope column is temporarily on hold due to an unrelated subscription issue.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/columnists/article_8bc7fc4b-4f56-43df-93c7-4c83fb3c9a62.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "letterAuthor": "Maureen Pelisson",
     "isLetter": true,
     "imgHiRes": true
@@ -156,7 +204,7 @@
     "copy": "Ballot Issue 5A would partially offset a projected $3 million annual drop in state school funding, which the district estimates could eliminate 33–65 positions over five years. The cost to property owners works out to roughly $115 a year per $1 million of assessed value. This guest commentary, written by a local parent and ROI professional, makes the financial case for passing the measure.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/editorials/article_38fad704-e58f-4a39-9766-da16b7d45ff1.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "isLetter": true,
     "imgHiRes": true
   },
@@ -206,7 +254,8 @@
     "copy": "Pam Houston, author of *Animals Taught Me Everything*, speaks and signs at Wilkinson Public Library Monday, Oct. 26, at 5:30 p.m. The book draws on her experiences with horses, wolves, elephants, and other animals to explore how they model the essentials of living. Houston also wrote *Deep Creek: Finding Hope In The High Country* and lives on a homestead near the Rio Grande headwaters.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/news_release/article_75084210-01f7-4ad8-bbde-1bd85136ddf1.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/eb/7ebd5759-5d82-4b63-a4a8-8925bb24bcba/6acff6cf85d2c.image.jpg"
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/eb/7ebd5759-5d82-4b63-a4a8-8925bb24bcba/6acff6cf85d2c.image.jpg",
+    "imgHiRes": true
   },
   {
     "title": "Chipeta Lodge renews focus on lodging, wellness and community",
@@ -217,7 +266,8 @@
     "copy": "Chipeta Lodge in Ridgway is refocusing on lodging, spa, and wellness while converting its White Buffalo restaurant into a casual bar with grab-and-go options. Day passes to the pool and spa are now available to locals. Catering for events shifts to Grace & Grit, reviving a partnership from the lodge's 1990s bed-and-breakfast days.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/news_release/article_61f116a7-386e-45a0-9908-b3a37f9340f3.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/68/c682f65a-6577-4ccb-a54b-f4d60a7dcc9a/6acff796dab91.image.jpg"
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/68/c682f65a-6577-4ccb-a54b-f4d60a7dcc9a/6acff796dab91.image.jpg",
+    "imgHiRes": true
   },
   {
     "title": "A community hub",

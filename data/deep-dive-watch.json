@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-15T04:01:46.304Z",
+ "generated": "2026-10-15T11:10:53.246Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -30,24 +30,9 @@
      "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
     }
    ],
-   "recent": [
-    {
-     "source": "telluride",
-     "date": "2026-09-30",
-     "title": "Special Meeting - Historic & Architectural Review Commission - Sep 30 2026",
-     "snippet": "HARC holds a special meeting dedicated entirely to the Carhenge Redevelopment Project — the proposed new construction at 700 W Pacific Ave that has been working its way through review since at least…"
-    },
-    {
-     "source": "telluride",
-     "date": "2026-09-30",
-     "title": "Special Town Council - Sep 30 2026",
-     "snippet": "This special session is entirely devoted to one thing: a Town Council appeal hearing on the Carhenge lot subdivision. On July 23, 2026, P&Z unanimously approved consolidating Lots 34 and 34B at 700…"
-    }
-   ],
+   "recent": [],
    "developments": [],
    "stale": [
-    "Carhenge / Shandoka: telluride discussed it on 2026-09-30 (\"Special Meeting - Historic & Architectural Review…\") but the deep dive was last edited 2026-09-27.",
-    "Carhenge / Shandoka: telluride discussed it on 2026-09-30 (\"Special Town Council - Sep 30 2026\") but the deep dive was last edited 2026-09-27.",
     "Carhenge / Shandoka: timeline entry \"HARC hears Shandoka's four buildings; Carhenge slips to…\" (Aug 19, 2026) is still marked upcoming but the date has passed."
    ]
   },
@@ -69,18 +54,11 @@
      "date": "2026-10-08",
      "title": "Planning Commission Meeting",
      "snippet": "The San Miguel County Planning Commission meets October 8 for a session that spans most of the day. The morning opens with a joint work session with the BOCC on an Affordable Housing Code Update — a…"
-    },
-    {
-     "source": "telluride",
-     "date": "2026-09-30",
-     "title": "Special Town Council - Sep 30 2026",
-     "snippet": "This special session is entirely devoted to one thing: a Town Council appeal hearing on the Carhenge lot subdivision. On July 23, 2026, P&Z unanimously approved consolidating Lots 34 and 34B at 700…"
     }
    ],
    "developments": [],
    "stale": [
-    "Code Changes & Accelerated Review: county discussed it on 2026-10-08 (\"Planning Commission Meeting\") but the deep dive was last edited 2026-07-19.",
-    "Code Changes & Accelerated Review: telluride discussed it on 2026-09-30 (\"Special Town Council - Sep 30 2026\") but the deep dive was last edited 2026-07-19."
+    "Code Changes & Accelerated Review: county discussed it on 2026-10-08 (\"Planning Commission Meeting\") but the deep dive was last edited 2026-07-19."
    ]
   },
   "wildfire": {
