@@ -7967,7 +7967,7 @@ const HOUSING_LISTINGS = [
     lng: -107.8123,
     org: "telluride",
     beds: "3 Bedroom, 2 Bath, ~1116 sq ft",
-    price: "",
+    price: "$453,000 (deed-restricted)",
     source: "SMRHA",
     contact: { phone: "(970) 728-3034", email: "admin@smrha.org" },
     url: "https://smrha.org/spruce-house-h/",
