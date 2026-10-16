@@ -20,8 +20,8 @@
   {
     "date": "October 15, 2026",
     "time": null,
-    "title": "Board of Trustees Public Hearing - Resolution No. 2026-0812",
-    "agendaUrl": "https://www.norwoodtown.com/files/3ac6a6aae/10.15.2026+Board+of+Trustee+Public+Hearing.pdf",
+    "title": "Board of Trustees CANCELLED Public Hearing - Resolution No. 2026-0812",
+    "agendaUrl": "https://www.norwoodtown.com/files/a37db5db3/10.15.2026+Board+of+Trustee+Public+Hearing+Cancellation.pdf",
     "packetUrl": null,
     "special": false,
     "board": "bot"
@@ -30,11 +30,10 @@
     "date": "October 19, 2026",
     "time": null,
     "title": "Planning and Zoning Commission Meeting",
-    "agendaUrl": null,
+    "agendaUrl": "https://www.norwoodtown.com/files/8a5f7ce8f/10.19.2026+P%26Z+BOA+AGENDA.pdf",
     "packetUrl": null,
     "special": false,
-    "board": "pz",
-    "note": "Next scheduled meeting -- agenda posted before the meeting."
+    "board": "pz"
   },
   {
     "date": "November 10, 2026",

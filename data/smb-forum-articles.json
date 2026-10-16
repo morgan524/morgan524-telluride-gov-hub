@@ -1,5 +1,18 @@
 [
   {
+    "title": "FERN FALK: A LIFETIME OF LISTENING AND LEARNING",
+    "source": "San Miguel Basin Forum",
+    "sourceKey": "smb",
+    "date": "October 15, 2026",
+    "firstSeen": "2026-10-15",
+    "dateSource": "article",
+    "newsTopic": "community",
+    "copy": "Fern Falk has spent 91 years in the Norwood area — raising a family, running the post office for 20 years, and making time to listen to her neighbors. She credits those daily conversations, at the hardware store, the post office counter, and the Mesa Rose café table, with keeping community alive. \"Put down the phone and talk to people,\" she says.",
+    "claudeSummary": true,
+    "href": "https://www.sanmiguelbasinforum.com/stories/fern-falk-a-lifetime-of-listening-and-learning,132950",
+    "img": ""
+  },
+  {
     "title": "Chiles family welcomes students to learn about regenerative agriculture",
     "source": "San Miguel Basin Forum",
     "sourceKey": "smb",
@@ -37,18 +50,5 @@
     "claudeSummary": true,
     "href": "https://www.sanmiguelbasinforum.com/stories/nucla-volleyball-girls-make-memories-on-off-court,130194",
     "img": "https://zeta.creativecirclecdn.com/smb/original/20260921-165714-8ef-youth%20vball.jpeg"
-  },
-  {
-    "title": "Hughes climbs Lizard Head",
-    "source": "San Miguel Basin Forum",
-    "sourceKey": "smb",
-    "date": "September 16, 2026",
-    "firstSeen": "2026-09-16",
-    "dateSource": "article",
-    "newsTopic": "recreation",
-    "copy": "Norwood native Wyatt Hughes — who summited Everest earlier this year — climbed Lizard Head, Colorado's hardest 13er, on Labor Day weekend with Eric Ahlstedt of Durango. The volcanic spire south of Telluride is considered unstable and very advanced; the pair took the Mark of Zorro summit pitch and were back down in six or seven hours. Hughes has now completed Colorado's Centennial list and has K2 in his sights for 2028.",
-    "claudeSummary": true,
-    "href": "https://www.sanmiguelbasinforum.com/stories/hughes-climbs-lizard-head,129262",
-    "img": "https://zeta.creativecirclecdn.com/smb/original/20260914-145938-24a-F1%20-%20lizard%20head.jpg"
   }
 ]

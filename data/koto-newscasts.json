@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 10-15-26",
+    "source": "KOTO Community Radio",
+    "date": "October 16, 2026",
+    "newsTopic": "community",
+    "copy": "Better Drainage May Help Norwood Go with the Flow; West End Round Up with the San Miguel Basin Forum; Naturita Burro Race Brings Big Hearts and a Lot of Attitude",
+    "href": "https://koto.org/news/newscast-10-15-26/"
+  },
+  {
     "title": "Newscast 10-14-26",
     "source": "KOTO Community Radio",
     "date": "October 15, 2026",
@@ -46,13 +54,5 @@
     "newsTopic": "arts-culture",
     "copy": "Mountain Village Names New Town Manager; All About Art About; Cat Movie Fisher with Risho Unda",
     "href": "https://koto.org/news/newscast-10-2-26/"
-  },
-  {
-    "title": "Newscast 10-1-26",
-    "source": "KOTO Community Radio",
-    "date": "October 2, 2026",
-    "newsTopic": "community",
-    "copy": "West End Roundup with the San Miguel Basin Forum; Watershed Coalition Stands Up for Public Lands; \"This Haunted Land\" Explores America’s Ghosts",
-    "href": "https://koto.org/news/newscast-10-1-26/"
   }
 ]

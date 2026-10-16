@@ -1,5 +1,30 @@
 [
   {
+    "title": "Correction, apology regarding a letter to the editor",
+    "source": "Telluride Times",
+    "date": "October 16, 2026",
+    "firstSeen": "2026-10-16",
+    "newsTopic": "public-safety",
+    "copy": "The Telluride Times has issued a correction and apology after a letter to the editor incorrectly claimed sheriff's office license-plate-reader accounts were canceled the day before a public records request arrived — the CORA request actually came two days earlier, and account updates were routine policy and personnel maintenance. The paper's own investigation found the allegations unsubstantiated.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/elections/article_0d61412d-3ecb-4a3b-893a-90a93df6a928.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/56/65660937-c200-45e1-86fb-e4da051debd2/6ad18d10be3ab.image.jpg",
+    "isLetter": true,
+    "imgHiRes": true
+  },
+  {
+    "title": "With anger spreading over Iran war, Democrats hope to flip Republican seats with veterans' help",
+    "source": "Telluride Times",
+    "date": "October 15, 2026",
+    "firstSeen": "2026-10-15",
+    "newsTopic": "community",
+    "copy": "Democrats are putting money into Colorado's heavily military 5th Congressional District for the first time in years, backing veteran Jessica Killin against Republican Rep. Jeff Crank. Some longtime Republican veterans in the district say the Iran war and Pentagon leadership have them reconsidering their usual vote.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/state/article_55341fa1-d41a-59d1-9c35-40231cb662bc.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/0b/e0b91090-2f29-5b79-b9cd-37074c9b54cf/6ad051933d611.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Arizona State hires veteran NHL coach Dave Hakstol to lead program, Powers announces resignation",
     "source": "Telluride Times",
     "date": "October 15, 2026",
@@ -60,18 +85,6 @@
     "imgHiRes": true
   },
   {
-    "title": "With anger spreading over Iran war, Democrats hope to flip Republican seats with veterans' help",
-    "source": "Telluride Times",
-    "date": "October 15, 2026",
-    "firstSeen": "2026-10-15",
-    "newsTopic": "community",
-    "copy": "Democrats are putting money into Colorado's heavily military 5th Congressional District for the first time in years, backing veteran Jessica Killin against Republican Rep. Jeff Crank. Some longtime Republican veterans in the district say the Iran war and Pentagon leadership have them reconsidering their usual vote.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/state/article_55341fa1-d41a-59d1-9c35-40231cb662bc.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/0b/e0b91090-2f29-5b79-b9cd-37074c9b54cf/6ad051933d611.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Amendment 83 is a trap, vote No",
     "source": "Telluride Times",
     "date": "October 14, 2026",
@@ -96,20 +109,6 @@
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_f8663b35-d8f8-4155-ad96-5b2a42482538.html",
     "img": "",
     "letterAuthor": "Ryan Robinson",
-    "isLetter": true,
-    "imgHiRes": true
-  },
-  {
-    "title": "Democrat Lane Masters for sheriff",
-    "source": "Telluride Times",
-    "date": "October 14, 2026",
-    "firstSeen": "2026-10-15",
-    "newsTopic": "public-safety",
-    "copy": "Lane Masters, a Telluride native and Marine veteran, is running for San Miguel County Sheriff as a Democrat. He brings 13 years in law enforcement — including homicide and bomb squad work in Bismarck — plus a degree in emergency management. He opposes ALPRs and ICE cooperation; incumbent Dan supports both.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_79c0e6e1-c033-46a2-bf1d-1d7abcf62f74.html",
-    "img": "",
-    "letterAuthor": "Paul Savage",
     "isLetter": true,
     "imgHiRes": true
   },
@@ -142,16 +141,16 @@
     "imgHiRes": true
   },
   {
-    "title": "Masters will rebuild sheriff's office",
+    "title": "Democrat Lane Masters for sheriff",
     "source": "Telluride Times",
     "date": "October 14, 2026",
     "firstSeen": "2026-10-15",
     "newsTopic": "public-safety",
-    "copy": "A retired San Miguel County reserve deputy is raising concerns about staffing and morale at the sheriff's office, saying close to half the patrol deputies have resigned since Dan Covault was appointed interim sheriff in June 2025. The letter also questions the timing of license-plate-reader account cancellations the day before a public records request arrived. The writer backs Lane Masters for sheriff in November.",
+    "copy": "Lane Masters, a Telluride native and Marine veteran, is running for San Miguel County Sheriff as a Democrat. He brings 13 years in law enforcement — including homicide and bomb squad work in Bismarck — plus a degree in emergency management. He opposes ALPRs and ICE cooperation; incumbent Dan supports both.",
     "claudeSummary": true,
-    "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_ec6b9339-d0d9-461c-bac7-2ac57b2e4510.html",
+    "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_79c0e6e1-c033-46a2-bf1d-1d7abcf62f74.html",
     "img": "",
-    "letterAuthor": "John Kirkendoll San Miguel County Reserve, Deputy Sheriff (Retired)",
+    "letterAuthor": "Paul Savage",
     "isLetter": true,
     "imgHiRes": true
   },
@@ -621,6 +620,20 @@
     "imgHiRes": true
   },
   {
+    "title": "Masters will rebuild sheriff's office",
+    "source": "Telluride Times",
+    "date": "October 14, 2026",
+    "firstSeen": "2026-10-15",
+    "newsTopic": "public-safety",
+    "copy": "A retired San Miguel County reserve deputy is raising concerns about staffing and morale at the sheriff's office, saying close to half the patrol deputies have resigned since Dan Covault was appointed interim sheriff in June 2025. The letter also questions the timing of license-plate-reader account cancellations the day before a public records request arrived. The writer backs Lane Masters for sheriff in November.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_ec6b9339-d0d9-461c-bac7-2ac57b2e4510.html",
+    "img": "",
+    "letterAuthor": "John Kirkendoll San Miguel County Reserve, Deputy Sheriff (Retired)",
+    "isLetter": true,
+    "imgHiRes": true
+  },
+  {
     "title": "Feasible?",
     "source": "Telluride Times",
     "date": "October 7, 2026",
@@ -970,54 +983,6 @@
     "imgHiRes": true
   },
   {
-    "title": "FTC settles with Southern Glazer's over claim it discriminated against smaller alcohol sellers",
-    "source": "Telluride Times",
-    "date": "October 2, 2026",
-    "firstSeen": "2026-10-03",
-    "newsTopic": "community",
-    "copy": "The FTC settled with Southern Glazer's — which distributes one in three bottles of wine and spirits sold in the U.S. — over claims it gave better pricing to big chains like Total Wine and Walmart than to smaller nearby stores. Under the deal, Southern Glazer's must compensate smaller retailers when a monitor finds they paid more than a competing chain for the same products. An independent monitor will oversee compliance for six years; Southern Glazer's admitted no wrongdoing.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/state/article_ffcc3d8c-796c-53fc-a554-ca9a7fb99d80.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "Mountain Village appoints Michael Bouchard as new town manager",
-    "source": "Telluride Times",
-    "date": "October 2, 2026",
-    "firstSeen": "2026-10-02",
-    "newsTopic": "community",
-    "copy": "Mountain Village has named Michael Bouchard as its next town manager, filling the role left vacant when Paul Wisor resigned May 1. Bouchard brings nearly 14 years with Denver, including leading a $1.6B redevelopment at the National Western Center. He starts January 1, 2027; Michelle Bulson continues as interim until then.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/article_7e8970c0-2e74-4ff2-adc8-2561cd2133f7.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/48/a489f08c-afe1-4ef3-adea-5071eeac0459/6ac014f4a3cb4.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "THS puts Ignacio to the test",
-    "source": "Telluride Times",
-    "date": "October 2, 2026",
-    "firstSeen": "2026-10-02",
-    "newsTopic": "community",
-    "copy": "Ignacio came into the MinerDome ranked 7th in 2A and left with a 25-23, 25-15, 25-12 sweep over Telluride, though the Lady Miners made them work for set one before the 'Cats pulled away. THS, short three varsity players, hung close behind strong serving from Hazel Noel and kills from Teagan O'Dell. Ignacio moves to 9-1; Telluride falls to 4-9.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/sports/article_b685286f-f994-48bd-ad2a-0dc8a37eebd9.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/fe/1fe81519-215f-455e-a870-271de856d3d9/6abcc353bef7b.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "Bring on the night",
-    "source": "Telluride Times",
-    "date": "October 2, 2026",
-    "firstSeen": "2026-10-02",
-    "newsTopic": "community",
-    "copy": "A small volunteer team called the RATS is pushing to make San Miguel County — all 824,000 acres — the third Dark Sky Reserve in the U.S. The application is about 80% complete but the five-person team needs help: writers, researchers, and people with digital skills to finish by this autumn. Two public stargazing events are coming up Oct. 8 in Telluride and Oct. 10 in Ridgway.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/article_4a3cff9e-9cdc-4a53-a59c-95dd41b1f9cb.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/a3/ba38304f-34d2-4fb6-a0ee-f005929bd548/6abb3a26011ba.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Applications Open for 2026/2027 Temporary Winter Community Housing Program",
     "source": "Town of Telluride",
     "date": "October 9, 2026",
@@ -1217,7 +1182,7 @@
   {
     "title": "Notice of Public Hearing for Liquor License on Thursday, November 19, 2026 at 5:30pm - Chipeta Lodge Resort &amp; Spa, 304 S Lena Street - Notice dated October 13, 2026",
     "source": "Town of Ridgway",
-    "date": "October 15, 2026",
+    "date": "October 16, 2026",
     "firstSeen": "2026-10-14",
     "newsTopic": "community",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1228,7 +1193,7 @@
   {
     "title": "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     "source": "Town of Ridgway",
-    "date": "October 15, 2026",
+    "date": "October 16, 2026",
     "firstSeen": "2026-09-29",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1239,7 +1204,7 @@
   {
     "title": "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     "source": "Town of Ridgway",
-    "date": "October 15, 2026",
+    "date": "October 16, 2026",
     "firstSeen": "2026-09-29",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",

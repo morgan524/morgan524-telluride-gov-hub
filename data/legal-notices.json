@@ -343,26 +343,6 @@
     "caseNumber": "2026-06"
   },
   {
-    "title": "Ordinance -- Amending Fees and Costs Provisions (Chapters 16.01 & 16.02) (COL-000256)",
-    "entity": "Town of Mountain Village",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "📋",
-    "iconClass": "type-hearing",
-    "type": "Ordinance",
-    "filterTag": "ordinance",
-    "summary": "The Town of Mountain Village passed on first reading an ordinance amending Chapters 16.01 and 16.02 of its Municipal Code concerning fees and costs. The second reading, public hearing, and final Council vote will be held on October 15, 2026 at 2:00 p.m. at Mountain Village Town Hall and via Zoom. The ordinance is available for review at the Town Clerk's office or on the town website.",
-    "deadline": "2026-10-15",
-    "expires": "2026-10-15",
-    "dates": "10/1",
-    "papers": [
-      "ttimes_1001"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_792d96c0-09c8-479f-83f8-bdf3681b49ae.html",
-    "address": "455 Mountain Village Blvd, Suite A, Mountain Village, CO",
-    "noticeKey": "ord-mv-fees-16.01-16.02-COL-000256"
-  },
-  {
     "title": "Public Hearing -- Land Use Code Amendment: Deep Geothermal Operations (COL-000263)",
     "entity": "San Miguel County Board of County Commissioners",
     "entityClass": "ent-county",
@@ -401,26 +381,6 @@
     "url": "https://www.telluridenews.com/news/legals/article_792d96c0-09c8-479f-83f8-bdf3681b49ae.html",
     "address": "San Miguel County, Colorado (various parcels countywide)",
     "noticeKey": "delinquent-tax-lien-sale-2025-san-miguel"
-  },
-  {
-    "title": "Liquor License Hearing -- New Tavern License Application (El Rhino / T Karn LLC)",
-    "entity": "Town of Mountain Village / T Karn LLC dba El Rhino",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "📋",
-    "iconClass": "type-hearing",
-    "type": "Ordinance",
-    "filterTag": "ordinance",
-    "summary": "T Karn, LLC, doing business as El Rhino, has applied for a new Tavern Liquor License from the Town of Mountain Village. A public hearing will be held at Mountain Village Town Hall on October 15, 2026, at 2:00 PM. The license would apply to 456 Mountain Village Boulevard, Unit E, Mountain Village, CO.",
-    "deadline": "2026-10-15",
-    "expires": "2026-10-15",
-    "dates": "10/8",
-    "papers": [
-      "ttimes_1008"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_5970564f-79b2-404e-8d86-38ffc649e835.html",
-    "address": "456 Mountain Village Boulevard, Unit E, Mountain Village, CO 81435",
-    "noticeKey": "liquor-el-rhino-mountain-village-2026"
   },
   {
     "title": "Housing Lottery -- Master Lease Rental Lottery, The Boarding House (1100 W Black Bear Rd)",
