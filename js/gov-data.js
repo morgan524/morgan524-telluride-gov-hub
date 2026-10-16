@@ -129,7 +129,9 @@ const COUNTY_CACHED_DATA = [
     type: "bocc",
     location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
     civicClerkId: 901,
-    note: null
+    note: null,
+    agendaUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/901/files/agenda/2051",
+    packetUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/901/files/agenda/2053"
   },
   {
     date: "October 22, 2026",
@@ -373,13 +375,12 @@ const SCHOOL_CACHE_DATE = '2026-10-16';
 const SCHOOL_CACHED_DATA = [
   {
     date: "October 20, 2026",
-    time: "5:15 PM",
+    time: null,
     title: "Telluride Board of Education Monthly Meeting",
-    agendaUrl: null,
+    agendaUrl: "https://files.smartsites.parentsquare.com/3403/102026_mm_packet.pdf",
     packetUrl: null,
     special: false,
-    location: "Bridal Veil District Conference Room / Zoom",
-    note: "Scheduled meeting -- agenda posted closer to the date."
+    location: "Bridal Veil District Conference Room / Zoom"
   },
   {
     date: "November 16, 2026",
@@ -552,7 +553,7 @@ const FIRE_CACHED_DATA = [
     date: "October 20, 2026",
     time: "5:30 PM",
     title: "Board of Directors Meeting",
-    agendaUrl: null,
+    agendaUrl: "https://www.telluridefire.com/files/cef8a399b/Agenda+-October+20th%2C+2026.pdf",
     packetUrl: null,
     special: false,
     location: "131 W Columbia Ave, Telluride, CO 81435"
@@ -946,6 +947,16 @@ const OURAY_CITY_CACHED_DATA = [
     boardbookId: 766038,
     agendaUrl: "https://meetings.boardbook.org/Public/Agenda/2503?meeting=766038",
     packetUrl: "https://meetings.boardbook.org/Public/DownloadAgenda/2503?meeting=766038"
+  },
+  {
+    date: "October 19, 2026",
+    time: "6:00 PM",
+    title: "Ouray City Council Regular Meeting",
+    board: "council",
+    location: "Ouray Community Center, 320 6th Ave, Ouray, CO 81427",
+    boardbookId: 765214,
+    agendaUrl: "https://meetings.boardbook.org/Public/Agenda/2503?meeting=765214",
+    packetUrl: "https://meetings.boardbook.org/Public/DownloadAgenda/2503?meeting=765214"
   }
 ];
 

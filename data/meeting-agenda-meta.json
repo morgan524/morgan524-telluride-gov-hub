@@ -396,11 +396,15 @@
   "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083",
     "sv": 4,
-    "ph": "57c355a4e98595b5"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/tZIufu6srzwsH9X0sfxgA_In-LUt0azBIi8Z"
   },
   "county|2026-10-21|Board of County Commissioners Meeting": {
     "sv": 4,
-    "ph": "a12dfd2ce826475e"
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/901/files/agenda/2051",
+    "zoomUrl": "https://us02web.zoom.us/meeting/register/fns7wAwITvunwFcd1y-RGg",
+    "meetingId": "816 1479 4240",
+    "passcode": "694265",
+    "phone": "719-359-4580"
   },
   "med|2026-10-22|Regular Board Meeting": {
     "sv": 4,
@@ -628,6 +632,10 @@
     "meetingId": "863 8230 7047",
     "passcode": "081226",
     "phone": "970-327-4288",
+    "sv": 4
+  },
+  "ouraycity|2026-10-19|Ouray City Council Regular Meeting": {
+    "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=765214",
     "sv": 4
   }
 }

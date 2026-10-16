@@ -339,10 +339,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA","meetingId":"812 9136 3866","passcode":"440860.","phone":"301-715-8592"},
 
   "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083","sv":4,"ph":"57c355a4e98595b5"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/tZIufu6srzwsH9X0sfxgA_In-LUt0azBIi8Z"},
 
   "county|2026-10-21|Board of County Commissioners Meeting":
-    {"sv":4,"ph":"a12dfd2ce826475e"},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/901/files/agenda/2051","zoomUrl":"https://us02web.zoom.us/meeting/register/fns7wAwITvunwFcd1y-RGg","meetingId":"816 1479 4240","passcode":"694265","phone":"719-359-4580"},
 
   "med|2026-10-22|Regular Board Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -474,7 +474,10 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "norwood|2026-10-15|Board of Trustees Public Hearing - Resolution No. 2026-0812":
-    {"agendaUrl":"https://www.norwoodtown.com/files/3ac6a6aae/10.15.2026+Board+of+Trustee+Public+Hearing.pdf","zoomUrl":"https://us02web.zoom.us/j/86382307047","meetingId":"863 8230 7047","passcode":"081226","phone":"970-327-4288","sv":4}
+    {"agendaUrl":"https://www.norwoodtown.com/files/3ac6a6aae/10.15.2026+Board+of+Trustee+Public+Hearing.pdf","zoomUrl":"https://us02web.zoom.us/j/86382307047","meetingId":"863 8230 7047","passcode":"081226","phone":"970-327-4288","sv":4},
+
+  "ouraycity|2026-10-19|Ouray City Council Regular Meeting":
+    {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=765214","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -798,7 +801,10 @@ const MEETING_PREVIEWS = {
     "The Planning & Zoning Commission meeting originally scheduled for October 22, 2026 has been rescheduled to November 2, 2026 at 9:00 a.m. at Rebekah Hall. No specific agenda items have been disclosed for the rescheduled session.",
 
   "norwood|2026-10-19|Planning and Zoning Commission Meeting":
-    "The commission is expected to discuss updates to the Land Use Code and Master Plan, as well as a board seat update. Members will also review minutes from the September 21 meeting. The session will be held in person at Norwood Town Hall with a Zoom option available."
+    "The commission is expected to discuss updates to the Land Use Code and Master Plan, as well as a board seat update. Members will also review minutes from the September 21 meeting. The session will be held in person at Norwood Town Hall with a Zoom option available.",
+
+  "ouraycity|2026-10-19|Ouray City Council Regular Meeting":
+    "Council is expected to celebrate Ouray's 150th anniversary, hear a housing services update, and vote on a law enforcement intergovernmental agreement with the county sheriff. Additional action items include a water service termination agreement, proposed 2027 water and sewer rates, light industrial zoning, and a perimeter trail easement request."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -848,7 +854,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "October 15, 2026",
     newsTopic: "community",
     copy: "Colorado’s vote next month on whether to amend the state Constitution by codifying the right to hunt and fish has intensified debate among hunters, conservationists and legal experts over exactly who — and which parts of the state — should take the lead in its wildlife management policy. Amendment 8",
-    href: "https://www.ouraynews.com/2026/10/14/will-coloradans-choose-right-hunt/",
+    href: "https://www.ouraynews.com/2026/10/14/will-coloradans-choose-right-hunt/?ta_paidstory",
     img: ""
   },
   {
@@ -892,13 +898,23 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Voters to decide whether to put right to natural gas in constitution",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 15, 2026",
+    newsTopic: "community",
+    copy: "Amendment 82 would add a right to natural gas in the state constitution at a time when Colorado is pushing both in policy and legislation to cut the use of natural gas as part of the state’s goal to reduce climate- altering greenhouse gas emissions. The measure was brought by Advance Colorado, a con",
+    href: "https://www.ouraynews.com/2026/10/14/voters-decide-whether-put-right-natural-gas-constitution/?ta_paidstory",
+    img: ""
+  },
+  {
     title: "Runner’s strong season continues",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "October 15, 2026",
     newsTopic: "community",
     copy: "",
-    href: "https://www.ouraynews.com/2026/10/14/runners-strong-season-continues/",
+    href: "https://www.ouraynews.com/2026/10/14/runners-strong-season-continues/?ta_paidstory",
     img: ""
   },
   {
@@ -912,6 +928,16 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Measure would require personal info on ballots",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 15, 2026",
+    newsTopic: "government",
+    copy: "Colorado voters will decide in November whether to require that people provide partial Social Security or driver’s license numbers, in addition to their signature, when returning mail ballots in order to have their vote counted. Here’s what Amendment 84 would do, who is behind it and who is fighting",
+    href: "https://www.ouraynews.com/2026/10/14/measure-require-personal-info-ballots/?ta_paidstory",
+    img: ""
+  },
+  {
     title: "No, my mother didn’t paint Beaumont pink",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
@@ -919,26 +945,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "Dear Editor: Comparing MTN Lodge to the Beaumont Hotel is as absurd as comparing Ouray to Ridgway. John Kuijvenhoven s scurrilous, out-of-the-blue letter was an attempt to damage my mother s reputation and aggravate me. Let us be absolutely clear. My mother did not paint the Beaumont pink. The Ouray",
     href: "https://www.ouraynews.com/2026/10/14/no-mother-didnt-paint-beaumont-pink/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Commissioners betray Log Hill Village",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 15, 2026",
-    newsTopic: "government",
-    copy: "Dear Editor: I saw this in the Plaindealer article regarding the Ouray County budget crisis: “Besides reductions, commissioners are considering a radical one-time revenue source that could make up a significant piece of the puzzle — sweeping $223,000 left over from a Log Hill Mesa local improvement ",
-    href: "https://www.ouraynews.com/2026/10/14/commissioners-betray-log-hill-village/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "CORRECTION",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 15, 2026",
-    newsTopic: "government",
-    copy: "An article in the Oct. 8-14 edition, “Ridgway seeks input on water supply plan,” misstated the date that the Ridgway Town Council is expected to vote on the water supply element of its master plan. The correct date is Nov. 19.",
-    href: "https://www.ouraynews.com/2026/10/14/correction-20261015-0258-189619/",
     img: ""
   },
   {
@@ -1197,10 +1203,10 @@ const MANUAL_SUMMARIES = {
     "The October 21 HARC meeting is anchored by the Shandoka Lot Redevelopment Project — the Town of Telluride's own large-scale development at 860 Black Bear Rd, zoned Accommodations 2. HARC takes up Buildings 1 and 2 as one public hearing item and Buildings 3 and 4 as a second, both continued from August 19. Each application covers new construction outside the Telluride Historic Landmark District exceeding 5,000 square feet of floor area under LUC 7-203.B.2.a.1. Also on the agenda: a payment-in-lieu of parking request for one space at 510 W Columbia Ave/129 N Townsend in the Historic Residential zone, where HARC is asked to support administrative approval. A small-scale new construction application at 785 Primrose Lane on a steep site is also up for review. The 448 Tomboy Road item has been continued to December 16 at the applicant's request, and the 214 S Fir Certificate of Appropriateness Amendment #2 — in the works since at least December 2025 — is being tabled for eight more months.",
 
   "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026":
-    "The October 21, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+    "Two substantive action items headline this meeting. First, SBG Productions is asking to restore the Telluride Jazz Festival to a full three-day run — August 13–15, 2027 — after the 2026 event was trimmed to two days in an attempt to cut costs and boost ticket sales; that experiment didn't move the needle, and the 50th anniversary year is the occasion for returning to the traditional format. Commission approval here is a prerequisite before CCAASE takes it up on November 4, followed by Town Council. If fully approved, the festival could draw up to 6,000 people per day, with the Town collecting admissions fees of $4.15 per ticket sold — up to $63,495 for the three-day run. Second, the Commission considers a design concept for expanding the basketball court in Town Park at its existing location. The work session covers seasonal check-ins with the Telluride Soccer Club and Telluride Lacrosse Club. Staff will also brief the Commission on the 2026 project update, 2027 budget, and the upcoming winter season.",
 
   "county|2026-10-21|Board of County Commissioners Meeting":
-    "The October 21, 2026 Board of County Commissioners meeting agenda hasn't been posted yet.",
+    "The headline work here is a suite of four Land Use Code amendments that would add an entirely new Article 6 — Natural Resources — to San Miguel County's code. Three sections get individual public hearings: forestry practices (Section 6-4), oil and gas operations (Section 6-5), and deep geothermal operations (also called Section 6-4 in the agenda, likely a numbering error to watch). A fourth resolution then amends Articles 1, 3, 4, and 5 to align existing code with the new natural-resources framework. That's a significant rewrite of how the county regulates extraction and land management. On the consent agenda: a 2027 Gondola IGA supplement and the Lawson Hill Connector Trail construction agreement. Afternoon items include a possible co-sponsorship of a CDBG grant application to restore water supply to Telluride Pines HOA residents, the 2027 Community Support Funding allocation, a $12,000 food bank request from West End Family Link, and a Public Health strategic plan presentation.",
 
   "med|2026-10-22|Regular Board Meeting":
     "The October 22, 2026 Mountain Village Metropolitan District Regular Board Meeting agenda hasn't been posted yet.",
@@ -1332,7 +1338,10 @@ const MANUAL_SUMMARIES = {
     "The November 12, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "norwood|2026-10-15|Board of Trustees Public Hearing - Resolution No. 2026-0812":
-    "A single item is on the table in Norwood Thursday evening: Resolution No. 2026-0812, which sets the grounds and procedures for a potential removal-for-cause of a sitting Planning Commission member. The Board of Trustees will hear public testimony before deciding how to proceed. Removal of an appointed board member is uncommon — and when a small town moves to formalize that process, it usually means something significant has happened behind the scenes. The meeting is at Town Hall, 1670 Naturita Street, at 6:30 p.m., with a Zoom option available."
+    "A single item is on the table in Norwood Thursday evening: Resolution No. 2026-0812, which sets the grounds and procedures for a potential removal-for-cause of a sitting Planning Commission member. The Board of Trustees will hear public testimony before deciding how to proceed. Removal of an appointed board member is uncommon — and when a small town moves to formalize that process, it usually means something significant has happened behind the scenes. The meeting is at Town Hall, 1670 Naturita Street, at 6:30 p.m., with a Zoom option available.",
+
+  "ouraycity|2026-10-19|Ouray City Council Regular Meeting":
+    "A full agenda for Ouray, which marks its 150th anniversary at this meeting. The consequential items: first readings of two ordinances — one setting 2027 water and sewer rates, and one addressing Light Industrial zoning and EQR (equivalent residential unit) calculations. Council also takes up Resolution No. 23, an intergovernmental agreement with the Ouray County Sheriff for full law-enforcement services — a structural decision about how the city gets policed. Resolution No. 24 covers a water service termination agreement. A perimeter trail easement request and a Responsible Entity Agreement round out the action items. On the discussion side, Waterview Phase II rural homes gets a council direction conversation, with the 2024 housing needs analysis and strategy addendum in the packet. Home Trust of Ouray County presents its quarterly housing services report."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -9386,10 +9395,11 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "October 21, 2026",
     title: "Parks & Recreation Commission",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "12:00 PM",
-    civicwebId: 8083
+    civicwebId: 8083,
+    packetUrl: "https://telluride-co.civicweb.net/document/446414/"
   },
   {
     date: "October 22, 2026",

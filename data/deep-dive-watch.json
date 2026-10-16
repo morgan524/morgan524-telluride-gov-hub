@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16T20:47:43.964Z",
+ "generated": "2026-10-16T23:25:04.684Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -47,7 +47,20 @@
   "code": {
    "label": "Code Changes & Accelerated Review",
    "lastUpdated": "2026-07-19",
-   "upcoming": [],
+   "upcoming": [
+    {
+     "source": "county",
+     "sourceLabel": "San Miguel County",
+     "title": "Board of County Commissioners Meeting",
+     "date": "2026-10-21",
+     "time": "9:30 AM",
+     "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/901/files/agenda/2051",
+     "link": "https://sanmiguelcoco.portal.civicclerk.com/event/901/files/agenda/2051",
+     "zoomLink": "https://us02web.zoom.us/meeting/register/fns7wAwITvunwFcd1y-RGg",
+     "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
+    }
+   ],
    "recent": [
     {
      "source": "county",
@@ -89,7 +102,20 @@
   "gondola": {
    "label": "Gondola 3A",
    "lastUpdated": "2026-07-20",
-   "upcoming": [],
+   "upcoming": [
+    {
+     "source": "county",
+     "sourceLabel": "San Miguel County",
+     "title": "Board of County Commissioners Meeting",
+     "date": "2026-10-21",
+     "time": "9:30 AM",
+     "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/901/files/agenda/2051",
+     "link": "https://sanmiguelcoco.portal.civicclerk.com/event/901/files/agenda/2051",
+     "zoomLink": "https://us02web.zoom.us/meeting/register/fns7wAwITvunwFcd1y-RGg",
+     "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
+    }
+   ],
    "recent": [
     {
      "source": "telluride",
@@ -136,7 +162,20 @@
   "fieldpaving": {
    "label": "Field Paving at Town Park",
    "lastUpdated": "",
-   "upcoming": [],
+   "upcoming": [
+    {
+     "source": "telluride",
+     "sourceLabel": "Town of Telluride",
+     "title": "Parks & Recreation Commission",
+     "date": "2026-10-21",
+     "time": "12:00 PM",
+     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083",
+     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083",
+     "zoomLink": "https://us06web.zoom.us/meeting/register/tZIufu6srzwsH9X0sfxgA_In-LUt0azBIi8Z",
+     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+    }
+   ],
    "recent": [],
    "developments": [],
    "stale": []
