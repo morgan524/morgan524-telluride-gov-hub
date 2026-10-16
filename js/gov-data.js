@@ -268,14 +268,6 @@ const TMVOA_CACHED_DATA = [
   },
   {
     date: "October 20, 2026",
-    title: "TMVOA Audit &amp; Compliance Committee",
-    board: "other",
-    agendaUrl: null,
-    packetUrl: null,
-    location: "Mountain Village, CO (see agenda for Zoom link)"
-  },
-  {
-    date: "October 20, 2026",
     title: "TMVOA Finance &amp; Budget Committee",
     board: "other",
     agendaUrl: null,

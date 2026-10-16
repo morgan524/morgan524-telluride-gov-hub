@@ -24,33 +24,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
     "type": "Community",
-    "endDate": "2026-12-12"
-  },
-  {
-    "title": "Up-off Gymnastics, Dance, and Spanish",
-    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-10-16/",
-    "date": "2026-10-16",
-    "time": "10:00 AM",
-    "location": "Lone Cone Library Norwood",
-    "town": "Norwood",
-    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
-    "type": "Music"
-  },
-  {
-    "title": "Ridgway Farmer's Market",
-    "href": "https://koto.org/event/ridgway-farmers-market/2026-10-16/",
-    "date": "2026-10-16",
-    "time": "10:00 AM",
-    "location": "Hartwell Park Ridgway",
-    "town": "Ridgway",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every…",
-    "type": "Music"
+    "endDate": "2026-12-15"
   },
   {
     "title": "OPL Read a Book - Get a Pumpkin",
@@ -65,6 +39,19 @@
     "desc": "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
     "type": "Family & Kids",
     "endDate": "2026-10-31"
+  },
+  {
+    "title": "Ridgway Farmers Market",
+    "href": "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
+    "date": "2026-10-16",
+    "time": "10:00 AM",
+    "location": "Hartwell Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and…",
+    "type": "Food & Drink"
   },
   {
     "title": "ALPINE JAM",
@@ -298,8 +285,8 @@
     "img": "https://1v09t9hszk.ucarecd.net/b1964748-70d2-4a7e-9996-5d4148ee589d/-/crop/1701x851/0,143/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "The ever evolving Nattali Rize, lyricist, musician, conscious artist. Most not...",
-    "type": "Arts & Film"
+    "desc": "Nattali Rize’s solo power set, is as raw and intimate as it is tough and explos...",
+    "type": "Community"
   },
   {
     "title": "Movies Under the Stars",
@@ -650,20 +637,6 @@
     "type": "Arts & Film"
   },
   {
-    "title": "OPEN MIC / JAM NIGHT w/ host DJ Strong",
-    "href": "https://events.ourayridgwayevents.com/event/open-mic-jam-night-w-host-dj-strong",
-    "date": "2026-10-21",
-    "time": "6:00 PM",
-    "location": "Floating Lotus Brewery",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/52523630382868/huge/8fc500326eed5dc630e7e4235909efe3b2751086.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Join us every Wednesday at 6 PM for Open Mic Night with DJ Strong at Floating Lotus Brewery. Bring an original song, play a favorite cover, meet other local musicians, or jump into one of our full-band jam sessions. Solo performers,…",
-    "type": "Music",
-    "endDate": "2026-12-10"
-  },
-  {
     "title": "Telluride Rotary Club Meeting",
     "href": "https://portal.clubrunner.ca/3291",
     "date": "2026-10-21",
@@ -833,20 +806,6 @@
     "source": "Telluride.com",
     "desc": "Across the Southwest, aridification and challenging politics are impacting our watersheds and threatening our rivers. …",
     "type": "Community"
-  },
-  {
-    "title": "Music Bingo",
-    "href": "https://events.ourayridgwayevents.com/event/music-bingo",
-    "date": "2026-10-22",
-    "time": "7:00 PM",
-    "location": "Floating Lotus Brewery",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53790449536989/huge/a7181e9d298980d4c2377db45d06d26bb81e0b12.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Music Bingo at Floating Lotus Brewery! Join us on the 2nd & 4th Thursdays from 7–9 PM for a high-energy night of music, drinks, and bingo-style fun. Listen, mark your card, and sing along. Learn more at floatinglotusbrewery.com.",
-    "type": "Food & Drink",
-    "endDate": "2026-11-13"
   },
   {
     "title": "Pickleball Nights",
@@ -1977,20 +1936,6 @@
     "type": "Community"
   },
   {
-    "title": "Trivia Night",
-    "href": "https://events.ourayridgwayevents.com/event/floating-lotus-trivia-night",
-    "date": "2026-11-05",
-    "time": "6:00 PM",
-    "location": "Floating Lotus Brewery",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53790516346797/huge/599d1a7013ddde307592e7dfc9b892fe265527e0.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Trivia Night at Floating Lotus Brewery! Join us on the 1st & 3rd Thursdays from 7–9 PM for a lively night of questions, drinks, and friendly competition. Grab a table, bring your team, and learn more at floatinglotusbrewery.com.",
-    "type": "Food & Drink",
-    "endDate": "2026-11-20"
-  },
-  {
     "title": "Pickleball Nights",
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-11-05",
@@ -2651,20 +2596,6 @@
     "type": "Community"
   },
   {
-    "title": "Floating Lotus Music Bingo – November & December 2026",
-    "href": "https://events.ourayridgwayevents.com/event/floating-lotus-music-bingo-november-december-2026",
-    "date": "2026-11-26",
-    "time": "6:00 PM",
-    "location": "Floating Lotus Brewery",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/51579855188578/huge/de5019ffbfacf4a9f5e85d8a14961584c70e7873.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Music Bingo at Floating Lotus Brewery! Join us Thursday, November 26 and Thursday, December 10 from 6–9 PM for a high-energy night of music, drinks and bingo-style fun. Listen, mark your card and sing along. Learn more at…",
-    "type": "Food & Drink",
-    "endDate": "2026-12-11"
-  },
-  {
     "title": "TODDLER STORYTIME ART FOR AGES 2.5-5",
     "href": "https://events.ourayridgwayevents.com/event/toddler-storytimeartfor-ages-25-5",
     "date": "2026-12-02",
@@ -2704,19 +2635,6 @@
     "source": "Telluride Rotary",
     "desc": "Telluride Rotary Club meets the 1st & 3rd Wednesdays at 6:00 PM (gathering at 5:30) — 1st Wednesday at Mountain Lodge in Mountain Village, 3rd Wednesday at an announced Telluride location. A service club supporting scholarships, Youth…",
     "type": "Family & Kids"
-  },
-  {
-    "title": "Floating Lotus Trivia Night – December 2026",
-    "href": "https://events.ourayridgwayevents.com/event/floating-lotus-trivia-night-december-2026",
-    "date": "2026-12-03",
-    "time": "6:00 PM",
-    "location": "Floating Lotus Brewery",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/51579855188578/huge/de5019ffbfacf4a9f5e85d8a14961584c70e7873.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Trivia Night at Floating Lotus Brewery! Join us Thursday, December 3 and Thursday, December 17 from 6–9 PM for a lively night of questions, drinks and friendly competition. Grab a table, bring your team, and learn more at…",
-    "type": "Food & Drink"
   },
   {
     "title": "23rd Annual Holiday Art & Gift Sale",
