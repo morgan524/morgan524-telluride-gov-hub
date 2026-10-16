@@ -346,7 +346,11 @@
   },
   "norwood|2026-10-19|Planning and Zoning Commission Meeting": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://www.norwoodtown.com/files/8a5f7ce8f/10.19.2026+P%26Z+BOA+AGENDA.pdf",
+    "zoomUrl": "https://us02web.zoom.us/j/85001344971",
+    "meetingId": "850 0134 4971",
+    "passcode": "8142302",
+    "phone": "970-327-4288"
   },
   "telluride|2026-09-21|Open Space Commission Site Walk - Sep 21 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8319",

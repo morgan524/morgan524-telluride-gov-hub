@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-16",
+    "title": "Paper bills now cost extra — worth it?",
+    "body": "Buried in a canceled-meeting notice: San Miguel Power Association is adding a new fee for paper billing. If you want a bill in the mail, you'll pay extra for it. The case for it is straightforward — digital is cheaper, and costs get passed to everyone otherwise. The case against it is just as real — not everyone is set up for online billing, and fees like this tend to land hardest on folks least able to absorb them. So: is a paper billing fee a reasonable nudge, or does it leave some neighbors behind?",
+    "choices": [
+      "Reasonable nudge toward digital",
+      "Unfair to some residents",
+      "Need more info"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-10-15",
     "title": "Leak forgiveness — fair relief or a slippery slope?",
     "body": "The Norwood Water Commission has four residential leak forgiveness requests on its October 13 agenda — customers on Hwy 145, Summit St, Juniper, and Grand Ave asking for relief on their bills. The case for: leaks happen, the water's already gone, and a punishing bill doesn't undo it. The case against: forgiveness spreads the cost across everyone else on the system, and the 2027 budget and 2025 audit are both on the same agenda, with water system costs still climbing. Where's the line between neighbor helping neighbor and just shifting the tab?\n\nShould a water commission grant leak forgiveness, or is that a cost the customer has to own?",
@@ -418,21 +432,6 @@
       "Access comes first",
       "Habitat comes first",
       "Both can coexist",
-      "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-09-16",
-    "title": "Two bucks a month — that's the fight?",
-    "body": "San Miguel Power Association is adding a $2.00 monthly fee for paper billing, set to kick in October 29, 2026. Small number, real disagreement. Some folks will say it's a nudge toward going paperless that saves everyone money in the long run. Others — especially residents without reliable internet, or those who just want a paper record — will say a utility shouldn't be penalizing customers for how they receive a bill. So: is a $2.00 paper billing fee a reasonable efficiency move, or a quiet burden on the wrong people?",
-    "choices": [
-      "Fair nudge, go paperless",
-      "Wrong way to push people",
-      "Two bucks isn't the point",
       "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",

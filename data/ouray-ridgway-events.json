@@ -1,110 +1,5 @@
 [
   {
-    "title": "Fall Break - Ridgway Schools",
-    "link": "https://events.ourayridgwayevents.com/event/fall-break-ridgway-schools",
-    "description": "Fall Break for Ridgway Schools begins on this date, giving students and families a scheduled pause from the academic calendar. The break is a district-wide observance for the Ridgway school community in Ouray County.",
-    "pubDate": "2026-10-15T06:00:00.000Z",
-    "endDate": "2026-10-16",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "",
-    "imageUrl": "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
-  },
-  {
-    "title": "Functional Fitness - Strength & Mobility Training For Women",
-    "link": "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women-8391",
-    "description": "Welcome to Ridgway's functional strength and mobility training for women. Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically but build real community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Every Tuesday & Thursday 8:15-9:15 am / Please check the website for dates and sign up! Location: 1075 Sherman St, Suite 201 / Weehawken Dance Studio (RIGS Building on the corner of Sherman and Amelia) Parking and entrance to the building are on N. Amelia St. …",
-    "pubDate": "2026-10-15T14:15:00.000Z",
-    "endDate": "2026-12-10",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "Weehawken Ridgway (Old Schoolhouse)",
-    "imageUrl": "https://localist-images.azureedge.net/photos/54236057466628/huge/10f1882bcc97fe1b7ad4209e2431edd0781a413f.jpg"
-  },
-  {
-    "title": "OPL Read a Book - Get a Pumpkin",
-    "link": "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
-    "description": "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
-    "pubDate": "2026-10-15T16:00:00.000Z",
-    "endDate": "2026-10-31",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "Ouray Public Library",
-    "imageUrl": "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg"
-  },
-  {
-    "title": "Ongoing: Space Cowboy by Dundee & Lee",
-    "link": "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
-    "description": "Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado artists Emilie Odeile and Ken Chapin of Dundee & Lee, the exhibition centers on a 10-foot-tall fiber rocket topped with a cowboy hat and Mission Control consoles that gather images, voices, stories, and discoveries as Space Cowboy travels from community to community. Throughout October, the exhibition comes alive with special events and programming, including appearances by Colorado Poet Laureate Crisosto Apache, community conversations, and opportunities for Ridgway residents to become part of the continuing Space Cowboy story. Space Cowboy travels with a simple idea: Colorado is the teacher and Space Cowboy is the learner. Every community adds something new to the mission. …",
-    "pubDate": "2026-10-15T16:00:00.000Z",
-    "endDate": "2026-10-29",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "Decker Community Room",
-    "imageUrl": "https://localist-images.azureedge.net/photos/53975670057489/huge/75be37bbb2b6bd7ba17f7754e11da5a0eaf5930c.jpg"
-  },
-  {
-    "title": "Guided Tour: Historic Beaumont Hotel & Spa",
-    "link": "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
-    "description": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
-    "pubDate": "2026-10-15T19:30:00.000Z",
-    "endDate": "2026-12-12",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "Beaumont Hotel & Spa",
-    "imageUrl": "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
-  },
-  {
-    "title": "The Life of a Ballot-What Happens After You Turn in Your Ballot",
-    "link": "https://events.ourayridgwayevents.com/event/the-life-of-a-ballot-what-happens-after-you-turn-in-your-ballot",
-    "description": "Overview of the Ouray County Voting Process from mailing, collecting, verifying, counting to auditing.",
-    "pubDate": "2026-10-15T21:00:00.000Z",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "Ouray County Fairgrounds and 4H Events Center",
-    "imageUrl": "https://localist-images.azureedge.net/photos/54162788961427/huge/628421ef90b3752edd42c5eb9d25b0edbc85c798.jpg"
-  },
-  {
-    "title": "Ouray High School Volleyball vs Dove Creek",
-    "link": "https://events.ourayridgwayevents.com/event/ouray-high-school-volleyball-vs-dove-creek",
-    "description": "Ouray High School hosts Dove Creek for a home volleyball matchup at Ouray School, with junior varsity taking the court first followed by the varsity squad. It's a chance for the community to cheer on the local team in what promises to be a competitive evening of high school athletics.",
-    "pubDate": "2026-10-15T22:30:00.000Z",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "Ouray School",
-    "imageUrl": "https://localist-images.azureedge.net/photos/53950094911567/huge/d5ee345c89849bce3200fa3413a281abd46154f5.jpg"
-  },
-  {
-    "title": "Talk: The Sherbino Presents: India Wood’s HIKING THE COLORADO X",
-    "link": "https://events.ourayridgwayevents.com/event/talk-the-sherbino-presents-india-woods-hiking-the-colorado-x",
-    "description": "Doors open at 6:00 PM; the talk begins at 6:30 PM. India Wood shares a short documentary, slide show and stories from her self-designed 1,500-mile hiking route across Colorado, including observations on the San Juan Mountains, ranching communities, public and private lands, and the challenges of a solo journey.",
-    "pubDate": "2026-10-16T00:30:00.000Z",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "The Sherbino",
-    "imageUrl": "https://localist-images.azureedge.net/photos/54066524162274/huge/48a226597b3ea784c96c139544da72ad35653f54.jpg"
-  },
-  {
-    "title": "Trivia Night",
-    "link": "https://events.ourayridgwayevents.com/event/floating-lotus-trivia-night",
-    "description": "Trivia Night at Floating Lotus Brewery! Join us on the 1st & 3rd Thursdays from 7–9 PM for a lively night of questions, drinks, and friendly competition. Grab a table, bring your team, and learn more at floatinglotusbrewery.com.",
-    "pubDate": "2026-10-16T01:00:00.000Z",
-    "endDate": "2026-11-20",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "Floating Lotus Brewery",
-    "imageUrl": "https://localist-images.azureedge.net/photos/53790516346797/huge/599d1a7013ddde307592e7dfc9b892fe265527e0.jpg"
-  },
-  {
     "title": "CELESTIAL BODIES - Olivia Ivy and Kane Scheidegger",
     "link": "https://events.ourayridgwayevents.com/event/celestial-bodies-olivia-ivy-and-kane-scheidegger",
     "description": "Join us at Space to Create Gallery in Ridgway for CELESTIAL BODIES, an exhibition exploring the connections between Body, Earth, and Cosmos through painting and photography. Featuring the work of Olivia Ivy and Kane Scheidegger, the exhibition brings together feminine figures, celestial symbolism, and otherworldly landscapes to explore the boundaries between the intimate and the infinite. From constellations hidden within the human form to the vastness of the night sky reflected in the earthly landscape, these works invite us to look beyond the familiar and reconsider our place within the universe. Exhibition dates October 2nd to November 2.",
@@ -117,6 +12,29 @@
     "imageUrl": "https://localist-images.azureedge.net/photos/54241868374608/huge/121c2ab6c42c0a5364ce85a3ffe552e3b10fe9f0.jpg"
   },
   {
+    "title": "Fall Break - Ridgway Schools",
+    "link": "https://events.ourayridgwayevents.com/event/fall-break-ridgway-schools",
+    "description": "Fall break for Ridgway Schools, a scheduled day off from classes for students in the Ridgway school district. This community calendar listing marks the holiday period for families in the Ouray and Ridgway area.",
+    "pubDate": "2026-10-16T06:00:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "",
+    "imageUrl": "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
+  },
+  {
+    "title": "OPL Read a Book - Get a Pumpkin",
+    "link": "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
+    "description": "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
+    "pubDate": "2026-10-16T16:00:00.000Z",
+    "endDate": "2026-10-31",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Ouray Public Library",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg"
+  },
+  {
     "title": "Ridgway Farmers Market",
     "link": "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
     "description": "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here.",
@@ -126,6 +44,18 @@
     "category": "Community Event",
     "location": "Hartwell Park",
     "imageUrl": "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
+  },
+  {
+    "title": "Guided Tour: Historic Beaumont Hotel & Spa",
+    "link": "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
+    "description": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
+    "pubDate": "2026-10-16T19:30:00.000Z",
+    "endDate": "2026-12-12",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Beaumont Hotel & Spa",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
   },
   {
     "title": "ALPINE JAM",
@@ -262,6 +192,18 @@
     "imageUrl": "https://localist-images.azureedge.net/photos/54241462626167/huge/7c0778035e072ff933b617f21809b1459dc84aca.jpg"
   },
   {
+    "title": "Ongoing: Space Cowboy by Dundee & Lee",
+    "link": "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
+    "description": "Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado artists Emilie Odeile and Ken Chapin of Dundee & Lee, the exhibition centers on a 10-foot-tall fiber rocket topped with a cowboy hat and Mission Control consoles that gather images, voices, stories, and discoveries as Space Cowboy travels from community to community. Throughout October, the exhibition comes alive with special events and programming, including appearances by Colorado Poet Laureate Crisosto Apache, community conversations, and opportunities for Ridgway residents to become part of the continuing Space Cowboy story. Space Cowboy travels with a simple idea: Colorado is the teacher and Space Cowboy is the learner. Every community adds something new to the mission. …",
+    "pubDate": "2026-10-19T16:00:00.000Z",
+    "endDate": "2026-10-29",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Decker Community Room",
+    "imageUrl": "https://localist-images.azureedge.net/photos/53975670057489/huge/75be37bbb2b6bd7ba17f7754e11da5a0eaf5930c.jpg"
+  },
+  {
     "title": "Senior Lunch by Neighbor to Neighbor",
     "link": "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
     "description": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
@@ -272,6 +214,18 @@
     "category": "Community Event",
     "location": "",
     "imageUrl": "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
+  },
+  {
+    "title": "Functional Fitness - Strength & Mobility Training For Women",
+    "link": "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women-8391",
+    "description": "Welcome to Ridgway's functional strength and mobility training for women. Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically but build real community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Every Tuesday & Thursday 8:15-9:15 am / Please check the website for dates and sign up! Location: 1075 Sherman St, Suite 201 / Weehawken Dance Studio (RIGS Building on the corner of Sherman and Amelia) Parking and entrance to the building are on N. Amelia St. …",
+    "pubDate": "2026-10-20T14:15:00.000Z",
+    "endDate": "2026-12-10",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Weehawken Ridgway (Old Schoolhouse)",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54236057466628/huge/10f1882bcc97fe1b7ad4209e2431edd0781a413f.jpg"
   },
   {
     "title": "BRITLEY & MATT",
@@ -796,6 +750,18 @@
     "category": "Community Event",
     "location": "Ouray Community Center, San Juan Room",
     "imageUrl": "https://localist-images.azureedge.net/photos/50382168464273/huge/9567987a01fc4f1da8e171fabd1eb5b7bdbdccfa.jpg"
+  },
+  {
+    "title": "Trivia Night",
+    "link": "https://events.ourayridgwayevents.com/event/floating-lotus-trivia-night",
+    "description": "Trivia Night at Floating Lotus Brewery! Join us on the 1st & 3rd Thursdays from 7–9 PM for a lively night of questions, drinks, and friendly competition. Grab a table, bring your team, and learn more at floatinglotusbrewery.com.",
+    "pubDate": "2026-11-06T01:00:00.000Z",
+    "endDate": "2026-11-20",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Floating Lotus Brewery",
+    "imageUrl": "https://localist-images.azureedge.net/photos/53790516346797/huge/599d1a7013ddde307592e7dfc9b892fe265527e0.jpg"
   },
   {
     "title": "First Friday Art Walk",

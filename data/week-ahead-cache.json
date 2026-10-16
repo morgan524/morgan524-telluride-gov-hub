@@ -1,10 +1,14 @@
 {
-  "hash": "0975115f11a071ece88be0adb2e605ce386a84fd",
-  "lede": "The meeting to watch this week is HARC on Tuesday the 21st, where the Town of Telluride's own Shandoka Lot Redevelopment at 860 Black Bear Rd comes back for public hearings on all four buildings — a large-scale new construction project in an Accommodations 2 zone that's been working through the process since August. Beyond that, the week has some genuine texture: the San Miguel Watershed Forum on Tuesday tackles how to actually fund water projects, and Freeski Film Night at the Sheridan on Wednesday is a reliable sign that winter is closer than it feels.",
+  "hash": "526eb0eecb8aa40c9466f4d777c9539ec814b3d1",
+  "lede": "The week's most consequential meeting is Telluride's HARC session on Tuesday, October 21, where the Shandoka Lot Redevelopment at 860 Black Bear Rd — a large Town-owned project in an Accommodations 2 zone — goes before the commission as two continued public hearings covering four buildings. Norwood's Planning and Zoning Commission also meets Monday with a Land Use Code Update and Master Plan Update on the table, foundational decisions that will shape what gets built there for years. On the community side, the San Miguel Watershed Forum on Tuesday and the water-in-the-West talk Thursday are worth your time if water is on your mind — and around here, it always should be.",
   "notable": [
     {
       "id": 10,
-      "stake": "Public hearings on all four buildings of the Town's Shandoka Lot redevelopment."
+      "stake": "Public hearings on four buildings in the Town's own large Shandoka redevelopment project."
+    },
+    {
+      "id": 0,
+      "stake": "Norwood reviews Land Use Code and Master Plan updates — rules shaping future development."
     }
   ]
 }

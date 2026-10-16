@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-family.xml" rel="self" type="application/rss+xml" />
     <description>Storytime, youth programs, and all-ages activities — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Oct 2026 03:57:01 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 11:06:05 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Fri, Oct 16] Up-off Gymnastics, Dance, and Spanish</title>
@@ -22,6 +22,19 @@ We are a MOBILE family business offering non-competitive Gymnastics, Preschool S
       <category>KOTO</category>
     </item>
     <item>
+      <title>[Fri, Oct 16] No School Science With Pinhead</title>
+      <link>https://telluridelibrary.libcal.com/event/17462872?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/no%20school%20science%20with%7C2026-10-16</guid>
+      <pubDate>Fri, 16 Oct 2026 19:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_19_15_52_03.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Kids Area
+
+1:00 PM – 3:00 PM · Join the Library and Pinhead for a fun filled afternoon of Science! 1:00 PM in the Youth Program area.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_19_15_52_03.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
       <title>[Sat, Oct 17] Dem-a-Palooza</title>
       <link>https://koto.org/event/dem-a-palooza/</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/dem%20a%20palooza%7C2026-10-17</guid>
@@ -34,13 +47,15 @@ A family-friendly fall festival hosted by the San Miguel County Democrats at Elk
       <category>KOTO</category>
     </item>
     <item>
-      <title>[Meeting] Planning and Zoning Commission Meeting — 2026-10-19</title>
+      <title>⚡ [Meeting] Planning and Zoning Commission Meeting — 2026-10-19</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/norwood%7C2026-10-19%7CPlanning%20and%20Zoning%20Commission%20Meeting</guid>
       <pubDate>Mon, 19 Oct 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Norwood • 2026-10-19
 
-The October 19, 2026 Norwood Planning and Zoning Commission Meeting agenda hasn't been posted yet.]]></description>
+Norwood's Planning and Zoning Commission meets October 19 at 6:30 p.m. at Town Hall. Two substantive items anchor the session: a Land Use Code Update and a Master Plan Update — both the kind of foundational work that shapes what gets built where, and under what rules, for years to come. The board will also address a Board Seat Update. Consent agenda covers September 21 minutes.
+
+⚡ Why it matters: Norwood reviews Land Use Code and Master Plan updates — rules shaping future development.]]></description>
       <category>Meeting</category>
       <category>Town of Norwood</category>
     </item>
@@ -152,7 +167,7 @@ The October 21, 2026 HARC Chair agenda hasn't been posted yet.]]></description>
 
 The October 21 HARC meeting is anchored by the Shandoka Lot Redevelopment Project — the Town of Telluride's own large-scale development at 860 Black Bear Rd, zoned Accommodations 2. HARC takes up Buildings 1 and 2 as one public hearing item and Buildings 3 and 4 as a second, both continued from August 19. Each application covers new construction outside the Telluride Historic Landmark District exceeding 5,000 square feet of floor area under LUC 7-203.B.2.a.1. Also on the agenda: a payment-in-lieu of parking request for one space at 510 W Columbia Ave/129 N Townsend in the Historic Residential zone, where HARC is asked to support administrative approval. A small-scale new construction application at 785 Primrose Lane on a steep site is also up for review. The 448 Tomboy Road item has been continued to December 16 at the applicant's request, and the 214 S Fir Certificate of Appropriateness Amendment #2 — in the works since at least December 2025 — is being tabled for eight more months.
 
-⚡ Why it matters: Public hearings on all four buildings of the Town's Shandoka Lot redevelopment.]]></description>
+⚡ Why it matters: Public hearings on four buildings in the Town's own large Shandoka redevelopment project.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
