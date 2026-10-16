@@ -6,20 +6,19 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Oct 2026 11:06:05 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 16:24:51 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
-      <title>[Fri, Oct 16] Telluride Horror Show</title>
-      <link>https://telluridelibrary.libcal.com/event/16217615?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20horror%20show%7C2026-10-16</guid>
-      <pubDate>Fri, 16 Oct 2026 15:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_15_16_36_17.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Program Room
+      <title>[Fri, Oct 16] Ridgway Farmer&apos;s Market</title>
+      <link>https://koto.org/event/ridgway-farmers-market/2026-10-16/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/ridgway%20farmer%20s%20market%7C2026-10-16</guid>
+      <pubDate>Fri, 16 Oct 2026 16:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Hartwell Park Ridgway
 
-Wilkinson Public Library serves as a "Horror Vault" venue for the Telluride Horror Show, screening a mix of documentaries and classic films in the Program Room. All screenings are free and open to the public.]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_15_16_36_17.webp" medium="image" />
+The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday]]></description>
       <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
+      <category>KOTO</category>
     </item>
     <item>
       <title>[Sat, Oct 17] Nattali Rize</title>
@@ -30,7 +29,7 @@ Wilkinson Public Library serves as a "Horror Vault" venue for the Telluride Horr
 📍 The Alibi • Telluride, CO
 🕒 9:00 PM
 
-Nattali Rize is a conscious artist, lyricist, and musician known for her ever-evolving sound and message-driven music. She performs live at The Alibi in Telluride.]]></description>
+The ever evolving Nattali Rize, lyricist, musician, conscious artist. Most not...]]></description>
       <media:content url="https://1v09t9hszk.ucarecd.net/b1964748-70d2-4a7e-9996-5d4148ee589d/-/crop/1701x851/0,143/-/preview/" medium="image" />
       <category>Community Event</category>
       <category>The Alibi</category>
@@ -135,6 +134,18 @@ The October 20, 2026 TMVOA Audit & Compliance Committee agenda hasn't been poste
 The October 20, 2026 TMVOA Finance & Budget Committee agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>tmvoa</category>
+    </item>
+    <item>
+      <title>[Wed, Oct 21] Freeski Film Night: Telluride Mountain Club</title>
+      <link>https://sheridanoperahouse.com/events/freeski-film-night-telluride-mountain-club/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/freeski%20film%20night%20telluride%7C2026-10-21</guid>
+      <pubDate>Wed, 21 Oct 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://sheridanoperahouse.com/wp-content/uploads/2026/10/Screenshot-2026-10-13-at-9.31.44-AM.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Sheridan Opera House
+📍 Sheridan Opera House • Telluride, CO
+]]></description>
+      <media:content url="https://sheridanoperahouse.com/wp-content/uploads/2026/10/Screenshot-2026-10-13-at-9.31.44-AM.png" medium="image" />
+      <category>Community Event</category>
+      <category>Sheridan Opera House</category>
     </item>
     <item>
       <title>[Meeting] Rico Board of Trustees Regular Meeting — 2026-10-21</title>
