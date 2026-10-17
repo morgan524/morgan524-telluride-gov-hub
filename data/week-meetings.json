@@ -400,6 +400,26 @@
     "hook": ""
   },
   {
+    "source": "telluride",
+    "sourceLabel": "Town of Telluride",
+    "title": "/Special Meeting - Planning & Zoning Commission Chair",
+    "date": "2026-11-02",
+    "time": "9:00 AM",
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8326",
+    "packetUrl": "https://telluride-co.civicweb.net/document/446310/",
+    "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8326",
+    "hasAgenda": true,
+    "summary": "This rescheduled P&Z Chair meeting — moved from October 22 to November 2 — has a single item on it: a minor subdivision at 510 W Columbia Avenue/129 N Townsend Street. The application asks to vacate the internal lot line between Lots 39 and 40 in the West Telluride Addition and merge them into one approximately 5,625-square-foot lot. It's a lot consolidation in the Historic Residential zone district, not a new development proposal.",
+    "zoomLink": "https://us06web.zoom.us/meeting/register/m65fl_EfRuC-m1IoGX6uiQ",
+    "zoomMeetingId": "815 3599 7736",
+    "zoomPasscode": "769982.",
+    "zoomPhone": "312-626-6799",
+    "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams",
+    "commentEmail": "townclerk@telluride.gov",
+    "hook": ""
+  },
+  {
     "source": "ouraycity",
     "sourceLabel": "City of Ouray",
     "title": "Ouray City Council Regular Meeting",

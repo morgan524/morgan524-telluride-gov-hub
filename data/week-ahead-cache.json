@@ -1,30 +1,34 @@
 {
-  "hash": "e0489b1d66a0bf02689e9fda13fb1916ce7eb8e3",
-  "lede": "The biggest item this week is Tuesday's San Miguel County commissioners meeting, where four public hearings on a brand-new Natural Resources article — covering forestry, oil and gas, and geothermal operations — could reshape how extraction and land use are governed across the county for years to come. Norwood's Planning and Zoning Commission also takes up Land Use Code and Master Plan updates Monday night, and Ouray City Council holds first readings on 2027 water and sewer rates plus a Light Industrial zoning ordinance. Closer to home, HARC takes up the Shandoka Lot redevelopment at 860 Black Bear Rd, and the school board revisits the ongoing mill levy override conversation.",
+  "hash": "f89a9ce4dd1d38ed5d66a23e37efdc4a91fed203",
+  "lede": "The biggest thing on the civic calendar this week is the San Miguel County Commissioners meeting Tuesday, where four proposed Land Use Code amendments — covering forestry, oil and gas, and geothermal operations — get individual public hearings, the kind of foundational code changes that could shape resource extraction rules in this county for a generation. Also worth watching: Norwood's Planning and Zoning takes up its own Land Use Code and Master Plan updates Monday, Telluride's HARC holds two public hearings on the large-scale Shandoka redevelopment at 860 Black Bear Rd, and the school board revisits the mill levy override question that's been running through recent meetings.",
   "notable": [
     {
       "id": 0,
-      "stake": "Land Use Code and Master Plan updates set rules for future development in Norwood."
+      "stake": "Land Use Code and Master Plan rewrites will govern what gets built in Norwood."
     },
     {
       "id": 2,
-      "stake": "First readings on 2027 water/sewer rates and Light Industrial zoning changes in Ouray."
+      "stake": "First readings set 2027 water/sewer rates and reshape Light Industrial zoning rules."
     },
     {
       "id": 3,
-      "stake": "First reading of Telluride Fire District's 2027 budget opens the public spending process."
+      "stake": "First reading of Fire District's 2027 budget opens the public spending process."
     },
     {
       "id": 4,
-      "stake": "Mill levy override funding update — ongoing school finance decision affecting local families."
+      "stake": "Mill levy override funding update — school finance decision affecting local taxpayers."
     },
     {
       "id": 10,
-      "stake": "Public hearings on large-scale Town-owned redevelopment at 860 Black Bear Rd."
+      "stake": "Public hearings on large Town-owned redevelopment at 860 Black Bear Rd."
+    },
+    {
+      "id": 11,
+      "stake": "Commission votes on restoring Jazz Festival to three days, affecting town event policy."
     },
     {
       "id": 12,
-      "stake": "Four public hearings on new county code governing forestry, oil, gas, and geothermal operations."
+      "stake": "Public hearings on new county natural-resources code covering forestry, oil, gas, and geothermal."
     }
   ]
 }
