@@ -399,7 +399,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"a12dfd2ce826475e"},
 
   "telluride|2026-11-05|Special Meeting - Planning & Zoning Commission - Nov 05 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312","sv":4,"ph":"930623a06e6efd7f"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312","sv":4,"ph":"2f0962b84aac8b50"},
 
   "telluride|2026-11-05|Town Council Budget - Nov 05 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054","sv":4,"ph":"dc6fd5ab4a1c2e97"},
@@ -839,6 +839,16 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Please watch this short video on Mission Alaska",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "October 17, 2026",
+    newsTopic: "community",
+    copy: "As many of you know, Fr. Mariusz was a missionary priest in Alaska. Please take the time to read his note on World Mission Sunday and watch a short 3 minute video. If you are called, please be generous during the 2nd collection at this weekend's H...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/please-watch-this-short-video-on-mission-alaska/",
+    img: ""
+  },
+  {
     title: "Parish bulletin for October 18",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -946,16 +956,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "government",
     copy: "An article in the Oct. 8-14 edition, “Ridgway seeks input on water supply plan,” misstated the date that the Ridgway Town Council is expected to vote on the water supply element of its master plan. The correct date is Nov. 19.",
     href: "https://www.ouraynews.com/2026/10/14/correction-20261015-0258-189619/",
-    img: ""
-  },
-  {
-    title: "2026 Telluride Mountain Club Recap Report",
-    source: "Telluride Mountain Club",
-    sourceKey: "tmc",
-    date: "October 12, 2026",
-    newsTopic: "community",
-    copy: "The post 2026 Telluride Mountain Club Recap Report appeared first on Telluride Mountain Club .",
-    href: "https://www.telluridemountainclub.org/2026-telluride-mountain-club-recap-report/",
     img: ""
   },
   {
@@ -4373,17 +4373,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "Dem-a-Palooza",
-    link: "https://koto.org/event/dem-a-palooza/",
-    description: "Saturday, October 17th, 1-3pm, Dem-a-Palooza, Elks Park. Join the San Miguel County Democrats for a family friendly Fall Festival, featuring our local Democratic candidates, games, a bonfire, and SPECIAL GUESTS! To learn about the special guests, go to https://www.mobilize.us/ coloradodemocraticparty/event/ 1054017",
-    pubDate: "2026-10-17T13:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Elks Park, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Tea and Tarot",
     link: "https://koto.org/event/tea-and-tarot/2026-10-18/",
     description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
@@ -5413,7 +5402,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
     pubDate: "2026-10-17T19:30:00.000Z",
-    endDate: "2026-12-15",
+    endDate: "2026-12-16",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6384,7 +6373,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-8-12-7427",
     description: "AFTER SCHOOL ART FOR AGES 8-12 Wednesdays, 3:15–4:45 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 16 – October 7Session 2 (4 weeks • $85): October 21 – November 11Session 3 (3 weeks • $70): December 2 – December 16Each week, students will explore an exciting theme while experimenting with a wide range of materials and techniques. Drawing inspiration from well-known artists and design styles, young artists will be supported in discovering their own unique creative voice in a fun, nurturing, studio-like setting. These classes are designed to foster a love of the arts through hands-on exploration, age-appropriate projects, and a focus on the joy of the creative process. A student art reception will be held in December. Students will take home their collected works in the days following the event. …",
     pubDate: "2026-12-02T22:15:00.000Z",
-    endDate: "2026-12-09",
+    endDate: "2026-12-16",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6462,6 +6451,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-5-8-861",
     description: "AFTER SCHOOL ART FOR AGES 5-8 Thursdays, 3:15–4:30 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 17 – October 8Session 2 (4 weeks • $85): October 22 – November 12Session 3 (3 weeks • $70): December 3 – December 17Each week, students will explore exciting themes and projects while experimenting with a wide variety of art materials—such as watercolor and acrylic paints, oil and chalk pastels, clay, collage, printmaking, and more. Through open-ended projects, students are encouraged to explore their creativity, make artistic choices, take creative risks, and discover their unique artistic voice. Our classes nurture imaginative thinking and storytelling, helping children express big ideas and emotions through visual narratives and personal creations. In addition to sparking imagination, our signature art projects support the development of fine motor skills, confidence, and social-emotional development in a fun group environment. …",
     pubDate: "2026-12-09T22:15:00.000Z",
+    endDate: "2026-12-16",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",

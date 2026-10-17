@@ -1,18 +1,5 @@
 [
   {
-    "title": "Dem-a-Palooza",
-    "href": "https://koto.org/event/dem-a-palooza/",
-    "date": "2026-10-17",
-    "time": "1:00 PM",
-    "location": "Elks Park, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-9.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Saturday, October 17th, 1-3pm, Dem-a-Palooza, Elks Park. Join the San Miguel County Democrats for a family friendly Fall Festival, featuring our local Democratic candidates, games, a bonfire, and SPECIAL GUESTS! To learn about the special…",
-    "type": "Family & Kids"
-  },
-  {
     "title": "Grand Opening of OCSAP Office",
     "href": "https://events.ourayridgwayevents.com/event/grand-opening-of-ocsap-office",
     "date": "2026-10-17",
@@ -37,7 +24,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
     "type": "Community",
-    "endDate": "2026-12-15"
+    "endDate": "2026-12-16"
   },
   {
     "title": "OPL Read a Book - Get a Pumpkin",
@@ -78,6 +65,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Details forthcoming",
     "type": "Community"
+  },
+  {
+    "title": "Dem-a-Palooza!",
+    "href": "https://www.telluride.com/event/dem-a-palooza/",
+    "date": "2026-10-17",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63738/bus_tour_graphics_1200_x_630_px_20261003041104444632.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "A family friendly fall festival celebrating democracy! Hear from our local Democratic candidates. There will be kids' …",
+    "type": "Family & Kids"
   },
   {
     "title": "Seed Saving 101 Workshop with the CSU Extension Office",
@@ -2585,7 +2585,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "AFTER SCHOOL ART FOR AGES 8-12 Wednesdays, 3:15–4:45 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 16 – October 7Session 2 (4 weeks • $85): October 21 – November 11Session 3…",
     "type": "Arts & Film",
-    "endDate": "2026-12-09"
+    "endDate": "2026-12-16"
   },
   {
     "title": "Telluride Rotary Club Meeting",
@@ -2730,7 +2730,8 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "AFTER SCHOOL ART FOR AGES 5-8 Thursdays, 3:15–4:30 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 17 – October 8Session 2 (4 weeks • $85): October 22 – November 12Session 3 (3…",
-    "type": "Arts & Film"
+    "type": "Arts & Film",
+    "endDate": "2026-12-16"
   },
   {
     "title": "Noel Night",
