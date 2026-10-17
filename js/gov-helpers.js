@@ -477,6 +477,14 @@ const DEEP_DIVE_UPDATES = [];
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-10-17",
+    title: "Wildfire code is now law — what comes next?",
+    body: "Town Council adopted the Colorado Wildfire Resiliency Code amendment to the Land Use Code back in August 2026. Now Planning & Zoning is expected to work through what implementation actually looks like. That's where it gets interesting. Some folks figure tighter building standards protect the whole community — a fire doesn't ask whose roof it jumps to next. Others worry the new rules add cost and friction to construction that's already brutal up here. The code is adopted, but the details aren't settled yet.\n\nSo: do you think the wildfire code amendment will make Telluride meaningfully safer, or mostly make building harder?",
+    choices: ["It'll make us safer", "Adds burden, little gain", "Too soon to tell"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-10-16",
     title: "Paper bills now cost extra — worth it?",
     body: "Buried in a canceled-meeting notice: San Miguel Power Association is adding a new fee for paper billing. If you want a bill in the mail, you'll pay extra for it. The case for it is straightforward — digital is cheaper, and costs get passed to everyone otherwise. The case against it is just as real — not everyone is set up for online billing, and fees like this tend to land hardest on folks least able to absorb them. So: is a paper billing fee a reasonable nudge, or does it leave some neighbors behind?",
@@ -707,14 +715,6 @@ const DAILY_QUESTIONS = [
     choices: ["Fire safety comes first", "Worried about the costs", "Depends on the details", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-09-17",
-    title: "Beavers, trails, and signs — Open Space has a full plate",
-    body: "The Open Space Commission is working through a string of site walks this month — debriefs from August walks on a potential trail alignment from the Bear Creek Trailhead to Firecracker Hill, beaver activity in Zone 3 of the Bear Creek Preserve, and sign sizing on the Valley Floor. They're also prepping for September 21st walks on Zone 1 restoration and a river restoration project at the Mill Creek Confluence.\n\nThe tension is real: restoration and wildlife habitat pull one way, expanded trail access pulls another. More trail connections mean more people out there — which isn't always what the beavers need.\n\nWhere do you draw the line between access and preservation?",
-    choices: ["Access comes first", "Habitat comes first", "Both can coexist", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -798,6 +798,46 @@ const MEETING_PREVIEWS = {
     "Board will consider personnel and financial reports, review Policy Governance Monitoring Reports EL-11 and EL-12, and hear a school report on the ELG Grant. The meeting includes a consent agenda covering quarterly financial statements and opportunities for public comment."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
+  {
+    title: "2026 Chamber Meeting, December",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
+    img: ""
+  },
+  {
+    title: "Noel Night",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 4, 2026",
+    newsTopic: "community",
+    copy: "Community shopping event and celebration.",
+    href: "https://norwoodcolorado.com/event/noel-night-3/",
+    img: ""
+  },
+  {
+    title: "West End Parade of Lights & Elfin Eve",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "Holiday parade and festival.",
+    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, November",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "November 10, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
+    img: ""
+  },
   {
     title: "Will Coloradans choose the ‘right to hunt’?",
     source: "Ouray County Plaindealer",
@@ -896,16 +936,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "government",
     copy: "An article in the Oct. 8-14 edition, “Ridgway seeks input on water supply plan,” misstated the date that the Ridgway Town Council is expected to vote on the water supply element of its master plan. The correct date is Nov. 19.",
     href: "https://www.ouraynews.com/2026/10/14/correction-20261015-0258-189619/",
-    img: ""
-  },
-  {
-    title: "2026 Telluride Mountain Club Recap Report",
-    source: "Telluride Mountain Club",
-    sourceKey: "tmc",
-    date: "October 12, 2026",
-    newsTopic: "community",
-    copy: "The post 2026 Telluride Mountain Club Recap Report appeared first on Telluride Mountain Club .",
-    href: "https://www.telluridemountainclub.org/2026-telluride-mountain-club-recap-report/",
     img: ""
   },
   {
@@ -2498,6 +2528,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Telluride School District talks housing developments",
+    source: "Telluride Times",
+    date: "October 17, 2026",
+    firstSeen: "2026-10-17",
+    newsTopic: "education",
+    copy: "The Telluride School District is working with Rural Homes and CHFA to expand housing options for employees, with 20 units planned at Two Rivers and additional rentals in Rico and behind the middle/high school. A CHFA program cuts mortgage rates roughly in half — from around 7.7% to 3.5% — with down payment assistance available. The district held information sessions this month so employees could learn about the options and ask questions.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_5f3fdb48-625f-4465-8ffb-2c9956bde9aa.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/be/fbe58fd3-df43-4ab8-9b34-2d2c70ed1687/6ad1c1f33c055.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "THS takes winning ways to Ridgway",
     source: "Telluride Times",
@@ -4830,17 +4872,6 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Yoga for ALL with Jane & Jay",
-    link: "https://telluridelibrary.libcal.com/event/17721826?hs=a",
-    description: "8:30 AM – 9:45 AM · Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
-    pubDate: "2026-10-16T14:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg"
-  },
-  {
     title: "Telluride Horror Show",
     link: "https://telluridelibrary.libcal.com/event/16217615?hs=a",
     description: "9:00 AM – 5:00 PM · Wilkinson Public Library is honored to be Telluride Horror Show&#39;s \"Horror Vault\".  THS will be showing a mix of documentatreis and old films in our program room.  The shows are all free and open to the public!  See the schedule here:  https://telluridehorrorshow2026.eventive.org/2026_schedule",
@@ -4852,15 +4883,26 @@ const WILKINSON_EVENTS = [
     imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_15_16_36_17.webp"
   },
   {
-    title: "No School Science With Pinhead",
-    link: "https://telluridelibrary.libcal.com/event/17462872?hs=a",
-    description: "1:00 PM – 3:00 PM · Join the Library and Pinhead for a fun filled afternoon of Science! 1:00 PM in the Youth Program area.",
-    pubDate: "2026-10-16T19:00:00.000Z",
+    title: "Seed Saving 101 Workshop with the CSU Extension Office",
+    link: "https://telluridelibrary.libcal.com/event/17348378?hs=a",
+    description: "9:00 AM – 12:00 PM · Learn how to collect, clean, store and save your seeds from your garden for next season with certified Colorado Master Gardener, Bronwen Spielman in this engaging 3 hour free workshop. Please sign up in advance as space is limited.  Coffee, tea and light pastries will be provided.",
+    pubDate: "2026-10-17T15:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_17_14_18_28.png"
+  },
+  {
+    title: "Hora de Cuentos del Día de Muertos • Special storytime for Day of The Dead",
+    link: "https://telluridelibrary.libcal.com/event/17707680?hs=a",
+    description: "3:00 PM – 4:00 PM · &Uacute;nete a una hora especial de cuentos del D&iacute;a de Muertos. Tendremos entretenidas sorpresas. &iexcl;Los esperamos!  &bull; Join us for a special Day of the Dead storytime. We will have fun surprises. We look forward to seeing you!",
+    pubDate: "2026-10-17T21:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_19_15_52_03.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_24_13_33_33.png"
   }
 ];
 
@@ -5350,123 +5392,10 @@ const OURAY_COUNTY_EVENTS = [
     category: "Community Event",
     location: "- 112 Village Square W. Suite 220 Ridgway CO 81432",
     imageUrl: ""
-  },
-  {
-    title: "Love Your Gorge",
-    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3786",
-    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3786",
-    pubDate: "2026-10-17T09:00:00.000Z",
-    source: "ouraycounty",
-    sourceLabel: "Ouray County",
-    category: "Community Event",
-    location: "Ouray Ice Park - Ouray CO 81427",
-    imageUrl: ""
   }
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "CELESTIAL BODIES - Olivia Ivy and Kane Scheidegger",
-    link: "https://events.ourayridgwayevents.com/event/celestial-bodies-olivia-ivy-and-kane-scheidegger",
-    description: "Join us at Space to Create Gallery in Ridgway for CELESTIAL BODIES, an exhibition exploring the connections between Body, Earth, and Cosmos through painting and photography. Featuring the work of Olivia Ivy and Kane Scheidegger, the exhibition brings together feminine figures, celestial symbolism, and otherworldly landscapes to explore the boundaries between the intimate and the infinite. From constellations hidden within the human form to the vastness of the night sky reflected in the earthly landscape, these works invite us to look beyond the familiar and reconsider our place within the universe. Exhibition dates October 2nd to November 2.",
-    pubDate: "2026-10-16T06:00:00.000Z",
-    endDate: "2026-11-02",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Space to Create Gallery",
-    imageUrl: "https://localist-images.azureedge.net/photos/54241868374608/huge/121c2ab6c42c0a5364ce85a3ffe552e3b10fe9f0.jpg"
-  },
-  {
-    title: "Fall Break - Ridgway Schools",
-    link: "https://events.ourayridgwayevents.com/event/fall-break-ridgway-schools",
-    description: "",
-    pubDate: "2026-10-16T06:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
-  },
-  {
-    title: "OPL Read a Book - Get a Pumpkin",
-    link: "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
-    description: "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
-    pubDate: "2026-10-16T16:00:00.000Z",
-    endDate: "2026-10-31",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Public Library",
-    imageUrl: "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg"
-  },
-  {
-    title: "Ridgway Farmers Market",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
-    description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here.",
-    pubDate: "2026-10-16T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Hartwell Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
-  },
-  {
-    title: "Guided Tour: Historic Beaumont Hotel & Spa",
-    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
-    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
-    pubDate: "2026-10-16T19:30:00.000Z",
-    endDate: "2026-12-15",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Beaumont Hotel & Spa",
-    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
-  },
-  {
-    title: "ALPINE JAM",
-    link: "https://events.ourayridgwayevents.com/event/alpine-jam-3576",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
-    pubDate: "2026-10-16T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Colorado Boy Depot",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "COLORADO SWITCHGRASS",
-    link: "https://events.ourayridgwayevents.com/event/colorado-switchgrass",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
-    pubDate: "2026-10-16T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Sound Bath & Meditation Event",
-    link: "https://events.ourayridgwayevents.com/event/sound-bath-meditation-event",
-    description: "This session will begin with some brief gentle stretching, breathwork and guided meditation from Elisabeth, to help you drop into a meditative state as you enjoy Ian's sound healing. Meet Ian Wilson, who hails from Miami, lived for a stint in Las Vegas, and arrived in the San Juan Mountain over a year ago. Trained by Sound Healing Academy, Ian has been studying frequency, sound, music theory, harmonics and applied physics for 3 years. His influences include Nicola Tesla, Beethoven, Slim Spurling, and Drunvalo Melechezdek. Ian has been practicing reiki since 2018, completing level III Master certification in 2022, under the guidance and teaching of Reiki Master Melissa Aluna Solano in Boulder. Through his company Inner Space Holistic Collective, he offers his sound healings in community with other holistic healers. Ian is offering monthly sound healing sessions with varying additional themes such as yin yoga, breathwork, and Reiki.",
-    pubDate: "2026-10-16T23:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Bee True You Wellness & Creative Studio",
-    imageUrl: "https://localist-images.azureedge.net/photos/54241391007422/huge/c283fa99b2569b75ea7f2f43d79ea304c87833e9.jpg"
-  },
-  {
-    title: "Ridgway Star Party",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-star-party",
-    description: "UPDATE: Due to the remnants of Tropical Storm Rachel moving into Utah and Western Colorado later today and after consultation with my colleagues at the Black Canyon Astronomical Society I have decided to RESCHEDULE the Star Party to Friday October 16th - same time at 7:30pm and Place - the Soccer Field A Celebration of Dark Skies in our community with the Black Canyon Astronomical Society, 7:30 p.m. at the Ridgway Athletic Park. Weather permitting, free and open to the public. Please park at the soccer field with headlights pointing east. Professional telescopes provided for viewing, with laser-guided constellation tours.",
-    pubDate: "2026-10-17T01:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Frontier Field / Ridgway Athletic Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/54121032080521/huge/44c09ba6ec5c167f288df3253c6ade57ae99a24f.jpg"
-  },
   {
     title: "Love Your Gorge",
     link: "https://events.ourayridgwayevents.com/event/love-your-gorge-2026",
@@ -5479,6 +5408,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53950572424037/huge/aa74aed14780ee99117533d3ad6303db0ccf191b.jpg"
   },
   {
+    title: "OPL Read a Book - Get a Pumpkin",
+    link: "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
+    description: "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
+    pubDate: "2026-10-17T16:00:00.000Z",
+    endDate: "2026-10-31",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Public Library",
+    imageUrl: "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg"
+  },
+  {
     title: "Grand Opening of OCSAP Office",
     link: "https://events.ourayridgwayevents.com/event/grand-opening-of-ocsap-office",
     description: "Stop in at the Ouray County Support and Advocacy Project's new office between 1 and 4pm on Saturday, October 17, to show you care about victims/survivors of sexual and/or intimate partner violence here. Learn more about this new nonprofit in Ouray County and ways we can all help our area feel safer for survivors. Join us for snacks and conversation. 970-708-8358 for questions.",
@@ -5488,6 +5429,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "OCSAP office in the REMAX building",
     imageUrl: "https://localist-images.azureedge.net/photos/54170098067739/huge/4826066a20a04fe739c1d0fc053ce5c0b55ec66f.jpg"
+  },
+  {
+    title: "Guided Tour: Historic Beaumont Hotel & Spa",
+    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
+    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
+    pubDate: "2026-10-17T19:30:00.000Z",
+    endDate: "2026-12-15",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Beaumont Hotel & Spa",
+    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
   },
   {
     title: "No Kings Afterparty in the Garden",
@@ -5556,6 +5509,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Bee True You Wellness & Creative Studio",
     imageUrl: "https://localist-images.azureedge.net/photos/54241462626167/huge/7c0778035e072ff933b617f21809b1459dc84aca.jpg"
+  },
+  {
+    title: "CELESTIAL BODIES - Olivia Ivy and Kane Scheidegger",
+    link: "https://events.ourayridgwayevents.com/event/celestial-bodies-olivia-ivy-and-kane-scheidegger",
+    description: "Join us at Space to Create Gallery in Ridgway for CELESTIAL BODIES, an exhibition exploring the connections between Body, Earth, and Cosmos through painting and photography. Featuring the work of Olivia Ivy and Kane Scheidegger, the exhibition brings together feminine figures, celestial symbolism, and otherworldly landscapes to explore the boundaries between the intimate and the infinite. From constellations hidden within the human form to the vastness of the night sky reflected in the earthly landscape, these works invite us to look beyond the familiar and reconsider our place within the universe. Exhibition dates October 2nd to November 2.",
+    pubDate: "2026-10-19T06:00:00.000Z",
+    endDate: "2026-11-02",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create Gallery",
+    imageUrl: "https://localist-images.azureedge.net/photos/54241868374608/huge/121c2ab6c42c0a5364ce85a3ffe552e3b10fe9f0.jpg"
   },
   {
     title: "Ongoing: Space Cowboy by Dundee & Lee",

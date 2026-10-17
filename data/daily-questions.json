@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-17",
+    "title": "Wildfire code is now law — what comes next?",
+    "body": "Town Council adopted the Colorado Wildfire Resiliency Code amendment to the Land Use Code back in August 2026. Now Planning & Zoning is expected to work through what implementation actually looks like. That's where it gets interesting. Some folks figure tighter building standards protect the whole community — a fire doesn't ask whose roof it jumps to next. Others worry the new rules add cost and friction to construction that's already brutal up here. The code is adopted, but the details aren't settled yet.\n\nSo: do you think the wildfire code amendment will make Telluride meaningfully safer, or mostly make building harder?",
+    "choices": [
+      "It'll make us safer",
+      "Adds burden, little gain",
+      "Too soon to tell"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-10-16",
     "title": "Paper bills now cost extra — worth it?",
     "body": "Buried in a canceled-meeting notice: San Miguel Power Association is adding a new fee for paper billing. If you want a bill in the mail, you'll pay extra for it. The case for it is straightforward — digital is cheaper, and costs get passed to everyone otherwise. The case against it is just as real — not everyone is set up for online billing, and fees like this tend to land hardest on folks least able to absorb them. So: is a paper billing fee a reasonable nudge, or does it leave some neighbors behind?",
@@ -417,21 +431,6 @@
       "Fire safety comes first",
       "Worried about the costs",
       "Depends on the details",
-      "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-09-17",
-    "title": "Beavers, trails, and signs — Open Space has a full plate",
-    "body": "The Open Space Commission is working through a string of site walks this month — debriefs from August walks on a potential trail alignment from the Bear Creek Trailhead to Firecracker Hill, beaver activity in Zone 3 of the Bear Creek Preserve, and sign sizing on the Valley Floor. They're also prepping for September 21st walks on Zone 1 restoration and a river restoration project at the Mill Creek Confluence.\n\nThe tension is real: restoration and wildlife habitat pull one way, expanded trail access pulls another. More trail connections mean more people out there — which isn't always what the beavers need.\n\nWhere do you draw the line between access and preservation?",
-    "choices": [
-      "Access comes first",
-      "Habitat comes first",
-      "Both can coexist",
       "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",
