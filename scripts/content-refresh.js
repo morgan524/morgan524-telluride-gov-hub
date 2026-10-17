@@ -4179,8 +4179,23 @@ async function syncOurayRidgwayEvents() {
     });
   }
 
-  const events = [];
+  // Localist sometimes carries the SAME class as two separate event pages
+  // (organizer re-posted it: ".../watercolor-with-anita-winter-still-waters"
+  // and ".../still-waters-3074"), so collapsing by link leaves both and the
+  // card renders twice. Collapse rows with the same title + start + end +
+  // venue; prefer the un-suffixed (original) slug, else the first seen.
+  // Flagged by the content review 2026-10-17 (three Nov 2026 classes).
+  const suffixed = (l) => /-\d+\/?$/.test(l);
+  const byIdentity = new Map();
   for (const g of byLink.values()) {
+    const key = [g.title.toLowerCase().replace(/\s+/g, ' '), g.startMs, g.endMs, (g.location || '').toLowerCase()].join('|');
+    const prev = byIdentity.get(key);
+    if (!prev || (suffixed(prev.link) && !suffixed(g.link))) byIdentity.set(key, g);
+  }
+  const dupesCollapsed = byLink.size - byIdentity.size;
+
+  const events = [];
+  for (const g of byIdentity.values()) {
     const startISO = new Date(g.startMs).toISOString();
     const startDay = startISO.slice(0, 10);
     const endDay = new Date(g.endMs).toISOString().slice(0, 10);
@@ -4198,7 +4213,7 @@ async function syncOurayRidgwayEvents() {
     });
   }
   events.sort((a, b) => a.pubDate.localeCompare(b.pubDate));
-  console.log(`  Ouray/Ridgway: ${events.length} events (RSS; collapsed by link; ${skippedPast} past, ${skippedFar} >60d, ${skippedGov} gov skipped)`);
+  console.log(`  Ouray/Ridgway: ${events.length} events (RSS; collapsed by link; ${dupesCollapsed} re-posted dupes merged; ${skippedPast} past, ${skippedFar} >60d, ${skippedGov} gov skipped)`);
   return events;
 }
 
@@ -6209,12 +6224,33 @@ async function syncTellurideBoardMeetings() {
   const KEEP = /town council|planning\s*(?:&|and)\s*zoning|\bp&z\b|housing authority|ethics commission|parks?\s*(?:&|and)\s*rec|open space commission|resident advisory committee|ecology commission|intergovernmental|\bjoint\b/i;
   const out = [];
   const seen = new Set();
+  // "Chair" agendas (e.g. "Planning & Zoning Commission Chair") are usually a
+  // shorter companion to the full commission meeting on the SAME date, so they
+  // were dropped wholesale. But a Chair meeting can also stand alone — the
+  // Nov 2 2026 "Rescheduled/Special Meeting - Planning & Zoning Commission
+  // Chair" (moved from Oct 22) had no full-P&Z row that day, so it vanished and
+  // its summary became an orphan (content review 2026-10-17). Skip a Chair
+  // variant only when its parent body also meets that date.
+  const bodyOf = (name) => String(name)
+    .replace(/\s*-\s*[A-Za-z]{3,9}\.?\s+\d{1,2}\s+\d{4}\s*$/, '')
+    .replace(/^\([^)]*\)\s*/, '')                       // "(Rescheduled to 11/2) …"
+    .replace(/^.*?\s-\s(?=\S)/, (pre) => (/rescheduled|special|cancel/i.test(pre) ? '' : pre))
+    .replace(/\bchair\b/ig, '')
+    .replace(/[^a-z&]+/ig, ' ').trim().toLowerCase();
+  const dayOf = (m) => { const d = new Date(m.MeetingDate || m.MeetingDateTime || ''); return isNaN(d) ? '' : d.toISOString().slice(0, 10); };
+  const fullBodyDays = new Set();
+  for (const m of items) {
+    const name = (m && m.Name || '').trim();
+    if (!name || /chair/i.test(name) || !KEEP.test(name)) continue;
+    if (/^(?:\(?cancelled?\)?:?\s*|CANCELLED\b)/i.test(name)) continue;
+    fullBodyDays.add(dayOf(m) + '|' + bodyOf(name));
+  }
   for (const m of items) {
     if (!m) continue;
     const name = (m.Name || '').trim();
     if (/^(?:\(?cancelled?\)?:?\s*|CANCELLED\b)/i.test(name)) continue;  // skip cancelled
     if (!KEEP.test(name)) continue;
-    if (/chair/i.test(name)) continue;                                  // skip shorter "Chair" agenda variants
+    if (/chair/i.test(name) && fullBodyDays.has(dayOf(m) + '|' + bodyOf(name))) continue; // companion of a same-day full meeting
     if (!m.Id) continue;
     const d = new Date(m.MeetingDate || m.MeetingDateTime || '');
     if (isNaN(d)) continue;
