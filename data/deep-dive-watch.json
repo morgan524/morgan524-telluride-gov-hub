@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16T23:25:04.684Z",
+ "generated": "2026-10-17T03:47:10.341Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -77,7 +77,20 @@
   "wildfire": {
    "label": "Wildfire Resiliency",
    "lastUpdated": "2026-06-01",
-   "upcoming": [],
+   "upcoming": [
+    {
+     "source": "fire",
+     "sourceLabel": "Fire Protection",
+     "title": "Board of Directors Meeting",
+     "date": "2026-10-20",
+     "time": "5:30 PM",
+     "location": "131 W Columbia Ave, Telluride, CO 81435",
+     "agendaUrl": "https://www.telluridefire.com/files/cef8a399b/Agenda+-October+20th%2C+2026.pdf",
+     "link": "https://www.telluridefire.com/files/cef8a399b/Agenda+-October+20th%2C+2026.pdf",
+     "zoomLink": "",
+     "livestream": ""
+    }
+   ],
    "recent": [
     {
      "source": "county",

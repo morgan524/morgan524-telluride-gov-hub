@@ -423,6 +423,19 @@
     "endDate": "2026-12-14"
   },
   {
+    "title": "Art in the Age of AI",
+    "href": "https://koto.org/event/art-in-the-age-of-ai/",
+    "date": "2026-10-19",
+    "time": "5:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/10/artai-1.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Can AI make art? Should it? What happens to human artists and human audiences when algorithms influence the way art is conceived and consumed? Join acclaimed songwriter and performer Emily Scott Robinson and novelist and former AI ethics…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Bike & Brewery Tour",
     "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     "date": "2026-10-19",
@@ -460,7 +473,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Join our wonderful volunteer team at the Decker! If you would like to help with Gallery Sitting during open hours, events, and more, please attend a New Volunteer Orientation to get started! You'll learn about the Decker Room and the…",
     "type": "Arts & Film",
-    "endDate": "2026-11-17"
+    "endDate": "2026-12-15"
   },
   {
     "title": "Ouray HS Volleyball VS Norwood",
@@ -806,6 +819,20 @@
     "source": "Telluride.com",
     "desc": "Across the Southwest, aridification and challenging politics are impacting our watersheds and threatening our rivers. …",
     "type": "Community"
+  },
+  {
+    "title": "Music Bingo",
+    "href": "https://events.ourayridgwayevents.com/event/music-bingo",
+    "date": "2026-10-22",
+    "time": "7:00 PM",
+    "location": "Floating Lotus Brewery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53790449536989/huge/a7181e9d298980d4c2377db45d06d26bb81e0b12.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Music Bingo at Floating Lotus Brewery! Join us on the 2nd & 4th Thursdays from 7–9 PM for a high-energy night of music, drinks, and bingo-style fun. Listen, mark your card, and sing along. Learn more at floatinglotusbrewery.com.",
+    "type": "Food & Drink",
+    "endDate": "2026-11-13"
   },
   {
     "title": "Pickleball Nights",
@@ -1936,6 +1963,20 @@
     "type": "Community"
   },
   {
+    "title": "Trivia Night",
+    "href": "https://events.ourayridgwayevents.com/event/floating-lotus-trivia-night",
+    "date": "2026-11-05",
+    "time": "7:00 PM",
+    "location": "Floating Lotus Brewery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53790516346797/huge/599d1a7013ddde307592e7dfc9b892fe265527e0.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Trivia Night at Floating Lotus Brewery! Join us on the 1st & 3rd Thursdays from 7–9 PM for a lively night of questions, drinks, and friendly competition. Grab a table, bring your team, and learn more at floatinglotusbrewery.com.",
+    "type": "Food & Drink",
+    "endDate": "2026-11-20"
+  },
+  {
     "title": "Pickleball Nights",
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-11-05",
@@ -2187,6 +2228,19 @@
     "endDate": "2026-12-08"
   },
   {
+    "title": "Free Legal Clinic – Clínica Jurídica Gratuita",
+    "href": "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-11-10/",
+    "date": "2026-11-10",
+    "time": "4:00 PM",
+    "location": "",
+    "town": "",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Weekly Young Adult Gathering",
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-11-10",
@@ -2252,6 +2306,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "Sewing 101 with Melissa",
+    "href": "https://koto.org/event/sewing-101-with-melissa/2026-11-11/",
+    "date": "2026-11-11",
+    "time": "5:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/02/sewing.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll…",
+    "type": "Community"
+  },
+  {
     "title": "Market on the Plaza",
     "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     "date": "2026-11-11",
@@ -2262,6 +2329,32 @@
     "category": "Community Event",
     "source": "Mountain Village",
     "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    "type": "Community"
+  },
+  {
+    "title": "Pilates for All Bodies with Laura",
+    "href": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-11-12/",
+    "date": "2026-11-12",
+    "time": "12:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/wellness.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    "type": "Wellness"
+  },
+  {
+    "title": "The Creative Exchange at Telluride Arts HQ",
+    "href": "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-11-12/",
+    "date": "2026-11-12",
+    "time": "5:30 PM",
+    "location": "Telluride Arts HQ, TELLURIDE",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories…",
     "type": "Community"
   },
   {
@@ -2596,6 +2689,20 @@
     "type": "Community"
   },
   {
+    "title": "Floating Lotus Music Bingo – November & December 2026",
+    "href": "https://events.ourayridgwayevents.com/event/floating-lotus-music-bingo-november-december-2026",
+    "date": "2026-11-26",
+    "time": "7:00 PM",
+    "location": "Floating Lotus Brewery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/51579855188578/huge/de5019ffbfacf4a9f5e85d8a14961584c70e7873.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Music Bingo at Floating Lotus Brewery! Join us Thursday, November 26 and Thursday, December 10 from 7–9 PM for a high-energy night of music, drinks and bingo-style fun. Listen, mark your card and sing along. Learn more at…",
+    "type": "Food & Drink",
+    "endDate": "2026-12-11"
+  },
+  {
     "title": "TODDLER STORYTIME ART FOR AGES 2.5-5",
     "href": "https://events.ourayridgwayevents.com/event/toddler-storytimeartfor-ages-25-5",
     "date": "2026-12-02",
@@ -2635,6 +2742,19 @@
     "source": "Telluride Rotary",
     "desc": "Telluride Rotary Club meets the 1st & 3rd Wednesdays at 6:00 PM (gathering at 5:30) — 1st Wednesday at Mountain Lodge in Mountain Village, 3rd Wednesday at an announced Telluride location. A service club supporting scholarships, Youth…",
     "type": "Family & Kids"
+  },
+  {
+    "title": "Floating Lotus Trivia Night – December 2026",
+    "href": "https://events.ourayridgwayevents.com/event/floating-lotus-trivia-night-december-2026",
+    "date": "2026-12-03",
+    "time": "7:00 PM",
+    "location": "Floating Lotus Brewery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/51579855188578/huge/de5019ffbfacf4a9f5e85d8a14961584c70e7873.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Trivia Night at Floating Lotus Brewery! Join us Thursday, December 3 and Thursday, December 17 from 7–9 PM for a lively night of questions, drinks and friendly competition. Grab a table, bring your team, and learn more at…",
+    "type": "Food & Drink"
   },
   {
     "title": "23rd Annual Holiday Art & Gift Sale",
@@ -2862,5 +2982,18 @@
     "source": "The Alibi",
     "desc": "“Settle back, easy Jim…” The iconic lyric from Robert Hunter’s Althea captured t...",
     "type": "Community"
+  },
+  {
+    "title": "Telluride Rotary Club Meeting",
+    "href": "https://portal.clubrunner.ca/3291",
+    "date": "2026-12-16",
+    "time": "6:00 PM (social at 5:30)",
+    "location": "Announced Telluride location",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-9.jpg",
+    "category": "",
+    "source": "Telluride Rotary",
+    "desc": "Telluride Rotary Club meets the 1st & 3rd Wednesdays at 6:00 PM (gathering at 5:30) — 1st Wednesday at Mountain Lodge in Mountain Village, 3rd Wednesday at an announced Telluride location. A service club supporting scholarships, Youth…",
+    "type": "Family & Kids"
   }
 ]

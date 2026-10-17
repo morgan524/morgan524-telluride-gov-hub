@@ -1,27 +1,27 @@
 {
- "generated": "2026-10-16T23:25:04.686Z",
+ "generated": "2026-10-17T03:47:10.343Z",
  "pinned": false,
- "topic": "carhenge",
- "topicLabel": "Carhenge / Shandoka",
- "headline": "Carhenge / Shandoka goes before HARC Meeting on Wednesday, October 21",
- "blurb": "The October 21 HARC meeting is anchored by the Shandoka Lot Redevelopment Project — the Town of Telluride's own large-scale development at 860 Black Bear Rd, zoned Accommodations 2. HARC takes up Buildings 1 and 2 as one public hearing item and Buildings 3 and 4 as a second, both continued from August 19. Each application covers new construction outside the Telluride Historic Landmark District exceeding 5,000 square feet of floor area under LUC 7-203.B.2.a.1.",
+ "topic": "wildfire",
+ "topicLabel": "Wildfire Resiliency",
+ "headline": "Wildfire Resiliency goes before Board of Directors Meeting on Tuesday, October 20",
+ "blurb": "The Telluride Fire Protection District board meets October 20th at 5:30 p.m. at Station 1 on Columbia Ave. Leading the agenda is the first reading of the 2027 budget — the opening move in a process that will play out over the next several weeks. The board will also ratify a pre-build contractor agreement with FCI, likely tied to the ongoing Station 3 update, and will receive a wildfire assignment update along with a September report on PANO camera usage.",
  "images": [],
  "deepDive": {
-  "label": "Carhenge / Shandoka",
-  "href": "/deep-dive-carhenge.html"
+  "label": "Wildfire Resiliency",
+  "href": "/deep-dive-wildfire.html"
  },
  "meeting": {
-  "title": "HARC Meeting",
-  "sourceLabel": "Town of Telluride",
-  "date": "2026-10-21",
-  "humanDate": "Wednesday, October 21",
+  "title": "Board of Directors Meeting",
+  "sourceLabel": "Fire Protection",
+  "date": "2026-10-20",
+  "humanDate": "Tuesday, October 20",
   "time": "5:30 PM",
-  "location": "Rebekah Hall, 113 W Columbia Ave",
-  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024",
+  "location": "131 W Columbia Ave, Telluride, CO 81435",
+  "agendaUrl": "https://www.telluridefire.com/files/cef8a399b/Agenda+-October+20th%2C+2026.pdf",
   "hasAgenda": true,
-  "packetUrl": "https://telluride-co.civicweb.net/document/446165/",
-  "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024",
-  "zoomLink": "https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA",
-  "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+  "packetUrl": "",
+  "link": "https://www.telluridefire.com/files/cef8a399b/Agenda+-October+20th%2C+2026.pdf",
+  "zoomLink": "",
+  "livestream": ""
  }
 }

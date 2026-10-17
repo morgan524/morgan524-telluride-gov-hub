@@ -1,17 +1,5 @@
 [
   {
-    "title": "Telluride Arts Salon Night",
-    "link": "https://www.telluride.com/event/telluride-arts-salon-night/",
-    "description": "Salon Nights are inspired by the legendary Parisian salons - those lively gatherings where artists, thinkers, and …",
-    "pubDate": "2026-04-09",
-    "endDate": "2026-10-15",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/60890/download.800x533.webp"
-  },
-  {
     "title": "Live Music at Alloy Kitchen",
     "link": "https://www.telluride.com/event/live-music-at-alloy-kitchen/",
     "description": "Free live music all season long. Alloy Kitchen at Mountain Lodge Telluride hosts a rotating lineup of local favorites - …",
@@ -34,17 +22,6 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/49105/scott-rodgerson-zlhbjxbccec-unsplash.800x533.webp"
-  },
-  {
-    "title": "Wash Party",
-    "link": "https://www.telluride.com/event/wash-party/",
-    "description": "It's time to Wash Party with Patagonia Telluride! Drop your winter gear off at The Laundromat, including shell jackets, …",
-    "pubDate": "2026-10-15",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63746/wash_party_flyer_final.800x533.webp"
   },
   {
     "title": "Telluride Horror Show",

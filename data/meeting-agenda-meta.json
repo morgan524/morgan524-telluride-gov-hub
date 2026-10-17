@@ -1,37 +1,4 @@
 {
-  "rico|2026-09-16|Rico Board of Trustees Regular Meeting": {
-    "sv": 4,
-    "ph": "b858cb282617fb09"
-  },
-  "telluride|2026-09-16|Historic & Architectural Review Commission Chair - Sep 16 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8023",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/dRjdHtmeTB6DmemBLALAFw",
-    "meetingId": "854 0207 9752",
-    "passcode": "775535",
-    "phone": "301-715-8592"
-  },
-  "telluride|2026-09-16|Historic & Architectural Review Commission - Sep 16 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8022",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA",
-    "meetingId": "812 9136 3866",
-    "passcode": "440860.",
-    "phone": "301-715-8592"
-  },
-  "telluride|2026-09-16|Parks & Recreation Commission - Sep 16 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082",
-    "sv": 4,
-    "ph": "6fb96e40a5040f91"
-  },
-  "county|2026-09-16|Board of County Commissioners Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/900/files/agenda/1999",
-    "zoomUrl": "https://us02web.zoom.us/meeting/register/tnLYPloRS7mtngp_HQWFXQ",
-    "meetingId": "867 6377 9971",
-    "passcode": "898059",
-    "phone": "719-359-4580"
-  },
   "mv|2026-09-17|Town Council Meeting": {
     "sv": 4,
     "agendaUrl": "https://townofmountainvillage.com/site/assets/files/49907/september_17-_2026_town_council_meeting_agenda.pdf",
@@ -158,10 +125,6 @@
     "sv": 4,
     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1070/files/agenda/2014"
   },
-  "ouray|2026-09-16|, 1-4:00 PM (@ OURAY COURTHOUSE!) - The PC will hold 2 public hearings; Curry Regular PUD, and an Exemption application from Clifford Pastor to subdivide his parcel into 2 lots. (Packet materials are under media TV icon)": {
-    "agendaUrl": "https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1017",
-    "sv": 4
-  },
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132",
     "sv": 4,
@@ -241,10 +204,6 @@
     "meetingId": "864 1732 3408",
     "passcode": "709234",
     "phone": "970-728-3071"
-  },
-  "telluride|2026-09-16|CANCELED - Parks & Recreation Commission - Sep 16 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082",
-    "sv": 4
   },
   "smart|2026-10-08|SMART Board of Directors": {
     "sv": 4,
@@ -358,11 +317,15 @@
   },
   "fire|2026-10-20|Board of Directors Meeting": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://www.telluridefire.com/files/cef8a399b/Agenda+-October+20th%2C+2026.pdf"
   },
   "school|2026-10-20|Telluride Board of Education Monthly Meeting": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://files.smartsites.parentsquare.com/3403/102026_mm_packet.pdf",
+    "zoomUrl": "https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09",
+    "meetingId": "865 8512 4120",
+    "passcode": "468668",
+    "phone": "970-728-6617"
   },
   "ophir|2026-10-20|General Assembly Meeting": {
     "sv": 4,
@@ -637,5 +600,13 @@
   "ouraycity|2026-10-19|Ouray City Council Regular Meeting": {
     "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=765214",
     "sv": 4
+  },
+  "school|2026-11-16|Telluride Board of Education Work Session": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "norwood|2026-11-16|Planning and Zoning Commission Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   }
 }
