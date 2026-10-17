@@ -78,7 +78,16 @@ function detectAnomalies(arrays, baseline) {
     const count = Array.isArray(arr) ? arr.length : 0;
     const dm = (baseline.sources[name] && baseline.sources[name].dailyMax) || {};
     const recentMax = Math.max(0, ...Object.values(dm));
-    if (count === 0 && recentMax >= MIN_EXPECTED) {
+    // A real break is a CLIFF: the source was at its normal level a day or two
+    // ago and is suddenly empty. Small date-windowed feeds (e.g. Ouray County's
+    // non-government events: next 30 days only) instead TAPER 3 → 2 → 1 → 0 as
+    // their few events pass, which is not a broken scraper — the 2026-10-17
+    // OURAY_COUNTY_EVENTS "High" was that: feed HTTP 200, 8 gov meetings
+    // parsed, just no non-gov events in the window. Require the last two days'
+    // level to still be ≥ MIN_EXPECTED before calling a zero a breakage.
+    const lastDays = Object.keys(dm).sort().slice(-2).map(k => dm[k]);
+    const recentLevel = Math.max(0, ...lastDays);
+    if (count === 0 && recentMax >= MIN_EXPECTED && recentLevel >= MIN_EXPECTED) {
       out.push({
         name, count, recentMax, severity: 'High',
         message: `${name}: 0 items now — had up to ${recentMax} in the last ${WINDOW_DAYS} days. ` +
