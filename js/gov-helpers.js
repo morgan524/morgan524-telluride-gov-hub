@@ -2529,6 +2529,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Flock defunded: Telluride’s automatic license plate readers turned off",
+    source: "Telluride Times",
+    date: "October 18, 2026",
+    firstSeen: "2026-10-18",
+    newsTopic: "government",
+    copy: "Telluride Town Council voted Oct. 6 to defund its two Flock Safety license plate reader cameras — $5,000/year — cutting short a five-year contract signed in March 2024. The cameras were shut off immediately over privacy concerns tied to reproductive care, immigration status, and potential federal data access. The marshal's department credited the technology with helping solve every major case over the past two-and-a-half years.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_8aa08b2f-34a5-4116-9349-53c8bb221ca6.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/c5/1c5eca62-aa89-47b2-bcfc-f84d92031fe0/6ad265cda9487.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Latino voters helped put Trump back in the White House. What's their next move?",
     source: "Telluride Times",
     date: "October 18, 2026",
@@ -2558,10 +2570,22 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "October 18, 2026",
     firstSeen: "2026-10-18",
     newsTopic: "education",
-    copy: "Three Telluride High School golfers — Banks O'Brien, Irvin Ossola, and Gage Wilson — competed at the Class 2A State Golf Championship in Pueblo on Oct. 5–6, with the team finishing fourth out of 14 schools. Sophomore O'Brien tied for third individually at 10 over par; Ossola tied for 22nd; and Wilson, just 18 months into the sport, tied for 43rd. Coach Reinecke called the result motivating heading into next year.",
+    copy: "Telluride High School's three-man golf team placed fourth out of 14 schools at the Class 2A State Championship in Pueblo on Oct. 5–6. Sophomore Banks O'Brien tied for third individually, shooting 75-77; sophomore Irvin Ossola tied for 22nd; and senior Gage Wilson, just 18 months into the sport, tied for 43rd. Coach Reinecke called the difficult conditions a motivator heading into next year.",
     claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_4f6b8d4a-b47c-4758-9101-a1ea62d34214.html",
+    href: "https://www.telluridenews.com/sports/article_4f6b8d4a-b47c-4758-9101-a1ea62d34214.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/79/a790ee02-16c3-4596-b5a3-4dd748dcfa4f/6ad16256bbee0.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "A boost for early readers",
+    source: "Telluride Times",
+    date: "October 17, 2026",
+    firstSeen: "2026-10-18",
+    newsTopic: "government",
+    copy: "Telluride R-1's literacy coach Emily Bordogna has secured four years of funding through a Colorado Department of Education Early Literacy Grant, keeping her K-3 coaching position stable despite statewide education budget cuts. A second grant adds a year of outside consulting support. The focus is strengthening core reading instruction so fewer kids need intervention later on.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_fccc60fe-e2ea-4f50-a4b7-2ea50780e99d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/be/3be370d8-79e8-4cac-9f44-c4b97b2a5d8b/6acf4c615bf7f.image.jpg",
     imgHiRes: true
   },
   {
@@ -3119,6 +3143,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/norwood_post/article_8027d0cb-6fa2-4d5e-99f0-f0c275b144d5.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/7f/17f3abc2-0169-48c0-8de5-4628aa5bd01f/6ac918be33210.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Fairway masters",
+    source: "Telluride Times",
+    date: "October 18, 2026",
+    firstSeen: "2026-10-18",
+    newsTopic: "education",
+    copy: "Three Telluride High School golfers — Banks O'Brien, Irvin Ossola, and Gage Wilson — competed at the Class 2A State Golf Championship in Pueblo on Oct. 5–6, with the team finishing fourth out of 14 schools. Sophomore O'Brien tied for third individually at 10 over par; Ossola tied for 22nd; and Wilson, just 18 months into the sport, tied for 43rd. Coach Reinecke called the result motivating heading into next year.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_4f6b8d4a-b47c-4758-9101-a1ea62d34214.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/79/a790ee02-16c3-4596-b5a3-4dd748dcfa4f/6ad16256bbee0.image.jpg",
     imgHiRes: true
   },
   {
@@ -4343,17 +4379,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-10-18/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-10-18T14:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
     title: "Art in the Age of AI",
     link: "https://koto.org/event/art-in-the-age-of-ai/",
     description: "Can AI make art? Should it? What happens to human artists and human audiences when algorithms influence the way art is conceived and consumed? Join acclaimed songwriter and performer Emily Scott Robinson and novelist and former AI ethics insider Jenny Williams for a deep discussion of the impacts AI is already having on creative practice, labor, and industries, along with impassioned hopes for the future—interspersed with songs and readings from these two artists’ body of work (100% human-made). This event will be held in the Wilkinson Public Library Program Room on Monday, October 19th at 5:30pm.",
@@ -5464,7 +5489,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
     pubDate: "2026-10-20T19:30:00.000Z",
-    endDate: "2026-12-16",
+    endDate: "2026-12-17",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
