@@ -1,29 +1,5 @@
 [
   {
-    "title": "Live Music at Alloy Kitchen",
-    "link": "https://www.telluride.com/event/live-music-at-alloy-kitchen/",
-    "description": "Free live music all season long. Alloy Kitchen at Mountain Lodge Telluride hosts a rotating lineup of local favorites - …",
-    "pubDate": "2026-06-11",
-    "endDate": "2026-10-16",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/62862/alloy-live-music-pool-deck.800x533.webp"
-  },
-  {
-    "title": "Lone Tree Cemetery Tours",
-    "link": "https://www.telluride.com/event/lone-tree-cemetery-tours/",
-    "description": "Join the Telluride Historical Museum for Lone Tree Cemetery Tours this fall! This Telluride Historical Museum tour …",
-    "pubDate": "2026-09-11",
-    "endDate": "2026-10-16",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/49105/scott-rodgerson-zlhbjxbccec-unsplash.800x533.webp"
-  },
-  {
     "title": "Telluride Horror Show",
     "link": "https://www.telluride.com/event/telluride-horror-show/",
     "description": "The Telluride Horror Show, Colorado's first and largest horror film festival, returns for its 17th edition October 16 - …",
@@ -330,5 +306,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63712/1789488966-daysoff.800x533.webp"
+  },
+  {
+    "title": "Elf the Musical",
+    "link": "https://www.telluride.com/event/elf-the-musical/",
+    "description": "Buddy, an orphan, mistakenly crawls into Santa’s bag and is transported to the North Pole. To find his father, Buddy …",
+    "pubDate": "2026-12-17",
+    "endDate": "2026-12-25",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63709/elf_instagram.800x533.webp"
   }
 ]

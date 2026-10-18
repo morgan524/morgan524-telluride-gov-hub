@@ -1,22 +1,4 @@
 {
-  "mv|2026-09-17|Town Council Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/49907/september_17-_2026_town_council_meeting_agenda.pdf",
-    "zoomUrl": "https://us06web.zoom.us/webinar/register/WN_Kr1kwk46TGyPz8uk-4_ktA",
-    "phone": "970-369-6429"
-  },
-  "airport|2026-09-17|TRAA Board of Commissioners Meeting": {
-    "sv": 4,
-    "ph": "b858cb282617fb09"
-  },
-  "telluride|2026-09-17|Liquor Licensing Authority - Sep 17 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8145",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1",
-    "meetingId": "861 6987 1704",
-    "passcode": "281002.",
-    "phone": "346-248-7799"
-  },
   "norwood|2026-09-21|Planning and Zoning Commission Meeting": {
     "sv": 4,
     "agendaUrl": "https://www.norwoodtown.com/files/d3a7e2221/09.21.2026+P%26Z+BOA+AGENDA.pdf",
@@ -89,14 +71,6 @@
     "zoomUrl": "https://us06web.zoom.us/meeting/register/gyjcfvLBT_6qgGte72mOHw",
     "meetingId": "822 7800 9621",
     "passcode": "976053",
-    "phone": "301-715-8592"
-  },
-  "telluride|2026-09-17|Special Meeting - Planning & Zoning Commission - Sep 17 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8310",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/j/85992668350?pwd=R89oLHvfdFJZrpNb6yzGqqHUrl3phe.1",
-    "meetingId": "859 9266 8350",
-    "passcode": "503877",
     "phone": "301-715-8592"
   },
   "telluride|2026-09-30|Special Town Council - Sep 30 2026": {
@@ -264,12 +238,6 @@
     "sv": 4,
     "ph": "b858cb282617fb09"
   },
-  "med|2026-09-17|Regular Board Meeting": {
-    "agendaUrl": "https://www.tellmed.org/files/61309e97c/THD+Special+Bd+Mtg+Agenda+9.17.26.pdf",
-    "zoomUrl": "https://us02web.zoom.us/j/81133887855?from=addon",
-    "meetingId": "811 3388 7855",
-    "sv": 4
-  },
   "county|2026-09-23|Board of County Commissioners Special Meeting": {
     "sv": 4,
     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/870/files/agenda/2008",
@@ -285,10 +253,6 @@
     "meetingId": "875 8192 6670",
     "passcode": "036006",
     "phone": "719-359-4580"
-  },
-  "telluride|2026-09-17|Open Space Commission Site Walk - Sep 17 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8317",
-    "sv": 4
   },
   "norwood|2026-09-22|Norwood Water Commission Meeting": {
     "agendaUrl": "https://www.norwoodtown.com/files/677a3380f/09.22.2026+NWC+Amended+Agenda.pdf",
@@ -437,7 +401,7 @@
   "telluride|2026-10-27|Town Council - Oct 27 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045",
     "sv": 4,
-    "ph": "503b66ccc1b69729"
+    "ph": "fe6dedc36e608232"
   },
   "county|2026-10-28|Board of County Commissioners Work Session": {
     "sv": 4
@@ -490,7 +454,7 @@
   "telluride|2026-11-04|Commission for Community Assistance, Arts & Special Events - Nov 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8068",
     "sv": 4,
-    "ph": "08f639f85583f1c4"
+    "ph": "f2f5a182ab5669a0"
   },
   "telluride|2026-11-04|Telluride Housing Authority Subcommittee - Nov 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8165",
@@ -504,7 +468,7 @@
   "telluride|2026-11-05|Special Meeting - Planning & Zoning Commission - Nov 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312",
     "sv": 4,
-    "ph": "2f0962b84aac8b50"
+    "ph": "930623a06e6efd7f"
   },
   "telluride|2026-11-05|Town Council Budget - Nov 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054",
@@ -606,6 +570,18 @@
     "ph": "b858cb282617fb09"
   },
   "norwood|2026-11-16|Planning and Zoning Commission Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "fire|2026-11-17|Board of Directors Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "school|2026-11-17|Telluride Board of Education Monthly Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "ophir|2026-11-17|General Assembly Meeting": {
     "sv": 4,
     "ph": "b858cb282617fb09"
   }
