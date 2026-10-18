@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-10-18",
+    "title": "The county wants to paint the jail. Also: helium.",
+    "body": "The Board of County Commissioners has a full plate this week — material hauling, trail construction, a fuel island canopy, jail painting, and a multi-jurisdictional hazard mitigation plan update. Tucked in alongside all that is an ECMC violation order against American Helium Operating LLC. That last one is easy to scroll past, but a state enforcement action against an energy operator in the county tends to land differently depending on who you ask. Some residents see resource extraction as a threat to the land and water up here. Others see it as legitimate economic activity the county shouldn't be in the business of cheering or jeering. The board hasn't taken a public position. So — how much does an energy violation order on the county's agenda matter to you?",
+    "choices": [
+      "It matters a lot",
+      "It's a state issue, not ours",
+      "Depends on the details",
+      "It's complicated"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-10-17",
     "title": "Wildfire code is now law — what comes next?",
     "body": "Town Council adopted the Colorado Wildfire Resiliency Code amendment to the Land Use Code back in August 2026. Now Planning & Zoning is expected to work through what implementation actually looks like. That's where it gets interesting. Some folks figure tighter building standards protect the whole community — a fire doesn't ask whose roof it jumps to next. Others worry the new rules add cost and friction to construction that's already brutal up here. The code is adopted, but the details aren't settled yet.\n\nSo: do you think the wildfire code amendment will make Telluride meaningfully safer, or mostly make building harder?",
@@ -417,21 +432,6 @@
       "More trails, more access",
       "Protect what's already there",
       "Depends on the specifics"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-09-18",
-    "title": "The wildfire code lands on P&Z's desk",
-    "body": "Town Council passed Ordinance #1640 back in August 2026, folding the Colorado Wildfire Resiliency Code into Telluride's Land Use Code. Now Planning & Zoning has to figure out what that actually means on the ground.\n\nSome residents will say it's overdue — one dry summer up here and the argument makes itself. Others will push back on what new resiliency standards do to construction costs, design flexibility, or already-strained housing options. Implementation is where the rubber meets the road, and that's still being worked out.\n\nWhat matters most to you as this code gets put into practice?",
-    "choices": [
-      "Fire safety comes first",
-      "Worried about the costs",
-      "Depends on the details",
-      "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",
     "topics": [
