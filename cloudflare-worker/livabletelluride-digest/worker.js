@@ -226,7 +226,11 @@ async function ltAudience(appKey, env, isTest) {
     return s.id;
   };
   if (isTest) return { segment: { id: id(env.CUSTOMERIO_TEST_SEGMENT || "Me Only") } };
-  return { and: [{ segment: { id: id("Weekly Update subscribers") } }, { not: { segment: { id: id("Yahoo & AOL Recipients") } } }] };
+  // Yahoo/AOL included again (Morgan 2026-10-19, "let's see what happens"): the
+  // "Yahoo & AOL Recipients" segment (28) was excluded during deliverability
+  // recovery. To exclude it again, set CUSTOMERIO_WEEKLY_AUDIENCE to
+  // {"and":[{"segment":{"id":15}},{"not":{"segment":{"id":28}}}]}.
+  return { segment: { id: id("Weekly Update subscribers") } };
 }
 
 const ltSleep = (ms) => new Promise((res) => setTimeout(res, ms));

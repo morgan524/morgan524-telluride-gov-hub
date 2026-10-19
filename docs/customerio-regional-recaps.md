@@ -74,7 +74,9 @@ broadcast, with a `recipients` filter:
 
 API recipients **replace** the audience set in the UI, so the Worker restates
 it, looking the segments up by name: Weekly Digest = "Weekly Update
-subscribers" AND NOT "Yahoo & AOL Recipients"; Weekly Digest TEST = "Me Only".
+subscribers" (Yahoo/AOL included again since 2026-10-19; it had been AND NOT
+"Yahoo & AOL Recipients" during deliverability recovery); Weekly Digest TEST =
+"Me Only".
 If those segments are renamed, set `CUSTOMERIO_WEEKLY_AUDIENCE` /
 `CUSTOMERIO_TEST_AUDIENCE` (a JSON recipients filter) on the Worker.
 
