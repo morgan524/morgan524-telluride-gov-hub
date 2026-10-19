@@ -7,7 +7,7 @@
 //   • scripts/build-rss-feed.js — the weekly Mailchimp RSS digest (imports
 //     RICK_VOICE so its lede+notable prompt shares the exact persona).
 //   • scripts/weekly-email.js   — the weekly digest-desk email (calls
-//     generateRickLede() to write the intro from the real meetings and events).
+//     generateRickLede() to write the intro from the real meetings; no events since 2026-10-19).
 //
 // Keeping the persona here means the two paths can't drift. (The Friday
 // "Weekend Ahead" email that also used it was retired 2026-10-04.)
@@ -54,14 +54,16 @@ function callClaude(apiKey, prompt, maxTokens) {
   });
 }
 
-// Build the lede-only prompt for the weekly (meetings + events).
+// Build the lede-only prompt for the weekly (meetings only).
 function ledePrompt({ meetings, events }) {
-  const windowLine = 'Below are the UPCOMING government meetings and community events for the coming week (Friday through Thursday) across the Telluride region.';
+  // Morgan 2026-10-19: the Week Ahead intro covers public meetings ONLY — no
+  // events (events are getting their own email). Any events passed in are ignored.
+  const windowLine = 'Below are the UPCOMING government meetings for the coming week across the Telluride region.';
   // HOUSE STYLE (Morgan, 2026-09-21 — "save that style for all future
   // digests"): cover MORE of the window, put the DAY OF THE WEEK on every item,
   // and wrap each body / event name in **double asterisks**. weekly-email.js
   // renders **…** as bold (escBold); nothing else is markup.
-  const style = ' Every meeting or event you mention MUST carry its day of the week (e.g. "Tuesday", "on Saturday"). Wrap the NAME of each governing body and each event in double asterisks for bold, exactly like **Telluride Town Council** or **Slap Dragon** — the name only, not the day or the venue. No other markup.' +
+  const style = ' Every meeting you mention MUST carry its day of the week (e.g. "Tuesday"). Wrap the NAME of each governing body in double asterisks for bold, exactly like **Telluride Town Council** — the name only, not the day or the venue. No other markup.' +
     // Morgan 2026-09-30: the region has many town councils, so a bare
     // "Town Council" is ambiguous. Every mention names its town.
     ' ALWAYS name a governing body with its town or county, every time you mention it — use the "body" name given for each meeting, e.g. **Telluride Town Council**, **Mountain Village Town Council**, **Ridgway Town Council**, **Ouray City Council**, **San Miguel County Board of County Commissioners**. NEVER write a bare "Town Council", "City Council", "Council", or "the Board" — not even on a second reference in the same paragraph.';
@@ -71,15 +73,14 @@ function ledePrompt({ meetings, events }) {
   // 2026-10-04: "the curtain goes up on Not-So-Young People's Theater presents
   // Shrek The Musical" — an event title of the form "X presents Y" read as a
   // broken sentence when dropped into prose.
-  const titles = ' When an event title has the form "X presents Y", write it as "X\'s Y" or "Y from X" so the sentence reads naturally (e.g. **Shrek The Musical** from Not-So-Young People\'s Theater).';
-  const byDay = titles + ' Separate the day paragraphs with a single newline character (\\n) inside the "lede" string; do not put two days in one paragraph.';
+  const byDay = ' Separate the day paragraphs with a single newline character (\\n) inside the "lede" string; do not put two days in one paragraph.';
   // Morgan 2026-10-19: each meeting carries "importance" (scripts/lib/
   // recap-importance.js). Major = a key body (Telluride Council/P&Z/HARC, San
   // Miguel BOCC/Planning Commission, Mountain Village Council/DRB) taking up
   // issues that affect everyone; those get a summary. Minor meetings are only
   // named, and single-lot items are never the story.
   const importance = ' Each meeting has an "importance" field. For a "major" meeting, summarize in a sentence or two what is on its agenda that affects the whole community (budgets, taxes and fees, code changes, housing policy, transit, wildfire, town-owned projects), not individual lot or property decisions. For a "minor" meeting, ONLY name it with its day (e.g. "**Ridgway Planning Commission** also meets Wednesday") — no description of its agenda.';
-  const spec = 'a plain-prose intro that orients a busy local (120-220 words), written DAY BY DAY in date order: one short paragraph per day that has a meeting or event worth mentioning, each opening with that day (e.g. "Monday, …"). Give the major meetings the most weight within their days, name the minor meetings briefly on theirs, and fold in three or so events "on the lighter side" on theirs. Aim to name most of the meetings and several events, not just one or two.' + importance + style + byDay;
+  const spec = 'a plain-prose intro that orients a busy local (120-220 words), written DAY BY DAY in date order: one short paragraph per day that has a meeting worth mentioning, each opening with that day (e.g. "Monday, …"). Give the major meetings the most weight within their days and name the minor meetings briefly on theirs. Aim to name most of the meetings. Do NOT mention community events, concerts, films, festivals, or anything "on the lighter side" — public meetings only.' + importance + style + byDay;
   const parts = [
     RICK_VOICE,
     '',
@@ -88,8 +89,7 @@ function ledePrompt({ meetings, events }) {
     'Return ONLY a JSON object (no markdown fence) with exactly one field, "lede": ' + spec + ' Be specific and grounded — only use what is in the lists below; never invent times, prices, lineups, vote outcomes, or details you were not given. No greeting, no sign-off, no "Rick here", no calls to action, no emoji.',
     '',
   ];
-  parts.push('MEETINGS:', JSON.stringify(meetings || [], null, 1), '');
-  parts.push('EVENTS:', JSON.stringify(events || [], null, 1));
+  parts.push('MEETINGS:', JSON.stringify(meetings || [], null, 1));
   return parts.join('\n');
 }
 
@@ -116,8 +116,9 @@ function ledeInputFingerprint({ meetings, events, cadence } = {}) {
     // written under the old style is regenerated (v2 = bold names + weekdays,
     // v3 = every body named with its town — no bare "Town Council",
     // v4 = one paragraph per day, line break between days,
-    // v5 = major meetings summarized, minor meetings only named).
-    style: 5,
+    // v5 = major meetings summarized, minor meetings only named,
+    // v6 = meetings only, no events).
+    style: 6,
     // Always 'week' now (Weekend Ahead retired 2026-10-04). Kept in the
     // payload so every existing cache key stays valid.
     cadence: 'week',

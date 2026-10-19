@@ -1036,7 +1036,7 @@ const festivalHero = festivalsThisWeek.map(festCard).join('');
 (async () => {
 
 // DEFAULT the intro to a fresh Rick-voice summary of THIS window's real
-// meetings + events — unless a human pinned a dated intro in the lede JSON
+// meetings (no events) — unless a human pinned a dated intro in the lede JSON
 // (that override always wins). Best-effort: generateRickLede returns null when
 // there's no ANTHROPIC_API_KEY or the call fails, and we keep the fallback.
 // The intro must name every body with its town ("Telluride Town Council", not
@@ -1062,7 +1062,9 @@ if (!LEDE_IS_OVERRIDE) {
         ? { body: ledeBodyName(m.name, m.src), title: m.name, date: m.date, importance: 'major', summary: m.summary }
         : { body: ledeBodyName(m.name, m.src), title: m.name, date: m.date, importance: 'minor' };
     }),
-    events: chosen.map((e) => ({ title: e.title, date: e.date, location: townLabel(e), summary: e.summary })),
+    // Meetings only (Morgan 2026-10-19): events stay in the email body but are
+    // never summarized in the intro.
+    events: [],
     apiKey: process.env.ANTHROPIC_API_KEY,
     // Content-addressed so re-rendering an UNCHANGED window is free and
     // byte-identical. digest-refresh.yml now re-renders after every Content
