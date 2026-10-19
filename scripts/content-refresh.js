@@ -5957,7 +5957,9 @@ async function syncSmartAgendas() {
     let href = m[1];
     const text = m[2].replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
     if (/special/i.test(text)) continue; // skip special-meeting rows; regular monthly only
-    const t = text.match(/\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})\b[\s\S]*?\b(Agenda|Packet)\b/i);
+    // "October 2025 Board Packet" (old) or "October 8, 2026 Board Packet" (since
+    // Aug 2026 — the old pattern missed these, so posted agendas never linked).
+    const t = text.match(/\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+(?:\d{1,2},?\s+)?(\d{4})\b[\s\S]*?\b(Agenda|Packet)\b/i);
     if (!t) continue;
     if (!/^https?:/i.test(href)) href = ORIGIN + (href.startsWith('/') ? href : '/' + href);
     const key = t[1][0].toUpperCase() + t[1].slice(1).toLowerCase() + ' ' + t[2];
@@ -6000,7 +6002,75 @@ async function syncSmartAgendas() {
     });
   }
   console.log(`  SMART: ${Object.keys(byMonth).length} month(s) on page; rebuilt ${stubs.length} stub(s) (${stubs.filter(s => s.agendaUrl).length} with agenda)`);
-  return stubs;
+  const gondola = await syncSmartGondolaMeetings(todayMid);
+  return stubs.concat(gondola).sort((a, b) => new Date(a.date) - new Date(b.date));
+}
+
+// SMART's gondola committees (Morgan 2026-10-19: "missing SMART meetings"):
+// the Gondola Advisory Committee (Gsub) meets virtually on the THIRD MONDAY of
+// each month at 3:00 PM except holidays, and the Leadership Committee (all the
+// partner governing bodies) is convened at milestones. Both post agendas and
+// packets on the gondola meetings page, not the board page. Every dated
+// meeting with posted documents from the last 30 days on is listed, plus one
+// placeholder for the next third-Monday Gsub meeting with nothing posted yet
+// (skipped for January/February, when the third Monday is a federal holiday,
+// and when the date is under 2 days away with no agenda — packets post at
+// least 24 hours ahead, so a missing one that late means no meeting).
+async function syncSmartGondolaMeetings(todayMid) {
+  const PAGE = 'https://smarttelluride.colorado.gov/gondola-project-meetings-and-materials';
+  const ORIGIN = 'https://smarttelluride.colorado.gov';
+  const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',
+                  'July', 'August', 'September', 'October', 'November', 'December'];
+  const html = await fetchPage(PAGE, 'SMART gondola meetings page');
+  if (!html) return [];
+  const byDate = {};   // 'YYYY-MM-DD|gsub|leadership' → { agendaUrl, packetUrl }
+  const aRe = /<a\b[^>]*href="([^"]+\.pdf[^"]*)"[^>]*>([\s\S]*?)<\/a>/gi;
+  let m;
+  while ((m = aRe.exec(html)) !== null) {
+    let href = m[1];
+    const text = m[2].replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+    const t = text.match(/\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2}),?\s+(\d{4})\b[\s\S]*?\b(Agenda|Packet)\b/i);
+    if (!t) continue;
+    const mi = MONTHS.findIndex((x) => x.toLowerCase() === t[1].toLowerCase());
+    const iso = `${t[3]}-${String(mi + 1).padStart(2, '0')}-${String(t[2]).padStart(2, '0')}`;
+    const body = /leadership/i.test(text) ? 'leadership' : 'gsub';
+    if (!/^https?:/i.test(href)) href = ORIGIN + (href.startsWith('/') ? href : '/' + href);
+    const k = iso + '|' + body;
+    byDate[k] = byDate[k] || {};
+    if (/agenda/i.test(t[4])) byDate[k].agendaUrl = href; else byDate[k].packetUrl = href;
+  }
+  const lookback = new Date(todayMid.getTime() - 30 * 86400000);
+  const label = (iso) => { const [y, mo, d] = iso.split('-').map(Number); return MONTHS[mo - 1] + ' ' + d + ', ' + y; };
+  const stub = (iso, body, docs) => ({
+    date: label(iso),
+    time: body === 'gsub' ? '3:00 PM' : '',
+    title: body === 'gsub' ? 'SMART Gondola Advisory Committee' : 'SMART Gondola Leadership Committee',
+    location: 'Virtual (Zoom link in the agenda)',
+    agendaUrl: docs.agendaUrl || null,
+    packetUrl: docs.packetUrl || null,
+    note: body === 'gsub'
+      ? (docs.agendaUrl ? 'Gondola Advisory Committee (Gsub): agenda and packet available (PDF).' : 'Gondola Advisory Committee (Gsub) — advises SMART on the gondola replacement project. Agenda, packet and Zoom link post at least 24 hours before.')
+      : (docs.agendaUrl ? 'Gondola Leadership Committee — the partner governing bodies together: agenda and packet available (PDF).' : 'Gondola Leadership Committee — the partner governing bodies together.'),
+  });
+  const out = [];
+  for (const [k, docs] of Object.entries(byDate)) {
+    const [iso, body] = k.split('|');
+    if (new Date(iso + 'T00:00:00') >= lookback) out.push(stub(iso, body, docs));
+  }
+  // Next third-Monday Gsub placeholder (this month or next).
+  for (let i = 0; i <= 1; i++) {
+    const base = new Date(todayMid.getFullYear(), todayMid.getMonth() + i, 1);
+    const firstMon = 1 + ((1 - base.getDay() + 7) % 7);
+    const d = new Date(base.getFullYear(), base.getMonth(), firstMon + 14);
+    const iso = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    if (byDate[iso + '|gsub']) break;                       // already listed with documents
+    if (d.getMonth() <= 1) continue;                         // MLK Day / Presidents Day
+    if (d - todayMid < 2 * 86400000) continue;               // too close with nothing posted
+    out.push(stub(iso, 'gsub', {}));
+    break;
+  }
+  console.log(`  SMART gondola committees: ${Object.keys(byDate).length} dated meeting(s) on page; listing ${out.length}`);
+  return out;
 }
 
 // TMVOA (Telluride Mountain Village Owners Association) — a private HOA, not
