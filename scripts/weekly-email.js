@@ -19,7 +19,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-const { stripDescPreamble, stripFormLabels } = require('./lib/clean-text.js');
+const { stripDescPreamble, stripFormLabels, titleCaseEventTitle } = require('./lib/clean-text.js');
 const { generateRickLede } = require('./lib/rick-lede.js');
 const RI = require('./lib/recap-importance.js');
 const { meetingDisplayName, SELF_IDENTIFYING } = require('./lib/meeting-title.js');
@@ -211,7 +211,7 @@ for (const name of EVENT_ARRAYS) {
     if (/(^|:\s*)(postponed|cancell?ed)\b/i.test(e.title)) continue;   // don't feature a postponed/canceled event
     if (MAJOR_FEST_RE.test(e.title)) continue;           // marquee festivals → featured hero, not daily picks
     evts.push({
-      title: e.title, date,
+      title: titleCaseEventTitle(e.title), date,
       href: e.link || e.href || e.url || '',
       summary: stripFormLabels(stripDescPreamble((e.summary || e.copy || e.description || '').replace(/<[^>]+>/g, ' ').replace(/https?:\/\/\S+/g, '').replace(/\*+/g, '').replace(/[\\|]/g, ' ').replace(/\s+/g, ' ').trim())),
       time: e.time || '', location: e.location || '', img: resolveEmailImg(e),

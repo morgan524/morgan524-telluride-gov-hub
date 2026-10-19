@@ -3449,7 +3449,7 @@ function replaceJsValue(source, varName, newValue, isObject = false) {
     // Funnel: normalize (sanitize) → validate (quarantine broken records)
     // → serialize. Quarantines are logged, not silent. A whole source
     // going malformed shrinks the array and trips source-health.
-    const sane = sanitizeRecords(newValue);
+    const sane = sanitizeRecords(newValue, varName);
     const { kept, quarantined } = validateRecords(sane);
     if (quarantined.length) {
       console.warn(`  ⚠ ${varName}: quarantined ${quarantined.length} malformed record(s) before write:`);

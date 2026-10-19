@@ -75,7 +75,46 @@ function stripFormLabels(s) {
     .replace(/\s+/g, ' ').trim();
 }
 
+// Event titles in Title Case (Morgan 2026-10-19): "TODDLER STORYTIME ART FOR
+// AGES 2.5-5" → "Toddler Storytime Art for Ages 2.5-5", "Up-off Gymnastics" →
+// "Up-Off Gymnastics". An ALL-CAPS title is lowered first (known acronyms and
+// vowel-less tokens like DJ/BBQ stay capitalized); then every word starting
+// with a lowercase letter is capitalized, except short joining words mid-title.
+// Words with inner capitals or digits (iPhone, 2.5-5, 5k) are left alone.
+const TC_MINOR = new Set(['a', 'an', 'and', 'as', 'at', 'but', 'by', 'for', 'from', 'in', 'into', 'nor', 'of', 'on', 'or', 'per', 'the', 'to', 'vs', 'via', 'with']);
+const TC_ACRONYMS = new Set(['KOTO', 'TSRC', 'ADA', 'AA', 'NA', 'ESL', 'STEM', 'LGBTQ', 'LGBTQIA', 'USA', 'US', 'HOA', 'TMVOA', 'SMART', 'BOCC', 'HARC', 'P&Z', 'Q&A', 'AI', 'EMT', 'ID', 'II', 'III', 'IV', 'VI', 'VFW', 'YMCA', 'AARP', 'ASL', 'RSVP', 'NYE', 'NFL', 'NBA', 'UFC', 'FAQ', 'TBA', 'TBD', 'MLK', 'CO', 'UTV', 'ATV', 'PTA', 'PTO', 'K-12', '4-H', 'TCA', 'TAB', 'TMC', 'TPAF', 'AHAA', 'SMRT', 'CORA', 'LT']);
+function titleCaseEventTitle(title) {
+  let t = String(title == null ? '' : title);
+  if (!/[a-z]/i.test(t)) return t;
+  const allCaps = !/[a-z]/.test(t);
+  const words = t.split(/(\s+)/);
+  let first = true;
+  return words.map((w, i) => {
+    if (/^\s+$/.test(w) || !w) return w;
+    const isFirst = first; first = false;
+    const prev = words.slice(0, i).join('').trim();
+    const afterColon = /[:—–-]$/.test(prev) || /[:(]$/.test(prev);
+    const isLast = !words.slice(i + 1).join('').trim();
+    const core = w.replace(/^[^A-Za-z0-9&]+|[^A-Za-z0-9&+]+$/g, '');
+    if (allCaps) {
+      if (TC_ACRONYMS.has(core.replace(/'S$/, '')) || (/^[A-Z&]{2,}$/.test(core) && !/[AEIOUY]/.test(core))) return w;
+      w = w.toLowerCase();
+    }
+    if (/^(https?:|www\.)|@/.test(w) || /^w\/$/i.test(w)) return w.replace(/^W\//, 'w/');
+    return w.split('-').map((seg, j) => {
+      const lead = seg.match(/^[^A-Za-z0-9]*/)[0];
+      const rest = seg.slice(lead.length);
+      if (!rest || !/^[a-z]/.test(rest)) return seg;                  // already capitalized, digit-led, or empty
+      if (/[A-Z0-9]/.test(rest.slice(1))) return seg;                 // iPhone, eBay, x2
+      const bare = rest.replace(/[^a-z']+$/, '');
+      if (j === 0 && !isFirst && !isLast && !afterColon && TC_MINOR.has(bare)) return seg;
+      return lead + rest[0].toUpperCase() + rest.slice(1);
+    }).join('-');
+  }).join('');
+}
+
 module.exports = {
+  titleCaseEventTitle,
   stripDescPreamble,
   stripFormLabels,
   isPlaceholderSummary,

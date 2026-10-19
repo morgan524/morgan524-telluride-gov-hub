@@ -15,6 +15,7 @@
 // Record shape (contract-checked): { title, href, date:'YYYY-MM-DD',
 //   endDate?, time, location, town, img, category, source }
 
+const { titleCaseEventTitle } = require('./lib/clean-text.js');
 const fs = require('fs');
 const path = require('path');
 const { writeMirror } = require('./lib/json-mirror.js');
@@ -361,7 +362,7 @@ function buildEventsIndex(repoRoot) {
     }
     for (const e of arr || []) {
       if (!e || !e.title) continue;
-      const title = String(e.title).trim();
+      const title = titleCaseEventTitle(String(e.title).trim());   // no ALL-CAPS titles (2026-10-19)
       if (/^\s*(?:cancell?ed|postponed)\b/i.test(title)) continue;   // source-marked cancellations/postponements
       if (EXCLUDED.test(title) || GOV_MEETING.test(title) || CLOSURE.test(title)) continue;
       const date = dateKeyOf(e);
