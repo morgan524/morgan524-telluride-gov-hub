@@ -94,7 +94,7 @@ function run(repoRoot) {
   // Meeting recaps
   for (const r of readJson(dataDir, 'meeting-recaps.json') || []) {
     if (!r || !r.title) continue;
-    out.push({ t: r.title + (r.sourceLabel ? ' — ' + r.sourceLabel : ''), s: clip(r.recap || ''), u: '/gov-hub-past.html', k: 'recap', d: r.date || '' });
+    out.push({ t: r.title + (r.sourceLabel ? ' — ' + r.sourceLabel : ''), s: clip(String(r.recap || '').replace(/\*\*/g, '')), u: '/gov-hub-past.html', k: 'recap', d: r.date || '' });
   }
 
   // Events (precomputed 60-day index)

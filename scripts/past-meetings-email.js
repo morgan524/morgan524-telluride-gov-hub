@@ -31,6 +31,7 @@ const fs = require('fs');
 const path = require('path');
 const RR = require('./lib/recap-regions.js');
 const RI = require('./lib/recap-importance.js');
+const { renderBold } = require('./lib/bold-guideline.js');
 
 const WEEK_START = process.argv[2] || new Date().toISOString().slice(0, 10);
 const OUT = process.argv[3] || 'past-meetings-email.html';
@@ -53,7 +54,7 @@ function weekLabel(weekStart) {
 
 function render(recaps, weekStart, preview) {
   const label = weekLabel(weekStart);
-  const row = (r, major) => `<tr><td style="padding:${major ? '14px' : '12px'} 0;border-top:1px solid #eef1ee;"><span style="display:inline-block;background:#e9efe9;color:#21443c;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(r.date)).toUpperCase()}</span><span style="font-size:12px;color:#7a8a85;margin-left:8px;">${esc(r.sourceLabel || '')}</span><div style="font-family:Georgia,serif;font-size:${major ? '16.5px' : '15px'};font-weight:700;color:#1a2e29;margin-top:5px;">${esc(r.title || '')}</div><div style="font-size:${major ? '15px;color:#2c3b35;line-height:1.6' : '14.5px;color:#5a6b64;line-height:1.55'};margin:4px 0 6px;">${esc(major ? RI.longRecap(r.recap) : RR.shortRecap(r.recap))}</div><a href="${esc(PAST_PAGE + '#' + RR.recapId(r))}" style="color:#a0531f;text-decoration:underline;font-size:12.5px;font-weight:600;">Read the full summary &rarr;</a></td></tr>`;
+  const row = (r, major) => `<tr><td style="padding:${major ? '14px' : '12px'} 0;border-top:1px solid #eef1ee;"><span style="display:inline-block;background:#e9efe9;color:#21443c;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(r.date)).toUpperCase()}</span><span style="font-size:12px;color:#7a8a85;margin-left:8px;">${esc(r.sourceLabel || '')}</span><div style="font-family:Georgia,serif;font-size:${major ? '16.5px' : '15px'};font-weight:700;color:#1a2e29;margin-top:5px;">${esc(r.title || '')}</div><div style="font-size:${major ? '15px;color:#2c3b35;line-height:1.6' : '14.5px;color:#5a6b64;line-height:1.55'};margin:4px 0 6px;">${renderBold(major ? RI.longRecap(r.recap) : RR.shortRecap(r.recap), esc)}</div><a href="${esc(PAST_PAGE + '#' + RR.recapId(r))}" style="color:#a0531f;text-decoration:underline;font-size:12.5px;font-weight:600;">Read the full summary &rarr;</a></td></tr>`;
   const list = recaps.slice(0, MAX_ROWS);
   const major = list.filter((r) => RI.isMajor(r));
   const other = list.filter((r) => !RI.isMajor(r));

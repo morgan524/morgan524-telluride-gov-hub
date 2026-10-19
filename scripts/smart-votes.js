@@ -25,6 +25,7 @@
  * GitHub runner IPs).
  */
 'use strict';
+const { BOLD_GUIDELINE } = require('./lib/bold-guideline.js');
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
@@ -118,7 +119,8 @@ function minutesBlocks(pages) {
 }
 
 const SYSTEM = `You extract recorded votes from the draft MINUTES of the SMART (San Miguel Authority for Regional Transportation) Board of Directors, Colorado.
-Return ONLY JSON: {"meetings":[{"date":"YYYY-MM-DD","type":"Regular|Special|Work Session","present":[{"name":"<full name as written>","jurisdiction":"<Town of Telluride|Town of Mountain Village|San Miguel County|Town of Ophir|Town of Rico|Town of Norwood|…>","alternate":true|false}],"motions":[{"title":"<short plain title, e.g. 'Resolution 2026-15 — Gondola Advisory Committee restructuring'>","category":"<one of: Budget & Finance, Transit Operations, Gondola, Intergovernmental, Appointments, Governance, Other>","mover":"<name>","seconder":"<name>","outcome":"Passed|Failed","tally":"<e.g. 5-0, or '' if not stated>","no":["<names voting no>"],"abstain":["<names>"],"recused":["<names>"],"detail":"<one sentence on what was approved>"}],"recap":"<2 short paragraphs (120-220 words total) for residents: what the board discussed and decided, in plain English, naming key projects/amounts; no invented facts; no mention of 'the minutes'>"}]}
+Return ONLY JSON: {"meetings":[{"date":"YYYY-MM-DD","type":"Regular|Special|Work Session","present":[{"name":"<full name as written>","jurisdiction":"<Town of Telluride|Town of Mountain Village|San Miguel County|Town of Ophir|Town of Rico|Town of Norwood|…>","alternate":true|false}],"motions":[{"title":"<short plain title, e.g. 'Resolution 2026-15 — Gondola Advisory Committee restructuring'>","category":"<one of: Budget & Finance, Transit Operations, Gondola, Intergovernmental, Appointments, Governance, Other>","mover":"<name>","seconder":"<name>","outcome":"Passed|Failed","tally":"<e.g. 5-0, or '' if not stated>","no":["<names voting no>"],"abstain":["<names>"],"recused":["<names>"],"detail":"<one sentence on what was approved>"}],"recap":"<2 short paragraphs (120-220 words total) for residents: what the board discussed and decided, in plain English, naming key projects/amounts; no invented facts; no mention of 'the minutes'; bold per BOLDING below>"}]}
+${BOLD_GUIDELINE}
 Rules: use ONLY what the minutes state. "Passed unanimously" = no dissent. Only list a name under no/abstain/recused if the minutes say so. Directors present = voting members (and alternates only if the minutes list them among Member Directors present). Staff/guests are not directors. INCLUDE every motion that was voted on, including approval of agenda/consent/minutes (the caller filters procedural ones). If there are no minutes in the text, return {"meetings":[]}.`;
 
 const PROCEDURAL = /\b(?:executive session|adjourn|recess)\b|\bapprov\w*\b[^.]{0,40}\b(?:agenda|minutes|consent)\b|\b(?:agenda|minutes|consent)\b[^.]{0,40}\bapprov/i;

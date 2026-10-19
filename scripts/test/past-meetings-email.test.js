@@ -101,3 +101,19 @@ test('a week with no major meetings has a single plain section', () => {
   assert.ok(!html.includes('Major Decisions') && !html.includes('Other Meetings'));
   assert.ok(html.includes('Last Week&#8217;s Meetings') || html.includes('Last Week&rsquo;s Meetings'));
 });
+
+// Bolding guideline (2026-10-19): only **marked** terms are bold; unmarked
+// legacy text bolds dollar figures only — never agency names.
+const { renderBold, BOLD_GUIDELINE } = require('../lib/bold-guideline.js');
+test('renderBold: marks become <strong>, stray marks dropped, legacy text bolds only dollars', () => {
+  assert.strictEqual(renderBold('Council committed **$812,000** to the gondola.'), 'Council committed <strong>$812,000</strong> to the gondola.');
+  assert.strictEqual(renderBold('A stray ** mark'), 'A stray  mark');
+  assert.strictEqual(renderBold('Mountain Village Town Council approved $812,000 for San Miguel County.'), 'Mountain Village Town Council approved <strong>$812,000</strong> for San Miguel County.');
+  assert.ok(/When in doubt, leave it unbolded/.test(BOLD_GUIDELINE));
+});
+test('Past Meetings email renders the recap bold marks', () => {
+  const r = { sourceKey: 'mv', sourceLabel: 'Mountain Village', date: '2026-10-15', title: 'Mountain Village Town Council — Oct 15, 2026',
+    recap: 'Council approved the **gondola project development** supplement, committing **$812,000** to the 2027 planning budget. Council also adopted the 2027 fee schedule.' };
+  const { html } = render([r], '2026-10-19', false);
+  assert.ok(html.includes('<strong>gondola project development</strong>') && !html.includes('**'));
+});

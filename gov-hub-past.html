@@ -118,34 +118,23 @@
   var list = document.getElementById('recap-list');
   if (!window.LTData) { list.innerHTML = '<div class="lt-data-error">This section failed to load. Please refresh in a minute.</div>'; return; }
   var esc = LTData.esc;
-  /* Bold proper-noun runs + standalone street addresses in summaries — the
-     same emphasizeNames heuristic as the live Gov-Hub cards and the digest. */
-  var NAME_STOP = {}; ('The A An On In At As It This That These Those Its Their And But Or If After Before During While Also Both Two Three Four Five Several Additional Other Following New Council Board Commission Committee Ordinance Ordinances Resolution Resolutions Meeting Session Sessions Town County City District State Chair Mayor Public Staff Members Member Consent Agenda Work Executive Regular Special Substantial Councilors January February March April May June July August September October November December Monday Tuesday Wednesday Thursday Friday Saturday Sunday Section Stage Phase Article Item Step Unit No Yes Accommodations Building Buildings Preliminary Large Scale').split(' ').forEach(function (w) { NAME_STOP[w] = 1; });
-  var ADDR = '\\d+\\s+(?:(?:N|S|E|W|NE|NW|SE|SW|North|South|East|West)\\.?\\s+[A-Z][A-Za-z’\']*(?:\\s+[A-Z][A-Za-z’\']*)*(?:\\s+(?:Ave|Avenue|St|Street|Rd|Road|Dr|Drive|Blvd|Boulevard|Ln|Lane|Way|Ct|Court|Pl|Place|Cir|Circle|Trail|Trl|Pkwy|Parkway|Hwy|Highway)(?![A-Za-z]))?|[A-Z][A-Za-z’\']*(?:\\s+[A-Z][A-Za-z’\']*)*\\s+(?:Ave|Avenue|St|Street|Rd|Road|Dr|Drive|Blvd|Boulevard|Ln|Lane|Way|Ct|Court|Pl|Place|Cir|Circle|Trail|Trl|Pkwy|Parkway|Hwy|Highway)(?![A-Za-z]))';
-  var RUN = "[A-Z][a-z]+(?:['’][A-Za-z]+)?(?:\\s+(?:of|the|[A-Z][a-z]+(?:['’][A-Za-z]+)?))*";
-  function emphasizeNames(raw) {
-    var re = new RegExp('(' + ADDR + ')|(' + RUN + ')', 'g');
-    var html = '', last = 0, m;
-    while ((m = re.exec(raw)) !== null) {
-      html += esc(raw.slice(last, m.index));
-      if (m[1]) {
-        var locates = /\b(?:at|on)\s+$/i.test(raw.slice(0, m.index));
-        html += locates ? esc(m[1]) : '<strong>' + esc(m[1]) + '</strong>';
-        last = m.index + m[1].length; continue;
-      }
-      var run = m[2], trimmed = run.replace(/(?:\s+(?:of|the))+$/, '');
-      var tail = run.slice(trimmed.length), leadThe = '';
-      if (/\s/.test(trimmed)) { var t = trimmed.match(/^(The\s+)(?=[A-Z])/); if (t) { leadThe = t[1]; trimmed = trimmed.slice(leadThe.length); } }
-      var multi = /\s/.test(trimmed);
-      var before = raw.slice(0, m.index).replace(/\s+$/, '');
-      var sentenceStart = before === '' || /[.!?]$/.test(before);
-      var sig = trimmed.split(/\s+/).filter(function (w) { return !/^(?:of|the)$/i.test(w); });
-      var allStop = sig.length > 0 && sig.every(function (w) { return NAME_STOP[w]; });
-      var bold = !allStop && (multi || (!sentenceStart && !NAME_STOP[trimmed]));
-      html += esc(leadThe) + (bold ? '<strong>' + esc(trimmed) + '</strong>' : esc(trimmed)) + esc(tail);
-      last = m.index + run.length;
+  /* Bolding guideline (Morgan 2026-10-19; scripts/lib/bold-guideline.js):
+     bold only what the writer marked with **…** (key dollar figures, pivotal
+     project names, the single most important outcome). Text without marks gets
+     its dollar figures bolded and nothing else — no more auto-bolding of every
+     agency, place and name. */
+  function boldMarks(raw) {
+    var t = String(raw == null ? '' : raw);
+    if (t.indexOf('**') >= 0) {
+      return t.split(/(\*\*[^*\n]+?\*\*)/g).map(function (seg) {
+        var m = seg.match(/^\*\*([^*\n]+?)\*\*$/);
+        return m ? '<strong>' + esc(m[1]) + '</strong>' : esc(seg.replace(/\*\*/g, ''));
+      }).join('');
     }
-    return html + esc(raw.slice(last));
+    var re = /\$\d[\d,]*(?:\.\d+)?(?:\s?(?:million|billion|thousand)\b|[MBK]\b)?(?:[–-]\$?\d[\d,]*(?:\.\d+)?(?:\s?(?:million|billion)\b|[MBK]\b)?)?/g;
+    var out = '', last = 0, m2;
+    while ((m2 = re.exec(t))) { out += esc(t.slice(last, m2.index)) + '<strong>' + esc(m2[0]) + '</strong>'; last = m2.index + m2[0].length; }
+    return out + esc(t.slice(last));
   }
   var MON = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
   var recaps = [], srcFilter = '';
@@ -209,7 +198,7 @@
       var vtBtn = vt ? '<a class="abtn" href="/v2/vote-tracker.html" target="_blank" rel="noopener">&#128499;&#65039; See the votes &mdash; Vote Tracker</a>' : '';
       var acts = (vtBtn || minutesBtn) ? '<div class="acts">' + vtBtn + minutesBtn + '</div>' : '';
       var paras = String(r.recap || '').split(/\n{2,}/).filter(Boolean)
-        .map(function (t) { return '<p>' + emphasizeNames(t) + '</p>'; }).join('');
+        .map(function (t) { return '<p>' + boldMarks(t) + '</p>'; }).join('');
       var tally = '';
       if (r.votes && r.votes.length) {
         tally = '<div class="vt"><span class="vt-h">&#128499;&#65039; Votes</span>' + r.votes.map(function (v) {

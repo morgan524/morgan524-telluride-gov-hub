@@ -66,7 +66,7 @@ function checkDates(key, html, d) {
   const [ps, pe] = RR.priorBusinessWeek(ws);
   const windows = key === 'past'
     ? [[ps, pe, 'last week (' + ps + ' to ' + pe + ')']]
-    : [[ws, addDays(ws, 6), 'the coming week'], [ps, pe, 'last week (recaps)']];
+    : [[ws, addDays(ws, 6), 'the coming week']];   // recaps left the weekly 2026-10-19
   const seen = new Set();
   for (const m of decode(html).matchAll(/\b(SUN|MON|TUE|WED|THU|FRI|SAT), (JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC) (\d{1,2})\b/g)) {
     const badge = m[0]; if (seen.has(badge)) continue; seen.add(badge);
@@ -180,7 +180,7 @@ async function editorialRead(key, d, text, apiKey) {
   const [ps, pe] = RR.priorBusinessWeek(d.weekStart);
   const scope = key === 'past'
     ? `This is the "Past Meetings" email: summaries of public meetings held ${ps} to ${pe}, each with a link to the full recap. It is sent ${d.weekStart}.`
-    : `This is "The Week Ahead Outlook": upcoming public meetings and events for ${d.weekStart} to ${addDays(d.weekStart, 6)} (sent the morning of ${d.weekStart}), plus a section of recaps of meetings held ${ps} to ${pe}.`;
+    : `This is "The Week Ahead Outlook": upcoming public meetings and events for ${d.weekStart} to ${addDays(d.weekStart, 6)} (sent the morning of ${d.weekStart}). Last week's meeting recaps are NOT in this email any more (they have their own Past Meetings email).`;
   const prompt = [
     'You are proofreading a community email newsletter for Livable Telluride before it is sent. It covers the whole region: San Miguel County (Telluride, Mountain Village, Ophir, Rico, Norwood and the West End) and Ouray County (Ridgway, Ouray), plus regional bodies such as SMART. Find concrete errors a reader would notice or be misled by.',
     'Each meeting is shown with a small town or agency tag before its title (e.g. "Town of Telluride · Town Council"), so a title that relies on that tag for the town is fine. Recap teasers are cut to a sentence or two and may end with "…" by design.',

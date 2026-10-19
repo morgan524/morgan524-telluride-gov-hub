@@ -26,6 +26,7 @@
 //
 // Env: ANTHROPIC_API_KEY. Requires `yt-dlp` on PATH (pip install yt-dlp).
 
+const { BOLD_GUIDELINE } = require('./lib/bold-guideline.js');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
@@ -346,7 +347,8 @@ WHAT TO WRITE — the recap is about what ACTUALLY HAPPENED:
   for HARC), return an EMPTY recap — {"title": "<body — date>", "recap": ""}.
   An empty recap means the meeting correctly gets NO card; do NOT pad it with the
   very items you were told to omit.
-- Around 100 words. Separate distinct topics with a BLANK LINE (\\n\\n) — two to four short paragraphs. No headers, no lists, no markdown.
+- Around 100 words. Separate distinct topics with a BLANK LINE (\\n\\n) — two to four short paragraphs. No headers, no lists. The ONLY markup allowed is **double asterisks** for bold, per BOLDING below.
+${BOLD_GUIDELINE}
 
 HARD RULES:
 - Use ONLY what the transcript supports. Do NOT invent vote tallies, names, numbers, or outcomes. If the transcript is unclear on an outcome, describe it without a fabricated tally.

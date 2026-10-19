@@ -8,7 +8,12 @@ const { checkDates, variant } = require('../digest-review.js');
 const WEEK = { weekStart: '2026-10-05' };
 
 test('a badge whose weekday matches and sits in the window passes', () => {
-  assert.deepStrictEqual(checkDates('weekly', '<span>TUE, OCT 6</span><span>WED, SEP 30</span>', WEEK), []);
+  assert.deepStrictEqual(checkDates('weekly', '<span>TUE, OCT 6</span>', WEEK), []);
+});
+
+// 2026-10-19: last week's recaps left the weekly, so a last-week date there is now an error.
+test('weekly: a last-week date is flagged (recaps live in Past Meetings now)', () => {
+  assert.ok(checkDates('weekly', '<span>WED, SEP 30</span>', WEEK).length > 0);
 });
 
 test('a wrong weekday is flagged high', () => {
@@ -27,7 +32,8 @@ test('Past Meetings only accepts last week', () => {
 });
 
 test('year boundary: a late-December week resolves to the right year', () => {
-  assert.deepStrictEqual(checkDates('weekly', '<span>MON, JAN 4</span><span>TUE, DEC 29</span>', { weekStart: '2027-01-04' }), []);
+  assert.deepStrictEqual(checkDates('weekly', '<span>MON, JAN 4</span>', { weekStart: '2027-01-04' }), []);
+  assert.deepStrictEqual(checkDates('past', '<span>TUE, DEC 29</span>', { weekStart: '2027-01-04' }), []);
 });
 
 test('variant keeps one region copy and unhides it', () => {
