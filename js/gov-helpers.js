@@ -5264,18 +5264,6 @@ const BEACON_EVENTS = [
 // Bot-refreshed by the chamber-music-events-refresh scheduled task.
 const CHAMBER_MUSIC_EVENTS = [
   {
-    title: "Hanneke Cassel Trio",
-    link: "https://telluridechambermusic.org/concert/hanneke-cassel-trio",
-    description: "Part of the \"Not Your Average Classical\" series. Performed at The Alibi.",
-    date: "2026-10-13",
-    time: "7:00 PM",
-    source: "chamber-music",
-    sourceLabel: "Telluride Chamber Music",
-    category: "Concert",
-    location: "The Alibi",
-    imageUrl: "https://telluridechambermusic.org/concerts/hanneke-cassel-trio.webp"
-  },
-  {
     title: "Telluride Community Concert - January",
     link: "https://telluridechambermusic.org/concert/telluride-community-concert--september",
     description: "An hour of free chamber music for community.",
