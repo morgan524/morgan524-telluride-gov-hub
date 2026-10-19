@@ -1,0 +1,37 @@
+name: Customer.io — remove stale emails
+
+# Unsubscribe permanently undeliverable addresses (hard bounces, dead domains,
+# earlier-bounce suppressions, spam complaints) found in recent broadcast
+# sends. Profiles are unsubscribed and tagged stale_email_reason, never
+# deleted. See scripts/customerio-remove-stale.js. Run by hand.
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: 'Unsubscribe them (true) or only list them (false)'
+        required: true
+        default: 'false'
+      days:
+        description: 'Look back this many days of sends'
+        required: true
+        default: '7'
+
+permissions:
+  contents: read
+
+jobs:
+  remove-stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+      - name: Find (and optionally unsubscribe) stale addresses
+        env:
+          CUSTOMERIO_APP_API_KEY: ${{ secrets.CUSTOMERIO_APP_API_KEY }}
+          CUSTOMERIO_SITE_ID: ${{ secrets.CUSTOMERIO_SITE_ID }}
+          CUSTOMERIO_TRACK_API_KEY: ${{ secrets.CUSTOMERIO_TRACK_API_KEY }}
+        run: |
+          if [ "${{ github.event.inputs.apply }}" = "true" ]; then A=--apply; else A=; fi
+          node scripts/customerio-remove-stale.js $A --days "${{ github.event.inputs.days }}"
