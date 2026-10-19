@@ -369,6 +369,17 @@ const MV_CACHE_DATE = '2026-10-19';
 
 const MV_CACHED_DATA = [
   {
+    date: "November 5, 2026",
+    time: "10:00 AM",
+    title: "Design Review Board",
+    board: "drb",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Town Hall, 455 Mountain Village Blvd, Suite A",
+    note: "Agenda typically posted the Friday before."
+  },
+  {
     date: "November 19, 2026",
     time: "3:00 PM - 8:00 PM",
     title: "Town Council Meeting",

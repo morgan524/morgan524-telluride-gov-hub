@@ -369,7 +369,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=761785","sv":4},
 
   "telluride|2026-11-04|Ecology Commission - Nov 04 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8120","sv":4,"ph":"dcde269a12793414"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8120","sv":4,"ph":"f7fa71ad7c369cd5"},
 
   "telluride|2026-11-04|Commission for Community Assistance, Arts & Special Events - Nov 04 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8068","sv":4,"ph":"08f639f85583f1c4"},
@@ -474,7 +474,10 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "county|2026-11-09|Intergovernmental Meeting - San Miguel County Hosts":
-    {"sv":4}
+    {"sv":4},
+
+  "smart|2026-11-16|SMART Gondola Advisory Committee":
+    {"sv":4,"ph":"b858cb282617fb09"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -831,7 +834,7 @@ const MEETING_PREVIEWS = {
     "Board will consider support for Mountain Munchkins, Plaza Guest Services funding, Conference Center Plaza enhancements, a Telluride Arts grant request, and a Mountain Village Post Office expansion. Directors will also review a feasibility analysis for Lots 1007/1008 and receive a workforce housing working group recap.",
 
   "ouraycity|2026-10-19|Ouray City Council Regular Meeting":
-    "Council is expected to celebrate Ouray's 150th anniversary, hear a housing services update, and vote on a law enforcement intergovernmental agreement with the Ouray County Sheriff. Additional action items include a water service termination agreement, first readings on 2027 utility rates and light industrial zoning, and a perimeter trail easement request."
+    "Council is expected to consider a law enforcement services agreement with the Ouray County Sheriff, proposed 2027 water and sewer rates, a water service termination agreement, and a light industrial ordinance. The meeting also includes a presentation on affordable housing and recognition of Ouray's 150th anniversary."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -992,16 +995,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "government",
     copy: "An article in the Oct. 8-14 edition, “Ridgway seeks input on water supply plan,” misstated the date that the Ridgway Town Council is expected to vote on the water supply element of its master plan. The correct date is Nov. 19.",
     href: "https://www.ouraynews.com/2026/10/14/correction-20261015-0258-189619/",
-    img: ""
-  },
-  {
-    title: "2026 Telluride Mountain Club Recap Report",
-    source: "Telluride Mountain Club",
-    sourceKey: "tmc",
-    date: "October 12, 2026",
-    newsTopic: "community",
-    copy: "The post 2026 Telluride Mountain Club Recap Report appeared first on Telluride Mountain Club .",
-    href: "https://www.telluridemountainclub.org/2026-telluride-mountain-club-recap-report/",
     img: ""
   },
   {
@@ -1363,7 +1356,10 @@ const MANUAL_SUMMARIES = {
     "The November 18 Board of County Commissioners regular meeting is being held in Norwood. The posted agenda doesn't include any item detail beyond the location — nothing on what's actually being taken up.",
 
   "county|2026-11-09|Intergovernmental Meeting - San Miguel County Hosts":
-    "The November 9 Intergovernmental Meeting hosted by San Miguel County has been posted, but the agenda carries no substantive detail beyond the meeting title itself. When the county convenes with its municipal partners — Telluride, Mountain Village, Norwood, and others — the conversations tend to touch the issues that don't fit neatly inside any single jurisdiction's boundaries. What exactly is on the table this time hasn't been shared yet."
+    "The November 9 Intergovernmental Meeting hosted by San Miguel County has been posted, but the agenda carries no substantive detail beyond the meeting title itself. When the county convenes with its municipal partners — Telluride, Mountain Village, Norwood, and others — the conversations tend to touch the issues that don't fit neatly inside any single jurisdiction's boundaries. What exactly is on the table this time hasn't been shared yet.",
+
+  "smart|2026-11-16|SMART Gondola Advisory Committee":
+    "The November 16 SMART Gondola Advisory Committee agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────

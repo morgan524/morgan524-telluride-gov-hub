@@ -458,7 +458,7 @@
   "telluride|2026-11-04|Ecology Commission - Nov 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8120",
     "sv": 4,
-    "ph": "dcde269a12793414"
+    "ph": "f7fa71ad7c369cd5"
   },
   "telluride|2026-11-04|Commission for Community Assistance, Arts & Special Events - Nov 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8068",
@@ -627,5 +627,9 @@
   },
   "county|2026-11-09|Intergovernmental Meeting - San Miguel County Hosts": {
     "sv": 4
+  },
+  "smart|2026-11-16|SMART Gondola Advisory Committee": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   }
 }
