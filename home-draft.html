@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Livable Telluride — Home (draft)</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Local news, deep dives, government meetings, housing data, community organizations, and events — gathered, explained, and always linked back to the original source.">
+<link rel="stylesheet" href="lt.css?v=8">
+<link rel="icon" href="/logo/icon-192.png?v=2">
+<link rel="apple-touch-icon" href="/logo/apple-touch-icon.png?v=2">
+<link rel="manifest" href="/manifest.json">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Livable Telluride">
+<meta property="og:url" content="https://livabletelluride.org/">
+<meta property="og:title" content="Livable Telluride — a civic information hub for the whole tri-county">
+<meta property="og:description" content="Local news, deep dives, government meetings, housing data, community organizations, and events — gathered, explained, and always linked back to the original source.">
+<meta property="og:image" content="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png">
+<style>
+  /* About Livable Telluride — mission/story cards + photo, directors, what-livable
+     (layout mirrors the live homepage about section, per Morgan) */
+  .lt-about { max-width: var(--maxw); margin: 0 auto; padding: 56px var(--pad-x) 0; }
+  .lt-about .a-head { text-align: center; max-width: 720px; margin: 0 auto 30px; }
+  .lt-about .a-head h2 { font: 500 36px/1.15 var(--serif); margin-top: 8px; }
+  .lt-about .a-head p { font: 400 16px/1.65 var(--sans); color: var(--body2); margin: 12px 0 0; }
+  .mission-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
+  .mission-col { display: flex; flex-direction: column; gap: 24px; }
+  .info-card { padding: 28px 30px; }
+  .info-card h3 { font: 600 27px/1.2 var(--serif); margin-bottom: 12px; }
+  .info-card p { font: 400 15.5px/1.7 var(--sans); color: var(--body2); margin: 0 0 14px; }
+  .info-card p:last-child { margin-bottom: 0; }
+  .photo-col { border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-media); min-height: 460px;
+    background: url('/images/about-hero-telluride.jpg') no-repeat center center / cover; }
+  .directors-card { margin-top: 24px; padding: 28px 30px; }
+  .directors-card h3 { font: 600 27px/1.2 var(--serif); margin-bottom: 8px; }
+  .directors-card .intro { font: 400 15.5px/1.6 var(--sans); color: var(--body2); margin: 0 0 14px; }
+  .director-chips { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+  .director-chips span { font: 600 15px/1 var(--sans); color: var(--ink); background: var(--paper); border: 1px solid var(--hairline); border-radius: 8px; padding: 13px 18px; }
+  .directors-card .reach { font: 400 15px/1.6 var(--sans); color: var(--muted); margin: 0; }
+  .livable-panel { margin-top: 24px; text-align: center; padding: 36px 40px; border-radius: 16px;
+    border: 1px solid var(--hairline); background: linear-gradient(135deg, rgba(36,72,63,.04), rgba(216,169,77,.05)); }
+  .livable-panel h3 { font: 600 30px/1.2 var(--serif); margin-bottom: 12px; }
+  .livable-panel .lead-p { font: 400 16.5px/1.65 var(--sans); color: var(--body2); max-width: 700px; margin: 0 auto 20px; }
+  .question-chips { display: flex; gap: 10px 12px; flex-wrap: wrap; justify-content: center; max-width: 760px; margin: 0 auto 20px; }
+  .question-chips .qc { font: 600 15px/1 var(--sans); color: var(--forest); background: #fff; border: 1px solid var(--hairline); border-radius: 999px; padding: 12px 18px; box-shadow: 0 2px 8px rgba(36,48,45,.05); }
+  .livable-panel .tail { font: 400 15px/1.65 var(--sans); color: var(--body2); max-width: 700px; margin: 0 auto; }
+  @media (max-width: 900px) {
+    .hero h1 { font-size: 38px; }
+    .mini-grid { grid-template-columns: 1fr; }
+    .prior-list .row { grid-template-columns: 48px 48px 1fr; }
+    .prior-list .p-logo { width: 48px; height: 48px; }
+    .prior-list .chev { display: none; }
+    .prior-cols { grid-template-columns: 1fr; gap: 10px; }
+    .pe-list .row { grid-template-columns: 48px 48px 1fr; }
+    .pe-list .p-img { width: 48px; height: 48px; }
+    .mission-row { grid-template-columns: 1fr; }
+    .photo-col { min-height: 320px; }
+    .livable-panel { padding: 26px 22px; }
+    .hero2 .ph { width: 100%; opacity: .18; }
+    .hero2 .ph-left { display: none; }
+    .hero2 .fade { display: none; }
+    .hero2-inner { padding: 48px var(--pad-x) 60px; }
+    .hero2-copy { margin-left: 0; }
+    .hero2 h1 { font-size: 40px; }
+    .overlap { margin-top: -20px; }
+  }
+</style>
+</head>
+<body>
+<div id="lt-header"></div>
+<style>
+  /* ── News-front layout (draft, Morgan 2026-10-19): three columns up top that
+     drop into topic sections with banner boxes between them, like a regional
+     business journal, but warmer — cream paper, forest/rust/gold, serif heads,
+     photos with rounded corners. */
+  .nf { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad-x); }
+  .edition { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 18px;
+    border-bottom: 3px double var(--forest); padding: 18px 0 12px; margin-top: 6px; }
+  .edition .ed-date { font: 700 12.5px/1 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--forest); }
+  .edition .ed-name { font: 600 34px/1 var(--serif); color: var(--forest); letter-spacing: -.01em; }
+  .edition .ed-tag { font: italic 400 15px/1.3 var(--serif); color: var(--muted); }
+  .edition a.ed-sub { font: 700 13px/1 var(--sans); color: #fff; background: var(--rust); padding: 10px 16px; border-radius: 999px; text-decoration: none; }
+  .topics { display: flex; flex-wrap: wrap; gap: 6px 20px; padding: 10px 0 14px; border-bottom: 1px solid var(--hairline); }
+  .topics a { font: 600 13.5px/1 var(--sans); color: var(--ink); text-decoration: none; }
+  .topics a:hover { color: var(--rust); }
+
+  .kick { font: 800 11px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--rust); }
+  .rail-h { display: flex; align-items: baseline; justify-content: space-between; border-bottom: 2px solid var(--forest);
+    padding-bottom: 8px; margin-bottom: 4px; }
+  .rail-h h2 { font: 700 13px/1 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--forest); margin: 0; }
+  .rail-h a { font: 600 12.5px/1 var(--sans); color: var(--rust); text-decoration: none; }
+
+  /* Top: three columns */
+  .front { display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 30px; padding: 24px 0 8px; }
+  .front > div { min-width: 0; }
+  .mlist .m { display: grid; grid-template-columns: 46px 1fr; gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--hairline); }
+  .mlist .m .d { text-align: center; background: var(--sage2); border-radius: 8px; padding: 6px 0; }
+  .mlist .m .d b { display: block; font: 600 20px/1 var(--serif); color: var(--forest); }
+  .mlist .m .d span { font: 800 9.5px/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--rust); }
+  .mlist .m a { font: 600 15px/1.25 var(--serif); color: var(--ink); text-decoration: none; }
+  .mlist .m a:hover { color: var(--rust); }
+  .mlist .m .meta { font: 400 12.5px/1.4 var(--sans); color: var(--muted); margin-top: 2px; }
+  .mlist .m.key a::after { content: ' ●'; color: var(--gold); font-size: 11px; }
+
+  .lead a { color: inherit; text-decoration: none; }
+  .lead .ph { aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; background: var(--sage) center/cover no-repeat; box-shadow: var(--shadow-media, 0 8px 24px rgba(26,46,41,.08)); }
+  .lead h1 { font: 600 34px/1.1 var(--serif); color: var(--forest); letter-spacing: -.015em; margin: 14px 0 8px; }
+  .lead a:hover h1 { color: var(--rust); }
+  .lead p { font: 400 16.5px/1.6 var(--sans); color: var(--body2); margin: 0; }
+  .lead .by { font: 400 13px/1.4 var(--sans); color: var(--muted); margin-top: 8px; }
+  .subleads { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--hairline); }
+  .sublead a { display: grid; grid-template-columns: 96px 1fr; gap: 12px; color: inherit; text-decoration: none; }
+  .sublead .ph { aspect-ratio: 1; border-radius: 9px; background: var(--sage) center/cover no-repeat; }
+  .sublead h3 { font: 600 16.5px/1.25 var(--serif); color: var(--ink); margin: 4px 0 0; }
+  .sublead a:hover h3 { color: var(--rust); }
+
+  .heads ol { list-style: none; counter-reset: h; margin: 0; padding: 0; }
+  .heads li { counter-increment: h; display: grid; grid-template-columns: 26px 1fr; gap: 8px; padding: 11px 0; border-bottom: 1px solid var(--hairline); }
+  .heads li::before { content: counter(h); font: 600 22px/1 var(--serif); color: var(--gold); }
+  .heads a { font: 600 15px/1.3 var(--serif); color: var(--ink); text-decoration: none; }
+  .heads a:hover { color: var(--rust); }
+  .heads .src { font: 400 12px/1.4 var(--sans); color: var(--muted); margin-top: 3px; }
+
+  /* Banner boxes between sections */
+  .banner { display: grid; grid-template-columns: auto 1fr auto; gap: 18px; align-items: center; margin: 30px 0; padding: 22px 26px;
+    border-radius: 14px; background: var(--forest); color: #e7efe9; }
+  .banner .b-ico { font-size: 30px; }
+  .banner h3 { font: 600 22px/1.2 var(--serif); color: #fff; margin: 0 0 4px; }
+  .banner p { font: 400 15px/1.5 var(--sans); margin: 0; color: #cfe0d6; }
+  .banner a.btn-b { font: 700 14px/1 var(--sans); color: var(--forest); background: var(--gold); padding: 13px 20px; border-radius: 999px; text-decoration: none; white-space: nowrap; }
+  .banner.warm { background: #f3e3cf; color: var(--ink); }
+  .banner.warm h3 { color: var(--forest); }
+  .banner.warm p { color: var(--body2); }
+  .banner.warm a.btn-b { background: var(--rust); color: #fff; }
+  .banner-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
+  .banner-pair .banner { margin: 0; grid-template-columns: auto 1fr; }
+  .banner-pair .banner a.btn-b { grid-column: 2; justify-self: start; margin-top: 6px; }
+
+  /* Topic sections */
+  .sect { padding: 14px 0 6px; }
+  .sect-h { display: flex; align-items: baseline; gap: 14px; border-top: 3px solid var(--forest); padding-top: 12px; margin-bottom: 16px; }
+  .sect-h h2 { font: 600 28px/1.1 var(--serif); color: var(--forest); margin: 0; }
+  .sect-h .more { margin-left: auto; font: 600 13.5px/1 var(--sans); color: var(--rust); text-decoration: none; }
+  .sect-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 24px; }
+  .card-n { display: block; color: inherit; text-decoration: none; }
+  .card-n .ph { aspect-ratio: 3/2; border-radius: 10px; background: var(--sage) center/cover no-repeat; margin-bottom: 10px; }
+  .card-n h3 { font: 600 18px/1.25 var(--serif); color: var(--ink); margin: 6px 0 6px; }
+  .card-n.big h3 { font-size: 24px; }
+  .card-n:hover h3 { color: var(--rust); }
+  .card-n p { font: 400 14.5px/1.55 var(--sans); color: var(--body2); margin: 0; }
+  .card-n .meta { font: 400 12.5px/1.4 var(--sans); color: var(--muted); margin-top: 6px; }
+  .stack .card-n { padding-bottom: 14px; margin-bottom: 14px; border-bottom: 1px solid var(--hairline); }
+  .stack .card-n:last-child { border-bottom: 0; }
+  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .tag { display: inline-block; font: 700 10.5px/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--forest);
+    background: var(--sage); border-radius: 999px; padding: 5px 9px; }
+  .empty { font: 400 14px/1.5 var(--sans); color: var(--muted); padding: 10px 0; }
+  .wa .wa-kick { display: flex; align-items: center; gap: 10px; }
+  .wa .wa-kick .pill { font: 800 11px/1 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: #fff; background: var(--forest); padding: 6px 10px; border-radius: 999px; white-space: nowrap; }
+  .wa h1 { font: 600 34px/1.1 var(--serif); color: var(--forest); letter-spacing: -.015em; margin: 12px 0 12px; }
+  .wa .wa-body p { font: 400 16.5px/1.7 var(--sans); color: var(--body2); margin: 0 0 12px; }
+  .wa .wa-body p:first-letter { }
+  .wa .wa-body strong { color: var(--forest); }
+  .wa .wa-body a { color: var(--rust); }
+  .wa .ph { aspect-ratio: 21/9; border-radius: 12px; background: var(--sage) center/cover no-repeat; margin-bottom: 14px; box-shadow: var(--shadow-media, 0 8px 24px rgba(26,46,41,.08)); }
+  .wa .wa-foot { display: flex; gap: 14px; flex-wrap: wrap; font: 600 13.5px/1 var(--sans); margin-top: 4px; }
+  .wa .wa-foot a { color: var(--rust); text-decoration: none; }
+  .days { columns: 2; column-gap: 30px; }
+  .day { break-inside: avoid; margin-bottom: 18px; }
+  .day h3 { font: 800 12px/1 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--rust); border-bottom: 1px solid var(--hairline); padding-bottom: 6px; margin: 0 0 4px; }
+  .gm { padding: 10px 0; border-bottom: 1px dotted var(--hairline); }
+  .gm:last-child { border-bottom: 0; }
+  .gm .t { font: 600 17px/1.25 var(--serif); color: var(--ink); }
+  .gm .t a { color: inherit; text-decoration: none; }
+  .gm .t a:hover { color: var(--rust); }
+  .gm .meta { font: 400 12.5px/1.4 var(--sans); color: var(--muted); margin: 2px 0 4px; }
+  .gm .s { font: 400 14.5px/1.55 var(--sans); color: var(--body2); margin: 0; }
+  .gm .s strong { color: var(--ink); }
+  .gm .why { font: 400 13.5px/1.5 var(--sans); color: var(--forest); background: var(--sage2); border-left: 3px solid var(--forest); border-radius: 4px; padding: 7px 10px; margin-top: 6px; }
+  .gm.key .t::after { content: '  KEY'; font: 800 9.5px/1 var(--sans); letter-spacing: .1em; color: var(--forest); background: var(--gold); border-radius: 4px; padding: 3px 5px; vertical-align: 3px; margin-left: 6px; }
+  .llist .it { padding: 11px 0; border-bottom: 1px solid var(--hairline); }
+  .llist .it a { display: grid; grid-template-columns: 64px 1fr; gap: 10px; color: inherit; text-decoration: none; }
+  .llist .it .ph { aspect-ratio: 1; border-radius: 8px; background: var(--sage) center/cover no-repeat; }
+  .llist .it h3 { font: 600 15px/1.25 var(--serif); color: var(--ink); margin: 0; }
+  .llist .it a:hover h3 { color: var(--rust); }
+  .llist .it .meta { font: 400 12px/1.4 var(--sans); color: var(--muted); margin-top: 3px; }
+  @media (max-width: 760px) { .days { columns: 1; } }
+  .draft-flag { background: #a8401f; color: #fff; font: 700 13px/1.4 var(--sans); text-align: center; padding: 8px 12px; }
+
+  @media (max-width: 1000px) {
+    .front { grid-template-columns: 1fr 1fr; }
+    .front .c-lead { grid-column: 1 / -1; order: -1; }
+    .sect-grid { grid-template-columns: 1fr 1fr; }
+    .sect-grid > :first-child { grid-column: 1 / -1; }
+    .grid4 { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 640px) {
+    .front, .sect-grid, .grid4, .subleads, .banner-pair { grid-template-columns: 1fr; }
+    .lead h1 { font-size: 27px; }
+    .banner { grid-template-columns: 1fr; text-align: left; }
+    .banner .b-ico { display: none; }
+    .edition .ed-name { font-size: 27px; }
+  }
+</style>
+
+<div class="draft-flag">DRAFT home page for review — not linked from the site. The live home page is unchanged.</div>
+
+<div class="nf">
+  <div class="edition">
+    <div>
+      <div class="ed-date" id="ed-date"></div>
+      <div class="ed-name">The Livable Telluride Report</div>
+      <div class="ed-tag">Meetings, news and neighbors across the tri-county &mdash; always linked to the source.</div>
+    </div>
+    <a class="ed-sub" href="subscribe.html">Get the Week Ahead &rarr;</a>
+  </div>
+  <nav class="topics" aria-label="Sections">
+    <a href="#government">Government</a><a href="#deep-dives">Deep Dives</a><a href="#news">Local News</a>
+    <a href="#events">Events</a><a href="#housing">Housing</a><a href="#region">Around the Region</a><a href="#mission">About</a>
+  </nav>
+
+  <!-- 1. Three columns -->
+  <section class="front">
+    <div class="c-meet">
+      <div class="rail-h"><h2>From Livable Telluride</h2><a href="read.html">All &rarr;</a></div>
+      <div class="llist" id="f-lt"><div class="empty">Loading&hellip;</div></div>
+    </div>
+    <div class="c-lead">
+      <article class="wa" id="f-wa"><div class="empty">Loading the Week Ahead&hellip;</div></article>
+    </div>
+    <div class="c-heads heads">
+      <div class="rail-h"><h2>Local Headlines</h2><a href="local-news.html">More &rarr;</a></div>
+      <ol id="f-heads"><li><span class="empty">Loading&hellip;</span></li></ol>
+    </div>
+  </section>
+
+  <div class="banner">
+    <div class="b-ico">&#9993;&#65039;</div>
+    <div><h3>The Week Ahead, every Monday morning</h3><p>Every public meeting across the region, what&rsquo;s on the agenda, and the best things to do &mdash; in one email.</p></div>
+    <a class="btn-b" href="subscribe.html">Subscribe free</a>
+  </div>
+
+  <!-- 2. Government -->
+  <section class="sect" id="government">
+    <div class="sect-h"><span class="kick">Government</span><h2>Public Meetings This Week</h2><a class="more" href="gov-hub.html">Agendas, Zoom links &amp; more &rarr;</a></div>
+    <div class="sect-grid" style="grid-template-columns: 3fr 1fr;">
+      <div class="days" id="g-days"><div class="empty">Loading&hellip;</div></div>
+      <div>
+        <div class="rail-h"><h2>Last Week, Recapped</h2><a href="gov-hub-past.html">All &rarr;</a></div>
+        <div class="stack" id="g-recaps"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="banner-pair">
+    <div class="banner warm">
+      <div class="b-ico">&#128483;&#65039;</div>
+      <div><h3>Speak up before it&rsquo;s decided</h3><p>Write a letter, comment on an agenda item, or send a note to any board.</p></div>
+      <a class="btn-b" href="submit-letter.html">Write a letter</a>
+    </div>
+    <div class="banner warm">
+      <div class="b-ico">&#128240;</div>
+      <div><h3>Missed a meeting?</h3><p>Past Meetings: a Monday recap of what every board decided last week.</p></div>
+      <a class="btn-b" href="profile.html#subt-past">Sign up</a>
+    </div>
+  </div>
+
+  <!-- 5. Events -->
+  <section class="sect" id="events">
+    <div class="sect-h"><span class="kick">Events</span><h2>Key Events This Week</h2><a class="more" href="events.html">Every event &rarr;</a></div>
+    <div class="grid4" id="ev"></div>
+  </section>
+
+  <!-- 3. Deep dives -->
+  <section class="sect" id="deep-dives">
+    <div class="sect-h"><span class="kick">Deep Dives</span><h2>The Big Issues, Explained</h2><a class="more" href="deep-dives.html">All deep dives &rarr;</a></div>
+    <div class="grid4" id="dd"></div>
+  </section>
+
+  <!-- 4. News -->
+  <section class="sect" id="news">
+    <div class="sect-h"><span class="kick">Local News</span><h2>From Around the Valley</h2><a class="more" href="local-news.html">Local news &rarr;</a></div>
+    <div class="sect-grid">
+      <div id="n-lead"></div>
+      <div class="stack" id="n-a"></div>
+      <div class="stack" id="n-b"></div>
+    </div>
+  </section>
+
+  <div class="banner">
+    <div class="b-ico">&#9829;&#65039;</div>
+    <div><h3>Reader-funded. Ad-free. Always free to read.</h3><p>Livable Telluride is a 501(c)(3) nonprofit. A gift of any size keeps it coming.</p></div>
+    <a class="btn-b" href="donate.html">Donate</a>
+  </div>
+
+  <!-- 6. Housing + Region -->
+  <section class="sect" id="housing">
+    <div class="sect-h"><span class="kick">Housing</span><h2>Homes Available Now</h2><a class="more" href="housing.html">All listings &rarr;</a></div>
+    <div class="grid4" id="hs"></div>
+  </section>
+
+  <section class="sect" id="region">
+    <div class="sect-h"><span class="kick">Around the Region</span><h2>West End &amp; Beyond</h2><a class="more" href="norwood.html">West End &rarr;</a></div>
+    <div class="grid4" id="rg"></div>
+  </section>
+</div>
+
+<section class="lt-about" id="mission">
+  <div class="a-head">
+    <span class="eyebrow">About Livable Telluride</span>
+    <h2>A civic information hub for every resident &mdash; before the decisions are final.</h2>
+    <p>Independent, ad-free, and built for the whole region: West End to Mountain Village, across the full political spectrum.</p>
+  </div>
+
+  <div class="mission-row">
+    <div class="mission-col">
+      <div class="info-card card">
+        <h3>Our Mission</h3>
+        <p>In <em>Bowling Alone</em>, Robert Putnam documented what happens when people stop showing up to civic life. Local governments grow less accountable. Decisions on budgets, land use, debt, and zoning move forward with little public scrutiny. The voices that stay at the table are typically those with a direct financial stake in the outcome &mdash; not because anyone is acting in bad faith, but because everyone else has tuned out.</p>
+        <p>Livable Telluride exists to close that gap. We are a civic information hub for the whole county &mdash; West End to Mountain Village, across the full political spectrum &mdash; bringing government meetings, local news, and community information together in one place, always linked back to original sources. As an IRS-approved 501(c)(3) educational nonprofit, we will never charge for access and rely solely on tax-deductible donations.</p>
+      </div>
+      <div class="info-card card">
+        <h3>Our Story</h3>
+        <p>A local group of us came to realize something important: residents cared deeply about the decisions shaping our community, but too often felt they were learning about major proposals late&mdash;through scattered information and social media arguments&mdash;after much of the important planning work was already complete.</p>
+        <p>The Society Turn PUD was a clear example. Most residents knew about the planned hospital at the site. Far fewer understood that it was only one part of a much larger development that also included roughly 300,000 square feet of free-market commercial space and a 125-room hotel.</p>
+        <p>The question was not what residents should think about the project. It was more basic: How can people participate meaningfully if they do not know what is actually being proposed? Livable Telluride is our ongoing answer to that question.</p>
+      </div>
+    </div>
+    <div class="photo-col" role="img" aria-label="Mt Wilson above the Telluride valley — aspens turning along the highway"></div>
+  </div>
+
+  <div class="directors-card card">
+    <h3>Meet Our Directors</h3>
+    <p class="intro">Livable Telluride, Inc. is a 501(c)(3)-approved organization. Our board of directors:</p>
+    <div class="director-chips">
+      <span>David Lavender</span>
+      <span>John Metzger</span>
+      <span>Keith Hill</span>
+      <span>Emily Masson</span>
+      <span>Morgan Smith</span>
+    </div>
+    <p class="reach">Any board member can be reached through <a href="mailto:info@livabletelluride.org">info@livabletelluride.org</a> &mdash; please include their name in the subject line.</p>
+  </div>
+
+  <div class="livable-panel">
+    <h3>What &ldquo;Livable&rdquo; Means</h3>
+    <p class="lead-p">&ldquo;Livable&rdquo; is not code for no growth, or for drawing a line between locals and newcomers. It means asking the self-government questions that deserve answers <em>before</em> decisions are finalized &mdash; not after.</p>
+    <div class="question-chips">
+      <span class="qc">What kind of growth?</span>
+      <span class="qc">For whose benefit?</span>
+      <span class="qc">Who can afford it when done?</span>
+      <span class="qc">What infrastructure is required?</span>
+      <span class="qc">How much water?</span>
+      <span class="qc">How much traffic?</span>
+      <span class="qc">What long-term public debt?</span>
+      <span class="qc">Through what public process?</span>
+    </div>
+    <p class="tail">These are not anti-growth questions. They are self-government questions &mdash; the kind a functioning community asks of itself, across the full range of political views, before the future is already decided.</p>
+  </div>
+</section>
+
+
+<div id="lt-footer"></div>
+<script src="site.js?v=13"></script>
+<script src="/js/lt-data.js?v=15"></script>
+<script>
+/* Draft news-front home page (Morgan 2026-10-19). The Week Ahead intro, its
+   government entries and its key events come straight from the approved
+   digest (digest/week.html, the visible "all regions" copy), so the page shows
+   exactly what subscribers got, Review Desk edits included. Everything else
+   reads the same data/*.json mirrors as the live pages. */
+(function () {
+  var E = LTData.esc;
+  var $ = function (id) { return document.getElementById(id); };
+  var safe = function (u) { return LTData.safeUrl ? LTData.safeUrl(u, '#') : (u || '#'); };
+  var bg = function (u) { return u ? ' style="background-image:url(\'' + String(u).replace(/'/g, '%27') + '\')"' : ''; };
+  var toKey = function (s) { var d = new Date(s); return isNaN(d) ? '' : d.toISOString().slice(0, 10); };
+  var shortDate = function (s) { var d = new Date(s); return isNaN(d) ? (s || '') : d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }); };
+  var dec = function (s) { var t = document.createElement('textarea'); t.innerHTML = String(s || ''); return t.value; };
+  // Headlines are news outlets only (the Times feed also carries town notices).
+  var NEWS = /telluride times|koto|san miguel basin forum|telluride news|ouray county plaindealer|norwood post/i;
+  var clip = function (s, n) { s = String(s || '').replace(/\s+/g, ' ').trim(); return s.length > n ? s.slice(0, n).replace(/\s+\S*$/, '') + '…' : s; };
+
+  $('ed-date').textContent = new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'America/Denver' });
+
+  // ── The Week Ahead: intro, meeting entries, key events ──────────────────
+  function sectionRows(doc, label) {
+    // The visible copy's header is exactly "→ <label>" (regional copies add "· Region").
+    var hdr = Array.prototype.find.call(doc.querySelectorAll('div'), function (d) {
+      return d.children.length === 0 && d.textContent.replace(/\s+/g, ' ').trim() === '→ ' + label;
+    });
+    if (!hdr) return [];
+    var table = hdr.nextElementSibling;
+    if (!table) return [];
+    return Array.prototype.filter.call(table.querySelectorAll(':scope > tbody > tr, :scope > tr'), function (tr) {
+      return tr.querySelector('div[style*="Georgia"]');
+    });
+  }
+  function cardParts(tr) {
+    var spans = tr.querySelectorAll('span');
+    var title = tr.querySelector('div[style*="Georgia"]');
+    var a = title && title.querySelector('a');
+    var sum = title && title.nextElementSibling;
+    var why = Array.prototype.find.call(tr.querySelectorAll('div'), function (d) { return /Why This Matters/i.test(d.textContent) && d.children.length === 0; });
+    var img = tr.querySelector('img');
+    var links = Array.prototype.map.call(tr.querySelectorAll('a'), function (x) { return { t: x.textContent.trim(), h: x.getAttribute('href') }; });
+    return {
+      badge: spans[0] ? spans[0].textContent.trim() : '',
+      src: spans[1] ? spans[1].textContent.replace('📍', '').trim() : '',
+      title: title ? title.textContent.trim() : '',
+      href: a ? a.getAttribute('href') : '',
+      summaryHtml: sum ? sum.innerHTML : '',
+      why: why && why.nextElementSibling ? why.nextElementSibling.textContent.replace(/Read the full Deep Dive.*$/, '').trim() : '',
+      img: img && /^https?:/.test(img.getAttribute('src') || '') ? img.getAttribute('src') : '',
+      agenda: (links.find(function (l) { return /agenda/i.test(l.t); }) || {}).h || '',
+    };
+  }
+  // Key bodies (same list as the Past Meetings importance rule).
+  var KEY = /telluride.*(town council|planning|zoning|harc)|county commissioners|bocc|planning commission|mountain village.*(town council|design review)/i;
+
+  Promise.all([
+    fetch('/digest/manifest.json?t=' + Date.now()).then(function (r) { return r.json(); }),
+    fetch('/digest/week.html?t=' + Date.now()).then(function (r) { return r.text(); }),
+  ]).then(function (res) {
+    var man = res[0].digests && res[0].digests.weekly || {};
+    var doc = new DOMParser().parseFromString(res[1], 'text/html');
+    // The intro is one or more consecutive <p>s with this style (a Review Desk
+    // edit with <p> breaks makes one per day); older ones use <br><br> inside one.
+    var ledePs = Array.prototype.filter.call(doc.querySelectorAll('p'), function (p) { return /font-size:15\.5px;line-height:1\.65/.test(p.getAttribute('style') || ''); });
+    var paras = [];
+    ledePs.forEach(function (p) { p.innerHTML.split(/<br\s*\/?>\s*<br\s*\/?>/i).forEach(function (x) { x = x.trim(); if (x) paras.push(x); }); });
+    var week = (man.covers || '').replace(/^Mon /, '');
+    var fest = doc.querySelector('img[width="64"]');
+    $('f-wa').innerHTML =
+      '<div class="wa-kick"><span class="pill">The Week Ahead</span><span class="kick">' + E(week) + '</span></div>' +
+      '<h1>What&rsquo;s on the table this week</h1>' +
+      '<div class="wa-body">' + (paras.length ? paras.map(function (x) { return '<p>' + x + '</p>'; }).join('') : '<p class="empty">This week&rsquo;s intro hasn&rsquo;t been written yet.</p>') + '</div>' +
+      '<div class="wa-foot"><a href="#government">The week&rsquo;s meetings &darr;</a><a href="#events">Key events &darr;</a><a href="subscribe.html">Get it by email &rarr;</a></div>';
+
+    // Government entries, grouped by day.
+    var meets = sectionRows(doc, 'Public Meetings This Week').map(cardParts);
+    var byDay = {}, order = [];
+    meets.forEach(function (m) {
+      var day = m.badge.split('·')[0].trim();
+      if (!byDay[day]) { byDay[day] = []; order.push(day); }
+      byDay[day].push(m);
+    });
+    $('g-days').innerHTML = order.length ? order.map(function (day) {
+      return '<div class="day"><h3>' + E(day) + '</h3>' + byDay[day].map(function (m) {
+        var time = (m.badge.split('·')[1] || '').trim();
+        var key = KEY.test(m.title + ' ' + m.src);
+        return '<div class="gm' + (key ? ' key' : '') + '"><div class="t">' + (m.agenda ? '<a href="' + E(safe(m.agenda)) + '">' + E(m.title) + '</a>' : E(m.title)) + '</div>' +
+          '<div class="meta">' + E([time, m.src].filter(Boolean).join(' · ')) + '</div>' +
+          '<p class="s">' + m.summaryHtml + '</p>' +
+          (m.why ? '<div class="why"><b>Why this matters:</b> ' + E(clip(m.why, 220)) + '</div>' : '') + '</div>';
+      }).join('') + '</div>';
+    }).join('') : '<div class="empty">No meetings listed this week.</div>';
+
+    // Key events picked for the Week Ahead.
+    var evs = sectionRows(doc, 'What to Attend').map(cardParts);
+    $('ev').innerHTML = evs.length ? evs.slice(0, 8).map(function (e) {
+      return '<a class="card-n" href="' + E(safe(e.href)) + '"><div class="ph"' + bg(e.img) + '></div>' +
+        '<span class="tag">' + E(e.badge) + '</span><h3>' + E(e.title) + '</h3><p>' + E(clip(e.summaryHtml.replace(/<[^>]+>/g, ''), 150)) + '</p>' +
+        '<div class="meta">' + E(e.src) + '</div></a>';
+    }).join('') : '<div class="empty">No key events picked this week yet.</div>';
+    if (!fest) { /* festival hero not shown in the draft */ }
+  }).catch(function (e) { $('f-wa').innerHTML = '<div class="empty">Couldn&rsquo;t load the Week Ahead (' + E(e.message) + ').</div>'; });
+
+  // ── Left rail: Livable Telluride's own newsletters ──────────────────────
+  LTData.load(['blog-posts']).then(function (d) {
+    var a = (Array.isArray(d['blog-posts']) ? d['blog-posts'] : []).slice(0, 6);
+    $('f-lt').innerHTML = a.map(function (p) {
+      return '<div class="it"><a href="' + E(safe(p.href)) + '"><div class="ph"' + bg(p.image) + '></div><div><h3>' + E(p.title) + '</h3><div class="meta">' + E(p.date || '') + '</div></div></a></div>';
+    }).join('') || '<div class="empty">No posts yet.</div>';
+  }).catch(function () { $('f-lt').innerHTML = '<div class="empty">Couldn&rsquo;t load posts.</div>'; });
+
+  // ── Right rail + Local News + Region ────────────────────────────────────
+  LTData.load(['telluride-times-articles', 'koto-featured-stories', 'koto-newscasts', 'smb-forum-articles', 'local-news-featured']).then(function (d) {
+    var arr = function (k) { var x = d[k]; return Array.isArray(x) ? x : []; };
+    var all = [].concat(arr('telluride-times-articles'), arr('koto-featured-stories'), arr('smb-forum-articles'))
+      .filter(function (x) { return x && x.title && x.href && NEWS.test(x.source || '') && !/^notice of|agenda$|^notice and call/i.test(x.title); })
+      .map(function (x) { return Object.assign({}, x, { title: dec(x.title), copy: dec(x.copy || x.summary || '') }); })
+      .sort(function (a, b) { return (toKey(b.date) || b.firstSeen || '').localeCompare(toKey(a.date) || a.firstSeen || ''); });
+    var seen = {}; all = all.filter(function (x) { var k = x.title.toLowerCase(); if (seen[k]) return false; seen[k] = 1; return true; });
+    $('f-heads').innerHTML = all.slice(0, 8).map(function (x) {
+      return '<li><div><a href="' + E(safe(x.href)) + '">' + E(x.title) + '</a><div class="src">' + E(x.source || '') + ' · ' + E(shortDate(x.date)) + '</div></div></li>';
+    }).join('');
+    var withImg = all.filter(function (x) { return x.img; });
+    var lead = withImg[0] || all[0];
+    var rest = all.filter(function (x) { return x !== lead; }).slice(8, 16);
+    var card = function (x, big) {
+      return '<a class="card-n' + (big ? ' big' : '') + '" href="' + E(safe(x.href)) + '">' + (big && x.img ? '<div class="ph"' + bg(x.img) + '></div>' : '') +
+        '<span class="tag">' + E(x.newsTopic || 'News') + '</span><h3>' + E(x.title) + '</h3>' + (big || x.copy ? '<p>' + E(clip(x.copy || x.summary, big ? 260 : 120)) + '</p>' : '') +
+        '<div class="meta">' + E(x.source || '') + ' · ' + E(shortDate(x.date)) + '</div></a>';
+    };
+    if (lead) $('n-lead').innerHTML = card(lead, true);
+    $('n-a').innerHTML = rest.slice(0, 3).map(function (x) { return card(x); }).join('');
+    $('n-b').innerHTML = rest.slice(3, 6).map(function (x) { return card(x); }).join('');
+    var region = [].concat(arr('smb-forum-articles'), arr('koto-newscasts').slice(0, 2)).slice(0, 4);
+    $('rg').innerHTML = region.map(function (x) { return card(x, !!x.img); }).join('') || '<div class="empty">Nothing new from the region this week.</div>';
+  }).catch(function () { $('f-heads').innerHTML = '<li><span class="empty">Couldn&rsquo;t load headlines.</span></li>'; });
+
+  // ── Last week, recapped ─────────────────────────────────────────────────
+  LTData.load(['meeting-recaps']).then(function (d) {
+    var r = (d['meeting-recaps'] || []).filter(function (x) { return x.recap && x.sourceKey !== 'rico' && x.sourceKey !== 'tmvoa'; })
+      .sort(function (a, b) { return b.date.localeCompare(a.date); }).slice(0, 5);
+    $('g-recaps').innerHTML = r.map(function (x) {
+      return '<a class="card-n" href="gov-hub-past.html"><span class="tag">' + E(x.sourceLabel || '') + '</span><h3>' + E(x.title) + '</h3><p>' + E(clip(String(x.recap).replace(/\*\*/g, ''), 130)) + '</p></a>';
+    }).join('');
+  }).catch(function () {});
+
+  // ── Deep dives ──────────────────────────────────────────────────────────
+  LTData.load(['land-use-issues']).then(function (d) {
+    var o = d['land-use-issues'] || {};
+    var keys = Object.keys(o).sort(function (a, b) { return String(o[b].lastUpdated || '').localeCompare(String(o[a].lastUpdated || '')); }).slice(0, 4);
+    $('dd').innerHTML = keys.map(function (k) {
+      var x = o[k];
+      return '<a class="card-n" href="deep-dive-' + E(k) + '.html"><div class="ph"' + bg(x.heroImage) + '></div><span class="tag">Deep Dive</span><h3>' + E(x.label) + '</h3><p>' + E(clip(x.statusTitle || x.intro, 140)) + '</p>' +
+        (x.lastUpdated ? '<div class="meta">Updated ' + E(shortDate(x.lastUpdated + 'T12:00:00')) + '</div>' : '') + '</a>';
+    }).join('');
+  }).catch(function () {});
+
+  // ── Housing ─────────────────────────────────────────────────────────────
+  LTData.load(['housing-listings']).then(function (d) {
+    var a = (d['housing-listings'] || []).slice(0, 4);
+    $('hs').innerHTML = a.map(function (h) {
+      return '<a class="card-n" href="' + E(safe(h.url || 'housing.html')) + '"><span class="tag">' + E(String(h.type || 'Listing').replace(/-/g, ' ')) + '</span><h3>' + E(String(h.title || '').replace(/^\W+/, '')) + '</h3>' +
+        '<p>' + E(h.beds || '') + '</p><div class="meta">' + E(h.price || '') + (h.source ? ' · ' + E(h.source) : '') + '</div></a>';
+    }).join('') || '<div class="empty">No listings right now.</div>';
+  }).catch(function () {});
+})();
+</script>
+
+</body>
+</html>
