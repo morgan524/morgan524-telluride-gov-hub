@@ -62,7 +62,7 @@
     "civicClerkId": 901,
     "note": null,
     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/901/files/agenda/2051",
-    "packetUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/901/files/agenda/2053"
+    "packetUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/901/files/agenda/2055"
   },
   {
     "date": "October 22, 2026",
@@ -99,6 +99,15 @@
     "type": "bocc",
     "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
     "civicClerkId": 889,
+    "note": null
+  },
+  {
+    "date": "November 9, 2026",
+    "time": "1:30 PM",
+    "title": "Intergovernmental Meeting - San Miguel County Hosts",
+    "type": "other",
+    "location": "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    "civicClerkId": 1077,
     "note": null
   },
   {

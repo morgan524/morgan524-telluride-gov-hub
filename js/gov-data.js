@@ -122,7 +122,7 @@ const COUNTY_CACHED_DATA = [
     civicClerkId: 901,
     note: null,
     agendaUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/901/files/agenda/2051",
-    packetUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/901/files/agenda/2053"
+    packetUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/901/files/agenda/2055"
   },
   {
     date: "October 22, 2026",
@@ -159,6 +159,15 @@ const COUNTY_CACHED_DATA = [
     type: "bocc",
     location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
     civicClerkId: 889,
+    note: null
+  },
+  {
+    date: "November 9, 2026",
+    time: "1:30 PM",
+    title: "Intergovernmental Meeting - San Miguel County Hosts",
+    type: "other",
+    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    civicClerkId: 1077,
     note: null
   },
   {
@@ -263,16 +272,16 @@ const TMVOA_CACHED_DATA = [
     date: "October 20, 2026",
     title: "TMVOA Finance &amp; Budget Committee",
     board: "other",
-    agendaUrl: null,
-    packetUrl: null,
+    agendaUrl: "https://tmvoa.org/site/assets/files/4897/tmvoa_finance_budget_meeting_agenda_10_20_26.pdf",
+    packetUrl: "https://tmvoa.org/site/assets/files/4897/tmvoa_finance_budget_meeting_packet_10_20_26.pdf",
     location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
     date: "October 22, 2026",
     title: "TMVOA Board of Directors Meeting",
     board: "board",
-    agendaUrl: null,
-    packetUrl: null,
+    agendaUrl: "https://tmvoa.org/site/assets/files/4868/tmvoa_board_meeting_agenda_10_22_26.pdf",
+    packetUrl: "https://tmvoa.org/site/assets/files/4868/tmvoa_board_meeting_packet_10_22_26.pdf",
     location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
@@ -570,11 +579,10 @@ const MED_CACHED_DATA = [
     date: "October 22, 2026",
     time: "8:30 AM - 11:30 AM",
     title: "Regular Board Meeting",
-    agendaUrl: null,
+    agendaUrl: "https://www.tellmed.org/files/51579856e/THD+Reg+BOD+Mtg+10.22.26+Agenda.pdf",
     packetUrl: null,
     special: false,
-    location: "333 W Colorado Ave (2nd Floor), Telluride / Zoom",
-    note: "Next scheduled meeting -- agenda posted before the meeting."
+    location: "333 W Colorado Ave (2nd Floor), Telluride / Zoom"
   },
   {
     date: "November 26, 2026",

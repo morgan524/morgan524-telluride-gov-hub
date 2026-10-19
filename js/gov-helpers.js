@@ -342,7 +342,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"1ff606174e68cca5"},
 
   "telluride|2026-10-27|Town Council - Oct 27 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045","sv":4,"ph":"fe6dedc36e608232"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/DaEVzy_NTsub9PbJHzPwTg","meetingId":"896 6851 5669","passcode":"714517.","phone":"719) 359-4580"},
 
   "county|2026-10-28|Board of County Commissioners Work Session":
     {"sv":4},
@@ -381,10 +381,10 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"a12dfd2ce826475e"},
 
   "telluride|2026-11-05|Special Meeting - Planning & Zoning Commission - Nov 05 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312","sv":4,"ph":"2f0962b84aac8b50"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312","sv":4,"ph":"930623a06e6efd7f"},
 
   "telluride|2026-11-05|Town Council Budget - Nov 05 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054","sv":4,"ph":"dc6fd5ab4a1c2e97"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054","sv":4,"ph":"6dd7ca52c2d0336e"},
 
   "telluride|2026-10-21|CANCELED - Historic & Architectural Review Commission Chair - Oct 21 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8025","sv":4},
@@ -414,7 +414,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8325","sv":4},
 
   "telluride|2026-11-09|Open Space Commission - Nov 09 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8133","sv":4,"ph":"93c2102d90e6fd4f"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8133","sv":4,"ph":"410853eec5221d83"},
 
   "norwood|2026-11-10|Norwood Water Commission Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -456,7 +456,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-11-17|Town Council - Nov 17 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8046","sv":4,"ph":"77b41b3f56f2888b"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8046","sv":4,"ph":"550a9db69c8ba5ea"},
 
   "rico|2026-11-18|Rico Board of Trustees Regular Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -471,7 +471,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8084","sv":4,"ph":"41308feda7cb9e07"},
 
   "county|2026-11-18|Board of County Commissioners Meeting":
-    {"sv":4,"ph":"49e704e3c3bab858"}
+    {"sv":4},
+
+  "county|2026-11-09|Intergovernmental Meeting - San Miguel County Hosts":
+    {"sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -815,8 +818,11 @@ const MEETING_PREVIEWS = {
   "county|2026-11-18|Board of County Commissioners Meeting":
     "Board will consider proposals for painting the county jail, developing a multi-jurisdictional hazard mitigation plan, and creating a housing action plan. Related legal notices include a creditor notice for a local estate and a public trustee foreclosure sale on a Norwood property.",
 
+  "county|2026-11-09|Intergovernmental Meeting - San Miguel County Hosts":
+    "San Miguel County is expected to host an intergovernmental meeting covering county business matters, including active procurement opportunities such as trail construction, jail painting, fuel canopy installation, material hauling, and a multi-jurisdictional hazard mitigation plan update. Foreclosure proceedings and estate matters may also be referenced as related legal notices.",
+
   "ouraycity|2026-10-19|Ouray City Council Regular Meeting":
-    "Council is expected to mark the city's 150th anniversary, hear a housing services update, and vote on a law enforcement intergovernmental agreement with the Ouray County Sheriff. Additional action items include a water service termination agreement, first readings on 2027 utility rates and light industrial zoning, and a perimeter trail easement request."
+    "Council is expected to discuss Ouray's 150th anniversary, hear a housing services update, and vote on a law enforcement intergovernmental agreement with the county sheriff. Additional action items include a water service termination agreement, proposed 2027 utility rates, a light industrial ordinance, and a perimeter trail easement request."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -977,6 +983,16 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "government",
     copy: "An article in the Oct. 8-14 edition, “Ridgway seeks input on water supply plan,” misstated the date that the Ridgway Town Council is expected to vote on the water supply element of its master plan. The correct date is Nov. 19.",
     href: "https://www.ouraynews.com/2026/10/14/correction-20261015-0258-189619/",
+    img: ""
+  },
+  {
+    title: "2026 Telluride Mountain Club Recap Report",
+    source: "Telluride Mountain Club",
+    sourceKey: "tmc",
+    date: "October 12, 2026",
+    newsTopic: "community",
+    copy: "The post 2026 Telluride Mountain Club Recap Report appeared first on Telluride Mountain Club .",
+    href: "https://www.telluridemountainclub.org/2026-telluride-mountain-club-recap-report/",
     img: ""
   },
   {
@@ -1206,7 +1222,7 @@ const MANUAL_SUMMARIES = {
     "The October 26 Open Space Commission agenda hasn't been posted yet.",
 
   "telluride|2026-10-27|Town Council - Oct 27 2026":
-    "The October 27, 2026 Town Council agenda hasn't been posted yet.",
+    "Three substantive items anchor this meeting. Council takes up the Fourth Supplement to the Gondola IGA, extending cost-sharing for the 2027 planning and development budget on the gondola replacement project — a line that connects directly to the SMART 3A funding voters approved. Two ordinances get first reading: one amending the Telluride Energy Mitigation Program (TEMP) under the municipal code, and one that would suspend the 5% capital fund allocation for open space in 2027 — a notable carve-out worth watching given the town's budget pressures. A work session covers special events on town property in 2026 and a proposed two-night concert in Town Park in August 2027. The long-running Stender Residence HARC appeal is continued again. Council also appoints an Open Space Commission member and approves routine minutes and a liquor licensing hearing officer.",
 
   "county|2026-10-28|Board of County Commissioners Work Session":
     "The October 28 BOCC Work Session in Placerville has been posted, but no agenda detail beyond the meeting name and location has been provided. There's no way to know what's on the table until the full agenda drops.",
@@ -1335,7 +1351,10 @@ const MANUAL_SUMMARIES = {
     "The November 18, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-11-18|Board of County Commissioners Meeting":
-    "The November 18, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet."
+    "The November 18 Board of County Commissioners regular meeting is being held in Norwood. The posted agenda doesn't include any item detail beyond the location — nothing on what's actually being taken up.",
+
+  "county|2026-11-09|Intergovernmental Meeting - San Miguel County Hosts":
+    "The November 9 Intergovernmental Meeting hosted by San Miguel County has been posted, but the agenda carries no substantive detail beyond the meeting title itself. When the county convenes with its municipal partners — Telluride, Mountain Village, Norwood, and others — the conversations tend to touch the issues that don't fit neatly inside any single jurisdiction's boundaries. What exactly is on the table this time hasn't been shared yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -3568,6 +3587,96 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14853"
   },
   {
+    title: "San Miguel County Public Health Announces Fall Vaccine Availability",
+    source: "San Miguel County",
+    date: "October 1, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1419",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14836"
+  },
+  {
+    title: "Chief Deputy Clerk Receives Excellence in Election Service Award",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "government",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1413",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14817"
+  },
+  {
+    title: "Planning Director Kaye Simonson Retires After Nearly Eight Years with the County",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1418",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14827"
+  },
+  {
+    title: "Another San Miguel Basin Fair in the Books",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1416",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14822"
+  },
+  {
+    title: "New Faces and a Fond Farewell for Parks + Open Space",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "recreation",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1417",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14826"
+  },
+  {
+    title: "County Housing Efforts Continue on Multiple Fronts",
+    source: "San Miguel County",
+    date: "September 24, 2026",
+    newsTopic: "housing",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1415",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14821"
+  },
+  {
+    title: "San Miguel County Adds Genasys Protect to Emergency Alerting Ecosystem",
+    source: "San Miguel County",
+    date: "September 24, 2026",
+    newsTopic: "public-safety",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1414",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14820"
+  },
+  {
+    title: "Safe Festivals - A Public Health Approach to Harm Reduction",
+    source: "San Miguel County",
+    date: "September 23, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1411",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14818"
+  },
+  {
+    title: "SMC Expands Crisis Intervention Services with Paragon Behavioral Health Connections",
+    source: "San Miguel County",
+    date: "September 22, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1412",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14816"
+  },
+  {
+    title: "Commissioners Finalize Deed Restriction Reversion Process",
+    source: "San Miguel County",
+    date: "September 22, 2026",
+    newsTopic: "housing",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1410",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14812"
+  },
+  {
     title: "DMV Services available in Egnar 11/18",
     source: "San Miguel County",
     date: "October 15, 2026",
@@ -4316,6 +4425,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/10/ALTO_FilmStill_03-1-scaled.jpg"
   },
   {
+    title: "The Classics Taproom Society",
+    link: "https://koto.org/event/the-classics-taproom-society/",
+    description: "A book club gathering at the Telluride Brewing Company Lawson Hill Taproom focused on classic literature, with discussions centered on works reaching significant publication anniversaries. The group explores timeless titles over fresh pours in a casual taproom setting.",
+    pubDate: "2026-10-21T17:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Brewing Company Lawson Hill Taproom",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/taproom-society-7.png"
+  },
+  {
     title: "Telluride Rotary Club Meeting",
     link: "https://koto.org/event/telluride-rotary-club-meeting-3/",
     description: "Telluride Rotary Club meets Wednesday, October 21, at 6:00 p.m. at the MountainFilm location, 122 S Oak Street, Telluride. Meetings feature guest speakers and discussion of club projects. Anyone with an interest in networking and service is welcome to drop in as a guest. Email telluriderotary@gmail.com for info or to rsvp.",
@@ -4338,7 +4458,7 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "Water in the West: The Southwest's last, best rivers and how to protect them",
+    title: "Water in the West: The Southwest's Last, Best Rivers and How to Protect Them",
     link: "https://koto.org/event/water-in-the-west-the-southwests-last-best-rivers-and-how-to-protect-them/",
     description: "Across the Southwest, aridification and challenging politics are impacting our watersheds and threatening our rivers. Join Mike Fiebig, Director of the Southwest River Protection Program at American Rivers, to learn what we can do to protect our local watersheds in the face of a changing climate. Drinks and snacks will be provided! Thanks to our event partners for making this happen: Patagonia Telluride, American Rivers, Dolores River Boating Advocates, and San Juan Citizens Alliance.",
     pubDate: "2026-10-22T17:30:00-06:00",
@@ -4382,7 +4502,7 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/10/rocky-horror-shadow-cast-banner.png"
   },
   {
-    title: "Up-off Gymnastics, Dance, and Spanish",
+    title: "Up-Off Gymnastics, Dance, and Spanish",
     link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-10-23/",
     description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
     pubDate: "2026-10-23T10:00:00-06:00",
@@ -4391,6 +4511,28 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Lone Cone Library Norwood",
     imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "Coffee, Croissants and Cribbage",
+    link: "https://koto.org/event/coffee-croissants-and-cribbage/",
+    description: "Coffee, croissants and cribbage is back! Come by the library Magazine Room 10-11:30am for friendly competition, free coffee and pastries, and community connection. May the nibs be with you.",
+    pubDate: "2026-10-23T10:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Art Goodtimes in Conversation with Dr. Howard Kornfeld",
+    link: "https://koto.org/event/art-goodtimes-in-conversation-with-dr-howard-kornfeld/",
+    description: "Dr. Howard Kornfeld, former Telluride resident, and now with Physicians for Social Responsibility, will be in coversation with Art Goodtimes about peace and nuclear disarmament. Free and open to all!",
+    pubDate: "2026-10-23T16:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
   },
   {
     title: "Rocky Horror Picture Show Live Shadow Cast Edition",
@@ -4415,6 +4557,39 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/10/155B9CC1-4DC7-4302-BEF2-5156CCF153DD.jpeg"
   },
   {
+    title: "Yogalates with Lauren Norton",
+    link: "https://koto.org/event/yogalates-with-lauren-norton/",
+    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
+    pubDate: "2026-10-24T12:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Horror Book Club: Interview with a Vampire",
+    link: "https://koto.org/event/horror-book-club-interview-with-a-vampire/",
+    description: "Join us for a spine-tingling afternoon of discussion and seasonal fun. We'll be reading Interview with a Vampire by Anne Rice, which is celebrating its 50th anniversary this year. Here are the confessions of a vampire. Hypnotic, shocking, and chillingly sensual, this is a novel of mesmerizing beauty and astonishing force—a story of danger and flight, of love and loss, of suspense and resolution, and of the extraordinary power of the senses. It is a novel only Anne Rice could write. The event will be led by Crisanne Schworn, a former WPL employee and devoted fan of the horror genre. We will discuss the book while carving pumpkins on the library terrace. Pumpkins and carving tools will be provided. Participants can pick up a free copy of the book starting September 13th at the library front desk after signing up. Space is limited, so register early to reserve your copy.",
+    pubDate: "2026-10-24T14:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/HORROR-BOOK-CLUB-2.png"
+  },
+  {
+    title: "SNL: Saturday Night at the Livery in Norwood Features Devaki Murch and Operation Babylift",
+    link: "https://koto.org/event/snl-saturday-night-at-the-livery-in-norwood-features-devaki-murch-and-operation-babylift/",
+    description: "Norwood Park & Rec District invites you to another installment of \"SNL: Saturday Night @ the Livery\"—Norwood's sporadic speakers series—at 7pm on October 24th, featuring Devaki Murch with her presentation and exhibit: \"The Mirror of Return: Operation Babylift Then and Now.\" Where were you in 1975? Hear from the crash survivor that is now connecting others with their records after being evacuated from Saigon as babies and raised all over the United States. There will be Vietnamese Happy Snacks and a non-acloholic bar. 1555 Summit St Norwood. As always, $5 at the door.",
+    pubDate: "2026-10-24T19:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "The Livery Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/NPRD-SNL-Devaki-poster.jpg"
+  },
+  {
     title: "Rocky Horror Picture Show Live Shadow Cast Edition",
     link: "https://koto.org/event/rocky-horror-picture-show-live-shadow-cast-edition/2026-10-24/",
     description: "The Rocky Horror Picture Show — Shadow Cast Edition Thursday, Friday, & Saturday Performances: Doors: 7:30pm || Show: 8:00pm (Oct. 22-24) Sunday Matinee: Doors: 2:30pm || Show: 3:00pm (Oct. 25) Directed by Erin Cawley Ages 18+ (under 18 with parental permission or parent is accompanying minor) Tickets: $15 + $15 required prop/supply fee Don’t dream it… be it. Get ready to do the Time Warp again as The Rocky Horror Picture Show returns to the Sherbino in full shadow-cast style! Part movie screening, part live theater, and completely outrageous, this cult-classic experience features a live local cast performing along with the film on stage—lip-syncing, dancing, and bringing your favorite characters and scenes to life right in front of the screen. And at Rocky Horror, the audience isn’t just watching. You’re part of the show. …",
@@ -4437,6 +4612,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   },
   {
+    title: "The Real Book Club:Jazz Standards",
+    link: "https://koto.org/event/the-real-book-clubjazz-standards/",
+    description: "Join us for The Real Book Club, a monthly jazz jam session for musicians of all levels who want to dive into classic jazz standards together! Whether you're a seasoned improviser or just starting out, this is a welcoming space to play, practice, and connect with fellow jazz enthusiasts. Each month, we’ll focus on three jazz standards selected from The Real Book. You’ll receive PDFs of the tunes in advance so you can shed at home and come ready to jam. Lead sheets will also be available on the day of the event. The songs we will play at this jam are: Once I Loved by Antonio Carlos Jobim. Here is a version I quite like with Astrud Gilberto singing. Guantanamera by Jose Fernandez Diaz. Here is a version I quite like by Joseito Fernandez. …",
+    pubDate: "2026-10-25T17:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
     title: "Rocky Horror Picture Show Live Shadow Cast Edition",
     link: "https://koto.org/event/rocky-horror-picture-show-live-shadow-cast-edition/2026-10-25/",
     description: "The Rocky Horror Picture Show — Shadow Cast Edition Thursday, Friday, & Saturday Performances: Doors: 7:30pm || Show: 8:00pm (Oct. 22-24) Sunday Matinee: Doors: 2:30pm || Show: 3:00pm (Oct. 25) Directed by Erin Cawley Ages 18+ (under 18 with parental permission or parent is accompanying minor) Tickets: $15 + $15 required prop/supply fee Don’t dream it… be it. Get ready to do the Time Warp again as The Rocky Horror Picture Show returns to the Sherbino in full shadow-cast style! Part movie screening, part live theater, and completely outrageous, this cult-classic experience features a live local cast performing along with the film on stage—lip-syncing, dancing, and bringing your favorite characters and scenes to life right in front of the screen. And at Rocky Horror, the audience isn’t just watching. You’re part of the show. …",
@@ -4448,7 +4634,62 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/10/rocky-horror-shadow-cast-banner.png"
   },
   {
-    title: "Blood Drive hosted by Telluride Fire & Vitalant",
+    title: "French Cafe at WPL",
+    link: "https://koto.org/event/french-cafe-at-wpl/",
+    description: "Practice your French with other French speakers in a relaxed atmosphere. Free crepes and coffee! All levels welcome. Advance registration recommended.",
+    pubDate: "2026-10-26T09:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Strings and Keys with Annie and Oliver",
+    link: "https://koto.org/event/strings-and-keys-with-annie-and-oliver/",
+    description: "Unwind at the library with live violin and piano music from violinist, Annie Foxen and pianist, Oliver Henry (both WPL staff members). Perfect for reading, relaxing, or simply listening. Free and open to the public. All ages are welcome.",
+    pubDate: "2026-10-26T12:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Desserts and Docs: The Colorado Experience",
+    link: "https://koto.org/event/desserts-and-docs-the-colorado-experience/",
+    description: "Join us for this 4 part series as we watch episodes from RMPBS Flagship history series, explores the people, places. and events that has shaped Colorado's rich heritage. October: \"The Sand Creek Massacre\" or \"Dearfield: Uncovering Dearfield\". A deep look at the tragic growing pains of the frontier or the rise of Colorado's historic Black homesteader town.",
+    pubDate: "2026-10-26T13:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Author Talk: Pam Houston",
+    link: "https://koto.org/event/author-talk-pam-houston/",
+    description: "Join us for a talk and signing with Pam Houston about her new book, Animals Taught Me Everything! What can a wagging tail and soaring wings teach us about a life well lived? From Icelandic mares and Irish wolfhounds to elephants, leopards, hyenas, and a desert-adapted lioness named Charlie, Pam Houston has learned life’s most important lessons from animals. How to play. How to rest. How to love. How to die. How to be present with the dying. How to be present with the living and with the Earth. How to find joy in the least likely places. How to find joy, literally, everywhere. With playful sincerity, Houston finds power and promise in the teachings of our fellow creatures and reminds us that animals are here for us, every day and everywhere.",
+    pubDate: "2026-10-26T17:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "The Listening Club at Telluride Music Co",
+    link: "https://koto.org/event/the-listening-club-at-telluride-music-co/",
+    description: "A monthly gathering at The Telluride Music Company where participants listen to a featured album together and then dive into a guided discussion exploring its cultural, historical, and musical context. The Listening Club meets on the fourth Monday of each month, with a knowledgeable guide leading the conversation.",
+    pubDate: "2026-10-26T18:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "The Telluride Music Company",
+    imageUrl: ""
+  },
+  {
+    title: "Blood Drive Hosted by Telluride Fire & Vitalant",
     link: "https://koto.org/event/blood-drive-hosted-by-telluride-fire-vitalant/",
     description: "Telluride Fire and Vitalant are hosting a blood drive at Telluride Fire Station 1 on Tuesday, October 27, running from 10:45 AM to 2:30 PM. Community members can sign up to donate at vitalant.org.",
     pubDate: "2026-10-27T10:45:00-06:00",
@@ -4481,6 +4722,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/10/garden.jpeg"
   },
   {
+    title: "America 250,Colorado 150 Book Club: Stampede to Timberline by Sibell Wolle",
+    link: "https://koto.org/event/america-250colorado-150-book-club-stampede-to-timberline-by-sibell-wolle/",
+    description: "This book includes the story of 240 of Colorado’s mining camps, with emphasis on the human side. The men who swarmed to the mountains to find precious metal came in successive waves from the late 1850s on, combing the gulches, scrambling over the passes and climbing the peaks. Their story is full of adventurous chances, lucky strikes, boom conditions, reckless spending, banditry, claim jumping, railroad wars and labor troubles. The author searched the Colorado Rockies from the time she saw and sketched her first ghost town until she had rediscovered and painted the vanishing mining camps. Twenty-two maps give the location of each one and serve as a guide for those who want to reach them by car or jeep, by horseback or on foot. …",
+    pubDate: "2026-10-27T17:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
     title: "7th Judicial District FREE Attorney Consultations for Pro Bono Week",
     link: "https://koto.org/event/7th-judicial-district-free-attorney-consultations-for-pro-bono-week/",
     description: "7 th Judicial District is pleased to announce, that in recognition of the national celebration of pro bono week, we will be hosting free attorney consultations and mediation sessions during the week of October 26 th -30 th , 2026. Free classes and presentations offered: Wednesday, October the 28 th 9:00 a.m. Parenting Education Workshop – offered by: CASA 1:00 p.m. Child Support Presentation – presented by: Attorney Adriana Hartley Thursday, October 29 th 10:00 a.m. Complete Eviction Process – presented by Colorado Legal Services 1:00 p.m. Contested Family Law Cases – presented by Colorado Legal Services 2:30 p.m. Evidence – presented by Colorado Legal Services Spanish Interpretation available. Availability for mediators and attorneys is limited so participants are encouraged to pre-register early. Local community resource agencies will be present on site to offer information with regard to the services and resources they offer. …",
@@ -4492,7 +4744,7 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/10/7th-2026-LRD-Flyer-English.jpg"
   },
   {
-    title: "Coffee and Climate Conversations: The Super El Niño is here",
+    title: "Coffee and Climate Conversations: The Super El Niño Is Here",
     link: "https://koto.org/event/coffee-and-climate-conversations-the-super-el-nino-is-here/",
     description: "Across our community, Super El Niño rumors are building hope and excitement that a snowy winter full of powder days is on the horizon. This year's El Niño is shaping up to be the strongest ever recorded, and is already driving changes in weather patterns, precipitation, and temperatures around the globe. Join us for a conversation with Emily Laidlaw, a social scientist at NOAA, to learn more about what the Super El Niño could mean for the San Juans and beyond, and how communities like ours could think about and prepare for its impacts.",
     pubDate: "2026-10-29T08:30:00-06:00",
@@ -4507,6 +4759,17 @@ const KOTO_COMMUNITY_EVENTS = [
     link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-10-29/",
     description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
     pubDate: "2026-10-29T12:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Death Details:What to Do Before You Check Out",
+    link: "https://koto.org/event/death-detailswhat-to-do-before-you-check-out/",
+    description: "Dying in America is comes with a lot of beaurocracy. Fortunately for you and your family, you can do a lot to be prepared for the only thing that is as certain as taxes. Join us for What To Do Before You Check Out and get all your death details in order! 5:30- 5:40: Randi Lathm, Care Coordination Manager, Tri-County Health Network- Palliative Board, Patient Coordination, Caregiver Volunteers, and Medical Transport 5:40 – 5:50: Emily McGough, NP, Telluride Medical Center- Advance Directives and Home Health Nursing 5:50 – 6:00: Matthew Bayma, Attorney, Scardinia Law – Medical Powers of Attorney, Durable Powers of Attorney, Living Wills and Wills 6:00 – 6:10: Heidi Hoff, RN, Telluride Concierge Nursing- Home Palliative Care and Hospice Options 6:10 – 6:20: Dr. …",
+    pubDate: "2026-10-29T17:30:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
@@ -4536,7 +4799,7 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/10/YF-thundertix.png"
   },
   {
-    title: "Up-off Gymnastics, Dance, and Spanish",
+    title: "Up-Off Gymnastics, Dance, and Spanish",
     link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-10-30/",
     description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
     pubDate: "2026-10-30T10:00:00-06:00",
@@ -4644,160 +4907,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.42-PM.png"
-  },
-  {
-    title: "Facing the Mourning",
-    link: "https://koto.org/event/facing-the-mourning/2026-11-05/",
-    description: "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit from additional support while navigating grief and loss. Please feel free to share this information with others who may be interested.",
-    pubDate: "2026-11-05T18:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Redvale Community Center",
-    imageUrl: ""
-  },
-  {
-    title: "Up-off Gymnastics, Dance, and Spanish",
-    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-11-06/",
-    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
-    pubDate: "2026-11-06T10:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Lone Cone Library Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
-  },
-  {
-    title: "Wildbelly Fermentation Fest",
-    link: "https://koto.org/event/wildbelly-fermentation-fest/",
-    description: "The Wildbelly Fermentation Fest is bringing together fermentation enthusiasts and expert teachers for two days of classes in the Mancos Valley on Nov. 7th & 8th.",
-    pubDate: "2026-11-07T00:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Mancos Community Center, Mancos, CO",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/03/857CD970-C1BC-4A46-AA34-6D1D567DA5AB.jpeg"
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-11-08/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-11-08T14:30:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
-    title: "Free Legal Clinic – Clínica Jurídica Gratuita",
-    link: "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-11-10/",
-    description: "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. Abogados voluntarios responderán a preguntas, ayudarán a llenar formularios y explicarán el proceso y el procedimiento de cuestiones jurídicas. Los abogados voluntarios no te representan y esta clínica es sólo informativa. CON CITA PREVIA. Llame a 970-728-4519 para más información y para registrarse.",
-    pubDate: "2026-11-10T16:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Sewing 101 with Melissa",
-    link: "https://koto.org/event/sewing-101-with-melissa/2026-11-11/",
-    description: "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.",
-    pubDate: "2026-11-11T17:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/02/sewing.jpg"
-  },
-  {
-    title: "Pilates for All Bodies with Laura",
-    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-11-12/",
-    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-11-12T12:30:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "The Creative Exchange at Telluride Arts HQ",
-    link: "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-11-12/",
-    description: "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories that fuel their work. Think of it as an open source model for creativity—where we learn from each other, swap ideas, and help strengthen one another’s practice. Each session is hosted by local artists and creative leaders who bring their own perspectives, techniques, and creative journeys into the room. Topics may span everything from the business of art and professional development, to creative process, storytelling, collaboration, and the philosophical underpinnings of making art. Whether you’re a full-time working artist, an educator, a student, a maker, or simply someone curious about creative expression, the Creative Exchange is open to you. …",
-    pubDate: "2026-11-12T17:30:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Arts HQ, TELLURIDE",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png"
-  },
-  {
-    title: "Facing the Mourning",
-    link: "https://koto.org/event/facing-the-mourning/2026-11-12/",
-    description: "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit from additional support while navigating grief and loss. Please feel free to share this information with others who may be interested.",
-    pubDate: "2026-11-12T18:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Redvale Community Center",
-    imageUrl: ""
-  },
-  {
-    title: "Ridgway Independent Film Festival",
-    link: "https://koto.org/event/ridgway-independent-film-festival/",
-    description: "The Ridgway Independent Film Festival returns to the historic Sherbino Theater in downtown Ridgway for a weekend running November 13–15, 2026. The festival features independent short films, select longer works, and filmmaker Q&As, bringing together filmmakers and audiences for a weekend of storytelling and community connection.",
-    pubDate: "2026-11-13T00:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Sherbino Theater, Ridgway",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/10/RIFF-FLIER-CONCEPTS-Facebook-Cover-3.png"
-  },
-  {
-    title: "Up-off Gymnastics, Dance, and Spanish",
-    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-11-13/",
-    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
-    pubDate: "2026-11-13T10:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Lone Cone Library Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
-  },
-  {
-    title: "Rainbow, Rockies and Rascals 2026 Fall Fundraiser!",
-    link: "https://koto.org/event/rainbow-rockies-and-rascals-2026-fall-fundraiser/",
-    description: "Rainbow, Rockies and Rascals will host a silent/live auction fundraiser on Friday, November 13th at the Telluride Science and Innovation Center from 5:30pm-9:30pm. Tickets are $15 from any program parent or $20 at the door and enters you into a 2026/2027 Ski Pass raffle. Come and enjoy free champagne (while it lasts), delicious hor duerves from Black Salt Hospitality, live music by Sean Mahoney and Flatliner Express, live auction MC'ed by Zoe Dohnal and an amazing silent auction with merchandise and services donated by our generous local businesses.",
-    pubDate: "2026-11-13T17:30:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Science &#038; Innovation Center, TELLURIDE",
-    imageUrl: ""
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-11-15/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-11-15T14:30:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
-    title: "Telluride Mountain School Open House",
-    link: "https://koto.org/event/telluride-mountain-school-open-house-2/",
-    description: "Telluride Mountain School is hosting an open house where prospective families and community members can step directly into the learning environment rather than sit through a formal presentation. Visitors are invited to explore classrooms, meet teachers and students, and experience firsthand the school's approach to curiosity, connection, and real-world learning.",
-    pubDate: "2026-11-17T09:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Mountain School",
-    imageUrl: ""
   }
 ];
 
@@ -4936,6 +5045,17 @@ const SHERIDAN_EVENTS = [
     category: "Concert / Performance",
     location: "Sheridan Opera House • Telluride, CO",
     imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/10/Screenshot-2026-10-13-at-1.02.18-PM.png"
+  },
+  {
+    title: "Adventures in Acting: The Legend of Sleepy Hollow / The Little Ghost Who Was a Quilt",
+    link: "https://sheridanoperahouse.com/events/adventures-in-acting-the-legend-of-sleepy-hollow/",
+    description: "A theatrical performance at the Sheridan Opera House presenting two spooky-season stories: Washington Irving's classic *The Legend of Sleepy Hollow* and *The Little Ghost Who Was a Quilt*. The production is part of the Adventures in Acting series, making it a fitting event for the Halloween season.",
+    pubDate: "2026-10-28",
+    source: "sheridan",
+    sourceLabel: "Sheridan Opera House",
+    category: "Concert / Performance",
+    location: "Sheridan Opera House • Telluride, CO",
+    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2022/08/VendorBadge_AsSeenOnWeb.png"
   }
 ];
 
@@ -4955,16 +5075,6 @@ const CLUB_RED_SHOWS = [];
 const FRESH_FOOD_HUB_EVENTS = [];
 const SHERBINO_EVENTS = [
   {
-    title: "Mountainfilm on Tour – Montrose",
-    href: "https://sherbino.org/event/mountainfilm-on-tour-montrose-adventure-shorts/",
-    date: "2026-10-18 15:00:00",
-    endDate: "2026-10-18 17:00:00",
-    location: "The Sherbino, Ridgway",
-    copy: "Mountainfilm on Tour brings a curated selection of short films from the acclaimed Telluride-based Mountainfilm festival to The Sherbino in Ridgway. The traveling program features the documentary and adventure storytelling the festival is known for, presented in a seated screening format with a limited bar available.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/sherb-and-wca-EVENT-BANNERS-3.png",
-    description: "Mountainfilm on Tour brings a curated selection of short films from the acclaimed Telluride-based Mountainfilm festival to The Sherbino in Ridgway. The traveling program features the documentary and adventure storytelling the festival is known for, presented in a seated screening format with a limited bar available."
-  },
-  {
     title: "Rocky Horror Picture Show Live Shadow Cast Edition",
     href: "https://sherbino.org/event/rocky-horror-picture-show-live-shadow-cast-edition-9/",
     date: "2026-10-22 20:00:00",
@@ -4974,7 +5084,7 @@ const SHERBINO_EVENTS = [
     imageUrl: "https://sherbino.org/wp-content/uploads/2025/11/RHPS-event-banner-1.png"
   },
   {
-    title: "Sherb Literary Living Room featuring Pam Houston with her new book: \"Animals Taught Me Everything\"",
+    title: "Sherb Literary Living Room Featuring Pam Houston with Her New Book: \"Animals Taught Me Everything\"",
     href: "https://sherbino.org/event/sherb-literary-living-room-featuring-pam-houston-with-her-new-book-animals-taught-me-everything/",
     date: "2026-10-27 18:30:00",
     endDate: "2026-10-27 19:30:00",
@@ -5004,14 +5114,14 @@ const SHERBINO_EVENTS = [
     description: "Easy Jim brings a two-night Halloween run to The Sherbino in Ridgway, performing across October 30 and 31, 2026, with shows starting at 8:00 p.m. each night. The run centers on Grateful Dead music, offering two evenings of celebration for Deadheads and live music fans in the region."
   },
   {
-    title: "The Sherbino Presents: Warren Miller's \"Days Off\"",
+    title: "Warren Miller's \"Days Off\" ~ Presented by The Sherbino, Citizens State Bank and Circle of Dreams Foundation",
     href: "https://sherbino.org/event/the-sherbino-presents-warren-millers-days-off/",
     date: "2026-11-04 18:30:00",
     endDate: "2026-11-04 20:00:00",
     location: "The Sherbino, Ridgway",
-    copy: "The Sherbino in Ridgway hosts a screening of *Days Off*, Warren Miller's 77th ski and snowboard film, hosted by Katie Burrell. Advance tickets are available at a discount, with general admission and student pricing, and doors open at 6:00 p.m. ahead of the 6:30 p.m. showing.",
+    copy: "Warren Miller's 77th ski and snowboard film, *Days Off*, screens at The Sherbino in Ridgway, hosted by Katie Burrell. Presented by The Sherbino, Citizens State Bank, and Circle of Dreams Foundation, the event offers advance general admission and student ticket pricing, with prices increasing at the door.",
     imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/Warren-Miller-Days-Off-Banner.png",
-    description: "The Sherbino in Ridgway hosts a screening of *Days Off*, Warren Miller's 77th ski and snowboard film, hosted by Katie Burrell. Advance tickets are available at a discount, with general admission and student pricing, and doors open at 6:00 p.m. ahead of the 6:30 p.m. showing."
+    description: "Warren Miller's 77th ski and snowboard film, *Days Off*, screens at The Sherbino in Ridgway, hosted by Katie Burrell. Presented by The Sherbino, Citizens State Bank, and Circle of Dreams Foundation, the event offers advance general admission and student ticket pricing, with prices increasing at the door."
   },
   {
     title: "The Sherbino & OCPAG Present: Heather & Doug – First Friday Show",
@@ -5102,6 +5212,15 @@ const SHERBINO_EVENTS = [
     copy: "A screening at The Sherbino in Ridgway as part of the Ridgway Independent Film Fest, featuring the film *We Wandered Beyond the Firelight*. Doors open at 1:45 pm with the film beginning at 2:00 pm, and single-block general admission tickets are $15.",
     imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/Block5.wewanderedbeyondthefirelight-1.png",
     description: "A screening at The Sherbino in Ridgway as part of the Ridgway Independent Film Fest, featuring the film *We Wandered Beyond the Firelight*. Doors open at 1:45 pm with the film beginning at 2:00 pm, and single-block general admission tickets are $15."
+  },
+  {
+    title: "The Sherbino & Citizens State Bank Present: Winter Wildlands Alliance BACKCOUNTRY FILM FEST",
+    href: "https://sherbino.org/event/the-sherbino-presents-winter-wildlands-alliance-backcountry-film-fest/",
+    date: "2026-11-18 18:30:00",
+    endDate: "2026-11-18 20:30:00",
+    location: "The Sherbino, Ridgway",
+    copy: "Winter Wildlands presents the Backcountry Film Festival at the Sherbino—an inspiring night of human-powered adventure and winter storytelling. ❄️🎬 📅 November 18, 2026 | Doors 6 PM • Films 6:30 PM @ TICKETS The Sherbino and CSB Present: Winter Wildlands Alliance Backcountry Film Festival Doors: 6:00pm || Films: 6:30pm || $10 students and seniors (18-/ 65+) || $15 General Admission The Backcountry Film Festival, presented by Winter Wildlands Alliance, celebrates the power and spirit of humans in winter. Since its inception, the festival has toured across states, countries—even Antarctica—screening hundreds of inspiring films that celebrate adventure, conservation, and the magic of winter. Over the years, the festival has raised millions of dollars to support local projects that strengthen winter communities and protect our wild snowscapes. The 2026-27 winter season is the 22st anniversary of the Backcountry Film Festival! …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/10/Backcountry-Film-Fest-Banner-Nov-18.png"
   }
 ];
 
@@ -5416,7 +5535,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
   },
   {
-    title: "BRITLEY & MATT",
+    title: "Britley & Matt",
     link: "https://events.ourayridgwayevents.com/event/britley-matt-7185",
     description: "Britley & Matt are performing live at a venue on North Cora Street in Ridgway. The event is an evening music performance hosted in the Ouray-Ridgway area.",
     pubDate: "2026-10-20T22:00:00.000Z",
@@ -5474,7 +5593,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54236148198717/huge/7d1ebafc567aad82f67c7ba07e1225354b86622c.jpg"
   },
   {
-    title: "TODDLER STORYTIME ART FOR AGES 2.5-5",
+    title: "Toddler Storytime Art for Ages 2.5-5",
     link: "https://events.ourayridgwayevents.com/event/toddler-storytimeartfor-ages-2-5",
     description: "TODDLER STORYTIME ART FOR AGES 2.5-5 Wednesdays, 10:00am–11:00am Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $70): September 16 – October 7Session 2 (4 weeks • $70): October 21 – November 11Session 3 (3 weeks • $55): December 2 – December 16Come join us for Storytime + Art! Each week, your child will enjoy story time with songs and finger rhymes, a process‑art project, and a variety of creative sensory play. We end with a quick cleanup, circle time, and movement songs. This class gently supports preschool prep and helps your child develop important school‑readiness skills—such as fine‑motor coordination, independence, and the ability to listen and follow directions—in a warm, supportive setting. Children will grow in: Social, language, and communication skillsFine‑ and gross‑motor coordinationListening and direction‑following abilitiesConfidence, creativity, and imaginationParents and caregivers stay to support their child—but we handle the mess! …",
     pubDate: "2026-10-21T16:00:00.000Z",
@@ -5498,7 +5617,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53887699628224/huge/262efc04b203189edcde410b9973aac1ca778195.jpg"
   },
   {
-    title: "AFTER SCHOOL ART FOR AGES 8-12",
+    title: "After School Art for Ages 8-12",
     link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-8-12-7963",
     description: "AFTER SCHOOL ART FOR AGES 8-12 Wednesdays, 3:15–4:45 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 16 – October 7Session 2 (4 weeks • $85): October 21 – November 11Session 3 (3 weeks • $70): December 2 – December 16Each week, students will explore an exciting theme while experimenting with a wide range of materials and techniques. Drawing inspiration from well-known artists and design styles, young artists will be supported in discovering their own unique creative voice in a fun, nurturing, studio-like setting. These classes are designed to foster a love of the arts through hands-on exploration, age-appropriate projects, and a focus on the joy of the creative process.. A student art reception will be held in December. Students will take home their collected works in the days following the event. …",
     pubDate: "2026-10-21T21:15:00.000Z",
@@ -5533,7 +5652,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54035264266437/huge/4f123a55b3d2309817e574335281ca0e9129f0c9.jpg"
   },
   {
-    title: "AFTER SCHOOL ART FOR AGES 5-8",
+    title: "After School Art for Ages 5-8",
     link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-5-8-6970",
     description: "AFTER SCHOOL ART FOR AGES 5-8 Thursdays, 3:15–4:30 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 17 – October 8Session 2 (4 weeks • $85): October 22 – November 12Session 3 (3 weeks • $70): December 3 – December 17Each week, students will explore exciting themes and projects while experimenting with a wide variety of art materials—such as watercolor and acrylic paints, oil and chalk pastels, clay, collage, printmaking, and more. Through open-ended projects, students are encouraged to explore their creativity, make artistic choices, take creative risks, and discover their unique artistic voice. Our classes nurture imaginative thinking and storytelling, helping children express big ideas and emotions through visual narratives and personal creations. In addition to sparking imagination, our signature art projects support the development of fine motor skills, confidence, and social-emotional development in a fun group environment. …",
     pubDate: "2026-10-22T21:15:00.000Z",
@@ -5614,7 +5733,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54055496965288/huge/4ac547d8a4681a49d4e49d0024729211c03874a6.jpg"
   },
   {
-    title: "AIDAN SWEENEY",
+    title: "Aidan Sweeney",
     link: "https://events.ourayridgwayevents.com/event/aidan-sweeney",
     description: "Aidan Sweeney performs live music at a venue on North Cora Street in Ridgway. The event is listed on the Ouray Ridgway community calendar.",
     pubDate: "2026-10-23T22:00:00.000Z",
@@ -5625,7 +5744,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
-    title: "PINE NEEDLE WEAVING: JEWELRY, BASKETS AND MORE! WITH EMILY KNICKERBOCKER",
+    title: "Pine Needle Weaving: Jewelry, Baskets and More! with Emily Knickerbocker",
     link: "https://events.ourayridgwayevents.com/event/pine-needle-weaving-jewelry-baskets-and-more-with-emily-knickerbocker",
     description: "Pine Needle Weaving: Jewelry, Baskets and More! with Emily Knickerbocker October 24th, 2026 | 10:00 am - 2:00 pm Cora Annex, Ridgway $75 includes all supplies Registration: www.weehawkenarts.org Discover the beauty and versatility of pine needles as you create your own wearable art and decorative pieces! In this class, students will explore the traditional craft of pine needle weaving and learn how to transform this natural material into unique, handcrafted items such as coiled jewelry, small baskets, hair accessories, and other creative forms. Students will work with naturally shed ponderosa pine needles and complementary materials like thread, found objects, and a wild clay or wood basket base. Through hands-on practice, you will learn essential techniques including preparing and softening needles, coiling, stitching, shaping, and finishing your designs. This beginner-friendly class is perfect for nature lovers and anyone interested in slowing down and connecting to the land through creative expression. …",
     pubDate: "2026-10-24T16:00:00.000Z",
@@ -5705,7 +5824,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54250768566062/huge/bbfffaba68b85f987b424216df9d9012aae2bf55.jpg"
   },
   {
-    title: "BRITLEY & MATT",
+    title: "Britley & Matt",
     link: "https://events.ourayridgwayevents.com/event/britley-matt-7748",
     description: "Britley & Matt perform live at a venue on North Cora Street in Ridgway. The event is an evening of live music hosted at what appears to be the Colorado Boy Depot.",
     pubDate: "2026-10-27T22:00:00.000Z",
@@ -5739,7 +5858,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52092171660517/huge/0e628304026c92db25e8df01849c962ac902a3b4.jpg"
   },
   {
-    title: "Sherb Literary Living Room featuring Pam Houston with her new book: “Animals Taught Me Everything”",
+    title: "Sherb Literary Living Room Featuring Pam Houston with Her New Book: “Animals Taught Me Everything”",
     link: "https://events.ourayridgwayevents.com/event/sherb-literary-living-room-featuring-pam-houston-with-her-new-book-animals-taught-me-everything-7659",
     description: "Doors: 6:00 PM || Talk starts: 6:30 PM || $15 entry Setting: Seated Join us for our Literary Living Room as Pam Houston features her just-published book, Animals Taught Me Everything. What can a wagging tail and soaring wings teach us about a life well lived? From Icelandic mares and Irish wolfhounds to elephants, leopards, hyenas, and a desert-adapted lioness named Charlie, Pam Houston has learned life’s most important lessons from animals. How to play. How to rest. How to love. How to die. How to be present with the dying. How to be present with the living and with the Earth. How to find joy in the least likely places. How to find joy, literally, everywhere. With playful sincerity, Houston finds power and promise in the teachings of our fellow creatures and reminds us that animals are here for us, every day and everywhere. …",
     pubDate: "2026-10-28T00:30:00.000Z",
@@ -5794,7 +5913,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53967861373929/huge/1167e663cc84a9c4be3eccaa396cf973741529f4.jpg"
   },
   {
-    title: "JELLY BOWL BAND",
+    title: "Jelly Bowl Band",
     link: "https://events.ourayridgwayevents.com/event/jelly-bowl-band",
     description: "The Jelly Bowl Band performs a live music show at a venue on N Cora Street in Ridgway. The event takes place in the evening on October 30th, offering a night of live music the day before Halloween.",
     pubDate: "2026-10-30T22:00:00.000Z",
@@ -5805,7 +5924,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
-    title: "Floating Lotus Halloween Pint Night supports Second Chance Humane Society",
+    title: "Floating Lotus Halloween Pint Night Supports Second Chance Humane Society",
     link: "https://events.ourayridgwayevents.com/event/floating-lotus-halloween-pint-night",
     description: "Join us at Floating Lotus Brewery for a spooky night of good beer, good times, and good people! There will be a costume contest for fun prizes. Plus, $1 from every beer supports the animals at Second Chance Humane Society!",
     pubDate: "2026-10-31T00:00:00.000Z",
@@ -5894,7 +6013,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54035396754488/huge/0ff17d6c525d45e896d55bfebccad3217d6391db.jpg"
   },
   {
-    title: "Trick-or-Treat Street",
+    title: "Trick-Or-Treat Street",
     link: "https://events.ourayridgwayevents.com/event/trick-or-treat-street",
     description: "Trick-or-Treat Street is a Halloween community event on Main Street in Ouray, where local businesses open their doors to trick-or-treaters. It's a festive neighborhood tradition welcoming families and kids to celebrate the holiday in downtown Ouray.",
     pubDate: "2026-10-31T22:00:00.000Z",
@@ -5916,7 +6035,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54035420061248/huge/d9483f91f6cbf291d9c98abc718e1ec3869ac8ae.jpg"
   },
   {
-    title: "SYNTH-O-WEEN",
+    title: "Synth-O-Ween",
     link: "https://events.ourayridgwayevents.com/event/synth-o-ween",
     description: "A ghoulish Halloween dance party at the Adobe Inn. DJ's, a live set by synth legend BOB SYNC. Coustume contest with cash prizes. Late night food.",
     pubDate: "2026-11-01T01:00:00.000Z",
@@ -6089,7 +6208,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54241427843593/huge/a1cc33d87bc18f9ea75e8d70335288204ff4e898.jpg"
   },
   {
-    title: "Teeth to the Wind: fundraiser for George & Michael Gardner Fund",
+    title: "Teeth to the Wind: Fundraiser for George & Michael Gardner Fund",
     link: "https://events.ourayridgwayevents.com/event/teeth-to-the-wind",
     description: "A fundraiser screening of *Teeth to the Wind*, a documentary following alpinists Michael Gardner and Sam Hennessey through their seasons in the Tetons, described by Gardner himself as something closer to a rom-com than a traditional climbing film. The event benefits the George and Michael Gardner Fund and takes place at the Ouray County 4-H Center.",
     pubDate: "2026-11-11T01:00:00.000Z",
@@ -6258,7 +6377,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
   },
   {
-    title: "NEW With Weehawken: Beat & Step: West African Dance, Drum & Body Percussion ~ with performances in The Nutcracker Remixed!",
+    title: "NEW With Weehawken: Beat & Step: West African Dance, Drum & Body Percussion ~ with Performances in The Nutcracker Remixed!",
     link: "https://events.ourayridgwayevents.com/event/new-with-weehawken-beat-step-west-african-dance-drum-body-percussion-with-performances-in-the-nutcracker-remixed",
     description: "Beat & Step: West African Dance, Drum & Body Percussion is an energetic and interactive class that combines traditional West African dance, drumming, and body percussion into one exciting experience. Students will learn dance combinations, explore traditional drumming rhythms that tell stories, and create music using their hands, feet, body, drums, and voice. Along the way, they'll develop coordination, rhythm, musicality, focus, memory, confidence, and teamwork while experiencing the rich cultural traditions of West Africa. No previous dance or music experience is required—just curiosity, energy, and a willingness to learn. Students enrolled in this performance class will showcase what they've learned in our winter production. Dress Code: Students should wear comfortable clothing that allows for plenty of movement. Athletic clothing such as T-shirts, leggings, athletic pants, or shorts is recommended. Please avoid jeans or restrictive clothing. Wear comfortable athletic shoes or sneakers that are clean and reserved for class. …",
     pubDate: "2026-11-25T23:00:00.000Z",
@@ -6282,7 +6401,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/51579855188578/huge/de5019ffbfacf4a9f5e85d8a14961584c70e7873.jpg"
   },
   {
-    title: "TODDLER STORYTIME ART FOR AGES 2.5-5",
+    title: "Toddler Storytime Art for Ages 2.5-5",
     link: "https://events.ourayridgwayevents.com/event/toddler-storytimeartfor-ages-25-5",
     description: "TODDLER STORYTIME ART FOR AGES 2.5-5 Wednesdays, 10:00am–11:00am Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $70): September 16 – October 7Session 2 (4 weeks • $70): October 21 – November 11Session 3 (3 weeks • $55): December 2 – December 16Come join us for Storytime + Art! Each week, your child will enjoy story time with songs and finger rhymes, a process‑art project, and a variety of creative sensory play. We end with a quick cleanup, circle time, and movement songs. This class gently supports preschool prep and helps your child develop important school‑readiness skills—such as fine‑motor coordination, independence, and the ability to listen and follow directions—in a warm, supportive setting. Children will grow in: Social, language, and communication skillsFine‑ and gross‑motor coordinationListening and direction‑following abilitiesConfidence, creativity, and imaginationParents and caregivers stay to support their child—but we handle the mess! …",
     pubDate: "2026-12-02T17:00:00.000Z",
@@ -6294,7 +6413,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53780434962919/huge/3aff831f26d7f9d4824893f89d8fd88416047a44.jpg"
   },
   {
-    title: "AFTER SCHOOL ART FOR AGES 8-12",
+    title: "After School Art for Ages 8-12",
     link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-8-12-7427",
     description: "AFTER SCHOOL ART FOR AGES 8-12 Wednesdays, 3:15–4:45 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 16 – October 7Session 2 (4 weeks • $85): October 21 – November 11Session 3 (3 weeks • $70): December 2 – December 16Each week, students will explore an exciting theme while experimenting with a wide range of materials and techniques. Drawing inspiration from well-known artists and design styles, young artists will be supported in discovering their own unique creative voice in a fun, nurturing, studio-like setting. These classes are designed to foster a love of the arts through hands-on exploration, age-appropriate projects, and a focus on the joy of the creative process. A student art reception will be held in December. Students will take home their collected works in the days following the event. …",
     pubDate: "2026-12-02T22:15:00.000Z",
@@ -6373,7 +6492,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/49789687984733/huge/a57c0755a8845e64cab68694d66e5c6576f4ca9e.jpg"
   },
   {
-    title: "AFTER SCHOOL ART FOR AGES 5-8",
+    title: "After School Art for Ages 5-8",
     link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-5-8-861",
     description: "AFTER SCHOOL ART FOR AGES 5-8 Thursdays, 3:15–4:30 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 17 – October 8Session 2 (4 weeks • $85): October 22 – November 12Session 3 (3 weeks • $70): December 3 – December 17Each week, students will explore exciting themes and projects while experimenting with a wide variety of art materials—such as watercolor and acrylic paints, oil and chalk pastels, clay, collage, printmaking, and more. Through open-ended projects, students are encouraged to explore their creativity, make artistic choices, take creative risks, and discover their unique artistic voice. Our classes nurture imaginative thinking and storytelling, helping children express big ideas and emotions through visual narratives and personal creations. In addition to sparking imagination, our signature art projects support the development of fine motor skills, confidence, and social-emotional development in a fun group environment. …",
     pubDate: "2026-12-09T22:15:00.000Z",
@@ -6385,7 +6504,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53780725919104/huge/846566299e8e325221de54dd5a54a0fd6427fbf5.jpg"
   },
   {
-    title: "Weehawken Dance presents The Nutcracker – Remixed",
+    title: "Weehawken Dance Presents The Nutcracker – Remixed",
     link: "https://events.ourayridgwayevents.com/event/weehawken-dance-presents-the-nutcracker-remixed",
     description: "Weehawken Dance and America’s Mattress present The Nutcracker ~ Remixed, a large-scale community dance production blending classical ballet with contemporary movement, jazz, hip hop, aerial arts and other styles. More than 400 local dancers participate across six split-cast performances at the Montrose Pavilion. Live-stream tickets are expected to become available shortly before each performance.",
     pubDate: "2026-12-10T01:00:00.000Z",
@@ -6535,7 +6654,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   },
   {
-    title: "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
+    title: "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
     link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
     description: "A workshop hosted by Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library exploring the emotional intersection of grief and gratitude in response to environmental change. The event takes place in Mountain Village and invites participants to process feelings of loss alongside a sense of connection to the natural world.",
     pubDate: "2026-10-20T12:00:00.000Z",
@@ -6601,7 +6720,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   },
   {
-    title: "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
+    title: "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
     link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
     description: "A community workshop held in Mountain Village bringing together participants to explore eco-grief — the emotional weight of loss tied to environmental change — alongside gratitude and love as responses to a shifting world. The program is a collaboration between Through the Woods Doula, EcoAction Partners, and the Wilkinson Public Library.",
     pubDate: "2026-10-27T12:00:00.000Z",
@@ -6667,7 +6786,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   },
   {
-    title: "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
+    title: "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
     link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
     description: "A community workshop hosted in Mountain Village, bringing together Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library to explore the emotional landscape of ecological grief and gratitude. The gathering offers participants a space to process feelings of loss and love in the context of a changing natural world.",
     pubDate: "2026-11-03T12:00:00.000Z",
@@ -6744,7 +6863,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/27556/merchant_event-1.png"
   },
   {
-    title: "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
+    title: "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
     link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
     description: "A community workshop hosted by Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library, exploring the emotional intersection of grief and gratitude in response to environmental change. The event takes place in Mountain Village and offers participants a space to process eco-grief alongside a sense of connection to the natural world.",
     pubDate: "2026-11-10T12:00:00.000Z",
@@ -6799,7 +6918,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   },
   {
-    title: "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
+    title: "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
     link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
     description: "A community workshop exploring eco-grief and gratitude, held in Mountain Village and presented by Through the Woods Doula, EcoAction Partners, and the Wilkinson Public Library. The event offers participants a space to process emotions of loss and love in the context of a changing natural world.",
     pubDate: "2026-11-17T12:00:00.000Z",
@@ -6823,18 +6942,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
 ];
 
 const TELLURIDE_COM_EVENTS = [
-  {
-    title: "Telluride Horror Show",
-    link: "https://www.telluride.com/event/telluride-horror-show/",
-    description: "The Telluride Horror Show, Colorado's first and largest horror film festival, returns for its 17th edition October 16 - …",
-    pubDate: "2026-10-16",
-    endDate: "2026-10-19",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/28873/152294600242caf78680.800x533.webp"
-  },
   {
     title: "Freeski Film Night",
     link: "https://www.telluride.com/event/freeski-film-night/",
@@ -7026,6 +7133,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/42692/telluride_skier.800x533.webp"
+  },
+  {
+    title: "Mind Blown",
+    link: "https://www.telluride.com/event/mind-blown/",
+    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of …",
+    pubDate: "2026-11-27",
+    endDate: "2027-03-27",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/36321/couch_1600x900.800x533.webp"
   },
   {
     title: "Holiday Arts Bazaar",
@@ -7604,6 +7723,23 @@ const LEGAL_NOTICES = [
     url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=211",
     address: "",
     smcBidID: "211"
+  },
+  {
+    title: "Request for Proposal -- TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS",
+    entity: "Town of Telluride",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Request for Proposal",
+    filterTag: "public-entity",
+    summary: "Town of Telluride is seeking qualified respondents for: TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS.",
+    deadline: "Closes 1/11/2026",
+    expires: "2026-01-11",
+    dates: "10/19",
+    url: "https://www.telluride.gov/bids.aspx?bidID=133",
+    address: "",
+    totBidID: "133"
   }
 ];
 
@@ -9139,10 +9275,11 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "October 27, 2026",
     title: "Town Council",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "10:00 AM",
-    civicwebId: 8045
+    civicwebId: 8045,
+    packetUrl: "https://telluride-co.civicweb.net/document/446443/"
   },
   {
     date: "November 2, 2026",

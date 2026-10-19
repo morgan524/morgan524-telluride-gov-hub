@@ -322,6 +322,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "The Classics Taproom Society",
+    "href": "https://koto.org/event/the-classics-taproom-society/",
+    "date": "2026-10-21",
+    "time": "5:30 PM",
+    "location": "Telluride Brewing Company Lawson Hill Taproom",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/10/taproom-society-7.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "A book club gathering at the Telluride Brewing Company Lawson Hill Taproom focused on classic literature, with discussions centered on works reaching significant publication anniversaries. The group explores timeless titles over fresh…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Zumba Fitness with Tamra",
     "href": "https://events.ourayridgwayevents.com/event/zumba-fitness-with-tamra",
     "date": "2026-10-21",
@@ -586,6 +599,19 @@
     "type": "Music"
   },
   {
+    "title": "Coffee, Croissants and Cribbage",
+    "href": "https://koto.org/event/coffee-croissants-and-cribbage/",
+    "date": "2026-10-23",
+    "time": "10:00 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Coffee, croissants and cribbage is back! Come by the library Magazine Room 10-11:30am for friendly competition, free coffee and pastries, and community connection. May the nibs be with you.",
+    "type": "Community"
+  },
+  {
     "title": "STEAM Art Explorers for Ages 5–8 in Montrose",
     "href": "https://events.ourayridgwayevents.com/event/steam-art-explorers-for-ages-58-in-montrose",
     "date": "2026-10-23",
@@ -611,6 +637,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Aidan Sweeney performs live music at a venue on North Cora Street in Ridgway. The event is listed on the Ouray Ridgway community calendar.",
     "type": "Music"
+  },
+  {
+    "title": "Art Goodtimes in Conversation with Dr. Howard Kornfeld",
+    "href": "https://koto.org/event/art-goodtimes-in-conversation-with-dr-howard-kornfeld/",
+    "date": "2026-10-23",
+    "time": "4:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/art.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Dr. Howard Kornfeld, former Telluride resident, and now with Physicians for Social Responsibility, will be in coversation with Art Goodtimes about peace and nuclear disarmament. Free and open to all!",
+    "type": "Arts & Film"
   },
   {
     "title": "SHOW Bar: An Intimate Night with Favorite Local Musicians",
@@ -692,6 +731,32 @@
     "type": "Community"
   },
   {
+    "title": "Yogalates with Lauren Norton",
+    "href": "https://koto.org/event/yogalates-with-lauren-norton/",
+    "date": "2026-10-24",
+    "time": "12:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-6.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and…",
+    "type": "Wellness"
+  },
+  {
+    "title": "Horror Book Club: Interview with a Vampire",
+    "href": "https://koto.org/event/horror-book-club-interview-with-a-vampire/",
+    "date": "2026-10-24",
+    "time": "2:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/10/HORROR-BOOK-CLUB-2.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join us for a spine-tingling afternoon of discussion and seasonal fun. We'll be reading Interview with a Vampire by Anne Rice, which is celebrating its 50th anniversary this year. Here are the confessions of a vampire. Hypnotic, shocking,…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Pumpkins & Peaks",
     "href": "https://www.telluride.com/event/pumpkins-peaks/",
     "date": "2026-10-24",
@@ -704,6 +769,19 @@
     "desc": "Celebrate fall in the mountains at Pumpkins & Peaks! Join TMVOA in Mountain Village for a day of free, …",
     "type": "Community",
     "endDate": "2026-10-26"
+  },
+  {
+    "title": "SNL: Saturday Night at the Livery in Norwood Features Devaki Murch and Operation Babylift",
+    "href": "https://koto.org/event/snl-saturday-night-at-the-livery-in-norwood-features-devaki-murch-and-operation-babylift/",
+    "date": "2026-10-24",
+    "time": "7:00 PM",
+    "location": "The Livery Norwood",
+    "town": "Norwood",
+    "img": "https://koto.org/wp-content/uploads/2026/10/NPRD-SNL-Devaki-poster.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Norwood Park & Rec District invites you to another installment of \"SNL: Saturday Night @ the Livery\"—Norwood's sporadic speakers series—at 7pm on October 24th, featuring Devaki Murch with her presentation and exhibit: \"The Mirror of…",
+    "type": "Arts & Film"
   },
   {
     "title": "Rocky Horror Picture Show Live Shadow Cast Edition",
@@ -811,6 +889,19 @@
     "endDate": "2026-11-08"
   },
   {
+    "title": "The Real Book Club:Jazz Standards",
+    "href": "https://koto.org/event/the-real-book-clubjazz-standards/",
+    "date": "2026-10-25",
+    "time": "5:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join us for The Real Book Club, a monthly jazz jam session for musicians of all levels who want to dive into classic jazz standards together! Whether you're a seasoned improviser or just starting out, this is a welcoming space to play,…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Healing Hearts Circle: Women Transcending Cancer/Chronic Illness",
     "href": "https://events.ourayridgwayevents.com/event/healing-hearts-circle-women-transcending-cancerchronic-illness",
     "date": "2026-10-25",
@@ -850,6 +941,71 @@
     "source": "KOTO Community Calendar",
     "desc": "The Rocky Horror Picture Show — Shadow Cast Edition Thursday, Friday, & Saturday Performances: Doors: 7:30pm || Show: 8:00pm (Oct. 22-24) Sunday Matinee: Doors: 2:30pm || Show: 3:00pm (Oct. 25) Directed by Erin Cawley Ages 18+ (under 18…",
     "type": "Community"
+  },
+  {
+    "title": "Desserts and Docs: The Colorado Experience",
+    "href": "https://koto.org/event/desserts-and-docs-the-colorado-experience/",
+    "date": "2026-10-26",
+    "time": "1:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-6.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join us for this 4 part series as we watch episodes from RMPBS Flagship history series, explores the people, places. and events that has shaped Colorado's rich heritage. October: \"The Sand Creek Massacre\" or \"Dearfield: Uncovering…",
+    "type": "Community"
+  },
+  {
+    "title": "Strings and Keys with Annie and Oliver",
+    "href": "https://koto.org/event/strings-and-keys-with-annie-and-oliver/",
+    "date": "2026-10-26",
+    "time": "12:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-3.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Unwind at the library with live violin and piano music from violinist, Annie Foxen and pianist, Oliver Henry (both WPL staff members). Perfect for reading, relaxing, or simply listening. Free and open to the public. All ages are welcome.",
+    "type": "Talks & Classes"
+  },
+  {
+    "title": "Author Talk: Pam Houston",
+    "href": "https://koto.org/event/author-talk-pam-houston/",
+    "date": "2026-10-26",
+    "time": "5:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join us for a talk and signing with Pam Houston about her new book, Animals Taught Me Everything! What can a wagging tail and soaring wings teach us about a life well lived? From Icelandic mares and Irish wolfhounds to elephants, leopards,…",
+    "type": "Talks & Classes"
+  },
+  {
+    "title": "The Listening Club at Telluride Music Co",
+    "href": "https://koto.org/event/the-listening-club-at-telluride-music-co/",
+    "date": "2026-10-26",
+    "time": "6:00 PM",
+    "location": "The Telluride Music Company",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-8.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "A monthly gathering at The Telluride Music Company where participants listen to a featured album together and then dive into a guided discussion exploring its cultural, historical, and musical context. The Listening Club meets on the…",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "French Cafe at WPL",
+    "href": "https://koto.org/event/french-cafe-at-wpl/",
+    "date": "2026-10-26",
+    "time": "9:00 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-9.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Practice your French with other French speakers in a relaxed atmosphere. Free crepes and coffee! All levels welcome. Advance registration recommended.",
+    "type": "Talks & Classes"
   },
   {
     "title": "Bike & Brewery Tour",
@@ -915,6 +1071,19 @@
     "source": "KOTO Community Calendar",
     "desc": "A dedication ceremony for the Telluride Remembrance Garden, hosted by Thrive Community Health Network, at the garden's location on the river trail at the intersection of Colorado Avenue and Hemlock Street. The event honors those the…",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "America 250,Colorado 150 Book Club: Stampede to Timberline by Sibell Wolle",
+    "href": "https://koto.org/event/america-250colorado-150-book-club-stampede-to-timberline-by-sibell-wolle/",
+    "date": "2026-10-27",
+    "time": "5:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This book includes the story of 240 of Colorado’s mining camps, with emphasis on the human side. The men who swarmed to the mountains to find precious metal came in successive waves from the late 1850s on, combing the gulches, scrambling…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Staying Grounded When the Ground Is Changing",
@@ -1023,16 +1192,16 @@
   },
   {
     "title": "Adventures in Acting: The Legend of Sleepy Hollow / The Little Ghost Who Was a Quilt",
-    "href": "https://www.telluride.com/event/adventures-in-acting-the-legend-of-sleepy-hollow-the-little-ghost-who-was-a-quilt/",
+    "href": "https://sheridanoperahouse.com/events/adventures-in-acting-the-legend-of-sleepy-hollow/",
     "date": "2026-10-28",
     "time": "6:00 PM",
-    "location": "Telluride, CO",
+    "location": "Sheridan Opera House • Telluride, CO",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63792/16-5h0a3038-scaled.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Kiddos from Adventures in Acting class (Grades K,1,2) present The Legend of Sleepy Hollow. This is a short, adorable …",
-    "type": "Talks & Classes"
+    "img": "https://sheridanoperahouse.com/wp-content/uploads/2022/08/VendorBadge_AsSeenOnWeb.png",
+    "category": "Concert / Performance",
+    "source": "Sheridan Opera House",
+    "desc": "A theatrical performance at the Sheridan Opera House presenting two spooky-season stories: Washington Irving's classic *The Legend of Sleepy Hollow* and *The Little Ghost Who Was a Quilt*. The production is part of the Adventures in Acting…",
+    "type": "Arts & Film"
   },
   {
     "title": "Weapons: Movie Night @ the Wright.",
@@ -1085,6 +1254,19 @@
     "source": "KOTO Community Calendar",
     "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
     "type": "Wellness"
+  },
+  {
+    "title": "Death Details:What to Do Before You Check Out",
+    "href": "https://koto.org/event/death-detailswhat-to-do-before-you-check-out/",
+    "date": "2026-10-29",
+    "time": "5:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Dying in America is comes with a lot of beaurocracy. Fortunately for you and your family, you can do a lot to be prepared for the only thing that is as certain as taxes. Join us for What To Do Before You Check Out and get all your death…",
+    "type": "Family & Kids"
   },
   {
     "title": "Facing the Mourning",
@@ -1625,7 +1807,7 @@
     "endDate": "2026-12-02"
   },
   {
-    "title": "The Sherbino Presents: Warren Miller's \"Days Off\"",
+    "title": "Warren Miller's \"Days Off\" ~ Presented by The Sherbino, Citizens State Bank and Circle of Dreams Foundation",
     "href": "https://sherbino.org/event/the-sherbino-presents-warren-millers-days-off/",
     "date": "2026-11-04",
     "time": "",
@@ -1634,7 +1816,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2026/09/Warren-Miller-Days-Off-Banner.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "The Sherbino in Ridgway hosts a screening of *Days Off*, Warren Miller's 77th ski and snowboard film, hosted by Katie Burrell. Advance tickets are available at a discount, with general admission and student pricing, and doors open at 6:00…",
+    "desc": "Warren Miller's 77th ski and snowboard film, *Days Off*, screens at The Sherbino in Ridgway, hosted by Katie Burrell. Presented by The Sherbino, Citizens State Bank, and Circle of Dreams Foundation, the event offers advance general…",
     "type": "Arts & Film"
   },
   {
@@ -1677,19 +1859,6 @@
     "type": "Arts & Film"
   },
   {
-    "title": "Facing the Mourning",
-    "href": "https://koto.org/event/facing-the-mourning/2026-11-05/",
-    "date": "2026-11-05",
-    "time": "6:00 PM",
-    "location": "Redvale Community Center",
-    "town": "",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit…",
-    "type": "Community"
-  },
-  {
     "title": "Trivia Night",
     "href": "https://events.ourayridgwayevents.com/event/floating-lotus-trivia-night",
     "date": "2026-11-05",
@@ -1715,19 +1884,6 @@
     "source": "Beacon",
     "desc": "Thursday night pickleball with no experience necessary. All supplies provided.",
     "type": "Outdoors & Sports"
-  },
-  {
-    "title": "Up-Off Gymnastics, Dance, and Spanish",
-    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-11-06/",
-    "date": "2026-11-06",
-    "time": "10:00 AM",
-    "location": "Lone Cone Library Norwood",
-    "town": "Norwood",
-    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
-    "type": "Music"
   },
   {
     "title": "First Friday Art Walk",
@@ -1850,19 +2006,6 @@
     "type": "Music"
   },
   {
-    "title": "Wildbelly Fermentation Fest",
-    "href": "https://koto.org/event/wildbelly-fermentation-fest/",
-    "date": "2026-11-07",
-    "time": "",
-    "location": "Mancos Community Center, Mancos, CO",
-    "town": "",
-    "img": "https://koto.org/wp-content/uploads/2026/03/857CD970-C1BC-4A46-AA34-6D1D567DA5AB.jpeg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Wildbelly Fermentation Fest is bringing together fermentation enthusiasts and expert teachers for two days of classes in the Mancos Valley on Nov. 7th & 8th.",
-    "type": "Community"
-  },
-  {
     "title": "Movies Under the Stars",
     "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     "date": "2026-11-07",
@@ -1915,19 +2058,6 @@
     "type": "Festivals"
   },
   {
-    "title": "Tea and Tarot",
-    "href": "https://koto.org/event/tea-and-tarot/2026-11-08/",
-    "date": "2026-11-08",
-    "time": "2:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    "type": "Community"
-  },
-  {
     "title": "Bike & Brewery Tour",
     "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     "date": "2026-11-09",
@@ -1953,19 +2083,6 @@
     "desc": "A monthly veterans' gathering hosted by the Welcome Home Alliance at The Sherbino, offering coffee, donuts, and camaraderie for veterans of every branch, era, and ability. Representatives will be on hand to share information on topics…",
     "type": "Community",
     "endDate": "2026-12-08"
-  },
-  {
-    "title": "Free Legal Clinic – Clínica Jurídica Gratuita",
-    "href": "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-11-10/",
-    "date": "2026-11-10",
-    "time": "4:00 PM",
-    "location": "",
-    "town": "",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys…",
-    "type": "Talks & Classes"
   },
   {
     "title": "2026 Volunteer of the Year Celebration for Dee Williams",
@@ -2046,19 +2163,6 @@
     "type": "Talks & Classes"
   },
   {
-    "title": "Sewing 101 with Melissa",
-    "href": "https://koto.org/event/sewing-101-with-melissa/2026-11-11/",
-    "date": "2026-11-11",
-    "time": "5:00 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/02/sewing.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll…",
-    "type": "Community"
-  },
-  {
     "title": "Market on the Plaza",
     "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     "date": "2026-11-11",
@@ -2069,45 +2173,6 @@
     "category": "Community Event",
     "source": "Mountain Village",
     "desc": "Mountain Village's Heritage Plaza hosts a weekly outdoor market featuring local vendors. The market brings together a variety of goods in the pedestrian-friendly plaza setting.",
-    "type": "Community"
-  },
-  {
-    "title": "Pilates for All Bodies with Laura",
-    "href": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-11-12/",
-    "date": "2026-11-12",
-    "time": "12:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/wellness.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    "type": "Wellness"
-  },
-  {
-    "title": "The Creative Exchange at Telluride Arts HQ",
-    "href": "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-11-12/",
-    "date": "2026-11-12",
-    "time": "5:30 PM",
-    "location": "Telluride Arts HQ, TELLURIDE",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories…",
-    "type": "Community"
-  },
-  {
-    "title": "Facing the Mourning",
-    "href": "https://koto.org/event/facing-the-mourning/2026-11-12/",
-    "date": "2026-11-12",
-    "time": "6:00 PM",
-    "location": "Redvale Community Center",
-    "town": "",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit…",
     "type": "Community"
   },
   {
@@ -2151,19 +2216,6 @@
     "endDate": "2026-12-10"
   },
   {
-    "title": "Up-Off Gymnastics, Dance, and Spanish",
-    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-11-13/",
-    "date": "2026-11-13",
-    "time": "10:00 AM",
-    "location": "Lone Cone Library Norwood",
-    "town": "Norwood",
-    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
-    "type": "Music"
-  },
-  {
     "title": "KOTO Ski Swap",
     "href": "https://www.telluride.com/event/koto-ski-swap/",
     "date": "2026-11-13",
@@ -2176,32 +2228,6 @@
     "desc": "Get prepped for the winter season ahead at the annual KOTO Ski Swap at the Wilkinson Public Library. Donate your used …",
     "type": "Community",
     "endDate": "2026-11-16"
-  },
-  {
-    "title": "Rainbow, Rockies and Rascals 2026 Fall Fundraiser!",
-    "href": "https://koto.org/event/rainbow-rockies-and-rascals-2026-fall-fundraiser/",
-    "date": "2026-11-13",
-    "time": "5:30 PM",
-    "location": "Telluride Science &#038; Innovation Center, TELLURIDE",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-7.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Rainbow, Rockies and Rascals will host a silent/live auction fundraiser on Friday, November 13th at the Telluride Science and Innovation Center from 5:30pm-9:30pm. Tickets are $15 from any program parent or $20 at the door and enters you…",
-    "type": "Talks & Classes"
-  },
-  {
-    "title": "Ridgway Independent Film Festival",
-    "href": "https://koto.org/event/ridgway-independent-film-festival/",
-    "date": "2026-11-13",
-    "time": "",
-    "location": "Sherbino Theater, Ridgway",
-    "town": "Ridgway",
-    "img": "https://koto.org/wp-content/uploads/2026/10/RIFF-FLIER-CONCEPTS-Facebook-Cover-3.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Ridgway Independent Film Festival returns to the historic Sherbino Theater in downtown Ridgway for a weekend running November 13–15, 2026. The festival features independent short films, select longer works, and filmmaker Q&As, bringing…",
-    "type": "Arts & Film"
   },
   {
     "title": "Ridgway Independent Film Fest 2026",
@@ -2336,19 +2362,6 @@
     "type": "Community"
   },
   {
-    "title": "Tea and Tarot",
-    "href": "https://koto.org/event/tea-and-tarot/2026-11-15/",
-    "date": "2026-11-15",
-    "time": "2:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    "type": "Community"
-  },
-  {
     "title": "Meet the Herd",
     "href": "https://events.ourayridgwayevents.com/event/meet-the-herd",
     "date": "2026-11-15",
@@ -2414,19 +2427,6 @@
     "type": "Food & Drink"
   },
   {
-    "title": "Telluride Mountain School Open House",
-    "href": "https://koto.org/event/telluride-mountain-school-open-house-2/",
-    "date": "2026-11-17",
-    "time": "9:00 AM",
-    "location": "Telluride Mountain School",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Telluride Mountain School is hosting an open house where prospective families and community members can step directly into the learning environment rather than sit through a formal presentation. Visitors are invited to explore classrooms,…",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
     "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
     "date": "2026-11-17",
@@ -2451,6 +2451,19 @@
     "source": "Telluride Rotary",
     "desc": "Telluride Rotary Club meets the 1st & 3rd Wednesdays at 6:00 PM (gathering at 5:30) — 1st Wednesday at Mountain Lodge in Mountain Village, 3rd Wednesday at an announced Telluride location. A service club supporting scholarships, Youth…",
     "type": "Family & Kids"
+  },
+  {
+    "title": "The Sherbino & Citizens State Bank Present: Winter Wildlands Alliance BACKCOUNTRY FILM FEST",
+    "href": "https://sherbino.org/event/the-sherbino-presents-winter-wildlands-alliance-backcountry-film-fest/",
+    "date": "2026-11-18",
+    "time": "",
+    "location": "The Sherbino, Ridgway",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2026/10/Backcountry-Film-Fest-Banner-Nov-18.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
+    "type": "Arts & Film"
   },
   {
     "title": "Market on the Plaza",
@@ -2558,6 +2571,20 @@
     "desc": "Music Bingo at Floating Lotus Brewery! Join us Thursday, November 26 and Thursday, December 10 from 7–9 PM for a high-energy night of music, drinks and bingo-style fun. Listen, mark your card and sing along. Learn more at…",
     "type": "Food & Drink",
     "endDate": "2026-12-11"
+  },
+  {
+    "title": "Mind Blown",
+    "href": "https://www.telluride.com/event/mind-blown/",
+    "date": "2026-11-27",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/36321/couch_1600x900.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of …",
+    "type": "Community",
+    "endDate": "2027-03-27"
   },
   {
     "title": "Toddler Storytime Art for Ages 2.5-5",

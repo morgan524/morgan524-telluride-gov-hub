@@ -1,15 +1,5 @@
 [
   {
-    "title": "Mountainfilm on Tour – Montrose",
-    "href": "https://sherbino.org/event/mountainfilm-on-tour-montrose-adventure-shorts/",
-    "date": "2026-10-18 15:00:00",
-    "endDate": "2026-10-18 17:00:00",
-    "location": "The Sherbino, Ridgway",
-    "copy": "Mountainfilm on Tour brings a curated selection of short films from the acclaimed Telluride-based Mountainfilm festival to The Sherbino in Ridgway. The traveling program features the documentary and adventure storytelling the festival is known for, presented in a seated screening format with a limited bar available.",
-    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/09/sherb-and-wca-EVENT-BANNERS-3.png",
-    "description": "Mountainfilm on Tour brings a curated selection of short films from the acclaimed Telluride-based Mountainfilm festival to The Sherbino in Ridgway. The traveling program features the documentary and adventure storytelling the festival is known for, presented in a seated screening format with a limited bar available."
-  },
-  {
     "title": "Rocky Horror Picture Show Live Shadow Cast Edition",
     "href": "https://sherbino.org/event/rocky-horror-picture-show-live-shadow-cast-edition-9/",
     "date": "2026-10-22 20:00:00",
@@ -19,7 +9,7 @@
     "imageUrl": "https://sherbino.org/wp-content/uploads/2025/11/RHPS-event-banner-1.png"
   },
   {
-    "title": "Sherb Literary Living Room featuring Pam Houston with her new book: \"Animals Taught Me Everything\"",
+    "title": "Sherb Literary Living Room Featuring Pam Houston with Her New Book: \"Animals Taught Me Everything\"",
     "href": "https://sherbino.org/event/sherb-literary-living-room-featuring-pam-houston-with-her-new-book-animals-taught-me-everything/",
     "date": "2026-10-27 18:30:00",
     "endDate": "2026-10-27 19:30:00",
@@ -49,14 +39,14 @@
     "description": "Easy Jim brings a two-night Halloween run to The Sherbino in Ridgway, performing across October 30 and 31, 2026, with shows starting at 8:00 p.m. each night. The run centers on Grateful Dead music, offering two evenings of celebration for Deadheads and live music fans in the region."
   },
   {
-    "title": "The Sherbino Presents: Warren Miller's \"Days Off\"",
+    "title": "Warren Miller's \"Days Off\" ~ Presented by The Sherbino, Citizens State Bank and Circle of Dreams Foundation",
     "href": "https://sherbino.org/event/the-sherbino-presents-warren-millers-days-off/",
     "date": "2026-11-04 18:30:00",
     "endDate": "2026-11-04 20:00:00",
     "location": "The Sherbino, Ridgway",
-    "copy": "The Sherbino in Ridgway hosts a screening of *Days Off*, Warren Miller's 77th ski and snowboard film, hosted by Katie Burrell. Advance tickets are available at a discount, with general admission and student pricing, and doors open at 6:00 p.m. ahead of the 6:30 p.m. showing.",
+    "copy": "Warren Miller's 77th ski and snowboard film, *Days Off*, screens at The Sherbino in Ridgway, hosted by Katie Burrell. Presented by The Sherbino, Citizens State Bank, and Circle of Dreams Foundation, the event offers advance general admission and student ticket pricing, with prices increasing at the door.",
     "imageUrl": "https://sherbino.org/wp-content/uploads/2026/09/Warren-Miller-Days-Off-Banner.png",
-    "description": "The Sherbino in Ridgway hosts a screening of *Days Off*, Warren Miller's 77th ski and snowboard film, hosted by Katie Burrell. Advance tickets are available at a discount, with general admission and student pricing, and doors open at 6:00 p.m. ahead of the 6:30 p.m. showing."
+    "description": "Warren Miller's 77th ski and snowboard film, *Days Off*, screens at The Sherbino in Ridgway, hosted by Katie Burrell. Presented by The Sherbino, Citizens State Bank, and Circle of Dreams Foundation, the event offers advance general admission and student ticket pricing, with prices increasing at the door."
   },
   {
     "title": "The Sherbino & OCPAG Present: Heather & Doug – First Friday Show",
@@ -147,5 +137,14 @@
     "copy": "A screening at The Sherbino in Ridgway as part of the Ridgway Independent Film Fest, featuring the film *We Wandered Beyond the Firelight*. Doors open at 1:45 pm with the film beginning at 2:00 pm, and single-block general admission tickets are $15.",
     "imageUrl": "https://sherbino.org/wp-content/uploads/2026/09/Block5.wewanderedbeyondthefirelight-1.png",
     "description": "A screening at The Sherbino in Ridgway as part of the Ridgway Independent Film Fest, featuring the film *We Wandered Beyond the Firelight*. Doors open at 1:45 pm with the film beginning at 2:00 pm, and single-block general admission tickets are $15."
+  },
+  {
+    "title": "The Sherbino & Citizens State Bank Present: Winter Wildlands Alliance BACKCOUNTRY FILM FEST",
+    "href": "https://sherbino.org/event/the-sherbino-presents-winter-wildlands-alliance-backcountry-film-fest/",
+    "date": "2026-11-18 18:30:00",
+    "endDate": "2026-11-18 20:30:00",
+    "location": "The Sherbino, Ridgway",
+    "copy": "Winter Wildlands presents the Backcountry Film Festival at the Sherbino—an inspiring night of human-powered adventure and winter storytelling. ❄️🎬 📅 November 18, 2026 | Doors 6 PM • Films 6:30 PM @ TICKETS The Sherbino and CSB Present: Winter Wildlands Alliance Backcountry Film Festival Doors: 6:00pm || Films: 6:30pm || $10 students and seniors (18-/ 65+) || $15 General Admission The Backcountry Film Festival, presented by Winter Wildlands Alliance, celebrates the power and spirit of humans in winter. Since its inception, the festival has toured across states, countries—even Antarctica—screening hundreds of inspiring films that celebrate adventure, conservation, and the magic of winter. Over the years, the festival has raised millions of dollars to support local projects that strengthen winter communities and protect our wild snowscapes. The 2026-27 winter season is the 22st anniversary of the Backcountry Film Festival! …",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/10/Backcountry-Film-Fest-Banner-Nov-18.png"
   }
 ]

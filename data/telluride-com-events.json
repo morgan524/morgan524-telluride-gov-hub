@@ -1,17 +1,5 @@
 [
   {
-    "title": "Telluride Horror Show",
-    "link": "https://www.telluride.com/event/telluride-horror-show/",
-    "description": "The Telluride Horror Show, Colorado's first and largest horror film festival, returns for its 17th edition October 16 - …",
-    "pubDate": "2026-10-16",
-    "endDate": "2026-10-19",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/28873/152294600242caf78680.800x533.webp"
-  },
-  {
     "title": "Freeski Film Night",
     "link": "https://www.telluride.com/event/freeski-film-night/",
     "description": "Join the Telluride Mountain Club for a winter kickoff in support of the PI Avy Fund! TMtC is bringing the ski community …",
@@ -202,6 +190,18 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/42692/telluride_skier.800x533.webp"
+  },
+  {
+    "title": "Mind Blown",
+    "link": "https://www.telluride.com/event/mind-blown/",
+    "description": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of …",
+    "pubDate": "2026-11-27",
+    "endDate": "2027-03-27",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/36321/couch_1600x900.800x533.webp"
   },
   {
     "title": "Holiday Arts Bazaar",

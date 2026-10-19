@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-19T12:42:47.439Z",
+ "generated": "2026-10-19T20:32:04.302Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -127,6 +127,18 @@
      "link": "https://sanmiguelcoco.portal.civicclerk.com/event/901/files/agenda/2051",
      "zoomLink": "https://us02web.zoom.us/meeting/register/fns7wAwITvunwFcd1y-RGg",
      "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
+    },
+    {
+     "source": "telluride",
+     "sourceLabel": "Town of Telluride",
+     "title": "Town Council",
+     "date": "2026-10-27",
+     "time": "10:00 AM",
+     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045",
+     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045",
+     "zoomLink": "https://us06web.zoom.us/meeting/register/DaEVzy_NTsub9PbJHzPwTg",
+     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
     }
    ],
    "recent": [

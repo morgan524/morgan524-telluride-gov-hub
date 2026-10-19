@@ -1,10 +1,10 @@
 {
-  "hash": "2516f6982a84a6026c09fde23f7832006651864b",
-  "lede": "The biggest thing on the civic calendar this week is Tuesday's San Miguel County commissioners meeting, where four public hearings will take up proposed Land Use Code amendments that would add an entirely new Natural Resources article covering forestry, oil and gas, and geothermal operations — foundational rules that will govern extraction and resource use in this county for years. Alongside that, Telluride's HARC takes up the large-scale Shandoka redevelopment at 860 Black Bear Rd, the school board revisits the mill levy override discussion, and Norwood's Planning and Zoning digs into its own land use and master plan updates.",
+  "hash": "98fbaa930d6b6cb625d55d2c036288bd67ac959b",
+  "lede": "The biggest thing on the table this week is San Miguel County's Board of Commissioners taking up four Land Use Code amendments that would add a brand-new Natural Resources article to county code — with individual public hearings on forestry, oil and gas, and geothermal operations on Tuesday, October 21. Alongside that, Norwood's Planning and Zoning is updating its Land Use Code and Master Plan, Ouray City Council has first readings on 2027 water and sewer rates and a Light Industrial zoning ordinance, and the Telluride School Board is revisiting the mill levy override question at its Monday night meeting.",
   "notable": [
     {
       "id": 0,
-      "stake": "Land use and master plan updates will shape what gets built in Norwood."
+      "stake": "Norwood's Land Use Code and Master Plan updates shape future development rules."
     },
     {
       "id": 2,
@@ -12,19 +12,19 @@
     },
     {
       "id": 3,
-      "stake": "First reading of Telluride Fire District's 2027 budget opens the public spending process."
+      "stake": "First reading of Telluride Fire District's 2027 budget opens public process."
     },
     {
       "id": 4,
-      "stake": "Mill levy override funding discussion continues — school funding is on the line."
+      "stake": "School board revisits mill levy override — a live funding decision affecting local schools."
     },
     {
-      "id": 10,
-      "stake": "Public hearings on large Town-owned redevelopment at 860 Black Bear Rd."
+      "id": 11,
+      "stake": "Parks Commission votes on restoring Jazz Festival to a full three-day event in 2027."
     },
     {
       "id": 12,
-      "stake": "Four public hearings on new county natural resource rules covering forestry, oil, and geothermal."
+      "stake": "Public hearings on new county code governing forestry, oil and gas, and geothermal operations."
     }
   ]
 }
