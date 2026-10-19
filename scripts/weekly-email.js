@@ -387,7 +387,8 @@ function deepDiveFor(entry) {
 }
 function bodyDesc(name, src) {
   const n = (name + ' ' + src).toLowerCase();
-  if (/county commissioner|bocc/.test(n)) return 'San Miguel County’s governing board — land use, budget, and countywide policy.';
+  // Name the right county (2026-10-19: Ouray County's BOCC was described as San Miguel's).
+  if (/county commissioner|bocc/.test(n)) return (/ouray/.test(n) ? 'Ouray County’s' : 'San Miguel County’s') + ' governing board — land use, budget, and countywide policy.';
   if (/town council/.test(n) && /mountain village/.test(n)) return 'Mountain Village’s governing council — ordinances, budget, and town policy.';
   if (/town council/.test(n)) return 'The town council — ordinances, budget, and local policy.';
   if (/planning|zoning|p&z/.test(n)) return 'The land-use board — development, subdivision, and zoning applications.';
@@ -1111,6 +1112,23 @@ out = Array.from(out).map((ch) => { const cp = ch.codePointAt(0); return cp > 12
 fs.writeFileSync(OUT, out);
 const SUBJECT = `${EMAIL_TITLE} — ${LABEL}`;
 console.log('SUBJECT=' + SUBJECT);
+// Editor copy (Morgan 2026-10-19): with EDITOR_JSON=<path>, also write the
+// email's text — intro, every meeting and event with the wording the card
+// shows — for scripts/editor-docx.py, which turns it into the Friday Word
+// document John Metzger edits (.github/workflows/editor-docx.yml).
+if (process.env.EDITOR_JSON) {
+  fs.writeFileSync(process.env.EDITOR_JSON, JSON.stringify({
+    subject: SUBJECT, weekStart: WEEK_START, label: LABEL, lede: LEDE,
+    meetings: meetings.map((m) => ({
+      date: m.date, time: m.time || '', body: meetingDisplayName(m.name, m.src), source: m.src,
+      summary: m.summary || '', whyThisMatters: m.wtm ? (m.wtm.popup || m.wtm.impact || m.wtm.decision || '') : '',
+      agenda: m.agenda || '',
+    })),
+    festivals: festivalsThisWeek.map((f) => ({ name: f.name, dates: [f.month, f.dayStart, f.dayEnd].filter(Boolean).join(' '), promo: f.promo || '', url: f.ticketUrl || f.url || '' })),
+    events: chosen.map((e) => ({ date: e.date, time: e.time || '', title: e.title, location: townLabel(e), summary: trunc(e.summary, 200), url: e.href || '' })),
+  }, null, 1));
+  console.log('EDITOR_JSON=' + process.env.EDITOR_JSON);
+}
 console.log(`weekly-email: ${meetings.length} meetings (${meetings.filter(m=>m.hasAgenda).length} w/ agenda links), ${chosen.length} events → ${OUT}${PREVIEW ? ' [preview]' : ''}`);
 console.log(`  conditional topic blocks: ${topicSections.map(t=>`${t.group} (${t.events.length})`).join(', ') || 'none this week'}`);
 

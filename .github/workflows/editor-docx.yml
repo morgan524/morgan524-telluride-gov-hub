@@ -1,0 +1,99 @@
+name: Week Ahead Editor Copy (Word)
+
+# Fridays after 6:00 PM Mountain time (Morgan 2026-10-19): email John Metzger
+# a Word document with all of next week's Week Ahead text — the intro, every
+# public meeting and every event with its suggested language — for editing.
+# Morgan then updates the newsletter on the Review Desk from his edits.
+# Nothing here touches the digest itself; it only renders and emails a copy.
+#
+# Two crons (6:15 PM in MDT and in MST); the guard keeps the one that lands at
+# 18:xx in Denver. Manual dispatch can send a test to another address.
+on:
+  schedule:
+    - cron: '15 0 * * 6'   # Sat 00:15 UTC = Fri 6:15 PM MDT (summer)
+    - cron: '15 1 * * 6'   # Sat 01:15 UTC = Fri 6:15 PM MST (winter)
+  workflow_dispatch:
+    inputs:
+      to:
+        description: 'Send to (default john@metzger.com). Use your own address for a test.'
+        required: false
+      week_start:
+        description: 'Week start YYYY-MM-DD (default: next Monday)'
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  editor-copy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Only proceed at 6 PM America/Denver
+        id: g
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$(TZ='America/Denver' date +%H)" = "18" ]; then
+            echo "go=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Denver hour=$(TZ='America/Denver' date +%H) (not 18) — DST twin cron, skipping"
+          fi
+
+      - uses: actions/checkout@v5
+        if: steps.g.outputs.go == 'true'
+      - uses: actions/setup-node@v5
+        if: steps.g.outputs.go == 'true'
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        if: steps.g.outputs.go == 'true'
+        with:
+          python-version: '3.12'
+
+      - name: Render next week's text and build the Word document
+        if: steps.g.outputs.go == 'true'
+        id: build
+        env:
+          WEEK_START_INPUT: ${{ github.event.inputs.week_start }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # the intro is written the same way as Monday's
+        run: |
+          set -eo pipefail
+          pip install -q python-docx==1.1.2
+          T=$(date +%s)
+          curl -fsS --retry 3 "https://livabletelluride.org/js/gov-data.js?t=$T"    -o /tmp/gd.js
+          curl -fsS --retry 3 "https://livabletelluride.org/js/gov-helpers.js?t=$T" -o /tmp/gh.js
+          WS="${WEEK_START_INPUT:-$(TZ='America/Denver' date -d 'next monday' +%F)}"
+          LABEL="$(date -u -d "$WS" '+%B %-d') – $(date -u -d "$WS +6 days" '+%B %-d, %Y')"
+          EDITOR_JSON=/tmp/editor.json node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WS" "$LABEL" /tmp/week.html
+          FILE="Week-Ahead-$WS.docx"
+          python3 scripts/editor-docx.py /tmp/editor.json "$FILE"
+          echo "file=$FILE" >> "$GITHUB_OUTPUT"
+          echo "label=$LABEL" >> "$GITHUB_OUTPUT"
+
+      - name: Email the Word document
+        if: steps.g.outputs.go == 'true'
+        uses: dawidd6/action-send-mail@v18
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.PREVIEW_SMTP_USER }}
+          password: ${{ secrets.PREVIEW_SMTP_PASS }}
+          from: Livable Telluride <${{ secrets.PREVIEW_SMTP_USER }}>
+          to: ${{ github.event.inputs.to || 'john@metzger.com' }}
+          cc: info@livabletelluride.org
+          subject: 'Week Ahead text for editing: ${{ steps.build.outputs.label }}'
+          body: |
+            John,
+
+            Attached is the text for next week's Week Ahead email (${{ steps.build.outputs.label }}): the intro, every public meeting, and every event with its suggested wording.
+
+            Please edit directly in the document (Track Changes is welcome) and send it back. Morgan will update the newsletter online from your edits before it goes out Monday morning.
+
+            Thanks,
+            Livable Telluride
+          attachments: ${{ steps.build.outputs.file }}
+
+      - uses: actions/upload-artifact@v4
+        if: steps.g.outputs.go == 'true'
+        with:
+          name: editor-docx
+          path: ${{ steps.build.outputs.file }}
