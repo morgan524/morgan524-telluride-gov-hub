@@ -335,11 +335,17 @@
   },
   "med|2026-10-22|Regular Board Meeting": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://www.tellmed.org/files/51579856e/THD+Reg+BOD+Mtg+10.22.26+Agenda.pdf",
+    "zoomUrl": "https://us02web.zoom.us/j/89509331558",
+    "meetingId": "895 0933 1558"
   },
   "tmvoa|2026-10-22|TMVOA Board of Directors Meeting": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://tmvoa.org/site/assets/files/4868/tmvoa_board_meeting_agenda_10_22_26.pdf",
+    "zoomUrl": "https://us02web.zoom.us/meeting/register/kOgdEpzPSm6ngU0nJxoTXQ",
+    "meetingId": "885 4321 0595",
+    "passcode": "070912",
+    "phone": "970) 728-1904"
   },
   "telluride|2026-10-22|Planning & Zoning Commission - Oct 22 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8106",
@@ -452,7 +458,7 @@
   "telluride|2026-11-04|Ecology Commission - Nov 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8120",
     "sv": 4,
-    "ph": "f7fa71ad7c369cd5"
+    "ph": "dcde269a12793414"
   },
   "telluride|2026-11-04|Commission for Community Assistance, Arts & Special Events - Nov 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8068",
@@ -493,7 +499,11 @@
   },
   "tmvoa|2026-10-20|TMVOA Finance &amp; Budget Committee": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://tmvoa.org/site/assets/files/4897/tmvoa_finance_budget_meeting_agenda_10_20_26.pdf",
+    "zoomUrl": "https://us02web.zoom.us/meeting/register/xjdroBU5To2l6JkuirV41w",
+    "meetingId": "830 7272 7929",
+    "passcode": "451495",
+    "phone": "970) 728-1904"
   },
   "tmvoa|2026-11-06|TMVOA Board of Directors Budget Meeting #1": {
     "sv": 4,

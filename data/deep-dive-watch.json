@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-19T20:32:04.302Z",
+ "generated": "2026-10-19T20:46:27.523Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -39,7 +39,20 @@
   "medcenter": {
    "label": "Telluride Medical Center",
    "lastUpdated": "2026-09-27",
-   "upcoming": [],
+   "upcoming": [
+    {
+     "source": "med",
+     "sourceLabel": "Telluride Regional Medical Center",
+     "title": "Regular Board Meeting",
+     "date": "2026-10-22",
+     "time": "8:30 AM - 11:30 AM",
+     "location": "333 W Colorado Ave (2nd Floor), Telluride / Zoom",
+     "agendaUrl": "https://www.tellmed.org/files/51579856e/THD+Reg+BOD+Mtg+10.22.26+Agenda.pdf",
+     "link": "https://www.tellmed.org/files/51579856e/THD+Reg+BOD+Mtg+10.22.26+Agenda.pdf",
+     "zoomLink": "https://us02web.zoom.us/j/89509331558",
+     "livestream": ""
+    }
+   ],
    "recent": [],
    "developments": [],
    "stale": []
@@ -139,6 +152,18 @@
      "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045",
      "zoomLink": "https://us06web.zoom.us/meeting/register/DaEVzy_NTsub9PbJHzPwTg",
      "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+    },
+    {
+     "source": "smart",
+     "sourceLabel": "SMART Transit",
+     "title": "SMART Gondola Advisory Committee",
+     "date": "2026-11-16",
+     "time": "3:00 PM",
+     "location": "Virtual (Zoom link in the agenda)",
+     "agendaUrl": "",
+     "link": "https://smarttelluride.colorado.gov/board-meetings",
+     "zoomLink": "",
+     "livestream": ""
     }
    ],
    "recent": [

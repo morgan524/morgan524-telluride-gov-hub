@@ -1,30 +1,38 @@
 {
-  "hash": "98fbaa930d6b6cb625d55d2c036288bd67ac959b",
-  "lede": "The biggest thing on the table this week is San Miguel County's Board of Commissioners taking up four Land Use Code amendments that would add a brand-new Natural Resources article to county code — with individual public hearings on forestry, oil and gas, and geothermal operations on Tuesday, October 21. Alongside that, Norwood's Planning and Zoning is updating its Land Use Code and Master Plan, Ouray City Council has first readings on 2027 water and sewer rates and a Light Industrial zoning ordinance, and the Telluride School Board is revisiting the mill levy override question at its Monday night meeting.",
+  "hash": "877c77583099970d56dad54abe6dfff0e24df9cd",
+  "lede": "The biggest thing on the table this week is San Miguel County's Board of Commissioners taking up four Land Use Code amendments that would add an entirely new Natural Resources article to county code — with separate public hearings on forestry, oil and gas, and geothermal operations. That's the kind of foundational change that sticks around for a generation, and public comment is open. Alongside that, Telluride's school board revisits the mill levy override, the Fire District opens its 2027 budget process, Ouray sets new water and sewer rates on first reading, and the Telluride Medical Center weighs a Two Site Model for how and where it delivers care.",
   "notable": [
     {
-      "id": 0,
-      "stake": "Norwood's Land Use Code and Master Plan updates shape future development rules."
+      "id": 12,
+      "stake": "Public hearings on new county code governing forestry, oil, gas, and geothermal."
     },
     {
       "id": 2,
-      "stake": "First readings on 2027 water/sewer rates and Light Industrial zoning changes in Ouray."
-    },
-    {
-      "id": 3,
-      "stake": "First reading of Telluride Fire District's 2027 budget opens public process."
+      "stake": "First readings set 2027 water/sewer rates and reshape Light Industrial zoning rules."
     },
     {
       "id": 4,
-      "stake": "School board revisits mill levy override — a live funding decision affecting local schools."
+      "stake": "Board discusses mill levy override funding — ongoing decision with direct school budget impact."
+    },
+    {
+      "id": 3,
+      "stake": "First reading of Fire District's 2027 budget opens the public funding process."
+    },
+    {
+      "id": 14,
+      "stake": "Possible action on Two Site Model could reshape how and where medical care is delivered."
+    },
+    {
+      "id": 0,
+      "stake": "Land Use Code and Master Plan updates decide what gets built in Norwood for years."
     },
     {
       "id": 11,
-      "stake": "Parks Commission votes on restoring Jazz Festival to a full three-day event in 2027."
+      "stake": "Vote on restoring Jazz Festival to three days affects town events planning and impact."
     },
     {
-      "id": 12,
-      "stake": "Public hearings on new county code governing forestry, oil and gas, and geothermal operations."
+      "id": 7,
+      "stake": "TMVOA's 2027 draft budget reviewed; public comment window available."
     }
   ]
 }
