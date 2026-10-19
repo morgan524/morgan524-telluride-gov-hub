@@ -7627,7 +7627,7 @@ const HOUSING_LISTINGS = [
     lat: 37.9375,
     lng: -107.8123,
     org: "telluride",
-    beds: "3 Bedroom, 2 Bath, ~1116 sq ft",
+    beds: "3 Bedroom, 2 Bath, ~1087 sq ft",
     price: "$453,000 (deed-restricted)",
     source: "SMRHA",
     contact: { phone: "(970) 728-3034", email: "admin@smrha.org" },
