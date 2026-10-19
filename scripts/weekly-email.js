@@ -21,6 +21,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 const { stripDescPreamble, stripFormLabels } = require('./lib/clean-text.js');
 const { generateRickLede } = require('./lib/rick-lede.js');
+const RI = require('./lib/recap-importance.js');
 const { meetingDisplayName, SELF_IDENTIFYING } = require('./lib/meeting-title.js');
 const RR = require('./lib/recap-regions.js');
 const GD = process.argv[2], GH = process.argv[3];
@@ -968,33 +969,9 @@ const whatsLookingForBox = `<tr><td class="callout-wrap" style="padding:26px 34p
 const calloutBox = SHOW_LOOKING_FOR ? whatsLookingForBox : (featuredOrgBox || whatsReadingBox);
 const section = (label, rows) => rows ? `<tr><td class="sec-pad" style="padding:24px 34px 0;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;border-bottom:1px solid #d4c9b0;padding-bottom:8px;">→ ${label}</div><table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}</table></td></tr>` : '';
 
-// ── Past meetings, recapped ──────────────────────────────────
-// Short teasers of last week's meeting recaps (the five business days before
-// WEEK_START), each linking to
-// its full recap on gov-hub-past.html. Ships an ALL list plus one hidden list
-// per region; the Customer.io template shows the reader's region (see
-// scripts/lib/recap-regions.js). Rico and TMVOA stay off the email lists.
-const RECAP_MAX = 14;
-const PAST_PAGE = SITE + '/gov-hub-past.html';
-let recapBlock = '';
-let allRecaps = [];
-try { allRecaps = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'meeting-recaps.json'), 'utf8')); }
-catch (e) { console.error('meeting-recaps.json unreadable — past-meetings section skipped:', e.message); }
-const weekRecaps = RR.recapsForWeek(allRecaps, WEEK_START);
-const recapRow = (r) => `<tr><td style="padding:12px 0;border-top:1px solid #eef1ee;"><span style="display:inline-block;background:#e9efe9;color:#21443c;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(r.date)).toUpperCase()}</span><span style="font-size:12px;color:#7a8a85;margin-left:8px;">${esc(r.sourceLabel || '')}</span><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:5px;">${esc(r.title || '')}</div><div style="font-size:14.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${esc(RR.shortRecap(r.recap))}</div><a href="${esc(PAST_PAGE + '#' + RR.recapId(r))}" style="color:#a0531f;text-decoration:underline;font-size:12.5px;font-weight:600;">Read the full summary →</a></td></tr>`;
-const moreRow = `<tr><td style="padding:10px 0 0;border-top:1px solid #eef1ee;"><a href="${esc(PAST_PAGE)}" style="color:#21443c;font-size:12.5px;font-weight:700;text-decoration:underline;">See every meeting recap on the Past Meetings page →</a></td></tr>`;
-const listFor = (rows, label, emptyMsg) => {
-  const body = rows.length ? rows.slice(0, RECAP_MAX).map(recapRow).join('') : `<tr><td style="padding:12px 0;font-size:14px;color:#5a6b64;">${emptyMsg}</td></tr>`;
-  return section(label, body + moreRow);
-};
-if (weekRecaps.length) {
-  const byRegion = {};
-  for (const g of RR.REGION_ORDER) byRegion[g] = listFor(RR.recapsForRegion(weekRecaps, g),
-    'Last Week&rsquo;s Meetings, Recapped &middot; ' + esc(g), 'No meetings in your area were recapped last week.');
-  recapBlock = RR.regionBlock(listFor(weekRecaps, 'Last Week&rsquo;s Meetings, Recapped', ''), byRegion);
-}
-console.log(`  past-meeting recaps (${RR.priorBusinessWeek(WEEK_START).join(' to ')}): all ${weekRecaps.length}; ` +
-  Object.keys(RR.RECAP_REGIONS).map((g) => g + ' ' + RR.recapsForRegion(weekRecaps, g).length).join(', '));
+// ── Past meetings, recapped: removed 2026-10-19 (Morgan) ─────
+// Last week's recaps now go out only in their own Monday email
+// (scripts/past-meetings-email.js); the weekly keeps the sign-up box below.
 // Regional "Public Meetings This Week": MEETING_REGIONS (the recap map plus
 // Rico in the East End). Bodies in no region (e.g. TMVOA) stay in the
 // all-area list only.
@@ -1069,10 +1046,19 @@ function ledeBodyName(name, src) {
   if (!place || SELF_IDENTIFYING.test(n) || n.toLowerCase().startsWith(place.toLowerCase())) return n || place;
   return place + ' ' + n;
 }
+const isMajorMeeting = (m) => RI.isMajor({ sourceKey: m.srcKey, title: m.name }, m.summary || '');
+console.log('  lede importance — major: ' + (meetings.filter(isMajorMeeting).map((m) => m.date + ' ' + ledeBodyName(m.name, m.src)).join('; ') || 'none'));
 if (!LEDE_IS_OVERRIDE) {
   const rickLede = await generateRickLede({
     cadence: 'week',
-    meetings: meetings.map((m) => ({ body: ledeBodyName(m.name, m.src), title: m.name, date: m.date, summary: m.summary })),
+    // Morgan 2026-10-19: same importance test as the Past Meetings email. Major
+    // meetings (key bodies on community-wide issues) get summarized; the rest
+    // are only named, so their agenda summary isn't handed to the writer.
+    meetings: meetings.map((m) => {
+      return isMajorMeeting(m)
+        ? { body: ledeBodyName(m.name, m.src), title: m.name, date: m.date, importance: 'major', summary: m.summary }
+        : { body: ledeBodyName(m.name, m.src), title: m.name, date: m.date, importance: 'minor' };
+    }),
     events: chosen.map((e) => ({ title: e.title, date: e.date, location: townLabel(e), summary: e.summary })),
     apiKey: process.env.ANTHROPIC_API_KEY,
     // Content-addressed so re-rendering an UNCHANGED window is free and
@@ -1122,7 +1108,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
   <tr><td class="sec-pad" style="padding:22px 34px 4px;">
     <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#2f7a5f;background:rgba(47,122,95,.1);padding:3px 10px;border-radius:999px;">📅 ${esc(EMAIL_TITLE)}</span>
     <p style="margin:11px 0 0;font-size:15.5px;line-height:1.65;color:#2c3b35;">${ledeHtml(LEDE)}</p></td></tr>
-  ${meetingsBlock}${recapBlock}
+  ${meetingsBlock}
   ${festivalHero}
   ${eventsBlock}${topicHtml}
   ${calloutBox}

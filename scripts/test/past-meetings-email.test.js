@@ -61,3 +61,43 @@ test('past key without its broadcast ID is refused, never sent to the weekly lis
   assert.ok(r.pending && /CUSTOMERIO_PAST_BROADCAST_ID/.test(r.error));
   assert.deepStrictEqual(calls, []);
 });
+
+// Importance (2026-10-19): key bodies on community-wide issues lead, longer;
+// single-lot decisions are de-emphasised.
+const RI = require('../lib/recap-importance.js');
+const BUDGET = { sourceKey: 'telluride', sourceLabel: 'Town of Telluride', date: '2026-10-13', title: 'Town Council Budget — Oct 13, 2026',
+  recap: 'Council held a budget work session on the proposed 2027 budget, with adoption scheduled for November 17. Water and sewer rates would rise 5 percent. The parking fund would cover the new transit shelters. A variance for a deck at 123 West Pacific Avenue was continued. Staff will return with a revised capital plan that includes affordable housing at Shandoka.' };
+const DRB = { sourceKey: 'mv', sourceLabel: 'Mountain Village', date: '2026-10-01', title: 'Design Review Board — Oct 1, 2026',
+  recap: 'The board approved the final architecture review for a single-family home at Lot 640A. A setback variance for a fence at 12 Adams Ranch Road was denied. A landscaping plan for Lot 726 was continued.' };
+const SMART = { sourceKey: 'smart', sourceLabel: 'SMART', date: '2026-10-08', title: 'SMART Board — Oct 8, 2026', recap: 'The board approved the gondola budget. It also discussed the transit budget and bus routes.' };
+
+test('key bodies on community-wide issues are major; lot-only meetings and other bodies are not', () => {
+  assert.ok(RI.isMajor(BUDGET));
+  assert.ok(!RI.isMajor(DRB), 'DRB meeting of only lot decisions keeps the short teaser');
+  assert.ok(!RI.isMajor(SMART), 'SMART is not one of the key bodies');
+});
+
+test('long summary drops the single-lot sentence and keeps community-wide ones', () => {
+  const s = RI.longRecap(BUDGET.recap);
+  assert.ok(!/deck/.test(s));
+  assert.ok(/rates/.test(s) && /Shandoka/.test(s));
+  assert.ok(s.length > RR.shortRecap(BUDGET.recap).length);
+});
+
+test('abbreviations like "sq. ft." do not split sentences', () => {
+  assert.strictEqual(RI.splitSentences('A 3,000 sq. ft. cap applies. Height rises to 45 ft. for multifamily.').length, 2);
+});
+
+test('Major Decisions section leads; others follow under Other Meetings', () => {
+  const { html } = render([SMART, BUDGET, DRB], '2026-10-19', false);
+  const a = html.indexOf('Major Decisions'), b = html.indexOf('Other Meetings');
+  assert.ok(a > 0 && b > a);
+  assert.ok(html.indexOf(BUDGET.title.split(' —')[0]) < b);
+  assert.ok(html.indexOf('Design Review Board') > b);
+});
+
+test('a week with no major meetings has a single plain section', () => {
+  const { html } = render([SMART, DRB], '2026-10-19', false);
+  assert.ok(!html.includes('Major Decisions') && !html.includes('Other Meetings'));
+  assert.ok(html.includes('Last Week&#8217;s Meetings') || html.includes('Last Week&rsquo;s Meetings'));
+});

@@ -73,7 +73,13 @@ function ledePrompt({ meetings, events }) {
   // broken sentence when dropped into prose.
   const titles = ' When an event title has the form "X presents Y", write it as "X\'s Y" or "Y from X" so the sentence reads naturally (e.g. **Shrek The Musical** from Not-So-Young People\'s Theater).';
   const byDay = titles + ' Separate the day paragraphs with a single newline character (\\n) inside the "lede" string; do not put two days in one paragraph.';
-  const spec = 'a plain-prose intro that orients a busy local (120-200 words), written DAY BY DAY in date order: one short paragraph per day that has a meeting or event worth mentioning, each opening with that day (e.g. "Monday, …"). Give the single biggest or most important meeting of the week the most weight within its day, cover the other consequential meetings on their days, and fold in three or so events "on the lighter side" on theirs. Aim to name most of the meetings and several events, not just one or two.' + style + byDay;
+  // Morgan 2026-10-19: each meeting carries "importance" (scripts/lib/
+  // recap-importance.js). Major = a key body (Telluride Council/P&Z/HARC, San
+  // Miguel BOCC/Planning Commission, Mountain Village Council/DRB) taking up
+  // issues that affect everyone; those get a summary. Minor meetings are only
+  // named, and single-lot items are never the story.
+  const importance = ' Each meeting has an "importance" field. For a "major" meeting, summarize in a sentence or two what is on its agenda that affects the whole community (budgets, taxes and fees, code changes, housing policy, transit, wildfire, town-owned projects), not individual lot or property decisions. For a "minor" meeting, ONLY name it with its day (e.g. "**Ridgway Planning Commission** also meets Wednesday") — no description of its agenda.';
+  const spec = 'a plain-prose intro that orients a busy local (120-220 words), written DAY BY DAY in date order: one short paragraph per day that has a meeting or event worth mentioning, each opening with that day (e.g. "Monday, …"). Give the major meetings the most weight within their days, name the minor meetings briefly on theirs, and fold in three or so events "on the lighter side" on theirs. Aim to name most of the meetings and several events, not just one or two.' + importance + style + byDay;
   const parts = [
     RICK_VOICE,
     '',
@@ -109,8 +115,9 @@ function ledeInputFingerprint({ meetings, events, cadence } = {}) {
     // Bump when the HOUSE STYLE in ledePrompt changes so every cached lede
     // written under the old style is regenerated (v2 = bold names + weekdays,
     // v3 = every body named with its town — no bare "Town Council",
-    // v4 = one paragraph per day, line break between days).
-    style: 4,
+    // v4 = one paragraph per day, line break between days,
+    // v5 = major meetings summarized, minor meetings only named).
+    style: 5,
     // Always 'week' now (Weekend Ahead retired 2026-10-04). Kept in the
     // payload so every existing cache key stays valid.
     cadence: 'week',

@@ -1,16 +1,26 @@
 # Regional sections in the weekly email
 
-The weekly email (`scripts/weekly-email.js`) includes **Last Week's Meetings,
-Recapped**: short teasers of the meeting recaps from the five business days
-(Mon–Fri) before the email's week, each linking to the full recap on
-`gov-hub-past.html#r-…`. Rico and TMVOA recaps never appear in the email (they
-stay on the website).
+Last week's meeting recaps (the five business days, Mon–Fri, before the email's
+week) go out in their own opt-in Monday email, **Past Meetings**
+(`scripts/past-meetings-email.js`): one non-regional list to the
+`sub_past_meetings` audience through its own broadcast
+(`CUSTOMERIO_PAST_BROADCAST_ID`, broadcast 5). Each entry links to its full
+recap on `gov-hub-past.html#r-…`. Rico and TMVOA recaps never appear in the
+email (they stay on the website). The weekly's bottom box (where the donate box
+was) invites readers to sign up.
 
-**Since 2026-10-04** the same recaps also go out as their own opt-in Monday
-email, **Past Meetings** (`scripts/past-meetings-email.js`): one non-regional
-list to the `sub_past_meetings` audience through its own broadcast
-(`CUSTOMERIO_PAST_BROADCAST_ID`, broadcast 5). The weekly's bottom box (where
-the donate box was) invites readers to sign up.
+The weekly email carried the same recaps as **Last Week's Meetings, Recapped**
+from 2026-09-30 until 2026-10-19, when Morgan dropped it in favour of the
+dedicated email.
+
+Past Meetings importance (2026-10-19, `scripts/lib/recap-importance.js`): the
+key bodies (Telluride Town Council, P&Z, HARC; San Miguel BOCC and Planning
+Commission; Mountain Village Town Council and Design Review Board) get a longer
+summary (~720 chars) built from the sentences about community-wide issues, and
+are listed first under **Major Decisions**. Sentences about a single lot or
+private property are left for the full recap, and a key-body meeting that is
+mostly lot-by-lot decisions keeps the short teaser. Everything else keeps the
+~230-char teaser under **Other Meetings**.
 
 **Public Meetings This Week** is regional too, using the same body map
 plus **Rico in the East End** (`MEETING_REGIONS`; Ophir is already East End).
