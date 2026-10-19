@@ -1,24 +1,5 @@
 [
   {
-    "title": "Monthly Welcome Home Alliance Veteran's Coffee at the Sherbino",
-    "href": "https://sherbino.org/event/monthly-welcome-home-alliance-veterans-coffee-at-the-sherbino/2026-10-13/",
-    "date": "2026-10-13 10:00:00",
-    "endDate": "2026-10-13 12:00:00",
-    "location": "Ridgway, CO",
-    "copy": "A recurring monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The event offers a casual space for veterans to connect with one another and with community support.",
-    "imageUrl": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
-    "description": "A recurring monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The event offers a casual space for veterans to connect with one another and with community support."
-  },
-  {
-    "title": "Talk: The Sherbino Presents: India Wood's HIKING THE COLORADO X",
-    "href": "https://sherbino.org/event/talk-the-sherbino-presents-india-woods-hiking-the-colorado-x/",
-    "date": "2026-10-15 18:30:00",
-    "endDate": "2026-10-15 20:00:00",
-    "location": "The Sherbino, Ridgway",
-    "copy": "🏔️ Join us at the Sherbino on Thursday, October 15th for an inspiring talk with India Wood on her 1,500 mile journey. Doors at 6 pm | Talk at 6:30 pm | $10 @ Doors open at 6:00 PM | Talk begins at 6:30 PM | $10 Join India Wood for wild stories about backpacking her own route along a 1,500-mile X across Colorado. Be inspired by one woman’s solo adventure and hear her observations of this state as a square sample of our planet. ********************************************* Join India for a showing of the short “Diagonal” documentary, slide show, and stories about backpacking the Colorado X, a walk no one else had ever done. She was a 50-something empty nester, unfit, her career and marriage falling apart when she decided to learn to stand on her own two feet again. …",
-    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/09/India-Wood-Talk-Banner-Oct-15.png"
-  },
-  {
     "title": "Mountainfilm on Tour – Montrose",
     "href": "https://sherbino.org/event/mountainfilm-on-tour-montrose-adventure-shorts/",
     "date": "2026-10-18 15:00:00",
@@ -96,5 +77,75 @@
     "copy": "A recurring monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The event offers a relaxed, community-oriented space for veterans to connect with one another.",
     "imageUrl": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
     "description": "A recurring monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The event offers a relaxed, community-oriented space for veterans to connect with one another."
+  },
+  {
+    "title": "Ridgway Independent Film Fest 2026",
+    "href": "https://sherbino.org/event/ridgway-independent-film-festival-2026/",
+    "date": "2026-11-13 00:00:00",
+    "endDate": "2026-11-15 23:59:59",
+    "location": "Ridgway, CO",
+    "copy": "The Ridgway Independent Film Festival (RIFF) returns for its 12th year in Ridgway, CO, celebrating bold storytelling and emerging filmmakers through independent cinema. The multi-day festival brings together film enthusiasts and the local community for screenings and events highlighting the power of independent film.",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2025/11/RIFF-Banner-new.png",
+    "description": "The Ridgway Independent Film Festival (RIFF) returns for its 12th year in Ridgway, CO, celebrating bold storytelling and emerging filmmakers through independent cinema. The multi-day festival brings together film enthusiasts and the local community for screenings and events highlighting the power of independent film."
+  },
+  {
+    "title": "Ridgway Independent Film Fest: Begin Where You Are ~ Opening Night Shorts",
+    "href": "https://sherbino.org/event/riff-begin-where-you-are-opening-night-shorts/",
+    "date": "2026-11-13 17:00:00",
+    "endDate": "2026-11-13 18:30:00",
+    "location": "The Sherbino, Ridgway",
+    "copy": "The Ridgway Independent Film Festival opens at The Sherbino with an evening of short films grouped under the theme \"Begin Where You Are.\" Doors open at 4:30 p.m. with films beginning at 5:00 p.m.; single-block general admission is $15.",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/09/Block0.beginasyouare.png",
+    "description": "The Ridgway Independent Film Festival opens at The Sherbino with an evening of short films grouped under the theme \"Begin Where You Are.\" Doors open at 4:30 p.m. with films beginning at 5:00 p.m.; single-block general admission is $15."
+  },
+  {
+    "title": "Ridgway Independent Film Fest ~ Something Was Calling Us",
+    "href": "https://sherbino.org/event/ridgway-independent-film-fest-something-was-calling-us/",
+    "date": "2026-11-14 10:00:00",
+    "endDate": "2026-11-14 11:30:00",
+    "location": "The Sherbino, Ridgway",
+    "copy": "The Ridgway Independent Film Fest screens \"Something Was Calling Us\" at The Sherbino, a film exploring the experience of heeding an inner call or turning point. The festival offers single-block general admission tickets as well as all-access passes and volunteer opportunities for those wanting a deeper involvement in the event.",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/09/Block1.somethingwascallingus-1.png",
+    "description": "The Ridgway Independent Film Fest screens \"Something Was Calling Us\" at The Sherbino, a film exploring the experience of heeding an inner call or turning point. The festival offers single-block general admission tickets as well as all-access passes and volunteer opportunities for those wanting a deeper involvement in the event."
+  },
+  {
+    "title": "Ridgway Independent Film Fest ~ The Mountains Knew Our Names",
+    "href": "https://sherbino.org/event/ridgway-independent-film-fest-the-mountains-knew-our-names/",
+    "date": "2026-11-14 13:00:00",
+    "endDate": "2026-11-14 14:30:00",
+    "location": "The Sherbino, Ridgway",
+    "copy": "A screening of *The Mountains Knew Our Names* presented as part of the Ridgway Independent Film Fest, held at The Sherbino in Ridgway. The festival features general admission single-block tickets as well as all-access passes, with doors opening ahead of the afternoon screening.",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/09/Block2.themountainsknewournames-1.png",
+    "description": "A screening of *The Mountains Knew Our Names* presented as part of the Ridgway Independent Film Fest, held at The Sherbino in Ridgway. The festival features general admission single-block tickets as well as all-access passes, with doors opening ahead of the afternoon screening."
+  },
+  {
+    "title": "Ridgway Independent Film Fest ~ We Gathered Around the Fire",
+    "href": "https://sherbino.org/event/ridgway-independent-film-fest-we-gathered-around-the-fire/",
+    "date": "2026-11-14 18:30:00",
+    "endDate": "2026-11-14 20:00:00",
+    "location": "The Sherbino, Ridgway",
+    "copy": "The Ridgway Independent Film Fest presents an evening screening block titled *We Gathered Around the Fire* at The Sherbino, with doors opening at 6:15 p.m. and films beginning at 6:30 p.m. General admission for this single block is $15, with festival passes and volunteer opportunities also available.",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/09/Block3.wegatheredaroundthefire-1.png",
+    "description": "The Ridgway Independent Film Fest presents an evening screening block titled *We Gathered Around the Fire* at The Sherbino, with doors opening at 6:15 p.m. and films beginning at 6:30 p.m. General admission for this single block is $15, with festival passes and volunteer opportunities also available."
+  },
+  {
+    "title": "Ridgway Independent Film Fest ~ We Invited the Monsters In",
+    "href": "https://sherbino.org/event/ridgway-independent-film-fest-we-invited-the-monsters-in/",
+    "date": "2026-11-15 10:00:00",
+    "endDate": "2026-11-15 11:30:00",
+    "location": "The Sherbino, Ridgway",
+    "copy": "The Ridgway Independent Film Fest presents *We Invited the Monsters In*, a film screening at The Sherbino exploring the blurry line between monsters and the familiar. The festival offers single-block general admission tickets as well as all-access passes and volunteer opportunities for those wanting a deeper involvement in the event.",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/09/Block4.weinvitedthemonstersin-1.png",
+    "description": "The Ridgway Independent Film Fest presents *We Invited the Monsters In*, a film screening at The Sherbino exploring the blurry line between monsters and the familiar. The festival offers single-block general admission tickets as well as all-access passes and volunteer opportunities for those wanting a deeper involvement in the event."
+  },
+  {
+    "title": "Ridgway Independent Film Fest ~ We Wandered Beyond the Firelight",
+    "href": "https://sherbino.org/event/ridgway-independent-film-fest-we-wandered-beyond-the-firelight/",
+    "date": "2026-11-15 14:00:00",
+    "endDate": "2026-11-15 15:30:00",
+    "location": "The Sherbino, Ridgway",
+    "copy": "A screening at The Sherbino in Ridgway as part of the Ridgway Independent Film Fest, featuring the film *We Wandered Beyond the Firelight*. Doors open at 1:45 pm with the film beginning at 2:00 pm, and single-block general admission tickets are $15.",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/09/Block5.wewanderedbeyondthefirelight-1.png",
+    "description": "A screening at The Sherbino in Ridgway as part of the Ridgway Independent Film Fest, featuring the film *We Wandered Beyond the Firelight*. Doors open at 1:45 pm with the film beginning at 2:00 pm, and single-block general admission tickets are $15."
   }
 ]

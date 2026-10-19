@@ -13,47 +13,6 @@
     "url": "https://townofridgway.colorado.gov/resources/requests-for-proposals/bids"
   },
   {
-    "title": "Probate Notice -- Claims Against Estate (Case No. 26PR30006)",
-    "entity": "Estate of (unnamed), Patricia L. Bode Personal Representative",
-    "entityClass": "ent-county",
-    "entityLogo": "assessor",
-    "icon": "💰",
-    "iconClass": "type-tax",
-    "type": "Tax & Finance",
-    "filterTag": "tax-finance",
-    "summary": "Patricia L. Bode, as Personal Representative of an estate in San Miguel County, is notifying all persons with claims against the estate that they must present those claims to her or to the District Court of San Miguel County on or before October 18, 2026, or claims may be forever barred. The notice is published through attorney Zachary T. Reams of Reams & Reams in Grand Junction, CO.",
-    "deadline": "2026-10-18",
-    "expires": "2026-10-18",
-    "dates": "6/18",
-    "papers": [
-      "ttimes_0618"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_5efd4701-ba7f-46ef-a7bd-74a242fdff7a.html",
-    "address": "District Court of San Miguel County, Colorado",
-    "noticeKey": "26PR30006",
-    "caseNumber": "26PR30006"
-  },
-  {
-    "title": "Notice to Creditors -- Estate of Michael Kiball (COL-000175)",
-    "entity": "Estate of Michael Kiball",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "This is a notice to creditors of the estate of Michael Kiball, handled by Bo James Nerlin of Devor & Pluhoff, LLC in Montrose, Colorado. All persons with claims against the estate must present them to the personal representative or the District Court of San Miguel County. The notice was published June 25, July 2, and July 9.",
-    "deadline": "2026-10-18",
-    "expires": "2026-10-18",
-    "dates": "6/25",
-    "papers": [
-      "ttimes_0625"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_efb0ca71-953d-4278-b75b-d81bd2f09fe9.html",
-    "address": "District Court of San Miguel County, Colorado",
-    "noticeKey": "creditors-kiball-COL-000175"
-  },
-  {
     "title": "Public Notice to Creditors -- Estate of Gerald D. Wilson (26PR30005)",
     "entity": "Estate of Gerald D. Wilson",
     "entityClass": "ent-county",

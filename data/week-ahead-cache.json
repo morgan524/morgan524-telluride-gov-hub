@@ -1,34 +1,34 @@
 {
-  "hash": "f098937844e52221ab54763fad0ada02d1963792",
-  "lede": "The biggest item this week is Tuesday's San Miguel County Commissioners meeting, where four separate public hearings will take up proposed Land Use Code amendments that would add an entirely new Natural Resources article to the county code — covering forestry, oil and gas, and geothermal operations. Also worth your attention: Telluride's HARC takes up the large-scale Shandoka redevelopment at 860 Black Bear Rd in two public hearings, the school board revisits the mill levy override discussion, and Norwood's Planning and Zoning digs into land use and master plan updates.",
+  "hash": "6e57e6774e198faca07855ca6c3f461469e49d73",
+  "lede": "The biggest item this week is Tuesday's San Miguel County Board of Commissioners meeting, where four public hearings will take up a brand-new Natural Resources article for the Land Use Code — covering forestry, oil and gas, and geothermal operations, the kind of foundational code change that sticks around for decades. Norwood's Planning and Zoning is also updating its Land Use Code and Master Plan on Monday, and Ouray City Council takes up first readings on 2027 water and sewer rates and a Light Industrial zoning change. Closer to home, HARC digs into the Shandoka Lot redevelopment on Tuesday, and the school board's ongoing mill levy override conversation continues at Monday's monthly meeting.",
   "notable": [
     {
-      "id": 12,
-      "stake": "Public hearings on new county code regulating forestry, oil, gas, and geothermal"
-    },
-    {
-      "id": 10,
-      "stake": "Public hearings on major new construction at Town-owned Shandoka site"
-    },
-    {
-      "id": 4,
-      "stake": "Board discusses mill levy override funding — affects school district finances"
-    },
-    {
       "id": 0,
-      "stake": "Norwood updates land use code and master plan, shaping future development rules"
+      "stake": "Norwood votes on Land Use Code and Master Plan updates shaping future development."
     },
     {
       "id": 2,
-      "stake": "First readings set 2027 water and sewer rates and revise industrial zoning rules"
+      "stake": "Ouray sets 2027 water/sewer rates and considers Light Industrial zoning changes."
     },
     {
       "id": 3,
-      "stake": "Fire district opens 2027 budget process with first reading"
+      "stake": "Fire District opens 2027 budget process; early reading sets spending direction."
+    },
+    {
+      "id": 4,
+      "stake": "School board revisits mill levy override — a live funding question for local schools."
+    },
+    {
+      "id": 10,
+      "stake": "Public hearings on large-scale Town-owned redevelopment at 860 Black Bear Rd."
     },
     {
       "id": 11,
-      "stake": "Commission votes on restoring Jazz Festival to three days and another event permit"
+      "stake": "Parks Commission votes on restoring Jazz Festival to three days in 2027."
+    },
+    {
+      "id": 12,
+      "stake": "Three public hearings on new county code governing forestry, oil, gas, and geothermal."
     }
   ]
 }
