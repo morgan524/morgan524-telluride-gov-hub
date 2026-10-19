@@ -1,8 +1,21 @@
 [
   {
+    "title": "Savvy Seniors-Open Tech",
+    "href": "https://telluridelibrary.libcal.com/event/17622974?hs=a",
+    "date": "2026-10-19",
+    "time": "1:30 PM",
+    "location": "Meeting Room #6 - large",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_29_14_07_10.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "A library program at Wilkinson Public Library designed to help seniors navigate technology. The session runs from 1:30 to 2:30 PM in Meeting Room #6.",
+    "type": "Community"
+  },
+  {
     "title": "OPL Read a Book - Get a Pumpkin",
     "href": "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
-    "date": "2026-10-18",
+    "date": "2026-10-19",
     "time": "10:00 AM",
     "location": "Ouray Public Library",
     "town": "Ouray",
@@ -12,99 +25,6 @@
     "desc": "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
     "type": "Family & Kids",
     "endDate": "2026-10-31"
-  },
-  {
-    "title": "Posture: The Joy of Alignment",
-    "href": "https://events.ourayridgwayevents.com/event/posture-the-joy-of-alignment",
-    "date": "2026-10-18",
-    "time": "10:00 AM",
-    "location": "Bee True You Wellness & Creative Studio",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53940133685119/huge/12d87bcb7ab37fac8b109f8ddf888685a78d34d4.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "POSTURE: The Joy of Alignment Stop Shrinking. Start Rising. Imagine standing taller, breathing deeper, moving freer, and feeling effortlessly at home in your body. Through asana, breath, and embodied awareness, you’ll discover how to…",
-    "type": "Community"
-  },
-  {
-    "title": "Gentle Yoga with Kristen Milord",
-    "href": "https://telluridelibrary.libcal.com/event/16536465?hs=a",
-    "date": "2026-10-18",
-    "time": "11:00 AM",
-    "location": "Magazine Room",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat,…",
-    "type": "Wellness"
-  },
-  {
-    "title": "Tea and Tarot",
-    "href": "https://telluridelibrary.libcal.com/event/17347284?hs=a",
-    "date": "2026-10-18",
-    "time": "2:30 PM",
-    "location": "Telluride Room",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance. Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in…",
-    "type": "Community"
-  },
-  {
-    "title": "LIVE JAZZ IN THE GARDEN! Zan Waller & Stefan Davenport",
-    "href": "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
-    "date": "2026-10-18",
-    "time": "4:00 PM",
-    "location": "Chloe's Charcuterie & Wine",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53950055817938/huge/4924d3606a12c233af2b47a380c304869dfaf267.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Zan Waller on trumpet and Stefan Davenport on guitar perform as Standard Alchemy, playing swing, cocktail jazz, and Great American Songbook standards in Chloe's Secret Garden. The outdoor Sunday series runs from 4:00–6:00 p.m. at Chloe's…",
-    "type": "Music",
-    "endDate": "2026-11-08"
-  },
-  {
-    "title": "THE YOUNG FABLES",
-    "href": "https://events.ourayridgwayevents.com/event/the-young-fables",
-    "date": "2026-10-18",
-    "time": "4:00 PM",
-    "location": "687 N Cora Street, Ridgway, CO 81432",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "The Young Fables will perform a live music show at a venue on North Cora Street in Ridgway. The event is listed through the Ouray Ridgway community calendar.",
-    "type": "Music"
-  },
-  {
-    "title": "Healing Hearts Circle: Women Transcending Cancer/Chronic Illness",
-    "href": "https://events.ourayridgwayevents.com/event/healing-hearts-circle-women-transcending-cancerchronic-illness",
-    "date": "2026-10-18",
-    "time": "5:00 PM",
-    "location": "Bee True You Wellness & Creative Studio",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/54241462626167/huge/7c0778035e072ff933b617f21809b1459dc84aca.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Healing Hearts Circle is a supportive gathering for women navigating cancer or chronic illness, held at Bee True You Wellness & Creative Studio. The circle offers a safe, inclusive space where participants can feel heard and connected as…",
-    "type": "Wellness",
-    "endDate": "2026-12-07"
-  },
-  {
-    "title": "Mountainfilm on Tour – Montrose",
-    "href": "https://sherbino.org/event/mountainfilm-on-tour-montrose-adventure-shorts/",
-    "date": "2026-10-18",
-    "time": "",
-    "location": "The Sherbino, Ridgway",
-    "town": "Ridgway",
-    "img": "https://sherbino.org/wp-content/uploads/2026/09/sherb-and-wca-EVENT-BANNERS-3.png",
-    "category": "",
-    "source": "Sherbino Theater",
-    "desc": "Mountainfilm on Tour brings a curated selection of short films from the acclaimed Telluride-based Mountainfilm festival to The Sherbino in Ridgway. The traveling program features the documentary and adventure storytelling the festival is…",
-    "type": "Community"
   },
   {
     "title": "Ongoing: Space Cowboy by Dundee & Lee",
@@ -121,6 +41,19 @@
     "endDate": "2026-10-29"
   },
   {
+    "title": "Musik 4 Kinders",
+    "href": "https://telluridelibrary.libcal.com/event/17515445?hs=a",
+    "date": "2026-10-19",
+    "time": "10:30 AM",
+    "location": "Kids Area",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. M sica, Movimiento, y Aprendizaje Alegre para ni os! Este programa ser en la sala de programas.",
+    "type": "Family & Kids"
+  },
+  {
     "title": "Senior Lunch by Neighbor to Neighbor",
     "href": "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
     "date": "2026-10-19",
@@ -135,6 +68,19 @@
     "endDate": "2026-12-14"
   },
   {
+    "title": "Melt and Make: Perler Bead Art",
+    "href": "https://telluridelibrary.libcal.com/event/17732308?hs=a",
+    "date": "2026-10-19",
+    "time": "4:00 PM",
+    "location": "Wilkinson Public Library",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_29_12_15_23.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "A recurring Monday afternoon program at Wilkinson Public Library where participants create art using Perler beads, the small colorful plastic beads that are arranged into patterns and fused together with heat. The session runs from 4:00 to…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Art in the Age of AI",
     "href": "https://koto.org/event/art-in-the-age-of-ai/",
     "date": "2026-10-19",
@@ -145,6 +91,19 @@
     "category": "Community Event",
     "source": "KOTO Community Calendar",
     "desc": "Can AI make art? Should it? What happens to human artists and human audiences when algorithms influence the way art is conceived and consumed? Join acclaimed songwriter and performer Emily Scott Robinson and novelist and former AI ethics…",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Art in the Age of Al: A Conversation and Performance with Emily Scott Robinson and Jenny Williams",
+    "href": "https://telluridelibrary.libcal.com/event/17272942?hs=a",
+    "date": "2026-10-19",
+    "time": "5:30 PM",
+    "location": "Program Room",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_30_21_37_08.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "5:30 PM – 7:00 PM · Can AI make art? Should it? What happens to human artists and human audiences when algorithms influence the way art is conceived and consumed? Join acclaimed songwriter and performer Emily Scott Robinson and novelist…",
     "type": "Arts & Film"
   },
   {
@@ -836,6 +795,34 @@
     "source": "KOTO Community Calendar",
     "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
     "type": "Community"
+  },
+  {
+    "title": "LIVE JAZZ IN THE GARDEN! Zan Waller & Stefan Davenport",
+    "href": "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
+    "date": "2026-10-25",
+    "time": "4:00 PM",
+    "location": "Chloe's Charcuterie & Wine",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53950055817938/huge/4924d3606a12c233af2b47a380c304869dfaf267.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Zan Waller on trumpet and Stefan Davenport on guitar perform as Standard Alchemy, playing swing, cocktail jazz, and Great American Songbook standards in Chloe's Secret Garden. The outdoor Sunday series runs from 4:00–6:00 p.m. at Chloe's…",
+    "type": "Music",
+    "endDate": "2026-11-08"
+  },
+  {
+    "title": "Healing Hearts Circle: Women Transcending Cancer/Chronic Illness",
+    "href": "https://events.ourayridgwayevents.com/event/healing-hearts-circle-women-transcending-cancerchronic-illness",
+    "date": "2026-10-25",
+    "time": "5:00 PM",
+    "location": "Bee True You Wellness & Creative Studio",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54241462626167/huge/7c0778035e072ff933b617f21809b1459dc84aca.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "A recurring support circle at Bee True You Wellness & Creative Studio for women navigating cancer or chronic illness, offering a safe and welcoming space that honors the whole person — body, mind, and spirit. The group emphasizes peer…",
+    "type": "Wellness",
+    "endDate": "2026-12-07"
   },
   {
     "title": "Teen Takeover at Ouray Hot Springs Pool",
@@ -2464,6 +2451,19 @@
     "source": "Telluride Rotary",
     "desc": "Telluride Rotary Club meets the 1st & 3rd Wednesdays at 6:00 PM (gathering at 5:30) — 1st Wednesday at Mountain Lodge in Mountain Village, 3rd Wednesday at an announced Telluride location. A service club supporting scholarships, Youth…",
     "type": "Family & Kids"
+  },
+  {
+    "title": "Market on the Plaza",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    "date": "2026-11-18",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Mountain Village's Heritage Plaza hosts a community market featuring local vendors at tents throughout the pedestrian-friendly plaza. The market brings together a variety of goods from area sellers in an outdoor setting.",
+    "type": "Community"
   },
   {
     "title": "Pickleball Nights",

@@ -342,7 +342,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"1ff606174e68cca5"},
 
   "telluride|2026-10-27|Town Council - Oct 27 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045","sv":4,"ph":"503b66ccc1b69729"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045","sv":4,"ph":"fe6dedc36e608232"},
 
   "county|2026-10-28|Board of County Commissioners Work Session":
     {"sv":4},
@@ -381,7 +381,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"a12dfd2ce826475e"},
 
   "telluride|2026-11-05|Special Meeting - Planning & Zoning Commission - Nov 05 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312","sv":4,"ph":"930623a06e6efd7f"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312","sv":4,"ph":"2f0962b84aac8b50"},
 
   "telluride|2026-11-05|Town Council Budget - Nov 05 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054","sv":4,"ph":"dc6fd5ab4a1c2e97"},
@@ -414,7 +414,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8325","sv":4},
 
   "telluride|2026-11-09|Open Space Commission - Nov 09 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8133","sv":4,"ph":"410853eec5221d83"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8133","sv":4,"ph":"93c2102d90e6fd4f"},
 
   "norwood|2026-11-10|Norwood Water Commission Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -459,7 +459,19 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8046","sv":4,"ph":"77b41b3f56f2888b"},
 
   "rico|2026-11-18|Rico Board of Trustees Regular Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"}
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "telluride|2026-11-18|Historic & Architectural Review Commission Chair - Nov 18 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8027","sv":4,"ph":"29e446caecdbde71"},
+
+  "telluride|2026-11-18|Historic & Architectural Review Commission - Nov 18 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8026","sv":4,"ph":"fd1c8b4365a387a6"},
+
+  "telluride|2026-11-18|Parks & Recreation Commission - Nov 18 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8084","sv":4,"ph":"41308feda7cb9e07"},
+
+  "county|2026-11-18|Board of County Commissioners Meeting":
+    {"sv":4,"ph":"49e704e3c3bab858"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -473,6 +485,14 @@ const DEEP_DIVE_UPDATES = [];
 //   sourceUrl, topics: [] }. Rendered by hub-bub.html from the JSON mirror
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
+  {
+    date: "2026-10-19",
+    title: "Should employee housing policy get a consultant?",
+    body: "Town Council is taking up a request for proposals to hire a consultant to review Telluride's employee rental housing policies. On one hand, outside expertise might spot gaps locals are too close to see — employee housing is a chronic pressure up here and the stakes are real. On the other hand, some residents will ask why the town needs to pay a consultant to study a problem the community already lives every day, and whether the money and time could go straight to solutions instead.\n\nSo: is bringing in outside help on employee housing policy a smart move, or a detour?",
+    choices: ["Smart investment", "Skip the consultant", "Depends on the cost", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
   {
     date: "2026-10-18",
     title: "The county wants to paint the jail. Also: helium.",
@@ -704,14 +724,6 @@ const DAILY_QUESTIONS = [
     choices: ["Fire safety has to come first", "Historic character shouldn't bend", "Find middle ground case by case", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-09-19",
-    title: "The Lawson Hill connector — shortcut or something else?",
-    body: "The Open Space Commission is set to discuss the Lawson Hill Connector Trail Project, along with material hauling needs and other land management questions in San Miguel County. A connector trail sounds straightforward — until it isn't. Proponents see better access and a more connected network. Skeptics worry about what more foot traffic does to the land, the neighborhood, and the character of open space that people moved here to protect. Nothing's been decided yet. So: when it comes to new trail connections up here, where do you land?",
-    choices: ["More trails, more access", "Protect what's already there", "Depends on the specifics"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -791,8 +803,20 @@ const MEETING_PREVIEWS = {
   "telluride|2026-11-17|Town Council - Nov 17 2026":
     "Council is expected to discuss consulting services for a comprehensive review of Telluride's employee rental housing policies, consider a proposed amendment to The Good Gargoyle Condominiums declaration, and review proposed changes to San Miguel Power Association's Rules and Regulations.",
 
+  "telluride|2026-11-18|Historic & Architectural Review Commission Chair - Nov 18 2026":
+    "The Historic & Architectural Review Commission is expected to convene its regular monthly meeting on November 18, 2026. Related notices include a proposed amendment to The Good Gargoyle Condominiums declaration and potential rule changes by San Miguel Power Association, which may be relevant to ongoing review matters.",
+
+  "telluride|2026-11-18|Historic & Architectural Review Commission - Nov 18 2026":
+    "The Historic and Architectural Review Commission is expected to review applications for Certificates of Appropriateness related to proposed changes to structures or signs within Telluride. The commission may also consider matters related to historic designation, preservation standards, and maintaining inventories of historically or architecturally significant structures.",
+
+  "telluride|2026-11-18|Parks & Recreation Commission - Nov 18 2026":
+    "The Parks & Recreation Commission is expected to meet on November 18, 2026, to address community parks and recreation needs in Telluride. Specific agenda items are not detailed in available materials, but the commission routinely interprets community desires for recreation and parks services at its monthly sessions.",
+
+  "county|2026-11-18|Board of County Commissioners Meeting":
+    "Board will consider proposals for painting the county jail, developing a multi-jurisdictional hazard mitigation plan, and creating a housing action plan. Related legal notices include a creditor notice for a local estate and a public trustee foreclosure sale on a Norwood property.",
+
   "ouraycity|2026-10-19|Ouray City Council Regular Meeting":
-    "Council is expected to consider approving an intergovernmental agreement with the Ouray County Sheriff for law enforcement services, adopt new water and sewer rates, and address a light industrial ordinance. Additional items include a water service termination agreement, a perimeter trail easement request, and a housing services quarterly report."
+    "Council is expected to mark the city's 150th anniversary, hear a housing services update, and vote on a law enforcement intergovernmental agreement with the Ouray County Sheriff. Additional action items include a water service termination agreement, first readings on 2027 utility rates and light industrial zoning, and a perimeter trail easement request."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -956,16 +980,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "2026 Telluride Mountain Club Recap Report",
-    source: "Telluride Mountain Club",
-    sourceKey: "tmc",
-    date: "October 12, 2026",
-    newsTopic: "community",
-    copy: "The post 2026 Telluride Mountain Club Recap Report appeared first on Telluride Mountain Club .",
-    href: "https://www.telluridemountainclub.org/2026-telluride-mountain-club-recap-report/",
-    img: ""
-  },
-  {
     title: "Parish bulletin for October 11",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -986,17 +1000,6 @@ const SMC_ALERTS = [
     pubDate: "2026-10-15T16:58:20.000Z",
     copy: "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
-    img: ""
-  },
-  {
-    title: "Ballot Delivery Delay",
-    source: "San Miguel County",
-    sourceLabel: "San Miguel County",
-    category: "Alert",
-    date: "2026-10-15",
-    pubDate: "2026-10-15T16:56:58.000Z",
-    copy: "Due to an error within the United States Postal Service, delivery of some election mail ballots has been delayed. We understand that receiving your ballot on time is important, and we apologize for the inconvenience and concern this delay may cause.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=549",
     img: ""
   }
 ];              // SMC AlertCenter items
@@ -1320,7 +1323,19 @@ const MANUAL_SUMMARIES = {
     "The November 17, 2026 Town Council agenda hasn't been posted yet.",
 
   "rico|2026-11-18|Rico Board of Trustees Regular Meeting":
-    "The November 18, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet."
+    "The November 18, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-11-18|Historic & Architectural Review Commission Chair - Nov 18 2026":
+    "The November 18, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
+
+  "telluride|2026-11-18|Historic & Architectural Review Commission - Nov 18 2026":
+    "The November 18, 2026 HARC agenda hasn't been posted yet.",
+
+  "telluride|2026-11-18|Parks & Recreation Commission - Nov 18 2026":
+    "The November 18, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+
+  "county|2026-11-18|Board of County Commissioners Meeting":
+    "The November 18, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2532,6 +2547,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "The benefits of a bilingual brain",
+    source: "Telluride Times",
+    date: "October 19, 2026",
+    firstSeen: "2026-10-19",
+    newsTopic: "education",
+    copy: "Telluride School's Dual Immersion Program, running since 2014, offers K–8 students half their day in Spanish alongside English. This year, 52% of graduating seniors earned the Colorado Seal of Biliteracy — the program's highest rate yet. Research backs cognitive benefits too, including stronger attention and multitasking skills.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_c81df289-4340-405c-9a02-777319a44e34.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/91/d918e005-daf7-4af6-8313-8d84d8ad66db/6ad25fd0a1b80.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Flock defunded: Telluride’s automatic license plate readers turned off",
     source: "Telluride Times",
     date: "October 18, 2026",
@@ -3638,15 +3665,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
-  },
-  {
-    title: "Ballot Delivery Delay",
-    source: "San Miguel County",
-    date: "October 15, 2026",
-    newsTopic: "government",
-    copy: "Due to an error within the United States Postal Service, delivery of some election mail ballots has been delayed. We understand that receiving your ballot on time is important, and we apologize for the inconvenience and concern this delay may cause.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=549",
-    img: ""
   },
   {
     title: "Town Manager's Report",
@@ -4875,26 +4893,48 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Gentle Yoga with Kristen Milord",
-    link: "https://telluridelibrary.libcal.com/event/16536465?hs=a",
-    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
-    pubDate: "2026-10-18T17:00:00.000Z",
+    title: "Musik 4 Kinders",
+    link: "https://telluridelibrary.libcal.com/event/17515445?hs=a",
+    description: "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. &iexcl;M&uacute;sica, Movimiento, y Aprendizaje Alegre para ni&ntilde;os! Este programa ser&aacute; en la sala de programas.",
+    pubDate: "2026-10-19T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png"
   },
   {
-    title: "Tea and Tarot",
-    link: "https://telluridelibrary.libcal.com/event/17347284?hs=a",
-    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
-    pubDate: "2026-10-18T20:30:00.000Z",
+    title: "Savvy Seniors-Open Tech",
+    link: "https://telluridelibrary.libcal.com/event/17622974?hs=a",
+    description: "A library program at Wilkinson Public Library designed to help seniors navigate technology. The session runs from 1:30 to 2:30 PM in Meeting Room #6.",
+    pubDate: "2026-10-19T19:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
+    location: "Meeting Room #6 - large",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_29_14_07_10.jpg"
+  },
+  {
+    title: "Melt and Make: Perler Bead Art",
+    link: "https://telluridelibrary.libcal.com/event/17732308?hs=a",
+    description: "A recurring Monday afternoon program at Wilkinson Public Library where participants create art using Perler beads, the small colorful plastic beads that are arranged into patterns and fused together with heat. The session runs from 4:00 to 5:00 PM.",
+    pubDate: "2026-10-19T22:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_29_12_15_23.png"
+  },
+  {
+    title: "Art in the Age of Al: A Conversation and Performance with Emily Scott Robinson and Jenny Williams",
+    link: "https://telluridelibrary.libcal.com/event/17272942?hs=a",
+    description: "5:30 PM – 7:00 PM · Can AI make art? Should it? What happens to human artists and human audiences when algorithms influence the way art is conceived and consumed? Join acclaimed songwriter and performer Emily Scott Robinson and novelist and former AI ethics insider Jenny Williams for a deep discussion of the impacts AI is already having on creative practice, labor, and industries, along with impassioned hopes for the future—interspersed with songs and readings from these two artists' body of work (100% human-made). Jenny Williams is the author of House of Liars , a new literary psychological thriller about AI, creativity, and motherhood, as well as the novel The Atlas of Forgotten Places (St. Martin's Press) and the novella A Short Future History of Whales (Spotify Audiobook Selects). …",
+    pubDate: "2026-10-19T23:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_30_21_37_08.png"
   }
 ];
 
@@ -5406,75 +5446,6 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "OPL Read a Book - Get a Pumpkin",
-    link: "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
-    description: "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
-    pubDate: "2026-10-18T16:00:00.000Z",
-    endDate: "2026-10-31",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Public Library",
-    imageUrl: "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg"
-  },
-  {
-    title: "Posture: The Joy of Alignment",
-    link: "https://events.ourayridgwayevents.com/event/posture-the-joy-of-alignment",
-    description: "POSTURE: The Joy of Alignment Stop Shrinking. Start Rising. Imagine standing taller, breathing deeper, moving freer, and feeling effortlessly at home in your body. Through asana, breath, and embodied awareness, you’ll discover how to lengthen what’s tight, strengthen what’s weak, and restore your body’s natural architecture, so you leave feeling lighter, clearer, more energized, and beautifully aligned from the inside out. YOUR ARCHITECTURE OF ALIGNMENT Explore your posture from the ground up and discover how small shifts in alignment can change the way you stand, move, breathe, and feel. ROOT — Find Your Foundation Awaken and align your feet, ankles, and knees to create a strong, responsive foundation that supports your joints and brings greater buoyancy and stability to everything above. PELVIS — Stand in Your Power Balance strength and mobility around your pelvis and lumbar spine to support your center, reduce strain, and restore vitality. …",
-    pubDate: "2026-10-18T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Bee True You Wellness & Creative Studio",
-    imageUrl: "https://localist-images.azureedge.net/photos/53940133685119/huge/12d87bcb7ab37fac8b109f8ddf888685a78d34d4.jpg"
-  },
-  {
-    title: "Mountainfilm on Tour – Montrose",
-    link: "https://events.ourayridgwayevents.com/event/mountainfilm-on-tour-montrose",
-    description: "Doors open at 2:30 PM; films begin at 3:00 PM. Mountainfilm on Tour brings an afternoon of documentary shorts about adventure, exploration, resilience and people who push the boundaries of what is possible. The Adventure Shorts program includes climbing, skiing, biking, paddling, running and other outdoor stories. Family-friendly.",
-    pubDate: "2026-10-18T21:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Montrose Pavilion",
-    imageUrl: "https://localist-images.azureedge.net/photos/54066524437755/huge/a340c3c7b6d6a9c5b6783370893f454ec37fd082.jpg"
-  },
-  {
-    title: "LIVE JAZZ IN THE GARDEN! Zan Waller & Stefan Davenport",
-    link: "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
-    description: "Zan Waller on trumpet and Stefan Davenport on guitar perform as Standard Alchemy, playing swing, cocktail jazz, and Great American Songbook standards in Chloe's Secret Garden. The outdoor Sunday series runs from 4:00–6:00 p.m. at Chloe's Charcuterie & Wine, with occasional special guest vocalists joining the duo.",
-    pubDate: "2026-10-18T22:00:00.000Z",
-    endDate: "2026-11-08",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Chloe's Charcuterie & Wine",
-    imageUrl: "https://localist-images.azureedge.net/photos/53950055817938/huge/4924d3606a12c233af2b47a380c304869dfaf267.jpg"
-  },
-  {
-    title: "THE YOUNG FABLES",
-    link: "https://events.ourayridgwayevents.com/event/the-young-fables",
-    description: "The Young Fables will perform a live music show at a venue on North Cora Street in Ridgway. The event is listed through the Ouray Ridgway community calendar.",
-    pubDate: "2026-10-18T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Healing Hearts Circle: Women Transcending Cancer/Chronic Illness",
-    link: "https://events.ourayridgwayevents.com/event/healing-hearts-circle-women-transcending-cancerchronic-illness",
-    description: "Healing Hearts Circle is a supportive gathering for women navigating cancer or chronic illness, held at Bee True You Wellness & Creative Studio. The circle offers a safe, inclusive space where participants can feel heard and connected as they navigate their journeys with body, mind, and spirit honored.",
-    pubDate: "2026-10-18T23:00:00.000Z",
-    endDate: "2026-12-07",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Bee True You Wellness & Creative Studio",
-    imageUrl: "https://localist-images.azureedge.net/photos/54241462626167/huge/7c0778035e072ff933b617f21809b1459dc84aca.jpg"
-  },
-  {
     title: "CELESTIAL BODIES - Olivia Ivy and Kane Scheidegger",
     link: "https://events.ourayridgwayevents.com/event/celestial-bodies-olivia-ivy-and-kane-scheidegger",
     description: "Join us at Space to Create Gallery in Ridgway for CELESTIAL BODIES, an exhibition exploring the connections between Body, Earth, and Cosmos through painting and photography. Featuring the work of Olivia Ivy and Kane Scheidegger, the exhibition brings together feminine figures, celestial symbolism, and otherworldly landscapes to explore the boundaries between the intimate and the infinite. From constellations hidden within the human form to the vastness of the night sky reflected in the earthly landscape, these works invite us to look beyond the familiar and reconsider our place within the universe. Exhibition dates October 2nd to November 2.",
@@ -5485,6 +5456,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Space to Create Gallery",
     imageUrl: "https://localist-images.azureedge.net/photos/54241868374608/huge/121c2ab6c42c0a5364ce85a3ffe552e3b10fe9f0.jpg"
+  },
+  {
+    title: "OPL Read a Book - Get a Pumpkin",
+    link: "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
+    description: "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
+    pubDate: "2026-10-19T16:00:00.000Z",
+    endDate: "2026-10-31",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Public Library",
+    imageUrl: "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg"
   },
   {
     title: "Ongoing: Space Cowboy by Dundee & Lee",
@@ -5775,6 +5758,30 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "United Church Of The San Juans",
     imageUrl: "https://localist-images.azureedge.net/photos/54198017321990/huge/d93984b7fe9a19865c0b6e69091253a2e299077c.jpg"
+  },
+  {
+    title: "LIVE JAZZ IN THE GARDEN! Zan Waller & Stefan Davenport",
+    link: "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
+    description: "Zan Waller on trumpet and Stefan Davenport on guitar perform as Standard Alchemy, playing swing, cocktail jazz, and Great American Songbook standards in Chloe's Secret Garden. The outdoor Sunday series runs from 4:00–6:00 p.m. at Chloe's Charcuterie & Wine, with occasional special guest vocalists joining the duo.",
+    pubDate: "2026-10-25T22:00:00.000Z",
+    endDate: "2026-11-08",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Chloe's Charcuterie & Wine",
+    imageUrl: "https://localist-images.azureedge.net/photos/53950055817938/huge/4924d3606a12c233af2b47a380c304869dfaf267.jpg"
+  },
+  {
+    title: "Healing Hearts Circle: Women Transcending Cancer/Chronic Illness",
+    link: "https://events.ourayridgwayevents.com/event/healing-hearts-circle-women-transcending-cancerchronic-illness",
+    description: "A recurring support circle at Bee True You Wellness & Creative Studio for women navigating cancer or chronic illness, offering a safe and welcoming space that honors the whole person — body, mind, and spirit. The group emphasizes peer connection, emotional support, and empowerment for women at any stage of their journey.",
+    pubDate: "2026-10-25T23:00:00.000Z",
+    endDate: "2026-12-07",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Bee True You Wellness & Creative Studio",
+    imageUrl: "https://localist-images.azureedge.net/photos/54241462626167/huge/7c0778035e072ff933b617f21809b1459dc84aca.jpg"
   },
   {
     title: "Teen Takeover at Ouray Hot Springs Pool",
@@ -6495,17 +6502,6 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "Closed For Columbus Day",
-    link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
-    pubDate: "2026-10-12T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Town Closure",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "Norwood Water Commission Meeting",
     link: "https://www.norwoodtown.com/2026-10-13-nwc-meeting",
     description: "The Norwood Water Commission will hold a regular meeting on October 13, 2026, hosted by the Town of Norwood. This is an official government meeting where water commission business for the Norwood area will be addressed.",
@@ -6914,6 +6910,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
+  },
+  {
+    title: "Market on the Plaza",
+    link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    description: "Mountain Village's Heritage Plaza hosts a community market featuring local vendors at tents throughout the pedestrian-friendly plaza. The market brings together a variety of goods from area sellers in an outdoor setting.",
+    pubDate: "2026-11-18T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   }
 ];
 

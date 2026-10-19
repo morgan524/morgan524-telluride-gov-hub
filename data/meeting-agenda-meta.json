@@ -401,7 +401,7 @@
   "telluride|2026-10-27|Town Council - Oct 27 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045",
     "sv": 4,
-    "ph": "503b66ccc1b69729"
+    "ph": "fe6dedc36e608232"
   },
   "county|2026-10-28|Board of County Commissioners Work Session": {
     "sv": 4
@@ -468,7 +468,7 @@
   "telluride|2026-11-05|Special Meeting - Planning & Zoning Commission - Nov 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312",
     "sv": 4,
-    "ph": "930623a06e6efd7f"
+    "ph": "2f0962b84aac8b50"
   },
   "telluride|2026-11-05|Town Council Budget - Nov 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054",
@@ -523,7 +523,7 @@
   "telluride|2026-11-09|Open Space Commission - Nov 09 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8133",
     "sv": 4,
-    "ph": "410853eec5221d83"
+    "ph": "93c2102d90e6fd4f"
   },
   "norwood|2026-11-10|Norwood Water Commission Meeting": {
     "sv": 4,
@@ -593,5 +593,24 @@
   "rico|2026-11-18|Rico Board of Trustees Regular Meeting": {
     "sv": 4,
     "ph": "b858cb282617fb09"
+  },
+  "telluride|2026-11-18|Historic & Architectural Review Commission Chair - Nov 18 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8027",
+    "sv": 4,
+    "ph": "29e446caecdbde71"
+  },
+  "telluride|2026-11-18|Historic & Architectural Review Commission - Nov 18 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8026",
+    "sv": 4,
+    "ph": "fd1c8b4365a387a6"
+  },
+  "telluride|2026-11-18|Parks & Recreation Commission - Nov 18 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8084",
+    "sv": 4,
+    "ph": "41308feda7cb9e07"
+  },
+  "county|2026-11-18|Board of County Commissioners Meeting": {
+    "sv": 4,
+    "ph": "49e704e3c3bab858"
   }
 }
