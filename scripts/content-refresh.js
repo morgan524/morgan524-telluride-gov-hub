@@ -654,6 +654,13 @@ CONTENT RULES:
   about the absence — the absence is the message, no further philosophy
   needed. Topics array should be empty in this case.
 - Never hallucinate names, vote counts, or decisions not in the source text.
+- CONTINUED / TABLED ITEMS: an item introduced by "The following will be continued
+  without discussion to…", "continued to…", or "Applicant requests to table…" is NOT
+  being heard at this meeting, even when its full project description follows. Never
+  write that the body "takes up", "hears", or "reviews" it, and never lead with it.
+  Mention it only briefly as continued (with the new date) and summarize the items
+  actually being heard. (2026-10-19: the Oct 21 HARC summary led with two Shandoka
+  hearings that the agenda continued without discussion to Nov 18.)
 - PLANNING COMMISSION / PLANNING & ZONING (P&Z) / HARC (Historic & Architectural
   Review Commission) MEETINGS: do NOT report on single-family residences under
   review — individual single-family home variances, design reviews, COAs,

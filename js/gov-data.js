@@ -1170,6 +1170,9 @@ const WHY_THIS_MATTERS = [
   // ── Gondola / SMART ──
   {
     match: /gondola(?!\s+plaza)|smart\s*board|smart\s*transit/i,   // not Gondola Plaza vending items
+    // Only on SMART's own meetings (Morgan 2026-10-19): a gondola IGA on a
+    // County or town consent agenda was getting this callout.
+    sources: ['smart'],
     decision: 'SMART Board decisions regarding gondola operations, maintenance, capital planning, or the future of the free gondola connecting Telluride and Mountain Village.',
     who: 'Every commuter, worker, and visitor who uses the gondola, plus all property taxpayers in the SMART district.',
     stage: 'Check agenda for specific action items.',

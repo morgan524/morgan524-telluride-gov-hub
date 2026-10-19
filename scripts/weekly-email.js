@@ -361,10 +361,13 @@ const WHY_THIS_MATTERS = G('WHY_THIS_MATTERS') || [];
 // PUD "has been continued without discussion to October 22" and the card still
 // carried the Shandoka/Carhenge "Why This Matters" callout.)
 const WTM_DEFERRED_RE = /\b(?:continued|postponed|tabled|deferred|pulled|withdrawn|removed from|rescheduled|bumped|carried over|not (?:on|be|being) (?:the agenda|discussed|heard|taken up)|without discussion|no discussion|off the agenda)\b/i;
-function getWTMEntry(text) {
+// An entry with `sources` (e.g. the gondola one: ['smart']) only applies to
+// meetings from those bodies.
+function getWTMEntry(text, srcKey) {
   const sentences = String(text || '').split(/(?<=[.!?])\s+|\s*\|\s*/).filter(Boolean);
   for (const entry of WHY_THIS_MATTERS) {
     if (!entry || !entry.match) continue;
+    if (Array.isArray(entry.sources) && !entry.sources.includes(srcKey)) continue;
     if (sentences.some((s) => entry.match.test(s) && !WTM_DEFERRED_RE.test(s))) return entry;
   }
   return null;
@@ -526,7 +529,7 @@ for (const fn of MEETING_FNS) {
     // Match the meeting against WHY_THIS_MATTERS (title + summary + description),
     // exactly like gov-hub.html's getWTMEntry(), so the same land-use / code
     // meetings get the "Why This Matters" highlight in the email.
-    let wtm = getWTMEntry(name + ' | ' + sm + ' | ' + (m.description || ''));
+    let wtm = getWTMEntry(name + ' | ' + sm + ' | ' + (m.description || ''), m.source || '');
     // The card shows ~520 characters of the summary. If the sentence that
     // triggered the "Why This Matters" box falls past that cut, the reader sees
     // the box with no visible reason for it (2026-10-04: the gondola box on a
