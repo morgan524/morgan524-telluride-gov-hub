@@ -5392,19 +5392,25 @@ async function syncMVAgendas() {
     // 2. Meeting cards: date + time range live in the `content-cards__pre-heading`
     //    block, present even before an agenda posts. e.g.
     //    ...pre-heading>July 16th 2026<br>2:00 pm - 7:00 pm<h3...><a href=/...>Town Council Meeting...
-    const cardRe = /content-cards__pre-heading["']?\s*>\s*([A-Za-z]+\s+\d{1,2}(?:st|nd|rd|th)?\s+\d{4})\s*<br\s*\/?>\s*([^<]*?)\s*<h3[^>]*>\s*<a\s+href=["']?([^\s>"']+)["']?\s*>\s*([^<]*)/gi;
+    // 2026-10-19: cards also come as "Thursday, November 5, 2026, 10 a.m." with
+    //    no <br> (the Nov 5 DRB was being skipped), so take the whole pre-heading
+    //    and pull the date and time out of it.
+    const cardRe = /content-cards__pre-heading["']?\s*>\s*([\s\S]*?)\s*<h3[^>]*>\s*<a\s+href=["']?([^\s>"']+)["']?\s*>\s*([^<]*)/gi;
     let cm, cardCount = 0;
     while ((cm = cardRe.exec(html)) !== null) {
       cardCount++;
-      const dm = /([A-Za-z]+)\s+(\d{1,2})(?:st|nd|rd|th)?\s+(\d{4})/.exec(cm[1]);
+      const pre = cm[1].replace(/<br\s*\/?>/gi, ' | ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+      const dm = /(?:[A-Za-z]+,\s*)?([A-Za-z]+)\s+(\d{1,2})(?:st|nd|rd|th)?,?\s+(\d{4})/.exec(pre);
       if (!dm) continue;
       const mIdx = MONTH_LOOKUP[dm[1].toLowerCase()];
       if (mIdx === undefined) continue;
       const dateKey = dateKeyFromYMD(dm[3], mIdx, dm[2]);
       const mDate = new Date(dateKey);
       if (isNaN(mDate) || mDate < lookback) continue;
-      const time = (cm[2] || '').replace(/\b(am|pm)\b/gi, s => s.toUpperCase()).replace(/\s+/g, ' ').trim();
-      const special = /special/i.test(cm[4] || '') || /special/i.test(cm[3] || '');
+      const time = pre.slice(dm.index + dm[0].length).replace(/^[\s,|]+/, '')
+        .replace(/\b([ap])\.?m\.?(?=\s|$|-)/gi, (x, ap) => ap.toUpperCase() + 'M')
+        .replace(/(?<![:\d])(\d{1,2})\s*(AM|PM)\b/g, '$1:00 $2').replace(/\s+/g, ' ').trim();
+      const special = /special/i.test(cm[3] || '') || /special/i.test(cm[2] || '');
       const d = docs[dateKey] || {};
       const stub = {
         date: dateKey,
