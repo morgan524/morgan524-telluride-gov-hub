@@ -1,27 +1,27 @@
 {
- "generated": "2026-10-20T19:07:59.425Z",
- "pinned": false,
- "topic": "wildfire",
- "topicLabel": "Wildfire Resiliency",
- "headline": "Wildfire Resiliency goes before Board of Directors Meeting on Tuesday, October 20",
- "blurb": "The Telluride Fire Protection District board meets October 20th at 5:30 p.m. at Station 1 on Columbia Ave. Leading the agenda is the first reading of the 2027 budget — the opening move in a process that will play out over the next several weeks. The board will also ratify a pre-build contractor agreement with FCI, likely tied to the ongoing Station 3 update, and will receive a wildfire assignment update along with a September report on PANO camera usage.",
+ "generated": "2026-10-20T20:11:37.596Z",
+ "pinned": true,
+ "topic": "carhenge",
+ "topicLabel": "Carhenge / Shandoka",
+ "headline": "Shandoka goes before Planning & Zoning on Thursday, October 22",
+ "blurb": "P&Z holds the public hearing on the Shandoka Lot Preliminary PUD: an 804-space parking structure (890 at build-out), 53 homes, a transit center, a food bank and childcare on Town-owned Lot L. Staff recommend approval, with the garage allowed up to 46 feet against a 40-foot limit. Written comment goes to kclothier@telluride.gov before 9 a.m. Thursday.",
  "images": [],
  "deepDive": {
-  "label": "Wildfire Resiliency",
-  "href": "/deep-dive-wildfire.html"
+  "label": "Carhenge / Shandoka",
+  "href": "/deep-dive-carhenge.html"
  },
  "meeting": {
-  "title": "Board of Directors Meeting",
-  "sourceLabel": "Fire Protection",
-  "date": "2026-10-20",
-  "humanDate": "Tuesday, October 20",
+  "title": "Planning & Zoning Commission",
+  "sourceLabel": "Town of Telluride",
+  "date": "2026-10-22",
+  "humanDate": "Thursday, October 22",
   "time": "5:30 PM",
-  "location": "131 W Columbia Ave, Telluride, CO 81435",
-  "agendaUrl": "https://www.telluridefire.com/files/cef8a399b/Agenda+-October+20th%2C+2026.pdf",
+  "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8106",
   "hasAgenda": true,
-  "packetUrl": "",
-  "link": "https://www.telluridefire.com/files/cef8a399b/Agenda+-October+20th%2C+2026.pdf",
-  "zoomLink": "",
-  "livestream": ""
+  "packetUrl": "https://telluride-co.civicweb.net/document/446322/",
+  "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8106",
+  "zoomLink": "https://us06web.zoom.us/meeting/register/OC4r5SGcR6S0q5DBnXPh8Q",
+  "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
  }
 }

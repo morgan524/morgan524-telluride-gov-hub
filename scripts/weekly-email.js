@@ -593,7 +593,10 @@ for (let i = meetings.length - 1; i >= 0; i--) if (!meetings[i]) meetings.splice
 // fills the To: line, same as on the site.
 const COMMENT_MAP = {
   telluride:          'townclerk@telluride.gov',
-  'telluride-harc':   'dcandelaria@telluride.gov',
+  // HARC and P&Z comments go to the Historic Preservation and Planning
+  // Director; Council stays with the Town Clerk (per Town Clerk, 2026-10-20).
+  'telluride-harc':   'kclothier@telluride.gov',
+  'telluride-pz':     'kclothier@telluride.gov',
   county:             'bocc@sanmiguelcountyco.gov',
   'county-planning':  'planningcommission@sanmiguelcountyco.gov',
   mv:                 'council@mtnvillage.org',
@@ -615,6 +618,7 @@ const commentEmailFor = (name, srcKey) => {
   if (key === 'mv'        && /planning|design review/.test(title)) key = 'mv-planning';
   if (key === 'ouraycity' && /planning/.test(title)) key = 'ouraycity-planning';
   if (key === 'telluride' && /harc|historic|architectural review/.test(title)) key = 'telluride-harc';
+  else if (key === 'telluride' && /planning|zoning|p&z/.test(title)) key = 'telluride-pz';
   return COMMENT_MAP[key] || '';
 };
 const boardName = (n, s) => (String(s).replace(/^town of /i, '') + ' ' + String(n).replace(/\s*meeting\s*$/i, ''))

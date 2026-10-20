@@ -50,7 +50,10 @@ const WINDOW_DAYS = 30;  // one month out — small towns meet monthly, 14d hid 
 // COMMENT_MAP; keep in sync). Bodies without a recipient resolve to ''.
 const COMMENT_MAP = {
   telluride:          'townclerk@telluride.gov',
-  'telluride-harc':   'dcandelaria@telluride.gov',
+  // HARC and P&Z comments go to the Historic Preservation and Planning
+  // Director; Council stays with the Town Clerk (per Town Clerk, 2026-10-20).
+  'telluride-harc':   'kclothier@telluride.gov',
+  'telluride-pz':     'kclothier@telluride.gov',
   county:             'bocc@sanmiguelcountyco.gov',
   'county-planning':  'planningcommission@sanmiguelcountyco.gov',
   mv:                 'council@mtnvillage.org',
@@ -71,6 +74,7 @@ function commentEmailFor(source, title) {
   if (key === 'mv' && /planning|design review/.test(t)) key = 'mv-planning';
   if (key === 'ouraycity' && /planning/.test(t)) key = 'ouraycity-planning';
   if (key === 'telluride' && /harc|historic|architectural review/.test(t)) key = 'telluride-harc';
+  else if (key === 'telluride' && /planning|zoning|p&z/.test(t)) key = 'telluride-pz';
   return COMMENT_MAP[key] || '';
 }
 
