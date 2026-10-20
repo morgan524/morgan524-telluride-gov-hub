@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-20T19:07:59.422Z",
+ "generated": "2026-10-20T23:46:24.424Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
-   "lastUpdated": "2026-09-27",
+   "lastUpdated": "2026-10-20",
    "upcoming": [
     {
      "source": "telluride",
@@ -32,9 +32,7 @@
    ],
    "recent": [],
    "developments": [],
-   "stale": [
-    "Carhenge / Shandoka: timeline entry \"HARC hears Shandoka's four buildings; Carhenge slips to…\" (Aug 19, 2026) is still marked upcoming but the date has passed."
-   ]
+   "stale": []
   },
   "medcenter": {
    "label": "Telluride Medical Center",
@@ -140,6 +138,18 @@
      "link": "https://sanmiguelcoco.portal.civicclerk.com/event/901/files/agenda/2051",
      "zoomLink": "https://us02web.zoom.us/meeting/register/fns7wAwITvunwFcd1y-RGg",
      "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
+    },
+    {
+     "source": "smart",
+     "sourceLabel": "SMART Transit",
+     "title": "SMART Gondola Advisory Committee",
+     "date": "2026-10-26",
+     "time": "3:00 PM",
+     "location": "Virtual (Zoom link in the agenda)",
+     "agendaUrl": "",
+     "link": "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.10.26-Gsub-Agenda.pdf",
+     "zoomLink": "",
+     "livestream": ""
     },
     {
      "source": "telluride",

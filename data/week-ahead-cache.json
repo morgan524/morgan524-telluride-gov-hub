@@ -1,30 +1,30 @@
 {
-  "hash": "2eb635681a03413a442306068bd5e901946a5394",
-  "lede": "The biggest item this week is the San Miguel County Commissioners hearing four proposed Land Use Code amendments on Tuesday that would add a brand-new Natural Resources article to county code — with individual public hearings on forestry, oil and gas, and geothermal operations, this is the kind of foundational code change that doesn't come around often. Town of Telluride's Planning and Zoning Commission takes up the Shandoka Lot Redevelopment PUD on Wednesday, a long-delayed hearing on what gets built on Town-owned land at 860 Black Bear Rd. The school board's mill levy override discussion and the hospital district's Two Site Model decision round out a week where several bodies are making choices with long tails.",
+  "hash": "70369027e55aeafd05d1b3d4f1207f52b39bd07e",
+  "lede": "The biggest thing on the calendar this week is the San Miguel County commissioners sitting for public hearings on four Land Use Code amendments that would add an entirely new Natural Resources article to county code — covering forestry, oil and gas, and geothermal operations — and that's the kind of foundational change worth showing up for. Telluride's Planning and Zoning Commission also finally gets its crack at the Shandoka Lot Redevelopment PUD on town-owned land at 860 Black Bear Rd, after the hearing was pushed from September. Meanwhile, the school board revisits the mill levy override discussion, the Fire District opens its 2027 budget process, and the hospital district weighs a Two Site Model that could reshape how care is delivered here for years to come.",
   "notable": [
     {
       "id": 9,
-      "stake": "Public hearings on new county code governing forestry, oil, gas, and geothermal."
+      "stake": "Public hearings on new county Natural Resources code covering forestry, oil, gas, geothermal."
     },
     {
       "id": 13,
-      "stake": "Shandoka Lot PUD hearing — Town-owned land, density tradeoffs, public input open."
+      "stake": "Shandoka Lot PUD hearing — town-owned housing site with dimensional tradeoffs on the table."
     },
     {
       "id": 1,
-      "stake": "Mill levy override funding update; board action on Unified Improvement Plan."
-    },
-    {
-      "id": 11,
-      "stake": "Hospital board may act on Two Site Model, shaping long-term local healthcare delivery."
+      "stake": "School board revisits mill levy override; outcome affects district funding directly."
     },
     {
       "id": 0,
-      "stake": "First reading of Fire District's 2027 budget opens public budget process."
+      "stake": "First reading of Fire District's 2027 budget opens the public process."
+    },
+    {
+      "id": 11,
+      "stake": "Hospital board may act on Two Site Model — long-term consequences for local healthcare delivery."
     },
     {
       "id": 8,
-      "stake": "Parks commission votes on restoring Jazz Festival to three days in 2027."
+      "stake": "Parks Commission votes on restoring Jazz Festival to three-day run in 2027."
     }
   ]
 }

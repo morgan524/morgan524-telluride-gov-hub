@@ -272,8 +272,8 @@ const SMART_CACHED_DATA = [
     time: "",
     title: "SMART Gondola Leadership Committee",
     location: "Virtual (Zoom link in the agenda)",
-    agendaUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/Agenda2026.09.28.pdf",
-    packetUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/09.28.2026-Gondola-Leadership-Committee-Meeting-Packet.pdf",
+    agendaUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/9.28.2026-Gondola-Leadership_Agenda-English_Spanish.pdf",
+    packetUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/9.28.2026-Gondola-Leadership_Packet-English_Spanish.pdf",
     note: "Gondola Leadership Committee — the partner governing bodies together: agenda and packet available (PDF)."
   },
   {
@@ -283,6 +283,15 @@ const SMART_CACHED_DATA = [
     location: "SMART Office, Lawson Hill (also virtual — see agenda)",
     agendaUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/1-SMART-Board-Agenda_October-8th-2026_distributed.pdf",
     packetUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-Meeting-Packet_October-8th-2026.pdf"
+  },
+  {
+    date: "October 26, 2026",
+    time: "3:00 PM",
+    title: "SMART Gondola Advisory Committee",
+    location: "Virtual (Zoom link in the agenda)",
+    agendaUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.10.26-Gsub-Agenda.pdf",
+    packetUrl: null,
+    note: "Gondola Advisory Committee (Gsub): agenda and packet available (PDF)."
   },
   {
     date: "November 12, 2026",
@@ -344,6 +353,14 @@ const TMVOA_CACHED_DATA = [
     board: "board",
     agendaUrl: "https://tmvoa.org/site/assets/files/4868/tmvoa_board_meeting_agenda_10_22_26.pdf",
     packetUrl: "https://tmvoa.org/site/assets/files/4868/tmvoa_board_meeting_packet_10_22_26.pdf",
+    location: "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    date: "October 27, 2026",
+    title: "TMVOA Finance &amp; Budget Committee",
+    board: "other",
+    agendaUrl: null,
+    packetUrl: null,
     location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
