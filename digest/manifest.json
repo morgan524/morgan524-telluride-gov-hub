@@ -1,21 +1,13 @@
 {
-  "generated": "2026-10-19 12:43 UTC",
+  "generated": "2026-10-20 00:15 UTC",
   "digests": {
     "weekly": {
       "name": "The Week Ahead Outlook",
-      "subject": "The Week Ahead Outlook - October 19 - October 25, 2026",
-      "covers": "Mon Oct 19 to Sun Oct 25, 2026",
-      "weekStart": "2026-10-19",
+      "subject": "The Week Ahead Outlook - October 26 - November 1, 2026",
+      "covers": "Mon Oct 26 to Sun Nov 1, 2026",
+      "weekStart": "2026-10-26",
       "audience": "Weekly Update",
       "file": "digest/week.html"
-    },
-    "past": {
-      "name": "Past Meetings",
-      "subject": "Past Meetings - October 12 - October 16, 2026",
-      "covers": "Meetings Oct 12 to Oct 16, 2026",
-      "weekStart": "2026-10-19",
-      "audience": "Past Meetings",
-      "file": "digest/past.html"
     }
   }
 }
