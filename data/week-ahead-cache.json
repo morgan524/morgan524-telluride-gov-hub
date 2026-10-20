@@ -1,38 +1,30 @@
 {
-  "hash": "877c77583099970d56dad54abe6dfff0e24df9cd",
-  "lede": "The biggest thing on the table this week is San Miguel County's Board of Commissioners taking up four Land Use Code amendments that would add an entirely new Natural Resources article to county code — with separate public hearings on forestry, oil and gas, and geothermal operations. That's the kind of foundational change that sticks around for a generation, and public comment is open. Alongside that, Telluride's school board revisits the mill levy override, the Fire District opens its 2027 budget process, Ouray sets new water and sewer rates on first reading, and the Telluride Medical Center weighs a Two Site Model for how and where it delivers care.",
+  "hash": "512d691c9a7ff43cdfa6aa493a01e9c379a0b279",
+  "lede": "The biggest thing on the calendar this week is Tuesday's Board of County Commissioners meeting, where San Miguel County holds public hearings on four Land Use Code amendments that would create a brand-new Natural Resources article — covering forestry, oil and gas, and geothermal operations — which is the kind of code rewrite that sticks around for decades. Wednesday's Planning and Zoning Commission finally hears the Shandoka Lot Redevelopment PUD application for Town-owned land at 860 Black Bear Rd, a housing-related proposal that's been waiting in the queue since September. The school board's ongoing mill levy override discussion and the Hospital District's Two Site Model conversation round out a week with more consequential decisions than usual.",
   "notable": [
     {
-      "id": 12,
-      "stake": "Public hearings on new county code governing forestry, oil, gas, and geothermal."
+      "id": 9,
+      "stake": "Public hearings on new county code covering forestry, oil, gas, and geothermal."
     },
     {
-      "id": 2,
-      "stake": "First readings set 2027 water/sewer rates and reshape Light Industrial zoning rules."
+      "id": 13,
+      "stake": "Preliminary PUD hearing for Town-owned affordable housing site at 860 Black Bear Rd."
     },
     {
-      "id": 4,
-      "stake": "Board discusses mill levy override funding — ongoing decision with direct school budget impact."
-    },
-    {
-      "id": 3,
-      "stake": "First reading of Fire District's 2027 budget opens the public funding process."
-    },
-    {
-      "id": 14,
-      "stake": "Possible action on Two Site Model could reshape how and where medical care is delivered."
-    },
-    {
-      "id": 0,
-      "stake": "Land Use Code and Master Plan updates decide what gets built in Norwood for years."
+      "id": 1,
+      "stake": "Board discusses mill levy override funding — ongoing decision with school budget implications."
     },
     {
       "id": 11,
-      "stake": "Vote on restoring Jazz Festival to three days affects town events planning and impact."
+      "stake": "Hospital board considers Two Site Model — long-term consequences for local healthcare delivery."
     },
     {
-      "id": 7,
-      "stake": "TMVOA's 2027 draft budget reviewed; public comment window available."
+      "id": 0,
+      "stake": "First reading of Fire District's 2027 budget opens formal public process."
+    },
+    {
+      "id": 8,
+      "stake": "Commission votes on restoring Jazz Festival to three days for 50th anniversary in 2027."
     }
   ]
 }

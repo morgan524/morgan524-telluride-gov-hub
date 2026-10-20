@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 10-19-26",
+    "source": "KOTO Community Radio",
+    "date": "October 20, 2026",
+    "newsTopic": "community",
+    "copy": "Child Care Expansion Makes Room for More Munchkins; Watershed Forum Looks to the Future of the San Miguel",
+    "href": "https://koto.org/news/newscast-10-19-26/"
+  },
+  {
     "title": "Newscast 10-16-26",
     "source": "KOTO Community Radio",
     "date": "October 17, 2026",
@@ -46,13 +54,5 @@
     "newsTopic": "community",
     "copy": "Telluride Tells ALPRs to Flock Off; County Awards Community Grants; Sheridan Opera House Heads to the Swamp",
     "href": "https://koto.org/news/newscast-10-7-26/"
-  },
-  {
-    "title": "Newscast 10-5-26",
-    "source": "KOTO Community Radio",
-    "date": "October 6, 2026",
-    "newsTopic": "housing",
-    "copy": "County Talks Housing Fees; Coming Up Next, Telluride",
-    "href": "https://koto.org/news/newscast-10-5-26/"
   }
 ]

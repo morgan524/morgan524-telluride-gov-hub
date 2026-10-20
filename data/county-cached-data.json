@@ -111,6 +111,15 @@
     "note": null
   },
   {
+    "date": "November 12, 2026",
+    "time": "9:00 AM",
+    "title": "Planning Commission Meeting",
+    "type": "planning",
+    "location": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
+    "civicClerkId": 1078,
+    "note": null
+  },
+  {
     "date": "November 18, 2026",
     "time": "9:30 AM",
     "title": "Board of County Commissioners Meeting",
@@ -138,6 +147,15 @@
     "note": null
   },
   {
+    "date": "December 10, 2026",
+    "time": "9:00 AM",
+    "title": "Planning Commission Meeting",
+    "type": "planning",
+    "location": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
+    "civicClerkId": 1079,
+    "note": null
+  },
+  {
     "date": "December 16, 2026",
     "time": "9:30 AM",
     "title": "Board of County Commissioners Meeting",
@@ -162,6 +180,15 @@
     "type": "other",
     "location": "333 W Colorado Ave, Second Floor, Telluride, CO 81435",
     "civicClerkId": 1076,
+    "note": null
+  },
+  {
+    "date": "January 14, 2027",
+    "time": "9:00 AM",
+    "title": "Planning Commission Meeting",
+    "type": "planning",
+    "location": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
+    "civicClerkId": 1080,
     "note": null
   }
 ]

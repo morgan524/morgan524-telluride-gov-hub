@@ -125,6 +125,17 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/45292/screenshot_2026-10-14_at_11_30_48_am.800x533.webp"
   },
   {
+    "title": "Halloween on the Hill",
+    "link": "https://www.telluride.com/event/halloween-on-the-hill/",
+    "description": "Join the Telluride Historical Museum for Halloween on the Hill. The museum will be hosting games, trick or treating, …",
+    "pubDate": "2026-10-31",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/49432/poster_11x17-rgb--v1.800x533.webp"
+  },
+  {
     "title": "Mountainfilm for Locals",
     "link": "https://www.telluride.com/event/mountainfilm-for-locals/",
     "description": "Join Mountainfilm for Mountainfilm for Locals, a free screening for our local community, presented in partnership with …",
@@ -272,7 +283,7 @@
     "sourceLabel": "Telluride.com",
     "category": "Community Event",
     "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/35913/holidayprelude_webbnr_1900x1010.800x533.webp"
+    "imageUrl": "https://www.telluride.com/site/assets/files/35913/holidayprelude-103.800x533.webp"
   },
   {
     "title": "Warren Miller&#039;s \"Days Off\"",
