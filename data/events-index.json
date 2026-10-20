@@ -1322,6 +1322,19 @@
     "endDate": "2026-11-01"
   },
   {
+    "title": "Decorate Your Own Trick or Treat Bag",
+    "href": "https://www.telluride.com/event/decorate-your-own-trick-or-treat-bag/",
+    "date": "2026-10-29",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/64041/screenshot_2026-10-20_at_11_19_55_am.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Decorate your own Halloween bag for trick or treating! All supplies will be provided.",
+    "type": "Community"
+  },
+  {
     "title": "Pickleball Nights",
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-10-29",
@@ -1439,6 +1452,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Halloween Parade",
+    "href": "https://www.telluride.com/event/halloween-parade/",
+    "date": "2026-10-30",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/50183/img_7441.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Get in the Halloween spirit with the annual Telluride Halloween Parade! Local kids will be dressed up in their costumes …",
+    "type": "Festivals"
+  },
+  {
     "title": "Mountain Sprouts Halloween Party & Fall Fundraiser",
     "href": "https://www.telluride.com/event/mountain-sprouts-halloween-party-fall-fundraiser/",
     "date": "2026-10-30",
@@ -1450,6 +1476,19 @@
     "source": "Telluride.com",
     "desc": "Mountain Sprouts Preschool is hosting a Halloween Dance Disco at The Patio on October 30th from 4–6pm, right after …",
     "type": "Music"
+  },
+  {
+    "title": "Halloween Movie Matinee: Addams Family",
+    "href": "https://www.telluride.com/event/halloween-movie-matinee-addams-family/",
+    "date": "2026-10-30",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/64047/2026_09_19_07_57_49.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Join the Wilkinson Public Library for an after school showing of the Addams Family (animated version) to get in the …",
+    "type": "Arts & Film"
   },
   {
     "title": "Minions and Monsters: Movie Night @ the Wright",
@@ -1606,6 +1645,19 @@
     "category": "Community Event",
     "source": "Telluride.com",
     "desc": "Join the Telluride Historical Museum for Halloween on the Hill. The museum will be hosting games, trick or treating, …",
+    "type": "Community"
+  },
+  {
+    "title": "Telluride Fire Halloween Open House",
+    "href": "https://www.telluride.com/event/telluride-fire-halloween-open-house/",
+    "date": "2026-10-31",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/59792/screenshot_2026-10-20_at_10_59_28_am.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Telluride Fire invites the community to its Halloween Open House on Saturday, October 31, from 4–7 p.m. at …",
     "type": "Community"
   },
   {
@@ -2807,7 +2859,7 @@
     "time": "5:00 PM",
     "location": "Telluride, CO",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/28866/mainstholiday_rb.800x533.webp",
+    "img": "https://www.telluride.com/site/assets/files/28866/noelnight-9-2100x1400-68fad2f3-c123-4d8b-bca6-f74e15695306.800x533.webp",
     "category": "Community Event",
     "source": "Telluride.com",
     "desc": "Noel Night marks the beginning of the holiday season with the lighting of the ceremonial Ski Tree, and shopping at …",
