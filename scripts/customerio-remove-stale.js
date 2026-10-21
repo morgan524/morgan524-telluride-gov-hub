@@ -22,12 +22,16 @@
  *        node scripts/customerio-remove-stale.js --emails a@x.com,b@y.org [--apply]
  *   Without --apply it only lists what it would change. --emails removes those
  *   specific addresses on request (any bounce type), the same way.
+ *        node scripts/customerio-remove-stale.js --rename old@x.com=new@x.com[,…] [--apply]
+ *   Changes a profile's email address (e.g. a domain that moved). Skipped if a
+ *   profile with the new address already exists, so no duplicate is created.
  */
 const APPLY = process.argv.includes('--apply');
 const arg = (name, dflt) => { const i = process.argv.indexOf(name); return i >= 0 ? process.argv[i + 1] : dflt; };
 const DAYS = Number(arg('--days', '7'));
 const BROADCASTS = String(arg('--broadcasts', '1,5')).split(',').map(Number);
 const EMAILS = String(arg('--emails', '')).split(',').map((e) => e.trim().toLowerCase()).filter(Boolean);
+const RENAMES = String(arg('--rename', '')).split(',').map((p) => p.split('=').map((e) => e.trim().toLowerCase())).filter((p) => p.length === 2 && p[0] && p[1]);
 
 const PERMANENT = [
   [/previously bounced address/i, 'earlier hard bounce'],
@@ -96,7 +100,35 @@ async function byEmail() {
   return out;
 }
 
+async function trackPut(id, body) {
+  const auth = 'Basic ' + Buffer.from(process.env.CUSTOMERIO_SITE_ID + ':' + process.env.CUSTOMERIO_TRACK_API_KEY).toString('base64');
+  const r = await fetch('https://track.customer.io/api/v1/customers/' + encodeURIComponent(id), {
+    method: 'PUT', headers: { Authorization: auth, 'Content-Type': 'application/json' }, body: JSON.stringify(body),
+  });
+  if (!r.ok) throw new Error(`Track API ${r.status} for ${id}: ${(await r.text()).slice(0, 200)}`);
+}
+const lookup = async (email) => ((await appGet('https://api.customer.io/v1/customers?email=' + encodeURIComponent(email))).results || [])
+  .filter((r) => String(r.email || '').toLowerCase() === email);
+
+// Address changes on request (old=new). Never creates a duplicate profile.
+async function renames() {
+  let ok = 0;
+  for (const [from, to] of RENAMES) {
+    const [src] = await lookup(from);
+    if (!src) { console.log(`  rename ${mask(from)}: no profile found, skipped`); continue; }
+    if ((await lookup(to)).length) { console.log(`  rename ${mask(from)} -> ${mask(to)}: new address already has a profile, skipped`); continue; }
+    console.log(`  rename ${mask(from)} -> ${mask(to)}`);
+    if (APPLY) { await trackPut(src.id || ('cio_' + src.cio_id), { email: to, email_changed_from: from, email_changed_at: Math.floor(Date.now() / 1000) }); ok++; }
+  }
+  if (APPLY) console.log(`changed ${ok} email address(es)`);
+}
+
 (async () => {
+  if (RENAMES.length) {
+    if (APPLY && (!process.env.CUSTOMERIO_SITE_ID || !process.env.CUSTOMERIO_TRACK_API_KEY)) throw new Error('CUSTOMERIO_SITE_ID / CUSTOMERIO_TRACK_API_KEY not set');
+    await renames();
+    if (!EMAILS.length) return;
+  }
   const list = EMAILS.length ? await byEmail() : await failures();
   const by = {};
   for (const p of list) by[p.reason] = (by[p.reason] || 0) + 1;

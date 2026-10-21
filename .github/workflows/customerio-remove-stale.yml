@@ -19,6 +19,10 @@ on:
         description: 'Optional: remove only these addresses (comma-separated), whatever the bounce type'
         required: false
         default: ''
+      rename:
+        description: 'Optional: change addresses, old=new (comma-separated)'
+        required: false
+        default: ''
 
 permissions:
   contents: read
@@ -37,7 +41,9 @@ jobs:
           CUSTOMERIO_SITE_ID: ${{ secrets.CUSTOMERIO_SITE_ID }}
           CUSTOMERIO_TRACK_API_KEY: ${{ secrets.CUSTOMERIO_TRACK_API_KEY }}
           EMAILS: ${{ github.event.inputs.emails }}
+          RENAME: ${{ github.event.inputs.rename }}
         run: |
           if [ "${{ github.event.inputs.apply }}" = "true" ]; then A=--apply; else A=; fi
-          if [ -n "$EMAILS" ]; then node scripts/customerio-remove-stale.js $A --emails "$EMAILS"
+          if [ -n "$RENAME" ]; then node scripts/customerio-remove-stale.js $A --rename "$RENAME" ${EMAILS:+--emails "$EMAILS"}
+          elif [ -n "$EMAILS" ]; then node scripts/customerio-remove-stale.js $A --emails "$EMAILS"
           else node scripts/customerio-remove-stale.js $A --days "${{ github.event.inputs.days }}"; fi
