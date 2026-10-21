@@ -1619,6 +1619,19 @@
           <input type="password" id="hbSignupPassword" autocomplete="new-password" placeholder="At least 8 characters">
         </div>
 
+        <!-- Region (restored 2026-10-21, per Morgan): optional now, kept for
+             regional editions of the weekly email. Values match profile.html
+             and scripts/lib/recap-regions.js REGION_ORDER. -->
+        <div class="hb-modal-field">
+          <label for="hbSignupRegion">Your region <span style="text-transform:none;letter-spacing:0;font-weight:500;">(optional)</span></label>
+          <select id="hbSignupRegion">
+            <option value="">— Select your region —</option>
+            <option value="East End">East End (Telluride, Mountain Village, Ophir, Rico)</option>
+            <option value="West End">West End (Norwood, Nucla, Naturita)</option>
+            <option value="Ridgway/Ouray">Ridgway / Ouray</option>
+          </select>
+        </div>
+
 
         <div class="hb-freq-group">
           <span class="hb-freq-label">Stay informed — choose what you'd like to receive</span>
@@ -1894,9 +1907,10 @@
       // Daily digest retired 2026-05-25; only 'weekly' or '' (none) now.
       const digestFreq = document.getElementById('hbFreqWeekly').checked ? 'weekly' : '';
       const includeNewsletter = document.getElementById('hbFreqNewsletter').checked;
-      // Region + Event Topics were removed from the form 2026-09-29 (Morgan: not
-      // used yet). The profile page still lets people set them.
-      const region = '';
+      // Region is back on the form (optional, 2026-10-21); Event Topics stay
+      // off it (set on the profile page).
+      const regionEl = document.getElementById('hbSignupRegion');
+      const region = regionEl ? regionEl.value : '';
       // Event Topics opt-ins (arts/civic/family/outdoors) — set via the Worker
       // (name-based) AFTER the member is created, since the JSONP form-embed
       // path would need each group's numeric web ID.
