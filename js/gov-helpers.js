@@ -870,10 +870,10 @@ const MEETING_PREVIEWS = {
     "The Historic & Architectural Review Commission Chair meeting scheduled for October 21, 2026 has been canceled. No agenda items will be discussed. The previously scheduled October 16, 2026 HARC Chair meeting was also canceled.",
 
   "telluride|2026-10-21|Historic & Architectural Review Commission - Oct 21 2026":
-    "The Historic & Architectural Review Commission is expected to introduce new member Troy Gulec, approve minutes from September 2026 meetings, and hear staff announcements. The commission's work focuses on preserving the historic character and architectural integrity of Telluride's Historic Landmark District.",
+    "The Historic & Architectural Review Commission is expected to introduce a new member, approve minutes from September meetings, and hear staff announcements. The commission's work focuses on preserving the historic character and architectural integrity of Telluride's Historic Landmark District.",
 
   "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026":
-    "The Parks & Recreation Commission will consider a request to add a third event day to the 2027 Telluride Jazz Festival and review a design concept for expanding the Town Park basketball court. The commission will also receive check-ins from local soccer and lacrosse clubs and hear staff project and budget updates."
+    "The Parks & Recreation Commission will consider a request to add a third event day to the 2027 Telluride Jazz Festival in Town Park and review a design concept for a Basketball Court Expansion Project. The commission will also receive check-ins from local soccer and lacrosse clubs."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1044,16 +1044,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "government",
     copy: "An article in the Oct. 8-14 edition, “Ridgway seeks input on water supply plan,” misstated the date that the Ridgway Town Council is expected to vote on the water supply element of its master plan. The correct date is Nov. 19.",
     href: "https://www.ouraynews.com/2026/10/14/correction-20261015-0258-189619/",
-    img: ""
-  },
-  {
-    title: "2026 Telluride Mountain Club Recap Report",
-    source: "Telluride Mountain Club",
-    sourceKey: "tmc",
-    date: "October 12, 2026",
-    newsTopic: "community",
-    copy: "The post 2026 Telluride Mountain Club Recap Report appeared first on Telluride Mountain Club .",
-    href: "https://www.telluridemountainclub.org/2026-telluride-mountain-club-recap-report/",
     img: ""
   },
   {
@@ -2665,6 +2655,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "A gathering of ‘people who feel like you do’",
+    source: "Telluride Times",
+    date: "October 21, 2026",
+    firstSeen: "2026-10-21",
+    newsTopic: "recreation",
+    copy: "A group of Telluride residents has been gathering monthly since January 2025, marching from the San Miguel County Courthouse to Town Park and back. Turnout typically runs a few dozen people, with speakers and occasional sing-alongs. The next march is October 24 at noon.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_47c831c3-7646-4060-853b-b983bc9b5480.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/b8/4b8f22b6-12ff-449b-be8f-3a40d8886679/6ad1c78dd8e9d.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "‘Rings of Time: Tales from the Telluride Bluegrass Festival’",
     source: "Telluride Times",
