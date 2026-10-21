@@ -697,15 +697,6 @@ const NORWOOD_CACHE_DATE = '2026-10-21';
 
 const NORWOOD_CACHED_DATA = [
   {
-    date: "October 14, 2026",
-    time: null,
-    title: "Board of Trustees Meeting",
-    agendaUrl: "https://www.norwoodtown.com/files/4a8e8713d/10.14.2026+Board+of+Trustee+Agenda+ADA.pdf",
-    packetUrl: "https://www.norwoodtown.com/files/ab18b4c37/10.14.2026+Board+of+Trustees+Supporting+Documents.pdf",
-    special: false,
-    board: "bot"
-  },
-  {
     date: "October 15, 2026",
     time: null,
     title: "Board of Trustees CANCELLED Public Hearing - Resolution No. 2026-0812",

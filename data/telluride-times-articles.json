@@ -116,7 +116,7 @@
     "copy": "CAFI, a local immigrant advocacy group, is urging a yes vote on Measure 5A for the Telluride R-1 School District. They warn that without it, programs like Dual Immersion — where English and Spanish speakers learn side by side — could be cut, along with arts, sports, and college prep. The district says failure could mean losing between 54 and 94 of its 142 staff.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_dd1df833-530a-430a-8b31-bd365515cd1b.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "isLetter": true,
     "imgHiRes": true
   },
@@ -1175,6 +1175,17 @@
     "copy": "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
     "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
+  },
+  {
+    "title": "Town of Ridgway, City of Ouray, and Ouray County Establish New Three-Year Affordable Housing Goals",
+    "source": "Town of Ridgway",
+    "date": "October 20, 2026",
+    "firstSeen": "2026-10-21",
+    "newsTopic": "housing",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Prop-123-Opt-In-Unit-Count-NewsRelease_FINAL-10.20.26-acc.pdf",
+    "img": ""
   },
   {
     "title": "Town Manager's Report",
