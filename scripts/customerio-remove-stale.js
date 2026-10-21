@@ -19,12 +19,15 @@
  *
  * Env: CUSTOMERIO_APP_API_KEY (read), CUSTOMERIO_SITE_ID + CUSTOMERIO_TRACK_API_KEY (write)
  * Usage: node scripts/customerio-remove-stale.js [--apply] [--days 7] [--broadcasts 1,5]
- *   Without --apply it only lists what it would change.
+ *        node scripts/customerio-remove-stale.js --emails a@x.com,b@y.org [--apply]
+ *   Without --apply it only lists what it would change. --emails removes those
+ *   specific addresses on request (any bounce type), the same way.
  */
 const APPLY = process.argv.includes('--apply');
 const arg = (name, dflt) => { const i = process.argv.indexOf(name); return i >= 0 ? process.argv[i + 1] : dflt; };
 const DAYS = Number(arg('--days', '7'));
 const BROADCASTS = String(arg('--broadcasts', '1,5')).split(',').map(Number);
+const EMAILS = String(arg('--emails', '')).split(',').map((e) => e.trim().toLowerCase()).filter(Boolean);
 
 const PERMANENT = [
   [/previously bounced address/i, 'earlier hard bounce'],
@@ -81,11 +84,23 @@ async function unsubscribe(p) {
 
 const mask = (e) => String(e).replace(/^(.{2})[^@]*/, '$1***');
 
+// Specific addresses removed on request: look each profile up by email.
+async function byEmail() {
+  const out = [];
+  for (const email of EMAILS) {
+    const d = await appGet('https://api.customer.io/v1/customers?email=' + encodeURIComponent(email));
+    const hits = (d.results || []).filter((r) => String(r.email || '').toLowerCase() === email);
+    if (!hits.length) { console.log(`  ${mask(email)}  no profile found, skipped`); continue; }
+    for (const h of hits) out.push({ id: h.id || ('cio_' + h.cio_id), email, reason: 'removed on request' });
+  }
+  return out;
+}
+
 (async () => {
-  const list = await failures();
+  const list = EMAILS.length ? await byEmail() : await failures();
   const by = {};
   for (const p of list) by[p.reason] = (by[p.reason] || 0) + 1;
-  console.log(`stale addresses (broadcasts ${BROADCASTS.join(',')}, last ${DAYS} days): ${list.length}`, by);
+  console.log(EMAILS.length ? `addresses requested: ${EMAILS.length}, profiles found: ${list.length}` : `stale addresses (broadcasts ${BROADCASTS.join(',')}, last ${DAYS} days): ${list.length}`, by);
   for (const p of list) console.log(`  ${mask(p.email)}  ${p.reason}`);
   if (!APPLY) { console.log('dry run: nothing changed (pass --apply to unsubscribe them)'); return; }
   if (!process.env.CUSTOMERIO_SITE_ID || !process.env.CUSTOMERIO_TRACK_API_KEY) throw new Error('CUSTOMERIO_SITE_ID / CUSTOMERIO_TRACK_API_KEY not set');
