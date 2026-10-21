@@ -234,21 +234,28 @@
 
     // Featured events: the digest's picks, else the best of the week's index.
     var index = Array.isArray(data['events-index']) ? data['events-index'] : [];
-    var picks = doc ? sectionRows(doc, 'What to Attend').map(cardParts).filter(function (e) { return e.title; }).map(function (e) {
+    // Featured events: only today onward (past days drop off; the strip and
+    // fallback picks roll forward from today).
+    var today = LTData.todayMT();
+    var ahead = weekDays(today);
+    var keyOf = function (e) { var d = days.filter(function (x) { return x.dow === e.dow && x.day === e.dayNum; })[0]; return d ? d.key : ''; };
+    var picks = doc ? sectionRows(doc, 'What to Attend').map(cardParts).filter(function (e) { return e.title && keyOf(e) >= today; }).map(function (e) {
       return { title: e.title, href: e.href, img: e.img, desc: e.summary, when: [e.badge.split('·')[0].trim(), e.src].filter(Boolean).join(' · '), kind: '' };
     }) : [];
     if (picks.length < 3) {
-      var keys = days.map(function (d) { return d.key; });
+      var keys = ahead.map(function (d) { return d.key; });
       var more = index.filter(function (e) { return keys.indexOf(e.date) >= 0 && e.type !== 'Community'; }).sort(function (a, b) { return rank(a) - rank(b); });
       var seen = {}; picks.forEach(function (p) { seen[p.title.toLowerCase()] = 1; });
       more.forEach(function (e) {
         if (picks.length >= 3 || seen[e.title.toLowerCase()]) return; seen[e.title.toLowerCase()] = 1;
-        var d = days[keys.indexOf(e.date)];
+        var d = ahead[keys.indexOf(e.date)];
         picks.push({ title: e.title, href: e.href, img: e.img, desc: [e.location, e.desc && e.desc.replace(/·\s*$/, '')].filter(Boolean).join(' · '), when: d.dow + ' ' + MON3[d.mon].toUpperCase() + ' ' + d.day + (e.town ? ' · ' + e.town.toUpperCase() : ''), kind: e.type });
       });
     }
     $('ev-feat').innerHTML = picks.length ? picks.slice(0, 3).map(eventCard).join('') : '<div class="lt-empty">No featured events this week yet.</div>';
-    renderWeekStrip(index, days);
+    // The seven-day strip rolls from today: the events feed drops past days,
+    // so a Monday-to-Sunday strip showed blank boxes for days already gone.
+    renderWeekStrip(index, ahead);
   }).catch(function (e) { err($('wk-feature'), e); });
 
   // Blog rail
