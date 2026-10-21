@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gov-Hub — Livable Telluride</title>
 <meta name="description" content="Every public meeting in the region — agendas, plain-English summaries, Zoom links, and how to comment — for the next month.">
-<link rel="stylesheet" href="lt.css?v=8">
+<link rel="stylesheet" href="lt.css?v=9">
 <link rel="icon" href="/logo/icon-192.png?v=2">
 <link rel="apple-touch-icon" href="/logo/apple-touch-icon.png?v=2">
 <link rel="manifest" href="/manifest.json">
@@ -95,7 +95,7 @@
   <img class="masthead-art" src="uploads/wilson-peak.png" alt="" aria-hidden="true">
   <div class="masthead-fade"></div>
   <div class="masthead-inner">
-    <div class="crumb">Act <span class="sep">&rsaquo;</span> Gov-Hub</div>
+    <div class="crumb">Government <span class="sep">&rsaquo;</span> This Week&rsquo;s Meetings</div>
     <h1>Gov-Hub</h1>
     <p class="sub">Every public meeting in the region for the next month &mdash; agendas, plain-English summaries, Zoom links, and how to make your voice heard.</p>
   </div>
@@ -140,10 +140,32 @@
   </div>
 </section>
 
+<!-- Vote Tracker moved under Government (2026-10 redesign, per Morgan). -->
+<section class="wrap" style="padding-top:0">
+  <style>
+    .vt-card { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; background: #fff; border: 1px solid var(--hairline-strong); border-left: 4px solid var(--gold); border-radius: 12px; padding: 20px 24px; margin-top: 18px; }
+    .vt-card .vt-ico { font-size: 30px; line-height: 1; }
+    .vt-card .vt-copy { flex: 1 1 320px; }
+    .vt-card h3 { font: 600 22px/1.25 var(--serif); color: var(--forest); margin: 0 0 4px; }
+    .vt-card p { font: 400 15px/1.55 var(--sans); color: var(--body2); margin: 0; }
+    .vt-card .vt-go { font: 700 14px/1 var(--sans); color: #fff; background: var(--forest); border-radius: 999px; padding: 12px 20px; text-decoration: none; white-space: nowrap; }
+    .vt-card .vt-go:hover { background: #1c3a33; color: #fff; }
+  </style>
+  <div class="vt-card">
+    <span aria-hidden="true" class="vt-ico">&#128499;&#65039;</span>
+    <div class="vt-copy">
+      <h3>How did they vote?</h3>
+      <p>The Vote Tracker records how each Telluride Town Council member voted on every motion, so you can see where your representatives stand.</p>
+    </div>
+    <a class="vt-go" href="/v2/vote-tracker.html">Open the Vote Tracker &rarr;</a>
+  </div>
+</section>
+
 <div class="gh-toggle-wrap">
   <div class="gh-toggle" role="tablist">
     <span class="gt active">Upcoming meetings</span>
     <a class="gt" href="gov-hub-past.html">Past meetings &amp; recaps</a>
+    <a class="gt" href="/v2/vote-tracker.html">Vote Tracker</a>
   </div>
 </div>
 
@@ -158,8 +180,8 @@
 </div>
 
 <div id="lt-footer"></div>
-<script src="site.js?v=13"></script>
-<script src="/js/lt-data.js?v=15"></script>
+<script src="site.js?v=20"></script>
+<script src="/js/lt-data.js?v=16"></script>
 <script>
 /* Featured Action — identical loader to index.html's (keep in sync). Loaded
    separately from the meeting list so a miss just hides the card. */
@@ -370,7 +392,8 @@
     // its day (Morgan 2026-09-29). The JSON is sorted this way too — this
     // keeps the page right even with an older cached file.
     function startMin(t) { var x = String(t || '').match(/(\d{1,2}):(\d{2})\s*([AP])M/i); return x ? ((+x[1] % 12) + (/p/i.test(x[3]) ? 12 : 0)) * 60 + +x[2] : 24 * 60; }
-    meetings = (data['week-meetings'] || []).filter(function (m) { return m.date >= LTData.todayMT(); })
+    // Off the list 3 hours after the scheduled start (LTData.meetingOver).
+    meetings = (data['week-meetings'] || []).filter(function (m) { return !LTData.meetingOver(m.date, m.time); })
       .sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : (startMin(a.time) - startMin(b.time)) || String(a.title).localeCompare(String(b.title)); });
     renderEntityFilter();
     render();

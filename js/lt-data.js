@@ -84,6 +84,37 @@
   }
   function todayMT() { return mtDateKey(new Date()); }
 
+  // ---- When a meeting drops off the site ---------------------------------
+  // Rule (per Morgan, 2026-10-20): a meeting comes down 3 hours after its
+  // scheduled start, Mountain Time. Earlier days are always over; later days
+  // never are. A meeting with no listed time stays up through its day.
+  // `date` may be 'YYYY-MM-DD' or a display date ('Oct 22, 2026');
+  // `time` is free text — the first clock time is the start ("8:30 AM - 11:30 AM").
+  var MEETING_GRACE_MIN = 180;
+  function startMinutes(time) {
+    var t = String(time || '');
+    if (/\bnoon\b/i.test(t)) return 12 * 60;
+    var x = t.match(/(\d{1,2})(?::(\d{2}))?\s*([ap])\.?\s*m\b/i);
+    return x ? ((+x[1] % 12) + (/p/i.test(x[3]) ? 12 : 0)) * 60 + (+x[2] || 0) : null;
+  }
+  function dateKeyOf(d) {
+    var s = String(d || '').trim();
+    if (/^\d{4}-\d{2}-\d{2}$/.test(s)) return s;
+    var p = new Date(s + ' 12:00');
+    return isNaN(p) ? '' : mtDateKey(p);
+  }
+  function meetingOver(date, time, now) {
+    var key = dateKeyOf(date); if (!key) return false;
+    now = now || new Date();
+    var today = mtDateKey(now);
+    if (key !== today) return key < today;
+    var start = startMinutes(time);
+    if (start == null) return false;
+    var hm = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Denver', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' })
+      .formatToParts(now).reduce(function (o, p) { o[p.type] = p.value; return o; }, {});
+    return (+hm.hour) * 60 + (+hm.minute) >= start + MEETING_GRACE_MIN;
+  }
+
   // Parse a 'YYYY-MM-DD' key to a Date safely for display math: anchored at
   // noon so no timezone can shift the calendar day.
   function parseDateKey(key) { return new Date(key + 'T12:00:00'); }
@@ -230,7 +261,7 @@
   function renderFeaturedAction(card, fa) {
     if (!card || !fa) return false;
     const m = fa.meeting;
-    if (!fa.headline || !m || !m.date || m.date < todayMT()) return false;   // stale or empty
+    if (!fa.headline || !m || !m.date || meetingOver(m.date, m.time)) return false;   // stale (3h after start) or empty
     const byId = (id) => card.querySelector('#' + id) || document.getElementById(id);
     byId('fa-headline').textContent = fa.headline;
     byId('fa-meta').textContent = [m.sourceLabel, m.humanDate, m.time, m.location]
@@ -276,6 +307,7 @@
 
   const api = { load: load, loadOne: loadOne, showError: showError,
     todayMT: todayMT, mtDateKey: mtDateKey, parseDateKey: parseDateKey,
+    meetingOver: meetingOver, startMinutes: startMinutes,
     fmtDate: fmtDate, esc: esc, safeUrl: safeUrl, emphasizeNames: emphasizeNames,
     icsDataUri: icsDataUri, icsFilename: icsFilename,
     renderFeaturedAction: renderFeaturedAction,

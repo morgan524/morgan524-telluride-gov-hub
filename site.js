@@ -23,25 +23,27 @@
   var ROOT = (location.pathname.match(/^(.*\/redesign\/)/) || [null, '/'])[1];
 
   // ---- Information architecture (approved 2026-07-20) ----
+  // Top bar (2026-10 redesign, per Morgan): plain links plus two dropdowns.
+  // Vote Tracker lives under Government. `es` = short Spanish label (the nav
+  // is kept out of Google Translate, whose literal labels ran long).
   var NAV = [
-    { key: 'learn', label: 'Learn', items: [
-      { href: 'local-news.html',   label: 'Local News',    built: true },
-      { href: 'deep-dives.html',   label: 'Deep Dives',    built: true },
-      { href: 'zoning-map/index.html',   label: 'Zoning Map',   built: true },   // re-shelled app
-      { href: 'projects-map/index.html', label: 'Projects Map', built: true }    // re-shelled app
+    { href: 'index.html',        label: 'Home',        es: 'Inicio',    built: true },
+    { href: 'local-news.html',   label: 'Local News',  es: 'Noticias',  built: true },
+    { key: 'resources', label: 'Resources', es: 'Recursos', items: [
+      { href: 'deep-dives.html',         label: 'Deep Dives',    es: 'Análisis',          built: true },
+      { href: 'zoning-map/index.html',   label: 'Zoning Map',    es: 'Mapa de zonas',     built: true },
+      { href: 'projects-map/index.html', label: 'Projects Map',  es: 'Mapa de proyectos', built: true },
+      { href: 'housing.html',            label: 'Housing',       es: 'Vivienda',          built: true },
+      { href: 'legal-notices.html',      label: 'Legal Notices', es: 'Avisos legales',    built: true }
     ]},
-    { key: 'connect', label: 'Connect', items: [
-      { href: 'local-orgs.html',   label: 'Local Orgs',    built: true },
-      { href: 'housing.html',      label: 'Housing',       built: true }
+    { key: 'government', label: 'Government', es: 'Gobierno', items: [
+      { href: 'gov-hub.html',            label: 'This Week’s Meetings',     es: 'Reuniones de la semana', built: true },
+      { href: 'gov-hub-past.html',       label: 'Past Meetings & Recaps',   es: 'Reuniones anteriores',   built: true },
+      { href: '/v2/vote-tracker.html',   label: 'Vote Tracker',             es: 'Votaciones',             built: true }
     ]},
-    { key: 'act', label: 'Act', items: [
-      { href: 'gov-hub.html',      label: 'Gov-Hub',       built: true },
-      // Events moved Connect -> Act 2026-08-05 (Morgan): showing up is an act
-      // of participation, and it belongs next to the meetings calendar.
-      { href: 'events.html',       label: 'Events',        built: true },
-      { href: '/v2/vote-tracker.html', label: 'Vote Tracker', built: true },   // existing app (kept)
-      { href: 'legal-notices.html',label: 'Legal Notices', built: true }
-    ]}
+    { href: 'events.html',       label: 'Events',      es: 'Eventos',   built: true },
+    { href: 'local-orgs.html',   label: 'Non Profits', es: 'ONG',       built: true },
+    { href: 'about.html',        label: 'About',       es: 'Nosotros',  built: true }
   ];
   // About left the top nav 2026-07-21 (lives on the homepage + footer now).
   // (Log In left the nav 2026-07-23 — Hub-Bub, the only login surface, has its own.)
@@ -53,7 +55,8 @@
 
   // Pages not in the nav inherit a parent's active state.
   var PROXY = {
-    'deep-dive.html': 'deep-dives.html', 'index.html': '',
+    'deep-dive.html': 'deep-dives.html', '': 'index.html',
+    'v2/vote-tracker.html': '/v2/vote-tracker.html',
     'zoning-map/': 'zoning-map/index.html', 'projects-map/': 'projects-map/index.html'
   };
 
@@ -71,78 +74,68 @@
     });
   }
 
+  // Spanish: the nav is kept out of Google Translate (its literal labels ran
+  // long: "Inmersiones en profundidad") and uses these short ones instead.
+  function navES() { return /googtrans=\/en\/es/.test(document.cookie); }
+  function L(o) { return navES() && o.es ? o.es : o.label; }
+
   // ---- header ----
+  // Logo strip (scrolls away) + menu bar (sticks to the top). On phones the
+  // links fold into the ☰ panel; Search, Donate and Subscribe stay in the bar.
+  var ICON_MAIL = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"></rect><path d="M3 6.5l9 6.5 9-6.5"></path></svg>';
+  var ICON_SEARCH = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>';
   function headerHTML() {
     var links = NAV.map(function (g) {
+      if (!g.items) {
+        return '<a class="lt-top' + (g.href === activeItem ? ' active' : '') + '" href="' + esc(resolveHref(g)) + '">' + esc(L(g)) + '</a>';
+      }
       var isActive = g.items.some(function (it) { return it.href === activeItem; });
       var drop = g.items.map(function (it) {
-        return '<a href="' + esc(resolveHref(it)) + '">' + esc(it.label) + '</a>';
+        return '<a href="' + esc(resolveHref(it)) + '"' + (it.href === activeItem ? ' aria-current="page"' : '') + '>' + esc(L(it)) + '</a>';
       }).join('');
       return '<div class="lt-nav-item' + (isActive ? ' active' : '') + '">' +
-        '<a href="#" aria-haspopup="true" aria-expanded="false" data-nav-group>' + esc(g.label) + ' &#9662;</a>' +
+        '<a href="#" aria-haspopup="true" aria-expanded="false" data-nav-group>' + esc(L(g)) + '</a>' +
         '<div class="lt-drop">' + drop + '</div></div>';
     }).join('');
-
-    var drawer = NAV.map(function (g) {
-      return '<div class="grp">' + esc(g.label) + '</div>' +
-        g.items.map(function (it) { return '<a href="' + esc(resolveHref(it)) + '">' + esc(it.label) + '</a>'; }).join('');
-    }).join('') +
-      '<div class="drawer-cta">' +
-      '<a class="lt-pill-subscribe" href="' + esc(ROOT + 'subscribe.html') + '">' +
-      '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"></rect><path d="M3 6.5l9 6.5 9-6.5"></path></svg>' +
-      'Subscribe</a>' +
-      '<button class="lt-pill-search" type="button" data-search-open aria-label="Search">' +
-      '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>' +
-      'Search</button>' +
-      '<button class="lt-pill-lang" type="button" data-lang-toggle>Espa&ntilde;ol</button></div>';
-
-    return '<nav class="lt-nav" aria-label="Main">' +
-      '<div class="lt-nav-row">' +
-      '<a class="lt-nav-logo" href="' + esc(ROOT + 'index.html') + '" aria-label="Livable Telluride home">' +
+    var lang = function (cls) {
+      return '<button class="lt-pill-lang ' + cls + '" type="button" data-lang-toggle title="Cambiar idioma / Switch language">Espa&ntilde;ol</button>';
+    };
+    return '<header class="lt-mast"><div class="lt-mast-row">' +
+      '<a class="lt-mast-logo" href="' + esc(ROOT + 'index.html') + '" aria-label="Livable Telluride home">' +
       '<img src="' + esc(ROOT + 'uploads/lt-logo.png') + '" alt="Livable Telluride"></a>' +
-      '<div class="lt-nav-links">' + links + '</div>' +
+      '<span class="lt-mast-tagline">Inform. Connect. Engage. Together.</span>' +
+      '</div></header>' +
+      '<nav class="lt-nav notranslate" translate="no" aria-label="Main"><div class="lt-nav-row">' +
+      '<button class="lt-burger" type="button" aria-label="Menu" aria-expanded="false" data-burger>&#9776;</button>' +
+      '<div class="lt-nav-links">' + links + lang('lt-lang-drawer') + '</div>' +
       '<div class="lt-nav-cta">' +
-      // Nav CTA slimmed 2026-07-23 (per Morgan): Donate left the nav for a
-      // homepage section (footer link remains); Log In left because the only
-      // login surface is Hub-Bub, which has its own. Search takes the
-      // prominent slot; Español stays.
-      // Subscribe added 2026-08-11 (per Morgan). Points at the ONE signup
-      // surface — /subscribe.html, which opens the signup form on
-      // that hash. Don't add a second signup form anywhere; see the unified
-      // signup workflow (everything routes through the Worker /update-profile).
-      '<a class="lt-pill-subscribe" href="' + esc(ROOT + 'subscribe.html') + '" title="Get the weekly email">' +
-      '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"></rect><path d="M3 6.5l9 6.5 9-6.5"></path></svg>' +
-      'Subscribe</a>' +
-      '<button class="lt-pill-search" type="button" data-search-open title="Search the site ( / )" aria-label="Search">' +
-      '<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>' +
-      'Search</button>' +
-      '<button class="lt-pill-lang" type="button" data-lang-toggle title="Cambiar idioma / Switch language">Espa&ntilde;ol</button>' +
-      '</div>' +
-      '<button class="lt-burger" type="button" aria-label="Menu" data-burger>&#9776;</button>' +
-      '</div><div class="lt-drawer">' + drawer + '</div></nav>' +
+      '<button class="lt-pill-search" type="button" data-search-open title="Search the site ( / )" aria-label="' + (navES() ? 'Buscar' : 'Search the site') + '">' + ICON_SEARCH + '</button>' +
+      '<a class="lt-pill-donate" href="' + esc(ROOT + 'donate.html') + '">' + (navES() ? 'Donar' : 'Donate') + '</a>' +
+      // Subscribe → the ONE signup surface (/subscribe.html). Don't add a second form.
+      '<a class="lt-pill-subscribe" href="' + esc(ROOT + 'subscribe.html') + '" title="Get the weekly email">' + ICON_MAIL + (navES() ? 'Suscríbete' : 'Subscribe') + '</a>' +
+      lang('lt-lang-bar') +
+      '</div></div></nav>' +
       '<div id="lvLangWidget"></div>';
   }
 
   // ---- footer ----
   function footerHTML() {
     return '<footer class="lt-footer"><div class="lt-footer-row">' +
-      '<div><div class="brand">Livable Telluride</div>' +
-      '<div class="tagline">Inform. Connect. Engage. Together.</div></div>' +
+      '<div><div class="brand notranslate" translate="no">Livable Telluride</div>' +
+      '<div class="tagline">Inform. Connect. Engage. Together. · A civic information hub for the region.</div></div>' +
       '<div class="lt-footer-links">' +
-      '<a href="' + esc(ROOT + 'start-here.html') + '">Start Here</a>' +
-      '<a href="' + esc(ROOT + 'local-news.html') + '">Learn</a>' +
-      // Connect points at Local Orgs since Events moved to Act (2026-08-05).
-      '<a href="' + esc(ROOT + 'local-orgs.html') + '">Connect</a>' +
-      '<a href="' + esc(ROOT + 'gov-hub.html') + '">Act</a>' +
       '<a href="' + esc(ROOT + 'about.html') + '">About</a>' +
+      // Past Issues: the newsletter list on the Deep Dives page (#blog-grid).
+      '<a href="' + esc(ROOT + 'deep-dives.html') + '#blog-grid">Past Issues</a>' +
       '<a href="' + esc(ROOT + 'donate.html') + '">Donate</a>' +
+      '<a href="mailto:info@livabletelluride.org">Contact: info@livabletelluride.org</a>' +
       '</div></div></footer>';
   }
 
   // ---- inject (loudly if placeholders are missing — standing rule) ----
   var h = document.getElementById('lt-header');
   if (h) h.outerHTML = headerHTML();
-  else console.error('[site.js] #lt-header placeholder missing on ' + page);
+  else if (!document.body.hasAttribute('data-no-header')) console.error('[site.js] #lt-header placeholder missing on ' + page);
   var f = document.getElementById('lt-footer');
   if (f) f.outerHTML = footerHTML();
   else if (!document.body.hasAttribute('data-no-footer')) console.error('[site.js] #lt-footer placeholder missing on ' + page);
@@ -176,7 +169,13 @@
   // ---- mobile drawer ----
   var burger = document.querySelector('[data-burger]');
   if (burger) burger.addEventListener('click', function () {
-    document.querySelector('.lt-nav').classList.toggle('drawer-open');
+    var open = document.querySelector('.lt-nav').classList.toggle('drawer-open');
+    burger.setAttribute('aria-expanded', String(open));
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    document.querySelectorAll('.lt-nav-item.open').forEach(function (x) { x.classList.remove('open'); });
+    var nav = document.querySelector('.lt-nav'); if (nav) nav.classList.remove('drawer-open');
   });
 
   /* ---- Español toggle ----------------------------------------------------
@@ -204,6 +203,8 @@
   };
   var gtCss = document.createElement('style');
   gtCss.textContent = '.goog-te-banner-frame{display:none!important}.goog-te-gadget{display:none!important}' +
+    // Google's current toolbar iframe ("Translated to: Spanish") — the old class above no longer matches it.
+    'iframe.skiptranslate,.VIpgJd-ZVi9od-ORHb-OEVmcd{display:none!important;visibility:hidden!important}' +
     'body{top:0!important}#lvLangWidget{position:absolute;left:-9999px;top:-9999px;opacity:0;height:0;overflow:hidden}' +
     'font[style*="background-color"]{background:transparent!important;box-shadow:none!important}' +
     '.goog-tooltip,.goog-tooltip:hover{display:none!important}.goog-text-highlight{background:none!important;box-shadow:none!important}';
@@ -222,6 +223,39 @@
     });
   });
   setLangLabels();
+  // The organization's name is never translated ("Telluride habitable"): wrap
+  // it in notranslate spans before Google runs, and put it back in the tab title.
+  function keepName(root) {
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null), hits = [], n;
+    while ((n = walker.nextNode())) {
+      if (n.nodeValue.indexOf('Livable Telluride') >= 0 && !(n.parentNode.closest && n.parentNode.closest('.notranslate,script,style'))) hits.push(n);
+    }
+    hits.forEach(function (t) {
+      // Google drops the spaces beside a protected span ("ElLivable Tellurideblog"),
+      // so the neighbouring spaces move inside the span, where it can't touch them.
+      var parts = t.nodeValue.split('Livable Telluride'), f = document.createDocumentFragment();
+      parts.forEach(function (part, i) {
+        if (i) {
+          var pre = /\s$/.test(parts[i - 1]) ? ' ' : '', post = /^\s/.test(part) ? ' ' : '';
+          var sp = document.createElement('span'); sp.className = 'notranslate'; sp.setAttribute('translate', 'no');
+          sp.textContent = pre + 'Livable Telluride' + post; f.appendChild(sp);
+          part = part.replace(/^\s/, '');
+        }
+        if (i < parts.length - 1) part = part.replace(/\s$/, '');
+        if (part) f.appendChild(document.createTextNode(part));
+      });
+      t.parentNode.replaceChild(f, t);
+    });
+  }
+  window.LTKeepName = keepName;
+  if (lvCurrentLang() === 'es') {
+    keepName(document.body);
+    var titleEl = document.querySelector('title');
+    if (titleEl) new MutationObserver(function () {
+      var t = document.title.replace(/Telluride habitable|Habitable Telluride/gi, 'Livable Telluride').replace(/— Hogar$/, '— Inicio');
+      if (t !== document.title) document.title = t;
+    }).observe(titleEl, { childList: true, characterData: true, subtree: true });
+  }
   if (lvCurrentLang() === 'es' && /^https?:$/.test(location.protocol)) {
     var s = document.createElement('script');
     s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
@@ -376,7 +410,8 @@
   overlay.addEventListener('click', function (e) { if (e.target === overlay) closeSearch(); });
   document.querySelectorAll('[data-search-open]').forEach(function (b) {
     b.addEventListener('click', function () {
-      document.querySelector('.lt-nav').classList.remove('drawer-open');
+      var nav = document.querySelector('.lt-nav');   // absent on pages with their own header
+      if (nav) nav.classList.remove('drawer-open');
       openSearch();
     });
   });

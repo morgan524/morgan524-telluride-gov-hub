@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Livable Telluride — a civic information hub for the whole tri-county</title>
 <meta name="description" content="Local news, deep dives, government meetings, housing data, community organizations, and events — gathered, explained, and always linked back to the original source.">
-<link rel="stylesheet" href="lt.css?v=8">
 <link rel="icon" href="/logo/icon-192.png?v=2">
 <link rel="apple-touch-icon" href="/logo/apple-touch-icon.png?v=2">
 <link rel="manifest" href="/manifest.json">
@@ -16,158 +15,248 @@
 <meta property="og:title" content="Livable Telluride — a civic information hub for the whole tri-county">
 <meta property="og:description" content="Local news, deep dives, government meetings, housing data, community organizations, and events — gathered, explained, and always linked back to the original source.">
 <meta property="og:image" content="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png">
+<link rel="stylesheet" href="lt.css?v=9">
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Libre+Baskerville:wght@400;700&amp;display=swap" rel="stylesheet"/>
 <style>
-  /* page-only layout (shared components live in lt.css) */
-  /* Hero — text left, photo bleeding in from the right (live-homepage layout),
-     with the three ways-in cards overlapping the bottom edge. */
-  .hero2 { position: relative; overflow: hidden; background: #fdf4ee; }
-  /* Lone Cone at sunset anchors the left (alpha fade baked into the webp);
-     the Telluride road photo keeps the right; copy sits between the fades. */
-  /* right-anchored so the baked right-edge fade survives the cover crop */
-  .hero2 .ph-left { position: absolute; left: 0; top: 0; width: 30%; height: 100%; object-fit: cover; object-position: right center; }
-  .hero2 .ph { position: absolute; right: 0; top: 0; width: 46%; height: 100%; object-fit: cover; object-position: center; }
-  /* Solid band widened + copy centered (was margin-left:30%), so the hero
-     text centers over the three cards below (Morgan, 2026-07-22). */
-  .hero2 .fade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(253,244,238,0) 16%, #fdf4ee 28%, #fdf4ee 70%, rgba(253,244,238,.5) 80%, rgba(253,244,238,0) 92%); }
-  .hero2-inner { position: relative; z-index: 2; max-width: var(--maxw); margin: 0 auto; padding: 76px var(--pad-x) 230px; }
-  .hero2-copy { margin: 0 auto; max-width: 660px; text-align: center; }
-  .hero2 .kicker { font: 700 31px/1.15 var(--sans); color: var(--gold); letter-spacing: .005em; }
-  .hero2 h1 { font: 600 64px/1.04 var(--serif); letter-spacing: -.02em; color: var(--forest); max-width: 660px; margin: 16px auto 0; }
-  .hero2 .sub { font: 400 17px/1.7 var(--sans); color: var(--body2); max-width: 490px; margin: 22px auto 0; }
-  /* Newcomer cards sit in the hero-overlap slot (replaced the old
-     Learn/Connect/Act pillars 2026-07-23); shallower cards → smaller pull. */
-  .overlap { position: relative; z-index: 3; max-width: var(--maxw); margin: -140px auto 0; padding: 0 var(--pad-x); }
-  .mini-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 22px; }
-  .mini-grid.four { grid-template-columns: repeat(4, 1fr); gap: 18px; }
-  @media (max-width: 900px) { .mini-grid.four { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 560px) { .mini-grid.four { grid-template-columns: 1fr; } }
-  .mini { padding: 20px 22px; background: var(--sage2); border: 1px solid var(--hairline); border-radius: 10px; }
-  /* White cards + thin forest stroke (Morgan 2026-07-23); hover = a ring,
-     not a width change, so the layout never shifts. */
-  a.mini-link { display: flex; flex-direction: column; color: inherit; text-decoration: none; background: #fff; border: 1px solid var(--forest); box-shadow: var(--shadow-media, 0 8px 24px rgba(26,46,41,.08)); transition: box-shadow .15s; }
-  a.mini-link:hover { box-shadow: 0 0 0 1px var(--forest), var(--shadow-media, 0 8px 24px rgba(26,46,41,.08)); }
-  a.mini-link p { flex: 1; margin-bottom: 10px; }
-  .mini .ico { font-size: 20px; color: var(--forest); }
-  .mini h4 { font: 600 19px/1.2 var(--serif); margin: 8px 0 4px; }
-  .mini p { font: 400 15px/1.55 var(--sans); color: var(--body2); margin: 0; }
-  .prior { max-width: var(--maxw); margin: 0 auto; padding: 56px var(--pad-x) 8px; }
-  .prior-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; border-bottom: 2px solid var(--forest); padding-bottom: 14px; flex-wrap: wrap; }
-  .prior-head h2 { margin-top: 8px; }
-  .prior-head .all { font: 600 15px/1 var(--sans); }
-  .prior-list .row { display: grid; grid-template-columns: 58px 64px 1fr auto; gap: 18px; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--hairline); }
-  .prior-list .p-logo { width: 64px; height: 64px; background: #fff; border: 1px solid var(--hairline); border-radius: 9px; display: flex; align-items: center; justify-content: center; padding: 4px; }
-  .prior-list .p-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
-  .prior-list .d-mon { font: 800 10.5px/1 var(--sans); text-transform: uppercase; letter-spacing: .08em; color: var(--rust); }
-  .prior-list .d-day { font: 600 36px/1 var(--serif); color: var(--forest); }
-  .prior-list h3 { font: 600 20px/1.25 var(--serif); margin: 6px 0 4px; }
-  .prior-list .hook { font: 400 15px/1.5 var(--sans); color: var(--body2); margin: 0 0 3px; }
-  .prior-list .chev { font-size: 22px; color: var(--rust); }
-  .prior-cols { display: grid; grid-template-columns: 1.12fr 1fr; gap: 46px; align-items: start; }
-  .prior-col-h { font: 700 13px/1.2 var(--sans); text-transform: uppercase; letter-spacing: .08em; color: var(--rust); padding: 16px 0 2px; }
-  .col-all { display: inline-block; margin-top: 14px; font: 600 15px/1 var(--sans); color: var(--forest); text-decoration: none; }
-  .col-all:hover { text-decoration: underline; }
-  .pe-list .row { display: grid; grid-template-columns: 58px 64px 1fr; gap: 16px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--hairline); }
-  .pe-list .p-img { width: 64px; height: 64px; border-radius: 9px; overflow: hidden; background: #eee; }
-  .pe-list .p-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .pe-list h3 { font: 600 17.5px/1.25 var(--serif); margin: 2px 0 3px; }
-  .pe-list .meta { font: 400 13.5px/1.45 var(--sans); }
-  /* About Livable Telluride — mission/story cards + photo, directors, what-livable
-     (layout mirrors the live homepage about section, per Morgan) */
-  .lt-about { max-width: var(--maxw); margin: 0 auto; padding: 56px var(--pad-x) 0; }
-  .lt-about .a-head { text-align: center; max-width: 720px; margin: 0 auto 30px; }
-  .lt-about .a-head h2 { font: 500 36px/1.15 var(--serif); margin-top: 8px; }
-  .lt-about .a-head p { font: 400 16px/1.65 var(--sans); color: var(--body2); margin: 12px 0 0; }
-  .mission-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
-  .mission-col { display: flex; flex-direction: column; gap: 24px; }
-  .info-card { padding: 28px 30px; }
-  .info-card h3 { font: 600 27px/1.2 var(--serif); margin-bottom: 12px; }
-  .info-card p { font: 400 15.5px/1.7 var(--sans); color: var(--body2); margin: 0 0 14px; }
-  .info-card p:last-child { margin-bottom: 0; }
-  .photo-col { border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-media); min-height: 460px;
-    background: url('/images/about-hero-telluride.jpg') no-repeat center center / cover; }
-  .directors-card { margin-top: 24px; padding: 28px 30px; }
-  .directors-card h3 { font: 600 27px/1.2 var(--serif); margin-bottom: 8px; }
-  .directors-card .intro { font: 400 15.5px/1.6 var(--sans); color: var(--body2); margin: 0 0 14px; }
-  .director-chips { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
-  .director-chips span { font: 600 15px/1 var(--sans); color: var(--ink); background: var(--paper); border: 1px solid var(--hairline); border-radius: 8px; padding: 13px 18px; }
-  .directors-card .reach { font: 400 15px/1.6 var(--sans); color: var(--muted); margin: 0; }
-  .livable-panel { margin-top: 24px; text-align: center; padding: 36px 40px; border-radius: 16px;
-    border: 1px solid var(--hairline); background: linear-gradient(135deg, rgba(36,72,63,.04), rgba(216,169,77,.05)); }
-  .livable-panel h3 { font: 600 30px/1.2 var(--serif); margin-bottom: 12px; }
-  .livable-panel .lead-p { font: 400 16.5px/1.65 var(--sans); color: var(--body2); max-width: 700px; margin: 0 auto 20px; }
-  .question-chips { display: flex; gap: 10px 12px; flex-wrap: wrap; justify-content: center; max-width: 760px; margin: 0 auto 20px; }
-  .question-chips .qc { font: 600 15px/1 var(--sans); color: var(--forest); background: #fff; border: 1px solid var(--hairline); border-radius: 999px; padding: 12px 18px; box-shadow: 0 2px 8px rgba(36,48,45,.05); }
-  .livable-panel .tail { font: 400 15px/1.65 var(--sans); color: var(--body2); max-width: 700px; margin: 0 auto; }
-  @media (max-width: 900px) {
-    .hero h1 { font-size: 38px; }
-    .mini-grid { grid-template-columns: 1fr; }
-    .prior-list .row { grid-template-columns: 48px 48px 1fr; }
-    .prior-list .p-logo { width: 48px; height: 48px; }
-    .prior-list .chev { display: none; }
-    .prior-cols { grid-template-columns: 1fr; gap: 10px; }
-    .pe-list .row { grid-template-columns: 48px 48px 1fr; }
-    .pe-list .p-img { width: 48px; height: 48px; }
-    .mission-row { grid-template-columns: 1fr; }
-    .photo-col { min-height: 320px; }
-    .livable-panel { padding: 26px 22px; }
-    .hero2 .ph { width: 100%; opacity: .18; }
-    .hero2 .ph-left { display: none; }
-    .hero2 .fade { display: none; }
-    .hero2-inner { padding: 48px var(--pad-x) 60px; }
-    .hero2-copy { margin-left: 0; }
-    .hero2 h1 { font-size: 40px; }
-    .overlap { margin-top: -20px; }
-  }
+:root{--forest:#143f33;--forest2:#205742;--green:#2d7051;--cream:#fbfaf7;--ink:#23352f;--muted:#66736c;--line:#dce2da;--gold:#c79b50;--pale:#f1f4ec}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font:15px/1.6 'DM Sans',Arial,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.wrap{max-width:1272px;margin:auto;padding:0 34px}.utility{background:var(--forest);color:#e7eee8;font-size:11px;font-weight:700;letter-spacing:.12em}.utility .wrap{height:33px;display:flex;align-items:center;justify-content:space-between}.utility a{opacity:.9}.masthead{background:#f9f6ef}.masthead .wrap{height:124px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:16px}.brandmark{width:64px;height:64px;background:var(--forest);border-radius:50%;display:grid;place-items:center;color:#fff;flex-shrink:0}.brand h1{font:700 31px/1.04 'Libre Baskerville',Georgia,serif;letter-spacing:-1.65px;margin:0;color:var(--forest)}.tagline{font-size:12px;color:#6c7d73;letter-spacing:.14em;text-transform:uppercase;font-weight:800;margin-top:8px}.masthead-right{text-align:right}.smallcap{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--green)}.masthead-right p{font-size:13px;margin:3px 0 0;color:var(--muted)}.nav{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}.nav .wrap{display:flex;align-items:center;gap:30px;min-height:51px;overflow-x:auto;white-space:nowrap}.nav a{font-size:12px;font-weight:800;color:#31483e;text-transform:uppercase;letter-spacing:.05em}.nav a:hover{color:var(--green)}.nav a.active{border-bottom:3px solid var(--gold);padding:17px 0 14px}.nav .give{margin-left:auto;color:var(--forest);border:1px solid var(--forest);border-radius:4px;padding:7px 12px}.banner{position:relative;background:linear-gradient(90deg,rgba(9,41,30,.88),rgba(9,41,30,.37) 52%,rgba(9,41,30,.05)),url('https://livabletelluride.org/images/lonecone-hero.webp') center 44%/cover;min-height:186px;color:#fff;display:flex;align-items:center}.banner .wrap{width:100%;padding-top:28px;padding-bottom:28px}.banner .eyebrow{color:#efd5a0;font-size:11px;letter-spacing:.19em;font-weight:800}.banner h2{font:700 29px/1.27 'Libre Baskerville',Georgia,serif;margin:9px 0 8px;max-width:680px}.banner p{margin:0;max-width:615px;color:#e8efe8;font-size:14px}.banner-note{position:absolute;bottom:9px;right:20px;font-size:10px;color:#fff9;letter-spacing:.08em}.edition{margin-top:28px;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between;gap:16px}.edition .bar{height:1px;background:var(--line);flex:1}.edition-label{color:var(--green);font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.edition-date{color:#6f776e;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em}.grid-lead{display:grid;grid-template-columns:1.38fr .93fr .7fr;gap:27px}.lead-card,.stack-card,.side-card{min-width:0}.lead-visual{height:264px;border-radius:3px;overflow:hidden;background:linear-gradient(140deg,rgba(22,52,39,.08),rgba(13,46,36,.3)),url('https://livabletelluride.org/img/telluride-125.jpeg') center center/cover;position:relative}.lead-visual .photo-label{position:absolute;bottom:12px;left:12px;background:#fffc;padding:4px 9px;font-size:10px;font-weight:700;color:var(--forest)}.category{font-size:10px;font-weight:800;color:var(--green);letter-spacing:.16em;text-transform:uppercase;margin:15px 0 8px}.headline{font:700 28px/1.24 'Libre Baskerville',Georgia,serif;letter-spacing:-.65px;margin:0 0 11px}.summary{color:#55645c;font-size:14px;line-height:1.65;margin:0 0 13px}.meta{font-size:11px;font-weight:800;color:#728179;letter-spacing:.07em;text-transform:uppercase}.story-link{display:inline-block;color:var(--green);font-size:12px;font-weight:800;margin-top:12px}.story-link:hover{text-decoration:underline}.stack-card{border-top:3px solid var(--forest)}.secondary{padding:4px 0 19px;border-bottom:1px solid var(--line)}.secondary:last-child{border-bottom:0}.secondary h3{font:700 19px/1.35 'Libre Baskerville',Georgia,serif;letter-spacing:-.35px;margin:0 0 9px}.secondary .category{margin-top:13px}.secondary .summary{font-size:13px;margin-bottom:7px}.sidebar{background:#eef2e9;border-top:3px solid var(--gold);padding:19px 20px 18px}.sidebar h3{font:700 20px/1.3 'Libre Baskerville',Georgia,serif;margin:7px 0 13px}.side-item{border-top:1px solid #d3dbce;padding:11px 0}.side-item .day{font-size:10px;font-weight:800;color:#729078;text-transform:uppercase;letter-spacing:.08em}.side-item b{font-size:12px;line-height:1.4;display:block;margin-top:3px}.side-bottom{background:var(--forest);color:white;display:block;text-align:center;padding:10px;font-size:11px;font-weight:800;letter-spacing:.05em;margin-top:5px}.rule{height:1px;background:var(--line);margin:30px 0 17px}.section-title{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:17px}.section-title h2{font:700 26px/1.25 'Libre Baskerville',Georgia,serif;letter-spacing:-.65px;margin:0;color:var(--forest)}.section-title .sub{font-size:13px;color:#6a786e;margin:5px 0 0}.actionlink{font-size:12px;font-weight:800;color:var(--green);white-space:nowrap}.meeting-head{display:grid;grid-template-columns:1.7fr .8fr;gap:26px}.week-text{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);padding:21px 25px}.week-text p{margin:0 0 10px;font-size:13px;color:#4d5c52}.week-text p:last-child{margin:0}.week-text strong{color:#223d31}.why{background:var(--forest);color:white;padding:22px 23px}.why .smallcap{color:#d9b36d}.why h3{font:700 19px/1.3 'Libre Baskerville',Georgia,serif;margin:10px 0}.why p{color:#d7e3d9;font-size:13px;line-height:1.7;margin:0}.tabs{display:flex;gap:8px;overflow-x:auto;padding:17px 0 13px}.tab{border:1px solid #d7e1d8;background:white;color:#577366;border-radius:4px;padding:8px 14px;white-space:nowrap;font-size:12px;font-weight:800}.tab[aria-selected=true]{background:var(--forest);border-color:var(--forest);color:#fff}.meetings{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.meeting{border:1px solid var(--line);background:#fff;padding:18px 19px 16px;display:flex;flex-direction:column;min-height:185px}.meeting .date{font-size:10px;letter-spacing:.11em;color:var(--green);font-weight:800}.meeting h3{font:700 16px/1.4 'Libre Baskerville',Georgia,serif;margin:9px 0}.meeting p{font-size:12px;color:#637269;line-height:1.55;margin:0 0 13px}.meeting .footerline{margin-top:auto;border-top:1px solid var(--line);padding-top:10px;display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:11px;font-weight:800;color:var(--green)}.meeting.hidden{display:none}.events{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.event{background:#fff;border:1px solid var(--line)}.event-art{height:143px;display:flex;justify-content:flex-start;align-items:flex-end;padding:13px;background:#58776a;position:relative;overflow:hidden}.event-art:after{content:'';position:absolute;width:220px;height:220px;border:2px solid #ffffff2b;border-radius:50%;top:-85px;right:-40px;box-shadow:0 0 0 35px #ffffff10,0 0 0 76px #ffffff08}.event-art.film{background:linear-gradient(135deg,#244a52,#648e91)}.event-art.music{background:linear-gradient(135deg,#473c44,#a6776f)}.event-art.outdoor{background:linear-gradient(135deg,#355e47,#a7ad71)}.event-art span{z-index:1;color:white;font:700 22px/1.1 'Libre Baskerville',Georgia,serif;max-width:220px}.event-info{padding:17px 19px}.event-info .category{margin:0 0 6px}.event-info h3{font:700 17px/1.35 'Libre Baskerville',Georgia,serif;margin:0 0 7px}.event-info p{font-size:12px;color:#6e7b72;margin:0}.event-info .story-link{margin-top:12px}.seven-days{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:18px}.day-cell{background:#fff;padding:12px;min-height:99px}.day-cell strong{display:block;color:var(--forest);font-size:11px;margin-bottom:7px}.day-cell span{font-size:11px;color:#657469;line-height:1.5;display:block}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.feature{padding:21px;background:var(--pale);border-top:3px solid var(--forest)}.feature .number{font-size:11px;color:#8d9e91;letter-spacing:.1em;font-weight:800}.feature h3{font:700 19px/1.36 'Libre Baskerville',Georgia,serif;margin:11px 0}.feature p{font-size:13px;color:#5e6c62;margin:0}.bottom{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;margin:32px 0 45px}.community{background:#ebece2;padding:24px 26px;border-left:4px solid var(--gold)}.community h3,.support h3{font:700 22px/1.3 'Libre Baskerville',Georgia,serif;margin:8px 0 10px}.community p,.support p{font-size:13px;line-height:1.7;color:#526155;margin:0}.support{background:#f6efe1;padding:24px 26px}.footer{background:var(--forest);color:#c9dace;padding:27px 0}.footer .wrap{display:flex;justify-content:space-between;gap:25px;align-items:center}.footer strong{color:#fff}.footer p{font-size:12px;margin:6px 0 0}.footer a{font-size:12px;font-weight:800}.disclaimer{font-size:11px;color:#8a968c;padding-bottom:20px}.mini{display:inline-block;background:#e7eadf;color:#47644b;padding:3px 7px;border-radius:3px;font-size:10px;letter-spacing:.06em;font-weight:800}button:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}@media(max-width:1030px){.grid-lead{grid-template-columns:1.2fr .95fr}.sidebar{grid-column:1/-1;display:grid;grid-template-columns:180px repeat(4,1fr);gap:10px}.sidebar h3{margin-top:0}.side-item{border-top:0;padding:0}.side-bottom{align-self:center}.meetings{grid-template-columns:repeat(2,1fr)}}@media(max-width:700px){.wrap{padding:0 18px}.masthead .wrap{height:100px}.brandmark{width:46px;height:46px}.brand h1{font-size:22px;letter-spacing:-1px}.tagline{font-size:9px}.masthead-right{display:none}.nav .wrap{gap:21px}.banner{min-height:190px}.banner h2{font-size:23px}.edition{margin-top:22px}.grid-lead,.meeting-head,.events,.features,.bottom{grid-template-columns:1fr}.lead-visual{height:190px}.headline{font-size:25px}.sidebar{grid-column:auto;display:block}.side-item{border-top:1px solid #d3dbce;padding:10px 0}.meetings{grid-template-columns:1fr}.meeting{min-height:unset}.seven-days{display:flex;overflow-x:auto}.day-cell{min-width:135px}.section-title{align-items:start}.section-title h2{font-size:23px}.actionlink{font-size:11px}.footer .wrap{display:block}}
+
+/* The Week Ahead: crafted newspaper-style editorial feature */
+.weekly-editorial{position:relative;background:#f8f5ed;border:1px solid #ded8c8;box-shadow:0 10px 30px rgba(26,48,33,.055);overflow:hidden}
+.weekly-editorial:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--gold)}
+.week-editorial-top{padding:24px 32px 21px 35px;display:flex;justify-content:space-between;align-items:center;gap:18px;background:linear-gradient(112deg,#f0f1e7,#f8f5ed);border-bottom:1px solid #dfddcf}
+.week-editorial-heading{display:flex;align-items:center;gap:17px;min-width:0}.week-edition-mark{width:60px;height:60px;flex:none;border:2px solid var(--forest);border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 20px Georgia,serif;letter-spacing:-2px;color:var(--forest)}.week-edition-dot{color:var(--gold)}
+.weekly-kicker{font-size:10px;letter-spacing:.19em;font-weight:800;color:#6c806d}.weekly-kicker span{padding:0 5px;color:var(--gold)}.week-editorial-heading h3{font:700 25px/1.3 'Libre Baskerville',Georgia,serif;color:var(--forest);margin:5px 0 0;letter-spacing:-.5px}
+.week-editorial-date{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;border-left:1px solid #d5d9cb;padding-left:24px;min-width:107px;color:var(--forest);text-align:center}.week-editorial-date span{font-size:9px;letter-spacing:.23em;font-weight:800}.week-editorial-date strong{font:700 25px Georgia,serif;line-height:1.35;white-space:nowrap}
+.weekly-lede-body{padding:26px 43px 15px 39px;display:grid;grid-template-columns:1fr 1fr;column-gap:36px;row-gap:19px}.editorial-opening,.editorial-day{min-width:0}.editorial-opening{display:flex;gap:4px;align-items:flex-start}.editorial-opening p,.editorial-day p{font:14px/1.85 'DM Sans',Arial,sans-serif;color:#3c4e42;margin:0}.editorial-opening strong,.editorial-day strong{font-weight:800;color:#173f33}.dropcap{color:var(--forest);font:700 60px/.92 'Libre Baskerville',Georgia,serif;float:left;margin:7px 5px 0 0}.editorial-day{border-top:1px solid #deddd0;padding-top:16px}.day-marker{display:inline-flex;align-items:baseline;gap:7px;color:#8c7347;font:800 10px 'DM Sans',sans-serif;letter-spacing:.15em;margin-bottom:9px}.day-marker span{font-size:16px;letter-spacing:0;font-family:Georgia,serif;font-weight:700}.spotlight-day{background:#e9eee3;border-top:3px solid var(--forest);padding:15px 17px 17px;margin:-3px -17px 0}.spotlight-day .day-marker{color:var(--forest)}
+.weekly-editorial-bottom{border-top:1px solid #dfddcf;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:14px 30px 14px 36px;background:#eeeee4}.weekly-note{display:flex;align-items:center;gap:10px;font-size:12px;color:#506251}.weekly-note strong{color:#244a39}.weekly-note-symbol{color:var(--gold);font-size:23px;line-height:1}.weekly-cta{flex:none;background:var(--forest);padding:10px 14px;font-size:11px;font-weight:800;color:white;letter-spacing:.025em;border-radius:2px}.weekly-cta:hover{background:var(--green)}
+@media(max-width:850px){.weekly-lede-body{grid-template-columns:1fr;gap:16px;padding:23px 28px}.week-editorial-top{padding:20px 25px}.week-editorial-bottom{padding:14px 24px}.spotlight-day{margin:0 -10px}}
+@media(max-width:570px){.week-editorial-top{gap:10px;padding:17px 16px 17px 20px}.week-edition-mark{width:42px;height:42px;font-size:16px}.week-editorial-heading{gap:10px}.week-editorial-heading h3{font-size:19px}.weekly-kicker{font-size:8px;letter-spacing:.09em}.week-editorial-date{min-width:73px;padding-left:9px}.week-editorial-date strong{font-size:18px}.week-editorial-date span{font-size:8px}.weekly-lede-body{padding:20px 21px}.editorial-opening p,.editorial-day p{font-size:13px;line-height:1.78}.dropcap{font-size:48px}.weekly-editorial-bottom{align-items:stretch;flex-direction:column;gap:9px;padding:13px 21px}.weekly-cta{text-align:center}.weekly-note{font-size:11px}}
+
+/* V3 scenic image supplied by user; preserve the photograph unfiltered */
+.scenic-strip{height:clamp(105px,12vw,178px);background-position:center center;background-repeat:no-repeat;background-size:cover;border-bottom:3px solid var(--gold)}
+.masthead .wrap{height:104px}.design-picker{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:18px 0 5px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.picker-label{font-size:10px;letter-spacing:.13em;font-weight:800;color:#658071;margin-right:10px}.design-choice{border:1px solid #b9c9bf;background:white;color:var(--forest);border-radius:40px;padding:9px 14px;font-size:12px;font-weight:800}.design-choice[aria-pressed=true]{background:var(--forest);border-color:var(--forest);color:white}.design-context{margin:5px 0 18px;font-size:12px;color:var(--muted)}[data-panel][hidden]{display:none!important}
+.briefing-panel{background:#f8faf7;border:1px solid #d5e0d6;overflow:hidden}.briefing-intro{background:#163b33;color:#fff;padding:30px 37px;display:flex;justify-content:space-between;gap:20px}.briefing-label{font-size:10px;letter-spacing:.2em;color:#d3b879;font-weight:800}.briefing-intro h3{font:700 clamp(25px,3vw,41px)/1.15 'Libre Baskerville',Georgia,serif;margin:15px 0}.briefing-intro h3 em{font-style:italic;font-weight:400;color:#e2c58e}.briefing-intro p{margin:0;color:#d2e0d6;font-size:13px;max-width:530px}.briefing-stat{display:flex;flex-direction:column;text-align:right;align-items:flex-end;justify-content:center;min-width:175px;border-left:1px solid #5d7768;padding-left:25px}.briefing-stat span{font:700 40px Georgia,serif;line-height:1}.briefing-stat b{font-size:10px;letter-spacing:.13em;margin-top:8px}.briefing-stat small{font-size:9px;letter-spacing:.15em;color:#c5d9c8;margin-top:12px}.briefing-feature{margin:23px 30px 4px;padding:22px 26px;background:#e4eadf;border-left:5px solid #b48c47}.briefing-feature .tag{font-size:10px;letter-spacing:.12em;color:#7b5e29;font-weight:800}.briefing-feature h4{font:700 22px/1.3 'Libre Baskerville',Georgia,serif;margin:9px 0;color:var(--forest)}.briefing-feature p{font-size:13px;margin:0 0 9px;max-width:790px}.briefing-feature a{font-size:12px;font-weight:800;color:var(--green)}.briefing-days{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:19px 23px 28px}.briefing-days article{padding:8px 16px;border-right:1px solid #d6e0d8}.briefing-days article:last-child{border:0}.briefing-days article>span{font-size:11px;color:#577463;letter-spacing:.08em;font-weight:800}.briefing-days article>span b{font:700 22px Georgia,serif;color:#204b39;padding-left:7px}.briefing-days h4{font:700 16px/1.35 'Libre Baskerville',Georgia,serif;color:var(--forest);margin:9px 0}.briefing-days p{font-size:12px;line-height:1.65;margin:0;color:#4d6256}.briefing-close{padding:14px 28px;background:#eaf0e8;display:flex;align-items:center;justify-content:space-between;gap:12px}.briefing-close span{font-size:9px;font-weight:800;color:#5a7665;letter-spacing:.13em}.briefing-close a{font-size:12px;font-weight:800;color:var(--forest)}
+.dispatch-panel{background:#f8f2e7;border:1px solid #ded2bc;overflow:hidden}.dispatch-head{background:#f0e6d4;padding:29px 37px;display:flex;justify-content:space-between;gap:25px;align-items:center;border-bottom:1px solid #dacbb1}.dispatch-eyebrow{font-weight:800;font-size:10px;letter-spacing:.22em;color:#875c2d}.dispatch-eyebrow span{margin-left:8px;color:#9b8a74}.dispatch-head h3{font:700 clamp(27px,3vw,39px)/1.15 'Libre Baskerville',Georgia,serif;letter-spacing:-.9px;color:#254838;margin:12px 0}.dispatch-head h3 i{color:#946c34}.dispatch-head p{margin:0;color:#697164;font-size:13px}.dispatch-calendar{border:2px solid #ad956c;min-width:150px;text-align:center;padding:15px 14px;background:#fbf8ef;box-shadow:5px 5px 0 #d2bea0}.dispatch-calendar b,.dispatch-calendar small{display:block;font-size:11px;letter-spacing:.2em;color:#746548}.dispatch-calendar strong{font:700 34px Georgia,serif;color:#254838;display:block}.dispatch-calendar strong span{color:#a78a58}.dispatch-grid{display:grid;grid-template-columns:260px 1fr;gap:0}.dispatch-rail{padding:24px 23px;background:#ece5d5;border-right:1px solid #d8c9b1}.rail-note{font-size:10px;font-weight:800;letter-spacing:.14em;color:#835e31;margin-bottom:17px}.dispatch-rail a{display:flex;gap:13px;border-top:1px solid #d2c1a8;padding:13px 0;color:#254838}.dispatch-rail a b{font:700 23px Georgia,serif;color:#a0804d}.dispatch-rail a span{font:700 12px/1.5 'DM Sans',sans-serif}.dispatch-rail a small{display:block;font:800 9px 'DM Sans',sans-serif;color:#8a7356;letter-spacing:.06em;margin-top:4px}.rail-summary{font:italic 14px/1.7 Georgia,serif;color:#53675b;margin:28px 0 0}.dispatch-timeline{padding:23px 31px 18px}.dispatch-timeline article{display:grid;grid-template-columns:92px 1fr;gap:23px;position:relative;padding:12px 0 19px;border-bottom:1px solid #dbd2be}.dispatch-timeline article:last-child{border:0}.dispatch-date{font-size:10px;font-weight:800;letter-spacing:.09em;color:#927144}.dispatch-date strong{display:block;font:700 29px Georgia,serif;color:#254838}.dispatch-timeline h4{font:700 17px/1.35 'Libre Baskerville',Georgia,serif;color:#234333;margin:0 0 7px}.dispatch-timeline p{font-size:12px;color:#526258;line-height:1.7;margin:0}.dispatch-primary{background:#e5eadf;padding:15px!important;margin:8px -12px;border-left:4px solid var(--forest)}.critical{font-size:9px;letter-spacing:.15em;font-weight:800;color:#9d682a;display:block;margin-bottom:5px}.dispatch-primary a{font-size:12px;font-weight:800;color:var(--green);display:inline-block;margin-top:8px}.dispatch-foot{background:#234a39;color:#fff;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:15px 27px}.dispatch-foot span{font-size:10px;letter-spacing:.14em;color:#d7e4d6}.dispatch-foot a{font-size:12px;font-weight:800}
+@media(max-width:800px){.briefing-days{grid-template-columns:repeat(2,1fr)}.briefing-days article:nth-child(2){border-right:0}.briefing-days article:nth-child(-n+2){border-bottom:1px solid #d6e0d8;padding-bottom:20px}.briefing-days article:nth-child(n+3){padding-top:20px}.dispatch-grid{grid-template-columns:1fr}.dispatch-rail{border-right:0;border-bottom:1px solid #d8c9b1}.dispatch-rail a{display:inline-flex;vertical-align:top;width:32%;padding-right:10px}.rail-summary{margin:12px 0 0}}@media(max-width:560px){.scenic-strip{height:100px}.briefing-intro,.dispatch-head{padding:23px 21px;display:block}.briefing-stat{border-left:0;border-top:1px solid #5d7768;text-align:left;align-items:flex-start;padding:13px 0 0;margin-top:17px}.briefing-stat span{font-size:29px}.briefing-feature{margin:17px 16px 0;padding:17px}.briefing-days{grid-template-columns:1fr;padding:15px 17px}.briefing-days article{border:0!important;border-bottom:1px solid #d6e0d8!important;padding:15px 5px!important}.briefing-days article:last-child{border:0!important}.briefing-close,.dispatch-foot{flex-direction:column;align-items:start}.dispatch-calendar{display:none}.dispatch-rail a{width:100%;display:flex}.dispatch-timeline{padding:18px}.dispatch-timeline article{grid-template-columns:58px 1fr;gap:10px}.dispatch-date{font-size:8px}.dispatch-date strong{font-size:24px}.dispatch-primary{margin:8px -6px}}
+
+/* Newsletter archive editorial sidebar */
+.sidebar{align-self:start; min-height:0; padding:24px 22px 22px; border-top:5px solid var(--gold); background:linear-gradient(145deg,#eef2e9,#f7f6ee);}
+.newsletter-rail-kicker{display:flex;align-items:center;gap:10px;color:#326b4d;font-weight:800;letter-spacing:.17em;font-size:10px;}
+.newsletter-mark{display:inline-grid;place-items:center;border:1.5px solid var(--forest);border-radius:50%;width:38px;height:38px;font:700 15px Georgia,serif;letter-spacing:-.08em;color:var(--forest)}
+.sidebar h3{font:700 clamp(22px,2vw,30px)/1.2 'Libre Baskerville',Georgia,serif;letter-spacing:-.05em;color:var(--forest);margin:14px 0 10px;}
+.newsletter-rail-desc{font-size:13px;line-height:1.65;color:#596d5f;margin:0 0 20px;}
+.newsletter-rail-list{border-top:1px solid #cdd9cc;}
+.newsletter-edition{display:block;text-decoration:none;color:#183a30;padding:18px 0 19px;border-bottom:1px solid #cdd9cc;transition:padding-left .16s ease;}
+.newsletter-edition:hover{padding-left:5px;}
+.edition-label{display:block;font-size:10px;font-weight:800;letter-spacing:.17em;color:#728e74;margin-bottom:8px;}
+.newsletter-edition strong{font:700 18px/1.36 'Libre Baskerville',Georgia,serif;display:block;letter-spacing:-.025em;}
+.edition-arrow{font-size:11px;display:inline-block;margin-top:12px;font-weight:800;color:#26724a;}
+.newsletter-edition-main strong{font-size:21px;}
+.newsletter-rail-note{font-size:11px;line-height:1.55;color:#66776b;margin:20px 0 16px;}
+.sidebar .side-bottom{font-size:11px;padding:14px 10px;border-radius:2px;}
+
+/* V5: selected photographic masthead, with live accessible overlay text */
+.scenic-hero{height:auto;min-height:270px;position:relative;display:flex;align-items:center;isolation:isolate;border-bottom:4px solid var(--gold);color:white;background-position:center 54%}
+.scenic-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(9,36,29,.82) 0%,rgba(9,36,29,.57) 47%,rgba(9,36,29,.10) 100%)}
+.scenic-hero-content{width:100%;padding-top:30px;padding-bottom:33px;position:relative;z-index:1}
+.scenic-eyebrow{font-size:13px;line-height:1.35;letter-spacing:.19em;color:#f6dfb2;font-weight:800}
+.scenic-hero h2{font:700 clamp(30px,3.55vw,53px)/1.17 'Libre Baskerville',Georgia,serif;letter-spacing:-.03em;margin:13px 0 13px;max-width:900px;text-shadow:0 2px 14px #09221e44}
+.scenic-hero p{font-size:clamp(14px,1.35vw,18px);font-weight:500;line-height:1.5;max-width:900px;margin:0;color:#f4f6f1;text-shadow:0 1px 7px #09221e80}
+@media(max-width:700px){.scenic-hero{min-height:290px;background-position:50% center}.scenic-hero-content{padding-top:30px;padding-bottom:30px}.scenic-eyebrow{font-size:10px;letter-spacing:.13em}.scenic-hero h2{font-size:clamp(28px,7.2vw,40px)}.scenic-hero p{font-size:14px}}
+
+/* V6 — distinguish the weekly meeting briefing from the newsletter/blog archive */
+.sidebar{padding:23px 18px 18px;background:#f6f3eb;border-top:5px solid var(--gold)}
+.sidebar h3{font-size:clamp(21px,1.7vw,26px);margin:13px 0 9px;line-height:1.25}
+.newsletter-rail-desc{margin-bottom:16px;font-size:12px;line-height:1.6}
+.newsletter-rail-desc strong{color:var(--forest)}
+.blog-rail-list{border-top:1px solid #d9ddcf}
+.blog-rail-item{display:grid;grid-template-columns:93px minmax(0,1fr);gap:11px;padding:13px 0;border-bottom:1px solid #d9ddcf;text-decoration:none;align-items:start}
+.blog-rail-item img{width:93px;height:78px;object-fit:cover;border-radius:5px;display:block;background:#dae1d7}
+.blog-rail-text{display:flex;flex-direction:column;min-width:0}
+.blog-rail-date{font-size:9px;line-height:1.35;letter-spacing:.055em;font-weight:800;color:#618067;margin:1px 0 5px}
+.blog-rail-text strong{font:700 12.2px/1.32 'Libre Baskerville',Georgia,serif;color:#1c4034;overflow-wrap:anywhere}
+.blog-rail-link{color:#2d7051;font-size:10px;font-weight:700;margin-top:5px}
+.blog-rail-item:hover .blog-rail-text strong{text-decoration:underline;text-underline-offset:3px}
+.sidebar .side-bottom{margin-top:16px;display:block;text-align:center}
+.blog-preview-note{font-size:10px;color:#7a8178;line-height:1.5;margin:12px 1px 0}
+@media(max-width:900px){.blog-rail-list{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}}
+@media(max-width:550px){.blog-rail-list{grid-template-columns:1fr}.blog-rail-item{grid-template-columns:108px minmax(0,1fr)}.blog-rail-item img{width:108px;height:80px}}
+.brandmark .lt-brand-logo{width:62px;height:52px;object-fit:contain;display:block}.brandmark{display:flex;align-items:center;justify-content:center;min-width:64px}@media(max-width:620px){.brandmark .lt-brand-logo{width:49px;height:43px}.brandmark{min-width:50px}}
+
+/* Past meeting summaries */
+.past-section{padding:42px 0 62px}.past-section .section-title{margin-bottom:24px}
+.recap-intro{background:#173d33;color:#f9f7ed;padding:34px 40px;display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:end;border-top:5px solid #c9a053}
+.recap-eyebrow{font-size:.73rem;font-weight:800;letter-spacing:.18em;color:#d8b875}
+.recap-intro h3{font-family:Georgia,serif;font-weight:600;font-size:clamp(2rem,3.1vw,3.3rem);line-height:1.08;margin:14px 0 0}
+.recap-intro h3 em{font-weight:400;color:#e5c58b}
+.recap-intro p{font-size:1.07rem;line-height:1.7;color:#e0e8dd;margin:0}
+.recap-categories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:20px}
+.recap-card{display:flex;flex-direction:column;background:#f6f5ee;border:1px solid #d5dbd0;padding:26px 25px 24px;color:#213b31;text-decoration:none;min-height:245px;transition:background .2s,border-color .2s}
+.recap-card:hover,.recap-card:focus-visible{background:#edf2e9;border-color:#85a994}
+.recap-card-top{display:flex;gap:14px;align-items:center;font-family:Georgia,serif;font-size:1.5rem;color:#b38a43;padding-bottom:14px;border-bottom:1px solid #d7ddd2}
+.recap-card-top span{font-family:inherit;font-size:.7rem;letter-spacing:.13em;font-weight:800;color:#517b67}
+.recap-card h3{font-family:Georgia,serif;font-size:1.52rem;line-height:1.18;margin:18px 0 10px;color:#183b30}
+.recap-card p{font-size:.94rem;line-height:1.6;margin:0 0 22px;color:#516257}
+.recap-card-action{font-weight:800;font-size:.89rem;color:#27664e;margin-top:auto}
+.recap-note{display:flex;align-items:center;gap:9px;margin-top:19px;font-size:.87rem;line-height:1.5;color:#69796d;flex-wrap:wrap}
+.recap-note-dot{width:8px;height:8px;border-radius:50%;background:#b58b45;flex-shrink:0}.recap-note a{color:#28634b;font-weight:800}
+@media(max-width:800px){.recap-intro{grid-template-columns:1fr;gap:20px;padding:28px}.recap-categories{grid-template-columns:1fr}.recap-card{min-height:auto}}
+
+
+/* Live-data additions (home-v16) */
+.briefing-days{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.briefing-days .also{display:block;margin-top:7px;font-size:11.5px;color:#6b7d72}
+.briefing-intro p a,.briefing-days a{color:inherit}
+.event-art.photo{background-size:cover;background-position:center}
+.event-art.photo:after{display:none}
+.event-art.photo::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,36,29,0) 35%,rgba(9,36,29,.72))}
+.event-art.photo span{font-size:17px}
+a.day-cell{text-decoration:none}a.day-cell:hover span{color:var(--forest);text-decoration:underline}
+.day-cell em{display:block;font-style:normal;font-size:10px;color:#8a978d;margin-top:4px}
+.recap-latest{display:block;border-top:1px dashed #d1d8cc;padding-top:12px;margin:-8px 0 18px;font-size:.84rem;line-height:1.5;color:#3c5348}
+.recap-latest b{display:block;font-size:.68rem;letter-spacing:.12em;color:#8a7440;margin-bottom:3px}
+#week{padding-top:38px}
+.briefing-intro p{margin:0;font-size:15px;line-height:1.55}
+.lt-empty{font-size:13px;color:var(--muted);padding:14px 0}
+.lt-err{padding:16px 18px;border:1px solid #e3c9c2;background:#fdf6f4;color:#7a3b2e;font-size:13px;border-radius:6px}
+/* The Week Ahead + blog rail side by side, rail pinned to the top */
+.week-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;align-items:start}
+.week-main{min-width:0}
+.week-rail{position:sticky;top:72px}   /* clears the sticky nav bar */
+.week-rail .sidebar{grid-column:auto;display:block}
+/* Beyond the headlines: hero image across the top of each deep-dive card */
+.feature-art{display:block;margin:-21px -21px 17px;height:170px;overflow:hidden;background:var(--pale)}
+.feature-art img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.feature:hover .feature-art img{transform:scale(1.03)}
+/* Seven-day strip: photo of each day's top event */
+.day-cell .day-art{display:block;margin:-12px -12px 10px;height:92px;overflow:hidden;background:var(--pale)}
+.day-cell .day-art img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.day-cell:hover .day-art img{transform:scale(1.04)}
+.seven-days{gap:12px;background:none;border:0}
+.day-cell{border:1px solid var(--line)}
+/* Week Ahead: one card per meeting, three across, a short last row stretches */
+.briefing-days{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+.briefing-days article{border-right:1px solid #d6e0d8;border-bottom:1px solid #d6e0d8;padding:14px 16px 16px}
+.briefing-days article.wk-empty{background:none}
+@media(max-width:900px){.briefing-days{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.briefing-days article:nth-child(n){border-right:1px solid #d6e0d8;border-bottom:1px solid #d6e0d8;padding-bottom:16px}
+.briefing-days article>span i{font-style:normal;font-weight:700;font-size:11px;color:#7b8f82;padding-left:8px;letter-spacing:.04em}
+.briefing-days .wk-src{display:block;font-style:normal;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-top:6px}
+.briefing-days h4 a{color:inherit;text-decoration:none}
+.briefing-days h4 a:hover{text-decoration:underline}
+@media(max-width:620px){.briefing-days{grid-template-columns:1fr}.briefing-days article.wk-empty{display:none}}
+/* Meeting summaries: recap title plus a short summary */
+.recap-latest .recap-title{display:block;font-weight:700;color:#213b31;margin-bottom:6px}
+.recap-latest .recap-summary{display:block;font-size:.86rem;line-height:1.6;color:#4d6256}
+.recap-card{min-height:0}
+/* About Livable Telluride: same content as the live homepage's about section */
+.lt-about{padding:42px 0 62px}
+.lt-about .a-head{text-align:center;max-width:720px;margin:0 auto 30px}
+.lt-about .eyebrow{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.lt-about .a-head h2{font:700 32px/1.2 'Libre Baskerville',Georgia,serif;color:var(--forest);margin:8px 0 0}
+.lt-about .a-head p{font-size:16px;line-height:1.65;color:var(--muted);margin:12px 0 0}
+.lt-about .card{background:#fff;border:1px solid var(--line);border-top:3px solid var(--forest)}
+.lt-about .mission-row{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.lt-about .mission-col{display:flex;flex-direction:column;gap:24px}
+.lt-about .info-card{padding:26px 28px}
+.lt-about h3{font:700 22px/1.25 'Libre Baskerville',Georgia,serif;color:var(--forest);margin:0 0 12px}
+.lt-about .info-card p{font-size:15px;line-height:1.7;color:#4d6256;margin:0 0 14px}
+.lt-about .info-card p:last-child{margin-bottom:0}
+.lt-about .photo-col{min-height:460px;background:url('images/about-hero-telluride.jpg') no-repeat center/cover;border:1px solid var(--line)}
+.lt-about .directors-card{margin-top:20px;padding:16px 20px;border-top-width:2px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px}
+.lt-about .directors-card h3{font-size:16px;margin:0}
+.lt-about .directors-card .intro{font-size:12.5px;color:var(--muted);margin:0;flex:1 1 300px}
+.lt-about .director-chips{display:flex;gap:6px;flex-wrap:wrap;flex-basis:100%;margin-top:6px}
+.lt-about .director-chips a{font-weight:700;font-size:12px;color:var(--forest);background:var(--pale);border:1px solid var(--line);border-radius:999px;padding:6px 12px;text-decoration:none;transition:background .15s,border-color .15s}
+.lt-about .director-chips a:hover,.lt-about .director-chips a:focus-visible{background:#fff;border-color:var(--green)}
+@media(max-width:850px){.lt-about .mission-row{grid-template-columns:1fr}.lt-about .photo-col{min-height:300px}.lt-about .a-head h2{font-size:25px}}
+.nav .pill-search{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;border:0;background:var(--forest);color:#fff;cursor:pointer}
+.nav .pill-search:hover,.nav .pill-search:focus-visible{background:#1c3a33}
+.search-section{padding:6px 0 34px}
+/* Hero banner: Wilson Peak at sunset (images/Wilson Banner.jpg, web-sized) */
+.scenic-hero{background-image:url('images/wilson-banner-4800.jpg');background-position:center 62%}
+.scenic-hero::before{background:linear-gradient(90deg,rgba(9,36,29,.72) 0%,rgba(9,36,29,.38) 42%,rgba(9,36,29,0) 75%)}
+@media(max-width:700px){.scenic-hero{background-image:url('images/wilson-banner-mobile.jpg');background-position:center 60%}}
+/* Week Ahead: newsletter lede in the tan box, comment links on cards */
+.wk-comment{display:inline-block;margin-top:10px;font-size:12px;font-weight:800;color:var(--green);text-decoration:none;border-bottom:1px solid currentColor}
+.wk-comment:hover{color:var(--forest)}
+.day-cell .day-town{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:3px}
+/* Green bar: the "read it online" button sits between the text and the dates */
+.briefing-intro .wk-read{flex:0 0 auto;align-self:center;display:inline-flex;align-items:center;font:800 13px/1 'DM Sans',Arial,sans-serif;color:#163b33;background:#e2c58e;border-radius:999px;padding:11px 18px;text-decoration:none;white-space:nowrap;margin-left:auto}
+.briefing-intro .wk-read:hover,.briefing-intro .wk-read:focus-visible{background:#f0d9a9}
+.briefing-intro .wk-read[hidden]{display:none}
+@media(max-width:760px){.briefing-intro .wk-read{margin:14px 0 0}}
+/* Meeting actions: agenda button + comment link on every meeting */
+.wk-acts{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-top:12px}
+.wk-acts .wk-agenda{display:inline-block;font-size:12px;font-weight:800;color:#fff;background:var(--forest);border:1px solid var(--forest);border-radius:999px;padding:6px 13px;text-decoration:none}
+.wk-acts .wk-agenda:hover{background:#1c3a33;color:#fff}
+.wk-acts .wk-agenda.ghost{background:#fff;color:var(--forest)}
+.wk-acts .wk-agenda.off{background:transparent;color:#9aa69f;border-color:#d6ddd6;cursor:default}
+.wk-acts .wk-comment{margin-top:0}
+.briefing-feature .wk-dive{display:inline-block;margin-top:12px;font-size:13px}
+/* Footer links */
+.footer .footer-links{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center}
+.footer .footer-links a{color:inherit}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* Green intro bar: about a third shorter (tighter padding, one-line text, smaller date) */
+@media(min-width:761px){
+  .briefing-intro{padding:16px 30px;align-items:center}
+  .briefing-intro p{max-width:none}
+  .briefing-stat{min-width:150px;padding-left:22px}
+  .briefing-stat span{font-size:32px}
+  .briefing-stat b{margin-top:5px}
+}
+@media(max-width:900px){.week-layout{grid-template-columns:1fr}.week-rail{position:static}}
+/* lt.css is loaded for the shared header/footer; undo its site-wide element
+   rules where they'd change the homepage's own look (verified element by element). */
+:where(#top,.scenic-hero) :is(h1,h2,h3,h4){color:inherit}   /* same weight as lt.css's bare h1-h4, so page rules still win */
+:where(#top) img{max-width:none}
+.lt-about .card{border-radius:0;box-shadow:none}
+.briefing-feature .tag{display:inline;font-family:inherit;line-height:16px;background:none;padding:0;border-radius:0;text-transform:none}
+.lt-about .eyebrow{font-family:inherit;line-height:17.6px}
+html{scroll-padding-top:64px}
 </style>
 </head>
 <body>
 <div id="lt-header"></div>
+<section aria-label="Livable Telluride — your mountain community, your voice" class="scenic-strip scenic-hero"><div class="wrap scenic-hero-content"><h2>Know what’s happening.<br/>Understand what matters.</h2></div></section>
+<main id="top">
+<div class="wrap">
+<section id="week"><div class="section-title"><div><h2>The Week Ahead…</h2></div></div>
+<div class="week-layout"><div class="week-main"><div class="briefing-panel newsbrief">
+<div class="briefing-intro"><div><span id="wk-label" hidden></span><p id="wk-lede">Your guide to important news, proposed changes and decisions affecting regional communities.</p></div><a class="wk-read" hidden href="#" id="wk-read">Read the full Week Ahead →</a><div class="briefing-stat"><span id="wk-days">&nbsp;</span><b id="wk-month">&nbsp;</b></div></div>
+<div class="briefing-feature" id="wk-feature"><div class="lt-empty">Loading this week’s meetings…</div></div>
+<div class="briefing-days" id="wk-daygrid"></div>
+<div class="briefing-close"><span></span><a href="gov-hub.html">All of this week’s meetings ↗</a></div>
+</div></div><aside class="week-rail"><aside class="sidebar" id="lt-blog"><div class="newsletter-rail-kicker"><span class="newsletter-mark">LT</span><span>FROM THE NEWSLETTER</span></div><h3>The Livable Telluride blog</h3><div class="blog-rail-list" id="blog-list"><div class="lt-empty">Loading posts…</div></div><a class="side-bottom" href="deep-dives.html">VIEW THE BLOG ARCHIVE →</a></aside></aside></div></section>
+<section class="search-section" id="explore">
 
-<section class="hero2">
-  <img class="ph-left" src="/images/lonecone-hero.webp" alt="Lone Cone at sunset above golden aspen forests">
-  <img class="ph" src="/img/telluride-125.jpeg" alt="The road into Telluride under Mt Wilson, aspens turning">
-  <div class="fade"></div>
-  <div class="hero2-inner">
-    <div class="hero2-copy">
-      <div class="kicker">Inform. Connect. Engage. Together.</div>
-      <h1>Your Community.<br>All in One Place.</h1>
-      <p class="sub">Livable Telluride brings together meetings, events, news, resources, and local voices to keep our mountain communities informed, connected, and empowered.</p>
-    </div>
-  </div>
-</section>
-
-<!-- The four task-based newcomer cards (New here? / What's happening? /
-     Want to speak up? / Need housing?) were removed from the home page
-     (Morgan, 2026-09-29) so the "Not sure where to look?" search box sits in
-     the hero-overlap slot. Every page they linked to is in the nav. -->
-<section class="overlap" id="explore">
-
-  <!-- Full-width "search anything" box in the hero-overlap slot (Morgan,
-       2026-07-23; moved up 2026-09-29). A REAL inline input (not the header pop-up) with a live
+  <!-- Full-width "search anything" box, copied from the live homepage (index.html #explore). A REAL inline input (not the header pop-up) with a live
        typeahead dropdown, reusing site.js's window.LTSearch index + ranking. -->
   <style>
     .home-search { position: relative; margin-top: 0; display: flex; align-items: center; gap: 22px;
       background: #fff; border: 1px solid var(--forest); border-radius: 12px; padding: 20px 26px;
-      box-shadow: var(--shadow-media, 0 8px 24px rgba(26,46,41,.08)); }
+      box-shadow: 0 8px 24px rgba(26,46,41,.08); }
     .home-search .hs-arrow { flex: 0 0 auto; color: var(--forest); }
     .home-search .hs-copy { flex: 0 0 auto; max-width: 30ch; }
-    .home-search .hs-copy b { font: 600 19px/1.25 var(--serif); color: var(--forest); display: block; margin-bottom: 3px; }
-    .home-search .hs-copy span { font: 400 14.5px/1.5 var(--sans); color: var(--body2); }
+    .home-search .hs-copy b { font: 600 19px/1.25 'Libre Baskerville',Georgia,serif; color: var(--forest); display: block; margin-bottom: 3px; }
+    .home-search .hs-copy span { font: 400 14.5px/1.5 'DM Sans',Arial,sans-serif; color: #3d4b47; }
     .home-search .hs-field { position: relative; flex: 1 1 auto; }
-    .home-search input { width: 100%; box-sizing: border-box; font: 400 17px/1.4 var(--sans); color: var(--body);
-      background: var(--sage2, #f3f6f1); border: 1.5px solid var(--forest); border-radius: 999px; padding: 15px 22px; outline: none; }
+    .home-search input { width: 100%; box-sizing: border-box; font: 400 17px/1.4 'DM Sans',Arial,sans-serif; color: #24302d;
+      background: #f3f6f1; border: 1.5px solid var(--forest); border-radius: 999px; padding: 15px 22px; outline: none; }
     .home-search input:focus { box-shadow: 0 0 0 3px rgba(33,68,60,.14); }
     .home-search input::placeholder { color: #8a978f; }
     .hs-results { position: absolute; left: 0; right: 0; top: calc(100% + 8px); z-index: 20;
-      background: #fdfbf6; border: 1px solid var(--hairline); border-radius: 12px;
+      background: #fdfbf6; border: 1px solid rgba(36,72,63,.16); border-radius: 12px;
       box-shadow: 0 18px 50px rgba(0,0,0,.22); max-height: 60vh; overflow-y: auto; display: none; padding: 6px 0 10px; }
     .hs-results.open { display: block; }
-    .hs-h { font: 700 11px/1 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--rust); padding: 12px 20px 5px; }
-    .hs-r { display: block; padding: 8px 20px; text-decoration: none; color: var(--body); }
-    .hs-r .t { font: 600 15.5px/1.3 var(--sans); }
-    .hs-r .s { font: 400 13px/1.45 var(--sans); color: #7a8a85; margin-top: 1px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .hs-h { font: 700 11px/1 'DM Sans',Arial,sans-serif; letter-spacing: .1em; text-transform: uppercase; color: #a04f24; padding: 12px 20px 5px; }
+    .hs-r { display: block; padding: 8px 20px; text-decoration: none; color: #24302d; }
+    .hs-r .t { font: 600 15.5px/1.3 'DM Sans',Arial,sans-serif; }
+    .hs-r .s { font: 400 13px/1.45 'DM Sans',Arial,sans-serif; color: #7a8a85; margin-top: 1px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     .hs-r:hover, .hs-r.sel { background: #eef1ee; }
-    .hs-empty { padding: 18px 20px; font: 400 14px/1.5 var(--sans); color: #7a8a85; }
+    .hs-empty { padding: 18px 20px; font: 400 14px/1.5 'DM Sans',Arial,sans-serif; color: #7a8a85; }
     @media (max-width: 760px) {
       .home-search { flex-wrap: wrap; gap: 14px; padding: 18px 20px; }
       .home-search .hs-arrow { display: none; }
@@ -242,99 +331,19 @@
   })();
   </script>
 </section>
-
-<!-- Weather sits ABOVE the Featured Action card (Morgan, 2026-07-23). -->
-<div style="max-width:var(--maxw);margin:44px auto 0;padding:0 var(--pad-x)"><div id="lt-weather"></div></div>
-
-<!-- Featured Action of the Week — replaced the Housing/Events/Donate mini-row
-     (per Morgan, 2026-07-22). Data: data/featured-action.json, written by
-     scripts/build-featured-action.js (top upcoming deep-dive-linked meeting;
-     FEATURED_ACTION_PIN in gov-data.js to hand-pick). Hidden when empty. -->
-<section class="wrap" style="padding-top:0">
-  <style>
-    .fa-card { display: none; background: var(--sage2); border: 1px solid var(--forest); border-radius: 12px; padding: 24px 26px; margin-top: 22px; }
-    .fa-eyebrow { font: 700 12px/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--rust); margin-bottom: 10px; }
-    .fa-card h3 { font: 600 24px/1.25 var(--serif); color: var(--forest); margin: 0 0 8px; }
-    .fa-meta { font: 500 14px/1.5 var(--sans); color: var(--body2); margin-bottom: 10px; }
-    .fa-blurb { font: 400 15px/1.6 var(--sans); color: var(--body); margin: 0 0 14px; max-width: 72ch; }
-    .fa-gallery { margin: 0 0 14px; display: grid; gap: 16px; }
-    .fa-gallery-multi { grid-template-columns: 1fr 1fr; align-items: start; }
-    /* Two images from different sources rarely share an aspect ratio (the
-       Shandoka board is wide, the Fruen rendering nearly square), which left
-       one column running far below the other. A fixed box with contain keeps
-       both fully visible -- cropping would cut the height annotations that are
-       the whole point of the Shandoka image. */
-    .fa-gallery-multi .fa-figure img { height: 300px; object-fit: contain; object-position: center top; }
-    @media (max-width: 700px) { .fa-gallery-multi .fa-figure img { height: auto; } }
-    @media (max-width: 700px) { .fa-gallery-multi { grid-template-columns: 1fr; } }
-    .fa-figure { margin: 0; }
-    .fa-figure img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line, #d8d3c6); }
-    .fa-figure figcaption { font: 400 15.5px/1.45 var(--sans); color: var(--muted, #6b7a80); margin-top: 6px; }
-
-    .fa-acts { display: flex; flex-wrap: wrap; gap: 10px; }
-    .fa-acts a { font: 600 14px/1 var(--sans); padding: 10px 16px; border-radius: 8px; text-decoration: none; }
-    .fa-acts .fa-dive { background: var(--forest); color: #fff; }
-    .fa-acts .fa-plain { border: 1.5px solid var(--forest); color: var(--forest); background: #fff; }
-    .fa-acts .fa-plain:hover { background: var(--sage2); }
-    .fa-acts .fa-live { background: var(--forest); border: 1.5px solid var(--forest); color: #fff; }
-    .fa-acts .fa-live:hover, .fa-acts .fa-dive:hover { background: #1c3a33; color: #fff; }
-    .fa-acts .fa-zoom { border: 1.5px solid #2d64a8; color: #2d64a8; background: #fff; }
-    .fa-acts .fa-zoom:hover { background: #eef3fa; }
-    .fa-acts .fa-empty { font: 600 14px/1 var(--sans); padding: 10px 16px; border-radius: 8px; border: 1.5px solid #c9c4b8; color: #9a9588; background: #f3f1ec; cursor: default; }
-  </style>
-  <!-- (The four newcomer cards moved up into the hero-overlap slot,
-       replacing the Learn/Connect/Act pillars — Morgan, 2026-07-23.) -->
-  <div class="fa-card" id="featured-action">
-    <div class="fa-eyebrow">&#9733; Featured Action</div>
-    <h3 id="fa-headline"></h3>
-    <div class="fa-meta" id="fa-meta"></div>
-    <div class="fa-gallery" id="fa-gallery" hidden></div>
-    <p class="fa-blurb" id="fa-blurb"></p>
-    <div class="fa-acts" id="fa-acts"></div>
-  </div>
+<div class="rule"></div><section id="events"><div class="section-title"><div><h2>Out &amp; about</h2></div><a class="actionlink" href="events.html">View this week's events →</a></div><div class="events" id="ev-feat"><div class="lt-empty">Loading events…</div></div><div class="seven-days" id="ev-week"></div></section>
+<div class="rule"></div><section id="deep-dives"><div class="section-title"><div><h2>Beyond the headlines</h2></div><a class="actionlink" href="deep-dives.html">All deep dives →</a></div><div class="features" id="dd-list"><div class="lt-empty">Loading deep dives…</div></div></section><div class="rule"></div><section aria-labelledby="past-meeting-heading" class="past-section" id="past-meetings">
+<div class="section-title"><div><h2 id="past-meeting-heading">Meeting summaries</h2></div><a class="actionlink" href="gov-hub-past.html">Browse all past meetings →</a></div>
+<div class="recap-categories">
+<a class="recap-card" href="gov-hub-past.html"><span class="recap-card-top">01 <span>LOCAL GOVERNMENT</span></span><h3>Town meetings &amp; commissions</h3><span class="recap-latest" id="rc-town"></span><span class="recap-card-action">All recaps <span aria-hidden="true">↗</span></span></a>
+<a class="recap-card" href="gov-hub-past.html"><span class="recap-card-top">02 <span>COUNTY DECISIONS</span></span><h3>County boards &amp; land use</h3><span class="recap-latest" id="rc-county"></span><span class="recap-card-action">All recaps <span aria-hidden="true">↗</span></span></a>
+<a class="recap-card" href="gov-hub-past.html"><span class="recap-card-top">03 <span>COMMUNITY SERVICES</span></span><h3>Schools, Fire/EMS, Housing and Special Districts</h3><span class="recap-latest" id="rc-svc"></span><span class="recap-card-action">All recaps <span aria-hidden="true">↗</span></span></a>
+</div>
 </section>
-
-<section class="prior">
-  <div class="prior-head">
-    <div><span class="eyebrow" id="prior-week">This week</span><h2 class="section-h">Top priorities</h2></div>
-    <a class="all" href="gov-hub.html">All meetings &amp; events &rarr;</a>
-  </div>
-  <div class="prior-cols">
-    <div>
-      <div class="prior-col-h">Government meetings</div>
-      <div class="prior-list" id="prior-list"><p class="meta" style="padding:18px 0">Loading this week's meetings&hellip;</p></div>
-      <a class="col-all" href="gov-hub.html">All government meetings &rarr;</a>
-    </div>
-    <div>
-      <div class="prior-col-h">Events this week</div>
-      <div class="pe-list" id="prior-events"><p class="meta" style="padding:18px 0">Loading this week's events&hellip;</p></div>
-      <a class="col-all" href="events.html">All events &rarr;</a>
-    </div>
-  </div>
-</section>
-
-<!-- Donate band (2026-07-23): Donate left the nav for this section — below
-     Top Priorities, above the mission. The footer link remains. -->
-<section class="wrap" style="padding-top:52px">
-  <style>
-    .donate-band { text-align: center; background: var(--forest); border-radius: 16px; padding: 40px 32px; color: rgba(255,255,255,.9); }
-    .donate-band .k { font: 700 11px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
-    .donate-band h2 { font: 500 32px/1.2 var(--serif); color: #fff; margin: 12px 0 10px; }
-    .donate-band p { font: 400 16px/1.65 var(--sans); max-width: 620px; margin: 0 auto 22px; }
-    .donate-band .btn-gold { font-size: 16px; padding: 14px 34px; }
-  </style>
-  <div class="donate-band">
-    <span class="k">Support Us</span>
-    <h2>Independent, ad-free, and always free. Keep it that way.</h2>
-    <p>Livable Telluride is built and run for the community &mdash; no paywall, no ads, no owners to answer to. If it helps you stay informed, help it keep going.</p>
-    <a class="btn btn-gold" href="donate.html">Donate &rarr;</a>
-  </div>
-</section>
-
-<section class="lt-about" id="mission">
+<div class="rule"></div><section aria-labelledby="about-heading" class="lt-about" id="mission">
   <div class="a-head">
     <span class="eyebrow">About Livable Telluride</span>
-    <h2>A civic information hub for every resident &mdash; before the decisions are final.</h2>
+    <h2 id="about-heading">A civic information hub for every resident &mdash; before the decisions are final.</h2>
     <p>Independent, ad-free, and built for the whole region: West End to Mountain Village, across the full political spectrum.</p>
   </div>
 
@@ -356,123 +365,19 @@
   </div>
 
   <div class="directors-card card">
-    <h3>Meet Our Directors</h3>
-    <p class="intro">Livable Telluride, Inc. is a 501(c)(3)-approved organization. Our board of directors:</p>
+    <h3>Board of Directors</h3>
+    <p class="intro">Livable Telluride, Inc. is a 501(c)(3)-approved organization. Click a name to send that board member a message.</p>
     <div class="director-chips">
-      <span>David Lavender</span>
-      <span>John Metzger</span>
-      <span>Keith Hill</span>
-      <span>Emily Masson</span>
-      <span>Morgan Smith</span>
+      <a href="mailto:info@livabletelluride.org?subject=Message%20for%20Livable%20Telluride%20Board%20Member%20David%20Lavender">David Lavender</a>
+      <a href="mailto:info@livabletelluride.org?subject=Message%20for%20Livable%20Telluride%20Board%20Member%20John%20Metzger">John Metzger</a>
+      <a href="mailto:info@livabletelluride.org?subject=Message%20for%20Livable%20Telluride%20Board%20Member%20Keith%20Hill">Keith Hill</a>
+      <a href="mailto:info@livabletelluride.org?subject=Message%20for%20Livable%20Telluride%20Board%20Member%20Emily%20Masson">Emily Masson</a>
+      <a href="mailto:info@livabletelluride.org?subject=Message%20for%20Livable%20Telluride%20Board%20Member%20Morgan%20Smith">Morgan Smith</a>
     </div>
-    <p class="reach">Any board member can be reached through <a href="mailto:info@livabletelluride.org">info@livabletelluride.org</a> &mdash; please include their name in the subject line.</p>
-  </div>
-
-  <div class="livable-panel">
-    <h3>What &ldquo;Livable&rdquo; Means</h3>
-    <p class="lead-p">&ldquo;Livable&rdquo; is not code for no growth, or for drawing a line between locals and newcomers. It means asking the self-government questions that deserve answers <em>before</em> decisions are finalized &mdash; not after.</p>
-    <div class="question-chips">
-      <span class="qc">What kind of growth?</span>
-      <span class="qc">For whose benefit?</span>
-      <span class="qc">Who can afford it when done?</span>
-      <span class="qc">What infrastructure is required?</span>
-      <span class="qc">How much water?</span>
-      <span class="qc">How much traffic?</span>
-      <span class="qc">What long-term public debt?</span>
-      <span class="qc">Through what public process?</span>
-    </div>
-    <p class="tail">These are not anti-growth questions. They are self-government questions &mdash; the kind a functioning community asks of itself, across the full range of political views, before the future is already decided.</p>
   </div>
 </section>
-
-
-<div id="lt-footer"></div>
-<script src="site.js?v=13"></script>
-<script src="/js/lt-data.js?v=15"></script>
-<script src="/js/lt-weather.js?v=1" defer></script>
-<script>
-/* Featured Action of the Week — data/featured-action.json (see the section
-   markup above for provenance). Loaded separately from the other sections so
-   a miss just hides the card, never breaks the page. */
-(function () {
-  var card = document.getElementById('featured-action');
-  if (!window.LTData || !card) return;
-  LTData.load(['featured-action']).then(function (data) {
-    // renderFeaturedAction does the stale/empty check itself and leaves the
-    // card hidden when the data is unusable.
-    LTData.renderFeaturedAction(card, data['featured-action']);
-  }).catch(function () { /* stays hidden */ });
-})();
-
-/* Top priorities — this week's public meetings from the precomputed
-   data/week-meetings.json (ALL sources aggregated by the pipeline, incl.
-   CivicClerk-config meetings; loud failure per standing rule). */
-(function () {
-  var list = document.getElementById('prior-list');
-  if (!window.LTData) { list.innerHTML = '<div class="lt-data-error">This section failed to load. Please refresh in a minute.</div>'; return; }
-  var MON = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
-
-  LTData.load(['week-meetings']).then(function (data) {
-    var today = LTData.todayMT();
-    var end = LTData.mtDateKey(new Date(LTData.parseDateKey(today).getTime() + 6 * 86400000));
-    var rows = [];
-    (data['week-meetings'] || []).forEach(function (m) {
-      if (!m || !m.title || !m.date) return;
-      if (m.kind === 'event') return;   // meetings only — civic events live on Gov Hub
-      if (m.date < today || m.date > end) return;
-      rows.push({ key: m.date, d: LTData.parseDateKey(m.date), title: m.title, srcKey: m.source, hook: m.hook || '',
-        time: (m.time || '').split('-')[0].trim(), loc: m.location || '', src: m.sourceLabel || m.source });
-    });
-    rows = rows.slice(0, 6);
-    document.getElementById('prior-week').textContent = 'This week · ' +
-      LTData.fmtDate(today, { month: 'short', day: 'numeric' }) + '–' +
-      LTData.fmtDate(end, { month: 'short', day: 'numeric' });
-    if (!rows.length) { list.innerHTML = '<p class="meta" style="padding:18px 0">No public meetings scheduled this week.</p>'; return; }
-    list.innerHTML = rows.map(function (r) {
-      var meta = [LTData.fmtDate(r.key, { weekday: 'short' }), r.time, r.loc || r.src].filter(Boolean).join(' · ');
-      return '<a class="row" href="gov-hub.html" style="color:inherit">' +
-        '<div><div class="d-mon">' + MON[r.d.getMonth()] + '</div><div class="d-day">' + r.d.getDate() + '</div></div>' +
-        (LTData.entityLogo(r.srcKey) ? '<div class="p-logo"><img src="' + LTData.esc(LTData.entityLogo(r.srcKey)) + '" alt="' + LTData.esc(r.src) + '" loading="lazy"></div>' : '<div></div>') +
-        '<div><span class="tag">' + LTData.esc(r.src) + '</span><h3>' + LTData.esc(r.title) + '</h3>' +
-        (r.hook ? '<div class="hook">' + LTData.esc(r.hook) + '</div>' : '') +
-        '<div class="meta">' + LTData.esc(meta) + '</div></div>' +
-        '<div class="chev">&rsaquo;</div></a>';
-    }).join('');
-  }).catch(function (err) { LTData.showError(list, err); });
-
-  /* Right column: top events over the same 7 days, from the events index.
-     One per day where possible; real photos and detail beat bare listings. */
-  var evList = document.getElementById('prior-events');
-  LTData.load(['events-index']).then(function (data) {
-    var raw = data['events-index'];
-    var evs = (raw && raw.events) ? raw.events : (Array.isArray(raw) ? raw : []);
-    var today = LTData.todayMT();
-    var end = LTData.mtDateKey(new Date(LTData.parseDateKey(today).getTime() + 6 * 86400000));
-    function score(e) {
-      var s = 0;
-      if (e.img && e.img.indexOf('/assets/digest/fallbacks/') === -1) s += 5;
-      if (e.desc) s += 2;
-      if (e.type === 'Festivals') s += 3;
-      if (e.type === 'Music') s += 1;
-      return s;
-    }
-    var pool = evs.filter(function (e) { return e && e.title && e.date >= today && e.date <= end; });
-    // Best event per day (by score), then top 6 days chronologically.
-    var byDay = {};
-    pool.forEach(function (e) { if (!byDay[e.date] || score(e) > score(byDay[e.date])) byDay[e.date] = e; });
-    var picks = Object.keys(byDay).sort().slice(0, 6).map(function (d) { return byDay[d]; });
-    if (!picks.length) { evList.innerHTML = '<p class="meta" style="padding:18px 0">No events listed this week.</p>'; return; }
-    evList.innerHTML = picks.map(function (e) {
-      var d = LTData.parseDateKey(e.date);
-      var meta = [LTData.fmtDate(e.date, { weekday: 'short' }), (e.time || '').split('-')[0].trim(), e.town].filter(Boolean).join(' · ');
-      return '<a class="row" href="events.html" style="color:inherit">' +
-        '<div><div class="d-mon">' + MON[d.getMonth()] + '</div><div class="d-day">' + d.getDate() + '</div></div>' +
-        (e.img ? '<div class="p-img"><img src="' + LTData.esc(e.img) + '" alt="" loading="lazy"></div>' : '<div></div>') +
-        '<div><h3>' + LTData.esc(e.title) + '</h3>' +
-        '<div class="meta">' + LTData.esc(meta) + '</div></div></a>';
-    }).join('');
-  }).catch(function (err) { LTData.showError(evList, err); });
-})();
-</script>
-</body>
-</html>
+</div></main><div id="lt-footer"></div>
+<script src="js/lt-data.js?v=16"></script>
+<script src="site.js?v=20"></script>
+<script src="home.js?v=2"></script>
+</body></html>

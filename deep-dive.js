@@ -198,6 +198,10 @@
     }
     // Upcoming meetings: live gov-hub matches when available (auto-refreshed
     // every 6h), otherwise the topic's hand-curated list.
+    // Meetings come off 3 hours after their scheduled start (LTData.meetingOver).
+    var notOver = function (m) { return !(LTData.meetingOver && LTData.meetingOver(m.date, m.time)); };
+    if (watch && watch.upcoming) watch.upcoming = watch.upcoming.filter(notOver);
+    if (issue.meetings) issue.meetings = issue.meetings.filter(notOver);
     if (watch && watch.upcoming && watch.upcoming.length) {
       side += '<div class="dd-card card"><h4>On upcoming agendas</h4>' + watch.upcoming.map(function (m) {
         var links = [];
