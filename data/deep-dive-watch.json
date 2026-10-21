@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-21T04:04:45.584Z",
+ "generated": "2026-10-21T11:30:52.135Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -91,6 +91,12 @@
    "upcoming": [],
    "recent": [
     {
+     "source": "fire",
+     "date": "2026-10-20",
+     "title": "Board of Directors Meeting",
+     "snippet": "The Telluride Fire Protection District board meets October 20th at 5:30 p.m. at Station 1 on Columbia Ave. Leading the agenda is the first reading of the 2027 budget — the opening move in a process…"
+    },
+    {
      "source": "county",
      "date": "2026-10-07",
      "title": "Board of County Commissioners Meeting",
@@ -99,6 +105,7 @@
    ],
    "developments": [],
    "stale": [
+    "Wildfire Resiliency: fire discussed it on 2026-10-20 (\"Board of Directors Meeting\") but the deep dive was last edited 2026-06-01.",
     "Wildfire Resiliency: county discussed it on 2026-10-07 (\"Board of County Commissioners Meeting\") but the deep dive was last edited 2026-06-01."
    ]
   },

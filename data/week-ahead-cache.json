@@ -1,26 +1,30 @@
 {
-  "hash": "6620e28ad26beb4f681e42b6ec22d7f3de1583a7",
-  "lede": "The biggest item this week is the San Miguel County Commissioners hearing four proposed Land Use Code amendments on Tuesday that would add an entirely new Natural Resources article to county code — covering forestry, oil and gas, and geothermal operations, each with its own public hearing. Also Tuesday, Town P&Z takes up the Shandoka Lot Redevelopment preliminary PUD at 860 Black Bear Rd, a Town-owned parcel where increased dimensional limits are on the table. The Telluride Hospital District board meets Wednesday with a possible action item on a Two Site Model that could reshape how and where the valley receives medical care.",
+  "hash": "5b2083c344a316c47178cb6014994116dd2f1985",
+  "lede": "The biggest thing happening in local government this week is the San Miguel County Board of Commissioners taking up four Land Use Code amendments that would add an entirely new Natural Resources article to county code — with separate public hearings on forestry, oil and gas, and deep geothermal operations — and that's worth your time if you care about how this county manages what's under and around us. Town of Telluride's Planning and Zoning Commission also finally hears the Shandoka Lot Redevelopment PUD application for Town-owned land at 860 Black Bear Rd, after a month's delay. Layered on top of all that, the Telluride Hospital District board takes up a possible Two Site Model for care delivery, and the Gondola Advisory Committee gets a federal funding update on the FTA Capital Investment Program.",
   "notable": [
     {
       "id": 4,
-      "stake": "Four public hearings on new county Land Use Code rules for forestry, oil, and geothermal."
+      "stake": "Public hearings on new county code governing forestry, oil/gas, and geothermal operations."
     },
     {
       "id": 8,
-      "stake": "Preliminary PUD hearing on Town-owned 860 Black Bear Rd with dimensional limit increases."
-    },
-    {
-      "id": 6,
-      "stake": "Possible board action on a Two Site Model that could reshape where the valley gets medical care."
+      "stake": "Preliminary PUD hearing for Town-owned Shandoka Lot redevelopment; public can weigh in."
     },
     {
       "id": 3,
-      "stake": "Commission vote on restoring Telluride Jazz Festival to a full three-day run in 2027."
+      "stake": "Commission votes on restoring Jazz Festival to three days for 2027 50th anniversary."
+    },
+    {
+      "id": 6,
+      "stake": "Hospital board may act on Two Site Model, reshaping how and where local care is delivered."
     },
     {
       "id": 10,
-      "stake": "Variance request to reduce required setback on a Mountain Village parcel near County Road 63L."
+      "stake": "Variance request to reduce required setback on Mountain Village parcel near County Road 63L."
+    },
+    {
+      "id": 13,
+      "stake": "Federal funding pipeline update for gondola project; public comment open."
     }
   ]
 }

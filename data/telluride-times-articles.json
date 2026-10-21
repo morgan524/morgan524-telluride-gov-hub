@@ -1,5 +1,17 @@
 [
   {
+    "title": "‘Rings of Time: Tales from the Telluride Bluegrass Festival’",
+    "source": "Telluride Times",
+    "date": "October 21, 2026",
+    "firstSeen": "2026-10-21",
+    "newsTopic": "arts-culture",
+    "copy": "A documentary about the Telluride Bluegrass Festival's 50-year history was pulled from its planned Town Park premiere over concerns about AI-animated sequences, generating unexpected buzz. The film traces the festival's arc from Bill Monroe to Billy Strings, weaving in personal stories including the loss of producer Craig Ferguson's son Griffin. A new release date hasn't been set.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/arts_and_entertainment/article_1f895a49-e287-4eec-9923-b362fe28be4c.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/ca/5caab768-286b-400c-9bdd-924d0386df9b/6ad6ae37ee533.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Celebrity exorcist priest to take one-year 'media fast' after meeting with Denver archbishop",
     "source": "Telluride Times",
     "date": "October 20, 2026",
@@ -76,7 +88,7 @@
     "copy": "A letter to the editor raises pointed questions about the Carhenge/Backman Village project after the Sept. 30 Town Council meeting upheld a lot-line vacation. The writer notes the platted density shows 176 units — or 151 plus commercial space — yet planning has advanced a 230-unit proposal, with over $1M reportedly spent on consultants. She's asking what legal weight a recorded plat actually carries if staff can set it aside during project review.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_085bdee6-f590-475f-93af-399bea9a04de.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "letterAuthor": "Madelaine Whiteman",
     "isLetter": true,
     "imgHiRes": true
@@ -100,9 +112,9 @@
     "source": "Telluride Times",
     "date": "October 20, 2026",
     "firstSeen": "2026-10-20",
-    "newsTopic": "community",
-    "copy": "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
-    "claudeSummary": false,
+    "newsTopic": "education",
+    "copy": "CAFI, a local immigrant advocacy group, is urging a yes vote on Measure 5A for the Telluride R-1 School District. They warn that without it, programs like Dual Immersion — where English and Spanish speakers learn side by side — could be cut, along with arts, sports, and college prep. The district says failure could mean losing between 54 and 94 of its 142 staff.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_dd1df833-530a-430a-8b31-bd365515cd1b.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     "isLetter": true,
@@ -222,7 +234,7 @@
     "copy": "A survivor named Lorina writes about how San Miguel County detective Dan Covault reopened a decade-old abuse case after following a single tip, ultimately linking cold cases and securing a conviction. She reported the predator to authorities from 1996–2002 with no result; Covault's 2013 investigation finally brought justice.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/columnists/article_d04f5116-2d6f-4fb0-a41d-c20dfbe440e9.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "isLetter": true,
     "imgHiRes": true
   },
