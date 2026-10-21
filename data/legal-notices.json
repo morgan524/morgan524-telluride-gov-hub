@@ -106,26 +106,6 @@
     "smcBidID": "208"
   },
   {
-    "title": "Ordinance -- Colorado Wildfire Resiliency Code Amendment to Land Use Code (Ordinance #1640)",
-    "entity": "Town of Telluride",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "📋",
-    "iconClass": "type-hearing",
-    "type": "Ordinance",
-    "filterTag": "ordinance",
-    "summary": "The Telluride Town Council passed Ordinance #1640 on August 11, 2026, amending Chapter 18 of the Telluride Municipal Code (Land Use Code) to implement the Colorado Wildfire Resiliency Code (CWRC). The amendments affect Historic and Architectural Review standards and Landscaping/Outdoor Illumination/Tree standards in the Zone District Regulations. The ordinance is effective upon publication of this notice; copies are available at Town Hall or online.",
-    "deadline": "2026-08-20",
-    "expires": "2026-10-20",
-    "dates": "8/20",
-    "papers": [
-      "ttimes_0820"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_7e6a7420-27c6-4f95-b0b8-101dfc5b4763.html",
-    "address": "Town of Telluride, Colorado",
-    "noticeKey": "ord-1640"
-  },
-  {
     "title": "ECMC Hearing Notice -- Order Finding Violation Against American Helium Operating LLC (Docket No. 260700207)",
     "entity": "Colorado Energy and Carbon Management Commission / American Helium Operating LLC",
     "entityClass": "ent-county",
@@ -471,7 +451,7 @@
     "summary": "Town of Telluride is seeking qualified respondents for: TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS.",
     "deadline": "Closes 1/11/2026",
     "expires": "2026-01-11",
-    "dates": "10/20",
+    "dates": "10/21",
     "url": "https://www.telluride.gov/bids.aspx?bidID=133",
     "address": "",
     "totBidID": "133"

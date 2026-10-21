@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-20T23:46:24.424Z",
+ "generated": "2026-10-21T04:04:45.584Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -88,20 +88,7 @@
   "wildfire": {
    "label": "Wildfire Resiliency",
    "lastUpdated": "2026-06-01",
-   "upcoming": [
-    {
-     "source": "fire",
-     "sourceLabel": "Fire Protection",
-     "title": "Board of Directors Meeting",
-     "date": "2026-10-20",
-     "time": "5:30 PM",
-     "location": "131 W Columbia Ave, Telluride, CO 81435",
-     "agendaUrl": "https://www.telluridefire.com/files/cef8a399b/Agenda+-October+20th%2C+2026.pdf",
-     "link": "https://www.telluridefire.com/files/cef8a399b/Agenda+-October+20th%2C+2026.pdf",
-     "zoomLink": "",
-     "livestream": ""
-    }
-   ],
+   "upcoming": [],
    "recent": [
     {
      "source": "county",
@@ -146,9 +133,9 @@
      "date": "2026-10-26",
      "time": "3:00 PM",
      "location": "Virtual (Zoom link in the agenda)",
-     "agendaUrl": "",
+     "agendaUrl": "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.10.26-Gsub-Agenda.pdf",
      "link": "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.10.26-Gsub-Agenda.pdf",
-     "zoomLink": "",
+     "zoomLink": "https://urldefense.com/v3/__https:/gbsm.zoom.us/j/82559576086__;!!ETWISUBM!3x58A-FfNf9JhIvrh2mHeq3wy9OHc7S76v3Obypudr5m-ILQvLZAsE3ZuUUqFUGuSSfFOzlMG_ETBGmg3kQV-w$",
      "livestream": ""
     },
     {
