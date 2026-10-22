@@ -1,12 +1,4 @@
 {
-  "norwood|2026-09-21|Planning and Zoning Commission Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://www.norwoodtown.com/files/d3a7e2221/09.21.2026+P%26Z+BOA+AGENDA.pdf",
-    "zoomUrl": "https://us02web.zoom.us/j/85001344971",
-    "meetingId": "850 0134 4971",
-    "passcode": "8142302",
-    "phone": "970-327-4288"
-  },
   "school|2026-09-22|Telluride Board of Education Work Session": {
     "sv": 4,
     "agendaUrl": "https://files.smartsites.parentsquare.com/3403/92226_ws_packet.pdf",
@@ -262,11 +254,6 @@
     "phone": "346-248-7799",
     "sv": 4
   },
-  "telluride|2026-09-21|Gondola Subcommittee - Sep 21 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8318",
-    "zoomUrl": "https://gbsm.zoom.us/j/82559576086",
-    "sv": 4
-  },
   "norwood|2026-10-19|Planning and Zoning Commission Meeting": {
     "sv": 4,
     "agendaUrl": "https://www.norwoodtown.com/files/8a5f7ce8f/10.19.2026+P%26Z+BOA+AGENDA.pdf",
@@ -274,10 +261,6 @@
     "meetingId": "850 0134 4971",
     "passcode": "8142302",
     "phone": "970-327-4288"
-  },
-  "telluride|2026-09-21|Open Space Commission Site Walk - Sep 21 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8319",
-    "sv": 4
   },
   "fire|2026-10-20|Board of Directors Meeting": {
     "sv": 4,

@@ -282,26 +282,6 @@
     "caseNumber": "2026-06"
   },
   {
-    "title": "Public Hearing -- Land Use Code Amendment: Deep Geothermal Operations (COL-000263)",
-    "entity": "San Miguel County Board of County Commissioners",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "The San Miguel County Board of County Commissioners will hold a public hearing on October 21, 2026 at 9:30 a.m. or later to consider a Land Use Code amendment adding a new Section 6-6 governing Deep Geothermal Operations, along with related amendments. This is the second step of a two-step process following Planning Commission review. Written comments must be received by October 13, 2026, and may be submitted to the San Miguel County Planning Department.",
-    "deadline": "2026-10-21",
-    "expires": "2026-10-21",
-    "dates": "10/1",
-    "papers": [
-      "ttimes_1001"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_792d96c0-09c8-479f-83f8-bdf3681b49ae.html",
-    "address": "333 W Colorado Ave, 2nd Floor, Telluride, CO 81435",
-    "noticeKey": "luc-amendment-deep-geothermal-COL-000263"
-  },
-  {
     "title": "Tax Lien Sale -- 2025 Delinquent Real Property Tax Lien Sale, San Miguel County",
     "entity": "San Miguel County Treasurer (Brandi R. Hatfield)",
     "entityClass": "ent-county",
@@ -451,7 +431,7 @@
     "summary": "Town of Telluride is seeking qualified respondents for: TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS.",
     "deadline": "Closes 1/11/2026",
     "expires": "2026-01-11",
-    "dates": "10/21",
+    "dates": "10/22",
     "url": "https://www.telluride.gov/bids.aspx?bidID=133",
     "address": "",
     "totBidID": "133"
