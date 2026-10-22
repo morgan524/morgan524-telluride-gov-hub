@@ -115,11 +115,11 @@ const COUNTY_CACHED_DATA = [
   },
   {
     date: "October 26, 2026",
-    time: "4:00 PM",
-    title: "Open Space Commission Meeting",
+    time: "6:00 PM",
+    title: "San Miguel Basin Fair Board Meeting 10/26",
     type: "other",
-    location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
-    civicClerkId: 1058,
+    location: "333 W Colorado Ave, Second Floor, Telluride, CO 81435",
+    civicClerkId: 1092,
     note: null
   },
   {
@@ -170,10 +170,10 @@ const COUNTY_CACHED_DATA = [
   {
     date: "November 23, 2026",
     time: "4:00 PM",
-    title: "Open Space Commission Meeting",
+    title: "Open Space Commission Meeting 11/23",
     type: "other",
-    location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
-    civicClerkId: 1059,
+    location: "333 W Colorado Ave, Third Floor, Telluride, CO 81435",
+    civicClerkId: 1091,
     note: null
   },
   {

@@ -363,7 +363,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8120","sv":4,"ph":"f7fa71ad7c369cd5"},
 
   "telluride|2026-11-04|Commission for Community Assistance, Arts & Special Events - Nov 04 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8068","sv":4,"ph":"da4f1e75726dd622"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8068","sv":4,"ph":"d59f611c627c7101"},
 
   "telluride|2026-11-04|Telluride Housing Authority Subcommittee - Nov 04 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8165","sv":4,"ph":"89b54e4a61932908"},
@@ -507,7 +507,10 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-10-23|Commission for Community Assistance, Arts & Special Events - Grant Subcommittee -Oct 23 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8328","sv":4}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8328","sv":4},
+
+  "county|2026-10-26|San Miguel Basin Fair Board Meeting 10/26":
+    {"sv":4,"ph":"47dc9b32b4fc82eb"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -846,10 +849,13 @@ const MEETING_PREVIEWS = {
     "The Grant Subcommittee is expected to review and discuss 2027 Grant Application Discrepancy Matrices during a worksession. The meeting will be held in person at Rebekah Hall on October 23, 2026.",
 
   "telluride|2026-10-22|Planning & Zoning Commission - Oct 22 2026":
-    "The Planning & Zoning Commission is expected to review minutes from its September 24 meeting and hold a public hearing on the Shandoka Lot Redevelopment Project, which involves consideration of a Preliminary Planned Unit Development application.",
+    "The Planning & Zoning Commission is expected to review land use matters within its authority, including potential zoning variances, planned unit developments, or subdivision approvals. A request for proposals for a comprehensive review of Telluride's Employee Rental Housing Policies may also be among related items before the commission.",
 
   "telluride|2026-10-22|(Rescheduled to 11/2) Planning & Zoning Commission Chair - Oct 22 2026":
-    "The Planning & Zoning Commission meeting originally scheduled for October 22, 2026 has been rescheduled to November 2, 2026 at 9:00 a.m. at Rebekah Hall. No specific agenda items were released; details are expected upon the rescheduled meeting's formal notice."
+    "The Planning & Zoning Commission meeting originally scheduled for October 22, 2026 has been rescheduled to November 2, 2026 at 9:00 a.m. at Rebekah Hall. No specific agenda items have been disclosed for the rescheduled session.",
+
+  "county|2026-10-26|San Miguel Basin Fair Board Meeting 10/26":
+    "The San Miguel Basin Fair Board is expected to meet on October 26, 2026. Specific agenda items for this meeting are not detailed in available notices, which primarily cover county financial matters, foreclosure sales, and procurement requests unrelated to the Fair Board's jurisdiction."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -953,6 +959,56 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Watershed protection project extended",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 22, 2026",
+    newsTopic: "public-safety",
+    copy: "The Emergency Watershed Protection project to mitigate debris flows below the Gold Mountain Fire burn area has received a 45-day extension with a new completion date of Nov. 17. Most construction is scheduled to be finished by Nov. 3. The federal Natural Resources Conservation Service approved the e",
+    href: "https://www.ouraynews.com/2026/10/21/watershed-protection-project-extended/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Log Hill funds never meant to offset deficit",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 22, 2026",
+    newsTopic: "government",
+    copy: "Dear Editor: I strongly disagree that the Board of County Commissioners be able to tap into or use monies/funds that were paid by and belong to the residents of Log Hill Village, and designated specifically for paving and upkeep of our roads. Those funds were never intended to be used to offset any ",
+    href: "https://www.ouraynews.com/2026/10/21/log-hill-funds-never-meant-offset-deficit/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Voters deserve better than Congressman Hurd",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 22, 2026",
+    newsTopic: "government",
+    copy: "Dear Editor: As we approach the November election, we’ll doubtless be hearing a lot about U.S. Rep. Jeff Hurd’s commitment to local issues. His mailers will almost certainly feature the congressman duded out in western casual, a shimmering Crystal Lake in the background and a smile on his face. Well",
+    href: "https://www.ouraynews.com/2026/10/21/voters-deserve-better-congressman-hurd/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Weiser committed to CO",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 22, 2026",
+    newsTopic: "community",
+    copy: "Dear Editor: Phil Weiser is deeply committed to justice and public service. The son and grandson of Holocaust survivors, he will be willing to fight for the American dream. Phil has made it a priority while running for governor to listen to his constituents. He has traveled across the state, holding",
+    href: "https://www.ouraynews.com/2026/10/21/weiser-committed-co/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Who’s funding statewide measures?",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 22, 2026",
+    newsTopic: "government",
+    copy: "Dear Editor: We have seven amendments and seven propositions on our Ouray County ballot. Amendments 81, 82, 83, 84, 85 and 86 and propositions 132 and 136 have as registered agents people from the West Group and Advance Colorado organizations. Amendment 87 and Proposition NN are opposed by the Advan",
+    href: "https://www.ouraynews.com/2026/10/21/whos-funding-statewide-measures/?ta_paidstory",
+    img: ""
+  },
+  {
     title: "News Release: Town, City and County Establish New Three-Year Affordable Housing Goals",
     source: "Ouray County",
     sourceKey: "ouray-county",
@@ -980,56 +1036,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "This week's parish bulletin is attached. As always, please check the Parish Calendar for the most updated information.Reminders:There will be a second collection this weekend for World Mission Sunday. Read the Pastor's Corner for more infor...",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-october-18/",
-    img: ""
-  },
-  {
-    title: "Will Coloradans choose the ‘right to hunt’?",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 15, 2026",
-    newsTopic: "community",
-    copy: "Colorado’s vote next month on whether to amend the state Constitution by codifying the right to hunt and fish has intensified debate among hunters, conservationists and legal experts over exactly who — and which parts of the state — should take the lead in its wildlife management policy. Amendment 8",
-    href: "https://www.ouraynews.com/2026/10/14/will-coloradans-choose-right-hunt/",
-    img: ""
-  },
-  {
-    title: "City hit with another police suit",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 15, 2026",
-    newsTopic: "public-safety",
-    copy: "The city of Ouray faces another lawsuit from an ex-employee of the police department. In a complaint filed last week in district court, former Ouray Police Department administrative assistant Lucy Reeder claimed the city lost her personal information, violated its own policies and wasn t honest abou",
-    href: "https://www.ouraynews.com/2026/10/14/city-hit-another-police-suit/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "County OKs police deal",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 15, 2026",
-    newsTopic: "government",
-    copy: "Ouray County commissioners approved a revised contract Tuesday that would make the Ouray County Sheriff’s Office the full-time provider of police services in the city of Ouray — but at a higher cost to the city than discussed last week. The board unanimously signed off on a new intergovernmental agr",
-    href: "https://www.ouraynews.com/2026/10/14/county-oks-police-deal/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "In light of budget cuts, Padgett takes 10% salary reduction",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 15, 2026",
-    newsTopic: "government",
-    copy: "Ouray County Commissioner Lynn Padgett will take a voluntary 10% salary reduction next year in a show of solidarity with other departments that took cuts for the 2027 budget. Padgett said budget reductions for travel to trainings and membership in outside organizations have also resulted in at least",
-    href: "https://www.ouraynews.com/2026/10/14/light-budget-cuts-padgett-takes-10-salary-reduction/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "School district to sell workforce unit",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 15, 2026",
-    newsTopic: "housing",
-    copy: "The Ridgway School Board plans to sell the school district’s last affordable housing unit and rejected a land donation that could have been used to build more housing at a board meeting Oct. 8. No staff members are occupying the district’s deed-restricted property in the Wetterhorn Homes development",
-    href: "https://www.ouraynews.com/2026/10/14/school-district-sell-workforce-unit/?ta_paidstory",
     img: ""
   },
   {
@@ -1434,7 +1440,10 @@ const MANUAL_SUMMARIES = {
     "The October 27 TMVOA Finance & Budget Committee agenda hasn't been posted yet.",
 
   "telluride|2026-10-23|Commission for Community Assistance, Arts & Special Events - Grant Subcommittee -Oct 23 2026":
-    "The Grant Subcommittee meets to work through discrepancy matrices from the 2027 grant applications — the internal reconciliation step where reviewers compare scores and flag inconsistencies before recommendations move forward."
+    "The Grant Subcommittee meets to work through discrepancy matrices from the 2027 grant applications — the internal reconciliation step where reviewers compare scores and flag inconsistencies before recommendations move forward.",
+
+  "county|2026-10-26|San Miguel Basin Fair Board Meeting 10/26":
+    "The San Miguel Basin Fair Board Meeting on October 26 agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2646,6 +2655,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "‘Overjoyed just to get away’",
+    source: "Telluride Times",
+    date: "October 22, 2026",
+    firstSeen: "2026-10-22",
+    newsTopic: "community",
+    copy: "Little Pink Houses of Hope brought 12 breast-cancer families from across the country to Telluride for a weeklong retreat — the second year running. Fifteen local sponsors covered lodging, food, and activities, from wagon rides at Schmid Family Ranch on Wilson Mesa to a rainy-day Jeep trip to Bridal Veil Falls. For families like one from Houston whose kids had never left Texas, it was their first time in Colorado.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_50cf3078-32be-4205-885d-4055eff5d967.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/a0/4a085e95-e789-48da-b2d9-6b5a519e3809/6ad6b43f7ae28.image.png",
+    imgHiRes: true
+  },
+  {
     title: "Norwood school construction raises noise concerns",
     source: "Telluride Times",
     date: "October 22, 2026",
@@ -3733,6 +3754,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Deed-Restricted Housing Lottery Applications Now Available for Spruce House H",
+    source: "Town of Telluride",
+    date: "October 22, 2026",
+    newsTopic: "housing",
+    copy: "(October 22, 2026) - The Town of Telluride and the San Miguel Regional Housing Authority (SMRHA) opened applications today for a deed-restricted homeownership lottery for Spruce House H at 226 East Pacific Avenue, Unit H, Telluride, Colorado, 81435.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=407",
+    img: ""
+  },
+  {
     title: "Applications Open for 2026/2027 Temporary Winter Community Housing Program",
     source: "Town of Telluride",
     date: "October 9, 2026",
@@ -3758,6 +3788,96 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1420",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14853"
+  },
+  {
+    title: "San Miguel County Public Health Announces Fall Vaccine Availability",
+    source: "San Miguel County",
+    date: "October 1, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1419",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14836"
+  },
+  {
+    title: "Chief Deputy Clerk Receives Excellence in Election Service Award",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "government",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1413",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14817"
+  },
+  {
+    title: "Planning Director Kaye Simonson Retires After Nearly Eight Years with the County",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1418",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14827"
+  },
+  {
+    title: "Another San Miguel Basin Fair in the Books",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1416",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14822"
+  },
+  {
+    title: "New Faces and a Fond Farewell for Parks + Open Space",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "recreation",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1417",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14826"
+  },
+  {
+    title: "County Housing Efforts Continue on Multiple Fronts",
+    source: "San Miguel County",
+    date: "September 24, 2026",
+    newsTopic: "housing",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1415",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14821"
+  },
+  {
+    title: "San Miguel County Adds Genasys Protect to Emergency Alerting Ecosystem",
+    source: "San Miguel County",
+    date: "September 24, 2026",
+    newsTopic: "public-safety",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1414",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14820"
+  },
+  {
+    title: "Safe Festivals - A Public Health Approach to Harm Reduction",
+    source: "San Miguel County",
+    date: "September 23, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1411",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14818"
+  },
+  {
+    title: "SMC Expands Crisis Intervention Services with Paragon Behavioral Health Connections",
+    source: "San Miguel County",
+    date: "September 22, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1412",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14816"
+  },
+  {
+    title: "Commissioners Finalize Deed Restriction Reversion Process",
+    source: "San Miguel County",
+    date: "September 22, 2026",
+    newsTopic: "housing",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1410",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14812"
   },
   {
     title: "DMV Services available in Egnar 11/18",
@@ -4453,17 +4573,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/10/Pop-up-thrift-store-FCFF-10.22-poster.jpg"
   },
   {
-    title: "Pilates for All Bodies with Laura",
-    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-10-22/",
-    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-10-22T12:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Water in the West: The Southwest's Last, Best Rivers and How to Protect Them",
     link: "https://koto.org/event/water-in-the-west-the-southwests-last-best-rivers-and-how-to-protect-them/",
     description: "Across the Southwest, aridification and challenging politics are impacting our watersheds and threatening our rivers. Join Mike Fiebig, Director of the Southwest River Protection Program at American Rivers, to learn what we can do to protect our local watersheds in the face of a changing climate. Drinks and snacks will be provided! Thanks to our event partners for making this happen: Patagonia Telluride, American Rivers, Dolores River Boating Advocates, and San Juan Citizens Alliance.",
@@ -4585,6 +4694,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Pumpkins & Peaks",
+    link: "https://koto.org/event/pumpkins-peaks/2026-10-24/",
+    description: "Celebrate fall in the mountains at Pumpkins & Peaks! Join TMVOA in Mountain Village for a day of free, family-friendly fall-inspired fun featuring pumpkins and pumpkin carving! In addition to getting to take your carved pumpkin home with you, you can also enjoy a petting zoo, face painting, a scavenger hunt with prizes, a fall-inspired family photo opportunity, 4WD off-road rides with Telluride Outside, outdoor movies & football screenings, fire pits, live music and more. Bundle up, bring the whole family, and enjoy a festive fall day in the mountains! This event is presented by TMVOA.",
+    pubDate: "2026-10-24T13:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Heritage Plaza, Mountain Village",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/p_ptmvbanner.1740x870.jpg"
+  },
+  {
     title: "Horror Book Club: Interview with a Vampire",
     link: "https://koto.org/event/horror-book-club-interview-with-a-vampire/",
     description: "Join us for a spine-tingling afternoon of discussion and seasonal fun. We'll be reading Interview with a Vampire by Anne Rice, which is celebrating its 50th anniversary this year. Here are the confessions of a vampire. Hypnotic, shocking, and chillingly sensual, this is a novel of mesmerizing beauty and astonishing force—a story of danger and flight, of love and loss, of suspense and resolution, and of the extraordinary power of the senses. It is a novel only Anne Rice could write. The event will be led by Crisanne Schworn, a former WPL employee and devoted fan of the horror genre. We will discuss the book while carving pumpkins on the library terrace. Pumpkins and carving tools will be provided. Participants can pick up a free copy of the book starting September 13th at the library front desk after signing up. Space is limited, so register early to reserve your copy.",
@@ -4616,6 +4736,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino, Ridgway",
     imageUrl: "https://koto.org/wp-content/uploads/2026/10/rocky-horror-shadow-cast-banner.png"
+  },
+  {
+    title: "Pumpkins & Peaks",
+    link: "https://koto.org/event/pumpkins-peaks/2026-10-25/",
+    description: "Celebrate fall in the mountains at Pumpkins & Peaks! Join TMVOA in Mountain Village for a day of free, family-friendly fall-inspired fun featuring pumpkins and pumpkin carving! In addition to getting to take your carved pumpkin home with you, you can also enjoy a petting zoo, face painting, a scavenger hunt with prizes, a fall-inspired family photo opportunity, 4WD off-road rides with Telluride Outside, outdoor movies & football screenings, fire pits, live music and more. Bundle up, bring the whole family, and enjoy a festive fall day in the mountains! This event is presented by TMVOA.",
+    pubDate: "2026-10-25T13:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Heritage Plaza, Mountain Village",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/p_ptmvbanner.1740x870.jpg"
   },
   {
     title: "Tea and Tarot",
@@ -4935,28 +5066,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Redvale Community Center",
     imageUrl: ""
-  },
-  {
-    title: "Up-Off Gymnastics, Dance, and Spanish",
-    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-11-06/",
-    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
-    pubDate: "2026-11-06T10:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Lone Cone Library Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
-  },
-  {
-    title: "Wildbelly Fermentation Fest",
-    link: "https://koto.org/event/wildbelly-fermentation-fest/",
-    description: "The Wildbelly Fermentation Fest is bringing together fermentation enthusiasts and expert teachers for two days of classes in the Mancos Valley on Nov. 7th & 8th.",
-    pubDate: "2026-11-07T00:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Mancos Community Center, Mancos, CO",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/03/857CD970-C1BC-4A46-AA34-6D1D567DA5AB.jpeg"
   }
 ];
 
@@ -5760,7 +5869,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
     description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
     pubDate: "2026-10-26T18:00:00.000Z",
-    endDate: "2026-12-14",
+    endDate: "2026-12-21",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5948,6 +6057,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Trunk or Treat",
+    link: "https://events.ourayridgwayevents.com/event/trunk-or-treat",
+    description: "Join Us for a Spooktacular Trunk or Treat! The Ridgway School District Family Engagement Committee invites you to a fun-filled Trunk or Treat Halloween! Put on your favorite costume, bring your candy bag, and join us for an evening of Halloween fun! This is a great opportunity for families to connect, enjoy some chili and treats, and celebrate with our wonderful community! Friday, October 30, 2026 4:30–5:30 PM Ridgway Library Parking Lot FREE Admission – Everyone Welcome! We can't wait to see all the little ghosts, goblins, and superheroes! Families, students, local businesses, and community organizations are invited to decorate a vehicle and hand out treats. Please email marissaamathis@gmail.com if you are interested in participating!",
+    pubDate: "2026-10-30T22:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ridgway Public Library",
+    imageUrl: "https://localist-images.azureedge.net/photos/54304459815198/huge/61fecb5849296161b03c2fdb1cab38268ab2ba07.jpg"
   },
   {
     title: "Floating Lotus Halloween Pint Night Supports Second Chance Humane Society",
@@ -6323,6 +6443,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg"
   },
   {
+    title: "Children's Story Time",
+    link: "https://events.ourayridgwayevents.com/event/childrens-story-time",
+    description: "An after-school story time program at the Ouray Public Library, welcoming children under 12. The recurring community event offers young readers the chance to enjoy stories together in a library setting.",
+    pubDate: "2026-11-12T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Public Library",
+    imageUrl: "https://localist-images.azureedge.net/photos/54312298062618/huge/a6fbed1afc71cd8df11f2dd64edccfd564bb4396.jpg"
+  },
+  {
     title: "Ouray Boys MS Basketball VS Telluride",
     link: "https://events.ourayridgwayevents.com/event/ouray-boys-ms-basketball-vs-telluride",
     description: "A middle school boys basketball matchup between Ouray and Telluride, with C Team, B Team, and A Team games scheduled sequentially throughout the afternoon and evening. The games take place at Ouray School.",
@@ -6343,6 +6474,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Annex on Cora",
     imageUrl: "https://localist-images.azureedge.net/photos/54066522860674/huge/ec6044316283ccc798d207fc858154d0421bc0ff.jpg"
+  },
+  {
+    title: "Ouray Public Library & Second Chance Cat/Kitten Adoption Event",
+    link: "https://events.ourayridgwayevents.com/event/catkitten-adoption-event",
+    description: "Second Chance Humane Society and Ouray Public Library are joining together to hold a Cat/Kitten Adoption event in the library.",
+    pubDate: "2026-11-13T21:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Public Library",
+    imageUrl: "https://localist-images.azureedge.net/photos/54312395432922/huge/81fa74c01c4c645711ce20fe9bdfa5eaf68361c6.jpg"
   },
   {
     title: "Ridgway Independent Film Fest 2026",
@@ -6366,6 +6508,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/54066525035817/huge/fc713b45b42bb680b2b3330e3f10c55c6faed8bf.jpg"
+  },
+  {
+    title: "Ouray Public Library Film Discussion",
+    link: "https://events.ourayridgwayevents.com/event/ouray-public-library-film-discussion",
+    description: "The film \"Tangerine\" will be discussed during this event. Reach out to programsouraypl@gmail.com to RSVP or learn more.",
+    pubDate: "2026-11-14T00:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Public Library",
+    imageUrl: "https://localist-images.azureedge.net/photos/54312441059400/huge/6a65afc072f95620c0759dcacd6a5be2f8e5463f.jpg"
   },
   {
     title: "Ridgway Independent Film Fest ~ Something Was Calling Us",
@@ -6501,6 +6654,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/54285174589098/huge/bfaabd4ba86f521f6c82e59eab09eadca8e67d94.jpg"
+  },
+  {
+    title: "After School Craft Time",
+    link: "https://events.ourayridgwayevents.com/event/after-school-craft-time-805",
+    description: "A recurring craft program at the Ouray Public Library welcomes children under 12 for a hands-on creative session after school. It is a community offering from the library for young kids looking to make something with their hands.",
+    pubDate: "2026-11-19T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Public Library",
+    imageUrl: "https://localist-images.azureedge.net/photos/54312499776171/huge/885dfa362713811755bfb15d49add9ac55c87307.jpg"
   },
   {
     title: "PSYLO at The Sherbino",
@@ -7973,6 +8137,23 @@ const LEGAL_NOTICES = [
     address: "53 East Homestead Road, Norwood, Colorado 81423 (Lot 24, Pioneer Village)",
     noticeKey: "foreclosure-2026-10-53-e-homestead-norwood",
     caseNumber: "2026-10"
+  },
+  {
+    title: "Request for Proposal -- TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS",
+    entity: "Town of Telluride",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Request for Proposal",
+    filterTag: "public-entity",
+    summary: "Town of Telluride is seeking qualified respondents for: TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS.",
+    deadline: "Closes 1/11/2026",
+    expires: "2026-01-11",
+    dates: "10/22",
+    url: "https://www.telluride.gov/bids.aspx?bidID=133",
+    address: "",
+    totBidID: "133"
   }
 ];
 

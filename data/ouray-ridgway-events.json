@@ -225,7 +225,7 @@
     "link": "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
     "description": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
     "pubDate": "2026-10-26T18:00:00.000Z",
-    "endDate": "2026-12-14",
+    "endDate": "2026-12-21",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
     "category": "Community Event",
@@ -413,6 +413,17 @@
     "category": "Community Event",
     "location": "687 N Cora Street, Ridgway, CO 81432",
     "imageUrl": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    "title": "Trunk or Treat",
+    "link": "https://events.ourayridgwayevents.com/event/trunk-or-treat",
+    "description": "Join Us for a Spooktacular Trunk or Treat! The Ridgway School District Family Engagement Committee invites you to a fun-filled Trunk or Treat Halloween! Put on your favorite costume, bring your candy bag, and join us for an evening of Halloween fun! This is a great opportunity for families to connect, enjoy some chili and treats, and celebrate with our wonderful community! Friday, October 30, 2026 4:30–5:30 PM Ridgway Library Parking Lot FREE Admission – Everyone Welcome! We can't wait to see all the little ghosts, goblins, and superheroes! Families, students, local businesses, and community organizations are invited to decorate a vehicle and hand out treats. Please email marissaamathis@gmail.com if you are interested in participating!",
+    "pubDate": "2026-10-30T22:30:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Ridgway Public Library",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54304459815198/huge/61fecb5849296161b03c2fdb1cab38268ab2ba07.jpg"
   },
   {
     "title": "Floating Lotus Halloween Pint Night Supports Second Chance Humane Society",
@@ -788,6 +799,17 @@
     "imageUrl": "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg"
   },
   {
+    "title": "Children's Story Time",
+    "link": "https://events.ourayridgwayevents.com/event/childrens-story-time",
+    "description": "An after-school story time program at the Ouray Public Library, welcoming children under 12. The recurring community event offers young readers the chance to enjoy stories together in a library setting.",
+    "pubDate": "2026-11-12T23:00:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Ouray Public Library",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54312298062618/huge/a6fbed1afc71cd8df11f2dd64edccfd564bb4396.jpg"
+  },
+  {
     "title": "Ouray Boys MS Basketball VS Telluride",
     "link": "https://events.ourayridgwayevents.com/event/ouray-boys-ms-basketball-vs-telluride",
     "description": "A middle school boys basketball matchup between Ouray and Telluride, with C Team, B Team, and A Team games scheduled sequentially throughout the afternoon and evening. The games take place at Ouray School.",
@@ -808,6 +830,17 @@
     "category": "Community Event",
     "location": "The Annex on Cora",
     "imageUrl": "https://localist-images.azureedge.net/photos/54066522860674/huge/ec6044316283ccc798d207fc858154d0421bc0ff.jpg"
+  },
+  {
+    "title": "Ouray Public Library & Second Chance Cat/Kitten Adoption Event",
+    "link": "https://events.ourayridgwayevents.com/event/catkitten-adoption-event",
+    "description": "Second Chance Humane Society and Ouray Public Library are joining together to hold a Cat/Kitten Adoption event in the library.",
+    "pubDate": "2026-11-13T21:00:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Ouray Public Library",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54312395432922/huge/81fa74c01c4c645711ce20fe9bdfa5eaf68361c6.jpg"
   },
   {
     "title": "Ridgway Independent Film Fest 2026",
@@ -831,6 +864,17 @@
     "category": "Community Event",
     "location": "The Sherbino",
     "imageUrl": "https://localist-images.azureedge.net/photos/54066525035817/huge/fc713b45b42bb680b2b3330e3f10c55c6faed8bf.jpg"
+  },
+  {
+    "title": "Ouray Public Library Film Discussion",
+    "link": "https://events.ourayridgwayevents.com/event/ouray-public-library-film-discussion",
+    "description": "The film \"Tangerine\" will be discussed during this event. Reach out to programsouraypl@gmail.com to RSVP or learn more.",
+    "pubDate": "2026-11-14T00:30:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Ouray Public Library",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54312441059400/huge/6a65afc072f95620c0759dcacd6a5be2f8e5463f.jpg"
   },
   {
     "title": "Ridgway Independent Film Fest ~ Something Was Calling Us",
@@ -966,6 +1010,17 @@
     "category": "Community Event",
     "location": "The Sherbino",
     "imageUrl": "https://localist-images.azureedge.net/photos/54285174589098/huge/bfaabd4ba86f521f6c82e59eab09eadca8e67d94.jpg"
+  },
+  {
+    "title": "After School Craft Time",
+    "link": "https://events.ourayridgwayevents.com/event/after-school-craft-time-805",
+    "description": "A recurring craft program at the Ouray Public Library welcomes children under 12 for a hands-on creative session after school. It is a community offering from the library for young kids looking to make something with their hands.",
+    "pubDate": "2026-11-19T23:00:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Ouray Public Library",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54312499776171/huge/885dfa362713811755bfb15d49add9ac55c87307.jpg"
   },
   {
     "title": "PSYLO at The Sherbino",

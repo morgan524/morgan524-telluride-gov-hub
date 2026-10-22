@@ -446,7 +446,7 @@
   "telluride|2026-11-04|Commission for Community Assistance, Arts & Special Events - Nov 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8068",
     "sv": 4,
-    "ph": "da4f1e75726dd622"
+    "ph": "d59f611c627c7101"
   },
   "telluride|2026-11-04|Telluride Housing Authority Subcommittee - Nov 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8165",
@@ -672,5 +672,9 @@
   "telluride|2026-10-23|Commission for Community Assistance, Arts & Special Events - Grant Subcommittee -Oct 23 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8328",
     "sv": 4
+  },
+  "county|2026-10-26|San Miguel Basin Fair Board Meeting 10/26": {
+    "sv": 4,
+    "ph": "47dc9b32b4fc82eb"
   }
 }

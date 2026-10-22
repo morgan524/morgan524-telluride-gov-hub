@@ -68,19 +68,6 @@
     "type": "Arts & Film"
   },
   {
-    "title": "Pilates for All Bodies with Laura",
-    "href": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-10-22/",
-    "date": "2026-10-22",
-    "time": "12:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/wellness.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    "type": "Wellness"
-  },
-  {
     "title": "Books Alive with Telluride Theatre (TES)",
     "href": "https://telluridelibrary.libcal.com/event/17704437?hs=a",
     "date": "2026-10-22",
@@ -438,6 +425,19 @@
     "endDate": "2026-11-02"
   },
   {
+    "title": "Pumpkins & Peaks",
+    "href": "https://koto.org/event/pumpkins-peaks/2026-10-24/",
+    "date": "2026-10-24",
+    "time": "1:00 PM",
+    "location": "Heritage Plaza, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://koto.org/wp-content/uploads/2026/10/p_ptmvbanner.1740x870.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Celebrate fall in the mountains at Pumpkins & Peaks! Join TMVOA in Mountain Village for a day of free, family-friendly fall-inspired fun featuring pumpkins and pumpkin carving! In addition to getting to take your carved pumpkin home with…",
+    "type": "Family & Kids"
+  },
+  {
     "title": "Ouray County Ranch History Museum Pie Contest & Free Museum Day",
     "href": "https://koto.org/event/ouray-county-ranch-history-museum-pie-contest-free-museum-day/",
     "date": "2026-10-24",
@@ -501,20 +501,6 @@
     "source": "KOTO Community Calendar",
     "desc": "Join us for a spine-tingling afternoon of discussion and seasonal fun. We'll be reading Interview with a Vampire by Anne Rice, which is celebrating its 50th anniversary this year. Here are the confessions of a vampire. Hypnotic, shocking,…",
     "type": "Talks & Classes"
-  },
-  {
-    "title": "Pumpkins & Peaks",
-    "href": "https://www.telluride.com/event/pumpkins-peaks/",
-    "date": "2026-10-24",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63613/p_pttbbanner.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Celebrate fall in the mountains at Pumpkins & Peaks! Join TMVOA in Mountain Village for a day of free, …",
-    "type": "Community",
-    "endDate": "2026-10-26"
   },
   {
     "title": "SNL: Saturday Night at the Livery in Norwood Features Devaki Murch and Operation Babylift",
@@ -593,6 +579,19 @@
     "source": "Mountain Village",
     "desc": "Brooke Einbender's nighttime immersive public artwork, Gaiascope, comes to Mountain Village following its presentation during the 2026 World Cup in downtown San José, California. The community is invited to experience this large-scale…",
     "type": "Talks & Classes"
+  },
+  {
+    "title": "Pumpkins & Peaks",
+    "href": "https://koto.org/event/pumpkins-peaks/2026-10-25/",
+    "date": "2026-10-25",
+    "time": "1:00 PM",
+    "location": "Heritage Plaza, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://koto.org/wp-content/uploads/2026/10/p_ptmvbanner.1740x870.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Celebrate fall in the mountains at Pumpkins & Peaks! Join TMVOA in Mountain Village for a day of free, family-friendly fall-inspired fun featuring pumpkins and pumpkin carving! In addition to getting to take your carved pumpkin home with…",
+    "type": "Family & Kids"
   },
   {
     "title": "Solkattu Workshop",
@@ -726,7 +725,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
     "type": "Community",
-    "endDate": "2026-12-14"
+    "endDate": "2026-12-21"
   },
   {
     "title": "Author Talk: Pam Houston",
@@ -1267,6 +1266,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "The Jelly Bowl Band performs a live music show at a venue on N Cora Street in Ridgway. The event takes place in the evening on October 30th, offering a night of live music the day before Halloween.",
     "type": "Music"
+  },
+  {
+    "title": "Trunk or Treat",
+    "href": "https://events.ourayridgwayevents.com/event/trunk-or-treat",
+    "date": "2026-10-30",
+    "time": "4:30 PM",
+    "location": "Ridgway Public Library",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54304459815198/huge/61fecb5849296161b03c2fdb1cab38268ab2ba07.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join Us for a Spooktacular Trunk or Treat! The Ridgway School District Family Engagement Committee invites you to a fun-filled Trunk or Treat Halloween! Put on your favorite costume, bring your candy bag, and join us for an evening of…",
+    "type": "Family & Kids"
   },
   {
     "title": "YOUNG FRANKENSTEIN – THE MUSICAL (a TMHS & Telluride Theatre Co-Production)",
@@ -1833,19 +1845,6 @@
     "type": "Outdoors & Sports"
   },
   {
-    "title": "Up-Off Gymnastics, Dance, and Spanish",
-    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-11-06/",
-    "date": "2026-11-06",
-    "time": "10:00 AM",
-    "location": "Lone Cone Library Norwood",
-    "town": "Norwood",
-    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
-    "type": "Music"
-  },
-  {
     "title": "Joint County Discussion of Wildfire Funding Opportunities",
     "href": "https://ouraycountyco.gov/Calendar.aspx?EID=3792",
     "date": "2026-11-06",
@@ -1990,19 +1989,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "ABOUT THE PERFORMANCE “As irreverent as it is poignant” — Australian Arts Review Come for the music; stay for the existential crisis. Genre-blurring jester and cellist Karen Hall peels back the layers of concert-hall formality until only…",
     "type": "Music"
-  },
-  {
-    "title": "Wildbelly Fermentation Fest",
-    "href": "https://koto.org/event/wildbelly-fermentation-fest/",
-    "date": "2026-11-07",
-    "time": "",
-    "location": "Mancos Community Center, Mancos, CO",
-    "town": "",
-    "img": "https://koto.org/wp-content/uploads/2026/03/857CD970-C1BC-4A46-AA34-6D1D567DA5AB.jpeg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Wildbelly Fermentation Fest is bringing together fermentation enthusiasts and expert teachers for two days of classes in the Mancos Valley on Nov. 7th & 8th.",
-    "type": "Community"
   },
   {
     "title": "Movies Under the Stars",
@@ -2188,6 +2174,19 @@
     "type": "Community"
   },
   {
+    "title": "Children's Story Time",
+    "href": "https://events.ourayridgwayevents.com/event/childrens-story-time",
+    "date": "2026-11-12",
+    "time": "4:00 PM",
+    "location": "Ouray Public Library",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/54312298062618/huge/a6fbed1afc71cd8df11f2dd64edccfd564bb4396.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "An after-school story time program at the Ouray Public Library, welcoming children under 12. The recurring community event offers young readers the chance to enjoy stories together in a library setting.",
+    "type": "Family & Kids"
+  },
+  {
     "title": "Ouray Boys MS Basketball VS Telluride",
     "href": "https://events.ourayridgwayevents.com/event/ouray-boys-ms-basketball-vs-telluride",
     "date": "2026-11-12",
@@ -2241,6 +2240,19 @@
     "endDate": "2026-12-10"
   },
   {
+    "title": "Ouray Public Library & Second Chance Cat/Kitten Adoption Event",
+    "href": "https://events.ourayridgwayevents.com/event/catkitten-adoption-event",
+    "date": "2026-11-13",
+    "time": "2:00 PM",
+    "location": "Ouray Public Library",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/54312395432922/huge/81fa74c01c4c645711ce20fe9bdfa5eaf68361c6.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Second Chance Humane Society and Ouray Public Library are joining together to hold a Cat/Kitten Adoption event in the library.",
+    "type": "Community"
+  },
+  {
     "title": "KOTO Ski Swap",
     "href": "https://www.telluride.com/event/koto-ski-swap/",
     "date": "2026-11-13",
@@ -2253,6 +2265,19 @@
     "desc": "Get prepped for the winter season ahead at the annual KOTO Ski Swap at the Wilkinson Public Library. Donate your used …",
     "type": "Community",
     "endDate": "2026-11-16"
+  },
+  {
+    "title": "Ouray Public Library Film Discussion",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-public-library-film-discussion",
+    "date": "2026-11-13",
+    "time": "5:30 PM",
+    "location": "Ouray Public Library",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/54312441059400/huge/6a65afc072f95620c0759dcacd6a5be2f8e5463f.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The film \"Tangerine\" will be discussed during this event. Reach out to programsouraypl@gmail.com to RSVP or learn more.",
+    "type": "Arts & Film"
   },
   {
     "title": "Ridgway Independent Film Fest 2026",
@@ -2516,6 +2541,19 @@
     "source": "Mountain Village",
     "desc": "Mountain Village's Heritage Plaza hosts a community market featuring local vendors at tents throughout the pedestrian-friendly plaza. The market brings together a variety of goods from area sellers in an outdoor setting.",
     "type": "Community"
+  },
+  {
+    "title": "After School Craft Time",
+    "href": "https://events.ourayridgwayevents.com/event/after-school-craft-time-805",
+    "date": "2026-11-19",
+    "time": "4:00 PM",
+    "location": "Ouray Public Library",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/54312499776171/huge/885dfa362713811755bfb15d49add9ac55c87307.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "A recurring craft program at the Ouray Public Library welcomes children under 12 for a hands-on creative session after school. It is a community offering from the library for young kids looking to make something with their hands.",
+    "type": "Family & Kids"
   },
   {
     "title": "Pickleball Nights",

@@ -1,22 +1,26 @@
 {
-  "hash": "66db5db97139f9fcb2001d7585058734b99f856a",
-  "lede": "The biggest thing on the table this week is the Telluride Hospital District board's discussion and possible action on a Two Site Model — where THD delivers care going forward is a long-term question for this whole valley, and Wednesday's meeting is where that conversation gets formal. Same day, P&Z hears the Shandoka Lot Redevelopment PUD at 860 Black Bear Rd, and Town Council meets Monday for first readings on two ordinances plus a gondola IGA supplement tied to SMART 3A funding. It's a heavy week for anyone paying attention to how this place is shaped.",
+  "hash": "5438d11a78f30931a1e135a5e9e026fddfc5431e",
+  "lede": "The biggest thing on the docket this week is Wednesday's Town Council meeting, where two ordinances get first readings and Council takes up the Fourth Supplement to the Gondola IGA — real decisions with real money attached. That same Wednesday, P&Z hears the long-delayed Shandoka Lot Redevelopment PUD at 860 Black Bear Rd, and the Telluride Hospital District board weighs possible action on a Two Site Model that could reshape how care gets delivered in this valley for years to come.",
   "notable": [
     {
       "id": 0,
-      "stake": "Board may act on Two Site Model reshaping how THD delivers care."
+      "stake": "Board may act on Two Site Model, reshaping long-term healthcare delivery here."
+    },
+    {
+      "id": 1,
+      "stake": "60-minute feasibility analysis of Lots 1007/1008 will steer major TMVOA decisions."
     },
     {
       "id": 2,
-      "stake": "PUD hearing for Town-owned 860 Black Bear Rd could expand dimensional limits."
+      "stake": "Public hearing on Shandoka PUD proposes increased dimensional limits on Town-owned land."
     },
     {
       "id": 4,
-      "stake": "Variance vote to reduce setback on Mountain Village parcel near County Road 63L."
+      "stake": "Variance request to reduce required setback on Mountain Village parcel goes to a vote."
     },
     {
-      "id": 10,
-      "stake": "Council votes on gondola IGA supplement and two ordinances at first reading."
+      "id": 11,
+      "stake": "Two ordinances get first reading; gondola IGA supplement extends cost-sharing commitments."
     }
   ]
 }
