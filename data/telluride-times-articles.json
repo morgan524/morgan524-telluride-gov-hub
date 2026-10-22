@@ -1,12 +1,24 @@
 [
   {
+    "title": "Norwood school construction raises noise concerns",
+    "source": "Telluride Times",
+    "date": "October 22, 2026",
+    "firstSeen": "2026-10-22",
+    "newsTopic": "education",
+    "copy": "Construction of Norwood's new school near Pinion Park has drawn noise complaints from neighbors, mostly around early morning and holiday work. The town asks residents to report complaints directly to Town Hall at (970) 327-4288, not the school district. A traffic study also flagged sight-line issues at Grand Ave and South Market St., with crosswalks proposed but parking cuts drawing pushback from trustees.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/norwood_post/article_94acc417-3cc8-4761-87c8-2c6ec17eb906.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/8c/c8cf540b-39c0-47eb-92ac-62c1175835b9/6ada1907bde71.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Voting-related measures on November ballots include a voter ID push targeting mail-in ballots",
     "source": "Telluride Times",
     "date": "October 22, 2026",
     "firstSeen": "2026-10-22",
     "newsTopic": "government",
-    "copy": "Advocates for stricter voter ID laws are pushing new measures in some states to require driver's license or partial Social Security numbers on mail-in ballots. In California, Colorado and Nevada, these proposals are on the midterm election ballots. The voter…",
-    "claudeSummary": false,
+    "copy": "Voters in California, Colorado, and Nevada are deciding on ballot measures this November that would require driver's license or partial Social Security numbers on mail-in ballots. Similar measures appear in Arizona, North Carolina, and Ohio, referred by Republican-led legislatures. Nationally, about 1 in 5 state ballot measures this cycle touch voting rules or election procedures.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/news/state/article_ed1c9fb1-ede7-5c0b-9689-7fa9da305f2c.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/7c/27c88659-31b2-550b-84fb-395ce845b876/6ad9ea63e9886.image.jpg",
     "imgHiRes": true
@@ -1242,28 +1254,6 @@
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
     "claudeSummary": false,
     "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-reminds-pet-owners-of-responsibilities-2026-10-06.pdf",
-    "img": ""
-  },
-  {
-    "title": "Ridgway Planning Commission Meeting Agenda",
-    "source": "Town of Ridgway",
-    "date": "October 21, 2026",
-    "firstSeen": "2026-10-17",
-    "newsTopic": "community",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-Planning-Commission-Meeting-Packet---October-21%2C-2026-acc.pdf",
-    "img": ""
-  },
-  {
-    "title": "Public Hearing Notice Wednesday, October 21, 2026 at 5:30pm: Amendment to Master Plan considering adding an addendum \"Water Supply Element\"",
-    "source": "Town of Ridgway",
-    "date": "October 12, 2026",
-    "firstSeen": "2026-10-13",
-    "newsTopic": "land-use",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.10.21_public-hearing-notice.pdf",
     "img": ""
   },
   {

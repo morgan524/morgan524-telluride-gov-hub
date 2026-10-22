@@ -446,7 +446,7 @@
   "telluride|2026-11-04|Commission for Community Assistance, Arts & Special Events - Nov 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8068",
     "sv": 4,
-    "ph": "08f639f85583f1c4"
+    "ph": "da4f1e75726dd622"
   },
   "telluride|2026-11-04|Telluride Housing Authority Subcommittee - Nov 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8165",
@@ -668,5 +668,9 @@
   "tmvoa|2026-10-27|TMVOA Finance &amp; Budget Committee": {
     "sv": 4,
     "ph": "b858cb282617fb09"
+  },
+  "telluride|2026-10-23|Commission for Community Assistance, Arts & Special Events - Grant Subcommittee -Oct 23 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8328",
+    "sv": 4
   }
 }

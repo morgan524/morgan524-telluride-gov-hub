@@ -1026,7 +1026,7 @@
     "time": "6:00 PM",
     "location": "Sheridan Opera House • Telluride, CO",
     "town": "Telluride",
-    "img": "https://sheridanoperahouse.com/wp-content/uploads/2022/08/VendorBadge_AsSeenOnWeb.png",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-1.jpg",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
     "desc": "A theatrical performance at the Sheridan Opera House presenting two spooky-season stories: Washington Irving's classic *The Legend of Sleepy Hollow* and *The Little Ghost Who Was a Quilt*. The production is part of the Adventures in Acting…",
@@ -1846,6 +1846,19 @@
     "type": "Music"
   },
   {
+    "title": "Joint County Discussion of Wildfire Funding Opportunities",
+    "href": "https://ouraycountyco.gov/Calendar.aspx?EID=3792",
+    "date": "2026-11-06",
+    "time": "3:30 AM",
+    "location": "-",
+    "town": "Ouray",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
+    "category": "Community Event",
+    "source": "Ouray County",
+    "desc": "Representatives from multiple counties will gather to discuss funding opportunities related to wildfire preparedness and mitigation. The meeting, organized through Ouray County, may include participation from two or more Ouray County…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "First Friday Art Walk",
     "href": "https://events.ourayridgwayevents.com/event/first-friday-art-walk",
     "date": "2026-11-06",
@@ -2557,6 +2570,32 @@
     "type": "Community"
   },
   {
+    "title": "Movies Under the Stars",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    "date": "2026-11-21",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Movies Under the Stars is a recurring outdoor film series held on Saturday evenings at dusk at the Conference Center Plaza in Mountain Village, running from June 13 through August 15. The community event brings free outdoor cinema to the…",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Mind Blown Telluride",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    "date": "2026-11-21",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    "type": "Community"
+  },
+  {
     "title": "Thanksgiving Break - Ridgway Schools",
     "href": "https://events.ourayridgwayevents.com/event/thanksgiving-break-ridgway-schools",
     "date": "2026-11-23",
@@ -2679,6 +2718,20 @@
     "desc": "Trivia Night at Floating Lotus Brewery! Join us Thursday, December 3 and Thursday, December 17 from 7–9 PM for a lively night of questions, drinks and friendly competition. Grab a table, bring your team, and learn more at…",
     "type": "Food & Drink",
     "endDate": "2026-12-18"
+  },
+  {
+    "title": "YPT: The SpongeBob Musical",
+    "href": "https://sheridanoperahouse.com/events/ypt-the-spongebob-musical/",
+    "date": "2026-12-04",
+    "time": "5:00 PM",
+    "location": "Sheridan Opera House • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/09/Screenshot-2026-10-12-at-10.51.39-AM.png",
+    "category": "Concert / Performance",
+    "source": "Sheridan Opera House",
+    "desc": "Young People's Theatre presents The SpongeBob Musical at the Sheridan Opera House, bringing the beloved underwater world of Bikini Bottom to life on stage. This youth theater production adapts the beloved animated series into a full-scale…",
+    "type": "Arts & Film",
+    "endDate": "2026-12-06"
   },
   {
     "title": "23rd Annual Holiday Art & Gift Sale",

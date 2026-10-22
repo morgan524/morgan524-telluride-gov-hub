@@ -321,8 +321,8 @@ const TMVOA_CACHED_DATA = [
     date: "October 22, 2026",
     title: "TMVOA Board of Directors Meeting",
     board: "board",
-    agendaUrl: "https://tmvoa.org/site/assets/files/4868/tmvoa_board_meeting_agenda_10_22_26.pdf",
-    packetUrl: "https://tmvoa.org/site/assets/files/4868/tmvoa_board_meeting_packet_10_22_26.pdf",
+    agendaUrl: "https://tmvoa.org/site/assets/files/4868/tmvoa_board_meeting_agenda_10_22_26_revised-1.pdf",
+    packetUrl: "https://tmvoa.org/site/assets/files/4868/tmvoa_board_meeting_packet_10_22_26_revised-1.pdf",
     location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
@@ -677,15 +677,6 @@ const NORWOOD_SAN_URL = 'https://www.norwoodtown.com/norwood-sanitation-district
 const NORWOOD_CACHE_DATE = '2026-10-22';
 
 const NORWOOD_CACHED_DATA = [
-  {
-    date: "October 15, 2026",
-    time: null,
-    title: "Board of Trustees CANCELLED Public Hearing - Resolution No. 2026-0812",
-    agendaUrl: "https://www.norwoodtown.com/files/a37db5db3/10.15.2026+Board+of+Trustee+Public+Hearing+Cancellation.pdf",
-    packetUrl: null,
-    special: false,
-    board: "bot"
-  },
   {
     date: "October 19, 2026",
     time: null,

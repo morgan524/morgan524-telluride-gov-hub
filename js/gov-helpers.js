@@ -363,7 +363,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8120","sv":4,"ph":"f7fa71ad7c369cd5"},
 
   "telluride|2026-11-04|Commission for Community Assistance, Arts & Special Events - Nov 04 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8068","sv":4,"ph":"08f639f85583f1c4"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8068","sv":4,"ph":"da4f1e75726dd622"},
 
   "telluride|2026-11-04|Telluride Housing Authority Subcommittee - Nov 04 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8165","sv":4,"ph":"89b54e4a61932908"},
@@ -504,7 +504,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.10.26-Gsub-Agenda.pdf","zoomUrl":"https://urldefense.com/v3/__https:/gbsm.zoom.us/j/82559576086__;!!ETWISUBM!3x58A-FfNf9JhIvrh2mHeq3wy9OHc7S76v3Obypudr5m-ILQvLZAsE3ZuUUqFUGuSSfFOzlMG_ETBGmg3kQV-w$","sv":4},
 
   "tmvoa|2026-10-27|TMVOA Finance &amp; Budget Committee":
-    {"sv":4,"ph":"b858cb282617fb09"}
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "telluride|2026-10-23|Commission for Community Assistance, Arts & Special Events - Grant Subcommittee -Oct 23 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8328","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -839,11 +842,14 @@ const MEETING_PREVIEWS = {
   "smart|2026-10-26|SMART Gondola Advisory Committee":
     "The SMART Gondola Advisory Committee will receive an update on the FTA Capital Investment Program and hear reports on SMART and partner jurisdiction activities. The virtual meeting will also include time for new business discussion and public comment.",
 
+  "telluride|2026-10-23|Commission for Community Assistance, Arts & Special Events - Grant Subcommittee -Oct 23 2026":
+    "The Grant Subcommittee is expected to review and discuss 2027 Grant Application Discrepancy Matrices during a worksession. The meeting will be held in person at Rebekah Hall on October 23, 2026.",
+
   "telluride|2026-10-22|Planning & Zoning Commission - Oct 22 2026":
-    "The Planning & Zoning Commission is expected to review minutes from its September meeting and hold a public hearing on the Shandoka Lot Redevelopment Project, which involves consideration of a Preliminary Planned Unit Development application. Public comment on non-agenda items will also be accepted.",
+    "The Planning & Zoning Commission is expected to review minutes from its September 24 meeting and hold a public hearing on the Shandoka Lot Redevelopment Project, which involves consideration of a Preliminary Planned Unit Development application.",
 
   "telluride|2026-10-22|(Rescheduled to 11/2) Planning & Zoning Commission Chair - Oct 22 2026":
-    "The Planning & Zoning Commission Chair meeting originally scheduled for October 22, 2026 has been rescheduled to November 2, 2026 at 9:00 a.m. at Rebekah Hall. No substantive agenda items have been published for the rescheduled session."
+    "The Planning & Zoning Commission meeting originally scheduled for October 22, 2026 has been rescheduled to November 2, 2026 at 9:00 a.m. at Rebekah Hall. No specific agenda items were released; details are expected upon the rescheduled meeting's formal notice."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -947,56 +953,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "Watershed protection project extended",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 22, 2026",
-    newsTopic: "public-safety",
-    copy: "The Emergency Watershed Protection project to mitigate debris flows below the Gold Mountain Fire burn area has received a 45-day extension with a new completion date of Nov. 17. Most construction is scheduled to be finished by Nov. 3. The federal Natural Resources Conservation Service approved the e",
-    href: "https://www.ouraynews.com/2026/10/21/watershed-protection-project-extended/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Log Hill funds never meant to offset deficit",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 22, 2026",
-    newsTopic: "government",
-    copy: "Dear Editor: I strongly disagree that the Board of County Commissioners be able to tap into or use monies/funds that were paid by and belong to the residents of Log Hill Village, and designated specifically for paving and upkeep of our roads. Those funds were never intended to be used to offset any ",
-    href: "https://www.ouraynews.com/2026/10/21/log-hill-funds-never-meant-offset-deficit/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Voters deserve better than Congressman Hurd",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 22, 2026",
-    newsTopic: "government",
-    copy: "Dear Editor: As we approach the November election, we’ll doubtless be hearing a lot about U.S. Rep. Jeff Hurd’s commitment to local issues. His mailers will almost certainly feature the congressman duded out in western casual, a shimmering Crystal Lake in the background and a smile on his face. Well",
-    href: "https://www.ouraynews.com/2026/10/21/voters-deserve-better-congressman-hurd/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Weiser committed to CO",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 22, 2026",
-    newsTopic: "community",
-    copy: "Dear Editor: Phil Weiser is deeply committed to justice and public service. The son and grandson of Holocaust survivors, he will be willing to fight for the American dream. Phil has made it a priority while running for governor to listen to his constituents. He has traveled across the state, holding",
-    href: "https://www.ouraynews.com/2026/10/21/weiser-committed-co/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Who’s funding statewide measures?",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "October 22, 2026",
-    newsTopic: "government",
-    copy: "Dear Editor: We have seven amendments and seven propositions on our Ouray County ballot. Amendments 81, 82, 83, 84, 85 and 86 and propositions 132 and 136 have as registered agents people from the West Group and Advance Colorado organizations. Amendment 87 and Proposition NN are opposed by the Advan",
-    href: "https://www.ouraynews.com/2026/10/21/whos-funding-statewide-measures/?ta_paidstory",
-    img: ""
-  },
-  {
     title: "News Release: Town, City and County Establish New Three-Year Affordable Housing Goals",
     source: "Ouray County",
     sourceKey: "ouray-county",
@@ -1024,6 +980,56 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "This week's parish bulletin is attached. As always, please check the Parish Calendar for the most updated information.Reminders:There will be a second collection this weekend for World Mission Sunday. Read the Pastor's Corner for more infor...",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-october-18/",
+    img: ""
+  },
+  {
+    title: "Will Coloradans choose the ‘right to hunt’?",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 15, 2026",
+    newsTopic: "community",
+    copy: "Colorado’s vote next month on whether to amend the state Constitution by codifying the right to hunt and fish has intensified debate among hunters, conservationists and legal experts over exactly who — and which parts of the state — should take the lead in its wildlife management policy. Amendment 8",
+    href: "https://www.ouraynews.com/2026/10/14/will-coloradans-choose-right-hunt/",
+    img: ""
+  },
+  {
+    title: "City hit with another police suit",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 15, 2026",
+    newsTopic: "public-safety",
+    copy: "The city of Ouray faces another lawsuit from an ex-employee of the police department. In a complaint filed last week in district court, former Ouray Police Department administrative assistant Lucy Reeder claimed the city lost her personal information, violated its own policies and wasn t honest abou",
+    href: "https://www.ouraynews.com/2026/10/14/city-hit-another-police-suit/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "County OKs police deal",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 15, 2026",
+    newsTopic: "government",
+    copy: "Ouray County commissioners approved a revised contract Tuesday that would make the Ouray County Sheriff’s Office the full-time provider of police services in the city of Ouray — but at a higher cost to the city than discussed last week. The board unanimously signed off on a new intergovernmental agr",
+    href: "https://www.ouraynews.com/2026/10/14/county-oks-police-deal/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "In light of budget cuts, Padgett takes 10% salary reduction",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 15, 2026",
+    newsTopic: "government",
+    copy: "Ouray County Commissioner Lynn Padgett will take a voluntary 10% salary reduction next year in a show of solidarity with other departments that took cuts for the 2027 budget. Padgett said budget reductions for travel to trainings and membership in outside organizations have also resulted in at least",
+    href: "https://www.ouraynews.com/2026/10/14/light-budget-cuts-padgett-takes-10-salary-reduction/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "School district to sell workforce unit",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "October 15, 2026",
+    newsTopic: "housing",
+    copy: "The Ridgway School Board plans to sell the school district’s last affordable housing unit and rejected a land donation that could have been used to build more housing at a board meeting Oct. 8. No staff members are occupying the district’s deed-restricted property in the Wetterhorn Homes development",
+    href: "https://www.ouraynews.com/2026/10/14/school-district-sell-workforce-unit/?ta_paidstory",
     img: ""
   },
   {
@@ -1425,7 +1431,10 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets virtually on October 26. The main item is a 25-minute informational update on the FTA Capital Investment Program — the federal funding pipeline that the gondola project depends on — presented by Ed Parks and Gavin Poindexter. Amber Blake follows with SMART and partner jurisdiction updates. Miles Graham handles new business and public comment, each allotted five minutes. No votes or formal actions are on the agenda; this is a status-check meeting.",
 
   "tmvoa|2026-10-27|TMVOA Finance &amp; Budget Committee":
-    "The October 27 TMVOA Finance & Budget Committee agenda hasn't been posted yet."
+    "The October 27 TMVOA Finance & Budget Committee agenda hasn't been posted yet.",
+
+  "telluride|2026-10-23|Commission for Community Assistance, Arts & Special Events - Grant Subcommittee -Oct 23 2026":
+    "The Grant Subcommittee meets to work through discrepancy matrices from the 2027 grant applications — the internal reconciliation step where reviewers compare scores and flag inconsistencies before recommendations move forward."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2637,13 +2646,25 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Norwood school construction raises noise concerns",
+    source: "Telluride Times",
+    date: "October 22, 2026",
+    firstSeen: "2026-10-22",
+    newsTopic: "education",
+    copy: "Construction of Norwood's new school near Pinion Park has drawn noise complaints from neighbors, mostly around early morning and holiday work. The town asks residents to report complaints directly to Town Hall at (970) 327-4288, not the school district. A traffic study also flagged sight-line issues at Grand Ave and South Market St., with crosswalks proposed but parking cuts drawing pushback from trustees.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_94acc417-3cc8-4761-87c8-2c6ec17eb906.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/8c/c8cf540b-39c0-47eb-92ac-62c1175835b9/6ada1907bde71.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Voting-related measures on November ballots include a voter ID push targeting mail-in ballots",
     source: "Telluride Times",
     date: "October 22, 2026",
     firstSeen: "2026-10-22",
     newsTopic: "government",
-    copy: "Advocates for stricter voter ID laws are pushing new measures in some states to require driver's license or partial Social Security numbers on mail-in ballots. In California, Colorado and Nevada, these proposals are on the midterm election ballots. The voter…",
-    claudeSummary: false,
+    copy: "Voters in California, Colorado, and Nevada are deciding on ballot measures this November that would require driver's license or partial Social Security numbers on mail-in ballots. Similar measures appear in Arizona, North Carolina, and Ohio, referred by Republican-led legislatures. Nationally, about 1 in 5 state ballot measures this cycle touch voting rules or election procedures.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_ed1c9fb1-ede7-5c0b-9689-7fa9da305f2c.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/7c/27c88659-31b2-550b-84fb-395ce845b876/6ad9ea63e9886.image.jpg",
     imgHiRes: true
@@ -3879,28 +3900,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-reminds-pet-owners-of-responsibilities-2026-10-06.pdf",
-    img: ""
-  },
-  {
-    title: "Ridgway Planning Commission Meeting Agenda",
-    source: "Town of Ridgway",
-    date: "October 21, 2026",
-    firstSeen: "2026-10-17",
-    newsTopic: "community",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-Planning-Commission-Meeting-Packet---October-21%2C-2026-acc.pdf",
-    img: ""
-  },
-  {
-    title: "Public Hearing Notice Wednesday, October 21, 2026 at 5:30pm: Amendment to Master Plan considering adding an addendum \"Water Supply Element\"",
-    source: "Town of Ridgway",
-    date: "October 12, 2026",
-    firstSeen: "2026-10-13",
-    newsTopic: "land-use",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.10.21_public-hearing-notice.pdf",
     img: ""
   },
   {
@@ -5177,17 +5176,6 @@ const ALIBI_EVENTS = [
  * Bot overwrites this on first run. */
 const SHERIDAN_EVENTS = [
   {
-    title: "Freeski Film Night: Telluride Mountain Club",
-    link: "https://sheridanoperahouse.com/events/freeski-film-night-telluride-mountain-club/",
-    description: "Telluride Mountain Club hosts a freeski film night at the historic Sheridan Opera House, bringing together ski and snowboard enthusiasts for an evening of action-packed mountain film. The event celebrates freestyle skiing culture and the adventurous spirit of the surrounding San Juan peaks as the winter season approaches.",
-    pubDate: "2026-10-21",
-    source: "sheridan",
-    sourceLabel: "Sheridan Opera House",
-    category: "Concert / Performance",
-    location: "Sheridan Opera House • Telluride, CO",
-    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/10/Screenshot-2026-10-13-at-9.31.44-AM.png"
-  },
-  {
     title: "SHOW Bar: An Intimate Night with Favorite Local Musicians",
     link: "https://sheridanoperahouse.com/events/show-bar-singer-songwriter-night-with-britley-matt/",
     description: "An intimate evening of live music at the Sheridan Opera House featuring favorite local musicians from the Telluride community. The historic venue provides an up-close setting for this locally focused concert celebrating the area's homegrown talent.",
@@ -5207,7 +5195,19 @@ const SHERIDAN_EVENTS = [
     sourceLabel: "Sheridan Opera House",
     category: "Concert / Performance",
     location: "Sheridan Opera House • Telluride, CO",
-    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2022/08/VendorBadge_AsSeenOnWeb.png"
+    imageUrl: ""
+  },
+  {
+    title: "YPT: The SpongeBob Musical",
+    link: "https://sheridanoperahouse.com/events/ypt-the-spongebob-musical/",
+    description: "Young People's Theatre presents The SpongeBob Musical at the Sheridan Opera House, bringing the beloved underwater world of Bikini Bottom to life on stage. This youth theater production adapts the beloved animated series into a full-scale musical, featuring young local performers in a colorful, high-energy show.",
+    pubDate: "2026-12-04",
+    endDate: "2026-12-06",
+    source: "sheridan",
+    sourceLabel: "Sheridan Opera House",
+    category: "Concert / Performance",
+    location: "Sheridan Opera House • Telluride, CO",
+    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/09/Screenshot-2026-10-12-at-10.51.39-AM.png"
   }
 ];
 
@@ -5610,7 +5610,17 @@ const TELLURIDE_FOUNDATION_EVENTS = [
 ];
 
 const OURAY_COUNTY_EVENTS = [
-
+  {
+    title: "Joint County Discussion of Wildfire Funding Opportunities",
+    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3792",
+    description: "Representatives from multiple counties will gather to discuss funding opportunities related to wildfire preparedness and mitigation. The meeting, organized through Ouray County, may include participation from two or more Ouray County Commissioners.",
+    pubDate: "2026-11-06T10:30:00.000Z",
+    source: "ouraycounty",
+    sourceLabel: "Ouray County",
+    category: "Community Event",
+    location: "-",
+    imageUrl: ""
+  }
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
@@ -6759,28 +6769,6 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "Board Of Trustees Cancelled Public Hearing Resolution No 2026 0812",
-    link: "https://www.norwoodtown.com/2026-10-15-board-of-trustees-cancelled-public-hearing-resolution-no-2026-0812",
-    description: "A previously scheduled public hearing before the Town of Norwood Board of Trustees regarding Resolution No. 2026-0812 has been cancelled. This government meeting, originally set for October 15, was organized by the Town of Norwood.",
-    pubDate: "2026-10-15T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Government Meeting",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
-    title: "Senior Meals",
-    link: "https://www.norwoodtown.com/2026-10-15-senior-meals",
-    description: "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather, share a meal, and connect with neighbors. This recurring community event takes place in Norwood and is organized through local town services.",
-    pubDate: "2026-10-15T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Community Event",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-10-19-planning-and-zoning-commission-meeting",
     description: "The Town of Norwood's Planning and Zoning Commission will hold a regular meeting to review and act on land use, development, and zoning matters affecting the community. The meeting is open to the public and provides an opportunity for residents to observe local planning decisions.",
@@ -7145,6 +7133,28 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    description: "Movies Under the Stars is a recurring outdoor film series held on Saturday evenings at dusk at the Conference Center Plaza in Mountain Village, running from June 13 through August 15. The community event brings free outdoor cinema to the plaza through the summer season.",
+    pubDate: "2026-11-21T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
+  {
+    title: "Mind Blown Telluride",
+    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    pubDate: "2026-11-21T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
   }
 ];
 
