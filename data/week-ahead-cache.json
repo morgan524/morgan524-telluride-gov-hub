@@ -1,26 +1,26 @@
 {
-  "hash": "46368d51dc54229ba005e7abfad95939932e1952",
-  "lede": "The biggest thing on the calendar this week is Town Council's October 27 meeting, where three consequential items land at once: a Fourth Supplement to the Gondola IGA committing to 2027 cost-sharing, plus first readings of ordinances touching the Telluride Energy Mitigation Program and at least one other code change. Before that, P&Z on October 22 takes up the long-delayed Shandoka Lot Preliminary PUD at 860 Black Bear Rd — a proposal to redevelop Town-owned property with increased dimensional limits — and the Hospital District board considers possible action on a Two Site Model that could reshape how and where this valley receives medical care.",
+  "hash": "94a4eac78b47eeb8ebffc3a73b8b63a1b97f7ed1",
+  "lede": "The biggest thing on the board this week is the Telluride P&Z hearing on the Shandoka Lot Redevelopment — a Preliminary PUD application for town-owned property at 860 Black Bear Rd that would increase dimensional limitations, finally getting its hearing after being continued from September. Town Council follows on Monday with first readings of ordinances touching the Telluride Energy Mitigation Program and the gondola IGA's cost-sharing extension, while the Hospital District takes up a possible Two Site Model that could reshape how and where care gets delivered across the valley.",
   "notable": [
     {
-      "id": 0,
-      "stake": "Board may vote on a Two Site Model affecting how the valley receives healthcare."
-    },
-    {
-      "id": 1,
-      "stake": "Feasibility vote on Lots 1007/1008 and childcare/arts funding decisions on the table."
-    },
-    {
       "id": 2,
-      "stake": "Preliminary PUD hearing for Town-owned land at 860 Black Bear Rd; dimensional limits may increase."
+      "stake": "Public hearing on town-owned land PUD that would increase dimensional limits."
+    },
+    {
+      "id": 0,
+      "stake": "Board may act on Two Site Model, reshaping long-term healthcare delivery."
     },
     {
       "id": 4,
-      "stake": "Variance request to reduce required setback on a Mountain Village parcel goes to a vote."
+      "stake": "Variance vote to reduce required setback on Mountain Village parcel near CR 63L."
     },
     {
       "id": 9,
-      "stake": "Council votes on gondola cost-sharing IGA and takes first readings on two ordinances."
+      "stake": "First readings on energy mitigation ordinance and gondola cost-sharing extension."
+    },
+    {
+      "id": 1,
+      "stake": "Feasibility vote on Lots 1007/1008 and funding decisions for childcare and arts."
     }
   ]
 }

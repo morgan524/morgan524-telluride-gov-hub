@@ -420,6 +420,109 @@
     "smcBidID": "211"
   },
   {
+    "title": "Sheriff's Foreclosure Sale -- HOA Lien, Unit 156A Tomboy Lodge (Sale No. 26-128)",
+    "entity": "The Tomboy Lodge Association, Inc. / San Miguel County Sheriff",
+    "entityClass": "ent-county",
+    "entityLogo": "assessor",
+    "icon": "💰",
+    "iconClass": "type-tax",
+    "type": "Tax & Finance",
+    "filterTag": "tax-finance",
+    "summary": "The San Miguel County Sheriff is conducting a foreclosure sale of Unit 156A at The Tomboy Lodge (619 West Colorado Avenue, Telluride) to satisfy an HOA lien of $15,449.81 held by The Tomboy Lodge Association, Inc., arising from Civil Action No. 2026 CV 30034. The property will be sold at public auction on December 16, 2026 at 10:00 a.m. on the steps of the San Miguel County District Courthouse. Parties with an interest in the property may have rights to redeem or cure the default under Colorado statutes.",
+    "deadline": "2026-12-16",
+    "expires": "2026-12-16",
+    "dates": "10/22",
+    "papers": [
+      "ttimes_1022"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_1f99287a-8ec7-49ee-b0ca-9d501ba00b5f.html",
+    "address": "619 West Columbia Avenue, Unit 156A, Telluride, Colorado 81435",
+    "noticeKey": "foreclosure-26-128-tomboy-unit156a",
+    "caseNumber": "2026 CV 30034"
+  },
+  {
+    "title": "Condominium Declaration Amendment Notice -- Good Gargoyle Condominiums First Amendment",
+    "entity": "Good Gargoyle Condominiums / Aaron J. Goodlock, Attorney",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "📋",
+    "iconClass": "type-hearing",
+    "type": "Ordinance",
+    "filterTag": "ordinance",
+    "summary": "Holders of first mortgages on units in The Good Gargoyle Condominiums are being notified of a proposed First Amendment to the Condominium Declaration originally recorded January 26, 1988 (Reception No. 252464) in San Miguel County. This notice was sent by certified mail along with a consent form and a copy of the proposed amendment. Interested parties may obtain a copy of the amendment and consent form by contacting attorney Aaron J. Goodlock in Denver.",
+    "deadline": "",
+    "expires": "2026-11-22",
+    "dates": "10/22",
+    "papers": [
+      "ttimes_1022"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_1f99287a-8ec7-49ee-b0ca-9d501ba00b5f.html",
+    "address": "The Good Gargoyle Condominiums, San Miguel County, Colorado",
+    "noticeKey": "condo-decl-amendment-good-gargoyle"
+  },
+  {
+    "title": "Deed-Restricted Ownership Lottery -- 226 East Pacific Ave., Unit H (Spruce House H)",
+    "entity": "San Miguel Regional Housing Authority",
+    "entityClass": "ent-county",
+    "entityLogo": "smrha",
+    "icon": "🏠",
+    "iconClass": "type-hearing",
+    "type": "Housing Notice",
+    "filterTag": "housing",
+    "summary": "The San Miguel Regional Housing Authority is offering Spruce House H (226 East Pacific Ave., Unit H, Telluride) for sale through an ownership lottery under the Telluride Affordable Housing Guidelines. Qualified households must submit complete applications; applications and materials are available beginning October 22, 2026 at www.smrha.org/lottery. Applications will be accepted by appointment only from October 30, 2026 at 9:00 AM through November 20, 2026 at Noon.",
+    "deadline": "2026-11-20",
+    "expires": "2026-11-20",
+    "dates": "10/22",
+    "papers": [
+      "ttimes_1022"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_1f99287a-8ec7-49ee-b0ca-9d501ba00b5f.html",
+    "address": "226 East Pacific Ave., Unit H, Telluride, Colorado",
+    "noticeKey": "housing-lottery-226-e-pacific-spruce-h"
+  },
+  {
+    "title": "Public Trustee Foreclosure Sale -- 65 Spruce Drive, Norwood (Sale No. 2026-09)",
+    "entity": "Alpine Bank / San Miguel County Public Trustee",
+    "entityClass": "ent-county",
+    "entityLogo": "assessor",
+    "icon": "💰",
+    "iconClass": "type-tax",
+    "type": "Tax & Finance",
+    "filterTag": "tax-finance",
+    "summary": "San Miguel County Public Trustee Brandi R. Hatfield is conducting a foreclosure sale of property at 65 Spruce Drive, Norwood, Colorado (Lot 26, Hillside Development Unit Three) to satisfy a deed of trust held by Alpine Bank with an outstanding principal balance of $30,161.93, due to the borrowers' failure to make timely payments. The property will be sold at public auction on December 17, 2026 at 10:00 a.m. at 305 W. Colorado Avenue, East entry, Telluride. The notice was first published October 22, 2026 and runs through November 19, 2026.",
+    "deadline": "2026-12-17",
+    "expires": "2026-12-17",
+    "dates": "10/22",
+    "papers": [
+      "ttimes_1022"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_1f99287a-8ec7-49ee-b0ca-9d501ba00b5f.html",
+    "address": "65 Spruce Drive, Norwood, Colorado 81423 (Lot 26, Hillside Development Unit Three)",
+    "noticeKey": "foreclosure-2026-09-65-spruce-norwood",
+    "caseNumber": "2026-09"
+  },
+  {
+    "title": "Public Trustee Foreclosure Sale -- 53 East Homestead Road, Norwood (Sale No. 2026-10)",
+    "entity": "Rocket Mortgage, LLC / San Miguel County Public Trustee",
+    "entityClass": "ent-county",
+    "entityLogo": "assessor",
+    "icon": "💰",
+    "iconClass": "type-tax",
+    "type": "Tax & Finance",
+    "filterTag": "tax-finance",
+    "summary": "San Miguel County Public Trustee Brandi R. Hatfield is conducting a foreclosure sale of property at 53 East Homestead Road, Norwood, Colorado (Lot 24, Pioneer Village) to satisfy a deed of trust now held by Rocket Mortgage, LLC, with an outstanding principal balance of $172,375.22, due to the borrower's failure to make timely payments. The property will be sold at public auction on December 17, 2026 at 10:00 a.m. at 305 W. Colorado Avenue, East entry, Telluride. The notice runs from October 22, 2026 through November 19, 2026.",
+    "deadline": "2026-12-17",
+    "expires": "2026-12-17",
+    "dates": "10/22",
+    "papers": [
+      "ttimes_1022"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_1f99287a-8ec7-49ee-b0ca-9d501ba00b5f.html",
+    "address": "53 East Homestead Road, Norwood, Colorado 81423 (Lot 24, Pioneer Village)",
+    "noticeKey": "foreclosure-2026-10-53-e-homestead-norwood",
+    "caseNumber": "2026-10"
+  },
+  {
     "title": "Request for Proposal -- TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS",
     "entity": "Town of Telluride",
     "entityClass": "ent-county",

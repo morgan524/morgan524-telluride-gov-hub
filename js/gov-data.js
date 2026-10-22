@@ -1059,16 +1059,6 @@ const TELLURIDE_CACHE_DATE = '2026-10-22';
 
 const TELLURIDE_CACHED_DATA = [
   {
-    date: "October 21, 2026",
-    title: "HARC Meeting",
-    board: "harc",
-    location: "Rebekah Hall, 113 W Columbia Ave",
-    civicWebId: 8024,
-    time: "5:30 PM",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024",
-    packetUrl: "https://telluride-co.civicweb.net/document/446165/"
-  },
-  {
     date: "November 18, 2026",
     title: "HARC Meeting",
     board: "harc",

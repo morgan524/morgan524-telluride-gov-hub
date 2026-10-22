@@ -519,6 +519,14 @@ const DEEP_DIVE_UPDATES = [];
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-10-22",
+    title: "Shandoka lot: what goes there?",
+    body: "The Planning & Zoning Commission is holding a public hearing on the Shandoka Lot Redevelopment Project — specifically a Preliminary Planned Unit Development application. A PUD gives developers flexibility to shape density and use in ways standard zoning might not allow. That's the tension. Some residents see PUDs as a practical tool for getting housing and mixed uses into tight spots. Others see them as a workaround that lets projects exceed what the neighborhood signed up for. Nothing is decided yet — this is a hearing, not a final vote.\n\nWhat's your read on PUD redevelopment in town: reasonable flexibility or too much room to maneuver?",
+    choices: ["Reasonable flexibility", "Too much room to maneuver", "Depends on the project"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-10-21",
     title: "Mountain Village wants to expand the post office — and a few other things",
     body: "The TMVOA board is set to consider a Mountain Village Post Office expansion, among other items — Plaza Guest Services funding, Conference Center Plaza enhancements, a Telluride Arts grant request, and a feasibility analysis for Lots 1007/1008. That's a lot on one agenda. The post office question alone tends to split people: some see expansion as overdue infrastructure for a growing resident base, others wonder whether the space and money could go toward more pressing needs like workforce housing — which also gets a working group recap at this meeting. What should be the board's actual priority right now?",
@@ -749,14 +757,6 @@ const DAILY_QUESTIONS = [
     choices: ["Year-round residents first", "Tourism drives everything here", "Spread it — both matter", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-09-22",
-    title: "Historic district, meet wildfire code — again",
-    body: "The Historic and Architectural Review Commission is holding a special meeting to work out how Ordinance #1640 — the wildfire resiliency code Town Council passed on August 11, 2026 — applies to buildings inside Telluride's historic district. That's where it gets interesting. Certificates of Appropriateness exist to protect historic character. Wildfire resiliency standards exist to protect lives and property. Those two goals don't always point the same direction. Which one gives when they conflict?\n\nWhere do you think the line should fall when historic preservation and fire safety don't agree?",
-    choices: ["Fire safety has to come first", "Protect the historic character", "Find a middle ground", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -840,22 +840,10 @@ const MEETING_PREVIEWS = {
     "The SMART Gondola Advisory Committee will receive an update on the FTA Capital Investment Program and hear reports on SMART and partner jurisdiction activities. The virtual meeting will also include time for new business discussion and public comment.",
 
   "telluride|2026-10-22|Planning & Zoning Commission - Oct 22 2026":
-    "The Planning & Zoning Commission is expected to consider the Shandoka Lot Redevelopment Project, a Preliminary Planned Unit Development application, alongside approval of minutes from the September 24 meeting. The public may comment on non-agenda items during the hybrid meeting held at Rebekah Hall.",
+    "The Planning & Zoning Commission is expected to review minutes from its September meeting and hold a public hearing on the Shandoka Lot Redevelopment Project, which involves consideration of a Preliminary Planned Unit Development application. Public comment on non-agenda items will also be accepted.",
 
   "telluride|2026-10-22|(Rescheduled to 11/2) Planning & Zoning Commission Chair - Oct 22 2026":
-    "The Planning & Zoning Commission Chair meeting originally scheduled for October 22, 2026 has been rescheduled to November 2, 2026 at 9:00 a.m. at Rebekah Hall. No specific agenda items have been published at this time.",
-
-  "telluride|2026-10-21|CANCELED - Historic & Architectural Review Commission Chair - Oct 21 2026":
-    "The Historic & Architectural Review Commission Chair meeting scheduled for October 21, 2026 has been canceled. No agenda items will be considered. The previously scheduled October 16, 2026 HARC Chair meeting was also canceled.",
-
-  "telluride|2026-10-21|Historic & Architectural Review Commission - Oct 21 2026":
-    "The Historic & Architectural Review Commission is expected to introduce new member Troy Gulec, approve minutes from September 2026 meetings, and hear staff announcements. The commission's work focuses on preserving the historic character and architectural integrity of Telluride's Historic Landmark District.",
-
-  "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026":
-    "The Parks & Recreation Commission is expected to review sport club check-ins for soccer and lacrosse, consider a request to add a third day to the 2027 Telluride Jazz Festival in Town Park, and discuss a design concept for expanding the basketball court at Town Park.",
-
-  "county|2026-10-22|Board of Adjustment Meeting":
-    "Board will consider a variance application from Town of Mountain Village to reduce a setback from County Road 63L Right-of-Way on Parcel #456536200023. Members will also approve October 2025 minutes. A site visit to the parcel, located across from the County Jail, is scheduled prior to the meeting."
+    "The Planning & Zoning Commission Chair meeting originally scheduled for October 22, 2026 has been rescheduled to November 2, 2026 at 9:00 a.m. at Rebekah Hall. No substantive agenda items have been published for the rescheduled session."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -2648,6 +2636,54 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Voting-related measures on November ballots include a voter ID push targeting mail-in ballots",
+    source: "Telluride Times",
+    date: "October 22, 2026",
+    firstSeen: "2026-10-22",
+    newsTopic: "government",
+    copy: "Advocates for stricter voter ID laws are pushing new measures in some states to require driver's license or partial Social Security numbers on mail-in ballots. In California, Colorado and Nevada, these proposals are on the midterm election ballots. The voter…",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/state/article_ed1c9fb1-ede7-5c0b-9689-7fa9da305f2c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/7c/27c88659-31b2-550b-84fb-395ce845b876/6ad9ea63e9886.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Spreading humanity through music",
+    source: "Telluride Times",
+    date: "October 22, 2026",
+    firstSeen: "2026-10-22",
+    newsTopic: "arts-culture",
+    copy: "Telluride-Boulder indie-folk duo LVDY performed for inmates in a Virginia jail addiction recovery program last April, and a video of the set racked up 4.5 million Instagram views. The pair are now fielding requests from other jail systems and plan to bring live music to more facilities on upcoming tours.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_b222c4a5-0f39-4021-837a-e13c1d1edb56.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/a6/5a63cce4-77ec-463c-971f-cc96536389ea/6ad6b3606fc9e.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Legals and Public Notices for Oct. 22-28, 2026",
+    source: "Telluride Times",
+    date: "October 22, 2026",
+    firstSeen: "2026-10-22",
+    newsTopic: "community",
+    copy: "The Tomboy Lodge Association has filed a foreclosure on Unit 156A at 619 West Columbia Avenue in Telluride over an unpaid HOA balance of $15,449.81. A public auction is scheduled for December 16, 2026, at the San Miguel County Courthouse. A second notice involving The Good Gargoyle Condominiums was also published but cut off.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/legals/article_1f99287a-8ec7-49ee-b0ca-9d501ba00b5f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Cynthia Guy",
+    source: "Telluride Times",
+    date: "October 22, 2026",
+    firstSeen: "2026-10-22",
+    newsTopic: "public-safety",
+    copy: "Cynthia \"Cindy\" Guy, 60, of Colorado passed away September 30, 2026. A massage therapist for over 30 years, she was known for her love of music, dancing, and the natural world. Donations in her memory may be made to Golden Retriever Rescue of the Rockies.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/obituaries/article_8d718cea-c1f4-4f48-bece-c5dcae337aa7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/1d/c1d90136-653a-427c-80e7-8de1300a6212/6ad8c8a75a9df.image.png",
+    imgHiRes: true
+  },
   {
     title: "Sister of American Stephen Hubbard says he's in disbelief following release by Russia",
     source: "Telluride Times",
@@ -5017,59 +5053,59 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Teen Pumpkin Carving Party",
-    link: "https://telluridelibrary.libcal.com/event/17727370?hs=a",
-    description: "12:00 PM – 4:00 PM · Join the WPL on this no school day to carve a pumpkin! We will provide pumpkins, carving tools, and snacks. This is an event for teens.",
-    pubDate: "2026-10-21T18:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_28_17_06_13.png"
-  },
-  {
-    title: "Mahjongg for Independent Players",
-    link: "https://telluridelibrary.libcal.com/event/17622569?hs=a",
-    description: "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
-    pubDate: "2026-10-21T19:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_10_13_36_20.jpg"
-  },
-  {
-    title: "Movie Matinee + Clay Play",
-    link: "https://telluridelibrary.libcal.com/event/17292129?hs=a",
-    description: "1:00 PM – 4:00 PM · Come hang out in the Kids Programming Area to watch Frankenweenie and The Nightmare Before Christmas!  We will have clay out to create your own creatures! Snacks will be provided.",
-    pubDate: "2026-10-21T19:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_17_09_16_28.png"
-  },
-  {
-    title: "Harry Potter Watch Party",
-    link: "https://telluridelibrary.libcal.com/event/17486061?hs=a",
-    description: "4:00 PM – 6:30 PM · Join the WPL every Wednesday after school in September and October, where we will sequentially watch all 8 of the original Harry Potter movies. This event is for teens/youth.",
-    pubDate: "2026-10-21T22:00:00.000Z",
+    title: "Books Alive with Telluride Theatre",
+    link: "https://telluridelibrary.libcal.com/event/17514639?hs=a",
+    description: "Books Alive with Telluride Theatre is a library program at Wilkinson Public Library that brings stories to life through theatrical performance. The event is geared toward young audiences and combines the magic of live theatre with the joy of reading.",
+    pubDate: "2026-10-22T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_22_52.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_24_13_46_16.png"
   },
   {
-    title: "The Classics Taproom Society: The Sun Also Rises with Daniel Zemke",
-    link: "https://telluridelibrary.libcal.com/event/17298306?hs=a",
-    description: "5:30 PM – 7:00 PM · The Classics Taproom Society: Old Books. Fresh Pours. New Conversations. Discover the magic of classic literature in our newest book club, where we celebrate the milestones of timeless works! With the upcoming 50th, 75th, and 100th anniversaries of these literary treasures in 2026 and 2027, there's no better time to dive deep into great stories. Each month features a passionate guest moderator who will guide you through rich discussions. The library will provide light appetizers and Telluride Brewing Company will also be offering $5 TBC beers during the book club. …",
-    pubDate: "2026-10-21T23:30:00.000Z",
+    title: "Books Alive with Telluride Theatre (TES)",
+    link: "https://telluridelibrary.libcal.com/event/17704437?hs=a",
+    description: "A library program hosted by Wilkinson Public Library in partnership with Telluride Theatre, held at Telluride Elementary School. The Books Alive event brings stories to life for young audiences through theatrical performance.",
+    pubDate: "2026-10-22T20:10:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Telluride Brewing Company",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_07_14_40_57.jpg"
+    location: "Telluride Elementary School",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_24_13_47_13.png"
+  },
+  {
+    title: "Littles On the Move",
+    link: "https://telluridelibrary.libcal.com/event/13960366?hs=a",
+    description: "3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.",
+    pubDate: "2026-10-22T21:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png"
+  },
+  {
+    title: "The Spark Lab with Telluride Theatre",
+    link: "https://telluridelibrary.libcal.com/event/17292172?hs=a",
+    description: "Telluride Theatre leads this weekly drop-in session in the Kids Area at Wilkinson Public Library, part of the rotating Spark Lab program. It takes place on the fourth Thursday of each month from 3:30 to 4:30 PM, offering a hands-on creative activity for young participants.",
+    pubDate: "2026-10-22T21:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_50_13.png"
+  },
+  {
+    title: "Adult Craft Night: Thrifted Ghost Painting",
+    link: "https://telluridelibrary.libcal.com/event/17485887?hs=a",
+    description: "5:30 PM – 7:00 PM · Join us for a night of spooky painting fun as we give vintage images a \"ghost up\". Some inspiration for your paintings can be found  here. All materials will be provided, registration is required as space is limited. Sign up at telluridelibrary.org.",
+    pubDate: "2026-10-22T23:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_14_09_46_10.jpg"
   }
 ];
 
@@ -5579,113 +5615,6 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "CELESTIAL BODIES - Olivia Ivy and Kane Scheidegger",
-    link: "https://events.ourayridgwayevents.com/event/celestial-bodies-olivia-ivy-and-kane-scheidegger",
-    description: "Join us at Space to Create Gallery in Ridgway for CELESTIAL BODIES, an exhibition exploring the connections between Body, Earth, and Cosmos through painting and photography. Featuring the work of Olivia Ivy and Kane Scheidegger, the exhibition brings together feminine figures, celestial symbolism, and otherworldly landscapes to explore the boundaries between the intimate and the infinite. From constellations hidden within the human form to the vastness of the night sky reflected in the earthly landscape, these works invite us to look beyond the familiar and reconsider our place within the universe. Exhibition dates October 2nd to November 2nd.",
-    pubDate: "2026-10-21T06:00:00.000Z",
-    endDate: "2026-11-02",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Space to Create Gallery",
-    imageUrl: "https://localist-images.azureedge.net/photos/54241868374608/huge/121c2ab6c42c0a5364ce85a3ffe552e3b10fe9f0.jpg"
-  },
-  {
-    title: "Vinyasa Yoga",
-    link: "https://events.ourayridgwayevents.com/event/vinyasa-yoga",
-    description: "Vinyasa Yoga: Wednesdays 8:15-9:15 am This is a dynamic practice that will challenge, strengthen, and uplift you both physically and mentally. This practice moves through seven doorways or stages, starting by creating sacred space and connecting with your breath. Then we light the fire through a series of warmups and vinyasa flow including Surya Namaskar (sun salutations) A, B & C. The warm up prepares the body for strong holding postures and finishes with yin and conscious surrender in savasana. A sweat towel, water, mat and a sense of adventure are strongly suggested. Men are also welcome to join this class! Jenn Turner is a yoga teacher, functional fitness instructor, and retreat facilitator with more than 500 hours of yoga training and 12+ years of experience. Her work weaves together functional movement, breath, strength, mindfulness, and play to help people reconnect with their bodies and inner wisdom. …",
-    pubDate: "2026-10-21T14:15:00.000Z",
-    endDate: "2026-12-16",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Weehawken Ridgway (Old Schoolhouse)",
-    imageUrl: "https://localist-images.azureedge.net/photos/54236148198717/huge/7d1ebafc567aad82f67c7ba07e1225354b86622c.jpg"
-  },
-  {
-    title: "OPL Read a Book - Get a Pumpkin",
-    link: "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
-    description: "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
-    pubDate: "2026-10-21T16:00:00.000Z",
-    endDate: "2026-10-31",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Public Library",
-    imageUrl: "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg"
-  },
-  {
-    title: "Toddler Storytime Art for Ages 2.5-5",
-    link: "https://events.ourayridgwayevents.com/event/toddler-storytimeartfor-ages-2-5",
-    description: "TODDLER STORYTIME ART FOR AGES 2.5-5 Wednesdays, 10:00am–11:00am Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $70): September 16 – October 7Session 2 (4 weeks • $70): October 21 – November 11Session 3 (3 weeks • $55): December 2 – December 16Come join us for Storytime + Art! Each week, your child will enjoy story time with songs and finger rhymes, a process‑art project, and a variety of creative sensory play. We end with a quick cleanup, circle time, and movement songs. This class gently supports preschool prep and helps your child develop important school‑readiness skills—such as fine‑motor coordination, independence, and the ability to listen and follow directions—in a warm, supportive setting. Children will grow in: Social, language, and communication skillsFine‑ and gross‑motor coordinationListening and direction‑following abilitiesConfidence, creativity, and imaginationParents and caregivers stay to support their child—but we handle the mess! …",
-    pubDate: "2026-10-21T16:00:00.000Z",
-    endDate: "2026-11-11",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Annex on Cora",
-    imageUrl: "https://localist-images.azureedge.net/photos/53780434962919/huge/3aff831f26d7f9d4824893f89d8fd88416047a44.jpg"
-  },
-  {
-    title: "Water Aerobics",
-    link: "https://events.ourayridgwayevents.com/event/water-aerobics",
-    description: "Join water aerobics weekly Wednesdays (Sometimes Tuesdays and Thursdays too!) from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy the positive atmosphere! Water aerobics is free for pool members, and non-members can join for just $5 per class.",
-    pubDate: "2026-10-21T16:00:00.000Z",
-    endDate: "2026-12-16",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Hot Springs",
-    imageUrl: "https://localist-images.azureedge.net/photos/53887699628224/huge/262efc04b203189edcde410b9973aac1ca778195.jpg"
-  },
-  {
-    title: "Guided Tour: Historic Beaumont Hotel & Spa",
-    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
-    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
-    pubDate: "2026-10-21T19:30:00.000Z",
-    endDate: "2026-12-19",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Beaumont Hotel & Spa",
-    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
-  },
-  {
-    title: "After School Art for Ages 8-12",
-    link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-8-12-7963",
-    description: "AFTER SCHOOL ART FOR AGES 8-12 Wednesdays, 3:15–4:45 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 16 – October 7Session 2 (4 weeks • $85): October 21 – November 11Session 3 (3 weeks • $70): December 2 – December 16Each week, students will explore an exciting theme while experimenting with a wide range of materials and techniques. Drawing inspiration from well-known artists and design styles, young artists will be supported in discovering their own unique creative voice in a fun, nurturing, studio-like setting. These classes are designed to foster a love of the arts through hands-on exploration, age-appropriate projects, and a focus on the joy of the creative process.. A student art reception will be held in December. Students will take home their collected works in the days following the event. …",
-    pubDate: "2026-10-21T21:15:00.000Z",
-    endDate: "2026-11-11",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Annex on Cora",
-    imageUrl: "https://localist-images.azureedge.net/photos/53780624349826/huge/2ad5a3657f19d47b14c7833f838ac040c0836f38.jpg"
-  },
-  {
-    title: "Zumba Fitness with Tamra",
-    link: "https://events.ourayridgwayevents.com/event/zumba-fitness-with-tamra",
-    description: "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn calories, and tone muscles. Classes are often described as a \"fitness party\" that reduces stress. All levels of fitness and dance experience are welcome. Classes are $12 to drop in. Class packs are available for purchase (5 classes for $50, 10 classes for $95). For more information, check out the instructor's website: https://zumba.com/p/zumbafitnesswithTamra or email Tamra at tamra.nichols@icloud.com . For updated class information, including last-minute changes or cancellations, follow the instructor's Zumba Facebook page at https://www.facebook.com/ZumbaFitnesswithTamra .",
-    pubDate: "2026-10-21T23:30:00.000Z",
-    endDate: "2026-12-17",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Community Center",
-    imageUrl: "https://localist-images.azureedge.net/photos/52277881680293/huge/aa29110a3c05049d073e03408632a25f10e17ba5.jpg"
-  },
-  {
-    title: "Hoppers: Movie Night @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/hoppers-movie-night-the-wright",
-    description: "Hoppers: Movie Night @ the Wright WHEN? Wednesday, October 21 Doors at 6:30 PM | Movie at 7:00 PM WHERE? Wright Opera House 472 Main St., Ouray, Colorado RUN TIME: 1 hour, 44 minutes RATING: PG ROTTEN TOMATOES SCORE: 94% ABOUT THE FILM Disney and Pixar’s Hoppers follows Mabel, an animal-loving young woman who uses new technology to transfer her consciousness into a lifelike robotic beaver. Her mission: communicate with the animals and help protect their habitat from human development. What begins as a strange little experiment becomes a big, funny, warm-hearted adventure about nature, friendship, and finding out what the world looks like from somebody else’s point of view. WHY SEE IT? Because Pixar has finally answered the question no one knew they were asking: what if you could become a beaver for a good cause? HOW? …",
-    pubDate: "2026-10-22T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/54035264266437/huge/4f123a55b3d2309817e574335281ca0e9129f0c9.jpg"
-  },
-  {
     title: "Functional Fitness - Strength & Mobility Training For Women",
     link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women-8391",
     description: "Welcome to Ridgway's functional strength and mobility training for women. Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically but build real community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Every Tuesday & Thursday 8:15-9:15 am / Please check the website for dates and sign up! Location: 1075 Sherman St, Suite 201 / Weehawken Dance Studio (RIGS Building on the corner of Sherman and Amelia) Parking and entrance to the building are on N. Amelia St. …",
@@ -5698,6 +5627,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54236057466628/huge/10f1882bcc97fe1b7ad4209e2431edd0781a413f.jpg"
   },
   {
+    title: "OPL Read a Book - Get a Pumpkin",
+    link: "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
+    description: "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
+    pubDate: "2026-10-22T16:00:00.000Z",
+    endDate: "2026-10-31",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Public Library",
+    imageUrl: "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg"
+  },
+  {
     title: "Ongoing: Space Cowboy by Dundee & Lee",
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
     description: "Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado artists Emilie Odeile and Ken Chapin of Dundee & Lee, the exhibition centers on a 10-foot-tall fiber rocket topped with a cowboy hat and Mission Control consoles that gather images, voices, stories, and discoveries as Space Cowboy travels from community to community. Throughout October, the exhibition comes alive with special events and programming, including appearances by Colorado Poet Laureate Crisosto Apache, community conversations, and opportunities for Ridgway residents to become part of the continuing Space Cowboy story. Space Cowboy travels with a simple idea: Colorado is the teacher and Space Cowboy is the learner. Every community adds something new to the mission. …",
@@ -5708,6 +5649,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Decker Community Room",
     imageUrl: "https://localist-images.azureedge.net/photos/53975670057489/huge/75be37bbb2b6bd7ba17f7754e11da5a0eaf5930c.jpg"
+  },
+  {
+    title: "Guided Tour: Historic Beaumont Hotel & Spa",
+    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
+    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
+    pubDate: "2026-10-22T19:30:00.000Z",
+    endDate: "2026-12-19",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Beaumont Hotel & Spa",
+    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
   },
   {
     title: "After School Art for Ages 5-8",
@@ -5777,6 +5730,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/54066524682512/huge/e95bf2e6509f8e2bf351e2781dcc132332bdb7c2.jpg"
+  },
+  {
+    title: "CELESTIAL BODIES - Olivia Ivy and Kane Scheidegger",
+    link: "https://events.ourayridgwayevents.com/event/celestial-bodies-olivia-ivy-and-kane-scheidegger",
+    description: "Join us at Space to Create Gallery in Ridgway for CELESTIAL BODIES, an exhibition exploring the connections between Body, Earth, and Cosmos through painting and photography. Featuring the work of Olivia Ivy and Kane Scheidegger, the exhibition brings together feminine figures, celestial symbolism, and otherworldly landscapes to explore the boundaries between the intimate and the infinite. From constellations hidden within the human form to the vastness of the night sky reflected in the earthly landscape, these works invite us to look beyond the familiar and reconsider our place within the universe. Exhibition dates October 2nd to November 2nd.",
+    pubDate: "2026-10-23T06:00:00.000Z",
+    endDate: "2026-11-02",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create Gallery",
+    imageUrl: "https://localist-images.azureedge.net/photos/54241868374608/huge/121c2ab6c42c0a5364ce85a3ffe552e3b10fe9f0.jpg"
   },
   {
     title: "STEAM Art Explorers for Ages 5–8 in Montrose",
@@ -5950,6 +5915,54 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54093161228645/huge/7e89b3abffd49ff677ff84078f716777d776bb9b.jpg"
   },
   {
+    title: "Vinyasa Yoga",
+    link: "https://events.ourayridgwayevents.com/event/vinyasa-yoga",
+    description: "Vinyasa Yoga: Wednesdays 8:15-9:15 am This is a dynamic practice that will challenge, strengthen, and uplift you both physically and mentally. This practice moves through seven doorways or stages, starting by creating sacred space and connecting with your breath. Then we light the fire through a series of warmups and vinyasa flow including Surya Namaskar (sun salutations) A, B & C. The warm up prepares the body for strong holding postures and finishes with yin and conscious surrender in savasana. A sweat towel, water, mat and a sense of adventure are strongly suggested. Men are also welcome to join this class! Jenn Turner is a yoga teacher, functional fitness instructor, and retreat facilitator with more than 500 hours of yoga training and 12+ years of experience. Her work weaves together functional movement, breath, strength, mindfulness, and play to help people reconnect with their bodies and inner wisdom. …",
+    pubDate: "2026-10-28T14:15:00.000Z",
+    endDate: "2026-12-16",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Ridgway (Old Schoolhouse)",
+    imageUrl: "https://localist-images.azureedge.net/photos/54236148198717/huge/7d1ebafc567aad82f67c7ba07e1225354b86622c.jpg"
+  },
+  {
+    title: "Toddler Storytime Art for Ages 2.5-5",
+    link: "https://events.ourayridgwayevents.com/event/toddler-storytimeartfor-ages-2-5",
+    description: "TODDLER STORYTIME ART FOR AGES 2.5-5 Wednesdays, 10:00am–11:00am Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $70): September 16 – October 7Session 2 (4 weeks • $70): October 21 – November 11Session 3 (3 weeks • $55): December 2 – December 16Come join us for Storytime + Art! Each week, your child will enjoy story time with songs and finger rhymes, a process‑art project, and a variety of creative sensory play. We end with a quick cleanup, circle time, and movement songs. This class gently supports preschool prep and helps your child develop important school‑readiness skills—such as fine‑motor coordination, independence, and the ability to listen and follow directions—in a warm, supportive setting. Children will grow in: Social, language, and communication skillsFine‑ and gross‑motor coordinationListening and direction‑following abilitiesConfidence, creativity, and imaginationParents and caregivers stay to support their child—but we handle the mess! …",
+    pubDate: "2026-10-28T16:00:00.000Z",
+    endDate: "2026-11-11",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Annex on Cora",
+    imageUrl: "https://localist-images.azureedge.net/photos/53780434962919/huge/3aff831f26d7f9d4824893f89d8fd88416047a44.jpg"
+  },
+  {
+    title: "Water Aerobics",
+    link: "https://events.ourayridgwayevents.com/event/water-aerobics",
+    description: "Join water aerobics weekly Wednesdays (Sometimes Tuesdays and Thursdays too!) from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy the positive atmosphere! Water aerobics is free for pool members, and non-members can join for just $5 per class.",
+    pubDate: "2026-10-28T16:00:00.000Z",
+    endDate: "2026-12-16",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Hot Springs",
+    imageUrl: "https://localist-images.azureedge.net/photos/53887699628224/huge/262efc04b203189edcde410b9973aac1ca778195.jpg"
+  },
+  {
+    title: "After School Art for Ages 8-12",
+    link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-8-12-7963",
+    description: "AFTER SCHOOL ART FOR AGES 8-12 Wednesdays, 3:15–4:45 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 16 – October 7Session 2 (4 weeks • $85): October 21 – November 11Session 3 (3 weeks • $70): December 2 – December 16Each week, students will explore an exciting theme while experimenting with a wide range of materials and techniques. Drawing inspiration from well-known artists and design styles, young artists will be supported in discovering their own unique creative voice in a fun, nurturing, studio-like setting. These classes are designed to foster a love of the arts through hands-on exploration, age-appropriate projects, and a focus on the joy of the creative process.. A student art reception will be held in December. Students will take home their collected works in the days following the event. …",
+    pubDate: "2026-10-28T21:15:00.000Z",
+    endDate: "2026-11-11",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Annex on Cora",
+    imageUrl: "https://localist-images.azureedge.net/photos/53780624349826/huge/2ad5a3657f19d47b14c7833f838ac040c0836f38.jpg"
+  },
+  {
     title: "OPL October Book Club- \"Mexican Gothic\"",
     link: "https://events.ourayridgwayevents.com/event/opl-october-book-club-mexican-gothic",
     description: "Join us for a group discussion of the novel \"Mexican Gothic\" by Silvia Moreno-Garcia. Discussion will start at the Ouray Public Library, shortly after closing.",
@@ -5970,6 +5983,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Timber Ridge Lodge",
     imageUrl: "https://localist-images.azureedge.net/photos/54125208857770/huge/4651674c11078e5614962e17cfca9a7ce117c064.jpg"
+  },
+  {
+    title: "Zumba Fitness with Tamra",
+    link: "https://events.ourayridgwayevents.com/event/zumba-fitness-with-tamra",
+    description: "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn calories, and tone muscles. Classes are often described as a \"fitness party\" that reduces stress. All levels of fitness and dance experience are welcome. Classes are $12 to drop in. Class packs are available for purchase (5 classes for $50, 10 classes for $95). For more information, check out the instructor's website: https://zumba.com/p/zumbafitnesswithTamra or email Tamra at tamra.nichols@icloud.com . For updated class information, including last-minute changes or cancellations, follow the instructor's Zumba Facebook page at https://www.facebook.com/ZumbaFitnesswithTamra .",
+    pubDate: "2026-10-28T23:30:00.000Z",
+    endDate: "2026-12-17",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Community Center",
+    imageUrl: "https://localist-images.azureedge.net/photos/52277881680293/huge/aa29110a3c05049d073e03408632a25f10e17ba5.jpg"
   },
   {
     title: "Weapons: Movie Night @ the Wright.",
@@ -6718,6 +6743,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Montrose Pavilion",
     imageUrl: "https://localist-images.azureedge.net/photos/54066523355312/huge/65de6aff77e10f2912e9ccfab16467e7d13e6025.jpg"
+  },
+  {
+    title: "Winter Break - Ridgway Schools",
+    link: "https://events.ourayridgwayevents.com/event/winter-break-ridgway-schools",
+    description: "Winter break for Ridgway Schools begins on this date, giving students and families time off during the holiday season. The break is a scheduled pause in the academic calendar for the Ridgway school district.",
+    pubDate: "2026-12-21T07:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
   }
 ];
 
@@ -7924,6 +7960,99 @@ const LEGAL_NOTICES = [
     url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=211",
     address: "",
     smcBidID: "211"
+  },
+  {
+    title: "Sheriff's Foreclosure Sale -- HOA Lien, Unit 156A Tomboy Lodge (Sale No. 26-128)",
+    entity: "The Tomboy Lodge Association, Inc. / San Miguel County Sheriff",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "The San Miguel County Sheriff is conducting a foreclosure sale of Unit 156A at The Tomboy Lodge (619 West Colorado Avenue, Telluride) to satisfy an HOA lien of $15,449.81 held by The Tomboy Lodge Association, Inc., arising from Civil Action No. 2026 CV 30034. The property will be sold at public auction on December 16, 2026 at 10:00 a.m. on the steps of the San Miguel County District Courthouse. Parties with an interest in the property may have rights to redeem or cure the default under Colorado statutes.",
+    deadline: "2026-12-16",
+    expires: "2026-12-16",
+    dates: "10/22",
+    papers: ["ttimes_1022"],
+    url: "https://www.telluridenews.com/news/legals/article_1f99287a-8ec7-49ee-b0ca-9d501ba00b5f.html",
+    address: "619 West Columbia Avenue, Unit 156A, Telluride, Colorado 81435",
+    noticeKey: "foreclosure-26-128-tomboy-unit156a",
+    caseNumber: "2026 CV 30034"
+  },
+  {
+    title: "Condominium Declaration Amendment Notice -- Good Gargoyle Condominiums First Amendment",
+    entity: "Good Gargoyle Condominiums / Aaron J. Goodlock, Attorney",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "Holders of first mortgages on units in The Good Gargoyle Condominiums are being notified of a proposed First Amendment to the Condominium Declaration originally recorded January 26, 1988 (Reception No. 252464) in San Miguel County. This notice was sent by certified mail along with a consent form and a copy of the proposed amendment. Interested parties may obtain a copy of the amendment and consent form by contacting attorney Aaron J. Goodlock in Denver.",
+    deadline: "",
+    expires: "2026-11-22",
+    dates: "10/22",
+    papers: ["ttimes_1022"],
+    url: "https://www.telluridenews.com/news/legals/article_1f99287a-8ec7-49ee-b0ca-9d501ba00b5f.html",
+    address: "The Good Gargoyle Condominiums, San Miguel County, Colorado",
+    noticeKey: "condo-decl-amendment-good-gargoyle"
+  },
+  {
+    title: "Deed-Restricted Ownership Lottery -- 226 East Pacific Ave., Unit H (Spruce House H)",
+    entity: "San Miguel Regional Housing Authority",
+    entityClass: "ent-county",
+    entityLogo: "smrha",
+    icon: "🏠",
+    iconClass: "type-hearing",
+    type: "Housing Notice",
+    filterTag: "housing",
+    summary: "The San Miguel Regional Housing Authority is offering Spruce House H (226 East Pacific Ave., Unit H, Telluride) for sale through an ownership lottery under the Telluride Affordable Housing Guidelines. Qualified households must submit complete applications; applications and materials are available beginning October 22, 2026 at www.smrha.org/lottery. Applications will be accepted by appointment only from October 30, 2026 at 9:00 AM through November 20, 2026 at Noon.",
+    deadline: "2026-11-20",
+    expires: "2026-11-20",
+    dates: "10/22",
+    papers: ["ttimes_1022"],
+    url: "https://www.telluridenews.com/news/legals/article_1f99287a-8ec7-49ee-b0ca-9d501ba00b5f.html",
+    address: "226 East Pacific Ave., Unit H, Telluride, Colorado",
+    noticeKey: "housing-lottery-226-e-pacific-spruce-h"
+  },
+  {
+    title: "Public Trustee Foreclosure Sale -- 65 Spruce Drive, Norwood (Sale No. 2026-09)",
+    entity: "Alpine Bank / San Miguel County Public Trustee",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "San Miguel County Public Trustee Brandi R. Hatfield is conducting a foreclosure sale of property at 65 Spruce Drive, Norwood, Colorado (Lot 26, Hillside Development Unit Three) to satisfy a deed of trust held by Alpine Bank with an outstanding principal balance of $30,161.93, due to the borrowers' failure to make timely payments. The property will be sold at public auction on December 17, 2026 at 10:00 a.m. at 305 W. Colorado Avenue, East entry, Telluride. The notice was first published October 22, 2026 and runs through November 19, 2026.",
+    deadline: "2026-12-17",
+    expires: "2026-12-17",
+    dates: "10/22",
+    papers: ["ttimes_1022"],
+    url: "https://www.telluridenews.com/news/legals/article_1f99287a-8ec7-49ee-b0ca-9d501ba00b5f.html",
+    address: "65 Spruce Drive, Norwood, Colorado 81423 (Lot 26, Hillside Development Unit Three)",
+    noticeKey: "foreclosure-2026-09-65-spruce-norwood",
+    caseNumber: "2026-09"
+  },
+  {
+    title: "Public Trustee Foreclosure Sale -- 53 East Homestead Road, Norwood (Sale No. 2026-10)",
+    entity: "Rocket Mortgage, LLC / San Miguel County Public Trustee",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "San Miguel County Public Trustee Brandi R. Hatfield is conducting a foreclosure sale of property at 53 East Homestead Road, Norwood, Colorado (Lot 24, Pioneer Village) to satisfy a deed of trust now held by Rocket Mortgage, LLC, with an outstanding principal balance of $172,375.22, due to the borrower's failure to make timely payments. The property will be sold at public auction on December 17, 2026 at 10:00 a.m. at 305 W. Colorado Avenue, East entry, Telluride. The notice runs from October 22, 2026 through November 19, 2026.",
+    deadline: "2026-12-17",
+    expires: "2026-12-17",
+    dates: "10/22",
+    papers: ["ttimes_1022"],
+    url: "https://www.telluridenews.com/news/legals/article_1f99287a-8ec7-49ee-b0ca-9d501ba00b5f.html",
+    address: "53 East Homestead Road, Norwood, Colorado 81423 (Lot 24, Pioneer Village)",
+    noticeKey: "foreclosure-2026-10-53-e-homestead-norwood",
+    caseNumber: "2026-10"
   },
   {
     title: "Request for Proposal -- TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS",
