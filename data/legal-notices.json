@@ -521,5 +521,22 @@
     "address": "53 East Homestead Road, Norwood, Colorado 81423 (Lot 24, Pioneer Village)",
     "noticeKey": "foreclosure-2026-10-53-e-homestead-norwood",
     "caseNumber": "2026-10"
+  },
+  {
+    "title": "Request for Proposal -- TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS",
+    "entity": "Town of Telluride",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Request for Proposal",
+    "filterTag": "public-entity",
+    "summary": "Town of Telluride is seeking qualified respondents for: TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS.",
+    "deadline": "Closes 1/11/2026",
+    "expires": "2026-01-11",
+    "dates": "10/23",
+    "url": "https://www.telluride.gov/bids.aspx?bidID=133",
+    "address": "",
+    "totBidID": "133"
   }
 ]
