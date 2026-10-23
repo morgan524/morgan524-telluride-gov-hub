@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-22T21:35:27.021Z",
+ "generated": "2026-10-23T04:09:33.675Z",
  "pinned": true,
  "topic": "carhenge",
  "topicLabel": "Carhenge / Shandoka",
@@ -11,17 +11,17 @@
   "href": "/deep-dive-carhenge.html"
  },
  "meeting": {
-  "title": "Planning & Zoning Commission",
-  "sourceLabel": "Town of Telluride",
+  "title": "",
+  "sourceLabel": "",
   "date": "2026-10-22",
   "humanDate": "Thursday, October 22",
-  "time": "5:30 PM",
-  "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8106",
-  "hasAgenda": true,
-  "packetUrl": "https://telluride-co.civicweb.net/document/446322/",
-  "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8106",
-  "zoomLink": "https://us06web.zoom.us/meeting/register/OC4r5SGcR6S0q5DBnXPh8Q",
-  "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+  "time": "",
+  "location": "",
+  "agendaUrl": "",
+  "hasAgenda": false,
+  "packetUrl": "",
+  "link": "",
+  "zoomLink": "",
+  "livestream": ""
  }
 }

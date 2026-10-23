@@ -1,26 +1,26 @@
 {
-  "hash": "5438d11a78f30931a1e135a5e9e026fddfc5431e",
-  "lede": "The biggest thing on the docket this week is Wednesday's Town Council meeting, where two ordinances get first readings and Council takes up the Fourth Supplement to the Gondola IGA — real decisions with real money attached. That same Wednesday, P&Z hears the long-delayed Shandoka Lot Redevelopment PUD at 860 Black Bear Rd, and the Telluride Hospital District board weighs possible action on a Two Site Model that could reshape how care gets delivered in this valley for years to come.",
+  "hash": "cf18721891ef23b582db93e58e2b24ad27ab3ec4",
+  "lede": "The biggest thing on the calendar this week is Tuesday's Town Council meeting, where the gondola replacement project takes a concrete step forward — Council votes on the Fourth Supplement to the Gondola IGA, locking in cost-sharing for the 2027 planning and development budget, and two ordinances get first readings, including one touching the Telluride Energy Mitigation Program. On the same day, Ouray County commissioners are deep in a work session on a proposed EMS and Ridgway Fire merger, a structural decision with real consequences for emergency response across the region. The Gondola Advisory Committee and SMART both meet Monday to hear where federal FTA funding pursuit actually stands.",
   "notable": [
     {
-      "id": 0,
-      "stake": "Board may act on Two Site Model, reshaping long-term healthcare delivery here."
-    },
-    {
-      "id": 1,
-      "stake": "60-minute feasibility analysis of Lots 1007/1008 will steer major TMVOA decisions."
+      "id": 5,
+      "stake": "Council votes on gondola cost-sharing IGA and reads two new ordinances."
     },
     {
       "id": 2,
-      "stake": "Public hearing on Shandoka PUD proposes increased dimensional limits on Town-owned land."
+      "stake": "Federal funding pipeline update for gondola replacement — public comment opportunity."
     },
     {
-      "id": 4,
-      "stake": "Variance request to reduce required setback on Mountain Village parcel goes to a vote."
+      "id": 3,
+      "stake": "FTA Capital Investment Program update reveals gondola project's federal funding status."
     },
     {
-      "id": 11,
-      "stake": "Two ordinances get first reading; gondola IGA supplement extends cost-sharing commitments."
+      "id": 7,
+      "stake": "Ouray BOCC votes on a fifth extension of an active Emergency Disaster Declaration."
+    },
+    {
+      "id": 8,
+      "stake": "Proposed EMS and Ridgway Fire merger discussed — shapes staffing and response times."
     }
   ]
 }

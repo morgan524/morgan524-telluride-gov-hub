@@ -6,7 +6,9 @@
     "location": "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
     "civicClerkId": 1081,
     "note": null,
-    "board": "bocc"
+    "packetUrl": "https://ouraycoco.portal.civicclerk.com/event/1081/files/agenda/7578",
+    "board": "bocc",
+    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/1081/files/agenda/7575"
   },
   {
     "date": "October 27, 2026",
@@ -15,7 +17,9 @@
     "location": "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
     "civicClerkId": 1105,
     "note": null,
-    "board": "bocc"
+    "packetUrl": "https://ouraycoco.portal.civicclerk.com/event/1105/files/agenda/7572",
+    "board": "bocc",
+    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/1105/files/agenda/7571"
   },
   {
     "date": "October 28, 2026",
@@ -24,7 +28,9 @@
     "location": "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
     "civicClerkId": 1129,
     "note": null,
-    "board": "bocc"
+    "packetUrl": "https://ouraycoco.portal.civicclerk.com/event/1129/files/agenda/7577",
+    "board": "bocc",
+    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/1129/files/agenda/7573"
   },
   {
     "date": "November 10, 2026",
@@ -77,15 +83,6 @@
     "title": "Board of County Commissioners",
     "location": "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
     "civicClerkId": 1071,
-    "note": null,
-    "board": "bocc"
-  },
-  {
-    "date": "December 8, 2026",
-    "time": "1:30 PM",
-    "title": "Board of County Commissioners Work Session",
-    "location": "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
-    "civicClerkId": 1095,
     "note": null,
     "board": "bocc"
   },

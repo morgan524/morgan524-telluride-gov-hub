@@ -1,30 +1,4 @@
 {
-  "school|2026-09-22|Telluride Board of Education Work Session": {
-    "sv": 4,
-    "agendaUrl": "https://files.smartsites.parentsquare.com/3403/92226_ws_packet.pdf",
-    "zoomUrl": "https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09",
-    "meetingId": "865 8512 4120",
-    "passcode": "468668"
-  },
-  "school|2026-09-22|Telluride Board of Education Monthly Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://files.smartsites.parentsquare.com/3403/92226_mm_packet.pdf",
-    "zoomUrl": "https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09",
-    "meetingId": "865 8512 4120",
-    "passcode": "468668"
-  },
-  "telluride|2026-09-22|Telluride Housing Authority - Sep 22 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303",
-    "sv": 4
-  },
-  "telluride|2026-09-22|Town Council - Sep 22 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/SHk2kkI1S6SZlmiHuwkPLg",
-    "meetingId": "822 3651 5916",
-    "passcode": "159154.",
-    "phone": "719) 359-4580"
-  },
   "county|2026-09-23|Board of County Commissioners Work Session": {
     "sv": 4,
     "ph": "307e0c7b19e4ff5b"
@@ -246,14 +220,6 @@
     "passcode": "036006",
     "phone": "719-359-4580"
   },
-  "norwood|2026-09-22|Norwood Water Commission Meeting": {
-    "agendaUrl": "https://www.norwoodtown.com/files/677a3380f/09.22.2026+NWC+Amended+Agenda.pdf",
-    "zoomUrl": "https://us02web.zoom.us/j/88274908233",
-    "meetingId": "882 7490 8233",
-    "passcode": "997236",
-    "phone": "346-248-7799",
-    "sv": 4
-  },
   "norwood|2026-10-19|Planning and Zoning Commission Meeting": {
     "sv": 4,
     "agendaUrl": "https://www.norwoodtown.com/files/8a5f7ce8f/10.19.2026+P%26Z+BOA+AGENDA.pdf",
@@ -396,7 +362,12 @@
     "phone": "719) 359-4580"
   },
   "county|2026-10-28|Board of County Commissioners Work Session": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1036/files/agenda/2056",
+    "zoomUrl": "https://us02web.zoom.us/meeting/register/oIcj4FR6RoCy142-aHzo5w",
+    "meetingId": "868 9105 7971",
+    "passcode": "451656",
+    "phone": "719-359-4580"
   },
   "ouraycity|2026-09-30|Ouray City Council Work Session": {
     "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=769742",
@@ -676,5 +647,29 @@
   "county|2026-10-26|San Miguel Basin Fair Board Meeting 10/26": {
     "sv": 4,
     "ph": "47dc9b32b4fc82eb"
+  },
+  "ouray|2026-10-27|Board of County Commissioners": {
+    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/1081/files/agenda/7575",
+    "zoomUrl": "https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1",
+    "meetingId": "876 0637 5697",
+    "passcode": "946299",
+    "phone": "346-248-7799",
+    "sv": 4
+  },
+  "ouray|2026-10-27|Board of County Commissioners Work Session": {
+    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/1105/files/agenda/7571",
+    "zoomUrl": "https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1",
+    "meetingId": "876 0637 5697",
+    "passcode": "946299",
+    "phone": "346-248-7799",
+    "sv": 4
+  },
+  "ouray|2026-10-28|Board of County Commissioners Work Session": {
+    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/1129/files/agenda/7573",
+    "zoomUrl": "https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1",
+    "meetingId": "876 0637 5697",
+    "passcode": "946299",
+    "phone": "346-248-7799",
+    "sv": 4
   }
 }
