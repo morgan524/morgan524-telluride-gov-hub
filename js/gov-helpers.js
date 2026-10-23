@@ -1063,7 +1063,7 @@ const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
 const MANUAL_SUMMARIES_CACHE_DATE = '2026-10-23';
-const LEGAL_NOTICES_CACHE_DATE = '2026-10-22';
+const LEGAL_NOTICES_CACHE_DATE = '2026-10-23';
 
 const MANUAL_SUMMARIES = {
   "county|2026-09-23|Board of County Commissioners Work Session":
@@ -3765,15 +3765,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Applications Open for 2026/2027 Temporary Winter Community Housing Program",
-    source: "Town of Telluride",
-    date: "October 9, 2026",
-    newsTopic: "housing",
-    copy: "(October 8, 2026) – The Town of Telluride is accepting applications for its Temporary Winter Community Housing program for the 2026/2027 winter season. The program provides seasonal housing in Town Park for eligible workers employed in the Telluride area.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=406",
-    img: ""
-  },
-  {
     title: "Placerville Community Annual Fall Potluck",
     source: "San Miguel County",
     date: "October 13, 2026",
@@ -3781,78 +3772,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1421",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14854"
-  },
-  {
-    title: "San Miguel County Public Health Announces Fall Vaccine Availability",
-    source: "San Miguel County",
-    date: "October 1, 2026",
-    newsTopic: "health",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1419",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14836"
-  },
-  {
-    title: "Chief Deputy Clerk Receives Excellence in Election Service Award",
-    source: "San Miguel County",
-    date: "September 25, 2026",
-    newsTopic: "government",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1413",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14817"
-  },
-  {
-    title: "Planning Director Kaye Simonson Retires After Nearly Eight Years with the County",
-    source: "San Miguel County",
-    date: "September 25, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1418",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14827"
-  },
-  {
-    title: "Another San Miguel Basin Fair in the Books",
-    source: "San Miguel County",
-    date: "September 25, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1416",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14822"
-  },
-  {
-    title: "New Faces and a Fond Farewell for Parks + Open Space",
-    source: "San Miguel County",
-    date: "September 25, 2026",
-    newsTopic: "recreation",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1417",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14826"
-  },
-  {
-    title: "County Housing Efforts Continue on Multiple Fronts",
-    source: "San Miguel County",
-    date: "September 24, 2026",
-    newsTopic: "housing",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1415",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14821"
-  },
-  {
-    title: "San Miguel County Adds Genasys Protect to Emergency Alerting Ecosystem",
-    source: "San Miguel County",
-    date: "September 24, 2026",
-    newsTopic: "public-safety",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1414",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14820"
-  },
-  {
-    title: "Safe Festivals - A Public Health Approach to Harm Reduction",
-    source: "San Miguel County",
-    date: "September 23, 2026",
-    newsTopic: "health",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1411",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14818"
   },
   {
     title: "DMV Services available in Egnar 11/18",
@@ -4002,14 +3921,7 @@ const KOTO_NEWSCASTS = [
 ];
 
 const KOTO_FEATURED_STORIES = [
-  {
-    title: "New Bike Track Gets the West End Rolling",
-    source: "KOTO Community Radio",
-    date: "October 9, 2026",
-    newsTopic: "recreation",
-    copy: "West End riders have already been flocking to Norwood's new pump track—and some have even bigger dreams for the town park.",
-    href: "https://koto.org/news/new-bike-track-gets-the-west-end-rolling/"
-  }
+
 ];
 
 // San Miguel Basin Forum (West End — Norwood, Nucla, Naturita, Paradox).
@@ -7989,23 +7901,6 @@ const LEGAL_NOTICES = [
     address: "53 East Homestead Road, Norwood, Colorado 81423 (Lot 24, Pioneer Village)",
     noticeKey: "foreclosure-2026-10-53-e-homestead-norwood",
     caseNumber: "2026-10"
-  },
-  {
-    title: "Request for Proposal -- TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "Town of Telluride is seeking qualified respondents for: TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS.",
-    deadline: "Closes 1/11/2026",
-    expires: "2026-01-11",
-    dates: "10/22",
-    url: "https://www.telluride.gov/bids.aspx?bidID=133",
-    address: "",
-    totBidID: "133"
   }
 ];
 
