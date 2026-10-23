@@ -1,26 +1,26 @@
 {
-  "hash": "cf18721891ef23b582db93e58e2b24ad27ab3ec4",
-  "lede": "The biggest thing on the calendar this week is Tuesday's Town Council meeting, where the gondola replacement project takes a concrete step forward — Council votes on the Fourth Supplement to the Gondola IGA, locking in cost-sharing for the 2027 planning and development budget, and two ordinances get first readings, including one touching the Telluride Energy Mitigation Program. On the same day, Ouray County commissioners are deep in a work session on a proposed EMS and Ridgway Fire merger, a structural decision with real consequences for emergency response across the region. The Gondola Advisory Committee and SMART both meet Monday to hear where federal FTA funding pursuit actually stands.",
+  "hash": "5a36e40bc8785d9de6e8c2a7f012a2e405da09a1",
+  "lede": "The biggest thing this week is Tuesday's Town Council meeting, where the Fourth Supplement to the Gondola IGA comes up for a vote — that's the cost-sharing extension for the 2027 gondola replacement planning budget, the project built on the SMART 3A funding voters backed. Council also takes first readings on two ordinances, including one amending the Telluride Energy Mitigation Program. Meanwhile, the Gondola Advisory Committee meets Monday to hear where things stand with the federal FTA Capital Investment Program funding pipeline.",
   "notable": [
     {
       "id": 5,
-      "stake": "Council votes on gondola cost-sharing IGA and reads two new ordinances."
+      "stake": "Council votes on gondola IGA cost-sharing extension and two ordinances get first reading."
     },
     {
       "id": 2,
-      "stake": "Federal funding pipeline update for gondola replacement — public comment opportunity."
+      "stake": "Federal funding status for gondola replacement project gets a formal update."
     },
     {
       "id": 3,
-      "stake": "FTA Capital Investment Program update reveals gondola project's federal funding status."
+      "stake": "FTA Capital Investment Program update reveals where federal gondola funding pursuit stands."
     },
     {
       "id": 7,
-      "stake": "Ouray BOCC votes on a fifth extension of an active Emergency Disaster Declaration."
+      "stake": "Ouray BOCC votes on fifth extension of Emergency Disaster Declaration and vacancy-fill requests."
     },
     {
       "id": 8,
-      "stake": "Proposed EMS and Ridgway Fire merger discussed — shapes staffing and response times."
+      "stake": "Proposed EMS and Ridgway Fire merger discussed — shapes emergency response for years."
     }
   ]
 }
