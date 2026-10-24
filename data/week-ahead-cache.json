@@ -1,18 +1,18 @@
 {
-  "hash": "35ea31dfaef4bc9766edf891da512654d0ed4898",
-  "lede": "The biggest thing on the calendar this week is Tuesday's Town Council meeting, where three substantive items are up: the Fourth Supplement to the Gondola IGA extending cost-sharing for 2027 planning and development, plus first readings of two ordinances including one amending the Telluride Energy Mitigation Program. Ouray County also has a full plate — commissioners are weighing a fifth extension of their Emergency Disaster Declaration and, in a separate work session, taking an early look at a proposed merger of EMS and Ridgway Fire, a structural change that would reshape emergency services for years.",
+  "hash": "c3cd662b6da3f0fdf90cef922cb659d8be5cf9a1",
+  "lede": "Town Council meets Tuesday the 27th with a packed agenda that touches the gondola project directly — they're voting on the Fourth Supplement to the Gondola IGA, extending cost-sharing on the 2027 planning budget, plus first readings on two ordinances including a Telluride Energy Mitigation Program amendment. Ouray County commissioners are also busy that day, voting on a fifth extension of their Emergency Disaster Declaration and fielding vacancy requests under an austerity resolution, while a separate work session digs into a proposed EMS and Ridgway Fire merger — the kind of structural change that affects response times and budgets for years.",
   "notable": [
     {
       "id": 4,
-      "stake": "Council votes on Gondola IGA supplement and two ordinances, including energy code changes."
+      "stake": "Council votes on gondola IGA extension and two ordinances get first reading."
     },
     {
       "id": 6,
-      "stake": "Ouray BOCC votes on fifth Emergency Disaster Declaration extension and two austerity vacancy-fill requests."
+      "stake": "BOCC votes on fifth Emergency Disaster Declaration extension and staffing vacancies."
     },
     {
       "id": 7,
-      "stake": "EMS-Ridgway Fire merger draft agreement reviewed — decision shapes staffing and response times for years."
+      "stake": "Proposed EMS and Ridgway Fire merger reviewed — shapes emergency services for years."
     }
   ]
 }
