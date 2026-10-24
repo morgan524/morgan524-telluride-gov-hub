@@ -2693,8 +2693,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "October 24, 2026",
     firstSeen: "2026-10-24",
     newsTopic: "education",
-    copy: "Telluride High School student Madalyn Charleston has embarked on a great adventure.",
-    claudeSummary: false,
+    copy: "Telluride High School sophomore Maddy Charleston is 11 months into a Rotary Youth Exchange in Jindřichův Hradec, Czech Republic — her first time traveling solo or outside the U.S. She's living with a host family, attending school, and picking up the language. The Telluride Rotary Club is also looking for a local family to host a Brazilian exchange student starting after the winter holidays.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/arts_and_entertainment/article_1f936f2f-4c7e-4d18-8be3-562240625316.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/25/f25cd7e7-36d3-4807-a549-a57f9f43968f/6ada86fbdc72c.image.jpg",
     imgHiRes: true
@@ -7231,6 +7231,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
+  },
+  {
+    title: "Bike & Brewery Tour",
+    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    description: "A guided bicycle tour departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route offers a scenic way to connect Mountain Village to town while visiting local breweries along the way.",
+    pubDate: "2026-11-23T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   }
 ];
 
