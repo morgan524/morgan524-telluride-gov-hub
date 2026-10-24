@@ -1,17 +1,5 @@
 [
   {
-    "title": "Coffee and climate chats continue at the library",
-    "source": "Telluride Times",
-    "date": "October 23, 2026",
-    "firstSeen": "2026-10-23",
-    "newsTopic": "community",
-    "copy": "A NOAA social scientist joins Sheep Mountain Alliance and EcoAction Partners Thursday, Oct. 29 at 8:30 a.m. at Wilkinson Public Library to talk about the anticipated \"super El Niño\" and what it might mean for the San Juans. The free Coffee & Climate Conversations series runs monthly. Tea, coffee, and pastries provided.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/article_7bde3816-0bf1-42f4-878f-2c28c4d55a19.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/c8/6c80dfc2-a354-4fab-b2a8-fdb938bb2b88/6ad6b0d9628fc.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Rooftop rescues and evacuations as severe flooding soaks Four Corners region",
     "source": "Telluride Times",
     "date": "October 23, 2026",
@@ -21,6 +9,18 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/news/state/article_b4ddee10-a6a0-5cfe-9aa2-d6ff7516c44c.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/ae/aaef24c3-a9fd-5457-9cd9-c206376bfbb4/6adb9ee797d47.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Coffee and climate chats continue at the library",
+    "source": "Telluride Times",
+    "date": "October 23, 2026",
+    "firstSeen": "2026-10-23",
+    "newsTopic": "community",
+    "copy": "A NOAA social scientist joins Sheep Mountain Alliance and EcoAction Partners Thursday, Oct. 29 at 8:30 a.m. at Wilkinson Public Library to talk about the anticipated \"super El Niño\" and what it might mean for the San Juans. The free Coffee & Climate Conversations series runs monthly. Tea, coffee, and pastries provided.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_7bde3816-0bf1-42f4-878f-2c28c4d55a19.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/c8/6c80dfc2-a354-4fab-b2a8-fdb938bb2b88/6ad6b0d9628fc.image.jpg",
     "imgHiRes": true
   },
   {
@@ -1013,18 +1013,6 @@
     "imgHiRes": true
   },
   {
-    "title": "Therapy dogs bring calm and joy to students following shooting at Colorado high school",
-    "source": "Telluride Times",
-    "date": "October 10, 2026",
-    "firstSeen": "2026-10-10",
-    "newsTopic": "education",
-    "copy": "Two golden Labs, Norene and Polenta, are now permanent fixtures at Evergreen High School near Denver, helping students recover from a September 2024 shooting that wounded two students. The dogs, provided free through the nonprofit Canine Companions, walk the halls and visit classrooms daily. Students took to them quickly — the pair were even crowned prince and princess at homecoming.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/state/article_459c9d3a-082e-578e-af5b-afd74bf89e75.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c0/ec0ce6f7-712b-5eb5-b4b8-cab6ccaf7cc0/6ac9ce581c95d.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Protect yourself from seasonal illness",
     "source": "Telluride Times",
     "date": "October 12, 2026",
@@ -1058,30 +1046,6 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/news/article_3584d048-c8ef-48c0-95a7-d294cdcf5db4.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/f4/af48efd3-0217-4d2d-b783-b52db76a4a30/6ac604c806533.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "BOCC approves fee waiver for Ilium Valley housing",
-    "source": "Telluride Times",
-    "date": "October 10, 2026",
-    "firstSeen": "2026-10-10",
-    "newsTopic": "housing",
-    "copy": "San Miguel County commissioners waived roughly $4,000 in planning application fees for Mountain Village's Ilium Valley affordable housing project, which aims to build up to 49 deed-restricted units across two sites. Nonprofit developer Rural Homes Colorado is on board, with Phase 1 groundbreaking targeted for fall 2027 and first move-ins toward end of 2028.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/article_12069120-1845-4229-bd4c-ee20acd15612.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/91/891e2f02-e32d-4d5b-a96f-1f3077dad0e5/6ac979293c4b2.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "Full interviews with both San Miguel County Commissioner candidates",
-    "source": "Telluride Times",
-    "date": "October 10, 2026",
-    "firstSeen": "2026-10-11",
-    "newsTopic": "government",
-    "copy": "Two candidates — Paul Reich and Dylan Brooks — are vying for San Miguel County Commissioner, each focused on housing and affordability. Reich wants to reverse the livability decline before it's too late; Brooks favors vacant-home tax incentives modeled on Utah's approach. Both see the next four years as pivotal for the region's middle class.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/elections/article_6ceca736-3b81-4a23-b240-1f90c84b88fb.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/c5/dc52cf3e-43f1-4f53-8ac6-8d3149cb3802/6ac96872cc7d9.image.png",
     "imgHiRes": true
   },
   {
@@ -1219,6 +1183,17 @@
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
   },
   {
+    "title": "View the Town of Ridgway's Recently Adopted Water Supply Element",
+    "source": "Town of Ridgway",
+    "date": "October 23, 2026",
+    "firstSeen": "2026-10-24",
+    "newsTopic": "community",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/CO-Ridgway-Water-Supply-Element-101526-acc.pdf",
+    "img": ""
+  },
+  {
     "title": "Town of Ridgway, City of Ouray, and Ouray County Establish New Three-Year Affordable Housing Goals",
     "source": "Town of Ridgway",
     "date": "October 20, 2026",
@@ -1265,7 +1240,7 @@
   {
     "title": "Notice of Public Hearing for Liquor License on Thursday, November 19, 2026 at 5:30pm - Chipeta Lodge Resort &amp; Spa, 304 S Lena Street - Notice dated October 13, 2026",
     "source": "Town of Ridgway",
-    "date": "October 23, 2026",
+    "date": "October 24, 2026",
     "firstSeen": "2026-10-14",
     "newsTopic": "community",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1276,7 +1251,7 @@
   {
     "title": "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     "source": "Town of Ridgway",
-    "date": "October 23, 2026",
+    "date": "October 24, 2026",
     "firstSeen": "2026-09-29",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1287,7 +1262,7 @@
   {
     "title": "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     "source": "Town of Ridgway",
-    "date": "October 23, 2026",
+    "date": "October 24, 2026",
     "firstSeen": "2026-09-29",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",

@@ -1,8 +1,4 @@
 {
-  "county|2026-09-23|Board of County Commissioners Work Session": {
-    "sv": 4,
-    "ph": "307e0c7b19e4ff5b"
-  },
   "med|2026-09-24|Regular Board Meeting": {
     "sv": 4,
     "ph": "b858cb282617fb09"
@@ -19,13 +15,6 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8103",
     "sv": 4,
     "ph": "313a820643e5b960"
-  },
-  "telluride|2026-09-23|Vending Subcommittee - Sep 23 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8308",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/l3rAiIuyRgyVFu2-92kJZw",
-    "meetingId": "835 9480 9571",
-    "passcode": "960386"
   },
   "county|2026-09-28|Open Space Commission Meeting": {
     "sv": 4,
@@ -203,14 +192,6 @@
   "airport|2026-10-15|TRAA Board of Commissioners Meeting": {
     "sv": 4,
     "ph": "b858cb282617fb09"
-  },
-  "county|2026-09-23|Board of County Commissioners Special Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/870/files/agenda/2008",
-    "zoomUrl": "https://us02web.zoom.us/meeting/register/n4e7ZSbqRwm-OmsZjc_8vg",
-    "meetingId": "835 4898 8890",
-    "passcode": "669213",
-    "phone": "719-359-4580"
   },
   "county|2026-09-30|Board of County Commissioners Work Session": {
     "sv": 4,
@@ -671,5 +652,9 @@
     "passcode": "946299",
     "phone": "346-248-7799",
     "sv": 4
+  },
+  "school|2026-11-04|Telluride Board of Education Work Session": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   }
 }

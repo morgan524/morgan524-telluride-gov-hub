@@ -270,7 +270,7 @@
     "packetUrl": "",
     "link": "https://www.tellurideschool.org/agendasandminutes",
     "hasAgenda": false,
-    "summary": "",
+    "summary": "The November 4 Telluride Board of Education Work Session agenda hasn't been posted yet.",
     "zoomLink": "https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09",
     "zoomMeetingId": "",
     "zoomPasscode": "[object Object]",
@@ -977,6 +977,26 @@
     "zoomPhone": "",
     "livestream": "",
     "commentEmail": "",
+    "hook": ""
+  },
+  {
+    "source": "county",
+    "sourceLabel": "San Miguel County",
+    "title": "Open Space Commission Meeting 11/23",
+    "date": "2026-11-23",
+    "time": "4:00 PM",
+    "location": "333 W Colorado Ave, Third Floor, Telluride, CO 81435",
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1091/files",
+    "packetUrl": "",
+    "link": "https://sanmiguelcoco.portal.civicclerk.com/event/1091/files",
+    "hasAgenda": true,
+    "summary": "",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams",
+    "commentEmail": "bocc@sanmiguelcountyco.gov",
     "hook": ""
   }
 ]
