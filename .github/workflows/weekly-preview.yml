@@ -15,6 +15,11 @@ on:
   schedule:
     - cron: '0 16 * * 0'   # Sun 16:00 UTC = 10:00 AM MDT (summer)
     - cron: '0 17 * * 0'   # Sun 17:00 UTC = 10:00 AM MST (winter)
+    - cron: '0 20 * * 0'   # Sun 20:00 UTC = 2 PM MDT / 1 PM MST (backup)
+# Once per week (Morgan 2026-10-24): any scheduled run from Sunday 10 AM to
+# 10 PM Denver sends if this Sunday's preview hasn't gone out yet; a cache
+# marker keyed on the date records the send. GitHub often starts crons late,
+# so the old "only at 10 AM" guard could skip both twins.
   workflow_dispatch:
     inputs:
       week_start:
@@ -25,6 +30,11 @@ on:
 permissions:
   contents: read
   issues: write   # ci-health-issue failure tracker
+  actions: write  # save the once-per-week cache marker
+
+concurrency:
+  group: weekly-preview
+  cancel-in-progress: false
 
 jobs:
   # DST guard: exactly one of the cron pair lands on 10:00 AM in Denver;
@@ -33,20 +43,29 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       go: ${{ steps.g.outputs.go }}
+      key: ${{ steps.w.outputs.key }}
     steps:
-      - name: Only proceed at 10:00 AM America/Denver
+      - name: Within the Sunday window?
+        id: w
+        run: |
+          echo "key=weekly-preview-sent-$(TZ='America/Denver' date +%F)" >> "$GITHUB_OUTPUT"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo "manual=true" >> "$GITHUB_OUTPUT"; echo "inwin=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+          DOW="$(TZ='America/Denver' date +%u)"; H=$((10#$(TZ='America/Denver' date +%H)))
+          if [ "$DOW" = "7" ] && [ "$H" -ge 10 ] && [ "$H" -lt 22 ]; then echo "inwin=true" >> "$GITHUB_OUTPUT"
+          else echo "Denver weekday=$DOW hour=$H — outside Sunday 10 AM to 10 PM, skipping"; fi
+      - name: Already sent today?
+        id: sent
+        if: steps.w.outputs.inwin == 'true' && steps.w.outputs.manual != 'true'
+        uses: actions/cache/restore@v4
+        with:
+          path: .weekly-preview-sent
+          key: ${{ steps.w.outputs.key }}
+          lookup-only: true
+      - name: Decide
         id: g
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "go=true" >> "$GITHUB_OUTPUT"; exit 0
-          fi
-          HOUR="$(TZ='America/Denver' date +%H)"
-          if [ "$HOUR" = "10" ]; then
-            echo "go=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "Denver hour=$HOUR (not 10) — DST twin cron, skipping"
-            echo "go=false" >> "$GITHUB_OUTPUT"
-          fi
+          if [ "${{ steps.w.outputs.inwin }}" = "true" ] && [ "${{ steps.sent.outputs.cache-hit }}" != "true" ]; then echo "go=true" >> "$GITHUB_OUTPUT"
+          else echo "go=false" >> "$GITHUB_OUTPUT"; echo "not in window or already sent — skipping"; fi
 
   preview:
     needs: guard
@@ -142,6 +161,16 @@ jobs:
       - name: Note when email isn't configured
         if: env.PREVIEW_SMTP_PASS == ''
         run: echo "::warning::PREVIEW_SMTP_PASS secret not set — rendered weekly-preview.html (see artifact) but did not email. Add PREVIEW_SMTP_USER + PREVIEW_SMTP_PASS to enable the Sunday email."
+
+      - name: Mark this Sunday's preview as sent
+        if: github.event_name == 'schedule'
+        run: mkdir -p .weekly-preview-sent && date -u +%FT%TZ > .weekly-preview-sent/at
+      - uses: actions/cache/save@v4
+        if: github.event_name == 'schedule'
+        continue-on-error: true
+        with:
+          path: .weekly-preview-sent
+          key: ${{ needs.guard.outputs.key }}
 
       - name: Upload preview artifact
         if: always()

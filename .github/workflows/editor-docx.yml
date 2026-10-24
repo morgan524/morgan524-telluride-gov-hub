@@ -6,12 +6,18 @@ name: Week Ahead Editor Copy (Word)
 # Morgan then updates the newsletter on the Review Desk from his edits.
 # Nothing here touches the digest itself; it only renders and emails a copy.
 #
-# Two crons (6:15 PM in MDT and in MST); the guard keeps the one that lands at
-# 18:xx in Denver. Manual dispatch can send a test to another address.
+# Send ONCE per week (Morgan 2026-10-24). GitHub often starts scheduled runs
+# hours late (Fri 2026-10-23 ran at 10:33 and 11:48 PM and the old "only at
+# 6 PM" guard skipped both), so any run from Friday 6 PM through Saturday
+# 2 PM Denver sends if that week's copy hasn't gone out yet. A cache marker
+# keyed on the week records the send; later runs that week skip. The
+# Saturday-morning cron is the backup if GitHub drops Friday's.
+# Manual dispatch always sends (use `to` for a test to another address).
 on:
   schedule:
     - cron: '15 0 * * 6'   # Sat 00:15 UTC = Fri 6:15 PM MDT (summer)
     - cron: '15 1 * * 6'   # Sat 01:15 UTC = Fri 6:15 PM MST (winter)
+    - cron: '0 15 * * 6'   # Sat 15:00 UTC = Sat 9 AM MDT / 8 AM MST (backup)
   workflow_dispatch:
     inputs:
       to:
@@ -23,19 +29,44 @@ on:
 
 permissions:
   contents: read
+  actions: write   # save the once-per-week cache marker
+
+concurrency:
+  group: editor-docx
+  cancel-in-progress: false
 
 jobs:
   editor-copy:
     runs-on: ubuntu-latest
     steps:
-      - name: Only proceed at 6 PM America/Denver
+      - name: Within the Friday-evening / Saturday window?
+        id: w
+        run: |
+          WS="$(TZ='America/Denver' date -d 'next monday' +%F)"
+          echo "key=editor-docx-sent-$WS" >> "$GITHUB_OUTPUT"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo "manual=true" >> "$GITHUB_OUTPUT"; echo "inwin=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+          DOW="$(TZ='America/Denver' date +%u)"; H=$((10#$(TZ='America/Denver' date +%H)))
+          if { [ "$DOW" = "5" ] && [ "$H" -ge 18 ]; } || { [ "$DOW" = "6" ] && [ "$H" -lt 14 ]; }; then
+            echo "inwin=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Denver weekday=$DOW hour=$H — outside Fri 6 PM to Sat 2 PM, skipping"
+          fi
+
+      - name: Already sent this week?
+        id: sent
+        if: steps.w.outputs.inwin == 'true' && steps.w.outputs.manual != 'true'
+        uses: actions/cache/restore@v4
+        with:
+          path: .editor-docx-sent
+          key: ${{ steps.w.outputs.key }}
+          lookup-only: true
+
+      - name: Decide
         id: g
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$(TZ='America/Denver' date +%H)" = "18" ]; then
-            echo "go=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "Denver hour=$(TZ='America/Denver' date +%H) (not 18) — DST twin cron, skipping"
-          fi
+          if [ "${{ steps.w.outputs.inwin }}" != "true" ]; then exit 0; fi
+          if [ "${{ steps.sent.outputs.cache-hit }}" = "true" ]; then echo "This week's copy already went out (${{ steps.w.outputs.key }}) — skipping"; exit 0; fi
+          echo "go=true" >> "$GITHUB_OUTPUT"
 
       - uses: actions/checkout@v5
         if: steps.g.outputs.go == 'true'
@@ -91,6 +122,16 @@ jobs:
             Thanks,
             Livable Telluride
           attachments: ${{ steps.build.outputs.file }}
+
+      - name: Mark this week as sent
+        if: steps.g.outputs.go == 'true' && github.event.inputs.to == ''
+        run: mkdir -p .editor-docx-sent && date -u +%FT%TZ > .editor-docx-sent/at
+      - uses: actions/cache/save@v4
+        if: steps.g.outputs.go == 'true' && github.event.inputs.to == ''
+        continue-on-error: true
+        with:
+          path: .editor-docx-sent
+          key: ${{ steps.w.outputs.key }}
 
       - uses: actions/upload-artifact@v4
         if: steps.g.outputs.go == 'true'
