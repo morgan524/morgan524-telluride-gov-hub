@@ -1,18 +1,22 @@
 {
-  "hash": "c3cd662b6da3f0fdf90cef922cb659d8be5cf9a1",
-  "lede": "Town Council meets Tuesday the 27th with a packed agenda that touches the gondola project directly — they're voting on the Fourth Supplement to the Gondola IGA, extending cost-sharing on the 2027 planning budget, plus first readings on two ordinances including a Telluride Energy Mitigation Program amendment. Ouray County commissioners are also busy that day, voting on a fifth extension of their Emergency Disaster Declaration and fielding vacancy requests under an austerity resolution, while a separate work session digs into a proposed EMS and Ridgway Fire merger — the kind of structural change that affects response times and budgets for years.",
+  "hash": "e409c82a02730a04a7b78c96e555bee5874487e5",
+  "lede": "Town Council meets Tuesday, October 27 with a full plate: the Fourth Supplement to the Gondola IGA — extending cost-sharing for the 2027 planning budget tied to the SMART 3A funding voters approved — gets a decision, and two ordinances, including one amending the Telluride Energy Mitigation Program, get their first readings. Ouray County commissioners are also busy, with a work session on a proposed EMS and Ridgway Fire merger and a regular meeting to consider extending the Emergency Disaster Declaration. Amid all that, the valley wraps up its Halloween stretch with the Witches Ride, Young Frankenstein at the Sheridan, and a Remembrance Garden dedication ceremony on Tuesday.",
   "notable": [
     {
       "id": 4,
-      "stake": "Council votes on gondola IGA extension and two ordinances get first reading."
+      "stake": "Council votes on gondola IGA supplement and two ordinances get first reading."
     },
     {
       "id": 6,
-      "stake": "BOCC votes on fifth Emergency Disaster Declaration extension and staffing vacancies."
+      "stake": "Ouray BOCC votes on fifth extension of Emergency Disaster Declaration."
     },
     {
       "id": 7,
-      "stake": "Proposed EMS and Ridgway Fire merger reviewed — shapes emergency services for years."
+      "stake": "Proposed EMS and Ridgway Fire merger under discussion — shapes response times and costs."
+    },
+    {
+      "id": 2,
+      "stake": "Federal funding pipeline update for gondola project — where grant pursuit actually stands."
     }
   ]
 }

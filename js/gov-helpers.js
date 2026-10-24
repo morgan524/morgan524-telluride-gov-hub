@@ -498,7 +498,13 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://ouraycoco.portal.civicclerk.com/event/1129/files/agenda/7573","zoomUrl":"https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1","meetingId":"876 0637 5697","passcode":"946299","phone":"346-248-7799","sv":4},
 
   "school|2026-11-04|Telluride Board of Education Work Session":
-    {"sv":4,"ph":"b858cb282617fb09"}
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "county|2026-11-23|Open Space Commission Meeting":
+    {"sv":4,"ph":"1ff606174e68cca5"},
+
+  "county|2026-11-23|Open Space Commission Meeting 11/23":
+    {"sv":4,"ph":"5b6f06437c0ffd41"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -843,7 +849,13 @@ const MEETING_PREVIEWS = {
     "Commissioners are expected to receive administrative reports and discuss a potential merger between EMS and Ridgway Fire services, including budget and operational considerations and a preliminary draft agreement outlining the terms of the consolidation.",
 
   "ouray|2026-10-28|Board of County Commissioners Work Session":
-    "Commissioners are expected to receive an annual planning presentation from CDOT and discuss FEMA Public Assistance related to Ouray County recovery projects and road damage assessments. No formal actions will be taken during the work session."
+    "Commissioners are expected to receive an annual planning presentation from CDOT and discuss FEMA Public Assistance related to Ouray County recovery projects and road damage assessments. No formal actions will be taken during the work session.",
+
+  "county|2026-11-23|Open Space Commission Meeting":
+    "The Open Space Commission is expected to meet on November 23, 2026. Related county activity includes active requests for proposals covering jail painting, a multi-jurisdictional hazard mitigation plan update, and a housing action plan, alongside several ongoing public trustee and sheriff foreclosure proceedings in the Norwood and Telluride areas.",
+
+  "county|2026-11-23|Open Space Commission Meeting 11/23":
+    "The San Miguel County Open Space Commission is expected to meet on November 23, 2026. Related county activity includes active requests for proposals covering jail painting, a multi-jurisdictional hazard mitigation plan update, and a housing action plan, alongside several ongoing foreclosure proceedings on local properties."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -884,6 +896,16 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "Monthly Chamber of Commerce meeting open to all.",
     href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
+    img: ""
+  },
+  {
+    title: "Parish Bulletin for October 25",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "October 24, 2026",
+    newsTopic: "community",
+    copy: "This week's parish bulletin is attached. As always, please check the Parish Calendar for the most updated information.Reminders:Pilgrimage to Poland will be June 8-22, 2027. If interested, contact the Church Office. Sign up and deposit are ...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-october-25/",
     img: ""
   },
   {
@@ -1024,16 +1046,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "This week's parish bulletin is attached. As always, please check the Parish Calendar for the most updated information.Reminders:There will be a second collection this weekend for World Mission Sunday. Read the Pastor's Corner for more infor...",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-october-18/",
-    img: ""
-  },
-  {
-    title: "2026 Telluride Mountain Club Annual Report",
-    source: "Telluride Mountain Club",
-    sourceKey: "tmc",
-    date: "October 12, 2026",
-    newsTopic: "community",
-    copy: "The post 2026 Telluride Mountain Club Annual Report appeared first on Telluride Mountain Club .",
-    href: "https://www.telluridemountainclub.org/2026-telluride-mountain-club-recap-report/",
     img: ""
   },
   {
@@ -1419,7 +1431,13 @@ const MANUAL_SUMMARIES = {
     "A work session — no formal votes — with two substantive conversations on the table. First, CDOT walks the commissioners through its annual planning presentation, covering what the state transportation agency has in store for the US-550 corridor and surrounding roads. Then the discussion shifts to FEMA Public Assistance, focusing on Ouray County's ongoing recovery projects and road damage assessments. Anyone who's watched mountain roads take a beating through wet cycles knows how long the repair queue can get — and how much of the funding story runs through federal reimbursement timelines.",
 
   "school|2026-11-04|Telluride Board of Education Work Session":
-    "The November 4 Telluride Board of Education Work Session agenda hasn't been posted yet."
+    "The November 4 Telluride Board of Education Work Session agenda hasn't been posted yet.",
+
+  "county|2026-11-23|Open Space Commission Meeting":
+    "The November 23 Open Space Commission Meeting agenda hasn't been posted yet.",
+
+  "county|2026-11-23|Open Space Commission Meeting 11/23":
+    "The November 23 San Miguel County Open Space Commission agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2676,6 +2694,30 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "More rain is expected after bad flooding in the Four Corners region led to rescues and evacuations",
+    source: "Telluride Times",
+    date: "October 24, 2026",
+    firstSeen: "2026-10-24",
+    newsTopic: "public-safety",
+    copy: "Severe flooding hit the Four Corners region this week, prompting 20 rescues, evacuations of 600 homes, and power outages for roughly 1,500 people in the Farmington and Shiprock areas. Four inches of rain fell on already-saturated ground Wednesday through Friday, with more expected. Southern Colorado saw flooding a full three feet above last year's 100-year flood level on the San Juan River.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_7eb9eb28-87c7-5edc-aff5-1823d107a000.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/3c/d3cf787c-2968-53d4-9f7f-bec042bfa82f/6adb9ee8ddc3d.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Chamberlain award winner Kingston featured at Bardic Trails",
+    source: "Telluride Times",
+    date: "October 24, 2026",
+    firstSeen: "2026-10-24",
+    newsTopic: "recreation",
+    copy: "Kate Kingston of Trinidad — a decorated Colorado poet with a long list of awards and fellowships — headlines Bardic Trails on Tuesday, Nov. 3 at 7 p.m. via Zoom. The free monthly series is hosted by Talking Gourds and open to all; the suggested prompt is \"Dia de los Muertos.\" Visit tellurideinstitute.org/talking-gourds for the link.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_d32416bd-7f24-4e4c-9e11-cde7de4c86ff.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/2c/02cdb11d-2bb2-4661-9c28-b5782f83071e/6adcea121c629.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Voters in 2 Democratic strongholds could ban transgender girls from girls school sports",
     source: "Telluride Times",
     date: "October 24, 2026",
@@ -2709,6 +2751,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_b4ddee10-a6a0-5cfe-9aa2-d6ff7516c44c.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/ae/aaef24c3-a9fd-5457-9cd9-c206376bfbb4/6adb9ee797d47.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "'We call it fellowship'",
+    source: "Telluride Times",
+    date: "October 23, 2026",
+    firstSeen: "2026-10-24",
+    newsTopic: "community",
+    copy: "AA meetings continue daily in Telluride at Christ Church, with a women's meeting resuming Thursdays at noon after an 18-month gap. Narcotics Anonymous meets Tuesdays at 5:30 p.m. Al-Anon recently ended its in-person run but online options remain via TellurideAlAnon@gmail.com.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_fd30f8a0-1316-4635-b9be-b6d7198760cc.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/3c/e3c424fd-e4b8-4cc3-8eac-8440d6e85c5f/6adbd0b365f77.image.jpg",
     imgHiRes: true
   },
   {
@@ -3793,6 +3847,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Applications Open for 2026/2027 Temporary Winter Community Housing Program",
+    source: "Town of Telluride",
+    date: "October 9, 2026",
+    newsTopic: "housing",
+    copy: "(October 8, 2026) – The Town of Telluride is accepting applications for its Temporary Winter Community Housing program for the 2026/2027 winter season. The program provides seasonal housing in Town Park for eligible workers employed in the Telluride area.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=406",
+    img: ""
+  },
+  {
     title: "Placerville Community Annual Fall Potluck",
     source: "San Miguel County",
     date: "October 13, 2026",
@@ -3800,6 +3863,69 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1421",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14854"
+  },
+  {
+    title: "San Miguel County Public Health Announces Fall Vaccine Availability",
+    source: "San Miguel County",
+    date: "October 1, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1419",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14836"
+  },
+  {
+    title: "Chief Deputy Clerk Receives Excellence in Election Service Award",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "government",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1413",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14817"
+  },
+  {
+    title: "Planning Director Kaye Simonson Retires After Nearly Eight Years with the County",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1418",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14827"
+  },
+  {
+    title: "Another San Miguel Basin Fair in the Books",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1416",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14822"
+  },
+  {
+    title: "New Faces and a Fond Farewell for Parks + Open Space",
+    source: "San Miguel County",
+    date: "September 25, 2026",
+    newsTopic: "recreation",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1417",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14826"
+  },
+  {
+    title: "County Housing Efforts Continue on Multiple Fronts",
+    source: "San Miguel County",
+    date: "September 24, 2026",
+    newsTopic: "housing",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1415",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14821"
+  },
+  {
+    title: "San Miguel County Adds Genasys Protect to Emergency Alerting Ecosystem",
+    source: "San Miguel County",
+    date: "September 24, 2026",
+    newsTopic: "public-safety",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1414",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14820"
   },
   {
     title: "DMV Services available in Egnar 11/18",
@@ -4475,39 +4601,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Ouray County Ranch History Museum Pie Contest & Free Museum Day",
-    link: "https://koto.org/event/ouray-county-ranch-history-museum-pie-contest-free-museum-day/",
-    description: "The Ouray County Ranch History Museum cordially invites you all to a homemade pie contest this Saturday, October 24. Also, a Free Museum Day. Apple or pumpkin pies arrive between 10-11am to the Ranch History Museum on Sherman Street in Downtown Ridgway to be judged @ 11am. Winners will be announced and prizes given @ high noon – along with $2 slices of pie. Everyone is welcome on this Free Museum Day. Proceeds help support the Museum and our community heritage. Bakers, please pre-register with Joan at 970.316.1085 . That's 970.316.1085 .",
-    pubDate: "2026-10-24T10:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Ouray County Ranch History Museum, Ridgway",
-    imageUrl: ""
-  },
-  {
-    title: "People's March",
-    link: "https://koto.org/event/peoples-march-3/",
-    description: "The next People's March is Saturday, October 24th, at 12 p.m. (noon) at the San Miguel County Courthouse. Speakers are Dr. Howard Kornfeld and Dylan Brooks. Singalong following the march! Bring your instruments! Bring your signs! All are welcome.",
-    pubDate: "2026-10-24T12:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "San Miguel County Courthouse, TELLURIDE",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/10/155B9CC1-4DC7-4302-BEF2-5156CCF153DD.jpeg"
-  },
-  {
-    title: "Yogalates with Lauren Norton",
-    link: "https://koto.org/event/yogalates-with-lauren-norton/",
-    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
-    pubDate: "2026-10-24T12:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Pumpkins & Peaks",
     link: "https://koto.org/event/pumpkins-peaks/2026-10-24/",
     description: "Celebrate fall in the mountains at Pumpkins & Peaks! Join TMVOA in Mountain Village for a day of free, family-friendly fall-inspired fun featuring pumpkins and pumpkin carving! In addition to getting to take your carved pumpkin home with you, you can also enjoy a petting zoo, face painting, a scavenger hunt with prizes, a fall-inspired family photo opportunity, 4WD off-road rides with Telluride Outside, outdoor movies & football screenings, fire pits, live music and more. Bundle up, bring the whole family, and enjoy a festive fall day in the mountains! This event is presented by TMVOA.",
@@ -5075,17 +5168,6 @@ const ALIBI_EVENTS = [
  * Bot overwrites this on first run. */
 const SHERIDAN_EVENTS = [
   {
-    title: "SHOW Bar: An Intimate Night with Favorite Local Musicians",
-    link: "https://sheridanoperahouse.com/events/show-bar-singer-songwriter-night-with-britley-matt/",
-    description: "An intimate evening of live music at the Sheridan Opera House featuring favorite local musicians from the Telluride community. The historic venue provides an up-close setting for this locally focused concert celebrating the area's homegrown talent.",
-    pubDate: "2026-10-23",
-    source: "sheridan",
-    sourceLabel: "Sheridan Opera House",
-    category: "Concert / Performance",
-    location: "Sheridan Opera House • Telluride, CO",
-    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/10/Screenshot-2026-10-13-at-1.02.18-PM.png"
-  },
-  {
     title: "Adventures in Acting: The Legend of Sleepy Hollow / The Little Ghost Who Was a Quilt",
     link: "https://sheridanoperahouse.com/events/adventures-in-acting-the-legend-of-sleepy-hollow/",
     description: "A theatrical performance at the Sheridan Opera House presenting two spooky-season stories: Washington Irving's classic *The Legend of Sleepy Hollow* and *The Little Ghost Who Was a Quilt*. The production is part of the Adventures in Acting series, making it a fitting event for the Halloween season.",
@@ -5107,6 +5189,17 @@ const SHERIDAN_EVENTS = [
     category: "Concert / Performance",
     location: "Sheridan Opera House • Telluride, CO",
     imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/09/Screenshot-2026-10-12-at-10.51.39-AM.png"
+  },
+  {
+    title: "Ski Film: Warren Miller's \"Days Off\"",
+    link: "https://sheridanoperahouse.com/events/ski-film-warren-millers-days-off/",
+    description: "Warren Miller Entertainment's \"Days Off\" comes to the Sheridan Opera House for a screening of the legendary ski film franchise's latest production. The film showcases skiing and snowboarding footage from mountain destinations around the world, as is traditional for Warren Miller's annual releases.",
+    pubDate: "2026-12-12",
+    source: "sheridan",
+    sourceLabel: "Sheridan Opera House",
+    category: "Concert / Performance",
+    location: "Sheridan Opera House • Telluride, CO",
+    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/09/Screenshot-2026-10-12-at-10.22.59-AM.png"
   }
 ];
 
@@ -5551,7 +5644,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
     pubDate: "2026-10-24T19:30:00.000Z",
-    endDate: "2026-12-22",
+    endDate: "2026-12-23",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5771,7 +5864,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/water-aerobics",
     description: "Join water aerobics weekly Wednesdays (Sometimes Tuesdays and Thursdays too!) from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy the positive atmosphere! Water aerobics is free for pool members, and non-members can join for just $5 per class.",
     pubDate: "2026-10-28T16:00:00.000Z",
-    endDate: "2026-12-16",
+    endDate: "2026-12-23",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -8060,6 +8153,23 @@ const LEGAL_NOTICES = [
     address: "53 East Homestead Road, Norwood, Colorado 81423 (Lot 24, Pioneer Village)",
     noticeKey: "foreclosure-2026-10-53-e-homestead-norwood",
     caseNumber: "2026-10"
+  },
+  {
+    title: "Request for Proposal -- TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS",
+    entity: "Town of Telluride",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Request for Proposal",
+    filterTag: "public-entity",
+    summary: "Town of Telluride is seeking qualified respondents for: TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS.",
+    deadline: "Closes 1/11/2026",
+    expires: "2026-01-11",
+    dates: "10/24",
+    url: "https://www.telluride.gov/bids.aspx?bidID=133",
+    address: "",
+    totBidID: "133"
   }
 ];
 

@@ -1,16 +1,5 @@
 [
   {
-    "title": "SHOW Bar: An Intimate Night with Favorite Local Musicians",
-    "link": "https://sheridanoperahouse.com/events/show-bar-singer-songwriter-night-with-britley-matt/",
-    "description": "An intimate evening of live music at the Sheridan Opera House featuring favorite local musicians from the Telluride community. The historic venue provides an up-close setting for this locally focused concert celebrating the area's homegrown talent.",
-    "pubDate": "2026-10-23",
-    "source": "sheridan",
-    "sourceLabel": "Sheridan Opera House",
-    "category": "Concert / Performance",
-    "location": "Sheridan Opera House • Telluride, CO",
-    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/10/Screenshot-2026-10-13-at-1.02.18-PM.png"
-  },
-  {
     "title": "Adventures in Acting: The Legend of Sleepy Hollow / The Little Ghost Who Was a Quilt",
     "link": "https://sheridanoperahouse.com/events/adventures-in-acting-the-legend-of-sleepy-hollow/",
     "description": "A theatrical performance at the Sheridan Opera House presenting two spooky-season stories: Washington Irving's classic *The Legend of Sleepy Hollow* and *The Little Ghost Who Was a Quilt*. The production is part of the Adventures in Acting series, making it a fitting event for the Halloween season.",
@@ -32,5 +21,16 @@
     "category": "Concert / Performance",
     "location": "Sheridan Opera House • Telluride, CO",
     "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/09/Screenshot-2026-10-12-at-10.51.39-AM.png"
+  },
+  {
+    "title": "Ski Film: Warren Miller's \"Days Off\"",
+    "link": "https://sheridanoperahouse.com/events/ski-film-warren-millers-days-off/",
+    "description": "Warren Miller Entertainment's \"Days Off\" comes to the Sheridan Opera House for a screening of the legendary ski film franchise's latest production. The film showcases skiing and snowboarding footage from mountain destinations around the world, as is traditional for Warren Miller's annual releases.",
+    "pubDate": "2026-12-12",
+    "source": "sheridan",
+    "sourceLabel": "Sheridan Opera House",
+    "category": "Concert / Performance",
+    "location": "Sheridan Opera House • Telluride, CO",
+    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/09/Screenshot-2026-10-12-at-10.22.59-AM.png"
   }
 ]

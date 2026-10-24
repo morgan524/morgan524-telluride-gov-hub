@@ -24,20 +24,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
     "type": "Community",
-    "endDate": "2026-12-22"
-  },
-  {
-    "title": "Ouray County Ranch History Museum Pie Contest & Free Museum Day",
-    "href": "https://koto.org/event/ouray-county-ranch-history-museum-pie-contest-free-museum-day/",
-    "date": "2026-10-24",
-    "time": "10:00 AM",
-    "location": "Ouray County Ranch History Museum, Ridgway",
-    "town": "Ridgway",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Ouray County Ranch History Museum cordially invites you all to a homemade pie contest this Saturday, October 24. Also, a Free Museum Day. Apple or pumpkin pies arrive between 10-11am to the Ranch History Museum on Sherman Street in…",
-    "type": "Community"
+    "endDate": "2026-12-23"
   },
   {
     "title": "OPL Read a Book - Get a Pumpkin",
@@ -65,32 +52,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "",
     "type": "Community"
-  },
-  {
-    "title": "People's March",
-    "href": "https://koto.org/event/peoples-march-3/",
-    "date": "2026-10-24",
-    "time": "12:00 PM",
-    "location": "San Miguel County Courthouse, TELLURIDE",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/10/155B9CC1-4DC7-4302-BEF2-5156CCF153DD.jpeg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The next People's March is Saturday, October 24th, at 12 p.m. (noon) at the San Miguel County Courthouse. Speakers are Dr. Howard Kornfeld and Dylan Brooks. Singalong following the march! Bring your instruments! Bring your signs! All are…",
-    "type": "Community"
-  },
-  {
-    "title": "Yogalates with Lauren Norton",
-    "href": "https://koto.org/event/yogalates-with-lauren-norton/",
-    "date": "2026-10-24",
-    "time": "12:00 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-6.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and…",
-    "type": "Wellness"
   },
   {
     "title": "Yogalates with Lauren",
@@ -633,7 +594,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Join water aerobics weekly Wednesdays (Sometimes Tuesdays and Thursdays too!) from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy the positive atmosphere! Water aerobics is free for pool members, and…",
     "type": "Community",
-    "endDate": "2026-12-16"
+    "endDate": "2026-12-23"
   },
   {
     "title": "After School Art for Ages 8-12",
@@ -2891,6 +2852,19 @@
     "source": "The Alibi",
     "desc": "Easy Jim takes the stage at The Alibi for the first night of a residency engagement, bringing live music to this Telluride bar venue. The residency format promises multiple nights of performances in an intimate setting.",
     "type": "Music"
+  },
+  {
+    "title": "Ski Film: Warren Miller's \"Days Off\"",
+    "href": "https://sheridanoperahouse.com/events/ski-film-warren-millers-days-off/",
+    "date": "2026-12-12",
+    "time": "5:00 PM",
+    "location": "Sheridan Opera House • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/09/Screenshot-2026-10-12-at-10.22.59-AM.png",
+    "category": "Concert / Performance",
+    "source": "Sheridan Opera House",
+    "desc": "Warren Miller Entertainment's \"Days Off\" comes to the Sheridan Opera House for a screening of the legendary ski film franchise's latest production. The film showcases skiing and snowboarding footage from mountain destinations around the…",
+    "type": "Arts & Film"
   },
   {
     "title": "Mountain Village Holiday Prelude",
