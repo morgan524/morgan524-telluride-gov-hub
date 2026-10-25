@@ -1,22 +1,26 @@
 {
-  "hash": "d295d6d52a816743f8843ae5e402c69ae3fc05d9",
-  "lede": "The biggest thing on the table this week is Tuesday's Telluride Town Council meeting, where the Fourth Supplement to the Gondola IGA goes up for a vote — that's the cost-sharing agreement that keeps 2027 planning money flowing on the gondola replacement — plus first readings of two ordinances touching the Energy Mitigation Program. Over in Ouray County, commissioners are deep into an EMS-Ridgway Fire merger discussion and a fifth extension of their Emergency Disaster Declaration, while the gondola's federal funding pursuit gets an airing Monday at the SMART Advisory Committee.",
+  "hash": "b9f845429390955392da3b3d6d2cbdad56e50379",
+  "lede": "The biggest item this week is Tuesday's Town Council meeting, where three substantive things land at once: a Fourth Supplement to the Gondola IGA extending cost-sharing for the 2027 planning budget, plus first readings of two ordinances — one touching the Telluride Energy Mitigation Program and another yet to be named. That gondola money question connects directly to what SMART voters approved, so it's worth paying attention. Ouray County also has a full plate, with commissioners weighing a fifth extension of their Emergency Disaster Declaration and a work session on a proposed EMS-Ridgway Fire merger that could reshape emergency response for years.",
   "notable": [
     {
       "id": 4,
-      "stake": "Council votes on gondola IGA supplement and two ordinances get first reading."
+      "stake": "Council votes on gondola IGA cost-sharing and reads two new ordinances."
     },
     {
       "id": 6,
-      "stake": "Ouray BOCC votes on fifth Emergency Disaster Declaration extension and vacancy fills."
+      "stake": "Commissioners vote on fifth extension of active Emergency Disaster Declaration."
     },
     {
       "id": 7,
-      "stake": "EMS and Ridgway Fire merger draft agreement shapes emergency response for years."
+      "stake": "Proposed EMS-Ridgway Fire merger reviewed — shapes staffing and response costs long-term."
     },
     {
       "id": 2,
-      "stake": "Federal funding pipeline update for gondola replacement — public comment open."
+      "stake": "Federal funding pipeline for gondola project gets a public status update."
+    },
+    {
+      "id": 3,
+      "stake": "Early 2027 Fair Board budget review and nonprofit structure discussion on the table."
     }
   ]
 }

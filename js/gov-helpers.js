@@ -504,6 +504,14 @@ const DEEP_DIVE_UPDATES = [];
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-10-25",
+    title: "The gondola update nobody's agreed on yet",
+    body: "The Gondola Sub Committee meets to hear an update on the FTA Capital Investment Program — federal transit money that could move the Telluride-Mountain Village gondola project forward. Some residents see a federally backed gondola connection as the right answer to traffic and parking up here. Others wonder whether chasing federal capital funding means ceding control, adding complexity, or committing to a project before the community has fully weighed in. Nothing's been decided — this is an update, not a vote.\n\nSo where do you stand: is federal investment in the gondola a good path forward, or does it give you pause?",
+    choices: ["Get the federal money", "Too many strings attached", "Need way more info"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-10-24",
     title: "One lot line goes away in West Telluride",
     body: "A minor subdivision application for 510 W Columbia Avenue is headed to the Planning & Zoning Commission Chair. The proposal would vacate the lot line between two existing parcels and combine them into a single lot — roughly 5,625 square feet — to be known as Lot 40R.\n\nStraightforward paperwork to some. To others, consolidating lots in a tight mountain town raises a familiar question: does merging parcels quietly remove a future opportunity for more housing, or is private owners managing their own property simply nobody else's business?\n\nWhat do you think — does a lot-line vacation like this matter to the broader community, or is it a private decision that doesn't warrant much scrutiny?",
@@ -732,14 +740,6 @@ const DAILY_QUESTIONS = [
     title: "The county wants to haul material and build trails — at the same time",
     body: "The Board of County Commissioners has a work session coming up that lumps together trail construction for the Lawson Hill Connector, material hauling, a fuel island canopy, and jail painting — all in one procurement conversation. Some will see efficient government: bundle the work, move faster. Others will wonder whether pairing a trail project with jail maintenance and fuel infrastructure is the right way to weigh priorities or spend public money. Nothing's been decided yet — this is a work session.\n\nWhen county projects get bundled like this, does that make the process smoother, or does it make it harder to scrutinize what's actually being approved?",
     choices: ["Bundling makes sense — move faster", "Keep projects separate", "Need more info"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
-  },
-  {
-    date: "2026-09-25",
-    title: "Federal money or local control — pick one?",
-    body: "The Gondola Leadership Committee is weighing two approaches: a federally funded path versus a locally-led one. Those aren't the same thing. Federal dollars usually come with federal strings — timelines, requirements, oversight. A locally-led project keeps more control up here but means finding the money some other way. Reasonable people land in different places on that trade. The committee is also working on a communications plan, which suggests this is still very much in motion, not decided.\n\nSo — when it comes to a project like this, which matters more to you: the funding source or who's running the show?",
-    choices: ["Keep local control", "Take the federal money", "Need more info"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
   }
@@ -3814,15 +3814,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Placerville Community Annual Fall Potluck",
-    source: "San Miguel County",
-    date: "October 13, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1421",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14854"
-  },
-  {
     title: "San Miguel County Public Health Announces Fall Vaccine Availability",
     source: "San Miguel County",
     date: "October 1, 2026",
@@ -5017,26 +5008,48 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Yogalates with Lauren",
-    link: "https://telluridelibrary.libcal.com/event/17660680?hs=a",
-    description: "12:00 PM – 1:00 PM · Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome. Mu&eacute;vase, respire y ll&eacute;nese de energ&iacute;a en esta din&aacute;mica clase biling&uuml;e, dirigido por Lauren Norton, dise&ntilde;ada para fortalecer su cuerpo y mente. Combinando la fuerza y fluidez del pilates, el ritmo y la energ&iacute;a de la danza, y la presencia equilibrante del yoga y la respiraci&oacute;n, esta sesi&oacute;n le dejar&aacute; sinti&eacute;ndose fuerte, en armon&iacute;a y revitalizado/a. …",
-    pubDate: "2026-10-24T18:00:00.000Z",
+    title: "Drop-In Tech Time with Oliver",
+    link: "https://telluridelibrary.libcal.com/event/15970397?hs=a",
+    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
+    pubDate: "2026-10-25T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "2nd Floor Desk",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://telluridelibrary.libcal.com/event/17347285?hs=a",
+    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
+    pubDate: "2026-10-25T20:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
+  },
+  {
+    title: "The Real Book Club: Jazz Standards",
+    link: "https://telluridelibrary.libcal.com/event/17622920?hs=a",
+    description: "5:00 PM – 7:00 PM · Join us for The Real Book Club, a monthly jazz jam session for musicians of all levels who want to dive into classic jazz standards together! Whether you&#39;re a seasoned improviser or just starting out, this is a welcoming space to play, practice, and connect with fellow jazz enthusiasts. Each month, we'll focus on three jazz standards selected from The Real Book. You'll receive PDFs of the tunes in advance so you can shed at home and come ready to jam. Lead sheets will also be available on the day of the event. The songs we will play at this jam are: Once I Loved by Antonio Carlos Jobim. Here is a version I quite like with Astrud Gilberto singing. Guantanamera by Jose Fernandez Diaz. Here is a version I quite like by Joseito Fernandez. …",
+    pubDate: "2026-10-25T23:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_12_05_46.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_10_13_52_37.jpg"
   },
   {
-    title: "Horror Book Club: Interview with a Vampire",
-    link: "https://telluridelibrary.libcal.com/event/17434302?hs=a",
-    description: "2:00 PM – 4:00 PM · Join us for a spine-tingling afternoon of discussion and seasonal fun. We&#39;ll be reading Interview with a Vampire by Anne Rice, which is celebrating its 50th anniversary this year. Here are the confessions of a vampire. Hypnotic, shocking, and chillingly sensual, this is a novel of mesmerizing beauty and astonishing force—a story of danger and flight, of love and loss, of suspense and resolution, and of the extraordinary power of the senses. It is a novel only Anne Rice could write. The event will be led by Crisanne Schworn, a former WPL employee and devoted fan of the horror genre. We will discuss the book while carving pumpkins on the library terrace. Pumpkins and carving tools will be provided. Participants can pick up a free copy of the book starting September 13th at the library front desk after signing up . …",
-    pubDate: "2026-10-24T20:00:00.000Z",
+    title: "Around The World- Portugal",
+    link: "https://telluridelibrary.libcal.com/event/17620415?hs=a",
+    description: "5:30 PM – 6:30 PM · Have you been to Portugal? Join us at The Wine Mine for a journey to Portugal. We will explore the history, regions and do some taste testing along the way.  Must be 21years old to attend.",
+    pubDate: "2026-10-25T23:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_17_13_55_36.jpg"
+    location: "Wine Mine",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_10_11_28_46.png"
   }
 ];
 
@@ -5560,58 +5573,13 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "OPL Read a Book - Get a Pumpkin",
     link: "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
     description: "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
-    pubDate: "2026-10-24T16:00:00.000Z",
+    pubDate: "2026-10-25T16:00:00.000Z",
     endDate: "2026-10-31",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Ouray Public Library",
     imageUrl: "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg"
-  },
-  {
-    title: "Pine Needle Weaving: Jewelry, Baskets and More! with Emily Knickerbocker",
-    link: "https://events.ourayridgwayevents.com/event/pine-needle-weaving-jewelry-baskets-and-more-with-emily-knickerbocker",
-    description: "Pine Needle Weaving: Jewelry, Baskets and More! with Emily Knickerbocker October 24th, 2026 | 10:00 am - 2:00 pm Cora Annex, Ridgway $75 includes all supplies Registration: www.weehawkenarts.org Discover the beauty and versatility of pine needles as you create your own wearable art and decorative pieces! In this class, students will explore the traditional craft of pine needle weaving and learn how to transform this natural material into unique, handcrafted items such as coiled jewelry, small baskets, hair accessories, and other creative forms. Students will work with naturally shed ponderosa pine needles and complementary materials like thread, found objects, and a wild clay or wood basket base. Through hands-on practice, you will learn essential techniques including preparing and softening needles, coiling, stitching, shaping, and finishing your designs. This beginner-friendly class is perfect for nature lovers and anyone interested in slowing down and connecting to the land through creative expression. …",
-    pubDate: "2026-10-24T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Annex on Cora",
-    imageUrl: "https://localist-images.azureedge.net/photos/53967939605631/huge/56b61991a8d062e4e1f71cbdf51fdd4fa7b4daea.jpg"
-  },
-  {
-    title: "Guided Tour: Historic Beaumont Hotel & Spa",
-    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
-    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
-    pubDate: "2026-10-24T19:30:00.000Z",
-    endDate: "2026-12-23",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Beaumont Hotel & Spa",
-    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
-  },
-  {
-    title: "4th Annual Boo-Mont Halloween Ball",
-    link: "https://events.ourayridgwayevents.com/event/4th-annual-boo-mont-halloween-ball",
-    description: "Get ready for the 4th Annual Boo-Mont Halloween Ball at the historic Beaumont Hotel in Ouray, Colorado! Come dressed to impress, scare, or simply make a statement! The evening will feature a costume contest with prizes, a DJ, spooky drink specials, a cash bar, and delicious hors d'oeuvres. 🎭 Costume Contest 🎶 DJ 🍸 Cash Bar + Spooky Drink Specials 🥂 Hors d'oeuvres 👻 Halloween Fun All Night 🎟️ Tickets are on sale now! Tickets are limited, so don't wait to get yours. 18 and up only. Must show valid ID at the door. Get ready for a night of costumes, cocktails, music, and Halloween magic at the Beaumont.",
-    pubDate: "2026-10-25T02:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Beaumont Hotel & Spa",
-    imageUrl: "https://localist-images.azureedge.net/photos/53860846025163/huge/937b6538c82ba8eff32aac54b7325895b4cde3f4.jpg"
-  },
-  {
-    title: "Rocky Horror Picture Show Live Shadow Cast Edition",
-    link: "https://events.ourayridgwayevents.com/event/rocky-horror-picture-show-live-shadow-cast-edition",
-    description: "Doors open at 7:30 PM; shows begin at 8:00 PM. The Rocky Horror Picture Show returns with a live local shadow cast performing alongside the film, plus audience callbacks, singing, dancing and an included venue-approved participation prop kit. Ages 18+; minors require parental permission or an accompanying parent.",
-    pubDate: "2026-10-25T02:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Sherbino",
-    imageUrl: "https://localist-images.azureedge.net/photos/54066524682512/huge/e95bf2e6509f8e2bf351e2781dcc132332bdb7c2.jpg"
   },
   {
     title: "Solkattu Workshop",
@@ -5623,6 +5591,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "United Church Of The San Juans",
     imageUrl: "https://localist-images.azureedge.net/photos/54198017321990/huge/d93984b7fe9a19865c0b6e69091253a2e299077c.jpg"
+  },
+  {
+    title: "Rocky Horror Picture Show Live Shadow Cast Edition",
+    link: "https://events.ourayridgwayevents.com/event/rocky-horror-picture-show-live-shadow-cast-edition",
+    description: "Doors open at 7:30 PM; shows begin at 8:00 PM. The Rocky Horror Picture Show returns with a live local shadow cast performing alongside the film, plus audience callbacks, singing, dancing and an included venue-approved participation prop kit. Ages 18+; minors require parental permission or an accompanying parent.",
+    pubDate: "2026-10-25T21:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/54066524682512/huge/e95bf2e6509f8e2bf351e2781dcc132332bdb7c2.jpg"
   },
   {
     title: "LIVE JAZZ IN THE GARDEN! Zan Waller & Stefan Davenport",
@@ -5718,6 +5697,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray County Fairgrounds and 4H Events Center",
     imageUrl: "https://localist-images.azureedge.net/photos/54250768566062/huge/bbfffaba68b85f987b424216df9d9012aae2bf55.jpg"
+  },
+  {
+    title: "Guided Tour: Historic Beaumont Hotel & Spa",
+    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
+    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
+    pubDate: "2026-10-27T19:30:00.000Z",
+    endDate: "2026-12-23",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Beaumont Hotel & Spa",
+    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
   },
   {
     title: "Britley & Matt",
@@ -6788,7 +6779,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/winter-break-ridgway-schools",
     description: "",
     pubDate: "2026-12-21T07:00:00.000Z",
-    endDate: "2026-12-23",
+    endDate: "2026-12-24",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
