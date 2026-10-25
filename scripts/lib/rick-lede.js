@@ -79,7 +79,9 @@ function ledePrompt({ meetings, events }) {
   // Miguel BOCC/Planning Commission, Mountain Village Council/DRB) taking up
   // issues that affect everyone; those get a summary. Minor meetings are only
   // named, and single-lot items are never the story.
-  const importance = ' Each meeting has an "importance" field. For a "major" meeting, summarize in a sentence or two what is on its agenda that affects the whole community (budgets, taxes and fees, code changes, housing policy, transit, wildfire, town-owned projects), not individual lot or property decisions. For a "minor" meeting, ONLY name it with its day (e.g. "**Ridgway Planning Commission** also meets Wednesday") — no description of its agenda.';
+  // Morgan 2026-10-25: minor meetings with a posted agenda now carry a short
+  // summary and get one clause; meetings with no agenda carry none.
+  const importance = ' Each meeting has an "importance" field. For a "major" meeting, summarize in a sentence or two what is on its agenda that affects the whole community (budgets, taxes and fees, code changes, housing policy, transit, wildfire, town-owned projects), not individual lot or property decisions. For a "minor" meeting, name it with its day; if it has a "summary", add one short clause on its main community-relevant item (e.g. "**Ouray County Board of County Commissioners** takes up the proposed EMS merger with Ridgway Fire on Tuesday"), skipping routine or single-lot items. A meeting with no "summary" has no posted agenda: only name it — never guess what it will cover.';
   const spec = 'a plain-prose intro that orients a busy local (120-220 words), written DAY BY DAY in date order: one short paragraph per day that has a meeting worth mentioning, each opening with that day (e.g. "Monday, …"). Give the major meetings the most weight within their days and name the minor meetings briefly on theirs. Aim to name most of the meetings. Do NOT mention community events, concerts, films, festivals, or anything "on the lighter side" — public meetings only.' + importance + style + byDay;
   const parts = [
     RICK_VOICE,
@@ -117,8 +119,9 @@ function ledeInputFingerprint({ meetings, events, cadence } = {}) {
     // v3 = every body named with its town — no bare "Town Council",
     // v4 = one paragraph per day, line break between days,
     // v5 = major meetings summarized, minor meetings only named,
-    // v6 = meetings only, no events).
-    style: 6,
+    // v6 = meetings only, no events,
+    // v7 = minor meetings with an agenda get a short clause).
+    style: 7,
     // Always 'week' now (Weekend Ahead retired 2026-10-04). Kept in the
     // payload so every existing cache key stays valid.
     cadence: 'week',

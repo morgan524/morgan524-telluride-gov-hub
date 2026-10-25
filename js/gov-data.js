@@ -1618,7 +1618,7 @@ const DEEP_DIVE_PAGES = [
 //   { "topic": "carhenge", "date": "2026-07-23",
 //     "headline": "…optional…", "blurb": "…optional…" }
 // The pin is ignored once its date has passed (falls back to automatic).
-const FEATURED_ACTION_PIN = {"topic": "carhenge", "date": "2026-10-22", "headline": "Shandoka goes before Planning & Zoning on Thursday, October 22", "blurb": "P&Z holds the public hearing on the Shandoka Lot Preliminary PUD: an 804-space parking structure (890 at build-out), 53 homes, a transit center, a food bank and childcare on Town-owned Lot L. Staff recommend approval, with the garage allowed up to 46 feet against a 40-foot limit. Written comment goes to kclothier@telluride.gov before 9 a.m. Thursday."};
+const FEATURED_ACTION_PIN = {};
 
 const ENTITY_LOGOS = {
   telluride: '<img src="/logo/Telluride%20Town.png" alt="Town of Telluride" style="width:100%;height:100%;object-fit:contain;">',

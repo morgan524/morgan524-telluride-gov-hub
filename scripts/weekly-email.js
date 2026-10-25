@@ -546,7 +546,7 @@ for (const fn of MEETING_FNS) {
       // Still not visible (cut off, or only in the raw agenda text) → no box.
       if (!wtm.match.test(name + ' ' + shown)) wtm = null;
     }
-    meetings.push({ name, date, src, srcKey: m.source || '', summary: shown, agenda, link: m.link || (SITE + '/gov-hub.html'), hasAgenda: !!agenda, wtm,
+    meetings.push({ name, date, src, srcKey: m.source || '', summary: shown, noAgenda: noAgendaContent, ledeText: noAgendaContent ? '' : sm, agenda, link: m.link || (SITE + '/gov-hub.html'), hasAgenda: !!agenda, wtm,
       // Carried for the "Add to calendar" button only. eventTimes is the field
       // every get*Meetings() source populates ('' when the body publishes no
       // hour → the calendar entry lands as all-day).
@@ -1003,17 +1003,42 @@ function ledeBodyName(name, src) {
   if (!place || SELF_IDENTIFYING.test(n) || n.toLowerCase().startsWith(place.toLowerCase())) return n || place;
   return place + ' ' + n;
 }
-const isMajorMeeting = (m) => RI.isMajor({ sourceKey: m.srcKey, title: m.name }, m.summary || '');
+// Morgan 2026-10-25: the recap scorer (RI.isMajor) wants two community
+// sentences, which a two-sentence agenda preview rarely has, so the Telluride
+// Council's gondola IGA meeting read as minor while a County work session with
+// no agenda (only the stock "land use, budget, countywide policy" body
+// description) read as major. Now: a key body is major when its agenda is
+// posted and mentions at least one community-wide issue; with no agenda it is
+// never major.
+const isMajorMeeting = (m) => !m.noAgenda && RI.isKeyBody({ sourceKey: m.srcKey, title: m.name }) && RI.meetingScore({ recap: m.ledeText }).community >= 1;
+// The writer gets the agenda summary from the FULL text (ledeText), not the
+// card's ~520-character cut, which on 2026-10-27 dropped two of the Telluride
+// Council's "three substantive items". Major meetings get the community-wide
+// sentences (RI.longRecap); minor meetings with a posted agenda get their main
+// item, so the intro can say what they cover and a newly posted agenda changes
+// the lede's inputs (and its cache key). For the short version, the opening
+// sentence is skipped when it only frames the meeting ("meets virtually on
+// October 26", "A work session with two conversations on the table"), then
+// sentences are kept in order up to ~300 characters.
+function minorSummary(m) {
+  const sents = RI.splitSentences(m.ledeText);
+  if (sents.length > 1 && RI.sentenceScore(sents[0]) <= 0 && !/\b(takes up|considers|reviews|discuss|vote|hearing|merger|ordinance|resolution)\b/i.test(sents[0])) sents.shift();
+  let out = '';
+  for (const x of sents) { if (out && out.length + x.length + 1 > 300) break; out += (out ? ' ' : '') + x; }
+  return out;
+}
 console.log('  lede importance — major: ' + (meetings.filter(isMajorMeeting).map((m) => m.date + ' ' + ledeBodyName(m.name, m.src)).join('; ') || 'none'));
 if (!LEDE_IS_OVERRIDE) {
   const rickLede = await generateRickLede({
     cadence: 'week',
-    // Morgan 2026-10-19: same importance test as the Past Meetings email. Major
-    // meetings (key bodies on community-wide issues) get summarized; the rest
-    // are only named, so their agenda summary isn't handed to the writer.
+    // Major meetings (key bodies with a posted agenda on community-wide
+    // issues) get summarized; minor ones get a short clause when their agenda
+    // is posted, and are only named when it isn't.
     meetings: meetings.map((m) => {
-      return isMajorMeeting(m)
-        ? { body: ledeBodyName(m.name, m.src), title: m.name, date: m.date, importance: 'major', summary: m.summary }
+      if (isMajorMeeting(m)) return { body: ledeBodyName(m.name, m.src), title: m.name, date: m.date, importance: 'major', summary: RI.longRecap(m.ledeText, 720) };
+      const sum = minorSummary(m);
+      return sum
+        ? { body: ledeBodyName(m.name, m.src), title: m.name, date: m.date, importance: 'minor', summary: sum }
         : { body: ledeBodyName(m.name, m.src), title: m.name, date: m.date, importance: 'minor' };
     }),
     // Meetings only (Morgan 2026-10-19): events stay in the email body but are

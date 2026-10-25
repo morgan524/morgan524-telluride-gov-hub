@@ -38,15 +38,16 @@ sync_main() {
   git rebase -q --autostash origin/main || { git rebase --abort 2>/dev/null; return 1; }
 }
 
-# Wait (up to 3 hours) for TODAY's review: GitHub's scheduler often runs the
-# 5:00 AM workflow late. "Today" is the review's UTC date.
+# Wait (up to 6 hours) for TODAY's review: GitHub's scheduler often runs the
+# 5:00 AM workflow late (10:33 AM on 2026-10-11, past the old 3-hour window).
+# "Today" is the review's UTC date.
 TODAY_UTC="$(date -u +%F)"
-for i in $(seq 1 36); do
+for i in $(seq 1 72); do
   sync_main || { log "FATAL: could not sync main"; exit 1; }
   REVIEWED="$(node -e "try{console.log(require('./digest/review.json').reviewedAt.slice(0,10))}catch(e){console.log('')}")"
   if [ "$REVIEWED" = "$TODAY_UTC" ] && [ -f digest/freeze.json ]; then break; fi
   if [ -n "${NO_WAIT:-}" ]; then log "NO_WAIT: using review from ${REVIEWED:-none}"; break; fi
-  [ "$i" = 36 ] && { log "Today's review never appeared (last: ${REVIEWED:-none}) — giving up"; exit 1; }
+  [ "$i" = 72 ] && { log "Today's review never appeared (last: ${REVIEWED:-none}) — giving up"; exit 1; }
   log "waiting for today's review (have ${REVIEWED:-none}); retry in 5 min"; sleep 300
 done
 
@@ -67,10 +68,12 @@ ALLOWED=(
   "Bash(sleep:*)" "Bash(date:*)" "Bash(ls:*)" "Bash(cat:*)" "Bash(head:*)" "Bash(tail:*)"
   "Bash(gh workflow run digest-sunday-review.yml:*)" "Bash(gh run list:*)" "Bash(gh run view:*)" "Bash(gh run watch:*)"
 )
+# Edit(path) deny rules cover every file-editing tool, Write included
+# (Claude Code warns that Write(path) rules are never matched).
 DENIED=(
   "Bash(gh workflow run digest-scheduled-send.yml:*)" "Bash(gh workflow run one-off-broadcast.yml:*)"
   "Bash(git push --force:*)" "Bash(git push -f:*)" "Bash(git reset:*)" "Bash(rm:*)"
-  "Edit(digest/*.lock.json)" "Write(digest/*.lock.json)" "Edit(digest/freeze.json)" "Write(digest/freeze.json)"
+  "Edit(digest/*.lock.json)" "Edit(digest/freeze.json)"
 )
 
 log "running Claude Code"
