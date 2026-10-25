@@ -1,6 +1,6 @@
 {
-  "frozenAt": "2026-10-24T23:30:22Z",
+  "frozenAt": "2026-10-25T14:53:51Z",
   "until": "2026-10-26T21:00:00Z",
   "weekStart": "2026-10-26",
-  "reason": "John Metzger's editor edits applied to digest/week.html (Morgan, 2026-10-24); hold them until the Review Desk approval. Review Desk edits still save."
+  "reason": "Sunday review (digest-sunday-review.yml): the bot will not re-render the digests until this time. Review Desk edits still save."
 }
