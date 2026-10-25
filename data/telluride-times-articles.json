@@ -1,5 +1,29 @@
 [
   {
+    "title": "More flooding possible in Four Corners region after days of heavy rain",
+    "source": "Telluride Times",
+    "date": "October 25, 2026",
+    "firstSeen": "2026-10-25",
+    "newsTopic": "public-safety",
+    "copy": "Heavy rain since Wednesday has caused significant flooding across the Four Corners region, with rivers surging into homes and forcing evacuations — especially around Farmington, New Mexico. Saturated soils have a flood watch still in effect, with more storms expected. Officials warn returning residents of contaminated water, gas leaks, and other hazards.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/state/article_6f889cc1-b235-52e0-8498-c5893045d6b6.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/a2/8a28e3d3-d61b-5320-84bc-815b3b88d72d/6ade3dec1f658.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Initial review of Shandoka parking structure approved by P&Z",
+    "source": "Telluride Times",
+    "date": "October 25, 2026",
+    "firstSeen": "2026-10-25",
+    "newsTopic": "housing",
+    "copy": "P&Z approved the preliminary PUD review for the Shandoka Lot Redevelopment, a proposed mixed-use project on the current surface parking lot that would include 50–60 housing units (80% deed-restricted affordable), a 900-vehicle parking structure, childcare, a food bank, and commercial space. The structure would replace 330 existing surface spots and absorb 288 spaces relocated from Carhenge. Some residents raised concerns about the added walking distance and traffic; HARC review continues Nov. 18.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_1f5aae64-fb06-4ef8-b5db-fc178525b765.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/3b/93b2b35c-4248-440a-a7d8-8ef97bbc5243/6adbb1a330c48.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Voters in 2 Democratic strongholds could ban transgender girls from girls school sports",
     "source": "Telluride Times",
     "date": "October 24, 2026",
@@ -1139,6 +1163,24 @@
     "copy": "(October 22, 2026) - The Town of Telluride and the San Miguel Regional Housing Authority (SMRHA) opened applications today for a deed-restricted homeownership lottery for Spruce House H at 226 East Pacific Avenue, Unit H, Telluride, Colorado, 81435.",
     "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=407",
     "img": ""
+  },
+  {
+    "title": "Applications Open for 2026/2027 Temporary Winter Community Housing Program",
+    "source": "Town of Telluride",
+    "date": "October 9, 2026",
+    "newsTopic": "housing",
+    "copy": "(October 8, 2026) – The Town of Telluride is accepting applications for its Temporary Winter Community Housing program for the 2026/2027 winter season. The program provides seasonal housing in Town Park for eligible workers employed in the Telluride area.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=406",
+    "img": ""
+  },
+  {
+    "title": "San Miguel County Public Health Announces Fall Vaccine Availability",
+    "source": "San Miguel County",
+    "date": "October 1, 2026",
+    "newsTopic": "health",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1419",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14836"
   },
   {
     "title": "DMV Services available in Egnar 11/18",
