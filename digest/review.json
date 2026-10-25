@@ -67,14 +67,18 @@
           "check": "link",
           "where": "https://tellurideadaptivesports.org/donate/",
           "url": "https://tellurideadaptivesports.org/donate/",
-          "problem": "Could not verify (403); the site may block automated checks. Click it once to be sure."
+          "problem": "Could not verify (403); the site may block automated checks. Click it once to be sure.",
+          "resolved": true,
+          "resolution": "not an error: link verified 10/25, the TASP donate page loads (site blocks bots)"
         },
         {
           "severity": "low",
           "check": "link",
           "where": "https://tellurideadaptivesports.org/",
           "url": "https://tellurideadaptivesports.org/",
-          "problem": "Could not verify (403); the site may block automated checks. Click it once to be sure."
+          "problem": "Could not verify (403); the site may block automated checks. Click it once to be sure.",
+          "resolved": true,
+          "resolution": "not an error: link verified 10/25, the TASP homepage loads (site blocks bots)"
         }
       ]
     },
