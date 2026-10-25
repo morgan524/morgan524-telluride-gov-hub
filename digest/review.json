@@ -14,7 +14,9 @@
           "where": "Intro paragraph (The Week Ahead Outlook)",
           "quote": "the Ouray County Board of County Commissioners Work Session are on the calendar",
           "problem": "The intro says the Ouray County BOCC Work Session is on Tuesday, but the body lists it on Wednesday, October 28.",
-          "suggestion": "Remove the Ouray County Board of County Commissioners Work Session from the Tuesday sentence in the intro, or correct the day to Wednesday."
+          "suggestion": "Remove the Ouray County Board of County Commissioners Work Session from the Tuesday sentence in the intro, or correct the day to Wednesday.",
+          "resolved": true,
+          "resolution": "fixed: new intro (John's edits restored, intro rewritten 10/25)"
         },
         {
           "check": "editorial",
@@ -22,7 +24,9 @@
           "where": "SAT, OCT 31 · Easy Jim ~ 2 Night Halloween Run",
           "quote": "performing across October 30 and 31, 2026",
           "problem": "The event is listed under Saturday, October 31, but the description says it runs across October 30 and 31; October 30 is a Friday, not listed separately, yet the Saturday listing implies only Oct 31.",
-          "suggestion": "Either add a separate Friday, October 30 listing for the first night or clarify that this Saturday entry covers both nights; as written the Oct 30 date contradicts the section header of Oct 31."
+          "suggestion": "Either add a separate Friday, October 30 listing for the first night or clarify that this Saturday entry covers both nights; as written the Oct 30 date contradicts the section header of Oct 31.",
+          "resolved": true,
+          "resolution": "John's edit says it is a two-night run on Oct 30 and 31"
         },
         {
           "check": "editorial",
@@ -30,7 +34,9 @@
           "where": "WED, OCT 28 · Ouray County Board of County Commissioners Work Session",
           "quote": "The Ouray County Board of County Commissioners Work Session also meets Wednesday",
           "problem": "The intro paragraph says this work session meets Wednesday, which matches the body, but the intro also placed it on Tuesday — creating a direct contradiction within the intro itself (flagged separately above). Additionally, the Wednesday BOCC Work Session and the Tuesday BOCC Work Session are two distinct meetings both tagged 'Ouray County · Ouray County Board of County Commissioners Work Session', making it easy to confuse them; the Wednesday one could be more clearly distinguished.",
-          "suggestion": "This is a structural/labeling issue; consider distinguishing the two Ouray County BOCC Work Sessions (e.g. noting different topics) so readers are not misled into thinking it is a duplicate listing."
+          "suggestion": "This is a structural/labeling issue; consider distinguishing the two Ouray County BOCC Work Sessions (e.g. noting different topics) so readers are not misled into thinking it is a duplicate listing.",
+          "resolved": true,
+          "resolution": "fixed: new intro (John's edits restored, intro rewritten 10/25)"
         },
         {
           "check": "editorial",
@@ -42,7 +48,9 @@
           "fix": {
             "find": "both the Ouray County Board of County Commissioners and the Ouray County Board of County Commissioners Work Session are on the calendar",
             "replace": "the Ouray County Board of County Commissioners is on the calendar"
-          }
+          },
+          "resolved": true,
+          "resolution": "fixed: new intro (John's edits restored, intro rewritten 10/25)"
         },
         {
           "check": "editorial",
@@ -50,7 +58,9 @@
           "where": "TUE, OCT 27 · Town of Telluride · Town Council",
           "quote": "10:00 AM",
           "problem": "The intro paragraph says 'Tuesday, the Telluride Town Council holds a regular meeting' but does not mention the time; the body lists 10:00 AM. Cross-checking the day: Tuesday October 27 is correct. However, the Ouray County BOCC is also listed at 9:00 AM on Tuesday and its work session at 1:30 PM — the Town Council at 10:00 AM overlaps with the BOCC; this is not itself an error. The real issue: the intro lists the Telluride Town Council before mentioning the Ouray County items, consistent with the body, so no error there. No issue confirmed here — disregard.",
-          "suggestion": "No action needed."
+          "suggestion": "No action needed.",
+          "resolved": true,
+          "resolution": "not an error (the review said no action needed)"
         },
         {
           "severity": "low",
