@@ -217,7 +217,7 @@
     } else if (issue.meetings && issue.meetings.length) {
       side += '<div class="dd-card card"><h4>Upcoming meetings</h4>' + issue.meetings.map(function (m) {
         return '<div class="dd-doc"><span class="tag rust-tint">' + esc(m.date || '') + (m.time ? ' · ' + esc(m.time) : '') + '</span>' +
-          '<a href="' + esc(safe(m.href)) + '" target="_blank" rel="noopener">' + esc(m.title || '') + '</a>' +
+          (m.href ? '<a href="' + esc(safe(m.href)) + '" target="_blank" rel="noopener">' + esc(m.title || '') + '</a>' : '<strong>' + esc(m.title || '') + '</strong>') +
           (m.location ? '<p>' + esc(m.location) + '</p>' : '') + '</div>';
       }).join('') + '</div>';
     }

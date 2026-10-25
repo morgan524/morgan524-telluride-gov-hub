@@ -1,14 +1,14 @@
 {
   "carhenge": {
-    "lastUpdated": "2026-10-20",
+    "lastUpdated": "2026-10-25",
     "label": "Carhenge / Shandoka",
     "heroImage": "https://ehq-production-us-california.imgix.net/6b1af98643c2eb1d96ea48d001eba309fb722ec3/original/1773791842/3923590257fa65a36b9b6893f6d1adc5_Carhenge-Lot-Header.png?auto=compress%2Cformat&w=1200",
     "heroAlt": "Carhenge Lot Redevelopment site plan showing building layout, green spaces, and pedestrian connections",
     "heroCredit": "Image: Town of Telluride / Engage Telluride",
     "intro": "Two of the most significant in-town redevelopment projects are advancing simultaneously: Carhenge (700 W Pacific) and Shandoka (Lot L). Both propose replacing surface parking with mixed-use neighborhoods combining housing, community space, and structured parking through the PUD and subdivision process.",
-    "statusTitle": "Shandoka goes before Planning & Zoning on Thursday, October 22. Staff recommend approving the Preliminary PUD for an 804-space parking structure and 53 homes on Town-owned Lot L.",
-    "statusCopy": "The Shandoka Preliminary PUD hearing, continued from September 24 for staff capacity, asks P&Z to approve variations to the Accommodations 2 limits on Lot L (860 Black Bear Rd): site coverage raised from 40% to 53.8% for a basement parking level, the parking structure allowed up to 46 feet (48-foot peak) against a 40-foot limit, and a single connected structure of up to 194,359 sq ft against the 30,000 sq ft per-structure cap. In exchange the Town lists public benefits: 80% of the homes deed-restricted, a transit center, a 1,353 sq ft food bank, a 2,000 sq ft childcare center, a 35-foot cap on the building along the river, and at least 100 commuter and visitor spaces on top of replacing the 330 Shandoka and 288 Carhenge spaces. Phase 1 is the 804-space structure and 30 homes; Phase 2 adds 23 homes and 86 more below-grade spaces. HARC's Shandoka design hearings, set for October 21, are continued without discussion to November 18. On Carhenge, Town Council voted 3–1 on September 30 to affirm P&Z's lot consolidation and directed special counsel to draft a resolution; the dissenting member said the Backman Village covenants were not factored into P&Z's findings. That evening HARC approved none of the three Carhenge design applications, unanimously directing significant reductions in mass and scale, and continued them to December.",
-    "nextStep": "Thursday, October 22, 5:30 PM, at Rebekah Hall, 113 W Columbia Ave, and on Zoom. Send written comment to kclothier@telluride.gov with \"Public Comment – 860 Black Bear Rd\" in the subject line before 9 a.m. Thursday to be distributed to commissioners and made part of the record. After 9 a.m., bring 10 printed copies or speak at the hearing; the Chair may limit comment to three minutes.",
+    "statusTitle": "P&Z continued the Shandoka Preliminary PUD to December 17 and asked for more information first. On Tuesday, October 27, Town Council takes up the resolution affirming the Carhenge lot consolidation.",
+    "statusCopy": "On October 22, Planning & Zoning did not vote on the Shandoka Preliminary PUD for the 804-space parking structure and 53 homes on Lot L (860 Black Bear Rd). After the public hearing, the Commission voted to continue it to its December 17 meeting and asked for six things before then: cross-sections from Entrada and the River Trail across the site, showing building heights and the water table against the proposed below-grade parking; a snow-removal and pedestrian-safety plan for the shaded areas; a plan for EV and e-bike charging; a strategy for high-clearance vehicles; more detail on covered bike parking; and counts of the vehicles and bicycles now parking on Lots L and J and of the units allocated parking there. The requested variations are still pending: site coverage of 53.8% against 40%, a parking structure up to 46 feet against a 40-foot limit, and one connected structure of up to 194,359 sq ft against the 30,000 sq ft cap. So is staff's recommendation to approve with 80% deed-restricted homes and at least 100 commuter and visitor spaces. HARC's Shandoka design hearings are continued to November 18.\n\nOn Carhenge, Town Council's October 27 consent calendar, which requires recusals, carries the resolution that puts its September 30 decision in writing. Council voted 3–1 that day to affirm P&Z's consolidation of Lots 34 and 34B into a single Lot 34AB, and the dissenting member said the Backman Village covenants were not factored into P&Z's findings. That evening HARC approved none of the three Carhenge design applications, unanimously directed significant reductions in mass and scale, and continued them to December.",
+    "nextStep": "Tuesday, October 27, 10:00 AM: Town Council at Rebekah Hall, 113 W Columbia Ave, and on Zoom. The Carhenge resolution is consent-calendar item 7.b, which has no set time on the agenda. Send written comment to townclerk@telluride.gov. The packet deadline (noon Wednesday, October 21) has passed, so comments now reach Council under separate cover. Shandoka returns to HARC on Wednesday, November 18, and to P&Z on Thursday, December 17, both at 5:30 PM. Neither agenda has been posted yet.",
     "metrics": [
       {
         "label": "What to follow",
@@ -17,8 +17,8 @@
       },
       {
         "label": "Best public moment",
-        "value": "Written comment to P&Z by 9 a.m. Oct 22",
-        "sub": "Preliminary PUD approval authorizes the Final PUD. The density, height and parking variations are set here, so this is the hearing where comment matters most."
+        "value": "Shandoka back before P&Z Dec 17",
+        "sub": "P&Z wants cross-sections, water-table data, snow, charging and parking counts before it votes. The height, coverage and parking variations will be decided at that hearing, so comment matters most there."
       }
     ],
     "timeline": [
@@ -74,12 +74,35 @@
       },
       {
         "date": "Oct 22, 2026",
-        "title": "P&Z hears the Shandoka Preliminary PUD",
-        "copy": "Planning & Zoning holds the public hearing on the Shandoka Lot Preliminary PUD. Staff recommend approval with conditions, including 80% deed-restricted homes, at least 100 commuter and visitor spaces, and a parking structure up to 46 feet. Approval authorizes the applicant to prepare a Final PUD.",
+        "title": "P&Z continues the Shandoka Preliminary PUD to December 17",
+        "copy": "After the public hearing, Planning & Zoning voted to continue the Shandoka Preliminary PUD to its December 17 meeting instead of acting on it. The Commission asked for six things first: cross-sections from Entrada and the River Trail across the site showing heights and the water table against the below-grade parking; a snow-removal and pedestrian-safety plan; an EV and e-bike charging plan; a strategy for high-clearance vehicles; more detail on covered bike parking; and counts of the vehicles and bicycles now parking on Lots L and J and of the units allocated parking there."
+      },
+      {
+        "date": "Oct 27, 2026",
+        "title": "Council resolution puts the Carhenge consolidation decision in writing",
+        "copy": "Town Council's consent calendar, with recusals required, carries the resolution affirming P&Z's July 23 approval consolidating Lots 34 and 34B into Lot 34AB. It is the written record of Council's 3–1 vote on September 30.",
+        "future": true
+      },
+      {
+        "date": "Nov 18, 2026",
+        "title": "HARC takes up Shandoka's four buildings",
+        "copy": "The hearings on Shandoka Buildings 1 and 2 and Buildings 3 and 4, continued from October 21, are set for the November 18 HARC meeting.",
+        "future": true
+      },
+      {
+        "date": "Dec 17, 2026",
+        "title": "Shandoka Preliminary PUD returns to P&Z",
+        "copy": "The continued Preliminary PUD hearing, with the information P&Z requested on October 22.",
         "future": true
       }
     ],
     "docs": [
+      {
+        "title": "P&Z Hearing Recording: Shandoka Preliminary PUD (Oct 22, 2026)",
+        "copy": "The Town's video of the October 22 hearing, including the Commission's deliberation and the motion continuing the Preliminary PUD to December 17 with six requests for more information.",
+        "tag": "Shandoka",
+        "href": "https://www.youtube.com/watch?v=jzRVXoqZaec"
+      },
       {
         "title": "P&Z Agenda Packet: Shandoka Preliminary PUD (Oct 22, 2026)",
         "copy": "The 260-page packet for the October 22 hearing: the staff memo recommending approval with conditions, the proposed motion, the requested height, site-coverage and floor-area variations, the parking breakdown (804 spaces in Phase 1, 86 more in Phase 2), the traffic study and the groundwater memo.",
@@ -191,21 +214,30 @@
     ],
     "meetings": [
       {
-        "date": "Oct 22, 2026",
-        "time": "5:30 PM",
-        "title": "P&Z: Shandoka Lot Redevelopment – Preliminary PUD (public hearing)",
+        "date": "Oct 27, 2026",
+        "time": "10:00 AM",
+        "title": "Town Council: Resolution affirming the Carhenge lot consolidation (consent item 7.b)",
         "source": "Town of Telluride",
         "location": "Hybrid / Rebekah Hall, 113 W Columbia Ave",
-        "href": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8106",
-        "zoom": "https://us06web.zoom.us/meeting/register/OC4r5SGcR6S0q5DBnXPh8Q"
+        "href": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045",
+        "zoom": "https://us06web.zoom.us/meeting/register/DaEVzy_NTsub9PbJHzPwTg"
       },
       {
         "date": "Nov 18, 2026",
-        "time": "",
-        "title": "HARC: Shandoka Buildings 1–2 and 3–4 (continued from Oct 21)",
+        "time": "5:30 PM",
+        "title": "HARC: Shandoka Buildings 1–2 and 3–4 (continued from Oct 21; agenda not yet posted)",
         "source": "Town of Telluride",
         "location": "Rebekah Hall, 113 W Columbia Ave",
-        "href": "https://telluride-co.civicweb.net/Portal/",
+        "href": "",
+        "zoom": ""
+      },
+      {
+        "date": "Dec 17, 2026",
+        "time": "5:30 PM",
+        "title": "P&Z: Shandoka Preliminary PUD (continued from Oct 22; agenda not yet posted)",
+        "source": "Town of Telluride",
+        "location": "Rebekah Hall, 113 W Columbia Ave",
+        "href": "",
         "zoom": ""
       }
     ],
@@ -218,7 +250,7 @@
       {
         "icon": "📐",
         "title": "Planning & Zoning Commission",
-        "copy": "Approved the Carhenge lot consolidation July 23 (affirmed by Council September 30). Hears the Shandoka Preliminary PUD October 22."
+        "copy": "Approved the Carhenge lot consolidation July 23 (affirmed by Council September 30). Continued the Shandoka Preliminary PUD on October 22 to December 17, pending more information."
       },
       {
         "icon": "🏛️",
