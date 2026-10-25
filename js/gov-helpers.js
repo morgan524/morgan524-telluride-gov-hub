@@ -1032,6 +1032,16 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "This week's parish bulletin is attached. As always, please check the Parish Calendar for the most updated information.Reminders:There will be a second collection this weekend for World Mission Sunday. Read the Pastor's Corner for more infor...",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-october-18/",
     img: ""
+  },
+  {
+    title: "2026 Telluride Mountain Club Annual Report",
+    source: "Telluride Mountain Club",
+    sourceKey: "tmc",
+    date: "October 12, 2026",
+    newsTopic: "community",
+    copy: "The post 2026 Telluride Mountain Club Annual Report appeared first on Telluride Mountain Club .",
+    href: "https://www.telluridemountainclub.org/2026-telluride-mountain-club-recap-report/",
+    img: ""
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
@@ -2672,6 +2682,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_6f889cc1-b235-52e0-8498-c5893045d6b6.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/a2/8a28e3d3-d61b-5320-84bc-815b3b88d72d/6ade3dec1f658.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Telluride Rewind",
+    source: "Telluride Times",
+    date: "October 25, 2026",
+    firstSeen: "2026-10-25",
+    newsTopic: "government",
+    copy: "Telluride's old town ordinances from 1966 included bans on opium dens, women loitering near saloons, and wearing clothing of the opposite sex. A 1981 council gave initial approval to convert the Nugget Theater into a 485-seat convention center. And in 1991, KOTO's Halloween bash drew 500-plus people and raised over $4,000.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_d3d0f2f2-d632-449d-9bef-a09e10630b4e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/dc/2dc7fd10-492e-45f1-83dd-fdaf935d60e6/6adcde8260d93.image.jpg",
     imgHiRes: true
   },
   {
@@ -4528,17 +4550,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Heritage Plaza, Mountain Village",
     imageUrl: "https://koto.org/wp-content/uploads/2026/10/p_ptmvbanner.1740x870.jpg"
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-10-25/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-10-25T14:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   },
   {
     title: "The Real Book Club:Jazz Standards",

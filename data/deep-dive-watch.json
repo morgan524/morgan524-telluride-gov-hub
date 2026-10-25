@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-25T20:40:34.757Z",
+ "generated": "2026-10-25T23:09:41.388Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
-   "lastUpdated": "2026-10-20",
+   "lastUpdated": "2026-10-25",
    "upcoming": [],
    "recent": [
     {
@@ -20,11 +20,7 @@
     }
    ],
    "developments": [],
-   "stale": [
-    "Carhenge / Shandoka: telluride discussed it on 2026-10-22 (\"Planning & Zoning Commission - Oct 22 2026\") but the deep dive was last edited 2026-10-20.",
-    "Carhenge / Shandoka: telluride discussed it on 2026-10-21 (\"Historic & Architectural Review Commission - Oct 21 2026\") but the deep dive was last edited 2026-10-20.",
-    "Carhenge / Shandoka: timeline entry \"P&Z hears the Shandoka Preliminary PUD\" (Oct 22, 2026) is still marked upcoming but the date has passed."
-   ]
+   "stale": []
   },
   "medcenter": {
    "label": "Telluride Medical Center",
