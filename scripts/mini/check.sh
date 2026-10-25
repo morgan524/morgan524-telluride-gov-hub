@@ -38,7 +38,8 @@ else bad "~/.anthropic_key missing (meeting recaps)"; fi
 TOK="$HOME/.config/livabletelluride/claude-oauth-token"
 if [ -s "$TOK" ]; then
   out=$(CLAUDE_CODE_OAUTH_TOKEN="$(cat "$TOK")" claude -p "Reply with just OK" --max-turns 1 2>&1 | tail -1)
-  echo "$out" | grep -qi ok && ok "Claude Code token works (Sunday follow-up)" || bad "Claude Code token didn't work: run claude setup-token, then re-run install.sh"
+  # Whole-line match: a bare "ok" also matched "Invalid bearer token" (2026-10-25).
+  echo "$out" | grep -qiE '^[[:space:]]*ok[.!]?[[:space:]]*$' && ok "Claude Code token works (Sunday follow-up)" || bad "Claude Code token didn't work: run claude setup-token, then re-run install.sh"
 else bad "Claude Code token missing — run: bash $REPO/scripts/mini/install.sh"; fi
 
 echo "Scheduled jobs:"
