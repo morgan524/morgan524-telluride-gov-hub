@@ -38,6 +38,20 @@
       "addedBy": "claude-content-review-fix",
       "addedOn": "2026-10-10",
       "expiresOn": "2026-11-02"
+    },
+    {
+      "id": "datefix-rocky-horror-picture-show-live-shadow-ca-2026-10-25-sherbino_events",
+      "kind": "event-date",
+      "array": "SHERBINO_EVENTS",
+      "titleMatch": "Rocky Horror Picture Show Live Shadow Cast Edition",
+      "wrongDate": "2026-10-22",
+      "correctDate": "2026-10-25",
+      "reason": "The page confirms the October 25 date as the Sunday matinee performance of the Rocky Horror Picture Show Live Shadow Cast Edition.",
+      "evidence": "https://koto.org/event/rocky-horror-picture-show-live-shadow-cast-edition/2026-10-25/",
+      "quote": "Sunday, October 25\nDoors: 2:30 PM | Show: 3:00pm",
+      "addedBy": "content-autofix",
+      "addedOn": "2026-10-25",
+      "expiresOn": "2026-11-24"
     }
   ]
 }
