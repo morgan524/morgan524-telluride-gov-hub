@@ -1,39 +1,6 @@
 [
   {
     "title": "Pumpkins & Peaks",
-    "link": "https://koto.org/event/pumpkins-peaks/2026-10-24/",
-    "description": "Celebrate fall in the mountains at Pumpkins & Peaks! Join TMVOA in Mountain Village for a day of free, family-friendly fall-inspired fun featuring pumpkins and pumpkin carving! In addition to getting to take your carved pumpkin home with you, you can also enjoy a petting zoo, face painting, a scavenger hunt with prizes, a fall-inspired family photo opportunity, 4WD off-road rides with Telluride Outside, outdoor movies & football screenings, fire pits, live music and more. Bundle up, bring the whole family, and enjoy a festive fall day in the mountains! This event is presented by TMVOA.",
-    "pubDate": "2026-10-24T13:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Heritage Plaza, Mountain Village",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/p_ptmvbanner.1740x870.jpg"
-  },
-  {
-    "title": "SNL: Saturday Night at the Livery in Norwood Features Devaki Murch and Operation Babylift",
-    "link": "https://koto.org/event/snl-saturday-night-at-the-livery-in-norwood-features-devaki-murch-and-operation-babylift/",
-    "description": "Norwood Park & Rec District invites you to another installment of \"SNL: Saturday Night @ the Livery\"—Norwood's sporadic speakers series—at 7pm on October 24th, featuring Devaki Murch with her presentation and exhibit: \"The Mirror of Return: Operation Babylift Then and Now.\" Where were you in 1975? Hear from the crash survivor that is now connecting others with their records after being evacuated from Saigon as babies and raised all over the United States. There will be Vietnamese Happy Snacks and a non-acloholic bar. 1555 Summit St Norwood. As always, $5 at the door.",
-    "pubDate": "2026-10-24T19:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "The Livery Norwood",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/NPRD-SNL-Devaki-poster.jpg"
-  },
-  {
-    "title": "Rocky Horror Picture Show Live Shadow Cast Edition",
-    "link": "https://koto.org/event/rocky-horror-picture-show-live-shadow-cast-edition/2026-10-24/",
-    "description": "The Rocky Horror Picture Show — Shadow Cast Edition Thursday, Friday, & Saturday Performances: Doors: 7:30pm || Show: 8:00pm (Oct. 22-24) Sunday Matinee: Doors: 2:30pm || Show: 3:00pm (Oct. 25) Directed by Erin Cawley Ages 18+ (under 18 with parental permission or parent is accompanying minor) Tickets: $15 + $15 required prop/supply fee Don’t dream it… be it. Get ready to do the Time Warp again as The Rocky Horror Picture Show returns to the Sherbino in full shadow-cast style! Part movie screening, part live theater, and completely outrageous, this cult-classic experience features a live local cast performing along with the film on stage—lip-syncing, dancing, and bringing your favorite characters and scenes to life right in front of the screen. And at Rocky Horror, the audience isn’t just watching. You’re part of the show. …",
-    "pubDate": "2026-10-24T19:30:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "The Sherbino, Ridgway",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/rocky-horror-shadow-cast-banner.png"
-  },
-  {
-    "title": "Pumpkins & Peaks",
     "link": "https://koto.org/event/pumpkins-peaks/2026-10-25/",
     "description": "Celebrate fall in the mountains at Pumpkins & Peaks! Join TMVOA in Mountain Village for a day of free, family-friendly fall-inspired fun featuring pumpkins and pumpkin carving! In addition to getting to take your carved pumpkin home with you, you can also enjoy a petting zoo, face painting, a scavenger hunt with prizes, a fall-inspired family photo opportunity, 4WD off-road rides with Telluride Outside, outdoor movies & football screenings, fire pits, live music and more. Bundle up, bring the whole family, and enjoy a festive fall day in the mountains! This event is presented by TMVOA.",
     "pubDate": "2026-10-25T13:00:00-06:00",
@@ -460,5 +427,49 @@
     "category": "Community Event",
     "location": "Telluride Science &#038; Innovation Center, TELLURIDE",
     "imageUrl": "https://koto.org/wp-content/uploads/2026/10/Poster-2026-jpeg.jpeg"
+  },
+  {
+    "title": "Songs from San Miguel – Live at the Livery",
+    "link": "https://koto.org/event/songs-from-san-miguel-live-at-the-livery/",
+    "description": "Norwood Park & Rec District presents Songs from San Miguel Live at the Livery on Friday, November 13th, featuring Brendan Forrest & Friends, Molly & the Starfish Lovers, Jacob Lukaszewski (\"Loo-kah-shev-ski\"), and Sean McFarland. This will be an evening of Americana, folk & roots music. Happy hour starts at 6:30 p.m.; music at 7:30 p.m. Cash bar, local food and more!",
+    "pubDate": "2026-11-13T18:30:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "The Livery Norwood",
+    "imageUrl": ""
+  },
+  {
+    "title": "Tea and Tarot",
+    "link": "https://koto.org/event/tea-and-tarot/2026-11-15/",
+    "description": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    "pubDate": "2026-11-15T14:30:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    "title": "Telluride Mountain School Open House",
+    "link": "https://koto.org/event/telluride-mountain-school-open-house-2/",
+    "description": "School In Action Open House! Come experience what learning looks like at Telluride Mountain School. Instead of a presentation about our school, step into the learning. Visit classrooms, meet teachers and students, explore our campus, and see firsthand how curiosity, connection, and real-world experiences shape the TMS experience. Come see: Learning in action – inquiry, hands-on projects, and interdisciplinary exploration Students known and supported – small classes and meaningful relationships School without walls – place-based and outdoor learning woven throughout the experience The TMS difference – a Preschool-8 education designed to cultivate confident, curious, capable learners Our community – meet the people who make TMS such a special place to learn",
+    "pubDate": "2026-11-17T09:00:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Mountain School",
+    "imageUrl": ""
+  },
+  {
+    "title": "Salon Night at Telluride Arts HQ",
+    "link": "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-11-19/",
+    "description": "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it here in Telluride. These are evenings for conversation and connection, not lectures or formal programming. They are casual, open, and intentionally unstructured, designed to create the atmosphere where ideas can collide, new friendships form, and creativity sparks. Imagine an evening where musicians talk with writers, painters meet photographers, filmmakers share stories with ceramicists—and the unexpected happens!",
+    "pubDate": "2026-11-19T17:30:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Arts HQ, TELLURIDE",
+    "imageUrl": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
   }
 ]

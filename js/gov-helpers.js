@@ -146,15 +146,6 @@ function resolveEventImage(e, opts) {
 // stays current automatically; the static config is the fallback for
 // sources without a PDF agenda.
 const MEETING_AGENDA_META = {
-  "med|2026-09-24|Regular Board Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"},
-
-  "telluride|2026-09-24|Planning & Zoning Commission - Sep 24 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/pvzPtHtIRZmah22XUU2xLg","meetingId":"846 6324 0731","passcode":"464545","phone":"301-715-8592"},
-
-  "telluride|2026-09-24|Planning & Zoning Commission Chair - Sep 24 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8103","sv":4,"ph":"313a820643e5b960"},
-
   "county|2026-09-28|Open Space Commission Meeting":
     {"sv":4,"ph":"1ff606174e68cca5"},
 
@@ -200,14 +191,8 @@ const MEETING_AGENDA_META = {
   "county|2026-10-08|Planning Commission Meeting":
     {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/924/files/agenda/2025","zoomUrl":"https://us06web.zoom.us/j/86224076240?pwd=dg8IrMwtLfHLkcZ1Y3JKlGs8IpYz0Q.1","meetingId":"862 2407 6240","passcode":"691404","phone":"970-728-3844"},
 
-  "county|2026-09-24|5 x 5 County Meeting - San Miguel County Hosts":
-    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1071/files/agenda/2005","zoomUrl":"https://us02web.zoom.us/meeting/register/MPkylS4iTRCn1ZOARSNRPQ","meetingId":"867 6377 9971","passcode":"898059.","phone":"719-359-4580"},
-
   "tmvoa|2026-09-29|TMVOA Board of Directors Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
-
-  "telluride|2026-09-24|Resident Advisory Committee - Sep 24 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8315","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/HZo2uN-sQUesPZ2bJze9pQ","meetingId":"864 1732 3408","passcode":"709234","phone":"970-728-3071"},
 
   "smart|2026-10-08|SMART Board of Directors":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -1075,19 +1060,10 @@ const SMC_ALERTS = [
 const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-10-24';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-10-25';
 const LEGAL_NOTICES_CACHE_DATE = '2026-10-24';
 
 const MANUAL_SUMMARIES = {
-  "med|2026-09-24|Regular Board Meeting":
-    "The September 24, 2026 MED Regular Board Meeting agenda hasn't been posted yet.",
-
-  "telluride|2026-09-24|Planning & Zoning Commission - Sep 24 2026":
-    "Two work sessions anchor the September 24 P&Z meeting. First up: a proposed employee housing project at the northwest corner of Telluride Middle-High School (725 W Colorado), brought by the Telluride School District R1 under an Intergovernmental Agreement with the Town — this is still early-stage, a work session rather than a formal application. Second: continued discussion of potential amendments to Land Use Code sections covering landscaping requirements (LUC 3-502) and tree maintenance, removal, and relocation (LUC 3-505). The Shandoka Lot Redevelopment preliminary PUD — a proposal to increase dimensional limits and provide public benefits on Town-owned land at 860 Black Bear Rd — was scheduled for a public hearing but has been continued without discussion to the October 22 meeting due to staff capacity.",
-
-  "telluride|2026-09-24|Planning & Zoning Commission Chair - Sep 24 2026":
-    "The September 24, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
-
   "county|2026-09-28|Open Space Commission Meeting":
     "The September 28, 2026 Open Space Commission Meeting agenda hasn't been posted yet.",
 
@@ -1133,14 +1109,8 @@ const MANUAL_SUMMARIES = {
   "county|2026-10-08|Planning Commission Meeting":
     "The San Miguel County Planning Commission meets October 8 for a session that spans most of the day. The morning opens with a joint work session with the BOCC on an Affordable Housing Code Update — a signal that the county is still actively trying to write policy fast enough to keep pace with a housing situation that hasn't gotten easier. After lunch, the commission takes up a Land Use Code amendment covering Subdivisions and Condominium Plats, which would change the rules governing how land gets divided and how ownership gets structured across unincorporated county. Both items sit at the code-change tier — the kind of amendments that quietly shape what gets built, where, and for whom, long after the meeting is over.",
 
-  "county|2026-09-24|5 x 5 County Meeting - San Miguel County Hosts":
-    "This is an informal gathering — no votes, no decisions. San Miguel County is hosting commissioners from Archuleta, Montezuma, Dolores, and La Plata counties for a 5x5 regional discussion at the Wilkinson Public Library. The substantive item is a conversation with the Southern Ute Indian Council about a gas enterprise pipeline spill — the kind of cross-jurisdictional environmental matter that rarely surfaces in a single county's regular agenda. Each county will also share updates, and federal and state representatives are expected to weigh in.",
-
   "tmvoa|2026-09-29|TMVOA Board of Directors Meeting":
     "The September 29, 2026 TMVOA Board of Directors Meeting agenda hasn't been posted yet.",
-
-  "telluride|2026-09-24|Resident Advisory Committee - Sep 24 2026":
-    "The Resident Advisory Committee meets Thursday, September 24 at noon in the Green Room. The working session covers three items worth watching: a tenant survey discussion, a look at unit vacancies, and a policies informational session — all squarely in the territory of how the Town manages its deed-restricted and municipal housing stock. The committee will also review RAC action items and responsibilities. Rounding out the agenda: updates from Town staff and committee members, public comment, and setting the next meeting date.",
 
   "smart|2026-10-08|SMART Board of Directors":
     "The October 8, 2026 SMART Board of Directors agenda hasn't been posted yet.",
@@ -2694,6 +2664,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Voters in 2 Democratic strongholds could ban transgender girls from girls school sports",
+    source: "Telluride Times",
+    date: "October 24, 2026",
+    firstSeen: "2026-10-24",
+    newsTopic: "education",
+    copy: "Voters in Colorado and Washington will decide ballot measures in 2026 to ban transgender girls from female school sports — the first time the question goes directly to voters rather than legislatures. Both states have Democratic-controlled governments that previously blocked such bans. Twenty-seven states already have these laws in place.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_9bccec66-74c7-563e-ac35-dfc9eb53d45e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/7d/77d3e71c-5704-544e-abf0-b57d72374a23/6adc8353505d3.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "More rain is expected after bad flooding in the Four Corners region led to rescues and evacuations",
     source: "Telluride Times",
     date: "October 24, 2026",
@@ -2711,8 +2693,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "October 24, 2026",
     firstSeen: "2026-10-24",
     newsTopic: "housing",
-    copy: "Lottery applications for the Spruce House H deed-restricted tier 2 housing unit are available starting on Oct. 22. Located at 226 East Pacific Avenue, the home is a three-bedroom, two-bath condominium and approximately 1,087 square feet. Spruce House H has…",
-    claudeSummary: false,
+    copy: "A deed-restricted 3-bed/2-bath condo at 226 East Pacific Avenue is up for lottery. Applications open Oct. 22 via SMRHA; submission window is Oct. 30–Nov. 20, with the drawing Dec. 11. Sale price is $453,000. Apply at smrha.org/applications — the window is short.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_fc32f2a5-bde2-4bed-a07b-52067fff8d8a.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/34/63406754-d858-4715-a981-f8f6f6c0dedc/6adb86a5bdda0.image.jpg",
     imgHiRes: true
@@ -2727,18 +2709,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_d32416bd-7f24-4e4c-9e11-cde7de4c86ff.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/2c/02cdb11d-2bb2-4661-9c28-b5782f83071e/6adcea121c629.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Voters in 2 Democratic strongholds could ban transgender girls from girls school sports",
-    source: "Telluride Times",
-    date: "October 24, 2026",
-    firstSeen: "2026-10-24",
-    newsTopic: "education",
-    copy: "Voters in Colorado and Washington will decide ballot measures in 2026 to ban transgender girls from female school sports — the first time the question goes directly to voters rather than legislatures. Both states have Democratic-controlled governments that previously blocked such bans. Twenty-seven states already have these laws in place.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_9bccec66-74c7-563e-ac35-dfc9eb53d45e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/7d/77d3e71c-5704-544e-abf0-b57d72374a23/6adc8353505d3.image.jpg",
     imgHiRes: true
   },
   {
@@ -3791,30 +3761,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "An artistic exploration of water",
-    source: "Telluride Times",
-    date: "October 11, 2026",
-    firstSeen: "2026-10-12",
-    newsTopic: "arts-culture",
-    copy: "Telluride Arts HQ is opening a winter group show called \"Precipitation\" on Nov. 19, running through April 2, with submissions from local and regional artists due Oct. 25. The theme draws on water's deep ties to life in the San Juans — snowpack, runoff, agriculture, mining history. Alongside the show, two local artists will work in-residence at HQ, with visitors able to watch the work being made.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_2e074ad6-5219-4ea3-a620-76ccae900234.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/2b/72be430b-ab94-4ad8-9491-3bd112968bf8/6acc139171818.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Sowing seeds of solace",
-    source: "Telluride Times",
-    date: "October 11, 2026",
-    firstSeen: "2026-10-11",
-    newsTopic: "recreation",
-    copy: "A remembrance garden is taking shape along the River Trail east of Town Park, created to give people a quiet place to sit with grief in a town better known for festivals. Three benches funded by the Thomas Albert Moore Foundation are in, and a \"wind phone\" is planned. A dedication ceremony is set for Oct. 27.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_3584d048-c8ef-48c0-95a7-d294cdcf5db4.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/f4/af48efd3-0217-4d2d-b783-b52db76a4a30/6ac604c806533.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Fairway masters",
     source: "Telluride Times",
     date: "October 18, 2026",
@@ -3922,15 +3868,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14826"
   },
   {
-    title: "County Housing Efforts Continue on Multiple Fronts",
-    source: "San Miguel County",
-    date: "September 24, 2026",
-    newsTopic: "housing",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1415",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14821"
-  },
-  {
     title: "DMV Services available in Egnar 11/18",
     source: "San Miguel County",
     date: "October 15, 2026",
@@ -3997,7 +3934,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Public Hearing for Liquor License on Thursday, November 19, 2026 at 5:30pm - Chipeta Lodge Resort &amp; Spa, 304 S Lena Street - Notice dated October 13, 2026",
     source: "Town of Ridgway",
-    date: "October 24, 2026",
+    date: "October 25, 2026",
     firstSeen: "2026-10-14",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -4008,7 +3945,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "October 24, 2026",
+    date: "October 25, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -4019,7 +3956,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "October 24, 2026",
+    date: "October 25, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -4605,39 +4542,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Pumpkins & Peaks",
-    link: "https://koto.org/event/pumpkins-peaks/2026-10-24/",
-    description: "Celebrate fall in the mountains at Pumpkins & Peaks! Join TMVOA in Mountain Village for a day of free, family-friendly fall-inspired fun featuring pumpkins and pumpkin carving! In addition to getting to take your carved pumpkin home with you, you can also enjoy a petting zoo, face painting, a scavenger hunt with prizes, a fall-inspired family photo opportunity, 4WD off-road rides with Telluride Outside, outdoor movies & football screenings, fire pits, live music and more. Bundle up, bring the whole family, and enjoy a festive fall day in the mountains! This event is presented by TMVOA.",
-    pubDate: "2026-10-24T13:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Heritage Plaza, Mountain Village",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/10/p_ptmvbanner.1740x870.jpg"
-  },
-  {
-    title: "SNL: Saturday Night at the Livery in Norwood Features Devaki Murch and Operation Babylift",
-    link: "https://koto.org/event/snl-saturday-night-at-the-livery-in-norwood-features-devaki-murch-and-operation-babylift/",
-    description: "Norwood Park & Rec District invites you to another installment of \"SNL: Saturday Night @ the Livery\"—Norwood's sporadic speakers series—at 7pm on October 24th, featuring Devaki Murch with her presentation and exhibit: \"The Mirror of Return: Operation Babylift Then and Now.\" Where were you in 1975? Hear from the crash survivor that is now connecting others with their records after being evacuated from Saigon as babies and raised all over the United States. There will be Vietnamese Happy Snacks and a non-acloholic bar. 1555 Summit St Norwood. As always, $5 at the door.",
-    pubDate: "2026-10-24T19:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "The Livery Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/10/NPRD-SNL-Devaki-poster.jpg"
-  },
-  {
-    title: "Rocky Horror Picture Show Live Shadow Cast Edition",
-    link: "https://koto.org/event/rocky-horror-picture-show-live-shadow-cast-edition/2026-10-24/",
-    description: "The Rocky Horror Picture Show — Shadow Cast Edition Thursday, Friday, & Saturday Performances: Doors: 7:30pm || Show: 8:00pm (Oct. 22-24) Sunday Matinee: Doors: 2:30pm || Show: 3:00pm (Oct. 25) Directed by Erin Cawley Ages 18+ (under 18 with parental permission or parent is accompanying minor) Tickets: $15 + $15 required prop/supply fee Don’t dream it… be it. Get ready to do the Time Warp again as The Rocky Horror Picture Show returns to the Sherbino in full shadow-cast style! Part movie screening, part live theater, and completely outrageous, this cult-classic experience features a live local cast performing along with the film on stage—lip-syncing, dancing, and bringing your favorite characters and scenes to life right in front of the screen. And at Rocky Horror, the audience isn’t just watching. You’re part of the show. …",
-    pubDate: "2026-10-24T19:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "The Sherbino, Ridgway",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/10/rocky-horror-shadow-cast-banner.png"
-  },
-  {
-    title: "Pumpkins & Peaks",
     link: "https://koto.org/event/pumpkins-peaks/2026-10-25/",
     description: "Celebrate fall in the mountains at Pumpkins & Peaks! Join TMVOA in Mountain Village for a day of free, family-friendly fall-inspired fun featuring pumpkins and pumpkin carving! In addition to getting to take your carved pumpkin home with you, you can also enjoy a petting zoo, face painting, a scavenger hunt with prizes, a fall-inspired family photo opportunity, 4WD off-road rides with Telluride Outside, outdoor movies & football screenings, fire pits, live music and more. Bundle up, bring the whole family, and enjoy a festive fall day in the mountains! This event is presented by TMVOA.",
     pubDate: "2026-10-25T13:00:00-06:00",
@@ -5064,6 +4968,50 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Science &#038; Innovation Center, TELLURIDE",
     imageUrl: "https://koto.org/wp-content/uploads/2026/10/Poster-2026-jpeg.jpeg"
+  },
+  {
+    title: "Songs from San Miguel – Live at the Livery",
+    link: "https://koto.org/event/songs-from-san-miguel-live-at-the-livery/",
+    description: "Norwood Park & Rec District presents Songs from San Miguel Live at the Livery on Friday, November 13th, featuring Brendan Forrest & Friends, Molly & the Starfish Lovers, Jacob Lukaszewski (\"Loo-kah-shev-ski\"), and Sean McFarland. This will be an evening of Americana, folk & roots music. Happy hour starts at 6:30 p.m.; music at 7:30 p.m. Cash bar, local food and more!",
+    pubDate: "2026-11-13T18:30:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "The Livery Norwood",
+    imageUrl: ""
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://koto.org/event/tea-and-tarot/2026-11-15/",
+    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    pubDate: "2026-11-15T14:30:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "Telluride Mountain School Open House",
+    link: "https://koto.org/event/telluride-mountain-school-open-house-2/",
+    description: "School In Action Open House! Come experience what learning looks like at Telluride Mountain School. Instead of a presentation about our school, step into the learning. Visit classrooms, meet teachers and students, explore our campus, and see firsthand how curiosity, connection, and real-world experiences shape the TMS experience. Come see: Learning in action – inquiry, hands-on projects, and interdisciplinary exploration Students known and supported – small classes and meaningful relationships School without walls – place-based and outdoor learning woven throughout the experience The TMS difference – a Preschool-8 education designed to cultivate confident, curious, capable learners Our community – meet the people who make TMS such a special place to learn",
+    pubDate: "2026-11-17T09:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Mountain School",
+    imageUrl: ""
+  },
+  {
+    title: "Salon Night at Telluride Arts HQ",
+    link: "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-11-19/",
+    description: "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it here in Telluride. These are evenings for conversation and connection, not lectures or formal programming. They are casual, open, and intentionally unstructured, designed to create the atmosphere where ideas can collide, new friendships form, and creativity sparks. Imagine an evening where musicians talk with writers, painters meet photographers, filmmakers share stories with ceramicists—and the unexpected happens!",
+    pubDate: "2026-11-19T17:30:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Arts HQ, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
   }
 ];
 
@@ -7265,17 +7213,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/49427/2019-lamplight-cemetery-tours-website-header.800x533.webp"
   },
   {
-    title: "An Intimate Night With Favorite Local Musicians",
-    link: "https://www.telluride.com/event/an-intimate-night-with-favorite-local-musicians/",
-    description: "Westside Western presents an Intimate Night at the Sheridan Opera House SHOW Bar featuring some of your favorite local …",
-    pubDate: "2026-10-23",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63789/screenshot_2026-10-13_at_3_51_53_pm.800x533.webp"
-  },
-  {
     title: "Pumpkins & Peaks",
     link: "https://www.telluride.com/event/pumpkins-peaks/",
     description: "Celebrate fall in the mountains at Pumpkins & Peaks! Join TMVOA in Mountain Village for a day of free, …",
@@ -7604,6 +7541,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/63709/elf_instagram.800x533.webp"
+  },
+  {
+    title: "Christmas Eve Torchlight Parade",
+    link: "https://www.telluride.com/event/christmas-eve-torchlight-parade/",
+    description: "The Christmas Eve Torchlight Parade will start at the top of the Gondola and head down into the Town of Telluride. …",
+    pubDate: "2026-12-24",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/43838/img_0715_rb-2100x1335-500d5271-0938-4018-a4ed-fd9c1cfeb5de.800x533.webp"
   }
 ];
 

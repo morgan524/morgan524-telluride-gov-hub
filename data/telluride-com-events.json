@@ -12,17 +12,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/49427/2019-lamplight-cemetery-tours-website-header.800x533.webp"
   },
   {
-    "title": "An Intimate Night With Favorite Local Musicians",
-    "link": "https://www.telluride.com/event/an-intimate-night-with-favorite-local-musicians/",
-    "description": "Westside Western presents an Intimate Night at the Sheridan Opera House SHOW Bar featuring some of your favorite local …",
-    "pubDate": "2026-10-23",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63789/screenshot_2026-10-13_at_3_51_53_pm.800x533.webp"
-  },
-  {
     "title": "Pumpkins & Peaks",
     "link": "https://www.telluride.com/event/pumpkins-peaks/",
     "description": "Celebrate fall in the mountains at Pumpkins & Peaks! Join TMVOA in Mountain Village for a day of free, …",
@@ -351,5 +340,16 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63709/elf_instagram.800x533.webp"
+  },
+  {
+    "title": "Christmas Eve Torchlight Parade",
+    "link": "https://www.telluride.com/event/christmas-eve-torchlight-parade/",
+    "description": "The Christmas Eve Torchlight Parade will start at the top of the Gondola and head down into the Town of Telluride. …",
+    "pubDate": "2026-12-24",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/43838/img_0715_rb-2100x1335-500d5271-0938-4018-a4ed-fd9c1cfeb5de.800x533.webp"
   }
 ]

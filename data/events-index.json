@@ -1,18 +1,5 @@
 [
   {
-    "title": "Pumpkins & Peaks",
-    "href": "https://koto.org/event/pumpkins-peaks/2026-10-24/",
-    "date": "2026-10-24",
-    "time": "1:00 PM",
-    "location": "Heritage Plaza, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://koto.org/wp-content/uploads/2026/10/p_ptmvbanner.1740x870.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Celebrate fall in the mountains at Pumpkins & Peaks! Join TMVOA in Mountain Village for a day of free, family-friendly fall-inspired fun featuring pumpkins and pumpkin carving! In addition to getting to take your carved pumpkin home with…",
-    "type": "Family & Kids"
-  },
-  {
     "title": "Guided Tour: Historic Beaumont Hotel & Spa",
     "href": "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     "date": "2026-10-24",
@@ -80,30 +67,18 @@
     "type": "Talks & Classes"
   },
   {
-    "title": "SNL: Saturday Night at the Livery in Norwood Features Devaki Murch and Operation Babylift",
-    "href": "https://koto.org/event/snl-saturday-night-at-the-livery-in-norwood-features-devaki-murch-and-operation-babylift/",
+    "title": "Pumpkins & Peaks",
+    "href": "https://www.telluride.com/event/pumpkins-peaks/",
     "date": "2026-10-24",
-    "time": "7:00 PM",
-    "location": "The Livery Norwood",
-    "town": "Norwood",
-    "img": "https://koto.org/wp-content/uploads/2026/10/NPRD-SNL-Devaki-poster.jpg",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63613/p_pttbbanner.800x533.webp",
     "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Norwood Park & Rec District invites you to another installment of \"SNL: Saturday Night @ the Livery\"—Norwood's sporadic speakers series—at 7pm on October 24th, featuring Devaki Murch with her presentation and exhibit: \"The Mirror of…",
-    "type": "Arts & Film"
-  },
-  {
-    "title": "Rocky Horror Picture Show Live Shadow Cast Edition",
-    "href": "https://koto.org/event/rocky-horror-picture-show-live-shadow-cast-edition/2026-10-24/",
-    "date": "2026-10-24",
-    "time": "7:30 PM",
-    "location": "The Sherbino, Ridgway",
-    "town": "Ridgway",
-    "img": "https://koto.org/wp-content/uploads/2026/10/rocky-horror-shadow-cast-banner.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Rocky Horror Picture Show — Shadow Cast Edition Thursday, Friday, & Saturday Performances: Doors: 7:30pm || Show: 8:00pm (Oct. 22-24) Sunday Matinee: Doors: 2:30pm || Show: 3:00pm (Oct. 25) Directed by Erin Cawley Ages 18+ (under 18…",
-    "type": "Community"
+    "source": "Telluride.com",
+    "desc": "Celebrate fall in the mountains at Pumpkins & Peaks! Join TMVOA in Mountain Village for a day of free, …",
+    "type": "Community",
+    "endDate": "2026-10-26"
   },
   {
     "title": "4th Annual Boo-Mont Halloween Ball",
@@ -117,6 +92,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Get ready for the 4th Annual Boo-Mont Halloween Ball at the historic Beaumont Hotel in Ouray, Colorado! Come dressed to impress, scare, or simply make a statement! The evening will feature a costume contest with prizes, a DJ, spooky drink…",
     "type": "Music"
+  },
+  {
+    "title": "Rocky Horror Picture Show Live Shadow Cast Edition",
+    "href": "https://events.ourayridgwayevents.com/event/rocky-horror-picture-show-live-shadow-cast-edition",
+    "date": "2026-10-24",
+    "time": "8:00 PM",
+    "location": "The Sherbino",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54066524682512/huge/e95bf2e6509f8e2bf351e2781dcc132332bdb7c2.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Doors open at 7:30 PM; shows begin at 8:00 PM. The Rocky Horror Picture Show returns with a live local shadow cast performing alongside the film, plus audience callbacks, singing, dancing and an included venue-approved participation prop…",
+    "type": "Arts & Film"
   },
   {
     "title": "Movies Under the Stars",
@@ -2096,6 +2084,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Songs from San Miguel – Live at the Livery",
+    "href": "https://koto.org/event/songs-from-san-miguel-live-at-the-livery/",
+    "date": "2026-11-13",
+    "time": "6:30 PM",
+    "location": "The Livery Norwood",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Norwood Park & Rec District presents Songs from San Miguel Live at the Livery on Friday, November 13th, featuring Brendan Forrest & Friends, Molly & the Starfish Lovers, Jacob Lukaszewski (\"Loo-kah-shev-ski\"), and Sean McFarland. This will…",
+    "type": "Community"
+  },
+  {
     "title": "Ridgway Independent Film Festival",
     "href": "https://koto.org/event/ridgway-independent-film-festival/",
     "date": "2026-11-13",
@@ -2241,6 +2242,19 @@
     "type": "Community"
   },
   {
+    "title": "Tea and Tarot",
+    "href": "https://koto.org/event/tea-and-tarot/2026-11-15/",
+    "date": "2026-11-15",
+    "time": "2:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    "type": "Community"
+  },
+  {
     "title": "Meet the Herd",
     "href": "https://events.ourayridgwayevents.com/event/meet-the-herd",
     "date": "2026-11-15",
@@ -2320,6 +2334,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Telluride Mountain School Open House",
+    "href": "https://koto.org/event/telluride-mountain-school-open-house-2/",
+    "date": "2026-11-17",
+    "time": "9:00 AM",
+    "location": "Telluride Mountain School",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "School In Action Open House! Come experience what learning looks like at Telluride Mountain School. Instead of a presentation about our school, step into the learning. Visit classrooms, meet teachers and students, explore our campus, and…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
     "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
     "date": "2026-11-17",
@@ -2383,6 +2410,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Ouray Public Library hosts Craft Time for children under 12.",
     "type": "Family & Kids"
+  },
+  {
+    "title": "Salon Night at Telluride Arts HQ",
+    "href": "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-11-19/",
+    "date": "2026-11-19",
+    "time": "5:30 PM",
+    "location": "Telluride Arts HQ, TELLURIDE",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it…",
+    "type": "Community"
   },
   {
     "title": "Pickleball Nights",
@@ -2972,5 +3012,18 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/",
     "type": "Music"
+  },
+  {
+    "title": "Christmas Eve Torchlight Parade",
+    "href": "https://www.telluride.com/event/christmas-eve-torchlight-parade/",
+    "date": "2026-12-24",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/43838/img_0715_rb-2100x1335-500d5271-0938-4018-a4ed-fd9c1cfeb5de.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "The Christmas Eve Torchlight Parade will start at the top of the Gondola and head down into the Town of Telluride. …",
+    "type": "Festivals"
   }
 ]
