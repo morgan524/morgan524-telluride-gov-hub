@@ -333,7 +333,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312","sv":4,"ph":"930623a06e6efd7f"},
 
   "telluride|2026-11-05|Town Council Budget - Nov 05 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054","sv":4,"ph":"6dd7ca52c2d0336e"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054","sv":4,"ph":"2b31143ef7ed21fe"},
 
   "telluride|2026-10-21|CANCELED - Historic & Architectural Review Commission Chair - Oct 21 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8025","sv":4},
@@ -405,13 +405,13 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-11-17|Town Council - Nov 17 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8046","sv":4,"ph":"1c679cbbc66fe9d8"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8046","sv":4,"ph":"682618c419262419"},
 
   "rico|2026-11-18|Rico Board of Trustees Regular Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-11-18|Historic & Architectural Review Commission Chair - Nov 18 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8027","sv":4,"ph":"29e446caecdbde71"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8027","sv":4,"ph":"5d5a28bd6c927e76"},
 
   "telluride|2026-11-18|Historic & Architectural Review Commission - Nov 18 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8026","sv":4,"ph":"fd1c8b4365a387a6"},
@@ -447,13 +447,13 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8320","sv":4,"ph":"a1a1d79c5ae0155d"},
 
   "telluride|2026-11-19|Planning & Zoning Commission - Nov 19 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8108","sv":4,"ph":"eb7467e457d122e2"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8108","sv":4,"ph":"e189d0628d0bf478"},
 
   "telluride|2026-11-19|Planning & Zoning Commission Chair - Nov 19 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8107","sv":4,"ph":"d1c02d0e14c5779b"},
 
   "telluride|2026-11-19|Liquor Licensing Authority - Nov 19 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8147","sv":4,"ph":"045bdf9820a590d8"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8147","sv":4,"ph":"dd26fcc2959762fc"},
 
   "telluride|2026-10-26|Gondola Sub Committee - Oct 26 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8327","zoomUrl":"https://urldefense.com/v3/__https:/gbsm.zoom.us/j/82559576086__;!!ETWISUBM!3x58A-FfNf9JhIvrh2mHeq3wy9OHc7S76v3Obypudr5m-ILQvLZAsE3ZuUUqFUGuSSfFOzlMG_ETBGmg3kQV-w$","sv":4},
@@ -500,6 +500,14 @@ const DEEP_DIVE_UPDATES = [];
 //   sourceUrl, topics: [] }. Rendered by hub-bub.html from the JSON mirror
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
+  {
+    date: "2026-10-26",
+    title: "Should a Veteran's Flag fly at the 4-H Event Center?",
+    body: "The Board of County Commissioners is expected to decide whether to hang a Veteran's Flag at the 4-H Event Center. Sounds simple. But these calls rarely are — some residents will see it as a straightforward act of recognition, long overdue. Others may wonder about precedent: once one flag goes up, what comes next, and who decides? Public comment is on the agenda, so the board wants to hear from people before the vote.\n\nWhere do you come down on it?",
+    choices: ["Hang the flag", "Leave it as is", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
   {
     date: "2026-10-25",
     title: "The gondola update nobody's agreed on yet",
@@ -731,14 +739,6 @@ const DAILY_QUESTIONS = [
     choices: ["Fire safety has to come first", "Ecology can't be an afterthought", "They can be balanced", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-09-26",
-    title: "The county wants to haul material and build trails — at the same time",
-    body: "The Board of County Commissioners has a work session coming up that lumps together trail construction for the Lawson Hill Connector, material hauling, a fuel island canopy, and jail painting — all in one procurement conversation. Some will see efficient government: bundle the work, move faster. Others will wonder whether pairing a trail project with jail maintenance and fuel infrastructure is the right way to weigh priorities or spend public money. Nothing's been decided yet — this is a work session.\n\nWhen county projects get bundled like this, does that make the process smoother, or does it make it harder to scrutinize what's actually being approved?",
-    choices: ["Bundling makes sense — move faster", "Keep projects separate", "Need more info"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -828,13 +828,13 @@ const MEETING_PREVIEWS = {
     "The San Miguel County Open Space Commission is expected to meet on November 23, 2026. Related county activity includes active requests for proposals covering jail painting, a multi-jurisdictional hazard mitigation plan update, and a housing action plan, alongside several ongoing foreclosure proceedings on local properties.",
 
   "telluride|2026-10-26|Gondola Sub Committee - Oct 26 2026":
-    "The Gondola Sub Committee is expected to receive an update on the FTA Capital Investment Program, hear SMART and partner jurisdiction updates, and discuss new business items. The virtual meeting will also include a public comment period.",
+    "The Gondola Sub Committee will receive an update on the FTA Capital Investment Program and hear SMART and partner jurisdiction updates. The committee will also discuss new business items and take public comment during the virtual meeting.",
 
   "county|2026-10-26|Open Space Commission Meeting":
-    "The Open Space Commission is expected to discuss the Lawson Hill Connector Trail Project, for which the county has issued a request for proposals. Commissioners may also address material hauling needs and other county infrastructure matters relevant to open space management and outdoor recreation planning.",
+    "The Open Space Commission is expected to discuss the Lawson Hill Connector Trail Project, for which San Miguel County is currently seeking proposals. Other county matters appearing alongside this meeting include material hauling contracts, facility maintenance projects, and various tax and financial proceedings.",
 
   "county|2026-10-26|San Miguel Basin Fair Board Meeting 10/26":
-    "The San Miguel Basin Fair Board will consider a new board member application, discuss proposed rule changes, and review the 2027 budget including grants. Updates are expected from the 4-H and Fairgrounds coordinators. The board will also set 2027 weigh-in dates and explore band and entertainment options."
+    "The San Miguel Basin Fair Board will consider a new board member application, proposed rule changes, panel and gate purchases for 2027, and budget and grant updates. The board will also hear reports from fair, 4-H, and parks coordinators, and discuss entertainment ideas and weigh-in dates for the 2027 fair."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1025,6 +1025,16 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "This week's parish bulletin is attached. As always, please check the Parish Calendar for the most updated information.Reminders:There will be a second collection this weekend for World Mission Sunday. Read the Pastor's Corner for more infor...",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-october-18/",
+    img: ""
+  },
+  {
+    title: "2026 Telluride Mountain Club Annual Report",
+    source: "Telluride Mountain Club",
+    sourceKey: "tmc",
+    date: "October 12, 2026",
+    newsTopic: "community",
+    copy: "The post 2026 Telluride Mountain Club Annual Report appeared first on Telluride Mountain Club .",
+    href: "https://www.telluridemountainclub.org/2026-telluride-mountain-club-recap-report/",
     img: ""
   }
 ];  // 7 regional feeds (West End, Ouray, …)
@@ -1313,7 +1323,7 @@ const MANUAL_SUMMARIES = {
     "The November 18, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-11-18|Historic & Architectural Review Commission Chair - Nov 18 2026":
-    "The November 18, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
+    "The November 18, 2026 HARC Chair agenda hasn't been posted yet.",
 
   "telluride|2026-11-18|Historic & Architectural Review Commission - Nov 18 2026":
     "The November 18, 2026 HARC agenda hasn't been posted yet.",
@@ -2654,6 +2664,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Keeping warm on a frigid mountain",
+    source: "Telluride Times",
+    date: "October 26, 2026",
+    firstSeen: "2026-10-26",
+    newsTopic: "recreation",
+    copy: "Beacon Telluride is collecting gently used winter gear — jackets, gloves, base layers, hats, ski pants — for seasonal workers who may arrive underprepared for mountain cold. Drop-offs accepted at The Toggery through Nov. 15. The nonprofit also runs home-cooked meal hosting and other programs for seasonal employees all winter.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_7f178afe-3177-4285-87d4-991204eb2c62.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/2b/c2b66677-61a4-4da4-9c9e-796708e99915/6adbd4392c889.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "More flooding possible in Four Corners region after days of heavy rain",
     source: "Telluride Times",
     date: "October 25, 2026",
@@ -3822,6 +3844,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
   },
   {
+    title: "Judge rules Ridgway hotel can’t house workers building Telluride’s Four Seasons resort",
+    source: "Colorado Sun",
+    date: "October 26, 2026",
+    firstSeen: "2026-10-26",
+    newsTopic: "community",
+    copy: "The developer of the $1 billion Four Seasons project in Mountain Village has acquired and leased area hotels far from the resort. Local groups are pushing back.",
+    claudeSummary: false,
+    href: "https://coloradosun.com/2026/10/26/ridgway-lawsuit-mountain-village-resort-housing/",
+    img: "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2026/10/IMG_5818-scaled.jpg?fit=1024%2C768&amp;ssl=1"
+  },
+  {
     title: "View the Town of Ridgway's Recently Adopted Water Supply Element",
     source: "Town of Ridgway",
     date: "October 23, 2026",
@@ -4951,48 +4984,81 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Drop-In Tech Time with Oliver",
-    link: "https://telluridelibrary.libcal.com/event/15970397?hs=a",
-    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
-    pubDate: "2026-10-25T19:00:00.000Z",
+    title: "Musik 4 Kinders",
+    link: "https://telluridelibrary.libcal.com/event/17515446?hs=a",
+    description: "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. &iexcl;M&uacute;sica, Movimiento, y Aprendizaje Alegre para ni&ntilde;os! Este programa ser&aacute; en la sala de programas.",
+    pubDate: "2026-10-26T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "2nd Floor Desk",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png"
   },
   {
-    title: "Tea and Tarot",
-    link: "https://telluridelibrary.libcal.com/event/17347285?hs=a",
-    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
-    pubDate: "2026-10-25T20:30:00.000Z",
+    title: "Strings and Keys with Annie and Oliver",
+    link: "https://telluridelibrary.libcal.com/event/17868116?hs=a",
+    description: "12:00 PM – 1:00 PM · Unwind at the library with live violin and piano music from violinist, Annie Foxen and pianist, Oliver Henry (both WPL staff members). Perfect for reading, relaxing, or simply listening. Free and open to the public. All ages are welcome.",
+    pubDate: "2026-10-26T18:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
+    location: "Lobby",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_21_15_37_19.jpg"
   },
   {
-    title: "The Real Book Club: Jazz Standards",
-    link: "https://telluridelibrary.libcal.com/event/17622920?hs=a",
-    description: "5:00 PM – 7:00 PM · Join us for The Real Book Club, a monthly jazz jam session for musicians of all levels who want to dive into classic jazz standards together! Whether you&#39;re a seasoned improviser or just starting out, this is a welcoming space to play, practice, and connect with fellow jazz enthusiasts. Each month, we'll focus on three jazz standards selected from The Real Book. You'll receive PDFs of the tunes in advance so you can shed at home and come ready to jam. Lead sheets will also be available on the day of the event. The songs we will play at this jam are: Once I Loved by Antonio Carlos Jobim. Here is a version I quite like with Astrud Gilberto singing. Guantanamera by Jose Fernandez Diaz. Here is a version I quite like by Joseito Fernandez. …",
-    pubDate: "2026-10-25T23:00:00.000Z",
+    title: "Homeschool Meet & Greet",
+    link: "https://telluridelibrary.libcal.com/event/17694504?hs=a",
+    description: "1:30 PM – 2:30 PM · Come meet other homeschooling families and learn about library resources.",
+    pubDate: "2026-10-26T19:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_22_16_54_50.png"
+  },
+  {
+    title: "Desserts and Docs: The Colorado Experience",
+    link: "https://telluridelibrary.libcal.com/event/17162458?hs=a",
+    description: "1:30 PM – 3:00 PM · Join us for this 4 part series as we watch episodes from RMPBS Flagship history series, explores the people, places. and events that has shaped Colorado&#39;s rich heritage.  August: \"The Original Coloradans\" An incredible look at the Ute Nation, their history before colonization, and their interactions with early trappers. September: \"The Sand Creek Massacre\" or \"Dearfield: Uncovering Dearfield\". A deep look at the tragic growing pains of the frontier or the rise of Colorado&#39;s historic Black homesteader town. October: The Ski Train- 100 yrs. and Made in Marble November: \"The Games That Never Happened\". The fascinating modern-history story of how Denver became the only city in the world to win the Winter Olympics and then vote to give them back!",
+    pubDate: "2026-10-26T19:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_10_13_52_37.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_09_16_23_04.jpg"
   },
   {
-    title: "Around The World- Portugal",
-    link: "https://telluridelibrary.libcal.com/event/17620415?hs=a",
-    description: "5:30 PM – 6:30 PM · Have you been to Portugal? Join us at The Wine Mine for a journey to Portugal. We will explore the history, regions and do some taste testing along the way.  Must be 21years old to attend.",
-    pubDate: "2026-10-25T23:30:00.000Z",
+    title: "Melt and Make: Perler Bead Art",
+    link: "https://telluridelibrary.libcal.com/event/17732309?hs=a",
+    description: "A drop-in crafting program at Wilkinson Public Library where participants create art using Perler beads, which are small plastic beads arranged into patterns and fused together with heat. The program runs Monday afternoons from 4:00 to 5:00 PM.",
+    pubDate: "2026-10-26T22:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Wine Mine",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_10_11_28_46.png"
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_29_12_15_23.png"
+  },
+  {
+    title: "Animals Taught Me Everything Author Talk with Pam Houston",
+    link: "https://telluridelibrary.libcal.com/event/17278977?hs=a",
+    description: "5:30 PM – 6:30 PM · Join us for a talk and signing with Pam Houston about her new book, Animals Taught Me Everything! What can a wagging tail and soaring wings teach us about a life well lived? From Icelandic mares and Irish wolfhounds to elephants, leopards, hyenas, and a desert-adapted lioness named Charlie, Pam Houston has learned life's most important lessons from animals. How to play. How to rest. How to love. How to die. How to be present with the dying. How to be present with the living and with the Earth. How to find joy in the least likely places. How to find joy, literally, everywhere. With playful sincerity, Houston finds power and promise in the teachings of our fellow creatures and reminds us that animals are here for us, every day and everywhere. …",
+    pubDate: "2026-10-26T23:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Magazine Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_17_13_45_00.jpg"
+  },
+  {
+    title: "The Listening Club: Sven Wunder&#039;s Natura Motra",
+    link: "https://telluridelibrary.libcal.com/event/17298549?hs=a",
+    description: "6:00 PM – 7:00 PM · Take some time to listen to the month&#39;s featured album. Then, join The Listening Club the fourth Monday of each month for a deep discussion of the album lead by your album guide for the evening. Your knowledgeable guide will bring you cultural, historical, and musical context that will surprise and delight you, as well as bring you a greater understanding of the music you are hearing. It&#39;s like a book club, but for albums! Come join the fun at Telluride Music Company and get into a raffle for a vinyl copy of the month&#39;s featured album and enjoy some FREE pizza with the discussion. Bring your own beverage. ( Signing up here in advance helps us know how much pizza to order! …",
+    pubDate: "2026-10-27T00:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Music Company",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_25_16_11_15.jpg"
   }
 ];
 
@@ -5543,76 +5609,6 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "OPL Read a Book - Get a Pumpkin",
-    link: "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
-    description: "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
-    pubDate: "2026-10-25T16:00:00.000Z",
-    endDate: "2026-10-31",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Public Library",
-    imageUrl: "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg"
-  },
-  {
-    title: "Solkattu Workshop",
-    link: "https://events.ourayridgwayevents.com/event/solkattu-workshop",
-    description: "Learn an ancient rhythmic vocalization system with experts David and Arlyn Alderdice. Step, clap, and vocalize together using this fun and accessible method to deepen your relationship with music and life.",
-    pubDate: "2026-10-25T20:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "United Church Of The San Juans",
-    imageUrl: "https://localist-images.azureedge.net/photos/54198017321990/huge/d93984b7fe9a19865c0b6e69091253a2e299077c.jpg"
-  },
-  {
-    title: "Rocky Horror Picture Show Live Shadow Cast Edition",
-    link: "https://events.ourayridgwayevents.com/event/rocky-horror-picture-show-live-shadow-cast-edition",
-    description: "Doors open at 7:30 PM; shows begin at 8:00 PM. The Rocky Horror Picture Show returns with a live local shadow cast performing alongside the film, plus audience callbacks, singing, dancing and an included venue-approved participation prop kit. Ages 18+; minors require parental permission or an accompanying parent.",
-    pubDate: "2026-10-25T21:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Sherbino",
-    imageUrl: "https://localist-images.azureedge.net/photos/54066524682512/huge/e95bf2e6509f8e2bf351e2781dcc132332bdb7c2.jpg"
-  },
-  {
-    title: "LIVE JAZZ IN THE GARDEN! Zan Waller & Stefan Davenport",
-    link: "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
-    description: "Zan Waller on trumpet and Stefan Davenport on guitar perform as Standard Alchemy, playing swing, cocktail jazz, and Great American Songbook standards in Chloe's Secret Garden. The outdoor Sunday series runs from 4:00–6:00 p.m. at Chloe's Charcuterie & Wine, with occasional special guest vocalists joining the duo.",
-    pubDate: "2026-10-25T22:00:00.000Z",
-    endDate: "2026-11-08",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Chloe's Charcuterie & Wine",
-    imageUrl: "https://localist-images.azureedge.net/photos/53950055817938/huge/4924d3606a12c233af2b47a380c304869dfaf267.jpg"
-  },
-  {
-    title: "Healing Hearts Circle: Women Transcending Cancer/Chronic Illness",
-    link: "https://events.ourayridgwayevents.com/event/healing-hearts-circle-women-transcending-cancerchronic-illness",
-    description: "A recurring support circle at Bee True You Wellness & Creative Studio for women navigating cancer or chronic illness, offering a safe and welcoming space that honors the whole person — body, mind, and spirit. The group emphasizes peer connection, emotional support, and empowerment for women at any stage of their journey.",
-    pubDate: "2026-10-25T23:00:00.000Z",
-    endDate: "2026-12-07",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Bee True You Wellness & Creative Studio",
-    imageUrl: "https://localist-images.azureedge.net/photos/54241462626167/huge/7c0778035e072ff933b617f21809b1459dc84aca.jpg"
-  },
-  {
-    title: "Teen Takeover at Ouray Hot Springs Pool",
-    link: "https://events.ourayridgwayevents.com/event/teen-takeover",
-    description: "Teen Takeover at Ouray Hot Springs Pool is an evening event giving middle and high school students dedicated time to enjoy the pool facility with swimming, basketball, races on the Wibit, games, music, and food. The event runs in two separate sessions — one for middle schoolers and one for high schoolers — and is free for Ouray Hot Springs members.",
-    pubDate: "2026-10-25T23:00:00.000Z",
-    endDate: "2026-11-16",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Hot Springs",
-    imageUrl: "https://localist-images.azureedge.net/photos/53924398882536/huge/a5451161d264c1870d73a22c5d5625c3a29a8c63.jpg"
-  },
-  {
     title: "CELESTIAL BODIES - Olivia Ivy and Kane Scheidegger",
     link: "https://events.ourayridgwayevents.com/event/celestial-bodies-olivia-ivy-and-kane-scheidegger",
     description: "Join us at Space to Create Gallery in Ridgway for CELESTIAL BODIES, an exhibition exploring the connections between Body, Earth, and Cosmos through painting and photography. Featuring the work of Olivia Ivy and Kane Scheidegger, the exhibition brings together feminine figures, celestial symbolism, and otherworldly landscapes to explore the boundaries between the intimate and the infinite. From constellations hidden within the human form to the vastness of the night sky reflected in the earthly landscape, these works invite us to look beyond the familiar and reconsider our place within the universe. Exhibition dates October 2nd to November 2nd.",
@@ -5623,6 +5619,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Space to Create Gallery",
     imageUrl: "https://localist-images.azureedge.net/photos/54241868374608/huge/121c2ab6c42c0a5364ce85a3ffe552e3b10fe9f0.jpg"
+  },
+  {
+    title: "OPL Read a Book - Get a Pumpkin",
+    link: "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
+    description: "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
+    pubDate: "2026-10-26T16:00:00.000Z",
+    endDate: "2026-10-31",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Public Library",
+    imageUrl: "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg"
   },
   {
     title: "Ongoing: Space Cowboy by Dundee & Lee",
@@ -6021,6 +6029,30 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Adobe Inn",
     imageUrl: "https://localist-images.azureedge.net/photos/53888467422235/huge/f256b058d12c444dee76fbf1c905276c3e76b084.jpg"
+  },
+  {
+    title: "LIVE JAZZ IN THE GARDEN! Zan Waller & Stefan Davenport",
+    link: "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
+    description: "Zan Waller on trumpet and Stefan Davenport on guitar perform as Standard Alchemy, playing swing, cocktail jazz, and Great American Songbook standards in Chloe's Secret Garden. The duo brings a refined, relaxed musical atmosphere to this recurring Sunday afternoon series at Chloe's Charcuterie & Wine.",
+    pubDate: "2026-11-01T23:00:00.000Z",
+    endDate: "2026-11-08",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Chloe's Charcuterie & Wine",
+    imageUrl: "https://localist-images.azureedge.net/photos/53950055817938/huge/4924d3606a12c233af2b47a380c304869dfaf267.jpg"
+  },
+  {
+    title: "Healing Hearts Circle: Women Transcending Cancer/Chronic Illness",
+    link: "https://events.ourayridgwayevents.com/event/healing-hearts-circle-women-transcending-cancerchronic-illness",
+    description: "Healing Hearts Circle is a supportive gathering at Bee True You Wellness & Creative Studio for women navigating cancer or chronic illness, offering a safe space where every journey is honored. The circle embraces the whole person — body, mind, and spirit — welcoming participants as they are and fostering connection, healing, and empowerment.",
+    pubDate: "2026-11-02T00:00:00.000Z",
+    endDate: "2026-12-07",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Bee True You Wellness & Creative Studio",
+    imageUrl: "https://localist-images.azureedge.net/photos/54241462626167/huge/7c0778035e072ff933b617f21809b1459dc84aca.jpg"
   },
   {
     title: "Monthly Karate in Ouray County",
@@ -6485,6 +6517,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54066526099851/huge/343172cafea91a01a42c75bb4bf61e850480fd58.jpg"
   },
   {
+    title: "Teen Takeover at Ouray Hot Springs Pool",
+    link: "https://events.ourayridgwayevents.com/event/teen-takeover",
+    description: "Teen Takeover at Ouray Hot Springs Pool is a free evening event for middle and high school students featuring swimming, games, basketball, races on the Wibit, music, and more. Middle schoolers and high schoolers each have their own dedicated time slot, with free admission for Ouray Hot Springs members.",
+    pubDate: "2026-11-16T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Hot Springs",
+    imageUrl: "https://localist-images.azureedge.net/photos/53924398882536/huge/a5451161d264c1870d73a22c5d5625c3a29a8c63.jpg"
+  },
+  {
     title: "Decker Room New Volunteer Orientation",
     link: "https://events.ourayridgwayevents.com/event/decker-room-new-volunteer-orientation",
     description: "Join our wonderful volunteer team at the Decker! If you would like to help with Gallery Sitting during open hours, events, and more, please attend a New Volunteer Orientation to get started! You'll learn about the Decker Room and the events and programs that take place here. Volunteers should be able to commit to consistent volunteer hours each month! Email decker@ridgwayfuse.org for info and to RSVP.",
@@ -6752,7 +6795,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/winter-break-ridgway-schools",
     description: "Winter break for Ridgway Schools begins on this date, giving students and families time off during the holiday season. The break is a scheduled pause in the academic calendar for the Ridgway school district.",
     pubDate: "2026-12-21T07:00:00.000Z",
-    endDate: "2026-12-24",
+    endDate: "2026-12-25",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6773,17 +6816,6 @@ const OURAY_RIDGWAY_EVENTS = [
 ];
 
 const NORWOOD_EVENTS = [
-  {
-    title: "Planning And Zoning Commission Meeting",
-    link: "https://www.norwoodtown.com/2026-10-19-planning-and-zoning-commission-meeting",
-    description: "The Town of Norwood's Planning and Zoning Commission will hold a regular meeting to review and act on land use, development, and zoning matters affecting the community. The meeting is open to the public and provides an opportunity for residents to observe local planning decisions.",
-    pubDate: "2026-10-19T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Government Meeting",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
   {
     title: "Senior Meals",
     link: "https://www.norwoodtown.com/2026-10-22-senior-meals",
@@ -7138,6 +7170,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
+  },
+  {
+    title: "Market on the Plaza",
+    link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    description: "Mountain Village's Heritage Plaza hosts a recurring outdoor market featuring local vendors at tents throughout the pedestrian-friendly plaza. The market brings together a variety of goods from the surrounding community in an open-air setting.",
+    pubDate: "2026-11-25T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   }
 ];
 

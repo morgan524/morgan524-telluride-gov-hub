@@ -1,5 +1,17 @@
 [
   {
+    "title": "Keeping warm on a frigid mountain",
+    "source": "Telluride Times",
+    "date": "October 26, 2026",
+    "firstSeen": "2026-10-26",
+    "newsTopic": "recreation",
+    "copy": "Beacon Telluride is collecting gently used winter gear — jackets, gloves, base layers, hats, ski pants — for seasonal workers who may arrive underprepared for mountain cold. Drop-offs accepted at The Toggery through Nov. 15. The nonprofit also runs home-cooked meal hosting and other programs for seasonal employees all winter.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/arts_and_entertainment/article_7f178afe-3177-4285-87d4-991204eb2c62.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/2b/c2b66677-61a4-4da4-9c9e-796708e99915/6adbd4392c889.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "More flooding possible in Four Corners region after days of heavy rain",
     "source": "Telluride Times",
     "date": "October 25, 2026",
@@ -1166,6 +1178,17 @@
     "copy": "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
     "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
+  },
+  {
+    "title": "Judge rules Ridgway hotel can’t house workers building Telluride’s Four Seasons resort",
+    "source": "Colorado Sun",
+    "date": "October 26, 2026",
+    "firstSeen": "2026-10-26",
+    "newsTopic": "community",
+    "copy": "The developer of the $1 billion Four Seasons project in Mountain Village has acquired and leased area hotels far from the resort. Local groups are pushing back.",
+    "claudeSummary": false,
+    "href": "https://coloradosun.com/2026/10/26/ridgway-lawsuit-mountain-village-resort-housing/",
+    "img": "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2026/10/IMG_5818-scaled.jpg?fit=1024%2C768&amp;ssl=1"
   },
   {
     "title": "View the Town of Ridgway's Recently Adopted Water Supply Element",

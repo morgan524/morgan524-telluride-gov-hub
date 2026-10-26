@@ -1,26 +1,22 @@
 {
-  "hash": "da1328466a0215e29f7bd70da3a5b64776539f1e",
-  "lede": "Town Council meets Tuesday, October 27 with a genuinely consequential agenda: a vote on the Fourth Supplement to the Gondola IGA extending cost-sharing for the 2027 planning budget, plus first readings of two ordinances — one touching the Telluride Energy Mitigation Program — all of which connect directly to decisions voters and taxpayers have skin in. The Gondola Advisory Committee also meets Monday the 26th with a federal funding update that signals where the FTA Capital Investment pipeline stands for the replacement project. End of the week, the valley shifts gears for Halloween — parade Friday, Witches Ride Thursday, and Young Frankenstein opening at the Sheridan.",
+  "hash": "b58f7b94068cbd3b6c0f0c02be762ce70bb0d7a9",
+  "lede": "The biggest thing on the calendar this week is Tuesday's Telluride Town Council meeting, where three real decisions are on the table: a cost-sharing supplement to the Gondola IGA tied to the 2027 planning budget, plus first readings of two ordinances touching the Town's Energy Mitigation Program. Over in Ouray County, commissioners are also deep in consequential territory — a fifth extension of the Emergency Disaster Declaration and preliminary discussions on merging EMS with Ridgway Fire. Closer to home, the gondola is closed for maintenance Monday, and the week winds down with the Witches Ride and Young Frankenstein to keep things from getting too serious.",
   "notable": [
     {
       "id": 4,
-      "stake": "Council votes on gondola IGA extension and two ordinances get first reading."
-    },
-    {
-      "id": 2,
-      "stake": "Federal funding update reveals where the gondola's FTA pipeline actually stands."
+      "stake": "Council votes on gondola IGA cost-sharing and two ordinances get first reading."
     },
     {
       "id": 6,
-      "stake": "Ouray BOCC votes on fifth Emergency Disaster Declaration extension and vacancy fills."
+      "stake": "Ouray BOCC votes on fifth Emergency Disaster Declaration extension; vacancy fills under austerity."
     },
     {
       "id": 7,
-      "stake": "Proposed EMS and Ridgway Fire merger could reshape emergency response for years."
+      "stake": "EMS and Ridgway Fire merger draft agreement shapes emergency response and costs for years."
     },
     {
-      "id": 3,
-      "stake": "Fair Board reviews Junior Livestock Sale finances and gets early look at 2027 budget."
+      "id": 2,
+      "stake": "Federal funding pipeline for gondola replacement gets public update — open public comment included."
     }
   ]
 }
