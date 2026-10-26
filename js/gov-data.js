@@ -700,6 +700,15 @@ const NORWOOD_CACHE_DATE = '2026-10-26';
 
 const NORWOOD_CACHED_DATA = [
   {
+    date: "October 27, 2026",
+    time: null,
+    title: "Board of Trustees Joint Work Session",
+    agendaUrl: "https://www.norwoodtown.com/files/6bb742041/10.27.2026+JOINT+Work+Session.pdf",
+    packetUrl: null,
+    special: false,
+    board: "bot"
+  },
+  {
     date: "November 10, 2026",
     time: null,
     title: "Norwood Water Commission Meeting",
@@ -860,7 +869,7 @@ const OURAY_COUNTY_CACHED_DATA = [
   },
   {
     date: "November 10, 2026",
-    time: "1:30 PM",
+    time: "2:30 PM",
     title: "Board of County Commissioners Work Session",
     location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
     civicClerkId: 1094,

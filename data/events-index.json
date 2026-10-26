@@ -68,15 +68,15 @@
   },
   {
     "title": "Strings and Keys with Annie and Oliver",
-    "href": "https://koto.org/event/strings-and-keys-with-annie-and-oliver/",
+    "href": "https://telluridelibrary.libcal.com/event/17868116?hs=a",
     "date": "2026-10-26",
     "time": "12:00 PM",
-    "location": "Wilkinson Public Library, Telluride",
+    "location": "Lobby",
     "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-3.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Unwind at the library with live violin and piano music from violinist, Annie Foxen and pianist, Oliver Henry (both WPL staff members). Perfect for reading, relaxing, or simply listening. Free and open to the public. All ages are welcome.",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_21_15_37_19.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "12:00 PM – 1:00 PM · Unwind at the library with live violin and piano music from violinist, Annie Foxen and pianist, Oliver Henry (both WPL staff members). Perfect for reading, relaxing, or simply listening. Free and open to the public.…",
     "type": "Talks & Classes"
   },
   {
@@ -156,19 +156,6 @@
     "category": "Library Event",
     "source": "Wilkinson Public Library",
     "desc": "6:00 PM – 7:00 PM · Take some time to listen to the month s featured album. Then, join The Listening Club the fourth Monday of each month for a deep discussion of the album lead by your album guide for the evening. Your knowledgeable guide…",
-    "type": "Talks & Classes"
-  },
-  {
-    "title": "French Cafe at WPL",
-    "href": "https://koto.org/event/french-cafe-at-wpl/",
-    "date": "2026-10-26",
-    "time": "9:00 AM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-9.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Practice your French with other French speakers in a relaxed atmosphere. Free crepes and coffee! All levels welcome. Advance registration recommended.",
     "type": "Talks & Classes"
   },
   {
@@ -965,6 +952,19 @@
     "type": "Family & Kids"
   },
   {
+    "title": "Telluride Fire's Halloween Open House",
+    "href": "https://koto.org/event/telluride-fires-halloween-open-house/",
+    "date": "2026-10-31",
+    "time": "4:00 PM",
+    "location": "Telluride Fire Station 1",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/10/Image-10-25-26-at-5.06-PM.jpeg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "It's Telluride Fire's second annual Halloween Open House. We will be serving free burgers & hot dogs (until supplies last). Children can get safety glow-sticks and trick-or-treat from their local firefighters. We can't wait to see you…",
+    "type": "Family & Kids"
+  },
+  {
     "title": "Trick or Treat: Witches @ the Wright",
     "href": "https://events.ourayridgwayevents.com/event/trick-or-treat-witches-the-wright",
     "date": "2026-10-31",
@@ -1242,6 +1242,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "Parenting Workshop w/ Bright Futures for Children",
+    "href": "https://koto.org/event/parenting-workshop-w-bright-futures-for-children/",
+    "date": "2026-11-04",
+    "time": "5:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/family.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join us for a fun and informative family workshop focused on helping your child build healthy habits! Guest speakers from Skippy Dental and Amy Erickson from San Miguel Ouray Public Health will share helpful tips on children’s dental…",
+    "type": "Family & Kids"
+  },
+  {
     "title": "Telluride Rotary Club Meeting",
     "href": "https://portal.clubrunner.ca/3291",
     "date": "2026-11-04",
@@ -1442,16 +1455,16 @@
     "endDate": "2026-11-30"
   },
   {
-    "title": "Adult Spelling Bee - Telluride Library",
-    "href": "https://www.alibitelluride.com/calendar#eca-event=adult-spelling-bee-telluride-library",
+    "title": "Adult Spelling Bee",
+    "href": "https://koto.org/event/adult-spelling-bee/",
     "date": "2026-11-06",
     "time": "6:30 PM",
-    "location": "The Alibi • Telluride, CO",
+    "location": "The Alibi, Telluride",
     "town": "Telluride",
-    "img": "https://1v09t9hszk.ucarecd.net/81532fb8-7b72-4529-9249-3d41062e15ff/-/crop/1174x1175/58,0/-/preview/",
-    "category": "Live Music",
-    "source": "The Alibi",
-    "desc": "An adult spelling bee hosted at The Alibi, offering teams of two the chance to compete for bragging rights and a $100 prize, with additional prizes also up for grabs. The event brings a playful, competitive twist to a weeknight evening at…",
+    "img": "https://koto.org/wp-content/uploads/2026/10/Hive-Mind.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Words. Drinks. Bragging Rights (and $100!). For teams of 2. Extra prizes for clever team names and costumes! Show your library card and get 10% off your drink! Space is limited to 10 teams of two, so make sure to sign up today! PLEASE…",
     "type": "Community"
   },
   {
@@ -1492,6 +1505,19 @@
     "source": "Sherbino Theater",
     "desc": "A free live music show presented by The Sherbino and the Ouray County Performing Arts Guild, featuring performers Heather and Doug in the Sherbino's intimate \"Living Room\" setting. The event runs from 6:00 to 8:00 p.m., with a cash bar…",
     "type": "Music"
+  },
+  {
+    "title": "Yoga with Lauren",
+    "href": "https://koto.org/event/yoga-with-lauren/2026-11-07/",
+    "date": "2026-11-07",
+    "time": "10:00 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/10/wellness-lineup-21.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and…",
+    "type": "Wellness"
   },
   {
     "title": "Introduction to Copper Jewelry with Emily Knickerbocker",
@@ -1585,6 +1611,19 @@
     "type": "Festivals"
   },
   {
+    "title": "Immersive Sound Journey with/Dustin Wells",
+    "href": "https://koto.org/event/immersive-sound-journey-with-dustin-wells-2/",
+    "date": "2026-11-08",
+    "time": "2:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/10/immersive-sound-2.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "",
+    "type": "Community"
+  },
+  {
     "title": "Tea and Tarot",
     "href": "https://koto.org/event/tea-and-tarot/2026-11-08/",
     "date": "2026-11-08",
@@ -1596,6 +1635,19 @@
     "source": "KOTO Community Calendar",
     "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
     "type": "Community"
+  },
+  {
+    "title": "Cardio Dance w/ Kelsey",
+    "href": "https://koto.org/event/cardio-dance-w-kelsey/",
+    "date": "2026-11-09",
+    "time": "6:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join us for a fun evening of dancing and getting your heart rate up! You will be having so much fun, you won't even know you are exercising! Led by Kelsey Trottier from the Telluride Dance Collective. 2nd and 4th Monday of the month.…",
+    "type": "Music"
   },
   {
     "title": "Bike & Brewery Tour",
@@ -1651,6 +1703,19 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Dance Fit Fusion",
+    "href": "https://koto.org/event/dance-fit-fusion/",
+    "date": "2026-11-10",
+    "time": "5:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join Marlen for a high-energy dance fitness class fused with barre, pilates and stretching that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout that will tone your body and boost your endurance…",
+    "type": "Music"
+  },
+  {
     "title": "2026 Volunteer of the Year Celebration for Dee Williams",
     "href": "https://events.ourayridgwayevents.com/event/2026-volunteer-of-the-year-celebration-for-dee-williams",
     "date": "2026-11-10",
@@ -1701,6 +1766,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "A fundraiser screening of *Teeth to the Wind*, a documentary following alpinists Michael Gardner and Sam Hennessey through their seasons in the Tetons, described by Gardner himself as something closer to a rom-com than a traditional…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Middle School Matters",
+    "href": "https://koto.org/event/middle-school-matters/",
+    "date": "2026-11-10",
+    "time": "8:30 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join us for a sereis of talks with Mountain School counselor Claire Eastham focused on adolescent development. You can come to one, two, or all three. These talks are free and open to all! November 10 at 9:00 am: Middle School Matters:…",
+    "type": "Community"
   },
   {
     "title": "Monthly Welcome Home Alliance Veteran's Coffee at the Sherbino",
@@ -1871,6 +1949,19 @@
     "source": "KOTO Community Calendar",
     "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
     "type": "Music"
+  },
+  {
+    "title": "2026 Western Colorado Farm & Ranch Innovation Expo — Free Admission",
+    "href": "https://koto.org/event/2026-western-colorado-farm-ranch-innovation-expo-free-admission/2026-11-13/",
+    "date": "2026-11-13",
+    "time": "12:00 PM",
+    "location": "Montrose County Event Center",
+    "town": "",
+    "img": "https://koto.org/wp-content/uploads/2026/10/2026-Expo-Flyer.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Discover agricultural innovation, explore practical ideas, and connect with your Western Slope neighbors at the free 2026 Western Colorado Farm & Ranch Innovation Expo, November 13–14 at the Montrose County Event Center. Hosted by the…",
+    "type": "Community"
   },
   {
     "title": "Ouray Public Library & Second Chance Cat/Kitten Adoption Event",
@@ -2097,19 +2188,6 @@
     "type": "Community"
   },
   {
-    "title": "Tea and Tarot",
-    "href": "https://koto.org/event/tea-and-tarot/2026-11-15/",
-    "date": "2026-11-15",
-    "time": "2:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    "type": "Community"
-  },
-  {
     "title": "Teen Takeover at Ouray Hot Springs Pool",
     "href": "https://events.ourayridgwayevents.com/event/teen-takeover",
     "date": "2026-11-15",
@@ -2202,19 +2280,6 @@
     "type": "Food & Drink"
   },
   {
-    "title": "Telluride Mountain School Open House",
-    "href": "https://koto.org/event/telluride-mountain-school-open-house-2/",
-    "date": "2026-11-17",
-    "time": "9:00 AM",
-    "location": "Telluride Mountain School",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Telluride Mountain School is hosting an open house where prospective families and community members can step directly into the learning environment rather than sit through a formal presentation. Visitors are invited to explore classrooms,…",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
     "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
     "date": "2026-11-17",
@@ -2278,45 +2343,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "A recurring craft program at the Ouray Public Library welcomes children under 12 for a hands-on creative session after school. It is a community offering from the library for young kids looking to make something with their hands.",
     "type": "Family & Kids"
-  },
-  {
-    "title": "Salon Night at Telluride Arts HQ",
-    "href": "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-11-19/",
-    "date": "2026-11-19",
-    "time": "5:30 PM",
-    "location": "Telluride Arts HQ, TELLURIDE",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it…",
-    "type": "Community"
-  },
-  {
-    "title": "Facing the Mourning",
-    "href": "https://koto.org/event/facing-the-mourning/2026-11-19/",
-    "date": "2026-11-19",
-    "time": "6:00 PM",
-    "location": "Redvale Community Center",
-    "town": "",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit…",
-    "type": "Community"
-  },
-  {
-    "title": "Up-Off Gymnastics, Dance, and Spanish",
-    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-11-20/",
-    "date": "2026-11-20",
-    "time": "10:00 AM",
-    "location": "Lone Cone Library Norwood",
-    "town": "Norwood",
-    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
-    "type": "Music"
   },
   {
     "title": "Jean Sandoval & the Town Kids",
@@ -2407,19 +2433,6 @@
     "category": "Community Event",
     "source": "Mountain Village",
     "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
-    "type": "Community"
-  },
-  {
-    "title": "Tea and Tarot",
-    "href": "https://koto.org/event/tea-and-tarot/2026-11-22/",
-    "date": "2026-11-22",
-    "time": "2:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
     "type": "Community"
   },
   {
@@ -2719,6 +2732,19 @@
     "type": "Community"
   },
   {
+    "title": "Family Gingerbread House Decorating (All Ages!)",
+    "href": "https://events.ourayridgwayevents.com/event/familygingerbreadhouse-decorating-all-ages",
+    "date": "2026-12-05",
+    "time": "10:00 AM",
+    "location": "The Sherbino",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54347358815353/huge/ca3ac0366fd031d94b748e4f9a0fd736807f51ac.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Family Gingerbread House Decorating Saturday, 10:00am-Noon (all ages!) Sherbino Ridgway $20 per gingerbread house Get cozy and join us for our annual gingerbread house decorating event! Picture buckets of candy, oodles of frosting, sticky…",
+    "type": "Family & Kids"
+  },
+  {
     "title": "Paint & Sip with Nicole: “Snow Topped Treeline\"",
     "href": "https://events.ourayridgwayevents.com/event/paint-sip-with-nicole-snow-topped-treeline",
     "date": "2026-12-05",
@@ -2785,6 +2811,20 @@
     "type": "Community"
   },
   {
+    "title": "Telluride Art Walk",
+    "href": "https://www.telluride.com/event/telluride-art-walk/",
+    "date": "2026-12-09",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/36708/download_2.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "The Telluride Art Walk is a lively monthly celebration of art, community, and creativity in downtown Telluride and …",
+    "type": "Arts & Film",
+    "endDate": "2027-05-28"
+  },
+  {
     "title": "Weehawken Dance Presents The Nutcracker – Remixed",
     "href": "https://events.ourayridgwayevents.com/event/weehawken-dance-presents-the-nutcracker-remixed",
     "date": "2026-12-09",
@@ -2797,6 +2837,19 @@
     "desc": "Weehawken Dance and America’s Mattress present The Nutcracker ~ Remixed, a large-scale community dance production blending classical ballet with contemporary movement, jazz, hip hop, aerial arts and other styles. More than 400 local…",
     "type": "Music",
     "endDate": "2026-12-13"
+  },
+  {
+    "title": "The Regular",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=the-regular",
+    "date": "2026-12-10",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://1v09t9hszk.ucarecd.net/4a5f4c4e-4a85-416f-bf68-4a874717300c/-/crop/1380x1380/233,0/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "The Regular is a folk rock band based in Denver, Colorado, performing live at The Alibi. The band brings their folk rock sound to Telluride for a late-night show.",
+    "type": "Music"
   },
   {
     "title": "Ridgway Wrecking Crew",
@@ -2944,6 +2997,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "The Ridgway Wrecking Crew takes the stage for a live music event at a venue on North Cora Street in Ridgway. The show is listed on the Ouray Ridgway community calendar as an evening performance.",
     "type": "Music"
+  },
+  {
+    "title": "Gin & Gingerbread House Decorating (Ages 21+)",
+    "href": "https://events.ourayridgwayevents.com/event/gin-gingerbreadhouse-decorating-ages-21",
+    "date": "2026-12-18",
+    "time": "6:00 PM",
+    "location": "The Sherbino",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54347322700001/huge/bea31d08c13f2b64cf129913f16be0253c37e409.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Gin & Gingerbread House Decorating Friday, December 18th, 6:00pm-8:00pm (ages 21+ only), Sherbino Ridgway $45 for one gingerbread house for one person decorating$65 for one gingerbread house for two people decorating$90 for one gingerbread…",
+    "type": "Community"
   },
   {
     "title": "Winter Break - Ridgway Schools",

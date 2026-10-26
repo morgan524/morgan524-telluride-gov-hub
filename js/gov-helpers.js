@@ -333,7 +333,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312","sv":4,"ph":"930623a06e6efd7f"},
 
   "telluride|2026-11-05|Town Council Budget - Nov 05 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054","sv":4,"ph":"2b31143ef7ed21fe"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054","sv":4,"ph":"6dd7ca52c2d0336e"},
 
   "telluride|2026-10-21|CANCELED - Historic & Architectural Review Commission Chair - Oct 21 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8025","sv":4},
@@ -405,13 +405,13 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-11-17|Town Council - Nov 17 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8046","sv":4,"ph":"682618c419262419"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8046","sv":4,"ph":"1c679cbbc66fe9d8"},
 
   "rico|2026-11-18|Rico Board of Trustees Regular Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-11-18|Historic & Architectural Review Commission Chair - Nov 18 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8027","sv":4,"ph":"5d5a28bd6c927e76"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8027","sv":4,"ph":"29e446caecdbde71"},
 
   "telluride|2026-11-18|Historic & Architectural Review Commission - Nov 18 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8026","sv":4,"ph":"fd1c8b4365a387a6"},
@@ -447,13 +447,13 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8320","sv":4,"ph":"a1a1d79c5ae0155d"},
 
   "telluride|2026-11-19|Planning & Zoning Commission - Nov 19 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8108","sv":4,"ph":"e189d0628d0bf478"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8108","sv":4,"ph":"eb7467e457d122e2"},
 
   "telluride|2026-11-19|Planning & Zoning Commission Chair - Nov 19 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8107","sv":4,"ph":"d1c02d0e14c5779b"},
 
   "telluride|2026-11-19|Liquor Licensing Authority - Nov 19 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8147","sv":4,"ph":"dd26fcc2959762fc"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8147","sv":4,"ph":"045bdf9820a590d8"},
 
   "telluride|2026-10-26|Gondola Sub Committee - Oct 26 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8327","zoomUrl":"https://urldefense.com/v3/__https:/gbsm.zoom.us/j/82559576086__;!!ETWISUBM!3x58A-FfNf9JhIvrh2mHeq3wy9OHc7S76v3Obypudr5m-ILQvLZAsE3ZuUUqFUGuSSfFOzlMG_ETBGmg3kQV-w$","sv":4},
@@ -828,13 +828,7 @@ const MEETING_PREVIEWS = {
     "The San Miguel County Open Space Commission is expected to meet on November 23, 2026. Related county activity includes active requests for proposals covering jail painting, a multi-jurisdictional hazard mitigation plan update, and a housing action plan, alongside several ongoing foreclosure proceedings on local properties.",
 
   "telluride|2026-10-26|Gondola Sub Committee - Oct 26 2026":
-    "The Gondola Sub Committee will receive an update on the FTA Capital Investment Program and hear SMART and partner jurisdiction updates. The committee will also discuss new business items and take public comment during the virtual meeting.",
-
-  "county|2026-10-26|Open Space Commission Meeting":
-    "The Open Space Commission is expected to discuss the Lawson Hill Connector Trail Project, for which San Miguel County is currently seeking proposals. Other county matters appearing alongside this meeting include material hauling contracts, facility maintenance projects, and various tax and financial proceedings.",
-
-  "county|2026-10-26|San Miguel Basin Fair Board Meeting 10/26":
-    "The San Miguel Basin Fair Board will consider a new board member application, proposed rule changes, panel and gate purchases for 2027, and budget and grant updates. The board will also hear reports from fair, 4-H, and parks coordinators, and discuss entertainment ideas and weigh-in dates for the 2027 fair."
+    "The Gondola Sub Committee will receive an update on the FTA Capital Investment Program and hear SMART and partner jurisdiction updates. The virtual meeting will also include time for new business discussion and public comment."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1025,16 +1019,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "This week's parish bulletin is attached. As always, please check the Parish Calendar for the most updated information.Reminders:There will be a second collection this weekend for World Mission Sunday. Read the Pastor's Corner for more infor...",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-october-18/",
-    img: ""
-  },
-  {
-    title: "2026 Telluride Mountain Club Annual Report",
-    source: "Telluride Mountain Club",
-    sourceKey: "tmc",
-    date: "October 12, 2026",
-    newsTopic: "community",
-    copy: "The post 2026 Telluride Mountain Club Annual Report appeared first on Telluride Mountain Club .",
-    href: "https://www.telluridemountainclub.org/2026-telluride-mountain-club-recap-report/",
     img: ""
   }
 ];  // 7 regional feeds (West End, Ouray, …)
@@ -1323,7 +1307,7 @@ const MANUAL_SUMMARIES = {
     "The November 18, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-11-18|Historic & Architectural Review Commission Chair - Nov 18 2026":
-    "The November 18, 2026 HARC Chair agenda hasn't been posted yet.",
+    "The November 18, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-11-18|Historic & Architectural Review Commission - Nov 18 2026":
     "The November 18, 2026 HARC agenda hasn't been posted yet.",
@@ -3817,6 +3801,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Applications Open for 2026/2027 Temporary Winter Community Housing Program",
+    source: "Town of Telluride",
+    date: "October 9, 2026",
+    newsTopic: "housing",
+    copy: "(October 8, 2026) – The Town of Telluride is accepting applications for its Temporary Winter Community Housing program for the 2026/2027 winter season. The program provides seasonal housing in Town Park for eligible workers employed in the Telluride area.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=406",
+    img: ""
+  },
+  {
+    title: "San Miguel County Public Health Announces Fall Vaccine Availability",
+    source: "San Miguel County",
+    date: "October 1, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1419",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14836"
+  },
+  {
     title: "DMV Services available in Egnar 11/18",
     source: "San Miguel County",
     date: "October 15, 2026",
@@ -3986,7 +3988,14 @@ const KOTO_NEWSCASTS = [
 ];
 
 const KOTO_FEATURED_STORIES = [
-
+  {
+    title: "Naturita Burro Race Brings Big Hearts and a Lot of Attitude",
+    source: "KOTO Community Radio",
+    date: "October 16, 2026",
+    newsTopic: "recreation",
+    copy: "The fourth annual Naturita Pack Burro Race honored the West End's mining heritage and brought people – and burros – together for a day on the trails.",
+    href: "https://koto.org/news/naturita-burro-race-brings-big-hearts-and-a-lot-of-attitude/"
+  }
 ];
 
 // San Miguel Basin Forum (West End — Norwood, Nucla, Naturita, Paradox).
@@ -4501,28 +4510,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "French Cafe at WPL",
-    link: "https://koto.org/event/french-cafe-at-wpl/",
-    description: "Practice your French with other French speakers in a relaxed atmosphere. Free crepes and coffee! All levels welcome. Advance registration recommended.",
-    pubDate: "2026-10-26T09:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Strings and Keys with Annie and Oliver",
-    link: "https://koto.org/event/strings-and-keys-with-annie-and-oliver/",
-    description: "Unwind at the library with live violin and piano music from violinist, Annie Foxen and pianist, Oliver Henry (both WPL staff members). Perfect for reading, relaxing, or simply listening. Free and open to the public. All ages are welcome.",
-    pubDate: "2026-10-26T12:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Desserts and Docs: The Colorado Experience",
     link: "https://koto.org/event/desserts-and-docs-the-colorado-experience/",
     description: "Join us for this 4 part series as we watch episodes from RMPBS Flagship history series, explores the people, places. and events that has shaped Colorado's rich heritage. October: \"The Sand Creek Massacre\" or \"Dearfield: Uncovering Dearfield\". A deep look at the tragic growing pains of the frontier or the rise of Colorado's historic Black homesteader town.",
@@ -4699,6 +4686,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/10/YF-thundertix.png"
   },
   {
+    title: "Telluride Fire's Halloween Open House",
+    link: "https://koto.org/event/telluride-fires-halloween-open-house/",
+    description: "It's Telluride Fire's second annual Halloween Open House. We will be serving free burgers & hot dogs (until supplies last). Children can get safety glow-sticks and trick-or-treat from their local firefighters. We can't wait to see you again!",
+    pubDate: "2026-10-31T16:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Fire Station 1",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/Image-10-25-26-at-5.06-PM.jpeg"
+  },
+  {
     title: "KOTO Halloween Bash",
     link: "https://koto.org/event/koto-halloween-bash/",
     description: "It's spooky season and that means it's time for the greatest off-season tradition in Telluride history – THE KOTO HALLOWEEN BASH! This year, we're letting our freak flags fly at The Alibi on Saturday, October 31st! Live music from Rado starts at 9 p.m. Costume Contest with cash prizes! Tickets are $20 in advance at alibitelluride.com and $25 at the door.",
@@ -4743,6 +4741,28 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/03/Bardic-Trails-2026.jpg"
   },
   {
+    title: "Telluride R-1 School District School Board Work Session – Student Interviews",
+    link: "https://koto.org/event/telluride-r-1-school-district-school-board-work-session-student-interviews/",
+    description: "Telluride R-1 School District Board of Education holds a work session on Wednesday, November 4th, at 3:30 p.m. in the Bridal Veil conference room at TMHS and via Zoom. The work session agenda and Zoom link can be found at tellurideschool.org.",
+    pubDate: "2026-11-04T15:30:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Middle/High School, TELLURIDE",
+    imageUrl: ""
+  },
+  {
+    title: "Parenting Workshop w/ Bright Futures for Children",
+    link: "https://koto.org/event/parenting-workshop-w-bright-futures-for-children/",
+    description: "Join us for a fun and informative family workshop focused on helping your child build healthy habits! Guest speakers from Skippy Dental and Amy Erickson from San Miguel Ouray Public Health will share helpful tips on children’s dental health and nutrition. Families will also receive handouts with healthy lunch and snack ideas to take home and try with their little ones. Come learn, connect, and discover simple ways to support your child’s health and well-being! FREE DINNER AND CHILDCARE / CENA Y CUIDADO DE NIÑOS GRATIS ¡Únanse a nosotros en un taller familiar, divertido e informativo, diseñado para ayudar a sus hijos a desarrollar hábitos saludables! Contaremos con la participación de representantes de Skippy Dental y de Amy Erickson, del Departamento de Salud Pública de San Miguel-Ouray, compartirán consejos útiles sobre la salud dental y la nutrición infantil. …",
+    pubDate: "2026-11-04T17:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
     title: "Art Walk Telluride",
     link: "https://koto.org/event/art-walk-telluride/2026-11-05/",
     description: "Join us the first Thursday of every month for Telluride's Art Walk. It will be an evening filled with inspiring exhibits, engaging receptions, and the chance to meet local and visiting artists. From 5–7 pm, participating venues will open their doors, showcasing new collections and inviting art lovers to explore the vibrant gallery scene. Find what's new on www.telluridearts.org Note: Special Edition Art Walk May 21st.",
@@ -4776,6 +4796,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   },
   {
+    title: "Adult Spelling Bee",
+    link: "https://koto.org/event/adult-spelling-bee/",
+    description: "Words. Drinks. Bragging Rights (and $100!). For teams of 2. Extra prizes for clever team names and costumes! Show your library card and get 10% off your drink! Space is limited to 10 teams of two, so make sure to sign up today! PLEASE NOTE: Only one team member needs to sign up for their team of two.",
+    pubDate: "2026-11-06T18:30:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "The Alibi, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/Hive-Mind.png"
+  },
+  {
     title: "Wildbelly Fermentation Fest",
     link: "https://koto.org/event/wildbelly-fermentation-fest/",
     description: "The Wildbelly Fermentation Fest is bringing together fermentation enthusiasts and expert teachers for two days of classes in the Mancos Valley on Nov. 7th & 8th.",
@@ -4785,6 +4816,28 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Mancos Community Center, Mancos, CO",
     imageUrl: "https://koto.org/wp-content/uploads/2026/03/857CD970-C1BC-4A46-AA34-6D1D567DA5AB.jpeg"
+  },
+  {
+    title: "Yoga with Lauren",
+    link: "https://koto.org/event/yoga-with-lauren/2026-11-07/",
+    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome. Muévase, respire y llénese de energía en esta dinámica clase bilingüe, dirigido por Lauren Norton, diseñada para fortalecer su cuerpo y mente. Combinando la fuerza y fluidez del pilates, el ritmo y la energía de la danza, y la presencia equilibrante del yoga y la respiración, esta sesión le dejará sintiéndose fuerte, en armonía y revitalizado/a. …",
+    pubDate: "2026-11-07T10:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/wellness-lineup-21.png"
+  },
+  {
+    title: "Immersive Sound Journey with/Dustin Wells",
+    link: "https://koto.org/event/immersive-sound-journey-with-dustin-wells-2/",
+    description: "Immersive Sound Journey with Dustin Wells In-Person An immersive sound journey is a live musical experience you take lying down. Musician and sound ceremony artist Dustin Wells surrounds the room with sacred instruments — gongs, shamanic drums, singing bowls, crystal bowls, wind chimes — woven live with synths, guitar, and voice into a single two-hour soundscape. The journey moves through a deliberate arc, from settling in to full sound to a quiet return, designed to guide the nervous system out of fight-or-flight and into the state where the body does its own healing. Come as you are; leave with what you came for. · Please arrive 30 minutes early to find your spot and get comfortable. · Suggested: bring what makes the floor feel like home — a yoga mat, pillow, blanket, or eye mask. Guests lie down if there's room, or sit as needed. …",
+    pubDate: "2026-11-08T14:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/immersive-sound-2.png"
   },
   {
     title: "Tea and Tarot",
@@ -4798,6 +4851,28 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   },
   {
+    title: "Cardio Dance w/ Kelsey",
+    link: "https://koto.org/event/cardio-dance-w-kelsey/",
+    description: "Join us for a fun evening of dancing and getting your heart rate up! You will be having so much fun, you won't even know you are exercising! Led by Kelsey Trottier from the Telluride Dance Collective. 2nd and 4th Monday of the month. ¡Únete a nosotros para una divertida noche de baile y ejercicio! Te divertirás tanto que ni te darás cuenta de que estás haciendo ejercicio. Dirigido por Kelsey Trottier del Telluride Dance Collective.",
+    pubDate: "2026-11-09T18:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Middle School Matters",
+    link: "https://koto.org/event/middle-school-matters/",
+    description: "Join us for a sereis of talks with Mountain School counselor Claire Eastham focused on adolescent development. You can come to one, two, or all three. These talks are free and open to all! November 10 at 9:00 am: Middle School Matters: Understanding the changes. Supporting growth. What’s really going on during the middle school years? Explore the social, emotional, and academic changes that shape early adolescence, and learn how parents can support growing independence, navigate challenges, and help kids build the skills they need to thrive. We'll have a coffee and donut social from 8:30 – 9:00. You can meet Claire, other caregivers, and just enjoy some free caffeine and sugar! January 12th at 5:30 pm topic TBD March 9th time and topic TBD Claire Eastham is a Licensed Marriage and Family Therapist who has been providing emotional support to kids in schools since 2013. …",
+    pubDate: "2026-11-10T08:30:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
     title: "Free Legal Clinic – Clínica Jurídica Gratuita",
     link: "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-11-10/",
     description: "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. Abogados voluntarios responderán a preguntas, ayudarán a llenar formularios y explicarán el proceso y el procedimiento de cuestiones jurídicas. Los abogados voluntarios no te representan y esta clínica es sólo informativa. CON CITA PREVIA. Llame a 970-728-4519 para más información y para registrarse.",
@@ -4806,6 +4881,17 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "",
+    imageUrl: ""
+  },
+  {
+    title: "Dance Fit Fusion",
+    link: "https://koto.org/event/dance-fit-fusion/",
+    description: "Join Marlen for a high-energy dance fitness class fused with barre, pilates and stretching that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout that will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. Únete a Marlen para una clase de fitness de baile llena de energía combinada con barre, pilates y estiramientos que combina movimientos de baja y alta intensidad para un entrenamiento de intervalos que quema calorías, tonificando tu cuerpo y aumentando tu resistencia sin darte cuenta de lo duro que estás trabajando. ¡Es ejercicio disfrazado! No se requiere experiencia en baile—solo lleva tu energía, una botella de agua y una sonrisa. …",
+    pubDate: "2026-11-10T17:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
   },
   {
@@ -4875,6 +4961,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   },
   {
+    title: "2026 Western Colorado Farm & Ranch Innovation Expo — Free Admission",
+    link: "https://koto.org/event/2026-western-colorado-farm-ranch-innovation-expo-free-admission/2026-11-13/",
+    description: "Discover agricultural innovation, explore practical ideas, and connect with your Western Slope neighbors at the free 2026 Western Colorado Farm & Ranch Innovation Expo, November 13–14 at the Montrose County Event Center. Hosted by the Western Colorado Soil Health Committee, this welcoming gathering brings together farmers, ranchers, gardeners, water leaders, educators, students, businesses, and community members for demonstrations, exhibits, presentations, and conversations. FRIDAY, NOVEMBER 13 Expo hours: noon–7 p.m. Explore agricultural equipment, technology, and exhibits, with water-related demonstrations beginning at 2 p.m. following the West Slope Water Summit. Meet vendors and producers, ask questions, and discover practical irrigation and water-management approaches. Also on Friday: West Slope Water Summit, 7:30 a.m.–2 p.m. This free gathering explores Western Colorado’s water outlook, watershed health, and agriculture’s connection to water, and includes an FFA student research presentation. Separate advance registration is required, with complimentary breakfast and lunch for registered participants. …",
+    pubDate: "2026-11-13T12:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Montrose County Event Center",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/2026-Expo-Flyer.jpg"
+  },
+  {
     title: "Rainbow, Rockies and Rascals 2026 Fall Fundraiser!",
     link: "https://koto.org/event/rainbow-rockies-and-rascals-2026-fall-fundraiser/",
     description: "Rainbow, Rockies and Rascals will host a silent/live auction fundraiser on Friday, November 13th at the Telluride Science and Innovation Center from 5:30pm-9:30pm. Tickets are $15 from any program parent or $20 at the door and enters you into a 2026/2027 Ski Pass raffle. Come and enjoy free champagne (while it lasts), delicious hors d'oeuvres from Black Salt Hospitality, music by DJ Sam, live auction MC'ed by Zoe Dohnal and an amazing silent auction with merchandise and services donated by our generous local businesses.",
@@ -4895,72 +4992,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "The Livery Norwood",
     imageUrl: ""
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-11-15/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-11-15T14:30:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
-    title: "Telluride Mountain School Open House",
-    link: "https://koto.org/event/telluride-mountain-school-open-house-2/",
-    description: "Telluride Mountain School is hosting an open house where prospective families and community members can step directly into the learning environment rather than sit through a formal presentation. Visitors are invited to explore classrooms, meet teachers and students, and experience firsthand the school's approach to curiosity, connection, and real-world learning.",
-    pubDate: "2026-11-17T09:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Mountain School",
-    imageUrl: ""
-  },
-  {
-    title: "Salon Night at Telluride Arts HQ",
-    link: "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-11-19/",
-    description: "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it here in Telluride. These are evenings for conversation and connection, not lectures or formal programming. They are casual, open, and intentionally unstructured, designed to create the atmosphere where ideas can collide, new friendships form, and creativity sparks. Imagine an evening where musicians talk with writers, painters meet photographers, filmmakers share stories with ceramicists—and the unexpected happens!",
-    pubDate: "2026-11-19T17:30:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Arts HQ, TELLURIDE",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
-  },
-  {
-    title: "Facing the Mourning",
-    link: "https://koto.org/event/facing-the-mourning/2026-11-19/",
-    description: "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit from additional support while navigating grief and loss. Please feel free to share this information with others who may be interested.",
-    pubDate: "2026-11-19T18:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Redvale Community Center",
-    imageUrl: ""
-  },
-  {
-    title: "Up-Off Gymnastics, Dance, and Spanish",
-    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-11-20/",
-    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
-    pubDate: "2026-11-20T10:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Lone Cone Library Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-11-22/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-11-22T14:30:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   }
 ];
 
@@ -5072,6 +5103,18 @@ const ALIBI_EVENTS = [
     category: "Live Music",
     location: "The Alibi • Telluride, CO",
     imageUrl: "https://1v09t9hszk.ucarecd.net/81532fb8-7b72-4529-9249-3d41062e15ff/-/crop/1174x1175/58,0/-/preview/"
+  },
+  {
+    title: "The Regular",
+    link: "https://www.alibitelluride.com/calendar#eca-event=the-regular",
+    description: "The Regular is a folk rock band based in Denver, Colorado, performing live at The Alibi. The band brings their folk rock sound to Telluride for a late-night show.",
+    pubDate: "2026-12-10",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://1v09t9hszk.ucarecd.net/4a5f4c4e-4a85-416f-bf68-4a874717300c/-/crop/1380x1380/233,0/-/preview/"
   },
   {
     title: "Easy Jim Residency Night 1",
@@ -6633,6 +6676,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52384238613262/huge/9e160cecd96f5b9cd4eba427774e315371414373.jpg"
   },
   {
+    title: "Family Gingerbread House Decorating (All Ages!)",
+    link: "https://events.ourayridgwayevents.com/event/familygingerbreadhouse-decorating-all-ages",
+    description: "Family Gingerbread House Decorating Saturday, 10:00am-Noon (all ages!) Sherbino Ridgway $20 per gingerbread house Get cozy and join us for our annual gingerbread house decorating event! Picture buckets of candy, oodles of frosting, sticky fingers, heaps of smiles, and a kajillion sugar-coated photo ops. Bring your favorite grown-up(s) to decorate your very own sweet gingerbread house. After check-in, you'll find fully assembled houses ready for the magic of your imagination and decoration. Browse tables filled with candy and goodies to embellish your creations with plenty of frosting, then take your house home to enjoy during the holiday season. Please sign up in advance to secure your gingerbread house! Walk-ins are welcome until we reach capacity. Doors open at 10 AM.",
+    pubDate: "2026-12-05T17:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/54347358815353/huge/ca3ac0366fd031d94b748e4f9a0fd736807f51ac.jpg"
+  },
+  {
     title: "Paint & Sip with Nicole: “Snow Topped Treeline\"",
     link: "https://events.ourayridgwayevents.com/event/paint-sip-with-nicole-snow-topped-treeline",
     description: "Paint & Sip with Nicole 6:00pm-8:00pm Weehawken Montrose $49 incl. all supplies and an adult beverage Unwind, sip, and create! Join us for a relaxed painting session designed for all skill levels—no experience needed. Nicole will guide you through the featured painting while you enjoy a beverage of your choice! All art supplies and one adult beverage are included; just bring your creativity! About Nicole Greenfield: Nicole Greenfield is a painter based in Ridgway, Colorado. Working primarily in acrylic and oil, she creates expressive portraits and atmospheric landscapes that explore the quiet intimacy found in observing people and the natural world. Nicole is a self-taught artist who has developed her skills through years of dedicated practice and online learning. …",
@@ -6701,6 +6755,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
+    title: "Gin & Gingerbread House Decorating (Ages 21+)",
+    link: "https://events.ourayridgwayevents.com/event/gin-gingerbreadhouse-decorating-ages-21",
+    description: "Gin & Gingerbread House Decorating Friday, December 18th, 6:00pm-8:00pm (ages 21+ only), Sherbino Ridgway $45 for one gingerbread house for one person decorating$65 for one gingerbread house for two people decorating$90 for one gingerbread house for four people decoratingWeehawken’s beloved adult gingerbread house decorating event is back for another year! Join us for a fun evening of festive creativity, sweet treats, and a little holiday cheer. Register on your own, as a couple, or with a group of up to four. You’ll arrive to find an assembled gingerbread house ready for a little holiday magic! Frosting, decorating materials, and an adult beverage are included. Feel free to bring extra treats and decorations from home to make your creation uniquely yours. Please bring a sheet pan or large box lid to safely transport your gingerbread house home. Ages 21+ only. …",
+    pubDate: "2026-12-19T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/54347322700001/huge/bea31d08c13f2b64cf129913f16be0253c37e409.jpg"
+  },
+  {
     title: "Winter Break - Ridgway Schools",
     link: "https://events.ourayridgwayevents.com/event/winter-break-ridgway-schools",
     description: "Winter break for Ridgway Schools begins on this date, giving students and families time off during the holiday season. The break is a scheduled pause in the academic calendar for the Ridgway school district.",
@@ -6734,6 +6799,17 @@ const NORWOOD_EVENTS = [
     source: "norwood",
     sourceLabel: "Town of Norwood",
     category: "Community Event",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Board Of Trustees Joint Work Session",
+    link: "https://www.norwoodtown.com/2026-10-27-board-of-trustees-joint-work-session",
+    description: "A joint work session of the Board of Trustees, hosted by the Town of Norwood, bringing together board members to discuss and collaborate on municipal matters. The meeting is open to the public as part of the town's ongoing local governance process.",
+    pubDate: "2026-10-27T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Government Meeting",
     location: "Norwood, CO",
     imageUrl: ""
   },
@@ -7368,6 +7444,18 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/28866/noelnight-9-2100x1400-68fad2f3-c123-4d8b-bca6-f74e15695306.800x533.webp"
   },
   {
+    title: "Telluride Art Walk",
+    link: "https://www.telluride.com/event/telluride-art-walk/",
+    description: "The Telluride Art Walk is a lively monthly celebration of art, community, and creativity in downtown Telluride and …",
+    pubDate: "2026-12-09",
+    endDate: "2027-05-28",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/36708/download_2.800x533.webp"
+  },
+  {
     title: "WinterSing!",
     link: "https://www.telluride.com/event/telluride-choral-society-wintersing/",
     description: "Celebrate the joy of the season early this year with light-bearing, beautiful choral music presented by Hal Adler and …",
@@ -7958,6 +8046,23 @@ const LEGAL_NOTICES = [
     address: "53 East Homestead Road, Norwood, Colorado 81423 (Lot 24, Pioneer Village)",
     noticeKey: "foreclosure-2026-10-53-e-homestead-norwood",
     caseNumber: "2026-10"
+  },
+  {
+    title: "Request for Proposal -- TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS",
+    entity: "Town of Telluride",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Request for Proposal",
+    filterTag: "public-entity",
+    summary: "Town of Telluride is seeking qualified respondents for: TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS.",
+    deadline: "Closes 1/11/2026",
+    expires: "2026-01-11",
+    dates: "10/26",
+    url: "https://www.telluride.gov/bids.aspx?bidID=133",
+    address: "",
+    totBidID: "133"
   }
 ];
 
