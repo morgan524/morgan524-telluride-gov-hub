@@ -124,8 +124,8 @@ const $ = (id) => document.getElementById(id);
 let KEY = sessionStorage.getItem("digestKey") || "";
 let manifest = null, cur = "weekly";
 const state = {};   // key -> { name, subject, covers, audience, baseHtml, html, history:[] }
-// When each approved digest auto-sends (the scheduled job fires at 9:00 AM MT).
-const SEND_WHEN = { weekly: "Monday 9:00 AM", past: "Monday 10:00 AM" };
+// When each approved digest auto-sends (MT). Past Meetings moved to Tuesday 2026-10-26.
+const SEND_WHEN = { weekly: "Monday 9:00 AM", past: "Tuesday 6:00 AM" };
 const sendWhen = () => SEND_WHEN[cur] || "its scheduled time";
 
 // ---- auth gate ----
@@ -188,7 +188,7 @@ function showGhWarning(status, alerts){
     // Token works for Approve but can't open issues: a failed Monday send would
     // go unannounced (what happened 2026-10-05).
     if(alerts==="forbidden"){
-      el.innerHTML='⚠ <b>Missed-send alerts are off</b> — the Worker\'s GitHub token can\'t open issues, so a failed Monday send raises no alarm.<br>'
+      el.innerHTML='⚠ <b>Missed-send alerts are off</b> — the Worker\'s GitHub token can\'t open issues, so a failed scheduled send raises no alarm.<br>'
         +'Fix: edit the fine-grained token and add <b>Issues: Read and write</b> on the site repo (same token — no secret change needed).';
       el.style.display="block"; return;
     }

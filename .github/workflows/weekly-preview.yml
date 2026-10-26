@@ -7,7 +7,7 @@ name: Weekly Email Preview
 # review/edits the morning before the Monday 6:00 AM send, with anything
 # posted Friday/Saturday picked up). The run also saves the paste-ready
 # Mailchimp HTML (weekly-mailchimp.html) as an artifact. Since 2026-10-04 it
-# also emails a review copy of Monday's "Past Meetings" email
+# also emails a review copy of Tuesday's "Past Meetings" email
 # (scripts/past-meetings-email.js), when last week has recaps.
 # Edit the "Week Ahead" lede before the send in the LEDE const of
 # scripts/weekly-email.js.

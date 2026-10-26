@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * past-meetings-email.js — render the Monday "Past Meetings" email: a short
+ * past-meetings-email.js — render the Tuesday "Past Meetings" email: a short
  * summary of each public meeting recapped from last week's five business days,
  * each linking to its full recap on gov-hub-past.html.
  *
@@ -24,7 +24,8 @@
  *
  * Usage:
  *   node scripts/past-meetings-email.js 2026-10-05 digest/past.html
- *   (weekStart = the Monday the email goes out; it covers the Mon–Fri before)
+ *   (weekStart = the Monday of the week it goes out — it sends that Tuesday,
+ *   6 AM MT since 2026-10-26 — and covers the Mon–Fri before)
  *   WEEKLY_PREVIEW=1 … renders the info@ review copy (banner, merge tags neutralised).
  */
 const fs = require('fs');
@@ -99,7 +100,7 @@ function render(recaps, weekStart, preview) {
 </table></td></tr></table></body></html>`;
 
   if (preview) {
-    const banner = `  <tr><td style="background:#a8401f;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;color:#fff;line-height:1.5;">REVIEW DRAFT &mdash; Monday's Past Meetings email. Look it over, then approve to send.<br><a href="https://livabletelluride.org/digest-review.html" style="color:#ffe4c4;font-weight:700;text-decoration:underline;">Edit or send this draft at the Review Desk &rarr;</a></td></tr>\n`;
+    const banner = `  <tr><td style="background:#a8401f;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;color:#fff;line-height:1.5;">REVIEW DRAFT &mdash; Tuesday's Past Meetings email. Look it over, then approve to send.<br><a href="https://livabletelluride.org/digest-review.html" style="color:#ffe4c4;font-weight:700;text-decoration:underline;">Edit or send this draft at the Review Desk &rarr;</a></td></tr>\n`;
     html = html.replace('  <tr><td class="sec-pad" style="background:#21443c;padding:26px 34px;">', banner + '  <tr><td class="sec-pad" style="background:#21443c;padding:26px 34px;">')
       .replace(/\*\|UNSUB\|\*/g, '#').replace(/\*\|[A-Z0-9_]+\|\*/g, '');
   }

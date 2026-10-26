@@ -648,8 +648,8 @@ async function saveDigest(body, env) {
 // second is a no-op thanks to the duplicate gate. (Morgan, 2026-09-21: "fix
 // this issue for all future ones.")
 //
-// Gates, identical to the workflow: right weekday (Monday → the weekly and
-// Past Meetings, each checked and sent on its own) at/after 09:00 America/Denver; an approval lock whose weekStart
+// Gates, identical to the workflow: right weekday and hour in America/Denver
+// (Monday 09:00 → the weekly; Tuesday 06:00 → Past Meetings); an approval lock whose weekStart
 // matches the manifest; the subject not already in data/sent-broadcasts.json;
 // the HTML neither tiny, bloated (>120 KB) nor carrying data:image payloads.
 // Everything is read from the repo's main branch via the Contents API so a
@@ -685,9 +685,10 @@ function denverParts(d) {
   return { weekday: parts.weekday, hour: parseInt(parts.hour, 10) % 24 };
 }
 
-// Digests due each Denver weekday, and the Denver hour each one goes out
-// (Morgan 2026-10-05: the Week Ahead at 9:00, Past Meetings an hour later).
-const SEND_DAYS = { Mon: [["weekly", 9], ["past", 10]] };
+// Digests due each Denver weekday, and the Denver hour each one goes out.
+// Morgan 2026-10-26: Past Meetings moved to early Tuesday so readers don't get
+// two emails on Monday (it was Monday 10:00, an hour after the Week Ahead).
+const SEND_DAYS = { Mon: [["weekly", 9]], Tue: [["past", 6]] };
 
 async function scheduledSend(env, dry) {
   const { weekday, hour } = denverParts(new Date());
@@ -772,7 +773,7 @@ export default {
     }
     // Dry run of the cron send's gates (no auth, nothing sent, no secrets):
     // proves the scheduled() path works in production without waiting for
-    // Monday. Reports the same skip reasons the cron would log.
+    // the send day. Reports the same skip reasons the cron would log.
     if (url.pathname === "/cron-check") {
       try { return json({ ok: true, dry: true, ...(await scheduledSend(env, true)) }, 200, origin); }
       catch (e) { return json({ ok: false, dry: true, error: String((e && e.message) || e) }, 200, origin); }
@@ -809,7 +810,7 @@ export default {
       if (out.skipped && /^not a send day/.test(out.skipped)) {
         ctx.waitUntil(ghRaiseIssue(env, "🚨 Digest Worker cron fired on the wrong day",
           "Cron `" + (event && event.cron) + "` fired at " + stamp + ", but " + out.skipped +
-          ". The Monday sends will not happen from the Worker — check the weekday in cloudflare-worker/livabletelluride-digest/wrangler.toml (use names like MON; Cloudflare numbers 1 = Sunday)."));
+          ". The Monday/Tuesday sends will not happen from the Worker — check the weekday in cloudflare-worker/livabletelluride-digest/wrangler.toml (use names like MON; Cloudflare numbers 1 = Sunday)."));
       }
       for (const r of out.results || []) {
         if (r.error) {

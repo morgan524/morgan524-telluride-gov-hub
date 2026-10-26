@@ -61,6 +61,43 @@ workflow, the Cloudflare Worker can be reused — just add the host to its
 allow-list and route fetches through it the same way `content-refresh.js`
 does.
 
+## Digest send schedule (America/Denver)
+
+| Email | Sends | Covers |
+| ----- | ----- | ------ |
+| The Week Ahead Outlook (`weekly`) | **Monday 9:00 AM** | that Mon–Sun |
+| Past Meetings (`past`) | **Tuesday 6:00 AM** | the Mon–Fri of the week before |
+
+Past Meetings moved from Monday 10:00 AM to Tuesday 6:00 AM on 2026-10-26
+(Morgan: no two emails on the same day). Both send ONLY after approval on the
+Review Desk (`digest/<key>.lock.json`), and Claude reviews links, images and
+summaries before that approval.
+
+- **Primary send:** the digest Worker's Cloudflare crons
+  (`cloudflare-worker/livabletelluride-digest/wrangler.toml`; `SEND_DAYS` in
+  `worker.js` holds each digest's weekday and Denver hour). Cloudflare crons are
+  UTC with no DST, so each send lists both the MDT and MST slot, and the Worker
+  skips the one that lands before the send hour. Five cron expressions is the
+  free-plan account limit; Tuesday uses one expression (`0 12,13 * * TUE`).
+- **Backup:** `.github/workflows/digest-scheduled-send.yml` (GitHub crons plus
+  a run after every Content Refresh). It uses the same weekday/hour gates.
+- **Week keys:** both digests' `weekStart` is the Monday of the week they go
+  out. `digest-refresh.yml` keys `weekly` to the coming Monday and `past` to
+  the Monday before the coming Tuesday (`PAST_WK`). The two match every day
+  except Tuesday, which keeps Monday's past approval valid through the Tuesday
+  send.
+- **Sunday freeze:** `digest-sunday-review.yml` freezes both digests until
+  Tuesday 15:00 UTC, after the Past Meetings send.
+
+To move a send again, change all of these together: `SEND_DAYS` plus the crons
+in `wrangler.toml`, the guard and crons in `digest-scheduled-send.yml`, `PAST_WK` in
+`digest-refresh.yml` (if the day moves), the freeze `until` in
+`digest-sunday-review.yml`, `SEND_WHEN` in `digest-review.html`, the banners in
+`scripts/lib/approved-preview.js`, `scripts/lib/frozen-preview.js` and
+`scripts/past-meetings-email.js`, and the reader-facing copy (`subscribe.html`,
+`profile.html`, `js/lt-profile.js`, the Past Meetings promo in
+`scripts/weekly-email.js`).
+
 ## Manual operations cheat sheet
 
 - **Trigger content-refresh now (instead of waiting for next cron):**

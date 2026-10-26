@@ -1,7 +1,7 @@
 name: Digest Sunday Review
 
-# Early-Sunday review of both Monday digests (Week Ahead + Past Meetings), then
-# a freeze until Monday afternoon (Morgan, 2026-10-04):
+# Early-Sunday review of both digests (Monday's Week Ahead + Tuesday's Past
+# Meetings), then a freeze until Tuesday morning (Morgan, 2026-10-04):
 #   1. render both digests fresh from the latest data (digest-refresh.yml),
 #   2. review them with scripts/digest-review.js — every link fetched, every
 #      date badge checked against its weekday and window, recap links checked,
@@ -9,7 +9,9 @@ name: Digest Sunday Review
 #      proposes (typos, wrong words, leftover labels). Anything that needs
 #      judgment stays in the report at digest/review.{md,html,json}, which the
 #      Sunday preview banner lists. No report email (Morgan, 2026-10-04),
-#   3. write digest/freeze.json: until Monday 21:00 UTC (3 PM MDT / 2 PM MST)
+#   3. write digest/freeze.json: until Tuesday 15:00 UTC (9 AM MDT / 8 AM MST),
+#      after the Tuesday 6 AM Past Meetings send (was Monday 21:00 UTC until
+#      Past Meetings moved to Tuesday on 2026-10-26). Until then
 #      digest-refresh.yml will not re-render either digest, so what Morgan
 #      reviews Sunday afternoon is what was reviewed. Review Desk edits and
 #      approvals still save (they go through the digest Worker, not the bot),
@@ -26,7 +28,7 @@ on:
   workflow_dispatch:
     inputs:
       freeze:
-        description: 'Freeze the digests until Monday afternoon after reviewing (true/false)'
+        description: 'Freeze the digests until Tuesday morning after reviewing (true/false)'
         required: false
         default: 'true'
 
@@ -89,7 +91,7 @@ jobs:
         id: win
         run: |
           WK="$(python3 -c "import json;print(json.load(open('digest/manifest.json'))['digests']['weekly']['weekStart'])")"
-          echo "until=${WK}T21:00:00Z" >> "$GITHUB_OUTPUT"
+          echo "until=$(date -u -d "$WK +1 day" +%F)T15:00:00Z" >> "$GITHUB_OUTPUT"   # Tuesday, after the 6 AM Past Meetings send
           echo "week=$WK" >> "$GITHUB_OUTPUT"
 
       - name: Review both digests
@@ -98,7 +100,7 @@ jobs:
           APPLY_FIXES: '1'
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           RSS_PROXY_URL: ${{ secrets.RSS_PROXY_URL }}   # link checks for hosts that block GitHub IPs
-          FROZEN_UNTIL: ${{ (github.event.inputs.freeze || 'true') == 'true' && 'Monday afternoon (3 PM MT)' || 'not frozen (manual test run)' }}
+          FROZEN_UNTIL: ${{ (github.event.inputs.freeze || 'true') == 'true' && 'Tuesday morning (9 AM MDT / 8 AM MST)' || 'not frozen (manual test run)' }}
         run: |
           set -o pipefail
           node scripts/digest-review.js digest | tee /tmp/review.log

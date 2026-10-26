@@ -1,6 +1,6 @@
 name: Digest Scheduled Send
 
-# BACKUP path since 2026-09-21. The PRIMARY 9:00 AM MT send now runs from a
+# BACKUP path since 2026-09-21. The PRIMARY sends now run from a
 # Cloudflare Cron Trigger on the digest Worker (cloudflare-worker/
 # livabletelluride-digest — scheduled() in worker.js, [triggers] in
 # wrangler.toml), which fires on the minute; this workflow's GitHub crons were
@@ -8,10 +8,11 @@ name: Digest Scheduled Send
 # whichever runs second is a no-op via the duplicate gate. Keep this workflow:
 # it is the retry if the Worker send fails, and confirm=SEND is the manual path.
 #
-# Sends APPROVED digests on Monday (America/Denver):
-#   - the "Week Ahead" (weekly) digest at 9:00 AM
-#   - the "Past Meetings" (past) recap email at 10:00 AM, its own opt-in list
-#     (added 2026-10-04; moved an hour after the weekly 2026-10-05)
+# Sends APPROVED digests (America/Denver):
+#   - the "Week Ahead" (weekly) digest Monday at 9:00 AM
+#   - the "Past Meetings" (past) recap email Tuesday at 6:00 AM, its own opt-in
+#     list (added 2026-10-04; Monday 10:00 AM until 2026-10-26, when Morgan
+#     moved it to early Tuesday so readers don't get two emails the same day)
 # Each runs as its own matrix job with its own gates and tripwire, one at a time
 # so their sent-broadcasts.json appends never race. The Friday "Weekend Ahead"
 # was retired 2026-10-04.
@@ -57,8 +58,8 @@ name: Digest Scheduled Send
 # workflow_run trigger below runs this job after every Content Refresh (which
 # fires 8x a day and demonstrably does run, even when delayed). A workflow_run
 # is an event, not a scheduler slot. It falls through to the same guard as a
-# scheduled run, so every gate still applies: before 09:00 Denver or a non
-# Monday weekday exits immediately, an unapproved digest still never sends,
+# scheduled run, so every gate still applies: a weekday/hour before a digest's
+# send time exits immediately, an unapproved digest still never sends,
 # and the duplicate gate makes every run after a send a no-op that records
 # sent=true (so the tripwire closes rather than fires).
 on:
@@ -74,8 +75,10 @@ on:
     - cron: '12 16 * * 1'   # Mon 16:12 UTC — backup #1
     - cron: '27 16 * * 1'   # Mon 16:27 UTC — backup #2
     - cron: '45 16 * * 1'   # Mon 16:45 UTC — backup #3
-    - cron: '0 17 * * 1'    # Mon 17:00 UTC = 10:00 MST (winter) — Past Meetings
-    - cron: '20 17 * * 1'   # Mon 17:20 UTC — Past Meetings backup
+    - cron: '0 12 * * 2'    # Tue 12:00 UTC = 06:00 MDT (summer) — Past Meetings
+    - cron: '20 12 * * 2'   # Tue 12:20 UTC — Past Meetings backup
+    - cron: '0 13 * * 2'    # Tue 13:00 UTC = 06:00 MST (winter) — Past Meetings
+    - cron: '20 13 * * 2'   # Tue 13:20 UTC — Past Meetings backup
   workflow_dispatch:
     inputs:
       digest:
@@ -113,19 +116,21 @@ jobs:
             echo "override=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          # Scheduled OR workflow_run: proceed once it's on or after 09:00 America/Denver (a
-          # delayed cron firing later the same morning/afternoon still counts —
-          # see the REDUNDANT TRIGGERS note above), and map the weekday to its digests.
+          # Scheduled OR workflow_run: map the America/Denver weekday to its digest
+          # and proceed once it's on or after that digest's send hour (a delayed
+          # cron firing later the same day still counts — see the REDUNDANT
+          # TRIGGERS note above). Week Ahead Monday from 09:00; Past Meetings
+          # Tuesday from 06:00 (Morgan 2026-10-26).
           HOUR="$(TZ='America/Denver' date +%H)"
           DOW="$(TZ='America/Denver' date +%u)"   # 1=Mon … 7=Sun
           HOUR10=$((10#$HOUR))   # strip any leading zero so bash doesn't read it as octal
-          if [ "$HOUR10" -lt 9 ]; then echo "Denver hour=$HOUR (before 09:00) — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0; fi
-          # Week Ahead from 09:00, Past Meetings from 10:00 (Morgan 2026-10-05).
           case "$DOW" in
-            1) if [ "$HOUR10" -ge 10 ]; then DIGESTS='["weekly","past"]'; else DIGESTS='["weekly"]'; fi ;;
-            *) echo "Denver weekday=$DOW (not Monday) — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0 ;;
+            1) DIGESTS='["weekly"]'; FROM=9 ;;
+            2) DIGESTS='["past"]';   FROM=6 ;;
+            *) echo "Denver weekday=$DOW (not Monday or Tuesday) — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0 ;;
           esac
-          echo "scheduled send — digests=$DIGESTS (Denver hour=$HOUR, >= 09:00)"
+          if [ "$HOUR10" -lt "$FROM" ]; then echo "Denver hour=$HOUR (before $FROM:00) — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          echo "scheduled send — digests=$DIGESTS (Denver weekday=$DOW hour=$HOUR, >= $FROM:00)"
           echo "go=true" >> "$GITHUB_OUTPUT"
           echo "digests=$DIGESTS" >> "$GITHUB_OUTPUT"
           echo "override=false" >> "$GITHUB_OUTPUT"
@@ -282,7 +287,7 @@ jobs:
               gh issue close "$NUM" --comment "Resolved: the ${DIGEST_KIND} digest went out at $NOW. Run: $RUN_URL"
             fi
           else
-            BODY="The ${DIGEST_KIND} digest's scheduled send window (9:00 AM MT) passed without a send.
+            BODY="The ${DIGEST_KIND} digest's scheduled send window (weekly: Monday 9:00 AM MT; past: Tuesday 6:00 AM MT) passed without a send.
 
           Reason: ${SKIP_REASON:-unknown}
           Run: $RUN_URL

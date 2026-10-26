@@ -10,22 +10,24 @@ account_id = "8f020e73de4e9956f0e3ad7dce070ef4"
 # same-named GitHub Actions secrets.
 # URL after deploy: https://livabletelluride-digest.morgan-8f0.workers.dev
 
-# Scheduled send on Monday (America/Denver): the Week Ahead at 9:00 AM and the
-# Past Meetings email at 10:00 AM, each gated on its own approval. UTC slots:
-# 15:00/15:30 = 9 MDT, 16:00/16:30 = 10 MDT or 9 MST, 17:00 = 10 MST. Five is
-# the free plan's per-account cron limit (no other Worker uses crons). Weekend Ahead (Friday)
-# was retired 2026-10-04. Cloudflare crons are UTC with no DST, so both the MDT
-# and MST candidates are listed; the Worker's scheduled() handler checks the
-# Denver hour (skips before 09:00) and the sent ledger (a second firing after a
-# send is a no-op), so exactly one broadcast goes out per approved digest. 15:30
-# is a same-morning retry if the 9:00 attempt hit a transient error. Moved here
-# from digest-scheduled-send.yml's GitHub cron (kept as backup) on 2026-09-21
-# because GitHub's scheduler drops/delays top-of-hour crons by hours.
+# Scheduled sends (America/Denver), each gated on its own approval: the Week
+# Ahead Monday 9:00 AM, Past Meetings Tuesday 6:00 AM (moved off Monday
+# 2026-10-26 so readers don't get two emails the same day). UTC slots: Monday
+# 15:00/15:30 = 9 MDT, 16:00/16:30 = 9 MST; Tuesday 12:00 = 6 MDT, 13:00 = 6 MST
+# (one expression, "0 12,13"). Five expressions is the free plan's per-account
+# cron limit (no other Worker uses crons). Cloudflare crons are UTC with no DST,
+# so both the MDT and MST candidates are listed; the Worker's scheduled() handler
+# checks the Denver weekday and hour (skips before the send hour) and the sent
+# ledger (a second firing after a send is a no-op), so exactly one broadcast
+# goes out per approved digest. The :30 slots are same-morning retries if the
+# 9:00 attempt hit a transient error. Moved here from digest-scheduled-send.yml's
+# GitHub cron (kept as backup) on 2026-09-21 because GitHub's scheduler
+# drops/delays top-of-hour crons by hours.
 [triggers]
 # Weekday by NAME: Cloudflare numbers days 1=Sunday … 7=Saturday (not cron's
 # 0/1=Monday), so "* * 1" fired every SUNDAY, the Worker saw "not a send day"
 # and skipped silently — no Monday cron send ever ran (found 2026-10-06).
-crons = ["0 15 * * MON", "30 15 * * MON", "0 16 * * MON", "30 16 * * MON", "0 17 * * MON"]
+crons = ["0 15 * * MON", "30 15 * * MON", "0 16 * * MON", "30 16 * * MON", "0 12,13 * * TUE"]
 
 # Style compression for broadcast trigger data (see ltCompress in worker.js and
 # docs/customerio-regional-recaps.md). "1" ONLY once both Weekly Digest

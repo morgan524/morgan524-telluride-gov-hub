@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 /**
- * digest-review.js — the Sunday-morning review of the Monday digests.
+ * digest-review.js — the Sunday-morning review of the coming digests (Monday's
+ * Week Ahead, Tuesday's Past Meetings).
  *
  * Morgan 2026-10-04: review both digests (Week Ahead + Past Meetings) early
  * Sunday so errors are caught before the afternoon read-through; after the
- * review the bot stops re-rendering them until Monday afternoon (see
+ * review the bot stops re-rendering them until Tuesday morning (see
  * digest-sunday-review.yml and the freeze guard in digest-refresh.yml).
  *
  * Report only — it never edits a digest. Two layers:
@@ -179,7 +180,7 @@ function callClaude(apiKey, prompt) {
 async function editorialRead(key, d, text, apiKey) {
   const [ps, pe] = RR.priorBusinessWeek(d.weekStart);
   const scope = key === 'past'
-    ? `This is the "Past Meetings" email: summaries of public meetings held ${ps} to ${pe}, each with a link to the full recap. It is sent ${d.weekStart}.`
+    ? `This is the "Past Meetings" email: summaries of public meetings held ${ps} to ${pe}, each with a link to the full recap. It is sent ${addDays(d.weekStart, 1)} (the Tuesday).`
     : `This is "The Week Ahead Outlook": upcoming public meetings and events for ${d.weekStart} to ${addDays(d.weekStart, 6)} (sent the morning of ${d.weekStart}). Last week's meeting recaps are NOT in this email any more (they have their own Past Meetings email).`;
   const prompt = [
     'You are proofreading a community email newsletter for Livable Telluride before it is sent. It covers the whole region: San Miguel County (Telluride, Mountain Village, Ophir, Rico, Norwood and the West End) and Ouray County (Ridgway, Ouray), plus regional bodies such as SMART. Find concrete errors a reader would notice or be misled by.',

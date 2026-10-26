@@ -3,9 +3,10 @@ name: Digest Refresh
 # Regenerates the Digest Review Desk's content from live site data and commits
 # it, so digest-review.html always shows the UPCOMING sends:
 #   - weekly = the coming Mon–Sun (the Monday "Week Ahead")
-#   - past   = the Monday "Past Meetings" email: recaps of the Mon–Fri before
-#              the coming Monday (only when that week has recaps). Replaced the
-#              Friday "Weekend Ahead" on 2026-10-04.
+#   - past   = the Tuesday "Past Meetings" email: recaps of the Mon–Fri of the
+#              week before it goes out (only when that week has recaps). Replaced
+#              the Friday "Weekend Ahead" on 2026-10-04; moved from Monday 10 AM
+#              to Tuesday 6 AM MT on 2026-10-26.
 # Runs daily; also dispatchable. Commits only when the rendered output changes.
 on:
   schedule:
@@ -69,7 +70,7 @@ jobs:
           set -eo pipefail
           # ── Sunday review freeze (Morgan 2026-10-04) ──
           # digest-sunday-review.yml reviews both digests early Sunday and then
-          # writes digest/freeze.json; until its "until" time (Monday afternoon)
+          # writes digest/freeze.json; until its "until" time (Tuesday morning)
           # the bot leaves the digests exactly as reviewed. Edits and approvals
           # on the Review Desk go through the digest Worker's /save, not this
           # workflow, so they still work. force=true overrides; an expired freeze
@@ -89,6 +90,13 @@ jobs:
           curl -fsS --retry 3 "https://livabletelluride.org/js/gov-helpers.js?t=$T" -o /tmp/gh.js
           WK=$(date -u -d "monday" +%F)     # coming Monday (today if Mon)
           WK_LABEL="$(date -u -d "$WK" '+%B %-d') - $(date -u -d "$WK +6 days" '+%B %-d, %Y')"
+          # Past Meetings sends TUESDAY, so its week is keyed to the Monday before
+          # the coming Tuesday (today if Tue). That equals $WK every day except
+          # Tuesday, when $WK has already rolled to next week — keying past to $WK
+          # would call Monday's approval stale and delete it hours before the
+          # Tuesday-morning send. Still the Monday-of-send-week date, so
+          # past-meetings-email.js covers the Mon–Fri before it, as before.
+          PAST_WK=$(date -u -d "$(date -u -d "tuesday" +%F) -1 day" +%F)
 
           # ── Freeze/lock support ──
           # If digest/<key>.lock.json exists and its weekStart matches the coming
@@ -112,12 +120,12 @@ jobs:
           # prints PAST_COUNT=0 and writes nothing otherwise). PAST_ON=1 puts it
           # in the manifest; no entry means nothing to approve or send.
           PAST_SUBJ_LOCK=""; PAST_ON=0
-          if [ "$(lock_ws digest/past.lock.json)" = "$WK" ] && [ -f digest/past.html ]; then
-            echo "past digest LOCKED for $WK — preserving the approved version"
+          if [ "$(lock_ws digest/past.lock.json)" = "$PAST_WK" ] && [ -f digest/past.html ]; then
+            echo "past digest LOCKED for $PAST_WK — preserving the approved version"
             PAST_SUBJ_LOCK="$(lock_subj digest/past.lock.json)"; PAST_ON=1
           else
             rm -f digest/past.lock.json
-            PAST_OUT="$(node scripts/past-meetings-email.js "$WK" digest/past.html)"
+            PAST_OUT="$(node scripts/past-meetings-email.js "$PAST_WK" digest/past.html)"
             echo "$PAST_OUT"
             if echo "$PAST_OUT" | grep -q '^SUBJECT='; then
               PAST_ON=1; PAST_SUBJ_RENDER="$(echo "$PAST_OUT" | sed -n 's/^SUBJECT=//p')"
@@ -125,18 +133,18 @@ jobs:
           fi
           export PAST_ON
           export PAST_SUBJ="${PAST_SUBJ_LOCK:-$PAST_SUBJ_RENDER}"
-          export PAST_COV="Meetings $(date -u -d "$WK -7 days" '+%b %-d') to $(date -u -d "$WK -3 days" '+%b %-d, %Y')"
+          export PAST_COV="Meetings $(date -u -d "$PAST_WK -7 days" '+%b %-d') to $(date -u -d "$PAST_WK -3 days" '+%b %-d, %Y')"
 
           export WK_SUBJ="${WK_SUBJ_LOCK:-The Week Ahead Outlook - $WK_LABEL}"
           export WK_COV="Mon $(date -u -d "$WK" '+%b %-d') to Sun $(date -u -d "$WK +6 days" '+%b %-d, %Y')"
-          export WK      # ISO weekStart per digest → the desk passes it to /save so the lock matches
+          export WK PAST_WK   # ISO weekStart per digest → the desk passes it to /save so the lock matches
           export GEN="$(date -u '+%Y-%m-%d %H:%M UTC')"
           python3 - <<'PY'
           import json, os, subprocess
           digests={
             "weekly":{"name":"The Week Ahead Outlook","subject":os.environ["WK_SUBJ"],"covers":os.environ["WK_COV"],"weekStart":os.environ["WK"],"audience":"Weekly Update","file":"digest/week.html"}}
           if os.environ.get("PAST_ON")=="1":
-            digests["past"]={"name":"Past Meetings","subject":os.environ["PAST_SUBJ"],"covers":os.environ["PAST_COV"],"weekStart":os.environ["WK"],"audience":"Past Meetings","file":"digest/past.html"}
+            digests["past"]={"name":"Past Meetings","subject":os.environ["PAST_SUBJ"],"covers":os.environ["PAST_COV"],"weekStart":os.environ["PAST_WK"],"audience":"Past Meetings","file":"digest/past.html"}
           # "generated" is a wall-clock stamp, so rewriting it unconditionally
           # made EVERY run a change — which was tolerable on a daily cron but
           # would be ~8 empty commits a day now that this workflow also runs

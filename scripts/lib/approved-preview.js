@@ -47,8 +47,8 @@ try { html = fs.readFileSync(htmlPath, 'utf8'); }
 catch { console.error(`[approved-preview] missing ${htmlPath}`); process.exit(3); }
 if (html.length < 2000) { console.error(`[approved-preview] ${htmlPath} too small`); process.exit(3); }
 
-const sendDay = 'Monday';   // every digest sends Monday since Weekend Ahead was retired (2026-10-04)
-const sendTime = key === 'past' ? '10:00 AM' : '9:00 AM';   // Past Meetings an hour after the Week Ahead (2026-10-05)
+const sendDay = key === 'past' ? 'Tuesday' : 'Monday';   // Past Meetings moved off Monday 2026-10-26 (one email a day)
+const sendTime = key === 'past' ? '6:00 AM' : '9:00 AM';
 const DESK = 'https://livabletelluride.org/digest-review.html';
 const banner =
   `  <tr><td style="background:#1f5130;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;` +

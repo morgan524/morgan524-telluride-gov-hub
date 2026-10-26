@@ -1,7 +1,7 @@
 # Regional sections in the weekly email
 
 Last week's meeting recaps (the five business days, Mon–Fri, before the email's
-week) go out in their own opt-in Monday email, **Past Meetings**
+week) go out in their own opt-in Tuesday email, **Past Meetings**
 (`scripts/past-meetings-email.js`): one non-regional list to the
 `sub_past_meetings` audience through its own broadcast
 (`CUSTOMERIO_PAST_BROADCAST_ID`, broadcast 5). Each entry links to its full
