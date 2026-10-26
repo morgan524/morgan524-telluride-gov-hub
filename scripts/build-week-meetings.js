@@ -78,7 +78,9 @@ function commentEmailFor(source, title) {
   return COMMENT_MAP[key] || '';
 }
 
-function buildWeekMeetings(repoRoot) {
+// opts.from / opts.to (Dates) widen the window — the Thursday-night Past
+// Meetings editor draft (past-meetings-editor.js) asks for the week just held.
+function buildWeekMeetings(repoRoot, opts = {}) {
   const { captured } = loadDataArrays(repoRoot);
   const getSummary = captured.getMeetingSummary;
   // Per-entity livestream URLs (gov-data ENTITY_REMOTE — e.g. the towns' and
@@ -108,8 +110,9 @@ function buildWeekMeetings(repoRoot) {
     return null;
   }
   const pad = (n) => String(n).padStart(2, '0');
-  const today = new Date(); today.setHours(0, 0, 0, 0);
-  const end = new Date(today.getTime() + WINDOW_DAYS * 86400000);
+  const today = opts.from ? new Date(opts.from) : new Date(); today.setHours(0, 0, 0, 0);
+  const end = opts.to ? new Date(opts.to) : new Date(today.getTime() + WINDOW_DAYS * 86400000);
+  if (opts.to) end.setHours(23, 59, 59, 999);
 
   const seen = new Set();
   const out = [];

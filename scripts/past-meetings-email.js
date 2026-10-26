@@ -22,6 +22,8 @@
  * recaps writes no file and prints PAST_COUNT=0, so digest-refresh.yml leaves
  * it out of the manifest and nothing is sent.
  *
+ * RETIRED for weeks from 2026-11-02 — see RETIRED_FROM below.
+ *
  * Usage:
  *   node scripts/past-meetings-email.js 2026-10-05 digest/past.html
  *   (weekStart = the Monday of the week it goes out — it sends that Tuesday,
@@ -42,7 +44,14 @@ const SITE = 'https://livabletelluride.org';
 const PAST_PAGE = SITE + '/gov-hub-past.html';
 const EMAIL_TITLE = 'Past Meetings';
 const KICKER = 'Livable Telluride · Past Meetings';
-const MAX_ROWS = 30;   // a heavy week still fits well under the 49 KB trigger cap
+const MAX_ROWS = 30;
+// The Tuesday send is retired (Morgan 2026-10-26): from this week on, the Past
+// Meetings email is a Thursday-night Word draft that Emily edits and Morgan
+// sends on Friday (past-meetings-editor.js + .github/workflows/past-meetings-docx.yml).
+// For a weekStart on/after this date the script writes nothing, so
+// digest-refresh puts no 'past' digest in the manifest and neither the Worker
+// cron nor digest-scheduled-send has anything to send. PAST_TUESDAY=1 overrides.
+const RETIRED_FROM = '2026-11-02';   // a heavy week still fits well under the 49 KB trigger cap
 
 const esc = (s) => String(s == null ? '' : s).replace(/&#0?39;/g, "'").replace(/[<>"]/g, (c) => ({ '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])).replace(/&(?!amp;|lt;|gt;|quot;)/g, '&amp;');
 const wd = (d) => new Date(d + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'America/Denver' });
@@ -119,6 +128,12 @@ function render(recaps, weekStart, preview) {
 module.exports = { render, weekLabel };
 
 if (require.main === module) {
+  if (WEEK_START >= RETIRED_FROM && !process.env.PAST_TUESDAY) {
+    if (fs.existsSync(OUT)) fs.unlinkSync(OUT);
+    console.log('PAST_COUNT=0');
+    console.log(`past-meetings-email: Tuesday send retired from ${RETIRED_FROM} (now the Thursday-night Word draft) — nothing written`);
+    process.exit(0);
+  }
   let all = [];
   try { all = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'meeting-recaps.json'), 'utf8')); }
   catch (e) { console.error('meeting-recaps.json unreadable:', e.message); process.exit(1); }

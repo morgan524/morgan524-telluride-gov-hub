@@ -1,0 +1,143 @@
+name: Past Meetings Editor Draft (Word)
+
+# Thursday night (Morgan 2026-10-26): email Emily a Word document of this
+# week's Past Meetings email — every public meeting held Friday through
+# Thursday, with the recap wording, plus any meeting whose recap isn't written
+# yet. Emily edits it and sends it back; Morgan sends it out on Friday. This
+# replaced the Tuesday auto-send (retired in scripts/past-meetings-email.js).
+#
+# Friday government meetings are rare, so the week is complete by Thursday
+# night. Recaps are generated once a day around 9:30 AM (on a Mac — YouTube
+# blocks GitHub's IPs), so late-week meetings often show as "recap pending".
+#
+# Same once-per-week pattern as editor-docx.yml: GitHub often starts crons
+# hours late, so any run from Thursday 9 PM through Friday noon Denver sends if
+# that week's draft hasn't gone out yet; a cache marker keyed on the Thursday
+# records the send. Manual dispatch always sends (use `to` for a test).
+on:
+  schedule:
+    - cron: '15 3 * * 5'    # Fri 03:15 UTC = Thu 9:15 PM MDT (summer)
+    - cron: '15 4 * * 5'    # Fri 04:15 UTC = Thu 9:15 PM MST (winter)
+    - cron: '0 13 * * 5'    # Fri 13:00 UTC = Fri 7 AM MDT / 6 AM MST (backup)
+  workflow_dispatch:
+    inputs:
+      to:
+        description: 'Send to (default emily@telluriderealty.com). Use your own address for a test.'
+        required: false
+      thursday:
+        description: 'Thursday that closes the week, YYYY-MM-DD (default: the most recent Thursday)'
+        required: false
+
+permissions:
+  contents: read
+  actions: write   # save the once-per-week cache marker
+
+concurrency:
+  group: past-meetings-docx
+  cancel-in-progress: false
+
+jobs:
+  editor-draft:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Within the Thursday-night / Friday-morning window?
+        id: w
+        run: |
+          DOW="$(TZ='America/Denver' date +%u)"; H=$((10#$(TZ='America/Denver' date +%H)))
+          # The Thursday that closes the week: today on Thursday, yesterday on Friday.
+          case "$DOW" in
+            4) DEF="$(TZ='America/Denver' date +%F)" ;;
+            5) DEF="$(TZ='America/Denver' date -d 'yesterday' +%F)" ;;
+            *) DEF="$(TZ='America/Denver' date -d 'last thursday' +%F)" ;;
+          esac
+          THU="${{ github.event.inputs.thursday }}"; THU="${THU:-$DEF}"
+          echo "thu=$THU" >> "$GITHUB_OUTPUT"
+          echo "key=past-docx-sent-$THU" >> "$GITHUB_OUTPUT"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo "manual=true" >> "$GITHUB_OUTPUT"; echo "inwin=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+          if { [ "$DOW" = "4" ] && [ "$H" -ge 21 ]; } || { [ "$DOW" = "5" ] && [ "$H" -lt 12 ]; }; then
+            echo "inwin=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Denver weekday=$DOW hour=$H — outside Thu 9 PM to Fri noon, skipping"
+          fi
+
+      - name: Already sent this week?
+        id: sent
+        if: steps.w.outputs.inwin == 'true' && steps.w.outputs.manual != 'true'
+        uses: actions/cache/restore@v4
+        with:
+          path: .past-docx-sent
+          key: ${{ steps.w.outputs.key }}
+          lookup-only: true
+
+      - name: Decide
+        id: g
+        run: |
+          if [ "${{ steps.w.outputs.inwin }}" != "true" ]; then exit 0; fi
+          if [ "${{ steps.sent.outputs.cache-hit }}" = "true" ]; then echo "This week's draft already went out (${{ steps.w.outputs.key }}) — skipping"; exit 0; fi
+          echo "go=true" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v5
+        if: steps.g.outputs.go == 'true'
+      - uses: actions/setup-node@v5
+        if: steps.g.outputs.go == 'true'
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        if: steps.g.outputs.go == 'true'
+        with:
+          python-version: '3.12'
+
+      - name: Collect this week's meetings and build the Word document
+        if: steps.g.outputs.go == 'true'
+        id: build
+        env:
+          TZ: America/Denver   # the meeting window is built from local dates
+        run: |
+          set -eo pipefail
+          pip install -q python-docx==1.1.2
+          THU="${{ steps.w.outputs.thu }}"
+          node scripts/past-meetings-editor.js "$THU" /tmp/past-editor.json | tee /tmp/pe.log
+          FILE="Past-Meetings-$THU.docx"
+          python3 scripts/past-meetings-docx.py /tmp/past-editor.json "$FILE"
+          echo "file=$FILE" >> "$GITHUB_OUTPUT"
+          echo "label=$(sed -n 's/^LABEL=//p' /tmp/pe.log)" >> "$GITHUB_OUTPUT"
+
+      - name: Email the Word document
+        if: steps.g.outputs.go == 'true'
+        uses: dawidd6/action-send-mail@v18
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.PREVIEW_SMTP_USER }}
+          password: ${{ secrets.PREVIEW_SMTP_PASS }}
+          from: Livable Telluride <${{ secrets.PREVIEW_SMTP_USER }}>
+          to: ${{ github.event.inputs.to || 'emily@telluriderealty.com' }}
+          cc: info@livabletelluride.org
+          subject: 'Past Meetings draft for editing: ${{ steps.build.outputs.label }}'
+          body: |
+            Emily,
+
+            Attached is the draft of this week's Past Meetings email (${{ steps.build.outputs.label }}): the intro, the major decisions, the other meetings, and any meeting whose recap wasn't ready by Thursday night.
+
+            Please edit directly in the document (Track Changes is welcome) and send it back to Morgan, who will send it out on Friday.
+
+            Thanks,
+            Livable Telluride
+          attachments: ${{ steps.build.outputs.file }}
+
+      - name: Mark this week as sent
+        if: steps.g.outputs.go == 'true' && github.event.inputs.to == ''
+        run: mkdir -p .past-docx-sent && date -u +%FT%TZ > .past-docx-sent/at
+      - uses: actions/cache/save@v4
+        if: steps.g.outputs.go == 'true' && github.event.inputs.to == ''
+        continue-on-error: true
+        with:
+          path: .past-docx-sent
+          key: ${{ steps.w.outputs.key }}
+
+      - uses: actions/upload-artifact@v4
+        if: steps.g.outputs.go == 'true'
+        with:
+          name: past-meetings-docx
+          path: ${{ steps.build.outputs.file }}
