@@ -36,6 +36,7 @@ const NAME_SPELLINGS = [
   // Jim Botenhagen
   { wrong: /\bBot(?:tenh|henh|tenhh|enhh)agen\b/g, right: 'Botenhagen' },
   { wrong: /\bBoten[- ]?Hagen\b/g, right: 'Botenhagen' },
+  { wrong: /\bJim (?:Roenhagen|Rodenhagen|Bodenhagen|Botenhaggen|Boden Hagen)\b/g, right: 'Jim Botenhagen' },
 
   // ── Telluride Town Council ──
   { wrong: /\bTeddy Er(?:ic+o|rico?)\b/g, right: 'Teddy Errico' },
