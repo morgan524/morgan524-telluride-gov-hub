@@ -33,6 +33,7 @@ const path = require('path');
 const RR = require('./lib/recap-regions.js');
 const RI = require('./lib/recap-importance.js');
 const { renderBold } = require('./lib/bold-guideline.js');
+const { fixNames } = require('./lib/name-spellings.js');
 
 const WEEK_START = process.argv[2] || new Date().toISOString().slice(0, 10);
 const OUT = process.argv[3] || 'past-meetings-email.html';
@@ -110,6 +111,7 @@ function render(recaps, weekStart, preview) {
     const h = url.indexOf('#'); const base = h >= 0 ? url.slice(0, h) : url; const frag = h >= 0 ? url.slice(h) : '';
     return 'href="' + base + (base.includes('?') ? '&amp;' : '?') + 'utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=past-meetings' + frag + '"';
   });
+  html = fixNames(html);
   html = Array.from(html).map((ch) => { const cp = ch.codePointAt(0); return cp > 127 ? '&#' + cp + ';' : ch; }).join('');
   return { html, subject: EMAIL_TITLE + ' - ' + label };
 }
