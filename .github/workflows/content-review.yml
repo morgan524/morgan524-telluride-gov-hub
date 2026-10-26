@@ -12,11 +12,10 @@ name: Daily Content Review
 # Runs ONCE a day, early morning, 30 min after the 12:00 UTC content-refresh
 # (6:30 AM MDT / 5:30 AM MST), so any Claude Fix PR is waiting by breakfast.
 # Was 4x/day (after every 6-hour refresh); cut to daily 2026-10-06 to save on
-# the Claude pass (Morgan). EXCEPTION-ONLY email: the owner is emailed (info@)
-# only when a finding needs a human decision — plus a light Monday weekly
-# digest as a paper trail. Auto-fixable issues never become email;
-# content-refresh.js fixes them at the source (sanitizeRecords +
-# filterMvConflicts).
+# the Claude pass (Morgan). This job sends NO email: the owner is emailed by
+# content-review-claude-fix.yml, after Claude has worked the findings, and only
+# for Critical/High items Claude did not resolve (Morgan, 2026-10-26). The
+# Monday digest of Low advisories was dropped; those stay in the GitHub issue.
 on:
   schedule:
     - cron: '30 12 * * *'   # daily 12:30 UTC = 6:30 AM MDT / 5:30 AM MST, after the 12:00 content-refresh
@@ -29,10 +28,6 @@ permissions:
 jobs:
   content-review:
     runs-on: ubuntu-latest
-    env:
-      # Morning email digest (reuses the weekly-preview SMTP secrets). If unset,
-      # the email is skipped and the GitHub issue remains the channel.
-      PREVIEW_SMTP_PASS: ${{ secrets.PREVIEW_SMTP_PASS }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
@@ -78,66 +73,11 @@ jobs:
           fi
           exit 0
 
-      # EXCEPTION-ONLY email policy. The owner is emailed only when something
-      # needs them. Decision (every run — there is one scheduled run a day):
-      #   • action items present (content-review-actionable.log non-empty)
-      #       → send an "action needed" email.
-      #   • else if Monday → send a light weekly digest (status + paper trail).
-      #   • else → send NOTHING (silent on normal/advisory-only days).
-      # Auto-fixable issues (exact dups, scheme-less links, MV wrong-dates) are
-      # fixed at the source by content-refresh.js, so they never become email.
-      - name: Decide + build email
-        id: email
-        if: always()
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-        run: |
-          DOW=$(date -u +%u); NOW=$(date -u +'%Y-%m-%d %H:%M UTC')
-          echo "send=false" >> "$GITHUB_OUTPUT"
-          ISSUE_LINK=$(printf '<p><a href="%s/%s/issues?q=is%%3Aissue+is%%3Aopen+content+review">Open the findings issue →</a></p>' "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY")
-          if [ -s content-review-actionable.log ]; then
-            N=$(sed -n '2p' content-review-actionable.log | grep -oE '^[0-9]+' || echo '')
-            echo "subject=🔧 Livable Telluride — content review needs you${N:+ ($N)}" >> "$GITHUB_OUTPUT"
-            {
-              printf '<p>The content review found item(s) that need your judgment as of %s. The rest were either auto-fixed by the bot or are low-priority advisories (see the GitHub issue).</p>' "$NOW"
-              printf '<pre style="font:13px/1.5 ui-monospace,monospace;white-space:pre-wrap;background:#f6f8fa;padding:14px;border-radius:8px;border:1px solid #e1e4e8">'
-              sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g' content-review-actionable.log
-              printf '</pre>%s' "$ISSUE_LINK"
-            } > content-review-email.html
-            echo "send=true" >> "$GITHUB_OUTPUT"
-          elif [ "$DOW" = "1" ] || [ "$EVENT_NAME" = "workflow_dispatch" ]; then
-            echo "subject=🗓️ Livable Telluride — weekly content review digest (no action needed)" >> "$GITHUB_OUTPUT"
-            {
-              printf '<p><b>Nothing needs you</b> as of %s. ✅ This is your weekly paper trail.</p>' "$NOW"
-              printf '<p>The bot reviews content 4×/day and auto-fixes duplicate events, scheme-less links, wrong-year dates, joint-meeting double-listings, and Mountain Village wrong-date copies. You only get an email when something needs a human decision.</p>'
-              if [ -s content-review-findings.log ]; then
-                printf '<p>Current low-priority advisories (FYI only — no action required):</p><pre style="font:13px/1.5 ui-monospace,monospace;white-space:pre-wrap;background:#f6f8fa;padding:14px;border-radius:8px;border:1px solid #e1e4e8">'
-                sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g' content-review-findings.log
-                printf '</pre>%s' "$ISSUE_LINK"
-              fi
-            } > content-review-email.html
-            echo "send=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "No action items and not Monday — staying silent. ✅"
-          fi
-
-      - name: Email to info@
-        if: steps.email.outputs.send == 'true' && env.PREVIEW_SMTP_PASS != ''
-        uses: dawidd6/action-send-mail@v18
-        with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          secure: true
-          username: ${{ secrets.PREVIEW_SMTP_USER }}
-          password: ${{ secrets.PREVIEW_SMTP_PASS }}
-          subject: ${{ steps.email.outputs.subject }}
-          to: info@livabletelluride.org
-          from: Livable Telluride <${{ secrets.PREVIEW_SMTP_USER }}>
-          html_body: file://content-review-email.html
-
-      - name: Note when email isn't configured
-        if: steps.email.outputs.send == 'true' && env.PREVIEW_SMTP_PASS == ''
-        run: echo "::warning::PREVIEW_SMTP_PASS not set — skipped the morning email. The GitHub issue still has the findings."
+      # No email from this job (Morgan, 2026-10-26). Emailing here went out
+      # BEFORE the Claude Fix job ran, so it listed items Claude then fixed,
+      # plus a Monday digest of Low advisories. The email now lives at the end
+      # of content-review-claude-fix.yml and lists only Critical/High items
+      # Claude did not resolve. Low advisories stay in the GitHub issue.
 
       - name: Upload run logs
         if: always()

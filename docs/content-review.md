@@ -14,14 +14,9 @@ Complements, does not replace: `weekly-review.yml` (infra/security/liveness) and
   - one auto-managed GitHub issue titled **🧭 Daily content review findings**
     — refreshed every run, auto-closed on a clean run (same pattern as
     maintenance's "🔎 Daily website review findings");
-  - an **exception-only email** to `info@livabletelluride.org`, decided once a
-    day on the **13:00 UTC run** (and on manual dispatch). It emails **only when
-    a finding needs a human** (non-`Low` severity → `content-review-actionable.log`
-    is non-empty); otherwise it stays **silent**. On **Mondays** it sends a light
-    weekly digest (status + current advisories) as a paper trail even when
-    nothing needs action. Reuses the `PREVIEW_SMTP_USER`/`PREVIEW_SMTP_PASS`
-    secrets via `dawidd6/action-send-mail`; if unset, email is skipped and the
-    issue remains the channel.
+  - **no email from the review job itself** (changed 2026-10-26). The email
+    is sent by `content-review-claude-fix.yml` *after* Claude has worked the
+    findings — see below.
 
 **Claude works the actionable items (added 2026-09-21).**
 `.github/workflows/content-review-claude-fix.yml` runs after every successful
@@ -33,10 +28,21 @@ detector fix for a false positive), verify with a local review run, then a
 shell step commits to `claude/content-review-fix-<stamp>`, opens a PR, and
 comments the link on the findings issue. Judgment fixes land as a **PR, never
 on main** (same tier split as `content-autofix.yml`); merge it and the next
-content-refresh re-renders. The morning email still goes out as a paper trail.
+content-refresh re-renders.
 
-**Severity → action:** `Critical`/`High`/`Medium` = actionable (emailed when
-present). `Low` = advisory (issue + weekly digest only, never an action email).
+**Email policy (Morgan, 2026-10-26): only important, unresolved items.** At the
+end of the Claude Fix job, Claude's `/tmp/claude-unresolved.log` (findings it
+did *not* fix, verbatim, with a "Why not fixed" line) is filtered to
+`Critical`/`High` and emailed to `info@`. Nothing Claude fixed is ever emailed.
+No email when there are no findings, when Claude fixed everything, when only
+`Medium`/`Low` remain, or when an earlier fix PR is still pending. If the
+Claude step itself fails, the raw `Critical`/`High` findings are emailed
+instead. The Monday digest of `Low` advisories was dropped. Uses the
+`PREVIEW_SMTP_USER`/`PREVIEW_SMTP_PASS` secrets.
+
+**Severity → action:** `Critical`/`High`/`Medium` = actionable (handed to
+Claude). Only unresolved `Critical`/`High` reach email. `Medium` and `Low` live
+in the GitHub issue only.
 Auto-fixable categories don't reach email at all — they're fixed at the source
 (below) before the review sees them.
 

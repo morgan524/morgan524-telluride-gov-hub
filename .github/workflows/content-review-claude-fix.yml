@@ -112,6 +112,7 @@ jobs:
           echo "----- actionable findings -----"; cat review-logs/content-review-actionable.log
 
       - name: Claude fixes the findings at the source
+        id: claude
         if: steps.gate.outputs.run == 'true'
         uses: anthropics/claude-code-action@main
         with:
@@ -185,10 +186,21 @@ jobs:
             one bullet per finding with what you changed and why (file paths),
             and a final "Not fixed" list for anything you left alone and why.
 
+            ALSO write /tmp/claude-unresolved.log — this is what gets emailed to
+            Morgan, so it must hold ONLY findings you did NOT fix in either
+            phase (left alone, could not verify, or blocked). Copy each such
+            finding's block from review-logs/content-review-actionable.log
+            VERBATIM, keeping its first line exactly in the form
+            `N. [Severity] Category`, then add one line
+            `   Why not fixed: <one sentence>`. Separate blocks with a blank line.
+            Do not list anything you fixed. If you fixed everything, write the
+            single word NONE.
+
       # Split Claude's work: phase 1 (easy) goes straight to main if a
       # mechanical gate agrees — the bot never self-certifies — and only the
       # remainder becomes a PR, so the PR carries just what needs judgment.
       - name: Apply easy fixes to main, PR the rest
+        id: apply
         if: steps.gate.outputs.run == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -276,7 +288,73 @@ jobs:
           } > /tmp/pr-body.md
           PR_URL=$(gh pr create --title "Content review fixes $(date -u +%F) (Claude)" --body-file /tmp/pr-body.md --base main --head "$BRANCH")
           echo "PR: $PR_URL"
+          echo "pr_url=$PR_URL" >> "$GITHUB_OUTPUT"
           NUM=$(gh issue list --state open --search "$ISSUE_TITLE in:title" --json number --jq '.[0].number // empty')
           if [ -n "$NUM" ]; then
             gh issue comment "$NUM" --body "🤖 Claude opened a fix PR for the actionable findings: $PR_URL"
           fi
+
+      # EMAIL POLICY (Morgan, 2026-10-26): "Do not include any that Claude has
+      # resolved. Only send me emails on important issues that need attention."
+      #   • Only Critical/High findings Claude did NOT fix are emailed.
+      #   • Anything Claude fixed (easy commit or fix PR) is left out.
+      #   • Medium/Low never email — they stay in the GitHub findings issue.
+      #   • No findings, all fixed, or a fix PR still pending → no email.
+      #   • If the Claude step itself failed, nothing was fixed, so the raw
+      #     Critical/High findings are emailed (otherwise they'd go unseen).
+      - name: Decide + build email (unresolved Critical/High only)
+        id: email
+        if: always() && steps.gate.outputs.run == 'true'
+        env:
+          CLAUDE_OUTCOME: ${{ steps.claude.outcome }}
+          PR_URL: ${{ steps.apply.outputs.pr_url }}
+        run: |
+          echo "send=false" >> "$GITHUB_OUTPUT"
+          NOW=$(date -u +'%Y-%m-%d %H:%M UTC')
+          if [ "$CLAUDE_OUTCOME" = "success" ]; then
+            SRC=/tmp/claude-unresolved.log
+            if [ ! -s "$SRC" ] || [ "$(tr -d '[:space:]' < "$SRC")" = "NONE" ]; then
+              echo "Claude resolved everything (or wrote no unresolved list) — no email."; exit 0
+            fi
+            NOTE="Claude worked today's findings. These important items are still unresolved:"
+          else
+            SRC=review-logs/content-review-actionable.log
+            NOTE="Claude's fix pass did not complete, so nothing below has been fixed:"
+          fi
+          # Keep only blocks whose header is [Critical] or [High].
+          awk '
+            /^[0-9]+\. \[[A-Za-z]+\]/ { keep = ($0 ~ /^[0-9]+\. \[(Critical|High)\]/) }
+            /^Content review|^[0-9]+ item\(s\)|^─/ { next }
+            keep { print }
+          ' "$SRC" > /tmp/important.log
+          N=$(grep -cE '^[0-9]+\. \[(Critical|High)\]' /tmp/important.log || true)
+          if [ "${N:-0}" = "0" ]; then
+            echo "No unresolved Critical/High items — no email."; exit 0
+          fi
+          ISSUE_LINK=$(printf '<p><a href="%s/%s/issues?q=is%%3Aissue+is%%3Aopen+content+review">Open the findings issue →</a></p>' "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY")
+          {
+            printf '<p>%s (%s)</p>' "$NOTE" "$NOW"
+            printf '<pre style="font:13px/1.5 ui-monospace,monospace;white-space:pre-wrap;background:#f6f8fa;padding:14px;border-radius:8px;border:1px solid #e1e4e8">'
+            sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g' /tmp/important.log
+            printf '</pre>'
+            if [ -n "$PR_URL" ]; then
+              printf '<p>Claude also opened a fix PR for other items; it needs your merge: <a href="%s">%s</a></p>' "$PR_URL" "$PR_URL"
+            fi
+            printf '%s' "$ISSUE_LINK"
+          } > content-review-email.html
+          echo "subject=🔧 Livable Telluride — needs your attention ($N)" >> "$GITHUB_OUTPUT"
+          echo "send=true" >> "$GITHUB_OUTPUT"
+
+      - name: Email to info@
+        if: always() && steps.email.outputs.send == 'true'
+        uses: dawidd6/action-send-mail@v18
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.PREVIEW_SMTP_USER }}
+          password: ${{ secrets.PREVIEW_SMTP_PASS }}
+          subject: ${{ steps.email.outputs.subject }}
+          to: info@livabletelluride.org
+          from: Livable Telluride <${{ secrets.PREVIEW_SMTP_USER }}>
+          html_body: file://content-review-email.html
