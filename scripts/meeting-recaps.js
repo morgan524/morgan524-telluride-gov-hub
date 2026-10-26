@@ -37,6 +37,7 @@ const { serializeArray } = require('./lib/serialize.js');
 const { SONNET } = require('./lib/claude-model.js');
 const { createResponseCache } = require('./lib/response-cache.js');
 const { mirrorAll } = require('./lib/json-mirror.js');
+const { fixNamesDeep } = require('./lib/name-spellings.js');
 
 const REPO_ROOT = path.resolve(__dirname, '..');
 const GOV_HELPERS = path.join(REPO_ROOT, 'js', 'gov-helpers.js');
@@ -734,6 +735,7 @@ async function main() {
       try { out = await recapFromTranscript(ch, date, v.title, transcript); }
       catch (e) { console.log(`      ✗ recap failed: ${e.message}`); continue; }
       if (!out || !out.recap) { console.log('      ✗ empty recap'); continue; }
+      out = fixNamesDeep(out);
 
       added.push({ sourceKey: ch.sourceKey, sourceLabel: ch.sourceLabel, date, title: (out.title || v.title).trim(), recap: out.recap.trim(), votes: Array.isArray(out.votes) ? out.votes.filter((x) => !EXEC_SESSION_RE.test(String((x && (x.item || x.title)) || ''))).slice(0, 8) : [], videoUrl });
       seenVideo.add(videoUrl); seenMeeting.add(meetKey);

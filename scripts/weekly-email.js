@@ -25,6 +25,7 @@ const { generateRickLede } = require('./lib/rick-lede.js');
 const RI = require('./lib/recap-importance.js');
 const { meetingDisplayName, SELF_IDENTIFYING } = require('./lib/meeting-title.js');
 const RR = require('./lib/recap-regions.js');
+const { fixNames } = require('./lib/name-spellings.js');
 const GD = process.argv[2], GH = process.argv[3];
 const WEEK_START = process.argv[4] || new Date().toISOString().slice(0, 10);
 const LABEL = process.argv[5] || 'This Week';
@@ -1137,6 +1138,7 @@ out = out.replace(/href="(https:\/\/livabletelluride\.org[^"]*)"/g, (m, url) => 
 // into Mailchimp or rendered by a mail client (fixes the "Telluride,Aos" /
 // ",Ai" / "‚Üí" mojibake from UTF-8 being mis-decoded as MacRoman). Existing
 // entities (&amp;, &#39;) are already ASCII and pass through untouched.
+out = fixNames(out);
 out = Array.from(out).map((ch) => { const cp = ch.codePointAt(0); return cp > 127 ? '&#' + cp + ';' : ch; }).join('');
 fs.writeFileSync(OUT, out);
 const SUBJECT = `${EMAIL_TITLE} — ${LABEL}`;
