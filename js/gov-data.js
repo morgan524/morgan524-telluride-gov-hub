@@ -56,7 +56,7 @@ const COUNTY_CIVICCLERK_AGENDA_FILES = {
   919:  1705,  // Planning Commission May 14 2026
 };
 
-const COUNTY_CACHE_DATE = '2026-10-25';
+const COUNTY_CACHE_DATE = '2026-10-26';
 
 const COUNTY_CACHED_DATA = [
   {
@@ -236,7 +236,7 @@ const COUNTY_CACHED_DATA = [
 
 const SMART_BOARD_URL = 'https://smarttelluride.colorado.gov/board-meetings';
 
-const SMART_CACHE_DATE = '2026-10-25';
+const SMART_CACHE_DATE = '2026-10-26';
 
 const SMART_CACHED_DATA = [
   {
@@ -286,7 +286,7 @@ const SMART_CACHED_DATA = [
 
 const TMVOA_URL = 'https://tmvoa.org/meetings-events/meeting-materials/';
 
-const TMVOA_CACHE_DATE = '2026-10-25';
+const TMVOA_CACHE_DATE = '2026-10-26';
 
 // TMVOA (Telluride Mountain Village Owners Association) — a private HOA, not
 // a government body, but its Gondola Leadership/Subcommittee meetings and
@@ -381,7 +381,7 @@ const MV_TC_URL = 'https://townofmountainvillage.com/government/town-council/tow
 
 const MV_DRB_URL = 'https://townofmountainvillage.com/business/planning/design-review-board/';
 
-const MV_CACHE_DATE = '2026-10-25';
+const MV_CACHE_DATE = '2026-10-26';
 
 const MV_CACHED_DATA = [
   {
@@ -432,7 +432,7 @@ const MV_CACHED_DATA = [
 
 const SCHOOL_BOARD_URL = 'https://www.tellurideschool.org/agendasandminutes';
 
-const SCHOOL_CACHE_DATE = '2026-10-25';
+const SCHOOL_CACHE_DATE = '2026-10-26';
 
 const SCHOOL_CACHED_DATA = [
   {
@@ -618,7 +618,7 @@ const SCHOOL_CACHED_DATA = [
 
 const FIRE_BOARD_URL = 'https://www.telluridefire.com/board-meetings';
 
-const FIRE_CACHE_DATE = '2026-10-25';
+const FIRE_CACHE_DATE = '2026-10-26';
 
 const FIRE_CACHED_DATA = [
   {
@@ -654,7 +654,7 @@ const FIRE_CACHED_DATA = [
 
 const MED_BOARD_URL = 'https://www.tellmed.org/board-meetings';
 
-const MED_CACHE_DATE = '2026-10-25';
+const MED_CACHE_DATE = '2026-10-26';
 
 const MED_CACHED_DATA = [
   {
@@ -696,7 +696,7 @@ const NORWOOD_NWC_URL = 'https://www.norwoodtown.com/nwc-meetings';
 
 const NORWOOD_SAN_URL = 'https://www.norwoodtown.com/norwood-sanitation-district-meeting';
 
-const NORWOOD_CACHE_DATE = '2026-10-25';
+const NORWOOD_CACHE_DATE = '2026-10-26';
 
 const NORWOOD_CACHED_DATA = [
   {
@@ -774,7 +774,7 @@ const OPHIR_GA_URL = 'https://townofophir.colorado.gov/general-assembly-2';
 
 const OPHIR_PZ_URL = 'https://townofophir.colorado.gov/planning-and-zoning';
 
-const OPHIR_CACHE_DATE = '2026-10-25';
+const OPHIR_CACHE_DATE = '2026-10-26';
 
 const OPHIR_CACHED_DATA = [
   {
@@ -968,26 +968,6 @@ const OURAY_CITY_ZOOM = {
 };
 const OURAY_CITY_CACHED_DATA = [
   {
-    date: "October 5, 2026",
-    time: "4:00 PM",
-    title: "Ouray City Council Work Session",
-    board: "council",
-    location: "Ouray Community Center, 320 6th Ave, Ouray, CO 81427",
-    boardbookId: 768776,
-    agendaUrl: "https://meetings.boardbook.org/Public/Agenda/2503?meeting=768776",
-    packetUrl: "https://meetings.boardbook.org/Public/DownloadAgenda/2503?meeting=768776"
-  },
-  {
-    date: "October 5, 2026",
-    time: "6:00 PM",
-    title: "Ouray City Council Regular Meeting",
-    board: "council",
-    location: "Ouray Community Center, 320 6th Ave, Ouray, CO 81427",
-    boardbookId: 761785,
-    agendaUrl: "https://meetings.boardbook.org/Public/Agenda/2503?meeting=761785",
-    packetUrl: "https://meetings.boardbook.org/Public/DownloadAgenda/2503?meeting=761785"
-  },
-  {
     date: "October 13, 2026",
     time: "4:00 PM",
     title: "Ouray Planning Commission Regular Meeting",
@@ -1009,7 +989,7 @@ const OURAY_CITY_CACHED_DATA = [
   }
 ];
 
-const RIDGWAY_CACHE_DATE = '2026-10-25';
+const RIDGWAY_CACHE_DATE = '2026-10-26';
 
 // Ridgway meeting stubs. Town Council = 2nd Wednesday @ 6:00 PM; Planning
 // Commission = 3rd Wednesday @ 5:30 PM. The agenda/packet PDF for each date is
@@ -1065,7 +1045,7 @@ const TOWN_CIVICWEB_IDS = {
 
 const TELLURIDE_HARC_URL = 'https://telluride.gov/100/Historic-and-Architectural-Review-Commis';
 
-const TELLURIDE_CACHE_DATE = '2026-10-25';
+const TELLURIDE_CACHE_DATE = '2026-10-26';
 
 const TELLURIDE_CACHED_DATA = [
   {
@@ -1088,7 +1068,7 @@ const TELLURIDE_CACHED_DATA = [
 
 const AIRPORT_BOARD_URL = 'https://tellurideairport.com/traa-board-information/';
 
-const AIRPORT_CACHE_DATE = '2026-10-25';
+const AIRPORT_CACHE_DATE = '2026-10-26';
 
 const AIRPORT_CACHED_DATA = [
   {

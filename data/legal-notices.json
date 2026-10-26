@@ -13,27 +13,6 @@
     "url": "https://townofridgway.colorado.gov/resources/requests-for-proposals/bids"
   },
   {
-    "title": "Public Notice to Creditors -- Estate of Gerald D. Wilson (26PR30005)",
-    "entity": "Estate of Gerald D. Wilson",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "Notice is given that the estate of Gerald D. Wilson, also known as Gerald Dean Nelson, is being administered in San Miguel County District Court under Case No. 26PR30005. All persons with claims against the estate must present them to Personal Representative Michael Kimball or to the District Court on or before October 25, 2026, or claims may be forever barred.",
-    "deadline": "2026-10-25",
-    "expires": "2026-10-25",
-    "dates": "7/2",
-    "papers": [
-      "ttimes_0702"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_d2ca136e-7993-4d52-abfc-0e8f243974dd.html",
-    "address": "District Court of San Miguel County, Colorado",
-    "noticeKey": "COL-000183-estate-wilson-26PR30005",
-    "caseNumber": "26PR30005"
-  },
-  {
     "title": "Notice to Creditors -- Estate of Lawrence de Bivort (Case No. 2026PR30008)",
     "entity": "Estate of Lawrence de Bivort",
     "entityClass": "ent-county",
@@ -534,7 +513,7 @@
     "summary": "Town of Telluride is seeking qualified respondents for: TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS.",
     "deadline": "Closes 1/11/2026",
     "expires": "2026-01-11",
-    "dates": "10/25",
+    "dates": "10/26",
     "url": "https://www.telluride.gov/bids.aspx?bidID=133",
     "address": "",
     "totBidID": "133"
