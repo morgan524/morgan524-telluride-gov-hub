@@ -334,14 +334,19 @@ async function handleProfileRead(request, env) {
     return json({ ok: false, msg: "Not signed in." }, 401);
   }
 
-  // Read the contact's attributes from Customer.io (App API; contact id == email).
+  // Find the contact by EMAIL, then read its attributes by cio_id. Most people
+  // were imported with an email but no `id`, so GET /customers/{email}/attributes
+  // (which matches on id) 404'd for them and every real subscriber was told
+  // "we don't have a subscription for you" (fixed 2026-10-26).
+  const H = { Authorization: "Bearer " + env.CUSTOMERIO_APP_API_KEY };
   let resp;
   try {
-    resp = await fetch("https://api.customer.io/v1/customers/" + encodeURIComponent(email) + "/attributes", {
-      headers: { Authorization: "Bearer " + env.CUSTOMERIO_APP_API_KEY },
-    });
+    const s = await fetch("https://api.customer.io/v1/customers?email=" + encodeURIComponent(email), { headers: H });
+    if (!s.ok) return json({ ok: false, msg: "Lookup failed (" + s.status + ")." });
+    const hits = (((await s.json()) || {}).results || []).filter((r) => String(r.email || "").toLowerCase() === email);
+    if (!hits.length) return json({ ok: true, found: false, email });
+    resp = await fetch("https://api.customer.io/v1/customers/" + encodeURIComponent(hits[0].cio_id) + "/attributes?id_type=cio_id", { headers: H });
   } catch { return json({ ok: false, msg: "Couldn't reach Customer.io." }, 502); }
-  if (resp.status === 404) return json({ ok: true, found: false, email });
   if (!(resp.status >= 200 && resp.status < 300)) return json({ ok: false, msg: "Lookup failed (" + resp.status + ")." });
 
   let a = {};
