@@ -8217,14 +8217,17 @@ const DRB_ALL_MEMBERS = [
   { id:'eckman',  name:'David Eckman',  shortName:'Eckman',  title:'Board Member' },
   { id:'bennett', name:'Scott Bennett', shortName:'Bennett', title:'Board Member' },
   { id:'kramer',  name:'Ellen Kramer',  shortName:'Kramer',  title:'Board Member' },
-  { id:'craige',  name:'David Craige',  shortName:'Craige',  title:'Board Member' },
-  { id:'austin',  name:'Jim Austin',    shortName:'Austin',  title:'1st Alternate (per Apr 2024 re-appointment)' },
+  { id:'craige',  name:'David Craige',  shortName:'Craige',  title:'Board Member (through Apr 2026)' },
+  { id:'austin',  name:'Jim Austin',    shortName:'Austin',  title:'Alternate (reappointed Apr 2026)' },
+  { id:'tbrown',  name:'Tobin Brown',   shortName:'T. Brown', title:'Alternate (Apr 2026+)' },
   { id:'garner',  name:'Greer Garner',  shortName:'Garner',  title:'Board Member' },
 ];
-const DRB_2026 = ['brown','miller','newton','eckman','bennett','kramer','craige','austin','garner'];
+const DRB_2026 = ['brown','miller','newton','eckman','bennett','kramer','craige','austin','tbrown','garner'];
 const DRB_2025 = ['brown','miller','newton','eckman','bennett','kramer','craige','austin','garner'];
 const DRB_2024 = ['brown','miller','newton','caton','eckman','bennett','kramer','craige','austin','garner'];
-// Roster identical 2025 → 2026; all 9 members carried over. Reappointment
+// 2026 spans a mid-year change: Apr 23 2026 council did not reappoint Craige
+// and appointed Tobin Brown (tbrown) as an alternate, so DRB_2026 lists both.
+// Roster identical 2025 → early 2026; all 9 members carried over. Reappointment
 // terms started Apr 25, 2024 (Brown, Bennett, Miller, Craige, Austin as 1st alt)
 // plus Newton, Eckman, Kramer, Garner as additional board appointments.
 // 2024 spans a mid-year roster change: Caton held the seat Jan-Apr, Newton
@@ -9010,7 +9013,7 @@ const DRB_VOTE_ITEMS = [
     description:'Board unanimously approved Banks Brown as Chair and Scott Bennett as Vice Chair for the coming term.',
     tags:['Appointments'],
     outcome:'Passed', tally:'Unanimous',
-    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', craige:'Yes', garner:'Yes' },
+    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', garner:'Yes' },
   },
   {
     id:'drb2026-02', date:'2026-05-07', year:2026,
@@ -9020,7 +9023,7 @@ const DRB_VOTE_ITEMS = [
     description:'Board approved the final architectural review for the new ADU at Lot 355, 129 Rocky Road with conditions including removal of four BX soffit light fixtures from the second floor.',
     tags:['Land Use'],
     outcome:'Passed', tally:'Unanimous',
-    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', craige:'Yes', garner:'Yes' },
+    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', garner:'Yes' },
   },
 
   /* ── June 4, 2026 ── */
@@ -9032,7 +9035,7 @@ const DRB_VOTE_ITEMS = [
     description:'Board approved the initial architectural and site review for a new single-family home at Lot 1171-R TBD San Joaquin Road with specified design variations, specific approvals, and conditions; Chair Eckman recused himself from the vote due to a conflict of interest.',
     tags:['Land Use'],
     outcome:'Passed', tally:'Unanimous',
-    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', craige:'Yes', garner:'Yes' },
+    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', garner:'Yes' },
   },
   {
     id:'drb2026-04', date:'2026-06-04', year:2026,
@@ -9042,7 +9045,7 @@ const DRB_VOTE_ITEMS = [
     description:'Board voted unanimously to continue the recommendation on the height variance and initial site review for the proposed single-family home at Lot 164-BR1 San Joaquin Road to the July 2, 2026 DRB meeting.',
     tags:['Land Use'],
     outcome:'Passed', tally:'Unanimous',
-    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', craige:'Yes', garner:'Yes' },
+    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', garner:'Yes' },
   },
   {
     id:'drb2026-05', date:'2026-06-04', year:2026,
@@ -9052,7 +9055,7 @@ const DRB_VOTE_ITEMS = [
     description:'Motion to continue the multi-family condominium project at Lot 27A to the August 6 meeting failed on a 3-3 tie vote.',
     tags:['Land Use'],
     outcome:'Failed', tally:'3-3',
-    votes:{ brown:'Voice', miller:'Voice', newton:'Voice', eckman:'Voice', bennett:'Voice', kramer:'Voice', craige:'Voice', austin:'Voice', garner:'Voice' },
+    votes:{ brown:'Voice', miller:'Voice', newton:'Voice', eckman:'Voice', bennett:'Voice', kramer:'Voice', austin:'Voice', garner:'Voice', tbrown:'Voice' },
   },
   {
     id:'drb2026-06', date:'2026-06-04', year:2026,
@@ -9062,7 +9065,7 @@ const DRB_VOTE_ITEMS = [
     description:'Board approved the initial architecture and site review for the 21-unit multi-family condominium project at Lot 27A TBD Moss Creek Lane with the specific approvals, design variations, and conditions outlined in the staff report.',
     tags:['Land Use'],
     outcome:'Passed', tally:'4-2',
-    votes:{ brown:'Voice', miller:'Voice', newton:'Voice', eckman:'Voice', bennett:'Voice', kramer:'Voice', craige:'Voice', austin:'Voice', garner:'Voice' },
+    votes:{ brown:'Voice', miller:'Voice', newton:'Voice', eckman:'Voice', bennett:'Voice', kramer:'Voice', austin:'Voice', garner:'Voice', tbrown:'Voice' },
   },
 
   /* ── July 2, 2026 ── */
@@ -9074,7 +9077,7 @@ const DRB_VOTE_ITEMS = [
     description:'',
     tags:['Other'],
     outcome:'Passed', tally:'Unanimous',
-    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', craige:'Yes', garner:'Yes' },
+    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', garner:'Yes' },
   },
   {
     id:'drb2026-08', date:'2026-07-02', year:2026,
@@ -9084,7 +9087,7 @@ const DRB_VOTE_ITEMS = [
     description:'',
     tags:['Land Use'],
     outcome:'Passed', tally:'Unanimous',
-    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', craige:'Yes', garner:'Yes' },
+    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', garner:'Yes' },
   },
   {
     id:'drb2026-09', date:'2026-07-02', year:2026,
@@ -9094,7 +9097,7 @@ const DRB_VOTE_ITEMS = [
     description:'',
     tags:['Land Use'],
     outcome:'Passed', tally:'Unanimous',
-    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', craige:'Yes', garner:'Yes' },
+    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', garner:'Yes' },
   },
   {
     id:'drb2026-10', date:'2026-07-02', year:2026,
@@ -9104,7 +9107,7 @@ const DRB_VOTE_ITEMS = [
     description:'',
     tags:['Land Use'],
     outcome:'Passed', tally:'Unanimous',
-    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', craige:'Yes', garner:'Yes' },
+    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', garner:'Yes' },
   },
   {
     id:'drb2026-11', date:'2026-07-02', year:2026,
@@ -9114,7 +9117,7 @@ const DRB_VOTE_ITEMS = [
     description:'',
     tags:['Land Use'],
     outcome:'Passed', tally:'Unanimous',
-    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', craige:'Yes', garner:'Yes' },
+    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', garner:'Yes' },
   },
   {
     id:'drb2026-12', date:'2026-07-02', year:2026,
@@ -9124,7 +9127,7 @@ const DRB_VOTE_ITEMS = [
     description:'',
     tags:['Housing'],
     outcome:'Passed', tally:'Unanimous',
-    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', craige:'Yes', garner:'Yes' },
+    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', garner:'Yes' },
   },
 
   /* ── August 6, 2026 ── */
@@ -9136,7 +9139,7 @@ const DRB_VOTE_ITEMS = [
     description:'Board approved the initial architecture and site review for four new condominium units at Pennington Place, granting specific approval for a secondary curb cut and adopting conditions 1-9 minus condition 2 (fire truck turnaround).',
     tags:['Land Use'],
     outcome:'Passed', tally:'Unanimous',
-    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', craige:'Yes', garner:'Yes' },
+    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', garner:'Yes' },
   },
   {
     id:'drb2026-14', date:'2026-08-06', year:2026,
@@ -9146,7 +9149,7 @@ const DRB_VOTE_ITEMS = [
     description:'Board voted unanimously to recommend denial to Town Council of the conditional use permit for temporary office space on a primary pedestrian route in the village center.',
     tags:['Land Use'],
     outcome:'Failed', tally:'Unanimous',
-    votes:{ brown:'No', miller:'No', newton:'No', eckman:'No', bennett:'No', kramer:'No', craige:'No', garner:'No' },
+    votes:{ brown:'No', miller:'No', newton:'No', eckman:'No', bennett:'No', kramer:'No', garner:'No' },
   },
   {
     id:'drb2026-15', date:'2026-08-06', year:2026,
@@ -9156,7 +9159,7 @@ const DRB_VOTE_ITEMS = [
     description:'Board voted to continue the final agenda item (item 7) to the September 3, 2026 Design Review Board meeting.',
     tags:['Other'],
     outcome:'Passed', tally:'Unanimous',
-    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', craige:'Yes', garner:'Yes' },
+    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', garner:'Yes' },
   },
 
   /* ── September 3, 2026 ── */
@@ -9168,7 +9171,7 @@ const DRB_VOTE_ITEMS = [
     description:'Motion to recommend approval to town council for a one-year conditional use permit (covering the 2026-2027 ski season) for a temporary food truck, seating, and tent at the Meadows base area, with conditions 1 through 4.',
     tags:['Land Use'],
     outcome:'Passed', tally:'Unanimous',
-    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', craige:'Yes', garner:'Yes' },
+    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', garner:'Yes' },
   },
   {
     id:'drb2026-17', date:'2026-09-03', year:2026,
@@ -9178,7 +9181,7 @@ const DRB_VOTE_ITEMS = [
     description:'Motion to approve the specific approval for a general easement encroachment for soil retention structures at 4140 Cortina Drive, with conditions 1 through 4 and deleting conditions 5, 6, and 7.',
     tags:['Land Use'],
     outcome:'Passed', tally:'Unanimous',
-    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', craige:'Yes', garner:'Yes' },
+    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', garner:'Yes' },
   },
   {
     id:'drb2026-18', date:'2026-09-03', year:2026,
@@ -9188,7 +9191,7 @@ const DRB_VOTE_ITEMS = [
     description:'Motion to approve the final architecture review for a new single family detached condominium at Lot AR 54 Adams Way, removing the GE roof eave encroachment from specific approvals, with design variations 1 and 2 subject to fire marshal approval, and conditions 1 through 7; one member opposed.',
     tags:['Land Use'],
     outcome:'Passed', tally:'Majority',
-    votes:{ brown:'Voice', miller:'Voice', newton:'Voice', eckman:'Voice', bennett:'Voice', kramer:'Voice', craige:'Voice', austin:'Voice', garner:'Voice' },
+    votes:{ brown:'Voice', miller:'Voice', newton:'Voice', eckman:'Voice', bennett:'Voice', kramer:'Voice', austin:'Voice', garner:'Voice', tbrown:'Voice' },
   },
   {
     id:'drb2026-19', date:'2026-09-03', year:2026,
@@ -9198,7 +9201,7 @@ const DRB_VOTE_ITEMS = [
     description:'Motion to approve the final architecture review for a new single family home at Lot 164B1R TBD San Joaquin Road with specific approvals 4 through 6, design variations 3, 4, and 5 (flat roof), and conditions 1 through 7 including a new easement condition; one member opposed.',
     tags:['Land Use'],
     outcome:'Passed', tally:'Majority',
-    votes:{ brown:'Voice', miller:'Voice', newton:'Voice', eckman:'Voice', bennett:'Voice', kramer:'Voice', craige:'Voice', austin:'Voice', garner:'Voice' },
+    votes:{ brown:'Voice', miller:'Voice', newton:'Voice', eckman:'Voice', bennett:'Voice', kramer:'Voice', austin:'Voice', garner:'Voice', tbrown:'Voice' },
   },
   {
     id:'drb2026-20', date:'2026-09-03', year:2026,
@@ -9208,7 +9211,7 @@ const DRB_VOTE_ITEMS = [
     description:'Motion to approve the final architecture review for a new detached condominium at Lot 155-7 TBD San Joaquin Drive with specific approvals 1 through 3, design variations 1 and 2, and conditions 1 through 8.',
     tags:['Land Use'],
     outcome:'Passed', tally:'Unanimous',
-    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', craige:'Yes', garner:'Yes' },
+    votes:{ brown:'Yes', miller:'Yes', newton:'Yes', eckman:'Yes', bennett:'Yes', kramer:'Yes', garner:'Yes' },
   },
 
   /* ── August 6, 2026 ── */
@@ -9232,7 +9235,7 @@ const DRB_VOTE_ITEMS = [
     description:'DRB approved final architecture review including design variations for hardy board siding/fascia, alternative parking requirement, previously approved easement encroachments, with additional conditions including 35% stone requirement, sconces replacing recessed balcony lighting, permanent irrigation of open space, and courtyard drainage review by staff.',
     tags:['Land Use'],
     outcome:'Passed', tally:'6-0',
-    votes:{ brown:'Voice', miller:'Voice', newton:'Voice', eckman:'Voice', bennett:'Voice', kramer:'Voice', craige:'Voice', austin:'Voice', garner:'Voice' },
+    votes:{ brown:'Voice', miller:'Voice', newton:'Voice', eckman:'Voice', bennett:'Voice', kramer:'Voice', austin:'Voice', garner:'Voice', tbrown:'Voice' },
   },
   {
     id:'drb2026-23', date:'2026-10-01', year:2026,
@@ -9242,7 +9245,7 @@ const DRB_VOTE_ITEMS = [
     description:'DRB approved final architecture review with specific approvals for secondary curb cut and outdoor living space lighting, with conditions including reducing Unit 7 entry to 3 fixtures and LCE terrace to 7 fixtures.',
     tags:['Land Use'],
     outcome:'Passed', tally:'6-0',
-    votes:{ brown:'Voice', miller:'Voice', newton:'Voice', eckman:'Voice', bennett:'Voice', kramer:'Voice', craige:'Voice', austin:'Voice', garner:'Voice' },
+    votes:{ brown:'Voice', miller:'Voice', newton:'Voice', eckman:'Voice', bennett:'Voice', kramer:'Voice', austin:'Voice', garner:'Voice', tbrown:'Voice' },
   },
   {
     id:'drb2026-24', date:'2026-10-01', year:2026,
@@ -9252,7 +9255,7 @@ const DRB_VOTE_ITEMS = [
     description:'DRB recommended approval to town council for a 3-year CUP renewal expiring upon gondola seasonal closure in fall 2029, with conditions including skirting installation, electrical permit, and fire code compliance.',
     tags:['Land Use'],
     outcome:'Passed', tally:'6-0',
-    votes:{ brown:'Voice', miller:'Voice', newton:'Voice', eckman:'Voice', bennett:'Voice', kramer:'Voice', craige:'Voice', austin:'Voice', garner:'Voice' },
+    votes:{ brown:'Voice', miller:'Voice', newton:'Voice', eckman:'Voice', bennett:'Voice', kramer:'Voice', austin:'Voice', garner:'Voice', tbrown:'Voice' },
   },
   {
     id:'drb2026-25', date:'2026-10-01', year:2026,
@@ -9262,7 +9265,7 @@ const DRB_VOTE_ITEMS = [
     description:'DRB voted to continue the final architecture review for the Snowdrift Swift Lane single-family home to the December 3, 2026 DRB meeting.',
     tags:['Land Use'],
     outcome:'Passed', tally:'6-0',
-    votes:{ brown:'Voice', miller:'Voice', newton:'Voice', eckman:'Voice', bennett:'Voice', kramer:'Voice', craige:'Voice', austin:'Voice', garner:'Voice' },
+    votes:{ brown:'Voice', miller:'Voice', newton:'Voice', eckman:'Voice', bennett:'Voice', kramer:'Voice', austin:'Voice', garner:'Voice', tbrown:'Voice' },
   },
   {
     id:'drb2026-26', date:'2026-10-01', year:2026,
@@ -9272,7 +9275,7 @@ const DRB_VOTE_ITEMS = [
     description:'DRB voted to table the single-family home application at Lot 1171R to the February 4, 2027 DRB meeting, requiring re-noticing.',
     tags:['Land Use'],
     outcome:'Passed', tally:'6-0',
-    votes:{ brown:'Voice', miller:'Voice', newton:'Voice', eckman:'Voice', bennett:'Voice', kramer:'Voice', craige:'Voice', austin:'Voice', garner:'Voice' },
+    votes:{ brown:'Voice', miller:'Voice', newton:'Voice', eckman:'Voice', bennett:'Voice', kramer:'Voice', austin:'Voice', garner:'Voice', tbrown:'Voice' },
   },
   {
     id:'drb2026-27', date:'2026-10-01', year:2026,
@@ -9292,7 +9295,7 @@ const DRB_VOTE_ITEMS = [
     description:'DRB approved the 2027 meeting schedule with the modification of moving the September meeting from September 2nd to September 9th, 2027.',
     tags:['Other'],
     outcome:'Passed', tally:'6-0',
-    votes:{ brown:'Voice', miller:'Voice', newton:'Voice', eckman:'Voice', bennett:'Voice', kramer:'Voice', craige:'Voice', austin:'Voice', garner:'Voice' },
+    votes:{ brown:'Voice', miller:'Voice', newton:'Voice', eckman:'Voice', bennett:'Voice', kramer:'Voice', austin:'Voice', garner:'Voice', tbrown:'Voice' },
   },
 
 ];
