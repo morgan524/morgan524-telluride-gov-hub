@@ -3795,24 +3795,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Applications Open for 2026/2027 Temporary Winter Community Housing Program",
-    source: "Town of Telluride",
-    date: "October 9, 2026",
-    newsTopic: "housing",
-    copy: "(October 8, 2026) – The Town of Telluride is accepting applications for its Temporary Winter Community Housing program for the 2026/2027 winter season. The program provides seasonal housing in Town Park for eligible workers employed in the Telluride area.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=406",
-    img: ""
-  },
-  {
-    title: "San Miguel County Public Health Announces Fall Vaccine Availability",
-    source: "San Miguel County",
-    date: "October 1, 2026",
-    newsTopic: "health",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1419",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14836"
-  },
-  {
     title: "DMV Services available in Egnar 11/18",
     source: "San Miguel County",
     date: "October 15, 2026",
@@ -8061,77 +8043,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_792d96c0-09c8-479f-83f8-bdf3681b49ae.html",
     address: "455 Mountain Village Blvd, Suite A, Mountain Village, CO",
     noticeKey: "ord-mv-fees-16.01-16.02-COL-000256"
-  },
-  {
-    title: "Public Hearing Notice -- San Miguel County Planning Commission Regular Meeting (COL-000261)",
-    entity: "San Miguel County Planning Commission",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The San Miguel County Planning Commission will hold its regular monthly meeting on October 8, 2026 at 9:00 a.m. at 333 West Colorado Ave., Second Floor, Telluride, CO, also available via Zoom. Agenda items include approval of September minutes, a work session with the BOCC on an Affordable Housing Code Update, a Land Use Code Amendment recommendation regarding Subdivisions and Condominium Plats, and staff comments. Community members may participate in person or via Zoom using the provided link and credentials.",
-    deadline: "2026-10-08",
-    expires: "2026-10-08",
-    dates: "10/1",
-    papers: ["ttimes_1001"],
-    url: "https://www.telluridenews.com/news/legals/article_792d96c0-09c8-479f-83f8-bdf3681b49ae.html",
-    address: "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
-    noticeKey: "smc-planning-commission-meeting-oct8-2026-COL-000261"
-  },
-  {
-    title: "Public Hearing Notice -- Land Use Code Amendment: Deep Geothermal Operations (COL-000263)",
-    entity: "San Miguel County Board of County Commissioners",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The San Miguel County Board of County Commissioners will hold a public hearing on October 21, 2026 at 9:30 a.m. or later to consider a Land Use Code amendment adding a new Section 6-6 regulating Deep Geothermal Operations with related amendments. This is the second step of a two-step process requiring Planning Commission review and BOCC approval. Written comments must be received by October 13, 2026 and may be submitted to the San Miguel County Planning Department by mail or email.",
-    deadline: "2026-10-21",
-    expires: "2026-10-21",
-    dates: "10/1",
-    papers: ["ttimes_1001"],
-    url: "https://www.telluridenews.com/news/legals/article_792d96c0-09c8-479f-83f8-bdf3681b49ae.html",
-    address: "333 W Colorado Ave, 2nd Floor, Telluride, CO 81435",
-    noticeKey: "smc-bocc-luc-deep-geothermal-COL-000263"
-  },
-  {
-    title: "Tax-Finance -- 2025 Delinquent Real Property Tax Lien Sale, San Miguel County",
-    entity: "San Miguel County Treasurer (Brandi R. Hatfield)",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "San Miguel County Treasurer Brandi R. Hatfield has announced the 2025 Delinquent Real Property Tax Lien Sale, to be held online at www.govease.com on Monday, October 26, 2026 at 10:00 a.m. Property owners with delinquent 2025 (and earlier) taxes must pay in full at the Treasurer's office no later than noon on October 22, 2026 to avoid having a tax lien sold against their property. The interest rate on tax lien certificates sold in 2026 is 13% per year, and the delinquent tax listing includes numerous San Miguel County parcels published for three consecutive weeks (October 1, 8, and 15, 2026).",
-    deadline: "2026-10-22",
-    expires: "2026-10-26",
-    dates: "10/1",
-    papers: ["ttimes_1001"],
-    url: "https://www.telluridenews.com/news/legals/article_792d96c0-09c8-479f-83f8-bdf3681b49ae.html",
-    address: "San Miguel County, Colorado (various parcels countywide)",
-    noticeKey: "smc-delinquent-tax-lien-sale-2025"
-  },
-  {
-    title: "Request for Proposal -- TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "Town of Telluride is seeking qualified respondents for: TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS.",
-    deadline: "Closes 1/11/2026",
-    expires: "2026-01-11",
-    dates: "10/27",
-    url: "https://www.telluride.gov/bids.aspx?bidID=133",
-    address: "",
-    totBidID: "133"
   }
 ];
 
