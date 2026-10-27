@@ -1,27 +1,5 @@
 [
   {
-    "title": "Blood Drive Hosted by Telluride Fire & Vitalant",
-    "link": "https://koto.org/event/blood-drive-hosted-by-telluride-fire-vitalant/",
-    "description": "Telluride Fire and Vitalant are hosting a blood drive at Telluride Fire Station 1 on Tuesday, October 27, running from 10:45 AM to 2:30 PM. Community members can sign up to donate at vitalant.org.",
-    "pubDate": "2026-10-27T10:45:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Fire Station 1",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/09/Blood-Drive-IG-POST-7.png"
-  },
-  {
-    "title": "Social Media for Nonprofits: Myth-Busting, Strategy & Practical Tips for Making Social Media Work for You",
-    "link": "https://koto.org/event/social-media-for-nonprofits-myth-busting-strategy-practical-tips-for-making-social-media-work-for-you/",
-    "description": "A workshop at Wilkinson Public Library addressing social media strategies for nonprofits, cutting through common myths and misconceptions about algorithms, posting frequency, and trends. The session aims to offer practical, grounded guidance on what actually matters when using social media effectively in a nonprofit context.",
-    "pubDate": "2026-10-27T11:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/09/Social-Media-Workshop-Poster.png"
-  },
-  {
     "title": "Telluride Remembrance Garden Dedication Ceremony",
     "link": "https://koto.org/event/telluride-remembrance-garden-dedication-ceremony/",
     "description": "A dedication ceremony for the Telluride Remembrance Garden, hosted by Thrive Community Health Network, at the garden's location on the river trail at the intersection of Colorado Avenue and Hemlock Street. The event honors those the community has loved and lost, marking the formal opening of this dedicated memorial space.",
@@ -374,6 +352,17 @@
     "imageUrl": "https://koto.org/wp-content/uploads/2026/02/sewing.jpg"
   },
   {
+    "title": "Semana De Bienestar",
+    "link": "https://koto.org/event/semana-de-bienestar/",
+    "description": "Semana De Bienestar (Wellness Week) is a free, bilingual, alcohol-free community event at Wilkinson Public Library offering programming for children, adults, and families. Activities are available in both English and Spanish, making this an inclusive celebration of wellbeing for the broader Telluride community.",
+    "pubDate": "2026-11-12T00:00:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
+  },
+  {
     "title": "The Creative Exchange at Telluride Arts HQ",
     "link": "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-11-12/",
     "description": "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories that fuel their work. Think of it as an open source model for creativity—where we learn from each other, swap ideas, and help strengthen one another’s practice. Each session is hosted by local artists and creative leaders who bring their own perspectives, techniques, and creative journeys into the room. Topics may span everything from the business of art and professional development, to creative process, storytelling, collaboration, and the philosophical underpinnings of making art. Whether you’re a full-time working artist, an educator, a student, a maker, or simply someone curious about creative expression, the Creative Exchange is open to you. …",
@@ -482,16 +471,5 @@
     "category": "Community Event",
     "location": "Wilkinson Public Library, Telluride",
     "imageUrl": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
-    "title": "Telluride R-1 School District Board Work Session",
-    "link": "https://koto.org/event/telluride-r-1-school-district-board-work-session-2/",
-    "description": "Telluride R-1 School District Board of Education holds a work session on Monday, November 16th, at 3:30 p.m. in the Bridal Veil conference room at TMHS and via Zoom. The work session agenda and Zoom link can be found at tellurideschool.org.",
-    "pubDate": "2026-11-16T15:30:00-07:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Middle/High School, TELLURIDE",
-    "imageUrl": ""
   }
 ]

@@ -1,12 +1,24 @@
 [
   {
+    "title": "'Super Bowl for theater kids'",
+    "source": "Telluride Times",
+    "date": "October 27, 2026",
+    "firstSeen": "2026-10-27",
+    "newsTopic": "education",
+    "copy": "THS theater students are raising $5,000 to attend ThesCon in Denver (Dec. 10–12) while staging \"Young Frankenstein\" Oct. 29–31 at the Michael D. Palm Theatre. Program ad sales and scholarships have covered about 20% so far. Funding cuts have hit the school's theater program hard since its drama teacher retired two years ago and wasn't replaced.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/arts_and_entertainment/article_4447c9ff-5b96-472b-a749-af85ccb311d2.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/11/01188f0c-dab2-480d-ba73-39c6cda9e9a0/6adfa5c0ef71b.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "‘Laugh-out-loud hilarious’",
     "source": "Telluride Times",
     "date": "October 27, 2026",
     "firstSeen": "2026-10-27",
-    "newsTopic": "community",
-    "copy": "A mad scientist, a yodeling assistant, a hunchbacked lackey and a glamorous ingénue who may or may not reappear as the Bride of Frankenstein.",
-    "claudeSummary": false,
+    "newsTopic": "education",
+    "copy": "Telluride Theatre and the Telluride School District are staging \"Young Frankenstein\" with 17 students in grades 7–12, running October 29–31 at the Michael D. Palm Theatre. Now in its second year of collaboration, the program includes student performers, designers, stage managers, and an assistant director.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/arts_and_entertainment/article_1e23d5d5-62d8-4aad-bbe7-1dcd076255a2.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/e5/2e5f7bea-ba5f-4ef4-8940-3de7fbb8b46e/6adf7b1c2c3a2.image.jpg",
     "imgHiRes": true
@@ -1129,6 +1141,24 @@
     "img": ""
   },
   {
+    "title": "Applications Open for 2026/2027 Temporary Winter Community Housing Program",
+    "source": "Town of Telluride",
+    "date": "October 9, 2026",
+    "newsTopic": "housing",
+    "copy": "(October 8, 2026) – The Town of Telluride is accepting applications for its Temporary Winter Community Housing program for the 2026/2027 winter season. The program provides seasonal housing in Town Park for eligible workers employed in the Telluride area.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=406",
+    "img": ""
+  },
+  {
+    "title": "San Miguel County Public Health Announces Fall Vaccine Availability",
+    "source": "San Miguel County",
+    "date": "October 1, 2026",
+    "newsTopic": "health",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1419",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14836"
+  },
+  {
     "title": "DMV Services available in Egnar 11/18",
     "source": "San Miguel County",
     "date": "October 15, 2026",
@@ -1147,6 +1177,17 @@
     "claudeSummary": false,
     "href": "https://coloradosun.com/2026/10/26/ridgway-lawsuit-mountain-village-resort-housing/",
     "img": "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2026/10/IMG_5818-scaled.jpg?fit=1024%2C768&amp;ssl=1"
+  },
+  {
+    "title": "View the Town of Ridgway's Recently Adopted Housing Action Plan",
+    "source": "Town of Ridgway",
+    "date": "October 27, 2026",
+    "firstSeen": "2026-10-27",
+    "newsTopic": "housing",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/CO-Ridgway-HAP_ADOPTED101426-acc.pdf",
+    "img": ""
   },
   {
     "title": "View the Town of Ridgway's Recently Adopted Water Supply Element",

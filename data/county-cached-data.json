@@ -181,5 +181,14 @@
     "location": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
     "civicClerkId": 1080,
     "note": null
+  },
+  {
+    "date": "January 25, 2027",
+    "time": "4:00 PM",
+    "title": "Open Space Commission Meeting",
+    "type": "other",
+    "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+    "civicClerkId": 1061,
+    "note": null
   }
 ]

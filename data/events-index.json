@@ -55,32 +55,6 @@
     "type": "Family & Kids"
   },
   {
-    "title": "Blood Drive Hosted by Telluride Fire & Vitalant",
-    "href": "https://koto.org/event/blood-drive-hosted-by-telluride-fire-vitalant/",
-    "date": "2026-10-27",
-    "time": "10:45 AM",
-    "location": "Telluride Fire Station 1",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/09/Blood-Drive-IG-POST-7.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Telluride Fire and Vitalant are hosting a blood drive at Telluride Fire Station 1 on Tuesday, October 27, running from 10:45 AM to 2:30 PM. Community members can sign up to donate at vitalant.org.",
-    "type": "Community"
-  },
-  {
-    "title": "Social Media for Nonprofits: Myth-Busting, Strategy & Practical Tips for Making Social Media Work for You",
-    "href": "https://koto.org/event/social-media-for-nonprofits-myth-busting-strategy-practical-tips-for-making-social-media-work-for-you/",
-    "date": "2026-10-27",
-    "time": "11:00 AM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/09/Social-Media-Workshop-Poster.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "A workshop at Wilkinson Public Library addressing social media strategies for nonprofits, cutting through common myths and misconceptions about algorithms, posting frequency, and trends. The session aims to offer practical, grounded…",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "Teen Cook",
     "href": "https://telluridelibrary.libcal.com/event/17486121?hs=a",
     "date": "2026-10-27",
@@ -910,6 +884,19 @@
     "source": "Telluride.com",
     "desc": "Join the Telluride Historical Museum for Halloween on the Hill. The museum will be hosting games, trick or treating, …",
     "type": "Community"
+  },
+  {
+    "title": "Halloween Dance Party",
+    "href": "https://www.telluride.com/event/halloween-dance-party/",
+    "date": "2026-10-31",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/55837/863251585_18016337219952458_168798008229105469_n.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Get spooky at Van Atta for Halloween! Join them for their 2nd Annual Halloween Dance Party - this year will feature …",
+    "type": "Music"
   },
   {
     "title": "Telluride Fire Halloween Open House",
@@ -1858,6 +1845,19 @@
     "desc": "The Ouray Economic Development Committee (OEDC) works as the liaison between the City and the local business community. This includes creating and implementing an Economic Development Plan and economic development incentives to best serve…",
     "type": "Community",
     "endDate": "2026-12-10"
+  },
+  {
+    "title": "Semana De Bienestar",
+    "href": "https://koto.org/event/semana-de-bienestar/",
+    "date": "2026-11-12",
+    "time": "",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-7.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Semana De Bienestar (Wellness Week) is a free, bilingual, alcohol-free community event at Wilkinson Public Library offering programming for children, adults, and families. Activities are available in both English and Spanish, making this…",
+    "type": "Family & Kids"
   },
   {
     "title": "Up-Off Gymnastics, Dance, and Spanish",

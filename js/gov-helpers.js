@@ -831,13 +831,13 @@ const MEETING_PREVIEWS = {
     "The Noxious Weed Advisory Board will consider proposed 2027 meeting dates, discuss enforcement authority and potential Board of County Commissioners involvement, review grant funding outlooks including ATB funds, and address a Code of Conduct compliance check. The board may also take up new business items at its Norwood meeting.",
 
   "telluride|2026-10-27|Town Council - Oct 27 2026":
-    "Council is expected to review 2026 special events held on town property and discuss a proposed two-night concert in Town Park scheduled for August 2027. Related notices include a new paper billing fee from San Miguel Power Association and a request for proposals on employee rental housing policy consulting.",
+    "Council is expected to review 2026 special events held on town property and discuss a proposed two-night concert in Town Park scheduled for August 2027. Additional business may include employee rental housing policy reforms and other administrative matters.",
 
   "ouray|2026-10-27|Board of County Commissioners":
-    "Board will consider extending an emergency disaster declaration for a fifth time, authorizing a flag display honoring veterans at the 4-H Event Center, and approving a request to fill a vacancy in the County Clerk and Recorder's Office under an existing austerity resolution, along with routine financial approvals.",
+    "Board will consider extending an emergency disaster declaration, approving routine expenditures, authorizing a vacancy fill in the County Clerk and Recorder's Office, and deciding on a request to hang a Veteran's Flag at the 4-H Event Center. Public comment will also be welcomed.",
 
   "ouray|2026-10-27|Board of County Commissioners Work Session":
-    "Commissioners are expected to receive administrative reports and discuss a proposed merger between EMS and Ridgway Fire services, including budget and operational considerations and a preliminary draft agreement. No formal action will be taken, but commissioners may provide direction to staff."
+    "Commissioners are expected to receive administrative reports and discuss a potential merger between EMS and Ridgway Fire services, including budget and operational considerations and a preliminary draft agreement. No formal action will be taken, but commissioners may provide direction to staff on the merger proposal."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -2666,13 +2666,25 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "'Super Bowl for theater kids'",
+    source: "Telluride Times",
+    date: "October 27, 2026",
+    firstSeen: "2026-10-27",
+    newsTopic: "education",
+    copy: "THS theater students are raising $5,000 to attend ThesCon in Denver (Dec. 10–12) while staging \"Young Frankenstein\" Oct. 29–31 at the Michael D. Palm Theatre. Program ad sales and scholarships have covered about 20% so far. Funding cuts have hit the school's theater program hard since its drama teacher retired two years ago and wasn't replaced.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_4447c9ff-5b96-472b-a749-af85ccb311d2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/11/01188f0c-dab2-480d-ba73-39c6cda9e9a0/6adfa5c0ef71b.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "‘Laugh-out-loud hilarious’",
     source: "Telluride Times",
     date: "October 27, 2026",
     firstSeen: "2026-10-27",
-    newsTopic: "community",
-    copy: "A mad scientist, a yodeling assistant, a hunchbacked lackey and a glamorous ingénue who may or may not reappear as the Bride of Frankenstein.",
-    claudeSummary: false,
+    newsTopic: "education",
+    copy: "Telluride Theatre and the Telluride School District are staging \"Young Frankenstein\" with 17 students in grades 7–12, running October 29–31 at the Michael D. Palm Theatre. Now in its second year of collaboration, the program includes student performers, designers, stage managers, and an assistant director.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/arts_and_entertainment/article_1e23d5d5-62d8-4aad-bbe7-1dcd076255a2.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/e5/2e5f7bea-ba5f-4ef4-8940-3de7fbb8b46e/6adf7b1c2c3a2.image.jpg",
     imgHiRes: true
@@ -3795,6 +3807,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Applications Open for 2026/2027 Temporary Winter Community Housing Program",
+    source: "Town of Telluride",
+    date: "October 9, 2026",
+    newsTopic: "housing",
+    copy: "(October 8, 2026) – The Town of Telluride is accepting applications for its Temporary Winter Community Housing program for the 2026/2027 winter season. The program provides seasonal housing in Town Park for eligible workers employed in the Telluride area.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=406",
+    img: ""
+  },
+  {
+    title: "San Miguel County Public Health Announces Fall Vaccine Availability",
+    source: "San Miguel County",
+    date: "October 1, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1419",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14836"
+  },
+  {
     title: "DMV Services available in Egnar 11/18",
     source: "San Miguel County",
     date: "October 15, 2026",
@@ -3813,6 +3843,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: false,
     href: "https://coloradosun.com/2026/10/26/ridgway-lawsuit-mountain-village-resort-housing/",
     img: "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2026/10/IMG_5818-scaled.jpg?fit=1024%2C768&amp;ssl=1"
+  },
+  {
+    title: "View the Town of Ridgway's Recently Adopted Housing Action Plan",
+    source: "Town of Ridgway",
+    date: "October 27, 2026",
+    firstSeen: "2026-10-27",
+    newsTopic: "housing",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/CO-Ridgway-HAP_ADOPTED101426-acc.pdf",
+    img: ""
   },
   {
     title: "View the Town of Ridgway's Recently Adopted Water Supply Element",
@@ -3961,6 +4002,14 @@ const KOTO_NEWSCASTS = [
 ];
 
 const KOTO_FEATURED_STORIES = [
+  {
+    title: "Mesa Rose Blooms Again",
+    source: "KOTO Community Radio",
+    date: "October 23, 2026",
+    newsTopic: "community",
+    copy: "Mesa Rose coffee shop is reopening in Norwood, with a new space and big plans for the future. But owners Kate and Erik Anderson say it's still the same community that's been at its heart for the past five years.",
+    href: "https://koto.org/news/mesa-rose-blooms-again/"
+  },
   {
     title: "Naturita Burro Race Brings Big Hearts and a Lot of Attitude",
     source: "KOTO Community Radio",
@@ -4483,28 +4532,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Blood Drive Hosted by Telluride Fire & Vitalant",
-    link: "https://koto.org/event/blood-drive-hosted-by-telluride-fire-vitalant/",
-    description: "Telluride Fire and Vitalant are hosting a blood drive at Telluride Fire Station 1 on Tuesday, October 27, running from 10:45 AM to 2:30 PM. Community members can sign up to donate at vitalant.org.",
-    pubDate: "2026-10-27T10:45:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Fire Station 1",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/09/Blood-Drive-IG-POST-7.png"
-  },
-  {
-    title: "Social Media for Nonprofits: Myth-Busting, Strategy & Practical Tips for Making Social Media Work for You",
-    link: "https://koto.org/event/social-media-for-nonprofits-myth-busting-strategy-practical-tips-for-making-social-media-work-for-you/",
-    description: "A workshop at Wilkinson Public Library addressing social media strategies for nonprofits, cutting through common myths and misconceptions about algorithms, posting frequency, and trends. The session aims to offer practical, grounded guidance on what actually matters when using social media effectively in a nonprofit context.",
-    pubDate: "2026-10-27T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/09/Social-Media-Workshop-Poster.png"
-  },
-  {
     title: "Telluride Remembrance Garden Dedication Ceremony",
     link: "https://koto.org/event/telluride-remembrance-garden-dedication-ceremony/",
     description: "A dedication ceremony for the Telluride Remembrance Garden, hosted by Thrive Community Health Network, at the garden's location on the river trail at the intersection of Colorado Avenue and Hemlock Street. The event honors those the community has loved and lost, marking the formal opening of this dedicated memorial space.",
@@ -4857,6 +4884,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/02/sewing.jpg"
   },
   {
+    title: "Semana De Bienestar",
+    link: "https://koto.org/event/semana-de-bienestar/",
+    description: "Semana De Bienestar (Wellness Week) is a free, bilingual, alcohol-free community event at Wilkinson Public Library offering programming for children, adults, and families. Activities are available in both English and Spanish, making this an inclusive celebration of wellbeing for the broader Telluride community.",
+    pubDate: "2026-11-12T00:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
     title: "The Creative Exchange at Telluride Arts HQ",
     link: "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-11-12/",
     description: "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories that fuel their work. Think of it as an open source model for creativity—where we learn from each other, swap ideas, and help strengthen one another’s practice. Each session is hosted by local artists and creative leaders who bring their own perspectives, techniques, and creative journeys into the room. Topics may span everything from the business of art and professional development, to creative process, storytelling, collaboration, and the philosophical underpinnings of making art. Whether you’re a full-time working artist, an educator, a student, a maker, or simply someone curious about creative expression, the Creative Exchange is open to you. …",
@@ -4965,17 +5003,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
-    title: "Telluride R-1 School District Board Work Session",
-    link: "https://koto.org/event/telluride-r-1-school-district-board-work-session-2/",
-    description: "Telluride R-1 School District Board of Education holds a work session on Monday, November 16th, at 3:30 p.m. in the Bridal Veil conference room at TMHS and via Zoom. The work session agenda and Zoom link can be found at tellurideschool.org.",
-    pubDate: "2026-11-16T15:30:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Middle/High School, TELLURIDE",
-    imageUrl: ""
   }
 ];
 
@@ -5032,7 +5059,20 @@ const WILKINSON_EVENTS = [
 // none of which are advertised as adoptable. The sync filters those out, so
 // this repopulates automatically when THS posts genuinely-available pets.
 const HUMANE_SOCIETY_ANIMALS = [
-
+  {
+    id: "TEL-A-206",
+    name: "Roo",
+    species: "Dog",
+    breed: "Cattle Dog, Australian (Blue Heeler) / Mixed Breed (Medium)",
+    ageGroup: "Young Puppy",
+    sex: "Female",
+    photo: "https://new-s3.shelterluv.com/profile-pictures/5768755a36f4f238b922ce9fea58a64e/ac175b19b11dbd163e40d0bbb3aba945.jpg",
+    profileUrl: "https://www.shelterluv.com/embed/animal/214866464",
+    summary: "Young Puppy • Cattle Dog, Australian (Blue Heeler) / Mixed Breed (Medium) • Female",
+    firstSeen: "2026-10-27",
+    revealDate: "2026-10-27",
+    lastSeen: "2026-10-27"
+  }
 ];
 
 /* The Alibi events — refreshed by syncAlibiEvents() every 6 hours.
@@ -7292,6 +7332,17 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/49432/poster_11x17-rgb--v1.800x533.webp"
   },
   {
+    title: "Halloween Dance Party",
+    link: "https://www.telluride.com/event/halloween-dance-party/",
+    description: "Get spooky at Van Atta for Halloween! Join them for their 2nd Annual Halloween Dance Party - this year will feature …",
+    pubDate: "2026-10-31",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/55837/863251585_18016337219952458_168798008229105469_n.800x533.webp"
+  },
+  {
     title: "Telluride Fire Halloween Open House",
     link: "https://www.telluride.com/event/telluride-fire-halloween-open-house/",
     description: "Telluride Fire invites the community to its Halloween Open House on Saturday, October 31, from 4–7 p.m. at …",
@@ -8043,6 +8094,23 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_792d96c0-09c8-479f-83f8-bdf3681b49ae.html",
     address: "455 Mountain Village Blvd, Suite A, Mountain Village, CO",
     noticeKey: "ord-mv-fees-16.01-16.02-COL-000256"
+  },
+  {
+    title: "Request for Proposal -- TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS",
+    entity: "Town of Telluride",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Request for Proposal",
+    filterTag: "public-entity",
+    summary: "Town of Telluride is seeking qualified respondents for: TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS.",
+    deadline: "Closes 1/11/2026",
+    expires: "2026-01-11",
+    dates: "10/27",
+    url: "https://www.telluride.gov/bids.aspx?bidID=133",
+    address: "",
+    totBidID: "133"
   }
 ];
 
@@ -9600,15 +9668,6 @@ const TELLURIDE_BOARD_MEETINGS = [
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "5:30 PM",
     civicwebId: 8312
-  },
-  {
-    date: "November 5, 2026",
-    title: "Town Council Budget",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054",
-    hasAgenda: false,
-    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: "9:00 AM",
-    civicwebId: 8054
   },
   {
     date: "November 9, 2026",
