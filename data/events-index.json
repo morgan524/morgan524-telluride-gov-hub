@@ -103,7 +103,7 @@
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_29_12_15_23.png",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "A drop-in crafting program at Wilkinson Public Library where participants create art using Perler beads, which are small plastic beads arranged into patterns and fused together with heat. The program runs Monday afternoons from 4:00 to…",
+    "desc": "4:00 PM – 5:00 PM · Join us for Perler Bead Art on Monday afternoons.",
     "type": "Arts & Film"
   },
   {
@@ -124,7 +124,7 @@
     "href": "https://telluridelibrary.libcal.com/event/17278977?hs=a",
     "date": "2026-10-26",
     "time": "5:30 PM",
-    "location": "Magazine Room",
+    "location": "Program Room",
     "town": "Telluride",
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_17_13_45_00.jpg",
     "category": "Library Event",
@@ -195,7 +195,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided bicycle tour departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co. Riders receive a complimentary beer upon arrival at the brewery.",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
   },
   {
@@ -380,7 +380,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49288/event.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "The Public Art Commission for Mountain Village holds one of its periodic meetings, gathering on an as-needed basis to conduct town business related to public art. The meeting is accessible in person as well as remotely via computer,…",
+    "desc": "The Public Art Commission meets on an as-needed basis. Zoom link included in the meeting agenda.",
     "type": "Arts & Film"
   },
   {
@@ -393,7 +393,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A community workshop held in Mountain Village bringing together participants to explore eco-grief — the emotional weight of loss tied to environmental change — alongside gratitude and love as responses to a shifting world. The program is a…",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
     "type": "Talks & Classes"
   },
   {
@@ -488,8 +488,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-1.jpg",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "A theatrical performance at the Sheridan Opera House presenting two spooky-season stories: Washington Irving's classic *The Legend of Sleepy Hollow* and *The Little Ghost Who Was a Quilt*. The production is part of the Adventures in Acting…",
-    "type": "Arts & Film"
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Weapons: Movie Night @ the Wright.",
@@ -541,7 +541,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Mountain Village's Heritage Plaza hosts a weekly outdoor market featuring vendors and tents in the heart of the pedestrian-friendly town center. The Market on the Plaza brings together local sellers for a community gathering in the scenic…",
+    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
     "type": "Community"
   },
   {
@@ -673,7 +673,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather and share a meal together. This recurring community event provides both nourishment and social connection for Norwood's…",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1078,8 +1078,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars is a recurring outdoor film series held at the Conference Center Plaza in Mountain Village, taking place on Saturday evenings at dusk. The series runs from June 13 through August 15.",
-    "type": "Arts & Film"
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -1172,7 +1172,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided bike ride through Mountain Village, traveling the Jurassic and Meadows Trails down to Telluride Brewing Co. for a complimentary beer. The tour departs from the Mountain Lodge and offers a scenic route connecting Mountain Village…",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
   },
   {
@@ -1238,7 +1238,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A community workshop hosted in Mountain Village, bringing together Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library to explore the emotional landscape of ecological grief and…",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
     "type": "Talks & Classes"
   },
   {
@@ -1304,7 +1304,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Mountain Village's Heritage Plaza hosts a weekly outdoor market featuring vendors with tents set up throughout the pedestrian-friendly space. The market brings together local and regional sellers offering goods to the Mountain Village…",
+    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
     "type": "Community"
   },
   {
@@ -1383,7 +1383,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
     "category": "Community Event",
     "source": "Ouray County",
-    "desc": "Representatives from multiple counties will gather to discuss funding opportunities related to wildfire preparedness and mitigation. The meeting, organized through Ouray County, may include participation from two or more Ouray County…",
+    "desc": "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3792",
     "type": "Talks & Classes"
   },
   {
@@ -1581,8 +1581,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars is a recurring outdoor film series held at the Conference Center Plaza in Mountain Village, screening movies on Saturday evenings at dusk throughout the summer. The series runs weekly from June 13 through August 15,…",
-    "type": "Arts & Film"
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -1659,7 +1659,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided bicycle ride through Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where participants receive a complimentary beer. The tour departs from the Mountain Lodge and offers a scenic…",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
   },
   {
@@ -1803,7 +1803,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/27556/merchant_event-1.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A monthly gathering for Mountain Village merchants, held on the second Tuesday of each month from 10 to 11 a.m. The meeting is offered in a hybrid format, allowing participants to attend either in person or remotely.",
+    "desc": "Join us for the monthly Mountain Village Merchant Meeting to be held on the second Tuesday of each month from 10 to 11 a.m. The meeting will be hybrid with",
     "type": "Community"
   },
   {
@@ -1816,7 +1816,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A community workshop hosted by Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library, exploring the emotional intersection of grief and gratitude in response to environmental change.…",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
     "type": "Talks & Classes"
   },
   {
@@ -1842,7 +1842,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Mountain Village's Heritage Plaza hosts a weekly outdoor market featuring local vendors. The market brings together a variety of goods in the pedestrian-friendly plaza setting.",
+    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
     "type": "Community"
   },
   {
@@ -2171,8 +2171,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars is an outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening movies on Saturday evenings at dusk. The series runs on select Saturdays and offers a community gathering under the open…",
-    "type": "Arts & Film"
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -2249,7 +2249,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided bicycle tour departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route connects Mountain Village to…",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
   },
   {
@@ -2289,7 +2289,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A community workshop exploring eco-grief and gratitude, held in Mountain Village and presented by Through the Woods Doula, EcoAction Partners, and the Wilkinson Public Library. The event offers participants a space to process emotions of…",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
     "type": "Talks & Classes"
   },
   {
@@ -2328,7 +2328,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Mountain Village's Heritage Plaza hosts a community market featuring local vendors at tents throughout the pedestrian-friendly plaza. The market brings together a variety of goods from area sellers in an outdoor setting.",
+    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
     "type": "Community"
   },
   {
@@ -2419,8 +2419,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars is a recurring outdoor film series held on Saturday evenings at dusk at the Conference Center Plaza in Mountain Village, running from June 13 through August 15. The community event brings free outdoor cinema to the…",
-    "type": "Arts & Film"
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -2459,7 +2459,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided bicycle tour departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route offers a scenic way to connect…",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
   },
   {
@@ -2498,7 +2498,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A community workshop held in Mountain Village exploring eco-grief — the emotional weight of loss tied to environmental change — alongside gratitude and love as responses to a shifting world. Led by Lauren Norton of Through the Woods Doula…",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
     "type": "Talks & Classes"
   },
   {
@@ -2525,7 +2525,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Mountain Village's Heritage Plaza hosts a recurring outdoor market featuring local vendors at tents throughout the pedestrian-friendly plaza. The market brings together a variety of goods from the surrounding community in an open-air…",
+    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
     "type": "Community"
   },
   {
@@ -2660,7 +2660,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/09/Screenshot-2026-10-12-at-10.51.39-AM.png",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "Young People's Theatre presents The SpongeBob Musical at the Sheridan Opera House, bringing the beloved underwater world of Bikini Bottom to life on stage. This youth theater production adapts the beloved animated series into a full-scale…",
+    "desc": "",
     "type": "Arts & Film",
     "endDate": "2026-12-06"
   },
@@ -2728,7 +2728,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Noel Night is a community holiday event hosted by the Town of Norwood, bringing residents together to celebrate the season. Held in early December, it offers a festive evening for families and neighbors in the Norwood area.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2848,7 +2848,7 @@
     "img": "https://1v09t9hszk.ucarecd.net/4a5f4c4e-4a85-416f-bf68-4a874717300c/-/crop/1380x1380/233,0/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "The Regular is a folk rock band based in Denver, Colorado, performing live at The Alibi. The band brings their folk rock sound to Telluride for a late-night show.",
+    "desc": "The Regular is a folk rock band based in Denver, CO. Originally formed in Chicag...",
     "type": "Music"
   },
   {
@@ -2902,8 +2902,8 @@
     "img": "https://1v09t9hszk.ucarecd.net/5a0e2028-07e8-4974-b039-d62e8ab44ab4/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Easy Jim takes the stage at The Alibi for the first night of a residency engagement, bringing live music to this Telluride bar venue. The residency format promises multiple nights of performances in an intimate setting.",
-    "type": "Music"
+    "desc": "“Settle back, easy Jim…” The iconic lyric from Robert Hunter’s Althea captured t...",
+    "type": "Community"
   },
   {
     "title": "Ski Film: Warren Miller's \"Days Off\"",
@@ -2915,7 +2915,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/09/Screenshot-2026-10-12-at-10.22.59-AM.png",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "Warren Miller Entertainment's \"Days Off\" comes to the Sheridan Opera House for a screening of the legendary ski film franchise's latest production. The film showcases skiing and snowboarding footage from mountain destinations around the…",
+    "desc": "",
     "type": "Arts & Film"
   },
   {
@@ -2955,8 +2955,8 @@
     "img": "https://1v09t9hszk.ucarecd.net/5a0e2028-07e8-4974-b039-d62e8ab44ab4/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Easy Jim continues their residency at The Alibi with a late-night performance on the second of what appears to be a multi-night run at the beloved Telluride bar. The residency format promises an intimate, unhurried evening of live music in…",
-    "type": "Music"
+    "desc": "“Settle back, easy Jim…” The iconic lyric from Robert Hunter’s Althea captured t...",
+    "type": "Community"
   },
   {
     "title": "Telluride Rotary Club Meeting",
@@ -3050,5 +3050,32 @@
     "source": "Telluride.com",
     "desc": "The Christmas Eve Torchlight Parade will start at the top of the Gondola and head down into the Town of Telluride. …",
     "type": "Festivals"
+  },
+  {
+    "title": "Tease the Season: A Holiday Burlesque",
+    "href": "https://www.telluride.com/event/tease-the-season-a-holiday-burlesque/",
+    "date": "2026-12-26",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/55819/holidayburlesque2025_hero_1920x1080-min.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Join the Telluride Theatre at the Sheridan Opera House for Tease the Season, a Holiday Burlesque. It's a special night …",
+    "type": "Arts & Film",
+    "endDate": "2026-12-28"
+  },
+  {
+    "title": "Sheridan Arts Foundation Holiday Rewind: A Tribute Concert Series: Tease the Season: Holiday Burlesque, Ft. The House of Shimmy Shake",
+    "href": "https://www.telluride.com/event/sheridan-arts-foundation-holiday-concert-series/",
+    "date": "2026-12-26",
+    "time": "",
+    "location": "Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
+    "category": "",
+    "source": "Telluride.com",
+    "desc": "Join the Sheridan Arts Foundation for five nights of world-class entertainment at the historic Sheridan Opera House.",
+    "type": "Music"
   }
 ]

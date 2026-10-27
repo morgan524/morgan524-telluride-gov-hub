@@ -1,26 +1,22 @@
 {
-  "hash": "89a94d9020ef05c818a1adf4e2001982fdc2df45",
-  "lede": "The biggest thing on the calendar this week is Monday's Town Council meeting, where council takes up the Fourth Supplement to the Gondola IGA — extending cost-sharing on the 2027 planning budget for the gondola replacement — plus first readings of two ordinances, including one amending the Telluride Energy Mitigation Program. Over in Ouray County, commissioners are wrestling with a proposed EMS and Ridgway Fire merger and a fifth extension of their Emergency Disaster Declaration. Closer to home, the gondola is closed Monday for maintenance, and the week winds down with Halloween events including the Witches Ride and Young Frankenstein the Musical.",
+  "hash": "6df753d3c9335c4dc465baf5a2e5961440a7961a",
+  "lede": "The biggest item this week is Monday's Town Council meeting, where three substantive things are on the table: a Fourth Supplement to the Gondola IGA that moves the gondola replacement project forward on the public's dime, plus first readings of two ordinances including one amending the Telluride Energy Mitigation Program. Over in Ouray County, commissioners are also deep into consequential territory — a fifth extension of the Emergency Disaster Declaration and a work session on a proposed merger of EMS and Ridgway Fire. Halloween carries the rest of the week.",
   "notable": [
     {
-      "id": 4,
-      "stake": "Council votes on gondola IGA extension and reads two new ordinances, including energy code changes."
-    },
-    {
-      "id": 6,
-      "stake": "Ouray BOCC votes on fifth Emergency Disaster Declaration extension — ongoing crisis marker."
-    },
-    {
-      "id": 7,
-      "stake": "Preliminary EMS–Ridgway Fire merger agreement reviewed; structural decision affecting response and costs."
+      "id": 0,
+      "stake": "Gondola IGA cost-sharing vote and two ordinances get first readings."
     },
     {
       "id": 2,
-      "stake": "Public update on federal funding pipeline the gondola project depends on; public comment open."
+      "stake": "Ouray County votes on fifth Emergency Disaster Declaration extension."
     },
     {
       "id": 3,
-      "stake": "Early 2027 Fair Board budget discussion and nonprofit structure review up for consideration."
+      "stake": "Proposed EMS and Ridgway Fire merger shapes emergency response for years."
+    },
+    {
+      "id": 8,
+      "stake": "P&Z hears lot-consolidation application in West Telluride's historic district."
     }
   ]
 }

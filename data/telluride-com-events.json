@@ -352,5 +352,29 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/43838/img_0715_rb-2100x1335-500d5271-0938-4018-a4ed-fd9c1cfeb5de.800x533.webp"
+  },
+  {
+    "title": "Sheridan Arts Foundation Holiday Rewind: A Tribute Concert Series",
+    "link": "https://www.telluride.com/event/sheridan-arts-foundation-holiday-concert-series/",
+    "description": "Join the Sheridan Arts Foundation for five nights of world-class entertainment at the historic Sheridan Opera House. …",
+    "pubDate": "2026-12-26",
+    "endDate": "2027-01-03",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/49719/sheridan-opera-house.800x533.webp"
+  },
+  {
+    "title": "Tease the Season: A Holiday Burlesque",
+    "link": "https://www.telluride.com/event/tease-the-season-a-holiday-burlesque/",
+    "description": "Join the Telluride Theatre at the Sheridan Opera House for Tease the Season, a Holiday Burlesque. It's a special night …",
+    "pubDate": "2026-12-26",
+    "endDate": "2026-12-28",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/55819/holidayburlesque2025_hero_1920x1080-min.800x533.webp"
   }
 ]

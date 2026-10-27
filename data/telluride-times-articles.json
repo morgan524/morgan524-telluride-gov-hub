@@ -1,5 +1,17 @@
 [
   {
+    "title": "Snow could shape winter air travel",
+    "source": "Telluride Times",
+    "date": "October 26, 2026",
+    "firstSeen": "2026-10-27",
+    "newsTopic": "community",
+    "copy": "Flight bookings for this winter are running below recent seasons, with air service down 8% November through April compared to last year. Travelers are waiting on snowfall before committing to flights. Breeze's Orange County–Montrose route is paused, but United, American, Southwest, and Denver Airlines are all operating this winter.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_432fda05-da07-4e67-8f3c-924bb69e2b06.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/29/729f7f1a-01f3-46e3-8949-6671be6d318b/6adb90d533492.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Keeping warm on a frigid mountain",
     "source": "Telluride Times",
     "date": "October 26, 2026",
@@ -1061,54 +1073,6 @@
     "imgHiRes": true
   },
   {
-    "title": "Lady Miners win league XC title",
-    "source": "Telluride Times",
-    "date": "October 13, 2026",
-    "firstSeen": "2026-10-13",
-    "newsTopic": "education",
-    "copy": "Telluride's girls cross country team claimed the San Juan Basin League title at Saturday's Chicken Creek Challenge north of Mancos, finishing third overall but first among league schools with 59 points. Senior Ruby Cieciuch led the way, placing eighth in 23:29. On the boys' side, junior Daniel Spinei was THS's top finisher at 48th overall.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/sports/article_86518b0b-b02d-4650-a222-6ec3196caf80.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/64/f64ec0bd-ffe6-4281-abb7-044a5385fef0/6ace9e136141e.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "Mountain club announces approval of new trail construction",
-    "source": "Telluride Times",
-    "date": "October 13, 2026",
-    "firstSeen": "2026-10-13",
-    "newsTopic": "recreation",
-    "copy": "After nearly a decade of planning, the Telluride Mountain Club has received approval for ~8 miles of new trail and 5.5 miles of rehab, with a $2M price tag. First up: a Mountain Village–to–Valley Floor connector, targeting a late summer 2027 opening. A South Side route from Town Park to Bridal Veil Falls is also in the mix.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news_release/article_d84a7299-bf5c-4e20-b9a7-1a412f5df2ff.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/a9/6a9ebbdd-4420-40f5-9deb-4b29b522e9a6/6ace9bb8a56af.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "A modern Mayberry: SMC Sheriff candidate Dan Covault",
-    "source": "Telluride Times",
-    "date": "October 13, 2026",
-    "firstSeen": "2026-10-13",
-    "newsTopic": "public-safety",
-    "copy": "Dan Covault, appointed San Miguel County Sheriff 16 months ago after 20 years in the office, is now running his first public election. He's added water tanks for fire risk areas, expanded mental health programs, and built a corrections academy. Deep roots here — he's worked the region since his teens.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/elections/article_2c1a7889-a43c-4ab1-be1f-ee30552409b2.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/22/a22f7d9f-2d4c-4f7f-9c15-45e4b7dbf910/6acdca94022ff.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "‘Deep-seated Telluride identity’: SMC Sheriff candidate Lane Masters",
-    "source": "Telluride Times",
-    "date": "October 13, 2026",
-    "firstSeen": "2026-10-13",
-    "newsTopic": "public-safety",
-    "copy": "Lane Masters, 37, is running for San Miguel County Sheriff — a lifelong goal for the Telluride native and son of retiring 46-year Sheriff Bill Masters. He brings nine years with the Bismarck PD plus current local deputy and sergeant experience. He's focused on staffing and calls disaster preparedness the county's biggest public safety challenge.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/elections/article_fcaa44d8-c396-49b5-8f3c-362a90a459d3.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/e3/2e30d9d6-1276-4b5b-b378-2bdfe705d42c/6acdd259d2be5.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Fairway masters",
     "source": "Telluride Times",
     "date": "October 18, 2026",
@@ -1213,17 +1177,6 @@
     "img": ""
   },
   {
-    "title": "Town Manager's Report",
-    "source": "Town of Ridgway",
-    "date": "October 13, 2026",
-    "firstSeen": "2026-10-13",
-    "newsTopic": "community",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Manager%27s-Report---October-13%2C-2026.pdf",
-    "img": ""
-  },
-  {
     "title": "Ridgway Bank Building Officially Added to the National Register of Historic Places",
     "source": "Town of Ridgway",
     "date": "October 9, 2027",
@@ -1248,7 +1201,7 @@
   {
     "title": "Notice of Public Hearing for Liquor License on Thursday, November 19, 2026 at 5:30pm - Chipeta Lodge Resort &amp; Spa, 304 S Lena Street - Notice dated October 13, 2026",
     "source": "Town of Ridgway",
-    "date": "October 26, 2026",
+    "date": "October 27, 2026",
     "firstSeen": "2026-10-14",
     "newsTopic": "community",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1259,7 +1212,7 @@
   {
     "title": "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     "source": "Town of Ridgway",
-    "date": "October 26, 2026",
+    "date": "October 27, 2026",
     "firstSeen": "2026-09-29",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1270,7 +1223,7 @@
   {
     "title": "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     "source": "Town of Ridgway",
-    "date": "October 26, 2026",
+    "date": "October 27, 2026",
     "firstSeen": "2026-09-29",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",

@@ -261,26 +261,6 @@
     "caseNumber": "2026-06"
   },
   {
-    "title": "Tax Lien Sale -- 2025 Delinquent Real Property Tax Lien Sale, San Miguel County",
-    "entity": "San Miguel County Treasurer (Brandi R. Hatfield)",
-    "entityClass": "ent-county",
-    "entityLogo": "assessor",
-    "icon": "💰",
-    "iconClass": "type-tax",
-    "type": "Tax & Finance",
-    "filterTag": "tax-finance",
-    "summary": "San Miguel County Treasurer Brandi R. Hatfield has announced the 2025 Delinquent Tax Publication and Real Property Tax Lien Sale, to be held online at www.govease.com on Monday, October 26, 2026 at 10:00 a.m. Property owners with delinquent 2025 (and earlier) real estate taxes must pay in full at the Treasurer's office by noon on October 22, 2026 to avoid having a tax lien sold on their property. The interest rate on Tax Lien Certificates sold in 2026 is 13% per year. Properties listed include parcels throughout San Miguel County.",
-    "deadline": "2026-10-22",
-    "expires": "2026-10-26",
-    "dates": "10/1",
-    "papers": [
-      "ttimes_1001"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_792d96c0-09c8-479f-83f8-bdf3681b49ae.html",
-    "address": "San Miguel County, Colorado (various parcels countywide)",
-    "noticeKey": "delinquent-tax-lien-sale-2025-san-miguel"
-  },
-  {
     "title": "Housing Lottery -- Master Lease Rental Lottery, The Boarding House (1100 W Black Bear Rd)",
     "entity": "Telluride Housing Authority / Town of Telluride Housing Division",
     "entityClass": "ent-county",
@@ -513,7 +493,7 @@
     "summary": "Town of Telluride is seeking qualified respondents for: TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS.",
     "deadline": "Closes 1/11/2026",
     "expires": "2026-01-11",
-    "dates": "10/26",
+    "dates": "10/27",
     "url": "https://www.telluride.gov/bids.aspx?bidID=133",
     "address": "",
     "totBidID": "133"

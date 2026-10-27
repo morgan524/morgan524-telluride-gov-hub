@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26T20:25:55.749Z",
+ "generated": "2026-10-27T00:21:58.032Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -85,18 +85,6 @@
    "label": "Gondola 3A",
    "lastUpdated": "2026-07-20",
    "upcoming": [
-    {
-     "source": "smart",
-     "sourceLabel": "SMART Transit",
-     "title": "SMART Gondola Advisory Committee",
-     "date": "2026-10-26",
-     "time": "3:00 PM",
-     "location": "Virtual (Zoom link in the agenda)",
-     "agendaUrl": "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.10.26-Gsub-Agenda.pdf",
-     "link": "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.10.26-Gsub-Agenda.pdf",
-     "zoomLink": "https://urldefense.com/v3/__https:/gbsm.zoom.us/j/82559576086__;!!ETWISUBM!3x58A-FfNf9JhIvrh2mHeq3wy9OHc7S76v3Obypudr5m-ILQvLZAsE3ZuUUqFUGuSSfFOzlMG_ETBGmg3kQV-w$",
-     "livestream": ""
-    },
     {
      "source": "telluride",
      "sourceLabel": "Town of Telluride",
