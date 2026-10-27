@@ -568,7 +568,7 @@
   "telluride|2026-11-19|Liquor Licensing Authority - Nov 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8147",
     "sv": 4,
-    "ph": "dd26fcc2959762fc"
+    "ph": "045bdf9820a590d8"
   },
   "telluride|2026-10-26|Gondola Sub Committee - Oct 26 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8327",
@@ -639,5 +639,9 @@
     "passcode": "463594",
     "phone": "970-728-3174",
     "sv": 4
+  },
+  "tmvoa|2026-10-29|TMVOA Audit &amp; Compliance Committee": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   }
 }

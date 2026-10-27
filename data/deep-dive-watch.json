@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-27T00:21:58.032Z",
+ "generated": "2026-10-27T08:51:40.398Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -112,6 +112,12 @@
    ],
    "recent": [
     {
+     "source": "smart",
+     "date": "2026-10-26",
+     "title": "SMART Gondola Advisory Committee",
+     "snippet": "The Gondola Advisory Committee meets virtually on October 26. The main item is a 25-minute informational update on the FTA Capital Investment Program — the federal funding pipeline that the gondola…"
+    },
+    {
      "source": "county",
      "date": "2026-10-21",
      "title": "Board of County Commissioners Meeting",
@@ -120,6 +126,7 @@
    ],
    "developments": [],
    "stale": [
+    "Gondola 3A: smart discussed it on 2026-10-26 (\"SMART Gondola Advisory Committee\") but the deep dive was last edited 2026-07-20.",
     "Gondola 3A: county discussed it on 2026-10-21 (\"Board of County Commissioners Meeting\") but the deep dive was last edited 2026-07-20."
    ]
   },
