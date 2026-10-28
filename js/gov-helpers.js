@@ -444,7 +444,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"a92a63f715b920c1"},
 
   "telluride|2026-11-19|Resident Advisory Committee - Nov 19 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8320","sv":4,"ph":"5c50c3c73d8fc7d1"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8320","sv":4,"ph":"a1a1d79c5ae0155d"},
 
   "telluride|2026-11-19|Planning & Zoning Commission - Nov 19 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8108","sv":4,"ph":"eb7467e457d122e2"},
@@ -509,6 +509,14 @@ const DEEP_DIVE_UPDATES = [];
 //   sourceUrl, topics: [] }. Rendered by hub-bub.html from the JSON mirror
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
+  {
+    date: "2026-10-28",
+    title: "Should someone outside town hall review the housing rules?",
+    body: "Multiple boards — the Housing Authority Subcommittee, Planning & Zoning, the Arts & Special Events Commission, and the Town Council budget session — are all being asked to weigh in on hiring outside consultants to do a comprehensive review of Telluride's employee rental housing policies. That's a lot of simultaneous attention on one question.\n\nSome residents will see outside eyes as overdue — fresh perspective on rules that may have calcified. Others will wonder why the town needs to pay consultants to evaluate programs that local staff and elected boards already know inside out.\n\nSo: does a third-party review of workforce housing policy sound like a good use of town resources to you — or not?",
+    choices: ["Worth bringing in outside eyes", "Local boards can handle this", "Depends on the cost", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
   {
     date: "2026-10-27",
     title: "Two nights of concerts in Town Park — good idea?",
@@ -740,14 +748,6 @@ const DAILY_QUESTIONS = [
     choices: ["Keep them separate", "Same table is fine", "Depends on the topic", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-09-28",
-    title: "County business: helium, hauling, and a jail paint job",
-    body: "The Board of County Commissioners has a full plate this week — procurement items covering material hauling, trail construction, a fuel island canopy, and jail painting, plus an energy regulatory hearing on an alleged violation against American Helium Operating LLC. That last one tends to fly under the radar up here, but energy enforcement touches land and revenue questions that affect the whole county.\n\nSome folks will say routine procurement and regulatory hearings are exactly what the board is for. Others will want to know more before any alleged violation gets resolved behind closed doors.\n\nHow closely should the public be watching that energy hearing?",
-    choices: ["Very closely — it's a public matter", "Board can handle it", "Need more details first"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -827,14 +827,11 @@ const MEETING_PREVIEWS = {
   "mv|2026-11-05|Design Review Board":
     "Board will consider design review applications including a specific approval for a general easement encroachment at 112 Stevens Dr. and a height variance at an undeveloped Mountain Village Blvd. lot. A conceptual work session on deck repairs and possible extensions at 120 Vischer Dr. is also scheduled.",
 
-  "telluride|2026-10-27|Town Council - Oct 27 2026":
-    "Council is expected to review 2026 special events held on Town property and discuss a proposed two-night concert in Town Park scheduled for August 2027. The meeting will be held as a hybrid session at Rebekah Hall on October 27, 2026.",
-
   "county|2026-10-28|Board of County Commissioners Work Session":
-    "Board will convene for a work session at the Placerville School House. The session includes a review of the agenda, public comment, and routine county staff and commissioner updates. Specific agenda items were not detailed in the available excerpt.",
+    "Board of County Commissioners will hold a work session on October 28, 2026, at the Placerville School House. The session includes standard procedural items such as roll call, agenda review, and public comment. Specific substantive agenda items were not detailed in the available excerpt.",
 
   "ouray|2026-10-28|Board of County Commissioners Work Session":
-    "Commissioners are expected to receive an annual planning presentation from CDOT and discuss FEMA Public Assistance matters, including Ouray County recovery projects and road damage assessments. No formal action will be taken, as work sessions are deliberative in nature."
+    "Commissioners are expected to hear an annual planning presentation from CDOT and discuss FEMA Public Assistance matters, including Ouray County recovery projects and road damage assessments. No formal action will be taken, as work sessions are deliberative in nature."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -2663,6 +2660,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Warm up the bus",
+    source: "Telluride Times",
+    date: "October 28, 2026",
+    firstSeen: "2026-10-28",
+    newsTopic: "community",
+    copy: "Telluride's Lady Miners cross country team punched a full-squad ticket to the 2A State Championships after placing third at the Class 2A Region IV meet in Mancos. Juniors Ella Browne and Calliope Barber both shattered their personal records — each breaking 23 minutes for the first time — to secure the team's qualifying score. State runs October 31 in Colorado Springs.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_25651cfa-9959-451c-8e14-952dc84fcc43.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/61/861b5992-6eae-4b8c-9b25-fdbbe8435e4f/6adfbefa404e8.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "'Super Bowl for theater kids'",
     source: "Telluride Times",
     date: "October 27, 2026",
@@ -3583,17 +3592,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
-  },
-  {
-    title: "Judge rules Ridgway hotel can’t house workers building Telluride’s Four Seasons resort",
-    source: "Colorado Sun",
-    date: "October 26, 2026",
-    firstSeen: "2026-10-26",
-    newsTopic: "community",
-    copy: "The developer of the $1 billion Four Seasons project in Mountain Village has acquired and leased area hotels far from the resort. Local groups are pushing back.",
-    claudeSummary: false,
-    href: "https://coloradosun.com/2026/10/26/ridgway-lawsuit-mountain-village-resort-housing/",
-    img: "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2026/10/IMG_5818-scaled.jpg?fit=1024%2C768&amp;ssl=1"
   },
   {
     title: "View the Town of Ridgway's Recently Adopted Housing Action Plan",
@@ -4792,48 +4790,37 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Storytime / Hora De Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/17514640?hs=a",
-    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    pubDate: "2026-10-27T16:30:00.000Z",
+    title: "Radio Biblioteca",
+    link: "https://telluridelibrary.libcal.com/event/17707366?hs=a",
+    description: "Radio Biblioteca is a bilingual program presented by Wilkinson Public Library in partnership with KOTO radio, airing community news and library updates for Spanish-speaking and English-speaking listeners alike. The broadcast shares information about local events and library programs with the Telluride community.",
+    pubDate: "2026-10-28T18:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+    location: "KOTO Radio Station",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_24_13_11_06.png"
   },
   {
-    title: "Teen Cook",
-    link: "https://telluridelibrary.libcal.com/event/17486121?hs=a",
-    description: "2:00 PM – 3:00 PM · Join the WPL Every Tuesday after school for Teen Cook. We will cook a different recipe from scratch, and have enough to share with those around!",
-    pubDate: "2026-10-27T20:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_27_00.png"
-  },
-  {
-    title: "I Heart Art",
-    link: "https://telluridelibrary.libcal.com/event/17292107?hs=a",
-    description: "2:30 PM – 4:00 PM · Looking for a fun and enriching way to spend your afternoons? Join us Tuesdays for I Heart Art, designed especially for kids aged 5-12!  &iquest;Buscas una manera divertida de pasar tus tardes? &iexcl;Unete a nuestro programa extracurricular, dise&ntilde;ado especialmente para ni&ntilde;os de 5 a 12 a&ntilde;os!",
-    pubDate: "2026-10-27T20:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_39_32.png"
-  },
-  {
-    title: "America 250/Colorado 150 Book Club- Stampede to Timberline with Rudy Davison",
-    link: "https://telluridelibrary.libcal.com/event/17001094?hs=a",
-    description: "5:30 PM – 7:00 PM · Join us for a discussion of Stampede to Timberline by Muriel Sibell Wolle, the classic book about Colorado&#39;s mining camps. Discussion will be led by local historian Rudy Davison. This book includes the story of 240 of Colorado's mining camps, with emphasis on the human side. The men who swarmed to the mountains to find precious metal came in successive waves from the late 1850s on, combing the gulches, scrambling over the passes and climbing the peaks. Their story is full of adventurous chances, lucky strikes, boom conditions, reckless spending, banditry, claim jumping, railroad wars and labor troubles. The author searched the Colorado Rockies from the time she saw and sketched her first ghost town until she had rediscovered and painted the vanishing mining camps. …",
-    pubDate: "2026-10-27T23:30:00.000Z",
+    title: "Mahjongg for Independent Players",
+    link: "https://telluridelibrary.libcal.com/event/17622570?hs=a",
+    description: "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-10-28T19:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_24_14_51_08.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_10_13_36_20.jpg"
+  },
+  {
+    title: "Movie and A Snack Club",
+    link: "https://telluridelibrary.libcal.com/event/17282932?hs=a",
+    description: "A recurring library program where participants gather to watch a movie and enjoy a snack together. The event takes place in the Program Room at Wilkinson Public Library and runs for two hours.",
+    pubDate: "2026-10-28T21:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_26_14_00_58.png"
   }
 ];
 
@@ -5337,132 +5324,6 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "Functional Fitness - Strength & Mobility Training For Women",
-    link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women-8391",
-    description: "Welcome to Ridgway's functional strength and mobility training for women. Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically but build real community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Every Tuesday & Thursday 8:15-9:15 am / Please check the website for dates and sign up! Location: 1075 Sherman St, Suite 201 / Weehawken Dance Studio (RIGS Building on the corner of Sherman and Amelia) Parking and entrance to the building are on N. Amelia St. …",
-    pubDate: "2026-10-27T14:15:00.000Z",
-    endDate: "2026-12-24",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Weehawken Ridgway (Old Schoolhouse)",
-    imageUrl: "https://localist-images.azureedge.net/photos/54236057466628/huge/10f1882bcc97fe1b7ad4209e2431edd0781a413f.jpg"
-  },
-  {
-    title: "Cimarron Gathering Place Open House",
-    link: "https://events.ourayridgwayevents.com/event/cimarron-gathering-place-open-house",
-    description: "An open house celebrating the newly established Cimarron Gathering Place, an age-friendly community center for residents 55 and older, held at the Ouray County Fairgrounds and 4H Events Center. The event includes a ribbon cutting ceremony and refreshments, and is open to all members of the community.",
-    pubDate: "2026-10-27T15:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray County Fairgrounds and 4H Events Center",
-    imageUrl: "https://localist-images.azureedge.net/photos/54250768566062/huge/bbfffaba68b85f987b424216df9d9012aae2bf55.jpg"
-  },
-  {
-    title: "OPL Read a Book - Get a Pumpkin",
-    link: "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
-    description: "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
-    pubDate: "2026-10-27T16:00:00.000Z",
-    endDate: "2026-10-31",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Public Library",
-    imageUrl: "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg"
-  },
-  {
-    title: "Ongoing: Space Cowboy by Dundee & Lee",
-    link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
-    description: "Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado artists Emilie Odeile and Ken Chapin of Dundee & Lee, the exhibition centers on a 10-foot-tall fiber rocket topped with a cowboy hat and Mission Control consoles that gather images, voices, stories, and discoveries as Space Cowboy travels from community to community. Throughout October, the exhibition comes alive with special events and programming, including appearances by Colorado Poet Laureate Crisosto Apache, community conversations, and opportunities for Ridgway residents to become part of the continuing Space Cowboy story. Space Cowboy travels with a simple idea: Colorado is the teacher and Space Cowboy is the learner. Every community adds something new to the mission. …",
-    pubDate: "2026-10-27T16:00:00.000Z",
-    endDate: "2026-10-29",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53975670057489/huge/75be37bbb2b6bd7ba17f7754e11da5a0eaf5930c.jpg"
-  },
-  {
-    title: "Guided Tour: Historic Beaumont Hotel & Spa",
-    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
-    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
-    pubDate: "2026-10-27T19:30:00.000Z",
-    endDate: "2026-12-26",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Beaumont Hotel & Spa",
-    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
-  },
-  {
-    title: "Britley & Matt",
-    link: "https://events.ourayridgwayevents.com/event/britley-matt-7748",
-    description: "Britley & Matt perform live at a venue on North Cora Street in Ridgway. The event is an evening of live music hosted at what appears to be the Colorado Boy Depot.",
-    pubDate: "2026-10-27T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Ouray MS Boys Basketball VS Nucla",
-    link: "https://events.ourayridgwayevents.com/event/ouray-ms-boys-basketball-vs-nucla",
-    description: "The Ouray Middle School boys basketball program hosts Nucla for a multi-game afternoon at Ouray School. The C team tips off at 4:00 p.m., followed by the B team at 5:00 p.m. and the A team at approximately 6:00 p.m.",
-    pubDate: "2026-10-27T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray School",
-    imageUrl: "https://localist-images.azureedge.net/photos/54295050055238/huge/e6b416841d46ef5f89858dd15f76e980683a1d35.jpg"
-  },
-  {
-    title: "Ridgway HS Volleyball vs Ouray and Senior Night",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-hs-volleyball-vs-ouray-and-senior-night",
-    description: "Ridgway High School volleyball hosts Ouray at Ridgway Secondary School, with JV play preceding the varsity match. The evening also serves as Senior Night, with a special recognition ceremony honoring the graduating players following the JV match.",
-    pubDate: "2026-10-27T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway Secondary School",
-    imageUrl: "https://localist-images.azureedge.net/photos/54354482662200/huge/fc5ad3de8b0c021475f7c6c4752a706f7f0ed0c8.jpg"
-  },
-  {
-    title: "Staying Grounded When the Ground Is Changing",
-    link: "https://events.ourayridgwayevents.com/event/staying-grounded-when-the-ground-is-changing",
-    description: "A community conversation about environmental stress, connection, and finding steady ground. Living on the Western Slope means being deeply connected to the land around us—and lately, it can also mean carrying the stress of wildfires, drought, changing water levels, smoke, and uncertainty about the places we love. Come connect with others who understand what it is like to love a place while also worrying about its future. Together, we'll explore the very real anxiety, grief, uncertainty, and helplessness that can come with environmental change—without getting stuck there. Leave noticing hopefulness with practical tools to manage uncertainty, resources to calm your nervous system and stay informed, ways to recognize what is within your control or influence, and methods to turn concern into meaningful action, hope, and connection. …",
-    pubDate: "2026-10-27T23:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Montrose Public Library",
-    imageUrl: "https://localist-images.azureedge.net/photos/54199125546246/huge/3dcd6a988a9de012312eb2b7bb057ead5bad2e8d.jpg"
-  },
-  {
-    title: "Tourism Advisory Committee",
-    link: "https://events.ourayridgwayevents.com/event/tourism-advisory-committee",
-    description: "The Ouray Tourism Advisory Committee (TAC) represents a cross-section of the small businesses, nonprofits, and residents of Ouray. We educate ourselves about best practices in the tourism industry, tourism marketing, and the visitor experience. We gather input, plan, prioritize, measure, and advise the City of Ouray on the best actions to take related to the tourism industry in our community.",
-    pubDate: "2026-10-27T23:30:00.000Z",
-    endDate: "2026-12-23",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Community Center",
-    imageUrl: "https://localist-images.azureedge.net/photos/52092171660517/huge/0e628304026c92db25e8df01849c962ac902a3b4.jpg"
-  },
-  {
-    title: "Sherb Literary Living Room Featuring Pam Houston with Her New Book: “Animals Taught Me Everything”",
-    link: "https://events.ourayridgwayevents.com/event/sherb-literary-living-room-featuring-pam-houston-with-her-new-book-animals-taught-me-everything-7659",
-    description: "Doors: 6:00 PM || Talk starts: 6:30 PM || $15 entry Setting: Seated Join us for our Literary Living Room as Pam Houston features her just-published book, Animals Taught Me Everything. What can a wagging tail and soaring wings teach us about a life well lived? From Icelandic mares and Irish wolfhounds to elephants, leopards, hyenas, and a desert-adapted lioness named Charlie, Pam Houston has learned life’s most important lessons from animals. How to play. How to rest. How to love. How to die. How to be present with the dying. How to be present with the living and with the Earth. How to find joy in the least likely places. How to find joy, literally, everywhere. With playful sincerity, Houston finds power and promise in the teachings of our fellow creatures and reminds us that animals are here for us, every day and everywhere. …",
-    pubDate: "2026-10-28T00:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Sherbino",
-    imageUrl: "https://localist-images.azureedge.net/photos/54093161228645/huge/7e89b3abffd49ff677ff84078f716777d776bb9b.jpg"
-  },
-  {
     title: "CELESTIAL BODIES - Olivia Ivy and Kane Scheidegger",
     link: "https://events.ourayridgwayevents.com/event/celestial-bodies-olivia-ivy-and-kane-scheidegger",
     description: "Join us at Space to Create Gallery in Ridgway for CELESTIAL BODIES, an exhibition exploring the connections between Body, Earth, and Cosmos through painting and photography. Featuring the work of Olivia Ivy and Kane Scheidegger, the exhibition brings together feminine figures, celestial symbolism, and otherworldly landscapes to explore the boundaries between the intimate and the infinite. From constellations hidden within the human form to the vastness of the night sky reflected in the earthly landscape, these works invite us to look beyond the familiar and reconsider our place within the universe. Exhibition dates October 2nd to November 2nd.",
@@ -5487,6 +5348,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54236148198717/huge/7d1ebafc567aad82f67c7ba07e1225354b86622c.jpg"
   },
   {
+    title: "OPL Read a Book - Get a Pumpkin",
+    link: "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
+    description: "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
+    pubDate: "2026-10-28T16:00:00.000Z",
+    endDate: "2026-10-31",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Public Library",
+    imageUrl: "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg"
+  },
+  {
     title: "Toddler Storytime Art for Ages 2.5-5",
     link: "https://events.ourayridgwayevents.com/event/toddler-storytimeartfor-ages-2-5",
     description: "TODDLER STORYTIME ART FOR AGES 2.5-5 Wednesdays, 10:00am–11:00am Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $70): September 16 – October 7Session 2 (4 weeks • $70): October 21 – November 11Session 3 (3 weeks • $55): December 2 – December 16Come join us for Storytime + Art! Each week, your child will enjoy story time with songs and finger rhymes, a process‑art project, and a variety of creative sensory play. We end with a quick cleanup, circle time, and movement songs. This class gently supports preschool prep and helps your child develop important school‑readiness skills—such as fine‑motor coordination, independence, and the ability to listen and follow directions—in a warm, supportive setting. Children will grow in: Social, language, and communication skillsFine‑ and gross‑motor coordinationListening and direction‑following abilitiesConfidence, creativity, and imaginationParents and caregivers stay to support their child—but we handle the mess! …",
@@ -5509,6 +5382,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray Hot Springs",
     imageUrl: "https://localist-images.azureedge.net/photos/53887699628224/huge/262efc04b203189edcde410b9973aac1ca778195.jpg"
+  },
+  {
+    title: "Guided Tour: Historic Beaumont Hotel & Spa",
+    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
+    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
+    pubDate: "2026-10-28T19:30:00.000Z",
+    endDate: "2026-12-26",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Beaumont Hotel & Spa",
+    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
   },
   {
     title: "After School Art for Ages 8-12",
@@ -5566,6 +5451,29 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Wright Opera House",
     imageUrl: "https://localist-images.azureedge.net/photos/54035284357305/huge/c0b13b236a6cb245075f76963685929bd6a42793.jpg"
+  },
+  {
+    title: "Functional Fitness - Strength & Mobility Training For Women",
+    link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women-8391",
+    description: "Welcome to Ridgway's functional strength and mobility training for women. Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically but build real community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Every Tuesday & Thursday 8:15-9:15 am / Please check the website for dates and sign up! Location: 1075 Sherman St, Suite 201 / Weehawken Dance Studio (RIGS Building on the corner of Sherman and Amelia) Parking and entrance to the building are on N. Amelia St. …",
+    pubDate: "2026-10-29T14:15:00.000Z",
+    endDate: "2026-12-24",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Ridgway (Old Schoolhouse)",
+    imageUrl: "https://localist-images.azureedge.net/photos/54236057466628/huge/10f1882bcc97fe1b7ad4209e2431edd0781a413f.jpg"
+  },
+  {
+    title: "Ongoing: Space Cowboy by Dundee & Lee",
+    link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
+    description: "Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado artists Emilie Odeile and Ken Chapin of Dundee & Lee, the exhibition centers on a 10-foot-tall fiber rocket topped with a cowboy hat and Mission Control consoles that gather images, voices, stories, and discoveries as Space Cowboy travels from community to community. Throughout October, the exhibition comes alive with special events and programming, including appearances by Colorado Poet Laureate Crisosto Apache, community conversations, and opportunities for Ridgway residents to become part of the continuing Space Cowboy story. Space Cowboy travels with a simple idea: Colorado is the teacher and Space Cowboy is the learner. Every community adds something new to the mission. …",
+    pubDate: "2026-10-29T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53975670057489/huge/75be37bbb2b6bd7ba17f7754e11da5a0eaf5930c.jpg"
   },
   {
     title: "After School Art for Ages 5-8",
@@ -6393,6 +6301,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
+    title: "Tourism Advisory Committee",
+    link: "https://events.ourayridgwayevents.com/event/tourism-advisory-committee",
+    description: "The Ouray Tourism Advisory Committee (TAC) represents a cross-section of the small businesses, nonprofits, and residents of Ouray. We educate ourselves about best practices in the tourism industry, tourism marketing, and the visitor experience. We gather input, plan, prioritize, measure, and advise the City of Ouray on the best actions to take related to the tourism industry in our community.",
+    pubDate: "2026-11-25T00:30:00.000Z",
+    endDate: "2026-12-23",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Community Center",
+    imageUrl: "https://localist-images.azureedge.net/photos/52092171660517/huge/0e628304026c92db25e8df01849c962ac902a3b4.jpg"
+  },
+  {
     title: "NEW With Weehawken: Beat & Step: West African Dance, Drum & Body Percussion ~ with Performances in The Nutcracker Remixed!",
     link: "https://events.ourayridgwayevents.com/event/new-with-weehawken-beat-step-west-african-dance-drum-body-percussion-with-performances-in-the-nutcracker-remixed",
     description: "Beat & Step: West African Dance, Drum & Body Percussion is an energetic and interactive class that combines traditional West African dance, drumming, and body percussion into one exciting experience. Students will learn dance combinations, explore traditional drumming rhythms that tell stories, and create music using their hands, feet, body, drums, and voice. Along the way, they'll develop coordination, rhythm, musicality, focus, memory, confidence, and teamwork while experiencing the rich cultural traditions of West Africa. No previous dance or music experience is required—just curiosity, energy, and a willingness to learn. Students enrolled in this performance class will showcase what they've learned in our winter production. Dress Code: Students should wear comfortable clothing that allows for plenty of movement. Athletic clothing such as T-shirts, leggings, athletic pants, or shorts is recommended. Please avoid jeans or restrictive clothing. Wear comfortable athletic shoes or sneakers that are clean and reserved for class. …",
@@ -6602,7 +6522,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/winter-break-ridgway-schools",
     description: "Winter break for Ridgway Schools begins on this date, giving students and families time off during the holiday season. The break is a scheduled pause in the academic calendar for the Ridgway school district.",
     pubDate: "2026-12-21T07:00:00.000Z",
-    endDate: "2026-12-26",
+    endDate: "2026-12-27",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6703,17 +6623,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Public Art Commission Meeting",
-    link: "https://townofmountainvillage.com/explore/events/all-events/public-art-commission-meeting/",
-    description: "The Public Art Commission meets on an as-needed basis. Zoom link included in the meeting agenda.",
-    pubDate: "2026-10-27T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49288/event.png"
-  },
   {
     title: "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
     link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",

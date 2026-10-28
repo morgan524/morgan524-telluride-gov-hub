@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Oct 2026 04:57:53 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 12:29:30 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Wed, Oct 28] Adventures in Acting: The Legend of Sleepy Hollow / The Little Ghost Who Was a Quilt</title>
@@ -41,6 +41,19 @@ The October 28 BOCC Work Session in Placerville has been posted, but no agenda d
 A work session — no formal votes — with two substantive conversations on the table. First, CDOT walks the commissioners through its annual planning presentation, covering what the state transportation agency has in store for the US-550 corridor and surrounding roads. Then the discussion shifts to FEMA Public Assistance, focusing on Ouray County's ongoing recovery projects and road damage assessments. Anyone who's watched mountain roads take a beating through wet cycles knows how long the repair queue can get — and how much of the funding story runs through federal reimbursement timelines.]]></description>
       <category>Meeting</category>
       <category>ouray</category>
+    </item>
+    <item>
+      <title>[Wed, Oct 28] Movie and A Snack Club</title>
+      <link>https://telluridelibrary.libcal.com/event/17282932?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/movie%20and%20a%20snack%7C2026-10-28</guid>
+      <pubDate>Wed, 28 Oct 2026 21:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_26_14_00_58.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+A recurring library program where participants gather to watch a movie and enjoy a snack together. The event takes place in the Program Room at Wilkinson Public Library and runs for two hours.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_26_14_00_58.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Thu, Oct 29] Young Frankenstein the Musical</title>
@@ -104,32 +117,6 @@ Get spooky at Van Atta for Halloween! Join them for their 2nd Annual Halloween D
       <category>Telluride.com</category>
     </item>
     <item>
-      <title>[Sun, Nov 1] KOTO Halloween Bash</title>
-      <link>https://koto.org/event/koto-halloween-bash/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/koto%20halloween%20bash%7C2026-11-01</guid>
-      <pubDate>Sun, 01 Nov 2026 03:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/10/KOTO-Halloween-RADO-poster-9.23-1-scaled.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 The Alibi, Telluride
-
-It's spooky season and that means it's time for the greatest off-season tradition in Telluride history – THE KOTO HALLOWEEN BASH! This year, we're letting our freak flags fly at The Alibi on Saturday, October 31st! Live music from Rado starts at 9 p.m. Costume Contest with cash prizes! Tickets are $20 in advance at alibitelluride.com and $25 at the door.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/10/KOTO-Halloween-RADO-poster-9.23-1-scaled.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Mon, Nov 2] Mountainfilm for Locals</title>
-      <link>https://www.telluride.com/event/mountainfilm-for-locals/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/mountainfilm%20for%20locals%7C2026-11-02</guid>
-      <pubDate>Mon, 02 Nov 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/63808/mf26_for_locals_2200x1237.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Join Mountainfilm for Mountainfilm for Locals, a free screening for our local community, presented in partnership with …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/63808/mf26_for_locals_2200x1237.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
       <title>⚡ [Meeting] Rescheduled/Special Meeting - Planning &amp; Zoning Commission Chair - Nov 02 2026 — 2026-11-02</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-11-02%7CRescheduled%2FSpecial%20Meeting%20-%20Planning%20%26%20Zoning%20Commission%20Chair%20-%20Nov%2002%202026</guid>
@@ -138,7 +125,7 @@ Join Mountainfilm for Mountainfilm for Locals, a free screening for our local co
 
 This rescheduled P&Z Chair meeting — moved from October 22 to November 2 — has a single item on it: a minor subdivision at 510 W Columbia Avenue/129 N Townsend Street. The application asks to vacate the internal lot line between Lots 39 and 40 in the West Telluride Addition and merge them into one approximately 5,625-square-foot lot. It's a lot consolidation in the Historic Residential zone district, not a new development proposal.
 
-⚡ Why it matters: P&Z votes on lot-line vacation and merger in the Historic District.]]></description>
+⚡ Why it matters: P&Z votes on merging two West Telluride lots into one larger parcel.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>

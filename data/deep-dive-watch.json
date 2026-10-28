@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T04:57:46.637Z",
+ "generated": "2026-10-28T12:29:24.683Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -20,7 +20,9 @@
     }
    ],
    "developments": [],
-   "stale": []
+   "stale": [
+    "Carhenge / Shandoka: timeline entry \"Council resolution puts the Carhenge consolidation decision…\" (Oct 27, 2026) is still marked upcoming but the date has passed."
+   ]
   },
   "medcenter": {
    "label": "Telluride Medical Center",
@@ -100,6 +102,12 @@
    ],
    "recent": [
     {
+     "source": "telluride",
+     "date": "2026-10-27",
+     "title": "Town Council - Oct 27 2026",
+     "snippet": "Three substantive items anchor this meeting. Council takes up the Fourth Supplement to the Gondola IGA, extending cost-sharing for the 2027 planning and development budget on the gondola replacement…"
+    },
+    {
      "source": "smart",
      "date": "2026-10-26",
      "title": "SMART Gondola Advisory Committee",
@@ -114,6 +122,7 @@
    ],
    "developments": [],
    "stale": [
+    "Gondola 3A: telluride discussed it on 2026-10-27 (\"Town Council - Oct 27 2026\") but the deep dive was last edited 2026-07-20.",
     "Gondola 3A: smart discussed it on 2026-10-26 (\"SMART Gondola Advisory Committee\") but the deep dive was last edited 2026-07-20.",
     "Gondola 3A: county discussed it on 2026-10-21 (\"Board of County Commissioners Meeting\") but the deep dive was last edited 2026-07-20."
    ]
@@ -135,18 +144,9 @@
      "livestream": ""
     }
    ],
-   "recent": [
-    {
-     "source": "norwood",
-     "date": "2026-10-13",
-     "title": "Norwood Water Commission Meeting",
-     "snippet": "A full agenda for the Norwood Water Commission's October 13 meeting. The biggest items center on the Cossey Complaint — the Commission will hold the hearing itself, consider a request to extend its…"
-    }
-   ],
+   "recent": [],
    "developments": [],
-   "stale": [
-    "Norwood Water: norwood discussed it on 2026-10-13 (\"Norwood Water Commission Meeting\") but the deep dive was last edited 2026-07-23."
-   ]
+   "stale": []
   },
   "fieldpaving": {
    "label": "Field Paving at Town Park",

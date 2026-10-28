@@ -1,46 +1,35 @@
 [
   {
-    "title": "Storytime / Hora De Cuentos",
-    "link": "https://telluridelibrary.libcal.com/event/17514640?hs=a",
-    "description": "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    "pubDate": "2026-10-27T16:30:00.000Z",
+    "title": "Radio Biblioteca",
+    "link": "https://telluridelibrary.libcal.com/event/17707366?hs=a",
+    "description": "Radio Biblioteca is a bilingual program presented by Wilkinson Public Library in partnership with KOTO radio, airing community news and library updates for Spanish-speaking and English-speaking listeners alike. The broadcast shares information about local events and library programs with the Telluride community.",
+    "pubDate": "2026-10-28T18:00:00.000Z",
     "source": "wilkinson",
     "sourceLabel": "Wilkinson Public Library",
     "category": "Library Event",
-    "location": "Kids Area",
-    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+    "location": "KOTO Radio Station",
+    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_24_13_11_06.png"
   },
   {
-    "title": "Teen Cook",
-    "link": "https://telluridelibrary.libcal.com/event/17486121?hs=a",
-    "description": "2:00 PM – 3:00 PM · Join the WPL Every Tuesday after school for Teen Cook. We will cook a different recipe from scratch, and have enough to share with those around!",
-    "pubDate": "2026-10-27T20:00:00.000Z",
-    "source": "wilkinson",
-    "sourceLabel": "Wilkinson Public Library",
-    "category": "Library Event",
-    "location": "Teen Area",
-    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_27_00.png"
-  },
-  {
-    "title": "I Heart Art",
-    "link": "https://telluridelibrary.libcal.com/event/17292107?hs=a",
-    "description": "2:30 PM – 4:00 PM · Looking for a fun and enriching way to spend your afternoons? Join us Tuesdays for I Heart Art, designed especially for kids aged 5-12!  &iquest;Buscas una manera divertida de pasar tus tardes? &iexcl;Unete a nuestro programa extracurricular, dise&ntilde;ado especialmente para ni&ntilde;os de 5 a 12 a&ntilde;os!",
-    "pubDate": "2026-10-27T20:30:00.000Z",
-    "source": "wilkinson",
-    "sourceLabel": "Wilkinson Public Library",
-    "category": "Library Event",
-    "location": "Kids Area",
-    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_39_32.png"
-  },
-  {
-    "title": "America 250/Colorado 150 Book Club- Stampede to Timberline with Rudy Davison",
-    "link": "https://telluridelibrary.libcal.com/event/17001094?hs=a",
-    "description": "5:30 PM – 7:00 PM · Join us for a discussion of Stampede to Timberline by Muriel Sibell Wolle, the classic book about Colorado&#39;s mining camps. Discussion will be led by local historian Rudy Davison. This book includes the story of 240 of Colorado's mining camps, with emphasis on the human side. The men who swarmed to the mountains to find precious metal came in successive waves from the late 1850s on, combing the gulches, scrambling over the passes and climbing the peaks. Their story is full of adventurous chances, lucky strikes, boom conditions, reckless spending, banditry, claim jumping, railroad wars and labor troubles. The author searched the Colorado Rockies from the time she saw and sketched her first ghost town until she had rediscovered and painted the vanishing mining camps. …",
-    "pubDate": "2026-10-27T23:30:00.000Z",
+    "title": "Mahjongg for Independent Players",
+    "link": "https://telluridelibrary.libcal.com/event/17622570?hs=a",
+    "description": "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
+    "pubDate": "2026-10-28T19:00:00.000Z",
     "source": "wilkinson",
     "sourceLabel": "Wilkinson Public Library",
     "category": "Library Event",
     "location": "Magazine Room",
-    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_24_14_51_08.png"
+    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_10_13_36_20.jpg"
+  },
+  {
+    "title": "Movie and A Snack Club",
+    "link": "https://telluridelibrary.libcal.com/event/17282932?hs=a",
+    "description": "A recurring library program where participants gather to watch a movie and enjoy a snack together. The event takes place in the Program Room at Wilkinson Public Library and runs for two hours.",
+    "pubDate": "2026-10-28T21:30:00.000Z",
+    "source": "wilkinson",
+    "sourceLabel": "Wilkinson Public Library",
+    "category": "Library Event",
+    "location": "Program Room",
+    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_26_14_00_58.png"
   }
 ]

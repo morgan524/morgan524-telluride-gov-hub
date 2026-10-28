@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Oct 2026 04:57:53 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 12:29:30 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Oct 28–3</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-42</guid>
-      <pubDate>Wed, 28 Oct 2026 04:57:53 GMT</pubDate>
-      <description><![CDATA[The one meeting worth circling on your calendar this week is Telluride's rescheduled Planning and Zoning Commission session on November 2, where a minor subdivision at 510 W Columbia Avenue goes before the chair — a lot-line vacation and merger that affects the Historic District, so it's worth knowing about. Beyond that, the government calendar is pretty quiet, with work sessions and unposted agendas filling most of the slots. On the community side, Halloween takes over the valley from Friday through Saturday, with the parade, open house at the fire station, and the TMHS and Telluride Theatre production of Young Frankenstein all on deck.]]></description>
+      <pubDate>Wed, 28 Oct 2026 12:29:30 GMT</pubDate>
+      <description><![CDATA[The one meeting with real stakes this week is Telluride's rescheduled Planning and Zoning Commission special session on Monday, November 2, where commissioners will consider a minor subdivision application to merge two lots at 510 W Columbia Avenue into a single 5,625-square-foot parcel — a land-use decision worth showing up for if you care about how property gets consolidated in town. Beyond that, it's a Halloween-heavy week: the parade, Young Frankenstein at the high school, the KOTO bash, Easy Jim's two-night run, and a full calendar of trick-or-treat events fill out Friday through Saturday.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -61,6 +61,45 @@ A theatrical performance at the Sheridan Opera House presenting two spooky-seaso
       <media:content url="https://koto.org/wp-content/uploads/2026/10/7th-2026-LRD-Flyer-English.jpg" medium="image" />
       <category>Community Event</category>
       <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Wed, Oct 28] Radio Biblioteca</title>
+      <link>https://telluridelibrary.libcal.com/event/17707366?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/radio%20biblioteca%7C2026-10-28</guid>
+      <pubDate>Wed, 28 Oct 2026 18:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_24_13_11_06.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 KOTO Radio Station
+
+Radio Biblioteca is a bilingual program presented by Wilkinson Public Library in partnership with KOTO radio, airing community news and library updates for Spanish-speaking and English-speaking listeners alike. The broadcast shares information about local events and library programs with the Telluride community.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_24_13_11_06.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Wed, Oct 28] Mahjongg for Independent Players</title>
+      <link>https://telluridelibrary.libcal.com/event/17622570?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/mahjongg%20for%20independent%20players%7C2026-10-28</guid>
+      <pubDate>Wed, 28 Oct 2026 19:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_10_13_36_20.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Magazine Room
+
+1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_10_13_36_20.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Wed, Oct 28] Movie and A Snack Club</title>
+      <link>https://telluridelibrary.libcal.com/event/17282932?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/movie%20and%20a%20snack%7C2026-10-28</guid>
+      <pubDate>Wed, 28 Oct 2026 21:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_26_14_00_58.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+A recurring library program where participants gather to watch a movie and enjoy a snack together. The event takes place in the Program Room at Wilkinson Public Library and runs for two hours.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_26_14_00_58.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Meeting] Citizen&apos;s Weed Advisory Board — 2026-10-29</title>
@@ -338,32 +377,6 @@ It's Telluride Fire's second annual Halloween Open House. We will be serving fre
       <category>KOTO</category>
     </item>
     <item>
-      <title>[Sun, Nov 1] KOTO Halloween Bash</title>
-      <link>https://koto.org/event/koto-halloween-bash/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/koto%20halloween%20bash%7C2026-11-01</guid>
-      <pubDate>Sun, 01 Nov 2026 03:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/10/KOTO-Halloween-RADO-poster-9.23-1-scaled.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 The Alibi, Telluride
-
-It's spooky season and that means it's time for the greatest off-season tradition in Telluride history – THE KOTO HALLOWEEN BASH! This year, we're letting our freak flags fly at The Alibi on Saturday, October 31st! Live music from Rado starts at 9 p.m. Costume Contest with cash prizes! Tickets are $20 in advance at alibitelluride.com and $25 at the door.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/10/KOTO-Halloween-RADO-poster-9.23-1-scaled.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Sun, Nov 1] Tea and Tarot</title>
-      <link>https://koto.org/event/tea-and-tarot/2026-11-01/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/tea%20and%20tarot%7C2026-11-01</guid>
-      <pubDate>Sun, 01 Nov 2026 21:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/04/tea-1.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Wilkinson Public Library, Telluride
-
-Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2025/04/tea-1.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
       <title>⚡ [Meeting] Rescheduled/Special Meeting - Planning &amp; Zoning Commission Chair - Nov 02 2026 — 2026-11-02</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-11-02%7CRescheduled%2FSpecial%20Meeting%20-%20Planning%20%26%20Zoning%20Commission%20Chair%20-%20Nov%2002%202026</guid>
@@ -372,7 +385,7 @@ Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in th
 
 This rescheduled P&Z Chair meeting — moved from October 22 to November 2 — has a single item on it: a minor subdivision at 510 W Columbia Avenue/129 N Townsend Street. The application asks to vacate the internal lot line between Lots 39 and 40 in the West Telluride Addition and merge them into one approximately 5,625-square-foot lot. It's a lot consolidation in the Historic Residential zone district, not a new development proposal.
 
-⚡ Why it matters: P&Z votes on lot-line vacation and merger in the Historic District.]]></description>
+⚡ Why it matters: P&Z votes on merging two West Telluride lots into one larger parcel.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -386,19 +399,6 @@ This rescheduled P&Z Chair meeting — moved from October 22 to November 2 — h
 Regular meeting on the City of Ouray's published schedule. The agenda is usually posted on BoardBook about a week ahead.]]></description>
       <category>Meeting</category>
       <category>City of Ouray</category>
-    </item>
-    <item>
-      <title>[Mon, Nov 2] Mountainfilm for Locals</title>
-      <link>https://www.telluride.com/event/mountainfilm-for-locals/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/mountainfilm%20for%20locals%7C2026-11-02</guid>
-      <pubDate>Mon, 02 Nov 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/63808/mf26_for_locals_2200x1237.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Join Mountainfilm for Mountainfilm for Locals, a free screening for our local community, presented in partnership with …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/63808/mf26_for_locals_2200x1237.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
     </item>
   </channel>
 </rss>
