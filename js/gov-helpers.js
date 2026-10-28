@@ -3874,6 +3874,20 @@ const SMB_FORUM_ARTICLES = [
 // dropped it stays dropped; the review finds something new.
 const LOCAL_NEWS_FEATURED = [
   {
+    title: "Does platted density mean anything in town planning?",
+    source: "Telluride Times",
+    sourceKey: "ttimes",
+    date: "October 20, 2026",
+    summary: "A letter to the editor raises pointed questions about the Carhenge/Backman Village project after the Sept. 30 Town Council meeting upheld a lot-line vacation. The writer notes the platted density shows 176 units — or 151 plus commercial space — yet planning has advanced a 230-unit proposal, with over $1M reportedly spent on consultants. She's asking what legal weight a recorded plat actually carries if staff can set it aside during project review.",
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_085bdee6-f590-475f-93af-399bea9a04de.html",
+    category: "Opinion",
+    newsTopic: "housing",
+    isLetter: true,
+    letterAuthor: "Madelaine Whiteman",
+    featured: true,
+    expires: "2026-10-31"   // Morgan directed a three-day run: Oct 28–30, off at the Sat 10/31 review
+  },
+  {
     title: "Another view of housing",
     source: "Telluride Times",
     sourceKey: "ttimes",
