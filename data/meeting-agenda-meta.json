@@ -499,7 +499,7 @@
   "telluride|2026-11-17|Town Council - Nov 17 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8046",
     "sv": 4,
-    "ph": "1c679cbbc66fe9d8"
+    "ph": "4807c55d76dc2f76"
   },
   "rico|2026-11-18|Rico Board of Trustees Regular Meeting": {
     "sv": 4,
@@ -645,5 +645,10 @@
   "tmvoa|2026-10-29|TMVOA Audit &amp; Compliance Committee": {
     "sv": 4,
     "ph": "b858cb282617fb09"
+  },
+  "telluride|2026-11-17|(Lottery) Telluride Housing Authority - Nov 17 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8329",
+    "sv": 4,
+    "ph": "d453c7f32314afb9"
   }
 }

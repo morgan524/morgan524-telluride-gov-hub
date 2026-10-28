@@ -405,7 +405,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-11-17|Town Council - Nov 17 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8046","sv":4,"ph":"1c679cbbc66fe9d8"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8046","sv":4,"ph":"4807c55d76dc2f76"},
 
   "rico|2026-11-18|Rico Board of Trustees Regular Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -495,7 +495,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1093/files/agenda/2059","zoomUrl":"https://us06web.zoom.us/j/88116514360?pwd=8CSCcqAImeFR8z2mhAEpMoGhiugbeT.1","meetingId":"881 1651 4360","passcode":"463594","phone":"970-728-3174","sv":4},
 
   "tmvoa|2026-10-29|TMVOA Audit &amp; Compliance Committee":
-    {"sv":4,"ph":"b858cb282617fb09"}
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "telluride|2026-11-17|(Lottery) Telluride Housing Authority - Nov 17 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8329","sv":4,"ph":"d453c7f32314afb9"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -827,11 +830,11 @@ const MEETING_PREVIEWS = {
   "mv|2026-11-05|Design Review Board":
     "Board will consider design review applications including a specific approval for a general easement encroachment at 112 Stevens Dr. and a height variance at an undeveloped Mountain Village Blvd. lot. A conceptual work session on deck repairs and possible extensions at 120 Vischer Dr. is also scheduled.",
 
-  "county|2026-10-28|Board of County Commissioners Work Session":
-    "Board of County Commissioners will hold a work session on October 28, 2026, at the Placerville School House. The session includes standard procedural items such as roll call, agenda review, and public comment. Specific substantive agenda items were not detailed in the available excerpt.",
+  "telluride|2026-11-17|(Lottery) Telluride Housing Authority - Nov 17 2026":
+    "The Telluride Housing Authority is expected to conduct a lottery process at its November 17, 2026 meeting. Related matters include a comprehensive review of employee rental housing policies, for which the Town is seeking consulting services.",
 
   "ouray|2026-10-28|Board of County Commissioners Work Session":
-    "Commissioners are expected to hear an annual planning presentation from CDOT and discuss FEMA Public Assistance matters, including Ouray County recovery projects and road damage assessments. No formal action will be taken, as work sessions are deliberative in nature."
+    "Commissioners are expected to receive an annual planning presentation from CDOT and discuss FEMA Public Assistance matters, including Ouray County recovery projects and road damage assessments. No formal action will be taken, though commissioners may provide direction to staff on these topics."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -873,6 +876,26 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Monthly Chamber of Commerce meeting open to all.",
     href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
     img: ""
+  },
+  {
+    title: "SBA Offers Disaster Assistance Across Colorado - Low-Interest Disaster Loans Now Available",
+    source: "Ouray County",
+    sourceKey: "ouray-county",
+    date: "October 28, 2026",
+    newsTopic: "public-safety",
+    copy: "The U.S. Small Business Administration announced low-interest federal disaster loans are now available to Colorado communities because of the Willow Fire, the Elk Fire, and the Ouray County wildfires, flooding, and mudslides.",
+    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=968",
+    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22986"
+  },
+  {
+    title: "JOINT COMMUNITY MESSAGE: Transition of Policing Services in Ouray",
+    source: "Ouray County",
+    sourceKey: "ouray-county",
+    date: "October 28, 2026",
+    newsTopic: "public-safety",
+    copy: "We are excited to announce that the Ouray County Sheriff’s Office has officially taken over municipal policing and law enforcement services within the City of Ouray.",
+    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=967",
+    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22993"
   },
   {
     title: "College student from Ridgway missing near Buena Vista",
@@ -1394,7 +1417,10 @@ const MANUAL_SUMMARIES = {
     "The Citizens Weed Advisory Board meets October 29 in Norwood for a routine session covering administrative ground: approving August 2026 minutes, setting three proposed 2027 meeting dates (March 25, August 26, October 28), and working through several standing administrative questions — whether Vegetation Control & Management has the authority to handle enforcement, how grant funds are shaping up for 2027, the status of America the Beautiful funds, and who has actually signed the board's Code of Conduct. The included meeting minutes from 2025 show the operational backdrop: 419 acres treated last year, ongoing Tamarisk biocontrol monitoring in Disappointment Valley with uncertain beetle results, and a persistent gap in board membership and enforcement capacity under Senate Bill 2431.",
 
   "tmvoa|2026-10-29|TMVOA Audit &amp; Compliance Committee":
-    "The October 29 TMVOA Audit & Compliance Committee agenda hasn't been posted yet."
+    "The October 29 TMVOA Audit & Compliance Committee agenda hasn't been posted yet.",
+
+  "telluride|2026-11-17|(Lottery) Telluride Housing Authority - Nov 17 2026":
+    "The November 17, 2026 Telluride Housing Authority Lottery agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2669,6 +2695,168 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Shrek-tastic",
+    source: "Telluride Times",
+    date: "October 28, 2026",
+    firstSeen: "2026-10-28",
+    newsTopic: "community",
+    copy: "\"Shrek the Musical\" ran at the Sheridan Opera House Oct. 8–11, with Kevin Douglas, Rachel Brand, and Nico Pantovich-Gonzalez in the lead roles. Audiences responded well — one theatergoer called it \"really well done and very funny.\"",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_14a58af3-1776-4a9d-860c-8f6f77b1b1f9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/75/775eb22a-fec7-42bf-85c4-e8fd28b92639/6ad9339685183.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Spooky night for pets",
+    source: "Telluride Times",
+    date: "October 28, 2026",
+    firstSeen: "2026-10-28",
+    newsTopic: "community",
+    copy: "Halloween ranks second only to July 4th for stressed pets. Keep them inside with a quiet space, soft sounds, and treats — away from candy, decorations, and the constant doorbell. If you dress them up, keep it short.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_7a83e1f9-de44-437c-8e41-755360e07d2a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/26/c26c8091-744c-4b3e-8bbf-c7aa0b0c0ad2/6adb81286a31d.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Telluride Ski Resort hires new ski patrol director",
+    source: "Telluride Times",
+    date: "October 28, 2026",
+    firstSeen: "2026-10-28",
+    newsTopic: "recreation",
+    copy: "Telluride Ski Resort has named Elizabeth Howe as its new ski patrol director — a return for someone who started here as a liftie back in 1993. She spent 20 years at Telski before moving on to senior roles at Vail and Mountain Capital Partners. She stepped into the position in August.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_5896ddf0-c4ae-4bef-a404-f05f5a98b20c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/be/ebed7049-41d3-4eb3-a95a-0dc2ee58ddca/6ad92ba6b2708.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "SMPA pursues renewable energy purchase to secure long-term savings",
+    source: "Telluride Times",
+    date: "October 28, 2026",
+    firstSeen: "2026-10-28",
+    newsTopic: "recreation",
+    copy: "SMPA and three partner co-ops have agreed to purchase power from Valley Range Energy Park, a 125MW solar facility with battery storage planned east of Cortez, through Tri-State's BYOR program. If Montezuma County approves it, the project would cover roughly 40% of 2024 peak demand and save SMPA members around $5 million over 20 years.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_94d2bb8f-9ba4-4ffe-9307-4e8e0463c325.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/bb/9bb20032-23e4-4462-af4c-9e7b65debfab/6adb81e69e130.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Vote No on measure 5A",
+    source: "Telluride Times",
+    date: "October 28, 2026",
+    firstSeen: "2026-10-28",
+    newsTopic: "education",
+    copy: "Telluride School District spends over $36,600 per student — more than double the state average — while enrollment has dropped 20% and is projected to keep falling. Spending has climbed from $19M to $26.2M since 2021, and the promised cuts don't keep pace with inflation. Measure 5A asks local taxpayers for $2.7M annually for seven years.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/article_2b34e3a8-15df-4e2a-aa28-0686436c1697.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "What would it take?",
+    source: "Telluride Times",
+    date: "October 28, 2026",
+    firstSeen: "2026-10-28",
+    newsTopic: "housing",
+    copy: "San Miguel Resource Center logged over 1,700 contacts with 125 domestic violence survivors in the past year. The recurring obstacles were housing, legal navigation, and access — not a lack of effort by survivors. No shelter exists in the service area, and getting help often depends on whether landlords, employers, and agencies are willing to cooperate.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/article_cd603936-eb4b-4392-a970-b6870145daf9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/1f/01fe2b13-0f76-4666-9c5e-3bbd476d2e47/6adf9ed12ca1f.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Rule-breaking",
+    source: "Telluride Times",
+    date: "October 28, 2026",
+    firstSeen: "2026-10-28",
+    newsTopic: "education",
+    copy: "A Telluride family sent their 16-year-old daughter Vivian to the Alzar School — a semester program split between Cascade, Idaho and Patagonia, Chile — despite a longtime rule against boarding school. The school mixes academics with kayaking, backcountry expeditions, and wilderness training for a student body of 30. After 61 days apart, the family reunited for Family Weekend.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/article_520a9af9-a7e6-4c33-8c88-0cec397d730a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/ca/5ca49cee-a81d-4254-a0fc-d5159df2fd11/6adb85019a5d7.image.jpg",
+    letterAuthor: "Viv",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Post-apumpkalyptic",
+    source: "Telluride Times",
+    date: "October 28, 2026",
+    firstSeen: "2026-10-28",
+    newsTopic: "community",
+    copy: "Fall's a good time to step back from the pumpkin spice wave and try something quieter. Kitchari — rice, split mung dal, ghee, and simple spices — is an Ayurvedic staple valued for easy digestion and a grounding, warming quality. The piece also notes that pumpkin pie spice works fine in oatmeal, squash, or lentil soup if you've got it sitting around.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/article_b4e4ab3a-32c7-4c5b-8920-6f1a1bef739c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/fa/dfaa67af-6b36-445c-b52a-9419b185aa51/6adb866ed6e78.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "How can you not be romantic about baseball?",
+    source: "Telluride Times",
+    date: "October 28, 2026",
+    firstSeen: "2026-10-28",
+    newsTopic: "recreation",
+    copy: "Postseason baseball is here, and a longtime Dodger fan — attending games since 1964 — makes the case for why the sport still holds a unique place in American life. Telluride's own adult softball leagues draw some of the loudest crowds in Town Park, while flag football and basketball leagues don't exist here at all.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/article_0f348675-f72a-49a2-b137-0f5ec6001d30.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/c4/dc470314-63f3-47e6-8b10-b9b98d779103/6adb88937802d.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Employers invited to apply for employee housing master leases",
+    source: "Telluride Times",
+    date: "October 28, 2026",
+    firstSeen: "2026-10-28",
+    newsTopic: "housing",
+    copy: "THA is accepting applications from local businesses, nonprofits, and government entities to master-lease units at the new Virginia Placer IIA building and the Boarding House. Applications are due in person by 11 a.m. on Oct. 28, with a lottery drawing set for Nov. 17. Leases start Dec. 1; rents range from $582/month for a Boarding House single room up to $3,147 for a two-bedroom apartment.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_89138f32-31bd-40d9-8b50-69e528babec3.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/0e/d0e28d11-3f5e-460d-a9c0-1492e74381b7/6adb82b177757.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Dee Williams celebrated with volunteer honor",
+    source: "Telluride Times",
+    date: "October 28, 2026",
+    firstSeen: "2026-10-28",
+    newsTopic: "community",
+    copy: "After carefully reviewing nominations, the Telluride Foundation is proud to announce Dee Williams as the recipient of the 2026 Volunteer of the Year Award. The recipient is nominated though an open community process and selected by Telluride Foundation staff.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news_release/article_fe2496a0-cb8a-4e11-ad87-e665c814941b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/8b/c8b34204-ead5-4ad4-819e-5a6d372333d0/6adcdb9a139b5.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Village Court Apartments waitlist to open on Oct. 27",
+    source: "Telluride Times",
+    date: "October 28, 2026",
+    firstSeen: "2026-10-28",
+    newsTopic: "housing",
+    copy: "Mountain Village's housing authority is opening the waitlist for new units in VCA Building 16 on Oct. 27, noon–6 p.m., via an online form only. Units are 1BD/1BA or 2BD/2BA with full kitchens, W/D, and A/C; one parking pass per unit. Rent is income-based, up to 140% AMI.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_d4c2a24e-8945-45dd-8a4b-a71863dc0181.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Mountain Village adopts new outdoor lighting rules",
+    source: "Telluride Times",
+    date: "October 28, 2026",
+    firstSeen: "2026-10-28",
+    newsTopic: "community",
+    copy: "Mountain Village's updated outdoor lighting rules took effect July 16. Holiday lights are allowed Nov. 1–Jan. 31, must be off 10 p.m.–6 a.m., and can't flash. Most existing fixtures can stay for now, with compliance deadlines of 2031–2036 depending on type.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_0df44ab4-89d5-4397-b583-108b4c251bb2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Warm up the bus",
     source: "Telluride Times",
     date: "October 28, 2026",
@@ -3576,6 +3764,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Applications Open for 2026/2027 Temporary Winter Community Housing Program",
+    source: "Town of Telluride",
+    date: "October 9, 2026",
+    newsTopic: "housing",
+    copy: "(October 8, 2026) – The Town of Telluride is accepting applications for its Temporary Winter Community Housing program for the 2026/2027 winter season. The program provides seasonal housing in Town Park for eligible workers employed in the Telluride area.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=406",
+    img: ""
+  },
+  {
+    title: "San Miguel County Public Health Announces Fall Vaccine Availability",
+    source: "San Miguel County",
+    date: "October 1, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1419",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14836"
+  },
+  {
     title: "DMV Services available in Egnar 11/18",
     source: "San Miguel County",
     date: "October 15, 2026",
@@ -3583,6 +3789,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
+  },
+  {
+    title: "SBA Offers Disaster Assistance in Ouray County",
+    source: "Town of Ridgway",
+    date: "October 27, 2026",
+    firstSeen: "2026-10-28",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/SBA-Press-Release-Oct-2026-Fire-Flood-Funding.pdf",
+    img: ""
   },
   {
     title: "View the Town of Ridgway's Recently Adopted Housing Action Plan",
@@ -5493,6 +5710,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53780725919104/huge/846566299e8e325221de54dd5a54a0fd6427fbf5.jpg"
   },
   {
+    title: "Ridgway MS Boys Basketball vs. Dolores",
+    link: "https://events.ourayridgwayevents.com/event/ridgway-ms-boys-basketball-vs-dolores",
+    description: "Join us at the Ridgway Secondary Gym as the Ridgway Middle School Boys Basketball team takes on Dolores! Bring your friends and family, grab something from concessions, and help us cheer on our athletes! Admission supports our athletic program and a great home crowd makes all the difference. Go Demons! Adults: $5 Seniors (65+): $3 Students: FREE Season Pass: $100 (good for the entire year)",
+    pubDate: "2026-10-29T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ridgway Secondary School",
+    imageUrl: "https://localist-images.azureedge.net/photos/54363953241643/huge/5ca5c38958e6f2cc658914fc0f4281346f27eea0.jpg"
+  },
+  {
     title: "RSS HS Soccer Playoff & HS Cross Country State Send-Off!",
     link: "https://events.ourayridgwayevents.com/event/hs-soccer-playoff-hs-cross-country-state-send-off",
     description: "Our Ridgway High School Boys Soccer team is headed to the playoffs, and our High School Cross Country athletes are heading to State! We invite the Ridgway community to join us for a special send-off celebration on Friday, October 30, at 8:45 a.m. at the RSS Circle! Come show your Demon pride, cheer on our student-athletes, and wish them luck!",
@@ -5602,7 +5830,7 @@ const OURAY_RIDGWAY_EVENTS = [
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Ouray, Colorado",
-    imageUrl: "https://localist-images.azureedge.net/photos/54109990596297/huge/ff02999ed014c36a19d03a5e04130f621d1212a6.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/54109990596297/huge/f5cfa2bfb88f929af55326a4cdf7924d8d4cea40.jpg"
   },
   {
     title: "Pumpkin Float",
@@ -6564,6 +6792,17 @@ const NORWOOD_EVENTS = [
     link: "https://www.norwoodtown.com/2026-10-27-board-of-trustees-joint-work-session",
     description: "A joint work session of the Board of Trustees, hosted by the Town of Norwood, bringing together board members to discuss and collaborate on municipal matters. The meeting is open to the public as part of the town's ongoing local governance process.",
     pubDate: "2026-10-27T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Government Meeting",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Norwood Sanitation District Meeting 10 29 2026 NSD Work Session",
+    link: "https://www.norwoodtown.com/2026-10-29-norwood-sanitation-district-meeting-10-29-2026-nsd-work-session",
+    description: "The Norwood Sanitation District will hold a work session meeting on October 29, 2026, hosted by the Town of Norwood. This is a local government meeting open to those with interest in sanitation district business and operations.",
+    pubDate: "2026-10-29T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
     category: "Government Meeting",
@@ -7804,6 +8043,23 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_792d96c0-09c8-479f-83f8-bdf3681b49ae.html",
     address: "455 Mountain Village Blvd, Suite A, Mountain Village, CO",
     noticeKey: "ord-mv-fees-16.01-16.02-COL-000256"
+  },
+  {
+    title: "Request for Proposal -- TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS",
+    entity: "Town of Telluride",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Request for Proposal",
+    filterTag: "public-entity",
+    summary: "Town of Telluride is seeking qualified respondents for: TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS.",
+    deadline: "Closes 1/11/2026",
+    expires: "2026-01-11",
+    dates: "10/28",
+    url: "https://www.telluride.gov/bids.aspx?bidID=133",
+    address: "",
+    totBidID: "133"
   }
 ];
 
@@ -9367,8 +9623,17 @@ const TELLURIDE_BOARD_MEETINGS = [
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8046",
     hasAgenda: false,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: "10:00 AM",
+    time: "10:30 AM",
     civicwebId: 8046
+  },
+  {
+    date: "November 17, 2026",
+    title: "(Lottery) Telluride Housing Authority",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8329",
+    hasAgenda: false,
+    location: "Rebekah Hall, 113 W Columbia Ave",
+    time: "10:00 AM",
+    civicwebId: 8329
   },
   {
     date: "November 18, 2026",
@@ -9459,6 +9724,15 @@ const TELLURIDE_BOARD_MEETINGS = [
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "5:30 PM",
     civicwebId: 8110
+  },
+  {
+    date: "January 12, 2027",
+    title: "Town Council",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8330",
+    hasAgenda: false,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: "10:00 AM",
+    civicwebId: 8330
   }
 ];
 

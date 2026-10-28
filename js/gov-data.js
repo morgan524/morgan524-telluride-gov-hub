@@ -347,8 +347,8 @@ const TMVOA_CACHED_DATA = [
     date: "October 29, 2026",
     title: "TMVOA Audit &amp; Compliance Committee",
     board: "other",
-    agendaUrl: null,
-    packetUrl: null,
+    agendaUrl: "https://tmvoa.org/site/assets/files/4969/tmvoa_audit_compliance_meeting_agenda_10_29_26.pdf",
+    packetUrl: "https://tmvoa.org/site/assets/files/4969/tmvoa_audit_compliance_meeting_packet_10_29_26.pdf",
     location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {

@@ -51,8 +51,17 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8046",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "10:00 AM",
+    "time": "10:30 AM",
     "civicwebId": 8046
+  },
+  {
+    "date": "November 17, 2026",
+    "title": "(Lottery) Telluride Housing Authority",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8329",
+    "hasAgenda": false,
+    "location": "Rebekah Hall, 113 W Columbia Ave",
+    "time": "10:00 AM",
+    "civicwebId": 8329
   },
   {
     "date": "November 18, 2026",
@@ -143,5 +152,14 @@
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "5:30 PM",
     "civicwebId": 8110
+  },
+  {
+    "date": "January 12, 2027",
+    "title": "Town Council",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8330",
+    "hasAgenda": false,
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "time": "10:00 AM",
+    "civicwebId": 8330
   }
 ]
