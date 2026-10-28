@@ -11,7 +11,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
     "type": "Community",
-    "endDate": "2026-12-25"
+    "endDate": "2026-12-26"
   },
   {
     "title": "OPL Read a Book - Get a Pumpkin",
@@ -118,32 +118,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Ridgway High School volleyball hosts Ouray at Ridgway Secondary School, with JV play preceding the varsity match. The evening also serves as Senior Night, with a special recognition ceremony honoring the graduating players following the JV…",
     "type": "Arts & Film"
-  },
-  {
-    "title": "Telluride Remembrance Garden Dedication Ceremony",
-    "href": "https://koto.org/event/telluride-remembrance-garden-dedication-ceremony/",
-    "date": "2026-10-27",
-    "time": "4:30 PM",
-    "location": "Telluride Remembrance Garden",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/10/garden.jpeg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "A dedication ceremony for the Telluride Remembrance Garden, hosted by Thrive Community Health Network, at the garden's location on the river trail at the intersection of Colorado Avenue and Hemlock Street. The event honors those the…",
-    "type": "Outdoors & Sports"
-  },
-  {
-    "title": "America 250,Colorado 150 Book Club: Stampede to Timberline by Sibell Wolle",
-    "href": "https://koto.org/event/america-250colorado-150-book-club-stampede-to-timberline-by-sibell-wolle/",
-    "date": "2026-10-27",
-    "time": "5:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "This book includes the story of 240 of Colorado’s mining camps, with emphasis on the human side. The men who swarmed to the mountains to find precious metal came in successive waves from the late 1850s on, combing the gulches, scrambling…",
-    "type": "Talks & Classes"
   },
   {
     "title": "America 250/Colorado 150 Book Club- Stampede to Timberline with Rudy Davison",
@@ -730,6 +704,19 @@
     "endDate": "2026-11-01"
   },
   {
+    "title": "RSS HS Soccer Playoff & HS Cross Country State Send-Off!",
+    "href": "https://events.ourayridgwayevents.com/event/hs-soccer-playoff-hs-cross-country-state-send-off",
+    "date": "2026-10-30",
+    "time": "8:45 AM",
+    "location": "Ridgway Secondary School",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54356090821112/huge/4ccf416a9e2d0616f492597ed825640d64c0321d.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Our Ridgway High School Boys Soccer team is headed to the playoffs, and our High School Cross Country athletes are heading to State! We invite the Ridgway community to join us for a special send-off celebration on Friday, October 30, at…",
+    "type": "Community"
+  },
+  {
     "title": "\"Hello to Golden Autumn\" Acrylic Painting Workshop",
     "href": "https://events.ourayridgwayevents.com/event/hello-to-golden-autumn-acrylic-painting-workshop",
     "date": "2026-10-30",
@@ -819,6 +806,20 @@
     "source": "KOTO Community Calendar",
     "desc": "It's okay to LAUGH during spooky season we invite you to join us for Mel Brooks' classic comedy: YOUNG FRANKENSTEIN – THE MUSICAL! Based on the film starring Gene Wilder, this musical pokes fun at Mary Shelly's \"Frankenstein,\" along with…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Every Sat. Floating Sound Bath",
+    "href": "https://events.ourayridgwayevents.com/event/floating-sound-bath-4324",
+    "date": "2026-10-31",
+    "time": "3:00 PM",
+    "location": "Orvis Hot Springs",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54329446861527/huge/53a8f8ffae924adab852a4b581b6b105251c9b9b.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "A weekly group float session held every Saturday at Orvis Hot Springs, combining warm-water aquatic massage with live sound therapy including vocals and singing bowls. The experience is offered on a sliding scale, and advance reservations…",
+    "type": "Wellness",
+    "endDate": "2026-12-26"
   },
   {
     "title": "Halloween Costume Contest",
@@ -1149,6 +1150,20 @@
     "source": "Mountain Village",
     "desc": "A community workshop hosted in Mountain Village, bringing together Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library to explore the emotional landscape of ecological grief and…",
     "type": "Talks & Classes"
+  },
+  {
+    "title": "Weds Floating Sound Bath",
+    "href": "https://events.ourayridgwayevents.com/event/floating-sound-bath",
+    "date": "2026-11-04",
+    "time": "1:30 PM",
+    "location": "Orvis Hot Springs",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54329351687325/huge/1e81b72abc42fb73374205a2bd7143bee62a33ef.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Group Float in warm healing waters every Wednesday @ 1:30pm. Receive gentle aquatic massage while listening to live sound therapy, vocals, bowls and more. Contact Christian 303-807-1039 to reserve your spot in advance. Please pay in…",
+    "type": "Wellness",
+    "endDate": "2026-12-23"
   },
   {
     "title": "Parenting Workshop w/ Bright Futures for Children",
@@ -2228,6 +2243,19 @@
     "endDate": "2026-12-15"
   },
   {
+    "title": "Telluride R-1 School District Board Regular Meeting",
+    "href": "https://koto.org/event/telluride-r-1-school-district-board-regular-meeting-2/",
+    "date": "2026-11-17",
+    "time": "5:15 PM",
+    "location": "Telluride Middle/High School, TELLURIDE",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Telluride R-1 School District Board of Education holds a regular meeting on Tuesday, November 17th, at 5:15 p.m. in the Bridal Veil conference room at TMHS and via Zoom. The meeting agenda and Zoom link can be found at tellurideschool.org.",
+    "type": "Community"
+  },
+  {
     "title": "Weekly Young Adult Gathering",
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-11-17",
@@ -2241,6 +2269,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Telluride Mountain School Open House",
+    "href": "https://koto.org/event/telluride-mountain-school-open-house-2/",
+    "date": "2026-11-17",
+    "time": "9:00 AM",
+    "location": "Telluride Mountain School",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Telluride Mountain School is hosting an open house where prospective families and community members can step directly into the learning environment rather than sit through a formal presentation. Visitors are invited to explore classrooms,…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
     "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
     "date": "2026-11-17",
@@ -2251,6 +2292,19 @@
     "category": "Community Event",
     "source": "Mountain Village",
     "desc": "A community workshop exploring eco-grief and gratitude, held in Mountain Village and presented by Through the Woods Doula, EcoAction Partners, and the Wilkinson Public Library. The event offers participants a space to process emotions of…",
+    "type": "Talks & Classes"
+  },
+  {
+    "title": "The Classics Taproom Society",
+    "href": "https://koto.org/event/the-classics-taproom-society-2/",
+    "date": "2026-11-18",
+    "time": "5:30 PM",
+    "location": "Telluride Brewing Company Lawson Hill Taproom",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/10/taproom-society-7-1.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Discover the magic of classic literature in our newest book club, where we celebrate the milestones of timeless works! With the upcoming 50th, 75th, and 100th anniversaries of these literary treasures in 2026 and 2027, there’s no better…",
     "type": "Talks & Classes"
   },
   {
@@ -2304,6 +2358,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "A recurring craft program at the Ouray Public Library welcomes children under 12 for a hands-on creative session after school. It is a community offering from the library for young kids looking to make something with their hands.",
     "type": "Family & Kids"
+  },
+  {
+    "title": "Salon Night at Telluride Arts HQ",
+    "href": "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-11-19/",
+    "date": "2026-11-19",
+    "time": "5:30 PM",
+    "location": "Telluride Arts HQ, TELLURIDE",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it…",
+    "type": "Community"
   },
   {
     "title": "Jean Sandoval & the Town Kids",
@@ -3043,6 +3110,19 @@
     "title": "Sheridan Arts Foundation Holiday Rewind: A Tribute Concert Series: Tease the Season: Holiday Burlesque, Ft. The House of Shimmy Shake",
     "href": "https://www.telluride.com/event/sheridan-arts-foundation-holiday-concert-series/",
     "date": "2026-12-26",
+    "time": "",
+    "location": "Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
+    "category": "",
+    "source": "Telluride.com",
+    "desc": "Join the Sheridan Arts Foundation for five nights of world-class entertainment at the historic Sheridan Opera House.",
+    "type": "Music"
+  },
+  {
+    "title": "Sheridan Arts Foundation Holiday Rewind: A Tribute Concert Series: Tease the Season: Holiday Burlesque, Ft. The House of Shimmy Shake",
+    "href": "https://www.telluride.com/event/sheridan-arts-foundation-holiday-concert-series/",
+    "date": "2026-12-27",
     "time": "",
     "location": "Telluride",
     "town": "Telluride",

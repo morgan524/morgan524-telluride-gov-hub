@@ -1,27 +1,27 @@
 {
- "generated": "2026-10-27T22:02:44.795Z",
+ "generated": "2026-10-28T04:57:46.639Z",
  "pinned": false,
- "topic": "gondola",
- "topicLabel": "Gondola 3A",
- "headline": "Gondola 3A goes before Town Council on Tuesday, October 27",
- "blurb": "Three substantive items anchor this meeting. Council takes up the Fourth Supplement to the Gondola IGA, extending cost-sharing for the 2027 planning and development budget on the gondola replacement project — a line that connects directly to the SMART 3A funding voters approved.",
+ "topic": "norwoodwater",
+ "topicLabel": "Norwood Water",
+ "headline": "Norwood Water goes before Norwood Water Commission Meeting on Tuesday, November 10",
+ "blurb": "The November 10, 2026 Norwood Water Commission Meeting agenda hasn't been posted yet.",
  "images": [],
  "deepDive": {
-  "label": "Gondola 3A",
-  "href": "/deep-dive-gondola.html"
+  "label": "Norwood Water",
+  "href": "/deep-dive-norwoodwater.html"
  },
  "meeting": {
-  "title": "Town Council",
-  "sourceLabel": "Town of Telluride",
-  "date": "2026-10-27",
-  "humanDate": "Tuesday, October 27",
-  "time": "10:00 AM",
-  "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045",
-  "hasAgenda": true,
-  "packetUrl": "https://telluride-co.civicweb.net/document/446443/",
-  "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045",
-  "zoomLink": "https://us06web.zoom.us/meeting/register/DaEVzy_NTsub9PbJHzPwTg",
-  "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+  "title": "Norwood Water Commission Meeting",
+  "sourceLabel": "Town of Norwood",
+  "date": "2026-11-10",
+  "humanDate": "Tuesday, November 10",
+  "time": "",
+  "location": "1670 Naturita St, Norwood CO 81423",
+  "agendaUrl": "",
+  "hasAgenda": false,
+  "packetUrl": "",
+  "link": "https://www.norwoodtown.com/nwc-meetings",
+  "zoomLink": "",
+  "livestream": ""
  }
 }

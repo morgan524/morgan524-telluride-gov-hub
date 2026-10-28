@@ -532,7 +532,9 @@
   },
   "mv|2026-11-05|Design Review Board": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/50155/november_5-_2026_design_review_board_meeting_agenda.pdf",
+    "zoomUrl": "https://us06web.zoom.us/j/82514604948?pwd=i0xGIqUZB5sk4vpv27kGSDMUpyzbNU.1",
+    "meetingId": "825 1460 4948"
   },
   "mv|2026-11-19|Town Council Meeting": {
     "sv": 4,
@@ -553,7 +555,7 @@
   "telluride|2026-11-19|Resident Advisory Committee - Nov 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8320",
     "sv": 4,
-    "ph": "a1a1d79c5ae0155d"
+    "ph": "5c50c3c73d8fc7d1"
   },
   "telluride|2026-11-19|Planning & Zoning Commission - Nov 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8108",
