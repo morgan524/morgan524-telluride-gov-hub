@@ -6,8 +6,21 @@
     <atom:link href="https://livabletelluride.org/feed-family.xml" rel="self" type="application/rss+xml" />
     <description>Storytime, youth programs, and all-ages activities — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Oct 2026 09:43:17 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 18:18:55 GMT</lastBuildDate>
     <ttl>360</ttl>
+    <item>
+      <title>[Thu, Oct 29] Coffee &amp; Climate Conversations</title>
+      <link>https://www.telluride.com/event/coffee-climate-conversations/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/coffee%20and%20climate%20conversations%7C2026-10-29</guid>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/57231/screenshot_2026-10-06_at_9_14_18_am.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+From big adventures to spending time with family and friends, recreation is often at the heart of our experiences on …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/57231/screenshot_2026-10-06_at_9_14_18_am.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
     <item>
       <title>[Meeting] Citizen&apos;s Weed Advisory Board — 2026-10-29</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
@@ -154,8 +167,20 @@ We are a MOBILE family business offering non-competitive Gymnastics, Preschool S
       <pubDate>Fri, 30 Oct 2026 22:00:00 GMT</pubDate>
       <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/10/IMG_0833.jpeg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
 
-Mark your calendars, Telluride! Mountain Sprouts Preschool is hosting a Halloween Dance Disco at The Patio on October 30th from 4–6pm, right after the school Halloween parade! Drop in for the live DJ, dancing, a nature scavenger hunt, food & drinks, arts and crafts, and plenty of festive fun! We’ll also have a silent auction with some amazing goodies donated by our wonderful local businesses, with proceeds supporting our incredible Mountain Sprouts Preschool. Bring the kids, bring your friends and come party with us! Everyone is welcome! The Patio October 30th 4–6pm]]></description>
+Mountain Sprouts Preschool is hosting a Halloween Dance Disco on October 30th, featuring a live DJ, dancing, a nature scavenger hunt, arts and crafts, and food and drinks. The drop-in community event takes place right after the school's Halloween parade.]]></description>
       <media:content url="https://koto.org/wp-content/uploads/2026/10/IMG_0833.jpeg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Fri, Oct 30] Raise a Glass to Val Maltese</title>
+      <link>https://koto.org/event/raise-a-glass-to-val-maltese/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/raise%20a%20glass%20to%7C2026-10-30</guid>
+      <pubDate>Fri, 30 Oct 2026 23:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 The Last Dollar Saloon, Telluride
+
+Friday, October 30th, raise a glass to Val Maltese at The Buck around 5 p.m. His wife Anne, son Cody, and Ned Mulford & family will be in attendance. Any old timers, see you there!]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
     </item>
@@ -194,7 +219,7 @@ It's Telluride Fire's second annual Halloween Open House. We will be serving fre
 
 This rescheduled P&Z Chair meeting — moved from October 22 to November 2 — has a single item on it: a minor subdivision at 510 W Columbia Avenue/129 N Townsend Street. The application asks to vacate the internal lot line between Lots 39 and 40 in the West Telluride Addition and merge them into one approximately 5,625-square-foot lot. It's a lot consolidation in the Historic Residential zone district, not a new development proposal.
 
-⚡ Why it matters: P&Z votes on merging two lots at 510 W Columbia into one 5,625-sq-ft parcel.]]></description>
+⚡ Why it matters: P&Z votes on merging two West Telluride lots into one parcel.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>

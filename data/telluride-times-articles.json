@@ -1,12 +1,36 @@
 [
   {
+    "title": "CHALKBOARD",
+    "source": "Telluride Times",
+    "date": "October 29, 2026",
+    "firstSeen": "2026-10-29",
+    "newsTopic": "government",
+    "copy": "Local birthdays and recurring community events for the Norwood and Nucla-Naturita area, including food pantry Sundays, senior meals Mondays and Thursdays, pickleball, AA meetings, free legal aid, and monthly board meetings for town, school, chamber, and parks. Contact details and schedules included.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/norwood_post/article_f14e64ad-71b7-424f-9c4b-7557b88fc4f3.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/ea/2eaa0286-4d0a-48c6-b8cb-a6a02d66daf9/6adbd6ce1fbd5.image.png",
+    "imgHiRes": true
+  },
+  {
+    "title": "Commissioners approve forestry practices amendment",
+    "source": "Telluride Times",
+    "date": "October 29, 2026",
+    "firstSeen": "2026-10-29",
+    "newsTopic": "government",
+    "copy": "San Miguel County updated its Land Use Code to regulate forestry practices, requiring applicants to submit reports detailing project impacts and mitigation plans. The rules cover wildfire, wildlife, wetlands, and geologic hazards, with a threshold of 80+ acres or 1.5+ acres of disturbance triggering formal review. Most logging here is wildfire mitigation, not commercial.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_7793d08b-f4b2-4470-a937-1ac3682aa344.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/0f/70f0b0a3-f9d6-4504-a408-ae99f96c1435/6ae109f6aa7f6.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Pioneer Day celebrations",
     "source": "Telluride Times",
     "date": "October 29, 2026",
     "firstSeen": "2026-10-29",
     "newsTopic": "community",
-    "copy": "",
-    "claudeSummary": false,
+    "copy": "Norwood fifth graders took top honors at the Pioneer Day parade on Sept. 26, winning first place and Best Overall Float — along with $75 toward a pizza or ice cream party. Kids also took part in sack races as part of the annual celebration.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/norwood_post/article_a48ce6d9-1754-4982-a7d4-73a99b3627d6.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/70/a70fdc09-f682-4717-ac0b-9a4ae4e0f269/6adbb5024c9b3.image.jpg",
     "imgHiRes": true
@@ -21,18 +45,6 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/norwood_post/article_7d871b3e-0bed-4077-9cd0-3607b927d6d2.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/56/e561c7f0-b687-4aed-9a50-e371cf443dea/6adbad15b3dbf.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "Commissioners approve forestry practices amendment",
-    "source": "Telluride Times",
-    "date": "October 29, 2026",
-    "firstSeen": "2026-10-29",
-    "newsTopic": "government",
-    "copy": "San Miguel County updated its Land Use Code to regulate forestry practices, requiring applicants to submit reports detailing project impacts and mitigation plans. The rules cover wildfire, wildlife, wetlands, and geologic hazards, with a threshold of 80+ acres or 1.5+ acres of disturbance triggering formal review. Most logging here is wildfire mitigation, not commercial.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/article_7793d08b-f4b2-4470-a937-1ac3682aa344.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/0f/70f0b0a3-f9d6-4504-a408-ae99f96c1435/6ae109f6aa7f6.image.jpg",
     "imgHiRes": true
   },
   {
@@ -52,9 +64,9 @@
     "source": "Telluride Times",
     "date": "October 29, 2026",
     "firstSeen": "2026-10-29",
-    "newsTopic": "community",
-    "copy": "",
-    "claudeSummary": false,
+    "newsTopic": "recreation",
+    "copy": "Michael Fagan, who built his life and real estate appraisal career in Telluride after college, passed away August 29 at 76. He was remembered by friends for his skiing, his laugh, and his steady presence in the community. He is survived by his son Sean, daughter-in-law Aimee, and grandson Enzo.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/obituaries/article_fd677271-e152-4dd9-8431-dd4e5bc2f851.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/4c/a4cb3a30-8a57-4cc5-bc98-e29dccdd2d65/6ae207e1d5d59.image.jpg",
     "imgHiRes": true
@@ -1172,7 +1184,18 @@
     "img": ""
   },
   {
-    "title": "Notice of Public Hearing for Liquor License on Thursday, November 19, 2026 at 5:30pm - Chipeta Lodge Resort &amp; Spa, 304 S Lena Street - Notice dated October 13, 2026",
+    "title": "Ridgway Town Council Budget Retreat Agenda",
+    "source": "Town of Ridgway",
+    "date": "October 31, 2026",
+    "firstSeen": "2026-10-29",
+    "newsTopic": "government",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/00-October-31-budget-retreat-agenda.pdf",
+    "img": ""
+  },
+  {
+    "title": "Notice of Public Hearing for Liquor License on November 19, 2026 at 5:30pm - Chipeta Lodge Resort &amp; Spa, 304 S Lena Street - Notice dated October 13, 2026",
     "source": "Town of Ridgway",
     "date": "October 29, 2026",
     "firstSeen": "2026-10-14",
