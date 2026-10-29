@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Oct 2026 00:44:46 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 09:43:17 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Thu, Oct 29] Young Frankenstein the Musical</title>
@@ -83,19 +83,6 @@ It's spooky season and that means it's time for the greatest off-season traditio
       <category>KOTO</category>
     </item>
     <item>
-      <title>[Mon, Nov 2] Mountainfilm for Locals</title>
-      <link>https://www.telluride.com/event/mountainfilm-for-locals/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/mountainfilm%20for%20locals%7C2026-11-02</guid>
-      <pubDate>Mon, 02 Nov 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/63808/mf26_for_locals_2200x1237.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Join Mountainfilm for Mountainfilm for Locals, a free screening for our local community, presented in partnership with …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/63808/mf26_for_locals_2200x1237.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
       <title>⚡ [Meeting] Rescheduled/Special Meeting - Planning &amp; Zoning Commission Chair - Nov 02 2026 — 2026-11-02</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-11-02%7CRescheduled%2FSpecial%20Meeting%20-%20Planning%20%26%20Zoning%20Commission%20Chair%20-%20Nov%2002%202026</guid>
@@ -104,7 +91,7 @@ Join Mountainfilm for Mountainfilm for Locals, a free screening for our local co
 
 This rescheduled P&Z Chair meeting — moved from October 22 to November 2 — has a single item on it: a minor subdivision at 510 W Columbia Avenue/129 N Townsend Street. The application asks to vacate the internal lot line between Lots 39 and 40 in the West Telluride Addition and merge them into one approximately 5,625-square-foot lot. It's a lot consolidation in the Historic Residential zone district, not a new development proposal.
 
-⚡ Why it matters: P&Z votes on merging two West Telluride lots into one parcel.]]></description>
+⚡ Why it matters: P&Z votes on merging two lots at 510 W Columbia into one 5,625-sq-ft parcel.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -118,19 +105,6 @@ This rescheduled P&Z Chair meeting — moved from October 22 to November 2 — h
 Regular meeting on the City of Ouray's published schedule. The agenda is usually posted on BoardBook about a week ahead.]]></description>
       <category>Meeting</category>
       <category>City of Ouray</category>
-    </item>
-    <item>
-      <title>[Tue, Nov 3] Mountainfilm for Locals</title>
-      <link>https://koto.org/event/mountainfilm-for-locals/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/mountainfilm%20for%20locals%7C2026-11-03</guid>
-      <pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/10/Mountainfilm-For-Locals-Poster-1-scaled.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Wilkinson Public Library, Telluride
-
-Doors and pizza at 5 PM, films at 5:30 PM. Join us for Mountainfilm for Locals, a free screening for our local community, presented in partnership with Wilkinson Public Library. Catch a 90-minute program of short films from the 2026 Mountainfilm Festival, including Best Documentary Short winner The Grandfather Puzzle and Evening in Chile, featuring Colorado freeskier Bobby Brown. Free pizza is first come, first served, so come hungry and come early!]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/10/Mountainfilm-For-Locals-Poster-1-scaled.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
     <item>
       <title>[Meeting] Ecology Commission - Nov 04 2026 — 2026-11-04</title>
