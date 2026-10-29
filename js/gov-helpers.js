@@ -146,9 +146,6 @@ function resolveEventImage(e, opts) {
 // stays current automatically; the static config is the fallback for
 // sources without a PDF agenda.
 const MEETING_AGENDA_META = {
-  "county|2026-09-28|Open Space Commission Meeting":
-    {"sv":4,"ph":"1ff606174e68cca5"},
-
   "telluride|2026-09-30|Special Meeting - Historic & Architectural Review Commission - Sep 30 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/gyjcfvLBT_6qgGte72mOHw","meetingId":"822 7800 9621","passcode":"976053","phone":"301-715-8592"},
 
@@ -275,17 +272,8 @@ const MEETING_AGENDA_META = {
   "school|2026-10-19|Telluride Board of Education Work Session":
     {"sv":4,"ph":"b858cb282617fb09"},
 
-  "telluride|2026-09-28|Gondola Leadership Committee - Sep 28 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8321","zoomUrl":"https://gbsm.zoom.us/j/83597933306","sv":4},
-
   "telluride|2026-10-14|Special Liquor Licensing Authority - Oct 14 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8146","sv":4,"zoomUrl":"https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1","meetingId":"861 6987 1704","passcode":"281002.","phone":"346-248-7799"},
-
-  "county|2026-09-28|Open Space Commission":
-    {"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1074/files/agenda/2017","zoomUrl":"https://us02web.zoom.us/j/86049358611","meetingId":"860 4935 8611","passcode":"048535","phone":"970-728-3174","sv":4},
-
-  "telluride|2026-09-28|Open Space Commission Site Walk - Sep 28 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8322","sv":4},
 
   "county|2026-10-26|Open Space Commission Meeting":
     {"sv":4,"ph":"1ff606174e68cca5"},
@@ -824,17 +812,14 @@ const MEETING_PREVIEWS = {
   "county|2026-11-23|Open Space Commission Meeting 11/23":
     "The San Miguel County Open Space Commission is expected to meet on November 23, 2026. Related county activity includes active requests for proposals covering jail painting, a multi-jurisdictional hazard mitigation plan update, and a housing action plan, alongside several ongoing foreclosure proceedings on local properties.",
 
-  "county|2026-10-29|Citizen's Weed Advisory Board":
-    "The Noxious Weed Advisory Board will consider proposed 2027 meeting dates, discuss enforcement authority and potential Board of County Commissioners involvement, review grant funding outlooks including ATB funds, and address a Code of Conduct compliance check. The board may also take up new business items at its Norwood meeting.",
-
   "mv|2026-11-05|Design Review Board":
     "Board will consider design review applications including a specific approval for a general easement encroachment at 112 Stevens Dr. and a height variance at an undeveloped Mountain Village Blvd. lot. A conceptual work session on deck repairs and possible extensions at 120 Vischer Dr. is also scheduled.",
 
   "telluride|2026-11-17|(Lottery) Telluride Housing Authority - Nov 17 2026":
     "The Telluride Housing Authority is expected to conduct a lottery process at its November 17, 2026 meeting. Related matters include a comprehensive review of employee rental housing policies, for which the Town is seeking consulting services.",
 
-  "ouray|2026-10-28|Board of County Commissioners Work Session":
-    "Commissioners are expected to receive an annual planning presentation from CDOT and discuss FEMA Public Assistance matters, including Ouray County recovery projects and road damage assessments. No formal action will be taken, though commissioners may provide direction to staff on these topics."
+  "county|2026-10-29|Citizen's Weed Advisory Board":
+    "The board will consider approving minutes from August 2026, setting 2027 meeting dates, and discussing administrative matters including weed enforcement authority, potential Board of County Commissioners involvement, 2027 grant funding outlook, and code of conduct compliance. New business items have not yet been specified."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1050,6 +1035,17 @@ const REGIONAL_NEWS_ARTICLES = [
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
   {
+    title: "Election Day Clerk's Office Closures 11/3/2026",
+    source: "San Miguel County",
+    sourceLabel: "San Miguel County",
+    category: "Alert",
+    date: "2026-10-28",
+    pubDate: "2026-10-28T22:03:33.000Z",
+    copy: "The Department of Motor Vehicles, Marriage License and Recording offices will be closed all day on 11/3/2026 for Election Day. Offices will re-open 11/4/2026 at 7:30 AM.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=550",
+    img: ""
+  },
+  {
     title: "DMV Services available in Egnar 11/18",
     source: "San Miguel County",
     sourceLabel: "San Miguel County",
@@ -1064,13 +1060,10 @@ const SMC_ALERTS = [
 const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-10-28';
-const LEGAL_NOTICES_CACHE_DATE = '2026-10-28';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-10-29';
+const LEGAL_NOTICES_CACHE_DATE = '2026-10-29';
 
 const MANUAL_SUMMARIES = {
-  "county|2026-09-28|Open Space Commission Meeting":
-    "The September 28, 2026 Open Space Commission Meeting agenda hasn't been posted yet.",
-
   "telluride|2026-09-30|Special Meeting - Historic & Architectural Review Commission - Sep 30 2026":
     "HARC holds a special meeting dedicated entirely to the Carhenge Redevelopment Project — the proposed new construction at 700 W Pacific Ave that has been working its way through review since at least July. Three separate Preliminary Large-Scale applications are on the table, each covering a different building cluster: Buildings A, B, and C; Buildings D1 and D2; and Buildings E1, E2, and E3. All are new construction outside the Telluride Historic Landmark District but exceed 5,000 square feet of floor area, triggering large-scale review under LUC 7-203.B.2.a.1. The property is Town-owned, zoned Accommodations 2, and Design Workshop is the applicant. Both the July and August HARC meetings passed without substantive discussion on these items — this special session signals that the review is finally moving forward in earnest.",
 
@@ -1197,17 +1190,8 @@ const MANUAL_SUMMARIES = {
   "school|2026-10-19|Telluride Board of Education Work Session":
     "The October 19, 2026 Telluride Board of Education Work Session agenda hasn't been posted yet.",
 
-  "telluride|2026-09-28|Gondola Leadership Committee - Sep 28 2026":
-    "The Gondola Leadership Committee meets September 28 at 3:00 PM — hybrid, with in-person at Ah Haa School's Launchpad Room. The centerpiece is a 60-minute action item: a comparative evaluation of federally funded versus locally-led project delivery. That choice — federal dollars with federal strings versus local control with local financing — is one of the more consequential forks the gondola effort has faced. The committee will also hear SMART program updates and a recap of the July Leadership Committee meeting, then take up a communications plan before closing with partner jurisdiction updates and public comment.",
-
   "telluride|2026-10-14|Special Liquor Licensing Authority - Oct 14 2026":
     "One item of substance: a public hearing on three special event permits for Palm Arts Inc. to serve alcohol at the Palm Theatre (721 W. Colorado Ave.) during the Telluride Horror Show, October 16–18, 2026. Projected attendance runs 600 on Friday evening and 1,400 each on Saturday and Sunday. Staff recommends approval — the Marshal's Department has no concerns, and the applicant's paperwork checks out. The board will also approve minutes from the September 17 meeting.",
-
-  "county|2026-09-28|Open Space Commission":
-    "A working session for the San Miguel County Open Space Commission. The main business: an org chart presentation from County Administrator Mike Bordogna, a budget update, follow-up on joint focus areas, and a hard conversation about what to cut from the 2026 work plan ahead of the November 9 budget deadline. The commission will also pick a date for a meet-and-greet with the BOCC, commission members, staff, and the incoming Parks & Open Space Manager and Parks Supervisor.",
-
-  "telluride|2026-09-28|Open Space Commission Site Walk - Sep 28 2026":
-    "The Open Space Commission is trading the meeting room for the mountain on September 28th — a site walk up Tomboy Road, meeting first at Rebekah Hall on West Columbia before heading out. No formal votes or approvals are on the agenda; this is a worksession in the field, giving commissioners a ground-level look at the high country terrain along that corridor.",
 
   "county|2026-10-26|Open Space Commission Meeting":
     "The October 26 Open Space Commission agenda hasn't been posted yet.",
@@ -2695,6 +2679,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Miner Volleyball takes two of Homecoming three",
+    source: "Telluride Times",
+    date: "October 28, 2026",
+    firstSeen: "2026-10-29",
+    newsTopic: "community",
+    copy: "Telluride volleyball swept Homecoming week with two wins, including a hard-fought 25-22, 26-28, 25-19, 25-21 victory over Crested Butte, moving the Lady Miners to 11-10 overall and up to no. 35 in state rankings. The boys soccer team dropped a 1-0 decision to Crested Butte on a deflected goal but still earned the no. 1 seed in the 2A State Tournament.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_4492fe42-2cd7-47eb-80ac-0e17be24e0f6.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/dc/6dcf7ba2-e1a1-4bed-9a62-c41f9bcfb972/6adfce32c2a51.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Shrek-tastic",
     source: "Telluride Times",
     date: "October 28, 2026",
@@ -2751,7 +2747,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Telluride School District spends over $36,600 per student — more than double the state average — while enrollment has dropped 20% and is projected to keep falling. Spending has climbed from $19M to $26.2M since 2021, and the promised cuts don't keep pace with inflation. Measure 5A asks local taxpayers for $2.7M annually for seven years.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/article_2b34e3a8-15df-4e2a-aa28-0686436c1697.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     isLetter: true,
     imgHiRes: true
   },
@@ -2780,7 +2776,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/ca/5ca49cee-a81d-4254-a0fc-d5159df2fd11/6adb85019a5d7.image.jpg",
     letterAuthor: "Viv",
     isLetter: true,
-    imgHiRes: true
+    imgHiRes: true,
+    authorChecked: true
   },
   {
     title: "Post-apumpkalyptic",
@@ -2825,9 +2822,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Telluride Times",
     date: "October 28, 2026",
     firstSeen: "2026-10-28",
-    newsTopic: "community",
-    copy: "After carefully reviewing nominations, the Telluride Foundation is proud to announce Dee Williams as the recipient of the 2026 Volunteer of the Year Award. The recipient is nominated though an open community process and selected by Telluride Foundation staff.",
-    claudeSummary: false,
+    newsTopic: "government",
+    copy: "Dee Williams has been named the Telluride Foundation's 2026 Volunteer of the Year, recognized for 50-plus years of service in Ouray County. She helped found the Home Trust of Ouray County, the Ouray Nordic Council, and played a key role in preserving the Wright Opera House. A community celebration is set for Nov. 10 at the Wright Opera House, 5–6:30 p.m.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_fe2496a0-cb8a-4e11-ad87-e665c814941b.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/8b/c8b34204-ead5-4ad4-819e-5a6d372333d0/6adcdb9a139b5.image.jpg",
     imgHiRes: true
@@ -3662,78 +3659,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "With anger spreading over Iran war, Democrats hope to flip Republican seats with veterans' help",
-    source: "Telluride Times",
-    date: "October 15, 2026",
-    firstSeen: "2026-10-15",
-    newsTopic: "community",
-    copy: "Democrats are putting money into Colorado's heavily military 5th Congressional District for the first time in years, backing veteran Jessica Killin against Republican Rep. Jeff Crank. Some longtime Republican veterans in the district say the Iran war and Pentagon leadership have them reconsidering their usual vote.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_55341fa1-d41a-59d1-9c35-40231cb662bc.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/0b/e0b91090-2f29-5b79-b9cd-37074c9b54cf/6ad051933d611.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Arizona State hires veteran NHL coach Dave Hakstol to lead program, Powers announces resignation",
-    source: "Telluride Times",
-    date: "October 15, 2026",
-    firstSeen: "2026-10-15",
-    newsTopic: "community",
-    copy: "Arizona State hired former NHL head coach Dave Hakstol to lead its hockey program after coach Greg Powers resigned amid an investigation into a workout that left 21-year-old player Matthew Mayich on life support with severe heat stroke. An independent review led by a former state Supreme Court chief justice is ongoing, with findings expected by early December. Hakstol previously coached the Flyers, Kraken, and North Dakota.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_379b9d93-5159-59ed-b683-51683151d898.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/49/9491d9b7-0669-5d03-ba3c-cf86d00aeb45/6ad112f1c7859.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Everyone has the same question in the midterms — where's the beef? (And how much does it cost?)",
-    source: "Telluride Times",
-    date: "October 15, 2026",
-    firstSeen: "2026-10-15",
-    newsTopic: "community",
-    copy: "Beef has become a recurring campaign theme in this midterm cycle, with candidates in Mississippi, Colorado, Iowa, Texas, and Arizona all fielding attacks or making moves around meat-eating and agricultural policy. Ground beef is running around $6.79 a pound nationally, up from $5.55 in January. Both parties are working the issue, though from different angles.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_c6f98b44-3fa8-59dc-a0ec-e9821804d43b.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/db/ddbf8b34-faec-5dc0-a29c-c79cf13a1044/6ad051973b9a0.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Green Grants program expands to the West End",
-    source: "Telluride Times",
-    date: "October 15, 2026",
-    firstSeen: "2026-10-15",
-    newsTopic: "infrastructure",
-    copy: "EcoAction Partners' Green Grants program has expanded into the West End of Montrose County, backed by roughly $85,000 from the Telluride Foundation. Grants typically run $5,000–$10,000 and can go toward heat pumps, windows, and EV infrastructure. The intent-to-apply deadline is October 30 at telluride-co.gosmart.org.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_b4c275f2-65d0-4961-b96e-1d2074d23b37.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/82/582ca34a-47bb-4209-a91e-70ad276263f8/6ad0f2217a207.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "We're on the edge of our seats",
-    source: "Telluride Times",
-    date: "October 15, 2026",
-    firstSeen: "2026-10-15",
-    newsTopic: "arts-culture",
-    copy: "The Telluride Horror Show runs October 16–18 for its 17th year, with headliners including Universal's upcoming slasher *River* and *Victorian Psycho*. Several films have local ties, including *The Cycle*, which features Telluride's own Jeb Berrier. Free screenings, campfire readings, and library films round out the weekend.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_03b74f4a-7cf3-4126-8b74-60372e7feda7.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/be/6be0816f-4efa-4e74-93bc-d33beee29069/6acddbe142bd5.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Legals and Public Notices for Oct. 15-21, 2026",
-    source: "Telluride Times",
-    date: "October 15, 2026",
-    firstSeen: "2026-10-15",
-    newsTopic: "government",
-    copy: "Sawpit's Board of Trustees will review the town's proposed 2027 budget at a public meeting November 19 at 6:30PM. Separately, a Tomboy Lodge unit at 619 W Columbia Ave is headed to foreclosure sale in San Miguel County, and Good Gargoyle Condominiums mortgage holders are being notified of a proposed declaration amendment.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/legals/article_2a67f0e2-7d5c-47a5-a0a6-a1635a6dda11.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Fairway masters",
     source: "Telluride Times",
     date: "October 18, 2026",
@@ -3780,6 +3705,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1419",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14836"
+  },
+  {
+    title: "Election Day Clerk's Office Closures 11/3/2026",
+    source: "San Miguel County",
+    date: "October 28, 2026",
+    newsTopic: "government",
+    copy: "The Department of Motor Vehicles, Marriage License and Recording offices will be closed all day on 11/3/2026 for Election Day. Offices will re-open 11/4/2026 at 7:30 AM.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=550",
+    img: ""
   },
   {
     title: "DMV Services available in Egnar 11/18",
@@ -3859,7 +3793,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Public Hearing for Liquor License on Thursday, November 19, 2026 at 5:30pm - Chipeta Lodge Resort &amp; Spa, 304 S Lena Street - Notice dated October 13, 2026",
     source: "Town of Ridgway",
-    date: "October 28, 2026",
+    date: "October 29, 2026",
     firstSeen: "2026-10-14",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3870,7 +3804,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "October 28, 2026",
+    date: "October 29, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3881,7 +3815,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "October 28, 2026",
+    date: "October 29, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3892,6 +3826,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 10-28-26",
+    source: "KOTO Community Radio",
+    date: "October 29, 2026",
+    newsTopic: "land-use",
+    copy: "County Land Use Code Gets an Update; Mountain Run Prevails Over EDM Concert; Young Frankenstein Brings the Fright and the Fantastic",
+    href: "https://koto.org/news/newscast-10-28-26/"
+  },
   {
     title: "Newscast 10-26-26",
     source: "KOTO Community Radio",
@@ -3947,14 +3889,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "community",
     copy: "Better Drainage May Help Norwood Go with the Flow; West End Round Up with the San Miguel Basin Forum; Naturita Burro Race Brings Big Hearts and a Lot of Attitude",
     href: "https://koto.org/news/newscast-10-15-26/"
-  },
-  {
-    title: "Newscast 10-14-26",
-    source: "KOTO Community Radio",
-    date: "October 15, 2026",
-    newsTopic: "government",
-    copy: "Telluride Ballots Arrive in PO Boxes; Mountain Club Brings More Trail to Telluride",
-    href: "https://koto.org/news/newscast-10-14-26/"
   }
 ];
 
@@ -5007,6 +4941,50 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Arts HQ, TELLURIDE",
     imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
+  },
+  {
+    title: "Ladies Night In at the Library",
+    link: "https://koto.org/event/ladies-night-in-at-the-library/",
+    description: "Join us at the library for an evening of pampering, snacks, and great company. We’ll be screening a surprise classic chick flick while enjoying fresh popcorn, chocolate, hot tea, face masks, eye patches, and unique nail polishes. You'll also have the chance to win prizes from local businesses including Studio G, Aveda Telluride Spa, and Two Skirts. Cozy attire and blankets are encouraged. This event is for adults only. Advance registration is encouraged so we know how many self-care supplies to provide :) Gather your girlfriends or come solo for our very first Ladies Night In!",
+    pubDate: "2026-11-19T17:30:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Mountainfilm for Locals: Norwood",
+    link: "https://koto.org/event/mountainfilm-for-locals-norwood/",
+    description: "Join us for Mountainfilm for Locals, a free screening for the Norwood community, presented in partnership with Lone Cone Library. Catch a 78-minute program of short films from the 2026 Mountainfilm Festival. Doors and pizza at 5:30 PM, films at 6 PM. Free pizza is first come, first served, so come hungry and come early!",
+    pubDate: "2026-11-19T17:30:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/Screenshot-2026-10-27-at-3.27.48-PM.png"
+  },
+  {
+    title: "Facing the Mourning",
+    link: "https://koto.org/event/facing-the-mourning/2026-11-19/",
+    description: "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit from additional support while navigating grief and loss. Please feel free to share this information with others who may be interested.",
+    pubDate: "2026-11-19T18:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Redvale Community Center",
+    imageUrl: ""
+  },
+  {
+    title: "Up-Off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-11-20/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-11-20T10:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   }
 ];
 
@@ -5052,20 +5030,7 @@ const WILKINSON_EVENTS = [
 // none of which are advertised as adoptable. The sync filters those out, so
 // this repopulates automatically when THS posts genuinely-available pets.
 const HUMANE_SOCIETY_ANIMALS = [
-  {
-    id: "TEL-A-206",
-    name: "Roo",
-    species: "Dog",
-    breed: "Cattle Dog, Australian (Blue Heeler) / Mixed Breed (Medium)",
-    ageGroup: "Young Puppy",
-    sex: "Female",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/5768755a36f4f238b922ce9fea58a64e/ac175b19b11dbd163e40d0bbb3aba945.jpg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/214866464",
-    summary: "Young Puppy • Cattle Dog, Australian (Blue Heeler) / Mixed Breed (Medium) • Female",
-    firstSeen: "2026-10-27",
-    revealDate: "2026-10-27",
-    lastSeen: "2026-10-28"
-  }
+
 ];
 
 /* The Alibi events — refreshed by syncAlibiEvents() every 6 hours.
@@ -5150,6 +5115,17 @@ const SHERIDAN_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Salomon Ski Film: SLINGSHOT",
+    link: "https://sheridanoperahouse.com/events/salomon-ski-film-slingshot/",
+    description: "Salomon's ski film *Slingshot* comes to the Sheridan Opera House for a screening that celebrates big-mountain skiing and the athletes who push the sport's boundaries. It's part of the annual tradition of ski film tours that kick off the winter season in mountain communities like Telluride.",
+    pubDate: "2026-11-14",
+    source: "sheridan",
+    sourceLabel: "Sheridan Opera House",
+    category: "Concert / Performance",
+    location: "Sheridan Opera House • Telluride, CO",
+    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/10/4x5_Poster-Lifestyle_2048x2048.webp"
+  },
+  {
     title: "YPT: The SpongeBob Musical",
     link: "https://sheridanoperahouse.com/events/ypt-the-spongebob-musical/",
     description: "Young People's Theatre presents The SpongeBob Musical at the Sheridan Opera House, bringing the beloved underwater world of Bikini Bottom to life on stage. This youth theater production adapts the beloved animated series into a full-scale musical, featuring young local performers in a colorful, high-energy show.",
@@ -5160,17 +5136,6 @@ const SHERIDAN_EVENTS = [
     category: "Concert / Performance",
     location: "Sheridan Opera House • Telluride, CO",
     imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/09/Screenshot-2026-10-12-at-10.51.39-AM.png"
-  },
-  {
-    title: "Ski Film: Warren Miller's \"Days Off\"",
-    link: "https://sheridanoperahouse.com/events/ski-film-warren-millers-days-off/",
-    description: "Warren Miller Entertainment's \"Days Off\" comes to the Sheridan Opera House for a screening of the legendary ski film franchise's latest production. The film showcases skiing and snowboarding footage from mountain destinations around the world, as is traditional for Warren Miller's annual releases.",
-    pubDate: "2026-12-12",
-    source: "sheridan",
-    sourceLabel: "Sheridan Opera House",
-    category: "Concert / Performance",
-    location: "Sheridan Opera House • Telluride, CO",
-    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/09/Screenshot-2026-10-12-at-10.22.59-AM.png"
   }
 ];
 
@@ -6868,17 +6833,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
-    link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
-    description: "A community workshop held in Mountain Village bringing together participants to explore eco-grief — the emotional weight of loss tied to environmental change — alongside gratitude and love as responses to a shifting world. The program is a collaboration between Through the Woods Doula, EcoAction Partners, and the Wilkinson Public Library.",
-    pubDate: "2026-10-27T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
-  },
-  {
     title: "Market on the Plaza",
     link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     description: "Mountain Village's Heritage Plaza hosts a weekly outdoor market featuring vendors and tents in the heart of the pedestrian-friendly town center. The Market on the Plaza brings together local sellers for a community gathering in the scenic Mountain Village setting.",
@@ -7521,6 +7475,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/55819/holidayburlesque2025_hero_1920x1080-min.800x533.webp"
+  },
+  {
+    title: "Roy Rivers: A John Denver Tribute",
+    link: "https://www.telluride.com/event/roy-rivers-a-john-denver-tribute/",
+    description: "Roy Rivers has spent a lifetime following the thread that first drew him to music: songs with heart, melody, and a …",
+    pubDate: "2026-12-28",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63690/screenshot_2026-10-01_at_12_48_31_pm.800x533.webp"
   }
 ];
 
@@ -7826,24 +7791,6 @@ const LEGAL_NOTICES = [
     caseNumber: "2026-06"
   },
   {
-    title: "Housing Lottery -- Master Lease Rental Lottery, The Boarding House (1100 W Black Bear Rd)",
-    entity: "Telluride Housing Authority / Town of Telluride Housing Division",
-    entityClass: "ent-county",
-    entityLogo: "smrha",
-    icon: "🏠",
-    iconClass: "type-hearing",
-    type: "Housing Notice",
-    filterTag: "housing",
-    summary: "The Telluride Housing Authority and Town of Telluride Housing Division are offering up to one double-occupancy room and one single-occupancy room at the Boarding House (1100 W Black Bear Road) for a two-year master lease via lottery. Local businesses, governmental, or non-profit organizations may apply. Applications are accepted October 9–28, 2026, at 11:00 AM each day, available at www.telluride-co.gov/735/Rental-Housing or in person at 820 Black Bear Rd G-17.",
-    deadline: "2026-10-28",
-    expires: "2026-10-28",
-    dates: "10/8",
-    papers: ["ttimes_1008"],
-    url: "https://www.telluridenews.com/news/legals/article_5970564f-79b2-404e-8d86-38ffc649e835.html",
-    address: "1100 W Black Bear Road, Telluride, CO (The Boarding House)",
-    noticeKey: "housing-lottery-boarding-house-2026"
-  },
-  {
     title: "Foreclosure Sale -- Deed of Trust, 40697 State Highway 145 Norwood (Sale No. 2026-07)",
     entity: "San Miguel County Public Trustee / National Loan Acquisitions Company",
     entityClass: "ent-county",
@@ -8056,7 +8003,7 @@ const LEGAL_NOTICES = [
     summary: "Town of Telluride is seeking qualified respondents for: TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS.",
     deadline: "Closes 1/11/2026",
     expires: "2026-01-11",
-    dates: "10/28",
+    dates: "10/29",
     url: "https://www.telluride.gov/bids.aspx?bidID=133",
     address: "",
     totBidID: "133"
@@ -8702,6 +8649,12 @@ const RIDGWAY_AGENDA_MAP = {
 // content-refresh.js) regenerates this map from the page every 6h, so
 // new agendas/packets/minutes appear automatically as Rico posts them.
 const RICO_AGENDA_MAP = {
+  "October 2026":
+    {"agenda":"https://townofrico.colorado.gov/sites/g/files/lrnvjt3111/files/documents/Board-of-Trustees-October-2026-Agenda.pdf"},
+
+  "October 2026 Meeting":
+    {"packet":"https://townofrico.colorado.gov/sites/g/files/lrnvjt3111/files/documents/Board-of-Trustees-October-2026-Packet.pdf"},
+
   "September 2026":
     {"agenda":"https://townofrico.colorado.gov/sites/g/files/lrnvjt3111/files/documents/Board-of-Trustees-September-2026-Agenda.pdf"},
 

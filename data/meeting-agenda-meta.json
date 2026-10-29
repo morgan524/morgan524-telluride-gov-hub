@@ -1,8 +1,4 @@
 {
-  "county|2026-09-28|Open Space Commission Meeting": {
-    "sv": 4,
-    "ph": "1ff606174e68cca5"
-  },
   "telluride|2026-09-30|Special Meeting - Historic & Architectural Review Commission - Sep 30 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309",
     "sv": 4,
@@ -268,11 +264,6 @@
     "sv": 4,
     "ph": "b858cb282617fb09"
   },
-  "telluride|2026-09-28|Gondola Leadership Committee - Sep 28 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8321",
-    "zoomUrl": "https://gbsm.zoom.us/j/83597933306",
-    "sv": 4
-  },
   "telluride|2026-10-14|Special Liquor Licensing Authority - Oct 14 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8146",
     "sv": 4,
@@ -280,18 +271,6 @@
     "meetingId": "861 6987 1704",
     "passcode": "281002.",
     "phone": "346-248-7799"
-  },
-  "county|2026-09-28|Open Space Commission": {
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1074/files/agenda/2017",
-    "zoomUrl": "https://us02web.zoom.us/j/86049358611",
-    "meetingId": "860 4935 8611",
-    "passcode": "048535",
-    "phone": "970-728-3174",
-    "sv": 4
-  },
-  "telluride|2026-09-28|Open Space Commission Site Walk - Sep 28 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8322",
-    "sv": 4
   },
   "county|2026-10-26|Open Space Commission Meeting": {
     "sv": 4,

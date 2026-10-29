@@ -1,5 +1,17 @@
 [
   {
+    "title": "Miner Volleyball takes two of Homecoming three",
+    "source": "Telluride Times",
+    "date": "October 28, 2026",
+    "firstSeen": "2026-10-29",
+    "newsTopic": "community",
+    "copy": "Telluride volleyball swept Homecoming week with two wins, including a hard-fought 25-22, 26-28, 25-19, 25-21 victory over Crested Butte, moving the Lady Miners to 11-10 overall and up to no. 35 in state rankings. The boys soccer team dropped a 1-0 decision to Crested Butte on a deflected goal but still earned the no. 1 seed in the 2A State Tournament.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/sports/article_4492fe42-2cd7-47eb-80ac-0e17be24e0f6.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/dc/6dcf7ba2-e1a1-4bed-9a62-c41f9bcfb972/6adfce32c2a51.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Shrek-tastic",
     "source": "Telluride Times",
     "date": "October 28, 2026",
@@ -56,7 +68,7 @@
     "copy": "Telluride School District spends over $36,600 per student — more than double the state average — while enrollment has dropped 20% and is projected to keep falling. Spending has climbed from $19M to $26.2M since 2021, and the promised cuts don't keep pace with inflation. Measure 5A asks local taxpayers for $2.7M annually for seven years.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/article_2b34e3a8-15df-4e2a-aa28-0686436c1697.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "isLetter": true,
     "imgHiRes": true
   },
@@ -85,7 +97,8 @@
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/ca/5ca49cee-a81d-4254-a0fc-d5159df2fd11/6adb85019a5d7.image.jpg",
     "letterAuthor": "Viv",
     "isLetter": true,
-    "imgHiRes": true
+    "imgHiRes": true,
+    "authorChecked": true
   },
   {
     "title": "Post-apumpkalyptic",
@@ -130,9 +143,9 @@
     "source": "Telluride Times",
     "date": "October 28, 2026",
     "firstSeen": "2026-10-28",
-    "newsTopic": "community",
-    "copy": "After carefully reviewing nominations, the Telluride Foundation is proud to announce Dee Williams as the recipient of the 2026 Volunteer of the Year Award. The recipient is nominated though an open community process and selected by Telluride Foundation staff.",
-    "claudeSummary": false,
+    "newsTopic": "government",
+    "copy": "Dee Williams has been named the Telluride Foundation's 2026 Volunteer of the Year, recognized for 50-plus years of service in Ouray County. She helped found the Home Trust of Ouray County, the Ouray Nordic Council, and played a key role in preserving the Wright Opera House. A community celebration is set for Nov. 10 at the Wright Opera House, 5–6:30 p.m.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/news_release/article_fe2496a0-cb8a-4e11-ad87-e665c814941b.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/8b/c8b34204-ead5-4ad4-819e-5a6d372333d0/6adcdb9a139b5.image.jpg",
     "imgHiRes": true
@@ -967,78 +980,6 @@
     "imgHiRes": true
   },
   {
-    "title": "With anger spreading over Iran war, Democrats hope to flip Republican seats with veterans' help",
-    "source": "Telluride Times",
-    "date": "October 15, 2026",
-    "firstSeen": "2026-10-15",
-    "newsTopic": "community",
-    "copy": "Democrats are putting money into Colorado's heavily military 5th Congressional District for the first time in years, backing veteran Jessica Killin against Republican Rep. Jeff Crank. Some longtime Republican veterans in the district say the Iran war and Pentagon leadership have them reconsidering their usual vote.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/state/article_55341fa1-d41a-59d1-9c35-40231cb662bc.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/0b/e0b91090-2f29-5b79-b9cd-37074c9b54cf/6ad051933d611.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "Arizona State hires veteran NHL coach Dave Hakstol to lead program, Powers announces resignation",
-    "source": "Telluride Times",
-    "date": "October 15, 2026",
-    "firstSeen": "2026-10-15",
-    "newsTopic": "community",
-    "copy": "Arizona State hired former NHL head coach Dave Hakstol to lead its hockey program after coach Greg Powers resigned amid an investigation into a workout that left 21-year-old player Matthew Mayich on life support with severe heat stroke. An independent review led by a former state Supreme Court chief justice is ongoing, with findings expected by early December. Hakstol previously coached the Flyers, Kraken, and North Dakota.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/state/article_379b9d93-5159-59ed-b683-51683151d898.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/49/9491d9b7-0669-5d03-ba3c-cf86d00aeb45/6ad112f1c7859.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "Everyone has the same question in the midterms — where's the beef? (And how much does it cost?)",
-    "source": "Telluride Times",
-    "date": "October 15, 2026",
-    "firstSeen": "2026-10-15",
-    "newsTopic": "community",
-    "copy": "Beef has become a recurring campaign theme in this midterm cycle, with candidates in Mississippi, Colorado, Iowa, Texas, and Arizona all fielding attacks or making moves around meat-eating and agricultural policy. Ground beef is running around $6.79 a pound nationally, up from $5.55 in January. Both parties are working the issue, though from different angles.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/state/article_c6f98b44-3fa8-59dc-a0ec-e9821804d43b.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/db/ddbf8b34-faec-5dc0-a29c-c79cf13a1044/6ad051973b9a0.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "Green Grants program expands to the West End",
-    "source": "Telluride Times",
-    "date": "October 15, 2026",
-    "firstSeen": "2026-10-15",
-    "newsTopic": "infrastructure",
-    "copy": "EcoAction Partners' Green Grants program has expanded into the West End of Montrose County, backed by roughly $85,000 from the Telluride Foundation. Grants typically run $5,000–$10,000 and can go toward heat pumps, windows, and EV infrastructure. The intent-to-apply deadline is October 30 at telluride-co.gosmart.org.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/norwood_post/article_b4c275f2-65d0-4961-b96e-1d2074d23b37.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/82/582ca34a-47bb-4209-a91e-70ad276263f8/6ad0f2217a207.image.png",
-    "imgHiRes": true
-  },
-  {
-    "title": "We're on the edge of our seats",
-    "source": "Telluride Times",
-    "date": "October 15, 2026",
-    "firstSeen": "2026-10-15",
-    "newsTopic": "arts-culture",
-    "copy": "The Telluride Horror Show runs October 16–18 for its 17th year, with headliners including Universal's upcoming slasher *River* and *Victorian Psycho*. Several films have local ties, including *The Cycle*, which features Telluride's own Jeb Berrier. Free screenings, campfire readings, and library films round out the weekend.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/arts_and_entertainment/article_03b74f4a-7cf3-4126-8b74-60372e7feda7.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/be/6be0816f-4efa-4e74-93bc-d33beee29069/6acddbe142bd5.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "Legals and Public Notices for Oct. 15-21, 2026",
-    "source": "Telluride Times",
-    "date": "October 15, 2026",
-    "firstSeen": "2026-10-15",
-    "newsTopic": "government",
-    "copy": "Sawpit's Board of Trustees will review the town's proposed 2027 budget at a public meeting November 19 at 6:30PM. Separately, a Tomboy Lodge unit at 619 W Columbia Ave is headed to foreclosure sale in San Miguel County, and Good Gargoyle Condominiums mortgage holders are being notified of a proposed declaration amendment.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/legals/article_2a67f0e2-7d5c-47a5-a0a6-a1635a6dda11.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Fairway masters",
     "source": "Telluride Times",
     "date": "October 18, 2026",
@@ -1085,6 +1026,15 @@
     "copy": "",
     "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1419",
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14836"
+  },
+  {
+    "title": "Election Day Clerk's Office Closures 11/3/2026",
+    "source": "San Miguel County",
+    "date": "October 28, 2026",
+    "newsTopic": "government",
+    "copy": "The Department of Motor Vehicles, Marriage License and Recording offices will be closed all day on 11/3/2026 for Election Day. Offices will re-open 11/4/2026 at 7:30 AM.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=550",
+    "img": ""
   },
   {
     "title": "DMV Services available in Egnar 11/18",
@@ -1164,7 +1114,7 @@
   {
     "title": "Notice of Public Hearing for Liquor License on Thursday, November 19, 2026 at 5:30pm - Chipeta Lodge Resort &amp; Spa, 304 S Lena Street - Notice dated October 13, 2026",
     "source": "Town of Ridgway",
-    "date": "October 28, 2026",
+    "date": "October 29, 2026",
     "firstSeen": "2026-10-14",
     "newsTopic": "community",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1175,7 +1125,7 @@
   {
     "title": "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     "source": "Town of Ridgway",
-    "date": "October 28, 2026",
+    "date": "October 29, 2026",
     "firstSeen": "2026-09-29",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1186,7 +1136,7 @@
   {
     "title": "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     "source": "Town of Ridgway",
-    "date": "October 28, 2026",
+    "date": "October 29, 2026",
     "firstSeen": "2026-09-29",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",

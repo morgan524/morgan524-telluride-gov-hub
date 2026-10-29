@@ -1928,6 +1928,19 @@
     "endDate": "2026-12-12"
   },
   {
+    "title": "Salomon Ski Film: SLINGSHOT",
+    "href": "https://sheridanoperahouse.com/events/salomon-ski-film-slingshot/",
+    "date": "2026-11-14",
+    "time": "5:00 PM",
+    "location": "Sheridan Opera House • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/10/4x5_Poster-Lifestyle_2048x2048.webp",
+    "category": "Concert / Performance",
+    "source": "Sheridan Opera House",
+    "desc": "Salomon's ski film *Slingshot* comes to the Sheridan Opera House for a screening that celebrates big-mountain skiing and the athletes who push the sport's boundaries. It's part of the annual tradition of ski film tours that kick off the…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Paint & Sip with Nicole: “Morning Peaks”",
     "href": "https://events.ourayridgwayevents.com/event/paint-sip-with-nicole-morning-peaks-3696",
     "date": "2026-11-14",
@@ -2239,6 +2252,58 @@
     "source": "KOTO Community Calendar",
     "desc": "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it…",
     "type": "Community"
+  },
+  {
+    "title": "Ladies Night In at the Library",
+    "href": "https://koto.org/event/ladies-night-in-at-the-library/",
+    "date": "2026-11-19",
+    "time": "5:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-7.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join us at the library for an evening of pampering, snacks, and great company. We’ll be screening a surprise classic chick flick while enjoying fresh popcorn, chocolate, hot tea, face masks, eye patches, and unique nail polishes. You'll…",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Mountainfilm for Locals: Norwood",
+    "href": "https://koto.org/event/mountainfilm-for-locals-norwood/",
+    "date": "2026-11-19",
+    "time": "5:30 PM",
+    "location": "Lone Cone Library Norwood",
+    "town": "Norwood",
+    "img": "https://koto.org/wp-content/uploads/2026/10/Screenshot-2026-10-27-at-3.27.48-PM.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join us for Mountainfilm for Locals, a free screening for the Norwood community, presented in partnership with Lone Cone Library. Catch a 78-minute program of short films from the 2026 Mountainfilm Festival. Doors and pizza at 5:30 PM,…",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Facing the Mourning",
+    "href": "https://koto.org/event/facing-the-mourning/2026-11-19/",
+    "date": "2026-11-19",
+    "time": "6:00 PM",
+    "location": "Redvale Community Center",
+    "town": "",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit…",
+    "type": "Community"
+  },
+  {
+    "title": "Up-Off Gymnastics, Dance, and Spanish",
+    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-11-20/",
+    "date": "2026-11-20",
+    "time": "10:00 AM",
+    "location": "Lone Cone Library Norwood",
+    "town": "Norwood",
+    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
+    "type": "Music"
   },
   {
     "title": "Jean Sandoval & the Town Kids",
@@ -2829,19 +2894,6 @@
     "type": "Music"
   },
   {
-    "title": "Ski Film: Warren Miller's \"Days Off\"",
-    "href": "https://sheridanoperahouse.com/events/ski-film-warren-millers-days-off/",
-    "date": "2026-12-12",
-    "time": "5:00 PM",
-    "location": "Sheridan Opera House • Telluride, CO",
-    "town": "Telluride",
-    "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/09/Screenshot-2026-10-12-at-10.22.59-AM.png",
-    "category": "Concert / Performance",
-    "source": "Sheridan Opera House",
-    "desc": "Warren Miller Entertainment's \"Days Off\" comes to the Sheridan Opera House for a screening of the legendary ski film franchise's latest production. The film showcases skiing and snowboarding footage from mountain destinations around the…",
-    "type": "Arts & Film"
-  },
-  {
     "title": "Mountain Village Holiday Prelude",
     "href": "https://www.telluride.com/event/mountain-village-holiday-prelude/",
     "date": "2026-12-12",
@@ -3005,6 +3057,32 @@
     "title": "Sheridan Arts Foundation Holiday Rewind: A Tribute Concert Series: Tease the Season: Holiday Burlesque, Ft. The House of Shimmy Shake",
     "href": "https://www.telluride.com/event/sheridan-arts-foundation-holiday-concert-series/",
     "date": "2026-12-27",
+    "time": "",
+    "location": "Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
+    "category": "",
+    "source": "Telluride.com",
+    "desc": "Join the Sheridan Arts Foundation for five nights of world-class entertainment at the historic Sheridan Opera House.",
+    "type": "Music"
+  },
+  {
+    "title": "Roy Rivers: A John Denver Tribute",
+    "href": "https://www.telluride.com/event/roy-rivers-a-john-denver-tribute/",
+    "date": "2026-12-28",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63690/screenshot_2026-10-01_at_12_48_31_pm.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Roy Rivers has spent a lifetime following the thread that first drew him to music: songs with heart, melody, and a …",
+    "type": "Community"
+  },
+  {
+    "title": "Sheridan Arts Foundation Holiday Rewind: A Tribute Concert Series: Roy Rivers: A John Denver Tribute",
+    "href": "https://www.telluride.com/event/sheridan-arts-foundation-holiday-concert-series/",
+    "date": "2026-12-28",
     "time": "",
     "location": "Telluride",
     "town": "Telluride",

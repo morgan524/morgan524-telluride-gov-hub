@@ -261,26 +261,6 @@
     "caseNumber": "2026-06"
   },
   {
-    "title": "Housing Lottery -- Master Lease Rental Lottery, The Boarding House (1100 W Black Bear Rd)",
-    "entity": "Telluride Housing Authority / Town of Telluride Housing Division",
-    "entityClass": "ent-county",
-    "entityLogo": "smrha",
-    "icon": "🏠",
-    "iconClass": "type-hearing",
-    "type": "Housing Notice",
-    "filterTag": "housing",
-    "summary": "The Telluride Housing Authority and Town of Telluride Housing Division are offering up to one double-occupancy room and one single-occupancy room at the Boarding House (1100 W Black Bear Road) for a two-year master lease via lottery. Local businesses, governmental, or non-profit organizations may apply. Applications are accepted October 9–28, 2026, at 11:00 AM each day, available at www.telluride-co.gov/735/Rental-Housing or in person at 820 Black Bear Rd G-17.",
-    "deadline": "2026-10-28",
-    "expires": "2026-10-28",
-    "dates": "10/8",
-    "papers": [
-      "ttimes_1008"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_5970564f-79b2-404e-8d86-38ffc649e835.html",
-    "address": "1100 W Black Bear Road, Telluride, CO (The Boarding House)",
-    "noticeKey": "housing-lottery-boarding-house-2026"
-  },
-  {
     "title": "Foreclosure Sale -- Deed of Trust, 40697 State Highway 145 Norwood (Sale No. 2026-07)",
     "entity": "San Miguel County Public Trustee / National Loan Acquisitions Company",
     "entityClass": "ent-county",
@@ -513,7 +493,7 @@
     "summary": "Town of Telluride is seeking qualified respondents for: TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS.",
     "deadline": "Closes 1/11/2026",
     "expires": "2026-01-11",
-    "dates": "10/28",
+    "dates": "10/29",
     "url": "https://www.telluride.gov/bids.aspx?bidID=133",
     "address": "",
     "totBidID": "133"

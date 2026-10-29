@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 10-28-26",
+    "source": "KOTO Community Radio",
+    "date": "October 29, 2026",
+    "newsTopic": "land-use",
+    "copy": "County Land Use Code Gets an Update; Mountain Run Prevails Over EDM Concert; Young Frankenstein Brings the Fright and the Fantastic",
+    "href": "https://koto.org/news/newscast-10-28-26/"
+  },
+  {
     "title": "Newscast 10-26-26",
     "source": "KOTO Community Radio",
     "date": "October 27, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "community",
     "copy": "Better Drainage May Help Norwood Go with the Flow; West End Round Up with the San Miguel Basin Forum; Naturita Burro Race Brings Big Hearts and a Lot of Attitude",
     "href": "https://koto.org/news/newscast-10-15-26/"
-  },
-  {
-    "title": "Newscast 10-14-26",
-    "source": "KOTO Community Radio",
-    "date": "October 15, 2026",
-    "newsTopic": "government",
-    "copy": "Telluride Ballots Arrive in PO Boxes; Mountain Club Brings More Trail to Telluride",
-    "href": "https://koto.org/news/newscast-10-14-26/"
   }
 ]
