@@ -37,7 +37,7 @@
   var SUBSCRIPTIONS = [
     { key: 'weekly',     label: 'Weekly Update', desc: 'The Monday look-ahead — upcoming meetings & events.' },
     { key: 'newsletter', label: 'Newsletter',    desc: 'Long-form posts when we publish them.' },
-    { key: 'past',       label: 'Past Meetings', desc: 'Tuesday recaps of last week’s public meetings, each linked to the full summary.' },
+    { key: 'past',       label: 'Past Meetings', desc: 'Friday recaps of the past week’s public meetings, each linked to the full summary.' },
   ];
 
   function qp(name) {

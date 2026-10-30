@@ -31,7 +31,7 @@ const H = { Authorization: 'Bearer ' + APP_KEY, 'Content-Type': 'application/jso
 const SUBS = [
   { key: 'weekly',     attr: 'sub_weekly_update', label: 'Weekly Update (the digest)' },
   { key: 'newsletter', attr: 'sub_newsletter',    label: 'Newsletter (long-form posts)' },
-  { key: 'past',       attr: 'sub_past_meetings', label: 'Past Meetings (Monday recaps)' },
+  { key: 'past',       attr: 'sub_past_meetings', label: 'Past Meetings (Friday recaps)' },
   { key: 'arts',       attr: 'topic_music_arts',  label: 'Topic — Music, Arts & Festivals' },
   { key: 'civic',      attr: 'topic_gov_meetings',label: 'Topic — Government Meetings' },
   { key: 'family',     attr: 'topic_family_kids', label: 'Topic — Family & Kids' },
