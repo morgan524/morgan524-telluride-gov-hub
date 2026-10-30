@@ -1,0 +1,147 @@
+<!-- Customer.io broadcast — paste into the Empty Layout HTML editor (Broadcasts →
+     Create broadcast → One-time send → Content → Email → Add content → Code).
+     Fluid 100%/max-600px, 16px min font. Images live on livabletelluride.org
+     (assets/newsletters/site-tour-2026-10/) and must be pushed before sending.
+     The two "Update preferences" links use Customer.io Liquid
+     ({{ customer.email }} + {{ customer.profile_key }}) so each reader's profile
+     page opens with their current settings. Do not replace them with a bare
+     /profile.html link, and do not use *|EMAIL|* merge tags (those only work in
+     the automated digests). Unsubscribe uses {% unsubscribe_url %} — do not replace it.
+     Subject:      Finding your way around the new site, plus a new Friday email
+     Preview text: A quick tour of the new layout, and how to turn on Past Meetings. -->
+<div style="margin:0;padding:0;background-color:#f4efe4;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f4efe4;">
+<tr><td align="center" style="padding:24px 12px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background-color:#fffdf8;border-radius:12px;overflow:hidden;border:1px solid #e5decf;">
+
+  <!-- Masthead -->
+  <tr><td align="center" style="background-color:#24483f;padding:22px 24px;">
+    <a href="https://livabletelluride.org" target="_blank"><img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo%20-%20White.png" alt="Livable Telluride" width="72" style="display:block;max-width:72px;height:auto;margin:0 auto 8px;border:0;"></a>
+    <div style="font-family:Georgia,'Times New Roman',serif;font-size:20px;line-height:1.3;color:#ffffff;font-weight:bold;">Livable Telluride</div>
+    <div style="font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:16px;letter-spacing:2px;text-transform:uppercase;color:#d8a94d;padding-top:4px;">Inform &middot; Connect &middot; Engage &middot; Together</div>
+  </td></tr>
+
+  <!-- Title block -->
+  <tr><td style="padding:30px 28px 6px;">
+    <h1 style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:28px;line-height:1.25;color:#24483f;">Finding Your Way Around the New Site, and a New Past Meetings Email</h1>
+    <div style="font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:16px;color:#7a7466;padding-top:12px;">October 30, 2026</div>
+  </td></tr>
+
+  <!-- Body -->
+  <tr><td style="padding:16px 28px 0;font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.65;color:#3b4340;">
+    <p style="margin:0 0 16px;">Quite a few of you dedicated readers have written in since we redesigned the landing page for <a href="https://livabletelluride.org/" target="_blank" style="color:#a0531f;text-decoration:underline;">livabletelluride.org</a>. Most of the notes said some version of the same two things: &ldquo;I like it,&rdquo; but &ldquo;where did such-and-such go?&rdquo; Fair enough. So this newsletter is a short tour of the new layout, plus how to sign up for the one new weekly email we added that is a summary of past Governmental meetings based on the video recordings of the meetings.</p>
+    <p style="margin:0 0 16px;"><strong>If you do not sign up for this, you will not receive it.</strong></p>
+
+    <h2 style="margin:28px 0 10px;font-family:Georgia,'Times New Roman',serif;font-size:21px;line-height:1.3;color:#24483f;">The menu, item by item</h2>
+    <p style="margin:0 0 16px;">Every page shares the same menu bar, and it stays pinned to the top of the screen as you scroll. On a phone or a narrow window, it folds into a single menu button (the three lines at the top left). From left to right:</p>
+  </td></tr>
+
+  <tr><td style="padding:0 28px 18px;">
+    <a href="https://livabletelluride.org" target="_blank"><img src="https://livabletelluride.org/assets/newsletters/site-tour-2026-10/menu-government.jpg" alt="The Livable Telluride menu bar with the Government menu open" width="544" style="display:block;width:100%;max-width:544px;height:auto;border:1px solid #e5decf;border-radius:8px;"></a>
+    <div style="font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;color:#7a7466;font-style:italic;padding-top:8px;">The menu bar, with the Government menu open.</div>
+  </td></tr>
+
+  <tr><td style="padding:0 28px 0;font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.65;color:#3b4340;">
+    <ul style="margin:0 0 16px;padding-left:22px;">
+      <li style="margin:0 0 10px;"><strong>Home.</strong> The front page. More on what is on it below.</li>
+      <li style="margin:0 0 10px;"><strong><a href="https://livabletelluride.org/local-news.html" target="_blank" style="color:#a0531f;text-decoration:underline;">Local News</a>.</strong> Stories from the Telluride Times, KOTO, and other local sources, with a short plain-English summary of each.</li>
+      <li style="margin:0 0 10px;"><strong>Resources&nbsp;&#9662;</strong> is a drop-down that gathers our reference material in one place: <a href="https://livabletelluride.org/deep-dives.html" target="_blank" style="color:#a0531f;text-decoration:underline;">Deep Dives</a> (the long looks at Carhenge/Shandoka, the gondola, the land use code, wildfire and more), the <a href="https://livabletelluride.org/zoning-map/index.html" target="_blank" style="color:#a0531f;text-decoration:underline;">Zoning Map</a>, the <a href="https://livabletelluride.org/projects-map/index.html" target="_blank" style="color:#a0531f;text-decoration:underline;">Projects Map</a>, <a href="https://livabletelluride.org/housing.html" target="_blank" style="color:#a0531f;text-decoration:underline;">Housing</a> and <a href="https://livabletelluride.org/legal-notices.html" target="_blank" style="color:#a0531f;text-decoration:underline;">Legal Notices</a>.</li>
+      <li style="margin:0 0 10px;"><strong>Government&nbsp;&#9662;</strong> is a drop-down with three items: <a href="https://livabletelluride.org/gov-hub.html" target="_blank" style="color:#a0531f;text-decoration:underline;">This Week&rsquo;s Meetings</a> (every public meeting ahead, with agendas, Zoom links, and a way to email a comment), <a href="https://livabletelluride.org/gov-hub-past.html" target="_blank" style="color:#a0531f;text-decoration:underline;">Past Meetings &amp; Recaps</a> (summaries of what happened), and the <a href="https://livabletelluride.org/v2/vote-tracker.html" target="_blank" style="color:#a0531f;text-decoration:underline;">Vote Tracker</a> (how each member voted on each motion).</li>
+      <li style="margin:0 0 10px;"><strong><a href="https://livabletelluride.org/events.html" target="_blank" style="color:#a0531f;text-decoration:underline;">Events</a>.</strong> Everything happening around the region, by day.</li>
+      <li style="margin:0 0 10px;"><strong><a href="https://livabletelluride.org/local-orgs.html" target="_blank" style="color:#a0531f;text-decoration:underline;">Non Profits</a>.</strong> The local organizations that keep the place running.</li>
+      <li style="margin:0 0 10px;"><strong><a href="https://livabletelluride.org/about.html" target="_blank" style="color:#a0531f;text-decoration:underline;">About</a>.</strong> Who we are.</li>
+    </ul>
+    <p style="margin:0 0 16px;">On the right side of the bar are four buttons: the magnifying glass (search), Donate, Subscribe, and Espa&ntilde;ol, which switches the site into Spanish with one click.</p>
+
+    <h2 style="margin:28px 0 10px;font-family:Georgia,'Times New Roman',serif;font-size:21px;line-height:1.3;color:#24483f;">The front page</h2>
+    <p style="margin:0 0 12px;">Top to bottom, the homepage now gives you:</p>
+    <ul style="margin:0 0 16px;padding-left:22px;">
+      <li style="margin:0 0 10px;"><strong>The Week Ahead.</strong> Built from the same Monday email you get. One featured meeting, then six more items of importance. Each has an Agenda button once the agenda is posted, and an &ldquo;Email a comment&rdquo; link for boards that take written comment. Meetings drop off about three hours after they start, so the list is always what is still ahead.</li>
+      <li style="margin:0 0 10px;"><strong>From the newsletter.</strong> Our latest posts, running alongside the Week Ahead.</li>
+      <li style="margin:0 0 10px;"><strong>A search box</strong> right on the page, for when you already know what you are looking for.</li>
+      <li style="margin:0 0 10px;"><strong>Out &amp; about.</strong> This week&rsquo;s events, with the town each one is in.</li>
+      <li style="margin:0 0 10px;"><strong>Beyond the headlines.</strong> The deep dives.</li>
+      <li style="margin:0 0 10px;"><strong>Meeting summaries.</strong> The most recent recaps, with a link to browse them all.</li>
+    </ul>
+
+    <h2 style="margin:28px 0 10px;font-family:Georgia,'Times New Roman',serif;font-size:21px;line-height:1.3;color:#24483f;">Search: the fastest way to find anything</h2>
+    <p style="margin:0 0 16px;">Click the magnifying glass on any page, or just press the <strong>/</strong> key on a keyboard. Start typing. Results show up as you go, sorted into groups: pages, deep dives, news, upcoming meetings, events, meeting recaps, local organizations, housing, legal notices, and blog posts. Use the arrow keys to move through them, Enter to open one, and Esc to close the box.</p>
+  </td></tr>
+
+  <tr><td style="padding:0 28px 18px;">
+    <a href="https://livabletelluride.org" target="_blank"><img src="https://livabletelluride.org/assets/newsletters/site-tour-2026-10/search-gondola.jpg" alt="Site search results for gondola, grouped into deep dives, news and upcoming meetings" width="544" style="display:block;width:100%;max-width:544px;height:auto;border:1px solid #e5decf;border-radius:8px;"></a>
+    <div style="font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;color:#7a7466;font-style:italic;padding-top:8px;">Typing &ldquo;gondola&rdquo; pulls up the deep dive, the latest news and every gondola meeting on the calendar.</div>
+  </td></tr>
+
+  <tr><td style="padding:0 28px 0;font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.65;color:#3b4340;">
+    <p style="margin:0 0 16px;">Try a name, a project (&ldquo;Shandoka&rdquo;), a board (&ldquo;HARC&rdquo;) or a topic (&ldquo;water&rdquo;). It is the quickest way into a site that, honestly, has gotten big.</p>
+
+    <h2 style="margin:28px 0 10px;font-family:Georgia,'Times New Roman',serif;font-size:21px;line-height:1.3;color:#24483f;">Start Here, for the newcomer in your life</h2>
+    <p style="margin:0 0 12px;">If you have a neighbor, a new coworker, or a second-home owner who keeps asking &ldquo;who actually decides this stuff?&rdquo;, send them to <a href="https://livabletelluride.org/start-here.html" target="_blank" style="color:#a0531f;text-decoration:underline;">livabletelluride.org/start-here.html</a>. It is a ten-minute read that covers:</p>
+    <ul style="margin:0 0 16px;padding-left:22px;">
+      <li style="margin:0 0 10px;"><strong>Who decides what.</strong> The seven governments that share this box canyon, from Town Council to the fire district, and what each one controls.</li>
+      <li style="margin:0 0 10px;"><strong>The conversations everyone&rsquo;s having.</strong> Carhenge/Shandoka, the land use code, wildfire, the free gondola, and the Town&rsquo;s debt, each with a link to the deep dive (or, for the debt, the spending tracker).</li>
+      <li style="margin:0 0 10px;"><strong>Two ways to plug in.</strong> Read the Monday email, or show up to one meeting. Either one is enough.</li>
+      <li style="margin:0 0 10px;"><strong>Words you&rsquo;ll hear.</strong> A decoder ring for PUD, deed restriction, IGA and the rest of the alphabet soup.</li>
+    </ul>
+  </td></tr>
+
+  <tr><td style="padding:0 28px 18px;">
+    <a href="https://livabletelluride.org" target="_blank"><img src="https://livabletelluride.org/assets/newsletters/site-tour-2026-10/start-here.jpg" alt="The Start Here page: New here? Start here." width="544" style="display:block;width:100%;max-width:544px;height:auto;border:1px solid #e5decf;border-radius:8px;"></a>
+    <div style="font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;color:#7a7466;font-style:italic;padding-top:8px;">The Start Here page.</div>
+  </td></tr>
+
+  <tr><td style="padding:0 28px 0;font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.65;color:#3b4340;">
+    <h2 style="margin:28px 0 10px;font-family:Georgia,'Times New Roman',serif;font-size:21px;line-height:1.3;color:#24483f;">New: the Past Meetings email, every Friday afternoon</h2>
+    <p style="margin:0 0 16px;">Most of us cannot sit through a three-hour council meeting, and official minutes can take weeks. So we now send a short email that tells you what actually happened at the past week&rsquo;s public meetings.</p>
+
+    <div style="font-family:Georgia,'Times New Roman',serif;font-size:18px;font-weight:bold;color:#24483f;margin:22px 0 6px;">What is in it</div>
+    <ul style="margin:0 0 16px;padding-left:22px;">
+      <li style="margin:0 0 10px;">Every public meeting held in the past week (Friday through Thursday) that we have a recap for, across the region: Telluride, San Miguel County, Mountain Village, SMART, Ouray County, Ridgway and more.</li>
+      <li style="margin:0 0 10px;"><strong>Major Decisions</strong> first. Meetings of the bodies that shape the most (Telluride Town Council, Planning &amp; Zoning and HARC; the County Commissioners and County Planning Commission; Mountain Village Town Council and Design Review Board) get a longer summary focused on the issues that affect everybody.</li>
+      <li style="margin:0 0 10px;"><strong>Other Meetings</strong> follow, each with a short teaser.</li>
+      <li style="margin:0 0 10px;">Every entry links to the full recap on the website, which links to the original meeting video so you can check the record yourself.</li>
+    </ul>
+    <p style="margin:0 0 16px;">If you spot an error, write to <a href="mailto:info@livabletelluride.org" style="color:#a0531f;text-decoration:underline;">info@livabletelluride.org</a> and we will fix it as soon as possible.</p>
+    <p style="margin:0 0 16px;">Rather not get another email? The same recaps are always on the website at <a href="https://livabletelluride.org/gov-hub-past.html" target="_blank" style="color:#a0531f;text-decoration:underline;">Past Meetings &amp; Recaps</a>, and the <a href="https://livabletelluride.org/v2/vote-tracker.html" target="_blank" style="color:#a0531f;text-decoration:underline;">Vote Tracker</a> shows how each board member voted on each motion. Both are under the Government menu whenever you want to check in.</p>
+    <p style="margin:0 0 16px;"><strong>Past Meetings is sign-up only.</strong> Being on the Monday list does not put you on this one. You have to switch it on. Here is how.</p>
+  </td></tr>
+
+  <!-- How to sign up — forest panel -->
+  <tr><td style="padding:8px 28px 26px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#24483f;border-radius:12px;">
+      <tr><td style="padding:24px 26px;font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.65;color:#f2efe6;">
+        <div style="font-family:Georgia,'Times New Roman',serif;font-size:21px;line-height:1.3;color:#ffffff;font-weight:bold;margin:0 0 12px;">How to sign up for Past Meetings</div>
+        <ol style="margin:0 0 18px;padding-left:22px;">
+          <li style="margin:0 0 10px;">Click the button below (or <strong>Update preferences</strong> at the bottom of this email). In the Week Ahead you can also click the gold <strong>Sign up for Past Meetings</strong> button.</li>
+          <li style="margin:0 0 10px;">Your profile page opens with your email already filled in, and a green note saying it loaded your current settings. Each subscription has a switch: dark green and &ldquo;Subscribed&rdquo; means you are on that list now; grey and &ldquo;Not subscribed&rdquo; means you are not.</li>
+          <li style="margin:0 0 10px;">Find <strong>Past Meetings</strong> and click its switch so it turns green.</li>
+          <li style="margin:0 0 10px;">Click <strong>Save my info</strong>. You will see &ldquo;Your info has been updated &mdash; thank you!&rdquo; That&rsquo;s it. Your first one arrives Friday.</li>
+        </ol>
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td style="background-color:#d8a94d;border-radius:8px;">
+            <a href="https://livabletelluride.org/profile.html?email={{ customer.email | url_encode }}&amp;key={{ customer.profile_key }}#subt-past" target="_blank" style="display:inline-block;padding:13px 22px;font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:16px;font-weight:bold;color:#24483f;text-decoration:none;">Turn on Past Meetings &rarr;</a>
+          </td>
+        </tr></table>
+        <p style="margin:18px 0 0;color:#cfdcd6;">That link is personal to you, which is how the page knows your settings. Please don&rsquo;t forward this email, or whoever you send it to could change your email settings.</p>
+      </td></tr>
+    </table>
+  </td></tr>
+
+  <tr><td style="padding:0 28px 10px;font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.65;color:#3b4340;">
+    <h2 style="margin:8px 0 10px;font-family:Georgia,'Times New Roman',serif;font-size:21px;line-height:1.3;color:#24483f;">Tell us what&rsquo;s missing</h2>
+    <p style="margin:0 0 16px;">The new site is still a work in progress, and readers have shared the best ideas so far. If something is hard to find, missing, or just wrong, write to <a href="mailto:info@livabletelluride.org" style="color:#a0531f;text-decoration:underline;">info@livabletelluride.org</a>.</p>
+    <p style="margin:0 0 16px;">Livable Telluride is an independent, ad-free 501(c)(3), supported by readers. If the site helps you keep up with local decisions, please consider a gift at <a href="https://livabletelluride.org/donate.html" target="_blank" style="color:#a0531f;text-decoration:underline;">livabletelluride.org/donate.html</a>.</p>
+  </td></tr>
+
+  <!-- Footer -->
+  <tr><td align="center" style="background-color:#efe9da;padding:18px 24px;font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#7a7466;">
+    <a href="https://livabletelluride.org" target="_blank" style="color:#a0531f;text-decoration:underline;">livabletelluride.org</a><br>
+    Inform. Connect. Engage. Together. &middot; <a href="mailto:info@livabletelluride.org" style="color:#7a7466;text-decoration:underline;">info@livabletelluride.org</a><br>
+    <a href="https://livabletelluride.org/profile.html?email={{ customer.email | url_encode }}&amp;key={{ customer.profile_key }}" style="color:#7a7466;text-decoration:underline;">Update preferences</a> &nbsp;&middot;&nbsp; <a href="{% unsubscribe_url %}" style="color:#7a7466;text-decoration:underline;">Unsubscribe</a>
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+</div>
