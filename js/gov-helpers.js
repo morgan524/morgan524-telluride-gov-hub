@@ -309,7 +309,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8165","sv":4,"ph":"89b54e4a61932908"},
 
   "county|2026-11-04|Board of County Commissioners Meeting":
-    {"sv":4,"ph":"a12dfd2ce826475e"},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/889/files/agenda/2060","zoomUrl":"https://us02web.zoom.us/meeting/register/yEtLDh7pSEiLm35vgwuJWQ","meetingId":"848 3698 7431","passcode":"369177","phone":"719-359-4580"},
 
   "telluride|2026-11-05|Special Meeting - Planning & Zoning Commission - Nov 05 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312","sv":4,"ph":"930623a06e6efd7f"},
@@ -462,7 +462,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://ouraycoco.portal.civicclerk.com/event/1129/files/agenda/7573","zoomUrl":"https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1","meetingId":"876 0637 5697","passcode":"946299","phone":"346-248-7799","sv":4},
 
   "school|2026-11-04|Telluride Board of Education Work Session":
-    {"sv":4,"ph":"b858cb282617fb09"},
+    {"sv":4,"agendaUrl":"https://files.smartsites.parentsquare.com/3403/1142026_ws_packet.pdf"},
 
   "county|2026-11-23|Open Space Commission Meeting":
     {"sv":4,"ph":"1ff606174e68cca5"},
@@ -849,7 +849,10 @@ const MEETING_PREVIEWS = {
     "The Planning & Zoning Commission Chair is expected to hold a public hearing on a proposed minor subdivision at 510 W Columbia Avenue, which would vacate the internal lot line between two existing lots and combine them into a single approximately 5,625-square-foot lot in the Historic Residential zone district.",
 
   "ouraycity|2026-11-02|Ouray City Council Regular Meeting":
-    "Council is expected to hold a public hearing on the proposed 2027 city budget and consider adopting updated water, sewer, refuse, and recycling rates for 2027. The council will also vote on four appointments to the Main Street Committee and a liquor license renewal."
+    "Council is expected to hold a public hearing on the proposed 2027 city budget and consider adopting updated water, sewer, refuse, and recycling rates for 2027. The council will also vote on four appointments to the Main Street Committee and a liquor license renewal.",
+
+  "school|2026-11-04|Telluride Board of Education Work Session":
+    "The Board is expected to conduct interviews with candidates seeking to serve as Student Representative to the Telluride R-1 School Board, asking questions about their background, motivations, and goals for the role."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -890,16 +893,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "Monthly Chamber of Commerce meeting open to all.",
     href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
-    img: ""
-  },
-  {
-    title: "Poland Pilgrimage sign-ups due tomorrow",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "October 30, 2026",
-    newsTopic: "community",
-    copy: "Reminder: Pilgrimage to Poland will be June 8-22, 2027. If interested, contact the Church Office at 970-728-3387 or Fr Mariusz via email at spctelluride@gmail.com.Sign-up and deposit are due by Oct. 31.Details are attached as PDF.Poland Pil...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/poland-pilgrimage-sign-ups-due-tomorrow/",
     img: ""
   },
   {
@@ -1023,16 +1016,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22993"
   },
   {
-    title: "Parish Bulletin for October 25",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "October 24, 2026",
-    newsTopic: "community",
-    copy: "This week's parish bulletin is attached. As always, please check the Parish Calendar for the most updated information.Reminders:Pilgrimage to Poland will be June 8-22, 2027. If interested, contact the Church Office. Sign up and deposit are ...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-october-25/",
-    img: ""
-  },
-  {
     title: "News Release: Cimarron Gathering Place Offers Age-Friendly Community Space at 4H Event Center",
     source: "Ouray County",
     sourceKey: "ouray-county",
@@ -1051,26 +1034,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "The Town of Ridgway, the City of Ouray, and Ouray County have submitted new affordable housing commitments under Colorado’s Proposition 123 program, establishing a combined goal of 37 affordable housing units over the next three-year...",
     href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=965",
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22986"
-  },
-  {
-    title: "Please watch this short video on Mission Alaska",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "October 17, 2026",
-    newsTopic: "community",
-    copy: "As many of you know, Fr. Mariusz was a missionary priest in Alaska. Please take the time to read his note on World Mission Sunday and watch a short 3 minute video. If you are called, please be generous during the 2nd collection at this weekend's H...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/please-watch-this-short-video-on-mission-alaska/",
-    img: ""
-  },
-  {
-    title: "Parish bulletin for October 18",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "October 17, 2026",
-    newsTopic: "community",
-    copy: "This week's parish bulletin is attached. As always, please check the Parish Calendar for the most updated information.Reminders:There will be a second collection this weekend for World Mission Sunday. Read the Pastor's Corner for more infor...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-october-18/",
-    img: ""
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
@@ -1267,7 +1230,7 @@ const MANUAL_SUMMARIES = {
     "The November 4, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-11-04|Board of County Commissioners Meeting":
-    "The November 4, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "A relatively light BOCC session. The consent agenda includes acceptance of the September road report, approval of October minutes, and ratification of a letter supporting a ban on recreational prairie dog shooting on public lands. Administrative matters include a quarterly update from the Tres Rios BLM Field Office, adoption of Resolution 2027-38 setting the 2027 meeting schedule, a resolution setting the 2027 Vegetation Control and Management Fee schedule, and a professional services agreement with RMMI Digital Document Solutions to digitize Planning Department files. The Natural Resources and Climate Resilience update includes a motion to sign on to a CC4CA letter opposing legal immunity for Big Oil. The Board will also convene in executive session to discuss potential legislation related to the county's Suncor/Exxon litigation. Sitting as the Housing Authority, commissioners will consider exception requests from Esperanza Reyes to continuing residency and employment standards under her deed restriction.",
 
   "telluride|2026-11-05|Special Meeting - Planning & Zoning Commission - Nov 05 2026":
     "The November 5, 2026 Special Meeting – Planning & Zoning Commission agenda hasn't been posted yet.",
@@ -1420,7 +1383,7 @@ const MANUAL_SUMMARIES = {
     "A work session — no formal votes — with two substantive conversations on the table. First, CDOT walks the commissioners through its annual planning presentation, covering what the state transportation agency has in store for the US-550 corridor and surrounding roads. Then the discussion shifts to FEMA Public Assistance, focusing on Ouray County's ongoing recovery projects and road damage assessments. Anyone who's watched mountain roads take a beating through wet cycles knows how long the repair queue can get — and how much of the funding story runs through federal reimbursement timelines.",
 
   "school|2026-11-04|Telluride Board of Education Work Session":
-    "The November 4 Telluride Board of Education Work Session agenda hasn't been posted yet.",
+    "The Board of Education meets Wednesday, November 4 at 3:30 PM at Bridal Veil for a work session focused on one item: interviewing student candidates for the Student Representative seat on the school board. Each candidate gets two minutes per question, covering their motivations, how they'd gather and share peer input, how they'd elevate underrepresented student voices, and how they'd manage the time commitment — which includes twice-monthly board meetings and a Colorado Association of School Boards conference in Colorado Springs, December 3–5, 2026.",
 
   "county|2026-11-23|Open Space Commission Meeting":
     "The November 23 Open Space Commission Meeting agenda hasn't been posted yet.",
@@ -4243,6 +4206,15 @@ const LOCAL_NEWS_FEATURED = [
 
 const BLOG_POSTS = [
   {
+    title: "Finding Your Way Around the New Website",
+    date: "Oct 30, 2026",
+    href: "https://livabletelluride.org/digest/one-off/finding-your-way-around-the-new-website-2026-10-30.html",
+    image: "https://livabletelluride.org/assets/newsletters/site-tour-2026-10/menu-government.jpg",
+    excerpt: "Livable Telluride Inform · Connect · Engage · Together Finding Your Way Around the New Site, and a New Past Meetings Email October 30, 2026 Quite a few of you dedicated readers have written in since we redesigned the landing page for livabletelluride.org . Most of the notes said some version of the same two things: “I like it,” but “where did such-and-such go?” Fair enough. So this newsletter is a",
+    category: "Newsletter",
+    source: "one-off"
+  },
+  {
     title: "Rocket Science Not Required: Making Sense of School District Measure 5A",
     date: "Oct 21, 2026",
     href: "https://livabletelluride.org/digest/one-off/rocket-science-not-required-making-sense-of-school-2026-10-21.html",
@@ -6901,6 +6873,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
   },
   {
+    title: "Bike & Brewery Tour",
+    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    pubDate: "2026-11-02T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
+  },
+  {
     title: "Mountainfilm for Locals",
     link: "https://townofmountainvillage.com/explore/events/all-events/mountainfilm-for-locals-2/",
     description: "Join Mountainfilm for Mountainfilm for Locals, a free screening for our local community, presented in partnership with Wilkinson Public Library. Catch a 90-",
@@ -6954,6 +6937,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
+  },
+  {
+    title: "Bike & Brewery Tour",
+    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    pubDate: "2026-11-09T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   },
   {
     title: "Mountain Village Merchant Meeting",
@@ -7011,6 +7005,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
   },
   {
+    title: "Bike & Brewery Tour",
+    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    pubDate: "2026-11-16T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
+  },
+  {
     title: "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
     link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
     description: "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
@@ -7053,6 +7058,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
+  },
+  {
+    title: "Bike & Brewery Tour",
+    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    pubDate: "2026-11-23T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   },
   {
     title: "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",

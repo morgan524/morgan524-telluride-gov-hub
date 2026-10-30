@@ -338,7 +338,11 @@
   },
   "county|2026-11-04|Board of County Commissioners Meeting": {
     "sv": 4,
-    "ph": "a12dfd2ce826475e"
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/889/files/agenda/2060",
+    "zoomUrl": "https://us02web.zoom.us/meeting/register/yEtLDh7pSEiLm35vgwuJWQ",
+    "meetingId": "848 3698 7431",
+    "passcode": "369177",
+    "phone": "719-359-4580"
   },
   "telluride|2026-11-05|Special Meeting - Planning & Zoning Commission - Nov 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312",
@@ -592,7 +596,7 @@
   },
   "school|2026-11-04|Telluride Board of Education Work Session": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://files.smartsites.parentsquare.com/3403/1142026_ws_packet.pdf"
   },
   "county|2026-11-23|Open Space Commission Meeting": {
     "sv": 4,

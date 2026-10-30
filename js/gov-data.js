@@ -128,7 +128,9 @@ const COUNTY_CACHED_DATA = [
     type: "bocc",
     location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
     civicClerkId: 889,
-    note: null
+    note: null,
+    agendaUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/889/files/agenda/2060",
+    packetUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/889/files/agenda/2061"
   },
   {
     date: "November 9, 2026",
