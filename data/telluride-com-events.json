@@ -21,18 +21,7 @@
     "sourceLabel": "Telluride.com",
     "category": "Community Event",
     "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/45301/gondola-rainbow-2-high-res-2100x1401-f18dd3a9-0d2b-4ff7-b99c-2c162daf4e94.800x533.webp"
-  },
-  {
-    "title": "Adventures in Acting: The Legend of Sleepy Hollow / The Little Ghost Who Was a Quilt",
-    "link": "https://www.telluride.com/event/adventures-in-acting-the-legend-of-sleepy-hollow-the-little-ghost-who-was-a-quilt/",
-    "description": "Kiddos from Adventures in Acting class (Grades K,1,2) present The Legend of Sleepy Hollow. This is a short, adorable …",
-    "pubDate": "2026-10-28",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63792/16-5h0a3038-scaled.800x533.webp"
+    "imageUrl": "https://www.telluride.com/site/assets/files/45301/i-5fmsgs6-5k-2100x1400-d6f22d2a-6109-408c-9f35-051a33841613.800x533.webp"
   },
   {
     "title": "Coffee & Climate Conversations",
@@ -397,5 +386,16 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63690/screenshot_2026-10-01_at_12_48_31_pm.800x533.webp"
+  },
+  {
+    "title": "Karl Denson&#039;s Afro Sonic",
+    "link": "https://www.telluride.com/event/karl-densons-afro-sonic/",
+    "description": "For almost four decades, Karl Denson has been one of American music’s most in-demand horn players and bandleaders — …",
+    "pubDate": "2026-12-29",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63693/karl-denson-pic-2026.800x533.webp"
   }
 ]

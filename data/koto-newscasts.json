@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 10-29-26",
+    "source": "KOTO Community Radio",
+    "date": "October 30, 2026",
+    "newsTopic": "arts-culture",
+    "copy": "West End Roundup with the San Miguel Basin Forum; Lights Up at the Rico Theatre; West End Runners Hit the Trails, One Step at a Time",
+    "href": "https://koto.org/news/newscast-10-29-26-2/"
+  },
+  {
     "title": "Newscast 10-28-26",
     "source": "KOTO Community Radio",
     "date": "October 29, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "community",
     "copy": "On this week’s Regional Roundup, we'll hear a report on a new program that seeks to expand access to birth control, then a report on a new program that gives out free trees to residents and businesses in southwest Colorado. After that we head to a historic ranch in Wyoming, the site where the Wilderness Act of 1964 was first drafted. After that we'",
     "href": "https://koto.org/news/newscast-10-16-26/"
-  },
-  {
-    "title": "Newscast 10-15-26",
-    "source": "KOTO Community Radio",
-    "date": "October 16, 2026",
-    "newsTopic": "community",
-    "copy": "Better Drainage May Help Norwood Go with the Flow; West End Round Up with the San Miguel Basin Forum; Naturita Burro Race Brings Big Hearts and a Lot of Attitude",
-    "href": "https://koto.org/news/newscast-10-15-26/"
   }
 ]

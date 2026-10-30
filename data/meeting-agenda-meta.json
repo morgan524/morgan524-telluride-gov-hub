@@ -93,10 +93,6 @@
     "passcode": "691404",
     "phone": "970-728-3844"
   },
-  "tmvoa|2026-09-29|TMVOA Board of Directors Meeting": {
-    "sv": 4,
-    "ph": "b858cb282617fb09"
-  },
   "smart|2026-10-08|SMART Board of Directors": {
     "sv": 4,
     "ph": "b858cb282617fb09"
@@ -296,14 +292,6 @@
     "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=769742",
     "sv": 4
   },
-  "ouray|2026-09-29|Board of County Commissioners Special Work Session": {
-    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/2149/files/agenda/7544",
-    "zoomUrl": "https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1",
-    "meetingId": "876 0637 5697",
-    "passcode": "946299",
-    "phone": "346-248-7799",
-    "sv": 4
-  },
   "ouray|2026-10-07|PM - Note: to be held at the 4-H Event Center! The PC will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (packet materials are attached to the agenda)": {
     "agendaUrl": "https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1019",
     "sv": 4
@@ -335,7 +323,8 @@
   "telluride|2026-11-04|Ecology Commission - Nov 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8120",
     "sv": 4,
-    "ph": "f7fa71ad7c369cd5"
+    "zoomUrl": "https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1",
+    "phone": "970-728-2496"
   },
   "telluride|2026-11-04|Commission for Community Assistance, Arts & Special Events - Nov 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8068",
@@ -354,7 +343,7 @@
   "telluride|2026-11-05|Special Meeting - Planning & Zoning Commission - Nov 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8312",
     "sv": 4,
-    "ph": "bd112a6c3e342f56"
+    "ph": "930623a06e6efd7f"
   },
   "telluride|2026-11-05|Town Council Budget - Nov 05 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054",
@@ -629,5 +618,10 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8329",
     "sv": 4,
     "ph": "d453c7f32314afb9"
+  },
+  "telluride|2026-11-12|Vending Subcommittee - Nov 12 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8358",
+    "sv": 4,
+    "ph": "2042314dfeae7cf0"
   }
 }

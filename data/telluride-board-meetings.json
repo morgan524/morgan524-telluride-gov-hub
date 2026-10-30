@@ -13,10 +13,11 @@
     "date": "November 4, 2026",
     "title": "Ecology Commission",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8120",
-    "hasAgenda": false,
+    "hasAgenda": true,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "4:00 PM",
-    "civicwebId": 8120
+    "civicwebId": 8120,
+    "packetUrl": "https://telluride-co.civicweb.net/document/446981/"
   },
   {
     "date": "November 5, 2026",

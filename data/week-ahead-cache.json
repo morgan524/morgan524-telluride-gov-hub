@@ -1,10 +1,18 @@
 {
-  "hash": "8fd8520bc52da0af651f298f325037583146ca47",
-  "lede": "Halloween weekend owns the calendar this week — parade, fire station open house, Young Frankenstein on stage, and Easy Jim's two-night run all land Friday through Saturday. On the meetings side, a rescheduled Telluride P&Z session on November 2 takes up a real land-use question: whether to merge two adjoining lots on West Columbia into a single 5,625-square-foot parcel. Most other boards either haven't posted agendas yet or are handling routine business.",
+  "hash": "0004c025f59188dac68c7b5f8fca9d95fb884bc1",
+  "lede": "The item worth circling on your calendar this week is Wednesday's Ecology Commission meeting, where a draft ordinance to phase out gas-powered lawn and garden equipment inside town limits — leaf blowers gone by 2028, everything else by 2030 — gets a public airing before it moves further in the process. The rest of the week is quieter on the civic front, with several agendas still unposted, while Halloween tips the weekend toward parades, parties, and a TMHS and Telluride Theatre production of Young Frankenstein running Friday and Saturday.",
   "notable": [
     {
-      "id": 2,
-      "stake": "P&Z votes on merging two West Telluride lots into one parcel."
+      "id": 0,
+      "stake": "Lot-line vacation merging two West Telluride parcels into one 5,625-sq-ft lot."
+    },
+    {
+      "id": 3,
+      "stake": "Draft ordinance could ban gas-powered yard equipment in town by 2028–2030."
+    },
+    {
+      "id": 10,
+      "stake": "Quasi-judicial easement review and height variance vote for Mountain Village properties."
     }
   ]
 }

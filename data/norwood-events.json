@@ -11,9 +11,9 @@
     "imageUrl": ""
   },
   {
-    "title": "Norwood Sanitation District Meeting 10 29 2026 NSD Work Session",
-    "link": "https://www.norwoodtown.com/2026-10-29-norwood-sanitation-district-meeting-10-29-2026-nsd-work-session",
-    "description": "The Norwood Sanitation District will hold a work session meeting on October 29, 2026, hosted by the Town of Norwood. This is a local government meeting open to those with interest in sanitation district business and operations.",
+    "title": "Norwood Sanitation District Meeting Work Session",
+    "link": "https://www.norwoodtown.com/2026-10-29-norwood-sanitation-district-meeting-work-session",
+    "description": "A work session for the Norwood Sanitation District, hosted by the Town of Norwood. This government meeting provides an opportunity for district business and operational matters to be discussed outside of a formal regular meeting.",
     "pubDate": "2026-10-29T12:00:00.000Z",
     "source": "norwood",
     "sourceLabel": "Town of Norwood",
@@ -29,6 +29,17 @@
     "source": "norwood",
     "sourceLabel": "Town of Norwood",
     "category": "Community Event",
+    "location": "Norwood, CO",
+    "imageUrl": ""
+  },
+  {
+    "title": "Norwood Water Commission Work Session",
+    "link": "https://www.norwoodtown.com/2026-11-02-nwc-work-session",
+    "description": "The Norwood Water Commission will hold a work session to conduct business related to the town's water management and infrastructure. This is a local government meeting hosted by the Town of Norwood.",
+    "pubDate": "2026-11-02T12:00:00.000Z",
+    "source": "norwood",
+    "sourceLabel": "Town of Norwood",
+    "category": "Government Meeting",
     "location": "Norwood, CO",
     "imageUrl": ""
   },

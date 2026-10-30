@@ -1,26 +1,26 @@
 {
- "generated": "2026-10-29T18:18:50.339Z",
+ "generated": "2026-10-30T00:45:25.887Z",
  "pinned": false,
  "topic": "norwoodwater",
  "topicLabel": "Norwood Water",
- "headline": "Norwood Water goes before Norwood Water Commission Meeting on Tuesday, November 10",
- "blurb": "The November 10, 2026 Norwood Water Commission Meeting agenda hasn't been posted yet.",
+ "headline": "Norwood Water goes before Norwood Water Commission Work Session on Monday, November 2",
+ "blurb": "",
  "images": [],
  "deepDive": {
   "label": "Norwood Water",
   "href": "/deep-dive-norwoodwater.html"
  },
  "meeting": {
-  "title": "Norwood Water Commission Meeting",
+  "title": "Norwood Water Commission Work Session",
   "sourceLabel": "Town of Norwood",
-  "date": "2026-11-10",
-  "humanDate": "Tuesday, November 10",
+  "date": "2026-11-02",
+  "humanDate": "Monday, November 2",
   "time": "",
   "location": "1670 Naturita St, Norwood CO 81423",
   "agendaUrl": "",
-  "hasAgenda": false,
+  "hasAgenda": true,
   "packetUrl": "",
-  "link": "https://www.norwoodtown.com/nwc-meetings",
+  "link": "https://www.norwoodtown.com/files/bbfdcc5d9/11.02.2026+NWC+Work+Session.pdf",
   "zoomLink": "",
   "livestream": ""
  }

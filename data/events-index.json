@@ -54,16 +54,16 @@
     "type": "Family & Kids"
   },
   {
-    "title": "Death Details:What to Do Before You Check Out",
-    "href": "https://koto.org/event/death-detailswhat-to-do-before-you-check-out/",
+    "title": "Death Details: What To Do Before You Check Out",
+    "href": "https://telluridelibrary.libcal.com/event/17729463?hs=a",
     "date": "2026-10-29",
     "time": "12:00 PM",
-    "location": "Wilkinson Public Library, Telluride",
+    "location": "Program Room",
     "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Dying in America is comes with a lot of beaurocracy. Fortunately for you and your family, you can do a lot to be prepared for the only thing that is as certain as taxes. Join us for What To Do Before You Check Out and get all your death…",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_20_16_19_58.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "12:00 PM – 1:15 PM · Dying in America comes with a lot of bureaucracy. Fortunately for you and your family, you can do a lot to be prepared for the only thing that is as certain as taxes. Join us for What To Do Before You Check Out and get…",
     "type": "Family & Kids"
   },
   {
@@ -776,7 +776,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
     "type": "Community",
-    "endDate": "2026-12-21"
+    "endDate": "2026-12-28"
   },
   {
     "title": "Mountainfilm for Locals",
@@ -2072,6 +2072,19 @@
     "type": "Community"
   },
   {
+    "title": "Stories & Poems Telluride",
+    "href": "https://koto.org/event/stories-poems-telluride/",
+    "date": "2026-11-17",
+    "time": "5:15 PM",
+    "location": "",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/10/DaivaCraigFlySPTnov26.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Storyteller and writer Craig Childs will join his wife poet Daiva Česonis, both of them living at the edge of Naturita Canyon on Wrights Mesa near Norwood, for an evening of storytelling and poetry at the Wilkinson Public Library’s…",
+    "type": "Community"
+  },
+  {
     "title": "Weekly Young Adult Gathering",
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-11-17",
@@ -2174,6 +2187,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "A recurring craft program at the Ouray Public Library welcomes children under 12 for a hands-on creative session after school. It is a community offering from the library for young kids looking to make something with their hands.",
     "type": "Family & Kids"
+  },
+  {
+    "title": "Ouray Chamber Business After Hours",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-chamber-business-after-hours-590",
+    "date": "2026-11-19",
+    "time": "5:00 PM",
+    "location": "Ouray Books",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/54365611177281/huge/68383e4c08c6ef463894f1749b6dc33a263b7628.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "We are looking forward to seeing everyone at the November Business After Hours hosted by Ouray Books and sponsored by the Ouray Chamber of Commerce! Come out for complimentary snacks and beverages, and a free drawing for all attendees!…",
+    "type": "Community"
   },
   {
     "title": "Salon Night at Telluride Arts HQ",
@@ -2317,6 +2343,19 @@
     "source": "Mountain Village",
     "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
     "type": "Community"
+  },
+  {
+    "title": "Stuff a Cruiser",
+    "href": "https://events.ourayridgwayevents.com/event/stuff-a-cruiser",
+    "date": "2026-11-23",
+    "time": "11:00 AM",
+    "location": "Ouray County Fairgrounds and 4H Events Center",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/54373648758769/huge/dc83b365d1d7f782ea6539886204bc8c86a39282.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Please join us for our Ouray County \"Stuff a Cruiser\" Thanksgiving Food Drive! We will be “stuffing” a sheriff's office patrol car on Monday, November 23 from 11AM to 2pm in front of the 4H Event Center in Ridgway. Help us make…",
+    "type": "Food & Drink"
   },
   {
     "title": "Thanksgiving Break - Ridgway Schools",
@@ -3044,6 +3083,32 @@
     "title": "Sheridan Arts Foundation Holiday Rewind: A Tribute Concert Series: Roy Rivers: A John Denver Tribute",
     "href": "https://www.telluride.com/event/sheridan-arts-foundation-holiday-concert-series/",
     "date": "2026-12-28",
+    "time": "",
+    "location": "Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
+    "category": "",
+    "source": "Telluride.com",
+    "desc": "Join the Sheridan Arts Foundation for five nights of world-class entertainment at the historic Sheridan Opera House.",
+    "type": "Music"
+  },
+  {
+    "title": "Karl Denson&#039;s Afro Sonic",
+    "href": "https://www.telluride.com/event/karl-densons-afro-sonic/",
+    "date": "2026-12-29",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63693/karl-denson-pic-2026.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "For almost four decades, Karl Denson has been one of American music’s most in-demand horn players and bandleaders — …",
+    "type": "Community"
+  },
+  {
+    "title": "Sheridan Arts Foundation Holiday Rewind: A Tribute Concert Series: Karl Denson's Afro Sonic",
+    "href": "https://www.telluride.com/event/sheridan-arts-foundation-holiday-concert-series/",
+    "date": "2026-12-29",
     "time": "",
     "location": "Telluride",
     "town": "Telluride",
