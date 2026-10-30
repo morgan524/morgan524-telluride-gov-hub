@@ -486,7 +486,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8358","sv":4,"ph":"2042314dfeae7cf0"},
 
   "norwood|2026-11-02|Norwood Water Commission Work Session":
-    {"agendaUrl":"https://www.norwoodtown.com/files/bbfdcc5d9/11.02.2026+NWC+Work+Session.pdf","zoomUrl":"https://us02web.zoom.us/j/84889491102","meetingId":"848 8949 1102","passcode":"841533","sv":4}
+    {"agendaUrl":"https://www.norwoodtown.com/files/bbfdcc5d9/11.02.2026+NWC+Work+Session.pdf","zoomUrl":"https://us02web.zoom.us/j/84889491102","meetingId":"848 8949 1102","passcode":"841533","sv":4},
+
+  "telluride|2026-11-02|Special Meeting - Planning & Zoning Commission Chair - Nov 02 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8359","sv":4,"ph":"d54c281fa29cd3e1"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -822,9 +825,62 @@ const MEETING_PREVIEWS = {
     "The Telluride Vending Subcommittee is expected to review vending permit applications, consistent with its standard role as a subcommittee of Town Council. No specific agenda items were disclosed in available materials. The subcommittee meets seasonally at Rebekah Hall.",
 
   "norwood|2026-11-02|Norwood Water Commission Work Session":
-    "The Norwood Water Commission will hold a work session to review the 2027 draft budget. Note that formal action cannot be taken at work sessions. The meeting will be held at Norwood Town Hall with a Zoom option available."
+    "The Norwood Water Commission will hold a work session to review the 2027 draft budget. Note that formal action cannot be taken at work sessions. The meeting will be held at Norwood Town Hall with a Zoom option available.",
+
+  "telluride|2026-11-02|Special Meeting - Planning & Zoning Commission Chair - Nov 02 2026":
+    "The Telluride Planning & Zoning Commission Chair is expected to convene a special rescheduled meeting, originally scheduled for October 22, 2026. Related notices suggest possible discussion of employee rental housing policy reforms and condominium declaration amendments, though a detailed agenda was not publicly available."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
+  {
+    title: "2026 Chamber Meeting, December",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
+    img: ""
+  },
+  {
+    title: "Noel Night",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 4, 2026",
+    newsTopic: "community",
+    copy: "Community shopping event and celebration.",
+    href: "https://norwoodcolorado.com/event/noel-night-3/",
+    img: ""
+  },
+  {
+    title: "West End Parade of Lights & Elfin Eve",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "Holiday parade and festival.",
+    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, November",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "November 10, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
+    img: ""
+  },
+  {
+    title: "Poland Pilgrimage sign-ups due tomorrow",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "October 30, 2026",
+    newsTopic: "community",
+    copy: "Reminder: Pilgrimage to Poland will be June 8-22, 2027. If interested, contact the Church Office at 970-728-3387 or Fr Mariusz via email at spctelluride@gmail.com.Sign-up and deposit are due by Oct. 31.Details are attached as PDF.Poland Pil...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/poland-pilgrimage-sign-ups-due-tomorrow/",
+    img: ""
+  },
   {
     title: "UPDATE: Body of Ridgway man found in Chaffee County",
     source: "Ouray County Plaindealer",
@@ -1367,7 +1423,10 @@ const MANUAL_SUMMARIES = {
     "The November 12, 2026 Vending Subcommittee agenda hasn't been posted yet.",
 
   "norwood|2026-11-02|Norwood Water Commission Work Session":
-    "The Norwood Water Commission sits down for a work session focused on a single item: the 2027 draft budget. Work sessions are deliberative — no formal action can be taken — so this is the commission's chance to work through the numbers before anything goes to a vote. The meeting is at Norwood Town Hall on Naturita Street at 6:00 p.m., with a Zoom option available."
+    "The Norwood Water Commission sits down for a work session focused on a single item: the 2027 draft budget. Work sessions are deliberative — no formal action can be taken — so this is the commission's chance to work through the numbers before anything goes to a vote. The meeting is at Norwood Town Hall on Naturita Street at 6:00 p.m., with a Zoom option available.",
+
+  "telluride|2026-11-02|Special Meeting - Planning & Zoning Commission Chair - Nov 02 2026":
+    "The November 2, 2026 Planning & Zoning Commission Chair special meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -3845,6 +3904,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Ridgway Sustainability Advisory Board Meeting Agenda",
+    source: "Town of Ridgway",
+    date: "November 3, 2026",
+    firstSeen: "2026-10-30",
+    newsTopic: "government",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/SAB-Meeting-Packet---November-3%2C-2026.pdf",
+    img: ""
+  },
+  {
     title: "Notice of Public Hearing for Liquor License on November 19, 2026 at 5:30pm - Chipeta Lodge Resort &amp; Spa, 304 S Lena Street - Notice dated October 13, 2026",
     source: "Town of Ridgway",
     date: "October 30, 2026",
@@ -4921,6 +4991,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/10/DaivaCraigFlySPTnov26.png"
   },
   {
+    title: "Roots to Routes: A Community Storytelling Night",
+    link: "https://koto.org/event/roots-to-routes-a-community-storytelling-night/",
+    description: "Some of the best adventures start right outside our front door, and others take us halfway around the world. Join the Telluride Mountain Club for Roots to Routes, a new storytelling night where your neighbors share personal, authentic outdoor adventures, from big expeditions abroad to memorable weekends close to home. Each storyteller gets 10 minutes to present with slides, followed by 3 minutes for Q&A. Have a story to share? We’re looking for a real mix of adventures, including climbing, mountaineering, rafting, skiing, bikepacking, hiking, and more, from people of all ages and experience levels. Submit your story by November 3rd. We look forward to seeing you there!",
+    pubDate: "2026-11-17T18:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/IMG_3987-scaled.jpeg"
+  },
+  {
     title: "The Classics Taproom Society",
     link: "https://koto.org/event/the-classics-taproom-society-2/",
     description: "Discover the magic of classic literature in our newest book club, where we celebrate the milestones of timeless works! With the upcoming 50th, 75th, and 100th anniversaries of these literary treasures in 2026 and 2027, there’s no better time to dive deep into great stories. Each month features a passionate guest moderator who will guide you through rich discussions. The library will provide light appetizers and Telluride Brewing Company will also be offering $5 TBC beers during the book club. Join us at Telluride Brewing Company in Lawson Hill on the 3rd Wednesday of the month Oct-March at 5:30pm to discuss the following classics: November 18- Foundation (75 years) by Isaac Asimov – presented by Laura Colbert December 16- The Catcher in the Rye by J.D. …",
@@ -4963,17 +5044,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Lone Cone Library Norwood",
     imageUrl: "https://koto.org/wp-content/uploads/2026/10/Screenshot-2026-10-27-at-3.27.48-PM.png"
-  },
-  {
-    title: "Facing the Mourning",
-    link: "https://koto.org/event/facing-the-mourning/2026-11-19/",
-    description: "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit from additional support while navigating grief and loss. Please feel free to share this information with others who may be interested.",
-    pubDate: "2026-11-19T18:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Redvale Community Center",
-    imageUrl: ""
   }
 ];
 
@@ -6800,17 +6870,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Coffee and Climate Conversations: Super El Niño",
-    link: "https://townofmountainvillage.com/explore/events/all-events/coffee-and-climate-conversations-super-el-nino/",
-    description: "Across our community, Super El Niño rumors are building hope and excitement that a snowy winter full of powder days is on the horizon.",
-    pubDate: "2026-10-29T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/50058/october_coffee_chat_instagram_post_45.jpg"
-  },
-  {
     title: "Movies Under the Stars",
     link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
@@ -7267,6 +7326,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/64113/ezgif-4x5_poster-lifestyle_2048x2048.800x533.webp"
+  },
+  {
+    title: "Roots to Routes: A Community Storytelling Night",
+    link: "https://www.telluride.com/event/roots-to-routes-a-community-storytelling-night/",
+    description: "Some of the best adventures start right outside our front door, and others take us halfway around the world. Join the …",
+    pubDate: "2026-11-17",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/64129/img_3987.800x533.webp"
   },
   {
     title: "Gondola Re-Opens for Winter",
@@ -7942,6 +8012,24 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_792d96c0-09c8-479f-83f8-bdf3681b49ae.html",
     address: "455 Mountain Village Blvd, Suite A, Mountain Village, CO",
     noticeKey: "ord-mv-fees-16.01-16.02-COL-000256"
+  },
+  {
+    title: "Budget Notice -- Proposed 2027 Budget, Southwestern Water Conservation District",
+    entity: "Southwestern Water Conservation District",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "The Southwestern Water Conservation District (SWCD) has submitted its proposed 2027 budget for public inspection at its office at 841 E 2nd Avenue, Durango, Colorado, and online at swwcd.org. The budget will be considered at a regular board meeting on Monday, December 14, 2026 at 9:00 a.m., which may be attended in person or via Zoom. Any interested elector of SWCD may inspect the budget and file objections prior to final adoption.",
+    deadline: "2026-12-14",
+    expires: "2026-12-14",
+    dates: "10/29",
+    papers: ["ttimes_1029"],
+    url: "https://www.telluridenews.com/news/legals/article_3815f6d8-2031-4cb7-b480-2859616b3237.html",
+    address: "841 E 2nd Avenue, Durango, Colorado",
+    noticeKey: "swcd-budget-2027"
   },
   {
     title: "Request for Proposal -- TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS",
@@ -9481,13 +9569,12 @@ function getTownAgendaLink(title, eventDate) {
 const TELLURIDE_BOARD_MEETINGS = [
   {
     date: "November 2, 2026",
-    title: "/Special Meeting - Planning & Zoning Commission Chair",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8326",
-    hasAgenda: true,
+    title: "Special Meeting - Planning & Zoning Commission Chair",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8359",
+    hasAgenda: false,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: "9:00 AM",
-    civicwebId: 8326,
-    packetUrl: "https://telluride-co.civicweb.net/document/446310/"
+    time: "10:30 AM",
+    civicwebId: 8359
   },
   {
     date: "November 4, 2026",

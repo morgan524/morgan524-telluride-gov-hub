@@ -441,6 +441,26 @@
     "noticeKey": "ord-mv-fees-16.01-16.02-COL-000256"
   },
   {
+    "title": "Budget Notice -- Proposed 2027 Budget, Southwestern Water Conservation District",
+    "entity": "Southwestern Water Conservation District",
+    "entityClass": "ent-county",
+    "entityLogo": "assessor",
+    "icon": "💰",
+    "iconClass": "type-tax",
+    "type": "Tax & Finance",
+    "filterTag": "tax-finance",
+    "summary": "The Southwestern Water Conservation District (SWCD) has submitted its proposed 2027 budget for public inspection at its office at 841 E 2nd Avenue, Durango, Colorado, and online at swwcd.org. The budget will be considered at a regular board meeting on Monday, December 14, 2026 at 9:00 a.m., which may be attended in person or via Zoom. Any interested elector of SWCD may inspect the budget and file objections prior to final adoption.",
+    "deadline": "2026-12-14",
+    "expires": "2026-12-14",
+    "dates": "10/29",
+    "papers": [
+      "ttimes_1029"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_3815f6d8-2031-4cb7-b480-2859616b3237.html",
+    "address": "841 E 2nd Avenue, Durango, Colorado",
+    "noticeKey": "swcd-budget-2027"
+  },
+  {
     "title": "Request for Proposal -- TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS",
     "entity": "Town of Telluride",
     "entityClass": "ent-county",

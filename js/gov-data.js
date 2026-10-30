@@ -327,7 +327,7 @@ const TMVOA_CACHED_DATA = [
     date: "November 6, 2026",
     title: "TMVOA Board of Directors Budget Meeting #1",
     board: "board",
-    agendaUrl: null,
+    agendaUrl: "https://tmvoa.org/site/assets/files/4890/tmvoa_board_meeting_agenda_11_06_26_draft.pdf",
     packetUrl: null,
     location: "Mountain Village, CO (see agenda for Zoom link)"
   },
@@ -683,6 +683,15 @@ const MED_CACHED_DATA = [
     agendaUrl: "https://www.tellmed.org/files/51579856e/THD+Reg+BOD+Mtg+10.22.26+Agenda.pdf",
     packetUrl: null,
     special: false,
+    location: "333 W Colorado Ave (2nd Floor), Telluride / Zoom"
+  },
+  {
+    date: "November 3, 2026",
+    time: "3:00 PM",
+    title: "Regular Board Meeting",
+    agendaUrl: "https://www.tellmed.org/files/123ee1a0f/THD+Special+Bd+Mtg+Agenda+11.3.26.pdf",
+    packetUrl: null,
+    special: true,
     location: "333 W Colorado Ave (2nd Floor), Telluride / Zoom"
   },
   {

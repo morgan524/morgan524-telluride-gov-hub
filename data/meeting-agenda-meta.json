@@ -630,5 +630,10 @@
     "meetingId": "848 8949 1102",
     "passcode": "841533",
     "sv": 4
+  },
+  "telluride|2026-11-02|Special Meeting - Planning & Zoning Commission Chair - Nov 02 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8359",
+    "sv": 4,
+    "ph": "d54c281fa29cd3e1"
   }
 }
