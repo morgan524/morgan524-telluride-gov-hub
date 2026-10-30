@@ -410,7 +410,7 @@ const MV_CACHED_DATA = [
     title: "Design Review Board",
     board: "drb",
     agendaUrl: "https://townofmountainvillage.com/site/assets/files/50155/november_5-_2026_design_review_board_meeting_agenda.pdf",
-    packetUrl: null,
+    packetUrl: "https://townofmountainvillage.com/site/assets/files/50160/november_5-_2026_design_review_board_meeting_packet.pdf",
     special: false,
     location: "Town Hall, 455 Mountain Village Blvd, Suite A"
   },
@@ -465,13 +465,12 @@ const SCHOOL_CACHED_DATA = [
   },
   {
     date: "November 4, 2026",
-    time: "3:30 PM",
+    time: null,
     title: "Telluride Board of Education Work Session",
-    agendaUrl: null,
+    agendaUrl: "https://files.smartsites.parentsquare.com/3403/1142026_ws_packet.pdf",
     packetUrl: null,
     special: false,
-    location: "Bridal Veil District Conference Room / Zoom",
-    note: "Scheduled meeting -- agenda posted closer to the date."
+    location: "Bridal Veil District Conference Room / Zoom"
   },
   {
     date: "November 16, 2026",
@@ -1023,6 +1022,16 @@ const OURAY_CITY_CACHED_DATA = [
     boardbookId: 765214,
     agendaUrl: "https://meetings.boardbook.org/Public/Agenda/2503?meeting=765214",
     packetUrl: "https://meetings.boardbook.org/Public/DownloadAgenda/2503?meeting=765214"
+  },
+  {
+    date: "November 2, 2026",
+    time: "6:00 PM",
+    title: "Ouray City Council Regular Meeting",
+    board: "council",
+    location: "Ouray Community Center, 320 6th Ave, Ouray, CO 81427",
+    boardbookId: 773056,
+    agendaUrl: "https://meetings.boardbook.org/Public/Agenda/2503?meeting=773056",
+    packetUrl: "https://meetings.boardbook.org/Public/DownloadAgenda/2503?meeting=773056"
   }
 ];
 

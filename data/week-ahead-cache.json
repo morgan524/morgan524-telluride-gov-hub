@@ -1,14 +1,22 @@
 {
-  "hash": "0bfdfdc92cd1aa2d8860a6002c9ec19d9b193421",
-  "lede": "The item worth watching this week is the Telluride Ecology Commission's November 4 meeting, where a draft ordinance to phase out gas-powered lawn and garden equipment — leaf blowers banned by 2028, everything else by 2030 — gets its first real public airing. On the land-use side, the P&Z Chair takes up a lot consolidation on West Columbia Avenue Monday. Bookending the week is a full Halloween weekend, plus Mountainfilm for Locals running Monday and Tuesday.",
+  "hash": "7de84d955ebc69f91da4786a8696415da0637900",
+  "lede": "The biggest thing on the docket this week is a Telluride Medical Center special meeting where the board takes up a proposal to engage Jensen Partners for due diligence with CommonSpirit Health — one of the country's largest hospital systems — a signal that a formal partnership or affiliation could be moving forward. Alongside that, Ouray City Council holds a public hearing on its 2027 budget and votes on second reading of two ordinances setting utility rates and adding a new light-industrial rate category, while Telluride's Ecology Commission takes up a draft ordinance that would ban gas-powered lawn equipment in town limits by 2028–2030. Halloween weekend kicks things off with the parade, Young Frankenstein at the high school, and a full slate of community events before the week turns to Mountainfilm for Locals.",
   "notable": [
     {
       "id": 5,
-      "stake": "Draft ordinance would ban gas lawn equipment town-wide by 2028–2030."
+      "stake": "Board votes on hiring due-diligence support for potential CommonSpirit Health partnership."
     },
     {
-      "id": 0,
-      "stake": "Vote on merging two lots at 510 W Columbia Ave into one parcel."
+      "id": 4,
+      "stake": "Public hearing on Ouray's 2027 budget; second-reading votes on utility and industrial rate ordinances."
+    },
+    {
+      "id": 7,
+      "stake": "Draft ordinance would ban gas-powered lawn equipment in Telluride by 2028���2030."
+    },
+    {
+      "id": 3,
+      "stake": "P&Z Chair votes on minor subdivision merging two lots in Historic Residential zone."
     }
   ]
 }

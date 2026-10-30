@@ -329,7 +329,7 @@
   "telluride|2026-11-04|Commission for Community Assistance, Arts & Special Events - Nov 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8068",
     "sv": 4,
-    "ph": "d59f611c627c7101"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/tZ0pc-ChqDwsGNFpPigfqqLQptmoMmpJdiOx"
   },
   "telluride|2026-11-04|Telluride Housing Authority Subcommittee - Nov 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8165",
@@ -373,7 +373,11 @@
   },
   "tmvoa|2026-11-06|TMVOA Board of Directors Budget Meeting #1": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://tmvoa.org/site/assets/files/4890/tmvoa_board_meeting_agenda_11_06_26_draft.pdf",
+    "zoomUrl": "https://us02web.zoom.us/meeting/register/Zl-93MeNQwyWYiRsQ3YGAA",
+    "meetingId": "871 5717 3224",
+    "passcode": "186923",
+    "phone": "970) 728-1904"
   },
   "ouray|2026-10-13|Board of County Commissioners": {
     "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/1069/files/agenda/7559",
@@ -533,7 +537,7 @@
   "telluride|2026-11-19|Planning & Zoning Commission Chair - Nov 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8107",
     "sv": 4,
-    "ph": "d1c02d0e14c5779b"
+    "ph": "377b24ec8cc33675"
   },
   "telluride|2026-11-19|Liquor Licensing Authority - Nov 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8147",
@@ -635,5 +639,24 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8359",
     "sv": 4,
     "ph": "d54c281fa29cd3e1"
+  },
+  "med|2026-11-03|Regular Board Meeting": {
+    "agendaUrl": "https://www.tellmed.org/files/123ee1a0f/THD+Special+Bd+Mtg+Agenda+11.3.26.pdf",
+    "zoomUrl": "https://us02web.zoom.us/j/81643831702?pwd=0XmN8YVZcrXW0wphr0yCMnI0hISL77.1&from=addon",
+    "meetingId": "816 4383 1702",
+    "passcode": "525157",
+    "sv": 4
+  },
+  "telluride|2026-11-02|Special Meeting - Planning & Zoning Commission Chair - Nov 02 2026 at 10:30 AM": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8359",
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/m65fl_EfRuC-m1IoGX6uiQ",
+    "meetingId": "815 3599 7736",
+    "passcode": "769982",
+    "phone": "301-715-8592",
+    "sv": 4
+  },
+  "ouraycity|2026-11-02|Ouray City Council Regular Meeting": {
+    "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=773056",
+    "sv": 4
   }
 }
