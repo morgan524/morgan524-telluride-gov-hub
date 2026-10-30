@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-10-30",
+    "title": "Should an outside consultant rewrite the housing rules?",
+    "body": "The Telluride Housing Authority Subcommittee is set to discuss a request for proposals to hire outside consulting services for a comprehensive review of the town's employee rental housing policies. That means fresh eyes — but also outside hands — on rules that shape who gets to live up here and under what terms.\n\nSome will see it as overdue: policies calcify, and an independent review could surface fixes insiders are too close to see. Others will wonder whether handing that work to consultants risks losing the local knowledge — and accountability — that should drive housing decisions.\n\nSo: is outside expertise the right tool for this, or should the community be leading its own review?",
+    "choices": [
+      "Bring in the outside experts",
+      "Keep it local and in-house",
+      "Depends on who they hire",
+      "It's complicated"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-10-29",
     "title": "Pause the open space fund — or hold the line?",
     "body": "Council is taking up an ordinance that would suspend the 5% capital fund allocation for open space in 2027. It's a first reading, so nothing is decided yet. The argument for: the town is facing budget pressure, and a one-year pause buys room to maneuver. The argument against: open space protection is exactly what gets quietly eroded during tight years, and a suspension sets a precedent. Both sides have a point.\n\nSo — is one year off a reasonable trade-off, or does pausing the open space fund open a door that's hard to close?",
@@ -420,21 +435,6 @@
       "Too easy to steer outcomes",
       "Depends on who participates",
       "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-09-30",
-    "title": "Budget season, wildfire code — same room",
-    "body": "Town Council's October 1 budget meeting is also expected to revisit Ordinance #1640 — the wildfire resiliency code amendment passed in August 2026. That pairing matters. New wildfire standards can mean real costs for property owners and the town itself, and a budget session is exactly where those costs start to feel concrete. Some residents will want the standards enforced fully, whatever they cost. Others will push back if compliance burdens land on homeowners or slow things down. Nothing's been decided yet on the budget side.\n\nWhat should Council prioritize if wildfire code compliance and other budget needs end up competing for the same dollars?",
-    "choices": [
-      "Wildfire code costs come first",
-      "Balance it with other needs",
-      "Owners should carry the cost",
-      "Need more info"
     ],
     "sourceUrl": "/gov-hub.html",
     "topics": [

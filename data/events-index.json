@@ -1,257 +1,5 @@
 [
   {
-    "title": "Guided Tour: Historic Beaumont Hotel & Spa",
-    "href": "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
-    "date": "2026-10-29",
-    "time": "1:30 PM",
-    "location": "Beaumont Hotel & Spa",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
-    "type": "Community",
-    "endDate": "2026-12-26"
-  },
-  {
-    "title": "OPL Read a Book - Get a Pumpkin",
-    "href": "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
-    "date": "2026-10-29",
-    "time": "10:00 AM",
-    "location": "Ouray Public Library",
-    "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
-    "type": "Family & Kids",
-    "endDate": "2026-10-31"
-  },
-  {
-    "title": "Ongoing: Space Cowboy by Dundee & Lee",
-    "href": "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
-    "date": "2026-10-29",
-    "time": "10:00 AM",
-    "location": "Decker Community Room",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53975670057489/huge/75be37bbb2b6bd7ba17f7754e11da5a0eaf5930c.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Space Cowboy Lands in Ridgway This October Space Cowboy is landing in Ridgway for a month of art, poetry, storytelling, and community programming as part of its four-year journey through Colorado’s Creative Districts. Created by Colorado…",
-    "type": "Community"
-  },
-  {
-    "title": "Storytime / Hora De Cuentos",
-    "href": "https://telluridelibrary.libcal.com/event/17514641?hs=a",
-    "date": "2026-10-29",
-    "time": "10:30 AM",
-    "location": "Kids Area",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi n en ingl s para ni os de todas las edades y sus padres o cuidadores.",
-    "type": "Family & Kids"
-  },
-  {
-    "title": "Death Details: What To Do Before You Check Out",
-    "href": "https://telluridelibrary.libcal.com/event/17729463?hs=a",
-    "date": "2026-10-29",
-    "time": "12:00 PM",
-    "location": "Program Room",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_20_16_19_58.jpg",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "12:00 PM – 1:15 PM · Dying in America comes with a lot of bureaucracy. Fortunately for you and your family, you can do a lot to be prepared for the only thing that is as certain as taxes. Join us for What To Do Before You Check Out and get…",
-    "type": "Family & Kids"
-  },
-  {
-    "title": "After School Art for Ages 5-8",
-    "href": "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-5-8-6970",
-    "date": "2026-10-29",
-    "time": "3:15 PM",
-    "location": "The Annex on Cora",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53780725919104/huge/846566299e8e325221de54dd5a54a0fd6427fbf5.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "AFTER SCHOOL ART FOR AGES 5-8 Thursdays, 3:15–4:30 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 17 – October 8Session 2 (4 weeks • $85): October 22 – November 12Session 3 (3…",
-    "type": "Arts & Film",
-    "endDate": "2026-11-12"
-  },
-  {
-    "title": "Littles On the Move",
-    "href": "https://telluridelibrary.libcal.com/event/13960367?hs=a",
-    "date": "2026-10-29",
-    "time": "3:30 PM",
-    "location": "Program Room",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. nase a nosotros en este grupo de juego inclusivo y acogedor…",
-    "type": "Family & Kids"
-  },
-  {
-    "title": "The Spark Lab: Decorate Your Own Halloween Bag",
-    "href": "https://telluridelibrary.libcal.com/event/17292173?hs=a",
-    "date": "2026-10-29",
-    "time": "3:30 PM",
-    "location": "Kids Area",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_26_14_02_08.png",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "3:30 PM – 4:30 PM · Decorate your own Halloween bag for trick or treating! All supplies will be provided.",
-    "type": "Community"
-  },
-  {
-    "title": "Ridgway MS Boys Basketball vs. Dolores",
-    "href": "https://events.ourayridgwayevents.com/event/ridgway-ms-boys-basketball-vs-dolores",
-    "date": "2026-10-29",
-    "time": "4:00 PM",
-    "location": "Ridgway Secondary School",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/54363953241643/huge/5ca5c38958e6f2cc658914fc0f4281346f27eea0.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Join us at the Ridgway Secondary Gym as the Ridgway Middle School Boys Basketball team takes on Dolores! Bring your friends and family, grab something from concessions, and help us cheer on our athletes! Admission supports our athletic…",
-    "type": "Outdoors & Sports"
-  },
-  {
-    "title": "Facing the Mourning",
-    "href": "https://koto.org/event/facing-the-mourning/2026-10-29/",
-    "date": "2026-10-29",
-    "time": "6:00 PM",
-    "location": "Redvale Community Center",
-    "town": "",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit…",
-    "type": "Community"
-  },
-  {
-    "title": "YOUNG FRANKENSTEIN – THE MUSICAL (a TMHS & Telluride Theatre Co-Production)",
-    "href": "https://koto.org/event/young-frankenstein-the-musical-a-tmhs-telluride-theatre-co-production/2026-10-29/",
-    "date": "2026-10-29",
-    "time": "6:00 PM",
-    "location": "Michael D. Palm Theater, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/10/YF-thundertix.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "It's okay to LAUGH during spooky season we invite you to join us for Mel Brooks' classic comedy: YOUNG FRANKENSTEIN – THE MUSICAL! Based on the film starring Gene Wilder, this musical pokes fun at Mary Shelly's \"Frankenstein,\" along with…",
-    "type": "Arts & Film"
-  },
-  {
-    "title": "Coffee & Climate Conversations",
-    "href": "https://www.telluride.com/event/coffee-climate-conversations/",
-    "date": "2026-10-29",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/57231/screenshot_2026-10-06_at_9_14_18_am.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "From big adventures to spending time with family and friends, recreation is often at the heart of our experiences on …",
-    "type": "Family & Kids"
-  },
-  {
-    "title": "Telluride Witches Ride",
-    "href": "https://www.telluride.com/event/telluride-witches-ride/",
-    "date": "2026-10-29",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/59902/screenshot_2025-10-29_at_11_20_29_am.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Grab your broomstick or bike and witchy attire and gather for a ride through Telluride! Meet at Elks Park and cocktails …",
-    "type": "Outdoors & Sports"
-  },
-  {
-    "title": "Young Frankenstein the Musical",
-    "href": "https://www.telluride.com/event/young-frankenstein-the-musical/",
-    "date": "2026-10-29",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63749/yf_thundertix-ezgif_com-webp-to-jpg-converter.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Book by Mel Brooks & Thomas Meehan Music & Lyrics by Mel Brooks Directed by Sasha Cucciniello PLEASE NOTE - …",
-    "type": "Arts & Film",
-    "endDate": "2026-11-01"
-  },
-  {
-    "title": "Decorate Your Own Trick or Treat Bag",
-    "href": "https://www.telluride.com/event/decorate-your-own-trick-or-treat-bag/",
-    "date": "2026-10-29",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/64041/screenshot_2026-10-20_at_11_19_55_am.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Decorate your own Halloween bag for trick or treating! All supplies will be provided.",
-    "type": "Community"
-  },
-  {
-    "title": "Functional Fitness - Strength & Mobility Training For Women",
-    "href": "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women-8391",
-    "date": "2026-10-29",
-    "time": "8:15 AM",
-    "location": "Weehawken Ridgway (Old Schoolhouse)",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/54236057466628/huge/10f1882bcc97fe1b7ad4209e2431edd0781a413f.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Welcome to Ridgway's functional strength and mobility training for women. Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups…",
-    "type": "Talks & Classes",
-    "endDate": "2026-12-24"
-  },
-  {
-    "title": "Coffee and Climate Conversation",
-    "href": "https://telluridelibrary.libcal.com/event/17734695?hs=a",
-    "date": "2026-10-29",
-    "time": "8:30 AM",
-    "location": "Magazine Room",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_30_10_08_19.png",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "8:30 AM – 9:30 AM · Coffee & Climate Conversations: El Ni o. Unite with fellow local climate activists to explore how we can make a positive impact on our environment through informed discussion and local action. Coffee, tea and pastries…",
-    "type": "Talks & Classes"
-  },
-  {
-    "title": "Senior Meals",
-    "href": "https://www.norwoodtown.com/2026-10-29-senior-meals",
-    "date": "2026-10-29",
-    "time": "",
-    "location": "Norwood, CO",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "Town of Norwood",
-    "desc": "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather and share a meal together. This recurring community event provides both nourishment and social connection for Norwood's…",
-    "type": "Community"
-  },
-  {
-    "title": "Coffee and Climate Conversations: Super El Niño",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/coffee-and-climate-conversations-super-el-nino/",
-    "date": "2026-10-29",
-    "time": "",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/50058/october_coffee_chat_instagram_post_45.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Across our community, Super El Niño rumors are building hope and excitement that a snowy winter full of powder days is on the horizon.",
-    "type": "Community"
-  },
-  {
     "title": "Up-Off Gymnastics, Dance, and Spanish",
     "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-10-30/",
     "date": "2026-10-30",
@@ -263,6 +11,32 @@
     "source": "KOTO Community Calendar",
     "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
     "type": "Music"
+  },
+  {
+    "title": "You & Me / Tu Y Yo",
+    "href": "https://telluridelibrary.libcal.com/event/17906309?hs=a",
+    "date": "2026-10-30",
+    "time": "10:30 AM",
+    "location": "Kids Area",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_30_13_07_23.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "10:30 AM – 11:00 AM · Join us every Friday for a fun and engaging parent-child program designed for preschoolers! Each week, we explore a new theme through hands-on activities that spark creativity. Acomp enos todos los viernes en un…",
+    "type": "Community"
+  },
+  {
+    "title": "Halloween Movie!",
+    "href": "https://telluridelibrary.libcal.com/event/16462621?hs=a",
+    "date": "2026-10-30",
+    "time": "3:30 PM",
+    "location": "Program Room",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_19_07_57_49.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "3:30 PM – 5:30 PM · Join us for an after school showing of the Addams Family (animated version) to get in the Halloween spirit. Halloween treats will be provided!",
+    "type": "Arts & Film"
   },
   {
     "title": "STEAM Art Explorers for Ages 5–8 in Montrose",
@@ -288,7 +62,7 @@
     "img": "https://koto.org/wp-content/uploads/2026/10/IMG_0833.jpeg",
     "category": "Community Event",
     "source": "KOTO Community Calendar",
-    "desc": "Mountain Sprouts Preschool is hosting a Halloween Dance Disco on October 30th, featuring a live DJ, dancing, a nature scavenger hunt, arts and crafts, and food and drinks. The drop-in community event takes place right after the school's…",
+    "desc": "Mark your calendars, Telluride! Mountain Sprouts Preschool is hosting a Halloween Dance Disco at The Patio on October 30th from 4–6pm, right after the school Halloween parade! Drop in for the live DJ, dancing, a nature scavenger hunt, food…",
     "type": "Music"
   },
   {
@@ -707,8 +481,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars is a recurring outdoor film series held at the Conference Center Plaza in Mountain Village, taking place on Saturday evenings at dusk. The series runs from June 13 through August 15.",
-    "type": "Arts & Film"
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -815,7 +589,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided bike ride through Mountain Village, traveling the Jurassic and Meadows Trails down to Telluride Brewing Co. for a complimentary beer. The tour departs from the Mountain Lodge and offers a scenic route connecting Mountain Village…",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
   },
   {
@@ -881,7 +655,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A community workshop hosted in Mountain Village, bringing together Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library to explore the emotional landscape of ecological grief and…",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
     "type": "Talks & Classes"
   },
   {
@@ -1031,7 +805,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Mountain Village's Heritage Plaza hosts a weekly outdoor market featuring vendors with tents set up throughout the pedestrian-friendly space. The market brings together local and regional sellers offering goods to the Mountain Village…",
+    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
     "type": "Community"
   },
   {
@@ -1110,7 +884,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
     "category": "Community Event",
     "source": "Ouray County",
-    "desc": "Representatives from multiple counties will gather to discuss funding opportunities related to wildfire preparedness and mitigation. The meeting, organized through Ouray County, may include participation from two or more Ouray County…",
+    "desc": "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3792",
     "type": "Talks & Classes"
   },
   {
@@ -1308,8 +1082,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars is a recurring outdoor film series held at the Conference Center Plaza in Mountain Village, screening movies on Saturday evenings at dusk throughout the summer. The series runs weekly from June 13 through August 15,…",
-    "type": "Arts & Film"
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -1386,7 +1160,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided bicycle ride through Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where participants receive a complimentary beer. The tour departs from the Mountain Lodge and offers a scenic…",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
   },
   {
@@ -1530,7 +1304,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/27556/merchant_event-1.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A monthly gathering for Mountain Village merchants, held on the second Tuesday of each month from 10 to 11 a.m. The meeting is offered in a hybrid format, allowing participants to attend either in person or remotely.",
+    "desc": "Join us for the monthly Mountain Village Merchant Meeting to be held on the second Tuesday of each month from 10 to 11 a.m. The meeting will be hybrid with",
     "type": "Community"
   },
   {
@@ -1543,7 +1317,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A community workshop hosted by Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library, exploring the emotional intersection of grief and gratitude in response to environmental change.…",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
     "type": "Talks & Classes"
   },
   {
@@ -1569,7 +1343,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Mountain Village's Heritage Plaza hosts a weekly outdoor market featuring local vendors. The market brings together a variety of goods in the pedestrian-friendly plaza setting.",
+    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
     "type": "Community"
   },
   {
@@ -1674,7 +1448,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-7.jpg",
     "category": "Community Event",
     "source": "KOTO Community Calendar",
-    "desc": "Semana De Bienestar (Wellness Week) is a free, bilingual, alcohol-free community event at Wilkinson Public Library offering programming for children, adults, and families. Activities are available in both English and Spanish, making this…",
+    "desc": "Las actividades son gratuitas, bilingües y libres de alcohol, y habrá actividades para niños, adultos y familias. ¡Los esperamos! All activities are free, bilingual, and alcohol-free, with activities for children, adults, and families. We…",
     "type": "Family & Kids"
   },
   {
@@ -1792,7 +1566,7 @@
     "img": "https://koto.org/wp-content/uploads/2026/10/RIFF-FLIER-CONCEPTS-Facebook-Cover-3.png",
     "category": "Community Event",
     "source": "KOTO Community Calendar",
-    "desc": "The Ridgway Independent Film Festival returns to the historic Sherbino Theater in downtown Ridgway for a weekend running November 13–15, 2026. The festival features independent short films, select longer works, and filmmaker Q&As, bringing…",
+    "desc": "Ridgway Independent Film Festival — November 13–15, 2026 Join us at the historic Sherbino Theater in downtown Ridgway for a weekend of independent films, fresh perspectives, and community connection. RIFF features short films, select…",
     "type": "Arts & Film"
   },
   {
@@ -1872,7 +1646,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/10/4x5_Poster-Lifestyle_2048x2048.webp",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "Salomon's ski film *Slingshot* comes to the Sheridan Opera House for a screening that celebrates big-mountain skiing and the athletes who push the sport's boundaries. It's part of the annual tradition of ski film tours that kick off the…",
+    "desc": "",
     "type": "Arts & Film"
   },
   {
@@ -1950,8 +1724,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars is an outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening movies on Saturday evenings at dusk. The series runs on select Saturdays and offers a community gathering under the open…",
-    "type": "Arts & Film"
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -2041,7 +1815,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided bicycle tour departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route connects Mountain Village to…",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
   },
   {
@@ -2107,7 +1881,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "KOTO Community Calendar",
-    "desc": "Telluride Mountain School is hosting an open house where prospective families and community members can step directly into the learning environment rather than sit through a formal presentation. Visitors are invited to explore classrooms,…",
+    "desc": "School In Action Open House! Come experience what learning looks like at Telluride Mountain School. Instead of a presentation about our school, step into the learning. Visit classrooms, meet teachers and students, explore our campus, and…",
     "type": "Talks & Classes"
   },
   {
@@ -2120,7 +1894,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A community workshop exploring eco-grief and gratitude, held in Mountain Village and presented by Through the Woods Doula, EcoAction Partners, and the Wilkinson Public Library. The event offers participants a space to process emotions of…",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
     "type": "Talks & Classes"
   },
   {
@@ -2172,7 +1946,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Mountain Village's Heritage Plaza hosts a community market featuring local vendors at tents throughout the pedestrian-friendly plaza. The market brings together a variety of goods from area sellers in an outdoor setting.",
+    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
     "type": "Community"
   },
   {
@@ -2328,8 +2102,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars is a recurring outdoor film series held on Saturday evenings at dusk at the Conference Center Plaza in Mountain Village, running from June 13 through August 15. The community event brings free outdoor cinema to the…",
-    "type": "Arts & Film"
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -2381,7 +2155,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided bicycle tour departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route offers a scenic way to connect…",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
   },
   {
@@ -2434,7 +2208,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A community workshop held in Mountain Village exploring eco-grief — the emotional weight of loss tied to environmental change — alongside gratitude and love as responses to a shifting world. Led by Lauren Norton of Through the Woods Doula…",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
     "type": "Talks & Classes"
   },
   {
@@ -2461,7 +2235,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Mountain Village's Heritage Plaza hosts a recurring outdoor market featuring local vendors at tents throughout the pedestrian-friendly plaza. The market brings together a variety of goods from the surrounding community in an open-air…",
+    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
     "type": "Community"
   },
   {
@@ -2515,8 +2289,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars is a recurring outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening on Saturday evenings at dusk. The series runs from June 13 through August 15, bringing community members…",
-    "type": "Arts & Film"
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -2622,7 +2396,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/09/Screenshot-2026-10-12-at-10.51.39-AM.png",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "Young People's Theatre presents The SpongeBob Musical at the Sheridan Opera House, bringing the beloved underwater world of Bikini Bottom to life on stage. This youth theater production adapts the beloved animated series into a full-scale…",
+    "desc": "",
     "type": "Arts & Film",
     "endDate": "2026-12-06"
   },
@@ -2703,7 +2477,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Noel Night is a community holiday event hosted by the Town of Norwood, bringing residents together to celebrate the season. Held in early December, it offers a festive evening for families and neighbors in the Norwood area.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2823,7 +2597,7 @@
     "img": "https://1v09t9hszk.ucarecd.net/4a5f4c4e-4a85-416f-bf68-4a874717300c/-/crop/1380x1380/233,0/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "The Regular is a folk rock band based in Denver, Colorado, performing live at The Alibi. The band brings their folk rock sound to Telluride for a late-night show.",
+    "desc": "The Regular is a folk rock band based in Denver, CO. Originally formed in Chicag...",
     "type": "Music"
   },
   {
@@ -2877,8 +2651,8 @@
     "img": "https://1v09t9hszk.ucarecd.net/5a0e2028-07e8-4974-b039-d62e8ab44ab4/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Easy Jim takes the stage at The Alibi for the first night of a residency engagement, bringing live music to this Telluride bar venue. The residency format promises multiple nights of performances in an intimate setting.",
-    "type": "Music"
+    "desc": "“Settle back, easy Jim…” The iconic lyric from Robert Hunter’s Althea captured t...",
+    "type": "Community"
   },
   {
     "title": "Ski Film: Warren Miller's \"Days Off\"",
@@ -2890,7 +2664,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/09/Screenshot-2026-10-12-at-10.22.59-AM.png",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "Warren Miller Entertainment's \"Days Off\" comes to the Sheridan Opera House for a screening of the legendary ski film franchise's latest production. The film showcases skiing and snowboarding footage from mountain destinations around the…",
+    "desc": "",
     "type": "Arts & Film"
   },
   {
@@ -2930,8 +2704,8 @@
     "img": "https://1v09t9hszk.ucarecd.net/5a0e2028-07e8-4974-b039-d62e8ab44ab4/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Easy Jim continues their residency at The Alibi with a late-night performance on the second of what appears to be a multi-night run at the beloved Telluride bar. The residency format promises an intimate, unhurried evening of live music in…",
-    "type": "Music"
+    "desc": "“Settle back, easy Jim…” The iconic lyric from Robert Hunter’s Althea captured t...",
+    "type": "Community"
   },
   {
     "title": "Telluride Rotary Club Meeting",

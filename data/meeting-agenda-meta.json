@@ -623,5 +623,12 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8358",
     "sv": 4,
     "ph": "2042314dfeae7cf0"
+  },
+  "norwood|2026-11-02|Norwood Water Commission Work Session": {
+    "agendaUrl": "https://www.norwoodtown.com/files/bbfdcc5d9/11.02.2026+NWC+Work+Session.pdf",
+    "zoomUrl": "https://us02web.zoom.us/j/84889491102",
+    "meetingId": "848 8949 1102",
+    "passcode": "841533",
+    "sv": 4
   }
 }

@@ -85,27 +85,6 @@
     "smcBidID": "208"
   },
   {
-    "title": "ECMC Hearing Notice -- Order Finding Violation Against American Helium Operating LLC (Docket No. 260700207)",
-    "entity": "Colorado Energy and Carbon Management Commission / American Helium Operating LLC",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "The Colorado Energy and Carbon Management Commission (ECMC) Staff has applied for an Order Finding Violation against American Helium Operating LLC (Operator No. 10841) related to Notice of Alleged Violation No. 404024729. A hearing before an ECMC Hearing Officer is scheduled for October 29, 2026 at 9:00 a.m. in Denver, with virtual access also available. Affected persons must petition to participate by September 29, 2026.",
-    "deadline": "2026-09-29",
-    "expires": "2026-10-29",
-    "dates": "8/20",
-    "papers": [
-      "ttimes_0820"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_7e6a7420-27c6-4f95-b0b8-101dfc5b4763.html",
-    "address": "Colorado Energy and Carbon Management Commission, 1120 Lincoln Street, Suite 801, Denver, CO 80203",
-    "noticeKey": "ecmc-docket-260700207-american-helium",
-    "caseNumber": "260700207"
-  },
-  {
     "title": "Request for Proposal -- Painting of the San Miguel County Jail",
     "entity": "San Miguel County",
     "entityClass": "ent-county",
@@ -138,26 +117,6 @@
     "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=210",
     "address": "",
     "smcBidID": "210"
-  },
-  {
-    "title": "Utility Notice -- Paper Billing Fee Effective October 29, 2026 (COL-000225)",
-    "entity": "San Miguel Power Association (SMPA)",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "💧",
-    "iconClass": "type-hearing",
-    "type": "Utilities",
-    "filterTag": "utilities",
-    "summary": "The Board of Directors of San Miguel Power Association (SMPA) has approved a $2.00 monthly Paper Billing Fee for members who choose to receive printed billing statements, effective for all paper bills generated on or after October 29, 2026. Members enrolled in paperless billing through SmartHub will not be charged the fee. Members can avoid the fee at any time by switching to paperless billing via the SmartHub online portal or mobile app.",
-    "deadline": "2026-10-29",
-    "expires": "2026-10-29",
-    "dates": "9/3",
-    "papers": [
-      "ttimes_0903"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_eb4be316-8baa-421e-80ee-1e619000f5c0.html",
-    "address": "San Miguel County, CO (SMPA service area)",
-    "noticeKey": "smpa-paper-billing-fee-2026"
   },
   {
     "title": "Water Court Application -- Finding of Reasonable Diligence, Telluride Pines Alder Creek Pump and Pipeline (26CW3043)",
@@ -480,5 +439,22 @@
     "url": "https://www.telluridenews.com/news/legals/article_792d96c0-09c8-479f-83f8-bdf3681b49ae.html",
     "address": "455 Mountain Village Blvd, Suite A, Mountain Village, CO",
     "noticeKey": "ord-mv-fees-16.01-16.02-COL-000256"
+  },
+  {
+    "title": "Request for Proposal -- TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS",
+    "entity": "Town of Telluride",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Request for Proposal",
+    "filterTag": "public-entity",
+    "summary": "Town of Telluride is seeking qualified respondents for: TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS.",
+    "deadline": "Closes 1/11/2026",
+    "expires": "2026-01-11",
+    "dates": "10/30",
+    "url": "https://www.telluride.gov/bids.aspx?bidID=133",
+    "address": "",
+    "totBidID": "133"
   }
 ]
