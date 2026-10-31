@@ -1102,7 +1102,7 @@ const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
 const MANUAL_SUMMARIES_CACHE_DATE = '2026-10-31';
-const LEGAL_NOTICES_CACHE_DATE = '2026-10-30';
+const LEGAL_NOTICES_CACHE_DATE = '2026-10-31';
 
 const MANUAL_SUMMARIES = {
   "mv|2026-10-01|Design Review Board":
@@ -3798,24 +3798,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Applications Open for 2026/2027 Temporary Winter Community Housing Program",
-    source: "Town of Telluride",
-    date: "October 9, 2026",
-    newsTopic: "housing",
-    copy: "(October 8, 2026) – The Town of Telluride is accepting applications for its Temporary Winter Community Housing program for the 2026/2027 winter season. The program provides seasonal housing in Town Park for eligible workers employed in the Telluride area.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=406",
-    img: ""
-  },
-  {
-    title: "San Miguel County Public Health Announces Fall Vaccine Availability",
-    source: "San Miguel County",
-    date: "October 1, 2026",
-    newsTopic: "health",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1419",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14836"
-  },
-  {
     title: "Election Day Clerk's Office Closures 11/3/2026",
     source: "San Miguel County",
     date: "October 28, 2026",
@@ -3823,15 +3805,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The Department of Motor Vehicles, Marriage License and Recording offices will be closed all day on 11/3/2026 for Election Day. Offices will re-open 11/4/2026 at 7:30 AM.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=550",
     img: ""
-  },
-  {
-    title: "DMV Services available in Egnar 11/18",
-    source: "San Miguel County",
-    date: "October 15, 2026",
-    newsTopic: "community",
-    copy: "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
   },
   {
     title: "SBA Offers Disaster Assistance in Ouray County",
@@ -7974,23 +7947,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_3815f6d8-2031-4cb7-b480-2859616b3237.html",
     address: "841 E 2nd Avenue, Durango, Colorado",
     noticeKey: "swcd-budget-2027"
-  },
-  {
-    title: "Request for Proposal -- TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "Town of Telluride is seeking qualified respondents for: TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS.",
-    deadline: "Closes 1/11/2026",
-    expires: "2026-01-11",
-    dates: "10/30",
-    url: "https://www.telluride.gov/bids.aspx?bidID=133",
-    address: "",
-    totBidID: "133"
   }
 ];
 
