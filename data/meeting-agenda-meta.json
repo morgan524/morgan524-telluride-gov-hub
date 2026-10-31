@@ -1,20 +1,4 @@
 {
-  "telluride|2026-09-30|Special Meeting - Historic & Architectural Review Commission - Sep 30 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/gyjcfvLBT_6qgGte72mOHw",
-    "meetingId": "822 7800 9621",
-    "passcode": "976053",
-    "phone": "301-715-8592"
-  },
-  "telluride|2026-09-30|Special Town Council - Sep 30 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/ZR3DDUQ0S8mhIKRt4KiuYg",
-    "meetingId": "872 6396 2426",
-    "passcode": "044233.",
-    "phone": "719) 359-4580"
-  },
   "mv|2026-10-01|Design Review Board": {
     "sv": 4,
     "agendaUrl": "https://townofmountainvillage.com/site/assets/files/49956/october_1-_2026_design_review_board_meeting_agenda.pdf",
@@ -152,14 +136,6 @@
     "sv": 4,
     "ph": "b858cb282617fb09"
   },
-  "county|2026-09-30|Board of County Commissioners Work Session": {
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1073/files/agenda/2015",
-    "zoomUrl": "https://us02web.zoom.us/meeting/register/axK-J57IQayv9QHf2lIksg",
-    "meetingId": "875 8192 6670",
-    "passcode": "036006",
-    "phone": "719-359-4580"
-  },
   "norwood|2026-10-19|Planning and Zoning Commission Meeting": {
     "sv": 4,
     "agendaUrl": "https://www.norwoodtown.com/files/8a5f7ce8f/10.19.2026+P%26Z+BOA+AGENDA.pdf",
@@ -287,10 +263,6 @@
     "meetingId": "868 9105 7971",
     "passcode": "451656",
     "phone": "719-359-4580"
-  },
-  "ouraycity|2026-09-30|Ouray City Council Work Session": {
-    "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=769742",
-    "sv": 4
   },
   "ouray|2026-10-07|PM - Note: to be held at the 4-H Event Center! The PC will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (packet materials are attached to the agenda)": {
     "agendaUrl": "https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1019",

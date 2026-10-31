@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 10-30-26",
+    "source": "KOTO Community Radio",
+    "date": "October 31, 2026",
+    "newsTopic": "community",
+    "copy": "HOA Seeks County’s Help with Water Shortage; Cat Movie Fisher with Risho Unda; Your Vote Matters More Than You Think",
+    "href": "https://koto.org/news/newscast-10-30-26/"
+  },
+  {
     "title": "Newscast 10-29-26",
     "source": "KOTO Community Radio",
     "date": "October 30, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "community",
     "copy": "Child Care Expansion Makes Room for More Munchkins; Watershed Forum Looks to the Future of the San Miguel",
     "href": "https://koto.org/news/newscast-10-19-26/"
-  },
-  {
-    "title": "Newscast 10-16-26",
-    "source": "KOTO Community Radio",
-    "date": "October 17, 2026",
-    "newsTopic": "community",
-    "copy": "On this week’s Regional Roundup, we'll hear a report on a new program that seeks to expand access to birth control, then a report on a new program that gives out free trees to residents and businesses in southwest Colorado. After that we head to a historic ranch in Wyoming, the site where the Wilderness Act of 1964 was first drafted. After that we'",
-    "href": "https://koto.org/news/newscast-10-16-26/"
   }
 ]

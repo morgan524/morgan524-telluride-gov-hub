@@ -146,12 +146,6 @@ function resolveEventImage(e, opts) {
 // stays current automatically; the static config is the fallback for
 // sources without a PDF agenda.
 const MEETING_AGENDA_META = {
-  "telluride|2026-09-30|Special Meeting - Historic & Architectural Review Commission - Sep 30 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8309","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/gyjcfvLBT_6qgGte72mOHw","meetingId":"822 7800 9621","passcode":"976053","phone":"301-715-8592"},
-
-  "telluride|2026-09-30|Special Town Council - Sep 30 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8313","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/ZR3DDUQ0S8mhIKRt4KiuYg","meetingId":"872 6396 2426","passcode":"044233.","phone":"719) 359-4580"},
-
   "mv|2026-10-01|Design Review Board":
     {"sv":4,"agendaUrl":"https://townofmountainvillage.com/site/assets/files/49956/october_1-_2026_design_review_board_meeting_agenda.pdf","zoomUrl":"https://us06web.zoom.us/j/86570635291?pwd=l2jamcgTZa6TyCpzPj1jMBiQSaSNw4.1","meetingId":"865 7063 5291"},
 
@@ -218,9 +212,6 @@ const MEETING_AGENDA_META = {
   "airport|2026-10-15|TRAA Board of Commissioners Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
 
-  "county|2026-09-30|Board of County Commissioners Work Session":
-    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1073/files/agenda/2015","zoomUrl":"https://us02web.zoom.us/meeting/register/axK-J57IQayv9QHf2lIksg","meetingId":"875 8192 6670","passcode":"036006","phone":"719-359-4580"},
-
   "norwood|2026-10-19|Planning and Zoning Commission Meeting":
     {"sv":4,"agendaUrl":"https://www.norwoodtown.com/files/8a5f7ce8f/10.19.2026+P%26Z+BOA+AGENDA.pdf","zoomUrl":"https://us02web.zoom.us/j/85001344971","meetingId":"850 0134 4971","passcode":"8142302","phone":"970-327-4288"},
 
@@ -280,9 +271,6 @@ const MEETING_AGENDA_META = {
 
   "county|2026-10-28|Board of County Commissioners Work Session":
     {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1036/files/agenda/2056","zoomUrl":"https://us02web.zoom.us/meeting/register/oIcj4FR6RoCy142-aHzo5w","meetingId":"868 9105 7971","passcode":"451656","phone":"719-359-4580"},
-
-  "ouraycity|2026-09-30|Ouray City Council Work Session":
-    {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=769742","sv":4},
 
   "ouray|2026-10-07|PM - Note: to be held at the 4-H Event Center! The PC will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (packet materials are attached to the agenda)":
     {"agendaUrl":"https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1019","sv":4},
@@ -896,6 +884,16 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Poland Pilgrimage sign-ups due tomorrow",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "October 30, 2026",
+    newsTopic: "community",
+    copy: "Reminder: Pilgrimage to Poland will be June 8-22, 2027. If interested, contact the Church Office at 970-728-3387 or Fr Mariusz via email at spctelluride@gmail.com.Sign-up and deposit are due by Oct. 31.Details are attached as PDF.Poland Pil...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/poland-pilgrimage-sign-ups-due-tomorrow/",
+    img: ""
+  },
+  {
     title: "UPDATE: Body of Ridgway man found in Chaffee County",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
@@ -1016,6 +1014,16 @@ const REGIONAL_NEWS_ARTICLES = [
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22993"
   },
   {
+    title: "Parish Bulletin for October 25",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "October 24, 2026",
+    newsTopic: "community",
+    copy: "This week's parish bulletin is attached. As always, please check the Parish Calendar for the most updated information.Reminders:Pilgrimage to Poland will be June 8-22, 2027. If interested, contact the Church Office. Sign up and deposit are ...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-october-25/",
+    img: ""
+  },
+  {
     title: "News Release: Cimarron Gathering Place Offers Age-Friendly Community Space at 4H Event Center",
     source: "Ouray County",
     sourceKey: "ouray-county",
@@ -1034,6 +1042,26 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "The Town of Ridgway, the City of Ouray, and Ouray County have submitted new affordable housing commitments under Colorado’s Proposition 123 program, establishing a combined goal of 37 affordable housing units over the next three-year...",
     href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=965",
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22986"
+  },
+  {
+    title: "Please watch this short video on Mission Alaska",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "October 17, 2026",
+    newsTopic: "community",
+    copy: "As many of you know, Fr. Mariusz was a missionary priest in Alaska. Please take the time to read his note on World Mission Sunday and watch a short 3 minute video. If you are called, please be generous during the 2nd collection at this weekend's H...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/please-watch-this-short-video-on-mission-alaska/",
+    img: ""
+  },
+  {
+    title: "Parish bulletin for October 18",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "October 17, 2026",
+    newsTopic: "community",
+    copy: "This week's parish bulletin is attached. As always, please check the Parish Calendar for the most updated information.Reminders:There will be a second collection this weekend for World Mission Sunday. Read the Pastor's Corner for more infor...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-october-18/",
+    img: ""
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
@@ -1063,16 +1091,10 @@ const SMC_ALERTS = [
 const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-10-30';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-10-31';
 const LEGAL_NOTICES_CACHE_DATE = '2026-10-30';
 
 const MANUAL_SUMMARIES = {
-  "telluride|2026-09-30|Special Meeting - Historic & Architectural Review Commission - Sep 30 2026":
-    "HARC holds a special meeting dedicated entirely to the Carhenge Redevelopment Project — the proposed new construction at 700 W Pacific Ave that has been working its way through review since at least July. Three separate Preliminary Large-Scale applications are on the table, each covering a different building cluster: Buildings A, B, and C; Buildings D1 and D2; and Buildings E1, E2, and E3. All are new construction outside the Telluride Historic Landmark District but exceed 5,000 square feet of floor area, triggering large-scale review under LUC 7-203.B.2.a.1. The property is Town-owned, zoned Accommodations 2, and Design Workshop is the applicant. Both the July and August HARC meetings passed without substantive discussion on these items — this special session signals that the review is finally moving forward in earnest.",
-
-  "telluride|2026-09-30|Special Town Council - Sep 30 2026":
-    "This special session is entirely devoted to one thing: a Town Council appeal hearing on the Carhenge lot subdivision. On July 23, 2026, P&Z unanimously approved consolidating Lots 34 and 34B at 700 W. Pacific Avenue into a single parcel — a preliminary step the Town needs before any redevelopment can move forward on that open-space site. Within two weeks, Sphere Law Firm filed an appeal on behalf of two neighboring property owners and the Chair 7 Community Coalition, which represents nearly 200 Backman Village area residents. The appellants raise several distinct legal challenges: that P&Z adopted staff findings wholesale without addressing contested issues (including recorded Backman Village covenants and owner-consent questions); that the approval's conditions contradict the very findings that supported it; and that P&Z waived seventeen of twenty-three subdivision design criteria by labeling them 'inapplicable' — a move the appellants argue the Land Use Code only permits through a PUD variation, which no longer exists here because the conceptual PUD application was withdrawn before the July 23 hearing. Town Council now sits as the appellate body, confined to the record compiled below.",
-
   "mv|2026-10-01|Design Review Board":
     "Two multi-family projects are the main event at this October 1 DRB meeting. First up is a continued final architecture review for 15 employee apartments at 306 Adams Ranch Rd (Lot 640A) — workforce housing that's been working its way through the process since at least September. Next is a fresh final architecture review for four new multifamily units at 100 Pennington Pl. The board also takes up a conditional use permit renewal for the Wok of Joy food trailer at Conference Center Plaza, and considers a general easement encroachment at 113 Palmyra Dr. Two single-family homes are on the agenda but headed for continuance — one to December, one to February. Administrative items include a voting procedure update, approval of meeting minutes from August and September, a lighting update, and adoption of the 2027 DRB meeting schedule.",
 
@@ -1139,9 +1161,6 @@ const MANUAL_SUMMARIES = {
   "airport|2026-10-15|TRAA Board of Commissioners Meeting":
     "The October 15, 2026 TRAA Board of Commissioners Meeting agenda hasn't been posted yet.",
 
-  "county|2026-09-30|Board of County Commissioners Work Session":
-    "This work session—where commissioners can discuss but not take formal action—centers on one consequential item: a proposed Employee Housing Impact Fee for San Miguel County. That's worth watching closely. The afternoon fills out with a Recreation Ranger District update from the Forest Service, a review of 13 legislative proposals Colorado Counties, Inc. is weighing for the 2027 state session, and a continued discussion on Community Support Funding for four local organizations: the Telluride Historical Museum, the Telluride Environmental Science and Engineering Laboratory (TESEL), the Telluride Institute, and the Telluride Junior Nordic Ski Program.",
-
   "norwood|2026-10-19|Planning and Zoning Commission Meeting":
     "Norwood's Planning and Zoning Commission meets October 19 at 6:30 p.m. at Town Hall. Two substantive items anchor the session: a Land Use Code Update and a Master Plan Update — both the kind of foundational work that shapes what gets built where, and under what rules, for years to come. The board will also address a Board Seat Update. Consent agenda covers September 21 minutes.",
 
@@ -1201,9 +1220,6 @@ const MANUAL_SUMMARIES = {
 
   "county|2026-10-28|Board of County Commissioners Work Session":
     "The October 28 BOCC Work Session in Placerville has been posted, but no agenda detail beyond the meeting name and location has been provided. There's no way to know what's on the table until the full agenda drops.",
-
-  "ouraycity|2026-09-30|Ouray City Council Work Session":
-    "A full-day budget work session for the Ouray City Council — the kind of meeting where the year's priorities actually get set, even if the formal votes come later. The morning runs through the Capital Improvement Fund and a fund-by-fund budget review. The afternoon shifts to operations and community: Fourth of July entertainment funding, the free in-town shuttle, and OurWay/All-Points Transit. Then comes the non-profit funding round, with nine organizations on the list — Home Trust leading at $45,000, Ouray Library at $100,000, Mountain Air Music and Voyager each at $10,000, OCSAP at $5,000, Mountain Rescue at $10,000, and smaller asks from EcoAction Partners, ROCC, and UWP.",
 
   "ouray|2026-10-07|PM - Note: to be held at the 4-H Event Center! The PC will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (packet materials are attached to the agenda)":
     "The Ouray County Planning Commission holds a work session on October 7 at the 4-H Event Center — note the change of venue — to review and discuss possible changes to the Land Use Code's Section 2, the Definitions chapter. Work sessions like this are where the real shaping happens: before any formal amendments are drafted, the Commission talks through what words mean and how those meanings ripple through everything else in the code. The packet materials are attached to the agenda for anyone who wants to dig in ahead of time.",
@@ -3730,42 +3746,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "A boost for early readers",
-    source: "Telluride Times",
-    date: "October 17, 2026",
-    firstSeen: "2026-10-18",
-    newsTopic: "government",
-    copy: "Telluride R-1's literacy coach Emily Bordogna has secured four years of funding through a Colorado Department of Education Early Literacy Grant, keeping her K-3 coaching position stable despite statewide education budget cuts. A second grant adds a year of outside consulting support. The focus is strengthening core reading instruction so fewer kids need intervention later on.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_fccc60fe-e2ea-4f50-a4b7-2ea50780e99d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/be/3be370d8-79e8-4cac-9f44-c4b97b2a5d8b/6acf4c615bf7f.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride School District talks housing developments",
-    source: "Telluride Times",
-    date: "October 17, 2026",
-    firstSeen: "2026-10-17",
-    newsTopic: "education",
-    copy: "The Telluride School District is working with Rural Homes and CHFA to expand housing options for employees, with 20 units planned at Two Rivers and additional rentals in Rico and behind the middle/high school. A CHFA program cuts mortgage rates roughly in half — from around 7.7% to 3.5% — with down payment assistance available. The district held information sessions this month so employees could learn about the options and ask questions.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_5f3fdb48-625f-4465-8ffb-2c9956bde9aa.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/be/fbe58fd3-df43-4ab8-9b34-2d2c70ed1687/6ad1c1f33c055.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "THS takes winning ways to Ridgway",
-    source: "Telluride Times",
-    date: "October 17, 2026",
-    firstSeen: "2026-10-17",
-    newsTopic: "infrastructure",
-    copy: "Telluride High School beat Ridgway 4-2 on the road, staying unbeaten in league play at 10-1-0. Montano, Clarke (two), and Zago Carolei scored for the Miners, with Young and Slosberg each making nine and seven saves respectively. THS hosts Coal Ridge next Saturday at 11 a.m.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_a2e030b2-8eca-4262-a87b-e9a98c9de6ad.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/44/544c51eb-d8d3-4e70-bfaf-2d62386f11ff/6acf49b5becca.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Fairway masters",
     source: "Telluride Times",
     date: "October 18, 2026",
@@ -3922,7 +3902,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Public Hearing for Liquor License on November 19, 2026 at 5:30pm - Chipeta Lodge Resort &amp; Spa, 304 S Lena Street - Notice dated October 13, 2026",
     source: "Town of Ridgway",
-    date: "October 30, 2026",
+    date: "October 31, 2026",
     firstSeen: "2026-10-14",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3933,7 +3913,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "October 30, 2026",
+    date: "October 31, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3944,7 +3924,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "October 30, 2026",
+    date: "October 31, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3955,6 +3935,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 10-30-26",
+    source: "KOTO Community Radio",
+    date: "October 31, 2026",
+    newsTopic: "community",
+    copy: "HOA Seeks County’s Help with Water Shortage; Cat Movie Fisher with Risho Unda; Your Vote Matters More Than You Think",
+    href: "https://koto.org/news/newscast-10-30-26/"
+  },
   {
     title: "Newscast 10-29-26",
     source: "KOTO Community Radio",
@@ -4010,14 +3998,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "community",
     copy: "Child Care Expansion Makes Room for More Munchkins; Watershed Forum Looks to the Future of the San Miguel",
     href: "https://koto.org/news/newscast-10-19-26/"
-  },
-  {
-    title: "Newscast 10-16-26",
-    source: "KOTO Community Radio",
-    date: "October 17, 2026",
-    newsTopic: "community",
-    copy: "On this week’s Regional Roundup, we'll hear a report on a new program that seeks to expand access to birth control, then a report on a new program that gives out free trees to residents and businesses in southwest Colorado. After that we head to a historic ranch in Wyoming, the site where the Wilderness Act of 1964 was first drafted. After that we'",
-    href: "https://koto.org/news/newscast-10-16-26/"
   }
 ];
 
@@ -4554,39 +4534,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Mountain Sprouts Preschool Halloween Dance Disco",
-    link: "https://koto.org/event/mountain-sprouts-preschool-halloween-dance-disco/",
-    description: "Mark your calendars, Telluride! Mountain Sprouts Preschool is hosting a Halloween Dance Disco at The Patio on October 30th from 4–6pm, right after the school Halloween parade! Drop in for the live DJ, dancing, a nature scavenger hunt, food & drinks, arts and crafts, and plenty of festive fun! We’ll also have a silent auction with some amazing goodies donated by our wonderful local businesses, with proceeds supporting our incredible Mountain Sprouts Preschool. Bring the kids, bring your friends and come party with us! Everyone is welcome! The Patio October 30th 4–6pm",
-    pubDate: "2026-10-30T16:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/10/IMG_0833.jpeg"
-  },
-  {
-    title: "Raise a Glass to Val Maltese",
-    link: "https://koto.org/event/raise-a-glass-to-val-maltese/",
-    description: "Friday, October 30th, raise a glass to Val Maltese at The Buck around 5 p.m. His wife Anne, son Cody, and Ned Mulford & family will be in attendance. Any old timers, see you there!",
-    pubDate: "2026-10-30T17:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "The Last Dollar Saloon, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "YOUNG FRANKENSTEIN – THE MUSICAL (a TMHS & Telluride Theatre Co-Production)",
-    link: "https://koto.org/event/young-frankenstein-the-musical-a-tmhs-telluride-theatre-co-production/2026-10-30/",
-    description: "It's okay to LAUGH during spooky season&#8230; we invite you to join us for Mel Brooks' classic comedy: YOUNG FRANKENSTEIN – THE MUSICAL! Based on the film starring Gene Wilder, this musical pokes fun at Mary Shelly's \"Frankenstein,\" along with other classic monster movies. This production is performed and designed by our very own students at Telluride Middle-High School, under the mentorship of Telluride Theatre and the R-1 School District. Grandson of the infamous Victor Frankenstein, Frederick Frankenstein (pronounced \"Fronk-en-steen\") inherits his family's estate in Transylvania. With the help of a hunchbacked sidekick, Igor, and a yodeling lab assistant, Inga, Frederick finds himself in the mad scientist shoes of his ancestors. \"It's alive!\" he exclaims as he brings to life a creature to rival his grandfather's. Eventually, of course, the monster escapes, and hilarity ensues. Have a laugh this Halloween & support our local students. Costumes encouraged! …",
-    pubDate: "2026-10-30T18:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Michael D. Palm Theater, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/10/YF-thundertix.png"
-  },
-  {
     title: "YOUNG FRANKENSTEIN – THE MUSICAL (a TMHS & Telluride Theatre Co-Production)",
     link: "https://koto.org/event/young-frankenstein-the-musical-a-tmhs-telluride-theatre-co-production/2026-10-31/",
     description: "It's okay to LAUGH during spooky season&#8230; we invite you to join us for Mel Brooks' classic comedy: YOUNG FRANKENSTEIN – THE MUSICAL! Based on the film starring Gene Wilder, this musical pokes fun at Mary Shelly's \"Frankenstein,\" along with other classic monster movies. This production is performed and designed by our very own students at Telluride Middle-High School, under the mentorship of Telluride Theatre and the R-1 School District. Grandson of the infamous Victor Frankenstein, Frederick Frankenstein (pronounced \"Fronk-en-steen\") inherits his family's estate in Transylvania. With the help of a hunchbacked sidekick, Igor, and a yodeling lab assistant, Inga, Frederick finds himself in the mad scientist shoes of his ancestors. \"It's alive!\" he exclaims as he brings to life a creature to rival his grandfather's. Eventually, of course, the monster escapes, and hilarity ensues. Have a laugh this Halloween & support our local students. Costumes encouraged! …",
@@ -5047,6 +4994,50 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
+  },
+  {
+    title: "Mountainfilm for Locals: Norwood",
+    link: "https://koto.org/event/mountainfilm-for-locals-norwood/",
+    description: "Join us for Mountainfilm for Locals, a free screening for the Norwood community, presented in partnership with Lone Cone Library. Catch a 78-minute program of short films from the 2026 Mountainfilm Festival. Doors and pizza at 5:30 PM, films at 6 PM. Free pizza is first come, first served, so come hungry and come early!",
+    pubDate: "2026-11-19T17:30:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/Screenshot-2026-10-27-at-3.27.48-PM.png"
+  },
+  {
+    title: "Facing the Mourning",
+    link: "https://koto.org/event/facing-the-mourning/2026-11-19/",
+    description: "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit from additional support while navigating grief and loss. Please feel free to share this information with others who may be interested.",
+    pubDate: "2026-11-19T18:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Redvale Community Center",
+    imageUrl: ""
+  },
+  {
+    title: "Up-Off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-11-20/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-11-20T10:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "Coffee, Croissants & Cribbage",
+    link: "https://koto.org/event/coffee-croissants-cribbage/",
+    description: "Coffee, croissants and cribbage is back! Come by the library Magazine Room 10-11:30am for friendly competition, free coffee and pastries, and community connection. May the nibs be with you.",
+    pubDate: "2026-11-20T10:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/10/nov-3.png"
   }
 ];
 
@@ -7142,28 +7133,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/45301/i-5fmsgs6-5k-2100x1400-d6f22d2a-6109-408c-9f35-051a33841613.800x533.webp"
   },
   {
-    title: "Coffee & Climate Conversations",
-    link: "https://www.telluride.com/event/coffee-climate-conversations/",
-    description: "From big adventures to spending time with family and friends, recreation is often at the heart of our experiences on …",
-    pubDate: "2026-10-29",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/57231/screenshot_2026-10-06_at_9_14_18_am.800x533.webp"
-  },
-  {
-    title: "Telluride Witches Ride",
-    link: "https://www.telluride.com/event/telluride-witches-ride/",
-    description: "Grab your broomstick or bike and witchy attire and gather for a ride through Telluride! Meet at Elks Park and cocktails …",
-    pubDate: "2026-10-29",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/59902/screenshot_2025-10-29_at_11_20_29_am.800x533.webp"
-  },
-  {
     title: "Young Frankenstein the Musical",
     link: "https://www.telluride.com/event/young-frankenstein-the-musical/",
     description: "Book by Mel Brooks & Thomas Meehan\n\nMusic & Lyrics by Mel Brooks\n\nDirected by Sasha Cucciniello\n\nPLEASE NOTE - …",
@@ -7174,17 +7143,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/63749/yf_thundertix-ezgif_com-webp-to-jpg-converter.800x533.webp"
-  },
-  {
-    title: "Decorate Your Own Trick or Treat Bag",
-    link: "https://www.telluride.com/event/decorate-your-own-trick-or-treat-bag/",
-    description: "Decorate your own Halloween bag for trick or treating! All supplies will be provided.",
-    pubDate: "2026-10-29",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/64041/screenshot_2026-10-20_at_11_19_55_am.800x533.webp"
   },
   {
     title: "Halloween Parade",
@@ -7526,6 +7484,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/63693/karl-denson-pic-2026.800x533.webp"
+  },
+  {
+    title: "Sabotage: A Beastie Boys Tribute",
+    link: "https://www.telluride.com/event/sabotage-a-beastie-boys-tribute/",
+    description: "Get ready to fight for your right to party. Sabotage brings the legendary sound, attitude, and high-energy chaos of …",
+    pubDate: "2026-12-30",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63696/sabotage_-_sheridan_opera_house_2.800x533.webp"
   }
 ];
 

@@ -24,28 +24,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/45301/i-5fmsgs6-5k-2100x1400-d6f22d2a-6109-408c-9f35-051a33841613.800x533.webp"
   },
   {
-    "title": "Coffee & Climate Conversations",
-    "link": "https://www.telluride.com/event/coffee-climate-conversations/",
-    "description": "From big adventures to spending time with family and friends, recreation is often at the heart of our experiences on …",
-    "pubDate": "2026-10-29",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/57231/screenshot_2026-10-06_at_9_14_18_am.800x533.webp"
-  },
-  {
-    "title": "Telluride Witches Ride",
-    "link": "https://www.telluride.com/event/telluride-witches-ride/",
-    "description": "Grab your broomstick or bike and witchy attire and gather for a ride through Telluride! Meet at Elks Park and cocktails …",
-    "pubDate": "2026-10-29",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/59902/screenshot_2025-10-29_at_11_20_29_am.800x533.webp"
-  },
-  {
     "title": "Young Frankenstein the Musical",
     "link": "https://www.telluride.com/event/young-frankenstein-the-musical/",
     "description": "Book by Mel Brooks & Thomas Meehan\n\nMusic & Lyrics by Mel Brooks\n\nDirected by Sasha Cucciniello\n\nPLEASE NOTE - …",
@@ -56,17 +34,6 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63749/yf_thundertix-ezgif_com-webp-to-jpg-converter.800x533.webp"
-  },
-  {
-    "title": "Decorate Your Own Trick or Treat Bag",
-    "link": "https://www.telluride.com/event/decorate-your-own-trick-or-treat-bag/",
-    "description": "Decorate your own Halloween bag for trick or treating! All supplies will be provided.",
-    "pubDate": "2026-10-29",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/64041/screenshot_2026-10-20_at_11_19_55_am.800x533.webp"
   },
   {
     "title": "Halloween Parade",
@@ -408,5 +375,16 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63693/karl-denson-pic-2026.800x533.webp"
+  },
+  {
+    "title": "Sabotage: A Beastie Boys Tribute",
+    "link": "https://www.telluride.com/event/sabotage-a-beastie-boys-tribute/",
+    "description": "Get ready to fight for your right to party. Sabotage brings the legendary sound, attitude, and high-energy chaos of …",
+    "pubDate": "2026-12-30",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63696/sabotage_-_sheridan_opera_house_2.800x533.webp"
   }
 ]
