@@ -1,1 +1,44 @@
-[]
+[
+  {
+    "id": "TEL-A-207",
+    "name": "Timber",
+    "species": "Dog",
+    "breed": "Collie, Border / Cattle Dog, Australian (Red Heeler)",
+    "ageGroup": "Young Puppy",
+    "sex": "Male",
+    "photo": "https://new-s3.shelterluv.com/profile-pictures/0a662cfa39b2fb52481998afdd852fa1/1d7757d222609783e86c8784475bf984.jpg",
+    "profileUrl": "https://www.shelterluv.com/embed/animal/214942068",
+    "summary": "Young Puppy • Collie, Border / Cattle Dog, Australian (Red Heeler) • Male",
+    "firstSeen": "2026-10-31",
+    "revealDate": "2026-10-31",
+    "lastSeen": "2026-10-31"
+  },
+  {
+    "id": "TEL-A-208",
+    "name": "Robin",
+    "species": "Dog",
+    "breed": "Shepherd, Australian",
+    "ageGroup": "Young Dog",
+    "sex": "Male",
+    "photo": "https://new-s3.shelterluv.com/profile-pictures/e0d1343dc5b39bd0a477488d65ea92c9/df48cf112b92fbdf076f579fc9a41830.JPG",
+    "profileUrl": "https://www.shelterluv.com/embed/animal/214942131",
+    "summary": "Young Dog • Shepherd, Australian • Male",
+    "firstSeen": "2026-10-31",
+    "revealDate": "2026-11-02",
+    "lastSeen": "2026-10-31"
+  },
+  {
+    "id": "TEL-A-209",
+    "name": "Callie",
+    "species": "Dog",
+    "breed": "Collie, Border / Cattle Dog, Australian (Red Heeler)",
+    "ageGroup": "Puppy",
+    "sex": "Female",
+    "photo": "https://new-s3.shelterluv.com/profile-pictures/52102616602c1e1ebef6744ff66b174c/40e31418045aad01388f15003b2c23fd.JPG",
+    "profileUrl": "https://www.shelterluv.com/embed/animal/214942170",
+    "summary": "Puppy • Collie, Border / Cattle Dog, Australian (Red Heeler) • Female",
+    "firstSeen": "2026-10-31",
+    "revealDate": "2026-11-04",
+    "lastSeen": "2026-10-31"
+  }
+]
