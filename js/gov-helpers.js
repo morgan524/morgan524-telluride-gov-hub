@@ -501,6 +501,14 @@ const DEEP_DIVE_UPDATES = [];
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-10-31",
+    title: "A height variance before it's built",
+    body: "The Design Review Board is taking up a height variance request for an undeveloped lot on Mountain Village Blvd. Nothing's approved yet — it's on the agenda, not in the books.\n\nThat's where the split usually starts. One side figures variances on empty lots are exactly the right moment to ask: before anything goes up, before neighbors are staring at it. The other side worries that granting height exceptions on undeveloped land sets a precedent that quietly rewrites what the rules actually mean.\n\nSo — is a pre-construction variance the responsible time to be flexible, or the riskiest?",
+    choices: ["Best time to bend the rules", "Sets a bad precedent", "Depends on the project"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-10-30",
     title: "Should an outside consultant rewrite the housing rules?",
     body: "The Telluride Housing Authority Subcommittee is set to discuss a request for proposals to hire outside consulting services for a comprehensive review of the town's employee rental housing policies. That means fresh eyes — but also outside hands — on rules that shape who gets to live up here and under what terms.\n\nSome will see it as overdue: policies calcify, and an independent review could surface fixes insiders are too close to see. Others will wonder whether handing that work to consultants risks losing the local knowledge — and accountability — that should drive housing decisions.\n\nSo: is outside expertise the right tool for this, or should the community be leading its own review?",
@@ -729,14 +737,6 @@ const DAILY_QUESTIONS = [
     title: "County cops for the city — whose call is it?",
     body: "Ouray County and Ouray City are sitting down together to work through a draft Intergovernmental Agreement that would hand full law enforcement services for the city over to the county — with a proposed compensation schedule attached — starting January 1, 2027. Nothing's signed yet; this is a joint work session. Some will see consolidation as smart, lean government. Others will ask what the city gives up when it no longer runs its own policing. So: is merging city law enforcement into the county a practical move, or does it cost the city something harder to get back?",
     choices: ["Smart consolidation", "City loses too much", "Depends on the price tag", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
-  },
-  {
-    date: "2026-10-01",
-    title: "The comp plan gets a work session — who shapes what comes next?",
-    body: "The Planning & Zoning Commission is holding a work session on Telluride's Comprehensive Plan, with consulting staff facilitating and commissioner input being gathered. It's wrapping up a week of community engagement on the plan's direction. Comp plans set the vision that guides land use, development, and priorities for years. Some residents see these processes as a real chance to steer growth and protect what makes up here livable. Others worry the outcome reflects whoever shows up — or whoever was hired to facilitate. So — do you trust this kind of planning process to reflect what the community actually wants?",
-    choices: ["Yes, these processes work", "Too easy to steer outcomes", "Depends on who participates", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
   }
@@ -2718,6 +2718,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Bee ready for this buzzy event",
+    source: "Telluride Times",
+    date: "October 31, 2026",
+    firstSeen: "2026-10-31",
+    newsTopic: "community",
+    copy: "Wilkinson Public Library is hosting an Adult Spelling Bee at The Alibi on Friday, Nov. 6, 6:30–8:30 p.m. Teams are full but a waitlist is open, and spectators are welcome — audience participation is part of the plan. The Alibi is offering honey-themed drinks with a 10% discount for library cardholders.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_89659bef-7cf0-4c62-9bb0-1fd9f36cc1e6.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/1f/21fb8ee1-5e8d-4d84-8d5d-49b54e8c86d2/6ae3c30b901ac.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "CDOT seeks input on Sawpit, Placerville projects",
     source: "Telluride Times",
@@ -5043,26 +5055,15 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "You & Me / Tu Y Yo",
-    link: "https://telluridelibrary.libcal.com/event/17906309?hs=a",
-    description: "10:30 AM – 11:00 AM · Join us every Friday for a fun and engaging parent-child program designed for preschoolers! Each week, we explore a new theme through hands-on activities that spark creativity.    &iexcl;Acomp&aacute;&ntilde;enos todos los viernes en un programa divertido y din&aacute;mico para padres e hijos, dise&ntilde;ado para ni&ntilde;os en edad preescolar! Cada semana exploramos un tema nuevo a trav&eacute;s de actividades pr&aacute;cticas que estimulan la creatividad.",
-    pubDate: "2026-10-30T16:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_30_13_07_23.png"
-  },
-  {
-    title: "Halloween Movie!",
-    link: "https://telluridelibrary.libcal.com/event/16462621?hs=a",
-    description: "3:30 PM – 5:30 PM · Join us for an after school showing of the Addams Family (animated version) to get in the Halloween spirit. Halloween treats will be provided!",
-    pubDate: "2026-10-30T21:30:00.000Z",
+    title: "Yogalates with Lauren",
+    link: "https://telluridelibrary.libcal.com/event/17884869?hs=a",
+    description: "12:00 PM – 1:00 PM · Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome. Mu&eacute;vase, respire y ll&eacute;nese de energ&iacute;a en esta din&aacute;mica clase biling&uuml;e, dirigido por Lauren Norton, dise&ntilde;ada para fortalecer su cuerpo y mente. Combinando la fuerza y fluidez del pilates, el ritmo y la energ&iacute;a de la danza, y la presencia equilibrante del yoga y la respiraci&oacute;n, esta sesi&oacute;n le dejar&aacute; sinti&eacute;ndose fuerte, en armon&iacute;a y revitalizado/a. …",
+    pubDate: "2026-10-31T18:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_19_07_57_49.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_12_05_46.jpg"
   }
 ];
 
@@ -5553,130 +5554,15 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "CELESTIAL BODIES - Olivia Ivy and Kane Scheidegger",
-    link: "https://events.ourayridgwayevents.com/event/celestial-bodies-olivia-ivy-and-kane-scheidegger",
-    description: "Join us at Space to Create Gallery in Ridgway for CELESTIAL BODIES, an exhibition exploring the connections between Body, Earth, and Cosmos through painting and photography. Featuring the work of Olivia Ivy and Kane Scheidegger, the exhibition brings together feminine figures, celestial symbolism, and otherworldly landscapes to explore the boundaries between the intimate and the infinite. From constellations hidden within the human form to the vastness of the night sky reflected in the earthly landscape, these works invite us to look beyond the familiar and reconsider our place within the universe. Exhibition dates October 2nd to November 2nd.",
-    pubDate: "2026-10-30T06:00:00.000Z",
-    endDate: "2026-11-02",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Space to Create Gallery",
-    imageUrl: "https://localist-images.azureedge.net/photos/54241868374608/huge/121c2ab6c42c0a5364ce85a3ffe552e3b10fe9f0.jpg"
-  },
-  {
-    title: "RSS HS Soccer Playoff & HS Cross Country State Send-Off!",
-    link: "https://events.ourayridgwayevents.com/event/hs-soccer-playoff-hs-cross-country-state-send-off",
-    description: "Our Ridgway High School Boys Soccer team is headed to the playoffs, and our High School Cross Country athletes are heading to State! We invite the Ridgway community to join us for a special send-off celebration on Friday, October 30, at 8:45 a.m. at the RSS Circle! Come show your Demon pride, cheer on our student-athletes, and wish them luck!",
-    pubDate: "2026-10-30T14:45:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway Secondary School",
-    imageUrl: "https://localist-images.azureedge.net/photos/54356090821112/huge/4ccf416a9e2d0616f492597ed825640d64c0321d.jpg"
-  },
-  {
-    title: "\"Hello to Golden Autumn\" Acrylic Painting Workshop",
-    link: "https://events.ourayridgwayevents.com/event/hello-to-golden-autumn-acrylic-painting-workshop",
-    description: "“Hello to Golden Autumn” Acrylic Painting Workshop with Mary Pat Ettinger October 30, 9:30 AM–1:30 PM Studio 4, Montrose Tuition: $75 inc. all supplies Registration: www.weehawkenarts.org Painting with acrylics in a watercolor style, students will enjoy exploring either landscape fall scenes or flowers and pumpkins scenes. Mary Pat will provide images for students to work from, or students may bring their own reference photos. Mary Pat will work with students to achieve a good composition and will help understand how various colors work well to create a vibrant painting. Students may expect to enjoy a delightful painting time filled with learning and laughter. All supplies included! About Mary Pat Ettinger – Artist & Instructor Mary Pat Ettinger’s work is often described as peaceful and uplifting. Having lived much of her life in rural settings, she draws daily inspiration from solitude, natural beauty, and the simple joys around her. …",
-    pubDate: "2026-10-30T15:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Weehawken Creative Arts in Montrose",
-    imageUrl: "https://localist-images.azureedge.net/photos/53967861373929/huge/1167e663cc84a9c4be3eccaa396cf973741529f4.jpg"
-  },
-  {
     title: "OPL Read a Book - Get a Pumpkin",
     link: "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
     description: "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
-    pubDate: "2026-10-30T16:00:00.000Z",
-    endDate: "2026-10-31",
+    pubDate: "2026-10-31T16:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Ouray Public Library",
     imageUrl: "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg"
-  },
-  {
-    title: "Guided Tour: Historic Beaumont Hotel & Spa",
-    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
-    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
-    pubDate: "2026-10-30T19:30:00.000Z",
-    endDate: "2026-12-29",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Beaumont Hotel & Spa",
-    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
-  },
-  {
-    title: "STEAM Art Explorers for Ages 5–8 in Montrose",
-    link: "https://events.ourayridgwayevents.com/event/steam-art-explorers-for-ages-58-in-montrose",
-    description: "MONTROSE AFTER SCHOOL ART SESSION 1 (5 WEEKS • OCTOBER 23 – NOVEMBER 20) Join us for a 5-week course that explores the intersection of art, science, technology, engineering, and math! In this hands-on art class, students will experiment with creative processes that turn scientific concepts into exciting works of art. Through a variety of fun projects, students will investigate chemical reactions, motion, light, color, and patterns. Projects include creating fizzy paintings using bubbling chemical reactions, experimenting with movement and gravity through pendulum painting, designing kaleidoscopes to explore symmetry and reflection, and making colorful lava lamps to investigate density and liquid interactions. Students will also take on collaborative challenges, activities, and movement games to build creativity, experimentation, problem-solving, and teamwork. With encouragement and plenty of opportunities to experiment, students will grow their artistic skills and confidence while embracing their creativity. …",
-    pubDate: "2026-10-30T21:45:00.000Z",
-    endDate: "2026-11-20",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Weehawken Montrose",
-    imageUrl: "https://localist-images.azureedge.net/photos/54055496965288/huge/4ac547d8a4681a49d4e49d0024729211c03874a6.jpg"
-  },
-  {
-    title: "Jelly Bowl Band",
-    link: "https://events.ourayridgwayevents.com/event/jelly-bowl-band",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
-    pubDate: "2026-10-30T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Trunk or Treat",
-    link: "https://events.ourayridgwayevents.com/event/trunk-or-treat",
-    description: "Join Us for a Spooktacular Trunk or Treat! The Ridgway School District Family Engagement Committee invites you to a fun-filled Trunk or Treat Halloween! Put on your favorite costume, bring your candy bag, and join us for an evening of Halloween fun! This is a great opportunity for families to connect, enjoy some chili and treats, and celebrate with our wonderful community! Friday, October 30, 2026 4:30–5:30 PM Ridgway Library Parking Lot FREE Admission – Everyone Welcome! We can't wait to see all the little ghosts, goblins, and superheroes! Families, students, local businesses, and community organizations are invited to decorate a vehicle and hand out treats. Please email marissaamathis@gmail.com if you are interested in participating!",
-    pubDate: "2026-10-30T22:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway Public Library",
-    imageUrl: "https://localist-images.azureedge.net/photos/54304459815198/huge/61fecb5849296161b03c2fdb1cab38268ab2ba07.jpg"
-  },
-  {
-    title: "Floating Lotus Halloween Pint Night Supports Second Chance Humane Society",
-    link: "https://events.ourayridgwayevents.com/event/floating-lotus-halloween-pint-night",
-    description: "Join us at Floating Lotus Brewery for a spooky night of good beer, good times, and good people! There will be a costume contest for fun prizes. Plus, $1 from every beer supports the animals at Second Chance Humane Society!",
-    pubDate: "2026-10-31T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/54248758224534/huge/5cdafa0f87d5382bb6c0951c8518b30a75c2d8f6.jpg"
-  },
-  {
-    title: "Minions and Monsters: Movie Night @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/minions-and-monsters-movie-night-the-wright",
-    description: "WHEN? Friday, October 30 Doors at 6:30 PM | Movie at 7:00 PM WHERE? Wright Opera House 472 Main St., Ouray, Colorado RUN TIME: 1 hour, 30 minutes RATING: PG ABOUT THE FILM The Minions are back—and this time they are headed to 1920s Hollywood with dreams of becoming movie stars. After discovering that the arrival of sound means Minionese is not exactly the language of leading men, the Minions decide to make a monster movie of their own. What could possibly go wrong? Quite a lot, naturally. A big-screen comedy full of old-Hollywood chaos, monster-movie mayhem, and the tiny yellow beings who have never once been trusted with a plan. WHY SEE IT? Because it is almost Halloween, and a Minion-made monster movie is exactly the kind of nonsense the season deserves. HOW? …",
-    pubDate: "2026-10-31T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/54035307723339/huge/023d6c0350f30b116080d9dd9507ac6801c8703a.jpg"
-  },
-  {
-    title: "Easy Jim ~ 2 Night Halloween Run at The Sherbino",
-    link: "https://events.ourayridgwayevents.com/event/easy-jim-2-night-halloween-run-at-the-sherbino",
-    description: "Easy Jim Halloween Run Brings Two Nights of Grateful Dead Celebrations to the Sherbino! October 30 & 31, 2026 • 8:00 p.m. nightly Sherbino Theatre | Ridgway, Colorado Some concerts are just concerts. This is a Run! The Sherbino and Pickin’ Productions invite Deadheads, music lovers, Halloween enthusiasts, and anyone looking for an unforgettable weekend to join us for the Easy Jim Halloween Run—a special two-night celebration of the music, community, and spirit of the Grateful Dead on Friday, October 30 and Saturday, October 31. Both performances begin at 8:00 p.m. Within Grateful Dead and jam-band culture, Halloween shows have become legendary. Alongside New Year’s Eve, they’re among the most anticipated performances of the year—filled with costumes, surprises, dancing, and the kind of musical spontaneity that has kept fans traveling from show to show for generations. That’s exactly what makes a Run so special. …",
-    pubDate: "2026-10-31T02:00:00.000Z",
-    endDate: "2026-11-01",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Sherbino",
-    imageUrl: "https://localist-images.azureedge.net/photos/53551962688679/huge/530cd950230f451d84a4795936d5b7a904b733f2.jpg"
   },
   {
     title: "Ouray MS Boys Basketball VS Dolores",
@@ -5721,6 +5607,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Fellin Park",
     imageUrl: "https://localist-images.azureedge.net/photos/54116757876412/huge/0765e06098445336f8065bfe4b16b8c9ed0a7462.jpg"
+  },
+  {
+    title: "Guided Tour: Historic Beaumont Hotel & Spa",
+    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
+    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
+    pubDate: "2026-10-31T19:30:00.000Z",
+    endDate: "2026-12-29",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Beaumont Hotel & Spa",
+    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
   },
   {
     title: "Every Sat. Floating Sound Bath",
@@ -5790,6 +5688,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53888467422235/huge/f256b058d12c444dee76fbf1c905276c3e76b084.jpg"
   },
   {
+    title: "Easy Jim ~ 2 Night Halloween Run at The Sherbino",
+    link: "https://events.ourayridgwayevents.com/event/easy-jim-2-night-halloween-run-at-the-sherbino",
+    description: "Easy Jim Halloween Run Brings Two Nights of Grateful Dead Celebrations to the Sherbino! October 30 & 31, 2026 • 8:00 p.m. nightly Sherbino Theatre | Ridgway, Colorado Some concerts are just concerts. This is a Run! The Sherbino and Pickin’ Productions invite Deadheads, music lovers, Halloween enthusiasts, and anyone looking for an unforgettable weekend to join us for the Easy Jim Halloween Run—a special two-night celebration of the music, community, and spirit of the Grateful Dead on Friday, October 30 and Saturday, October 31. Both performances begin at 8:00 p.m. Within Grateful Dead and jam-band culture, Halloween shows have become legendary. Alongside New Year’s Eve, they’re among the most anticipated performances of the year—filled with costumes, surprises, dancing, and the kind of musical spontaneity that has kept fans traveling from show to show for generations. That’s exactly what makes a Run so special. …",
+    pubDate: "2026-11-01T02:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/53551962688679/huge/530cd950230f451d84a4795936d5b7a904b733f2.jpg"
+  },
+  {
     title: "LIVE JAZZ IN THE GARDEN! Zan Waller & Stefan Davenport",
     link: "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
     description: "LIVE MUSIC IN THE GARDEN! 🎶 Sundays from 4:00–6:00 p.m., let us introduce you to Chloe’s Secret Garden! 🌿✨ Standard Alchemy (Zan Waller on trumpet, Stefan Davenport on guitar) plays swing, cocktail jazz and Great American Songbook standards, with occasional special guest vocalists. Enjoy live cocktail jazz with the perfect wine and scrumptious charcuterie in our cozy garden setting. Sip, savor, and settle in for a relaxed afternoon of music and Colorado magic! 🍷🧀💛 We can’t wait to see you there! Join us! 🎵",
@@ -5812,6 +5721,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Bee True You Wellness & Creative Studio",
     imageUrl: "https://localist-images.azureedge.net/photos/54241462626167/huge/7c0778035e072ff933b617f21809b1459dc84aca.jpg"
+  },
+  {
+    title: "CELESTIAL BODIES - Olivia Ivy and Kane Scheidegger",
+    link: "https://events.ourayridgwayevents.com/event/celestial-bodies-olivia-ivy-and-kane-scheidegger",
+    description: "Join us at Space to Create Gallery in Ridgway for CELESTIAL BODIES, an exhibition exploring the connections between Body, Earth, and Cosmos through painting and photography. Featuring the work of Olivia Ivy and Kane Scheidegger, the exhibition brings together feminine figures, celestial symbolism, and otherworldly landscapes to explore the boundaries between the intimate and the infinite. From constellations hidden within the human form to the vastness of the night sky reflected in the earthly landscape, these works invite us to look beyond the familiar and reconsider our place within the universe. Exhibition dates October 2nd to November 2nd.",
+    pubDate: "2026-11-02T07:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create Gallery",
+    imageUrl: "https://localist-images.azureedge.net/photos/54241868374608/huge/121c2ab6c42c0a5364ce85a3ffe552e3b10fe9f0.jpg"
   },
   {
     title: "Senior Lunch by Neighbor to Neighbor",
@@ -6001,6 +5921,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Floating Lotus Brewery",
     imageUrl: "https://localist-images.azureedge.net/photos/53790516346797/huge/599d1a7013ddde307592e7dfc9b892fe265527e0.jpg"
+  },
+  {
+    title: "STEAM Art Explorers for Ages 5–8 in Montrose",
+    link: "https://events.ourayridgwayevents.com/event/steam-art-explorers-for-ages-58-in-montrose",
+    description: "MONTROSE AFTER SCHOOL ART SESSION 1 (5 WEEKS • OCTOBER 23 – NOVEMBER 20) Join us for a 5-week course that explores the intersection of art, science, technology, engineering, and math! In this hands-on art class, students will experiment with creative processes that turn scientific concepts into exciting works of art. Through a variety of fun projects, students will investigate chemical reactions, motion, light, color, and patterns. Projects include creating fizzy paintings using bubbling chemical reactions, experimenting with movement and gravity through pendulum painting, designing kaleidoscopes to explore symmetry and reflection, and making colorful lava lamps to investigate density and liquid interactions. Students will also take on collaborative challenges, activities, and movement games to build creativity, experimentation, problem-solving, and teamwork. With encouragement and plenty of opportunities to experiment, students will grow their artistic skills and confidence while embracing their creativity. …",
+    pubDate: "2026-11-06T22:45:00.000Z",
+    endDate: "2026-11-20",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Montrose",
+    imageUrl: "https://localist-images.azureedge.net/photos/54055496965288/huge/4ac547d8a4681a49d4e49d0024729211c03874a6.jpg"
   },
   {
     title: "David Nunn",
@@ -6729,7 +6661,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/winter-break-ridgway-schools",
     description: "",
     pubDate: "2026-12-21T07:00:00.000Z",
-    endDate: "2026-12-29",
+    endDate: "2026-12-30",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",

@@ -1,22 +1,30 @@
 {
-  "hash": "d55ab8a886a6b77f7518675357ff3e3185f8c3df",
-  "lede": "The biggest thing to watch this week is the Telluride Medical Center's special meeting on a potential due-diligence engagement with CommonSpirit Health — one of the largest nonprofit hospital systems in the country — which could signal a major partnership or affiliation on the horizon. The Telluride Ecology Commission is also taking up a draft ordinance that would ban gas-powered lawn and garden equipment in town limits by 2028–2030, and Ouray City Council holds a public hearing on its 2027 budget with utility rate ordinances up for a second-reading vote. Closer to home, Mountainfilm for Locals runs Monday and Tuesday, and Halloween weekend wraps up with the Young Frankenstein musical co-production from TMHS and Telluride Theatre.",
+  "hash": "b9f824795bf8ad6fa726c34bd1e01b10392313db",
+  "lede": "The biggest thing to watch this week is the Telluride Medical Center's special board meeting on Monday, where a proposal to engage Jensen Partners for due diligence with CommonSpirit Health — one of the country's largest hospital systems — is on the table, a signal that a major affiliation decision may be taking shape. Ouray City Council is also holding a public hearing on its 2027 budget and voting on utility rate ordinances on second reading. Closer to home, the Ecology Commission takes up a draft ordinance that would ban gas-powered lawn and garden equipment in town limits, with leaf blowers first on the chopping block by 2028.",
   "notable": [
     {
       "id": 5,
-      "stake": "Board votes on due-diligence proposal that could reshape local hospital's future."
+      "stake": "Board votes on CommonSpirit due diligence — potential hospital affiliation in play."
     },
     {
-      "id": 4,
-      "stake": "Public hearing on 2027 budget; water, sewer, and refuse rate ordinances up for second reading."
-    },
-    {
-      "id": 7,
-      "stake": "Draft ordinance would ban gas-powered lawn equipment in town limits by 2028–2030."
+      "id": 6,
+      "stake": "Same CommonSpirit due diligence vote; residents should track any hospital partnership decision."
     },
     {
       "id": 3,
-      "stake": "P&Z Chair votes on lot-line vacation merging two parcels in Historic Residential zone."
+      "stake": "P&Z Chair rules on lot-line vacation in Historic Residential zone — sets merger precedent."
+    },
+    {
+      "id": 4,
+      "stake": "Ouray public hearing on 2027 budget; second-reading votes on utility and industrial rate ordinances."
+    },
+    {
+      "id": 7,
+      "stake": "Draft ordinance would ban gas-powered lawn equipment in Telluride by 2028–2030."
+    },
+    {
+      "id": 8,
+      "stake": "Commission considers Jazz Festival date change and consequential special-events calendar decisions."
     }
   ]
 }

@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 31 Oct 2026 04:53:56 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 11:59:14 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Sat, Oct 31] KOTO Halloween Bash</title>
@@ -33,6 +33,19 @@ Get spooky at Van Atta for Halloween! Join them for their 2nd Annual Halloween D
       <media:content url="https://www.telluride.com/site/assets/files/55837/863251585_18016337219952458_168798008229105469_n.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Sat, Oct 31] Yogalates with Lauren</title>
+      <link>https://telluridelibrary.libcal.com/event/17884869?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/yogalates%20with%20lauren%7C2026-10-31</guid>
+      <pubDate>Sat, 31 Oct 2026 18:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_12_05_46.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+12:00 PM – 1:00 PM · Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome. Mu&eacute;vase, respire y ll&eacute;nese de energ&iacute;a en esta din&aacute;mica clase biling&uuml;e, dirigido por Lauren Norton, dise&ntilde;ada para fortalecer su cuerpo y mente. Combinando la fuerza y fluidez del pilates, el ritmo y la energ&iacute;a de la danza, y la presencia equilibrante del yoga y la respiraci&oacute;n, esta sesi&oacute;n le dejar&aacute; sinti&eacute;ndose fuerte, en armon&iacute;a y revitalizado/a. …]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_12_05_46.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Sun, Nov 1] KOTO Halloween Bash</title>
@@ -102,7 +115,7 @@ The November 2, 2026 Planning & Zoning Commission Chair special meeting agenda h
 
 A single item is on this rescheduled P&Z Chair meeting: a minor subdivision at 510 W Columbia Avenue / 129 N Townsend Street. The application asks to vacate the internal lot line between Lots 39 and 40 in Block 9 of the West Telluride Addition, merging them into one roughly 5,625-square-foot lot designated Lot 40R. The property sits in the Historic Residential zone district. Nothing of broad public consequence is on the agenda beyond this routine lot consolidation.
 
-⚡ Why it matters: P&Z Chair votes on lot-line vacation merging two parcels in Historic Residential zone.]]></description>
+⚡ Why it matters: P&Z Chair rules on lot-line vacation in Historic Residential zone — sets merger precedent.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -115,7 +128,7 @@ A single item is on this rescheduled P&Z Chair meeting: a minor subdivision at 5
 
 The main business this evening is the 2027 budget. Council holds a public hearing on the proposed City of Ouray budget and takes up two ordinances on second reading: Ordinance 7 sets the 2027 rates for water, sewer, surcharge, refuse, and recycling; Ordinance 8 amends the municipal code to add a rate category specifically for light industrial operations — a new wrinkle in how the city classifies utility customers. Council also considers ratifying a Caterpillar equipment lease-purchase agreement and approving an MOU with the Ridgway Fire Protection District covering fire, EMS, training, and operational cooperation. On the liquor license side, The Yankee Girl Café has a new application before the council. The consent agenda includes four appointments to the Main Street Committee and a liquor license renewal for Ouray Lodge No. 492.
 
-⚡ Why it matters: Public hearing on 2027 budget; water, sewer, and refuse rate ordinances up for second reading.]]></description>
+⚡ Why it matters: Ouray public hearing on 2027 budget; second-reading votes on utility and industrial rate ordinances.]]></description>
       <category>Meeting</category>
       <category>ouraycity</category>
     </item>
@@ -141,18 +154,20 @@ Doors and pizza at 5 PM, films at 5:30 PM. Join us for Mountainfilm for Locals, 
 
 A short special meeting — just 30 minutes on the books — with one substantive item: a proposal from Jensen Partners to provide support through the due diligence process with CommonSpirit. CommonSpirit Health is one of the largest nonprofit hospital systems in the country, and any formal due diligence engagement signals that a potential partnership, affiliation, or transaction is being evaluated seriously. The board meets at the Wellness Annex (500 W Pacific Ave) and via Zoom at 3:00 PM. The next regular board meeting is November 19.
 
-⚡ Why it matters: Board votes on due-diligence proposal that could reshape local hospital's future.]]></description>
+⚡ Why it matters: Board votes on CommonSpirit due diligence — potential hospital affiliation in play.]]></description>
       <category>Meeting</category>
       <category>Telluride Medical Center</category>
     </item>
     <item>
-      <title>[Meeting] Regular Board Meeting -- Special Meeting — 2026-11-03</title>
+      <title>⚡ [Meeting] Regular Board Meeting -- Special Meeting — 2026-11-03</title>
       <link>https://www.tellmed.org/files/123ee1a0f/THD+Special+Bd+Mtg+Agenda+11.3.26.pdf</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/med%7C2026-11-03%7CRegular%20Board%20Meeting%20--%20Special%20Meeting</guid>
       <pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Medical Center • 2026-11-03
 
-A short special meeting — just 30 minutes on the books — with one substantive item: a proposal from Jensen Partners to provide support through the due diligence process with CommonSpirit. CommonSpirit Health is one of the largest nonprofit hospital systems in the country, and any formal due diligence engagement signals that a potential partnership, affiliation, or transaction is being evaluated seriously. The board meets at the Wellness Annex (500 W Pacific Ave) and via Zoom at 3:00 PM. The next regular board meeting is November 19.]]></description>
+A short special meeting — just 30 minutes on the books — with one substantive item: a proposal from Jensen Partners to provide support through the due diligence process with CommonSpirit. CommonSpirit Health is one of the largest nonprofit hospital systems in the country, and any formal due diligence engagement signals that a potential partnership, affiliation, or transaction is being evaluated seriously. The board meets at the Wellness Annex (500 W Pacific Ave) and via Zoom at 3:00 PM. The next regular board meeting is November 19.
+
+⚡ Why it matters: Same CommonSpirit due diligence vote; residents should track any hospital partnership decision.]]></description>
       <category>Meeting</category>
       <category>Medical Center</category>
     </item>
@@ -165,18 +180,20 @@ A short special meeting — just 30 minutes on the books — with one substantiv
 
 The Ecology Commission meets to finalize its 2027 workplan and, more consequentially, to discuss a draft ordinance that would phase out combustion-powered lawn and garden equipment within town limits. The proposed ordinance — a new Article 10 added to Chapter 7 of the Municipal Code — would ban gas-powered leaf blowers by 2028 and all other covered equipment by 2030. The recitals cite the box canyon's particular sensitivity to noise (90–110 decibels, amplified by the terrain) and air quality impacts. Colorado's HB23-1161 already provides a 30% point-of-sale discount on electric replacements, and the San Miguel Power Association offers additional rebates up to 25%, potentially offsetting roughly half the replacement cost. Exceptions are included for pre-adoption dual-use enclosed-cab tractors. The commission also votes to formally adopt its 2027 workplan, which carries forward ongoing threads: the Climate Action Plan update, bear safety programming, Trash Bash, Green Grants, and landscaping ordinance advocacy.
 
-⚡ Why it matters: Draft ordinance would ban gas-powered lawn equipment in town limits by 2028–2030.]]></description>
+⚡ Why it matters: Draft ordinance would ban gas-powered lawn equipment in Telluride by 2028–2030.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
     <item>
-      <title>[Meeting] Commission for Community Assistance, Arts &amp; Special Events - Nov 04 2026 — 2026-11-04</title>
+      <title>⚡ [Meeting] Commission for Community Assistance, Arts &amp; Special Events - Nov 04 2026 — 2026-11-04</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-11-04%7CCommission%20for%20Community%20Assistance%2C%20Arts%20%26%20Special%20Events%20-%20Nov%2004%202026</guid>
       <pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-11-04
 
-The Commission for Community Assistance, Arts & Special Events works through a full plate of calendar and banner requests from Telluride Arts — Art Walk dates running from December 2026 through May 2027, plus a Holiday Arts Bazaar in December 2027 — and a date change request from SBG Productions moving the Telluride Jazz Festival to August 13–15, 2027. The more consequential work happens in the afternoon worksession: the Grant Subcommittee's financial training, a discussion of 2027 grant guidelines and philosophies, and a first look at revised 2027 special event policies. The subcommittee also brings back a recommendation on grant application discrepancies it flagged at its October 23 meeting.]]></description>
+The Commission for Community Assistance, Arts & Special Events works through a full plate of calendar and banner requests from Telluride Arts — Art Walk dates running from December 2026 through May 2027, plus a Holiday Arts Bazaar in December 2027 — and a date change request from SBG Productions moving the Telluride Jazz Festival to August 13–15, 2027. The more consequential work happens in the afternoon worksession: the Grant Subcommittee's financial training, a discussion of 2027 grant guidelines and philosophies, and a first look at revised 2027 special event policies. The subcommittee also brings back a recommendation on grant application discrepancies it flagged at its October 23 meeting.
+
+⚡ Why it matters: Commission considers Jazz Festival date change and consequential special-events calendar decisions.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
