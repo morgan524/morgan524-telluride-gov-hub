@@ -14,7 +14,8 @@
           "where": "MON, NOV 2 · 9:00 AM and MON, NOV 2 · 10:30 AM",
           "quote": "Town of Telluride · Town of Telluride /Special Meeting - Planning & Zoning Commission Chair",
           "problem": "The same P&Z Chair meeting is listed twice with identical descriptions but different times (9:00 AM and 10:30 AM). One of the two listings is a duplicate and should be removed.",
-          "suggestion": "Remove one of the two listings, keeping whichever time is correct."
+          "suggestion": "Remove one of the two listings, keeping whichever time is correct.",
+          "note": "Real error. The 9:00 AM agenda only continues the item to 10:30 AM. Fixed for future renders in content-refresh.js (keep the later same-day slot, clean the '/Special' title). This frozen draft still shows both cards. John's Oct 31 draft (014dbbb3) has the single 10:30 card; see review-followup.md."
         },
         {
           "check": "editorial",
@@ -22,7 +23,8 @@
           "where": "TUE, NOV 3 · 3:00 PM · Medical Center Regular Board Meeting",
           "quote": "A short special meeting — just 30 minutes on the books",
           "problem": "The section tag and intro both call this a 'Regular Board Meeting,' but the body describes it as a special meeting. These are contradictory; it cannot be both.",
-          "suggestion": "Reconcile the title and body — if it is a special meeting, change the tag and intro reference to 'Special Meeting'; if it is a regular meeting, remove 'special' from the body."
+          "suggestion": "Reconcile the title and body — if it is a special meeting, change the tag and intro reference to 'Special Meeting'; if it is a regular meeting, remove 'special' from the body.",
+          "note": "Real error: tellmed.org lists Nov 3 as a Special Meeting (agenda 'THD Special Bd Mtg'). Fixed for future renders in weekly-email.js (Regular -> Special for flagged specials). This draft and the pinned intro in data/week-ahead-lede.json still say 'Regular'; see review-followup.md."
         },
         {
           "check": "editorial",
