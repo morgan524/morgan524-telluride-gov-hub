@@ -1,96 +1,73 @@
 {
-  "reviewedAt": "2026-10-25 14:52",
-  "weekStart": "2026-10-26",
-  "frozenUntil": "Monday afternoon (3 PM MT)",
+  "reviewedAt": "2026-11-01 17:00",
+  "weekStart": "2026-11-02",
+  "frozenUntil": "Tuesday morning (9 AM MDT / 8 AM MST)",
   "digests": [
     {
       "key": "weekly",
       "name": "The Week Ahead Outlook",
-      "subject": "The Week Ahead Outlook - October 26 - November 1, 2026",
+      "subject": "The Week Ahead Outlook - November 2 - November 8, 2026",
       "issues": [
         {
           "check": "editorial",
           "severity": "high",
-          "where": "Intro paragraph (The Week Ahead Outlook)",
-          "quote": "the Ouray County Board of County Commissioners Work Session are on the calendar",
-          "problem": "The intro says the Ouray County BOCC Work Session is on Tuesday, but the body lists it on Wednesday, October 28.",
-          "suggestion": "Remove the Ouray County Board of County Commissioners Work Session from the Tuesday sentence in the intro, or correct the day to Wednesday.",
-          "resolved": true,
-          "resolution": "fixed: new intro (John's edits restored, intro rewritten 10/25)"
+          "where": "MON, NOV 2 · 9:00 AM and MON, NOV 2 · 10:30 AM",
+          "quote": "Town of Telluride · Town of Telluride /Special Meeting - Planning & Zoning Commission Chair",
+          "problem": "The same P&Z Chair meeting is listed twice with identical descriptions but different times (9:00 AM and 10:30 AM). One of the two listings is a duplicate and should be removed.",
+          "suggestion": "Remove one of the two listings, keeping whichever time is correct."
         },
         {
           "check": "editorial",
           "severity": "high",
-          "where": "SAT, OCT 31 · Easy Jim ~ 2 Night Halloween Run",
-          "quote": "performing across October 30 and 31, 2026",
-          "problem": "The event is listed under Saturday, October 31, but the description says it runs across October 30 and 31; October 30 is a Friday, not listed separately, yet the Saturday listing implies only Oct 31.",
-          "suggestion": "Either add a separate Friday, October 30 listing for the first night or clarify that this Saturday entry covers both nights; as written the Oct 30 date contradicts the section header of Oct 31.",
-          "resolved": true,
-          "resolution": "John's edit says it is a two-night run on Oct 30 and 31"
+          "where": "TUE, NOV 3 · 3:00 PM · Medical Center Regular Board Meeting",
+          "quote": "A short special meeting — just 30 minutes on the books",
+          "problem": "The section tag and intro both call this a 'Regular Board Meeting,' but the body describes it as a special meeting. These are contradictory; it cannot be both.",
+          "suggestion": "Reconcile the title and body — if it is a special meeting, change the tag and intro reference to 'Special Meeting'; if it is a regular meeting, remove 'special' from the body."
         },
         {
           "check": "editorial",
           "severity": "high",
-          "where": "WED, OCT 28 · Ouray County Board of County Commissioners Work Session",
-          "quote": "The Ouray County Board of County Commissioners Work Session also meets Wednesday",
-          "problem": "The intro paragraph says this work session meets Wednesday, which matches the body, but the intro also placed it on Tuesday — creating a direct contradiction within the intro itself (flagged separately above). Additionally, the Wednesday BOCC Work Session and the Tuesday BOCC Work Session are two distinct meetings both tagged 'Ouray County · Ouray County Board of County Commissioners Work Session', making it easy to confuse them; the Wednesday one could be more clearly distinguished.",
-          "suggestion": "This is a structural/labeling issue; consider distinguishing the two Ouray County BOCC Work Sessions (e.g. noting different topics) so readers are not misled into thinking it is a duplicate listing.",
-          "resolved": true,
-          "resolution": "fixed: new intro (John's edits restored, intro rewritten 10/25)"
-        },
-        {
-          "check": "editorial",
-          "severity": "high",
-          "where": "Intro paragraph",
-          "quote": "the Ouray County Board of County Commissioners Work Session are on the calendar",
-          "problem": "The intro places the Ouray County BOCC Work Session on Tuesday, but in the body it is listed on Wednesday, October 28.",
-          "suggestion": "Remove 'and the Ouray County Board of County Commissioners Work Session' from the Tuesday sentence in the intro.",
+          "where": "Intro paragraph (Tuesday)",
+          "quote": "interview board candidates",
+          "problem": "The intro says the Board of Education work session is to 'interview board candidates,' but the body specifies they are interviewing student candidates for the Student Representative seat — a materially different thing.",
+          "suggestion": "Change the intro to read 'interview student candidates for the Student Representative seat' or similar.",
           "fix": {
-            "find": "both the Ouray County Board of County Commissioners and the Ouray County Board of County Commissioners Work Session are on the calendar",
-            "replace": "the Ouray County Board of County Commissioners is on the calendar"
+            "find": "interview board candidates",
+            "replace": "interview student candidates for the Student Representative seat"
           },
-          "resolved": true,
-          "resolution": "fixed: new intro (John's edits restored, intro rewritten 10/25)"
+          "fixed": true
+        },
+        {
+          "check": "editorial",
+          "severity": "high",
+          "where": "What to Attend · THU, NOV 5 · Facing the Mourning",
+          "quote": "a free, four-week grief support series taking place every Thursday throughout September",
+          "problem": "The event is listed under November 5 but the description says it takes place 'throughout September,' contradicting the November date.",
+          "suggestion": "Update the description to reflect the correct month (November) rather than September.",
+          "fix": {
+            "find": "taking place every Thursday throughout September",
+            "replace": "taking place every Thursday throughout November"
+          },
+          "fixed": true
         },
         {
           "check": "editorial",
           "severity": "medium",
-          "where": "TUE, OCT 27 · Town of Telluride · Town Council",
-          "quote": "10:00 AM",
-          "problem": "The intro paragraph says 'Tuesday, the Telluride Town Council holds a regular meeting' but does not mention the time; the body lists 10:00 AM. Cross-checking the day: Tuesday October 27 is correct. However, the Ouray County BOCC is also listed at 9:00 AM on Tuesday and its work session at 1:30 PM — the Town Council at 10:00 AM overlaps with the BOCC; this is not itself an error. The real issue: the intro lists the Telluride Town Council before mentioning the Ouray County items, consistent with the body, so no error there. No issue confirmed here — disregard.",
-          "suggestion": "No action needed.",
-          "resolved": true,
-          "resolution": "not an error (the review said no action needed)"
-        },
-        {
-          "severity": "low",
-          "check": "link",
-          "where": "https://tellurideadaptivesports.org/donate/",
-          "url": "https://tellurideadaptivesports.org/donate/",
-          "problem": "Could not verify (403); the site may block automated checks. Click it once to be sure.",
-          "resolved": true,
-          "resolution": "not an error: link verified 10/25, the TASP donate page loads (site blocks bots)"
-        },
-        {
-          "severity": "low",
-          "check": "link",
-          "where": "https://tellurideadaptivesports.org/",
-          "url": "https://tellurideadaptivesports.org/",
-          "problem": "Could not verify (403); the site may block automated checks. Click it once to be sure.",
-          "resolved": true,
-          "resolution": "not an error: link verified 10/25, the TASP homepage loads (site blocks bots)"
+          "where": "Intro paragraph (Tuesday)",
+          "quote": "second in size only to Kaiser Permanente",
+          "problem": "CommonSpirit Health is generally ranked second among nonprofit hospital systems by number of hospitals, but Kaiser Permanente is an integrated insurer/provider, not a comparable hospital network. The standard comparison is to HCA Healthcare (for-profit) or, among nonprofits, to Ascension. This claim is misleading.",
+          "suggestion": "Remove or correct the size comparison; for example, describe CommonSpirit as 'one of the largest nonprofit hospital systems in the country' without the Kaiser comparison.",
+          "fix": {
+            "find": "second in size only to Kaiser Permanente",
+            "replace": "one of the largest nonprofit hospital systems in the country"
+          },
+          "fixed": true
         }
       ]
-    },
-    {
-      "key": "past",
-      "name": "Past Meetings",
-      "subject": "Past Meetings - October 19 - October 23, 2026",
-      "issues": []
     }
   ],
   "errors": [],
-  "total": 7,
-  "linksChecked": 56,
-  "fixed": 0
+  "total": 2,
+  "linksChecked": 55,
+  "fixed": 3
 }
