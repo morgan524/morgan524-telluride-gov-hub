@@ -6315,7 +6315,7 @@ async function syncTellurideBoardMeetings() {
   // its summary became an orphan (content review 2026-10-17). Skip a Chair
   // variant only when its parent body also meets that date.
   const bodyOf = (name) => String(name)
-    .replace(/\s*-\s*[A-Za-z]{3,9}\.?\s+\d{1,2}\s+\d{4}\s*$/, '')
+    .replace(/\s*-\s*[A-Za-z]{3,9}\.?\s+\d{1,2}\s+\d{4}(?:\s+at\s+\d{1,2}:\d{2}\s*[AP]M)?\s*$/i, '')
     .replace(/^\([^)]*\)\s*/, '')                       // "(Rescheduled to 11/2) …"
     .replace(/^.*?\s-\s(?=\S)/, (pre) => (/rescheduled|special|cancel/i.test(pre) ? '' : pre))
     .replace(/\bchair\b/ig, '')
@@ -6339,7 +6339,9 @@ async function syncTellurideBoardMeetings() {
     if (isNaN(d)) continue;
     const dateKey = `${months[d.getUTCMonth()]} ${d.getUTCDate()}, ${d.getUTCFullYear()}`;
     const title = name
-      .replace(/\s*-\s*[A-Za-z]{3,9}\.?\s+\d{1,2}\s+\d{4}\s*$/, '')   // drop CivicWeb date suffix
+      // drop CivicWeb date suffix, including the "… - Nov 02 2026 at 10:30 AM"
+      // form the clerk uses for a second same-day slot (Nov 2 2026 P&Z Chair)
+      .replace(/\s*-\s*[A-Za-z]{3,9}\.?\s+\d{1,2}\s+\d{4}(?:\s+at\s+\d{1,2}:\d{2}\s*[AP]M)?\s*$/i, '')
       // Strip a BARE "(RESCHEDULED)"/"RESCHEDULED:" tag — card shows the clean
       // name, trusting the date field for the new date. Do NOT strip when the
       // parenthetical carries more than the bare word (e.g. "(Rescheduled to
@@ -6347,12 +6349,24 @@ async function syncTellurideBoardMeetings() {
       // when this entry's own date field is still the OLD slot, and the old
       // `\)?` (optional close-paren) let the match run past the open paren
       // and eat into "to Oct 13th)", leaving a dangling "to Oct 13th) Title".
-      .replace(/^(?:\(rescheduled\)|rescheduled):?\s*/i, '')
+      // "Rescheduled/Special Meeting - …" (slash form) used to leave a bare
+      // "/Special Meeting - …" headline in the Nov 2 2026 digest.
+      .replace(/^(?:\(rescheduled\)|rescheduled)\s*[:/]?\s*/i, '')
       .trim();
     const dedup = dateKey + '|' + title.toLowerCase();
-    if (seen.has(dedup)) continue;
-    seen.add(dedup);
     const time = civicWebTime(m);
+    // Same body, same day, two CivicWeb rows: the clerk opens the first slot
+    // only to continue the item "without discussion" to a later slot (Nov 2
+    // 2026 P&Z Chair: 9:00 AM row continued to a new 10:30 AM row, which holds
+    // the real hearing and packet). Both rendered as identical cards in the
+    // digest. Keep one row, the later start time.
+    if (seen.has(dedup)) {
+      const prev = out.find((r) => (r.date + '|' + r.title.toLowerCase()) === dedup);
+      const mins = (t) => { const x = String(t || '').match(/(\d{1,2}):(\d{2})\s*([AP])M/i); return x ? ((+x[1] % 12) + (/p/i.test(x[3]) ? 12 : 0)) * 60 + +x[2] : -1; };
+      if (prev && mins(time) > mins(prev.time)) out.splice(out.indexOf(prev), 1);
+      else continue;
+    }
+    seen.add(dedup);
     out.push({
       date: dateKey,
       title,

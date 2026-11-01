@@ -201,6 +201,16 @@ const resolveEmailImg = (e) => {
 const EVENT_ARRAYS = ['WILKINSON_EVENTS','SHERIDAN_EVENTS','ALIBI_EVENTS','SHERBINO_EVENTS','NUCLA_NATURITA_EVENTS','CLUB_RED_SHOWS','FRESH_FOOD_HUB_EVENTS','COMMUNITY_EVENTS','MUSIC_ON_THE_GREEN','TELLURIDE_FARMERS_MARKET','BEACON_EVENTS','CHAMBER_MUSIC_EVENTS','TELLURIDE_SCIENCE_EVENTS','TELLURIDE_FOUNDATION_EVENTS','TELLURIDE_VENTURE_EVENTS','OURAY_COUNTY_EVENTS','NORWOOD_EVENTS','MOUNTAIN_VILLAGE_EVENTS','TELLURIDE_COM_EVENTS','KOTO_COMMUNITY_EVENTS','OURAY_RIDGWAY_EVENTS','SHERIDAN_OPERA_EVENTS'];
 const SITE = 'https://livabletelluride.org';
 const isoMT = (v) => { if (!v) return ''; const s = String(v); if (/^\d{4}-\d{2}-\d{2}$/.test(s)) return s; const d = new Date(s); return isNaN(d) ? '' : d.toLocaleDateString('en-CA', { timeZone: 'America/Denver' }); };
+// A summer series whose calendar recurrence outlived the season: Mountain
+// Village's "Movies Under the Stars" ("Saturday evenings at dusk throughout
+// the summer") landed on Nov 7 2026, the same class as the summer-only Bike &
+// Brewery Tour Morgan pulled from that draft. When the event's own text says
+// "throughout the summer" and the date is Nov–Mar, it's a stale repeat: skip
+// it rather than feature it (Sunday review 2026-11-01).
+function outOfSeasonRepeat(desc, date) {
+  const mon = +String(date).slice(5, 7);
+  return /\bthroughout the summer\b/i.test(String(desc || '')) && (mon >= 11 || mon <= 3);
+}
 let evts = [];
 for (const name of EVENT_ARRAYS) {
   const arr = G(name); if (!Array.isArray(arr)) continue;
@@ -212,6 +222,7 @@ for (const name of EVENT_ARRAYS) {
     if (/closed|closure|holiday hours/i.test(e.title)) continue;
     if (/(^|:\s*)(postponed|cancell?ed)\b/i.test(e.title)) continue;   // don't feature a postponed/canceled event
     if (MAJOR_FEST_RE.test(e.title)) continue;           // marquee festivals → featured hero, not daily picks
+    if (outOfSeasonRepeat(e.summary || e.copy || e.description || '', date)) continue;
     evts.push({
       title: titleCaseEventTitle(e.title), date,
       href: e.link || e.href || e.url || '',
@@ -478,7 +489,14 @@ for (const fn of MEETING_FNS) {
     const _p = (n) => String(n).padStart(2, '0');
     const date = m.eventDate.getFullYear() + '-' + _p(m.eventDate.getMonth() + 1) + '-' + _p(m.eventDate.getDate());
     if (!inWeek(date)) continue;
-    const name = (m.title || '').replace(/\s*--?\s*Special Meeting$/i, '').trim();
+    // Getters flag special meetings with a " -- Special Meeting" suffix, which
+    // is dropped here. When the base title is the board's default "Regular …"
+    // name (tellmed's Nov 3 2026 special posted with no title of its own), say
+    // "Special" instead — "Regular Board Meeting" over "A short special
+    // meeting…" read as a contradiction (Sunday review 2026-11-01).
+    const rawTitle = m.title || '';
+    let name = rawTitle.replace(/\s*--?\s*Special Meeting$/i, '').trim();
+    if (name !== rawTitle.trim()) name = name.replace(/\bRegular\b/, 'Special');
     const src = m.sourceLabel || m.source || '';
     if (isExcludedMeeting(m.source, date, m.title || name)) continue;   // specific dated meetings hidden from the digest (see MEETING_EXCLUDE)
     // Dedup key: alphabetise the title's word tokens before joining so word-order
