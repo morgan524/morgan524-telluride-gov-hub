@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-11-01",
+    "title": "One lot line erased on W. Columbia",
+    "body": "A minor subdivision application for 510 W Columbia Avenue would vacate the lot line between two existing parcels and merge them into a single roughly 5,625-square-foot lot — Lot 40R. Straightforward on paper. But combining parcels can change what's buildable, and neighbors tend to notice when a lot suddenly has more room to work with. Some will see a reasonable consolidation of property a landowner already holds. Others will wonder what comes next on a freshly enlarged footprint.\n\nWhat's your read — routine paperwork, or does it matter?",
+    "choices": [
+      "Routine, no big deal",
+      "Worth watching closely",
+      "Depends what gets built",
+      "It's complicated"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-10-31",
     "title": "A height variance before it's built",
     "body": "The Design Review Board is taking up a height variance request for an undeveloped lot on Mountain Village Blvd. Nothing's approved yet — it's on the agenda, not in the books.\n\nThat's where the split usually starts. One side figures variances on empty lots are exactly the right moment to ask: before anything goes up, before neighbors are staring at it. The other side worries that granting height exceptions on undeveloped land sets a precedent that quietly rewrites what the rules actually mean.\n\nSo — is a pre-construction variance the responsible time to be flexible, or the riskiest?",
@@ -418,21 +433,6 @@
       "Fold them in and move on",
       "Push back before budgeting",
       "Depends on the cost",
-      "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-10-02",
-    "title": "County cops for the city — whose call is it?",
-    "body": "Ouray County and Ouray City are sitting down together to work through a draft Intergovernmental Agreement that would hand full law enforcement services for the city over to the county — with a proposed compensation schedule attached — starting January 1, 2027. Nothing's signed yet; this is a joint work session. Some will see consolidation as smart, lean government. Others will ask what the city gives up when it no longer runs its own policing. So: is merging city law enforcement into the county a practical move, or does it cost the city something harder to get back?",
-    "choices": [
-      "Smart consolidation",
-      "City loses too much",
-      "Depends on the price tag",
       "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",

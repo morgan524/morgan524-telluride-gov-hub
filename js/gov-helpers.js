@@ -489,6 +489,14 @@ const DEEP_DIVE_UPDATES = [];
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-11-01",
+    title: "One lot line erased on W. Columbia",
+    body: "A minor subdivision application for 510 W Columbia Avenue would vacate the lot line between two existing parcels and merge them into a single roughly 5,625-square-foot lot — Lot 40R. Straightforward on paper. But combining parcels can change what's buildable, and neighbors tend to notice when a lot suddenly has more room to work with. Some will see a reasonable consolidation of property a landowner already holds. Others will wonder what comes next on a freshly enlarged footprint.\n\nWhat's your read — routine paperwork, or does it matter?",
+    choices: ["Routine, no big deal", "Worth watching closely", "Depends what gets built", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-10-31",
     title: "A height variance before it's built",
     body: "The Design Review Board is taking up a height variance request for an undeveloped lot on Mountain Village Blvd. Nothing's approved yet — it's on the agenda, not in the books.\n\nThat's where the split usually starts. One side figures variances on empty lots are exactly the right moment to ask: before anything goes up, before neighbors are staring at it. The other side worries that granting height exceptions on undeveloped land sets a precedent that quietly rewrites what the rules actually mean.\n\nSo — is a pre-construction variance the responsible time to be flexible, or the riskiest?",
@@ -717,14 +725,6 @@ const DAILY_QUESTIONS = [
     title: "Budget day — and a new power bill fee in the mix",
     body: "Town Council is holding a special budget session on October 13. Two things are already in the room before anyone sits down: the wildfire resiliency code changes passed in August, which may carry implementation costs, and an upcoming paper billing fee from San Miguel Power Association that could affect town finances.\n\nSome residents will say plan around it — it's a small fee and the resiliency work is overdue. Others will ask why outside charges get folded into a town budget without a harder look. Neither position is unreasonable.\n\nSo: when outside costs land on the town's plate during budget season, how should Council handle them?",
     choices: ["Fold them in and move on", "Push back before budgeting", "Depends on the cost", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
-  },
-  {
-    date: "2026-10-02",
-    title: "County cops for the city — whose call is it?",
-    body: "Ouray County and Ouray City are sitting down together to work through a draft Intergovernmental Agreement that would hand full law enforcement services for the city over to the county — with a proposed compensation schedule attached — starting January 1, 2027. Nothing's signed yet; this is a joint work session. Some will see consolidation as smart, lean government. Others will ask what the city gives up when it no longer runs its own policing. So: is merging city law enforcement into the county a practical move, or does it cost the city something harder to get back?",
-    choices: ["Smart consolidation", "City loses too much", "Depends on the price tag", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
   }
@@ -2685,6 +2685,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "‘We’re in a vast archaeological treasure trove’",
+    source: "Telluride Times",
+    date: "November 1, 2026",
+    firstSeen: "2026-11-01",
+    newsTopic: "community",
+    copy: "Rob Schultheis, a longtime Telluride resident and journalist, says he's been finding what he believes are Ice Age mammoth carvings across the valley for the past three years — in Lawson Hill, near Ames, near Ilium. He thinks they were hunting talismans, and says once you know what to look for, they're hard to miss.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_75f8d2ec-c830-45a2-88ff-aa3bb45759cf.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/03/b03d736c-2c8f-464e-9aa4-134dd9bf03e5/6ae504564d5bd.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Bodies of 2 students are recovered after they died on hiking trip",
     source: "Telluride Times",
     date: "November 1, 2026",
@@ -2757,18 +2769,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Commissioners approve funding request from West End Family Link",
-    source: "Telluride Times",
-    date: "October 29, 2026",
-    firstSeen: "2026-10-30",
-    newsTopic: "government",
-    copy: "West End Family Link Center in Nucla, which serves roughly 2,170 residents across a wide stretch of Montrose and San Miguel Counties, closed in August due to budget shortfalls before reopening with $75,000 in emergency Montrose County funding. San Miguel County commissioners unanimously approved an additional $12,000 request to help cover operating costs and food pantry needs. The pantry has seen a 35% jump in demand from Norwood residents and delivers about 75 boxes monthly to homebound individuals — now running on a staff of three, down from seven.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_a0411372-6f6e-41c8-a676-6b9a36eff8a6.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/d9/7d9019f0-92c6-4b3e-9836-b55fba0afe85/6adba938ecc47.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Where art meets community",
     source: "Telluride Times",
     date: "October 29, 2026",
@@ -2778,6 +2778,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/arts_and_entertainment/article_0719d21b-d568-4def-b876-96777569136e.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/e8/5e824b21-bafa-4666-829d-0d636a1c0430/6ae3911727d6d.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Commissioners approve funding request from West End Family Link",
+    source: "Telluride Times",
+    date: "October 29, 2026",
+    firstSeen: "2026-10-30",
+    newsTopic: "government",
+    copy: "West End Family Link Center in Nucla, which serves roughly 2,170 residents across a wide stretch of Montrose and San Miguel Counties, closed in August due to budget shortfalls before reopening with $75,000 in emergency Montrose County funding. San Miguel County commissioners unanimously approved an additional $12,000 request to help cover operating costs and food pantry needs. The pantry has seen a 35% jump in demand from Norwood residents and delivers about 75 boxes monthly to homebound individuals — now running on a staff of three, down from seven.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_a0411372-6f6e-41c8-a676-6b9a36eff8a6.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/d9/7d9019f0-92c6-4b3e-9836-b55fba0afe85/6adba938ecc47.image.jpg",
     imgHiRes: true
   },
   {
@@ -4467,17 +4479,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "KOTO Halloween Bash",
-    link: "https://koto.org/event/koto-halloween-bash/",
-    description: "It's spooky season and that means it's time for the greatest off-season tradition in Telluride history – THE KOTO HALLOWEEN BASH! This year, we're letting our freak flags fly at The Alibi on Saturday, October 31st! Live music from Rado starts at 9 p.m. Costume Contest with cash prizes! Tickets are $20 in advance at alibitelluride.com and $25 at the door.",
-    pubDate: "2026-10-31T21:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "The Alibi, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/10/KOTO-Halloween-RADO-poster-9.23-1-scaled.jpg"
-  },
-  {
     title: "Tea and Tarot",
     link: "https://koto.org/event/tea-and-tarot/2026-11-01/",
     description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
@@ -4998,15 +4999,15 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Yogalates with Lauren",
-    link: "https://telluridelibrary.libcal.com/event/17884869?hs=a",
-    description: "12:00 PM – 1:00 PM · Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome. Mu&eacute;vase, respire y ll&eacute;nese de energ&iacute;a en esta din&aacute;mica clase biling&uuml;e, dirigido por Lauren Norton, dise&ntilde;ada para fortalecer su cuerpo y mente. Combinando la fuerza y fluidez del pilates, el ritmo y la energ&iacute;a de la danza, y la presencia equilibrante del yoga y la respiraci&oacute;n, esta sesi&oacute;n le dejar&aacute; sinti&eacute;ndose fuerte, en armon&iacute;a y revitalizado/a. …",
-    pubDate: "2026-10-31T18:00:00.000Z",
+    title: "Tea and Tarot",
+    link: "https://telluridelibrary.libcal.com/event/17347286?hs=a",
+    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
+    pubDate: "2026-11-01T21:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_12_05_46.jpg"
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
   }
 ];
 
@@ -5538,151 +5539,6 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "OPL Read a Book - Get a Pumpkin",
-    link: "https://events.ourayridgwayevents.com/event/opl-read-a-book-get-a-pumpkin",
-    description: "Children up to 18 years may come to the library and describe a book they have read. In exchange, they will receive a coupon for a free pumpkin from Ouray Grocery as well as a decorating kit. This is available until October 31.",
-    pubDate: "2026-10-31T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Public Library",
-    imageUrl: "https://localist-images.azureedge.net/photos/54188249807949/huge/1a5f21ca0ac1cdb0454f5abc2853e960332eb048.jpg"
-  },
-  {
-    title: "Ouray MS Boys Basketball VS Dolores",
-    link: "https://events.ourayridgwayevents.com/event/ouray-ms-boys-basketball-vs-dolores",
-    description: "The Ouray Middle School boys basketball team hosts Dolores at Ouray School, with C Team, B Team, and A Team games scheduled sequentially throughout the afternoon. The event features three levels of middle school competition, with tip-off times starting at 11:00 a.m. and the A Team game expected to begin around 1:00 p.m.",
-    pubDate: "2026-10-31T17:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray School",
-    imageUrl: "https://localist-images.azureedge.net/photos/54295159093943/huge/67505924eb869addcb5a43c8743993bdc858d49e.jpg"
-  },
-  {
-    title: "Happy Halloween",
-    link: "https://events.ourayridgwayevents.com/event/happy-halloween",
-    description: "12:30 - 2 PM | Pumpkin Float and fall photo opportunity at the Ouray Hot Springs 12:30 pm | There will be two groups kids 0-6 years old and then 7-16. If there are people 17 and up, you can join the big kids group after they have time to find pumpkins. It will run continuously until we are out of pumpkins or 2 pm. 1:00 - 4:30 PM | Pumpkin decorating in Fellin Park 3:30 - 4 PM | Costume Contest (Prizes for 1st, 2nd, and 3rd place) in Fellin Park Little Ghouls: Ages 0–5 1st: $50 Gift Card 2nd: $20 Gift Card 3rd: $10 Gift Card Kids & Teens: Ages 6–17 1st: $50 Gift Card 2nd: $20 Gift Card 3rd: $10 Gift Card Adults: Ages 18+ 1st: $50 Gift Card Plus a 10-punch hot springs pool pass 2nd: $20 Gift Card 3rd: $10 Gift Card 4 - 6 …",
-    pubDate: "2026-10-31T18:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray, Colorado",
-    imageUrl: "https://localist-images.azureedge.net/photos/54109990596297/huge/f5cfa2bfb88f929af55326a4cdf7924d8d4cea40.jpg"
-  },
-  {
-    title: "Pumpkin Float",
-    link: "https://events.ourayridgwayevents.com/event/pumpkin-float",
-    description: "From 12:30 - 2 pm at the Ouray Hot Springs we will have the annual pumpkin float! Free with entry 12:30 pm | There will be two groups kids 0-6 years old and then 7-16. If there are people 17 and up, you can join the big kids group after they have time to find pumpkins. It will run continuously until we are out of pumpkins or 2 pm. There will also be an area for a fun fall photo backdrop. Be sure to take your pumpkin to Fellin Park afterward to do some fun decorating!",
-    pubDate: "2026-10-31T18:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Hot Springs",
-    imageUrl: "https://localist-images.azureedge.net/photos/54116712387130/huge/d0c1ca486ffed76cfb726c15e726bc9bd6cfaeb5.jpg"
-  },
-  {
-    title: "Pumpkin Decorating",
-    link: "https://events.ourayridgwayevents.com/event/pumpkin-decorating",
-    description: "Join us in Fellin Park from 1 pm - 4:30 pm for pumpkin decorating! Whether you get your pumpkin from the pumpkin float at the Ouray Hot Springs from 12:30 - 2:00 pm or you bring your own, we will have fun decorating supplies for the pumpkins. If you would like to bring your own carving supplies, you are more than welcome.",
-    pubDate: "2026-10-31T19:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Fellin Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/54116757876412/huge/0765e06098445336f8065bfe4b16b8c9ed0a7462.jpg"
-  },
-  {
-    title: "Guided Tour: Historic Beaumont Hotel & Spa",
-    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
-    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
-    pubDate: "2026-10-31T19:30:00.000Z",
-    endDate: "2026-12-30",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Beaumont Hotel & Spa",
-    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
-  },
-  {
-    title: "Every Sat. Floating Sound Bath",
-    link: "https://events.ourayridgwayevents.com/event/floating-sound-bath-4324",
-    description: "A weekly group float session held every Saturday at Orvis Hot Springs, combining warm-water aquatic massage with live sound therapy including vocals and singing bowls. The experience is offered on a sliding scale, and advance reservations are required — contact Vanessa W. at 720-470-2823 or via Venmo to secure a spot.",
-    pubDate: "2026-10-31T21:00:00.000Z",
-    endDate: "2026-12-26",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Orvis Hot Springs",
-    imageUrl: "https://localist-images.azureedge.net/photos/54329446861527/huge/53a8f8ffae924adab852a4b581b6b105251c9b9b.jpg"
-  },
-  {
-    title: "Halloween Costume Contest",
-    link: "https://events.ourayridgwayevents.com/event/halloween-costume-contest",
-    description: "Join us in Fellin Park to show off your Halloween spirit from 3:30 - 4 PM | Costume Contest (Prizes for 1st, 2nd, and 3rd place) in Fellin Park Little Ghouls: Ages 0–5 1st: $50 Gift Card 2nd: $20 Gift Card 3rd: $10 Gift Card Kids & Teens: Ages 6–17 1st: $50 Gift Card 2nd: $20 Gift Card 3rd: $10 Gift Card Adults: Ages 18+ 1st: $50 Gift Card + 10 Punch Pass to the Ouray Hot Springs 2nd: $20 Gift Card 3rd: $10 Gift Card Show up a little before 3:30 pm to line up in your group and we will do a parade in the park for the judges to pick the top costumes for the winners.",
-    pubDate: "2026-10-31T21:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Fellin Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/54116796135497/huge/c0d44c94cd761974941f4777c2aa7195fb9577a6.jpg"
-  },
-  {
-    title: "Trick or Treat: Witches @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/trick-or-treat-witches-the-wright",
-    description: "WHEN? Saturday, October 31 4:00–7:00 PM WHERE? Wright Opera House 472 Main St., Ouray, Colorado ABOUT THE EVENT The Spooky Witches and Warlocks are taking over the Wright Opera House for Halloween. Bring the family downtown for Trick or Treat: Witches at the Wright. Stop by for candy, a little friendly fright, and Halloween fun inside one of Ouray’s most historic buildings. HOW? Free and open to the public Family-friendly trick-or-treating Candy while supplies last Halloween fun at the historic Wright Opera House in downtown Ouray.",
-    pubDate: "2026-10-31T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/54035396754488/huge/0ff17d6c525d45e896d55bfebccad3217d6391db.jpg"
-  },
-  {
-    title: "Trick-Or-Treat Street",
-    link: "https://events.ourayridgwayevents.com/event/trick-or-treat-street",
-    description: "Trick-or-Treat Street is a Halloween community event on Main Street in Ouray, where local businesses open their doors to trick-or-treaters. It's a festive neighborhood tradition welcoming families and kids to celebrate the holiday in downtown Ouray.",
-    pubDate: "2026-10-31T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray, Colorado",
-    imageUrl: "https://localist-images.azureedge.net/photos/54116843513915/huge/8506e24761ad8734bd1aa94d1daa32c49e44a0c9.jpg"
-  },
-  {
-    title: "Casper: Movie Night @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/casper-movie-night-the-wright",
-    description: "A Halloween screening of the 1995 PG film *Casper* at the Wright Opera House in Ouray, with doors opening at 6:30 PM and the movie beginning at 7:00 PM. The film runs approximately one hour and forty minutes and follows a young girl and her paranormal-therapist father as they encounter the friendly ghost Casper.",
-    pubDate: "2026-11-01T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/54035420061248/huge/d9483f91f6cbf291d9c98abc718e1ec3869ac8ae.jpg"
-  },
-  {
-    title: "Synth-O-Ween",
-    link: "https://events.ourayridgwayevents.com/event/synth-o-ween",
-    description: "A ghoulish Halloween dance party at the Adobe Inn. DJ's, a live set by synth legend BOB SYNC. Coustume contest with cash prizes. Late night food.",
-    pubDate: "2026-11-01T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Adobe Inn",
-    imageUrl: "https://localist-images.azureedge.net/photos/53888467422235/huge/f256b058d12c444dee76fbf1c905276c3e76b084.jpg"
-  },
-  {
-    title: "Easy Jim ~ 2 Night Halloween Run at The Sherbino",
-    link: "https://events.ourayridgwayevents.com/event/easy-jim-2-night-halloween-run-at-the-sherbino",
-    description: "Easy Jim Halloween Run Brings Two Nights of Grateful Dead Celebrations to the Sherbino! October 30 & 31, 2026 • 8:00 p.m. nightly Sherbino Theatre | Ridgway, Colorado Some concerts are just concerts. This is a Run! The Sherbino and Pickin’ Productions invite Deadheads, music lovers, Halloween enthusiasts, and anyone looking for an unforgettable weekend to join us for the Easy Jim Halloween Run—a special two-night celebration of the music, community, and spirit of the Grateful Dead on Friday, October 30 and Saturday, October 31. Both performances begin at 8:00 p.m. Within Grateful Dead and jam-band culture, Halloween shows have become legendary. Alongside New Year’s Eve, they’re among the most anticipated performances of the year—filled with costumes, surprises, dancing, and the kind of musical spontaneity that has kept fans traveling from show to show for generations. That’s exactly what makes a Run so special. …",
-    pubDate: "2026-11-01T02:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Sherbino",
-    imageUrl: "https://localist-images.azureedge.net/photos/53551962688679/huge/530cd950230f451d84a4795936d5b7a904b733f2.jpg"
-  },
-  {
     title: "LIVE JAZZ IN THE GARDEN! Zan Waller & Stefan Davenport",
     link: "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
     description: "Zan Waller on trumpet and Stefan Davenport on guitar perform as Standard Alchemy, playing swing, cocktail jazz, and Great American Songbook standards in Chloe's Secret Garden. The duo brings a refined, relaxed musical atmosphere to this recurring Sunday afternoon series at Chloe's Charcuterie & Wine.",
@@ -5752,6 +5608,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Weehawken Ridgway (Old Schoolhouse)",
     imageUrl: "https://localist-images.azureedge.net/photos/54236057466628/huge/10f1882bcc97fe1b7ad4209e2431edd0781a413f.jpg"
+  },
+  {
+    title: "Guided Tour: Historic Beaumont Hotel & Spa",
+    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
+    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
+    pubDate: "2026-11-03T20:30:00.000Z",
+    endDate: "2026-12-30",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Beaumont Hotel & Spa",
+    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
   },
   {
     title: "Brooke White",
@@ -5870,6 +5738,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/54285254769122/huge/fef689b0cf33c59a41987d09be3ce720b1fe14db.jpg"
+  },
+  {
+    title: "Every Sat. Floating Sound Bath",
+    link: "https://events.ourayridgwayevents.com/event/floating-sound-bath-4324",
+    description: "A recurring Saturday program at Orvis Hot Springs combining group floating in warm mineral waters with live sound therapy, including vocals and singing bowls. Participants receive gentle aquatic massage while immersed in sound; sliding-scale pricing applies and advance reservation is required.",
+    pubDate: "2026-11-05T22:00:00.000Z",
+    endDate: "2026-12-26",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Orvis Hot Springs",
+    imageUrl: "https://localist-images.azureedge.net/photos/54329446861527/huge/53a8f8ffae924adab852a4b581b6b105251c9b9b.jpg"
   },
   {
     title: "After School Art for Ages 5-8",
@@ -6645,7 +6525,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/winter-break-ridgway-schools",
     description: "Winter break for Ridgway Schools begins on this date, giving students and families time off during the holiday season. The break is a scheduled pause in the academic calendar for the Ridgway school district.",
     pubDate: "2026-12-21T07:00:00.000Z",
-    endDate: "2026-12-30",
+    endDate: "2026-12-31",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -7031,6 +6911,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
+  },
+  {
+    title: "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
+    link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
+    description: "This eco-grief workshop, hosted in Mountain Village, brings together Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library to explore the intersection of grief and gratitude in the face of environmental change. The program offers participants a space to process loss and find meaning in their relationship with the natural world.",
+    pubDate: "2026-12-01T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
   }
 ];
 

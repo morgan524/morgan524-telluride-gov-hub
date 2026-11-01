@@ -6,41 +6,28 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Nov 2026 05:19:02 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 12:58:49 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Nov 1–7</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-43</guid>
-      <pubDate>Sun, 01 Nov 2026 05:19:02 GMT</pubDate>
-      <description><![CDATA[The biggest thing on the civic calendar this week is a special meeting at Telluride Medical Center where the board takes up a proposal to engage Jensen Partners for due diligence with CommonSpirit Health — one of the country's largest hospital systems — a signal that a major affiliation or transaction may be in motion. Alongside that, Ouray City Council holds a public hearing on its 2027 budget and votes on utility rate ordinances, Telluride's Ecology Commission takes up a draft ordinance that would phase out gas-powered lawn equipment in town by 2030, and Mountainfilm for Locals runs Monday and Tuesday for those who haven't caught it yet.]]></description>
+      <pubDate>Sun, 01 Nov 2026 12:58:49 GMT</pubDate>
+      <description><![CDATA[The biggest thing to watch this week is the Telluride Medical Center's special board meeting on Monday, where trustees take up a formal due diligence engagement with CommonSpirit Health — one of the country's largest hospital systems — a move that signals a potential partnership or affiliation is being seriously evaluated. Also on the agenda around the valley: Ouray City Council holds a public hearing on its 2027 budget and votes on utility rate ordinances, Telluride's Ecology Commission takes up a draft ordinance to phase out gas-powered lawn equipment by 2028–2030, and Mountainfilm for Locals runs Monday and Tuesday for those looking for a reason to get out of the house.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
-      <title>[Sun, Nov 1] KOTO Halloween Bash</title>
-      <link>https://koto.org/event/koto-halloween-bash/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/koto%20halloween%20bash%7C2026-11-01</guid>
-      <pubDate>Sun, 01 Nov 2026 03:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/10/KOTO-Halloween-RADO-poster-9.23-1-scaled.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 The Alibi, Telluride
-
-It's spooky season and that means it's time for the greatest off-season tradition in Telluride history – THE KOTO HALLOWEEN BASH! This year, we're letting our freak flags fly at The Alibi on Saturday, October 31st! Live music from Rado starts at 9 p.m. Costume Contest with cash prizes! Tickets are $20 in advance at alibitelluride.com and $25 at the door.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/10/KOTO-Halloween-RADO-poster-9.23-1-scaled.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
       <title>[Sun, Nov 1] Tea and Tarot</title>
-      <link>https://koto.org/event/tea-and-tarot/2026-11-01/</link>
+      <link>https://telluridelibrary.libcal.com/event/17347286?hs=a</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/tea%20and%20tarot%7C2026-11-01</guid>
       <pubDate>Sun, 01 Nov 2026 21:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/04/tea-1.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Wilkinson Public Library, Telluride
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Telluride Room
 
-Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2025/04/tea-1.jpg" medium="image" />
+2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance. Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png" medium="image" />
       <category>Community Event</category>
-      <category>KOTO</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Meeting] Rescheduled/Special Meeting - Planning &amp; Zoning Commission Chair - Nov 02 2026 — 2026-11-02</title>
@@ -84,7 +71,7 @@ The November 2, 2026 Planning & Zoning Commission Chair special meeting agenda h
 
 A single item is on this rescheduled P&Z Chair meeting: a minor subdivision at 510 W Columbia Avenue / 129 N Townsend Street. The application asks to vacate the internal lot line between Lots 39 and 40 in Block 9 of the West Telluride Addition, merging them into one roughly 5,625-square-foot lot designated Lot 40R. The property sits in the Historic Residential zone district. Nothing of broad public consequence is on the agenda beyond this routine lot consolidation.
 
-⚡ Why it matters: P&Z Chair decides lot-line vacation merging two parcels in Historic Residential zone.]]></description>
+⚡ Why it matters: P&Z Chair votes on merging two lots in Telluride's Historic Residential zone.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -97,7 +84,7 @@ A single item is on this rescheduled P&Z Chair meeting: a minor subdivision at 5
 
 The main business this evening is the 2027 budget. Council holds a public hearing on the proposed City of Ouray budget and takes up two ordinances on second reading: Ordinance 7 sets the 2027 rates for water, sewer, surcharge, refuse, and recycling; Ordinance 8 amends the municipal code to add a rate category specifically for light industrial operations — a new wrinkle in how the city classifies utility customers. Council also considers ratifying a Caterpillar equipment lease-purchase agreement and approving an MOU with the Ridgway Fire Protection District covering fire, EMS, training, and operational cooperation. On the liquor license side, The Yankee Girl Café has a new application before the council. The consent agenda includes four appointments to the Main Street Committee and a liquor license renewal for Ouray Lodge No. 492.
 
-⚡ Why it matters: Public hearing on Ouray's 2027 budget; council votes on utility rate ordinances.]]></description>
+⚡ Why it matters: Public hearing and second-reading votes on Ouray's 2027 budget and utility rates.]]></description>
       <category>Meeting</category>
       <category>ouraycity</category>
     </item>
@@ -123,7 +110,7 @@ Join Mountainfilm for Mountainfilm for Locals, a free screening for our local co
 
 A short special meeting — just 30 minutes on the books — with one substantive item: a proposal from Jensen Partners to provide support through the due diligence process with CommonSpirit. CommonSpirit Health is one of the largest nonprofit hospital systems in the country, and any formal due diligence engagement signals that a potential partnership, affiliation, or transaction is being evaluated seriously. The board meets at the Wellness Annex (500 W Pacific Ave) and via Zoom at 3:00 PM. The next regular board meeting is November 19.
 
-⚡ Why it matters: Board votes on due diligence engagement with major hospital system CommonSpirit Health.]]></description>
+⚡ Why it matters: Board votes on CommonSpirit due diligence — a potential hospital affiliation is at stake.]]></description>
       <category>Meeting</category>
       <category>Telluride Medical Center</category>
     </item>

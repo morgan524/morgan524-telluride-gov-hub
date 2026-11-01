@@ -1,14 +1,14 @@
 {
-  "hash": "d02970dbaf8719953eddefb7acfe50fff5fa676a",
-  "lede": "The biggest thing on the civic calendar this week is a special meeting at Telluride Medical Center where the board takes up a proposal to engage Jensen Partners for due diligence with CommonSpirit Health — one of the country's largest hospital systems — a signal that a major affiliation or transaction may be in motion. Alongside that, Ouray City Council holds a public hearing on its 2027 budget and votes on utility rate ordinances, Telluride's Ecology Commission takes up a draft ordinance that would phase out gas-powered lawn equipment in town by 2030, and Mountainfilm for Locals runs Monday and Tuesday for those who haven't caught it yet.",
+  "hash": "d44dbf0830e78efd2a035fcbe18d0d0549b2fc89",
+  "lede": "The biggest thing to watch this week is the Telluride Medical Center's special board meeting on Monday, where trustees take up a formal due diligence engagement with CommonSpirit Health — one of the country's largest hospital systems — a move that signals a potential partnership or affiliation is being seriously evaluated. Also on the agenda around the valley: Ouray City Council holds a public hearing on its 2027 budget and votes on utility rate ordinances, Telluride's Ecology Commission takes up a draft ordinance to phase out gas-powered lawn equipment by 2028–2030, and Mountainfilm for Locals runs Monday and Tuesday for those looking for a reason to get out of the house.",
   "notable": [
     {
       "id": 5,
-      "stake": "Board votes on due diligence engagement with major hospital system CommonSpirit Health."
+      "stake": "Board votes on CommonSpirit due diligence — a potential hospital affiliation is at stake."
     },
     {
       "id": 4,
-      "stake": "Public hearing on Ouray's 2027 budget; council votes on utility rate ordinances."
+      "stake": "Public hearing and second-reading votes on Ouray's 2027 budget and utility rates."
     },
     {
       "id": 7,
@@ -16,7 +16,7 @@
     },
     {
       "id": 3,
-      "stake": "P&Z Chair decides lot-line vacation merging two parcels in Historic Residential zone."
+      "stake": "P&Z Chair votes on merging two lots in Telluride's Historic Residential zone."
     }
   ]
 }
