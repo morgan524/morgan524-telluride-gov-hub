@@ -1,25 +1,15 @@
 {
-  "updated": "2026-10-01",
+  "updated": "2026-11-01",
   "items": {
     "telluride:summaries": {
       "level": "YELLOW",
       "since": "2026-09-29",
-      "what": "Town of Telluride: 3 meeting(s) this week have an agenda but no summary"
+      "what": "Town of Telluride: 2 meeting(s) this week have an agenda but no summary"
     },
-    "county:summaries": {
+    "norwood:packets": {
       "level": "YELLOW",
-      "since": "2026-10-01",
-      "what": "San Miguel County: 1 meeting(s) this week have an agenda but no summary"
-    },
-    "telluride:probe-cap": {
-      "level": "YELLOW",
-      "since": "2026-10-01",
-      "what": "telluride: API returned exactly 15 items — check for a silent page cap"
-    },
-    "airport:probe-http": {
-      "level": "RED",
-      "since": "2026-10-01",
-      "what": "airport: listing HTTP 403"
+      "since": "2026-11-01",
+      "what": "Town of Norwood: agendas found but no packets on 2 recent meetings"
     },
     "votes:freshness": {
       "level": "YELLOW",
