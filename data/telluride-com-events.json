@@ -1,17 +1,5 @@
 [
   {
-    "title": "Lamplight Cemetery Tour",
-    "link": "https://www.telluride.com/event/lamplight-cemetery-tour/",
-    "description": "Explore the historic Lone Tree Cemetery by the eeriness of lamplight. This tour takes place in the evening and recounts …",
-    "pubDate": "2026-10-23",
-    "endDate": "2026-10-30",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/49427/2019-lamplight-cemetery-tours-website-header.800x533.webp"
-  },
-  {
     "title": "Gondola Closed for Maintenance",
     "link": "https://www.telluride.com/event/gondola-closes-for-maintenance/",
     "description": "The gondola will be closed for maintenance starting October 26 and will re-open for winter at 6:30 a.m. on November 20, …",
@@ -34,39 +22,6 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63749/yf_thundertix-ezgif_com-webp-to-jpg-converter.800x533.webp"
-  },
-  {
-    "title": "Halloween Parade",
-    "link": "https://www.telluride.com/event/halloween-parade/",
-    "description": "Get in the Halloween spirit with the annual Telluride Halloween Parade! Local kids will be dressed up in their costumes …",
-    "pubDate": "2026-10-30",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/50183/img_7441.800x533.webp"
-  },
-  {
-    "title": "Mountain Sprouts Halloween Party & Fall Fundraiser",
-    "link": "https://www.telluride.com/event/mountain-sprouts-halloween-party-fall-fundraiser/",
-    "description": "Mountain Sprouts Preschool is hosting a Halloween Dance Disco at The Patio on October 30th from 4–6pm, right after …",
-    "pubDate": "2026-10-30",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63836/img_0833.800x533.webp"
-  },
-  {
-    "title": "Halloween Movie Matinee: Addams Family",
-    "link": "https://www.telluride.com/event/halloween-movie-matinee-addams-family/",
-    "description": "Join the Wilkinson Public Library for an after school showing of the Addams Family (animated version) to get in the …",
-    "pubDate": "2026-10-30",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/64047/2026_09_19_07_57_49.800x533.webp"
   },
   {
     "title": "KOTO Halloween Bash",
@@ -386,5 +341,27 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63696/sabotage_-_sheridan_opera_house_2.800x533.webp"
+  },
+  {
+    "title": "New Year&#039;s Eve Torchlight Parade & Fireworks",
+    "link": "https://www.telluride.com/event/new-years-eve-torchlight-parade-fireworks/",
+    "description": "Watch as Telluride Ski and Snowboard School instructors meander down the mountain with torches to light up the …",
+    "pubDate": "2026-12-31",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/43841/torch2-2100x1400-0321debd-b521-4a85-89e7-ae7e6aba206f.800x533.webp"
+  },
+  {
+    "title": "Sixtiesmania",
+    "link": "https://www.telluride.com/event/sixtiesmania/",
+    "description": "Rewind to the ’60s! Break out the mod dresses, go-go boots, velvet sport coats and big hair.\n\nRing in 2027 at a …",
+    "pubDate": "2026-12-31",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63699/soh_photo_1.800x533.webp"
   }
 ]

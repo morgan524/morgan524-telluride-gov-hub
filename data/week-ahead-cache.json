@@ -1,30 +1,22 @@
 {
-  "hash": "b9f824795bf8ad6fa726c34bd1e01b10392313db",
-  "lede": "The biggest thing to watch this week is the Telluride Medical Center's special board meeting on Monday, where a proposal to engage Jensen Partners for due diligence with CommonSpirit Health — one of the country's largest hospital systems — is on the table, a signal that a major affiliation decision may be taking shape. Ouray City Council is also holding a public hearing on its 2027 budget and voting on utility rate ordinances on second reading. Closer to home, the Ecology Commission takes up a draft ordinance that would ban gas-powered lawn and garden equipment in town limits, with leaf blowers first on the chopping block by 2028.",
+  "hash": "d02970dbaf8719953eddefb7acfe50fff5fa676a",
+  "lede": "The biggest thing on the civic calendar this week is a special meeting at Telluride Medical Center where the board takes up a proposal to engage Jensen Partners for due diligence with CommonSpirit Health — one of the country's largest hospital systems — a signal that a major affiliation or transaction may be in motion. Alongside that, Ouray City Council holds a public hearing on its 2027 budget and votes on utility rate ordinances, Telluride's Ecology Commission takes up a draft ordinance that would phase out gas-powered lawn equipment in town by 2030, and Mountainfilm for Locals runs Monday and Tuesday for those who haven't caught it yet.",
   "notable": [
     {
       "id": 5,
-      "stake": "Board votes on CommonSpirit due diligence — potential hospital affiliation in play."
-    },
-    {
-      "id": 6,
-      "stake": "Same CommonSpirit due diligence vote; residents should track any hospital partnership decision."
-    },
-    {
-      "id": 3,
-      "stake": "P&Z Chair rules on lot-line vacation in Historic Residential zone — sets merger precedent."
+      "stake": "Board votes on due diligence engagement with major hospital system CommonSpirit Health."
     },
     {
       "id": 4,
-      "stake": "Ouray public hearing on 2027 budget; second-reading votes on utility and industrial rate ordinances."
+      "stake": "Public hearing on Ouray's 2027 budget; council votes on utility rate ordinances."
     },
     {
       "id": 7,
       "stake": "Draft ordinance would ban gas-powered lawn equipment in Telluride by 2028–2030."
     },
     {
-      "id": 8,
-      "stake": "Commission considers Jazz Festival date change and consequential special-events calendar decisions."
+      "id": 3,
+      "stake": "P&Z Chair decides lot-line vacation merging two parcels in Historic Residential zone."
     }
   ]
 }
