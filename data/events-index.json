@@ -168,7 +168,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Every Tuesday night downstairs at The Well (122 S Aspen), gathering for food, conversation, and bible study. Continues on Nov 25th.",
+    "desc": "Every Tuesday night young adults gather downstairs at The Well for food, conversation, and bible study.",
     "type": "Food & Drink"
   },
   {
@@ -889,7 +889,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Every Tuesday night downstairs at The Well (122 S Aspen), gathering for food, conversation, and bible study. Continues on Nov 25th.",
+    "desc": "Every Tuesday night young adults gather downstairs at The Well for food, conversation, and bible study.",
     "type": "Food & Drink"
   },
   {
@@ -1504,7 +1504,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Every Tuesday night downstairs at The Well (122 S Aspen), gathering for food, conversation, and bible study. Continues on Nov 25th.",
+    "desc": "Every Tuesday night young adults gather downstairs at The Well for food, conversation, and bible study.",
     "type": "Food & Drink"
   },
   {
@@ -1922,7 +1922,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Every Tuesday night downstairs at The Well (122 S Aspen), gathering for food, conversation, and bible study. Continues on Nov 25th.",
+    "desc": "Every Tuesday night young adults gather downstairs at The Well for food, conversation, and bible study.",
     "type": "Food & Drink"
   },
   {
@@ -2069,7 +2069,7 @@
     "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
     "category": "Community Event",
     "source": "Beacon",
-    "desc": "Every Tuesday night downstairs at The Well (122 S Aspen), gathering for food, conversation, and bible study. Continues on Nov 25th.",
+    "desc": "Every Tuesday night young adults gather downstairs at The Well for food, conversation, and bible study.",
     "type": "Food & Drink"
   },
   {
@@ -2139,6 +2139,19 @@
     "desc": "Trivia Night at Floating Lotus Brewery! Join us Thursday, December 3 and Thursday, December 17 from 7–9 PM for a lively night of questions, drinks and friendly competition. Grab a table, bring your team, and learn more at…",
     "type": "Food & Drink",
     "endDate": "2026-12-18"
+  },
+  {
+    "title": "Friday Feast",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-12-04",
+    "time": "5:00 PM",
+    "location": "The Well Coffee Shop",
+    "town": "",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "A twice-a-month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel. April 2nd is a Luau at Lift Ops, 11am-1pm.",
+    "type": "Food & Drink"
   },
   {
     "title": "YPT: The SpongeBob Musical",
@@ -2300,6 +2313,19 @@
     "type": "Festivals"
   },
   {
+    "title": "Weekly Young Adult Gathering",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-12-08",
+    "time": "6:00 PM",
+    "location": "The Well, 122 S Aspen",
+    "town": "",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "Every Tuesday night young adults gather downstairs at The Well for food, conversation, and bible study.",
+    "type": "Food & Drink"
+  },
+  {
     "title": "After School Art for Ages 5-8",
     "href": "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-5-8-861",
     "date": "2026-12-09",
@@ -2353,6 +2379,19 @@
     "desc": "Weehawken Dance and America’s Mattress present The Nutcracker ~ Remixed, a large-scale community dance production blending classical ballet with contemporary movement, jazz, hip hop, aerial arts and other styles. More than 400 local…",
     "type": "Music",
     "endDate": "2026-12-13"
+  },
+  {
+    "title": "Clothing Swap",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-12-10",
+    "time": "7:00 PM",
+    "location": "Billies Restaurant",
+    "town": "",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "A clothing swap event listed under Other Happenings.",
+    "type": "Community"
   },
   {
     "title": "The Regular",
@@ -2462,6 +2501,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Coffee House Nights",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-12-12",
+    "time": "7:00-9:00 PM",
+    "location": "The Coffee Cowboy / The Well",
+    "town": "",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "An evening of good coffee, games, and local community. Held at The Coffee Cowboy on Dec 12 and The Well on Jan 15 and Jan 29.",
+    "type": "Community"
+  },
+  {
     "title": "Easy Jim Residency Night 2",
     "href": "https://www.alibitelluride.com/calendar#eca-event=easy-jim-residency-1",
     "date": "2026-12-12",
@@ -2515,6 +2567,19 @@
     "type": "Music"
   },
   {
+    "title": "Friday Feast",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-12-18",
+    "time": "5:00 PM",
+    "location": "The Well Coffee Shop",
+    "town": "",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "A twice-a-month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel. April 2nd is a Luau at Lift Ops, 11am-1pm.",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Gin & Gingerbread House Decorating (Ages 21+)",
     "href": "https://events.ourayridgwayevents.com/event/gin-gingerbreadhouse-decorating-ages-21",
     "date": "2026-12-18",
@@ -2566,6 +2631,19 @@
     "source": "Telluride.com",
     "desc": "The Christmas Eve Torchlight Parade will start at the top of the Gondola and head down into the Town of Telluride. …",
     "type": "Festivals"
+  },
+  {
+    "title": "Moonlight Skin and Ski",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-12-25",
+    "time": "",
+    "location": "Beacon, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "An uphill skin to the top of lift 10; no experience necessary. $10 equipment rentals available.",
+    "type": "Community"
   },
   {
     "title": "Tease the Season: A Holiday Burlesque",
