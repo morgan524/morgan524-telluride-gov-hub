@@ -129,8 +129,8 @@ const COUNTY_CACHED_DATA = [
     location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
     civicClerkId: 889,
     note: null,
-    agendaUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/889/files/agenda/2060",
-    packetUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/889/files/agenda/2061"
+    agendaUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/889/files/agenda/2064",
+    packetUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/889/files/agenda/2065"
   },
   {
     date: "November 9, 2026",
@@ -169,6 +169,15 @@ const COUNTY_CACHED_DATA = [
     note: null
   },
   {
+    date: "November 25, 2026",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Work Session",
+    type: "bocc",
+    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    civicClerkId: 1106,
+    note: null
+  },
+  {
     date: "December 9, 2026",
     time: "9:30 AM",
     title: "Board of County Commissioners Regular Meeting",
@@ -196,6 +205,16 @@ const COUNTY_CACHED_DATA = [
     note: null
   },
   {
+    date: "December 18, 2026",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Special Meeting",
+    type: "bocc",
+    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    civicClerkId: 1107,
+    note: null,
+    special: true
+  },
+  {
     date: "December 28, 2026",
     time: "4:00 PM",
     title: "Open Space Commission Meeting",
@@ -214,6 +233,15 @@ const COUNTY_CACHED_DATA = [
     note: null
   },
   {
+    date: "January 13, 2027",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Work Session",
+    type: "bocc",
+    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    civicClerkId: 1095,
+    note: null
+  },
+  {
     date: "January 14, 2027",
     time: "9:00 AM",
     title: "Planning Commission Meeting",
@@ -229,6 +257,15 @@ const COUNTY_CACHED_DATA = [
     type: "other",
     location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
     civicClerkId: 1061,
+    note: null
+  },
+  {
+    date: "January 27, 2027",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Work Session",
+    type: "bocc",
+    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    civicClerkId: 1108,
     note: null
   }
 ];
@@ -737,6 +774,15 @@ const NORWOOD_CACHED_DATA = [
     packetUrl: null,
     special: false,
     board: "nwc"
+  },
+  {
+    date: "November 4, 2026",
+    time: null,
+    title: "Board of Trustees Budget Work Session",
+    agendaUrl: "https://www.norwoodtown.com/files/8bb3805e6/11.04.2026+BOT+Work+Session+Agenda.pdf",
+    packetUrl: null,
+    special: false,
+    board: "bot"
   },
   {
     date: "November 10, 2026",

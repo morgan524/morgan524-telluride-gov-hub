@@ -284,7 +284,7 @@
   },
   "county|2026-11-04|Board of County Commissioners Meeting": {
     "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/889/files/agenda/2060",
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/889/files/agenda/2064",
     "zoomUrl": "https://us02web.zoom.us/meeting/register/yEtLDh7pSEiLm35vgwuJWQ",
     "meetingId": "848 3698 7431",
     "passcode": "369177",
@@ -482,12 +482,12 @@
   "telluride|2026-11-19|Planning & Zoning Commission - Nov 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8108",
     "sv": 4,
-    "ph": "5e578be060296478"
+    "ph": "eb7467e457d122e2"
   },
   "telluride|2026-11-19|Planning & Zoning Commission Chair - Nov 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8107",
     "sv": 4,
-    "ph": "e1366c63737da9ff"
+    "ph": "377b24ec8cc33675"
   },
   "telluride|2026-11-19|Liquor Licensing Authority - Nov 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8147",
@@ -617,6 +617,10 @@
   "telluride|2026-12-02|Telluride Housing Authority Subcommittee - Dec 02 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8166",
     "sv": 4,
-    "ph": "02e8c766a6222905"
+    "ph": "8157a58c768c338c"
+  },
+  "county|2026-11-25|Board of County Commissioners Work Session": {
+    "sv": 4,
+    "ph": "155b8bb013cf3ec0"
   }
 }

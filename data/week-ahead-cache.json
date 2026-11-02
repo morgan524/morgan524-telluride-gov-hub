@@ -1,14 +1,14 @@
 {
-  "hash": "349b62bec01a523953e517ee146c38457b238bc9",
-  "lede": "The biggest thing on the civic calendar this week is a special meeting of the Telluride Medical Center board to consider formally engaging a consultant for due diligence with CommonSpirit Health — one of the country's largest hospital systems — which signals a potential affiliation or transaction that could reshape local healthcare for good. Meanwhile, Ouray City Council holds a public hearing on its 2027 budget and votes on two ordinances setting utility rates and adding a new light-industrial rate category, and Telluride's Ecology Commission takes up a draft ordinance that would ban gas-powered lawn equipment in town limits by 2028 and 2030.",
+  "hash": "1d3f8181fb5863ac143a4f65f5b7f30c5c3c53a8",
+  "lede": "The biggest thing to watch this week is a Telluride Medical Center special meeting where the board takes up a proposal to engage Jensen Partners for due diligence with CommonSpirit Health — one of the country's largest hospital systems — a step that could signal a major affiliation or structural change for local healthcare. Meanwhile, Telluride's Ecology Commission is weighing a draft ordinance that would ban gas-powered lawn and garden equipment in town limits by 2028–2030, and Ouray City Council holds a public hearing on its 2027 budget along with utility rate ordinances up for a second-reading vote.",
   "notable": [
     {
       "id": 5,
-      "stake": "Board votes on CommonSpirit due diligence — could reshape local healthcare permanently."
+      "stake": "Board votes on CommonSpirit due diligence — potential hospital affiliation or major structural change."
     },
     {
       "id": 4,
-      "stake": "Public hearing on Ouray's 2027 budget; votes on utility rate ordinances including new industrial category."
+      "stake": "Public hearing on Ouray's 2027 budget; utility rate ordinances up for second-reading vote."
     },
     {
       "id": 7,
@@ -16,7 +16,7 @@
     },
     {
       "id": 3,
-      "stake": "P&Z votes on merging two lots in Historic Residential zone on W Columbia Ave."
+      "stake": "P&Z hears lot-consolidation application in Historic Residential zone — land-use decision."
     }
   ]
 }

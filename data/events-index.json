@@ -143,7 +143,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
     "type": "Community",
-    "endDate": "2026-12-31"
+    "endDate": "2027-01-01"
   },
   {
     "title": "Brooke White",
@@ -211,6 +211,20 @@
     "desc": "Welcome to Ridgway's functional strength and mobility training for women. Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups…",
     "type": "Talks & Classes",
     "endDate": "2026-12-31"
+  },
+  {
+    "title": "Cimarron Gathering Place",
+    "href": "https://events.ourayridgwayevents.com/event/cimarron-gathering-place",
+    "date": "2026-11-03",
+    "time": "9:00 AM",
+    "location": "Ouray County Fairgrounds and 4H Events Center",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/54392775177578/huge/a38bc7fc2fd791cdb9dc33b9ee386b3ef236c85e.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "A recurring community gathering at the Ouray County Fairgrounds and 4H Events Center offering adults a welcoming space to socialize, play games, exercise, and connect with others. Visit roccnet.org for the full schedule of activities.",
+    "type": "Arts & Film",
+    "endDate": "2026-11-24"
   },
   {
     "title": "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
@@ -361,19 +375,6 @@
     "source": "Sherbino Theater",
     "desc": "Warren Miller's 77th ski and snowboard film, *Days Off*, screens at The Sherbino in Ridgway, hosted by Katie Burrell. Presented by The Sherbino, Citizens State Bank, and Circle of Dreams Foundation, the event offers advance general…",
     "type": "Arts & Film"
-  },
-  {
-    "title": "Market on the Plaza",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
-    "date": "2026-11-04",
-    "time": "",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Mountain Village's Heritage Plaza hosts a weekly outdoor market featuring vendors with tents set up throughout the pedestrian-friendly space. The market brings together local and regional sellers offering goods to the Mountain Village…",
-    "type": "Community"
   },
   {
     "title": "Every Sat. Floating Sound Bath",
@@ -747,6 +748,33 @@
     "type": "Community"
   },
   {
+    "title": "LIVE JAZZ IN THE GARDEN! Zan Waller & Stefan Davenport",
+    "href": "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
+    "date": "2026-11-08",
+    "time": "4:00 PM",
+    "location": "Chloe's Charcuterie & Wine",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53950055817938/huge/4924d3606a12c233af2b47a380c304869dfaf267.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Zan Waller on trumpet and Stefan Davenport on guitar perform as Standard Alchemy, bringing swing, cocktail jazz, and Great American Songbook standards to Chloe's Secret Garden. The duo plays Sundays from 4:00–6:00 p.m. at Chloe's…",
+    "type": "Music"
+  },
+  {
+    "title": "Healing Hearts Circle: Women Transcending Cancer/Chronic Illness",
+    "href": "https://events.ourayridgwayevents.com/event/healing-hearts-circle-women-transcending-cancerchronic-illness",
+    "date": "2026-11-08",
+    "time": "5:00 PM",
+    "location": "Bee True You Wellness & Creative Studio",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54241462626167/huge/7c0778035e072ff933b617f21809b1459dc84aca.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "A recurring support circle at Bee True You Wellness & Creative Studio for women navigating cancer or chronic illness, offering a safe, welcoming space where participants are supported in body, mind, and spirit. The group honors each…",
+    "type": "Wellness",
+    "endDate": "2026-12-07"
+  },
+  {
     "title": "Cardio Dance w/ Kelsey",
     "href": "https://koto.org/event/cardio-dance-w-kelsey/",
     "date": "2026-11-09",
@@ -824,6 +852,19 @@
     "source": "KOTO Community Calendar",
     "desc": "Join Marlen for a high-energy dance fitness class fused with barre, pilates and stretching that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout that will tone your body and boost your endurance…",
     "type": "Music"
+  },
+  {
+    "title": "Dee William's 2026 Volunteer of the Year Celebration",
+    "href": "https://koto.org/event/dee-williams-2026-volunteer-of-the-year-celebration/",
+    "date": "2026-11-10",
+    "time": "5:00 PM",
+    "location": "Wright Opera House, Ouray",
+    "town": "Ouray",
+    "img": "https://koto.org/wp-content/uploads/2026/11/2026-Volunteer-Celebration-8.5-X-11.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Telluride Foundation is proud to announce Dee Williams as the recipient of the 2026 Volunteer of the Year Award. Dee has provided decades of service and leadership in Ouray County. Dee's many contributions include helping launch the…",
+    "type": "Festivals"
   },
   {
     "title": "2026 Volunteer of the Year Celebration for Dee Williams",
@@ -940,19 +981,6 @@
     "category": "Community Event",
     "source": "KOTO Community Calendar",
     "desc": "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll…",
-    "type": "Community"
-  },
-  {
-    "title": "Market on the Plaza",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
-    "date": "2026-11-11",
-    "time": "",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Mountain Village's Heritage Plaza hosts a weekly outdoor market featuring local vendors. The market brings together a variety of goods in the pedestrian-friendly plaza setting.",
     "type": "Community"
   },
   {
@@ -1558,19 +1586,6 @@
     "type": "Arts & Film"
   },
   {
-    "title": "Market on the Plaza",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
-    "date": "2026-11-18",
-    "time": "",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Mountain Village's Heritage Plaza hosts a community market featuring local vendors at tents throughout the pedestrian-friendly plaza. The market brings together a variety of goods from area sellers in an outdoor setting.",
-    "type": "Community"
-  },
-  {
     "title": "After School Craft Time",
     "href": "https://events.ourayridgwayevents.com/event/after-school-craft-time-805",
     "date": "2026-11-19",
@@ -1818,6 +1833,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Around The World: America’s Pumpkin Beer & Chocolate Pretzels",
+    "href": "https://koto.org/event/around-the-world-americas-pumpkin-beer-chocolate-pretzels/",
+    "date": "2026-11-23",
+    "time": "3:00 AM",
+    "location": "",
+    "town": "",
+    "img": "https://koto.org/wp-content/uploads/2026/11/November-around-the-world.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Owner and Brewmaster, TJ is taking us on a journey to early America to discover how a humble native gourd became our continent’s most iconic seasonal tradition. Long before pumpkin spice became a modern phenomenon, early American colonists…",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Thanksgiving Break - Ridgway Schools",
     "href": "https://events.ourayridgwayevents.com/event/thanksgiving-break-ridgway-schools",
     "date": "2026-11-23",
@@ -1925,32 +1953,6 @@
     "endDate": "2026-12-02"
   },
   {
-    "title": "Cardio Dance w/Kelsey",
-    "href": "https://koto.org/event/cardio-dance-w-kelsey-2/",
-    "date": "2026-11-25",
-    "time": "6:00 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join us for a fun evening of dancing and getting your heart rate up! You will be having so much fun, you won't even know you are exercising! Led by Kelsey Trottier from the Telluride Dance Collective. 2nd and 4th Monday of the month.…",
-    "type": "Music"
-  },
-  {
-    "title": "Market on the Plaza",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
-    "date": "2026-11-25",
-    "time": "",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Mountain Village's Heritage Plaza hosts a recurring outdoor market featuring local vendors at tents throughout the pedestrian-friendly plaza. The market brings together a variety of goods from the surrounding community in an open-air…",
-    "type": "Community"
-  },
-  {
     "title": "Telluride Ski Resort Opening Day 2026",
     "href": "https://www.telluride.com/event/telluride-ski-resort-opening-day/",
     "date": "2026-11-26",
@@ -1961,19 +1963,6 @@
     "category": "Community Event",
     "source": "Telluride.com",
     "desc": "Telluride Ski Resort is scheduled to open on Thursday, November 26. Join us for opening weekend with plenty to do on …",
-    "type": "Community"
-  },
-  {
-    "title": "Facing the Mourning",
-    "href": "https://koto.org/event/facing-the-mourning/2026-11-26/",
-    "date": "2026-11-26",
-    "time": "6:00 PM",
-    "location": "Redvale Community Center",
-    "town": "",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit…",
     "type": "Community"
   },
   {
@@ -2042,6 +2031,20 @@
     "source": "Mountain Village",
     "desc": "A guided bicycle tour departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route offers a scenic descent…",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "JUST ADDED: After School Art Now Also on Tuesdays for Ages 5-8",
+    "href": "https://events.ourayridgwayevents.com/event/just-added-after-school-art-now-also-on-tuesdays-for-ages-5-8",
+    "date": "2026-12-01",
+    "time": "3:15 PM",
+    "location": "The Annex on Cora",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54408756809744/huge/2040a00a1c30c15a8ac05388326ccbb70c5c8bbc.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "SESSION 3 (3 WEEKS • DECEMBER 1 – DECEMBER 15) Please note: Tuesday is an additional day of our After School Art class, offering the same projects and activities as the Thursday class. Families should choose either Tuesday or Thursday, as…",
+    "type": "Arts & Film",
+    "endDate": "2026-12-15"
   },
   {
     "title": "Brooke White",
@@ -2162,6 +2165,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "The 23rd Annual Holiday Art & Gift Sale returns to the Decker Community Room, offering handmade work from local artisans and craftspeople. This long-running community tradition provides an opportunity to find one-of-a-kind, locally made…",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Weehawken Youth Art Show",
+    "href": "https://events.ourayridgwayevents.com/event/weehawken-youth-art-show",
+    "date": "2026-12-04",
+    "time": "5:00 PM",
+    "location": "The Annex on Cora",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54409313649026/huge/33876b40a213c17d393c0bd1992e25d68ea47372.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Weehawken Youth Art Show We’re excited to celebrate our after school artists with a public art show featuring all of their beautiful work from this fall semester. Friends, grandparents, siblings, and all community members are warmly…",
     "type": "Arts & Film"
   },
   {
@@ -2523,7 +2539,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Winter break for Ridgway Schools begins on this date, giving students and families time off during the holiday season. The break is a scheduled pause in the academic calendar for the Ridgway school district.",
     "type": "Community",
-    "endDate": "2026-12-31"
+    "endDate": "2027-01-01"
   },
   {
     "title": "Brooke White",
