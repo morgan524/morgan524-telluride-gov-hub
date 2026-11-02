@@ -1,14 +1,14 @@
 {
-  "hash": "1fb33463177d85832d1a0d70eb636aa6e8ed0275",
-  "lede": "The biggest thing to watch this week is the Telluride Medical Center's special board meeting Monday on whether to engage Jensen Partners for due diligence with CommonSpirit Health — one of the country's largest hospital systems — a signal that a major affiliation or transaction may be in motion. Also on the agenda side, Ouray City Council holds a public hearing on its 2027 budget and votes on utility rate ordinances, and Telluride's Ecology Commission takes up a draft ordinance that would ban gas-powered lawn equipment in town limits by 2028–2030. On the lighter side, Mountainfilm for Locals runs Monday and Tuesday, and the Warren Miller film lands Wednesday at the Sherbino.",
+  "hash": "349b62bec01a523953e517ee146c38457b238bc9",
+  "lede": "The biggest thing on the civic calendar this week is a special meeting of the Telluride Medical Center board to consider formally engaging a consultant for due diligence with CommonSpirit Health — one of the country's largest hospital systems — which signals a potential affiliation or transaction that could reshape local healthcare for good. Meanwhile, Ouray City Council holds a public hearing on its 2027 budget and votes on two ordinances setting utility rates and adding a new light-industrial rate category, and Telluride's Ecology Commission takes up a draft ordinance that would ban gas-powered lawn equipment in town limits by 2028 and 2030.",
   "notable": [
     {
       "id": 5,
-      "stake": "Board votes on engaging due diligence partner for potential CommonSpirit Health affiliation."
+      "stake": "Board votes on CommonSpirit due diligence — could reshape local healthcare permanently."
     },
     {
       "id": 4,
-      "stake": "Public hearing on Ouray's 2027 budget; council votes on new utility and industrial rate ordinances."
+      "stake": "Public hearing on Ouray's 2027 budget; votes on utility rate ordinances including new industrial category."
     },
     {
       "id": 7,
@@ -16,7 +16,7 @@
     },
     {
       "id": 3,
-      "stake": "P&Z Chair decides lot merger in Historic Residential zone at W Columbia and N Townsend."
+      "stake": "P&Z votes on merging two lots in Historic Residential zone on W Columbia Ave."
     }
   ]
 }

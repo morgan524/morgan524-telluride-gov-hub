@@ -482,12 +482,12 @@
   "telluride|2026-11-19|Planning & Zoning Commission - Nov 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8108",
     "sv": 4,
-    "ph": "eb7467e457d122e2"
+    "ph": "5e578be060296478"
   },
   "telluride|2026-11-19|Planning & Zoning Commission Chair - Nov 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8107",
     "sv": 4,
-    "ph": "377b24ec8cc33675"
+    "ph": "e1366c63737da9ff"
   },
   "telluride|2026-11-19|Liquor Licensing Authority - Nov 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8147",
@@ -608,5 +608,15 @@
   "ouraycity|2026-11-02|Ouray City Council Regular Meeting": {
     "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=773056",
     "sv": 4
+  },
+  "telluride|2026-12-02|Commission for Community Assistance, Arts & Special Events - Dec 02 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8069",
+    "sv": 4,
+    "ph": "1782388eee465c34"
+  },
+  "telluride|2026-12-02|Telluride Housing Authority Subcommittee - Dec 02 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8166",
+    "sv": 4,
+    "ph": "02e8c766a6222905"
   }
 }
