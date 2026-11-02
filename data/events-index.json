@@ -1,15 +1,15 @@
 [
   {
     "title": "Tea and Tarot",
-    "href": "https://koto.org/event/tea-and-tarot/2026-11-01/",
+    "href": "https://telluridelibrary.libcal.com/event/17347286?hs=a",
     "date": "2026-11-01",
     "time": "2:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
+    "location": "Telluride Room",
     "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance. Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in…",
     "type": "Community"
   },
   {
@@ -119,7 +119,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
     "type": "Community",
-    "endDate": "2026-12-30"
+    "endDate": "2026-12-31"
   },
   {
     "title": "Brooke White",
@@ -335,8 +335,8 @@
     "img": "https://sherbino.org/wp-content/uploads/2026/09/Warren-Miller-Days-Off-Banner.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "Warren Miller's 77th ski and snowboard film, *Days Off*, screens at The Sherbino in Ridgway, hosted by Katie Burrell. Presented by The Sherbino, Citizens State Bank, and Circle of Dreams Foundation, the event offers advance general…",
-    "type": "Arts & Film"
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Market on the Plaza",
@@ -363,7 +363,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Group float in warm, healing waters every Saturday @ 3pm. Receive gentle aquatic massage surrounded by live sound therapy; vocals, bowls and more. Contact Vanessa W. 720-470-2823 to reserve your spot. Sliding Scale: $35-$85/person. Please…",
     "type": "Wellness",
-    "endDate": "2026-12-26"
+    "endDate": "2026-12-31"
   },
   {
     "title": "After School Art for Ages 5-8",
@@ -563,7 +563,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2026/10/STILLS-4.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "The opening reception for the Ridgway Independent Film Fest Stills Exhibit kicks off First Friday at The Sherbino, featuring still images from the 2026 festival on display in the Decker Room. The exhibit runs through November 30, offering…",
+    "desc": "",
     "type": "Arts & Film"
   },
   {
@@ -576,8 +576,8 @@
     "img": "https://sherbino.org/wp-content/uploads/2026/10/montague-closing.jpg",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "The Sherbino's 610 Arts Collective hosts the closing reception for *Containment*, an exhibition by Ridgway artist Michelle Montague, on the final evening of its roughly six-week run. The free event runs from 5:00 to 7:00 p.m. and offers a…",
-    "type": "Arts & Film"
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "The Sherbino & OCPAG Present: Heather & Doug – First Friday Show",
@@ -589,8 +589,8 @@
     "img": "https://sherbino.org/wp-content/uploads/2026/09/heather-and-doug-nov-first-fri.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "A free live music show presented by The Sherbino and the Ouray County Performing Arts Guild, featuring performers Heather and Doug in the Sherbino's intimate \"Living Room\" setting. The event runs from 6:00 to 8:00 p.m., with a cash bar…",
-    "type": "Music"
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Yoga with Lauren",
@@ -876,7 +876,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "A recurring monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The event offers a relaxed, community-oriented space for veterans to connect with one another.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1163,7 +1163,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2025/11/RIFF-Banner-new.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "The Ridgway Independent Film Festival (RIFF) returns for its 12th year in Ridgway, CO, celebrating bold storytelling and emerging filmmakers through independent cinema. The multi-day festival brings together film enthusiasts and the local…",
+    "desc": "",
     "type": "Arts & Film",
     "endDate": "2026-11-15"
   },
@@ -1177,7 +1177,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2026/09/Block0.beginasyouare.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "The Ridgway Independent Film Festival opens at The Sherbino with an evening of short films grouped under the theme \"Begin Where You Are.\" Doors open at 4:30 p.m. with films beginning at 5:00 p.m.; single-block general admission is $15.",
+    "desc": "",
     "type": "Arts & Film"
   },
   {
@@ -1269,7 +1269,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2026/09/Block1.somethingwascallingus-1.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "The Ridgway Independent Film Fest screens \"Something Was Calling Us\" at The Sherbino, a film exploring the experience of heeding an inner call or turning point. The festival offers single-block general admission tickets as well as…",
+    "desc": "",
     "type": "Arts & Film"
   },
   {
@@ -1282,7 +1282,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2026/09/Block2.themountainsknewournames-1.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "A screening of *The Mountains Knew Our Names* presented as part of the Ridgway Independent Film Fest, held at The Sherbino in Ridgway. The festival features general admission single-block tickets as well as all-access passes, with doors…",
+    "desc": "",
     "type": "Arts & Film"
   },
   {
@@ -1295,7 +1295,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2026/09/Block3.wegatheredaroundthefire-1.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "The Ridgway Independent Film Fest presents an evening screening block titled *We Gathered Around the Fire* at The Sherbino, with doors opening at 6:15 p.m. and films beginning at 6:30 p.m. General admission for this single block is $15,…",
+    "desc": "",
     "type": "Arts & Film"
   },
   {
@@ -1373,7 +1373,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2026/09/Block4.weinvitedthemonstersin-1.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "The Ridgway Independent Film Fest presents *We Invited the Monsters In*, a film screening at The Sherbino exploring the blurry line between monsters and the familiar. The festival offers single-block general admission tickets as well as…",
+    "desc": "",
     "type": "Arts & Film"
   },
   {
@@ -1386,7 +1386,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2026/09/Block5.wewanderedbeyondthefirelight-1.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "A screening at The Sherbino in Ridgway as part of the Ridgway Independent Film Fest, featuring the film *We Wandered Beyond the Firelight*. Doors open at 1:45 pm with the film beginning at 2:00 pm, and single-block general admission…",
+    "desc": "",
     "type": "Arts & Film"
   },
   {
@@ -1712,8 +1712,8 @@
     "img": "https://sherbino.org/wp-content/uploads/2026/10/PSYLO-SHERB-26-A1C-scaled.jpg",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "Cosmic Luau with PSYLO is a dancehall-style show at The Sherbino Theater in Ridgway, featuring a light show by Lumagic. The event combines tropical and psychedelic themes in a limited-seating venue setting.",
-    "type": "Arts & Film"
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Yoga with Lauren",
@@ -1834,6 +1834,19 @@
     "type": "Music"
   },
   {
+    "title": "Dance Fit Fusion",
+    "href": "https://koto.org/event/dance-fit-fusion-2/",
+    "date": "2026-11-24",
+    "time": "5:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join Marlen for a high-energy dance fitness class fused with barre, pilates and stretching that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout that will tone your body and boost your endurance…",
+    "type": "Music"
+  },
+  {
     "title": "Tourism Advisory Committee",
     "href": "https://events.ourayridgwayevents.com/event/tourism-advisory-committee",
     "date": "2026-11-24",
@@ -1888,6 +1901,19 @@
     "endDate": "2026-12-02"
   },
   {
+    "title": "Cardio Dance w/Kelsey",
+    "href": "https://koto.org/event/cardio-dance-w-kelsey-2/",
+    "date": "2026-11-25",
+    "time": "6:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join us for a fun evening of dancing and getting your heart rate up! You will be having so much fun, you won't even know you are exercising! Led by Kelsey Trottier from the Telluride Dance Collective. 2nd and 4th Monday of the month.…",
+    "type": "Music"
+  },
+  {
     "title": "Market on the Plaza",
     "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     "date": "2026-11-25",
@@ -1911,6 +1937,19 @@
     "category": "Community Event",
     "source": "Telluride.com",
     "desc": "Telluride Ski Resort is scheduled to open on Thursday, November 26. Join us for opening weekend with plenty to do on …",
+    "type": "Community"
+  },
+  {
+    "title": "Facing the Mourning",
+    "href": "https://koto.org/event/facing-the-mourning/2026-11-26/",
+    "date": "2026-11-26",
+    "time": "6:00 PM",
+    "location": "Redvale Community Center",
+    "town": "",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit…",
     "type": "Community"
   },
   {

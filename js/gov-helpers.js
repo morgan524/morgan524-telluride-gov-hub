@@ -372,7 +372,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8027","sv":4,"ph":"29e446caecdbde71"},
 
   "telluride|2026-11-18|Historic & Architectural Review Commission - Nov 18 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8026","sv":4,"ph":"1e59a64f2d286a07"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8026","sv":4,"ph":"9fd6e4fcd824ff78"},
 
   "telluride|2026-11-18|Parks & Recreation Commission - Nov 18 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8084","sv":4,"ph":"41308feda7cb9e07"},
@@ -758,9 +758,6 @@ const MEETING_PREVIEWS = {
   "telluride|2026-11-09|Open Space Commission - Nov 09 2026":
     "The Open Space Commission is expected to discuss priorities and criteria related to open space acquisition, management, and maintenance in Telluride, and may review open-space elements of local plans. A separate municipal process is also underway seeking consulting services to review employee rental housing policies.",
 
-  "telluride|2026-11-02|Rescheduled/Special Meeting - Planning & Zoning Commission Chair - Nov 02 2026":
-    "The Planning & Zoning Commission Chair is expected to consider a minor subdivision application for 510 W Columbia Avenue, which would vacate the lot line between two existing parcels and consolidate them into a single approximately 5,625-square-foot lot known as Lot 40R.",
-
   "telluride|2026-11-17|Town Council - Nov 17 2026":
     "Council is expected to discuss consulting services for a comprehensive review of Telluride's employee rental housing policies, consider a proposed amendment to The Good Gargoyle Condominiums declaration, and review proposed changes to San Miguel Power Association's Rules and Regulations.",
 
@@ -809,26 +806,23 @@ const MEETING_PREVIEWS = {
   "telluride|2026-11-12|Vending Subcommittee - Nov 12 2026":
     "The Telluride Vending Subcommittee is expected to review vending permit applications, consistent with its standard role as a subcommittee of Town Council. No specific agenda items were disclosed in available materials. The subcommittee meets seasonally at Rebekah Hall.",
 
-  "norwood|2026-11-02|Norwood Water Commission Work Session":
-    "The Norwood Water Commission will hold a work session to review the 2027 draft budget. Note that formal action cannot be taken at work sessions. The meeting will be held at Norwood Town Hall with a Zoom option available.",
-
-  "telluride|2026-11-02|Special Meeting - Planning & Zoning Commission Chair - Nov 02 2026":
-    "The Telluride Planning & Zoning Commission Chair is expected to convene a special rescheduled meeting, originally scheduled for October 22, 2026. Related notices suggest possible discussion of employee rental housing policy reforms and condominium declaration amendments, though a detailed agenda was not publicly available.",
-
   "med|2026-11-03|Regular Board Meeting":
     "Board will consider a proposal from Jensen Partners to provide support during a due diligence process with CommonSpirit. The meeting will also include a public comment period. The session is scheduled for 30 minutes and will be held via Zoom and at the Wellness Annex in Telluride.",
 
   "tmvoa|2026-11-06|TMVOA Board of Directors Budget Meeting #1":
     "Board will consider approving October 22 meeting minutes and reviewing the 2025 audit and tax return presented by CLA. Directors will also examine a draft budget for 2027. The meeting is the first of three budget sessions ahead of a December 17 members meeting.",
 
+  "school|2026-11-04|Telluride Board of Education Work Session":
+    "The Board is expected to conduct interviews with candidates seeking to serve as Student Representative to the Telluride R-1 School Board, asking questions about their background, motivations, and goals for the role.",
+
   "telluride|2026-11-02|Special Meeting - Planning & Zoning Commission Chair - Nov 02 2026 at 10:30 AM":
-    "The Planning & Zoning Commission Chair is expected to hold a public hearing on a proposed minor subdivision at 510 W Columbia Avenue, which would vacate the internal lot line between two existing lots and combine them into a single approximately 5,625-square-foot lot in the Historic Residential zone district.",
+    "The Planning & Zoning Commission Chair is expected to consider a Minor Subdivision application at 510 W Columbia Avenue, which proposes vacating the internal lot line between two existing lots to create a single approximately 5,625-square-foot lot in Telluride's Historic Residential zone district.",
+
+  "telluride|2026-11-02|Rescheduled/Special Meeting - Planning & Zoning Commission Chair - Nov 02 2026":
+    "The Planning & Zoning Commission Chair will consider a Minor Subdivision application for 510 W Columbia Avenue, proposing to vacate the internal lot line between two existing lots and merge them into a single approximately 5,625-square-foot lot in the Historic Residential zone district.",
 
   "ouraycity|2026-11-02|Ouray City Council Regular Meeting":
-    "Council is expected to hold a public hearing on the proposed 2027 city budget and consider adopting updated water, sewer, refuse, and recycling rates for 2027. The council will also vote on four appointments to the Main Street Committee and a liquor license renewal.",
-
-  "school|2026-11-04|Telluride Board of Education Work Session":
-    "The Board is expected to conduct interviews with candidates seeking to serve as Student Representative to the Telluride R-1 School Board, asking questions about their background, motivations, and goals for the role."
+    "Council is expected to hold public hearings on the proposed 2027 city budget and utility rate ordinance, consider four appointments to the Main Street Committee, and act on a liquor license renewal. A councilor has also requested permission to participate remotely."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -3688,30 +3682,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "A fond (and family-friendly) farewell to fall",
-    source: "Telluride Times",
-    date: "October 19, 2026",
-    firstSeen: "2026-10-20",
-    newsTopic: "arts-culture",
-    copy: "Mountain Village is closing out fall with \"Pumpkins & Peaks,\" a free two-day family event Oct. 24–25 in Heritage Plaza featuring pumpkins, live music, carnival games, a petting zoo, and outdoor football screenings. The gondola stays open a week later than usual this season. Food, drinks, and fall film screenings round it out.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_16ce0655-48c8-414c-8983-51199a021507.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/68/368f52ec-0e96-4659-8efe-74acf78d2afa/6ad3ade216825.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "The benefits of a bilingual brain",
-    source: "Telluride Times",
-    date: "October 19, 2026",
-    firstSeen: "2026-10-19",
-    newsTopic: "education",
-    copy: "Telluride School's Dual Immersion Program, running since 2014, offers K–8 students half their day in Spanish alongside English. This year, 52% of graduating seniors earned the Colorado Seal of Biliteracy — the program's highest rate yet. Research backs cognitive benefits too, including stronger attention and multitasking skills.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_c81df289-4340-405c-9a02-777319a44e34.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/91/d918e005-daf7-4af6-8313-8d84d8ad66db/6ad25fd0a1b80.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Local Employers Invited to Apply for Employee Housing Master Leases",
     source: "Town of Telluride",
     date: "October 23, 2026",
@@ -3847,7 +3817,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Public Hearing for Liquor License on November 19, 2026 at 5:30pm - Chipeta Lodge Resort &amp; Spa, 304 S Lena Street - Notice dated October 13, 2026",
     source: "Town of Ridgway",
-    date: "November 1, 2026",
+    date: "November 2, 2026",
     firstSeen: "2026-10-14",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3858,7 +3828,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "November 1, 2026",
+    date: "November 2, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3869,7 +3839,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "November 1, 2026",
+    date: "November 2, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -4479,17 +4449,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-11-01/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-11-01T14:30:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
     title: "Mountainfilm for Locals",
     link: "https://koto.org/event/mountainfilm-for-locals/",
     description: "Doors and pizza at 5 PM, films at 5:30 PM. Join us for Mountainfilm for Locals, a free screening for our local community, presented in partnership with Wilkinson Public Library. Catch a 90-minute program of short films from the 2026 Mountainfilm Festival, including Best Documentary Short winner The Grandfather Puzzle and Evening in Chile, featuring Colorado freeskier Bobby Brown. Free pizza is first come, first served, so come hungry and come early!",
@@ -4994,6 +4953,39 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "Dance Fit Fusion",
+    link: "https://koto.org/event/dance-fit-fusion-2/",
+    description: "Join Marlen for a high-energy dance fitness class fused with barre, pilates and stretching that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout that will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. Únete a Marlen para una clase de fitness de baile llena de energía combinada con barre, pilates y estiramientos que combina movimientos de baja y alta intensidad para un entrenamiento de intervalos que quema calorías, tonificando tu cuerpo y aumentando tu resistencia sin darte cuenta de lo duro que estás trabajando. ¡Es ejercicio disfrazado! No se requiere experiencia en baile—solo lleva tu energía, una botella de agua y una sonrisa. …",
+    pubDate: "2026-11-24T17:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Cardio Dance w/Kelsey",
+    link: "https://koto.org/event/cardio-dance-w-kelsey-2/",
+    description: "Join us for a fun evening of dancing and getting your heart rate up! You will be having so much fun, you won't even know you are exercising! Led by Kelsey Trottier from the Telluride Dance Collective. 2nd and 4th Monday of the month. ¡Únete a nosotros para una divertida noche de baile y ejercicio! Te divertirás tanto que ni te darás cuenta de que estás haciendo ejercicio. Dirigido por Kelsey Trottier del Telluride Dance Collective.",
+    pubDate: "2026-11-25T18:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Facing the Mourning",
+    link: "https://koto.org/event/facing-the-mourning/2026-11-26/",
+    description: "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit from additional support while navigating grief and loss. Please feel free to share this information with others who may be interested.",
+    pubDate: "2026-11-26T18:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Redvale Community Center",
+    imageUrl: ""
   }
 ];
 
@@ -5029,7 +5021,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Puppy • Collie, Border / Cattle Dog, Australian (Red Heeler) • Male",
     firstSeen: "2026-10-31",
     revealDate: "2026-10-31",
-    lastSeen: "2026-11-01"
+    lastSeen: "2026-11-02"
   },
   {
     id: "TEL-A-208",
@@ -5043,7 +5035,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Shepherd, Australian • Male",
     firstSeen: "2026-10-31",
     revealDate: "2026-11-02",
-    lastSeen: "2026-11-01"
+    lastSeen: "2026-11-02"
   },
   {
     id: "TEL-A-209",
@@ -5057,7 +5049,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Collie, Border / Cattle Dog, Australian (Red Heeler) • Female",
     firstSeen: "2026-10-31",
     revealDate: "2026-11-04",
-    lastSeen: "2026-11-01"
+    lastSeen: "2026-11-02"
   }
 ];
 
@@ -5183,53 +5175,13 @@ const CLUB_RED_SHOWS = [];
 const FRESH_FOOD_HUB_EVENTS = [];
 const SHERBINO_EVENTS = [
   {
-    title: "Celebration of Life for Barry Merkel",
-    href: "https://sherbino.org/event/barry-merkel-celebration-of-life/",
-    date: "2026-10-26 16:00:00",
-    endDate: "2026-10-26 19:00:00",
-    location: "The Sherbino, Ridgway",
-    copy: "Remembering Barry Merkel, longtime Ridgway local, Sherbino volunteer, and friend to so many. Join us October 26 at 4 PM to celebrate his life. @ 4 pm || Sherbino A Celebration of Life for Barry MerkelMonday, October 26, 2026 | 4:00 PM | The Sherbino, Ridgway The family of Barry Merkel invites friends, neighbors, and community members to gather at the Sherbino for a Celebration of Life honoring a longtime Ridgway local, dedicated volunteer, and friend to just about everyone. Barry was a familiar face and helping hand throughout the community, and he played an important role in the Sherbino's story from its earliest days. As a devoted volunteer, Barry gave generously of his time, talents, and energy, helping transform the historic theater into the gathering place it is today. His handiwork and contributions remain part of the very fabric of the Sherbino. …",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/10/A-Celebration-of-Barry-Merkels-Life.png"
-  },
-  {
-    title: "Sherb Literary Living Room Featuring Pam Houston with Her New Book: \"Animals Taught Me Everything\"",
-    href: "https://sherbino.org/event/sherb-literary-living-room-featuring-pam-houston-with-her-new-book-animals-taught-me-everything/",
-    date: "2026-10-27 18:30:00",
-    endDate: "2026-10-27 19:30:00",
-    location: "The Sherbino, Ridgway",
-    copy: "Pam Houston visits The Sherbino in Ridgway for a Literary Living Room evening centered on her newly published book *Animals Taught Me Everything*, exploring what animals — from horses to wolfhounds — can reveal about living well. The seated event begins at 6:30 PM with doors opening at 6:00 PM, and admission is $15.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/08/Pam-Houston-Banner.png",
-    description: "Pam Houston visits The Sherbino in Ridgway for a Literary Living Room evening centered on her newly published book *Animals Taught Me Everything*, exploring what animals — from horses to wolfhounds — can reveal about living well. The seated event begins at 6:30 PM with doors opening at 6:00 PM, and admission is $15."
-  },
-  {
-    title: "Easy Jim ~ 2 Night Halloween Run",
-    href: "https://sherbino.org/event/easy-jim-2-night-halloween-run-3/",
-    date: "2026-10-30 20:00:00",
-    endDate: "2026-10-30 22:30:00",
-    location: "The Sherbino, Ridgway",
-    copy: "Easy Jim brings a two-night Halloween run to the Sherbino in Ridgway on October 30 and 31, 2026, with shows beginning at 8:00 p.m. each evening. The performances celebrate the music of the Grateful Dead in a seasonal setting at this beloved community theater.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/07/easy-jim2.png",
-    description: "Easy Jim brings a two-night Halloween run to the Sherbino in Ridgway on October 30 and 31, 2026, with shows beginning at 8:00 p.m. each evening. The performances celebrate the music of the Grateful Dead in a seasonal setting at this beloved community theater."
-  },
-  {
-    title: "Easy Jim ~ 2 Night Halloween Run",
-    href: "https://sherbino.org/event/easy-jim-2-night-halloween-run-4/",
-    date: "2026-10-31 20:00:00",
-    endDate: "2026-10-31 22:30:00",
-    location: "The Sherbino, Ridgway",
-    copy: "Easy Jim brings a two-night Halloween run to The Sherbino in Ridgway, performing across October 30 and 31, 2026, with shows starting at 8:00 p.m. each night. The run centers on Grateful Dead music, offering two evenings of celebration for Deadheads and live music fans in the region.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/07/easy-jim2.png",
-    description: "Easy Jim brings a two-night Halloween run to The Sherbino in Ridgway, performing across October 30 and 31, 2026, with shows starting at 8:00 p.m. each night. The run centers on Grateful Dead music, offering two evenings of celebration for Deadheads and live music fans in the region."
-  },
-  {
     title: "Warren Miller's \"Days Off\" ~ Presented by The Sherbino, Citizens State Bank and Circle of Dreams Foundation",
     href: "https://sherbino.org/event/the-sherbino-presents-warren-millers-days-off/",
     date: "2026-11-04 18:30:00",
     endDate: "2026-11-04 20:00:00",
     location: "The Sherbino, Ridgway",
-    copy: "Warren Miller's 77th ski and snowboard film, *Days Off*, screens at The Sherbino in Ridgway, hosted by Katie Burrell. Presented by The Sherbino, Citizens State Bank, and Circle of Dreams Foundation, the event offers advance general admission and student ticket pricing, with prices increasing at the door.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/Warren-Miller-Days-Off-Banner.png",
-    description: "Warren Miller's 77th ski and snowboard film, *Days Off*, screens at The Sherbino in Ridgway, hosted by Katie Burrell. Presented by The Sherbino, Citizens State Bank, and Circle of Dreams Foundation, the event offers advance general admission and student ticket pricing, with prices increasing at the door."
+    copy: "@ Doors: 6:00pm || Film: 6:30pm || $12 advance General Admission || $10 advance Students ||  Price Goes Up at the door:  $15 General Admission / $12 students ENTER Warren Miller Digital Sweepstakes Wednesday, November 4 This fall, drop in on Warren Miller’s 77th film, Days Off. Follow host Katie Burrell as the world’s best athletes show you what they do on their days off—no agenda, no competition, just pure, unscripted joy. Embark on a global journey from heli-drops in Alaska and high-alpine mountaineering in Chamonix to the legendary powder of Hokkaido, Japan. Take a ride down Banff’s infamous skijoring course, hit the slopes of Deer Valley, and charge Canada’s finest in Revelstoke, Whistler, and Pemberton. Days Off captures the raw, unfiltered heart of mountain culture—a pure celebration of skiing for skiing’s sake and the joy of making time for what matters most. Winter’s greatest tradition is back. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/Warren-Miller-Days-Off-Banner.png"
   },
   {
     title: "Ridgway Independent Film Fest STILLS EXHIBIT Opening Reception for First Friday",
@@ -5237,9 +5189,8 @@ const SHERBINO_EVENTS = [
     date: "2026-11-06 17:00:00",
     endDate: "2026-11-06 20:00:00",
     location: "The Sherbino, Ridgway",
-    copy: "The opening reception for the Ridgway Independent Film Fest Stills Exhibit kicks off First Friday at The Sherbino, featuring still images from the 2026 festival on display in the Decker Room. The exhibit runs through November 30, offering visitors a chance to linger over photography drawn from the independent film festival.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/10/STILLS-4.png",
-    description: "The opening reception for the Ridgway Independent Film Fest Stills Exhibit kicks off First Friday at The Sherbino, featuring still images from the 2026 festival on display in the Decker Room. The exhibit runs through November 30, offering visitors a chance to linger over photography drawn from the independent film festival."
+    copy: "A moment worth a closer look. Explore still images from the 2026 Ridgway Independent Film Fest, on display November 6–30 in the Decker Room.\n\n\n\n\t\n\t\t\n\t\t\t\t\t\n\n\t\t\t\t\t\n\t\t\t\t @ \t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\n\n\n\n\nRIDGWAY INDEPENDENT FILM FEST ~ STILLS EXHIBITAn invitation to look a little longer.\n\n\n\nExplore a selection of film stills from the 2026 Ridgway Independent Film Fest. From intimate close-ups to expansive landscapes, the exhibit celebrates the faces, places, and small details that bring these films to life.November 6–30 · Decker RoomOpening Reception on First Friday, Nov 6\n\n\n\nPresented by the Sherbino Theater and the Town of Ridgway.\n\n\n\nSee the images, then experience the stories in motion. Festival tickets are on sale now: $75 for a full festival pass or $15 per block.\n\n\n\n\nView Full RIFF Program\n\n\n\nAll Access Festival Pass\n\n\n\nVolunteer at the Fest!\n\n\n\n\n\t\n\t\t\n\t\n\n\n\t\n\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\n\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tAdd to calendar\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\n\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tGoogle Calendar\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tiCalendar\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tOutlook 365\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tOutlook Live",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/10/STILLS-4.png"
   },
   {
     title: "First Friday Closing Reception: Michelle Montague's CONTAINMENT",
@@ -5247,9 +5198,8 @@ const SHERBINO_EVENTS = [
     date: "2026-11-06 17:00:00",
     endDate: "2026-11-06 19:00:00",
     location: "The Sherbino, Ridgway",
-    copy: "The Sherbino's 610 Arts Collective hosts the closing reception for *Containment*, an exhibition by Ridgway artist Michelle Montague, on the final evening of its roughly six-week run. The free event runs from 5:00 to 7:00 p.m. and offers a last chance to experience Montague's work in the 610 Arts Collective gallery.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/10/montague-closing.jpg",
-    description: "The Sherbino's 610 Arts Collective hosts the closing reception for *Containment*, an exhibition by Ridgway artist Michelle Montague, on the final evening of its roughly six-week run. The free event runs from 5:00 to 7:00 p.m. and offers a last chance to experience Montague's work in the 610 Arts Collective gallery."
+    copy: "@ CONTAINMENT ~ An Exhibition by Michelle Montague at the Sherbino's 610 Arts Collective gallery On display September 29 – November 6 Closing Reception: Friday, Nov 6 | 5:00–7:00 PM | Free! 610 Arts Collective presents CONTAINMENT, a new exhibition by Ridgway artist Michelle Montague. In this body of work, Montague places her signature clay figures within mixed-media box assemblages, creating intimate environments that hold both personal emotion and cultural tension. Begun in the aftermath of the 2024 election, the series reflects her response to current events, balancing anxiety, vulnerability, and frustration with an enduring hope for change. Using wooden crates, found objects, and sculpted human forms, Montague builds layered scenes that invite viewers to look closely and question their first impressions. The boxes serve as both practical display structures and symbolic containers—framing each narrative while intensifying the sense of confinement, exposure, and emotional pressure within the work. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/10/montague-closing.jpg"
   },
   {
     title: "The Sherbino & OCPAG Present: Heather & Doug – First Friday Show",
@@ -5257,9 +5207,8 @@ const SHERBINO_EVENTS = [
     date: "2026-11-06 18:00:00",
     endDate: "2026-11-06 20:00:00",
     location: "The Sherbino, Ridgway",
-    copy: "A free live music show presented by The Sherbino and the Ouray County Performing Arts Guild, featuring performers Heather and Doug in the Sherbino's intimate \"Living Room\" setting. The event runs from 6:00 to 8:00 p.m., with a cash bar available, donations to the performers and venue welcome, and additional support provided by FUSE.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/heather-and-doug-nov-first-fri.png",
-    description: "A free live music show presented by The Sherbino and the Ouray County Performing Arts Guild, featuring performers Heather and Doug in the Sherbino's intimate \"Living Room\" setting. The event runs from 6:00 to 8:00 p.m., with a cash bar available, donations to the performers and venue welcome, and additional support provided by FUSE."
+    copy: "@ Friday, November 6th | 6:00–8:00 pmSherbino “Living Room” Free Show, Donations to the Performer and the Sherbino are welcome! | Cash Bar | Tips Encouraged | Sponsored by Ouray County Performing Arts Guild with additional support from FUSECelebrate First Friday with an intimate evening of live music at the Sherbino! Heather & Douglas join us inside The Sherbino on Friday, November 6 from 6–8 PM for an evening of live music as part of Ridgway’s First Friday festivities. Featuring acoustic guitar, upright bass, vocals, and an easygoing blend of roots-inspired sounds, Heather & Douglas are a longtime local favorite in the Sherbino's Courtyars — and a perfect soundtrack for a night out in Ridgway. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/heather-and-doug-nov-first-fri.png"
   },
   {
     title: "Monthly Welcome Home Alliance Veteran's Coffee at the Sherbino",
@@ -5267,9 +5216,8 @@ const SHERBINO_EVENTS = [
     date: "2026-11-10 10:00:00",
     endDate: "2026-11-10 12:00:00",
     location: "Ridgway, CO",
-    copy: "A recurring monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The event offers a relaxed, community-oriented space for veterans to connect with one another.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
-    description: "A recurring monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The event offers a relaxed, community-oriented space for veterans to connect with one another."
+    copy: "",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png"
   },
   {
     title: "Ridgway Independent Film Fest 2026",
@@ -5277,9 +5225,8 @@ const SHERBINO_EVENTS = [
     date: "2026-11-13 00:00:00",
     endDate: "2026-11-15 23:59:59",
     location: "Ridgway, CO",
-    copy: "The Ridgway Independent Film Festival (RIFF) returns for its 12th year in Ridgway, CO, celebrating bold storytelling and emerging filmmakers through independent cinema. The multi-day festival brings together film enthusiasts and the local community for screenings and events highlighting the power of independent film.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2025/11/RIFF-Banner-new.png",
-    description: "The Ridgway Independent Film Festival (RIFF) returns for its 12th year in Ridgway, CO, celebrating bold storytelling and emerging filmmakers through independent cinema. The multi-day festival brings together film enthusiasts and the local community for screenings and events highlighting the power of independent film."
+    copy: "@ All Access Festival Pass Volunteer at The Film Fest 12 Years of Fierce, Fearless, Independent Film The Ridgway Independent Film Festival (RIFF) returns in 2026 with its 12th year of celebrating bold storytelling, emerging filmmakers, and the power of community through the lens of independent film. The RIFF committee has selected films with a lineup of 6 blocks of films spanning 3 days. View Digital Program, tickets and more. Individual Block Tickets: $15 All Access Festival Pass: $75 Rooted in a volunteer-driven, grassroots effort born shortly after Ridgway became one of Colorado’s first Certified Creative Districts, RIFF continues to evolve while honoring its origins. This year, RIFF returns to its longtime home in November, taking place November 13–15, 2026, with a refreshed structure designed to create deeper connection and conversation. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2025/11/RIFF-Banner-new.png"
   },
   {
     title: "Ridgway Independent Film Fest: Begin Where You Are ~ Opening Night Shorts",
@@ -5287,9 +5234,8 @@ const SHERBINO_EVENTS = [
     date: "2026-11-13 17:00:00",
     endDate: "2026-11-13 18:30:00",
     location: "The Sherbino, Ridgway",
-    copy: "The Ridgway Independent Film Festival opens at The Sherbino with an evening of short films grouped under the theme \"Begin Where You Are.\" Doors open at 4:30 p.m. with films beginning at 5:00 p.m.; single-block general admission is $15.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/Block0.beginasyouare.png",
-    description: "The Ridgway Independent Film Festival opens at The Sherbino with an evening of short films grouped under the theme \"Begin Where You Are.\" Doors open at 4:30 p.m. with films beginning at 5:00 p.m.; single-block general admission is $15."
+    copy: "View Full RIFF Program\n\n\n\nAll Access Festival Pass\n\n\n\nVolunteer at the Fest!\n\n\n\n\n\t\n\t\t\n\t\t\t\t\t\n\n\t\t\t\t\t\n\t\t\t\t @ \t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\n\n\n\n\nDoors:  4:30pm || Film start: 5:00pm ||  Single Block General Admission  $15 || Setting: Seated at The Sherbino\n\n\n\nBegin Where You Are\n\n\n\nEvery story begins before we know where it will lead. Opening night gathers threads from across the weekend—animated and lived, local and far-flung, strange and familiar. A little taste of where we are and everywhere we might go.\n\n\n\nFilms in This Block\n\n\n\nPaper Trail\n\n\n\nMs. Rossi 3:  Ms. Rossi Meets the Mob\n\n\n\nWhat Happens in Vegas\n\n\n\nThe Orange and the Seder\n\n\n\nThe Time My Grandmother Was Held Hostage by Bank Robbers\n\n\n\nMountain Guides: Barometers of Change\n\n\n\nBusy Bodies\n\n\n\n\n\n\n\n\t\n\t\t\n\t\n\n\n\t\n\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\n\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tAdd to calendar\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\n\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tGoogle Calendar\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tiCalendar\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tOutlook 365\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tOutlook Live",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/Block0.beginasyouare.png"
   },
   {
     title: "Ridgway Independent Film Fest ~ Something Was Calling Us",
@@ -5297,9 +5243,8 @@ const SHERBINO_EVENTS = [
     date: "2026-11-14 10:00:00",
     endDate: "2026-11-14 11:30:00",
     location: "The Sherbino, Ridgway",
-    copy: "The Ridgway Independent Film Fest screens \"Something Was Calling Us\" at The Sherbino, a film exploring the experience of heeding an inner call or turning point. The festival offers single-block general admission tickets as well as all-access passes and volunteer opportunities for those wanting a deeper involvement in the event.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/Block1.somethingwascallingus-1.png",
-    description: "The Ridgway Independent Film Fest screens \"Something Was Calling Us\" at The Sherbino, a film exploring the experience of heeding an inner call or turning point. The festival offers single-block general admission tickets as well as all-access passes and volunteer opportunities for those wanting a deeper involvement in the event."
+    copy: "View Full Digital Program\n\n\n\nAll Access Festival Pass\n\n\n\nVolunteer at the Fest!\n\n\n\n\n\t\n\t\t\n\t\t\t\t\t\n\n\t\t\t\t\t\n\t\t\t\t @ \t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\n\n\n\n\nDoors:  9:45 am || Film start: 10:00 am ||  Single Block General Admission:  $15\n\n\n\nSomething Was Calling Us\n\n\n\nSooner or later, a voice asks us to listen. It may carry a memory, a lost love, an echo of someone gone, or the hope of finding our way back. Wistful, tender, and occasionally strange, these stories follow the quiet pull of love, loss, identity, and change—and the unexpected paths we take toward what is missing.\n\n\n\n\t\n\t\t\n\t\n\n\n\t\n\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\n\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tAdd to calendar\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\n\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tGoogle Calendar\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tiCalendar\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tOutlook 365\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tOutlook Live",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/Block1.somethingwascallingus-1.png"
   },
   {
     title: "Ridgway Independent Film Fest ~ The Mountains Knew Our Names",
@@ -5307,9 +5252,8 @@ const SHERBINO_EVENTS = [
     date: "2026-11-14 13:00:00",
     endDate: "2026-11-14 14:30:00",
     location: "The Sherbino, Ridgway",
-    copy: "A screening of *The Mountains Knew Our Names* presented as part of the Ridgway Independent Film Fest, held at The Sherbino in Ridgway. The festival features general admission single-block tickets as well as all-access passes, with doors opening ahead of the afternoon screening.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/Block2.themountainsknewournames-1.png",
-    description: "A screening of *The Mountains Knew Our Names* presented as part of the Ridgway Independent Film Fest, held at The Sherbino in Ridgway. The festival features general admission single-block tickets as well as all-access passes, with doors opening ahead of the afternoon screening."
+    copy: "View Full Digital Program\n\n\n\nAll Access Festival Pass\n\n\n\nVolunteer at the Fest!\n\n\n\n\n\t\n\t\t\n\t\t\t\t\t\n\n\t\t\t\t\t\n\t\t\t\t @ \t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\n\n\n\n\nDoors:  12:45 pm || Film start: 1:00 pm ||  Single Block General Admission:  $15\n\n\n\nThe Mountains Knew Our Names \n\n\n\nThe places we pass through remember more than we do. Rooted across Colorado, these documentaries explore the ties between people and place—the histories we inherit, the traditions we carry, the communities that raise us, and the paths we choose for ourselves.\n\n\n\n\t\n\t\t\n\t\n\n\n\t\n\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\n\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tAdd to calendar\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\n\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tGoogle Calendar\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tiCalendar\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tOutlook 365\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tOutlook Live",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/Block2.themountainsknewournames-1.png"
   },
   {
     title: "Ridgway Independent Film Fest ~ We Gathered Around the Fire",
@@ -5317,9 +5261,8 @@ const SHERBINO_EVENTS = [
     date: "2026-11-14 18:30:00",
     endDate: "2026-11-14 20:00:00",
     location: "The Sherbino, Ridgway",
-    copy: "The Ridgway Independent Film Fest presents an evening screening block titled *We Gathered Around the Fire* at The Sherbino, with doors opening at 6:15 p.m. and films beginning at 6:30 p.m. General admission for this single block is $15, with festival passes and volunteer opportunities also available.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/Block3.wegatheredaroundthefire-1.png",
-    description: "The Ridgway Independent Film Fest presents an evening screening block titled *We Gathered Around the Fire* at The Sherbino, with doors opening at 6:15 p.m. and films beginning at 6:30 p.m. General admission for this single block is $15, with festival passes and volunteer opportunities also available."
+    copy: "View Full Digital Program\n\n\n\nAll Access Festival Pass\n\n\n\nVolunteer at the Fest!\n\n\n\n\n\t\n\t\t\n\t\t\t\t\t\n\n\t\t\t\t\t\n\t\t\t\t @ \t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\n\n\n\n\nDoors:  6:15 pm || Film start: 6:30 pm ||  Single Block General Admission:  $15\n\n\n\nWe Gathered Around the Fire\n\n\n\nSo we sit together and share what we have carried. Look closely enough, and even a mailbox has a story. These films find community in the ordinary places where lives intersect—in neighbors, shared spaces, small gestures, and the things we build together. Come gather for a while. You may leave dancing.\n\n\n\n\t\n\t\t\n\t\n\n\n\t\n\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\n\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tAdd to calendar\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\n\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tGoogle Calendar\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tiCalendar\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tOutlook 365\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tOutlook Live",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/Block3.wegatheredaroundthefire-1.png"
   },
   {
     title: "Ridgway Independent Film Fest ~ We Invited the Monsters In",
@@ -5327,9 +5270,8 @@ const SHERBINO_EVENTS = [
     date: "2026-11-15 10:00:00",
     endDate: "2026-11-15 11:30:00",
     location: "The Sherbino, Ridgway",
-    copy: "The Ridgway Independent Film Fest presents *We Invited the Monsters In*, a film screening at The Sherbino exploring the blurry line between monsters and the familiar. The festival offers single-block general admission tickets as well as all-access passes and volunteer opportunities for those wanting a deeper involvement in the event.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/Block4.weinvitedthemonstersin-1.png",
-    description: "The Ridgway Independent Film Fest presents *We Invited the Monsters In*, a film screening at The Sherbino exploring the blurry line between monsters and the familiar. The festival offers single-block general admission tickets as well as all-access passes and volunteer opportunities for those wanting a deeper involvement in the event."
+    copy: "View Full Digital Program\n\n\n\nAll Access Festival Pass\n\n\n\nVolunteer at the Fest!\n\n\n\n\n\t\n\t\t\n\t\t\t\t\t\n\n\t\t\t\t\t\n\t\t\t\t @ \t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\n\n\n\n\nDoors:  9:45 am || Film start: 10:00 am ||  Single Block General Admission:  $15\n\n\n\nWe Invited the Monsters In\n\n\n\nUp close, it becomes harder to tell the monsters from the rest of us. Gothic, gruesome, funny, and occasionally sweet, these stories pair tenderness with terror and vengeance with very dark humor. Come for the weird. Stay for the dark. And maybe don’t ask what’s for dinner.\n\n\n\n\t\n\t\t\n\t\n\n\n\t\n\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\n\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tAdd to calendar\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\n\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tGoogle Calendar\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tiCalendar\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tOutlook 365\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tOutlook Live",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/Block4.weinvitedthemonstersin-1.png"
   },
   {
     title: "Ridgway Independent Film Fest ~ We Wandered Beyond the Firelight",
@@ -5337,9 +5279,8 @@ const SHERBINO_EVENTS = [
     date: "2026-11-15 14:00:00",
     endDate: "2026-11-15 15:30:00",
     location: "The Sherbino, Ridgway",
-    copy: "A screening at The Sherbino in Ridgway as part of the Ridgway Independent Film Fest, featuring the film *We Wandered Beyond the Firelight*. Doors open at 1:45 pm with the film beginning at 2:00 pm, and single-block general admission tickets are $15.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/Block5.wewanderedbeyondthefirelight-1.png",
-    description: "A screening at The Sherbino in Ridgway as part of the Ridgway Independent Film Fest, featuring the film *We Wandered Beyond the Firelight*. Doors open at 1:45 pm with the film beginning at 2:00 pm, and single-block general admission tickets are $15."
+    copy: "View Full RIFF Program\n\n\n\nAll Access Festival Pass\n\n\n\nVolunteer at the Fest!\n\n\n\n\n\t\n\t\t\n\t\t\t\t\t\n\n\t\t\t\t\t\n\t\t\t\t @ \t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\n\n\n\n\nDoors:  1:45 pm || Film start: 2:00 pm ||  Single Block General Admission:  $15\n\n\n\nWe Wandered Beyond the Firelight\n\n\n\nBy morning, the world is no simpler—only larger. These stories move between truth and memory, expectation and identity, the lives we’re given and the ones we make for ourselves. Tender, tense, funny, and quietly unsettling, they inhabit the gray areas—where things get complicated and perhaps a little more human.\n\n\n\n\t\n\t\t\n\t\n\n\n\t\n\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\n\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tAdd to calendar\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\n\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tGoogle Calendar\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tiCalendar\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tOutlook 365\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tOutlook Live",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/Block5.wewanderedbeyondthefirelight-1.png"
   },
   {
     title: "The Sherbino & Citizens State Bank Present: Winter Wildlands Alliance BACKCOUNTRY FILM FEST",
@@ -5356,9 +5297,8 @@ const SHERBINO_EVENTS = [
     date: "2026-11-20 19:30:00",
     endDate: "2026-11-20 21:30:00",
     location: "The Sherbino, Ridgway",
-    copy: "Cosmic Luau with PSYLO is a dancehall-style show at The Sherbino Theater in Ridgway, featuring a light show by Lumagic. The event combines tropical and psychedelic themes in a limited-seating venue setting.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/10/PSYLO-SHERB-26-A1C-scaled.jpg",
-    description: "Cosmic Luau with PSYLO is a dancehall-style show at The Sherbino Theater in Ridgway, featuring a light show by Lumagic. The event combines tropical and psychedelic themes in a limited-seating venue setting."
+    copy: "@ COSMIC LUAU WITH PSYLO Friday, November 20, 2026 | The Sherbino Theater, Ridgway Doors: 7:00 PM | Show: 7:30 PM | Tickets: $17 Advance / $20 Day of Show Dancehall-style show with limited seating | Light Show by Lumagic Get ready for a tropical twist on a psychedelic night! The Sherbino and Pickin’ Productions invite you to COSMIC LUAU WITH PSYLO — an evening of electrifying live music, hypnotic grooves, and a dazzling light show by Lumagic! Get into the island spirit! Audience members are encouraged to break out their Hawaiian shirts, tropical prints, leis, grass skirts, and favorite island-inspired attire. We're bringing a little luau energy to the mountains of Ridgway, so dress for the occasion and come ready to dance! ABOUT PSYLO Ridgway-based PSYLO serves up a powerful blend of original psychedelic rock and improvisational jam band music. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/10/PSYLO-SHERB-26-A1C-scaled.jpg"
   }
 ];
 
@@ -5614,7 +5554,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
     pubDate: "2026-11-03T20:30:00.000Z",
-    endDate: "2026-12-30",
+    endDate: "2026-12-31",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5744,7 +5684,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/floating-sound-bath-4324",
     description: "Group float in warm, healing waters every Saturday @ 3pm. Receive gentle aquatic massage surrounded by live sound therapy; vocals, bowls and more. Contact Vanessa W. 720-470-2823 to reserve your spot. Sliding Scale: $35-$85/person. Please pay in advance: cash at indoor pool or Venmo: @GOLDENTHREADSTHERAPY *Orvis entry fee pay seperately",
     pubDate: "2026-11-05T22:00:00.000Z",
-    endDate: "2026-12-26",
+    endDate: "2026-12-31",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6638,28 +6578,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Movies Under the Stars",
-    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    pubDate: "2026-10-31T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
-  },
-  {
-    title: "Mind Blown Telluride",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
-    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
-    pubDate: "2026-10-31T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
-  },
-  {
     title: "Bike & Brewery Tour",
     link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
@@ -6949,50 +6867,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/63749/yf_thundertix-ezgif_com-webp-to-jpg-converter.800x533.webp"
-  },
-  {
-    title: "KOTO Halloween Bash",
-    link: "https://www.telluride.com/event/koto-halloween-bash/",
-    description: "In 2019 RADO formed and took up the cause in Denver’s prolific music scene. The band melds together ferocious …",
-    pubDate: "2026-10-31",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/45292/screenshot_2026-10-14_at_11_30_48_am.800x533.webp"
-  },
-  {
-    title: "Halloween on the Hill",
-    link: "https://www.telluride.com/event/halloween-on-the-hill/",
-    description: "Join the Telluride Historical Museum for Halloween on the Hill. The museum will be hosting games, trick or treating, …",
-    pubDate: "2026-10-31",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/49432/poster_11x17-rgb--v1.800x533.webp"
-  },
-  {
-    title: "Halloween Dance Party",
-    link: "https://www.telluride.com/event/halloween-dance-party/",
-    description: "Get spooky at Van Atta for Halloween! Join them for their 2nd Annual Halloween Dance Party - this year will feature …",
-    pubDate: "2026-10-31",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/55837/863251585_18016337219952458_168798008229105469_n.800x533.webp"
-  },
-  {
-    title: "Telluride Fire Halloween Open House",
-    link: "https://www.telluride.com/event/telluride-fire-halloween-open-house/",
-    description: "Telluride Fire invites the community to its Halloween Open House on Saturday, October 31, from 4–7 p.m. at …",
-    pubDate: "2026-10-31",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/59792/screenshot_2026-10-20_at_10_59_28_am.800x533.webp"
   },
   {
     title: "Mountainfilm for Locals",
