@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-01 17:00 UTC",
+  "generated": "2026-11-03 19:53 UTC",
   "digests": {
     "weekly": {
       "name": "The Week Ahead Outlook",
-      "subject": "The Week Ahead Outlook - November 2 - November 8, 2026",
-      "covers": "Mon Nov 2 to Sun Nov 8, 2026",
-      "weekStart": "2026-11-02",
+      "subject": "The Week Ahead Outlook - November 9 - November 15, 2026",
+      "covers": "Mon Nov 9 to Sun Nov 15, 2026",
+      "weekStart": "2026-11-09",
       "audience": "Weekly Update",
       "file": "digest/week.html"
     }
