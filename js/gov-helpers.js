@@ -1088,7 +1088,7 @@ const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
 const MANUAL_SUMMARIES_CACHE_DATE = '2026-11-03';
-const LEGAL_NOTICES_CACHE_DATE = '2026-11-02';
+const LEGAL_NOTICES_CACHE_DATE = '2026-11-03';
 
 const MANUAL_SUMMARIES = {
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026":
@@ -3514,15 +3514,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Applications Open for 2026/2027 Temporary Winter Community Housing Program",
-    source: "Town of Telluride",
-    date: "October 9, 2026",
-    newsTopic: "housing",
-    copy: "(October 8, 2026) – The Town of Telluride is accepting applications for its Temporary Winter Community Housing program for the 2026/2027 winter season. The program provides seasonal housing in Town Park for eligible workers employed in the Telluride area.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=406",
-    img: ""
-  },
-  {
     title: "Election Day Clerk's Office Closures 11/3/2026",
     source: "San Miguel County",
     date: "October 28, 2026",
@@ -3530,15 +3521,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The Department of Motor Vehicles, Marriage License and Recording offices will be closed all day on 11/3/2026 for Election Day. Offices will re-open 11/4/2026 at 7:30 AM.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=550",
     img: ""
-  },
-  {
-    title: "DMV Services available in Egnar 11/18",
-    source: "San Miguel County",
-    date: "October 15, 2026",
-    newsTopic: "community",
-    copy: "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
   },
   {
     title: "SBA Offers Disaster Assistance in Ouray County",
@@ -7523,24 +7505,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_2a67f0e2-7d5c-47a5-a0a6-a1635a6dda11.html",
     address: "San Miguel Power Association service territory, San Miguel County, Colorado (meeting held virtually)",
     noticeKey: "smpa-rules-regulations-amendment-2026-COL000275"
-  },
-  {
-    title: "Public Hearing -- Planning & Zoning Commission, 510 W Columbia Avenue Minor Subdivision",
-    entity: "Town of Telluride Planning and Zoning Commission",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The Town of Telluride Planning and Zoning Commission Chair will hold a public hearing on Monday, November 2, 2026 at 9:00 a.m. via hybrid meeting (in person and Zoom) to consider a Minor Subdivision application for 510 W Columbia Avenue. The notice was truncated but identifies the project as a Minor Subdivision at that address in Telluride. Members of the public may attend via Zoom (Meeting ID 815 3599 7736, Password: 769982) or by phone.",
-    deadline: "2026-11-02",
-    expires: "2026-11-02",
-    dates: "10/15",
-    papers: ["ttimes_1015"],
-    url: "https://www.telluridenews.com/news/legals/article_2a67f0e2-7d5c-47a5-a0a6-a1635a6dda11.html",
-    address: "510 W Columbia Avenue, Telluride, CO",
-    noticeKey: "pz-hearing-510-w-columbia-minor-subdivision"
   },
   {
     title: "Request for Proposal -- San Miguel County Housing Action Plan",

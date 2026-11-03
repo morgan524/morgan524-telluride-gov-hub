@@ -239,26 +239,6 @@
     "noticeKey": "smpa-rules-regulations-amendment-2026-COL000275"
   },
   {
-    "title": "Public Hearing -- Planning & Zoning Commission, 510 W Columbia Avenue Minor Subdivision",
-    "entity": "Town of Telluride Planning and Zoning Commission",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "The Town of Telluride Planning and Zoning Commission Chair will hold a public hearing on Monday, November 2, 2026 at 9:00 a.m. via hybrid meeting (in person and Zoom) to consider a Minor Subdivision application for 510 W Columbia Avenue. The notice was truncated but identifies the project as a Minor Subdivision at that address in Telluride. Members of the public may attend via Zoom (Meeting ID 815 3599 7736, Password: 769982) or by phone.",
-    "deadline": "2026-11-02",
-    "expires": "2026-11-02",
-    "dates": "10/15",
-    "papers": [
-      "ttimes_1015"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_2a67f0e2-7d5c-47a5-a0a6-a1635a6dda11.html",
-    "address": "510 W Columbia Avenue, Telluride, CO",
-    "noticeKey": "pz-hearing-510-w-columbia-minor-subdivision"
-  },
-  {
     "title": "Request for Proposal -- San Miguel County Housing Action Plan",
     "entity": "San Miguel County",
     "entityClass": "ent-county",
