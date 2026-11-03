@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T06:00:53.345Z",
+ "generated": "2026-11-03T14:03:55.345Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -157,9 +157,18 @@
      "livestream": ""
     }
    ],
-   "recent": [],
+   "recent": [
+    {
+     "source": "norwood",
+     "date": "2026-11-02",
+     "title": "Norwood Water Commission Work Session",
+     "snippet": "The Norwood Water Commission sits down for a work session focused on a single item: the 2027 draft budget. Work sessions are deliberative — no formal action can be taken — so this is the commission's…"
+    }
+   ],
    "developments": [],
-   "stale": []
+   "stale": [
+    "Norwood Water: norwood discussed it on 2026-11-02 (\"Norwood Water Commission Work Session\") but the deep dive was last edited 2026-07-23."
+   ]
   },
   "fieldpaving": {
    "label": "Field Paving at Town Park",

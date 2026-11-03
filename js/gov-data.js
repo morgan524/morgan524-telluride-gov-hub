@@ -758,15 +758,6 @@ const NORWOOD_CACHE_DATE = '2026-11-03';
 
 const NORWOOD_CACHED_DATA = [
   {
-    date: "October 27, 2026",
-    time: null,
-    title: "Board of Trustees Joint Work Session",
-    agendaUrl: "https://www.norwoodtown.com/files/6bb742041/10.27.2026+JOINT+Work+Session.pdf",
-    packetUrl: null,
-    special: false,
-    board: "bot"
-  },
-  {
     date: "November 2, 2026",
     time: null,
     title: "Norwood Water Commission Work Session",

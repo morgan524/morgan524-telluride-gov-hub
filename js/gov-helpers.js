@@ -492,7 +492,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://www.norwoodtown.com/files/8bb3805e6/11.04.2026+BOT+Work+Session+Agenda.pdf","zoomUrl":"https://us02web.zoom.us/j/88369352327","meetingId":"883 6935 2327","passcode":"122688","phone":"970-327-4288","sv":4},
 
   "tmvoa|2026-12-03|TMVOA Board of Directors Budget Meeting #3":
-    {"sv":4,"ph":"b858cb282617fb09"}
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "telluride|2026-12-03|Town Council Retreat - Dec 03 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8051","sv":4,"ph":"57e0e2e4fad4db1f"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -506,6 +509,14 @@ const DEEP_DIVE_UPDATES = [];
 //   sourceUrl, topics: [] }. Rendered by hub-bub.html from the JSON mirror
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
+  {
+    date: "2026-11-03",
+    title: "Deck repairs — or something more?",
+    body: "The Design Review Board has a work session coming up on deck repairs and possible extensions at 120 Vischer Dr. Work sessions are exploratory — nothing's decided yet. But that phrase \"possible extensions\" is where opinions tend to split. Some neighbors see deck work as routine upkeep that keeps older structures sound. Others worry that a repair conversation quietly becomes an expansion conversation, adding mass or footprint to something that wasn't originally sized for it. Where's the line between fixing what's there and changing what's there?",
+    choices: ["Repairs only — hold the line", "Extensions can be reasonable", "Depends on the specifics", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
   {
     date: "2026-11-02",
     title: "How many boards does it take to hire one consultant?",
@@ -737,14 +748,6 @@ const DAILY_QUESTIONS = [
     choices: ["People have to come first", "Protect the wildlife", "Find a middle ground", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-10-04",
-    title: "Two keys to every liquor license — is that the right setup?",
-    body: "The Liquor Licensing Authority is taking up license applications or modifications this week. Here's the wrinkle: both the local Authority and the Colorado Department of Revenue have to sign off before anything gets issued or changed. New licenses and appeals go to Town Council on top of that.\n\nSome folks think layered approval protects the community — more eyes, more accountability. Others figure it just slows things down and splits responsibility in ways that help no one. Up here, a license delay can make or break a season.\n\nDo you think the two-key approval setup works, or is it more friction than protection?",
-    choices: ["It's solid protection", "Too much friction", "Depends on the applicant", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -842,11 +845,8 @@ const MEETING_PREVIEWS = {
   "norwood|2026-11-04|Board of Trustees Budget Work Session":
     "Board members will review the 2027 draft budget during a work session. No formal action will be taken. The meeting will be held at Norwood Town Hall with a Zoom attendance option available.",
 
-  "telluride|2026-11-02|Special Meeting - Planning & Zoning Commission Chair - Nov 02 2026 at 10:30 AM":
-    "The Planning & Zoning Commission Chair will consider a Minor Subdivision application at 510 W Columbia Avenue to vacate the internal lot line between two existing lots and consolidate them into a single approximately 5,625-square-foot lot within the Historic Residential zone district.",
-
-  "telluride|2026-11-02|Rescheduled/Special Meeting - Planning & Zoning Commission Chair - Nov 02 2026":
-    "The Planning & Zoning Commission Chair will consider a Minor Subdivision application at 510 W Columbia Avenue to vacate the internal lot line between two lots and combine them into a single approximately 5,625-square-foot lot in the Historic Residential zone district."
+  "telluride|2026-12-03|Town Council Retreat - Dec 03 2026":
+    "Council is expected to discuss employee rental housing policies as part of a retreat session. A related request for proposals has been issued seeking consulting services to conduct a comprehensive review of the town's existing employee rental housing policies."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1437,7 +1437,10 @@ const MANUAL_SUMMARIES = {
     "The Norwood Board of Trustees sits down for a work session on the 2027 draft budget. No formal action can be taken at a work session — this is the stage where trustees dig into the numbers before any votes. Budget season in a small mountain town is always a tight exercise, and what gets funded (and what doesn't) shapes everything from road maintenance to staffing.",
 
   "tmvoa|2026-12-03|TMVOA Board of Directors Budget Meeting #3":
-    "The December 3 TMVOA Board of Directors Budget Meeting #3 agenda hasn't been posted yet."
+    "The December 3 TMVOA Board of Directors Budget Meeting #3 agenda hasn't been posted yet.",
+
+  "telluride|2026-12-03|Town Council Retreat - Dec 03 2026":
+    "The December 3, 2026 Town Council Retreat agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2720,6 +2723,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Telluride cross-country girls place 14th at State",
+    source: "Telluride Times",
+    date: "November 3, 2026",
+    firstSeen: "2026-11-03",
+    newsTopic: "education",
+    copy: "Costumed spectators, though not overwhelming in number, weren’t ashamed to show up and show off Saturday, Oct. 31, at the 2026 Colorado High School Activities Association State Cross-Country Championships.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/sports/article_a59d7d28-23a9-4b52-9507-e5318124cc16.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/13/b1366ece-acdb-41cc-ac63-c866f13a8bb1/6ae8ffa65e387.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Spectacular spooky season",
     source: "Telluride Times",
@@ -4770,59 +4785,59 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Musik 4 Kinders",
-    link: "https://telluridelibrary.libcal.com/event/17874562?hs=a",
-    description: "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. &iexcl;M&uacute;sica, Movimiento, y Aprendizaje Alegre para ni&ntilde;os! Este programa ser&aacute; en la sala de programas.",
-    pubDate: "2026-11-02T17:30:00.000Z",
+    title: "Reclaiming Your Inner Wisdom: An Online Author Talk with Asha Frost",
+    link: "https://telluridelibrary.libcal.com/event/17873432?hs=a",
+    description: "12:00 PM – 1:00 PM · In a fast-paced world that often leaves us feeling overwhelmed and disconnected, true healing does not come from looking outward—it begins within. Join us for a transformative virtual conversation with Indigenous Medicine Woman Asha Frost as she explores her groundbreaking book, You Are the Medicine: 13 Moons of Indigenous Wisdom, Ancestral Connection, and Animal Spirit Guidance. The Medicine you have been searching for lives within you. Follow the path of the 13 Ojibwe Moons with Animal Spirits and Ancestors as your guides as you unlock your connection to your own unique, inherent healing power. Through storytelling, ceremonies, and Shamanic journeys, learn to apply ancient wisdom to your life in ways that are respectful and conscious of the stolen lands, lives, and traditions of Indigenous peoples. Discover how to : - Ground and root into your own lineage and meet your Ancestral guides. …",
+    pubDate: "2026-11-03T19:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png"
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_22_12_49_03.jpg"
   },
   {
-    title: "Savvy Seniors-Energy Bill Assistance Questions/Answers",
-    link: "https://telluridelibrary.libcal.com/event/17789247?hs=a",
-    description: "1:30 PM – 2:30 PM · Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone. Monday November 2nd, we will have resources for Energy Bill Assistance.We are gathering information from the various county and federal programs to help Seniors with low income that might have trouble paying their electric bill over the winter.",
-    pubDate: "2026-11-02T20:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Meeting Room #6 - large",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_21_12_02_06.png"
-  },
-  {
-    title: "Teen Arts and Crafts",
-    link: "https://telluridelibrary.libcal.com/event/17900460?hs=a",
-    description: "4:00 PM – 5:00 PM · Join us for arts and crafts on Monday afternoons in November!",
-    pubDate: "2026-11-02T23:00:00.000Z",
+    title: "Teen Cook",
+    link: "https://telluridelibrary.libcal.com/event/17486122?hs=a",
+    description: "2:00 PM – 3:00 PM · Join the WPL Every Tuesday after school for Teen Cook. We will cook a different recipe from scratch, and have enough to share with those around!",
+    pubDate: "2026-11-03T21:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_27_11_18_01.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_27_00.png"
   },
   {
-    title: "Poderosa Book Club",
-    link: "https://telluridelibrary.libcal.com/event/17729632?hs=a",
-    description: "5:00 PM – 6:00 PM · Vamos a discutir el libro (En Tiempo de las Mariposas) y compartir nuestros pensamientos. Este es un grupo de lectura y necesitas recoger su libro con Claudia. Por favor de registrarse con Claudia",
-    pubDate: "2026-11-03T00:00:00.000Z",
+    title: "I Heart Art",
+    link: "https://telluridelibrary.libcal.com/event/17292108?hs=a",
+    description: "2:30 PM – 4:00 PM · Looking for a fun and enriching way to spend your afternoons? Join us Tuesdays for I Heart Art, designed especially for kids aged 5-12!  &iquest;Buscas una manera divertida de pasar tus tardes? &iexcl;Unete a nuestro programa extracurricular, dise&ntilde;ado especialmente para ni&ntilde;os de 5 a 12 a&ntilde;os!",
+    pubDate: "2026-11-03T21:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_25_21_54_26.jpg"
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_39_32.png"
   },
   {
-    title: "Mountainfilm for Locals: A Night of Short Films",
-    link: "https://telluridelibrary.libcal.com/event/17278978?hs=a",
-    description: "5:00 PM – 7:00 PM · Date: Monday, Nov. 2, 2026 Time: Doors and pizza at 5 PM, films at 5:30 PM Join us for Mountainfilm for Locals, a free screening for our local community, presented in partnership with Wilkinson Public Library. Catch a 90-minute program of short films from the 2026 Mountainfilm Festival, including Best Documentary Short winner The Grandfather Puzzle and Evening in Chile , featuring Colorado freeskier Bobby Brown. Free pizza is first come, first served, so come hungry and come early! Here are the films that will be shown: Jaunt \"In a stark warehouse office, Justice is weighed down by deadlines. But every day for one hour, he trades spreadsheets for speed and hits the trails in Jaunt.\" 4 min HAMM! \"Lindsey Hamm found her calling as a mountain guide at 25. …",
-    pubDate: "2026-11-03T00:00:00.000Z",
+    title: "Cookbook Bookclub: Family Favorites",
+    link: "https://telluridelibrary.libcal.com/event/17666672?hs=a",
+    description: "5:30 PM – 7:00 PM · Join us for our tastiest book club! Bring your favorite family recipe to share with the group. You will leave with a full tummy and a brand new cookbook filled with recipes from your fellow community members. Sign up at telluridelibrary.org/events.",
+    pubDate: "2026-11-04T00:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_13_16_44_14.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_17_13_50_43.jpg"
+  },
+  {
+    title: "Bardic Trails Online Poetry Night: Kate Kingston",
+    link: "https://telluridelibrary.libcal.com/event/15970605?hs=a",
+    description: "7:00 PM – 8:30 PM · The Telluride Institute&#39;s Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet's work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit < https://www. tellurideinstitute.org/ western-slope-calendar > to get the zoom link each month , Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. Jan. 6 / Euro-American poet Dane Cervine of Santa Cruz (CA)* Feb. …",
+    pubDate: "2026-11-04T02:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_29_15_45_27.jpg"
   }
 ];
 
@@ -6537,17 +6552,6 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "Board Of Trustees Joint Work Session",
-    link: "https://www.norwoodtown.com/2026-10-27-board-of-trustees-joint-work-session",
-    description: "",
-    pubDate: "2026-10-27T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Government Meeting",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "Norwood Sanitation District Meeting Work Session",
     link: "https://www.norwoodtown.com/2026-10-29-norwood-sanitation-district-meeting-work-session",
     description: "",
@@ -6648,17 +6652,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
-  },
-  {
-    title: "Mountainfilm for Locals",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountainfilm-for-locals-2/",
-    description: "Join Mountainfilm for Mountainfilm for Locals, a free screening for our local community, presented in partnership with Wilkinson Public Library. Catch a 90-",
-    pubDate: "2026-11-02T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/50081/mf26_for_locals_1800x900.png"
   },
   {
     title: "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
@@ -6857,6 +6850,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
+  },
+  {
+    title: "Design Review Board Meeting December 2026",
+    link: "https://townofmountainvillage.com/explore/events/all-events/december-design-review-board-meeting/",
+    description: "The Mountain Village Design Review Board meets for its monthly meeting. Meeting material is typically posted on the Friday before a scheduled meeting.",
+    pubDate: "2026-12-03T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/30530/drb-event-new.png"
   }
 ];
 
