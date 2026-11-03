@@ -134,11 +134,11 @@ const COUNTY_CACHED_DATA = [
   },
   {
     date: "November 9, 2026",
-    time: "1:30 PM",
-    title: "Intergovernmental Meeting - San Miguel County Hosts",
+    time: "7:00 PM",
+    title: "San Miguel Basin Fair Board",
     type: "other",
-    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
-    civicClerkId: 1077,
+    location: "1110 Summit Street, Norwood Sheriff Annex, Norwood, CO 81423",
+    civicClerkId: 1119,
     note: null
   },
   {
@@ -936,7 +936,7 @@ const OURAY_COUNTY_CACHED_DATA = [
   },
   {
     date: "November 10, 2026",
-    time: "2:30 PM",
+    time: "3:00 PM",
     title: "Board of County Commissioners Work Session",
     location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
     civicClerkId: 1094,
