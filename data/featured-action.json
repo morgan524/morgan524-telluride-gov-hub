@@ -1,27 +1,27 @@
 {
- "generated": "2026-11-02T21:37:52.904Z",
+ "generated": "2026-11-03T06:00:53.347Z",
  "pinned": false,
- "topic": "norwoodwater",
- "topicLabel": "Norwood Water",
- "headline": "Norwood Water goes before Norwood Water Commission Work Session on Monday, November 2",
- "blurb": "The Norwood Water Commission sits down for a work session focused on a single item: the 2027 draft budget. Work sessions are deliberative — no formal action can be taken — so this is the commission's chance to work through the numbers before anything goes to a vote. The meeting is at Norwood Town Hall on Naturita Street at 6:00 p.m., with a Zoom option available.",
+ "topic": "medcenter",
+ "topicLabel": "Telluride Medical Center",
+ "headline": "Telluride Medical Center goes before Regular Board Meeting -- Special Meeting on Tuesday, November 3",
+ "blurb": "A short special meeting — just 30 minutes on the books — with one substantive item: a proposal from Jensen Partners to provide support through the due diligence process with CommonSpirit. CommonSpirit Health is one of the largest nonprofit hospital systems in the country, and any formal due diligence engagement signals that a potential partnership, affiliation, or transaction is being evaluated seriously.",
  "images": [],
  "deepDive": {
-  "label": "Norwood Water",
-  "href": "/deep-dive-norwoodwater.html"
+  "label": "Telluride Medical Center",
+  "href": "/deep-dive-medcenter.html"
  },
  "meeting": {
-  "title": "Norwood Water Commission Work Session",
-  "sourceLabel": "Town of Norwood",
-  "date": "2026-11-02",
-  "humanDate": "Monday, November 2",
-  "time": "",
-  "location": "1670 Naturita St, Norwood CO 81423",
-  "agendaUrl": "https://www.norwoodtown.com/files/bbfdcc5d9/11.02.2026+NWC+Work+Session.pdf",
+  "title": "Regular Board Meeting -- Special Meeting",
+  "sourceLabel": "Telluride Regional Medical Center",
+  "date": "2026-11-03",
+  "humanDate": "Tuesday, November 3",
+  "time": "3:00 PM",
+  "location": "333 W Colorado Ave (2nd Floor), Telluride / Zoom",
+  "agendaUrl": "https://www.tellmed.org/files/123ee1a0f/THD+Special+Bd+Mtg+Agenda+11.3.26.pdf",
   "hasAgenda": true,
   "packetUrl": "",
-  "link": "https://www.norwoodtown.com/files/bbfdcc5d9/11.02.2026+NWC+Work+Session.pdf",
-  "zoomLink": "https://us02web.zoom.us/j/84889491102",
+  "link": "https://www.tellmed.org/files/123ee1a0f/THD+Special+Bd+Mtg+Agenda+11.3.26.pdf",
+  "zoomLink": "https://us02web.zoom.us/j/81643831702?pwd=0XmN8YVZcrXW0wphr0yCMnI0hISL77.1&from=addon",
   "livestream": ""
  }
 }

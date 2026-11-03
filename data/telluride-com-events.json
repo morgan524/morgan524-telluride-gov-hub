@@ -12,18 +12,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/45301/i-5fmsgs6-5k-2100x1400-d6f22d2a-6109-408c-9f35-051a33841613.800x533.webp"
   },
   {
-    "title": "Young Frankenstein the Musical",
-    "link": "https://www.telluride.com/event/young-frankenstein-the-musical/",
-    "description": "Book by Mel Brooks & Thomas Meehan\n\nMusic & Lyrics by Mel Brooks\n\nDirected by Sasha Cucciniello\n\nPLEASE NOTE - …",
-    "pubDate": "2026-10-29",
-    "endDate": "2026-11-01",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63749/yf_thundertix-ezgif_com-webp-to-jpg-converter.800x533.webp"
-  },
-  {
     "title": "Mountainfilm for Locals",
     "link": "https://www.telluride.com/event/mountainfilm-for-locals/",
     "description": "Join Mountainfilm for Mountainfilm for Locals, a free screening for our local community, presented in partnership with …",
@@ -102,6 +90,17 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/63705/gwft-banner-16x9-horizontal-2048x1152.800x533.webp"
   },
   {
+    "title": "An Outlaw Thanksgiving",
+    "link": "https://www.telluride.com/event/an-outlaw-thanksgiving-at-alloy-kitchen/",
+    "description": "An Outlaw Thanksgiving at Alloy Kitchen in Mountain Lodge Telluride, Mountain Village. A fire-lit Thanksgiving buffet …",
+    "pubDate": "2026-11-26",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/64180/lodge-winter-2200x1237.800x533.webp"
+  },
+  {
     "title": "Telluride Ski Resort Opening Day 2026",
     "link": "https://www.telluride.com/event/telluride-ski-resort-opening-day/",
     "description": "Telluride Ski Resort is scheduled to open on Thursday, November 26. Join us for opening weekend with plenty to do on …",
@@ -111,6 +110,18 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/42692/telluride_skier.800x533.webp"
+  },
+  {
+    "title": "Live Music at Mountain Lodge",
+    "link": "https://www.telluride.com/event/live-music-at-alloy-kitchen/",
+    "description": "Live music all winter at Mountain Lodge Telluride in Mountain Village. Local acts play the Après Lounge from 4 to 7 …",
+    "pubDate": "2026-11-26",
+    "endDate": "2027-04-05",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/62862/lodge-winter-2200x1237-6.800x533.webp"
   },
   {
     "title": "Mind Blown",
@@ -208,6 +219,18 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/35913/holidayprelude-103.800x533.webp"
   },
   {
+    "title": "Après at 9,545",
+    "link": "https://www.telluride.com/event/apres-at-9-545-subshift/",
+    "description": "Après at 9,545 kicks off the winter on the pool deck at Mountain Lodge Telluride, 9,545 feet up in Mountain Village. …",
+    "pubDate": "2026-12-12",
+    "endDate": "2027-04-03",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/64198/lodge-winter-2200x1237.800x533.webp"
+  },
+  {
     "title": "Warren Miller&#039;s \"Days Off\"",
     "link": "https://www.telluride.com/event/warren-millers-days-off/",
     "description": "Celebrate the season with Warren Miller’s 77th annual ski and snowboard film, Days Off, coming to the Sheridan Opera …",
@@ -240,6 +263,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/43838/img_0715_rb-2100x1335-500d5271-0938-4018-a4ed-fd9c1cfeb5de.800x533.webp"
+  },
+  {
+    "title": "Christmas Day Buffet",
+    "link": "https://www.telluride.com/event/christmas-day-buffet-at-alloy-kitchen/",
+    "description": "Christmas Day buffet at Alloy Kitchen in Mountain Lodge Telluride, Mountain Village, on Friday, December 25, from 3 to …",
+    "pubDate": "2026-12-25",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/64201/maddyb-2026-alloy-women-toast-wide-6ab42305e0333.800x533.webp"
   },
   {
     "title": "Sheridan Arts Foundation Holiday Rewind: A Tribute Concert Series",
@@ -319,5 +353,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63699/soh_photo_1.800x533.webp"
+  },
+  {
+    "title": "Falco & Book Play Jerry Garcia",
+    "link": "https://www.telluride.com/event/falco-book-play-jerry-garcia/",
+    "description": "Rewind to the ’60s! Break out the mod dresses, go-go boots, velvet sport coats and big hair.\n\nRing in 2027 at a …",
+    "pubDate": "2027-01-02",
+    "endDate": "2027-01-04",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63702/falcobookportwashington-19.800x533.webp"
   }
 ]

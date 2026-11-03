@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 11-2-26",
+    "source": "KOTO Community Radio",
+    "date": "November 3, 2026",
+    "newsTopic": "community",
+    "copy": "Winter Comes to the San Juans; Voters Head to the Polls",
+    "href": "https://koto.org/news/newscast-11-2-26/"
+  },
+  {
     "title": "Newscast 10-30-26",
     "source": "KOTO Community Radio",
     "date": "October 31, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "infrastructure",
     "copy": "Learning Life's Lessons from Animals; Cat Movie Fisher with Risho Unda; A Behind-the-Scenes Look at the Gondola",
     "href": "https://koto.org/news/newscast-10-21-26/"
-  },
-  {
-    "title": "Newscast 10-19-26",
-    "source": "KOTO Community Radio",
-    "date": "October 20, 2026",
-    "newsTopic": "community",
-    "copy": "Child Care Expansion Makes Room for More Munchkins; Watershed Forum Looks to the Future of the San Miguel",
-    "href": "https://koto.org/news/newscast-10-19-26/"
   }
 ]

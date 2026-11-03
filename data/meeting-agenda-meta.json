@@ -622,5 +622,21 @@
   "county|2026-11-25|Board of County Commissioners Work Session": {
     "sv": 4,
     "ph": "155b8bb013cf3ec0"
+  },
+  "mv|2026-12-03|Design Review Board": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "norwood|2026-11-04|Board of Trustees Budget Work Session": {
+    "agendaUrl": "https://www.norwoodtown.com/files/8bb3805e6/11.04.2026+BOT+Work+Session+Agenda.pdf",
+    "zoomUrl": "https://us02web.zoom.us/j/88369352327",
+    "meetingId": "883 6935 2327",
+    "passcode": "122688",
+    "phone": "970-327-4288",
+    "sv": 4
+  },
+  "tmvoa|2026-12-03|TMVOA Board of Directors Budget Meeting #3": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   }
 }

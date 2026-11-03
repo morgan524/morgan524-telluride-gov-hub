@@ -1,22 +1,22 @@
 {
-  "hash": "1d3f8181fb5863ac143a4f65f5b7f30c5c3c53a8",
-  "lede": "The biggest thing to watch this week is a Telluride Medical Center special meeting where the board takes up a proposal to engage Jensen Partners for due diligence with CommonSpirit Health — one of the country's largest hospital systems — a step that could signal a major affiliation or structural change for local healthcare. Meanwhile, Telluride's Ecology Commission is weighing a draft ordinance that would ban gas-powered lawn and garden equipment in town limits by 2028–2030, and Ouray City Council holds a public hearing on its 2027 budget along with utility rate ordinances up for a second-reading vote.",
+  "hash": "943b6480c7510855068ff27c77ef93a69ce8235a",
+  "lede": "The biggest thing on the docket this week is a special Telluride Medical Center board meeting Tuesday where trustees will consider engaging Jensen Partners to guide due diligence with CommonSpirit Health, one of the country's largest nonprofit hospital systems — a step that could signal a significant partnership or affiliation down the road. Also worth watching: the Ecology Commission takes up a draft ordinance that would ban gas-powered lawn and garden equipment in town limits by 2028–2030, and the Norwood Board of Trustees digs into its 2027 draft budget. On the lighter side, Mountainfilm for Locals kicks off Tuesday at the library and Art Walk runs Friday.",
   "notable": [
     {
-      "id": 5,
-      "stake": "Board votes on CommonSpirit due diligence — potential hospital affiliation or major structural change."
+      "id": 0,
+      "stake": "Board votes on hiring advisors for potential CommonSpirit Health hospital partnership."
     },
     {
-      "id": 4,
-      "stake": "Public hearing on Ouray's 2027 budget; utility rate ordinances up for second-reading vote."
+      "id": 1,
+      "stake": "Same CommonSpirit due-diligence vote — consequential for the future of local healthcare."
     },
     {
-      "id": 7,
-      "stake": "Draft ordinance would ban gas-powered lawn equipment in Telluride by 2028–2030."
+      "id": 2,
+      "stake": "Draft ordinance would ban gas-powered yard equipment in town by 2028–2030."
     },
     {
-      "id": 3,
-      "stake": "P&Z hears lot-consolidation application in Historic Residential zone — land-use decision."
+      "id": 10,
+      "stake": "Quasi-judicial easement review and height variance vote on Mountain Village properties."
     }
   ]
 }
