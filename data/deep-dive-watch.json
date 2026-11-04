@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T20:56:06.000Z",
+ "generated": "2026-11-04T01:11:42.973Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -27,20 +27,7 @@
   "medcenter": {
    "label": "Telluride Medical Center",
    "lastUpdated": "2026-09-27",
-   "upcoming": [
-    {
-     "source": "med",
-     "sourceLabel": "Telluride Regional Medical Center",
-     "title": "Regular Board Meeting -- Special Meeting",
-     "date": "2026-11-03",
-     "time": "3:00 PM",
-     "location": "333 W Colorado Ave (2nd Floor), Telluride / Zoom",
-     "agendaUrl": "https://www.tellmed.org/files/123ee1a0f/THD+Special+Bd+Mtg+Agenda+11.3.26.pdf",
-     "link": "https://www.tellmed.org/files/123ee1a0f/THD+Special+Bd+Mtg+Agenda+11.3.26.pdf",
-     "zoomLink": "https://us02web.zoom.us/j/81643831702?pwd=0XmN8YVZcrXW0wphr0yCMnI0hISL77.1&from=addon",
-     "livestream": ""
-    }
-   ],
+   "upcoming": [],
    "recent": [
     {
      "source": "med",

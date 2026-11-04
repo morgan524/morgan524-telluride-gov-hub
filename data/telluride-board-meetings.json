@@ -33,7 +33,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8046",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "10:30 AM",
+    "time": "10:00 AM",
     "civicwebId": 8046
   },
   {
@@ -143,5 +143,14 @@
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "10:00 AM",
     "civicwebId": 8330
+  },
+  {
+    "date": "February 2, 2027",
+    "title": "Town Council",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8331",
+    "hasAgenda": false,
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "time": "10:00 AM",
+    "civicwebId": 8331
   }
 ]

@@ -1,22 +1,22 @@
 {
-  "hash": "470327c5c4610e82ebd57054063a66cf2f13550a",
-  "lede": "The biggest thing on the board this week is a special meeting at Telluride Medical Center where trustees will take up a proposal to engage Jensen Partners for due diligence with CommonSpirit Health — one of the largest nonprofit hospital systems in the country — a step that could signal a major shift in how this valley gets its healthcare. The Ecology Commission is also moving on a draft ordinance that would ban gas-powered lawn and garden equipment in town limits by 2028–2030, and the Norwood Board of Trustees digs into its 2027 draft budget. On the lighter side, Warren Miller's 'Days Off' hits town Wednesday and Art Walk returns Friday.",
+  "hash": "25bae4fe525a35acab93980fd834e0f0e819d733",
+  "lede": "The biggest thing on the civic calendar this week is the Ecology Commission taking up a draft ordinance that would ban gas-powered leaf blowers in Telluride by 2028 and all other combustion lawn and garden equipment by 2030 — a real code change worth watching if you work in landscaping or just own a leaf blower. The TMVOA also kicks off its three-meeting 2027 budget cycle on Thursday, and the Arts and Special Events Commission works through a stack of event calendar requests including a proposed date shift for the Telluride Jazz Festival.",
   "notable": [
     {
       "id": 0,
-      "stake": "Trustees vote on hiring due-diligence help for a potential CommonSpirit Health partnership."
+      "stake": "Draft ordinance would ban gas-powered yard equipment in town by 2030."
     },
     {
       "id": 1,
-      "stake": "Same CommonSpirit due-diligence item — a decision that could reshape local healthcare."
+      "stake": "Commission votes on Jazz Festival date change and multiple Arts event approvals."
     },
     {
-      "id": 2,
-      "stake": "Draft ordinance would ban gas-powered yard equipment in Telluride by 2028–2030."
+      "id": 8,
+      "stake": "Quasi-judicial easement review and height variance vote for Mountain Village properties."
     },
     {
-      "id": 10,
-      "stake": "Quasi-judicial easement review and height variance vote on Mountain Village properties."
+      "id": 9,
+      "stake": "TMVOA 2027 draft budget and 2025 audit reviewed — shapes owner assessments ahead."
     }
   ]
 }

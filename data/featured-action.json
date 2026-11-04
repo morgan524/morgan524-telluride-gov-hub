@@ -1,27 +1,27 @@
 {
- "generated": "2026-11-03T20:56:06.003Z",
+ "generated": "2026-11-04T01:11:42.975Z",
  "pinned": false,
- "topic": "medcenter",
- "topicLabel": "Telluride Medical Center",
- "headline": "Telluride Medical Center goes before Regular Board Meeting -- Special Meeting on Tuesday, November 3",
- "blurb": "A short special meeting — just 30 minutes on the books — with one substantive item: a proposal from Jensen Partners to provide support through the due diligence process with CommonSpirit. CommonSpirit Health is one of the largest nonprofit hospital systems in the country, and any formal due diligence engagement signals that a potential partnership, affiliation, or transaction is being evaluated seriously.",
+ "topic": "norwoodwater",
+ "topicLabel": "Norwood Water",
+ "headline": "Norwood Water goes before Norwood Water Commission Meeting on Tuesday, November 10",
+ "blurb": "The November 10, 2026 Norwood Water Commission Meeting agenda hasn't been posted yet.",
  "images": [],
  "deepDive": {
-  "label": "Telluride Medical Center",
-  "href": "/deep-dive-medcenter.html"
+  "label": "Norwood Water",
+  "href": "/deep-dive-norwoodwater.html"
  },
  "meeting": {
-  "title": "Regular Board Meeting -- Special Meeting",
-  "sourceLabel": "Telluride Regional Medical Center",
-  "date": "2026-11-03",
-  "humanDate": "Tuesday, November 3",
-  "time": "3:00 PM",
-  "location": "333 W Colorado Ave (2nd Floor), Telluride / Zoom",
-  "agendaUrl": "https://www.tellmed.org/files/123ee1a0f/THD+Special+Bd+Mtg+Agenda+11.3.26.pdf",
-  "hasAgenda": true,
+  "title": "Norwood Water Commission Meeting",
+  "sourceLabel": "Town of Norwood",
+  "date": "2026-11-10",
+  "humanDate": "Tuesday, November 10",
+  "time": "",
+  "location": "1670 Naturita St, Norwood CO 81423",
+  "agendaUrl": "",
+  "hasAgenda": false,
   "packetUrl": "",
-  "link": "https://www.tellmed.org/files/123ee1a0f/THD+Special+Bd+Mtg+Agenda+11.3.26.pdf",
-  "zoomLink": "https://us02web.zoom.us/j/81643831702?pwd=0XmN8YVZcrXW0wphr0yCMnI0hISL77.1&from=addon",
+  "link": "https://www.norwoodtown.com/nwc-meetings",
+  "zoomLink": "",
   "livestream": ""
  }
 }

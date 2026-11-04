@@ -1,16 +1,5 @@
 [
   {
-    "date": "October 14, 2026",
-    "time": "10:00 AM",
-    "title": "Board of County Commissioners Work Session",
-    "type": "bocc",
-    "location": "5634 Cty Road H1, Egnar Fire Station, Egnar, CO 81325",
-    "civicClerkId": 858,
-    "note": null,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/858/files/agenda/2038",
-    "packetUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/858/files/agenda/2039"
-  },
-  {
     "date": "October 21, 2026",
     "time": "9:30 AM",
     "title": "Board of County Commissioners Meeting",
@@ -91,6 +80,15 @@
     "note": null
   },
   {
+    "date": "November 16, 2026",
+    "time": "4:00 PM",
+    "title": "Open Space Commission Meeting",
+    "type": "other",
+    "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+    "civicClerkId": 1059,
+    "note": null
+  },
+  {
     "date": "November 18, 2026",
     "time": "9:30 AM",
     "title": "Board of County Commissioners Meeting",
@@ -133,6 +131,15 @@
     "type": "planning",
     "location": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
     "civicClerkId": 1079,
+    "note": null
+  },
+  {
+    "date": "December 14, 2026",
+    "time": "4:00 PM",
+    "title": "Open Space Commission Meeting",
+    "type": "other",
+    "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+    "civicClerkId": 1060,
     "note": null
   },
   {
