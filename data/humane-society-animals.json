@@ -15,7 +15,7 @@
   },
   {
     "id": "TEL-A-208",
-    "name": "Robin",
+    "name": "Yuki",
     "species": "Dog",
     "breed": "Shepherd, Australian",
     "ageGroup": "Young Dog",
@@ -39,6 +39,34 @@
     "summary": "Young Dog • Collie, Border / Cattle Dog, Australian (Red Heeler) • Female",
     "firstSeen": "2026-10-31",
     "revealDate": "2026-11-04",
+    "lastSeen": "2026-11-04"
+  },
+  {
+    "id": "TEL-A-211",
+    "name": "Astra",
+    "species": "Dog",
+    "breed": "Husky",
+    "ageGroup": "Young Puppy",
+    "sex": "Female",
+    "photo": "https://new-s3.shelterluv.com/profile-pictures/52a6e181f5deae5d4a70189e53d2adfb/9d5cc31d87b5500bce17db4628dc42b7.jpeg",
+    "profileUrl": "https://www.shelterluv.com/embed/animal/214965927",
+    "summary": "Young Puppy • Husky • Female",
+    "firstSeen": "2026-11-04",
+    "revealDate": "2026-11-04",
+    "lastSeen": "2026-11-04"
+  },
+  {
+    "id": "TEL-A-212",
+    "name": "Charlie",
+    "species": "Dog",
+    "breed": "Retriever, Black Labrador",
+    "ageGroup": "Young Dog",
+    "sex": "Male",
+    "photo": "https://new-s3.shelterluv.com/profile-pictures/57d25e9a106a174e46d309ee8c5ff80d/4e4e89baaa0961b83aa46254179f7eaf.JPG",
+    "profileUrl": "https://www.shelterluv.com/embed/animal/214965980",
+    "summary": "Young Dog • Retriever, Black Labrador • Male",
+    "firstSeen": "2026-11-04",
+    "revealDate": "2026-11-06",
     "lastSeen": "2026-11-04"
   }
 ]

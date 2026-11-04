@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T01:11:42.973Z",
+ "generated": "2026-11-04T19:37:52.016Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -31,6 +31,12 @@
    "recent": [
     {
      "source": "med",
+     "date": "2026-11-03",
+     "title": "Regular Board Meeting",
+     "snippet": "A short special meeting — just 30 minutes on the books — with one substantive item: a proposal from Jensen Partners to provide support through the due diligence process with CommonSpirit.…"
+    },
+    {
+     "source": "med",
      "date": "2026-10-22",
      "title": "Regular Board Meeting",
      "snippet": "The Telluride Hospital District board meets October 22 at the Wellness Annex (and via Zoom) for a session that's heavier than usual on strategic decisions. The two items worth watching: a discussion…"
@@ -38,6 +44,7 @@
    ],
    "developments": [],
    "stale": [
+    "Telluride Medical Center: med discussed it on 2026-11-03 (\"Regular Board Meeting\") but the deep dive was last edited 2026-09-27.",
     "Telluride Medical Center: med discussed it on 2026-10-22 (\"Regular Board Meeting\") but the deep dive was last edited 2026-09-27."
    ]
   },
@@ -62,18 +69,9 @@
    "label": "Wildfire Resiliency",
    "lastUpdated": "2026-06-01",
    "upcoming": [],
-   "recent": [
-    {
-     "source": "fire",
-     "date": "2026-10-20",
-     "title": "Board of Directors Meeting",
-     "snippet": "The Telluride Fire Protection District board meets October 20th at 5:30 p.m. at Station 1 on Columbia Ave. Leading the agenda is the first reading of the 2027 budget — the opening move in a process…"
-    }
-   ],
+   "recent": [],
    "developments": [],
-   "stale": [
-    "Wildfire Resiliency: fire discussed it on 2026-10-20 (\"Board of Directors Meeting\") but the deep dive was last edited 2026-06-01."
-   ]
+   "stale": []
   },
   "diamond": {
    "label": "Diamond Ridge",

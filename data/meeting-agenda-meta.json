@@ -435,7 +435,7 @@
   "telluride|2026-11-18|Historic & Architectural Review Commission - Nov 18 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8026",
     "sv": 4,
-    "ph": "9fd6e4fcd824ff78"
+    "ph": "e158a6bce34f4078"
   },
   "telluride|2026-11-18|Parks & Recreation Commission - Nov 18 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8084",
@@ -482,7 +482,7 @@
   "telluride|2026-11-19|Planning & Zoning Commission - Nov 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8108",
     "sv": 4,
-    "ph": "eb7467e457d122e2"
+    "ph": "848b7ed7be0a6fd3"
   },
   "telluride|2026-11-19|Planning & Zoning Commission Chair - Nov 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8107",
@@ -651,5 +651,10 @@
   "county|2026-11-16|Open Space Commission Meeting": {
     "sv": 4,
     "ph": "1ff606174e68cca5"
+  },
+  "telluride|2026-12-04|Special Town Council - Dec 04 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324",
+    "sv": 4,
+    "ph": "95f3b815f17bcaa8"
   }
 }
