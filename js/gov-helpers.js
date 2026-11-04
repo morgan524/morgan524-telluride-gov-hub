@@ -1084,7 +1084,7 @@ const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
 const MANUAL_SUMMARIES_CACHE_DATE = '2026-11-04';
-const LEGAL_NOTICES_CACHE_DATE = '2026-11-03';
+const LEGAL_NOTICES_CACHE_DATE = '2026-11-04';
 
 const MANUAL_SUMMARIES = {
   "telluride|2026-10-05|Open Space Commission - Oct 05 2026":
@@ -3519,15 +3519,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Applications Open for 2026/2027 Temporary Winter Community Housing Program",
-    source: "Town of Telluride",
-    date: "October 9, 2026",
-    newsTopic: "housing",
-    copy: "(October 8, 2026) – The Town of Telluride is accepting applications for its Temporary Winter Community Housing program for the 2026/2027 winter season. The program provides seasonal housing in Town Park for eligible workers employed in the Telluride area.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=406",
-    img: ""
-  },
-  {
     title: "Black Bear and Imogene Passes Closed for the Winter",
     source: "San Miguel County",
     date: "November 3, 2026",
@@ -3553,15 +3544,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Due to changing weather conditions and the onset of winter, Imogene and Black Bear Passes are now officially closed for the season.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=551",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
-  },
-  {
-    title: "DMV Services available in Egnar 11/18",
-    source: "San Miguel County",
-    date: "October 15, 2026",
-    newsTopic: "community",
-    copy: "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
   },
   {
     title: "SBA Offers Disaster Assistance in Ouray County",
@@ -7757,23 +7739,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_3815f6d8-2031-4cb7-b480-2859616b3237.html",
     address: "841 E 2nd Avenue, Durango, Colorado",
     noticeKey: "swcd-budget-2027"
-  },
-  {
-    title: "Request for Proposal -- TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "Town of Telluride is seeking qualified respondents for: TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS.",
-    deadline: "Closes 1/11/2026",
-    expires: "2026-01-11",
-    dates: "11/3",
-    url: "https://www.telluride.gov/bids.aspx?bidID=133",
-    address: "",
-    totBidID: "133"
   }
 ];
 
