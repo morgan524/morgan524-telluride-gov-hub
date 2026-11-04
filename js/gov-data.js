@@ -2357,6 +2357,16 @@ const LOCAL_ORGS = [
       social: { facebook: "https://www.facebook.com/Telluride-Christian-Fellowship-47477149350", youtube: "https://www.youtube.com/@tcf8750" },
       logo: "https://livabletelluride.org/logo/Church.png"
     },
+    {
+      name: "The Alpine Chapel",
+      category: "churches",
+      town: "Telluride",
+      summary: "A Telluride congregation drawing people from a variety of denominations and church backgrounds, with Sunday worship at 9 AM year-round, a nursery and Sunday school, youth group, and ministries including Friday Feast and The Well Coffee House.",
+      website: "https://www.thealpinechapel.com/",
+      donate: "https://thealpinechapel.com/give/",
+      social: { facebook: "https://www.facebook.com/TheAlpineChapel/", instagram: "https://www.instagram.com/thealpinechapel/", youtube: "https://www.youtube.com/@thealpinechapel", email: "mailto:admin@thealpinechapel.com" },
+      logo: "https://livabletelluride.org/logo/Church.png"
+    },
     /* ── 12 additional verified Telluride-area orgs (2026-05-16 expansion) ── */
     {
       name: "KOTO Community Radio",
