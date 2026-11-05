@@ -1,12 +1,4 @@
 {
-  "telluride|2026-10-05|Open Space Commission - Oct 05 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8132",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/ePrh_CzmTLKqp0syEbUesw",
-    "meetingId": "894 7506 0147",
-    "passcode": "314276.",
-    "phone": "719) 359-4580"
-  },
   "telluride|2026-10-06|Town Council - Oct 06 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044",
     "sv": 4,
@@ -242,28 +234,12 @@
     "agendaUrl": "https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1019",
     "sv": 4
   },
-  "ouray|2026-10-05|Board of County Commissioners Special Joint Work Session": {
-    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/2151/files/agenda/7554",
-    "zoomUrl": "https://zoom.us/j/9349389230?omn=99931366635",
-    "meetingId": "934 938 9230",
-    "passcode": "491878",
-    "phone": "346-248-7799",
-    "sv": 4
-  },
   "ouray|2026-10-06|Board of County Commissioners Special Work Session": {
     "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/2150/files/agenda/7556",
     "zoomUrl": "https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1",
     "meetingId": "876 0637 5697",
     "passcode": "946299",
     "phone": "346-248-7799",
-    "sv": 4
-  },
-  "ouraycity|2026-10-05|Ouray City Council Work Session": {
-    "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=768776",
-    "sv": 4
-  },
-  "ouraycity|2026-10-05|Ouray City Council Regular Meeting": {
-    "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=761785",
     "sv": 4
   },
   "telluride|2026-11-04|Ecology Commission - Nov 04 2026": {
@@ -421,7 +397,7 @@
   "telluride|2026-11-17|Town Council - Nov 17 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8046",
     "sv": 4,
-    "ph": "1c679cbbc66fe9d8"
+    "ph": "ea5ac597fb54bd44"
   },
   "rico|2026-11-18|Rico Board of Trustees Regular Meeting": {
     "sv": 4,
@@ -430,12 +406,18 @@
   "telluride|2026-11-18|Historic & Architectural Review Commission Chair - Nov 18 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8027",
     "sv": 4,
-    "ph": "29e446caecdbde71"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/dRjdHtmeTB6DmemBLALAFw",
+    "meetingId": "854 0207 9752",
+    "passcode": "775535.",
+    "phone": "301-715-8592"
   },
   "telluride|2026-11-18|Historic & Architectural Review Commission - Nov 18 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8026",
     "sv": 4,
-    "ph": "e158a6bce34f4078"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA",
+    "meetingId": "812 9136 3866",
+    "passcode": "440860.",
+    "phone": "301-715-8592"
   },
   "telluride|2026-11-18|Parks & Recreation Commission - Nov 18 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8084",
@@ -446,7 +428,12 @@
     "sv": 4
   },
   "county|2026-11-09|Intergovernmental Meeting - San Miguel County Hosts": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1077/files/agenda/2067",
+    "zoomUrl": "https://us02web.zoom.us/meeting/register/-Xc7XRV5QtSEK4_gcCq7Hw",
+    "meetingId": "816 7927 3686",
+    "passcode": "275604",
+    "phone": "719-359-4580"
   },
   "smart|2026-11-16|SMART Gondola Advisory Committee": {
     "sv": 4,
@@ -642,7 +629,7 @@
   "telluride|2026-12-03|Town Council Retreat - Dec 03 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8051",
     "sv": 4,
-    "ph": "498c7465f77f00af"
+    "ph": "5e6191a8c024dc08"
   },
   "county|2026-11-09|San Miguel Basin Fair Board": {
     "sv": 4,
@@ -655,6 +642,13 @@
   "telluride|2026-12-04|Special Town Council - Dec 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324",
     "sv": 4,
-    "ph": "95f3b815f17bcaa8"
+    "ph": "d497cf06f961b57e"
+  },
+  "telluride|2026-11-09|Intergovernmental Meeting - Nov 09 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8360",
+    "meetingId": "816 7927 3686",
+    "passcode": "275604",
+    "phone": "719-359-4580",
+    "sv": 4
   }
 }

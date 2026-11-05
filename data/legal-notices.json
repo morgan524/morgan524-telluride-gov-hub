@@ -34,23 +34,6 @@
     "caseNumber": "2026PR30008"
   },
   {
-    "title": "Request for Quote -- Request for Quote: Material Hauling",
-    "entity": "San Miguel County",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Request for Quote",
-    "filterTag": "public-entity",
-    "summary": "San Miguel County is seeking qualified respondents for: Request for Quote: Material Hauling.",
-    "deadline": "Open until contracted",
-    "expires": "2026-11-04",
-    "dates": "8/6",
-    "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=159",
-    "address": "",
-    "smcBidID": "159"
-  },
-  {
     "title": "Request for Proposal -- Lawson Hill Connector Trail Project",
     "entity": "San Miguel County",
     "entityClass": "ent-county",
@@ -397,5 +380,39 @@
     "url": "https://www.telluridenews.com/news/legals/article_3815f6d8-2031-4cb7-b480-2859616b3237.html",
     "address": "841 E 2nd Avenue, Durango, Colorado",
     "noticeKey": "swcd-budget-2027"
+  },
+  {
+    "title": "Request for Quote -- Request for Quote: Material Hauling",
+    "entity": "San Miguel County",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Request for Quote",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County is seeking qualified respondents for: Request for Quote: Material Hauling.",
+    "deadline": "Open until contracted",
+    "expires": "2027-02-03",
+    "dates": "11/5",
+    "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=159",
+    "address": "",
+    "smcBidID": "159"
+  },
+  {
+    "title": "Request for Proposal -- TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS",
+    "entity": "Town of Telluride",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Request for Proposal",
+    "filterTag": "public-entity",
+    "summary": "Town of Telluride is seeking qualified respondents for: TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS.",
+    "deadline": "Closes 1/11/2026",
+    "expires": "2026-01-11",
+    "dates": "11/5",
+    "url": "https://www.telluride.gov/bids.aspx?bidID=133",
+    "address": "",
+    "totBidID": "133"
   }
 ]

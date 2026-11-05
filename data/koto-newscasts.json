@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 11-4-26",
+    "source": "KOTO Community Radio",
+    "date": "November 5, 2026",
+    "newsTopic": "government",
+    "copy": "San Miguel County Votes for Sheriff Masters; Dylan Brooks Wins County Commissioner Seat; Voters Support Telluride Schools",
+    "href": "https://koto.org/news/newscast-11-4-26/"
+  },
+  {
     "title": "Newscast 11-2-26",
     "source": "KOTO Community Radio",
     "date": "November 3, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "community",
     "copy": "West End Roundup with the San Miguel Basin Forum; \"The Mirror of Return\" Reflects on Operation Babylift; Mesa Rose Blooms Again",
     "href": "https://koto.org/news/newscast-10-22-26/"
-  },
-  {
-    "title": "Newscast 10-21-26",
-    "source": "KOTO Community Radio",
-    "date": "October 22, 2026",
-    "newsTopic": "infrastructure",
-    "copy": "Learning Life's Lessons from Animals; Cat Movie Fisher with Risho Unda; A Behind-the-Scenes Look at the Gondola",
-    "href": "https://koto.org/news/newscast-10-21-26/"
   }
 ]

@@ -1,10 +1,23 @@
 {
- "generated": "2026-11-04T19:37:52.016Z",
+ "generated": "2026-11-05T01:27:26.644Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
    "lastUpdated": "2026-10-26",
-   "upcoming": [],
+   "upcoming": [
+    {
+     "source": "telluride",
+     "sourceLabel": "Town of Telluride",
+     "title": "HARC Meeting",
+     "date": "2026-11-18",
+     "time": "5:30 PM",
+     "location": "Rebekah Hall, 113 W Columbia Ave",
+     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8026",
+     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8026",
+     "zoomLink": "https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA",
+     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+    }
+   ],
    "recent": [
     {
      "source": "telluride",
