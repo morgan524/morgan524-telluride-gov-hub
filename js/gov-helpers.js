@@ -3840,6 +3840,19 @@ const SMB_FORUM_ARTICLES = [
 // dropped it stays dropped; the review finds something new.
 const LOCAL_NEWS_FEATURED = [
   {
+    title: "Herding unicorns",
+    source: "Telluride Times",
+    sourceKey: "ttimes",
+    date: "November 5, 2026",
+    summary: "John Metzger writes that Telluride is a one-of-a-kind unicorn, livable for the few but unaffordable for the workers who keep it humming, and that rural stars must align for small towns to thrive. State and federal money is starting to flow into the region through Enterprise Zone expansions and a $50B rural health program, a new emergency hub is under construction outside Telluride, and Norwood is planning a new school and a reimagined medical center. Coordination between districts remains the stubborn obstacle.",
+    href: "https://www.telluridenews.com/norwood_post/article_fd7f8dfa-b21f-48c8-a4aa-5a9feb679e90.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/05/b05007ac-70f0-47ba-abc9-1844981e5de0/6ae4e34f633d2.image.jpg",
+    category: "Opinion",
+    newsTopic: "health",
+    featured: true,
+    expires: "2026-11-08"   // Morgan directed a three-day run: Nov 5–7, off at the Sun 11/8 review
+  },
+  {
     title: "Does platted density mean anything in town planning?",
     source: "Telluride Times",
     sourceKey: "ttimes",
