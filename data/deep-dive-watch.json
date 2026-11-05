@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T01:27:26.644Z",
+ "generated": "2026-11-05T10:37:35.476Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -24,12 +24,6 @@
      "date": "2026-10-22",
      "title": "Planning & Zoning Commission - Oct 22 2026",
      "snippet": "The October 22 P&Z meeting carries two items of broader public consequence. First, the Shandoka Lot Redevelopment — a Preliminary PUD application for Town-owned property at 860 Black Bear Rd —…"
-    },
-    {
-     "source": "telluride",
-     "date": "2026-10-21",
-     "title": "Historic & Architectural Review Commission - Oct 21 2026",
-     "snippet": "The two Shandoka Lot Redevelopment hearings (Buildings 1 and 2, and Buildings 3 and 4 on the Town-owned lot at 860 Black Bear Rd) are continued again, without discussion, to the November 18 HARC…"
     }
    ],
    "developments": [],
@@ -65,18 +59,9 @@
    "label": "Code Changes & Accelerated Review",
    "lastUpdated": "2026-07-19",
    "upcoming": [],
-   "recent": [
-    {
-     "source": "county",
-     "date": "2026-10-21",
-     "title": "Board of County Commissioners Meeting",
-     "snippet": "The headline work here is a suite of four Land Use Code amendments that would add an entirely new Article 6 — Natural Resources — to San Miguel County's code. Three sections get individual public…"
-    }
-   ],
+   "recent": [],
    "developments": [],
-   "stale": [
-    "Code Changes & Accelerated Review: county discussed it on 2026-10-21 (\"Board of County Commissioners Meeting\") but the deep dive was last edited 2026-07-19."
-   ]
+   "stale": []
   },
   "wildfire": {
    "label": "Wildfire Resiliency",
@@ -123,19 +108,12 @@
      "date": "2026-10-26",
      "title": "SMART Gondola Advisory Committee",
      "snippet": "The Gondola Advisory Committee meets virtually on October 26. The main item is a 25-minute informational update on the FTA Capital Investment Program — the federal funding pipeline that the gondola…"
-    },
-    {
-     "source": "county",
-     "date": "2026-10-21",
-     "title": "Board of County Commissioners Meeting",
-     "snippet": "The headline work here is a suite of four Land Use Code amendments that would add an entirely new Article 6 — Natural Resources — to San Miguel County's code. Three sections get individual public…"
     }
    ],
    "developments": [],
    "stale": [
     "Gondola 3A: telluride discussed it on 2026-10-27 (\"Town Council - Oct 27 2026\") but the deep dive was last edited 2026-07-20.",
-    "Gondola 3A: smart discussed it on 2026-10-26 (\"SMART Gondola Advisory Committee\") but the deep dive was last edited 2026-07-20.",
-    "Gondola 3A: county discussed it on 2026-10-21 (\"Board of County Commissioners Meeting\") but the deep dive was last edited 2026-07-20."
+    "Gondola 3A: smart discussed it on 2026-10-26 (\"SMART Gondola Advisory Committee\") but the deep dive was last edited 2026-07-20."
    ]
   },
   "norwoodwater": {
@@ -172,14 +150,7 @@
    "label": "Field Paving at Town Park",
    "lastUpdated": "",
    "upcoming": [],
-   "recent": [
-    {
-     "source": "telluride",
-     "date": "2026-10-21",
-     "title": "Parks & Recreation Commission - Oct 21 2026",
-     "snippet": "Two substantive action items headline this meeting. First, SBG Productions is asking to restore the Telluride Jazz Festival to a full three-day run — August 13–15, 2027 — after the 2026 event was…"
-    }
-   ],
+   "recent": [],
    "developments": [],
    "stale": []
   }

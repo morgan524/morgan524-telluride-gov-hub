@@ -399,6 +399,128 @@
     "smcBidID": "159"
   },
   {
+    "title": "Name Change Petition -- Lauren Elizabeth O'Hare to Lauren O'Hare Benson (2026C23)",
+    "entity": "San Miguel County District Court / Lauren Elizabeth O'Hare",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "Lauren Elizabeth O'Hare has petitioned the San Miguel County District Court to change her name to Lauren O'Hare Benson. The court has ordered publication of this notice as required by law. The notice runs November 5, 12, and 19, 2026.",
+    "deadline": "2026-11-19",
+    "expires": "2026-11-19",
+    "dates": "11/5",
+    "papers": [
+      "ttimes_1105"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_4fe133a6-ca5f-42a1-810d-63306c1b854d.html",
+    "address": "305 West Colorado Avenue, Telluride, CO 81435",
+    "noticeKey": "name-change-2026C23",
+    "caseNumber": "2026C23"
+  },
+  {
+    "title": "Name Change Petition -- Lara Marie Zibners Lohr to Lara Marie Zibners (2026C30012)",
+    "entity": "San Miguel County District Court / Lara Marie Zibners Lohr",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "Lara Marie Zibners Lohr has petitioned the San Miguel County District Court to change her name to Lara Marie Zibners. Magistrate Melanie S. Mergan issued an Order for Publication on October 26, 2026, finding the petition meets all statutory requirements. The notice runs November 5, 12, and 19, 2026.",
+    "deadline": "2026-11-19",
+    "expires": "2026-11-19",
+    "dates": "11/5",
+    "papers": [
+      "ttimes_1105"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_4fe133a6-ca5f-42a1-810d-63306c1b854d.html",
+    "address": "305 West Colorado Avenue, Telluride, CO 81435",
+    "noticeKey": "name-change-2026C30012",
+    "caseNumber": "2026C30012"
+  },
+  {
+    "title": "Public Hearing -- Ophir Ordinance #2026-07 Prohibiting Short-Term Rentals",
+    "entity": "Town of Ophir",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "📋",
+    "iconClass": "type-hearing",
+    "type": "Ordinance",
+    "filterTag": "ordinance",
+    "summary": "The Town of Ophir will hold a public hearing on Tuesday, November 17, 2026 at 7:00 PM at Ophir Town Hall to consider second reading of Ordinance #2026-07, which would amend Section 303.1 of the Town's Land Use Code to prohibit short-term rentals of 30 days or fewer. Community members may attend in person at 36 Porphyry Street, Ophir, or contact Town Hall at (970) 728-4943 for more information. This ordinance would apply throughout the Town of Ophir.",
+    "deadline": "2026-11-17",
+    "expires": "2026-11-17",
+    "dates": "11/5",
+    "papers": [
+      "ttimes_1105"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_4fe133a6-ca5f-42a1-810d-63306c1b854d.html",
+    "address": "36 Porphyry Street, Ophir, CO 81426",
+    "noticeKey": "ord-ophir-2026-07"
+  },
+  {
+    "title": "Public Meeting -- San Miguel County Planning Commission Regular Meeting (November 12, 2026)",
+    "entity": "San Miguel County Planning Commission",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "The San Miguel County Planning Commission will hold its regular meeting on Thursday, November 12, 2026 at 9:00 AM at 333 West Colorado Ave., Second Floor, Telluride, with a Zoom option available. The agenda includes a work session on amendments to the Affordable Housing Impact Mitigation Fee and housing incentive ideas, as well as a land use application to rezone a portion of Placerville Park near the fire station from Forestry, Agriculture, and Open (F) to Public (P). Public participation is available in person or via Zoom.",
+    "deadline": "2026-11-12",
+    "expires": "2026-11-12",
+    "dates": "11/5",
+    "papers": [
+      "ttimes_1105"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_4fe133a6-ca5f-42a1-810d-63306c1b854d.html",
+    "address": "333 West Colorado Ave., Second Floor, Telluride, CO 81435",
+    "noticeKey": "smc-planning-commission-2026-11-12"
+  },
+  {
+    "title": "RFP -- Telluride Conference Center Management and Operation Agreement",
+    "entity": "Town of Mountain Village",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "The Town of Mountain Village is seeking proposals from qualified firms to manage and operate the Town-owned Telluride Conference Center under a Management and Operation Agreement. An optional virtual information session is scheduled for November 17, 2026 at 10:00 AM, with details available in the RFP packet. All proposals must be submitted electronically by 5:00 PM on Wednesday, December 16, 2026; RFP packets are available at TMV Town Hall, 455 Mountain Village Blvd., Suite A, or at www.townofmountainvillage.com/rfp.",
+    "deadline": "2026-12-16",
+    "expires": "2026-12-16",
+    "dates": "11/5",
+    "papers": [
+      "ttimes_1105"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_4fe133a6-ca5f-42a1-810d-63306c1b854d.html",
+    "address": "455 Mountain Village Blvd., Suite A, Mountain Village, CO",
+    "noticeKey": "rfp-tmv-conference-center-2026"
+  },
+  {
+    "title": "ITB -- Telluride Regional Airport New ARFF Truck Acquisition",
+    "entity": "Telluride Regional Airport",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "The Telluride Regional Airport is soliciting bids for the procurement of one newly manufactured Index B – Class IV Aircraft Rescue and Fire Fighting (ARFF) Truck and auxiliary equipment. A non-mandatory pre-bid conference call is scheduled for November 10, 2026 at 1:00 PM MT via Microsoft Teams. Bids must be submitted electronically to coloradoairportdev@dibblecorp.com by Thursday, December 3, 2026 at 1:00 PM MT.",
+    "deadline": "2026-12-03",
+    "expires": "2026-12-03",
+    "dates": "11/5",
+    "papers": [
+      "ttimes_1105"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_4fe133a6-ca5f-42a1-810d-63306c1b854d.html",
+    "address": "Telluride Regional Airport, Telluride, CO",
+    "noticeKey": "itb-telluride-airport-arff-truck-2026"
+  },
+  {
     "title": "Request for Proposal -- TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS",
     "entity": "Town of Telluride",
     "entityClass": "ent-county",

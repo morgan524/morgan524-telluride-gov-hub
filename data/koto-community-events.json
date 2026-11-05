@@ -1,27 +1,5 @@
 [
   {
-    "title": "Telluride R-1 School District School Board Work Session – Student Interviews",
-    "link": "https://koto.org/event/telluride-r-1-school-district-school-board-work-session-student-interviews/",
-    "description": "Telluride R-1 School District Board of Education holds a work session on Wednesday, November 4th, at 3:30 p.m. in the Bridal Veil conference room at TMHS and via Zoom. The work session agenda and Zoom link can be found at tellurideschool.org.",
-    "pubDate": "2026-11-04T15:30:00-07:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Middle/High School, TELLURIDE",
-    "imageUrl": ""
-  },
-  {
-    "title": "Parenting Workshop w/ Bright Futures for Children",
-    "link": "https://koto.org/event/parenting-workshop-w-bright-futures-for-children/",
-    "description": "Join us for a fun and informative family workshop focused on helping your child build healthy habits! Guest speakers from Skippy Dental and Amy Erickson from San Miguel Ouray Public Health will share helpful tips on children’s dental health and nutrition. Families will also receive handouts with healthy lunch and snack ideas to take home and try with their little ones. Come learn, connect, and discover simple ways to support your child’s health and well-being! FREE DINNER AND CHILDCARE / CENA Y CUIDADO DE NIÑOS GRATIS ¡Únanse a nosotros en un taller familiar, divertido e informativo, diseñado para ayudar a sus hijos a desarrollar hábitos saludables! Contaremos con la participación de representantes de Skippy Dental y de Amy Erickson, del Departamento de Salud Pública de San Miguel-Ouray, compartirán consejos útiles sobre la salud dental y la nutrición infantil. …",
-    "pubDate": "2026-11-04T17:00:00-07:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": ""
-  },
-  {
     "title": "Art Walk Telluride",
     "link": "https://koto.org/event/art-walk-telluride/2026-11-05/",
     "description": "Join us the first Thursday of every month for Telluride's Art Walk. It will be an evening filled with inspiring exhibits, engaging receptions, and the chance to meet local and visiting artists. From 5–7 pm, participating venues will open their doors, showcasing new collections and inviting art lovers to explore the vibrant gallery scene. Find what's new on www.telluridearts.org Note: Special Edition Art Walk May 21st.",
@@ -536,6 +514,17 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "An Outlaw Thanksgiving at Alloy Kitchen",
+    "link": "https://koto.org/event/an-outlaw-thanksgiving-at-alloy-kitchen/",
+    "description": "An Outlaw Thanksgiving at Alloy Kitchen in Mountain Lodge Telluride, Mountain Village. A fire-lit Thanksgiving buffet with live music on Thursday, November 26, from 2 to 6 PM. Reservations through OpenTable.",
+    "pubDate": "2026-11-26T14:00:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Mountain Lodge Telluride, Mountain Village",
     "imageUrl": ""
   }
 ]
