@@ -1,5 +1,53 @@
 [
   {
+    "title": "An exciting week for Norwood athletics",
+    "source": "Telluride Times",
+    "date": "November 5, 2026",
+    "firstSeen": "2026-11-05",
+    "newsTopic": "community",
+    "copy": "Norwood football beat Sanford 28-24 to claim the Mountain League title and earn a home playoff game. The Lady Mavs volleyball team reached their tournament final before falling to Ouray in three close sets, finishing their season on a solid note.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/norwood_post/article_f4e9f5a2-c7dd-48f6-b2f1-1e64eb2ba21a.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/ee/2eec1fa0-628d-4fed-8a4b-2665ecff07a7/6ae77341c9217.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "UPCOMING YOUTH EVENTS",
+    "source": "Telluride Times",
+    "date": "November 5, 2026",
+    "firstSeen": "2026-11-05",
+    "newsTopic": "education",
+    "copy": "Middle school boys basketball has a stretch of games Nov. 5–10, football hits the state playoffs Nov. 7 against Front Range Christian at 1 p.m., Skippy Dental comes through Nov. 9–10, and the week wraps with a Veterans Day Assembly on Nov. 11 at 9:30 a.m.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/norwood_post/article_96ab3f97-8478-461d-b907-a50d6827a6af.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/ba/3bad08c3-bc3a-47d9-b5f6-f19509ace6d3/6ae77cafa06f2.image.png",
+    "imgHiRes": true
+  },
+  {
+    "title": "Camp V balances housing construction crews with tourism",
+    "source": "Telluride Times",
+    "date": "November 5, 2026",
+    "firstSeen": "2026-11-05",
+    "newsTopic": "housing",
+    "copy": "Camp V near Naturita has leased its historic 1942 cabins to Four Seasons construction crews through end of next year, while the rest of the property stays open to visitors. West End towns are increasingly absorbing the resort's workforce housing load — Merrimac also bought the Rimrock Hotel in Naturita — and locals say it's straining food supplies and community resources.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/norwood_post/article_b643d886-8f8e-46e9-b303-a5d3c761c52c.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/a9/7a997949-8ae0-43ca-bd3a-aa365c7c087f/6ae4dc637c040.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Herding unicorns",
+    "source": "Telluride Times",
+    "date": "November 5, 2026",
+    "firstSeen": "2026-11-05",
+    "newsTopic": "health",
+    "copy": "State and federal money is starting to flow into the region — Enterprise Zone expansions, a $50B rural health program — while a new emergency hub is under construction outside Telluride and Norwood is planning a new school and reimagined medical center. Coordination between districts remains the stubborn obstacle.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/norwood_post/article_fd7f8dfa-b21f-48c8-a4aa-5a9feb679e90.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/05/b05007ac-70f0-47ba-abc9-1844981e5de0/6ae4e34f633d2.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Letters to the Editor",
     "source": "Telluride Times",
     "date": "November 5, 2026",
@@ -8,7 +56,7 @@
     "copy": "Two letters this week: a Norwood resident thanks EcoAction Partners and San Miguel County for a Green Grant that helped replace windows and a door, cutting heating costs. A second letter calls out vandalism at the Highway 145 Wilson Mountains scenic overlook, where Roosevelt-era signage has been defaced with stickers, graffiti, and scratches.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/article_3d729f51-501f-4da7-80fe-e85a41702e0d.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "letterAuthor": "James Kennett",
     "isLetter": true,
     "imgHiRes": true
@@ -19,8 +67,8 @@
     "date": "November 5, 2026",
     "firstSeen": "2026-11-05",
     "newsTopic": "community",
-    "copy": "“Sure, I remember him. He invited me to his teepee back in the day. He wanted to show me a suppository he made from elk brains.”",
-    "claudeSummary": false,
+    "copy": "Telluride has a long history of making room for people who don't fit the usual mold — from Vietnam vet Rudy, who lived in the woods on the edge of town, to poets and gardeners holding public office. That spirit still shows up in things like a skijoring race on bare pavement and a street named for a local Olympian. It's just how this place has always worked.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/article_5f0841da-b7fc-478f-9306-3dcc88bd226d.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     "isLetter": true,
@@ -60,7 +108,7 @@
     "copy": "Marmots, bats, bears, snakes, and pikas all handle a San Juan winter in their own ways — some dropping into deep torpor, others staying quietly active under the snow. Each strategy goes back millions of years of adapting to cold and high altitude. The mountains go quiet, but nothing really stops.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/article_86ef0d71-2afb-4f4f-976b-c162309dc51b.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "isLetter": true,
     "imgHiRes": true
   },

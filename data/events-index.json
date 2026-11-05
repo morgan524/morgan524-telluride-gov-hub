@@ -834,6 +834,19 @@
     "type": "Music"
   },
   {
+    "title": "Ridgway Independent Film Fest 2026",
+    "href": "https://koto.org/event/ridgway-independent-film-fest-2026/",
+    "date": "2026-11-13",
+    "time": "10:00 AM",
+    "location": "The Sherbino, Ridgway",
+    "town": "Ridgway",
+    "img": "https://koto.org/wp-content/uploads/2026/11/RIFF-banner-2026.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "12 Years of Fierce, Fearless, Independent Film The Ridgway Independent Film Festival (RIFF) returns in 2026 with its 12th year of celebrating bold storytelling, emerging filmmakers, and the power of community through the lens of…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "2026 Western Colorado Farm & Ranch Innovation Expo — Free Admission",
     "href": "https://koto.org/event/2026-western-colorado-farm-ranch-innovation-expo-free-admission/2026-11-13/",
     "date": "2026-11-13",
@@ -936,20 +949,6 @@
     "source": "KOTO Community Calendar",
     "desc": "This year’s ski swap takes place Friday, November 13th, thru Monday, November 16th in the garage of the Wilkinson Public Library. Details of each day shared below. Friday 11/13 Individual Seller Check-in/Gear Drop off — 11 AM – 6 PM $1 per…",
     "type": "Community"
-  },
-  {
-    "title": "Ridgway Independent Film Fest 2026",
-    "href": "https://sherbino.org/event/ridgway-independent-film-festival-2026/",
-    "date": "2026-11-13",
-    "time": "",
-    "location": "Ridgway, CO",
-    "town": "Ridgway",
-    "img": "https://sherbino.org/wp-content/uploads/2025/11/RIFF-Banner-new.png",
-    "category": "",
-    "source": "Sherbino Theater",
-    "desc": "The Ridgway Independent Film Festival (RIFF) returns for its 12th year in Ridgway, CO, celebrating bold storytelling and emerging filmmakers through independent cinema. The multi-day festival brings together film enthusiasts and the local…",
-    "type": "Arts & Film",
-    "endDate": "2026-11-15"
   },
   {
     "title": "Ridgway Independent Film Fest: Begin Where You Are ~ Opening Night Shorts",
@@ -1710,19 +1709,6 @@
     "type": "Music"
   },
   {
-    "title": "An Outlaw Thanksgiving at Alloy Kitchen",
-    "href": "https://koto.org/event/an-outlaw-thanksgiving-at-alloy-kitchen/",
-    "date": "2026-11-26",
-    "time": "2:00 PM",
-    "location": "Mountain Lodge Telluride, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/mountainvillage.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "An Outlaw Thanksgiving at Alloy Kitchen in Mountain Lodge Telluride, Mountain Village. A fire-lit Thanksgiving buffet with live music on Thursday, November 26, from 2 to 6 PM. Reservations through OpenTable.",
-    "type": "Music"
-  },
-  {
     "title": "An Outlaw Thanksgiving",
     "href": "https://www.telluride.com/event/an-outlaw-thanksgiving-at-alloy-kitchen/",
     "date": "2026-11-26",
@@ -2134,6 +2120,32 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Celebrate Yule Day in Ouray and Ridgway with a magical winter festival for the whole family. Stroll a twinkling village of artisan booths, savor hot cocoa and seasonal treats, enjoy live carolers, and meet Santa in a snowy alpine setting.…",
     "type": "Family & Kids"
+  },
+  {
+    "title": "Movies Under the Stars",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    "date": "2026-12-05",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Movies Under the Stars is a recurring outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening on Saturday evenings at dusk. The series runs weekly throughout the summer months, offering a seasonal community…",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Mind Blown Telluride",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    "date": "2026-12-05",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    "type": "Community"
   },
   {
     "title": "Ouray Yule! Jeep Raffle • Tree Lighting • Holiday Parade",

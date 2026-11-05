@@ -558,12 +558,14 @@
   "telluride|2026-11-17|(Lottery) Telluride Housing Authority - Nov 17 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8329",
     "sv": 4,
-    "ph": "d453c7f32314afb9"
+    "ph": "044820362edecae3"
   },
   "telluride|2026-11-12|Vending Subcommittee - Nov 12 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8358",
     "sv": 4,
-    "ph": "2042314dfeae7cf0"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/Rpy5H2UfTx6pLRSkJpuMKA",
+    "meetingId": "865 1629 3864",
+    "passcode": "480624"
   },
   "norwood|2026-11-02|Norwood Water Commission Work Session": {
     "agendaUrl": "https://www.norwoodtown.com/files/bbfdcc5d9/11.02.2026+NWC+Work+Session.pdf",

@@ -1,27 +1,5 @@
 [
   {
-    "title": "Norwood Sanitation District Meeting Work Session",
-    "link": "https://www.norwoodtown.com/2026-10-29-norwood-sanitation-district-meeting-work-session",
-    "description": "A work session for the Norwood Sanitation District, hosted by the Town of Norwood. This government meeting provides an opportunity for district business and operational matters to be discussed outside of a formal regular meeting.",
-    "pubDate": "2026-10-29T12:00:00.000Z",
-    "source": "norwood",
-    "sourceLabel": "Town of Norwood",
-    "category": "Government Meeting",
-    "location": "Norwood, CO",
-    "imageUrl": ""
-  },
-  {
-    "title": "Senior Meals",
-    "link": "https://www.norwoodtown.com/2026-10-29-senior-meals",
-    "description": "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather and share a meal together. This recurring community event provides both nourishment and social connection for Norwood's senior residents.",
-    "pubDate": "2026-10-29T12:00:00.000Z",
-    "source": "norwood",
-    "sourceLabel": "Town of Norwood",
-    "category": "Community Event",
-    "location": "Norwood, CO",
-    "imageUrl": ""
-  },
-  {
     "title": "Norwood Water Commission Work Session",
     "link": "https://www.norwoodtown.com/2026-11-02-nwc-work-session",
     "description": "The Norwood Water Commission will hold a work session to conduct business related to the town's water management and infrastructure. This is a local government meeting hosted by the Town of Norwood.",
@@ -99,10 +77,10 @@
     "imageUrl": ""
   },
   {
-    "title": "Closed For Christmas Eve",
-    "link": "https://www.norwoodtown.com/2026-12-24-closed-for-christmas-eve",
-    "description": "The Town of Norwood will be closed on Christmas Eve in observance of the holiday. Municipal offices and services will be unavailable that day.",
-    "pubDate": "2026-12-24T12:00:00.000Z",
+    "title": "Closed For Christmas Day",
+    "link": "https://www.norwoodtown.com/2026-12-25-closed-for-christmas-day",
+    "description": "The Town of Norwood will be closed on Christmas Day in observance of the holiday. Municipal offices and services will be unavailable, so residents should plan accordingly for any town business needs.",
+    "pubDate": "2026-12-25T12:00:00.000Z",
     "source": "norwood",
     "sourceLabel": "Town of Norwood",
     "category": "Town Closure",

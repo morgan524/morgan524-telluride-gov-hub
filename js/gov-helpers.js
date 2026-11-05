@@ -444,10 +444,10 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-11-17|(Lottery) Telluride Housing Authority - Nov 17 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8329","sv":4,"ph":"d453c7f32314afb9"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8329","sv":4,"ph":"044820362edecae3"},
 
   "telluride|2026-11-12|Vending Subcommittee - Nov 12 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8358","sv":4,"ph":"2042314dfeae7cf0"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8358","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/Rpy5H2UfTx6pLRSkJpuMKA","meetingId":"865 1629 3864","passcode":"480624"},
 
   "norwood|2026-11-02|Norwood Water Commission Work Session":
     {"agendaUrl":"https://www.norwoodtown.com/files/bbfdcc5d9/11.02.2026+NWC+Work+Session.pdf","zoomUrl":"https://us02web.zoom.us/j/84889491102","meetingId":"848 8949 1102","passcode":"841533","sv":4},
@@ -835,53 +835,13 @@ const MEETING_PREVIEWS = {
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
-    title: "2026 Chamber Meeting, December",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 8, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
-    img: ""
-  },
-  {
-    title: "Noel Night",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 4, 2026",
-    newsTopic: "community",
-    copy: "Community shopping event and celebration.",
-    href: "https://norwoodcolorado.com/event/noel-night-3/",
-    img: ""
-  },
-  {
-    title: "West End Parade of Lights & Elfin Eve",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 3, 2026",
-    newsTopic: "arts-culture",
-    copy: "Holiday parade and festival.",
-    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, November",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "November 10, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
-    img: ""
-  },
-  {
     title: "Cleared for takeoff",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "November 5, 2026",
     newsTopic: "community",
-    copy: "",
-    href: "https://www.ouraynews.com/2026/11/04/cleared-for-takeoff/?ta_paidstory",
+    copy: "Ouray’s Main Street was a spooky place to be on Halloween, with witches at the Wright Opera House including Gayle Veum of Log Hill. The “King of Pop” and a member of the Jackson Five were spotted trick-or-treating in Ouray on Halloween. The Fedel family of Ouray was inspired to create this group cos",
+    href: "https://www.ouraynews.com/2026/11/04/cleared-for-takeoff/",
     img: ""
   },
   {
@@ -1354,10 +1314,10 @@ const MANUAL_SUMMARIES = {
     "The October 29 TMVOA Audit & Compliance Committee agenda hasn't been posted yet.",
 
   "telluride|2026-11-17|(Lottery) Telluride Housing Authority - Nov 17 2026":
-    "The November 17, 2026 Telluride Housing Authority Lottery agenda hasn't been posted yet.",
+    "The November 17, 2026 Telluride Housing Authority agenda hasn't been posted yet.",
 
   "telluride|2026-11-12|Vending Subcommittee - Nov 12 2026":
-    "The November 12, 2026 Vending Subcommittee agenda hasn't been posted yet.",
+    "The Vending Subcommittee meets to approve minutes from September 23 and to act on the remaining open permit for the 2026-2027 winter vending season at Gondola Plaza. The Gondola Plaza East spot was already awarded to Mini Deli (PhilAm, LLC) in September. Up now is Gondola Plaza West, where The Gyro Cart — a returning vendor with eight consecutive summer seasons on Oak Street East — has submitted a late application to operate through the winter season serving lamb gyros, chicken shawarma, Greek salads, and related items, 11am to 4pm. Staff recommends granting the permit. Winter vending permits run $250 for the season.",
 
   "norwood|2026-11-02|Norwood Water Commission Work Session":
     "The Norwood Water Commission sits down for a work session focused on a single item: the 2027 draft budget. Work sessions are deliberative — no formal action can be taken — so this is the commission's chance to work through the numbers before anything goes to a vote. The meeting is at Norwood Town Hall on Naturita Street at 6:00 p.m., with a Zoom option available.",
@@ -2707,6 +2667,54 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "An exciting week for Norwood athletics",
+    source: "Telluride Times",
+    date: "November 5, 2026",
+    firstSeen: "2026-11-05",
+    newsTopic: "community",
+    copy: "Norwood football beat Sanford 28-24 to claim the Mountain League title and earn a home playoff game. The Lady Mavs volleyball team reached their tournament final before falling to Ouray in three close sets, finishing their season on a solid note.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_f4e9f5a2-c7dd-48f6-b2f1-1e64eb2ba21a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/ee/2eec1fa0-628d-4fed-8a4b-2665ecff07a7/6ae77341c9217.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "UPCOMING YOUTH EVENTS",
+    source: "Telluride Times",
+    date: "November 5, 2026",
+    firstSeen: "2026-11-05",
+    newsTopic: "education",
+    copy: "Middle school boys basketball has a stretch of games Nov. 5–10, football hits the state playoffs Nov. 7 against Front Range Christian at 1 p.m., Skippy Dental comes through Nov. 9–10, and the week wraps with a Veterans Day Assembly on Nov. 11 at 9:30 a.m.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_96ab3f97-8478-461d-b907-a50d6827a6af.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/ba/3bad08c3-bc3a-47d9-b5f6-f19509ace6d3/6ae77cafa06f2.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "Camp V balances housing construction crews with tourism",
+    source: "Telluride Times",
+    date: "November 5, 2026",
+    firstSeen: "2026-11-05",
+    newsTopic: "housing",
+    copy: "Camp V near Naturita has leased its historic 1942 cabins to Four Seasons construction crews through end of next year, while the rest of the property stays open to visitors. West End towns are increasingly absorbing the resort's workforce housing load — Merrimac also bought the Rimrock Hotel in Naturita — and locals say it's straining food supplies and community resources.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_b643d886-8f8e-46e9-b303-a5d3c761c52c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/a9/7a997949-8ae0-43ca-bd3a-aa365c7c087f/6ae4dc637c040.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Herding unicorns",
+    source: "Telluride Times",
+    date: "November 5, 2026",
+    firstSeen: "2026-11-05",
+    newsTopic: "health",
+    copy: "State and federal money is starting to flow into the region — Enterprise Zone expansions, a $50B rural health program — while a new emergency hub is under construction outside Telluride and Norwood is planning a new school and reimagined medical center. Coordination between districts remains the stubborn obstacle.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_fd7f8dfa-b21f-48c8-a4aa-5a9feb679e90.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/05/b05007ac-70f0-47ba-abc9-1844981e5de0/6ae4e34f633d2.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Letters to the Editor",
     source: "Telluride Times",
     date: "November 5, 2026",
@@ -2715,7 +2723,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Two letters this week: a Norwood resident thanks EcoAction Partners and San Miguel County for a Green Grant that helped replace windows and a door, cutting heating costs. A second letter calls out vandalism at the Highway 145 Wilson Mountains scenic overlook, where Roosevelt-era signage has been defaced with stickers, graffiti, and scratches.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/article_3d729f51-501f-4da7-80fe-e85a41702e0d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     letterAuthor: "James Kennett",
     isLetter: true,
     imgHiRes: true
@@ -2726,8 +2734,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "November 5, 2026",
     firstSeen: "2026-11-05",
     newsTopic: "community",
-    copy: "“Sure, I remember him. He invited me to his teepee back in the day. He wanted to show me a suppository he made from elk brains.”",
-    claudeSummary: false,
+    copy: "Telluride has a long history of making room for people who don't fit the usual mold — from Vietnam vet Rudy, who lived in the woods on the edge of town, to poets and gardeners holding public office. That spirit still shows up in things like a skijoring race on bare pavement and a street named for a local Olympian. It's just how this place has always worked.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/article_5f0841da-b7fc-478f-9306-3dcc88bd226d.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     isLetter: true,
@@ -2767,7 +2775,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Marmots, bats, bears, snakes, and pikas all handle a San Juan winter in their own ways — some dropping into deep torpor, others staying quietly active under the snow. Each strategy goes back millions of years of adapting to cold and high altitude. The mountains go quiet, but nothing really stops.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/article_86ef0d71-2afb-4f4f-976b-c162309dc51b.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     isLetter: true,
     imgHiRes: true
   },
@@ -4529,6 +4537,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   },
   {
+    title: "Ridgway Independent Film Fest 2026",
+    link: "https://koto.org/event/ridgway-independent-film-fest-2026/",
+    description: "12 Years of Fierce, Fearless, Independent Film The Ridgway Independent Film Festival (RIFF) returns in 2026 with its 12th year of celebrating bold storytelling, emerging filmmakers, and the power of community through the lens of independent film. The RIFF committee has selected films with a lineup of 6 blocks of films spanning 3 days. View Digital Program, tickets and more. Individual Block Tickets: $15 All Access Festival Pass: $75 Rooted in a volunteer-driven, grassroots effort born shortly after Ridgway became one of Colorado’s first Certified Creative Districts, RIFF continues to evolve while honoring its origins. This year, RIFF returns to its longtime home in November, taking place November 13–15, 2026, with a refreshed structure designed to create deeper connection and conversation. …",
+    pubDate: "2026-11-13T10:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "The Sherbino, Ridgway",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/11/RIFF-banner-2026.png"
+  },
+  {
     title: "2026 Western Colorado Farm & Ranch Innovation Expo — Free Admission",
     link: "https://koto.org/event/2026-western-colorado-farm-ranch-innovation-expo-free-admission/2026-11-13/",
     description: "Discover agricultural innovation, explore practical ideas, and connect with your Western Slope neighbors at the free 2026 Western Colorado Farm & Ranch Innovation Expo, November 13–14 at the Montrose County Event Center. Hosted by the Western Colorado Soil Health Committee, this welcoming gathering brings together farmers, ranchers, gardeners, water leaders, educators, students, businesses, and community members for demonstrations, exhibits, presentations, and conversations. FRIDAY, NOVEMBER 13 Expo hours: noon–7 p.m. Explore agricultural equipment, technology, and exhibits, with water-related demonstrations beginning at 2 p.m. following the West Slope Water Summit. Meet vendors and producers, ask questions, and discover practical irrigation and water-management approaches. Also on Friday: West Slope Water Summit, 7:30 a.m.–2 p.m. This free gathering explores Western Colorado’s water outlook, watershed health, and agriculture’s connection to water, and includes an FFA student research presentation. Separate advance registration is required, with complimentary breakfast and lunch for registered participants. …",
@@ -4813,17 +4832,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
-  },
-  {
-    title: "An Outlaw Thanksgiving at Alloy Kitchen",
-    link: "https://koto.org/event/an-outlaw-thanksgiving-at-alloy-kitchen/",
-    description: "An Outlaw Thanksgiving at Alloy Kitchen in Mountain Lodge Telluride, Mountain Village. A fire-lit Thanksgiving buffet with live music on Thursday, November 26, from 2 to 6 PM. Reservations through OpenTable.",
-    pubDate: "2026-11-26T14:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Mountain Lodge Telluride, Mountain Village",
-    imageUrl: ""
   }
 ];
 
@@ -4923,20 +4931,6 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Puppy • Husky • Female",
     firstSeen: "2026-11-04",
     revealDate: "2026-11-04",
-    lastSeen: "2026-11-05"
-  },
-  {
-    id: "TEL-A-212",
-    name: "Charlie",
-    species: "Dog",
-    breed: "Retriever, Black Labrador",
-    ageGroup: "Young Dog",
-    sex: "Male",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/57d25e9a106a174e46d309ee8c5ff80d/4e4e89baaa0961b83aa46254179f7eaf.JPG",
-    profileUrl: "https://www.shelterluv.com/embed/animal/214965980",
-    summary: "Young Dog • Retriever, Black Labrador • Male",
-    firstSeen: "2026-11-04",
-    revealDate: "2026-11-06",
     lastSeen: "2026-11-05"
   }
 ];
@@ -6637,28 +6631,6 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "Norwood Sanitation District Meeting Work Session",
-    link: "https://www.norwoodtown.com/2026-10-29-norwood-sanitation-district-meeting-work-session",
-    description: "A work session for the Norwood Sanitation District, hosted by the Town of Norwood. This government meeting provides an opportunity for district business and operational matters to be discussed outside of a formal regular meeting.",
-    pubDate: "2026-10-29T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Government Meeting",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
-    title: "Senior Meals",
-    link: "https://www.norwoodtown.com/2026-10-29-senior-meals",
-    description: "A midday meal program for seniors hosted by the Town of Norwood, offering older community members a chance to gather and share a meal together. This recurring community event provides both nourishment and social connection for Norwood's senior residents.",
-    pubDate: "2026-10-29T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Community Event",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "Norwood Water Commission Work Session",
     link: "https://www.norwoodtown.com/2026-11-02-nwc-work-session",
     description: "The Norwood Water Commission will hold a work session to conduct business related to the town's water management and infrastructure. This is a local government meeting hosted by the Town of Norwood.",
@@ -6736,10 +6708,10 @@ const NORWOOD_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "Closed For Christmas Eve",
-    link: "https://www.norwoodtown.com/2026-12-24-closed-for-christmas-eve",
-    description: "The Town of Norwood will be closed on Christmas Eve in observance of the holiday. Municipal offices and services will be unavailable that day.",
-    pubDate: "2026-12-24T12:00:00.000Z",
+    title: "Closed For Christmas Day",
+    link: "https://www.norwoodtown.com/2026-12-25-closed-for-christmas-day",
+    description: "The Town of Norwood will be closed on Christmas Day in observance of the holiday. Municipal offices and services will be unavailable, so residents should plan accordingly for any town business needs.",
+    pubDate: "2026-12-25T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
     category: "Town Closure",
@@ -6946,6 +6918,28 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30530/drb-event-new.png"
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    description: "Movies Under the Stars is a recurring outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening on Saturday evenings at dusk. The series runs weekly throughout the summer months, offering a seasonal community gathering under the open sky.",
+    pubDate: "2026-12-05T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
+  {
+    title: "Mind Blown Telluride",
+    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    pubDate: "2026-12-05T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
   }
 ];
 
@@ -9402,21 +9396,21 @@ const TELLURIDE_BOARD_MEETINGS = [
   },
   {
     date: "November 17, 2026",
+    title: "(Lottery) Telluride Housing Authority",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8329",
+    hasAgenda: false,
+    location: "Rebekah Hall, 113 W Columbia Ave",
+    time: "10:05 AM",
+    civicwebId: 8329
+  },
+  {
+    date: "November 17, 2026",
     title: "Town Council",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8046",
     hasAgenda: false,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "10:00 AM",
     civicwebId: 8046
-  },
-  {
-    date: "November 17, 2026",
-    title: "(Lottery) Telluride Housing Authority",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8329",
-    hasAgenda: false,
-    location: "Rebekah Hall, 113 W Columbia Ave",
-    time: "10:00 AM",
-    civicwebId: 8329
   },
   {
     date: "November 18, 2026",
