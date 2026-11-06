@@ -78,7 +78,9 @@
     "type": "planning",
     "location": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
     "civicClerkId": 1078,
-    "note": null
+    "note": null,
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1078/files/agenda/2071",
+    "packetUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1078/files/agenda/2072"
   },
   {
     "date": "November 16, 2026",

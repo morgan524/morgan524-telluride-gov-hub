@@ -1,12 +1,4 @@
 {
-  "telluride|2026-10-06|Town Council - Oct 06 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/FzTNzG02TT6y-M9RZcn60w",
-    "meetingId": "818 0787 9405",
-    "passcode": "424441.",
-    "phone": "719) 359-4580"
-  },
   "mv|2026-10-07|Town Council Meeting": {
     "sv": 4,
     "agendaUrl": "https://townofmountainvillage.com/site/assets/files/50052/october_7-_2026_special_town_council_meeting_agenda.pdf",
@@ -234,14 +226,6 @@
     "agendaUrl": "https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1019",
     "sv": 4
   },
-  "ouray|2026-10-06|Board of County Commissioners Special Work Session": {
-    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/2150/files/agenda/7556",
-    "zoomUrl": "https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1",
-    "meetingId": "876 0637 5697",
-    "passcode": "946299",
-    "phone": "346-248-7799",
-    "sv": 4
-  },
   "telluride|2026-11-04|Ecology Commission - Nov 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8120",
     "sv": 4,
@@ -459,7 +443,11 @@
   },
   "county|2026-11-12|Planning Commission Meeting": {
     "sv": 4,
-    "ph": "a92a63f715b920c1"
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1078/files/agenda/2071",
+    "zoomUrl": "https://us06web.zoom.us/j/81323528392?pwd=6mxcRmpL4YivaaHMcNBnsN3TwRLIoU.1",
+    "meetingId": "813 2352 8392",
+    "passcode": "279143",
+    "phone": "970-728-3844"
   },
   "telluride|2026-11-19|Resident Advisory Committee - Nov 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8320",
@@ -651,6 +639,22 @@
     "meetingId": "816 7927 3686",
     "passcode": "275604",
     "phone": "719-359-4580",
+    "sv": 4
+  },
+  "ouray|2026-11-10|Board of County Commissioners": {
+    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/1070/files/agenda/7579",
+    "zoomUrl": "https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1",
+    "meetingId": "876 0637 5697",
+    "passcode": "946299",
+    "phone": "346-248-7799",
+    "sv": 4
+  },
+  "ouray|2026-11-10|Board of County Commissioners Work Session": {
+    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/1094/files/agenda/7581",
+    "zoomUrl": "https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1",
+    "meetingId": "876 0637 5697",
+    "passcode": "946299",
+    "phone": "346-248-7799",
     "sv": 4
   }
 }

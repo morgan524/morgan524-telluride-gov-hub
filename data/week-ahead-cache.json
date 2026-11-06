@@ -1,18 +1,22 @@
 {
-  "hash": "02356adf9964a58773726a98812c8b56dfdc7408",
-  "lede": "The biggest meeting of the week is TMVOA's first 2027 budget session on November 6, where the owners association takes its initial look at next year's spending and hears results from the completed 2025 audit — the kind of session that sets the tone for what Mountain Village property owners will be paying. On Sunday the 9th, San Miguel County convenes a cross-jurisdictional intergovernmental session with Telluride, Mountain Village, Ophir, and Norwood to compare notes on regional large projects and infrastructure pressures. Around the edges, the week offers a Financial Aid Workshop at the library Friday and a Free Legal Clinic Tuesday for anyone who needs either.",
+  "hash": "9e56259673f797049f34a725aa46cafcb850184b",
+  "lede": "The biggest thing on the government calendar this week is San Miguel County's Planning Commission taking up proposed changes to the Affordable Housing Impact Mitigation Fee — a fee structure that directly shapes whether workforce housing gets built here or not. Alongside that, TMVOA opens its three-meeting 2027 budget cycle and the county's intergovernmental meeting brings Telluride, Mountain Village, Ophir, and Norwood together for a regional large-projects check-in. On the lighter side, the week is packed: Art Walk, the Adult Spelling Bee, Wildbelly Fermentation Fest, and a FAFSA/financial aid workshop for families at the library.",
   "notable": [
     {
-      "id": 3,
+      "id": 0,
       "stake": "First look at TMVOA's 2027 draft budget and completed 2025 audit."
     },
     {
-      "id": 2,
-      "stake": "Quasi-judicial easement review and height variance vote for Mountain Village homes."
+      "id": 7,
+      "stake": "Public hearings on a PUD land split and a 2026 budget amendment before Ouray BOCC."
     },
     {
-      "id": 7,
-      "stake": "Regional large-projects update where development and infrastructure pressures across five jurisdictions surface."
+      "id": 13,
+      "stake": "County may reshape Affordable Housing Impact Mitigation Fee — affects all workforce housing projects."
+    },
+    {
+      "id": 14,
+      "stake": "Town will award the final Gondola Plaza West winter vending permit."
     }
   ]
 }

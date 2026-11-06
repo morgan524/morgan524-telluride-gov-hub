@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 11-5-26",
+    "source": "KOTO Community Radio",
+    "date": "November 6, 2026",
+    "newsTopic": "public-safety",
+    "copy": "Ouray County Sheriff's Office Takes Over City Policing; West End Roundup with the San Miguel Basin Forum; Norwood Mavericks Charge into State Playoffs",
+    "href": "https://koto.org/news/newscast-11-5-26/"
+  },
+  {
     "title": "Newscast 11-4-26",
     "source": "KOTO Community Radio",
     "date": "November 5, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "community",
     "copy": "On this week’s Regional Roundup, we’ll hear about the reopening of a lawsuit challenging the shrinking of Bears Ears and Grand Staircase-Escalante national monuments, followed by a report on challenges facing Native American voters. Then we'll hear about a court ruling against a group that claimed ownership of nearly 1,500 acres of public land in s",
     "href": "https://koto.org/news/newscast-10-23-26/"
-  },
-  {
-    "title": "Newscast 10-22-26",
-    "source": "KOTO Community Radio",
-    "date": "October 23, 2026",
-    "newsTopic": "community",
-    "copy": "West End Roundup with the San Miguel Basin Forum; \"The Mirror of Return\" Reflects on Operation Babylift; Mesa Rose Blooms Again",
-    "href": "https://koto.org/news/newscast-10-22-26/"
   }
 ]

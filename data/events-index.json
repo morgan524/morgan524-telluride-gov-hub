@@ -1,5 +1,19 @@
 [
   {
+    "title": "Guided Tour: Historic Beaumont Hotel & Spa",
+    "href": "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
+    "date": "2026-11-05",
+    "time": "1:30 PM",
+    "location": "Beaumont Hotel & Spa",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
+    "type": "Community",
+    "endDate": "2027-01-02"
+  },
+  {
     "title": "Every Sat. Floating Sound Bath",
     "href": "https://events.ourayridgwayevents.com/event/floating-sound-bath-4324",
     "date": "2026-11-05",
@@ -120,6 +134,20 @@
     "endDate": "2026-11-20"
   },
   {
+    "title": "Gaper Contest 2026 - Voyager FUNdraiser",
+    "href": "https://events.ourayridgwayevents.com/event/gaper-contest-2026",
+    "date": "2026-11-05",
+    "time": "8:00 AM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54366527548837/huge/4c3995fa47f3b861d61e318e7dafd3cbfa9b02e9.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "A community photo contest and fundraiser for Voyager inviting locals of all ages from the northern San Juan region to submit their best gaper photos for a chance to be named Gaper of the Year. Voting takes place during Gaper Week, November…",
+    "type": "Community",
+    "endDate": "2026-11-29"
+  },
+  {
     "title": "Functional Fitness - Strength & Mobility Training For Women",
     "href": "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women-8391",
     "date": "2026-11-05",
@@ -132,6 +160,32 @@
     "desc": "Welcome to Ridgway's functional strength and mobility training for women. Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups…",
     "type": "Talks & Classes",
     "endDate": "2026-12-31"
+  },
+  {
+    "title": "Turkey Trot 2026",
+    "href": "https://koto.org/event/turkey-trot-2026/",
+    "date": "2026-11-05",
+    "time": "",
+    "location": "",
+    "town": "",
+    "img": "https://koto.org/wp-content/uploads/2026/11/Turkey-Trot-English-Digital.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Dust off those tennis shoes and tail feathers – the Turkey Trot is back! This 5K walk/run is free and fun for the whole family (even Fido!). Sign up online in advance to be entered into a raffle, with additional prizes for the fastest…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Senior Meals",
+    "href": "https://www.norwoodtown.com/2026-11-05-senior-meals",
+    "date": "2026-11-05",
+    "time": "",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "Town of Norwood",
+    "desc": "A community meal program for seniors hosted by the Town of Norwood, offering older residents an opportunity to gather and share a midday meal. This recurring lunchtime event provides both nourishment and social connection for the senior…",
+    "type": "Community"
   },
   {
     "title": "Up-Off Gymnastics, Dance, and Spanish",
@@ -347,6 +401,32 @@
     "endDate": "2026-12-12"
   },
   {
+    "title": "Veterans and First Responders Spaghetti Dinner",
+    "href": "https://events.ourayridgwayevents.com/event/veterans-and-first-responders-spaghetti-dinner",
+    "date": "2026-11-07",
+    "time": "5:00 PM",
+    "location": "Ouray Elks Lodge #492",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/52188242178845/huge/0788e2f4af22c3cf54de566c2faa96fcb39fc63e.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "All veterans and first responders eat free on Saturday night! Come join us for our annual spaghetti dinner at 5:00pm and stay for Turkey Bingo at 7:00pm!",
+    "type": "Food & Drink"
+  },
+  {
+    "title": "Turkey Bingo",
+    "href": "https://events.ourayridgwayevents.com/event/turkey-bingo",
+    "date": "2026-11-07",
+    "time": "7:00 PM",
+    "location": "Ouray Elks Lodge #492",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/54430837255754/huge/e51268a046e74dea5f71d8a2937e8b1fe4c5c577.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Do you want to win a turkey dinner by playing bingo? It's possible by joining us after our annual spaghetti dinner for Veterans and First Responders. $10 for ten games!",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Delusions and Grandeur",
     "href": "https://events.ourayridgwayevents.com/event/delusions-and-grandeur",
     "date": "2026-11-07",
@@ -490,7 +570,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
     "type": "Community",
-    "endDate": "2026-12-28"
+    "endDate": "2027-01-04"
   },
   {
     "title": "Cardio Dance w/ Kelsey",
@@ -703,6 +783,60 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "Weds Floating Sound Bath",
+    "href": "https://events.ourayridgwayevents.com/event/floating-sound-bath",
+    "date": "2026-11-11",
+    "time": "1:30 PM",
+    "location": "Orvis Hot Springs",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54329351687325/huge/1e81b72abc42fb73374205a2bd7143bee62a33ef.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Group Float in warm healing waters every Wednesday @ 1:30pm. Receive gentle aquatic massage while listening to live sound therapy, vocals, bowls and more. Contact Christian 303-807-1039 to reserve your spot in advance. Please pay in…",
+    "type": "Wellness",
+    "endDate": "2026-12-30"
+  },
+  {
+    "title": "Toddler Storytime Art for Ages 2.5-5",
+    "href": "https://events.ourayridgwayevents.com/event/toddler-storytimeartfor-ages-2-5",
+    "date": "2026-11-11",
+    "time": "10:00 AM",
+    "location": "The Annex on Cora",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53780434962919/huge/3aff831f26d7f9d4824893f89d8fd88416047a44.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "TODDLER STORYTIME ART FOR AGES 2.5-5 Wednesdays, 10:00am–11:00am Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $70): September 16 – October 7Session 2 (4 weeks • $70): October 21 – November…",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Water Aerobics",
+    "href": "https://events.ourayridgwayevents.com/event/water-aerobics",
+    "date": "2026-11-11",
+    "time": "10:00 AM",
+    "location": "Ouray Hot Springs",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53887699628224/huge/262efc04b203189edcde410b9973aac1ca778195.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join water aerobics weekly Wednesdays (Sometimes Tuesdays and Thursdays too!) from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy the positive atmosphere! Water aerobics is free for pool members, and…",
+    "type": "Community",
+    "endDate": "2026-12-30"
+  },
+  {
+    "title": "After School Art for Ages 8-12",
+    "href": "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-8-12-7963",
+    "date": "2026-11-11",
+    "time": "3:15 PM",
+    "location": "The Annex on Cora",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53780624349826/huge/2ad5a3657f19d47b14c7833f838ac040c0836f38.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "AFTER SCHOOL ART FOR AGES 8-12 Wednesdays, 3:15–4:45 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 16 – October 7Session 2 (4 weeks • $85): October 21 – November 11Session 3…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Sewing 101 with Melissa",
     "href": "https://koto.org/event/sewing-101-with-melissa/2026-11-11/",
     "date": "2026-11-11",
@@ -714,6 +848,20 @@
     "source": "KOTO Community Calendar",
     "desc": "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll…",
     "type": "Community"
+  },
+  {
+    "title": "Zumba Fitness with Tamra",
+    "href": "https://events.ourayridgwayevents.com/event/zumba-fitness-with-tamra",
+    "date": "2026-11-11",
+    "time": "5:30 PM",
+    "location": "Ouray Community Center",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/52277881680293/huge/b13f129a21efb471bc913e0a6f0a0aa42fa702f4.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn…",
+    "type": "Arts & Film",
+    "endDate": "2026-12-17"
   },
   {
     "title": "Children's Story Time",
@@ -819,6 +967,19 @@
     "source": "KOTO Community Calendar",
     "desc": "Semana De Bienestar (Wellness Week) is a free, bilingual, alcohol-free community event at Wilkinson Public Library offering programming for children, adults, and families. Activities are available in both English and Spanish, making this…",
     "type": "Family & Kids"
+  },
+  {
+    "title": "Senior Meals",
+    "href": "https://www.norwoodtown.com/2026-11-12-senior-meals",
+    "date": "2026-11-12",
+    "time": "",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "Town of Norwood",
+    "desc": "A community meal program for seniors hosted by the Town of Norwood. It offers older residents an opportunity to gather, share a meal, and connect with neighbors in a welcoming setting.",
+    "type": "Community"
   },
   {
     "title": "Up-Off Gymnastics, Dance, and Spanish",
@@ -987,6 +1148,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Ouray County Community Art Show Opening Reception",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-county-community-art-show-opening-reception",
+    "date": "2026-11-14",
+    "time": "4:00 PM",
+    "location": "Ridgway Public Library",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54435452092746/huge/df157ebdad62744ce51aff87a308b444ba83d265.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The opening reception will be on November 14th from 4pm to 7pm. The Ouray County Community Art Show at the Ridgway Library on 300 Charles St., Ridgway will be on display from November 14th 2026 through January 7th 2027.",
     "type": "Arts & Film"
   },
   {
@@ -1303,6 +1477,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "The Sherbino & Citizens State Bank Present: Winter Wildlands Alliance BACKCOUNTRY FILM FEST",
+    "href": "https://koto.org/event/the-sherbino-citizens-state-bank-present-winter-wildlands-alliance-backcountry-film-fest/",
+    "date": "2026-11-18",
+    "time": "6:00 PM",
+    "location": "The Sherbino, Ridgway",
+    "town": "Ridgway",
+    "img": "https://koto.org/wp-content/uploads/2026/11/BCFF-film-fest-nov-18.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Sherbino and CSB Present: Winter Wildlands Alliance Backcountry Film Festival Doors: 6:00pm || Films: 6:30pm || $10 students and seniors (18-/ 65+) || $15 General Admission The Backcountry Film Festival, presented by Winter Wildlands…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Telluride Rotary Club Meeting",
     "href": "https://portal.clubrunner.ca/3291",
     "date": "2026-11-18",
@@ -1316,17 +1503,18 @@
     "type": "Family & Kids"
   },
   {
-    "title": "The Sherbino & Citizens State Bank Present: Winter Wildlands Alliance BACKCOUNTRY FILM FEST",
-    "href": "https://sherbino.org/event/the-sherbino-presents-winter-wildlands-alliance-backcountry-film-fest/",
+    "title": "Vinyasa Yoga",
+    "href": "https://events.ourayridgwayevents.com/event/vinyasa-yoga",
     "date": "2026-11-18",
-    "time": "",
-    "location": "The Sherbino, Ridgway",
+    "time": "8:15 AM",
+    "location": "Weehawken Ridgway (Old Schoolhouse)",
     "town": "Ridgway",
-    "img": "https://sherbino.org/wp-content/uploads/2026/10/Backcountry-Film-Fest-Banner-Nov-18.png",
-    "category": "",
-    "source": "Sherbino Theater",
-    "desc": "",
-    "type": "Arts & Film"
+    "img": "https://localist-images.azureedge.net/photos/54236148198717/huge/7d1ebafc567aad82f67c7ba07e1225354b86622c.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Vinyasa Yoga: Wednesdays 8:15-9:15 am This is a dynamic practice that will challenge, strengthen, and uplift you both physically and mentally. This practice moves through seven doorways or stages, starting by creating sacred space and…",
+    "type": "Wellness",
+    "endDate": "2026-12-30"
   },
   {
     "title": "After School Craft Time",
@@ -1404,6 +1592,19 @@
     "category": "Community Event",
     "source": "KOTO Community Calendar",
     "desc": "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit…",
+    "type": "Community"
+  },
+  {
+    "title": "Senior Meals",
+    "href": "https://www.norwoodtown.com/2026-11-19-senior-meals",
+    "date": "2026-11-19",
+    "time": "",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "Town of Norwood",
+    "desc": "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to gather, share a meal, and connect with neighbors.",
     "type": "Community"
   },
   {
@@ -1763,6 +1964,19 @@
     "endDate": "2026-12-11"
   },
   {
+    "title": "No Senior Meals",
+    "href": "https://www.norwoodtown.com/2026-11-26-no-senior-meals",
+    "date": "2026-11-26",
+    "time": "",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "Town of Norwood",
+    "desc": "The Town of Norwood's regular senior meals program will not be held on this date. This notice serves as a reminder for community members who rely on or participate in the senior meals service.",
+    "type": "Community"
+  },
+  {
     "title": "Mind Blown",
     "href": "https://www.telluride.com/event/mind-blown/",
     "date": "2026-11-27",
@@ -1910,6 +2124,19 @@
     "endDate": "2026-12-16"
   },
   {
+    "title": "Craft & Sip with Emily: \"Pine Needle Ornaments\" (Ages 15+)",
+    "href": "https://events.ourayridgwayevents.com/event/craft-sip-with-emily-pine-needle-ornaments-ages-15",
+    "date": "2026-12-02",
+    "time": "6:00 PM",
+    "location": "The Annex on Cora",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54435016951492/huge/4aedf9cff9cb59b9d7d929dc702bf6ea8b437111.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Craft & Sip: \"Pine Needle Ornaments\" Wednesday, December 2nd 6:00pm-8:00pm Cora Annex, Ridgway $49: www.weehawkenarts.org Unwind, get creative, and get into the holiday spirit with a nature-inspired craft & sip! Using natural pine needles,…",
+    "type": "Community"
+  },
+  {
     "title": "Telluride Rotary Club Meeting",
     "href": "https://portal.clubrunner.ca/3291",
     "date": "2026-12-02",
@@ -1921,6 +2148,19 @@
     "source": "Telluride Rotary",
     "desc": "Telluride Rotary Club meets the 1st & 3rd Wednesdays at 6:00 PM (gathering at 5:30) — 1st Wednesday at Mountain Lodge in Mountain Village, 3rd Wednesday at an announced Telluride location. A service club supporting scholarships, Youth…",
     "type": "Family & Kids"
+  },
+  {
+    "title": "Beautification Committee (OBC)",
+    "href": "https://events.ourayridgwayevents.com/event/beautification-committee",
+    "date": "2026-12-02",
+    "time": "8:00 AM",
+    "location": "Ouray Community Center, San Juan Room",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/50382168464273/huge/9567987a01fc4f1da8e171fabd1eb5b7bdbdccfa.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The Beautification Committee (OBC) works on projects to help beautify the community. The committee oversees the installation of all the flower gardens in the City as well as all the hanging baskets and plantings on Main Street. They have…",
+    "type": "Community"
   },
   {
     "title": "Floating Lotus Trivia Night – December 2026",
@@ -1935,6 +2175,19 @@
     "desc": "Trivia Night at Floating Lotus Brewery! Join us Thursday, December 3 and Thursday, December 17 from 7–9 PM for a lively night of questions, drinks and friendly competition. Grab a table, bring your team, and learn more at…",
     "type": "Food & Drink",
     "endDate": "2026-12-18"
+  },
+  {
+    "title": "Senior Meals",
+    "href": "https://www.norwoodtown.com/2026-12-03-senior-meals",
+    "date": "2026-12-03",
+    "time": "",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "Town of Norwood",
+    "desc": "A community meal program for seniors hosted by the Town of Norwood. This midday gathering offers older residents an opportunity to share a meal and connect with neighbors.",
+    "type": "Community"
   },
   {
     "title": "Design Review Board Meeting December 2026",
