@@ -1,22 +1,22 @@
 {
-  "hash": "9e56259673f797049f34a725aa46cafcb850184b",
-  "lede": "The biggest thing on the government calendar this week is San Miguel County's Planning Commission taking up proposed changes to the Affordable Housing Impact Mitigation Fee — a fee structure that directly shapes whether workforce housing gets built here or not. Alongside that, TMVOA opens its three-meeting 2027 budget cycle and the county's intergovernmental meeting brings Telluride, Mountain Village, Ophir, and Norwood together for a regional large-projects check-in. On the lighter side, the week is packed: Art Walk, the Adult Spelling Bee, Wildbelly Fermentation Fest, and a FAFSA/financial aid workshop for families at the library.",
+  "hash": "71a0968d5d15cf85f1a13fe72a5e7e8b1db8e821",
+  "lede": "The most consequential meeting this week is San Miguel County's Planning Commission on November 12, where proposed changes to the Affordable Housing Impact Mitigation Fee — a key lever in whether workforce housing actually gets built here — are on the table alongside broader housing incentive ideas. TMVOA also kicks off its three-meeting 2027 budget cycle on November 6, and the regional intergovernmental session on November 9 brings all five jurisdictions together for a cross-entity check-in on large projects and infrastructure pressures.",
   "notable": [
+    {
+      "id": 13,
+      "stake": "Proposed fee changes could reshape how workforce housing gets built countywide."
+    },
     {
       "id": 0,
       "stake": "First look at TMVOA's 2027 draft budget and completed 2025 audit."
     },
     {
-      "id": 7,
-      "stake": "Public hearings on a PUD land split and a 2026 budget amendment before Ouray BOCC."
-    },
-    {
-      "id": 13,
-      "stake": "County may reshape Affordable Housing Impact Mitigation Fee — affects all workforce housing projects."
-    },
-    {
       "id": 14,
-      "stake": "Town will award the final Gondola Plaza West winter vending permit."
+      "stake": "Board votes on final open winter vending permit for Gondola Plaza West."
+    },
+    {
+      "id": 7,
+      "stake": "Two public hearings: a PUD land split and a 2026 budget amendment."
     }
   ]
 }

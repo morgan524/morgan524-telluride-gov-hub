@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T01:30:55.626Z",
+ "generated": "2026-11-06T10:39:04.109Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -18,14 +18,7 @@
      "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
     }
    ],
-   "recent": [
-    {
-     "source": "telluride",
-     "date": "2026-10-22",
-     "title": "Planning & Zoning Commission - Oct 22 2026",
-     "snippet": "The October 22 P&Z meeting carries two items of broader public consequence. First, the Shandoka Lot Redevelopment — a Preliminary PUD application for Town-owned property at 860 Black Bear Rd —…"
-    }
-   ],
+   "recent": [],
    "developments": [],
    "stale": [
     "Carhenge / Shandoka: timeline entry \"Council resolution puts the Carhenge consolidation decision…\" (Oct 27, 2026) is still marked upcoming but the date has passed."
@@ -41,18 +34,11 @@
      "date": "2026-11-03",
      "title": "Regular Board Meeting",
      "snippet": "A short special meeting — just 30 minutes on the books — with one substantive item: a proposal from Jensen Partners to provide support through the due diligence process with CommonSpirit.…"
-    },
-    {
-     "source": "med",
-     "date": "2026-10-22",
-     "title": "Regular Board Meeting",
-     "snippet": "The Telluride Hospital District board meets October 22 at the Wellness Annex (and via Zoom) for a session that's heavier than usual on strategic decisions. The two items worth watching: a discussion…"
     }
    ],
    "developments": [],
    "stale": [
-    "Telluride Medical Center: med discussed it on 2026-11-03 (\"Regular Board Meeting\") but the deep dive was last edited 2026-09-27.",
-    "Telluride Medical Center: med discussed it on 2026-10-22 (\"Regular Board Meeting\") but the deep dive was last edited 2026-09-27."
+    "Telluride Medical Center: med discussed it on 2026-11-03 (\"Regular Board Meeting\") but the deep dive was last edited 2026-09-27."
    ]
   },
   "code": {

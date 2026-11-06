@@ -446,16 +446,6 @@ const MV_CACHE_DATE = '2026-11-06';
 
 const MV_CACHED_DATA = [
   {
-    date: "November 5, 2026",
-    time: "10:00 AM",
-    title: "Design Review Board",
-    board: "drb",
-    agendaUrl: "https://townofmountainvillage.com/site/assets/files/50155/november_5-_2026_design_review_board_meeting_agenda.pdf",
-    packetUrl: "https://townofmountainvillage.com/site/assets/files/50179/november_5-_2026_design_review_board_meeting_packet.pdf",
-    special: false,
-    location: "Town Hall, 455 Mountain Village Blvd, Suite A"
-  },
-  {
     date: "November 19, 2026",
     time: "3:00 PM - 8:00 PM",
     title: "Town Council Meeting",

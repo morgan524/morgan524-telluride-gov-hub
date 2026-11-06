@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-11-06",
+    "title": "Should the county have an AI policy — and what should it say?",
+    "body": "Commissioners are expected to dig into a draft AI resolution and policy, alongside Senate Bill 26-189, at a work session. It's not a final vote — just a conversation. But the tension is real. Some residents will want the county ahead of this, with clear rules before AI tools become routine in government work. Others will wonder why a small mountain county needs a formal AI policy at all, or worry that outside legislation like SB 26-189 is already doing the steering for them. Where do you come down?",
+    "choices": [
+      "Get the policy in place now",
+      "Overkill for a county this size",
+      "Let the state law handle it",
+      "It's complicated"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-11-05",
     "title": "One deed restriction, one exception request",
     "body": "The Board of County Commissioners, sitting as the Housing Authority, will consider an exception request from Esperanza Reyes to continuing residency and employment standards under her deed restriction. Deed restrictions on affordable units exist for a reason — they keep housing in local hands over time. But life doesn't always fit the rules: circumstances change, and a flat denial can feel punishing. Some neighbors will say exceptions undermine the whole system. Others will say a case-by-case review is exactly how fair administration works.\n\nWhere do you come down — should deed restriction exceptions be granted case by case, or held firm?",
@@ -419,21 +434,6 @@
       "Safety wins here",
       "Too much surveillance",
       "Depends on the policy",
-      "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-10-07",
-    "title": "The gondola IGA gets a rewrite — again",
-    "body": "START is set to vote on a resolution amending the Gondola Project Development IGA for FY27, and they'll also dig into the FY27 budget. Amending a major intergovernmental agreement mid-project raises real questions. Supporters will say adjustments are normal as a project this complex evolves. Critics may wonder whether the changes signal cost creep, shifting commitments, or something the public hasn't been told yet — especially with litigation in executive session on the same agenda. So: does an IGA amendment mid-project concern you, or is that just how big projects work up here?",
-    "choices": [
-      "Normal course of business",
-      "Red flag — want more transparency",
-      "Depends what changed",
       "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",
