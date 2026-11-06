@@ -145,10 +145,10 @@ const COUNTY_CACHED_DATA = [
   {
     date: "November 16, 2026",
     time: "4:00 PM",
-    title: "Open Space Commission Meeting",
+    title: "Open Space Commission Meeting 11/23",
     type: "other",
-    location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
-    civicClerkId: 1059,
+    location: "333 W Colorado Ave, Third Floor, Telluride, CO 81435",
+    civicClerkId: 1091,
     note: null
   },
   {
