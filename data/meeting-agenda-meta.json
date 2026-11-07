@@ -632,5 +632,10 @@
   "ouraycity|2026-11-10|Ouray Planning Commission Regular Meeting": {
     "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=776213",
     "sv": 4
+  },
+  "telluride|2026-12-07|Open Space Commission - Dec 07 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8134",
+    "sv": 4,
+    "ph": "9cf9fe1d604db893"
   }
 }

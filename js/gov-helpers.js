@@ -483,7 +483,10 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"31ce8a9d6a4fcb25"},
 
   "ouraycity|2026-11-10|Ouray Planning Commission Regular Meeting":
-    {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=776213","sv":4}
+    {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=776213","sv":4},
+
+  "telluride|2026-12-07|Open Space Commission - Dec 07 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8134","sv":4,"ph":"9cf9fe1d604db893"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -497,6 +500,14 @@ const DEEP_DIVE_UPDATES = [];
 //   sourceUrl, topics: [] }. Rendered by hub-bub.html from the JSON mirror
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
+  {
+    date: "2026-11-07",
+    title: "Who reviews the rent rules — and does it matter who does it?",
+    body: "Council is moving toward hiring outside consultants to do a comprehensive review of Telluride's employee rental housing policies. Some residents will see that as a smart move — fresh eyes, no local baggage, a real audit of whether the policies are actually working. Others will push back: local housing is a local problem, and paying consultants to study it can feel like a way to delay hard decisions the town already has the information to make. No contract has been approved yet — this is still at the discussion stage.\n\nSo where do you land: is outside expertise the right tool here, or is this one the town should work out itself?",
+    choices: ["Bring in the consultants", "Keep it in-house", "Need more info first"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
   {
     date: "2026-11-06",
     title: "Should the county have an AI policy — and what should it say?",
@@ -728,14 +739,6 @@ const DAILY_QUESTIONS = [
     choices: ["Exercise it — secure the unit", "Pass — max price is too much", "Need more details first"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-10-08",
-    title: "Cameras on every plate — worth it up here?",
-    body: "Town Council is taking up the Flock Safety automated license plate reader system in a work session, with Chief Marshal Josh Comte presenting. The pitch is public safety — ALPRs can flag stolen vehicles and help solve crimes fast. The pushback is just as predictable: the cameras log where your car is, when, and how often. That's a record most people don't know exists. A small town with one road in and one road out makes that data unusually revealing. So where do you land?\n\nIs the safety case strong enough to accept that kind of surveillance in a place this size?",
-    choices: ["Safety wins here", "Too much surveillance", "Depends on the policy", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -828,7 +831,10 @@ const MEETING_PREVIEWS = {
     "No agenda or meeting notice for the San Miguel County Open Space Commission meeting on November 23, 2026 appears in the available legal notices. A preview cannot be accurately produced from the provided information.",
 
   "ouraycity|2026-11-10|Ouray Planning Commission Regular Meeting":
-    "The Ouray Planning Commission is expected to consider restricting natural medicine within the city and discuss proposed amendments to land use definitions for short-term rentals and bed-and-breakfasts. The commission will also approve minutes from three previous meetings and address a request for remote participation by Commissioner Wood."
+    "The Ouray Planning Commission is expected to consider restricting natural medicine within the city and discuss proposed amendments to land use definitions for short-term rentals and bed-and-breakfasts. The commission will also approve minutes from three previous meetings and address a request for remote participation by Commissioner Wood.",
+
+  "telluride|2026-12-07|Open Space Commission - Dec 07 2026":
+    "The Open Space Commission is expected to meet on December 7, 2026, to address priorities and management of Telluride's open space properties. Discussion may also touch on employee rental housing policy matters, as the Town is simultaneously seeking consulting services for a comprehensive review of those policies."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1411,7 +1417,10 @@ const MANUAL_SUMMARIES = {
     "The November 16 Open Space Commission agenda hasn't been posted yet.",
 
   "ouraycity|2026-11-10|Ouray Planning Commission Regular Meeting":
-    "The Ouray Planning Commission takes up two substantive matters at its November 10 meeting. First, an action item on restricting natural medicine — a proposed ordinance that would regulate or limit psychedelic substances in city limits, a question municipalities across Colorado have been navigating since voters passed Proposition 122 in 2022. Second, a discussion on proposed amendments to Chapter 7 of the Land Use Code that would define short-term rentals and bed-and-breakfasts — the kind of definitional work that tends to quietly shape how STR enforcement and permitting plays out for years afterward. The commission also considers a remote-participation request from Commissioner Wood and approves minutes from three prior meetings dating back to February. Planning Commission vacancies round out the agenda."
+    "The Ouray Planning Commission takes up two substantive matters at its November 10 meeting. First, an action item on restricting natural medicine — a proposed ordinance that would regulate or limit psychedelic substances in city limits, a question municipalities across Colorado have been navigating since voters passed Proposition 122 in 2022. Second, a discussion on proposed amendments to Chapter 7 of the Land Use Code that would define short-term rentals and bed-and-breakfasts — the kind of definitional work that tends to quietly shape how STR enforcement and permitting plays out for years afterward. The commission also considers a remote-participation request from Commissioner Wood and approves minutes from three prior meetings dating back to February. Planning Commission vacancies round out the agenda.",
+
+  "telluride|2026-12-07|Open Space Commission - Dec 07 2026":
+    "The December 7, 2026 Open Space Commission agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -3637,6 +3646,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 
 const KOTO_NEWSCASTS = [
   {
+    title: "Newscast 11-6-26",
+    source: "KOTO Community Radio",
+    date: "November 7, 2026",
+    newsTopic: "community",
+    copy: "On this week’s Regional Roundup, we’ll hear about the flooding in the Four Corners region, followed by the story of one of the world’s toughest ultramarathons, the Moab 240, which this year was canceled for the first time in the race’s history due to flash flooding and dangerous winds from the remnants of Tropical Storm Rachel. Then we’ll hear abou",
+    href: "https://koto.org/news/newscast-11-6-26/"
+  },
+  {
     title: "Newscast 11-5-26",
     source: "KOTO Community Radio",
     date: "November 6, 2026",
@@ -3695,7 +3712,14 @@ const KOTO_NEWSCASTS = [
 ];
 
 const KOTO_FEATURED_STORIES = [
-
+  {
+    title: "52 Years of Music: How Telluride’s Bluegrass Festival Shaped the Town",
+    source: "KOTO Community Radio",
+    date: "November 7, 2026",
+    newsTopic: "arts-culture",
+    copy: "The Telluride Bluegrass Festival has shaped the town’s culture and identity over the past five decades. A longtime attendee shares her reflections on how the music, performers, and experiences have evolved while the festival tradition continues.",
+    href: "https://koto.org/news/52-years-of-music-how-tellurides-bluegrass-festival-shaped-the-town/"
+  }
 ];
 
 // San Miguel Basin Forum (West End — Norwood, Nucla, Naturita, Paradox).
@@ -4233,17 +4257,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Adult Spelling Bee",
-    link: "https://koto.org/event/adult-spelling-bee/",
-    description: "Words. Drinks. Bragging Rights (and $100!). For teams of 2. Extra prizes for clever team names and costumes! Show your library card and get 10% off your drink! Space is limited to 10 teams of two, so make sure to sign up today! PLEASE NOTE: Only one team member needs to sign up for their team of two.",
-    pubDate: "2026-11-06T18:30:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "The Alibi, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/10/Hive-Mind.png"
-  },
-  {
     title: "Wildbelly Fermentation Fest",
     link: "https://koto.org/event/wildbelly-fermentation-fest/",
     description: "The Wildbelly Fermentation Fest is bringing together fermentation enthusiasts and expert teachers for two days of classes in the Mancos Valley on Nov. 7th & 8th.",
@@ -4775,37 +4788,15 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "You & Me / Tu Y Yo",
-    link: "https://telluridelibrary.libcal.com/event/17874697?hs=a",
-    description: "10:30 AM – 11:00 AM · Join us every Friday for a fun and engaging parent-child program designed for preschoolers! Each week, we explore a new theme through hands-on activities that spark creativity.    &iexcl;Acomp&aacute;&ntilde;enos todos los viernes en un programa divertido y din&aacute;mico para padres e hijos, dise&ntilde;ado para ni&ntilde;os en edad preescolar! Cada semana exploramos un tema nuevo a trav&eacute;s de actividades pr&aacute;cticas que estimulan la creatividad.",
-    pubDate: "2026-11-06T17:30:00.000Z",
+    title: "Yoga With/con Lauren",
+    link: "https://telluridelibrary.libcal.com/event/17482788?hs=a",
+    description: "10:00 AM – 11:00 AM · Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome. Mu&eacute;vase, respire y ll&eacute;nese de energ&iacute;a en esta din&aacute;mica clase biling&uuml;e, dirigido por Lauren Norton, dise&ntilde;ada para fortalecer su cuerpo y mente. Combinando la fuerza y fluidez del pilates, el ritmo y la energ&iacute;a de la danza, y la presencia equilibrante del yoga y la respiraci&oacute;n, esta sesi&oacute;n le dejar&aacute; sinti&eacute;ndose fuerte, en armon&iacute;a y revitalizado/a. …",
+    pubDate: "2026-11-07T17:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_30_13_07_23.png"
-  },
-  {
-    title: "Learn DND",
-    link: "https://telluridelibrary.libcal.com/event/17918574?hs=a",
-    description: "4:00 PM – 6:00 PM · Have you ever been curious about learning how to play Dungeons and Dragons? This is your opportunity! Join local Dungeon Master Kase in a one day campaign that is open to both experienced DND players, and folks who have never played once. This is a chance for folks to learn how DND works and jump right into a fun campaign. This is open to teens and adults.",
-    pubDate: "2026-11-06T23:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Meeting Room #6 - large",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_28_17_49_40.png"
-  },
-  {
-    title: "Adult Spelling Bee at the Alibi",
-    link: "https://telluridelibrary.libcal.com/event/17585210?hs=a",
-    description: "6:30 PM – 8:30 PM · Words. Drinks. Bragging Rights (and $100!). For teams of 2.   Extra prizes for clever team names and costumes! Show your library card and get 10% off your drink! Space is limited to 10 teams of two, so make sure to sign up today.  There will be lots os audience participation, so even if you are not competing, come heckle your friends and jump in on the audience challenges! PLEASE NOTE:  Only one team member needs to sign up for their team of two.",
-    pubDate: "2026-11-07T01:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "The Alibi",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_07_14_12_51.jpg"
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_23_17_28_04.jpg"
   }
 ];
 
@@ -4881,18 +4872,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "Adult Spelling Bee - Telluride Library",
-    link: "https://www.alibitelluride.com/calendar#eca-event=adult-spelling-bee-telluride-library",
-    description: "An adult spelling bee hosted at The Alibi, offering teams of two the chance to compete for bragging rights and a $100 prize, with additional prizes also up for grabs. The event brings a playful, competitive twist to a weeknight evening at one of Telluride's favorite local bars.",
-    pubDate: "2026-11-06",
-    time: "6:30 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://1v09t9hszk.ucarecd.net/81532fb8-7b72-4529-9249-3d41062e15ff/-/crop/1174x1175/58,0/-/preview/"
-  },
   {
     title: "The Motel Prophets & Red Mountain Revival",
     link: "https://www.alibitelluride.com/calendar#eca-event=the-motel-prophets",
@@ -5532,130 +5511,14 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Gaper Contest 2026 - Voyager FUNdraiser",
     link: "https://events.ourayridgwayevents.com/event/gaper-contest-2026",
-    description: "A community fundraiser for Voyager in which locals of all ages from the northern San Juan region submit photos for a chance to be named Gaper of the Year, with voting taking place during Gaper Week (November 21–29, 2026, coinciding with opening week at Telluride Ski Resort). Submitted photos must be original — no AI-generated or photoshopped images are accepted.",
-    pubDate: "2026-11-06T15:00:00.000Z",
+    description: "A community fundraiser for Voyager in which locals of all ages from the northern San Juan region submit photos for a chance to be named Gaper of the Year, with voting taking place during Gaper Week (November 21–29, 2026, coinciding with opening week at Telluride Ski Resort). Submitted photos must be authentic — no AI-generated or photoshopped images are accepted.",
+    pubDate: "2026-11-07T15:00:00.000Z",
     endDate: "2026-11-29",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/54366527548837/huge/4c3995fa47f3b861d61e318e7dafd3cbfa9b02e9.jpg"
-  },
-  {
-    title: "Guided Tour: Historic Beaumont Hotel & Spa",
-    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
-    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
-    pubDate: "2026-11-06T20:30:00.000Z",
-    endDate: "2027-01-05",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Beaumont Hotel & Spa",
-    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
-  },
-  {
-    title: "Every Sat. Floating Sound Bath",
-    link: "https://events.ourayridgwayevents.com/event/floating-sound-bath-4324",
-    description: "A recurring Saturday afternoon event at Orvis Hot Springs combining group floating in warm water with live sound therapy, including vocals and singing bowls. Participants receive gentle aquatic massage during the session, with pricing on a sliding scale; advance reservations are required by contacting the organizer directly.",
-    pubDate: "2026-11-06T22:00:00.000Z",
-    endDate: "2027-01-02",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Orvis Hot Springs",
-    imageUrl: "https://localist-images.azureedge.net/photos/54329446861527/huge/53a8f8ffae924adab852a4b581b6b105251c9b9b.jpg"
-  },
-  {
-    title: "STEAM Art Explorers for Ages 5–8 in Montrose",
-    link: "https://events.ourayridgwayevents.com/event/steam-art-explorers-for-ages-58-in-montrose",
-    description: "MONTROSE AFTER SCHOOL ART SESSION 1 (5 WEEKS • OCTOBER 23 – NOVEMBER 20) Join us for a 5-week course that explores the intersection of art, science, technology, engineering, and math! In this hands-on art class, students will experiment with creative processes that turn scientific concepts into exciting works of art. Through a variety of fun projects, students will investigate chemical reactions, motion, light, color, and patterns. Projects include creating fizzy paintings using bubbling chemical reactions, experimenting with movement and gravity through pendulum painting, designing kaleidoscopes to explore symmetry and reflection, and making colorful lava lamps to investigate density and liquid interactions. Students will also take on collaborative challenges, activities, and movement games to build creativity, experimentation, problem-solving, and teamwork. With encouragement and plenty of opportunities to experiment, students will grow their artistic skills and confidence while embracing their creativity. …",
-    pubDate: "2026-11-06T22:45:00.000Z",
-    endDate: "2026-11-20",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Weehawken Montrose",
-    imageUrl: "https://localist-images.azureedge.net/photos/54055496965288/huge/4ac547d8a4681a49d4e49d0024729211c03874a6.jpg"
-  },
-  {
-    title: "David Nunn",
-    link: "https://events.ourayridgwayevents.com/event/david-nunn",
-    description: "David Nunn will perform a live music event at a venue on North Cora Street in Ridgway. The show is listed through the Ouray Ridgway community calendar, with additional details available at the Colorado Boy Depot website.",
-    pubDate: "2026-11-06T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "First Friday Art Walk",
-    link: "https://events.ourayridgwayevents.com/event/first-friday-art-walk",
-    description: "A monthly community art walk through downtown Ridgway, where local galleries, studios, shops, and gathering spaces open their doors for new exhibitions, artist receptions, live music, and pop-up programming. Each edition offers a different mix of art and activity from the area's creative community.",
-    pubDate: "2026-11-07T00:00:00.000Z",
-    endDate: "2026-12-05",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Downtown Ridgway, CO",
-    imageUrl: "https://localist-images.azureedge.net/photos/52941247100302/huge/24aa8ce412f9817ce04becd51e5d1cc5b8db2cad.jpg"
-  },
-  {
-    title: "First Friday Closing Reception - Michelle Montague's CONTAINMENT at 610 Arts",
-    link: "https://events.ourayridgwayevents.com/event/first-friday-closing-reception-michelle-montagues-containment-at-610-arts",
-    description: "CONTAINMENT ~ An Exhibition by Michelle Montague at the Sherbino’s 610 Arts Collective gallery On display September 29 – November 6, 2026 Closing Artist Reception: Friday, November 6th | 5:00–7:00 PM | Free! In this body of work, Montague places her signature clay figures within mixed-media box assemblages, creating intimate environments that hold both personal emotion and cultural tension. Begun in the aftermath of the 2024 election, the series reflects her response to current events, balancing anxiety, vulnerability, and frustration with an enduring hope for change. Using wooden crates, found objects, and sculpted human forms, Montague builds layered scenes that invite viewers to look closely and question their first impressions. The boxes serve as both practical display structures and symbolic containers—framing each narrative while intensifying the sense of confinement, exposure, and emotional pressure within the work. Montague’s sculptural practice has long explored perspective and the human body. …",
-    pubDate: "2026-11-07T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The 610 Arts Collective",
-    imageUrl: "https://localist-images.azureedge.net/photos/54285116156578/huge/5636e88a7c45f34a52f3bd815404edbcac6fdc25.jpg"
-  },
-  {
-    title: "First Friday at Rootwings Art",
-    link: "https://events.ourayridgwayevents.com/event/first-friday-at-rootwings-art-1540",
-    description: "Rootwings Art will be open for Ridgway's First Friday Art Walk, featuring local ceramic sculptures and large vessels by artist Andy Nasisse, original oils by Emma Kalff, Bruce Backer's Ravens & Crows, Taos artist Fred Burns fantasy nudes and one of a kind jewelry and ceramics by Vanessa Backer.",
-    pubDate: "2026-11-07T00:00:00.000Z",
-    endDate: "2026-12-05",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Herran House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53312391289791/huge/00a6a9e1834a357256b5925d35f6a6525ff06493.jpg"
-  },
-  {
-    title: "November - Art Opening: Film Stills-Ridgway Independent Film Fest",
-    link: "https://events.ourayridgwayevents.com/event/art-opening-film-stills-ridgway-independent-film-fest",
-    description: "Get a truly unique sneak preview of the upcoming film festival at this opening reception! The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In coordination with the annual Independent Film Festival (November 13-15) this show is both a preview and a celebration of the art of short filmmaking.",
-    pubDate: "2026-11-07T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53048304229484/huge/448e2d96ea605dd9b840c088158ffcfb1b9eebeb.jpg"
-  },
-  {
-    title: "Ongoing: Film Stills from the Ridgway Independent Film Fest",
-    link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-film-stills-ridgway-independent-film-fest",
-    description: "The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In coordination with the annual Independent Film Festival (November 13-15) this show is both a preview and a celebration of the art of short filmmaking.",
-    pubDate: "2026-11-07T00:00:00.000Z",
-    endDate: "2026-11-30",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53048306784001/huge/b4907ccb0dd0b51c0bd862f76e556e669e3684c2.jpg"
-  },
-  {
-    title: "The Sherbino & OCPAG Present: Heather & Doug – First Friday Show",
-    link: "https://events.ourayridgwayevents.com/event/the-sherbino-ocpag-present-heather-doug-first-friday-show",
-    description: "Friday, November 6th | 6:00–8:00 pm Sherbino “Living Room” Free Show, Donations to the Performer and the Sherbino are welcome! | Cash Bar | Tips Encouraged | Sponsored by Ouray County Performing Arts Guild with additional support from FUSE Celebrate First Friday with an intimate evening of live music at the Sherbino! Heather & Douglas join us inside The Sherbino on Friday, November 6 from 6–8 PM for an evening of live music as part of Ridgway’s First Friday festivities. Featuring acoustic guitar, upright bass, vocals, and an easygoing blend of roots-inspired sounds, Heather & Douglas are a longtime local favorite in the Sherbino’s Courtyars — and a perfect soundtrack for a night out in Ridgway. …",
-    pubDate: "2026-11-07T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Sherbino",
-    imageUrl: "https://localist-images.azureedge.net/photos/54285086340176/huge/fe98b798c883b3dd3ffa09611fecdeb34431c2f4.jpg"
   },
   {
     title: "Introduction to Copper Jewelry with Emily Knickerbocker",
@@ -5690,6 +5553,30 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Wright Opera House",
     imageUrl: "https://localist-images.azureedge.net/photos/53644731506912/huge/89ae9ae8e058db83a936dd643f6af477841cd019.jpg"
+  },
+  {
+    title: "Guided Tour: Historic Beaumont Hotel & Spa",
+    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
+    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
+    pubDate: "2026-11-07T20:30:00.000Z",
+    endDate: "2027-01-05",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Beaumont Hotel & Spa",
+    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
+  },
+  {
+    title: "Every Sat. Floating Sound Bath",
+    link: "https://events.ourayridgwayevents.com/event/floating-sound-bath-4324",
+    description: "A weekly group float session held every Saturday at Orvis Hot Springs, combining warm water relaxation with live sound therapy including vocals and singing bowls. Participants receive gentle aquatic massage during the experience, with sliding scale pricing available; contact Vanessa W. at 720-470-2823to reserve a spot and arrange advance payment.",
+    pubDate: "2026-11-07T22:00:00.000Z",
+    endDate: "2027-01-02",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Orvis Hot Springs",
+    imageUrl: "https://localist-images.azureedge.net/photos/54329446861527/huge/53a8f8ffae924adab852a4b581b6b105251c9b9b.jpg"
   },
   {
     title: "Veterans and First Responders Spaghetti Dinner",
@@ -5768,6 +5655,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Bee True You Wellness & Creative Studio",
     imageUrl: "https://localist-images.azureedge.net/photos/54241462626167/huge/7c0778035e072ff933b617f21809b1459dc84aca.jpg"
+  },
+  {
+    title: "Ongoing: Film Stills from the Ridgway Independent Film Fest",
+    link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-film-stills-ridgway-independent-film-fest",
+    description: "The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In coordination with the annual Independent Film Festival (November 13-15) this show is both a preview and a celebration of the art of short filmmaking.",
+    pubDate: "2026-11-09T17:00:00.000Z",
+    endDate: "2026-11-30",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53048306784001/huge/b4907ccb0dd0b51c0bd862f76e556e669e3684c2.jpg"
   },
   {
     title: "Senior Lunch by Neighbor to Neighbor",
@@ -6010,6 +5909,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54312395432922/huge/81fa74c01c4c645711ce20fe9bdfa5eaf68361c6.jpg"
   },
   {
+    title: "STEAM Art Explorers for Ages 5–8 in Montrose",
+    link: "https://events.ourayridgwayevents.com/event/steam-art-explorers-for-ages-58-in-montrose",
+    description: "MONTROSE AFTER SCHOOL ART SESSION 1 (5 WEEKS • OCTOBER 23 – NOVEMBER 20) Join us for a 5-week course that explores the intersection of art, science, technology, engineering, and math! In this hands-on art class, students will experiment with creative processes that turn scientific concepts into exciting works of art. Through a variety of fun projects, students will investigate chemical reactions, motion, light, color, and patterns. Projects include creating fizzy paintings using bubbling chemical reactions, experimenting with movement and gravity through pendulum painting, designing kaleidoscopes to explore symmetry and reflection, and making colorful lava lamps to investigate density and liquid interactions. Students will also take on collaborative challenges, activities, and movement games to build creativity, experimentation, problem-solving, and teamwork. With encouragement and plenty of opportunities to experiment, students will grow their artistic skills and confidence while embracing their creativity. …",
+    pubDate: "2026-11-13T22:45:00.000Z",
+    endDate: "2026-11-20",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Montrose",
+    imageUrl: "https://localist-images.azureedge.net/photos/54055496965288/huge/4ac547d8a4681a49d4e49d0024729211c03874a6.jpg"
+  },
+  {
     title: "Ridgway Independent Film Fest 2026",
     link: "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-2026",
     description: "12 Years of Fierce, Fearless, Independent Film The Ridgway Independent Film Festival (RIFF) returns in 2026 with its 12th year of celebrating bold storytelling, emerging filmmakers, and the power of community through the lens of independent film. The RIFF committee has selected films with a lineup of 6 blocks of films spanning 3 days. View Digital Program, tickets and more. Individual Block Tickets: $15 All Access Festival Pass: $75 Rooted in a volunteer-driven, grassroots effort born shortly after Ridgway became one of Colorado’s first Certified Creative Districts, RIFF continues to evolve while honoring its origins. This year, RIFF returns to its longtime home in November, taking place November 13–15, 2026, with a refreshed structure designed to create deeper connection and conversation. …",
@@ -6163,6 +6074,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray Hot Springs",
     imageUrl: "https://localist-images.azureedge.net/photos/53924398882536/huge/a5451161d264c1870d73a22c5d5625c3a29a8c63.jpg"
+  },
+  {
+    title: "Britley & Matt",
+    link: "https://events.ourayridgwayevents.com/event/britley-matt-5034",
+    description: "Britley & Matt are performing live music at a venue on North Cora Street in Ridgway. The event is listed through the Ouray Ridgway community calendar.",
+    pubDate: "2026-11-17T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
     title: "Decker Room New Volunteer Orientation",
@@ -6364,6 +6286,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/parks-and-recreation-committee-parc",
     description: "The Parks and Recreation Committee (PARC) is made up of community members who volunteer their time to support and enhance recreational opportunities in Ouray. PARC organizes safe, family-friendly events that bring the community together. Events include Broomball, Cabin Fever Days, Dodgeball, Softball, and Game Night, among others. The committee works closely with local organizations, businesses, and other City committees to carry out its mission. Community partners include the Ouray Hot Springs Pool & Fitness Center, the Beautification Committee, and the Ouray School District. PARC also plays an important role in developing and implementing master plans for the City’s park system, helping ensure that Ouray’s parks and recreational spaces serve residents and visitors for years to come. Members of the public are welcome to attend these meetings. Meetings: PARC meets monthly on the first Tuesday at 6:00 p.m. …",
     pubDate: "2026-12-02T01:00:00.000Z",
+    endDate: "2027-01-06",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6438,6 +6361,28 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Decker Community Room",
     imageUrl: "https://localist-images.azureedge.net/photos/54139018107075/huge/dc77ec311ce3e3367f9e9d6c47ed459172ad9558.jpg"
+  },
+  {
+    title: "First Friday Art Walk",
+    link: "https://events.ourayridgwayevents.com/event/first-friday-art-walk",
+    description: "A monthly community art walk through downtown Ridgway, where galleries, studios, shops, and gathering spaces open their doors for new exhibitions, artist receptions, live music, and pop-up programming. Each edition offers a fresh lineup of creative experiences spread across the walkable downtown area.",
+    pubDate: "2026-12-05T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Downtown Ridgway, CO",
+    imageUrl: "https://localist-images.azureedge.net/photos/52941247100302/huge/24aa8ce412f9817ce04becd51e5d1cc5b8db2cad.jpg"
+  },
+  {
+    title: "First Friday at Rootwings Art",
+    link: "https://events.ourayridgwayevents.com/event/first-friday-at-rootwings-art-1540",
+    description: "Rootwings Art will be open for Ridgway's First Friday Art Walk, featuring local ceramic sculptures and large vessels by artist Andy Nasisse, original oils by Emma Kalff, Bruce Backer's Ravens & Crows, Taos artist Fred Burns fantasy nudes and one of a kind jewelry and ceramics by Vanessa Backer.",
+    pubDate: "2026-12-05T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Herran House",
+    imageUrl: "https://localist-images.azureedge.net/photos/53312391289791/huge/00a6a9e1834a357256b5925d35f6a6525ff06493.jpg"
   },
   {
     title: "Weehawken Youth Art Show",
@@ -6537,6 +6482,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Decker Community Room",
     imageUrl: "https://localist-images.azureedge.net/photos/52253033564264/huge/ef12b5792bac47932752278d68230c7704389412.jpg"
+  },
+  {
+    title: "Britley & Matt",
+    link: "https://events.ourayridgwayevents.com/event/britley-matt-8937",
+    description: "Britley & Matt are performing live music at a venue on North Cora Street in Ridgway. The event is listed through the Ouray Ridgway community calendar.",
+    pubDate: "2026-12-08T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
     title: "After School Art for Ages 5-8",

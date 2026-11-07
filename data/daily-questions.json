@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-07",
+    "title": "Who reviews the rent rules — and does it matter who does it?",
+    "body": "Council is moving toward hiring outside consultants to do a comprehensive review of Telluride's employee rental housing policies. Some residents will see that as a smart move — fresh eyes, no local baggage, a real audit of whether the policies are actually working. Others will push back: local housing is a local problem, and paying consultants to study it can feel like a way to delay hard decisions the town already has the information to make. No contract has been approved yet — this is still at the discussion stage.\n\nSo where do you land: is outside expertise the right tool here, or is this one the town should work out itself?",
+    "choices": [
+      "Bring in the consultants",
+      "Keep it in-house",
+      "Need more info first"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-11-06",
     "title": "Should the county have an AI policy — and what should it say?",
     "body": "Commissioners are expected to dig into a draft AI resolution and policy, alongside Senate Bill 26-189, at a work session. It's not a final vote — just a conversation. But the tension is real. Some residents will want the county ahead of this, with clear rules before AI tools become routine in government work. Others will wonder why a small mountain county needs a formal AI policy at all, or worry that outside legislation like SB 26-189 is already doing the steering for them. Where do you come down?",
@@ -420,21 +434,6 @@
       "Exercise it — secure the unit",
       "Pass — max price is too much",
       "Need more details first"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-10-08",
-    "title": "Cameras on every plate — worth it up here?",
-    "body": "Town Council is taking up the Flock Safety automated license plate reader system in a work session, with Chief Marshal Josh Comte presenting. The pitch is public safety — ALPRs can flag stolen vehicles and help solve crimes fast. The pushback is just as predictable: the cameras log where your car is, when, and how often. That's a record most people don't know exists. A small town with one road in and one road out makes that data unusually revealing. So where do you land?\n\nIs the safety case strong enough to accept that kind of surveillance in a place this size?",
-    "choices": [
-      "Safety wins here",
-      "Too much surveillance",
-      "Depends on the policy",
-      "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",
     "topics": [

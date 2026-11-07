@@ -1,26 +1,22 @@
 {
-  "hash": "bbbc7b8660de684d2ec18999b44439554e0bfbb0",
-  "lede": "The biggest thing on the civic calendar this week is the San Miguel County Planning Commission meeting Wednesday, where proposed amendments to the Affordable Housing Impact Mitigation Fee — the formula that shapes whether workforce housing actually gets built here — are on the table for discussion. The Open Space Commission also meets Monday to dig into the Valley Floor goat grazing pilot, with a resident pushing for hard data on vegetation, costs, and wildlife impacts. Ouray's Planning Commission takes up a proposed ordinance on natural medicine regulation Monday as well, and the KOTO Ski Swap arrives Friday if you still need gear.",
+  "hash": "3343f0466092d0a0cda530ecad3798f0c93ef927",
+  "lede": "The biggest thing to watch this week is San Miguel County's Planning Commission on November 12, where proposed changes to the Affordable Housing Impact Mitigation Fee are on the table alongside broader housing incentive ideas — decisions that shape whether workforce housing actually gets built here. Also worth your attention: the Ouray BOCC has two public hearings Tuesday, including a PUD land split and a budget amendment, and the Ouray Planning Commission takes up a proposed ordinance on natural medicine regulation. Closer to home, Monday's Open Space Commission is pressing for real data on the Valley Floor goat grazing pilot.",
   "notable": [
     {
       "id": 0,
-      "stake": "Commission faces demand for real data and accountability on Valley Floor goat grazing program."
+      "stake": "Commission reviews goat grazing data, costs, and wildlife impacts on Valley Floor."
     },
     {
       "id": 5,
-      "stake": "Two public hearings: a 14-acre PUD split and a 2026 budget amendment, plus repeal of an austerity resolution."
+      "stake": "Public hearings on a PUD land split and 2026 budget amendment; austerity resolution repeal vote."
     },
     {
       "id": 7,
-      "stake": "Proposed ordinance would restrict natural medicine use in Ouray city limits."
+      "stake": "Proposed ordinance would restrict psychedelic substances within Ouray city limits."
     },
     {
       "id": 11,
-      "stake": "Amendments to the Affordable Housing Impact Mitigation Fee could reshape workforce housing countywide."
-    },
-    {
-      "id": 12,
-      "stake": "Board votes on final open winter vending permit for Gondola Plaza West."
+      "stake": "Affordable Housing Impact Mitigation Fee changes could affect all future workforce housing countywide."
     }
   ]
 }
