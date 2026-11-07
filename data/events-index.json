@@ -569,7 +569,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Join water aerobics weekly Wednesdays (Sometimes Tuesdays and Thursdays too!) from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy the positive atmosphere! Water aerobics is free for pool members, and…",
     "type": "Community",
-    "endDate": "2026-12-30"
+    "endDate": "2027-01-06"
   },
   {
     "title": "Veterans Day Lunch",
@@ -2054,7 +2054,8 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "The Beautification Committee (OBC) works on projects to help beautify the community. The committee oversees the installation of all the flower gardens in the City as well as all the hanging baskets and plantings on Main Street. They have…",
-    "type": "Community"
+    "type": "Community",
+    "endDate": "2027-01-06"
   },
   {
     "title": "Floating Lotus Trivia Night – December 2026",
@@ -2345,6 +2346,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month.…",
     "type": "Talks & Classes"
+  },
+  {
+    "title": "Bike & Brewery Tour",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    "date": "2026-12-07",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "A guided bicycle tour originating at the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route offers a scenic descent through…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Britley & Matt",

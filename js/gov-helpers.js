@@ -2731,6 +2731,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Silver Skiers program strikes gold in Telluride",
+    source: "Telluride Times",
+    date: "November 7, 2026",
+    firstSeen: "2026-11-07",
+    newsTopic: "recreation",
+    copy: "TSS's Silver Skiers program has been pairing skiers aged 50–84 with professional instructors in small, ability-matched groups every January and February since 2016. Up to 50 participants join each season for weekly Thursday sessions on double green and blue terrain. Coordinator Christine McRoy says the social side — skiing with a consistent group — is as big a draw as the instruction itself.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_0a2562d8-47d0-4b0b-8f67-426e1bd6eae5.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/da/5da9a187-03b1-4168-9b85-88735c539b76/6aee01d70a375.image.png",
+    imgHiRes: true
+  },
+  {
     title: "'Déjà vu all over again' ends for Planet Bluegrass, popular EDM-fest",
     source: "Telluride Times",
     date: "November 6, 2026",
@@ -5777,7 +5789,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/water-aerobics",
     description: "Join water aerobics weekly Wednesdays (Sometimes Tuesdays and Thursdays too!) from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy the positive atmosphere! Water aerobics is free for pool members, and non-members can join for just $5 per class.",
     pubDate: "2026-11-11T17:00:00.000Z",
-    endDate: "2026-12-30",
+    endDate: "2027-01-06",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6298,6 +6310,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/beautification-committee",
     description: "The Beautification Committee (OBC) works on projects to help beautify the community. The committee oversees the installation of all the flower gardens in the City as well as all the hanging baskets and plantings on Main Street. They have also worked hard over the years to acquire many historic mining pieces and equipment that are displayed throughout the community to recognize Ouray's mining heritage. The committee has also provided direction on signage, light poles, and benches on the public rights of way. The Beautification Committee also plays an important role in developing and implementing master plans for the City’s park system. The committee makes recommendations to the City Council on these many beautification projects as well as the use of dollars from the Beautification Fund. This fund is supported by a portion of the Lodging Occupation Tax and is used exclusively for projects that help beautify the community. …",
     pubDate: "2026-12-02T15:00:00.000Z",
+    endDate: "2027-01-06",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6942,6 +6955,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
+  },
+  {
+    title: "Bike & Brewery Tour",
+    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    description: "A guided bicycle tour originating at the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route offers a scenic descent through Mountain Village and into town.",
+    pubDate: "2026-12-07T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   }
 ];
 
