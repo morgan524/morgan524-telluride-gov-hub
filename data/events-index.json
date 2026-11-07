@@ -11,20 +11,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
     "type": "Community",
-    "endDate": "2027-01-02"
-  },
-  {
-    "title": "Up-Off Gymnastics, Dance, and Spanish",
-    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-11-06/",
-    "date": "2026-11-06",
-    "time": "10:00 AM",
-    "location": "Lone Cone Library Norwood",
-    "town": "Norwood",
-    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
-    "type": "Music"
+    "endDate": "2027-01-05"
   },
   {
     "title": "You & Me / Tu Y Yo",
@@ -255,15 +242,15 @@
   },
   {
     "title": "Watercolor with Anita Winter: “Still Waters”",
-    "href": "https://events.ourayridgwayevents.com/event/watercolor-with-anita-winter-still-waters",
+    "href": "https://events.ourayridgwayevents.com/event/watercolor-with-anita-winter-still-waters-3074",
     "date": "2026-11-07",
     "time": "10:00 AM",
     "location": "The Annex on Cora",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/54066522649708/huge/a35808b29295063770a1a017fa3e070e4b7d2146.jpg",
+    "img": "https://localist-images.azureedge.net/photos/54225894464998/huge/40b45a6163c5f0a2e613c61175c30464ae416f5b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Learn to create reflections and still-water effects in watercolor with Anita Winter through demonstrations, guided exercises and individualized instruction. Participants will practice several techniques and apply them to a finished…",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -395,6 +382,19 @@
     "category": "Community Event",
     "source": "KOTO Community Calendar",
     "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    "type": "Community"
+  },
+  {
+    "title": "PHM Thanksgiving Meal",
+    "href": "https://events.ourayridgwayevents.com/event/phm-thanksgiving",
+    "date": "2026-11-08",
+    "time": "3:00 PM",
+    "location": "Ridgway Christian Center",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54444809107548/huge/93d4a7771a51058364b197145f49192febbf2903.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Praise Him Ministires is hosting a FREE Thanksgiving meal for everyone. Catered locally by True Grit Cafe, guests are provided with a traditional Thanksgiving meal. Stop by anytime between 3-6pm.",
     "type": "Community"
   },
   {
@@ -718,6 +718,19 @@
     "endDate": "2026-12-30"
   },
   {
+    "title": "Veterans Day Lunch",
+    "href": "https://events.ourayridgwayevents.com/event/veterans-day-lunch",
+    "date": "2026-11-11",
+    "time": "11:30 AM",
+    "location": "Ridgway Christian Center",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54444848076517/huge/a18edea5131ceba7b9cdd485c752ca808219e7f0.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us as we come together to honor and celebrate the brave men and women who have served in the United States Armed Forces. This Veterans Day event is a time to recognize their courage, sacrifice, dedication, and commitment to protecting…",
+    "type": "Community"
+  },
+  {
     "title": "After School Art for Ages 8-12",
     "href": "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-8-12-7963",
     "date": "2026-11-11",
@@ -991,6 +1004,19 @@
     "source": "KOTO Community Calendar",
     "desc": "Norwood Park & Rec District presents Songs from San Miguel Live at the Livery on Friday, November 13th, featuring Brendan Forrest & Friends, Molly & the Starfish Lovers, Jacob Lukaszewski (\"Loo-kah-shev-ski\"), and Sean McFarland. This will…",
     "type": "Community"
+  },
+  {
+    "title": "The Motel Prophets & Red Mountain Revival",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=the-motel-prophets",
+    "date": "2026-11-13",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://1v09t9hszk.ucarecd.net/e377708b-2c0a-4491-812f-9a6dbc3d6993/-/crop/1545x773/0,1227/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Two live acts — The Motel Prophets and Red Mountain Revival — take the stage at The Alibi for a night of live music. The show begins at 9:00 PM.",
+    "type": "Music"
   },
   {
     "title": "Ridgway Independent Film Festival",
@@ -1830,6 +1856,32 @@
     "type": "Music"
   },
   {
+    "title": "An Outlaw Thanksgiving at Alloy Kitchen",
+    "href": "https://koto.org/event/an-outlaw-thanksgiving-at-alloy-kitchen/",
+    "date": "2026-11-26",
+    "time": "2:00 PM",
+    "location": "Mountain Lodge Telluride, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/mountainvillage.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "An Outlaw Thanksgiving at Alloy Kitchen in Mountain Lodge Telluride, Mountain Village. A fire-lit Thanksgiving buffet with live music on Thursday, November 26, from 2 to 6 PM. Reservations through OpenTable.",
+    "type": "Music"
+  },
+  {
+    "title": "Live Music in the Après Lounge at Mountain Lodge Telluride",
+    "href": "https://koto.org/event/live-music-in-the-apres-lounge-at-mountain-lodge-telluride/2026-11-26/",
+    "date": "2026-11-26",
+    "time": "4:00 PM",
+    "location": "Mountain Lodge Telluride, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Local live music in the Après Lounge at Mountain Lodge Telluride in Mountain Village, 4 to 7 PM on most Thursdays, Fridays and Saturdays all winter.",
+    "type": "Music"
+  },
+  {
     "title": "An Outlaw Thanksgiving",
     "href": "https://www.telluride.com/event/an-outlaw-thanksgiving-at-alloy-kitchen/",
     "date": "2026-11-26",
@@ -1868,6 +1920,19 @@
     "desc": "Live music all winter at Mountain Lodge Telluride in Mountain Village. Local acts play the Après Lounge from 4 to 7 …",
     "type": "Music",
     "endDate": "2027-04-05"
+  },
+  {
+    "title": "Facing the Mourning",
+    "href": "https://koto.org/event/facing-the-mourning/2026-11-26/",
+    "date": "2026-11-26",
+    "time": "6:00 PM",
+    "location": "Redvale Community Center",
+    "town": "",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit…",
+    "type": "Community"
   },
   {
     "title": "Floating Lotus Music Bingo – November & December 2026",
@@ -1909,6 +1974,19 @@
     "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of …",
     "type": "Community",
     "endDate": "2027-03-27"
+  },
+  {
+    "title": "DJ Phoenix",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=dj-phoenix-1",
+    "date": "2026-11-27",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://1v09t9hszk.ucarecd.net/ca6338a4-f816-4b2d-9519-f999c902da9f/-/crop/1877x750/0,2065/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "DJ Phoenix, a 30-year veteran of the Colorado house music scene, takes the decks at The Alibi for a late-night set. Expect an experienced hand behind the turntables bringing energy to one of Telluride's favorite local venues.",
+    "type": "Music"
   },
   {
     "title": "Movies Under the Stars",
@@ -2942,5 +3020,31 @@
     "source": "Telluride.com",
     "desc": "Join the Sheridan Arts Foundation for five nights of world-class entertainment at the historic Sheridan Opera House.",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Telluride Rotary Club Meeting",
+    "href": "https://portal.clubrunner.ca/3291",
+    "date": "2027-01-06",
+    "time": "6:00 PM (social at 5:30)",
+    "location": "Mountain Lodge, 457 Mountain Village Blvd, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/mountainvillage.jpg",
+    "category": "",
+    "source": "Telluride Rotary",
+    "desc": "Telluride Rotary Club meets the 1st & 3rd Wednesdays at 6:00 PM (gathering at 5:30) — 1st Wednesday at Mountain Lodge in Mountain Village, 3rd Wednesday at an announced Telluride location. A service club supporting scholarships, Youth…",
+    "type": "Family & Kids"
+  },
+  {
+    "title": "Meal Prep/Cooking Classes",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2027-01-06",
+    "time": "6:00-8:00 PM",
+    "location": "Ah Haa School for the Arts",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "A meal prep and cooking class offered at Ah Haa School for the Arts.",
+    "type": "Talks & Classes"
   }
 ]

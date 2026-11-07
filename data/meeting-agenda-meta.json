@@ -1,35 +1,4 @@
 {
-  "mv|2026-10-07|Town Council Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/50052/october_7-_2026_special_town_council_meeting_agenda.pdf",
-    "zoomUrl": "https://us06web.zoom.us/webinar/register/WN_xT2roTghSA6GOZPQ43l6pw"
-  },
-  "telluride|2026-10-07|Ecology Commission - Oct 07 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8119",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1",
-    "phone": "970-728-2496"
-  },
-  "telluride|2026-10-07|Commission for Community Assistance, Arts & Special Events - Oct 07 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8067",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/tZ0pc-ChqDwsGNFpPigfqqLQptmoMmpJdiOx"
-  },
-  "telluride|2026-10-07|Telluride Housing Authority Subcommittee - Oct 07 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8164",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/j/83022451705?pwd=Lj8jkLF9GQny7CWBqvP8IYkQhviQBb.1",
-    "meetingId": "830 2245 1705",
-    "passcode": "229528.",
-    "phone": "719) 359-4580"
-  },
-  "county|2026-10-07|Board of County Commissioners Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/888/files/agenda/2030",
-    "meetingId": "872 8126 1249",
-    "passcode": "508225",
-    "phone": "719-359-4580"
-  },
   "telluride|2026-10-08|Special Meeting - Planning & Zoning Commission - Oct 08 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8311",
     "sv": 4,
@@ -222,10 +191,6 @@
     "passcode": "451656",
     "phone": "719-359-4580"
   },
-  "ouray|2026-10-07|PM - Note: to be held at the 4-H Event Center! The PC will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (packet materials are attached to the agenda)": {
-    "agendaUrl": "https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1019",
-    "sv": 4
-  },
   "telluride|2026-11-04|Ecology Commission - Nov 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8120",
     "sv": 4,
@@ -316,7 +281,10 @@
   "telluride|2026-11-09|Open Space Commission - Nov 09 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8133",
     "sv": 4,
-    "ph": "410853eec5221d83"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/ePrh_CzmTLKqp0syEbUesw",
+    "meetingId": "894 7506 0147",
+    "passcode": "314276.",
+    "phone": "719) 359-4580"
   },
   "norwood|2026-11-10|Norwood Water Commission Meeting": {
     "sv": 4,
@@ -660,5 +628,9 @@
   "county|2026-11-16|Open Space Commission Meeting 11/23": {
     "sv": 4,
     "ph": "31ce8a9d6a4fcb25"
+  },
+  "ouraycity|2026-11-10|Ouray Planning Commission Regular Meeting": {
+    "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=776213",
+    "sv": 4
   }
 }

@@ -13,10 +13,11 @@
     "date": "November 9, 2026",
     "title": "Open Space Commission",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8133",
-    "hasAgenda": false,
+    "hasAgenda": true,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "4:00 PM",
-    "civicwebId": 8133
+    "civicwebId": 8133,
+    "packetUrl": "https://telluride-co.civicweb.net/document/447339/"
   },
   {
     "date": "November 17, 2026",
