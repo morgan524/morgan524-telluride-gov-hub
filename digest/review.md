@@ -1,28 +1,26 @@
 # Digest review: 2026-11-09
 
-Reviewed 2026-11-08 16:56 (UTC). Fixed 2; 5 left to check; 57 links checked.
+Reviewed 2026-11-08 17:07 (UTC). Fixed 2; 2 left to check; 57 links checked.
 
 ## The Week Ahead Outlook
 *The Week Ahead Outlook - November 9 - November 15, 2026*
 
-- **HIGH** · editorial · Intro paragraph, Tuesday description · "the Ouray County Board of County Commissioners Work Session opens the afternoon"
-  The intro says the Work Session opens the afternoon and the regular BOCC meeting (with public hearings) follows, but the body shows the opposite order: regular BOCC meeting is at 9:00 AM and the Work Session is at 3:00 PM. *Fix:* Reverse the order in the intro so the regular BOCC meeting (9:00 AM, with public hearings) is described first, and the Work Session (3:00 PM) second.
-- **HIGH** · editorial · Intro paragraph, Thursday description · "after lunch, the commission takes up a county-initiated rezoning of a portion of Placerville Park near the fire station"
-  The Placerville Park rezoning item is mentioned in the intro but does not appear anywhere in the body's listing for the San Miguel County Planning Commission meeting on Nov 12. *Fix:* Either add the Placerville Park rezoning item to the Nov 12 Planning Commission body listing, or remove it from the intro if it is not on the agenda.
-- **HIGH** · editorial · THU, NOV 12 · 4:00 PM — SMART Board of Directors · "ℹ Why This Matters
+- **HIGH** · editorial · Intro paragraph (Thursday, San Miguel County Planning Commission) · "a county-initiated rezoning of a portion of Placerville Park near the fire station"
+  The intro describes a second Planning Commission agenda item — a rezoning of Placerville Park — that does not appear anywhere in the body listing for that meeting, so readers cannot find it. *Fix:* Either add the Placerville Park rezoning item to the Planning Commission body listing, or remove the reference from the intro.
+- **MEDIUM** · editorial · THU, NOV 12 · SMART Board of Directors listing · "The agenda hasn't been posted yet — details will follow closer to the meeting.
+ℹ Why This Matters
 The gondola (built 1996) is important regional infrastructure."
-  A 'Why This Matters' gondola-funding blurb is embedded inside the SMART Board listing; this appears to be leftover template/placeholder content unrelated to any agenda item described for this meeting. *Fix:* Remove the gondola 'Why This Matters' block from the SMART Board entry, or replace it with content actually relevant to the SMART Board meeting.
-- **FIXED** · **MEDIUM** · editorial · What to Attend — TUE, NOV 10, Dee Williams event · "Dee William's 2026 Volunteer of the Year Celebration"
-  The apostrophe is placed incorrectly inside the name, making it read as if the person's surname is 'William' rather than 'Williams'. *Fix:* Change to "Dee Williams' 2026 Volunteer of the Year Celebration" (or "Dee Williams's").
+  The 'Why This Matters' gondola blurb is inserted inside the SMART Board listing, between the 'no agenda' text and the '📅 Add to calendar' link, making it appear the calendar link belongs to the gondola item rather than the SMART Board meeting. *Fix:* Move the 'Why This Matters' block outside the SMART Board listing, either above or below it, so the calendar link unambiguously belongs to the SMART meeting.
+- **FIXED** · **HIGH** · editorial · Intro paragraph (Tuesday, Ouray County BOCC description) · "The afternoon brings two public hearings"
+  The BOCC meeting is at 9:00 AM, but the body of the listing says 'The afternoon brings two public hearings,' which contradicts the posted start time. *Fix:* Change 'The afternoon brings' to 'The meeting includes' or 'On the agenda are'.
+- **FIXED** · **MEDIUM** · editorial · What to Attend · TUE, NOV 10 · Dee William's 2026 Volunteer of the Year Celebration · "Dee William's 2026 Volunteer of the Year Celebration"
+  The event title uses 'William's' (as if the name is 'William') while the body correctly identifies the person as 'Dee Williams'; the possessive should be 'Williams''. *Fix:* Correct the title to "Dee Williams' 2026 Volunteer of the Year Celebration".
 
 ## Past Meetings
 *Past Meetings - October 30 - November 5, 2026*
 
-- **HIGH** · editorial · Other Meetings · Town of Ridgway · Ridgway Town Council — Oct 31, 2026 · "SAT, OCT 31 … Oct 31, 2026"
-  This meeting took place October 31, which is outside the email's coverage window of November 2–6, 2026; it should not appear in this edition. *Fix:* Remove this listing or move it to the correct weekly edition covering October 31.
-- **MEDIUM** · date · SAT, OCT 31
-  SAT, OCT 31 (2026-10-31) falls outside last week (2026-11-02 to 2026-11-06).
-- **FIXED** · **HIGH** · editorial · Intro paragraph · "October 30 - November 5, 2026"
-  The stated date range does not match the email's coverage period of November 2–6, 2026, and the Oct 31 Ridgway meeting falls outside it anyway. *Fix:* Change the date range to November 2 – November 6, 2026 and verify whether the Oct 31 meeting belongs in this edition.
+Already sent on 2026-11-07 — nothing left to review.
+
+
 
 Edit or approve at https://livabletelluride.org/digest-review.html

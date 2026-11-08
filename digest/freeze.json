@@ -1,5 +1,5 @@
 {
-  "frozenAt": "2026-11-08T16:57:29Z",
+  "frozenAt": "2026-11-08T17:08:42Z",
   "until": "2026-11-10T15:00:00Z",
   "weekStart": "2026-11-09",
   "reason": "Sunday review (digest-sunday-review.yml): the bot will not re-render the digests until this time. Review Desk edits still save."
