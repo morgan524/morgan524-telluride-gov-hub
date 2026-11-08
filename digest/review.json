@@ -1,67 +1,81 @@
 {
-  "reviewedAt": "2026-11-01 17:00",
-  "weekStart": "2026-11-02",
+  "reviewedAt": "2026-11-08 16:56",
+  "weekStart": "2026-11-09",
   "frozenUntil": "Tuesday morning (9 AM MDT / 8 AM MST)",
   "digests": [
     {
       "key": "weekly",
       "name": "The Week Ahead Outlook",
-      "subject": "The Week Ahead Outlook - November 2 - November 8, 2026",
+      "subject": "The Week Ahead Outlook - November 9 - November 15, 2026",
       "issues": [
         {
           "check": "editorial",
           "severity": "high",
-          "where": "MON, NOV 2 · 9:00 AM and MON, NOV 2 · 10:30 AM",
-          "quote": "Town of Telluride · Town of Telluride /Special Meeting - Planning & Zoning Commission Chair",
-          "problem": "The same P&Z Chair meeting is listed twice with identical descriptions but different times (9:00 AM and 10:30 AM). One of the two listings is a duplicate and should be removed.",
-          "suggestion": "Remove one of the two listings, keeping whichever time is correct.",
-          "note": "Real error. The 9:00 AM agenda only continues the item to 10:30 AM. Fixed for future renders in content-refresh.js (keep the later same-day slot, clean the '/Special' title). This frozen draft still shows both cards. John's Oct 31 draft (014dbbb3) has the single 10:30 card; see review-followup.md."
+          "where": "Intro paragraph, Tuesday description",
+          "quote": "the Ouray County Board of County Commissioners Work Session opens the afternoon",
+          "problem": "The intro says the Work Session opens the afternoon and the regular BOCC meeting (with public hearings) follows, but the body shows the opposite order: regular BOCC meeting is at 9:00 AM and the Work Session is at 3:00 PM.",
+          "suggestion": "Reverse the order in the intro so the regular BOCC meeting (9:00 AM, with public hearings) is described first, and the Work Session (3:00 PM) second."
         },
         {
           "check": "editorial",
           "severity": "high",
-          "where": "TUE, NOV 3 · 3:00 PM · Medical Center Regular Board Meeting",
-          "quote": "A short special meeting — just 30 minutes on the books",
-          "problem": "The section tag and intro both call this a 'Regular Board Meeting,' but the body describes it as a special meeting. These are contradictory; it cannot be both.",
-          "suggestion": "Reconcile the title and body — if it is a special meeting, change the tag and intro reference to 'Special Meeting'; if it is a regular meeting, remove 'special' from the body.",
-          "note": "Real error: tellmed.org lists Nov 3 as a Special Meeting (agenda 'THD Special Bd Mtg'). Fixed for future renders in weekly-email.js (Regular -> Special for flagged specials). This draft and the pinned intro in data/week-ahead-lede.json still say 'Regular'; see review-followup.md."
+          "where": "Intro paragraph, Thursday description",
+          "quote": "after lunch, the commission takes up a county-initiated rezoning of a portion of Placerville Park near the fire station",
+          "problem": "The Placerville Park rezoning item is mentioned in the intro but does not appear anywhere in the body's listing for the San Miguel County Planning Commission meeting on Nov 12.",
+          "suggestion": "Either add the Placerville Park rezoning item to the Nov 12 Planning Commission body listing, or remove it from the intro if it is not on the agenda."
         },
         {
           "check": "editorial",
           "severity": "high",
-          "where": "Intro paragraph (Tuesday)",
-          "quote": "interview board candidates",
-          "problem": "The intro says the Board of Education work session is to 'interview board candidates,' but the body specifies they are interviewing student candidates for the Student Representative seat — a materially different thing.",
-          "suggestion": "Change the intro to read 'interview student candidates for the Student Representative seat' or similar.",
-          "fix": {
-            "find": "interview board candidates",
-            "replace": "interview student candidates for the Student Representative seat"
-          },
-          "fixed": true
-        },
-        {
-          "check": "editorial",
-          "severity": "high",
-          "where": "What to Attend · THU, NOV 5 · Facing the Mourning",
-          "quote": "a free, four-week grief support series taking place every Thursday throughout September",
-          "problem": "The event is listed under November 5 but the description says it takes place 'throughout September,' contradicting the November date.",
-          "suggestion": "Update the description to reflect the correct month (November) rather than September.",
-          "fix": {
-            "find": "taking place every Thursday throughout September",
-            "replace": "taking place every Thursday throughout November"
-          },
-          "fixed": true
+          "where": "THU, NOV 12 · 4:00 PM — SMART Board of Directors",
+          "quote": "ℹ Why This Matters\nThe gondola (built 1996) is important regional infrastructure.",
+          "problem": "A 'Why This Matters' gondola-funding blurb is embedded inside the SMART Board listing; this appears to be leftover template/placeholder content unrelated to any agenda item described for this meeting.",
+          "suggestion": "Remove the gondola 'Why This Matters' block from the SMART Board entry, or replace it with content actually relevant to the SMART Board meeting."
         },
         {
           "check": "editorial",
           "severity": "medium",
-          "where": "Intro paragraph (Tuesday)",
-          "quote": "second in size only to Kaiser Permanente",
-          "problem": "CommonSpirit Health is generally ranked second among nonprofit hospital systems by number of hospitals, but Kaiser Permanente is an integrated insurer/provider, not a comparable hospital network. The standard comparison is to HCA Healthcare (for-profit) or, among nonprofits, to Ascension. This claim is misleading.",
-          "suggestion": "Remove or correct the size comparison; for example, describe CommonSpirit as 'one of the largest nonprofit hospital systems in the country' without the Kaiser comparison.",
+          "where": "What to Attend — TUE, NOV 10, Dee Williams event",
+          "quote": "Dee William's 2026 Volunteer of the Year Celebration",
+          "problem": "The apostrophe is placed incorrectly inside the name, making it read as if the person's surname is 'William' rather than 'Williams'.",
+          "suggestion": "Change to \"Dee Williams' 2026 Volunteer of the Year Celebration\" (or \"Dee Williams's\").",
           "fix": {
-            "find": "second in size only to Kaiser Permanente",
-            "replace": "one of the largest nonprofit hospital systems in the country"
+            "find": "Dee William's 2026 Volunteer of the Year Celebration",
+            "replace": "Dee Williams' 2026 Volunteer of the Year Celebration"
+          },
+          "fixed": true
+        }
+      ]
+    },
+    {
+      "key": "past",
+      "name": "Past Meetings",
+      "subject": "Past Meetings - October 30 - November 5, 2026",
+      "issues": [
+        {
+          "check": "editorial",
+          "severity": "high",
+          "where": "Other Meetings · Town of Ridgway · Ridgway Town Council — Oct 31, 2026",
+          "quote": "SAT, OCT 31 … Oct 31, 2026",
+          "problem": "This meeting took place October 31, which is outside the email's coverage window of November 2–6, 2026; it should not appear in this edition.",
+          "suggestion": "Remove this listing or move it to the correct weekly edition covering October 31."
+        },
+        {
+          "severity": "medium",
+          "check": "date",
+          "where": "SAT, OCT 31",
+          "problem": "SAT, OCT 31 (2026-10-31) falls outside last week (2026-11-02 to 2026-11-06)."
+        },
+        {
+          "check": "editorial",
+          "severity": "high",
+          "where": "Intro paragraph",
+          "quote": "October 30 - November 5, 2026",
+          "problem": "The stated date range does not match the email's coverage period of November 2–6, 2026, and the Oct 31 Ridgway meeting falls outside it anyway.",
+          "suggestion": "Change the date range to November 2 – November 6, 2026 and verify whether the Oct 31 meeting belongs in this edition.",
+          "fix": {
+            "find": "October 30 - November 5, 2026",
+            "replace": "November 2 – November 6, 2026"
           },
           "fixed": true
         }
@@ -69,7 +83,7 @@
     }
   ],
   "errors": [],
-  "total": 2,
-  "linksChecked": 55,
-  "fixed": 3
+  "total": 5,
+  "linksChecked": 57,
+  "fixed": 2
 }

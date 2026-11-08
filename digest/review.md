@@ -1,19 +1,28 @@
-# Digest review: 2026-11-02
+# Digest review: 2026-11-09
 
-Reviewed 2026-11-01 17:00 (UTC). Fixed 3; 2 left to check; 55 links checked.
+Reviewed 2026-11-08 16:56 (UTC). Fixed 2; 5 left to check; 57 links checked.
 
 ## The Week Ahead Outlook
-*The Week Ahead Outlook - November 2 - November 8, 2026*
+*The Week Ahead Outlook - November 9 - November 15, 2026*
 
-- **HIGH** · editorial · MON, NOV 2 · 9:00 AM and MON, NOV 2 · 10:30 AM · "Town of Telluride · Town of Telluride /Special Meeting - Planning & Zoning Commission Chair"
-  The same P&Z Chair meeting is listed twice with identical descriptions but different times (9:00 AM and 10:30 AM). One of the two listings is a duplicate and should be removed. *Fix:* Remove one of the two listings, keeping whichever time is correct.
-- **HIGH** · editorial · TUE, NOV 3 · 3:00 PM · Medical Center Regular Board Meeting · "A short special meeting — just 30 minutes on the books"
-  The section tag and intro both call this a 'Regular Board Meeting,' but the body describes it as a special meeting. These are contradictory; it cannot be both. *Fix:* Reconcile the title and body — if it is a special meeting, change the tag and intro reference to 'Special Meeting'; if it is a regular meeting, remove 'special' from the body.
-- **FIXED** · **HIGH** · editorial · Intro paragraph (Tuesday) · "interview board candidates"
-  The intro says the Board of Education work session is to 'interview board candidates,' but the body specifies they are interviewing student candidates for the Student Representative seat — a materially different thing. *Fix:* Change the intro to read 'interview student candidates for the Student Representative seat' or similar.
-- **FIXED** · **HIGH** · editorial · What to Attend · THU, NOV 5 · Facing the Mourning · "a free, four-week grief support series taking place every Thursday throughout September"
-  The event is listed under November 5 but the description says it takes place 'throughout September,' contradicting the November date. *Fix:* Update the description to reflect the correct month (November) rather than September.
-- **FIXED** · **MEDIUM** · editorial · Intro paragraph (Tuesday) · "second in size only to Kaiser Permanente"
-  CommonSpirit Health is generally ranked second among nonprofit hospital systems by number of hospitals, but Kaiser Permanente is an integrated insurer/provider, not a comparable hospital network. The standard comparison is to HCA Healthcare (for-profit) or, among nonprofits, to Ascension. This claim is misleading. *Fix:* Remove or correct the size comparison; for example, describe CommonSpirit as 'one of the largest nonprofit hospital systems in the country' without the Kaiser comparison.
+- **HIGH** · editorial · Intro paragraph, Tuesday description · "the Ouray County Board of County Commissioners Work Session opens the afternoon"
+  The intro says the Work Session opens the afternoon and the regular BOCC meeting (with public hearings) follows, but the body shows the opposite order: regular BOCC meeting is at 9:00 AM and the Work Session is at 3:00 PM. *Fix:* Reverse the order in the intro so the regular BOCC meeting (9:00 AM, with public hearings) is described first, and the Work Session (3:00 PM) second.
+- **HIGH** · editorial · Intro paragraph, Thursday description · "after lunch, the commission takes up a county-initiated rezoning of a portion of Placerville Park near the fire station"
+  The Placerville Park rezoning item is mentioned in the intro but does not appear anywhere in the body's listing for the San Miguel County Planning Commission meeting on Nov 12. *Fix:* Either add the Placerville Park rezoning item to the Nov 12 Planning Commission body listing, or remove it from the intro if it is not on the agenda.
+- **HIGH** · editorial · THU, NOV 12 · 4:00 PM — SMART Board of Directors · "ℹ Why This Matters
+The gondola (built 1996) is important regional infrastructure."
+  A 'Why This Matters' gondola-funding blurb is embedded inside the SMART Board listing; this appears to be leftover template/placeholder content unrelated to any agenda item described for this meeting. *Fix:* Remove the gondola 'Why This Matters' block from the SMART Board entry, or replace it with content actually relevant to the SMART Board meeting.
+- **FIXED** · **MEDIUM** · editorial · What to Attend — TUE, NOV 10, Dee Williams event · "Dee William's 2026 Volunteer of the Year Celebration"
+  The apostrophe is placed incorrectly inside the name, making it read as if the person's surname is 'William' rather than 'Williams'. *Fix:* Change to "Dee Williams' 2026 Volunteer of the Year Celebration" (or "Dee Williams's").
+
+## Past Meetings
+*Past Meetings - October 30 - November 5, 2026*
+
+- **HIGH** · editorial · Other Meetings · Town of Ridgway · Ridgway Town Council — Oct 31, 2026 · "SAT, OCT 31 … Oct 31, 2026"
+  This meeting took place October 31, which is outside the email's coverage window of November 2–6, 2026; it should not appear in this edition. *Fix:* Remove this listing or move it to the correct weekly edition covering October 31.
+- **MEDIUM** · date · SAT, OCT 31
+  SAT, OCT 31 (2026-10-31) falls outside last week (2026-11-02 to 2026-11-06).
+- **FIXED** · **HIGH** · editorial · Intro paragraph · "October 30 - November 5, 2026"
+  The stated date range does not match the email's coverage period of November 2–6, 2026, and the Oct 31 Ridgway meeting falls outside it anyway. *Fix:* Change the date range to November 2 – November 6, 2026 and verify whether the Oct 31 meeting belongs in this edition.
 
 Edit or approve at https://livabletelluride.org/digest-review.html
