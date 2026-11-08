@@ -66,3 +66,38 @@ test('non-ASCII text survives a fix as numeric entities', () => {
 test('text extraction joins a word bolded in two pieces', () => {
   assert.ok(textOf('<div>Restoration <strong>Pl</strong>an site walk</div>').includes('Restoration Plan site walk'));
 });
+
+// 2026-11-08: the review edited an approved, already-sent Past Meetings email,
+// breaking its approval hash. Approved digests are reported on, never edited;
+// sent ones are skipped.
+const { approvalState } = require('../digest-review.js');
+const fs = require('fs');
+const os = require('os');
+const path = require('path');
+function fakeRepo(files) {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'review-'));
+  fs.mkdirSync(path.join(root, 'digest')); fs.mkdirSync(path.join(root, 'data'));
+  for (const [f, v] of Object.entries(files)) fs.writeFileSync(path.join(root, f), JSON.stringify(v));
+  return root;
+}
+const PAST = { subject: 'Past Meetings - October 30 - November 5, 2026', weekStart: '2026-11-09' };
+
+test('a digest with a matching lock is locked; a sent subject is sent', () => {
+  const root = fakeRepo({
+    'digest/past.lock.json': { weekStart: '2026-11-09', subject: PAST.subject, sha256: 'abc' },
+    'data/sent-broadcasts.json': [{ subject: PAST.subject, sentAt: '2026-11-07T15:12:15.946Z' }],
+  });
+  assert.deepStrictEqual(approvalState('past', PAST, root), { locked: true, sent: true, sentAt: '2026-11-07' });
+});
+
+test('a stale lock (other week) and an unsent subject leave the digest open', () => {
+  const root = fakeRepo({
+    'digest/past.lock.json': { weekStart: '2026-11-02', subject: 'older' },
+    'data/sent-broadcasts.json': [{ subject: 'something else' }],
+  });
+  assert.deepStrictEqual(approvalState('past', PAST, root), { locked: false, sent: false, sentAt: '' });
+});
+
+test('no lock file and no sent archive is simply open', () => {
+  assert.deepStrictEqual(approvalState('weekly', { subject: 'x', weekStart: '2026-11-09' }, fakeRepo({})), { locked: false, sent: false, sentAt: '' });
+});

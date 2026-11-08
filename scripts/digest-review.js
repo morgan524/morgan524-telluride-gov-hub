@@ -231,6 +231,31 @@ function applyTextFixes(html, issues) {
   return parts.join('');
 }
 
+// ── Approved / sent digests ─────────────────────────────────────────────────
+// 2026-11-08: the review rewrote the header of digest/past.html — a digest
+// Morgan had approved (digest/past.lock.json) and already sent the day before
+// (Emily's Friday-to-Thursday draft, Oct 30 – Nov 5). That broke the lock's
+// sha256 so the approval no longer matched the file, and the "fix" itself was
+// wrong: the reviewer assumed the retired Mon–Fri window. Rules:
+//   • a digest whose subject is already in data/sent-broadcasts.json has gone
+//     out — there is nothing left to review, so it is skipped with a note;
+//   • a digest with a matching approval lock is reviewed (Morgan may still want
+//     to know) but NEVER edited — an approved file must stay byte-for-byte what
+//     was approved, or the send's integrity gate refuses it.
+function approvalState(key, d, root) {
+  const st = { locked: false, sent: false, sentAt: '' };
+  try {
+    const lock = JSON.parse(fs.readFileSync(path.join(root, 'digest', key + '.lock.json'), 'utf8'));
+    st.locked = !lock.weekStart || !d.weekStart || lock.weekStart === d.weekStart;
+  } catch (_) {}
+  try {
+    const sent = JSON.parse(fs.readFileSync(path.join(root, 'data', 'sent-broadcasts.json'), 'utf8'));
+    const hit = (Array.isArray(sent) ? sent : []).find((s) => s && s.subject === d.subject);
+    if (hit) { st.sent = true; st.sentAt = String(hit.sentAt || '').slice(0, 10); }
+  } catch (_) {}
+  return st;
+}
+
 // ── Report ──────────────────────────────────────────────────────────────────
 const SEV = { high: 0, medium: 1, low: 2 };
 const NO_KEY = 'ANTHROPIC_API_KEY not set — editorial read skipped; mechanical checks only';
@@ -238,7 +263,8 @@ function toMarkdown(rep) {
   const L = [`# Digest review: ${rep.weekStart}`, '', `Reviewed ${rep.reviewedAt} (UTC). Fixed ${rep.fixed || 0}; ${rep.total} left to check; ${rep.linksChecked} links checked.`, ''];
   for (const dg of rep.digests) {
     L.push(`## ${dg.name}`, `*${dg.subject}*`, '');
-    if (!dg.issues.length) { L.push('No issues found.', ''); continue; }
+    if (dg.note) L.push(dg.note, '');
+    if (!dg.issues.length) { L.push(dg.note ? '' : 'No issues found.', ''); continue; }
     for (const x of dg.issues) {
       L.push(`- ${x.fixed ? '**FIXED** · ' : ''}**${x.severity.toUpperCase()}** · ${x.check} · ${x.where || ''}${x.quote ? ` · "${x.quote}"` : ''}`);
       L.push(`  ${x.problem}${x.suggestion ? ` *Fix:* ${x.suggestion}` : ''}${x.url ? ` (${x.url})` : ''}`);
@@ -253,8 +279,9 @@ function toHtml(rep) {
   const esc = (s) => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   const color = { high: '#a8401f', medium: '#b58a2c', low: '#5a6b64' };
   const sec = rep.digests.map((dg) => `<h2 style="font-family:Georgia,serif;color:#21443c;margin:22px 0 4px;">${esc(dg.name)}</h2><div style="color:#5a6b64;font-size:13px;margin-bottom:8px;">${esc(dg.subject)}</div>` +
+    (dg.note ? `<p style="margin:0 0 8px;color:#5a6b64;">${esc(dg.note)}</p>` : '') +
     (dg.issues.length ? '<ul style="padding-left:18px;margin:0;">' + dg.issues.map((x) => `<li style="margin:0 0 10px;line-height:1.5;">${x.fixed ? '<span style="font-weight:700;color:#2f7a5f;">FIXED</span> &middot; ' : ''}<span style="font-weight:700;color:${color[x.severity] || '#333'};">${esc(x.severity.toUpperCase())}</span> &middot; ${esc(x.check)} &middot; ${esc(x.where)}${x.quote ? ` &middot; &ldquo;${esc(x.quote)}&rdquo;` : ''}<br>${esc(x.problem)}${x.suggestion ? ` <em>Fix:</em> ${esc(x.suggestion)}` : ''}${x.url ? `<br><a href="${esc(x.url)}">${esc(x.url)}</a>` : ''}</li>`).join('') + '</ul>'
-      : '<p style="margin:0;">No issues found.</p>')).join('');
+      : (dg.note ? '' : '<p style="margin:0;">No issues found.</p>'))).join('');
   return `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Digest review ${esc(rep.weekStart)}</title></head><body style="margin:0;background:#f0ece3;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#2c3b35;"><div style="max-width:640px;margin:0 auto;background:#fdfbf6;padding:24px 28px;"><div style="font-family:Georgia,serif;font-size:11px;color:#b58a2c;letter-spacing:.18em;text-transform:uppercase;">Livable Telluride &middot; Sunday digest review</div><h1 style="font-family:Georgia,serif;font-size:22px;margin:6px 0 4px;">${rep.fixed || 0} fixed &middot; ${rep.total} left to check for the ${esc(rep.weekStart)} send</h1><div style="font-size:13px;color:#5a6b64;">Reviewed ${esc(rep.reviewedAt)} UTC &middot; ${rep.linksChecked} links checked &middot; the bot will not re-render these digests until ${esc(rep.frozenUntil || 'Monday afternoon')}.</div>${sec}${rep.errors.length ? '<h2 style="font-family:Georgia,serif;">Review problems</h2><ul>' + rep.errors.map((e) => `<li>${esc(e)}</li>`).join('') + '</ul>' : ''}<p style="margin-top:22px;"><a href="https://livabletelluride.org/digest-review.html" style="color:#a0531f;font-weight:700;">Edit or approve at the Review Desk &rarr;</a></p></div></body></html>`;
 }
 
@@ -275,18 +302,28 @@ async function main() {
   rep.linksChecked = links.checked;
   for (const [key, html] of Object.entries(htmlByKey)) {
     const d = man.digests[key];
+    const st = approvalState(key, d, ROOT);
+    if (st.sent) {
+      console.log(`  i ${key}: already sent${st.sentAt ? ' ' + st.sentAt : ''} — not reviewed`);
+      rep.digests.push({ key, name: d.name, subject: d.subject, issues: [], note: `Already sent${st.sentAt ? ' on ' + st.sentAt : ''} — nothing left to review.` });
+      continue;
+    }
     let issues = [...checkSize(key, html), ...checkDates(key, allVariant(html), d), ...checkRecapAnchors(html, recaps),
       ...links.issues.filter((x) => x.where.split(', ').includes(key)).map((x) => Object.assign({}, x, { where: x.url }))];
     if (apiKey) {
       try { issues = issues.concat(await editorialRead(key, d, textOf(allVariant(html)), apiKey)); }
       catch (e) { rep.errors.push(`${key}: editorial read failed (${e.message}); mechanical checks still ran`); }
     } else if (!rep.errors.includes(NO_KEY)) rep.errors.push(NO_KEY);
-    if (process.env.APPLY_FIXES === '1') {
+    let note = '';
+    if (process.env.APPLY_FIXES === '1' && st.locked) {
+      note = 'Approved on the Review Desk — nothing was changed; apply any fix there and re-approve.';
+      console.log(`  i ${key}: approved (lock) — fixes reported, not applied`);
+    } else if (process.env.APPLY_FIXES === '1') {
       const fixedHtml = applyTextFixes(html, issues);
       if (fixedHtml !== html) fs.writeFileSync(path.join(ROOT, d.file), fixedHtml);
     }
     issues.sort((a, b) => (!!a.fixed - !!b.fixed) || ((SEV[a.severity] ?? 3) - (SEV[b.severity] ?? 3)));
-    rep.digests.push({ key, name: d.name, subject: d.subject, issues });
+    rep.digests.push(Object.assign({ key, name: d.name, subject: d.subject, issues }, note ? { note } : {}));
     rep.total += issues.filter((x) => !x.fixed).length;
     rep.fixed = (rep.fixed || 0) + issues.filter((x) => x.fixed).length;
   }
@@ -300,5 +337,5 @@ async function main() {
   console.log('HIGH=' + high);
 }
 
-module.exports = { checkDates, allVariant, variant, textOf, applyTextFixes };
+module.exports = { checkDates, allVariant, variant, textOf, applyTextFixes, approvalState };
 if (require.main === module) main().catch((e) => { console.error('digest-review FATAL', e.message); process.exit(1); });

@@ -1053,12 +1053,18 @@ if (!LEDE_IS_OVERRIDE) {
     // Major meetings (key bodies with a posted agenda on community-wide
     // issues) get summarized; minor ones get a short clause when their agenda
     // is posted, and are only named when it isn't.
+    // Start time rides along (2026-11-08) so same-day meetings are described in
+    // the order they happen — the Nov 10 intro had Ouray County's 3 PM work
+    // session "open the afternoon" ahead of the 9 AM regular meeting. Only a
+    // published hour is passed ('' → omitted, so a timeless meeting's
+    // fingerprint is unchanged by this field).
     meetings: meetings.map((m) => {
-      if (isMajorMeeting(m)) return { body: ledeBodyName(m.name, m.src), title: m.name, date: m.date, importance: 'major', summary: RI.longRecap(m.ledeText, 720) };
+      const time = m.time || undefined;
+      if (isMajorMeeting(m)) return { body: ledeBodyName(m.name, m.src), title: m.name, date: m.date, time, importance: 'major', summary: RI.longRecap(m.ledeText, 720) };
       const sum = minorSummary(m);
       return sum
-        ? { body: ledeBodyName(m.name, m.src), title: m.name, date: m.date, importance: 'minor', summary: sum }
-        : { body: ledeBodyName(m.name, m.src), title: m.name, date: m.date, importance: 'minor' };
+        ? { body: ledeBodyName(m.name, m.src), title: m.name, date: m.date, time, importance: 'minor', summary: sum }
+        : { body: ledeBodyName(m.name, m.src), title: m.name, date: m.date, time, importance: 'minor' };
     }),
     // Meetings only (Morgan 2026-10-19): events stay in the email body but are
     // never summarized in the intro.

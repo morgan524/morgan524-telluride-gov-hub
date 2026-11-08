@@ -82,7 +82,13 @@ function ledePrompt({ meetings, events }) {
   // Morgan 2026-10-25: minor meetings with a posted agenda now carry a short
   // summary and get one clause; meetings with no agenda carry none.
   const importance = ' Each meeting has an "importance" field. For a "major" meeting, summarize in a sentence or two what is on its agenda that affects the whole community (budgets, taxes and fees, code changes, housing policy, transit, wildfire, town-owned projects), not individual lot or property decisions. For a "minor" meeting, name it with its day; if it has a "summary", add one short clause on its main community-relevant item (e.g. "**Ouray County Board of County Commissioners** takes up the proposed EMS merger with Ridgway Fire on Tuesday"), skipping routine or single-lot items. A meeting with no "summary" has no posted agenda: only name it — never guess what it will cover.';
-  const spec = 'a plain-prose intro that orients a busy local (120-220 words), written DAY BY DAY in date order: one short paragraph per day that has a meeting worth mentioning, each opening with that day (e.g. "Monday, …"). Give the major meetings the most weight within their days and name the minor meetings briefly on theirs. Aim to name most of the meetings. Do NOT mention community events, concerts, films, festivals, or anything "on the lighter side" — public meetings only.' + importance + style + byDay;
+  // 2026-11-08: the Nov 10 intro had the Ouray County BOCC Work Session (3 PM)
+  // "open the afternoon" and the regular meeting (9 AM) follow it — the model
+  // never saw the start times, so it invented an order from the summaries.
+  // Each meeting now carries its published "time" (when the body posts one),
+  // and same-day ordering and time-of-day words must follow it.
+  const timing = ' Each meeting may carry a "time" (its published start time). When two or more meetings fall on the same day, mention them in start-time order, earliest first, and use the "time" fields as given. Use words like "morning", "afternoon", "evening", "opens", "then" or "follows" ONLY when the "time" fields support them; a meeting with no "time" gets no time-of-day at all. Do not put an item\'s own timing (e.g. "the afternoon brings a hearing") on the meeting as a whole.';
+  const spec = 'a plain-prose intro that orients a busy local (120-220 words), written DAY BY DAY in date order: one short paragraph per day that has a meeting worth mentioning, each opening with that day (e.g. "Monday, …"). Give the major meetings the most weight within their days and name the minor meetings briefly on theirs. Aim to name most of the meetings. Do NOT mention community events, concerts, films, festivals, or anything "on the lighter side" — public meetings only.' + importance + timing + style + byDay;
   const parts = [
     RICK_VOICE,
     '',
@@ -120,8 +126,9 @@ function ledeInputFingerprint({ meetings, events, cadence } = {}) {
     // v4 = one paragraph per day, line break between days,
     // v5 = major meetings summarized, minor meetings only named,
     // v6 = meetings only, no events,
-    // v7 = minor meetings with an agenda get a short clause).
-    style: 7,
+    // v7 = minor meetings with an agenda get a short clause,
+    // v8 = start times passed in; same-day order and time-of-day follow them).
+    style: 8,
     // Always 'week' now (Weekend Ahead retired 2026-10-04). Kept in the
     // payload so every existing cache key stays valid.
     cadence: 'week',
