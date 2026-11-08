@@ -54,5 +54,19 @@
     "firstSeen": "2026-11-04",
     "revealDate": "2026-11-04",
     "lastSeen": "2026-11-08"
+  },
+  {
+    "id": "TEL-A-205",
+    "name": "Gunnar",
+    "species": "Dog",
+    "breed": "Shepherd, Australian",
+    "ageGroup": "Adult Dog",
+    "sex": "Male",
+    "photo": "https://new-s3.shelterluv.com/profile-pictures/3f099e82633b934f57616c966ec2b9ba/3f3778311ebd88f5cd226c6d778aefb3.JPG",
+    "profileUrl": "https://www.shelterluv.com/embed/animal/214846020",
+    "summary": "Adult Dog • Shepherd, Australian • Male",
+    "firstSeen": "2026-11-08",
+    "revealDate": "2026-11-08",
+    "lastSeen": "2026-11-08"
   }
 ]
