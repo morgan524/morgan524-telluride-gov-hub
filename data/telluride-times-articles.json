@@ -1,5 +1,17 @@
 [
   {
+    "title": "A festival for the town where the theme is joy",
+    "source": "Telluride Times",
+    "date": "November 8, 2026",
+    "firstSeen": "2026-11-08",
+    "newsTopic": "arts-culture",
+    "copy": "Raíces Sin Fronteras hosts its fourth annual Semana de Bienestar — Wellness Week — in Telluride, Nov. 12–15, timed for the off-season when year-round residents are still here. Free, bilingual, and open to all ages, this year's theme is alegría — joy — with events ranging from dance and wellness workshops to a Mayan bonfire ceremony. Around 500 community members participated last year.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/arts_and_entertainment/article_463e28d1-d4d5-4134-87a3-5553416f7e46.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/36/a36fd091-88de-44d4-a0dd-c3ba96e2d1a9/6aee58578f832.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "After tough winter, businesses contemplate economic resilience",
     "source": "Telluride Times",
     "date": "November 7, 2026",
@@ -172,19 +184,6 @@
     "imgHiRes": true
   },
   {
-    "title": "A winter’s nap",
-    "source": "Telluride Times",
-    "date": "November 5, 2026",
-    "firstSeen": "2026-11-05",
-    "newsTopic": "community",
-    "copy": "Marmots, bats, bears, snakes, and pikas all handle a San Juan winter in their own ways — some dropping into deep torpor, others staying quietly active under the snow. Each strategy goes back millions of years of adapting to cold and high altitude. The mountains go quiet, but nothing really stops.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/opinion/article_86ef0d71-2afb-4f4f-976b-c162309dc51b.html",
-    "img": "",
-    "isLetter": true,
-    "imgHiRes": true
-  },
-  {
     "title": "Purvi Shah of New York wins Fischer Poetry Prize contest",
     "source": "Telluride Times",
     "date": "November 5, 2026",
@@ -218,6 +217,19 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/arts_and_entertainment/article_6e8c6f0f-7011-4371-8ac0-e7209aefa600.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/ba/eba01191-f249-49e6-957f-69eeed21b7ac/6ae625f51bf1f.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "A winter’s nap",
+    "source": "Telluride Times",
+    "date": "November 5, 2026",
+    "firstSeen": "2026-11-05",
+    "newsTopic": "community",
+    "copy": "Marmots, bats, bears, snakes, and pikas all handle a San Juan winter in their own ways — some dropping into deep torpor, others staying quietly active under the snow. Each strategy goes back millions of years of adapting to cold and high altitude. The mountains go quiet, but nothing really stops.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/opinion/article_86ef0d71-2afb-4f4f-976b-c162309dc51b.html",
+    "img": "",
+    "isLetter": true,
     "imgHiRes": true
   },
   {
