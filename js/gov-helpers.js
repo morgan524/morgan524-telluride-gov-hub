@@ -146,15 +146,6 @@ function resolveEventImage(e, opts) {
 // stays current automatically; the static config is the fallback for
 // sources without a PDF agenda.
 const MEETING_AGENDA_META = {
-  "telluride|2026-10-08|Special Meeting - Planning & Zoning Commission - Oct 08 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8311","sv":4,"ph":"4318f9c666b0b315"},
-
-  "county|2026-10-08|Planning Commission Meeting":
-    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/924/files/agenda/2025","zoomUrl":"https://us06web.zoom.us/j/86224076240?pwd=dg8IrMwtLfHLkcZ1Y3JKlGs8IpYz0Q.1","meetingId":"862 2407 6240","passcode":"691404","phone":"970-728-3844"},
-
-  "smart|2026-10-08|SMART Board of Directors":
-    {"sv":4,"ph":"b858cb282617fb09"},
-
   "norwood|2026-10-13|Norwood Water Commission Meeting":
     {"sv":4,"agendaUrl":"https://www.norwoodtown.com/files/4a41c8cfc/10.13.2026+NWC+Agenda.pdf","zoomUrl":"https://us02web.zoom.us/j/88274908233","meetingId":"882 7490 8233","passcode":"997236","phone":"346-248-7799"},
 
@@ -259,9 +250,6 @@ const MEETING_AGENDA_META = {
 
   "telluride|2026-10-21|CANCELED - Historic & Architectural Review Commission Chair - Oct 21 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8025","sv":4},
-
-  "telluride|2026-10-08|San Miguel Authority for Regional Transportation - Oct 08 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8323","zoomUrl":"https://www.google.com/url?q=https://us02web.zoom.us/j/86722451498?pwd%3D7BgRYT2yt0O3KF5fCqes3oftgNSi6U.1&sa=D&source=calendar&ust=1791663141829276&usg=AOvVaw3s6jFtWFQYVpUDFpY9yqLe","sv":4},
 
   "tmvoa|2026-10-20|TMVOA Audit &amp; Compliance Committee":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -375,7 +363,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8107","sv":4,"ph":"377b24ec8cc33675"},
 
   "telluride|2026-11-19|Liquor Licensing Authority - Nov 19 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8147","sv":4,"ph":"dd26fcc2959762fc"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8147","sv":4,"ph":"045bdf9820a590d8"},
 
   "telluride|2026-10-26|Gondola Sub Committee - Oct 26 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8327","zoomUrl":"https://urldefense.com/v3/__https:/gbsm.zoom.us/j/82559576086__;!!ETWISUBM!3x58A-FfNf9JhIvrh2mHeq3wy9OHc7S76v3Obypudr5m-ILQvLZAsE3ZuUUqFUGuSSfFOzlMG_ETBGmg3kQV-w$","sv":4},
@@ -486,7 +474,13 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=776213","sv":4},
 
   "telluride|2026-12-07|Open Space Commission - Dec 07 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8134","sv":4,"ph":"9cf9fe1d604db893"}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8134","sv":4,"ph":"9cf9fe1d604db893"},
+
+  "norwood|2026-12-08|Norwood Water Commission Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "tmvoa|2026-12-08|Mountain Village Merchant Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -1066,19 +1060,10 @@ const SMC_ALERTS = [
 const ENGAGE_MEETINGS = [
 
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-11-07';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-11-08';
 const LEGAL_NOTICES_CACHE_DATE = '2026-11-07';
 
 const MANUAL_SUMMARIES = {
-  "telluride|2026-10-08|Special Meeting - Planning & Zoning Commission - Oct 08 2026":
-    "The October 8, 2026 Special Meeting - Planning & Zoning Commission agenda hasn't been posted yet.",
-
-  "county|2026-10-08|Planning Commission Meeting":
-    "The San Miguel County Planning Commission meets October 8 for a session that spans most of the day. The morning opens with a joint work session with the BOCC on an Affordable Housing Code Update — a signal that the county is still actively trying to write policy fast enough to keep pace with a housing situation that hasn't gotten easier. After lunch, the commission takes up a Land Use Code amendment covering Subdivisions and Condominium Plats, which would change the rules governing how land gets divided and how ownership gets structured across unincorporated county. Both items sit at the code-change tier — the kind of amendments that quietly shape what gets built, where, and for whom, long after the meeting is over.",
-
-  "smart|2026-10-08|SMART Board of Directors":
-    "The October 8, 2026 SMART Board of Directors agenda hasn't been posted yet.",
-
   "norwood|2026-10-13|Norwood Water Commission Meeting":
     "A full agenda for the Norwood Water Commission's October 13 meeting. The biggest items center on the Cossey Complaint — the Commission will hold the hearing itself, consider a request to extend its date, and go into executive session twice for legal advice on that matter and separately on the Jubilee/Valentine Easement. Contract approval with Land Right and a review of SGM's Draft Environmental Assessment and Cultural Resources Report for the Redundant Line Project round out the infrastructure business. Four leak forgiveness requests are on the table for residential customers on Hwy 145, Summit St, Juniper, and Grand Ave. The Commission also takes up the 2027 Draft Budget and the 2025 Audit — both worth watching as water system costs continue to climb.",
 
@@ -1183,9 +1168,6 @@ const MANUAL_SUMMARIES = {
 
   "telluride|2026-10-21|CANCELED - Historic & Architectural Review Commission Chair - Oct 21 2026":
     "The October 21, 2026 HARC Chair meeting has been canceled.",
-
-  "telluride|2026-10-08|San Miguel Authority for Regional Transportation - Oct 08 2026":
-    "SMART's board meets virtually October 8th with two consequential action items. Resolution 2026-22 would amend the Gondola Project Development IGA for FY27 — another formal step in the long-running effort to get the gondola funded and built. The board will also begin FY27 budget development discussions, which will shape how the authority spends the $5.2M/year in tax revenue voters approved under Measure 3A. A verbal gondola project update and the September operations report round out the substantive content. The meeting closes with an executive session covering two matters: personnel issues related to the Executive Director position, and legal counsel consultation on Masson vs. San Miguel County BOCC — a case worth watching for anyone tracking the gondola's legal and political landscape.",
 
   "tmvoa|2026-10-20|TMVOA Audit &amp; Compliance Committee":
     "The October 20, 2026 TMVOA Audit & Compliance Committee agenda hasn't been posted yet.",
@@ -1410,7 +1392,13 @@ const MANUAL_SUMMARIES = {
     "The Ouray Planning Commission takes up two substantive matters at its November 10 meeting. First, an action item on restricting natural medicine — a proposed ordinance that would regulate or limit psychedelic substances in city limits, a question municipalities across Colorado have been navigating since voters passed Proposition 122 in 2022. Second, a discussion on proposed amendments to Chapter 7 of the Land Use Code that would define short-term rentals and bed-and-breakfasts — the kind of definitional work that tends to quietly shape how STR enforcement and permitting plays out for years afterward. The commission also considers a remote-participation request from Commissioner Wood and approves minutes from three prior meetings dating back to February. Planning Commission vacancies round out the agenda.",
 
   "telluride|2026-12-07|Open Space Commission - Dec 07 2026":
-    "The December 7, 2026 Open Space Commission agenda hasn't been posted yet."
+    "The December 7, 2026 Open Space Commission agenda hasn't been posted yet.",
+
+  "norwood|2026-12-08|Norwood Water Commission Meeting":
+    "The December 8, 2026 Norwood Water Commission Meeting agenda hasn't been posted yet.",
+
+  "tmvoa|2026-12-08|Mountain Village Merchant Meeting":
+    "The December 8 Mountain Village Merchant Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2721,6 +2709,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "After tough winter, businesses contemplate economic resilience",
+    source: "Telluride Times",
+    date: "November 7, 2026",
+    firstSeen: "2026-11-08",
+    newsTopic: "public-safety",
+    copy: "A rough winter — low snow, resort closure, summer wildfires — exposed how quickly slow weeks can push local businesses to the edge. The Telluride Foundation is now convening a workgroup of government, tourism, and business reps to build long-term economic resilience. A possible Chamber of Commerce is on the table, with a steering committee meeting in November to work out the details.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_52cda217-aea5-43bb-ae2c-1e7b76af28fc.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/01/c01e9f6e-a315-47d4-a480-473e7b9cefcd/6aee32558d890.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Silver Skiers program strikes gold in Telluride",
     source: "Telluride Times",
     date: "November 7, 2026",
@@ -3417,42 +3417,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "More flooding possible in Four Corners region after days of heavy rain",
-    source: "Telluride Times",
-    date: "October 25, 2026",
-    firstSeen: "2026-10-25",
-    newsTopic: "public-safety",
-    copy: "Heavy rain since Wednesday has caused significant flooding across the Four Corners region, with rivers surging into homes and forcing evacuations — especially around Farmington, New Mexico. Saturated soils have a flood watch still in effect, with more storms expected. Officials warn returning residents of contaminated water, gas leaks, and other hazards.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_6f889cc1-b235-52e0-8498-c5893045d6b6.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/a2/8a28e3d3-d61b-5320-84bc-815b3b88d72d/6ade3dec1f658.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride Rewind",
-    source: "Telluride Times",
-    date: "October 25, 2026",
-    firstSeen: "2026-10-25",
-    newsTopic: "government",
-    copy: "Telluride's old town ordinances from 1966 included bans on opium dens, women loitering near saloons, and wearing clothing of the opposite sex. A 1981 council gave initial approval to convert the Nugget Theater into a 485-seat convention center. And in 1991, KOTO's Halloween bash drew 500-plus people and raised over $4,000.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_d3d0f2f2-d632-449d-9bef-a09e10630b4e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/dc/2dc7fd10-492e-45f1-83dd-fdaf935d60e6/6adcde8260d93.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Initial review of Shandoka parking structure approved by P&Z",
-    source: "Telluride Times",
-    date: "October 25, 2026",
-    firstSeen: "2026-10-25",
-    newsTopic: "housing",
-    copy: "P&Z approved the preliminary PUD review for the Shandoka Lot Redevelopment, a proposed mixed-use project on the current surface parking lot that would include 50–60 housing units (80% deed-restricted affordable), a 900-vehicle parking structure, childcare, a food bank, and commercial space. The structure would replace 330 existing surface spots and absorb 288 spaces relocated from Carhenge. Some residents raised concerns about the added walking distance and traffic; HARC review continues Nov. 18.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_1f5aae64-fb06-4ef8-b5db-fc178525b765.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/3b/93b2b35c-4248-440a-a7d8-8ef97bbc5243/6adbb1a330c48.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "‘We’re in a vast archaeological treasure trove’",
     source: "Telluride Times",
     date: "November 1, 2026",
@@ -3480,15 +3444,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "housing",
     copy: "(October 22, 2026) - The Town of Telluride and the San Miguel Regional Housing Authority (SMRHA) opened applications today for a deed-restricted homeownership lottery for Spruce House H at 226 East Pacific Avenue, Unit H, Telluride, Colorado, 81435.",
     href: "https://www.telluride.gov/CivicAlerts.aspx?aid=407",
-    img: ""
-  },
-  {
-    title: "Applications Open for 2026/2027 Temporary Winter Community Housing Program",
-    source: "Town of Telluride",
-    date: "October 9, 2026",
-    newsTopic: "housing",
-    copy: "(October 8, 2026) – The Town of Telluride is accepting applications for its Temporary Winter Community Housing program for the 2026/2027 winter season. The program provides seasonal housing in Town Park for eligible workers employed in the Telluride area.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=406",
     img: ""
   },
   {
@@ -3603,7 +3558,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Public Hearing for Liquor License on November 19, 2026 at 5:30pm - Chipeta Lodge Resort &amp; Spa, 304 S Lena Street - Notice dated October 13, 2026",
     source: "Town of Ridgway",
-    date: "November 7, 2026",
+    date: "November 8, 2026",
     firstSeen: "2026-10-14",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3614,7 +3569,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "November 7, 2026",
+    date: "November 8, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3625,7 +3580,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "November 7, 2026",
+    date: "November 8, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3636,7 +3591,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway, City of Ouray, and Ouray County Establish New Three-Year Affordable Housing Goals",
     source: "Town of Ridgway",
-    date: "November 7, 2026",
+    date: "November 8, 2026",
     firstSeen: "2026-10-21",
     newsTopic: "housing",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -4774,6 +4729,28 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Redvale Community Center",
     imageUrl: ""
+  },
+  {
+    title: "Up-Off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-11-27/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-11-27T10:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "Live Music in the Après Lounge at Mountain Lodge Telluride",
+    link: "https://koto.org/event/live-music-in-the-apres-lounge-at-mountain-lodge-telluride/2026-11-27/",
+    description: "Local live music in the Après Lounge at Mountain Lodge Telluride in Mountain Village, 4 to 7 PM on most Thursdays, Fridays and Saturdays all winter.",
+    pubDate: "2026-11-27T16:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Mountain Lodge Telluride, Mountain Village",
+    imageUrl: ""
   }
 ];
 
@@ -4809,7 +4786,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Puppy • Collie, Border / Cattle Dog, Australian (Red Heeler) • Male",
     firstSeen: "2026-10-31",
     revealDate: "2026-10-31",
-    lastSeen: "2026-11-07"
+    lastSeen: "2026-11-08"
   },
   {
     id: "TEL-A-208",
@@ -4823,7 +4800,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Shepherd, Australian • Male",
     firstSeen: "2026-10-31",
     revealDate: "2026-11-02",
-    lastSeen: "2026-11-07"
+    lastSeen: "2026-11-08"
   },
   {
     id: "TEL-A-209",
@@ -4837,7 +4814,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Collie, Border / Cattle Dog, Australian (Red Heeler) • Female",
     firstSeen: "2026-10-31",
     revealDate: "2026-11-04",
-    lastSeen: "2026-11-07"
+    lastSeen: "2026-11-08"
   },
   {
     id: "TEL-A-211",
@@ -4851,7 +4828,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Puppy • Husky • Female",
     firstSeen: "2026-11-04",
     revealDate: "2026-11-04",
-    lastSeen: "2026-11-07"
+    lastSeen: "2026-11-08"
   }
 ];
 
@@ -6960,17 +6937,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/45301/i-5fmsgs6-5k-2100x1400-d6f22d2a-6109-408c-9f35-051a33841613.800x533.webp"
-  },
-  {
-    title: "Adult Spelling Bee",
-    link: "https://www.telluride.com/event/adult-spelling-bee/",
-    description: "Words. Drinks. Bragging Rights (and $100!). For teams of 2. Extra prizes for clever team names and costumes! Show your …",
-    pubDate: "2026-11-06",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63826/screenshot_2026-10-14_at_11_32_08_am.800x533.webp"
   },
   {
     title: "KOTO Ski Swap",

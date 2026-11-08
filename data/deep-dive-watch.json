@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T21:40:35.126Z",
+ "generated": "2026-11-08T05:23:07.536Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -111,6 +111,18 @@
      "sourceLabel": "Town of Norwood",
      "title": "Norwood Water Commission Meeting",
      "date": "2026-11-10",
+     "time": "",
+     "location": "1670 Naturita St, Norwood CO 81423",
+     "agendaUrl": "",
+     "link": "https://www.norwoodtown.com/nwc-meetings",
+     "zoomLink": "",
+     "livestream": ""
+    },
+    {
+     "source": "norwood",
+     "sourceLabel": "Town of Norwood",
+     "title": "Norwood Water Commission Meeting",
+     "date": "2026-12-08",
      "time": "",
      "location": "1670 Naturita St, Norwood CO 81423",
      "agendaUrl": "",

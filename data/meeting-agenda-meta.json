@@ -1,21 +1,4 @@
 {
-  "telluride|2026-10-08|Special Meeting - Planning & Zoning Commission - Oct 08 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8311",
-    "sv": 4,
-    "ph": "4318f9c666b0b315"
-  },
-  "county|2026-10-08|Planning Commission Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/924/files/agenda/2025",
-    "zoomUrl": "https://us06web.zoom.us/j/86224076240?pwd=dg8IrMwtLfHLkcZ1Y3JKlGs8IpYz0Q.1",
-    "meetingId": "862 2407 6240",
-    "passcode": "691404",
-    "phone": "970-728-3844"
-  },
-  "smart|2026-10-08|SMART Board of Directors": {
-    "sv": 4,
-    "ph": "b858cb282617fb09"
-  },
   "norwood|2026-10-13|Norwood Water Commission Meeting": {
     "sv": 4,
     "agendaUrl": "https://www.norwoodtown.com/files/4a41c8cfc/10.13.2026+NWC+Agenda.pdf",
@@ -229,11 +212,6 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8025",
     "sv": 4
   },
-  "telluride|2026-10-08|San Miguel Authority for Regional Transportation - Oct 08 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8323",
-    "zoomUrl": "https://www.google.com/url?q=https://us02web.zoom.us/j/86722451498?pwd%3D7BgRYT2yt0O3KF5fCqes3oftgNSi6U.1&sa=D&source=calendar&ust=1791663141829276&usg=AOvVaw3s6jFtWFQYVpUDFpY9yqLe",
-    "sv": 4
-  },
   "tmvoa|2026-10-20|TMVOA Audit &amp; Compliance Committee": {
     "sv": 4,
     "ph": "b858cb282617fb09"
@@ -435,7 +413,7 @@
   "telluride|2026-11-19|Liquor Licensing Authority - Nov 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8147",
     "sv": 4,
-    "ph": "dd26fcc2959762fc"
+    "ph": "045bdf9820a590d8"
   },
   "telluride|2026-10-26|Gondola Sub Committee - Oct 26 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8327",
@@ -637,5 +615,13 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8134",
     "sv": 4,
     "ph": "9cf9fe1d604db893"
+  },
+  "norwood|2026-12-08|Norwood Water Commission Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "tmvoa|2026-12-08|Mountain Village Merchant Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   }
 }
