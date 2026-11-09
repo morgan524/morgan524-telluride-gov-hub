@@ -107,6 +107,20 @@
     "type": "Music"
   },
   {
+    "title": "Gaper Contest 2026 - Voyager FUNdraiser",
+    "href": "https://events.ourayridgwayevents.com/event/gaper-contest-2026",
+    "date": "2026-11-09",
+    "time": "8:00 AM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54366527548837/huge/4c3995fa47f3b861d61e318e7dafd3cbfa9b02e9.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "A community photo contest and fundraiser hosted by Voyager, open to locals of all ages from the northern San Juan region, where participants submit real (no AI or photo-edited) photos for a chance to be named Gaper of the Year. Community…",
+    "type": "Community",
+    "endDate": "2026-11-29"
+  },
+  {
     "title": "Bike & Brewery Tour",
     "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     "date": "2026-11-09",
@@ -116,7 +130,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    "desc": "A guided bicycle ride through Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where participants receive a complimentary beer. The tour departs from the Mountain Lodge and offers a scenic…",
     "type": "Outdoors & Sports"
   },
   {
@@ -131,7 +145,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
     "type": "Community",
-    "endDate": "2027-01-07"
+    "endDate": "2027-01-08"
   },
   {
     "title": "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
@@ -315,7 +329,20 @@
     "img": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "",
+    "desc": "A recurring monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The event offers a relaxed, community-oriented space for veterans to connect with one another.",
+    "type": "Community"
+  },
+  {
+    "title": "Norwood Water Commission Meeting",
+    "href": "https://www.norwoodtown.com/2026-11-10-nwc-meeting",
+    "date": "2026-11-10",
+    "time": "",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Government Meeting",
+    "source": "Town of Norwood",
+    "desc": "The Norwood Water Commission will hold a regular meeting to conduct official business related to the town's water services and infrastructure. Members of the public are welcome to attend this local government meeting in Norwood, Colorado.",
     "type": "Community"
   },
   {
@@ -328,7 +355,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/27556/merchant_event-1.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Join us for the monthly Mountain Village Merchant Meeting to be held on the second Tuesday of each month from 10 to 11 a.m. The meeting will be hybrid with",
+    "desc": "A monthly gathering for Mountain Village merchants, held on the second Tuesday of each month from 10 to 11 a.m. The meeting is offered in a hybrid format, allowing participants to attend either in person or remotely.",
     "type": "Community"
   },
   {
@@ -341,7 +368,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
+    "desc": "A community workshop hosted by Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library, exploring the emotional intersection of grief and gratitude in response to environmental change.…",
     "type": "Talks & Classes"
   },
   {
@@ -381,7 +408,7 @@
     "img": "https://localist-images.azureedge.net/photos/53887699628224/huge/262efc04b203189edcde410b9973aac1ca778195.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Join water aerobics weekly Wednesdays (Sometimes Tuesdays and Thursdays too!) from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy the positive atmosphere! Water aerobics is free for pool members, and…",
+    "desc": "Join a self-led water aerobics group every Wednesday (and occasionally Tuesdays and Thursdays!) from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy a fun, positive atmosphere! Please note: Water…",
     "type": "Community",
     "endDate": "2027-01-06"
   },
@@ -450,7 +477,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "A weekly group float session held every Saturday at Orvis Hot Springs, combining warm-water aquatic massage with live sound therapy including vocals and singing bowls. The experience is offered on a sliding scale and advance reservations…",
     "type": "Wellness",
-    "endDate": "2027-01-07"
+    "endDate": "2027-01-08"
   },
   {
     "title": "After School Art for Ages 5-8",
@@ -489,6 +516,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "A middle school boys basketball matchup between Ouray and Telluride, with C Team, B Team, and A Team games scheduled sequentially throughout the afternoon and evening. The games take place at Ouray School.",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Ridgway MS Boys Basketball vs. Dove Creek",
+    "href": "https://events.ourayridgwayevents.com/event/ridgway-ms-boys-basketball-vs-dove-creek",
+    "date": "2026-11-12",
+    "time": "4:00 PM",
+    "location": "Ridgway Secondary School",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54470908260396/huge/c07b972a9b1ef11410a50f6dbec96405399336eb.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ridgway Middle School Boys Basketball hosts a home game against Dove Creek at Ridgway Secondary School. It's a chance for the community to come out and support the local middle school team.",
     "type": "Outdoors & Sports"
   },
   {
@@ -567,7 +607,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-7.jpg",
     "category": "Community Event",
     "source": "KOTO Community Calendar",
-    "desc": "Las actividades son gratuitas, bilingües y libres de alcohol, y habrá actividades para niños, adultos y familias. ¡Los esperamos! All activities are free, bilingual, and alcohol-free, with activities for children, adults, and families. We…",
+    "desc": "Semana De Bienestar (Wellness Week) is a free, bilingual, alcohol-free community event at Wilkinson Public Library offering programming for children, adults, and families. Activities are available in both English and Spanish, making this…",
     "type": "Family & Kids"
   },
   {
@@ -580,7 +620,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A community meal program for seniors hosted by the Town of Norwood. It offers older residents an opportunity to gather, share a meal, and connect with neighbors in a welcoming setting.",
     "type": "Community"
   },
   {
@@ -711,8 +751,8 @@
     "img": "https://1v09t9hszk.ucarecd.net/e377708b-2c0a-4491-812f-9a6dbc3d6993/-/crop/1545x773/0,1227/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Join us for local legend Corey Hooker & the Motel Prophets for whats shaping up ...",
-    "type": "Community"
+    "desc": "Two live acts — The Motel Prophets and Red Mountain Revival — take the stage at The Alibi for a night of live music. The show begins at 9:00 PM.",
+    "type": "Music"
   },
   {
     "title": "Ridgway Independent Film Festival",
@@ -724,7 +764,7 @@
     "img": "https://koto.org/wp-content/uploads/2026/10/RIFF-FLIER-CONCEPTS-Facebook-Cover-3.png",
     "category": "Community Event",
     "source": "KOTO Community Calendar",
-    "desc": "Ridgway Independent Film Festival — November 13–15, 2026 Join us at the historic Sherbino Theater in downtown Ridgway for a weekend of independent films, fresh perspectives, and community connection. RIFF features short films, select…",
+    "desc": "The Ridgway Independent Film Festival returns to the historic Sherbino Theater in downtown Ridgway for a weekend running November 13–15, 2026. The festival features independent short films, select longer works, and filmmaker Q&As, bringing…",
     "type": "Arts & Film"
   },
   {
@@ -750,7 +790,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2026/09/Block0.beginasyouare.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "",
+    "desc": "The Ridgway Independent Film Festival opens at The Sherbino with an evening of short films grouped under the theme \"Begin Where You Are.\" Doors open at 4:30 p.m. with films beginning at 5:00 p.m.; single-block general admission is $15.",
     "type": "Arts & Film"
   },
   {
@@ -816,7 +856,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/10/4x5_Poster-Lifestyle_2048x2048.webp",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "",
+    "desc": "Telluride Sports presents Powder Panic, a ski and snowboard film screening at the historic Sheridan Opera House. The event celebrates mountain culture and the thrill of big-mountain riding through cinematic footage of skiing and…",
     "type": "Arts & Film"
   },
   {
@@ -881,7 +921,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2026/09/Block1.somethingwascallingus-1.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "",
+    "desc": "The Ridgway Independent Film Fest screens \"Something Was Calling Us\" at The Sherbino, a film exploring the experience of heeding an inner call or turning point. The festival offers single-block general admission tickets as well as…",
     "type": "Arts & Film"
   },
   {
@@ -894,7 +934,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2026/09/Block2.themountainsknewournames-1.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "",
+    "desc": "A screening of *The Mountains Knew Our Names* presented as part of the Ridgway Independent Film Fest, held at The Sherbino in Ridgway. The festival features general admission single-block tickets as well as all-access passes, with doors…",
     "type": "Arts & Film"
   },
   {
@@ -907,7 +947,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2026/09/Block3.wegatheredaroundthefire-1.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "",
+    "desc": "The Ridgway Independent Film Fest presents an evening screening block titled *We Gathered Around the Fire* at The Sherbino, with doors opening at 6:15 p.m. and films beginning at 6:30 p.m. General admission for this single block is $15,…",
     "type": "Arts & Film"
   },
   {
@@ -920,8 +960,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    "type": "Community"
+    "desc": "Movies Under the Stars is an outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening movies on Saturday evenings at dusk. The series runs on select Saturdays and offers a community gathering under the open…",
+    "type": "Arts & Film"
   },
   {
     "title": "Mind Blown Telluride",
@@ -937,6 +977,19 @@
     "type": "Community"
   },
   {
+    "title": "Festival of Miles at Cimarron Athletic Field",
+    "href": "https://events.ourayridgwayevents.com/event/festival-of-miles-at-cimarron-athletic-field",
+    "date": "2026-11-15",
+    "time": "10:00 AM",
+    "location": "Ridgway Secondary School",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54471314763623/huge/a7d8b5f4cfeafb3b2f349192e5df13c2d6fcb981.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "A community track event at Ridgway Secondary School featuring a series of back-to-back mile races for participants of all ages, from elementary school children through open adult divisions. Races run on a rolling schedule with check-in…",
+    "type": "Festivals"
+  },
+  {
     "title": "Tea and Tarot",
     "href": "https://koto.org/event/tea-and-tarot/2026-11-15/",
     "date": "2026-11-15",
@@ -948,6 +1001,20 @@
     "source": "KOTO Community Calendar",
     "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
     "type": "Community"
+  },
+  {
+    "title": "Healing Hearts Circle: Women Transcending Cancer/Chronic Illness",
+    "href": "https://events.ourayridgwayevents.com/event/healing-hearts-circle-women-transcending-cancerchronic-illness",
+    "date": "2026-11-15",
+    "time": "5:00 PM",
+    "location": "Bee True You Wellness & Creative Studio",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54241462626167/huge/7c0778035e072ff933b617f21809b1459dc84aca.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "A recurring support circle at Bee True You Wellness & Creative Studio in the Ouray-Ridgway area, offering women navigating cancer or chronic illness a safe, welcoming space to connect. The gathering honors each woman's unique journey and…",
+    "type": "Wellness",
+    "endDate": "2026-12-07"
   },
   {
     "title": "Teen Takeover at Ouray Hot Springs Pool",
@@ -985,7 +1052,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2026/09/Block4.weinvitedthemonstersin-1.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "",
+    "desc": "The Ridgway Independent Film Fest presents *We Invited the Monsters In*, a film screening at The Sherbino exploring the blurry line between monsters and the familiar. The festival offers single-block general admission tickets as well as…",
     "type": "Arts & Film"
   },
   {
@@ -998,7 +1065,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2026/09/Block5.wewanderedbeyondthefirelight-1.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "",
+    "desc": "A screening at The Sherbino in Ridgway as part of the Ridgway Independent Film Fest, featuring the film *We Wandered Beyond the Firelight*. Doors open at 1:45 pm with the film beginning at 2:00 pm, and single-block general admission…",
     "type": "Arts & Film"
   },
   {
@@ -1011,7 +1078,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    "desc": "A guided bicycle tour departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route connects Mountain Village to…",
     "type": "Outdoors & Sports"
   },
   {
@@ -1026,6 +1093,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Britley & Matt are performing live music at a venue on North Cora Street in Ridgway. The event is listed through the Ouray Ridgway community calendar.",
     "type": "Music"
+  },
+  {
+    "title": "Ridgway MS Boys Basketball vs. Telluride",
+    "href": "https://events.ourayridgwayevents.com/event/ridgway-ms-boys-basketball-vs-telluride",
+    "date": "2026-11-17",
+    "time": "4:00 PM",
+    "location": "Ridgway Secondary School",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54470962886159/huge/2ff254776de0b6cce7a72d3d613d6130412b6b4a.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "A middle school boys basketball game at Ridgway Secondary School, with the Ridgway team hosting Telluride. The event is listed on the Ouray Ridgway Calendar as a community sporting event.",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Decker Room New Volunteer Orientation",
@@ -1103,7 +1183,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "KOTO Community Calendar",
-    "desc": "School In Action Open House! Come experience what learning looks like at Telluride Mountain School. Instead of a presentation about our school, step into the learning. Visit classrooms, meet teachers and students, explore our campus, and…",
+    "desc": "Telluride Mountain School is hosting an open house where prospective families and community members can step directly into the learning environment rather than sit through a formal presentation. Visitors are invited to explore classrooms,…",
     "type": "Talks & Classes"
   },
   {
@@ -1116,7 +1196,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
+    "desc": "A community workshop exploring eco-grief and gratitude, held in Mountain Village and presented by Through the Woods Doula, EcoAction Partners, and the Wilkinson Public Library. The event offers participants a space to process emotions of…",
     "type": "Talks & Classes"
   },
   {
@@ -1264,6 +1344,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "County Employee Friendsgiving Potluck (BOCC Room)",
+    "href": "https://ouraycountyco.gov/Calendar.aspx?EID=3794",
+    "date": "2026-11-19",
+    "time": "",
+    "location": "- BOCC Room, Ouray County Courthouse 541 4th Street Ouray CO 81427",
+    "town": "Ouray",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/food.jpg",
+    "category": "Community Event",
+    "source": "Ouray County",
+    "desc": "A potluck Friendsgiving gathering for Ouray County employees, held in the BOCC Room at the Ouray County Courthouse in Ouray. Two or more county commissioners may be in attendance.",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Senior Meals",
     "href": "https://www.norwoodtown.com/2026-11-19-senior-meals",
     "date": "2026-11-19",
@@ -1273,7 +1366,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to gather, share a meal, and connect with neighbors.",
     "type": "Community"
   },
   {
@@ -1338,7 +1431,7 @@
     "img": "https://koto.org/wp-content/uploads/2026/10/GWFT-Cowgirl-16x9-Story-Post-Graphic-Only-2-scaled.jpg",
     "category": "Community Event",
     "source": "KOTO Community Calendar",
-    "desc": "Join us for a night of women-centric short ski films! These screenings provide a space to continue the celebration of winter storytelling and women in snow sports. All are welcome. Get hyped for an El Nino year and pray for snow. This…",
+    "desc": "The Girl Winter Film Tour comes to the Sheridan Opera House for an evening of short films celebrating women in snow sports and winter storytelling. The program features five films and runs approximately two hours.",
     "type": "Arts & Film"
   },
   {
@@ -1364,8 +1457,8 @@
     "img": "https://sherbino.org/wp-content/uploads/2026/10/PSYLO-SHERB-26-A1C-scaled.jpg",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "",
-    "type": "Community"
+    "desc": "Cosmic Luau with PSYLO is a dancehall-style show at The Sherbino Theater in Ridgway, featuring a light show by Lumagic. The event combines tropical and psychedelic themes in a limited-seating venue setting.",
+    "type": "Arts & Film"
   },
   {
     "title": "Yoga with Lauren",
@@ -1403,8 +1496,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    "type": "Community"
+    "desc": "Movies Under the Stars is a recurring outdoor film series held on Saturday evenings at dusk at the Conference Center Plaza in Mountain Village, running from June 13 through August 15. The community event brings free outdoor cinema to the…",
+    "type": "Arts & Film"
   },
   {
     "title": "Mind Blown Telluride",
@@ -1482,7 +1575,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    "desc": "A guided bicycle tour departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route offers a scenic way to connect…",
     "type": "Outdoors & Sports"
   },
   {
@@ -1539,6 +1632,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Friendsgiving Potluck Luncheon at Cimarron Gathering Place",
+    "href": "https://events.ourayridgwayevents.com/event/cimarron-gathering-place-1041",
+    "date": "2026-11-24",
+    "time": "9:30 AM",
+    "location": "Ouray 4 H Event Center",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/54472221581238/huge/fa6e95b8212ce5651f6273a51fa7ed9684fae611.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Friendsgiving Potluck Luncheon. Doors Open at 9:30. Lunch served at Noon, Come early to visit and play games. Bring a dish to share. Turkey Provided. All are welcome.",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
     "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
     "date": "2026-11-24",
@@ -1548,7 +1654,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
+    "desc": "A community workshop held in Mountain Village exploring eco-grief — the emotional weight of loss tied to environmental change — alongside gratitude and love as responses to a shifting world. Led by Lauren Norton of Through the Woods Doula…",
     "type": "Talks & Classes"
   },
   {
@@ -1681,7 +1787,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "The Town of Norwood's regular senior meals program will not be held on this date. This notice serves as a reminder for community members who rely on or participate in the senior meals service.",
     "type": "Community"
   },
   {
@@ -1747,7 +1853,7 @@
     "img": "https://1v09t9hszk.ucarecd.net/ca6338a4-f816-4b2d-9519-f999c902da9f/-/crop/1877x750/0,2065/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "DJ Phoenix is a 30 year veteran of the Colorado house music scene and no strange...",
+    "desc": "DJ Phoenix, a 30-year veteran of the Colorado house music scene, takes the decks at The Alibi for a late-night set. Expect an experienced hand behind the turntables bringing energy to one of Telluride's favorite local venues.",
     "type": "Music"
   },
   {
@@ -1773,8 +1879,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    "type": "Community"
+    "desc": "Movies Under the Stars is a recurring outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening on Saturday evenings at dusk. The series runs from June 13 through August 15, bringing community members…",
+    "type": "Arts & Film"
   },
   {
     "title": "Sunday Rehab",
@@ -1800,7 +1906,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    "desc": "A guided bicycle tour departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route offers a scenic descent…",
     "type": "Outdoors & Sports"
   },
   {
@@ -1867,7 +1973,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
+    "desc": "This eco-grief workshop, hosted in Mountain Village, brings together Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library to explore the intersection of grief and gratitude in the…",
     "type": "Talks & Classes"
   },
   {
@@ -1939,6 +2045,19 @@
     "endDate": "2027-01-06"
   },
   {
+    "title": "Wreaths for Rescues",
+    "href": "https://telluridescience.org/event/wreaths-for-rescues/",
+    "date": "2026-12-03",
+    "time": "5:30 PM – 7:30 PM",
+    "location": "Telluride Innovation Center, 300 S. Townsend, Telluride",
+    "town": "Telluride",
+    "img": "https://telluridescience.org/wp-content/uploads/2026/11/wreaths.png",
+    "category": "",
+    "source": "Telluride Science",
+    "desc": "Celebrate your beloved pets, past & present, by making a festive pet-themed holiday wreath. Adela Floral will lead this hands-on wreath-making workshop to benefit Second Chance Humane Society. Bring mementos such as small pet photos to…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Floating Lotus Trivia Night – December 2026",
     "href": "https://events.ourayridgwayevents.com/event/floating-lotus-trivia-night-december-2026",
     "date": "2026-12-03",
@@ -1962,7 +2081,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A community meal program for seniors hosted by the Town of Norwood. This midday gathering offers older residents an opportunity to share a meal and connect with neighbors.",
     "type": "Community"
   },
   {
@@ -2001,7 +2120,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/09/Screenshot-2026-10-12-at-10.51.39-AM.png",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "",
+    "desc": "Young People's Theatre presents The SpongeBob Musical at the Sheridan Opera House, bringing the beloved underwater world of Bikini Bottom to life on stage. This youth theater production adapts the beloved animated series into a full-scale…",
     "type": "Arts & Film",
     "endDate": "2026-12-06"
   },
@@ -2108,7 +2227,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2026/07/NOEL-NIGHT.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "",
+    "desc": "The Hip Snacks perform live at The Sherbino in Ridgway as part of Noel Night, an annual free community celebration presented by the Ouray County Performing Arts Guild and The Sherbino. Entry is by donation, with doors opening at 8:00 p.m.…",
     "type": "Community"
   },
   {
@@ -2121,7 +2240,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Noel Night is a community holiday event hosted by the Town of Norwood, bringing residents together to celebrate the season. Held in early December, it offers a festive evening for families and neighbors in the Norwood area.",
     "type": "Community"
   },
   {
@@ -2151,6 +2270,19 @@
     "type": "Festivals"
   },
   {
+    "title": "Ouray Yule! Jeep Raffle • Tree Lighting • Holiday Parade",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-yule-jeep-raffle-tree-lighting-holiday-parade",
+    "date": "2026-12-05",
+    "time": "4:30 PM",
+    "location": "Ouray, CO, USA",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/49789687984733/huge/a57c0755a8845e64cab68694d66e5c6576f4ca9e.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Shopping starts at 10:30 am! Visit our website for a detailed schedule • CLICK HERE Some highlights: 5:00 PM • Jeep Raffle Dusk • Tree Lighting 6:00 PM • Holiday Parade Photos with Santa & storytime with Mrs. Claus Plus much more! See you…",
+    "type": "Festivals"
+  },
+  {
     "title": "Paint & Sip with Nicole: “Snow Topped Treeline\"",
     "href": "https://events.ourayridgwayevents.com/event/paint-sip-with-nicole-snow-topped-treeline",
     "date": "2026-12-05",
@@ -2173,7 +2305,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2026/11/864479175_1594584442706599_7214255078047042247_n-1.jpg",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "",
+    "desc": "A beloved Ouray County holiday tradition held at The Sherbino in Ridgway, this family-friendly event invites all ages to decorate gingerbread houses with candy and icing on a Saturday morning from 10:00am to noon. Gingerbread houses are…",
     "type": "Family & Kids"
   },
   {
@@ -2199,8 +2331,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    "type": "Community"
+    "desc": "Movies Under the Stars is a recurring outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening on Saturday evenings at dusk. The series runs weekly throughout the summer months, offering a seasonal community…",
+    "type": "Arts & Film"
   },
   {
     "title": "Mind Blown Telluride",
@@ -2214,19 +2346,6 @@
     "source": "Mountain Village",
     "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
     "type": "Community"
-  },
-  {
-    "title": "Ouray Yule! Jeep Raffle • Tree Lighting • Holiday Parade",
-    "href": "https://events.ourayridgwayevents.com/event/ouray-yule-jeep-raffle-tree-lighting-holiday-parade",
-    "date": "2026-12-06",
-    "time": "",
-    "location": "Ouray, CO, USA",
-    "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/49789687984733/huge/a57c0755a8845e64cab68694d66e5c6576f4ca9e.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Shopping starts at 10:30 am! Visit our website for a detailed schedule • CLICK HERE Some highlights: 5:00 PM • Jeep Raffle Dusk • Tree Lighting 6:00 PM • Holiday Parade Photos with Santa & storytime with Mrs. Claus Plus much more! See you…",
-    "type": "Festivals"
   },
   {
     "title": "Monthly Karate in Ouray County",
@@ -2251,7 +2370,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    "desc": "A guided bicycle tour originating at the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route offers a scenic descent through…",
     "type": "Outdoors & Sports"
   },
   {
@@ -2290,7 +2409,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "",
+    "desc": "The Welcome Home Alliance hosts its monthly veterans' coffee gathering at the Sherbino in Ridgway, offering a relaxed space for veterans to connect with one another and with community support. It's a recurring informal meetup centered on…",
     "type": "Community"
   },
   {
@@ -2303,7 +2422,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/27556/merchant_event-1.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Join us for the monthly Mountain Village Merchant Meeting to be held on the second Tuesday of each month from 10 to 11 a.m. The meeting will be hybrid with",
+    "desc": "A monthly gathering for Mountain Village merchants, held on the second Tuesday of each month from 10 to 11 a.m. The meeting is offered in a hybrid format, allowing participants to attend either in person or remotely.",
     "type": "Community"
   },
   {
@@ -2316,7 +2435,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
+    "desc": "This workshop, hosted in Mountain Village, brings together facilitators from Through the Woods Doula, EcoAction Partners, and the Wilkinson Public Library to explore the emotional terrain of living through environmental change. It offers a…",
     "type": "Talks & Classes"
   },
   {
@@ -2375,6 +2494,19 @@
     "endDate": "2026-12-13"
   },
   {
+    "title": "Matchstick Productions ~ The Way Out ~ Presented by The Sherbino",
+    "href": "https://sherbino.org/event/matchstick-productions-the-way-out-presented-by-the-sherbino/",
+    "date": "2026-12-09",
+    "time": "",
+    "location": "The Sherbino, Ridgway",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2026/10/The-Way-out-Matchstick-banner-1.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "Matchstick Productions' 34th annual ski film, *The Way Out*, screens at The Sherbino in Ridgway, celebrating the culture and lifestyle of skiing. Doors open at 6:00pm with the film beginning at 6:30pm, with discounted admission available…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Clothing Swap",
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-12-10",
@@ -2397,7 +2529,7 @@
     "img": "https://1v09t9hszk.ucarecd.net/4a5f4c4e-4a85-416f-bf68-4a874717300c/-/crop/1380x1380/233,0/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "The Regular is a folk rock band based in Denver, CO. Originally formed in Chicag...",
+    "desc": "The Regular is a folk rock band based in Denver, Colorado, performing live at The Alibi. The band brings their folk rock sound to Telluride for a late-night show.",
     "type": "Music"
   },
   {
@@ -2451,8 +2583,8 @@
     "img": "https://1v09t9hszk.ucarecd.net/5a0e2028-07e8-4974-b039-d62e8ab44ab4/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "“Settle back, easy Jim…” The iconic lyric from Robert Hunter’s Althea captured t...",
-    "type": "Community"
+    "desc": "Easy Jim takes the stage at The Alibi for the first night of a residency engagement, bringing live music to this Telluride bar venue. The residency format promises multiple nights of performances in an intimate setting.",
+    "type": "Music"
   },
   {
     "title": "Ski Film: Warren Miller's \"Days Off\"",
@@ -2464,7 +2596,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/09/Screenshot-2026-10-12-at-10.22.59-AM.png",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "",
+    "desc": "Warren Miller Entertainment's \"Days Off\" comes to the Sheridan Opera House for a screening of the legendary ski film franchise's latest production. The film showcases skiing and snowboarding footage from mountain destinations around the…",
     "type": "Arts & Film"
   },
   {
@@ -2531,8 +2663,8 @@
     "img": "https://1v09t9hszk.ucarecd.net/5a0e2028-07e8-4974-b039-d62e8ab44ab4/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "“Settle back, easy Jim…” The iconic lyric from Robert Hunter’s Althea captured t...",
-    "type": "Community"
+    "desc": "Easy Jim continues their residency at The Alibi with a late-night performance on the second of what appears to be a multi-night run at the beloved Telluride bar. The residency format promises an intimate, unhurried evening of live music in…",
+    "type": "Music"
   },
   {
     "title": "Britley & Matt",
@@ -2573,6 +2705,19 @@
     "desc": "Buddy, an orphan, mistakenly crawls into Santa’s bag and is transported to the North Pole. To find his father, Buddy …",
     "type": "Arts & Film",
     "endDate": "2026-12-25"
+  },
+  {
+    "title": "Ridgway HS Boys Basketball vs. Caprock Academy",
+    "href": "https://events.ourayridgwayevents.com/event/ridgway-hs-boys-basketball-vs-caprock-academy",
+    "date": "2026-12-18",
+    "time": "3:00 PM",
+    "location": "Ridgway Secondary School",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54471009862513/huge/f3b17047226a66cb00188aee2e68e967d398ed1c.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The Ridgway High School Boys Basketball team hosts Caprock Academy at the Ridgway Secondary School gym. Admission supports the athletic program, and concessions will be available.",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Ridgway Wrecking Crew",
@@ -2623,8 +2768,8 @@
     "img": "https://1v09t9hszk.ucarecd.net/5caa6e55-bef5-4af0-b673-ba480ad8ced1/-/crop/2048x820/0,163/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Joint Point is an original jam band from Colorado. They blend adventurous rock, ...",
-    "type": "Music"
+    "desc": "Joint Point is an original jam band from Colorado known for blending adventurous rock with improvisational, genre-spanning musicianship. The group performs at The Alibi in Telluride, bringing their signature live sound to an intimate…",
+    "type": "Arts & Film"
   },
   {
     "title": "Winter Break - Ridgway Schools",
@@ -2846,7 +2991,7 @@
     "img": "https://1v09t9hszk.ucarecd.net/c5b3912c-a04e-4a42-b283-66695bb266a4/-/crop/2922x1168/0,1910/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Mascolo is a French-American vocalist, multi-instrumentalist, and producer. His ...",
+    "desc": "Mascolo, a French-American vocalist, multi-instrumentalist, and producer, takes the decks at The Alibi for a New Year's Eve DJ set. The night offers a live music sendoff to 2026 at one of Telluride's beloved local venues.",
     "type": "Music"
   },
   {
@@ -2953,5 +3098,18 @@
     "source": "Telluride.com",
     "desc": "Actually, It Is Rocket Science is a tongue-in-cheek look at the seemingly reckless abandon that many of the world’s …",
     "type": "Talks & Classes"
+  },
+  {
+    "title": "San Juan Skijoring",
+    "href": "https://events.ourayridgwayevents.com/event/san-juan-skijoring",
+    "date": "2027-01-08",
+    "time": "",
+    "location": "Ouray County Fairgrounds and 4H Events Center",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53322123681803/huge/097624e051a0d64ba11e239d678e52d038396e92.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "San Juan Skijoring began in 2017 as a non-profit organization and hosts our Skijoring event annually on the second full weekend in January. We strive to have the best event possible and continue giving back to our local youth through…",
+    "type": "Family & Kids"
   }
 ]

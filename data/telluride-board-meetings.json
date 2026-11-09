@@ -10,32 +10,24 @@
     "packetUrl": "https://telluride-co.civicweb.net/document/447222/"
   },
   {
-    "date": "November 9, 2026",
-    "title": "Open Space Commission",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8133",
-    "hasAgenda": true,
-    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "4:00 PM",
-    "civicwebId": 8133,
-    "packetUrl": "https://telluride-co.civicweb.net/document/447339/"
-  },
-  {
     "date": "November 17, 2026",
-    "title": "(Lottery) Telluride Housing Authority",
+    "title": "(Master Lease Lottery) Telluride Housing Authority",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8329",
-    "hasAgenda": false,
+    "hasAgenda": true,
     "location": "Rebekah Hall, 113 W Columbia Ave",
     "time": "10:05 AM",
-    "civicwebId": 8329
+    "civicwebId": 8329,
+    "packetUrl": "https://telluride-co.civicweb.net/document/447348/"
   },
   {
     "date": "November 17, 2026",
     "title": "Town Council",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8046",
-    "hasAgenda": false,
+    "hasAgenda": true,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "10:00 AM",
-    "civicwebId": 8046
+    "civicwebId": 8046,
+    "packetUrl": "https://telluride-co.civicweb.net/document/447389/"
   },
   {
     "date": "November 18, 2026",

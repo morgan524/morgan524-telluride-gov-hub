@@ -767,15 +767,6 @@ const NORWOOD_CACHE_DATE = '2026-11-09';
 
 const NORWOOD_CACHED_DATA = [
   {
-    date: "November 2, 2026",
-    time: null,
-    title: "Norwood Water Commission Work Session",
-    agendaUrl: "https://www.norwoodtown.com/files/bbfdcc5d9/11.02.2026+NWC+Work+Session.pdf",
-    packetUrl: null,
-    special: false,
-    board: "nwc"
-  },
-  {
     date: "November 4, 2026",
     time: null,
     title: "Board of Trustees Budget Work Session",
@@ -788,11 +779,10 @@ const NORWOOD_CACHED_DATA = [
     date: "November 10, 2026",
     time: null,
     title: "Norwood Water Commission Meeting",
-    agendaUrl: null,
-    packetUrl: null,
+    agendaUrl: "https://www.norwoodtown.com/files/285151cdb/11.10.26+NWC+Meeting+Agenda+.pdf",
+    packetUrl: "https://www.norwoodtown.com/files/834de0904/11.10.2026+NWC+Supporting+Documents.pdf",
     special: false,
-    board: "nwc",
-    note: "Next scheduled meeting -- agenda posted before the meeting."
+    board: "nwc"
   },
   {
     date: "November 11, 2026",
@@ -908,7 +898,7 @@ const OURAY_COUNTY_CACHED_DATA = [
     location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
     civicClerkId: 1070,
     note: null,
-    packetUrl: "https://ouraycoco.portal.civicclerk.com/event/1070/files/agenda/7585",
+    packetUrl: "https://ouraycoco.portal.civicclerk.com/event/1070/files/agenda/7587",
     board: "bocc",
     agendaUrl: "https://ouraycoco.portal.civicclerk.com/event/1070/files/agenda/7579"
   },

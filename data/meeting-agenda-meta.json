@@ -327,7 +327,10 @@
   "telluride|2026-11-17|Town Council - Nov 17 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8046",
     "sv": 4,
-    "ph": "ea5ac597fb54bd44"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/lsl6_LyUQreJPEkCInZv8A",
+    "meetingId": "840 7405 0490",
+    "passcode": "203716.",
+    "phone": "719) 359-4580"
   },
   "rico|2026-11-18|Rico Board of Trustees Regular Meeting": {
     "sv": 4,
@@ -565,7 +568,7 @@
   "telluride|2026-12-03|Town Council Retreat - Dec 03 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8051",
     "sv": 4,
-    "ph": "5e6191a8c024dc08"
+    "ph": "8a1e2d979230f1c7"
   },
   "county|2026-11-09|San Miguel Basin Fair Board": {
     "sv": 4,
@@ -578,7 +581,7 @@
   "telluride|2026-12-04|Special Town Council - Dec 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324",
     "sv": 4,
-    "ph": "d497cf06f961b57e"
+    "ph": "4b9e8cc3c35fa8ec"
   },
   "telluride|2026-11-09|Intergovernmental Meeting - Nov 09 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8360",
@@ -614,7 +617,7 @@
   "telluride|2026-12-07|Open Space Commission - Dec 07 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8134",
     "sv": 4,
-    "ph": "9cf9fe1d604db893"
+    "ph": "73dde754d9947413"
   },
   "norwood|2026-12-08|Norwood Water Commission Meeting": {
     "sv": 4,
@@ -635,5 +638,9 @@
   "county|2026-12-09|Board of County Commissioners Regular Meeting": {
     "sv": 4,
     "ph": "9aaa47f1803242c3"
+  },
+  "telluride|2026-11-17|(Master Lease Lottery) Telluride Housing Authority - Nov 17 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8329",
+    "sv": 4
   }
 }

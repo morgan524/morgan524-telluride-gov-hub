@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-outdoors.xml" rel="self" type="application/rss+xml" />
     <description>Hikes, races, ski events, and stewardship days — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Nov 2026 11:11:42 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 22:11:13 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>⚡ [Meeting] Open Space Commission - Nov 09 2026 — 2026-11-09</title>
@@ -171,6 +171,19 @@ The Vending Subcommittee meets to approve minutes from September 23 and to act o
       <category>Town of Telluride</category>
     </item>
     <item>
+      <title>[Fri, Nov 13] Ridgway Independent Film Festival</title>
+      <link>https://koto.org/event/ridgway-independent-film-festival/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/ridgway%20independent%20film%20festival%7C2026-11-13</guid>
+      <pubDate>Fri, 13 Nov 2026 07:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/10/RIFF-FLIER-CONCEPTS-Facebook-Cover-3.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Sherbino Theater, Ridgway
+
+The Ridgway Independent Film Festival returns to the historic Sherbino Theater in downtown Ridgway for a weekend running November 13–15, 2026. The festival features independent short films, select longer works, and filmmaker Q&As, bringing together filmmakers and audiences for a weekend of storytelling and community connection.]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/10/RIFF-FLIER-CONCEPTS-Facebook-Cover-3.png" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
       <title>[Fri, Nov 13] KOTO Ski Swap</title>
       <link>https://koto.org/event/koto-ski-swap/</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/koto%20ski%20swap%7C2026-11-13</guid>
@@ -181,6 +194,19 @@ This year’s ski swap takes place Friday, November 13th, thru Monday, November 
       <media:content url="https://koto.org/wp-content/uploads/2026/10/ski-swap-cow-crop.png" medium="image" />
       <category>Community Event</category>
       <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sat, Nov 14] Film Night: Powder Panic Presented by Telluride Sports</title>
+      <link>https://sheridanoperahouse.com/events/salomon-ski-film-slingshot/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/film%20night%20powder%20panic%7C2026-11-14</guid>
+      <pubDate>Sat, 14 Nov 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://sheridanoperahouse.com/wp-content/uploads/2026/10/4x5_Poster-Lifestyle_2048x2048.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Sheridan Opera House
+📍 Sheridan Opera House • Telluride, CO
+
+Telluride Sports presents Powder Panic, a ski and snowboard film screening at the historic Sheridan Opera House. The event celebrates mountain culture and the thrill of big-mountain riding through cinematic footage of skiing and snowboarding action.]]></description>
+      <media:content url="https://sheridanoperahouse.com/wp-content/uploads/2026/10/4x5_Poster-Lifestyle_2048x2048.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Sheridan Opera House</category>
     </item>
     <item>
       <title>[Sat, Nov 14] Salomon Ski Film: Slingshot</title>
