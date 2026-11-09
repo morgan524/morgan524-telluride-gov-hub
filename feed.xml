@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Nov 2026 00:43:08 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 11:11:42 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Nov 9–15</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-44</guid>
-      <pubDate>Mon, 09 Nov 2026 00:43:08 GMT</pubDate>
-      <description><![CDATA[The most consequential meeting this week is San Miguel County's Planning Commission on Wednesday, where proposed changes to the Affordable Housing Impact Mitigation Fee — the fee structure that shapes whether workforce housing actually gets built here — are on the table for discussion. Monday's Open Space Commission is also worth watching, as residents push for a full accounting of the goat grazing pilot on the Valley Floor, two seasons in. On the community side, the week is busy: Long Table Dinner at Wilkinson Monday, a Free Legal Clinic Tuesday, the KOTO Ski Swap Friday, and the Ridgway Independent Film Festival running through the weekend.]]></description>
+      <pubDate>Mon, 09 Nov 2026 11:11:42 GMT</pubDate>
+      <description><![CDATA[The biggest thing to watch this week is the San Miguel County Planning Commission meeting Wednesday, where proposed changes to the Affordable Housing Impact Mitigation Fee — the fee structure that shapes whether and how workforce housing actually gets built across the county — are on the table for discussion. Monday's Open Space Commission is also worth attention, with a resident pushing for a real accounting of the Valley Floor goat grazing pilot: data, costs, wildlife impacts. Throw in a regional intergovernmental session Monday covering cross-jurisdictional development pressures, and the KOTO Ski Swap Friday to remind you why you live here.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -25,7 +25,7 @@
 
 The Open Space Commission takes up three items Monday. First is a letter from resident Ramona Gaylord pressing the Commission for a full accounting of the goat grazing pilot on the Valley Floor — two seasons in, she wants the pre- and post-grazing vegetation data, the established success criteria, total program costs, wildlife disturbance assessments (particularly regarding the elk herd and the long-standing dog prohibition), and a clear public timeline for deciding whether goats return in 2027. Second is review and approval of the 2026/2027 Annual Winter Use Operational Plan for the Valley Floor, covering Nordic grooming schedules, trail routes, temporary bridge installation, and the SMBA Fat Bike Nordic Relay (capped at 50 participants, December 15–March 19). Third is an update from Nancy Craft on native engagement activities, including an August meeting with Ernest House Jr. of the Ute Mountain Ute Tribe on Valley Floor signage updates and the question of a land acknowledgment.
 
-⚡ Why it matters: Commission faces public demand for data and cost accountability on Valley Floor grazing.]]></description>
+⚡ Why it matters: Commission faces demand for full goat-grazing data, costs, and wildlife accountability.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -63,15 +63,41 @@ San Miguel County hosts this intergovernmental work session with representatives
       <category>Town of Telluride</category>
     </item>
     <item>
-      <title>[Mon, Nov 9] Long Table Dinner/Cena De Mesa Larga</title>
-      <link>https://telluridelibrary.libcal.com/event/17240963?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/long%20table%20dinner%20cena%7C2026-11-09</guid>
-      <pubDate>Mon, 09 Nov 2026 01:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_07_19_41_38.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Lobby
+      <title>[Mon, Nov 9] Musik 4 Kinders</title>
+      <link>https://telluridelibrary.libcal.com/event/17874563?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/musik%204%20kinders%7C2026-11-09</guid>
+      <pubDate>Mon, 09 Nov 2026 17:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Kids Area
 
-6:00 PM – 7:30 PM · Join us for an evening of community, connection, and culinary delight at Wilkinson Public Library's Long Table Dinner on Sunday, November 8th at 6PM. This free gathering invites adults to share a memorable Indian meal catered by Sue and Brady from La Cocina/Pescado. Enjoy an elegant yet relaxed atmosphere where you can meet new friends, engage in lively conversation, and savor Indian dishes crafted with creativity and care. Seating is purposely randomized (you will draw a table color when you arrive) so that you meet and talk to new people! You can arrive with your friends or family, but you won&#39;t be sitting with them. For adults only please. Because space is limited, registration is required. …]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_07_19_41_38.jpg" medium="image" />
+10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. &iexcl;M&uacute;sica, Movimiento, y Aprendizaje Alegre para ni&ntilde;os! Este programa ser&aacute; en la sala de programas.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Mon, Nov 9] Savvy Seniors-Open Tech</title>
+      <link>https://telluridelibrary.libcal.com/event/17789248?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/savvy%20seniors%20open%20tech%7C2026-11-09</guid>
+      <pubDate>Mon, 09 Nov 2026 20:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_21_12_02_31.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Meeting Room #6 - large
+
+1:30 PM – 2:30 PM · Join us every Monday for "Savvy Seniors," an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_21_12_02_31.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Mon, Nov 9] Teen Arts and Crafts</title>
+      <link>https://telluridelibrary.libcal.com/event/17900461?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/teen%20arts%20and%20crafts%7C2026-11-09</guid>
+      <pubDate>Mon, 09 Nov 2026 23:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_27_11_18_01.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Teen Area
+
+4:00 PM – 5:00 PM · Join us for arts and crafts on Monday afternoons in November!]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_27_11_18_01.png" medium="image" />
       <category>Community Event</category>
       <category>Wilkinson Public Library</category>
     </item>
@@ -87,15 +113,13 @@ The November 10, 2026 Norwood Water Commission Meeting agenda hasn't been posted
       <category>Town of Norwood</category>
     </item>
     <item>
-      <title>⚡ [Meeting] Board of County Commissioners — 2026-11-10</title>
+      <title>[Meeting] Board of County Commissioners — 2026-11-10</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/ouray%7C2026-11-10%7CBoard%20of%20County%20Commissioners</guid>
       <pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[ouray • 2026-11-10
 
-The November 10 BOCC meeting carries a full load. The afternoon brings two public hearings: the Curry Regular PUD, a request to split a 14.42-acre parcel on County Road 1 into two lots and open space via a combined preliminary/final development plan; and a 2026 budget amendment. In general business, the board takes up a request to repeal Resolution 2025-043 — the austerity resolution that has been governing hiring — alongside four separate vacancy-fill requests under that same resolution for EMS and Road & Bridge. Also on the docket: a termination notice for the Ourway service due to lack of funding, the Albertson's opioid settlement form, potential negotiations with the City of Ouray over the Emergency Management Department and Coroner's Office, courthouse HVAC repairs, a rodeo shed replacement, and retirement plan participation agreement updates. The consent agenda wraps up multiple Corbett Creek project change orders and project acceptance.
-
-⚡ Why it matters: Two public hearings: a PUD land split and a 2026 budget amendment up for action.]]></description>
+The November 10 BOCC meeting carries a full load. The afternoon brings two public hearings: the Curry Regular PUD, a request to split a 14.42-acre parcel on County Road 1 into two lots and open space via a combined preliminary/final development plan; and a 2026 budget amendment. In general business, the board takes up a request to repeal Resolution 2025-043 — the austerity resolution that has been governing hiring — alongside four separate vacancy-fill requests under that same resolution for EMS and Road & Bridge. Also on the docket: a termination notice for the Ourway service due to lack of funding, the Albertson's opioid settlement form, potential negotiations with the City of Ouray over the Emergency Management Department and Coroner's Office, courthouse HVAC repairs, a rodeo shed replacement, and retirement plan participation agreement updates. The consent agenda wraps up multiple Corbett Creek project change orders and project acceptance.]]></description>
       <category>Meeting</category>
       <category>ouray</category>
     </item>
@@ -111,17 +135,28 @@ A work session, so no formal votes — but the direction set here shapes what co
       <category>ouray</category>
     </item>
     <item>
-      <title>⚡ [Meeting] Ouray Planning Commission Regular Meeting — 2026-11-10</title>
+      <title>[Meeting] Ouray Planning Commission Regular Meeting — 2026-11-10</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/ouraycity%7C2026-11-10%7COuray%20Planning%20Commission%20Regular%20Meeting</guid>
       <pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[ouraycity • 2026-11-10
 
-The Ouray Planning Commission takes up two substantive matters at its November 10 meeting. First, an action item on restricting natural medicine — a proposed ordinance that would regulate or limit psychedelic substances in city limits, a question municipalities across Colorado have been navigating since voters passed Proposition 122 in 2022. Second, a discussion on proposed amendments to Chapter 7 of the Land Use Code that would define short-term rentals and bed-and-breakfasts — the kind of definitional work that tends to quietly shape how STR enforcement and permitting plays out for years afterward. The commission also considers a remote-participation request from Commissioner Wood and approves minutes from three prior meetings dating back to February. Planning Commission vacancies round out the agenda.
-
-⚡ Why it matters: Proposed ordinance would restrict psychedelic substances within Ouray city limits.]]></description>
+The Ouray Planning Commission takes up two substantive matters at its November 10 meeting. First, an action item on restricting natural medicine — a proposed ordinance that would regulate or limit psychedelic substances in city limits, a question municipalities across Colorado have been navigating since voters passed Proposition 122 in 2022. Second, a discussion on proposed amendments to Chapter 7 of the Land Use Code that would define short-term rentals and bed-and-breakfasts — the kind of definitional work that tends to quietly shape how STR enforcement and permitting plays out for years afterward. The commission also considers a remote-participation request from Commissioner Wood and approves minutes from three prior meetings dating back to February. Planning Commission vacancies round out the agenda.]]></description>
       <category>Meeting</category>
       <category>ouraycity</category>
+    </item>
+    <item>
+      <title>[Tue, Nov 10] Adult Craft Night-Embroidered Tote Bags</title>
+      <link>https://telluridelibrary.libcal.com/event/17849286?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/adult%20craft%20night%20embroidered%7C2026-11-10</guid>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_21_14_49_26.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+5:00 PM – 7:00 PM · Get crafty and add a personal touch to your everyday tote! Join us for a fun and relaxing evening of embroidery as we transform plain tote bags into one-of-a-kind creations. Learn a few simple stitches, experiment with colorful threads, and create a design that&#39;s uniquely yours. No experience necessary! All materials are provided, and you&#39;ll leave with a handmade tote bag that&#39;s both stylish and functional. This program is free, but space is limited, so be sure to register in advance!]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_21_14_49_26.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Tue, Nov 10] Cardio Dance w/ Kelsey</title>
@@ -141,8 +176,7 @@ Join us for a fun evening of dancing and getting your heart rate up! You will be
       <guid isPermaLink="false">https://livabletelluride.org/event/monthly%20welcome%20home%20alliance%7C2026-11-10</guid>
       <pubDate>Tue, 10 Nov 2026 10:00:00 GMT</pubDate>
       <description><![CDATA[<img src="https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />📍 Ridgway, CO
-
-A recurring monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The event offers a relaxed, community-oriented space for veterans to connect with one another.]]></description>
+]]></description>
       <media:content url="https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png" medium="image" />
       <category>Community Event</category>
     </item>
@@ -249,7 +283,7 @@ The November 12, 2026 SMART Board of Directors agenda hasn't been posted yet.]]>
 
 Two substantive items on the November 12 agenda. The morning work session takes up proposed amendments to LUC Section 5-1303 — the Affordable Housing Impact Mitigation Fee — along with a broader discussion of housing incentive ideas. That fee structure has real implications for how (and whether) workforce housing gets built across the county, so the conversation is worth watching. After lunch, the commission moves to a formal land use application: a county-initiated rezoning of a portion of Placerville Park around the fire station, from Forestry, Agriculture, and Open (F) to Public (P) — a housekeeping move to bring the zoning in line with the site's actual public use.
 
-⚡ Why it matters: Affordable Housing Impact Mitigation Fee amendments could reshape workforce housing county-wide.]]></description>
+⚡ Why it matters: Proposed changes to Affordable Housing Impact Mitigation Fee could reshape workforce housing countywide.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -262,7 +296,7 @@ Two substantive items on the November 12 agenda. The morning work session takes 
 
 The Vending Subcommittee meets to approve minutes from September 23 and to act on the remaining open permit for the 2026-2027 winter vending season at Gondola Plaza. The Gondola Plaza East spot was already awarded to Mini Deli (PhilAm, LLC) in September. Up now is Gondola Plaza West, where The Gyro Cart — a returning vendor with eight consecutive summer seasons on Oak Street East — has submitted a late application to operate through the winter season serving lamb gyros, chicken shawarma, Greek salads, and related items, 11am to 4pm. Staff recommends granting the permit. Winter vending permits run $250 for the season.
 
-⚡ Why it matters: Board votes on final open winter vending permit at Gondola Plaza West.]]></description>
+⚡ Why it matters: Commission votes on final open winter vending permit for Gondola Plaza West.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -287,7 +321,7 @@ Don't throw away your old clothes just because they have a tiny (or even a large
       <description><![CDATA[🎫 KOTO
 📍 Wilkinson Public Library, Telluride
 
-Semana De Bienestar (Wellness Week) is a free, bilingual, alcohol-free community event at Wilkinson Public Library offering programming for children, adults, and families. Activities are available in both English and Spanish, making this an inclusive celebration of wellbeing for the broader Telluride community.]]></description>
+Las actividades son gratuitas, bilingües y libres de alcohol, y habrá actividades para niños, adultos y familias. ¡Los esperamos! All activities are free, bilingual, and alcohol-free, with activities for children, adults, and families. We look forward to having you! JUEVES/THURSDAY: PARA INSCRIBIRSE Y VER HORARIOS/TO REGISTER AND SEE FULL SCHEDULE Arte para Niños/ Kids Art @ Ah Haa Ballet para niños/Ballet for kids @Telluride Arts Bienvenidos a semana de bienestar/Welcome to Wellness Week @WPL program room Ceremonia de Fuego/Fire Ceremony @Town Park Baño de Sonido/Sound Bath @WPL]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
     </item>
@@ -300,7 +334,7 @@ Semana De Bienestar (Wellness Week) is a free, bilingual, alcohol-free community
 📍 The Alibi • Telluride, CO
 🕒 9:00 PM
 
-Two live acts — The Motel Prophets and Red Mountain Revival — take the stage at The Alibi for a night of live music. The show begins at 9:00 PM.]]></description>
+Join us for local legend Corey Hooker & the Motel Prophets for whats shaping up ...]]></description>
       <media:content url="https://1v09t9hszk.ucarecd.net/e377708b-2c0a-4491-812f-9a6dbc3d6993/-/crop/1545x773/0,1227/-/preview/" medium="image" />
       <category>Community Event</category>
       <category>The Alibi</category>
@@ -338,7 +372,7 @@ Facing the Mourning is a free, four-week grief support series taking place every
       <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/10/RIFF-FLIER-CONCEPTS-Facebook-Cover-3.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
 📍 Sherbino Theater, Ridgway
 
-The Ridgway Independent Film Festival returns to the historic Sherbino Theater in downtown Ridgway for a weekend running November 13–15, 2026. The festival features independent short films, select longer works, and filmmaker Q&As, bringing together filmmakers and audiences for a weekend of storytelling and community connection.]]></description>
+Ridgway Independent Film Festival — November 13–15, 2026 Join us at the historic Sherbino Theater in downtown Ridgway for a weekend of independent films, fresh perspectives, and community connection. RIFF features short films, select longer works, and filmmaker Q&As. Discover new stories and connect with filmmakers and fellow film lovers. RIFF.sherbino.org]]></description>
       <media:content url="https://koto.org/wp-content/uploads/2026/10/RIFF-FLIER-CONCEPTS-Facebook-Cover-3.png" medium="image" />
       <category>Community Event</category>
       <category>KOTO</category>
@@ -401,8 +435,7 @@ Discover agricultural innovation, explore practical ideas, and connect with your
       <pubDate>Sat, 14 Nov 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[<img src="https://sheridanoperahouse.com/wp-content/uploads/2026/10/4x5_Poster-Lifestyle_2048x2048.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Sheridan Opera House
 📍 Sheridan Opera House • Telluride, CO
-
-Telluride Sports presents Powder Panic, a ski and snowboard film screening at the historic Sheridan Opera House. The event celebrates mountain culture and the thrill of big-mountain riding through cinematic footage of skiing and snowboarding action.]]></description>
+]]></description>
       <media:content url="https://sheridanoperahouse.com/wp-content/uploads/2026/10/4x5_Poster-Lifestyle_2048x2048.webp" medium="image" />
       <category>Community Event</category>
       <category>Sheridan Opera House</category>
@@ -442,43 +475,6 @@ Rainbow, Rockies and Rascals will host a silent/live auction fundraiser on Frida
 📍 The Livery Norwood
 
 Norwood Park & Rec District presents Songs from San Miguel Live at the Livery on Friday, November 13th, featuring Brendan Forrest & Friends, Molly & the Starfish Lovers, Jacob Lukaszewski ("Loo-kah-shev-ski"), and Sean McFarland. This will be an evening of Americana, folk & roots music. Happy hour starts at 6:30 p.m.; music at 7:30 p.m. Cash bar, local food and more!]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Sat, Nov 14] Ridgway Independent Film Fest ~ Something Was Calling Us</title>
-      <link>https://sherbino.org/event/ridgway-independent-film-fest-something-was-calling-us/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/ridgway%20independent%20film%20fest%7C2026-11-14</guid>
-      <pubDate>Sat, 14 Nov 2026 10:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://sherbino.org/wp-content/uploads/2026/09/Block1.somethingwascallingus-1.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />📍 The Sherbino, Ridgway
-
-The Ridgway Independent Film Fest screens "Something Was Calling Us" at The Sherbino, a film exploring the experience of heeding an inner call or turning point. The festival offers single-block general admission tickets as well as all-access passes and volunteer opportunities for those wanting a deeper involvement in the event.]]></description>
-      <media:content url="https://sherbino.org/wp-content/uploads/2026/09/Block1.somethingwascallingus-1.png" medium="image" />
-      <category>Community Event</category>
-    </item>
-    <item>
-      <title>[Sat, Nov 14] 2026 Western Colorado Farm &amp; Ranch Innovation Expo — Free Admission</title>
-      <link>https://koto.org/event/2026-western-colorado-farm-ranch-innovation-expo-free-admission/2026-11-14/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/2026%20western%20colorado%20farm%7C2026-11-14</guid>
-      <pubDate>Sat, 14 Nov 2026 15:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/10/2026-Expo-Flyer.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Montrose County Event Center
-
-Discover agricultural innovation, explore practical ideas, and connect with your Western Slope neighbors at the free 2026 Western Colorado Farm & Ranch Innovation Expo, November 13–14 at the Montrose County Event Center. Hosted by the Western Colorado Soil Health Committee, this welcoming gathering brings together farmers, ranchers, gardeners, water leaders, educators, students, businesses, and community members for demonstrations, exhibits, presentations, and conversations. FRIDAY, NOVEMBER 13 Expo hours: noon–7 p.m. Explore agricultural equipment, technology, and exhibits, with water-related demonstrations beginning at 2 p.m. following the West Slope Water Summit. Meet vendors and producers, ask questions, and discover practical irrigation and water-management approaches. Also on Friday: West Slope Water Summit, 7:30 a.m.–2 p.m. This free gathering explores Western Colorado’s water outlook, watershed health, and agriculture’s connection to water, and includes an FFA student research presentation. Separate advance registration is required, with complimentary breakfast and lunch for registered participants. …]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/10/2026-Expo-Flyer.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Sat, Nov 14] Yoga with Lauren</title>
-      <link>https://koto.org/event/yoga-with-lauren/2026-11-14/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/yoga%20with%20lauren%7C2026-11-14</guid>
-      <pubDate>Sat, 14 Nov 2026 17:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/10/wellness-lineup-21.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Wilkinson Public Library, Telluride
-
-Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome. Muévase, respire y llénese de energía en esta dinámica clase bilingüe, dirigido por Lauren Norton, diseñada para fortalecer su cuerpo y mente. Combinando la fuerza y fluidez del pilates, el ritmo y la energía de la danza, y la presencia equilibrante del yoga y la respiración, esta sesión le dejará sintiéndose fuerte, en armonía y revitalizado/a. …]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/10/wellness-lineup-21.png" medium="image" />
       <category>Community Event</category>
       <category>KOTO</category>
     </item>

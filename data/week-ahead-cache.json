@@ -1,26 +1,18 @@
 {
-  "hash": "96fa075b0cc8e61a53a99dbb846879c67883547b",
-  "lede": "The most consequential meeting this week is San Miguel County's Planning Commission on Wednesday, where proposed changes to the Affordable Housing Impact Mitigation Fee — the fee structure that shapes whether workforce housing actually gets built here — are on the table for discussion. Monday's Open Space Commission is also worth watching, as residents push for a full accounting of the goat grazing pilot on the Valley Floor, two seasons in. On the community side, the week is busy: Long Table Dinner at Wilkinson Monday, a Free Legal Clinic Tuesday, the KOTO Ski Swap Friday, and the Ridgway Independent Film Festival running through the weekend.",
+  "hash": "a7ee6a7b4df6580b015fbec8ebb068732b63ffef",
+  "lede": "The biggest thing to watch this week is the San Miguel County Planning Commission meeting Wednesday, where proposed changes to the Affordable Housing Impact Mitigation Fee — the fee structure that shapes whether and how workforce housing actually gets built across the county — are on the table for discussion. Monday's Open Space Commission is also worth attention, with a resident pushing for a real accounting of the Valley Floor goat grazing pilot: data, costs, wildlife impacts. Throw in a regional intergovernmental session Monday covering cross-jurisdictional development pressures, and the KOTO Ski Swap Friday to remind you why you live here.",
   "notable": [
     {
       "id": 0,
-      "stake": "Commission faces public demand for data and cost accountability on Valley Floor grazing."
-    },
-    {
-      "id": 5,
-      "stake": "Two public hearings: a PUD land split and a 2026 budget amendment up for action."
-    },
-    {
-      "id": 7,
-      "stake": "Proposed ordinance would restrict psychedelic substances within Ouray city limits."
+      "stake": "Commission faces demand for full goat-grazing data, costs, and wildlife accountability."
     },
     {
       "id": 11,
-      "stake": "Affordable Housing Impact Mitigation Fee amendments could reshape workforce housing county-wide."
+      "stake": "Proposed changes to Affordable Housing Impact Mitigation Fee could reshape workforce housing countywide."
     },
     {
       "id": 12,
-      "stake": "Board votes on final open winter vending permit at Gondola Plaza West."
+      "stake": "Commission votes on final open winter vending permit for Gondola Plaza West."
     }
   ]
 }
