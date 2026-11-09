@@ -5213,19 +5213,7 @@ const BEACON_EVENTS = [
   {
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Every Tuesday night young adults gather downstairs at The Well for food, conversation, and bible study.",
-    date: "2026-11-03",
-    time: "6:00 PM",
-    source: "beacon",
-    sourceLabel: "Beacon",
-    category: "Community Event",
-    location: "The Well, 122 S Aspen",
-    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
-  },
-  {
-    title: "Weekly Young Adult Gathering",
-    link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Every Tuesday night young adults gather downstairs at The Well for food, conversation, and bible study.",
+    description: "Every Tuesday night, a gathering for food, conversation, and bible study downstairs at The Well.",
     date: "2026-11-10",
     time: "6:00 PM",
     source: "beacon",
@@ -5237,7 +5225,7 @@ const BEACON_EVENTS = [
   {
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Every Tuesday night young adults gather downstairs at The Well for food, conversation, and bible study.",
+    description: "Every Tuesday night, a gathering for food, conversation, and bible study downstairs at The Well.",
     date: "2026-11-17",
     time: "6:00 PM",
     source: "beacon",
@@ -5249,7 +5237,7 @@ const BEACON_EVENTS = [
   {
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Every Tuesday night young adults gather downstairs at The Well for food, conversation, and bible study.",
+    description: "Every Tuesday night, a gathering for food, conversation, and bible study downstairs at The Well.",
     date: "2026-11-24",
     time: "6:00 PM",
     source: "beacon",
@@ -5261,7 +5249,7 @@ const BEACON_EVENTS = [
   {
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Every Tuesday night young adults gather downstairs at The Well for food, conversation, and bible study.",
+    description: "Every Tuesday night, a gathering for food, conversation, and bible study downstairs at The Well.",
     date: "2026-12-01",
     time: "6:00 PM",
     source: "beacon",
@@ -5285,7 +5273,7 @@ const BEACON_EVENTS = [
   {
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Every Tuesday night young adults gather downstairs at The Well for food, conversation, and bible study.",
+    description: "Every Tuesday night, a gathering for food, conversation, and bible study downstairs at The Well.",
     date: "2026-12-08",
     time: "6:00 PM",
     source: "beacon",
@@ -5297,7 +5285,7 @@ const BEACON_EVENTS = [
   {
     title: "Clothing Swap",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "A clothing swap event listed under Other Happenings.",
+    description: "A community clothing swap event.",
     date: "2026-12-10",
     time: "7:00 PM",
     source: "beacon",
@@ -5309,13 +5297,25 @@ const BEACON_EVENTS = [
   {
     title: "Coffee House Nights",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "An evening of good coffee, games, and local community. Held at The Coffee Cowboy on Dec 12 and The Well on Jan 15 and Jan 29.",
+    description: "An evening of good coffee, games, and local community. Hosted at The Coffee Cowboy (Dec 12) and The Well (Jan 15 and Jan 29).",
     date: "2026-12-12",
     time: "7:00-9:00 PM",
     source: "beacon",
     sourceLabel: "Beacon",
     category: "Community Event",
-    location: "The Coffee Cowboy / The Well",
+    location: "Beacon, Telluride",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Weekly Young Adult Gathering",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Every Tuesday night, a gathering for food, conversation, and bible study downstairs at The Well.",
+    date: "2026-12-15",
+    time: "6:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "The Well, 122 S Aspen",
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
@@ -5333,7 +5333,7 @@ const BEACON_EVENTS = [
   {
     title: "Moonlight Skin and Ski",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "An uphill skin to the top of lift 10; no experience necessary. $10 equipment rentals available.",
+    description: "An uphill skin to the top of lift 10; no experience necessary. Equipment rentals available for $10.",
     date: "2026-12-25",
     time: "",
     source: "beacon",
@@ -5345,13 +5345,13 @@ const BEACON_EVENTS = [
   {
     title: "Meal Prep/Cooking Classes",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "A meal prep and cooking class offered at Ah Haa School for the Arts.",
+    description: "Meal prep and cooking classes held at AH HAA School for the Arts.",
     date: "2027-01-06",
     time: "6:00-8:00 PM",
     source: "beacon",
     sourceLabel: "Beacon",
     category: "Community Event",
-    location: "Ah Haa School for the Arts",
+    location: "AH HAA School for the Arts",
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
@@ -5369,19 +5369,19 @@ const BEACON_EVENTS = [
   {
     title: "Coffee House Nights",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "An evening of good coffee, games, and local community. Held at The Coffee Cowboy on Dec 12 and The Well on Jan 15 and Jan 29.",
+    description: "An evening of good coffee, games, and local community. Hosted at The Coffee Cowboy (Dec 12) and The Well (Jan 15 and Jan 29).",
     date: "2027-01-15",
     time: "7:00-9:00 PM",
     source: "beacon",
     sourceLabel: "Beacon",
     category: "Community Event",
-    location: "The Coffee Cowboy / The Well",
+    location: "Beacon, Telluride",
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
     title: "Moonlight Skin and Ski",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "An uphill skin to the top of lift 10; no experience necessary. $10 equipment rentals available.",
+    description: "An uphill skin to the top of lift 10; no experience necessary. Equipment rentals available for $10.",
     date: "2027-01-20",
     time: "",
     source: "beacon",
@@ -5405,13 +5405,13 @@ const BEACON_EVENTS = [
   {
     title: "Coffee House Nights",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "An evening of good coffee, games, and local community. Held at The Coffee Cowboy on Dec 12 and The Well on Jan 15 and Jan 29.",
+    description: "An evening of good coffee, games, and local community. Hosted at The Coffee Cowboy (Dec 12) and The Well (Jan 15 and Jan 29).",
     date: "2027-01-29",
     time: "7:00-9:00 PM",
     source: "beacon",
     sourceLabel: "Beacon",
     category: "Community Event",
-    location: "The Coffee Cowboy / The Well",
+    location: "Beacon, Telluride",
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
@@ -5429,7 +5429,7 @@ const BEACON_EVENTS = [
   {
     title: "Dodgeball Tournament",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "A dodgeball tournament listed under Other Happenings.",
+    description: "A community dodgeball tournament open to seasonal workers and locals.",
     date: "2027-02-07",
     time: "7:00-9:00 PM",
     source: "beacon",
@@ -5441,7 +5441,7 @@ const BEACON_EVENTS = [
   {
     title: "Moonlight Skin and Ski",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "An uphill skin to the top of lift 10; no experience necessary. $10 equipment rentals available.",
+    description: "An uphill skin to the top of lift 10; no experience necessary. Equipment rentals available for $10.",
     date: "2027-02-17",
     time: "",
     source: "beacon",
@@ -5503,6 +5503,18 @@ const CHAMBER_MUSIC_EVENTS = [
     category: "Concert",
     location: "Michael D. Palm Theatre",
     imageUrl: "https://telluridechambermusic.org/concerts/stewart-goodyear.webp"
+  },
+  {
+    title: "Tom Stone, Gary Hoffman & Chloe Mun",
+    link: "https://telluridechambermusic.org/concert/tom-stone-gary-hoffman-chloe-mun",
+    description: "An exceptional piano trio.",
+    date: "2027-03-09",
+    time: "7:00 PM",
+    source: "chamber-music",
+    sourceLabel: "Telluride Chamber Music",
+    category: "Concert",
+    location: "Michael D. Palm Theatre",
+    imageUrl: "https://telluridechambermusic.org/concerts/tom-stone-gary-hoffman-chloe-mun.webp"
   }
 ];
 

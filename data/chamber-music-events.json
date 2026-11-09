@@ -34,5 +34,17 @@
     "category": "Concert",
     "location": "Michael D. Palm Theatre",
     "imageUrl": "https://telluridechambermusic.org/concerts/stewart-goodyear.webp"
+  },
+  {
+    "title": "Tom Stone, Gary Hoffman & Chloe Mun",
+    "link": "https://telluridechambermusic.org/concert/tom-stone-gary-hoffman-chloe-mun",
+    "description": "An exceptional piano trio.",
+    "date": "2027-03-09",
+    "time": "7:00 PM",
+    "source": "chamber-music",
+    "sourceLabel": "Telluride Chamber Music",
+    "category": "Concert",
+    "location": "Michael D. Palm Theatre",
+    "imageUrl": "https://telluridechambermusic.org/concerts/tom-stone-gary-hoffman-chloe-mun.webp"
   }
 ]
