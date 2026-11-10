@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10T06:45:47.589Z",
+ "generated": "2026-11-10T16:56:44.920Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -45,9 +45,18 @@
    "label": "Code Changes & Accelerated Review",
    "lastUpdated": "2026-07-19",
    "upcoming": [],
-   "recent": [],
+   "recent": [
+    {
+     "source": "telluride",
+     "date": "2026-11-09",
+     "title": "Intergovernmental Meeting - Nov 09 2026",
+     "snippet": "San Miguel County hosts this intergovernmental work session with representatives from Telluride, Mountain Village, Ophir, Norwood, and the county itself. The session opens with a regional…"
+    }
+   ],
    "developments": [],
-   "stale": []
+   "stale": [
+    "Code Changes & Accelerated Review: telluride discussed it on 2026-11-09 (\"Intergovernmental Meeting - Nov 09 2026\") but the deep dive was last edited 2026-07-19."
+   ]
   },
   "wildfire": {
    "label": "Wildfire Resiliency",
@@ -88,18 +97,11 @@
      "date": "2026-10-27",
      "title": "Town Council - Oct 27 2026",
      "snippet": "Three substantive items anchor this meeting. Council takes up the Fourth Supplement to the Gondola IGA, extending cost-sharing for the 2027 planning and development budget on the gondola replacement…"
-    },
-    {
-     "source": "smart",
-     "date": "2026-10-26",
-     "title": "SMART Gondola Advisory Committee",
-     "snippet": "The Gondola Advisory Committee meets virtually on October 26. The main item is a 25-minute informational update on the FTA Capital Investment Program — the federal funding pipeline that the gondola…"
     }
    ],
    "developments": [],
    "stale": [
-    "Gondola 3A: telluride discussed it on 2026-10-27 (\"Town Council - Oct 27 2026\") but the deep dive was last edited 2026-07-20.",
-    "Gondola 3A: smart discussed it on 2026-10-26 (\"SMART Gondola Advisory Committee\") but the deep dive was last edited 2026-07-20."
+    "Gondola 3A: telluride discussed it on 2026-10-27 (\"Town Council - Oct 27 2026\") but the deep dive was last edited 2026-07-20."
    ]
   },
   "norwoodwater": {

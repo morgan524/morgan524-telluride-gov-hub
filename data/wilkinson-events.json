@@ -1,46 +1,68 @@
 [
   {
-    "title": "Musik 4 Kinders",
-    "link": "https://telluridelibrary.libcal.com/event/17874563?hs=a",
-    "description": "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. &iexcl;M&uacute;sica, Movimiento, y Aprendizaje Alegre para ni&ntilde;os! Este programa ser&aacute; en la sala de programas.",
-    "pubDate": "2026-11-09T17:30:00.000Z",
-    "source": "wilkinson",
-    "sourceLabel": "Wilkinson Public Library",
-    "category": "Library Event",
-    "location": "Kids Area",
-    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png"
-  },
-  {
-    "title": "Savvy Seniors-Open Tech",
-    "link": "https://telluridelibrary.libcal.com/event/17789248?hs=a",
-    "description": "1:30 PM – 2:30 PM · Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone.",
-    "pubDate": "2026-11-09T20:30:00.000Z",
-    "source": "wilkinson",
-    "sourceLabel": "Wilkinson Public Library",
-    "category": "Library Event",
-    "location": "Meeting Room #6 - large",
-    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_21_12_02_31.png"
-  },
-  {
-    "title": "Teen Arts and Crafts",
-    "link": "https://telluridelibrary.libcal.com/event/17900461?hs=a",
-    "description": "4:00 PM – 5:00 PM · Join us for arts and crafts on Monday afternoons in November!",
-    "pubDate": "2026-11-09T23:00:00.000Z",
-    "source": "wilkinson",
-    "sourceLabel": "Wilkinson Public Library",
-    "category": "Library Event",
-    "location": "Teen Area",
-    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_27_11_18_01.png"
-  },
-  {
-    "title": "Adult Craft Night-Embroidered Tote Bags",
-    "link": "https://telluridelibrary.libcal.com/event/17849286?hs=a",
-    "description": "5:00 PM – 7:00 PM · Get crafty and add a personal touch to your everyday tote! Join us for a fun and relaxing evening of embroidery as we transform plain tote bags into one-of-a-kind creations. Learn a few simple stitches, experiment with colorful threads, and create a design that&#39;s uniquely yours. No experience necessary! All materials are provided, and you&#39;ll leave with a handmade tote bag that&#39;s both stylish and functional. This program is free, but space is limited, so be sure to register in advance!",
-    "pubDate": "2026-11-10T00:00:00.000Z",
+    "title": "The Adolescent Development Series: Middle School Matters",
+    "link": "https://telluridelibrary.libcal.com/event/17800712?hs=a",
+    "description": "8:30 AM – 10:00 AM · Join us for a sereis of talks with Mountain School counselor Claire Eastham focused on adolescent development. You can come to one, two, or all three. These talks are free and open to all! November 10 at 9:00 am: Middle School Matters: Understanding the changes. Supporting growth. What's really going on during the middle school years? Explore the social, emotional, and academic changes that shape early adolescence, and learn how parents can support growing independence, navigate challenges, and help kids build the skills they need to thrive. We&#39;ll have a coffee and donut social from 8:30 - 9:00. You can meet Claire, other caregivers, and just enjoy some free caffeine and sugar! …",
+    "pubDate": "2026-11-10T15:30:00.000Z",
     "source": "wilkinson",
     "sourceLabel": "Wilkinson Public Library",
     "category": "Library Event",
     "location": "Program Room",
-    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_21_14_49_26.jpg"
+    "imageUrl": ""
+  },
+  {
+    "title": "A City on Mars: Online Author Talk with Kelly and Zach Weinersmith",
+    "link": "https://telluridelibrary.libcal.com/event/17873488?hs=a",
+    "description": "12:00 PM – 1:00 PM · Join us for an out-of-this-world virtual conversation with New York Times bestselling authors Kelly and Zach Weinersmith as they dive into their book, A City on Mars: Can We Settle Space, Should We Settle Space, and Have We Really Thought This Through? Earth is not well. The promise of starting life anew somewhere far, far away—no climate change, no war, no doomscrolling—beckons, and settling the stars ﬁnally seems within our grasp. Or is it? Critically acclaimed, bestselling authors Kelly and Zach Weinersmith set out to write the essential guide to a glorious future of space settlements, but after years of research, they aren't so sure it's a good idea. In a world hurtling toward human expansion into space, A City on Mars investigates whether the dream of new worlds won't create nightmares, both for settlers and the people they leave behind. …",
+    "pubDate": "2026-11-10T19:00:00.000Z",
+    "source": "wilkinson",
+    "sourceLabel": "Wilkinson Public Library",
+    "category": "Library Event",
+    "location": "Wilkinson Public Library",
+    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_22_12_54_08.jpg"
+  },
+  {
+    "title": "Teen Cook",
+    "link": "https://telluridelibrary.libcal.com/event/17486123?hs=a",
+    "description": "2:00 PM – 3:00 PM · Join the WPL Every Tuesday after school for Teen Cook. We will cook a different recipe from scratch, and have enough to share with those around!",
+    "pubDate": "2026-11-10T21:00:00.000Z",
+    "source": "wilkinson",
+    "sourceLabel": "Wilkinson Public Library",
+    "category": "Library Event",
+    "location": "Teen Area",
+    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_15_27_00.png"
+  },
+  {
+    "title": "I Heart Art",
+    "link": "https://telluridelibrary.libcal.com/event/17292109?hs=a",
+    "description": "2:30 PM – 4:00 PM · Looking for a fun and enriching way to spend your afternoons? Join us Tuesdays for I Heart Art, designed especially for kids aged 5-12!  &iquest;Buscas una manera divertida de pasar tus tardes? &iexcl;Unete a nuestro programa extracurricular, dise&ntilde;ado especialmente para ni&ntilde;os de 5 a 12 a&ntilde;os!",
+    "pubDate": "2026-11-10T21:30:00.000Z",
+    "source": "wilkinson",
+    "sourceLabel": "Wilkinson Public Library",
+    "category": "Library Event",
+    "location": "Kids Area",
+    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_17_39_32.png"
+  },
+  {
+    "title": "Free Legal Clinic - Clínica Jurídica Gratuita (Zoom)",
+    "link": "https://telluridelibrary.libcal.com/event/16009655?hs=a",
+    "description": "4:00 PM – 5:40 PM · A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only.  BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una cl&iacute;nica de asesoramiento jur&iacute;dico GRATUITO para las personas que notienen abogado. Abogados voluntarios responder&aacute;n a preguntas, ayudar&aacute;n a llenar formularios y explicar&aacute;n el proceso y el procedimiento de cuestiones jur&iacute;dicas. Los abogados voluntarios no te representan y esta cl&iacute;nica es s&oacute;lo informativa. CON CITA PREVIA. Llame a 970-728-4519 para m&aacute;s informaci&oacute;n y para registrarse.",
+    "pubDate": "2026-11-10T23:00:00.000Z",
+    "source": "wilkinson",
+    "sourceLabel": "Wilkinson Public Library",
+    "category": "Library Event",
+    "location": "Meeting Room #5 - small",
+    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1760996664.jpg"
+  },
+  {
+    "title": "Dance Fit Fusion with Marlen",
+    "link": "https://telluridelibrary.libcal.com/event/17477840?hs=a",
+    "description": "5:00 PM – 6:00 PM · Join Marlen for a high-energy dance fitness class fused with barre, pilates and stretching that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout that will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. &Uacute;nete a Marlen para una clase de fitness de baile llena de energ&iacute;a combinada con barre, pilates y estiramientos que combina movimientos de baja y alta intensidad para un entrenamiento de intervalos que quema calor&iacute;as, tonificando tu cuerpo y aumentando tu resistencia sin darte cuenta de lo duro que est&aacute;s trabajando. &iexcl;Es ejercicio disfrazado! …",
+    "pubDate": "2026-11-11T00:00:00.000Z",
+    "source": "wilkinson",
+    "sourceLabel": "Wilkinson Public Library",
+    "category": "Library Event",
+    "location": "Program Room",
+    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_19_13_49_49.jpg"
   }
 ]
