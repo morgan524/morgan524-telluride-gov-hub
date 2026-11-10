@@ -1,15 +1,5 @@
 [
   {
-    "date": "November 9, 2026",
-    "title": "Intergovernmental Meeting",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8360",
-    "hasAgenda": true,
-    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "1:30 PM",
-    "civicwebId": 8360,
-    "packetUrl": "https://telluride-co.civicweb.net/document/447222/"
-  },
-  {
     "date": "November 17, 2026",
     "title": "(Master Lease Lottery) Telluride Housing Authority",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8329",
@@ -136,5 +126,14 @@
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "10:00 AM",
     "civicwebId": 8331
+  },
+  {
+    "date": "February 8, 2027",
+    "title": "Intergovernmental Meeting",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8340",
+    "hasAgenda": false,
+    "location": "TBD",
+    "time": "1:30 PM",
+    "civicwebId": 8340
   }
 ]

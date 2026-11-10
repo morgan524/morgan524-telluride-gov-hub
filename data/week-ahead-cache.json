@@ -1,18 +1,22 @@
 {
-  "hash": "a7ee6a7b4df6580b015fbec8ebb068732b63ffef",
-  "lede": "The biggest thing to watch this week is the San Miguel County Planning Commission meeting Wednesday, where proposed changes to the Affordable Housing Impact Mitigation Fee — the fee structure that shapes whether and how workforce housing actually gets built across the county — are on the table for discussion. Monday's Open Space Commission is also worth attention, with a resident pushing for a real accounting of the Valley Floor goat grazing pilot: data, costs, wildlife impacts. Throw in a regional intergovernmental session Monday covering cross-jurisdictional development pressures, and the KOTO Ski Swap Friday to remind you why you live here.",
+  "hash": "cac491289ba92abf45bf9c1096fac77cb7ac424a",
+  "lede": "The most consequential meeting this week is the Ouray County BOCC on Monday, November 10, where two public hearings are on the docket — a PUD request to split a 14-acre parcel on County Road 1 and a 2026 budget amendment — plus a vote on whether to repeal an austerity resolution passed last year. San Miguel County's Planning Commission follows on Wednesday with a work session on the Affordable Housing Impact Mitigation Fee, a structure that directly shapes whether workforce housing gets built here. Ouray's Planning Commission also meets Monday to take up a proposed ordinance on natural medicine restrictions.",
   "notable": [
     {
-      "id": 0,
-      "stake": "Commission faces demand for full goat-grazing data, costs, and wildlife accountability."
+      "id": 1,
+      "stake": "Public hearings on a PUD land split, budget amendment, and austerity repeal vote."
     },
     {
-      "id": 11,
-      "stake": "Proposed changes to Affordable Housing Impact Mitigation Fee could reshape workforce housing countywide."
+      "id": 3,
+      "stake": "Proposed ordinance could restrict psychedelic substances in Ouray city limits."
     },
     {
-      "id": 12,
-      "stake": "Commission votes on final open winter vending permit for Gondola Plaza West."
+      "id": 7,
+      "stake": "Proposed fee amendments could reshape how workforce housing gets built countywide."
+    },
+    {
+      "id": 8,
+      "stake": "Subcommittee votes on final open winter vending permit for Gondola Plaza West."
     }
   ]
 }

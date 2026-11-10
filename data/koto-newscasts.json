@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 11-9-26",
+    "source": "KOTO Community Radio",
+    "date": "November 10, 2026",
+    "newsTopic": "community",
+    "copy": "Remembering Christel Leimgruber; County Discusses Flooding Support",
+    "href": "https://koto.org/news/newscast-11-9-26/"
+  },
+  {
     "title": "Newscast 11-6-26",
     "source": "KOTO Community Radio",
     "date": "November 7, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "land-use",
     "copy": "County Land Use Code Gets an Update; Mountain Run Prevails Over EDM Concert; Young Frankenstein Brings the Fright and the Fantastic",
     "href": "https://koto.org/news/newscast-10-28-26/"
-  },
-  {
-    "title": "Newscast 10-26-26",
-    "source": "KOTO Community Radio",
-    "date": "October 27, 2026",
-    "newsTopic": "community",
-    "copy": "Coming Up Next, Telluride; Dam, Beavers!",
-    "href": "https://koto.org/news/newscast-10-26-26/"
   }
 ]

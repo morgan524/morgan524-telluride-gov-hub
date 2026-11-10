@@ -708,30 +708,6 @@
     "imgHiRes": true
   },
   {
-    "title": "'Super Bowl for theater kids'",
-    "source": "Telluride Times",
-    "date": "October 27, 2026",
-    "firstSeen": "2026-10-27",
-    "newsTopic": "education",
-    "copy": "THS theater students are raising $5,000 to attend ThesCon in Denver (Dec. 10–12) while staging \"Young Frankenstein\" Oct. 29–31 at the Michael D. Palm Theatre. Program ad sales and scholarships have covered about 20% so far. Funding cuts have hit the school's theater program hard since its drama teacher retired two years ago and wasn't replaced.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/arts_and_entertainment/article_4447c9ff-5b96-472b-a749-af85ccb311d2.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/11/01188f0c-dab2-480d-ba73-39c6cda9e9a0/6adfa5c0ef71b.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "‘Laugh-out-loud hilarious’",
-    "source": "Telluride Times",
-    "date": "October 27, 2026",
-    "firstSeen": "2026-10-27",
-    "newsTopic": "education",
-    "copy": "Telluride Theatre and the Telluride School District are staging \"Young Frankenstein\" with 17 students in grades 7–12, running October 29–31 at the Michael D. Palm Theatre. Now in its second year of collaboration, the program includes student performers, designers, stage managers, and an assistant director.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/arts_and_entertainment/article_1e23d5d5-62d8-4aad-bbe7-1dcd076255a2.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/e5/2e5f7bea-ba5f-4ef4-8940-3de7fbb8b46e/6adf7b1c2c3a2.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "‘We’re in a vast archaeological treasure trove’",
     "source": "Telluride Times",
     "date": "November 1, 2026",
@@ -742,6 +718,24 @@
     "href": "https://www.telluridenews.com/arts_and_entertainment/article_75f8d2ec-c830-45a2-88ff-aa3bb45759cf.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/03/b03d736c-2c8f-464e-9aa4-134dd9bf03e5/6ae504564d5bd.image.jpg",
     "imgHiRes": true
+  },
+  {
+    "title": "Local Employers Invited to Apply for Employee Housing Master Leases",
+    "source": "Town of Telluride",
+    "date": "October 23, 2026",
+    "newsTopic": "housing",
+    "copy": "(October 22, 2026) – The Telluride Housing Authority (THA) is offering master leases on five apartments at the new Virginia Placer IIA building and two rooms at the Telluride Boarding House to local businesses and organizations.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=408",
+    "img": ""
+  },
+  {
+    "title": "Deed-Restricted Housing Lottery Applications Now Available for Spruce House H",
+    "source": "Town of Telluride",
+    "date": "October 22, 2026",
+    "newsTopic": "housing",
+    "copy": "(October 22, 2026) - The Town of Telluride and the San Miguel Regional Housing Authority (SMRHA) opened applications today for a deed-restricted homeownership lottery for Spruce House H at 226 East Pacific Avenue, Unit H, Telluride, Colorado, 81435.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=407",
+    "img": ""
   },
   {
     "title": "Sign Up for the 2026 Turkey Trot!",
@@ -771,6 +765,15 @@
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14905"
   },
   {
+    "title": "Treasurer's Office Closed 11/11 - 11/3",
+    "source": "San Miguel County",
+    "date": "November 9, 2026",
+    "newsTopic": "community",
+    "copy": "The Treasurer's office will be closed Weds 11/11 - Fri 11/13.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=553",
+    "img": ""
+  },
+  {
     "title": "Fairground Facilities Closed Until Further Notice",
     "source": "San Miguel County",
     "date": "November 6, 2026",
@@ -789,26 +792,13 @@
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
   },
   {
-    "title": "SBA Offers Disaster Assistance in Ouray County",
-    "source": "Town of Ridgway",
-    "date": "October 27, 2026",
-    "firstSeen": "2026-10-28",
+    "title": "DMV Services available in Egnar 11/18",
+    "source": "San Miguel County",
+    "date": "October 15, 2026",
     "newsTopic": "community",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/SBA-Press-Release-Oct-2026-Fire-Flood-Funding.pdf",
-    "img": ""
-  },
-  {
-    "title": "View the Town of Ridgway's Recently Adopted Housing Action Plan",
-    "source": "Town of Ridgway",
-    "date": "October 27, 2026",
-    "firstSeen": "2026-10-27",
-    "newsTopic": "housing",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/CO-Ridgway-HAP_ADOPTED101426-acc.pdf",
-    "img": ""
+    "copy": "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
   },
   {
     "title": "Ridgway Bank Building Officially Added to the National Register of Historic Places",
@@ -833,6 +823,17 @@
     "img": ""
   },
   {
+    "title": "Ridgway Youth Advisory Council Meeting Agenda",
+    "source": "Town of Ridgway",
+    "date": "November 18, 2026",
+    "firstSeen": "2026-11-10",
+    "newsTopic": "government",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/00-Youth-Advisory-Council-Meeting-Agenda-2026-11-18.pdf",
+    "img": ""
+  },
+  {
     "title": "Notice of Public Hearing Wed., Nov. 18, 2026 at 5:30 p.m. - 1) Text Amendment to the Ridgway Municipal Code reducing term of Planning Commission members to 3 years; 2) Application for Resubdivision of Lots 16-22 of Block 22 (N Laura St and Clinton St); 3) Application for Conditional Use Permit for Lot 6 of Block 4 of River Park, Ridgway Business Park (542 N Cora St)",
     "source": "Town of Ridgway",
     "date": "November 4, 2026",
@@ -846,7 +847,7 @@
   {
     "title": "Notice of Public Hearing for Liquor License on November 19, 2026 at 5:30pm - Chipeta Lodge Resort &amp; Spa, 304 S Lena Street - Notice dated October 13, 2026",
     "source": "Town of Ridgway",
-    "date": "November 9, 2026",
+    "date": "November 10, 2026",
     "firstSeen": "2026-10-14",
     "newsTopic": "community",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -857,7 +858,7 @@
   {
     "title": "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     "source": "Town of Ridgway",
-    "date": "November 9, 2026",
+    "date": "November 10, 2026",
     "firstSeen": "2026-09-29",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -868,7 +869,7 @@
   {
     "title": "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     "source": "Town of Ridgway",
-    "date": "November 9, 2026",
+    "date": "November 10, 2026",
     "firstSeen": "2026-09-29",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -879,7 +880,7 @@
   {
     "title": "Town of Ridgway, City of Ouray, and Ouray County Establish New Three-Year Affordable Housing Goals",
     "source": "Town of Ridgway",
-    "date": "November 9, 2026",
+    "date": "November 10, 2026",
     "firstSeen": "2026-10-21",
     "newsTopic": "housing",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
