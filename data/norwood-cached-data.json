@@ -20,12 +20,11 @@
   {
     "date": "November 11, 2026",
     "time": null,
-    "title": "Board of Trustees Meeting",
-    "agendaUrl": null,
+    "title": "Board of Trustees Rescheduled for 11.18.2026 Due to Federal Holiday Meeting",
+    "agendaUrl": "https://www.norwoodtown.com/files/4b4b60e4b/11.11.2026+Board+of+Trustee+Rescheduled+.pdf",
     "packetUrl": null,
     "special": false,
-    "board": "bot",
-    "note": "Projected date falls on Veterans Day; the board may reschedule. Confirm when the agenda posts."
+    "board": "bot"
   },
   {
     "date": "November 16, 2026",

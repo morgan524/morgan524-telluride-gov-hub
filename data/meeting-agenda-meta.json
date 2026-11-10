@@ -355,7 +355,7 @@
   "telluride|2026-11-18|Parks & Recreation Commission - Nov 18 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8084",
     "sv": 4,
-    "ph": "41308feda7cb9e07"
+    "ph": "7b44be1a152fd234"
   },
   "county|2026-11-18|Board of County Commissioners Meeting": {
     "sv": 4
@@ -406,7 +406,10 @@
   "telluride|2026-11-19|Planning & Zoning Commission - Nov 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8108",
     "sv": 4,
-    "ph": "848b7ed7be0a6fd3"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/OC4r5SGcR6S0q5DBnXPh8Q",
+    "meetingId": "893 9320 2174",
+    "passcode": "963785",
+    "phone": "301-715-8592"
   },
   "telluride|2026-11-19|Planning & Zoning Commission Chair - Nov 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8107",
@@ -617,7 +620,7 @@
   "telluride|2026-12-07|Open Space Commission - Dec 07 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8134",
     "sv": 4,
-    "ph": "86fe5e50822c82b4"
+    "ph": "73dde754d9947413"
   },
   "norwood|2026-12-08|Norwood Water Commission Meeting": {
     "sv": 4,
@@ -650,5 +653,13 @@
   "county|2026-12-10|Planning Commission Meeting": {
     "sv": 4,
     "ph": "b7c74705fcca6b2f"
+  },
+  "telluride|2026-11-12|San Miguel Authority for Regional Transportation - Nov 12 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8361",
+    "zoomUrl": "https://us02web.zoom.us/j/89092438576?pwd=wbYXpfraF25klegZlpgVZz5PwtIUNv.1",
+    "sv": 4
+  },
+  "county|2026-12-03|One Time Event": {
+    "sv": 4
   }
 }

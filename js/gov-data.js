@@ -179,6 +179,15 @@ const COUNTY_CACHED_DATA = [
     note: null
   },
   {
+    date: "December 3, 2026",
+    time: "9:30 AM",
+    title: "One Time Event",
+    type: "other",
+    location: "333 West Colorado Ave, 2nd Fl, Telluride, CO 81435",
+    civicClerkId: 1120,
+    note: null
+  },
+  {
     date: "December 9, 2026",
     time: "9:30 AM",
     title: "Board of County Commissioners Regular Meeting",
@@ -769,12 +778,11 @@ const NORWOOD_CACHED_DATA = [
   {
     date: "November 11, 2026",
     time: null,
-    title: "Board of Trustees Meeting",
-    agendaUrl: null,
+    title: "Board of Trustees Rescheduled for 11.18.2026 Due to Federal Holiday Meeting",
+    agendaUrl: "https://www.norwoodtown.com/files/4b4b60e4b/11.11.2026+Board+of+Trustee+Rescheduled+.pdf",
     packetUrl: null,
     special: false,
-    board: "bot",
-    note: "Projected date falls on Veterans Day; the board may reschedule. Confirm when the agenda posts."
+    board: "bot"
   },
   {
     date: "November 16, 2026",

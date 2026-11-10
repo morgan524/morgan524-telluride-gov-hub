@@ -1,22 +1,26 @@
 {
-  "hash": "75d83f41bddb1f20196e5a0cb96ca797d2f5f97b",
-  "lede": "The biggest item this week is the Ouray County BOCC's November 10 meeting, which carries two public hearings — one on the Curry Regular PUD, a proposed 14.42-acre lot split on County Road 1, and one on a 2026 budget amendment — plus a vote on whether to repeal an austerity resolution from last year. San Miguel County's Planning Commission follows on November 12 with a work session on proposed changes to the Affordable Housing Impact Mitigation Fee, a structure that directly shapes whether workforce housing gets built here. Ouray's Planning Commission also meets November 10 to take up a proposed ordinance on natural medicine restrictions under Proposition 122.",
+  "hash": "a3a2e9846c64059e975db1a04432895fcc0aa3aa",
+  "lede": "The heaviest lift this week lands in San Miguel County, where the Planning Commission takes up proposed amendments to the Affordable Housing Impact Mitigation Fee structure on November 12 — a conversation that shapes whether workforce housing actually gets built here. Ouray County's BOCC also has a full plate Monday, with two public hearings including the Curry Regular PUD land split and a budget amendment, plus a vote on repealing an austerity resolution. On the lighter side, the KOTO Ski Swap kicks off Friday and the Ridgway Independent Film Festival runs through the weekend.",
   "notable": [
     {
       "id": 1,
-      "stake": "Public hearings on a lot-split PUD, budget amendment, and austerity resolution repeal."
+      "stake": "Public hearings on a PUD land split, budget amendment, and austerity repeal vote."
     },
     {
       "id": 3,
-      "stake": "Proposed ordinance could restrict psychedelic substances within Ouray city limits."
-    },
-    {
-      "id": 7,
-      "stake": "Proposed fee-structure changes could directly affect how workforce housing gets built countywide."
+      "stake": "Ouray city vote on ordinance restricting psychedelic substances under Prop 122."
     },
     {
       "id": 8,
-      "stake": "Public action on the remaining winter vending permit for Gondola Plaza West."
+      "stake": "Proposed changes to county affordable housing fee structure affect workforce housing supply."
+    },
+    {
+      "id": 9,
+      "stake": "Town board awards final Gondola Plaza West winter vending permit."
+    },
+    {
+      "id": 10,
+      "stake": "Board votes on three resolutions including federal transit grant comments and ED contract amendment."
     }
   ]
 }
