@@ -429,7 +429,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=773056","sv":4},
 
   "telluride|2026-12-02|Commission for Community Assistance, Arts & Special Events - Dec 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8069","sv":4,"ph":"8fc648d68da140f0"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8069","sv":4,"ph":"1782388eee465c34"},
 
   "telluride|2026-12-02|Telluride Housing Authority Subcommittee - Dec 02 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8166","sv":4,"ph":"8157a58c768c338c"},
@@ -1008,26 +1008,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Reminder: Pilgrimage to Poland will be June 8-22, 2027. If interested, contact the Church Office at 970-728-3387 or Fr Mariusz via email at spctelluride@gmail.com.Sign-up and deposit are due by Oct. 31.Details are attached as PDF.Poland Pil...",
     href: "https://stpatrickstelluride.com/2026/parish-news/poland-pilgrimage-sign-ups-due-tomorrow/",
     img: ""
-  },
-  {
-    title: "SBA Offers Disaster Assistance Across Colorado - Low-Interest Disaster Loans Now Available",
-    source: "Ouray County",
-    sourceKey: "ouray-county",
-    date: "October 28, 2026",
-    newsTopic: "public-safety",
-    copy: "The U.S. Small Business Administration announced low-interest federal disaster loans are now available to Colorado communities because of the Willow Fire, the Elk Fire, and the Ouray County wildfires, flooding, and mudslides.",
-    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=968",
-    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22986"
-  },
-  {
-    title: "JOINT COMMUNITY MESSAGE: Transition of Policing Services in Ouray",
-    source: "Ouray County",
-    sourceKey: "ouray-county",
-    date: "October 28, 2026",
-    newsTopic: "public-safety",
-    copy: "We are excited to announce that the Ouray County Sheriff’s Office has officially taken over municipal policing and law enforcement services within the City of Ouray.",
-    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=967",
-    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22993"
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
@@ -3346,6 +3326,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Local Employers Invited to Apply for Employee Housing Master Leases",
+    source: "Town of Telluride",
+    date: "October 23, 2026",
+    newsTopic: "housing",
+    copy: "(October 22, 2026) – The Telluride Housing Authority (THA) is offering master leases on five apartments at the new Virginia Placer IIA building and two rooms at the Telluride Boarding House to local businesses and organizations.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=408",
+    img: ""
+  },
+  {
+    title: "Deed-Restricted Housing Lottery Applications Now Available for Spruce House H",
+    source: "Town of Telluride",
+    date: "October 22, 2026",
+    newsTopic: "housing",
+    copy: "(October 22, 2026) - The Town of Telluride and the San Miguel Regional Housing Authority (SMRHA) opened applications today for a deed-restricted homeownership lottery for Spruce House H at 226 East Pacific Avenue, Unit H, Telluride, Colorado, 81435.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=407",
+    img: ""
+  },
+  {
     title: "Sign Up for the 2026 Turkey Trot!",
     source: "San Miguel County",
     date: "November 5, 2026",
@@ -3398,6 +3396,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Due to changing weather conditions and the onset of winter, Imogene and Black Bear Passes are now officially closed for the season.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=551",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
+  },
+  {
+    title: "DMV Services available in Egnar 11/18",
+    source: "San Miguel County",
+    date: "October 15, 2026",
+    newsTopic: "community",
+    copy: "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
   },
   {
     title: "Ridgway Bank Building Officially Added to the National Register of Historic Places",
@@ -3609,6 +3616,32 @@ const KOTO_FEATURED_STORIES = [
 // page over the coming weeks, the bot will add them with firstSeen=today
 // and the array will naturally shed the sentinels via the same logic.
 const SMB_FORUM_ARTICLES = [
+  {
+    title: "Pentz reflects on PVS, grateful for school sale and Redd family",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "November 11, 2026",
+    firstSeen: "2026-11-11",
+    dateSource: "article",
+    newsTopic: "education",
+    copy: "Paradox Valley School closed in 2023 after years of challenges, but the property stayed in community hands — the Redd family donated funds for nonprofit UI Charitable to purchase the campus and hold it as a charitable asset. Future uses being discussed include a community hub, classes, recreation, emergency services, and possibly a school again.",
+    claudeSummary: true,
+    href: "https://www.sanmiguelbasinforum.com/stories/pentz-reflects-on-pvs-grateful-for-school-sale-and-redd-family,135769",
+    img: ""
+  },
+  {
+    title: "Art at the Apothecary announces community art events",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "November 11, 2026",
+    firstSeen: "2026-11-11",
+    dateSource: "article",
+    newsTopic: "arts-culture",
+    copy: "Art at the Apothecary in Nucla has a craft fair Nov. 28 (10 a.m.–4 p.m.) and Elfin Eve on Dec. 3, featuring local makers selling quilts, baskets, crocheted goods, 3-D printing, tinctures, and more. Quilting classes are set to resume in January.",
+    claudeSummary: true,
+    href: "https://www.sanmiguelbasinforum.com/stories/art-at-the-apothecary-announces-community-art-events,135771",
+    img: "https://zeta.creativecirclecdn.com/smb/original/20261111-095952-4aa-F2%20-%20photo%20option.jpg"
+  },
   {
     title: "Norwood celebrates league championship after Campbell named Broncos coach of the week",
     source: "San Miguel Basin Forum",
@@ -4839,6 +4872,18 @@ const ALIBI_EVENTS = [
     imageUrl: "https://1v09t9hszk.ucarecd.net/5a0e2028-07e8-4974-b039-d62e8ab44ab4/"
   },
   {
+    title: "Wild Love Tigress",
+    link: "https://www.alibitelluride.com/calendar#eca-event=wild-love-tigress",
+    description: "Wild Love Tigress is a funk band performing live at The Alibi, bringing an expansive sound that includes horns and backing singers. The show starts at 9:00 PM.",
+    pubDate: "2026-12-17",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://1v09t9hszk.ucarecd.net/5200691c-3406-4f5d-9291-108fe34d7eb6/"
+  },
+  {
     title: "Joint Point",
     link: "https://www.alibitelluride.com/calendar#eca-event=joint-point",
     description: "Joint Point is an original jam band from Colorado known for blending adventurous rock with improvisational, genre-spanning musicianship. The group performs at The Alibi in Telluride, bringing their signature live sound to an intimate late-night setting.",
@@ -5647,14 +5692,14 @@ const OURAY_RIDGWAY_EVENTS = [
   },
   {
     title: "Watercolor & Wine with Katey Fetch: Moonlight & Mountains",
-    link: "https://events.ourayridgwayevents.com/event/watercolor-wine-with-katey-fetch-moonlight-mountains",
-    description: "Create a moonlit mountain watercolor with Katey Fetch in a relaxed paint-and-sip class. Designed for beginners and welcoming to all experience levels, the class includes step-by-step guidance, one beverage and all art supplies.",
+    link: "https://events.ourayridgwayevents.com/event/watercolor-wine-with-katey-fetch-moonlight-mountains-5914",
+    description: "Unwind, get creative, and discover the joy of watercolor in this relaxed paint-and-sip class! You'll create a moonlit mountain watercolor with Katey Fetch. Designed for beginners but welcoming to artists of all experience levels, this class will guide you step by step through creating a beautiful watercolor painting in a fun, supportive environment. A beverage and all supplies are included. About the Instructor: Katey Fetch: Katey Fetch hails from a small town in Colorado, where she continues to learn how to be an artist. Though she went to art school, she took a long hiatus from art and is in the midst of rediscovering what art means to her. Her favorite mediums are graphite pencil and watercolor. She draws inspiration from many talented artists, both past and present, nature, and the wonder of the three feral beasts she’s raising—aka, her daughters. Katey enjoys creating portraits, forlorn figures, and interesting compositions.",
     pubDate: "2026-11-13T01:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "The Annex on Cora",
-    imageUrl: "https://localist-images.azureedge.net/photos/54066522860674/huge/ec6044316283ccc798d207fc858154d0421bc0ff.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/54226967465916/huge/f2b2a7765648f57e0960f267f5571df9510dfcd8.jpg"
   },
   {
     title: "Music Bingo",
@@ -6272,7 +6317,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Yule Day",
     link: "https://events.ourayridgwayevents.com/event/yule-day",
-    description: "Celebrate Yule Day in Ouray and Ridgway with a magical winter festival for the whole family. Stroll a twinkling village of artisan booths, savor hot cocoa and seasonal treats, enjoy live carolers, and meet Santa in a snowy alpine setting. Kids’ crafts, a community tree-lighting, and cozy fireside storytelling make this a heartwarming holiday tradition—join neighbors and visitors for a sparkling evening of cheer and small-town charm. More Info to come!",
+    description: "Celebrate Yule Day in Ouray and Ridgway with a magical winter festival for the whole family. Stroll a twinkling village of artisan booths, savor hot cocoa and seasonal treats, enjoy live carolers, and meet Santa in a snowy alpine setting. Kids’ crafts, a community tree-lighting, and cozy fireside storytelling make this a heartwarming holiday tradition—join neighbors and visitors for a sparkling evening of cheer and small-town charm. Schedule of Events: 10:00 AM – 4:00 PM: Elf on the Shelf (Cards located at VC, Library)Adult Black Out Card (Cards located at Marmot's Açai)Library Holiday Market 11:00 AM – 1:00 PM: Cindy Lou Who & Grinch appearances (Visitor Center & Main Street) 12:00 PM – 4:00 PM: At The Wright Opera House Letters to Santa, Cookie Decorating, Hot Cocoa Bar 1:00 PM – 3:00 PM: At The Wright Opera House Photos with Cindy Lou WhoMrs. …",
     pubDate: "2026-12-05T07:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -6301,6 +6346,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Beaumont Hotel & Spa",
     imageUrl: "https://localist-images.azureedge.net/photos/54426336992107/huge/479c4f5831dc9da4cb4faa828ee0b67c07643535.jpg"
+  },
+  {
+    title: "The Beaumont Hotel Christmas Tea",
+    link: "https://events.ourayridgwayevents.com/event/the-beaumont-hotel-christmas-tea",
+    description: "Celebrate the magic of the holiday season with an elegant Christmas Tea at the historic Beaumont Hotel in beautiful Ouray, Colorado! Join us on Saturday, December 5, for a festive afternoon filled with delicious tea sandwiches, freshly baked scones, and an assortment of sweet treats. Gather your friends, bring the family, and enjoy a charming holiday tradition surrounded by the timeless elegance and historic beauty of the Beaumont Hotel. Whether you're starting a new holiday tradition or continuing a favorite one, Christmas Tea at the Beaumont is the perfect way to slow down, savor the season, and make special memories. EVENT DETAILS 📅 Saturday, December 5, 2026 🕰️ Two Tea Times Available: 1:00 PM 2:45 PM 📍 The Beaumont Hotel Ouray, Colorado 💲 Pricing: Adults: $65 per person Children (10 & under): $35 per person Enjoy an assortment of tea sandwiches, scones, and sweet treats! …",
+    pubDate: "2026-12-05T20:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Beaumont Hotel & Spa",
+    imageUrl: "https://localist-images.azureedge.net/photos/54480765793368/huge/27d2745cd7b779e3c0ec4325e87b6bd4babd828d.jpg"
   },
   {
     title: "Ouray Yule! Jeep Raffle • Tree Lighting • Holiday Parade",

@@ -297,8 +297,8 @@ const SMART_CACHED_DATA = [
     time: "4:00 PM",
     title: "SMART Board of Directors",
     location: "SMART Office, Lawson Hill (also virtual — see agenda)",
-    agendaUrl: null,
-    packetUrl: null
+    agendaUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/Board-Agenda_November-12th-2026.pdf",
+    packetUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/Board-Packet_November-12th-2026.pdf"
   },
   {
     date: "November 16, 2026",
@@ -308,6 +308,14 @@ const SMART_CACHED_DATA = [
     agendaUrl: null,
     packetUrl: null,
     note: "Gondola Advisory Committee (Gsub) — advises SMART on the gondola replacement project. Agenda, packet and Zoom link post at least 24 hours before."
+  },
+  {
+    date: "December 10, 2026",
+    time: "4:00 PM",
+    title: "SMART Board of Directors",
+    location: "SMART Office, Lawson Hill (also virtual — see agenda)",
+    agendaUrl: null,
+    packetUrl: null
   }
 ];
 

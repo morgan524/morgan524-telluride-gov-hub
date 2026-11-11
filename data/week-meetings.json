@@ -67,8 +67,8 @@
     "time": "4:00 PM",
     "location": "SMART Office, Lawson Hill (also virtual — see agenda)",
     "agendaUrl": "",
-    "packetUrl": "",
-    "link": "https://smarttelluride.colorado.gov/board-meetings",
+    "packetUrl": "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/Board-Packet_November-12th-2026.pdf",
+    "link": "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/Board-Agenda_November-12th-2026.pdf",
     "hasAgenda": false,
     "summary": "The November 12, 2026 SMART Board of Directors agenda hasn't been posted yet.",
     "zoomLink": "",
@@ -937,6 +937,26 @@
     "zoomPhone": "",
     "livestream": "https://media.avcaptureall.cloud/?customerGuid=f6f590a7-5acc-4d32-9928-ad9ae0d02e06",
     "commentEmail": "council@mtnvillage.org",
+    "hook": ""
+  },
+  {
+    "source": "smart",
+    "sourceLabel": "SMART Transit",
+    "title": "SMART Board of Directors",
+    "date": "2026-12-10",
+    "time": "4:00 PM",
+    "location": "SMART Office, Lawson Hill (also virtual — see agenda)",
+    "agendaUrl": "",
+    "packetUrl": "",
+    "link": "https://smarttelluride.colorado.gov/board-meetings",
+    "hasAgenda": false,
+    "summary": "",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "",
+    "commentEmail": "",
     "hook": ""
   }
 ]
