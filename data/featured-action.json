@@ -1,26 +1,26 @@
 {
- "generated": "2026-11-10T23:04:15.055Z",
+ "generated": "2026-11-11T05:31:39.376Z",
  "pinned": false,
- "topic": "norwoodwater",
- "topicLabel": "Norwood Water",
- "headline": "Norwood Water goes before Norwood Water Commission Meeting on Tuesday, November 10",
- "blurb": "The November 10, 2026 Norwood Water Commission Meeting agenda hasn't been posted yet.",
+ "topic": "gondola",
+ "topicLabel": "Gondola 3A",
+ "headline": "Gondola 3A goes before SMART Gondola Advisory Committee on Monday, November 16",
+ "blurb": "The November 16 SMART Gondola Advisory Committee agenda hasn't been posted yet.",
  "images": [],
  "deepDive": {
-  "label": "Norwood Water",
-  "href": "/deep-dive-norwoodwater.html"
+  "label": "Gondola 3A",
+  "href": "/deep-dive-gondola.html"
  },
  "meeting": {
-  "title": "Norwood Water Commission Meeting",
-  "sourceLabel": "Town of Norwood",
-  "date": "2026-11-10",
-  "humanDate": "Tuesday, November 10",
-  "time": "",
-  "location": "1670 Naturita St, Norwood CO 81423",
+  "title": "SMART Gondola Advisory Committee",
+  "sourceLabel": "SMART Transit",
+  "date": "2026-11-16",
+  "humanDate": "Monday, November 16",
+  "time": "3:00 PM",
+  "location": "Virtual (Zoom link in the agenda)",
   "agendaUrl": "",
   "hasAgenda": false,
-  "packetUrl": "https://www.norwoodtown.com/files/834de0904/11.10.2026+NWC+Supporting+Documents.pdf",
-  "link": "https://www.norwoodtown.com/files/285151cdb/11.10.26+NWC+Meeting+Agenda+.pdf",
+  "packetUrl": "",
+  "link": "https://smarttelluride.colorado.gov/board-meetings",
   "zoomLink": "",
   "livestream": ""
  }

@@ -1,26 +1,18 @@
 {
-  "hash": "a3a2e9846c64059e975db1a04432895fcc0aa3aa",
-  "lede": "The heaviest lift this week lands in San Miguel County, where the Planning Commission takes up proposed amendments to the Affordable Housing Impact Mitigation Fee structure on November 12 — a conversation that shapes whether workforce housing actually gets built here. Ouray County's BOCC also has a full plate Monday, with two public hearings including the Curry Regular PUD land split and a budget amendment, plus a vote on repealing an austerity resolution. On the lighter side, the KOTO Ski Swap kicks off Friday and the Ridgway Independent Film Festival runs through the weekend.",
+  "hash": "adfd9935d1eb8f478ae5b7b8f7b9b1ad86987d1c",
+  "lede": "The sharpest item this week is Thursday's San Miguel County Planning Commission meeting, where proposed amendments to the Affordable Housing Impact Mitigation Fee — LUC Section 5-1303 — are on the table alongside broader housing incentive ideas; how that fee gets structured will shape what workforce housing actually gets built here. SMART's board also meets Thursday to vote on resolutions including a federal Capital Investments Grant comment and an amendment to the Executive Director's employment agreement, with a gondola project update in the mix. On the lighter side, the KOTO Ski Swap kicks off Friday and the Ridgway Independent Film Festival runs through the weekend.",
   "notable": [
     {
-      "id": 1,
-      "stake": "Public hearings on a PUD land split, budget amendment, and austerity repeal vote."
+      "id": 4,
+      "stake": "Proposed fee changes to Affordable Housing Impact Mitigation could reshape workforce housing county-wide."
     },
     {
-      "id": 3,
-      "stake": "Ouray city vote on ordinance restricting psychedelic substances under Prop 122."
+      "id": 5,
+      "stake": "Board votes on final open winter vending permit for Gondola Plaza West."
     },
     {
-      "id": 8,
-      "stake": "Proposed changes to county affordable housing fee structure affect workforce housing supply."
-    },
-    {
-      "id": 9,
-      "stake": "Town board awards final Gondola Plaza West winter vending permit."
-    },
-    {
-      "id": 10,
-      "stake": "Board votes on three resolutions including federal transit grant comments and ED contract amendment."
+      "id": 6,
+      "stake": "SMART votes on federal grant program comments and Executive Director employment amendment."
     }
   ]
 }
