@@ -1,18 +1,18 @@
 {
-  "hash": "adfd9935d1eb8f478ae5b7b8f7b9b1ad86987d1c",
-  "lede": "The sharpest item this week is Thursday's San Miguel County Planning Commission meeting, where proposed amendments to the Affordable Housing Impact Mitigation Fee — LUC Section 5-1303 — are on the table alongside broader housing incentive ideas; how that fee gets structured will shape what workforce housing actually gets built here. SMART's board also meets Thursday to vote on resolutions including a federal Capital Investments Grant comment and an amendment to the Executive Director's employment agreement, with a gondola project update in the mix. On the lighter side, the KOTO Ski Swap kicks off Friday and the Ridgway Independent Film Festival runs through the weekend.",
+  "hash": "ac0d321c0990606e100820acddd04501d5f44395",
+  "lede": "The most consequential meeting this week is San Miguel County's Planning Commission on November 12, where proposed amendments to the Affordable Housing Impact Mitigation Fee — LUC Section 5-1303 — are on the table alongside broader housing incentive ideas; that fee structure directly shapes whether workforce housing gets built here, so it's worth paying attention. SMART's board also meets virtually that same day to act on three resolutions, including an amendment to the Executive Director's employment agreement and a resolution on federal transit grant program changes, with a gondola project update in the mix. On the lighter side, the KOTO Ski Swap kicks off Friday and there's ski film action at the Sheridan Opera House on Saturday.",
   "notable": [
     {
       "id": 4,
-      "stake": "Proposed fee changes to Affordable Housing Impact Mitigation could reshape workforce housing county-wide."
-    },
-    {
-      "id": 5,
-      "stake": "Board votes on final open winter vending permit for Gondola Plaza West."
+      "stake": "Proposed fee changes to county affordable housing mitigation could reshape workforce housing."
     },
     {
       "id": 6,
-      "stake": "SMART votes on federal grant program comments and Executive Director employment amendment."
+      "stake": "Board votes on federal transit grant comments and Executive Director contract amendment."
+    },
+    {
+      "id": 5,
+      "stake": "Final winter vending permit for Gondola Plaza West decided — The Gyro Cart on the line."
     }
   ]
 }

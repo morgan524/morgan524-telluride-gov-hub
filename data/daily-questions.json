@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-11-11",
+    "title": "Should the town hire a consultant to review its employee housing rules?",
+    "body": "Town Council is expected to discuss bringing in consulting services for a comprehensive review of Telluride's employee rental housing policies. That sounds procedural — until you think about what it means.\n\nSome residents will say outside expertise is exactly what's needed: fresh eyes, no local politics, a real audit of whether the rules are working. Others will push back — consultants cost money, and the people who know how employee housing actually functions up here are already in town.\n\nIs outside help the right move for something this local?",
+    "choices": [
+      "Fresh eyes are worth it",
+      "We know our own problems",
+      "Depends on the cost",
+      "It's complicated"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-11-10",
     "title": "A trail, a canopy, and a fresh coat for the jail",
     "body": "The Planning Commission has a mixed plate: a connector trail, a fuel island canopy, and painting the county jail are all on the table. Each one sounds routine until you think about what it competes with. Trail access is something a lot of people here care about. Jail upkeep is a public obligation. A fuel canopy is infrastructure. The question is whether these get weighed against each other — or just rubber-stamped one by one.\n\nWhich of these would you most want the commission to slow down and scrutinize?",
@@ -419,21 +434,6 @@
       "More coordination makes us safer",
       "Too diffuse to be effective",
       "Depends on what's in it"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-10-12",
-    "title": "A trail connector — or just another county project?",
-    "body": "The Board of County Commissioners has a Lawson Hill Connector Trail project on its work session agenda alongside routine infrastructure items like a fuel island canopy and jail painting. A trail connector sounds simple enough — until you live near one. Some residents will see it as long-overdue infrastructure linking the community. Others will wonder about cost, maintenance, and who actually pushed it forward. It's a work session, so nothing is decided yet. Who benefits from a connector trail, and who ends up paying for it?",
-    "choices": [
-      "Good investment for the community",
-      "Not the county's priority right now",
-      "Depends on where it goes",
-      "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",
     "topics": [

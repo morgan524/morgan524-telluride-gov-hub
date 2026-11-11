@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T05:31:39.374Z",
+ "generated": "2026-11-11T13:53:58.868Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -117,18 +117,9 @@
      "livestream": ""
     }
    ],
-   "recent": [
-    {
-     "source": "telluride",
-     "date": "2026-10-27",
-     "title": "Town Council - Oct 27 2026",
-     "snippet": "Three substantive items anchor this meeting. Council takes up the Fourth Supplement to the Gondola IGA, extending cost-sharing for the 2027 planning and development budget on the gondola replacement…"
-    }
-   ],
+   "recent": [],
    "developments": [],
-   "stale": [
-    "Gondola 3A: telluride discussed it on 2026-10-27 (\"Town Council - Oct 27 2026\") but the deep dive was last edited 2026-07-20."
-   ]
+   "stale": []
   },
   "norwoodwater": {
    "label": "Norwood Water",
@@ -150,6 +141,12 @@
    "recent": [
     {
      "source": "norwood",
+     "date": "2026-11-10",
+     "title": "Norwood Water Commission Meeting",
+     "snippet": "The November 10, 2026 Norwood Water Commission Meeting agenda hasn't been posted yet."
+    },
+    {
+     "source": "norwood",
      "date": "2026-11-02",
      "title": "Norwood Water Commission Work Session",
      "snippet": "The Norwood Water Commission sits down for a work session focused on a single item: the 2027 draft budget. Work sessions are deliberative — no formal action can be taken — so this is the commission's…"
@@ -157,6 +154,7 @@
    ],
    "developments": [],
    "stale": [
+    "Norwood Water: norwood discussed it on 2026-11-10 (\"Norwood Water Commission Meeting\") but the deep dive was last edited 2026-07-23.",
     "Norwood Water: norwood discussed it on 2026-11-02 (\"Norwood Water Commission Work Session\") but the deep dive was last edited 2026-07-23."
    ]
   },

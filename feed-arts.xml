@@ -6,21 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Nov 2026 05:31:47 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 13:54:07 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Wed, Nov 11] Dance Fit Fusion with Marlen</title>
-      <link>https://telluridelibrary.libcal.com/event/17477840?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/dance%20fit%20fusion%20with%7C2026-11-11</guid>
-      <pubDate>Wed, 11 Nov 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_19_13_49_49.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Program Room
-
-5:00 PM – 6:00 PM · Join Marlen for a high-energy dance fitness class fused with barre, pilates and stretching that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout that will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. &Uacute;nete a Marlen para una clase de fitness de baile llena de energ&iacute;a combinada con barre, pilates y estiramientos que combina movimientos de baja y alta intensidad para un entrenamiento de intervalos que quema calor&iacute;as, tonificando tu cuerpo y aumentando tu resistencia sin darte cuenta de lo duro que est&aacute;s trabajando. &iexcl;Es ejercicio disfrazado! …]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_19_13_49_49.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
     <item>
       <title>[Meeting] Board of Trustees Meeting — 2026-11-11</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
@@ -55,6 +42,19 @@ The November 11, 2026 Norwood Board of Trustees Meeting agenda hasn't been poste
       <category>Norwood</category>
     </item>
     <item>
+      <title>[Wed, Nov 11] Movie and A Snack Club</title>
+      <link>https://telluridelibrary.libcal.com/event/17282939?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/movie%20and%20a%20snack%7C2026-11-11</guid>
+      <pubDate>Wed, 11 Nov 2026 22:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_23_17_12_52.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+A free library program held in the Program Room at Wilkinson Public Library, where participants gather to watch a movie and enjoy a snack. The event runs from 3:30 to 5:30 PM.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_23_17_12_52.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
       <title>[Meeting] SMART Board of Directors — 2026-11-12</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/smart%7C2026-11-12%7CSMART%20Board%20of%20Directors</guid>
@@ -74,7 +74,7 @@ The November 12, 2026 SMART Board of Directors agenda hasn't been posted yet.]]>
 
 Two substantive items on the November 12 agenda. The morning work session takes up proposed amendments to LUC Section 5-1303 — the Affordable Housing Impact Mitigation Fee — along with a broader discussion of housing incentive ideas. That fee structure has real implications for how (and whether) workforce housing gets built across the county, so the conversation is worth watching. After lunch, the commission moves to a formal land use application: a county-initiated rezoning of a portion of Placerville Park around the fire station, from Forestry, Agriculture, and Open (F) to Public (P) — a housekeeping move to bring the zoning in line with the site's actual public use.
 
-⚡ Why it matters: Proposed fee changes to Affordable Housing Impact Mitigation could reshape workforce housing county-wide.]]></description>
+⚡ Why it matters: Proposed fee changes to county affordable housing mitigation could reshape workforce housing.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -87,7 +87,7 @@ Two substantive items on the November 12 agenda. The morning work session takes 
 
 The Vending Subcommittee meets to approve minutes from September 23 and to act on the remaining open permit for the 2026-2027 winter vending season at Gondola Plaza. The Gondola Plaza East spot was already awarded to Mini Deli (PhilAm, LLC) in September. Up now is Gondola Plaza West, where The Gyro Cart — a returning vendor with eight consecutive summer seasons on Oak Street East — has submitted a late application to operate through the winter season serving lamb gyros, chicken shawarma, Greek salads, and related items, 11am to 4pm. Staff recommends granting the permit. Winter vending permits run $250 for the season.
 
-⚡ Why it matters: Board votes on final open winter vending permit for Gondola Plaza West.]]></description>
+⚡ Why it matters: Final winter vending permit for Gondola Plaza West decided — The Gyro Cart on the line.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -100,7 +100,7 @@ The Vending Subcommittee meets to approve minutes from September 23 and to act o
 
 SMART's board convenes virtually to act on three resolutions: routine agenda/minutes approval, a resolution of support for comments on proposed changes to a federal Capital Investments Grant Program, and an amendment to the Executive Director's employment agreement. The gondola project gets a verbal update — always worth watching given the ongoing SMART Ballot Issue 3A context. The board also receives the November operations report and Q3 2026 performance data before closing with an executive session on personnel matters concerning the Executive Director position.
 
-⚡ Why it matters: SMART votes on federal grant program comments and Executive Director employment amendment.]]></description>
+⚡ Why it matters: Board votes on federal transit grant comments and Executive Director contract amendment.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -167,17 +167,6 @@ Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norto
       <media:content url="https://koto.org/wp-content/uploads/2026/10/wellness-lineup-21.png" medium="image" />
       <category>Community Event</category>
       <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Sun, Nov 15] Ridgway Independent Film Fest ~ We Invited the Monsters In</title>
-      <link>https://sherbino.org/event/ridgway-independent-film-fest-we-invited-the-monsters-in/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/ridgway%20independent%20film%20fest%7C2026-11-15</guid>
-      <pubDate>Sun, 15 Nov 2026 10:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://sherbino.org/wp-content/uploads/2026/09/Block4.weinvitedthemonstersin-1.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />📍 The Sherbino, Ridgway
-
-The Ridgway Independent Film Fest presents *We Invited the Monsters In*, a film screening at The Sherbino exploring the blurry line between monsters and the familiar. The festival offers single-block general admission tickets as well as all-access passes and volunteer opportunities for those wanting a deeper involvement in the event.]]></description>
-      <media:content url="https://sherbino.org/wp-content/uploads/2026/09/Block4.weinvitedthemonstersin-1.png" medium="image" />
-      <category>Community Event</category>
     </item>
     <item>
       <title>[Meeting] Telluride Board of Education Work Session — 2026-11-16</title>
