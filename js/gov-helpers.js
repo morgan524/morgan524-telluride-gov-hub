@@ -1087,7 +1087,7 @@ const ENGAGE_MEETINGS = [
   }
 ];         // Engage Telluride project key dates
 const MANUAL_SUMMARIES_CACHE_DATE = '2026-11-10';
-const LEGAL_NOTICES_CACHE_DATE = '2026-11-10';
+const LEGAL_NOTICES_CACHE_DATE = '2026-11-11';
 
 const MANUAL_SUMMARIES = {
   "norwood|2026-10-13|Norwood Water Commission Meeting":
@@ -3334,54 +3334,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Miner Volleyball takes two of Homecoming three",
-    source: "Telluride Times",
-    date: "October 28, 2026",
-    firstSeen: "2026-10-29",
-    newsTopic: "community",
-    copy: "Telluride volleyball swept Homecoming week with two wins, including a hard-fought 25-22, 26-28, 25-19, 25-21 victory over Crested Butte, moving the Lady Miners to 11-10 overall and up to no. 35 in state rankings. The boys soccer team dropped a 1-0 decision to Crested Butte on a deflected goal but still earned the no. 1 seed in the 2A State Tournament.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_4492fe42-2cd7-47eb-80ac-0e17be24e0f6.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/dc/6dcf7ba2-e1a1-4bed-9a62-c41f9bcfb972/6adfce32c2a51.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Shrek-tastic",
-    source: "Telluride Times",
-    date: "October 28, 2026",
-    firstSeen: "2026-10-28",
-    newsTopic: "community",
-    copy: "\"Shrek the Musical\" ran at the Sheridan Opera House Oct. 8–11, with Kevin Douglas, Rachel Brand, and Nico Pantovich-Gonzalez in the lead roles. Audiences responded well — one theatergoer called it \"really well done and very funny.\"",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_14a58af3-1776-4a9d-860c-8f6f77b1b1f9.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/75/775eb22a-fec7-42bf-85c4-e8fd28b92639/6ad9339685183.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Spooky night for pets",
-    source: "Telluride Times",
-    date: "October 28, 2026",
-    firstSeen: "2026-10-28",
-    newsTopic: "community",
-    copy: "Halloween ranks second only to July 4th for stressed pets. Keep them inside with a quiet space, soft sounds, and treats — away from candy, decorations, and the constant doorbell. If you dress them up, keep it short.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_7a83e1f9-de44-437c-8e41-755360e07d2a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/26/c26c8091-744c-4b3e-8bbf-c7aa0b0c0ad2/6adb81286a31d.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride Ski Resort hires new ski patrol director",
-    source: "Telluride Times",
-    date: "October 28, 2026",
-    firstSeen: "2026-10-28",
-    newsTopic: "recreation",
-    copy: "Telluride Ski Resort has named Elizabeth Howe as its new ski patrol director — a return for someone who started here as a liftie back in 1993. She spent 20 years at Telski before moving on to senior roles at Vail and Mountain Capital Partners. She stepped into the position in August.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_5896ddf0-c4ae-4bef-a404-f05f5a98b20c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/be/ebed7049-41d3-4eb3-a95a-0dc2ee58ddca/6ad92ba6b2708.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "‘We’re in a vast archaeological treasure trove’",
     source: "Telluride Times",
     date: "November 1, 2026",
@@ -3392,24 +3344,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/arts_and_entertainment/article_75f8d2ec-c830-45a2-88ff-aa3bb45759cf.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/03/b03d736c-2c8f-464e-9aa4-134dd9bf03e5/6ae504564d5bd.image.jpg",
     imgHiRes: true
-  },
-  {
-    title: "Local Employers Invited to Apply for Employee Housing Master Leases",
-    source: "Town of Telluride",
-    date: "October 23, 2026",
-    newsTopic: "housing",
-    copy: "(October 22, 2026) – The Telluride Housing Authority (THA) is offering master leases on five apartments at the new Virginia Placer IIA building and two rooms at the Telluride Boarding House to local businesses and organizations.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=408",
-    img: ""
-  },
-  {
-    title: "Deed-Restricted Housing Lottery Applications Now Available for Spruce House H",
-    source: "Town of Telluride",
-    date: "October 22, 2026",
-    newsTopic: "housing",
-    copy: "(October 22, 2026) - The Town of Telluride and the San Miguel Regional Housing Authority (SMRHA) opened applications today for a deed-restricted homeownership lottery for Spruce House H at 226 East Pacific Avenue, Unit H, Telluride, Colorado, 81435.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=407",
-    img: ""
   },
   {
     title: "Sign Up for the 2026 Turkey Trot!",
@@ -3464,15 +3398,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Due to changing weather conditions and the onset of winter, Imogene and Black Bear Passes are now officially closed for the season.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=551",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
-  },
-  {
-    title: "DMV Services available in Egnar 11/18",
-    source: "San Miguel County",
-    date: "October 15, 2026",
-    newsTopic: "community",
-    copy: "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
   },
   {
     title: "Ridgway Bank Building Officially Added to the National Register of Historic Places",
@@ -7813,23 +7738,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_4fe133a6-ca5f-42a1-810d-63306c1b854d.html",
     address: "Telluride Regional Airport, Telluride, CO",
     noticeKey: "itb-telluride-airport-arff-truck-2026"
-  },
-  {
-    title: "Request for Proposal -- TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "Town of Telluride is seeking qualified respondents for: TELLURIDE 4th OF JULY DRONE SHOWS PRODUCTION REQUEST FOR PROPOSALS.",
-    deadline: "Closes 1/11/2026",
-    expires: "2026-01-11",
-    dates: "11/10",
-    url: "https://www.telluride.gov/bids.aspx?bidID=133",
-    address: "",
-    totBidID: "133"
   }
 ];
 
