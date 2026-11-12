@@ -205,5 +205,14 @@
     "location": "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
     "civicClerkId": 1108,
     "note": null
+  },
+  {
+    "date": "February 10, 2027",
+    "time": "9:30 AM",
+    "title": "Board of County Commissioners Work Session",
+    "type": "bocc",
+    "location": "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    "civicClerkId": 1096,
+    "note": null
   }
 ]

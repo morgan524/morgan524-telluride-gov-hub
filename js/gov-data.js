@@ -265,6 +265,15 @@ const COUNTY_CACHED_DATA = [
     location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
     civicClerkId: 1108,
     note: null
+  },
+  {
+    date: "February 10, 2027",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Work Session",
+    type: "bocc",
+    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    civicClerkId: 1096,
+    note: null
   }
 ];
 
@@ -695,6 +704,15 @@ const MED_CACHED_DATA = [
     location: "333 W Colorado Ave (2nd Floor), Telluride / Zoom"
   },
   {
+    date: "November 19, 2026",
+    time: "8:30 AM - 11:30 AM",
+    title: "Regular Board Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "333 W Colorado Ave (2nd Floor), Telluride / Zoom"
+  },
+  {
     date: "November 26, 2026",
     time: "8:30 AM - 11:30 AM",
     title: "Regular Board Meeting",
@@ -749,11 +767,10 @@ const NORWOOD_CACHED_DATA = [
     date: "November 16, 2026",
     time: null,
     title: "Planning and Zoning Commission Meeting",
-    agendaUrl: null,
+    agendaUrl: "https://www.norwoodtown.com/files/6a9b8d335/11.16.2026+P%26Z+BOA+AGENDA.pdf",
     packetUrl: null,
     special: false,
-    board: "pz",
-    note: "Next scheduled meeting -- agenda posted before the meeting."
+    board: "pz"
   },
   {
     date: "December 8, 2026",
@@ -880,15 +897,6 @@ const OURAY_COUNTY_CACHED_DATA = [
     title: "Board of County Commissioners",
     location: "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
     civicClerkId: 1082,
-    note: null,
-    board: "bocc"
-  },
-  {
-    date: "November 17, 2026",
-    time: "1:30 PM",
-    title: "Board of County Commissioners Work Session",
-    location: "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
-    civicClerkId: 1106,
     note: null,
     board: "bocc"
   },

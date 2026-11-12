@@ -1,19 +1,8 @@
 [
   {
-    "title": "Senior Meals",
-    "link": "https://www.norwoodtown.com/2026-11-05-senior-meals",
-    "description": "",
-    "pubDate": "2026-11-05T12:00:00.000Z",
-    "source": "norwood",
-    "sourceLabel": "Town of Norwood",
-    "category": "Community Event",
-    "location": "Norwood, CO",
-    "imageUrl": ""
-  },
-  {
     "title": "Norwood Water Commission Meeting",
     "link": "https://www.norwoodtown.com/2026-11-10-nwc-meeting",
-    "description": "",
+    "description": "The Norwood Water Commission will hold a regular meeting to conduct official business related to the town's water services and infrastructure. Members of the public are welcome to attend this local government meeting in Norwood, Colorado.",
     "pubDate": "2026-11-10T12:00:00.000Z",
     "source": "norwood",
     "sourceLabel": "Town of Norwood",
@@ -24,7 +13,7 @@
   {
     "title": "Board Of Trustees Rescheduled For 11 18 2026 Due To Federal Holiday",
     "link": "https://www.norwoodtown.com/2026-11-11-board-of-trustees-rescheduled-for-11-18-2026-due-to-federal-holiday",
-    "description": "",
+    "description": "The Town of Norwood Board of Trustees meeting has been rescheduled to November 18, 2026, in observance of a federal holiday. The meeting will take place in Norwood, Colorado, as a regular Town of Norwood government proceeding.",
     "pubDate": "2026-11-11T12:00:00.000Z",
     "source": "norwood",
     "sourceLabel": "Town of Norwood",
@@ -35,7 +24,7 @@
   {
     "title": "Closed For Veterans Day",
     "link": "https://www.norwoodtown.com/2026-11-11-closed-for-veterans-day",
-    "description": "",
+    "description": "The Town of Norwood will be closed in observance of Veterans Day. Municipal offices and services will be unavailable on this federal holiday honoring those who have served in the United States armed forces.",
     "pubDate": "2026-11-11T12:00:00.000Z",
     "source": "norwood",
     "sourceLabel": "Town of Norwood",
@@ -46,7 +35,7 @@
   {
     "title": "Norwood Sanitation District Meeting",
     "link": "https://www.norwoodtown.com/2026-11-12-norwood-sanitation-district-meeting-amended",
-    "description": "",
+    "description": "The Norwood Sanitation District will hold a public meeting in Norwood, Colorado. This is an official government meeting open to the community.",
     "pubDate": "2026-11-12T12:00:00.000Z",
     "source": "norwood",
     "sourceLabel": "Town of Norwood",
@@ -57,7 +46,7 @@
   {
     "title": "Senior Meals",
     "link": "https://www.norwoodtown.com/2026-11-12-senior-meals",
-    "description": "",
+    "description": "A community meal program for seniors hosted by the Town of Norwood. It offers older residents an opportunity to gather, share a meal, and connect with neighbors in a welcoming setting.",
     "pubDate": "2026-11-12T12:00:00.000Z",
     "source": "norwood",
     "sourceLabel": "Town of Norwood",
@@ -66,9 +55,20 @@
     "imageUrl": ""
   },
   {
+    "title": "Planning And Zoning Commission Meeting",
+    "link": "https://www.norwoodtown.com/2026-11-16-planning-and-zoning-commission-meeting",
+    "description": "A regular meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
+    "pubDate": "2026-11-16T12:00:00.000Z",
+    "source": "norwood",
+    "sourceLabel": "Town of Norwood",
+    "category": "Government Meeting",
+    "location": "Norwood, CO",
+    "imageUrl": ""
+  },
+  {
     "title": "Board Of Trustees Meeting",
     "link": "https://www.norwoodtown.com/2026-11-18-board-of-trustees-meeting",
-    "description": "",
+    "description": "The Town of Norwood Board of Trustees will hold a regular meeting on November 18. This is an official government meeting open to the public, providing an opportunity for community members to observe local municipal business and decision-making.",
     "pubDate": "2026-11-18T12:00:00.000Z",
     "source": "norwood",
     "sourceLabel": "Town of Norwood",
@@ -79,7 +79,7 @@
   {
     "title": "Senior Meals",
     "link": "https://www.norwoodtown.com/2026-11-19-senior-meals",
-    "description": "",
+    "description": "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to gather, share a meal, and connect with neighbors.",
     "pubDate": "2026-11-19T12:00:00.000Z",
     "source": "norwood",
     "sourceLabel": "Town of Norwood",
@@ -90,7 +90,7 @@
   {
     "title": "No Senior Meals",
     "link": "https://www.norwoodtown.com/2026-11-26-no-senior-meals",
-    "description": "",
+    "description": "The Town of Norwood's regular senior meals program will not be held on this date. This notice serves as a reminder for community members who rely on or participate in the senior meals service.",
     "pubDate": "2026-11-26T12:00:00.000Z",
     "source": "norwood",
     "sourceLabel": "Town of Norwood",
@@ -101,7 +101,7 @@
   {
     "title": "Closed For Thanksgiving",
     "link": "https://www.norwoodtown.com/2026-11-26-closed-for-thanksgiving",
-    "description": "",
+    "description": "The Town of Norwood will be closed in observance of Thanksgiving Day. Municipal offices and services will be unavailable, with normal operations expected to resume following the holiday.",
     "pubDate": "2026-11-26T12:00:00.000Z",
     "source": "norwood",
     "sourceLabel": "Town of Norwood",
@@ -112,7 +112,7 @@
   {
     "title": "Senior Meals",
     "link": "https://www.norwoodtown.com/2026-12-03-senior-meals",
-    "description": "",
+    "description": "A community meal program for seniors hosted by the Town of Norwood. This midday gathering offers older residents an opportunity to share a meal and connect with neighbors.",
     "pubDate": "2026-12-03T12:00:00.000Z",
     "source": "norwood",
     "sourceLabel": "Town of Norwood",
@@ -123,7 +123,7 @@
   {
     "title": "Noel Night",
     "link": "https://www.norwoodtown.com/2026-12-04-noel-night",
-    "description": "",
+    "description": "Noel Night is a community holiday event hosted by the Town of Norwood, bringing residents together to celebrate the season. Held in early December, it offers a festive evening for families and neighbors in the Norwood area.",
     "pubDate": "2026-12-04T12:00:00.000Z",
     "source": "norwood",
     "sourceLabel": "Town of Norwood",
@@ -134,7 +134,7 @@
   {
     "title": "Closed For Christmas Day",
     "link": "https://www.norwoodtown.com/2026-12-25-closed-for-christmas-day",
-    "description": "",
+    "description": "The Town of Norwood will be closed on Christmas Day in observance of the holiday. Municipal offices and services will be unavailable, so residents should plan accordingly for any town business needs.",
     "pubDate": "2026-12-25T12:00:00.000Z",
     "source": "norwood",
     "sourceLabel": "Town of Norwood",

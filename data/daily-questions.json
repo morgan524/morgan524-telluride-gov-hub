@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-11-12",
+    "title": "New pour, new rules",
+    "body": "The Liquor Licensing Authority meets to act on license applications or modifications. The hearing officer handles most matters, but new licenses require Town Council approval — and both local and state sign-off are needed before anything is issued. That split process is where the tension lives. Some residents see multiple checkpoints as the right way to protect the character of a small town. Others think the layered approval structure slows legitimate business down or gives too many hands a veto. So: does the current approval process strike the right balance — or is it too much gatekeeping for a place this size?",
+    "choices": [
+      "The checkpoints make sense",
+      "Too many hoops",
+      "Depends on the applicant",
+      "It's complicated"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-11-11",
     "title": "Should the town hire a consultant to review its employee housing rules?",
     "body": "Town Council is expected to discuss bringing in consulting services for a comprehensive review of Telluride's employee rental housing policies. That sounds procedural — until you think about what it means.\n\nSome residents will say outside expertise is exactly what's needed: fresh eyes, no local politics, a real audit of whether the rules are working. Others will push back — consultants cost money, and the people who know how employee housing actually functions up here are already in town.\n\nIs outside help the right move for something this local?",
@@ -420,20 +435,6 @@
       "Manage them now",
       "Depends on the location",
       "Need to see the plan"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-10-13",
-    "title": "The county's hazard plan is up for a rewrite — does yours match theirs?",
-    "body": "The Board of County Commissioners is taking up a multi-jurisdictional hazard mitigation plan update alongside procurement for trail construction, material hauling, a fuel island canopy, and jail painting. Hazard mitigation plans are meant to coordinate how different agencies respond when things go sideways — floods, fires, the usual up here. Some residents think regional coordination is exactly what's needed. Others wonder whether a multi-jurisdictional plan papers over the gaps between agencies more than it closes them. Nothing is final yet — this is still at the Board level. So: do coordinated regional hazard plans actually make communities safer, or do they spread responsibility thin?",
-    "choices": [
-      "More coordination makes us safer",
-      "Too diffuse to be effective",
-      "Depends on what's in it"
     ],
     "sourceUrl": "/gov-hub.html",
     "topics": [
