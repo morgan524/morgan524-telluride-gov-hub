@@ -1,18 +1,22 @@
 {
-  "hash": "ac0d321c0990606e100820acddd04501d5f44395",
-  "lede": "The most consequential meeting this week is San Miguel County's Planning Commission on November 12, where proposed amendments to the Affordable Housing Impact Mitigation Fee — LUC Section 5-1303 — are on the table alongside broader housing incentive ideas; that fee structure directly shapes whether workforce housing gets built here, so it's worth paying attention. SMART's board also meets virtually that same day to act on three resolutions, including an amendment to the Executive Director's employment agreement and a resolution on federal transit grant program changes, with a gondola project update in the mix. On the lighter side, the KOTO Ski Swap kicks off Friday and there's ski film action at the Sheridan Opera House on Saturday.",
+  "hash": "7bba659e0446966d6e9bfbecbb99abdd35441379",
+  "lede": "The biggest thing on the calendar this week is Telluride Town Council's November 17 meeting, where the 2027 budget and property tax levy go to a vote alongside a second-reading ordinance that would suspend the Open Space Fund's 5% cut of Real Estate Transfer Tax revenue for the year — a real trade-off between tight finances and long-term land conservation. Meanwhile, San Miguel County's Planning Commission digs into proposed changes to the Affordable Housing Impact Mitigation Fee on November 12, a wonky-sounding item with genuine consequences for how workforce housing gets built here. Rounding out the week, SMART's board acts on three resolutions including an amendment to the Executive Director's employment contract and an update on the gondola project.",
   "notable": [
     {
-      "id": 4,
-      "stake": "Proposed fee changes to county affordable housing mitigation could reshape workforce housing."
+      "id": 1,
+      "stake": "Fee structure changes could shape whether workforce housing gets built countywide."
     },
     {
-      "id": 6,
-      "stake": "Board votes on federal transit grant comments and Executive Director contract amendment."
+      "id": 3,
+      "stake": "SMART board votes on three resolutions, including Executive Director contract amendment."
     },
     {
-      "id": 5,
-      "stake": "Final winter vending permit for Gondola Plaza West decided — The Gyro Cart on the line."
+      "id": 2,
+      "stake": "Board decides who gets the last winter vending permit at Gondola Plaza West."
+    },
+    {
+      "id": 13,
+      "stake": "Council votes on 2027 budget, property tax levy, and Open Space Fund suspension ordinance."
     }
   ]
 }

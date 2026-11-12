@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 11-11-26",
+    "source": "KOTO Community Radio",
+    "date": "November 12, 2026",
+    "newsTopic": "education",
+    "copy": "Telluride School Superintendent John Pandolfo Announces Retirement; CO 150, US 250, BG 52; Cat Movie Fisher with Risho Unda",
+    "href": "https://koto.org/news/newscast-11-11-26/"
+  },
+  {
     "title": "Newscast 11-9-26",
     "source": "KOTO Community Radio",
     "date": "November 10, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "arts-culture",
     "copy": "West End Roundup with the San Miguel Basin Forum; Lights Up at the Rico Theatre; West End Runners Hit the Trails, One Step at a Time",
     "href": "https://koto.org/news/newscast-10-29-26-2/"
-  },
-  {
-    "title": "Newscast 10-28-26",
-    "source": "KOTO Community Radio",
-    "date": "October 29, 2026",
-    "newsTopic": "land-use",
-    "copy": "County Land Use Code Gets an Update; Mountain Run Prevails Over EDM Concert; Young Frankenstein Brings the Fright and the Fantastic",
-    "href": "https://koto.org/news/newscast-10-28-26/"
   }
 ]

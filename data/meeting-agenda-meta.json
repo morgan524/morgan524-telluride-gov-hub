@@ -252,10 +252,6 @@
     "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=766038",
     "sv": 4
   },
-  "telluride|2026-10-12|Open Space Commission Site Walk - Oct 12 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8325",
-    "sv": 4
-  },
   "telluride|2026-11-09|Open Space Commission - Nov 09 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8133",
     "sv": 4,
@@ -661,5 +657,9 @@
   },
   "county|2026-12-03|One Time Event": {
     "sv": 4
+  },
+  "smart|2026-12-10|SMART Board of Directors": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   }
 }

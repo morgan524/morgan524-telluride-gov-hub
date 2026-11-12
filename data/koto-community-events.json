@@ -1,19 +1,8 @@
 [
   {
-    "title": "Sewing 101 with Melissa",
-    "link": "https://koto.org/event/sewing-101-with-melissa/2026-11-11/",
-    "description": "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.",
-    "pubDate": "2026-11-11T17:00:00-07:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/02/sewing.jpg"
-  },
-  {
     "title": "Semana De Bienestar",
     "link": "https://koto.org/event/semana-de-bienestar/",
-    "description": "Semana De Bienestar (Wellness Week) is a free, bilingual, alcohol-free community event at Wilkinson Public Library offering programming for children, adults, and families. Activities are available in both English and Spanish, making this an inclusive celebration of wellbeing for the broader Telluride community.",
+    "description": "Las actividades son gratuitas, bilingües y libres de alcohol, y habrá actividades para niños, adultos y familias. ¡Los esperamos! All activities are free, bilingual, and alcohol-free, with activities for children, adults, and families. We look forward to having you! JUEVES/THURSDAY: PARA INSCRIBIRSE Y VER HORARIOS/TO REGISTER AND SEE FULL SCHEDULE Arte para Niños/ Kids Art @ Ah Haa Ballet para niños/Ballet for kids @Telluride Arts Bienvenidos a semana de bienestar/Welcome to Wellness Week @WPL program room Ceremonia de Fuego/Fire Ceremony @Town Park Baño de Sonido/Sound Bath @WPL",
     "pubDate": "2026-11-12T00:00:00-07:00",
     "source": "koto",
     "sourceLabel": "KOTO",
@@ -46,7 +35,7 @@
   {
     "title": "Ridgway Independent Film Festival",
     "link": "https://koto.org/event/ridgway-independent-film-festival/",
-    "description": "The Ridgway Independent Film Festival returns to the historic Sherbino Theater in downtown Ridgway for a weekend running November 13–15, 2026. The festival features independent short films, select longer works, and filmmaker Q&As, bringing together filmmakers and audiences for a weekend of storytelling and community connection.",
+    "description": "Ridgway Independent Film Festival — November 13–15, 2026 Join us at the historic Sherbino Theater in downtown Ridgway for a weekend of independent films, fresh perspectives, and community connection. RIFF features short films, select longer works, and filmmaker Q&As. Discover new stories and connect with filmmakers and fellow film lovers. RIFF.sherbino.org",
     "pubDate": "2026-11-13T00:00:00-07:00",
     "source": "koto",
     "sourceLabel": "KOTO",
@@ -178,7 +167,7 @@
   {
     "title": "Telluride Mountain School Open House",
     "link": "https://koto.org/event/telluride-mountain-school-open-house-2/",
-    "description": "Telluride Mountain School is hosting an open house where prospective families and community members can step directly into the learning environment rather than sit through a formal presentation. Visitors are invited to explore classrooms, meet teachers and students, and experience firsthand the school's approach to curiosity, connection, and real-world learning.",
+    "description": "School In Action Open House! Come experience what learning looks like at Telluride Mountain School. Instead of a presentation about our school, step into the learning. Visit classrooms, meet teachers and students, explore our campus, and see firsthand how curiosity, connection, and real-world experiences shape the TMS experience. Come see: Learning in action – inquiry, hands-on projects, and interdisciplinary exploration Students known and supported – small classes and meaningful relationships School without walls – place-based and outdoor learning woven throughout the experience The TMS difference – a Preschool-8 education designed to cultivate confident, curious, capable learners Our community – meet the people who make TMS such a special place to learn",
     "pubDate": "2026-11-17T09:00:00-07:00",
     "source": "koto",
     "sourceLabel": "KOTO",
@@ -310,7 +299,7 @@
   {
     "title": "Girl Winter Film Tour",
     "link": "https://koto.org/event/girl-winter-film-tour/",
-    "description": "The Girl Winter Film Tour comes to the Sheridan Opera House for an evening of short films celebrating women in snow sports and winter storytelling. The program features five films and runs approximately two hours.",
+    "description": "Join us for a night of women-centric short ski films! These screenings provide a space to continue the celebration of winter storytelling and women in snow sports. All are welcome. Get hyped for an El Nino year and pray for snow. This event will showcase 5 films & run approximately two hours. Film Line-Up: VIVID – feat. Devin Logan, Jenna Dramise, Nicole Cordingley and Sierra Schlag Biscuits – feat. Erin Spong and Nat Segal Rapid Fire – feat. Mali Noyes Theory of Butter – feat. Analise Gates and Maddie Gerritsen Winter Elements – presented by Moonrise Doors open at 6:00 PM Films begin at 7:00 PM",
     "pubDate": "2026-11-20T18:00:00-07:00",
     "source": "koto",
     "sourceLabel": "KOTO",
@@ -493,5 +482,60 @@
     "category": "Community Event",
     "location": "Wilkinson Public Library, Telluride",
     "imageUrl": ""
+  },
+  {
+    "title": "Sunday Live Music in the Lounge at Mountain Lodge Telluride",
+    "link": "https://koto.org/event/sunday-live-music-in-the-lounge-at-mountain-lodge-telluride/2026-11-29/",
+    "description": "Live music in the lounge at Mountain Lodge Telluride in Mountain Village, Sundays from 6 to 9 PM all winter.",
+    "pubDate": "2026-11-29T18:00:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Mountain Lodge Telluride, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Strings and Keys",
+    "link": "https://koto.org/event/strings-and-keys/",
+    "description": "Annie Foxen and pianist, Oliver Henry (both WPL staff members). Perfect for reading, relaxing, or simply listening. Free and open to the public. All ages are welcome.",
+    "pubDate": "2026-11-30T12:00:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "Desserts and Docs-The Colorado Experience",
+    "link": "https://koto.org/event/desserts-and-docs-the-colorado-experience-2/",
+    "description": "Join us for this 4 part series as we watch episodes from RMPBS Flagship history series, explores the people, places. and events that has shaped Colorado's rich heritage. August: \"The Original Coloradans\" An incredible look at the Ute Nation, their history before colonization, and their interactions with early trappers. September: \" October: November: \"The Games That Never Happened\". The fascinating modern-history story of how Denver became the only city in the world to win the Winter Olympics and then vote to give them back!",
+    "pubDate": "2026-11-30T13:30:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "Trivia Night at The Stronghouse Brew Pub",
+    "link": "https://koto.org/event/trivia-night-at-the-stronghouse-brew-pub/",
+    "description": "Gather together your smartest friends and come on down to the Stronghouse Brew Pub for a thrilling night of Library Trivia! Top three teams will get a gift card to the Stronghouse ($75, $50, $25) and we'll do additional raffles for people who have a library card and/or a Friends of the Library membership. There will be staff members on hand to help you get a library card and/or a FOL membership if you don't have one already. Please keep your teams to a max of 6 and get ready for a night of brain-teasing fun! Get there early to grab your seat and a bite to eat!",
+    "pubDate": "2026-12-01T17:30:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Stronghouse Brewpub, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/dec-Trivia-2.png"
+  },
+  {
+    "title": "Bardic Trails Online Poetry Night",
+    "link": "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-12-01/",
+    "description": "The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit to get the zoom link each month, Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. Jan. 6 / Euro-American poet Dane Cervine of California Feb. …",
+    "pubDate": "2026-12-01T19:00:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/03/Bardic-Trails-2026.jpg"
   }
 ]
