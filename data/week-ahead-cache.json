@@ -1,22 +1,22 @@
 {
-  "hash": "c6c90ebb367abdf15e6e467cd32e0a162151d2cb",
-  "lede": "The biggest thing on the calendar this week is Telluride Town Council's November 17 meeting, where the 2027 budget and property tax levy come to a vote alongside a second-reading ordinance that would suspend the Open Space Fund's RETT dedication for the year — a real tension between tight finances and the town's conservation commitments. Before that, the San Miguel County Planning Commission digs into proposed changes to the Affordable Housing Impact Mitigation Fee on November 12, a wonky-sounding item that quietly shapes whether workforce housing actually gets built here. Sprinkled through the week: ski film nights, the KOTO Ski Swap, and the Ridgway Independent Film Festival to ease you into the season.",
+  "hash": "ba9aed113abf59a79343eae5941f87cbbfbc9df1",
+  "lede": "The biggest thing on the calendar this week is Telluride Town Council's November 17 meeting, where the 2027 budget and property tax levy come to a vote — and Council will also take a second crack at an ordinance that would suspend the Open Space Fund's cut of Real Estate Transfer Tax revenue for the year. San Miguel County's Planning Commission digs into proposed changes to the Affordable Housing Impact Mitigation Fee on the 12th, a wonky-sounding item with real consequences for whether workforce housing actually gets built. SMART's board also convenes to act on three resolutions, including an amendment to the Executive Director's employment agreement and a gondola project update worth keeping an eye on.",
   "notable": [
     {
       "id": 1,
-      "stake": "Fee structure changes could directly affect how much workforce housing gets built countywide."
-    },
-    {
-      "id": 2,
-      "stake": "Board votes on the remaining Gondola Plaza West winter vending permit."
+      "stake": "Proposed fee changes could reshape how workforce housing gets built countywide."
     },
     {
       "id": 3,
-      "stake": "Board votes on three resolutions, including an amendment to the Executive Director's employment agreement."
+      "stake": "Board votes on three resolutions, including Executive Director contract amendment."
+    },
+    {
+      "id": 5,
+      "stake": "Land Use Code and Master Plan updates will shape what gets built in Norwood for years."
     },
     {
       "id": 13,
-      "stake": "Council votes on the 2027 budget, property tax levy, and Open Space Fund suspension ordinance."
+      "stake": "2027 budget, property tax levy, and Open Space Fund suspension all come to a vote."
     }
   ]
 }

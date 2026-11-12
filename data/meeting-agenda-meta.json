@@ -306,7 +306,11 @@
   },
   "norwood|2026-11-16|Planning and Zoning Commission Meeting": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://www.norwoodtown.com/files/6a9b8d335/11.16.2026+P%26Z+BOA+AGENDA.pdf",
+    "zoomUrl": "https://us02web.zoom.us/j/85001344971",
+    "meetingId": "850 0134 4971",
+    "passcode": "8142302",
+    "phone": "970-327-4288"
   },
   "fire|2026-11-17|Board of Directors Meeting": {
     "sv": 4,
@@ -415,7 +419,10 @@
   "telluride|2026-11-19|Liquor Licensing Authority - Nov 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8147",
     "sv": 4,
-    "ph": "045bdf9820a590d8"
+    "zoomUrl": "https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1",
+    "meetingId": "861 6987 1704",
+    "passcode": "281002.",
+    "phone": "346-248-7799"
   },
   "telluride|2026-10-26|Gondola Sub Committee - Oct 26 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8327",
@@ -659,6 +666,10 @@
     "sv": 4
   },
   "smart|2026-12-10|SMART Board of Directors": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "med|2026-11-19|Regular Board Meeting": {
     "sv": 4,
     "ph": "b858cb282617fb09"
   }

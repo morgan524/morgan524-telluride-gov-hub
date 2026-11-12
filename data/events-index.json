@@ -28,20 +28,6 @@
     "endDate": "2026-11-30"
   },
   {
-    "title": "Every Sat. Floating Sound Bath",
-    "href": "https://events.ourayridgwayevents.com/event/floating-sound-bath-4324",
-    "date": "2026-11-12",
-    "time": "3:00 PM",
-    "location": "Orvis Hot Springs",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/54329446861527/huge/53a8f8ffae924adab852a4b581b6b105251c9b9b.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "A weekly group float session held every Saturday at Orvis Hot Springs, combining warm-water aquatic massage with live sound therapy including vocals and singing bowls. The experience is offered on a sliding scale and advance reservations…",
-    "type": "Wellness",
-    "endDate": "2027-01-09"
-  },
-  {
     "title": "After School Art for Ages 5-8",
     "href": "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-5-8-6970",
     "date": "2026-11-12",
@@ -504,20 +490,7 @@
     "type": "Arts & Film"
   },
   {
-    "title": "Film Night: Powder Panic Presented by Telluride Sports",
-    "href": "https://sheridanoperahouse.com/events/salomon-ski-film-slingshot/",
-    "date": "2026-11-14",
-    "time": "5:00 PM",
-    "location": "Sheridan Opera House • Telluride, CO",
-    "town": "Telluride",
-    "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/10/4x5_Poster-Lifestyle_2048x2048.webp",
-    "category": "Concert / Performance",
-    "source": "Sheridan Opera House",
-    "desc": "Telluride Sports presents Powder Panic, a ski and snowboard film screening at the historic Sheridan Opera House. The event celebrates mountain culture and the thrill of big-mountain riding through cinematic footage of skiing and…",
-    "type": "Arts & Film"
-  },
-  {
-    "title": "Salomon Ski Film: Slingshot",
+    "title": "Pre-Season Powder Panic",
     "href": "https://www.telluride.com/event/salomon-ski-film-slingshot/",
     "date": "2026-11-14",
     "time": "5:00 PM",
@@ -526,8 +499,8 @@
     "img": "https://www.telluride.com/site/assets/files/64113/ezgif-4x5_poster-lifestyle_2048x2048.800x533.webp",
     "category": "Community Event",
     "source": "Telluride.com",
-    "desc": "SLINGSHOT is a snowboard/ski backcountry film featuring riders like Blake Moller, Nils Mindnich, Bode Merrill, Luke …",
-    "type": "Arts & Film"
+    "desc": "Telluride Sports presents: Pre-Season Powder Panic featuring Pro Snowboarder Blake Moller: Freeride World Tour Champion …",
+    "type": "Community"
   },
   {
     "title": "Pre-Season Powder Panic Ski Film Night",
@@ -737,7 +710,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
     "type": "Community",
-    "endDate": "2027-01-04"
+    "endDate": "2027-01-11"
   },
   {
     "title": "Bike & Brewery Tour",
@@ -1464,6 +1437,19 @@
     "type": "Community"
   },
   {
+    "title": "Turkey Trot",
+    "href": "https://www.telluride.com/event/san-miguel-county-turkey-trot/",
+    "date": "2026-11-26",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/43699/screenshot_2026-11-12_at_1_22_13_pm.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Join San Miguel County for the annual family holiday tradition, the Turkey Trot 5K- Fun Run/Walk. Admission is free. …",
+    "type": "Family & Kids"
+  },
+  {
     "title": "Live Music at Mountain Lodge",
     "href": "https://www.telluride.com/event/live-music-at-alloy-kitchen/",
     "date": "2026-11-26",
@@ -1610,17 +1596,17 @@
     "type": "Music"
   },
   {
-    "title": "Film: Will Ski 4 Food",
-    "href": "https://sheridanoperahouse.com/events/film-will-ski-4-food/",
+    "title": "Will Ski 4 Food",
+    "href": "https://www.telluride.com/event/will-ski-4-food/",
     "date": "2026-11-28",
     "time": "5:00 PM",
-    "location": "Sheridan Opera House • Telluride, CO",
+    "location": "Telluride, CO",
     "town": "Telluride",
-    "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/11/Will-Ski-4-Food.png",
-    "category": "Concert / Performance",
-    "source": "Sheridan Opera House",
-    "desc": "A film screening of *Will Ski 4 Food* takes place at the historic Sheridan Opera House in Telluride. The event brings the ski and outdoor film experience to one of the region's most beloved performance venues.",
-    "type": "Arts & Film"
+    "img": "https://www.telluride.com/site/assets/files/64295/will-ski-4-food.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "After an unforgettable world premiere at Snowbasin Resort, Will Ski 4 Food is headed to Telluride. Come spend an …",
+    "type": "Food & Drink"
   },
   {
     "title": "Movies Under the Stars",
@@ -1890,16 +1876,16 @@
   },
   {
     "title": "Wreaths for Rescues",
-    "href": "https://telluridescience.org/event/wreaths-for-rescues/",
+    "href": "https://www.telluride.com/event/wreaths-for-rescues/",
     "date": "2026-12-03",
-    "time": "5:30 PM – 7:30 PM",
-    "location": "Telluride Innovation Center, 300 S. Townsend, Telluride",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
     "town": "Telluride",
-    "img": "https://telluridescience.org/wp-content/uploads/2026/11/wreaths.png",
-    "category": "",
-    "source": "Telluride Science",
-    "desc": "Celebrate your beloved pets, past & present, by making a festive pet-themed holiday wreath. Adela Floral will lead this hands-on wreath-making workshop to benefit Second Chance Humane Society. Bring mementos such as small pet photos to…",
-    "type": "Talks & Classes"
+    "img": "https://www.telluride.com/site/assets/files/64277/wreaths_for_rescues_square.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Celebrate your beloved pets, past & present, by making a festive pet-themed holiday wreath. Adela Floral will lead …",
+    "type": "Community"
   },
   {
     "title": "Floating Lotus Trivia Night – December 2026",
@@ -1953,20 +1939,6 @@
     "source": "Beacon",
     "desc": "A twice-a-month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel. April 2nd is a Luau at Lift Ops, 11am-1pm.",
     "type": "Food & Drink"
-  },
-  {
-    "title": "YPT: The SpongeBob Musical",
-    "href": "https://sheridanoperahouse.com/events/ypt-the-spongebob-musical/",
-    "date": "2026-12-04",
-    "time": "5:00 PM",
-    "location": "Sheridan Opera House • Telluride, CO",
-    "town": "Telluride",
-    "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/09/Screenshot-2026-10-12-at-10.51.39-AM.png",
-    "category": "Concert / Performance",
-    "source": "Sheridan Opera House",
-    "desc": "Young People's Theatre presents The SpongeBob Musical at the Sheridan Opera House, bringing the beloved underwater world of Bikini Bottom to life on stage. This youth theater production adapts the beloved animated series into a full-scale…",
-    "type": "Arts & Film",
-    "endDate": "2026-12-06"
   },
   {
     "title": "23rd Annual Holiday Art & Gift Sale",
@@ -2576,6 +2548,19 @@
     "type": "Music"
   },
   {
+    "title": "Telluride Backcountry Film Festival",
+    "href": "https://www.telluride.com/event/telluride-backcountry-film-festival/",
+    "date": "2026-12-15",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/61598/centered_2.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Join Sheep Mountain Alliance for an evening celebrating human-powered adventure, winter storytelling, and public lands …",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Weekly Young Adult Gathering",
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-12-15",
@@ -2622,7 +2607,7 @@
     "time": "9:00 PM",
     "location": "The Alibi • Telluride, CO",
     "town": "Telluride",
-    "img": "https://1v09t9hszk.ucarecd.net/5200691c-3406-4f5d-9291-108fe34d7eb6/",
+    "img": "https://1v09t9hszk.ucarecd.net/abac4fc9-1234-481d-af73-ae5227ee3cfb/-/crop/660x330/0,96/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
     "desc": "Wild Love Tigress is a funk band performing live at The Alibi, bringing an expansive sound that includes horns and backing singers. The show starts at 9:00 PM.",
@@ -2690,7 +2675,7 @@
     "img": "https://localist-images.azureedge.net/photos/54497185467537/huge/e05ed6611f6588659af50658006fd678c5de06b0.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Get into the holiday spirit with some friendly competition, hot cocoa, and a visit from Santa at the Ouray Hot Springs! On Dec. 19 from 4-6 PM, we'll have pool races followed by visits with Santa. The top racer will go head-to-head with…",
+    "desc": "Get into the holiday spirit with some friendly competition, hot cocoa, and a visit from Santa at the Ouray Hot Springs! Plus, get a Santa Hat when you arrive! On Dec. 19 from 4-6 PM, we'll have pool races followed by visits with Santa. The…",
     "type": "Community"
   },
   {
@@ -2732,6 +2717,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Brooke White performs live at a venue on N Cora Street in Ridgway, with the event listed through the Ouray Ridgway community calendar. It is a live music performance hosted at the Colorado Boy location in Ridgway.",
     "type": "Music"
+  },
+  {
+    "title": "The Very Merry Market",
+    "href": "https://www.telluride.com/event/the-very-merry-market/",
+    "date": "2026-12-22",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/60167/website_event_header_image_2000x1000.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Celebrate the season at The Very Merry Market - a cozy, one-day holiday makers’ market inside the Telluride …",
+    "type": "Community"
   },
   {
     "title": "Christmas Eve Torchlight Parade",

@@ -24,9 +24,9 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/28871/464865559_570687275405719_3117454875494611862_n.800x533.webp"
   },
   {
-    "title": "Salomon Ski Film: Slingshot",
+    "title": "Pre-Season Powder Panic",
     "link": "https://www.telluride.com/event/salomon-ski-film-slingshot/",
-    "description": "SLINGSHOT is a snowboard/ski backcountry film featuring riders like Blake Moller, Nils Mindnich, Bode Merrill, Luke …",
+    "description": "Telluride Sports presents: Pre-Season Powder Panic featuring Pro Snowboarder Blake Moller: Freeride World Tour Champion …",
     "pubDate": "2026-11-14",
     "source": "telluride-com",
     "sourceLabel": "Telluride.com",
@@ -90,6 +90,17 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/42692/telluride_skier.800x533.webp"
   },
   {
+    "title": "Turkey Trot",
+    "link": "https://www.telluride.com/event/san-miguel-county-turkey-trot/",
+    "description": "Join San Miguel County for the annual family holiday tradition, the  Turkey Trot 5K- Fun Run/Walk. Admission is free. …",
+    "pubDate": "2026-11-26",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/43699/screenshot_2026-11-12_at_1_22_13_pm.800x533.webp"
+  },
+  {
     "title": "Live Music at Mountain Lodge",
     "link": "https://www.telluride.com/event/live-music-at-alloy-kitchen/",
     "description": "Live music all winter at Mountain Lodge Telluride in Mountain Village. Local acts play the Après Lounge from 4 to 7 …",
@@ -114,6 +125,17 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/36321/couch_1600x900.800x533.webp"
   },
   {
+    "title": "Will Ski 4 Food",
+    "link": "https://www.telluride.com/event/will-ski-4-food/",
+    "description": "After an unforgettable world premiere at Snowbasin Resort, Will Ski 4 Food is headed to Telluride. Come spend an …",
+    "pubDate": "2026-11-28",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/64295/will-ski-4-food.800x533.webp"
+  },
+  {
     "title": "Sunday Rehab",
     "link": "https://www.telluride.com/event/sunday-rehab/",
     "description": "Sunday Rehab at Mountain Lodge Telluride in Mountain Village, 1 to 5 p.m. on winter Sundays. Live music and an extended …",
@@ -124,6 +146,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/62769/download_1.800x533.webp"
+  },
+  {
+    "title": "Wreaths for Rescues",
+    "link": "https://www.telluride.com/event/wreaths-for-rescues/",
+    "description": "Celebrate your beloved pets, past & present, by making a festive pet-themed holiday wreath. Adela Floral will lead …",
+    "pubDate": "2026-12-03",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/64277/wreaths_for_rescues_square.800x533.webp"
   },
   {
     "title": "Holiday Arts Bazaar",
@@ -232,6 +265,17 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/63712/1789488966-daysoff.800x533.webp"
   },
   {
+    "title": "Telluride Backcountry Film Festival",
+    "link": "https://www.telluride.com/event/telluride-backcountry-film-festival/",
+    "description": "Join Sheep Mountain Alliance for an evening celebrating human-powered adventure, winter storytelling, and public lands …",
+    "pubDate": "2026-12-15",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/61598/centered_2.800x533.webp"
+  },
+  {
     "title": "Elf the Musical",
     "link": "https://www.telluride.com/event/elf-the-musical/",
     "description": "Buddy, an orphan, mistakenly crawls into Santa’s bag and is transported to the North Pole. To find his father, Buddy …",
@@ -242,6 +286,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63709/elf_instagram.800x533.webp"
+  },
+  {
+    "title": "The Very Merry Market",
+    "link": "https://www.telluride.com/event/the-very-merry-market/",
+    "description": "Celebrate the season at The Very Merry Market - a cozy, one-day holiday makers’ market inside the Telluride …",
+    "pubDate": "2026-12-22",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/60167/website_event_header_image_2000x1000.800x533.webp"
   },
   {
     "title": "Christmas Eve Torchlight Parade",
