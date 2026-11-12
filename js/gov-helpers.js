@@ -974,7 +974,7 @@ const ENGAGE_MEETINGS = [
   }
 ];         // Engage Telluride project key dates
 const MANUAL_SUMMARIES_CACHE_DATE = '2026-11-12';
-const LEGAL_NOTICES_CACHE_DATE = '2026-11-11';
+const LEGAL_NOTICES_CACHE_DATE = '2026-11-12';
 
 const MANUAL_SUMMARIES = {
   "norwood|2026-10-13|Norwood Water Commission Meeting":
@@ -3319,24 +3319,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Local Employers Invited to Apply for Employee Housing Master Leases",
-    source: "Town of Telluride",
-    date: "October 23, 2026",
-    newsTopic: "housing",
-    copy: "(October 22, 2026) – The Telluride Housing Authority (THA) is offering master leases on five apartments at the new Virginia Placer IIA building and two rooms at the Telluride Boarding House to local businesses and organizations.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=408",
-    img: ""
-  },
-  {
-    title: "Deed-Restricted Housing Lottery Applications Now Available for Spruce House H",
-    source: "Town of Telluride",
-    date: "October 22, 2026",
-    newsTopic: "housing",
-    copy: "(October 22, 2026) - The Town of Telluride and the San Miguel Regional Housing Authority (SMRHA) opened applications today for a deed-restricted homeownership lottery for Spruce House H at 226 East Pacific Avenue, Unit H, Telluride, Colorado, 81435.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=407",
-    img: ""
-  },
-  {
     title: "Sign Up for the 2026 Turkey Trot!",
     source: "San Miguel County",
     date: "November 5, 2026",
@@ -3389,15 +3371,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Due to changing weather conditions and the onset of winter, Imogene and Black Bear Passes are now officially closed for the season.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=551",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
-  },
-  {
-    title: "DMV Services available in Egnar 11/18",
-    source: "San Miguel County",
-    date: "October 15, 2026",
-    newsTopic: "community",
-    copy: "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
   },
   {
     title: "Ridgway Bank Building Officially Added to the National Register of Historic Places",
@@ -7314,40 +7287,6 @@ const LEGAL_NOTICES = [
     address: "District Court of San Miguel County, Colorado",
     noticeKey: "probate-2026PR30008",
     caseNumber: "2026PR30008"
-  },
-  {
-    title: "Request for Proposal -- Lawson Hill Connector Trail Project",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Lawson Hill Connector Trail Project.",
-    deadline: "Open until contracted",
-    expires: "2026-11-11",
-    dates: "8/13",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=207",
-    address: "",
-    smcBidID: "207"
-  },
-  {
-    title: "Request for Proposal -- Fuel Island Canopy Construction",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Fuel Island Canopy Construction.",
-    deadline: "Open until contracted",
-    expires: "2026-11-11",
-    dates: "8/13",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=208",
-    address: "",
-    smcBidID: "208"
   },
   {
     title: "Request for Proposal -- Painting of the San Miguel County Jail",
