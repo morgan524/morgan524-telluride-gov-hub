@@ -5,14 +5,14 @@
    "first": "ashley",
    "jurisdiction": "Town of Telluride",
    "alternate": false,
-   "seen": 24
+   "seen": 25
   },
   "stark": {
    "name": "Marya Stark",
    "first": "marya",
    "jurisdiction": "Town of Telluride",
    "alternate": false,
-   "seen": 5
+   "seen": 6
   },
   "permakoff": {
    "name": "Kristen Permakoff",
@@ -26,28 +26,28 @@
    "first": "harvey",
    "jurisdiction": "Town of Mountain Village",
    "alternate": false,
-   "seen": 45
+   "seen": 46
   },
   "waring": {
    "name": "Lance Waring",
    "first": "lance",
    "jurisdiction": "San Miguel County",
    "alternate": false,
-   "seen": 38
+   "seen": 39
   },
   "magid": {
    "name": "Tucker Magid",
    "first": "tucker",
    "jurisdiction": "Town of Mountain Village",
    "alternate": false,
-   "seen": 31
+   "seen": 32
   },
   "brown": {
    "name": "Anne Brown",
    "first": "anne",
    "jurisdiction": "San Miguel County",
    "alternate": false,
-   "seen": 20
+   "seen": 21
   },
   "gleason": {
    "name": "Galena Gleason",
@@ -61,7 +61,7 @@
    "first": "gregg",
    "jurisdiction": "Town of Rico",
    "alternate": false,
-   "seen": 5
+   "seen": 6
   },
   "fee": {
    "name": "Meehan Fee",
@@ -125,6 +125,13 @@
    "jurisdiction": "Town of Telluride",
    "alternate": false,
    "seen": 3
+  },
+  "jensen": {
+   "name": "Dan Jensen",
+   "first": "dan",
+   "jurisdiction": "Town of Mountain Village",
+   "alternate": true,
+   "seen": 1
   }
  },
  "packets": {
@@ -2718,6 +2725,53 @@
        "outcome": "Passed",
        "tally": "7-0",
        "detail": "Selected PFM Asset Management as SMART's investment advisor and authorized SMART's entry into the CSIP Investment Pool.",
+       "noIds": [],
+       "abstainIds": [],
+       "recusedIds": []
+      }
+     ]
+    }
+   ]
+  },
+  "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/Board-Packet_November-12th-2026.pdf": {
+   "url": "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/Board-Packet_November-12th-2026.pdf",
+   "label": "November 12, 2026 Board Packet",
+   "parsedAt": "2026-11-13",
+   "meetings": [
+    {
+     "date": "2026-10-08",
+     "type": "Regular",
+     "presentIds": [
+      "storyvonspreecken",
+      "stark",
+      "mogenson",
+      "magid",
+      "jensen",
+      "brown",
+      "waring",
+      "anderson"
+     ],
+     "altIds": [
+      "jensen"
+     ],
+     "recap": "The board took up two votes at its October meeting. The main action was approving the **FY27 amendment to the gondola project development IGA**, which covers a total project development budget of slightly more than **$6.5 million**, with SMART on the hook for half. The expanded budget reflects more intensive work planned for fiscal year 2027, including advancing engineering toward roughly 30% conceptual design, completing environmental clearance under NEPA, and hiring outside technical experts. The board also heard that negotiations with Telluride Ski & Golf over easements are expected later in the process, and that federal policy changes could shift how money is spent across quarters, even if the total stays the same.\n\nStaff also walked the board through a revised draft FY 2027 operating budget, noting a proposed **$1,650,000 gondola operating reserve** to be funded in FY27 and available when SMART takes over gondola operations in 2028. The main remaining unknown is property-tax revenue, pending final county valuation certificates expected in early December. On operations, staff reported corrective steps taken after a bus lift inspection concern raised at the prior meeting, and provided updates on new Rico and Norwood weekend routes, driver training for off-season schedules, and progress on facility improvements at the Ilium parcel. The board also entered a brief executive session on personnel matters related to the executive director position and a pending legal case.",
+     "motions": [
+      {
+       "title": "Resolution 2026-21 Parts 1a & 1b — Agenda approval and September 10, 2026 meeting minutes",
+       "category": "Governance",
+       "outcome": "Passed",
+       "tally": "",
+       "detail": "The board approved the October 8, 2026 agenda and the minutes of the September 10, 2026 meeting.",
+       "noIds": [],
+       "abstainIds": [],
+       "recusedIds": []
+      },
+      {
+       "title": "Resolution 2026-22 — FY27 Amendment to Gondola Project Development IGA",
+       "category": "Gondola",
+       "outcome": "Passed",
+       "tally": "",
+       "detail": "The board approved the FY 2027 amendment to the gondola project development IGA, covering a project development budget of slightly more than $6.5 million with SMART responsible for 50%, supporting engineering, environmental clearance, and outside technical expertise.",
        "noIds": [],
        "abstainIds": [],
        "recusedIds": []
