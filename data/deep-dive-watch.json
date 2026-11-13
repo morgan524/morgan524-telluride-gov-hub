@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T05:56:51.203Z",
+ "generated": "2026-11-13T14:20:52.847Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -117,9 +117,18 @@
      "livestream": ""
     }
    ],
-   "recent": [],
+   "recent": [
+    {
+     "source": "telluride",
+     "date": "2026-11-12",
+     "title": "San Miguel Authority for Regional Transportation - Nov 12 2026",
+     "snippet": "SMART's board convenes virtually to act on three resolutions: routine agenda/minutes approval, a resolution of support for comments on proposed changes to a federal Capital Investments Grant Program,…"
+    }
+   ],
    "developments": [],
-   "stale": []
+   "stale": [
+    "Gondola 3A: telluride discussed it on 2026-11-12 (\"San Miguel Authority for Regional Transportation - Nov 12…\") but the deep dive was last edited 2026-07-20."
+   ]
   },
   "norwoodwater": {
    "label": "Norwood Water",

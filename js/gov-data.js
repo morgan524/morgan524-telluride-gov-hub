@@ -274,6 +274,15 @@ const COUNTY_CACHED_DATA = [
     location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
     civicClerkId: 1096,
     note: null
+  },
+  {
+    date: "February 11, 2027",
+    time: "9:00 AM",
+    title: "Planning Commission Meeting",
+    type: "planning",
+    location: "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
+    civicClerkId: 1081,
+    note: null
   }
 ];
 

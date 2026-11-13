@@ -1,22 +1,22 @@
 {
-  "hash": "695721f6505d064afc5cb3f951f0744b78b6d269",
-  "lede": "The biggest thing on the calendar this week is Monday night in Telluride Town Council, where the 2027 budget and its accompanying property tax levy go to a vote — and right alongside it, a second reading on suspending the Open Space Fund's 5% cut of Real Estate Transfer Tax revenue for the year, a move that puts fiscal pressure and land conservation directly in tension. Norwood's Planning and Zoning Commission is also doing foundational work Monday, taking up both a Land Use Code update and a Master Plan update that will shape what gets built in that community for years. Over in Ouray County Tuesday, the BOCC considers resolutions to repeal existing austerity measures and adopt a formal AI governance policy, two signals about where that county is headed.",
+  "hash": "3a2d4e484afb8b6162b1b4ba47a519b9006315f5",
+  "lede": "Monday night, Telluride Town Council votes on the 2027 budget and the property tax levy that funds it — and in the same session takes up second reading of an ordinance that would suspend the 5% Open Space Fund dedication from Real Estate Transfer Tax revenue for the coming year, a real tension between tight finances and the valley's land-conservation commitments worth paying attention to. Norwood's Planning and Zoning Commission is also working through updates to its Land Use Code and Master Plan, the foundational documents that shape what gets built where for years to come. Ouray County's BOCC has a full plate too, with resolutions shifting the county's fiscal posture and adopting a first-of-its-kind regional AI governance policy.",
   "notable": [
     {
       "id": 9,
-      "stake": "2027 budget, property tax levy, and open space fund suspension all go to a vote."
+      "stake": "Council votes on 2027 budget, tax levy, and open-space fund suspension ordinance."
     },
     {
       "id": 1,
-      "stake": "Land Use Code and Master Plan updates will define what gets built in Norwood for years."
+      "stake": "Norwood P&Z updates Land Use Code and Master Plan, shaping future development rules."
     },
     {
       "id": 12,
-      "stake": "Ouray County votes to repeal austerity measures and adopt first regional AI governance policy."
+      "stake": "Ouray County BOCC votes to end austerity measures and adopt a new AI governance policy."
     },
     {
       "id": 11,
-      "stake": "Workforce housing lottery drawings for two Black Bear Road properties — eligible renters should attend."
+      "stake": "Lottery drawings determine who gets workforce housing on Black Bear Road."
     }
   ]
 }
