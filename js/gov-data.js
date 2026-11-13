@@ -314,7 +314,7 @@ const SMART_CACHED_DATA = [
     title: "SMART Gondola Advisory Committee",
     location: "Virtual (Zoom link in the agenda)",
     agendaUrl: null,
-    packetUrl: null,
+    packetUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/Agenda-2026.11.16.pdf",
     note: "Gondola Advisory Committee (Gsub) — advises SMART on the gondola replacement project. Agenda, packet and Zoom link post at least 24 hours before."
   },
   {
@@ -437,6 +437,14 @@ const TMVOA_CACHED_DATA = [
   {
     date: "March 9, 2027",
     title: "Mountain Village Merchant Meeting",
+    board: "merchant",
+    agendaUrl: null,
+    packetUrl: null,
+    location: "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    date: "May 11, 2027",
+    title: "TMVOA/Town of Mtn Village &amp; Town of Telluride Joint Merchant Meeting",
     board: "merchant",
     agendaUrl: null,
     packetUrl: null,
@@ -682,8 +690,7 @@ const FIRE_CACHED_DATA = [
     agendaUrl: null,
     packetUrl: null,
     special: false,
-    location: "131 W Columbia Ave, Telluride, CO 81435",
-    note: "Next scheduled meeting -- agenda typically posted a few days before."
+    location: "131 W Columbia Ave, Telluride, CO 81435"
   },
   {
     date: "December 15, 2026",
@@ -1004,6 +1011,16 @@ const OURAY_CITY_CACHED_DATA = [
     boardbookId: 776213,
     agendaUrl: "https://meetings.boardbook.org/Public/Agenda/2503?meeting=776213",
     packetUrl: "https://meetings.boardbook.org/Public/DownloadAgenda/2503?meeting=776213"
+  },
+  {
+    date: "November 16, 2026",
+    time: "6:00 PM",
+    title: "Ouray City Council Regular Meeting",
+    board: "council",
+    location: "Ouray Community Center, 320 6th Ave, Ouray, CO 81427",
+    boardbookId: 774802,
+    agendaUrl: "https://meetings.boardbook.org/Public/Agenda/2503?meeting=774802",
+    packetUrl: "https://meetings.boardbook.org/Public/DownloadAgenda/2503?meeting=774802"
   }
 ];
 

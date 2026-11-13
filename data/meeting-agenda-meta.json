@@ -323,7 +323,7 @@
   "telluride|2026-11-18|Parks & Recreation Commission - Nov 18 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8084",
     "sv": 4,
-    "ph": "7b44be1a152fd234"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/tZIufu6srzwsH9X0sfxgA_In-LUt0azBIi8Z"
   },
   "county|2026-11-18|Board of County Commissioners Meeting": {
     "sv": 4
@@ -544,7 +544,7 @@
   "telluride|2026-12-03|Town Council Retreat - Dec 03 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8051",
     "sv": 4,
-    "ph": "8a1e2d979230f1c7"
+    "ph": "b70de71d43089fe6"
   },
   "county|2026-11-09|San Miguel Basin Fair Board": {
     "sv": 4,
@@ -657,6 +657,15 @@
     "meetingId": "876 0637 5697",
     "passcode": "946299",
     "phone": "346-248-7799",
+    "sv": 4
+  },
+  "telluride|2026-12-03|Planning & Zoning Commission - Special Meeting - Dec 03 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8362",
+    "sv": 4,
+    "ph": "a5aeca1c51c0115f"
+  },
+  "ouraycity|2026-11-16|Ouray City Council Regular Meeting": {
+    "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=774802",
     "sv": 4
   }
 }

@@ -1,19 +1,5 @@
 [
   {
-    "id": "TEL-A-207",
-    "name": "Timber",
-    "species": "Dog",
-    "breed": "Collie, Border / Cattle Dog, Australian (Red Heeler)",
-    "ageGroup": "Young Puppy",
-    "sex": "Male",
-    "photo": "https://new-s3.shelterluv.com/profile-pictures/0a662cfa39b2fb52481998afdd852fa1/1d7757d222609783e86c8784475bf984.jpg",
-    "profileUrl": "https://www.shelterluv.com/embed/animal/214942068",
-    "summary": "Young Puppy • Collie, Border / Cattle Dog, Australian (Red Heeler) • Male",
-    "firstSeen": "2026-10-31",
-    "revealDate": "2026-10-31",
-    "lastSeen": "2026-11-13"
-  },
-  {
     "id": "TEL-A-208",
     "name": "Yuki",
     "species": "Dog",
@@ -38,20 +24,6 @@
     "profileUrl": "https://www.shelterluv.com/embed/animal/214942170",
     "summary": "Young Dog • Collie, Border / Cattle Dog, Australian (Red Heeler) • Female",
     "firstSeen": "2026-10-31",
-    "revealDate": "2026-11-04",
-    "lastSeen": "2026-11-13"
-  },
-  {
-    "id": "TEL-A-211",
-    "name": "Astra",
-    "species": "Dog",
-    "breed": "Husky",
-    "ageGroup": "Young Puppy",
-    "sex": "Female",
-    "photo": "https://new-s3.shelterluv.com/profile-pictures/52a6e181f5deae5d4a70189e53d2adfb/9d5cc31d87b5500bce17db4628dc42b7.jpeg",
-    "profileUrl": "https://www.shelterluv.com/embed/animal/214965927",
-    "summary": "Young Puppy • Husky • Female",
-    "firstSeen": "2026-11-04",
     "revealDate": "2026-11-04",
     "lastSeen": "2026-11-13"
   }

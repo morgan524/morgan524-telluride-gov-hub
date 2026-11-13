@@ -309,7 +309,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8026","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA","meetingId":"812 9136 3866","passcode":"440860.","phone":"301-715-8592"},
 
   "telluride|2026-11-18|Parks & Recreation Commission - Nov 18 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8084","sv":4,"ph":"7b44be1a152fd234"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8084","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/tZIufu6srzwsH9X0sfxgA_In-LUt0azBIi8Z"},
 
   "county|2026-11-18|Board of County Commissioners Meeting":
     {"sv":4},
@@ -429,7 +429,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-12-03|Town Council Retreat - Dec 03 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8051","sv":4,"ph":"8a1e2d979230f1c7"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8051","sv":4,"ph":"b70de71d43089fe6"},
 
   "county|2026-11-09|San Miguel Basin Fair Board":
     {"sv":4,"ph":"6825174845a5ec0c"},
@@ -498,7 +498,13 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://ouraycoco.portal.civicclerk.com/event/1082/files/agenda/7595","zoomUrl":"https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1","meetingId":"876 0637 5697","passcode":"946299","phone":"346-248-7799","sv":4},
 
   "ouray|2026-11-18|Board of County Commissioners Work Session":
-    {"agendaUrl":"https://ouraycoco.portal.civicclerk.com/event/1130/files/agenda/7597","zoomUrl":"https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1","meetingId":"876 0637 5697","passcode":"946299","phone":"346-248-7799","sv":4}
+    {"agendaUrl":"https://ouraycoco.portal.civicclerk.com/event/1130/files/agenda/7597","zoomUrl":"https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1","meetingId":"876 0637 5697","passcode":"946299","phone":"346-248-7799","sv":4},
+
+  "telluride|2026-12-03|Planning & Zoning Commission - Special Meeting - Dec 03 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8362","sv":4,"ph":"a5aeca1c51c0115f"},
+
+  "ouraycity|2026-11-16|Ouray City Council Regular Meeting":
+    {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=774802","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -843,7 +849,13 @@ const MEETING_PREVIEWS = {
     "Board will consider extending an emergency disaster declaration, approving expenditures, and reviewing the October Public Trustee Report. General business includes a change order for Corbett Creek, addressing runoff concerns on CR-361, and selecting an ACH vendor.",
 
   "ouray|2026-11-18|Board of County Commissioners Work Session":
-    "Commissioners are expected to receive a quarterly EMS update and discuss an intergovernmental agreement with Ridgway Fire, along with memoranda of understanding with the City of Ouray and Town of Ridgway. The board will also hear commissioner and administrative reports and continue discussions on the 2027 budget."
+    "Commissioners are expected to receive a quarterly EMS update and discuss an intergovernmental agreement with Ridgway Fire, along with memoranda of understanding with the City of Ouray and Town of Ridgway. The board will also hear commissioner and administrative reports and continue discussions on the 2027 budget.",
+
+  "telluride|2026-12-03|Planning & Zoning Commission - Special Meeting - Dec 03 2026":
+    "The Planning & Zoning Commission is expected to discuss a comprehensive review of Telluride's employee rental housing policies, as the town seeks consulting services to evaluate existing regulations. The special meeting may address the scope and direction of this policy review effort.",
+
+  "ouraycity|2026-11-16|Ouray City Council Regular Meeting":
+    "Council is expected to adopt the 2027 city budget, set property tax levies, and approve appropriations for the coming year. Additional action items include amendments to the Ouray Ice Park management agreement and a professional services contract for a hot springs pool house condition assessment."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1014,16 +1026,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "Attached please find the Parish Bulletin for the week of November 1st.We have Holy Adoration before Holy Masses this weekend.1st Friday Devotions to ...",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-november-1/",
-    img: ""
-  },
-  {
-    title: "Poland Pilgrimage sign-ups due tomorrow",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "October 30, 2026",
-    newsTopic: "community",
-    copy: "Reminder: Pilgrimage to Poland will be June 8-22, 2027. If interested, contact the Church Office at 970-728-3387 or Fr Mariusz via email at spctelluride@gmail.com.Sign-up and deposit are due by Oct. 31.Details are attached as PDF.Poland Pil...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/poland-pilgrimage-sign-ups-due-tomorrow/",
     img: ""
   }
 ];  // 7 regional feeds (West End, Ouray, …)
@@ -1250,7 +1252,7 @@ const MANUAL_SUMMARIES = {
     "A heavy agenda for November 18. The two items that have been waiting since August — the Shandoka Lot redevelopment preliminary large-scale reviews for Buildings 1 & 2 and Buildings 3 & 4 at 860 Black Bear Rd — are finally being heard, with the Town of Telluride as applicant and Design Workshop doing the design work. Both involve new construction outside the historic district exceeding 5,000 sq ft in an Accommodations 2 zone. Also on the docket: preliminary large-scale reviews for two other Town-owned sites — 113 W Columbia (Rebekah Hall itself, demolition of the existing principal structure plus new construction over 5,000 sq ft) and 335 W Colorado (demolition of a THAS-rated primary structure, large-scale new construction, and relocation of two historic sheds). A privately owned property at 421 E Columbia gets a small-scale addition and minor alterations. The two 238 N Pine applications are continued without discussion to April 21, 2027. HARC also elects its chair and vice chair and reviews its 2026 annual report.",
 
   "telluride|2026-11-18|Parks & Recreation Commission - Nov 18 2026":
-    "The November 18, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+    "A routine Parks & Recreation Commission meeting. The one action item is a proposed update to the Town Park Pavilion Banner Policy — specifically to add a category recognizing Telluride high school senior athletes participating in winter sports organizations under contract with the town. The policy sets display timing (first day back from holiday break through end of ice rink season), design standards keyed to Telluride R-1 School District specs, and a $10 installation fee per banner. The worksession covers a recap of P&R facilities and operations across spring, summer, and fall 2026. Staff reports touch on the Warner Field fence and safety netting project (Phase 1 of Core Area Improvements), the Hanley Ice Rink opening for 2026–2027, the coed hockey league launching November 15 with 11 teams, winter programming, the Winter Community Housing Program starting in the Town Park lot on November 23, and upcoming events including Noel Night and New Year's Eve.",
 
   "county|2026-11-18|Board of County Commissioners Meeting":
     "The November 18 Board of County Commissioners regular meeting is being held in Norwood. The posted agenda doesn't include any item detail beyond the location — nothing on what's actually being taken up.",
@@ -1439,7 +1441,13 @@ const MANUAL_SUMMARIES = {
     "A substantive session for the Ouray County BOCC. Two resolutions stand out: Resolution 2026-031 repeals the county's austerity measures (Resolution 2026-008), signaling a shift in the county's fiscal posture; and Resolution 2026-032 adopts a formal AI policy and governance standards — one of the first such moves in the region. The 2027 budget gets an update and discussion, followed by a public hearing on amending the 2026 budget via Resolution 2026-033. On the infrastructure side, commissioners take up a change order on the Corbett Creek project, a runoff concern on CR-361's upper bridge, and an OHV grant application for an Alpine Ranger Program through Colorado Parks and Wildlife. Human Services business includes MOUs with CASA and an IGA with Montrose County for child support services. Executive session covers active water and civil litigation — dockets dating back to 2019 — plus potential code enforcement action for unpermitted structures and road closures in the McIntyre Gulch high alpine area, and a possible property transaction at 800 N. Oak Street in Ouray.",
 
   "ouray|2026-11-18|Board of County Commissioners Work Session":
-    "A work session, so no formal votes — but the direction commissioners give here shapes what comes back for action later. The morning opens with EMS director Nathan McCullough's quarterly update and a discussion of an intergovernmental agreement between the county and Ridgway Fire. Then come two memoranda of understanding: one with the City of Ouray at 10:00, one with the Town of Ridgway at 10:30 — the specifics of each aren't spelled out in the agenda, but MOUs with both municipal neighbors in the same session suggests coordinated service or cost-sharing conversations are in motion. The afternoon wraps with commissioner and administrative reports, then 2027 budget discussion picks up wherever it left off the previous day."
+    "A work session, so no formal votes — but the direction commissioners give here shapes what comes back for action later. The morning opens with EMS director Nathan McCullough's quarterly update and a discussion of an intergovernmental agreement between the county and Ridgway Fire. Then come two memoranda of understanding: one with the City of Ouray at 10:00, one with the Town of Ridgway at 10:30 — the specifics of each aren't spelled out in the agenda, but MOUs with both municipal neighbors in the same session suggests coordinated service or cost-sharing conversations are in motion. The afternoon wraps with commissioner and administrative reports, then 2027 budget discussion picks up wherever it left off the previous day.",
+
+  "telluride|2026-12-03|Planning & Zoning Commission - Special Meeting - Dec 03 2026":
+    "The December 3, 2026 Planning & Zoning Commission Special Meeting agenda hasn't been posted yet.",
+
+  "ouraycity|2026-11-16|Ouray City Council Regular Meeting":
+    "The big lift at this meeting is the 2027 budget cycle — council takes up four linked resolutions adopting the budget, appropriating funds to city accounts, setting the mill levy, and locking in the 2027 fee schedule. Alongside that, a second amendment to the management agreement with Ouray Ice Park, Inc. goes to a vote, and council approves a professional services agreement with Short Elliott Hendrickson for a facility condition assessment of the Hot Springs Pool House — a signal that the city is taking stock of aging infrastructure. A parking plan is on the table for discussion and direction to staff. On the consent agenda, the city ratifies its participation in the South Ouray Erosion Control Project. Council also repeals the 2022 remote participation policy."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -3469,6 +3477,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Local Employers Invited to Apply for Employee Housing Master Leases",
+    source: "Town of Telluride",
+    date: "October 23, 2026",
+    newsTopic: "housing",
+    copy: "(October 22, 2026) – The Telluride Housing Authority (THA) is offering master leases on five apartments at the new Virginia Placer IIA building and two rooms at the Telluride Boarding House to local businesses and organizations.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=408",
+    img: ""
+  },
+  {
+    title: "Deed-Restricted Housing Lottery Applications Now Available for Spruce House H",
+    source: "Town of Telluride",
+    date: "October 22, 2026",
+    newsTopic: "housing",
+    copy: "(October 22, 2026) - The Town of Telluride and the San Miguel Regional Housing Authority (SMRHA) opened applications today for a deed-restricted homeownership lottery for Spruce House H at 226 East Pacific Avenue, Unit H, Telluride, Colorado, 81435.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=407",
+    img: ""
+  },
+  {
     title: "Sign Up for the 2026 Turkey Trot!",
     source: "San Miguel County",
     date: "November 5, 2026",
@@ -3514,6 +3540,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
   },
   {
+    title: "DMV Services available in Egnar 11/18",
+    source: "San Miguel County",
+    date: "October 15, 2026",
+    newsTopic: "community",
+    copy: "Attention, West Enders! The DMV will be coming to visit on Wednesday, November 18th, at the Firehouse in Egnar. No appointment necessary. Mark your calendars and save yourself a drive, we'll see you there! Questions? 970-728-3954.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=547",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14832"
+  },
+  {
     title: "Ridgway Bank Building Officially Added to the National Register of Historic Places",
     source: "Town of Ridgway",
     date: "October 9, 2027",
@@ -3533,6 +3568,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-reminds-pet-owners-of-responsibilities-2026-10-06.pdf",
+    img: ""
+  },
+  {
+    title: "Ridgway Planning Commission Meeting Agenda and Packet - November 18, 2026&nbsp;",
+    source: "Town of Ridgway",
+    date: "November 13, 2026",
+    firstSeen: "2026-11-13",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-Planning-Commission-Meeting-Packet---November-18%2C-2026-acc.pdf",
     img: ""
   },
   {
@@ -3558,6 +3604,28 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
+    source: "Town of Ridgway",
+    date: "November 13, 2026",
+    firstSeen: "2026-09-29",
+    newsTopic: "government",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Change-of-meeting-date-Council-notice.pdf",
+    img: ""
+  },
+  {
+    title: "Ridgway Town Council Meeting Agenda",
+    source: "Town of Ridgway",
+    date: "November 19, 2026",
+    firstSeen: "2026-11-13",
+    newsTopic: "government",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/00-Nov-19-tc-agenda.pdf",
+    img: ""
+  },
+  {
     title: "Notice of Public Hearing for Liquor License on November 19, 2026 at 5:30pm - Chipeta Lodge Resort &amp; Spa, 304 S Lena Street - Notice dated October 13, 2026",
     source: "Town of Ridgway",
     date: "November 13, 2026",
@@ -3577,17 +3645,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Budget-meetings-notice-2026.pdf",
-    img: ""
-  },
-  {
-    title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
-    source: "Town of Ridgway",
-    date: "November 13, 2026",
-    firstSeen: "2026-09-29",
-    newsTopic: "government",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Change-of-meeting-date-Council-notice.pdf",
     img: ""
   },
   {
@@ -4292,17 +4349,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/10/ski-swap-cow-crop.png"
   },
   {
-    title: "Up-Off Gymnastics, Dance, and Spanish",
-    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-11-13/",
-    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
-    pubDate: "2026-11-13T10:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Lone Cone Library Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
-  },
-  {
     title: "Ridgway Independent Film Fest 2026",
     link: "https://koto.org/event/ridgway-independent-film-fest-2026/",
     description: "12 Years of Fierce, Fearless, Independent Film The Ridgway Independent Film Festival (RIFF) returns in 2026 with its 12th year of celebrating bold storytelling, emerging filmmakers, and the power of community through the lens of independent film. The RIFF committee has selected films with a lineup of 6 blocks of films spanning 3 days. View Digital Program, tickets and more. Individual Block Tickets: $15 All Access Festival Pass: $75 Rooted in a volunteer-driven, grassroots effort born shortly after Ridgway became one of Colorado’s first Certified Creative Districts, RIFF continues to evolve while honoring its origins. This year, RIFF returns to its longtime home in November, taking place November 13–15, 2026, with a refreshed structure designed to create deeper connection and conversation. …",
@@ -4831,20 +4877,6 @@ const WILKINSON_EVENTS = [
 // this repopulates automatically when THS posts genuinely-available pets.
 const HUMANE_SOCIETY_ANIMALS = [
   {
-    id: "TEL-A-207",
-    name: "Timber",
-    species: "Dog",
-    breed: "Collie, Border / Cattle Dog, Australian (Red Heeler)",
-    ageGroup: "Young Puppy",
-    sex: "Male",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/0a662cfa39b2fb52481998afdd852fa1/1d7757d222609783e86c8784475bf984.jpg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/214942068",
-    summary: "Young Puppy • Collie, Border / Cattle Dog, Australian (Red Heeler) • Male",
-    firstSeen: "2026-10-31",
-    revealDate: "2026-10-31",
-    lastSeen: "2026-11-13"
-  },
-  {
     id: "TEL-A-208",
     name: "Yuki",
     species: "Dog",
@@ -4869,20 +4901,6 @@ const HUMANE_SOCIETY_ANIMALS = [
     profileUrl: "https://www.shelterluv.com/embed/animal/214942170",
     summary: "Young Dog • Collie, Border / Cattle Dog, Australian (Red Heeler) • Female",
     firstSeen: "2026-10-31",
-    revealDate: "2026-11-04",
-    lastSeen: "2026-11-13"
-  },
-  {
-    id: "TEL-A-211",
-    name: "Astra",
-    species: "Dog",
-    breed: "Husky",
-    ageGroup: "Young Puppy",
-    sex: "Female",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/52a6e181f5deae5d4a70189e53d2adfb/9d5cc31d87b5500bce17db4628dc42b7.jpeg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/214965927",
-    summary: "Young Puppy • Husky • Female",
-    firstSeen: "2026-11-04",
     revealDate: "2026-11-04",
     lastSeen: "2026-11-13"
   }
@@ -5536,8 +5554,8 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Gaper Contest 2026 - Voyager FUNdraiser",
     link: "https://events.ourayridgwayevents.com/event/gaper-contest-2026",
-    description: "A community photo contest and fundraiser for Voyager inviting locals of all ages from the northern San Juan region to submit their best \"gaper\" photos for a chance to be named Gaper of the Year. Community voting takes place during Gaper Week, November 21–29, 2026, coinciding with opening week at Telluride Ski Resort.",
-    pubDate: "2026-11-12T15:00:00.000Z",
+    description: "A community fundraiser for Voyager in which locals of all ages from the northern San Juan region submit photos for a chance to be named Gaper of the Year, with voting taking place during Gaper Week (November 21–29, 2026, coinciding with opening week at Telluride Ski Resort). Submitted photos must be original — no AI-generated or photoshopped images are accepted.",
+    pubDate: "2026-11-13T15:00:00.000Z",
     endDate: "2026-11-29",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5546,34 +5564,10 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54366527548837/huge/4c3995fa47f3b861d61e318e7dafd3cbfa9b02e9.jpg"
   },
   {
-    title: "Functional Fitness - Strength & Mobility Training For Women",
-    link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women-8391",
-    description: "Welcome to Ridgway's functional strength and mobility training for women. Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically but build real community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Every Tuesday & Thursday 8:15-9:15 am / Please check the website for dates and sign up! Location: 1075 Sherman St, Suite 201 / Weehawken Dance Studio (RIGS Building on the corner of Sherman and Amelia) Parking and entrance to the building are on N. Amelia St. …",
-    pubDate: "2026-11-12T15:15:00.000Z",
-    endDate: "2026-12-31",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Weehawken Ridgway (Old Schoolhouse)",
-    imageUrl: "https://localist-images.azureedge.net/photos/54236057466628/huge/10f1882bcc97fe1b7ad4209e2431edd0781a413f.jpg"
-  },
-  {
-    title: "Ouray Economic Development Committee",
-    link: "https://events.ourayridgwayevents.com/event/ouray-economic-development-committee",
-    description: "The Ouray Economic Development Committee (OEDC) works as the liaison between the City and the local business community. This includes creating and implementing an Economic Development Plan and economic development incentives to best serve the business community and to align with programs that induce private investment enterprises and commerce. The committee also explores regional economic development efforts with the Town of Ridgway and Ouray County as well as is tasked with developing a Business Expansion and Retention (BEAR) program, participating in policy discussions and revisions to community planning documents, and making recommendations to the City Council about economic incentive requests.",
-    pubDate: "2026-11-12T15:30:00.000Z",
-    endDate: "2026-12-10",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Community Center",
-    imageUrl: "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg"
-  },
-  {
     title: "Opening of SBA Disaster Loan Outreach Center in Ridgway",
     link: "https://events.ourayridgwayevents.com/event/opening-of-sba-disaster-loan-outreach-center-in-ridgway",
     description: "The U.S. Small Business Administration will be opening a Disaster Loan Outreach Center (DLOC) at the Ouray County 4H Center & Fairgrounds to assist communities affected by the wildfire, flooding, and mudslides that occurred June 27 – July 29, 2026. Beginning Monday, November 9th at 1pm, SBA customer service representatives will be on hand at the DLOC in Ridgway to answer questions and assist with the disaster loan application process. Walk-ins are welcome, and in-person appointments can be scheduled in advance at appointment.sba.gov. After Nov. 9th, the Center will be open on weekdays from 9am - 6pm, except it will be closed on Wednesday, Nov. 11th for Veterans Day. The Center will close permantently on Monday, Nov. 16th at 6 pm. The deadline to return physical damage applications for Ouray County is Dec. 22. …",
-    pubDate: "2026-11-12T16:00:00.000Z",
+    pubDate: "2026-11-13T16:00:00.000Z",
     endDate: "2026-11-16",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5582,94 +5576,16 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54426681104676/huge/052fefa1447324d3f196a2fcda7186517881fb5d.jpg"
   },
   {
-    title: "Ongoing: Film Stills from the Ridgway Independent Film Fest",
-    link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-film-stills-ridgway-independent-film-fest",
-    description: "The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In coordination with the annual Independent Film Festival (November 13-15) this show is both a preview and a celebration of the art of short filmmaking.",
-    pubDate: "2026-11-12T17:00:00.000Z",
-    endDate: "2026-11-30",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53048306784001/huge/b4907ccb0dd0b51c0bd862f76e556e669e3684c2.jpg"
-  },
-  {
     title: "Guided Tour: Historic Beaumont Hotel & Spa",
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
-    pubDate: "2026-11-12T20:30:00.000Z",
-    endDate: "2027-01-09",
+    pubDate: "2026-11-13T20:30:00.000Z",
+    endDate: "2027-01-12",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Beaumont Hotel & Spa",
     imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
-  },
-  {
-    title: "After School Art for Ages 5-8",
-    link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-5-8-6970",
-    description: "AFTER SCHOOL ART FOR AGES 5-8 Thursdays, 3:15–4:30 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 17 – October 8Session 2 (4 weeks • $85): October 22 – November 12Session 3 (3 weeks • $70): December 3 – December 17Each week, students will explore exciting themes and projects while experimenting with a wide variety of art materials—such as watercolor and acrylic paints, oil and chalk pastels, clay, collage, printmaking, and more. Through open-ended projects, students are encouraged to explore their creativity, make artistic choices, take creative risks, and discover their unique artistic voice. Our classes nurture imaginative thinking and storytelling, helping children express big ideas and emotions through visual narratives and personal creations. In addition to sparking imagination, our signature art projects support the development of fine motor skills, confidence, and social-emotional development in a fun group environment. …",
-    pubDate: "2026-11-12T22:15:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Annex on Cora",
-    imageUrl: "https://localist-images.azureedge.net/photos/53780725919104/huge/846566299e8e325221de54dd5a54a0fd6427fbf5.jpg"
-  },
-  {
-    title: "Children's Story Time",
-    link: "https://events.ourayridgwayevents.com/event/childrens-story-time",
-    description: "An after-school story time program at the Ouray Public Library, welcoming children under 12. The recurring community event offers young readers the chance to enjoy stories together in a library setting.",
-    pubDate: "2026-11-12T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Public Library",
-    imageUrl: "https://localist-images.azureedge.net/photos/54312298062618/huge/a6fbed1afc71cd8df11f2dd64edccfd564bb4396.jpg"
-  },
-  {
-    title: "Ouray Boys MS Basketball VS Telluride",
-    link: "https://events.ourayridgwayevents.com/event/ouray-boys-ms-basketball-vs-telluride",
-    description: "A middle school boys basketball matchup between Ouray and Telluride, with C Team, B Team, and A Team games scheduled sequentially throughout the afternoon and evening. The games take place at Ouray School.",
-    pubDate: "2026-11-12T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray School",
-    imageUrl: "https://localist-images.azureedge.net/photos/54295271173715/huge/9b568202240729797ff29fe3e96ca0b53155e04d.jpg"
-  },
-  {
-    title: "Ridgway MS Boys Basketball vs. Dove Creek",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-ms-boys-basketball-vs-dove-creek",
-    description: "Ridgway Middle School Boys Basketball hosts a home game against Dove Creek at Ridgway Secondary School. It's a chance for the community to come out and support the local middle school team.",
-    pubDate: "2026-11-12T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway Secondary School",
-    imageUrl: "https://localist-images.azureedge.net/photos/54470908260396/huge/c07b972a9b1ef11410a50f6dbec96405399336eb.jpg"
-  },
-  {
-    title: "Watercolor & Wine with Katey Fetch: Moonlight & Mountains",
-    link: "https://events.ourayridgwayevents.com/event/watercolor-wine-with-katey-fetch-moonlight-mountains-5914",
-    description: "Unwind, get creative, and discover the joy of watercolor in this relaxed paint-and-sip class! You'll create a moonlit mountain watercolor with Katey Fetch. Designed for beginners but welcoming to artists of all experience levels, this class will guide you step by step through creating a beautiful watercolor painting in a fun, supportive environment. A beverage and all supplies are included. About the Instructor: Katey Fetch: Katey Fetch hails from a small town in Colorado, where she continues to learn how to be an artist. Though she went to art school, she took a long hiatus from art and is in the midst of rediscovering what art means to her. Her favorite mediums are graphite pencil and watercolor. She draws inspiration from many talented artists, both past and present, nature, and the wonder of the three feral beasts she’s raising—aka, her daughters. Katey enjoys creating portraits, forlorn figures, and interesting compositions.",
-    pubDate: "2026-11-13T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Annex on Cora",
-    imageUrl: "https://localist-images.azureedge.net/photos/54226967465916/huge/f2b2a7765648f57e0960f267f5571df9510dfcd8.jpg"
-  },
-  {
-    title: "Music Bingo",
-    link: "https://events.ourayridgwayevents.com/event/music-bingo",
-    description: "Music Bingo at Floating Lotus Brewery! Join us on the 2nd & 4th Thursdays from 7–9 PM for a high-energy night of music, drinks, and bingo-style fun. Listen, mark your card, and sing along. Learn more at floatinglotusbrewery.com.",
-    pubDate: "2026-11-13T02:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53790449536989/huge/a7181e9d298980d4c2377db45d06d26bb81e0b12.jpg"
   },
   {
     title: "Ouray Public Library & Second Chance Cat/Kitten Adoption Event",
@@ -5797,6 +5713,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54066525467985/huge/aeb14558baf2ca7e09ccf2907f91417a1c740cce.jpg"
   },
   {
+    title: "Every Sat. Floating Sound Bath",
+    link: "https://events.ourayridgwayevents.com/event/floating-sound-bath-4324",
+    description: "A weekly group float session held every Saturday at Orvis Hot Springs, combining warm water relaxation with live sound therapy including vocals and singing bowls. Participants receive gentle aquatic massage while immersed in the healing sounds, with sliding-scale pricing and advance reservations required through the event organizer.",
+    pubDate: "2026-11-14T22:00:00.000Z",
+    endDate: "2027-01-09",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Orvis Hot Springs",
+    imageUrl: "https://localist-images.azureedge.net/photos/54329446861527/huge/5ff492866a14a5e49ce0e515c6d714c1010eeea6.jpg"
+  },
+  {
     title: "Ouray County Community Art Show Opening Reception",
     link: "https://events.ourayridgwayevents.com/event/ouray-county-community-art-show-opening-reception",
     description: "The opening reception will be on November 14th from 4pm to 7pm. The Ouray County Community Art Show at the Ridgway Library on 300 Charles St., Ridgway will be on display from November 14th 2026 through January 7th 2027.",
@@ -5897,6 +5825,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53924398882536/huge/a5451161d264c1870d73a22c5d5625c3a29a8c63.jpg"
   },
   {
+    title: "Ongoing: Film Stills from the Ridgway Independent Film Fest",
+    link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-film-stills-ridgway-independent-film-fest",
+    description: "The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In coordination with the annual Independent Film Festival (November 13-15) this show is both a preview and a celebration of the art of short filmmaking.",
+    pubDate: "2026-11-16T17:00:00.000Z",
+    endDate: "2026-11-30",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53048306784001/huge/b4907ccb0dd0b51c0bd862f76e556e669e3684c2.jpg"
+  },
+  {
     title: "Senior Lunch by Neighbor to Neighbor",
     link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
     description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
@@ -5907,6 +5847,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
+  },
+  {
+    title: "Functional Fitness - Strength & Mobility Training For Women",
+    link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women-8391",
+    description: "Welcome to Ridgway's functional strength and mobility training for women. Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically but build real community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Every Tuesday & Thursday 8:15-9:15 am / Please check the website for dates and sign up! Location: 1075 Sherman St, Suite 201 / Weehawken Dance Studio (RIGS Building on the corner of Sherman and Amelia) Parking and entrance to the building are on N. Amelia St. …",
+    pubDate: "2026-11-17T15:15:00.000Z",
+    endDate: "2026-12-31",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Ridgway (Old Schoolhouse)",
+    imageUrl: "https://localist-images.azureedge.net/photos/54236057466628/huge/10f1882bcc97fe1b7ad4209e2431edd0781a413f.jpg"
   },
   {
     title: "Cimarron Gathering Place",
@@ -6070,6 +6022,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
+    title: "Free Community Thanksgiving Dinner",
+    link: "https://events.ourayridgwayevents.com/event/free-community-thanksgiving-dinner",
+    description: "We are offering a free thanksgiving dinner to our Community. Cocktails at 5:00pm and free dinner at 6:00pm. Donations are welcome!",
+    pubDate: "2026-11-21T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Elks Lodge #492",
+    imageUrl: "https://localist-images.azureedge.net/photos/54499361055853/huge/0cf92b9806986d9583c378d0494670d2b5658cfb.jpg"
+  },
+  {
     title: "PSYLO at The Sherbino",
     link: "https://events.ourayridgwayevents.com/event/psylo-at-the-sherbino",
     description: "PSYLO brings a Cosmic Luau to The Sherbino in Telluride, promising an evening that blends psychedelic vibes with tropical flair. The event is hosted at The Sherbino, one of the area's well-known community and performance venues.",
@@ -6079,6 +6042,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/54284857340278/huge/1ca7afcc7bf4922a6b8dfc622234079f2bc22c0d.jpg"
+  },
+  {
+    title: "Turkey Bingo",
+    link: "https://events.ourayridgwayevents.com/event/turkey-bingo-at-greenwoods",
+    description: "A fundraiser hosted by RACC at Greenwood's, Turkey Bingo offers community members a chance to win a free turkey by playing bingo, with a suggested donation supporting Ridgway area businesses. Thanksgiving pies made at Greenwood's will also be available for pickup at the event.",
+    pubDate: "2026-11-22T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Greenwood's",
+    imageUrl: "https://localist-images.azureedge.net/photos/54506676236668/huge/8d0f2807c6d13cff029995c2dc89a1a23b1cf2d8.jpg"
   },
   {
     title: "Thanksgiving Break - Ridgway Schools",
@@ -6403,6 +6377,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/monthly-welcome-home-alliance-veterans-coffee-the-sherbino",
     description: "A monthly veterans' gathering hosted by the Welcome Home Alliance at The Sherbino, offering coffee, donuts, and camaraderie for veterans of every branch, era, and ability. Representatives will be on hand to share information on topics including navigating the VA, housing, jobs, and volunteer opportunities.",
     pubDate: "2026-12-08T17:00:00.000Z",
+    endDate: "2027-01-12",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6443,6 +6418,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Montrose Pavilion",
     imageUrl: "https://localist-images.azureedge.net/photos/54066523355312/huge/65de6aff77e10f2912e9ccfab16467e7d13e6025.jpg"
+  },
+  {
+    title: "Ouray Economic Development Committee",
+    link: "https://events.ourayridgwayevents.com/event/ouray-economic-development-committee",
+    description: "The Ouray Economic Development Committee (OEDC) works as the liaison between the City and the local business community. This includes creating and implementing an Economic Development Plan and economic development incentives to best serve the business community and to align with programs that induce private investment enterprises and commerce. The committee also explores regional economic development efforts with the Town of Ridgway and Ouray County as well as is tasked with developing a Business Expansion and Retention (BEAR) program, participating in policy discussions and revisions to community planning documents, and making recommendations to the City Council about economic incentive requests.",
+    pubDate: "2026-12-10T15:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Community Center",
+    imageUrl: "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg"
   },
   {
     title: "Ridgway Wrecking Crew",
@@ -6502,7 +6488,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Swimming with Santa",
     link: "https://events.ourayridgwayevents.com/event/swimming-with-santa",
-    description: "Get into the holiday spirit with some friendly competition, hot cocoa, and a visit from Santa at the Ouray Hot Springs! Plus, get a Santa Hat when you arrive! On Dec. 19 from 4-6 PM, we'll have pool races followed by visits with Santa. The top racer will go head-to-head with Santa in a final showdown for a 10-punch pass! Everyone who participates in the races will also receive a glowstick. After the races, Santa will head into the warm pool from 5:30–6:00 PM to visit with kids and take photos. Schedule 4:00 PM: Doors open, get some hot cocoa! 4:30 PM: Race Registration 5:00 PM: Pool races begin 5:30–6:00 PM: Santa visits with kids in the hot pool Come race, cheer on the competitors, or simply enjoy a little holiday fun with Santa at the hot springs!",
+    description: "Get into the holiday spirit with some friendly competition, hot cocoa, and a visit from Santa at the Ouray Hot Springs! Plus, get a Santa Hat when you arrive! On Dec. 19 from 4-6 PM, we'll have pool races followed by visits with Santa. The top racer will go head-to-head with Santa in a final showdown for a 10-punch pass! Everyone who participates in the races will also receive a free glowstick! After the races, Santa will head into the warm pool from 5:30–6:00 PM to visit with kids and take photos. Schedule 4:00 PM: Doors open, get some hot cocoa! 4:30 PM: Race Registration 5:00 PM: Pool races begin 5:30–6:00 PM: Santa visits with kids in the hot pool Come race, cheer on the competitors, or simply enjoy a little holiday fun with Santa at the hot springs!",
     pubDate: "2026-12-19T23:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -7097,7 +7083,7 @@ const TELLURIDE_COM_EVENTS = [
     sourceLabel: "Telluride.com",
     category: "Community Event",
     location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/36627/hab-2026-2200x1237.800x533.webp"
+    imageUrl: "https://www.telluride.com/site/assets/files/36627/hab-2026-2200x1237-w-sponsor.800x533.webp"
   },
   {
     title: "Spongebob the Musical",
@@ -7109,7 +7095,7 @@ const TELLURIDE_COM_EVENTS = [
     sourceLabel: "Telluride.com",
     category: "Community Event",
     location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63715/spongebobthemusical-ezgif_com-webp-to-jpg-converter.800x533.webp"
+    imageUrl: "https://www.telluride.com/site/assets/files/63715/telluride_event_images_2200_x_1237_px.800x533.webp"
   },
   {
     title: "Noel Night",
@@ -7133,6 +7119,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/36708/download_2.800x533.webp"
+  },
+  {
+    title: "PI Avy Fund Backcountry Chat",
+    link: "https://www.telluride.com/event/pi-avy-fund-backcountry-chat/",
+    description: "Join the Telluride Mountain Club and PI Avy Fund for their first Backcountry Chat of the season! We will cover several …",
+    pubDate: "2026-12-10",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/64280/dsc02424.800x533.webp"
   },
   {
     title: "WinterSing!",
@@ -7202,7 +7199,7 @@ const TELLURIDE_COM_EVENTS = [
     sourceLabel: "Telluride.com",
     category: "Community Event",
     location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/61598/centered_2.800x533.webp"
+    imageUrl: "https://www.telluride.com/site/assets/files/61598/1920_x_1005_px_cover_centered.800x533.webp"
   },
   {
     title: "Elf the Musical",
@@ -8288,6 +8285,9 @@ const RIDGWAY_AGENDA_MAP = {
 
   "March 11, 2020":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.03.11%20TC%20Agenda%20Packet.pdf",
+
+  "November 18, 2026":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-Planning-Commission-Meeting-Packet---November-18%2C-2026-acc.pdf",
 
   "October 21, 2026":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-Planning-Commission-Meeting-Packet---October-21%2C-2026-acc.pdf",
@@ -9377,10 +9377,11 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "November 18, 2026",
     title: "Parks & Recreation Commission",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8084",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "12:00 PM",
-    civicwebId: 8084
+    civicwebId: 8084,
+    packetUrl: "https://telluride-co.civicweb.net/document/447741/"
   },
   {
     date: "November 19, 2026",
@@ -9409,6 +9410,15 @@ const TELLURIDE_BOARD_MEETINGS = [
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "9:00 AM",
     civicwebId: 8166
+  },
+  {
+    date: "December 3, 2026",
+    title: "Planning & Zoning Commission - Special Meeting",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8362",
+    hasAgenda: false,
+    location: "Telluride Science & Innovation Center - 300 S Townsend St",
+    time: "5:30 PM",
+    civicwebId: 8362
   },
   {
     date: "December 3, 2026",
