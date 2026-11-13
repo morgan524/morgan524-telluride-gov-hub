@@ -1,22 +1,22 @@
 {
-  "hash": "ba9aed113abf59a79343eae5941f87cbbfbc9df1",
-  "lede": "The biggest thing on the calendar this week is Telluride Town Council's November 17 meeting, where the 2027 budget and property tax levy come to a vote — and Council will also take a second crack at an ordinance that would suspend the Open Space Fund's cut of Real Estate Transfer Tax revenue for the year. San Miguel County's Planning Commission digs into proposed changes to the Affordable Housing Impact Mitigation Fee on the 12th, a wonky-sounding item with real consequences for whether workforce housing actually gets built. SMART's board also convenes to act on three resolutions, including an amendment to the Executive Director's employment agreement and a gondola project update worth keeping an eye on.",
+  "hash": "695721f6505d064afc5cb3f951f0744b78b6d269",
+  "lede": "The biggest thing on the calendar this week is Monday night in Telluride Town Council, where the 2027 budget and its accompanying property tax levy go to a vote — and right alongside it, a second reading on suspending the Open Space Fund's 5% cut of Real Estate Transfer Tax revenue for the year, a move that puts fiscal pressure and land conservation directly in tension. Norwood's Planning and Zoning Commission is also doing foundational work Monday, taking up both a Land Use Code update and a Master Plan update that will shape what gets built in that community for years. Over in Ouray County Tuesday, the BOCC considers resolutions to repeal existing austerity measures and adopt a formal AI governance policy, two signals about where that county is headed.",
   "notable": [
     {
+      "id": 9,
+      "stake": "2027 budget, property tax levy, and open space fund suspension all go to a vote."
+    },
+    {
       "id": 1,
-      "stake": "Proposed fee changes could reshape how workforce housing gets built countywide."
+      "stake": "Land Use Code and Master Plan updates will define what gets built in Norwood for years."
     },
     {
-      "id": 3,
-      "stake": "Board votes on three resolutions, including Executive Director contract amendment."
+      "id": 12,
+      "stake": "Ouray County votes to repeal austerity measures and adopt first regional AI governance policy."
     },
     {
-      "id": 5,
-      "stake": "Land Use Code and Master Plan updates will shape what gets built in Norwood for years."
-    },
-    {
-      "id": 13,
-      "stake": "2027 budget, property tax levy, and Open Space Fund suspension all come to a vote."
+      "id": 11,
+      "stake": "Workforce housing lottery drawings for two Black Bear Road properties — eligible renters should attend."
     }
   ]
 }

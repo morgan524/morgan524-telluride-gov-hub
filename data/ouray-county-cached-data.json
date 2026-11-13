@@ -28,7 +28,9 @@
     "location": "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
     "civicClerkId": 1082,
     "note": null,
-    "board": "bocc"
+    "packetUrl": "https://ouraycoco.portal.civicclerk.com/event/1082/files/agenda/7596",
+    "board": "bocc",
+    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/1082/files/agenda/7595"
   },
   {
     "date": "November 18, 2026",
@@ -37,7 +39,9 @@
     "location": "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
     "civicClerkId": 1130,
     "note": null,
-    "board": "bocc"
+    "packetUrl": "https://ouraycoco.portal.civicclerk.com/event/1130/files/agenda/7598",
+    "board": "bocc",
+    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/1130/files/agenda/7597"
   },
   {
     "date": "December 8, 2026",

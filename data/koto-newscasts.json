@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 11-12-26",
+    "source": "KOTO Community Radio",
+    "date": "November 13, 2026",
+    "newsTopic": "community",
+    "copy": "West End Roundup with the San Miguel Basin Forum; Kaye Simonson Retires as County Planning Director; Songs from the San Miguel Take to the Stage",
+    "href": "https://koto.org/news/newscast-11-12-26/"
+  },
+  {
     "title": "Newscast 11-11-26",
     "source": "KOTO Community Radio",
     "date": "November 12, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "community",
     "copy": "HOA Seeks County’s Help with Water Shortage; Cat Movie Fisher with Risho Unda; Your Vote Matters More Than You Think",
     "href": "https://koto.org/news/newscast-10-30-26/"
-  },
-  {
-    "title": "Newscast 10-29-26",
-    "source": "KOTO Community Radio",
-    "date": "October 30, 2026",
-    "newsTopic": "arts-culture",
-    "copy": "West End Roundup with the San Miguel Basin Forum; Lights Up at the Rico Theatre; West End Runners Hit the Trails, One Step at a Time",
-    "href": "https://koto.org/news/newscast-10-29-26-2/"
   }
 ]

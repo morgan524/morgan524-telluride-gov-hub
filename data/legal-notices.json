@@ -68,27 +68,6 @@
     "smcBidID": "210"
   },
   {
-    "title": "Foreclosure Sale Notice -- 619 W Columbia Ave D303, Telluride (Sale No. 202606)",
-    "entity": "Brandi R. Hatfield, Public Trustee, San Miguel County / Deutsche Bank National Trust Company",
-    "entityClass": "ent-county",
-    "entityLogo": "assessor",
-    "icon": "💰",
-    "iconClass": "type-tax",
-    "type": "Tax & Finance",
-    "filterTag": "tax-finance",
-    "summary": "The San Miguel County Public Trustee has scheduled a foreclosure auction for Unit 303, Building D1, The Tomboy Lodge (619 W Columbia Ave D303, Telluride, CO 81435) following a default on a deed of trust originally granted by J. Ascenzo DiGiacomo to Long Beach Mortgage Company, now held by Deutsche Bank National Trust Company. The outstanding principal balance is $187,007.81 on an original loan of $209,000. The public auction will be held at 10:00 a.m. on November 12, 2026, at 305 W. Colorado Avenue, East entry, Telluride, CO; notice of intent to cure must be filed at least 15 calendar days before the sale date.",
-    "deadline": "2026-11-12",
-    "expires": "2026-11-12",
-    "dates": "9/17",
-    "papers": [
-      "ttimes_0917"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_6e1025d7-5ad7-45a9-8530-2bda61ea94b8.html",
-    "address": "619 W Columbia Ave, Unit D303 (Tomboy Lodge), Telluride, CO 81435",
-    "noticeKey": "foreclosure-sale-202606-COL000242",
-    "caseNumber": "202606"
-  },
-  {
     "title": "Request for Proposal -- Consulting Services for a Comprehensive Review of the Telluride Employee Rental Housing Policies",
     "entity": "Town of Telluride",
     "entityClass": "ent-county",
@@ -104,27 +83,6 @@
     "url": "https://www.telluride.gov/bids.aspx?bidID=132",
     "address": "",
     "totBidID": "132"
-  },
-  {
-    "title": "Foreclosure Sale -- 619 W Columbia Ave D-303, Telluride (2026-06)",
-    "entity": "Deutsche Bank National Trust Company / San Miguel County Public Trustee",
-    "entityClass": "ent-county",
-    "entityLogo": "assessor",
-    "icon": "💰",
-    "iconClass": "type-tax",
-    "type": "Tax & Finance",
-    "filterTag": "tax-finance",
-    "summary": "The San Miguel County Public Trustee has scheduled a public auction foreclosure sale for Unit 303, Building D-1, The Tomboy Lodge at 619 W Columbia Ave D-303, Telluride, CO 81435, following a default on a 2004 deed of trust originally granted by J. Ascenzo DiGiacomo to Long Beach Mortgage Company (now held by Deutsche Bank National Trust Company). The outstanding principal balance is $187,007.81 on an original loan of $209,000. The auction will be held at 10:00 a.m. on Thursday, November 12, 2026, at 305 W. Colorado Avenue, East entry, Telluride, CO.",
-    "deadline": "2026-11-12",
-    "expires": "2026-11-12",
-    "dates": "9/24",
-    "papers": [
-      "ttimes_0924"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_87c1dedd-06e4-4678-a68d-6a0116434245.html",
-    "address": "619 W Columbia Ave D-303, Telluride, CO 81435",
-    "noticeKey": "foreclosure-2026-06-tomboy-lodge-d303",
-    "caseNumber": "2026-06"
   },
   {
     "title": "Foreclosure Sale -- Deed of Trust, 40697 State Highway 145 Norwood (Sale No. 2026-07)",
@@ -425,26 +383,6 @@
     "url": "https://www.telluridenews.com/news/legals/article_4fe133a6-ca5f-42a1-810d-63306c1b854d.html",
     "address": "36 Porphyry Street, Ophir, CO 81426",
     "noticeKey": "ord-ophir-2026-07"
-  },
-  {
-    "title": "Public Meeting -- San Miguel County Planning Commission Regular Meeting (November 12, 2026)",
-    "entity": "San Miguel County Planning Commission",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "The San Miguel County Planning Commission will hold its regular meeting on Thursday, November 12, 2026 at 9:00 AM at 333 West Colorado Ave., Second Floor, Telluride, with a Zoom option available. The agenda includes a work session on amendments to the Affordable Housing Impact Mitigation Fee and housing incentive ideas, as well as a land use application to rezone a portion of Placerville Park near the fire station from Forestry, Agriculture, and Open (F) to Public (P). Public participation is available in person or via Zoom.",
-    "deadline": "2026-11-12",
-    "expires": "2026-11-12",
-    "dates": "11/5",
-    "papers": [
-      "ttimes_1105"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_4fe133a6-ca5f-42a1-810d-63306c1b854d.html",
-    "address": "333 West Colorado Ave., Second Floor, Telluride, CO 81435",
-    "noticeKey": "smc-planning-commission-2026-11-12"
   },
   {
     "title": "RFP -- Telluride Conference Center Management and Operation Agreement",
