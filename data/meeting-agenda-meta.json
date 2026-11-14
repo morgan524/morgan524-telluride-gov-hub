@@ -1,29 +1,4 @@
 {
-  "norwood|2026-10-14|Board of Trustees Meeting": {
-    "sv": 4,
-    "ph": "b858cb282617fb09"
-  },
-  "ridgway|2026-10-14|Ridgway Town Council Regular Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Updated-Town-Council-Regular-Meeting-Packet---October-14%2C-2026.pdf",
-    "zoomUrl": "https://us02web.zoom.us/j/86099482328?pwd=mlhYCUDObNpU8FLRgTKoSJmuljfclB.1",
-    "meetingId": "860 9948 2328",
-    "passcode": "019813",
-    "phone": "346 248 7799"
-  },
-  "telluride|2026-10-14|Liquor Licensing Authority - Oct 14 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8146",
-    "sv": 4,
-    "ph": "28ddc62878422962"
-  },
-  "county|2026-10-14|Board of County Commissioners Work Session": {
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/858/files/agenda/2038",
-    "zoomUrl": "https://us02web.zoom.us/meeting/register/qTt5CFcNRD-N6Bld7DWwkA",
-    "meetingId": "848 3404 4273",
-    "passcode": "251572",
-    "phone": "719-359-4580"
-  },
   "mv|2026-10-15|Town Council Meeting": {
     "sv": 4,
     "agendaUrl": "https://townofmountainvillage.com/site/assets/files/50073/october_15-_2026_town_council_meeting_agenda.pdf",
@@ -126,14 +101,6 @@
     "sv": 4,
     "ph": "b858cb282617fb09"
   },
-  "telluride|2026-10-14|Special Liquor Licensing Authority - Oct 14 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8146",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1",
-    "meetingId": "861 6987 1704",
-    "passcode": "281002.",
-    "phone": "346-248-7799"
-  },
   "county|2026-10-26|Open Space Commission Meeting": {
     "sv": 4,
     "ph": "1ff606174e68cca5"
@@ -211,14 +178,6 @@
     "meetingId": "871 5717 3224",
     "passcode": "186923",
     "phone": "970) 728-1904"
-  },
-  "ouray|2026-10-14|Board of County Commissioners Work Session": {
-    "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/1117/files/agenda/7564",
-    "zoomUrl": "https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1",
-    "meetingId": "876 0637 5697",
-    "passcode": "946299",
-    "phone": "346-248-7799",
-    "sv": 4
   },
   "telluride|2026-11-09|Open Space Commission - Nov 09 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8133",
@@ -326,7 +285,12 @@
     "zoomUrl": "https://us06web.zoom.us/meeting/register/tZIufu6srzwsH9X0sfxgA_In-LUt0azBIi8Z"
   },
   "county|2026-11-18|Board of County Commissioners Meeting": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/902/files/agenda/2077",
+    "zoomUrl": "https://us02web.zoom.us/meeting/register/3oa6IAwwScu2-a0JGVOl8Q",
+    "meetingId": "845 8283 9046",
+    "passcode": "556147",
+    "phone": "719-359-4580"
   },
   "county|2026-11-09|Intergovernmental Meeting - San Miguel County Hosts": {
     "sv": 4,
@@ -544,7 +508,7 @@
   "telluride|2026-12-03|Town Council Retreat - Dec 03 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8051",
     "sv": 4,
-    "ph": "b70de71d43089fe6"
+    "ph": "8a1e2d979230f1c7"
   },
   "county|2026-11-09|San Miguel Basin Fair Board": {
     "sv": 4,
@@ -584,7 +548,7 @@
   },
   "county|2026-11-16|Open Space Commission Meeting 11/23": {
     "sv": 4,
-    "ph": "31ce8a9d6a4fcb25"
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1091/files/agenda/2075"
   },
   "ouraycity|2026-11-10|Ouray Planning Commission Regular Meeting": {
     "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=776213",
@@ -667,5 +631,9 @@
   "ouraycity|2026-11-16|Ouray City Council Regular Meeting": {
     "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=774802",
     "sv": 4
+  },
+  "school|2026-12-14|Telluride Board of Education Work Session": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   }
 }

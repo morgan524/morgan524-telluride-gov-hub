@@ -1,26 +1,22 @@
 {
-  "hash": "1f16b77ce4552805e26a24e2753fecae13115f0a",
-  "lede": "The biggest thing on the calendar this week is Telluride Town Council's Monday session, where the 2027 budget and property tax levy go to a vote alongside second reading of an ordinance that would suspend the Open Space Fund's cut of Real Estate Transfer Tax revenue for the year — a real tension between tight finances and the land-conservation commitments this valley has long held dear. Ouray City Council is doing the same kind of heavy lifting on its own 2027 budget, mill levy, and fee schedule, while Norwood's Planning and Zoning Commission digs into foundational Land Use Code and Master Plan updates that will shape what gets built there for years. And if you're waiting on workforce housing on Black Bear Road, the Telluride Housing Authority draws master lease lotteries for two properties Monday night.",
+  "hash": "b2a400b9ec964b8a3dcf77130ab79ec98b8936cb",
+  "lede": "Monday night, Telluride Town Council votes on the 2027 budget and the property tax levy that funds it — and tucked into that same meeting is a second reading of an ordinance that would suspend the Open Space Fund's 5% cut of Real Estate Transfer Tax revenue for the year, a real tension between tight finances and the town's conservation commitments worth showing up for. Norwood's Planning and Zoning Commission also digs into Land Use Code and Master Plan updates Monday, the kind of foundational work that shapes what gets built for years. Ouray City Council meanwhile votes on its own 2027 budget package, mill levy, and fee schedule, and over in Ouray County the BOCC takes up a resolution repealing austerity measures alongside a new AI governance policy.",
   "notable": [
     {
       "id": 1,
-      "stake": "Norwood's Land Use Code and Master Plan updates shape future development patterns."
+      "stake": "Land Use Code and Master Plan updates shape Norwood's future development rules."
     },
     {
       "id": 5,
-      "stake": "Ouray adopts 2027 budget, mill levy, fee schedule, and Ice Park agreement."
+      "stake": "Ouray votes on 2027 budget, mill levy, fee schedule, and Ice Park agreement."
     },
     {
       "id": 9,
-      "stake": "Telluride votes on 2027 budget, tax levy, and suspending Open Space Fund dedication."
-    },
-    {
-      "id": 11,
-      "stake": "Master lease lotteries decide workforce housing placements on Black Bear Road."
+      "stake": "Telluride votes on 2027 budget, tax levy, and Open Space Fund suspension ordinance."
     },
     {
       "id": 12,
-      "stake": "Ouray County repeals austerity measures and adopts first regional AI governance policy."
+      "stake": "Ouray County repeals austerity, discusses 2027 budget, and adopts first AI policy."
     }
   ]
 }

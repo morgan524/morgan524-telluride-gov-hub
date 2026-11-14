@@ -146,18 +146,6 @@ function resolveEventImage(e, opts) {
 // stays current automatically; the static config is the fallback for
 // sources without a PDF agenda.
 const MEETING_AGENDA_META = {
-  "norwood|2026-10-14|Board of Trustees Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"},
-
-  "ridgway|2026-10-14|Ridgway Town Council Regular Meeting":
-    {"sv":4,"agendaUrl":"https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Updated-Town-Council-Regular-Meeting-Packet---October-14%2C-2026.pdf","zoomUrl":"https://us02web.zoom.us/j/86099482328?pwd=mlhYCUDObNpU8FLRgTKoSJmuljfclB.1","meetingId":"860 9948 2328","passcode":"019813","phone":"346 248 7799"},
-
-  "telluride|2026-10-14|Liquor Licensing Authority - Oct 14 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8146","sv":4,"ph":"28ddc62878422962"},
-
-  "county|2026-10-14|Board of County Commissioners Work Session":
-    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/858/files/agenda/2038","zoomUrl":"https://us02web.zoom.us/meeting/register/qTt5CFcNRD-N6Bld7DWwkA","meetingId":"848 3404 4273","passcode":"251572","phone":"719-359-4580"},
-
   "mv|2026-10-15|Town Council Meeting":
     {"sv":4,"agendaUrl":"https://townofmountainvillage.com/site/assets/files/50073/october_15-_2026_town_council_meeting_agenda.pdf","zoomUrl":"https://us06web.zoom.us/webinar/register/WN_umHST1CvS4e9rjqoKXLYAQ","phone":"970-369-6429"},
 
@@ -209,9 +197,6 @@ const MEETING_AGENDA_META = {
   "school|2026-10-19|Telluride Board of Education Work Session":
     {"sv":4,"ph":"b858cb282617fb09"},
 
-  "telluride|2026-10-14|Special Liquor Licensing Authority - Oct 14 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8146","sv":4,"zoomUrl":"https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1","meetingId":"861 6987 1704","passcode":"281002.","phone":"346-248-7799"},
-
   "county|2026-10-26|Open Space Commission Meeting":
     {"sv":4,"ph":"1ff606174e68cca5"},
 
@@ -250,9 +235,6 @@ const MEETING_AGENDA_META = {
 
   "tmvoa|2026-11-06|TMVOA Board of Directors Budget Meeting #1":
     {"sv":4,"agendaUrl":"https://tmvoa.org/site/assets/files/4890/tmvoa_board_meeting_agenda_11_06_26_revised_pl.pdf","zoomUrl":"https://us02web.zoom.us/meeting/register/Zl-93MeNQwyWYiRsQ3YGAA","meetingId":"871 5717 3224","passcode":"186923","phone":"970) 728-1904"},
-
-  "ouray|2026-10-14|Board of County Commissioners Work Session":
-    {"agendaUrl":"https://ouraycoco.portal.civicclerk.com/event/1117/files/agenda/7564","zoomUrl":"https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1","meetingId":"876 0637 5697","passcode":"946299","phone":"346-248-7799","sv":4},
 
   "telluride|2026-11-09|Open Space Commission - Nov 09 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8133","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/ePrh_CzmTLKqp0syEbUesw","meetingId":"894 7506 0147","passcode":"314276.","phone":"719) 359-4580"},
@@ -312,7 +294,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8084","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/tZIufu6srzwsH9X0sfxgA_In-LUt0azBIi8Z"},
 
   "county|2026-11-18|Board of County Commissioners Meeting":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/902/files/agenda/2077","zoomUrl":"https://us02web.zoom.us/meeting/register/3oa6IAwwScu2-a0JGVOl8Q","meetingId":"845 8283 9046","passcode":"556147","phone":"719-359-4580"},
 
   "county|2026-11-09|Intergovernmental Meeting - San Miguel County Hosts":
     {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1077/files/agenda/2067","zoomUrl":"https://us02web.zoom.us/meeting/register/-Xc7XRV5QtSEK4_gcCq7Hw","meetingId":"816 7927 3686","passcode":"275604","phone":"719-359-4580"},
@@ -429,7 +411,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-12-03|Town Council Retreat - Dec 03 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8051","sv":4,"ph":"b70de71d43089fe6"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8051","sv":4,"ph":"8a1e2d979230f1c7"},
 
   "county|2026-11-09|San Miguel Basin Fair Board":
     {"sv":4,"ph":"6825174845a5ec0c"},
@@ -450,7 +432,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://ouraycoco.portal.civicclerk.com/event/1094/files/agenda/7581","zoomUrl":"https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1","meetingId":"876 0637 5697","passcode":"946299","phone":"346-248-7799","sv":4},
 
   "county|2026-11-16|Open Space Commission Meeting 11/23":
-    {"sv":4,"ph":"31ce8a9d6a4fcb25"},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1091/files/agenda/2075"},
 
   "ouraycity|2026-11-10|Ouray Planning Commission Regular Meeting":
     {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=776213","sv":4},
@@ -504,7 +486,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8362","sv":4,"ph":"a5aeca1c51c0115f"},
 
   "ouraycity|2026-11-16|Ouray City Council Regular Meeting":
-    {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=774802","sv":4}
+    {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=774802","sv":4},
+
+  "school|2026-12-14|Telluride Board of Education Work Session":
+    {"sv":4,"ph":"b858cb282617fb09"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -1085,22 +1070,10 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/facilities-master-plan/widgets/99345/key_dates#43074"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-11-13';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-11-14';
 const LEGAL_NOTICES_CACHE_DATE = '2026-11-13';
 
 const MANUAL_SUMMARIES = {
-  "norwood|2026-10-14|Board of Trustees Meeting":
-    "The October 14, 2026 Norwood Board of Trustees Meeting agenda hasn't been posted yet.",
-
-  "ridgway|2026-10-14|Ridgway Town Council Regular Meeting":
-    "The Ridgway Workforce & Affordable Housing Committee meets the evening of October 14 — after the regular Council meeting — to take up two items from Home Trust of Ouray County. First, Housing Services Director Eva Henson delivers the Q3 2026 quarterly report: one year into the regional administrator arrangement, milestones include a rehabilitated rental unit returned to service at 835 2nd Street, the first deed-restriction resale at Riverfront Village (Unit 201, $395,000), and a $145,000 supplemental DOLA grant secured with no local match. The report also flags that Ridgway is expected to consider its Proposition 123 opt-in resolution at this same meeting, committing to add 13 deed-restricted units in the 2027–2029 cycle. Second, the committee will weigh whether to exercise the Town's Right of First Refusal on 683 Frederickson Street — a deed-restricted, two-bedroom/three-bath unit at the Wetterhorn Community with a maximum resale price of $429,659 — after Rural Homes, LLC declined to purchase. The Housing Services Administrator contract expires December 31, 2026; 2027 renewal planning is already underway.",
-
-  "telluride|2026-10-14|Liquor Licensing Authority - Oct 14 2026":
-    "The October 14, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
-
-  "county|2026-10-14|Board of County Commissioners Work Session":
-    "The Board of County Commissioners is holding a work session in Egnar — the far western end of San Miguel County, a long way from the box canyon in every sense. The posted agenda doesn't list specific items beyond the location itself, so there's no detail yet on what's being discussed. Worth watching for an agenda update if you track county business from the western slope side of things.",
-
   "mv|2026-10-15|Town Council Meeting":
     "A full plate for the October 15 Council meeting. Two housing authority items come first in consequence: second reading of an ordinance amending MVHA fee language in the Municipal Code (Sections 16.01 & 16.02) to point to an annual fee schedule rather than hardcoded figures, paired with a resolution adopting the actual 2027 MVHA fee schedules — including Village Court Apartments rents. The gondola project surfaces again with a fourth supplement to the intergovernmental cost-sharing agreement for the 2027 planning and development budget. A three-party MOU between Mountain Village, San Miguel County, and the Ridge at Telluride HOA on the Ridge View Plane interpretation heads to a vote — view plane disputes in this canyon have a long history. Council will also consider a town manager employment agreement for Michael Bouchard, a work session on expanding the Munchkins childcare program, a draft Beaver Management Plan, a food truck CUP renewal, and a sustainable tourism services agreement with the Telluride Tourism Board. The meeting closes with an executive session on sewer authority negotiations with the Town of Telluride.",
 
@@ -1152,9 +1125,6 @@ const MANUAL_SUMMARIES = {
   "school|2026-10-19|Telluride Board of Education Work Session":
     "The October 19, 2026 Telluride Board of Education Work Session agenda hasn't been posted yet.",
 
-  "telluride|2026-10-14|Special Liquor Licensing Authority - Oct 14 2026":
-    "One item of substance: a public hearing on three special event permits for Palm Arts Inc. to serve alcohol at the Palm Theatre (721 W. Colorado Ave.) during the Telluride Horror Show, October 16–18, 2026. Projected attendance runs 600 on Friday evening and 1,400 each on Saturday and Sunday. Staff recommends approval — the Marshal's Department has no concerns, and the applicant's paperwork checks out. The board will also approve minutes from the September 17 meeting.",
-
   "county|2026-10-26|Open Space Commission Meeting":
     "The October 26 Open Space Commission agenda hasn't been posted yet.",
 
@@ -1193,9 +1163,6 @@ const MANUAL_SUMMARIES = {
 
   "tmvoa|2026-11-06|TMVOA Board of Directors Budget Meeting #1":
     "The Telluride Mountain Village Owners Association opens its three-meeting budget cycle for 2027 with this first session on November 6. The bulk of the afternoon goes to two substantive items: a presentation of the completed 2025 audit and tax return by CLA (Clifton, Larson, Allen LP), and a first look at the 2027 draft budget. Two more budget sessions follow — November 19 and December 3 — before the Members Meeting on December 17, where the budget is expected to be finalized. Routine minutes approval and public comment round out the agenda.",
-
-  "ouray|2026-10-14|Board of County Commissioners Work Session":
-    "A full-day work session — no formal votes, but the direction set here tends to shape what comes next. The Ouray County Home Trust's Housing Services Administrator delivers a quarterly report, which means an update on where the county's affordable housing work actually stands. The Colorado River District gives its annual briefing, relevant given how water allocation questions shadow every land-use conversation in this region. Abram Herman presents on behalf of Friends of Youth and Nature. Midday shifts to County Manager performance feedback and commissioner reports. The afternoon gets substantive: Land Use takes up fee schedule updates — changes here affect what it costs to bring a development application — followed by a budget discussion with Ridgway Fire & EMS.",
 
   "telluride|2026-11-09|Open Space Commission - Nov 09 2026":
     "The Open Space Commission takes up three items Monday. First is a letter from resident Ramona Gaylord pressing the Commission for a full accounting of the goat grazing pilot on the Valley Floor — two seasons in, she wants the pre- and post-grazing vegetation data, the established success criteria, total program costs, wildlife disturbance assessments (particularly regarding the elk herd and the long-standing dog prohibition), and a clear public timeline for deciding whether goats return in 2027. Second is review and approval of the 2026/2027 Annual Winter Use Operational Plan for the Valley Floor, covering Nordic grooming schedules, trail routes, temporary bridge installation, and the SMBA Fat Bike Nordic Relay (capped at 50 participants, December 15–March 19). Third is an update from Nancy Craft on native engagement activities, including an August meeting with Ernest House Jr. of the Ute Mountain Ute Tribe on Valley Floor signage updates and the question of a land acknowledgment.",
@@ -1393,7 +1360,7 @@ const MANUAL_SUMMARIES = {
     "A work session, so no formal votes — but the direction set here shapes what comes next. The afternoon opens with back-to-back presentations from EcoAction Partners and San Miguel Power Association, covering an hour on energy and environmental programming. Then the commissioners shift to something newer on the civic agenda: a review of a draft AI resolution and draft policy, tied to Colorado Senate Bill 26-189, the state's emerging AI governance framework. Commissioner and administrative updates close things out.",
 
   "county|2026-11-16|Open Space Commission Meeting 11/23":
-    "The November 16 Open Space Commission agenda hasn't been posted yet.",
+    "The Open Space Commission meets November 16 with a full slate of trail, park, and conservation updates. On the trail side, three projects get status reports: the Down Valley Connector, the East End Connector, and the South Side Perimeter Trail — each one part of the longer effort to stitch together accessible routes across both sides of the canyon. Parks updates cover Mill Creek and Galloping Goose. Conservation easement work continues on three properties: Beaver Mesa Ranch, Indian Ridge Farm, and O.A. Greager. The commission also takes up a membership appointment, considering Daniel Alvarado for a regular seat.",
 
   "ouraycity|2026-11-10|Ouray Planning Commission Regular Meeting":
     "The Ouray Planning Commission takes up two substantive matters at its November 10 meeting. First, an action item on restricting natural medicine — a proposed ordinance that would regulate or limit psychedelic substances in city limits, a question municipalities across Colorado have been navigating since voters passed Proposition 122 in 2022. Second, a discussion on proposed amendments to Chapter 7 of the Land Use Code that would define short-term rentals and bed-and-breakfasts — the kind of definitional work that tends to quietly shape how STR enforcement and permitting plays out for years afterward. The commission also considers a remote-participation request from Commissioner Wood and approves minutes from three prior meetings dating back to February. Planning Commission vacancies round out the agenda.",
@@ -1447,7 +1414,10 @@ const MANUAL_SUMMARIES = {
     "The December 3, 2026 Planning & Zoning Commission Special Meeting agenda hasn't been posted yet.",
 
   "ouraycity|2026-11-16|Ouray City Council Regular Meeting":
-    "The big lift at this meeting is the 2027 budget cycle — council takes up four linked resolutions adopting the budget, appropriating funds to city accounts, setting the mill levy, and locking in the 2027 fee schedule. Alongside that, a second amendment to the management agreement with Ouray Ice Park, Inc. goes to a vote, and council approves a professional services agreement with Short Elliott Hendrickson for a facility condition assessment of the Hot Springs Pool House — a signal that the city is taking stock of aging infrastructure. A parking plan is on the table for discussion and direction to staff. On the consent agenda, the city ratifies its participation in the South Ouray Erosion Control Project. Council also repeals the 2022 remote participation policy."
+    "The big lift at this meeting is the 2027 budget cycle — council takes up four linked resolutions adopting the budget, appropriating funds to city accounts, setting the mill levy, and locking in the 2027 fee schedule. Alongside that, a second amendment to the management agreement with Ouray Ice Park, Inc. goes to a vote, and council approves a professional services agreement with Short Elliott Hendrickson for a facility condition assessment of the Hot Springs Pool House — a signal that the city is taking stock of aging infrastructure. A parking plan is on the table for discussion and direction to staff. On the consent agenda, the city ratifies its participation in the South Ouray Erosion Control Project. Council also repeals the 2022 remote participation policy.",
+
+  "school|2026-12-14|Telluride Board of Education Work Session":
+    "The December 14 Telluride Board of Education Work Session agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2795,6 +2765,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Ah Haa School fellowship offers art outside the classroom",
+    source: "Telluride Times",
+    date: "November 13, 2026",
+    firstSeen: "2026-11-14",
+    newsTopic: "arts-culture",
+    copy: "Ah Haa School for the Arts is accepting applications through November 30 for its Teen Fellowship, open to high schoolers across the San Miguel Watershed. The 16-week program runs January through May, pairing fellows with local artist mentors to develop independent projects that culminate in a gallery exhibition. Now in its third year, the program is funded by Ah Haa with additional fundraising by the fellows themselves.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_89f6b011-2f00-4a80-8394-5daef2d3bf28.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/a6/6a64449e-ee88-4a55-afd8-014a7d606cc7/6af49be95f300.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "A tremendous experience",
     source: "Telluride Times",
     date: "November 13, 2026",
@@ -3441,30 +3423,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Heavy precipitation pulls San Juans out of drought",
-    source: "Telluride Times",
-    date: "October 31, 2026",
-    firstSeen: "2026-10-31",
-    newsTopic: "community",
-    copy: "October storms pulled most of San Miguel County out of drought, with the San Juan Mountains recording the highest rainfall accumulation in Colorado. The San Miguel River hit 1,600 cfs on Oct. 22 — a record for that date — and saturated soils heading into winter is considered a good sign for spring runoff. That said, four of the top 10 driest years on record have come in the past eight years, and one wet fall doesn't erase what farmers and ranchers have already lived through.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_1790ffdc-36d9-4b37-b5cd-ebb14ff44895.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/22/4225eb99-928f-41d5-8a96-7e29d4f3346e/6ae4db11c67a8.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Bee ready for this buzzy event",
-    source: "Telluride Times",
-    date: "October 31, 2026",
-    firstSeen: "2026-10-31",
-    newsTopic: "community",
-    copy: "Wilkinson Public Library is hosting an Adult Spelling Bee at The Alibi on Friday, Nov. 6, 6:30–8:30 p.m. Teams are full but a waitlist is open, and spectators are welcome — audience participation is part of the plan. The Alibi is offering honey-themed drinks with a 10% discount for library cardholders.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_89659bef-7cf0-4c62-9bb0-1fd9f36cc1e6.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/1f/21fb8ee1-5e8d-4d84-8d5d-49b54e8c86d2/6ae3c30b901ac.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "‘We’re in a vast archaeological treasure trove’",
     source: "Telluride Times",
     date: "November 1, 2026",
@@ -3493,6 +3451,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "(October 22, 2026) - The Town of Telluride and the San Miguel Regional Housing Authority (SMRHA) opened applications today for a deed-restricted homeownership lottery for Spruce House H at 226 East Pacific Avenue, Unit H, Telluride, Colorado, 81435.",
     href: "https://www.telluride.gov/CivicAlerts.aspx?aid=407",
     img: ""
+  },
+  {
+    title: "Join Us! Meet and Greet with Planning Director Finalists",
+    source: "San Miguel County",
+    date: "November 13, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1425",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14983"
   },
   {
     title: "Sign Up for the 2026 Turkey Trot!",
@@ -3573,7 +3540,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Ridgway Planning Commission Meeting Agenda and Packet - November 18, 2026&nbsp;",
     source: "Town of Ridgway",
-    date: "November 13, 2026",
+    date: "November 14, 2026",
     firstSeen: "2026-11-13",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3606,7 +3573,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "November 13, 2026",
+    date: "November 14, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3628,7 +3595,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Public Hearing for Liquor License on November 19, 2026 at 5:30pm - Chipeta Lodge Resort &amp; Spa, 304 S Lena Street - Notice dated October 13, 2026",
     source: "Town of Ridgway",
-    date: "November 13, 2026",
+    date: "November 14, 2026",
     firstSeen: "2026-10-14",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3639,7 +3606,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "November 13, 2026",
+    date: "November 14, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3650,7 +3617,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway, City of Ouray, and Ouray County Establish New Three-Year Affordable Housing Goals",
     source: "Town of Ridgway",
-    date: "November 13, 2026",
+    date: "November 14, 2026",
     firstSeen: "2026-10-21",
     newsTopic: "housing",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3661,6 +3628,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 11-13-26",
+    source: "KOTO Community Radio",
+    date: "November 14, 2026",
+    newsTopic: "government",
+    copy: "On this week’s Regional Roundup, we hear about an abortion ban recently approved by voters in Idaho. Then, we continue our election coverage with a look at how the climate crisis figured into this year’s midterms. We head to Arizona, where historic flooding didn’t stop Diné voters from casting their ballots. Then we travel to Montrose, Colorado, fo",
+    href: "https://koto.org/news/newscast-11-13-26/"
+  },
   {
     title: "Newscast 11-12-26",
     source: "KOTO Community Radio",
@@ -3716,14 +3691,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "community",
     copy: "Winter Comes to the San Juans; Voters Head to the Polls",
     href: "https://koto.org/news/newscast-11-2-26/"
-  },
-  {
-    title: "Newscast 10-30-26",
-    source: "KOTO Community Radio",
-    date: "October 31, 2026",
-    newsTopic: "community",
-    copy: "HOA Seeks County’s Help with Water Shortage; Cat Movie Fisher with Risho Unda; Your Vote Matters More Than You Think",
-    href: "https://koto.org/news/newscast-10-30-26/"
   }
 ];
 
@@ -3818,19 +3785,6 @@ const SMB_FORUM_ARTICLES = [
     claudeSummary: true,
     href: "https://www.sanmiguelbasinforum.com/stories/norwood-celebrates-league-championship-after-campbell-named-broncos-coach-of-the-week,134927",
     img: "https://zeta.creativecirclecdn.com/smb/original/20261103-091444-060-F2%20-%20front%20page%20pic.jpeg"
-  },
-  {
-    title: "FERN FALK: A LIFETIME OF LISTENING AND LEARNING",
-    source: "San Miguel Basin Forum",
-    sourceKey: "smb",
-    date: "October 15, 2026",
-    firstSeen: "2026-10-15",
-    dateSource: "article",
-    newsTopic: "community",
-    copy: "Fern Falk has spent 91 years in the Norwood area — raising a family, running the post office for 20 years, and making time to listen to her neighbors. She credits those daily conversations, at the hardware store, the post office counter, and the Mesa Rose café table, with keeping community alive. \"Put down the phone and talk to people,\" she says.",
-    claudeSummary: true,
-    href: "https://www.sanmiguelbasinforum.com/stories/fern-falk-a-lifetime-of-listening-and-learning,132950",
-    img: ""
   }
 ];
 
@@ -4316,17 +4270,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Semana De Bienestar",
-    link: "https://koto.org/event/semana-de-bienestar/",
-    description: "Semana De Bienestar (Wellness Week) is a free, bilingual, alcohol-free community event at Wilkinson Public Library offering programming for children, adults, and families. Activities are available in both English and Spanish, making this an inclusive celebration of wellbeing for the broader Telluride community.",
-    pubDate: "2026-11-12T00:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Ridgway Independent Film Festival",
     link: "https://koto.org/event/ridgway-independent-film-festival/",
     description: "The Ridgway Independent Film Festival returns to the historic Sherbino Theater in downtown Ridgway for a weekend running November 13–15, 2026. The festival features independent short films, select longer works, and filmmaker Q&As, bringing together filmmakers and audiences for a weekend of storytelling and community connection.",
@@ -4358,39 +4301,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino, Ridgway",
     imageUrl: "https://koto.org/wp-content/uploads/2026/11/RIFF-banner-2026.png"
-  },
-  {
-    title: "2026 Western Colorado Farm & Ranch Innovation Expo — Free Admission",
-    link: "https://koto.org/event/2026-western-colorado-farm-ranch-innovation-expo-free-admission/2026-11-13/",
-    description: "Discover agricultural innovation, explore practical ideas, and connect with your Western Slope neighbors at the free 2026 Western Colorado Farm & Ranch Innovation Expo, November 13–14 at the Montrose County Event Center. Hosted by the Western Colorado Soil Health Committee, this welcoming gathering brings together farmers, ranchers, gardeners, water leaders, educators, students, businesses, and community members for demonstrations, exhibits, presentations, and conversations. FRIDAY, NOVEMBER 13 Expo hours: noon–7 p.m. Explore agricultural equipment, technology, and exhibits, with water-related demonstrations beginning at 2 p.m. following the West Slope Water Summit. Meet vendors and producers, ask questions, and discover practical irrigation and water-management approaches. Also on Friday: West Slope Water Summit, 7:30 a.m.–2 p.m. This free gathering explores Western Colorado’s water outlook, watershed health, and agriculture’s connection to water, and includes an FFA student research presentation. Separate advance registration is required, with complimentary breakfast and lunch for registered participants. …",
-    pubDate: "2026-11-13T12:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Montrose County Event Center",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/10/2026-Expo-Flyer.jpg"
-  },
-  {
-    title: "Rainbow, Rockies and Rascals 2026 Fall Fundraiser!",
-    link: "https://koto.org/event/rainbow-rockies-and-rascals-2026-fall-fundraiser/",
-    description: "Rainbow, Rockies and Rascals will host a silent/live auction fundraiser on Friday, November 13th at the Telluride Science and Innovation Center from 5:30pm-9:30pm. Tickets are $15 from any program parent or $20 at the door and enters you into a 2026/2027 Ski Pass raffle. Come and enjoy free champagne (while it lasts), delicious hors d'oeuvres from Black Salt Hospitality, music by DJ Sam, live auction MC'ed by Zoe Dohnal and an amazing silent auction with merchandise and services donated by our generous local businesses.",
-    pubDate: "2026-11-13T17:30:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Science &#038; Innovation Center, TELLURIDE",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/10/Poster-2026-jpeg.jpeg"
-  },
-  {
-    title: "Songs from San Miguel – Live at the Livery",
-    link: "https://koto.org/event/songs-from-san-miguel-live-at-the-livery/",
-    description: "Norwood Park & Rec District presents Songs from San Miguel Live at the Livery on Friday, November 13th, featuring Brendan Forrest & Friends, Molly & the Starfish Lovers, Jacob Lukaszewski (\"Loo-kah-shev-ski\"), and Sean McFarland. This will be an evening of Americana, folk & roots music. Happy hour starts at 6:30 p.m.; music at 7:30 p.m. Cash bar, local food and more!",
-    pubDate: "2026-11-13T18:30:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "The Livery Norwood",
-    imageUrl: ""
   },
   {
     title: "2026 Western Colorado Farm & Ranch Innovation Expo — Free Admission",
@@ -4831,6 +4741,39 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.42-PM.png"
+  },
+  {
+    title: "Facing the Mourning",
+    link: "https://koto.org/event/facing-the-mourning/2026-12-03/",
+    description: "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit from additional support while navigating grief and loss. Please feel free to share this information with others who may be interested.",
+    pubDate: "2026-12-03T18:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Redvale Community Center",
+    imageUrl: ""
+  },
+  {
+    title: "Up-Off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-12-04/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-12-04T10:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "Mamas & Caregivers Connect – Prenatal, Postpartum, and Beyond",
+    link: "https://koto.org/event/mamas-caregivers-connect-prenatal-postpartum-and-beyond/2026-12-04/",
+    description: "A supportive skill-building community for new and expecting moms to connect, share, and grow in breastfeeding confidence, physical recovery, and emotional wellbeing throughout the perinatal and postpartum journey.",
+    pubDate: "2026-12-04T11:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/11/Mamas-Caregivers-Connect-.png"
   }
 ];
 
@@ -4888,7 +4831,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Shepherd, Australian • Male",
     firstSeen: "2026-10-31",
     revealDate: "2026-11-02",
-    lastSeen: "2026-11-13"
+    lastSeen: "2026-11-14"
   },
   {
     id: "TEL-A-209",
@@ -4902,7 +4845,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Collie, Border / Cattle Dog, Australian (Red Heeler) • Female",
     firstSeen: "2026-10-31",
     revealDate: "2026-11-04",
-    lastSeen: "2026-11-13"
+    lastSeen: "2026-11-14"
   }
 ];
 
@@ -6530,6 +6473,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray County Fairgrounds and 4H Events Center",
     imageUrl: "https://localist-images.azureedge.net/photos/53322123681803/huge/097624e051a0d64ba11e239d678e52d038396e92.jpg"
+  },
+  {
+    title: "Ridgway HS Boys Basketball vs. Telluride",
+    link: "https://events.ourayridgwayevents.com/event/ridgway-hs-boys-basketball-vs-telluride",
+    description: "The Ridgway High School boys basketball team hosts Telluride at Ridgway Secondary School in a league matchup. Admission fees support the athletic program, with concessions available at the gym.",
+    pubDate: "2027-01-12T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ridgway Secondary School",
+    imageUrl: "https://localist-images.azureedge.net/photos/54471036324426/huge/fc6cf810c04892eebfbf5221c1cc88f3a93b0d8b.jpg"
   }
 ];
 

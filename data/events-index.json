@@ -53,19 +53,6 @@
     "type": "Community"
   },
   {
-    "title": "2026 Western Colorado Farm & Ranch Innovation Expo — Free Admission",
-    "href": "https://koto.org/event/2026-western-colorado-farm-ranch-innovation-expo-free-admission/2026-11-13/",
-    "date": "2026-11-13",
-    "time": "12:00 PM",
-    "location": "Montrose County Event Center",
-    "town": "",
-    "img": "https://koto.org/wp-content/uploads/2026/10/2026-Expo-Flyer.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Discover agricultural innovation, explore practical ideas, and connect with your Western Slope neighbors at the free 2026 Western Colorado Farm & Ranch Innovation Expo, November 13–14 at the Montrose County Event Center. Hosted by the…",
-    "type": "Community"
-  },
-  {
     "title": "Ouray Public Library & Second Chance Cat/Kitten Adoption Event",
     "href": "https://events.ourayridgwayevents.com/event/catkitten-adoption-event",
     "date": "2026-11-13",
@@ -133,19 +120,6 @@
     "endDate": "2026-12-01"
   },
   {
-    "title": "Rainbow, Rockies and Rascals 2026 Fall Fundraiser!",
-    "href": "https://koto.org/event/rainbow-rockies-and-rascals-2026-fall-fundraiser/",
-    "date": "2026-11-13",
-    "time": "5:30 PM",
-    "location": "Telluride Science &#038; Innovation Center, TELLURIDE",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/10/Poster-2026-jpeg.jpeg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Rainbow, Rockies and Rascals will host a silent/live auction fundraiser on Friday, November 13th at the Telluride Science and Innovation Center from 5:30pm-9:30pm. Tickets are $15 from any program parent or $20 at the door and enters you…",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "Ouray Public Library Film Discussion",
     "href": "https://events.ourayridgwayevents.com/event/ouray-public-library-film-discussion",
     "date": "2026-11-13",
@@ -157,19 +131,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "The film \"Tangerine\" will be discussed during this event. Reach out to programsouraypl@gmail.com to RSVP or learn more.",
     "type": "Arts & Film"
-  },
-  {
-    "title": "Songs from San Miguel – Live at the Livery",
-    "href": "https://koto.org/event/songs-from-san-miguel-live-at-the-livery/",
-    "date": "2026-11-13",
-    "time": "6:30 PM",
-    "location": "The Livery Norwood",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Norwood Park & Rec District presents Songs from San Miguel Live at the Livery on Friday, November 13th, featuring Brendan Forrest & Friends, Molly & the Starfish Lovers, Jacob Lukaszewski (\"Loo-kah-shev-ski\"), and Sean McFarland. This will…",
-    "type": "Community"
   },
   {
     "title": "Gaper Contest 2026 - Voyager FUNdraiser",
@@ -1784,6 +1745,19 @@
     "type": "Community"
   },
   {
+    "title": "Facing the Mourning",
+    "href": "https://koto.org/event/facing-the-mourning/2026-12-03/",
+    "date": "2026-12-03",
+    "time": "6:00 PM",
+    "location": "Redvale Community Center",
+    "town": "",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit…",
+    "type": "Community"
+  },
+  {
     "title": "Floating Lotus Trivia Night – December 2026",
     "href": "https://events.ourayridgwayevents.com/event/floating-lotus-trivia-night-december-2026",
     "date": "2026-12-03",
@@ -1821,6 +1795,32 @@
     "category": "Community Event",
     "source": "Mountain Village",
     "desc": "The Mountain Village Design Review Board meets for its monthly meeting. Meeting material is typically posted on the Friday before a scheduled meeting.",
+    "type": "Community"
+  },
+  {
+    "title": "Up-Off Gymnastics, Dance, and Spanish",
+    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-12-04/",
+    "date": "2026-12-04",
+    "time": "10:00 AM",
+    "location": "Lone Cone Library Norwood",
+    "town": "Norwood",
+    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
+    "type": "Music"
+  },
+  {
+    "title": "Mamas & Caregivers Connect – Prenatal, Postpartum, and Beyond",
+    "href": "https://koto.org/event/mamas-caregivers-connect-prenatal-postpartum-and-beyond/2026-12-04/",
+    "date": "2026-12-04",
+    "time": "11:00 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/11/Mamas-Caregivers-Connect-.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "A supportive skill-building community for new and expecting moms to connect, share, and grow in breastfeeding confidence, physical recovery, and emotional wellbeing throughout the perinatal and postpartum journey.",
     "type": "Community"
   },
   {
@@ -2968,5 +2968,18 @@
     "desc": "San Juan Skijoring began in 2017 as a non-profit organization and hosts our Skijoring event annually on the second full weekend in January. We strive to have the best event possible and continue giving back to our local youth through…",
     "type": "Family & Kids",
     "endDate": "2027-01-10"
+  },
+  {
+    "title": "Ridgway HS Boys Basketball vs. Telluride",
+    "href": "https://events.ourayridgwayevents.com/event/ridgway-hs-boys-basketball-vs-telluride",
+    "date": "2027-01-12",
+    "time": "3:00 PM",
+    "location": "Ridgway Secondary School",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54471036324426/huge/fc6cf810c04892eebfbf5221c1cc88f3a93b0d8b.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The Ridgway High School boys basketball team hosts Telluride at Ridgway Secondary School in a league matchup. Admission fees support the athletic program, with concessions available at the gym.",
+    "type": "Outdoors & Sports"
   }
 ]

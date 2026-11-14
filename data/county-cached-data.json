@@ -68,7 +68,9 @@
     "type": "other",
     "location": "333 W Colorado Ave, Third Floor, Telluride, CO 81435",
     "civicClerkId": 1091,
-    "note": null
+    "note": null,
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1091/files/agenda/2075",
+    "packetUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1091/files/agenda/2076"
   },
   {
     "date": "November 18, 2026",
@@ -77,7 +79,9 @@
     "type": "bocc",
     "location": "Norwood Sheriff Annex, 1110 Summit St, Norwood, CO 81423",
     "civicClerkId": 902,
-    "note": null
+    "note": null,
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/902/files/agenda/2077",
+    "packetUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/902/files/agenda/2078"
   },
   {
     "date": "November 23, 2026",

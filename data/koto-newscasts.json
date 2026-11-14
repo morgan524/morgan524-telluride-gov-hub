@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 11-13-26",
+    "source": "KOTO Community Radio",
+    "date": "November 14, 2026",
+    "newsTopic": "government",
+    "copy": "On this week’s Regional Roundup, we hear about an abortion ban recently approved by voters in Idaho. Then, we continue our election coverage with a look at how the climate crisis figured into this year’s midterms. We head to Arizona, where historic flooding didn’t stop Diné voters from casting their ballots. Then we travel to Montrose, Colorado, fo",
+    "href": "https://koto.org/news/newscast-11-13-26/"
+  },
+  {
     "title": "Newscast 11-12-26",
     "source": "KOTO Community Radio",
     "date": "November 13, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "community",
     "copy": "Winter Comes to the San Juans; Voters Head to the Polls",
     "href": "https://koto.org/news/newscast-11-2-26/"
-  },
-  {
-    "title": "Newscast 10-30-26",
-    "source": "KOTO Community Radio",
-    "date": "October 31, 2026",
-    "newsTopic": "community",
-    "copy": "HOA Seeks County’s Help with Water Shortage; Cat Movie Fisher with Risho Unda; Your Vote Matters More Than You Think",
-    "href": "https://koto.org/news/newscast-10-30-26/"
   }
 ]
