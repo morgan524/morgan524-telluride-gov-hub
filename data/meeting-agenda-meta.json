@@ -531,7 +531,7 @@
   "telluride|2026-12-04|Special Town Council - Dec 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324",
     "sv": 4,
-    "ph": "5023b18de42b4f68"
+    "ph": "4b9e8cc3c35fa8ec"
   },
   "telluride|2026-11-09|Intergovernmental Meeting - Nov 09 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8360",
@@ -645,5 +645,9 @@
   "school|2026-12-14|Telluride Board of Education Work Session": {
     "sv": 4,
     "ph": "b858cb282617fb09"
+  },
+  "county|2026-12-14|Open Space Commission Meeting": {
+    "sv": 4,
+    "ph": "1ff606174e68cca5"
   }
 }
