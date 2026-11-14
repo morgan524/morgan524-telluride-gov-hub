@@ -229,7 +229,10 @@
   },
   "school|2026-11-16|Telluride Board of Education Work Session": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://files.smartsites.parentsquare.com/3403/111626_ws_packet.pdf",
+    "zoomUrl": "https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09",
+    "meetingId": "865 8512 4120",
+    "passcode": "468668"
   },
   "norwood|2026-11-16|Planning and Zoning Commission Meeting": {
     "sv": 4,
@@ -241,11 +244,15 @@
   },
   "fire|2026-11-17|Board of Directors Meeting": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://www.telluridefire.com/files/db88b55e6/Agenda+-November+17th%2C+2026.pdf"
   },
   "school|2026-11-17|Telluride Board of Education Monthly Meeting": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://files.smartsites.parentsquare.com/3403/111726_mm_packet.pdf",
+    "zoomUrl": "https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09",
+    "meetingId": "865 8512 4120",
+    "passcode": "468668",
+    "phone": "579 354 7517"
   },
   "ophir|2026-11-17|General Assembly Meeting": {
     "sv": 4,
@@ -312,7 +319,7 @@
   },
   "mv|2026-11-19|Town Council Meeting": {
     "sv": 4,
-    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/50266/november_19-_2026_town_council_meeting_agenda.pdf",
+    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/50266/november_19-_2026_town_council_meeting_agenda-1.pdf",
     "zoomUrl": "https://us06web.zoom.us/webinar/register/WN_t5hWlTN2Qvy0rx0NxKKR6g",
     "phone": "970-369-6429"
   },
@@ -322,7 +329,10 @@
   },
   "tmvoa|2026-11-19|TMVOA Board of Directors Budget Meeting #2": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://tmvoa.org/site/assets/files/4891/tmvoa_board_meeting_agenda_11_19_26-1.pdf",
+    "zoomUrl": "https://us02web.zoom.us/meeting/register/_hAMuenpTESyoldHUHB1WA",
+    "meetingId": "8 94 1215 6221",
+    "passcode": "812579"
   },
   "county|2026-11-12|Planning Commission Meeting": {
     "sv": 4,
@@ -521,7 +531,7 @@
   "telluride|2026-12-04|Special Town Council - Dec 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324",
     "sv": 4,
-    "ph": "4b9e8cc3c35fa8ec"
+    "ph": "5023b18de42b4f68"
   },
   "telluride|2026-11-09|Intergovernmental Meeting - Nov 09 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8360",

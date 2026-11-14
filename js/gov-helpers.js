@@ -264,16 +264,16 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=765214","sv":4},
 
   "school|2026-11-16|Telluride Board of Education Work Session":
-    {"sv":4,"ph":"b858cb282617fb09"},
+    {"sv":4,"agendaUrl":"https://files.smartsites.parentsquare.com/3403/111626_ws_packet.pdf","zoomUrl":"https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09","meetingId":"865 8512 4120","passcode":"468668"},
 
   "norwood|2026-11-16|Planning and Zoning Commission Meeting":
     {"sv":4,"agendaUrl":"https://www.norwoodtown.com/files/6a9b8d335/11.16.2026+P%26Z+BOA+AGENDA.pdf","zoomUrl":"https://us02web.zoom.us/j/85001344971","meetingId":"850 0134 4971","passcode":"8142302","phone":"970-327-4288"},
 
   "fire|2026-11-17|Board of Directors Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"},
+    {"sv":4,"agendaUrl":"https://www.telluridefire.com/files/db88b55e6/Agenda+-November+17th%2C+2026.pdf"},
 
   "school|2026-11-17|Telluride Board of Education Monthly Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"},
+    {"sv":4,"agendaUrl":"https://files.smartsites.parentsquare.com/3403/111726_mm_packet.pdf","zoomUrl":"https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09","meetingId":"865 8512 4120","passcode":"468668","phone":"579 354 7517"},
 
   "ophir|2026-11-17|General Assembly Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -306,13 +306,13 @@ const MEETING_AGENDA_META = {
     {"sv":4,"agendaUrl":"https://townofmountainvillage.com/site/assets/files/50155/november_5-_2026_design_review_board_meeting_agenda.pdf","zoomUrl":"https://us06web.zoom.us/j/82514604948?pwd=i0xGIqUZB5sk4vpv27kGSDMUpyzbNU.1","meetingId":"825 1460 4948"},
 
   "mv|2026-11-19|Town Council Meeting":
-    {"sv":4,"agendaUrl":"https://townofmountainvillage.com/site/assets/files/50266/november_19-_2026_town_council_meeting_agenda.pdf","zoomUrl":"https://us06web.zoom.us/webinar/register/WN_t5hWlTN2Qvy0rx0NxKKR6g","phone":"970-369-6429"},
+    {"sv":4,"agendaUrl":"https://townofmountainvillage.com/site/assets/files/50266/november_19-_2026_town_council_meeting_agenda-1.pdf","zoomUrl":"https://us06web.zoom.us/webinar/register/WN_t5hWlTN2Qvy0rx0NxKKR6g","phone":"970-369-6429"},
 
   "airport|2026-11-19|TRAA Board of Commissioners Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "tmvoa|2026-11-19|TMVOA Board of Directors Budget Meeting #2":
-    {"sv":4,"ph":"b858cb282617fb09"},
+    {"sv":4,"agendaUrl":"https://tmvoa.org/site/assets/files/4891/tmvoa_board_meeting_agenda_11_19_26-1.pdf","zoomUrl":"https://us02web.zoom.us/meeting/register/_hAMuenpTESyoldHUHB1WA","meetingId":"8 94 1215 6221","passcode":"812579"},
 
   "county|2026-11-12|Planning Commission Meeting":
     {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1078/files/agenda/2071","zoomUrl":"https://us06web.zoom.us/j/81323528392?pwd=6mxcRmpL4YivaaHMcNBnsN3TwRLIoU.1","meetingId":"813 2352 8392","passcode":"279143","phone":"970-728-3844"},
@@ -420,7 +420,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"1ff606174e68cca5"},
 
   "telluride|2026-12-04|Special Town Council - Dec 04 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324","sv":4,"ph":"4b9e8cc3c35fa8ec"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324","sv":4,"ph":"5023b18de42b4f68"},
 
   "telluride|2026-11-09|Intergovernmental Meeting - Nov 09 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8360","meetingId":"816 7927 3686","passcode":"275604","phone":"719-359-4580","sv":4},
@@ -503,6 +503,14 @@ const DEEP_DIVE_UPDATES = [];
 //   sourceUrl, topics: [] }. Rendered by hub-bub.html from the JSON mirror
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
+  {
+    date: "2026-11-14",
+    title: "Hazard plan — worth the county's time right now?",
+    body: "The Board of County Commissioners is expected to consider developing a multi-jurisdictional hazard mitigation plan. That means pulling multiple local governments together to map out risks and responses before something goes wrong. Some residents will say that kind of coordinated planning is exactly what a mountain community needs — better late than never. Others may wonder whether it's another layer of process that moves slowly and costs money the county could spend on more immediate needs. Nothing's decided yet. So: is a multi-jurisdictional hazard plan a smart use of county attention right now?",
+    choices: ["Yes, long overdue", "Wrong priority right now", "Depends on the cost", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
   {
     date: "2026-11-13",
     title: "New license, new fight — or no fight at all?",
@@ -734,14 +742,6 @@ const DAILY_QUESTIONS = [
     choices: ["Reasonable nudge toward digital", "Unfair to some residents", "Need more info"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-10-15",
-    title: "Leak forgiveness — fair relief or a slippery slope?",
-    body: "The Norwood Water Commission has four residential leak forgiveness requests on its October 13 agenda — customers on Hwy 145, Summit St, Juniper, and Grand Ave asking for relief on their bills. The case for: leaks happen, the water's already gone, and a punishing bill doesn't undo it. The case against: forgiveness spreads the cost across everyone else on the system, and the 2027 budget and 2025 audit are both on the same agenda, with water system costs still climbing. Where's the line between neighbor helping neighbor and just shifting the tab?\n\nShould a water commission grant leak forgiveness, or is that a cost the customer has to own?",
-    choices: ["Grant it — leaks happen", "Customer owns the bill", "Case by case only", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -840,7 +840,19 @@ const MEETING_PREVIEWS = {
     "The Planning & Zoning Commission is expected to discuss a comprehensive review of Telluride's employee rental housing policies, as the town seeks consulting services to evaluate existing regulations. The special meeting may address the scope and direction of this policy review effort.",
 
   "ouraycity|2026-11-16|Ouray City Council Regular Meeting":
-    "Council is expected to adopt the 2027 city budget, set property tax levies, and approve appropriations for the coming year. Additional action items include amendments to the Ouray Ice Park management agreement and a professional services contract for a hot springs pool house condition assessment."
+    "Council is expected to adopt the 2027 city budget, set property tax levies, and approve appropriations for the coming year. Additional action items include amendments to the Ouray Ice Park management agreement and a professional services contract for a hot springs pool house condition assessment.",
+
+  "fire|2026-11-17|Board of Directors Meeting":
+    "Board will consider a presentation from Municipal Capital Markets Group, review FCI pre-build estimates, and hold a second reading of the budget. Updates are also expected on Station 3, inclusion efforts, and PANO usage, along with routine departmental reports and bill approvals.",
+
+  "school|2026-11-16|Telluride Board of Education Work Session":
+    "Board will consider follow-up items from its August retreat, review strategic financial planning, and discuss homeschool student enrollment in specials, electives, and short-term programs. Members will also address KOTO radio access on November 19.",
+
+  "school|2026-11-17|Telluride Board of Education Monthly Meeting":
+    "Board will consider personnel matters, review October financial reports, and hear updates from Telluride Mountain High School and district administrators. Policy Governance Monitoring Reports GP-13 and GP-14 will be presented. The board will also approve minutes from three previous meetings and may take action on contract awards.",
+
+  "tmvoa|2026-11-19|TMVOA Board of Directors Budget Meeting #2":
+    "Board will consider approving minutes from November 6, review the 2027 budget and 2025 tax return (Form 990), and hold an executive session with legal counsel regarding ongoing negotiations. The meeting will also address upcoming budget meeting dates and a members meeting scheduled for December."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1192,16 +1204,16 @@ const MANUAL_SUMMARIES = {
     "A full agenda for Ouray, which marks its 150th anniversary at this meeting. The consequential items: first readings of two ordinances — one setting 2027 water and sewer rates, and one addressing Light Industrial zoning and EQR (equivalent residential unit) calculations. Council also takes up Resolution No. 23, an intergovernmental agreement with the Ouray County Sheriff for full law-enforcement services — a structural decision about how the city gets policed. Resolution No. 24 covers a water service termination agreement. A perimeter trail easement request and a Responsible Entity Agreement round out the action items. On the discussion side, Waterview Phase II rural homes gets a council direction conversation, with the 2024 housing needs analysis and strategy addendum in the packet. Home Trust of Ouray County presents its quarterly housing services report.",
 
   "school|2026-11-16|Telluride Board of Education Work Session":
-    "The November 16, 2026 Telluride Board of Education Work Session agenda hasn't been posted yet.",
+    "A work session, so no votes — but four discussion items are on the table. The board revisits takeaways from its August governance retreat, where members worked through strategic priorities, community engagement, and financial stewardship with an outside facilitator. Strategic financial planning gets its own dedicated slot, relevant context given that a Special Board Meeting to approve the mill levy is already scheduled for December 14. The board also takes up homeschool student enrollment in specials and electives, and short-term enrollment — a perennial question in a small district where community boundaries blur. Finally, there's a brief discussion of KOTO access on November 19.",
 
   "norwood|2026-11-16|Planning and Zoning Commission Meeting":
     "Norwood's Planning and Zoning Commission meets November 16 at 6:30 p.m. at Town Hall. The substantive work is on two fronts that tend to shape everything else: a Land Use Code update and a Master Plan update — the kind of foundational documents that determine what gets built where for years to come. The commission also takes up a discussion of the Board of Adjustments, which handles variance requests and sits at the intersection of the code and how it actually gets applied on the ground.",
 
   "fire|2026-11-17|Board of Directors Meeting":
-    "The November 17, 2026 Fire Board of Directors Meeting agenda hasn't been posted yet.",
+    "The Telluride Fire Protection District board meets November 17th at 5:30 p.m. at 131 W. Columbia Ave. The heaviest lifting is financial: a Municipal Capital Markets Group presentation suggests the district is exploring debt or financing options, FCI pre-build estimates point toward construction planning, and the budget gets its second reading. On the ongoing side, the board continues tracking the Station 3 project, an inclusion initiative, and PANO system usage. Staff reports round out the evening.",
 
   "school|2026-11-17|Telluride Board of Education Monthly Meeting":
-    "The November 17, 2026 Telluride Board of Education Monthly Meeting agenda hasn't been posted yet.",
+    "The board opens with a debrief on November ballot results — Ballot Measure 5A (the MLO), Proposition NN, Amendment 87, and Propositions 134 and 135 — which will shape school funding going forward. Flood expense estimation is on the table as well, a reminder that the canyon's geography comes with costs that don't show up in a normal budget cycle. The superintendent search moves into action: the board takes up approval of a search consultant. Policy updates get a first reading, covering four board-level policies (IHCDA, KDB, IKF-E, AC) and four superintendent-level policies (KF, KF-E, IKA, IKA-R). The meeting closes with an executive session on collective bargaining strategy with the Telluride Education Association. A December 14 special meeting is already scheduled to approve the mill levy.",
 
   "ophir|2026-11-17|General Assembly Meeting":
     "The November 17, 2026 Ophir General Assembly Meeting agenda hasn't been posted yet.",
@@ -1240,7 +1252,7 @@ const MANUAL_SUMMARIES = {
     "The November 19 TRAA Board of Commissioners Meeting agenda hasn't been posted yet.",
 
   "tmvoa|2026-11-19|TMVOA Board of Directors Budget Meeting #2":
-    "The November 19 TMVOA Board of Directors Budget Meeting #2 agenda hasn't been posted yet.",
+    "The TMVOA Board holds its second budget meeting of the cycle, working through the 2027 budget ahead of a members meeting on December 17. The board will also review the 2025 Form 990 — the organization's annual federal financial disclosure — and hear a briefing on the overall budget process. The meeting closes with a 30-minute executive session with legal counsel on ongoing negotiations, under C.R.S. § 38-33.3-308(4)(b) and (f); no action will be taken in that session. A third budget session is scheduled for December 3.",
 
   "county|2026-11-12|Planning Commission Meeting":
     "Two substantive items on the November 12 agenda. The morning work session takes up proposed amendments to LUC Section 5-1303 — the Affordable Housing Impact Mitigation Fee — along with a broader discussion of housing incentive ideas. That fee structure has real implications for how (and whether) workforce housing gets built across the county, so the conversation is worth watching. After lunch, the commission moves to a formal land use application: a county-initiated rezoning of a portion of Placerville Park around the fire station, from Forestry, Agriculture, and Open (F) to Public (P) — a housekeeping move to bring the zoning in line with the site's actual public use.",
@@ -2764,6 +2776,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "A community-wide effort to help residents thrive",
+    source: "Telluride Times",
+    date: "November 14, 2026",
+    firstSeen: "2026-11-14",
+    newsTopic: "education",
+    copy: "San Miguel County has just 40 behavioral health providers for 7,000-plus residents, and local surveys show 74% of respondents have been directly affected by someone's substance use. Telluride High School students report binge drinking and marijuana use well above state averages. The county is now updating its behavioral health strategic plan through a collaborative process involving several new work groups.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_b8b30502-5f97-4ffc-8a9e-0fad266a25e6.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/f4/2f45c9b2-ae17-4472-aef7-1866ef201bf8/6af7667a97409.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Ah Haa School fellowship offers art outside the classroom",
     source: "Telluride Times",
@@ -4780,36 +4804,14 @@ const KOTO_COMMUNITY_EVENTS = [
 const WILKINSON_EVENTS = [
   {
     title: "Semana De Bienestar",
-    link: "https://telluridelibrary.libcal.com/event/17895399?hs=a",
-    description: "Semana de Bienestar is a free, bilingual wellness week at Wilkinson Public Library featuring activities for children, adults, and families in both English and Spanish. All programming is alcohol-free and open to the community.",
-    pubDate: "2026-11-13T17:00:00.000Z",
+    link: "https://telluridelibrary.libcal.com/event/17895472?hs=a",
+    description: "Semana de Bienestar is a free, bilingual wellness week event at Wilkinson Public Library offering activities for children, adults, and families in a welcoming, alcohol-free environment. Programming is available in both English and Spanish.",
+    pubDate: "2026-11-14T17:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_26_15_40_24.jpg"
-  },
-  {
-    title: "You & Me / Tu Y Yo",
-    link: "https://telluridelibrary.libcal.com/event/17874698?hs=a",
-    description: "10:30 AM – 11:00 AM · Join us every Friday for a fun and engaging parent-child program designed for preschoolers! Each week, we explore a new theme through hands-on activities that spark creativity.    &iexcl;Acomp&aacute;&ntilde;enos todos los viernes en un programa divertido y din&aacute;mico para padres e hijos, dise&ntilde;ado para ni&ntilde;os en edad preescolar! Cada semana exploramos un tema nuevo a trav&eacute;s de actividades pr&aacute;cticas que estimulan la creatividad.",
-    pubDate: "2026-11-13T17:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_30_13_07_23.png"
-  },
-  {
-    title: "Learn DND",
-    link: "https://telluridelibrary.libcal.com/event/17876898?hs=a",
-    description: "4:00 PM – 6:00 PM · Have you ever been curious about learning how to play Dungeons and Dragons? This is your opportunity! Join local Dungeon Master Kase in a one day campaign that is open to both experienced DND players, and folks who have never played once. This is a chance for folks to learn how DND works and jump right into a fun campaign. This is open to teens and adults.",
-    pubDate: "2026-11-13T23:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_28_17_47_56.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_26_15_52_41.jpg"
   }
 ];
 
@@ -4857,18 +4859,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "The Motel Prophets & Red Mountain Revival",
-    link: "https://www.alibitelluride.com/calendar#eca-event=the-motel-prophets",
-    description: "Two live acts — The Motel Prophets and Red Mountain Revival — take the stage at The Alibi for a night of live music. The show begins at 9:00 PM.",
-    pubDate: "2026-11-13",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://1v09t9hszk.ucarecd.net/e377708b-2c0a-4491-812f-9a6dbc3d6993/-/crop/1545x773/0,1227/-/preview/"
-  },
   {
     title: "DJ Phoenix",
     link: "https://www.alibitelluride.com/calendar#eca-event=dj-phoenix-1",
@@ -5497,8 +5487,8 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Gaper Contest 2026 - Voyager FUNdraiser",
     link: "https://events.ourayridgwayevents.com/event/gaper-contest-2026",
-    description: "A community fundraiser for Voyager in which locals of all ages from the northern San Juan region submit photos for a chance to be named Gaper of the Year, with voting taking place during Gaper Week (November 21–29, 2026, coinciding with opening week at Telluride Ski Resort). Submitted photos must be original — no AI-generated or photoshopped images are accepted.",
-    pubDate: "2026-11-13T15:00:00.000Z",
+    description: "A community fundraiser for Voyager in which locals of all ages from the northern San Juan region submit photos for a chance to be named Gaper of the Year, with voting taking place during Gaper Week (November 21–29, 2026, coinciding with Telluride Ski Resort's opening week). Submitted photos must be original — no AI-generated or photoshopped images are accepted.",
+    pubDate: "2026-11-14T15:00:00.000Z",
     endDate: "2026-11-29",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5507,108 +5497,16 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54366527548837/huge/4c3995fa47f3b861d61e318e7dafd3cbfa9b02e9.jpg"
   },
   {
-    title: "Opening of SBA Disaster Loan Outreach Center in Ridgway",
-    link: "https://events.ourayridgwayevents.com/event/opening-of-sba-disaster-loan-outreach-center-in-ridgway",
-    description: "The U.S. Small Business Administration will be opening a Disaster Loan Outreach Center (DLOC) at the Ouray County 4H Center & Fairgrounds to assist communities affected by the wildfire, flooding, and mudslides that occurred June 27 – July 29, 2026. Beginning Monday, November 9th at 1pm, SBA customer service representatives will be on hand at the DLOC in Ridgway to answer questions and assist with the disaster loan application process. Walk-ins are welcome, and in-person appointments can be scheduled in advance at appointment.sba.gov. After Nov. 9th, the Center will be open on weekdays from 9am - 6pm, except it will be closed on Wednesday, Nov. 11th for Veterans Day. The Center will close permantently on Monday, Nov. 16th at 6 pm. The deadline to return physical damage applications for Ouray County is Dec. 22. …",
-    pubDate: "2026-11-13T16:00:00.000Z",
-    endDate: "2026-11-16",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray County Fairgrounds and 4H Events Center",
-    imageUrl: "https://localist-images.azureedge.net/photos/54426681104676/huge/052fefa1447324d3f196a2fcda7186517881fb5d.jpg"
-  },
-  {
-    title: "Guided Tour: Historic Beaumont Hotel & Spa",
-    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
-    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
-    pubDate: "2026-11-13T20:30:00.000Z",
-    endDate: "2027-01-12",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Beaumont Hotel & Spa",
-    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
-  },
-  {
-    title: "Ouray Public Library & Second Chance Cat/Kitten Adoption Event",
-    link: "https://events.ourayridgwayevents.com/event/catkitten-adoption-event",
-    description: "Second Chance Humane Society and Ouray Public Library are joining together to hold a Cat/Kitten Adoption event in the library.",
-    pubDate: "2026-11-13T21:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Public Library",
-    imageUrl: "https://localist-images.azureedge.net/photos/54312395432922/huge/81fa74c01c4c645711ce20fe9bdfa5eaf68361c6.jpg"
-  },
-  {
-    title: "STEAM Art Explorers for Ages 5–8 in Montrose",
-    link: "https://events.ourayridgwayevents.com/event/steam-art-explorers-for-ages-58-in-montrose",
-    description: "MONTROSE AFTER SCHOOL ART SESSION 1 (5 WEEKS • OCTOBER 23 – NOVEMBER 20) Join us for a 5-week course that explores the intersection of art, science, technology, engineering, and math! In this hands-on art class, students will experiment with creative processes that turn scientific concepts into exciting works of art. Through a variety of fun projects, students will investigate chemical reactions, motion, light, color, and patterns. Projects include creating fizzy paintings using bubbling chemical reactions, experimenting with movement and gravity through pendulum painting, designing kaleidoscopes to explore symmetry and reflection, and making colorful lava lamps to investigate density and liquid interactions. Students will also take on collaborative challenges, activities, and movement games to build creativity, experimentation, problem-solving, and teamwork. With encouragement and plenty of opportunities to experiment, students will grow their artistic skills and confidence while embracing their creativity. …",
-    pubDate: "2026-11-13T22:45:00.000Z",
-    endDate: "2026-11-20",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Weehawken Montrose",
-    imageUrl: "https://localist-images.azureedge.net/photos/54055496965288/huge/4ac547d8a4681a49d4e49d0024729211c03874a6.jpg"
-  },
-  {
     title: "Ridgway Independent Film Fest 2026",
     link: "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-2026",
     description: "12 Years of Fierce, Fearless, Independent Film The Ridgway Independent Film Festival (RIFF) returns in 2026 with its 12th year of celebrating bold storytelling, emerging filmmakers, and the power of community through the lens of independent film. The RIFF committee has selected films with a lineup of 6 blocks of films spanning 3 days. View Digital Program, tickets and more. Individual Block Tickets: $15 All Access Festival Pass: $75 Rooted in a volunteer-driven, grassroots effort born shortly after Ridgway became one of Colorado’s first Certified Creative Districts, RIFF continues to evolve while honoring its origins. This year, RIFF returns to its longtime home in November, taking place November 13–15, 2026, with a refreshed structure designed to create deeper connection and conversation. …",
-    pubDate: "2026-11-13T23:00:00.000Z",
+    pubDate: "2026-11-14T16:00:00.000Z",
     endDate: "2026-11-15",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/54284797074125/huge/f69e5cc695d03e358a569b88193151ecb838d189.jpg"
-  },
-  {
-    title: "The Killens",
-    link: "https://events.ourayridgwayevents.com/event/the-killens-8701",
-    description: "The Killens are performing a live music show at a venue on North Cora Street in Ridgway. The event is listed through the Ouray Ridgway community calendar.",
-    pubDate: "2026-11-13T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Familiar Grounds - Marcie Reed Whiton and Wellington Martins",
-    link: "https://events.ourayridgwayevents.com/event/familiar-grounds-marcie-reed-whiton-and-wellington-martins",
-    description: "Join us for Familiar Ground, an exhibition bringing together two friends and their creative lives. A celebration of the people we meet, the places we remember, and the materials that inspire us. Featuring portraits and paintings by Marcie Reed Whiton and photography and woodworking by Wellington Martins, the exhibition is meant to feel a little like walking into someone's living room: a collection of familiar faces, places, memories, and personal discoveries, all sharing the same space. It's an invitation to put your feet up, look around, and get inspired by the familiar. On view throughout November 30.",
-    pubDate: "2026-11-14T00:00:00.000Z",
-    endDate: "2026-12-01",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Space to Create Art Gallery",
-    imageUrl: "https://localist-images.azureedge.net/photos/54472722974882/huge/75812f0dd549dfd8b3d96bcdbbbdbf4949f9ff80.jpg"
-  },
-  {
-    title: "Ridgway Independent Film Fest: Begin Where You Are ~ Opening Night Shorts",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-begin-where-you-are-opening-night-shorts",
-    description: "Doors open at 4:30 PM; films begin at 5:00 PM. Opening night gathers animated and live-action short films that are local and far-flung, strange and familiar—a preview of the stories and perspectives that unfold across the festival weekend.",
-    pubDate: "2026-11-14T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Sherbino",
-    imageUrl: "https://localist-images.azureedge.net/photos/54066525035817/huge/fc713b45b42bb680b2b3330e3f10c55c6faed8bf.jpg"
-  },
-  {
-    title: "Ouray Public Library Film Discussion",
-    link: "https://events.ourayridgwayevents.com/event/ouray-public-library-film-discussion",
-    description: "The film \"Tangerine\" will be discussed during this event. Reach out to programsouraypl@gmail.com to RSVP or learn more.",
-    pubDate: "2026-11-14T00:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Public Library",
-    imageUrl: "https://localist-images.azureedge.net/photos/54312441059400/huge/6a65afc072f95620c0759dcacd6a5be2f8e5463f.jpg"
   },
   {
     title: "Ridgway Independent Film Fest ~ Something Was Calling Us",
@@ -5654,6 +5552,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/54066525467985/huge/aeb14558baf2ca7e09ccf2907f91417a1c740cce.jpg"
+  },
+  {
+    title: "Guided Tour: Historic Beaumont Hotel & Spa",
+    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
+    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
+    pubDate: "2026-11-14T20:30:00.000Z",
+    endDate: "2027-01-12",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Beaumont Hotel & Spa",
+    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
   },
   {
     title: "Every Sat. Floating Sound Bath",
@@ -5768,6 +5678,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53924398882536/huge/a5451161d264c1870d73a22c5d5625c3a29a8c63.jpg"
   },
   {
+    title: "Opening of SBA Disaster Loan Outreach Center in Ridgway",
+    link: "https://events.ourayridgwayevents.com/event/opening-of-sba-disaster-loan-outreach-center-in-ridgway",
+    description: "The U.S. Small Business Administration will be opening a Disaster Loan Outreach Center (DLOC) at the Ouray County 4H Center & Fairgrounds to assist communities affected by the wildfire, flooding, and mudslides that occurred June 27 – July 29, 2026. Beginning Monday, November 9th at 1pm, SBA customer service representatives will be on hand at the DLOC in Ridgway to answer questions and assist with the disaster loan application process. Walk-ins are welcome, and in-person appointments can be scheduled in advance at appointment.sba.gov. After Nov. 9th, the Center will be open on weekdays from 9am - 6pm, except it will be closed on Wednesday, Nov. 11th for Veterans Day. The Center will close permantently on Monday, Nov. 16th at 6 pm. The deadline to return physical damage applications for Ouray County is Dec. 22. …",
+    pubDate: "2026-11-16T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray County Fairgrounds and 4H Events Center",
+    imageUrl: "https://localist-images.azureedge.net/photos/54426681104676/huge/052fefa1447324d3f196a2fcda7186517881fb5d.jpg"
+  },
+  {
     title: "Ongoing: Film Stills from the Ridgway Independent Film Fest",
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-film-stills-ridgway-independent-film-fest",
     description: "The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In coordination with the annual Independent Film Festival (November 13-15) this show is both a preview and a celebration of the art of short filmmaking.",
@@ -5790,6 +5711,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
+  },
+  {
+    title: "Familiar Grounds - Marcie Reed Whiton and Wellington Martins",
+    link: "https://events.ourayridgwayevents.com/event/familiar-grounds-marcie-reed-whiton-and-wellington-martins",
+    description: "Join us for Familiar Ground, an exhibition bringing together two friends and their creative lives. A celebration of the people we meet, the places we remember, and the materials that inspire us. Featuring portraits and paintings by Marcie Reed Whiton and photography and woodworking by Wellington Martins, the exhibition is meant to feel a little like walking into someone's living room: a collection of familiar faces, places, memories, and personal discoveries, all sharing the same space. It's an invitation to put your feet up, look around, and get inspired by the familiar. On view throughout November 30.",
+    pubDate: "2026-11-17T00:00:00.000Z",
+    endDate: "2026-12-01",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create Art Gallery",
+    imageUrl: "https://localist-images.azureedge.net/photos/54472722974882/huge/75812f0dd549dfd8b3d96bcdbbbdbf4949f9ff80.jpg"
   },
   {
     title: "Functional Fitness - Strength & Mobility Training For Women",
@@ -5952,6 +5885,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Floating Lotus Brewery",
     imageUrl: "https://localist-images.azureedge.net/photos/53790516346797/huge/599d1a7013ddde307592e7dfc9b892fe265527e0.jpg"
+  },
+  {
+    title: "STEAM Art Explorers for Ages 5–8 in Montrose",
+    link: "https://events.ourayridgwayevents.com/event/steam-art-explorers-for-ages-58-in-montrose",
+    description: "MONTROSE AFTER SCHOOL ART SESSION 1 (5 WEEKS • OCTOBER 23 – NOVEMBER 20) Join us for a 5-week course that explores the intersection of art, science, technology, engineering, and math! In this hands-on art class, students will experiment with creative processes that turn scientific concepts into exciting works of art. Through a variety of fun projects, students will investigate chemical reactions, motion, light, color, and patterns. Projects include creating fizzy paintings using bubbling chemical reactions, experimenting with movement and gravity through pendulum painting, designing kaleidoscopes to explore symmetry and reflection, and making colorful lava lamps to investigate density and liquid interactions. Students will also take on collaborative challenges, activities, and movement games to build creativity, experimentation, problem-solving, and teamwork. With encouragement and plenty of opportunities to experiment, students will grow their artistic skills and confidence while embracing their creativity. …",
+    pubDate: "2026-11-20T22:45:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Montrose",
+    imageUrl: "https://localist-images.azureedge.net/photos/54055496965288/huge/4ac547d8a4681a49d4e49d0024729211c03874a6.jpg"
   },
   {
     title: "Jean Sandoval & the Town Kids",
@@ -6864,6 +6808,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
+  },
+  {
+    title: "Bike & Brewery Tour",
+    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    description: "A guided bicycle ride departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route takes participants through scenic mountain terrain between Mountain Village and town.",
+    pubDate: "2026-12-14T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   }
 ];
 
