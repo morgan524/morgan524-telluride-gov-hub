@@ -108,9 +108,20 @@ jobs:
           lock_subj() { python3 -c "import json;print(json.load(open('$1')).get('subject',''))" 2>/dev/null || true; }
 
           WK_SUBJ_LOCK=""
+          # Editor edits (John Metzger's Word copy, applied by hand) write
+          # digest/freeze.json with "editor": true. Keep that week's digest even
+          # on a forced render — the Sunday review's force=true render overwrote
+          # them on 2026-11-01. The review still proofreads the held version.
+          ED_WS=""
+          if [ -f digest/freeze.json ]; then
+            ED_WS="$(python3 -c "import json;d=json.load(open('digest/freeze.json'));print(d.get('weekStart','') if d.get('editor') else '')" 2>/dev/null || true)"
+          fi
           if [ "$(lock_ws digest/weekly.lock.json)" = "$WK" ]; then
             echo "week digest LOCKED for $WK — preserving the approved version"
             WK_SUBJ_LOCK="$(lock_subj digest/weekly.lock.json)"
+          elif [ -n "$ED_WS" ] && [ "$ED_WS" = "$WK" ] && [ -f digest/week.html ]; then
+            echo "week digest holds editor edits for $WK (digest/freeze.json) — not re-rendering"
+            WK_SUBJ_LOCK="$(lock_subj digest/freeze.json)"
           else
             rm -f digest/weekly.lock.json
             node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WK" "$WK_LABEL" digest/week.html
