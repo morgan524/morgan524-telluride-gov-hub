@@ -60,18 +60,6 @@
     "imgHiRes": true
   },
   {
-    "title": "Telluride Rewind",
-    "source": "Telluride Times",
-    "date": "November 13, 2026",
-    "firstSeen": "2026-11-13",
-    "newsTopic": "infrastructure",
-    "copy": "Highway 145 was completed and the Telluride Chamber was notifying oil companies to update their maps — projections called for 3,000 cars a day once the road got known. Meanwhile in 1976, direct dial came to the 728 exchange, and the Sheridan changed hands with new partners promising restaurant improvements while keeping the bar mostly as it was.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/article_0bae94c9-6ca9-47ff-b2ce-139fb33cd61d.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/4e/b4e52673-3793-4a8b-a123-b1289f309b78/6af1d46b641c9.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Telski appeals dismissed lawsuit against Fee, Prohaska, Wisor",
     "source": "Telluride Times",
     "date": "November 13, 2026",
@@ -81,6 +69,18 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/news/article_058213a9-59a7-4b22-aeeb-f365acc63082.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/8c/88cb9c2a-1684-47be-a7ba-8d4d3602b630/6af3bdd1af9f6.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Telluride Rewind",
+    "source": "Telluride Times",
+    "date": "November 13, 2026",
+    "firstSeen": "2026-11-13",
+    "newsTopic": "infrastructure",
+    "copy": "Highway 145 was completed and the Telluride Chamber was notifying oil companies to update their maps — projections called for 3,000 cars a day once the road got known. Meanwhile in 1976, direct dial came to the 728 exchange, and the Sheridan changed hands with new partners promising restaurant improvements while keeping the bar mostly as it was.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_0bae94c9-6ca9-47ff-b2ce-139fb33cd61d.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/4e/b4e52673-3793-4a8b-a123-b1289f309b78/6af1d46b641c9.image.jpg",
     "imgHiRes": true
   },
   {

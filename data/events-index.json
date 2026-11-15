@@ -2109,7 +2109,8 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "The Ouray Economic Development Committee (OEDC) works as the liaison between the City and the local business community. This includes creating and implementing an Economic Development Plan and economic development incentives to best serve…",
-    "type": "Community"
+    "type": "Community",
+    "endDate": "2027-01-14"
   },
   {
     "title": "The Regular",
@@ -2335,6 +2336,19 @@
     "source": "Beacon",
     "desc": "Every Tuesday night, a gathering for food, conversation, and bible study downstairs at The Well.",
     "type": "Food & Drink"
+  },
+  {
+    "title": "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
+    "date": "2026-12-15",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "This eco-grief workshop, hosted in Mountain Village, brings together Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library to explore the emotional experience of living through…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Telluride Rotary Club Meeting",

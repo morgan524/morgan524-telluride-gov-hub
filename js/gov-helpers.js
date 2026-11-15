@@ -2853,18 +2853,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Telluride Rewind",
-    source: "Telluride Times",
-    date: "November 13, 2026",
-    firstSeen: "2026-11-13",
-    newsTopic: "infrastructure",
-    copy: "Highway 145 was completed and the Telluride Chamber was notifying oil companies to update their maps — projections called for 3,000 cars a day once the road got known. Meanwhile in 1976, direct dial came to the 728 exchange, and the Sheridan changed hands with new partners promising restaurant improvements while keeping the bar mostly as it was.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_0bae94c9-6ca9-47ff-b2ce-139fb33cd61d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/4e/b4e52673-3793-4a8b-a123-b1289f309b78/6af1d46b641c9.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Telski appeals dismissed lawsuit against Fee, Prohaska, Wisor",
     source: "Telluride Times",
     date: "November 13, 2026",
@@ -2874,6 +2862,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_058213a9-59a7-4b22-aeeb-f365acc63082.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/8c/88cb9c2a-1684-47be-a7ba-8d4d3602b630/6af3bdd1af9f6.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Telluride Rewind",
+    source: "Telluride Times",
+    date: "November 13, 2026",
+    firstSeen: "2026-11-13",
+    newsTopic: "infrastructure",
+    copy: "Highway 145 was completed and the Telluride Chamber was notifying oil companies to update their maps — projections called for 3,000 cars a day once the road got known. Meanwhile in 1976, direct dial came to the 728 exchange, and the Sheridan changed hands with new partners promising restaurant improvements while keeping the bar mostly as it was.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_0bae94c9-6ca9-47ff-b2ce-139fb33cd61d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/4e/b4e52673-3793-4a8b-a123-b1289f309b78/6af1d46b641c9.image.jpg",
     imgHiRes: true
   },
   {
@@ -6296,6 +6296,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/ouray-economic-development-committee",
     description: "The Ouray Economic Development Committee (OEDC) works as the liaison between the City and the local business community. This includes creating and implementing an Economic Development Plan and economic development incentives to best serve the business community and to align with programs that induce private investment enterprises and commerce. The committee also explores regional economic development efforts with the Town of Ridgway and Ouray County as well as is tasked with developing a Business Expansion and Retention (BEAR) program, participating in policy discussions and revisions to community planning documents, and making recommendations to the City Council about economic incentive requests.",
     pubDate: "2026-12-10T15:30:00.000Z",
+    endDate: "2027-01-14",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6815,6 +6816,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
+  },
+  {
+    title: "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
+    link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
+    description: "This eco-grief workshop, hosted in Mountain Village, brings together Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library to explore the emotional experience of living through environmental change. The program offers participants a space to process feelings of grief and gratitude connected to the natural world.",
+    pubDate: "2026-12-15T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
   }
 ];
 
