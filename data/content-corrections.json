@@ -1,4 +1,19 @@
 {
   "_comment": "Durable editorial corrections, re-applied on EVERY content refresh (content-refresh.js Task 21d, via scripts/lib/content-corrections.js). They exist because the arrays they fix are re-scraped from scratch every 6 hours, so editing js/gov-helpers.js directly fixes nothing. Rows are written by scripts/content-autofix.js -- deterministic ones automatically, judgment ones via a pull request -- and can be hand-edited or deleted at any time. kind: event-date | clear-link | set-link | drop-event | set-title. A row matches on array + normalized title + the date the SOURCE currently publishes (wrongDate), so it goes inert the moment the source corrects itself. EVERY ROW EXPIRES: expiresOn is required and pruned automatically, because a permanent override silently distorts data long after the source fixed its own mistake.",
-  "corrections": []
+  "corrections": [
+    {
+      "id": "datefix-ridgway-independent-film-fest-2026-2026-11-15-sherbino_events",
+      "kind": "event-date",
+      "array": "SHERBINO_EVENTS",
+      "titleMatch": "Ridgway Independent Film Fest 2026",
+      "wrongDate": "2026-11-13",
+      "correctDate": "2026-11-15",
+      "reason": "The page lists the event on November 15, 2026, though the body text also mentions the festival spans November 13–15, 2026.",
+      "evidence": "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-2026",
+      "quote": "Sunday, November 15, 2026 9:00am to 3:00pm MST",
+      "addedBy": "content-autofix",
+      "addedOn": "2026-11-15",
+      "expiresOn": "2026-12-15"
+    }
+  ]
 }
