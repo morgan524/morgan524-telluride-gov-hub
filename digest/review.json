@@ -1,72 +1,19 @@
 {
-  "reviewedAt": "2026-11-08 17:07",
-  "weekStart": "2026-11-09",
+  "reviewedAt": "2026-11-15 17:35",
+  "weekStart": "2026-11-16",
   "frozenUntil": "Tuesday morning (9 AM MDT / 8 AM MST)",
   "digests": [
     {
       "key": "weekly",
       "name": "The Week Ahead Outlook",
-      "subject": "The Week Ahead Outlook - November 9 - November 15, 2026",
-      "issues": [
-        {
-          "check": "editorial",
-          "severity": "high",
-          "where": "Intro paragraph (Thursday, San Miguel County Planning Commission)",
-          "quote": "a county-initiated rezoning of a portion of Placerville Park near the fire station",
-          "problem": "The intro describes a second Planning Commission agenda item — a rezoning of Placerville Park — that does not appear anywhere in the body listing for that meeting, so readers cannot find it.",
-          "suggestion": "Either add the Placerville Park rezoning item to the Planning Commission body listing, or remove the reference from the intro.",
-          "resolved": true,
-          "resolution": "not an error: the rezoning is on the posted Nov 12 agenda (legal notice in the Telluride Times, Nov 5); the card shows the first ~520 characters of the summary by design and links to the agenda"
-        },
-        {
-          "check": "editorial",
-          "severity": "medium",
-          "where": "THU, NOV 12 · SMART Board of Directors listing",
-          "quote": "The agenda hasn't been posted yet — details will follow closer to the meeting.\nℹ Why This Matters\nThe gondola (built 1996) is important regional infrastructure.",
-          "problem": "The 'Why This Matters' gondola blurb is inserted inside the SMART Board listing, between the 'no agenda' text and the '📅 Add to calendar' link, making it appear the calendar link belongs to the gondola item rather than the SMART Board meeting.",
-          "suggestion": "Move the 'Why This Matters' block outside the SMART Board listing, either above or below it, so the calendar link unambiguously belongs to the SMART meeting.",
-          "resolved": true,
-          "resolution": "not an error: by design — the gondola 'Why This Matters' callout applies to SMART's own meetings (Morgan 2026-10-19) and every highlighted card puts the callout above its action links, same as Gov-Hub"
-        },
-        {
-          "check": "editorial",
-          "severity": "high",
-          "where": "Intro paragraph (Tuesday, Ouray County BOCC description)",
-          "quote": "The afternoon brings two public hearings",
-          "problem": "The BOCC meeting is at 9:00 AM, but the body of the listing says 'The afternoon brings two public hearings,' which contradicts the posted start time.",
-          "suggestion": "Change 'The afternoon brings' to 'The meeting includes' or 'On the agenda are'.",
-          "fix": {
-            "find": "The afternoon brings two public hearings:",
-            "replace": "The agenda carries two public hearings:"
-          },
-          "fixed": true
-        },
-        {
-          "check": "editorial",
-          "severity": "medium",
-          "where": "What to Attend · TUE, NOV 10 · Dee William's 2026 Volunteer of the Year Celebration",
-          "quote": "Dee William's 2026 Volunteer of the Year Celebration",
-          "problem": "The event title uses 'William's' (as if the name is 'William') while the body correctly identifies the person as 'Dee Williams'; the possessive should be 'Williams''.",
-          "suggestion": "Correct the title to \"Dee Williams' 2026 Volunteer of the Year Celebration\".",
-          "fix": {
-            "find": "Dee William's 2026 Volunteer of the Year Celebration",
-            "replace": "Dee Williams' 2026 Volunteer of the Year Celebration"
-          },
-          "fixed": true
-        }
-      ]
-    },
-    {
-      "key": "past",
-      "name": "Past Meetings",
-      "subject": "Past Meetings - October 30 - November 5, 2026",
-      "issues": [],
-      "note": "Already sent on 2026-11-07 — nothing left to review.",
-      "resolution": "the 5 AM review flagged the Oct 31 Ridgway listing and the Oct 30 - Nov 5 date range as outside Nov 2-6; not an error — this is Emily's Friday-to-Thursday draft, approved and sent Saturday Nov 7. The review's header edit was reverted so the file matches its approval hash again, and digest-review.js now skips sent digests and never edits an approved one"
+      "subject": "The Week Ahead - November 16 - November 22, 2026",
+      "issues": []
     }
   ],
-  "errors": [],
-  "total": 2,
-  "linksChecked": 57,
-  "fixed": 2
+  "errors": [
+    "weekly: editorial read failed (Unexpected non-whitespace character after JSON at position 2232 (line 7 column 1)); mechanical checks still ran"
+  ],
+  "total": 0,
+  "linksChecked": 69,
+  "fixed": 0
 }
