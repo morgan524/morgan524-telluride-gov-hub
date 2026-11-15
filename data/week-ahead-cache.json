@@ -1,34 +1,30 @@
 {
-  "hash": "0c19066c30379ac9c445b2a426ecdc83ab0f4963",
-  "lede": "Monday night, Telluride Town Council votes on the 2027 budget and the property tax levy that funds it — and wrapped into that same meeting is a second reading on suspending the Open Space Fund's 5% RETT dedication for the year, which is the kind of thing that slips by quietly but matters for land conservation down the road. Ouray City Council is doing something similar Monday, adopting its full 2027 budget package including the mill levy and fee schedule. The Fire District board takes up debt financing options and a budget second reading Tuesday, and Norwood's Planning and Zoning digs into Land Use Code and Master Plan updates the same night.",
+  "hash": "d6110e17a2567d3bb712b6730d936bc385cb88aa",
+  "lede": "The biggest thing on the calendar this week is Monday night in Telluride, where Town Council votes on the 2027 budget and property tax levy — and takes a second crack at an ordinance that would suspend the Open Space Fund's cut of Real Estate Transfer Tax revenue for the year, a real tension between the town's finances and its land-conservation commitments. The Fire District is also weighing debt financing and a budget second reading on Monday, the School Board debriefs November ballot results that will shape school funding, and Norwood's Planning and Zoning digs into Land Use Code and Master Plan updates that set the rules for what gets built there for years to come.",
   "notable": [
     {
-      "id": 1,
-      "stake": "Land Use Code and Master Plan updates shape what gets built in Norwood for years."
-    },
-    {
-      "id": 5,
-      "stake": "Council votes on 2027 budget, mill levy, fee schedule, and Ice Park agreement."
+      "id": 9,
+      "stake": "Council votes on 2027 budget, property tax levy, and Open Space Fund suspension."
     },
     {
       "id": 6,
-      "stake": "Fire District weighs financing options and adopts budget on second reading."
+      "stake": "Fire District weighs debt financing options and passes budget on second reading."
     },
     {
       "id": 7,
-      "stake": "Board debriefs November ballot results that directly affect school funding."
+      "stake": "Board debriefs ballot measures that will directly shape school funding going forward."
     },
     {
-      "id": 9,
-      "stake": "Council votes on 2027 budget, tax levy, and suspending Open Space Fund dedication."
+      "id": 1,
+      "stake": "Norwood P&Z rewrites Land Use Code and Master Plan — foundational rules for future development."
+    },
+    {
+      "id": 5,
+      "stake": "Ouray Council votes on 2027 budget, mill levy, fee schedule, and Ice Park agreement."
     },
     {
       "id": 11,
-      "stake": "Master Lease Lottery drawings for two Black Bear Road workforce housing properties."
-    },
-    {
-      "id": 12,
-      "stake": "County repeals austerity measures and updates 2027 budget — fiscal posture shift."
+      "stake": "Lottery drawings determine who gets workforce housing on Black Bear Road."
     }
   ]
 }

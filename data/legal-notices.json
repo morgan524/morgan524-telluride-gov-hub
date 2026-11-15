@@ -106,26 +106,6 @@
     "caseNumber": "2026-07"
   },
   {
-    "title": "Notice -- First Amendment to Condominium Declaration, The Good Gargoyle Condominiums (COL-000272)",
-    "entity": "The Good Gargoyle Condominiums (via attorney Aaron J. Goodlock)",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "📋",
-    "iconClass": "type-hearing",
-    "type": "Ordinance",
-    "filterTag": "ordinance",
-    "summary": "Holders of first mortgages on units in The Good Gargoyle Condominiums are being notified of a proposed First Amendment to the Condominium Declaration originally recorded January 26, 1988. Notice was sent by certified mail to first mortgagees along with a consent form and a copy of the proposed amendment. Parties seeking a copy of the amendment or consent form may contact attorney Aaron J. Goodlock in Denver.",
-    "deadline": "2026-10-22",
-    "expires": "2026-11-14",
-    "dates": "10/15",
-    "papers": [
-      "ttimes_1015"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_2a67f0e2-7d5c-47a5-a0a6-a1635a6dda11.html",
-    "address": "The Good Gargoyle Condominiums, San Miguel County, Colorado (Declaration recorded Book 441, Pages 832-846, Reception No. 252464)",
-    "noticeKey": "good-gargoyle-condo-first-amendment-COL000272"
-  },
-  {
     "title": "Utility Rule Change -- Proposed Amendment to SMPA Rules and Regulations (COL-000275)",
     "entity": "San Miguel Power Association, Inc. (SMPA)",
     "entityClass": "ent-county",

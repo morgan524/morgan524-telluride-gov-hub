@@ -1,14 +1,4 @@
 {
-  "mv|2026-10-15|Town Council Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/50073/october_15-_2026_town_council_meeting_agenda.pdf",
-    "zoomUrl": "https://us06web.zoom.us/webinar/register/WN_umHST1CvS4e9rjqoKXLYAQ",
-    "phone": "970-369-6429"
-  },
-  "airport|2026-10-15|TRAA Board of Commissioners Meeting": {
-    "sv": 4,
-    "ph": "b858cb282617fb09"
-  },
   "norwood|2026-10-19|Planning and Zoning Commission Meeting": {
     "sv": 4,
     "agendaUrl": "https://www.norwoodtown.com/files/8a5f7ce8f/10.19.2026+P%26Z+BOA+AGENDA.pdf",
@@ -214,14 +204,6 @@
   "smart|2026-11-12|SMART Board of Directors": {
     "sv": 4,
     "ph": "b858cb282617fb09"
-  },
-  "norwood|2026-10-15|Board of Trustees Public Hearing - Resolution No. 2026-0812": {
-    "agendaUrl": "https://www.norwoodtown.com/files/3ac6a6aae/10.15.2026+Board+of+Trustee+Public+Hearing.pdf",
-    "zoomUrl": "https://us02web.zoom.us/j/86382307047",
-    "meetingId": "863 8230 7047",
-    "passcode": "081226",
-    "phone": "970-327-4288",
-    "sv": 4
   },
   "ouraycity|2026-10-19|Ouray City Council Regular Meeting": {
     "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=765214",
@@ -493,7 +475,7 @@
   "telluride|2026-12-02|Telluride Housing Authority Subcommittee - Dec 02 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8166",
     "sv": 4,
-    "ph": "8157a58c768c338c"
+    "ph": "02e8c766a6222905"
   },
   "county|2026-11-25|Board of County Commissioners Work Session": {
     "sv": 4,
@@ -531,7 +513,7 @@
   "telluride|2026-12-04|Special Town Council - Dec 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324",
     "sv": 4,
-    "ph": "4b9e8cc3c35fa8ec"
+    "ph": "5023b18de42b4f68"
   },
   "telluride|2026-11-09|Intergovernmental Meeting - Nov 09 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8360",
@@ -649,5 +631,17 @@
   "county|2026-12-14|Open Space Commission Meeting": {
     "sv": 4,
     "ph": "1ff606174e68cca5"
+  },
+  "fire|2026-12-15|Board of Directors Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "school|2026-12-15|Telluride Board of Education Monthly Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "ophir|2026-12-15|General Assembly Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   }
 }

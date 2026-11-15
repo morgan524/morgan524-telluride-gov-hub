@@ -146,12 +146,6 @@ function resolveEventImage(e, opts) {
 // stays current automatically; the static config is the fallback for
 // sources without a PDF agenda.
 const MEETING_AGENDA_META = {
-  "mv|2026-10-15|Town Council Meeting":
-    {"sv":4,"agendaUrl":"https://townofmountainvillage.com/site/assets/files/50073/october_15-_2026_town_council_meeting_agenda.pdf","zoomUrl":"https://us06web.zoom.us/webinar/register/WN_umHST1CvS4e9rjqoKXLYAQ","phone":"970-369-6429"},
-
-  "airport|2026-10-15|TRAA Board of Commissioners Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"},
-
   "norwood|2026-10-19|Planning and Zoning Commission Meeting":
     {"sv":4,"agendaUrl":"https://www.norwoodtown.com/files/8a5f7ce8f/10.19.2026+P%26Z+BOA+AGENDA.pdf","zoomUrl":"https://us02web.zoom.us/j/85001344971","meetingId":"850 0134 4971","passcode":"8142302","phone":"970-327-4288"},
 
@@ -256,9 +250,6 @@ const MEETING_AGENDA_META = {
 
   "smart|2026-11-12|SMART Board of Directors":
     {"sv":4,"ph":"b858cb282617fb09"},
-
-  "norwood|2026-10-15|Board of Trustees Public Hearing - Resolution No. 2026-0812":
-    {"agendaUrl":"https://www.norwoodtown.com/files/3ac6a6aae/10.15.2026+Board+of+Trustee+Public+Hearing.pdf","zoomUrl":"https://us02web.zoom.us/j/86382307047","meetingId":"863 8230 7047","passcode":"081226","phone":"970-327-4288","sv":4},
 
   "ouraycity|2026-10-19|Ouray City Council Regular Meeting":
     {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=765214","sv":4},
@@ -396,7 +387,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8069","sv":4,"ph":"1782388eee465c34"},
 
   "telluride|2026-12-02|Telluride Housing Authority Subcommittee - Dec 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8166","sv":4,"ph":"8157a58c768c338c"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8166","sv":4,"ph":"02e8c766a6222905"},
 
   "county|2026-11-25|Board of County Commissioners Work Session":
     {"sv":4,"ph":"155b8bb013cf3ec0"},
@@ -420,7 +411,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"1ff606174e68cca5"},
 
   "telluride|2026-12-04|Special Town Council - Dec 04 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324","sv":4,"ph":"4b9e8cc3c35fa8ec"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324","sv":4,"ph":"5023b18de42b4f68"},
 
   "telluride|2026-11-09|Intergovernmental Meeting - Nov 09 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8360","meetingId":"816 7927 3686","passcode":"275604","phone":"719-359-4580","sv":4},
@@ -492,7 +483,16 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "county|2026-12-14|Open Space Commission Meeting":
-    {"sv":4,"ph":"1ff606174e68cca5"}
+    {"sv":4,"ph":"1ff606174e68cca5"},
+
+  "fire|2026-12-15|Board of Directors Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "school|2026-12-15|Telluride Board of Education Monthly Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "ophir|2026-12-15|General Assembly Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -917,8 +917,8 @@ const REGIONAL_NEWS_ARTICLES = [
     sourceKey: "ouray-plaindealer",
     date: "November 12, 2026",
     newsTopic: "education",
-    copy: "Ridgway School District Lego robotics team members celebrate as their autonomous Lego robot completes its mission on a tabletop game field. Left to right are eighth-graders Sawyer Mullins, Brielle Haag and Sadie McCracken, members of the RoboRidgway team that qualified to compete at the state compet",
-    href: "https://www.ouraynews.com/2026/11/11/keep-calm-build/?ta_paidstory",
+    copy: "Ridgway School District Lego robotics team members celebrate as their autonomous Lego robot completes its mission on a tabletop game field on Saturday during the FIRST Lego League Challenge held at Ridgway Secondary School. Pictured here, from left to right, are eighth graders Sawyer Mullins, Briell",
+    href: "https://www.ouraynews.com/2026/11/11/keep-calm-build/",
     img: ""
   },
   {
@@ -928,7 +928,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "November 12, 2026",
     newsTopic: "government",
     copy: "DELTA – A Colorado water court judge appears likely to let supporters and opponents of a pipeline diversion from Cow Creek into Ridgway Reservoir duke out their claims at a trial scheduled for next year. As the long-running water rights application inches toward a resolution, Division 4 Water Court ",
-    href: "https://www.ouraynews.com/2026/11/11/water-battle-likely-headed-trial/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/11/11/water-battle-likely-headed-trial/",
     img: ""
   },
   {
@@ -938,7 +938,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "November 12, 2026",
     newsTopic: "community",
     copy: "The OurWay commuter shuttle service that runs between Ouray, Ridgway and Montrose will shut down at the end of this year due to lack of funding. After nearly three years, the pilot program’s $531,000 Multimodal Transportation and Mitigations Option Fund grant from the Colorado Department of Transpor",
-    href: "https://www.ouraynews.com/2026/11/11/shuttle-service-shut/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/11/11/shuttle-service-shut/",
     img: ""
   },
   {
@@ -972,16 +972,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "Looking Back",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "November 12, 2026",
-    newsTopic: "arts-culture",
-    copy: "November 10, 1966 The Academy Award winning musical “Mary Poppins” will reopen the Chipeta Theatre on Thanksgiving Day. Mr. and Mrs. Vernon L. Wrye of Cleveland, Ohio, have purchased the Chipeta Theatre in Ouray from Mrs. Dannie Mac Hilliard who built the theatre and has operated it for the past 10 ",
-    href: "https://www.ouraynews.com/2026/11/11/looking-back-20261112-0152-478888/?ta_paidstory",
-    img: ""
-  },
-  {
     title: "Our subscription rates are increasing. Here’s why",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
@@ -1009,6 +999,16 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "government",
     copy: "Ridgway will likely upgrade its sewer plant at its current location, behind the public works property at 501 Otto St. The council had examined some alternative sites but they presented their own challenges, namely cost and concern about impacts to surrounding development. At a budget workshop Oct. 3",
     href: "https://www.ouraynews.com/2026/11/11/town-weighs-sewer-treatment-options/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Commissioners repeal policy requiring approval to fill every staff vacancy",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "November 12, 2026",
+    newsTopic: "government",
+    copy: "Ouray County commissioners will no longer review renewing individual staff positions every time there is a vacancy, after hearing concerns that it was a burden on staff and raised questions from the public and press about resignations and terminations. Commissioners created the austerity policy a ye",
+    href: "https://www.ouraynews.com/2026/11/11/commissioners-repeal-policy-requiring-approval-fill-every-staff-vacancy/?ta_paidstory",
     img: ""
   },
   {
@@ -1077,16 +1077,10 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/facilities-master-plan/widgets/99345/key_dates#43074"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-11-14';
-const LEGAL_NOTICES_CACHE_DATE = '2026-11-13';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-11-15';
+const LEGAL_NOTICES_CACHE_DATE = '2026-11-15';
 
 const MANUAL_SUMMARIES = {
-  "mv|2026-10-15|Town Council Meeting":
-    "A full plate for the October 15 Council meeting. Two housing authority items come first in consequence: second reading of an ordinance amending MVHA fee language in the Municipal Code (Sections 16.01 & 16.02) to point to an annual fee schedule rather than hardcoded figures, paired with a resolution adopting the actual 2027 MVHA fee schedules — including Village Court Apartments rents. The gondola project surfaces again with a fourth supplement to the intergovernmental cost-sharing agreement for the 2027 planning and development budget. A three-party MOU between Mountain Village, San Miguel County, and the Ridge at Telluride HOA on the Ridge View Plane interpretation heads to a vote — view plane disputes in this canyon have a long history. Council will also consider a town manager employment agreement for Michael Bouchard, a work session on expanding the Munchkins childcare program, a draft Beaver Management Plan, a food truck CUP renewal, and a sustainable tourism services agreement with the Telluride Tourism Board. The meeting closes with an executive session on sewer authority negotiations with the Town of Telluride.",
-
-  "airport|2026-10-15|TRAA Board of Commissioners Meeting":
-    "The October 15, 2026 TRAA Board of Commissioners Meeting agenda hasn't been posted yet.",
-
   "norwood|2026-10-19|Planning and Zoning Commission Meeting":
     "Norwood's Planning and Zoning Commission meets October 19 at 6:30 p.m. at Town Hall. Two substantive items anchor the session: a Land Use Code Update and a Master Plan Update — both the kind of foundational work that shapes what gets built where, and under what rules, for years to come. The board will also address a Board Seat Update. Consent agenda covers September 21 minutes.",
 
@@ -1191,9 +1185,6 @@ const MANUAL_SUMMARIES = {
 
   "smart|2026-11-12|SMART Board of Directors":
     "The November 12, 2026 SMART Board of Directors agenda hasn't been posted yet.",
-
-  "norwood|2026-10-15|Board of Trustees Public Hearing - Resolution No. 2026-0812":
-    "A single item is on the table in Norwood Thursday evening: Resolution No. 2026-0812, which sets the grounds and procedures for a potential removal-for-cause of a sitting Planning Commission member. The Board of Trustees will hear public testimony before deciding how to proceed. Removal of an appointed board member is uncommon — and when a small town moves to formalize that process, it usually means something significant has happened behind the scenes. The meeting is at Town Hall, 1670 Naturita Street, at 6:30 p.m., with a Zoom option available.",
 
   "ouraycity|2026-10-19|Ouray City Council Regular Meeting":
     "A full agenda for Ouray, which marks its 150th anniversary at this meeting. The consequential items: first readings of two ordinances — one setting 2027 water and sewer rates, and one addressing Light Industrial zoning and EQR (equivalent residential unit) calculations. Council also takes up Resolution No. 23, an intergovernmental agreement with the Ouray County Sheriff for full law-enforcement services — a structural decision about how the city gets policed. Resolution No. 24 covers a water service termination agreement. A perimeter trail easement request and a Responsible Entity Agreement round out the action items. On the discussion side, Waterview Phase II rural homes gets a council direction conversation, with the 2024 housing needs analysis and strategy addendum in the packet. Home Trust of Ouray County presents its quarterly housing services report.",
@@ -1427,7 +1418,16 @@ const MANUAL_SUMMARIES = {
     "The December 14 Telluride Board of Education Work Session agenda hasn't been posted yet.",
 
   "county|2026-12-14|Open Space Commission Meeting":
-    "The December 14 Open Space Commission agenda hasn't been posted yet."
+    "The December 14 Open Space Commission agenda hasn't been posted yet.",
+
+  "fire|2026-12-15|Board of Directors Meeting":
+    "The December 15 fire Board of Directors Meeting agenda hasn't been posted yet.",
+
+  "school|2026-12-15|Telluride Board of Education Monthly Meeting":
+    "The December 15 Telluride Board of Education Monthly Meeting agenda hasn't been posted yet.",
+
+  "ophir|2026-12-15|General Assembly Meeting":
+    "The December 15 Ophir General Assembly Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2784,6 +2784,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "County discusses housing mitigation impact fee",
+    source: "Telluride Times",
+    date: "November 14, 2026",
+    firstSeen: "2026-11-15",
+    newsTopic: "education",
+    copy: "San Miguel County commissioners and planners met to review three possible changes to the unincorporated county's affordable housing impact fee, which applies to new residential construction within the R-1 School District. All three options would adjust the exemption threshold and graduated mitigation rates, which currently run 18–90% of a $1,112-per-square-foot market gap figure. Some locals and one commissioner raised concerns that the fees are pricing out full-time residents looking to build free-market homes.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_7af836c2-160e-4635-ab2c-d00c9f4759e0.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/0c/b0cd5a5f-ac31-4879-a162-41cd8b2cd2f7/6af61466ddb84.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "A community-wide effort to help residents thrive",
     source: "Telluride Times",
     date: "November 14, 2026",
@@ -3442,30 +3454,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Bodies of 2 students are recovered after they died on hiking trip",
-    source: "Telluride Times",
-    date: "November 1, 2026",
-    firstSeen: "2026-11-01",
-    newsTopic: "education",
-    copy: "Two Colorado Mountain College students, Kaden Matsuda, 19, of Ridgway, and Jackson Donlon, 20, of New York, died during a backcountry trip after a severe storm dropped two feet of snow in the San Isabel area. Their bodies were recovered from a basin on West Apostle Mountain. The sheriff noted they were well-prepared — the mountains don't always care.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_9ab8de6c-9a06-4ced-8c63-c034e7af4d8c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/2f/02f2828f-1b93-41d0-8670-a8fa9d19b103/6ae617e2d7476.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "‘We’re in a vast archaeological treasure trove’",
-    source: "Telluride Times",
-    date: "November 1, 2026",
-    firstSeen: "2026-11-01",
-    newsTopic: "community",
-    copy: "Rob Schultheis, a longtime Telluride resident and journalist, says he's been finding what he believes are Ice Age mammoth carvings across the valley for the past three years — in Lawson Hill, near Ames, near Ilium. He thinks they were hunting talismans, and says once you know what to look for, they're hard to miss.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_75f8d2ec-c830-45a2-88ff-aa3bb45759cf.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/03/b03d736c-2c8f-464e-9aa4-134dd9bf03e5/6ae504564d5bd.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Local Employers Invited to Apply for Employee Housing Master Leases",
     source: "Town of Telluride",
     date: "October 23, 2026",
@@ -3562,7 +3550,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Ridgway Planning Commission Meeting Agenda and Packet - November 18, 2026&nbsp;",
     source: "Town of Ridgway",
-    date: "November 14, 2026",
+    date: "November 15, 2026",
     firstSeen: "2026-11-13",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3595,7 +3583,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "November 14, 2026",
+    date: "November 15, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3617,7 +3605,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Public Hearing for Liquor License on November 19, 2026 at 5:30pm - Chipeta Lodge Resort &amp; Spa, 304 S Lena Street - Notice dated October 13, 2026",
     source: "Town of Ridgway",
-    date: "November 14, 2026",
+    date: "November 15, 2026",
     firstSeen: "2026-10-14",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3628,7 +3616,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "November 14, 2026",
+    date: "November 15, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3639,7 +3627,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway, City of Ouray, and Ouray County Establish New Three-Year Affordable Housing Goals",
     source: "Town of Ridgway",
-    date: "November 14, 2026",
+    date: "November 15, 2026",
     firstSeen: "2026-10-21",
     newsTopic: "housing",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -4820,7 +4808,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Shepherd, Australian • Male",
     firstSeen: "2026-10-31",
     revealDate: "2026-11-02",
-    lastSeen: "2026-11-14"
+    lastSeen: "2026-11-15"
   },
   {
     id: "TEL-A-209",
@@ -4834,7 +4822,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Collie, Border / Cattle Dog, Australian (Red Heeler) • Female",
     firstSeen: "2026-10-31",
     revealDate: "2026-11-04",
-    lastSeen: "2026-11-14"
+    lastSeen: "2026-11-15"
   }
 ];
 
@@ -5545,7 +5533,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
     pubDate: "2026-11-14T20:30:00.000Z",
-    endDate: "2027-01-12",
+    endDate: "2027-01-13",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5810,7 +5798,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/floating-sound-bath",
     description: "Group Float in warm healing waters every Wednesday @ 1:30pm. Receive gentle aquatic massage while listening to live sound therapy, vocals, bowls and more. Contact Christian 303-807-1039 to reserve your spot in advance. Please pay in advance. Sliding scale: $35-$85/person.Pay Cash at indoor pool or Venmo to @GOLDENTHREADSTHERAPY. *Orvis entry fee pay seperately.",
     pubDate: "2026-11-18T20:30:00.000Z",
-    endDate: "2027-01-06",
+    endDate: "2027-01-13",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -7401,24 +7389,6 @@ const LEGAL_NOTICES = [
     address: "40697 State Highway 145, Norwood, CO 81423 (NW¼ NW¼ Section 26, Township 45 North, Range 13 West, N.M.P.M., San Miguel County)",
     noticeKey: "foreclosure-2026-07-norwood-hwy145",
     caseNumber: "2026-07"
-  },
-  {
-    title: "Notice -- First Amendment to Condominium Declaration, The Good Gargoyle Condominiums (COL-000272)",
-    entity: "The Good Gargoyle Condominiums (via attorney Aaron J. Goodlock)",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "Holders of first mortgages on units in The Good Gargoyle Condominiums are being notified of a proposed First Amendment to the Condominium Declaration originally recorded January 26, 1988. Notice was sent by certified mail to first mortgagees along with a consent form and a copy of the proposed amendment. Parties seeking a copy of the amendment or consent form may contact attorney Aaron J. Goodlock in Denver.",
-    deadline: "2026-10-22",
-    expires: "2026-11-14",
-    dates: "10/15",
-    papers: ["ttimes_1015"],
-    url: "https://www.telluridenews.com/news/legals/article_2a67f0e2-7d5c-47a5-a0a6-a1635a6dda11.html",
-    address: "The Good Gargoyle Condominiums, San Miguel County, Colorado (Declaration recorded Book 441, Pages 832-846, Reception No. 252464)",
-    noticeKey: "good-gargoyle-condo-first-amendment-COL000272"
   },
   {
     title: "Utility Rule Change -- Proposed Amendment to SMPA Rules and Regulations (COL-000275)",
