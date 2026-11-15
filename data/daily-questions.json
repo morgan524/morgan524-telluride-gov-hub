@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-11-15",
+    "title": "Who gets to say yes — and who just gets to watch?",
+    "body": "The Liquor Licensing Authority is set to review license applications or modifications, but with a catch built into the process: the hearing officer handles most matters, while new licenses require Town Council approval on top of that. So the same question comes up again — how much of this decision really belongs to the licensing body, and how much gets handed up the chain?\n\nSome folks think layered oversight keeps things accountable. Others think it slows things down and muddies who's actually responsible. Where do you land?",
+    "choices": [
+      "Layered approval makes sense",
+      "One body should decide",
+      "Depends on the license",
+      "It's complicated"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-11-14",
     "title": "Hazard plan — worth the county's time right now?",
     "body": "The Board of County Commissioners is expected to consider developing a multi-jurisdictional hazard mitigation plan. That means pulling multiple local governments together to map out risks and responses before something goes wrong. Some residents will say that kind of coordinated planning is exactly what a mountain community needs — better late than never. Others may wonder whether it's another layer of process that moves slowly and costs money the county could spend on more immediate needs. Nothing's decided yet. So: is a multi-jurisdictional hazard plan a smart use of county attention right now?",
@@ -421,20 +436,6 @@
       "It'll make us safer",
       "Adds burden, little gain",
       "Too soon to tell"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-10-16",
-    "title": "Paper bills now cost extra — worth it?",
-    "body": "Buried in a canceled-meeting notice: San Miguel Power Association is adding a new fee for paper billing. If you want a bill in the mail, you'll pay extra for it. The case for it is straightforward — digital is cheaper, and costs get passed to everyone otherwise. The case against it is just as real — not everyone is set up for online billing, and fees like this tend to land hardest on folks least able to absorb them. So: is a paper billing fee a reasonable nudge, or does it leave some neighbors behind?",
-    "choices": [
-      "Reasonable nudge toward digital",
-      "Unfair to some residents",
-      "Need more info"
     ],
     "sourceUrl": "/gov-hub.html",
     "topics": [

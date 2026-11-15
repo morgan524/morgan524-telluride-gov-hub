@@ -475,7 +475,7 @@
   "telluride|2026-12-02|Telluride Housing Authority Subcommittee - Dec 02 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8166",
     "sv": 4,
-    "ph": "02e8c766a6222905"
+    "ph": "8157a58c768c338c"
   },
   "county|2026-11-25|Board of County Commissioners Work Session": {
     "sv": 4,
@@ -513,7 +513,7 @@
   "telluride|2026-12-04|Special Town Council - Dec 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324",
     "sv": 4,
-    "ph": "5023b18de42b4f68"
+    "ph": "4b9e8cc3c35fa8ec"
   },
   "telluride|2026-11-09|Intergovernmental Meeting - Nov 09 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8360",
@@ -643,5 +643,10 @@
   "ophir|2026-12-15|General Assembly Meeting": {
     "sv": 4,
     "ph": "b858cb282617fb09"
+  },
+  "telluride|2026-12-15|Town Council - Dec 15 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8047",
+    "sv": 4,
+    "ph": "55630399c20b067e"
   }
 }
