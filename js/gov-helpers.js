@@ -3532,24 +3532,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Local Employers Invited to Apply for Employee Housing Master Leases",
-    source: "Town of Telluride",
-    date: "October 23, 2026",
-    newsTopic: "housing",
-    copy: "(October 22, 2026) – The Telluride Housing Authority (THA) is offering master leases on five apartments at the new Virginia Placer IIA building and two rooms at the Telluride Boarding House to local businesses and organizations.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=408",
-    img: ""
-  },
-  {
-    title: "Deed-Restricted Housing Lottery Applications Now Available for Spruce House H",
-    source: "Town of Telluride",
-    date: "October 22, 2026",
-    newsTopic: "housing",
-    copy: "(October 22, 2026) - The Town of Telluride and the San Miguel Regional Housing Authority (SMRHA) opened applications today for a deed-restricted homeownership lottery for Spruce House H at 226 East Pacific Avenue, Unit H, Telluride, Colorado, 81435.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=407",
-    img: ""
-  },
-  {
     title: "Join Us! Meet and Greet with Planning Director Finalists",
     source: "San Miguel County",
     date: "November 13, 2026",
