@@ -387,7 +387,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8069","sv":4,"ph":"1782388eee465c34"},
 
   "telluride|2026-12-02|Telluride Housing Authority Subcommittee - Dec 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8166","sv":4,"ph":"8157a58c768c338c"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8166","sv":4,"ph":"318a8fe2a3798f29"},
 
   "county|2026-11-25|Board of County Commissioners Work Session":
     {"sv":4,"ph":"155b8bb013cf3ec0"},
@@ -510,7 +510,16 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8085","sv":4,"ph":"0875ac690f9acac0"},
 
   "county|2026-12-16|Board of County Commissioners Meeting":
-    {"sv":4,"ph":"a12dfd2ce826475e"}
+    {"sv":4,"ph":"a12dfd2ce826475e"},
+
+  "telluride|2026-12-11|Telluride Housing Authority Subcommittee Special Meeting - Dec 11 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8365","sv":4,"ph":"7936b664b0cd4d30"},
+
+  "telluride|2026-12-08|Telluride Housing Authority Subcommittee Special Meeting - Dec 08 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8364","sv":4,"ph":"1eed6ec987641b2d"},
+
+  "telluride|2026-11-18|Telluride Housing Authority Subcommittee Special Meeting - Nov 18 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8363","zoomUrl":"https://us06web.zoom.us/meeting/register/vCd8aZy5TLOCOVod7PLOyQ","meetingId":"896 9784 6227","passcode":"734380.","phone":"719) 359-4580","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -875,17 +884,20 @@ const MEETING_PREVIEWS = {
   "telluride|2026-12-16|Parks & Recreation Commission - Dec 16 2026":
     "The Telluride Parks & Recreation Commission is expected to meet on December 16, 2026. No specific agenda items have been published. Separately, the Town is seeking consulting services for a comprehensive review of its Employee Rental Housing Policies, though this matter falls outside the Commission's typical jurisdiction.",
 
-  "county|2026-11-16|Open Space Commission Meeting":
-    "The Open Space Commission is expected to address matters related to land and property issues in San Miguel County, potentially including updates on local housing, hazard mitigation planning, and open space management. Related public notices suggest broader county activity involving foreclosures, infrastructure, and procurement.",
-
-  "county|2026-11-16|Open Space Commission Meeting 11/23":
-    "The Open Space Commission is expected to consider appointing Daniel Alvarado to a regular commission seat, receive updates on several trail projects, parks improvements, and conservation easements, and hold a commission meet and greet. Minutes from the October work session will also be reviewed.",
-
   "county|2026-12-16|Board of County Commissioners Meeting":
     "Board will consider several procurement matters, including requests for proposals on a Housing Action Plan, a trail connector project, and fuel island canopy construction, along with a material hauling quote. Related legal notices include multiple foreclosure sales and a proposed 2027 budget from the Southwestern Water Conservation District.",
 
+  "telluride|2026-12-11|Telluride Housing Authority Subcommittee Special Meeting - Dec 11 2026":
+    "The Telluride Housing Authority Subcommittee is expected to discuss a Request for Proposals seeking qualified consultants to conduct a comprehensive review of the Town of Telluride's employee rental housing policies.",
+
+  "telluride|2026-12-08|Telluride Housing Authority Subcommittee Special Meeting - Dec 08 2026":
+    "The Telluride Housing Authority Subcommittee is expected to discuss a Request for Proposal for consulting services to conduct a comprehensive review of the Town of Telluride's employee rental housing policies.",
+
+  "telluride|2026-11-18|Telluride Housing Authority Subcommittee Special Meeting - Nov 18 2026":
+    "The Telluride Housing Authority Subcommittee will consider multiple requests for exceptions to Affordable Housing Guidelines regarding lenders and mortgages, including applications from Nichole Zangara and Jim Riley and several other applicants. The subcommittee will also accept public comment during the hybrid meeting.",
+
   "ouraycity|2026-11-16|Ouray City Council Regular Meeting":
-    "Council is expected to adopt the 2027 city budget, set property tax levies, and approve appropriations. Other items include an amended management agreement with Ouray Ice Park, a facility assessment for the Hot Springs Pool House, and consent items covering committee appointments and an erosion control project agreement."
+    "Council is expected to adopt the 2027 city budget, set property tax levies, and approve appropriations for the coming year. Additional action items include amendments to the Ouray Ice Park management agreement and a professional services contract for a hot springs pool house condition assessment."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1472,7 +1484,16 @@ const MANUAL_SUMMARIES = {
     "The December 16, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-12-16|Board of County Commissioners Meeting":
-    "The December 16 Board of County Commissioners agenda hasn't been posted yet."
+    "The December 16 Board of County Commissioners agenda hasn't been posted yet.",
+
+  "telluride|2026-12-11|Telluride Housing Authority Subcommittee Special Meeting - Dec 11 2026":
+    "The December 11, 2026 Telluride Housing Authority Subcommittee Special Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-12-08|Telluride Housing Authority Subcommittee Special Meeting - Dec 08 2026":
+    "The December 8, 2026 Telluride Housing Authority Subcommittee Special Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-11-18|Telluride Housing Authority Subcommittee Special Meeting - Nov 18 2026":
+    "The Telluride Housing Authority Subcommittee meets in special session to rule on two categories of exceptions tied to the current THA lottery. First, Nichole Zangara and Jim Riley are seeking approval to use an unconventional loan to purchase a Spruce House unit — a request that must clear the Guidelines' §110.2 lender standards, with a closing deadline of February 28, 2027. Second, six households — the Tavanos, Gulec/Davis, Candelaria/Schiefelbein, Bayon/McLaughlin, Tarris/Krell, and Kaunelis — are each requesting an exception to the minimum household size requirement under §103.3B. Neither type of exception, if granted, guarantees lottery qualification; full household eligibility review still follows. The subcommittee is asked to consider each application separately."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2829,6 +2850,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Telluride Rewind",
+    source: "Telluride Times",
+    date: "November 16, 2026",
+    firstSeen: "2026-11-16",
+    newsTopic: "government",
+    copy: "Back in 1971, a property owner notified Telluride's town board he planned to subdivide 15–20 acres at the mouth of Bear Creek Canyon. Town efforts through the '80s to purchase and preserve the land fell through, but a private buyer ultimately acquired the 320-acre parcel and transferred it to the San Miguel Conservation Foundation in 1995.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_850099a0-59f3-4adf-b030-7d81862d213f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/8d/48dee0e9-92f4-435a-9f69-2474876bb546/6af76dd24fc9d.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "New turns and U-turns on Telluride Hospital District's road forward",
     source: "Telluride Times",
     date: "November 15, 2026",
@@ -2838,6 +2871,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_06d37a7b-663f-4a7a-abfe-de5a6059fc37.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/05/5058fb36-47a4-4f6d-ad9a-03ea784e2fbc/6af6b1981a817.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "TSSC brings on new staff, board members and approach",
+    source: "Telluride Times",
+    date: "November 15, 2026",
+    firstSeen: "2026-11-16",
+    newsTopic: "government",
+    copy: "The 41-year-old Telluride Ski and Snowboard Club heads into the season with a new board chair, Lauren Woodward, new secretary/treasurer Jason Soules, two additional board members, and a new operations manager, Jessica Lockwood. The club is emphasizing cross-discipline training, clearer communication with families, and a refreshed clubhouse. On-snow training starts in December, with a ski-athon and festival presence planned.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_1e79501b-a444-4012-bcc4-d993e7b994da.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/48/f48664cd-675f-4eea-a4c0-5da978a61b23/6af755b2778da.image.jpg",
     imgHiRes: true
   },
   {
@@ -4971,6 +5016,30 @@ const ALIBI_EVENTS = [
     imageUrl: "https://1v09t9hszk.ucarecd.net/ca6338a4-f816-4b2d-9519-f999c902da9f/-/crop/1877x750/0,2065/-/preview/"
   },
   {
+    title: "Private Event",
+    link: "https://www.alibitelluride.com/calendar#eca-event=closed-private-event",
+    description: "A private live music event is taking place at The Alibi in Telluride. The venue is not open to the general public for this occasion; those with questions or interest in attending can reach out directly to the venue for more information.",
+    pubDate: "2026-12-03",
+    time: "5:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://1v09t9hszk.ucarecd.net/ab087872-1df0-4d51-8ebb-db3437d32780/"
+  },
+  {
+    title: "Private Event",
+    link: "https://www.alibitelluride.com/calendar#eca-event=private-event-2",
+    description: "A private live music event is taking place at The Alibi in Telluride. The venue is not open to the general public for this occasion; those with questions or inquiries can reach out directly to the venue for more information.",
+    pubDate: "2026-12-08",
+    time: "5:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://1v09t9hszk.ucarecd.net/fc1ad9d1-f11b-4aca-9636-5b95b6e3c307/"
+  },
+  {
     title: "The Regular",
     link: "https://www.alibitelluride.com/calendar#eca-event=the-regular",
     description: "The Regular is a folk rock band based in Denver, Colorado, performing live at The Alibi. The band brings their folk rock sound to Telluride for a late-night show.",
@@ -5074,16 +5143,6 @@ const NUCLA_NATURITA_EVENTS = [];
 const CLUB_RED_SHOWS = [];
 const FRESH_FOOD_HUB_EVENTS = [];
 const SHERBINO_EVENTS = [
-  {
-    title: "Ridgway Independent Film Fest ~ We Wandered Beyond the Firelight",
-    href: "https://sherbino.org/event/ridgway-independent-film-fest-we-wandered-beyond-the-firelight/",
-    date: "2026-11-15 14:00:00",
-    endDate: "2026-11-15 15:30:00",
-    location: "The Sherbino, Ridgway",
-    copy: "A screening at The Sherbino in Ridgway as part of the Ridgway Independent Film Fest, featuring the film *We Wandered Beyond the Firelight*. Doors open at 1:45 pm with the film beginning at 2:00 pm, and single-block general admission tickets are $15.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/Block5.wewanderedbeyondthefirelight-1.png",
-    description: "A screening at The Sherbino in Ridgway as part of the Ridgway Independent Film Fest, featuring the film *We Wandered Beyond the Firelight*. Doors open at 1:45 pm with the film beginning at 2:00 pm, and single-block general admission tickets are $15."
-  },
   {
     title: "The Sherbino & Citizens State Bank Present: Winter Wildlands Alliance BACKCOUNTRY FILM FEST",
     href: "https://sherbino.org/event/the-sherbino-presents-winter-wildlands-alliance-backcountry-film-fest/",
@@ -5630,7 +5689,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
     pubDate: "2026-11-17T20:30:00.000Z",
-    endDate: "2027-01-14",
+    endDate: "2027-01-15",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5774,6 +5833,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Floating Lotus Brewery",
     imageUrl: "https://localist-images.azureedge.net/photos/53790516346797/huge/599d1a7013ddde307592e7dfc9b892fe265527e0.jpg"
+  },
+  {
+    title: "Steps Tavern Presents Karaoke Night",
+    link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night-6356",
+    description: "Steps Tavern Presents Karaoke Night. Doors Open at 8:00 PM every Thursday Night.",
+    pubDate: "2026-11-20T03:00:00.000Z",
+    endDate: "2027-01-15",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Steps Tavern",
+    imageUrl: "https://localist-images.azureedge.net/photos/54528016985213/huge/d5c76d660410708a93445cf6fa31edf1a9f61bf2.jpg"
   },
   {
     title: "STEAM Art Explorers for Ages 5–8 in Montrose",
@@ -5934,6 +6005,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Floating Lotus Brewery",
     imageUrl: "https://localist-images.azureedge.net/photos/51579855188578/huge/de5019ffbfacf4a9f5e85d8a14961584c70e7873.jpg"
+  },
+  {
+    title: "Mamas & Caregivers Connect - Prenatal, Postpartum, and Beyond",
+    link: "https://events.ourayridgwayevents.com/event/mamas-caregivers-connect-prenatal-postpartum-and-beyond",
+    description: "A community gathering at the Ridgway Public Library for new and expecting mothers to connect and support one another through the prenatal and postpartum journey. The group meets in person and virtually, focusing on breastfeeding confidence, physical recovery, and emotional wellbeing.",
+    pubDate: "2026-12-01T18:00:00.000Z",
+    endDate: "2027-01-05",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ridgway Public Libary",
+    imageUrl: "https://localist-images.azureedge.net/photos/54532606385088/huge/459531119ef8c0df8c5ec458451a30206ae6736e.jpg"
   },
   {
     title: "JUST ADDED: After School Art Now Also on Tuesdays for Ages 5-8",
@@ -9154,6 +9237,16 @@ const TELLURIDE_BOARD_MEETINGS = [
   },
   {
     date: "November 18, 2026",
+    title: "Telluride Housing Authority Subcommittee Special Meeting",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8363",
+    hasAgenda: true,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: "9:00 AM",
+    civicwebId: 8363,
+    packetUrl: "https://telluride-co.civicweb.net/document/447896/"
+  },
+  {
+    date: "November 18, 2026",
     title: "Parks & Recreation Commission",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8084",
     hasAgenda: true,
@@ -9225,6 +9318,24 @@ const TELLURIDE_BOARD_MEETINGS = [
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "4:00 PM",
     civicwebId: 8134
+  },
+  {
+    date: "December 8, 2026",
+    title: "Telluride Housing Authority Subcommittee Special Meeting",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8364",
+    hasAgenda: false,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: "9:00 AM",
+    civicwebId: 8364
+  },
+  {
+    date: "December 11, 2026",
+    title: "Telluride Housing Authority Subcommittee Special Meeting",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8365",
+    hasAgenda: false,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: "10:00 AM",
+    civicwebId: 8365
   },
   {
     date: "December 15, 2026",

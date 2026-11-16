@@ -145,7 +145,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
     "type": "Community",
-    "endDate": "2027-01-14"
+    "endDate": "2027-01-15"
   },
   {
     "title": "Britley & Matt",
@@ -478,6 +478,20 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Trivia Night at Floating Lotus Brewery! Join us on the 1st & 3rd Thursdays from 7–9 PM for a lively night of questions, drinks, and friendly competition. Grab a table, bring your team, and learn more at floatinglotusbrewery.com.",
     "type": "Food & Drink"
+  },
+  {
+    "title": "Steps Tavern Presents Karaoke Night",
+    "href": "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night-6356",
+    "date": "2026-11-19",
+    "time": "8:00 PM",
+    "location": "Steps Tavern",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54528016985213/huge/d5c76d660410708a93445cf6fa31edf1a9f61bf2.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Steps Tavern Presents Karaoke Night. Doors Open at 8:00 PM every Thursday Night.",
+    "type": "Community",
+    "endDate": "2027-01-15"
   },
   {
     "title": "County Employee Friendsgiving Potluck (BOCC Room)",
@@ -1217,6 +1231,20 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Mamas & Caregivers Connect - Prenatal, Postpartum, and Beyond",
+    "href": "https://events.ourayridgwayevents.com/event/mamas-caregivers-connect-prenatal-postpartum-and-beyond",
+    "date": "2026-12-01",
+    "time": "11:00 AM",
+    "location": "Ridgway Public Libary",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54532606385088/huge/459531119ef8c0df8c5ec458451a30206ae6736e.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "A community gathering at the Ridgway Public Library for new and expecting mothers to connect and support one another through the prenatal and postpartum journey. The group meets in person and virtually, focusing on breastfeeding…",
+    "type": "Community",
+    "endDate": "2027-01-05"
+  },
+  {
     "title": "JUST ADDED: After School Art Now Also on Tuesdays for Ages 5-8",
     "href": "https://events.ourayridgwayevents.com/event/just-added-after-school-art-now-also-on-tuesdays-for-ages-5-8",
     "date": "2026-12-01",
@@ -1389,6 +1417,19 @@
     "source": "KOTO Community Calendar",
     "desc": "Join us the first Thursday of every month for Telluride's Art Walk. It will be an evening filled with inspiring exhibits, engaging receptions, and the chance to meet local and visiting artists. From 5–7 pm, participating venues will open…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Private Event",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=closed-private-event",
+    "date": "2026-12-03",
+    "time": "5:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://1v09t9hszk.ucarecd.net/ab087872-1df0-4d51-8ebb-db3437d32780/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "A private live music event is taking place at The Alibi in Telluride. The venue is not open to the general public for this occasion; those with questions or interest in attending can reach out directly to the venue for more information.",
+    "type": "Music"
   },
   {
     "title": "Wreaths for Rescues",
@@ -1859,6 +1900,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Britley & Matt are performing live music at a venue on North Cora Street in Ridgway. The event is listed through the Ouray Ridgway community calendar.",
+    "type": "Music"
+  },
+  {
+    "title": "Private Event",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=private-event-2",
+    "date": "2026-12-08",
+    "time": "5:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://1v09t9hszk.ucarecd.net/fc1ad9d1-f11b-4aca-9636-5b95b6e3c307/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "A private live music event is taking place at The Alibi in Telluride. The venue is not open to the general public for this occasion; those with questions or inquiries can reach out directly to the venue for more information.",
     "type": "Music"
   },
   {

@@ -475,7 +475,7 @@
   "telluride|2026-12-02|Telluride Housing Authority Subcommittee - Dec 02 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8166",
     "sv": 4,
-    "ph": "8157a58c768c338c"
+    "ph": "318a8fe2a3798f29"
   },
   "county|2026-11-25|Board of County Commissioners Work Session": {
     "sv": 4,
@@ -671,5 +671,23 @@
   "county|2026-12-16|Board of County Commissioners Meeting": {
     "sv": 4,
     "ph": "a12dfd2ce826475e"
+  },
+  "telluride|2026-12-11|Telluride Housing Authority Subcommittee Special Meeting - Dec 11 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8365",
+    "sv": 4,
+    "ph": "7936b664b0cd4d30"
+  },
+  "telluride|2026-12-08|Telluride Housing Authority Subcommittee Special Meeting - Dec 08 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8364",
+    "sv": 4,
+    "ph": "1eed6ec987641b2d"
+  },
+  "telluride|2026-11-18|Telluride Housing Authority Subcommittee Special Meeting - Nov 18 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8363",
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/vCd8aZy5TLOCOVod7PLOyQ",
+    "meetingId": "896 9784 6227",
+    "passcode": "734380.",
+    "phone": "719) 359-4580",
+    "sv": 4
   }
 }

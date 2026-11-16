@@ -309,7 +309,7 @@ const SMART_CACHED_DATA = [
     title: "SMART Gondola Advisory Committee",
     location: "Virtual (Zoom link in the agenda)",
     agendaUrl: null,
-    packetUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/Agenda-2026.11.16.pdf",
+    packetUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.11.16-Gsub-Meeting-Packet.pdf",
     note: "Gondola Advisory Committee (Gsub) — advises SMART on the gondola replacement project. Agenda, packet and Zoom link post at least 24 hours before."
   },
   {
@@ -459,8 +459,8 @@ const MV_CACHED_DATA = [
     time: "3:00 PM - 8:00 PM",
     title: "Town Council Meeting",
     board: "tc",
-    agendaUrl: "https://townofmountainvillage.com/site/assets/files/50266/november_19-_2026_town_council_meeting_agenda-1.pdf",
-    packetUrl: "https://townofmountainvillage.com/site/assets/files/50268/november_19-_2026_town_council_meeting_packet-1.pdf",
+    agendaUrl: "https://townofmountainvillage.com/site/assets/files/50266/november_19-_2026_town_council_meeting_agenda.pdf",
+    packetUrl: "https://townofmountainvillage.com/site/assets/files/50272/november_19-_2026_town_council_meeting_packet.pdf",
     special: false,
     location: "Town Hall, 455 Mountain Village Blvd, Suite A"
   },
@@ -781,6 +781,15 @@ const NORWOOD_CACHED_DATA = [
     board: "pz"
   },
   {
+    date: "November 18, 2026",
+    time: null,
+    title: "Board of Trustees Meeting",
+    agendaUrl: "https://www.norwoodtown.com/files/8ec8087d1/11.18.2026+Board+of+Trustee+Agenda+ADA.pdf",
+    packetUrl: "https://www.norwoodtown.com/files/e1c9fa885/11.18.2026+BOT+Supporting+Documents.pdf",
+    special: false,
+    board: "bot"
+  },
+  {
     date: "December 8, 2026",
     time: null,
     title: "Norwood Water Commission Meeting",
@@ -906,7 +915,7 @@ const OURAY_COUNTY_CACHED_DATA = [
     location: "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
     civicClerkId: 1082,
     note: null,
-    packetUrl: "https://ouraycoco.portal.civicclerk.com/event/1082/files/agenda/7596",
+    packetUrl: "https://ouraycoco.portal.civicclerk.com/event/1082/files/agenda/7599",
     board: "bocc",
     agendaUrl: "https://ouraycoco.portal.civicclerk.com/event/1082/files/agenda/7595"
   },
@@ -963,6 +972,141 @@ const OURAY_COUNTY_CACHED_DATA = [
     title: "Board of County Commissioners Work Session",
     location: "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
     civicClerkId: 1131,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "January 12, 2027",
+    time: "9:00 AM",
+    title: "Board of County Commissioners",
+    location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 2152,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "January 12, 2027",
+    time: "1:30 PM",
+    title: "Board of County Commissioners Work Session",
+    location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 2176,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "January 13, 2027",
+    time: "9:00 AM",
+    title: "Board of County Commissioners Work Session",
+    location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 2200,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "January 26, 2027",
+    time: "9:00 AM",
+    title: "Board of County Commissioners",
+    location: "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
+    civicClerkId: 2164,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "January 26, 2027",
+    time: "1:30 PM",
+    title: "Board of County Commissioners Work Session - 4H Event Center",
+    location: "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
+    civicClerkId: 2188,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "January 27, 2027",
+    time: "9:00 AM",
+    title: "Board of County Commissioners Work Session - 4H Event Center",
+    location: "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
+    civicClerkId: 2212,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "February 9, 2027",
+    time: "9:00 AM",
+    title: "Board of County Commissioners",
+    location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 2153,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "February 9, 2027",
+    time: "1:30 PM",
+    title: "Board of County Commissioners Work Session",
+    location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 2177,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "February 10, 2027",
+    time: "9:00 AM",
+    title: "Board of County Commissioners Work Session",
+    location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 2201,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "February 23, 2027",
+    time: "9:00 AM",
+    title: "Board of County Commissioners",
+    location: "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
+    civicClerkId: 2165,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "February 23, 2027",
+    time: "1:30 PM",
+    title: "Board of County Commissioners Work Session - 4H Event Center",
+    location: "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
+    civicClerkId: 2189,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "February 24, 2027",
+    time: "9:00 AM",
+    title: "Board of County Commissioners Work Session - 4H Event Center",
+    location: "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
+    civicClerkId: 2213,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "March 9, 2027",
+    time: "9:00 AM",
+    title: "Board of County Commissioners",
+    location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 2154,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "March 9, 2027",
+    time: "1:30 PM",
+    title: "Board of County Commissioners Work Session",
+    location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 2178,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "March 10, 2027",
+    time: "9:00 AM",
+    title: "Board of County Commissioners Work Session",
+    location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 2202,
     note: null,
     board: "bocc"
   }
@@ -1107,7 +1251,7 @@ const AIRPORT_CACHED_DATA = [
     time: "12:00 PM",
     title: "TRAA Board of Commissioners Meeting",
     agendaUrl: null,
-    packetUrl: null,
+    packetUrl: "https://tellurideairport.com/wp-content/uploads/2026/11/TRAA-Board-Packet-111926.pdf",
     special: false,
     location: "Terminal Observation Lounge, Telluride Regional Airport"
   },
