@@ -498,7 +498,19 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8047","sv":4,"ph":"55630399c20b067e"},
 
   "rico|2026-12-16|Rico Board of Trustees Regular Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"}
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "telluride|2026-12-16|Historic & Architectural Review Commission Chair - Dec 16 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8029","sv":4,"ph":"c6ce421268a71d96"},
+
+  "telluride|2026-12-16|Historic & Architectural Review Commission - Dec 16 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8028","sv":4,"ph":"b3cd4bc3eb8e2235"},
+
+  "telluride|2026-12-16|Parks & Recreation Commission - Dec 16 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8085","sv":4,"ph":"0875ac690f9acac0"},
+
+  "county|2026-12-16|Board of County Commissioners Meeting":
+    {"sv":4,"ph":"a12dfd2ce826475e"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -512,6 +524,14 @@ const DEEP_DIVE_UPDATES = [];
 //   sourceUrl, topics: [] }. Rendered by hub-bub.html from the JSON mirror
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
+  {
+    date: "2026-11-16",
+    title: "The county wants a housing action plan — but what does that mean?",
+    body: "The Board of County Commissioners is set to consider creating a housing action plan. That sounds straightforward until you ask what it actually commits anyone to. Supporters would say the region's housing crunch demands a real roadmap — something with teeth. Skeptics might wonder whether another plan just means more process, more delay, and outcomes that look good on paper but don't move the needle. Nothing's been adopted yet; this is still at the consideration stage.\n\nSo: is a housing action plan a meaningful step forward, or one more document that gathers dust?",
+    choices: ["Real step forward", "More process, less action", "Depends what's in it"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
   {
     date: "2026-11-15",
     title: "Who gets to say yes — and who just gets to watch?",
@@ -743,14 +763,6 @@ const DAILY_QUESTIONS = [
     choices: ["It matters a lot", "It's a state issue, not ours", "Depends on the details", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-10-17",
-    title: "Wildfire code is now law — what comes next?",
-    body: "Town Council adopted the Colorado Wildfire Resiliency Code amendment to the Land Use Code back in August 2026. Now Planning & Zoning is expected to work through what implementation actually looks like. That's where it gets interesting. Some folks figure tighter building standards protect the whole community — a fire doesn't ask whose roof it jumps to next. Others worry the new rules add cost and friction to construction that's already brutal up here. The code is adopted, but the details aren't settled yet.\n\nSo: do you think the wildfire code amendment will make Telluride meaningfully safer, or mostly make building harder?",
-    choices: ["It'll make us safer", "Adds burden, little gain", "Too soon to tell"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -854,14 +866,26 @@ const MEETING_PREVIEWS = {
   "telluride|2026-12-15|Town Council - Dec 15 2026":
     "Council is expected to discuss a request for proposals for consulting services related to a comprehensive review of the Town of Telluride's employee rental housing policies.",
 
+  "telluride|2026-12-16|Historic & Architectural Review Commission Chair - Dec 16 2026":
+    "No agenda details are available for the December 16, 2026 Historic & Architectural Review Commission meeting. A related legal notice indicates the Town of Telluride is seeking consulting services for a comprehensive review of its Employee Rental Housing Policies, though a direct connection to this meeting's agenda has not been confirmed.",
+
+  "telluride|2026-12-16|Historic & Architectural Review Commission - Dec 16 2026":
+    "The Historic and Architectural Review Commission is expected to review applications for Certificates of Appropriateness related to proposed construction, renovation, demolition, or alterations to structures within Telluride. The commission may also address matters concerning historic designation, preservation standards, and inventories of architecturally or historically significant properties.",
+
+  "telluride|2026-12-16|Parks & Recreation Commission - Dec 16 2026":
+    "The Telluride Parks & Recreation Commission is expected to meet on December 16, 2026. No specific agenda items have been published. Separately, the Town is seeking consulting services for a comprehensive review of its Employee Rental Housing Policies, though this matter falls outside the Commission's typical jurisdiction.",
+
   "county|2026-11-16|Open Space Commission Meeting":
-    "The Open Space Commission is expected to address matters related to land use and open space management in San Miguel County, potentially including updates relevant to active RFPs such as the Housing Action Plan and the Multi-Jurisdictional All-Hazard Mitigation Plan Update, which may intersect with open space planning priorities.",
+    "The Open Space Commission is expected to address matters related to land and property issues in San Miguel County, potentially including updates on local housing, hazard mitigation planning, and open space management. Related public notices suggest broader county activity involving foreclosures, infrastructure, and procurement.",
 
   "county|2026-11-16|Open Space Commission Meeting 11/23":
-    "The Open Space Commission will consider a membership appointment, review updates on trail projects including the Down Valley and East End Connector Trails, and hear updates on parks and conservation easements, including Beaver Mesa Ranch and Indian Ridge Farm. Commissioners will also hold a meet and greet under new business.",
+    "The Open Space Commission is expected to consider appointing Daniel Alvarado to a regular commission seat, receive updates on several trail projects, parks improvements, and conservation easements, and hold a commission meet and greet. Minutes from the October work session will also be reviewed.",
+
+  "county|2026-12-16|Board of County Commissioners Meeting":
+    "Board will consider several procurement matters, including requests for proposals on a Housing Action Plan, a trail connector project, and fuel island canopy construction, along with a material hauling quote. Related legal notices include multiple foreclosure sales and a proposed 2027 budget from the Southwestern Water Conservation District.",
 
   "ouraycity|2026-11-16|Ouray City Council Regular Meeting":
-    "Council is expected to adopt the 2027 city budget, set property tax levies, and approve appropriations for the coming year. Additional action items include amendments to the Ouray Ice Park management agreement and a professional services contract for a hot springs pool house condition assessment."
+    "Council is expected to adopt the 2027 city budget, set property tax levies, and approve appropriations. Other items include an amended management agreement with Ouray Ice Park, a facility assessment for the Hot Springs Pool House, and consent items covering committee appointments and an erosion control project agreement."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1436,7 +1460,19 @@ const MANUAL_SUMMARIES = {
     "The December 15, 2026 Town Council agenda hasn't been posted yet.",
 
   "rico|2026-12-16|Rico Board of Trustees Regular Meeting":
-    "The December 16, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet."
+    "The December 16, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-12-16|Historic & Architectural Review Commission Chair - Dec 16 2026":
+    "The December 16, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
+
+  "telluride|2026-12-16|Historic & Architectural Review Commission - Dec 16 2026":
+    "The December 16, 2026 HARC agenda hasn't been posted yet.",
+
+  "telluride|2026-12-16|Parks & Recreation Commission - Dec 16 2026":
+    "The December 16, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+
+  "county|2026-12-16|Board of County Commissioners Meeting":
+    "The December 16 Board of County Commissioners agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2865,18 +2901,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Telski appeals dismissed lawsuit against Fee, Prohaska, Wisor",
-    source: "Telluride Times",
-    date: "November 13, 2026",
-    firstSeen: "2026-11-13",
-    newsTopic: "recreation",
-    copy: "Telski's lawsuit against three former local officials — dismissed in August — is now heading to the Colorado Court of Appeals after Telski filed an appeal in October. The defendants have also filed for attorney fees, which Telski is contesting, questioning rates and work it says falls outside direct case defense. The legal back-and-forth over the ski patrol strike-era purchase offer continues to grind on.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_058213a9-59a7-4b22-aeeb-f365acc63082.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/8c/88cb9c2a-1684-47be-a7ba-8d4d3602b630/6af3bdd1af9f6.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Telluride Rewind",
     source: "Telluride Times",
     date: "November 13, 2026",
@@ -2886,6 +2910,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_0bae94c9-6ca9-47ff-b2ce-139fb33cd61d.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/4e/b4e52673-3793-4a8b-a123-b1289f309b78/6af1d46b641c9.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Telski appeals dismissed lawsuit against Fee, Prohaska, Wisor",
+    source: "Telluride Times",
+    date: "November 13, 2026",
+    firstSeen: "2026-11-13",
+    newsTopic: "recreation",
+    copy: "Telski's lawsuit against three former local officials — dismissed in August — is now heading to the Colorado Court of Appeals after Telski filed an appeal in October. The defendants have also filed for attorney fees, which Telski is contesting, questioning rates and work it says falls outside direct case defense. The legal back-and-forth over the ski patrol strike-era purchase offer continues to grind on.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_058213a9-59a7-4b22-aeeb-f365acc63082.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/8c/88cb9c2a-1684-47be-a7ba-8d4d3602b630/6af3bdd1af9f6.image.jpg",
     imgHiRes: true
   },
   {
@@ -4277,17 +4313,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "2026 Western Colorado Farm & Ranch Innovation Expo — Free Admission",
-    link: "https://koto.org/event/2026-western-colorado-farm-ranch-innovation-expo-free-admission/2026-11-14/",
-    description: "Discover agricultural innovation, explore practical ideas, and connect with your Western Slope neighbors at the free 2026 Western Colorado Farm & Ranch Innovation Expo, November 13–14 at the Montrose County Event Center. Hosted by the Western Colorado Soil Health Committee, this welcoming gathering brings together farmers, ranchers, gardeners, water leaders, educators, students, businesses, and community members for demonstrations, exhibits, presentations, and conversations. FRIDAY, NOVEMBER 13 Expo hours: noon–7 p.m. Explore agricultural equipment, technology, and exhibits, with water-related demonstrations beginning at 2 p.m. following the West Slope Water Summit. Meet vendors and producers, ask questions, and discover practical irrigation and water-management approaches. Also on Friday: West Slope Water Summit, 7:30 a.m.–2 p.m. This free gathering explores Western Colorado’s water outlook, watershed health, and agriculture’s connection to water, and includes an FFA student research presentation. Separate advance registration is required, with complimentary breakfast and lunch for registered participants. …",
-    pubDate: "2026-11-14T08:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Montrose County Event Center",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/10/2026-Expo-Flyer.jpg"
-  },
-  {
     title: "Telluride R-1 School District Board Work Session",
     link: "https://koto.org/event/telluride-r-1-school-district-board-work-session-2/",
     description: "Telluride R-1 School District Board of Education holds a work session on Monday, November 16th, at 3:30 p.m. in the Bridal Veil conference room at TMHS and via Zoom. The work session agenda and Zoom link can be found at tellurideschool.org.",
@@ -4792,53 +4817,86 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2026/02/sewing.jpg"
+  },
+  {
+    title: "Matchstick Productions ~ The Way Out ~ Presented by The Sherbino",
+    link: "https://koto.org/event/matchstick-productions-the-way-out-presented-by-the-sherbino/",
+    description: "Wednesday, December 9th Doors: 6:00pm || Film: 6:30pm || $10 students and seniors (18-/ 65+) / $15 General Admission || Matchstick Productions returns with their 34th annual ski film, The Way Out, an action-packed tribute to the culture and lifestyle of skiing. What makes skiing special goes far beyond the fleeting thrill of dropping into a line. It’s the deep, elemental relationship with nature that sets mountain culture apart from any traditional activity. For skiers, this isn’t just a sport; we live to ski, and ski to live. The Way Out drops you right into the action across the globe, from heavy Alaskan spine lines to local backyard laps in Whistler. The Way Out represents a path toward total freedom. …",
+    pubDate: "2026-12-09T18:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "The Sherbino, Ridgway",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/11/Way-out-Matchstick-Dec-9.png"
+  },
+  {
+    title: "Telluride Mountain School Open House",
+    link: "https://koto.org/event/telluride-mountain-school-open-house-4/",
+    description: "Telluride Mountain School is hosting an open house where prospective families and community members can step directly into the learning environment rather than sit through a formal presentation. Visitors are welcome to explore classrooms, meet teachers and students, and experience firsthand the school's approach to curiosity, connection, and real-world learning.",
+    pubDate: "2026-12-10T09:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Mountain School",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/09/Screenshot-2026-09-18-at-2.05.52-PM.png"
+  },
+  {
+    title: "The Creative Exchange at Telluride Arts HQ",
+    link: "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-12-10/",
+    description: "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories that fuel their work. Think of it as an open source model for creativity—where we learn from each other, swap ideas, and help strengthen one another’s practice. Each session is hosted by local artists and creative leaders who bring their own perspectives, techniques, and creative journeys into the room. Topics may span everything from the business of art and professional development, to creative process, storytelling, collaboration, and the philosophical underpinnings of making art. Whether you’re a full-time working artist, an educator, a student, a maker, or simply someone curious about creative expression, the Creative Exchange is open to you. …",
+    pubDate: "2026-12-10T17:30:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Arts HQ, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png"
   }
 ];
 
 const WILKINSON_EVENTS = [
   {
-    title: "Semana De Bienestar",
-    link: "https://telluridelibrary.libcal.com/event/17895502?hs=a",
-    description: "Semana de Bienestar is a free, bilingual wellness week hosted at Wilkinson Public Library, featuring activities for children, adults, and families in both English and Spanish. All programming is alcohol-free and open to the community.",
-    pubDate: "2026-11-15T17:00:00.000Z",
+    title: "Musik 4 Kinders",
+    link: "https://telluridelibrary.libcal.com/event/17874564?hs=a",
+    description: "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. &iexcl;M&uacute;sica, Movimiento, y Aprendizaje Alegre para ni&ntilde;os! Este programa ser&aacute; en la sala de programas.",
+    pubDate: "2026-11-16T17:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_26_15_59_05.jpg"
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png"
   },
   {
-    title: "Gentle Yoga with Kristen Milord",
-    link: "https://telluridelibrary.libcal.com/event/16536471?hs=a",
-    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
-    pubDate: "2026-11-15T18:00:00.000Z",
+    title: "Savvy Seniors- Neuroplasticity Day",
+    link: "https://telluridelibrary.libcal.com/event/17789249?hs=a",
+    description: "1:30 PM – 2:30 PM · Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone. Neuroplasticity refers to the brain's ability to restructure or rewire itself when adapting to change. It can continue to develop throughout life in response to stimulation, environmental changes, and individual experiences. …",
+    pubDate: "2026-11-16T20:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Meeting Room #6 - large",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_21_12_05_11.png"
+  },
+  {
+    title: "Teen Arts and Crafts",
+    link: "https://telluridelibrary.libcal.com/event/17900462?hs=a",
+    description: "4:00 PM – 5:00 PM · Join us for arts and crafts on Monday afternoons in November!",
+    pubDate: "2026-11-16T23:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Teen Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_27_11_18_01.png"
+  },
+  {
+    title: "Puzzle Competition",
+    link: "https://telluridelibrary.libcal.com/event/17278980?hs=a",
+    description: "5:00 PM – 7:00 PM · Space is limited to 10 teams of two, so make sure to sign up today! NEW, PLEASE NOTE: Only one team member needs to sign up for their team of two. Dive into the ultimate puzzle challenge at Wilkinson Public Library&#39;s Puzzle Competition! Join us on Monday, November 16th, from 5 to 7pm for an evening of brain-teasing fun. Gather your partner and prepare to piece together a 500-piece puzzle against the clock. It&#39;s a race to the finish as teams compete head-to-head to claim the title of puzzle champions! All participants will work on the same puzzle, ensuring a level playing field for everyone. This event isn&#39;t just about speed—it&#39;s about camaraderie and community. Puzzle enthusiasts of all ages are invited to showcase their skills and enjoy an evening of friendly competition. …",
+    pubDate: "2026-11-17T00:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
-  },
-  {
-    title: "Drop-In Tech Time with Oliver",
-    link: "https://telluridelibrary.libcal.com/event/15970400?hs=a",
-    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
-    pubDate: "2026-11-15T20:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "2nd Floor Desk",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://telluridelibrary.libcal.com/event/17347288?hs=a",
-    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
-    pubDate: "2026-11-15T21:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_16_12_05_53.jpg"
   }
 ];
 
@@ -5016,16 +5074,6 @@ const NUCLA_NATURITA_EVENTS = [];
 const CLUB_RED_SHOWS = [];
 const FRESH_FOOD_HUB_EVENTS = [];
 const SHERBINO_EVENTS = [
-  {
-    title: "Ridgway Independent Film Fest ~ We Invited the Monsters In",
-    href: "https://sherbino.org/event/ridgway-independent-film-fest-we-invited-the-monsters-in/",
-    date: "2026-11-15 10:00:00",
-    endDate: "2026-11-15 11:30:00",
-    location: "The Sherbino, Ridgway",
-    copy: "The Ridgway Independent Film Fest presents *We Invited the Monsters In*, a film screening at The Sherbino exploring the blurry line between monsters and the familiar. The festival offers single-block general admission tickets as well as all-access passes and volunteer opportunities for those wanting a deeper involvement in the event.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/Block4.weinvitedthemonstersin-1.png",
-    description: "The Ridgway Independent Film Fest presents *We Invited the Monsters In*, a film screening at The Sherbino exploring the blurry line between monsters and the familiar. The festival offers single-block general admission tickets as well as all-access passes and volunteer opportunities for those wanting a deeper involvement in the event."
-  },
   {
     title: "Ridgway Independent Film Fest ~ We Wandered Beyond the Firelight",
     href: "https://sherbino.org/event/ridgway-independent-film-fest-we-wandered-beyond-the-firelight/",
@@ -5497,92 +5545,14 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Gaper Contest 2026 - Voyager FUNdraiser",
     link: "https://events.ourayridgwayevents.com/event/gaper-contest-2026",
-    description: "A community photo contest and fundraiser for Voyager inviting locals of all ages from the northern San Juan region to submit their best \"gaper\" photos for a chance to be named Gaper of the Year. Voting takes place during Gaper Week, November 21–29, 2026, coinciding with opening week at Telluride Ski Resort, with the winner determined by votes and additional criteria.",
-    pubDate: "2026-11-15T15:00:00.000Z",
+    description: "A community photo contest inviting locals of all ages from the northern San Juan region to submit their best gaper photos for a chance to be named Gaper of the Year, serving as a fundraiser for Voyager. Voting takes place during Gaper Week, November 21–29, 2026, coinciding with opening week at Telluride Ski Resort.",
+    pubDate: "2026-11-16T15:00:00.000Z",
     endDate: "2026-11-29",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/54366527548837/huge/4c3995fa47f3b861d61e318e7dafd3cbfa9b02e9.jpg"
-  },
-  {
-    title: "Meet the Herd",
-    link: "https://events.ourayridgwayevents.com/event/meet-the-herd",
-    description: "A community program at Hartwell Park inviting teens to interact with horses and donkeys from Metaphorse Growth and Healing Center in Montrose. Participants can walk, brush, and spend time getting acquainted with the animals in a relaxed, hands-on setting.",
-    pubDate: "2026-11-15T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Hartwell Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/54169731436948/huge/dbbd3f3898d5c967439d53e9f2750ee716cbef70.jpg"
-  },
-  {
-    title: "Ridgway Independent Film Fest 2026",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-2026",
-    description: "12 Years of Fierce, Fearless, Independent Film The Ridgway Independent Film Festival (RIFF) returns in 2026 with its 12th year of celebrating bold storytelling, emerging filmmakers, and the power of community through the lens of independent film. The RIFF committee has selected films with a lineup of 6 blocks of films spanning 3 days. View Digital Program, tickets and more. Individual Block Tickets: $15 All Access Festival Pass: $75 Rooted in a volunteer-driven, grassroots effort born shortly after Ridgway became one of Colorado’s first Certified Creative Districts, RIFF continues to evolve while honoring its origins. This year, RIFF returns to its longtime home in November, taking place November 13–15, 2026, with a refreshed structure designed to create deeper connection and conversation. …",
-    pubDate: "2026-11-15T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Sherbino",
-    imageUrl: "https://localist-images.azureedge.net/photos/54284797074125/huge/f69e5cc695d03e358a569b88193151ecb838d189.jpg"
-  },
-  {
-    title: "Festival of Miles at Cimarron Athletic Field",
-    link: "https://events.ourayridgwayevents.com/event/festival-of-miles-at-cimarron-athletic-field",
-    description: "A community track event at Ridgway Secondary School featuring a series of back-to-back mile races for participants of all ages, from elementary school children through open adult divisions. Races run on a rolling schedule with check-in beginning at 9:30 AM, with high school, middle school, elementary, and open men's and women's heats each taking place throughout the morning.",
-    pubDate: "2026-11-15T17:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway Secondary School",
-    imageUrl: "https://localist-images.azureedge.net/photos/54471314763623/huge/a7d8b5f4cfeafb3b2f349192e5df13c2d6fcb981.jpg"
-  },
-  {
-    title: "Ridgway Independent Film Fest ~ We Invited the Monsters In",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-we-invited-the-monsters-in",
-    description: "Doors open at 9:45 AM; films begin at 10:00 AM. A short-film block mixing gothic, gruesome, funny and occasionally sweet stories, pairing tenderness with terror and vengeance with very dark humor.",
-    pubDate: "2026-11-15T17:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Sherbino",
-    imageUrl: "https://localist-images.azureedge.net/photos/54066525898104/huge/ab6fc9df31e535f3ce3ce4e1afaa3862ce728901.jpg"
-  },
-  {
-    title: "Ridgway Independent Film Fest ~ We Wandered Beyond the Firelight",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-independent-film-fest-we-wandered-beyond-the-firelight",
-    description: "Doors open at 1:45 PM; films begin at 2:00 PM. A short-film block exploring truth and memory, expectation and identity, and the lives people are given versus the lives they make.",
-    pubDate: "2026-11-15T21:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Sherbino",
-    imageUrl: "https://localist-images.azureedge.net/photos/54066526099851/huge/343172cafea91a01a42c75bb4bf61e850480fd58.jpg"
-  },
-  {
-    title: "Healing Hearts Circle: Women Transcending Cancer/Chronic Illness",
-    link: "https://events.ourayridgwayevents.com/event/healing-hearts-circle-women-transcending-cancerchronic-illness",
-    description: "A recurring support circle at Bee True You Wellness & Creative Studio in the Ouray-Ridgway area, offering women navigating cancer or chronic illness a safe, welcoming space to connect. The gathering honors each woman's unique journey and addresses the whole person — body, mind, and spirit.",
-    pubDate: "2026-11-16T00:00:00.000Z",
-    endDate: "2026-12-07",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Bee True You Wellness & Creative Studio",
-    imageUrl: "https://localist-images.azureedge.net/photos/54241462626167/huge/7c0778035e072ff933b617f21809b1459dc84aca.jpg"
-  },
-  {
-    title: "Teen Takeover at Ouray Hot Springs Pool",
-    link: "https://events.ourayridgwayevents.com/event/teen-takeover",
-    description: "Teen Takeover at Ouray Hot Springs Pool is a free evening event for middle and high school students featuring swimming, games, basketball, races on the Wibit, music, and more. Middle schoolers and high schoolers each have their own dedicated time slot, with free admission for Ouray Hot Springs members.",
-    pubDate: "2026-11-16T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Hot Springs",
-    imageUrl: "https://localist-images.azureedge.net/photos/53924398882536/huge/a5451161d264c1870d73a22c5d5625c3a29a8c63.jpg"
   },
   {
     title: "Opening of SBA Disaster Loan Outreach Center in Ridgway",
@@ -5871,6 +5841,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Greenwood's",
     imageUrl: "https://localist-images.azureedge.net/photos/54506676236668/huge/8d0f2807c6d13cff029995c2dc89a1a23b1cf2d8.jpg"
+  },
+  {
+    title: "Healing Hearts Circle: Women Transcending Cancer/Chronic Illness",
+    link: "https://events.ourayridgwayevents.com/event/healing-hearts-circle-women-transcending-cancerchronic-illness",
+    description: "A recurring support circle at Bee True You Wellness & Creative Studio for women navigating cancer or chronic illness, offering a safe and welcoming space that honors the whole person — body, mind, and spirit. The group provides connection and mutual support for women at any stage of their journey, meeting most Sundays.",
+    pubDate: "2026-11-23T00:00:00.000Z",
+    endDate: "2026-12-07",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Bee True You Wellness & Creative Studio",
+    imageUrl: "https://localist-images.azureedge.net/photos/54241462626167/huge/7c0778035e072ff933b617f21809b1459dc84aca.jpg"
   },
   {
     title: "Thanksgiving Break - Ridgway Schools",
@@ -7747,6 +7729,9 @@ const HOUSING_LISTINGS = [
 ];
 
 const RIDGWAY_AGENDA_MAP = {
+  "November 19, 2026":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---November-19%2C-2026.pdf",
+
   "October 31, 2026":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Budget-Retreat-Packet---October-31%2C-2026_0.pdf",
 
