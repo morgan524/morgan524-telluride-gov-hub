@@ -495,7 +495,10 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-12-15|Town Council - Dec 15 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8047","sv":4,"ph":"55630399c20b067e"}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8047","sv":4,"ph":"55630399c20b067e"},
+
+  "rico|2026-12-16|Rico Board of Trustees Regular Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -806,14 +809,8 @@ const MEETING_PREVIEWS = {
   "telluride|2026-12-03|Town Council Retreat - Dec 03 2026":
     "Council is expected to discuss employee rental housing policies as part of a retreat session. A related request for proposals has been issued seeking consulting services to conduct a comprehensive review of the town's existing employee rental housing policies.",
 
-  "county|2026-11-16|Open Space Commission Meeting":
-    "The Open Space Commission is expected to discuss the Lawson Hill Connector Trail Project, for which San Miguel County is seeking qualified contractors. The commission may also address broader county matters, including a proposed housing action plan and a multi-jurisdictional all-hazard mitigation plan update.",
-
   "telluride|2026-12-04|Special Town Council - Dec 04 2026":
     "Council is expected to discuss consulting services for a comprehensive review of Telluride's employee rental housing policies, including consideration of a related request for proposals seeking qualified respondents to conduct the review.",
-
-  "county|2026-11-16|Open Space Commission Meeting 11/23":
-    "No agenda or meeting notice for the San Miguel County Open Space Commission meeting on November 23, 2026 appears in the available legal notices. A preview cannot be accurately produced from the provided information.",
 
   "telluride|2026-12-07|Open Space Commission - Dec 07 2026":
     "The Open Space Commission is expected to meet on December 7, 2026, to address priorities and management of Telluride's open space properties. Discussion may also touch on employee rental housing policy matters, as the Town is simultaneously seeking consulting services for a comprehensive review of those policies.",
@@ -830,9 +827,6 @@ const MEETING_PREVIEWS = {
   "county|2026-12-03|One Time Event":
     "San Miguel County is expected to address several procurement and financial matters, including requests for proposals for a multi-jurisdictional hazard mitigation plan update and a housing action plan, along with multiple foreclosure sales, a proposed 2027 water district budget, and bids for airport and conference center services.",
 
-  "norwood|2026-11-16|Planning and Zoning Commission Meeting":
-    "The commission is expected to discuss updates to the Land Use Code and Master Plan, as well as consider matters related to the Board of Adjustments. Members will also review minutes from the October 19 meeting.",
-
   "mv|2026-11-19|Town Council Meeting":
     "Council is expected to introduce new staff members, approve meeting minutes and a winter parking agreement with Telluride Ski & Golf, consider supporting the Colorado Association of Ski Towns' 2027 legislative agenda, and hold a public hearing on the proposed 2027 Mountain Village Metro District budget.",
 
@@ -845,14 +839,8 @@ const MEETING_PREVIEWS = {
   "telluride|2026-12-03|Planning & Zoning Commission - Special Meeting - Dec 03 2026":
     "The Planning & Zoning Commission is expected to discuss a comprehensive review of Telluride's employee rental housing policies, as the town seeks consulting services to evaluate existing regulations. The special meeting may address the scope and direction of this policy review effort.",
 
-  "ouraycity|2026-11-16|Ouray City Council Regular Meeting":
-    "Council is expected to adopt the 2027 city budget, set property tax levies, and approve appropriations for the coming year. Additional action items include amendments to the Ouray Ice Park management agreement and a professional services contract for a hot springs pool house condition assessment.",
-
   "fire|2026-11-17|Board of Directors Meeting":
     "Board will consider a presentation from Municipal Capital Markets Group, review FCI pre-build estimates, and hold a second reading of the budget. Updates are also expected on Station 3, inclusion efforts, and PANO usage, along with routine departmental reports and bill approvals.",
-
-  "school|2026-11-16|Telluride Board of Education Work Session":
-    "Board will consider follow-up items from its August retreat, review strategic financial planning, and discuss homeschool student enrollment in specials, electives, and short-term programs. Members will also address KOTO radio access on November 19.",
 
   "school|2026-11-17|Telluride Board of Education Monthly Meeting":
     "Board will consider personnel matters, review October financial reports, and hear updates from Telluride Mountain High School and district administrators. Policy Governance Monitoring Reports GP-13 and GP-14 will be presented. The board will also approve minutes from three previous meetings and may take action on contract awards.",
@@ -864,7 +852,16 @@ const MEETING_PREVIEWS = {
     "The Open Space Commission is expected to discuss the proposed Lawson Hill Connector Trail Project, for which the county is seeking qualified respondents. Additional county matters, including material hauling services and housing action planning, may provide context for open space and land use considerations.",
 
   "telluride|2026-12-15|Town Council - Dec 15 2026":
-    "Council is expected to discuss a request for proposals for consulting services related to a comprehensive review of the Town of Telluride's employee rental housing policies."
+    "Council is expected to discuss a request for proposals for consulting services related to a comprehensive review of the Town of Telluride's employee rental housing policies.",
+
+  "county|2026-11-16|Open Space Commission Meeting":
+    "The Open Space Commission is expected to address matters related to land use and open space management in San Miguel County, potentially including updates relevant to active RFPs such as the Housing Action Plan and the Multi-Jurisdictional All-Hazard Mitigation Plan Update, which may intersect with open space planning priorities.",
+
+  "county|2026-11-16|Open Space Commission Meeting 11/23":
+    "The Open Space Commission will consider a membership appointment, review updates on trail projects including the Down Valley and East End Connector Trails, and hear updates on parks and conservation easements, including Beaver Mesa Ranch and Indian Ridge Farm. Commissioners will also hold a meet and greet under new business.",
+
+  "ouraycity|2026-11-16|Ouray City Council Regular Meeting":
+    "Council is expected to adopt the 2027 city budget, set property tax levies, and approve appropriations for the coming year. Additional action items include amendments to the Ouray Ice Park management agreement and a professional services contract for a hot springs pool house condition assessment."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1083,8 +1080,8 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/facilities-master-plan/widgets/99345/key_dates#43074"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-11-15';
-const LEGAL_NOTICES_CACHE_DATE = '2026-11-15';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-11-16';
+const LEGAL_NOTICES_CACHE_DATE = '2026-11-16';
 
 const MANUAL_SUMMARIES = {
   "norwood|2026-10-19|Planning and Zoning Commission Meeting":
@@ -1436,7 +1433,10 @@ const MANUAL_SUMMARIES = {
     "The December 15 Ophir General Assembly Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-12-15|Town Council - Dec 15 2026":
-    "The December 15, 2026 Town Council agenda hasn't been posted yet."
+    "The December 15, 2026 Town Council agenda hasn't been posted yet.",
+
+  "rico|2026-12-16|Rico Board of Trustees Regular Meeting":
+    "The December 16, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2793,6 +2793,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "New turns and U-turns on Telluride Hospital District's road forward",
+    source: "Telluride Times",
+    date: "November 15, 2026",
+    firstSeen: "2026-11-16",
+    newsTopic: "health",
+    copy: "The Telluride Hospital District board signed a letter of intent with CommonSpirit Health (formerly Catholic Health Initiatives Colorado) and hired Jensen Partners for due diligence support. The LOI includes potentially transferring substantially all medical center assets to CommonSpirit — something board chair Tom Crabtree called \"TBD.\" Key sticking points include preserving staff, tax dollars, and reproductive health services the community currently relies on.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_06d37a7b-663f-4a7a-abfe-de5a6059fc37.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/05/5058fb36-47a4-4f6d-ad9a-03ea784e2fbc/6af6b1981a817.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Mountain League champs",
     source: "Telluride Times",
     date: "November 12, 2026",
@@ -3439,28 +3451,22 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Spectacular spooky season",
-    source: "Telluride Times",
-    date: "November 2, 2026",
-    firstSeen: "2026-11-03",
-    newsTopic: "community",
-    copy: "Telluride marked Halloween with its annual Witches' Ride on Oct. 29 — costumed cyclists rolling through town — followed by the Halloween Parade down Colorado Avenue on Oct. 30. Both events drew the usual mix of kids and adults.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_9109cde4-18c2-41a5-a91c-00f6a23e75b0.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/86/5868b165-2b97-409f-93d3-a94e11ae8e32/6ae8f84bb0344.image.jpg",
-    imgHiRes: true
+    title: "Local Employers Invited to Apply for Employee Housing Master Leases",
+    source: "Town of Telluride",
+    date: "October 23, 2026",
+    newsTopic: "housing",
+    copy: "(October 22, 2026) – The Telluride Housing Authority (THA) is offering master leases on five apartments at the new Virginia Placer IIA building and two rooms at the Telluride Boarding House to local businesses and organizations.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=408",
+    img: ""
   },
   {
-    title: "BOCC votes on oil and gas rules",
-    source: "Telluride Times",
-    date: "November 2, 2026",
-    firstSeen: "2026-11-02",
-    newsTopic: "land-use",
-    copy: "San Miguel County commissioners approved new Land Use Code amendments covering oil and gas, deep geothermal, and forestry operations. Oil and gas setbacks increase from 1,500 to 2,000 feet; no new local drilling permits have been issued since around 2011. Deep geothermal rules — new to the code — set 1,000-foot residential setbacks.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_6f4d357d-41ac-42fe-9b18-7b0de96938b6.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/7d/97d4f06f-b6a7-4203-bf9d-d78ea5189b84/6ae37c4c9e0d4.image.jpg",
-    imgHiRes: true
+    title: "Deed-Restricted Housing Lottery Applications Now Available for Spruce House H",
+    source: "Town of Telluride",
+    date: "October 22, 2026",
+    newsTopic: "housing",
+    copy: "(October 22, 2026) - The Town of Telluride and the San Miguel Regional Housing Authority (SMRHA) opened applications today for a deed-restricted homeownership lottery for Spruce House H at 226 East Pacific Avenue, Unit H, Telluride, Colorado, 81435.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=407",
+    img: ""
   },
   {
     title: "Join Us! Meet and Greet with Planning Director Finalists",
@@ -3541,7 +3547,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Ridgway Planning Commission Meeting Agenda and Packet - November 18, 2026&nbsp;",
     source: "Town of Ridgway",
-    date: "November 15, 2026",
+    date: "November 16, 2026",
     firstSeen: "2026-11-13",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3574,7 +3580,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "November 15, 2026",
+    date: "November 16, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3596,7 +3602,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Public Hearing for Liquor License on November 19, 2026 at 5:30pm - Chipeta Lodge Resort &amp; Spa, 304 S Lena Street - Notice dated October 13, 2026",
     source: "Town of Ridgway",
-    date: "November 15, 2026",
+    date: "November 16, 2026",
     firstSeen: "2026-10-14",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3607,7 +3613,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "November 15, 2026",
+    date: "November 16, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3618,7 +3624,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway, City of Ouray, and Ouray County Establish New Three-Year Affordable Housing Goals",
     source: "Town of Ridgway",
-    date: "November 15, 2026",
+    date: "November 16, 2026",
     firstSeen: "2026-10-21",
     newsTopic: "housing",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -4282,17 +4288,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/10/2026-Expo-Flyer.jpg"
   },
   {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-11-15/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-11-15T14:30:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
     title: "Telluride R-1 School District Board Work Session",
     link: "https://koto.org/event/telluride-r-1-school-district-board-work-session-2/",
     description: "Telluride R-1 School District Board of Education holds a work session on Monday, November 16th, at 3:30 p.m. in the Bridal Veil conference room at TMHS and via Zoom. The work session agenda and Zoom link can be found at tellurideschool.org.",
@@ -4865,7 +4860,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Shepherd, Australian • Male",
     firstSeen: "2026-10-31",
     revealDate: "2026-11-02",
-    lastSeen: "2026-11-15"
+    lastSeen: "2026-11-16"
   },
   {
     id: "TEL-A-209",
@@ -4879,7 +4874,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Collie, Border / Cattle Dog, Australian (Red Heeler) • Female",
     firstSeen: "2026-10-31",
     revealDate: "2026-11-04",
-    lastSeen: "2026-11-15"
+    lastSeen: "2026-11-16"
   },
   {
     id: "TEL-A-214",
@@ -4893,7 +4888,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Puppy • Collie, Border / American Blue Heeler • Male",
     firstSeen: "2026-11-15",
     revealDate: "2026-11-15",
-    lastSeen: "2026-11-15"
+    lastSeen: "2026-11-16"
   }
 ];
 
@@ -5022,66 +5017,6 @@ const CLUB_RED_SHOWS = [];
 const FRESH_FOOD_HUB_EVENTS = [];
 const SHERBINO_EVENTS = [
   {
-    title: "Monthly Welcome Home Alliance Veteran's Coffee at the Sherbino",
-    href: "https://sherbino.org/event/monthly-welcome-home-alliance-veterans-coffee-at-the-sherbino/2026-11-10/",
-    date: "2026-11-10 10:00:00",
-    endDate: "2026-11-10 12:00:00",
-    location: "Ridgway, CO",
-    copy: "A recurring monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The event offers a relaxed, community-oriented space for veterans to connect with one another.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
-    description: "A recurring monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The event offers a relaxed, community-oriented space for veterans to connect with one another."
-  },
-  {
-    title: "Ridgway Independent Film Fest 2026",
-    href: "https://sherbino.org/event/ridgway-independent-film-festival-2026/",
-    date: "2026-11-13 00:00:00",
-    endDate: "2026-11-15 23:59:59",
-    location: "Ridgway, CO",
-    copy: "The Ridgway Independent Film Festival (RIFF) returns for its 12th year in Ridgway, CO, celebrating bold storytelling and emerging filmmakers through independent cinema. The multi-day festival brings together film enthusiasts and the local community for screenings and events highlighting the power of independent film.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2025/11/RIFF-Banner-new.png",
-    description: "The Ridgway Independent Film Festival (RIFF) returns for its 12th year in Ridgway, CO, celebrating bold storytelling and emerging filmmakers through independent cinema. The multi-day festival brings together film enthusiasts and the local community for screenings and events highlighting the power of independent film."
-  },
-  {
-    title: "Ridgway Independent Film Fest: Begin Where You Are ~ Opening Night Shorts",
-    href: "https://sherbino.org/event/riff-begin-where-you-are-opening-night-shorts/",
-    date: "2026-11-13 17:00:00",
-    endDate: "2026-11-13 18:30:00",
-    location: "The Sherbino, Ridgway",
-    copy: "The Ridgway Independent Film Festival opens at The Sherbino with an evening of short films grouped under the theme \"Begin Where You Are.\" Doors open at 4:30 p.m. with films beginning at 5:00 p.m.; single-block general admission is $15.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/Block0.beginasyouare.png",
-    description: "The Ridgway Independent Film Festival opens at The Sherbino with an evening of short films grouped under the theme \"Begin Where You Are.\" Doors open at 4:30 p.m. with films beginning at 5:00 p.m.; single-block general admission is $15."
-  },
-  {
-    title: "Ridgway Independent Film Fest ~ Something Was Calling Us",
-    href: "https://sherbino.org/event/ridgway-independent-film-fest-something-was-calling-us/",
-    date: "2026-11-14 10:00:00",
-    endDate: "2026-11-14 11:30:00",
-    location: "The Sherbino, Ridgway",
-    copy: "The Ridgway Independent Film Fest screens \"Something Was Calling Us\" at The Sherbino, a film exploring the experience of heeding an inner call or turning point. The festival offers single-block general admission tickets as well as all-access passes and volunteer opportunities for those wanting a deeper involvement in the event.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/Block1.somethingwascallingus-1.png",
-    description: "The Ridgway Independent Film Fest screens \"Something Was Calling Us\" at The Sherbino, a film exploring the experience of heeding an inner call or turning point. The festival offers single-block general admission tickets as well as all-access passes and volunteer opportunities for those wanting a deeper involvement in the event."
-  },
-  {
-    title: "Ridgway Independent Film Fest ~ The Mountains Knew Our Names",
-    href: "https://sherbino.org/event/ridgway-independent-film-fest-the-mountains-knew-our-names/",
-    date: "2026-11-14 13:00:00",
-    endDate: "2026-11-14 14:30:00",
-    location: "The Sherbino, Ridgway",
-    copy: "A screening of *The Mountains Knew Our Names* presented as part of the Ridgway Independent Film Fest, held at The Sherbino in Ridgway. The festival features general admission single-block tickets as well as all-access passes, with doors opening ahead of the afternoon screening.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/Block2.themountainsknewournames-1.png",
-    description: "A screening of *The Mountains Knew Our Names* presented as part of the Ridgway Independent Film Fest, held at The Sherbino in Ridgway. The festival features general admission single-block tickets as well as all-access passes, with doors opening ahead of the afternoon screening."
-  },
-  {
-    title: "Ridgway Independent Film Fest ~ We Gathered Around the Fire",
-    href: "https://sherbino.org/event/ridgway-independent-film-fest-we-gathered-around-the-fire/",
-    date: "2026-11-14 18:30:00",
-    endDate: "2026-11-14 20:00:00",
-    location: "The Sherbino, Ridgway",
-    copy: "The Ridgway Independent Film Fest presents an evening screening block titled *We Gathered Around the Fire* at The Sherbino, with doors opening at 6:15 p.m. and films beginning at 6:30 p.m. General admission for this single block is $15, with festival passes and volunteer opportunities also available.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/Block3.wegatheredaroundthefire-1.png",
-    description: "The Ridgway Independent Film Fest presents an evening screening block titled *We Gathered Around the Fire* at The Sherbino, with doors opening at 6:15 p.m. and films beginning at 6:30 p.m. General admission for this single block is $15, with festival passes and volunteer opportunities also available."
-  },
-  {
     title: "Ridgway Independent Film Fest ~ We Invited the Monsters In",
     href: "https://sherbino.org/event/ridgway-independent-film-fest-we-invited-the-monsters-in/",
     date: "2026-11-15 10:00:00",
@@ -5141,6 +5076,15 @@ const SHERBINO_EVENTS = [
     description: "A beloved Ouray County holiday tradition held at The Sherbino in Ridgway, this family-friendly event invites all ages to decorate gingerbread houses with candy and icing on a Saturday morning from 10:00am to noon. Gingerbread houses are available for $20 each."
   },
   {
+    title: "Colorado Gives Day 2026",
+    href: "https://sherbino.org/event/colorado-gives-day-2026-sherbino/",
+    date: "2026-12-08 00:00:00",
+    endDate: "2026-12-08 23:30:00",
+    location: "Ridgway, CO",
+    copy: "Support The Sherbino this Colorado Gives Day! Early giving is open now, and Colorado Gives Day is December 8, 2026. Help sustain live music, film, arts, cultural programming, and community gatherings in Ridgway. @ The Sherbino Joins Colorado Gives Day to Keep Arts, Culture, and Community Thriving in Ridgway Early giving is underway for the December 8 statewide celebration of generosity, supporting year-round cultural programming and the spaces that bring people together. The Sherbino (Ridgway Chautauqua) is joining thousands of Colorado nonprofits for Colorado Gives Day on Tuesday, December 8, 2026. The statewide giving movement encourages Coloradans to support the organizations that strengthen their communities. While Colorado Gives Day officially takes place December 8, early giving is open now, allowing supporters to make donations throughout November and early December. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/11/Support-The-Sherbino_-Colorado-Gives-Day-1.png"
+  },
+  {
     title: "Monthly Welcome Home Alliance Veteran's Coffee at the Sherbino",
     href: "https://sherbino.org/event/monthly-welcome-home-alliance-veterans-coffee-at-the-sherbino/2026-12-08/",
     date: "2026-12-08 10:00:00",
@@ -5159,6 +5103,26 @@ const SHERBINO_EVENTS = [
     copy: "Matchstick Productions' 34th annual ski film, *The Way Out*, screens at The Sherbino in Ridgway, celebrating the culture and lifestyle of skiing. Doors open at 6:00pm with the film beginning at 6:30pm, with discounted admission available for students and seniors.",
     imageUrl: "https://sherbino.org/wp-content/uploads/2026/10/The-Way-out-Matchstick-banner-1.png",
     description: "Matchstick Productions' 34th annual ski film, *The Way Out*, screens at The Sherbino in Ridgway, celebrating the culture and lifestyle of skiing. Doors open at 6:00pm with the film beginning at 6:30pm, with discounted admission available for students and seniors."
+  },
+  {
+    title: "The Sherbino Presents: Before Words There Were Birds: An Old Caw Medicine Show with Poetry, Storytelling, Music & More",
+    href: "https://sherbino.org/event/before-words-there-were-birds-december-12/",
+    date: "2026-12-12 18:00:00",
+    endDate: "2026-12-12 19:30:00",
+    location: "The Sherbino, Ridgway",
+    copy: "A multi-disciplinary live performance at The Sherbino in Ridgway, \"Before Words There Were Birds: An Old Caw Medicine Show\" brings together poetry, storytelling, music, and more in a seated evening show. The event features an ensemble of performers and poets in what promises to be an eclectic, genre-blending night of spoken and musical art.",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/10/words-birds.png",
+    description: "A multi-disciplinary live performance at The Sherbino in Ridgway, \"Before Words There Were Birds: An Old Caw Medicine Show\" brings together poetry, storytelling, music, and more in a seated evening show. The event features an ensemble of performers and poets in what promises to be an eclectic, genre-blending night of spoken and musical art."
+  },
+  {
+    title: "Mountainfilm on Tour – Ridgway",
+    href: "https://sherbino.org/event/mountainfilm-on-tour-ridgway-2026/",
+    date: "2026-12-15 18:30:00",
+    endDate: "2026-12-15 20:30:00",
+    location: "The Sherbino, Ridgway",
+    copy: "Mountainfilm on Tour brings a curated selection of short films from the acclaimed Telluride-based Mountainfilm festival to The Sherbino in Ridgway. The touring program typically features documentary and adventure films celebrating outdoor culture, environmental issues, and human achievement.",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/10/sherb-and-wca-EVENT-BANNERS-1920-x-1080-2.png",
+    description: "Mountainfilm on Tour brings a curated selection of short films from the acclaimed Telluride-based Mountainfilm festival to The Sherbino in Ridgway. The touring program typically features documentary and adventure films celebrating outdoor culture, environmental issues, and human achievement."
   }
 ];
 
@@ -5696,7 +5660,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
     pubDate: "2026-11-17T20:30:00.000Z",
-    endDate: "2027-01-13",
+    endDate: "2027-01-14",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6558,28 +6522,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Movies Under the Stars",
-    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars is an outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening movies on Saturday evenings at dusk. The series runs on select Saturdays and offers a community gathering under the open sky.",
-    pubDate: "2026-11-14T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
-  },
-  {
-    title: "Mind Blown Telluride",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
-    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
-    pubDate: "2026-11-14T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
-  },
-  {
     title: "Bike & Brewery Tour",
     link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     description: "A guided bicycle tour departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route connects Mountain Village to town through scenic trail terrain.",
@@ -6836,17 +6778,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/28871/464865559_570687275405719_3117454875494611862_n.800x533.webp"
-  },
-  {
-    title: "Pre-Season Powder Panic",
-    link: "https://www.telluride.com/event/salomon-ski-film-slingshot/",
-    description: "Telluride Sports presents: Pre-Season Powder Panic featuring Pro Snowboarder Blake Moller: Freeride World Tour Champion …",
-    pubDate: "2026-11-14",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/64113/ezgif-4x5_poster-lifestyle_2048x2048.800x533.webp"
   },
   {
     title: "Roots to Routes: A Community Storytelling Night",
@@ -7532,24 +7463,6 @@ const LEGAL_NOTICES = [
     address: "53 East Homestead Road, Norwood, Colorado 81423 (Lot 24, Pioneer Village)",
     noticeKey: "foreclosure-2026-10-53-e-homestead-norwood",
     caseNumber: "2026-10"
-  },
-  {
-    title: "Ordinance -- Amendment to Municipal Code Chapters 16.01 and 16.02 Concerning Fees and Costs (COL-000256)",
-    entity: "Town of Mountain Village",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "The Town of Mountain Village Town Council passed on first reading an ordinance amending Chapters 16.01 and 16.02 of the Mountain Village Municipal Code regarding fees and costs. The second reading, public hearing, and final vote are scheduled for October 15, 2026 at 2:00 p.m. at Mountain Village Town Hall (2nd floor conference room) and via Zoom. The ordinance is available for review at the Town Clerk's office or on the town website.",
-    deadline: "2026-10-15",
-    expires: "2026-11-15",
-    dates: "10/1",
-    papers: ["ttimes_1001"],
-    url: "https://www.telluridenews.com/news/legals/article_792d96c0-09c8-479f-83f8-bdf3681b49ae.html",
-    address: "455 Mountain Village Blvd, Suite A, Mountain Village, CO",
-    noticeKey: "ord-mv-fees-16.01-16.02-COL-000256"
   },
   {
     title: "Budget Notice -- Proposed 2027 Budget, Southwestern Water Conservation District",

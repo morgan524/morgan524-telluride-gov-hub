@@ -246,26 +246,6 @@
     "caseNumber": "2026-10"
   },
   {
-    "title": "Ordinance -- Amendment to Municipal Code Chapters 16.01 and 16.02 Concerning Fees and Costs (COL-000256)",
-    "entity": "Town of Mountain Village",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "📋",
-    "iconClass": "type-hearing",
-    "type": "Ordinance",
-    "filterTag": "ordinance",
-    "summary": "The Town of Mountain Village Town Council passed on first reading an ordinance amending Chapters 16.01 and 16.02 of the Mountain Village Municipal Code regarding fees and costs. The second reading, public hearing, and final vote are scheduled for October 15, 2026 at 2:00 p.m. at Mountain Village Town Hall (2nd floor conference room) and via Zoom. The ordinance is available for review at the Town Clerk's office or on the town website.",
-    "deadline": "2026-10-15",
-    "expires": "2026-11-15",
-    "dates": "10/1",
-    "papers": [
-      "ttimes_1001"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_792d96c0-09c8-479f-83f8-bdf3681b49ae.html",
-    "address": "455 Mountain Village Blvd, Suite A, Mountain Village, CO",
-    "noticeKey": "ord-mv-fees-16.01-16.02-COL-000256"
-  },
-  {
     "title": "Budget Notice -- Proposed 2027 Budget, Southwestern Water Conservation District",
     "entity": "Southwestern Water Conservation District",
     "entityClass": "ent-county",
