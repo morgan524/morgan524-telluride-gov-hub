@@ -5226,19 +5226,7 @@ const BEACON_EVENTS = [
   {
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Every Tuesday night, a gathering for food, conversation, and bible study downstairs at The Well.",
-    date: "2026-11-10",
-    time: "6:00 PM",
-    source: "beacon",
-    sourceLabel: "Beacon",
-    category: "Community Event",
-    location: "The Well, 122 S Aspen",
-    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
-  },
-  {
-    title: "Weekly Young Adult Gathering",
-    link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Every Tuesday night, a gathering for food, conversation, and bible study downstairs at The Well.",
+    description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
     date: "2026-11-17",
     time: "6:00 PM",
     source: "beacon",
@@ -5248,9 +5236,21 @@ const BEACON_EVENTS = [
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
+    title: "Ski and Board Days",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Once a week, young adults gather over lunch to ski and board together.",
+    date: "2026-11-20",
+    time: "11:00 AM-1:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "Beacon, Telluride",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Every Tuesday night, a gathering for food, conversation, and bible study downstairs at The Well.",
+    description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
     date: "2026-11-24",
     time: "6:00 PM",
     source: "beacon",
@@ -5260,9 +5260,21 @@ const BEACON_EVENTS = [
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
+    title: "Ski and Board Days",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Once a week, young adults gather over lunch to ski and board together.",
+    date: "2026-11-27",
+    time: "11:00 AM-1:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "Beacon, Telluride",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Every Tuesday night, a gathering for food, conversation, and bible study downstairs at The Well.",
+    description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
     date: "2026-12-01",
     time: "6:00 PM",
     source: "beacon",
@@ -5274,7 +5286,7 @@ const BEACON_EVENTS = [
   {
     title: "Friday Feast",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "A twice-a-month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel. April 2nd is a Luau at Lift Ops, 11am-1pm.",
+    description: "A twice-a-month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel. April 2nd is a Luau at Lift Ops, 11-1 pm.",
     date: "2026-12-04",
     time: "5:00 PM",
     source: "beacon",
@@ -5284,9 +5296,21 @@ const BEACON_EVENTS = [
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
+    title: "Ski and Board Days",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Once a week, young adults gather over lunch to ski and board together.",
+    date: "2026-12-04",
+    time: "11:00 AM-1:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "Beacon, Telluride",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Every Tuesday night, a gathering for food, conversation, and bible study downstairs at The Well.",
+    description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
     date: "2026-12-08",
     time: "6:00 PM",
     source: "beacon",
@@ -5298,13 +5322,25 @@ const BEACON_EVENTS = [
   {
     title: "Clothing Swap",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "A community clothing swap event.",
+    description: "A clothing swap event held at Billies Restaurant.",
     date: "2026-12-10",
     time: "7:00 PM",
     source: "beacon",
     sourceLabel: "Beacon",
     category: "Community Event",
     location: "Billies Restaurant",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Ski and Board Days",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Once a week, young adults gather over lunch to ski and board together.",
+    date: "2026-12-11",
+    time: "11:00 AM-1:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "Beacon, Telluride",
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
@@ -5322,7 +5358,7 @@ const BEACON_EVENTS = [
   {
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Every Tuesday night, a gathering for food, conversation, and bible study downstairs at The Well.",
+    description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
     date: "2026-12-15",
     time: "6:00 PM",
     source: "beacon",
@@ -5334,7 +5370,7 @@ const BEACON_EVENTS = [
   {
     title: "Friday Feast",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "A twice-a-month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel. April 2nd is a Luau at Lift Ops, 11am-1pm.",
+    description: "A twice-a-month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel. April 2nd is a Luau at Lift Ops, 11-1 pm.",
     date: "2026-12-18",
     time: "5:00 PM",
     source: "beacon",
@@ -5344,9 +5380,33 @@ const BEACON_EVENTS = [
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
+    title: "Ski and Board Days",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Once a week, young adults gather over lunch to ski and board together.",
+    date: "2026-12-18",
+    time: "11:00 AM-1:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "Beacon, Telluride",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Weekly Young Adult Gathering",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
+    date: "2026-12-22",
+    time: "6:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "The Well, 122 S Aspen",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
     title: "Moonlight Skin and Ski",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "An uphill skin to the top of lift 10; no experience necessary. Equipment rentals available for $10.",
+    description: "An uphill skin to the top of lift 10; no experience necessary. $10 equipment rentals available.",
     date: "2026-12-25",
     time: "",
     source: "beacon",
@@ -5356,7 +5416,19 @@ const BEACON_EVENTS = [
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
-    title: "Meal Prep/Cooking Classes",
+    title: "Ski and Board Days",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Once a week, young adults gather over lunch to ski and board together.",
+    date: "2026-12-25",
+    time: "11:00 AM-1:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "Beacon, Telluride",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Meal Prep/Cooking Classes at AH HAA School for the Arts",
     link: "https://www.beacontelluride.com/upcoming-events",
     description: "Meal prep and cooking classes held at AH HAA School for the Arts.",
     date: "2027-01-06",
@@ -5370,7 +5442,7 @@ const BEACON_EVENTS = [
   {
     title: "Friday Feast",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "A twice-a-month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel. April 2nd is a Luau at Lift Ops, 11am-1pm.",
+    description: "A twice-a-month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel. April 2nd is a Luau at Lift Ops, 11-1 pm.",
     date: "2027-01-08",
     time: "5:00 PM",
     source: "beacon",
@@ -5394,7 +5466,7 @@ const BEACON_EVENTS = [
   {
     title: "Moonlight Skin and Ski",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "An uphill skin to the top of lift 10; no experience necessary. Equipment rentals available for $10.",
+    description: "An uphill skin to the top of lift 10; no experience necessary. $10 equipment rentals available.",
     date: "2027-01-20",
     time: "",
     source: "beacon",
@@ -5406,7 +5478,7 @@ const BEACON_EVENTS = [
   {
     title: "Friday Feast",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "A twice-a-month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel. April 2nd is a Luau at Lift Ops, 11am-1pm.",
+    description: "A twice-a-month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel. April 2nd is a Luau at Lift Ops, 11-1 pm.",
     date: "2027-01-22",
     time: "5:00 PM",
     source: "beacon",
@@ -5430,7 +5502,7 @@ const BEACON_EVENTS = [
   {
     title: "Friday Feast",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "A twice-a-month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel. April 2nd is a Luau at Lift Ops, 11am-1pm.",
+    description: "A twice-a-month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel. April 2nd is a Luau at Lift Ops, 11-1 pm.",
     date: "2027-02-05",
     time: "5:00 PM",
     source: "beacon",
@@ -5442,7 +5514,7 @@ const BEACON_EVENTS = [
   {
     title: "Dodgeball Tournament",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "A community dodgeball tournament open to seasonal workers and locals.",
+    description: "A dodgeball tournament open to seasonal workers and the community.",
     date: "2027-02-07",
     time: "7:00-9:00 PM",
     source: "beacon",
@@ -5454,7 +5526,7 @@ const BEACON_EVENTS = [
   {
     title: "Moonlight Skin and Ski",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "An uphill skin to the top of lift 10; no experience necessary. Equipment rentals available for $10.",
+    description: "An uphill skin to the top of lift 10; no experience necessary. $10 equipment rentals available.",
     date: "2027-02-17",
     time: "",
     source: "beacon",
@@ -5466,8 +5538,20 @@ const BEACON_EVENTS = [
   {
     title: "Friday Feast",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "A twice-a-month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel. April 2nd is a Luau at Lift Ops, 11am-1pm.",
+    description: "A twice-a-month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel. April 2nd is a Luau at Lift Ops, 11-1 pm.",
     date: "2027-02-19",
+    time: "5:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "The Well Coffee Shop",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Friday Feast",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "A twice-a-month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel. April 2nd is a Luau at Lift Ops, 11-1 pm.",
+    date: "2027-03-05",
     time: "5:00 PM",
     source: "beacon",
     sourceLabel: "Beacon",
