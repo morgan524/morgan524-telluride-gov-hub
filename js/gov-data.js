@@ -459,8 +459,8 @@ const MV_CACHED_DATA = [
     time: "3:00 PM - 8:00 PM",
     title: "Town Council Meeting",
     board: "tc",
-    agendaUrl: "https://townofmountainvillage.com/site/assets/files/50266/november_19-_2026_town_council_meeting_agenda.pdf",
-    packetUrl: "https://townofmountainvillage.com/site/assets/files/50272/november_19-_2026_town_council_meeting_packet.pdf",
+    agendaUrl: "https://townofmountainvillage.com/site/assets/files/50275/november_19-_2026_town_council_meeting_agenda.pdf",
+    packetUrl: "https://townofmountainvillage.com/site/assets/files/50277/november_19-_2026_town_council_meeting_packet.pdf",
     special: false,
     location: "Town Hall, 455 Mountain Village Blvd, Suite A"
   },
@@ -753,15 +753,6 @@ const NORWOOD_SAN_URL = 'https://www.norwoodtown.com/norwood-sanitation-district
 const NORWOOD_CACHE_DATE = '2026-11-17';
 
 const NORWOOD_CACHED_DATA = [
-  {
-    date: "November 10, 2026",
-    time: null,
-    title: "Norwood Water Commission Meeting",
-    agendaUrl: "https://www.norwoodtown.com/files/285151cdb/11.10.26+NWC+Meeting+Agenda+.pdf",
-    packetUrl: "https://www.norwoodtown.com/files/834de0904/11.10.2026+NWC+Supporting+Documents.pdf",
-    special: false,
-    board: "nwc"
-  },
   {
     date: "November 11, 2026",
     time: null,
