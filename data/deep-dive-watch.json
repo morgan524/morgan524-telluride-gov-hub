@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16T21:54:44.834Z",
+ "generated": "2026-11-17T07:22:07.973Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -103,21 +103,14 @@
   "gondola": {
    "label": "Gondola 3A",
    "lastUpdated": "2026-07-20",
-   "upcoming": [
+   "upcoming": [],
+   "recent": [
     {
      "source": "smart",
-     "sourceLabel": "SMART Transit",
-     "title": "SMART Gondola Advisory Committee",
      "date": "2026-11-16",
-     "time": "3:00 PM",
-     "location": "Virtual (Zoom link in the agenda)",
-     "agendaUrl": "",
-     "link": "https://smarttelluride.colorado.gov/board-meetings",
-     "zoomLink": "",
-     "livestream": ""
-    }
-   ],
-   "recent": [
+     "title": "SMART Gondola Advisory Committee",
+     "snippet": "The November 16 SMART Gondola Advisory Committee agenda hasn't been posted yet."
+    },
     {
      "source": "telluride",
      "date": "2026-11-12",
@@ -127,6 +120,7 @@
    ],
    "developments": [],
    "stale": [
+    "Gondola 3A: smart discussed it on 2026-11-16 (\"SMART Gondola Advisory Committee\") but the deep dive was last edited 2026-07-20.",
     "Gondola 3A: telluride discussed it on 2026-11-12 (\"San Miguel Authority for Regional Transportation - Nov 12…\") but the deep dive was last edited 2026-07-20."
    ]
   },
@@ -153,18 +147,11 @@
      "date": "2026-11-10",
      "title": "Norwood Water Commission Meeting",
      "snippet": "The November 10, 2026 Norwood Water Commission Meeting agenda hasn't been posted yet."
-    },
-    {
-     "source": "norwood",
-     "date": "2026-11-02",
-     "title": "Norwood Water Commission Work Session",
-     "snippet": "The Norwood Water Commission sits down for a work session focused on a single item: the 2027 draft budget. Work sessions are deliberative — no formal action can be taken — so this is the commission's…"
     }
    ],
    "developments": [],
    "stale": [
-    "Norwood Water: norwood discussed it on 2026-11-10 (\"Norwood Water Commission Meeting\") but the deep dive was last edited 2026-07-23.",
-    "Norwood Water: norwood discussed it on 2026-11-02 (\"Norwood Water Commission Work Session\") but the deep dive was last edited 2026-07-23."
+    "Norwood Water: norwood discussed it on 2026-11-10 (\"Norwood Water Commission Meeting\") but the deep dive was last edited 2026-07-23."
    ]
   },
   "fieldpaving": {

@@ -1,27 +1,27 @@
 {
- "generated": "2026-11-16T21:54:44.836Z",
+ "generated": "2026-11-17T07:22:07.975Z",
  "pinned": false,
- "topic": "gondola",
- "topicLabel": "Gondola 3A",
- "headline": "Gondola 3A goes before SMART Gondola Advisory Committee on Monday, November 16",
- "blurb": "The November 16 SMART Gondola Advisory Committee agenda hasn't been posted yet.",
+ "topic": "carhenge",
+ "topicLabel": "Carhenge / Shandoka",
+ "headline": "Carhenge / Shandoka goes before HARC Meeting on Wednesday, November 18",
+ "blurb": "A heavy agenda for November 18. The two items that have been waiting since August — the Shandoka Lot redevelopment preliminary large-scale reviews for Buildings 1 & 2 and Buildings 3 & 4 at 860 Black Bear Rd — are finally being heard, with the Town of Telluride as applicant and Design Workshop doing the design work. Both involve new construction outside the historic district exceeding 5,000 sq ft in an Accommodations 2 zone.",
  "images": [],
  "deepDive": {
-  "label": "Gondola 3A",
-  "href": "/deep-dive-gondola.html"
+  "label": "Carhenge / Shandoka",
+  "href": "/deep-dive-carhenge.html"
  },
  "meeting": {
-  "title": "SMART Gondola Advisory Committee",
-  "sourceLabel": "SMART Transit",
-  "date": "2026-11-16",
-  "humanDate": "Monday, November 16",
-  "time": "3:00 PM",
-  "location": "Virtual (Zoom link in the agenda)",
-  "agendaUrl": "",
-  "hasAgenda": false,
-  "packetUrl": "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.11.16-Gsub-Meeting-Packet.pdf",
-  "link": "https://smarttelluride.colorado.gov/board-meetings",
-  "zoomLink": "",
-  "livestream": ""
+  "title": "HARC Meeting",
+  "sourceLabel": "Town of Telluride",
+  "date": "2026-11-18",
+  "humanDate": "Wednesday, November 18",
+  "time": "5:30 PM",
+  "location": "Rebekah Hall, 113 W Columbia Ave",
+  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8026",
+  "hasAgenda": true,
+  "packetUrl": "https://telluride-co.civicweb.net/document/447248/",
+  "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8026",
+  "zoomLink": "https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA",
+  "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
  }
 }

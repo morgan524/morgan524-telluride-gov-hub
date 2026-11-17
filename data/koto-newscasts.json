@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 11-16-26",
+    "source": "KOTO Community Radio",
+    "date": "November 17, 2026",
+    "newsTopic": "housing",
+    "copy": "Telski Delays Opening Day; Local Communities Grapple with Affordable Housing Requirements; Coming Up Next, Telluride",
+    "href": "https://koto.org/news/newscast-11-16-26/"
+  },
+  {
     "title": "Newscast 11-13-26",
     "source": "KOTO Community Radio",
     "date": "November 14, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "government",
     "copy": "San Miguel County Votes for Sheriff Masters; Dylan Brooks Wins County Commissioner Seat; Voters Support Telluride Schools",
     "href": "https://koto.org/news/newscast-11-4-26/"
-  },
-  {
-    "title": "Newscast 11-2-26",
-    "source": "KOTO Community Radio",
-    "date": "November 3, 2026",
-    "newsTopic": "community",
-    "copy": "Winter Comes to the San Juans; Voters Head to the Polls",
-    "href": "https://koto.org/news/newscast-11-2-26/"
   }
 ]

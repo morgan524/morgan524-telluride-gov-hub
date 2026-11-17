@@ -13,27 +13,6 @@
     "url": "https://townofridgway.colorado.gov/resources/requests-for-proposals/bids"
   },
   {
-    "title": "Notice to Creditors -- Estate of Lawrence de Bivort (Case No. 2026PR30008)",
-    "entity": "Estate of Lawrence de Bivort",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "The estate of Lawrence de Bivort (also known as Lawrence Harwood de Bivort, Lawrence H. de Bivort, and Lawrence H. Debivort) is being probated in San Miguel County, Colorado. Benjamin L. de Bivort is serving as Personal Representative. All persons with claims against the estate must present them to the Personal Representative or the San Miguel County District Court by November 16, 2026, or their claims may be permanently barred.",
-    "deadline": "2026-11-16",
-    "expires": "2026-11-16",
-    "dates": "7/16",
-    "papers": [
-      "ttimes_0716"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_6d5eb2e7-d860-4528-8e72-754a66dad591.html",
-    "address": "District Court of San Miguel County, Colorado",
-    "noticeKey": "probate-2026PR30008",
-    "caseNumber": "2026PR30008"
-  },
-  {
     "title": "Request for Proposal -- Painting of the San Miguel County Jail",
     "entity": "San Miguel County",
     "entityClass": "ent-county",

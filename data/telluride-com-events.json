@@ -68,17 +68,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/64180/lodge-winter-2200x1237.800x533.webp"
   },
   {
-    "title": "Telluride Ski Resort Opening Day 2026",
-    "link": "https://www.telluride.com/event/telluride-ski-resort-opening-day/",
-    "description": "Telluride Ski Resort is scheduled to open on Thursday, November 26. Join us for opening weekend with plenty to do on …",
-    "pubDate": "2026-11-26",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/42692/telluride_skier.800x533.webp"
-  },
-  {
     "title": "Turkey Trot",
     "link": "https://www.telluride.com/event/san-miguel-county-turkey-trot/",
     "description": "Join San Miguel County for the annual family holiday tradition, the  Turkey Trot 5K- Fun Run/Walk. Admission is free. …",
@@ -170,6 +159,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63715/telluride_event_images_2200_x_1237_px.800x533.webp"
+  },
+  {
+    "title": "Telluride Ski Resort Opening Day 2026",
+    "link": "https://www.telluride.com/event/telluride-ski-resort-opening-day/",
+    "description": "Telluride Ski Resort has pushed its opening to Saturday, December 5. Join us for opening weekend with plenty to do on …",
+    "pubDate": "2026-12-05",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/42692/telluride_skier.800x533.webp"
   },
   {
     "title": "Noel Night",

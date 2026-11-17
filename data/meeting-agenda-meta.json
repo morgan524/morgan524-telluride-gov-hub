@@ -301,7 +301,7 @@
   },
   "mv|2026-11-19|Town Council Meeting": {
     "sv": 4,
-    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/50266/november_19-_2026_town_council_meeting_agenda-1.pdf",
+    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/50266/november_19-_2026_town_council_meeting_agenda.pdf",
     "zoomUrl": "https://us06web.zoom.us/webinar/register/WN_t5hWlTN2Qvy0rx0NxKKR6g",
     "phone": "970-369-6429"
   },
@@ -689,5 +689,36 @@
     "passcode": "734380.",
     "phone": "719) 359-4580",
     "sv": 4
+  },
+  "norwood|2026-11-18|Board of Trustees Meeting": {
+    "agendaUrl": "https://www.norwoodtown.com/files/8ec8087d1/11.18.2026+Board+of+Trustee+Agenda+ADA.pdf",
+    "zoomUrl": "https://us02web.zoom.us/j/87556267477?pwd=VmNTcmQ3S3lpTWJFbS80TVZ3NjU5Zz09",
+    "meetingId": "875 5626 7477",
+    "passcode": "8142301",
+    "phone": "970-327-4288",
+    "sv": 4
+  },
+  "airport|2026-12-17|TRAA Board of Commissioners Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "tmvoa|2026-12-17|TMVOA Members Budget Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "telluride|2026-12-17|Liquor Licensing Authority - Dec 17 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8123",
+    "sv": 4,
+    "ph": "e8c092d7dc733b1f"
+  },
+  "telluride|2026-12-17|Planning & Zoning Commission - Dec 17 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8110",
+    "sv": 4,
+    "ph": "17e4f9dd2ee65452"
+  },
+  "telluride|2026-12-17|Planning & Zoning Commission Chair - Dec 17 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8109",
+    "sv": 4,
+    "ph": "0454c5807aedf511"
   }
 }

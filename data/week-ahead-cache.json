@@ -1,30 +1,34 @@
 {
-  "hash": "30b7fd2a6545e35179a6601e0d44b1b50ef2fe89",
-  "lede": "Monday night, Telluride Town Council votes on the 2027 budget and property tax levy — and in the same session takes up second reading of an ordinance that would suspend the Open Space Fund's 5% cut of Real Estate Transfer Tax revenue for the year, a real trade-off worth showing up for. The school board also meets twice this week, including a Monday work session and a Wednesday regular meeting that opens with a debrief on November ballot results that will shape district funding. And if you need a break from civic life, the gondola reopens for winter on Friday.",
+  "hash": "597ebd7fe5677b3929f3dcc2e47b296417e26d12",
+  "lede": "Monday night, Telluride Town Council votes on the 2027 budget and the property tax levy that funds it — and in the same session takes up second reading of an ordinance that would suspend the Open Space Fund's 5% cut of Real Estate Transfer Tax revenue for the year, a real trade-off worth showing up for. The school board opens its meeting with a debrief on November ballot results, including the 5A mill levy override, which will determine what the district can actually do next year. The gondola re-opens for winter on Friday, and the Backcountry Film Fest runs Wednesday and Thursday if you need a reason to get out of the house mid-week.",
   "notable": [
     {
-      "id": 5,
-      "stake": "Council votes on 2027 budget, mill levy, fee schedule, and Ice Park agreement."
-    },
-    {
-      "id": 6,
-      "stake": "Fire district budget gets second reading; debt financing and construction costs on table."
-    },
-    {
-      "id": 7,
-      "stake": "Board debriefs November ballot results, including school mill levy, shaping future funding."
-    },
-    {
-      "id": 9,
-      "stake": "Council votes 2027 budget, property tax levy, and Open Space Fund suspension ordinance."
-    },
-    {
-      "id": 12,
-      "stake": "County repeals austerity measures and adopts 2027 budget update — fiscal direction shifts."
+      "id": 3,
+      "stake": "Council votes on 2027 budget, tax levy, and Open Space Fund suspension."
     },
     {
       "id": 1,
-      "stake": "Norwood updates Land Use Code and Master Plan, shaping what gets built for years."
+      "stake": "Board debriefs November ballot results, including school mill levy override 5A."
+    },
+    {
+      "id": 0,
+      "stake": "Fire district considers financing options and votes on second-reading budget."
+    },
+    {
+      "id": 9,
+      "stake": "HARC hears long-awaited Shandoka Lot large-scale redevelopment preliminary reviews."
+    },
+    {
+      "id": 6,
+      "stake": "County repeals austerity measures and adopts formal AI governance policy."
+    },
+    {
+      "id": 13,
+      "stake": "THA subcommittee rules on unconventional loan and occupancy exceptions for lottery units."
+    },
+    {
+      "id": 14,
+      "stake": "Norwood considers Land Use Code change altering Planning and Zoning Commission structure."
     }
   ]
 }
