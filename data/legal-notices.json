@@ -85,26 +85,6 @@
     "caseNumber": "2026-07"
   },
   {
-    "title": "Utility Rule Change -- Proposed Amendment to SMPA Rules and Regulations (COL-000275)",
-    "entity": "San Miguel Power Association, Inc. (SMPA)",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "💧",
-    "iconClass": "type-hearing",
-    "type": "Utilities",
-    "filterTag": "utilities",
-    "summary": "The Board of Directors of San Miguel Power Association, Inc. (SMPA) is considering amendments to its Rules and Regulations, with proposed changes available for member review on the SMPA website. The Board will review and may adopt the changes at its November 17, 2026 virtual Board Meeting beginning at 9:00 a.m. Members may register to attend and provide public comment through the SMPA website.",
-    "deadline": "2026-11-17",
-    "expires": "2026-11-17",
-    "dates": "10/15",
-    "papers": [
-      "ttimes_1015"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_2a67f0e2-7d5c-47a5-a0a6-a1635a6dda11.html",
-    "address": "San Miguel Power Association service territory, San Miguel County, Colorado (meeting held virtually)",
-    "noticeKey": "smpa-rules-regulations-amendment-2026-COL000275"
-  },
-  {
     "title": "Request for Proposal -- San Miguel County Housing Action Plan",
     "entity": "San Miguel County",
     "entityClass": "ent-county",
@@ -302,26 +282,6 @@
     "address": "305 West Colorado Avenue, Telluride, CO 81435",
     "noticeKey": "name-change-2026C30012",
     "caseNumber": "2026C30012"
-  },
-  {
-    "title": "Public Hearing -- Ophir Ordinance #2026-07 Prohibiting Short-Term Rentals",
-    "entity": "Town of Ophir",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "📋",
-    "iconClass": "type-hearing",
-    "type": "Ordinance",
-    "filterTag": "ordinance",
-    "summary": "The Town of Ophir will hold a public hearing on Tuesday, November 17, 2026 at 7:00 PM at Ophir Town Hall to consider second reading of Ordinance #2026-07, which would amend Section 303.1 of the Town's Land Use Code to prohibit short-term rentals of 30 days or fewer. Community members may attend in person at 36 Porphyry Street, Ophir, or contact Town Hall at (970) 728-4943 for more information. This ordinance would apply throughout the Town of Ophir.",
-    "deadline": "2026-11-17",
-    "expires": "2026-11-17",
-    "dates": "11/5",
-    "papers": [
-      "ttimes_1105"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_4fe133a6-ca5f-42a1-810d-63306c1b854d.html",
-    "address": "36 Porphyry Street, Ophir, CO 81426",
-    "noticeKey": "ord-ophir-2026-07"
   },
   {
     "title": "RFP -- Telluride Conference Center Management and Operation Agreement",

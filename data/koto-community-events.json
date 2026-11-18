@@ -1,27 +1,5 @@
 [
   {
-    "title": "Telluride R-1 School District Board Regular Meeting",
-    "link": "https://koto.org/event/telluride-r-1-school-district-board-regular-meeting-2/",
-    "description": "Telluride R-1 School District Board of Education holds a regular meeting on Tuesday, November 17th, at 5:15 p.m. in the Bridal Veil conference room at TMHS and via Zoom. The meeting agenda and Zoom link can be found at tellurideschool.org.",
-    "pubDate": "2026-11-17T17:15:00-07:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Middle/High School, TELLURIDE",
-    "imageUrl": ""
-  },
-  {
-    "title": "Stories & Poems Telluride",
-    "link": "https://koto.org/event/stories-poems-telluride/",
-    "description": "Storyteller and writer Craig Childs will join his wife poet Daiva Česonis, both of them living at the edge of Naturita Canyon on Wrights Mesa near Norwood, for an evening of storytelling and poetry at the Wilkinson Public Library’s magazine room Tuesday Nov. 17 th at 5:15 pm MST.",
-    "pubDate": "2026-11-17T17:15:00-07:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/DaivaCraigFlySPTnov26.png"
-  },
-  {
     "title": "Roots to Routes: A Community Storytelling Night",
     "link": "https://koto.org/event/roots-to-routes-a-community-storytelling-night/",
     "description": "Some of the best adventures start right outside our front door, and others take us halfway around the world. Join the Telluride Mountain Club for Roots to Routes, a new storytelling night where your neighbors share personal, authentic outdoor adventures, from big expeditions abroad to memorable weekends close to home. Each storyteller gets 10 minutes to present with slides, followed by 3 minutes for Q&A. Have a story to share? We’re looking for a real mix of adventures, including climbing, mountaineering, rafting, skiing, bikepacking, hiking, and more, from people of all ages and experience levels. Submit your story by November 3rd. We look forward to seeing you there!",
@@ -525,6 +503,17 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "",
+    "imageUrl": ""
+  },
+  {
+    "title": "Mountainfilm Noel Night Local Pass Sale",
+    "link": "https://koto.org/event/mountainfilm-noel-night-local-pass-sale/",
+    "description": "Mountainfilm is holding a pass sale on Noel Night, Wednesday, December 9, from 11 AM to 8 PM at the Mountainfilm office, 122 S. Oak St. in Telluride. Palmyra Passes to the 2027 festival will be buy one, get one free, in person only . The festival is May 27-31, 2027.",
+    "pubDate": "2026-12-09T11:00:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Mountainfilm Offices, Telluride",
     "imageUrl": ""
   }
 ]

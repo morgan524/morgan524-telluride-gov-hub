@@ -297,7 +297,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"agendaUrl":"https://townofmountainvillage.com/site/assets/files/50155/november_5-_2026_design_review_board_meeting_agenda.pdf","zoomUrl":"https://us06web.zoom.us/j/82514604948?pwd=i0xGIqUZB5sk4vpv27kGSDMUpyzbNU.1","meetingId":"825 1460 4948"},
 
   "mv|2026-11-19|Town Council Meeting":
-    {"sv":4,"agendaUrl":"https://townofmountainvillage.com/site/assets/files/50266/november_19-_2026_town_council_meeting_agenda.pdf","zoomUrl":"https://us06web.zoom.us/webinar/register/WN_t5hWlTN2Qvy0rx0NxKKR6g","phone":"970-369-6429"},
+    {"sv":4,"agendaUrl":"https://townofmountainvillage.com/site/assets/files/50275/november_19-_2026_town_council_meeting_agenda.pdf","zoomUrl":"https://us06web.zoom.us/webinar/register/WN_t5hWlTN2Qvy0rx0NxKKR6g","phone":"970-369-6429"},
 
   "airport|2026-11-19|TRAA Board of Commissioners Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -384,10 +384,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=773056","sv":4},
 
   "telluride|2026-12-02|Commission for Community Assistance, Arts & Special Events - Dec 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8069","sv":4,"ph":"27b262912c27bbe7"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8069","sv":4,"ph":"1782388eee465c34"},
 
   "telluride|2026-12-02|Telluride Housing Authority Subcommittee - Dec 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8166","sv":4,"ph":"18b4e853a15de16c"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8166","sv":4,"ph":"318a8fe2a3798f29"},
 
   "county|2026-11-25|Board of County Commissioners Work Session":
     {"sv":4,"ph":"155b8bb013cf3ec0"},
@@ -800,18 +800,6 @@ const DAILY_QUESTIONS = [
 // target, and these seeds let the data start landing again. No page renders
 // them yet — restoring (or retiring) the reader UIs is tracked separately.
 const MEETING_PREVIEWS = {
-  "telluride|2026-11-18|Historic & Architectural Review Commission Chair - Nov 18 2026":
-    "The Historic & Architectural Review Commission is expected to convene its regular monthly meeting on November 18, 2026. Related notices include a proposed amendment to The Good Gargoyle Condominiums declaration and potential rule changes by San Miguel Power Association, which may be relevant to ongoing review matters.",
-
-  "telluride|2026-11-18|Historic & Architectural Review Commission - Nov 18 2026":
-    "The Historic and Architectural Review Commission is expected to review applications for Certificates of Appropriateness related to proposed changes to structures or signs within Telluride. The commission may also consider matters related to historic designation, preservation standards, and maintaining inventories of historically or architecturally significant structures.",
-
-  "telluride|2026-11-18|Parks & Recreation Commission - Nov 18 2026":
-    "The Parks & Recreation Commission is expected to meet on November 18, 2026, to address community parks and recreation needs in Telluride. Specific agenda items are not detailed in available materials, but the commission routinely interprets community desires for recreation and parks services at its monthly sessions.",
-
-  "county|2026-11-18|Board of County Commissioners Meeting":
-    "Board will consider proposals for painting the county jail, developing a multi-jurisdictional hazard mitigation plan, and creating a housing action plan. Related legal notices include a creditor notice for a local estate and a public trustee foreclosure sale on a Norwood property.",
-
   "telluride|2026-11-19|Resident Advisory Committee - Nov 19 2026":
     "The Resident Advisory Committee is expected to discuss employee rental housing policy reform, including a comprehensive review of existing policies through consulting services. Additional related matters may include a proposed amendment to The Good Gargoyle Condominiums declaration and potential changes to San Miguel Power Association utility rules and regulations.",
 
@@ -860,9 +848,6 @@ const MEETING_PREVIEWS = {
   "mv|2026-11-19|Town Council Meeting":
     "Council is expected to introduce new staff members, approve meeting minutes and a winter parking agreement with Telluride Ski & Golf, consider supporting the Colorado Association of Ski Towns' 2027 legislative agenda, and hold a public hearing on the proposed 2027 Mountain Village Metro District budget.",
 
-  "ouray|2026-11-18|Board of County Commissioners Work Session":
-    "Commissioners are expected to receive a quarterly EMS update and discuss an intergovernmental agreement with Ridgway Fire, along with memoranda of understanding with the City of Ouray and Town of Ridgway. The board will also hear commissioner and administrative reports and continue discussions on the 2027 budget.",
-
   "telluride|2026-12-03|Planning & Zoning Commission - Special Meeting - Dec 03 2026":
     "The Planning & Zoning Commission is expected to discuss a comprehensive review of Telluride's employee rental housing policies, as the town seeks consulting services to evaluate existing regulations. The special meeting may address the scope and direction of this policy review effort.",
 
@@ -893,12 +878,6 @@ const MEETING_PREVIEWS = {
   "telluride|2026-12-08|Telluride Housing Authority Subcommittee Special Meeting - Dec 08 2026":
     "The Telluride Housing Authority Subcommittee is expected to discuss a Request for Proposal for consulting services to conduct a comprehensive review of the Town of Telluride's employee rental housing policies.",
 
-  "telluride|2026-11-18|Telluride Housing Authority Subcommittee Special Meeting - Nov 18 2026":
-    "The Telluride Housing Authority Subcommittee will consider multiple requests for exceptions to Affordable Housing Guidelines regarding lenders and mortgages, including applications from Nichole Zangara and Jim Riley and several other applicants. The subcommittee will also accept public comment during the hybrid meeting.",
-
-  "norwood|2026-11-18|Board of Trustees Meeting":
-    "Board will consider an ordinance amending the Land Use Code regarding Planning and Zoning Commission membership, a CRA employee retirement matter, a fireworks display contract, and the 2027 draft budget. Reports from the San Miguel Sheriff's Office, Norwood Parks and Recreation District, and town staff are also on the agenda.",
-
   "telluride|2026-12-17|Liquor Licensing Authority - Dec 17 2026":
     "The Telluride Liquor Licensing Authority is expected to convene its regular monthly meeting on December 17, 2026. Specific agenda items have not been detailed, but the authority typically reviews liquor license applications and modifications requiring local approval in coordination with the Colorado Department of Revenue.",
 
@@ -908,14 +887,29 @@ const MEETING_PREVIEWS = {
   "telluride|2026-12-17|Planning & Zoning Commission Chair - Dec 17 2026":
     "The Planning & Zoning Commission Chair is expected to meet on December 17, 2026. Key topics may include a comprehensive review of Telluride's Employee Rental Housing Policies, with the town currently seeking consulting services to assess and potentially update those housing regulations.",
 
+  "telluride|2026-11-18|Telluride Housing Authority Subcommittee Special Meeting - Nov 18 2026":
+    "The Telluride Housing Authority Subcommittee will consider multiple requests for exceptions to Affordable Housing Guidelines regarding lender and mortgage requirements, including applications from several couples and individuals seeking unconventional loan approvals for affordable housing units.",
+
+  "telluride|2026-11-18|Historic & Architectural Review Commission Chair - Nov 18 2026":
+    "The Historic & Architectural Review Commission is expected to consider an extension application for a project at 115 W Colorado Avenue. The commission may also hear public comment on non-agenda items. The meeting will be held in hybrid format at Rebekah Hall.",
+
+  "telluride|2026-11-18|Historic & Architectural Review Commission - Nov 18 2026":
+    "The Historic and Architectural Review Commission is expected to review applications for Certificates of Appropriateness related to proposed changes to structures within Telluride's historic district, potentially including renovations, alterations, or additions. The commission may also address preservation policies or updates to inventories of historically and architecturally significant properties",
+
+  "telluride|2026-11-18|Parks & Recreation Commission - Nov 18 2026":
+    "The Parks & Recreation Commission is expected to review a proposed update to the Banner Policy for the Town Park Pavilion, discuss department facilities and operations from spring through fall 2026, and receive staff reports on 2026 projects, the 2027 budget, winter season updates, and Town Park improvements.",
+
   "telluride|2026-11-17|(Master Lease Lottery) Telluride Housing Authority - Nov 17 2026":
-    "The Telluride Housing Authority is expected to conduct master lease lottery drawings to assign available rental units at the Telluride Boarding House (1100 Black Bear Rd) and Virginia Placer IIA Apartments (1280 Black Bear Rd), pursuant to the Town's Employee Rental Housing Policies.",
+    "The Telluride Housing Authority will conduct master lease lotteries to assign available units at the Telluride Boarding House (1100 Black Bear Rd) and Virginia Placer IIA Apartments (1280 Black Bear Rd), pursuant to the Town's Employee Rental Housing Policies.",
 
   "telluride|2026-11-17|Town Council - Nov 17 2026":
-    "Council is expected to discuss updates on Colorado's Extended Producer Responsibility Act and local composting services, consider establishing a sewer authority, and review employee rental housing policies. The Telluride Housing Authority will also meet. The hybrid meeting will be held at Rebekah Hall.",
+    "Council is expected to discuss updates on Colorado's Extended Producer Responsibility Act and local composting services, consider establishing a sewer authority, and address employee rental housing policy matters through the Telluride Housing Authority. The hybrid meeting will be held at Rebekah Hall beginning at 10:00 AM.",
 
-  "ouray|2026-11-17|Board of County Commissioners":
-    "Board will consider extending an emergency disaster declaration, approving expenditures and minutes, and signing a change order for the Corbett Creek project. Additional topics include a runoff concern at the CR-361 Upper Bridge and selecting an ACH vendor. Public comment will also be heard."
+  "county|2026-11-18|Board of County Commissioners Meeting":
+    "Board will consider matters related to county operations at a meeting held at the Norwood Sheriff Annex. Related activity includes requests for proposals for jail painting, a multi-jurisdictional hazard mitigation plan update, and a housing action plan, alongside several public trustee and sheriff's foreclosure sales in the county.",
+
+  "ouray|2026-11-18|Board of County Commissioners Work Session":
+    "Commissioners are expected to receive a quarterly EMS update and discuss an intergovernmental agreement with Ridgway Fire. The board will also review memoranda of understanding with the City of Ouray and Town of Ridgway, hear commissioner reports, and continue discussions on the 2027 budget."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1064,8 +1058,8 @@ const REGIONAL_NEWS_ARTICLES = [
     sourceKey: "ouray-plaindealer",
     date: "November 12, 2026",
     newsTopic: "government",
-    copy: "Ouray County commissioners will no longer review renewing individual staff positions every time there is a vacancy, after hearing concerns that it was a burden on staff and raised questions from the public and press about resignations and terminations. Commissioners created the austerity policy a ye",
-    href: "https://www.ouraynews.com/2026/11/11/commissioners-repeal-policy-requiring-approval-fill-every-staff-vacancy/?ta_paidstory",
+    copy: "Editor s note: This article has been updated to correct an error regarding the Plaindealer seeking a request for comment from former Road and Bridge Superintendent Ty Barger. Ouray County commissioners will no longer review renewing individual staff positions every time there is a vacancy, after hea",
+    href: "https://www.ouraynews.com/2026/11/11/commissioners-repeal-policy-requiring-approval-fill-every-staff-vacancy/",
     img: ""
   },
   {
@@ -1146,7 +1140,7 @@ const ENGAGE_MEETINGS = [
   }
 ];         // Engage Telluride project key dates
 const MANUAL_SUMMARIES_CACHE_DATE = '2026-11-17';
-const LEGAL_NOTICES_CACHE_DATE = '2026-11-17';
+const LEGAL_NOTICES_CACHE_DATE = '2026-11-18';
 
 const MANUAL_SUMMARIES = {
   "norwood|2026-10-19|Planning and Zoning Commission Meeting":
@@ -2897,6 +2891,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Telluride Ski Resort revises winter season opening date",
+    source: "Telluride Times",
+    date: "November 17, 2026",
+    firstSeen: "2026-11-18",
+    newsTopic: "recreation",
+    copy: "Telluride Ski Resort pushed its opening day back to Saturday, Dec. 5, citing warm high pressure that's made low-elevation snowmaking difficult despite solid snowpack up high. The mountain stays closed to all activity until then. The town-to-Mountain Village gondola reopens Nov. 20; the Chondola stays closed until ski season opens.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_05e05805-a6de-4272-82a4-f6c0b39a61f7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/6a/96aa3c9e-d835-4391-ba92-098813f855b9/6afcb2ef2655a.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Shake it up: Sneak peek at Telluride Bluegrass Festival's 2027 lineup",
     source: "Telluride Times",
     date: "November 17, 2026",
@@ -3555,28 +3561,22 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Busy as beavers",
-    source: "Telluride Times",
-    date: "November 4, 2026",
-    firstSeen: "2026-11-05",
-    newsTopic: "recreation",
-    copy: "Beavers have set up shop near Telluride Town Park for years, and a new colony is now active on the Valley Floor near Eider Creek and Sunnyside. The Open Space Commission and San Miguel Watershed Coalition say the activity — ponds, dams, felled trees — is broadly good for riparian health, even if it looks messy. The bike path may need some creative workarounds.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_f9ac2c3d-dd18-4ab4-9280-7a9d449a5260.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/fa/2fa0eace-4898-4ff7-b659-7dd284c977c9/6ae6107fa7af7.image.jpg",
-    imgHiRes: true
+    title: "Local Employers Invited to Apply for Employee Housing Master Leases",
+    source: "Town of Telluride",
+    date: "October 23, 2026",
+    newsTopic: "housing",
+    copy: "(October 22, 2026) – The Telluride Housing Authority (THA) is offering master leases on five apartments at the new Virginia Placer IIA building and two rooms at the Telluride Boarding House to local businesses and organizations.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=408",
+    img: ""
   },
   {
-    title: "School district mill levy override big local election winner",
-    source: "Telluride Times",
-    date: "November 4, 2026",
-    firstSeen: "2026-11-04",
-    newsTopic: "government",
-    copy: "Telluride's school district mill levy override (5A) passed with 61.45% of the vote — 1,988 yes to 1,247 no — securing continued local funding to offset reductions from the state's new school funding formula. San Miguel County also elected a new sheriff, Lane Masters, over incumbent Dan Covault, 54–46%, and unaffiliated candidate Dylan Brooks won the county commissioner race over Democrat Paul Reich, 53–47%.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_e490f4b6-2cc4-4512-8600-6bc88491da2e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/c0/cc0d4997-387c-469f-9dc6-6dc4ac26b46b/6aeadbdd58004.image.png",
-    imgHiRes: true
+    title: "Deed-Restricted Housing Lottery Applications Now Available for Spruce House H",
+    source: "Town of Telluride",
+    date: "October 22, 2026",
+    newsTopic: "housing",
+    copy: "(October 22, 2026) - The Town of Telluride and the San Miguel Regional Housing Authority (SMRHA) opened applications today for a deed-restricted homeownership lottery for Spruce House H at 226 East Pacific Avenue, Unit H, Telluride, Colorado, 81435.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=407",
+    img: ""
   },
   {
     title: "Join Us! Meet and Greet with Planning Director Finalists",
@@ -3595,6 +3595,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1424",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14909"
+  },
+  {
+    title: "Black Bear and Imogene Passes Closed for the Winter",
+    source: "San Miguel County",
+    date: "November 3, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1423",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
   },
   {
     title: "County Offices Closed Thursday 11/19",
@@ -3624,6 +3633,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Black Bear and Imogene Passes Closed for the Winter",
+    source: "San Miguel County",
+    date: "November 3, 2026",
+    newsTopic: "community",
+    copy: "Due to changing weather conditions and the onset of winter, Imogene and Black Bear Passes are now officially closed for the season.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=551",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
+  },
+  {
     title: "Ridgway Bank Building Officially Added to the National Register of Historic Places",
     source: "Town of Ridgway",
     date: "October 9, 2027",
@@ -3648,7 +3666,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Ridgway Planning Commission Meeting Agenda and Packet - November 18, 2026&nbsp;",
     source: "Town of Ridgway",
-    date: "November 17, 2026",
+    date: "November 18, 2026",
     firstSeen: "2026-11-13",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3668,20 +3686,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Notice of Public Hearing Wed., Nov. 18, 2026 at 5:30 p.m. - 1) Text Amendment to the Ridgway Municipal Code reducing term of Planning Commission members to 3 years; 2) Application for Resubdivision of Lots 16-22 of Block 22 (N Laura St and Clinton St); 3) Application for Conditional Use Permit for Lot 6 of Block 4 of River Park, Ridgway Business Park (542 N Cora St)",
-    source: "Town of Ridgway",
-    date: "November 4, 2026",
-    firstSeen: "2026-11-04",
-    newsTopic: "recreation",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.11.18_public-hearing-notice-PC.pdf",
-    img: ""
-  },
-  {
     title: "Notice of Change of November Meeting Date for the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "November 17, 2026",
+    date: "November 18, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3703,7 +3710,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Public Hearing for Liquor License on November 19, 2026 at 5:30pm - Chipeta Lodge Resort &amp; Spa, 304 S Lena Street - Notice dated October 13, 2026",
     source: "Town of Ridgway",
-    date: "November 17, 2026",
+    date: "November 18, 2026",
     firstSeen: "2026-10-14",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3714,7 +3721,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "November 17, 2026",
+    date: "November 18, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3725,7 +3732,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway, City of Ouray, and Ouray County Establish New Three-Year Affordable Housing Goals",
     source: "Town of Ridgway",
-    date: "November 17, 2026",
+    date: "November 18, 2026",
     firstSeen: "2026-10-21",
     newsTopic: "housing",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -4378,28 +4385,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Telluride R-1 School District Board Regular Meeting",
-    link: "https://koto.org/event/telluride-r-1-school-district-board-regular-meeting-2/",
-    description: "Telluride R-1 School District Board of Education holds a regular meeting on Tuesday, November 17th, at 5:15 p.m. in the Bridal Veil conference room at TMHS and via Zoom. The meeting agenda and Zoom link can be found at tellurideschool.org.",
-    pubDate: "2026-11-17T17:15:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Middle/High School, TELLURIDE",
-    imageUrl: ""
-  },
-  {
-    title: "Stories & Poems Telluride",
-    link: "https://koto.org/event/stories-poems-telluride/",
-    description: "Storyteller and writer Craig Childs will join his wife poet Daiva Česonis, both of them living at the edge of Naturita Canyon on Wrights Mesa near Norwood, for an evening of storytelling and poetry at the Wilkinson Public Library’s magazine room Tuesday Nov. 17 th at 5:15 pm MST.",
-    pubDate: "2026-11-17T17:15:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/10/DaivaCraigFlySPTnov26.png"
-  },
-  {
     title: "Roots to Routes: A Community Storytelling Night",
     link: "https://koto.org/event/roots-to-routes-a-community-storytelling-night/",
     description: "Some of the best adventures start right outside our front door, and others take us halfway around the world. Join the Telluride Mountain Club for Roots to Routes, a new storytelling night where your neighbors share personal, authentic outdoor adventures, from big expeditions abroad to memorable weekends close to home. Each storyteller gets 10 minutes to present with slides, followed by 3 minutes for Q&A. Have a story to share? We’re looking for a real mix of adventures, including climbing, mountaineering, rafting, skiing, bikepacking, hiking, and more, from people of all ages and experience levels. Submit your story by November 3rd. We look forward to seeing you there!",
@@ -4904,6 +4889,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: ""
+  },
+  {
+    title: "Mountainfilm Noel Night Local Pass Sale",
+    link: "https://koto.org/event/mountainfilm-noel-night-local-pass-sale/",
+    description: "Mountainfilm is holding a pass sale on Noel Night, Wednesday, December 9, from 11 AM to 8 PM at the Mountainfilm office, 122 S. Oak St. in Telluride. Palmyra Passes to the 2027 festival will be buy one, get one free, in person only . The festival is May 27-31, 2027.",
+    pubDate: "2026-12-09T11:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Mountainfilm Offices, Telluride",
+    imageUrl: ""
   }
 ];
 
@@ -4961,7 +4957,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Shepherd, Australian • Male",
     firstSeen: "2026-10-31",
     revealDate: "2026-11-02",
-    lastSeen: "2026-11-17"
+    lastSeen: "2026-11-18"
   },
   {
     id: "TEL-A-209",
@@ -4975,7 +4971,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Collie, Border / Cattle Dog, Australian (Red Heeler) • Female",
     firstSeen: "2026-10-31",
     revealDate: "2026-11-04",
-    lastSeen: "2026-11-17"
+    lastSeen: "2026-11-18"
   },
   {
     id: "TEL-A-214",
@@ -4989,7 +4985,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Puppy • Collie, Border / American Blue Heeler • Male",
     firstSeen: "2026-11-15",
     revealDate: "2026-11-15",
-    lastSeen: "2026-11-17"
+    lastSeen: "2026-11-18"
   }
 ];
 
@@ -6647,17 +6643,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Bike & Brewery Tour",
-    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
-    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
-    pubDate: "2026-11-16T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
-  },
-  {
     title: "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
     link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
     description: "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
@@ -6904,18 +6889,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/45301/i-5fmsgs6-5k-2100x1400-d6f22d2a-6109-408c-9f35-051a33841613.800x533.webp"
   },
   {
-    title: "KOTO Ski Swap",
-    link: "https://www.telluride.com/event/koto-ski-swap/",
-    description: "Get prepped for the winter season ahead at the annual KOTO Ski Swap at the Wilkinson Public Library. Donate your used …",
-    pubDate: "2026-11-13",
-    endDate: "2026-11-16",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/28871/464865559_570687275405719_3117454875494611862_n.800x533.webp"
-  },
-  {
     title: "Roots to Routes: A Community Storytelling Night",
     link: "https://www.telluride.com/event/roots-to-routes-a-community-storytelling-night/",
     description: "Some of the best adventures start right outside our front door, and others take us halfway around the world. Join the …",
@@ -7146,6 +7119,18 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/64198/lodge-winter-2200x1237.800x533.webp"
   },
   {
+    title: "Palm Art Dance Presents: Neverland",
+    link: "https://www.telluride.com/event/palm-art-dance-presents-neverland/",
+    description: "Palm Arts Dance presents Neverland at the Michael D. Palm Theatre. From age three to eighteen, this performance will …",
+    pubDate: "2026-12-12",
+    endDate: "2026-12-14",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/64374/neverland_2026_pr_image_4_93_x_3_87_in.800x533.webp"
+  },
+  {
     title: "Warren Miller&#039;s \"Days Off\"",
     link: "https://www.telluride.com/event/warren-millers-days-off/",
     description: "Celebrate the season with Warren Miller’s 77th annual ski and snowboard film, Days Off, coming to the Sheridan Opera …",
@@ -7304,6 +7289,18 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/63702/falcobookportwashington-19.800x533.webp"
   },
   {
+    title: "Augment Music at the SHOW Bar",
+    link: "https://www.telluride.com/event/augment-music-at-the-show-bar/",
+    description: "The Sheridan Arts Foundation is teaming up with Augment Music to present four free evenings of live music at SHOW Bar …",
+    pubDate: "2027-01-05",
+    endDate: "2027-03-30",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/64385/augment-at-show-bar-1.800x533.webp"
+  },
+  {
     title: "Teton Gravity Research&#039;s \"Actually, It Is Rocket Science\"",
     link: "https://www.telluride.com/event/teton-gravity-researchs-actually-it-is-rocket-science/",
     description: "Actually, It Is Rocket Science is a tongue-in-cheek look at the seemingly reckless abandon that many of the world’s …",
@@ -7452,24 +7449,6 @@ const LEGAL_NOTICES = [
     address: "40697 State Highway 145, Norwood, CO 81423 (NW¼ NW¼ Section 26, Township 45 North, Range 13 West, N.M.P.M., San Miguel County)",
     noticeKey: "foreclosure-2026-07-norwood-hwy145",
     caseNumber: "2026-07"
-  },
-  {
-    title: "Utility Rule Change -- Proposed Amendment to SMPA Rules and Regulations (COL-000275)",
-    entity: "San Miguel Power Association, Inc. (SMPA)",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "💧",
-    iconClass: "type-hearing",
-    type: "Utilities",
-    filterTag: "utilities",
-    summary: "The Board of Directors of San Miguel Power Association, Inc. (SMPA) is considering amendments to its Rules and Regulations, with proposed changes available for member review on the SMPA website. The Board will review and may adopt the changes at its November 17, 2026 virtual Board Meeting beginning at 9:00 a.m. Members may register to attend and provide public comment through the SMPA website.",
-    deadline: "2026-11-17",
-    expires: "2026-11-17",
-    dates: "10/15",
-    papers: ["ttimes_1015"],
-    url: "https://www.telluridenews.com/news/legals/article_2a67f0e2-7d5c-47a5-a0a6-a1635a6dda11.html",
-    address: "San Miguel Power Association service territory, San Miguel County, Colorado (meeting held virtually)",
-    noticeKey: "smpa-rules-regulations-amendment-2026-COL000275"
   },
   {
     title: "Request for Proposal -- San Miguel County Housing Action Plan",
@@ -7653,24 +7632,6 @@ const LEGAL_NOTICES = [
     address: "305 West Colorado Avenue, Telluride, CO 81435",
     noticeKey: "name-change-2026C30012",
     caseNumber: "2026C30012"
-  },
-  {
-    title: "Public Hearing -- Ophir Ordinance #2026-07 Prohibiting Short-Term Rentals",
-    entity: "Town of Ophir",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "The Town of Ophir will hold a public hearing on Tuesday, November 17, 2026 at 7:00 PM at Ophir Town Hall to consider second reading of Ordinance #2026-07, which would amend Section 303.1 of the Town's Land Use Code to prohibit short-term rentals of 30 days or fewer. Community members may attend in person at 36 Porphyry Street, Ophir, or contact Town Hall at (970) 728-4943 for more information. This ordinance would apply throughout the Town of Ophir.",
-    deadline: "2026-11-17",
-    expires: "2026-11-17",
-    dates: "11/5",
-    papers: ["ttimes_1105"],
-    url: "https://www.telluridenews.com/news/legals/article_4fe133a6-ca5f-42a1-810d-63306c1b854d.html",
-    address: "36 Porphyry Street, Ophir, CO 81426",
-    noticeKey: "ord-ophir-2026-07"
   },
   {
     title: "RFP -- Telluride Conference Center Management and Operation Agreement",
@@ -9267,26 +9228,6 @@ function getTownAgendaLink(title, eventDate) {
 // MeetingsService (HARC stays in TELLURIDE_CACHED_DATA above). Empty until the
 // next content-refresh run. Each entry: {date,title,agendaUrl,hasAgenda,location,time}.
 const TELLURIDE_BOARD_MEETINGS = [
-  {
-    date: "November 17, 2026",
-    title: "(Master Lease Lottery) Telluride Housing Authority",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8329",
-    hasAgenda: true,
-    location: "Rebekah Hall, 113 W Columbia Ave",
-    time: "10:05 AM",
-    civicwebId: 8329,
-    packetUrl: "https://telluride-co.civicweb.net/document/447348/"
-  },
-  {
-    date: "November 17, 2026",
-    title: "Town Council",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8046",
-    hasAgenda: true,
-    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: "10:00 AM",
-    civicwebId: 8046,
-    packetUrl: "https://telluride-co.civicweb.net/document/447389/"
-  },
   {
     date: "November 18, 2026",
     title: "Telluride Housing Authority Subcommittee Special Meeting",

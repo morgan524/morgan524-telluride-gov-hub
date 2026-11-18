@@ -94,32 +94,6 @@
     "endDate": "2026-12-15"
   },
   {
-    "title": "Telluride R-1 School District Board Regular Meeting",
-    "href": "https://koto.org/event/telluride-r-1-school-district-board-regular-meeting-2/",
-    "date": "2026-11-17",
-    "time": "5:15 PM",
-    "location": "Telluride Middle/High School, TELLURIDE",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-2.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Telluride R-1 School District Board of Education holds a regular meeting on Tuesday, November 17th, at 5:15 p.m. in the Bridal Veil conference room at TMHS and via Zoom. The meeting agenda and Zoom link can be found at tellurideschool.org.",
-    "type": "Community"
-  },
-  {
-    "title": "Stories & Poems Telluride",
-    "href": "https://koto.org/event/stories-poems-telluride/",
-    "date": "2026-11-17",
-    "time": "5:15 PM",
-    "location": "",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/10/DaivaCraigFlySPTnov26.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Storyteller and writer Craig Childs will join his wife poet Daiva Česonis, both of them living at the edge of Naturita Canyon on Wrights Mesa near Norwood, for an evening of storytelling and poetry at the Wilkinson Public Library’s…",
-    "type": "Community"
-  },
-  {
     "title": "Talking Gourds Presents: Stories and Poems-Craig Childs and Daiva ČEsonis",
     "href": "https://telluridelibrary.libcal.com/event/15798229?hs=a",
     "date": "2026-11-17",
@@ -2033,6 +2007,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "Mountainfilm Noel Night Local Pass Sale",
+    "href": "https://koto.org/event/mountainfilm-noel-night-local-pass-sale/",
+    "date": "2026-12-09",
+    "time": "11:00 AM",
+    "location": "Mountainfilm Offices, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-8.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Mountainfilm is holding a pass sale on Noel Night, Wednesday, December 9, from 11 AM to 8 PM at the Mountainfilm office, 122 S. Oak St. in Telluride. Palmyra Passes to the 2027 festival will be buy one, get one free, in person only . The…",
+    "type": "Festivals"
+  },
+  {
     "title": "After School Art for Ages 5-8",
     "href": "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-5-8-861",
     "date": "2026-12-09",
@@ -2260,6 +2247,20 @@
     "desc": "Après at 9,545 kicks off the winter on the pool deck at Mountain Lodge Telluride, 9,545 feet up in Mountain Village. …",
     "type": "Community",
     "endDate": "2027-04-03"
+  },
+  {
+    "title": "Palm Art Dance Presents: Neverland",
+    "href": "https://www.telluride.com/event/palm-art-dance-presents-neverland/",
+    "date": "2026-12-12",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/64374/neverland_2026_pr_image_4_93_x_3_87_in.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Palm Arts Dance presents Neverland at the Michael D. Palm Theatre. From age three to eighteen, this performance will …",
+    "type": "Arts & Film",
+    "endDate": "2026-12-14"
   },
   {
     "title": "Warren Miller&#039;s \"Days Off\"",
@@ -2862,6 +2863,20 @@
     "source": "Telluride.com",
     "desc": "Join the Sheridan Arts Foundation for five nights of world-class entertainment at the historic Sheridan Opera House.",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Augment Music at the SHOW Bar",
+    "href": "https://www.telluride.com/event/augment-music-at-the-show-bar/",
+    "date": "2027-01-05",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/64385/augment-at-show-bar-1.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "The Sheridan Arts Foundation is teaming up with Augment Music to present four free evenings of live music at SHOW Bar …",
+    "type": "Music",
+    "endDate": "2027-03-30"
   },
   {
     "title": "Telluride Rotary Club Meeting",

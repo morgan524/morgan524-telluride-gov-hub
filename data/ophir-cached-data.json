@@ -18,5 +18,15 @@
     "special": false,
     "board": "ga",
     "note": "Next scheduled meeting -- agenda posted closer to the date."
+  },
+  {
+    "date": "January 19, 2027",
+    "time": null,
+    "title": "General Assembly Meeting",
+    "agendaUrl": null,
+    "packetUrl": null,
+    "special": false,
+    "board": "ga",
+    "note": "Next scheduled meeting -- agenda posted closer to the date."
   }
 ]

@@ -12,18 +12,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/45301/i-5fmsgs6-5k-2100x1400-d6f22d2a-6109-408c-9f35-051a33841613.800x533.webp"
   },
   {
-    "title": "KOTO Ski Swap",
-    "link": "https://www.telluride.com/event/koto-ski-swap/",
-    "description": "Get prepped for the winter season ahead at the annual KOTO Ski Swap at the Wilkinson Public Library. Donate your used …",
-    "pubDate": "2026-11-13",
-    "endDate": "2026-11-16",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/28871/464865559_570687275405719_3117454875494611862_n.800x533.webp"
-  },
-  {
     "title": "Roots to Routes: A Community Storytelling Night",
     "link": "https://www.telluride.com/event/roots-to-routes-a-community-storytelling-night/",
     "description": "Some of the best adventures start right outside our front door, and others take us halfway around the world. Join the …",
@@ -254,6 +242,18 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/64198/lodge-winter-2200x1237.800x533.webp"
   },
   {
+    "title": "Palm Art Dance Presents: Neverland",
+    "link": "https://www.telluride.com/event/palm-art-dance-presents-neverland/",
+    "description": "Palm Arts Dance presents Neverland at the Michael D. Palm Theatre. From age three to eighteen, this performance will …",
+    "pubDate": "2026-12-12",
+    "endDate": "2026-12-14",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/64374/neverland_2026_pr_image_4_93_x_3_87_in.800x533.webp"
+  },
+  {
     "title": "Warren Miller&#039;s \"Days Off\"",
     "link": "https://www.telluride.com/event/warren-millers-days-off/",
     "description": "Celebrate the season with Warren Miller’s 77th annual ski and snowboard film, Days Off, coming to the Sheridan Opera …",
@@ -410,6 +410,18 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63702/falcobookportwashington-19.800x533.webp"
+  },
+  {
+    "title": "Augment Music at the SHOW Bar",
+    "link": "https://www.telluride.com/event/augment-music-at-the-show-bar/",
+    "description": "The Sheridan Arts Foundation is teaming up with Augment Music to present four free evenings of live music at SHOW Bar …",
+    "pubDate": "2027-01-05",
+    "endDate": "2027-03-30",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/64385/augment-at-show-bar-1.800x533.webp"
   },
   {
     "title": "Teton Gravity Research&#039;s \"Actually, It Is Rocket Science\"",

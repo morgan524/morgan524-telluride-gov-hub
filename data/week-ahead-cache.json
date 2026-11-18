@@ -1,34 +1,22 @@
 {
-  "hash": "f985044d936137b39f76d8b55569c0fbb838422c",
-  "lede": "Monday night, Telluride Town Council votes on the 2027 budget and the property tax levy that funds it — and in the same session takes a second reading on an ordinance that would suspend the Open Space Fund's 5% cut of Real Estate Transfer Tax revenue for the year, a real tension between keeping the lights on and protecting the land-conservation commitment this community has long held. Also Monday, the School Board debriefs on November ballot results including the 5A mill levy override, which will shape school funding for years ahead, and the Fire District takes its budget to a second reading alongside early construction financing discussions. By the end of the week, the gondola reopens for winter.",
+  "hash": "b76df7a6dde624d62df88b03ae00c3aa7d92ec3e",
+  "lede": "Mountain Village Council has a packed Thursday — public hearing on the Metro District's 2027 budget, first readings on the town budget ordinance and the 2026 property tax levy, and a minor subdivision on the land-use side, all in one sitting. Meanwhile, HARC takes up the long-delayed Shandoka Lot redevelopment preliminary reviews at 860 Black Bear Rd on Tuesday, and the Telluride Housing Authority Subcommittee meets in special session to rule on lottery exceptions that could determine whether two families close on a Spruce House unit. The gondola reopens for winter on Friday, and the Backcountry Film Fest runs Wednesday and Thursday if you need a reason to get out of the house.",
   "notable": [
     {
-      "id": 3,
-      "stake": "Council votes on 2027 budget, property tax levy, and open-space fund suspension."
-    },
-    {
-      "id": 1,
-      "stake": "Board debriefs on 5A MLO results that directly determine school funding going forward."
-    },
-    {
-      "id": 0,
-      "stake": "Fire District budget gets second reading alongside debt and construction financing review."
-    },
-    {
-      "id": 9,
-      "stake": "Long-delayed Shandoka Lot redevelopment at 860 Black Bear Rd gets its first HARC hearing."
+      "id": 2,
+      "stake": "HARC hears long-delayed Shandoka Lot new-construction reviews at 860 Black Bear Rd."
     },
     {
       "id": 6,
-      "stake": "County votes to repeal austerity measures and adopt a first-in-region AI governance policy."
+      "stake": "THA subcommittee rules on lottery exceptions affecting real buyers with a closing deadline."
     },
     {
-      "id": 13,
-      "stake": "THA subcommittee rules on unconventional loan and eligibility exceptions affecting active lottery."
+      "id": 7,
+      "stake": "First action on ordinance restructuring Norwood's Planning & Zoning and Board of Adjustment seats."
     },
     {
-      "id": 14,
-      "stake": "Norwood considers land use code change equalizing Planning and Zoning Commission seat structure."
+      "id": 8,
+      "stake": "Public hearing on MV Metro District 2027 budget; first readings on town budget and property tax levy."
     }
   ]
 }
