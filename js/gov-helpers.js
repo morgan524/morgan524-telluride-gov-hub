@@ -471,7 +471,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://ouraycoco.portal.civicclerk.com/event/1082/files/agenda/7595","zoomUrl":"https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1","meetingId":"876 0637 5697","passcode":"946299","phone":"346-248-7799","sv":4},
 
   "ouray|2026-11-18|Board of County Commissioners Work Session":
-    {"agendaUrl":"https://ouraycoco.portal.civicclerk.com/event/1130/files/agenda/7597","zoomUrl":"https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1","meetingId":"876 0637 5697","passcode":"946299","phone":"346-248-7799","sv":4},
+    {"agendaUrl":"https://ouraycoco.portal.civicclerk.com/event/1130/files/agenda/7600","zoomUrl":"https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1","meetingId":"876 0637 5697","passcode":"946299","phone":"346-248-7799","sv":4},
 
   "telluride|2026-12-03|Planning & Zoning Commission - Special Meeting - Dec 03 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8362","sv":4,"ph":"a5aeca1c51c0115f"},
@@ -890,25 +890,55 @@ const MEETING_PREVIEWS = {
   "telluride|2026-12-17|Planning & Zoning Commission Chair - Dec 17 2026":
     "The Planning & Zoning Commission Chair is expected to meet on December 17, 2026. Key topics may include a comprehensive review of Telluride's Employee Rental Housing Policies, with the town currently seeking consulting services to assess and potentially update those housing regulations.",
 
-  "telluride|2026-11-18|Telluride Housing Authority Subcommittee Special Meeting - Nov 18 2026":
-    "The Telluride Housing Authority Subcommittee will consider multiple requests from residents seeking exceptions to Affordable Housing Guidelines regarding lenders and mortgages, including applications from Nichole Zangara, Jim Riley, Anthony and Melannie Tavano, and others. Members will also hear public comment during the hybrid meeting.",
-
-  "telluride|2026-11-18|Historic & Architectural Review Commission Chair - Nov 18 2026":
-    "The Historic & Architectural Review Commission is expected to consider an application for an extension related to a project at 115 W Colorado Avenue. The meeting will be held in hybrid format at Rebekah Hall on November 18, 2026, with public comment accepted on non-agenda items.",
-
-  "telluride|2026-11-18|Historic & Architectural Review Commission - Nov 18 2026":
-    "The Historic and Architectural Review Commission is expected to review applications for Certificates of Appropriateness related to proposed changes to structures or signs in Telluride. The commission may also address matters related to historic designation, preservation standards, and architectural significance within the town.",
-
-  "telluride|2026-11-18|Parks & Recreation Commission - Nov 18 2026":
-    "The Parks & Recreation Commission is expected to consider an update to the Banner Policy for the Town Park Pavilion, review department facilities and operations from spring through fall 2026, and receive staff reports on 2026 projects, the 2027 budget, winter season updates, and Town Park Oval and Warner Field improvements.",
-
   "county|2026-12-18|Board of County Commissioners Special Meeting":
     "Board will consider procurement matters including a Housing Action Plan, material hauling services, a Lawson Hill Connector Trail project, and a fuel island canopy construction. Related legal notices include multiple foreclosure sales and a proposed 2027 budget from the Southwestern Water Conservation District.",
 
+  "telluride|2026-11-18|Telluride Housing Authority Subcommittee Special Meeting - Nov 18 2026":
+    "The Telluride Housing Authority Subcommittee will consider multiple requests from residents seeking exceptions to Affordable Housing Guidelines regarding lenders and mortgages. The subcommittee may also discuss a proposed review of employee rental housing policies.",
+
+  "telluride|2026-11-18|Historic & Architectural Review Commission Chair - Nov 18 2026":
+    "The Historic & Architectural Review Commission will consider an application for an extension related to a project at 115 W Colorado Avenue. The meeting will also include a public comment period on non-agenda items. Members of the public may attend in person or participate remotely.",
+
+  "telluride|2026-11-18|Historic & Architectural Review Commission - Nov 18 2026":
+    "The Historic and Architectural Review Commission is expected to review applications for Certificates of Appropriateness related to construction, renovation, alteration, or demolition of structures in Telluride. The commission may also address matters of historic designation and architectural significance within the town.",
+
+  "telluride|2026-11-18|Parks & Recreation Commission - Nov 18 2026":
+    "The Parks & Recreation Commission is expected to consider an update to the Banner Policy for the Town Park Pavilion, review departmental facilities and operations from spring through fall 2026, and receive staff reports on 2026 projects, the 2027 budget, winter season updates, and Town Park Oval improvements.",
+
   "ouray|2026-11-18|Board of County Commissioners Work Session":
-    "Commissioners are expected to receive a quarterly EMS update and discuss an intergovernmental agreement with Ridgway Fire. The board will also review memorandums of understanding with the City of Ouray and Town of Ridgway, hear administrative reports, and continue discussions on the 2027 budget."
+    "Board will discuss a quarterly EMS update and an intergovernmental agreement with Ridgway Fire, along with memoranda of understanding with the City of Ouray and Town of Ridgway. Commissioners will also hear administrative reports and continue discussions on the 2027 budget."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
+  {
+    title: "2026 Chamber Meeting, December",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
+    img: ""
+  },
+  {
+    title: "Noel Night",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 4, 2026",
+    newsTopic: "community",
+    copy: "Community shopping event and celebration.",
+    href: "https://norwoodcolorado.com/event/noel-night-3/",
+    img: ""
+  },
+  {
+    title: "West End Parade of Lights & Elfin Eve",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "Holiday parade and festival.",
+    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
+    img: ""
+  },
   {
     title: "Parish Bulletin for the Week of November 15th",
     source: "St. Patrick's Catholic Church",
@@ -6043,6 +6073,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/51579855188578/huge/de5019ffbfacf4a9f5e85d8a14961584c70e7873.jpg"
   },
   {
+    title: "Monsters & Myths by Challenge Island",
+    link: "https://events.ourayridgwayevents.com/event/monsters-myths-by-challenge-island",
+    description: "A Challenge Island program for kids centered on monsters and myths, featuring themed building and engineering activities inspired by legendary creatures and mythological beasts. The event takes place at the Voyager Youth Program's Ridgway site.",
+    pubDate: "2026-11-30T22:00:00.000Z",
+    endDate: "2026-12-14",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Voyager Youth Program - Ridgway Site",
+    imageUrl: "https://localist-images.azureedge.net/photos/54543483397623/huge/4f3401f8c9cf844d59fb883a46f09a6ba3e5011a.jpg"
+  },
+  {
     title: "Mamas & Caregivers Connect - Prenatal, Postpartum, and Beyond",
     link: "https://events.ourayridgwayevents.com/event/mamas-caregivers-connect-prenatal-postpartum-and-beyond",
     description: "A community gathering at the Ridgway Public Library for new and expecting mothers to connect and support one another through the prenatal and postpartum journey. The group meets in person and virtually, focusing on breastfeeding confidence, physical recovery, and emotional wellbeing.",
@@ -6498,28 +6540,6 @@ const OURAY_RIDGWAY_EVENTS = [
 ];
 
 const NORWOOD_EVENTS = [
-  {
-    title: "Board Of Trustees Rescheduled For 11 18 2026 Due To Federal Holiday",
-    link: "https://www.norwoodtown.com/2026-11-11-board-of-trustees-rescheduled-for-11-18-2026-due-to-federal-holiday",
-    description: "The Town of Norwood Board of Trustees meeting has been rescheduled to November 18, 2026, in observance of a federal holiday. The meeting will take place in Norwood, Colorado, as a regular Town of Norwood government proceeding.",
-    pubDate: "2026-11-11T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Town Closure",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
-    title: "Closed For Veterans Day",
-    link: "https://www.norwoodtown.com/2026-11-11-closed-for-veterans-day",
-    description: "The Town of Norwood will be closed in observance of Veterans Day. Municipal offices and services will be unavailable on this federal holiday honoring those who have served in the United States armed forces.",
-    pubDate: "2026-11-11T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Town Closure",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-11-12-norwood-sanitation-district-meeting-amended",

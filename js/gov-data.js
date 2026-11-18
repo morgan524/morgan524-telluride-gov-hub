@@ -743,15 +743,6 @@ const NORWOOD_CACHE_DATE = '2026-11-18';
 
 const NORWOOD_CACHED_DATA = [
   {
-    date: "November 11, 2026",
-    time: null,
-    title: "Board of Trustees Rescheduled for 11.18.2026 Due to Federal Holiday Meeting",
-    agendaUrl: "https://www.norwoodtown.com/files/4b4b60e4b/11.11.2026+Board+of+Trustee+Rescheduled+.pdf",
-    packetUrl: null,
-    special: false,
-    board: "bot"
-  },
-  {
     date: "November 16, 2026",
     time: null,
     title: "Planning and Zoning Commission Meeting",
@@ -904,9 +895,9 @@ const OURAY_COUNTY_CACHED_DATA = [
     location: "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
     civicClerkId: 1130,
     note: null,
-    packetUrl: "https://ouraycoco.portal.civicclerk.com/event/1130/files/agenda/7598",
+    packetUrl: "https://ouraycoco.portal.civicclerk.com/event/1130/files/agenda/7601",
     board: "bocc",
-    agendaUrl: "https://ouraycoco.portal.civicclerk.com/event/1130/files/agenda/7597"
+    agendaUrl: "https://ouraycoco.portal.civicclerk.com/event/1130/files/agenda/7600"
   },
   {
     date: "December 8, 2026",
@@ -959,6 +950,15 @@ const OURAY_COUNTY_CACHED_DATA = [
     title: "Board of County Commissioners",
     location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
     civicClerkId: 2152,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "January 12, 2027",
+    time: "9:00 AM",
+    title: "Swearing-In Ceremony and Reception",
+    location: "Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 2224,
     note: null,
     board: "bocc"
   },
