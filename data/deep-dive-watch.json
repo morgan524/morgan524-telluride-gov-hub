@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T02:52:28.849Z",
+ "generated": "2026-11-18T11:25:12.458Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -28,18 +28,9 @@
    "label": "Telluride Medical Center",
    "lastUpdated": "2026-09-27",
    "upcoming": [],
-   "recent": [
-    {
-     "source": "med",
-     "date": "2026-11-03",
-     "title": "Regular Board Meeting",
-     "snippet": "A short special meeting — just 30 minutes on the books — with one substantive item: a proposal from Jensen Partners to provide support through the due diligence process with CommonSpirit.…"
-    }
-   ],
+   "recent": [],
    "developments": [],
-   "stale": [
-    "Telluride Medical Center: med discussed it on 2026-11-03 (\"Regular Board Meeting\") but the deep dive was last edited 2026-09-27."
-   ]
+   "stale": []
   },
   "code": {
    "label": "Code Changes & Accelerated Review",
