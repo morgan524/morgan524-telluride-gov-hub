@@ -356,5 +356,25 @@
     "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=208",
     "address": "",
     "smcBidID": "208"
+  },
+  {
+    "title": "Notice of Final Settlement -- PRV Stations Early Procurement, Ferguson Enterprises (Town of Telluride)",
+    "entity": "Town of Telluride Public Works Department",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "The Town of Telluride Public Works Department intends to begin processing final payment to Ferguson Enterprises, LLC for the 2024/2025 Early Procurement of Package-Type Pressure Reducing Valve (PRV) Stations project. Any person or firm with claims or debts against the contractor must file written notice with Civil Engineer Justin Blair at P.O. Box 397, Telluride, CO 81435 on or before November 23, 2026. No payment will be processed if valid claims are received before that date.",
+    "deadline": "2026-11-23",
+    "expires": "2026-11-23",
+    "dates": "11/19",
+    "papers": [
+      "ttimes_1119"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_a0b9535a-57a0-48ea-91a5-bf3583aa9d95.html",
+    "address": "Town of Telluride, CO (Public Works Department, P.O. Box 397, Telluride, CO 81435)",
+    "noticeKey": "final-settlement-telluride-prv-ferguson-2026"
   }
 ]

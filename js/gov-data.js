@@ -262,7 +262,7 @@ const COUNTY_CACHED_DATA = [
 
 const SMART_BOARD_URL = 'https://smarttelluride.colorado.gov/board-meetings';
 
-const SMART_CACHE_DATE = '2026-11-18';
+const SMART_CACHE_DATE = '2026-11-19';
 
 const SMART_CACHED_DATA = [
   {
@@ -1190,16 +1190,6 @@ const TELLURIDE_HARC_URL = 'https://telluride.gov/100/Historic-and-Architectural
 const TELLURIDE_CACHE_DATE = '2026-11-19';
 
 const TELLURIDE_CACHED_DATA = [
-  {
-    date: "November 18, 2026",
-    title: "HARC Meeting",
-    board: "harc",
-    location: "Rebekah Hall, 113 W Columbia Ave",
-    civicWebId: 8026,
-    time: "5:30 PM",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8026",
-    packetUrl: "https://telluride-co.civicweb.net/document/447248/"
-  },
   {
     date: "December 16, 2026",
     title: "HARC Meeting",

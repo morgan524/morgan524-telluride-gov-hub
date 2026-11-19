@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-11-19",
+    "title": "Should the town rethink how it rents to its own workers?",
+    "body": "The Resident Advisory Committee is taking up consulting services for a comprehensive review of Telluride's employee rental housing policies. That means the rules governing who gets town-owned housing, on what terms, could change.\n\nSome residents will say the current policies need a hard look — the workforce has shifted and the housing crunch is real. Others will push back on spending consulting dollars to revisit a system that, however imperfect, is already running.\n\nWhat do you think — is a full policy review the right move, or not worth the cost?",
+    "choices": [
+      "Review is overdue",
+      "Not worth the cost",
+      "Depends on the scope",
+      "It's complicated"
+    ],
+    "sourceUrl": "/gov-hub.html",
+    "topics": [
+      "meeting"
+    ]
+  },
+  {
     "date": "2026-11-18",
     "title": "Exception or precedent?",
     "body": "The Telluride Housing Authority Subcommittee has a stack of requests on its plate — residents including Nichole Zangara, Jim Riley, and Anthony and Melannie Tavano are asking for exceptions to the Affordable Housing Guidelines around lenders and mortgages. That's a lot of individual cases at once.\n\nSome will see this as the system working: real people hitting real obstacles, and a process that lets them ask for relief. Others will wonder whether a pile of exception requests signals that the underlying guidelines need a harder look — or whether exceptions, granted often enough, quietly become the new rule.\n\nSo: when residents need exceptions to make affordable housing work for them, is that a feature of the system or a sign something's off?",
@@ -419,21 +434,6 @@
       "Post office expansion first",
       "Workforce housing comes first",
       "Fund both somehow",
-      "It's complicated"
-    ],
-    "sourceUrl": "/gov-hub.html",
-    "topics": [
-      "meeting"
-    ]
-  },
-  {
-    "date": "2026-10-20",
-    "title": "A trail through Lawson Hill — what's the cost of connection?",
-    "body": "The Open Space Commission is expected to take up the Lawson Hill Connector Trail Project, with proposals currently being sought. On the surface it sounds straightforward — more trail, more access. But connector trails through open space tend to split people. Some see a long-overdue link that makes the area more usable for more residents. Others worry about what more foot traffic does to land that was set aside precisely to limit it. Neither side is wrong, exactly. So: is a connector trail through open space a win for the community, or a compromise of what open space is for?",
-    "choices": [
-      "More access is worth it",
-      "Protect the open space",
-      "Depends on the route",
       "It's complicated"
     ],
     "sourceUrl": "/gov-hub.html",

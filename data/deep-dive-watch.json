@@ -1,14 +1,23 @@
 {
- "generated": "2026-11-19T02:28:01.144Z",
+ "generated": "2026-11-19T11:23:23.502Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
    "lastUpdated": "2026-10-26",
    "upcoming": [],
-   "recent": [],
+   "recent": [
+    {
+     "source": "telluride",
+     "date": "2026-11-18",
+     "title": "Historic & Architectural Review Commission - Nov 18 2026",
+     "snippet": "A heavy agenda for November 18. The two items that have been waiting since August — the Shandoka Lot redevelopment preliminary large-scale reviews for Buildings 1 & 2 and Buildings 3 & 4 at 860 Black…"
+    }
+   ],
    "developments": [],
    "stale": [
-    "Carhenge / Shandoka: timeline entry \"Council resolution puts the Carhenge consolidation decision…\" (Oct 27, 2026) is still marked upcoming but the date has passed."
+    "Carhenge / Shandoka: telluride discussed it on 2026-11-18 (\"Historic & Architectural Review Commission - Nov 18 2026\") but the deep dive was last edited 2026-10-26.",
+    "Carhenge / Shandoka: timeline entry \"Council resolution puts the Carhenge consolidation decision…\" (Oct 27, 2026) is still marked upcoming but the date has passed.",
+    "Carhenge / Shandoka: timeline entry \"HARC takes up Shandoka's four buildings\" (Nov 18, 2026) is still marked upcoming but the date has passed."
    ]
   },
   "medcenter": {
@@ -136,7 +145,14 @@
    "label": "Field Paving at Town Park",
    "lastUpdated": "",
    "upcoming": [],
-   "recent": [],
+   "recent": [
+    {
+     "source": "telluride",
+     "date": "2026-11-18",
+     "title": "Parks & Recreation Commission - Nov 18 2026",
+     "snippet": "A routine Parks & Recreation Commission meeting. The one action item is a proposed update to the Town Park Pavilion Banner Policy — specifically to add a category recognizing Telluride high school…"
+    }
+   ],
    "developments": [],
    "stale": []
   }

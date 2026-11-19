@@ -1,27 +1,5 @@
 [
   {
-    "title": "The Classics Taproom Society",
-    "link": "https://koto.org/event/the-classics-taproom-society-2/",
-    "description": "Discover the magic of classic literature in our newest book club, where we celebrate the milestones of timeless works! With the upcoming 50th, 75th, and 100th anniversaries of these literary treasures in 2026 and 2027, there’s no better time to dive deep into great stories. Each month features a passionate guest moderator who will guide you through rich discussions. The library will provide light appetizers and Telluride Brewing Company will also be offering $5 TBC beers during the book club. Join us at Telluride Brewing Company in Lawson Hill on the 3rd Wednesday of the month Oct-March at 5:30pm to discuss the following classics: November 18- Foundation (75 years) by Isaac Asimov – presented by Laura Colbert December 16- The Catcher in the Rye by J.D. …",
-    "pubDate": "2026-11-18T17:30:00-07:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Brewing Company Lawson Hill Taproom",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/taproom-society-7-1.png"
-  },
-  {
-    "title": "The Sherbino & Citizens State Bank Present: Winter Wildlands Alliance BACKCOUNTRY FILM FEST",
-    "link": "https://koto.org/event/the-sherbino-citizens-state-bank-present-winter-wildlands-alliance-backcountry-film-fest/",
-    "description": "The Sherbino and CSB Present: Winter Wildlands Alliance Backcountry Film Festival Doors: 6:00pm || Films: 6:30pm || $10 students and seniors (18-/ 65+) || $15 General Admission The Backcountry Film Festival, presented by Winter Wildlands Alliance, celebrates the power and spirit of humans in winter. Since its inception, the festival has toured across states, countries—even Antarctica—screening hundreds of inspiring films that celebrate adventure, conservation, and the magic of winter. Over the years, the festival has raised millions of dollars to support local projects that strengthen winter communities and protect our wild snowscapes. The 2026-27 winter season is the 22nd Anniversary of the Backcountry Film Festival! This year showcases a dynamic lineup of short documentaries and ski films that transport audiences straight to the heart of winter. …",
-    "pubDate": "2026-11-18T18:00:00-07:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "The Sherbino, Ridgway",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/11/BCFF-film-fest-nov-18.png"
-  },
-  {
     "title": "Salon Night at Telluride Arts HQ",
     "link": "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-11-19/",
     "description": "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it here in Telluride. These are evenings for conversation and connection, not lectures or formal programming. They are casual, open, and intentionally unstructured, designed to create the atmosphere where ideas can collide, new friendships form, and creativity sparks. Imagine an evening where musicians talk with writers, painters meet photographers, filmmakers share stories with ceramicists—and the unexpected happens!",
@@ -86,6 +64,17 @@
     "category": "Community Event",
     "location": "Wilkinson Public Library, Telluride",
     "imageUrl": "https://koto.org/wp-content/uploads/2026/10/nov-3.png"
+  },
+  {
+    "title": "Telluride Adaptive Sports Program New Volunteer Meeting",
+    "link": "https://koto.org/event/telluride-adaptive-sports-program-new-volunteer-meeting/",
+    "description": "The Telluride Adaptive Sport Program (aka TASP) is looking for new volunteers! Volunteers assist with adaptive outdoor adventures for individuals living with disabilities. No adaptive experience necessary. TASP is hosting a New Volunteer information meeting this Friday, November 20th 4:30-5:30pm in the Program Room of the Library. Come learn all about the winter program and how to get involved! For more information, call 970-728-2443 or email volunteer@ tellurideadaptivesports.org . Virtual link available upon request. You can also visit the website at tellurideadaptivesports.org .",
+    "pubDate": "2026-11-20T16:30:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
   },
   {
     "title": "Girl Winter Film Tour",
@@ -429,6 +418,17 @@
     "imageUrl": "https://koto.org/wp-content/uploads/2026/11/SpongeBob-Dec.-4-6-2026.jpg"
   },
   {
+    "title": "Dolores Ski Swap",
+    "link": "https://koto.org/event/dolores-ski-swap/",
+    "description": "Find your ski and winter outdoor gear at the Dolores Ski Swap on Saturday, December 5th, 9 a.m. – 2 p.m. at the Dolores School Cafeteria. In addition to a robust inventory of gently used skis, snowboards and gear, community members are invited to drop off their donations or consignment items on Friday, December 4th, from 3 – 7 p.m., and shop the Saturday sale to support Dolores Ski Club and Operation Graduation. For more info, email OGDoloresSeniors@gmail.com.",
+    "pubDate": "2026-12-05T09:00:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Dolores School",
+    "imageUrl": ""
+  },
+  {
     "title": "Live Music in the Après Lounge at Mountain Lodge Telluride",
     "link": "https://koto.org/event/live-music-in-the-apres-lounge-at-mountain-lodge-telluride/2026-12-05/",
     "description": "Local live music in the Après Lounge at Mountain Lodge Telluride in Mountain Village, 4 to 7 PM on most Thursdays, Fridays and Saturdays all winter.",
@@ -504,5 +504,27 @@
     "category": "Community Event",
     "location": "Mountainfilm Offices, Telluride",
     "imageUrl": ""
+  },
+  {
+    "title": "Sewing 101 with Melissa",
+    "link": "https://koto.org/event/sewing-101-with-melissa/2026-12-09/",
+    "description": "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.",
+    "pubDate": "2026-12-09T17:00:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/02/sewing.jpg"
+  },
+  {
+    "title": "Matchstick Productions ~ The Way Out ~ Presented by The Sherbino",
+    "link": "https://koto.org/event/matchstick-productions-the-way-out-presented-by-the-sherbino/",
+    "description": "Wednesday, December 9th Doors: 6:00pm || Film: 6:30pm || $10 students and seniors (18-/ 65+) / $15 General Admission || Matchstick Productions returns with their 34th annual ski film, The Way Out, an action-packed tribute to the culture and lifestyle of skiing. What makes skiing special goes far beyond the fleeting thrill of dropping into a line. It’s the deep, elemental relationship with nature that sets mountain culture apart from any traditional activity. For skiers, this isn’t just a sport; we live to ski, and ski to live. The Way Out drops you right into the action across the globe, from heavy Alaskan spine lines to local backyard laps in Whistler. The Way Out represents a path toward total freedom. …",
+    "pubDate": "2026-12-09T18:00:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "The Sherbino, Ridgway",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/11/Way-out-Matchstick-Dec-9.png"
   }
 ]

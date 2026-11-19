@@ -1,14 +1,18 @@
 {
-  "hash": "71126aa9eaba3205026c4cdc26a0cf4bb09aec51",
-  "lede": "Mountain Village Town Council has a heavy Thursday — public hearing on the Metro District's proposed 2027 budget, first readings on both the town budget ordinance and the 2026 property tax levy, plus a minor subdivision on the land-use side, so if taxes or spending are on your radar, that's the room to be in. The gondola reopens Friday, which means winter is officially here, and there's enough going on around the valley — film fests, Friendsgiving, a People's March — to fill the shoulder days before the holiday.",
+  "hash": "cca1c4789ff89bd08b7bb3b2224a91bf44f89140",
+  "lede": "Thursday is a heavy one for Mountain Village: Town Council opens a public hearing on the Metro District's proposed 2027 budget and takes up first readings on both the town budget ordinance and the 2026 property tax levy — decisions that directly set what residents pay and what services they get. The School Board also meets Friday morning for a first reading of a revised extracurricular eligibility policy that ties athletic participation to Colorado's statutory definitions of male and female. Elsewhere, the gondola reopens Friday for winter, and the week closes out with Alpine Chapel's free community Friendsgiving on Sunday.",
   "notable": [
     {
       "id": 0,
-      "stake": "Public hearing on 2027 budget and property tax levy votes tonight."
+      "stake": "Public hearing and first readings on 2027 budget and 2026 property tax levy."
+    },
+    {
+      "id": 8,
+      "stake": "First reading of Policy JJJ ties athletic eligibility to state sex definitions."
     },
     {
       "id": 4,
-      "stake": "Land Use Code amendments in active work session — shape future zoning rules."
+      "stake": "Work session continues on potential Land Use Code amendments affecting development rules."
     }
   ]
 }

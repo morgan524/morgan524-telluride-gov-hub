@@ -708,5 +708,12 @@
   "county|2026-12-18|Board of County Commissioners Special Meeting": {
     "sv": 4,
     "ph": "7751bc604656aec0"
+  },
+  "school|2026-11-20|Telluride Board of Education Special Meeting": {
+    "agendaUrl": "https://files.smartsites.parentsquare.com/3403/112026_sm_packet.pdf",
+    "zoomUrl": "https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09",
+    "meetingId": "865 8512 4120",
+    "passcode": "468668",
+    "sv": 4
   }
 }
