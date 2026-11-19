@@ -1,23 +1,10 @@
 {
- "generated": "2026-11-18T20:16:31.749Z",
+ "generated": "2026-11-19T02:28:01.144Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
    "lastUpdated": "2026-10-26",
-   "upcoming": [
-    {
-     "source": "telluride",
-     "sourceLabel": "Town of Telluride",
-     "title": "HARC Meeting",
-     "date": "2026-11-18",
-     "time": "5:30 PM",
-     "location": "Rebekah Hall, 113 W Columbia Ave",
-     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8026",
-     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8026",
-     "zoomLink": "https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA",
-     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
-    }
-   ],
+   "upcoming": [],
    "recent": [],
    "developments": [],
    "stale": [
@@ -148,20 +135,7 @@
   "fieldpaving": {
    "label": "Field Paving at Town Park",
    "lastUpdated": "",
-   "upcoming": [
-    {
-     "source": "telluride",
-     "sourceLabel": "Town of Telluride",
-     "title": "Parks & Recreation Commission",
-     "date": "2026-11-18",
-     "time": "12:00 PM",
-     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8084",
-     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8084",
-     "zoomLink": "https://us06web.zoom.us/meeting/register/tZIufu6srzwsH9X0sfxgA_In-LUt0azBIi8Z",
-     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
-    }
-   ],
+   "upcoming": [],
    "recent": [],
    "developments": [],
    "stale": []

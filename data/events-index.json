@@ -189,7 +189,7 @@
     "endDate": "2026-12-30"
   },
   {
-    "title": "Ongoing: Film Stills from the Ridgway Independent Film Fest",
+    "title": "Film Stills from the Ridgway Independent Film Fest",
     "href": "https://events.ourayridgwayevents.com/event/copy-of-art-opening-film-stills-ridgway-independent-film-fest",
     "date": "2026-11-19",
     "time": "10:00 AM",
@@ -476,6 +476,19 @@
     "source": "Sherbino Theater",
     "desc": "Cosmic Luau with PSYLO is a dancehall-style show at The Sherbino Theater in Ridgway, featuring a light show by Lumagic. The event combines tropical and psychedelic themes in a limited-seating venue setting.",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Mind Blown Telluride: Magic with Ty Gallenbeck",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-magic-with-ty-gallenbeck/",
+    "date": "2026-11-20",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/50161/mind-blown-listing-2200x1100.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "A close-up magic show featuring magician Ty Gallenbeck, held at Mountain Lodge Telluride in Mountain Village. Performances run most Friday and Saturday nights.",
+    "type": "Community"
   },
   {
     "title": "Yoga with Lauren",
@@ -835,20 +848,6 @@
     "type": "Family & Kids"
   },
   {
-    "title": "Live Music at Mountain Lodge",
-    "href": "https://www.telluride.com/event/live-music-at-alloy-kitchen/",
-    "date": "2026-11-26",
-    "time": "5:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/62862/lodge-winter-2200x1237-6.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Live music all winter at Mountain Lodge Telluride in Mountain Village. Local acts play the Après Lounge from 4 to 7 …",
-    "type": "Music",
-    "endDate": "2027-04-05"
-  },
-  {
     "title": "Facing the Mourning",
     "href": "https://koto.org/event/facing-the-mourning/2026-11-26/",
     "date": "2026-11-26",
@@ -900,6 +899,19 @@
     "source": "Town of Norwood",
     "desc": "The Town of Norwood's regular senior meals program will not be held on this date. This notice serves as a reminder for community members who rely on or participate in the senior meals service.",
     "type": "Community"
+  },
+  {
+    "title": "Live Music at Mountain Lodge",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/live-music-at-mountain-lodge/",
+    "date": "2026-11-26",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/50249/alloy-live-music-1800x900.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Live music returns to the Après Lounge at Mountain Lodge Telluride in Mountain Village, with local acts performing most Thursdays from 4 to 7 p.m. throughout the winter season. It's a relaxed après-ski setting for enjoying live…",
+    "type": "Music"
   },
   {
     "title": "Up-Off Gymnastics, Dance, and Spanish",
@@ -981,6 +993,19 @@
     "type": "Music"
   },
   {
+    "title": "Mind Blown Telluride: Magic with Ty Gallenbeck",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-magic-with-ty-gallenbeck/",
+    "date": "2026-11-27",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/50161/mind-blown-listing-2200x1100.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "A close-up magic show featuring magician Ty Gallenbeck, held at Mountain Lodge Telluride in Mountain Village. Gallenbeck performs most Friday and Saturday nights, delivering an intimate experience of sleight-of-hand and illusion for…",
+    "type": "Community"
+  },
+  {
     "title": "Yoga with Lauren",
     "href": "https://koto.org/event/yoga-with-lauren/2026-11-28/",
     "date": "2026-11-28",
@@ -1057,20 +1082,6 @@
     "source": "KOTO Community Calendar",
     "desc": "Join us for The Real Book Club, a monthly jazz jam session for musicians of all levels who want to dive into classic jazz standards together! Whether you're a seasoned improviser or just starting out, this is a welcoming space to play,…",
     "type": "Talks & Classes"
-  },
-  {
-    "title": "Sunday Rehab",
-    "href": "https://www.telluride.com/event/sunday-rehab/",
-    "date": "2026-11-29",
-    "time": "5:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/62769/download_1.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Sunday Rehab at Mountain Lodge Telluride in Mountain Village, 1 to 5 p.m. on winter Sundays. Live music and an extended …",
-    "type": "Music",
-    "endDate": "2027-04-04"
   },
   {
     "title": "Sunday Live Music in the Lounge at Mountain Lodge Telluride",
@@ -1599,6 +1610,19 @@
     "category": "Community Event",
     "source": "Town of Norwood",
     "desc": "Noel Night is a community holiday event hosted by the Town of Norwood, bringing residents together to celebrate the season. Held in early December, it offers a festive evening for families and neighbors in the Norwood area.",
+    "type": "Community"
+  },
+  {
+    "title": "Mind Blown Telluride: Magic with Ty Gallenbeck",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-magic-with-ty-gallenbeck/",
+    "date": "2026-12-04",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/50161/mind-blown-listing-2200x1100.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Magician Ty Gallenbeck performs close-up magic at Mountain Lodge Telluride in Mountain Village, with shows running most Friday and Saturday nights. Mind Blown Telluride is an ongoing local magic show featuring Gallenbeck's sleight-of-hand…",
     "type": "Community"
   },
   {
@@ -2155,6 +2179,19 @@
     "type": "Music"
   },
   {
+    "title": "Mind Blown Telluride: Magic with Ty Gallenbeck",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-magic-with-ty-gallenbeck/",
+    "date": "2026-12-11",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/50161/mind-blown-listing-2200x1100.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Magician Ty Gallenbeck performs his close-up magic show, Mind Blown Telluride, at Mountain Lodge Telluride in Mountain Village. The intimate show runs most Friday and Saturday nights, offering guests an up-close experience with sleight of…",
+    "type": "Community"
+  },
+  {
     "title": "Happy Little Trees: Classes @ the Wright",
     "href": "https://events.ourayridgwayevents.com/event/happy-little-trees-classes-the-wright-6743",
     "date": "2026-12-12",
@@ -2481,6 +2518,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Gin & Gingerbread House Decorating Friday, December 18th, 6:00pm-8:00pm (ages 21+ only), Sherbino Ridgway $45 for one gingerbread house for one person decorating$65 for one gingerbread house for two people decorating$90 for one gingerbread…",
+    "type": "Community"
+  },
+  {
+    "title": "Mind Blown Telluride: Magic with Ty Gallenbeck",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-magic-with-ty-gallenbeck/",
+    "date": "2026-12-18",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/50161/mind-blown-listing-2200x1100.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "A close-up magic show featuring magician Ty Gallenbeck, held at Mountain Lodge Telluride in Mountain Village. The Mind Blown Telluride series runs most Friday and Saturday nights.",
     "type": "Community"
   },
   {

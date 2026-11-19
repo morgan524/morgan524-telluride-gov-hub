@@ -1,27 +1,27 @@
 {
- "generated": "2026-11-18T20:16:31.751Z",
+ "generated": "2026-11-19T02:28:01.145Z",
  "pinned": false,
- "topic": "carhenge",
- "topicLabel": "Carhenge / Shandoka",
- "headline": "Carhenge / Shandoka goes before HARC Meeting on Wednesday, November 18",
- "blurb": "A heavy agenda for November 18. The two items that have been waiting since August — the Shandoka Lot redevelopment preliminary large-scale reviews for Buildings 1 & 2 and Buildings 3 & 4 at 860 Black Bear Rd — are finally being heard, with the Town of Telluride as applicant and Design Workshop doing the design work. Both involve new construction outside the historic district exceeding 5,000 sq ft in an Accommodations 2 zone.",
+ "topic": "code",
+ "topicLabel": "Code Changes & Accelerated Review",
+ "headline": "Code Changes & Accelerated Review goes before Planning & Zoning Commission on Thursday, November 19",
+ "blurb": "A light agenda for this one. The 222 West San Juan Avenue subdivision work session — which had been continued from October — has since been withdrawn by the applicant, so it won't be heard. The commission will get a presentation on wildfire modeling technologies from Firebird Chief Scientist Jason Sibold, and continue a work session on potential Land Use Code amendments to landscaping requirements (LUC 3-502) and tree maintenance and removal rules (LUC 3-505).",
  "images": [],
  "deepDive": {
-  "label": "Carhenge / Shandoka",
-  "href": "/deep-dive-carhenge.html"
+  "label": "Code Changes & Accelerated Review",
+  "href": "/deep-dive-code.html"
  },
  "meeting": {
-  "title": "HARC Meeting",
+  "title": "Planning & Zoning Commission",
   "sourceLabel": "Town of Telluride",
-  "date": "2026-11-18",
-  "humanDate": "Wednesday, November 18",
+  "date": "2026-11-19",
+  "humanDate": "Thursday, November 19",
   "time": "5:30 PM",
-  "location": "Rebekah Hall, 113 W Columbia Ave",
-  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8026",
+  "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8108",
   "hasAgenda": true,
-  "packetUrl": "https://telluride-co.civicweb.net/document/447248/",
-  "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8026",
-  "zoomLink": "https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA",
+  "packetUrl": "https://telluride-co.civicweb.net/document/447433/",
+  "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8108",
+  "zoomLink": "https://us06web.zoom.us/meeting/register/OC4r5SGcR6S0q5DBnXPh8Q",
   "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
  }
 }

@@ -1,12 +1,4 @@
 {
-  "norwood|2026-10-19|Planning and Zoning Commission Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://www.norwoodtown.com/files/8a5f7ce8f/10.19.2026+P%26Z+BOA+AGENDA.pdf",
-    "zoomUrl": "https://us02web.zoom.us/j/85001344971",
-    "meetingId": "850 0134 4971",
-    "passcode": "8142302",
-    "phone": "970-327-4288"
-  },
   "fire|2026-10-20|Board of Directors Meeting": {
     "sv": 4,
     "agendaUrl": "https://www.telluridefire.com/files/cef8a399b/Agenda+-October+20th%2C+2026.pdf"
@@ -86,10 +78,6 @@
     "zoomUrl": "https://us06web.zoom.us/j/89983740568?pwd=Dl2LOcbcDvSP6Ifh2K09u2KB0cdBZH.1",
     "meetingId": "899 8374 0568",
     "passcode": "022414"
-  },
-  "school|2026-10-19|Telluride Board of Education Work Session": {
-    "sv": 4,
-    "ph": "b858cb282617fb09"
   },
   "county|2026-10-26|Open Space Commission Meeting": {
     "sv": 4,
@@ -204,10 +192,6 @@
   "smart|2026-11-12|SMART Board of Directors": {
     "sv": 4,
     "ph": "b858cb282617fb09"
-  },
-  "ouraycity|2026-10-19|Ouray City Council Regular Meeting": {
-    "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=765214",
-    "sv": 4
   },
   "school|2026-11-16|Telluride Board of Education Work Session": {
     "sv": 4,

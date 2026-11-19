@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 11-18-26",
+    "source": "KOTO Community Radio",
+    "date": "November 19, 2026",
+    "newsTopic": "housing",
+    "copy": "Telluride Approves its 2027 Budget; Hospital District Considers Partnership with CommonSpirit; County Examines Housing Mitigation Fee",
+    "href": "https://koto.org/news/newscast-11-18-26/"
+  },
+  {
     "title": "Newscast 11-16-26",
     "source": "KOTO Community Radio",
     "date": "November 17, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "public-safety",
     "copy": "Ouray County Sheriff's Office Takes Over City Policing; West End Roundup with the San Miguel Basin Forum; Norwood Mavericks Charge into State Playoffs",
     "href": "https://koto.org/news/newscast-11-5-26/"
-  },
-  {
-    "title": "Newscast 11-4-26",
-    "source": "KOTO Community Radio",
-    "date": "November 5, 2026",
-    "newsTopic": "government",
-    "copy": "San Miguel County Votes for Sheriff Masters; Dylan Brooks Wins County Commissioner Seat; Voters Support Telluride Schools",
-    "href": "https://koto.org/news/newscast-11-4-26/"
   }
 ]
