@@ -1,5 +1,41 @@
 [
   {
+    "title": "Upcoming youth events",
+    "source": "Telluride Times",
+    "date": "November 19, 2026",
+    "firstSeen": "2026-11-19",
+    "newsTopic": "community",
+    "copy": "Three quick dates for Telluride families: House winners get announced Nov. 19, boys basketball league finals land Nov. 21, and kids are out Nov. 23–27 for Thanksgiving break.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/norwood_post/article_83843478-b79a-46b2-b73a-13722b11658d.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/6b/26b6eb94-3c4f-421c-b115-c2a957f3ca4f/6af77e44f3953.image.png",
+    "imgHiRes": true
+  },
+  {
+    "title": "Keeping Norwood's community garden growing",
+    "source": "Telluride Times",
+    "date": "November 19, 2026",
+    "firstSeen": "2026-11-19",
+    "newsTopic": "housing",
+    "copy": "The Norwood Community Garden — started in 2009, with 30+ plots and water included in annual rents as low as $25 — has been struggling with drought, aging infrastructure, and a volunteer base that's largely older. San Miguel County just approved $5,000 for a planning consultant to map out a more water-efficient, lower-labor future for the space.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/norwood_post/article_68fcccc6-9e71-4ed4-9ec4-8b627fce5ea2.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/f3/af3b7695-2da9-45b1-856a-e9bf504a994d/6af737a5555df.image.webp",
+    "imgHiRes": true
+  },
+  {
+    "title": "Norwood School November newsletter",
+    "source": "Telluride Times",
+    "date": "November 19, 2026",
+    "firstSeen": "2026-11-19",
+    "newsTopic": "education",
+    "copy": "Norwood School's Homecoming Week drew strong community turnout for games, a bonfire, and a dance, with local businesses and families pitching in to make it happen. Construction on the new school building is on track, with completion expected March 2028 and move-in planned for summer 2028.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/norwood_post/article_dc5e2023-dbc5-4772-91bc-b4cc6a7b9b07.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Suicide Loss Remembrance Day is Saturday, Nov. 21",
     "source": "Telluride Times",
     "date": "November 19, 2026",
@@ -80,7 +116,7 @@
     "copy": "Two THS students share positive experiences from the school's mentorship program — one working with a local pastor, another in a fifth-grade dual-immersion classroom. Separately, a resident questions school district spending amid a 21% enrollment drop since 2019-20 and rising per-pupil costs. The Sheridan Opera House and a local condo owner both thank the Town's Green Grant program for helping fund energy-efficiency upgrades.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/article_30ac257a-69a5-48f2-bdcc-5005215f2cde.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "letterAuthor": "Sincerely, Hazel Noel",
     "isLetter": true,
     "imgHiRes": true
@@ -94,7 +130,7 @@
     "copy": "A writer recalls discovering a rat had swum aboard their sailboat while anchored in storm-damaged Puerto Rico. After failed sticky traps, they caught it in a live trap — and instead of drowning it, motored it to shore. Small moment, but it stuck with her.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/columnists/article_75232578-f647-41f6-9fb8-5f89f2996bfc.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "isLetter": true,
     "imgHiRes": true
   },
@@ -116,8 +152,8 @@
     "date": "November 19, 2026",
     "firstSeen": "2026-11-19",
     "newsTopic": "community",
-    "copy": "Growing up with a career military father, I learned early that control was not up for negotiation. Resistance was, pretty much, futile. Though my father was a charismatic, talented and deeply emotional man, we didn’t encounter too much of that…",
-    "claudeSummary": false,
+    "copy": "A personal essay in the Telluride Times reflects on the costs of reflexive pushback — personally and culturally — and points to three recent books exploring acceptance, non-reactivity, and letting go of control. Practical reads for anyone feeling worn down by the urge to fight every battle.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/columnists/article_645b761f-ff38-4ef1-a98f-195316fa6575.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     "isLetter": true,
@@ -784,28 +820,6 @@
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
     "claudeSummary": false,
     "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-reminds-pet-owners-of-responsibilities-2026-10-06.pdf",
-    "img": ""
-  },
-  {
-    "title": "Ridgway Planning Commission Meeting Agenda and Packet - November 18, 2026&nbsp;",
-    "source": "Town of Ridgway",
-    "date": "November 19, 2026",
-    "firstSeen": "2026-11-13",
-    "newsTopic": "community",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-Planning-Commission-Meeting-Packet---November-18%2C-2026-acc.pdf",
-    "img": ""
-  },
-  {
-    "title": "Ridgway Youth Advisory Council Meeting Agenda",
-    "source": "Town of Ridgway",
-    "date": "November 18, 2026",
-    "firstSeen": "2026-11-10",
-    "newsTopic": "government",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/00-Youth-Advisory-Council-Meeting-Agenda-2026-11-18.pdf",
     "img": ""
   },
   {

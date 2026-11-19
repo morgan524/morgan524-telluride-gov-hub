@@ -420,7 +420,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=776213","sv":4},
 
   "telluride|2026-12-07|Open Space Commission - Dec 07 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8134","sv":4,"ph":"73dde754d9947413"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8134","sv":4,"ph":"a9e422e946835d0f"},
 
   "norwood|2026-12-08|Norwood Water Commission Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -534,7 +534,16 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"7751bc604656aec0"},
 
   "school|2026-11-20|Telluride Board of Education Special Meeting":
-    {"agendaUrl":"https://files.smartsites.parentsquare.com/3403/112026_sm_packet.pdf","zoomUrl":"https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09","meetingId":"865 8512 4120","passcode":"468668","sv":4}
+    {"agendaUrl":"https://files.smartsites.parentsquare.com/3403/112026_sm_packet.pdf","zoomUrl":"https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09","meetingId":"865 8512 4120","passcode":"468668","sv":4},
+
+  "telluride|2026-12-15|Special Joint Town Council - Dec 15 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8366","sv":4,"ph":"422d3832599edff9"},
+
+  "telluride|2026-12-15|Special Joint Historic & Architectural Review Commission - Dec 15 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8367","sv":4,"ph":"6f777296adfe6d4b"},
+
+  "telluride|2026-12-15|Special Joint Planning & Zoning Commission - Dec 15 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8368","sv":4,"ph":"48c342c8e69c52ee"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -872,14 +881,23 @@ const MEETING_PREVIEWS = {
   "school|2026-11-20|Telluride Board of Education Special Meeting":
     "Board will consider a first reading and approval of Policy JJJ, conduct a board self-assessment, and hold an executive session regarding negotiations strategy. The meeting also includes two public comment periods and is scheduled for Friday, November 20, 2026, at 8:45 AM.",
 
+  "telluride|2026-12-15|Special Joint Town Council - Dec 15 2026":
+    "Council is expected to discuss employee rental housing policies as part of a special joint session. The Town of Telluride has issued a Request for Proposal seeking consulting services to conduct a comprehensive review of its employee rental housing policies, suggesting housing affordability remains a key focus.",
+
+  "telluride|2026-12-15|Special Joint Historic & Architectural Review Commission - Dec 15 2026":
+    "The Historic and Architectural Review Commission is expected to convene in a special joint session to review matters related to historic preservation and architectural appropriateness in Telluride. The meeting may also touch on employee rental housing policy, as the town is separately seeking consulting services for a comprehensive review of those policies.",
+
+  "telluride|2026-12-15|Special Joint Planning & Zoning Commission - Dec 15 2026":
+    "The Planning & Zoning Commission is expected to discuss a comprehensive review of Telluride's employee rental housing policies, including consideration of consulting services to evaluate and potentially update the town's existing framework governing employee rental housing.",
+
   "telluride|2026-11-19|Resident Advisory Committee - Nov 19 2026":
     "The Resident Advisory Committee is expected to discuss consulting services for a comprehensive review of Telluride's employee rental housing policies, as well as a proposed amendment to the condominium declaration for Good Gargoyle Condominiums, originally recorded in 1988.",
 
   "telluride|2026-11-19|Planning & Zoning Commission - Nov 19 2026":
-    "The Planning & Zoning Commission is expected to elect a new chair and vice chair, approve October meeting minutes, and introduce a new senior planner. A previously continued work session will also be taken up, along with public comment on non-agenda items.",
+    "The Planning & Zoning Commission is expected to consider matters related to employee rental housing policy, including a comprehensive review of existing regulations, as well as a proposed amendment to the condominium declaration for the Good Gargoyle Condominiums, originally recorded in 1988.",
 
   "telluride|2026-11-19|Liquor Licensing Authority - Nov 19 2026":
-    "The Liquor Licensing Authority will consider special event permit requests from the Telluride Nordic Association for an annual membership party on December 2 and from Second Chance Humane Society, along with approval of minutes from an October 14 special meeting."
+    "The Liquor Licensing Authority will consider special event permit requests from the Telluride Nordic Association for an annual membership party on December 2 and from Second Chance Humane Society, along with approval of minutes from the October 14 special meeting."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -929,7 +947,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "November 19, 2026",
     newsTopic: "recreation",
     copy: "San Miguel Power Association’s board voted unanimously Tuesday to hike nearly all of its rate categories for the next year, including a 27% increase to the flat access fee levied on the vast majority of the co-op’s customers. Marking the fifth straight year of rate increases for the electric provide",
-    href: "https://www.ouraynews.com/2026/11/18/electricity-rate-hikes-approved/",
+    href: "https://www.ouraynews.com/2026/11/18/electricity-rate-hikes-approved/?ta_paidstory",
     img: ""
   },
   {
@@ -949,7 +967,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "November 19, 2026",
     newsTopic: "government",
     copy: "Ouray County employees will have new guardrails for how to use artificial intelligence tools in their work starting in January, after county commissioners on Tuesday approved their first-ever AI policy. The county developed a draft of the new policy in April, and fleshed it out with feedback from co",
-    href: "https://www.ouraynews.com/2026/11/18/county-signs-off-artificial-intelligence-policy/",
+    href: "https://www.ouraynews.com/2026/11/18/county-signs-off-artificial-intelligence-policy/?ta_paidstory",
     img: ""
   },
   {
@@ -959,7 +977,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "November 19, 2026",
     newsTopic: "government",
     copy: "Ouray City Council members will continue to be able to attend a limited number of meetings online each year, although councilors appear ready to tighten the rules dictating remote governance. The council voted 4-1 Monday night against repealing a five-year-old policy that allows councilors to attend",
-    href: "https://www.ouraynews.com/2026/11/18/changes-looming-citys-remote-attendance-policy/",
+    href: "https://www.ouraynews.com/2026/11/18/changes-looming-citys-remote-attendance-policy/?ta_paidstory",
     img: ""
   },
   {
@@ -979,7 +997,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "November 19, 2026",
     newsTopic: "government",
     copy: "Dear Editor: As nearly 30-year residents of Log Hill Village, we are deeply concerned by the Ouray County Board of County Commissioners unilateral decision to appropriate the $223,000 remaining in the Piñon Special Assessment Paving District for general county use. When the paving district was estab",
-    href: "https://www.ouraynews.com/2026/11/18/county-budget-decisions-reinforce-skepticism/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/11/18/county-budget-decisions-reinforce-skepticism/",
     img: ""
   },
   {
@@ -998,8 +1016,8 @@ const REGIONAL_NEWS_ARTICLES = [
     sourceKey: "ouray-plaindealer",
     date: "November 19, 2026",
     newsTopic: "community",
-    copy: "60 Years Ago November 17, 1966 Five Denver youths were sentenced last Thursday in Delta after pleading guilty to reduced charges of malicious mischief in damaging power transformers belonging to the Western Colorado Power Company in Ouray. Gary Dean Mc-Queary and Richard J. L. Severn, both 18; Johnn",
-    href: "https://www.ouraynews.com/2026/11/18/looking-back-20261119-0207-340361/?ta_paidstory",
+    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago November 17, 1966 Five Denver youths were sentenced last Thursday in Delta after pleading guilty to reduced charges of malicious mischief in damaging power transformers belonging to the",
+    href: "https://www.ouraynews.com/2026/11/18/looking-back-20261119-0207-340361/",
     img: ""
   },
   {
@@ -1501,7 +1519,16 @@ const MANUAL_SUMMARIES = {
     "The December 18 Board of County Commissioners Special Meeting agenda hasn't been posted yet.",
 
   "school|2026-11-20|Telluride Board of Education Special Meeting":
-    "A special meeting with a lot packed into one Friday morning. The board takes up a first reading of Policy JJJ — a revised extracurricular eligibility policy that incorporates Colorado's statutory definitions of male and female for athletic team participation, along with updated rules for homeschooled, charter, and nonpublic-school students seeking to participate in district activities. Then the meeting moves into executive session on two fronts: selecting a superintendent search consultant (with reference-check materials protected under CORA's mandatory nondisclosure provisions), and a personnel matter involving Superintendent John Pandolfo. Coming out of executive session, the board votes on approving the search consultant and any investigative action tied to the Pandolfo matter. The board also conducts a self-assessment under GP-4-E."
+    "A special meeting with a lot packed into one Friday morning. The board takes up a first reading of Policy JJJ — a revised extracurricular eligibility policy that incorporates Colorado's statutory definitions of male and female for athletic team participation, along with updated rules for homeschooled, charter, and nonpublic-school students seeking to participate in district activities. Then the meeting moves into executive session on two fronts: selecting a superintendent search consultant (with reference-check materials protected under CORA's mandatory nondisclosure provisions), and a personnel matter involving Superintendent John Pandolfo. Coming out of executive session, the board votes on approving the search consultant and any investigative action tied to the Pandolfo matter. The board also conducts a self-assessment under GP-4-E.",
+
+  "telluride|2026-12-15|Special Joint Town Council - Dec 15 2026":
+    "The December 15, 2026 Special Joint Town Council agenda hasn't been posted yet.",
+
+  "telluride|2026-12-15|Special Joint Historic & Architectural Review Commission - Dec 15 2026":
+    "The December 15, 2026 Special Joint Historic & Architectural Review Commission agenda hasn't been posted yet.",
+
+  "telluride|2026-12-15|Special Joint Planning & Zoning Commission - Dec 15 2026":
+    "The December 15, 2026 Special Joint Planning & Zoning Commission agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2885,6 +2912,42 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Upcoming youth events",
+    source: "Telluride Times",
+    date: "November 19, 2026",
+    firstSeen: "2026-11-19",
+    newsTopic: "community",
+    copy: "Three quick dates for Telluride families: House winners get announced Nov. 19, boys basketball league finals land Nov. 21, and kids are out Nov. 23–27 for Thanksgiving break.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_83843478-b79a-46b2-b73a-13722b11658d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/6b/26b6eb94-3c4f-421c-b115-c2a957f3ca4f/6af77e44f3953.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "Keeping Norwood's community garden growing",
+    source: "Telluride Times",
+    date: "November 19, 2026",
+    firstSeen: "2026-11-19",
+    newsTopic: "housing",
+    copy: "The Norwood Community Garden — started in 2009, with 30+ plots and water included in annual rents as low as $25 — has been struggling with drought, aging infrastructure, and a volunteer base that's largely older. San Miguel County just approved $5,000 for a planning consultant to map out a more water-efficient, lower-labor future for the space.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_68fcccc6-9e71-4ed4-9ec4-8b627fce5ea2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/f3/af3b7695-2da9-45b1-856a-e9bf504a994d/6af737a5555df.image.webp",
+    imgHiRes: true
+  },
+  {
+    title: "Norwood School November newsletter",
+    source: "Telluride Times",
+    date: "November 19, 2026",
+    firstSeen: "2026-11-19",
+    newsTopic: "education",
+    copy: "Norwood School's Homecoming Week drew strong community turnout for games, a bonfire, and a dance, with local businesses and families pitching in to make it happen. Construction on the new school building is on track, with completion expected March 2028 and move-in planned for summer 2028.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_dc5e2023-dbc5-4772-91bc-b4cc6a7b9b07.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Suicide Loss Remembrance Day is Saturday, Nov. 21",
     source: "Telluride Times",
     date: "November 19, 2026",
@@ -2965,7 +3028,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Two THS students share positive experiences from the school's mentorship program — one working with a local pastor, another in a fifth-grade dual-immersion classroom. Separately, a resident questions school district spending amid a 21% enrollment drop since 2019-20 and rising per-pupil costs. The Sheridan Opera House and a local condo owner both thank the Town's Green Grant program for helping fund energy-efficiency upgrades.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/article_30ac257a-69a5-48f2-bdcc-5005215f2cde.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     letterAuthor: "Sincerely, Hazel Noel",
     isLetter: true,
     imgHiRes: true
@@ -2979,7 +3042,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A writer recalls discovering a rat had swum aboard their sailboat while anchored in storm-damaged Puerto Rico. After failed sticky traps, they caught it in a live trap — and instead of drowning it, motored it to shore. Small moment, but it stuck with her.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_75232578-f647-41f6-9fb8-5f89f2996bfc.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     isLetter: true,
     imgHiRes: true
   },
@@ -3001,8 +3064,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "November 19, 2026",
     firstSeen: "2026-11-19",
     newsTopic: "community",
-    copy: "Growing up with a career military father, I learned early that control was not up for negotiation. Resistance was, pretty much, futile. Though my father was a charismatic, talented and deeply emotional man, we didn’t encounter too much of that…",
-    claudeSummary: false,
+    copy: "A personal essay in the Telluride Times reflects on the costs of reflexive pushback — personally and culturally — and points to three recent books exploring acceptance, non-reactivity, and letting go of control. Practical reads for anyone feeling worn down by the urge to fight every battle.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_645b761f-ff38-4ef1-a98f-195316fa6575.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     isLetter: true,
@@ -3669,28 +3732,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-reminds-pet-owners-of-responsibilities-2026-10-06.pdf",
-    img: ""
-  },
-  {
-    title: "Ridgway Planning Commission Meeting Agenda and Packet - November 18, 2026&nbsp;",
-    source: "Town of Ridgway",
-    date: "November 19, 2026",
-    firstSeen: "2026-11-13",
-    newsTopic: "community",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-Planning-Commission-Meeting-Packet---November-18%2C-2026-acc.pdf",
-    img: ""
-  },
-  {
-    title: "Ridgway Youth Advisory Council Meeting Agenda",
-    source: "Town of Ridgway",
-    date: "November 18, 2026",
-    firstSeen: "2026-11-10",
-    newsTopic: "government",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/00-Youth-Advisory-Council-Meeting-Agenda-2026-11-18.pdf",
     img: ""
   },
   {
@@ -5743,17 +5784,7 @@ const TELLURIDE_FOUNDATION_EVENTS = [
 ];
 
 const OURAY_COUNTY_EVENTS = [
-  {
-    title: "County Employee Friendsgiving Potluck (BOCC Room)",
-    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3794",
-    description: "A potluck Friendsgiving gathering for Ouray County employees, held in the BOCC Room at the Ouray County Courthouse in Ouray. Two or more county commissioners may be in attendance.",
-    pubDate: "2026-11-19T12:00:00.000Z",
-    source: "ouraycounty",
-    sourceLabel: "Ouray County",
-    category: "Community Event",
-    location: "- BOCC Room, Ouray County Courthouse 541 4th Street Ouray CO 81427",
-    imageUrl: ""
-  }
+
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
@@ -5969,7 +6000,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
     description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
     pubDate: "2026-11-23T19:00:00.000Z",
-    endDate: "2027-01-11",
+    endDate: "2027-01-18",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6562,28 +6593,6 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "Norwood Sanitation District Meeting",
-    link: "https://www.norwoodtown.com/2026-11-12-norwood-sanitation-district-meeting-amended",
-    description: "The Norwood Sanitation District will hold a public meeting in Norwood, Colorado. This is an official government meeting open to the community.",
-    pubDate: "2026-11-12T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Government Meeting",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
-    title: "Senior Meals",
-    link: "https://www.norwoodtown.com/2026-11-12-senior-meals",
-    description: "A community meal program for seniors hosted by the Town of Norwood. It offers older residents an opportunity to gather, share a meal, and connect with neighbors in a welcoming setting.",
-    pubDate: "2026-11-12T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Community Event",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-11-16-planning-and-zoning-commission-meeting",
     description: "A regular meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
@@ -6675,17 +6684,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Mind Blown Telluride: Magic with Ty Gallenbeck",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-magic-with-ty-gallenbeck/",
-    description: "A close-up magic show featuring magician Ty Gallenbeck, held at Mountain Lodge Telluride in Mountain Village. Performances run most Friday and Saturday nights.",
-    pubDate: "2026-11-20T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/50161/mind-blown-listing-2200x1100.jpg"
-  },
-  {
     title: "Movies Under the Stars",
     link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     description: "Movies Under the Stars is a recurring outdoor film series held on Saturday evenings at dusk at the Conference Center Plaza in Mountain Village, running from June 13 through August 15. The community event brings free outdoor cinema to the plaza through the summer season.",
@@ -6763,17 +6761,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/50156/mind-blown-listing-2200x1100.jpg"
   },
   {
-    title: "Mind Blown Telluride: Magic with Ty Gallenbeck",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-magic-with-ty-gallenbeck/",
-    description: "A close-up magic show featuring magician Ty Gallenbeck, held at Mountain Lodge Telluride in Mountain Village. Gallenbeck performs most Friday and Saturday nights, delivering an intimate experience of sleight-of-hand and illusion for audiences in the Telluride area.",
-    pubDate: "2026-11-27T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/50161/mind-blown-listing-2200x1100.jpg"
-  },
-  {
     title: "Movies Under the Stars",
     link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     description: "Movies Under the Stars is a recurring outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening on Saturday evenings at dusk. The series runs from June 13 through August 15, bringing community members together for movies in an open-air setting.",
@@ -6816,17 +6803,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30530/drb-event-new.png"
-  },
-  {
-    title: "Mind Blown Telluride: Magic with Ty Gallenbeck",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-magic-with-ty-gallenbeck/",
-    description: "Magician Ty Gallenbeck performs close-up magic at Mountain Lodge Telluride in Mountain Village, with shows running most Friday and Saturday nights. Mind Blown Telluride is an ongoing local magic show featuring Gallenbeck's sleight-of-hand and illusions in an intimate setting.",
-    pubDate: "2026-12-04T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/50161/mind-blown-listing-2200x1100.jpg"
   },
   {
     title: "Movies Under the Stars",
@@ -6895,17 +6871,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
   },
   {
-    title: "Mind Blown Telluride: Magic with Ty Gallenbeck",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-magic-with-ty-gallenbeck/",
-    description: "Magician Ty Gallenbeck performs his close-up magic show, Mind Blown Telluride, at Mountain Lodge Telluride in Mountain Village. The intimate show runs most Friday and Saturday nights, offering guests an up-close experience with sleight of hand and illusion.",
-    pubDate: "2026-12-11T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/50161/mind-blown-listing-2200x1100.jpg"
-  },
-  {
     title: "Movies Under the Stars",
     link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     description: "Movies Under the Stars is an outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening movies on Saturday evenings at dusk. The series runs weekly from June 13 through August 15, 2026.",
@@ -6961,10 +6926,32 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/50264/1920_x_1005_px_cover_centered.jpg"
   },
   {
+    title: "Movies Under the Stars",
+    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    description: "Movies Under the Stars is an outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening movies on Saturday evenings at dusk. The series runs weekly on Saturdays from June 13 through August 15.",
+    pubDate: "2026-12-19T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
+  {
+    title: "Mind Blown Telluride",
+    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    pubDate: "2026-12-19T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
+  },
+  {
     title: "Mind Blown Telluride: Magic with Ty Gallenbeck",
     link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-magic-with-ty-gallenbeck/",
-    description: "A close-up magic show featuring magician Ty Gallenbeck, held at Mountain Lodge Telluride in Mountain Village. The Mind Blown Telluride series runs most Friday and Saturday nights.",
-    pubDate: "2026-12-18T12:00:00.000Z",
+    description: "A close-up magic show featuring magician Ty Gallenbeck, held at Mountain Lodge Telluride in Mountain Village. The show runs most Friday and Saturday nights as an ongoing series.",
+    pubDate: "2026-12-19T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
     category: "Community Event",
@@ -9414,6 +9401,33 @@ const TELLURIDE_BOARD_MEETINGS = [
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "10:00 AM",
     civicwebId: 8365
+  },
+  {
+    date: "December 15, 2026",
+    title: "Special Joint Town Council",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8366",
+    hasAgenda: false,
+    location: "Ah Haa School For the Arts - Launch Pad",
+    time: "5:00 PM",
+    civicwebId: 8366
+  },
+  {
+    date: "December 15, 2026",
+    title: "Special Joint Historic & Architectural Review Commission",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8367",
+    hasAgenda: false,
+    location: "Ah Haa School For the Arts - Launch Pad",
+    time: "5:00 PM",
+    civicwebId: 8367
+  },
+  {
+    date: "December 15, 2026",
+    title: "Special Joint Planning & Zoning Commission",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8368",
+    hasAgenda: false,
+    location: "Ah Haa School For the Arts - Launch Pad",
+    time: "5:00 PM",
+    civicwebId: 8368
   },
   {
     date: "December 15, 2026",

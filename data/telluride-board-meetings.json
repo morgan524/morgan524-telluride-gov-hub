@@ -83,6 +83,33 @@
   },
   {
     "date": "December 15, 2026",
+    "title": "Special Joint Town Council",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8366",
+    "hasAgenda": false,
+    "location": "Ah Haa School For the Arts - Launch Pad",
+    "time": "5:00 PM",
+    "civicwebId": 8366
+  },
+  {
+    "date": "December 15, 2026",
+    "title": "Special Joint Historic & Architectural Review Commission",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8367",
+    "hasAgenda": false,
+    "location": "Ah Haa School For the Arts - Launch Pad",
+    "time": "5:00 PM",
+    "civicwebId": 8367
+  },
+  {
+    "date": "December 15, 2026",
+    "title": "Special Joint Planning & Zoning Commission",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8368",
+    "hasAgenda": false,
+    "location": "Ah Haa School For the Arts - Launch Pad",
+    "time": "5:00 PM",
+    "civicwebId": 8368
+  },
+  {
+    "date": "December 15, 2026",
     "title": "Town Council",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8047",
     "hasAgenda": false,

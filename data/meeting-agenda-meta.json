@@ -533,7 +533,7 @@
   "telluride|2026-12-07|Open Space Commission - Dec 07 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8134",
     "sv": 4,
-    "ph": "73dde754d9947413"
+    "ph": "a9e422e946835d0f"
   },
   "norwood|2026-12-08|Norwood Water Commission Meeting": {
     "sv": 4,
@@ -715,5 +715,20 @@
     "meetingId": "865 8512 4120",
     "passcode": "468668",
     "sv": 4
+  },
+  "telluride|2026-12-15|Special Joint Town Council - Dec 15 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8366",
+    "sv": 4,
+    "ph": "422d3832599edff9"
+  },
+  "telluride|2026-12-15|Special Joint Historic & Architectural Review Commission - Dec 15 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8367",
+    "sv": 4,
+    "ph": "6f777296adfe6d4b"
+  },
+  "telluride|2026-12-15|Special Joint Planning & Zoning Commission - Dec 15 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8368",
+    "sv": 4,
+    "ph": "48c342c8e69c52ee"
   }
 }

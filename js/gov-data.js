@@ -270,8 +270,8 @@ const SMART_CACHED_DATA = [
     time: "3:00 PM",
     title: "SMART Gondola Advisory Committee",
     location: "Virtual (Zoom link in the agenda)",
-    agendaUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.10.26-Gsub-Agenda.pdf",
-    packetUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.10.26-Gsub-Meeting-Packet.pdf",
+    agendaUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.10.26-Gsub-Agenda-%28English_Spanish%29.pdf",
+    packetUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.10.26-Gsub-Packet-%28English_Spanish%29.pdf",
     note: "Gondola Advisory Committee (Gsub): agenda and packet available (PDF)."
   },
   {
@@ -287,9 +287,9 @@ const SMART_CACHED_DATA = [
     time: "3:00 PM",
     title: "SMART Gondola Advisory Committee",
     location: "Virtual (Zoom link in the agenda)",
-    agendaUrl: null,
-    packetUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.11.16-Gsub-Meeting-Packet.pdf",
-    note: "Gondola Advisory Committee (Gsub) — advises SMART on the gondola replacement project. Agenda, packet and Zoom link post at least 24 hours before."
+    agendaUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.11.16-Gsub-Meeting-Packet.pdf",
+    packetUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.11.16_Gsub_Agenda.pdf",
+    note: "Gondola Advisory Committee (Gsub): agenda and packet available (PDF)."
   },
   {
     date: "December 10, 2026",
@@ -747,7 +747,7 @@ const NORWOOD_CACHED_DATA = [
     time: null,
     title: "Board of Trustees Meeting",
     agendaUrl: "https://www.norwoodtown.com/files/8ec8087d1/11.18.2026+Board+of+Trustee+Agenda+ADA.pdf",
-    packetUrl: "https://www.norwoodtown.com/files/e1c9fa885/11.18.2026+BOT+Supporting+Documents.pdf",
+    packetUrl: "https://www.norwoodtown.com/files/b22e92a07/11.18.2026+BOT+Supporting+Documents.pdf",
     special: false,
     board: "bot"
   },
@@ -938,18 +938,18 @@ const OURAY_COUNTY_CACHED_DATA = [
   {
     date: "January 12, 2027",
     time: "9:00 AM",
-    title: "Board of County Commissioners",
-    location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
-    civicClerkId: 2152,
+    title: "Swearing-In Ceremony and Reception",
+    location: "Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 2224,
     note: null,
     board: "bocc"
   },
   {
     date: "January 12, 2027",
-    time: "9:00 AM",
-    title: "Swearing-In Ceremony and Reception",
-    location: "Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
-    civicClerkId: 2224,
+    time: "10:00 AM",
+    title: "Board of County Commissioners",
+    location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 2152,
     note: null,
     board: "bocc"
   },
@@ -1190,6 +1190,14 @@ const TELLURIDE_HARC_URL = 'https://telluride.gov/100/Historic-and-Architectural
 const TELLURIDE_CACHE_DATE = '2026-11-19';
 
 const TELLURIDE_CACHED_DATA = [
+  {
+    date: "December 15, 2026",
+    title: "HARC Meeting",
+    board: "harc",
+    location: "Rebekah Hall, 113 W Columbia Ave",
+    civicWebId: 8367,
+    time: "5:00 PM"
+  },
   {
     date: "December 16, 2026",
     title: "HARC Meeting",
