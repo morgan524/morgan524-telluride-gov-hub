@@ -1,12 +1,24 @@
 [
   {
+    "title": "Telluride Town Council talks recycling, composting",
+    "source": "Telluride Times",
+    "date": "November 20, 2026",
+    "firstSeen": "2026-11-20",
+    "newsTopic": "government",
+    "copy": "Colorado's Extended Producer Responsibility law shifts recycling costs from residents to packaging producers, and Telluride has opted in. Once the Town's contract with the Circular Action Alliance is finalized, recycling automatically becomes free for anyone already receiving service — no action needed. Bruin Waste is handling most of the reporting burden; the application process has been slow but is moving forward.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_39e8b487-e60e-43dc-9896-973180a8b86c.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/34/f3444de8-2e04-4591-ae0b-6ef1a6f43c34/6afca8cbc5eb9.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Lawfully wedded weirdos",
     "source": "Telluride Times",
     "date": "November 19, 2026",
     "firstSeen": "2026-11-20",
-    "newsTopic": "community",
-    "copy": "The bride wore a hot pink gown. The groom sported a powder blue vintage suit and a bespoke bolo tie. The bridal procession was set to the crowd’s acapella version of the Beatles’ “All You Need is Love.” The officiant…",
-    "claudeSummary": false,
+    "newsTopic": "arts-culture",
+    "copy": "Kris Kwasniewski and Scott Upshur, both well-known in Telluride's arts community, got married November 5th on the courthouse steps in front of over 200 guests. The two met on Main Street in 2015 and celebrated with a reception at the Sheridan Opera House featuring local band Chrome Velvet.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/arts_and_entertainment/article_569bdca9-b6de-41e0-aad4-59b02931a9a5.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/d2/6d23006c-62b7-4492-b425-d3f79cc28bbc/6afdc36850b3f.image.jpg",
     "imgHiRes": true
@@ -727,15 +739,6 @@
     "copy": "",
     "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1423",
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
-  },
-  {
-    "title": "County Offices Closed Thursday 11/19",
-    "source": "San Miguel County",
-    "date": "November 17, 2026",
-    "newsTopic": "community",
-    "copy": "All County offices will be closed Thursday, November 19th, for staff training. We apologize for any inconvenience.",
-    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=554",
-    "img": ""
   },
   {
     "title": "Treasurer's Office Closed 11/11 - 11/13",

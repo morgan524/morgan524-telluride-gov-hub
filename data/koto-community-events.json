@@ -1,16 +1,5 @@
 [
   {
-    "title": "Mountainfilm for Locals: Norwood",
-    "link": "https://koto.org/event/mountainfilm-for-locals-norwood/",
-    "description": "Join us for Mountainfilm for Locals, a free screening for the Norwood community, presented in partnership with Lone Cone Library. Catch a 78-minute program of short films from the 2026 Mountainfilm Festival. Doors and pizza at 5:30 PM, films at 6 PM. Free pizza is first come, first served, so come hungry and come early!",
-    "pubDate": "2026-11-19T17:30:00-07:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Lone Cone Library Norwood",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/Screenshot-2026-10-27-at-3.27.48-PM.png"
-  },
-  {
     "title": "Up-Off Gymnastics, Dance, and Spanish",
     "link": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-11-20/",
     "description": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
@@ -46,7 +35,7 @@
   {
     "title": "Girl Winter Film Tour",
     "link": "https://koto.org/event/girl-winter-film-tour/",
-    "description": "Join us for a night of women-centric short ski films! These screenings provide a space to continue the celebration of winter storytelling and women in snow sports. All are welcome. Get hyped for an El Nino year and pray for snow. This event will showcase 5 films & run approximately two hours. Film Line-Up: VIVID – feat. Devin Logan, Jenna Dramise, Nicole Cordingley and Sierra Schlag Biscuits – feat. Erin Spong and Nat Segal Rapid Fire – feat. Mali Noyes Theory of Butter – feat. Analise Gates and Maddie Gerritsen Winter Elements – presented by Moonrise Doors open at 6:00 PM Films begin at 7:00 PM",
+    "description": "The Girl Winter Film Tour comes to the Sheridan Opera House for an evening of short films celebrating women in snow sports and winter storytelling. The program features five films and runs approximately two hours.",
     "pubDate": "2026-11-20T18:00:00-07:00",
     "source": "koto",
     "sourceLabel": "KOTO",
@@ -102,11 +91,11 @@
     "title": "Around The World: America’s Pumpkin Beer & Chocolate Pretzels",
     "link": "https://koto.org/event/around-the-world-americas-pumpkin-beer-chocolate-pretzels/",
     "description": "Owner and Brewmaster, TJ is taking us on a journey to early America to discover how a humble native gourd became our continent’s most iconic seasonal tradition. Long before pumpkin spice became a modern phenomenon, early American colonists relied on native pumpkins to survive winter and celebrate the harvest holidays. Join us for a curated tasting event exploring the rich history of American pumpkin brewing paired with traditional European-style chocolate pretzels. Grab your tasting passport, explore the global trade routes that brought us holiday spices, and toast to the historic flavors of the American harvest season! (Ages 21+ only).",
-    "pubDate": "2026-11-23T03:00:00-07:00",
+    "pubDate": "2026-11-23T17:30:00-07:00",
     "source": "koto",
     "sourceLabel": "KOTO",
     "category": "Community Event",
-    "location": "",
+    "location": "Wine Mine, Telluride",
     "imageUrl": "https://koto.org/wp-content/uploads/2026/11/November-around-the-world.png"
   },
   {
@@ -162,17 +151,6 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Mountain Lodge Telluride, Mountain Village",
-    "imageUrl": ""
-  },
-  {
-    "title": "Facing the Mourning",
-    "link": "https://koto.org/event/facing-the-mourning/2026-11-26/",
-    "description": "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit from additional support while navigating grief and loss. Please feel free to share this information with others who may be interested.",
-    "pubDate": "2026-11-26T18:00:00-07:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Redvale Community Center",
     "imageUrl": ""
   },
   {
@@ -317,17 +295,6 @@
     "category": "Community Event",
     "location": "",
     "imageUrl": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.42-PM.png"
-  },
-  {
-    "title": "Facing the Mourning",
-    "link": "https://koto.org/event/facing-the-mourning/2026-12-03/",
-    "description": "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit from additional support while navigating grief and loss. Please feel free to share this information with others who may be interested.",
-    "pubDate": "2026-12-03T18:00:00-07:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Redvale Community Center",
-    "imageUrl": ""
   },
   {
     "title": "Up-Off Gymnastics, Dance, and Spanish",
@@ -493,5 +460,49 @@
     "category": "Community Event",
     "location": "The Sherbino, Ridgway",
     "imageUrl": "https://koto.org/wp-content/uploads/2026/11/Way-out-Matchstick-Dec-9.png"
+  },
+  {
+    "title": "Telluride Mountain School Open House",
+    "link": "https://koto.org/event/telluride-mountain-school-open-house-4/",
+    "description": "Telluride Mountain School is hosting an open house where prospective families and community members can step directly into the learning environment rather than sit through a formal presentation. Visitors are welcome to explore classrooms, meet teachers and students, and experience firsthand the school's approach to curiosity, connection, and real-world learning.",
+    "pubDate": "2026-12-10T09:00:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Mountain School",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/09/Screenshot-2026-09-18-at-2.05.52-PM.png"
+  },
+  {
+    "title": "The Creative Exchange at Telluride Arts HQ",
+    "link": "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-12-10/",
+    "description": "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories that fuel their work. Think of it as an open source model for creativity—where we learn from each other, swap ideas, and help strengthen one another’s practice. Each session is hosted by local artists and creative leaders who bring their own perspectives, techniques, and creative journeys into the room. Topics may span everything from the business of art and professional development, to creative process, storytelling, collaboration, and the philosophical underpinnings of making art. Whether you’re a full-time working artist, an educator, a student, a maker, or simply someone curious about creative expression, the Creative Exchange is open to you. …",
+    "pubDate": "2026-12-10T17:30:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Arts HQ, TELLURIDE",
+    "imageUrl": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png"
+  },
+  {
+    "title": "PI Avy Fund Backcountry Chat",
+    "link": "https://koto.org/event/pi-avy-fund-backcountry-chat/",
+    "description": "Join the Telluride Mountain Club and PI Avy Fund for our first Backcountry Chat of the season! We will cover several important topics to help backcountry users get dialed before heading into the mountains this season. Colorado Avalanche Information Center (CAIC) forecaster, Chris Dickson, will provide an update on current snowpack conditions and share tips for the season ahead. Telluride Helitrax Program Director, Matt Steen, will walk attendees through the local backcountry radio system, while Search and Rescue Specialist, Fischer Hazen, will share best practices for communicating with Search and Rescue via satellite inReach. The event is free, and pizza will be provided!",
+    "pubDate": "2026-12-10T18:00:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/11/DSC02424-scaled.jpg"
+  },
+  {
+    "title": "Ski Film: Warren Miller's Day Off",
+    "link": "https://koto.org/event/ski-film-warren-millers-day-off/",
+    "description": "Warren Miller's *Days Off*, the legendary ski film franchise's 77th installment, comes to the Sheridan Opera House in Telluride. The film follows host Katie Burrell and the world's top snow sports athletes across global destinations, capturing unscripted, competition-free riding from Alaska heli-drops to high-alpine terrain.",
+    "pubDate": "2026-12-11T00:00:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Sheridan Opera House, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/11/Warren-Miller-Web.jpg"
   }
 ]
