@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Nov 2026 11:09:42 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 19:52:03 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Fri, Nov 20] Girl Winter Film Tour</title>
@@ -44,19 +44,6 @@ A special meeting with a lot packed into one Friday morning. The board takes up 
 Cosmic Luau with PSYLO is a dancehall-style show at The Sherbino Theater in Ridgway, featuring a light show by Lumagic. The event combines tropical and psychedelic themes in a limited-seating venue setting.]]></description>
       <media:content url="https://sherbino.org/wp-content/uploads/2026/10/PSYLO-SHERB-26-A1C-scaled.jpg" medium="image" />
       <category>Community Event</category>
-    </item>
-    <item>
-      <title>[Sat, Nov 21] Girl Winter Film Tour</title>
-      <link>https://koto.org/event/girl-winter-film-tour/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/girl%20winter%20film%20tour%7C2026-11-21</guid>
-      <pubDate>Sat, 21 Nov 2026 01:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/10/GWFT-Cowgirl-16x9-Story-Post-Graphic-Only-2-scaled.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Sheridan Opera House, Telluride
-
-The Girl Winter Film Tour comes to the Sheridan Opera House for an evening of short films celebrating women in snow sports and winter storytelling. The program features five films and runs approximately two hours.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/10/GWFT-Cowgirl-16x9-Story-Post-Graphic-Only-2-scaled.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
     <item>
       <title>[Sat, Nov 21] Yoga with Lauren</title>

@@ -21,10 +21,11 @@
     "date": "December 3, 2026",
     "title": "Town Council Retreat",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8051",
-    "hasAgenda": false,
+    "hasAgenda": true,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "9:00 AM",
-    "civicwebId": 8051
+    "civicwebId": 8051,
+    "packetUrl": "https://telluride-co.civicweb.net/document/448279/"
   },
   {
     "date": "December 4, 2026",
