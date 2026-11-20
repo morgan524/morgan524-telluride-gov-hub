@@ -64,27 +64,6 @@
     "totBidID": "132"
   },
   {
-    "title": "Foreclosure Sale -- Deed of Trust, 40697 State Highway 145 Norwood (Sale No. 2026-07)",
-    "entity": "San Miguel County Public Trustee / National Loan Acquisitions Company",
-    "entityClass": "ent-county",
-    "entityLogo": "assessor",
-    "icon": "💰",
-    "iconClass": "type-tax",
-    "type": "Tax & Finance",
-    "filterTag": "tax-finance",
-    "summary": "Public Trustee Brandi R. Hatfield of San Miguel County will sell a tract of land in the NW¼ NW¼ of Section 26, Township 45 North, Range 13 West (commonly 40697 State Highway 145, Norwood, CO) at public auction on November 19, 2026, at 10:00 AM, at 305 W. Colorado Avenue, Telluride. The foreclosure was initiated by National Loan Acquisitions Company due to failure to pay installments on the original $216,000 deed of trust granted by Sandra G. Esch. The outstanding principal balance is $101,421.78.",
-    "deadline": "2026-11-19",
-    "expires": "2026-11-19",
-    "dates": "10/8",
-    "papers": [
-      "ttimes_1008"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_5970564f-79b2-404e-8d86-38ffc649e835.html",
-    "address": "40697 State Highway 145, Norwood, CO 81423 (NW¼ NW¼ Section 26, Township 45 North, Range 13 West, N.M.P.M., San Miguel County)",
-    "noticeKey": "foreclosure-2026-07-norwood-hwy145",
-    "caseNumber": "2026-07"
-  },
-  {
     "title": "Request for Proposal -- San Miguel County Housing Action Plan",
     "entity": "San Miguel County",
     "entityClass": "ent-county",
@@ -240,48 +219,6 @@
     "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=159",
     "address": "",
     "smcBidID": "159"
-  },
-  {
-    "title": "Name Change Petition -- Lauren Elizabeth O'Hare to Lauren O'Hare Benson (2026C23)",
-    "entity": "San Miguel County District Court / Lauren Elizabeth O'Hare",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "Lauren Elizabeth O'Hare has petitioned the San Miguel County District Court to change her name to Lauren O'Hare Benson. The court has ordered publication of this notice as required by law. The notice runs November 5, 12, and 19, 2026.",
-    "deadline": "2026-11-19",
-    "expires": "2026-11-19",
-    "dates": "11/5",
-    "papers": [
-      "ttimes_1105"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_4fe133a6-ca5f-42a1-810d-63306c1b854d.html",
-    "address": "305 West Colorado Avenue, Telluride, CO 81435",
-    "noticeKey": "name-change-2026C23",
-    "caseNumber": "2026C23"
-  },
-  {
-    "title": "Name Change Petition -- Lara Marie Zibners Lohr to Lara Marie Zibners (2026C30012)",
-    "entity": "San Miguel County District Court / Lara Marie Zibners Lohr",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "Lara Marie Zibners Lohr has petitioned the San Miguel County District Court to change her name to Lara Marie Zibners. Magistrate Melanie S. Mergan issued an Order for Publication on October 26, 2026, finding the petition meets all statutory requirements. The notice runs November 5, 12, and 19, 2026.",
-    "deadline": "2026-11-19",
-    "expires": "2026-11-19",
-    "dates": "11/5",
-    "papers": [
-      "ttimes_1105"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_4fe133a6-ca5f-42a1-810d-63306c1b854d.html",
-    "address": "305 West Colorado Avenue, Telluride, CO 81435",
-    "noticeKey": "name-change-2026C30012",
-    "caseNumber": "2026C30012"
   },
   {
     "title": "RFP -- Telluride Conference Center Management and Operation Agreement",

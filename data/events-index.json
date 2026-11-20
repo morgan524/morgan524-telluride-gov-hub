@@ -106,32 +106,6 @@
     "type": "Community"
   },
   {
-    "title": "Salon Night at Telluride Arts HQ",
-    "href": "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-11-19/",
-    "date": "2026-11-19",
-    "time": "5:30 PM",
-    "location": "Telluride Arts HQ, TELLURIDE",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it…",
-    "type": "Community"
-  },
-  {
-    "title": "Ladies Night In at the Library",
-    "href": "https://koto.org/event/ladies-night-in-at-the-library/",
-    "date": "2026-11-19",
-    "time": "5:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-7.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join us at the library for an evening of pampering, snacks, and great company. We’ll be screening a surprise classic chick flick while enjoying fresh popcorn, chocolate, hot tea, face masks, eye patches, and unique nail polishes. You'll…",
-    "type": "Arts & Film"
-  },
-  {
     "title": "Mountainfilm for Locals: Norwood",
     "href": "https://koto.org/event/mountainfilm-for-locals-norwood/",
     "date": "2026-11-19",
@@ -156,19 +130,6 @@
     "source": "Wilkinson Public Library",
     "desc": "5:30 PM – 7:30 PM · Join us at the library for an evening of pampering, snacks, and great company. We'll be screening a surprise classic chick flick while enjoying fresh popcorn, artisan chocolate, hot tea, eye patches, and unique nail…",
     "type": "Arts & Film"
-  },
-  {
-    "title": "Facing the Mourning",
-    "href": "https://koto.org/event/facing-the-mourning/2026-11-19/",
-    "date": "2026-11-19",
-    "time": "6:00 PM",
-    "location": "Redvale Community Center",
-    "town": "",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Facing the Mourning is a free, four-week grief support series taking place every Thursday throughout September. When: Thursdays in September at 6:00 PM Where: Redvale Community Center Cost: Free The series is open to anyone who may benefit…",
-    "type": "Community"
   },
   {
     "title": "Trivia Night",
@@ -235,7 +196,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to gather, share a meal, and connect with neighbors.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -366,7 +327,7 @@
     "img": "https://koto.org/wp-content/uploads/2026/10/GWFT-Cowgirl-16x9-Story-Post-Graphic-Only-2-scaled.jpg",
     "category": "Community Event",
     "source": "KOTO Community Calendar",
-    "desc": "The Girl Winter Film Tour comes to the Sheridan Opera House for an evening of short films celebrating women in snow sports and winter storytelling. The program features five films and runs approximately two hours.",
+    "desc": "Join us for a night of women-centric short ski films! These screenings provide a space to continue the celebration of winter storytelling and women in snow sports. All are welcome. Get hyped for an El Nino year and pray for snow. This…",
     "type": "Arts & Film"
   },
   {
@@ -471,8 +432,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars is a recurring outdoor film series held on Saturday evenings at dusk at the Conference Center Plaza in Mountain Village, running from June 13 through August 15. The community event brings free outdoor cinema to the…",
-    "type": "Arts & Film"
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -578,7 +539,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided bicycle tour departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route offers a scenic way to connect…",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
   },
   {
@@ -670,7 +631,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A community workshop held in Mountain Village exploring eco-grief — the emotional weight of loss tied to environmental change — alongside gratitude and love as responses to a shifting world. Led by Lauren Norton of Through the Woods Doula…",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
     "type": "Talks & Classes"
   },
   {
@@ -844,7 +805,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "The Town of Norwood's regular senior meals program will not be held on this date. This notice serves as a reminder for community members who rely on or participate in the senior meals service.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -857,7 +818,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/50249/alloy-live-music-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Live music returns to the Après Lounge at Mountain Lodge Telluride in Mountain Village, with local acts performing most Thursdays from 4 to 7 p.m. throughout the winter season. It's a relaxed après-ski setting for enjoying live…",
+    "desc": "Live music all winter at Mountain Lodge Telluride in Mountain Village. Local acts play the Après Lounge from 4 to 7 p.m. most Thursdays,",
     "type": "Music"
   },
   {
@@ -936,7 +897,7 @@
     "img": "https://1v09t9hszk.ucarecd.net/ca6338a4-f816-4b2d-9519-f999c902da9f/-/crop/1877x750/0,2065/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "DJ Phoenix, a 30-year veteran of the Colorado house music scene, takes the decks at The Alibi for a late-night set. Expect an experienced hand behind the turntables bringing energy to one of Telluride's favorite local venues.",
+    "desc": "DJ Phoenix is a 30 year veteran of the Colorado house music scene and no strange...",
     "type": "Music"
   },
   {
@@ -988,8 +949,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars is a recurring outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening on Saturday evenings at dusk. The series runs from June 13 through August 15, bringing community members…",
-    "type": "Arts & Film"
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Tea and Tarot",
@@ -1080,7 +1041,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided bicycle tour departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route offers a scenic descent…",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
   },
   {
@@ -1187,7 +1148,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "This eco-grief workshop, hosted in Mountain Village, brings together Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library to explore the intersection of grief and gratitude in the…",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
     "type": "Talks & Classes"
   },
   {
@@ -1281,8 +1242,8 @@
     "img": "https://1v09t9hszk.ucarecd.net/ab087872-1df0-4d51-8ebb-db3437d32780/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "A private live music event is taking place at The Alibi in Telluride. The venue is not open to the general public for this occasion; those with questions or interest in attending can reach out directly to the venue for more information.",
-    "type": "Music"
+    "desc": "Please contact hello@alibitelluride.com with all event inquiries!",
+    "type": "Community"
   },
   {
     "title": "Wreaths for Rescues",
@@ -1334,7 +1295,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A community meal program for seniors hosted by the Town of Norwood. This midday gathering offers older residents an opportunity to share a meal and connect with neighbors.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1543,7 +1504,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Noel Night is a community holiday event hosted by the Town of Norwood, bringing residents together to celebrate the season. Held in early December, it offers a festive evening for families and neighbors in the Norwood area.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1699,8 +1660,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars is a recurring outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening on Saturday evenings at dusk. The series runs weekly throughout the summer months, offering a seasonal community…",
-    "type": "Arts & Film"
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -1777,7 +1738,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/42542/copy_of_2024_community_dinner_-_blog_header_2.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A community dinner hosted by Mountain Village, now in its fourth year, bringing together residents and workers of the Mountain Village area for an evening of food and neighborly connection.",
+    "desc": "Do you live or work in Mountain Village? Then this evening is for you! Join your neighbors, coworkers, and friends for our 4th annual Community Dinner,",
     "type": "Food & Drink"
   },
   {
@@ -1790,7 +1751,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided bicycle tour originating at the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route offers a scenic descent through…",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
   },
   {
@@ -1843,8 +1804,8 @@
     "img": "https://1v09t9hszk.ucarecd.net/fc1ad9d1-f11b-4aca-9636-5b95b6e3c307/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "A private live music event is taking place at The Alibi in Telluride. The venue is not open to the general public for this occasion; those with questions or inquiries can reach out directly to the venue for more information.",
-    "type": "Music"
+    "desc": "Please contact hello@alibitelluride.com with all event inquiries!",
+    "type": "Community"
   },
   {
     "title": "Weekly Young Adult Gathering",
@@ -1895,7 +1856,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/27556/merchant_event-1.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A monthly gathering for Mountain Village merchants, held on the second Tuesday of each month from 10 to 11 a.m. The meeting is offered in a hybrid format, allowing participants to attend either in person or remotely.",
+    "desc": "Join us for the monthly Mountain Village Merchant Meeting to be held on the second Tuesday of each month from 10 to 11 a.m. The meeting will be hybrid with",
     "type": "Community"
   },
   {
@@ -1908,7 +1869,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "This workshop, hosted in Mountain Village, brings together facilitators from Through the Woods Doula, EcoAction Partners, and the Wilkinson Public Library to explore the emotional terrain of living through environmental change. It offers a…",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
     "type": "Talks & Classes"
   },
   {
@@ -2069,7 +2030,7 @@
     "img": "https://1v09t9hszk.ucarecd.net/4a5f4c4e-4a85-416f-bf68-4a874717300c/-/crop/1380x1380/233,0/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "The Regular is a folk rock band based in Denver, Colorado, performing live at The Alibi. The band brings their folk rock sound to Telluride for a late-night show.",
+    "desc": "The Regular is a folk rock band based in Denver, CO. Originally formed in Chicag...",
     "type": "Music"
   },
   {
@@ -2108,9 +2069,9 @@
     "img": "https://www.telluride.com/site/assets/files/45744/download_7.800x533.webp",
     "category": "Community Event",
     "source": "Telluride.com",
-    "desc": "Celebrate the joy of the season early this year with light-bearing, beautiful choral music presented by Hal Adler and …",
-    "type": "Community",
-    "endDate": "2026-12-14"
+    "desc": "Telluride Choral Society's annual celebration of Holiday music featuring the Telluride adult Chorale and Youth Choir. A …",
+    "type": "Family & Kids",
+    "endDate": "2026-12-13"
   },
   {
     "title": "Easy Jim",
@@ -2136,8 +2097,8 @@
     "img": "https://1v09t9hszk.ucarecd.net/5a0e2028-07e8-4974-b039-d62e8ab44ab4/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Easy Jim takes the stage at The Alibi for the first night of a residency engagement, bringing live music to this Telluride bar venue. The residency format promises multiple nights of performances in an intimate setting.",
-    "type": "Music"
+    "desc": "“Settle back, easy Jim…” The iconic lyric from Robert Hunter’s Althea captured t...",
+    "type": "Community"
   },
   {
     "title": "Happy Little Trees: Classes @ the Wright",
@@ -2230,8 +2191,8 @@
     "img": "https://1v09t9hszk.ucarecd.net/5a0e2028-07e8-4974-b039-d62e8ab44ab4/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Easy Jim continues their residency at The Alibi with a late-night performance on the second of what appears to be a multi-night run at the beloved Telluride bar. The residency format promises an intimate, unhurried evening of live music in…",
-    "type": "Music"
+    "desc": "“Settle back, easy Jim…” The iconic lyric from Robert Hunter’s Althea captured t...",
+    "type": "Community"
   },
   {
     "title": "The Sherbino Presents: Before Words There Were Birds: An Old Caw Medicine Show with Poetry, Storytelling, Music & More",
@@ -2256,8 +2217,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars is an outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening movies on Saturday evenings at dusk. The series runs weekly from June 13 through August 15, 2026.",
-    "type": "Arts & Film"
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -2282,7 +2243,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A guided bicycle ride departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route takes participants through…",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
   },
   {
@@ -2347,7 +2308,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "This eco-grief workshop, hosted in Mountain Village, brings together Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library to explore the emotional experience of living through…",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
     "type": "Talks & Classes"
   },
   {
@@ -2400,7 +2361,7 @@
     "img": "https://1v09t9hszk.ucarecd.net/abac4fc9-1234-481d-af73-ae5227ee3cfb/-/crop/660x330/0,96/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Wild Love Tigress is a funk band performing live at The Alibi, bringing an expansive sound that includes horns and backing singers. The show starts at 9:00 PM.",
+    "desc": "An explosive funk band complete with horns, backing singers and the full spectru...",
     "type": "Music"
   },
   {
@@ -2491,8 +2452,8 @@
     "img": "https://1v09t9hszk.ucarecd.net/5caa6e55-bef5-4af0-b673-ba480ad8ced1/-/crop/2048x820/0,163/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Joint Point is an original jam band from Colorado known for blending adventurous rock with improvisational, genre-spanning musicianship. The group performs at The Alibi in Telluride, bringing their signature live sound to an intimate…",
-    "type": "Arts & Film"
+    "desc": "Joint Point is an original jam band from Colorado. They blend adventurous rock, ...",
+    "type": "Music"
   },
   {
     "title": "Movies Under the Stars",
@@ -2504,8 +2465,8 @@
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Movies Under the Stars is an outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening movies on Saturday evenings at dusk. The series runs weekly on Saturdays from June 13 through August 15.",
-    "type": "Arts & Film"
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -2530,7 +2491,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/50161/mind-blown-listing-2200x1100.jpg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "A close-up magic show featuring magician Ty Gallenbeck, held at Mountain Lodge Telluride in Mountain Village. The show runs most Friday and Saturday nights as an ongoing series.",
+    "desc": "Mind Blown Telluride: magician Ty Gallenbeck's close-up magic show at Mountain Lodge Telluride in Mountain Village. Shows run most Friday and Saturday nights",
     "type": "Community"
   },
   {
@@ -2770,6 +2731,19 @@
     "type": "Festivals"
   },
   {
+    "title": "Mascolo",
+    "href": "https://www.telluride.com/event/mascolo/",
+    "date": "2026-12-31",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/64422/screenshot_2026-11-19_at_2_59_01_pm.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Mascolo is a French-American vocalist, multi-instrumentalist, and producer. His signature sound is crafted from a mix …",
+    "type": "Community"
+  },
+  {
     "title": "Sixtiesmania",
     "href": "https://www.telluride.com/event/sixtiesmania/",
     "date": "2026-12-31",
@@ -2792,7 +2766,7 @@
     "img": "https://1v09t9hszk.ucarecd.net/c5b3912c-a04e-4a42-b283-66695bb266a4/-/crop/2922x1168/0,1910/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Mascolo, a French-American vocalist, multi-instrumentalist, and producer, takes the decks at The Alibi for a New Year's Eve DJ set. The night offers a live music sendoff to 2026 at one of Telluride's beloved local venues.",
+    "desc": "Mascolo is a French-American vocalist, multi-instrumentalist, and producer. His ...",
     "type": "Music"
   },
   {
@@ -2964,8 +2938,8 @@
     "img": "https://1v09t9hszk.ucarecd.net/5a0e2028-07e8-4974-b039-d62e8ab44ab4/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Easy Jim takes the stage at The Alibi for the first night of a residency engagement, bringing live music to the bar in downtown Telluride. The residency format promises multiple nights of performances from the act in the weeks ahead.",
-    "type": "Music"
+    "desc": "“Settle back, easy Jim…” The iconic lyric from Robert Hunter’s Althea captured t...",
+    "type": "Community"
   },
   {
     "title": "Easy Jim Residency Night 2",
@@ -2977,7 +2951,20 @@
     "img": "https://1v09t9hszk.ucarecd.net/5a0e2028-07e8-4974-b039-d62e8ab44ab4/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Easy Jim continues their residency at The Alibi with a second night of live music. The late-night show is part of an ongoing series at the beloved Telluride bar.",
-    "type": "Music"
+    "desc": "“Settle back, easy Jim…” The iconic lyric from Robert Hunter’s Althea captured t...",
+    "type": "Community"
+  },
+  {
+    "title": "The Lone Bellow",
+    "href": "https://www.telluride.com/event/the-lone-bellow/",
+    "date": "2027-01-19",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63802/the-lone-bellow-ezgif_com-webp-to-jpg-converter.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "With their upcoming sixth studio album, “What A Time To Be Alive” , The Lone Bellow embarks on a bold new chapter …",
+    "type": "Community"
   }
 ]

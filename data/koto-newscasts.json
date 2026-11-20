@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 11-19-26",
+    "source": "KOTO Community Radio",
+    "date": "November 20, 2026",
+    "newsTopic": "public-safety",
+    "copy": "Forest Service Acquires Lizard Head Property; West End Roundup with the San Miguel Basin Forum; GMUG Looks at Gold Mountain Fire Recovery",
+    "href": "https://koto.org/news/newscast-11-19-26/"
+  },
+  {
     "title": "Newscast 11-18-26",
     "source": "KOTO Community Radio",
     "date": "November 19, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "community",
     "copy": "On this week’s Regional Roundup, we’ll hear about the flooding in the Four Corners region, followed by the story of one of the world’s toughest ultramarathons, the Moab 240, which this year was canceled for the first time in the race’s history due to flash flooding and dangerous winds from the remnants of Tropical Storm Rachel. Then we’ll hear abou",
     "href": "https://koto.org/news/newscast-11-6-26/"
-  },
-  {
-    "title": "Newscast 11-5-26",
-    "source": "KOTO Community Radio",
-    "date": "November 6, 2026",
-    "newsTopic": "public-safety",
-    "copy": "Ouray County Sheriff's Office Takes Over City Policing; West End Roundup with the San Miguel Basin Forum; Norwood Mavericks Charge into State Playoffs",
-    "href": "https://koto.org/news/newscast-11-5-26/"
   }
 ]

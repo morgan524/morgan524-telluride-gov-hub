@@ -92,6 +92,17 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/36321/couch_1600x900.800x533.webp"
   },
   {
+    "title": "DJ Phoenix",
+    "link": "https://www.telluride.com/event/dj-phoenix/",
+    "description": "DJ Phoenix is a 30 year veteran of the Colorado house music scene and no stranger to Telluride party culture. Long time …",
+    "pubDate": "2026-11-27",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/64408/screenshot_2026-11-19_at_2_36_47_pm.800x533.webp"
+  },
+  {
     "title": "Will Ski 4 Food",
     "link": "https://www.telluride.com/event/will-ski-4-food/",
     "description": "After an unforgettable world premiere at Snowbasin Resort, Will Ski 4 Food is headed to Telluride. Come spend an …",
@@ -172,6 +183,17 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/36708/download_2.800x533.webp"
   },
   {
+    "title": "The Regular",
+    "link": "https://www.telluride.com/event/the-regular/",
+    "description": "The Regular is a folk rock band based in Denver, CO. Originally formed in Chicago, IL, in 2014, the band's frontman, …",
+    "pubDate": "2026-12-10",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/64412/screenshot_2026-11-19_at_2_38_27_pm.800x533.webp"
+  },
+  {
     "title": "PI Avy Fund Backcountry Chat",
     "link": "https://www.telluride.com/event/pi-avy-fund-backcountry-chat/",
     "description": "Join the Telluride Mountain Club and PI Avy Fund for their first Backcountry Chat of the season! We will cover several …",
@@ -185,9 +207,9 @@
   {
     "title": "WinterSing!",
     "link": "https://www.telluride.com/event/telluride-choral-society-wintersing/",
-    "description": "Celebrate the joy of the season early this year with light-bearing, beautiful choral music presented by Hal Adler and …",
+    "description": "Telluride Choral Society's annual celebration of Holiday music featuring the Telluride adult Chorale and Youth Choir. A …",
     "pubDate": "2026-12-11",
-    "endDate": "2026-12-14",
+    "endDate": "2026-12-13",
     "source": "telluride-com",
     "sourceLabel": "Telluride.com",
     "category": "Community Event",
@@ -263,6 +285,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/61598/1920_x_1005_px_cover_centered.800x533.webp"
+  },
+  {
+    "title": "Wild Love Tigress",
+    "link": "https://www.telluride.com/event/wild-love-tigress/",
+    "description": "An explosive funk band complete with horns, backing singers and the full spectrum of hairstyles, Wild Love Tigress …",
+    "pubDate": "2026-12-17",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/64416/screenshot_2026-11-19_at_2_55_27_pm.800x533.webp"
   },
   {
     "title": "Elf the Musical",
@@ -378,6 +411,17 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/43841/torch2-2100x1400-0321debd-b521-4a85-89e7-ae7e6aba206f.800x533.webp"
   },
   {
+    "title": "Mascolo",
+    "link": "https://www.telluride.com/event/mascolo/",
+    "description": "Mascolo is a French-American vocalist, multi-instrumentalist, and producer.\n\nHis signature sound is crafted from a mix …",
+    "pubDate": "2026-12-31",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/64422/screenshot_2026-11-19_at_2_59_01_pm.800x533.webp"
+  },
+  {
     "title": "Sixtiesmania",
     "link": "https://www.telluride.com/event/sixtiesmania/",
     "description": "Rewind to the ’60s! Break out the mod dresses, go-go boots, velvet sport coats and big hair.\n\nRing in 2027 at a …",
@@ -422,5 +466,16 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63796/screenshot-2026-10-12-at-10_30_44-am.800x533.webp"
+  },
+  {
+    "title": "The Lone Bellow",
+    "link": "https://www.telluride.com/event/the-lone-bellow/",
+    "description": "With their upcoming sixth studio album, “What A Time To Be Alive” , The Lone Bellow embarks on a bold new chapter …",
+    "pubDate": "2027-01-19",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63802/the-lone-bellow-ezgif_com-webp-to-jpg-converter.800x533.webp"
   }
 ]
