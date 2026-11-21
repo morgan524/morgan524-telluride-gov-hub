@@ -273,5 +273,16 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/50161/mind-blown-listing-2200x1100.jpg"
+  },
+  {
+    "title": "Bike & Brewery Tour",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    "description": "A guided bicycle ride originating at the Mountain Lodge in Mountain Village, following the Jurassic and Meadows trails down to Telluride Brewing Co., where participants receive a complimentary beer. The tour offers a scenic two-brewery route connecting Mountain Village to town.",
+    "pubDate": "2026-12-21T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   }
 ]

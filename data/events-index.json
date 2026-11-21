@@ -14,19 +14,6 @@
     "endDate": "2027-01-19"
   },
   {
-    "title": "Yoga with Lauren",
-    "href": "https://koto.org/event/yoga-with-lauren/2026-11-21/",
-    "date": "2026-11-21",
-    "time": "10:00 AM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/10/wellness-lineup-21.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and…",
-    "type": "Wellness"
-  },
-  {
     "title": "Yoga With/con Lauren",
     "href": "https://telluridelibrary.libcal.com/event/17482790?hs=a",
     "date": "2026-11-21",
@@ -159,7 +146,7 @@
     "type": "Community"
   },
   {
-    "title": "LIVE JAZZ IN THE GARDEN! Zan Waller & Stefan Davenport",
+    "title": "Live Jazz at Chloe's: Standard Alchemy Jazz",
     "href": "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
     "date": "2026-11-22",
     "time": "4:00 PM",
@@ -168,7 +155,7 @@
     "img": "https://localist-images.azureedge.net/photos/53950055817938/huge/4924d3606a12c233af2b47a380c304869dfaf267.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Zan Waller on trumpet and Stefan Davenport on guitar perform as Standard Alchemy, playing swing, cocktail jazz, and Great American Songbook standards in Chloe's Secret Garden. The outdoor music series runs Sundays from 4:00–7:00 p.m. at…",
+    "desc": "Standard Alchemy brings live jazz to Chloe's Charcuterie & Wine on Sunday afternoons from 4:00–7:00 p.m., with Zan Waller on trumpet and Stefan Davenport on guitar performing swing, cocktail jazz, and Great American Songbook standards.…",
     "type": "Music",
     "endDate": "2027-01-17"
   },
@@ -413,7 +400,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Join a self-led water aerobics group every Wednesday (and occasionally Tuesdays and Thursdays!) from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy a fun, positive atmosphere! Please note: Water…",
     "type": "Community",
-    "endDate": "2027-01-13"
+    "endDate": "2027-01-20"
   },
   {
     "title": "NEW With Weehawken: Beat & Step: West African Dance, Drum & Body Percussion ~ with Performances in The Nutcracker Remixed!",
@@ -2394,6 +2381,19 @@
     "desc": "Winter break for Ridgway Schools begins on this date, giving students and families time off during the holiday season. The break is a scheduled pause in the academic calendar for the Ridgway school district.",
     "type": "Community",
     "endDate": "2027-01-01"
+  },
+  {
+    "title": "Bike & Brewery Tour",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    "date": "2026-12-21",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "A guided bicycle ride originating at the Mountain Lodge in Mountain Village, following the Jurassic and Meadows trails down to Telluride Brewing Co., where participants receive a complimentary beer. The tour offers a scenic two-brewery…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Brooke White",

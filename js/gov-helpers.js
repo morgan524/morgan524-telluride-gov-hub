@@ -2853,15 +2853,15 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "Commissioners approve land use code amendment on subdivisions",
+    title: "Man charged with felony for allegedly menacing teens",
     source: "Telluride Times",
     date: "November 21, 2026",
     firstSeen: "2026-11-21",
-    newsTopic: "government",
-    copy: "San Miguel County commissioners approved a land use code amendment Nov. 18 that creates separate standards for major and minor subdivisions outside of PUDs, and adds a review process for condominium and townhouse plats that didn't exist before. The change also clarifies application requirements for splitting parcels. The Ilium Valley housing project isn't expected to be affected.",
+    newsTopic: "recreation",
+    copy: "A man living in a tent near Bear Creek Trail was arrested in September after allegedly pulling a knife on a group of teenagers at \"Split Rock,\" a wooded hangout spot on the edge of town. Christian Shuford faces felony menacing plus several misdemeanor charges; he told deputies he was protecting himself after the teens damaged his property. A disposition hearing is set for January 5, 2027.",
     claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_8c01589e-3e4f-4b14-babb-cb373c9a65df.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    href: "https://www.telluridenews.com/news/article_fb8a060a-8ca2-4f05-9f5d-1ebe554d62ab.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/95/99584031-e4ae-4e7a-ba10-6bcef3d5eb51/6b00876854323.image.jpg",
     imgHiRes: true
   },
   {
@@ -3456,6 +3456,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/opinion/columnists/article_77edfb33-89bf-4734-9a2e-bdfa40ba2390.html",
     img: "",
     isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Commissioners approve land use code amendment on subdivisions",
+    source: "Telluride Times",
+    date: "November 21, 2026",
+    firstSeen: "2026-11-21",
+    newsTopic: "government",
+    copy: "San Miguel County commissioners approved a land use code amendment Nov. 18 that creates separate standards for major and minor subdivisions outside of PUDs, and adds a review process for condominium and townhouse plats that didn't exist before. The change also clarifies application requirements for splitting parcels. The Ilium Valley housing project isn't expected to be affected.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_8c01589e-3e4f-4b14-babb-cb373c9a65df.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     imgHiRes: true
   },
   {
@@ -4349,17 +4361,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Yoga with Lauren",
-    link: "https://koto.org/event/yoga-with-lauren/2026-11-21/",
-    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome. Muévase, respire y llénese de energía en esta dinámica clase bilingüe, dirigido por Lauren Norton, diseñada para fortalecer su cuerpo y mente. Combinando la fuerza y fluidez del pilates, el ritmo y la energía de la danza, y la presencia equilibrante del yoga y la respiración, esta sesión le dejará sintiéndose fuerte, en armonía y revitalizado/a. …",
-    pubDate: "2026-11-21T10:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/10/wellness-lineup-21.png"
-  },
   {
     title: "People's March",
     link: "https://koto.org/event/peoples-march-4/",
@@ -5684,9 +5685,9 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54506676236668/huge/8d0f2807c6d13cff029995c2dc89a1a23b1cf2d8.jpg"
   },
   {
-    title: "LIVE JAZZ IN THE GARDEN! Zan Waller & Stefan Davenport",
+    title: "Live Jazz at Chloe's: Standard Alchemy Jazz",
     link: "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
-    description: "Zan Waller on trumpet and Stefan Davenport on guitar perform as Standard Alchemy, playing swing, cocktail jazz, and Great American Songbook standards in Chloe's Secret Garden. The outdoor music series runs Sundays from 4:00–7:00 p.m. at Chloe's Charcuterie & Wine, with occasional special guest vocalists joining the duo.",
+    description: "Standard Alchemy brings live jazz to Chloe's Charcuterie & Wine on Sunday afternoons from 4:00–7:00 p.m., with Zan Waller on trumpet and Stefan Davenport on guitar performing swing, cocktail jazz, and Great American Songbook standards. Occasional special guest vocalists join the duo, making for an intimate evening of live music alongside wine and charcuterie.",
     pubDate: "2026-11-22T23:00:00.000Z",
     endDate: "2027-01-17",
     source: "oray",
@@ -5840,7 +5841,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/water-aerobics",
     description: "Join a self-led water aerobics group every Wednesday (and occasionally Tuesdays and Thursdays!) from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy a fun, positive atmosphere! Please note: Water aerobics takes place during member-only hours and is open to Ouray Hot Springs members only.",
     pubDate: "2026-11-25T17:00:00.000Z",
-    endDate: "2027-01-13",
+    endDate: "2027-01-20",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6788,6 +6789,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/50161/mind-blown-listing-2200x1100.jpg"
+  },
+  {
+    title: "Bike & Brewery Tour",
+    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    description: "A guided bicycle ride originating at the Mountain Lodge in Mountain Village, following the Jurassic and Meadows trails down to Telluride Brewing Co., where participants receive a complimentary beer. The tour offers a scenic two-brewery route connecting Mountain Village to town.",
+    pubDate: "2026-12-21T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   }
 ];
 
