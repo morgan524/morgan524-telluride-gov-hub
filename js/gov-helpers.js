@@ -528,6 +528,14 @@ const DEEP_DIVE_UPDATES = [];
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-11-21",
+    title: "Pause the open space fund — again?",
+    body: "Council is voting on second reading of an ordinance that would suspend the 5% Open Space Fund dedication from Real Estate Transfer Tax revenue for the 2027 budget year. The argument for: fiscal pressure is real, and a one-year suspension keeps the lights on without permanently touching the program. The argument against: voters backed that land-conservation commitment, and a suspension that keeps recurring starts to look like a policy shift dressed up as a budget fix.\n\nSo — is a temporary suspension a reasonable response to a tight year, or does skipping it again cross a line?",
+    choices: ["Reasonable budget call", "Erodes a voter commitment", "Depends on what else gets cut", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-11-20",
     title: "Open space money — or keep the lights on?",
     body: "Council is voting on a second reading of an ordinance that would suspend the 5% Open Space Fund dedication from Real Estate Transfer Tax revenue for the 2027 budget year. The fund is how the town has long honored a voter expectation around land conservation — skipping a year frees up money when budgets are tight. Supporters say fiscal pressure is real and one year isn't a broken promise. Critics say it sets a pattern and that conservation commitments are easiest to honor when they're inconvenient.\n\nSo which is it — a reasonable pause, or the first chip in something that holds?",
@@ -758,14 +766,6 @@ const DAILY_QUESTIONS = [
     choices: ["Makes sense — consolidate", "Too many unknowns yet", "Keep them separate", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-10-22",
-    title: "Shandoka lot: what goes there?",
-    body: "The Planning & Zoning Commission is holding a public hearing on the Shandoka Lot Redevelopment Project — specifically a Preliminary Planned Unit Development application. A PUD gives developers flexibility to shape density and use in ways standard zoning might not allow. That's the tension. Some residents see PUDs as a practical tool for getting housing and mixed uses into tight spots. Others see them as a workaround that lets projects exceed what the neighborhood signed up for. Nothing is decided yet — this is a hearing, not a final vote.\n\nWhat's your read on PUD redevelopment in town: reasonable flexibility or too much room to maneuver?",
-    choices: ["Reasonable flexibility", "Too much room to maneuver", "Depends on the project"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -935,7 +935,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "November 19, 2026",
     newsTopic: "government",
     copy: "Ouray City Council members will continue to be able to attend a limited number of meetings online each year, although councilors appear ready to tighten the rules dictating remote governance. The council voted 4-1 Monday night against repealing a five-year-old policy that allows councilors to attend",
-    href: "https://www.ouraynews.com/2026/11/18/changes-looming-citys-remote-attendance-policy/",
+    href: "https://www.ouraynews.com/2026/11/18/changes-looming-citys-remote-attendance-policy/?ta_paidstory",
     img: ""
   },
   {
@@ -2855,6 +2855,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Commissioners approve land use code amendment on subdivisions",
+    source: "Telluride Times",
+    date: "November 21, 2026",
+    firstSeen: "2026-11-21",
+    newsTopic: "government",
+    copy: "San Miguel County commissioners approved a land use code amendment Nov. 18 that creates separate standards for major and minor subdivisions outside of PUDs, and adds a review process for condominium and townhouse plats that didn't exist before. The change also clarifies application requirements for splitting parcels. The Ilium Valley housing project isn't expected to be affected.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_8c01589e-3e4f-4b14-babb-cb373c9a65df.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Bingo: Sen. Cleave Simpson scores sleeper win as card spells ‘cabinet’",
     source: "Telluride Times",
     date: "November 20, 2026",
@@ -4340,17 +4352,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Girl Winter Film Tour",
-    link: "https://koto.org/event/girl-winter-film-tour/",
-    description: "The Girl Winter Film Tour comes to the Sheridan Opera House for an evening of short films celebrating women in snow sports and winter storytelling. The program features five films and runs approximately two hours.",
-    pubDate: "2026-11-20T18:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Sheridan Opera House, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/10/GWFT-Cowgirl-16x9-Story-Post-Graphic-Only-2-scaled.jpg"
-  },
-  {
     title: "Yoga with Lauren",
     link: "https://koto.org/event/yoga-with-lauren/2026-11-21/",
     description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome. Muévase, respire y llénese de energía en esta dinámica clase bilingüe, dirigido por Lauren Norton, diseñada para fortalecer su cuerpo y mente. Combinando la fuerza y fluidez del pilates, el ritmo y la energía de la danza, y la presencia equilibrante del yoga y la respiración, esta sesión le dejará sintiéndose fuerte, en armonía y revitalizado/a. …",
@@ -4811,42 +4812,75 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Sheridan Opera House, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2026/11/Warren-Miller-Web.jpg"
+  },
+  {
+    title: "Up-Off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-12-11/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-12-11T10:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "Live Music in the Après Lounge at Mountain Lodge Telluride",
+    link: "https://koto.org/event/live-music-in-the-apres-lounge-at-mountain-lodge-telluride/2026-12-11/",
+    description: "Local live music in the Après Lounge at Mountain Lodge Telluride in Mountain Village, 4 to 7 PM on most Thursdays, Fridays and Saturdays all winter.",
+    pubDate: "2026-12-11T16:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Mountain Lodge Telluride, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "The Sherbino Presents: Before Words There Were Birds: An Old Caw Medicine Show with Poetry, Storytelling, Music & More",
+    link: "https://koto.org/event/the-sherbino-presents-before-words-there-were-birds-an-old-caw-medicine-show-with-poetry-storytelling-music-more/",
+    description: "December 12 @ 6:00 pm – 7:30 pm Seated Show. Doors at 5:30, show at 6:00 || $20 general admission, $18 seniors/students (under 18 or over 65) in advance. Prices go up the day of the show. Before Words There Were Birds: an Old Caw Medicine Show with Poetry, Storytelling, Music and more, featuring consummate performers and poets Rosemerry Wahtola Trommer, Wendy Videlock, Ellen Metrick and Daiva Chesonis. Before we named the rivers or drew boundaries across the land, there were birds. They were among our first musicians, our first messengers, and perhaps our first poets. The evening takes its inspiration from ravens and crows, owls and hawks, songbirds and migrating flocks—and from the ancient human impulse to listen closely to the more-than-human world. Poems and stories will mingle with breath, rhythm, flute song, humor, silence, and the ancient rhythm of the frame drum. …",
+    pubDate: "2026-12-12T17:30:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "The Sherbino, Ridgway",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/11/Poetry-caw-dec-12.png"
+  },
+  {
+    title: "Palm Arts Dance Presents: Neverland",
+    link: "https://koto.org/event/palm-arts-dance-presents-neverland/2026-12-12/",
+    description: "Palm Arts Dance Presents: Neverland Saturday, December 12th at 6pm Sunday, December 13th at 2pm Michael D. Palm Theatre 721 West Colorado Avenue Telluride, CO 81435 Reserved Seating Advance Tickets: $15 student, $20 adult Door Tickets: $20 student, $25 adult Tickets at www.telluridepalm.com Palm Arts Dance presents Neverland at the Michael D. Palm Theatre on Saturday, December 12th at 6pm and Sunday, December 13th at 2pm! From age three to eighteen, this performance will feature over 100 local dancers from Telluride, Norwood, Ridgway, and Rico. This year's winter production promises an enchanting journey filled with beautiful dancing, familiar characters, and a little magic. Palm Arts Dance is thrilled to be back on their newly rebuilt sprung stage floor after the devastating flood this past July. …",
+    pubDate: "2026-12-12T18:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Michael D. Palm Theater, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/11/Neverland-2026-PR-Image-4.93-x-3.87-in.png"
   }
 ];
 
 const WILKINSON_EVENTS = [
   {
-    title: "Coffee, Croissants and Cribbage",
-    link: "https://telluridelibrary.libcal.com/event/17849320?hs=a",
-    description: "10:00 AM – 11:30 AM · Coffee, croissants and cribbage is back! Come by the library Magazine Room 10-11:30am for friendly competition, free coffee and pastries, and community connection. May the nibs be with you.",
-    pubDate: "2026-11-20T17:00:00.000Z",
+    title: "Yoga With/con Lauren",
+    link: "https://telluridelibrary.libcal.com/event/17482790?hs=a",
+    description: "10:00 AM – 11:00 AM · Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome. Mu&eacute;vase, respire y ll&eacute;nese de energ&iacute;a en esta din&aacute;mica clase biling&uuml;e, dirigido por Lauren Norton, dise&ntilde;ada para fortalecer su cuerpo y mente. Combinando la fuerza y fluidez del pilates, el ritmo y la energ&iacute;a de la danza, y la presencia equilibrante del yoga y la respiraci&oacute;n, esta sesi&oacute;n le dejar&aacute; sinti&eacute;ndose fuerte, en armon&iacute;a y revitalizado/a. …",
+    pubDate: "2026-11-21T17:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_19_11_58_12.jpg"
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_23_17_28_04.jpg"
   },
   {
-    title: "You & Me / Tu Y Yo",
-    link: "https://telluridelibrary.libcal.com/event/17874699?hs=a",
-    description: "10:30 AM – 11:00 AM · Join us every Friday for a fun and engaging parent-child program designed for preschoolers! Each week, we explore a new theme through hands-on activities that spark creativity.    &iexcl;Acomp&aacute;&ntilde;enos todos los viernes en un programa divertido y din&aacute;mico para padres e hijos, dise&ntilde;ado para ni&ntilde;os en edad preescolar! Cada semana exploramos un tema nuevo a trav&eacute;s de actividades pr&aacute;cticas que estimulan la creatividad.",
-    pubDate: "2026-11-20T17:30:00.000Z",
+    title: "Studio Ghibli Movie Matinee: The Secret World of Arrietty",
+    link: "https://telluridelibrary.libcal.com/event/17413379?hs=a",
+    description: "A free library screening of *The Secret World of Arrietty*, the Studio Ghibli animated film based on Mary Norton's classic novel *The Borrowers*, about a family of tiny people living hidden beneath the floorboards of a house. The event takes place in the Program Room at Wilkinson Public Library and runs from 2:00 to 4:00 PM.",
+    pubDate: "2026-11-21T21:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_30_13_07_23.png"
-  },
-  {
-    title: "Learn DND",
-    link: "https://telluridelibrary.libcal.com/event/17876899?hs=a",
-    description: "4:00 PM – 6:00 PM · Have you ever been curious about learning how to play Dungeons and Dragons? This is your opportunity! Join local Dungeon Master Kase in a one day campaign that is open to both experienced DND players, and folks who have never played once. This is a chance for folks to learn how DND works and jump right into a fun campaign. This is open to teens and adults.",
-    pubDate: "2026-11-20T23:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_28_17_47_56.png"
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_16_07_14.png"
   }
 ];
 
@@ -5607,8 +5641,8 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Gaper Contest 2026 - Voyager FUNdraiser",
     link: "https://events.ourayridgwayevents.com/event/gaper-contest-2026",
-    description: "A community photo contest and fundraiser for Voyager inviting locals of all ages from the northern San Juan region to submit their best \"gaper\" photos for a chance to be named Gaper of the Year. Voting takes place during Gaper Week, November 21–29, 2026, coinciding with the opening week of Telluride Ski Resort.",
-    pubDate: "2026-11-20T15:00:00.000Z",
+    description: "A community fundraiser for Voyager in which locals of all ages from the northern San Juan region submit photos for a chance to be named Gaper of the Year. Voting takes place during Gaper Week, November 21–29, 2026, coinciding with the opening week of Telluride Ski Resort.",
+    pubDate: "2026-11-21T15:00:00.000Z",
     endDate: "2026-11-29",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5620,69 +5654,13 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Guided Tour: Historic Beaumont Hotel & Spa",
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
-    pubDate: "2026-11-20T20:30:00.000Z",
+    pubDate: "2026-11-21T20:30:00.000Z",
     endDate: "2027-01-19",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Beaumont Hotel & Spa",
     imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
-  },
-  {
-    title: "STEAM Art Explorers for Ages 5–8 in Montrose",
-    link: "https://events.ourayridgwayevents.com/event/steam-art-explorers-for-ages-58-in-montrose",
-    description: "MONTROSE AFTER SCHOOL ART SESSION 1 (5 WEEKS • OCTOBER 23 – NOVEMBER 20) Join us for a 5-week course that explores the intersection of art, science, technology, engineering, and math! In this hands-on art class, students will experiment with creative processes that turn scientific concepts into exciting works of art. Through a variety of fun projects, students will investigate chemical reactions, motion, light, color, and patterns. Projects include creating fizzy paintings using bubbling chemical reactions, experimenting with movement and gravity through pendulum painting, designing kaleidoscopes to explore symmetry and reflection, and making colorful lava lamps to investigate density and liquid interactions. Students will also take on collaborative challenges, activities, and movement games to build creativity, experimentation, problem-solving, and teamwork. With encouragement and plenty of opportunities to experiment, students will grow their artistic skills and confidence while embracing their creativity. …",
-    pubDate: "2026-11-20T22:45:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Weehawken Montrose",
-    imageUrl: "https://localist-images.azureedge.net/photos/54055496965288/huge/4ac547d8a4681a49d4e49d0024729211c03874a6.jpg"
-  },
-  {
-    title: "Jean Sandoval & the Town Kids",
-    link: "https://events.ourayridgwayevents.com/event/jean-sandoval-the-town-kids",
-    description: "Jean Sandoval & the Town Kids are performing live music at a venue on North Cora Street in Ridgway. The event is listed through the Ouray Ridgway community calendar.",
-    pubDate: "2026-11-20T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Familiar Grounds - Marcie Reed Whiton and Wellington Martins",
-    link: "https://events.ourayridgwayevents.com/event/familiar-grounds-marcie-reed-whiton-and-wellington-martins",
-    description: "Join us for Familiar Ground, an exhibition bringing together two friends and their creative lives. A celebration of the people we meet, the places we remember, and the materials that inspire us. Featuring portraits and paintings by Marcie Reed Whiton and photography and woodworking by Wellington Martins, the exhibition is meant to feel a little like walking into someone's living room: a collection of familiar faces, places, memories, and personal discoveries, all sharing the same space. It's an invitation to put your feet up, look around, and get inspired by the familiar. On view throughout November 30.",
-    pubDate: "2026-11-21T00:00:00.000Z",
-    endDate: "2026-12-01",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Space to Create Art Gallery",
-    imageUrl: "https://localist-images.azureedge.net/photos/54472722974882/huge/75812f0dd549dfd8b3d96bcdbbbdbf4949f9ff80.jpg"
-  },
-  {
-    title: "Free Community Thanksgiving Dinner",
-    link: "https://events.ourayridgwayevents.com/event/free-community-thanksgiving-dinner",
-    description: "We are offering a free thanksgiving dinner to our Community. Cocktails at 5:00pm and free dinner at 6:00pm. Donations are welcome!",
-    pubDate: "2026-11-21T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Elks Lodge #492",
-    imageUrl: "https://localist-images.azureedge.net/photos/54499361055853/huge/0cf92b9806986d9583c378d0494670d2b5658cfb.jpg"
-  },
-  {
-    title: "PSYLO at The Sherbino",
-    link: "https://events.ourayridgwayevents.com/event/psylo-at-the-sherbino",
-    description: "PSYLO brings a Cosmic Luau to The Sherbino in Telluride, promising an evening that blends psychedelic vibes with tropical flair. The event is hosted at The Sherbino, one of the area's well-known community and performance venues.",
-    pubDate: "2026-11-21T02:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Sherbino",
-    imageUrl: "https://localist-images.azureedge.net/photos/54284857340278/huge/1ca7afcc7bf4922a6b8dfc622234079f2bc22c0d.jpg"
   },
   {
     title: "Every Sat. Floating Sound Bath",
@@ -5777,6 +5755,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
+  },
+  {
+    title: "Familiar Grounds - Marcie Reed Whiton and Wellington Martins",
+    link: "https://events.ourayridgwayevents.com/event/familiar-grounds-marcie-reed-whiton-and-wellington-martins",
+    description: "Join us for Familiar Ground, an exhibition bringing together two friends and their creative lives. A celebration of the people we meet, the places we remember, and the materials that inspire us. Featuring portraits and paintings by Marcie Reed Whiton and photography and woodworking by Wellington Martins, the exhibition is meant to feel a little like walking into someone's living room: a collection of familiar faces, places, memories, and personal discoveries, all sharing the same space. It's an invitation to put your feet up, look around, and get inspired by the familiar. On view throughout November 30.",
+    pubDate: "2026-11-24T00:00:00.000Z",
+    endDate: "2026-12-01",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create Art Gallery",
+    imageUrl: "https://localist-images.azureedge.net/photos/54472722974882/huge/75812f0dd549dfd8b3d96bcdbbbdbf4949f9ff80.jpg"
   },
   {
     title: "Functional Fitness - Strength & Mobility Training For Women",
