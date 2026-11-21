@@ -31,10 +31,11 @@
     "date": "December 4, 2026",
     "title": "Special Town Council",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324",
-    "hasAgenda": false,
+    "hasAgenda": true,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "10:00 AM",
-    "civicwebId": 8324
+    "civicwebId": 8324,
+    "packetUrl": "https://telluride-co.civicweb.net/document/448285/"
   },
   {
     "date": "December 7, 2026",

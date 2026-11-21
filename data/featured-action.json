@@ -1,3 +1,27 @@
 {
- "generated": "2026-11-20T19:51:59.677Z"
+ "generated": "2026-11-21T02:06:13.936Z",
+ "pinned": false,
+ "topic": "code",
+ "topicLabel": "Code Changes & Accelerated Review",
+ "headline": "Code Changes & Accelerated Review goes before Special Town Council on Friday, December 4",
+ "blurb": "This special meeting is a single-item public hearing: Town Council sits as an appellate body to review a challenge to HARC's September 16, 2026 approval of a new construction project at 208 S Fir Street. The appellant, an adjacent property owner at 150 W Pacific Avenue, filed the appeal on September 30, 2026.",
+ "images": [],
+ "deepDive": {
+  "label": "Code Changes & Accelerated Review",
+  "href": "/deep-dive-code.html"
+ },
+ "meeting": {
+  "title": "Special Town Council",
+  "sourceLabel": "Town of Telluride",
+  "date": "2026-12-04",
+  "humanDate": "Friday, December 4",
+  "time": "10:00 AM",
+  "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324",
+  "hasAgenda": true,
+  "packetUrl": "https://telluride-co.civicweb.net/document/448285/",
+  "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324",
+  "zoomLink": "https://us06web.zoom.us/meeting/register/LyUziwYoTiaZTkcdYc8iiA",
+  "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+ }
 }

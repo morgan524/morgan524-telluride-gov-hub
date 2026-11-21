@@ -122,26 +122,6 @@
     "noticeKey": "condo-decl-amendment-good-gargoyle"
   },
   {
-    "title": "Deed-Restricted Ownership Lottery -- 226 East Pacific Ave., Unit H (Spruce House H)",
-    "entity": "San Miguel Regional Housing Authority",
-    "entityClass": "ent-county",
-    "entityLogo": "smrha",
-    "icon": "🏠",
-    "iconClass": "type-hearing",
-    "type": "Housing Notice",
-    "filterTag": "housing",
-    "summary": "The San Miguel Regional Housing Authority is offering Spruce House H (226 East Pacific Ave., Unit H, Telluride) for sale through an ownership lottery under the Telluride Affordable Housing Guidelines. Qualified households must submit complete applications; applications and materials are available beginning October 22, 2026 at www.smrha.org/lottery. Applications will be accepted by appointment only from October 30, 2026 at 9:00 AM through November 20, 2026 at Noon.",
-    "deadline": "2026-11-20",
-    "expires": "2026-11-20",
-    "dates": "10/22",
-    "papers": [
-      "ttimes_1022"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_1f99287a-8ec7-49ee-b0ca-9d501ba00b5f.html",
-    "address": "226 East Pacific Ave., Unit H, Telluride, Colorado",
-    "noticeKey": "housing-lottery-226-e-pacific-spruce-h"
-  },
-  {
     "title": "Public Trustee Foreclosure Sale -- 65 Spruce Drive, Norwood (Sale No. 2026-09)",
     "entity": "Alpine Bank / San Miguel County Public Trustee",
     "entityClass": "ent-county",

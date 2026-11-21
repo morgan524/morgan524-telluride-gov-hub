@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-20T19:51:59.674Z",
+ "generated": "2026-11-21T02:06:13.933Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -31,7 +31,20 @@
   "code": {
    "label": "Code Changes & Accelerated Review",
    "lastUpdated": "2026-07-19",
-   "upcoming": [],
+   "upcoming": [
+    {
+     "source": "telluride",
+     "sourceLabel": "Town of Telluride",
+     "title": "Special Town Council",
+     "date": "2026-12-04",
+     "time": "10:00 AM",
+     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324",
+     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324",
+     "zoomLink": "https://us06web.zoom.us/meeting/register/LyUziwYoTiaZTkcdYc8iiA",
+     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+    }
+   ],
    "recent": [
     {
      "source": "telluride",

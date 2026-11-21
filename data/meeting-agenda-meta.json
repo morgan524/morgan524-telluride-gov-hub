@@ -1,34 +1,4 @@
 {
-  "rico|2026-10-21|Rico Board of Trustees Regular Meeting": {
-    "sv": 4,
-    "ph": "b858cb282617fb09"
-  },
-  "telluride|2026-10-21|Historic & Architectural Review Commission Chair - Oct 21 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8025",
-    "sv": 4,
-    "ph": "c951089001cb45c2"
-  },
-  "telluride|2026-10-21|Historic & Architectural Review Commission - Oct 21 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8024",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA",
-    "meetingId": "812 9136 3866",
-    "passcode": "440860.",
-    "phone": "301-715-8592"
-  },
-  "telluride|2026-10-21|Parks & Recreation Commission - Oct 21 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/tZIufu6srzwsH9X0sfxgA_In-LUt0azBIi8Z"
-  },
-  "county|2026-10-21|Board of County Commissioners Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/901/files/agenda/2051",
-    "zoomUrl": "https://us02web.zoom.us/meeting/register/fns7wAwITvunwFcd1y-RGg",
-    "meetingId": "816 1479 4240",
-    "passcode": "694265",
-    "phone": "719-359-4580"
-  },
   "med|2026-10-22|Regular Board Meeting": {
     "sv": 4,
     "agendaUrl": "https://www.tellmed.org/files/51579856e/THD+Reg+BOD+Mtg+10.22.26+Agenda.pdf",
@@ -116,10 +86,6 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054",
     "sv": 4,
     "ph": "6dd7ca52c2d0336e"
-  },
-  "telluride|2026-10-21|CANCELED - Historic & Architectural Review Commission Chair - Oct 21 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8025",
-    "sv": 4
   },
   "tmvoa|2026-11-06|TMVOA Board of Directors Budget Meeting #1": {
     "sv": 4,
@@ -426,7 +392,7 @@
   "telluride|2026-12-02|Commission for Community Assistance, Arts & Special Events - Dec 02 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8069",
     "sv": 4,
-    "ph": "1782388eee465c34"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/tZ0pc-ChqDwsGNFpPigfqqLQptmoMmpJdiOx"
   },
   "telluride|2026-12-02|Telluride Housing Authority Subcommittee - Dec 02 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8166",
@@ -472,7 +438,10 @@
   "telluride|2026-12-04|Special Town Council - Dec 04 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324",
     "sv": 4,
-    "ph": "2a3105ef0e5cb56d"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/LyUziwYoTiaZTkcdYc8iiA",
+    "meetingId": "830 8270 2436",
+    "passcode": "535925.",
+    "phone": "719) 359-4580"
   },
   "telluride|2026-11-09|Intergovernmental Meeting - Nov 09 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8360",
@@ -540,7 +509,7 @@
   },
   "county|2026-12-10|Planning Commission Meeting": {
     "sv": 4,
-    "ph": "b7c74705fcca6b2f"
+    "ph": "66dd61a1d3bb2812"
   },
   "telluride|2026-11-12|San Miguel Authority for Regional Transportation - Nov 12 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8361",
@@ -606,7 +575,7 @@
   "telluride|2026-12-15|Town Council - Dec 15 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8047",
     "sv": 4,
-    "ph": "4de2b55220f228d4"
+    "ph": "6d6f5991d037fa3a"
   },
   "rico|2026-12-16|Rico Board of Trustees Regular Meeting": {
     "sv": 4,
@@ -694,7 +663,7 @@
   "telluride|2026-12-15|Special Joint Town Council - Dec 15 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8366",
     "sv": 4,
-    "ph": "ba8a5f63dfa5948b"
+    "ph": "057310c1bdf7122a"
   },
   "telluride|2026-12-15|Special Joint Historic & Architectural Review Commission - Dec 15 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8367",
@@ -705,5 +674,9 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8368",
     "sv": 4,
     "ph": "48c342c8e69c52ee"
+  },
+  "norwood|2026-12-21|Planning and Zoning Commission Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   }
 }
