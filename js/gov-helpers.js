@@ -3606,42 +3606,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Local Employers Invited to Apply for Employee Housing Master Leases",
-    source: "Town of Telluride",
-    date: "October 23, 2026",
-    newsTopic: "housing",
-    copy: "(October 22, 2026) – The Telluride Housing Authority (THA) is offering master leases on five apartments at the new Virginia Placer IIA building and two rooms at the Telluride Boarding House to local businesses and organizations.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=408",
-    img: ""
-  },
-  {
-    title: "Deed-Restricted Housing Lottery Applications Now Available for Spruce House H",
-    source: "Town of Telluride",
-    date: "October 22, 2026",
-    newsTopic: "housing",
-    copy: "(October 22, 2026) - The Town of Telluride and the San Miguel Regional Housing Authority (SMRHA) opened applications today for a deed-restricted homeownership lottery for Spruce House H at 226 East Pacific Avenue, Unit H, Telluride, Colorado, 81435.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=407",
-    img: ""
-  },
-  {
-    title: "Sign Up for the 2026 Turkey Trot!",
-    source: "San Miguel County",
-    date: "November 5, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1424",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14909"
-  },
-  {
-    title: "Black Bear and Imogene Passes Closed for the Winter",
-    source: "San Miguel County",
-    date: "November 3, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1423",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
-  },
-  {
     title: "Fairground Facilities Closed Until Further Notice",
     source: "San Miguel County",
     date: "November 20, 2026",
@@ -3658,15 +3622,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The Treasurer's office will be closed Weds 11/11 - Fri 11/13.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=553",
     img: ""
-  },
-  {
-    title: "Black Bear and Imogene Passes Closed for the Winter",
-    source: "San Miguel County",
-    date: "November 3, 2026",
-    newsTopic: "community",
-    copy: "Due to changing weather conditions and the onset of winter, Imogene and Black Bear Passes are now officially closed for the season.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=551",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
   },
   {
     title: "Ridgway Bank Building Officially Added to the National Register of Historic Places",
