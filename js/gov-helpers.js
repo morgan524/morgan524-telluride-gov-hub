@@ -510,6 +510,14 @@ const DEEP_DIVE_UPDATES = [];
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-11-22",
+    title: "The levy vote is set — but the ballot results came first",
+    body: "The school board is debriefing November ballot results — including Ballot Measure 5A, the MLO — before a December 14 special meeting to approve the mill levy. So voters already weighed in, and now the board acts on what that means for school funding going forward. Some residents will say the process is working as it should: voters decide, the board follows through. Others will wonder whether a December special meeting, after the fact, leaves much room for the community to shape what comes next. Either way, the numbers from November set the table.\n\nDoes the sequence — ballot first, levy vote after — give you confidence in how school funding decisions get made up here, or does it leave you wanting more input along the way?",
+    choices: ["Confident in the process", "Want more community input", "Depends on the ballot results", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-11-21",
     title: "Pause the open space fund — again?",
     body: "Council is voting on second reading of an ordinance that would suspend the 5% Open Space Fund dedication from Real Estate Transfer Tax revenue for the 2027 budget year. The argument for: fiscal pressure is real, and a one-year suspension keeps the lights on without permanently touching the program. The argument against: voters backed that land-conservation commitment, and a suspension that keeps recurring starts to look like a policy shift dressed up as a budget fix.\n\nSo — is a temporary suspension a reasonable response to a tight year, or does skipping it again cross a line?",
@@ -738,14 +746,6 @@ const DAILY_QUESTIONS = [
     title: "One lot line goes away in West Telluride",
     body: "A minor subdivision application for 510 W Columbia Avenue is headed to the Planning & Zoning Commission Chair. The proposal would vacate the lot line between two existing parcels and combine them into a single lot — roughly 5,625 square feet — to be known as Lot 40R.\n\nStraightforward paperwork to some. To others, consolidating lots in a tight mountain town raises a familiar question: does merging parcels quietly remove a future opportunity for more housing, or is private owners managing their own property simply nobody else's business?\n\nWhat do you think — does a lot-line vacation like this matter to the broader community, or is it a private decision that doesn't warrant much scrutiny?",
     choices: ["Private call, not our business", "These decisions add up", "Depends on what gets built", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
-  },
-  {
-    date: "2026-10-23",
-    title: "Merge EMS and Ridgway Fire — or keep them separate?",
-    body: "Commissioners are sitting down to talk about a potential merger between EMS and Ridgway Fire services. There's a preliminary draft agreement on the table, along with budget and operational questions. Consolidation backers tend to argue it stretches resources further and streamlines response. Critics worry that merging two distinct cultures and service areas creates more problems than it solves — and that \"preliminary\" can become fait accompli fast. Nothing's been decided; this is a work session. So: does combining these services sound like smart regionalism to you, or a deal that deserves a harder look first?",
-    choices: ["Makes sense — consolidate", "Too many unknowns yet", "Keep them separate", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
   }
@@ -3005,6 +3005,43 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Wilson Peak’s viral moment",
+    source: "Telluride Times",
+    date: "November 19, 2026",
+    firstSeen: "2026-11-19",
+    newsTopic: "recreation",
+    copy: "A flyer appeared on West Colorado Avenue riffing on a viral Chicago stunt where hundreds gathered at Millennium Park on Nov. 8 attempting to \"move\" the 110-ton Cloud Gate sculpture. Telluride's version called for moving Wilson Peak. Mostly just made the rounds on social media.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_bd58ab29-6c31-403f-aad6-4e98226297a2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/45/b45e6455-6c83-4a90-a457-cb4a5f7b04c1/6afafee5a905e.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "Pushback 101: finding a balance",
+    source: "Telluride Times",
+    date: "November 19, 2026",
+    firstSeen: "2026-11-19",
+    newsTopic: "community",
+    copy: "A personal essay in the Telluride Times reflects on the costs of reflexive pushback — personally and culturally — and points to three recent books exploring acceptance, non-reactivity, and letting go of control. Practical reads for anyone feeling worn down by the urge to fight every battle.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_645b761f-ff38-4ef1-a98f-195316fa6575.html",
+    img: "",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "'Still showing up' for democracy on the courthouse steps",
+    source: "Telluride Times",
+    date: "November 19, 2026",
+    firstSeen: "2026-11-19",
+    newsTopic: "government",
+    copy: "Telluride's monthly People's March continues at the San Miguel County Courthouse, with organizers saying recent election results haven't slowed their plans. The Nov. 21 gathering starts at noon, features local speakers, a walk to Town Park and back, and ends with a singalong. December's march is already scheduled with speakers lined up.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_bfe5ecbf-0f49-4c38-bfcb-51bb774889dd.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/35/3359ab5d-85a2-4161-8db6-4781b0f9b870/6af781a00a64a.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Sarah E. Schantz wins 2026 Cantor Poetry Prize contest",
     source: "Telluride Times",
     date: "November 19, 2026",
@@ -3089,43 +3126,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/opinion/columnists/article_75232578-f647-41f6-9fb8-5f89f2996bfc.html",
     img: "",
     isLetter: true,
-    imgHiRes: true
-  },
-  {
-    title: "Wilson Peak’s viral moment",
-    source: "Telluride Times",
-    date: "November 19, 2026",
-    firstSeen: "2026-11-19",
-    newsTopic: "recreation",
-    copy: "A flyer appeared on West Colorado Avenue riffing on a viral Chicago stunt where hundreds gathered at Millennium Park on Nov. 8 attempting to \"move\" the 110-ton Cloud Gate sculpture. Telluride's version called for moving Wilson Peak. Mostly just made the rounds on social media.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_bd58ab29-6c31-403f-aad6-4e98226297a2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/45/b45e6455-6c83-4a90-a457-cb4a5f7b04c1/6afafee5a905e.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "Pushback 101: finding a balance",
-    source: "Telluride Times",
-    date: "November 19, 2026",
-    firstSeen: "2026-11-19",
-    newsTopic: "community",
-    copy: "A personal essay in the Telluride Times reflects on the costs of reflexive pushback — personally and culturally — and points to three recent books exploring acceptance, non-reactivity, and letting go of control. Practical reads for anyone feeling worn down by the urge to fight every battle.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_645b761f-ff38-4ef1-a98f-195316fa6575.html",
-    img: "",
-    isLetter: true,
-    imgHiRes: true
-  },
-  {
-    title: "'Still showing up' for democracy on the courthouse steps",
-    source: "Telluride Times",
-    date: "November 19, 2026",
-    firstSeen: "2026-11-19",
-    newsTopic: "government",
-    copy: "Telluride's monthly People's March continues at the San Miguel County Courthouse, with organizers saying recent election results haven't slowed their plans. The Nov. 21 gathering starts at noon, features local speakers, a walk to Town Park and back, and ends with a singalong. December's march is already scheduled with speakers lined up.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_bfe5ecbf-0f49-4c38-bfcb-51bb774889dd.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/35/3359ab5d-85a2-4161-8db6-4781b0f9b870/6af781a00a64a.image.jpg",
     imgHiRes: true
   },
   {
@@ -4715,7 +4715,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Telluride Mountain School Open House",
     link: "https://koto.org/event/telluride-mountain-school-open-house-4/",
-    description: "School In Action Open House! Come experience what learning looks like at Telluride Mountain School. Instead of a presentation about our school, step into the learning. Visit classrooms, meet teachers and students, explore our campus, and see firsthand how curiosity, connection, and real-world experiences shape the TMS experience. Come see: Learning in action – inquiry, hands-on projects, and interdisciplinary exploration Students known and supported – small classes and meaningful relationships School without walls – place-based and outdoor learning woven throughout the experience The TMS difference – a Preschool-8 education designed to cultivate confident, curious, capable learners Our community – meet the people who make TMS such a special place to learn",
+    description: "Telluride Mountain School is hosting an open house where prospective families and community members can step directly into the learning environment rather than sit through a formal presentation. Visitors are welcome to explore classrooms, meet teachers and students, and experience firsthand the school's approach to curiosity, connection, and real-world learning.",
     pubDate: "2026-12-10T09:00:00-07:00",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4748,7 +4748,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Ski Film: Warren Miller's Day Off",
     link: "https://koto.org/event/ski-film-warren-millers-day-off/",
-    description: "Warren Miller's \"Days Off\" This fall, drop in on Warren Miller’s 77th film, Days Off. Follow host Katie Burrell as the world’s best athletes show you what they do on their days off—no agenda, no competition, just pure, unscripted joy.Embark on a global journey from heli-drops in Alaska and high-alpine mountaineering in Chamonix to the legendary powder of Hokkaido, Japan. Take a ride down Banff’s infamous skijoring course, hit the slopes of Deer Valley, and charge Canada’s finest in Revelstoke, Whistler, and Pemberton. Days Off captures the raw, unfiltered heart of mountain culture—a pure celebration of skiing for skiing’s sake and the joy of making time for what matters most. Sponsored by Christy Sports. DOORS 5:00PM/SHOW 5:30PM DOORS 8:00PM/SHOW 8:30PM",
+    description: "Warren Miller's *Days Off*, the legendary ski film franchise's 77th installment, comes to the Sheridan Opera House in Telluride. The film follows host Katie Burrell and the world's top snow sports athletes across global destinations, capturing unscripted, competition-free riding from Alaska heli-drops to high-alpine terrain.",
     pubDate: "2026-12-11T00:00:00-07:00",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4943,7 +4943,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Phoenix",
     link: "https://www.alibitelluride.com/calendar#eca-event=dj-phoenix-1",
-    description: "DJ Phoenix is a 30 year veteran of the Colorado house music scene and no strange...",
+    description: "DJ Phoenix, a 30-year veteran of the Colorado house music scene, takes the decks at The Alibi for a late-night set. Expect an experienced hand behind the turntables bringing energy to one of Telluride's favorite local venues.",
     pubDate: "2026-11-27",
     time: "9:00 PM",
     source: "alibi",
@@ -4955,7 +4955,7 @@ const ALIBI_EVENTS = [
   {
     title: "Private Event",
     link: "https://www.alibitelluride.com/calendar#eca-event=closed-private-event",
-    description: "Please contact hello@alibitelluride.com with all event inquiries!",
+    description: "A private live music event is taking place at The Alibi in Telluride. The venue is not open to the general public for this occasion; those with questions or interest in attending can reach out directly to the venue for more information.",
     pubDate: "2026-12-03",
     time: "5:00 PM",
     source: "alibi",
@@ -4967,7 +4967,7 @@ const ALIBI_EVENTS = [
   {
     title: "Private Event",
     link: "https://www.alibitelluride.com/calendar#eca-event=private-event-2",
-    description: "Please contact hello@alibitelluride.com with all event inquiries!",
+    description: "A private live music event is taking place at The Alibi in Telluride. The venue is not open to the general public for this occasion; those with questions or inquiries can reach out directly to the venue for more information.",
     pubDate: "2026-12-08",
     time: "5:00 PM",
     source: "alibi",
@@ -4979,7 +4979,7 @@ const ALIBI_EVENTS = [
   {
     title: "The Regular",
     link: "https://www.alibitelluride.com/calendar#eca-event=the-regular",
-    description: "The Regular is a folk rock band based in Denver, CO. Originally formed in Chicag...",
+    description: "The Regular is a folk rock band based in Denver, Colorado, performing live at The Alibi. The band brings their folk rock sound to Telluride for a late-night show.",
     pubDate: "2026-12-10",
     time: "9:00 PM",
     source: "alibi",
@@ -4991,7 +4991,7 @@ const ALIBI_EVENTS = [
   {
     title: "Easy Jim Residency Night 1",
     link: "https://www.alibitelluride.com/calendar#eca-event=easy-jim-residency",
-    description: "“Settle back, easy Jim…” The iconic lyric from Robert Hunter’s Althea captured t...",
+    description: "Easy Jim takes the stage at The Alibi for the first night of a residency engagement, bringing live music to this Telluride bar venue. The residency format promises multiple nights of performances in an intimate setting.",
     pubDate: "2026-12-11",
     time: "9:00 PM",
     source: "alibi",
@@ -5003,7 +5003,7 @@ const ALIBI_EVENTS = [
   {
     title: "Easy Jim Residency Night 2",
     link: "https://www.alibitelluride.com/calendar#eca-event=easy-jim-residency-1",
-    description: "“Settle back, easy Jim…” The iconic lyric from Robert Hunter’s Althea captured t...",
+    description: "Easy Jim continues their residency at The Alibi with a late-night performance on the second of what appears to be a multi-night run at the beloved Telluride bar. The residency format promises an intimate, unhurried evening of live music in one of the town's most familiar local venues.",
     pubDate: "2026-12-12",
     time: "9:00 PM",
     source: "alibi",
@@ -5015,7 +5015,7 @@ const ALIBI_EVENTS = [
   {
     title: "Wild Love Tigress",
     link: "https://www.alibitelluride.com/calendar#eca-event=wild-love-tigress",
-    description: "An explosive funk band complete with horns, backing singers and the full spectru...",
+    description: "Wild Love Tigress is a funk band performing live at The Alibi, bringing an expansive sound that includes horns and backing singers. The show starts at 9:00 PM.",
     pubDate: "2026-12-17",
     time: "9:00 PM",
     source: "alibi",
@@ -5027,7 +5027,7 @@ const ALIBI_EVENTS = [
   {
     title: "Joint Point",
     link: "https://www.alibitelluride.com/calendar#eca-event=joint-point",
-    description: "Joint Point is an original jam band from Colorado. They blend adventurous rock, ...",
+    description: "Joint Point is an original jam band from Colorado known for blending adventurous rock with improvisational, genre-spanning musicianship. The group performs at The Alibi in Telluride, bringing their signature live sound to an intimate late-night setting.",
     pubDate: "2026-12-19",
     time: "9:00 PM",
     source: "alibi",
@@ -5039,7 +5039,7 @@ const ALIBI_EVENTS = [
   {
     title: "Mascolo - NYE DJ Set",
     link: "https://www.alibitelluride.com/calendar#eca-event=mascolo-nye-dj-set",
-    description: "Mascolo is a French-American vocalist, multi-instrumentalist, and producer. His ...",
+    description: "Mascolo, a French-American vocalist, multi-instrumentalist, and producer, takes the decks at The Alibi for a New Year's Eve DJ set. The night offers a live music sendoff to 2026 at one of Telluride's beloved local venues.",
     pubDate: "2026-12-31",
     time: "8:30 PM",
     source: "alibi",
@@ -5051,7 +5051,7 @@ const ALIBI_EVENTS = [
   {
     title: "Easy Jim Residency Night 1",
     link: "https://www.alibitelluride.com/calendar#eca-event=easy-jim-residency-2",
-    description: "“Settle back, easy Jim…” The iconic lyric from Robert Hunter’s Althea captured t...",
+    description: "Easy Jim takes the stage at The Alibi for the first night of a residency engagement, bringing live music to the bar in downtown Telluride. The residency format promises multiple nights of performances from the act in the weeks ahead.",
     pubDate: "2027-01-16",
     time: "9:00 PM",
     source: "alibi",
@@ -5063,7 +5063,7 @@ const ALIBI_EVENTS = [
   {
     title: "Easy Jim Residency Night 2",
     link: "https://www.alibitelluride.com/calendar#eca-event=easy-jim-residency-3",
-    description: "“Settle back, easy Jim…” The iconic lyric from Robert Hunter’s Althea captured t...",
+    description: "Easy Jim continues their residency at The Alibi with a second night of live music. The late-night show is part of an ongoing series at the beloved Telluride bar.",
     pubDate: "2027-01-17",
     time: "9:00 PM",
     source: "alibi",
@@ -5639,8 +5639,8 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Gaper Contest 2026 - Voyager FUNdraiser",
     link: "https://events.ourayridgwayevents.com/event/gaper-contest-2026",
-    description: "Voyager's New FUNdraiser Locals of all ages from the northern San Juan region submit photos for a chance to be a famed Gaper of the Year. No AI or photoshopped photos please. Voting happens during Gaper Week Nov. 21-29, 2026 (opening week of Telluride Ski Resort). The Gaper with the most votes and money raised ($5 per vote) wins lift tickets. 1st place: Telluride 4 days 2nd Place: Silverton, 2 days 3rd Place: Purgatory, 2 days Contest Timeline Nov. 18, 2026 - Photo Submission Deadline Nov. 21-29, 2026 - GAPER WEEK: Get Out and Vote! Dec. 1, 2026 - Winners Announced What's a Gaper? A \"clueless\" skier or snowboarder distinguished by their bright colored clothes or jeans and often a Gaper Gap - the gap between goggles and a helmet/hat. All Contest Info www.voyageryouth.org/gapers",
-    pubDate: "2026-11-21T15:00:00.000Z",
+    description: "A community photo contest and fundraiser for Voyager inviting locals of all ages from the northern San Juan region to submit their best gaper photos for a chance to be named Gaper of the Year. Voting takes place during Gaper Week, November 21–29, 2026, coinciding with opening week at Telluride Ski Resort, with the winner determined by votes and additional criteria.",
+    pubDate: "2026-11-22T15:00:00.000Z",
     endDate: "2026-11-29",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5649,44 +5649,9 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54366527548837/huge/4c3995fa47f3b861d61e318e7dafd3cbfa9b02e9.jpg"
   },
   {
-    title: "Guided Tour: Historic Beaumont Hotel & Spa",
-    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
-    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
-    pubDate: "2026-11-21T20:30:00.000Z",
-    endDate: "2027-01-20",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Beaumont Hotel & Spa",
-    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
-  },
-  {
-    title: "Every Sat. Floating Sound Bath",
-    link: "https://events.ourayridgwayevents.com/event/floating-sound-bath-4324",
-    description: "Group float in warm, healing waters every Saturday @ 3pm. Receive gentle aquatic massage surrounded by live sound therapy; vocals, bowls and more. Contact Vanessa W. 720-470-2823 to reserve your spot. Sliding Scale: $35-$85/person. Please pay in advance: cash at indoor pool or Venmo: @GOLDENTHREADSTHERAPY *Orvis entry fee pay seperately",
-    pubDate: "2026-11-21T22:00:00.000Z",
-    endDate: "2027-01-16",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Orvis Hot Springs",
-    imageUrl: "https://localist-images.azureedge.net/photos/54329446861527/huge/5ff492866a14a5e49ce0e515c6d714c1010eeea6.jpg"
-  },
-  {
-    title: "Turkey Bingo",
-    link: "https://events.ourayridgwayevents.com/event/turkey-bingo-at-greenwoods",
-    description: "RACC is thrilled to once again host our Turkey Bingo Fundraiser at Greenwood’s. A suggested donation to RACC of $25 helps to support Ridgway area businesses. RACC will provide bingo cards and winners will receive a FREE Turkey! You can also pick up your Thanksgiving Pies made at Greenwood’s. Location is Greenwood’s",
-    pubDate: "2026-11-22T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Greenwood's",
-    imageUrl: "https://localist-images.azureedge.net/photos/54506676236668/huge/8d0f2807c6d13cff029995c2dc89a1a23b1cf2d8.jpg"
-  },
-  {
     title: "Live Jazz at Chloe's: Standard Alchemy Jazz",
     link: "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
-    description: "LIVE MUSIC! 🎶 Sundays from 4:00–7:00 p.m., Standard Alchemy (Zan Waller on trumpet, Stefan Davenport on guitar) plays swing, cocktail jazz and Great American Songbook standards, with occasional special guest vocalists. Enjoy live cocktail jazz with the perfect wine and scrumptious charcuterie. Sip, savor, and settle in for a relaxed afternoon of music and Colorado magic! 🍷🧀💛 We can’t wait to see you there! Join us! 🎵",
+    description: "Standard Alchemy brings live jazz to Chloe's Charcuterie & Wine on Sunday afternoons from 4:00–7:00 p.m., with Zan Waller on trumpet and Stefan Davenport on guitar performing swing, cocktail jazz, and Great American Songbook standards. Occasional special guest vocalists join the duo, making for an intimate evening of live music alongside wine and charcuterie.",
     pubDate: "2026-11-22T23:00:00.000Z",
     endDate: "2027-01-17",
     source: "oray",
@@ -5698,7 +5663,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Healing Hearts Circle: Women Transcending Cancer/Chronic Illness",
     link: "https://events.ourayridgwayevents.com/event/healing-hearts-circle-women-transcending-cancerchronic-illness",
-    description: "Women Transcending Cancer/Chronic Disease with Grit and Grace A safe, supportive circle for women navigating cancer or chronic disease – where every path is honored and the whole woman is supported: body, mind, and spirit. Come as you are. Leave feeling heard, connected and empowered Meeting MOST Sundays. Contact Kate Rolston to check is happening on the Sunday you are interested in: kate@m3.life",
+    description: "A recurring support circle at Bee True You Wellness & Creative Studio for women navigating cancer or chronic illness, offering a safe and welcoming space that honors the whole person — body, mind, and spirit. The group provides connection and mutual support for women at any stage of their journey, meeting most Sundays.",
     pubDate: "2026-11-23T00:00:00.000Z",
     endDate: "2026-12-07",
     source: "oray",
@@ -5710,7 +5675,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Thanksgiving Break - Ridgway Schools",
     link: "https://events.ourayridgwayevents.com/event/thanksgiving-break-ridgway-schools",
-    description: "",
+    description: "Ridgway Schools will be closed for Thanksgiving break during this period. Students, staff, and families can expect the district to be on holiday recess in observance of the Thanksgiving holiday.",
     pubDate: "2026-11-23T07:00:00.000Z",
     endDate: "2026-11-27",
     source: "oray",
@@ -5781,7 +5746,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Cimarron Gathering Place",
     link: "https://events.ourayridgwayevents.com/event/cimarron-gathering-place",
-    description: "A place for adults to gather to socialize, play games, exercise, make new friends, and learn. Go to www.roccnet.org for full schedule of activities",
+    description: "A recurring community gathering for adults at the Ouray County Fairgrounds and 4H Events Center, offering opportunities to socialize, play games, exercise, meet new people, and participate in learning activities. Full schedule details are available at roccnet.org.",
     pubDate: "2026-11-24T16:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5801,9 +5766,21 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54472221581238/huge/fa6e95b8212ce5651f6273a51fa7ed9684fae611.jpg"
   },
   {
+    title: "Guided Tour: Historic Beaumont Hotel & Spa",
+    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
+    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
+    pubDate: "2026-11-24T20:30:00.000Z",
+    endDate: "2027-01-20",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Beaumont Hotel & Spa",
+    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
+  },
+  {
     title: "Ethan Perry",
     link: "https://events.ourayridgwayevents.com/event/ethan-perry-1540",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    description: "Ethan Perry is performing live music at a venue on N Cora Street in Ridgway. The event is listed through the Colorado Boy Depot calendar as part of the local community lineup.",
     pubDate: "2026-11-24T23:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5884,9 +5861,21 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/51579855188578/huge/de5019ffbfacf4a9f5e85d8a14961584c70e7873.jpg"
   },
   {
+    title: "Every Sat. Floating Sound Bath",
+    link: "https://events.ourayridgwayevents.com/event/floating-sound-bath-4324",
+    description: "A weekly group float session held every Saturday at Orvis Hot Springs, combining warm-water aquatic massage with live sound therapy including vocals and singing bowls. The experience is offered on a sliding scale and reservations can be made by contacting the organizer directly.",
+    pubDate: "2026-11-28T22:00:00.000Z",
+    endDate: "2027-01-16",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Orvis Hot Springs",
+    imageUrl: "https://localist-images.azureedge.net/photos/54329446861527/huge/5ff492866a14a5e49ce0e515c6d714c1010eeea6.jpg"
+  },
+  {
     title: "Monsters & Myths by Challenge Island",
     link: "https://events.ourayridgwayevents.com/event/monsters-myths-by-challenge-island",
-    description: "Monsters and Myths by Challenge Island® is coming to Voyager! This monstrously marvelous imaginary island is filled with mythological beasts, legendary creatures and things that go bump in the night. Dracula’s Blood Drive Hydra's Head Launch, Big Foot Treetop Track, and Monster Truck Arena, are just a few of the mystery destinations on Monsters and Myths Island. STEAM Teams will work together to overcome epic engineering challenges using only the materials supplied in their treasure boxes and their imaginations! REGISTRATION: Each week is a different challenge within the same theme - sign up for one or as many as you want. Multiple-day sign-ups are encouraged for more team consistency and skill development. Space is limited. Sign up today by registering for the \"After School Programming\" at voyageryouth.org",
+    description: "A Challenge Island program for kids centered on monsters and myths, featuring themed building and engineering activities inspired by legendary creatures and mythological beasts. The event takes place at the Voyager Youth Program's Ridgway site.",
     pubDate: "2026-11-30T22:00:00.000Z",
     endDate: "2026-12-14",
     source: "oray",
@@ -5898,7 +5887,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Mamas & Caregivers Connect - Prenatal, Postpartum, and Beyond",
     link: "https://events.ourayridgwayevents.com/event/mamas-caregivers-connect-prenatal-postpartum-and-beyond",
-    description: "A supportive skill-building community for new and expecting moms to connect, share, and grow in breastfeeding confidence, physical recovery, and emotional wellbeing throughout the prenatal and postpartum journey. Gathering in person and virtually from 11:00-12:30 pm Ridgway - 1st Tuesday of the month at Ridgway Public Library Telluride - 1st Friday of the month at Wilkinson Public Library Call with ?'s (970)-728-5613",
+    description: "A community gathering at the Ridgway Public Library for new and expecting mothers to connect and support one another through the prenatal and postpartum journey. The group meets in person and virtually, focusing on breastfeeding confidence, physical recovery, and emotional wellbeing.",
     pubDate: "2026-12-01T18:00:00.000Z",
     endDate: "2027-01-05",
     source: "oray",
@@ -5922,7 +5911,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Brooke White",
     link: "https://events.ourayridgwayevents.com/event/brooke-white-3226",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    description: "Brooke White is performing live at a venue on N Cora Street in Ridgway. The event is listed through the Colorado Boy Depot calendar as a live music performance.",
     pubDate: "2026-12-01T23:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -6016,7 +6005,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "23rd Annual Holiday Art & Gift Sale",
     link: "https://events.ourayridgwayevents.com/event/23rd-annual-holiday-art-gift-sale",
-    description: "Shop local this holiday season at the 23rd Annual Holiday Art & Gift Sale! Browse one-of-a-kind gifts handmade by local artisans and craftspeople and find something special for everyone on your list. Come support local makers, discover unique handmade work, and enjoy a festive holiday shopping tradition in Ridgway. Questions? Ruth Higdon: elrutho@aol.com Nina Rea: nina.rea@icloud.com",
+    description: "The 23rd Annual Holiday Art & Gift Sale returns to the Decker Community Room, offering handmade work from local artisans and craftspeople. This long-running community tradition provides an opportunity to find one-of-a-kind, locally made gifts during the holiday season.",
     pubDate: "2026-12-05T00:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -6027,7 +6016,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "First Friday Art Walk",
     link: "https://events.ourayridgwayevents.com/event/first-friday-art-walk",
-    description: "First Friday is back! Spend the evening exploring downtown Ridgway, where galleries, studios, shops and gathering spaces come alive with new exhibitions, artist receptions, live music, pop-ups and special programming. Each month brings something different, so take a stroll, discover what’s new and make a night of it. 🎨🛍️ Shop local. Win local. Celebrate local. 🎶🍷 Visit participating businesses during First Friday for a chance to win a $100 gift card to a local business of your choice. 👀 Follow the link for this month’s map, featured stops and giveaway details. First Friday Map & Offer Details",
+    description: "A monthly community art walk through downtown Ridgway, where galleries, studios, shops, and gathering spaces open their doors for new exhibitions, artist receptions, live music, and pop-up programming. Each edition offers a fresh lineup of creative experiences spread across the walkable downtown area.",
     pubDate: "2026-12-05T00:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -6159,7 +6148,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Ridgway Film Club - Film Screening and Discussion",
     link: "https://events.ourayridgwayevents.com/event/ridgway-film-club-8555",
-    description: "Free film screening with discussion afterwards. For movie details, sign up here (movie names released via email the week prior) www.ridgwayfilmclub.wordpress.com Sponsored by Ridgway Public Library",
+    description: "The Ridgway Film Club hosts a free film screening at the Decker Community Room, followed by a group discussion. The specific film is announced to registered participants via email the week before the event; visit ridgwayfilmclub.wordpress.com to sign up. Sponsored by Ridgway Public Library.",
     pubDate: "2026-12-07T02:00:00.000Z",
     endDate: "2027-01-10",
     source: "oray",
@@ -6182,7 +6171,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
     link: "https://events.ourayridgwayevents.com/event/monthly-welcome-home-alliance-veterans-coffee-the-sherbino",
-    description: "MONTHLY WELCOME HOME ALLIANCE VETERAN’S COFFEE @ THE SHERBINO Every Branch. Every Era. Every Ability. Offering coffee, donuts and camaraderie. Mike Trickey and April Heard will be there bringing information to you on topics such as: Navigating the VA, Housing, Jobs, Volunteer Opportunities, community resources, VA benefits, recreation and mental health. For more information or to offer support (products or monetary), call 970-765-2210 or visit https://www.whafv.org/ Occurs the 2nd Tuesday of Every Month || 10 am - Noon || Free to attend || Vets Only, Please",
+    description: "A monthly veterans' gathering hosted by the Welcome Home Alliance at The Sherbino, offering coffee, donuts, and camaraderie for veterans of every branch, era, and ability. Representatives will be on hand to share information on topics including navigating the VA, housing, jobs, and volunteer opportunities.",
     pubDate: "2026-12-08T17:00:00.000Z",
     endDate: "2027-01-12",
     source: "oray",
@@ -6194,7 +6183,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Britley & Matt",
     link: "https://events.ourayridgwayevents.com/event/britley-matt-8937",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    description: "Britley & Matt are performing live music at a venue on North Cora Street in Ridgway. The event is listed through the Ouray Ridgway community calendar.",
     pubDate: "2026-12-08T23:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -6262,21 +6251,9 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg"
   },
   {
-    title: "Community Meditation",
-    link: "https://events.ourayridgwayevents.com/event/community-meditation-1981",
-    description: "Join us for a peer-led meditation series at the Decker Community Room. Free and open to the public!",
-    pubDate: "2026-12-11T01:30:00.000Z",
-    endDate: "2027-01-15",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/54568874680153/huge/de66bb88b09c1bfd9b24a43eeaaa48672ea59807.jpg"
-  },
-  {
     title: "Ridgway Wrecking Crew",
     link: "https://events.ourayridgwayevents.com/event/ridgway-wrecking-crew-6009",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    description: "The Ridgway Wrecking Crew is a live music event taking place at a venue on North Cora Street in Ridgway. It is listed on the Ouray Ridgway community calendar as a local music gathering in the area.",
     pubDate: "2026-12-11T23:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -6298,7 +6275,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Britley & Matt",
     link: "https://events.ourayridgwayevents.com/event/britley-matt-14",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    description: "Britley & Matt are performing live music at a venue on North Cora Street in Ridgway. This community event is listed through the Ouray Ridgway Calendar and takes place in mid-December.",
     pubDate: "2026-12-15T23:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -6333,7 +6310,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Ridgway HS Boys Basketball vs. Caprock Academy",
     link: "https://events.ourayridgwayevents.com/event/ridgway-hs-boys-basketball-vs-caprock-academy",
-    description: "Join us at the Ridgway Secondary Gym as the Ridgway High School Boys Basketball team takes on Caprock Academy! Bring your friends and family, check out our concessions, and cheer on our athletes! Admission supports our athletic program and a great home crowd makes all the difference. Go Demons! Adults: $5 Seniors (65+): $3 Students: FREE Season Pass: $100 (good for the entire year) HS Boys Basketball Schedule",
+    description: "The Ridgway High School Boys Basketball team hosts Caprock Academy at the Ridgway Secondary School gym. Admission supports the athletic program, and concessions will be available.",
     pubDate: "2026-12-18T22:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -6344,7 +6321,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Ridgway Wrecking Crew",
     link: "https://events.ourayridgwayevents.com/event/ridgway-wrecking-crew-1374",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    description: "The Ridgway Wrecking Crew takes the stage for a live music event at a venue on North Cora Street in Ridgway. The show is listed on the Ouray Ridgway community calendar as an evening performance.",
     pubDate: "2026-12-18T23:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -6377,7 +6354,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Winter Break - Ridgway Schools",
     link: "https://events.ourayridgwayevents.com/event/winter-break-ridgway-schools",
-    description: "",
+    description: "Winter break for Ridgway Schools begins on this date, giving students and families time off during the holiday season. The break is a scheduled pause in the academic calendar for the Ridgway school district.",
     pubDate: "2026-12-21T07:00:00.000Z",
     endDate: "2027-01-01",
     source: "oray",
@@ -6389,7 +6366,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Brooke White",
     link: "https://events.ourayridgwayevents.com/event/brooke-white-6996",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    description: "Brooke White performs live at a venue on N Cora Street in Ridgway, with the event listed through the Ouray Ridgway community calendar. It is a live music performance hosted at the Colorado Boy location in Ridgway.",
     pubDate: "2026-12-22T23:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -6412,7 +6389,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Ridgway HS Boys Basketball vs. Telluride",
     link: "https://events.ourayridgwayevents.com/event/ridgway-hs-boys-basketball-vs-telluride",
-    description: "Join us at the Ridgway Secondary Gym as the Ridgway High School Boys Basketball team takes on Telluride! Bring your friends and family, check out our concessions, and cheer on our athletes! Admission supports our athletic program and a great home crowd makes all the difference. Go Demons! Adults: $5 Seniors (65+): $3 Students: FREE Season Pass: $100 (good for the entire year) HS Boys Basketball Schedule",
+    description: "The Ridgway High School boys basketball team hosts Telluride at Ridgway Secondary School in a league matchup. Admission fees support the athletic program, with concessions available at the gym.",
     pubDate: "2027-01-12T22:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -6426,7 +6403,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-11-16-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "A regular meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
     pubDate: "2026-11-16T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6437,7 +6414,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-11-18-board-of-trustees-meeting",
-    description: "",
+    description: "The Town of Norwood Board of Trustees will hold a regular meeting on November 18. This is an official government meeting open to the public, providing an opportunity for community members to observe local municipal business and decision-making.",
     pubDate: "2026-11-18T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6448,7 +6425,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Meals",
     link: "https://www.norwoodtown.com/2026-11-19-senior-meals",
-    description: "",
+    description: "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to gather, share a meal, and connect with neighbors.",
     pubDate: "2026-11-19T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6459,7 +6436,7 @@ const NORWOOD_EVENTS = [
   {
     title: "No Senior Meals",
     link: "https://www.norwoodtown.com/2026-11-26-no-senior-meals",
-    description: "",
+    description: "The Town of Norwood's regular senior meals program will not be held on this date. This notice serves as a reminder for community members who rely on or participate in the senior meals service.",
     pubDate: "2026-11-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6470,7 +6447,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Thanksgiving",
     link: "https://www.norwoodtown.com/2026-11-26-closed-for-thanksgiving",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Thanksgiving Day. Municipal offices and services will be unavailable, with normal operations expected to resume following the holiday.",
     pubDate: "2026-11-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6481,7 +6458,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Meals",
     link: "https://www.norwoodtown.com/2026-12-03-senior-meals",
-    description: "",
+    description: "A community meal program for seniors hosted by the Town of Norwood. This midday gathering offers older residents an opportunity to share a meal and connect with neighbors.",
     pubDate: "2026-12-03T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6492,7 +6469,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Noel Night",
     link: "https://www.norwoodtown.com/2026-12-04-noel-night",
-    description: "",
+    description: "Noel Night is a community holiday event hosted by the Town of Norwood, bringing residents together to celebrate the season. Held in early December, it offers a festive evening for families and neighbors in the Norwood area.",
     pubDate: "2026-12-04T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6503,7 +6480,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Christmas Day",
     link: "https://www.norwoodtown.com/2026-12-25-closed-for-christmas-day",
-    description: "",
+    description: "The Town of Norwood will be closed on Christmas Day in observance of the holiday. Municipal offices and services will be unavailable, so residents should plan accordingly for any town business needs.",
     pubDate: "2026-12-25T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6517,7 +6494,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Movies Under the Stars",
     link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    description: "Movies Under the Stars is a recurring outdoor film series held on Saturday evenings at dusk at the Conference Center Plaza in Mountain Village, running from June 13 through August 15. The community event brings free outdoor cinema to the plaza through the summer season.",
     pubDate: "2026-11-21T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -6539,7 +6516,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Bike & Brewery Tour",
     link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
-    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    description: "A guided bicycle tour departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route offers a scenic way to connect Mountain Village to town while visiting local breweries along the way.",
     pubDate: "2026-11-23T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -6550,7 +6527,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
     link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
-    description: "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
+    description: "A community workshop held in Mountain Village exploring eco-grief — the emotional weight of loss tied to environmental change — alongside gratitude and love as responses to a shifting world. Led by Lauren Norton of Through the Woods Doula and Mollie Theis of EcoAction Partners, in partnership with the Wilkinson Public Library, the program offers space for reflection and connection.",
     pubDate: "2026-11-24T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -6561,7 +6538,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "An Outlaw Thanksgiving at Alloy Kitchen",
     link: "https://townofmountainvillage.com/explore/events/all-events/an-outlaw-thanksgiving-at-alloy-kitchen/",
-    description: "An Outlaw Thanksgiving at Alloy Kitchen in Mountain Lodge Telluride, Mountain Village. A fire-lit Thanksgiving buffet with live music on Thursday,",
+    description: "A Thanksgiving buffet at Alloy Kitchen in Mountain Lodge Telluride, set around a fire with live music. It's a festive holiday gathering in Mountain Village with an outlaw spirit for those celebrating Thanksgiving in the mountains.",
     pubDate: "2026-11-26T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -6572,7 +6549,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Live Music at Mountain Lodge",
     link: "https://townofmountainvillage.com/explore/events/all-events/live-music-at-mountain-lodge/",
-    description: "Live music all winter at Mountain Lodge Telluride in Mountain Village. Local acts play the Après Lounge from 4 to 7 p.m. most Thursdays,",
+    description: "Live music returns to the Après Lounge at Mountain Lodge Telluride in Mountain Village, with local acts performing most Thursdays from 4 to 7 p.m. throughout the winter season. It's a relaxed après-ski setting for enjoying live performances from the local music community.",
     pubDate: "2026-11-26T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -6583,7 +6560,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Mind Blown Telluride",
     link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-8/",
-    description: "Mind Blown Telluride: magician Ty Gallenbeck's close-up magic show at Mountain Lodge Telluride in Mountain Village. Shows run most Friday and Saturday nights",
+    description: "A close-up magic show featuring magician Ty Gallenbeck, held at Mountain Lodge Telluride in Mountain Village. Performances take place most Friday and Saturday nights.",
     pubDate: "2026-11-27T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -6594,7 +6571,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Movies Under the Stars",
     link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    description: "Movies Under the Stars is a recurring outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening on Saturday evenings at dusk. The series runs from June 13 through August 15, bringing community members together for movies in an open-air setting.",
     pubDate: "2026-11-28T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -6605,7 +6582,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Bike & Brewery Tour",
     link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
-    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    description: "A guided bicycle tour departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route offers a scenic descent connecting Mountain Village to town, combining outdoor recreation with a stop at a local brewery.",
     pubDate: "2026-11-30T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -6616,7 +6593,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
     link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
-    description: "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
+    description: "This eco-grief workshop, hosted in Mountain Village, brings together Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library to explore the intersection of grief and gratitude in the face of environmental change. The program offers participants a space to process loss and find meaning in their relationship with the natural world.",
     pubDate: "2026-12-01T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -6638,7 +6615,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Movies Under the Stars",
     link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    description: "Movies Under the Stars is a recurring outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening on Saturday evenings at dusk. The series runs weekly throughout the summer months, offering a seasonal community gathering under the open sky.",
     pubDate: "2026-12-05T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -6660,7 +6637,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Mountain Village Community Dinner",
     link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-community-dinner/",
-    description: "Do you live or work in Mountain Village? Then this evening is for you! Join your neighbors, coworkers, and friends for our 4th annual Community Dinner,",
+    description: "A community dinner hosted by Mountain Village, now in its fourth year, bringing together residents and workers of the Mountain Village area for an evening of food and neighborly connection.",
     pubDate: "2026-12-07T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -6671,7 +6648,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Bike & Brewery Tour",
     link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
-    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    description: "A guided bicycle tour originating at the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route offers a scenic descent through Mountain Village and into town.",
     pubDate: "2026-12-07T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -6682,7 +6659,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Mountain Village Merchant Meeting",
     link: "https://townofmountainvillage.com/explore/events/all-events/merchant-meeting/",
-    description: "Join us for the monthly Mountain Village Merchant Meeting to be held on the second Tuesday of each month from 10 to 11 a.m. The meeting will be hybrid with",
+    description: "A monthly gathering for Mountain Village merchants, held on the second Tuesday of each month from 10 to 11 a.m. The meeting is offered in a hybrid format, allowing participants to attend either in person or remotely.",
     pubDate: "2026-12-08T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -6693,7 +6670,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
     link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
-    description: "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
+    description: "This workshop, hosted in Mountain Village, brings together facilitators from Through the Woods Doula, EcoAction Partners, and the Wilkinson Public Library to explore the emotional terrain of living through environmental change. It offers a guided space to process feelings of ecological grief and loss alongside moments of gratitude and connection to the natural world.",
     pubDate: "2026-12-08T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -6704,7 +6681,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Movies Under the Stars",
     link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    description: "Movies Under the Stars is an outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening movies on Saturday evenings at dusk. The series runs weekly from June 13 through August 15, 2026.",
     pubDate: "2026-12-12T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -6726,7 +6703,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Bike & Brewery Tour",
     link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
-    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    description: "A guided bicycle ride departing from the Mountain Lodge in Mountain Village, following the Jurassic Trail and Meadows Trail down to Telluride Brewing Co., where riders receive a complimentary beer. The route takes participants through scenic mountain terrain between Mountain Village and town.",
     pubDate: "2026-12-14T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -6737,7 +6714,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
     link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
-    description: "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
+    description: "This eco-grief workshop, hosted in Mountain Village, brings together Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners, and the Wilkinson Public Library to explore the emotional experience of living through environmental change. The program offers participants a space to process feelings of grief and gratitude connected to the natural world.",
     pubDate: "2026-12-15T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -6759,7 +6736,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Movies Under the Stars",
     link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    description: "Movies Under the Stars is an outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening movies on Saturday evenings at dusk. The series runs weekly on Saturdays from June 13 through August 15.",
     pubDate: "2026-12-19T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -6781,7 +6758,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Mind Blown Telluride: Magic with Ty Gallenbeck",
     link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-magic-with-ty-gallenbeck/",
-    description: "Mind Blown Telluride: magician Ty Gallenbeck's close-up magic show at Mountain Lodge Telluride in Mountain Village. Shows run most Friday and Saturday nights",
+    description: "A close-up magic show featuring magician Ty Gallenbeck, held at Mountain Lodge Telluride in Mountain Village. The show runs most Friday and Saturday nights as an ongoing series.",
     pubDate: "2026-12-19T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -6792,13 +6769,35 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Bike & Brewery Tour",
     link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
-    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    description: "A guided bicycle ride originating at the Mountain Lodge in Mountain Village, following the Jurassic and Meadows trails down to Telluride Brewing Co., where participants receive a complimentary beer. The tour offers a scenic two-brewery route connecting Mountain Village to town.",
     pubDate: "2026-12-21T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
+  },
+  {
+    title: "The Very Merry Market",
+    link: "https://townofmountainvillage.com/explore/events/all-events/the-very-merry-market/",
+    description: "A one-day holiday makers' market held inside the Telluride Conference Center in Mountain Village, offering locally made and one-of-a-kind goods in a festive seasonal setting. The event brings together the community to celebrate the holiday season.",
+    pubDate: "2026-12-22T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/47492/social_image.png"
+  },
+  {
+    title: "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
+    link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
+    description: "This community workshop in Mountain Village brings together facilitators from Through the Woods Doula, EcoAction Partners, and the Wilkinson Public Library to explore the emotional landscape of living through environmental change. The program offers participants a space to hold both grief and gratitude as intertwined responses to a shifting natural world.",
+    pubDate: "2026-12-22T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
   }
 ];
 
