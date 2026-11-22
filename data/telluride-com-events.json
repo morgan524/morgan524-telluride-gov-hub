@@ -12,28 +12,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/45301/i-5fmsgs6-5k-2100x1400-d6f22d2a-6109-408c-9f35-051a33841613.800x533.webp"
   },
   {
-    "title": "Gondola Re-Opens for Winter",
-    "link": "https://www.telluride.com/event/gondola-reopens-for-the-season/",
-    "description": "The gondola, which closes temporarily for maintenance during the off-season, re-opens on Friday, November 20 for the …",
-    "pubDate": "2026-11-20",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/42687/winter_gondola_telluride.800x533.webp"
-  },
-  {
-    "title": "Girl Winter Film Tour",
-    "link": "https://www.telluride.com/event/girl-winter-film-tour/",
-    "description": "You’ve heard of “Girl Dinner” – the perfectly chaotic spread of favorite snacks, little treats, and whatever …",
-    "pubDate": "2026-11-20",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63705/gwft-banner-16x9-horizontal-2048x1152.800x533.webp"
-  },
-  {
     "title": "Turkey Bingo",
     "link": "https://www.telluride.com/event/turkey-bingo/",
     "description": "This local favorite event returns again for another year! Bring your white t-shirts and be ready for a good time …",
@@ -488,5 +466,28 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63802/the-lone-bellow-ezgif_com-webp-to-jpg-converter.800x533.webp"
+  },
+  {
+    "title": "Community Concert",
+    "link": "https://www.telluride.com/event/community-concert/",
+    "description": "A fun and free chamber music series featuring talented local musicians. These concerts will appeal to both first time …",
+    "pubDate": "2027-01-21",
+    "endDate": "2027-03-25",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/60285/ezgif-img_9713.800x533.webp"
+  },
+  {
+    "title": "Local Rock Night With Sister Sabbath & Chrome Velvet",
+    "link": "https://www.telluride.com/event/local-rock-night-with-sister-sabbath-chrome-velvet/",
+    "description": "Get ready for a night of pure, unapologetic rock and roll! Two local bands, one stage, and an evening dedicated to the …",
+    "pubDate": "2027-01-21",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/64378/local_rock_night.800x533.webp"
   }
 ]

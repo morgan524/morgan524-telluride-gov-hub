@@ -1,5 +1,17 @@
 [
   {
+    "title": "'We're a base camp for adventure' in Mountain Village",
+    "source": "Telluride Times",
+    "date": "November 21, 2026",
+    "firstSeen": "2026-11-22",
+    "newsTopic": "arts-culture",
+    "copy": "Mountain Lodge in Mountain Village is packing its winter calendar with live music, signature parties, and illusionist Ty Gallenbeck's Mind Blown show, now relocated from The Peaks into a new 30-seat room with cocktail service. The lodge's restaurant has rebranded as Alloy Kitchen and hosts live music Thursday through Sunday. Big DJ events, pool-deck parties with lasers, and a Cocktails and Cowboys night round out the season.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/arts_and_entertainment/article_f312214d-4741-4341-b47f-d4f23a02abc3.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/94/49410c31-cce0-4152-b835-22972094880a/6affa517524dc.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Man charged with felony for allegedly menacing teens",
     "source": "Telluride Times",
     "date": "November 21, 2026",
@@ -729,28 +741,31 @@
     "imgHiRes": true
   },
   {
-    "title": "Work begins on Mill Creek PUD",
-    "source": "Telluride Times",
-    "date": "November 8, 2026",
-    "firstSeen": "2026-11-09",
-    "newsTopic": "land-use",
-    "copy": "Ground is being broken on the Mill Creek PUD west of Telluride — a project approved back in 2016 that will bring 20 single-family lots to a 121-acre parcel north of the Spur. Infrastructure work runs through spring 2029, with a 3.2-acre piece set aside for up to 72 affordable units once the first lot sells.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/article_e5c8aa7f-8778-4458-9ffa-9b6fe1330736.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/49/a4960fc1-5d07-4313-8e39-4a4aa8d7a6b3/6aee421a1d65b.image.png",
-    "imgHiRes": true
+    "title": "Local Employers Invited to Apply for Employee Housing Master Leases",
+    "source": "Town of Telluride",
+    "date": "October 23, 2026",
+    "newsTopic": "housing",
+    "copy": "(October 22, 2026) – The Telluride Housing Authority (THA) is offering master leases on five apartments at the new Virginia Placer IIA building and two rooms at the Telluride Boarding House to local businesses and organizations.",
+    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=408",
+    "img": ""
   },
   {
-    "title": "A festival for the town where the theme is joy",
-    "source": "Telluride Times",
-    "date": "November 8, 2026",
-    "firstSeen": "2026-11-08",
-    "newsTopic": "arts-culture",
-    "copy": "Raíces Sin Fronteras hosts its fourth annual Semana de Bienestar — Wellness Week — in Telluride, Nov. 12–15, timed for the off-season when year-round residents are still here. Free, bilingual, and open to all ages, this year's theme is alegría — joy — with events ranging from dance and wellness workshops to a Mayan bonfire ceremony. Around 500 community members participated last year.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/arts_and_entertainment/article_463e28d1-d4d5-4134-87a3-5553416f7e46.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/36/a36fd091-88de-44d4-a0dd-c3ba96e2d1a9/6aee58578f832.image.jpg",
-    "imgHiRes": true
+    "title": "Sign Up for the 2026 Turkey Trot!",
+    "source": "San Miguel County",
+    "date": "November 5, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1424",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14909"
+  },
+  {
+    "title": "Black Bear and Imogene Passes Closed for the Winter",
+    "source": "San Miguel County",
+    "date": "November 3, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1423",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
   },
   {
     "title": "Fairground Facilities Closed Until Further Notice",
@@ -769,6 +784,15 @@
     "copy": "The Treasurer's office will be closed Weds 11/11 - Fri 11/13.",
     "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=553",
     "img": ""
+  },
+  {
+    "title": "Black Bear and Imogene Passes Closed for the Winter",
+    "source": "San Miguel County",
+    "date": "November 3, 2026",
+    "newsTopic": "community",
+    "copy": "Due to changing weather conditions and the onset of winter, Imogene and Black Bear Passes are now officially closed for the season.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=551",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
   },
   {
     "title": "Ridgway Bank Building Officially Added to the National Register of Historic Places",
@@ -795,7 +819,7 @@
   {
     "title": "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     "source": "Town of Ridgway",
-    "date": "November 21, 2026",
+    "date": "November 22, 2026",
     "firstSeen": "2026-09-29",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -806,7 +830,7 @@
   {
     "title": "Town of Ridgway, City of Ouray, and Ouray County Establish New Three-Year Affordable Housing Goals",
     "source": "Town of Ridgway",
-    "date": "November 21, 2026",
+    "date": "November 22, 2026",
     "firstSeen": "2026-10-21",
     "newsTopic": "housing",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",

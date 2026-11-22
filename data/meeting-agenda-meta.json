@@ -1,38 +1,4 @@
 {
-  "med|2026-10-22|Regular Board Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://www.tellmed.org/files/51579856e/THD+Reg+BOD+Mtg+10.22.26+Agenda.pdf",
-    "zoomUrl": "https://us02web.zoom.us/j/89509331558",
-    "meetingId": "895 0933 1558"
-  },
-  "tmvoa|2026-10-22|TMVOA Board of Directors Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://tmvoa.org/site/assets/files/4868/tmvoa_board_meeting_agenda_10_22_26.pdf",
-    "zoomUrl": "https://us02web.zoom.us/meeting/register/kOgdEpzPSm6ngU0nJxoTXQ",
-    "meetingId": "885 4321 0595",
-    "passcode": "070912",
-    "phone": "970) 728-1904"
-  },
-  "telluride|2026-10-22|Planning & Zoning Commission - Oct 22 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8106",
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/OC4r5SGcR6S0q5DBnXPh8Q",
-    "meetingId": "893 9320 2174",
-    "passcode": "963785.",
-    "phone": "301-715-8592"
-  },
-  "telluride|2026-10-22|Planning & Zoning Commission Chair - Oct 22 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8105",
-    "sv": 4,
-    "ph": "d0e0554de56351fb"
-  },
-  "county|2026-10-22|Board of Adjustment Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1072/files/agenda/2046",
-    "zoomUrl": "https://us06web.zoom.us/j/89983740568?pwd=Dl2LOcbcDvSP6Ifh2K09u2KB0cdBZH.1",
-    "meetingId": "899 8374 0568",
-    "passcode": "022414"
-  },
   "county|2026-10-26|Open Space Commission Meeting": {
     "sv": 4,
     "ph": "1ff606174e68cca5"
@@ -121,10 +87,6 @@
     "meetingId": "815 3599 7736",
     "passcode": "769982.",
     "phone": "312-626-6799",
-    "sv": 4
-  },
-  "telluride|2026-10-22|(Rescheduled to 11/2) Planning & Zoning Commission Chair - Oct 22 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8105",
     "sv": 4
   },
   "smart|2026-11-12|SMART Board of Directors": {
