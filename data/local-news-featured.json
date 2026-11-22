@@ -1,5 +1,59 @@
 [
   {
+    "title": "Herding unicorns",
+    "source": "Telluride Times",
+    "sourceKey": "ttimes",
+    "date": "November 5, 2026",
+    "summary": "John Metzger writes that Telluride is a one-of-a-kind unicorn, livable for the few but unaffordable for the workers who keep it humming, and that rural stars must align for small towns to thrive. State and federal money is starting to flow into the region through Enterprise Zone expansions and a $50B rural health program, a new emergency hub is under construction outside Telluride, and Norwood is planning a new school and a reimagined medical center. Coordination between districts remains the stubborn obstacle.",
+    "href": "https://www.telluridenews.com/norwood_post/article_fd7f8dfa-b21f-48c8-a4aa-5a9feb679e90.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/05/b05007ac-70f0-47ba-abc9-1844981e5de0/6ae4e34f633d2.image.jpg",
+    "category": "Opinion",
+    "newsTopic": "health",
+    "featured": true,
+    "expires": "2026-11-08"
+  },
+  {
+    "title": "Does platted density mean anything in town planning?",
+    "source": "Telluride Times",
+    "sourceKey": "ttimes",
+    "date": "October 20, 2026",
+    "summary": "A letter to the editor raises pointed questions about the Carhenge/Backman Village project after the Sept. 30 Town Council meeting upheld a lot-line vacation. The writer notes the platted density shows 176 units — or 151 plus commercial space — yet planning has advanced a 230-unit proposal, with over $1M reportedly spent on consultants. She's asking what legal weight a recorded plat actually carries if staff can set it aside during project review.",
+    "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_085bdee6-f590-475f-93af-399bea9a04de.html",
+    "category": "Opinion",
+    "newsTopic": "housing",
+    "isLetter": true,
+    "letterAuthor": "Madelaine Whiteman",
+    "featured": true,
+    "expires": "2026-10-31"
+  },
+  {
+    "title": "Another view of housing",
+    "source": "Telluride Times",
+    "sourceKey": "ttimes",
+    "date": "September 15, 2026",
+    "summary": "In a letter to the editor, Madelaine Whiteman contrasts Telluride's single-plan approach to its Town-led workforce housing project with San Rafael, California, where five developers competed for an affordable-housing site and three finalists presented distinct proposals on cost, density, and public benefit. She asks why Telluride taxpayers are being asked to move forward on a Town-developed project without competing bids or a known final cost, and questions whether housing development, management, and rental should be a core municipal responsibility at all.",
+    "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_9823f845-c4a0-4cf8-afe5-28cb216da161.html",
+    "category": "Opinion",
+    "newsTopic": "housing",
+    "isLetter": true,
+    "letterAuthor": "Madelaine Whiteman",
+    "featured": true,
+    "expires": "2026-09-17"
+  },
+  {
+    "title": "New medicine for a vulnerable economy",
+    "source": "Telluride Times",
+    "sourceKey": "ttimes",
+    "date": "September 3, 2026",
+    "summary": "San Miguel County has joined Colorado's Region 10 Enterprise Zone, unlocking state grants and tax credits aimed at shoring up the region's economy. The designation is paired with a push to better coordinate emergency medical care across Telluride, Norwood, Ridgway, and other remote communities, including satellite clinic networks and shared triage protocols. Dr. Kim Hewson outlines a strategy for pooling medical resources across town lines rather than each community going it alone.",
+    "href": "https://www.telluridenews.com/article_443b80a1-ddbc-5133-8843-fc9a06df6359.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/c4/7c456985-867a-50e6-a5e7-715c13382d79/6a994f3985289.image.jpg",
+    "category": "Health",
+    "newsTopic": "health",
+    "featured": true,
+    "expires": "2026-09-07"
+  },
+  {
     "title": "Fire management moonshot",
     "source": "Telluride Times",
     "sourceKey": "ttimes",
@@ -9,8 +63,7 @@
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/84/e849a731-98e2-5067-a168-3729aa39f798/6a745ca4b69ef.image.jpg?crop=766%2C403%2C0%2C11",
     "category": "Opinion",
     "newsTopic": "public-safety",
-    "featured": true,
-    "expires": "2026-08-08"
+    "featured": false
   },
   {
     "title": "Stakeholders discuss housing density",

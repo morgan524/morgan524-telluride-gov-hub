@@ -35,8 +35,9 @@
   // silently thrown away while the name/region still saved (making the request
   // look successful). Never reintroduce numeric ids here.
   var SUBSCRIPTIONS = [
-    { key: 'weekly',     label: 'Weekly Update', desc: 'The Friday look-ahead — upcoming meetings & events.' },
+    { key: 'weekly',     label: 'Weekly Update', desc: 'The Monday look-ahead — upcoming meetings & events.' },
     { key: 'newsletter', label: 'Newsletter',    desc: 'Long-form posts when we publish them.' },
+    { key: 'past',       label: 'Past Meetings', desc: 'Friday recaps of the past week’s public meetings, each linked to the full summary.' },
   ];
 
   function qp(name) {
@@ -164,7 +165,7 @@
           '<div class="row"><label for="ltProfAddr">Your address or town</label><input id="ltProfAddr" type="text" placeholder="So we can flag events close to you"></div>' +
           '<div class="row"><label for="ltProfRadius">How far you’ll travel (miles)</label><input id="ltProfRadius" type="number" min="1" max="200" placeholder="e.g. 25"></div>' +
           '<div class="lt-prof-section">Your subscriptions</div>' +
-          '<div class="lt-prof-note">These switches start off because we can’t tell which lists you’re on from here. <strong>Anything you don’t touch stays exactly as it is</strong> — only switches you actually move get saved. For event topics and your current settings, use the <a href="/profile.html">full profile page</a>.</div>' +
+          '<div class="lt-prof-note">These switches start off because we can’t tell which lists you’re on from here. <strong>Anything you don’t touch stays exactly as it is</strong> — only switches you actually move get saved. To see your current settings, use the <a href="/profile.html">full profile page</a>.</div>' +
           subRowsHtml() +
           '<p class="lt-prof-msg" id="ltProfMsg" role="status" aria-live="polite"></p>' +
           '<div class="lt-prof-actions">' +

@@ -70,6 +70,15 @@ jobs:
           cd scripts
           npx playwright install-deps chromium
 
+      # Newsletters sent from the Customer.io UI never reach
+      # data/sent-broadcasts.json, so archive them to digest/one-off/ here;
+      # content-refresh.js then lists them on the Deep Dives blog. Never fails
+      # the run (a Customer.io outage is retried next tick).
+      - name: Archive sent Customer.io newsletters
+        env:
+          CUSTOMERIO_APP_API_KEY: ${{ secrets.CUSTOMERIO_APP_API_KEY }}
+        run: node scripts/archive-customerio-newsletters.js
+
       # No `continue-on-error` below: per-task RSS / API failures are already
       # isolated via try/catch inside each script, so transient feed errors
       # don't crash the run. A non-zero exit here means a true fatal error

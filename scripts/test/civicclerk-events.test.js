@@ -5,7 +5,7 @@ const test = require('node:test');
 const assert = require('node:assert');
 const {
   wallParts, fmtMeetingDate, fmtMeetingTime, countyTypeOf, formatEventLocation,
-  countyRowsFromEvents, mergeCountyRows,
+  countyRowsFromEvents, mergeCountyRows, pickAgendaFile, describePublishedFiles,
 } = require('../lib/civicclerk-events.js');
 const { serializeArray } = require('../lib/serialize.js');
 
@@ -162,4 +162,73 @@ test('every row value is a scalar the serializer can emit', () => {
         `${k} must be a scalar, got ${typeof v}`);
     }
   }
+});
+
+// ── pickAgendaFile ────────────────────────────────────────────────────────
+// Every case here is one where the old `f.type === 'Agenda'` test returned
+// nothing and the site then told a reader an agenda that was sitting on the
+// county portal "hasn't been posted yet".
+
+test('a plain Agenda file wins over minutes and packets, whatever the order', () => {
+  const pick = pickAgendaFile([
+    { type: 'Minutes', fileId: 1 },
+    { type: 'Agenda Packet', fileId: 2 },
+    { type: 'Agenda', fileId: 3 },
+  ]);
+  assert.equal(pick.fileId, 3);
+});
+
+test('an agenda-packet type is used when there is no plain Agenda', () => {
+  assert.equal(pickAgendaFile([{ type: 'Minutes', fileId: 1 }, { type: 'Agenda Packet', fileId: 2 }]).fileId, 2);
+  assert.equal(pickAgendaFile([{ type: 'Revised Agenda', fileId: 7 }]).fileId, 7);
+  assert.equal(pickAgendaFile([{ type: 'agenda', fileId: 8 }]).fileId, 8);
+});
+
+test('a file with no type is matched on its name', () => {
+  const pick = pickAgendaFile([{ type: null, name: 'BOCC Agenda 09-02-2026.pdf', fileId: 1980 }]);
+  assert.equal(pick.fileId, 1980);
+});
+
+test('minutes never masquerade as an agenda', () => {
+  // "Agenda and Minutes" is the record of a meeting that already happened.
+  assert.equal(pickAgendaFile([{ type: 'Minutes', name: 'Agenda and Minutes 8-19.pdf', fileId: 4 }]), null);
+});
+
+test('no agenda means null, never a guessed file id', () => {
+  // The whole point of the never-link-to-an-agenda-that-doesn't-exist rule:
+  // an event with only a packet-less notice must produce NO url.
+  assert.equal(pickAgendaFile([]), null);
+  assert.equal(pickAgendaFile(undefined), null);
+  assert.equal(pickAgendaFile([{ type: 'Minutes', fileId: 1 }]), null);
+  assert.equal(pickAgendaFile([{ type: 'Agenda' }]), null);   // no fileId → unusable
+});
+
+test('describePublishedFiles says what the API actually returned', () => {
+  assert.equal(describePublishedFiles([]), 'none');
+  assert.equal(
+    describePublishedFiles([{ type: 'Packet', name: 'x.pdf', fileId: 5 }, { type: null, name: null, fileId: 6 }]),
+    'Packet:x.pdf#5 | ?:?#6');
+});
+
+test('pickPacketFile finds the "Agenda Packet" file, never the plain agenda or minutes', () => {
+  const { pickPacketFile } = require('../lib/civicclerk-events.js');
+  const files = [
+    { fileId: 2015, type: 'Agenda', name: '20260930-BOCC-Agenda' },
+    { fileId: 2019, type: 'Agenda Packet', name: '20260930-BOCC-Packet' },
+  ];
+  assert.equal(pickPacketFile(files).fileId, 2019);
+  assert.equal(pickPacketFile([{ fileId: 1, type: 'Agenda', name: 'Agenda' }]), null);
+  assert.equal(pickPacketFile([{ fileId: 3, type: '', name: 'Packet and Minutes' }]), null);
+  assert.equal(pickPacketFile([{ fileId: 4, type: '', name: 'Full Packet' }]).fileId, 4);
+});
+
+test('countyRowsFromEvents sets packetUrl only from a real packet file', () => {
+  const { countyRowsFromEvents } = require('../lib/civicclerk-events.js');
+  const rows = countyRowsFromEvents([
+    { id: 1073, eventName: 'Board of County Commissioners Work Session', startDateTime: '2026-09-30T09:30:00Z',
+      publishedFiles: [{ fileId: 2015, type: 'Agenda' }, { fileId: 2019, type: 'Agenda Packet' }] },
+    { id: 888, eventName: 'Board of County Commissioners Meeting', startDateTime: '2026-10-07T09:30:00Z', publishedFiles: [] },
+  ]);
+  assert.equal(rows[0].packetUrl, 'https://sanmiguelcoco.portal.civicclerk.com/event/1073/files/agenda/2019');
+  assert.equal(rows[1].packetUrl, undefined);
 });

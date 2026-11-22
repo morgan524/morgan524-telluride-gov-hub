@@ -30,3 +30,13 @@ test('nextOccurrences returns forward dates, honors count and skipMonths', () =>
   const skipped = nextOccurrences({ nth: 4, weekday: 4 }, from2, 1, [7]);
   assert.equal(skipped[0].date, 'September 24, 2026');
 });
+
+// Projected stubs on a federal holiday get flagged (2026-10-04: Norwood and
+// Ridgway 2nd-Wednesday stubs on Veterans Day).
+test('federalHoliday names fixed and floating holidays', () => {
+  const { federalHoliday } = require('../lib/schedule.js');
+  assert.strictEqual(federalHoliday(new Date(2026, 10, 11)), 'Veterans Day');
+  assert.strictEqual(federalHoliday(new Date(2026, 10, 26)), 'Thanksgiving');
+  assert.strictEqual(federalHoliday(new Date(2026, 4, 25)), 'Memorial Day');
+  assert.strictEqual(federalHoliday(new Date(2026, 10, 12)), null);
+});

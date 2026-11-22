@@ -1,165 +1,46 @@
 [
   {
-    "date": "August 13, 2026",
-    "time": "9:00 AM",
-    "title": "Planning Commission Meeting",
-    "type": "planning",
-    "location": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
-    "civicClerkId": 922,
-    "note": null
-  },
-  {
-    "date": "August 19, 2026",
-    "time": "9:30 AM",
-    "title": "Board of County Commissioners Meeting",
-    "type": "bocc",
-    "location": "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
-    "civicClerkId": 899,
-    "note": null
-  },
-  {
-    "date": "August 24, 2026",
-    "time": "4:00 PM",
-    "title": "Open Space Commission Meeting",
-    "type": "other",
-    "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
-    "civicClerkId": 1056,
-    "note": null
-  },
-  {
-    "date": "August 26, 2026",
-    "time": "9:30 AM",
-    "title": "Board of County Commissioners Work Session",
-    "type": "bocc",
-    "location": "333 West Colorado Ave, 2nd Floor, Telluride, CO 81435",
-    "civicClerkId": 869,
-    "note": null
-  },
-  {
-    "date": "August 27, 2026",
-    "time": "4:30 PM",
-    "title": "CWAB",
-    "type": "other",
-    "location": "",
-    "civicClerkId": 1055,
-    "note": null
-  },
-  {
-    "date": "September 2, 2026",
-    "time": "9:30 AM",
-    "title": "Board of County Commissioners Meeting",
-    "type": "bocc",
-    "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
-    "civicClerkId": 887,
-    "note": null
-  },
-  {
-    "date": "September 9, 2026",
-    "time": "9:30 AM",
-    "title": "Board of County Commissioners Work Session",
-    "type": "bocc",
-    "location": "333 West Colorado Ave, 2nd Floor, Telluride, CO 81435",
-    "civicClerkId": 857,
-    "note": null
-  },
-  {
-    "date": "September 10, 2026",
-    "time": "9:00 AM",
-    "title": "Planning Commission Meeting",
-    "type": "planning",
-    "location": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
-    "civicClerkId": 923,
-    "note": null
-  },
-  {
-    "date": "September 16, 2026",
-    "time": "9:30 AM",
-    "title": "Board of County Commissioners Meeting",
-    "type": "bocc",
-    "location": "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
-    "civicClerkId": 900,
-    "note": null
-  },
-  {
-    "date": "September 23, 2026",
-    "time": "9:30 AM",
-    "title": "Board of County Commissioners Work Session",
-    "type": "bocc",
-    "location": "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
-    "civicClerkId": 870,
-    "note": null
-  },
-  {
-    "date": "September 28, 2026",
-    "time": "4:00 PM",
-    "title": "Open Space Commission Meeting",
-    "type": "other",
-    "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
-    "civicClerkId": 1057,
-    "note": null
-  },
-  {
-    "date": "October 7, 2026",
-    "time": "10:00 AM",
-    "title": "Board of County Commissioners Meeting",
-    "type": "bocc",
-    "location": "5634 Cty Road H1, Egnar Fire Station, Egnar, CO 81325",
-    "civicClerkId": 888,
-    "note": null
-  },
-  {
-    "date": "October 8, 2026",
-    "time": "9:00 AM",
-    "title": "Planning Commission Meeting",
-    "type": "planning",
-    "location": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
-    "civicClerkId": 924,
-    "note": null
-  },
-  {
-    "date": "October 14, 2026",
-    "time": "9:30 AM",
-    "title": "Board of County Commissioners Work Session",
-    "type": "bocc",
-    "location": "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
-    "civicClerkId": 858,
-    "note": null
-  },
-  {
-    "date": "October 21, 2026",
-    "time": "9:30 AM",
-    "title": "Board of County Commissioners Meeting",
-    "type": "bocc",
-    "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
-    "civicClerkId": 901,
-    "note": null
-  },
-  {
-    "date": "October 26, 2026",
-    "time": "4:00 PM",
-    "title": "Open Space Commission Meeting",
-    "type": "other",
-    "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
-    "civicClerkId": 1058,
-    "note": null
-  },
-  {
-    "date": "October 28, 2026",
-    "time": "4:00 PM",
-    "title": "Board of County Commissioners Work Session",
-    "type": "bocc",
-    "location": "Placerville School House, Placerville",
-    "civicClerkId": 1036,
-    "note": null
-  },
-  {
     "date": "November 4, 2026",
     "time": "9:30 AM",
     "title": "Board of County Commissioners Meeting",
     "type": "bocc",
     "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
     "civicClerkId": 889,
-    "note": null
+    "note": null,
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/889/files/agenda/2064",
+    "packetUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/889/files/agenda/2066"
+  },
+  {
+    "date": "November 9, 2026",
+    "time": "7:00 PM",
+    "title": "San Miguel Basin Fair Board",
+    "type": "other",
+    "location": "1110 Summit Street, Norwood Sheriff Annex, Norwood, CO 81423",
+    "civicClerkId": 1119,
+    "note": null,
+    "packetUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1077/files/agenda/2068"
+  },
+  {
+    "date": "November 12, 2026",
+    "time": "9:00 AM",
+    "title": "Planning Commission Meeting",
+    "type": "planning",
+    "location": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
+    "civicClerkId": 1078,
+    "note": null,
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1078/files/agenda/2071",
+    "packetUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1078/files/agenda/2072"
+  },
+  {
+    "date": "November 16, 2026",
+    "time": "4:00 PM",
+    "title": "Open Space Commission Meeting 11/23",
+    "type": "other",
+    "location": "333 W Colorado Ave, Third Floor, Telluride, CO 81435",
+    "civicClerkId": 1091,
+    "note": null,
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1091/files/agenda/2075",
+    "packetUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1091/files/agenda/2076"
   },
   {
     "date": "November 18, 2026",
@@ -168,6 +49,153 @@
     "type": "bocc",
     "location": "Norwood Sheriff Annex, 1110 Summit St, Norwood, CO 81423",
     "civicClerkId": 902,
+    "note": null,
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/902/files/agenda/2077",
+    "packetUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/902/files/agenda/2078"
+  },
+  {
+    "date": "November 23, 2026",
+    "time": "4:00 PM",
+    "title": "Open Space Commission Meeting 11/23",
+    "type": "other",
+    "location": "333 W Colorado Ave, Third Floor, Telluride, CO 81435",
+    "civicClerkId": 1091,
+    "note": null
+  },
+  {
+    "date": "November 25, 2026",
+    "time": "9:30 AM",
+    "title": "Board of County Commissioners Work Session",
+    "type": "bocc",
+    "location": "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    "civicClerkId": 1106,
+    "note": null
+  },
+  {
+    "date": "December 3, 2026",
+    "time": "9:30 AM",
+    "title": "One Time Event",
+    "type": "other",
+    "location": "333 West Colorado Ave, 2nd Fl, Telluride, CO 81435",
+    "civicClerkId": 1120,
+    "note": null
+  },
+  {
+    "date": "December 9, 2026",
+    "time": "9:30 AM",
+    "title": "Board of County Commissioners Regular Meeting",
+    "type": "bocc",
+    "location": "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    "civicClerkId": 980,
+    "note": null
+  },
+  {
+    "date": "December 10, 2026",
+    "time": "9:00 AM",
+    "title": "Planning Commission Meeting",
+    "type": "planning",
+    "location": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
+    "civicClerkId": 1079,
+    "note": null
+  },
+  {
+    "date": "December 14, 2026",
+    "time": "4:00 PM",
+    "title": "Open Space Commission Meeting",
+    "type": "other",
+    "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+    "civicClerkId": 1060,
+    "note": null
+  },
+  {
+    "date": "December 16, 2026",
+    "time": "9:30 AM",
+    "title": "Board of County Commissioners Meeting",
+    "type": "bocc",
+    "location": "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    "civicClerkId": 1037,
+    "note": null
+  },
+  {
+    "date": "December 18, 2026",
+    "time": "9:30 AM",
+    "title": "Board of County Commissioners Special Meeting",
+    "type": "bocc",
+    "location": "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    "civicClerkId": 1107,
+    "note": null,
+    "special": true
+  },
+  {
+    "date": "December 28, 2026",
+    "time": "4:00 PM",
+    "title": "Open Space Commission Meeting",
+    "type": "other",
+    "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+    "civicClerkId": 1060,
+    "note": null
+  },
+  {
+    "date": "January 7, 2027",
+    "time": "9:00 AM",
+    "title": "Lodging Tax Panel",
+    "type": "other",
+    "location": "333 W Colorado Ave, Second Floor, Telluride, CO 81435",
+    "civicClerkId": 1076,
+    "note": null
+  },
+  {
+    "date": "January 13, 2027",
+    "time": "9:30 AM",
+    "title": "Board of County Commissioners Work Session",
+    "type": "bocc",
+    "location": "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    "civicClerkId": 1095,
+    "note": null
+  },
+  {
+    "date": "January 14, 2027",
+    "time": "9:00 AM",
+    "title": "Planning Commission Meeting",
+    "type": "planning",
+    "location": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
+    "civicClerkId": 1080,
+    "note": null
+  },
+  {
+    "date": "January 25, 2027",
+    "time": "4:00 PM",
+    "title": "Open Space Commission Meeting",
+    "type": "other",
+    "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+    "civicClerkId": 1061,
+    "note": null
+  },
+  {
+    "date": "January 27, 2027",
+    "time": "9:30 AM",
+    "title": "Board of County Commissioners Work Session",
+    "type": "bocc",
+    "location": "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    "civicClerkId": 1108,
+    "note": null
+  },
+  {
+    "date": "February 10, 2027",
+    "time": "9:30 AM",
+    "title": "Board of County Commissioners Work Session",
+    "type": "bocc",
+    "location": "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    "civicClerkId": 1096,
+    "note": null
+  },
+  {
+    "date": "February 11, 2027",
+    "time": "9:00 AM",
+    "title": "Planning Commission Meeting",
+    "type": "planning",
+    "location": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
+    "civicClerkId": 1081,
     "note": null
   }
 ]

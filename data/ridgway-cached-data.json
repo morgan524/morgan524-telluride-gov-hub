@@ -1,29 +1,32 @@
 [
   {
-    "date": "August 12, 2026",
+    "date": "November 11, 2026",
     "time": "6:00 PM",
     "title": "Ridgway Town Council Regular Meeting",
     "agendaUrl": null,
     "packetUrl": null,
     "special": false,
-    "board": "council"
+    "board": "council",
+    "note": "Next scheduled meeting -- agenda posted the week before."
   },
   {
-    "date": "September 9, 2026",
+    "date": "December 9, 2026",
     "time": "6:00 PM",
     "title": "Ridgway Town Council Regular Meeting",
     "agendaUrl": null,
     "packetUrl": null,
     "special": false,
-    "board": "council"
+    "board": "council",
+    "note": "Next scheduled meeting -- agenda posted the week before."
   },
   {
-    "date": "October 14, 2026",
+    "date": "January 13, 2027",
     "time": "6:00 PM",
     "title": "Ridgway Town Council Regular Meeting",
     "agendaUrl": null,
     "packetUrl": null,
     "special": false,
-    "board": "council"
+    "board": "council",
+    "note": "Next scheduled meeting -- agenda posted the week before."
   }
 ]

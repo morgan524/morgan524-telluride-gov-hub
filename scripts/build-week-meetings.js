@@ -39,6 +39,7 @@ const GETTERS = [
   ['ridgway',   'Town of Ridgway',                  'getRidgwayMeetings'],
   ['rico',      'Town of Rico',                     'getRicoMeetings'],
   ['ouray',     'Ouray County',                     'getOurayMeetings'],
+  ['ouraycity', 'City of Ouray',                    'getOurayCityMeetings'],
   ['smart',     'SMART Transit',                    'getSmartMeetings'],
   ['airport',   'Telluride Regional Airport',       'getAirportMeetings'],
   ['tmvoa',     'TMVOA',                            'getTMVOAMeetings'],
@@ -49,7 +50,10 @@ const WINDOW_DAYS = 30;  // one month out — small towns meet monthly, 14d hid 
 // COMMENT_MAP; keep in sync). Bodies without a recipient resolve to ''.
 const COMMENT_MAP = {
   telluride:          'townclerk@telluride.gov',
-  'telluride-harc':   'dcandelaria@telluride.gov',
+  // HARC and P&Z comments go to the Historic Preservation and Planning
+  // Director; Council stays with the Town Clerk (per Town Clerk, 2026-10-20).
+  'telluride-harc':   'kclothier@telluride.gov',
+  'telluride-pz':     'kclothier@telluride.gov',
   county:             'bocc@sanmiguelcountyco.gov',
   'county-planning':  'planningcommission@sanmiguelcountyco.gov',
   mv:                 'council@mtnvillage.org',
@@ -59,6 +63,8 @@ const COMMENT_MAP = {
   norwood:            'cross@norwoodtown.com',
   ophir:              'clerk@ophir.us',
   rico:               'townclerk@ricocolorado.gov',
+  ouraycity:          'clerk@cityofouray.com',
+  'ouraycity-planning': 'planning@cityofouray.com',
   airport:            'info@tellurideairport.com',
 };
 function commentEmailFor(source, title) {
@@ -66,11 +72,15 @@ function commentEmailFor(source, title) {
   const t = String(title || '').toLowerCase();
   if (key === 'county' && /planning/.test(t)) key = 'county-planning';
   if (key === 'mv' && /planning|design review/.test(t)) key = 'mv-planning';
+  if (key === 'ouraycity' && /planning/.test(t)) key = 'ouraycity-planning';
   if (key === 'telluride' && /harc|historic|architectural review/.test(t)) key = 'telluride-harc';
+  else if (key === 'telluride' && /planning|zoning|p&z/.test(t)) key = 'telluride-pz';
   return COMMENT_MAP[key] || '';
 }
 
-function buildWeekMeetings(repoRoot) {
+// opts.from / opts.to (Dates) widen the window — the Thursday-night Past
+// Meetings editor draft (past-meetings-editor.js) asks for the week just held.
+function buildWeekMeetings(repoRoot, opts = {}) {
   const { captured } = loadDataArrays(repoRoot);
   const getSummary = captured.getMeetingSummary;
   // Per-entity livestream URLs (gov-data ENTITY_REMOTE — e.g. the towns' and
@@ -100,8 +110,9 @@ function buildWeekMeetings(repoRoot) {
     return null;
   }
   const pad = (n) => String(n).padStart(2, '0');
-  const today = new Date(); today.setHours(0, 0, 0, 0);
-  const end = new Date(today.getTime() + WINDOW_DAYS * 86400000);
+  const today = opts.from ? new Date(opts.from) : new Date(); today.setHours(0, 0, 0, 0);
+  const end = opts.to ? new Date(opts.to) : new Date(today.getTime() + WINDOW_DAYS * 86400000);
+  if (opts.to) end.setHours(23, 59, 59, 999);
 
   const seen = new Set();
   const out = [];
@@ -134,7 +145,10 @@ function buildWeekMeetings(repoRoot) {
         sourceLabel: sourceLabel,   // the canonical entity label (GETTERS), not per-record variants — filters group on it
         title: title,
         date: date,
-        time: String(m.time || '').trim(),
+        // Every get*Meetings() getter emits the hour as `eventTimes` (m.time was
+        // never set, so week-meetings shipped time:'' for every meeting and the
+        // site's time label never rendered).
+        time: String(m.eventTimes || m.time || '').trim(),
         location: String(m.location || '').trim(),
         agendaUrl: m.agendaLink || meta.agendaUrl || '',
         packetUrl: m.packetUrl || meta.packetUrl || '',
@@ -152,16 +166,46 @@ function buildWeekMeetings(repoRoot) {
           ? !isPlaceholderSummary(summary)
           : !!m.hasAgenda,
         summary: String(summary || '').trim(),
-        zoomLink: String(meta.zoomUrl || zoomLink || ''),
-        zoomMeetingId: String(meta.meetingId || ''),
-        zoomPasscode: String(meta.passcode || zoomPasscode || ''),
-        zoomPhone: String(meta.phone || ''),
+        // Last fallback: a getter's own standing room (m.zoomUrl etc. — e.g.
+        // City of Ouray's published Council / Planning Commission Zoom).
+        zoomLink: String(meta.zoomUrl || zoomLink || m.zoomUrl || ''),
+        zoomMeetingId: String(meta.meetingId || m.zoomMeetingId || ''),
+        zoomPasscode: String(meta.passcode || zoomPasscode || m.zoomPasscode || ''),
+        zoomPhone: String(meta.phone || m.zoomPhone || ''),
         livestream: (remote[source] && remote[source].livestream) || '',
         commentEmail: commentEmailFor(source, title),
       });
     }
   }
-  out.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : a.title.localeCompare(b.title)));
+  // Hand-curated civic EVENTS (gov-data GOV_EVENTS): open houses, pop-ups,
+  // focus groups — listed on their day but flagged kind:'event' so the page
+  // renders an event card and meeting-only consumers can skip them.
+  const todayKey = today.getFullYear() + '-' + pad(today.getMonth() + 1) + '-' + pad(today.getDate());
+  const endKey = end.getFullYear() + '-' + pad(end.getMonth() + 1) + '-' + pad(end.getDate());
+  const labelFor = Object.fromEntries(GETTERS.map(([k, label]) => [k, label]));
+  for (const e of (Array.isArray(captured.GOV_EVENTS) ? captured.GOV_EVENTS : [])) {
+    if (!e || !e.title || !/^\d{4}-\d{2}-\d{2}$/.test(e.date || '')) continue;
+    if (e.date < todayKey || e.date > endKey) continue;
+    const source = e.source || 'telluride';
+    out.push({
+      kind: 'event',
+      source: source,
+      sourceLabel: labelFor[source] || e.sourceLabel || source,
+      title: String(e.title).trim(),
+      date: e.date,
+      time: String(e.time || '').trim(),
+      location: String(e.location || '').trim(),
+      summary: String(e.summary || '').trim(),
+      links: (Array.isArray(e.links) ? e.links : []).filter((l) => l && l.label && /^https:\/\//.test(l.href || '')),
+      agendaUrl: '', packetUrl: '', link: '', hasAgenda: false,
+      zoomLink: '', zoomMeetingId: '', zoomPasscode: '', zoomPhone: '',
+      livestream: '', commentEmail: '',
+    });
+  }
+  // Date, then START TIME within the day (Morgan 2026-09-29: first in the
+  // morning to last), then title. No published time sorts last in its day.
+  const startMin = (t) => { const x = String(t || '').match(/(\d{1,2}):(\d{2})\s*([AP])M/i); return x ? ((+x[1] % 12) + (/p/i.test(x[3]) ? 12 : 0)) * 60 + +x[2] : 24 * 60; };
+  out.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : (startMin(a.time) - startMin(b.time)) || a.title.localeCompare(b.title)));
   return out;
 }
 
@@ -190,6 +234,7 @@ function saveHookCache(dataDir, cache) {
 function applyCachedHooks(meetings, cache) {
   const misses = [];
   for (const m of meetings) {
+    if (m.kind === 'event') { m.hook = ''; continue; }   // events: no agenda to hook
     const c = cache[hookKey(m)];
     if (c && c.sig === summarySig(m.summary) && c.hook) m.hook = c.hook;
     else { m.hook = ''; misses.push(m); }

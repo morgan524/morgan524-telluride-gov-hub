@@ -37,7 +37,9 @@ jobs:
         run: |
           set +e
           node scripts/check-vote-tracker-freshness.js | tee /tmp/vt.txt
-          echo "stale=$?" >> "$GITHUB_OUTPUT"
+          # PIPESTATUS[0] = the node script's exit code. Plain $? was tee's (always
+          # 0), so this check could never open its issue (fixed 2026-09-29).
+          echo "stale=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
           set -e
 
       - name: Open / update the review issue

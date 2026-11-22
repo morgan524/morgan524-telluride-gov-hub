@@ -1,0 +1,67 @@
+name: Worker Cron Audit
+
+# Asks Cloudflare what cron triggers are ACTUALLY registered on the digest
+# Worker, and compares them to wrangler.toml. A successful `wrangler deploy`
+# prints the schedules it pushed, but that is the deploy's own claim — this
+# reads them back from the API, which is the only thing that proves the crons
+# the 9:00 AM send depends on really exist.
+#
+# Added 2026-09-28 after the Monday send did not go out: the Worker's
+# scheduled() never ran (no send, and none of the GitHub issues it raises on
+# failure), while /cron-check confirmed every gate would have passed.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 14 * * 1'   # Mon 14:00 UTC — one hour before the 15:00 send
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Read registered schedules from the Cloudflare API
+        env:
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_WORKER || secrets.CLOUDFLAIR_WORKER }}
+          ACCOUNT: 8f020e73de4e9956f0e3ad7dce070ef4
+          SCRIPT: livabletelluride-digest
+        run: |
+          set -euo pipefail
+          api="https://api.cloudflare.com/client/v4/accounts/$ACCOUNT/workers/scripts/$SCRIPT/schedules"
+          code=$(curl -s -o /tmp/sched.json -w '%{http_code}' -H "Authorization: Bearer $CF_TOKEN" "$api")
+          echo "HTTP $code"
+          python3 - <<'PY'
+          import json, os, re, sys
+          try:
+              d = json.load(open('/tmp/sched.json'))
+          except Exception as e:
+              print('could not parse API response:', e); print(open('/tmp/sched.json').read()[:600]); sys.exit(1)
+          if not d.get('success'):
+              print('API call FAILED:'); print(json.dumps(d.get('errors'), indent=2)[:900]); sys.exit(1)
+          live = [s.get('cron') for s in (d.get('result') or {}).get('schedules') or []]
+          toml = open('cloudflare-worker/livabletelluride-digest/wrangler.toml').read()
+          m = re.search(r'crons\s*=\s*\[(.*?)\]', toml, re.S)
+          want = re.findall(r'"([^"]+)"', m.group(1)) if m else []
+          print('wrangler.toml wants :', want)
+          print('Cloudflare has      :', live)
+          missing = [c for c in want if c not in live]
+          extra   = [c for c in live if c not in want]
+          if missing: print('MISSING on Cloudflare:', missing)
+          if extra:   print('EXTRA on Cloudflare  :', extra)
+          print('RESULT:', 'OK - all crons registered' if not missing else 'BROKEN - the 9:00 send has no trigger')
+          sys.exit(1 if missing else 0)
+          PY
+
+      - name: CI health issue
+        if: always()
+        uses: ./.github/actions/ci-health-issue
+        with:
+          title: '🚨 Digest Worker cron triggers are missing'
+          status: ${{ job.status }}
+          run-url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}

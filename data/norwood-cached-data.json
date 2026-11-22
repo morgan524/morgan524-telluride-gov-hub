@@ -1,15 +1,24 @@
 [
   {
-    "date": "August 17, 2026",
+    "date": "November 16, 2026",
     "time": null,
-    "title": "Planning and Zoning Commission Cancelled",
-    "agendaUrl": "https://www.norwoodtown.com/files/39acf0aed/08.17.2026+P%26Z+BOA+Agenda+-+Cancel.pdf",
+    "title": "Planning and Zoning Commission Meeting",
+    "agendaUrl": "https://www.norwoodtown.com/files/6a9b8d335/11.16.2026+P%26Z+BOA+AGENDA.pdf",
     "packetUrl": null,
     "special": false,
     "board": "pz"
   },
   {
-    "date": "September 8, 2026",
+    "date": "November 18, 2026",
+    "time": null,
+    "title": "Board of Trustees Meeting",
+    "agendaUrl": "https://www.norwoodtown.com/files/8ec8087d1/11.18.2026+Board+of+Trustee+Agenda+ADA.pdf",
+    "packetUrl": "https://www.norwoodtown.com/files/b22e92a07/11.18.2026+BOT+Supporting+Documents.pdf",
+    "special": false,
+    "board": "bot"
+  },
+  {
+    "date": "December 8, 2026",
     "time": null,
     "title": "Norwood Water Commission Meeting",
     "agendaUrl": null,
@@ -19,7 +28,7 @@
     "note": "Next scheduled meeting -- agenda posted before the meeting."
   },
   {
-    "date": "September 9, 2026",
+    "date": "December 9, 2026",
     "time": null,
     "title": "Board of Trustees Meeting",
     "agendaUrl": null,
@@ -29,7 +38,7 @@
     "note": "Next scheduled meeting -- agenda posted before the meeting."
   },
   {
-    "date": "September 21, 2026",
+    "date": "December 21, 2026",
     "time": null,
     "title": "Planning and Zoning Commission Meeting",
     "agendaUrl": null,
@@ -39,7 +48,7 @@
     "note": "Next scheduled meeting -- agenda posted before the meeting."
   },
   {
-    "date": "October 13, 2026",
+    "date": "January 12, 2027",
     "time": null,
     "title": "Norwood Water Commission Meeting",
     "agendaUrl": null,
@@ -49,7 +58,7 @@
     "note": "Next scheduled meeting -- agenda posted before the meeting."
   },
   {
-    "date": "October 14, 2026",
+    "date": "January 13, 2027",
     "time": null,
     "title": "Board of Trustees Meeting",
     "agendaUrl": null,
@@ -59,13 +68,13 @@
     "note": "Next scheduled meeting -- agenda posted before the meeting."
   },
   {
-    "date": "October 19, 2026",
+    "date": "January 18, 2027",
     "time": null,
     "title": "Planning and Zoning Commission Meeting",
     "agendaUrl": null,
     "packetUrl": null,
     "special": false,
     "board": "pz",
-    "note": "Next scheduled meeting -- agenda posted before the meeting."
+    "note": "Projected date falls on Martin Luther King Jr. Day; the board may reschedule. Confirm when the agenda posts."
   }
 ]

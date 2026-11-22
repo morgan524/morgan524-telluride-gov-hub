@@ -9,8 +9,11 @@
 // the single write funnel so they self-heal on each refresh instead of needing
 // manual edits the next scrape would revert. All rules are field-gated, so
 // non-event/meeting arrays pass through untouched.
-function sanitizeRecords(arr) {
+const { titleCaseEventTitle } = require('./clean-text.js');
+
+function sanitizeRecords(arr, varName) {
   if (!Array.isArray(arr)) return arr;
+  const isEventArray = /_EVENTS$/.test(String(varName || ''));
   const tokenKey = (t) => String(t).toLowerCase()
     .replace(/&[a-z]+;|&#\d+;/g, ' ').replace(/[^a-z0-9]+/g, ' ')
     .trim().split(' ').filter(Boolean).sort().join(' ');
@@ -37,6 +40,8 @@ function sanitizeRecords(arr) {
       o.title = o.title
         .replace(/\b(Meeting|Event|Concert|Workshop|Festival|Show|Session|Class|Gathering|Service|Market|Forum)\s+\1\b/gi, '$1')
         .replace(/\s{2,}/g, ' ').trim();
+      // Event titles in Title Case — no ALL-CAPS titles (Morgan 2026-10-19).
+      if (isEventArray) o.title = titleCaseEventTitle(o.title);
     }
 
     // (1b) Repair scheme-less links — some scrapers store "www.x.org" or

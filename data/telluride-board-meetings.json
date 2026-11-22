@@ -1,174 +1,148 @@
 [
   {
-    "date": "August 25, 2026",
-    "title": "Ethics Commission",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8301",
+    "date": "December 2, 2026",
+    "title": "Telluride Housing Authority Subcommittee",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8166",
+    "hasAgenda": false,
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "time": "9:00 AM",
+    "civicwebId": 8166
+  },
+  {
+    "date": "December 3, 2026",
+    "title": "Planning & Zoning Commission - Special Meeting",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8362",
+    "hasAgenda": false,
+    "location": "Telluride Science & Innovation Center - 300 S Townsend St",
+    "time": "5:30 PM",
+    "civicwebId": 8362
+  },
+  {
+    "date": "December 3, 2026",
+    "title": "Town Council Retreat",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8051",
     "hasAgenda": true,
-    "location": "Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
-    "civicwebId": 8301,
-    "packetUrl": "https://telluride-co.civicweb.net/document/443653/"
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "time": "9:00 AM",
+    "civicwebId": 8051,
+    "packetUrl": "https://telluride-co.civicweb.net/document/448279/"
   },
   {
-    "date": "September 1, 2026",
+    "date": "December 4, 2026",
+    "title": "Special Town Council",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324",
+    "hasAgenda": true,
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "time": "10:00 AM",
+    "civicwebId": 8324,
+    "packetUrl": "https://telluride-co.civicweb.net/document/448285/"
+  },
+  {
+    "date": "December 7, 2026",
+    "title": "Open Space Commission",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8134",
+    "hasAgenda": false,
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "time": "4:00 PM",
+    "civicwebId": 8134
+  },
+  {
+    "date": "December 8, 2026",
+    "title": "Telluride Housing Authority Subcommittee Special Meeting",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8364",
+    "hasAgenda": false,
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "time": "9:00 AM",
+    "civicwebId": 8364
+  },
+  {
+    "date": "December 11, 2026",
+    "title": "Telluride Housing Authority Subcommittee Special Meeting",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8365",
+    "hasAgenda": false,
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "time": "10:00 AM",
+    "civicwebId": 8365
+  },
+  {
+    "date": "December 15, 2026",
+    "title": "Special Joint Town Council",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8366",
+    "hasAgenda": false,
+    "location": "Ah Haa School For the Arts - Launch Pad",
+    "time": "5:00 PM",
+    "civicwebId": 8366
+  },
+  {
+    "date": "December 15, 2026",
+    "title": "Special Joint Historic & Architectural Review Commission",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8367",
+    "hasAgenda": false,
+    "location": "Ah Haa School For the Arts - Launch Pad",
+    "time": "5:00 PM",
+    "civicwebId": 8367
+  },
+  {
+    "date": "December 15, 2026",
+    "title": "Special Joint Planning & Zoning Commission",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8368",
+    "hasAgenda": false,
+    "location": "Ah Haa School For the Arts - Launch Pad",
+    "time": "5:00 PM",
+    "civicwebId": 8368
+  },
+  {
+    "date": "December 15, 2026",
     "title": "Town Council",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8047",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
-    "civicwebId": 8042
+    "time": "10:00 AM",
+    "civicwebId": 8047
   },
   {
-    "date": "September 2, 2026",
-    "title": "Telluride Housing Authority Subcommittee",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163",
-    "hasAgenda": false,
-    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
-    "civicwebId": 8163
-  },
-  {
-    "date": "September 10, 2026",
-    "title": "Town Council Budget",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052",
-    "hasAgenda": false,
-    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
-    "civicwebId": 8052
-  },
-  {
-    "date": "September 16, 2026",
+    "date": "December 16, 2026",
     "title": "Parks & Recreation Commission",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8085",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
-    "civicwebId": 8082
+    "time": "12:00 PM",
+    "civicwebId": 8085
   },
   {
-    "date": "September 22, 2026",
-    "title": "Telluride Housing Authority",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8303",
-    "hasAgenda": false,
-    "location": "Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
-    "civicwebId": 8303
-  },
-  {
-    "date": "September 22, 2026",
-    "title": "Town Council",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043",
-    "hasAgenda": false,
-    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
-    "civicwebId": 8043
-  },
-  {
-    "date": "September 24, 2026",
+    "date": "December 17, 2026",
     "title": "Planning & Zoning Commission",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8110",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
-    "civicwebId": 8104
+    "time": "5:30 PM",
+    "civicwebId": 8110
   },
   {
-    "date": "October 1, 2026",
-    "title": "Town Council Budget",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8053",
-    "hasAgenda": false,
-    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
-    "civicwebId": 8053
-  },
-  {
-    "date": "October 6, 2026",
+    "date": "January 12, 2027",
     "title": "Town Council",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8330",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
-    "civicwebId": 8044
+    "time": "10:00 AM",
+    "civicwebId": 8330
   },
   {
-    "date": "October 7, 2026",
-    "title": "Telluride Housing Authority Subcommittee",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8164",
-    "hasAgenda": false,
-    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
-    "civicwebId": 8164
-  },
-  {
-    "date": "October 21, 2026",
-    "title": "Parks & Recreation Commission",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083",
-    "hasAgenda": false,
-    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
-    "civicwebId": 8083
-  },
-  {
-    "date": "October 22, 2026",
-    "title": "Planning & Zoning Commission",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8106",
-    "hasAgenda": false,
-    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
-    "civicwebId": 8106
-  },
-  {
-    "date": "October 27, 2026",
+    "date": "February 2, 2027",
     "title": "Town Council",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8331",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
-    "civicwebId": 8045
+    "time": "10:00 AM",
+    "civicwebId": 8331
   },
   {
-    "date": "November 4, 2026",
-    "title": "Telluride Housing Authority Subcommittee",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8165",
+    "date": "February 8, 2027",
+    "title": "Intergovernmental Meeting",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8340",
     "hasAgenda": false,
-    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
-    "civicwebId": 8165
-  },
-  {
-    "date": "November 5, 2026",
-    "title": "Town Council Budget",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054",
-    "hasAgenda": false,
-    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
-    "civicwebId": 8054
-  },
-  {
-    "date": "November 17, 2026",
-    "title": "Town Council",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8046",
-    "hasAgenda": false,
-    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
-    "civicwebId": 8046
-  },
-  {
-    "date": "November 18, 2026",
-    "title": "Parks & Recreation Commission",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8084",
-    "hasAgenda": false,
-    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
-    "civicwebId": 8084
-  },
-  {
-    "date": "November 19, 2026",
-    "title": "Planning & Zoning Commission",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8108",
-    "hasAgenda": false,
-    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
-    "civicwebId": 8108
+    "location": "TBD",
+    "time": "1:30 PM",
+    "civicwebId": 8340
   }
 ]

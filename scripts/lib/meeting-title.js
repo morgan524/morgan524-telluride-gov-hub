@@ -20,7 +20,7 @@
 //     School District  + "Telluride Board of Education Meeting"  reads as a body
 //
 // Blind prefixing gives "Norwood Norwood Water Commission Meeting". Used by
-// scripts/weekly-email.js for both the Week Ahead and Weekend Ahead digests.
+// scripts/weekly-email.js for the Week Ahead digest.
 
 'use strict';
 

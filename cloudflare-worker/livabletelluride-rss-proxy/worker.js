@@ -212,11 +212,13 @@ const PROFILE_MERGE_FIELDS = ["FNAME", "LNAME", "MMERGE6", "MMERGE10", "MMERGE11
 
 // Customer.io is the system of record. Maps the signup/profile inputs onto the
 // Customer.io attribute schema (also used by the one-time import). subs[] keys
-// are the name-based subscription keys the site sends (weekly/newsletter + the
-// four Event Topics); fields[] are the profile field names the form posts.
+// are the name-based subscription keys the site sends (weekly/newsletter/past +
+// the four Event Topics); fields[] are the profile field names the form posts.
+// `past` = the Monday "Past Meetings" recap email (opt-in, added 2026-10-04).
 const CIO_SUBS_TO_ATTR = {
   weekly:     "sub_weekly_update",
   newsletter: "sub_newsletter",
+  past:       "sub_past_meetings",
   arts:       "topic_music_arts",
   civic:      "topic_gov_meetings",
   family:     "topic_family_kids",
@@ -279,13 +281,36 @@ async function handleInterests(request, env) {
   const cors = profileCorsHeaders(request.headers.get("Origin") || "");
   const json = (obj, status) => new Response(JSON.stringify(obj), { status: status || 200, headers: cors });
   if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
-  return json({ ok: true, available: { weekly: true, newsletter: true, arts: true, civic: true, family: true, outdoors: true } });
+  return json({ ok: true, available: { weekly: true, newsletter: true, past: true, arts: true, civic: true, family: true, outdoors: true } });
 }
 
 // POST /profile-read { idToken } — returns the signed-in user's own Customer.io
 // attributes (name, region, subscription flags) so the profile page can pre-fill.
 // Token-verified; the email comes from the verified token, never from input. A
 // contact Customer.io doesn't have yet returns { ok:true, found:false }.
+// Personal profile-link code (2026-10-05). Each subscriber's emails carry
+// "&key=<code>" on the "Update preferences" link; the code is an HMAC of their
+// lowercased email under PROFILE_LINK_SECRET, stored on the person as the
+// Customer.io attribute `profile_key` (backfilled by scripts/customerio-
+// profile-keys.js, stamped on every /update-profile) and inserted by the
+// broadcast templates as *|PKEY|*. Email + matching code lets /profile-read
+// show that person's switches without a Hub-Bub sign-in, and nobody can look
+// up someone else by typing their address. 128 bits, base64url.
+async function profileKey(env, email) {
+  const secret = env.PROFILE_LINK_SECRET || "";
+  if (!secret) return "";
+  const key = await crypto.subtle.importKey("raw", new TextEncoder().encode(secret),
+    { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+  const mac = new Uint8Array(await crypto.subtle.sign("HMAC", key, new TextEncoder().encode(String(email).trim().toLowerCase())));
+  return btoa(String.fromCharCode(...mac.slice(0, 16))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+function sameString(a, b) {   // constant-time compare
+  a = String(a); b = String(b);
+  if (a.length !== b.length) return false;
+  let d = 0; for (let i = 0; i < a.length; i++) d |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  return d === 0;
+}
+
 async function handleProfileRead(request, env) {
   const cors = profileCorsHeaders(request.headers.get("Origin") || "");
   const json = (obj, status) => new Response(JSON.stringify(obj), { status: status || 200, headers: cors });
@@ -294,19 +319,34 @@ async function handleProfileRead(request, env) {
   if (!env.CUSTOMERIO_APP_API_KEY) return json({ ok: false, msg: "Profile lookup isn't configured yet." }, 500);
 
   let data; try { data = await request.json(); } catch { return json({ ok: false, msg: "Bad request." }, 400); }
-  const idToken = data && data.idToken;
-  if (!idToken) return json({ ok: false, msg: "Not signed in." }, 401);
-  const email = await verifyFirebaseEmail(idToken);
-  if (!email) return json({ ok: false, msg: "We couldn't verify your sign-in." }, 401);
+  // Either a Hub-Bub sign-in (Firebase ID token) or an email plus its personal
+  // link code from one of our emails.
+  let email = null;
+  if (data && data.idToken) {
+    email = await verifyFirebaseEmail(data.idToken);
+    if (!email) return json({ ok: false, msg: "We couldn't verify your sign-in." }, 401);
+  } else if (data && data.email && data.key) {
+    const e = String(data.email).trim().toLowerCase();
+    const expect = await profileKey(env, e);
+    if (!expect || !sameString(expect, String(data.key).trim())) return json({ ok: false, msg: "This link can't show your settings." }, 401);
+    email = e;
+  } else {
+    return json({ ok: false, msg: "Not signed in." }, 401);
+  }
 
-  // Read the contact's attributes from Customer.io (App API; contact id == email).
+  // Find the contact by EMAIL, then read its attributes by cio_id. Most people
+  // were imported with an email but no `id`, so GET /customers/{email}/attributes
+  // (which matches on id) 404'd for them and every real subscriber was told
+  // "we don't have a subscription for you" (fixed 2026-10-26).
+  const H = { Authorization: "Bearer " + env.CUSTOMERIO_APP_API_KEY };
   let resp;
   try {
-    resp = await fetch("https://api.customer.io/v1/customers/" + encodeURIComponent(email) + "/attributes", {
-      headers: { Authorization: "Bearer " + env.CUSTOMERIO_APP_API_KEY },
-    });
+    const s = await fetch("https://api.customer.io/v1/customers?email=" + encodeURIComponent(email), { headers: H });
+    if (!s.ok) return json({ ok: false, msg: "Lookup failed (" + s.status + ")." });
+    const hits = (((await s.json()) || {}).results || []).filter((r) => String(r.email || "").toLowerCase() === email);
+    if (!hits.length) return json({ ok: true, found: false, email });
+    resp = await fetch("https://api.customer.io/v1/customers/" + encodeURIComponent(hits[0].cio_id) + "/attributes?id_type=cio_id", { headers: H });
   } catch { return json({ ok: false, msg: "Couldn't reach Customer.io." }, 502); }
-  if (resp.status === 404) return json({ ok: true, found: false, email });
   if (!(resp.status >= 200 && resp.status < 300)) return json({ ok: false, msg: "Lookup failed (" + resp.status + ")." });
 
   let a = {};
@@ -326,6 +366,7 @@ async function handleProfileRead(request, env) {
       // suppresses delivery regardless of what these say.
       weekly:     !globallyUnsubscribed && truthy(a.sub_weekly_update),
       newsletter: !globallyUnsubscribed && truthy(a.sub_newsletter),
+      past:       !globallyUnsubscribed && truthy(a.sub_past_meetings),
       arts:       !globallyUnsubscribed && truthy(a.topic_music_arts),
       civic:      !globallyUnsubscribed && truthy(a.topic_gov_meetings),
       family:     !globallyUnsubscribed && truthy(a.topic_family_kids),
@@ -379,6 +420,9 @@ async function handleUpdateProfile(request, env) {
   // cleared by an explicit opt-in action; turning everything off does NOT set it
   // (attribute-level off is enough).
   if (optingIn) cioAttrs.unsubscribed = false;
+  // Keep the person's profile-link code current (new signups get theirs here).
+  const pk = await profileKey(env, email);
+  if (pk) cioAttrs.profile_key = pk;
   if (!Object.keys(cioAttrs).length) return json({ ok: false, msg: "Nothing to update." }, 400);
 
   const cioStatus = await cioIdentify(env, email, cioAttrs);

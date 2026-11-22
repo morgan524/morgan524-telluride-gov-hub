@@ -26,6 +26,7 @@
 //
 // Env: ANTHROPIC_API_KEY. Requires `yt-dlp` on PATH (pip install yt-dlp).
 
+const { BOLD_GUIDELINE } = require('./lib/bold-guideline.js');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
@@ -36,6 +37,7 @@ const { serializeArray } = require('./lib/serialize.js');
 const { SONNET } = require('./lib/claude-model.js');
 const { createResponseCache } = require('./lib/response-cache.js');
 const { mirrorAll } = require('./lib/json-mirror.js');
+const { fixNamesDeep } = require('./lib/name-spellings.js');
 
 const REPO_ROOT = path.resolve(__dirname, '..');
 const GOV_HELPERS = path.join(REPO_ROOT, 'js', 'gov-helpers.js');
@@ -48,6 +50,22 @@ const CHANNELS = [
   { sourceKey: 'telluride', sourceLabel: 'Town of Telluride', url: 'https://www.youtube.com/@townoftelluridecolorado8739/streams' },
   { sourceKey: 'county',    sourceLabel: 'San Miguel County', url: 'https://www.youtube.com/@sanmiguelcountyco/streams' },
   { sourceKey: 'rico',      sourceLabel: 'Rico',              url: 'https://www.youtube.com/@townofrico/streams' },
+  // Ridgway posts finished recordings to /videos (no /streams tab), titled
+  // "Town Council Regular Meeting – September 9, 2026". It also posts advisory
+  // boards (Sustainability, etc.) — `include` keeps Council + Planning
+  // Commission only. Added 2026-09-29.
+  // Ouray County posts Board of County Commissioners recordings to a Vimeo
+  // showcase (linked from ouraycountyco.gov/417/BOCC-Meeting-Recordings), with
+  // English auto-captions. Vimeo's bot check rejects yt-dlp/curl on the player
+  // page (401 "couldn't verify the security of your connection") even with TLS
+  // impersonation, but a real browser loads it, and the signed captions URL it
+  // exposes downloads fine with a plain fetch. So: list via yt-dlp + oEmbed,
+  // captions via Playwright. The showcase id changes yearly — update it here.
+  // Added 2026-09-29.
+  { sourceKey: 'ouray',     sourceLabel: 'Ouray County', kind: 'vimeo',
+    url: 'https://vimeo.com/showcase/12061870', referer: 'https://ouraycountyco.gov/' },
+  { sourceKey: 'ridgway',   sourceLabel: 'Town of Ridgway',   url: 'https://www.youtube.com/@townofridgwaycolorado2070/videos',
+    include: /town council|planning commission/i },
   // Mountain Village does NOT use YouTube — it publishes to an AV Capture All
   // portal that exposes, per meeting, a direct .mp4 AND a .vtt caption file.
   // The .vtt is a ready-made transcript (no yt-dlp, no download, no
@@ -56,6 +74,14 @@ const CHANNELS = [
   // Vote Tracker with NO ingest path at all since March.
   { sourceKey: 'mv', sourceLabel: 'Mountain Village', kind: 'avcapture',
     url: 'https://media.avcaptureall.cloud/?customerGuid=f6f590a7-5acc-4d32-9928-ad9ae0d02e06&target=foo&view=thumbs&tabs=past%7Ctoday%7Cupcoming' },
+  // SMART posts finished recordings to /videos (no /streams tab), titled
+  // "9-10-26 SMART Board Meeting", plus its Gondola Leadership and Gondola
+  // Advisory committees. These video recaps are timely; smart-votes.js later
+  // replaces a Board recap with the minutes-based one once the next packet
+  // carries that meeting's minutes. Added 2026-10-01.
+  // SMART uploads weeks after the meeting (9/10 Board → posted 9/30), so it
+  // gets a longer look-back than the global --days window.
+  { sourceKey: 'smart',     sourceLabel: 'SMART',             url: 'https://www.youtube.com/@SMART-Transit/videos', days: 60 },
 ];
 
 const args = process.argv.slice(2);
@@ -67,7 +93,7 @@ const DAYS = parseInt(val('--days', '21'), 10);
 const LIMIT = parseInt(val('--limit', '5'), 10);
 const ONLY_ENTITY = val('--entity', null);
 const ONLY_VIDEO = val('--video', null);
-const KEEP = 50;   // cap MEETING_RECAPS length after prepending
+const KEEP = 150;  // cap MEETING_RECAPS length after prepending (50 → 150 on 2026-09-29: with 6 entities, 50 dropped Mountain Village recaps within a day)
 
 const MONTHS = { jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11 };
 
@@ -78,6 +104,8 @@ function parseDateFromTitle(title) {
   const t = String(title || '');
   let m;
   if ((m = t.match(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/))) return iso(m[3], m[1], m[2]);
+  // "9-10-26" / "9-10-2026" (SMART). Two-digit years are 20xx.
+  if ((m = t.match(/\b(\d{1,2})-(\d{1,2})-(\d{4}|\d{2})\b/))) return iso(m[3].length === 2 ? '20' + m[3] : m[3], m[1], m[2]);
   if ((m = t.match(/\b([A-Za-z]{3,9})\.?\s+(\d{1,2}),?\s+(\d{4})\b/))) {
     const mo = MONTHS[m[1].slice(0, 3).toLowerCase()];
     if (mo != null) return iso(m[3], mo + 1, m[2]);
@@ -102,6 +130,7 @@ function daysSince(isoDate) {
 function bodyToken(title) {
   return String(title || '')
     .replace(/\b\d{1,2}\/\d{1,2}\/\d{4}\b/g, '')
+    .replace(/\b\d{1,2}-\d{1,2}-(\d{4}|\d{2})\b/g, '')
     .replace(/\b[A-Za-z]{3,9}\.?\s+\d{1,2},?\s+\d{4}\b/g, '')
     .replace(/\b\d{8}\b/g, '')
     .replace(/\b(regular|special|chair|work\s*session|meeting|board|of|directors|the)\b/gi, '')
@@ -194,6 +223,72 @@ function listChannel(url) {
   return out.split('\n').filter(Boolean).map((l) => { const i = l.indexOf('\t'); return { id: l.slice(0, i), title: l.slice(i + 1) }; });
 }
 
+// Vimeo showcase → [{id, title, date}]. yt-dlp can list a showcase's ids
+// (titles come back NA), and Vimeo's public oEmbed endpoint — not behind the
+// bot check — gives each title and upload date.
+async function listVimeo(url) {
+  let out = '';
+  try { out = yt(['--flat-playlist', '--playlist-end', '12', '--print', '%(id)s', url]); }
+  catch (e) { console.warn(`  ⚠ could not list ${url}: ${String(e.message || e).slice(0, 80)}`); return []; }
+  const vids = [];
+  for (const id of out.split('\n').map((x) => x.trim()).filter((x) => /^\d+$/.test(x))) {
+    try {
+      const r = await fetch(`https://vimeo.com/api/oembed.json?url=https://vimeo.com/${id}`);
+      if (!r.ok) continue;
+      const j = await r.json();
+      const title = String(j.title || '').trim();
+      const date = parseDateFromTitle(title) || String(j.upload_date || '').slice(0, 10);
+      if (title) vids.push({ id, title, date: /^\d{4}-\d{2}-\d{2}$/.test(date) ? date : '' });
+    } catch (e) { /* skip this video */ }
+  }
+  return vids;
+}
+
+// Vimeo captions: load the player in a real (headless) browser, read the
+// signed captions.vimeo.com .vtt URL off the <track>/playerConfig, then fetch
+// it plainly. '' when the video has no English track.
+async function fetchVimeoTranscript(id, referer) {
+  const { chromium } = require('playwright');
+  // channel:'chrome' = the real Google Chrome installed on this Mac. Vimeo's bot
+  // check 401s Playwright's bundled Chromium but lets real Chrome through
+  // (verified 2026-09-29). Fall back to bundled if Chrome isn't installed.
+  let browser;
+  try { browser = await chromium.launch({ channel: 'chrome' }); }
+  catch (e) { browser = await chromium.launch(); }
+  try {
+    const page = await browser.newPage({
+      userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+      extraHTTPHeaders: referer ? { Referer: referer } : {},
+    });
+    await page.goto(`https://player.vimeo.com/video/${id}`, { waitUntil: 'domcontentloaded', timeout: 90000 });
+    await page.waitForFunction(() => !!(window.playerConfig && window.playerConfig.request), null, { timeout: 60000 }).catch(() => {});
+    const vtt = await page.evaluate(() => {
+      const tracks = (window.playerConfig && window.playerConfig.request && window.playerConfig.request.text_tracks) || [];
+      const t = tracks.find((x) => /^en/i.test(x.lang || '')) || tracks[0];
+      if (t && t.url) return new URL(t.url, location.origin).href;
+      const el = document.querySelector('track');
+      return el ? el.src : '';
+    });
+    return vtt ? await fetchVtt(vtt) : '';
+  } catch (e) {
+    console.warn(`      ⚠ Vimeo player ${id}: ${String(e.message || e).split('\n')[0]}`);
+    return '';
+  } finally { await browser.close(); }
+}
+
+// The date a YouTube video streamed/was published, as YYYY-MM-DD ('' if
+// unknown). --flat-playlist listings carry no date, and some channels title
+// meetings without one — Rico posts "Board of Trustees September Meeting" — so
+// parseDateFromTitle() found nothing and EVERY Rico video was skipped (zero
+// Rico recaps ever; found 2026-09-29). One extra yt-dlp call per undated video.
+function streamDate(videoId) {
+  let out = '';
+  try { out = yt(['--skip-download', '--print', '%(release_date)s %(upload_date)s', `https://www.youtube.com/watch?v=${videoId}`]); }
+  catch (e) { return ''; }
+  const m = String(out).match(/\b(20\d{2})(\d{2})(\d{2})\b/);
+  return m ? `${m[1]}-${m[2]}-${m[3]}` : '';
+}
+
 // Pull the transcript for one video via yt-dlp auto/manual captions (json3).
 function fetchTranscript(videoId) {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'recap-'));
@@ -253,7 +348,8 @@ WHAT TO WRITE — the recap is about what ACTUALLY HAPPENED:
   for HARC), return an EMPTY recap — {"title": "<body — date>", "recap": ""}.
   An empty recap means the meeting correctly gets NO card; do NOT pad it with the
   very items you were told to omit.
-- Around 100 words. Separate distinct topics with a BLANK LINE (\\n\\n) — two to four short paragraphs. No headers, no lists, no markdown.
+- Around 100 words. Separate distinct topics with a BLANK LINE (\\n\\n) — two to four short paragraphs. No headers, no lists. The ONLY markup allowed is **double asterisks** for bold, per BOLDING below.
+${BOLD_GUIDELINE}
 
 HARD RULES:
 - Use ONLY what the transcript supports. Do NOT invent vote tallies, names, numbers, or outcomes. If the transcript is unclear on an outcome, describe it without a fabricated tally.
@@ -343,7 +439,9 @@ const VT_CONFIG = (() => {
   catch (e) { return {}; }
 })();
 function trackerEntityFor(sourceKey, title) {
-  if (sourceKey === 'county' && /county commissioners|BOCC/i.test(title)) return 'bocc';
+  // 'commissioners?' — the County's own titles vary: "Board of County Commissioner
+  // Meeting" (singular) matched nothing, so Sep 9 & 23 2026 got no vote draft.
+  if (sourceKey === 'county' && /county commissioners?\b|\bBOCC\b/i.test(title)) return 'bocc';
   if (sourceKey === 'county' && /planning commission/i.test(title)) return 'pc';
   if (sourceKey === 'mv' && /design review/i.test(title)) return 'drb';
   if (sourceKey === 'mv' && /town council/i.test(title)) return 'tomv';
@@ -374,6 +472,11 @@ function rosterForDate(entity, isoDate) {
 // motion's own subject. (2026-07-23)
 const PROCEDURAL_RE = /\b(?:go into|enter|convene in|adjourn(?:ment)?|recess)\b|\bexecutive session\b|\bconsent calendar\b|\bapprove (?:the )?(?:minutes|agenda)\b|\bminutes approval\b|\bapproval of (?:the )?(?:minutes|agenda)\b/i;
 function isProcedural(title) { return PROCEDURAL_RE.test(String(title || '')); }
+// Recap summaries never list votes to enter/convene in executive session
+// (Morgan, 2026-09-29). The prompt already says to exclude them, but the model
+// still returned five ("Enter executive session", "Executive session — lot 9
+// block 20…"), so enforce it in code.
+const EXEC_SESSION_RE = /\bexecutive session\b/i;
 
 // Guard #1 — cross-check the two independent LLM passes over the same
 // transcript. The recap pass and the vote pass each report a tally; where both
@@ -464,7 +567,26 @@ async function draftVotes(entityKey, isoDate, title, transcript, videoUrl, recap
     // voted. Only applied when the model reported NO per-member votes at all;
     // if it named even one, that evidence is kept as-is.
     if (!Object.keys(votes).length && /passed|failed|carried/i.test(v.outcome || '')) {
-      for (const id of roster) votes[id] = 'Voice';
+      // Unanimous by the WHOLE board ("3-0" on a 3-member board) names everyone:
+      // record Yes, not Voice (Morgan, 2026-09-29 — Voice left the heatmap blank
+      // for plainly unanimous BOCC votes). A 5-0 on a 6-member board stays Voice:
+      // we can't tell who didn't vote.
+      // Best effort (Morgan, 2026-09-29: "accept that it might have some
+      // error"): a motion that passed/failed with no recorded dissent credits
+      // every REGULAR member with Yes (No if it failed). Alternates (config
+      // `alternates`) only sit in for an absent member, so they're left blank.
+      // A split tally (5-1, 4-2) stays Voice — we can't tell who dissented.
+      const t = parseTally(v.tally);
+      const alts = new Set(entity.alternates || []);
+      const regular = roster.filter((id) => !alts.has(id));
+      const noDissent = t ? (t[1] === 0 && (t[0] === regular.length || t[0] === roster.length))
+        : /^(|unknown|unanimous(ly)?|voice)$/i.test(String(v.tally || '').trim());
+      if (noDissent) {
+        const val = /failed/i.test(v.outcome || '') ? 'No' : 'Yes';
+        for (const id of (t && t[0] === roster.length ? roster : regular)) votes[id] = val;
+      } else {
+        for (const id of roster) votes[id] = 'Voice';
+      }
     }
     // A vote carrying named dissent is the one case we will NOT auto-publish.
     // Voice votes make no claim about individuals, so they are safe. Split
@@ -482,8 +604,19 @@ async function draftVotes(entityKey, isoDate, title, transcript, videoUrl, recap
     const tallyDisagrees = !!(voteTally && recapTally &&
       (voteTally[0] !== recapTally[0] || voteTally[1] !== recapTally[1]));
     const reviewReasons = [];
-    if (!isVoice && Object.keys(votes).length > 0) reviewReasons.push('split-vote attribution (caption names are unreliable)');
+    // A UNANIMOUS vote makes no claim about any one person that the tally
+    // doesn't already make: if every named member is 'Yes' and that count equals
+    // the tally's ayes with zero nays, nothing needs checking. This rule used to
+    // hold ANY vote with per-member entries — every 7-0 too — so from July 2026
+    // not a single Telluride vote reached the tracker (Morgan, 2026-09-29).
+    // Held: any No/Abstain/Recused/Absent, or a Yes count that disagrees.
+    const vals = Object.values(votes);
+    const unanimousAsTallied = !!voteTally && voteTally[1] === 0 && vals.length > 0 &&
+      vals.every((x) => x === 'Yes') && vals.length === voteTally[0];
+    if (!isVoice && vals.length > 0 && !unanimousAsTallied) reviewReasons.push('split-vote attribution (caption names are unreliable)');
     if (tallyDisagrees) reviewReasons.push(`tally disagreement: vote pass ${voteTally.join('-')} vs recap pass ${recapTally.join('-')}`);
+    // needsReview is informational now: insert-votes.mjs publishes these
+    // best-effort and prints the reasons (Morgan, 2026-09-29).
     return {
       needsReview: reviewReasons.length > 0,
       reviewReasons,
@@ -541,6 +674,7 @@ async function main() {
   let channelFailures = 0;
   for (const ch of channels) {
     const isAv = ch.kind === 'avcapture';
+    const isVimeo = ch.kind === 'vimeo';
     // One source must not be able to take down the others. On 2026-08-06 the
     // Mountain Village listing threw MODULE_NOT_FOUND (playwright absent from
     // the bot checkout's scripts/node_modules) and the uncaught rejection
@@ -548,7 +682,7 @@ async function main() {
     // listed, so nothing was recapped at all that day.
     let vids;
     try {
-      vids = isAv ? await listAvCapture(ch.url) : listChannel(ch.url);
+      vids = isAv ? await listAvCapture(ch.url) : isVimeo ? await listVimeo(ch.url) : listChannel(ch.url);
     } catch (e) {
       channelFailures++;
       console.warn(`  ⚠ ${ch.sourceKey}: could not list meetings (${e.message.split('\n')[0]}) — continuing with other sources`);
@@ -574,13 +708,16 @@ async function main() {
     for (const v of vids) {
       if (ONLY_VIDEO && v.id !== ONLY_VIDEO) continue;
       if (!FORCE && SKIP_TITLE.test(v.title)) continue;
+      if (ch.include && !ch.include.test(v.title)) continue;
       const videoUrl = isAv
         ? `https://media.avcaptureall.cloud/meeting/${v.id}`
+        : isVimeo ? `https://vimeo.com/${v.id}`
         : `https://www.youtube.com/watch?v=${v.id}`;
-      const date = v.date || parseDateFromTitle(v.title);
+      if (!FORCE && seenVideo.has(videoUrl)) continue;   // before any extra date lookup
+      const date = v.date || parseDateFromTitle(v.title) || (isAv || isVimeo ? '' : streamDate(v.id));
       if (!date) { continue; }
       const age = daysSince(date);
-      if (!FORCE && (age > DAYS || age < 0)) continue;
+      if (!FORCE && (age > Math.max(DAYS, ch.days || 0) || age < 0)) continue;
       const meetKey = `${ch.sourceKey}|${date}|${bodyToken(v.title)}`;
       if (!FORCE && (seenVideo.has(videoUrl) || seenMeeting.has(meetKey))) continue;
       if (added.length >= LIMIT) { console.log(`  (reached --limit ${LIMIT})`); break; }
@@ -588,7 +725,7 @@ async function main() {
       console.log(`  ★ ${ch.sourceKey}  ${date}  ${v.title}`);
       if (DRY) { added.push({ sourceKey: ch.sourceKey, date, title: v.title, videoUrl }); continue; }
 
-      const transcript = isAv ? await fetchVtt(v.vtt) : fetchTranscript(v.id);
+      const transcript = isAv ? await fetchVtt(v.vtt) : isVimeo ? await fetchVimeoTranscript(v.id, ch.referer) : fetchTranscript(v.id);
       if (!transcript || transcript.length < 500) { console.log(`      ⚠ no usable transcript (${transcript.length} chars) — skipping`); continue; }
       const fromCache = recapIsCached(ch, date, v.title, transcript);
       console.log(fromCache
@@ -598,8 +735,9 @@ async function main() {
       try { out = await recapFromTranscript(ch, date, v.title, transcript); }
       catch (e) { console.log(`      ✗ recap failed: ${e.message}`); continue; }
       if (!out || !out.recap) { console.log('      ✗ empty recap'); continue; }
+      out = fixNamesDeep(out);
 
-      added.push({ sourceKey: ch.sourceKey, sourceLabel: ch.sourceLabel, date, title: (out.title || v.title).trim(), recap: out.recap.trim(), votes: Array.isArray(out.votes) ? out.votes.slice(0, 8) : [], videoUrl });
+      added.push({ sourceKey: ch.sourceKey, sourceLabel: ch.sourceLabel, date, title: (out.title || v.title).trim(), recap: out.recap.trim(), votes: Array.isArray(out.votes) ? out.votes.filter((x) => !EXEC_SESSION_RE.test(String((x && (x.item || x.title)) || ''))).slice(0, 8) : [], videoUrl });
       seenVideo.add(videoUrl); seenMeeting.add(meetKey);
       console.log(`      ✓ ${out.title}`);
 
@@ -665,4 +803,4 @@ if (require.main === module) {
   main().catch((e) => { console.error(e); process.exit(1); });
 }
 
-module.exports = { RESPONSE_CACHE, recapRequestBody, recapIsCached, callClaude };
+module.exports = { RESPONSE_CACHE, recapRequestBody, recapIsCached, callClaude, parseDateFromTitle, bodyToken };

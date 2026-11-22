@@ -42,6 +42,35 @@ test('cache bucket is a positive integer (10-minute granularity)', () => {
   assert.ok(Number.isInteger(b) && b > 0);
 });
 
+// Meetings come off the site 3 hours after their scheduled start (MT).
+// Oct 22, 2026 is MDT (UTC-6): 17:30 MT = 23:30Z.
+test('meetingOver: drops a meeting 3 hours after its start, Mountain Time', () => {
+  const at = (iso) => new Date(iso);
+  // 5:30 PM meeting: still up at 8:29 PM MT, gone at 8:30 PM MT.
+  assert.equal(LTData.meetingOver('2026-10-22', '5:30 PM', at('2026-10-23T02:29:00Z')), false);
+  assert.equal(LTData.meetingOver('2026-10-22', '5:30 PM', at('2026-10-23T02:30:00Z')), true);
+  // Range: the clock starts at the first time.
+  assert.equal(LTData.meetingOver('2026-10-22', '8:30 AM - 11:30 AM', at('2026-10-22T17:29:00Z')), false);
+  assert.equal(LTData.meetingOver('2026-10-22', '8:30 AM - 11:30 AM', at('2026-10-22T17:30:00Z')), true);
+  // Earlier days are over; later days are not; no time = up through the day.
+  assert.equal(LTData.meetingOver('2026-10-21', '9:00 AM', at('2026-10-22T14:00:00Z')), true);
+  assert.equal(LTData.meetingOver('2026-10-23', '9:00 AM', at('2026-10-22T14:00:00Z')), false);
+  assert.equal(LTData.meetingOver('2026-10-22', '', at('2026-10-23T05:00:00Z')), false);
+  // Display-format dates (hand-curated deep-dive lists) work too.
+  assert.equal(LTData.meetingOver('Oct 21, 2026', '5:30 PM', at('2026-10-22T14:00:00Z')), true);
+  assert.equal(LTData.meetingOver('Oct 23, 2026', '5:30 PM', at('2026-10-22T14:00:00Z')), false);
+});
+
+test('startMinutes reads the first clock time in free text', () => {
+  assert.equal(LTData.startMinutes('5:30 PM'), 17 * 60 + 30);
+  assert.equal(LTData.startMinutes('8:30 AM - 11:30 AM'), 8 * 60 + 30);
+  assert.equal(LTData.startMinutes('12:00 PM'), 12 * 60);
+  assert.equal(LTData.startMinutes('12:15 AM'), 15);
+  assert.equal(LTData.startMinutes('6 p.m.'), 18 * 60);
+  assert.equal(LTData.startMinutes('Noon'), 12 * 60);
+  assert.equal(LTData.startMinutes(''), null);
+});
+
 // ── renderFeaturedAction: the remote ways in ──────────────────────────────────
 // Morgan, 2026-08-19: "we always need to include the Zoom link and the YouTube
 // link to join in". The card used to render Zoom only, so a meeting's
@@ -72,8 +101,8 @@ test('renderFeaturedAction renders both the Zoom and the YouTube link', () => {
     livestream: 'https://www.youtube.com/@townoftelluridecolorado8739/streams',
   })), true);
   const acts = card.els['fa-acts'].innerHTML;
-  assert.match(acts, /href="https:\/\/us06web\.zoom\.us\/meeting\/register\/KKzcuKFdTuyXzpw65k2aAA"[^>]*>Join Zoom</);
-  assert.match(acts, /href="https:\/\/www\.youtube\.com\/@townoftelluridecolorado8739\/streams"[^>]*>Watch on YouTube</);
+  assert.match(acts, /href="https:\/\/us06web\.zoom\.us\/meeting\/register\/KKzcuKFdTuyXzpw65k2aAA"[^>]*>[^<]*Join Zoom</);
+  assert.match(acts, /href="https:\/\/www\.youtube\.com\/@townoftelluridecolorado8739\/streams"[^>]*>[^<]*Watch on YouTube</);
 });
 
 test('a non-YouTube livestream gets a generic label', () => {
@@ -81,7 +110,7 @@ test('a non-YouTube livestream gets a generic label', () => {
   LTData.renderFeaturedAction(card, featuredAction({
     livestream: 'https://media.avcaptureall.cloud/?customerGuid=f6f590a7',
   }));
-  assert.match(card.els['fa-acts'].innerHTML, />Watch the Livestream</);
+  assert.match(card.els['fa-acts'].innerHTML, />[^<]*Watch the Livestream</);
 });
 
 test('no livestream in the data means no livestream link', () => {

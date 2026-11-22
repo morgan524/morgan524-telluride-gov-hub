@@ -41,7 +41,7 @@ const STATIC_PAGES = [
   { t: 'Legal Notices', s: 'Public notices, bids and RFPs from every local government.', u: '/legal-notices.html', k: 'page' },
   { t: 'About Livable Telluride', s: 'Who we are and why we do this.', u: '/about.html', k: 'page' },
   { t: 'Donate', s: 'Independent, ad-free, always free. Keep it that way.', u: '/donate.html', k: 'page' },
-  { t: 'Subscribe to the Week Ahead newsletter', s: 'Meetings, events, and what to watch — free by email every Monday.', u: '/hub-bub.html#signup', k: 'page' },
+  { t: 'Subscribe to the Week Ahead newsletter', s: 'Meetings, events, and what to watch — free by email every Monday.', u: '/subscribe.html', k: 'page' },
   { t: 'Norwood & the West End', s: 'Town meetings, events, Forum news, notices, and groups — one page for Norwood, Nucla, Naturita, and Wright\'s Mesa.', u: '/norwood.html', k: 'page' },
 ];
 
@@ -94,7 +94,7 @@ function run(repoRoot) {
   // Meeting recaps
   for (const r of readJson(dataDir, 'meeting-recaps.json') || []) {
     if (!r || !r.title) continue;
-    out.push({ t: r.title + (r.sourceLabel ? ' — ' + r.sourceLabel : ''), s: clip(r.recap || ''), u: '/gov-hub-past.html', k: 'recap', d: r.date || '' });
+    out.push({ t: r.title + (r.sourceLabel ? ' — ' + r.sourceLabel : ''), s: clip(String(r.recap || '').replace(/\*\*/g, '')), u: '/gov-hub-past.html', k: 'recap', d: r.date || '' });
   }
 
   // Events (precomputed 60-day index)

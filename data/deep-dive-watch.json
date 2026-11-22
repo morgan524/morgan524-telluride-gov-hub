@@ -1,59 +1,28 @@
 {
- "generated": "2026-08-24T01:41:20.531Z",
+ "generated": "2026-11-22T01:06:52.398Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
-   "lastUpdated": "2026-08-17",
-   "upcoming": [
-    {
-     "source": "school",
-     "sourceLabel": "School District R-1",
-     "title": "Telluride Board of Education Monthly Meeting",
-     "date": "2026-08-25",
-     "time": "",
-     "location": "Bridal Veil District Conference Room / Zoom",
-     "agendaUrl": "https://files.smartsites.parentsquare.com/3403/82526_mm_packet_1.pdf",
-     "link": "https://files.smartsites.parentsquare.com/3403/82526_mm_packet_1.pdf",
-     "zoomLink": "https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09",
-     "livestream": ""
-    }
-   ],
+   "lastUpdated": "2026-10-26",
+   "upcoming": [],
    "recent": [
     {
      "source": "telluride",
-     "date": "2026-08-19",
-     "title": "Historic & Architectural Review Commission - Aug 19 2026",
-     "snippet": "A full slate at HARC on August 19, dominated by two projects that have been in the room before and will be again. The Shandoka Lot Redevelopment at 860 Black Bear Rd comes in for preliminary…"
+     "date": "2026-11-18",
+     "title": "Historic & Architectural Review Commission - Nov 18 2026",
+     "snippet": "A heavy agenda for November 18. The two items that have been waiting since August — the Shandoka Lot redevelopment preliminary large-scale reviews for Buildings 1 & 2 and Buildings 3 & 4 at 860 Black…"
     }
    ],
-   "developments": [
-    {
-     "topic": "carhenge",
-     "type": "news",
-     "source": "Town of Telluride",
-     "articleDate": "Aug 8, 2026",
-     "title": "Shandoka and Carhenge Lots Closed Aug 11–21",
-     "copy": "Both the Shandoka and Carhenge commuter parking lots will close temporarily from August 11 through 21. The reason for the closure was not specified in the notice.",
-     "href": "https://www.telluride.gov/AlertCenter.aspx?AID=71",
-     "addedDate": "2026-08-08"
-    }
-   ],
+   "developments": [],
    "stale": [
-    "Carhenge / Shandoka: telluride discussed it on 2026-08-19 (\"Historic & Architectural Review Commission - Aug 19 2026\") but the deep dive was last edited 2026-08-17.",
-    "Carhenge / Shandoka: timeline entry \"HARC hears Shandoka's four buildings; Carhenge slips to…\" (Aug 19, 2026) is still marked upcoming but the date has passed."
+    "Carhenge / Shandoka: telluride discussed it on 2026-11-18 (\"Historic & Architectural Review Commission - Nov 18 2026\") but the deep dive was last edited 2026-10-26.",
+    "Carhenge / Shandoka: timeline entry \"Council resolution puts the Carhenge consolidation decision…\" (Oct 27, 2026) is still marked upcoming but the date has passed.",
+    "Carhenge / Shandoka: timeline entry \"HARC takes up Shandoka's four buildings\" (Nov 18, 2026) is still marked upcoming but the date has passed."
    ]
   },
-  "skigate": {
-   "label": "Ski-Gate: Telski v. Former Officials",
-   "lastUpdated": "2026-07-21",
-   "upcoming": [],
-   "recent": [],
-   "developments": [],
-   "stale": []
-  },
-  "society": {
-   "label": "Society Turn / Valley Floor Entrance",
-   "lastUpdated": "2026-06-01",
+  "medcenter": {
+   "label": "Telluride Medical Center",
+   "lastUpdated": "2026-09-27",
    "upcoming": [],
    "recent": [],
    "developments": [],
@@ -62,25 +31,38 @@
   "code": {
    "label": "Code Changes & Accelerated Review",
    "lastUpdated": "2026-07-19",
-   "upcoming": [],
+   "upcoming": [
+    {
+     "source": "telluride",
+     "sourceLabel": "Town of Telluride",
+     "title": "Special Town Council",
+     "date": "2026-12-04",
+     "time": "10:00 AM",
+     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324",
+     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324",
+     "zoomLink": "https://us06web.zoom.us/meeting/register/LyUziwYoTiaZTkcdYc8iiA",
+     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+    }
+   ],
    "recent": [
     {
      "source": "telluride",
-     "date": "2026-08-20",
-     "title": "Planning & Zoning Commission - Aug 20 2026",
-     "snippet": "The August 20 P&Z meeting has two work sessions and one public hearing worth following. The school district's employee housing proposal gets its first formal look — a work session on new construction…"
+     "date": "2026-11-19",
+     "title": "Planning & Zoning Commission - Nov 19 2026",
+     "snippet": "A light agenda for this one. The 222 West San Juan Avenue subdivision work session — which had been continued from October — has since been withdrawn by the applicant, so it won't be heard. The…"
     },
     {
      "source": "telluride",
-     "date": "2026-08-11",
-     "title": "Town Council - Aug 11 2026",
-     "snippet": "The most consequential item on this agenda is third reading of the Colorado Wildfire Resiliency Code — if approved, it amends the Land Use Code's historic and architectural review standards and…"
+     "date": "2026-11-09",
+     "title": "Intergovernmental Meeting - Nov 09 2026",
+     "snippet": "San Miguel County hosts this intergovernmental work session with representatives from Telluride, Mountain Village, Ophir, Norwood, and the county itself. The session opens with a regional…"
     }
    ],
    "developments": [],
    "stale": [
-    "Code Changes & Accelerated Review: telluride discussed it on 2026-08-20 (\"Planning & Zoning Commission - Aug 20 2026\") but the deep dive was last edited 2026-07-19.",
-    "Code Changes & Accelerated Review: telluride discussed it on 2026-08-11 (\"Town Council - Aug 11 2026\") but the deep dive was last edited 2026-07-19."
+    "Code Changes & Accelerated Review: telluride discussed it on 2026-11-19 (\"Planning & Zoning Commission - Nov 19 2026\") but the deep dive was last edited 2026-07-19.",
+    "Code Changes & Accelerated Review: telluride discussed it on 2026-11-09 (\"Intergovernmental Meeting - Nov 09 2026\") but the deep dive was last edited 2026-07-19."
    ]
   },
   "wildfire": {
@@ -89,22 +71,15 @@
    "upcoming": [],
    "recent": [
     {
-     "source": "fire",
-     "date": "2026-08-18",
-     "title": "Board of Directors Meeting",
-     "snippet": "The Telluride Fire Protection District board meets August 18th at 5:30 p.m. at 131 W. Columbia Ave. Station 3 gets another update — that project has been moving through the district's planning for a…"
-    },
-    {
      "source": "telluride",
-     "date": "2026-08-11",
-     "title": "Town Council - Aug 11 2026",
-     "snippet": "The most consequential item on this agenda is third reading of the Colorado Wildfire Resiliency Code — if approved, it amends the Land Use Code's historic and architectural review standards and…"
+     "date": "2026-11-19",
+     "title": "Planning & Zoning Commission - Nov 19 2026",
+     "snippet": "A light agenda for this one. The 222 West San Juan Avenue subdivision work session — which had been continued from October — has since been withdrawn by the applicant, so it won't be heard. The…"
     }
    ],
    "developments": [],
    "stale": [
-    "Wildfire Resiliency: fire discussed it on 2026-08-18 (\"Board of Directors Meeting\") but the deep dive was last edited 2026-06-01.",
-    "Wildfire Resiliency: telluride discussed it on 2026-08-11 (\"Town Council - Aug 11 2026\") but the deep dive was last edited 2026-06-01."
+    "Wildfire Resiliency: telluride discussed it on 2026-11-19 (\"Planning & Zoning Commission - Nov 19 2026\") but the deep dive was last edited 2026-06-01."
    ]
   },
   "diamond": {
@@ -121,15 +96,22 @@
    "upcoming": [],
    "recent": [
     {
-     "source": "mv",
-     "date": "2026-08-20",
-     "title": "Town Council Meeting",
-     "snippet": "A full agenda for Mountain Village this Thursday. The most consequential action item is a resolution setting a sale price appreciation cap under Municipal Code Section 16.02.070 — the kind of…"
+     "source": "smart",
+     "date": "2026-11-16",
+     "title": "SMART Gondola Advisory Committee",
+     "snippet": "The November 16 SMART Gondola Advisory Committee agenda hasn't been posted yet."
+    },
+    {
+     "source": "telluride",
+     "date": "2026-11-12",
+     "title": "San Miguel Authority for Regional Transportation - Nov 12 2026",
+     "snippet": "SMART's board convenes virtually to act on three resolutions: routine agenda/minutes approval, a resolution of support for comments on proposed changes to a federal Capital Investments Grant Program,…"
     }
    ],
    "developments": [],
    "stale": [
-    "Gondola 3A: mv discussed it on 2026-08-20 (\"Town Council Meeting\") but the deep dive was last edited 2026-07-20."
+    "Gondola 3A: smart discussed it on 2026-11-16 (\"SMART Gondola Advisory Committee\") but the deep dive was last edited 2026-07-20.",
+    "Gondola 3A: telluride discussed it on 2026-11-12 (\"San Miguel Authority for Regional Transportation - Nov 12…\") but the deep dive was last edited 2026-07-20."
    ]
   },
   "norwoodwater": {
@@ -140,7 +122,7 @@
      "source": "norwood",
      "sourceLabel": "Town of Norwood",
      "title": "Norwood Water Commission Meeting",
-     "date": "2026-09-08",
+     "date": "2026-12-08",
      "time": "",
      "location": "1670 Naturita St, Norwood CO 81423",
      "agendaUrl": "",
@@ -152,14 +134,14 @@
    "recent": [
     {
      "source": "norwood",
-     "date": "2026-08-11",
+     "date": "2026-11-10",
      "title": "Norwood Water Commission Meeting",
-     "snippet": "The Norwood Water Commission meets August 11 at 6:30 p.m. at Town Hall with a Zoom option. Routine consent items cover July financials, meeting minutes, and budget-to-actuals. Board business includes…"
+     "snippet": "The November 10, 2026 Norwood Water Commission Meeting agenda hasn't been posted yet."
     }
    ],
    "developments": [],
    "stale": [
-    "Norwood Water: norwood discussed it on 2026-08-11 (\"Norwood Water Commission Meeting\") but the deep dive was last edited 2026-07-23."
+    "Norwood Water: norwood discussed it on 2026-11-10 (\"Norwood Water Commission Meeting\") but the deep dive was last edited 2026-07-23."
    ]
   },
   "fieldpaving": {
@@ -169,9 +151,9 @@
    "recent": [
     {
      "source": "telluride",
-     "date": "2026-08-19",
-     "title": "Parks & Recreation Commission - Aug 19 2026",
-     "snippet": "The Commission takes up two substantive items. First, staff is recommending 2027 fee increases for the Town Park Campground and showers — nightly rates would rise roughly 8%, with premium vehicle…"
+     "date": "2026-11-18",
+     "title": "Parks & Recreation Commission - Nov 18 2026",
+     "snippet": "A routine Parks & Recreation Commission meeting. The one action item is a proposed update to the Town Park Pavilion Banner Policy — specifically to add a category recognizing Telluride high school…"
     }
    ],
    "developments": [],

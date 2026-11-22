@@ -1,0 +1,153 @@
+name: Digest Sunday Review
+
+# Early-Sunday review of both digests (Monday's Week Ahead + Tuesday's Past
+# Meetings), then a freeze until Tuesday morning (Morgan, 2026-10-04):
+#   1. render both digests fresh from the latest data (digest-refresh.yml),
+#   2. review them with scripts/digest-review.js — every link fetched, every
+#      date badge checked against its weekday and window, recap links checked,
+#      plus an editorial read by Claude — and APPLY the exact text fixes it
+#      proposes (typos, wrong words, leftover labels). Anything that needs
+#      judgment stays in the report at digest/review.{md,html,json}, which the
+#      Sunday preview banner lists. No report email (Morgan, 2026-10-04),
+#   3. write digest/freeze.json: until Tuesday 15:00 UTC (9 AM MDT / 8 AM MST),
+#      after the Tuesday 6 AM Past Meetings send (was Monday 21:00 UTC until
+#      Past Meetings moved to Tuesday on 2026-10-26). Until then
+#      digest-refresh.yml will not re-render either digest, so what Morgan
+#      reviews Sunday afternoon is what was reviewed. Review Desk edits and
+#      approvals still save (they go through the digest Worker, not the bot),
+# Only text inside the emails is changed; layout and links are never touched.
+on:
+  schedule:
+    - cron: '0 11 * * 0'   # Sun 11:00 UTC = 5:00 AM MDT (summer)
+    - cron: '0 12 * * 0'   # Sun 12:00 UTC = 5:00 AM MST (winter)
+    - cron: '0 15 * * 0'   # Sun 15:00 UTC = 9 AM MDT / 8 AM MST (backup)
+# Once per week (Morgan 2026-10-24): any scheduled run from Sunday 5 AM to
+# 2 PM Denver runs the review if it hasn't run yet today; a cache marker keyed
+# on the date records it. GitHub often starts crons late, so the old "only at
+# 5 AM" guard could skip both twins.
+  workflow_dispatch:
+    inputs:
+      freeze:
+        description: 'Freeze the digests until Tuesday morning after reviewing (true/false)'
+        required: false
+        default: 'true'
+
+permissions:
+  contents: write
+  issues: write
+  actions: write  # save the once-per-week cache marker
+
+concurrency:
+  group: digest-sunday-review
+  cancel-in-progress: false
+
+jobs:
+  # DST guard: exactly one of the cron pair lands on 5:00 AM in Denver.
+  guard:
+    runs-on: ubuntu-latest
+    outputs:
+      go: ${{ steps.g.outputs.go }}
+      key: ${{ steps.w.outputs.key }}
+    steps:
+      - id: w
+        run: |
+          echo "key=sunday-review-done-$(TZ='America/Denver' date +%F)" >> "$GITHUB_OUTPUT"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo "manual=true" >> "$GITHUB_OUTPUT"; echo "inwin=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+          DOW="$(TZ='America/Denver' date +%u)"; H=$((10#$(TZ='America/Denver' date +%H)))
+          if [ "$DOW" = "7" ] && [ "$H" -ge 5 ] && [ "$H" -lt 14 ]; then echo "inwin=true" >> "$GITHUB_OUTPUT"
+          else echo "Denver weekday=$DOW hour=$H — outside Sunday 5 AM to 2 PM, skipping"; fi
+      - id: done
+        if: steps.w.outputs.inwin == 'true' && steps.w.outputs.manual != 'true'
+        uses: actions/cache/restore@v4
+        with:
+          path: .sunday-review-done
+          key: ${{ steps.w.outputs.key }}
+          lookup-only: true
+      - id: g
+        run: |
+          if [ "${{ steps.w.outputs.inwin }}" = "true" ] && [ "${{ steps.done.outputs.cache-hit }}" != "true" ]; then echo "go=true" >> "$GITHUB_OUTPUT"
+          else echo "go=false" >> "$GITHUB_OUTPUT"; echo "not in window or already reviewed today — skipping"; fi
+
+  render:
+    needs: guard
+    if: needs.guard.outputs.go == 'true'
+    uses: ./.github/workflows/digest-refresh.yml
+    with:
+      force: 'true'
+    secrets: inherit
+
+  review:
+    needs: [guard, render]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main   # the render job just committed the fresh digests to main
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+
+      - name: Freeze window
+        id: win
+        run: |
+          WK="$(python3 -c "import json;print(json.load(open('digest/manifest.json'))['digests']['weekly']['weekStart'])")"
+          echo "until=$(date -u -d "$WK +1 day" +%F)T15:00:00Z" >> "$GITHUB_OUTPUT"   # Tuesday, after the 6 AM Past Meetings send
+          echo "week=$WK" >> "$GITHUB_OUTPUT"
+
+      - name: Review both digests
+        id: review
+        env:
+          APPLY_FIXES: '1'
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RSS_PROXY_URL: ${{ secrets.RSS_PROXY_URL }}   # link checks for hosts that block GitHub IPs
+          FROZEN_UNTIL: ${{ (github.event.inputs.freeze || 'true') == 'true' && 'Tuesday morning (9 AM MDT / 8 AM MST)' || 'not frozen (manual test run)' }}
+        run: |
+          set -o pipefail
+          node scripts/digest-review.js digest | tee /tmp/review.log
+          echo "issues=$(sed -n 's/^ISSUES=//p' /tmp/review.log)" >> "$GITHUB_OUTPUT"
+          echo "high=$(sed -n 's/^HIGH=//p' /tmp/review.log)" >> "$GITHUB_OUTPUT"
+
+      - name: Write the freeze
+        if: (github.event.inputs.freeze || 'true') == 'true'
+        env:
+          UNTIL: ${{ steps.win.outputs.until }}
+          WK: ${{ steps.win.outputs.week }}
+        run: |
+          python3 - <<'PY'
+          import json, os, datetime
+          json.dump({"frozenAt": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+                     "until": os.environ["UNTIL"], "weekStart": os.environ["WK"],
+                     "reason": "Sunday review (digest-sunday-review.yml): the bot will not re-render the digests until this time. Review Desk edits still save."},
+                    open("digest/freeze.json", "w"), indent=2)
+          PY
+          cat digest/freeze.json
+
+      - name: Commit report (+ freeze)
+        run: |
+          git config user.name "Gov Hub Bot"
+          git config user.email "bot@livabletelluride.org"
+          git add digest/review.md digest/review.html digest/review.json digest/week.html
+          [ -f digest/past.html ] && git add digest/past.html
+          [ -f digest/freeze.json ] && git add digest/freeze.json
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          git commit -m "Sunday digest review ${{ steps.win.outputs.week }}: ${{ steps.review.outputs.issues }} left to check"
+          for i in 1 2 3; do git pull --rebase origin main && git push && break || { echo "push attempt $i failed; retrying"; sleep 10; }; done
+
+      - name: Mark today's review as done
+        if: github.event_name == 'schedule'
+        run: mkdir -p .sunday-review-done && date -u +%FT%TZ > .sunday-review-done/at
+      - uses: actions/cache/save@v4
+        if: github.event_name == 'schedule'
+        continue-on-error: true
+        with:
+          path: .sunday-review-done
+          key: ${{ needs.guard.outputs.key }}
+
+      - name: CI health issue
+        if: always()
+        uses: ./.github/actions/ci-health-issue
+        with:
+          title: '🚨 Digest Sunday Review workflow is failing'
+          status: ${{ job.status }}
+          run-url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}

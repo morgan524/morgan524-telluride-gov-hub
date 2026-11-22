@@ -86,6 +86,18 @@ test('set-link swaps the dead href for a working one', () => {
   assert.equal(out.TJC_EVENTS[0].title, 'Shabbat!', 'event untouched otherwise');
 });
 
+test('set-title fixes a source typo and leaves the rest of the record alone', () => {
+  const arrays = { KOTO_COMMUNITY_EVENTS: [{ title: 'Ballor Measure 5A Information Meeting', pubDate: '2026-10-12T08:30:00-06:00', link: 'https://x/' }] };
+  const { arrays: out, skipped } = applyCorrections(arrays, [
+    { id: 'x', kind: 'set-title', array: 'KOTO_COMMUNITY_EVENTS', titleMatch: 'Ballor Measure 5A Information Meeting',
+      newTitle: 'Ballot Measure 5A Information Meeting', wrongDate: '2026-10-12', expiresOn: '2026-11-11' },
+    { id: 'y', kind: 'set-title', array: 'KOTO_COMMUNITY_EVENTS', titleMatch: 'whatever', expiresOn: '2026-11-11' },
+  ], TODAY);
+  assert.equal(out.KOTO_COMMUNITY_EVENTS[0].title, 'Ballot Measure 5A Information Meeting');
+  assert.equal(out.KOTO_COMMUNITY_EVENTS[0].link, 'https://x/');
+  assert.equal(skipped.length, 1, 'a set-title with no newTitle is skipped, never blanks a title');
+});
+
 test('correctionKey ignores the id, so a re-mint dedups against yesterday', () => {
   // The autofixer stamps today's date into every id it writes. Deduping on the
   // id therefore never matched an earlier run, and one dead Shabbat href

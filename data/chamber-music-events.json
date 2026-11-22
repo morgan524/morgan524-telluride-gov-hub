@@ -1,9 +1,21 @@
 [
   {
+    "title": "Telluride Community Concert - January",
+    "link": "https://telluridechambermusic.org/concert/telluride-community-concert--september",
+    "description": "An hour of free chamber music for community.",
+    "date": "2027-01-21",
+    "time": "5:30 PM",
+    "source": "chamber-music",
+    "sourceLabel": "Telluride Chamber Music",
+    "category": "Concert",
+    "location": "Telluride Science and Innovation Center",
+    "imageUrl": "https://telluridechambermusic.org/concerts/telluride-community-concert--september.webp"
+  },
+  {
     "title": "Chill with Chamber Music! — Norwood",
     "link": "https://telluridechambermusic.org/concert/norwood-aug",
-    "description": "An hour of gorgeous music. The perfect way to unwind after your day.",
-    "date": "2026-08-27",
+    "description": "An hour of gorgeous music in the West End.",
+    "date": "2027-01-28",
     "time": "6:00 PM",
     "source": "chamber-music",
     "sourceLabel": "Telluride Chamber Music",
@@ -12,39 +24,27 @@
     "imageUrl": "https://telluridechambermusic.org/concerts/norwood-aug.webp"
   },
   {
-    "title": "Telluride Community Concert — September",
-    "link": "https://telluridechambermusic.org/concert/community-sep",
-    "description": "An hour of chamber music on the deck — the perfect way to unwind.",
-    "date": "2026-09-10",
-    "time": "6:00 PM",
-    "source": "chamber-music",
-    "sourceLabel": "Telluride Chamber Music",
-    "category": "Concert",
-    "location": "Telluride Science and Innovation Center",
-    "imageUrl": "https://telluridechambermusic.org/concerts/community-sep.webp"
-  },
-  {
-    "title": "Balourdet Quartet",
-    "link": "https://telluridechambermusic.org/concert/balourdet",
-    "description": "An evening of Ravel and Brahms in the historic Sheridan Opera House.",
-    "date": "2026-09-13",
+    "title": "Stewart Goodyear",
+    "link": "https://telluridechambermusic.org/concert/stewart-goodyear",
+    "description": "One of the great pianists of this generation performing Beethoven, Ravel and Gershwin.",
+    "date": "2027-02-03",
     "time": "7:00 PM",
     "source": "chamber-music",
     "sourceLabel": "Telluride Chamber Music",
     "category": "Concert",
-    "location": "Sheridan Opera House, Telluride, CO",
-    "imageUrl": "https://telluridechambermusic.org/concerts/balourdet.webp"
+    "location": "Michael D. Palm Theatre",
+    "imageUrl": "https://telluridechambermusic.org/concerts/stewart-goodyear.webp"
   },
   {
-    "title": "Hanneke Cassel Trio",
-    "link": "https://telluridechambermusic.org/concert/hanneke-cassel-trio",
-    "description": "Our \"Not Your Average Classical\" series is back!",
-    "date": "2026-10-13",
+    "title": "Tom Stone, Gary Hoffman & Chloe Mun",
+    "link": "https://telluridechambermusic.org/concert/tom-stone-gary-hoffman-chloe-mun",
+    "description": "An exceptional piano trio.",
+    "date": "2027-03-09",
     "time": "7:00 PM",
     "source": "chamber-music",
     "sourceLabel": "Telluride Chamber Music",
     "category": "Concert",
-    "location": "The Alibi",
-    "imageUrl": "https://telluridechambermusic.org/concerts/hanneke-cassel-trio.webp"
+    "location": "Michael D. Palm Theatre",
+    "imageUrl": "https://telluridechambermusic.org/concerts/tom-stone-gary-hoffman-chloe-mun.webp"
   }
 ]

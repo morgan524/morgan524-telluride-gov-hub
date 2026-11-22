@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="js/site-config.js"></script>
-<title>Your Profile · Livable Telluride (PROTOTYPE)</title>
+<title>Your Profile · Livable Telluride</title>
   <meta name="description" content="Manage your Livable Telluride subscription and notification preferences.">
 <style>
   :root{ --green:#21443c; --green-2:#2a5347; --accent:#2f7a5f; --ink:#1a2e29;
@@ -141,7 +141,7 @@
         <div class="row">
           <label for="pEmail">Email <span class="hint">— the address you subscribed with</span></label>
           <input id="pEmail" type="email" autocomplete="email" required placeholder="you@example.com">
-          <span class="help">Want to use a different email address? Just <a href="https://livabletelluride.org/hub-bub.html#signup">sign up with the new one</a> — that creates your new profile.</span>
+          <span class="help">Want to use a different email address? Just <a href="https://livabletelluride.org/subscribe.html">sign up with the new one</a> — that creates your new profile.</span>
         </div>
 
         <div class="row">
@@ -172,7 +172,7 @@
         </div>
 
         <div class="sub">
-          <div><div class="sub-t" id="subt-weekly">Weekly Update</div><div class="sub-d">The Friday look-ahead — upcoming meetings &amp; events.</div></div>
+          <div><div class="sub-t" id="subt-weekly">Weekly Update</div><div class="sub-d">The Monday look-ahead — upcoming meetings &amp; events.</div></div>
           <div class="tog" data-sub="weekly" data-init="">
             <button type="button" class="tog-sw" role="switch" aria-checked="false" aria-labelledby="subt-weekly"></button>
             <span class="tog-lbl">Not subscribed</span>
@@ -182,6 +182,13 @@
           <div><div class="sub-t" id="subt-newsletter">Newsletter</div><div class="sub-d">Long-form posts when we publish them.</div></div>
           <div class="tog" data-sub="newsletter" data-init="">
             <button type="button" class="tog-sw" role="switch" aria-checked="false" aria-labelledby="subt-newsletter"></button>
+            <span class="tog-lbl">Not subscribed</span>
+          </div>
+        </div>
+        <div class="sub">
+          <div><div class="sub-t" id="subt-past">Past Meetings</div><div class="sub-d">Friday recaps of the past week&rsquo;s public meetings, each linked to the full summary.</div></div>
+          <div class="tog" data-sub="past" data-init="">
+            <button type="button" class="tog-sw" role="switch" aria-checked="false" aria-labelledby="subt-past"></button>
             <span class="tog-lbl">Not subscribed</span>
           </div>
         </div>
@@ -346,7 +353,8 @@
       }
     });
     const note=document.getElementById('profTopicGate');
-    if(note) note.style.display = on ? 'none' : '';
+    const anyTopicShown = !!document.querySelector('.sub.topic-row.show');
+    if(note) note.style.display = (on || !anyTopicShown) ? 'none' : '';
   }
 
   // Pre-fill from the email "Update your info" link
@@ -368,8 +376,12 @@
     });
   });
 
+  // Event Topics are hidden for now (Morgan 2026-10-05: no email uses them yet).
+  // Hidden rows are never sent on save, so each person's topic_* attributes in
+  // Customer.io stay exactly as they are. Set to true to bring the rows back.
+  const SHOW_TOPICS = false;
   // Reveal each Event Topic row only if its Customer.io topic actually exists.
-  fetch(AVAIL_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body:'{}' })
+  if (SHOW_TOPICS) fetch(AVAIL_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body:'{}' })
     .then(r=>r.json()).then(function(resp){
       const avail = (resp && resp.available) || {};
       document.querySelectorAll('.sub.topic-row .tog[data-sub]').forEach(function(tog){
@@ -383,36 +395,52 @@
   // returns the record for the email tied to that token, so no one can read
   // anyone else's data.
   (function initProfileLoad(){
-    const loginHint = 'Have an account? <a href="/hub-bub.html#login">Log in</a> and your saved info loads here automatically.';
+    const loginHint = 'Have an account? <a href="/subscribe.html#login">Log in</a> and your saved info loads here automatically.';
     subsUnknown(true);   // assume unknown until a profile-read proves otherwise
-    if (!window.firebase || !firebase.initializeApp) { loadMsg(loginHint, 'info'); return; }
+    function applyRead(resp, viaLink){
+      if (resp && resp.ok && resp.found) {
+        const fl = resp.fields || {};
+        if (fl.FNAME) setVal('pFirst', fl.FNAME); if (fl.LNAME) setVal('pLast', fl.LNAME); if (fl.MMERGE6) setRegion(fl.MMERGE6);
+        if (fl.MMERGE10) setVal('pAddr', fl.MMERGE10); if (fl.MMERGE11) setVal('pRadius', fl.MMERGE11);
+        flagMissing();
+        if (resp.subs) { Object.keys(resp.subs).forEach(function(k){ setSubStatus(k, resp.subs[k]); }); subsUnknown(false); }
+        // A global opt-out (Customer.io's own footer unsubscribe) suppresses
+        // every send regardless of the per-list attributes, so say so plainly
+        // rather than showing switches that imply mail is on its way.
+        globalUnsub(resp.unsubscribed === true);
+        loadMsg('✓ Loaded your '+(viaLink ? 'current settings' : 'saved info')+' for <strong>'+resp.email+'</strong>. The switches below show what you’re on right now.'+(viaLink ? '' : ' Empty boxes are details we don’t have yet.'), 'ok');
+        return true;
+      }
+      if (resp && resp.ok && !resp.found) {
+        loadMsg('We don’t have a subscription for <strong>'+resp.email+'</strong> yet. Fill in your info below to get started.', 'info');
+        return true;
+      }
+      return false;
+    }
+    // From an email's "Update preferences" link: ?email=…&key=… (the personal
+    // code is checked by the Worker, so an address alone shows nothing).
+    function tryEmailLink(){
+      const e = qp('email'), k = qp('key');
+      if (!e || !k || /\*\|/.test(k)) return false;   // missing, or an unfilled merge tag
+      fetch(READ_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ email: e, key: k }) })
+        .then(function(r){ return r.json(); })
+        .then(function(resp){ if (!applyRead(resp, true)) loadMsg(loginHint, 'info'); })
+        .catch(function(){ loadMsg('Couldn’t load your settings just now — you can still update anything below.', 'info'); });
+      return true;
+    }
+    if (!window.firebase || !firebase.initializeApp) { if (!tryEmailLink()) loadMsg(loginHint, 'info'); return; }
     try {
       firebase.initializeApp(SITE_CONFIG.FIREBASE);
     } catch(e) { /* already initialized */ }
     try { _db = firebase.firestore(); _storage = firebase.storage(); } catch(e) {}
     firebase.auth().onAuthStateChanged(function(user){
-      if (!user || !user.email) { loadMsg(loginHint, 'info'); return; }
+      if (!user || !user.email) { if (!tryEmailLink()) loadMsg(loginHint, 'info'); return; }
       setVal('pEmail', user.email);
       initAvatar(user);
       user.getIdToken().then(function(token){
         return fetch(READ_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ idToken: token }) });
       }).then(function(r){ return r.json(); }).then(function(resp){
-        if (resp && resp.ok && resp.found) {
-          const fl = resp.fields || {};
-          setVal('pFirst', fl.FNAME); setVal('pLast', fl.LNAME); setRegion(fl.MMERGE6);
-          setVal('pAddr', fl.MMERGE10); setVal('pRadius', fl.MMERGE11);
-          flagMissing();
-          if (resp.subs) { Object.keys(resp.subs).forEach(function(k){ setSubStatus(k, resp.subs[k]); }); subsUnknown(false); }
-          // A global opt-out (Customer.io's own footer unsubscribe) suppresses
-          // every send regardless of the per-list attributes, so say so plainly
-          // rather than showing switches that imply mail is on its way.
-          globalUnsub(resp.unsubscribed === true);
-          loadMsg('✓ Loaded your saved info for <strong>'+resp.email+'</strong>. The switches below show what you’re on right now. Empty boxes are details we don’t have yet.', 'ok');
-        } else if (resp && resp.ok && !resp.found) {
-          loadMsg('You’re signed in as <strong>'+resp.email+'</strong>, but we don’t have a subscription for that address yet. Fill in your info below to get started.', 'info');
-        } else {
-          loadMsg(loginHint, 'info');
-        }
+        if (!applyRead(resp, false)) loadMsg(loginHint, 'info');
       }).catch(function(){ loadMsg('Couldn’t load your saved info just now — you can still update anything below.', 'info'); });
     });
   })();

@@ -75,3 +75,18 @@ test('filterMvConflicts drops off-by-1 MV copy, keeps same-date + unknown', () =
   assert.equal(dropped[0].title, 'Town Talk: Tau');
   assert.equal(kept.length, 2);
 });
+
+// Event titles in Title Case (2026-10-19).
+const { titleCaseEventTitle } = require('../lib/clean-text.js');
+test('event titles: ALL CAPS and lowercase words become Title Case', () => {
+  assert.strictEqual(titleCaseEventTitle('TODDLER STORYTIME ART FOR AGES 2.5-5'), 'Toddler Storytime Art for Ages 2.5-5');
+  assert.strictEqual(titleCaseEventTitle('Up-off Gymnastics, Dance, and Spanish'), 'Up-Off Gymnastics, Dance, and Spanish');
+  assert.strictEqual(titleCaseEventTitle('DJ NIGHT AT THE KOTO STATION'), 'DJ Night at the KOTO Station');
+  assert.strictEqual(titleCaseEventTitle('iPhone basics w/ Faction'), 'iPhone Basics w/ Faction');
+  assert.strictEqual(titleCaseEventTitle('Guided Tour: Historic Beaumont Hotel & Spa'), 'Guided Tour: Historic Beaumont Hotel & Spa');
+});
+test('sanitizeRecords title-cases only *_EVENTS arrays', () => {
+  const rec = [{ title: 'AFTER SCHOOL ART FOR AGES 5-8', date: '2026-10-22' }];
+  assert.strictEqual(sanitizeRecords(rec, 'OURAY_RIDGWAY_EVENTS')[0].title, 'After School Art for Ages 5-8');
+  assert.strictEqual(sanitizeRecords(rec, 'TELLURIDE_TIMES_ARTICLES')[0].title, 'AFTER SCHOOL ART FOR AGES 5-8');
+});

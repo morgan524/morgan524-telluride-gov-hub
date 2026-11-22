@@ -654,6 +654,13 @@ CONTENT RULES:
   about the absence — the absence is the message, no further philosophy
   needed. Topics array should be empty in this case.
 - Never hallucinate names, vote counts, or decisions not in the source text.
+- CONTINUED / TABLED ITEMS: an item introduced by "The following will be continued
+  without discussion to…", "continued to…", or "Applicant requests to table…" is NOT
+  being heard at this meeting, even when its full project description follows. Never
+  write that the body "takes up", "hears", or "reviews" it, and never lead with it.
+  Mention it only briefly as continued (with the new date) and summarize the items
+  actually being heard. (2026-10-19: the Oct 21 HARC summary led with two Shandoka
+  hearings that the agenda continued without discussion to Nov 18.)
 - PLANNING COMMISSION / PLANNING & ZONING (P&Z) / HARC (Historic & Architectural
   Review Commission) MEETINGS: do NOT report on single-family residences under
   review — individual single-family home variances, design reviews, COAs,
@@ -953,8 +960,9 @@ async function fetchUpcomingMeetings() {
 
   // Ouray County — CivicPlus AgendaCenter RSS (both boards)
   try {
+    // BOCC moved to CivicClerk (handled right below); only the Planning
+    // Commission is still on AgendaCenter.
     const feeds = [
-      { url: AGENDA_SOURCES.ouray.boccRss, board: 'bocc' },
       { url: AGENDA_SOURCES.ouray.pcRss,   board: 'pc' }
     ];
     for (const feed of feeds) {
@@ -985,6 +993,44 @@ async function fetchUpcomingMeetings() {
       }
     }
   } catch (e) { console.warn('  Ouray County RSS error:', e.message); }
+
+  // Ouray County BOCC — CivicClerk (ouraycoco). Title matches the card
+  // (ourayTitle) so the summary key source|date|title lines up.
+  try {
+    const evs = await fetchOurayCountyEvents(now) || [];
+    for (const ev of evs) {
+      const ag = pickAgendaFile(ev.publishedFiles);
+      const p = wallParts(ev.startDateTime || ev.eventDate);
+      if (!ag || !p) continue;
+      const d = new Date(p.y, p.mo - 1, p.d);
+      if (d < new Date(now.getFullYear(), now.getMonth(), now.getDate()) || d > horizon) continue;
+      meetings.push({
+        source: 'ouray',
+        date: `${p.y}-${String(p.mo).padStart(2, '0')}-${String(p.d).padStart(2, '0')}`,
+        title: ourayTitle(ev.eventName),
+        agendaUrl: `${OURAY_CC_PORTAL}/event/${ev.id}/files/agenda/${ag.fileId}`,
+      });
+    }
+  } catch (e) { console.warn('  Ouray County CivicClerk error:', e.message); }
+
+  // City of Ouray — BoardBook (see syncOurayCityMeetings). Only meetings whose
+  // agenda has posted; the BoardBook agenda page is plain HTML with the full
+  // numbered item list, which extractAgendaText reads directly. Title is the
+  // card title verbatim so the summary key (source|date|title) matches exactly.
+  try {
+    const rows = await syncOurayCityMeetings(now) || [];
+    const pad = (n) => String(n).padStart(2, '0');
+    for (const r of rows) {
+      const d = new Date(r.date);
+      if (!r.agendaUrl || isNaN(d) || d < new Date(now.getFullYear(), now.getMonth(), now.getDate()) || d > horizon) continue;
+      meetings.push({
+        source: 'ouraycity',
+        date: d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()),
+        title: r.title,
+        agendaUrl: r.agendaUrl,
+      });
+    }
+  } catch (e) { console.warn('  City of Ouray BoardBook error:', e.message); }
 
   return meetings;
 }
@@ -1097,6 +1143,15 @@ async function extractAgendaText(url) {
       .replace(/&gt;/g, '>')
       .replace(/\s+/g, ' ')
       .trim();
+    // BoardBook (City of Ouray) agenda pages wrap the item list in menu /
+    // help / footer chrome — keep only "<Month D, YYYY at …> Agenda … Web Viewer".
+    if (/meetings\.boardbook\.org\/Public\/Agenda\//i.test(url)) {
+      const m = text.match(/(?:[A-Z][a-z]+ \d{1,2}, \d{4} at [^A]*?)?Agenda Agenda ([\s\S]*?)(?:Web Viewer|<< Back to the Public Page|$)/);
+      if (m && m[1] && m[1].length > 40) {
+        const head = (text.match(/Hide Everything (.+?) Agenda Agenda/) || [])[1] || '';
+        text = (head ? head + '. ' : '') + 'Agenda: ' + m[1].trim();
+      }
+    }
     return { text: text.slice(0, MAX_AGENDA_TEXT), urls };
   } catch (e) {
     console.warn('  Agenda extract error:', e.message);
@@ -1173,9 +1228,31 @@ function parseZoomFromAgenda(text, urls) {
  * that page; extractAgendaText can scrape it because it's static HTML
  * (no SPA shell, unlike CivicClerk).
  */
+// Start time of a CivicWeb meeting record, as "4:00 PM" ('' when absent).
+// CivicWeb sends MeetingDateTime as "2026-10-07 16:00" (space, not "T") plus a
+// ready-made MeetingTime "04:00 PM". The old /T(\d{2}):/ match never hit the
+// space form, so every Town meeting shipped with no time, and HARC fell back to
+// a hard-coded "5:00 PM" that was wrong for the Sep 30 2026 5:30 PM special
+// (Morgan 2026-09-29). Accept either separator; fall back to MeetingTime.
+function civicWebTime(m) {
+  const tm = String((m && m.MeetingDateTime) || '').match(/[T ](\d{2}):(\d{2})/);
+  if (tm) { const h = parseInt(tm[1], 10); return `${((h + 11) % 12) + 1}:${tm[2]} ${h >= 12 ? 'PM' : 'AM'}`; }
+  const t = String((m && m.MeetingTime) || '').trim();
+  return /^\d{1,2}:\d{2}\s*[AP]M$/i.test(t) ? t.replace(/^0/, '').toUpperCase() : '';
+}
+
 async function fetchTownTellurideMeetings(now, horizon) {
   const out = [];
-  const fromStr = now.toISOString().split('T')[0];                // YYYY-MM-DD
+  // Compare CALENDAR DAYS in Mountain time, never instants. CivicWeb's
+  // MeetingDate is a bare "YYYY-MM-DD", which new Date() reads as UTC
+  // midnight = 6 PM MT the evening BEFORE. The old `mDate < now` test
+  // therefore dropped every same-day meeting from the 00:00 UTC run onward
+  // (6 PM MT the day before) — on 2026-09-30 the 5:30 PM HARC special
+  // (Carhenge) vanished from Gov Hub the evening before it met.
+  const mtDay = (d) => d.toLocaleDateString('en-CA', { timeZone: 'America/Denver' });
+  const todayMT = mtDay(now);
+  const horizonMT = mtDay(horizon);
+  const fromStr = todayMT;                                          // YYYY-MM-DD (MT)
   const url = `${AGENDA_SOURCES.telluride.meetingsApiBase}` +
     `?from=${encodeURIComponent(fromStr)}` +
     `&to=${encodeURIComponent('9999-12-31')}`;
@@ -1196,7 +1273,9 @@ async function fetchTownTellurideMeetings(now, horizon) {
     if (!m) continue;
     const mDate = new Date(m.MeetingDate || m.MeetingDateTime || '');
     if (isNaN(mDate)) continue;
-    if (mDate < now || mDate > horizon) continue;
+    const mDay = String(m.MeetingDate || m.MeetingDateTime || '').slice(0, 10);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(mDay)) continue;
+    if (mDay < todayMT || mDay > horizonMT) continue;   // today's meetings stay all day
 
     // Filter out cancelled meetings — they're in the feed with names
     // like "CANCELLED: Planning & Zoning Commission Chair - May 28 2026"
@@ -1219,14 +1298,86 @@ async function fetchTownTellurideMeetings(now, horizon) {
 
     out.push({
       source: 'telluride',
-      date: mDate.toISOString().split('T')[0],
+      date: mDay,
       title: (m.Name || 'Town of Telluride Meeting').trim(),
       agendaUrl,
       hasAgenda: !!agendaUrl && m.Published === true,
       agendaSeedText: seedParts.join('\n'),
+      time: civicWebTime(m),
     });
   }
   return out;
+}
+
+// Hand-verified {civicClerkId: fileId} escape hatch from gov-data.js, used
+// ONLY when the API reports no agenda file for an event. CivicClerk's
+// publishedFiles list is not always complete: on 2026-08-31 the Sep 2 BOCC
+// (event 887) had a live agenda at /event/887/files/agenda/1980 that the API
+// never listed, so every card and the weekly digest said "agenda hasn't been
+// posted yet" for five days.
+//
+// COUNTY_CIVICCLERK_AGENDA_FILES has existed in gov-data.js since the same
+// class of miss in April/May 2026, but its only reader was deleted in a
+// refactor, so the three entries in it have been dead ever since. This is that
+// reader, restored. An override never overrides anything: it fills in only
+// where pickAgendaFile() found nothing, so a real published file always wins
+// and a stale hand entry can't shadow it.
+let _countyAgendaFileOverrides = null;
+function countyAgendaFileOverrides() {
+  if (_countyAgendaFileOverrides) return _countyAgendaFileOverrides;
+  try {
+    _countyAgendaFileOverrides = extractJsObject(readJsFile(GOV_DATA_JS), 'COUNTY_CIVICCLERK_AGENDA_FILES') || {};
+  } catch (e) {
+    console.warn(`  COUNTY_CIVICCLERK_AGENDA_FILES load error: ${e.message}`);
+    _countyAgendaFileOverrides = {};
+  }
+  return _countyAgendaFileOverrides;
+}
+
+// Resolve one CivicClerk event to its agenda document URL, or '' when the
+// county genuinely hasn't published one. Shared by fetchSmcCountyMeetings()
+// (which feeds MEETING_AGENDA_META) and syncCountyAgendas() (which patches
+// COUNTY_CACHED_DATA) so the two can never disagree about whether an agenda
+// exists — they used to carry two copies of the same `f.type === 'Agenda'`
+// line. `label` just tags the log line with which pass reported the miss.
+const _countyAgendaLogged = new Set();   // one line per event per run, not per pass
+function countyAgendaFor(ev, label) {
+  const base = `${AGENDA_SOURCES.county.portalBase}/event/${ev.id}/files/agenda/`;
+  const file = pickAgendaFile(ev.publishedFiles);
+  if (file) return { url: `${base}${file.fileId}`, name: file.name || '' };
+
+  const say = (msg) => { if (!_countyAgendaLogged.has(ev.id)) { _countyAgendaLogged.add(ev.id); console.log(msg); } };
+  const overrideFileId = countyAgendaFileOverrides()[ev.id];
+  if (overrideFileId) {
+    say(`    County event ${ev.id} (${ev.eventName}): API lists no agenda; using verified override file ${overrideFileId}`);
+    return { url: `${base}${overrideFileId}`, name: '' };
+  }
+  // Not an error — most events legitimately have no agenda yet. Logged so the
+  // next "the agenda is right there and the site says it isn't" is one grep
+  // away instead of a five-day mystery.
+  say(`    ${label}: no agenda file for event ${ev.id} (${ev.eventName}) — publishedFiles: ${describePublishedFiles(ev.publishedFiles)}`);
+  return { url: '', name: '' };
+}
+
+// CivicClerk's Events API silently returns at most 15 events per request —
+// $top is ignored and there is no @odata.nextLink — so every "next 90 days"
+// query was truncated to the first 15 (found 2026-09-29: Ouray County had 21,
+// San Miguel's 90-day rebuild was capped too). Page with $skip (needs
+// $orderby for a stable order) until a short page comes back. Returns the same
+// {status, text} shape as fetch() so call sites don't change.
+async function fetchCivicClerkAll(url) {
+  const all = [];
+  let pageSize = 0;
+  for (let page = 0; page < 20; page++) {
+    const r = await fetch(url + (url.includes('$orderby') ? '' : '&$orderby=startDateTime') + '&$skip=' + all.length);
+    if (r.status !== 200) return page === 0 ? r : { status: 200, text: JSON.stringify({ value: all }) };
+    let v;
+    try { v = JSON.parse(r.text).value || []; } catch (e) { return page === 0 ? r : { status: 200, text: JSON.stringify({ value: all }) }; }
+    all.push(...v);
+    if (page === 0) pageSize = v.length;
+    if (!v.length || v.length < pageSize) break;
+  }
+  return { status: 200, text: JSON.stringify({ value: all }) };
 }
 
 /**
@@ -1238,8 +1389,9 @@ async function fetchTownTellurideMeetings(now, horizon) {
  *   - source: 'county'
  *   - date: 'YYYY-MM-DD' (real event date, not RSS pubDate)
  *   - title: eventName
- *   - agendaUrl: portal /event/<id>/files/agenda/<fileId> URL when a
- *     publishedFile of type "Agenda" exists; otherwise empty string
+ *   - agendaUrl: portal /event/<id>/files/agenda/<fileId> URL, resolved by
+ *     countyAgendaFor() from the event's publishedFiles (or the verified
+ *     COUNTY_CIVICCLERK_AGENDA_FILES override); otherwise empty string
  *   - hasAgenda: boolean
  *   - agendaSeedText: a fallback "agenda body" cobbled together from the
  *     API's eventName + eventDescription + agendaName + categoryName.
@@ -1261,7 +1413,7 @@ async function fetchSmcCountyMeetings(now, horizon) {
     `$filter=${encodeURIComponent(filter)}` +
     `&$orderby=startDateTime` +
     `&$top=100`;
-  const resp = await fetch(url);
+  const resp = await fetchCivicClerkAll(url);
   if (resp.status !== 200) {
     console.warn(`  CivicClerk API returned HTTP ${resp.status}`);
     return out;
@@ -1282,12 +1434,7 @@ async function fetchSmcCountyMeetings(now, horizon) {
     // cases (timezone math, removed events).
     if (startDate < now || startDate > horizon) continue;
 
-    const agendaFile = Array.isArray(ev.publishedFiles)
-      ? ev.publishedFiles.find((f) => f && f.type === 'Agenda')
-      : null;
-    const agendaUrl = agendaFile
-      ? `${AGENDA_SOURCES.county.portalBase}/event/${ev.id}/files/agenda/${agendaFile.fileId}`
-      : '';
+    const { url: agendaUrl, name: agendaFileName } = countyAgendaFor(ev, 'CivicClerk summaries');
 
     // Build a structured "seed" agenda body. Not the actual PDF content
     // (see extractAgendaText note), but more useful for Claude than just
@@ -1297,7 +1444,7 @@ async function fetchSmcCountyMeetings(now, horizon) {
       ev.eventName    ? `Event: ${ev.eventName}`       : '',
       ev.agendaName   ? `Agenda: ${ev.agendaName}`     : '',
       ev.eventDescription ? `Description: ${ev.eventDescription}` : '',
-      agendaFile?.name ? `Agenda file: ${agendaFile.name}` : '',
+      agendaFileName ? `Agenda file: ${agendaFileName}` : '',
     ].filter(Boolean);
     const agendaSeedText = seedParts.join('\n');
 
@@ -3257,7 +3404,9 @@ function readJsFile(filePath) {
 const { extractJsArray, extractJsObject } = require('./lib/extract.js');
 // JS→JSON migration (Phase 1): dual-write mirrored arrays to data/<name>.json.
 const { mirrorAll } = require('./lib/json-mirror.js');
-const { countyRowsFromEvents, mergeCountyRows } = require('./lib/civicclerk-events.js');
+const {
+  countyRowsFromEvents, mergeCountyRows, pickAgendaFile, describePublishedFiles, wallParts,
+} = require('./lib/civicclerk-events.js');
 const { stripDescPreamble } = require('./lib/clean-text.js');
 
 /**
@@ -3300,7 +3449,7 @@ function replaceJsValue(source, varName, newValue, isObject = false) {
     // Funnel: normalize (sanitize) → validate (quarantine broken records)
     // → serialize. Quarantines are logged, not silent. A whole source
     // going malformed shrinks the array and trips source-health.
-    const sane = sanitizeRecords(newValue);
+    const sane = sanitizeRecords(newValue, varName);
     const { kept, quarantined } = validateRecords(sane);
     if (quarantined.length) {
       console.warn(`  ⚠ ${varName}: quarantined ${quarantined.length} malformed record(s) before write:`);
@@ -3421,7 +3570,11 @@ function isDigestTitle(t) {
          /Daily Digest|Weekly Digest|Daily Update|Weekly Update/i.test(t) ||
          /\bWeek(?:end)?\b[\s\w]*\bOutlook\b/i.test(t) ||
          /\bWeek(?:end)?\s+Ahead\b/i.test(t) ||
-         /\bWeekend\s+(Update|Outlook|Digest)\b/i.test(t);
+         /\bWeekend\s+(Update|Outlook|Digest)\b/i.test(t) ||
+         // The Monday "Past Meetings" recap email (2026-10-04): subject is
+         // "Past Meetings - <week>". Anchored so an editorial post that merely
+         // mentions past meetings still reaches the blog.
+         /^Past Meetings\s+-\s+/i.test(t);
 }
 
 const BLOG_UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15';
@@ -3436,6 +3589,85 @@ async function fetchHtml(url, ms = 12000) {
     return await r.text();
   } catch (e) { return ''; }
   finally { clearTimeout(t); }
+}
+
+// ── One-off newsletters (digest/one-off/*.html) ───────────────────────────────
+// One-offs are published straight to the site and never pass through the digest
+// Worker's /send path, so they never land in data/sent-broadcasts.json — which
+// is why "Déjà VooDoo" (Jul 2026) and "Last Call on the Shandoka Survey" (Aug
+// 2026) had to be hand-added to BLOG_POSTS. This scans the directory instead of
+// the broadcast archive, so any one-off is picked up however it was published.
+// Idempotent: keyed on href, then title, then the date in the filename.
+const MONTHS_ABBR = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+// htmlToText leaves named entities other than the five it handles; one-off
+// bodies are Georgia-serif prose full of &rsquo;/&mdash;, so decode the common
+// ones here rather than changing htmlToText (which feeds other excerpts too).
+function decodeCommonEntities(s) {
+  const map = { rsquo: '’', lsquo: '‘', ldquo: '“', rdquo: '”',
+                mdash: '—', ndash: '–', hellip: '…', apos: "'",
+                middot: '·', bull: '•', deg: '°', times: '×' };
+  return String(s || '')
+    .replace(/&(rsquo|lsquo|ldquo|rdquo|mdash|ndash|hellip|apos|middot|bull|deg|times);/g,
+      (_, n) => map[n])
+    // Numeric entities (&#8217; / &#x2019;) — email editors emit both forms.
+    .replace(/&#(\d{2,6});/g, (_, d) => String.fromCodePoint(Number(d)))
+    .replace(/&#x([0-9a-f]{2,6});/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)));
+}
+
+function syncOneOffBlog(posts) {
+  const dir = path.join(REPO_ROOT, 'digest', 'one-off');
+  let files = [];
+  try { files = fs.readdirSync(dir).filter((f) => f.endsWith('.html')); }
+  catch (e) { return []; }
+
+  const norm       = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  const haveHref   = new Set(posts.map((p) => p && p.href).filter(Boolean));
+  const haveTitle  = new Set(posts.map((p) => norm(p && p.title)).filter(Boolean));
+  // Dates already represented by SOME post, so a one-off that is just the
+  // archive copy of an already-listed newsletter (e.g. carhenge-2026-07-22.html
+  // vs archive/2026-07-22-weekly.html) is not added twice.
+  const haveDate   = new Set();
+  for (const p of posts) {
+    const m = String((p && p.href) || '').match(/(\d{4}-\d{2}-\d{2})/);
+    if (m) haveDate.add(m[1]);
+  }
+
+  const additions = [];
+  for (const file of files.sort()) {          // oldest → newest; prepended below
+    const dm = file.match(/(\d{4})-(\d{2})-(\d{2})\.html$/);
+    if (!dm) { console.log(`  Skipping undated one-off: ${file}`); continue; }
+    const iso  = `${dm[1]}-${dm[2]}-${dm[3]}`;
+    const href = `https://livabletelluride.org/digest/one-off/${file}`;
+    if (haveHref.has(href)) continue;
+
+    let html = '';
+    try { html = fs.readFileSync(path.join(dir, file), 'utf8'); } catch (e) { continue; }
+
+    // Title: <title> minus the site suffix, else the first <h1>.
+    let title = decodeCommonEntities(((html.match(/<title>([\s\S]*?)<\/title>/i) || [])[1] || '').trim())
+      .replace(/\s*[—–-]\s*Livable Telluride.*$/i, '').trim();
+    if (!title) {
+      title = decodeCommonEntities(htmlToText((html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i) || [])[1] || '')).trim();
+    }
+    if (!title) { console.log(`  Skipping untitled one-off: ${file}`); continue; }
+    if (isDigestTitle(title)) { console.log(`  Skipping digest one-off: ${title}`); continue; }
+    if (haveTitle.has(norm(title)) || haveDate.has(iso)) continue;
+
+    additions.push({
+      title,
+      date:     `${MONTHS_ABBR[Number(dm[2]) - 1]} ${Number(dm[3])}, ${dm[1]}`,
+      href,
+      image:    firstImageFromHtml(html) || 'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png',
+      // Skip <head>: its <title> would otherwise open every excerpt.
+      excerpt:  decodeCommonEntities(htmlToText(html.replace(/<head[\s\S]*?<\/head>/i, ''))).slice(0, 400),
+      category: 'Newsletter',
+      source:   'one-off',
+    });
+    haveHref.add(href); haveTitle.add(norm(title)); haveDate.add(iso);
+    console.log(`  One-off newsletter added to blog: ${title}`);
+  }
+  return additions;
 }
 
 async function syncBroadcastBlog(existingPosts) {
@@ -3470,6 +3702,22 @@ async function syncBroadcastBlog(existingPosts) {
       haveHref.add(b.href);
     }
     posts = [...additions, ...posts];  // sent-broadcasts.json is newest-first
+  }
+
+  // 2b. Add any one-off newsletter published to digest/one-off/ that the
+  //     broadcast archive never saw, then re-sort newest-first so one-offs land
+  //     in date order rather than at the top. Only sorts when every date parses,
+  //     so an unparseable date can never silently reshuffle the blog.
+  const oneOffs = syncOneOffBlog(posts);
+  if (oneOffs.length) {
+    posts = [...oneOffs, ...posts];
+    const stamped = posts.map((p) => ({ p, t: Date.parse(p && p.date) }));
+    if (stamped.every((s) => Number.isFinite(s.t))) {
+      stamped.sort((a, b) => b.t - a.t);
+      posts = stamped.map((s) => s.p);
+    } else {
+      console.warn('  BLOG_POSTS: unparseable date(s) — leaving blog order as-is');
+    }
   }
 
   // 3. Enrich: for posts whose card image is the logo (or missing), pull the first
@@ -3897,6 +4145,12 @@ async function syncOurayRidgwayEvents() {
     let location = '';
     const lastAt = title.lastIndexOf(' at ');
     if (lastAt > 0) { location = title.slice(lastAt + 4).trim(); title = title.slice(0, lastAt).trim(); }
+    // An organizer title that already ends "at <Venue>" gets Localist's own
+    // " at <Venue>" appended on top → "First Friday at Rootwings Art at
+    // Rootwings Art". Collapse a repeated trailing " at X" to one.
+    title = title.replace(/^(.*?)( at [^,]+?)\2+$/i, '$1$2').trim();
+    // Organizer typos that would otherwise ship verbatim ("Ongiong: …").
+    title = title.replace(/^on(?:gi|gio|goi)ng\b/i, 'Ongoing');
     if (!title) continue;
 
     if (GOV_MEETING_PATTERN_NODE.test(title)) { skippedGov++; continue; }
@@ -3919,6 +4173,9 @@ async function syncOurayRidgwayEvents() {
       continue;
     }
     let desc = decodeXmlText(field(it, 'description')).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    // Localist appends its own "View on site | Email this event" nav footer to
+    // every feed description — site chrome, not event copy.
+    desc = desc.replace(/\s*View on site\s*\|?\s*Email this event\s*$/i, '').trim();
     if (/^https?:\/\/\S+$/.test(desc)) desc = '';
     desc = smartTruncate(stripDescPreamble(desc), EVENT_DESC_MAX);
     const img = it.match(/<media:content[^>]*url=['"]([^'"]+)['"]/);
@@ -3929,8 +4186,23 @@ async function syncOurayRidgwayEvents() {
     });
   }
 
-  const events = [];
+  // Localist sometimes carries the SAME class as two separate event pages
+  // (organizer re-posted it: ".../watercolor-with-anita-winter-still-waters"
+  // and ".../still-waters-3074"), so collapsing by link leaves both and the
+  // card renders twice. Collapse rows with the same title + start + end +
+  // venue; prefer the un-suffixed (original) slug, else the first seen.
+  // Flagged by the content review 2026-10-17 (three Nov 2026 classes).
+  const suffixed = (l) => /-\d+\/?$/.test(l);
+  const byIdentity = new Map();
   for (const g of byLink.values()) {
+    const key = [g.title.toLowerCase().replace(/\s+/g, ' '), g.startMs, g.endMs, (g.location || '').toLowerCase()].join('|');
+    const prev = byIdentity.get(key);
+    if (!prev || (suffixed(prev.link) && !suffixed(g.link))) byIdentity.set(key, g);
+  }
+  const dupesCollapsed = byLink.size - byIdentity.size;
+
+  const events = [];
+  for (const g of byIdentity.values()) {
     const startISO = new Date(g.startMs).toISOString();
     const startDay = startISO.slice(0, 10);
     const endDay = new Date(g.endMs).toISOString().slice(0, 10);
@@ -3948,7 +4220,7 @@ async function syncOurayRidgwayEvents() {
     });
   }
   events.sort((a, b) => a.pubDate.localeCompare(b.pubDate));
-  console.log(`  Ouray/Ridgway: ${events.length} events (RSS; collapsed by link; ${skippedPast} past, ${skippedFar} >60d, ${skippedGov} gov skipped)`);
+  console.log(`  Ouray/Ridgway: ${events.length} events (RSS; collapsed by link; ${dupesCollapsed} re-posted dupes merged; ${skippedPast} past, ${skippedFar} >60d, ${skippedGov} gov skipped)`);
   return events;
 }
 
@@ -4828,6 +5100,52 @@ async function enrichRecurringActsPosters() {
 // ══════════════════════════════════════════════════════════════
 // ── Task N: Sync Ouray County Meetings from CivicPlus RSS ──
 // ══════════════════════════════════════════════════════════════
+// Ouray County moved its Board of County Commissioners off CivicPlus
+// AgendaCenter (the RSS feeds went empty in July 2025) onto CivicClerk, tenant
+// "ouraycoco" — the same system San Miguel uses. Rebuilds OURAY_COUNTY_CACHED_DATA
+// from its Events API: real start time, location, and the Agenda + Agenda Packet
+// files per event. null on any failure so the committed list is kept. The
+// Planning Commission is still on AgendaCenter and keeps its old path.
+// (Morgan, 2026-09-29: Ouray County showed no upcoming meetings.)
+const OURAY_CC_API = 'https://ouraycoco.api.civicclerk.com/v1';
+const OURAY_CC_PORTAL = 'https://ouraycoco.portal.civicclerk.com';
+// "Board of County Commissioners - Event Center" → the body name; the location
+// is shown separately on the card.
+const ourayTitle = (t) => String(t || '').replace(/\s+-\s+(?:Event Center|Courthouse|[A-Z][\w .'-]{0,24})\s*$/, '').trim();
+let _ourayEventsOnce = null;
+function fetchOurayCountyEvents(now = new Date()) {
+  if (_ourayEventsOnce) return _ourayEventsOnce;
+  _ourayEventsOnce = (async () => {
+    const from = new Date(now.getTime() - 7 * 86400000).toISOString().slice(0, 10);
+    const to = new Date(now.getTime() + 120 * 86400000).toISOString().slice(0, 10);
+    const url = `${OURAY_CC_API}/Events?$filter=` + encodeURIComponent(`startDateTime ge ${from}T00:00:00Z and startDateTime le ${to}T23:59:59Z`);
+    let resp;
+    try { resp = await fetchCivicClerkAll(url + '&$orderby=startDateTime'); } catch (e) { console.warn(`  Ouray CivicClerk fetch error: ${e.message}`); return null; }
+    if (resp.status !== 200) { console.warn(`  Ouray CivicClerk HTTP ${resp.status}`); return null; }
+    try { return (JSON.parse(resp.text).value || []).filter((e) => e && !e.isDeleted); }
+    catch (e) { console.warn(`  Ouray CivicClerk JSON error: ${e.message}`); return null; }
+  })();
+  return _ourayEventsOnce;
+}
+async function rebuildOurayCountyMeetings(now = new Date()) {
+  console.log('\n🏔️  Rebuilding Ouray County meetings from CivicClerk (ouraycoco)...');
+  const events = await fetchOurayCountyEvents(now);
+  if (!events || !events.length) { console.warn('  Ouray CivicClerk returned no events — preserving existing OURAY_COUNTY_CACHED_DATA'); return null; }
+  const byId = new Map(events.map((e) => [e.id, e]));
+  const rows = countyRowsFromEvents(events, { portalBase: OURAY_CC_PORTAL }).map((r) => {
+    const ev = byId.get(r.civicClerkId) || {};
+    const ag = pickAgendaFile(ev.publishedFiles);
+    const out = { ...r, title: ourayTitle(r.title), board: /planning/i.test(r.title) ? 'pc' : 'bocc' };
+    delete out.type;
+    if (ag && !/packet/i.test(ag.type || '')) out.agendaUrl = `${OURAY_CC_PORTAL}/event/${r.civicClerkId}/files/agenda/${ag.fileId}`;
+    return out;
+  });
+  const mins = (t) => { const x = String(t || '').match(/(\d{1,2}):(\d{2})\s*([AP])M/i); return x ? ((+x[1] % 12) + (/p/i.test(x[3]) ? 12 : 0)) * 60 + +x[2] : 0; };
+  rows.sort((a, b) => new Date(a.date) - new Date(b.date) || mins(a.time) - mins(b.time));
+  console.log(`  ${rows.length} Ouray County meeting(s); ${rows.filter((r) => r.agendaUrl).length} with agenda, ${rows.filter((r) => r.packetUrl).length} with packet`);
+  return rows;
+}
+
 async function syncOurayMeetings() {
   console.log('\n🏔️  Syncing Ouray County meetings from AgendaCenter RSS...');
   const now = new Date();
@@ -4890,6 +5208,27 @@ async function syncOurayMeetings() {
 // ══════════════════════════════════════════════════════════════
 // ── Task N: Sync Norwood Meetings from HTML pages ──
 // ══════════════════════════════════════════════════════════════
+// Norwood titles its calendar entries the way staff talk ("NWC Meeting",
+// "NWC Amended", "BOT Special") — an acronym plus a note about the AGENDA
+// ("Amended" means a revised agenda was posted, not a different meeting).
+// Spell the body out and drop the agenda qualifier so a card never reads as
+// an internal note. Shared by syncNorwoodMeetings() (NORWOOD_CACHED_DATA) and
+// syncNorwoodEvents() (NORWOOD_EVENTS) so both arrays carry the same title —
+// the content review flagged "NWC Amended" appearing in both on 2026-09-22.
+function norwoodMeetingTitle(raw) {
+  let t = String(raw || '').trim();
+  const expanded = t
+    .replace(/^NWC\b/i, 'Norwood Water Commission')
+    .replace(/^BOT\b/i, 'Board of Trustees')
+    .replace(/^P\s*&\s*Z\b/i, 'Planning and Zoning Commission');
+  if (expanded === t && !/\b(meeting|commission|trustees|board)\b/i.test(t)) return t; // not a meeting title
+  t = expanded
+    .replace(/\b(amended|revised|updated|agenda)\b/gi, ' ')
+    .replace(/\s+/g, ' ').trim();
+  if (!/\b(meeting|session|hearing|workshop|retreat)\b/i.test(t)) t += ' Meeting';
+  return t;
+}
+
 async function syncNorwoodMeetings() {
   console.log('\n🏘️  Syncing Norwood meetings from meeting pages...');
   const now = new Date();
@@ -4925,6 +5264,14 @@ async function syncNorwoodMeetings() {
 
       // Build agenda map by date
       const agendaMap = {};
+      // Packet: Norwood posts it as "<date> … Supporting Documents.pdf" (or a
+      // "…Packet.pdf") attachment on the same row. Never read before 2026-09-29.
+      const packetRe = /<a href="([^"]+)" aria-label="[^"]*(?:Supporting Documents|Packet)[^"]*attachment for (\d{4}-\d{2}-\d{2})/gi;
+      const packetMap = {};
+      let pm;
+      while ((pm = packetRe.exec(html)) !== null) {
+        if (!packetMap[pm[2]]) packetMap[pm[2]] = 'https://www.norwoodtown.com' + pm[1];
+      }
       let am;
       while ((am = agendaRe.exec(html)) !== null) {
         if (!agendaMap[am[1]]) agendaMap[am[1]] = 'https://www.norwoodtown.com' + am[2];
@@ -4935,15 +5282,14 @@ async function syncNorwoodMeetings() {
 
       let vm;
       while ((vm = viewRe.exec(html)) !== null) {
-        // The town titles these "NWC Meeting" — spell it out so cards don't
-        // ask readers to know the acronym.
-        const title = vm[1].replace(/^NWC Meeting$/i, 'Norwood Water Commission Meeting');
+        const title = norwoodMeetingTitle(vm[1]);
         const dateStr = vm[2];
         const mDate = new Date(dateStr + 'T12:00:00'); // noon local to avoid tz
         if (mDate < pruneDate || mDate.getTime() > horizon) continue;
         const agendaUrl = agendaMap[dateStr] || null;
+        const packetUrl = packetMap[dateStr] || null;
         const humanDate = mDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-        entries.push({ date: humanDate, title, board: pageDef.board, agendaUrl });
+        entries.push({ date: humanDate, title, board: pageDef.board, agendaUrl, packetUrl });
       }
     } catch (e) {
       console.warn('  Norwood scrape error:', e.message);
@@ -5046,19 +5392,25 @@ async function syncMVAgendas() {
     // 2. Meeting cards: date + time range live in the `content-cards__pre-heading`
     //    block, present even before an agenda posts. e.g.
     //    ...pre-heading>July 16th 2026<br>2:00 pm - 7:00 pm<h3...><a href=/...>Town Council Meeting...
-    const cardRe = /content-cards__pre-heading["']?\s*>\s*([A-Za-z]+\s+\d{1,2}(?:st|nd|rd|th)?\s+\d{4})\s*<br\s*\/?>\s*([^<]*?)\s*<h3[^>]*>\s*<a\s+href=["']?([^\s>"']+)["']?\s*>\s*([^<]*)/gi;
+    // 2026-10-19: cards also come as "Thursday, November 5, 2026, 10 a.m." with
+    //    no <br> (the Nov 5 DRB was being skipped), so take the whole pre-heading
+    //    and pull the date and time out of it.
+    const cardRe = /content-cards__pre-heading["']?\s*>\s*([\s\S]*?)\s*<h3[^>]*>\s*<a\s+href=["']?([^\s>"']+)["']?\s*>\s*([^<]*)/gi;
     let cm, cardCount = 0;
     while ((cm = cardRe.exec(html)) !== null) {
       cardCount++;
-      const dm = /([A-Za-z]+)\s+(\d{1,2})(?:st|nd|rd|th)?\s+(\d{4})/.exec(cm[1]);
+      const pre = cm[1].replace(/<br\s*\/?>/gi, ' | ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+      const dm = /(?:[A-Za-z]+,\s*)?([A-Za-z]+)\s+(\d{1,2})(?:st|nd|rd|th)?,?\s+(\d{4})/.exec(pre);
       if (!dm) continue;
       const mIdx = MONTH_LOOKUP[dm[1].toLowerCase()];
       if (mIdx === undefined) continue;
       const dateKey = dateKeyFromYMD(dm[3], mIdx, dm[2]);
       const mDate = new Date(dateKey);
       if (isNaN(mDate) || mDate < lookback) continue;
-      const time = (cm[2] || '').replace(/\b(am|pm)\b/gi, s => s.toUpperCase()).replace(/\s+/g, ' ').trim();
-      const special = /special/i.test(cm[4] || '') || /special/i.test(cm[3] || '');
+      const time = pre.slice(dm.index + dm[0].length).replace(/^[\s,|]+/, '')
+        .replace(/\b([ap])\.?m\.?(?=\s|$|-)/gi, (x, ap) => ap.toUpperCase() + 'M')
+        .replace(/(?<![:\d])(\d{1,2})\s*(AM|PM)\b/g, '$1:00 $2').replace(/\s+/g, ' ').trim();
+      const special = /special/i.test(cm[3] || '') || /special/i.test(cm[2] || '');
       const d = docs[dateKey] || {};
       const stub = {
         date: dateKey,
@@ -5089,14 +5441,38 @@ async function syncMVAgendas() {
 // then pairs each meeting with the first agenda PDF that falls between it
 // and the next meeting slug. This avoids the trap where a future meeting
 // (no agenda yet) on the listing page borrows the next past meeting's PDF.
+// Off-cadence card (a work session or special meeting) carries its type in the
+// URL slug ("...-board-work-session-...", "...-special-meeting-..."), unlike a
+// regular meeting whose slug vocabulary varies month to month ("regular-meeting"
+// vs "regular-board-meeting") and must NOT drive the title — that would orphan
+// every MEETING_AGENDA_META/MANUAL_SUMMARIES key already written against the
+// fixed "Regular Board Meeting" / "Board of Directors Meeting" title. So this
+// only overrides title/special for the two off-cadence cases it can name with
+// confidence; a regular meeting's slug never matches either and falls through
+// to the caller's fixed title, unchanged from before this function existed.
+function classifyTractionRecSlug(slug) {
+  if (/work-session/.test(slug)) return { title: 'Board Work Session', special: false };
+  if (/special/.test(slug)) return { title: null, special: true };
+  return { title: null, special: false };
+}
+
+// A window's own posted time ("3:00 p.m.", "8:30 a.m.(MST)") only matters for
+// those same off-cadence cards — a regular meeting keeps the caller's fixed
+// cadence time as before. Normalized to "H:MM AM/PM" to match existing data.
+function extractTractionRecTime(windowText) {
+  const m = /(\d{1,2})(?::(\d{2}))?\s*([ap])\.?\s*m\.?/i.exec(windowText);
+  if (!m) return null;
+  return `${m[1]}:${m[2] || '00'} ${m[3].toUpperCase()}M`;
+}
+
 function parseTractionRecAgendas(html, host) {
-  const meetingRe = /\/(\d{4})-(\d{2})-(\d{2})-[a-z0-9-]*(?:board|meeting)[a-z0-9-]*/g;
+  const meetingRe = /\/(\d{4})-(\d{2})-(\d{2})-([a-z0-9-]*(?:board|meeting)[a-z0-9-]*)/g;
   const pdfRe = /\/files\/([a-z0-9]+)\/([^"'\s<>]*[Aa]genda[^"'\s<>]*\.pdf)/g;
   const meetings = [];
   const pdfs = [];
   let m;
   while ((m = meetingRe.exec(html)) !== null) {
-    meetings.push({ pos: m.index, year: m[1], month: m[2], day: m[3] });
+    meetings.push({ pos: m.index, year: m[1], month: m[2], day: m[3], slug: m[4] });
   }
   while ((m = pdfRe.exec(html)) !== null) {
     pdfs.push({ pos: m.index, hash: m[1], name: m[2] });
@@ -5113,15 +5489,30 @@ function parseTractionRecAgendas(html, host) {
     uniqMeetings.push(mt);
   }
   const map = {};
+  // Every card the page lists, not just the ones with an agenda PDF attached —
+  // a work session or special meeting with no packet yet used to vanish
+  // entirely here (silently, since assembleBoardStubs only ever sees what this
+  // function returns). See the 2026-09-11 tellmed work-session miss.
+  const list = [];
   for (let i = 0; i < uniqMeetings.length; i++) {
     const mt = uniqMeetings[i];
     const nextPos = i + 1 < uniqMeetings.length ? uniqMeetings[i + 1].pos : Infinity;
     const candidate = pdfs.find(p => p.pos > mt.pos && p.pos < nextPos);
-    if (!candidate) continue;
     const key = dateKeyFromYMD(mt.year, parseInt(mt.month, 10) - 1, mt.day);
-    map[key] = `https://${host}/files/${candidate.hash}/${candidate.name}`;
+    let agendaUrl = null;
+    if (candidate) {
+      agendaUrl = `https://${host}/files/${candidate.hash}/${candidate.name}`;
+      map[key] = agendaUrl;
+    }
+    const cls = classifyTractionRecSlug(mt.slug);
+    const entry = { date: key, agendaUrl, title: cls.title, special: cls.special };
+    if (cls.title || cls.special) {
+      const time = extractTractionRecTime(html.slice(mt.pos, mt.pos + 900));
+      if (time) entry.time = time;
+    }
+    list.push(entry);
   }
-  return map;
+  return { map, meetings: list };
 }
 
 async function syncFireAgendas() {
@@ -5129,9 +5520,9 @@ async function syncFireAgendas() {
   const PAGE = 'https://www.telluridefire.com/board-meetings';
   const html = await fetchPage(PAGE, 'Fire District board-meetings page');
   if (!html) return null;
-  const map = parseTractionRecAgendas(html, 'www.telluridefire.com');
-  console.log(`  Found ${Object.keys(map).length} Fire District agenda PDF(s)`);
-  return map;
+  const result = parseTractionRecAgendas(html, 'www.telluridefire.com');
+  console.log(`  Found ${Object.keys(result.map).length} Fire District agenda PDF(s), ${result.meetings.length} meeting(s) total`);
+  return result;
 }
 
 async function syncMedAgendas() {
@@ -5139,9 +5530,9 @@ async function syncMedAgendas() {
   const PAGE = 'https://www.tellmed.org/board-meetings';
   const html = await fetchPage(PAGE, 'Hospital District board-meetings page');
   if (!html) return null;
-  const map = parseTractionRecAgendas(html, 'www.tellmed.org');
-  console.log(`  Found ${Object.keys(map).length} Hospital District agenda PDF(s)`);
-  return map;
+  const result = parseTractionRecAgendas(html, 'www.tellmed.org');
+  console.log(`  Found ${Object.keys(result.map).length} Hospital District agenda PDF(s), ${result.meetings.length} meeting(s) total`);
+  return result;
 }
 
 // ── Generate + reconcile: shared meeting-list rebuild ─────────────────────────
@@ -5161,7 +5552,7 @@ async function syncMedAgendas() {
 //   opts:    { title, location, time?, board?, note?, placeholders=2, skipMonths=[], lookbackDays=21 }
 // Returns a sorted stub array, or null when there's nothing to publish (so the
 // caller preserves the existing array rather than blanking the section).
-const { nextOccurrences: _nextOccurrences, fmtDate: _fmtScheduleDate } = require('./lib/schedule.js');
+const { nextOccurrences: _nextOccurrences, fmtDate: _fmtScheduleDate, federalHoliday: _federalHoliday } = require('./lib/schedule.js');
 function assembleBoardStubs(scraped, cadence, opts, now = new Date()) {
   const lookbackDays = opts.lookbackDays == null ? 21 : opts.lookbackDays;
   const lookback = new Date(now.getTime() - lookbackDays * 86400000);
@@ -5198,6 +5589,8 @@ function assembleBoardStubs(scraped, cadence, opts, now = new Date()) {
       };
       if (opts.board) stub.board = opts.board;
       if (opts.note) stub.note = opts.note;
+      const holiday = _federalHoliday(occ.jsDate);
+      if (holiday) stub.note = `Projected date falls on ${holiday}; the board may reschedule. Confirm when the agenda posts.`;
       byDate.set(key, stub);
     }
   }
@@ -5209,9 +5602,9 @@ function assembleBoardStubs(scraped, cadence, opts, now = new Date()) {
 // (Verified cadence: the regular board meeting is the 4th Thursday every month.)
 async function rebuildMedMeetings() {
   console.log('\n🏥 Rebuilding Hospital District meetings...');
-  const map = await syncMedAgendas();               // { 'Month D, YYYY': url } or null
-  if (map === null) { console.warn('  Med: fetch failed — preserving existing MED_CACHED_DATA'); return null; }
-  const scraped = Object.keys(map).map(date => ({ date, agendaUrl: map[date] }));
+  const result = await syncMedAgendas();             // { map, meetings } or null
+  if (result === null) { console.warn('  Med: fetch failed — preserving existing MED_CACHED_DATA'); return null; }
+  const scraped = result.meetings;
   return assembleBoardStubs(scraped, { nth: 4, weekday: 4 }, {
     title: 'Regular Board Meeting',
     time: '8:30 AM - 11:30 AM',
@@ -5232,6 +5625,30 @@ async function rebuildMedMeetings() {
 //     so the board meets monthly, not bimonthly.
 // The hand-kept list only ever recorded odd months, so it was missing half the
 // meetings — this projection is more complete than what it replaces, not less.
+// Telluride Regional Airport Authority posts one board packet PDF per meeting
+// (no separate agenda) as WordPress media: TRAA-Board-Packet-MMDDYY.pdf. The
+// public WP REST API lists them, so map filename date → packet URL for
+// patchAgendaUrls(..., 'packetUrl'). Added 2026-09-29 (packets were never read).
+async function syncAirportPackets() {
+  const map = {};
+  let resp;
+  try { resp = await fetch('https://tellurideairport.com/wp-json/wp/v2/media?search=Board-Packet&per_page=30&_fields=source_url'); }
+  catch (e) { console.warn(`  Airport packets fetch error: ${e.message}`); return map; }
+  if (resp.status !== 200) { console.warn(`  Airport packets HTTP ${resp.status}`); return map; }
+  let items = [];
+  try { items = JSON.parse(resp.text) || []; } catch (e) { return map; }
+  const MONTHS_FULL = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  for (const it of items) {
+    const u = String((it && it.source_url) || '');
+    const m = u.match(/Board-Packet-(\d{2})(\d{2})(\d{2})\.pdf$/i);
+    if (!m) continue;
+    const key = `${MONTHS_FULL[+m[1] - 1]} ${+m[2]}, 20${m[3]}`;
+    if (!map[key]) map[key] = u;
+  }
+  console.log(`  Airport: ${Object.keys(map).length} board packet(s) on the WP media API`);
+  return map;
+}
+
 function rebuildAirportMeetings(existing, now = new Date()) {
   return assembleBoardStubs(existing, { nth: 3, weekday: 4 }, {
     title: 'TRAA Board of Commissioners Meeting',
@@ -5295,6 +5712,7 @@ async function rebuildTellurideHarcMeetings(existing, now = new Date()) {
       location: 'Rebekah Hall, 113 W Columbia Ave',
     };
     if (id) row.civicWebId = Number(id);
+    if (m.time) row.time = m.time;   // the Town's own start time — never a guess
     // A packet URL already patched in, and any hand-written note, outlive the
     // rebuild — syncTellurideAgendas would re-patch the URL, but not the note.
     const prior = priorByDate.get(date);
@@ -5331,7 +5749,7 @@ async function rebuildCountyMeetings(existing, now = new Date()) {
     `$filter=${encodeURIComponent(filter)}&$orderby=startDateTime&$top=100`;
 
   let resp;
-  try { resp = await fetch(url); }
+  try { resp = await fetchCivicClerkAll(url); }
   catch (e) { console.warn(`  CivicClerk fetch error: ${e.message} — preserving existing COUNTY_CACHED_DATA`); return null; }
   if (resp.status !== 200) {
     console.warn(`  CivicClerk API returned HTTP ${resp.status} — preserving existing COUNTY_CACHED_DATA`);
@@ -5366,9 +5784,9 @@ async function rebuildCountyMeetings(existing, now = new Date()) {
 // solve this the same way — Fire was the one district left un-wired.
 async function rebuildFireMeetings() {
   console.log('\n🚒 Rebuilding Fire District meetings...');
-  const map = await syncFireAgendas();              // { 'Month D, YYYY': url } or null
-  if (map === null) { console.warn('  Fire: fetch failed — preserving existing FIRE_CACHED_DATA'); return null; }
-  const scraped = Object.keys(map).map(date => ({ date, agendaUrl: map[date] }));
+  const result = await syncFireAgendas();           // { map, meetings } or null
+  if (result === null) { console.warn('  Fire: fetch failed — preserving existing FIRE_CACHED_DATA'); return null; }
+  const scraped = result.meetings;
   return assembleBoardStubs(scraped, { nth: 3, weekday: 2 }, {
     title: 'Board of Directors Meeting',
     time: '5:30 PM',
@@ -5441,6 +5859,67 @@ function rebuildOphirMeetings(existing, now = new Date()) {
 // ("second Wednesday of the month", per the town's own page). Planning
 // Commission is as-needed (no placeholder). Agenda URLs resolve from
 // RIDGWAY_AGENDA_MAP by date at render time, so placeholders need none here.
+// City of Ouray (the CITY government — Ouray County is a separate source) posts
+// City Council and Planning Commission meetings on BoardBook Premier, org 2503.
+// There is no feed; the public list page is a plain HTML table
+// (#PublicMeetingsTable), one <tr> per meeting, whose first cell reads
+// "September 30, 2026 at 9:00 AM - Ouray City Council Work Session". Returns
+// [{date,time,title,board,location,boardbookId,agendaUrl,packetUrl}] or null on
+// any fetch/parse failure (a transient error never wipes the committed list).
+// Added 2026-09-29 (Morgan): "I am not seeing listings for … Ouray".
+const OURAY_CITY_BOARDBOOK = 'https://meetings.boardbook.org/Public/Organization/2503';
+// One BoardBook fetch per run: the rebuild step and fetchUpcomingMeetings()
+// (called by two tasks) all share this promise.
+let _ourayCityOnce = null;
+function syncOurayCityMeetings(now = new Date()) {
+  if (!_ourayCityOnce) _ourayCityOnce = _syncOurayCityMeetings(now);
+  return _ourayCityOnce;
+}
+async function _syncOurayCityMeetings(now) {
+  console.log('\n🏔  Syncing City of Ouray meetings from BoardBook...');
+  let resp;
+  try { resp = await fetch(OURAY_CITY_BOARDBOOK); }
+  catch (e) { console.warn(`  BoardBook fetch error: ${e.message}`); return null; }
+  const html = (resp && resp.text) || '';
+  if (resp.status !== 200 || !/PublicMeetingsTable/.test(html)) {
+    console.warn(`  BoardBook HTTP ${resp && resp.status} / no meetings table — preserving existing OURAY_CITY_CACHED_DATA`);
+    return null;
+  }
+  const dec = (s) => String(s || '').replace(/&amp;/g, '&').replace(/&#39;|&#x27;/g, "'")
+    .replace(/&quot;/g, '"').replace(/&nbsp;/g, ' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+  const lookback = new Date(now.getTime() - 21 * 86400000);
+  const horizon = new Date(now.getTime() + 120 * 86400000);
+  const out = [];
+  const table = html.slice(html.indexOf('PublicMeetingsTable'));
+  for (const row of table.split(/<tr[\s>]/).slice(1)) {
+    const head = row.match(/<td>\s*<div>([\s\S]*?)<\/div>/);
+    if (!head) continue;
+    const mm = dec(head[1]).match(/^([A-Z][a-z]+ \d{1,2}, \d{4}) at (\d{1,2}:\d{2} [AP]M) - (.+)$/);
+    if (!mm) continue;
+    const [, date, time, rawTitle] = mm;
+    if (/^cancell?ed\b/i.test(rawTitle)) continue;              // "CANCELLED - Ouray Planning Commission…"
+    const when = new Date(date);
+    if (isNaN(when) || when < lookback || when > horizon) continue;
+    const title = rawTitle.trim();
+    const id = (row.match(/meeting=(\d+)/) || [])[1];
+    const span = (k) => { const x = row.match(new RegExp(`id='location[\\d-]+-${k}'>([^<]*)<`)); return x ? dec(x[1]) : ''; };
+    const location = [span('description'), span('line1'), span('csz')].filter(Boolean).join(', ');
+    const rec = { date, time, title, board: /planning/i.test(title) ? 'pc' : 'council' };
+    if (location) rec.location = location;
+    if (id) rec.boardbookId = Number(id);
+    // BoardBook lists a meeting only once its agenda posts. DownloadAgenda is
+    // the full agenda + attachments PDF (the packet).
+    if (id && /\/Public\/Agenda\/2503\?meeting=/.test(row)) {
+      rec.agendaUrl = `https://meetings.boardbook.org/Public/Agenda/2503?meeting=${id}`;
+      rec.packetUrl = `https://meetings.boardbook.org/Public/DownloadAgenda/2503?meeting=${id}`;
+    }
+    out.push(rec);
+  }
+  out.sort((a, b) => new Date(a.date) - new Date(b.date) || a.time.localeCompare(b.time));
+  console.log(`  ${out.length} City of Ouray meeting(s) in the window`);
+  return out.length ? out : null;
+}
+
 function rebuildRidgwayMeetings(existing, now = new Date()) {
   return assembleBoardStubs(existing, { nth: 2, weekday: 3 }, {
     title: 'Ridgway Town Council Regular Meeting', board: 'council', time: '6:00 PM',
@@ -5484,7 +5963,9 @@ async function syncSmartAgendas() {
     let href = m[1];
     const text = m[2].replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
     if (/special/i.test(text)) continue; // skip special-meeting rows; regular monthly only
-    const t = text.match(/\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})\b[\s\S]*?\b(Agenda|Packet)\b/i);
+    // "October 2025 Board Packet" (old) or "October 8, 2026 Board Packet" (since
+    // Aug 2026 — the old pattern missed these, so posted agendas never linked).
+    const t = text.match(/\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+(?:\d{1,2},?\s+)?(\d{4})\b[\s\S]*?\b(Agenda|Packet)\b/i);
     if (!t) continue;
     if (!/^https?:/i.test(href)) href = ORIGIN + (href.startsWith('/') ? href : '/' + href);
     const key = t[1][0].toUpperCase() + t[1].slice(1).toLowerCase() + ' ' + t[2];
@@ -5527,7 +6008,75 @@ async function syncSmartAgendas() {
     });
   }
   console.log(`  SMART: ${Object.keys(byMonth).length} month(s) on page; rebuilt ${stubs.length} stub(s) (${stubs.filter(s => s.agendaUrl).length} with agenda)`);
-  return stubs;
+  const gondola = await syncSmartGondolaMeetings(todayMid);
+  return stubs.concat(gondola).sort((a, b) => new Date(a.date) - new Date(b.date));
+}
+
+// SMART's gondola committees (Morgan 2026-10-19: "missing SMART meetings"):
+// the Gondola Advisory Committee (Gsub) meets virtually on the THIRD MONDAY of
+// each month at 3:00 PM except holidays, and the Leadership Committee (all the
+// partner governing bodies) is convened at milestones. Both post agendas and
+// packets on the gondola meetings page, not the board page. Every dated
+// meeting with posted documents from the last 30 days on is listed, plus one
+// placeholder for the next third-Monday Gsub meeting with nothing posted yet
+// (skipped for January/February, when the third Monday is a federal holiday,
+// and when the date is under 2 days away with no agenda — packets post at
+// least 24 hours ahead, so a missing one that late means no meeting).
+async function syncSmartGondolaMeetings(todayMid) {
+  const PAGE = 'https://smarttelluride.colorado.gov/gondola-project-meetings-and-materials';
+  const ORIGIN = 'https://smarttelluride.colorado.gov';
+  const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',
+                  'July', 'August', 'September', 'October', 'November', 'December'];
+  const html = await fetchPage(PAGE, 'SMART gondola meetings page');
+  if (!html) return [];
+  const byDate = {};   // 'YYYY-MM-DD|gsub|leadership' → { agendaUrl, packetUrl }
+  const aRe = /<a\b[^>]*href="([^"]+\.pdf[^"]*)"[^>]*>([\s\S]*?)<\/a>/gi;
+  let m;
+  while ((m = aRe.exec(html)) !== null) {
+    let href = m[1];
+    const text = m[2].replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+    const t = text.match(/\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2}),?\s+(\d{4})\b[\s\S]*?\b(Agenda|Packet)\b/i);
+    if (!t) continue;
+    const mi = MONTHS.findIndex((x) => x.toLowerCase() === t[1].toLowerCase());
+    const iso = `${t[3]}-${String(mi + 1).padStart(2, '0')}-${String(t[2]).padStart(2, '0')}`;
+    const body = /leadership/i.test(text) ? 'leadership' : 'gsub';
+    if (!/^https?:/i.test(href)) href = ORIGIN + (href.startsWith('/') ? href : '/' + href);
+    const k = iso + '|' + body;
+    byDate[k] = byDate[k] || {};
+    if (/agenda/i.test(t[4])) byDate[k].agendaUrl = href; else byDate[k].packetUrl = href;
+  }
+  const lookback = new Date(todayMid.getTime() - 30 * 86400000);
+  const label = (iso) => { const [y, mo, d] = iso.split('-').map(Number); return MONTHS[mo - 1] + ' ' + d + ', ' + y; };
+  const stub = (iso, body, docs) => ({
+    date: label(iso),
+    time: body === 'gsub' ? '3:00 PM' : '',
+    title: body === 'gsub' ? 'SMART Gondola Advisory Committee' : 'SMART Gondola Leadership Committee',
+    location: 'Virtual (Zoom link in the agenda)',
+    agendaUrl: docs.agendaUrl || null,
+    packetUrl: docs.packetUrl || null,
+    note: body === 'gsub'
+      ? (docs.agendaUrl ? 'Gondola Advisory Committee (Gsub): agenda and packet available (PDF).' : 'Gondola Advisory Committee (Gsub) — advises SMART on the gondola replacement project. Agenda, packet and Zoom link post at least 24 hours before.')
+      : (docs.agendaUrl ? 'Gondola Leadership Committee — the partner governing bodies together: agenda and packet available (PDF).' : 'Gondola Leadership Committee — the partner governing bodies together.'),
+  });
+  const out = [];
+  for (const [k, docs] of Object.entries(byDate)) {
+    const [iso, body] = k.split('|');
+    if (new Date(iso + 'T00:00:00') >= lookback) out.push(stub(iso, body, docs));
+  }
+  // Next third-Monday Gsub placeholder (this month or next).
+  for (let i = 0; i <= 1; i++) {
+    const base = new Date(todayMid.getFullYear(), todayMid.getMonth() + i, 1);
+    const firstMon = 1 + ((1 - base.getDay() + 7) % 7);
+    const d = new Date(base.getFullYear(), base.getMonth(), firstMon + 14);
+    const iso = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    if (byDate[iso + '|gsub']) break;                       // already listed with documents
+    if (d.getMonth() <= 1) continue;                         // MLK Day / Presidents Day
+    if (d - todayMid < 2 * 86400000) continue;               // too close with nothing posted
+    out.push(stub(iso, 'gsub', {}));
+    break;
+  }
+  console.log(`  SMART gondola committees: ${Object.keys(byDate).length} dated meeting(s) on page; listing ${out.length}`);
+  return out;
 }
 
 // TMVOA (Telluride Mountain Village Owners Association) — a private HOA, not
@@ -5627,7 +6176,7 @@ async function syncCountyAgendas() {
   const map = {};
   let resp;
   try {
-    resp = await fetch(url);
+    resp = await fetchCivicClerkAll(url);
   } catch (e) {
     console.warn(`  CivicClerk fetch error: ${e.message}`);
     return map;
@@ -5651,11 +6200,8 @@ async function syncCountyAgendas() {
     // Limit to BOCC / Open Space / Planning to avoid stomping on unrelated
     // CACHED entries with the same date.
     if (!/board of county commissioners|planning commission|open space/i.test(ev.eventName || '')) continue;
-    const pubFiles = Array.isArray(ev.publishedFiles) ? ev.publishedFiles : [];
-    const agendaFile = pubFiles.find(f => f && f.type === 'Agenda');
-    if (!agendaFile) continue;
-    const agendaUrl =
-      `${AGENDA_SOURCES.county.portalBase}/event/${ev.id}/files/agenda/${agendaFile.fileId}`;
+    const { url: agendaUrl } = countyAgendaFor(ev, 'CivicClerk agenda sync');
+    if (!agendaUrl) continue;
     const start = new Date(ev.startDateTime || ev.eventDate);
     if (isNaN(start)) continue;
     // gov-data.js dates are in MT local calendar terms ("May 27, 2026"),
@@ -5753,29 +6299,74 @@ async function syncTellurideBoardMeetings() {
   // County-side joint sessions need no equivalent change: COUNTY_CACHED_DATA is
   // rebuilt from every CivicClerk event, so "Planning Commission and Board of
   // County Commissioners Joint Work Session" already flows through.
-  const KEEP = /town council|planning\s*(?:&|and)\s*zoning|\bp&z\b|housing authority|ethics commission|parks?\s*(?:&|and)\s*rec|intergovernmental|\bjoint\b/i;
+  // OPEN SPACE / RESIDENT ADVISORY / ECOLOGY added 2026-09-21: refreshSummaries()
+  // summarizes every CivicWeb body, so a summary for a body missing here has
+  // no list row to render on — the content review flagged the Oct 5 2026 Open
+  // Space Commission as exactly that orphan. Open Space is the Chair 7 body;
+  // the Resident Advisory Committee is the Town's employee-housing tenants.
+  const KEEP = /town council|planning\s*(?:&|and)\s*zoning|\bp&z\b|housing authority|ethics commission|parks?\s*(?:&|and)\s*rec|open space commission|resident advisory committee|ecology commission|intergovernmental|\bjoint\b/i;
   const out = [];
   const seen = new Set();
+  // "Chair" agendas (e.g. "Planning & Zoning Commission Chair") are usually a
+  // shorter companion to the full commission meeting on the SAME date, so they
+  // were dropped wholesale. But a Chair meeting can also stand alone — the
+  // Nov 2 2026 "Rescheduled/Special Meeting - Planning & Zoning Commission
+  // Chair" (moved from Oct 22) had no full-P&Z row that day, so it vanished and
+  // its summary became an orphan (content review 2026-10-17). Skip a Chair
+  // variant only when its parent body also meets that date.
+  const bodyOf = (name) => String(name)
+    .replace(/\s*-\s*[A-Za-z]{3,9}\.?\s+\d{1,2}\s+\d{4}(?:\s+at\s+\d{1,2}:\d{2}\s*[AP]M)?\s*$/i, '')
+    .replace(/^\([^)]*\)\s*/, '')                       // "(Rescheduled to 11/2) …"
+    .replace(/^.*?\s-\s(?=\S)/, (pre) => (/rescheduled|special|cancel/i.test(pre) ? '' : pre))
+    .replace(/\bchair\b/ig, '')
+    .replace(/[^a-z&]+/ig, ' ').trim().toLowerCase();
+  const dayOf = (m) => { const d = new Date(m.MeetingDate || m.MeetingDateTime || ''); return isNaN(d) ? '' : d.toISOString().slice(0, 10); };
+  const fullBodyDays = new Set();
+  for (const m of items) {
+    const name = (m && m.Name || '').trim();
+    if (!name || /chair/i.test(name) || !KEEP.test(name)) continue;
+    if (/^(?:\(?cancelled?\)?:?\s*|CANCELLED\b)/i.test(name)) continue;
+    fullBodyDays.add(dayOf(m) + '|' + bodyOf(name));
+  }
   for (const m of items) {
     if (!m) continue;
     const name = (m.Name || '').trim();
     if (/^(?:\(?cancelled?\)?:?\s*|CANCELLED\b)/i.test(name)) continue;  // skip cancelled
     if (!KEEP.test(name)) continue;
-    if (/chair/i.test(name)) continue;                                  // skip shorter "Chair" agenda variants
+    if (/chair/i.test(name) && fullBodyDays.has(dayOf(m) + '|' + bodyOf(name))) continue; // companion of a same-day full meeting
     if (!m.Id) continue;
     const d = new Date(m.MeetingDate || m.MeetingDateTime || '');
     if (isNaN(d)) continue;
     const dateKey = `${months[d.getUTCMonth()]} ${d.getUTCDate()}, ${d.getUTCFullYear()}`;
     const title = name
-      .replace(/\s*-\s*[A-Za-z]{3,9}\.?\s+\d{1,2}\s+\d{4}\s*$/, '')   // drop CivicWeb date suffix
-      .replace(/^\(?rescheduled\)?:?\s*/i, '')                        // "(RESCHEDULED) Parks & Rec…" — card shows the clean name; the date field is already the new date
+      // drop CivicWeb date suffix, including the "… - Nov 02 2026 at 10:30 AM"
+      // form the clerk uses for a second same-day slot (Nov 2 2026 P&Z Chair)
+      .replace(/\s*-\s*[A-Za-z]{3,9}\.?\s+\d{1,2}\s+\d{4}(?:\s+at\s+\d{1,2}:\d{2}\s*[AP]M)?\s*$/i, '')
+      // Strip a BARE "(RESCHEDULED)"/"RESCHEDULED:" tag — card shows the clean
+      // name, trusting the date field for the new date. Do NOT strip when the
+      // parenthetical carries more than the bare word (e.g. "(Rescheduled to
+      // Oct 13th)") — that annotation is the only place the new date lives
+      // when this entry's own date field is still the OLD slot, and the old
+      // `\)?` (optional close-paren) let the match run past the open paren
+      // and eat into "to Oct 13th)", leaving a dangling "to Oct 13th) Title".
+      // "Rescheduled/Special Meeting - …" (slash form) used to leave a bare
+      // "/Special Meeting - …" headline in the Nov 2 2026 digest.
+      .replace(/^(?:\(rescheduled\)|rescheduled)\s*[:/]?\s*/i, '')
       .trim();
     const dedup = dateKey + '|' + title.toLowerCase();
-    if (seen.has(dedup)) continue;
+    const time = civicWebTime(m);
+    // Same body, same day, two CivicWeb rows: the clerk opens the first slot
+    // only to continue the item "without discussion" to a later slot (Nov 2
+    // 2026 P&Z Chair: 9:00 AM row continued to a new 10:30 AM row, which holds
+    // the real hearing and packet). Both rendered as identical cards in the
+    // digest. Keep one row, the later start time.
+    if (seen.has(dedup)) {
+      const prev = out.find((r) => (r.date + '|' + r.title.toLowerCase()) === dedup);
+      const mins = (t) => { const x = String(t || '').match(/(\d{1,2}):(\d{2})\s*([AP])M/i); return x ? ((+x[1] % 12) + (/p/i.test(x[3]) ? 12 : 0)) * 60 + +x[2] : -1; };
+      if (prev && mins(time) > mins(prev.time)) out.splice(out.indexOf(prev), 1);
+      else continue;
+    }
     seen.add(dedup);
-    let time = '';
-    const tm = String(m.MeetingDateTime || '').match(/T(\d{2}):(\d{2})/);
-    if (tm) { const h = parseInt(tm[1], 10); time = `${((h + 11) % 12) + 1}:${tm[2]} ${h >= 12 ? 'PM' : 'AM'}`; }
     out.push({
       date: dateKey,
       title,
@@ -5871,15 +6462,26 @@ function patchAgendaUrls(govDataSrc, arrayName, agendaMap, field = 'agendaUrl') 
     if (!url) return;
     const escDate = dateKey.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
-    // Pass 1: update existing `<field>: null` or `<field>: '<old>'`.
+    // Entries come in two quote styles: hand-typed rows use 'single', but
+    // arrays the bot REBUILDS (TELLURIDE_CACHED_DATA via the HARC rebuild) are
+    // re-serialized with "double" quotes. Both regexes used to require single
+    // quotes, so on rebuilt arrays nothing ever matched and every patch was
+    // silently dropped — the Sep 30 2026 HARC packet (CivicWeb doc 445284) was
+    // found every run and never written (Morgan 2026-09-29). Accept either.
+    const Q = `(?:'${escDate}'|"${escDate}")`;
+    const VAL = `(?:'(?:[^'\\\\]|\\\\.)*'|"(?:[^"\\\\]|\\\\.)*"|null|true|false|\\d+)`;
+    const quoteFor = (entry) => (/date:\s*"/.test(entry) ? '"' : "'");
+
+    // Pass 1: update an existing `<field>: null` / `<field>: '<old>'` / "<old>".
     const updateRe = new RegExp(
-      "(\\{[^{}]*date:\\s*'" + escDate + "'[^{}]*?" + field + ":\\s*)(null|'[^']*')",
+      "(\\{[^{}]*date:\\s*" + Q + "[^{}]*?" + field + ":\\s*)(null|'[^']*'|\"[^\"]*\")",
       'g'
     );
     let matched = false;
     body = body.replace(updateRe, (full, prefix, current) => {
       matched = true;
-      const newVal = "'" + url + "'";
+      const q = quoteFor(prefix);
+      const newVal = q + url + q;
       if (current === newVal) return full;
       changed++;
       return prefix + newVal;
@@ -5893,15 +6495,16 @@ function patchAgendaUrls(govDataSrc, arrayName, agendaMap, field = 'agendaUrl') 
     // inserted agendaUrl near the end of the field list instead of awkwardly
     // squeezed between `time:` and `title:`.
     const insertRe = new RegExp(
-      "(\\{[^{}]*date:\\s*'" + escDate + "'[^{}]*)(\\b(?:note|location|civicClerkId|type|time)\\s*:\\s*(?:'(?:[^'\\\\]|\\\\.)*'|null|true|false|\\d+))",
+      "(\\{[^{}]*date:\\s*" + Q + "[^{}]*)(\\b(?:note|location|civicClerkId|civicWebId|board|type|time)\\s*:\\s*" + VAL + ")",
       'g'
     );
     body = body.replace(insertRe, (full, before, lastField) => {
       // Indent the new line to match surrounding fields (look back for indent).
       const m = before.match(/\n(\s+)[^\n]*$/);
       const indent = m ? m[1] : '    ';
+      const q = quoteFor(before);
       changed++;
-      return before + lastField + ',\n' + indent + field + ": '" + url + "'";
+      return before + lastField + ',\n' + indent + field + ': ' + q + url + q;
     });
   });
 
@@ -6166,8 +6769,8 @@ async function syncNorwoodEvents() {
     if (seen.has(key)) continue;
     seen.add(key);
 
-    const title = slugToTitle(slug);
     const category = classifySlug(slug);
+    const title = category === 'Government Meeting' ? norwoodMeetingTitle(slugToTitle(slug)) : slugToTitle(slug);
     const link = 'https://www.norwoodtown.com/' + dateStr + '-' + slug;
 
     events.push({
@@ -6967,6 +7570,21 @@ function eventNeedsSummary(e) {
   if (desc.length < 80) return true;
   if (/^show at the/i.test(desc)) return true;
   if (/see the .* page for tickets and details/i.test(desc)) return true;
+  // Raw Localist scrape chrome (Ouray/Ridgway calendar) — "View on site |
+  // Email this event" is the site's own nav footer, not event content, and
+  // it's long enough to slip past the length check above.
+  if (/view on site\s*\|?\s*email this event/i.test(desc)) return true;
+  // Raw Sherbino "copy" field ticket-info header ("@ Gates: 6:00 || Show:
+  // 6:30 pm || ..." or "@ Sunday || Doors at 7 pm || ..."). Real prose never
+  // starts with a bare "@".
+  if (/^@\s*\S/.test(desc)) return true;
+  // Source-truncated mid-word/mid-sentence (Alibi's ECA API shortDescription
+  // field ends in a literal "..." wherever it happens to cut off — distinct
+  // from our own smartTruncate's " …" single-ellipsis marker below).
+  if (/\.\.\.\s*$/.test(desc)) return true;
+  // No terminal punctuation at all — a raw og:description/meta snippet that
+  // got cut off (Mountain Village, some KOTO listings) without any ellipsis.
+  if (!/[.!?…"”'’)\]]\s*$/.test(desc)) return true;
   return false;
 }
 
@@ -6993,6 +7611,7 @@ async function syncEventDescriptions(eventArrays) {
     const key = eventSummaryCacheKey(ev);
     if (cache[key]) {
       ev.description = cache[key];
+      if (ev.copy !== undefined) ev.copy = cache[key];
       cacheHits++;
       continue;
     }
@@ -7001,6 +7620,10 @@ async function syncEventDescriptions(eventArrays) {
       const text = await callClaudeRaw(RICK_EVENT_USER_PROMPT_TEMPLATE(ev));
       if (text && text.length >= 40) {
         ev.description = text;
+        // Some sources (Sherbino) key off `copy` instead of `description` —
+        // patch both so every renderer picks up the clean text regardless
+        // of which field it reads first.
+        if (ev.copy !== undefined) ev.copy = text;
         cache[key] = text;
         generated++;
       } else {
@@ -7273,6 +7896,15 @@ async function main() {
     }
   }
 
+  // Airport board packets → packetUrl on AIRPORT_CACHED_DATA (2026-09-29).
+  try {
+    const airportPackets = await syncAirportPackets();
+    if (Object.keys(airportPackets).length) {
+      const { src, changed: n } = patchAgendaUrls(govDataSrc, 'AIRPORT_CACHED_DATA', airportPackets, 'packetUrl');
+      if (n > 0) { govDataSrc = src; govDataChanged = true; console.log(`  AIRPORT_CACHED_DATA: patched ${n} packetUrl field(s)`); }
+    }
+  } catch (e) { console.warn('  Airport packet sync failed:', e.message); }
+
   // HARC agenda PACKAGES (DocumentType 4) → packetUrl on TELLURIDE_CACHED_DATA
   // (green "Agenda Packet" button; requested 2026-07-21).
   try {
@@ -7366,6 +7998,30 @@ async function main() {
       govDataChanged = true;
     }
   } catch (e) { console.warn(`  Ridgway rebuild error: ${e.message}`); }
+
+  // ── 0a5a. Ouray County: rebuild OURAY_COUNTY_CACHED_DATA from CivicClerk ──
+  try {
+    const existing = extractJsArray(govDataSrc, 'OURAY_COUNTY_CACHED_DATA') || [];
+    const rows = await rebuildOurayCountyMeetings();
+    if (rows && JSON.stringify(rows) !== JSON.stringify(existing)) {
+      govDataSrc = replaceJsValue(govDataSrc, 'OURAY_COUNTY_CACHED_DATA', rows, false);
+      govDataChanged = true;
+      console.log(`  OURAY_COUNTY_CACHED_DATA: rebuilt (${rows.length} meetings)`);
+    }
+  } catch (e) { console.warn(`  Ouray County rebuild error: ${e.message}`); }
+
+  // ── 0a5b. City of Ouray: rebuild OURAY_CITY_CACHED_DATA from BoardBook ──
+  //   Projected regular meetings are generated at render time by
+  //   getOurayCityMeetings(); only real BoardBook rows are stored here.
+  try {
+    const existing = extractJsArray(govDataSrc, 'OURAY_CITY_CACHED_DATA') || [];
+    const rows = await syncOurayCityMeetings();
+    if (rows && JSON.stringify(rows) !== JSON.stringify(existing)) {
+      govDataSrc = replaceJsValue(govDataSrc, 'OURAY_CITY_CACHED_DATA', rows, false);
+      govDataChanged = true;
+      console.log(`  OURAY_CITY_CACHED_DATA: rebuilt (${rows.length} meetings)`);
+    }
+  } catch (e) { console.warn(`  City of Ouray rebuild error: ${e.message}`); }
 
   // ── 0a6. TMVOA: rebuild TMVOA_CACHED_DATA from the live meeting-materials page ──
   try {
@@ -7868,7 +8524,7 @@ async function main() {
     'ALIBI_EVENTS', 'SHERBINO_EVENTS', 'NUCLA_NATURITA_EVENTS',
     'CLUB_RED_SHOWS', 'FRESH_FOOD_HUB_EVENTS',
     'MUSIC_ON_THE_GREEN', 'COMMUNITY_EVENTS', 'TELLURIDE_COM_EVENTS',
-    'OURAY_COUNTY_EVENTS', 'MOUNTAIN_VILLAGE_EVENTS', 'NORWOOD_EVENTS',
+    'OURAY_COUNTY_EVENTS', 'OURAY_RIDGWAY_EVENTS', 'MOUNTAIN_VILLAGE_EVENTS', 'NORWOOD_EVENTS',
   ];
   const arraySnapshot = {};
   for (const name of eventArrayNames) {

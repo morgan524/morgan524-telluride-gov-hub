@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Past Meetings — Livable Telluride</title>
 <meta name="description" content="Plain-English recaps of recent government meetings across the Telluride region — written from the official video transcripts, with links to the Vote Tracker.">
-<link rel="stylesheet" href="lt.css?v=8">
+<link rel="stylesheet" href="lt.css?v=9">
 <link rel="icon" href="/logo/icon-192.png?v=2">
 <link rel="apple-touch-icon" href="/logo/apple-touch-icon.png?v=2">
 <link rel="manifest" href="/manifest.json">
@@ -67,6 +67,17 @@
     .r-card { grid-template-columns: 72px 1fr; }
     .r-date .e-logo { width: 64px; height: 64px; }
   }
+  /* Phones: date + logo become a single row ON TOP of the card so the title
+     and summary run full width (per Morgan 2026-09-29). */
+  @media (max-width: 600px) {
+    .r-card { grid-template-columns: 1fr; gap: 10px; }
+    .r-date { display: flex; align-items: center; gap: 8px; text-align: left; }
+    .r-date .e-logo { order: -1; width: 44px; height: 44px; margin: 0 6px 0 0; padding: 4px; border-radius: 8px; }
+    .r-date .m { font-size: 12px; }
+    .r-date .d { font-size: 24px; line-height: 1; }
+    .r-date .y { font-size: 12px; }
+  }
+  .r-card.r-target { outline: 3px solid var(--forest); outline-offset: 4px; border-radius: 6px; scroll-margin-top: 90px; }
 </style>
 </head>
 <body>
@@ -76,7 +87,7 @@
   <img class="masthead-art" src="uploads/wilson-peak.png" alt="" aria-hidden="true">
   <div class="masthead-fade"></div>
   <div class="masthead-inner">
-    <div class="crumb">Act <span class="sep">&rsaquo;</span> Gov-Hub <span class="sep">&rsaquo;</span> Past Meetings</div>
+    <div class="crumb">Government <span class="sep">&rsaquo;</span> Past Meetings &amp; Recaps</div>
     <h1>Past Meetings</h1>
     <p class="sub">What actually happened &mdash; plain-English recaps written automatically from each meeting's official video transcript, refreshed daily.</p>
   </div>
@@ -86,6 +97,7 @@
   <div class="gh-toggle" role="tablist">
     <a class="gt" href="gov-hub.html">Upcoming meetings</a>
     <span class="gt active">Past meetings &amp; recaps</span>
+    <a class="gt" href="/v2/vote-tracker.html">Vote Tracker</a>
   </div>
 </div>
 
@@ -100,41 +112,30 @@
 </div>
 
 <div id="lt-footer"></div>
-<script src="site.js?v=12"></script>
-<script src="/js/lt-data.js?v=12"></script>
+<script src="site.js?v=20"></script>
+<script src="/js/lt-data.js?v=16"></script>
 <script>
 (function () {
   var list = document.getElementById('recap-list');
   if (!window.LTData) { list.innerHTML = '<div class="lt-data-error">This section failed to load. Please refresh in a minute.</div>'; return; }
   var esc = LTData.esc;
-  /* Bold proper-noun runs + standalone street addresses in summaries — the
-     same emphasizeNames heuristic as the live Gov-Hub cards and the digest. */
-  var NAME_STOP = {}; ('The A An On In At As It This That These Those Its Their And But Or If After Before During While Also Both Two Three Four Five Several Additional Other Following New Council Board Commission Committee Ordinance Ordinances Resolution Resolutions Meeting Session Sessions Town County City District State Chair Mayor Public Staff Members Member Consent Agenda Work Executive Regular Special Substantial Councilors January February March April May June July August September October November December Monday Tuesday Wednesday Thursday Friday Saturday Sunday Section Stage Phase Article Item Step Unit No Yes Accommodations Building Buildings Preliminary Large Scale').split(' ').forEach(function (w) { NAME_STOP[w] = 1; });
-  var ADDR = '\\d+\\s+(?:(?:N|S|E|W|NE|NW|SE|SW|North|South|East|West)\\.?\\s+[A-Z][A-Za-z’\']*(?:\\s+[A-Z][A-Za-z’\']*)*(?:\\s+(?:Ave|Avenue|St|Street|Rd|Road|Dr|Drive|Blvd|Boulevard|Ln|Lane|Way|Ct|Court|Pl|Place|Cir|Circle|Trail|Trl|Pkwy|Parkway|Hwy|Highway))?|[A-Z][A-Za-z’\']*(?:\\s+[A-Z][A-Za-z’\']*)*\\s+(?:Ave|Avenue|St|Street|Rd|Road|Dr|Drive|Blvd|Boulevard|Ln|Lane|Way|Ct|Court|Pl|Place|Cir|Circle|Trail|Trl|Pkwy|Parkway|Hwy|Highway))';
-  var RUN = "[A-Z][a-z]+(?:['’][A-Za-z]+)?(?:\\s+(?:of|the|[A-Z][a-z]+(?:['’][A-Za-z]+)?))*";
-  function emphasizeNames(raw) {
-    var re = new RegExp('(' + ADDR + ')|(' + RUN + ')', 'g');
-    var html = '', last = 0, m;
-    while ((m = re.exec(raw)) !== null) {
-      html += esc(raw.slice(last, m.index));
-      if (m[1]) {
-        var locates = /\b(?:at|on)\s+$/i.test(raw.slice(0, m.index));
-        html += locates ? esc(m[1]) : '<strong>' + esc(m[1]) + '</strong>';
-        last = m.index + m[1].length; continue;
-      }
-      var run = m[2], trimmed = run.replace(/(?:\s+(?:of|the))+$/, '');
-      var tail = run.slice(trimmed.length), leadThe = '';
-      if (/\s/.test(trimmed)) { var t = trimmed.match(/^(The\s+)(?=[A-Z])/); if (t) { leadThe = t[1]; trimmed = trimmed.slice(leadThe.length); } }
-      var multi = /\s/.test(trimmed);
-      var before = raw.slice(0, m.index).replace(/\s+$/, '');
-      var sentenceStart = before === '' || /[.!?]$/.test(before);
-      var sig = trimmed.split(/\s+/).filter(function (w) { return !/^(?:of|the)$/i.test(w); });
-      var allStop = sig.length > 0 && sig.every(function (w) { return NAME_STOP[w]; });
-      var bold = !allStop && (multi || (!sentenceStart && !NAME_STOP[trimmed]));
-      html += esc(leadThe) + (bold ? '<strong>' + esc(trimmed) + '</strong>' : esc(trimmed)) + esc(tail);
-      last = m.index + run.length;
+  /* Bolding guideline (Morgan 2026-10-19; scripts/lib/bold-guideline.js):
+     bold only what the writer marked with **…** (key dollar figures, pivotal
+     project names, the single most important outcome). Text without marks gets
+     its dollar figures bolded and nothing else — no more auto-bolding of every
+     agency, place and name. */
+  function boldMarks(raw) {
+    var t = String(raw == null ? '' : raw);
+    if (t.indexOf('**') >= 0) {
+      return t.split(/(\*\*[^*\n]+?\*\*)/g).map(function (seg) {
+        var m = seg.match(/^\*\*([^*\n]+?)\*\*$/);
+        return m ? '<strong>' + esc(m[1]) + '</strong>' : esc(seg.replace(/\*\*/g, ''));
+      }).join('');
     }
-    return html + esc(raw.slice(last));
+    var re = /\$\d[\d,]*(?:\.\d+)?(?:\s?(?:million|billion|thousand)\b|[MBK]\b)?(?:[–-]\$?\d[\d,]*(?:\.\d+)?(?:\s?(?:million|billion)\b|[MBK]\b)?)?/g;
+    var out = '', last = 0, m2;
+    while ((m2 = re.exec(t))) { out += esc(t.slice(last, m2.index)) + '<strong>' + esc(m2[0]) + '</strong>'; last = m2.index + m2[0].length; }
+    return out + esc(t.slice(last));
   }
   var MON = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
   var recaps = [], srcFilter = '';
@@ -152,7 +153,33 @@
     if (r.sourceKey === 'mv' && /design review/i.test(t)) return 'drb';
     if (r.sourceKey === 'mv') return 'tomv';
     if (r.sourceKey === 'rico') return 'rico';
+    if (r.sourceKey === 'smart') return 'smart';
     return '';
+  }
+
+  // Anchor for each recap — MUST match recapId() in scripts/lib/recap-regions.js
+  // (the weekly email's "Read the full summary" links point here).
+  function recapId(r) {
+    var slug = String(r.title || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 48);
+    return 'r-' + (r.sourceKey || 'x') + '-' + (r.date || '') + (slug ? '-' + slug : '');
+  }
+  // Arriving from an email link (#r-…): scroll to that recap and highlight it.
+  function showHashTarget() {
+    var id = decodeURIComponent((location.hash || '').slice(1));
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.classList.add('r-target');
+    // Clear the sticky site nav. Re-run after load: the header injection and
+    // late layout shifts otherwise leave the page at the top.
+    function go() {
+      var hdr = document.querySelector('.lt-nav');
+      var off = (hdr ? hdr.getBoundingClientRect().height : 110) + 16;
+      window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - off, behavior: 'auto' });
+    }
+    go();
+    setTimeout(go, 400);
+    if (document.readyState !== 'complete') window.addEventListener('load', function () { setTimeout(go, 50); });
   }
 
   function render() {
@@ -166,10 +193,13 @@
       var logo = LOGO_BY_KEY[r.sourceKey]
         ? '<div class="e-logo"><img src="' + esc(LOGO_BY_KEY[r.sourceKey]) + '" alt="' + esc(r.sourceLabel || '') + '" loading="lazy"></div>' : '';
       var vt = voteTrackerFor(r);
-      var acts = vt
-        ? '<div class="acts"><a class="abtn" href="/v2/vote-tracker.html" target="_blank" rel="noopener">&#128499;&#65039; See the votes &mdash; Vote Tracker</a></div>' : '';
+      // SMART recaps are written from the minutes inside the board packet —
+      // link the source document (other entities' recaps come from video).
+      var minutesBtn = r.minutesUrl ? '<a class="abtn" href="' + esc(r.minutesUrl) + '" target="_blank" rel="noopener">&#128196; Minutes (in the board packet)</a>' : '';
+      var vtBtn = vt ? '<a class="abtn" href="/v2/vote-tracker.html" target="_blank" rel="noopener">&#128499;&#65039; See the votes &mdash; Vote Tracker</a>' : '';
+      var acts = (vtBtn || minutesBtn) ? '<div class="acts">' + vtBtn + minutesBtn + '</div>' : '';
       var paras = String(r.recap || '').split(/\n{2,}/).filter(Boolean)
-        .map(function (t) { return '<p>' + emphasizeNames(t) + '</p>'; }).join('');
+        .map(function (t) { return '<p>' + boldMarks(t) + '</p>'; }).join('');
       var tally = '';
       if (r.votes && r.votes.length) {
         tally = '<div class="vt"><span class="vt-h">&#128499;&#65039; Votes</span>' + r.votes.map(function (v) {
@@ -178,7 +208,7 @@
             ' &mdash; <span class="oc">' + esc(oc) + '</span></span>';
         }).join('') + '</div>';
       }
-      html += '<article class="r-card">' +
+      html += '<article class="r-card" id="' + esc(recapId(r)) + '">' +
         '<div class="r-date"><div class="m">' + MON[d.getMonth()] + '</div><div class="d">' + d.getDate() + '</div><div class="y">' + d.getFullYear() + '</div>' + logo + '</div>' +
         '<div><span class="tag">' + esc(r.sourceLabel || '') + '</span>' +
         '<h3>' + esc(r.title || '') + '</h3>' +
@@ -206,6 +236,7 @@
       render();
     });
     render();
+    showHashTarget();
   }).catch(function (err) { LTData.showError(list, err); });
 })();
 </script>

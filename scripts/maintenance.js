@@ -398,6 +398,9 @@ const SITEMAP_FILE = path.join(REPO_ROOT, 'sitemap.xml');
 const SITEMAP_EXCLUDE = new Set([
   'event-review.html', 'org-review.html', 'action-grid.html',
   'source-document.html', 'week-ahead-email-template.html', 'weekly-preview.html',
+  // Reachable by direct URL only (deliberately not in nav or search) — matches
+  // its own <meta name="robots" content="noindex">.
+  'steering.html',
 ]);
 function regenerateSitemap() {
   console.log('\n🗺  Task: regenerate sitemap.xml...');

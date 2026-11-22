@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gov-Hub — Livable Telluride</title>
 <meta name="description" content="Every public meeting in the region — agendas, plain-English summaries, Zoom links, and how to comment — for the next month.">
-<link rel="stylesheet" href="lt.css?v=8">
+<link rel="stylesheet" href="lt.css?v=9">
 <link rel="icon" href="/logo/icon-192.png?v=2">
 <link rel="apple-touch-icon" href="/logo/apple-touch-icon.png?v=2">
 <link rel="manifest" href="/manifest.json">
@@ -60,6 +60,8 @@
   .m-card .acts .abtn.zoom:hover { background: #eef3fa; }
   .m-card .acts .abtn.live { border-color: #a0463d; color: #a0463d; }
   .m-card .acts .abtn.live:hover { background: #f9efee; }
+  .m-card .ev-badge { display: inline-block; font: 700 11px/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; color: #fff; background: var(--rust); padding: 4px 8px; border-radius: 4px; margin-left: 8px; vertical-align: middle; }
+  .m-card.m-event { border-left: 4px solid var(--rust); padding-left: 12px; }
   .zoomline { font: 500 15px/1.6 var(--sans); color: var(--muted); margin-top: 8px; }
   /* Zoom row under the button row: Join button + Meeting ID/Passcode inline */
   .m-card .acts.zoomrow { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
@@ -74,6 +76,16 @@
     .m-card { grid-template-columns: 72px 1fr; }
     .m-date .e-logo { width: 64px; height: 64px; }
   }
+  /* Phones: date + logo become a single row ON TOP of the card so the title
+     and summary run full width (per Morgan 2026-09-29). */
+  @media (max-width: 600px) {
+    .m-card { grid-template-columns: 1fr; gap: 10px; }
+    .m-date { display: flex; align-items: center; gap: 8px; text-align: left; }
+    .m-date .e-logo { order: -1; width: 44px; height: 44px; margin: 0 6px 0 0; padding: 4px; border-radius: 8px; }
+    .m-date .m { font-size: 12px; }
+    .m-date .d { font-size: 24px; line-height: 1; }
+    .m-date .y { font-size: 12px; }
+  }
 </style>
 </head>
 <body>
@@ -83,7 +95,7 @@
   <img class="masthead-art" src="uploads/wilson-peak.png" alt="" aria-hidden="true">
   <div class="masthead-fade"></div>
   <div class="masthead-inner">
-    <div class="crumb">Act <span class="sep">&rsaquo;</span> Gov-Hub</div>
+    <div class="crumb">Government <span class="sep">&rsaquo;</span> This Week&rsquo;s Meetings</div>
     <h1>Gov-Hub</h1>
     <p class="sub">Every public meeting in the region for the next month &mdash; agendas, plain-English summaries, Zoom links, and how to make your voice heard.</p>
   </div>
@@ -111,6 +123,12 @@
     .fa-acts a { font: 600 14px/1 var(--sans); padding: 10px 16px; border-radius: 8px; text-decoration: none; }
     .fa-acts .fa-dive { background: var(--forest); color: #fff; }
     .fa-acts .fa-plain { border: 1.5px solid var(--forest); color: var(--forest); background: #fff; }
+    .fa-acts .fa-plain:hover { background: var(--sage2); }
+    .fa-acts .fa-live { background: var(--forest); border: 1.5px solid var(--forest); color: #fff; }
+    .fa-acts .fa-live:hover, .fa-acts .fa-dive:hover { background: #1c3a33; color: #fff; }
+    .fa-acts .fa-zoom { border: 1.5px solid #2d64a8; color: #2d64a8; background: #fff; }
+    .fa-acts .fa-zoom:hover { background: #eef3fa; }
+    .fa-acts .fa-empty { font: 600 14px/1 var(--sans); padding: 10px 16px; border-radius: 8px; border: 1.5px solid #c9c4b8; color: #9a9588; background: #f3f1ec; cursor: default; }
   </style>
   <div class="fa-card" id="featured-action">
     <div class="fa-eyebrow">&#9733; Featured Action</div>
@@ -122,10 +140,32 @@
   </div>
 </section>
 
+<!-- Vote Tracker moved under Government (2026-10 redesign, per Morgan). -->
+<section class="wrap" style="padding-top:0">
+  <style>
+    .vt-card { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; background: #fff; border: 1px solid var(--hairline-strong); border-left: 4px solid var(--gold); border-radius: 12px; padding: 20px 24px; margin-top: 18px; }
+    .vt-card .vt-ico { font-size: 30px; line-height: 1; }
+    .vt-card .vt-copy { flex: 1 1 320px; }
+    .vt-card h3 { font: 600 22px/1.25 var(--serif); color: var(--forest); margin: 0 0 4px; }
+    .vt-card p { font: 400 15px/1.55 var(--sans); color: var(--body2); margin: 0; }
+    .vt-card .vt-go { font: 700 14px/1 var(--sans); color: #fff; background: var(--forest); border-radius: 999px; padding: 12px 20px; text-decoration: none; white-space: nowrap; }
+    .vt-card .vt-go:hover { background: #1c3a33; color: #fff; }
+  </style>
+  <div class="vt-card">
+    <span aria-hidden="true" class="vt-ico">&#128499;&#65039;</span>
+    <div class="vt-copy">
+      <h3>How did they vote?</h3>
+      <p>The Vote Tracker records how each Telluride Town Council member voted on every motion, so you can see where your representatives stand.</p>
+    </div>
+    <a class="vt-go" href="/v2/vote-tracker.html">Open the Vote Tracker &rarr;</a>
+  </div>
+</section>
+
 <div class="gh-toggle-wrap">
   <div class="gh-toggle" role="tablist">
     <span class="gt active">Upcoming meetings</span>
     <a class="gt" href="gov-hub-past.html">Past meetings &amp; recaps</a>
+    <a class="gt" href="/v2/vote-tracker.html">Vote Tracker</a>
   </div>
 </div>
 
@@ -140,8 +180,8 @@
 </div>
 
 <div id="lt-footer"></div>
-<script src="site.js?v=12"></script>
-<script src="/js/lt-data.js?v=13"></script>
+<script src="site.js?v=20"></script>
+<script src="/js/lt-data.js?v=16"></script>
 <script>
 /* Featured Action — identical loader to index.html's (keep in sync). Loaded
    separately from the meeting list so a miss just hides the card. */
@@ -161,12 +201,16 @@
   if (!window.LTData) { list.innerHTML = '<div class="lt-data-error">This section failed to load. Please refresh in a minute.</div>'; return; }
   var esc = LTData.esc, safe = LTData.safeUrl;
   var MON = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+  var MEETING_LINKS = {};   // hand-curated extra doc buttons, keyed source|date|title
   var meetings = [], srcFilter = '', govShowAll = false;
-  // ISO date 5 business days (Mon–Fri) ahead of today — the initial cutoff;
-  // "Show more" reveals everything past it (Morgan 2026-07-23).
+  // ISO date GOV_BUSINESS_DAYS business days (Mon–Fri) ahead of today — the
+  // initial cutoff; "Show more" reveals everything past it (Morgan 2026-07-23).
+  // 10, not 5 (Morgan 2026-09-29): the small towns meet monthly, and a 5-day
+  // window hid Norwood / Ridgway / Ophir / Rico behind "Show more".
+  var GOV_BUSINESS_DAYS = 10;
   function businessCutoff() {
     var d = LTData.parseDateKey(LTData.todayMT()), n = 0;
-    while (n < 5) { d.setDate(d.getDate() + 1); var wd = d.getDay(); if (wd !== 0 && wd !== 6) n++; }
+    while (n < GOV_BUSINESS_DAYS) { d.setDate(d.getDate() + 1); var wd = d.getDay(); if (wd !== 0 && wd !== 6) n++; }
     var pad = function (x) { return String(x).padStart(2, '0'); };
     return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
   }
@@ -186,40 +230,30 @@
     { key: 'norwood',   label: 'Town of Norwood' },
     { key: 'ophir',     label: 'Town of Ophir' },
     { key: 'rico',      label: 'Town of Rico' },
+    { key: 'ouraycity', label: 'City of Ouray' },
     { key: 'ridgway',   label: 'Town of Ridgway' },
     { key: 'telluride', label: 'Town of Telluride' },
     { key: 'tmvoa',     label: 'TMVOA (Mtn Village HOA)' }
   ];
   var LOGO_BY_KEY = LTData.ENTITY_LOGOS;
 
-  /* Bold proper-noun runs + standalone street addresses in summaries — the
-     same emphasizeNames heuristic as the live Gov-Hub cards and the digest. */
-  var NAME_STOP = {}; ('The A An On In At As It This That These Those Its Their And But Or If After Before During While Also Both Two Three Four Five Several Additional Other Following New Council Board Commission Committee Ordinance Ordinances Resolution Resolutions Meeting Session Sessions Town County City District State Chair Mayor Public Staff Members Member Consent Agenda Work Executive Regular Special Substantial Councilors January February March April May June July August September October November December Monday Tuesday Wednesday Thursday Friday Saturday Sunday Section Stage Phase Article Item Step Unit No Yes Accommodations Building Buildings Preliminary Large Scale').split(' ').forEach(function (w) { NAME_STOP[w] = 1; });
-  var ADDR = '\\d+\\s+(?:(?:N|S|E|W|NE|NW|SE|SW|North|South|East|West)\\.?\\s+[A-Z][A-Za-z’\']*(?:\\s+[A-Z][A-Za-z’\']*)*(?:\\s+(?:Ave|Avenue|St|Street|Rd|Road|Dr|Drive|Blvd|Boulevard|Ln|Lane|Way|Ct|Court|Pl|Place|Cir|Circle|Trail|Trl|Pkwy|Parkway|Hwy|Highway))?|[A-Z][A-Za-z’\']*(?:\\s+[A-Z][A-Za-z’\']*)*\\s+(?:Ave|Avenue|St|Street|Rd|Road|Dr|Drive|Blvd|Boulevard|Ln|Lane|Way|Ct|Court|Pl|Place|Cir|Circle|Trail|Trl|Pkwy|Parkway|Hwy|Highway))';
-  var RUN = "[A-Z][a-z]+(?:['’][A-Za-z]+)?(?:\\s+(?:of|the|[A-Z][a-z]+(?:['’][A-Za-z]+)?))*";
-  function emphasizeNames(raw) {
-    var re = new RegExp('(' + ADDR + ')|(' + RUN + ')', 'g');
-    var html = '', last = 0, m;
-    while ((m = re.exec(raw)) !== null) {
-      html += esc(raw.slice(last, m.index));
-      if (m[1]) {
-        var locates = /\b(?:at|on)\s+$/i.test(raw.slice(0, m.index));
-        html += locates ? esc(m[1]) : '<strong>' + esc(m[1]) + '</strong>';
-        last = m.index + m[1].length; continue;
-      }
-      var run = m[2], trimmed = run.replace(/(?:\s+(?:of|the))+$/, '');
-      var tail = run.slice(trimmed.length), leadThe = '';
-      if (/\s/.test(trimmed)) { var t = trimmed.match(/^(The\s+)(?=[A-Z])/); if (t) { leadThe = t[1]; trimmed = trimmed.slice(leadThe.length); } }
-      var multi = /\s/.test(trimmed);
-      var before = raw.slice(0, m.index).replace(/\s+$/, '');
-      var sentenceStart = before === '' || /[.!?]$/.test(before);
-      var sig = trimmed.split(/\s+/).filter(function (w) { return !/^(?:of|the)$/i.test(w); });
-      var allStop = sig.length > 0 && sig.every(function (w) { return NAME_STOP[w]; });
-      var bold = !allStop && (multi || (!sentenceStart && !NAME_STOP[trimmed]));
-      html += esc(leadThe) + (bold ? '<strong>' + esc(trimmed) + '</strong>' : esc(trimmed)) + esc(tail);
-      last = m.index + run.length;
+  /* Bolding guideline (Morgan 2026-10-19; scripts/lib/bold-guideline.js):
+     bold only what the writer marked with **…** (key dollar figures, pivotal
+     project names, the single most important outcome). Text without marks gets
+     its dollar figures bolded and nothing else — no more auto-bolding of every
+     agency, place and name. */
+  function boldMarks(raw) {
+    var t = String(raw == null ? '' : raw);
+    if (t.indexOf('**') >= 0) {
+      return t.split(/(\*\*[^*\n]+?\*\*)/g).map(function (seg) {
+        var m = seg.match(/^\*\*([^*\n]+?)\*\*$/);
+        return m ? '<strong>' + esc(m[1]) + '</strong>' : esc(seg.replace(/\*\*/g, ''));
+      }).join('');
     }
-    return html + esc(raw.slice(last));
+    var re = /\$\d[\d,]*(?:\.\d+)?(?:\s?(?:million|billion|thousand)\b|[MBK]\b)?(?:[–-]\$?\d[\d,]*(?:\.\d+)?(?:\s?(?:million|billion)\b|[MBK]\b)?)?/g;
+    var out = '', last = 0, m2;
+    while ((m2 = re.exec(t))) { out += esc(t.slice(last, m2.index)) + '<strong>' + esc(m2[0]) + '</strong>'; last = m2.index + m2[0].length; }
+    return out + esc(t.slice(last));
   }
 
   function commentMailto(m) {
@@ -234,7 +268,7 @@
       list.innerHTML = '<p class="meta" style="padding:18px 0">No meetings scheduled for ' + esc(name) + ' in the next two weeks.</p>';
       return;
     }
-    // Limit to the next 5 business days unless "Show more" was clicked.
+    // Limit to the next GOV_BUSINESS_DAYS business days unless "Show more" was clicked.
     var cutoff = businessCutoff();
     var hiddenCount = govShowAll ? 0 : rows.filter(function (m) { return m.date > cutoff; }).length;
     var shown = govShowAll ? rows : rows.filter(function (m) { return m.date <= cutoff; });
@@ -255,6 +289,22 @@
       // calendar page; Agenda Packet is always present — solid green download
       // when posted, grey non-clickable ghost when not yet.
       var acts = '';
+      if (m.kind === 'event') {
+        // Civic EVENT (gov-data GOV_EVENTS) — not a meeting: no agenda/packet
+        // ghosts, no comment inbox. Its own links + add-to-calendar only.
+        (m.links || []).forEach(function (l) {
+          if (l && l.href && l.label) acts += '<a class="abtn" href="' + esc(safe(l.href)) + '" target="_blank" rel="noopener">' + esc(l.label) + '</a>';
+        });
+        acts += '<a class="abtn" href="' + LTData.icsDataUri({ title: m.title + ' — ' + m.sourceLabel, date: m.date, time: m.time, location: m.location, description: m.summary, url: (m.links && m.links[0] && m.links[0].href) || '' }) + '" download="' + esc(LTData.icsFilename(m.title, m.date)) + '">&#128197; Add to calendar</a>';
+        html += '<article class="m-card m-event">' +
+          '<div class="m-date"><div class="m">' + MON[d.getMonth()] + '</div><div class="d">' + d.getDate() + '</div>' + logo + '</div>' +
+          '<div><span class="tag">' + esc(m.sourceLabel) + '</span><span class="ev-badge">Community Event</span>' + (m.time ? '<span class="src">' + esc(m.time) + '</span>' : '') +
+          '<h3>' + esc(m.title) + '</h3>' +
+          (m.summary ? '<p class="summ">' + boldMarks(m.summary) + '</p>' : '') +
+          (m.location ? '<div class="meta" style="margin-bottom:6px">&#128205; ' + esc(m.location) + '</div>' : '') +
+          '<div class="acts" style="margin-top:10px">' + acts + '</div></div></article>';
+        return;
+      }
       if (m.commentEmail) acts += '<a class="cbtn" href="' + esc(commentMailto(m)) + '">&#9993;&#65039; Submit Comment</a>';
       // View Agenda mirrors the packet button's two states (per Morgan
       // 2026-07-23): solid green ONLY when an agenda is actually posted
@@ -268,6 +318,12 @@
       acts += m.packetUrl
         ? '<a class="abtn primary" href="' + esc(safe(m.packetUrl)) + '" download target="_blank" rel="noopener">&#128230; Agenda Packet &darr;</a>'
         : '<span class="abtn empty" title="Agenda packet not yet posted" aria-disabled="true">&#128230; Agenda Packet</span>';
+      // Hand-curated extra documents for this meeting (gov-data MEETING_LINKS,
+      // keyed source|date|title). Rendered as outline buttons so they read as
+      // supporting material, not as the Town's own agenda.
+      (MEETING_LINKS[m.source + '|' + m.date + '|' + m.title] || []).forEach(function (d) {
+        if (d && d.href && d.label) acts += '<a class="abtn" href="' + esc(safe(d.href)) + '" target="_blank" rel="noopener">&#128196; ' + esc(d.label) + '</a>';
+      });
       if (m.livestream) acts += '<a class="abtn live" href="' + esc(safe(m.livestream)) + '" target="_blank" rel="noopener">&#9654; Livestream</a>';
       if (!m.hasAgenda && (m.agendaUrl || m.link)) acts += '<a class="abtn" href="' + esc(safe(m.agendaUrl || m.link)) + '" target="_blank" rel="noopener">Meeting info</a>';
       // Add-to-calendar (.ics) — Morgan 2026-07-23. Meetings without a time
@@ -292,7 +348,7 @@
         '<div class="m-date"><div class="m">' + MON[d.getMonth()] + '</div><div class="d">' + d.getDate() + '</div>' + logo + '</div>' +
         '<div><span class="tag">' + esc(m.sourceLabel) + '</span>' + (m.time ? '<span class="src">' + esc(m.time) + '</span>' : '') +
         '<h3>' + esc(m.title) + '</h3>' +
-        (m.summary ? '<p class="summ">' + emphasizeNames(m.summary) + '</p>' : '') +
+        (m.summary ? '<p class="summ">' + boldMarks(m.summary) + '</p>' : '') +
         (m.location ? '<div class="meta" style="margin-bottom:6px">&#128205; ' + esc(m.location) + '</div>' : '') +
         '<div class="acts" style="margin-top:10px">' + acts + '</div>' + zoomRow + '</div></article>';
     });
@@ -330,8 +386,15 @@
     });
   }
 
-  LTData.load(['week-meetings']).then(function (data) {
-    meetings = (data['week-meetings'] || []).filter(function (m) { return m.date >= LTData.todayMT(); });
+  LTData.load(['week-meetings', 'meeting-links']).then(function (data) {
+    MEETING_LINKS = data['meeting-links'] || {};
+    // Date, then start time (earliest first); no published time goes last in
+    // its day (Morgan 2026-09-29). The JSON is sorted this way too — this
+    // keeps the page right even with an older cached file.
+    function startMin(t) { var x = String(t || '').match(/(\d{1,2}):(\d{2})\s*([AP])M/i); return x ? ((+x[1] % 12) + (/p/i.test(x[3]) ? 12 : 0)) * 60 + +x[2] : 24 * 60; }
+    // Off the list 3 hours after the scheduled start (LTData.meetingOver).
+    meetings = (data['week-meetings'] || []).filter(function (m) { return !LTData.meetingOver(m.date, m.time); })
+      .sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : (startMin(a.time) - startMin(b.time)) || String(a.title).localeCompare(String(b.title)); });
     renderEntityFilter();
     render();
   }).catch(function (err) { LTData.showError(list, err); });

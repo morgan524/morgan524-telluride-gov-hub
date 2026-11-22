@@ -42,7 +42,11 @@ function renderDigest(envExtra, outFile) {
   }
 }
 renderDigest({}, 'digest-weekly.html');
-renderDigest({ WEEKEND: '1' }, 'digest-weekend.html');
+// Past Meetings email (writes nothing in a week with no recaps — that's fine).
+try {
+  cp.execFileSync('node', [path.join(REPO, 'scripts', 'past-meetings-email.js'), WEEK, path.join(OUT, 'digest-past.html')],
+    { stdio: ['ignore', 'ignore', 'ignore'] });
+} catch (e) { write('digest-past.error.txt', String((e && e.message) || e)); }
 
 // ── 2. Data layer: normalized meeting + summary + image outputs ──────────────
 const { captured, arrays } = loadDataArrays(REPO);

@@ -1,0 +1,19 @@
+{
+  "reviewedAt": "2026-11-15 17:35",
+  "weekStart": "2026-11-16",
+  "frozenUntil": "Tuesday morning (9 AM MDT / 8 AM MST)",
+  "digests": [
+    {
+      "key": "weekly",
+      "name": "The Week Ahead Outlook",
+      "subject": "The Week Ahead - November 16 - November 22, 2026",
+      "issues": []
+    }
+  ],
+  "errors": [
+    "weekly: editorial read failed (Unexpected non-whitespace character after JSON at position 2232 (line 7 column 1)); mechanical checks still ran"
+  ],
+  "total": 0,
+  "linksChecked": 69,
+  "fixed": 0
+}

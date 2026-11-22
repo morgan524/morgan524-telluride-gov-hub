@@ -116,6 +116,7 @@ input[type=text],input[type=password],textarea{width:100%;border:1px solid var(-
 
 <div id="nlwrap"><iframe id="nlframe" title="Newsletter Desk"></iframe></div>
 
+<script src="js/digest-region-sync.js"></script>
 <script>
 const WORKER = "https://livabletelluride-digest.morgan-8f0.workers.dev";
 const CHIPS = ["Remove an event…","Add an event…","Rewrite a card…","Make the intro shorter","Why is this listed?"];
@@ -123,8 +124,8 @@ const $ = (id) => document.getElementById(id);
 let KEY = sessionStorage.getItem("digestKey") || "";
 let manifest = null, cur = "weekly";
 const state = {};   // key -> { name, subject, covers, audience, baseHtml, html, history:[] }
-// When each approved digest auto-sends (the scheduled job fires at 9:00 AM MT).
-const SEND_WHEN = { weekly: "Monday 9:00 AM", weekend: "Friday 9:00 AM" };
+// When each approved digest auto-sends (MT). Past Meetings moved to Tuesday 2026-10-26.
+const SEND_WHEN = { weekly: "Monday 9:00 AM", past: "Tuesday 6:00 AM" };
 const sendWhen = () => SEND_WHEN[cur] || "its scheduled time";
 
 // ---- auth gate ----
@@ -172,7 +173,7 @@ function setPill(h){
   if(h && h.ok && h.broadcast){ p.innerHTML='<span class="dot ok"></span>Customer.io — live'; }
   else if(h && h.ok){ p.innerHTML='<span class="dot"></span>Customer.io — test only (broadcast pending)'; }
   else { p.innerHTML='<span class="dot"></span>Worker offline'; }
-  showGhWarning(h && h.github);
+  showGhWarning(h && h.github, h && h.alerts);
 }
 // An expired GitHub token used to announce itself only when Approve failed —
 // after all the editing was done, minutes before a send window. Now the Desk
@@ -181,9 +182,18 @@ const GH_FIX =
   'Fix: create a fine-grained GitHub token with <b>Contents: Read and write</b> on the site repo, then run '
   + '<code>npx wrangler secret put GITHUB_TOKEN</code> in <code>cloudflare-worker/livabletelluride-digest</code> '
   + '(or update the secret in the Cloudflare dashboard). Editing here still works — only Approve and photo upload need it.';
-function showGhWarning(status){
+function showGhWarning(status, alerts){
   const el=$("ghwarn"); if(!el) return;
-  if(!status || status==="ok" || status==="unknown"){ el.style.display="none"; el.innerHTML=""; return; }
+  if(!status || status==="ok" || status==="unknown"){
+    // Token works for Approve but can't open issues: a failed Monday send would
+    // go unannounced (what happened 2026-10-05).
+    if(alerts==="forbidden"){
+      el.innerHTML='⚠ <b>Missed-send alerts are off</b> — the Worker\'s GitHub token can\'t open issues, so a failed scheduled send raises no alarm.<br>'
+        +'Fix: edit the fine-grained token and add <b>Issues: Read and write</b> on the site repo (same token — no secret change needed).';
+      el.style.display="block"; return;
+    }
+    el.style.display="none"; el.innerHTML=""; return;
+  }
   const head = status==="missing"
     ? "⚠ <b>Approve is not configured</b> — the Worker has no GitHub token."
     : status==="forbidden"
@@ -254,12 +264,21 @@ function updateLockState(){
   else { el.textContent='Not approved — nothing will send until you Approve & Schedule.';
     btn.textContent='✓ Approve & Schedule — sends '+sendWhen(); }
 }
+// Edits made in the preview only touch the visible (ALL) copy of each regional
+// section; carry them into the hidden East/West/Ridgway copies that Customer.io
+// actually sends before anything leaves the Desk (js/digest-region-sync.js).
+function synced(d){
+  if(!window.LTRegionSync) return d.html;
+  const r=window.LTRegionSync.syncRegions(d.html, d.baseHtml);
+  if(r.stats.replaced||r.stats.removed) console.log("region sync:", r.stats);
+  d.html=r.html; return d.html;
+}
 async function lockDigest(){
   const d=state[cur];
   if(!d.weekStart){ showStatus("Can't approve — this digest has no weekStart (re-run Digest Refresh first).",true); return; }
   if(!confirm('Approve "'+d.subject+'" and SCHEDULE it? It becomes the final version and sends automatically '+sendWhen()+'. Nothing is sent right now.')) return;
   showStatus('<span class="spin"></span> Approving & scheduling…'); $("lockbtn").disabled=true;
-  try{ const r=await api("/save",{ key:cur, html:d.html, subject:d.subject, weekStart:d.weekStart });
+  try{ const r=await api("/save",{ key:cur, html:synced(d), subject:d.subject, weekStart:d.weekStart });
     if(r.ok){ d.locked=true; updateLockState(); showGhWarning("ok");
       showStatus("✓ Approved & scheduled — this exact version sends automatically "+sendWhen()+". Nothing was sent now."); }
     else if(r.tokenExpired || /bad credentials|401/i.test(String(r.error||"")+String(r.detail||""))){
@@ -279,7 +298,7 @@ $("lockbtn").onclick=lockDigest;
 // change was invisible until it arrived in a test email — the reviewer's whole
 // reason for distrusting the preview. Now: remember the scroll, and when the
 // Worker tells us what text it changed, scroll straight to it and flash it.
-// Applies to both the Week Ahead and the Weekend Ahead (shared code path).
+// Applies to every digest on the desk (Week Ahead, Past Meetings — shared code path).
 let _lastScroll = 0;
 function stampUpdated(note){
   const el=$("upd"); if(!el) return;
@@ -616,7 +635,7 @@ $("reset").onclick=()=>{ const d=state[cur]; d.html=d.baseHtml; d.subject=manife
 $("test").onclick=async()=>{
   const to=$("testto").value.trim(); if(!to.includes("@")){ showStatus("Enter a valid test email.",true); return; }
   showStatus('<span class="spin"></span> Sending test to '+to+'…'); $("test").disabled=true;
-  try{ const r=await api("/send",{ emailHtml:state[cur].html, subject:state[cur].subject, test:true, to });
+  try{ const r=await api("/send",{ emailHtml:synced(state[cur]), subject:state[cur].subject, test:true, to });
     if(r.ok) showStatus("✓ Test sent to "+to+" — check inbox + spam."); else showStatus("⚠ "+(r.error||"send failed")+(r.detail?" — "+r.detail:""),true);
   }catch(e){ if(e.message!=="unauthorized") showStatus("⚠ "+e.message,true); }
   finally{ $("test").disabled=false; }
@@ -625,7 +644,7 @@ $("fulltest").onclick=async()=>{
   const d=state[cur];
   if(!confirm('Send a FULL test of "'+d.subject+'" through the real broadcast path to your Customer.io test list (just you)?')) return;
   showStatus('<span class="spin"></span> Firing test broadcast…'); $("fulltest").disabled=true;
-  try{ const r=await api("/send",{ emailHtml:d.html, subject:d.subject, testBroadcast:true });
+  try{ const r=await api("/send",{ emailHtml:synced(d), subject:d.subject, testBroadcast:true });
     if(r.ok) showStatus("✓ Test broadcast fired — it'll land at your test-list address shortly (check inbox + spam).");
     else if(r.pending) showStatus("⏳ "+r.error,true);
     else showStatus("⚠ "+(r.error||"send failed")+(r.detail?" — "+r.detail:""),true);

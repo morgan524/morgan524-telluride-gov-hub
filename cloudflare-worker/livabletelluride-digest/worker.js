@@ -41,12 +41,13 @@ function json(obj, status, origin) {
   });
 }
 
-const SYSTEM = `You are the editor's assistant for "Livable Telluride", a community newsletter for Telluride, Mountain Village, and the surrounding San Miguel County towns. A reviewer is looking at a ready-to-send HTML email digest (a "Weekend Outlook" or "Week Ahead") and may ask you to edit it or answer questions about it.
+const SYSTEM = `You are the editor's assistant for "Livable Telluride", a community newsletter for Telluride, Mountain Village, and the surrounding San Miguel County towns. A reviewer is looking at a ready-to-send HTML email digest (a "Week Ahead" or "Past Meetings") and may ask you to edit it or answer questions about it.
 
 You receive the FULL current email as HTML. When the reviewer asks for a change, DO NOT return the whole email — return a small set of precise find/replace EDITS via the "respond" tool. This keeps you fast and safe. Rules:
 - Each edit has "find" (an EXACT substring copied VERBATIM from the current email HTML — identical text, whitespace, tags, and &#...; entities) and "replace" (the new text). Keep "find" as SHORT as possible while still matching the intended spot EXACTLY ONCE; if a short snippet would be ambiguous, include just enough surrounding markup to make it unique. Order edits top-to-bottom.
 - To REMOVE an event, set find = that event's entire card <tr>...</tr> and replace = "" (empty). To ADD one, set find = a unique nearby anchor (e.g. the closing </tr> of an existing card) and replace = that same anchor followed by a new card copied from an existing card's markup (date badge, title link, location line, short blurb, a "Details" link, and an <img> only if a real photo URL is given). To REWRITE, find only the specific text/attribute and replace it.
-- Preserve email-safe structure: inline styles, <table> layout, no <script>, no external CSS or web fonts. Keep any Customer.io Liquid tags (e.g. {% unsubscribe_url %}, {{ customer.email }}) and any legacy *|MERGE|* tags intact. Keep everything PURE ASCII using numeric HTML entities (e.g. &#8212; em dash, &#128205; pin) exactly like the rest of the email.
+- Preserve email-safe structure: inline styles, <table> layout, no <script>, no external CSS or web fonts. Keep the *|UNSUB|*, *|EMAIL|*, *|FNAME|* and *|MMERGE6|* merge tags intact, and never replace them with Customer.io Liquid ({% ... %} or {{ ... }}): the broadcast template only substitutes these *|TAG|* tags, so Liquid inside the email body is sent unrendered and breaks the Unsubscribe / Update preferences links. Keep everything PURE ASCII using numeric HTML entities (e.g. &#8212; em dash, &#128205; pin) exactly like the rest of the email.
+- Keep every <!--LT-RGN--> marker and the hidden regional recap blocks (the <!--[if !mso]><!--><tbody style="display:none;"> ... </tbody><!--<![endif]--> sections under "Public Meetings This Week", "Last Week's Meetings, Recapped" and "What to Attend") exactly where and as they are. The Customer.io template splits the email on those markers to show each reader their own region's meetings. If you edit a visible list in those sections, leave the hidden copies alone.
 - Keep the tone informational and grounded in the local area — never breathless, salesy, or padded. Never invent facts about an event (dates, prices, lineups). If you lack a detail the reviewer didn't give you, ask for it instead of guessing.
 - To change the subject line, set "subject". If the reviewer only asks a question, answer it in "reply" with changed=false and no edits.
 Always respond by calling the "respond" tool. Set changed=true only when you provide edits or a new subject.`;
@@ -151,6 +152,137 @@ async function chat(body, env) {
   };
 }
 
+
+// ── Regional digests + payload size ─────────────────────────────────────────
+// weekly-email.js ships regional sections as an ALL copy plus hidden East End /
+// West End / Ridgway/Ouray copies between <!--LT-RGN--> markers
+// (scripts/lib/recap-regions.js). Customer.io caps a broadcast trigger's data
+// at 50 KB, and carrying every copy blew past it (the 422 "data exceeds the
+// 50KB limit", 2026-09-30). So the Worker splits the email: one trigger per
+// region, each carrying only that region's copy and a recipients filter on
+// customer.region, plus one for everyone else (blank/other region → ALL copy).
+// Customer.io allows one broadcast trigger every 10 s, so a regional send
+// takes ~35 s.
+const LT_REGION_MARK = "<!--LT-RGN-->";
+const LT_HIDE_OPEN = '<!--[if !mso]><!--><tbody style="display:none;">';
+const LT_HIDE_CLOSE = "</tbody><!--<![endif]-->";
+const LT_REGIONS = ["East End", "West End", "Ridgway/Ouray"];
+
+function ltHasRegions(html) {
+  const n = String(html || "").split(LT_REGION_MARK).length;
+  return n >= 6 && n % 5 === 1;
+}
+// off: 1 = ALL copy, 2/3/4 = East End / West End / Ridgway/Ouray.
+function ltRegionVariant(html, off) {
+  if (!ltHasRegions(html)) return String(html || "");
+  return String(html).split(LT_REGION_MARK).map((p, i) => {
+    if (i % 5 === 0) return p;
+    if (i % 5 !== off) return "";
+    return off === 1 ? p : p.split(LT_HIDE_OPEN).join("").split(LT_HIDE_CLOSE).join("");
+  }).join("");
+}
+
+// Shrink the trigger payload: every repeated long inline style / site URL
+// prefix / UTM string is sent once in `dict` and replaced in the body by a
+// short §n§ token; the Weekly Digest template expands them (see
+// docs/customerio-regional-recaps.md). Only used when CIO_TEMPLATE_DICT = "1"
+// (i.e. once the template carries the expansion loop). Bodies are pure ASCII,
+// so § never occurs naturally; if it does, or the round trip isn't exact, the
+// body is sent uncompressed.
+function ltCompress(html) {
+  const src = String(html || "");
+  if (src.includes("§")) return { body: src, dict: [] };
+  const counts = new Map();
+  const add = (k) => counts.set(k, (counts.get(k) || 0) + 1);
+  for (const m of src.matchAll(/ style="[^"]{24,}"/g)) add(m[0]);
+  for (const m of src.matchAll(/https:\/\/livabletelluride\.org\/[a-z0-9\/-]*\.html\?/g)) add(m[0]);
+  for (const m of src.matchAll(/utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=[a-z-]+/g)) add(m[0]);
+  const keys = [...counts].filter(([k, c]) => c >= 2 && k.length * (c - 1) > 60)
+    .map(([k]) => k).sort((a, b) => b.length - a.length);
+  let body = src; const dict = [];
+  keys.forEach((k, i) => { const t = "§" + i.toString(36) + "§"; body = body.split(k).join(t); dict.push({ k: t, v: k }); });
+  let back = body; for (const d of dict) back = back.split(d.k).join(d.v);
+  return back === src ? { body, dict } : { body: src, dict: [] };
+}
+
+function ltPayload(subject, html, env) {
+  const c = String(env.CIO_TEMPLATE_DICT || "") === "1" ? ltCompress(html) : { body: String(html), dict: [] };
+  const data = c.dict.length ? { subject, body: c.body, dict: c.dict } : { subject, body: c.body };
+  return { data, bytes: new TextEncoder().encode(JSON.stringify(data)).length };
+}
+
+// The broadcast's audience, restated for API-defined recipients (they REPLACE
+// the audience set in the Customer.io UI). Env JSON overrides; otherwise the
+// segments are looked up by name — the same ones the broadcasts use in the UI.
+async function ltAudience(appKey, env, isTest) {
+  const override = String((isTest ? env.CUSTOMERIO_TEST_AUDIENCE : env.CUSTOMERIO_WEEKLY_AUDIENCE) || "").trim();
+  if (override) return JSON.parse(override);
+  const r = await fetch("https://api.customer.io/v1/segments", { headers: { Authorization: "Bearer " + appKey } });
+  if (!r.ok) throw new Error("couldn't list Customer.io segments (" + r.status + ")");
+  const segs = (await r.json()).segments || [];
+  const id = (name) => {
+    const s = segs.find((x) => String(x.name || "").trim().toLowerCase() === name.toLowerCase());
+    if (!s) throw new Error('Customer.io segment "' + name + '" not found');
+    return s.id;
+  };
+  if (isTest) return { segment: { id: id(env.CUSTOMERIO_TEST_SEGMENT || "Me Only") } };
+  // Yahoo/AOL included again (Morgan 2026-10-19, "let's see what happens"): the
+  // "Yahoo & AOL Recipients" segment (28) was excluded during deliverability
+  // recovery. To exclude it again, set CUSTOMERIO_WEEKLY_AUDIENCE to
+  // {"and":[{"segment":{"id":15}},{"not":{"segment":{"id":28}}}]}.
+  return { segment: { id: id("Weekly Update subscribers") } };
+}
+
+const ltSleep = (ms) => new Promise((res) => setTimeout(res, ms));
+
+async function ltTrigger(bid, appKey, payload) {
+  for (let attempt = 0; attempt < 4; attempt++) {
+    const r = await fetch("https://api.customer.io/v1/campaigns/" + bid + "/triggers", {
+      method: "POST",
+      headers: { Authorization: "Bearer " + appKey, "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    const t = await r.text();
+    if (r.status === 429) { await ltSleep(11000); continue; }   // one trigger per 10 s
+    return r.ok ? { ok: true } : { ok: false, status: r.status, detail: t.slice(0, 300) };
+  }
+  return { ok: false, status: 429, detail: "rate limited after retries" };
+}
+
+// Send a digest through an API-triggered broadcast. Regional emails go out as
+// four triggers (East End, West End, Ridgway/Ouray, everyone else); anything
+// else is one trigger to the broadcast's own UI audience, as before.
+async function ltSendBroadcast(bid, subject, html, appKey, env, isTest) {
+  const LIMIT = 49000;
+  if (!ltHasRegions(html)) {
+    const { data, bytes } = ltPayload(subject, html, env);
+    if (bytes > LIMIT) return { error: "Email is " + Math.round(bytes / 1024) + " KB — over Customer.io's 50 KB limit for broadcast data." };
+    const r = await ltTrigger(bid, appKey, { data });
+    return r.ok ? { ok: true, sends: ["all"] } : { error: "Customer.io " + r.status, detail: r.detail };
+  }
+  const audience = await ltAudience(appKey, env, isTest);
+  const eq = (g) => ({ attribute: { field: "region", operator: "eq", value: g } });
+  const plan = LT_REGIONS.map((g, i) => ({ name: g, off: i + 2, filter: { and: [audience, eq(g)] } }));
+  plan.push({ name: "everyone else", off: 1, filter: { and: [audience, { not: { or: LT_REGIONS.map(eq) } }] } });
+  // Size-check every variant BEFORE sending any, so a too-big email never
+  // leaves some regions sent and others not.
+  for (const p of plan) {
+    p.payload = ltPayload(subject, ltRegionVariant(html, p.off), env);
+    if (p.payload.bytes > LIMIT) return { error: "The " + p.name + " email is " + Math.round(p.payload.bytes / 1024) + " KB — over Customer.io's 50 KB limit for broadcast data." + (String(env.CIO_TEMPLATE_DICT || "") === "1" ? "" : " (Style compression is off — see docs/customerio-regional-recaps.md.)") };
+  }
+  const sent = [];
+  for (let i = 0; i < plan.length; i++) {
+    if (i) await ltSleep(10500);
+    const p = plan[i];
+    const r = await ltTrigger(bid, appKey, { data: p.payload.data, recipients: p.filter });
+    if (!r.ok) {
+      return { error: "Customer.io " + r.status + " on the " + p.name + " send" + (sent.length ? " — already sent: " + sent.join(", ") + ". Do NOT resend those." : ""), detail: r.detail, sent };
+    }
+    sent.push(p.name);
+  }
+  return { ok: true, sends: sent };
+}
+
 async function send(body, env) {
   const appKey = (env.CUSTOMERIO_APP_API_KEY || "").trim();
   if (!appKey) return { error: "Customer.io App API key not configured on the Worker." };
@@ -164,7 +296,7 @@ async function send(body, env) {
     // Liquid ({% unsubscribe_url %}, {{ customer.* }}) only renders on the real
     // broadcast path (the CIO template render_liquid's trigger.body), plus any
     // legacy Mailchimp merge tags.
-    const testHtml = html
+    const testHtml = ltRegionVariant(html, 1)
       .replace(/\{\{\s*unsubscribe_url\s*\}\}/g, "#")
       .replace(/\{\{\s*customer\.[^}]*\}\}/g, "")
       .replace(/\*\|UNSUB\|\*/g, "#").replace(/\*\|[A-Z0-9_]+\|\*/g, "");
@@ -185,43 +317,41 @@ async function send(body, env) {
     if (!tbid) {
       return { pending: true, error: "No test broadcast configured yet. Create an API-triggered test broadcast pointed at a one-person test segment, then set CUSTOMERIO_TEST_BROADCAST_ID." };
     }
-    const r = await fetch("https://api.customer.io/v1/campaigns/" + tbid + "/triggers", {
-      method: "POST",
-      headers: { Authorization: "Bearer " + appKey, "Content-Type": "application/json" },
-      body: JSON.stringify({ data: { subject, body: html } }),
-    });
-    const t = await r.text();
-    return r.ok ? { ok: true, mode: "test-broadcast" } : { error: "Customer.io " + r.status, detail: t.slice(0, 400) };
+    const r = await ltSendBroadcast(tbid, subject, html, appKey, env, true);
+    return r.ok ? { ok: true, mode: "test-broadcast", sends: r.sends } : r;
   }
 
-  // Approve & Send → API-triggered broadcast to the segment.
-  const bid = (env.CUSTOMERIO_BROADCAST_ID || "").trim();
+  // Approve & Send → API-triggered broadcast to the segment. Each digest has
+  // its own broadcast (its audience is set in the Customer.io UI): the weekly
+  // goes to Weekly Update subscribers, Past Meetings to its own opt-in segment.
+  // Never fall back to the weekly broadcast for another key — that would mail
+  // the wrong email to the whole Weekly list.
+  const isPast = body.key === "past";
+  const bid = ((isPast ? env.CUSTOMERIO_PAST_BROADCAST_ID : env.CUSTOMERIO_BROADCAST_ID) || "").trim();
   if (!bid) {
     return {
       pending: true,
-      error: "Customer.io broadcast not finalized yet. Create the API-triggered broadcast in the Customer.io UI, target the Weekly Update segment, and set CUSTOMERIO_BROADCAST_ID — then this goes live. (Send test works now.)",
+      error: isPast
+        ? "Past Meetings broadcast not configured. Create the API-triggered \"Past Meetings\" broadcast in the Customer.io UI (audience: Past Meetings subscribers), then set CUSTOMERIO_PAST_BROADCAST_ID. (Send test works now.)"
+        : "Customer.io broadcast not finalized yet. Create the API-triggered broadcast in the Customer.io UI, target the Weekly Update segment, and set CUSTOMERIO_BROADCAST_ID — then this goes live. (Send test works now.)",
     };
   }
-  const r = await fetch("https://api.customer.io/v1/campaigns/" + bid + "/triggers", {
-    method: "POST",
-    headers: { Authorization: "Bearer " + appKey, "Content-Type": "application/json" },
-    body: JSON.stringify({ data: { subject, body: html } }),
-  });
-  const t = await r.text();
-  if (!r.ok) return { error: "Customer.io " + r.status, detail: t.slice(0, 400) };
+  const r = await ltSendBroadcast(bid, subject, html, appKey, env, false);
+  if (!r.ok) return r;
   // Sent — archive the exact HTML and record it so the next content-refresh run
   // turns this newsletter into a blog post. Best-effort: a blog hiccup must never
   // report the send as failed (it already went out).
   let blog = "skipped";
-  if (env.GITHUB_TOKEN) { try { blog = await archiveBroadcast(env, body); } catch (e) { blog = "archive-error: " + String((e && e.message) || e).slice(0, 120); } }
-  return { ok: true, mode: "broadcast", blog };
+  // Archive the everyone (ALL) version — not the raw body with hidden copies.
+  if (env.GITHUB_TOKEN) { try { blog = await archiveBroadcast(env, Object.assign({}, body, { emailHtml: ltRegionVariant(html, 1) })); } catch (e) { blog = "archive-error: " + String((e && e.message) || e).slice(0, 120); } }
+  return { ok: true, mode: "broadcast", sends: r.sends, blog };
 }
 
 // Archive a just-sent broadcast: commit the exact HTML to digest/archive/ and
 // append a record to data/sent-broadcasts.json (content-refresh turns those into
 // BLOG_POSTS). Reuses the /save GitHub token.
 async function archiveBroadcast(env, body) {
-  const key = body.key === "weekend" ? "weekend" : "weekly";
+  const key = body.key === "past" ? "past" : "weekly";
   const html = String(body.emailHtml || "");
   const subject = String(body.subject || "Livable Telluride");
   const now = new Date();
@@ -277,8 +407,18 @@ async function ghAppendJson(env, path, entry) {
 // the lock and stops re-rendering that digest, so the daily bot can no longer
 // change the lede or swap events — Monday's Approve & Send goes out exactly as
 // approved. The lock auto-expires when the week rolls over (the workflow deletes
-// a lock whose weekStart no longer matches the coming Monday/Friday).
-const DIGEST_FILES = { weekly: "digest/week.html", weekend: "digest/weekend.html" };
+// a lock whose weekStart no longer matches the coming Monday).
+const DIGEST_FILES = { weekly: "digest/week.html", past: "digest/past.html" };
+
+// Hex SHA-256 of a string's UTF-8 bytes. The approval lock records this for
+// the digest body so the send can prove the HTML going out is byte-for-byte
+// what the reviewer approved — digest-refresh.yml already refuses to re-render
+// a locked digest, but nothing stopped a direct commit or a stray script from
+// editing digest/week.html under a still-valid approval.
+async function sha256Hex(str) {
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, "0")).join("");
+}
 
 // UTF-8-safe base64 (GitHub Contents API wants base64 file content).
 function b64(str) {
@@ -321,6 +461,32 @@ async function ghTokenStatus(env) {
     else status = "unknown";
   } catch (e) { status = "unknown"; }
   _ghCache = { at: now, status };
+  return status;
+}
+
+// Can the token open the cron tripwire's GitHub issues? A token with only
+// Contents access sends fine but fails ghRaiseIssue silently — a missed Monday
+// send then raises no alert at all. Probe with a deliberately empty POST: GitHub
+// validates permission before the body, so 422 (missing title) means allowed
+// and 403/404 means not. Nothing is ever created.
+let _ghIssuesCache = { at: 0, status: "unknown" };
+async function ghIssuesStatus(env) {
+  if (!env.GITHUB_TOKEN) return "missing";
+  const now = Date.now();
+  if (_ghIssuesCache.status !== "unknown" && now - _ghIssuesCache.at < 600000) return _ghIssuesCache.status;
+  const repo = (env.GITHUB_REPO || "morgan524/morgan524-telluride-gov-hub").trim();
+  let status = "unknown";
+  try {
+    const r = await fetch("https://api.github.com/repos/" + repo + "/issues", {
+      method: "POST",
+      headers: { "Authorization": "Bearer " + env.GITHUB_TOKEN, "Accept": "application/vnd.github+json", "User-Agent": "livabletelluride-digest-worker", "Content-Type": "application/json" },
+      body: "{}",
+    });
+    if (r.status === 422) status = "ok";
+    else if (r.status === 401) status = "bad";
+    else if (r.status === 403 || r.status === 404) status = "forbidden";
+  } catch (e) { status = "unknown"; }
+  _ghIssuesCache = { at: now, status };
   return status;
 }
 
@@ -465,10 +631,125 @@ async function saveDigest(body, env) {
   const subject = String(body.subject || "");
   const weekStart = String(body.weekStart || "");
   if (!/^\d{4}-\d{2}-\d{2}$/.test(weekStart)) return { error: "Missing/invalid weekStart (YYYY-MM-DD)." };
-  const lock = JSON.stringify({ weekStart, subject, lockedAt: new Date().toISOString() }, null, 2) + "\n";
+  const lock = JSON.stringify({ weekStart, subject, sha256: await sha256Hex(html), lockedAt: new Date().toISOString() }, null, 2) + "\n";
   await ghPutFile(env, file, html, "Digest: lock approved " + key + " for " + weekStart);
   await ghPutFile(env, "digest/" + key + ".lock.json", lock, "Digest: lock marker " + key + " " + weekStart);
   return { ok: true, locked: true, weekStart };
+}
+
+
+// ── Scheduled send (Cloudflare Cron Trigger) ────────────────────────────────
+// The approved digest used to go out ONLY from digest-scheduled-send.yml on a
+// GitHub Actions cron — and GitHub's scheduler drops or delays top-of-hour
+// crons by hours (documented in that workflow; the 2026-09-21 Week Ahead had
+// zero runs by 9:17 AM and went out by hand). Cloudflare cron triggers fire on
+// the minute, so the Worker now owns the 9:00 AM MT send and the GitHub
+// workflow is the backup — both apply the same gates, and whichever runs
+// second is a no-op thanks to the duplicate gate. (Morgan, 2026-09-21: "fix
+// this issue for all future ones.")
+//
+// Gates, identical to the workflow: right weekday and hour in America/Denver
+// (Monday 09:00 → the weekly; Tuesday 06:00 → Past Meetings); an approval lock whose weekStart
+// matches the manifest; the subject not already in data/sent-broadcasts.json;
+// the HTML neither tiny, bloated (>120 KB) nor carrying data:image payloads.
+// Everything is read from the repo's main branch via the Contents API so a
+// CDN-cached copy can never send a stale file.
+async function ghGetText(env, path) {
+  const repo = (env.GITHUB_REPO || "morgan524/morgan524-telluride-gov-hub").trim();
+  const r = await fetch("https://api.github.com/repos/" + repo + "/contents/" + path + "?ref=main", {
+    headers: { "Authorization": "Bearer " + env.GITHUB_TOKEN, "Accept": "application/vnd.github+json", "User-Agent": "livabletelluride-digest-worker" },
+  });
+  if (r.status === 404) return null;
+  if (!r.ok) throw new Error("GitHub " + r.status + " reading " + path);
+  const j = await r.json();
+  return fromB64(j.content);
+}
+
+// Tripwire: a failed or skipped-when-due scheduled send must be LOUD. Opens (or
+// comments on) a GitHub issue so it lands in the same place the other bots report.
+async function ghRaiseIssue(env, title, body) {
+  const repo = (env.GITHUB_REPO || "morgan524/morgan524-telluride-gov-hub").trim();
+  const headers = { "Authorization": "Bearer " + env.GITHUB_TOKEN, "Accept": "application/vnd.github+json", "User-Agent": "livabletelluride-digest-worker", "Content-Type": "application/json" };
+  const q = await fetch("https://api.github.com/search/issues?q=" + encodeURIComponent('repo:' + repo + ' is:issue is:open in:title "' + title + '"'), { headers });
+  const found = q.ok ? (await q.json()) : null;
+  const num = found && found.items && found.items[0] && found.items[0].number;
+  const r = num
+    ? await fetch("https://api.github.com/repos/" + repo + "/issues/" + num + "/comments", { method: "POST", headers, body: JSON.stringify({ body }) })
+    : await fetch("https://api.github.com/repos/" + repo + "/issues", { method: "POST", headers, body: JSON.stringify({ title, body }) });
+  if (!r.ok) console.error("ghRaiseIssue: GitHub " + r.status + " — ALERT NOT RAISED: " + title + " (the Worker's GITHUB_TOKEN needs Issues: Read and write)");
+}
+
+function denverParts(d) {
+  const f = new Intl.DateTimeFormat("en-US", { timeZone: "America/Denver", weekday: "short", hour: "numeric", hour12: false });
+  const parts = Object.fromEntries(f.formatToParts(d).map(p => [p.type, p.value]));
+  return { weekday: parts.weekday, hour: parseInt(parts.hour, 10) % 24 };
+}
+
+// Digests due each Denver weekday, and the Denver hour each one goes out.
+// Morgan 2026-10-26: Past Meetings moved to early Tuesday so readers don't get
+// two emails on Monday (it was Monday 10:00, an hour after the Week Ahead).
+const SEND_DAYS = { Mon: [["weekly", 9]], Tue: [["past", 6]] };
+
+async function scheduledSend(env, dry) {
+  const { weekday, hour } = denverParts(new Date());
+  const slots = SEND_DAYS[weekday];
+  if (!slots) return { skipped: "not a send day in Denver (" + weekday + ")", results: [] };
+  const keys = slots.filter(([, h]) => hour >= h).map(([k]) => k);
+  if (!keys.length) return { skipped: "before the first send hour in Denver (hour " + hour + ")", results: [] };
+  if (!env.GITHUB_TOKEN) throw new Error("GITHUB_TOKEN not configured on the Worker");
+  const man = JSON.parse(await ghGetText(env, "digest/manifest.json") || "{}");
+  // One digest's failure must not stop the other from going out.
+  const results = [];
+  for (const key of keys) {
+    try { results.push(Object.assign({ key }, await scheduledSendKey(env, man, key, dry))); }
+    catch (e) { results.push({ key, error: String((e && e.message) || e) }); }
+  }
+  return { results };
+}
+
+async function scheduledSendKey(env, man, key, dry) {
+  const d = man.digests && man.digests[key];
+  if (!d) {
+    // Past Meetings is only rendered when last week has recaps; no entry means
+    // nothing to send this week, which is not a missed send.
+    if (key === "past") return { skipped: "no Past Meetings digest this week (no recaps)" };
+    throw new Error("manifest has no '" + key + "' digest");
+  }
+  const subject = d.subject, weekStart = d.weekStart || "";
+
+  const lockText = await ghGetText(env, "digest/" + key + ".lock.json");
+  if (!lockText) return { skipped: "no approval lock for " + key + " — nothing was approved on the Review Desk", due: true };
+  const lock = JSON.parse(lockText);
+  if (lock.weekStart && weekStart && lock.weekStart !== weekStart) {
+    return { skipped: "stale approval lock (lock " + lock.weekStart + " vs manifest " + weekStart + ")", due: true };
+  }
+  let sent = [];
+  try { sent = JSON.parse(await ghGetText(env, "data/sent-broadcasts.json") || "[]"); } catch (e) {}
+  if (sent.some(x => x && x.subject === subject)) return { skipped: "already sent (duplicate gate): " + subject };
+
+  const html = await ghGetText(env, d.file);
+  if (!html || html.length < 2000) throw new Error(d.file + " looks too small (" + (html ? html.length : 0) + " bytes)");
+  if (html.includes("data:image")) throw new Error(d.file + " contains inline data:image payloads — re-approve at the Review Desk");
+  // Clip check on what readers actually get: a regional digest carries hidden
+  // copies, but each reader receives only one version (see ltSendBroadcast).
+  const biggest = Math.max(...[1, 2, 3, 4].map((o) => ltRegionVariant(html, o).length));
+  if (biggest > 120000) throw new Error(d.file + " renders to " + biggest + " bytes — over the 120 KB clip limit");
+
+  // Integrity gate: the body must still be what was approved. Locks written
+  // before this field existed carry no hash — those still send (unverified)
+  // rather than blocking the next digest on an upgrade.
+  if (lock.sha256) {
+    const actual = await sha256Hex(html);
+    if (actual !== lock.sha256) {
+      return { skipped: "content changed since approval (" + d.file + " is " + actual.slice(0, 12) +
+        ", approved " + lock.sha256.slice(0, 12) + ") — re-approve on the Review Desk", due: true };
+    }
+  }
+
+  if (dry) return { wouldSend: true, subject, bytes: html.length, verified: !!lock.sha256 };
+  const r = await send({ emailHtml: html, subject, key, test: false }, env);
+  if (!r || !r.ok) throw new Error("send failed: " + JSON.stringify(r).slice(0, 300));
+  return { sent: true, subject, blog: r.blog };
 }
 
 export default {
@@ -481,11 +762,21 @@ export default {
         ok: true,
         broadcast: !!(env.CUSTOMERIO_BROADCAST_ID || "").trim(),
         testBroadcast: !!(env.CUSTOMERIO_TEST_BROADCAST_ID || "").trim(),
+        pastBroadcast: !!(env.CUSTOMERIO_PAST_BROADCAST_ID || "").trim(),
         // "ok" | "bad" | "missing" | "forbidden" | "unknown" — the Desk warns on
         // load so an expired token surfaces before the reviewer does the work,
         // not at Approve time. No secret is exposed, only whether it still works.
         github: await ghTokenStatus(env),
+        // Whether a failed/missed cron send can open its 🚨 GitHub issue.
+        alerts: await ghIssuesStatus(env),
       }, 200, origin);
+    }
+    // Dry run of the cron send's gates (no auth, nothing sent, no secrets):
+    // proves the scheduled() path works in production without waiting for
+    // the send day. Reports the same skip reasons the cron would log.
+    if (url.pathname === "/cron-check") {
+      try { return json({ ok: true, dry: true, ...(await scheduledSend(env, true)) }, 200, origin); }
+      catch (e) { return json({ ok: false, dry: true, error: String((e && e.message) || e) }, 200, origin); }
     }
     if (request.method !== "POST") return json({ error: "POST only" }, 405, origin);
 
@@ -504,6 +795,39 @@ export default {
       return json({ error: "not found" }, 404, origin);
     } catch (e) {
       return json({ error: String((e && e.message) || e) }, 500, origin);
+    }
+  },
+
+  // Cron Triggers (wrangler.toml [triggers]). Runs the gated scheduled send.
+  async scheduled(event, env, ctx) {
+    const stamp = new Date().toISOString();
+    try {
+      const out = await scheduledSend(env);
+      console.log("scheduled send " + stamp + ": " + JSON.stringify(out));
+      // Every cron in wrangler.toml targets a send day, so landing on any other
+      // day means the schedule itself is wrong (2026-10-06: Cloudflare reads
+      // weekday 1 as Sunday, and the "Monday" crons fired on Sundays for weeks).
+      if (out.skipped && /^not a send day/.test(out.skipped)) {
+        ctx.waitUntil(ghRaiseIssue(env, "🚨 Digest Worker cron fired on the wrong day",
+          "Cron `" + (event && event.cron) + "` fired at " + stamp + ", but " + out.skipped +
+          ". The Monday/Tuesday sends will not happen from the Worker — check the weekday in cloudflare-worker/livabletelluride-digest/wrangler.toml (use names like MON; Cloudflare numbers 1 = Sunday)."));
+      }
+      for (const r of out.results || []) {
+        if (r.error) {
+          console.error("scheduled send " + stamp + " " + r.key + " FAILED: " + r.error);
+          ctx.waitUntil(ghRaiseIssue(env, "🚨 Digest scheduled send failed (Worker cron)",
+            "The Worker's cron send of the " + r.key + " digest threw at " + stamp + ":\n\n```\n" + r.error + "\n```\nThe GitHub backup (digest-scheduled-send.yml) may still send it; otherwise run it with -f digest=" + r.key + " -f confirm=SEND."));
+        } else if (r.skipped && r.due) {
+          ctx.waitUntil(ghRaiseIssue(env, "🚨 Digest did not send (Worker cron)",
+            "The scheduled send window for the " + r.key + " digest passed at " + stamp + " but nothing went out.\n\nReason: " + r.skipped +
+            "\n\nApprove the digest on the Review Desk, then run `gh workflow run digest-scheduled-send.yml -f digest=" + r.key + " -f confirm=SEND` or wait for the next cron."));
+        }
+      }
+    } catch (e) {
+      const msg = String((e && e.message) || e);
+      console.error("scheduled send " + stamp + " FAILED: " + msg);
+      ctx.waitUntil(ghRaiseIssue(env, "🚨 Digest scheduled send failed (Worker cron)",
+        "The Worker's cron send threw at " + stamp + ":\n\n```\n" + msg + "\n```\nThe GitHub backup (digest-scheduled-send.yml) may still send it; otherwise run it with confirm=SEND."));
     }
   },
 };

@@ -31,168 +31,34 @@ const COUNTY_HOSTED_PACKETS = {
   919: '/assets/packets/planning-commission-2026-05-14-packet.pdf',  // Planning Commission May 14 2026
 };
 
+// {civicClerkId: fileId} for agendas San Miguel County has published on the
+// portal but its CivicClerk API does not list in the event's publishedFiles.
+// Read by countyAgendaFor() in scripts/content-refresh.js, and consulted ONLY
+// when the API reports no agenda file — a real published file always wins, so
+// a stale entry here can never shadow one.
+//
+// Reach for this LAST. The 2026-08-31 miss (Sep 2 BOCC, event 887) looked like
+// an API omission and wasn't: the file was listed all along, under a type the
+// old exact `f.type === 'Agenda'` match didn't recognise. pickAgendaFile()
+// handles that shape now, and the override entry added for 887 never fired, so
+// it was removed. Before adding a row here, read the run log's
+// `no agenda file for event <id> — publishedFiles: …` line: if it names any
+// file at all, the matcher is what needs widening, not this map.
+//
+// Verify before adding: open
+// https://sanmiguelcoco.portal.civicclerk.com/event/<civicClerkId>/files/agenda/<fileId>
+// and confirm it renders that meeting's agenda. Anything unverified would put
+// a "View agenda" link on a document nobody has seen, which is the exact
+// failure the never-link-to-an-agenda-that-doesn't-exist rule exists to stop.
 const COUNTY_CIVICCLERK_AGENDA_FILES = {
   1025: 1652,  // Planning Commission Apr 2 2026
   999:  1702,  // BOCC May 13 2026
   919:  1705,  // Planning Commission May 14 2026
 };
 
-const COUNTY_CACHE_DATE = '2026-08-24';
+const COUNTY_CACHE_DATE = '2026-11-22';
 
 const COUNTY_CACHED_DATA = [
-  {
-    date: "August 13, 2026",
-    time: "9:00 AM",
-    title: "Planning Commission Meeting",
-    type: "planning",
-    location: "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
-    civicClerkId: 922,
-    note: null
-  },
-  {
-    date: "August 19, 2026",
-    time: "9:30 AM",
-    title: "Board of County Commissioners Meeting",
-    type: "bocc",
-    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
-    civicClerkId: 899,
-    note: null
-  },
-  {
-    date: "August 24, 2026",
-    time: "4:00 PM",
-    title: "Open Space Commission Meeting",
-    type: "other",
-    location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
-    civicClerkId: 1056,
-    note: null
-  },
-  {
-    date: "August 26, 2026",
-    time: "9:30 AM",
-    title: "Board of County Commissioners Work Session",
-    type: "bocc",
-    location: "333 West Colorado Ave, 2nd Floor, Telluride, CO 81435",
-    civicClerkId: 869,
-    note: null
-  },
-  {
-    date: "August 27, 2026",
-    time: "4:30 PM",
-    title: "CWAB",
-    type: "other",
-    location: "",
-    civicClerkId: 1055,
-    note: null
-  },
-  {
-    date: "September 2, 2026",
-    time: "9:30 AM",
-    title: "Board of County Commissioners Meeting",
-    type: "bocc",
-    location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
-    civicClerkId: 887,
-    note: null
-  },
-  {
-    date: "September 9, 2026",
-    time: "9:30 AM",
-    title: "Board of County Commissioners Work Session",
-    type: "bocc",
-    location: "333 West Colorado Ave, 2nd Floor, Telluride, CO 81435",
-    civicClerkId: 857,
-    note: null
-  },
-  {
-    date: "September 10, 2026",
-    time: "9:00 AM",
-    title: "Planning Commission Meeting",
-    type: "planning",
-    location: "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
-    civicClerkId: 923,
-    note: null
-  },
-  {
-    date: "September 16, 2026",
-    time: "9:30 AM",
-    title: "Board of County Commissioners Meeting",
-    type: "bocc",
-    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
-    civicClerkId: 900,
-    note: null
-  },
-  {
-    date: "September 23, 2026",
-    time: "9:30 AM",
-    title: "Board of County Commissioners Work Session",
-    type: "bocc",
-    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
-    civicClerkId: 870,
-    note: null
-  },
-  {
-    date: "September 28, 2026",
-    time: "4:00 PM",
-    title: "Open Space Commission Meeting",
-    type: "other",
-    location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
-    civicClerkId: 1057,
-    note: null
-  },
-  {
-    date: "October 7, 2026",
-    time: "10:00 AM",
-    title: "Board of County Commissioners Meeting",
-    type: "bocc",
-    location: "5634 Cty Road H1, Egnar Fire Station, Egnar, CO 81325",
-    civicClerkId: 888,
-    note: null
-  },
-  {
-    date: "October 8, 2026",
-    time: "9:00 AM",
-    title: "Planning Commission Meeting",
-    type: "planning",
-    location: "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
-    civicClerkId: 924,
-    note: null
-  },
-  {
-    date: "October 14, 2026",
-    time: "9:30 AM",
-    title: "Board of County Commissioners Work Session",
-    type: "bocc",
-    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
-    civicClerkId: 858,
-    note: null
-  },
-  {
-    date: "October 21, 2026",
-    time: "9:30 AM",
-    title: "Board of County Commissioners Meeting",
-    type: "bocc",
-    location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
-    civicClerkId: 901,
-    note: null
-  },
-  {
-    date: "October 26, 2026",
-    time: "4:00 PM",
-    title: "Open Space Commission Meeting",
-    type: "other",
-    location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
-    civicClerkId: 1058,
-    note: null
-  },
-  {
-    date: "October 28, 2026",
-    time: "4:00 PM",
-    title: "Board of County Commissioners Work Session",
-    type: "bocc",
-    location: "Placerville School House, Placerville",
-    civicClerkId: 1036,
-    note: null
-  },
   {
     date: "November 4, 2026",
     time: "9:30 AM",
@@ -200,7 +66,41 @@ const COUNTY_CACHED_DATA = [
     type: "bocc",
     location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
     civicClerkId: 889,
-    note: null
+    note: null,
+    agendaUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/889/files/agenda/2064",
+    packetUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/889/files/agenda/2066"
+  },
+  {
+    date: "November 9, 2026",
+    time: "7:00 PM",
+    title: "San Miguel Basin Fair Board",
+    type: "other",
+    location: "1110 Summit Street, Norwood Sheriff Annex, Norwood, CO 81423",
+    civicClerkId: 1119,
+    note: null,
+    packetUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/1077/files/agenda/2068"
+  },
+  {
+    date: "November 12, 2026",
+    time: "9:00 AM",
+    title: "Planning Commission Meeting",
+    type: "planning",
+    location: "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
+    civicClerkId: 1078,
+    note: null,
+    agendaUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/1078/files/agenda/2071",
+    packetUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/1078/files/agenda/2072"
+  },
+  {
+    date: "November 16, 2026",
+    time: "4:00 PM",
+    title: "Open Space Commission Meeting 11/23",
+    type: "other",
+    location: "333 W Colorado Ave, Third Floor, Telluride, CO 81435",
+    civicClerkId: 1091,
+    note: null,
+    agendaUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/1091/files/agenda/2075",
+    packetUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/1091/files/agenda/2076"
   },
   {
     date: "November 18, 2026",
@@ -209,17 +109,190 @@ const COUNTY_CACHED_DATA = [
     type: "bocc",
     location: "Norwood Sheriff Annex, 1110 Summit St, Norwood, CO 81423",
     civicClerkId: 902,
+    note: null,
+    agendaUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/902/files/agenda/2077",
+    packetUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/902/files/agenda/2078"
+  },
+  {
+    date: "November 23, 2026",
+    time: "4:00 PM",
+    title: "Open Space Commission Meeting 11/23",
+    type: "other",
+    location: "333 W Colorado Ave, Third Floor, Telluride, CO 81435",
+    civicClerkId: 1091,
+    note: null
+  },
+  {
+    date: "November 25, 2026",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Work Session",
+    type: "bocc",
+    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    civicClerkId: 1106,
+    note: null
+  },
+  {
+    date: "December 3, 2026",
+    time: "9:30 AM",
+    title: "One Time Event",
+    type: "other",
+    location: "333 West Colorado Ave, 2nd Fl, Telluride, CO 81435",
+    civicClerkId: 1120,
+    note: null
+  },
+  {
+    date: "December 9, 2026",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Regular Meeting",
+    type: "bocc",
+    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    civicClerkId: 980,
+    note: null
+  },
+  {
+    date: "December 10, 2026",
+    time: "9:00 AM",
+    title: "Planning Commission Meeting",
+    type: "planning",
+    location: "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
+    civicClerkId: 1079,
+    note: null
+  },
+  {
+    date: "December 14, 2026",
+    time: "4:00 PM",
+    title: "Open Space Commission Meeting",
+    type: "other",
+    location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+    civicClerkId: 1060,
+    note: null
+  },
+  {
+    date: "December 16, 2026",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Meeting",
+    type: "bocc",
+    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    civicClerkId: 1037,
+    note: null
+  },
+  {
+    date: "December 18, 2026",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Special Meeting",
+    type: "bocc",
+    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    civicClerkId: 1107,
+    note: null,
+    special: true
+  },
+  {
+    date: "December 28, 2026",
+    time: "4:00 PM",
+    title: "Open Space Commission Meeting",
+    type: "other",
+    location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+    civicClerkId: 1060,
+    note: null
+  },
+  {
+    date: "January 7, 2027",
+    time: "9:00 AM",
+    title: "Lodging Tax Panel",
+    type: "other",
+    location: "333 W Colorado Ave, Second Floor, Telluride, CO 81435",
+    civicClerkId: 1076,
+    note: null
+  },
+  {
+    date: "January 13, 2027",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Work Session",
+    type: "bocc",
+    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    civicClerkId: 1095,
+    note: null
+  },
+  {
+    date: "January 14, 2027",
+    time: "9:00 AM",
+    title: "Planning Commission Meeting",
+    type: "planning",
+    location: "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
+    civicClerkId: 1080,
+    note: null
+  },
+  {
+    date: "January 25, 2027",
+    time: "4:00 PM",
+    title: "Open Space Commission Meeting",
+    type: "other",
+    location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+    civicClerkId: 1061,
+    note: null
+  },
+  {
+    date: "January 27, 2027",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Work Session",
+    type: "bocc",
+    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    civicClerkId: 1108,
+    note: null
+  },
+  {
+    date: "February 10, 2027",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Work Session",
+    type: "bocc",
+    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    civicClerkId: 1096,
+    note: null
+  },
+  {
+    date: "February 11, 2027",
+    time: "9:00 AM",
+    title: "Planning Commission Meeting",
+    type: "planning",
+    location: "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
+    civicClerkId: 1081,
     note: null
   }
 ];
 
 const SMART_BOARD_URL = 'https://smarttelluride.colorado.gov/board-meetings';
 
-const SMART_CACHE_DATE = '2026-08-24';
+const SMART_CACHE_DATE = '2026-11-22';
 
 const SMART_CACHED_DATA = [
   {
-    date: "September 10, 2026",
+    date: "October 26, 2026",
+    time: "3:00 PM",
+    title: "SMART Gondola Advisory Committee",
+    location: "Virtual (Zoom link in the agenda)",
+    agendaUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.10.26-Gsub-Agenda-%28English_Spanish%29.pdf",
+    packetUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.10.26-Gsub-Packet-%28English_Spanish%29.pdf",
+    note: "Gondola Advisory Committee (Gsub): agenda and packet available (PDF)."
+  },
+  {
+    date: "November 12, 2026",
+    time: "4:00 PM",
+    title: "SMART Board of Directors",
+    location: "SMART Office, Lawson Hill (also virtual — see agenda)",
+    agendaUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/Board-Agenda_November-12th-2026.pdf",
+    packetUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/Board-Packet_November-12th-2026.pdf"
+  },
+  {
+    date: "November 16, 2026",
+    time: "3:00 PM",
+    title: "SMART Gondola Advisory Committee",
+    location: "Virtual (Zoom link in the agenda)",
+    agendaUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.11.16-Gsub-Meeting-Packet.pdf",
+    packetUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.11.16_Gsub_Agenda.pdf",
+    note: "Gondola Advisory Committee (Gsub): agenda and packet available (PDF)."
+  },
+  {
+    date: "December 10, 2026",
     time: "4:00 PM",
     title: "SMART Board of Directors",
     location: "SMART Office, Lawson Hill (also virtual — see agenda)",
@@ -230,7 +303,7 @@ const SMART_CACHED_DATA = [
 
 const TMVOA_URL = 'https://tmvoa.org/meetings-events/meeting-materials/';
 
-const TMVOA_CACHE_DATE = '2026-08-24';
+const TMVOA_CACHE_DATE = '2026-11-22';
 
 // TMVOA (Telluride Mountain Village Owners Association) — a private HOA, not
 // a government body, but its Gondola Leadership/Subcommittee meetings and
@@ -240,23 +313,47 @@ const TMVOA_CACHE_DATE = '2026-08-24';
 // see that function for the robots.txt-aware scraping note.
 const TMVOA_CACHED_DATA = [
   {
-    date: "July 28, 2026",
-    title: "Gondola Leadership Committee Meeting",
-    board: "gondola",
-    agendaUrl: "https://tmvoa.org/site/assets/files/4825/07_28_26_leadership_gondola_agenda_updated.pdf",
-    packetUrl: "https://tmvoa.org/site/assets/files/4825/07_28_26_leadership_gondola_committee_packet.pdf",
+    date: "October 27, 2026",
+    title: "TMVOA Finance &amp; Budget Committee",
+    board: "other",
+    agendaUrl: "https://tmvoa.org/site/assets/files/4964/tmvoa_finance_budget_meeting_agenda_10_27_26_draft.pdf",
+    packetUrl: "https://tmvoa.org/site/assets/files/4964/f_b_committee_meeting_packet_10_27_26_draft.pdf",
     location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
-    date: "July 31, 2026",
-    title: "TMVOA Board of Directors Meeting",
+    date: "October 29, 2026",
+    title: "TMVOA Audit &amp; Compliance Committee",
+    board: "other",
+    agendaUrl: "https://tmvoa.org/site/assets/files/4969/tmvoa_audit_compliance_meeting_agenda_10_29_26.pdf",
+    packetUrl: "https://tmvoa.org/site/assets/files/4969/tmvoa_audit_compliance_meeting_packet_10_29_26.pdf",
+    location: "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    date: "November 6, 2026",
+    title: "TMVOA Board of Directors Budget Meeting #1",
     board: "board",
-    agendaUrl: "https://tmvoa.org/site/assets/files/4830/tmvoa_board_meeting_agenda_7_31_26-1.pdf",
-    packetUrl: "https://tmvoa.org/site/assets/files/4830/tmvoa_board_meeting_packet_7_31_26-1.pdf",
+    agendaUrl: "https://tmvoa.org/site/assets/files/4890/tmvoa_board_meeting_agenda_11_06_26_revised_pl.pdf",
+    packetUrl: "https://tmvoa.org/site/assets/files/4890/tmvoa_board_meeting_packet_11_06_26_revised_v2.pdf",
     location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
-    date: "August 11, 2026",
+    date: "November 19, 2026",
+    title: "TMVOA Board of Directors Budget Meeting #2",
+    board: "board",
+    agendaUrl: "https://tmvoa.org/site/assets/files/4891/tmvoa_board_meeting_agenda_11_19_26-1.pdf",
+    packetUrl: "https://tmvoa.org/site/assets/files/4891/tmvoa_board_meeting_packet_11_19_26_v2-1.pdf",
+    location: "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    date: "December 3, 2026",
+    title: "TMVOA Board of Directors Budget Meeting #3",
+    board: "board",
+    agendaUrl: null,
+    packetUrl: null,
+    location: "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    date: "December 8, 2026",
     title: "Mountain Village Merchant Meeting",
     board: "merchant",
     agendaUrl: null,
@@ -264,23 +361,31 @@ const TMVOA_CACHED_DATA = [
     location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
-    date: "August 20, 2026",
+    date: "December 17, 2026",
+    title: "TMVOA Members Budget Meeting",
+    board: "other",
+    agendaUrl: null,
+    packetUrl: null,
+    location: "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    date: "January 12, 2027",
+    title: "Mountain Village Merchant Meeting",
+    board: "merchant",
+    agendaUrl: null,
+    packetUrl: null,
+    location: "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    date: "January 20, 2027",
     title: "TMVOA Investment Committee Meeting",
     board: "investment",
-    agendaUrl: "https://tmvoa.org/site/assets/files/4819/investment_committee_agenda_8_20_26_new_format.pdf",
-    packetUrl: "https://tmvoa.org/site/assets/files/4819/investment_committee_meeting_packet_8_20_26.pdf",
-    location: "Mountain Village, CO (see agenda for Zoom link)"
-  },
-  {
-    date: "August 27, 2026",
-    title: "TMVOA Board of Directors Meeting",
-    board: "board",
-    agendaUrl: "https://tmvoa.org/site/assets/files/4851/tmvoa_board_meeting_agenda_8_27_26.pdf",
+    agendaUrl: null,
     packetUrl: null,
     location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
-    date: "September 8, 2026",
+    date: "February 9, 2027",
     title: "Mountain Village Merchant Meeting",
     board: "merchant",
     agendaUrl: null,
@@ -288,8 +393,16 @@ const TMVOA_CACHED_DATA = [
     location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
-    date: "October 13, 2026",
+    date: "March 9, 2027",
     title: "Mountain Village Merchant Meeting",
+    board: "merchant",
+    agendaUrl: null,
+    packetUrl: null,
+    location: "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    date: "May 11, 2027",
+    title: "TMVOA/Town of Mtn Village &amp; Town of Telluride Joint Merchant Meeting",
     board: "merchant",
     agendaUrl: null,
     packetUrl: null,
@@ -301,32 +414,11 @@ const MV_TC_URL = 'https://townofmountainvillage.com/government/town-council/tow
 
 const MV_DRB_URL = 'https://townofmountainvillage.com/business/planning/design-review-board/';
 
-const MV_CACHE_DATE = '2026-08-24';
+const MV_CACHE_DATE = '2026-11-22';
 
 const MV_CACHED_DATA = [
   {
-    date: "September 3, 2026",
-    time: "10:00 AM - 3:00 PM",
-    title: "Design Review Board",
-    board: "drb",
-    agendaUrl: "https://townofmountainvillage.com/site/assets/files/49733/september_3-_2026_design_review_board_meeting_agenda.pdf",
-    packetUrl: null,
-    special: false,
-    location: "Town Hall, 455 Mountain Village Blvd, Suite A"
-  },
-  {
-    date: "September 17, 2026",
-    time: "2:00 PM - 7:45 PM",
-    title: "Town Council Meeting",
-    board: "tc",
-    agendaUrl: null,
-    packetUrl: null,
-    special: false,
-    location: "Town Hall, 455 Mountain Village Blvd, Suite A",
-    note: "Agenda typically posted the Friday before."
-  },
-  {
-    date: "October 1, 2026",
+    date: "December 3, 2026",
     time: "10:00 AM - 3:00 PM",
     title: "Design Review Board",
     board: "drb",
@@ -337,19 +429,8 @@ const MV_CACHED_DATA = [
     note: "Agenda typically posted the Friday before."
   },
   {
-    date: "October 7, 2026",
-    time: "10:00 AM - 5:00 PM",
-    title: "Town Council Meeting",
-    board: "tc",
-    agendaUrl: null,
-    packetUrl: null,
-    special: false,
-    location: "Town Hall, 455 Mountain Village Blvd, Suite A",
-    note: "Agenda typically posted the Friday before."
-  },
-  {
-    date: "October 15, 2026",
-    time: "2:00 PM - 6:45 PM",
+    date: "December 10, 2026",
+    time: "2:00 PM - 7:00 PM",
     title: "Town Council Meeting",
     board: "tc",
     agendaUrl: null,
@@ -362,85 +443,71 @@ const MV_CACHED_DATA = [
 
 const SCHOOL_BOARD_URL = 'https://www.tellurideschool.org/agendasandminutes';
 
-const SCHOOL_CACHE_DATE = '2026-08-24';
+const SCHOOL_CACHE_DATE = '2026-11-22';
 
 const SCHOOL_CACHED_DATA = [
   {
-    date: "August 24, 2026",
+    date: "November 4, 2026",
     time: null,
     title: "Telluride Board of Education Work Session",
-    agendaUrl: "https://files.smartsites.parentsquare.com/3403/82426_ws_packet.pdf",
+    agendaUrl: "https://files.smartsites.parentsquare.com/3403/1142026_ws_packet.pdf",
     packetUrl: null,
     special: false,
     location: "Bridal Veil District Conference Room / Zoom"
   },
   {
-    date: "August 25, 2026",
+    date: "November 4, 2026",
     time: null,
     title: "Telluride Board of Education Monthly Meeting",
-    agendaUrl: "https://files.smartsites.parentsquare.com/3403/82526_mm_packet_1.pdf",
+    agendaUrl: "https://files.smartsites.parentsquare.com/3403/signed_11426_ws_minutes.pdf",
     packetUrl: null,
     special: false,
     location: "Bridal Veil District Conference Room / Zoom"
   },
   {
-    date: "August 26, 2026",
+    date: "November 6, 2026",
+    time: null,
+    title: "Telluride Board of Education Special Meeting",
+    agendaUrl: "https://files.smartsites.parentsquare.com/3403/11626_sm_agenda.pdf",
+    packetUrl: null,
+    special: false,
+    location: "Bridal Veil District Conference Room / Zoom"
+  },
+  {
+    date: "November 6, 2026",
     time: null,
     title: "Telluride Board of Education Monthly Meeting",
-    agendaUrl: "https://files.smartsites.parentsquare.com/3403/82626_board_retreat_packet.pdf",
+    agendaUrl: "https://files.smartsites.parentsquare.com/3403/signed_11626_sm_minutes.pdf",
     packetUrl: null,
     special: false,
     location: "Bridal Veil District Conference Room / Zoom"
-  },
-  {
-    date: "September 22, 2026",
-    time: "3:30 PM",
-    title: "Telluride Board of Education Work Session",
-    agendaUrl: null,
-    packetUrl: null,
-    special: false,
-    location: "Bridal Veil District Conference Room / Zoom",
-    note: "Scheduled meeting -- agenda posted closer to the date."
-  },
-  {
-    date: "September 22, 2026",
-    time: "5:15 PM",
-    title: "Telluride Board of Education Monthly Meeting",
-    agendaUrl: null,
-    packetUrl: null,
-    special: false,
-    location: "Bridal Veil District Conference Room / Zoom",
-    note: "Scheduled meeting -- agenda posted closer to the date."
-  },
-  {
-    date: "October 20, 2026",
-    time: "5:15 PM",
-    title: "Telluride Board of Education Monthly Meeting",
-    agendaUrl: null,
-    packetUrl: null,
-    special: false,
-    location: "Bridal Veil District Conference Room / Zoom",
-    note: "Scheduled meeting -- agenda posted closer to the date."
   },
   {
     date: "November 16, 2026",
-    time: "3:30 PM",
+    time: null,
     title: "Telluride Board of Education Work Session",
-    agendaUrl: null,
+    agendaUrl: "https://files.smartsites.parentsquare.com/3403/111626_ws_packet.pdf",
     packetUrl: null,
     special: false,
-    location: "Bridal Veil District Conference Room / Zoom",
-    note: "Scheduled meeting -- agenda posted closer to the date."
+    location: "Bridal Veil District Conference Room / Zoom"
   },
   {
     date: "November 17, 2026",
-    time: "5:15 PM",
+    time: null,
     title: "Telluride Board of Education Monthly Meeting",
-    agendaUrl: null,
+    agendaUrl: "https://files.smartsites.parentsquare.com/3403/111726_mm_packet.pdf",
     packetUrl: null,
     special: false,
-    location: "Bridal Veil District Conference Room / Zoom",
-    note: "Scheduled meeting -- agenda posted closer to the date."
+    location: "Bridal Veil District Conference Room / Zoom"
+  },
+  {
+    date: "November 20, 2026",
+    time: null,
+    title: "Telluride Board of Education Special Meeting",
+    agendaUrl: "https://files.smartsites.parentsquare.com/3403/112026_sm_packet.pdf",
+    packetUrl: null,
+    special: false,
+    location: "Bridal Veil District Conference Room / Zoom"
   },
   {
     date: "December 14, 2026",
@@ -586,20 +653,20 @@ const SCHOOL_CACHED_DATA = [
 
 const FIRE_BOARD_URL = 'https://www.telluridefire.com/board-meetings';
 
-const FIRE_CACHE_DATE = '2026-08-24';
+const FIRE_CACHE_DATE = '2026-11-22';
 
 const FIRE_CACHED_DATA = [
   {
-    date: "August 18, 2026",
+    date: "November 17, 2026",
     time: "5:30 PM",
     title: "Board of Directors Meeting",
-    agendaUrl: "https://www.telluridefire.com/files/5257dafba/Agenda+-August+18th%2C+2026.pdf",
+    agendaUrl: "https://www.telluridefire.com/files/db88b55e6/Agenda+-November+17th%2C+2026.pdf",
     packetUrl: null,
     special: false,
     location: "131 W Columbia Ave, Telluride, CO 81435"
   },
   {
-    date: "September 15, 2026",
+    date: "December 15, 2026",
     time: "5:30 PM",
     title: "Board of Directors Meeting",
     agendaUrl: null,
@@ -609,7 +676,7 @@ const FIRE_CACHED_DATA = [
     note: "Next scheduled meeting -- agenda typically posted a few days before."
   },
   {
-    date: "October 20, 2026",
+    date: "January 19, 2027",
     time: "5:30 PM",
     title: "Board of Directors Meeting",
     agendaUrl: null,
@@ -622,20 +689,39 @@ const FIRE_CACHED_DATA = [
 
 const MED_BOARD_URL = 'https://www.tellmed.org/board-meetings';
 
-const MED_CACHE_DATE = '2026-08-24';
+const MED_CACHE_DATE = '2026-11-22';
 
 const MED_CACHED_DATA = [
   {
-    date: "August 27, 2026",
+    date: "November 3, 2026",
+    time: "3:00 PM",
+    title: "Regular Board Meeting",
+    agendaUrl: "https://www.tellmed.org/files/123ee1a0f/THD+Special+Bd+Mtg+Agenda+11.3.26.pdf",
+    packetUrl: null,
+    special: true,
+    location: "333 W Colorado Ave (2nd Floor), Telluride / Zoom"
+  },
+  {
+    date: "November 19, 2026",
     time: "8:30 AM - 11:30 AM",
     title: "Regular Board Meeting",
-    agendaUrl: "https://www.tellmed.org/files/2218817c5/THD+Reg+BOD+Mtg+8.27.26+Agenda.pdf",
+    agendaUrl: null,
     packetUrl: null,
     special: false,
     location: "333 W Colorado Ave (2nd Floor), Telluride / Zoom"
   },
   {
-    date: "September 24, 2026",
+    date: "November 26, 2026",
+    time: "8:30 AM - 11:30 AM",
+    title: "Regular Board Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "333 W Colorado Ave (2nd Floor), Telluride / Zoom",
+    note: "Projected date falls on Thanksgiving; the board may reschedule. Confirm when the agenda posts."
+  },
+  {
+    date: "December 24, 2026",
     time: "8:30 AM - 11:30 AM",
     title: "Regular Board Meeting",
     agendaUrl: null,
@@ -654,20 +740,29 @@ const NORWOOD_NWC_URL = 'https://www.norwoodtown.com/nwc-meetings';
 
 const NORWOOD_SAN_URL = 'https://www.norwoodtown.com/norwood-sanitation-district-meeting';
 
-const NORWOOD_CACHE_DATE = '2026-08-24';
+const NORWOOD_CACHE_DATE = '2026-11-22';
 
 const NORWOOD_CACHED_DATA = [
   {
-    date: "August 17, 2026",
+    date: "November 16, 2026",
     time: null,
-    title: "Planning and Zoning Commission Cancelled",
-    agendaUrl: "https://www.norwoodtown.com/files/39acf0aed/08.17.2026+P%26Z+BOA+Agenda+-+Cancel.pdf",
+    title: "Planning and Zoning Commission Meeting",
+    agendaUrl: "https://www.norwoodtown.com/files/6a9b8d335/11.16.2026+P%26Z+BOA+AGENDA.pdf",
     packetUrl: null,
     special: false,
     board: "pz"
   },
   {
-    date: "September 8, 2026",
+    date: "November 18, 2026",
+    time: null,
+    title: "Board of Trustees Meeting",
+    agendaUrl: "https://www.norwoodtown.com/files/8ec8087d1/11.18.2026+Board+of+Trustee+Agenda+ADA.pdf",
+    packetUrl: "https://www.norwoodtown.com/files/b22e92a07/11.18.2026+BOT+Supporting+Documents.pdf",
+    special: false,
+    board: "bot"
+  },
+  {
+    date: "December 8, 2026",
     time: null,
     title: "Norwood Water Commission Meeting",
     agendaUrl: null,
@@ -677,7 +772,7 @@ const NORWOOD_CACHED_DATA = [
     note: "Next scheduled meeting -- agenda posted before the meeting."
   },
   {
-    date: "September 9, 2026",
+    date: "December 9, 2026",
     time: null,
     title: "Board of Trustees Meeting",
     agendaUrl: null,
@@ -687,7 +782,7 @@ const NORWOOD_CACHED_DATA = [
     note: "Next scheduled meeting -- agenda posted before the meeting."
   },
   {
-    date: "September 21, 2026",
+    date: "December 21, 2026",
     time: null,
     title: "Planning and Zoning Commission Meeting",
     agendaUrl: null,
@@ -697,7 +792,7 @@ const NORWOOD_CACHED_DATA = [
     note: "Next scheduled meeting -- agenda posted before the meeting."
   },
   {
-    date: "October 13, 2026",
+    date: "January 12, 2027",
     time: null,
     title: "Norwood Water Commission Meeting",
     agendaUrl: null,
@@ -707,7 +802,7 @@ const NORWOOD_CACHED_DATA = [
     note: "Next scheduled meeting -- agenda posted before the meeting."
   },
   {
-    date: "October 14, 2026",
+    date: "January 13, 2027",
     time: null,
     title: "Board of Trustees Meeting",
     agendaUrl: null,
@@ -717,14 +812,14 @@ const NORWOOD_CACHED_DATA = [
     note: "Next scheduled meeting -- agenda posted before the meeting."
   },
   {
-    date: "October 19, 2026",
+    date: "January 18, 2027",
     time: null,
     title: "Planning and Zoning Commission Meeting",
     agendaUrl: null,
     packetUrl: null,
     special: false,
     board: "pz",
-    note: "Next scheduled meeting -- agenda posted before the meeting."
+    note: "Projected date falls on Martin Luther King Jr. Day; the board may reschedule. Confirm when the agenda posts."
   }
 ];
 
@@ -732,29 +827,31 @@ const OPHIR_GA_URL = 'https://townofophir.colorado.gov/general-assembly-2';
 
 const OPHIR_PZ_URL = 'https://townofophir.colorado.gov/planning-and-zoning';
 
-const OPHIR_CACHE_DATE = '2026-08-24';
+const OPHIR_CACHE_DATE = '2026-11-22';
 
 const OPHIR_CACHED_DATA = [
   {
-    date: "August 18, 2026",
+    date: "November 17, 2026",
     time: null,
     title: "General Assembly Meeting",
     agendaUrl: null,
     packetUrl: null,
     special: false,
-    board: "ga"
+    board: "ga",
+    note: "Next scheduled meeting -- agenda posted closer to the date."
   },
   {
-    date: "September 15, 2026",
+    date: "December 15, 2026",
     time: null,
     title: "General Assembly Meeting",
     agendaUrl: null,
     packetUrl: null,
     special: false,
-    board: "ga"
+    board: "ga",
+    note: "Next scheduled meeting -- agenda posted closer to the date."
   },
   {
-    date: "October 20, 2026",
+    date: "January 19, 2027",
     time: null,
     title: "General Assembly Meeting",
     agendaUrl: null,
@@ -776,7 +873,274 @@ const RICO_BOARD_URL = 'https://townofrico.colorado.gov/government/board-of-trus
 
 const RIDGWAY_COUNCIL_URL = 'https://townofridgway.colorado.gov/i-want-to/ridgway-town-council';
 
-const RIDGWAY_CACHE_DATE = '2026-08-24';
+// Ouray County Board of County Commissioners — from CivicClerk (tenant
+// ouraycoco). REBUILT every content refresh by rebuildOurayCountyMeetings()
+// in scripts/content-refresh.js; hand edits are overwritten. (The County left
+// AgendaCenter in July 2025; its RSS feeds are empty.)
+const OURAY_COUNTY_CACHED_DATA = [
+  {
+    date: "November 17, 2026",
+    time: "9:00 AM",
+    title: "Board of County Commissioners",
+    location: "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
+    civicClerkId: 1082,
+    note: null,
+    packetUrl: "https://ouraycoco.portal.civicclerk.com/event/1082/files/agenda/7599",
+    board: "bocc",
+    agendaUrl: "https://ouraycoco.portal.civicclerk.com/event/1082/files/agenda/7595"
+  },
+  {
+    date: "November 18, 2026",
+    time: "9:00 AM",
+    title: "Board of County Commissioners Work Session",
+    location: "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
+    civicClerkId: 1130,
+    note: null,
+    packetUrl: "https://ouraycoco.portal.civicclerk.com/event/1130/files/agenda/7601",
+    board: "bocc",
+    agendaUrl: "https://ouraycoco.portal.civicclerk.com/event/1130/files/agenda/7600"
+  },
+  {
+    date: "December 8, 2026",
+    time: "9:00 AM",
+    title: "Board of County Commissioners",
+    location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 1071,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "December 9, 2026",
+    time: "9:00 AM",
+    title: "Board of County Commissioners Work Session",
+    location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 1119,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "December 15, 2026",
+    time: "9:00 AM",
+    title: "Board of County Commissioners",
+    location: "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
+    civicClerkId: 1083,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "December 15, 2026",
+    time: "1:30 PM",
+    title: "Board of County Commissioners Work Session",
+    location: "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
+    civicClerkId: 1107,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "December 16, 2026",
+    time: "9:00 AM",
+    title: "Board of County Commissioners Work Session",
+    location: "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
+    civicClerkId: 1131,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "January 12, 2027",
+    time: "9:00 AM",
+    title: "Swearing-In Ceremony and Reception",
+    location: "Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 2224,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "January 12, 2027",
+    time: "10:00 AM",
+    title: "Board of County Commissioners",
+    location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 2152,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "January 12, 2027",
+    time: "1:30 PM",
+    title: "Board of County Commissioners Work Session",
+    location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 2176,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "January 13, 2027",
+    time: "9:00 AM",
+    title: "Board of County Commissioners Work Session",
+    location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 2200,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "January 26, 2027",
+    time: "9:00 AM",
+    title: "Board of County Commissioners",
+    location: "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
+    civicClerkId: 2164,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "January 26, 2027",
+    time: "1:30 PM",
+    title: "Board of County Commissioners Work Session - 4H Event Center",
+    location: "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
+    civicClerkId: 2188,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "January 27, 2027",
+    time: "9:00 AM",
+    title: "Board of County Commissioners Work Session - 4H Event Center",
+    location: "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
+    civicClerkId: 2212,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "February 9, 2027",
+    time: "9:00 AM",
+    title: "Board of County Commissioners",
+    location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 2153,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "February 9, 2027",
+    time: "1:30 PM",
+    title: "Board of County Commissioners Work Session",
+    location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 2177,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "February 10, 2027",
+    time: "9:00 AM",
+    title: "Board of County Commissioners Work Session",
+    location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 2201,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "February 23, 2027",
+    time: "9:00 AM",
+    title: "Board of County Commissioners",
+    location: "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
+    civicClerkId: 2165,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "February 23, 2027",
+    time: "1:30 PM",
+    title: "Board of County Commissioners Work Session - 4H Event Center",
+    location: "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
+    civicClerkId: 2189,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "February 24, 2027",
+    time: "9:00 AM",
+    title: "Board of County Commissioners Work Session - 4H Event Center",
+    location: "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
+    civicClerkId: 2213,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "March 9, 2027",
+    time: "9:00 AM",
+    title: "Board of County Commissioners",
+    location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 2154,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "March 9, 2027",
+    time: "1:30 PM",
+    title: "Board of County Commissioners Work Session",
+    location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 2178,
+    note: null,
+    board: "bocc"
+  },
+  {
+    date: "March 10, 2027",
+    time: "9:00 AM",
+    title: "Board of County Commissioners Work Session",
+    location: "BOCC Room, Ouray County Courthouse, 541 4th Street, Ouray, CO 81427",
+    civicClerkId: 2202,
+    note: null,
+    board: "bocc"
+  }
+];
+
+// City of Ouray (the city government, not Ouray County): City Council and
+// Planning Commission, from BoardBook Premier org 2503. OURAY_CITY_CACHED_DATA
+// is REBUILT every content refresh by syncOurayCityMeetings() in
+// scripts/content-refresh.js — hand edits are overwritten. getOurayCityMeetings()
+// adds the regular Council / Planning Commission meetings from the City's
+// published schedule until BoardBook posts them (~a week ahead).
+const OURAY_CITY_URL = 'https://meetings.boardbook.org/Public/Organization/2503';
+// Standing Zoom rooms, copied from the City's own pages (verified 2026-09-29):
+// cityofouray.com/city_offices/city_council/ ("Join the City Council Regular
+// Meetings via Zoom") and …/committees___boards/planning_commission.php.
+// BoardBook agendas carry no Zoom info, so getOurayCityMeetings() attaches
+// these: Council → REGULAR meetings only (as the City states); PC → all.
+const OURAY_CITY_ZOOM = {
+  council: { zoomUrl: 'https://zoom.us/j/9349389230',  meetingId: '934 938 9230',  passcode: '491878', phone: '408-638-0968' },
+  pc:      { zoomUrl: 'https://zoom.us/j/98645657434', meetingId: '986 4565 7434', passcode: '788405', phone: '346-248-7799' },
+};
+const OURAY_CITY_CACHED_DATA = [
+  {
+    date: "November 2, 2026",
+    time: "6:00 PM",
+    title: "Ouray City Council Regular Meeting",
+    board: "council",
+    location: "Ouray Community Center, 320 6th Ave, Ouray, CO 81427",
+    boardbookId: 773056,
+    agendaUrl: "https://meetings.boardbook.org/Public/Agenda/2503?meeting=773056",
+    packetUrl: "https://meetings.boardbook.org/Public/DownloadAgenda/2503?meeting=773056"
+  },
+  {
+    date: "November 10, 2026",
+    time: "4:00 PM",
+    title: "Ouray Planning Commission Regular Meeting",
+    board: "pc",
+    location: "Ouray Community Center, 320 6th Ave, Ouray, CO 81427",
+    boardbookId: 776213,
+    agendaUrl: "https://meetings.boardbook.org/Public/Agenda/2503?meeting=776213",
+    packetUrl: "https://meetings.boardbook.org/Public/DownloadAgenda/2503?meeting=776213"
+  },
+  {
+    date: "November 16, 2026",
+    time: "6:00 PM",
+    title: "Ouray City Council Regular Meeting",
+    board: "council",
+    location: "Ouray Community Center, 320 6th Ave, Ouray, CO 81427",
+    boardbookId: 774802,
+    agendaUrl: "https://meetings.boardbook.org/Public/Agenda/2503?meeting=774802",
+    packetUrl: "https://meetings.boardbook.org/Public/DownloadAgenda/2503?meeting=774802"
+  }
+];
+
+const RIDGWAY_CACHE_DATE = '2026-11-22';
 
 // Ridgway meeting stubs. Town Council = 2nd Wednesday @ 6:00 PM; Planning
 // Commission = 3rd Wednesday @ 5:30 PM. The agenda/packet PDF for each date is
@@ -785,31 +1149,34 @@ const RIDGWAY_CACHE_DATE = '2026-08-24';
 // ahead of today so upcoming meetings render before their agenda is posted.
 const RIDGWAY_CACHED_DATA = [
   {
-    date: "August 12, 2026",
+    date: "November 11, 2026",
     time: "6:00 PM",
     title: "Ridgway Town Council Regular Meeting",
     agendaUrl: null,
     packetUrl: null,
     special: false,
-    board: "council"
+    board: "council",
+    note: "Next scheduled meeting -- agenda posted the week before."
   },
   {
-    date: "September 9, 2026",
+    date: "December 9, 2026",
     time: "6:00 PM",
     title: "Ridgway Town Council Regular Meeting",
     agendaUrl: null,
     packetUrl: null,
     special: false,
-    board: "council"
+    board: "council",
+    note: "Next scheduled meeting -- agenda posted the week before."
   },
   {
-    date: "October 14, 2026",
+    date: "January 13, 2027",
     time: "6:00 PM",
     title: "Ridgway Town Council Regular Meeting",
     agendaUrl: null,
     packetUrl: null,
     special: false,
-    board: "council"
+    board: "council",
+    note: "Next scheduled meeting -- agenda posted the week before."
   }
 ];
 
@@ -830,79 +1197,70 @@ const TOWN_CIVICWEB_IDS = {
 
 const TELLURIDE_HARC_URL = 'https://telluride.gov/100/Historic-and-Architectural-Review-Commis';
 
-const TELLURIDE_CACHE_DATE = '2026-08-24';
+const TELLURIDE_CACHE_DATE = '2026-11-22';
 
 const TELLURIDE_CACHED_DATA = [
   {
-    date: "September 16, 2026",
+    date: "December 15, 2026",
     title: "HARC Meeting",
     board: "harc",
     location: "Rebekah Hall, 113 W Columbia Ave",
-    civicWebId: 8022
-  },
-  {
-    date: "October 21, 2026",
-    title: "HARC Meeting",
-    board: "harc",
-    location: "Rebekah Hall, 113 W Columbia Ave",
-    civicWebId: 8024
-  },
-  {
-    date: "November 18, 2026",
-    title: "HARC Meeting",
-    board: "harc",
-    location: "Rebekah Hall, 113 W Columbia Ave",
-    civicWebId: 8026
+    civicWebId: 8367,
+    time: "5:00 PM"
   },
   {
     date: "December 16, 2026",
     title: "HARC Meeting",
     board: "harc",
     location: "Rebekah Hall, 113 W Columbia Ave",
-    civicWebId: 8028
+    civicWebId: 8028,
+    time: "5:30 PM"
   }
 ];
 
 const AIRPORT_BOARD_URL = 'https://tellurideairport.com/traa-board-information/';
 
-const AIRPORT_CACHE_DATE = '2026-08-24';
+const AIRPORT_CACHE_DATE = '2026-11-22';
 
 const AIRPORT_CACHED_DATA = [
-  {
-    date: "August 20, 2026",
-    time: "12:00 PM",
-    title: "TRAA Board of Commissioners Meeting",
-    agendaUrl: null,
-    packetUrl: null,
-    special: false,
-    location: "Terminal Observation Lounge, Telluride Regional Airport"
-  },
-  {
-    date: "September 17, 2026",
-    time: "12:00 PM",
-    title: "TRAA Board of Commissioners Meeting",
-    agendaUrl: null,
-    packetUrl: null,
-    special: false,
-    location: "Terminal Observation Lounge, Telluride Regional Airport"
-  },
-  {
-    date: "October 15, 2026",
-    time: "12:00 PM",
-    title: "TRAA Board of Commissioners Meeting",
-    agendaUrl: null,
-    packetUrl: null,
-    special: false,
-    location: "Terminal Observation Lounge, Telluride Regional Airport"
-  },
   {
     date: "November 19, 2026",
     time: "12:00 PM",
     title: "TRAA Board of Commissioners Meeting",
     agendaUrl: null,
-    packetUrl: null,
+    packetUrl: "https://tellurideairport.com/wp-content/uploads/2026/11/TRAA-Board-Packet-111926.pdf",
     special: false,
     location: "Terminal Observation Lounge, Telluride Regional Airport"
+  },
+  {
+    date: "December 17, 2026",
+    time: "12:00 PM",
+    title: "TRAA Board of Commissioners Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Terminal Observation Lounge, Telluride Regional Airport",
+    note: "Regular board meeting of the Telluride Regional Airport Authority."
+  },
+  {
+    date: "January 21, 2027",
+    time: "12:00 PM",
+    title: "TRAA Board of Commissioners Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Terminal Observation Lounge, Telluride Regional Airport",
+    note: "Regular board meeting of the Telluride Regional Airport Authority."
+  },
+  {
+    date: "February 18, 2027",
+    time: "12:00 PM",
+    title: "TRAA Board of Commissioners Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Terminal Observation Lounge, Telluride Regional Airport",
+    note: "Regular board meeting of the Telluride Regional Airport Authority."
   }
 ];
 
@@ -992,11 +1350,14 @@ const WHY_THIS_MATTERS = [
 
   // ── Gondola / SMART ──
   {
-    match: /gondola|smart\s*board|smart\s*transit/i,
+    match: /gondola(?!\s+plaza)|smart\s*board|smart\s*transit/i,   // not Gondola Plaza vending items
+    // Only on SMART's own meetings (Morgan 2026-10-19): a gondola IGA on a
+    // County or town consent agenda was getting this callout.
+    sources: ['smart'],
     decision: 'SMART Board decisions regarding gondola operations, maintenance, capital planning, or the future of the free gondola connecting Telluride and Mountain Village.',
     who: 'Every commuter, worker, and visitor who uses the gondola, plus all property taxpayers in the SMART district.',
     stage: 'Check agenda for specific action items.',
-    impact: 'The gondola (built 1996) is critical regional infrastructure. The current funding agreement expires in 2027. Ballot Issue 3A approved ~$8.2M/year in new tax revenue, but a replacement gondola is estimated at $120-150M+ -- leaving a significant funding gap.',
+    impact: 'The gondola (built 1996) is important regional infrastructure. The replacement gondola is estimated at $120-150M+ -- leaving a significant funding gap.',
     context: 'CORA records revealed roughly $125K in campaign consulting before the ballot was referred. The campaign marketed the measure as funding a "new gondola" but the actual revenue only covers a fraction of replacement cost.'
   },
 
@@ -1110,12 +1471,193 @@ const SCHOOL_ZOOM_LINK = 'https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A
 // constant passcode is derived from SCHOOL_ZOOM_LINK by getMeetingPasscode().
 const MEETING_PASSCODES = {};
 
+// ── Civic EVENTS on the Gov Hub (not meetings) ─────────────────────────────
+// Hand-curated, strict JSON. Open houses, pop-ups, focus groups and similar
+// engagement sessions a public body hosts that are not formal meetings (no
+// agenda, packet or public-comment inbox). build-week-meetings.js merges them
+// into data/week-meetings.json with kind:'event' so they list on their own
+// day; gov-hub.html renders them as event cards. They are kept OUT of the
+// homepage "Top priorities" meetings list, the deep-dive watch / Featured
+// Action, and the Haiku hook batch. Past entries drop off by date on their
+// own; prune them here whenever convenient.
+// Fields: source (GETTERS key), date YYYY-MM-DD, time, title, location,
+// summary, links [{label, href}].
+const GOV_EVENTS = [
+  {
+    "date": "2026-09-29",
+    "time": "5:30 PM - 7:30 PM",
+    "title": "Comprehensive Plan Open House: Land Use Opportunity Lab",
+    "location": "Ah Haa School for the Arts, 3rd Floor Launchpad",
+    "summary": "The Town's Comprehensive Plan update moves into Phase 2. Review the revised Vision Statement, weigh in on the opportunities that matter most over the next 10 to 20 years, and help identify where they could take shape. Drop in for whatever interests you; no need to stay the whole time.",
+    "source": "telluride",
+    "links": [
+      {
+        "label": "Community Questionnaire",
+        "href": "https://survey.alchemer.com/s3/9003580/Telluride-Comprehensive-Plan-Phase-2-Questionnaire"
+      },
+      {
+        "label": "Project page",
+        "href": "https://engagetelluride.org/2025-comprehensive-plan"
+      },
+      {
+        "label": "Sign up for updates",
+        "href": "https://telluride.us21.list-manage.com/subscribe?u=bc4726f5d81aa18f63733d8c8&id=2366054da1"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-30",
+    "time": "8:30 AM - 9:30 AM",
+    "title": "Comprehensive Plan Pop-Up",
+    "location": "Elks Park",
+    "summary": "Comprehensive Plan Phase 2 pop-up. No presentation and no formal meeting: stop by for a few minutes or stay and chat about the revised Vision Statement and where you see opportunities for change, investment or preservation.",
+    "source": "telluride",
+    "links": [
+      {
+        "label": "Community Questionnaire",
+        "href": "https://survey.alchemer.com/s3/9003580/Telluride-Comprehensive-Plan-Phase-2-Questionnaire"
+      },
+      {
+        "label": "Project page",
+        "href": "https://engagetelluride.org/2025-comprehensive-plan"
+      },
+      {
+        "label": "Sign up for updates",
+        "href": "https://telluride.us21.list-manage.com/subscribe?u=bc4726f5d81aa18f63733d8c8&id=2366054da1"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-30",
+    "time": "1:30 PM - 3:00 PM",
+    "title": "Comprehensive Plan Focus Group: Economy",
+    "location": "Ah Haa School for the Arts, 3rd Floor Launchpad",
+    "summary": "Comprehensive Plan Phase 2 focus group on the draft goals and objectives for the economy. Join one or more sessions on the topics you care about.",
+    "source": "telluride",
+    "links": [
+      {
+        "label": "Community Questionnaire",
+        "href": "https://survey.alchemer.com/s3/9003580/Telluride-Comprehensive-Plan-Phase-2-Questionnaire"
+      },
+      {
+        "label": "Project page",
+        "href": "https://engagetelluride.org/2025-comprehensive-plan"
+      },
+      {
+        "label": "Sign up for updates",
+        "href": "https://telluride.us21.list-manage.com/subscribe?u=bc4726f5d81aa18f63733d8c8&id=2366054da1"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-30",
+    "time": "3:00 PM - 4:30 PM",
+    "title": "Comprehensive Plan Focus Group: Environment & Recreation",
+    "location": "Ah Haa School for the Arts, 3rd Floor Launchpad",
+    "summary": "Comprehensive Plan Phase 2 focus group on the draft goals and objectives for environment and recreation. Join one or more sessions on the topics you care about.",
+    "source": "telluride",
+    "links": [
+      {
+        "label": "Community Questionnaire",
+        "href": "https://survey.alchemer.com/s3/9003580/Telluride-Comprehensive-Plan-Phase-2-Questionnaire"
+      },
+      {
+        "label": "Project page",
+        "href": "https://engagetelluride.org/2025-comprehensive-plan"
+      },
+      {
+        "label": "Sign up for updates",
+        "href": "https://telluride.us21.list-manage.com/subscribe?u=bc4726f5d81aa18f63733d8c8&id=2366054da1"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-01",
+    "time": "8:30 AM - 9:30 AM",
+    "title": "Comprehensive Plan Pop-Up",
+    "location": "Oak Street Gondola Plaza",
+    "summary": "Comprehensive Plan Phase 2 pop-up. No presentation and no formal meeting: stop by for a few minutes or stay and chat about the revised Vision Statement and where you see opportunities for change, investment or preservation.",
+    "source": "telluride",
+    "links": [
+      {
+        "label": "Community Questionnaire",
+        "href": "https://survey.alchemer.com/s3/9003580/Telluride-Comprehensive-Plan-Phase-2-Questionnaire"
+      },
+      {
+        "label": "Project page",
+        "href": "https://engagetelluride.org/2025-comprehensive-plan"
+      },
+      {
+        "label": "Sign up for updates",
+        "href": "https://telluride.us21.list-manage.com/subscribe?u=bc4726f5d81aa18f63733d8c8&id=2366054da1"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-01",
+    "time": "12:30 PM - 2:00 PM",
+    "title": "Comprehensive Plan Focus Group: Community & Livability",
+    "location": "Rebekah Hall, Council Chambers",
+    "summary": "Comprehensive Plan Phase 2 focus group on the draft goals and objectives for community and livability. Join one or more sessions on the topics you care about.",
+    "source": "telluride",
+    "links": [
+      {
+        "label": "Community Questionnaire",
+        "href": "https://survey.alchemer.com/s3/9003580/Telluride-Comprehensive-Plan-Phase-2-Questionnaire"
+      },
+      {
+        "label": "Project page",
+        "href": "https://engagetelluride.org/2025-comprehensive-plan"
+      },
+      {
+        "label": "Sign up for updates",
+        "href": "https://telluride.us21.list-manage.com/subscribe?u=bc4726f5d81aa18f63733d8c8&id=2366054da1"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-01",
+    "time": "2:00 PM - 3:30 PM",
+    "title": "Comprehensive Plan Focus Group: Housing & Infrastructure",
+    "location": "Rebekah Hall, Council Chambers",
+    "summary": "Comprehensive Plan Phase 2 focus group on the draft goals and objectives for housing and infrastructure. Join one or more sessions on the topics you care about.",
+    "source": "telluride",
+    "links": [
+      {
+        "label": "Community Questionnaire",
+        "href": "https://survey.alchemer.com/s3/9003580/Telluride-Comprehensive-Plan-Phase-2-Questionnaire"
+      },
+      {
+        "label": "Project page",
+        "href": "https://engagetelluride.org/2025-comprehensive-plan"
+      },
+      {
+        "label": "Sign up for updates",
+        "href": "https://telluride.us21.list-manage.com/subscribe?u=bc4726f5d81aa18f63733d8c8&id=2366054da1"
+      }
+    ]
+  }
+];
+
+// ── Extra document buttons on a Gov Hub meeting card ──────────────────────────
+// Hand-curated. Keyed "source|date|title" exactly as those fields appear in
+// data/week-meetings.json, so a key survives only while the bot keeps naming
+// the meeting the same way — check the key if a button disappears.
+// Each value is a list of { label, href } rendered as outline buttons in the
+// meeting's action row, after Agenda Packet.
+const MEETING_LINKS = {
+  'telluride|2026-09-30|Special Town Council': [
+    { label: 'Appellants Brief',
+      href: 'https://livabletelluride.org/assets/Carhenge/appellants-pre-hearing-brief-2026-09-25.pdf' }
+  ]
+};
+
 const LAND_USE_ISSUES = {
   "carhenge":
-    {"lastUpdated":"2026-08-17","label":"Carhenge / Shandoka","heroImage":"https://ehq-production-us-california.imgix.net/6b1af98643c2eb1d96ea48d001eba309fb722ec3/original/1773791842/3923590257fa65a36b9b6893f6d1adc5_Carhenge-Lot-Header.png?auto=compress%2Cformat&w=1200","heroAlt":"Carhenge Lot Redevelopment site plan showing building layout, green spaces, and pedestrian connections","heroCredit":"Image: Town of Telluride / Engage Telluride","intro":"Two of the most significant in-town redevelopment projects are advancing simultaneously: Carhenge (700 W Pacific) and Shandoka (Lot L). Both propose replacing surface parking with mixed-use neighborhoods combining housing, community space, and structured parking through the PUD and subdivision process.","statusTitle":"Shandoka is the main item this week: HARC takes up Preliminary Large Scale hearings on all four buildings on August 19, with a 3:00 PM site walk on the lot beforehand. Carhenge has been continued to September.","statusCopy":"The two projects have swapped places. Shandoka has moved from a July 15 work session to formal Preliminary Large Scale review, split across two hearings: Buildings 1 and 2, then Buildings 3 and 4, on Town-owned Lot L at 860 Black Bear Rd, in the Accommodations 2 zone, with Design Workshop as applicant. Carhenge is not being heard: its Preliminary Large-Scale hearing on Buildings A, B and C, already continued from July 15, is continued again to a date in September still to be set. Story poles stood on the Shandoka lot in mid-August, and the drawings in the August 19 packet are substantially updated from what the public saw earlier. The open questions are unchanged: density, height and massing, what the units will actually cost, parking, traffic, and flood and groundwater.","nextStep":"HARC, Wednesday August 19: a site walk at 3:00 PM at 860 Black Bear Rd (the Shandoka Lot), then the hearing at 5:30 PM at Rebekah Hall, 113 W Columbia Ave, and on Zoom. Both are open to everyone. HARC reviews design: height, mass, scale, materials and context. Those are exactly the things still movable at this stage. We encourage you to share your thoughts on this parking garage and housing project with the Town Council as well, since Council makes the final call.","metrics":[{"label":"What to follow","value":"Affordable housing PUD -- but what kind of affordability?","sub":"Both projects are precedent-setting decisions, not routine site plans. Projects labeled workforce housing can still miss lower-income workers. The entitlement details matter."},{"label":"Best public moment","value":"P&Z work sessions and open houses","sub":"Massing, density, and code fit get defined before formal votes. Engage early."}],"timeline":[{"date":"Past","title":"Southwest Area Conceptual Plan sets the stage","copy":"SWAP and the Lift 7 Neighborhood Planning effort identified both sites as priority in-town redevelopment opportunities aligned with the Telluride Master Plan."},{"date":"Sep 2025","title":"Town Council endorses Shandoka Alternative 2","copy":"Council approved the preferred concept for Lot L: below-grade structured parking, separate residential buildings, childcare, transit-oriented commercial, and enhanced pedestrian circulation."},{"date":"Mar 2026","title":"Carhenge enters formal P&Z review; Shandoka holds open houses","copy":"Carhenge P&Z work session scheduled March 26 to review subdivision and PUD direction. Shandoka community open houses March 25-26 at Ah Haa School and Cowboy General Store."},{"date":"May 2026","title":"Chair 7 Coalition files legal challenges; Carhenge tabled to July 23","copy":"Through counsel Diane Wolfson (Sphere Law Firm), the Chair 7 Community Coalition submitted seven letters to the Town and P&Z opposing the Carhenge and Shandoka PUDs on parking, traffic, flood and groundwater, and Backman Village Plat grounds — all seven are linked under Key Documents below. At the May 29 hearing the Commission tabled the Carhenge application to the July 23, 2026 P&Z meeting; the Shandoka work session is set for June 25, 2026."},{"date":"Jul 6–17, 2026","title":"Story poles go up on the Carhenge lot","copy":"The Town erected story poles across the 700 W Pacific parking lot from July 6 to July 17 (closing the lot during that window) so residents could see the proposed building heights and massing before the formal hearings."},{"date":"Jul 15, 2026","title":"HARC public hearing on the eight buildings","copy":"The Historic & Architectural Review Commission held Preliminary Large-Scale public hearings on the proposed Buildings A, B, C, D1, D2, E1, E2 and E3 on Lots 34 and 34B — all new construction in the Accommodations 2 zone (outside the Historic Landmark District), with Design Workshop as applicant and the Town as owner. A Shandoka Lot work session followed."},{"date":"Jul 23, 2026","title":"P&Z takes up the subdivision and Conceptual PUD","copy":"Planning & Zoning hears the Carhenge Preliminary Large Scale Subdivision — consolidating Lots 34 and 34B into a single parcel of just over 15,000 sq ft — and a Conceptual PUD for the new construction, carried over from May. Formal PUD, Subdivision, and Large Scale Activity hearings, then Town Council, still lie ahead."},{"date":"Aug 19, 2026","title":"HARC hears Shandoka's four buildings; Carhenge slips to September","copy":"The Historic & Architectural Review Commission takes up Preliminary Large Scale applications for Shandoka Buildings 1 and 2 and Buildings 3 and 4 on Town-owned Lot L, preceded by a 3:00 PM site walk on the lot itself. The Carhenge Preliminary Large-Scale hearing on Buildings A, B and C, continued from July 15, is continued again to a date in September to be determined.","future":true}],"docs":[{"title":"HARC Agenda Packet: Shandoka Preliminary Large Scale (Aug 19, 2026)","copy":"The full packet for the August 19 hearing, including the substantially updated Shandoka drawings for Buildings 1 and 2 and Buildings 3 and 4. This is the current design of record. The earlier Alternative 2 concept below is what it replaced.","tag":"Shandoka","href":"https://telluride-co.civicweb.net/document/443013/"},{"title":"Carhenge Lot Ground Study (June 2026)","copy":"The Town-commissioned geotechnical and groundwater study of the 700 W Pacific site — directly relevant to the flood-zone and shallow-groundwater questions raised about the proposed below-grade parking.","tag":"Carhenge","href":"https://engagetelluride.org/32089/widgets/113355/documents/83231"},{"title":"C7CC — Summary of Legal Issues (June 2026)","copy":"Chair 7 Community Coalition overview of the seven legal letters its counsel (Diane Wolfson, Sphere Law Firm) filed opposing the Carhenge and Shandoka PUD applications — covering parking, traffic, flood and groundwater hazards, and the Backman Village Plat restrictions.","tag":"C7CC","href":"https://firebasestorage.googleapis.com/v0/b/telluride-gov-hub.firebasestorage.app/o/deep-dive-docs%2Fchair-7%2Fchair7-summary-of-legal-issues.pdf?alt=media&token=36937ed8-1f92-447f-b520-16cf94d56aa6"},{"title":"C7CC — Shandoka: Traffic (Letter to P&Z, May 28 2026)","copy":"Identifies trip generators the existing studies never modeled — a transit center and a childcare facility with high, concentrated peak-hour traffic — and asks the Commission to decline a favorable circulation finding without a development-specific traffic study.","tag":"C7CC","href":"https://firebasestorage.googleapis.com/v0/b/telluride-gov-hub.firebasestorage.app/o/deep-dive-docs%2Fchair-7%2Fchair7-shandoka-traffic.pdf?alt=media&token=26c50b31-37e2-476f-bddc-ceedcba8b784"},{"title":"C7CC — Carhenge: Parking (Letter to P&Z, May 27 2026)","copy":"Argues the 225–235 spaces understate Code requirements, and that the project relocates the roughly 288 intercept-parking spaces that justify its low one-space-per-unit minimum; asks P&Z to hold the application pending a real parking-demand analysis.","tag":"C7CC","href":"https://firebasestorage.googleapis.com/v0/b/telluride-gov-hub.firebasestorage.app/o/deep-dive-docs%2Fchair-7%2Fchair7-carhenge-parking.pdf?alt=media&token=7e69811d-e42b-4180-a6db-3f1573b9838f"},{"title":"C7CC — Carhenge: Traffic (Letter to P&Z, May 27 2026)","copy":"Contends the traffic record is inadequate — the 2020 study and 2025 update modeled a different project and never analyzed the 10,000 sq ft of commercial use or peak school hours — and notes the Davis Street / West Colorado Avenue exit is already failing at Level of Service F.","tag":"C7CC","href":"https://firebasestorage.googleapis.com/v0/b/telluride-gov-hub.firebasestorage.app/o/deep-dive-docs%2Fchair-7%2Fchair7-carhenge-traffic.pdf?alt=media&token=4f2ad7e8-7912-42d1-a2b2-94c6c42b5a2a"},{"title":"C7CC — Carhenge: Flood Hazards and Ground Water (Letter to P&Z, May 27 2026)","copy":"Flags that much of the site sits in FEMA Zone AE and a shallow-groundwater zone, yet the plan proposes multi-level basement parking — a configuration counsel argues is barred by NFIP rules and LUC Section 8-622.D, and that the project may not be buildable as drawn.","tag":"C7CC","href":"https://firebasestorage.googleapis.com/v0/b/telluride-gov-hub.firebasestorage.app/o/deep-dive-docs%2Fchair-7%2Fchair7-carhenge-flood-groundwater.pdf?alt=media&token=8c3550f6-8665-4803-bf43-470e9afeb9d4"},{"title":"C7CC — Carhenge: Backman Village Plat (Letter to Town of Telluride, May 27 2026)","copy":"Argues the Backman Village Plat caps Lots 34 and 34-B at 141 multifamily units versus the proposed 220–230, and that consolidating the lots requires a plat amendment needing unanimous owner consent the Coalition will withhold — which counsel calls a literally futile posture.","tag":"C7CC","href":"https://firebasestorage.googleapis.com/v0/b/telluride-gov-hub.firebasestorage.app/o/deep-dive-docs%2Fchair-7%2Fchair7-carhenge-backman-plat.pdf?alt=media&token=1f7eec13-01fc-4d9d-ad7a-f8eeb22b4147"},{"title":"C7CC — Shandoka: Backman Village Plat and 1987 Dedication Deed (Letter to Town of Telluride, May 27 2026)","copy":"The strongest Shandoka argument: the only permitted use for Lot L is parking to serve the surrounding lots, and a recorded 1987 Dedication Deed restricts it to public parking, transportation, access, and river and trail corridors — not the proposed housing, commercial space, or transit center.","tag":"C7CC","href":"https://firebasestorage.googleapis.com/v0/b/telluride-gov-hub.firebasestorage.app/o/deep-dive-docs%2Fchair-7%2Fchair7-shandoka-backman-plat.pdf?alt=media&token=43ec3390-a003-4fc5-8961-e6fc0e762af1"},{"title":"Carhenge P&Z Work Session Application (Mar 26, 2026)","copy":"Full application package for the Planning & Zoning work session.","tag":"Carhenge","href":"https://engagetelluride.org/32089/widgets/113355/documents/79175"},{"title":"Carhenge Site Plan (Mar 26, 2026)","copy":"Site plan drawings for the proposed redevelopment.","tag":"Carhenge","href":"https://engagetelluride.org/32089/widgets/113355/documents/79180"},{"title":"Carhenge Application Narrative","copy":"Project narrative describing the redevelopment concept and entitlement approach.","tag":"Carhenge","href":"https://engagetelluride.org/32089/widgets/113355/documents/79178"},{"title":"Letter of Authorization (Town of Telluride)","copy":"Signed authorization letter for the application.","tag":"Carhenge","href":"https://engagetelluride.org/32089/widgets/113355/documents/79181"},{"title":"Shandoka Lot Redevelopment -- Alternative 2 (PDF)","copy":"Full concept package for the Council-endorsed Alternative 2 design (29.5 MB).","tag":"Shandoka","href":"https://engagetelluride.org/32023/widgets/113083/documents/78970"}],"meetings":[{"date":"Aug 19, 2026","time":"3:00 PM","title":"Site Walk: Shandoka Lot, open to the public","source":"Town of Telluride","location":"860 Black Bear Rd (the Shandoka Lot)","href":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020","zoom":""},{"date":"Aug 19, 2026","time":"5:30 PM","title":"HARC: Shandoka Preliminary Large Scale, Buildings 1-4","source":"Town of Telluride","location":"Hybrid / Rebekah Hall, 113 W Columbia Ave","href":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020","zoom":""},{"date":"Aug 27, 2026","title":"Planning & Zoning Commission, next regular meeting","source":"Town of Telluride","location":"Hybrid / Rebekah Hall, 113 W Columbia Ave","href":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8102","zoom":""}],"players":[{"icon":"🏘️","title":"Town of Telluride / Design Workshop","copy":"Design Workshop leads the consultant team for both projects, handling site planning, architecture, infrastructure, and landscape design."},{"icon":"📐","title":"Planning & Zoning Commission","copy":"First major venue for density, compatibility, and code review. Carhenge work session March 26."},{"icon":"🏛️","title":"Town Council","copy":"Endorsed Shandoka Alternative 2 in September 2025. Will ultimately decide PUD and ordinance-level questions for both projects."},{"icon":"🧭","title":"Residents and community groups","copy":"C7CC and neighborhood residents supply the strongest real-world test of whether these projects solve the right problems."}],"news":[{"source":"Telluride Inside...and Out","date":"Jun 5, 2025","title":"Community Opportunities for Lift 7 & Gondola Station Planning","copy":"Town hosts events June 10-11 to gather feedback on transforming the Lift 7 base area into an affordable, pedestrian-friendly neighborhood.","href":"https://tellurideinside.com/2025/06/town-of-telluride-community-opportunities-for-lift-7-gondola-station-planning.html"},{"source":"Telluride News","date":"Apr 27, 2025","title":"Troubled by the communication surrounding Chair 7 redevelopment","copy":"Letter to the editor expressing concern about transparency and clarity in how the Chair 7 redevelopment project has been communicated to the community.","href":"https://www.telluridenews.com/letters_to_the_editor/article_639074ba-0d61-4cd9-9fc3-fc4ef2b206b3.html"},{"source":"Telluride News","date":"Oct 30, 2024","title":"Residents of Chair 7 neighborhood form community coalition","copy":"Neighbors in the Chair 7 area established the C7CC coalition (180+ members) to have a meaningful role in development plans for Carhenge and Shandoka.","href":"https://www.telluridenews.com/news/article_389e8d8c-9664-11ef-92b0-1b4c760901b6.html"},{"source":"Telluride News","date":"Sep 1, 2024","title":"Plan for Lift 7 area comes into focus","copy":"Emerging details on the development plan for the Lift 7 vicinity, including Carhenge and the Shandoka parking lot.","href":"https://www.telluridenews.com/news/article_b36a9c76-6807-11ef-8320-e798c816f268.html"},{"source":"Telluride News","date":"Jun 7, 2025","title":"Parking and People -- When is enough, enough?","copy":"Letter to the editor examining parking demand and whether current provisions meet community needs amid redevelopment plans.","href":"https://www.telluridenews.com/letters_to_the_editor/article_8e791e64-4b71-4ce7-8402-9828662eb5c1.html"},{"source":"Facebook","date":"Ongoing","title":"C7CC -- Chair 7 Community Coalition (Facebook Group)","copy":"Active community discussion group with 180+ members tracking Chair 7, Carhenge, and Shandoka development concerns.","href":"https://www.facebook.com/groups/1076276483955655"}],"sideBox":{"title":"What is it costing us?","copy":"Carhenge is a Town-funded project. Follow the public dollars — construction, debt service, and subsidy — in the cost & debt tracker.","label":"Open the cost tracker","href":"/projects-map/cost-tracker.html?project=Carhenge"}},
+    {"lastUpdated":"2026-10-26","label":"Carhenge / Shandoka","heroImage":"https://ehq-production-us-california.imgix.net/6b1af98643c2eb1d96ea48d001eba309fb722ec3/original/1773791842/3923590257fa65a36b9b6893f6d1adc5_Carhenge-Lot-Header.png?auto=compress%2Cformat&w=1200","heroAlt":"Carhenge Lot Redevelopment site plan showing building layout, green spaces, and pedestrian connections","heroCredit":"Image: Town of Telluride / Engage Telluride","intro":"Two of the most significant in-town redevelopment projects are advancing simultaneously: Carhenge (700 W Pacific) and Shandoka (Lot L). Both propose replacing surface parking with mixed-use neighborhoods combining housing, community space, and structured parking through the PUD and subdivision process.","statusTitle":"P&Z continued the Shandoka Preliminary PUD to December 17 on six conditions: information it wants before it votes. On Tuesday, October 27, Town Council takes up the resolution affirming the Carhenge lot consolidation.","statusCopy":"On October 22, Planning & Zoning held the public hearing on the Shandoka Preliminary PUD for Lot L (860 Black Bear Rd) and then voted not to decide it yet. The motion continues the hearing to December 17 pending six items: (1) cross-sections from Entrada, across the river and River Trail, through Buildings 3, 2 and 1 and across Black Bear Road to the Shandoka buildings, showing heights and the water table against the below-grade parking; (2) a snow-removal and pedestrian-safety plan; (3) an e-bike and EV charging plan; (4) options for high-clearance vehicles in the garage; (5) how much covered bike parking the site needs for current and new riders; and (6) how many vehicles and bicycles now park on Lots L and J, and which units are allocated parking there. The motion passed.\n\nStaff recommended approval with conditions: 80% of homes deed-restricted, at least 100 commuter and visitor spaces beyond replacing the 330 Shandoka and 288 Carhenge spaces and about 62 for the new uses, a 2,000 sq ft childcare center and a 1,353 sq ft food bank, the parking structure capped at 46 feet (48-foot peak) on about 2% of the site, Building 2 held to 35 feet along the river, site coverage of 53.8% (35.15% above grade), and the connected project capped at 194,359 sq ft. Staff also suggested writing in a minimum of 43 affordable units after the applicant committed on the record to 53 homes, 80% deed-restricted. Design Workshop said Building 1 has been cut 22% to about 154,800 sq ft, about 60% of the parking is now below grade, and all levels clear 8 feet 2 inches for ADA vans. It also said covered bike storage would grow from about 900 sq ft to about 1,600 sq ft, and that the childcare center would add capacity rather than replace an existing one. How many levels go below grade is still undecided. Going more than one level down needs a separate P&Z groundwater hearing, and the dewatering study modeled up to four levels.\n\nCommissioners pressed on several gaps. P&Z's conceptual condition that parking be free in perpetuity is gone from the motion; staff said parking policy belongs to Town Council, and the Town's attorney at the meeting said the code requires public parking, not free parking, so a \"free\" condition would likely draw a later PUD amendment. Several commissioners said residents and local commuters losing Carhenge need free parking anyway. The vehicle-ownership study P&Z asked for in July still hasn't been provided, because the Town hasn't supplied the data. Commissioners also raised taller vans and work trucks that won't fit the garage, overflowing bike sheds (one asked for at least 2,500 sq ft of covered bike parking), the groundwater a geotechnical report puts 3 to 5 feet below the surface, and snow and ice on the shaded site. Another objected that the Final PUD is reviewed by staff and the chair rather than the full board, which makes this the full Commission's last look. One commissioner opposed continuing, saying they had enough information and were not convinced the project meets the master plan's balance between parking and a pedestrian-oriented town.\n\nAbout eight residents spoke, in the room and on Zoom. They raised the Backman Village covenants and the Town Attorney determination they say LUC 5-202.C.3 requires; one entrance and exit for a garage of 800-plus cars on a powder day; snow on the garage roof; groundwater, and whether a dry monitoring year understates it; Building 1's size and shade on existing Shandoka homes; the longer walk from Carhenge; the dropped free-parking condition; and what the garage will cost. One speaker said 100 new spaces are no public benefit if they cost $50 million. The applicant answered that repeated traffic studies show the network works with restriping at Davis and Colorado, that license-plate readers keep the garage entrance moving, and that groundwater has been monitored continuously since June 2025. HARC has not yet reviewed the current design; its Shandoka hearings are continued to November 18.\n\nOn Carhenge, Town Council's October 27 consent calendar, which requires recusals, carries the resolution that puts its September 30 decision in writing. Council voted 3–1 that day to affirm P&Z's consolidation of Lots 34 and 34B into a single Lot 34AB, and the dissenting member said the Backman Village covenants were not factored into P&Z's findings. That evening HARC approved none of the three Carhenge design applications, unanimously directed significant reductions in mass and scale, and continued them to December.","nextStep":"Tuesday, October 27, 10:00 AM: Town Council at Rebekah Hall, 113 W Columbia Ave, and on Zoom. The Carhenge resolution is consent-calendar item 7.b, which has no set time on the agenda. Send written comment to townclerk@telluride.gov. The packet deadline (noon Wednesday, October 21) has passed, so comments now reach Council under separate cover. Shandoka returns to HARC on Wednesday, November 18, and to P&Z on Thursday, December 17, both at 5:30 PM. Neither agenda has been posted yet.","metrics":[{"label":"What to follow","value":"Affordable housing PUD -- but what kind of affordability?","sub":"Both projects are precedent-setting decisions, not routine site plans. Projects labeled workforce housing can still miss lower-income workers. The entitlement details matter."},{"label":"Best public moment","value":"Shandoka back before P&Z Dec 17","sub":"P&Z wants cross-sections, water-table data, snow, charging and parking counts before it votes. The height, coverage and parking variations will be decided at that hearing, so comment matters most there."}],"timeline":[{"date":"Past","title":"Southwest Area Conceptual Plan sets the stage","copy":"SWAP and the Lift 7 Neighborhood Planning effort identified both sites as priority in-town redevelopment opportunities aligned with the Telluride Master Plan."},{"date":"Sep 2025","title":"Town Council endorses Shandoka Alternative 2","copy":"Council approved the preferred concept for Lot L: below-grade structured parking, separate residential buildings, childcare, transit-oriented commercial, and enhanced pedestrian circulation."},{"date":"Mar 2026","title":"Carhenge enters formal P&Z review; Shandoka holds open houses","copy":"Carhenge P&Z work session scheduled March 26 to review subdivision and PUD direction. Shandoka community open houses March 25-26 at Ah Haa School and Cowboy General Store."},{"date":"May 2026","title":"Chair 7 Coalition files legal challenges; Carhenge tabled to July 23","copy":"Through counsel Diane Wolfson (Sphere Law Firm), the Chair 7 Community Coalition submitted seven letters to the Town and P&Z opposing the Carhenge and Shandoka PUDs on parking, traffic, flood and groundwater, and Backman Village Plat grounds — all seven are linked under Key Documents below. At the May 29 hearing the Commission tabled the Carhenge application to the July 23, 2026 P&Z meeting; the Shandoka work session is set for June 25, 2026."},{"date":"Jul 6–17, 2026","title":"Story poles go up on the Carhenge lot","copy":"The Town erected story poles across the 700 W Pacific parking lot from July 6 to July 17 (closing the lot during that window) so residents could see the proposed building heights and massing before the formal hearings."},{"date":"Jul 15, 2026","title":"HARC public hearing on the eight buildings","copy":"The Historic & Architectural Review Commission held Preliminary Large-Scale public hearings on the proposed Buildings A, B, C, D1, D2, E1, E2 and E3 on Lots 34 and 34B — all new construction in the Accommodations 2 zone (outside the Historic Landmark District), with Design Workshop as applicant and the Town as owner. A Shandoka Lot work session followed."},{"date":"Jul 23, 2026","title":"P&Z takes up the subdivision and Conceptual PUD","copy":"Planning & Zoning hears the Carhenge Preliminary Large Scale Subdivision — consolidating Lots 34 and 34B into a single parcel of just over 15,000 sq ft — and a Conceptual PUD for the new construction, carried over from May. Formal PUD, Subdivision, and Large Scale Activity hearings, then Town Council, still lie ahead."},{"date":"Aug 19, 2026","title":"HARC hears Shandoka's four buildings; Carhenge slips to September","copy":"The Historic & Architectural Review Commission takes up Preliminary Large Scale applications for Shandoka Buildings 1 and 2 and Buildings 3 and 4 on Town-owned Lot L, preceded by a 3:00 PM site walk on the lot itself. The Carhenge Preliminary Large-Scale hearing on Buildings A, B and C, continued from July 15, is continued again to a date in September to be determined."},{"date":"Sep 30, 2026","title":"Council affirms the Carhenge lot consolidation; HARC sends the design back","copy":"With three members recused, Town Council voted 3–1 to affirm P&Z's July 23 approval consolidating Lots 34 and 34B and directed special counsel to draft a resolution memorializing the decision. That evening HARC approved none of the three Carhenge design applications, unanimously directing significant reductions in mass and scale, the removal of fourth-story elements, and a dedicated pedestrian bridge, and continued all three to December."},{"date":"Oct 21, 2026","title":"Shandoka HARC hearings continued to November 18","copy":"HARC's hearings on Shandoka Buildings 1 and 2 and Buildings 3 and 4 are continued without discussion to the November 18 HARC meeting."},{"date":"Oct 22, 2026","title":"P&Z continues the Shandoka Preliminary PUD to December 17 on six conditions","copy":"After a hearing of more than three hours, Planning & Zoning voted to continue the Shandoka Preliminary PUD to December 17 instead of approving it as staff recommended. Before it votes, P&Z wants six things: cross-sections from Entrada across the site to the Shandoka buildings showing heights and the water table against the below-grade parking; a snow-removal and pedestrian-safety plan; an e-bike and EV charging plan; options for high-clearance vehicles; how much covered bike parking is needed; and counts of the vehicles and bicycles now parking on Lots L and J and of the units allocated parking there. P&Z's earlier condition that parking be free was left to Town Council, and the vehicle-ownership data it asked for in July has still not been provided."},{"date":"Oct 27, 2026","title":"Council resolution puts the Carhenge consolidation decision in writing","copy":"Town Council's consent calendar, with recusals required, carries the resolution affirming P&Z's July 23 approval consolidating Lots 34 and 34B into Lot 34AB. It is the written record of Council's 3–1 vote on September 30.","future":true},{"date":"Nov 18, 2026","title":"HARC takes up Shandoka's four buildings","copy":"The hearings on Shandoka Buildings 1 and 2 and Buildings 3 and 4, continued from October 21, are set for the November 18 HARC meeting.","future":true},{"date":"Dec 17, 2026","title":"Shandoka Preliminary PUD returns to P&Z","copy":"The continued Preliminary PUD hearing, with the information P&Z requested on October 22.","future":true}],"docs":[{"title":"P&Z Hearing Recording: Shandoka Preliminary PUD (Oct 22, 2026)","copy":"The Town's video of the October 22 hearing, including the Commission's deliberation and the motion continuing the Preliminary PUD to December 17 with six requests for more information.","tag":"Shandoka","href":"https://www.youtube.com/watch?v=jzRVXoqZaec"},{"title":"P&Z Agenda Packet: Shandoka Preliminary PUD (Oct 22, 2026)","copy":"The 260-page packet for the October 22 hearing: the staff memo recommending approval with conditions, the proposed motion, the requested height, site-coverage and floor-area variations, the parking breakdown (804 spaces in Phase 1, 86 more in Phase 2), the traffic study and the groundwater memo.","tag":"Shandoka","href":"https://telluride-co.civicweb.net/document/446322/"},{"title":"Appellants' Pre-Hearing Brief — Carhenge Appeal (Sep 25, 2026)","copy":"Filed by Sphere Law Firm for Karen Stratman, Lu Holland and the Chair 7 Community Coalition in the appeal of the July 23 P&Z approval. Argues LUC 5-202.C.3 required the Town Attorney to determine the applicant's right to submit before the application reached P&Z, and that the record contains no such determination. Asks Council to reverse or remand, and to leave the validity of the Backman Village Plat and Covenants to the courts.","tag":"C7CC","href":"https://livabletelluride.org/assets/Carhenge/appellants-pre-hearing-brief-2026-09-25.pdf"},{"title":"Applicant's Pre-Hearing Brief — Carhenge Appeal (Sep 16, 2026)","copy":"The Town's answer to the appeal, filed by Reginald Nubine of Kaplan Kirsch as counsel for the Town of Telluride — owner of Lots 34 and 34B, applicant and real party in interest, with Design Workshop as its authorized representative. Argues P&Z made findings supported by competent record evidence, that criteria it found inapplicable were not waived, and that the Backman Village covenants did not deprive P&Z of jurisdiction because a private property dispute belongs in \"the forum authorized to decide private property rights.\" Asks Council to affirm.","tag":"Town","href":"https://telluride-co.civicweb.net/document/445180/"},{"title":"HARC Agenda Packet: Carhenge Preliminary Large Scale (Sep 30, 2026)","copy":"The full 170-page packet for the September 30 HARC hearing, covering all eight buildings across three separate applications. The applicant reports compliance on every dimensional line and requests no PUD variations.","tag":"Carhenge","href":"https://telluride-co.civicweb.net/document/445284/"},{"title":"HARC Agenda Packet: Shandoka Preliminary Large Scale (Aug 19, 2026)","copy":"The full packet for the August 19 hearing, including the substantially updated Shandoka drawings for Buildings 1 and 2 and Buildings 3 and 4. This is the current design of record. The earlier Alternative 2 concept below is what it replaced.","tag":"Shandoka","href":"https://telluride-co.civicweb.net/document/443013/"},{"title":"Carhenge Lot Ground Study (June 2026)","copy":"The Town-commissioned geotechnical and groundwater study of the 700 W Pacific site — directly relevant to the flood-zone and shallow-groundwater questions raised about the proposed below-grade parking.","tag":"Carhenge","href":"https://engagetelluride.org/32089/widgets/113355/documents/83231"},{"title":"C7CC — Summary of Legal Issues (June 2026)","copy":"Chair 7 Community Coalition overview of the seven legal letters its counsel (Diane Wolfson, Sphere Law Firm) filed opposing the Carhenge and Shandoka PUD applications — covering parking, traffic, flood and groundwater hazards, and the Backman Village Plat restrictions.","tag":"C7CC","href":"https://firebasestorage.googleapis.com/v0/b/telluride-gov-hub.firebasestorage.app/o/deep-dive-docs%2Fchair-7%2Fchair7-summary-of-legal-issues.pdf?alt=media&token=36937ed8-1f92-447f-b520-16cf94d56aa6"},{"title":"C7CC — Shandoka: Traffic (Letter to P&Z, May 28 2026)","copy":"Identifies trip generators the existing studies never modeled — a transit center and a childcare facility with high, concentrated peak-hour traffic — and asks the Commission to decline a favorable circulation finding without a development-specific traffic study.","tag":"C7CC","href":"https://firebasestorage.googleapis.com/v0/b/telluride-gov-hub.firebasestorage.app/o/deep-dive-docs%2Fchair-7%2Fchair7-shandoka-traffic.pdf?alt=media&token=26c50b31-37e2-476f-bddc-ceedcba8b784"},{"title":"C7CC — Carhenge: Parking (Letter to P&Z, May 27 2026)","copy":"Argues the 225–235 spaces understate Code requirements, and that the project relocates the roughly 288 intercept-parking spaces that justify its low one-space-per-unit minimum; asks P&Z to hold the application pending a real parking-demand analysis.","tag":"C7CC","href":"https://firebasestorage.googleapis.com/v0/b/telluride-gov-hub.firebasestorage.app/o/deep-dive-docs%2Fchair-7%2Fchair7-carhenge-parking.pdf?alt=media&token=7e69811d-e42b-4180-a6db-3f1573b9838f"},{"title":"C7CC — Carhenge: Traffic (Letter to P&Z, May 27 2026)","copy":"Contends the traffic record is inadequate — the 2020 study and 2025 update modeled a different project and never analyzed the 10,000 sq ft of commercial use or peak school hours — and notes the Davis Street / West Colorado Avenue exit is already failing at Level of Service F.","tag":"C7CC","href":"https://firebasestorage.googleapis.com/v0/b/telluride-gov-hub.firebasestorage.app/o/deep-dive-docs%2Fchair-7%2Fchair7-carhenge-traffic.pdf?alt=media&token=4f2ad7e8-7912-42d1-a2b2-94c6c42b5a2a"},{"title":"C7CC — Carhenge: Flood Hazards and Ground Water (Letter to P&Z, May 27 2026)","copy":"Flags that much of the site sits in FEMA Zone AE and a shallow-groundwater zone, yet the plan proposes multi-level basement parking — a configuration counsel argues is barred by NFIP rules and LUC Section 8-622.D, and that the project may not be buildable as drawn.","tag":"C7CC","href":"https://firebasestorage.googleapis.com/v0/b/telluride-gov-hub.firebasestorage.app/o/deep-dive-docs%2Fchair-7%2Fchair7-carhenge-flood-groundwater.pdf?alt=media&token=8c3550f6-8665-4803-bf43-470e9afeb9d4"},{"title":"C7CC — Carhenge: Backman Village Plat (Letter to Town of Telluride, May 27 2026)","copy":"Argues the Backman Village Plat caps Lots 34 and 34-B at 141 multifamily units versus the proposed 220–230, and that consolidating the lots requires a plat amendment needing unanimous owner consent the Coalition will withhold — which counsel calls a literally futile posture.","tag":"C7CC","href":"https://firebasestorage.googleapis.com/v0/b/telluride-gov-hub.firebasestorage.app/o/deep-dive-docs%2Fchair-7%2Fchair7-carhenge-backman-plat.pdf?alt=media&token=1f7eec13-01fc-4d9d-ad7a-f8eeb22b4147"},{"title":"C7CC — Shandoka: Backman Village Plat and 1987 Dedication Deed (Letter to Town of Telluride, May 27 2026)","copy":"The strongest Shandoka argument: the only permitted use for Lot L is parking to serve the surrounding lots, and a recorded 1987 Dedication Deed restricts it to public parking, transportation, access, and river and trail corridors — not the proposed housing, commercial space, or transit center.","tag":"C7CC","href":"https://firebasestorage.googleapis.com/v0/b/telluride-gov-hub.firebasestorage.app/o/deep-dive-docs%2Fchair-7%2Fchair7-shandoka-backman-plat.pdf?alt=media&token=43ec3390-a003-4fc5-8961-e6fc0e762af1"},{"title":"Carhenge P&Z Work Session Application (Mar 26, 2026)","copy":"Full application package for the Planning & Zoning work session.","tag":"Carhenge","href":"https://engagetelluride.org/32089/widgets/113355/documents/79175"},{"title":"Carhenge Site Plan (Mar 26, 2026)","copy":"Site plan drawings for the proposed redevelopment.","tag":"Carhenge","href":"https://engagetelluride.org/32089/widgets/113355/documents/79180"},{"title":"Carhenge Application Narrative","copy":"Project narrative describing the redevelopment concept and entitlement approach.","tag":"Carhenge","href":"https://engagetelluride.org/32089/widgets/113355/documents/79178"},{"title":"Letter of Authorization (Town of Telluride)","copy":"Signed authorization letter for the application.","tag":"Carhenge","href":"https://engagetelluride.org/32089/widgets/113355/documents/79181"},{"title":"Shandoka Lot Redevelopment -- Alternative 2 (PDF)","copy":"Full concept package for the Council-endorsed Alternative 2 design (29.5 MB).","tag":"Shandoka","href":"https://engagetelluride.org/32023/widgets/113083/documents/78970"}],"meetings":[{"date":"Oct 27, 2026","time":"10:00 AM","title":"Town Council: Resolution affirming the Carhenge lot consolidation (consent item 7.b)","source":"Town of Telluride","location":"Hybrid / Rebekah Hall, 113 W Columbia Ave","href":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045","zoom":"https://us06web.zoom.us/meeting/register/DaEVzy_NTsub9PbJHzPwTg"},{"date":"Nov 18, 2026","time":"5:30 PM","title":"HARC: Shandoka Buildings 1–2 and 3–4 (continued from Oct 21; agenda not yet posted)","source":"Town of Telluride","location":"Rebekah Hall, 113 W Columbia Ave","href":"","zoom":""},{"date":"Dec 17, 2026","time":"5:30 PM","title":"P&Z: Shandoka Preliminary PUD (continued from Oct 22; agenda not yet posted)","source":"Town of Telluride","location":"Rebekah Hall, 113 W Columbia Ave","href":"","zoom":""}],"players":[{"icon":"🏘️","title":"Town of Telluride / Design Workshop","copy":"Design Workshop leads the consultant team for both projects, handling site planning, architecture, infrastructure, and landscape design."},{"icon":"📐","title":"Planning & Zoning Commission","copy":"Approved the Carhenge lot consolidation July 23 (affirmed by Council September 30). Continued the Shandoka Preliminary PUD on October 22 to December 17, pending more information."},{"icon":"🏛️","title":"Town Council","copy":"Endorsed Shandoka Alternative 2 in September 2025 and affirmed the Carhenge lot consolidation 3–1 on September 30, 2026. Will ultimately decide PUD and ordinance-level questions for both projects."},{"icon":"🧭","title":"Residents and community groups","copy":"C7CC and neighborhood residents supply the strongest real-world test of whether these projects solve the right problems."}],"news":[{"source":"Telluride Inside...and Out","date":"Jun 5, 2025","title":"Community Opportunities for Lift 7 & Gondola Station Planning","copy":"Town hosts events June 10-11 to gather feedback on transforming the Lift 7 base area into an affordable, pedestrian-friendly neighborhood.","href":"https://tellurideinside.com/2025/06/town-of-telluride-community-opportunities-for-lift-7-gondola-station-planning.html"},{"source":"Telluride News","date":"Apr 27, 2025","title":"Troubled by the communication surrounding Chair 7 redevelopment","copy":"Letter to the editor expressing concern about transparency and clarity in how the Chair 7 redevelopment project has been communicated to the community.","href":"https://www.telluridenews.com/letters_to_the_editor/article_639074ba-0d61-4cd9-9fc3-fc4ef2b206b3.html"},{"source":"Telluride News","date":"Oct 30, 2024","title":"Residents of Chair 7 neighborhood form community coalition","copy":"Neighbors in the Chair 7 area established the C7CC coalition (180+ members) to have a meaningful role in development plans for Carhenge and Shandoka.","href":"https://www.telluridenews.com/news/article_389e8d8c-9664-11ef-92b0-1b4c760901b6.html"},{"source":"Telluride News","date":"Sep 1, 2024","title":"Plan for Lift 7 area comes into focus","copy":"Emerging details on the development plan for the Lift 7 vicinity, including Carhenge and the Shandoka parking lot.","href":"https://www.telluridenews.com/news/article_b36a9c76-6807-11ef-8320-e798c816f268.html"},{"source":"Telluride News","date":"Jun 7, 2025","title":"Parking and People -- When is enough, enough?","copy":"Letter to the editor examining parking demand and whether current provisions meet community needs amid redevelopment plans.","href":"https://www.telluridenews.com/letters_to_the_editor/article_8e791e64-4b71-4ce7-8402-9828662eb5c1.html"},{"source":"Facebook","date":"Ongoing","title":"C7CC -- Chair 7 Community Coalition (Facebook Group)","copy":"Active community discussion group with 180+ members tracking Chair 7, Carhenge, and Shandoka development concerns.","href":"https://www.facebook.com/groups/1076276483955655"}],"sideBox":{"title":"What is it costing us?","copy":"Carhenge is a Town-funded project. Follow the public dollars — construction, debt service, and subsidy — in the cost & debt tracker.","label":"Open the cost tracker","href":"/projects-map/cost-tracker.html?project=Carhenge"}},
 
-  "society":
-    {"lastUpdated":"2026-06-01","label":"Society Turn / Valley Floor Entrance","heroImage":"https://img1.wsimg.com/isteam/ip/3f388f66-602e-4c3d-940c-27e48680fdb9/Society%20Turn%20Aerial.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1200,cg:true","heroAlt":"Aerial view of the Society Turn development site along Highway 145 between Telluride and Mountain Village","heroCredit":"Image: societyturn.info","intro":"A 19.7-acre mixed-use PUD by Genesee Properties along Highway 145, west of the Society Turn Roundabout. The project bundles a regional hospital site, wastewater expansion, employee housing, medical offices, retail, hotel, and conference facilities -- raising questions about total scale, traffic, wildfire evacuation, and whether one project is being used to justify a broader build-out at the valley entrance.","statusTitle":"Society Turn remains a high-consequence regional development issue.","statusCopy":"Even when framed around public-serving uses, the project raises larger questions about total scale, traffic, wildfire evacuation, environmental limits, and whether one project is being used to justify a much broader build-out.","nextStep":"Track BOCC, Town Council, and any hospital-district discussions that tie facility needs to the larger site plan.","metrics":[{"label":"Primary tension","value":"Public benefit vs. total development scale","sub":"The public-facing rationale and the full project footprint may not be the same thing."},{"label":"Regional concern","value":"Traffic and emergency access","sub":"The site sits at a sensitive gateway for movement in and out of the valley."},{"label":"Best source","value":"Full packets and development summaries","sub":"Do not rely on summary language alone; the details matter."}],"timeline":[{"date":"2021","title":"Sketch PUD approved by County Commissioners","copy":"Planning Commission reviewed and recommended approval of the Sketch PUD for the 19.7-acre Genesee Properties parcel. BOCC approved."},{"date":"Recent","title":"Preliminary PUD/Subdivision phase begins; public scrutiny grows","copy":"The project advances toward Preliminary PUD while residents focus on total build-out scale, traffic at the roundabout, and wildfire evacuation concerns."},{"date":"Now","title":"The issue is no longer just one project","copy":"It has become a referendum on development scale, sequencing, and whether infrastructure and environmental analysis are keeping up."},{"date":"Next","title":"Watch for hearings, revised site materials, and hospital-related tie-ins","copy":"The most important developments may come through linked public bodies, not just one jurisdiction.","future":true}],"docs":[{"title":"Society Turn PUD Information","copy":"Developer site with aerial imagery, project features, community benefits, and mixed-use development details.","tag":"Developer","href":"https://societyturn.info/"},{"title":"San Miguel County CivicClerk Portal","copy":"Best place to look for county-side packets, work sessions, and supporting development materials.","tag":"County Record","href":"https://sanmiguelcoco.portal.civicclerk.com/"},{"title":"County Commissioners Page","copy":"Track BOCC agendas and board-level movement on major regional items.","tag":"BOCC","href":"https://sanmiguelcountyco.gov/192/Board-of-County-Commissioners"},{"title":"Telluride Medical Center Board Meetings","copy":"Useful when hospital facility planning overlaps with Society Turn discussions.","tag":"Hospital","href":"https://www.tellmed.org/board-meetings"}],"players":[{"icon":"🏗️","title":"Project sponsors and consultants","copy":"Control project framing, phasing, and how public benefits are presented."},{"icon":"🌲","title":"County decision-makers","copy":"Central to land-use approval, code fit, and regional public process."},{"icon":"🏥","title":"Hospital district leadership","copy":"Their participation can heavily influence how the project is perceived and justified."},{"icon":"🚗","title":"Regional commuters and residents","copy":"They bear the real-world consequences of traffic, access, and gateway-scale growth."}]},
+  "medcenter":
+    {"lastUpdated":"2026-09-27","label":"Telluride Medical Center","heroImage":"https://img1.wsimg.com/isteam/ip/3f388f66-602e-4c3d-940c-27e48680fdb9/Society%20Turn%20Aerial.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1200,cg:true","heroAlt":"Aerial view of the Society Turn parcel along Highway 145, the site secured for a new Telluride medical facility","heroCredit":"Image: societyturn.info","intro":"The Telluride Hospital District spent years planning to leave its current clinic and build a new regional medical center at Society Turn. Then the landowner of the existing site reopened the door. The district is now weighing two futures at once — in the middle of a leadership change, partnership talks with a large multi-state health system, and a land deal that makes it the public face of a development it does not control. Almost none of it has been decided in public.","statusTitle":"Two sites, one budget, and a board in transition. The landowner of the current clinic has offered to extend a lease that was supposed to end in 2032, while the Society Turn relocation plan continues on its own track.","statusCopy":"For most of the planning process the premise was simple: the lease on the current building runs out and the district moves to Society Turn. On March 31, 2026, Board Chair Dr. Thomas Crabtree told the community that premise had changed — the owners \"are now open to discussing our continuing use of the property in some fashion for decades to come.\" The board said it would gather more information, canvass stakeholders, price a remodel, and decide whether to \"proceed with both sites in some fashion or proceed with the plan to relocate all services to Society Turn.\"\n\nSince then two other things have moved. On September 11 the board took a presentation from CommonSpirit Health on a potential partnership, with Letter of Intent talks already underway on the new facility. On September 17 it held a one-hour special meeting whose only substantive item was the interim leadership of the medical center — executive session under the personnel exemption, then public action. No packet was posted for either meeting.","nextStep":"Watch the Telluride Hospital District board. The decisions that matter — whether to keep the current clinic, what a CommonSpirit partnership would commit the district to, and who runs the organization — are being made at board meetings, most of which post no materials in advance. Meetings are held in person and on Zoom, and public comment comes at the top of the agenda.","metrics":[{"label":"The hospital's share of the project","value":"About 10%","sub":"The medical facility is roughly 44,000 sq ft of a mixed-use PUD of about 400,000 sq ft. The district receives about 2.6 acres essentially free — valued at $1–2 million — and in exchange becomes the public justification for a project it does not control."},{"label":"The rent on the current clinic","value":"$10 a year","sub":"The district leases roughly 10,000 sq ft — a remodeled residential building — from Newmont Mining, successor to Idarado Mining Co. The lease had been set to end in 2032."},{"label":"How the new building is to be paid for","value":"Philanthropy, not taxes","sub":"The district says construction is \"expected to be fully funded through philanthropy,\" through a phased capital campaign, without increasing the existing mill levy. No public cost estimate has been released."}],"timeline":[{"date":"2019","title":"District and landowner begin looking for a new home","copy":"The hospital district and the private landowner of the current clinic site start exploring a relocation, and the district begins evaluating candidate sites for a new facility."},{"date":"2021","title":"County approves the Society Turn Sketch PUD","copy":"San Miguel County Commissioners approve the Sketch PUD for the 19.7-acre Genesee Properties parcel along Highway 145 west of the Society Turn roundabout — a mixed-use project that bundles a regional hospital site with wastewater expansion, employee housing, medical offices, retail, hotel and conference space."},{"date":"2025","title":"Planning task force reports; land secured at Society Turn","copy":"A district task force working with healthcare planning firm Jensen Partners completes about six months of analysis. Land at Society Turn — about 2.6 acres, conveyed essentially free and valued at $1–2 million — is secured through an MOU with Genesee Partners. The plan forecasts roughly 15,000 primary care visits and 4,500 emergency visits a year, with an on-site helipad, space for mobile MRI, and facilities for telehealth and visiting specialists."},{"date":"Nov 2025","title":"Question 300 fails","copy":"Telluride voters reject the citizens' charter amendment that would have required a public vote on Town projects costing $10 million or more, 62.80% to 37.20%. Opponents campaigned in part on the delay it would cause the Society Turn medical facility — one of several projects the measure would have sent back to the ballot."},{"date":"Late 2025","title":"Society Turn PUD advances toward final county approval","copy":"The Preliminary PUD and subdivision process moves through San Miguel County, with the project reported as having completed four of five approval steps. Residents press on total build-out scale, on traffic studies that relied on March 2020 data taken during the COVID lockdown, and on the absence of any wildfire evacuation analysis for a site at the valley's single entry and exit point."},{"date":"Mar 31, 2026","title":"The landowner reopens the current site","copy":"Board Chair Dr. Thomas Crabtree tells the community that the owners of the existing clinic property, rather than ending the lease as planned, \"are now open to discussing our continuing use of the property in some fashion for decades to come.\" The board commits to canvassing stakeholders, pricing a remodel, and deciding whether to pursue both sites or relocate entirely."},{"date":"Sep 11, 2026","title":"CommonSpirit Health presents to the board","copy":"A single-item work session: a presentation from CommonSpirit Health on a potential partnership with the district, with Letter of Intent talks already underway on the new facility project. No packet or supporting materials were posted in advance, so the scope and terms are not public. Discussion only; no board action scheduled."},{"date":"Sep 17, 2026","title":"Special meeting on interim leadership","copy":"A one-hour special board meeting with a single substantive item: the interim leadership of Telluride Regional Medical Center. The board went into executive session under the personnel exemption and then returned to take public action on who runs the organization in the near term.","future":false}],"docs":[{"title":"Facility Planning Update from Dr. Thomas Crabtree, THD Board Chair (Mar 31, 2026)","copy":"The update in which the board chair discloses that the owners of the current clinic property are open to extending the district's use \"for decades to come,\" and sets out the choice between keeping both sites and relocating entirely to Society Turn.","tag":"Hospital District","href":"https://www.tellmed.org/2026-03-31-facility-planning-update-from-dr-thomas-crabtree-thd-board-chair"},{"title":"Planning Advances for the Future of Healthcare in Telluride (Mar 26, 2026)","copy":"The district's own account of the task force work with Jensen Partners: projected visit volumes, the helipad and mobile MRI, the phased capital campaign, and the commitment to fund construction through philanthropy without raising the mill levy.","tag":"Hospital District","href":"https://www.tellmed.org/2026-03-26-planning-advances-for-the-future-of-healthcare-in-telluride"},{"title":"Telluride Hospital District Board Meetings","copy":"Agendas, packets and Zoom links for the board that is making these decisions. Many meetings post no materials in advance — the agenda itself is often the only notice of what will be taken up.","tag":"Hospital District","href":"https://www.tellmed.org/board-meetings"},{"title":"Telluride Hospital District Board of Directors","copy":"Who sits on the elected board of the special district, and how to reach them.","tag":"Hospital District","href":"https://www.tellmed.org/board-of-directors"},{"title":"Society Turn PUD Information","copy":"The developer's information site for the 19.7-acre Genesee Properties mixed-use PUD at the valley entrance, which contains the parcel secured for the medical facility.","tag":"Society Turn","href":"https://societyturn.info/"},{"title":"San Miguel County CivicClerk Portal","copy":"County agendas and packets — the venue for the Society Turn PUD approvals and any further land-use action at the site.","tag":"County","href":"https://sanmiguelcoco.portal.civicclerk.com/"},{"title":"San Miguel County Board of County Commissioners","copy":"The body that approved the Sketch PUD in 2021 and the PUD in late 2025.","tag":"County","href":"https://sanmiguelcountyco.gov/192/Board-of-County-Commissioners"}],"meetings":[],"players":[{"icon":"🏥","title":"Telluride Hospital District Board","copy":"An elected special-district board. It controls the facility decision, the partnership talks, and the leadership of the medical center. Most of its consequential discussion happens in work sessions and executive session."},{"icon":"⛏️","title":"Newmont Mining (successor to Idarado)","copy":"Owns the land under the current clinic and leases it to the district for $10 a year. Its willingness to extend past 2032 is what reopened the two-site question."},{"icon":"🚗","title":"Regional residents and commuters","copy":"Surveys cited during the Measure 300 campaign found most residents did not know the hospital was only about 10% of the Society Turn footprint, or that the full project ran to roughly 400,000 sq ft. Traffic, access and evacuation at the valley entrance land on them."},{"icon":"🏗️","title":"Genesee Partners","copy":"Developer of the 19.7-acre Society Turn PUD. The district's land there is held through an MOU, so the medical facility's site sits inside someone else's larger mixed-use project."},{"icon":"🩺","title":"CommonSpirit Health","copy":"A large multi-state health system in Letter of Intent talks with the district over a partnership tied to the new facility. Terms have not been made public."},{"icon":"🗳️","title":"Voters and donors","copy":"The district is funded by an existing mill levy and says the building will be paid for by philanthropy. That makes donors, not taxpayers, the decisive constituency for the new facility — and leaves voters with the board election as their main lever."}],"news":[{"source":"Telluride Hospital District","date":"Mar 31, 2026","title":"Facility Planning Update from Dr. Thomas Crabtree","copy":"The board chair discloses the landowner's reversal and the resulting choice between one site and two.","href":"https://www.tellmed.org/2026-03-31-facility-planning-update-from-dr-thomas-crabtree-thd-board-chair"},{"source":"Telluride Daily Planet","date":"Nov 2025","title":"The people decided: Question 300 goes down in Election Night landslide","copy":"Voters reject the $10 million project-vote charter amendment 62.80% to 37.20%; the Society Turn medical facility was among the projects opponents said it would delay.","href":"https://www.telluridenews.com/news/article_35dd1724-f906-4f32-872f-b1199ef798a6.html"},{"source":"Telluride Daily Planet","date":"Mar 2026","title":"Planning advances for the future of healthcare in Telluride","copy":"The district's task force findings, the Society Turn site, and the plan to fund construction through philanthropy.","href":"https://www.telluridenews.com/news_release/article_eedf4291-aaa6-4adf-af75-0e0f69427e05.html"},{"source":"Telluride Daily Planet","date":"2019","title":"Med center may have new site","copy":"Early coverage of the district and the landowner exploring a relocation from the clinic the district leases for $10 a year.","href":"https://www.telluridenews.com/business/article_2c4377f2-6deb-11e9-af87-77fcdf281f89.html"}],"sideBox":{"title":"What we could not confirm","copy":"The district has not published minutes for the September 11 work session or the September 17 special meeting on interim leadership, has not released a cost estimate for the new facility, and has not said whether a CommonSpirit letter of intent was signed or whether the current lease has actually been extended. If you have those documents, we would like to see them.","label":"Send us a document","href":"mailto:info@livabletelluride.org?subject=Telluride%20Medical%20Center%20deep%20dive"}},
 
   "code":
     {"lastUpdated":"2026-07-19","label":"Code Changes & Accelerated Review","heroImage":"/assets/ssr/SMC-Housing-Code-Update-infographic.jpg","heroAlt":"San Miguel County Housing Code Update infographic showing Phase 1 Project Foundation (Fall/Winter 2025), Phase 2 Issue Identification & Analysis (Spring 2026), and Phase 3 Final Audit Report and Code Drafting (Summer 2026).","heroCredit":"Source: San Miguel County Housing Code Update project page","heroAspect":"tall","legalSummary":"The current LUCA Draft (April 8, 2026) would create a 90-day \"Accelerated Housing Review\" track. Compared to the SSR's recommendations, the County's draft removes (1) language identifying the program as voluntary, (2) the exclusion of PUDs that involve rezoning or subdivision, (3) a 10-unit project-size cap, and (4) the requirement that review default to a two-step Planning-Commission-plus-BOCC process. The redline (linked above) shows SSR additions in blue and County deletions in red.","legalIssuesTitle":"Concerns with the County's draft","legalIssuesSub":"Specific places where the County's April 8 LUCA Draft removed or weakened SSR-recommended limits on the Accelerated Housing Review process.","intro":"Code reform is often where the biggest long-term land-use changes happen, because one ordinance can affect every future project, not just one site, for better or worse. The most active local example right now is the San Miguel County Housing Code Update, a 15-month land use code audit being shaped by an appointed Stakeholder Strategic Roundtable (SSR).","statusTitle":"The Final Code Audit Report is out -- the first full picture of the proposed Land Use Code changes.","statusCopy":"San Miguel County is undertaking a comprehensive land use code audit (June 2025 -- Sept 2026) funded by a Colorado Proposition 123 Local Planning Capacity Grant. The Stakeholder Strategic Roundtable (SSR) -- a mix of County staff, planning commissioners, school and housing officials, and 12 appointed community members -- meets monthly to review existing housing policies and shape draft amendments. The County notes this work also positions it for Proposition 123 \"Fast Track Approval\" funding, but does NOT satisfy SB24-174, which still requires a separate Housing Action Plan by January 1, 2028. If review timelines shorten or approval standards shift through this code audit, the practical balance between faster housing production and meaningful public review, environmental protection, and growth management changes for years to come.","nextStep":"Read the Final Code Audit Report (public draft, July 2026) on the County project page -- it contains the actual proposed code amendments, zone by zone. The SSR meets again July 27. Comments go to housingupdate@sanmiguelcountyco.gov before the Planning Commission and BOCC take up adoption this fall.","controversyUpdate":{"date":"May 14, 2026","heading":"May 14 Planning Commission — Fast Track Review","packetHref":"/assets/packets/planning-commission-2026-05-14-packet.pdf","points":[{"label":"Why it is before the Commission now","text":"San Miguel County must adopt a qualifying fast-track review process by June 30, 2026 to access Proposition 123 planning and infrastructure grant funds this fiscal year. Missing the June 30 window pushes the deadline to December 31 — and risks losing eligibility altogether. Planning Director Kaye Simonson drafted the amendment; it is Agenda Item 7 at the May 14 Planning Commission meeting, with a Commission recommendation to the BOCC expected."},{"label":"What the amendment actually does","text":"Eligible projects — those with at least 50% deed-restricted affordable units (rental at or below 120% AMI, for-sale at or below 200% AMI) — would receive a guaranteed 90-day review window. Critically, the amendment does NOT change substantive Land Use Code standards, does not obligate the County to approve any project, and does not allow more market-rate housing. It compresses only the review timeline, not the approval criteria."},{"label":"SSR position: 5 of 7 members opposed","text":"At its April 27 meeting the Stakeholder Strategic Roundtable weighed in. Five of seven members opposed moving the amendment forward as Phase 1. Their objections: the County is rushing the fast-track piece ahead of comprehensive code reform; the draft drops the 10-unit project-size cap the SSR had recommended; and other code amendments should be adopted before any accelerated pathway is created for large projects. Two members were in favor."},{"label":"Public comment: 9 submitted, all in opposition","text":"Every public comment received before the May 14 meeting opposed the amendment. Commenters — Morgan Smith, Nick Farkouh, Pam Bennett, Scott Bennett, Shellie Duplan (Aldasoro Ranch HOA), Emily Masson, Jolana Vankova, Lauren Murray, and Virginia Lucarelli — raised consistent themes: complete the broader code reform before creating a fast-track; restore the project-size limit; ensure meaningful public notice and hearing rights are not eroded."},{"label":"The core dispute","text":"The County's position is that the fast-track amendment should come first (Phase 1) to protect grant eligibility while the broader code reform continues in parallel. The SSR majority and virtually all public commenters argue the reverse: finish the comprehensive code overhaul first, then build a fast-track pathway inside a reformed framework with the right safeguards in place. The Planning Commission must decide whether the June 30 grant deadline justifies front-loading the fast-track before those safeguards exist."}]},"metrics":[{"label":"Big question","value":"Speed vs. scrutiny","sub":"How much process should be compressed in the name of housing delivery?"},{"label":"Who is affected","value":"Every future applicant and every future neighbor","sub":"Code amendments are system rules, not one-off exceptions."},{"label":"Best tactic","value":"Read the draft language","sub":"The text of the amendment matters more than the summary memo."}],"timeline":[{"date":"Past","title":"Housing pressure pushes governments toward procedural reform","copy":"Fast-track review and code cleanup become recurring policy tools in response to affordability pressure, even as many residents worry about cumulative growth effects."},{"date":"June 2025","title":"SMC Housing Code Update kicks off after Regional Housing Needs Assessment","copy":"San Miguel County launches a 15-month land use code audit funded by Colorado's Proposition 123 Local Planning Capacity Grant, targeting regulatory barriers in unincorporated areas and implementing East End Master Plan recommendations."},{"date":"Summer 2025","title":"Community Listening Sessions and Code Review begin","copy":"First series of community listening sessions held October 6-8, 2025; second series held December 8, 2025. SSR formed to advise staff and consultants on housing policy and code amendments."},{"date":"Fall 2025 - Apr 2026","title":"SSR meetings 1-5 review existing housing regulations","copy":"The Stakeholder Strategic Roundtable meets monthly (October, December, January, March, April) to review the Community Housing Zone designation and other housing-related rules. Each meeting packet and high-level summary is posted in the project document center."},{"date":"Now -- Spring 2026","title":"Community Review of Draft Code Amendments","copy":"Draft amendments developed over winter are now open for community review. This is the engagement window where the actual ordinance text becomes concrete and residents can weigh in on specifics rather than concepts."},{"date":"Apr 27, 2026","title":"SSR takes position on Accelerated Housing Review: 5 to 2 opposed","copy":"Five of seven SSR members voted against advancing the Accelerated Housing Review amendment as Phase 1, citing the missing project-size limit, wanting comprehensive reform first, and concern that the fast-track is being created before adequate safeguards are in place."},{"date":"May 14, 2026","title":"Planning Commission considers Accelerated Housing Review amendment (Agenda Item 7)","copy":"All 9 public comments received were in opposition. SSR voted 5-2 against advancing as Phase 1. Commission recommendation goes to BOCC. County's June 30 Prop 123 grant deadline drives the timing."},{"date":"Jun 3, 2026","title":"County adopts the Prioritized Housing Review program","copy":"To hold its Proposition 123 eligibility, the BOCC adopted the fast-track review ahead of the broader code reform -- with customizations: rental eligibility at or below 120% AMI, for-sale at or below 200% AMI, a County-specific list of eligible (and ineligible) application types, and confirmation that all other code standards still apply."},{"date":"Jul 2026","title":"Final Code Audit Report (public draft) released -- the proposed code changes arrive","copy":"The consultant team's report lays out the actual proposed Land Use Code amendments: cut by-right minimum lot sizes from 35 acres to 7 (Low Density), 3 (Medium), and 2 (High); raise by-right density to current PUD levels and add deed-restriction density bonuses (25% bonus at 37% deed-restricted units, 35% at 38-50%, 50% plus 10 ft of height at 51%+); halve setbacks in LD/MD/HD; allow duplexes and townhomes wherever single-family homes are allowed; make ADUs by-right and raise their cap to 1,000 sq ft; expand cottage housing, cohousing, and tiny-home allowances; rewrite the Community Housing zone (3,000 sq ft dwelling cap, 40-45 ft height tiers for affordability and net-zero); and reduce reliance on the 18-36 month PUD process. Rejected ideas include parking-minimum changes, fee waivers, and open-space reductions."},{"date":"Jul 16, 2026","title":"SSR meeting six digs into density and workforce housing types","copy":"The Stakeholder Strategic Roundtable worked through zoning, density, and housing types -- condos, cottages, townhomes -- against a projected need of roughly 1,100 units countywide by 2030 (207 in unincorporated areas). Density bonuses for deed-restricted projects drew interest; no recommendations were finalized."},{"date":"Summer-Fall 2026","title":"Planning Commission and BOCC Work Sessions, then Final Presentations","copy":"After community review, the Planning Commission and Board of County Commissioners hold work sessions on draft amendments, followed by final code amendment presentations in the fall.","future":true},{"date":"Winter 2026","title":"Adoption process for the final code amendments","copy":"The County moves to formal adoption of the updated land use code, completing the 15-month process. Adopted text -- not the summary -- is what governs every future application.","future":true}],"news":[{"source":"Telluride Times","date":"Jul 19, 2026","title":"Stakeholders discuss housing density","copy":"Coverage of the SSR's sixth meeting (July 16): workforce housing types, zoning, and density against a projected countywide need of ~1,100 units by 2030 -- with density bonuses for deed-restricted projects on the table and no recommendations finalized yet.","href":"https://www.telluridenews.com/news/article_3fa56ff6-1d64-4c3b-b271-0802fcb74db2.html"}],"docs":[{"title":"Final Code Audit Report & Recommendations (public draft, July 2026)","copy":"The full proposed Land Use Code changes -- lot sizes, density and bonuses, setbacks, housing types, the Community Housing zone rewrite, and Appendix A code redlines. Posted in the project document center.","tag":"Key Document","href":"https://www.sanmiguelcountyco.gov/882/Housing-Code-Update"},{"title":"May 14, 2026 Planning Commission Packet — Agenda Item 7: Accelerated Housing Review","copy":"Full PC packet for the May 14 meeting, including staff memo, proposed amendment text, SSR April 27 meeting recap, and all 9 public comments received — all in opposition. This is the most current record of where the amendment stands before the Commission vote.","tag":"May 14 PC Packet","href":"https://sanmiguelcoco.portal.civicclerk.com/"},{"title":"Accelerated Housing Review LUCA Draft (April 8, 2026)","copy":"The actual draft code amendment text the County is currently moving forward. This is the single most important document: every rule in this draft becomes law if adopted. Read this BEFORE the redline below to see where the County landed.","tag":"Flagship Draft","href":"/assets/ssr/14055-document-14055.pdf"},{"title":"SSR-vs-County redline (offline copy)","copy":"Mirror of the redlined Accelerated Housing Review draft, with SSR additions in BLUE and County deletions in RED. Stored on this site so it stays available even if SMC moves or removes the original. Use this to see exactly what the SSR recommended versus what the County kept.","tag":"Redline (mirror)","href":"assets/ssr/Accelerated-Housing-Review-LUCA-redline-SSR-vs-County.pdf"},{"title":"April SSR No. 5 Meeting Packet","copy":"Fifth and most recent SSR meeting packet (April 2026). High-level summary not yet posted by SMC at the time of writing.","tag":"SSR No. 5","href":"/assets/ssr/14206-April-SSR-No-5-Meeting-Packet.pdf"},{"title":"March SSR No. 4 Meeting Packet","copy":"Fourth SSR meeting packet (March 2026). This is where the Accelerated Housing Review draft language was substantively reworked.","tag":"SSR No. 4","href":"/assets/ssr/13938-March-SSR-No-4-Meeting-Packet.pdf"},{"title":"March SSR No. 4 Meeting High-Level Summary","copy":"Short summary of what was discussed and decided at SSR No. 4.","tag":"SSR No. 4 Summary","href":"/assets/ssr/14065-March-SSR-No-4-Meeting-High-Level-Summary.pdf"},{"title":"January SSR No. 3 Meeting Packet","copy":"Third SSR meeting packet (January 2026).","tag":"SSR No. 3","href":"/assets/ssr/13846-January-SSR-No-3-Meeting-Packet.pdf"},{"title":"January SSR No. 3 Meeting High-Level Summary","copy":"Short summary of what was discussed and decided at SSR No. 3.","tag":"SSR No. 3 Summary","href":"/assets/ssr/13883-January-SSR-No-3-High-Level-Summary.pdf"},{"title":"December SSR No. 2 Meeting Packet","copy":"Second SSR meeting packet (December 2025).","tag":"SSR No. 2","href":"/assets/ssr/13733-December-SSR-No-2-Meeting-Packet.pdf"},{"title":"December SSR No. 2 Meeting High-Level Summary","copy":"Short summary of what was discussed and decided at SSR No. 2.","tag":"SSR No. 2 Summary","href":"/assets/ssr/13810-December-SSR-No-Meeting-High-Level-Summary.pdf"},{"title":"October SSR No. 1 Meeting Packet","copy":"First SSR meeting packet (October 2025). Typically the largest packet because it sets up baseline existing-code review.","tag":"SSR No. 1","href":"/assets/ssr/13732-October-SSR-No-1-Meeting-Packet.pdf"},{"title":"October SSR No. 1 Meeting High-Level Summary","copy":"Short summary of what was discussed and decided at SSR No. 1.","tag":"SSR No. 1 Summary","href":"/assets/ssr/13734-October-SSR-No-1-Meeting-High-Level-Summary.pdf"},{"title":"BOCC Presentation -- Community Engagement Plan","copy":"Presentation given to the Board of County Commissioners describing the Housing Code Update community engagement strategy.","tag":"BOCC","href":"/assets/ssr/13339-BOCC-Presentation-Community-Engagement-Plan-PDF.pdf"},{"title":"Community Engagement Plan","copy":"Full Community Engagement Plan describing how the County intends to gather public input throughout the code update.","tag":"Plan","href":"/assets/ssr/13340-Community-Engagement-Plan-PDF.pdf"},{"title":"San Miguel County Housing Code Update (project page)","copy":"Official SMC project page -- timeline, listening sessions, SSR roster, document center, and Spanish-language information. The canonical entry point for everything happening in this code audit.","tag":"SMC Project Page","href":"https://www.sanmiguelcountyco.gov/882/Housing-Code-Update"},{"title":"San Miguel County Land Use Code (Accelerated Housing Review)","copy":"The current Land Use Code language that the Accelerated Housing Review draft would amend. Useful for comparing existing rules against the proposed changes.","tag":"Existing Code","href":"/assets/ssr/14055-document-14055.pdf"},{"title":"San Miguel County CivicClerk Portal","copy":"Source for BOCC and Planning Commission packets, staff memos, and joint work sessions where this code update will be debated and ultimately adopted.","tag":"CivicClerk","href":"https://sanmiguelcoco.portal.civicclerk.com/"},{"title":"Submit comments to the SSR","copy":"Email housingupdate@sanmiguelcountyco.gov. Comments received by noon a week before a meeting go into the meeting packet; by noon the day before go to the meeting body; later is held until next meeting.","tag":"Public Comment","href":"mailto:housingupdate@sanmiguelcountyco.gov"}],"legalIssues":[{"icon":"⚖️","title":"3-1501 -- the County removed language identifying the program as voluntary","copy":"The SSR draft kept the phrase \"in order to receive financial assistance from the State of Colorado\" before the requirement to provide an Accelerated Housing Review. The County removed it. Nothing in C.R.S. 29-32-105 actually requires this 90-day review -- it is a precondition for one funding stream (Proposition 123). Colorado HB26-1360 has eliminated Prop 123 funding for this fiscal year and it may be eliminated again. As written, the County's draft reads as a mandate when in fact the program is voluntary tied to a discretionary funding source."},{"icon":"🏗️","title":"3-1501 / eligible-vs-ineligible -- new PUDs with rezoning or subdivision could be fast-tracked","copy":"The SSR draft excluded \"Planned Unit Development approval or amendment that includes zoning approval or subdivision of land\" from the 90-day track -- the same language used by the State of Colorado. The County's draft strikes that exclusion AND removes \"approval that does not involve rezoning or subdivision of land\" from the eligible-projects clause. Read together, the County draft would let a brand-new PUD that requires both rezoning and subdivision proceed through 90-day administrative review, which can apply to projects of any size (see issue 5)."},{"icon":"🗺️","title":"3-1501 ineligible list -- \"Initial Zoning or Rezoning\" deleted","copy":"The County's draft strikes \"Initial Zoning or Rezoning\" from the list of project types ineligible for accelerated review. Combined with the change above, this signals that rezoning is now permitted within a 90-day administrative review for both PUDs and other developments. The change is consequential by omission rather than statement."},{"icon":"📋","title":"3-1503 -- the two-step process backstop is removed","copy":"The SSR draft kept the language \"Unless an alternate process is specified in the Land Use Code, the Accelerated Housing Review process shall be a Two-Step process (review by the Planning Commission + Board of County Commissioners).\" The County's draft strikes that line entirely. With it gone, the Code does not specify who reviews these applications, what notice is given to neighbors, or whether the public has a hearing -- it could become a fully administrative one-step process. The draft should specify the actual procedure."},{"icon":"📐","title":"Article 7 Definitions -- the 10-unit cap and contiguous-land limit are deleted","copy":"The SSR draft included \"No project that includes more than ten (10) total units may be considered for Accelerated Housing Review\" along with rules requiring the application to encompass the whole contiguous parcel and preventing future fast-track applications on the same land. The County's draft strikes the entire paragraph. Nothing in Proposition 123 requires the fast-track process to apply to projects of any size. As drafted, a 200-unit development could move through 90-day review with limited or no public notice -- a far different posture than the small-project framing the SSR proposed."}],"players":[{"icon":"📜","title":"Planning staff and consultants","copy":"They draft and shape the first version of the ordinance language and run the SSR process day-to-day."},{"icon":"🌲","title":"County Planning Commission and BOCC","copy":"They translate policy goals into enforceable rules and hold the final adoption vote on draft amendments."},{"icon":"🏠","title":"Housing advocates and neighborhood critics","copy":"Both tend to agree the rules matter -- they just disagree on what problem the rules should solve first."},{"icon":"⚖️","title":"Future applicants and objectors","copy":"They inherit whatever approval framework gets adopted now."}],"roster":{"title":"Stakeholder Strategic Roundtable (SSR)","subtitle":"Appointed by San Miguel County to advise on the Housing Code Update. The SSR adheres to a charter with consensus-seeking norms and a 70% super-majority for formal \"temperature-check\" statements; recap, slide deck, and audio are posted within 72 hours of each meeting.","groups":[{"label":"SSR Project Team","members":[{"name":"Drea Araiza","role":"Housing Specialist, San Miguel County staff"},{"name":"Hallie Bevan-Simpson","role":"County Planning Commission"},{"name":"Jarrod Biggs","role":"Deputy County Manager, San Miguel County staff"},{"name":"John Miller","role":"Telluride Ski and Golf"},{"name":"Drew Nelson","role":"Housing Director, Town of Mountain Village"},{"name":"John Pandolfo","role":"Superintendent, Telluride School District R-1"},{"name":"Kaye Simonson","role":"Planning Director, San Miguel County staff"},{"name":"Lee Taylor","role":"County Planning Commission"},{"name":"James Van Hooser","role":"Community Housing Manager, Town of Telluride"},{"name":"Lance Waring","role":"Board of County Commissioners"}]},{"label":"Appointed Individuals","members":[{"name":"Danny Craft"},{"name":"Tony Daranyi"},{"name":"Elaine Demas"},{"name":"Nick Farkouh"},{"name":"Peter Johnson"},{"name":"Nina Kothe"},{"name":"Amy Levek"},{"name":"Paul Major"},{"name":"Stefanie Solomon"},{"name":"Jason Soules"},{"name":"Kathrine Warren"},{"name":"Anna Wilson"}]}]}},
@@ -1126,8 +1668,6 @@ const LAND_USE_ISSUES = {
   "diamond":
     {"lastUpdated":"2026-06-01","label":"Diamond Ridge","heroImage":"/images/Diamond%20Ridge.jpg","intro":"Diamond Ridge is a 105-acre property on Deep Creek Mesa near the Telluride Airport that San Miguel County and the Town of Telluride purchased for $7.2M with plans for high-density affordable housing using a newly created high-density zone district called the CH Zone that allows for 20 units per acre. Neighboring landowners challenged the rezoning and won twice in court -- first on due process and illegal spot zoning grounds, then on a PUD interpretation that further restricts development. A $5M state grant expired due to the County's failed legal strategy. Despite neighboring landowners and many community members requesting discussions about the property's future, the Town and County have not held public discussions, and the land remains idle.","statusTitle":"The courts ruled the County broke its own rules -- twice.","statusCopy":"In 2022, the BOCC rushed through a rezone of 39 acres of the Diamond Ridge property from protected Forestry/Agricultural land to the CH Zone. The district court found that County Commissioner Hilary Cooper helped engineer the purchase and rezone behind the scenes, and therefore, when she refused to recuse herself from a vote on rezoning, the County denied landowners proper due process. The court also found the rezone was illegal spot zoning that ignored the Master Plan. The Town and County believe the 39 acres to be separate from the encompassing 1991 Aldasoro PUD plan, which restricts development to one home per 35 acres, and therefore made no attempt to rezone the remaining 66 acres of undisputedly PUD-protected land. Neighboring property owners dispute this belief. In a second 2024 ruling, the court confirmed that the Diamond Ranch lots are part of the 1991 Aldasoro PUD, meaning they are restricted to one home per 35 acres. However, in a later decision by a new judge on the case, the court did find the 39 acres not to be subject to the 1991 PUD. Neighboring property owners have appealed this ruling, and the County subsequently appealed the PUD ruling but has not attempted a new rezoning.","nextStep":"Watch for the outcome of the appeals of the PUD-related rulings, and whether the County attempts any new rezoning or development strategy.","metrics":[{"label":"Core tension","value":"Government bypassed its own zoning rules to fast-track development","sub":"The County invented a new high-density zone and applied it to protected open space -- the court found it violated due process and the Master Plan."},{"label":"What the courts found","value":"Two rulings vindicating the landowners","sub":"Dec. 2022: rezoning vacated for commissioner bias and illegal spot zoning. June 2024: Diamond Ranch lots confirmed within the 1991 Aldasoro PUD, restricting development to 35-acre lots."}],"timeline":[{"date":"1991","title":"Aldasoro Ranch PUD Plan protects the area as open space","copy":"The Sheep Ranch area (now Diamond Ranch) is zoned Forestry/Agricultural with 35-acre minimum lots, Department of Wildlife building site approval required, and a RETA for transportation mitigation -- protections landowners relied on when purchasing property."},{"date":"2021","title":"BOCC quietly creates a new high-density zone district called the CH (Community Housing) Zone","copy":"San Miguel County amends the Land Use Code to create the Community Housing zone allowing up to 20 units per acre -- the polar opposite of the F/Ag zoning that had protected the area for decades. The entire process was conducted by Zoom during the COVID lockdowns, with no public participation. Text messages later revealed this was coordinated with the Town's purchase plan."},{"date":"2022","title":"Only three months after adopting the CH Zone, an application to rezone Diamond Ridge is completed, and the rezone is rushed through over objections; court strikes it down","copy":"Despite a formal recusal request, Commissioner Cooper -- who had privately coordinated the purchase and rezone with the Town -- voted to approve the rezone 3-0. Neighboring landowners sued. In December 2022, Judge Patrick ruled in favor of the neighboring landowners and vacated (nullified) the rezone, finding a due process violation and illegal spot zoning."},{"date":"2023","title":"$5M state grant expires; landowners offer to buy the property","copy":"The County's failed legal strategy costs taxpayers the $5M DOLA housing grant, which expires in November 2023. Area residents offer $6.15M to purchase the property -- nearly the full purchase price -- but the County and Town refuse to sell."},{"date":"2024","title":"Second court victory: Diamond Ranch confirmed within Aldasoro PUD","copy":"In June 2024, Judge Patrick rules that the Diamond Ranch lots are part of the 1991 PUD's unified plan of development, meaning they are restricted to one home per 35-acre lot. The County announces it will appeal rather than accept the ruling."},{"date":"2026","title":"Order of Judgment: the disputed parcel ruled NOT part of the 1991 PUD","copy":"In a March 2026 Order of Judgment, a new judge (D. Cory Jackson) enters judgment for the Town and County on the landowners' declaratory claim. The court holds that \"Parcel C\" -- the disputed ~39 acres the County sought to rezone -- is NOT part of the 1991 Aldasoro PUD, so the governments are not required to comply with C.R.S. 24-67-106 or bring a condemnation action to clear the PUD restrictions. The court reasoned the 1991 PUD covered the separate \"Sheep Ranch\" subdistrict, that Parcel C was platted later (1995) from separately purchased acreage, and that the 2000 PUD Assignment Agreement expressly excluded Parcel C. Neighboring landowners are appealing. Case No. 2023CV30044."},{"date":"Next","title":"Appeals pending","copy":"The County is appealing the June 2024 PUD determination. If the appeal fails, it would further solidify the existing development restrictions that landowners have fought to preserve. Neighboring property owners are appealing the ruling that the distinct 39 acres the County and Town sought to rezone is not subject to the 1991 PUD's unified plan of development.","future":true}],"docs":[{"title":"Order of Judgment — Parcel C & the 1991 PUD (March 2026)","copy":"A new judge (D. Cory Jackson) enters final judgment for the Town and County on the landowners' C.R.C.P. 57 declaratory claim, holding that \"Parcel C\" -- the disputed ~39 acres the County sought to rezone -- is NOT part of the 1991 Aldasoro PUD, so the governments need not comply with C.R.S. 24-67-106 or bring a condemnation action to clear PUD restrictions. The court reasoned the 1991 PUD covered the separate \"Sheep Ranch,\" that Parcel C was platted later (1995), and that the 2000 PUD Assignment Agreement expressly excluded it. The landowners are appealing. Case No. 2023CV30044.","tag":"Court Order 2026","href":"/assets/Diamond%20Ridge/diamond-order-judgment-2026.pdf"},{"title":"Plaintiffs' Opening Brief in Support of Declaratory Relief (with Exhibits)","copy":"Landowners' opening brief seeking declaratory relief, filed Dec 16, 2024, including the full exhibit record (large file).","tag":"Brief Dec 2024","href":"/assets/Diamond%20Ridge/diamond-declaratory-opening-brief-2024.pdf"},{"title":"Order RE: Petition for Review — Aldasoro PUD (June 2024)","copy":"Court rules in favor of landowners: Diamond Ranch lots are part of the 1991 Aldasoro PUD unified plan of development. BOCC's contrary interpretation vacated. Case No. 23CV30044.","tag":"Court Order 2024","href":"/assets/Diamond%20Ridge/diamond-order-petition-review-2024.pdf"},{"title":"Plaintiffs' Reply Brief (C.R.C.P. 106(a) Relief)","copy":"Landowners' reply brief in support of C.R.C.P. 106(a) relief (Case No. 23CV30044), May 20, 2024.","tag":"Reply May 2024","href":"/assets/Diamond%20Ridge/diamond-reply-brief-2024.pdf"},{"title":"County's Answer Brief","copy":"San Miguel County's answer brief responding to the landowners' Rule 106 petition (Case No. 23CV30044), May 6, 2024.","tag":"Answer May 2024","href":"/assets/Diamond%20Ridge/diamond-answer-brief-2024.pdf"},{"title":"Plaintiffs' Opening Brief (Rule 106 Review)","copy":"Landowners' opening brief in the C.R.C.P. 106(a)(4) review of the BOCC's Diamond Ridge rezone (Case No. 23CV30044), April 4, 2024.","tag":"Brief Apr 2024","href":"/assets/Diamond%20Ridge/diamond-opening-brief-2024.pdf"},{"title":"Order RE: Rule 106(a)(4) Review — Rezoning (Dec 2022)","copy":"Court rules in favor of landowners: BOCC's rezoning of Diamond Ridge vacated on two grounds -- Commissioner Cooper's participation violated due process, and the rezone constituted illegal spot zoning inconsistent with the Master Plan. Case No. 22CV30023.","tag":"Court Order 2022","href":"/assets/Diamond%20Ridge/diamond-order-106a-review-2022.pdf"},{"title":"San Miguel County CivicClerk Portal","copy":"County-level records including BOCC agendas and Diamond Ridge development materials.","tag":"County Record","href":"https://sanmiguelcoco.portal.civicclerk.com/"}],"legalIssues":[{"icon":"⚖️","title":"Commissioner bias and due process violation","copy":"Text messages showed Commissioner Cooper privately coordinated the purchase and rezone with the Town's representative, advocated declaring an \"emergency\" to rush the process, and then refused to recuse when the matter came before the BOCC. The court found she prejudged the outcome and deprived landowners of a fair hearing."},{"icon":"🗺️","title":"Illegal spot zoning in violation of the Master Plan","copy":"The court found the rezone was incompatible with the comprehensive zoning plan. The Master Plan designates the area as Low Density Residential Cluster (1 unit per 6-8 acres), but the CH zone allows up to 20 units per acre. The court said this bore no relation to the original purpose of the Diamond Ridge PUD."},{"icon":"📋","title":"PUD protections upheld over County objections","copy":"In a second case, the court confirmed that Diamond Ranch lots are part of the 1991 Aldasoro PUD's unified plan of development -- entitling landowners to the protections they bargained for, including 35-acre minimum lots and Department of Wildlife building site approval."},{"icon":"💰","title":"Taxpayer cost of the County's failed strategy","copy":"The County and Town spent $7.2M of public funds on land that remains undeveloped. A $5M DOLA grant expired in November 2023 because the County's rezoning was struck down. When area residents offered $6.15M to buy the property back, the County refused."}],"players":[{"icon":"🏛️","title":"San Miguel County BOCC","copy":"Created the CH zone, approved the rezoning despite a recusal request, and continues to appeal rather than accept the court's rulings protecting existing land use protections."},{"icon":"🏔️","title":"Town of Telluride","copy":"Co-purchaser of Diamond Ridge. Town Program Director Lance McDonald submitted the rezoning application and coordinated with Commissioner Cooper behind the scenes before the public hearing process."},{"icon":"🏠","title":"Deep Creek Mesa / neighboring landowners","copy":"Prevailed in both court challenges -- Bennett v. Vickers (rezoning) and Lucarelli v. BOCC (PUD interpretation). Offered $6.15M to purchase the property and resolve the dispute, but the offer was refused."},{"icon":"👨‍⚖️","title":"Judge J. Steven Patrick","copy":"Ruled in favor of landowners in both cases -- vacating the rezoning in 2022 and confirming Diamond Ranch lots within the Aldasoro PUD in 2024."}],"news":[{"source":"Telluride News","date":"Jul 14, 2024","title":"County to appeal court's land-use ruling on Aldasoro PUD","href":"https://www.telluridenews.com/news/article_5b4df0c2-4180-11ef-aaa5-5b37f7e2a039.html","copy":"Rather than accept a second court loss, San Miguel County announces it will appeal the June 2024 ruling confirming Diamond Ranch lots are protected by the 1991 Aldasoro PUD."},{"source":"Telluride News","date":"Jan 5, 2024","title":"No talks to sell Diamond Ridge property, town says","href":"https://www.telluridenews.com/news/article_1f11df86-a9d4-11ee-b2a1-5fbbd91a6830.html","copy":"Despite losing in court, officials refuse a $6.15M offer from neighboring residents -- nearly the full purchase price -- choosing to hold land they cannot legally develop under current rulings."},{"source":"Telluride News","date":"Nov 17, 2023","title":"State to reallocate grant that was for Diamond Ridge housing project","href":"https://www.telluridenews.com/news/article_48fa9492-85a2-11ee-82bd-7f691ab62966.html","copy":"DOLA reallocates the $5M grant after the County's illegal rezoning was struck down -- a direct consequence of the BOCC's failure to follow its own land use rules."},{"source":"Telluride News (Release)","date":"Nov 15, 2023","title":"State grant for Diamond Ridge housing initiative expires due to litigation delays","href":"https://www.telluridenews.com/news_release/article_09d4da6e-856d-11ee-b27b-a752864d23d8.html","copy":"The $5M DOLA grant officially expires, with funds redirected to other Colorado communities whose housing projects followed proper process."},{"source":"Telluride News","date":"May 5, 2023","title":"Judge: 'Spot zoning' remains illegal for Diamond Ridge project","href":"https://www.telluridenews.com/news/article_04f0e2ae-ead6-11ed-b6cb-4bdfb53b3196.html","copy":"Court reaffirms its December 2022 ruling that the Diamond Ridge rezoning was illegal spot zoning, rejecting the County's attempts to revisit the decision."},{"source":"Telluride News (Opinion)","date":"Jan 12, 2023","title":"The Diamond Ridge fiasco","href":"https://www.telluridenews.com/opinion/article_4e695f38-9144-11ed-8109-efe6161caf94.html","copy":"Opinion piece examining how the County's disregard for process and existing protections led to a costly legal defeat and a stalled housing project."},{"source":"Telluride News","date":"Jan 2, 2023","title":"Legal ruling reverses Diamond Ridge rezone","href":"https://www.telluridenews.com/news/article_85c1c148-8be3-11ed-aaca-0fd1af7ae3da.html","copy":"Judge Patrick's December 2022 order vacates the BOCC's rezoning, vindicating landowners who argued the process was tainted by commissioner bias and violated the Master Plan."},{"source":"Telluride News","date":"Jul 22, 2022","title":"Deep Creek group files lawsuit over zoning decision","href":"https://www.telluridenews.com/news/article_793756f6-094b-11ed-abf3-131792480868.html","copy":"Neighboring landowners take the only recourse available to them -- a Rule 106(a)(4) petition challenging the BOCC's rezoning after their recusal request was ignored."},{"source":"Telluride News","date":"May 20, 2022","title":"Commissioners approve rezone of Diamond Ridge","href":"https://www.telluridenews.com/news/article_eac5e9fa-d704-11ec-8e24-e7d9f2a0067d.html","copy":"BOCC votes 3-0 to rezone 39 acres from F/Ag to Community Housing despite a formal recusal request -- Commissioner Cooper, who privately coordinated the plan, refuses to step aside."},{"source":"Telluride News","date":"May 11, 2022","title":"Commissioner's recusal sought ahead of hearing","href":"https://www.telluridenews.com/news/article_9e0337f8-d308-11ec-acf1-674927587809.html","copy":"Landowners' counsel formally requests Commissioner Cooper recuse herself, citing text messages showing she was a driving force behind the purchase and rezone plan -- a request the Commissioner ignores."},{"source":"Telluride News","date":"Apr 22, 2022","title":"Planning board narrowly OKs zoning change","href":"https://www.telluridenews.com/news/article_f9e1393c-c1cc-11ec-8a85-9fd77399946c.html","copy":"Planning Commission narrowly approves the rezone over significant opposition, sending the controversial decision to the BOCC for final action."},{"source":"Telluride News","date":"Apr 21, 2022","title":"County planning commission begins Diamond Ridge rezoning process","href":"https://www.telluridenews.com/news/article_ac75ddb0-c0f5-11ec-b7c9-c7819ef15cd3.html","copy":"Formal review begins on the application to convert protected open space into high-density housing, prompting immediate concern from Deep Creek Mesa residents."}]},
 
-  "skigate":
-    {"ctaTitle":"Follow the case","ctaCopy":"This fight is in the courts, not at a public hearing — the best way to follow it is the filings themselves. Start with the operative complaint, then the dueling dismissal briefs.","ctaLabel":"Read the complaint","ctaHref":"/assets/Ski-Gate/first-amended-complaint-2026-05-08.pdf","lastUpdated":"2026-07-21","category":"Governance","label":"Ski-Gate: Telski v. Former Officials","heroImage":"assets/Ski-Gate/telluride-ski-resort-hero.jpg","heroAlt":"Winter view over the Mountain Village base area of Telluride Ski Resort, seen from the gondola","heroCredit":"Photo: Murray Foubister via Wikimedia Commons, CC BY-SA 2.0","intro":"In late December 2025, at the height of a ski patrol strike that closed the resort during the holiday peak, two sitting elected officials — Telluride's mayor pro tem and Mountain Village's mayor — traveled to California and presented Telski owner Chuck Horning with a signed offer to buy a 51% controlling stake in the resort for $127.5 million on behalf of undisclosed investors. When the trip became public in January, both resigned, both towns commissioned independent investigations, and Telski sued the two former officials and Mountain Village's former town manager. The case the community has dubbed “Ski-Gate” now turns on a hard question: where is the line between public office and private dealmaking?","statusTitle":"Where it stands now","statusCopy":"Three motions are fully briefed and awaiting a ruling in San Miguel County District Court (case 2026CV30011). All three defendants have moved to dismiss, arguing the amended complaint does not plausibly allege they did anything to prolong the strike — pointing to the meeting transcript itself, which they say shows the proposed deal would have ended it. Fee has separately moved to strike the secretly recorded meeting transcript, arguing the recording violated California's all-party-consent law. Telski responds that the signed offer's own terms — official acts listed as “Additional Consideration” — plausibly plead an abuse of public office.","nextStep":"The court's ruling on the motions to dismiss and the motion to strike. If the case survives, it moves into discovery; if it is dismissed, Telski can seek leave to amend or appeal.","metrics":[{"label":"The offer","value":"$127.5M for 51%","sub":"Signed “Offer to Purchase” presented to Telski's owner on Dec 29, 2025, on behalf of the “Telluride Ski Resort Fund”"},{"label":"The strike","value":"Dec 27 – Jan 7","sub":"Ski patrol strike closed the resort at the height of the 2025–26 holiday season; Telski estimates losses of several million dollars"},{"label":"Officials out","value":"3","sub":"Two resigned in January 2026; the former town manager separated from employment May 1"},{"label":"Investigations","value":"2","sub":"Independent reports commissioned by Mountain Village (309 pages) and Telluride"}],"legalIssuesTitle":"The legal questions in play","legalIssues":[{"title":"Tortious interference","copy":"Telski alleges the defendants interfered with its business by representing they could end — and by implication prolong — the strike unless Horning sold a controlling stake. The defendants counter that the complaint alleges no act that prolonged the strike, and that the transcript shows the deal was framed as a way to end it."},{"title":"Civil conspiracy","copy":"The complaint alleges the three coordinated on the offer and related documents, including a draft NDA that Telluride's own CORA production shows was authored by Wisor on January 3, 2026. The defense calls the conspiracy claim derivative and unsupported by any unlawful agreement or overt act."},{"title":"The secret recording","copy":"Telski's key exhibit is a partial transcript of the Newport Beach meeting, recorded by a Telski representative without the officials' knowledge. Fee argues California's all-party-consent law (Cal. Penal Code § 632) makes the recording unlawful and inadmissible; Telski opposes striking it."},{"title":"Public office vs. private gain","copy":"The signed offer's Appendix B listed official public acts — brokering an end to the strike, holding snowmaking water prices, town housing partnerships, regional flight spending — as “Additional Consideration.” Both towns' ethics codes restrict officials from trading on their offices; the two independent investigations reached nuanced conclusions about whether lines were crossed."}],"timeline":[{"date":"Dec 26, 2025","title":"A meeting is arranged","copy":"One day before the ski patrol strike begins, Fee and Prohaska contact Telski owner Chuck Horning to arrange a California meeting, saying they have something that could resolve the looming patrol impasse."},{"date":"Dec 27, 2025","title":"Ski patrol strike closes the resort","copy":"The Telluride Ski Patrol strike shuts the mountain at the height of the holiday season. The closure runs through January 7 and, by Telski's estimate, costs the resort and local businesses millions."},{"date":"Dec 28–29, 2025","title":"The Newport Beach offer","copy":"Fee and Prohaska meet Telski representatives, then Horning. They sign an “Offer to Purchase”: 51% of Telski's assets for $127.5 million via the “Telluride Ski Resort Fund,” with both officials as managing partners. Appendix B lists “Additional Consideration” — official acts including brokering an end to the strike, holding water prices, housing partnerships, and flight spending. Telski does not accept. A Telski representative records the meeting without the officials' knowledge."},{"date":"Jan 7, 2026","title":"The strike ends","copy":"Ski patrol and Telski reach agreement; the resort reopens after roughly ten days dark."},{"date":"Jan 13–14, 2026","title":"The story breaks","copy":"Telski files a CORA request. A Mountain Village executive session about the trip is accidentally livestreamed, and town manager Paul Wisor reveals previously undisclosed details. Prohaska resigns within hours of learning the town wants an outside investigation."},{"date":"Jan 20–26, 2026","title":"Investigations open; Fee resigns","copy":"Telluride's council votes to investigate Fee; Mountain Village hires an independent investigator. Fee resigns as mayor pro tem and councilmember on January 26, writing that “it is impossible to ignore the rift that this episode has caused in our community.”"},{"date":"Feb 24, 2026","title":"Telski sues","copy":"TSG Ski and Golf, LLC files suit in San Miguel County District Court against Fee, Prohaska, and Wisor, claiming tortious interference and civil conspiracy and seeking damages estimated at several million dollars."},{"date":"May 1, 2026","title":"Wisor separates from the town","copy":"After an investigation into his behind-the-scenes role — including drafting transaction documents — Wisor's employment as Mountain Village town manager ends. “Though difficult, this decision is being made in what I believe is the best interest of the organization and the community as a whole,” he says."},{"date":"May 8, 2026","title":"Amended complaint adds the receipts","copy":"Telski files a First Amended Complaint attaching the signed Offer to Purchase, a partial transcript of the recorded Newport Beach meeting, and the Wisor-drafted NDA produced under CORA."},{"date":"Jun 2, 2026","title":"Mountain Village's investigation reports","copy":"The town releases a 309-page independent report: Prohaska “technically” violated no ethics-code provision, but her conduct was “inconsistent with her ethical obligations”; Wisor did not act contrary to code and had negotiated a clause requiring his termination if the deal closed."},{"date":"Jun 10, 2026","title":"Telluride's investigation reports","copy":"The ILG report finds Fee “failed to maintain the line between personal and governmental roles” — noting she used her official email and title to obtain a flight voucher for the trip — while crediting that she may have believed she was acting personally."},{"date":"Jun 5 – Jul 6, 2026","title":"Dismissal fight fully briefed","copy":"All three defendants move to dismiss; Fee also moves to strike the recorded transcript under California's all-party-consent law. Telski responds; the defendants reply. The motions now await the court's ruling."}],"docs":[{"title":"Defendants' Joint Reply in Support of Motions to Dismiss (Jul 6, 2026)","copy":"The defense's last word on dismissal: the complaint pleads no act that prolonged the strike, and its own exhibits contradict it.","tag":"Defense","href":"/assets/Ski-Gate/joint-reply-iso-dismissal-2026-07-06.pdf"},{"title":"Fee's Reply in Support of Motion to Strike (Jul 6, 2026)","copy":"Closing brief on whether the secretly recorded meeting transcript should be struck from the case.","tag":"Defense","href":"/assets/Ski-Gate/fee-reply-iso-strike-2026-07-06.pdf"},{"title":"Telski's Combined Response to Motions to Dismiss (Jun 26, 2026)","copy":"Telski's counter: the signed offer's own terms plausibly plead that public powers were leveraged for a private acquisition.","tag":"Telski","href":"/assets/Ski-Gate/telski-combined-response-2026-06-26.pdf"},{"title":"Telski's Opposition to the Motion to Strike (Jun 26, 2026)","copy":"Why Telski says the transcript of the Newport Beach meeting should stay in the record.","tag":"Telski","href":"/assets/Ski-Gate/telski-opposition-to-strike-2026-06-26.pdf"},{"title":"Fee's Motion to Dismiss (Jun 5, 2026)","copy":"Fee's separate dismissal motion directed at the First Amended Complaint.","tag":"Defense","href":"/assets/Ski-Gate/fee-motion-to-dismiss-2026-06-05.pdf"},{"title":"Fee's Motion to Strike the Recording (Jun 5, 2026)","copy":"Argues the meeting was recorded without consent in violation of Cal. Penal Code § 632, an all-party-consent state, and the transcript is inadmissible and scandalous.","tag":"Defense","href":"/assets/Ski-Gate/fee-motion-to-strike-2026-06-05.pdf"},{"title":"Prohaska & Wisor's Motion to Dismiss (Jun 5, 2026)","copy":"Argues the transcript shows the proposed deal would have ended the strike, not prolonged it, and no plausible claim is stated under Colorado's Twombly/Iqbal standard.","tag":"Defense","href":"/assets/Ski-Gate/prohaska-wisor-motion-to-dismiss-2026-06-05.pdf"},{"title":"First Amended Complaint (May 8, 2026)","copy":"The operative complaint — the $127.5M offer, Appendix B's “Additional Consideration,” the recorded-meeting transcript excerpts, and the two claims for relief.","tag":"Telski","href":"/assets/Ski-Gate/first-amended-complaint-2026-05-08.pdf"}],"players":[{"title":"TSG Ski and Golf, LLC (Telski)","copy":"The independently owned resort operator, and the plaintiff. Owner Chuck Horning received — and declined — the offer; a Telski representative recorded the December meeting."},{"title":"Julie Meehan Fee","copy":"Former Telluride mayor pro tem and councilmember; resigned January 26, 2026. Maintains she acted as a private citizen and that the offer's terms were aspirational; her motions argue the claims fail as a matter of law."},{"title":"Martinique “Marti” Prohaska","copy":"Former Mountain Village mayor (and ski patroller); resigned January 14, 2026. MV's independent report found no technical code violation but conduct “inconsistent with her ethical obligations.”"},{"title":"Paul Wisor","copy":"Former Mountain Village town manager; drafted transaction documents including an NDA. Separated from town employment May 1, 2026. MV's report found he did not act contrary to code."},{"title":"The two towns","copy":"Telluride and Mountain Village are not parties to the lawsuit. Each commissioned an independent investigation and released its report in June 2026."}],"news":[{"source":"Telluride Daily Planet","date":"Jul 21, 2026","title":"Telski amends lawsuit against Prohaska, Wisor and Fee","href":"https://www.telluridenews.com/news/article_fdd6316f-fb0f-4629-87d0-6ae9800e4251.html"},{"source":"Telluride Daily Planet","date":"Jun 10, 2026","title":"Fee failed to maintain line between personal, governmental roles","href":"https://www.telluridenews.com/news/article_7f2f7f97-cfba-4bba-8e22-5cedb5539f85.html"},{"source":"Telluride Daily Planet","date":"Jun 2, 2026","title":"Investigation finds Prohaska 'technically' free of ethics violations","href":"https://www.telluridenews.com/news/article_2fcca626-62fb-459c-9c24-a3ca6915d695.html"},{"source":"Telluride Daily Planet","date":"May 1, 2026","title":"Wisor resigns as Mountain Village town manager","href":"https://www.telluridenews.com/news/article_2c1cc16d-5e4a-4543-86bd-1faadf9f7028.html"},{"source":"Telluride Daily Planet","date":"Mar 6, 2026","title":"Telski lawsuit claims 'civil conspiracy' in 'self-serving scheme'","href":"https://www.telluridenews.com/news/article_dfa5dfbb-25c4-44af-a45f-91b182c88ee0.html"},{"source":"Telluride Daily Planet","date":"Jan 26, 2026","title":"Telluride Mayor Pro Tem Meehan Fee resigns","href":"https://www.telluridenews.com/news/article_ed2fc3f8-8a43-480e-9183-84ea4db0d28c.html"},{"source":"Telluride Daily Planet","date":"Jan 25, 2026","title":"MV opens investigation into former Mayor Marti Prohaska's resignation","href":"https://www.telluridenews.com/news/article_a76bcdfd-ee6f-4be7-b849-c0bc84c01ecc.html"}],"meetings":[]},
 
   "norwoodwater":
     {"lastUpdated":"2026-07-23","label":"Norwood Water","heroImage":"/images/deep-dives/norwood-water-system.jpg","heroAlt":"Map of the Norwood Water Commission's water system across Wright's Mesa","heroCredit":"Water system overview -- SGM, 2022 Water Supply Adequacy Memo","intro":"Norwood's water is run by the Norwood Water Commission (NWC), a rural system serving the town, Redvale, and the farms and homes of Wright's Mesa through roughly 20 miles of pipe. Nearly all of its firm supply is a single contract: 300 acre-feet a year of raw water from Gurley Reservoir, and Gurley only delivers from April to November -- the winter runs on two small raw-water reservoirs filled each fall. The town's own engineers have warned twice, in the 2020 Water Master Plan and again in a 2022 supply-adequacy memo, that the supply has no redundancy, that drought can threaten it, and that the growth Norwood is approving is on pace to consume the entire allocation within a decade or two. On Wright's Mesa, every subdivision approval draws down the same fixed bucket of water.","statusTitle":"Growth is on pace to use up the whole water contract.","statusCopy":"The 2022 SGM memo puts hard numbers on it: the system was using roughly 198 of its 300 acre-feet, and at the 2% growth rate assumed in the Master Plan the full allocation is reached around 2042 -- at 3% growth, around 2036. Development already approved or in early planning (the 24-lot Pinon Park Subdivision and the 75-100 lot Mountain Village Employee Housing Project) adds an estimated 124 taps and about 310 people, an 11.6% population jump that by itself matches the plan's growth assumptions. The treatment plant faces the same clock: maximum-day demand is projected to hit 92% of its capacity by 2042, and the engineers recommend planning for a new plant in the early 2030s with rate-structure work starting about a decade ahead. Their repeated recommendation is to firm up a second, year-round source -- the San Miguel River diversion the NWC already holds a decreed right for -- and to consider a water-rights dedication ordinance so new development brings water with it.","nextStep":"The Water Commission meets the second Tuesday of each month (tracked on Gov-Hub and the Norwood hub). Watch for movement on the San Miguel River supply project, a water-rights dedication ordinance, rate-structure changes, and how each new subdivision application squares with the 300 acre-foot math.","metrics":[{"label":"Firm supply","value":"300 acre-feet a year -- one contract, one reservoir","sub":"A perpetual 2005 agreement for Gurley Reservoir raw water, deliverable only April-November. Single watershed, drought-vulnerable, no redundant source."},{"label":"The math","value":"Full allocation reached around 2036-2042","sub":"Roughly 198 AF already in use (2022). Approved and planned projects add ~124 taps; 3% growth exhausts the contract by 2036, 2% by 2042."},{"label":"The pipe","value":"One 10-inch line feeds the whole system","sub":"The only transmission line from the treatment plant to town has failed repeatedly and is past the end of its useful life; rural lines are undersized, with low pressure and no fire flows."},{"label":"Treatment","value":"92% of plant capacity by 2042","sub":"The 0.56 million-gallon-per-day plant handles today's demand but engineers recommend planning its replacement in the early 2030s -- financing alone can take a decade."}],"timeline":[{"date":"1993","title":"The NWC is created","copy":"Town and rural Wright's Mesa water service -- historically provided by the San Miguel Water Conservancy District -- is consolidated into the Norwood Water Commission. The Town owns the in-town infrastructure; the NWC operates the entire system as one."},{"date":"1994-2006","title":"Early master plans","copy":"Westwater Engineering prepares the original distribution master plan (1994), a raw-water feasibility report (1995), and a master plan update (2006). Some recommendations are implemented; others are not."},{"date":"April 2005","title":"The 300 acre-foot Gurley contract","copy":"The NWC and the Farmers Water Development Commission sign a perpetual agreement for 300 acre-feet per year of raw, untreated Gurley Reservoir water for domestic use -- the supply the whole system still runs on."},{"date":"2018","title":"A drought exposes the risk","copy":"Water levels drop significantly in Gurley Reservoir and the NWC's raw-water reservoirs. Engineers later conclude that a second consecutive drought year would have left the system unable to supply adequate drinking water without restrictions."},{"date":"November 2020","title":"The SGM Water Master Plan","copy":"A full system study: GIS mapping, a hydraulic model, and a hard look at infrastructure. Findings include undersized and un-looped distribution lines, low pressures and missing fire flows in rural areas, a failing single transmission line, and water-quality compliance tensions. It recommends pursuing the San Miguel River as a second supply and raising service fees gradually to fund aging-infrastructure replacement."},{"date":"August 2022","title":"The supply-adequacy warning","copy":"With Pinon Park approved and the Mountain Village Employee Housing Project in early planning, SGM re-runs the numbers: growth is tracking the high end, the full 300 AF is reached between 2036 and 2042, and the treatment plant nears capacity on the same horizon. The memo urges the NWC to firm up its decreed San Miguel River diversion and consider a water-rights dedication ordinance."},{"date":"July 2026","title":"NWC meetings join Gov-Hub","copy":"Livable Telluride begins tracking the Water Commission's second-Tuesday meetings alongside Norwood's Trustees and P&Z -- agendas, packets, and plain-English summaries as they post."}],"docs":[{"title":"Water Supply Adequacy Memo (SGM, August 2022)","copy":"The growth-versus-supply math: current use against the 300 AF Gurley contract, tap projections for Pinon Park and the Mountain Village Employee Housing Project, treatment-plant capacity timing, and the recommendation to firm up the San Miguel River right.","tag":"Engineering memo","href":"https://firebasestorage.googleapis.com/v0/b/telluride-gov-hub.firebasestorage.app/o/deep-dive-docs%2Fnorwoodwater%2FNWC-2022-Water-Supply-Adequacy-Memo.pdf?alt=media&token=b73ca267-3332-460d-9cb0-41ceb0bbb708"},{"title":"NWC Water Master Plan (SGM, November 2020)","copy":"The full system study behind the memo: supply and water rights, treatment and storage, the hydraulic model, infrastructure priorities, and the San Miguel River diversion feasibility work. Large file (~80 MB).","tag":"Master plan","href":"https://firebasestorage.googleapis.com/v0/b/telluride-gov-hub.firebasestorage.app/o/deep-dive-docs%2Fnorwoodwater%2FNWC-2020-Water-Master-Plan.pdf?alt=media&token=81157ef6-a29d-4511-9dd3-c055eda6dad8"}],"legalIssues":[{"icon":"⚖️","title":"A decreed river right, not yet a real supply","copy":"The NWC holds a decreed San Miguel River diversion right (5 cfs -- Case No. 94CW244, diligence Case No. 08CW55) near the confluence with Beaver Creek. Engineers have urged the commission to firm it up as a second, year-round source; building the intake, pump station, and transmission line is a major capital project, and water-court proceedings in a contested basin can take years."},{"icon":"💧","title":"Agricultural rights can't simply become tap water","copy":"Converting agricultural water rights to domestic use requires a change case in water court. A water-rights dedication ordinance -- used by other Western Slope providers -- would require future development or annexations to dedicate rights that offset their demand on the potable system."}],"players":[{"icon":"🚰","title":"Norwood Water Commission","copy":"Operates the entire system -- supply, treatment, storage, and 20 miles of distribution -- for the town and rural Wright's Mesa. Meets the second Tuesday of each month."},{"icon":"🏛️","title":"Town of Norwood -- Trustees & P&Z","copy":"Approve the growth that draws on the fixed water supply. The Town owns the in-town infrastructure; every subdivision decision is also a water decision."},{"icon":"🌾","title":"Farmers Water Development Commission","copy":"The counterparty on the perpetual 2005 Gurley Reservoir contract that supplies the NWC's 300 acre-feet per year."},{"icon":"📐","title":"SGM (town engineers)","copy":"Authors of the 2020 Water Master Plan and the 2022 supply-adequacy memo -- the two documents that lay out the system's risks and the path to a second source."}],"news":[],"category":"Water","chart":{"title":"When the 300-acre-foot contract runs out","yLabel":"Water demand (acre-feet / year)","xs":[2022,2030,2036,2042],"cap":300,"capLabel":"300 AF — the full Gurley contract","series":[{"label":"2% growth","values":[201.6,236.2,266,299.6]},{"label":"3% growth","values":[203.6,257.9,307.9,367.7]},{"label":"4% growth","values":[205.6,281.3,356,450.4]}],"markers":[{"x":2036,"label":"3% hits the cap ~2036"},{"x":2042,"label":"2% hits the cap ~2042"}],"caption":"Projected annual water demand vs. the Norwood Water Commission's firm 300 acre-foot/year Gurley Reservoir supply, at three growth rates. Once demand crosses the dashed line, the town has no firm water left for new taps without a second source. Source: SGM 2022 Water Supply Adequacy Memo, Table 3."}}
@@ -1233,6 +1773,8 @@ const ENTITY_LOGOS = {
   norwood: '<img src="/logo/Norwood%20Town.jpeg" alt="Town of Norwood" style="width:100%;height:100%;object-fit:contain;">',
   ophir: '<img src="/logo/Ophir.jpeg" alt="Town of Ophir" style="width:100%;height:100%;object-fit:contain;">',
   rico: '<img src="/logo/Rico%20Town.png" alt="Town of Rico" style="width:100%;height:100%;object-fit:contain;">',
+  ouray: '<img src="/logo/Ouray%20County%20logo.png" alt="Ouray County" style="width:100%;height:100%;object-fit:contain;">',
+  ouraycity: '<img src="/logo/City%20of%20Ouray%20Logo.webp" alt="City of Ouray" style="width:100%;height:100%;object-fit:contain;">',
   ttimes: '<img src="/logo/TT%20Logo.png" alt="The Telluride Times" style="width:100%;height:100%;object-fit:contain;">',
   tjc: '<img src="/logo/Telluride%20Jewish.webp" alt="Telluride Jewish Community" style="width:100%;height:100%;object-fit:contain;">',
   tf: '<img src="/logo/Telluride%20Foundation.png" alt="Telluride Foundation" style="width:100%;height:100%;object-fit:contain;">',
@@ -1261,8 +1803,9 @@ const TOWN_IMAGES = {
   ridgway: '/logo/Ridgway%20Town.png',
   ophir: '/logo/Ophir.jpeg',
   rico: '/logo/Rico%20Town.png',
+  ouraycity: '/logo/City%20of%20Ouray%20Logo.webp',
   placerville: '/logo/Placerville.png',
-  ouray: '/logo/Ouray%20Town.png',
+  ouray: '/logo/Ouray%20County%20logo.png',
   nucla: '/logo/Nucla%20Town.png',
   naturita: '/logo/Naturita%20Town.png'
 };
@@ -1279,6 +1822,7 @@ const SOURCE_SHORT_NAME = {
   smb: 'Basin Forum',
   ophir: 'Ophir',
   rico: 'Rico',
+  ouraycity: 'Ouray',
   airport: 'TEX',
   wilkinson: 'Wilkinson',
   tmvoa: 'TMVOA'
@@ -1323,6 +1867,7 @@ const ENTITY_ADDRESS = {
   norwood:   'Town of Norwood, 1670 Naturita St, Norwood, CO 81423',
   ophir:     'Town of Ophir, CO 81426',
   rico:      'Rico Town Hall, 2 Commercial St, Rico, CO 81332',
+  ouraycity: 'Ouray Community Center, 320 6th Ave, Ouray, CO 81427',
   airport:   'Terminal Observation Lounge, Telluride Regional Airport, Telluride, CO 81435',
   ttimes:    'Telluride, CO',
   tmvoa:     'Mountain Village, CO 81435'
@@ -1413,9 +1958,9 @@ const TELLURIDE_FESTIVALS = [
   { name: 'Telluride Food + Vine', month: 5, dayStart: 12, dayEnd: 14, icon: '🍷',
     logo: 'https://cdn.prod.website-files.com/63e3b404578d3e63abef7364/69b1ded759adc5521903fd3e_TFV%20Logo%20Full%E2%84%A2.svg',
     url: 'https://www.telluridefoodandvine.com/', ticketUrl: 'https://www.telluridefoodandvine.com/events', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: '2026 Weekend Pass and featured events available' },
-  { name: 'Telluride Horror Show', month: 9, dayStart: 9, dayEnd: 12, icon: '🎃',
+  { name: 'Telluride Horror Show', month: 9, dayStart: 16, dayEnd: 18, icon: '🎃',   // Oct 16–18, 2026 per telluridehorrorshow.com (checked 2026-10-04; was 9–12)
     logo: 'https://images.squarespace-cdn.com/content/v1/635aaf48434dcc204d4bfb34/762ca493-d7d2-459e-86a2-214c641c3695/HorrorShowLogoColor_STRAIGHT.png',
-    url: 'https://www.telluridehorrorshow.com/', ticketUrl: 'https://www.telluridehorrorshow.com/', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: '3-day passes on sale Mar 25 — 6-packs on sale Jul 1, 2026' },
+    url: 'https://www.telluridehorrorshow.com/', ticketUrl: 'https://www.telluridehorrorshow.com/', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: 'Passes and 6-packs on sale now' },
   { name: 'Telluride Jazz Festival', month: 7, dayStart: 7, dayEnd: 10, icon: '🎷',
     logo: 'https://images.squarespace-cdn.com/content/v1/583db0c9d1758e46ff3221e9/821ecb11-5000-415a-a970-87b539036111/2026-ebony-color-logo-png-for-website-no-dates.png?format=1500w',
     url: 'https://www.telluridejazz.org/', ticketUrl: 'https://www.telluridejazz.org/tickets', ticketLabel: 'Buy Tickets', ticketStatus: 'on-sale', promo: 'Tickets on sale now — Tier 1 pricing until July 15' },
@@ -1431,7 +1976,7 @@ const TELLURIDE_FESTIVALS = [
     url: 'https://www.tellurideyogafestival.com/', ticketUrl: 'https://www.tellurideyogafestival.com/passes', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: 'June 25–28, 2026 — festival passes available now' },
   { name: 'Telluride Autumn Classic', month: 8, dayStart: 24, dayEnd: 27, icon: '🏎️',
     logo: 'https://tellurideautumnclassic.com/wp-content/uploads/2021/03/logo-1024x293.webp',
-    url: 'https://tellurideautumnclassic.com/', ticketUrl: 'https://registration.guidebook.com/91911f23-f9fc-11f0-8e6b-af6ca49d39b1', ticketLabel: 'Register Now', ticketStatus: 'on-sale', promo: 'Sept 24–27, 2026 — cars, motorcycles, aircraft & fine arts' }
+    url: 'https://tellurideautumnclassic.com/', ticketUrl: 'https://registration.guidebook.com/91911f23-f9fc-11f0-8e6b-af6ca49d39b1', ticketLabel: 'Register Now', ticketStatus: 'on-sale', promo: 'Cars, motorcycles, aircraft & fine arts — a concours competition, road rallies, and an arts festival set against peak aspen color in the San Juans' }
 ];
 
 
@@ -1928,6 +2473,16 @@ const LOCAL_ORGS = [
       website: "https://www.telluridechurch.org/",
       donate: "https://www.telluridechurch.org/give/",
       social: { facebook: "https://www.facebook.com/Telluride-Christian-Fellowship-47477149350", youtube: "https://www.youtube.com/@tcf8750" },
+      logo: "https://livabletelluride.org/logo/Church.png"
+    },
+    {
+      name: "The Alpine Chapel",
+      category: "churches",
+      town: "Telluride",
+      summary: "A Telluride congregation drawing people from a variety of denominations and church backgrounds, with Sunday worship at 9 AM year-round, a nursery and Sunday school, youth group, and ministries including Friday Feast and The Well Coffee House.",
+      website: "https://www.thealpinechapel.com/",
+      donate: "https://thealpinechapel.com/give/",
+      social: { facebook: "https://www.facebook.com/TheAlpineChapel/", instagram: "https://www.instagram.com/thealpinechapel/", youtube: "https://www.youtube.com/@thealpinechapel", email: "mailto:admin@thealpinechapel.com" },
       logo: "https://livabletelluride.org/logo/Church.png"
     },
     /* ── 12 additional verified Telluride-area orgs (2026-05-16 expansion) ── */

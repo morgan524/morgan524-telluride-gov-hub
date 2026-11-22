@@ -1,0 +1,49 @@
+name: Meeting recaps weekly check
+
+# Morgan (2026-09-29): recaps must keep flowing for every entity we watch.
+#
+# The recaps themselves are made ONLY on the Mac (scripts/run-meeting-recaps-
+# local.sh, launchd 9:30 AM daily) because YouTube and Vimeo block transcript
+# downloads from GitHub runner IPs. This workflow is the assurance that it is
+# still running: it opens (or comments on) an issue when the whole job has gone
+# quiet, or when one entity has had no new recap in 45+ days.
+
+on:
+  schedule:
+    - cron: '10 15 * * 1'     # Mondays 15:10 UTC = 9:10am MT (8:10am MST)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+
+      - name: Check recap freshness
+        id: check
+        run: |
+          set +e
+          node scripts/check-recap-freshness.js | tee /tmp/recaps.txt
+          echo "stale=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+          set -e
+
+      - name: Open / update the issue
+        if: steps.check.outputs.stale == '1'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BODY=$(printf 'The weekly recap check found entities that are not current.\n\n- **PIPELINE** = no recap for ANY entity in 10+ days. The Mac job has almost certainly stopped: check that the Mac is on at 9:30 AM, then `~/Library/Logs/meeting-recaps.log`.\n- **NEVER** = a watched channel has produced no recaps at all (broken URL or title format).\n- **STALE** = nothing new for one entity in 45+ days. First check whether that body actually met.\n\n```\n%s\n```\n\nCommon fixes: `brew upgrade yt-dlp` (YouTube changed), a new yearly Ouray County Vimeo showcase id in `scripts/meeting-recaps.js`, or a changed channel URL / title format. Run one entity by hand:\n```bash\nnode scripts/meeting-recaps.js --dry-run --entity <key> --days 60\n```\n' "$(cat /tmp/recaps.txt)")
+          EXISTING=$(gh issue list --label recaps --state open --search "Meeting recaps behind" --json number --jq '.[0].number')
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body "$BODY"
+          else
+            gh label create recaps --color 0e8a16 --description "Past-meeting recaps" 2>/dev/null || true
+            gh issue create --title "📼 Meeting recaps behind for one or more entities" --label recaps --body "$BODY"
+          fi

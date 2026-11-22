@@ -55,6 +55,7 @@ provider changes, a script is restructured), update it in the same commit.
 | Firestore rules, Hub-Bub auth, admin-email check | `docs/firestore-auth.md` |
 | Daily content-correctness review — duplicate events, wrong/past/conflicting dates, broken links, AI semantic pass, "the content-review issue flagged X" | `docs/content-review.md` |
 | Weekly infra/security/liveness review (dead-code guard, feed freshness, secret scan, Lighthouse) | `docs/weekly-review/PROTOCOL.md` |
+| Monthly source-coverage review — is every entity still delivering meetings, times, agendas, packets, recaps, votes; upstream page/API drift; roster/channel config drift | `scripts/source-coverage-audit.js` + `scripts/source-coverage-expect.json` (edit the expect file when a body changes how it publishes) |
 | Planned migration of bot data from JS-source-rewriting to JSON files (phased, not started) | `docs/json-data-migration-plan.md` |
 | Manual ops cheat sheet, other workflows, liveness checks, Cloudflare account, email addresses, domain note, loose ends | `docs/operations.md` |
 
@@ -190,9 +191,105 @@ Audit with `node scripts/audit-meeting-summaries.js /tmp/gd.js /tmp/gh.js 21 45`
 same predicates so the audit and the email can never disagree — **if you change
 the agenda logic here, mirror it in the audit script.**
 
+### The other half: an agenda that exists but never got ingested
+
+The three rejection cases above are the RENDER side, and they are correct — but
+they are only ever as honest as the data. If the ingest misses an agenda that
+was posted, the summary stays on its "hasn't been posted yet" stub, case 1 fires
+on that wording, and the digest suppresses a link to a document that is sitting
+right there on the portal. From the outside this is indistinguishable from a
+county that hasn't posted yet, which is what made it take five days to notice.
+
+So when a reader says "the agenda is up and the site says it isn't", check the
+ingest before touching the render rules:
+
+- **County (CivicClerk).** `countyAgendaFor()` in `scripts/content-refresh.js`
+  resolves the agenda file for an event via `pickAgendaFile()`
+  (`scripts/lib/civicclerk-events.js`). It used to be a bare
+  `f.type === 'Agenda'` — an exact, case-sensitive match, duplicated in two
+  places, silent when it missed. It now matches agenda-ish types and file names
+  in descending order of confidence, logs the event's whole `publishedFiles`
+  list when it still finds nothing, and falls back to
+  `COUNTY_CIVICCLERK_AGENDA_FILES` in `gov-data.js` — a hand-VERIFIED
+  `{civicClerkId: fileId}` map for agendas the API refuses to list at all. A
+  real published file always wins over an override.
+  **Widen the matcher before reaching for the map.** The 2026-08-31 miss (Sep 2
+  BOCC, event 887, file 1980) presented as an API omission and was not: the
+  file was listed the whole time, under a type the exact match didn't
+  recognise. The run log tells you which it is — `no agenda file for event
+  <id> — publishedFiles: …` prints `none` for a genuine omission and names the
+  files otherwise.
+- **Timing.** `MEETING_AGENDA_META`'s `ph` hash is the fingerprint of the
+  summary inputs. If it hasn't changed across days of commits
+  (`git log -S'"<source>|<date>|<title>":'`), the ingest never saw anything new
+  — that is an ingest miss, not a slow AI pass.
+
+`digest-refresh.yml` re-renders on every Content Refresh, so once the data is
+right the link appears within minutes rather than at the next daily cron.
+
 Note `MANUAL_SUMMARIES` and `MEETING_PREVIEWS` live in **`js/gov-helpers.js`**
 (~lines 940 and 503), not `gov-data.js`. `AI_SUMMARIES` is Firestore-backed and
 inlined ONLY on `gov-hub.html`, so it's empty in any node-side render.
+
+## Meeting start times: real times only, shown everywhere
+
+**Rule (Morgan, 2026-09-29):** every meeting shows its start time on Gov-Hub,
+the homepage and both digests, and the time must come from the body's own
+calendar. **Never default a guessed hour.** HARC used to fall back to a
+hard-coded "5:00 PM", which was wrong for the Sep 30 2026 5:30 PM special.
+If no time was published, show none.
+
+- Getters emit the hour as `eventTimes`. `build-week-meetings.js` maps it to
+  `time` in `data/week-meetings.json`, which Gov-Hub and the homepage render.
+  `scripts/weekly-email.js` puts it in the meeting date badge
+  ("WED, OCT 7 · 4:00 PM").
+- Town of Telluride times come from CivicWeb through `civicWebTime()` in
+  `scripts/content-refresh.js`. CivicWeb's `MeetingDateTime` is
+  `"YYYY-MM-DD HH:MM"` with a **space**, not a `T`.
+- Rico's 7:00 PM is its standing third-Wednesday schedule (the dates are
+  projected the same way), not a guess.
+- **Order within a day = start time, earliest first** (Morgan 2026-09-29);
+  no published time goes last in its day. This is enforced in three places,
+  so keep all three if you touch any of them: the `out.sort` in
+  `scripts/build-week-meetings.js` (the JSON every page reads),
+  `gov-hub.html`'s load-time sort, and the `meetings.sort` in
+  `scripts/weekly-email.js` (the digest).
+
+## City of Ouray source; agenda-packet patching
+
+- **City of Ouray** (source `ouraycity`, separate from `ouray` = Ouray County)
+  comes from BoardBook Premier org 2503. There's no feed, so
+  `syncOurayCityMeetings()` scrapes the public list table into
+  `OURAY_CITY_CACHED_DATA`. `getOurayCityMeetings()` adds the published regular
+  schedule (Council 1st/3rd Monday 6 PM, Monday holiday → Tuesday; Planning
+  Commission 2nd Tuesday 4 PM) until BoardBook posts the real row.
+- **`patchAgendaUrls()` must handle both quote styles.** Rebuilt arrays like
+  `TELLURIDE_CACHED_DATA` are serialized with `"double"` quotes. The patcher
+  used to match only `'single'`, which silently dropped every HARC packet
+  (fixed 2026-09-29). If a packet or agenda is found in the log but never shows
+  up on the site, check this first.
+
+## SMART votes + recaps come from packet minutes (and YouTube)
+
+`scripts/smart-votes.js` (weekly, `.github/workflows/smart-votes.yml`) reads the
+MINUTES inside each SMART board packet (smarttelluride.colorado.gov/board-meetings;
+each packet carries the previous meeting's draft minutes). It regenerates the
+`SMART-BEGIN … SMART-END` block in `v2/vote-tracker.html` and the SMART cards in
+`MEETING_RECAPS`. Parsed packets are cached in `data/smart-votes.json`, so only
+new packets cost an AI call; `--reparse` redoes everything. Director spelling
+variants are merged in its `ALIAS`/`CANON` maps; alternate status is per meeting,
+and an alternate only votes when their town is short a regular director.
+SMART's CloudFront blocks GitHub IPs, so fetches fall back to the site Worker proxy.
+
+SMART also posts recordings to youtube.com/@SMART-Transit (`/videos`, no
+`/streams` tab), titled "9-10-26 SMART Board Meeting" (M-D-YY), plus the Gondola
+Leadership and Gondola Advisory committees. `meeting-recaps.js` recaps these
+like any other channel, with a 60-day look-back (`days: 60`) because SMART
+uploads weeks after the meeting. `smart-votes.js` keeps those YouTube recaps
+and replaces one only when a minutes-based card exists for the same date, so
+the Board card switches to the minutes version once the next packet arrives.
+Uploads can sit without auto-captions for a day or more; the recap job skips
+a 0-char transcript and retries on later runs.
 
 ## Featured organization rotation is week-anchored
 

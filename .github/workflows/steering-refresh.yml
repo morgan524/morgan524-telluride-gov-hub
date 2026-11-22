@@ -1,0 +1,93 @@
+name: Steering Roster Refresh
+
+on:
+  schedule:
+    # Monday 13:00 UTC (~7am Mountain) — after content-refresh (12:00),
+    # maintenance (12:30) and housing-refresh (12:45) so a concurrent
+    # whole-array rewrite of gov-helpers.js can't collide with this one.
+    - cron: '0 13 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+
+      - name: Run steering roster refresh
+        env:
+          GOOGLE_ADMIN_SA_KEY: ${{ secrets.GOOGLE_ADMIN_SA_KEY }}
+          GOOGLE_ADMIN_IMPERSONATE_EMAIL: ${{ secrets.GOOGLE_ADMIN_IMPERSONATE_EMAIL }}
+          STEERING_NAME_OVERRIDES: ${{ secrets.STEERING_NAME_OVERRIDES }}
+        run: |
+          set -o pipefail
+          node scripts/steering-refresh.js 2>&1 | tee /tmp/steering-refresh.log
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "Gov Hub Bot"
+          git config user.email "bot@livabletelluride.org"
+          git add -A
+          git commit -m "🧭 Steering roster refresh $(date -u +'%Y-%m-%d')
+
+          Automated: sync STEERING_MEMBERS to steering@livabletelluride.org"
+          git pull --rebase origin main
+          git push
+
+      - name: Upload run logs
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: steering-refresh-logs-${{ github.run_id }}
+          path: '/tmp/*.log'
+          retention-days: 14
+          if-no-files-found: ignore
+
+      - name: Open or update CI Health issue on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_TITLE: '🚨 Steering Roster Refresh workflow is failing'
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set +e
+          NUM=$(gh issue list --state open --search "$ISSUE_TITLE in:title" --json number --jq '.[0].number // empty')
+          NOW=$(date -u +'%Y-%m-%d %H:%M UTC')
+          if [ -n "$NUM" ]; then
+            gh issue comment "$NUM" --body "Another failure at $NOW. Run: $RUN_URL"
+          else
+            gh issue create \
+              --title "$ISSUE_TITLE" \
+              --body "$(printf 'The scheduled Steering Roster Refresh workflow failed.\n\nFirst observed: %s\nRun: %s\n\nLogs are attached to the run as an artifact. This issue auto-closes when the next run succeeds.' "$NOW" "$RUN_URL")"
+          fi
+          exit 0
+
+      - name: Close CI Health issue on success
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_TITLE: '🚨 Steering Roster Refresh workflow is failing'
+        run: |
+          set +e
+          NUM=$(gh issue list --state open --search "$ISSUE_TITLE in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$NUM" ]; then
+            gh issue comment "$NUM" --body "✅ Workflow recovered at $(date -u +'%Y-%m-%d %H:%M UTC'). Closing."
+            gh issue close "$NUM"
+          fi
+          exit 0

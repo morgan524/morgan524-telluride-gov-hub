@@ -1,30 +1,18 @@
 [
   {
-    "date": "September 16, 2026",
+    "date": "December 15, 2026",
     "title": "HARC Meeting",
     "board": "harc",
     "location": "Rebekah Hall, 113 W Columbia Ave",
-    "civicWebId": 8022
-  },
-  {
-    "date": "October 21, 2026",
-    "title": "HARC Meeting",
-    "board": "harc",
-    "location": "Rebekah Hall, 113 W Columbia Ave",
-    "civicWebId": 8024
-  },
-  {
-    "date": "November 18, 2026",
-    "title": "HARC Meeting",
-    "board": "harc",
-    "location": "Rebekah Hall, 113 W Columbia Ave",
-    "civicWebId": 8026
+    "civicWebId": 8367,
+    "time": "5:00 PM"
   },
   {
     "date": "December 16, 2026",
     "title": "HARC Meeting",
     "board": "harc",
     "location": "Rebekah Hall, 113 W Columbia Ave",
-    "civicWebId": 8028
+    "civicWebId": 8028,
+    "time": "5:30 PM"
   }
 ]

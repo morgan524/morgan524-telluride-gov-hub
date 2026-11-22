@@ -2,21 +2,47 @@ name: Digest Refresh
 
 # Regenerates the Digest Review Desk's content from live site data and commits
 # it, so digest-review.html always shows the UPCOMING sends:
-#   - weekly  = the coming Mon–Sun (the Monday "Week Ahead")
-#   - weekend = the coming Fri–Sun (the Friday "Weekend Ahead", events only)
+#   - weekly = the coming Mon–Sun (the Monday "Week Ahead")
+#   - past   = the Tuesday "Past Meetings" email: recaps of the Mon–Fri of the
+#              week before it goes out (only when that week has recaps). Replaced
+#              the Friday "Weekend Ahead" on 2026-10-04; moved from Monday 10 AM
+#              to Tuesday 6 AM MT on 2026-10-26.
 # Runs daily; also dispatchable. Commits only when the rendered output changes.
 on:
   schedule:
     - cron: '0 13 * * *'   # daily 13:00 UTC (~7am Mountain)
     - cron: '45 15 * * 0'  # Sunday 15:45 UTC — freshen the Review Desk draft
                            # right before the 10:00 AM Sunday weekly review email
-    - cron: '45 19 * * 4'  # Thu 19:45 UTC (1:45 PM MDT) — freshen right before
-    - cron: '45 20 * * 4'  # Thu 20:45 UTC (1:45 PM MST)   the 2:00 PM Thu weekend
-                           #   review email (weekend-preview.yml). Idempotent:
-                           #   commits only if the render changed, so running
-                           #   both DST twins is harmless. (Wed→Thu 2026-07-23
-                           #   with the weekend send moving Thu→Fri.)
+  # Re-render as soon as the bot data the digest reads actually CHANGES.
+  # Without this the digest only refreshed on the crons above, so an agenda
+  # that posted after a run sat unpublished for up to a day — the Aug 31 case:
+  # the Telluride Housing Authority Subcommittee agenda landed in
+  # js/gov-helpers.js at the 13:13 UTC content refresh, but digest/week.html
+  # had last rendered at 18:48 UTC the previous evening and still said the
+  # agenda wasn't posted. (A `push` trigger can't do this job: pushes made with
+  # the workflow GITHUB_TOKEN — i.e. every bot commit — do not fire `on: push`.
+  # `workflow_run` does.)
+  #
+  # Safe to run often: the render is deterministic for unchanged inputs (the
+  # Rick lede is content-addressed in data/rick-lede-cache.json), the commit
+  # step is a no-op when nothing changed, and an APPROVED digest stays frozen
+  # behind its .lock.json.
+  workflow_run:
+    workflows: ['Content Refresh']
+    types: [completed]
   workflow_dispatch:
+    inputs:
+      force:
+        description: 'Re-render even while the Sunday review freeze is active (true/false)'
+        required: false
+        default: 'false'
+  # Called by digest-sunday-review.yml to render fresh right before it reviews.
+  workflow_call:
+    inputs:
+      force:
+        type: string
+        required: false
+        default: 'false'
 
 permissions:
   contents: write
@@ -25,6 +51,12 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    # On a workflow_run trigger, only follow a SUCCESSFUL Content Refresh — a
+    # failed one may have written nothing (or partial data), and re-rendering
+    # from it would just churn. Scheduled/dispatch runs always proceed.
+    if: >-
+      github.event_name != 'workflow_run' ||
+      github.event.workflow_run.conclusion == 'success'
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
@@ -33,8 +65,23 @@ jobs:
       - name: Render digests + manifest from live data
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # Rick-voice lede generation
+          FORCE: ${{ inputs.force || github.event.inputs.force || 'false' }}
         run: |
           set -eo pipefail
+          # ── Sunday review freeze (Morgan 2026-10-04) ──
+          # digest-sunday-review.yml reviews both digests early Sunday and then
+          # writes digest/freeze.json; until its "until" time (Tuesday morning)
+          # the bot leaves the digests exactly as reviewed. Edits and approvals
+          # on the Review Desk go through the digest Worker's /save, not this
+          # workflow, so they still work. force=true overrides; an expired freeze
+          # file is removed here.
+          if [ -f digest/freeze.json ]; then
+            UNTIL="$(python3 -c "import json;print(json.load(open('digest/freeze.json')).get('until',''))" 2>/dev/null || true)"
+            if [ -n "$UNTIL" ] && [ "$(date -u +%s)" -lt "$(date -u -d "$UNTIL" +%s)" ] && [ "${FORCE:-false}" != "true" ]; then
+              echo "digests FROZEN until $UNTIL (Sunday review) — not re-rendering"; exit 0
+            fi
+            if [ -z "$UNTIL" ] || [ "$(date -u +%s)" -ge "$(date -u -d "$UNTIL" +%s)" ]; then echo "freeze expired ($UNTIL) — removing"; rm -f digest/freeze.json; fi
+          fi
           # Cache-bust (?t=timestamp) so we always get the freshest data, not a
           # CDN-cached copy, and -f so a site outage fails the run loudly instead
           # of feeding an error page to node.
@@ -42,13 +89,18 @@ jobs:
           curl -fsS --retry 3 "https://livabletelluride.org/js/gov-data.js?t=$T"    -o /tmp/gd.js
           curl -fsS --retry 3 "https://livabletelluride.org/js/gov-helpers.js?t=$T" -o /tmp/gh.js
           WK=$(date -u -d "monday" +%F)     # coming Monday (today if Mon)
-          WE=$(date -u -d "friday" +%F)     # coming Friday (today if Fri)
           WK_LABEL="$(date -u -d "$WK" '+%B %-d') - $(date -u -d "$WK +6 days" '+%B %-d, %Y')"
-          WE_LABEL="$(date -u -d "$WE" '+%B %-d') - $(date -u -d "$WE +2 days" '+%B %-d, %Y')"
+          # Past Meetings sends TUESDAY, so its week is keyed to the Monday before
+          # the coming Tuesday (today if Tue). That equals $WK every day except
+          # Tuesday, when $WK has already rolled to next week — keying past to $WK
+          # would call Monday's approval stale and delete it hours before the
+          # Tuesday-morning send. Still the Monday-of-send-week date, so
+          # past-meetings-email.js covers the Mon–Fri before it, as before.
+          PAST_WK=$(date -u -d "$(date -u -d "tuesday" +%F) -1 day" +%F)
 
           # ── Freeze/lock support ──
           # If digest/<key>.lock.json exists and its weekStart matches the coming
-          # Monday/Friday, a human has APPROVED that digest on the Review Desk —
+          # Monday, a human has APPROVED that digest on the Review Desk —
           # do NOT re-render it (that would change the lede or swap events after
           # approval). A lock whose weekStart no longer matches is stale (the week
           # rolled over): delete it and render fresh.
@@ -56,42 +108,83 @@ jobs:
           lock_subj() { python3 -c "import json;print(json.load(open('$1')).get('subject',''))" 2>/dev/null || true; }
 
           WK_SUBJ_LOCK=""
+          # Editor edits (John Metzger's Word copy, applied by hand) write
+          # digest/freeze.json with "editor": true. Keep that week's digest even
+          # on a forced render — the Sunday review's force=true render overwrote
+          # them on 2026-11-01. The review still proofreads the held version.
+          ED_WS=""
+          if [ -f digest/freeze.json ]; then
+            ED_WS="$(python3 -c "import json;d=json.load(open('digest/freeze.json'));print(d.get('weekStart','') if d.get('editor') else '')" 2>/dev/null || true)"
+          fi
           if [ "$(lock_ws digest/weekly.lock.json)" = "$WK" ]; then
             echo "week digest LOCKED for $WK — preserving the approved version"
             WK_SUBJ_LOCK="$(lock_subj digest/weekly.lock.json)"
+          elif [ -n "$ED_WS" ] && [ "$ED_WS" = "$WK" ] && [ -f digest/week.html ]; then
+            echo "week digest holds editor edits for $WK (digest/freeze.json) — not re-rendering"
+            WK_SUBJ_LOCK="$(lock_subj digest/freeze.json)"
           else
             rm -f digest/weekly.lock.json
             node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WK" "$WK_LABEL" digest/week.html
           fi
 
-          WE_SUBJ_LOCK=""
-          if [ "$(lock_ws digest/weekend.lock.json)" = "$WE" ]; then
-            echo "weekend digest LOCKED for $WE — preserving the approved version"
-            WE_SUBJ_LOCK="$(lock_subj digest/weekend.lock.json)"
+          # Past Meetings: rendered only when last week has recaps (the script
+          # prints PAST_COUNT=0 and writes nothing otherwise). PAST_ON=1 puts it
+          # in the manifest; no entry means nothing to approve or send.
+          PAST_SUBJ_LOCK=""; PAST_ON=0
+          if [ "$(lock_ws digest/past.lock.json)" = "$PAST_WK" ] && [ -f digest/past.html ]; then
+            echo "past digest LOCKED for $PAST_WK — preserving the approved version"
+            PAST_SUBJ_LOCK="$(lock_subj digest/past.lock.json)"; PAST_ON=1
           else
-            rm -f digest/weekend.lock.json
-            WEEKEND=1 node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WE" "$WE_LABEL" digest/weekend.html
+            rm -f digest/past.lock.json
+            PAST_OUT="$(node scripts/past-meetings-email.js "$PAST_WK" digest/past.html)"
+            echo "$PAST_OUT"
+            if echo "$PAST_OUT" | grep -q '^SUBJECT='; then
+              PAST_ON=1; PAST_SUBJ_RENDER="$(echo "$PAST_OUT" | sed -n 's/^SUBJECT=//p')"
+            fi
           fi
+          export PAST_ON
+          export PAST_SUBJ="${PAST_SUBJ_LOCK:-$PAST_SUBJ_RENDER}"
+          export PAST_COV="Meetings $(date -u -d "$PAST_WK -7 days" '+%b %-d') to $(date -u -d "$PAST_WK -3 days" '+%b %-d, %Y')"
 
           export WK_SUBJ="${WK_SUBJ_LOCK:-The Week Ahead Outlook - $WK_LABEL}"
-          export WE_SUBJ="${WE_SUBJ_LOCK:-The Weekend Ahead Outlook - $WE_LABEL}"
           export WK_COV="Mon $(date -u -d "$WK" '+%b %-d') to Sun $(date -u -d "$WK +6 days" '+%b %-d, %Y')"
-          export WE_COV="Fri $(date -u -d "$WE" '+%b %-d') to Sun $(date -u -d "$WE +2 days" '+%b %-d, %Y')"
-          export WK WE   # ISO weekStart per digest → the desk passes it to /save so the lock matches
+          export WK PAST_WK   # ISO weekStart per digest → the desk passes it to /save so the lock matches
           export GEN="$(date -u '+%Y-%m-%d %H:%M UTC')"
           python3 - <<'PY'
-          import json, os
-          m={"generated":os.environ["GEN"],"digests":{
-            "weekly":{"name":"The Week Ahead Outlook","subject":os.environ["WK_SUBJ"],"covers":os.environ["WK_COV"],"weekStart":os.environ["WK"],"audience":"Weekly Update","file":"digest/week.html"},
-            "weekend":{"name":"The Weekend Ahead Outlook","subject":os.environ["WE_SUBJ"],"covers":os.environ["WE_COV"],"weekStart":os.environ["WE"],"audience":"Weekly Update","file":"digest/weekend.html"}}}
-          open("digest/manifest.json","w").write(json.dumps(m,indent=2)+"\n")
-          print("manifest:",os.environ["WK_SUBJ"],"|",os.environ["WE_SUBJ"])
+          import json, os, subprocess
+          digests={
+            "weekly":{"name":"The Week Ahead Outlook","subject":os.environ["WK_SUBJ"],"covers":os.environ["WK_COV"],"weekStart":os.environ["WK"],"audience":"Weekly Update","file":"digest/week.html"}}
+          if os.environ.get("PAST_ON")=="1":
+            digests["past"]={"name":"Past Meetings","subject":os.environ["PAST_SUBJ"],"covers":os.environ["PAST_COV"],"weekStart":os.environ["PAST_WK"],"audience":"Past Meetings","file":"digest/past.html"}
+          # "generated" is a wall-clock stamp, so rewriting it unconditionally
+          # made EVERY run a change — which was tolerable on a daily cron but
+          # would be ~8 empty commits a day now that this workflow also runs
+          # after each Content Refresh. Only advance the stamp when something
+          # real moved (a rendered digest, or a lock added/removed); otherwise
+          # carry the previous one forward so the run is a true no-op.
+          moved=[l for l in subprocess.run(["git","status","--porcelain","digest/"],
+                 capture_output=True,text=True).stdout.splitlines()
+                 if l.strip() and not l.split()[-1].endswith("digest/manifest.json")]
+          old={}
+          try: old=json.load(open("digest/manifest.json"))
+          except Exception: pass
+          gen=os.environ["GEN"]
+          if not moved and old.get("digests")==digests and old.get("generated"):
+              gen=old["generated"]
+              print("no digest changes — carrying generated stamp forward")
+          open("digest/manifest.json","w").write(json.dumps({"generated":gen,"digests":digests},indent=2)+"\n")
+          print("manifest:",os.environ["WK_SUBJ"],"|",os.environ.get("PAST_SUBJ") if os.environ.get("PAST_ON")=="1" else "(no Past Meetings this week)")
           PY
       - name: Commit if changed
         run: |
           git config user.name "Gov Hub Bot"
           git config user.email "bot@livabletelluride.org"
           git add -A digest/   # -A so a deleted (stale) lock file is staged too
+          # The lede cache has to PERSIST between runs to do its job — CI starts
+          # from a fresh checkout, so an uncommitted cache is a guaranteed miss
+          # (and a reworded lede) every single run. Same reason
+          # data/meeting-hooks-cache.json is committed.
+          if [ -f data/rick-lede-cache.json ]; then git add data/rick-lede-cache.json; fi
           if git diff --cached --quiet; then
             echo "no digest changes"
           else

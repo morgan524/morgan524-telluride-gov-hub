@@ -1,26 +1,27 @@
 {
- "generated": "2026-08-24T01:53:05.388Z",
+ "generated": "2026-11-22T01:44:36.799Z",
  "pinned": false,
- "topic": "carhenge",
- "topicLabel": "Carhenge / Shandoka",
- "headline": "Carhenge / Shandoka goes before Telluride Board of Education Monthly Meeting on Tuesday, August 25",
- "blurb": "The August 25 Board of Education meeting carries real weight. The most consequential item is a flood-related budget appropriation for FY 2026-27 — the board will discuss and then vote on adjusting the district's spending plan to account for flood damage, a reminder that the canyon's geography extracts its own costs.",
+ "topic": "code",
+ "topicLabel": "Code Changes & Accelerated Review",
+ "headline": "Code Changes & Accelerated Review goes before Special Town Council on Friday, December 4",
+ "blurb": "This special meeting is a single-item public hearing: Town Council sits as an appellate body to review a challenge to HARC's September 16, 2026 approval of a new construction project at 208 S Fir Street. The appellant, an adjacent property owner at 150 W Pacific Avenue, filed the appeal on September 30, 2026.",
  "images": [],
  "deepDive": {
-  "label": "Carhenge / Shandoka",
-  "href": "/deep-dive-carhenge.html"
+  "label": "Code Changes & Accelerated Review",
+  "href": "/deep-dive-code.html"
  },
  "meeting": {
-  "title": "Telluride Board of Education Monthly Meeting",
-  "sourceLabel": "School District R-1",
-  "date": "2026-08-25",
-  "humanDate": "Tuesday, August 25",
-  "time": "",
-  "location": "Bridal Veil District Conference Room / Zoom",
-  "agendaUrl": "https://files.smartsites.parentsquare.com/3403/82526_mm_packet_1.pdf",
+  "title": "Special Town Council",
+  "sourceLabel": "Town of Telluride",
+  "date": "2026-12-04",
+  "humanDate": "Friday, December 4",
+  "time": "10:00 AM",
+  "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324",
   "hasAgenda": true,
-  "packetUrl": "",
-  "zoomLink": "https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09",
-  "livestream": ""
+  "packetUrl": "https://telluride-co.civicweb.net/document/448285/",
+  "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324",
+  "zoomLink": "https://us06web.zoom.us/meeting/register/LyUziwYoTiaZTkcdYc8iiA",
+  "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
  }
 }

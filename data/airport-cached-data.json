@@ -1,38 +1,41 @@
 [
   {
-    "date": "August 20, 2026",
-    "time": "12:00 PM",
-    "title": "TRAA Board of Commissioners Meeting",
-    "agendaUrl": null,
-    "packetUrl": null,
-    "special": false,
-    "location": "Terminal Observation Lounge, Telluride Regional Airport"
-  },
-  {
-    "date": "September 17, 2026",
-    "time": "12:00 PM",
-    "title": "TRAA Board of Commissioners Meeting",
-    "agendaUrl": null,
-    "packetUrl": null,
-    "special": false,
-    "location": "Terminal Observation Lounge, Telluride Regional Airport"
-  },
-  {
-    "date": "October 15, 2026",
-    "time": "12:00 PM",
-    "title": "TRAA Board of Commissioners Meeting",
-    "agendaUrl": null,
-    "packetUrl": null,
-    "special": false,
-    "location": "Terminal Observation Lounge, Telluride Regional Airport"
-  },
-  {
     "date": "November 19, 2026",
     "time": "12:00 PM",
     "title": "TRAA Board of Commissioners Meeting",
     "agendaUrl": null,
-    "packetUrl": null,
+    "packetUrl": "https://tellurideairport.com/wp-content/uploads/2026/11/TRAA-Board-Packet-111926.pdf",
     "special": false,
     "location": "Terminal Observation Lounge, Telluride Regional Airport"
+  },
+  {
+    "date": "December 17, 2026",
+    "time": "12:00 PM",
+    "title": "TRAA Board of Commissioners Meeting",
+    "agendaUrl": null,
+    "packetUrl": null,
+    "special": false,
+    "location": "Terminal Observation Lounge, Telluride Regional Airport",
+    "note": "Regular board meeting of the Telluride Regional Airport Authority."
+  },
+  {
+    "date": "January 21, 2027",
+    "time": "12:00 PM",
+    "title": "TRAA Board of Commissioners Meeting",
+    "agendaUrl": null,
+    "packetUrl": null,
+    "special": false,
+    "location": "Terminal Observation Lounge, Telluride Regional Airport",
+    "note": "Regular board meeting of the Telluride Regional Airport Authority."
+  },
+  {
+    "date": "February 18, 2027",
+    "time": "12:00 PM",
+    "title": "TRAA Board of Commissioners Meeting",
+    "agendaUrl": null,
+    "packetUrl": null,
+    "special": false,
+    "location": "Terminal Observation Lounge, Telluride Regional Airport",
+    "note": "Regular board meeting of the Telluride Regional Airport Authority."
   }
 ]

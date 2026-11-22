@@ -48,6 +48,8 @@ const MIRROR_ARRAYS = [
   // Hub-Bub Question of the Day (content-refresh Task 24); hub-bub.html reads
   // the JSON mirror directly.
   'DAILY_QUESTIONS',
+  // Steering committee roster (names only) — written by steering-refresh.js.
+  'STEERING_MEMBERS',
 ];
 
 // Bot-managed OBJECT maps (keyed data, not arrays) — same dual-write, extracted
@@ -66,6 +68,8 @@ const MIRROR_GOVDATA_ARRAYS = [
   'COUNTY_CACHED_DATA', 'NORWOOD_CACHED_DATA', 'OPHIR_CACHED_DATA', 'SCHOOL_CACHED_DATA',
   'TELLURIDE_CACHED_DATA', 'MV_CACHED_DATA', 'MED_CACHED_DATA', 'SMART_CACHED_DATA',
   'FIRE_CACHED_DATA', 'RIDGWAY_CACHED_DATA', 'AIRPORT_CACHED_DATA',
+  'OURAY_CITY_CACHED_DATA',   // BOT-REBUILT from BoardBook each run
+  'OURAY_COUNTY_CACHED_DATA', // BOT-REBUILT from CivicClerk (ouraycoco) each run
   // deep-dive page index (hand-edited config; redesign reads the JSON)
   'DEEP_DIVE_PAGES',
   // local orgs directory (hand-edited config; redesign local-orgs reads the JSON)
@@ -80,7 +84,7 @@ const MIRROR_GOVDATA_ARRAYS = [
 // the bot arrays these change only by human edit — after editing gov-data.js,
 // run `node scripts/mirror-json.js` and commit, or the json-mirror CI test
 // fails. content-refresh also re-mirrors them each run as a self-heal.
-const MIRROR_GOVDATA_OBJECTS = ['LAND_USE_ISSUES', 'GONDOLA_DATA'];
+const MIRROR_GOVDATA_OBJECTS = ['LAND_USE_ISSUES', 'GONDOLA_DATA', 'MEETING_LINKS'];
 
 // BLOG_POSTS -> blog-posts.json
 function mirrorFileName(varName) {

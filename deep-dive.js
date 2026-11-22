@@ -15,6 +15,17 @@
   // those alongside http(s) (LTData.safeUrl is absolute-only).
   function safe(u) { return /^(https?:\/\/|\/(?!\/)|mailto:)/i.test(u || '') ? u : '#'; }
 
+  // Long prose fields may carry blank lines to mark paragraph breaks. Escape
+  // each paragraph and emit its own <p>; a single-paragraph string renders
+  // exactly as it did before.
+  function paras(text) {
+    return String(text || '').split(/\n\s*\n/).map(function (t) {
+      return t.trim();
+    }).filter(Boolean).map(function (t) {
+      return '<p>' + esc(t) + '</p>';
+    }).join('');
+  }
+
   function section(label, inner) {
     return '<section class="dd-sect"><div class="eyebrow" style="margin-bottom:10px">' + esc(label) + '</div>' + inner + '</section>';
   }
@@ -121,7 +132,7 @@
     if (issue.intro) body += '<p class="dd-lead">' + esc(issue.intro) + '</p>';
     if (issue.statusTitle || issue.statusCopy || issue.nextStep) {
       body += '<div class="dd-status card"><h3>' + esc(issue.statusTitle || 'Where it stands now') + '</h3>' +
-        (issue.statusCopy ? '<p>' + esc(issue.statusCopy) + '</p>' : '') +
+        (issue.statusCopy ? paras(issue.statusCopy) : '') +
         (issue.nextStep ? '<div class="dd-watch"><strong>Watch for:</strong> ' + esc(issue.nextStep) + '</div>' : '') + '</div>';
     }
     // Optional data chart right under the status card (e.g. Norwood Water's
@@ -187,6 +198,10 @@
     }
     // Upcoming meetings: live gov-hub matches when available (auto-refreshed
     // every 6h), otherwise the topic's hand-curated list.
+    // Meetings come off 3 hours after their scheduled start (LTData.meetingOver).
+    var notOver = function (m) { return !(LTData.meetingOver && LTData.meetingOver(m.date, m.time)); };
+    if (watch && watch.upcoming) watch.upcoming = watch.upcoming.filter(notOver);
+    if (issue.meetings) issue.meetings = issue.meetings.filter(notOver);
     if (watch && watch.upcoming && watch.upcoming.length) {
       side += '<div class="dd-card card"><h4>On upcoming agendas</h4>' + watch.upcoming.map(function (m) {
         var links = [];
@@ -202,7 +217,7 @@
     } else if (issue.meetings && issue.meetings.length) {
       side += '<div class="dd-card card"><h4>Upcoming meetings</h4>' + issue.meetings.map(function (m) {
         return '<div class="dd-doc"><span class="tag rust-tint">' + esc(m.date || '') + (m.time ? ' · ' + esc(m.time) : '') + '</span>' +
-          '<a href="' + esc(safe(m.href)) + '" target="_blank" rel="noopener">' + esc(m.title || '') + '</a>' +
+          (m.href ? '<a href="' + esc(safe(m.href)) + '" target="_blank" rel="noopener">' + esc(m.title || '') + '</a>' : '<strong>' + esc(m.title || '') + '</strong>') +
           (m.location ? '<p>' + esc(m.location) + '</p>' : '') + '</div>';
       }).join('') + '</div>';
     }

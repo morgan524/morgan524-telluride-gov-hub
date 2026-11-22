@@ -6,21 +6,19 @@
 // Two callers use this:
 //   • scripts/build-rss-feed.js — the weekly Mailchimp RSS digest (imports
 //     RICK_VOICE so its lede+notable prompt shares the exact persona).
-//   • scripts/weekly-email.js   — the weekly AND weekend digest-desk emails
-//     (calls generateRickLede() to write the intro from the real events).
+//   • scripts/weekly-email.js   — the weekly digest-desk email (calls
+//     generateRickLede() to write the intro from the real meetings; no events since 2026-10-19).
 //
-// Before this module existed, only the RSS path had a Rick lede; the
-// digest-desk weekend email fell back to a hand-maintained JSON that defaulted
-// to a generic canned line whenever nobody typed a dated entry — which is why
-// the "Weekend Ahead Outlook" intro was never in Rick's voice. Keeping the
-// persona here means the two paths can't drift.
+// Keeping the persona here means the two paths can't drift. (The Friday
+// "Weekend Ahead" email that also used it was retired 2026-10-04.)
 // ──────────────────────────────────────────────────────────────────────────
 const https = require('https');
+const fs = require('fs');
+const crypto = require('crypto');
 const { SONNET } = require('./claude-model.js');
 
-// The persona line. Cadence-neutral ("community email", not "weekly") so it
-// reads correctly for both the weekly and the weekend send; the window line in
-// the prompt below establishes which one.
+// The persona line. Cadence-neutral ("community email", not "weekly"); the
+// window line in the prompt below establishes the period.
 const RICK_VOICE = 'You are "Rick" — a long-time Telluride local writing the one-paragraph intro to Livable Telluride\'s community email. You\'ve seen it all, you love this valley, and you\'re not cynical but you pay attention when something real is at stake. Voice: warm, plain-spoken, grounded.';
 
 function callClaude(apiKey, prompt, maxTokens) {
@@ -56,16 +54,41 @@ function callClaude(apiKey, prompt, maxTokens) {
   });
 }
 
-// Build the lede-only prompt. `cadence` is 'weekend' (Fri–Sun, events only) or
-// 'week' (Fri–Thu, meetings + events).
-function ledePrompt({ meetings, events, cadence }) {
-  const weekend = cadence === 'weekend';
-  const windowLine = weekend
-    ? 'Below are the notable community events for THIS COMING WEEKEND (Friday through Sunday) across the Telluride region.'
-    : 'Below are the UPCOMING government meetings and community events for the coming week (Friday through Thursday) across the Telluride region.';
-  const spec = weekend
-    ? 'a 2-3 sentence (40-70 word) plain-prose intro to the weekend. LEAD with the single best or biggest thing happening, then briefly fold in a couple of the others. Warm and grounded — like a local telling a friend what is worth getting out for.'
-    : 'a 2-4 sentence (50-90 word) plain-prose intro that orients a busy local. LEAD with the single biggest or most important thing this week, then briefly fold in the rest.';
+// Build the lede-only prompt for the weekly (meetings only).
+function ledePrompt({ meetings, events }) {
+  // Morgan 2026-10-19: the Week Ahead intro covers public meetings ONLY — no
+  // events (events are getting their own email). Any events passed in are ignored.
+  const windowLine = 'Below are the UPCOMING government meetings for the coming week across the Telluride region.';
+  // HOUSE STYLE (Morgan, 2026-09-21 — "save that style for all future
+  // digests"): cover MORE of the window, put the DAY OF THE WEEK on every item,
+  // and wrap each body / event name in **double asterisks**. weekly-email.js
+  // renders **…** as bold (escBold); nothing else is markup.
+  const style = ' Every meeting you mention MUST carry its day of the week (e.g. "Tuesday"). Wrap the NAME of each governing body in double asterisks for bold, exactly like **Telluride Town Council** — the name only, not the day or the venue. No other markup.' +
+    // Morgan 2026-09-30: the region has many town councils, so a bare
+    // "Town Council" is ambiguous. Every mention names its town.
+    ' ALWAYS name a governing body with its town or county, every time you mention it — use the "body" name given for each meeting, e.g. **Telluride Town Council**, **Mountain Village Town Council**, **Ridgway Town Council**, **Ouray City Council**, **San Miguel County Board of County Commissioners**. NEVER write a bare "Town Council", "City Council", "Council", or "the Board" — not even on a second reference in the same paragraph.';
+  // Morgan 2026-09-30: a line break after each summarized day. The paragraphs
+  // are separated by a newline inside the JSON string; weekly-email.js renders
+  // each one on its own line.
+  // 2026-10-04: "the curtain goes up on Not-So-Young People's Theater presents
+  // Shrek The Musical" — an event title of the form "X presents Y" read as a
+  // broken sentence when dropped into prose.
+  const byDay = ' Separate the day paragraphs with a single newline character (\\n) inside the "lede" string; do not put two days in one paragraph.';
+  // Morgan 2026-10-19: each meeting carries "importance" (scripts/lib/
+  // recap-importance.js). Major = a key body (Telluride Council/P&Z/HARC, San
+  // Miguel BOCC/Planning Commission, Mountain Village Council/DRB) taking up
+  // issues that affect everyone; those get a summary. Minor meetings are only
+  // named, and single-lot items are never the story.
+  // Morgan 2026-10-25: minor meetings with a posted agenda now carry a short
+  // summary and get one clause; meetings with no agenda carry none.
+  const importance = ' Each meeting has an "importance" field. For a "major" meeting, summarize in a sentence or two what is on its agenda that affects the whole community (budgets, taxes and fees, code changes, housing policy, transit, wildfire, town-owned projects), not individual lot or property decisions. For a "minor" meeting, name it with its day; if it has a "summary", add one short clause on its main community-relevant item (e.g. "**Ouray County Board of County Commissioners** takes up the proposed EMS merger with Ridgway Fire on Tuesday"), skipping routine or single-lot items. A meeting with no "summary" has no posted agenda: only name it — never guess what it will cover.';
+  // 2026-11-08: the Nov 10 intro had the Ouray County BOCC Work Session (3 PM)
+  // "open the afternoon" and the regular meeting (9 AM) follow it — the model
+  // never saw the start times, so it invented an order from the summaries.
+  // Each meeting now carries its published "time" (when the body posts one),
+  // and same-day ordering and time-of-day words must follow it.
+  const timing = ' Each meeting may carry a "time" (its published start time). When two or more meetings fall on the same day, mention them in start-time order, earliest first, and use the "time" fields as given. Use words like "morning", "afternoon", "evening", "opens", "then" or "follows" ONLY when the "time" fields support them; a meeting with no "time" gets no time-of-day at all. Do not put an item\'s own timing (e.g. "the afternoon brings a hearing") on the meeting as a whole.';
+  const spec = 'a plain-prose intro that orients a busy local (120-220 words), written DAY BY DAY in date order: one short paragraph per day that has a meeting worth mentioning, each opening with that day (e.g. "Monday, …"). Give the major meetings the most weight within their days and name the minor meetings briefly on theirs. Aim to name most of the meetings. Do NOT mention community events, concerts, films, festivals, or anything "on the lighter side" — public meetings only.' + importance + timing + style + byDay;
   const parts = [
     RICK_VOICE,
     '',
@@ -74,25 +97,132 @@ function ledePrompt({ meetings, events, cadence }) {
     'Return ONLY a JSON object (no markdown fence) with exactly one field, "lede": ' + spec + ' Be specific and grounded — only use what is in the lists below; never invent times, prices, lineups, vote outcomes, or details you were not given. No greeting, no sign-off, no "Rick here", no calls to action, no emoji.',
     '',
   ];
-  if (!weekend) { parts.push('MEETINGS:', JSON.stringify(meetings || [], null, 1), ''); }
-  parts.push('EVENTS:', JSON.stringify(events || [], null, 1));
+  parts.push('MEETINGS:', JSON.stringify(meetings || [], null, 1));
   return parts.join('\n');
+}
+
+// ── Lede cache ──────────────────────────────────────────────────────────────
+// The lede is a Claude call, so the SAME inputs used to produce a DIFFERENT
+// paragraph on every render. That made the digest render non-deterministic,
+// which mattered once the digest started re-rendering whenever the bot data
+// changes (digest-refresh.yml runs after Content Refresh): every run rewrote
+// digest/week.html with a reworded intro, so "commit only if the render
+// changed" always committed, and a real change (an agenda link appearing) was
+// buried in lede churn.
+//
+// Fix: content-address the lede. The key is a hash of EXACTLY what the prompt
+// is built from — cadence + the meetings/events list — so the same window
+// returns the same paragraph with no API call, and the lede is rewritten only
+// when the underlying meetings/events actually change (e.g. an agenda posts
+// and a placeholder summary becomes a real one). Same pattern as
+// data/meeting-hooks-cache.json.
+function ledeInputFingerprint({ meetings, events, cadence } = {}) {
+  // Hash the prompt inputs, not the prompt string: prompt wording can be
+  // edited without invalidating every cached lede in the file.
+  const payload = JSON.stringify({
+    // Bump when the HOUSE STYLE in ledePrompt changes so every cached lede
+    // written under the old style is regenerated (v2 = bold names + weekdays,
+    // v3 = every body named with its town — no bare "Town Council",
+    // v4 = one paragraph per day, line break between days,
+    // v5 = major meetings summarized, minor meetings only named,
+    // v6 = meetings only, no events,
+    // v7 = minor meetings with an agenda get a short clause,
+    // v8 = start times passed in; same-day order and time-of-day follow them).
+    style: 8,
+    // Always 'week' now (Weekend Ahead retired 2026-10-04). Kept in the
+    // payload so every existing cache key stays valid.
+    cadence: 'week',
+    meetings: meetings || [],
+    events: events || [],
+  });
+  return crypto.createHash('sha1').update(payload).digest('hex').slice(0, 16);
+}
+
+function loadLedeCache(cacheFile) {
+  if (!cacheFile) return {};
+  try { return JSON.parse(fs.readFileSync(cacheFile, 'utf8')) || {}; }
+  catch (e) { return {}; }   // missing/corrupt cache is a miss, never an error
+}
+
+function saveLedeCache(cacheFile, cache) {
+  if (!cacheFile) return;
+  // Keep the file from growing without bound: ledes are per-window and go
+  // stale the moment the window passes. 40 entries is several weeks of both
+  // cadences; oldest-written are dropped first.
+  const keys = Object.keys(cache);
+  if (keys.length > 40) {
+    const trimmed = {};
+    for (const k of keys.slice(-40)) trimmed[k] = cache[k];
+    cache = trimmed;
+  }
+  try { fs.writeFileSync(cacheFile, JSON.stringify(cache, null, 1) + '\n'); }
+  catch (e) { /* best-effort: a read-only FS must not fail the render */ }
+}
+
+// Places that make a council name unambiguous. Anything else in front of
+// "Council" (or nothing) is a bare reference.
+const PLACE_RE = /(telluride|mountain village|ridgway|norwood|ophir|rico|ouray|nucla|naturita|sawpit|placerville|montrose|dolores|san miguel)\s*(town|city)?\s*$/i;
+
+// Bare council references in a lede: "Town Council", "City Council" or
+// "Council" not directly preceded by a place name. Returns the offending
+// snippets (empty when the lede is fine).
+function bareCouncilRefs(lede) {
+  const out = [];
+  const t = String(lede || '').replace(/\*\*/g, '');
+  const re = /\b(?:(?:Town|City)\s+)?Council\b/g;
+  let m;
+  while ((m = re.exec(t))) {
+    const before = t.slice(Math.max(0, m.index - 40), m.index) + (/^(town|city)/i.test(m[0]) ? m[0].split(/\s+/)[0] : '');
+    if (!PLACE_RE.test(before.replace(/\s+$/, '') + ' ') && !PLACE_RE.test(before)) out.push(t.slice(Math.max(0, m.index - 20), m.index + m[0].length));
+  }
+  return out;
 }
 
 // Generate the Rick-voice lede from the ACTUAL meetings + events in the window.
 // Best-effort: returns null (never throws) when there is no API key, nothing to
 // write about, or the call/parse fails — so the caller keeps its fallback lede.
-async function generateRickLede({ meetings, events, apiKey, cadence } = {}) {
-  const key = apiKey || process.env.ANTHROPIC_API_KEY;
-  if (!key) { console.log('  i No ANTHROPIC_API_KEY — skipping Rick lede (using fallback)'); return null; }
+async function generateRickLede({ meetings, events, apiKey, cadence, cacheFile } = {}) {
   const ev = Array.isArray(events) ? events : [];
   const mtg = Array.isArray(meetings) ? meetings : [];
   if (!ev.length && !mtg.length) return null;   // nothing to summarize
+
+  // A cache hit needs no API key — that's the point: re-rendering the same
+  // window is free and byte-identical, so only a real content change moves
+  // the digest.
+  const fp = ledeInputFingerprint({ meetings: mtg, events: ev, cadence });
+  const cache = loadLedeCache(cacheFile);
+  if (cache[fp] && cache[fp].lede) {
+    console.log('  i Rick lede cache hit (' + fp + ') — no Claude call');
+    return cache[fp].lede;
+  }
+
+  // Log the fingerprint on a MISS too: when a digest re-render moves the lede,
+  // this is the one line that says why (the inputs changed, and to what key).
+  console.log('  i Rick lede cache miss (' + fp + ') — generating');
+  const key = apiKey || process.env.ANTHROPIC_API_KEY;
+  if (!key) { console.log('  i No ANTHROPIC_API_KEY — skipping Rick lede (using fallback)'); return null; }
   try {
-    const raw = await callClaude(key, ledePrompt({ meetings: mtg, events: ev, cadence }), 500);
-    const m = raw.match(/\{[\s\S]*\}/);          // tolerate a stray markdown fence
-    const parsed = JSON.parse(m ? m[0] : raw);
-    const lede = String(parsed.lede || '').trim();
+    // Tolerate a stray markdown fence and a raw line break inside the string
+    // (the day-by-day intro asks for newline-separated paragraphs).
+    const parse = (raw) => {
+      const m = raw.match(/\{[\s\S]*\}/); const j = m ? m[0] : raw;
+      let o; try { o = JSON.parse(j); } catch (e) { o = JSON.parse(j.replace(/\r?\n/g, '\\n')); }
+      return String(o.lede || '').trim();
+    };
+    const prompt = ledePrompt({ meetings: mtg, events: ev, cadence });
+    let lede = parse(await callClaude(key, prompt, 1200));
+    // One corrective retry when a bare "Town Council" / "Council" slips through.
+    const bad = bareCouncilRefs(lede);
+    if (lede && bad.length) {
+      console.log('  ! Rick lede named a council without its town (' + bad.join(' | ') + ') — retrying');
+      const fixed = parse(await callClaude(key, prompt + '\n\nYour previous draft was:\n' + lede +
+        '\n\nIt used a bare council name here: ' + bad.map((b) => '"' + b + '"').join(', ') +
+        '. Rewrite it so EVERY mention of a council or board names its town or county (e.g. **Telluride Town Council**). Same JSON format.', 1200));
+      const stillBad = bareCouncilRefs(fixed);
+      if (fixed && stillBad.length < bad.length) lede = fixed;
+      if (stillBad.length) console.log('  ! Rick lede still has a bare council reference after retry: ' + stillBad.join(' | '));
+    }
+    if (lede) { cache[fp] = { lede, at: new Date().toISOString().slice(0, 10) }; saveLedeCache(cacheFile, cache); }
     return lede || null;
   } catch (e) {
     console.log('  ! Rick lede generation failed (' + e.message + ') — using fallback');
@@ -100,4 +230,4 @@ async function generateRickLede({ meetings, events, apiKey, cadence } = {}) {
   }
 }
 
-module.exports = { generateRickLede, ledePrompt, RICK_VOICE };
+module.exports = { generateRickLede, ledePrompt, RICK_VOICE, ledeInputFingerprint, bareCouncilRefs };

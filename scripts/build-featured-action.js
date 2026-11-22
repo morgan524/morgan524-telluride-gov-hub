@@ -23,7 +23,7 @@ const HORIZON_DAYS = 14;
 // Importance tie-break when two topics meet the same day (most contested
 // land-use fights first). Topics absent from this list rank last, in watch
 // order.
-const TOPIC_PRIORITY = ['carhenge', 'society', 'diamond', 'gondola', 'code', 'wildfire', 'skigate'];
+const TOPIC_PRIORITY = ['carhenge', 'medcenter', 'diamond', 'gondola', 'code', 'wildfire'];
 
 // Topic key → deep-dive page. Default is deep-dive-<key>.html; anything
 // off-pattern is listed here.
@@ -111,7 +111,12 @@ function run(repoRoot) {
   if (choice) {
     const m = choice.meeting;
     // Enrich from week-meetings (summary + packet + time live there).
-    const wk = week.find(w => w.source === m.source && w.date === m.date && w.title === m.title) || {};
+    // Exact source+date+title first; fall back to the same meeting page URL so
+    // a retitled row (CivicWeb renames "HARC" → "HARC Meeting", etc.) still
+    // joins. Without a join the card lost its packet and agenda state entirely.
+    const sameUrl = (w) => (m.agendaUrl && w.agendaUrl === m.agendaUrl) || (m.link && w.link === m.link);
+    const wk = week.find(w => w.source === m.source && w.date === m.date && w.title === m.title)
+      || week.find(w => w.source === m.source && w.date === m.date && sameUrl(w)) || {};
     // An expired pin must stop supplying COPY, not just stop selecting the
     // meeting. `pinned` already tested pin.date, but headline/blurb used
     // `pin.headline || …` unconditionally — so once a pin's date passed, it
@@ -148,9 +153,13 @@ function run(repoRoot) {
         humanDate: humanDate(m.date),
         time: m.time || wk.time || '',
         location: m.location || wk.location || '',
-        agendaUrl: m.agendaUrl || wk.agendaUrl || '',
-        hasAgenda: wk.hasAgenda !== undefined ? !!wk.hasAgenda : !!(m.agendaUrl),
-        packetUrl: wk.packetUrl || '',
+        // Agenda + packet come from week-meetings FIRST — the same record the
+        // regular Gov-Hub cards render from — so the featured card updates on
+        // the same refresh (the watch row is a snapshot and has no packet).
+        agendaUrl: wk.agendaUrl || m.agendaUrl || '',
+        hasAgenda: wk.hasAgenda !== undefined ? !!wk.hasAgenda : false,
+        packetUrl: wk.packetUrl || m.packetUrl || '',
+        link: wk.link || m.link || '',
         // Pin-supplied links win, then the meeting's own, then the entity's
         // channel — an active pin for a meeting the watch doesn't know still
         // renders "Join Zoom" and "Watch on YouTube". Both are gated on
