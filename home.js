@@ -117,7 +117,24 @@
     if (m.href) return '<a class="wk-agenda ghost" href="' + E(safe(m.href)) + '" rel="noopener" target="_blank">Meeting info →</a>';
     return '<span aria-disabled="true" class="wk-agenda off">Agenda not posted yet</span>';
   }
-  function meetingActs(m) { return '<div class="wk-acts">' + agendaBtn(m) + commentLink(m) + '</div>'; }
+  function meetingActs(m, remote) { return '<div class="wk-acts">' + agendaBtn(m) + commentLink(m) + (remote || '') + '</div>'; }
+  // The featured meeting always offers both remote ways in — Zoom to take part,
+  // the livestream to watch (Morgan, 2026-08-19: "we always need to include the
+  // Zoom link and the YouTube link to join in"). Only the featured card gets
+  // them: the day grid stays a glance, not a console of buttons.
+  //
+  // `fm` is data/featured-action.json's meeting, whose links are the resolved
+  // ones — build-featured-action.js has already applied an active pin and the
+  // entity-channel fallback — so they beat the raw week-meetings row.
+  function remoteActs(m, fm) {
+    // Prefer the featured-action record's links, then the week-meetings row's.
+    var src = { zoomLink: (fm && fm.zoomLink) || m.zoomLink || '',
+                livestream: (fm && fm.livestream) || m.livestream || '',
+                livestreamLabel: (fm && fm.livestreamLabel) || m.livestreamLabel || '' };
+    return LTData.remoteWaysIn(src).map(function (w) {
+      return '<a class="wk-remote" href="' + E(safe(w.href)) + '" rel="noopener" target="_blank">' + E(w.label) + '</a>';
+    }).join('');
+  }
   // The featured meeting: this week's Featured Action meeting when it falls in
   // the week and hasn't happened yet (Shandoka P&Z, Oct 22), else the top pick.
   function isFeatured(m, fa) {
@@ -135,7 +152,7 @@
     var tag = isFeatured(big, fa) ? 'FEATURED THIS WEEK' : 'THE BIG ONE';
     $('wk-feature').innerHTML = '<span class="tag">' + tag + ' · ' + E(DOWLONG[big.dow] || big.dow) + (big.time ? ', ' + E(big.time) : '') + '</span>' +
       '<h4>' + E(big.title) + '</h4><p>' + E(clip(big.summary || big.why, 420)) + '</p>' +
-      meetingActs(big) +
+      meetingActs(big, remoteActs(big, isFeatured(big, fa) ? (fa && fa.meeting) : null)) +
       (isFeatured(big, fa) && fa.deepDive && fa.deepDive.href ? '<a class="wk-dive" href="' + E(safe(new URL(fa.deepDive.href, (ORIGIN || location.origin) + '/').href)) + '">Read the ' + E(fa.deepDive.label) + ' deep dive →</a>' : '');
     var chosen = pickMeetings(meets.filter(function (m) { return m !== big; }), MEETING_SLOTS).sort(byDate);
     $('wk-daygrid').innerHTML = chosen.map(function (m) {
@@ -149,7 +166,8 @@
     var keys = days.map(function (d) { return d.key; });
     return rows.filter(function (r) { return keys.indexOf(r.date) >= 0; }).map(function (r) {
       var d = days[keys.indexOf(r.date)];
-      return { key: r.date, dow: d.dow, dayNum: d.day, time: r.time || '', src: r.sourceLabel || '', title: r.title || '', summary: r.summary || '', why: '', agenda: r.hasAgenda ? (r.agendaUrl || '') : '', href: r.link || '', commentEmail: r.commentEmail || '' };
+      return { key: r.date, dow: d.dow, dayNum: d.day, time: r.time || '', src: r.sourceLabel || '', title: r.title || '', summary: r.summary || '', why: '', agenda: r.hasAgenda ? (r.agendaUrl || '') : '', href: r.link || '', commentEmail: r.commentEmail || '',
+        zoomLink: r.zoomLink || '', livestream: r.livestream || '' };
     });
   }
 
