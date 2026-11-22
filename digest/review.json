@@ -1,19 +1,57 @@
 {
-  "reviewedAt": "2026-11-15 17:35",
-  "weekStart": "2026-11-16",
+  "reviewedAt": "2026-11-22 18:15",
+  "weekStart": "2026-11-23",
   "frozenUntil": "Tuesday morning (9 AM MDT / 8 AM MST)",
   "digests": [
     {
       "key": "weekly",
       "name": "The Week Ahead Outlook",
-      "subject": "The Week Ahead - November 16 - November 22, 2026",
-      "issues": []
+      "subject": "The Week Ahead Outlook - November 23 - November 29, 2026",
+      "issues": [
+        {
+          "check": "editorial",
+          "severity": "medium",
+          "where": "What to Attend · THU, NOV 26 · An Outlaw Thanksgiving at Alloy Kitchen",
+          "quote": "with live music on Thursday,",
+          "problem": "The event description ends mid-sentence with a trailing comma and no ellipsis, making it a broken sentence rather than a designed teaser cutoff.",
+          "suggestion": "Add an ellipsis to signal the intentional truncation, e.g. 'with live music on Thursday…'",
+          "fix": {
+            "find": "with live music on Thursday,",
+            "replace": "with live music on Thursday…"
+          },
+          "fixed": true
+        },
+        {
+          "check": "editorial",
+          "severity": "medium",
+          "where": "What to Attend · FRI, NOV 27 · DJ Phoenix",
+          "quote": "DJ Phoenix is a 30 year veteran of the Colorado house music scene and no stranger to Telluride party culture. Long time",
+          "problem": "The description ends with 'Long time' — a broken sentence fragment with no ellipsis, indicating a missing truncation marker.",
+          "suggestion": "Add an ellipsis after 'Long time' to match the intended teaser format.",
+          "fix": {
+            "find": "Telluride party culture. Long time",
+            "replace": "Telluride party culture. Long time…"
+          },
+          "fixed": true
+        },
+        {
+          "check": "editorial",
+          "severity": "medium",
+          "where": "What to Attend · SAT, NOV 28 · Will Ski 4 Food",
+          "quote": "Come spend an",
+          "problem": "The description ends with 'Come spend an' — a broken sentence fragment mid-article with no ellipsis, indicating a missing truncation marker.",
+          "suggestion": "Add an ellipsis after 'Come spend an' to match the intended teaser format.",
+          "fix": {
+            "find": "Come spend an",
+            "replace": "Come spend an…"
+          },
+          "fixed": true
+        }
+      ]
     }
   ],
-  "errors": [
-    "weekly: editorial read failed (Unexpected non-whitespace character after JSON at position 2232 (line 7 column 1)); mechanical checks still ran"
-  ],
+  "errors": [],
   "total": 0,
-  "linksChecked": 69,
-  "fixed": 0
+  "linksChecked": 33,
+  "fixed": 3
 }
