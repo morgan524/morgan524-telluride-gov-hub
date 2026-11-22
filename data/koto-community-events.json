@@ -1,16 +1,5 @@
 [
   {
-    "title": "Alpine Chapel's Annual FREE Community Friendsgiving",
-    "link": "https://koto.org/event/alpine-chapels-annual-free-community-friendsgiving/",
-    "description": "All are welcome for a FREE Community Friendsgiving meal around the table on Saturday, November 21st, from 5-7 p.m. at Telluride High School. Dine in only; while supplies last. No reservations required. All are welcome!",
-    "pubDate": "2026-11-21T17:00:00-07:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Middle/High School, TELLURIDE",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/10/image0-7-1-scaled.jpeg"
-  },
-  {
     "title": "Tea and Tarot",
     "link": "https://koto.org/event/tea-and-tarot/2026-11-22/",
     "description": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
@@ -482,5 +471,49 @@
     "category": "Community Event",
     "location": "Michael D. Palm Theater, Telluride",
     "imageUrl": "https://koto.org/wp-content/uploads/2026/11/Neverland-2026-PR-Image-4.93-x-3.87-in.png"
+  },
+  {
+    "title": "Palm Arts Dance Presents: Neverland",
+    "link": "https://koto.org/event/palm-arts-dance-presents-neverland/2026-12-13/",
+    "description": "Palm Arts Dance Presents: Neverland Saturday, December 12th at 6pm Sunday, December 13th at 2pm Michael D. Palm Theatre 721 West Colorado Avenue Telluride, CO 81435 Reserved Seating Advance Tickets: $15 student, $20 adult Door Tickets: $20 student, $25 adult Tickets at www.telluridepalm.com Palm Arts Dance presents Neverland at the Michael D. Palm Theatre on Saturday, December 12th at 6pm and Sunday, December 13th at 2pm! From age three to eighteen, this performance will feature over 100 local dancers from Telluride, Norwood, Ridgway, and Rico. This year's winter production promises an enchanting journey filled with beautiful dancing, familiar characters, and a little magic. Palm Arts Dance is thrilled to be back on their newly rebuilt sprung stage floor after the devastating flood this past July. …",
+    "pubDate": "2026-12-13T14:00:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Michael D. Palm Theater, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/11/Neverland-2026-PR-Image-4.93-x-3.87-in.png"
+  },
+  {
+    "title": "Tea and Tarot",
+    "link": "https://koto.org/event/tea-and-tarot/2026-12-13/",
+    "description": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    "pubDate": "2026-12-13T14:30:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    "title": "Sunday Live Music in the Lounge at Mountain Lodge Telluride",
+    "link": "https://koto.org/event/sunday-live-music-in-the-lounge-at-mountain-lodge-telluride/2026-12-13/",
+    "description": "Live music in the lounge at Mountain Lodge Telluride in Mountain Village, Sundays from 6 to 9 PM all winter.",
+    "pubDate": "2026-12-13T18:00:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Mountain Lodge Telluride, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Telluride Backcountry Film Festival",
+    "link": "https://koto.org/event/telluride-backcountry-film-festival/",
+    "description": "Join Sheep Mountain Alliance for an evening celebrating human-powered adventure, winter storytelling, and public lands advocacy! In partnership with Winter Wildlands Alliance, the Backcountry Film Festival is part of an international tour celebrating the spirit of human-powered adventure, the stories that connect us to wild places and to each other, and to the movement to keep winter wild. This event and fundraiser will feature an update on Sheep Mountain Alliance's current work, a variety of short films, a raffle, and pizza, snacks, and drinks.",
+    "pubDate": "2026-12-15T17:30:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Science &#038; Innovation Center, TELLURIDE",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/11/1920-x-1005-px-Cover-Centered-scaled.jpg"
   }
 ]

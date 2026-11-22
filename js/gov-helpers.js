@@ -2837,6 +2837,30 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "'Skiing is much more than what happens on the mountain'",
+    source: "Telluride Times",
+    date: "November 22, 2026",
+    firstSeen: "2026-11-22",
+    newsTopic: "recreation",
+    copy: "A documentary called \"Will Ski 4 Food\" screens at the Sheridan Opera House on Nov. 28, tracing the roots of freestyle skiing through the lens of Warren Miller cameraman Gary Nate, who filmed in Telluride for decades before his death in 2024. His son Colby directed the film after discovering boxes of his dad's old slides and footage. No streaming platform yet — for now it's showing live to ski communities.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_7892a5e9-ce25-464e-8e36-2b1a3017872e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/3b/93b6b223-24f9-49cd-b4a0-bf51cf9184a0/6afe3c6052e1a.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Commissioners approve land use code amendment on subdivisions",
+    source: "Telluride Times",
+    date: "November 21, 2026",
+    firstSeen: "2026-11-21",
+    newsTopic: "government",
+    copy: "San Miguel County commissioners approved a land use code amendment Nov. 18 that creates separate standards for major and minor subdivisions outside of PUDs, and adds a review process for condominium and townhouse plats that didn't exist before. The change also clarifies application requirements for splitting parcels. The Ilium Valley housing project isn't expected to be affected.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_8c01589e-3e4f-4b14-babb-cb373c9a65df.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
     title: "'We're a base camp for adventure' in Mountain Village",
     source: "Telluride Times",
     date: "November 21, 2026",
@@ -3455,18 +3479,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Commissioners approve land use code amendment on subdivisions",
-    source: "Telluride Times",
-    date: "November 21, 2026",
-    firstSeen: "2026-11-21",
-    newsTopic: "government",
-    copy: "San Miguel County commissioners approved a land use code amendment Nov. 18 that creates separate standards for major and minor subdivisions outside of PUDs, and adds a review process for condominium and townhouse plats that didn't exist before. The change also clarifies application requirements for splitting parcels. The Ilium Valley housing project isn't expected to be affected.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_8c01589e-3e4f-4b14-babb-cb373c9a65df.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Letters to the editor",
     source: "Telluride Times",
     date: "November 12, 2026",
@@ -3576,15 +3588,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/arts_and_entertainment/article_d38ea20e-a280-4051-a365-885e2d413887.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/30/230f93da-7cb4-4cc2-b9f4-970205e117f9/6aef13276f934.image.jpg",
     imgHiRes: true
-  },
-  {
-    title: "Local Employers Invited to Apply for Employee Housing Master Leases",
-    source: "Town of Telluride",
-    date: "October 23, 2026",
-    newsTopic: "housing",
-    copy: "(October 22, 2026) – The Telluride Housing Authority (THA) is offering master leases on five apartments at the new Virginia Placer IIA building and two rooms at the Telluride Boarding House to local businesses and organizations.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=408",
-    img: ""
   },
   {
     title: "Sign Up for the 2026 Turkey Trot!",
@@ -4325,17 +4328,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Alpine Chapel's Annual FREE Community Friendsgiving",
-    link: "https://koto.org/event/alpine-chapels-annual-free-community-friendsgiving/",
-    description: "All are welcome for a FREE Community Friendsgiving meal around the table on Saturday, November 21st, from 5-7 p.m. at Telluride High School. Dine in only; while supplies last. No reservations required. All are welcome!",
-    pubDate: "2026-11-21T17:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Middle/High School, TELLURIDE",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/10/image0-7-1-scaled.jpeg"
-  },
-  {
     title: "Tea and Tarot",
     link: "https://koto.org/event/tea-and-tarot/2026-11-22/",
     description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
@@ -4807,31 +4799,86 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Michael D. Palm Theater, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2026/11/Neverland-2026-PR-Image-4.93-x-3.87-in.png"
+  },
+  {
+    title: "Palm Arts Dance Presents: Neverland",
+    link: "https://koto.org/event/palm-arts-dance-presents-neverland/2026-12-13/",
+    description: "Palm Arts Dance Presents: Neverland Saturday, December 12th at 6pm Sunday, December 13th at 2pm Michael D. Palm Theatre 721 West Colorado Avenue Telluride, CO 81435 Reserved Seating Advance Tickets: $15 student, $20 adult Door Tickets: $20 student, $25 adult Tickets at www.telluridepalm.com Palm Arts Dance presents Neverland at the Michael D. Palm Theatre on Saturday, December 12th at 6pm and Sunday, December 13th at 2pm! From age three to eighteen, this performance will feature over 100 local dancers from Telluride, Norwood, Ridgway, and Rico. This year's winter production promises an enchanting journey filled with beautiful dancing, familiar characters, and a little magic. Palm Arts Dance is thrilled to be back on their newly rebuilt sprung stage floor after the devastating flood this past July. …",
+    pubDate: "2026-12-13T14:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Michael D. Palm Theater, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/11/Neverland-2026-PR-Image-4.93-x-3.87-in.png"
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://koto.org/event/tea-and-tarot/2026-12-13/",
+    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    pubDate: "2026-12-13T14:30:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "Sunday Live Music in the Lounge at Mountain Lodge Telluride",
+    link: "https://koto.org/event/sunday-live-music-in-the-lounge-at-mountain-lodge-telluride/2026-12-13/",
+    description: "Live music in the lounge at Mountain Lodge Telluride in Mountain Village, Sundays from 6 to 9 PM all winter.",
+    pubDate: "2026-12-13T18:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Mountain Lodge Telluride, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride Backcountry Film Festival",
+    link: "https://koto.org/event/telluride-backcountry-film-festival/",
+    description: "Join Sheep Mountain Alliance for an evening celebrating human-powered adventure, winter storytelling, and public lands advocacy! In partnership with Winter Wildlands Alliance, the Backcountry Film Festival is part of an international tour celebrating the spirit of human-powered adventure, the stories that connect us to wild places and to each other, and to the movement to keep winter wild. This event and fundraiser will feature an update on Sheep Mountain Alliance's current work, a variety of short films, a raffle, and pizza, snacks, and drinks.",
+    pubDate: "2026-12-15T17:30:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Science &#038; Innovation Center, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/11/1920-x-1005-px-Cover-Centered-scaled.jpg"
   }
 ];
 
 const WILKINSON_EVENTS = [
   {
-    title: "Yoga With/con Lauren",
-    link: "https://telluridelibrary.libcal.com/event/17482790?hs=a",
-    description: "10:00 AM – 11:00 AM · Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome. Mu&eacute;vase, respire y ll&eacute;nese de energ&iacute;a en esta din&aacute;mica clase biling&uuml;e, dirigido por Lauren Norton, dise&ntilde;ada para fortalecer su cuerpo y mente. Combinando la fuerza y fluidez del pilates, el ritmo y la energ&iacute;a de la danza, y la presencia equilibrante del yoga y la respiraci&oacute;n, esta sesi&oacute;n le dejar&aacute; sinti&eacute;ndose fuerte, en armon&iacute;a y revitalizado/a. …",
-    pubDate: "2026-11-21T17:00:00.000Z",
+    title: "Drop-In Tech Time with Oliver",
+    link: "https://telluridelibrary.libcal.com/event/15970401?hs=a",
+    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
+    pubDate: "2026-11-22T20:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_23_17_28_04.jpg"
+    location: "2nd Floor Desk",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
   },
   {
-    title: "Studio Ghibli Movie Matinee: The Secret World of Arrietty",
-    link: "https://telluridelibrary.libcal.com/event/17413379?hs=a",
-    description: "2:00 PM – 4:00 PM",
-    pubDate: "2026-11-21T21:00:00.000Z",
+    title: "Tea and Tarot",
+    link: "https://telluridelibrary.libcal.com/event/17347289?hs=a",
+    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
+    pubDate: "2026-11-22T21:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_21_16_07_14.png"
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
+  },
+  {
+    title: "Around the World: America&#039;s Pumpkin Beer & Chocolate Pretzels",
+    link: "https://telluridelibrary.libcal.com/event/17939663?hs=a",
+    description: "5:30 PM – 6:30 PM · Owner and Brewmaster, TJ is taking us on a journey to early America to discover how a humble native gourd became our continent's most iconic seasonal tradition. Long before pumpkin spice became a modern phenomenon, early American colonists relied on native pumpkins to survive winter and celebrate the harvest holidays. Join us for a curated tasting event exploring the rich history of American pumpkin brewing paired with traditional European-style chocolate pretzels. Grab your tasting passport, explore the global trade routes that brought us holiday spices, and toast to the historic flavors of the American harvest season! (Ages 21+ only).",
+    pubDate: "2026-11-23T00:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wine Mine",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_11_01_14_12_27.png"
   }
 ];
 
