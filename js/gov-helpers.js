@@ -269,9 +269,6 @@ const MEETING_AGENDA_META = {
   "tmvoa|2026-10-27|TMVOA Finance &amp; Budget Committee":
     {"sv":4,"ph":"b858cb282617fb09"},
 
-  "telluride|2026-10-23|Commission for Community Assistance, Arts & Special Events - Grant Subcommittee -Oct 23 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8328","sv":4},
-
   "county|2026-10-26|San Miguel Basin Fair Board Meeting 10/26":
     {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1092/files/agenda/2058"},
 
@@ -758,12 +755,6 @@ const DAILY_QUESTIONS = [
 // target, and these seeds let the data start landing again. No page renders
 // them yet — restoring (or retiring) the reader UIs is tracked separately.
 const MEETING_PREVIEWS = {
-  "county|2026-11-23|Open Space Commission Meeting":
-    "The Open Space Commission is expected to meet on November 23, 2026. Related county activity includes active requests for proposals covering jail painting, a multi-jurisdictional hazard mitigation plan update, and a housing action plan, alongside several ongoing public trustee and sheriff foreclosure proceedings in the Norwood and Telluride areas.",
-
-  "county|2026-11-23|Open Space Commission Meeting 11/23":
-    "The San Miguel County Open Space Commission is expected to meet on November 23, 2026. Related county activity includes active requests for proposals covering jail painting, a multi-jurisdictional hazard mitigation plan update, and a housing action plan, alongside several ongoing foreclosure proceedings on local properties.",
-
   "telluride|2026-12-02|Commission for Community Assistance, Arts & Special Events - Dec 02 2026":
     "The Commission for Community Assistance, Arts & Special Events is expected to meet on December 2, 2026, to address its regular responsibilities, which may include funding allocations for community, arts, and special events organizations, and consideration of special events policies, street closures, and banner applications.",
 
@@ -1066,8 +1057,8 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/facilities-master-plan/widgets/99345/key_dates#43153"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-11-22';
-const LEGAL_NOTICES_CACHE_DATE = '2026-11-21';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-11-23';
+const LEGAL_NOTICES_CACHE_DATE = '2026-11-23';
 
 const MANUAL_SUMMARIES = {
   "county|2026-10-26|Open Space Commission Meeting":
@@ -1192,9 +1183,6 @@ const MANUAL_SUMMARIES = {
 
   "tmvoa|2026-10-27|TMVOA Finance &amp; Budget Committee":
     "The October 27 TMVOA Finance & Budget Committee agenda hasn't been posted yet.",
-
-  "telluride|2026-10-23|Commission for Community Assistance, Arts & Special Events - Grant Subcommittee -Oct 23 2026":
-    "The Grant Subcommittee meets to work through discrepancy matrices from the 2027 grant applications — the internal reconciliation step where reviewers compare scores and flag inconsistencies before recommendations move forward.",
 
   "county|2026-10-26|San Miguel Basin Fair Board Meeting 10/26":
     "The San Miguel Basin Fair Board holds its regular October meeting with County Manager Mike Bordogna presenting alongside a guest presentation on the Fair Board nonprofit structure. Financial business includes outstanding receipts from the Junior Livestock Sale, sponsorships, and added money, plus an early look at the 2027 budget and grant updates from Westmeath and Lone Cone Legacy Trust. Coordinators for 4-H, the fairgrounds, and Parks & Open Space each give reports. Old business covers proposed rule changes and panel/gate purchases for next year. New business takes up a board member application from Ashley Tomlinson, setting 2027 weigh-in dates, and brainstorming band and entertainment options. Next meeting is set for November 9.",
@@ -2837,6 +2825,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "A ski bum’s holy grail",
+    source: "Telluride Times",
+    date: "November 22, 2026",
+    firstSeen: "2026-11-23",
+    newsTopic: "recreation",
+    copy: "Telluride's opening day 2026 is set for Dec. 5, and the race for first chair remains a real local tradition. Snowboarder Dustin Hinde has grabbed it many times, saying it's shifted from bragging rights to simply loving the start of a season. The tradition also carries weight for the Spencer family, who rode first chair together after losing Scott Spencer — a dedicated skier with over 100 days a year — to an avalanche in 2019.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_c6bc5cbc-6941-49c9-a11d-c797201513cb.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/c6/4c615a43-5049-4825-84c5-8f3210ed6697/6b02c34d55fc9.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "'Skiing is much more than what happens on the mountain'",
     source: "Telluride Times",
     date: "November 22, 2026",
@@ -3566,28 +3566,22 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "After two wins at State, the Miners are moving on",
-    source: "Telluride Times",
-    date: "November 9, 2026",
-    firstSeen: "2026-11-09",
+    title: "Sign Up for the 2026 Turkey Trot!",
+    source: "San Miguel County",
+    date: "November 5, 2026",
     newsTopic: "community",
-    copy: "Telluride's soccer Miners are through to the Class 2A Final Four after back-to-back home wins — 6-1 over Loveland Campion and 4-2 over Vanguard Classical. The No. 1 seed faces St. John Paul the Great on Nov. 11 in Westminster, with a potential championship matchup against rival Crested Butte still on the table.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_31a9c6e0-3689-4de8-b340-b33ba37f8156.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/ce/acedbd0f-20c2-4933-bef1-121395411674/6af2377a99908.image.jpg",
-    imgHiRes: true
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1424",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14909"
   },
   {
-    title: "The festival tapestry of Telluride: Is a 50-year legacy unraveling?",
-    source: "Telluride Times",
-    date: "November 9, 2026",
-    firstSeen: "2026-11-09",
-    newsTopic: "arts-culture",
-    copy: "Telluride's festival scene is hitting a rough patch — ticket sales were down across the board in summer 2026, continuing a three-year slide after the post-Covid boom. Mushroom Festival saw a 38% drop and laid off its three full-time staff. A new Festival and Special Event Alliance has formed to draw attention to what organizers are calling a real threat to a 50-year legacy.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_d38ea20e-a280-4051-a365-885e2d413887.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/30/230f93da-7cb4-4cc2-b9f4-970205e117f9/6aef13276f934.image.jpg",
-    imgHiRes: true
+    title: "Black Bear and Imogene Passes Closed for the Winter",
+    source: "San Miguel County",
+    date: "November 3, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1423",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
   },
   {
     title: "Fairground Facilities Closed Until Further Notice",
@@ -3606,6 +3600,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The Treasurer's office will be closed Weds 11/11 - Fri 11/13.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=553",
     img: ""
+  },
+  {
+    title: "Black Bear and Imogene Passes Closed for the Winter",
+    source: "San Miguel County",
+    date: "November 3, 2026",
+    newsTopic: "community",
+    copy: "Due to changing weather conditions and the onset of winter, Imogene and Black Bear Passes are now officially closed for the season.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=551",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
   },
   {
     title: "Ridgway Bank Building Officially Added to the National Register of Historic Places",
@@ -3632,7 +3635,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "November 22, 2026",
+    date: "November 23, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3643,7 +3646,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway, City of Ouray, and Ouray County Establish New Three-Year Affordable Housing Goals",
     source: "Town of Ridgway",
-    date: "November 22, 2026",
+    date: "November 23, 2026",
     firstSeen: "2026-10-21",
     newsTopic: "housing",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -4301,17 +4304,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-11-22/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-11-22T14:30:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
     title: "Around The World: America’s Pumpkin Beer & Chocolate Pretzels",
     link: "https://koto.org/event/around-the-world-americas-pumpkin-beer-chocolate-pretzels/",
     description: "Owner and Brewmaster, TJ is taking us on a journey to early America to discover how a humble native gourd became our continent’s most iconic seasonal tradition. Long before pumpkin spice became a modern phenomenon, early American colonists relied on native pumpkins to survive winter and celebrate the harvest holidays. Join us for a curated tasting event exploring the rich history of American pumpkin brewing paired with traditional European-style chocolate pretzels. Grab your tasting passport, explore the global trade routes that brought us holiday spices, and toast to the historic flavors of the American harvest season! (Ages 21+ only).",
@@ -4816,6 +4808,39 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Science &#038; Innovation Center, TELLURIDE",
     imageUrl: "https://koto.org/wp-content/uploads/2026/11/1920-x-1005-px-Cover-Centered-scaled.jpg"
+  },
+  {
+    title: "Mountainfilm on Tour – Ridgway",
+    link: "https://koto.org/event/mountainfilm-on-tour-ridgway/",
+    description: "December 15 @ 6:30 pm – 8:30 pm Doors: 6 || Show: 6:30 || $20 Advance or $15 student Advance || $25 @ DOOR adult, $18 student @ Door Citizen’s State Bank presents: Mountainfilm on Tour ~ Ridgway! at the Sherbino Theater. Mountainfilm on Tour: Adventure Shorts — SEE THE LIST OF FILMS HERE This is the same program as the Adventure shorts shown at the Montrose Pavilion in October. Mountainfilm on Tour returns to Ridgway with an evening of inspiring, action-packed short films celebrating adventure, exploration, resilience, and the people who push the boundaries of what is possible. This year’s program is themed Adventure and features a handpicked collection of documentary shorts from the renowned Mountainfilm Festival in Telluride, Colorado. Expect incredible landscapes, remarkable athletes, bold expeditions, and stories that capture the indomitable spirit at the heart of outdoor adventure. …",
+    pubDate: "2026-12-15T18:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "The Sherbino, Ridgway",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/11/MTN-Film-Dec-15.png"
+  },
+  {
+    title: "Salon Night at Telluride Arts HQ",
+    link: "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-12-17/",
+    description: "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it here in Telluride. These are evenings for conversation and connection, not lectures or formal programming. They are casual, open, and intentionally unstructured, designed to create the atmosphere where ideas can collide, new friendships form, and creativity sparks. Imagine an evening where musicians talk with writers, painters meet photographers, filmmakers share stories with ceramicists—and the unexpected happens!",
+    pubDate: "2026-12-17T17:30:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Arts HQ, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
+  },
+  {
+    title: "Up-Off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-12-18/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-12-18T10:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   }
 ];
 
@@ -4873,7 +4898,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Shepherd, Australian • Male",
     firstSeen: "2026-10-31",
     revealDate: "2026-11-02",
-    lastSeen: "2026-11-22"
+    lastSeen: "2026-11-23"
   },
   {
     id: "TEL-A-209",
@@ -4887,7 +4912,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Collie, Border / Cattle Dog, Australian (Red Heeler) • Female",
     firstSeen: "2026-10-31",
     revealDate: "2026-11-04",
-    lastSeen: "2026-11-22"
+    lastSeen: "2026-11-23"
   },
   {
     id: "TEL-A-214",
@@ -4901,7 +4926,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Puppy • Collie, Border / American Blue Heeler • Male",
     firstSeen: "2026-11-15",
     revealDate: "2026-11-15",
-    lastSeen: "2026-11-22"
+    lastSeen: "2026-11-23"
   }
 ];
 
@@ -5078,25 +5103,6 @@ const CLUB_RED_SHOWS = [];
 const FRESH_FOOD_HUB_EVENTS = [];
 const SHERBINO_EVENTS = [
   {
-    title: "The Sherbino & Citizens State Bank Present: Winter Wildlands Alliance BACKCOUNTRY FILM FEST",
-    href: "https://sherbino.org/event/the-sherbino-presents-winter-wildlands-alliance-backcountry-film-fest/",
-    date: "2026-11-18 18:30:00",
-    endDate: "2026-11-18 20:30:00",
-    location: "The Sherbino, Ridgway",
-    copy: "Winter Wildlands presents the Backcountry Film Festival at the Sherbino—an inspiring night of human-powered adventure and winter storytelling. ❄️🎬 📅 November 18, 2026 | Doors 6 PM • Films 6:30 PM @ TICKETS The Sherbino and CSB Present: Winter Wildlands Alliance Backcountry Film Festival Doors: 6:00pm || Films: 6:30pm || $10 students and seniors (18-/ 65+) || $15 General Admission The Backcountry Film Festival, presented by Winter Wildlands Alliance, celebrates the power and spirit of humans in winter. Since its inception, the festival has toured across states, countries—even Antarctica—screening hundreds of inspiring films that celebrate adventure, conservation, and the magic of winter. Over the years, the festival has raised millions of dollars to support local projects that strengthen winter communities and protect our wild snowscapes. The 2026-27 winter season is the 22nd Anniversary of the Backcountry Film Festival! …",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/10/Backcountry-Film-Fest-Banner-Nov-18.png"
-  },
-  {
-    title: "Cosmic Luau with PSYLO",
-    href: "https://sherbino.org/event/cosmic-luau-with-psylo/",
-    date: "2026-11-20 19:30:00",
-    endDate: "2026-11-20 21:30:00",
-    location: "The Sherbino, Ridgway",
-    copy: "Cosmic Luau with PSYLO is a dancehall-style show at The Sherbino Theater in Ridgway, featuring a light show by Lumagic. The event combines tropical and psychedelic themes in a limited-seating venue setting.",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/10/PSYLO-SHERB-26-A1C-scaled.jpg",
-    description: "Cosmic Luau with PSYLO is a dancehall-style show at The Sherbino Theater in Ridgway, featuring a light show by Lumagic. The event combines tropical and psychedelic themes in a limited-seating venue setting."
-  },
-  {
     title: "Noel Night Gift to the Community! THE HIP SNACKS",
     href: "https://sherbino.org/event/noel-night-free-show-the-hip-snacks/",
     date: "2026-12-04 20:30:00",
@@ -5164,6 +5170,25 @@ const SHERBINO_EVENTS = [
     copy: "Mountainfilm on Tour brings a curated selection of short films from the acclaimed Telluride-based Mountainfilm festival to The Sherbino in Ridgway. The touring program typically features documentary and adventure films celebrating outdoor culture, environmental issues, and human achievement.",
     imageUrl: "https://sherbino.org/wp-content/uploads/2026/10/sherb-and-wca-EVENT-BANNERS-1920-x-1080-2.png",
     description: "Mountainfilm on Tour brings a curated selection of short films from the acclaimed Telluride-based Mountainfilm festival to The Sherbino in Ridgway. The touring program typically features documentary and adventure films celebrating outdoor culture, environmental issues, and human achievement."
+  },
+  {
+    title: "Gin & Gingerbread",
+    href: "https://sherbino.org/event/gin-and-gingerbread-adult-holiday-workshop/",
+    date: "2026-12-18 18:00:00",
+    endDate: "2026-12-18 20:00:00",
+    location: "The Sherbino, Ridgway",
+    copy: "An adults-only holiday event at The Sherbino in Ridgway hosted by Weehawken Creative Arts, featuring gingerbread house decorating with a festive gin component. It's a creative, seasonal evening for grown-ups who want to get into the holiday spirit with frosting, candy, and cocktails.",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/10/Gin-Gingerbread-Holiday-Workshop-1.png",
+    description: "An adults-only holiday event at The Sherbino in Ridgway hosted by Weehawken Creative Arts, featuring gingerbread house decorating with a festive gin component. It's a creative, seasonal evening for grown-ups who want to get into the holiday spirit with frosting, candy, and cocktails."
+  },
+  {
+    title: "Craig Childs' Dark Night 2026: ON FIRE, A Night of Storytelling, Visual Media and Poetry, with Musician Emily Scott Robinson",
+    href: "https://sherbino.org/event/craig-childs-dark-night-on-fire/",
+    date: "2026-12-19 19:00:00",
+    endDate: "2026-12-19 21:00:00",
+    location: "The Sherbino, Ridgway",
+    copy: "Craig Childs brings his 2026 Dark Night program, ON FIRE, to The Sherbino on Saturday, December 19. @ Doors at 6:30 PM || Event Starts at 7 PM || Seated Event Reserved Section — $29 advanceReserved seats may be selected from the seating chart and will be assigned to you after purchase. Your name will be placed on the chair(s) you purchase. General Admission — $22 advanceGA seating is located behind the reserved section and is not assigned. Author and storyteller Craig Childs brings his 2026 Dark Night show, ON FIRE, to The Sherbino this December. CRAIG CHILDS has published more than a dozen critically acclaimed books, including Tracing Time: Seasons of Rock Art on the Colorado Plateau, The Secret Knowledge of Water, Atlas of a Lost World, and The Wild Dark: Finding the Night Sky in the Age of Light (Torrey House Press, May 2025). …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/09/childs-dark-night-26.png"
   }
 ];
 
@@ -5743,7 +5768,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
     pubDate: "2026-11-24T20:30:00.000Z",
-    endDate: "2027-01-20",
+    endDate: "2027-01-21",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6464,28 +6489,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Movies Under the Stars",
-    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars is a recurring outdoor film series held on Saturday evenings at dusk at the Conference Center Plaza in Mountain Village, running from June 13 through August 15. The community event brings free outdoor cinema to the plaza through the summer season.",
-    pubDate: "2026-11-21T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
-  },
-  {
-    title: "Mind Blown Telluride",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
-    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
-    pubDate: "2026-11-21T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
-  },
   {
     title: "Bike & Brewery Tour",
     link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
@@ -7421,24 +7424,6 @@ const LEGAL_NOTICES = [
     address: "619 West Columbia Avenue, Unit 156A, Telluride, Colorado 81435",
     noticeKey: "foreclosure-26-128-tomboy-unit156a",
     caseNumber: "2026 CV 30034"
-  },
-  {
-    title: "Condominium Declaration Amendment Notice -- Good Gargoyle Condominiums First Amendment",
-    entity: "Good Gargoyle Condominiums / Aaron J. Goodlock, Attorney",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "Holders of first mortgages on units in The Good Gargoyle Condominiums are being notified of a proposed First Amendment to the Condominium Declaration originally recorded January 26, 1988 (Reception No. 252464) in San Miguel County. This notice was sent by certified mail along with a consent form and a copy of the proposed amendment. Interested parties may obtain a copy of the amendment and consent form by contacting attorney Aaron J. Goodlock in Denver.",
-    deadline: "",
-    expires: "2026-11-22",
-    dates: "10/22",
-    papers: ["ttimes_1022"],
-    url: "https://www.telluridenews.com/news/legals/article_1f99287a-8ec7-49ee-b0ca-9d501ba00b5f.html",
-    address: "The Good Gargoyle Condominiums, San Miguel County, Colorado",
-    noticeKey: "condo-decl-amendment-good-gargoyle"
   },
   {
     title: "Public Trustee Foreclosure Sale -- 65 Spruce Drive, Norwood (Sale No. 2026-09)",

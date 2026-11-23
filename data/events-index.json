@@ -14,15 +14,15 @@
   },
   {
     "title": "Tea and Tarot",
-    "href": "https://koto.org/event/tea-and-tarot/2026-11-22/",
+    "href": "https://telluridelibrary.libcal.com/event/17347289?hs=a",
     "date": "2026-11-22",
     "time": "2:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
+    "location": "Telluride Room",
     "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance. Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in…",
     "type": "Community"
   },
   {
@@ -187,7 +187,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
     "type": "Community",
-    "endDate": "2027-01-20"
+    "endDate": "2027-01-21"
   },
   {
     "title": "Ethan Perry",
@@ -2134,16 +2134,16 @@
   },
   {
     "title": "Mountainfilm on Tour – Ridgway",
-    "href": "https://sherbino.org/event/mountainfilm-on-tour-ridgway-2026/",
+    "href": "https://koto.org/event/mountainfilm-on-tour-ridgway/",
     "date": "2026-12-15",
-    "time": "",
+    "time": "6:00 PM",
     "location": "The Sherbino, Ridgway",
     "town": "Ridgway",
-    "img": "https://sherbino.org/wp-content/uploads/2026/10/sherb-and-wca-EVENT-BANNERS-1920-x-1080-2.png",
-    "category": "",
-    "source": "Sherbino Theater",
-    "desc": "Mountainfilm on Tour brings a curated selection of short films from the acclaimed Telluride-based Mountainfilm festival to The Sherbino in Ridgway. The touring program typically features documentary and adventure films celebrating outdoor…",
-    "type": "Community"
+    "img": "https://koto.org/wp-content/uploads/2026/11/MTN-Film-Dec-15.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "December 15 @ 6:30 pm – 8:30 pm Doors: 6 || Show: 6:30 || $20 Advance or $15 student Advance || $25 @ DOOR adult, $18 student @ Door Citizen’s State Bank presents: Mountainfilm on Tour ~ Ridgway! at the Sherbino Theater. Mountainfilm on…",
+    "type": "Arts & Film"
   },
   {
     "title": "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
@@ -2186,6 +2186,19 @@
     "endDate": "2026-12-25"
   },
   {
+    "title": "Salon Night at Telluride Arts HQ",
+    "href": "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-12-17/",
+    "date": "2026-12-17",
+    "time": "5:30 PM",
+    "location": "Telluride Arts HQ, TELLURIDE",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it…",
+    "type": "Community"
+  },
+  {
     "title": "Wild Love Tigress",
     "href": "https://www.alibitelluride.com/calendar#eca-event=wild-love-tigress",
     "date": "2026-12-17",
@@ -2196,6 +2209,19 @@
     "category": "Live Music",
     "source": "The Alibi",
     "desc": "Wild Love Tigress is a funk band performing live at The Alibi, bringing an expansive sound that includes horns and backing singers. The show starts at 9:00 PM.",
+    "type": "Music"
+  },
+  {
+    "title": "Up-Off Gymnastics, Dance, and Spanish",
+    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-12-18/",
+    "date": "2026-12-18",
+    "time": "10:00 AM",
+    "location": "Lone Cone Library Norwood",
+    "town": "Norwood",
+    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
     "type": "Music"
   },
   {
@@ -2264,6 +2290,19 @@
     "type": "Community"
   },
   {
+    "title": "Gin & Gingerbread",
+    "href": "https://sherbino.org/event/gin-and-gingerbread-adult-holiday-workshop/",
+    "date": "2026-12-18",
+    "time": "",
+    "location": "The Sherbino, Ridgway",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2026/10/Gin-Gingerbread-Holiday-Workshop-1.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "An adults-only holiday event at The Sherbino in Ridgway hosted by Weehawken Creative Arts, featuring gingerbread house decorating with a festive gin component. It's a creative, seasonal evening for grown-ups who want to get into the…",
+    "type": "Community"
+  },
+  {
     "title": "Swimming with Santa",
     "href": "https://events.ourayridgwayevents.com/event/swimming-with-santa",
     "date": "2026-12-19",
@@ -2288,6 +2327,19 @@
     "source": "The Alibi",
     "desc": "Joint Point is an original jam band from Colorado known for blending adventurous rock with improvisational, genre-spanning musicianship. The group performs at The Alibi in Telluride, bringing their signature live sound to an intimate…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Craig Childs' Dark Night 2026: ON FIRE, A Night of Storytelling, Visual Media and Poetry, with Musician Emily Scott Robinson",
+    "href": "https://sherbino.org/event/craig-childs-dark-night-on-fire/",
+    "date": "2026-12-19",
+    "time": "",
+    "location": "The Sherbino, Ridgway",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2026/09/childs-dark-night-26.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Movies Under the Stars",
@@ -2892,5 +2944,18 @@
     "source": "Telluride Chamber Music",
     "desc": "An hour of free chamber music for community.",
     "type": "Music"
+  },
+  {
+    "title": "Friday Feast",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2027-01-22",
+    "time": "5:00 PM",
+    "location": "The Well Coffee Shop",
+    "town": "",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "A twice-a-month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel. April 2nd is a Luau at Lift Ops, 11-1 pm.",
+    "type": "Food & Drink"
   }
 ]

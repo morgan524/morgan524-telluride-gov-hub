@@ -1,5 +1,17 @@
 [
   {
+    "title": "A ski bum’s holy grail",
+    "source": "Telluride Times",
+    "date": "November 22, 2026",
+    "firstSeen": "2026-11-23",
+    "newsTopic": "recreation",
+    "copy": "Telluride's opening day 2026 is set for Dec. 5, and the race for first chair remains a real local tradition. Snowboarder Dustin Hinde has grabbed it many times, saying it's shifted from bragging rights to simply loving the start of a season. The tradition also carries weight for the Spencer family, who rode first chair together after losing Scott Spencer — a dedicated skier with over 100 days a year — to an avalanche in 2019.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_c6bc5cbc-6941-49c9-a11d-c797201513cb.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/c6/4c615a43-5049-4825-84c5-8f3210ed6697/6b02c34d55fc9.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "'Skiing is much more than what happens on the mountain'",
     "source": "Telluride Times",
     "date": "November 22, 2026",
@@ -729,28 +741,22 @@
     "imgHiRes": true
   },
   {
-    "title": "After two wins at State, the Miners are moving on",
-    "source": "Telluride Times",
-    "date": "November 9, 2026",
-    "firstSeen": "2026-11-09",
+    "title": "Sign Up for the 2026 Turkey Trot!",
+    "source": "San Miguel County",
+    "date": "November 5, 2026",
     "newsTopic": "community",
-    "copy": "Telluride's soccer Miners are through to the Class 2A Final Four after back-to-back home wins — 6-1 over Loveland Campion and 4-2 over Vanguard Classical. The No. 1 seed faces St. John Paul the Great on Nov. 11 in Westminster, with a potential championship matchup against rival Crested Butte still on the table.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/sports/article_31a9c6e0-3689-4de8-b340-b33ba37f8156.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/ce/acedbd0f-20c2-4933-bef1-121395411674/6af2377a99908.image.jpg",
-    "imgHiRes": true
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1424",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14909"
   },
   {
-    "title": "The festival tapestry of Telluride: Is a 50-year legacy unraveling?",
-    "source": "Telluride Times",
-    "date": "November 9, 2026",
-    "firstSeen": "2026-11-09",
-    "newsTopic": "arts-culture",
-    "copy": "Telluride's festival scene is hitting a rough patch — ticket sales were down across the board in summer 2026, continuing a three-year slide after the post-Covid boom. Mushroom Festival saw a 38% drop and laid off its three full-time staff. A new Festival and Special Event Alliance has formed to draw attention to what organizers are calling a real threat to a 50-year legacy.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/arts_and_entertainment/article_d38ea20e-a280-4051-a365-885e2d413887.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/30/230f93da-7cb4-4cc2-b9f4-970205e117f9/6aef13276f934.image.jpg",
-    "imgHiRes": true
+    "title": "Black Bear and Imogene Passes Closed for the Winter",
+    "source": "San Miguel County",
+    "date": "November 3, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1423",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
   },
   {
     "title": "Fairground Facilities Closed Until Further Notice",
@@ -769,6 +775,15 @@
     "copy": "The Treasurer's office will be closed Weds 11/11 - Fri 11/13.",
     "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=553",
     "img": ""
+  },
+  {
+    "title": "Black Bear and Imogene Passes Closed for the Winter",
+    "source": "San Miguel County",
+    "date": "November 3, 2026",
+    "newsTopic": "community",
+    "copy": "Due to changing weather conditions and the onset of winter, Imogene and Black Bear Passes are now officially closed for the season.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=551",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
   },
   {
     "title": "Ridgway Bank Building Officially Added to the National Register of Historic Places",
@@ -795,7 +810,7 @@
   {
     "title": "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     "source": "Town of Ridgway",
-    "date": "November 22, 2026",
+    "date": "November 23, 2026",
     "firstSeen": "2026-09-29",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -806,7 +821,7 @@
   {
     "title": "Town of Ridgway, City of Ouray, and Ouray County Establish New Three-Year Affordable Housing Goals",
     "source": "Town of Ridgway",
-    "date": "November 22, 2026",
+    "date": "November 23, 2026",
     "firstSeen": "2026-10-21",
     "newsTopic": "housing",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",

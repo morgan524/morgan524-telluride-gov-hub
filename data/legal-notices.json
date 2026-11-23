@@ -102,26 +102,6 @@
     "caseNumber": "2026 CV 30034"
   },
   {
-    "title": "Condominium Declaration Amendment Notice -- Good Gargoyle Condominiums First Amendment",
-    "entity": "Good Gargoyle Condominiums / Aaron J. Goodlock, Attorney",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "📋",
-    "iconClass": "type-hearing",
-    "type": "Ordinance",
-    "filterTag": "ordinance",
-    "summary": "Holders of first mortgages on units in The Good Gargoyle Condominiums are being notified of a proposed First Amendment to the Condominium Declaration originally recorded January 26, 1988 (Reception No. 252464) in San Miguel County. This notice was sent by certified mail along with a consent form and a copy of the proposed amendment. Interested parties may obtain a copy of the amendment and consent form by contacting attorney Aaron J. Goodlock in Denver.",
-    "deadline": "",
-    "expires": "2026-11-22",
-    "dates": "10/22",
-    "papers": [
-      "ttimes_1022"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_1f99287a-8ec7-49ee-b0ca-9d501ba00b5f.html",
-    "address": "The Good Gargoyle Condominiums, San Miguel County, Colorado",
-    "noticeKey": "condo-decl-amendment-good-gargoyle"
-  },
-  {
     "title": "Public Trustee Foreclosure Sale -- 65 Spruce Drive, Norwood (Sale No. 2026-09)",
     "entity": "Alpine Bank / San Miguel County Public Trustee",
     "entityClass": "ent-county",
