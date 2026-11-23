@@ -507,6 +507,14 @@ const DEEP_DIVE_UPDATES = [];
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-11-23",
+    title: "A banner for the seniors — worth a policy change?",
+    body: "The Parks & Recreation Commission is looking at adding a new category to the Town Park Pavilion Banner Policy: banners honoring Telluride high school senior athletes in winter sports organizations under contract with the town. Display would run from the first day back after holiday break through the end of ice rink season, with a $10 installation fee per banner.\n\nSome will see it as a small, well-deserved nod to local kids. Others may wonder whether adding a new policy category for one group opens the door to more carve-outs down the line. Where do you draw the line on who gets recognized in public space?",
+    choices: ["Good recognition for local kids", "Slippery slope on policy", "Ten bucks is too cheap", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-11-22",
     title: "The levy vote is set — but the ballot results came first",
     body: "The school board is debriefing November ballot results — including Ballot Measure 5A, the MLO — before a December 14 special meeting to approve the mill levy. So voters already weighed in, and now the board acts on what that means for school funding going forward. Some residents will say the process is working as it should: voters decide, the board follows through. Others will wonder whether a December special meeting, after the fact, leaves much room for the community to shape what comes next. Either way, the numbers from November set the table.\n\nDoes the sequence — ballot first, levy vote after — give you confidence in how school funding decisions get made up here, or does it leave you wanting more input along the way?",
@@ -735,14 +743,6 @@ const DAILY_QUESTIONS = [
     title: "The gondola update nobody's agreed on yet",
     body: "The Gondola Sub Committee meets to hear an update on the FTA Capital Investment Program — federal transit money that could move the Telluride-Mountain Village gondola project forward. Some residents see a federally backed gondola connection as the right answer to traffic and parking up here. Others wonder whether chasing federal capital funding means ceding control, adding complexity, or committing to a project before the community has fully weighed in. Nothing's been decided — this is an update, not a vote.\n\nSo where do you stand: is federal investment in the gondola a good path forward, or does it give you pause?",
     choices: ["Get the federal money", "Too many strings attached", "Need way more info"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
-  },
-  {
-    date: "2026-10-24",
-    title: "One lot line goes away in West Telluride",
-    body: "A minor subdivision application for 510 W Columbia Avenue is headed to the Planning & Zoning Commission Chair. The proposal would vacate the lot line between two existing parcels and combine them into a single lot — roughly 5,625 square feet — to be known as Lot 40R.\n\nStraightforward paperwork to some. To others, consolidating lots in a tight mountain town raises a familiar question: does merging parcels quietly remove a future opportunity for more housing, or is private owners managing their own property simply nobody else's business?\n\nWhat do you think — does a lot-line vacation like this matter to the broader community, or is it a private decision that doesn't warrant much scrutiny?",
-    choices: ["Private call, not our business", "These decisions add up", "Depends on what gets built", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
   }
@@ -2825,6 +2825,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Ilium housing development makes progress",
+    source: "Telluride Times",
+    date: "November 23, 2026",
+    firstSeen: "2026-11-23",
+    newsTopic: "housing",
+    copy: "Rural Homes updated Mountain Village Town Council on plans for 49 deed-restricted for-sale townhomes in Ilium Valley, priced at $701K–$765K per unit with an estimated total cost of $34.3–$37.5M. Prop 123 grants and home sales are expected to cover most costs. A feasibility report is due by end of November.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_b53fb950-b769-4928-8ff8-78f5a17e0ea8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/bd/bbdd5c81-4a4f-4eed-8c0f-59031168d691/6b00968e4eb52.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "A ski bum’s holy grail",
     source: "Telluride Times",
     date: "November 22, 2026",
@@ -4846,37 +4858,37 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Drop-In Tech Time with Oliver",
-    link: "https://telluridelibrary.libcal.com/event/15970401?hs=a",
-    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
-    pubDate: "2026-11-22T20:00:00.000Z",
+    title: "CANCELLEDSavvy Seniors-Open Tech",
+    link: "https://telluridelibrary.libcal.com/event/17789250?hs=a",
+    description: "1:30 PM – 2:30 PM · Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone.",
+    pubDate: "2026-11-23T20:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "2nd Floor Desk",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
+    location: "Meeting Room #6 - large",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_29_14_06_45.jpg"
   },
   {
-    title: "Tea and Tarot",
-    link: "https://telluridelibrary.libcal.com/event/17347289?hs=a",
-    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
-    pubDate: "2026-11-22T21:30:00.000Z",
+    title: "Clay Play",
+    link: "https://telluridelibrary.libcal.com/event/17918591?hs=a",
+    description: "A drop-in library program for kids at the Wilkinson Public Library where participants can explore hands-on creativity using air dry clay. The event takes place in the Youth Programming Space and runs from 2:00 to 4:00 PM.",
+    pubDate: "2026-11-23T21:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_28_18_06_53.png"
   },
   {
-    title: "Around the World: America&#039;s Pumpkin Beer & Chocolate Pretzels",
-    link: "https://telluridelibrary.libcal.com/event/17939663?hs=a",
-    description: "5:30 PM – 6:30 PM · Owner and Brewmaster, TJ is taking us on a journey to early America to discover how a humble native gourd became our continent's most iconic seasonal tradition. Long before pumpkin spice became a modern phenomenon, early American colonists relied on native pumpkins to survive winter and celebrate the harvest holidays. Join us for a curated tasting event exploring the rich history of American pumpkin brewing paired with traditional European-style chocolate pretzels. Grab your tasting passport, explore the global trade routes that brought us holiday spices, and toast to the historic flavors of the American harvest season! (Ages 21+ only).",
-    pubDate: "2026-11-23T00:30:00.000Z",
+    title: "Teen Arts and Crafts",
+    link: "https://telluridelibrary.libcal.com/event/17900463?hs=a",
+    description: "4:00 PM – 5:00 PM · Join us for arts and crafts on Monday afternoons in November!",
+    pubDate: "2026-11-23T23:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Wine Mine",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_11_01_14_12_27.png"
+    location: "Teen Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_27_11_18_01.png"
   }
 ];
 
@@ -6398,17 +6410,6 @@ const OURAY_RIDGWAY_EVENTS = [
 ];
 
 const NORWOOD_EVENTS = [
-  {
-    title: "Planning And Zoning Commission Meeting",
-    link: "https://www.norwoodtown.com/2026-11-16-planning-and-zoning-commission-meeting",
-    description: "A regular meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
-    pubDate: "2026-11-16T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Government Meeting",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-11-18-board-of-trustees-meeting",
