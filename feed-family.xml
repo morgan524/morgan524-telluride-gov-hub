@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-family.xml" rel="self" type="application/rss+xml" />
     <description>Storytime, youth programs, and all-ages activities — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Nov 2026 01:31:19 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 12:03:34 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Open Space Commission Meeting — 2026-11-23</title>
@@ -29,6 +29,32 @@ The November 23 Open Space Commission Meeting agenda hasn't been posted yet.]]><
 The November 23 San Miguel County Open Space Commission agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>[Mon, Nov 23] Clay Play</title>
+      <link>https://telluridelibrary.libcal.com/event/17918591?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/clay%20play%7C2026-11-23</guid>
+      <pubDate>Mon, 23 Nov 2026 21:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_28_18_06_53.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Kids Area
+
+A drop-in library program for kids at the Wilkinson Public Library where participants can explore hands-on creativity using air dry clay. The event takes place in the Youth Programming Space and runs from 2:00 to 4:00 PM.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_28_18_06_53.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Mon, Nov 23] Teen Arts and Crafts</title>
+      <link>https://telluridelibrary.libcal.com/event/17900463?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/teen%20arts%20and%20crafts%7C2026-11-23</guid>
+      <pubDate>Mon, 23 Nov 2026 23:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_27_11_18_01.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Teen Area
+
+4:00 PM – 5:00 PM · Join us for arts and crafts on Monday afternoons in November!]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_27_11_18_01.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Meeting] Board of County Commissioners Work Session — 2026-11-25</title>
