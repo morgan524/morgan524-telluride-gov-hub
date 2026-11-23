@@ -94,6 +94,20 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Gaper Contest 2026 - Voyager FUNdraiser",
+    "href": "https://events.ourayridgwayevents.com/event/gaper-contest-2026",
+    "date": "2026-11-23",
+    "time": "8:00 AM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54366527548837/huge/4c3995fa47f3b861d61e318e7dafd3cbfa9b02e9.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "A community photo contest and fundraiser for Voyager inviting locals of all ages from the northern San Juan region to submit their best \"gaper\" photos for a chance to be named Gaper of the Year. Voting takes place during Gaper Week,…",
+    "type": "Community",
+    "endDate": "2026-11-29"
+  },
+  {
     "title": "Stuff a Cruiser",
     "href": "https://events.ourayridgwayevents.com/event/stuff-a-cruiser",
     "date": "2026-11-23",
@@ -145,7 +159,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
     "type": "Community",
-    "endDate": "2027-01-21"
+    "endDate": "2027-01-22"
   },
   {
     "title": "Ethan Perry",
@@ -547,16 +561,30 @@
     "type": "Music"
   },
   {
-    "title": "Will Ski 4 Food",
-    "href": "https://www.telluride.com/event/will-ski-4-food/",
+    "title": "Free Open Skate",
+    "href": "https://www.telluride.com/event/free-open-skate/",
     "date": "2026-11-28",
     "time": "5:00 PM",
     "location": "Telluride, CO",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/64295/will-ski-4-food.800x533.webp",
+    "img": "https://www.telluride.com/site/assets/files/64458/tdp4468.800x533.webp",
     "category": "Community Event",
     "source": "Telluride.com",
-    "desc": "After an unforgettable world premiere at Snowbasin Resort, Will Ski 4 Food is headed to Telluride. Come spend an …",
+    "desc": "Lace up your skates, Telluride! Free Open Skate is back at Hanley Rink in Town Park for the 2026-27 winter season, …",
+    "type": "Community",
+    "endDate": "2027-02-27"
+  },
+  {
+    "title": "Will Ski 4 Food",
+    "href": "https://koto.org/event/will-ski-4-food/2026-11-28/1/",
+    "date": "2026-11-28",
+    "time": "5:30 PM",
+    "location": "Sheridan Opera House, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/food.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Will Ski 4 Food – a film following longtime Warren Miller cameraman, Gary Nate and the pioneers of freestyle skiing – is coming to the Sheridan Opera House for two screenings on Saturday, November 28 th , at 5:30 & 8 p.m. Gary spent part…",
     "type": "Food & Drink"
   },
   {
@@ -586,6 +614,20 @@
     "type": "Community"
   },
   {
+    "title": "Live Jazz at Chloe's: Standard Alchemy Jazz",
+    "href": "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
+    "date": "2026-11-29",
+    "time": "4:00 PM",
+    "location": "Chloe's Charcuterie & Wine",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53950055817938/huge/4924d3606a12c233af2b47a380c304869dfaf267.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Standard Alchemy — featuring Zan Waller on trumpet and Stefan Davenport on guitar — performs swing, cocktail jazz, and Great American Songbook standards at Chloe's Charcuterie & Wine on Sunday afternoons from 4:00 to 7:00 p.m. Occasional…",
+    "type": "Music",
+    "endDate": "2027-01-17"
+  },
+  {
     "title": "The Real Book Club-Jazz Standards",
     "href": "https://koto.org/event/the-real-book-club-jazz-standards/",
     "date": "2026-11-29",
@@ -597,6 +639,20 @@
     "source": "KOTO Community Calendar",
     "desc": "Join us for The Real Book Club, a monthly jazz jam session for musicians of all levels who want to dive into classic jazz standards together! Whether you're a seasoned improviser or just starting out, this is a welcoming space to play,…",
     "type": "Talks & Classes"
+  },
+  {
+    "title": "Healing Hearts Circle: Women Transcending Cancer/Chronic Illness",
+    "href": "https://events.ourayridgwayevents.com/event/healing-hearts-circle-women-transcending-cancerchronic-illness",
+    "date": "2026-11-29",
+    "time": "5:00 PM",
+    "location": "Bee True You Wellness & Creative Studio",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54241462626167/huge/7c0778035e072ff933b617f21809b1459dc84aca.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "A recurring support circle at Bee True You Wellness & Creative Studio for women navigating cancer or chronic illness, offering a safe and welcoming space where participants can share their experiences. The group takes a whole-person…",
+    "type": "Wellness",
+    "endDate": "2026-12-07"
   },
   {
     "title": "Sunday Live Music in the Lounge at Mountain Lodge Telluride",
@@ -704,6 +760,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Brooke White is performing live at a venue on N Cora Street in Ridgway. The event is listed through the Colorado Boy Depot calendar as a live music performance.",
     "type": "Music"
+  },
+  {
+    "title": "Open Studio Live Figure Drawing",
+    "href": "https://events.ourayridgwayevents.com/event/open-studio-live-figure-drawing",
+    "date": "2026-12-01",
+    "time": "5:00 PM",
+    "location": "Decker Community Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54570422998639/huge/0dd76b855bbec5f20e3c2058d5f4e9ef161ac281.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "✍️ Open Studio Figure Drawing (Clothed) 🎨 Take a break from screens and spend the evening drawing the human figure Join us for a relaxed, uninstructed open studio figure drawing session featuring a live, clothed model. Whether you're an…",
+    "type": "Arts & Film"
   },
   {
     "title": "Trivia Night at The Stronghouse Brew Pub",
@@ -904,7 +973,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Steps Tavern Presents Karaoke Night. Doors Open at 8:00 PM every Thursday Night.",
     "type": "Community",
-    "endDate": "2027-01-15"
+    "endDate": "2027-01-22"
   },
   {
     "title": "Senior Meals",
@@ -1050,6 +1119,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Noel Night at Ridgway Pilates",
+    "href": "https://events.ourayridgwayevents.com/event/noel-night-at-ridgway-pilates",
+    "date": "2026-12-04",
+    "time": "5:00 PM",
+    "location": "Ridgway Pilates",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54587477099681/huge/e79ac85370dd36311d7fc0bf98e93b6f15b1287f.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ridgway Pilates hosts a festive holiday evening featuring live DJ sets, pop-up vendors including Scarlet Lily Botanicals, Good Batch, and Poise Society Active Wear, free ice cream samples from Brown Chicken Brown Cow, discounts on Pilates…",
+    "type": "Wellness"
+  },
+  {
     "title": "Ridgway Noel Night",
     "href": "https://events.ourayridgwayevents.com/event/ridgway-noel-night",
     "date": "2026-12-04",
@@ -1126,6 +1208,19 @@
     "category": "",
     "source": "Sherbino Theater",
     "desc": "The Hip Snacks perform live at The Sherbino in Ridgway as part of Noel Night, an annual free community celebration presented by the Ouray County Performing Arts Guild and The Sherbino. Entry is by donation, with doors opening at 8:00 p.m.…",
+    "type": "Community"
+  },
+  {
+    "title": "Special Olympics Pint Night",
+    "href": "https://events.ourayridgwayevents.com/event/special-olympics-pint-night",
+    "date": "2026-12-04",
+    "time": "",
+    "location": "Floating Lotus Brewery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54579706253158/huge/60130a61c56a58e900b5deff857264c9eb942e9d.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Let’s fill the taproom for our local athletes! 🍻 Join us Friday, December 4, at Floating Lotus for a Pint Night supporting the Montrose Recreation District Special Olympics teams. Save the date and spread the word.",
     "type": "Community"
   },
   {
@@ -1655,6 +1750,19 @@
     "endDate": "2026-12-13"
   },
   {
+    "title": "Brews for the Backcountry • ROCC Pint Night with Flannel Feedback",
+    "href": "https://events.ourayridgwayevents.com/event/brews-for-the-backcountry-rocc-pint-night-with-flannel-feedback",
+    "date": "2026-12-10",
+    "time": "5:00 PM",
+    "location": "Floating Lotus Brewery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54579464943680/huge/863cab09fcf46762acf334e84ebbff67659d9988.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Break out the flannel and bring your trail crew. On Thursday, December 10, from 5–9 PM, Flannel Feedback brings live ’90s rock and grunge covers to Floating Lotus Brewery & Taproom, 144 Campbell Lane, Ridgway, CO. We’re teaming up with the…",
+    "type": "Outdoors & Sports"
+  },
+  {
     "title": "The Creative Exchange at Telluride Arts HQ",
     "href": "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-12-10/",
     "date": "2026-12-10",
@@ -1679,6 +1787,20 @@
     "source": "KOTO Community Calendar",
     "desc": "Join the Telluride Mountain Club and PI Avy Fund for our first Backcountry Chat of the season! We will cover several important topics to help backcountry users get dialed before heading into the mountains this season. Colorado Avalanche…",
     "type": "Community"
+  },
+  {
+    "title": "Community Meditation",
+    "href": "https://events.ourayridgwayevents.com/event/community-meditation-1981",
+    "date": "2026-12-10",
+    "time": "6:30 PM",
+    "location": "Decker Community Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54585518387469/huge/ca4f03c43122c6d7ba856179cc7023a37cf32120.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us for a peer-led meditation series at the Decker Community Room. Free and open to the public!",
+    "type": "Wellness",
+    "endDate": "2027-01-15"
   },
   {
     "title": "Clothing Swap",
@@ -2144,19 +2266,6 @@
     "endDate": "2026-12-25"
   },
   {
-    "title": "Salon Night at Telluride Arts HQ",
-    "href": "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-12-17/",
-    "date": "2026-12-17",
-    "time": "5:30 PM",
-    "location": "Telluride Arts HQ, TELLURIDE",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it…",
-    "type": "Community"
-  },
-  {
     "title": "Wild Love Tigress",
     "href": "https://www.alibitelluride.com/calendar#eca-event=wild-love-tigress",
     "date": "2026-12-17",
@@ -2167,19 +2276,6 @@
     "category": "Live Music",
     "source": "The Alibi",
     "desc": "Wild Love Tigress is a funk band performing live at The Alibi, bringing an expansive sound that includes horns and backing singers. The show starts at 9:00 PM.",
-    "type": "Music"
-  },
-  {
-    "title": "Up-Off Gymnastics, Dance, and Spanish",
-    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-12-18/",
-    "date": "2026-12-18",
-    "time": "10:00 AM",
-    "location": "Lone Cone Library Norwood",
-    "town": "Norwood",
-    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
     "type": "Music"
   },
   {

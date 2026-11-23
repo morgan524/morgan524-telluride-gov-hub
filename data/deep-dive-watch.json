@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T12:03:30.317Z",
+ "generated": "2026-11-23T23:50:17.647Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -43,6 +43,18 @@
      "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324",
      "zoomLink": "https://us06web.zoom.us/meeting/register/LyUziwYoTiaZTkcdYc8iiA",
      "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+    },
+    {
+     "source": "county",
+     "sourceLabel": "San Miguel County",
+     "title": "Planning Commission Meeting",
+     "date": "2026-12-10",
+     "time": "9:00 AM",
+     "location": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
+     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1079/files/agenda/2081",
+     "link": "https://sanmiguelcoco.portal.civicclerk.com/event/1079/files/agenda/2081",
+     "zoomLink": "https://us06web.zoom.us/j/85095578704?pwd=OOSbmnUKj5tHkjTXYS15TV55G1PNiv.1",
+     "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
     }
    ],
    "recent": [
