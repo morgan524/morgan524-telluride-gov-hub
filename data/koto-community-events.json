@@ -1,16 +1,5 @@
 [
   {
-    "title": "Tea and Tarot",
-    "link": "https://koto.org/event/tea-and-tarot/2026-11-22/",
-    "description": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    "pubDate": "2026-11-22T14:30:00-07:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
     "title": "Around The World: America’s Pumpkin Beer & Chocolate Pretzels",
     "link": "https://koto.org/event/around-the-world-americas-pumpkin-beer-chocolate-pretzels/",
     "description": "Owner and Brewmaster, TJ is taking us on a journey to early America to discover how a humble native gourd became our continent’s most iconic seasonal tradition. Long before pumpkin spice became a modern phenomenon, early American colonists relied on native pumpkins to survive winter and celebrate the harvest holidays. Join us for a curated tasting event exploring the rich history of American pumpkin brewing paired with traditional European-style chocolate pretzels. Grab your tasting passport, explore the global trade routes that brought us holiday spices, and toast to the historic flavors of the American harvest season! (Ages 21+ only).",
@@ -515,5 +504,38 @@
     "category": "Community Event",
     "location": "Telluride Science &#038; Innovation Center, TELLURIDE",
     "imageUrl": "https://koto.org/wp-content/uploads/2026/11/1920-x-1005-px-Cover-Centered-scaled.jpg"
+  },
+  {
+    "title": "Mountainfilm on Tour – Ridgway",
+    "link": "https://koto.org/event/mountainfilm-on-tour-ridgway/",
+    "description": "December 15 @ 6:30 pm – 8:30 pm Doors: 6 || Show: 6:30 || $20 Advance or $15 student Advance || $25 @ DOOR adult, $18 student @ Door Citizen’s State Bank presents: Mountainfilm on Tour ~ Ridgway! at the Sherbino Theater. Mountainfilm on Tour: Adventure Shorts — SEE THE LIST OF FILMS HERE This is the same program as the Adventure shorts shown at the Montrose Pavilion in October. Mountainfilm on Tour returns to Ridgway with an evening of inspiring, action-packed short films celebrating adventure, exploration, resilience, and the people who push the boundaries of what is possible. This year’s program is themed Adventure and features a handpicked collection of documentary shorts from the renowned Mountainfilm Festival in Telluride, Colorado. Expect incredible landscapes, remarkable athletes, bold expeditions, and stories that capture the indomitable spirit at the heart of outdoor adventure. …",
+    "pubDate": "2026-12-15T18:00:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "The Sherbino, Ridgway",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/11/MTN-Film-Dec-15.png"
+  },
+  {
+    "title": "Salon Night at Telluride Arts HQ",
+    "link": "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-12-17/",
+    "description": "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it here in Telluride. These are evenings for conversation and connection, not lectures or formal programming. They are casual, open, and intentionally unstructured, designed to create the atmosphere where ideas can collide, new friendships form, and creativity sparks. Imagine an evening where musicians talk with writers, painters meet photographers, filmmakers share stories with ceramicists—and the unexpected happens!",
+    "pubDate": "2026-12-17T17:30:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Arts HQ, TELLURIDE",
+    "imageUrl": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
+  },
+  {
+    "title": "Up-Off Gymnastics, Dance, and Spanish",
+    "link": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-12-18/",
+    "description": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    "pubDate": "2026-12-18T10:00:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Lone Cone Library Norwood",
+    "imageUrl": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   }
 ]
