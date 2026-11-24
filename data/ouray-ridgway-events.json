@@ -74,7 +74,7 @@
     "link": "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     "description": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
     "pubDate": "2026-11-24T20:30:00.000Z",
-    "endDate": "2027-01-22",
+    "endDate": "2027-01-23",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
     "category": "Community Event",
@@ -181,7 +181,7 @@
     "link": "https://events.ourayridgwayevents.com/event/floating-sound-bath-4324",
     "description": "A weekly group float session held every Saturday at Orvis Hot Springs, combining warm-water aquatic massage with live sound therapy including vocals and singing bowls. The experience is offered on a sliding scale and reservations can be made by contacting the organizer directly.",
     "pubDate": "2026-11-28T22:00:00.000Z",
-    "endDate": "2027-01-16",
+    "endDate": "2027-01-23",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
     "category": "Community Event",
@@ -423,7 +423,7 @@
   {
     "title": "Ridgway Noel Night",
     "link": "https://events.ourayridgwayevents.com/event/ridgway-noel-night",
-    "description": "The holiday spirit is coming to Ridgway! Mark your calendars for Friday, December 4th, as the community comes together for Ridgway's annual Noel Night celebration. This beloved holiday tradition promises an evening filled with festive fun, local shopping, music, food, and plenty of holiday cheer. Enjoy a festive parade, capture special memories with photos with Santa, explore holiday shopping specials at local businesses, and take in live music throughout the celebration. There will also be delicious food and beverages, along with plenty of other surprises to make the evening memorable. Noel Night is a wonderful opportunity to gather with friends and family, support our local businesses, and celebrate everything that makes the Ridgway community so special during the holiday season.",
+    "description": "The holiday spirit is coming to Ridgway! Mark your calendars for Friday, December 4th, as the community comes together for Ridgway's annual Noel Night celebration. This beloved holiday tradition promises an evening filled with festive fun, local shopping, music, food, and plenty of holiday cheer. Enjoy a colorful parade, capture special memories with photos with Santa, explore holiday shopping specials at local businesses, and take in live music throughout the celebration. There will also be delicious food and beverages, along with plenty of other surprises to make the evening memorable. Noel Night is a wonderful opportunity to gather with friends and family, support our local businesses, and celebrate everything that makes the Ridgway community so special during the holiday season.",
     "pubDate": "2026-12-05T00:00:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
@@ -638,13 +638,13 @@
   {
     "title": "Brews for the Backcountry • ROCC Pint Night with Flannel Feedback",
     "link": "https://events.ourayridgwayevents.com/event/brews-for-the-backcountry-rocc-pint-night-with-flannel-feedback",
-    "description": "Break out the flannel and bring your trail crew. On Thursday, December 10, from 5–9 PM, Flannel Feedback brings live ’90s rock and grunge covers to Floating Lotus Brewery & Taproom, 144 Campbell Lane, Ridgway, CO. We’re teaming up with the Ridgway Ouray Community Council for a pint night benefiting the Ouray County Alpine Ranger Program. Grab a beer and let’s help ROCC fund the program for 2027.",
+    "description": "Break out the flannel and bring your trail crew. On Thursday, December 10, from 5–9 PM, Flannel Feedback brings live ’90s rock and grunge covers to Floating Lotus Brewery & Taproom, 144 Campbell Lane, Ridgway, CO. We’re teaming up with the Ridgway Ouray Community Council for a pint night benefiting the Ouray County Alpine Ranger Program. Grab a beer and let’s help ROCC fund the program for 2027. Come early and learn from the Rangers from 5-6:15pm. There's also food to purchase from the Taqueria Alonzo food truck. Entry and giveways are free, but a $20+ suggested donation at the door will be matched by a local donor (up to a set amount). Hosted by the Ridgway Ouray Community Council (ROCC).",
     "pubDate": "2026-12-11T00:00:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
     "category": "Community Event",
     "location": "Floating Lotus Brewery",
-    "imageUrl": "https://localist-images.azureedge.net/photos/54579464943680/huge/863cab09fcf46762acf334e84ebbff67659d9988.jpg"
+    "imageUrl": "https://localist-images.azureedge.net/photos/54579464943680/huge/7b95501d5266ff0affe7941d02db2aef49ec04a9.jpg"
   },
   {
     "title": "Community Meditation",
@@ -783,6 +783,17 @@
     "imageUrl": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
+    "title": "Community Conversation",
+    "link": "https://events.ourayridgwayevents.com/event/community-conversation",
+    "description": "What's working well in Ouray? What could work better? Stop by the Community Center at City Hall and talk to resident and City Council member Dave Doherty to share your ideas. Dates: Dec. 29, 2026 from 5:30-7:30 PM Jan. 27, 2027 from 5:30-7:30 PM Feb. 24, 2027 from 5:30-7:30 PM If you have questions about this event/opportunity, feel free to reach out to Dave at ddoherty@cityofouray.com or 970-318-8342.",
+    "pubDate": "2026-12-30T00:30:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Ouray Community Center",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54603706241349/huge/7e6afe735d02217c66034b9b4fe23c45b7cae0a4.jpg"
+  },
+  {
     "title": "San Juan Skijoring",
     "link": "https://events.ourayridgwayevents.com/event/san-juan-skijoring",
     "description": "San Juan Skijoring began in 2017 as a non-profit organization and hosts our Skijoring event annually on the second full weekend in January. We strive to have the best event possible and continue giving back to our local youth through scholarships.",
@@ -804,5 +815,16 @@
     "category": "Community Event",
     "location": "Ridgway Secondary School",
     "imageUrl": "https://localist-images.azureedge.net/photos/54471036324426/huge/fc6cf810c04892eebfbf5221c1cc88f3a93b0d8b.jpg"
+  },
+  {
+    "title": "Ridgway HS Boys Basketball vs. Dolores",
+    "link": "https://events.ourayridgwayevents.com/event/ridgway-hs-boys-basketball-vs-dolores",
+    "description": "The Ridgway High School Boys Basketball team hosts Dolores at Ridgway Secondary School. Admission supports the athletic program, with concessions available at the gym.",
+    "pubDate": "2027-01-23T18:00:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Ridgway Secondary School",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54471108905325/huge/4f27e206b0b18ddc50a86d8c8a3897b524416c95.jpg"
   }
 ]

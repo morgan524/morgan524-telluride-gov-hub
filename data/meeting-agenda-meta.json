@@ -355,7 +355,10 @@
   "telluride|2026-12-02|Telluride Housing Authority Subcommittee - Dec 02 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8166",
     "sv": 4,
-    "ph": "318a8fe2a3798f29"
+    "zoomUrl": "https://us06web.zoom.us/j/83022451705?pwd=Lj8jkLF9GQny7CWBqvP8IYkQhviQBb.1",
+    "meetingId": "830 2245 1705",
+    "passcode": "229528.",
+    "phone": "719) 359-4580"
   },
   "county|2026-11-25|Board of County Commissioners Work Session": {
     "sv": 4,
@@ -537,7 +540,7 @@
   "telluride|2026-12-15|Town Council - Dec 15 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8047",
     "sv": 4,
-    "ph": "1fcc437b29b73927"
+    "ph": "6d6f5991d037fa3a"
   },
   "rico|2026-12-16|Rico Board of Trustees Regular Meeting": {
     "sv": 4,
@@ -565,12 +568,12 @@
   "telluride|2026-12-11|Telluride Housing Authority Subcommittee Special Meeting - Dec 11 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8365",
     "sv": 4,
-    "ph": "7936b664b0cd4d30"
+    "ph": "635fc2db9b080013"
   },
   "telluride|2026-12-08|Telluride Housing Authority Subcommittee Special Meeting - Dec 08 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8364",
     "sv": 4,
-    "ph": "1eed6ec987641b2d"
+    "ph": "2f3612d70d8225e4"
   },
   "telluride|2026-11-18|Telluride Housing Authority Subcommittee Special Meeting - Nov 18 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8363",

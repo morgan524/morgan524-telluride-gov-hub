@@ -324,7 +324,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8069","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/tZ0pc-ChqDwsGNFpPigfqqLQptmoMmpJdiOx"},
 
   "telluride|2026-12-02|Telluride Housing Authority Subcommittee - Dec 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8166","sv":4,"ph":"318a8fe2a3798f29"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8166","sv":4,"zoomUrl":"https://us06web.zoom.us/j/83022451705?pwd=Lj8jkLF9GQny7CWBqvP8IYkQhviQBb.1","meetingId":"830 2245 1705","passcode":"229528.","phone":"719) 359-4580"},
 
   "county|2026-11-25|Board of County Commissioners Work Session":
     {"sv":4,"ph":"155b8bb013cf3ec0"},
@@ -432,7 +432,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-12-15|Town Council - Dec 15 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8047","sv":4,"ph":"1fcc437b29b73927"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8047","sv":4,"ph":"6d6f5991d037fa3a"},
 
   "rico|2026-12-16|Rico Board of Trustees Regular Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -450,10 +450,10 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"a12dfd2ce826475e"},
 
   "telluride|2026-12-11|Telluride Housing Authority Subcommittee Special Meeting - Dec 11 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8365","sv":4,"ph":"7936b664b0cd4d30"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8365","sv":4,"ph":"635fc2db9b080013"},
 
   "telluride|2026-12-08|Telluride Housing Authority Subcommittee Special Meeting - Dec 08 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8364","sv":4,"ph":"1eed6ec987641b2d"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8364","sv":4,"ph":"2f3612d70d8225e4"},
 
   "telluride|2026-11-18|Telluride Housing Authority Subcommittee Special Meeting - Nov 18 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8363","zoomUrl":"https://us06web.zoom.us/meeting/register/vCd8aZy5TLOCOVod7PLOyQ","meetingId":"896 9784 6227","passcode":"734380.","phone":"719) 359-4580","sv":4},
@@ -1242,7 +1242,7 @@ const MANUAL_SUMMARIES = {
     "The December 2 CCAASE meeting is largely a calendar and banner housekeeping session for 2026-2027 events, with one item that carries a bit more weight. The commission holds a public hearing on a street closure request from AB Legacy (Telluride Sleighs and Wagons) for the 2027 Telluride Skijoring and Winter Celebration — an expanded footprint compared to the one-year-only approval granted for 2026. The 2027 request adds closure of South Pine St., both sides of Fir St., and extends the closure window from Thursday, March 11 through Monday, March 15. That dates overlap with the Spring Break Festival (March 11–13) is flagged in the staff memo. Beyond skijoring, the board takes up calendar and banner requests from Telluride Arts (Noel Night), Telluride AIDS Benefit (Fashion Week date shift to Feb 18–March 1), and Telluride Youth Lacrosse (May 22–23 tournament), plus a full slate of 2027 single, double, and triple banner hang approvals. The commission also considers adopting its 2027 Special Event Policies — a document that was workshopped in November and returns here for formal action.",
 
   "telluride|2026-12-02|Telluride Housing Authority Subcommittee - Dec 02 2026":
-    "The December 2, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The December 2 Telluride Housing Authority Subcommittee meeting has one substantive action item: a request from Lela and Jon Martin for an exception to the permitted capital improvement limits under their deed restriction, covering a proposed $160,000 roof replacement at 950 E. Colorado Avenue, Gold Run, Unit 3B. That figure is 57% of their original purchase price of $279,200 — well beyond the 30% absolute cap written into their older deed restriction. Staff recommends approval, conditioned on the Martins executing a new deed restriction under the current Guidelines, which replaced the hard cap with a more flexible exception process. If approved, the unit's maximum sale price would climb significantly, raising affordability-tier questions the subcommittee will need to weigh. The board also takes up minutes from the October 7 and November 18 meetings.",
 
   "county|2026-11-25|Board of County Commissioners Work Session":
     "The November 25 Board of County Commissioners Work Session agenda hasn't been posted yet.",
@@ -2831,6 +2831,54 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Telluride makes progress on safely disposing of vapes",
+    source: "Telluride Times",
+    date: "November 24, 2026",
+    firstSeen: "2026-11-24",
+    newsTopic: "arts-culture",
+    copy: "San Miguel County's vape drop-off program has collected 826 used devices since launching in April, with bins at The Village Market and Telluride Bottleworks. The county hauls them to Mesa County's hazardous waste facility every six weeks. Expansion to Norwood and local festivals is being explored, though bear attraction and disposal limits are complicating things.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_98517381-5a87-4c19-94cb-538953057004.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/c1/ac15ae7d-eb21-41a5-b34a-77852b7d4a7b/6b00d16641be0.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Angela Sissy Carter (Nay) and Larry Carter",
+    source: "Telluride Times",
+    date: "November 24, 2026",
+    firstSeen: "2026-11-24",
+    newsTopic: "public-safety",
+    copy: "Angela \"Sissy\" and Larry Carter, a Norwood-area couple deep in rodeo, hunting, and family life, were killed in an automobile accident in Dry Creek Basin on Nov. 18. They leave behind two young children, Kelsey (9) and Colt (7). A memorial service is Saturday, Nov. 28, at noon at Norwood High School.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/obituaries/article_361b5908-91d5-47b7-bcda-1dd60739f27a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/35/8350b6a0-cf05-4d17-9c46-ac33d14d41c8/6b057e4968af0.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "'Gems of kids, of athletes': Lady Miners’ All-SJBL honors arrive",
+    source: "Telluride Times",
+    date: "November 24, 2026",
+    firstSeen: "2026-11-24",
+    newsTopic: "community",
+    copy: "Three Telluride High volleyball players — seniors Ella-Rose Aplin and Ford Fenton, plus junior Hazel Noel — earned Second Team All-San Juan Basin League honors after a late-season surge. The Lady Miners finished 11-14, reaching the 36-team State Tournament as the 36th seed despite fielding a full roster only about six times all season.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_749119e0-f083-4551-9928-2e5a1ec8d88b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/f8/7f861f9a-d0af-44d3-80cf-05962e1fc667/6b04988f11579.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Telluride Rewind",
+    source: "Telluride Times",
+    date: "November 24, 2026",
+    firstSeen: "2026-11-24",
+    newsTopic: "public-safety",
+    copy: "Two snapshots from Telluride's past: in 1981, the San Miguel County Courthouse received two anonymous bomb threats days apart, forcing evacuations and disrupting county business — Sheriff Masters called it the work of a \"wacko.\" A decade later, a brief neon sign ban divided merchants and residents until a compromise allowed displays back on while new town code worked through approval.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_9f382aa8-6c7f-4731-ad5c-f599a239191c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/36/e36fb72c-c4f1-44fa-9945-01c9cd19b5df/6b02c7e05a6ff.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Speaking volumes: Locals voice concerns about CommonSpirit partnership",
     source: "Telluride Times",
     date: "November 23, 2026",
@@ -2846,11 +2894,11 @@ const TELLURIDE_TIMES_ARTICLES = [
     title: "Redvale couple killed last week in crash on Highway 141",
     source: "Telluride Times",
     date: "November 23, 2026",
-    firstSeen: "2026-11-23",
-    newsTopic: "education",
-    copy: "Larry and Angela Carter of Redvale were killed November 18 on Highway 141 when a cattle hauler attempted to pass in a no-passing zone and struck their turning Toyota Tacoma. The couple leaves behind two children. Norwood Public School and local counselors have been providing grief support to students, staff, and first responders.",
+    firstSeen: "2026-11-24",
+    newsTopic: "public-safety",
+    copy: "Larry and Angela Carter of Redvale were killed November 18 on Highway 141 when a cattle hauler attempted to pass in a no-passing zone and struck their turning Toyota Tacoma. The couple leaves behind two children. Norwood schools and local counselors have been providing grief support, and a GoFundMe is active at tinyurl.com/nw83ysh9.",
     claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_63b40a6d-641e-4414-ae25-02203cd681c8.html",
+    href: "https://www.telluridenews.com/news/article_63b40a6d-641e-4414-ae25-02203cd681c8.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/98/198e7882-7d32-4222-bd28-e179d4c9d761/6b0462e518292.image.png",
     imgHiRes: true
   },
@@ -3387,6 +3435,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Redvale couple killed last week in crash on Highway 141",
+    source: "Telluride Times",
+    date: "November 23, 2026",
+    firstSeen: "2026-11-23",
+    newsTopic: "education",
+    copy: "Larry and Angela Carter of Redvale were killed November 18 on Highway 141 when a cattle hauler attempted to pass in a no-passing zone and struck their turning Toyota Tacoma. The couple leaves behind two children. Norwood Public School and local counselors have been providing grief support to students, staff, and first responders.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_63b40a6d-641e-4414-ae25-02203cd681c8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/98/198e7882-7d32-4222-bd28-e179d4c9d761/6b0462e518292.image.png",
+    imgHiRes: true
+  },
+  {
     title: "Storytelling and poetry with locals Craig Childs and Daiva Česonis",
     source: "Telluride Times",
     date: "November 12, 2026",
@@ -3584,6 +3644,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Town Council adopts 2027 fees and charges",
+    source: "Town of Telluride",
+    date: "November 24, 2026",
+    newsTopic: "government",
+    copy: "(November 24, 2026) - During last Tuesday's regular meeting, Town Council adopted the Town of Telluride's 2027 Fee Schedule, which sets the cost of utilities, permits, licenses and other Town services. Most fees will stay the same in 2027.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=409",
+    img: ""
+  },
+  {
     title: "Sign Up for the 2026 Turkey Trot!",
     source: "San Miguel County",
     date: "November 5, 2026",
@@ -3629,6 +3698,26 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
   },
   {
+    title: "Town of Telluride Offices Closed for Thanksgiving, Thursday and Friday, November 26 and 27",
+    source: "Town of Telluride",
+    date: "November 24, 2026",
+    newsTopic: "community",
+    copy: "The Town of Telluride's administrative offices will be closed on Thursday, November 26, and Friday, November 27, in observance of the Thanksgiving holiday.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=51",
+    img: ""
+  },
+  {
+    title: "Town Reminds Residents and Businesses about Snow Removal Rules",
+    source: "Town of Ridgway",
+    date: "November 24, 2026",
+    firstSeen: "2026-11-24",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/V3-Snow-Removal-Press-Release-2026-11-24.pdf",
+    img: ""
+  },
+  {
     title: "Ridgway Bank Building Officially Added to the National Register of Historic Places",
     source: "Town of Ridgway",
     date: "October 9, 2027",
@@ -3648,6 +3737,39 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-reminds-pet-owners-of-responsibilities-2026-10-06.pdf",
+    img: ""
+  },
+  {
+    title: "Notice of Public Hearing of the Ridgway Town Council on Dec. 9, 2026 - Notice dated November 23, 2026",
+    source: "Town of Ridgway",
+    date: "November 24, 2026",
+    firstSeen: "2026-11-24",
+    newsTopic: "government",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.12.09_TC-public-hearing-notice-acc.pdf",
+    img: ""
+  },
+  {
+    title: "Notice and Call of Special Meeting of the Ridgway Town Council on Nov. 30, 2026",
+    source: "Town of Ridgway",
+    date: "November 24, 2026",
+    firstSeen: "2026-11-24",
+    newsTopic: "government",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Special-Meeting-Notice_0.pdf",
+    img: ""
+  },
+  {
+    title: "Notice of Introduction of Ordinance No. 05-2026 - Notice dated November 23, 2026",
+    source: "Town of Ridgway",
+    date: "November 24, 2026",
+    firstSeen: "2026-11-24",
+    newsTopic: "government",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ord-introduction-notice-05-2026.pdf",
     img: ""
   },
   {
@@ -4893,25 +5015,11 @@ const HUMANE_SOCIETY_ANIMALS = [
     breed: "Shepherd, Australian",
     ageGroup: "Young Dog",
     sex: "Male",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/e0d1343dc5b39bd0a477488d65ea92c9/df48cf112b92fbdf076f579fc9a41830.JPG",
+    photo: "https://new-s3.shelterluv.com/profile-pictures/c067959bb239e4d7326cd9292aabdd21/f958828e485b59006c34e4c885570d98.jpeg",
     profileUrl: "https://www.shelterluv.com/embed/animal/214942131",
     summary: "Young Dog • Shepherd, Australian • Male",
     firstSeen: "2026-10-31",
     revealDate: "2026-11-02",
-    lastSeen: "2026-11-24"
-  },
-  {
-    id: "TEL-A-209",
-    name: "Callie",
-    species: "Dog",
-    breed: "Collie, Border / Cattle Dog, Australian (Red Heeler)",
-    ageGroup: "Young Dog",
-    sex: "Female",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/52102616602c1e1ebef6744ff66b174c/40e31418045aad01388f15003b2c23fd.JPG",
-    profileUrl: "https://www.shelterluv.com/embed/animal/214942170",
-    summary: "Young Dog • Collie, Border / Cattle Dog, Australian (Red Heeler) • Female",
-    firstSeen: "2026-10-31",
-    revealDate: "2026-11-04",
     lastSeen: "2026-11-24"
   },
   {
@@ -5690,7 +5798,17 @@ const TELLURIDE_FOUNDATION_EVENTS = [
 ];
 
 const OURAY_COUNTY_EVENTS = [
-
+  {
+    title: "Alpine Ranger Fund Benefit",
+    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3868",
+    description: "A fundraising benefit for the Alpine Ranger Fund, held at Floating Lotus Brewery in Ridgway. The event supports ranger programs in the region, with Ouray County Commissioners expected to be in attendance.",
+    pubDate: "2026-12-10T17:00:00.000Z",
+    source: "ouraycounty",
+    sourceLabel: "Ouray County",
+    category: "Community Event",
+    location: "Floating Lotus Brewery - 144 Campbell Ln Ridgway CO 81432",
+    imageUrl: ""
+  }
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
@@ -5769,7 +5887,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
     pubDate: "2026-11-24T20:30:00.000Z",
-    endDate: "2027-01-22",
+    endDate: "2027-01-23",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5876,7 +5994,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/floating-sound-bath-4324",
     description: "A weekly group float session held every Saturday at Orvis Hot Springs, combining warm-water aquatic massage with live sound therapy including vocals and singing bowls. The experience is offered on a sliding scale and reservations can be made by contacting the organizer directly.",
     pubDate: "2026-11-28T22:00:00.000Z",
-    endDate: "2027-01-16",
+    endDate: "2027-01-23",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6118,7 +6236,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Ridgway Noel Night",
     link: "https://events.ourayridgwayevents.com/event/ridgway-noel-night",
-    description: "The holiday spirit is coming to Ridgway! Mark your calendars for Friday, December 4th, as the community comes together for Ridgway's annual Noel Night celebration. This beloved holiday tradition promises an evening filled with festive fun, local shopping, music, food, and plenty of holiday cheer. Enjoy a festive parade, capture special memories with photos with Santa, explore holiday shopping specials at local businesses, and take in live music throughout the celebration. There will also be delicious food and beverages, along with plenty of other surprises to make the evening memorable. Noel Night is a wonderful opportunity to gather with friends and family, support our local businesses, and celebrate everything that makes the Ridgway community so special during the holiday season.",
+    description: "The holiday spirit is coming to Ridgway! Mark your calendars for Friday, December 4th, as the community comes together for Ridgway's annual Noel Night celebration. This beloved holiday tradition promises an evening filled with festive fun, local shopping, music, food, and plenty of holiday cheer. Enjoy a colorful parade, capture special memories with photos with Santa, explore holiday shopping specials at local businesses, and take in live music throughout the celebration. There will also be delicious food and beverages, along with plenty of other surprises to make the evening memorable. Noel Night is a wonderful opportunity to gather with friends and family, support our local businesses, and celebrate everything that makes the Ridgway community so special during the holiday season.",
     pubDate: "2026-12-05T00:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -6333,13 +6451,13 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Brews for the Backcountry • ROCC Pint Night with Flannel Feedback",
     link: "https://events.ourayridgwayevents.com/event/brews-for-the-backcountry-rocc-pint-night-with-flannel-feedback",
-    description: "Break out the flannel and bring your trail crew. On Thursday, December 10, from 5–9 PM, Flannel Feedback brings live ’90s rock and grunge covers to Floating Lotus Brewery & Taproom, 144 Campbell Lane, Ridgway, CO. We’re teaming up with the Ridgway Ouray Community Council for a pint night benefiting the Ouray County Alpine Ranger Program. Grab a beer and let’s help ROCC fund the program for 2027.",
+    description: "Break out the flannel and bring your trail crew. On Thursday, December 10, from 5–9 PM, Flannel Feedback brings live ’90s rock and grunge covers to Floating Lotus Brewery & Taproom, 144 Campbell Lane, Ridgway, CO. We’re teaming up with the Ridgway Ouray Community Council for a pint night benefiting the Ouray County Alpine Ranger Program. Grab a beer and let’s help ROCC fund the program for 2027. Come early and learn from the Rangers from 5-6:15pm. There's also food to purchase from the Taqueria Alonzo food truck. Entry and giveways are free, but a $20+ suggested donation at the door will be matched by a local donor (up to a set amount). Hosted by the Ridgway Ouray Community Council (ROCC).",
     pubDate: "2026-12-11T00:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/54579464943680/huge/863cab09fcf46762acf334e84ebbff67659d9988.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/54579464943680/huge/7b95501d5266ff0affe7941d02db2aef49ec04a9.jpg"
   },
   {
     title: "Community Meditation",
@@ -6478,6 +6596,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
+    title: "Community Conversation",
+    link: "https://events.ourayridgwayevents.com/event/community-conversation",
+    description: "What's working well in Ouray? What could work better? Stop by the Community Center at City Hall and talk to resident and City Council member Dave Doherty to share your ideas. Dates: Dec. 29, 2026 from 5:30-7:30 PM Jan. 27, 2027 from 5:30-7:30 PM Feb. 24, 2027 from 5:30-7:30 PM If you have questions about this event/opportunity, feel free to reach out to Dave at ddoherty@cityofouray.com or 970-318-8342.",
+    pubDate: "2026-12-30T00:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Community Center",
+    imageUrl: "https://localist-images.azureedge.net/photos/54603706241349/huge/7e6afe735d02217c66034b9b4fe23c45b7cae0a4.jpg"
+  },
+  {
     title: "San Juan Skijoring",
     link: "https://events.ourayridgwayevents.com/event/san-juan-skijoring",
     description: "San Juan Skijoring began in 2017 as a non-profit organization and hosts our Skijoring event annually on the second full weekend in January. We strive to have the best event possible and continue giving back to our local youth through scholarships.",
@@ -6499,6 +6628,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ridgway Secondary School",
     imageUrl: "https://localist-images.azureedge.net/photos/54471036324426/huge/fc6cf810c04892eebfbf5221c1cc88f3a93b0d8b.jpg"
+  },
+  {
+    title: "Ridgway HS Boys Basketball vs. Dolores",
+    link: "https://events.ourayridgwayevents.com/event/ridgway-hs-boys-basketball-vs-dolores",
+    description: "The Ridgway High School Boys Basketball team hosts Dolores at Ridgway Secondary School. Admission supports the athletic program, with concessions available at the gym.",
+    pubDate: "2027-01-23T18:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ridgway Secondary School",
+    imageUrl: "https://localist-images.azureedge.net/photos/54471108905325/huge/4f27e206b0b18ddc50a86d8c8a3897b524416c95.jpg"
   }
 ];
 
@@ -7692,24 +7832,6 @@ const LEGAL_NOTICES = [
     address: "San Miguel County Court, Telluride, CO",
     noticeKey: "name-change-2026C23-ohare",
     caseNumber: "2026C23"
-  },
-  {
-    title: "Notice of Final Settlement -- PRV Stations Early Procurement, Ferguson Enterprises (Town of Telluride)",
-    entity: "Town of Telluride Public Works Department",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The Town of Telluride Public Works Department intends to begin processing final payment to Ferguson Enterprises, LLC for the 2024/2025 Early Procurement of Package-Type Pressure Reducing Valve (PRV) Stations project. Any person or firm with claims or debts against the contractor must file a proper written notice with Justin Blair, Civil Engineer, by November 23, 2026. No claims received by that date will allow final payment to proceed.",
-    deadline: "2026-11-23",
-    expires: "2026-11-23",
-    dates: "11/19",
-    papers: ["ttimes_1119"],
-    url: "https://www.telluridenews.com/news/legals/article_a0b9535a-57a0-48ea-91a5-bf3583aa9d95.html",
-    address: "Town of Telluride Public Works Department, P.O. Box 397, Telluride, CO 81435",
-    noticeKey: "final-settlement-telluride-prv-ferguson-2026"
   },
   {
     title: "Public Notice -- Petition for Change of Name, Lara Marie Zibners Lohr (Case No. 2026C30012)",
@@ -9259,10 +9381,11 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "December 2, 2026",
     title: "Telluride Housing Authority Subcommittee",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8166",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "9:00 AM",
-    civicwebId: 8166
+    civicwebId: 8166,
+    packetUrl: "https://telluride-co.civicweb.net/document/448336/"
   },
   {
     date: "December 3, 2026",

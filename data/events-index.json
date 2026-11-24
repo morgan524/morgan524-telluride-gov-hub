@@ -11,7 +11,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours…",
     "type": "Community",
-    "endDate": "2027-01-22"
+    "endDate": "2027-01-23"
   },
   {
     "title": "Film Stills from the Ridgway Independent Film Fest",
@@ -479,7 +479,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "A weekly group float session held every Saturday at Orvis Hot Springs, combining warm-water aquatic massage with live sound therapy including vocals and singing bowls. The experience is offered on a sliding scale and reservations can be…",
     "type": "Wellness",
-    "endDate": "2027-01-16"
+    "endDate": "2027-01-23"
   },
   {
     "title": "Live Music in the Après Lounge at Mountain Lodge Telluride",
@@ -1698,13 +1698,26 @@
     "endDate": "2026-12-13"
   },
   {
+    "title": "Alpine Ranger Fund Benefit",
+    "href": "https://ouraycountyco.gov/Calendar.aspx?EID=3868",
+    "date": "2026-12-10",
+    "time": "10:00 AM",
+    "location": "Floating Lotus Brewery - 144 Campbell Ln Ridgway CO 81432",
+    "town": "Ridgway",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
+    "category": "Community Event",
+    "source": "Ouray County",
+    "desc": "A fundraising benefit for the Alpine Ranger Fund, held at Floating Lotus Brewery in Ridgway. The event supports ranger programs in the region, with Ouray County Commissioners expected to be in attendance.",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Brews for the Backcountry • ROCC Pint Night with Flannel Feedback",
     "href": "https://events.ourayridgwayevents.com/event/brews-for-the-backcountry-rocc-pint-night-with-flannel-feedback",
     "date": "2026-12-10",
     "time": "5:00 PM",
     "location": "Floating Lotus Brewery",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/54579464943680/huge/863cab09fcf46762acf334e84ebbff67659d9988.jpg",
+    "img": "https://localist-images.azureedge.net/photos/54579464943680/huge/7b95501d5266ff0affe7941d02db2aef49ec04a9.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Break out the flannel and bring your trail crew. On Thursday, December 10, from 5–9 PM, Flannel Feedback brings live ’90s rock and grunge covers to Floating Lotus Brewery & Taproom, 144 Campbell Lane, Ridgway, CO. We’re teaming up with the…",
@@ -2619,6 +2632,19 @@
     "type": "Community"
   },
   {
+    "title": "Community Conversation",
+    "href": "https://events.ourayridgwayevents.com/event/community-conversation",
+    "date": "2026-12-29",
+    "time": "5:30 PM",
+    "location": "Ouray Community Center",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/54603706241349/huge/7e6afe735d02217c66034b9b4fe23c45b7cae0a4.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "What's working well in Ouray? What could work better? Stop by the Community Center at City Hall and talk to resident and City Council member Dave Doherty to share your ideas. Dates: Dec. 29, 2026 from 5:30-7:30 PM Jan. 27, 2027 from…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Weekly Young Adult Gathering",
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-12-29",
@@ -3011,5 +3037,18 @@
     "source": "Beacon",
     "desc": "A twice-a-month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel. April 2nd is a Luau at Lift Ops, 11-1 pm.",
     "type": "Food & Drink"
+  },
+  {
+    "title": "Ridgway HS Boys Basketball vs. Dolores",
+    "href": "https://events.ourayridgwayevents.com/event/ridgway-hs-boys-basketball-vs-dolores",
+    "date": "2027-01-23",
+    "time": "11:00 AM",
+    "location": "Ridgway Secondary School",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54471108905325/huge/4f27e206b0b18ddc50a86d8c8a3897b524416c95.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The Ridgway High School Boys Basketball team hosts Dolores at Ridgway Secondary School. Admission supports the athletic program, with concessions available at the gym.",
+    "type": "Outdoors & Sports"
   }
 ]
