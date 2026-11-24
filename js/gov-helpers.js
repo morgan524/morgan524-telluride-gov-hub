@@ -390,7 +390,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "county|2026-12-10|Planning Commission Meeting":
-    {"sv":4,"ph":"66dd61a1d3bb2812"},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1079/files/agenda/2081","zoomUrl":"https://us06web.zoom.us/j/85095578704?pwd=OOSbmnUKj5tHkjTXYS15TV55G1PNiv.1","meetingId":"850 9557 8704","passcode":"959543","phone":"970-728-3844"},
 
   "telluride|2026-11-12|San Miguel Authority for Regional Transportation - Nov 12 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8361","zoomUrl":"https://us02web.zoom.us/j/89092438576?pwd=wbYXpfraF25klegZlpgVZz5PwtIUNv.1","sv":4},
@@ -1058,7 +1058,7 @@ const ENGAGE_MEETINGS = [
   }
 ];         // Engage Telluride project key dates
 const MANUAL_SUMMARIES_CACHE_DATE = '2026-11-23';
-const LEGAL_NOTICES_CACHE_DATE = '2026-11-23';
+const LEGAL_NOTICES_CACHE_DATE = '2026-11-24';
 
 const MANUAL_SUMMARIES = {
   "county|2026-10-26|Open Space Commission Meeting":
@@ -1305,7 +1305,7 @@ const MANUAL_SUMMARIES = {
     "The December 10, 2026 Mountain Village Town Council Meeting agenda hasn't been posted yet.",
 
   "county|2026-12-10|Planning Commission Meeting":
-    "The December 10 San Miguel County Planning Commission agenda hasn't been posted yet.",
+    "One substantive item on the December 10 agenda: the Planning Commission takes up proposed amendments to Land Use Code Section 5-1303 G, the county's Affordable Housing Impact Mitigation Fee. The commission will consider and make a recommendation — meaning this goes to the BOCC before anything is final. Fee structure changes like this sit at the intersection of development economics and the county's long-running struggle to produce housing that working people can actually afford.",
 
   "telluride|2026-11-12|San Miguel Authority for Regional Transportation - Nov 12 2026":
     "SMART's board convenes virtually to act on three resolutions: routine agenda/minutes approval, a resolution of support for comments on proposed changes to a federal Capital Investments Grant Program, and an amendment to the Executive Director's employment agreement. The gondola project gets a verbal update — always worth watching given the ongoing SMART Ballot Issue 3A context. The board also receives the November operations report and Q3 2026 performance data before closing with an executive session on personnel matters concerning the Executive Director position.",
@@ -2825,6 +2825,30 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Speaking volumes: Locals voice concerns about CommonSpirit partnership",
+    source: "Telluride Times",
+    date: "November 23, 2026",
+    firstSeen: "2026-11-23",
+    newsTopic: "health",
+    copy: "The Telluride Hospital District held a packed Nov. 19 meeting where residents raised pointed questions about a potential partnership with CommonSpirit Health — formerly Catholic Health Initiatives Colorado. Community members voiced concerns about reproductive care, transgender services, end-of-life care, and care for undocumented patients under a Catholic health system. The four-month due diligence period is about one month in.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_533bb8c3-7fc4-4f6f-827c-d813933d3dbe.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/96/b969a636-c32c-4429-9760-356ec5afacac/6b01f71cd4377.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Redvale couple killed last week in crash on Highway 141",
+    source: "Telluride Times",
+    date: "November 23, 2026",
+    firstSeen: "2026-11-23",
+    newsTopic: "education",
+    copy: "Larry and Angela Carter of Redvale were killed November 18 on Highway 141 when a cattle hauler attempted to pass in a no-passing zone and struck their turning Toyota Tacoma. The couple leaves behind two children. Norwood Public School and local counselors have been providing grief support to students, staff, and first responders.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_63b40a6d-641e-4414-ae25-02203cd681c8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/98/198e7882-7d32-4222-bd28-e179d4c9d761/6b0462e518292.image.png",
+    imgHiRes: true
+  },
+  {
     title: "Ilium housing development makes progress",
     source: "Telluride Times",
     date: "November 23, 2026",
@@ -3114,6 +3138,19 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Compassion (even for a rat)",
+    source: "Telluride Times",
+    date: "November 19, 2026",
+    firstSeen: "2026-11-19",
+    newsTopic: "community",
+    copy: "A writer recalls discovering a rat had swum aboard their sailboat while anchored in storm-damaged Puerto Rico. After failed sticky traps, they caught it in a live trap — and instead of drowning it, motored it to shore. Small moment, but it stuck with her.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_75232578-f647-41f6-9fb8-5f89f2996bfc.html",
+    img: "",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
     title: "Letters to the Editor",
     source: "Telluride Times",
     date: "November 19, 2026",
@@ -3124,19 +3161,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/opinion/article_30ac257a-69a5-48f2-bdcc-5005215f2cde.html",
     img: "",
     letterAuthor: "Sincerely, Hazel Noel",
-    isLetter: true,
-    imgHiRes: true
-  },
-  {
-    title: "Compassion (even for a rat)",
-    source: "Telluride Times",
-    date: "November 19, 2026",
-    firstSeen: "2026-11-19",
-    newsTopic: "community",
-    copy: "A writer recalls discovering a rat had swum aboard their sailboat while anchored in storm-damaged Puerto Rico. After failed sticky traps, they caught it in a live trap — and instead of drowning it, motored it to shore. Small moment, but it stuck with her.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_75232578-f647-41f6-9fb8-5f89f2996bfc.html",
-    img: "",
     isLetter: true,
     imgHiRes: true
   },
@@ -3554,48 +3578,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Great deals for steep slopes at annual KOTO event",
-    source: "Telluride Times",
-    date: "November 10, 2026",
-    firstSeen: "2026-11-10",
-    newsTopic: "recreation",
-    copy: "KOTO's annual ski swap runs Nov. 13–16 at the Wilkinson Library garage — drop off Friday, shop Saturday 10–4. Now in its third decade, it's a solid fundraiser for the station and a real way to find quality gear without paying resort-town retail prices. New this year: sellers can pre-list items at MySkiSwap.com.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_90524283-8c15-4f14-a0fc-67da62b7ffbb.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/d5/ed550b27-2fa0-4c4c-9890-419dde4eb074/6aed1d9f135b3.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Chair 7 coalition shares concerns about Carhenge, Shandoka projects",
-    source: "Telluride Times",
-    date: "November 10, 2026",
-    firstSeen: "2026-11-10",
-    newsTopic: "housing",
-    copy: "Neighbors near the base of Chair 7 have formed a 200-member nonprofit coalition raising concerns about proposed variances that would push Carhenge from 151 to 220-230 units and balloon permitted square footage well beyond current limits. Members largely support affordable housing and childcare but want smaller scale and preserved open space. Town Council voted 3-1 in September to uphold P&Z's lot-consolidation approval; full development review is still ahead.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_2eadc4c2-f0d0-4186-bbde-0a5cba04aa48.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/ac/eac779d3-8cc8-4d9c-b146-5a862f1f41be/6aea3ded244bf.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "Sign Up for the 2026 Turkey Trot!",
-    source: "San Miguel County",
-    date: "November 5, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1424",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14909"
-  },
-  {
-    title: "Black Bear and Imogene Passes Closed for the Winter",
-    source: "San Miguel County",
-    date: "November 3, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1423",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
-  },
-  {
     title: "Fairground Facilities Closed Until Further Notice",
     source: "San Miguel County",
     date: "November 20, 2026",
@@ -3612,15 +3594,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The Treasurer's office will be closed Weds 11/11 - Fri 11/13.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=553",
     img: ""
-  },
-  {
-    title: "Black Bear and Imogene Passes Closed for the Winter",
-    source: "San Miguel County",
-    date: "November 3, 2026",
-    newsTopic: "community",
-    copy: "Due to changing weather conditions and the onset of winter, Imogene and Black Bear Passes are now officially closed for the season.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=551",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
   },
   {
     title: "Ridgway Bank Building Officially Added to the National Register of Historic Places",
@@ -3724,26 +3697,11 @@ const KOTO_NEWSCASTS = [
     newsTopic: "education",
     copy: "Telluride School Superintendent John Pandolfo Announces Retirement; CO 150, US 250, BG 52; Cat Movie Fisher with Risho Unda",
     href: "https://koto.org/news/newscast-11-11-26/"
-  },
-  {
-    title: "Newscast 11-9-26",
-    source: "KOTO Community Radio",
-    date: "November 10, 2026",
-    newsTopic: "community",
-    copy: "Remembering Christel Leimgruber; County Discusses Flooding Support",
-    href: "https://koto.org/news/newscast-11-9-26/"
   }
 ];
 
 const KOTO_FEATURED_STORIES = [
-  {
-    title: "Remembering Christel Leimgruber",
-    source: "KOTO Community Radio",
-    date: "November 10, 2026",
-    newsTopic: "recreation",
-    copy: "Telluride legend Christel Leimgruber passed away in October. An local icon, her generosity, laugh, and joy made Leimgruber’s the place to be for après ski.",
-    href: "https://koto.org/news/remembering-christel-leimgruber/"
-  }
+
 ];
 
 // San Miguel Basin Forum (West End — Norwood, Nucla, Naturita, Paradox).
@@ -4437,6 +4395,28 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Will Ski 4 Food",
+    link: "https://koto.org/event/will-ski-4-food/2026-11-28/1/",
+    description: "Will Ski 4 Food – a film following longtime Warren Miller cameraman, Gary Nate and the pioneers of freestyle skiing – is coming to the Sheridan Opera House for two screenings on Saturday, November 28 th , at 5:30 & 8 p.m. Gary spent part of his career filming in Telluride, including memorable segments featuring Scott Kennett and his dog, Zudnik. Tickets are available at sheridanoperahouse.com.",
+    pubDate: "2026-11-28T17:30:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Sheridan Opera House, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Will Ski 4 Food",
+    link: "https://koto.org/event/will-ski-4-food/2026-11-28/2/",
+    description: "Will Ski 4 Food – a film following longtime Warren Miller cameraman, Gary Nate and the pioneers of freestyle skiing – is coming to the Sheridan Opera House for two screenings on Saturday, November 28 th , at 5:30 & 8 p.m. Gary spent part of his career filming in Telluride, including memorable segments featuring Scott Kennett and his dog, Zudnik. Tickets are available at sheridanoperahouse.com.",
+    pubDate: "2026-11-28T20:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Sheridan Opera House, Telluride",
+    imageUrl: ""
+  },
+  {
     title: "Tea and Tarot",
     link: "https://koto.org/event/tea-and-tarot/2026-11-29/",
     description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
@@ -4831,28 +4811,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino, Ridgway",
     imageUrl: "https://koto.org/wp-content/uploads/2026/11/MTN-Film-Dec-15.png"
-  },
-  {
-    title: "Salon Night at Telluride Arts HQ",
-    link: "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-12-17/",
-    description: "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it here in Telluride. These are evenings for conversation and connection, not lectures or formal programming. They are casual, open, and intentionally unstructured, designed to create the atmosphere where ideas can collide, new friendships form, and creativity sparks. Imagine an evening where musicians talk with writers, painters meet photographers, filmmakers share stories with ceramicists—and the unexpected happens!",
-    pubDate: "2026-12-17T17:30:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Arts HQ, TELLURIDE",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
-  },
-  {
-    title: "Up-Off Gymnastics, Dance, and Spanish",
-    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-12-18/",
-    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
-    pubDate: "2026-12-18T10:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Lone Cone Library Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   }
 ];
 
@@ -5216,30 +5174,6 @@ const BEACON_EVENTS = [
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
     description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
-    date: "2026-11-17",
-    time: "6:00 PM",
-    source: "beacon",
-    sourceLabel: "Beacon",
-    category: "Community Event",
-    location: "The Well, 122 S Aspen",
-    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
-  },
-  {
-    title: "Ski and Board Days",
-    link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Once a week, young adults gather over lunch to ski and board together.",
-    date: "2026-11-20",
-    time: "11:00 AM-1:00 PM",
-    source: "beacon",
-    sourceLabel: "Beacon",
-    category: "Community Event",
-    location: "Beacon, Telluride",
-    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
-  },
-  {
-    title: "Weekly Young Adult Gathering",
-    link: "https://www.beacontelluride.com/upcoming-events",
-    description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
     date: "2026-11-24",
     time: "6:00 PM",
     source: "beacon",
@@ -5318,6 +5252,18 @@ const BEACON_EVENTS = [
     sourceLabel: "Beacon",
     category: "Community Event",
     location: "Billies Restaurant",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Meal Prep/Cooking Classes",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Meal prep and cooking classes held at AH HAA School for the Arts. Times vary: Dec 11 5-8 pm, Jan 6 6-8 pm, Jan 24 5-8 pm, Feb 3 5-8 pm, Feb 16 5:30-8:30 pm.",
+    date: "2026-12-11",
+    time: "5:00-8:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "AH HAA School for the Arts",
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
@@ -5417,11 +5363,35 @@ const BEACON_EVENTS = [
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
-    title: "Meal Prep/Cooking Classes at AH HAA School for the Arts",
+    title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Meal prep and cooking classes held at AH HAA School for the Arts.",
+    description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
+    date: "2026-12-29",
+    time: "6:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "The Well, 122 S Aspen",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Ski and Board Days",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Once a week, young adults gather over lunch to ski and board together.",
+    date: "2027-01-01",
+    time: "11:00 AM-1:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "Beacon, Telluride",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Meal Prep/Cooking Classes",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Meal prep and cooking classes held at AH HAA School for the Arts. Times vary: Dec 11 5-8 pm, Jan 6 6-8 pm, Jan 24 5-8 pm, Feb 3 5-8 pm, Feb 16 5:30-8:30 pm.",
     date: "2027-01-06",
-    time: "6:00-8:00 PM",
+    time: "5:00-8:00 PM",
     source: "beacon",
     sourceLabel: "Beacon",
     category: "Community Event",
@@ -5477,6 +5447,18 @@ const BEACON_EVENTS = [
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
+    title: "Meal Prep/Cooking Classes",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Meal prep and cooking classes held at AH HAA School for the Arts. Times vary: Dec 11 5-8 pm, Jan 6 6-8 pm, Jan 24 5-8 pm, Feb 3 5-8 pm, Feb 16 5:30-8:30 pm.",
+    date: "2027-01-24",
+    time: "5:00-8:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "AH HAA School for the Arts",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
     title: "Coffee House Nights",
     link: "https://www.beacontelluride.com/upcoming-events",
     description: "An evening of good coffee, games, and local community. Hosted at The Coffee Cowboy (Dec 12) and The Well (Jan 15 and Jan 29).",
@@ -5486,6 +5468,18 @@ const BEACON_EVENTS = [
     sourceLabel: "Beacon",
     category: "Community Event",
     location: "Beacon, Telluride",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Meal Prep/Cooking Classes",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Meal prep and cooking classes held at AH HAA School for the Arts. Times vary: Dec 11 5-8 pm, Jan 6 6-8 pm, Jan 24 5-8 pm, Feb 3 5-8 pm, Feb 16 5:30-8:30 pm.",
+    date: "2027-02-03",
+    time: "5:00-8:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "AH HAA School for the Arts",
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
@@ -5503,13 +5497,25 @@ const BEACON_EVENTS = [
   {
     title: "Dodgeball Tournament",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "A dodgeball tournament open to seasonal workers and the community.",
+    description: "A dodgeball tournament open to attendees.",
     date: "2027-02-07",
     time: "7:00-9:00 PM",
     source: "beacon",
     sourceLabel: "Beacon",
     category: "Community Event",
     location: "Beacon, Telluride",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Meal Prep/Cooking Classes",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Meal prep and cooking classes held at AH HAA School for the Arts. Times vary: Dec 11 5-8 pm, Jan 6 6-8 pm, Jan 24 5-8 pm, Feb 3 5-8 pm, Feb 16 5:30-8:30 pm.",
+    date: "2027-02-16",
+    time: "5:00-8:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "AH HAA School for the Arts",
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
@@ -5541,6 +5547,18 @@ const BEACON_EVENTS = [
     link: "https://www.beacontelluride.com/upcoming-events",
     description: "A twice-a-month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel. April 2nd is a Luau at Lift Ops, 11-1 pm.",
     date: "2027-03-05",
+    time: "5:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "The Well Coffee Shop",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Friday Feast",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "A twice-a-month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel. April 2nd is a Luau at Lift Ops, 11-1 pm.",
+    date: "2027-03-19",
     time: "5:00 PM",
     source: "beacon",
     sourceLabel: "Beacon",
@@ -5647,42 +5665,6 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "Gaper Contest 2026 - Voyager FUNdraiser",
-    link: "https://events.ourayridgwayevents.com/event/gaper-contest-2026",
-    description: "A community photo contest and fundraiser for Voyager inviting locals of all ages from the northern San Juan region to submit their best gaper photos for a chance to be named Gaper of the Year. Voting takes place during Gaper Week, November 21–29, 2026, coinciding with opening week at Telluride Ski Resort, with the winner determined by votes and additional criteria.",
-    pubDate: "2026-11-22T15:00:00.000Z",
-    endDate: "2026-11-29",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/54366527548837/huge/4c3995fa47f3b861d61e318e7dafd3cbfa9b02e9.jpg"
-  },
-  {
-    title: "Live Jazz at Chloe's: Standard Alchemy Jazz",
-    link: "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
-    description: "Standard Alchemy brings live jazz to Chloe's Charcuterie & Wine on Sunday afternoons from 4:00–7:00 p.m., with Zan Waller on trumpet and Stefan Davenport on guitar performing swing, cocktail jazz, and Great American Songbook standards. Occasional special guest vocalists join the duo, making for an intimate evening of live music alongside wine and charcuterie.",
-    pubDate: "2026-11-22T23:00:00.000Z",
-    endDate: "2027-01-17",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Chloe's Charcuterie & Wine",
-    imageUrl: "https://localist-images.azureedge.net/photos/53950055817938/huge/4924d3606a12c233af2b47a380c304869dfaf267.jpg"
-  },
-  {
-    title: "Healing Hearts Circle: Women Transcending Cancer/Chronic Illness",
-    link: "https://events.ourayridgwayevents.com/event/healing-hearts-circle-women-transcending-cancerchronic-illness",
-    description: "A recurring support circle at Bee True You Wellness & Creative Studio for women navigating cancer or chronic illness, offering a safe and welcoming space that honors the whole person — body, mind, and spirit. The group provides connection and mutual support for women at any stage of their journey, meeting most Sundays.",
-    pubDate: "2026-11-23T00:00:00.000Z",
-    endDate: "2026-12-07",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Bee True You Wellness & Creative Studio",
-    imageUrl: "https://localist-images.azureedge.net/photos/54241462626167/huge/7c0778035e072ff933b617f21809b1459dc84aca.jpg"
-  },
-  {
     title: "Thanksgiving Break - Ridgway Schools",
     link: "https://events.ourayridgwayevents.com/event/thanksgiving-break-ridgway-schools",
     description: "Ridgway Schools will be closed for Thanksgiving break during this period. Students, staff, and families can expect the district to be on holiday recess in observance of the Thanksgiving holiday.",
@@ -5693,6 +5675,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
+  },
+  {
+    title: "Gaper Contest 2026 - Voyager FUNdraiser",
+    link: "https://events.ourayridgwayevents.com/event/gaper-contest-2026",
+    description: "A community photo contest and fundraiser for Voyager inviting locals of all ages from the northern San Juan region to submit their best \"gaper\" photos for a chance to be named Gaper of the Year. Voting takes place during Gaper Week, November 21–29, 2026, coinciding with opening week at Telluride Ski Resort, with the winner determined by popular vote.",
+    pubDate: "2026-11-23T15:00:00.000Z",
+    endDate: "2026-11-29",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/54366527548837/huge/4c3995fa47f3b861d61e318e7dafd3cbfa9b02e9.jpg"
   },
   {
     title: "Stuff a Cruiser",
@@ -5780,7 +5774,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
     pubDate: "2026-11-24T20:30:00.000Z",
-    endDate: "2027-01-21",
+    endDate: "2027-01-22",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5883,6 +5877,30 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54329446861527/huge/5ff492866a14a5e49ce0e515c6d714c1010eeea6.jpg"
   },
   {
+    title: "Live Jazz at Chloe's: Standard Alchemy Jazz",
+    link: "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
+    description: "Standard Alchemy — featuring Zan Waller on trumpet and Stefan Davenport on guitar — performs swing, cocktail jazz, and Great American Songbook standards at Chloe's Charcuterie & Wine on Sunday afternoons from 4:00 to 7:00 p.m. Occasional special guest vocalists join the duo, making it a relaxed weekly setting for live jazz paired with wine and charcuterie.",
+    pubDate: "2026-11-29T23:00:00.000Z",
+    endDate: "2027-01-17",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Chloe's Charcuterie & Wine",
+    imageUrl: "https://localist-images.azureedge.net/photos/53950055817938/huge/4924d3606a12c233af2b47a380c304869dfaf267.jpg"
+  },
+  {
+    title: "Healing Hearts Circle: Women Transcending Cancer/Chronic Illness",
+    link: "https://events.ourayridgwayevents.com/event/healing-hearts-circle-women-transcending-cancerchronic-illness",
+    description: "A recurring support circle at Bee True You Wellness & Creative Studio for women navigating cancer or chronic illness, offering a safe and welcoming space where participants can share their experiences. The group takes a whole-person approach, honoring each woman's individual path while nurturing connection across body, mind, and spirit.",
+    pubDate: "2026-11-30T00:00:00.000Z",
+    endDate: "2026-12-07",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Bee True You Wellness & Creative Studio",
+    imageUrl: "https://localist-images.azureedge.net/photos/54241462626167/huge/7c0778035e072ff933b617f21809b1459dc84aca.jpg"
+  },
+  {
     title: "Monsters & Myths by Challenge Island",
     link: "https://events.ourayridgwayevents.com/event/monsters-myths-by-challenge-island",
     description: "A Challenge Island program for kids centered on monsters and myths, featuring themed building and engineering activities inspired by legendary creatures and mythological beasts. The event takes place at the Voyager Youth Program's Ridgway site.",
@@ -5928,6 +5946,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Open Studio Live Figure Drawing",
+    link: "https://events.ourayridgwayevents.com/event/open-studio-live-figure-drawing",
+    description: "✍️ Open Studio Figure Drawing (Clothed) 🎨 Take a break from screens and spend the evening drawing the human figure Join us for a relaxed, uninstructed open studio figure drawing session featuring a live, clothed model. Whether you're an experienced artist or just beginning to explore figure drawing, this is an opportunity to develop your skills, experiment with different mediums, and enjoy creating alongside others. We'll provide a live model, painting boards, newsprint, and charcoal (easels coming soon!) . You're welcome to work in the medium of your choice and bring any additional materials you'd like to use. All skill levels are welcome! ✧˖°🎨 This is a donation-based uninstructed class. There is no set admission price; contributions of any amount are welcome. Donations help compensate our live model, cover studio expenses, and build our shared collection of art equipment and supplies so we can continue offering these sessions. …",
+    pubDate: "2026-12-02T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/54570422998639/huge/0dd76b855bbec5f20e3c2058d5f4e9ef161ac281.jpg"
   },
   {
     title: "Parks and Recreation Committee (PARC)",
@@ -6005,12 +6034,23 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night-6356",
     description: "Steps Tavern Presents Karaoke Night. Doors Open at 8:00 PM every Thursday Night.",
     pubDate: "2026-12-04T03:00:00.000Z",
-    endDate: "2027-01-15",
+    endDate: "2027-01-22",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Steps Tavern",
     imageUrl: "https://localist-images.azureedge.net/photos/54528016985213/huge/d5c76d660410708a93445cf6fa31edf1a9f61bf2.jpg"
+  },
+  {
+    title: "Special Olympics Pint Night",
+    link: "https://events.ourayridgwayevents.com/event/special-olympics-pint-night",
+    description: "Let’s fill the taproom for our local athletes! 🍻 Join us Friday, December 4, at Floating Lotus for a Pint Night supporting the Montrose Recreation District Special Olympics teams. Save the date and spread the word.",
+    pubDate: "2026-12-04T07:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/54579706253158/huge/60130a61c56a58e900b5deff857264c9eb942e9d.jpg"
   },
   {
     title: "23rd Annual Holiday Art & Gift Sale",
@@ -6044,6 +6084,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Herran House",
     imageUrl: "https://localist-images.azureedge.net/photos/53312391289791/huge/00a6a9e1834a357256b5925d35f6a6525ff06493.jpg"
+  },
+  {
+    title: "Noel Night at Ridgway Pilates",
+    link: "https://events.ourayridgwayevents.com/event/noel-night-at-ridgway-pilates",
+    description: "Ridgway Pilates hosts a festive holiday evening featuring live DJ sets, pop-up vendors including Scarlet Lily Botanicals, Good Batch, and Poise Society Active Wear, free ice cream samples from Brown Chicken Brown Cow, discounts on Pilates lessons, and an epic raffle.",
+    pubDate: "2026-12-05T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ridgway Pilates",
+    imageUrl: "https://localist-images.azureedge.net/photos/54587477099681/huge/e79ac85370dd36311d7fc0bf98e93b6f15b1287f.jpg"
   },
   {
     title: "Ridgway Noel Night",
@@ -6259,6 +6310,29 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray Community Center",
     imageUrl: "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg"
+  },
+  {
+    title: "Brews for the Backcountry • ROCC Pint Night with Flannel Feedback",
+    link: "https://events.ourayridgwayevents.com/event/brews-for-the-backcountry-rocc-pint-night-with-flannel-feedback",
+    description: "Break out the flannel and bring your trail crew. On Thursday, December 10, from 5–9 PM, Flannel Feedback brings live ’90s rock and grunge covers to Floating Lotus Brewery & Taproom, 144 Campbell Lane, Ridgway, CO. We’re teaming up with the Ridgway Ouray Community Council for a pint night benefiting the Ouray County Alpine Ranger Program. Grab a beer and let’s help ROCC fund the program for 2027.",
+    pubDate: "2026-12-11T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/54579464943680/huge/863cab09fcf46762acf334e84ebbff67659d9988.jpg"
+  },
+  {
+    title: "Community Meditation",
+    link: "https://events.ourayridgwayevents.com/event/community-meditation-1981",
+    description: "Join us for a peer-led meditation series at the Decker Community Room. Free and open to the public!",
+    pubDate: "2026-12-11T01:30:00.000Z",
+    endDate: "2027-01-15",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/54585518387469/huge/ca4f03c43122c6d7ba856179cc7023a37cf32120.jpg"
   },
   {
     title: "Ridgway Wrecking Crew",
@@ -6870,6 +6944,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/64295/will-ski-4-food.800x533.webp"
+  },
+  {
+    title: "Free Open Skate",
+    link: "https://www.telluride.com/event/free-open-skate/",
+    description: "Lace up your skates, Telluride! Free Open Skate is back at Hanley Rink in Town Park for the 2026-27 winter season, …",
+    pubDate: "2026-11-28",
+    endDate: "2027-02-27",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/64458/tdp4468.800x533.webp"
   },
   {
     title: "Wreaths for Rescues",
@@ -7568,24 +7654,6 @@ const LEGAL_NOTICES = [
     url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=208",
     address: "",
     smcBidID: "208"
-  },
-  {
-    title: "Notice of Final Settlement -- PRV Stations Early Procurement, Ferguson Enterprises (Town of Telluride)",
-    entity: "Town of Telluride Public Works Department",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The Town of Telluride Public Works Department intends to begin processing final payment to Ferguson Enterprises, LLC for the 2024/2025 Early Procurement of Package-Type Pressure Reducing Valve (PRV) Stations project. Any person or firm with claims or debts against the contractor must file written notice with Civil Engineer Justin Blair at P.O. Box 397, Telluride, CO 81435 on or before November 23, 2026. No payment will be processed if valid claims are received before that date.",
-    deadline: "2026-11-23",
-    expires: "2026-11-23",
-    dates: "11/19",
-    papers: ["ttimes_1119"],
-    url: "https://www.telluridenews.com/news/legals/article_a0b9535a-57a0-48ea-91a5-bf3583aa9d95.html",
-    address: "Town of Telluride, CO (Public Works Department, P.O. Box 397, Telluride, CO 81435)",
-    noticeKey: "final-settlement-telluride-prv-ferguson-2026"
   }
 ];
 

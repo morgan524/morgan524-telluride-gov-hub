@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Nov 2026 12:03:34 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 23:50:21 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Nov 23–29</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-46</guid>
-      <pubDate>Mon, 23 Nov 2026 12:03:34 GMT</pubDate>
-      <description><![CDATA[Thanksgiving week lands squarely on this stretch of the calendar, and the valley is leaning into it — Turkey Trot on Thursday morning, an Outlaw Thanksgiving at Alloy Kitchen, live music at Mountain Lodge, and Will Ski 4 Food on Saturday to kick off the holiday weekend right. On the government side, the Open Space Commission, the Board of County Commissioners, and the Mountain Village Metro District all have meetings on the books, but none have posted agendas yet, so there's nothing to weigh in on this week.]]></description>
+      <pubDate>Mon, 23 Nov 2026 23:50:21 GMT</pubDate>
+      <description><![CDATA[Thanksgiving lands square in the middle of this week, and the valley is leaning into it — the Turkey Trot runs Thursday morning, Alloy Kitchen is hosting an Outlaw Thanksgiving, and Will Ski 4 Food kicks off the holiday weekend on the mountain Saturday and Sunday. On the government side, the Open Space Commission and the Board of County Commissioners both have meetings on the books, but none of the agendas have been posted yet, so there's nothing to dig into this week.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -277,6 +277,19 @@ After an unforgettable world premiere at Snowbasin Resort, Will Ski 4 Food is he
       <category>Telluride.com</category>
     </item>
     <item>
+      <title>[Sat, Nov 28] Free Open Skate</title>
+      <link>https://www.telluride.com/event/free-open-skate/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/free%20open%20skate%7C2026-11-28</guid>
+      <pubDate>Sat, 28 Nov 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/64458/tdp4468.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Lace up your skates, Telluride! Free Open Skate is back at Hanley Rink in Town Park for the 2026-27 winter season, …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/64458/tdp4468.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
       <title>[Sat, Nov 28] Mind Blown Telluride</title>
       <link>https://koto.org/event/mind-blown-telluride/2026-11-27/</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/mind%20blown%20telluride%7C2026-11-28</guid>
@@ -311,6 +324,18 @@ Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norto
 📍 Mountain Lodge Telluride, Mountain Village
 
 Local live music in the Après Lounge at Mountain Lodge Telluride in Mountain Village, 4 to 7 PM on most Thursdays, Fridays and Saturdays all winter.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sun, Nov 29] Will Ski 4 Food</title>
+      <link>https://koto.org/event/will-ski-4-food/2026-11-28/1/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/will%20ski%204%20food%7C2026-11-29</guid>
+      <pubDate>Sun, 29 Nov 2026 00:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Sheridan Opera House, Telluride
+
+Will Ski 4 Food – a film following longtime Warren Miller cameraman, Gary Nate and the pioneers of freestyle skiing – is coming to the Sheridan Opera House for two screenings on Saturday, November 28 th , at 5:30 & 8 p.m. Gary spent part of his career filming in Telluride, including memorable segments featuring Scott Kennett and his dog, Zudnik. Tickets are available at sheridanoperahouse.com.]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
     </item>

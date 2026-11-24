@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-outdoors.xml" rel="self" type="application/rss+xml" />
     <description>Hikes, races, ski events, and stewardship days — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Nov 2026 12:03:34 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 23:50:21 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Open Space Commission Meeting — 2026-11-23</title>
@@ -64,6 +64,18 @@ After an unforgettable world premiere at Snowbasin Resort, Will Ski 4 Food is he
       <media:content url="https://www.telluride.com/site/assets/files/64295/will-ski-4-food.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Sun, Nov 29] Will Ski 4 Food</title>
+      <link>https://koto.org/event/will-ski-4-food/2026-11-28/1/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/will%20ski%204%20food%7C2026-11-29</guid>
+      <pubDate>Sun, 29 Nov 2026 00:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Sheridan Opera House, Telluride
+
+Will Ski 4 Food – a film following longtime Warren Miller cameraman, Gary Nate and the pioneers of freestyle skiing – is coming to the Sheridan Opera House for two screenings on Saturday, November 28 th , at 5:30 & 8 p.m. Gary spent part of his career filming in Telluride, including memorable segments featuring Scott Kennett and his dog, Zudnik. Tickets are available at sheridanoperahouse.com.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
   </channel>
 </rss>

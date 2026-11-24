@@ -1,41 +1,5 @@
 [
   {
-    "title": "Gaper Contest 2026 - Voyager FUNdraiser",
-    "link": "https://events.ourayridgwayevents.com/event/gaper-contest-2026",
-    "description": "A community photo contest and fundraiser for Voyager inviting locals of all ages from the northern San Juan region to submit their best gaper photos for a chance to be named Gaper of the Year. Voting takes place during Gaper Week, November 21–29, 2026, coinciding with opening week at Telluride Ski Resort, with the winner determined by votes and additional criteria.",
-    "pubDate": "2026-11-22T15:00:00.000Z",
-    "endDate": "2026-11-29",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "",
-    "imageUrl": "https://localist-images.azureedge.net/photos/54366527548837/huge/4c3995fa47f3b861d61e318e7dafd3cbfa9b02e9.jpg"
-  },
-  {
-    "title": "Live Jazz at Chloe's: Standard Alchemy Jazz",
-    "link": "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
-    "description": "Standard Alchemy brings live jazz to Chloe's Charcuterie & Wine on Sunday afternoons from 4:00–7:00 p.m., with Zan Waller on trumpet and Stefan Davenport on guitar performing swing, cocktail jazz, and Great American Songbook standards. Occasional special guest vocalists join the duo, making for an intimate evening of live music alongside wine and charcuterie.",
-    "pubDate": "2026-11-22T23:00:00.000Z",
-    "endDate": "2027-01-17",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "Chloe's Charcuterie & Wine",
-    "imageUrl": "https://localist-images.azureedge.net/photos/53950055817938/huge/4924d3606a12c233af2b47a380c304869dfaf267.jpg"
-  },
-  {
-    "title": "Healing Hearts Circle: Women Transcending Cancer/Chronic Illness",
-    "link": "https://events.ourayridgwayevents.com/event/healing-hearts-circle-women-transcending-cancerchronic-illness",
-    "description": "A recurring support circle at Bee True You Wellness & Creative Studio for women navigating cancer or chronic illness, offering a safe and welcoming space that honors the whole person — body, mind, and spirit. The group provides connection and mutual support for women at any stage of their journey, meeting most Sundays.",
-    "pubDate": "2026-11-23T00:00:00.000Z",
-    "endDate": "2026-12-07",
-    "source": "oray",
-    "sourceLabel": "Ouray Ridgway Calendar",
-    "category": "Community Event",
-    "location": "Bee True You Wellness & Creative Studio",
-    "imageUrl": "https://localist-images.azureedge.net/photos/54241462626167/huge/7c0778035e072ff933b617f21809b1459dc84aca.jpg"
-  },
-  {
     "title": "Thanksgiving Break - Ridgway Schools",
     "link": "https://events.ourayridgwayevents.com/event/thanksgiving-break-ridgway-schools",
     "description": "Ridgway Schools will be closed for Thanksgiving break during this period. Students, staff, and families can expect the district to be on holiday recess in observance of the Thanksgiving holiday.",
@@ -46,6 +10,18 @@
     "category": "Community Event",
     "location": "",
     "imageUrl": "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
+  },
+  {
+    "title": "Gaper Contest 2026 - Voyager FUNdraiser",
+    "link": "https://events.ourayridgwayevents.com/event/gaper-contest-2026",
+    "description": "A community photo contest and fundraiser for Voyager inviting locals of all ages from the northern San Juan region to submit their best \"gaper\" photos for a chance to be named Gaper of the Year. Voting takes place during Gaper Week, November 21–29, 2026, coinciding with opening week at Telluride Ski Resort, with the winner determined by popular vote.",
+    "pubDate": "2026-11-23T15:00:00.000Z",
+    "endDate": "2026-11-29",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54366527548837/huge/4c3995fa47f3b861d61e318e7dafd3cbfa9b02e9.jpg"
   },
   {
     "title": "Stuff a Cruiser",
@@ -133,7 +109,7 @@
     "link": "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
     "description": "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
     "pubDate": "2026-11-24T20:30:00.000Z",
-    "endDate": "2027-01-21",
+    "endDate": "2027-01-22",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
     "category": "Community Event",
@@ -236,6 +212,30 @@
     "imageUrl": "https://localist-images.azureedge.net/photos/54329446861527/huge/5ff492866a14a5e49ce0e515c6d714c1010eeea6.jpg"
   },
   {
+    "title": "Live Jazz at Chloe's: Standard Alchemy Jazz",
+    "link": "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
+    "description": "Standard Alchemy — featuring Zan Waller on trumpet and Stefan Davenport on guitar — performs swing, cocktail jazz, and Great American Songbook standards at Chloe's Charcuterie & Wine on Sunday afternoons from 4:00 to 7:00 p.m. Occasional special guest vocalists join the duo, making it a relaxed weekly setting for live jazz paired with wine and charcuterie.",
+    "pubDate": "2026-11-29T23:00:00.000Z",
+    "endDate": "2027-01-17",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Chloe's Charcuterie & Wine",
+    "imageUrl": "https://localist-images.azureedge.net/photos/53950055817938/huge/4924d3606a12c233af2b47a380c304869dfaf267.jpg"
+  },
+  {
+    "title": "Healing Hearts Circle: Women Transcending Cancer/Chronic Illness",
+    "link": "https://events.ourayridgwayevents.com/event/healing-hearts-circle-women-transcending-cancerchronic-illness",
+    "description": "A recurring support circle at Bee True You Wellness & Creative Studio for women navigating cancer or chronic illness, offering a safe and welcoming space where participants can share their experiences. The group takes a whole-person approach, honoring each woman's individual path while nurturing connection across body, mind, and spirit.",
+    "pubDate": "2026-11-30T00:00:00.000Z",
+    "endDate": "2026-12-07",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Bee True You Wellness & Creative Studio",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54241462626167/huge/7c0778035e072ff933b617f21809b1459dc84aca.jpg"
+  },
+  {
     "title": "Monsters & Myths by Challenge Island",
     "link": "https://events.ourayridgwayevents.com/event/monsters-myths-by-challenge-island",
     "description": "A Challenge Island program for kids centered on monsters and myths, featuring themed building and engineering activities inspired by legendary creatures and mythological beasts. The event takes place at the Voyager Youth Program's Ridgway site.",
@@ -281,6 +281,17 @@
     "category": "Community Event",
     "location": "687 N Cora Street, Ridgway, CO 81432",
     "imageUrl": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    "title": "Open Studio Live Figure Drawing",
+    "link": "https://events.ourayridgwayevents.com/event/open-studio-live-figure-drawing",
+    "description": "✍️ Open Studio Figure Drawing (Clothed) 🎨 Take a break from screens and spend the evening drawing the human figure Join us for a relaxed, uninstructed open studio figure drawing session featuring a live, clothed model. Whether you're an experienced artist or just beginning to explore figure drawing, this is an opportunity to develop your skills, experiment with different mediums, and enjoy creating alongside others. We'll provide a live model, painting boards, newsprint, and charcoal (easels coming soon!) . You're welcome to work in the medium of your choice and bring any additional materials you'd like to use. All skill levels are welcome! ✧˖°🎨 This is a donation-based uninstructed class. There is no set admission price; contributions of any amount are welcome. Donations help compensate our live model, cover studio expenses, and build our shared collection of art equipment and supplies so we can continue offering these sessions. …",
+    "pubDate": "2026-12-02T00:00:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Decker Community Room",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54570422998639/huge/0dd76b855bbec5f20e3c2058d5f4e9ef161ac281.jpg"
   },
   {
     "title": "Parks and Recreation Committee (PARC)",
@@ -358,12 +369,23 @@
     "link": "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night-6356",
     "description": "Steps Tavern Presents Karaoke Night. Doors Open at 8:00 PM every Thursday Night.",
     "pubDate": "2026-12-04T03:00:00.000Z",
-    "endDate": "2027-01-15",
+    "endDate": "2027-01-22",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
     "category": "Community Event",
     "location": "Steps Tavern",
     "imageUrl": "https://localist-images.azureedge.net/photos/54528016985213/huge/d5c76d660410708a93445cf6fa31edf1a9f61bf2.jpg"
+  },
+  {
+    "title": "Special Olympics Pint Night",
+    "link": "https://events.ourayridgwayevents.com/event/special-olympics-pint-night",
+    "description": "Let’s fill the taproom for our local athletes! 🍻 Join us Friday, December 4, at Floating Lotus for a Pint Night supporting the Montrose Recreation District Special Olympics teams. Save the date and spread the word.",
+    "pubDate": "2026-12-04T07:00:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Floating Lotus Brewery",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54579706253158/huge/60130a61c56a58e900b5deff857264c9eb942e9d.jpg"
   },
   {
     "title": "23rd Annual Holiday Art & Gift Sale",
@@ -397,6 +419,17 @@
     "category": "Community Event",
     "location": "Herran House",
     "imageUrl": "https://localist-images.azureedge.net/photos/53312391289791/huge/00a6a9e1834a357256b5925d35f6a6525ff06493.jpg"
+  },
+  {
+    "title": "Noel Night at Ridgway Pilates",
+    "link": "https://events.ourayridgwayevents.com/event/noel-night-at-ridgway-pilates",
+    "description": "Ridgway Pilates hosts a festive holiday evening featuring live DJ sets, pop-up vendors including Scarlet Lily Botanicals, Good Batch, and Poise Society Active Wear, free ice cream samples from Brown Chicken Brown Cow, discounts on Pilates lessons, and an epic raffle.",
+    "pubDate": "2026-12-05T00:00:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Ridgway Pilates",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54587477099681/huge/e79ac85370dd36311d7fc0bf98e93b6f15b1287f.jpg"
   },
   {
     "title": "Ridgway Noel Night",
@@ -612,6 +645,29 @@
     "category": "Community Event",
     "location": "Ouray Community Center",
     "imageUrl": "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg"
+  },
+  {
+    "title": "Brews for the Backcountry • ROCC Pint Night with Flannel Feedback",
+    "link": "https://events.ourayridgwayevents.com/event/brews-for-the-backcountry-rocc-pint-night-with-flannel-feedback",
+    "description": "Break out the flannel and bring your trail crew. On Thursday, December 10, from 5–9 PM, Flannel Feedback brings live ’90s rock and grunge covers to Floating Lotus Brewery & Taproom, 144 Campbell Lane, Ridgway, CO. We’re teaming up with the Ridgway Ouray Community Council for a pint night benefiting the Ouray County Alpine Ranger Program. Grab a beer and let’s help ROCC fund the program for 2027.",
+    "pubDate": "2026-12-11T00:00:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Floating Lotus Brewery",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54579464943680/huge/863cab09fcf46762acf334e84ebbff67659d9988.jpg"
+  },
+  {
+    "title": "Community Meditation",
+    "link": "https://events.ourayridgwayevents.com/event/community-meditation-1981",
+    "description": "Join us for a peer-led meditation series at the Decker Community Room. Free and open to the public!",
+    "pubDate": "2026-12-11T01:30:00.000Z",
+    "endDate": "2027-01-15",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Decker Community Room",
+    "imageUrl": "https://localist-images.azureedge.net/photos/54585518387469/huge/ca4f03c43122c6d7ba856179cc7023a37cf32120.jpg"
   },
   {
     "title": "Ridgway Wrecking Crew",
