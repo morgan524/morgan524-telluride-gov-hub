@@ -227,5 +227,14 @@
     "civicClerkId": 2190,
     "note": null,
     "board": "bocc"
+  },
+  {
+    "date": "March 24, 2027",
+    "time": "9:00 AM",
+    "title": "Board of County Commissioners Work Session - 4H Event Center",
+    "location": "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
+    "civicClerkId": 2214,
+    "note": null,
+    "board": "bocc"
   }
 ]

@@ -2,26 +2,6 @@
   {
     "source": "county",
     "sourceLabel": "San Miguel County",
-    "title": "Open Space Commission Meeting 11/23",
-    "date": "2026-11-23",
-    "time": "4:00 PM",
-    "location": "333 W Colorado Ave, Third Floor, Telluride, CO 81435",
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1091/files",
-    "packetUrl": "",
-    "link": "https://sanmiguelcoco.portal.civicclerk.com/event/1091/files",
-    "hasAgenda": false,
-    "summary": "The November 23 San Miguel County Open Space Commission agenda hasn't been posted yet.",
-    "zoomLink": "",
-    "zoomMeetingId": "",
-    "zoomPasscode": "",
-    "zoomPhone": "",
-    "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams",
-    "commentEmail": "bocc@sanmiguelcountyco.gov",
-    "hook": ""
-  },
-  {
-    "source": "county",
-    "sourceLabel": "San Miguel County",
     "title": "Board of County Commissioners Work Session",
     "date": "2026-11-25",
     "time": "9:30 AM",
@@ -957,6 +937,26 @@
     "zoomPhone": "",
     "livestream": "",
     "commentEmail": "cross@norwoodtown.com",
+    "hook": ""
+  },
+  {
+    "source": "med",
+    "sourceLabel": "Telluride Regional Medical Center",
+    "title": "Regular Board Meeting",
+    "date": "2026-12-24",
+    "time": "8:30 AM - 11:30 AM",
+    "location": "333 W Colorado Ave (2nd Floor), Telluride / Zoom",
+    "agendaUrl": "",
+    "packetUrl": "",
+    "link": "https://www.tellmed.org/board-meetings",
+    "hasAgenda": false,
+    "summary": "The December 24, 2026 Regular Board Meeting agenda hasn't been posted yet.",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "",
+    "commentEmail": "bodadmin@tellmed.org",
     "hook": ""
   }
 ]

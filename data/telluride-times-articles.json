@@ -753,6 +753,33 @@
     "imgHiRes": true
   },
   {
+    "title": "Sign Up for the 2026 Turkey Trot!",
+    "source": "San Miguel County",
+    "date": "November 5, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1424",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14909"
+  },
+  {
+    "title": "Black Bear and Imogene Passes Closed for the Winter",
+    "source": "San Miguel County",
+    "date": "November 3, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1423",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
+  },
+  {
+    "title": "Treasurer's Office Closed Weds 11/25 - Fri 11/27",
+    "source": "San Miguel County",
+    "date": "November 24, 2026",
+    "newsTopic": "community",
+    "copy": "The Treasurer's office will be closed Weds 11/25 - Fri 11/27.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=553",
+    "img": ""
+  },
+  {
     "title": "Fairground Facilities Closed Until Further Notice",
     "source": "San Miguel County",
     "date": "November 20, 2026",
@@ -762,13 +789,13 @@
     "img": ""
   },
   {
-    "title": "Treasurer's Office Closed 11/11 - 11/13",
+    "title": "Black Bear and Imogene Passes Closed for the Winter",
     "source": "San Miguel County",
-    "date": "November 12, 2026",
+    "date": "November 3, 2026",
     "newsTopic": "community",
-    "copy": "The Treasurer's office will be closed Weds 11/11 - Fri 11/13.",
-    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=553",
-    "img": ""
+    "copy": "Due to changing weather conditions and the onset of winter, Imogene and Black Bear Passes are now officially closed for the season.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=551",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
   },
   {
     "title": "Ridgway Bank Building Officially Added to the National Register of Historic Places",
@@ -795,7 +822,7 @@
   {
     "title": "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     "source": "Town of Ridgway",
-    "date": "November 23, 2026",
+    "date": "November 24, 2026",
     "firstSeen": "2026-09-29",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -806,7 +833,7 @@
   {
     "title": "Town of Ridgway, City of Ouray, and Ouray County Establish New Three-Year Affordable Housing Goals",
     "source": "Town of Ridgway",
-    "date": "November 23, 2026",
+    "date": "November 24, 2026",
     "firstSeen": "2026-10-21",
     "newsTopic": "housing",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",

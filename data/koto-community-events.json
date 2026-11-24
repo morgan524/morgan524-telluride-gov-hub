@@ -1,16 +1,5 @@
 [
   {
-    "title": "Around The World: America’s Pumpkin Beer & Chocolate Pretzels",
-    "link": "https://koto.org/event/around-the-world-americas-pumpkin-beer-chocolate-pretzels/",
-    "description": "Owner and Brewmaster, TJ is taking us on a journey to early America to discover how a humble native gourd became our continent’s most iconic seasonal tradition. Long before pumpkin spice became a modern phenomenon, early American colonists relied on native pumpkins to survive winter and celebrate the harvest holidays. Join us for a curated tasting event exploring the rich history of American pumpkin brewing paired with traditional European-style chocolate pretzels. Grab your tasting passport, explore the global trade routes that brought us holiday spices, and toast to the historic flavors of the American harvest season! (Ages 21+ only).",
-    "pubDate": "2026-11-23T17:30:00-07:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wine Mine, Telluride",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/11/November-around-the-world.png"
-  },
-  {
     "title": "Dance Fit Fusion",
     "link": "https://koto.org/event/dance-fit-fusion-2/",
     "description": "Join Marlen for a high-energy dance fitness class fused with barre, pilates and stretching that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout that will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. Únete a Marlen para una clase de fitness de baile llena de energía combinada con barre, pilates y estiramientos que combina movimientos de baja y alta intensidad para un entrenamiento de intervalos que quema calorías, tonificando tu cuerpo y aumentando tu resistencia sin darte cuenta de lo duro que estás trabajando. ¡Es ejercicio disfrazado! No se requiere experiencia en baile—solo lleva tu energía, una botella de agua y una sonrisa. …",
@@ -537,5 +526,16 @@
     "category": "Community Event",
     "location": "The Sherbino, Ridgway",
     "imageUrl": "https://koto.org/wp-content/uploads/2026/11/MTN-Film-Dec-15.png"
+  },
+  {
+    "title": "Salon Night at Telluride Arts HQ",
+    "link": "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-12-17/",
+    "description": "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it here in Telluride. These are evenings for conversation and connection, not lectures or formal programming. They are casual, open, and intentionally unstructured, designed to create the atmosphere where ideas can collide, new friendships form, and creativity sparks. Imagine an evening where musicians talk with writers, painters meet photographers, filmmakers share stories with ceramicists—and the unexpected happens!",
+    "pubDate": "2026-12-17T17:30:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Arts HQ, TELLURIDE",
+    "imageUrl": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
   }
 ]

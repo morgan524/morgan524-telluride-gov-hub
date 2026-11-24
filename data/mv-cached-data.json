@@ -20,5 +20,27 @@
     "special": false,
     "location": "Town Hall, 455 Mountain Village Blvd, Suite A",
     "note": "Agenda typically posted the Friday before."
+  },
+  {
+    "date": "January 7, 2027",
+    "time": "10:00 AM - 3:00 PM",
+    "title": "Design Review Board",
+    "board": "drb",
+    "agendaUrl": null,
+    "packetUrl": null,
+    "special": false,
+    "location": "Town Hall, 455 Mountain Village Blvd, Suite A",
+    "note": "Agenda typically posted the Friday before."
+  },
+  {
+    "date": "February 4, 2027",
+    "time": "10:00 AM - 3:30 PM",
+    "title": "Design Review Board",
+    "board": "drb",
+    "agendaUrl": null,
+    "packetUrl": null,
+    "special": false,
+    "location": "Town Hall, 455 Mountain Village Blvd, Suite A",
+    "note": "Agenda typically posted the Friday before."
   }
 ]
