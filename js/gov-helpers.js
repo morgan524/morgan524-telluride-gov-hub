@@ -3653,24 +3653,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Sign Up for the 2026 Turkey Trot!",
-    source: "San Miguel County",
-    date: "November 5, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1424",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14909"
-  },
-  {
-    title: "Black Bear and Imogene Passes Closed for the Winter",
-    source: "San Miguel County",
-    date: "November 3, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1423",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
-  },
-  {
     title: "Treasurer's Office Closed Weds 11/25 - Fri 11/27",
     source: "San Miguel County",
     date: "November 24, 2026",
@@ -3687,15 +3669,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Due to unforeseen circumstances, the San Miguel County Fairground facilities will be closed until further notice, beginning Friday, November 6th.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=552",
     img: ""
-  },
-  {
-    title: "Black Bear and Imogene Passes Closed for the Winter",
-    source: "San Miguel County",
-    date: "November 3, 2026",
-    newsTopic: "community",
-    copy: "Due to changing weather conditions and the onset of winter, Imogene and Black Bear Passes are now officially closed for the season.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=551",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
   },
   {
     title: "Town of Telluride Offices Closed for Thanksgiving, Thursday and Friday, November 26 and 27",
