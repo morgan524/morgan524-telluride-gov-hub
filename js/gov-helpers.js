@@ -5174,30 +5174,6 @@ const BEACON_EVENTS = [
     title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
     description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
-    date: "2026-11-17",
-    time: "6:00 PM",
-    source: "beacon",
-    sourceLabel: "Beacon",
-    category: "Community Event",
-    location: "The Well, 122 S Aspen",
-    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
-  },
-  {
-    title: "Ski and Board Days",
-    link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Once a week, young adults gather over lunch to ski and board together.",
-    date: "2026-11-20",
-    time: "11:00 AM-1:00 PM",
-    source: "beacon",
-    sourceLabel: "Beacon",
-    category: "Community Event",
-    location: "Beacon, Telluride",
-    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
-  },
-  {
-    title: "Weekly Young Adult Gathering",
-    link: "https://www.beacontelluride.com/upcoming-events",
-    description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
     date: "2026-11-24",
     time: "6:00 PM",
     source: "beacon",
@@ -5276,6 +5252,18 @@ const BEACON_EVENTS = [
     sourceLabel: "Beacon",
     category: "Community Event",
     location: "Billies Restaurant",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Meal Prep/Cooking Classes",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Meal prep and cooking classes held at AH HAA School for the Arts. Times vary: Dec 11 5-8 pm, Jan 6 6-8 pm, Jan 24 5-8 pm, Feb 3 5-8 pm, Feb 16 5:30-8:30 pm.",
+    date: "2026-12-11",
+    time: "5:00-8:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "AH HAA School for the Arts",
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
@@ -5375,11 +5363,35 @@ const BEACON_EVENTS = [
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
-    title: "Meal Prep/Cooking Classes at AH HAA School for the Arts",
+    title: "Weekly Young Adult Gathering",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "Meal prep and cooking classes held at AH HAA School for the Arts.",
+    description: "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
+    date: "2026-12-29",
+    time: "6:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "The Well, 122 S Aspen",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Ski and Board Days",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Once a week, young adults gather over lunch to ski and board together.",
+    date: "2027-01-01",
+    time: "11:00 AM-1:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "Beacon, Telluride",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Meal Prep/Cooking Classes",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Meal prep and cooking classes held at AH HAA School for the Arts. Times vary: Dec 11 5-8 pm, Jan 6 6-8 pm, Jan 24 5-8 pm, Feb 3 5-8 pm, Feb 16 5:30-8:30 pm.",
     date: "2027-01-06",
-    time: "6:00-8:00 PM",
+    time: "5:00-8:00 PM",
     source: "beacon",
     sourceLabel: "Beacon",
     category: "Community Event",
@@ -5435,6 +5447,18 @@ const BEACON_EVENTS = [
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
+    title: "Meal Prep/Cooking Classes",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Meal prep and cooking classes held at AH HAA School for the Arts. Times vary: Dec 11 5-8 pm, Jan 6 6-8 pm, Jan 24 5-8 pm, Feb 3 5-8 pm, Feb 16 5:30-8:30 pm.",
+    date: "2027-01-24",
+    time: "5:00-8:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "AH HAA School for the Arts",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
     title: "Coffee House Nights",
     link: "https://www.beacontelluride.com/upcoming-events",
     description: "An evening of good coffee, games, and local community. Hosted at The Coffee Cowboy (Dec 12) and The Well (Jan 15 and Jan 29).",
@@ -5444,6 +5468,18 @@ const BEACON_EVENTS = [
     sourceLabel: "Beacon",
     category: "Community Event",
     location: "Beacon, Telluride",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Meal Prep/Cooking Classes",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Meal prep and cooking classes held at AH HAA School for the Arts. Times vary: Dec 11 5-8 pm, Jan 6 6-8 pm, Jan 24 5-8 pm, Feb 3 5-8 pm, Feb 16 5:30-8:30 pm.",
+    date: "2027-02-03",
+    time: "5:00-8:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "AH HAA School for the Arts",
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
@@ -5461,13 +5497,25 @@ const BEACON_EVENTS = [
   {
     title: "Dodgeball Tournament",
     link: "https://www.beacontelluride.com/upcoming-events",
-    description: "A dodgeball tournament open to seasonal workers and the community.",
+    description: "A dodgeball tournament open to attendees.",
     date: "2027-02-07",
     time: "7:00-9:00 PM",
     source: "beacon",
     sourceLabel: "Beacon",
     category: "Community Event",
     location: "Beacon, Telluride",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Meal Prep/Cooking Classes",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Meal prep and cooking classes held at AH HAA School for the Arts. Times vary: Dec 11 5-8 pm, Jan 6 6-8 pm, Jan 24 5-8 pm, Feb 3 5-8 pm, Feb 16 5:30-8:30 pm.",
+    date: "2027-02-16",
+    time: "5:00-8:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "AH HAA School for the Arts",
     imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
   },
   {
@@ -5499,6 +5547,18 @@ const BEACON_EVENTS = [
     link: "https://www.beacontelluride.com/upcoming-events",
     description: "A twice-a-month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel. April 2nd is a Luau at Lift Ops, 11-1 pm.",
     date: "2027-03-05",
+    time: "5:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "The Well Coffee Shop",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Friday Feast",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "A twice-a-month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel. April 2nd is a Luau at Lift Ops, 11-1 pm.",
+    date: "2027-03-19",
     time: "5:00 PM",
     source: "beacon",
     sourceLabel: "Beacon",

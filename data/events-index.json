@@ -1936,6 +1936,19 @@
     "endDate": "2027-03-13"
   },
   {
+    "title": "Meal Prep/Cooking Classes",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-12-11",
+    "time": "5:00-8:00 PM",
+    "location": "AH HAA School for the Arts",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "Meal prep and cooking classes held at AH HAA School for the Arts. Times vary: Dec 11 5-8 pm, Jan 6 6-8 pm, Jan 24 5-8 pm, Feb 3 5-8 pm, Feb 16 5:30-8:30 pm.",
+    "type": "Community"
+  },
+  {
     "title": "Easy Jim Residency Night 1",
     "href": "https://www.alibitelluride.com/calendar#eca-event=easy-jim-residency",
     "date": "2026-12-11",
@@ -2645,6 +2658,19 @@
     "type": "Community"
   },
   {
+    "title": "Weekly Young Adult Gathering",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-12-29",
+    "time": "6:00 PM",
+    "location": "The Well, 122 S Aspen",
+    "town": "",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "A weekly gathering downstairs at The Well for food, conversation, and bible study.",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Sheridan Arts Foundation Holiday Rewind: A Tribute Concert Series: Karl Denson's Afro Sonic",
     "href": "https://www.telluride.com/event/sheridan-arts-foundation-holiday-concert-series/",
     "date": "2026-12-29",
@@ -2749,6 +2775,19 @@
     "type": "Music"
   },
   {
+    "title": "Ski and Board Days",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2027-01-01",
+    "time": "11:00 AM-1:00 PM",
+    "location": "Beacon, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "Once a week, young adults gather over lunch to ski and board together.",
+    "type": "Community"
+  },
+  {
     "title": "Falco & Book Play Jerry Garcia",
     "href": "https://www.telluride.com/event/falco-book-play-jerry-garcia/",
     "date": "2027-01-02",
@@ -2803,6 +2842,19 @@
     "endDate": "2027-03-30"
   },
   {
+    "title": "Meal Prep/Cooking Classes",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2027-01-06",
+    "time": "5:00-8:00 PM",
+    "location": "AH HAA School for the Arts",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "Meal prep and cooking classes held at AH HAA School for the Arts. Times vary: Dec 11 5-8 pm, Jan 6 6-8 pm, Jan 24 5-8 pm, Feb 3 5-8 pm, Feb 16 5:30-8:30 pm.",
+    "type": "Community"
+  },
+  {
     "title": "Telluride Rotary Club Meeting",
     "href": "https://portal.clubrunner.ca/3291",
     "date": "2027-01-06",
@@ -2814,19 +2866,6 @@
     "source": "Telluride Rotary",
     "desc": "Telluride Rotary Club meets the 1st & 3rd Wednesdays at 6:00 PM (gathering at 5:30) — 1st Wednesday at Mountain Lodge in Mountain Village, 3rd Wednesday at an announced Telluride location. A service club supporting scholarships, Youth…",
     "type": "Family & Kids"
-  },
-  {
-    "title": "Meal Prep/Cooking Classes at AH HAA School for the Arts",
-    "href": "https://www.beacontelluride.com/upcoming-events",
-    "date": "2027-01-06",
-    "time": "6:00-8:00 PM",
-    "location": "AH HAA School for the Arts",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
-    "category": "Community Event",
-    "source": "Beacon",
-    "desc": "Meal prep and cooking classes held at AH HAA School for the Arts.",
-    "type": "Community"
   },
   {
     "title": "Friday Feast",
