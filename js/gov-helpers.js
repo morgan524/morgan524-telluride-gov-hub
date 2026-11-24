@@ -1058,7 +1058,7 @@ const ENGAGE_MEETINGS = [
   }
 ];         // Engage Telluride project key dates
 const MANUAL_SUMMARIES_CACHE_DATE = '2026-11-23';
-const LEGAL_NOTICES_CACHE_DATE = '2026-11-23';
+const LEGAL_NOTICES_CACHE_DATE = '2026-11-24';
 
 const MANUAL_SUMMARIES = {
   "county|2026-10-26|Open Space Commission Meeting":
@@ -3578,48 +3578,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Great deals for steep slopes at annual KOTO event",
-    source: "Telluride Times",
-    date: "November 10, 2026",
-    firstSeen: "2026-11-10",
-    newsTopic: "recreation",
-    copy: "KOTO's annual ski swap runs Nov. 13–16 at the Wilkinson Library garage — drop off Friday, shop Saturday 10–4. Now in its third decade, it's a solid fundraiser for the station and a real way to find quality gear without paying resort-town retail prices. New this year: sellers can pre-list items at MySkiSwap.com.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_90524283-8c15-4f14-a0fc-67da62b7ffbb.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/d5/ed550b27-2fa0-4c4c-9890-419dde4eb074/6aed1d9f135b3.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Chair 7 coalition shares concerns about Carhenge, Shandoka projects",
-    source: "Telluride Times",
-    date: "November 10, 2026",
-    firstSeen: "2026-11-10",
-    newsTopic: "housing",
-    copy: "Neighbors near the base of Chair 7 have formed a 200-member nonprofit coalition raising concerns about proposed variances that would push Carhenge from 151 to 220-230 units and balloon permitted square footage well beyond current limits. Members largely support affordable housing and childcare but want smaller scale and preserved open space. Town Council voted 3-1 in September to uphold P&Z's lot-consolidation approval; full development review is still ahead.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_2eadc4c2-f0d0-4186-bbde-0a5cba04aa48.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/ac/eac779d3-8cc8-4d9c-b146-5a862f1f41be/6aea3ded244bf.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "Sign Up for the 2026 Turkey Trot!",
-    source: "San Miguel County",
-    date: "November 5, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1424",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14909"
-  },
-  {
-    title: "Black Bear and Imogene Passes Closed for the Winter",
-    source: "San Miguel County",
-    date: "November 3, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1423",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
-  },
-  {
     title: "Fairground Facilities Closed Until Further Notice",
     source: "San Miguel County",
     date: "November 20, 2026",
@@ -3636,15 +3594,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The Treasurer's office will be closed Weds 11/11 - Fri 11/13.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=553",
     img: ""
-  },
-  {
-    title: "Black Bear and Imogene Passes Closed for the Winter",
-    source: "San Miguel County",
-    date: "November 3, 2026",
-    newsTopic: "community",
-    copy: "Due to changing weather conditions and the onset of winter, Imogene and Black Bear Passes are now officially closed for the season.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=551",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
   },
   {
     title: "Ridgway Bank Building Officially Added to the National Register of Historic Places",
@@ -3748,26 +3697,11 @@ const KOTO_NEWSCASTS = [
     newsTopic: "education",
     copy: "Telluride School Superintendent John Pandolfo Announces Retirement; CO 150, US 250, BG 52; Cat Movie Fisher with Risho Unda",
     href: "https://koto.org/news/newscast-11-11-26/"
-  },
-  {
-    title: "Newscast 11-9-26",
-    source: "KOTO Community Radio",
-    date: "November 10, 2026",
-    newsTopic: "community",
-    copy: "Remembering Christel Leimgruber; County Discusses Flooding Support",
-    href: "https://koto.org/news/newscast-11-9-26/"
   }
 ];
 
 const KOTO_FEATURED_STORIES = [
-  {
-    title: "Remembering Christel Leimgruber",
-    source: "KOTO Community Radio",
-    date: "November 10, 2026",
-    newsTopic: "recreation",
-    copy: "Telluride legend Christel Leimgruber passed away in October. An local icon, her generosity, laugh, and joy made Leimgruber’s the place to be for après ski.",
-    href: "https://koto.org/news/remembering-christel-leimgruber/"
-  }
+
 ];
 
 // San Miguel Basin Forum (West End — Norwood, Nucla, Naturita, Paradox).
@@ -7660,24 +7594,6 @@ const LEGAL_NOTICES = [
     url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=208",
     address: "",
     smcBidID: "208"
-  },
-  {
-    title: "Notice of Final Settlement -- PRV Stations Early Procurement, Ferguson Enterprises (Town of Telluride)",
-    entity: "Town of Telluride Public Works Department",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The Town of Telluride Public Works Department intends to begin processing final payment to Ferguson Enterprises, LLC for the 2024/2025 Early Procurement of Package-Type Pressure Reducing Valve (PRV) Stations project. Any person or firm with claims or debts against the contractor must file written notice with Civil Engineer Justin Blair at P.O. Box 397, Telluride, CO 81435 on or before November 23, 2026. No payment will be processed if valid claims are received before that date.",
-    deadline: "2026-11-23",
-    expires: "2026-11-23",
-    dates: "11/19",
-    papers: ["ttimes_1119"],
-    url: "https://www.telluridenews.com/news/legals/article_a0b9535a-57a0-48ea-91a5-bf3583aa9d95.html",
-    address: "Town of Telluride, CO (Public Works Department, P.O. Box 397, Telluride, CO 81435)",
-    noticeKey: "final-settlement-telluride-prv-ferguson-2026"
   }
 ];
 
