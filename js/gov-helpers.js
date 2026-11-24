@@ -432,7 +432,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-12-15|Town Council - Dec 15 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8047","sv":4,"ph":"6d6f5991d037fa3a"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8047","sv":4,"ph":"1fcc437b29b73927"},
 
   "rico|2026-12-16|Rico Board of Trustees Regular Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -492,6 +492,9 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8368","sv":4,"ph":"48c342c8e69c52ee"},
 
   "norwood|2026-12-21|Planning and Zoning Commission Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "med|2026-12-24|Regular Board Meeting":
     {"sv":4,"ph":"b858cb282617fb09"}
 };
 
@@ -506,6 +509,14 @@ const DEEP_DIVE_UPDATES = [];
 //   sourceUrl, topics: [] }. Rendered by hub-bub.html from the JSON mirror
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
+  {
+    date: "2026-11-24",
+    title: "A housing action plan — from the county this time",
+    body: "The Board of County Commissioners has a housing action plan on its work session agenda, alongside a hazard mitigation plan update and some routine procurement items. Nothing's been voted on yet — this is still a work session.\n\nHere's where people tend to split. Some residents think the county stepping up on housing is overdue and welcome another hand on the problem. Others wonder whether another plan — on top of what the town is already doing — is duplication, or whether county-level action looks meaningfully different from what's come before.\n\nWhat do you think: does a county housing action plan move the needle, or is it more of the same?",
+    choices: ["Real progress", "More of the same", "Depends on what's in it"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
   {
     date: "2026-11-23",
     title: "A banner for the seniors — worth a policy change?",
@@ -735,14 +746,6 @@ const DAILY_QUESTIONS = [
     title: "Should a Veteran's Flag fly at the 4-H Event Center?",
     body: "The Board of County Commissioners is expected to decide whether to hang a Veteran's Flag at the 4-H Event Center. Sounds simple. But these calls rarely are — some residents will see it as a straightforward act of recognition, long overdue. Others may wonder about precedent: once one flag goes up, what comes next, and who decides? Public comment is on the agenda, so the board wants to hear from people before the vote.\n\nWhere do you come down on it?",
     choices: ["Hang the flag", "Leave it as is", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
-  },
-  {
-    date: "2026-10-25",
-    title: "The gondola update nobody's agreed on yet",
-    body: "The Gondola Sub Committee meets to hear an update on the FTA Capital Investment Program — federal transit money that could move the Telluride-Mountain Village gondola project forward. Some residents see a federally backed gondola connection as the right answer to traffic and parking up here. Others wonder whether chasing federal capital funding means ceding control, adding complexity, or committing to a project before the community has fully weighed in. Nothing's been decided — this is an update, not a vote.\n\nSo where do you stand: is federal investment in the gondola a good path forward, or does it give you pause?",
-    choices: ["Get the federal money", "Too many strings attached", "Need way more info"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
   }
@@ -1014,6 +1017,17 @@ const REGIONAL_NEWS_ARTICLES = [
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
   {
+    title: "Treasurer's Office Closed Weds 11/25 - Fri 11/27",
+    source: "San Miguel County",
+    sourceLabel: "San Miguel County",
+    category: "Alert",
+    date: "2026-11-24",
+    pubDate: "2026-11-24T00:06:44.000Z",
+    copy: "The Treasurer's office will be closed Weds 11/25 - Fri 11/27.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=553",
+    img: ""
+  },
+  {
     title: "Fairground Facilities Closed Until Further Notice",
     source: "San Miguel County",
     sourceLabel: "San Miguel County",
@@ -1022,17 +1036,6 @@ const SMC_ALERTS = [
     pubDate: "2026-11-20T22:36:04.000Z",
     copy: "Due to unforeseen circumstances, the San Miguel County Fairground facilities will be closed until further notice, beginning Friday, November 6th.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=552",
-    img: ""
-  },
-  {
-    title: "Treasurer's Office Closed 11/11 - 11/13",
-    source: "San Miguel County",
-    sourceLabel: "San Miguel County",
-    category: "Alert",
-    date: "2026-11-12",
-    pubDate: "2026-11-12T17:19:09.000Z",
-    copy: "The Treasurer's office will be closed Weds 11/11 - Fri 11/13.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=553",
     img: ""
   },
   {
@@ -1057,7 +1060,7 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/facilities-master-plan/widgets/99345/key_dates#43153"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-11-23';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-11-24';
 const LEGAL_NOTICES_CACHE_DATE = '2026-11-24';
 
 const MANUAL_SUMMARIES = {
@@ -1407,7 +1410,10 @@ const MANUAL_SUMMARIES = {
     "The December 15, 2026 Special Joint Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "norwood|2026-12-21|Planning and Zoning Commission Meeting":
-    "The December 21, 2026 Norwood Planning and Zoning Commission Meeting agenda hasn't been posted yet."
+    "The December 21, 2026 Norwood Planning and Zoning Commission Meeting agenda hasn't been posted yet.",
+
+  "med|2026-12-24|Regular Board Meeting":
+    "The December 24, 2026 Regular Board Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -3578,6 +3584,33 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Sign Up for the 2026 Turkey Trot!",
+    source: "San Miguel County",
+    date: "November 5, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1424",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14909"
+  },
+  {
+    title: "Black Bear and Imogene Passes Closed for the Winter",
+    source: "San Miguel County",
+    date: "November 3, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1423",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
+  },
+  {
+    title: "Treasurer's Office Closed Weds 11/25 - Fri 11/27",
+    source: "San Miguel County",
+    date: "November 24, 2026",
+    newsTopic: "community",
+    copy: "The Treasurer's office will be closed Weds 11/25 - Fri 11/27.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=553",
+    img: ""
+  },
+  {
     title: "Fairground Facilities Closed Until Further Notice",
     source: "San Miguel County",
     date: "November 20, 2026",
@@ -3587,13 +3620,13 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Treasurer's Office Closed 11/11 - 11/13",
+    title: "Black Bear and Imogene Passes Closed for the Winter",
     source: "San Miguel County",
-    date: "November 12, 2026",
+    date: "November 3, 2026",
     newsTopic: "community",
-    copy: "The Treasurer's office will be closed Weds 11/11 - Fri 11/13.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=553",
-    img: ""
+    copy: "Due to changing weather conditions and the onset of winter, Imogene and Black Bear Passes are now officially closed for the season.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=551",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
   },
   {
     title: "Ridgway Bank Building Officially Added to the National Register of Historic Places",
@@ -3620,7 +3653,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "November 23, 2026",
+    date: "November 24, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3631,7 +3664,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway, City of Ouray, and Ouray County Establish New Three-Year Affordable Housing Goals",
     source: "Town of Ridgway",
-    date: "November 23, 2026",
+    date: "November 24, 2026",
     firstSeen: "2026-10-21",
     newsTopic: "housing",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3642,6 +3675,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 11-23-26",
+    source: "KOTO Community Radio",
+    date: "November 24, 2026",
+    newsTopic: "housing",
+    copy: "Rural Homes and Mountain Village Partner for Ilium Housing; Montrose County Drafts Data Center Regulations",
+    href: "https://koto.org/news/newscast-11-23-26/"
+  },
   {
     title: "Newscast 11-20-26",
     source: "KOTO Community Radio",
@@ -4274,17 +4315,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Around The World: America’s Pumpkin Beer & Chocolate Pretzels",
-    link: "https://koto.org/event/around-the-world-americas-pumpkin-beer-chocolate-pretzels/",
-    description: "Owner and Brewmaster, TJ is taking us on a journey to early America to discover how a humble native gourd became our continent’s most iconic seasonal tradition. Long before pumpkin spice became a modern phenomenon, early American colonists relied on native pumpkins to survive winter and celebrate the harvest holidays. Join us for a curated tasting event exploring the rich history of American pumpkin brewing paired with traditional European-style chocolate pretzels. Grab your tasting passport, explore the global trade routes that brought us holiday spices, and toast to the historic flavors of the American harvest season! (Ages 21+ only).",
-    pubDate: "2026-11-23T17:30:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wine Mine, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/11/November-around-the-world.png"
-  },
-  {
     title: "Dance Fit Fusion",
     link: "https://koto.org/event/dance-fit-fusion-2/",
     description: "Join Marlen for a high-energy dance fitness class fused with barre, pilates and stretching that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout that will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. Únete a Marlen para una clase de fitness de baile llena de energía combinada con barre, pilates y estiramientos que combina movimientos de baja y alta intensidad para un entrenamiento de intervalos que quema calorías, tonificando tu cuerpo y aumentando tu resistencia sin darte cuenta de lo duro que estás trabajando. ¡Es ejercicio disfrazado! No se requiere experiencia en baile—solo lleva tu energía, una botella de agua y una sonrisa. …",
@@ -4811,42 +4841,42 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino, Ridgway",
     imageUrl: "https://koto.org/wp-content/uploads/2026/11/MTN-Film-Dec-15.png"
+  },
+  {
+    title: "Salon Night at Telluride Arts HQ",
+    link: "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-12-17/",
+    description: "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it here in Telluride. These are evenings for conversation and connection, not lectures or formal programming. They are casual, open, and intentionally unstructured, designed to create the atmosphere where ideas can collide, new friendships form, and creativity sparks. Imagine an evening where musicians talk with writers, painters meet photographers, filmmakers share stories with ceramicists—and the unexpected happens!",
+    pubDate: "2026-12-17T17:30:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Arts HQ, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
   }
 ];
 
 const WILKINSON_EVENTS = [
   {
-    title: "CANCELLEDSavvy Seniors-Open Tech",
-    link: "https://telluridelibrary.libcal.com/event/17789250?hs=a",
-    description: "1:30 PM – 2:30 PM · Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone.",
-    pubDate: "2026-11-23T20:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Meeting Room #6 - large",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_09_29_14_06_45.jpg"
-  },
-  {
-    title: "Clay Play",
-    link: "https://telluridelibrary.libcal.com/event/17918591?hs=a",
-    description: "A drop-in library program for kids at the Wilkinson Public Library where participants can explore hands-on creativity using air dry clay. The event takes place in the Youth Programming Space and runs from 2:00 to 4:00 PM.",
-    pubDate: "2026-11-23T21:00:00.000Z",
+    title: "I Heart Art",
+    link: "https://telluridelibrary.libcal.com/event/17962983?hs=a",
+    description: "2:30 PM – 3:30 PM · Join us in the Youth Programming space for a fall break I Heart Art! We will be making placemats - make your own or make one to donate to our local Senior Lunch!",
+    pubDate: "2026-11-24T21:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_28_18_06_53.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_11_19_12_00_17.png"
   },
   {
-    title: "Teen Arts and Crafts",
-    link: "https://telluridelibrary.libcal.com/event/17900463?hs=a",
-    description: "4:00 PM – 5:00 PM · Join us for arts and crafts on Monday afternoons in November!",
-    pubDate: "2026-11-23T23:00:00.000Z",
+    title: "Dance Fit Fusion with Marlen",
+    link: "https://telluridelibrary.libcal.com/event/17477841?hs=a",
+    description: "5:00 PM – 6:00 PM · Join Marlen for a high-energy dance fitness class fused with barre, pilates and stretching that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout that will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. &Uacute;nete a Marlen para una clase de fitness de baile llena de energ&iacute;a combinada con barre, pilates y estiramientos que combina movimientos de baja y alta intensidad para un entrenamiento de intervalos que quema calor&iacute;as, tonificando tu cuerpo y aumentando tu resistencia sin darte cuenta de lo duro que est&aacute;s trabajando. &iexcl;Es ejercicio disfrazado! …",
+    pubDate: "2026-11-25T00:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_27_11_18_01.png"
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_19_13_49_34.jpg"
   }
 ];
 
@@ -4868,7 +4898,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Shepherd, Australian • Male",
     firstSeen: "2026-10-31",
     revealDate: "2026-11-02",
-    lastSeen: "2026-11-23"
+    lastSeen: "2026-11-24"
   },
   {
     id: "TEL-A-209",
@@ -4882,7 +4912,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Collie, Border / Cattle Dog, Australian (Red Heeler) • Female",
     firstSeen: "2026-10-31",
     revealDate: "2026-11-04",
-    lastSeen: "2026-11-23"
+    lastSeen: "2026-11-24"
   },
   {
     id: "TEL-A-214",
@@ -4896,7 +4926,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Puppy • Collie, Border / American Blue Heeler • Male",
     firstSeen: "2026-11-15",
     revealDate: "2026-11-15",
-    lastSeen: "2026-11-23"
+    lastSeen: "2026-11-24"
   }
 ];
 
@@ -5667,8 +5697,8 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Thanksgiving Break - Ridgway Schools",
     link: "https://events.ourayridgwayevents.com/event/thanksgiving-break-ridgway-schools",
-    description: "Ridgway Schools will be closed for Thanksgiving break during this period. Students, staff, and families can expect the district to be on holiday recess in observance of the Thanksgiving holiday.",
-    pubDate: "2026-11-23T07:00:00.000Z",
+    description: "Thanksgiving Break for Ridgway Schools begins, with students out of class for the holiday period. This community calendar listing marks the start of the school break for families in the Ridgway area.",
+    pubDate: "2026-11-24T07:00:00.000Z",
     endDate: "2026-11-27",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5679,61 +5709,14 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Gaper Contest 2026 - Voyager FUNdraiser",
     link: "https://events.ourayridgwayevents.com/event/gaper-contest-2026",
-    description: "A community photo contest and fundraiser for Voyager inviting locals of all ages from the northern San Juan region to submit their best \"gaper\" photos for a chance to be named Gaper of the Year. Voting takes place during Gaper Week, November 21–29, 2026, coinciding with opening week at Telluride Ski Resort, with the winner determined by popular vote.",
-    pubDate: "2026-11-23T15:00:00.000Z",
+    description: "A community photo contest fundraiser for Voyager inviting locals of all ages from the northern San Juan region to submit their best \"gaper\" photos for a chance to be named Gaper of the Year. Voting takes place during Gaper Week, November 21–29, 2026, coinciding with opening week at Telluride Ski Resort, with the winner determined by votes and additional criteria.",
+    pubDate: "2026-11-24T15:00:00.000Z",
     endDate: "2026-11-29",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/54366527548837/huge/4c3995fa47f3b861d61e318e7dafd3cbfa9b02e9.jpg"
-  },
-  {
-    title: "Stuff a Cruiser",
-    link: "https://events.ourayridgwayevents.com/event/stuff-a-cruiser",
-    description: "Please join us for our Ouray County \"Stuff a Cruiser\" Thanksgiving Food Drive! We will be “stuffing” a sheriff's office patrol car on Monday, November 23 from 8:30 AM -10:30 AM at City Hall and then 11AM to 2pm in front of the 4H Event Center in Ridgway. Help us make Thanksgiving special for families in Ouray County!We are accepting food donations to assemble traditional Thanksgiving dinners such as frozen turkeys, stuffing, potatoes, green beans, cranberry sauce, etc. - to be delivered in time for Thanksgiving Day. (Monetary donations are accepted as well - this helps us to continue our community outreach programs)Please contact Jennifer Peterson @ jpeterson@ourayco.gov if you have a family you’d like to add to the list.",
-    pubDate: "2026-11-23T15:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray County Fairgrounds and 4H Events Center",
-    imageUrl: "https://localist-images.azureedge.net/photos/54373648758769/huge/dc83b365d1d7f782ea6539886204bc8c86a39282.jpg"
-  },
-  {
-    title: "Film Stills from the Ridgway Independent Film Fest",
-    link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-film-stills-ridgway-independent-film-fest",
-    description: "The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In coordination with the annual Independent Film Festival (November 13-15) this show is both a preview and a celebration of the art of short filmmaking.",
-    pubDate: "2026-11-23T17:00:00.000Z",
-    endDate: "2026-11-30",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53048306784001/huge/b4907ccb0dd0b51c0bd862f76e556e669e3684c2.jpg"
-  },
-  {
-    title: "Senior Lunch by Neighbor to Neighbor",
-    link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
-    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
-    pubDate: "2026-11-23T19:00:00.000Z",
-    endDate: "2027-01-18",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
-  },
-  {
-    title: "Familiar Grounds - Marcie Reed Whiton and Wellington Martins",
-    link: "https://events.ourayridgwayevents.com/event/familiar-grounds-marcie-reed-whiton-and-wellington-martins",
-    description: "Join us for Familiar Ground, an exhibition bringing together two friends and their creative lives. A celebration of the people we meet, the places we remember, and the materials that inspire us. Featuring portraits and paintings by Marcie Reed Whiton and photography and woodworking by Wellington Martins, the exhibition is meant to feel a little like walking into someone's living room: a collection of familiar faces, places, memories, and personal discoveries, all sharing the same space. It's an invitation to put your feet up, look around, and get inspired by the familiar. On view throughout November 30.",
-    pubDate: "2026-11-24T00:00:00.000Z",
-    endDate: "2026-12-01",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Space to Create Art Gallery",
-    imageUrl: "https://localist-images.azureedge.net/photos/54472722974882/huge/75812f0dd549dfd8b3d96bcdbbbdbf4949f9ff80.jpg"
   },
   {
     title: "Functional Fitness - Strength & Mobility Training For Women",
@@ -5768,6 +5751,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray 4 H Event Center",
     imageUrl: "https://localist-images.azureedge.net/photos/54472221581238/huge/fa6e95b8212ce5651f6273a51fa7ed9684fae611.jpg"
+  },
+  {
+    title: "Film Stills from the Ridgway Independent Film Fest",
+    link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-film-stills-ridgway-independent-film-fest",
+    description: "The art of the short film is the focus of this exhibition, which extracts the most captivating film stills from this year's selected films, and gives viewers a chance to slow down and really enjoy these images as works of art. In coordination with the annual Independent Film Festival (November 13-15) this show is both a preview and a celebration of the art of short filmmaking.",
+    pubDate: "2026-11-24T17:00:00.000Z",
+    endDate: "2026-11-30",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53048306784001/huge/b4907ccb0dd0b51c0bd862f76e556e669e3684c2.jpg"
   },
   {
     title: "Guided Tour: Historic Beaumont Hotel & Spa",
@@ -5853,6 +5848,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53483890616270/huge/dd89f2f9028ca228db911b8e16c50dc39897358f.jpg"
   },
   {
+    title: "Familiar Grounds - Marcie Reed Whiton and Wellington Martins",
+    link: "https://events.ourayridgwayevents.com/event/familiar-grounds-marcie-reed-whiton-and-wellington-martins",
+    description: "Join us for Familiar Ground, an exhibition bringing together two friends and their creative lives. A celebration of the people we meet, the places we remember, and the materials that inspire us. Featuring portraits and paintings by Marcie Reed Whiton and photography and woodworking by Wellington Martins, the exhibition is meant to feel a little like walking into someone's living room: a collection of familiar faces, places, memories, and personal discoveries, all sharing the same space. It's an invitation to put your feet up, look around, and get inspired by the familiar. On view throughout November 30.",
+    pubDate: "2026-11-26T00:00:00.000Z",
+    endDate: "2026-12-01",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create Art Gallery",
+    imageUrl: "https://localist-images.azureedge.net/photos/54472722974882/huge/75812f0dd549dfd8b3d96bcdbbbdbf4949f9ff80.jpg"
+  },
+  {
     title: "Floating Lotus Music Bingo – November & December 2026",
     link: "https://events.ourayridgwayevents.com/event/floating-lotus-music-bingo-november-december-2026",
     description: "Music Bingo at Floating Lotus Brewery! Join us Thursday, November 26 and Thursday, December 10 from 7–9 PM for a high-energy night of music, drinks and bingo-style fun. Listen, mark your card and sing along. Learn more at floatinglotusbrewery.com.",
@@ -5899,6 +5906,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Bee True You Wellness & Creative Studio",
     imageUrl: "https://localist-images.azureedge.net/photos/54241462626167/huge/7c0778035e072ff933b617f21809b1459dc84aca.jpg"
+  },
+  {
+    title: "Senior Lunch by Neighbor to Neighbor",
+    link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
+    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
+    pubDate: "2026-11-30T19:00:00.000Z",
+    endDate: "2027-01-18",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
   },
   {
     title: "Monsters & Myths by Challenge Island",
@@ -7654,6 +7673,62 @@ const LEGAL_NOTICES = [
     url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=208",
     address: "",
     smcBidID: "208"
+  },
+  {
+    title: "Public Notice -- Petition for Change of Name, Lauren Elizabeth O'Hare (Case No. 2026C23)",
+    entity: "San Miguel County Court",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "A Petition for Change of Name of an Adult has been filed in San Miguel County Court requesting that Lauren Elizabeth O'Hare's name be changed to Lauren O'Hare Benson. The notice is published as required by law in the Telluride Times.",
+    deadline: "",
+    expires: "2026-12-19",
+    dates: "11/19",
+    papers: ["ttimes_1119"],
+    url: "https://www.telluridenews.com/news/legals/article_a0b9535a-57a0-48ea-91a5-bf3583aa9d95.html",
+    address: "San Miguel County Court, Telluride, CO",
+    noticeKey: "name-change-2026C23-ohare",
+    caseNumber: "2026C23"
+  },
+  {
+    title: "Notice of Final Settlement -- PRV Stations Early Procurement, Ferguson Enterprises (Town of Telluride)",
+    entity: "Town of Telluride Public Works Department",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "The Town of Telluride Public Works Department intends to begin processing final payment to Ferguson Enterprises, LLC for the 2024/2025 Early Procurement of Package-Type Pressure Reducing Valve (PRV) Stations project. Any person or firm with claims or debts against the contractor must file a proper written notice with Justin Blair, Civil Engineer, by November 23, 2026. No claims received by that date will allow final payment to proceed.",
+    deadline: "2026-11-23",
+    expires: "2026-11-23",
+    dates: "11/19",
+    papers: ["ttimes_1119"],
+    url: "https://www.telluridenews.com/news/legals/article_a0b9535a-57a0-48ea-91a5-bf3583aa9d95.html",
+    address: "Town of Telluride Public Works Department, P.O. Box 397, Telluride, CO 81435",
+    noticeKey: "final-settlement-telluride-prv-ferguson-2026"
+  },
+  {
+    title: "Public Notice -- Petition for Change of Name, Lara Marie Zibners Lohr (Case No. 2026C30012)",
+    entity: "San Miguel Combined Court",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "A Petition for Change of Name of an Adult was filed on October 26, 2026 in San Miguel County Court requesting that Lara Marie Zibners Lohr's name be changed to Lara Marie Zibners (removing the last name 'Lohr'). The notice is published as required by law in the Telluride Times.",
+    deadline: "",
+    expires: "2026-12-26",
+    dates: "11/19",
+    papers: ["ttimes_1119"],
+    url: "https://www.telluridenews.com/news/legals/article_a0b9535a-57a0-48ea-91a5-bf3583aa9d95.html",
+    address: "San Miguel Combined Court, P.O. Box 919, Telluride, CO 81435",
+    noticeKey: "name-change-2026C30012-zibners-lohr",
+    caseNumber: "2026C30012"
   }
 ];
 
