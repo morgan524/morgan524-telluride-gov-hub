@@ -143,6 +143,17 @@
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/27556/merchant_event-1.png"
   },
   {
+    "title": "Chanukah in Telluride Mountain Village",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/chanukah-in-telluride-1/",
+    "description": "Celebrate the Festival of Lights in Telluride at Chabad’s 5th Annual Menorah Lighting and Chanukah Celebration!",
+    "pubDate": "2026-12-08T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/47366/chanukah_in_the_rockies_2025_telluride_-_16_9.png"
+  },
+  {
     "title": "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
     "link": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
     "description": "This workshop, hosted in Mountain Village, brings together facilitators from Through the Woods Doula, EcoAction Partners, and the Wilkinson Public Library to explore the emotional terrain of living through environmental change. It offers a guided space to process feelings of ecological grief and loss alongside moments of gratitude and connection to the natural world.",
@@ -152,6 +163,17 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
+  },
+  {
+    "title": "Noel Night",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/noel-night/",
+    "description": "Noel Night marks the beginning of the holiday season with the lighting of the ceremonial Ski Tree, and shopping at local retailers.",
+    "pubDate": "2026-12-09T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/31332/1435687101a20036601e28_1800x900.jpg"
   },
   {
     "title": "Movies Under the Stars",
@@ -273,5 +295,16 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
+  },
+  {
+    "title": "Christmas Day Buffet at Alloy Kitchen",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/christmas-day-buffet-at-alloy-kitchen/",
+    "description": "Alloy Kitchen at Mountain Lodge Telluride in Mountain Village is hosting a Christmas Day buffet on Friday, December 25, from 3 to 7 PM. The event is priced at $85 for adults.",
+    "pubDate": "2026-12-25T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/50175/lodge-winter-2200x1100-4.jpg"
   }
 ]

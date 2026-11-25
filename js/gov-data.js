@@ -449,10 +449,32 @@ const MV_CACHED_DATA = [
     note: "Agenda typically posted the Friday before."
   },
   {
+    date: "January 21, 2027",
+    time: "2:00 PM - 7:00 PM",
+    title: "Town Council Meeting",
+    board: "tc",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Town Hall, 455 Mountain Village Blvd, Suite A",
+    note: "Agenda typically posted the Friday before."
+  },
+  {
     date: "February 4, 2027",
     time: "10:00 AM - 3:30 PM",
     title: "Design Review Board",
     board: "drb",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Town Hall, 455 Mountain Village Blvd, Suite A",
+    note: "Agenda typically posted the Friday before."
+  },
+  {
+    date: "February 18, 2027",
+    time: "2:00 PM - 8:00 PM",
+    title: "Town Council Meeting",
+    board: "tc",
     agendaUrl: null,
     packetUrl: null,
     special: false,
@@ -736,15 +758,6 @@ const NORWOOD_SAN_URL = 'https://www.norwoodtown.com/norwood-sanitation-district
 const NORWOOD_CACHE_DATE = '2026-11-25';
 
 const NORWOOD_CACHED_DATA = [
-  {
-    date: "November 18, 2026",
-    time: null,
-    title: "Board of Trustees Meeting",
-    agendaUrl: "https://www.norwoodtown.com/files/8ec8087d1/11.18.2026+Board+of+Trustee+Agenda+ADA.pdf",
-    packetUrl: "https://www.norwoodtown.com/files/b22e92a07/11.18.2026+BOT+Supporting+Documents.pdf",
-    special: false,
-    board: "bot"
-  },
   {
     date: "December 8, 2026",
     time: null,

@@ -96,6 +96,20 @@
     "endDate": "2026-12-01"
   },
   {
+    "title": "Free Wine Tasting",
+    "href": "https://www.telluride.com/event/free-wine-tasting/",
+    "date": "2026-11-25",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/46449/mvwmplanetpic2.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Join the Mountain Village Wine Merchant every Wednesday for a free wine tasting of three different wines.",
+    "type": "Food & Drink",
+    "endDate": "2027-03-31"
+  },
+  {
     "title": "Cardio Dance w/Kelsey",
     "href": "https://koto.org/event/cardio-dance-w-kelsey-2/",
     "date": "2026-11-25",
@@ -804,6 +818,20 @@
     "type": "Community"
   },
   {
+    "title": "Free Tasting",
+    "href": "https://www.telluride.com/event/free-tasting-at-telluride-wine-merchant/",
+    "date": "2026-12-03",
+    "time": "5:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/62697/screenshot_2026-06-03_at_1_50_16_pm.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Free tasting every Thursday from 4-6pm. The theme of the tasting will vary from different seasonal selections in wine, …",
+    "type": "Food & Drink",
+    "endDate": "2027-04-01"
+  },
+  {
     "title": "Floating Lotus Trivia Night – December 2026",
     "href": "https://events.ourayridgwayevents.com/event/floating-lotus-trivia-night-december-2026",
     "date": "2026-12-03",
@@ -949,19 +977,6 @@
     "type": "Arts & Film"
   },
   {
-    "title": "First Friday Art Walk",
-    "href": "https://events.ourayridgwayevents.com/event/first-friday-art-walk",
-    "date": "2026-12-04",
-    "time": "5:00 PM",
-    "location": "Downtown Ridgway, CO",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/52941247100302/huge/24aa8ce412f9817ce04becd51e5d1cc5b8db2cad.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "A monthly community art walk through downtown Ridgway, where galleries, studios, shops, and gathering spaces open their doors for new exhibitions, artist receptions, live music, and pop-up programming. Each edition offers a fresh lineup of…",
-    "type": "Arts & Film"
-  },
-  {
     "title": "First Friday at Rootwings Art",
     "href": "https://events.ourayridgwayevents.com/event/first-friday-at-rootwings-art-1540",
     "date": "2026-12-04",
@@ -973,6 +988,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Rootwings Art will be open for Ridgway's First Friday Art Walk, featuring local ceramic sculptures and large vessels by artist Andy Nasisse, original oils by Emma Kalff, Bruce Backer's Ravens & Crows, Taos artist Fred Burns fantasy nudes…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "First Friday X Noel Night",
+    "href": "https://events.ourayridgwayevents.com/event/first-friday-art-walk",
+    "date": "2026-12-04",
+    "time": "5:00 PM",
+    "location": "Downtown Ridgway, CO",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52941247100302/huge/24aa8ce412f9817ce04becd51e5d1cc5b8db2cad.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "First Friday Art Walk and Noel Night come together for a festive December evening in downtown Ridgway, combining a holiday parade, a visit from Santa, local shopping, and festive treats. The 23rd Annual Holiday Art and Gift Sale at the…",
+    "type": "Festivals"
   },
   {
     "title": "Noel Night at Ridgway Pilates",
@@ -1525,19 +1553,6 @@
     "type": "Community"
   },
   {
-    "title": "Noel Night",
-    "href": "https://www.telluride.com/event/noel-night/",
-    "date": "2026-12-09",
-    "time": "5:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/28866/noelnight-9-2100x1400-68fad2f3-c123-4d8b-bca6-f74e15695306.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Noel Night marks the beginning of the holiday season with the lighting of the ceremonial Ski Tree, and shopping at …",
-    "type": "Community"
-  },
-  {
     "title": "Telluride Art Walk",
     "href": "https://www.telluride.com/event/telluride-art-walk/",
     "date": "2026-12-09",
@@ -1604,6 +1619,19 @@
     "desc": "Weehawken Dance and America’s Mattress present The Nutcracker ~ Remixed, a large-scale community dance production blending classical ballet with contemporary movement, jazz, hip hop, aerial arts and other styles. More than 400 local…",
     "type": "Music",
     "endDate": "2026-12-13"
+  },
+  {
+    "title": "Noel Night",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/noel-night/",
+    "date": "2026-12-09",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/31332/1435687101a20036601e28_1800x900.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Noel Night marks the beginning of the holiday season with the lighting of the ceremonial Ski Tree, and shopping at local retailers.",
+    "type": "Community"
   },
   {
     "title": "Alpine Ranger Fund Benefit",
@@ -1718,7 +1746,7 @@
     "time": "9:00 PM",
     "location": "The Alibi • Telluride, CO",
     "town": "Telluride",
-    "img": "https://1v09t9hszk.ucarecd.net/4a5f4c4e-4a85-416f-bf68-4a874717300c/-/crop/1380x1380/233,0/-/preview/",
+    "img": "https://1v09t9hszk.ucarecd.net/65646ce1-2053-4871-8053-86f98a94c026/-/crop/2000x1001/0,99/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
     "desc": "The Regular is a folk rock band based in Denver, Colorado, performing live at The Alibi. The band brings their folk rock sound to Telluride for a late-night show.",
@@ -2471,6 +2499,19 @@
     "category": "Community Event",
     "source": "Beacon",
     "desc": "An uphill skin to the top of lift 10; no experience necessary. $10 equipment rentals available.",
+    "type": "Community"
+  },
+  {
+    "title": "Christmas Day Buffet at Alloy Kitchen",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/christmas-day-buffet-at-alloy-kitchen/",
+    "date": "2026-12-25",
+    "time": "",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/50175/lodge-winter-2200x1100-4.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Alloy Kitchen at Mountain Lodge Telluride in Mountain Village is hosting a Christmas Day buffet on Friday, December 25, from 3 to 7 PM. The event is priced at $85 for adults.",
     "type": "Community"
   },
   {

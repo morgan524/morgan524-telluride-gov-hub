@@ -411,7 +411,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://ouraycoco.portal.civicclerk.com/event/1130/files/agenda/7600","zoomUrl":"https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1","meetingId":"876 0637 5697","passcode":"946299","phone":"346-248-7799","sv":4},
 
   "telluride|2026-12-03|Planning & Zoning Commission - Special Meeting - Dec 03 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8362","sv":4,"ph":"6d8ee3921c5f5f7f"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8362","sv":4},
 
   "ouraycity|2026-11-16|Ouray City Council Regular Meeting":
     {"agendaUrl":"https://meetings.boardbook.org/Public/Agenda/2503?meeting=774802","sv":4},
@@ -453,7 +453,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8365","sv":4,"ph":"635fc2db9b080013"},
 
   "telluride|2026-12-08|Telluride Housing Authority Subcommittee Special Meeting - Dec 08 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8364","sv":4,"ph":"392928bb3588596e"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8364","sv":4,"ph":"2f3612d70d8225e4"},
 
   "telluride|2026-11-18|Telluride Housing Authority Subcommittee Special Meeting - Nov 18 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8363","zoomUrl":"https://us06web.zoom.us/meeting/register/vCd8aZy5TLOCOVod7PLOyQ","meetingId":"896 9784 6227","passcode":"734380.","phone":"719) 359-4580","sv":4},
@@ -471,10 +471,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8123","sv":4,"ph":"e8c092d7dc733b1f"},
 
   "telluride|2026-12-17|Planning & Zoning Commission - Dec 17 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8110","sv":4,"ph":"a9cbc18b4b321503"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8110","sv":4,"ph":"17e4f9dd2ee65452"},
 
   "telluride|2026-12-17|Planning & Zoning Commission Chair - Dec 17 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8109","sv":4,"ph":"1a98272876d385c2"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8109","sv":4,"ph":"0454c5807aedf511"},
 
   "county|2026-12-18|Board of County Commissioners Special Meeting":
     {"sv":4,"ph":"7751bc604656aec0"},
@@ -495,7 +495,10 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "med|2026-12-24|Regular Board Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"}
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "telluride|2026-12-02|Ecology Commission - Dec 02 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8369","zoomUrl":"https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1","phone":"970-728-2496","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -831,7 +834,10 @@ const MEETING_PREVIEWS = {
     "The Planning & Zoning Commission is expected to discuss a comprehensive review of Telluride's employee rental housing policies, including consideration of consulting services to evaluate and potentially update the town's existing framework governing employee rental housing.",
 
   "mv|2026-12-03|Design Review Board":
-    "Board will consider final architecture review for a new single-family home at Lot 224-B on Snowdrift Lane, continued from October. Members will also approve minutes from the November 5 meeting and receive staff updates."
+    "Board will consider final architecture review for a new single-family home at Lot 224-B on Snowdrift Lane, continued from October. Members will also approve minutes from the November 5 meeting and receive staff updates.",
+
+  "telluride|2026-12-02|Ecology Commission - Dec 02 2026":
+    "The Ecology Commission is expected to discuss a proposal to prohibit combustion-powered lawn care equipment in Telluride, including a possible phase-out ordinance affecting commercial operators. The commission will also review and approve minutes from its November 4 meeting."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1308,7 +1314,7 @@ const MANUAL_SUMMARIES = {
     "A work session, so no formal votes — but the direction commissioners give here shapes what comes back for action later. The morning opens with EMS director Nathan McCullough's quarterly update and a discussion of an intergovernmental agreement between the county and Ridgway Fire. Then come two memoranda of understanding: one with the City of Ouray at 10:00, one with the Town of Ridgway at 10:30 — the specifics of each aren't spelled out in the agenda, but MOUs with both municipal neighbors in the same session suggests coordinated service or cost-sharing conversations are in motion. The afternoon wraps with commissioner and administrative reports, then 2027 budget discussion picks up wherever it left off the previous day.",
 
   "telluride|2026-12-03|Planning & Zoning Commission - Special Meeting - Dec 03 2026":
-    "The December 3 Special Meeting agenda hasn't been posted yet.",
+    "The December 3 Special Meeting — rescheduled from the cancelled November 5 meeting — hasn't posted an agenda yet.",
 
   "ouraycity|2026-11-16|Ouray City Council Regular Meeting":
     "The big lift at this meeting is the 2027 budget cycle — council takes up four linked resolutions adopting the budget, appropriating funds to city accounts, setting the mill levy, and locking in the 2027 fee schedule. Alongside that, a second amendment to the management agreement with Ouray Ice Park, Inc. goes to a vote, and council approves a professional services agreement with Short Elliott Hendrickson for a facility condition assessment of the Hot Springs Pool House — a signal that the city is taking stock of aging infrastructure. A parking plan is on the table for discussion and direction to staff. On the consent agenda, the city ratifies its participation in the South Ouray Erosion Control Project. Council also repeals the 2022 remote participation policy.",
@@ -1392,7 +1398,10 @@ const MANUAL_SUMMARIES = {
     "The December 21, 2026 Norwood Planning and Zoning Commission Meeting agenda hasn't been posted yet.",
 
   "med|2026-12-24|Regular Board Meeting":
-    "The December 24, 2026 Regular Board Meeting agenda hasn't been posted yet."
+    "The December 24, 2026 Regular Board Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-12-02|Ecology Commission - Dec 02 2026":
+    "The Ecology Commission takes up a proposed ordinance that would phase out combustion-powered lawn and garden equipment townwide — first for leaf blowers by January 1, 2028, then for all other covered equipment (mowers, trimmers, edgers, and the like) by January 1, 2030. The draft ordinance would also immediately bar the Town from purchasing any new gas-powered lawn equipment. Snow removal gear, chainsaws, portable generators, and wildfire/defensible-space work are carved out. Enforcement would run complaint-based, with a written warning on a first offense; commercial operators can be cited both individually and as a business entity. Colorado's HB23-1161 point-of-sale discount and San Miguel Power Association rebates together could offset roughly half the cost of replacement equipment. This is a work session — no vote is on the table yet — with the path forward likely running through a Town Council agenda item after today's discussion."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2810,6 +2819,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "County discusses deed-restricted housing covenant changes",
+    source: "Telluride Times",
+    date: "November 25, 2026",
+    firstSeen: "2026-11-25",
+    newsTopic: "housing",
+    copy: "With the evolving real estate market and the challenge of offering enough affordable housing to locals, San Miguel County staff are working to update the deed restriction covenant. The Board of County Commissioners (BOCC) held a discussion about potential amendments…",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/article_43979468-325f-44cf-85b2-6853972a4ad0.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/a1/5a166416-4f5e-41a4-ab91-2c1e86db0263/6b05d10fa1165.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Telluride makes progress on safely disposing of vapes",
     source: "Telluride Times",
     date: "November 24, 2026",
@@ -3664,25 +3685,36 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Ridgway Bank Building Officially Added to the National Register of Historic Places",
+    title: "Notice and Call of Special Meeting of the Ridgway Town Council on November 30, 2026 - Notice dated November 23, 2026",
     source: "Town of Ridgway",
-    date: "October 9, 2027",
-    firstSeen: "2026-10-09",
-    newsTopic: "community",
+    date: "November 25, 2026",
+    firstSeen: "2026-11-24",
+    newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Bank-Building-PR-2026-10-09.pdf",
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Special-Meeting-Notice_0.pdf",
     img: ""
   },
   {
-    title: "Ridgway Reminds Pet Owners of Responsibilities",
+    title: "Ridgway Town Council Special Meeting Agenda",
     source: "Town of Ridgway",
-    date: "October 6, 2027",
-    firstSeen: "2026-10-06",
-    newsTopic: "community",
+    date: "November 30, 2026",
+    firstSeen: "2026-11-25",
+    newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-reminds-pet-owners-of-responsibilities-2026-10-06.pdf",
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Nov-30-special-meeting-agenda.pdf",
+    img: ""
+  },
+  {
+    title: "Ridgway Sustainability Advisory Board Meeting Agenda",
+    source: "Town of Ridgway",
+    date: "December 3, 2026",
+    firstSeen: "2026-11-25",
+    newsTopic: "government",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/SAB-Meeting-Packet---December-3%2C-2026.pdf",
     img: ""
   },
   {
@@ -3694,17 +3726,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.12.09_TC-public-hearing-notice-acc.pdf",
-    img: ""
-  },
-  {
-    title: "Notice and Call of Special Meeting of the Ridgway Town Council on Nov. 30, 2026",
-    source: "Town of Ridgway",
-    date: "November 25, 2026",
-    firstSeen: "2026-11-24",
-    newsTopic: "government",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Special-Meeting-Notice_0.pdf",
     img: ""
   },
   {
@@ -3738,6 +3759,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Prop-123-Opt-In-Unit-Count-NewsRelease_FINAL-10.20.26-acc.pdf",
+    img: ""
+  },
+  {
+    title: "Ridgway Bank Building Officially Added to the National Register of Historic Places",
+    source: "Town of Ridgway",
+    date: "October 9, 2027",
+    firstSeen: "2026-10-09",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Bank-Building-PR-2026-10-09.pdf",
     img: ""
   }
 ];
@@ -4995,20 +5027,6 @@ const HUMANE_SOCIETY_ANIMALS = [
     lastSeen: "2026-11-25"
   },
   {
-    id: "TEL-A-214",
-    name: "Lumber Jack",
-    species: "Dog",
-    breed: "Collie, Border / American Blue Heeler",
-    ageGroup: "Young Puppy",
-    sex: "Male",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/4baf1e0b4226774ef3278f9a481cedce/0c9dd956ae6a0e662049a105167bcb15.jpg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/215053447",
-    summary: "Young Puppy • Collie, Border / American Blue Heeler • Male",
-    firstSeen: "2026-11-15",
-    revealDate: "2026-11-15",
-    lastSeen: "2026-11-25"
-  },
-  {
     id: "TEL-A-209",
     name: "Callie",
     species: "Dog",
@@ -5078,7 +5096,7 @@ const ALIBI_EVENTS = [
     sourceLabel: "The Alibi",
     category: "Live Music",
     location: "The Alibi • Telluride, CO",
-    imageUrl: "https://1v09t9hszk.ucarecd.net/4a5f4c4e-4a85-416f-bf68-4a874717300c/-/crop/1380x1380/233,0/-/preview/"
+    imageUrl: "https://1v09t9hszk.ucarecd.net/65646ce1-2053-4871-8053-86f98a94c026/-/crop/2000x1001/0,99/-/preview/"
   },
   {
     title: "Easy Jim Residency Night 1",
@@ -6131,6 +6149,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54579706253158/huge/60130a61c56a58e900b5deff857264c9eb942e9d.jpg"
   },
   {
+    title: "Parade in Ridgway: Temporary Closure of Hwy 62 / Sherman Street and Other Streets",
+    link: "https://events.ourayridgwayevents.com/event/parade-in-ridgway-temporary-closure-of-hwy-62-sherman-street",
+    description: "Ridgway's Noel Night Parade on Dec. 4, 2026 will start at approximately 5:00 pm. The parade will last about 45 minutes. The following streets will be temporarily closed: Sherman Street / Highway 62 between N. Railroad St and N. Laura St.N. Railroad St. between Charles St. and Sherman St.N. Laura St. between Sherman St. and Clinton St.Clinton St. between N. Laura St. and N. Lena St.N. Lena St. between Clinton St. and Charles St.Charles St. between N. Lena St. and N. Railroad St. If you'll be traveling north of Ridgway, these are options for a detour: If you're coming from north of Ridgway and will be heading west of Ridgway: from Highway 550 head west on County Road 24, then south on County road 5, then go west on Sherman St. …",
+    pubDate: "2026-12-04T23:55:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Downtown Ridgway, Colorado",
+    imageUrl: "https://localist-images.azureedge.net/photos/54612421741739/huge/f8b09f814cb4f8b922b8474ce9a92a6ceb524b41.jpg"
+  },
+  {
     title: "23rd Annual Holiday Art & Gift Sale",
     link: "https://events.ourayridgwayevents.com/event/23rd-annual-holiday-art-gift-sale",
     description: "The 23rd Annual Holiday Art & Gift Sale returns to the Decker Community Room, offering handmade work from local artisans and craftspeople. This long-running community tradition provides an opportunity to find one-of-a-kind, locally made gifts during the holiday season.",
@@ -6142,17 +6171,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/54139018107075/huge/dc77ec311ce3e3367f9e9d6c47ed459172ad9558.jpg"
   },
   {
-    title: "First Friday Art Walk",
-    link: "https://events.ourayridgwayevents.com/event/first-friday-art-walk",
-    description: "A monthly community art walk through downtown Ridgway, where galleries, studios, shops, and gathering spaces open their doors for new exhibitions, artist receptions, live music, and pop-up programming. Each edition offers a fresh lineup of creative experiences spread across the walkable downtown area.",
-    pubDate: "2026-12-05T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Downtown Ridgway, CO",
-    imageUrl: "https://localist-images.azureedge.net/photos/52941247100302/huge/24aa8ce412f9817ce04becd51e5d1cc5b8db2cad.jpg"
-  },
-  {
     title: "First Friday at Rootwings Art",
     link: "https://events.ourayridgwayevents.com/event/first-friday-at-rootwings-art-1540",
     description: "Rootwings Art will be open for Ridgway's First Friday Art Walk, featuring local ceramic sculptures and large vessels by artist Andy Nasisse, original oils by Emma Kalff, Bruce Backer's Ravens & Crows, Taos artist Fred Burns fantasy nudes and one of a kind jewelry and ceramics by Vanessa Backer.",
@@ -6162,6 +6180,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Herran House",
     imageUrl: "https://localist-images.azureedge.net/photos/53312391289791/huge/00a6a9e1834a357256b5925d35f6a6525ff06493.jpg"
+  },
+  {
+    title: "First Friday X Noel Night",
+    link: "https://events.ourayridgwayevents.com/event/first-friday-art-walk",
+    description: "First Friday Art Walk and Noel Night come together for a festive December evening in downtown Ridgway, combining a holiday parade, a visit from Santa, local shopping, and festive treats. The 23rd Annual Holiday Art and Gift Sale at the Decker Weehawken Youth Art Show is also part of the celebration, alongside live music and seasonal specials at area businesses.",
+    pubDate: "2026-12-05T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Downtown Ridgway, CO",
+    imageUrl: "https://localist-images.azureedge.net/photos/52941247100302/huge/24aa8ce412f9817ce04becd51e5d1cc5b8db2cad.jpg"
   },
   {
     title: "Noel Night at Ridgway Pilates",
@@ -6177,7 +6206,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Ridgway Noel Night",
     link: "https://events.ourayridgwayevents.com/event/ridgway-noel-night",
-    description: "The holiday spirit is coming to Ridgway! Mark your calendars for Friday, December 4th, as the community comes together for Ridgway's annual Noel Night celebration. This beloved holiday tradition promises an evening filled with festive fun, local shopping, music, food, and plenty of holiday cheer. Enjoy a colorful parade, capture special memories with photos with Santa, explore holiday shopping specials at local businesses, and take in live music throughout the celebration. There will also be delicious food and beverages, along with plenty of other surprises to make the evening memorable. Noel Night is a wonderful opportunity to gather with friends and family, support our local businesses, and celebrate everything that makes the Ridgway community so special during the holiday season.",
+    description: "The holiday spirit is coming to Ridgway! Mark your calendars for Friday, December 4th, as the community comes together for Ridgway's annual Noel Night celebration. This beloved holiday tradition promises an evening filled with festive fun, local shopping, music, food, and plenty of holiday cheer. Enjoy a colorful parade, capture special memories with photos with Santa, explore holiday shopping specials at local businesses, and take in live music throughout the celebration. There will also be delicious food and beverages, along with plenty of other surprises to make the evening memorable. Noel Night is a wonderful opportunity to gather with friends and family, support our local businesses, and celebrate everything that makes the Ridgway community so special during the holiday season. Schedule: 5pm Parade and Tree Lighting 5pm-9pm Shop in Ridgway and find great holiday deals 6:15pm-7:45pm Get your picture taken with Santa at the gazebo in Hartwell Park! …",
     pubDate: "2026-12-05T00:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -6596,17 +6625,6 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "Board Of Trustees Meeting",
-    link: "https://www.norwoodtown.com/2026-11-18-board-of-trustees-meeting",
-    description: "The Town of Norwood Board of Trustees will hold a regular meeting on November 18. This is an official government meeting open to the public, providing an opportunity for community members to observe local municipal business and decision-making.",
-    pubDate: "2026-11-18T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Government Meeting",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "Senior Meals",
     link: "https://www.norwoodtown.com/2026-11-19-senior-meals",
     description: "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to gather, share a meal, and connect with neighbors.",
@@ -6819,6 +6837,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/27556/merchant_event-1.png"
   },
   {
+    title: "Chanukah in Telluride Mountain Village",
+    link: "https://townofmountainvillage.com/explore/events/all-events/chanukah-in-telluride-1/",
+    description: "Celebrate the Festival of Lights in Telluride at Chabad’s 5th Annual Menorah Lighting and Chanukah Celebration!",
+    pubDate: "2026-12-08T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/47366/chanukah_in_the_rockies_2025_telluride_-_16_9.png"
+  },
+  {
     title: "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
     link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
     description: "This workshop, hosted in Mountain Village, brings together facilitators from Through the Woods Doula, EcoAction Partners, and the Wilkinson Public Library to explore the emotional terrain of living through environmental change. It offers a guided space to process feelings of ecological grief and loss alongside moments of gratitude and connection to the natural world.",
@@ -6828,6 +6857,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
+  },
+  {
+    title: "Noel Night",
+    link: "https://townofmountainvillage.com/explore/events/all-events/noel-night/",
+    description: "Noel Night marks the beginning of the holiday season with the lighting of the ceremonial Ski Tree, and shopping at local retailers.",
+    pubDate: "2026-12-09T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/31332/1435687101a20036601e28_1800x900.jpg"
   },
   {
     title: "Movies Under the Stars",
@@ -6949,6 +6989,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
+  },
+  {
+    title: "Christmas Day Buffet at Alloy Kitchen",
+    link: "https://townofmountainvillage.com/explore/events/all-events/christmas-day-buffet-at-alloy-kitchen/",
+    description: "Alloy Kitchen at Mountain Lodge Telluride in Mountain Village is hosting a Christmas Day buffet on Friday, December 25, from 3 to 7 PM. The event is priced at $85 for adults.",
+    pubDate: "2026-12-25T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/50175/lodge-winter-2200x1100-4.jpg"
   }
 ];
 
@@ -6964,6 +7015,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/45301/i-5fmsgs6-5k-2100x1400-d6f22d2a-6109-408c-9f35-051a33841613.800x533.webp"
+  },
+  {
+    title: "Free Wine Tasting",
+    link: "https://www.telluride.com/event/free-wine-tasting/",
+    description: "Join the Mountain Village Wine Merchant every Wednesday for a free wine tasting of three different wines.",
+    pubDate: "2026-11-25",
+    endDate: "2027-03-31",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/46449/mvwmplanetpic2.800x533.webp"
   },
   {
     title: "An Outlaw Thanksgiving",
@@ -7055,6 +7118,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/64277/wreaths_for_rescues_square.800x533.webp"
+  },
+  {
+    title: "Free Tasting",
+    link: "https://www.telluride.com/event/free-tasting-at-telluride-wine-merchant/",
+    description: "Free tasting every Thursday from 4-6pm. The theme of the tasting will vary from different seasonal selections in wine, …",
+    pubDate: "2026-12-03",
+    endDate: "2027-04-01",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62697/screenshot_2026-06-03_at_1_50_16_pm.800x533.webp"
   },
   {
     title: "Holiday Arts Bazaar",
@@ -9345,6 +9420,16 @@ function getTownAgendaLink(title, eventDate) {
 // MeetingsService (HARC stays in TELLURIDE_CACHED_DATA above). Empty until the
 // next content-refresh run. Each entry: {date,title,agendaUrl,hasAgenda,location,time}.
 const TELLURIDE_BOARD_MEETINGS = [
+  {
+    date: "December 2, 2026",
+    title: "Ecology Commission",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8369",
+    hasAgenda: true,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: "4:00 PM",
+    civicwebId: 8369,
+    packetUrl: "https://telluride-co.civicweb.net/document/448375/"
+  },
   {
     date: "December 2, 2026",
     title: "Telluride Housing Authority Subcommittee",
