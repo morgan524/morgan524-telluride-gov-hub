@@ -32,10 +32,32 @@
     "note": "Agenda typically posted the Friday before."
   },
   {
+    "date": "January 21, 2027",
+    "time": "2:00 PM - 7:00 PM",
+    "title": "Town Council Meeting",
+    "board": "tc",
+    "agendaUrl": null,
+    "packetUrl": null,
+    "special": false,
+    "location": "Town Hall, 455 Mountain Village Blvd, Suite A",
+    "note": "Agenda typically posted the Friday before."
+  },
+  {
     "date": "February 4, 2027",
     "time": "10:00 AM - 3:30 PM",
     "title": "Design Review Board",
     "board": "drb",
+    "agendaUrl": null,
+    "packetUrl": null,
+    "special": false,
+    "location": "Town Hall, 455 Mountain Village Blvd, Suite A",
+    "note": "Agenda typically posted the Friday before."
+  },
+  {
+    "date": "February 18, 2027",
+    "time": "2:00 PM - 8:00 PM",
+    "title": "Town Council Meeting",
+    "board": "tc",
     "agendaUrl": null,
     "packetUrl": null,
     "special": false,

@@ -512,8 +512,7 @@
   },
   "telluride|2026-12-03|Planning & Zoning Commission - Special Meeting - Dec 03 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8362",
-    "sv": 4,
-    "ph": "6d8ee3921c5f5f7f"
+    "sv": 4
   },
   "ouraycity|2026-11-16|Ouray City Council Regular Meeting": {
     "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=774802",
@@ -575,7 +574,7 @@
   "telluride|2026-12-08|Telluride Housing Authority Subcommittee Special Meeting - Dec 08 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8364",
     "sv": 4,
-    "ph": "392928bb3588596e"
+    "ph": "2f3612d70d8225e4"
   },
   "telluride|2026-11-18|Telluride Housing Authority Subcommittee Special Meeting - Nov 18 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8363",
@@ -609,12 +608,12 @@
   "telluride|2026-12-17|Planning & Zoning Commission - Dec 17 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8110",
     "sv": 4,
-    "ph": "a9cbc18b4b321503"
+    "ph": "17e4f9dd2ee65452"
   },
   "telluride|2026-12-17|Planning & Zoning Commission Chair - Dec 17 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8109",
     "sv": 4,
-    "ph": "1a98272876d385c2"
+    "ph": "0454c5807aedf511"
   },
   "county|2026-12-18|Board of County Commissioners Special Meeting": {
     "sv": 4,
@@ -649,5 +648,11 @@
   "med|2026-12-24|Regular Board Meeting": {
     "sv": 4,
     "ph": "b858cb282617fb09"
+  },
+  "telluride|2026-12-02|Ecology Commission - Dec 02 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8369",
+    "zoomUrl": "https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1",
+    "phone": "970-728-2496",
+    "sv": 4
   }
 }

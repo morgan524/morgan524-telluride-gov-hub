@@ -1,5 +1,17 @@
 [
   {
+    "title": "County discusses deed-restricted housing covenant changes",
+    "source": "Telluride Times",
+    "date": "November 25, 2026",
+    "firstSeen": "2026-11-25",
+    "newsTopic": "housing",
+    "copy": "With the evolving real estate market and the challenge of offering enough affordable housing to locals, San Miguel County staff are working to update the deed restriction covenant. The Board of County Commissioners (BOCC) held a discussion about potential amendments…",
+    "claudeSummary": false,
+    "href": "https://www.telluridenews.com/news/article_43979468-325f-44cf-85b2-6853972a4ad0.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/a1/5a166416-4f5e-41a4-ab91-2c1e86db0263/6b05d10fa1165.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Telluride makes progress on safely disposing of vapes",
     "source": "Telluride Times",
     "date": "November 24, 2026",
@@ -854,25 +866,36 @@
     "img": ""
   },
   {
-    "title": "Ridgway Bank Building Officially Added to the National Register of Historic Places",
+    "title": "Notice and Call of Special Meeting of the Ridgway Town Council on November 30, 2026 - Notice dated November 23, 2026",
     "source": "Town of Ridgway",
-    "date": "October 9, 2027",
-    "firstSeen": "2026-10-09",
-    "newsTopic": "community",
+    "date": "November 25, 2026",
+    "firstSeen": "2026-11-24",
+    "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
     "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Bank-Building-PR-2026-10-09.pdf",
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Special-Meeting-Notice_0.pdf",
     "img": ""
   },
   {
-    "title": "Ridgway Reminds Pet Owners of Responsibilities",
+    "title": "Ridgway Town Council Special Meeting Agenda",
     "source": "Town of Ridgway",
-    "date": "October 6, 2027",
-    "firstSeen": "2026-10-06",
-    "newsTopic": "community",
+    "date": "November 30, 2026",
+    "firstSeen": "2026-11-25",
+    "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
     "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-reminds-pet-owners-of-responsibilities-2026-10-06.pdf",
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Nov-30-special-meeting-agenda.pdf",
+    "img": ""
+  },
+  {
+    "title": "Ridgway Sustainability Advisory Board Meeting Agenda",
+    "source": "Town of Ridgway",
+    "date": "December 3, 2026",
+    "firstSeen": "2026-11-25",
+    "newsTopic": "government",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/SAB-Meeting-Packet---December-3%2C-2026.pdf",
     "img": ""
   },
   {
@@ -884,17 +907,6 @@
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
     "claudeSummary": false,
     "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.12.09_TC-public-hearing-notice-acc.pdf",
-    "img": ""
-  },
-  {
-    "title": "Notice and Call of Special Meeting of the Ridgway Town Council on Nov. 30, 2026",
-    "source": "Town of Ridgway",
-    "date": "November 25, 2026",
-    "firstSeen": "2026-11-24",
-    "newsTopic": "government",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Special-Meeting-Notice_0.pdf",
     "img": ""
   },
   {
@@ -928,6 +940,17 @@
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
     "claudeSummary": false,
     "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Prop-123-Opt-In-Unit-Count-NewsRelease_FINAL-10.20.26-acc.pdf",
+    "img": ""
+  },
+  {
+    "title": "Ridgway Bank Building Officially Added to the National Register of Historic Places",
+    "source": "Town of Ridgway",
+    "date": "October 9, 2027",
+    "firstSeen": "2026-10-09",
+    "newsTopic": "community",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Bank-Building-PR-2026-10-09.pdf",
     "img": ""
   }
 ]

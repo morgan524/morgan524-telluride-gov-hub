@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Nov 2026 07:49:42 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 19:06:26 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Nov 25–1</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-46</guid>
-      <pubDate>Wed, 25 Nov 2026 07:49:42 GMT</pubDate>
-      <description><![CDATA[Thanksgiving is the main event this week — the Turkey Trot kicks off Thursday morning, Alloy Kitchen is hosting an Outlaw Thanksgiving, and there's live music at Mountain Lodge if you need somewhere to land. The library has a movie matinee and Radio Biblioteca on Wednesday for folks easing into the holiday, and the weekend stretches out with Will Ski 4 Food, free open skate, and Mind Blown for those sticking around after the feast.]]></description>
+      <pubDate>Wed, 25 Nov 2026 19:06:26 GMT</pubDate>
+      <description><![CDATA[Thanksgiving lands square in the middle of this week, and the valley is leaning into it — Turkey Trot on Thursday morning, an Outlaw Thanksgiving dinner at Alloy Kitchen, and live music through the holiday weekend including Will Ski 4 Food on the mountain Saturday and Sunday. On the government side, both the Board of County Commissioners Work Session and the Mountain Village Metro District meeting are on the calendar, but neither has posted an agenda yet, so there's nothing to track down or weigh in on this week.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -26,6 +26,19 @@
 The November 25 Board of County Commissioners Work Session agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>[Wed, Nov 25] Free Wine Tasting</title>
+      <link>https://www.telluride.com/event/free-wine-tasting/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/free%20wine%20tasting%7C2026-11-25</guid>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/46449/mvwmplanetpic2.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Join the Mountain Village Wine Merchant every Wednesday for a free wine tasting of three different wines.]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/46449/mvwmplanetpic2.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
     </item>
     <item>
       <title>[Wed, Nov 25] Radio Biblioteca</title>
