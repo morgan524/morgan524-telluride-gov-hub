@@ -6,33 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Nov 2026 22:11:59 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 07:49:42 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Wed, Nov 25] Dance Fit Fusion with Marlen</title>
-      <link>https://telluridelibrary.libcal.com/event/17477841?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/dance%20fit%20fusion%20with%7C2026-11-25</guid>
-      <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_19_13_49_34.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Program Room
-
-5:00 PM – 6:00 PM · Join Marlen for a high-energy dance fitness class fused with barre, pilates and stretching that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout that will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. &Uacute;nete a Marlen para una clase de fitness de baile llena de energ&iacute;a combinada con barre, pilates y estiramientos que combina movimientos de baja y alta intensidad para un entrenamiento de intervalos que quema calor&iacute;as, tonificando tu cuerpo y aumentando tu resistencia sin darte cuenta de lo duro que est&aacute;s trabajando. &iexcl;Es ejercicio disfrazado! …]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_19_13_49_34.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Wed, Nov 25] Dance Fit Fusion</title>
-      <link>https://koto.org/event/dance-fit-fusion-2/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/dance%20fit%20fusion%7C2026-11-25</guid>
-      <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Wilkinson Public Library, Telluride
-
-Join Marlen for a high-energy dance fitness class fused with barre, pilates and stretching that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout that will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. Únete a Marlen para una clase de fitness de baile llena de energía combinada con barre, pilates y estiramientos que combina movimientos de baja y alta intensidad para un entrenamiento de intervalos que quema calorías, tonificando tu cuerpo y aumentando tu resistencia sin darte cuenta de lo duro que estás trabajando. ¡Es ejercicio disfrazado! No se requiere experiencia en baile—solo lleva tu energía, una botella de agua y una sonrisa. …]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
     <item>
       <title>[Meeting] Board of County Commissioners Work Session — 2026-11-25</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
@@ -43,6 +18,19 @@ Join Marlen for a high-energy dance fitness class fused with barre, pilates and 
 The November 25 Board of County Commissioners Work Session agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>[Wed, Nov 25] Movie Matinee: Toy Story 5</title>
+      <link>https://telluridelibrary.libcal.com/event/17282942?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/movie%20matinee%20toy%20story%7C2026-11-25</guid>
+      <pubDate>Wed, 25 Nov 2026 21:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_19_16_36_34.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+A free screening of *Toy Story 5* held in the Program Room at Wilkinson Public Library. The matinee runs from 2:00 to 4:00 PM.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_19_16_36_34.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Thu, Nov 26] Live Music at Mountain Lodge</title>
