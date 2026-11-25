@@ -276,26 +276,6 @@
     "caseNumber": "2026C23"
   },
   {
-    "title": "Notice of Final Settlement -- PRV Stations Early Procurement, Ferguson Enterprises (Town of Telluride)",
-    "entity": "Town of Telluride Public Works Department",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "The Town of Telluride Public Works Department intends to begin processing final payment to Ferguson Enterprises, LLC for the 2024/2025 Early Procurement of Package-Type Pressure Reducing Valve (PRV) Stations project. Any person or firm with claims or debts against the contractor must file a proper written notice with Justin Blair, Civil Engineer, by November 23, 2026. No claims received by that date will allow final payment to proceed.",
-    "deadline": "2026-11-23",
-    "expires": "2026-11-23",
-    "dates": "11/19",
-    "papers": [
-      "ttimes_1119"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_a0b9535a-57a0-48ea-91a5-bf3583aa9d95.html",
-    "address": "Town of Telluride Public Works Department, P.O. Box 397, Telluride, CO 81435",
-    "noticeKey": "final-settlement-telluride-prv-ferguson-2026"
-  },
-  {
     "title": "Public Notice -- Petition for Change of Name, Lara Marie Zibners Lohr (Case No. 2026C30012)",
     "entity": "San Miguel Combined Court",
     "entityClass": "ent-county",
