@@ -366,7 +366,9 @@
   },
   "mv|2026-12-03|Design Review Board": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/50308/december_3-_2026_design_review_board_meeting_agenda.pdf",
+    "zoomUrl": "https://us06web.zoom.us/j/86575861027?pwd=jB2Z1X9A7Tt4LTgZpv6aUoxjCJQb0i.1",
+    "meetingId": "865 7586 1027"
   },
   "norwood|2026-11-04|Board of Trustees Budget Work Session": {
     "agendaUrl": "https://www.norwoodtown.com/files/8bb3805e6/11.04.2026+BOT+Work+Session+Agenda.pdf",
@@ -511,7 +513,7 @@
   "telluride|2026-12-03|Planning & Zoning Commission - Special Meeting - Dec 03 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8362",
     "sv": 4,
-    "ph": "a5aeca1c51c0115f"
+    "ph": "6d8ee3921c5f5f7f"
   },
   "ouraycity|2026-11-16|Ouray City Council Regular Meeting": {
     "agendaUrl": "https://meetings.boardbook.org/Public/Agenda/2503?meeting=774802",
@@ -573,7 +575,7 @@
   "telluride|2026-12-08|Telluride Housing Authority Subcommittee Special Meeting - Dec 08 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8364",
     "sv": 4,
-    "ph": "2f3612d70d8225e4"
+    "ph": "392928bb3588596e"
   },
   "telluride|2026-11-18|Telluride Housing Authority Subcommittee Special Meeting - Nov 18 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8363",
@@ -607,12 +609,12 @@
   "telluride|2026-12-17|Planning & Zoning Commission - Dec 17 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8110",
     "sv": 4,
-    "ph": "17e4f9dd2ee65452"
+    "ph": "a9cbc18b4b321503"
   },
   "telluride|2026-12-17|Planning & Zoning Commission Chair - Dec 17 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8109",
     "sv": 4,
-    "ph": "0454c5807aedf511"
+    "ph": "1a98272876d385c2"
   },
   "county|2026-12-18|Board of County Commissioners Special Meeting": {
     "sv": 4,

@@ -789,30 +789,6 @@
     "imgHiRes": true
   },
   {
-    "title": "Bright Futures receives grant award to support perinatal families",
-    "source": "Telluride Times",
-    "date": "November 11, 2026",
-    "firstSeen": "2026-11-12",
-    "newsTopic": "health",
-    "copy": "Bright Futures landed a 12-month behavioral health grant from the Colorado Perinatal Care Quality Collaborative to build out screening and referral networks for families from pregnancy through a baby's first year. Monthly in-person support groups launch in December in Telluride and Ridgway, with an online option available. Isolation is a recognized challenge out here, and the grant targets that alongside mental health, basic needs, and safety screenings.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/arts_and_entertainment/article_fb9248de-20b3-4db0-93f6-17913c762be7.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/d1/dd13c1eb-3da6-40de-a356-505ce6fb9093/6aef52306d858.image.png",
-    "imgHiRes": true
-  },
-  {
-    "title": "Telluride’s volleyball season ends on Eastern Plains",
-    "source": "Telluride Times",
-    "date": "November 11, 2026",
-    "firstSeen": "2026-11-11",
-    "newsTopic": "community",
-    "copy": "Telluride's volleyball season ended Nov. 6-7 at regionals in Wiggins, where the Lady Miners fell to top-seeded Wiggins in three sets before losing a five-set thriller to Ascent Classical Academy-Northern Colorado 17-15 in the decisive fifth. It was the first time in four playoff appearances THS had won a set. They finished 11-14 on the year.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/sports/article_5432bf3c-d483-44b5-b5e0-9e9ec9bd7563.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/0d/f0d78fbe-6c9d-4311-b20d-f2e1cea071ee/6af23c2a85783.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Town Council adopts 2027 fees and charges",
     "source": "Town of Telluride",
     "date": "November 24, 2026",
@@ -820,6 +796,24 @@
     "copy": "(November 24, 2026) - During last Tuesday's regular meeting, Town Council adopted the Town of Telluride's 2027 Fee Schedule, which sets the cost of utilities, permits, licenses and other Town services. Most fees will stay the same in 2027.",
     "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=409",
     "img": ""
+  },
+  {
+    "title": "Sign Up for the 2026 Turkey Trot!",
+    "source": "San Miguel County",
+    "date": "November 5, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1424",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14909"
+  },
+  {
+    "title": "Black Bear and Imogene Passes Closed for the Winter",
+    "source": "San Miguel County",
+    "date": "November 3, 2026",
+    "newsTopic": "community",
+    "copy": "",
+    "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1423",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
   },
   {
     "title": "Treasurer's Office Closed Weds 11/25 - Fri 11/27",
@@ -831,13 +825,13 @@
     "img": ""
   },
   {
-    "title": "Fairground Facilities Closed Until Further Notice",
+    "title": "Black Bear and Imogene Passes Closed for the Winter",
     "source": "San Miguel County",
-    "date": "November 20, 2026",
+    "date": "November 3, 2026",
     "newsTopic": "community",
-    "copy": "Due to unforeseen circumstances, the San Miguel County Fairground facilities will be closed until further notice, beginning Friday, November 6th.",
-    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=552",
-    "img": ""
+    "copy": "Due to changing weather conditions and the onset of winter, Imogene and Black Bear Passes are now officially closed for the season.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=551",
+    "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
   },
   {
     "title": "Town of Telluride Offices Closed for Thanksgiving, Thursday and Friday, November 26 and 27",
@@ -884,7 +878,7 @@
   {
     "title": "Notice of Public Hearing of the Ridgway Town Council on Dec. 9, 2026 - Notice dated November 23, 2026",
     "source": "Town of Ridgway",
-    "date": "November 24, 2026",
+    "date": "November 25, 2026",
     "firstSeen": "2026-11-24",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -895,7 +889,7 @@
   {
     "title": "Notice and Call of Special Meeting of the Ridgway Town Council on Nov. 30, 2026",
     "source": "Town of Ridgway",
-    "date": "November 24, 2026",
+    "date": "November 25, 2026",
     "firstSeen": "2026-11-24",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -906,7 +900,7 @@
   {
     "title": "Notice of Introduction of Ordinance No. 05-2026 - Notice dated November 23, 2026",
     "source": "Town of Ridgway",
-    "date": "November 24, 2026",
+    "date": "November 25, 2026",
     "firstSeen": "2026-11-24",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -917,7 +911,7 @@
   {
     "title": "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     "source": "Town of Ridgway",
-    "date": "November 24, 2026",
+    "date": "November 25, 2026",
     "firstSeen": "2026-09-29",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -928,7 +922,7 @@
   {
     "title": "Town of Ridgway, City of Ouray, and Ouray County Establish New Three-Year Affordable Housing Goals",
     "source": "Town of Ridgway",
-    "date": "November 24, 2026",
+    "date": "November 25, 2026",
     "firstSeen": "2026-10-21",
     "newsTopic": "housing",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",

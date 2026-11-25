@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T22:11:59.080Z",
+ "generated": "2026-11-25T07:49:39.287Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -136,18 +136,9 @@
      "livestream": ""
     }
    ],
-   "recent": [
-    {
-     "source": "norwood",
-     "date": "2026-11-10",
-     "title": "Norwood Water Commission Meeting",
-     "snippet": "The November 10, 2026 Norwood Water Commission Meeting agenda hasn't been posted yet."
-    }
-   ],
+   "recent": [],
    "developments": [],
-   "stale": [
-    "Norwood Water: norwood discussed it on 2026-11-10 (\"Norwood Water Commission Meeting\") but the deep dive was last edited 2026-07-23."
-   ]
+   "stale": []
   },
   "fieldpaving": {
    "label": "Field Paving at Town Park",

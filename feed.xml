@@ -6,28 +6,15 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Nov 2026 22:11:59 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 07:49:42 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
-      <title>📅 The Week Ahead — Nov 24–30</title>
+      <title>📅 The Week Ahead — Nov 25–1</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-46</guid>
-      <pubDate>Tue, 24 Nov 2026 22:11:59 GMT</pubDate>
-      <description><![CDATA[Thanksgiving week lands squarely in the middle of this stretch, and the valley is leaning into it — the Turkey Trot kicks off Thursday morning, Alloy Kitchen is hosting an Outlaw Thanksgiving, and the mountain opens up for Will Ski 4 Food on Saturday. On the government side, both the County Commissioners work session and the Mountain Village Metro District board meeting have agendas that haven't been posted yet, so there's nothing pressing to track at the dais this week.]]></description>
+      <pubDate>Wed, 25 Nov 2026 07:49:42 GMT</pubDate>
+      <description><![CDATA[Thanksgiving is the main event this week — the Turkey Trot kicks off Thursday morning, Alloy Kitchen is hosting an Outlaw Thanksgiving, and there's live music at Mountain Lodge if you need somewhere to land. The library has a movie matinee and Radio Biblioteca on Wednesday for folks easing into the holiday, and the weekend stretches out with Will Ski 4 Food, free open skate, and Mind Blown for those sticking around after the feast.]]></description>
       <category>The Week Ahead</category>
-    </item>
-    <item>
-      <title>[Tue, Nov 24] I Heart Art</title>
-      <link>https://telluridelibrary.libcal.com/event/17962983?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/i%20heart%20art%7C2026-11-24</guid>
-      <pubDate>Tue, 24 Nov 2026 21:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_11_19_12_00_17.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Kids Area
-
-2:30 PM – 3:30 PM · Join us in the Youth Programming space for a fall break I Heart Art! We will be making placemats - make your own or make one to donate to our local Senior Lunch!]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_11_19_12_00_17.png" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Meeting] Board of County Commissioners Work Session — 2026-11-25</title>
@@ -41,29 +28,30 @@ The November 25 Board of County Commissioners Work Session agenda hasn't been po
       <category>San Miguel County</category>
     </item>
     <item>
-      <title>[Wed, Nov 25] Dance Fit Fusion with Marlen</title>
-      <link>https://telluridelibrary.libcal.com/event/17477841?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/dance%20fit%20fusion%20with%7C2026-11-25</guid>
-      <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_19_13_49_34.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Program Room
+      <title>[Wed, Nov 25] Radio Biblioteca</title>
+      <link>https://telluridelibrary.libcal.com/event/17877049?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/radio%20biblioteca%7C2026-11-25</guid>
+      <pubDate>Wed, 25 Nov 2026 19:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_23_00_49_30.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 KOTO Radio Station
 
-5:00 PM – 6:00 PM · Join Marlen for a high-energy dance fitness class fused with barre, pilates and stretching that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout that will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. &Uacute;nete a Marlen para una clase de fitness de baile llena de energ&iacute;a combinada con barre, pilates y estiramientos que combina movimientos de baja y alta intensidad para un entrenamiento de intervalos que quema calor&iacute;as, tonificando tu cuerpo y aumentando tu resistencia sin darte cuenta de lo duro que est&aacute;s trabajando. &iexcl;Es ejercicio disfrazado! …]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_19_13_49_34.jpg" medium="image" />
+A bilingual radio program presented by Wilkinson Public Library and broadcast on KOTO 91.7 FM, Radio Biblioteca shares library news and community events in both Spanish and English. The program airs on alternating Wednesdays and serves as a resource for Spanish-speaking members of the Telluride community.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_23_00_49_30.png" medium="image" />
       <category>Community Event</category>
       <category>Wilkinson Public Library</category>
     </item>
     <item>
-      <title>[Wed, Nov 25] Dance Fit Fusion</title>
-      <link>https://koto.org/event/dance-fit-fusion-2/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/dance%20fit%20fusion%7C2026-11-25</guid>
-      <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Wilkinson Public Library, Telluride
+      <title>[Wed, Nov 25] Movie Matinee: Toy Story 5</title>
+      <link>https://telluridelibrary.libcal.com/event/17282942?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/movie%20matinee%20toy%20story%7C2026-11-25</guid>
+      <pubDate>Wed, 25 Nov 2026 21:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_19_16_36_34.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
 
-Join Marlen for a high-energy dance fitness class fused with barre, pilates and stretching that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout that will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. Únete a Marlen para una clase de fitness de baile llena de energía combinada con barre, pilates y estiramientos que combina movimientos de baja y alta intensidad para un entrenamiento de intervalos que quema calorías, tonificando tu cuerpo y aumentando tu resistencia sin darte cuenta de lo duro que estás trabajando. ¡Es ejercicio disfrazado! No se requiere experiencia en baile—solo lleva tu energía, una botella de agua y una sonrisa. …]]></description>
+A free screening of *Toy Story 5* held in the Program Room at Wilkinson Public Library. The matinee runs from 2:00 to 4:00 PM.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_19_16_36_34.png" medium="image" />
       <category>Community Event</category>
-      <category>KOTO</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Meeting] Regular Board Meeting — 2026-11-26</title>

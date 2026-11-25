@@ -295,5 +295,22 @@
     "address": "San Miguel Combined Court, P.O. Box 919, Telluride, CO 81435",
     "noticeKey": "name-change-2026C30012-zibners-lohr",
     "caseNumber": "2026C30012"
+  },
+  {
+    "title": "Request for Proposal -- County Jail Medical Provider",
+    "entity": "San Miguel County",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Request for Proposal",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County is seeking qualified respondents for: County Jail Medical Provider.",
+    "deadline": "Closes 2/20/2026",
+    "expires": "2026-02-20",
+    "dates": "11/25",
+    "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=212",
+    "address": "",
+    "smcBidID": "212"
   }
 ]

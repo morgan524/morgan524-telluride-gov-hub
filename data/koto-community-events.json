@@ -1,16 +1,5 @@
 [
   {
-    "title": "Dance Fit Fusion",
-    "link": "https://koto.org/event/dance-fit-fusion-2/",
-    "description": "Join Marlen for a high-energy dance fitness class fused with barre, pilates and stretching that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout that will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. Únete a Marlen para una clase de fitness de baile llena de energía combinada con barre, pilates y estiramientos que combina movimientos de baja y alta intensidad para un entrenamiento de intervalos que quema calorías, tonificando tu cuerpo y aumentando tu resistencia sin darte cuenta de lo duro que estás trabajando. ¡Es ejercicio disfrazado! No se requiere experiencia en baile—solo lleva tu energía, una botella de agua y una sonrisa. …",
-    "pubDate": "2026-11-24T17:00:00-07:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": ""
-  },
-  {
     "title": "Cardio Dance w/Kelsey",
     "link": "https://koto.org/event/cardio-dance-w-kelsey-2/",
     "description": "Join us for a fun evening of dancing and getting your heart rate up! You will be having so much fun, you won't even know you are exercising! Led by Kelsey Trottier from the Telluride Dance Collective. 2nd and 4th Monday of the month. ¡Únete a nosotros para una divertida noche de baile y ejercicio! Te divertirás tanto que ni te darás cuenta de que estás haciendo ejercicio. Dirigido por Kelsey Trottier del Telluride Dance Collective.",
@@ -350,6 +339,17 @@
     "category": "Community Event",
     "location": "",
     "imageUrl": ""
+  },
+  {
+    "title": "Chanukah in Telluride Mountain Village",
+    "link": "https://koto.org/event/chanukah-in-telluride-mountain-village-2/",
+    "description": "Celebrate the Festival of Lights in Telluride at Chabad’s 5th Annual Menorah Lighting and Chanukah Celebration! Join locals and visitors for an uplifting holiday event featuring live music, a 10-foot menorah lighting, children’s crafts, and delicious kosher latkes. Set against Telluride’s stunning mountain backdrop, this free community celebration welcomes people of all ages to experience the warmth, joy, and spirit of Chanukah. RSVP is kindly requested.",
+    "pubDate": "2026-12-08T16:30:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Heritage Plaza, Mountain Village",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/11/Telluride-WebBanner.jpg"
   },
   {
     "title": "Mountainfilm Noel Night Local Pass Sale",
