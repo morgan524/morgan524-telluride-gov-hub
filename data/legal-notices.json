@@ -297,6 +297,107 @@
     "smcBidID": "209"
   },
   {
+    "title": "Public Hearing -- Proposed 2027 Budget & 2026 Budget Amendment, Lone Tree Cemetery District 1",
+    "entity": "Lone Tree Cemetery District 1",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "Lone Tree Cemetery District 1 has submitted a proposed 2027 budget and may consider an amended 2026 budget. Public hearings will be held at 4:00 p.m. on December 2, 2026 at 220 E Colorado Avenue, Telluride, and via Zoom. Any interested elector of the District may file objections with the Board prior to final adoption.",
+    "deadline": "2026-12-02",
+    "expires": "2026-12-02",
+    "dates": "11/26",
+    "papers": [
+      "ttimes_1126"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_ba744009-b2ab-4c5a-b98a-f9fb25c487cd.html",
+    "address": "220 E Colorado Avenue, Telluride, CO",
+    "noticeKey": "ltcd1-budget-2027-hearing"
+  },
+  {
+    "title": "Ordinance -- Telluride Energy Mitigation Program (TEMP) Update & Outdoor Energy Use Cap (Ord. 1646)",
+    "entity": "Town of Telluride",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "📋",
+    "iconClass": "type-hearing",
+    "type": "Ordinance",
+    "filterTag": "ordinance",
+    "summary": "The Telluride Town Council passed Ordinance #1646 on November 17, 2026, updating the applicability of the Telluride Energy Mitigation Program (TEMP) and instituting a maximum outdoor energy use cap on covered residential properties. The ordinance became effective upon publication of this notice. Copies are available at Town Hall or online at the Town's website.",
+    "deadline": "2026-11-26",
+    "expires": "2027-01-26",
+    "dates": "11/26",
+    "papers": [
+      "ttimes_1126"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_ba744009-b2ab-4c5a-b98a-f9fb25c487cd.html",
+    "address": "Town of Telluride, CO (all covered residential properties)",
+    "noticeKey": "ord-1646"
+  },
+  {
+    "title": "Ordinance -- Suspension of Open Space Fund Dedication from RETT for 2027 Budget Year (Ord. 1647)",
+    "entity": "Town of Telluride",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "📋",
+    "iconClass": "type-hearing",
+    "type": "Ordinance",
+    "filterTag": "ordinance",
+    "summary": "The Telluride Town Council passed Ordinance #1647 on November 17, 2026, suspending for the 2027 budget year the Telluride Municipal Code provision (TMC Section 4-3-30) requiring a 5% dedication to the Open Space Fund from unencumbered Real Estate Transfer Tax revenue. The ordinance became effective upon publication of this notice. Copies are available at Town Hall or online.",
+    "deadline": "2026-11-26",
+    "expires": "2027-01-26",
+    "dates": "11/26",
+    "papers": [
+      "ttimes_1126"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_ba744009-b2ab-4c5a-b98a-f9fb25c487cd.html",
+    "address": "Town of Telluride, CO",
+    "noticeKey": "ord-1647"
+  },
+  {
+    "title": "Sheriff's Sale -- Real Property Foreclosure, Lot 7 Telluride Ski Ranches Filing 4A (Sale No. 26-147)",
+    "entity": "San Miguel County Sheriff / Telluride Ski Ranches Association",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "Telluride Ski Ranches Association obtained a court order to foreclose on Lot 7, Telluride Ski Ranches Filing 4A, owned by Kevin M. Kirton and Krista S. Kirton, due to default under the subdivision's protective covenants. A Sheriff's Sale will be held at 10:00 a.m. on January 6, 2026 (as published) on the steps at 305 W Colorado Ave., Telluride; bidders must have cash or certified funds. Any Notice of Intent to Cure must be filed no later than 15 calendar days before the sale date.",
+    "deadline": "2026-12-22",
+    "expires": "2026-12-24",
+    "dates": "11/26",
+    "papers": [
+      "ttimes_1126"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_ba744009-b2ab-4c5a-b98a-f9fb25c487cd.html",
+    "address": "Lot 7, Telluride Ski Ranches Filing No. 4, Phase A, Telluride, CO 81435; Sale at 305 W Colorado Ave., Telluride, CO 81435",
+    "noticeKey": "sheriffs-sale-26-147-2026CV030027",
+    "caseNumber": "2026CV030027"
+  },
+  {
+    "title": "Public Hearing -- Preliminary Small Scale Subdivision, 335 W Colorado Avenue (Planning & Zoning)",
+    "entity": "Town of Telluride Planning & Zoning Commission / San Miguel County (Owner) / HOK (Applicant)",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "📋",
+    "iconClass": "type-hearing",
+    "type": "Ordinance",
+    "filterTag": "ordinance",
+    "summary": "The Telluride Planning and Zoning Commission will hold a public hearing on December 17, 2026 at 5:30 p.m. to consider a Preliminary Small Scale Subdivision application for 335 W Colorado Avenue. The application, filed by HOK on behalf of owner San Miguel County, proposes to vacate lot lines between Lots 1, 3, and 5, Block 1, Town of Telluride, consolidating them into one 9,375 sq. ft. lot (Lot 3A) in the Historic Commercial zone district. The hearing will be held via hybrid meeting format; more information is available at 113 W Columbia, Telluride.",
+    "deadline": "2026-12-17",
+    "expires": "2026-12-17",
+    "dates": "11/26",
+    "papers": [
+      "ttimes_1126"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_ba744009-b2ab-4c5a-b98a-f9fb25c487cd.html",
+    "address": "335 W Colorado Avenue, Lots 1, 3, and 5, Block 1, Town of Telluride, CO",
+    "noticeKey": "pz-hearing-335-w-colorado-subdivision"
+  },
+  {
     "title": "Request for Proposal -- County Jail Medical Provider",
     "entity": "San Miguel County",
     "entityClass": "ent-county",
