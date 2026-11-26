@@ -396,22 +396,5 @@
     "url": "https://www.telluridenews.com/news/legals/article_ba744009-b2ab-4c5a-b98a-f9fb25c487cd.html",
     "address": "335 W Colorado Avenue, Lots 1, 3, and 5, Block 1, Town of Telluride, CO",
     "noticeKey": "pz-hearing-335-w-colorado-subdivision"
-  },
-  {
-    "title": "Request for Proposal -- County Jail Medical Provider",
-    "entity": "San Miguel County",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Request for Proposal",
-    "filterTag": "public-entity",
-    "summary": "San Miguel County is seeking qualified respondents for: County Jail Medical Provider.",
-    "deadline": "Closes 2/20/2026",
-    "expires": "2026-02-20",
-    "dates": "11/26",
-    "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=212",
-    "address": "",
-    "smcBidID": "212"
   }
 ]
