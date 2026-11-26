@@ -504,6 +504,14 @@ const DEEP_DIVE_UPDATES = [];
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-11-26",
+    title: "Gas-powered leaf blowers — Telluride's next ban?",
+    body: "The Ecology Commission is looking at a proposal to prohibit combustion-powered lawn care equipment in Telluride, possibly including a phase-out ordinance aimed at commercial operators. Supporters would say cleaner air and quieter streets are worth it. Opponents — especially commercial landscapers — might argue the costs and logistics of switching equipment fall hardest on small operators who work here for a living. Nothing is decided yet; this is still at the discussion stage.\n\nSo where do you land: is a ban on gas-powered lawn equipment a reasonable step, or too much of a burden on the people doing the work?",
+    choices: ["Ban makes sense", "Too hard on workers", "Phase-out yes, full ban no", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-11-25",
     title: "The eligibility policy the school board just took up",
     body: "The Telluride Board of Education took a first reading of Policy JJJ — a revised extracurricular eligibility policy that incorporates Colorado's statutory definitions of male and female for athletic team participation. It also updates rules for homeschooled, charter, and nonpublic-school students joining district activities. Some will say aligning with state statute is the right call — consistent, legally grounded, end of story. Others will say a policy built around those definitions excludes kids who belong on the field. The board hasn't voted yet. So where do you come down?",
@@ -734,14 +742,6 @@ const DAILY_QUESTIONS = [
     choices: ["Worth bringing in outside eyes", "Local boards can handle this", "Depends on the cost", "It's complicated"],
     sourceUrl: "/gov-hub.html",
     topics: ["meeting"]
-  },
-  {
-    date: "2026-10-27",
-    title: "Two nights of concerts in Town Park — good idea?",
-    body: "Council is looking at a proposed two-night concert in Town Park for August 2027. Up here, Town Park events are a long-running argument: they bring energy and economic life, and they also bring noise, crowds, and wear on a space that neighbors actually live next to. Supporters will say it's part of what makes this place tick. Skeptics will say two nights is one more than the canyon needs. Nothing's been decided — this is still a review stage. So: how do you feel about adding another multi-night concert to Town Park?",
-    choices: ["Bring it on", "One night is enough", "Depends on the details", "It's complicated"],
-    sourceUrl: "/gov-hub.html",
-    topics: ["meeting"]
   }
 ];
 
@@ -955,6 +955,16 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "SMPA aims to have Ridgway batteries online by 2029",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "November 26, 2026",
+    newsTopic: "community",
+    copy: "San Miguel Power Association says it’s moving forward with a new battery storage project in Ridgway, building on the town’s existing microgrid at Ridgway Space to Create by adding a backup system for essential services during power outages. Funded with the help of a grant from the Colorado Departmen",
+    href: "https://www.ouraynews.com/2026/11/25/smpa-aims-ridgway-batteries-online-2029/?ta_paidstory",
+    img: ""
+  },
+  {
     title: "Corrected: Parish Bulletin for Nov 22",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -972,16 +982,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "This week's parish bulletin is attached. As always, please check the Parish Calendar for the most updated information.REMINDERS, PARISH NOVENA, and HELP NEEDEDTuesday evenings – Candlelight Holy Adoration at 6:00PMand Holy Mass at 7:00 PM.Novembe...",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-november-22nd/",
-    img: ""
-  },
-  {
-    title: "Flood damage fixed in a rush",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "November 19, 2026",
-    newsTopic: "public-safety",
-    copy: "In just over two months, an emergency public works project erected more than 2,000 feet of concrete flood barrier walls before another storm could torrent more debris flows down the Gold Mountain Fire burn scar and damage more homes. The project to repair and re-engineer the damaged watershed betwee",
-    href: "https://www.ouraynews.com/2026/11/18/flood-damage-fixed-rush/",
     img: ""
   },
   {
@@ -2804,6 +2804,169 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Chalkboard",
+    source: "Telluride Times",
+    date: "November 26, 2026",
+    firstSeen: "2026-11-26",
+    newsTopic: "government",
+    copy: "Local birthdays and recurring community meeting times are listed for late November through early December. Regular gatherings include town board, school board, chamber meetings, senior meals, food pantry distribution, pickleball, AA, and legal aid. Contact info and schedules are included for each.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_dfac2d8d-7b7f-49ac-8553-f5f21b6f95a7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/f7/ff7aa20c-29f7-43d8-9923-60de40e08a8c/6b0097444ef62.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Upcoming youth events",
+    source: "Telluride Times",
+    date: "November 26, 2026",
+    firstSeen: "2026-11-26",
+    newsTopic: "education",
+    copy: "November 30: School resumes",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/norwood_post/article_5bfab398-f725-43c1-b038-489f1aca0de5.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/a2/9a2b9666-9e74-45b9-9990-b999cda1ae11/6b00949d76e7e.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "The mountains win again: 320 acres near Lizard Hass Pass preserved",
+    source: "Telluride Times",
+    date: "November 26, 2026",
+    firstSeen: "2026-11-26",
+    newsTopic: "arts-culture",
+    copy: "320 acres of high-elevation forest and meadow near Lizard Head Pass — the last private inholding in that stretch of the San Juan National Forest — has been transferred to public ownership through The Conservation Fund, using federal Land and Water Conservation Fund dollars. The land, which sits just south of the Lizard Head Wilderness and carries cultural significance for the Ute Mountain Ute Tribe, was previously at risk of becoming nine luxury homesites. It'll now stay open for wildlife habitat, backcountry recreation, and traditional tribal uses.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_58233678-f393-4bda-96f8-10770512155b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/fb/ffb541aa-4ffa-4db9-b7fc-4522d1bcb5af/6b074ea68e03d.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Cheering for the holidays, together",
+    source: "Telluride Times",
+    date: "November 26, 2026",
+    firstSeen: "2026-11-26",
+    newsTopic: "government",
+    copy: "After a divisive election season, this column leans on Dickens' Tiny Tim to make a simple point: Americans share more common ground than the rhetoric suggests. Sports crowds cheer together without sorting by party — maybe that's a model worth keeping in mind past the holidays.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_0ac6f319-f061-4f9e-a2c3-ab8176b9aa31.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Letters to the Editor",
+    source: "Telluride Times",
+    date: "November 26, 2026",
+    firstSeen: "2026-11-26",
+    newsTopic: "land-use",
+    copy: "Telluride's Chair 7 Community Coalition, representing 200+ households, says the Town's proposed developments at Carhenge and Shandoka lots seek variances far outside existing zoning — in one case nearly 8x the allowed square footage — after spending close to $3M on designs. The coalition isn't opposing development, just asking the Town to follow the same rules any private owner would.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_28c2bf90-2d0c-421d-8f1b-fb6f86cbc91e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Eliot Brown",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Time to get back on the horse",
+    source: "Telluride Times",
+    date: "November 26, 2026",
+    firstSeen: "2026-11-26",
+    newsTopic: "public-safety",
+    copy: "A rider returns to a desert trail after years away, expecting redemption — and collects three crashes instead, courtesy of a canyon rim edge, a boulder field, and a rogue cable in the brush. The trail runs slickrock, wash crossings, and juniper singletrack through red canyon country still damp from last week's flash floods. Made it out fine.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_e845c149-2537-4734-8691-c9b7adab5ed4.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/d2/3d2678cd-f6a7-4092-943b-f99af132bb5a/6b031cbb7e403.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "November, ablaze",
+    source: "Telluride Times",
+    date: "November 26, 2026",
+    firstSeen: "2026-11-26",
+    newsTopic: "community",
+    copy: "The asparagus ferns are putting on a show right now across the region — from Norwood to Ridgway to Cortez — blazing golden yellow along ditches and fence lines. Those same plants mark where wild asparagus grows come spring (late April–May, below ~7,000 ft). Worth noting where they are now.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_1532511c-4c84-4007-b1a5-70519867a0e0.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/ae/eaedb71c-3c76-41d1-962d-89a18b059de6/6b02ce27106da.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Telluride k9 Adventure School wins award",
+    source: "Telluride Times",
+    date: "November 26, 2026",
+    firstSeen: "2026-11-26",
+    newsTopic: "education",
+    copy: "Telluride k9 Adventure School took home a 2026 Pet Care Excellence Award from the International Boarding and Pet Services Association, chosen from an international pool in the Independent Provider category. Owner Sierra Hawksley has run the adventure hike and dog camp operation here since 2018.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_dfbc1f44-8f12-4d04-b203-3ece5778a34a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Home for the holidays: Tips for leaving your cat at home",
+    source: "Telluride Times",
+    date: "November 26, 2026",
+    firstSeen: "2026-11-26",
+    newsTopic: "community",
+    copy: "Most cats do better staying home than traveling, but shouldn't be left alone more than 2–3 days (less for kittens or anxious cats). Before leaving, cat-proof the space, set up food and water dispensers, add an extra litter box, and leave a worn T-shirt for comfort. A trusted pet sitter to check in daily makes all the difference.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_0c180aa3-2ef0-4e2d-b3f5-214cd4be7837.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "The dance of the nutcrackers: a dance of nature in all her glory",
+    source: "Telluride Times",
+    date: "November 26, 2026",
+    firstSeen: "2026-11-26",
+    newsTopic: "arts-culture",
+    copy: "Clark's nutcrackers are having a bumper seed year in the ponderosas — good time to watch them work. These birds cache pinecone seeds, then locate them under deep snow come winter, and their unretrieved caches can sprout into new evergreen trees. Worth stepping outside and paying attention.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_1f589efb-8da5-4927-adad-6fb2f347ba73.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/ee/2ee46764-3b19-4c5c-a04a-b969a1c403ee/6afedb7843f93.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Thrive receives funding to expand mental health, substance use care",
+    source: "Telluride Times",
+    date: "November 26, 2026",
+    firstSeen: "2026-11-26",
+    newsTopic: "health",
+    copy: "Thrive Community Health Network received a $160,000 grant from the Katz Amsterdam Foundation to expand bilingual mental health and substance use care here. Local surveys show 74% of adults say substance use has directly affected their life — well above the 47% national figure. Funding flows through San Miguel Resource Center, Communities that Care, and Telluride Regional Medical Center.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_717feead-a266-4fc2-a488-cfd8df460a68.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Two towns, one healthcare community, a shared future",
+    source: "Telluride Times",
+    date: "November 26, 2026",
+    firstSeen: "2026-11-26",
+    newsTopic: "public-safety",
+    copy: "A long-time regional resident and Mountain Village homeowner makes the case that Telluride and Mountain Village already function as one healthcare community, and that a coordinated approach — local urgent care in both towns connected to emergency services at Society Turn — reflects that reality. The piece notes a 2014 plan for a Mountain Village medical center that never materialized, and flags the real costs of traveling for care, especially for parents, older residents, and workers without easy transportation. The call is for distributed, connected services rather than competing facilities.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_24a6bb5c-f30a-40ea-a4a4-92c5cacd057c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/d1/ed1fbfe6-3e31-4f5e-963c-e14c04875ff3/6b02fe8077b26.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Legals and Public Notices for Nov. 26-Dec. 2, 2026",
+    source: "Telluride Times",
+    date: "November 26, 2026",
+    firstSeen: "2026-11-26",
+    newsTopic: "government",
+    copy: "Telluride Town Council passed two ordinances in November: one updating the energy mitigation program and adding an outdoor energy use cap on covered residential properties, and one suspending the 5% open space fund dedication from real estate transfer tax revenue for 2027. Lone Tree Cemetery District 1 holds a public hearing Dec. 2 on its 2027 budget.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/legals/article_ba744009-b2ab-4c5a-b98a-f9fb25c487cd.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
     title: "At season’s end, Miner boys’ soccer receives All-League love",
     source: "Telluride Times",
     date: "November 25, 2026",
@@ -3333,18 +3496,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/sports/article_1e79501b-a444-4012-bcc4-d993e7b994da.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/48/f48664cd-675f-4eea-a4c0-5da978a61b23/6af755b2778da.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Mountain League champs",
-    source: "Telluride Times",
-    date: "November 12, 2026",
-    firstSeen: "2026-11-12",
-    newsTopic: "community",
-    copy: "Norwood's Mavericks football program wrapped up an 8-2 season and a second straight state playoff appearance under coach Brad Campbell, losing a close one to Front Range Christian 32-30. Campbell also picked up a Denver Broncos coach of the week honor, nominated through CHSAA for how he and his staff run a clean, competitive program.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_e2603e9c-9fcf-4ff4-aedf-0db4b293e310.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/56/356f9558-bc8d-4b4a-a42e-4196f7f80c4b/6af1c042adcb7.image.jpg",
     imgHiRes: true
   },
   {
@@ -4794,28 +4945,7 @@ const KOTO_COMMUNITY_EVENTS = [
 ];
 
 const WILKINSON_EVENTS = [
-  {
-    title: "Radio Biblioteca",
-    link: "https://telluridelibrary.libcal.com/event/17877049?hs=a",
-    description: "A bilingual radio program presented by Wilkinson Public Library and broadcast on KOTO 91.7 FM, Radio Biblioteca shares library news and community events in both Spanish and English. The program airs on alternating Wednesdays and serves as a resource for Spanish-speaking members of the Telluride community.",
-    pubDate: "2026-11-25T19:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "KOTO Radio Station",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_10_23_00_49_30.png"
-  },
-  {
-    title: "Movie Matinee: Toy Story 5",
-    link: "https://telluridelibrary.libcal.com/event/17282942?hs=a",
-    description: "A free screening of *Toy Story 5* held in the Program Room at Wilkinson Public Library. The matinee runs from 2:00 to 4:00 PM.",
-    pubDate: "2026-11-25T21:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_19_16_36_34.png"
-  }
+
 ];
 
 // Bot-managed by scripts/content-refresh.js Task 7 (syncHumaneSocietyAnimals).
@@ -5643,8 +5773,8 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Thanksgiving Break - Ridgway Schools",
     link: "https://events.ourayridgwayevents.com/event/thanksgiving-break-ridgway-schools",
-    description: "Thanksgiving Break for Ridgway Schools begins, giving students and staff time off for the holiday. This break is a scheduled pause in the academic calendar observed by Ridgway schools in the region.",
-    pubDate: "2026-11-25T07:00:00.000Z",
+    description: "Thanksgiving Break for Ridgway Schools marks a scheduled holiday recess for students and staff in the Ridgway school district. This break falls over the Thanksgiving holiday period, giving families time off together during the late November holiday.",
+    pubDate: "2026-11-26T07:00:00.000Z",
     endDate: "2026-11-27",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5655,86 +5785,14 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Gaper Contest 2026 - Voyager FUNdraiser",
     link: "https://events.ourayridgwayevents.com/event/gaper-contest-2026",
-    description: "A community photo contest and fundraiser for Voyager inviting locals of all ages from the northern San Juan region to submit their best \"gaper\" photos for a chance to be named Gaper of the Year. Voting takes place during Gaper Week, November 21–29, 2026, coinciding with opening week at Telluride Ski Resort, with winners determined by votes and additional criteria.",
-    pubDate: "2026-11-25T15:00:00.000Z",
+    description: "A community photo contest and fundraiser hosted by Voyager in which locals of all ages from the northern San Juan region submit real, unedited photos for a chance to be named Gaper of the Year. Voting takes place during Gaper Week, November 21–29, 2026, coinciding with opening week at Telluride Ski Resort.",
+    pubDate: "2026-11-26T15:00:00.000Z",
     endDate: "2026-11-29",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/54366527548837/huge/4c3995fa47f3b861d61e318e7dafd3cbfa9b02e9.jpg"
-  },
-  {
-    title: "Vinyasa Yoga",
-    link: "https://events.ourayridgwayevents.com/event/vinyasa-yoga",
-    description: "Vinyasa Yoga: Wednesdays 8:15-9:15 am This is a dynamic practice that will challenge, strengthen, and uplift you both physically and mentally. This practice moves through seven doorways or stages, starting by creating sacred space and connecting with your breath. Then we light the fire through a series of warmups and vinyasa flow including Surya Namaskar (sun salutations) A, B & C. The warm up prepares the body for strong holding postures and finishes with yin and conscious surrender in savasana. A sweat towel, water, mat and a sense of adventure are strongly suggested. Men are also welcome to join this class! Jenn Turner is a yoga teacher, functional fitness instructor, and retreat facilitator with more than 500 hours of yoga training and 12+ years of experience. Her work weaves together functional movement, breath, strength, mindfulness, and play to help people reconnect with their bodies and inner wisdom. …",
-    pubDate: "2026-11-25T15:15:00.000Z",
-    endDate: "2026-12-30",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Weehawken Ridgway (Old Schoolhouse)",
-    imageUrl: "https://localist-images.azureedge.net/photos/54236148198717/huge/7d1ebafc567aad82f67c7ba07e1225354b86622c.jpg"
-  },
-  {
-    title: "Water Aerobics",
-    link: "https://events.ourayridgwayevents.com/event/water-aerobics",
-    description: "Join a self-led water aerobics group every Wednesday (and occasionally Tuesdays and Thursdays!) from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy a fun, positive atmosphere! Please note: Water aerobics takes place during member-only hours and is open to Ouray Hot Springs members only.",
-    pubDate: "2026-11-25T17:00:00.000Z",
-    endDate: "2027-01-20",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Hot Springs",
-    imageUrl: "https://localist-images.azureedge.net/photos/53887699628224/huge/262efc04b203189edcde410b9973aac1ca778195.jpg"
-  },
-  {
-    title: "Guided Tour: Historic Beaumont Hotel & Spa",
-    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
-    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
-    pubDate: "2026-11-25T20:30:00.000Z",
-    endDate: "2027-01-23",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Beaumont Hotel & Spa",
-    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
-  },
-  {
-    title: "Weds Floating Sound Bath",
-    link: "https://events.ourayridgwayevents.com/event/floating-sound-bath",
-    description: "Group Float in warm healing waters every Wednesday @ 1:30pm. Receive gentle aquatic massage while listening to live sound therapy, vocals, bowls and more. Contact Christian 303-807-1039 to reserve your spot in advance. Please pay in advance. Sliding scale: $35-$85/person.Pay Cash at indoor pool or Venmo to @GOLDENTHREADSTHERAPY. *Orvis entry fee pay seperately.",
-    pubDate: "2026-11-25T20:30:00.000Z",
-    endDate: "2027-01-20",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Orvis Hot Springs",
-    imageUrl: "https://localist-images.azureedge.net/photos/54329351687325/huge/1e81b72abc42fb73374205a2bd7143bee62a33ef.jpg"
-  },
-  {
-    title: "NEW With Weehawken: Beat & Step: West African Dance, Drum & Body Percussion ~ with Performances in The Nutcracker Remixed!",
-    link: "https://events.ourayridgwayevents.com/event/new-with-weehawken-beat-step-west-african-dance-drum-body-percussion-with-performances-in-the-nutcracker-remixed",
-    description: "Beat & Step: West African Dance, Drum & Body Percussion is an energetic and interactive class that combines traditional West African dance, drumming, and body percussion into one exciting experience. Students will learn dance combinations, explore traditional drumming rhythms that tell stories, and create music using their hands, feet, body, drums, and voice. Along the way, they'll develop coordination, rhythm, musicality, focus, memory, confidence, and teamwork while experiencing the rich cultural traditions of West Africa. No previous dance or music experience is required—just curiosity, energy, and a willingness to learn. Students enrolled in this performance class will showcase what they've learned in our winter production. Dress Code: Students should wear comfortable clothing that allows for plenty of movement. Athletic clothing such as T-shirts, leggings, athletic pants, or shorts is recommended. Please avoid jeans or restrictive clothing. Wear comfortable athletic shoes or sneakers that are clean and reserved for class. …",
-    pubDate: "2026-11-25T23:00:00.000Z",
-    endDate: "2026-12-02",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Weehawken Montrose",
-    imageUrl: "https://localist-images.azureedge.net/photos/53483890616270/huge/dd89f2f9028ca228db911b8e16c50dc39897358f.jpg"
-  },
-  {
-    title: "Familiar Grounds - Marcie Reed Whiton and Wellington Martins",
-    link: "https://events.ourayridgwayevents.com/event/familiar-grounds-marcie-reed-whiton-and-wellington-martins",
-    description: "Join us for Familiar Ground, an exhibition bringing together two friends and their creative lives. A celebration of the people we meet, the places we remember, and the materials that inspire us. Featuring portraits and paintings by Marcie Reed Whiton and photography and woodworking by Wellington Martins, the exhibition is meant to feel a little like walking into someone's living room: a collection of familiar faces, places, memories, and personal discoveries, all sharing the same space. It's an invitation to put your feet up, look around, and get inspired by the familiar. On view throughout November 30.",
-    pubDate: "2026-11-26T00:00:00.000Z",
-    endDate: "2026-12-01",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Space to Create Art Gallery",
-    imageUrl: "https://localist-images.azureedge.net/photos/54472722974882/huge/75812f0dd549dfd8b3d96bcdbbbdbf4949f9ff80.jpg"
   },
   {
     title: "Functional Fitness - Strength & Mobility Training For Women",
@@ -5761,6 +5819,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53048306784001/huge/b4907ccb0dd0b51c0bd862f76e556e669e3684c2.jpg"
   },
   {
+    title: "Guided Tour: Historic Beaumont Hotel & Spa",
+    link: "https://events.ourayridgwayevents.com/event/guided-tour-historic-beaumont-hotel-spa",
+    description: "Explore Our Story: Historic Tours at the Beaumont Hotel Step into a world of elegance and intrigue with our guided historic tours. Built in 1886, the Beaumont Hotel has stood witness to the colorful history of Ouray, Colorado. Our tours offer a behind-the-scenes look at the hotel’s original architecture, fascinating stories, and notable guests. Perfect for history lovers and curious travelers alike. The Beaumont Hotel has been a cherished landmark in Ouray, hosting dignitaries, celebrities, and visitors from around the world, making it a prime sight for any vacation. Its Victorian architecture and luxurious details have made it an iconic destination for those looking to explore Colorado’s past. Tickets must be purchased before 12:00 pm the day of selected tour.",
+    pubDate: "2026-11-26T20:30:00.000Z",
+    endDate: "2027-01-23",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Beaumont Hotel & Spa",
+    imageUrl: "https://localist-images.azureedge.net/photos/54028675143904/huge/ebfc00389a64e579a48a893200a2e27823511c3a.jpg"
+  },
+  {
     title: "Floating Lotus Music Bingo – November & December 2026",
     link: "https://events.ourayridgwayevents.com/event/floating-lotus-music-bingo-november-december-2026",
     description: "Music Bingo at Floating Lotus Brewery! Join us Thursday, November 26 and Thursday, December 10 from 7–9 PM for a high-energy night of music, drinks and bingo-style fun. Listen, mark your card and sing along. Learn more at floatinglotusbrewery.com.",
@@ -5771,6 +5841,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Floating Lotus Brewery",
     imageUrl: "https://localist-images.azureedge.net/photos/51579855188578/huge/de5019ffbfacf4a9f5e85d8a14961584c70e7873.jpg"
+  },
+  {
+    title: "Familiar Grounds - Marcie Reed Whiton and Wellington Martins",
+    link: "https://events.ourayridgwayevents.com/event/familiar-grounds-marcie-reed-whiton-and-wellington-martins",
+    description: "Join us for Familiar Ground, an exhibition bringing together two friends and their creative lives. A celebration of the people we meet, the places we remember, and the materials that inspire us. Featuring portraits and paintings by Marcie Reed Whiton and photography and woodworking by Wellington Martins, the exhibition is meant to feel a little like walking into someone's living room: a collection of familiar faces, places, memories, and personal discoveries, all sharing the same space. It's an invitation to put your feet up, look around, and get inspired by the familiar. On view throughout November 30.",
+    pubDate: "2026-11-28T00:00:00.000Z",
+    endDate: "2026-12-01",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create Art Gallery",
+    imageUrl: "https://localist-images.azureedge.net/photos/54472722974882/huge/75812f0dd549dfd8b3d96bcdbbbdbf4949f9ff80.jpg"
   },
   {
     title: "Every Sat. Floating Sound Bath",
@@ -5903,6 +5985,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/50382168464273/huge/9567987a01fc4f1da8e171fabd1eb5b7bdbdccfa.jpg"
   },
   {
+    title: "Vinyasa Yoga",
+    link: "https://events.ourayridgwayevents.com/event/vinyasa-yoga",
+    description: "Vinyasa Yoga: Wednesdays 8:15-9:15 am This is a dynamic practice that will challenge, strengthen, and uplift you both physically and mentally. This practice moves through seven doorways or stages, starting by creating sacred space and connecting with your breath. Then we light the fire through a series of warmups and vinyasa flow including Surya Namaskar (sun salutations) A, B & C. The warm up prepares the body for strong holding postures and finishes with yin and conscious surrender in savasana. A sweat towel, water, mat and a sense of adventure are strongly suggested. Men are also welcome to join this class! Jenn Turner is a yoga teacher, functional fitness instructor, and retreat facilitator with more than 500 hours of yoga training and 12+ years of experience. Her work weaves together functional movement, breath, strength, mindfulness, and play to help people reconnect with their bodies and inner wisdom. …",
+    pubDate: "2026-12-02T15:15:00.000Z",
+    endDate: "2026-12-30",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Ridgway (Old Schoolhouse)",
+    imageUrl: "https://localist-images.azureedge.net/photos/54236148198717/huge/7d1ebafc567aad82f67c7ba07e1225354b86622c.jpg"
+  },
+  {
     title: "Toddler Storytime Art for Ages 2.5-5",
     link: "https://events.ourayridgwayevents.com/event/toddler-storytimeartfor-ages-25-5",
     description: "TODDLER STORYTIME ART FOR AGES 2.5-5 Wednesdays, 10:00am–11:00am Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $70): September 16 – October 7Session 2 (4 weeks • $70): October 21 – November 11Session 3 (3 weeks • $55): December 2 – December 16Come join us for Storytime + Art! Each week, your child will enjoy story time with songs and finger rhymes, a process‑art project, and a variety of creative sensory play. We end with a quick cleanup, circle time, and movement songs. This class gently supports preschool prep and helps your child develop important school‑readiness skills—such as fine‑motor coordination, independence, and the ability to listen and follow directions—in a warm, supportive setting. Children will grow in: Social, language, and communication skillsFine‑ and gross‑motor coordinationListening and direction‑following abilitiesConfidence, creativity, and imaginationParents and caregivers stay to support their child—but we handle the mess! …",
@@ -5915,6 +6009,30 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53780434962919/huge/3aff831f26d7f9d4824893f89d8fd88416047a44.jpg"
   },
   {
+    title: "Water Aerobics",
+    link: "https://events.ourayridgwayevents.com/event/water-aerobics",
+    description: "Join a self-led water aerobics group every Wednesday (and occasionally Tuesdays and Thursdays!) from 10–11 a.m. at the Ouray Hot Springs Pool. Get a workout, build community, and enjoy a fun, positive atmosphere! Please note: Water aerobics takes place during member-only hours and is open to Ouray Hot Springs members only.",
+    pubDate: "2026-12-02T17:00:00.000Z",
+    endDate: "2027-01-20",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Hot Springs",
+    imageUrl: "https://localist-images.azureedge.net/photos/53887699628224/huge/262efc04b203189edcde410b9973aac1ca778195.jpg"
+  },
+  {
+    title: "Weds Floating Sound Bath",
+    link: "https://events.ourayridgwayevents.com/event/floating-sound-bath",
+    description: "Group Float in warm healing waters every Wednesday @ 1:30pm. Receive gentle aquatic massage while listening to live sound therapy, vocals, bowls and more. Contact Christian 303-807-1039 to reserve your spot in advance. Please pay in advance. Sliding scale: $35-$85/person.Pay Cash at indoor pool or Venmo to @GOLDENTHREADSTHERAPY. *Orvis entry fee pay seperately.",
+    pubDate: "2026-12-02T20:30:00.000Z",
+    endDate: "2027-01-20",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Orvis Hot Springs",
+    imageUrl: "https://localist-images.azureedge.net/photos/54329351687325/huge/1e81b72abc42fb73374205a2bd7143bee62a33ef.jpg"
+  },
+  {
     title: "After School Art for Ages 8-12",
     link: "https://events.ourayridgwayevents.com/event/afterschool-artfor-ages-8-12-7427",
     description: "AFTER SCHOOL ART FOR AGES 8-12 Wednesdays, 3:15–4:45 pm Cora Annex, 145N Cora St, Ridgway Registration: www.weehawkenarts.org Session 1 (4 weeks • $85): September 16 – October 7Session 2 (4 weeks • $85): October 21 – November 11Session 3 (3 weeks • $70): December 2 – December 16Each week, students will explore an exciting theme while experimenting with a wide range of materials and techniques. Drawing inspiration from well-known artists and design styles, young artists will be supported in discovering their own unique creative voice in a fun, nurturing, studio-like setting. These classes are designed to foster a love of the arts through hands-on exploration, age-appropriate projects, and a focus on the joy of the creative process. A student art reception will be held in December. Students will take home their collected works in the days following the event. …",
@@ -5925,6 +6043,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Annex on Cora",
     imageUrl: "https://localist-images.azureedge.net/photos/53780624349826/huge/2ad5a3657f19d47b14c7833f838ac040c0836f38.jpg"
+  },
+  {
+    title: "NEW With Weehawken: Beat & Step: West African Dance, Drum & Body Percussion ~ with Performances in The Nutcracker Remixed!",
+    link: "https://events.ourayridgwayevents.com/event/new-with-weehawken-beat-step-west-african-dance-drum-body-percussion-with-performances-in-the-nutcracker-remixed",
+    description: "Beat & Step: West African Dance, Drum & Body Percussion is an energetic and interactive class that combines traditional West African dance, drumming, and body percussion into one exciting experience. Students will learn dance combinations, explore traditional drumming rhythms that tell stories, and create music using their hands, feet, body, drums, and voice. Along the way, they'll develop coordination, rhythm, musicality, focus, memory, confidence, and teamwork while experiencing the rich cultural traditions of West Africa. No previous dance or music experience is required—just curiosity, energy, and a willingness to learn. Students enrolled in this performance class will showcase what they've learned in our winter production. Dress Code: Students should wear comfortable clothing that allows for plenty of movement. Athletic clothing such as T-shirts, leggings, athletic pants, or shorts is recommended. Please avoid jeans or restrictive clothing. Wear comfortable athletic shoes or sneakers that are clean and reserved for class. …",
+    pubDate: "2026-12-02T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Montrose",
+    imageUrl: "https://localist-images.azureedge.net/photos/53483890616270/huge/dd89f2f9028ca228db911b8e16c50dc39897358f.jpg"
   },
   {
     title: "Craft & Sip with Emily: \"Pine Needle Ornaments\" (Ages 15+)",
@@ -6460,17 +6589,6 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "Senior Meals",
-    link: "https://www.norwoodtown.com/2026-11-19-senior-meals",
-    description: "A midday community meal program for seniors hosted by the Town of Norwood. It offers older residents a regular opportunity to gather, share a meal, and connect with neighbors.",
-    pubDate: "2026-11-19T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Community Event",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "No Senior Meals",
     link: "https://www.norwoodtown.com/2026-11-26-no-senior-meals",
     description: "The Town of Norwood's regular senior meals program will not be held on this date. This notice serves as a reminder for community members who rely on or participate in the senior meals service.",
@@ -6824,6 +6942,28 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/50175/lodge-winter-2200x1100-4.jpg"
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    description: "Movies Under the Stars is a recurring outdoor film series held at the Conference Center Plaza in Mountain Village, screening on Saturday evenings at dusk. The series runs weekly from June 13 through August 15, bringing community members together for movies shown under the open sky.",
+    pubDate: "2026-12-26T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
+  {
+    title: "Mind Blown Telluride",
+    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    pubDate: "2026-12-26T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
   }
 ];
 
@@ -7701,6 +7841,97 @@ const LEGAL_NOTICES = [
     url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=209",
     address: "",
     smcBidID: "209"
+  },
+  {
+    title: "Public Hearing -- Proposed 2027 Budget & 2026 Budget Amendment, Lone Tree Cemetery District 1",
+    entity: "Lone Tree Cemetery District 1",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "Lone Tree Cemetery District 1 has submitted a proposed 2027 budget and may consider an amended 2026 budget. Public hearings will be held at 4:00 p.m. on December 2, 2026 at 220 E Colorado Avenue, Telluride, and via Zoom. Any interested elector of the District may file objections with the Board prior to final adoption.",
+    deadline: "2026-12-02",
+    expires: "2026-12-02",
+    dates: "11/26",
+    papers: ["ttimes_1126"],
+    url: "https://www.telluridenews.com/news/legals/article_ba744009-b2ab-4c5a-b98a-f9fb25c487cd.html",
+    address: "220 E Colorado Avenue, Telluride, CO",
+    noticeKey: "ltcd1-budget-2027-hearing"
+  },
+  {
+    title: "Ordinance -- Telluride Energy Mitigation Program (TEMP) Update & Outdoor Energy Use Cap (Ord. 1646)",
+    entity: "Town of Telluride",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "The Telluride Town Council passed Ordinance #1646 on November 17, 2026, updating the applicability of the Telluride Energy Mitigation Program (TEMP) and instituting a maximum outdoor energy use cap on covered residential properties. The ordinance became effective upon publication of this notice. Copies are available at Town Hall or online at the Town's website.",
+    deadline: "2026-11-26",
+    expires: "2027-01-26",
+    dates: "11/26",
+    papers: ["ttimes_1126"],
+    url: "https://www.telluridenews.com/news/legals/article_ba744009-b2ab-4c5a-b98a-f9fb25c487cd.html",
+    address: "Town of Telluride, CO (all covered residential properties)",
+    noticeKey: "ord-1646"
+  },
+  {
+    title: "Ordinance -- Suspension of Open Space Fund Dedication from RETT for 2027 Budget Year (Ord. 1647)",
+    entity: "Town of Telluride",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "The Telluride Town Council passed Ordinance #1647 on November 17, 2026, suspending for the 2027 budget year the Telluride Municipal Code provision (TMC Section 4-3-30) requiring a 5% dedication to the Open Space Fund from unencumbered Real Estate Transfer Tax revenue. The ordinance became effective upon publication of this notice. Copies are available at Town Hall or online.",
+    deadline: "2026-11-26",
+    expires: "2027-01-26",
+    dates: "11/26",
+    papers: ["ttimes_1126"],
+    url: "https://www.telluridenews.com/news/legals/article_ba744009-b2ab-4c5a-b98a-f9fb25c487cd.html",
+    address: "Town of Telluride, CO",
+    noticeKey: "ord-1647"
+  },
+  {
+    title: "Sheriff's Sale -- Real Property Foreclosure, Lot 7 Telluride Ski Ranches Filing 4A (Sale No. 26-147)",
+    entity: "San Miguel County Sheriff / Telluride Ski Ranches Association",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "Telluride Ski Ranches Association obtained a court order to foreclose on Lot 7, Telluride Ski Ranches Filing 4A, owned by Kevin M. Kirton and Krista S. Kirton, due to default under the subdivision's protective covenants. A Sheriff's Sale will be held at 10:00 a.m. on January 6, 2026 (as published) on the steps at 305 W Colorado Ave., Telluride; bidders must have cash or certified funds. Any Notice of Intent to Cure must be filed no later than 15 calendar days before the sale date.",
+    deadline: "2026-12-22",
+    expires: "2026-12-24",
+    dates: "11/26",
+    papers: ["ttimes_1126"],
+    url: "https://www.telluridenews.com/news/legals/article_ba744009-b2ab-4c5a-b98a-f9fb25c487cd.html",
+    address: "Lot 7, Telluride Ski Ranches Filing No. 4, Phase A, Telluride, CO 81435; Sale at 305 W Colorado Ave., Telluride, CO 81435",
+    noticeKey: "sheriffs-sale-26-147-2026CV030027",
+    caseNumber: "2026CV030027"
+  },
+  {
+    title: "Public Hearing -- Preliminary Small Scale Subdivision, 335 W Colorado Avenue (Planning & Zoning)",
+    entity: "Town of Telluride Planning & Zoning Commission / San Miguel County (Owner) / HOK (Applicant)",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "The Telluride Planning and Zoning Commission will hold a public hearing on December 17, 2026 at 5:30 p.m. to consider a Preliminary Small Scale Subdivision application for 335 W Colorado Avenue. The application, filed by HOK on behalf of owner San Miguel County, proposes to vacate lot lines between Lots 1, 3, and 5, Block 1, Town of Telluride, consolidating them into one 9,375 sq. ft. lot (Lot 3A) in the Historic Commercial zone district. The hearing will be held via hybrid meeting format; more information is available at 113 W Columbia, Telluride.",
+    deadline: "2026-12-17",
+    expires: "2026-12-17",
+    dates: "11/26",
+    papers: ["ttimes_1126"],
+    url: "https://www.telluridenews.com/news/legals/article_ba744009-b2ab-4c5a-b98a-f9fb25c487cd.html",
+    address: "335 W Colorado Avenue, Lots 1, 3, and 5, Block 1, Town of Telluride, CO",
+    noticeKey: "pz-hearing-335-w-colorado-subdivision"
   },
   {
     title: "Request for Proposal -- County Jail Medical Provider",
