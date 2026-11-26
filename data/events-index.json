@@ -110,19 +110,6 @@
     "endDate": "2027-03-31"
   },
   {
-    "title": "Cardio Dance w/Kelsey",
-    "href": "https://koto.org/event/cardio-dance-w-kelsey-2/",
-    "date": "2026-11-25",
-    "time": "6:00 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join us for a fun evening of dancing and getting your heart rate up! You will be having so much fun, you won't even know you are exercising! Led by Kelsey Trottier from the Telluride Dance Collective. 2nd and 4th Monday of the month.…",
-    "type": "Music"
-  },
-  {
     "title": "Gaper Contest 2026 - Voyager FUNdraiser",
     "href": "https://events.ourayridgwayevents.com/event/gaper-contest-2026",
     "date": "2026-11-25",
@@ -481,7 +468,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Standard Alchemy — featuring Zan Waller on trumpet and Stefan Davenport on guitar — performs swing, cocktail jazz, and Great American Songbook standards at Chloe's Charcuterie & Wine on Sunday afternoons from 4:00 to 7:00 p.m. Occasional…",
     "type": "Music",
-    "endDate": "2027-01-17"
+    "endDate": "2027-01-24"
   },
   {
     "title": "The Real Book Club-Jazz Standards",
@@ -2202,6 +2189,19 @@
     "type": "Music"
   },
   {
+    "title": "Up-Off Gymnastics, Dance, and Spanish",
+    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-12-18/",
+    "date": "2026-12-18",
+    "time": "10:00 AM",
+    "location": "Lone Cone Library Norwood",
+    "town": "Norwood",
+    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
+    "type": "Music"
+  },
+  {
     "title": "Ski and Board Days",
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-12-18",
@@ -3014,17 +3014,17 @@
     "type": "Outdoors & Sports"
   },
   {
-    "title": "Atlas Radio",
-    "href": "https://www.telluride.com/event/atlas-radio/",
+    "title": "Pilates Workshop",
+    "href": "https://events.ourayridgwayevents.com/event/pilates-workshop",
     "date": "2027-01-24",
-    "time": "5:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/64426/screenshot_2026-11-19_at_3_03_34_pm.800x533.webp",
+    "time": "1:00 PM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/54597700780563/huge/047d65730afb0fa2d75059a936390319bfcd6eb1.jpg",
     "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Led by guitarist Blake Beitzel, Atlas Radio is a funk-forward jam band based in Denver, CO. Atlas Radio often combines …",
-    "type": "Music"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "PILATES WORKSHOP: BUILT FOR PROGRESS Why the Design of the Pilates Method Helps you Overcome “Why Can’t I Do [Insert Exercise] Yet?” Sunday, January 24 • 1-3 pm • Ridgway Pilates • $50 Who it's for: Pilates teachers who want a deeper…",
+    "type": "Wellness"
   },
   {
     "title": "John Craigie & the Bones of J.R. Jones",
@@ -3051,5 +3051,18 @@
     "source": "Beacon",
     "desc": "Meal prep and cooking classes held at AH HAA School for the Arts. Times vary: Dec 11 5-8 pm, Jan 6 6-8 pm, Jan 24 5-8 pm, Feb 3 5-8 pm, Feb 16 5:30-8:30 pm.",
     "type": "Community"
+  },
+  {
+    "title": "Atlas Radio",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=atlas-radio",
+    "date": "2027-01-24",
+    "time": "8:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://1v09t9hszk.ucarecd.net/c259bebf-9fe4-48c3-b51c-8402400f2fea/-/crop/3550x1774/83,0/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Atlas Radio is a funk-forward jam band led by guitarist Blake Beitzel, performing live at The Alibi in Telluride. The group brings an energetic, groove-driven sound rooted in funk and jam band traditions.",
+    "type": "Music"
   }
 ]

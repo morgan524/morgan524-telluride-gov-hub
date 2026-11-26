@@ -56,7 +56,7 @@ const COUNTY_CIVICCLERK_AGENDA_FILES = {
   919:  1705,  // Planning Commission May 14 2026
 };
 
-const COUNTY_CACHE_DATE = '2026-11-25';
+const COUNTY_CACHE_DATE = '2026-11-26';
 
 const COUNTY_CACHED_DATA = [
   {
@@ -123,11 +123,13 @@ const COUNTY_CACHED_DATA = [
   {
     date: "December 3, 2026",
     time: "10:00 AM",
-    title: "One Time Event",
+    title: "Board of County Commissioner meeting -Special",
     type: "other",
     location: "333 West Colorado Ave, 2nd Fl, Telluride, CO 81435",
     civicClerkId: 1120,
-    note: null
+    note: null,
+    special: true,
+    packetUrl: "https://sanmiguelcoco.portal.civicclerk.com/event/1120/files/agenda/2083"
   },
   {
     date: "December 9, 2026",
@@ -261,18 +263,9 @@ const COUNTY_CACHED_DATA = [
 
 const SMART_BOARD_URL = 'https://smarttelluride.colorado.gov/board-meetings';
 
-const SMART_CACHE_DATE = '2026-11-25';
+const SMART_CACHE_DATE = '2026-11-26';
 
 const SMART_CACHED_DATA = [
-  {
-    date: "October 26, 2026",
-    time: "3:00 PM",
-    title: "SMART Gondola Advisory Committee",
-    location: "Virtual (Zoom link in the agenda)",
-    agendaUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.10.26-Gsub-Agenda-%28English_Spanish%29.pdf",
-    packetUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.10.26-Gsub-Packet-%28English_Spanish%29.pdf",
-    note: "Gondola Advisory Committee (Gsub): agenda and packet available (PDF)."
-  },
   {
     date: "November 12, 2026",
     time: "4:00 PM",
@@ -302,7 +295,7 @@ const SMART_CACHED_DATA = [
 
 const TMVOA_URL = 'https://tmvoa.org/meetings-events/meeting-materials/';
 
-const TMVOA_CACHE_DATE = '2026-11-25';
+const TMVOA_CACHE_DATE = '2026-11-26';
 
 // TMVOA (Telluride Mountain Village Owners Association) — a private HOA, not
 // a government body, but its Gondola Leadership/Subcommittee meetings and
@@ -311,14 +304,6 @@ const TMVOA_CACHE_DATE = '2026-11-25';
 // every run by syncTMVOAAgendas() from the live meeting-materials page —
 // see that function for the robots.txt-aware scraping note.
 const TMVOA_CACHED_DATA = [
-  {
-    date: "October 27, 2026",
-    title: "TMVOA Finance &amp; Budget Committee",
-    board: "other",
-    agendaUrl: "https://tmvoa.org/site/assets/files/4964/tmvoa_finance_budget_meeting_agenda_10_27_26_draft.pdf",
-    packetUrl: "https://tmvoa.org/site/assets/files/4964/f_b_committee_meeting_packet_10_27_26_draft.pdf",
-    location: "Mountain Village, CO (see agenda for Zoom link)"
-  },
   {
     date: "October 29, 2026",
     title: "TMVOA Audit &amp; Compliance Committee",
@@ -413,7 +398,7 @@ const MV_TC_URL = 'https://townofmountainvillage.com/government/town-council/tow
 
 const MV_DRB_URL = 'https://townofmountainvillage.com/business/planning/design-review-board/';
 
-const MV_CACHE_DATE = '2026-11-25';
+const MV_CACHE_DATE = '2026-11-26';
 
 const MV_CACHED_DATA = [
   {
@@ -485,7 +470,7 @@ const MV_CACHED_DATA = [
 
 const SCHOOL_BOARD_URL = 'https://www.tellurideschool.org/agendasandminutes';
 
-const SCHOOL_CACHE_DATE = '2026-11-25';
+const SCHOOL_CACHE_DATE = '2026-11-26';
 
 const SCHOOL_CACHED_DATA = [
   {
@@ -677,7 +662,7 @@ const SCHOOL_CACHED_DATA = [
 
 const FIRE_BOARD_URL = 'https://www.telluridefire.com/board-meetings';
 
-const FIRE_CACHE_DATE = '2026-11-25';
+const FIRE_CACHE_DATE = '2026-11-26';
 
 const FIRE_CACHED_DATA = [
   {
@@ -713,7 +698,7 @@ const FIRE_CACHED_DATA = [
 
 const MED_BOARD_URL = 'https://www.tellmed.org/board-meetings';
 
-const MED_CACHE_DATE = '2026-11-25';
+const MED_CACHE_DATE = '2026-11-26';
 
 const MED_CACHED_DATA = [
   {
@@ -755,7 +740,7 @@ const NORWOOD_NWC_URL = 'https://www.norwoodtown.com/nwc-meetings';
 
 const NORWOOD_SAN_URL = 'https://www.norwoodtown.com/norwood-sanitation-district-meeting';
 
-const NORWOOD_CACHE_DATE = '2026-11-25';
+const NORWOOD_CACHE_DATE = '2026-11-26';
 
 const NORWOOD_CACHED_DATA = [
   {
@@ -824,7 +809,7 @@ const OPHIR_GA_URL = 'https://townofophir.colorado.gov/general-assembly-2';
 
 const OPHIR_PZ_URL = 'https://townofophir.colorado.gov/planning-and-zoning';
 
-const OPHIR_CACHE_DATE = '2026-11-25';
+const OPHIR_CACHE_DATE = '2026-11-26';
 
 const OPHIR_CACHED_DATA = [
   {
@@ -875,17 +860,6 @@ const RIDGWAY_COUNCIL_URL = 'https://townofridgway.colorado.gov/i-want-to/ridgwa
 // in scripts/content-refresh.js; hand edits are overwritten. (The County left
 // AgendaCenter in July 2025; its RSS feeds are empty.)
 const OURAY_COUNTY_CACHED_DATA = [
-  {
-    date: "November 18, 2026",
-    time: "9:00 AM",
-    title: "Board of County Commissioners Work Session",
-    location: "Ouray County 4-H Event Center, 22739 Highway 550, Ridgway, CO 81432",
-    civicClerkId: 1130,
-    note: null,
-    packetUrl: "https://ouraycoco.portal.civicclerk.com/event/1130/files/agenda/7601",
-    board: "bocc",
-    agendaUrl: "https://ouraycoco.portal.civicclerk.com/event/1130/files/agenda/7600"
-  },
   {
     date: "December 8, 2026",
     time: "9:00 AM",
@@ -1143,7 +1117,7 @@ const OURAY_CITY_CACHED_DATA = [
   }
 ];
 
-const RIDGWAY_CACHE_DATE = '2026-11-25';
+const RIDGWAY_CACHE_DATE = '2026-11-26';
 
 // Ridgway meeting stubs. Town Council = 2nd Wednesday @ 6:00 PM; Planning
 // Commission = 3rd Wednesday @ 5:30 PM. The agenda/packet PDF for each date is
@@ -1200,7 +1174,7 @@ const TOWN_CIVICWEB_IDS = {
 
 const TELLURIDE_HARC_URL = 'https://telluride.gov/100/Historic-and-Architectural-Review-Commis';
 
-const TELLURIDE_CACHE_DATE = '2026-11-25';
+const TELLURIDE_CACHE_DATE = '2026-11-26';
 
 const TELLURIDE_CACHED_DATA = [
   {
@@ -1223,7 +1197,7 @@ const TELLURIDE_CACHED_DATA = [
 
 const AIRPORT_BOARD_URL = 'https://tellurideairport.com/traa-board-information/';
 
-const AIRPORT_CACHE_DATE = '2026-11-25';
+const AIRPORT_CACHE_DATE = '2026-11-26';
 
 const AIRPORT_CACHED_DATA = [
   {

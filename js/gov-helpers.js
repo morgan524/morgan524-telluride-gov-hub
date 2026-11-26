@@ -146,9 +146,6 @@ function resolveEventImage(e, opts) {
 // stays current automatically; the static config is the fallback for
 // sources without a PDF agenda.
 const MEETING_AGENDA_META = {
-  "county|2026-10-26|Open Space Commission Meeting":
-    {"sv":4,"ph":"1ff606174e68cca5"},
-
   "telluride|2026-10-27|Town Council - Oct 27 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/DaEVzy_NTsub9PbJHzPwTg","meetingId":"896 6851 5669","passcode":"714517.","phone":"719) 359-4580"},
 
@@ -260,17 +257,8 @@ const MEETING_AGENDA_META = {
   "telluride|2026-11-19|Liquor Licensing Authority - Nov 19 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8147","sv":4,"zoomUrl":"https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1","meetingId":"861 6987 1704","passcode":"281002.","phone":"346-248-7799"},
 
-  "telluride|2026-10-26|Gondola Sub Committee - Oct 26 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8327","zoomUrl":"https://urldefense.com/v3/__https:/gbsm.zoom.us/j/82559576086__;!!ETWISUBM!3x58A-FfNf9JhIvrh2mHeq3wy9OHc7S76v3Obypudr5m-ILQvLZAsE3ZuUUqFUGuSSfFOzlMG_ETBGmg3kQV-w$","sv":4},
-
-  "smart|2026-10-26|SMART Gondola Advisory Committee":
-    {"agendaUrl":"https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.10.26-Gsub-Agenda.pdf","zoomUrl":"https://urldefense.com/v3/__https:/gbsm.zoom.us/j/82559576086__;!!ETWISUBM!3x58A-FfNf9JhIvrh2mHeq3wy9OHc7S76v3Obypudr5m-ILQvLZAsE3ZuUUqFUGuSSfFOzlMG_ETBGmg3kQV-w$","sv":4},
-
   "tmvoa|2026-10-27|TMVOA Finance &amp; Budget Committee":
     {"sv":4,"ph":"b858cb282617fb09"},
-
-  "county|2026-10-26|San Miguel Basin Fair Board Meeting 10/26":
-    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1092/files/agenda/2058"},
 
   "ouray|2026-10-27|Board of County Commissioners":
     {"agendaUrl":"https://ouraycoco.portal.civicclerk.com/event/1081/files/agenda/7575","zoomUrl":"https://us06web.zoom.us/j/87606375697?pwd=F4epE8XNbLwY5HjLUYeETbwoQsL0ps.1","meetingId":"876 0637 5697","passcode":"946299","phone":"346-248-7799","sv":4},
@@ -498,7 +486,10 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-12-02|Ecology Commission - Dec 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8369","zoomUrl":"https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1","phone":"970-728-2496","sv":4}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8369","zoomUrl":"https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1","phone":"970-728-2496","sv":4},
+
+  "county|2026-12-03|Board of County Commissioner meeting -Special":
+    {"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1120/files/agenda/2082","zoomUrl":"https://us02web.zoom.us/meeting/register/ZX_PyCyTS0Oj4fzOTO9w2g","meetingId":"886 4762 0336","passcode":"118664","phone":"719-359-4580","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -837,7 +828,10 @@ const MEETING_PREVIEWS = {
     "Board will consider final architecture review for a new single-family home at Lot 224-B on Snowdrift Lane, continued from October. Members will also approve minutes from the November 5 meeting and receive staff updates.",
 
   "telluride|2026-12-02|Ecology Commission - Dec 02 2026":
-    "The Ecology Commission is expected to discuss a proposal to prohibit combustion-powered lawn care equipment in Telluride, including a possible phase-out ordinance affecting commercial operators. The commission will also review and approve minutes from its November 4 meeting."
+    "The Ecology Commission is expected to discuss a proposal to prohibit combustion-powered lawn care equipment in Telluride, including a possible phase-out ordinance affecting commercial operators. The commission will also review and approve minutes from its November 4 meeting.",
+
+  "county|2026-12-03|Board of County Commissioner meeting -Special":
+    "Board will consider agenda items at a special meeting on December 3, 2026 in Telluride. Related public notices include requests for proposals for a Multi-Jurisdictional All-Hazard Mitigation Plan Update and a Housing Action Plan, along with several foreclosure sales and other county matters."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -871,6 +865,96 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "A thankful gathering",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "November 26, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.ouraynews.com/2026/11/25/a-thankful-gathering/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "‘Do it!’: Public backs plan for Blue Lakes use fees",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "November 26, 2026",
+    newsTopic: "recreation",
+    copy: "Forest Service expected to launch permit system next summer After taking the temperature of the public this summer, the U.S. Forest Service says most hikers and campers favor implementing a permit system next year for one of the most popular backcountry areas in southwest Colorado. The Forest Servic",
+    href: "https://www.ouraynews.com/2026/11/25/public-backs-plan-blue-lakes-use-fees/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "MTN Lodge shifts, starts paying taxes",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "November 26, 2026",
+    newsTopic: "government",
+    copy: "The MTN Lodge says it is paying all applicable sales and lodging tax to the town of Ridgway as it continues to house construction workers after a judge in September ordered it to stop operating as workforce housing. In a statement shared with the Plaindealer, MTN Lodge spokesperson Kristin Kenney Wi",
+    href: "https://www.ouraynews.com/2026/11/25/mtn-lodge-shifts-starts-paying-taxes/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Deputy position spared budget axe",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "November 26, 2026",
+    newsTopic: "public-safety",
+    copy: "When the Ridgway Marshal’s Office is one deputy short, scheduling is tough, but they manage. When they’re two deputies short, like they are now, or when there’s a major emergency, things get “even more dire,” according to Ridgway Marshal Shane Schmalz, who said he personally worked 75 hours of overt",
+    href: "https://www.ouraynews.com/2026/11/25/deputy-position-spared-budget-axe/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "EMS calls dip as agency prepares for merger",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "November 26, 2026",
+    newsTopic: "public-safety",
+    copy: "Chief attributes drop to summer fire, winter tourism decline Ouray County Emergency Medical Services has received 530 calls so far in 2026, down slightly from about 600 in all of 2025, thanks to deflated tourism from the mild winter and the Gold Mountain Fire, according to EMS Chief Nate Mc-Cullough",
+    href: "https://www.ouraynews.com/2026/11/25/ems-calls-dip-agency-prepares-merger/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Ouray administrator receives high marks in review",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "November 26, 2026",
+    newsTopic: "government",
+    copy: "Ouray City Administrator Michelle Metteer received high scores from the city council on her annual job performance review this fall. Unlike past city administrator reviews, the council did not publicly discuss Metteer’s performance review after it was completed and did not release any written commen",
+    href: "https://www.ouraynews.com/2026/11/25/ouray-administrator-receives-high-marks-review/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Trust for Land Restoration",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "November 26, 2026",
+    newsTopic: "arts-culture",
+    copy: "Editor s note: The Ouray County Plaindealer is continuing its tradition of featuring nonprofit organizations based in Ouray County, serving Ouray County in a series of profiles called Season of Sharing. The purpose is to highlight the meaningful work these organizations perform and let the community",
+    href: "https://www.ouraynews.com/2026/11/25/trust-land-restoration-20261126-0300-151117/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Looking Back",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "November 26, 2026",
+    newsTopic: "government",
+    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago November 24, 1966 The Ouray City Council went on the record Monday night as unanimously in favor of a large water and sanitation district that would include capacity for future growth. ",
+    href: "https://www.ouraynews.com/2026/11/25/looking-back-20261126-0300-270086/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Ouray’s wet fall is one for record books",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "November 26, 2026",
+    newsTopic: "community",
+    copy: "It’s been a rare fall season in Ouray, both warm and wet, thanks in part to El Niño. As of Tuesday morning, the city’s mean fall temperature was a remarkable 51.1 degrees — the highest ever recorded and 4.8 degrees above the new normal (46.3). The second-highest mean fall temperature, 50.5, occurred",
+    href: "https://www.ouraynews.com/2026/11/25/ourays-wet-fall-one-record-books/?ta_paidstory",
+    img: ""
+  },
+  {
     title: "Corrected: Parish Bulletin for Nov 22",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -898,96 +982,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "public-safety",
     copy: "In just over two months, an emergency public works project erected more than 2,000 feet of concrete flood barrier walls before another storm could torrent more debris flows down the Gold Mountain Fire burn scar and damage more homes. The project to repair and re-engineer the damaged watershed betwee",
     href: "https://www.ouraynews.com/2026/11/18/flood-damage-fixed-rush/",
-    img: ""
-  },
-  {
-    title: "Electricity rate hikes approved",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "November 19, 2026",
-    newsTopic: "recreation",
-    copy: "San Miguel Power Association’s board voted unanimously Tuesday to hike nearly all of its rate categories for the next year, including a 27% increase to the flat access fee levied on the vast majority of the co-op’s customers. Marking the fifth straight year of rate increases for the electric provide",
-    href: "https://www.ouraynews.com/2026/11/18/electricity-rate-hikes-approved/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "In Ouray, the fireworks show will go on",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "November 19, 2026",
-    newsTopic: "public-safety",
-    copy: "Despite fire danger concerns, council favors traditional July 4 pyrotechnics over drone display The familiar sights and sounds of Ouray’s Fourth of July fireworks display will return in 2027 — assuming high fire danger doesn’t crash the party. A split city council agreed earlier this month to set as",
-    href: "https://www.ouraynews.com/2026/11/18/ouray-fireworks-show-will-go/",
-    img: ""
-  },
-  {
-    title: "County signs off on artificial intelligence policy",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "November 19, 2026",
-    newsTopic: "government",
-    copy: "Ouray County employees will have new guardrails for how to use artificial intelligence tools in their work starting in January, after county commissioners on Tuesday approved their first-ever AI policy. The county developed a draft of the new policy in April, and fleshed it out with feedback from co",
-    href: "https://www.ouraynews.com/2026/11/18/county-signs-off-artificial-intelligence-policy/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Changes looming for city’s remote attendance policy",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "November 19, 2026",
-    newsTopic: "government",
-    copy: "Ouray City Council members will continue to be able to attend a limited number of meetings online each year, although councilors appear ready to tighten the rules dictating remote governance. The council voted 4-1 Monday night against repealing a five-year-old policy that allows councilors to attend",
-    href: "https://www.ouraynews.com/2026/11/18/changes-looming-citys-remote-attendance-policy/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Poisonings contradict Top of the Pines’ mission",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "November 19, 2026",
-    newsTopic: "recreation",
-    copy: "Dear Editor: When the land for Top of the Pines was donated by the Girl Scouts of America in 2002, it was specified that the wildlife must be protected in the future. The TOP mission statement provides for recreational activities while “preserving open space and wildlife habitat and creating a model",
-    href: "https://www.ouraynews.com/2026/11/18/poisonings-contradict-top-pines-mission/",
-    img: ""
-  },
-  {
-    title: "County budget decisions reinforce skepticism",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "November 19, 2026",
-    newsTopic: "government",
-    copy: "Dear Editor: As nearly 30-year residents of Log Hill Village, we are deeply concerned by the Ouray County Board of County Commissioners unilateral decision to appropriate the $223,000 remaining in the Piñon Special Assessment Paving District for general county use. When the paving district was estab",
-    href: "https://www.ouraynews.com/2026/11/18/county-budget-decisions-reinforce-skepticism/",
-    img: ""
-  },
-  {
-    title: "CORRECTION",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "November 19, 2026",
-    newsTopic: "infrastructure",
-    copy: "An article in the Nov. 12-18 edition of the Plaindealer about the elimination of Ouray County s austerity policy incorrectly indicated Road and Bridge Supervisor Ty Barger declined to comment on his resignation. Barger did not respond to a reporter s emailed request for comment. Instead, he sent an ",
-    href: "https://www.ouraynews.com/2026/11/18/correction-20261119-0207-212168/",
-    img: ""
-  },
-  {
-    title: "Looking Back",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "November 19, 2026",
-    newsTopic: "community",
-    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago November 17, 1966 Five Denver youths were sentenced last Thursday in Delta after pleading guilty to reduced charges of malicious mischief in damaging power transformers belonging to the",
-    href: "https://www.ouraynews.com/2026/11/18/looking-back-20261119-0207-340361/",
-    img: ""
-  },
-  {
-    title: "Long before Mears, pathfinders had four legs",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "November 19, 2026",
-    newsTopic: "infrastructure",
-    copy: "Visitors to Ouray often look up at the towering peaks and wonder how early miners ever reached their high-altitude claims. We rightfully memorialize Otto Mears, dubbed the Pathfinder of the San Juan Mountains.” Long before Mears blasted his famous toll roads into sheer canyon walls, however, mines w",
-    href: "https://www.ouraynews.com/2026/11/18/long-mears-pathfinders-four-legs/?ta_paidstory",
     img: ""
   },
   {
@@ -1045,13 +1039,10 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/facilities-master-plan/widgets/99345/key_dates#43153"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-11-25';
-const LEGAL_NOTICES_CACHE_DATE = '2026-11-25';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-11-26';
+const LEGAL_NOTICES_CACHE_DATE = '2026-11-26';
 
 const MANUAL_SUMMARIES = {
-  "county|2026-10-26|Open Space Commission Meeting":
-    "The October 26 Open Space Commission agenda hasn't been posted yet.",
-
   "telluride|2026-10-27|Town Council - Oct 27 2026":
     "Three substantive items anchor this meeting. Council takes up the Fourth Supplement to the Gondola IGA, extending cost-sharing for the 2027 planning and development budget on the gondola replacement project — a line that connects directly to the SMART 3A funding voters approved. Two ordinances get first reading: one amending the Telluride Energy Mitigation Program (TEMP) under the municipal code, and one that would suspend the 5% capital fund allocation for open space in 2027 — a notable carve-out worth watching given the town's budget pressures. A work session covers special events on town property in 2026 and a proposed two-night concert in Town Park in August 2027. The long-running Stender Residence HARC appeal is continued again. Council also appoints an Open Space Commission member and approves routine minutes and a liquor licensing hearing officer.",
 
@@ -1163,17 +1154,8 @@ const MANUAL_SUMMARIES = {
   "telluride|2026-11-19|Liquor Licensing Authority - Nov 19 2026":
     "Three special event liquor permits are on the table for early December. The Telluride Nordic Association is requesting a permit for its annual membership party on December 2 (5:00–7:30 pm, ~50 attendees) at 300 S. Townsend St. Second Chance Humane Society follows with a holiday wreath-making workshop benefiting animal rescue on December 3 (4:00–8:30 pm, ~30–35 people) at the same location. The Town of Telluride itself is seeking a permit for its employee holiday party on December 10 (3:00–10:00 pm), also at 300 S. Townsend. Staff recommends approval on all three. The Authority will also ratify minutes from the October 14 special meeting, where permits for the Telluride Horror Show were approved.",
 
-  "telluride|2026-10-26|Gondola Sub Committee - Oct 26 2026":
-    "The Gondola Advisory Committee meets virtually on October 26 at 3:00 PM. The main substantive item is a Federal Transit Administration Capital Investment Program update from Ed Parks and Gavin Poindexter — a signal of where federal funding pursuit stands for the gondola project. Amber Blake follows with SMART and partner jurisdiction updates. Miles Graham handles new business and public comment, each allotted five minutes.",
-
-  "smart|2026-10-26|SMART Gondola Advisory Committee":
-    "The Gondola Advisory Committee meets virtually on October 26. The main item is a 25-minute informational update on the FTA Capital Investment Program — the federal funding pipeline that the gondola project depends on — presented by Ed Parks and Gavin Poindexter. Amber Blake follows with SMART and partner jurisdiction updates. Miles Graham handles new business and public comment, each allotted five minutes. No votes or formal actions are on the agenda; this is a status-check meeting.",
-
   "tmvoa|2026-10-27|TMVOA Finance &amp; Budget Committee":
     "The October 27 TMVOA Finance & Budget Committee agenda hasn't been posted yet.",
-
-  "county|2026-10-26|San Miguel Basin Fair Board Meeting 10/26":
-    "The San Miguel Basin Fair Board holds its regular October meeting with County Manager Mike Bordogna presenting alongside a guest presentation on the Fair Board nonprofit structure. Financial business includes outstanding receipts from the Junior Livestock Sale, sponsorships, and added money, plus an early look at the 2027 budget and grant updates from Westmeath and Lone Cone Legacy Trust. Coordinators for 4-H, the fairgrounds, and Parks & Open Space each give reports. Old business covers proposed rule changes and panel/gate purchases for next year. New business takes up a board member application from Ashley Tomlinson, setting 2027 weigh-in dates, and brainstorming band and entertainment options. Next meeting is set for November 9.",
 
   "ouray|2026-10-27|Board of County Commissioners":
     "The Ouray County BOCC meets October 27 at the 4-H Event Center in Ridgway. The board takes up a fifth extension of the Emergency Disaster Declaration — a marker of how long the county has been navigating that situation. General business includes two vacancy-fill requests under the austerity resolution (Clerk and Recorder's Office, Treasurer's Office), a response letter on the Si Se Puede trademark dispute with UFW, a road materials supply agreement, and a resolution supporting Proposition 137 on the November 3 ballot. The board also considers a proclamation naming October 28 Gold Mountain Fire First Responder Appreciation Day. Sitting as the Local Licensing Authority, commissioners review a liquor license renewal for Divide Ranch. Sitting as the Board of Adjustment, they hold a public hearing on a Land Use Code variance request from Martha Campbell and the Home Trust of Ouray County for a property on County Road 24D. Blair & Associates presents the 2025 audited financial report.",
@@ -1401,7 +1383,10 @@ const MANUAL_SUMMARIES = {
     "The December 24, 2026 Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-12-02|Ecology Commission - Dec 02 2026":
-    "The Ecology Commission takes up a proposed ordinance that would phase out combustion-powered lawn and garden equipment townwide — first for leaf blowers by January 1, 2028, then for all other covered equipment (mowers, trimmers, edgers, and the like) by January 1, 2030. The draft ordinance would also immediately bar the Town from purchasing any new gas-powered lawn equipment. Snow removal gear, chainsaws, portable generators, and wildfire/defensible-space work are carved out. Enforcement would run complaint-based, with a written warning on a first offense; commercial operators can be cited both individually and as a business entity. Colorado's HB23-1161 point-of-sale discount and San Miguel Power Association rebates together could offset roughly half the cost of replacement equipment. This is a work session — no vote is on the table yet — with the path forward likely running through a Town Council agenda item after today's discussion."
+    "The Ecology Commission takes up a proposed ordinance that would phase out combustion-powered lawn and garden equipment townwide — first for leaf blowers by January 1, 2028, then for all other covered equipment (mowers, trimmers, edgers, and the like) by January 1, 2030. The draft ordinance would also immediately bar the Town from purchasing any new gas-powered lawn equipment. Snow removal gear, chainsaws, portable generators, and wildfire/defensible-space work are carved out. Enforcement would run complaint-based, with a written warning on a first offense; commercial operators can be cited both individually and as a business entity. Colorado's HB23-1161 point-of-sale discount and San Miguel Power Association rebates together could offset roughly half the cost of replacement equipment. This is a work session — no vote is on the table yet — with the path forward likely running through a Town Council agenda item after today's discussion.",
+
+  "county|2026-12-03|Board of County Commissioner meeting -Special":
+    "A special BOCC session with two distinct parts. First, budget adjustments for 2027: the board will work through potential amendments including clarifying the wildfire mitigation budget, a $50,000 seed-money request from the Chamber of Commerce, and an additional cost contribution tied to a Youth Hangout project. The consent agenda covers routine items — a planning commission reappointment, surplus declaration for three aging Road and Bridge trucks, the annual HUTF mileage sheet, an amended deed restriction in Two Rivers Subdivision, and a Proposition 123 MOU with the City of Montrose. Then, starting around 11:05, the commissioners move into closed executive sessions for personnel reviews of the County Manager and County Attorney, both of whom requested the closed meetings."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2819,13 +2804,25 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "At season’s end, Miner boys’ soccer receives All-League love",
+    source: "Telluride Times",
+    date: "November 25, 2026",
+    firstSeen: "2026-11-26",
+    newsTopic: "community",
+    copy: "Telluride boys' soccer wrapped its season 13-4 overall, falling to St. John Paul the Great in the state semifinals. Senior defender Gunnar Drew earned First Team All-SJBL honors and finished as a Player-of-the-Year runner-up. Clarke, Raible, and Montano also made First Team; Mahoney and Zago Carolei earned Second Team recognition.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_5a707c1c-a96b-45a1-984a-9809cc1b595c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/fb/dfb13b9a-72a2-46fb-b2f5-3e8831bf96b0/6b049a8a4867a.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "County discusses deed-restricted housing covenant changes",
     source: "Telluride Times",
     date: "November 25, 2026",
     firstSeen: "2026-11-25",
     newsTopic: "housing",
-    copy: "With the evolving real estate market and the challenge of offering enough affordable housing to locals, San Miguel County staff are working to update the deed restriction covenant. The Board of County Commissioners (BOCC) held a discussion about potential amendments…",
-    claudeSummary: false,
+    copy: "San Miguel County is updating its deed-restricted housing covenant, with key changes including a 3% annual appreciation cap to keep units affordable after some have sold for $750,000 or more. Capital improvement limits would be tied to current sales prices rather than original purchase price. Eligibility and foreclosure provisions are also under review.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_43979468-325f-44cf-85b2-6853972a4ad0.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/a1/5a166416-4f5e-41a4-ab91-2c1e86db0263/6b05d10fa1165.image.jpg",
     imgHiRes: true
@@ -3423,18 +3420,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Gathering around the communal table once more",
-    source: "Telluride Times",
-    date: "November 12, 2026",
-    firstSeen: "2026-11-12",
-    newsTopic: "education",
-    copy: "Alpine Chapel's free Thanksgiving sit-down dinner returns Nov. 21, 5–7 p.m., at Telluride High School Cafeteria after years of Covid-era takeout. No reservations, all welcome — catered turkey dinner plus live music, games, and a dessert bar.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_eeeb680d-fcb5-4367-958c-26b857b358b0.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/31/931e9413-0ccf-4597-bb7d-fc050bc0a1f5/6af501c0c1424.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Redvale couple killed last week in crash on Highway 141",
     source: "Telluride Times",
     date: "November 23, 2026",
@@ -3447,179 +3432,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Storytelling and poetry with locals Craig Childs and Daiva Česonis",
-    source: "Telluride Times",
-    date: "November 12, 2026",
-    firstSeen: "2026-11-12",
-    newsTopic: "arts-culture",
-    copy: "Craig Childs and his wife Daiva Česonis — both living near Norwood — are bringing an evening of storytelling and poetry to Wilkinson Public Library's magazine room Tuesday, Nov. 17 at 5:15 p.m. Childs is a 16-book author and John Burroughs Medal winner; Česonis is a former San Miguel County poet laureate with deep Telluride roots. Free, all ages, and open-mic friendly — the prompt this month is \"Quiet.\"",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_6a62cce7-264a-4631-b246-d9ab86ca088a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/a8/9a8d009b-33c6-4328-be12-55a10a318ecb/6aee4ef7e8811.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Uncompahgre Medical Center expands access to addiction treatment",
-    source: "Telluride Times",
-    date: "November 12, 2026",
-    firstSeen: "2026-11-12",
-    newsTopic: "health",
-    copy: "Federal grants are bringing expanded addiction treatment to San Miguel County and the West End, with Uncompahgre Medical Center, Telluride Regional Medical Center, and Basin Clinic all receiving funding through Colorado's Rural Health Transformation Program. Services include specialist consultations, telehealth, monthly in-person visits, and free naloxone kits. A peer support specialist will also be available at UMC at no cost to patients.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_6c5692f4-8c6e-4e67-8a45-ac9be42088a9.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/02/10257dc4-fccf-428f-90d9-4b0463d859a0/6aee3f4ae1c97.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "Upcoming youth events",
-    source: "Telluride Times",
-    date: "November 12, 2026",
-    firstSeen: "2026-11-12",
-    newsTopic: "government",
-    copy: "Busy week for local kids: talent show and middle school dance on the 12th, state football quarterfinals and basketball games through the week, and winter sports practice kicking off the 16th. Jacob Lukaszewski plays The Livery on the 13th. School board meets the 18th.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_b0f26baf-ea34-4473-8033-8d523d621412.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/25/f25d43e3-ebe4-48b4-a322-1460b4927628/6aee4b663d26c.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "The kestrel is some kind of storyteller",
-    source: "Telluride Times",
-    date: "November 12, 2026",
-    firstSeen: "2026-11-12",
-    newsTopic: "community",
-    copy: "Kestrels — North America's smallest falcon — are a regular sight along the Western Slope's pastures, orchards, and desert margins. The male sports blue-gray wings; the female, reddish brown — both marked by rusty backs and dark facial stripes. Small enough to miss on a fence wire until they move.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_16557668-75cf-4439-828a-10af6665d784.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "SMPA’s proposed rate increase meets needs in challenging situation",
-    source: "Telluride Times",
-    date: "November 12, 2026",
-    firstSeen: "2026-11-12",
-    newsTopic: "public-safety",
-    copy: "SMPA is proposing a rate increase taking effect Dec. 15, driven by rising wholesale power costs, insurance, equipment, and expanded wildfire mitigation work. For most residential members, the monthly access charge would rise $9 to $42, with on-peak rates climbing to 31¢/kWh. The board votes Nov. 17 at 9 a.m. via Zoom — open to the public.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_d1e9175b-d273-4c4b-8ef7-9e80fc9d5ac4.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/04/e0475813-7cac-4852-bf1d-bce96f209c5f/6af221d489efa.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Barthold Lichtenbelt joins Citizens State Bank board of directors",
-    source: "Telluride Times",
-    date: "November 12, 2026",
-    firstSeen: "2026-11-12",
-    newsTopic: "government",
-    copy: "Barthold Lichtenbelt, a retired NVIDIA vice president with over 20 years in graphics and AI software, has joined the Citizens State Bank board. He and his wife Cat have deep roots across Ouray and San Miguel counties, known locally for founding the Ouray County Response Fund and helping Swiss Village Mobile Home Park residents gain land ownership.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_61ba937a-bf69-4e50-aad8-9164d06182a8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/7a/67ab6b15-28b6-4652-b277-a37e8edefae3/6af1d18c9d6d2.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "Get dialed for winter: avalanche education returns to Telluride",
-    source: "Telluride Times",
-    date: "November 12, 2026",
-    firstSeen: "2026-11-12",
-    newsTopic: "education",
-    copy: "Telluride Mountain Club's Peter Inglis Avalanche Education Fund is accepting scholarship applications through Dec. 31 for residents of five surrounding counties. Four Backcountry Chats are planned at the library this winter, starting Dec. 10. First one covers snowpack, local radio systems, and SAR communication.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_42ea4081-c71b-4b6f-a649-bc2080fa7281.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/8b/68bb51b7-7627-41c8-9069-0ad2b8c278ab/6af1e4a590362.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Pups and pickup trucks",
-    source: "Telluride Times",
-    date: "November 12, 2026",
-    firstSeen: "2026-11-12",
-    newsTopic: "community",
-    copy: "Around 100,000 dogs die each year from falling or jumping out of pickup truck beds — from fractures, trauma, or getting hit by other vehicles. Secure crates help but still carry risks. The safest spot for a dog is inside the cab.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_cf4f14dc-ba09-4c76-82bb-ff958ca5a41b.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/7c/37cfd853-b51c-4f75-bc5f-d45796caaaa3/6af1ebf24b687.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Local governments meet to discuss big regional projects",
-    source: "Telluride Times",
-    date: "November 12, 2026",
-    firstSeen: "2026-11-12",
-    newsTopic: "housing",
-    copy: "Officials from Telluride, Mountain Village, San Miguel County, Norwood, and Ophir met Nov. 9 to swap updates on regional projects. Big items included Mountain Village's 49-unit workforce housing plan in Ilium (Phase 1 groundbreaking targeted fall 2027), a future regional wastewater plant also eyed for Ilium, and Telluride's Canyonlands and Shandoka housing projects moving through approvals.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_be4a3c6b-7f35-4484-a65b-3961ed0f082a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/b5/3b57f3d8-0644-4ca0-856c-2c3bf5517887/6af36f9065492.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Golden hours",
-    source: "Telluride Times",
-    date: "November 12, 2026",
-    firstSeen: "2026-11-12",
-    newsTopic: "recreation",
-    copy: "A solo evening mountain bike ride on a new desert trail near town — winding through junipers, red dirt, and rimrock as the sun dropped. Well-built singletrack, good light, nobody else around. Some rides just land right.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_fcf5d513-065e-43a4-adb8-a3be927f2db4.html",
-    img: "",
-    isLetter: true,
-    imgHiRes: true
-  },
-  {
-    title: "New regulations prepare County for natural resources development",
-    source: "Telluride Times",
-    date: "November 12, 2026",
-    firstSeen: "2026-11-12",
-    newsTopic: "community",
-    copy: "San Miguel County wrapped up seven years of work on Oct. 21, passing final regulations covering five natural resource categories — solar, mining, forestry, oil and gas, and deep geothermal. The rules are meant to balance development with protecting land, water, wildlife, and community character. Planning Director Kaye Simonson retired at the close of the project.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_77edfb33-89bf-4734-9a2e-bdfa40ba2390.html",
-    img: "",
-    isLetter: true,
-    imgHiRes: true
-  },
-  {
-    title: "Letters to the editor",
-    source: "Telluride Times",
-    date: "November 12, 2026",
-    firstSeen: "2026-11-12",
-    newsTopic: "education",
-    copy: "Three letters this week: a resident crediting the town's Green Grant program with helping replace decades-old windows and cutting heat loss; a student raving about her Early Intervention OT internship through the THS Mentorship Program; and another student who shadowed the pastor at Telluride Alpine Chapel.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_768123d9-e5bc-4298-8537-f15dde2eadff.html",
-    img: "",
-    letterAuthor: "Sincerely, Bridger Barret",
-    isLetter: true,
-    imgHiRes: true
-  },
-  {
-    title: "American jurors",
-    source: "Telluride Times",
-    date: "November 12, 2026",
-    firstSeen: "2026-11-12",
-    newsTopic: "community",
-    copy: "Juries are being asked to weigh increasingly complex factors — trauma histories, mental illness, drug effects, even genetic predispositions — when deciding criminal responsibility. Two cases, Lindsay Clancy and Christa Pike, show how murky that line has become. Some are asking whether verdicts like \"guilty but insane\" might help juries navigate cases that current options don't fit cleanly.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_5636bc3f-ec18-4584-8c38-22773bb78428.html",
-    img: "",
-    isLetter: true,
-    imgHiRes: true
-  },
-  {
-    title: "Legals and Public Notices for Nov. 12-18, 2026",
-    source: "Telluride Times",
-    date: "November 12, 2026",
-    firstSeen: "2026-11-12",
-    newsTopic: "infrastructure",
-    copy: "A foreclosure sale is scheduled for December 17, 2026 at the San Miguel County Public Trustee's office for a Norwood property at 53 East Homestead Road, with an outstanding balance of roughly $172,000. A second foreclosure involves a San Miguel County property held by Alpine Bank, with about $30,000 remaining on the loan.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/legals/article_88be68bb-ea46-4015-9b5f-01e0e2540cfc.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town Council adopts 2027 fees and charges",
     source: "Town of Telluride",
     date: "November 24, 2026",
@@ -3629,6 +3441,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Sign Up for the 2026 Turkey Trot!",
+    source: "San Miguel County",
+    date: "November 5, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1424",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14909"
+  },
+  {
+    title: "Black Bear and Imogene Passes Closed for the Winter",
+    source: "San Miguel County",
+    date: "November 3, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1423",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
+  },
+  {
     title: "Treasurer's Office Closed Weds 11/25 - Fri 11/27",
     source: "San Miguel County",
     date: "November 24, 2026",
@@ -3636,6 +3466,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The Treasurer's office will be closed Weds 11/25 - Fri 11/27.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=553",
     img: ""
+  },
+  {
+    title: "Black Bear and Imogene Passes Closed for the Winter",
+    source: "San Miguel County",
+    date: "November 3, 2026",
+    newsTopic: "community",
+    copy: "Due to changing weather conditions and the onset of winter, Imogene and Black Bear Passes are now officially closed for the season.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=551",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
   },
   {
     title: "Town of Telluride Offices Closed for Thanksgiving, Thursday and Friday, November 26 and 27",
@@ -3660,7 +3499,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of Special Meeting of the Ridgway Town Council on November 30, 2026 - Notice dated November 23, 2026",
     source: "Town of Ridgway",
-    date: "November 25, 2026",
+    date: "November 26, 2026",
     firstSeen: "2026-11-24",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3693,7 +3532,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Public Hearing of the Ridgway Town Council on Dec. 9, 2026 - Notice dated November 23, 2026",
     source: "Town of Ridgway",
-    date: "November 25, 2026",
+    date: "November 26, 2026",
     firstSeen: "2026-11-24",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3704,7 +3543,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Introduction of Ordinance No. 05-2026 - Notice dated November 23, 2026",
     source: "Town of Ridgway",
-    date: "November 25, 2026",
+    date: "November 26, 2026",
     firstSeen: "2026-11-24",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3715,7 +3554,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice and Call of 2027 Fiscal Year Budget Meetings of the Ridgway Town Council - Notice dated September 10, 2026",
     source: "Town of Ridgway",
-    date: "November 25, 2026",
+    date: "November 26, 2026",
     firstSeen: "2026-09-29",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3726,7 +3565,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway, City of Ouray, and Ouray County Establish New Three-Year Affordable Housing Goals",
     source: "Town of Ridgway",
-    date: "November 25, 2026",
+    date: "November 26, 2026",
     firstSeen: "2026-10-21",
     newsTopic: "housing",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3748,6 +3587,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 11-25-26",
+    source: "KOTO Community Radio",
+    date: "November 26, 2026",
+    newsTopic: "community",
+    copy: "West End Roundup with the San Miguel Basin Forum; I, Jonathan, Attends the Listening Club; Telluride Gives Thanks",
+    href: "https://koto.org/news/newscast-11-25-26/"
+  },
   {
     title: "Newscast 11-23-26",
     source: "KOTO Community Radio",
@@ -3803,14 +3650,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "community",
     copy: "West End Roundup with the San Miguel Basin Forum; Kaye Simonson Retires as County Planning Director; Songs from the San Miguel Take to the Stage",
     href: "https://koto.org/news/newscast-11-12-26/"
-  },
-  {
-    title: "Newscast 11-11-26",
-    source: "KOTO Community Radio",
-    date: "November 12, 2026",
-    newsTopic: "education",
-    copy: "Telluride School Superintendent John Pandolfo Announces Retirement; CO 150, US 250, BG 52; Cat Movie Fisher with Risho Unda",
-    href: "https://koto.org/news/newscast-11-11-26/"
   }
 ];
 
@@ -4414,17 +4253,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Cardio Dance w/Kelsey",
-    link: "https://koto.org/event/cardio-dance-w-kelsey-2/",
-    description: "Join us for a fun evening of dancing and getting your heart rate up! You will be having so much fun, you won't even know you are exercising! Led by Kelsey Trottier from the Telluride Dance Collective. 2nd and 4th Monday of the month. ¡Únete a nosotros para una divertida noche de baile y ejercicio! Te divertirás tanto que ni te darás cuenta de que estás haciendo ejercicio. Dirigido por Kelsey Trottier del Telluride Dance Collective.",
-    pubDate: "2026-11-25T18:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Turkey Trot 2026",
     link: "https://koto.org/event/turkey-trot-2026/",
     description: "Dust off those tennis shoes and tail feathers – the Turkey Trot is back! This 5K walk/run is free and fun for the whole family (even Fido!). Sign up online in advance to be entered into a raffle, with additional prizes for the fastest male, fastest female, fastest kid under 12 and best costume. The event will take place at the intersection of Sunshine Mesa Rd. and Ilium Rd. at 9:00 a.m. on Thanksgiving morning, Thursday, November 26th, at 9:00 a.m. Sign up online at bit.ly/smcturkeytrot2026.",
@@ -4951,6 +4779,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Arts HQ, TELLURIDE",
     imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
+  },
+  {
+    title: "Up-Off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-12-18/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-12-18T10:00:00-07:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   }
 ];
 
@@ -4997,7 +4836,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Shepherd, Australian • Male",
     firstSeen: "2026-10-31",
     revealDate: "2026-11-02",
-    lastSeen: "2026-11-25"
+    lastSeen: "2026-11-26"
   },
   {
     id: "TEL-A-209",
@@ -5011,7 +4850,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Collie, Border / Cattle Dog, Australian (Red Heeler) • Female",
     firstSeen: "2026-11-25",
     revealDate: "2026-11-25",
-    lastSeen: "2026-11-25"
+    lastSeen: "2026-11-26"
   }
 ];
 
@@ -5154,6 +4993,18 @@ const ALIBI_EVENTS = [
     category: "Live Music",
     location: "The Alibi • Telluride, CO",
     imageUrl: "https://1v09t9hszk.ucarecd.net/5a0e2028-07e8-4974-b039-d62e8ab44ab4/"
+  },
+  {
+    title: "Atlas Radio",
+    link: "https://www.alibitelluride.com/calendar#eca-event=atlas-radio",
+    description: "Atlas Radio is a funk-forward jam band led by guitarist Blake Beitzel, performing live at The Alibi in Telluride. The group brings an energetic, groove-driven sound rooted in funk and jam band traditions.",
+    pubDate: "2027-01-24",
+    time: "8:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://1v09t9hszk.ucarecd.net/c259bebf-9fe4-48c3-b51c-8402400f2fea/-/crop/3550x1774/83,0/-/preview/"
   }
 ];
 
@@ -5938,7 +5789,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/live-music-in-the-garden-zan-waller-stefan-davenport-1540",
     description: "Standard Alchemy — featuring Zan Waller on trumpet and Stefan Davenport on guitar — performs swing, cocktail jazz, and Great American Songbook standards at Chloe's Charcuterie & Wine on Sunday afternoons from 4:00 to 7:00 p.m. Occasional special guest vocalists join the duo, making it a relaxed weekly setting for live jazz paired with wine and charcuterie.",
     pubDate: "2026-11-29T23:00:00.000Z",
-    endDate: "2027-01-17",
+    endDate: "2027-01-24",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6593,6 +6444,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ridgway Secondary School",
     imageUrl: "https://localist-images.azureedge.net/photos/54471108905325/huge/4f27e206b0b18ddc50a86d8c8a3897b524416c95.jpg"
+  },
+  {
+    title: "Pilates Workshop",
+    link: "https://events.ourayridgwayevents.com/event/pilates-workshop",
+    description: "PILATES WORKSHOP: BUILT FOR PROGRESS Why the Design of the Pilates Method Helps you Overcome “Why Can’t I Do [Insert Exercise] Yet?” Sunday, January 24 • 1-3 pm • Ridgway Pilates • $50 Who it's for: Pilates teachers who want a deeper understanding of why the method works, and dedicated clients who are ready to move beyond \"what\" and understand \"how\" and \"why.\" … Every Pilates practitioner has hit the wall: the exercise that stays just out of reach, the client who plateaus, the move that looks effortless on someone else. The answer usually isn't \"try harder\" or \"do more of that exercise.\" It's found in the method itself. Pilates was designed as a complete system, and each of its hallmarks does a specific job in helping the body progress. …",
+    pubDate: "2027-01-24T20:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/54597700780563/huge/047d65730afb0fa2d75059a936390319bfcd6eb1.jpg"
   }
 ];
 
@@ -6666,17 +6528,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Eco- Grief Workshop: Between Grief & Gratitude, Where Love & Loss Meet in a Changing World",
-    link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
-    description: "A community workshop held in Mountain Village exploring eco-grief — the emotional weight of loss tied to environmental change — alongside gratitude and love as responses to a shifting world. Led by Lauren Norton of Through the Woods Doula and Mollie Theis of EcoAction Partners, in partnership with the Wilkinson Public Library, the program offers space for reflection and connection.",
-    pubDate: "2026-11-24T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
-  },
   {
     title: "An Outlaw Thanksgiving at Alloy Kitchen",
     link: "https://townofmountainvillage.com/explore/events/all-events/an-outlaw-thanksgiving-at-alloy-kitchen/",
@@ -7584,23 +7435,6 @@ const LEGAL_NOTICES = [
     url: "https://townofridgway.colorado.gov/resources/requests-for-proposals/bids"
   },
   {
-    title: "Request for Proposal -- Painting of the San Miguel County Jail",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Painting of the San Miguel County Jail.",
-    deadline: "Open until contracted",
-    expires: "2026-11-25",
-    dates: "8/27",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=209",
-    address: "",
-    smcBidID: "209"
-  },
-  {
     title: "Request for Proposal -- 2028 Multi-Jurisdictional All-Hazard Mitigation Plan Update",
     entity: "San Miguel County",
     entityClass: "ent-county",
@@ -7850,6 +7684,40 @@ const LEGAL_NOTICES = [
     address: "San Miguel Combined Court, P.O. Box 919, Telluride, CO 81435",
     noticeKey: "name-change-2026C30012-zibners-lohr",
     caseNumber: "2026C30012"
+  },
+  {
+    title: "Request for Proposal -- Painting of the San Miguel County Jail",
+    entity: "San Miguel County",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Request for Proposal",
+    filterTag: "public-entity",
+    summary: "San Miguel County is seeking qualified respondents for: Painting of the San Miguel County Jail.",
+    deadline: "Open until contracted",
+    expires: "2027-02-24",
+    dates: "11/26",
+    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=209",
+    address: "",
+    smcBidID: "209"
+  },
+  {
+    title: "Request for Proposal -- County Jail Medical Provider",
+    entity: "San Miguel County",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Request for Proposal",
+    filterTag: "public-entity",
+    summary: "San Miguel County is seeking qualified respondents for: County Jail Medical Provider.",
+    deadline: "Closes 2/20/2026",
+    expires: "2026-02-20",
+    dates: "11/26",
+    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=212",
+    address: "",
+    smcBidID: "212"
   }
 ];
 
@@ -7973,6 +7841,9 @@ const HOUSING_LISTINGS = [
 ];
 
 const RIDGWAY_AGENDA_MAP = {
+  "November 30, 2026":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Special-Meeting-Packet---November-30%2C-2026.pdf",
+
   "November 19, 2026":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---November-19%2C-2026_0.pdf",
 

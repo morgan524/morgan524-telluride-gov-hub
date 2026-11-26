@@ -1,8 +1,4 @@
 {
-  "county|2026-10-26|Open Space Commission Meeting": {
-    "sv": 4,
-    "ph": "1ff606174e68cca5"
-  },
   "telluride|2026-10-27|Town Council - Oct 27 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045",
     "sv": 4,
@@ -234,23 +230,9 @@
     "passcode": "281002.",
     "phone": "346-248-7799"
   },
-  "telluride|2026-10-26|Gondola Sub Committee - Oct 26 2026": {
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8327",
-    "zoomUrl": "https://urldefense.com/v3/__https:/gbsm.zoom.us/j/82559576086__;!!ETWISUBM!3x58A-FfNf9JhIvrh2mHeq3wy9OHc7S76v3Obypudr5m-ILQvLZAsE3ZuUUqFUGuSSfFOzlMG_ETBGmg3kQV-w$",
-    "sv": 4
-  },
-  "smart|2026-10-26|SMART Gondola Advisory Committee": {
-    "agendaUrl": "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/2026.10.26-Gsub-Agenda.pdf",
-    "zoomUrl": "https://urldefense.com/v3/__https:/gbsm.zoom.us/j/82559576086__;!!ETWISUBM!3x58A-FfNf9JhIvrh2mHeq3wy9OHc7S76v3Obypudr5m-ILQvLZAsE3ZuUUqFUGuSSfFOzlMG_ETBGmg3kQV-w$",
-    "sv": 4
-  },
   "tmvoa|2026-10-27|TMVOA Finance &amp; Budget Committee": {
     "sv": 4,
     "ph": "b858cb282617fb09"
-  },
-  "county|2026-10-26|San Miguel Basin Fair Board Meeting 10/26": {
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1092/files/agenda/2058"
   },
   "ouray|2026-10-27|Board of County Commissioners": {
     "agendaUrl": "https://ouraycoco.portal.civicclerk.com/event/1081/files/agenda/7575",
@@ -653,6 +635,14 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8369",
     "zoomUrl": "https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1",
     "phone": "970-728-2496",
+    "sv": 4
+  },
+  "county|2026-12-03|Board of County Commissioner meeting -Special": {
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1120/files/agenda/2082",
+    "zoomUrl": "https://us02web.zoom.us/meeting/register/ZX_PyCyTS0Oj4fzOTO9w2g",
+    "meetingId": "886 4762 0336",
+    "passcode": "118664",
+    "phone": "719-359-4580",
     "sv": 4
   }
 }

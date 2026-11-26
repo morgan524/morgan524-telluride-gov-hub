@@ -1,27 +1,27 @@
 {
- "generated": "2026-11-25T19:06:22.883Z",
+ "generated": "2026-11-26T03:29:12.744Z",
  "pinned": false,
  "topic": "code",
  "topicLabel": "Code Changes & Accelerated Review",
- "headline": "Code Changes & Accelerated Review goes before Special Town Council on Friday, December 4",
- "blurb": "This special meeting is a single-item public hearing: Town Council sits as an appellate body to review a challenge to HARC's September 16, 2026 approval of a new construction project at 208 S Fir Street. The appellant, an adjacent property owner at 150 W Pacific Avenue, filed the appeal on September 30, 2026.",
+ "headline": "Code Changes & Accelerated Review goes before Board of County Commissioner meeting -Special on Thursday, December 3",
+ "blurb": "A special BOCC session with two distinct parts. First, budget adjustments for 2027: the board will work through potential amendments including clarifying the wildfire mitigation budget, a $50,000 seed-money request from the Chamber of Commerce, and an additional cost contribution tied to a Youth Hangout project.",
  "images": [],
  "deepDive": {
   "label": "Code Changes & Accelerated Review",
   "href": "/deep-dive-code.html"
  },
  "meeting": {
-  "title": "Special Town Council",
-  "sourceLabel": "Town of Telluride",
-  "date": "2026-12-04",
-  "humanDate": "Friday, December 4",
+  "title": "Board of County Commissioner meeting -Special",
+  "sourceLabel": "San Miguel County",
+  "date": "2026-12-03",
+  "humanDate": "Thursday, December 3",
   "time": "10:00 AM",
-  "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324",
+  "location": "333 West Colorado Ave, 2nd Fl, Telluride, CO 81435",
+  "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1120/files",
   "hasAgenda": true,
-  "packetUrl": "https://telluride-co.civicweb.net/document/448285/",
-  "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8324",
-  "zoomLink": "https://us06web.zoom.us/meeting/register/LyUziwYoTiaZTkcdYc8iiA",
-  "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+  "packetUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1120/files/agenda/2083",
+  "link": "https://sanmiguelcoco.portal.civicclerk.com/event/1120/files",
+  "zoomLink": "https://us02web.zoom.us/meeting/register/ZX_PyCyTS0Oj4fzOTO9w2g",
+  "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
  }
 }
