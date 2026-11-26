@@ -1,5 +1,18 @@
 {
-  "hash": "36b3554c34c9d6ce7641e30df14de720bf6db650",
-  "lede": "Thanksgiving lands square in the middle of this week, and the valley is leaning into it — Turkey Trot on Thursday morning, an Outlaw Thanksgiving dinner at Alloy Kitchen, and live music through the holiday weekend including Will Ski 4 Food on the mountain Saturday and Sunday. On the government side, both the Board of County Commissioners Work Session and the Mountain Village Metro District meeting are on the calendar, but neither has posted an agenda yet, so there's nothing to track down or weigh in on this week.",
-  "notable": []
+  "hash": "3bdc5cc7aa319da9173d04815e6851bf767109c5",
+  "lede": "The most consequential thing on the calendar this week happens Tuesday at the Ecology Commission, where a proposed ordinance would ban gas-powered lawn and garden equipment townwide — leaf blowers first by 2028, everything else by 2030. The Housing Authority Subcommittee also takes up a real decision Tuesday: whether to grant a deed-restricted homeowner a $160,000 roofing exception that runs 57% of their original purchase price. Around those meetings, the week opens with Thanksgiving traditions — Turkey Trot, Outlaw Thanksgiving, Will Ski 4 Food on the slopes — before rolling into the usual mix of live music, trivia, and community gatherings.",
+  "notable": [
+    {
+      "id": 3,
+      "stake": "Vote on ordinance banning gas lawn equipment townwide by 2028–2030."
+    },
+    {
+      "id": 2,
+      "stake": "Board decides whether deed-restricted owner can exceed capital improvement limits."
+    },
+    {
+      "id": 1,
+      "stake": "Public hearing on expanded street closure footprint for 2027 Skijoring event."
+    }
+  ]
 }

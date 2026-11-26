@@ -63,11 +63,13 @@
   {
     "date": "December 3, 2026",
     "time": "10:00 AM",
-    "title": "One Time Event",
+    "title": "Board of County Commissioner meeting -Special",
     "type": "other",
     "location": "333 West Colorado Ave, 2nd Fl, Telluride, CO 81435",
     "civicClerkId": 1120,
-    "note": null
+    "note": null,
+    "special": true,
+    "packetUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1120/files/agenda/2083"
   },
   {
     "date": "December 9, 2026",

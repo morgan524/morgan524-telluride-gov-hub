@@ -13,23 +13,6 @@
     "url": "https://townofridgway.colorado.gov/resources/requests-for-proposals/bids"
   },
   {
-    "title": "Request for Proposal -- Painting of the San Miguel County Jail",
-    "entity": "San Miguel County",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Request for Proposal",
-    "filterTag": "public-entity",
-    "summary": "San Miguel County is seeking qualified respondents for: Painting of the San Miguel County Jail.",
-    "deadline": "Open until contracted",
-    "expires": "2026-11-25",
-    "dates": "8/27",
-    "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=209",
-    "address": "",
-    "smcBidID": "209"
-  },
-  {
     "title": "Request for Proposal -- 2028 Multi-Jurisdictional All-Hazard Mitigation Plan Update",
     "entity": "San Miguel County",
     "entityClass": "ent-county",
@@ -295,5 +278,39 @@
     "address": "San Miguel Combined Court, P.O. Box 919, Telluride, CO 81435",
     "noticeKey": "name-change-2026C30012-zibners-lohr",
     "caseNumber": "2026C30012"
+  },
+  {
+    "title": "Request for Proposal -- Painting of the San Miguel County Jail",
+    "entity": "San Miguel County",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Request for Proposal",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County is seeking qualified respondents for: Painting of the San Miguel County Jail.",
+    "deadline": "Open until contracted",
+    "expires": "2027-02-24",
+    "dates": "11/26",
+    "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=209",
+    "address": "",
+    "smcBidID": "209"
+  },
+  {
+    "title": "Request for Proposal -- County Jail Medical Provider",
+    "entity": "San Miguel County",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Request for Proposal",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County is seeking qualified respondents for: County Jail Medical Provider.",
+    "deadline": "Closes 2/20/2026",
+    "expires": "2026-02-20",
+    "dates": "11/26",
+    "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=212",
+    "address": "",
+    "smcBidID": "212"
   }
 ]
