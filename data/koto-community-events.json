@@ -1,27 +1,5 @@
 [
   {
-    "title": "Turkey Trot 2026",
-    "link": "https://koto.org/event/turkey-trot-2026/",
-    "description": "Dust off those tennis shoes and tail feathers – the Turkey Trot is back! This 5K walk/run is free and fun for the whole family (even Fido!). Sign up online in advance to be entered into a raffle, with additional prizes for the fastest male, fastest female, fastest kid under 12 and best costume. The event will take place at the intersection of Sunshine Mesa Rd. and Ilium Rd. at 9:00 a.m. on Thanksgiving morning, Thursday, November 26th, at 9:00 a.m. Sign up online at bit.ly/smcturkeytrot2026.",
-    "pubDate": "2026-11-26T09:00:00-07:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/11/Turkey-Trot-English-Digital.png"
-  },
-  {
-    "title": "An Outlaw Thanksgiving at Alloy Kitchen",
-    "link": "https://koto.org/event/an-outlaw-thanksgiving-at-alloy-kitchen/",
-    "description": "An Outlaw Thanksgiving at Alloy Kitchen in Mountain Lodge Telluride, Mountain Village. A fire-lit Thanksgiving buffet with live music on Thursday, November 26, from 2 to 6 PM. Reservations through OpenTable.",
-    "pubDate": "2026-11-26T14:00:00-07:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Mountain Lodge Telluride, Mountain Village",
-    "imageUrl": ""
-  },
-  {
     "title": "Live Music in the Après Lounge at Mountain Lodge Telluride",
     "link": "https://koto.org/event/live-music-in-the-apres-lounge-at-mountain-lodge-telluride/2026-11-26/",
     "description": "Local live music in the Après Lounge at Mountain Lodge Telluride in Mountain Village, 4 to 7 PM on most Thursdays, Fridays and Saturdays all winter.",
@@ -376,7 +354,7 @@
   {
     "title": "Telluride Mountain School Open House",
     "link": "https://koto.org/event/telluride-mountain-school-open-house-4/",
-    "description": "Telluride Mountain School is hosting an open house where prospective families and community members can step directly into the learning environment rather than sit through a formal presentation. Visitors are welcome to explore classrooms, meet teachers and students, and experience firsthand the school's approach to curiosity, connection, and real-world learning.",
+    "description": "School In Action Open House! Come experience what learning looks like at Telluride Mountain School. Instead of a presentation about our school, step into the learning. Visit classrooms, meet teachers and students, explore our campus, and see firsthand how curiosity, connection, and real-world experiences shape the TMS experience. Come see: Learning in action – inquiry, hands-on projects, and interdisciplinary exploration Students known and supported – small classes and meaningful relationships School without walls – place-based and outdoor learning woven throughout the experience The TMS difference – a Preschool-8 education designed to cultivate confident, curious, capable learners Our community – meet the people who make TMS such a special place to learn",
     "pubDate": "2026-12-10T09:00:00-07:00",
     "source": "koto",
     "sourceLabel": "KOTO",
@@ -409,7 +387,7 @@
   {
     "title": "Ski Film: Warren Miller's Day Off",
     "link": "https://koto.org/event/ski-film-warren-millers-day-off/",
-    "description": "Warren Miller's *Days Off*, the legendary ski film franchise's 77th installment, comes to the Sheridan Opera House in Telluride. The film follows host Katie Burrell and the world's top snow sports athletes across global destinations, capturing unscripted, competition-free riding from Alaska heli-drops to high-alpine terrain.",
+    "description": "Warren Miller's \"Days Off\" This fall, drop in on Warren Miller’s 77th film, Days Off. Follow host Katie Burrell as the world’s best athletes show you what they do on their days off—no agenda, no competition, just pure, unscripted joy.Embark on a global journey from heli-drops in Alaska and high-alpine mountaineering in Chamonix to the legendary powder of Hokkaido, Japan. Take a ride down Banff’s infamous skijoring course, hit the slopes of Deer Valley, and charge Canada’s finest in Revelstoke, Whistler, and Pemberton. Days Off captures the raw, unfiltered heart of mountain culture—a pure celebration of skiing for skiing’s sake and the joy of making time for what matters most. Sponsored by Christy Sports. DOORS 5:00PM/SHOW 5:30PM DOORS 8:00PM/SHOW 8:30PM",
     "pubDate": "2026-12-11T00:00:00-07:00",
     "source": "koto",
     "sourceLabel": "KOTO",
@@ -537,5 +515,16 @@
     "category": "Community Event",
     "location": "Lone Cone Library Norwood",
     "imageUrl": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    "title": "Live Music in the Après Lounge at Mountain Lodge Telluride",
+    "link": "https://koto.org/event/live-music-in-the-apres-lounge-at-mountain-lodge-telluride/2026-12-18/",
+    "description": "Local live music in the Après Lounge at Mountain Lodge Telluride in Mountain Village, 4 to 7 PM on most Thursdays, Fridays and Saturdays all winter.",
+    "pubDate": "2026-12-18T16:00:00-07:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Mountain Lodge Telluride, Mountain Village",
+    "imageUrl": ""
   }
 ]

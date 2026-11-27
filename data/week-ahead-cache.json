@@ -1,18 +1,22 @@
 {
-  "hash": "3bdc5cc7aa319da9173d04815e6851bf767109c5",
-  "lede": "The most consequential thing on the calendar this week happens Tuesday at the Ecology Commission, where a proposed ordinance would ban gas-powered lawn and garden equipment townwide — leaf blowers first by 2028, everything else by 2030. The Housing Authority Subcommittee also takes up a real decision Tuesday: whether to grant a deed-restricted homeowner a $160,000 roofing exception that runs 57% of their original purchase price. Around those meetings, the week opens with Thanksgiving traditions — Turkey Trot, Outlaw Thanksgiving, Will Ski 4 Food on the slopes — before rolling into the usual mix of live music, trivia, and community gatherings.",
+  "hash": "17930a275b566142d69f75ebefcedb53341f697a",
+  "lede": "The biggest thing on the government calendar this week is the Ecology Commission taking up a proposed ordinance that would ban gas-powered leaf blowers in Telluride by 2028 and all combustion lawn equipment by 2030 — a real policy change worth paying attention to if you have opinions about it. The county commissioners also have a special budget session Wednesday with actual dollar decisions on the table, including a $50,000 Chamber seed-money request and wildfire mitigation funding. The Housing Authority subcommittee weighs in on a $160,000 deed-restricted roof replacement that tests the limits of capital improvement rules.",
   "notable": [
     {
-      "id": 3,
-      "stake": "Vote on ordinance banning gas lawn equipment townwide by 2028–2030."
-    },
-    {
       "id": 2,
-      "stake": "Board decides whether deed-restricted owner can exceed capital improvement limits."
+      "stake": "Proposed ordinance banning gas lawn equipment townwide; public review stage."
     },
     {
       "id": 1,
-      "stake": "Public hearing on expanded street closure footprint for 2027 Skijoring event."
+      "stake": "Deed-restricted homeowner seeks exception for $160,000 roof replacement."
+    },
+    {
+      "id": 0,
+      "stake": "Public hearing on expanded street closure for 2027 Skijoring event footprint."
+    },
+    {
+      "id": 8,
+      "stake": "County budget amendments up for decision, including $50K Chamber request."
     }
   ]
 }

@@ -535,5 +535,16 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63773/john_craigie.800x533.webp"
+  },
+  {
+    "title": "Dogs in a Pile",
+    "link": "https://www.telluride.com/event/dogs-in-a-pile/",
+    "description": "Something organic has been blooming from Asbury Park, New Jersey, and is now making its way around the world. Dogs In A …",
+    "pubDate": "2027-01-26",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63805/screenshot_2026-10-13_at_4_07_42_pm.800x533.webp"
   }
 ]
