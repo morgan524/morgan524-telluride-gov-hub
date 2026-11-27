@@ -823,33 +823,23 @@ const MEETING_PREVIEWS = {
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
-    title: "2026 Chamber Meeting, December",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 8, 2026",
+    title: "Volunteers needed-Saturday, Nov. 28 at 10 am",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "November 27, 2026",
     newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
+    copy: "Please come and help change out our parish song books on this Saturday, November 28 at 10 am. Volunteer hours are able to be earned.",
+    href: "https://stpatrickstelluride.com/2026/parish-news/volunteers-needed-saturday-nov-28-at-10-am/",
     img: ""
   },
   {
-    title: "Noel Night",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 4, 2026",
+    title: "Parish novena begins/Comienza la novena parroquial",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "November 27, 2026",
     newsTopic: "community",
-    copy: "Community shopping event and celebration.",
-    href: "https://norwoodcolorado.com/event/noel-night-3/",
-    img: ""
-  },
-  {
-    title: "West End Parade of Lights & Elfin Eve",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 3, 2026",
-    newsTopic: "arts-culture",
-    copy: "Holiday parade and festival.",
-    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
+    copy: "PLEASE JOIN US! Reminder to begin the prayers of the Novena to the Most Sacred Heart of Jesus today on your own and/or with your family as we prepare to consecrate our St. Patrick Parish to the Most Sacred Heart of Jesus at the Sunday 9 am Holy Mass on...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/parish-novena-begins-comienza-la-novena-parroquial/",
     img: ""
   },
   {
@@ -2770,6 +2760,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Parade of Lights will illuminate Norwood",
+    source: "Telluride Times",
+    date: "November 27, 2026",
+    firstSeen: "2026-11-27",
+    newsTopic: "community",
+    copy: "Norwood's Noel Night returns Friday, Dec. 4, with the Parade of Lights at 6:15 p.m., holiday markets across three venues, a turkey dinner drawing, and kazoo caroling at The Livery. Markets run Dec. 4–5 at Town Hall, NPRD, and Lone Cone Library, with 30+ vendor booths total.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_c8150b8a-13db-453e-8f92-c87660d0d08d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/a1/5a152bed-c4a1-4e5f-93a8-201b7bce13c4/6b008be7828b0.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Community helpers",
     source: "Telluride Times",
     date: "November 27, 2026",
@@ -4362,17 +4364,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Up-Off Gymnastics, Dance, and Spanish",
-    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-11-27/",
-    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
-    pubDate: "2026-11-27T10:00:00-07:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Lone Cone Library Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
-  },
-  {
     title: "Live Music in the Après Lounge at Mountain Lodge Telluride",
     link: "https://koto.org/event/live-music-in-the-apres-lounge-at-mountain-lodge-telluride/2026-11-27/",
     description: "Local live music in the Après Lounge at Mountain Lodge Telluride in Mountain Village, 4 to 7 PM on most Thursdays, Fridays and Saturdays all winter.",
@@ -4890,20 +4881,6 @@ const WILKINSON_EVENTS = [
 // none of which are advertised as adoptable. The sync filters those out, so
 // this repopulates automatically when THS posts genuinely-available pets.
 const HUMANE_SOCIETY_ANIMALS = [
-  {
-    id: "TEL-A-208",
-    name: "Yuki",
-    species: "Dog",
-    breed: "Shepherd, Australian",
-    ageGroup: "Young Dog",
-    sex: "Male",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/c067959bb239e4d7326cd9292aabdd21/f958828e485b59006c34e4c885570d98.jpeg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/214942131",
-    summary: "Young Dog • Shepherd, Australian • Male",
-    firstSeen: "2026-10-31",
-    revealDate: "2026-11-02",
-    lastSeen: "2026-11-27"
-  },
   {
     id: "TEL-A-209",
     name: "Callie",
@@ -6580,17 +6557,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "An Outlaw Thanksgiving at Alloy Kitchen",
-    link: "https://townofmountainvillage.com/explore/events/all-events/an-outlaw-thanksgiving-at-alloy-kitchen/",
-    description: "A Thanksgiving buffet at Alloy Kitchen in Mountain Lodge Telluride, set around a fire with live music. It's a festive holiday gathering in Mountain Village with an outlaw spirit for those celebrating Thanksgiving in the mountains.",
-    pubDate: "2026-11-26T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/50177/lodge-winter-2200x1100-3.jpg"
-  },
-  {
     title: "Live Music at Mountain Lodge",
     link: "https://townofmountainvillage.com/explore/events/all-events/live-music-at-mountain-lodge/",
     description: "Live music returns to the Après Lounge at Mountain Lodge Telluride in Mountain Village, with local acts performing most Thursdays from 4 to 7 p.m. throughout the winter season. It's a relaxed après-ski setting for enjoying live performances from the local music community.",
@@ -6655,6 +6621,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30530/drb-event-new.png"
+  },
+  {
+    title: "Live Music at Mountain Lodge",
+    link: "https://townofmountainvillage.com/explore/events/all-events/live-music-at-mountain-lodge/",
+    description: "Live music returns to the Après Lounge at Mountain Lodge Telluride in Mountain Village, with local acts performing most Thursdays from 4 to 7 p.m. throughout the winter season. It's a relaxed après-ski setting for catching live performances from the local music community.",
+    pubDate: "2026-12-03T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/50249/alloy-live-music-1800x900.jpg"
   },
   {
     title: "Movies Under the Stars",
@@ -6745,6 +6722,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/31332/1435687101a20036601e28_1800x900.jpg"
   },
   {
+    title: "Live Music at Mountain Lodge",
+    link: "https://townofmountainvillage.com/explore/events/all-events/live-music-at-mountain-lodge/",
+    description: "Mountain Lodge Telluride hosts recurring live music in its Après Lounge in Mountain Village, with local acts performing most Thursdays from 4 to 7 p.m. throughout the winter season. It's a relaxed après-ski setting for catching live local music after a day on the mountain.",
+    pubDate: "2026-12-10T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/50249/alloy-live-music-1800x900.jpg"
+  },
+  {
     title: "Movies Under the Stars",
     link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     description: "Movies Under the Stars is an outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening movies on Saturday evenings at dusk. The series runs weekly from June 13 through August 15, 2026.",
@@ -6798,6 +6786,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/50264/1920_x_1005_px_cover_centered.jpg"
+  },
+  {
+    title: "Live Music at Mountain Lodge",
+    link: "https://townofmountainvillage.com/explore/events/all-events/live-music-at-mountain-lodge/",
+    description: "Live music returns to the Après Lounge at Mountain Lodge Telluride in Mountain Village, with local acts taking the stage most Thursdays from 4 to 7 p.m. throughout the winter season. It's a relaxed après-ski setting for catching live performances from the local music community.",
+    pubDate: "2026-12-17T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/50249/alloy-live-music-1800x900.jpg"
   },
   {
     title: "Movies Under the Stars",
@@ -6864,6 +6863,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
+  },
+  {
+    title: "Live Music at Mountain Lodge",
+    link: "https://townofmountainvillage.com/explore/events/all-events/live-music-at-mountain-lodge/",
+    description: "Live music returns to the Après Lounge at Mountain Lodge Telluride in Mountain Village, with local acts performing most Thursdays from 4 to 7 p.m. throughout the winter season. It's a relaxed après-ski setting for catching live performances from the local music community.",
+    pubDate: "2026-12-24T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/50249/alloy-live-music-1800x900.jpg"
   },
   {
     title: "Christmas Day Buffet at Alloy Kitchen",

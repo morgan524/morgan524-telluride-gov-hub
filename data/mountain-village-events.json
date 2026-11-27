@@ -1,16 +1,5 @@
 [
   {
-    "title": "An Outlaw Thanksgiving at Alloy Kitchen",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/an-outlaw-thanksgiving-at-alloy-kitchen/",
-    "description": "A Thanksgiving buffet at Alloy Kitchen in Mountain Lodge Telluride, set around a fire with live music. It's a festive holiday gathering in Mountain Village with an outlaw spirit for those celebrating Thanksgiving in the mountains.",
-    "pubDate": "2026-11-26T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/50177/lodge-winter-2200x1100-3.jpg"
-  },
-  {
     "title": "Live Music at Mountain Lodge",
     "link": "https://townofmountainvillage.com/explore/events/all-events/live-music-at-mountain-lodge/",
     "description": "Live music returns to the Après Lounge at Mountain Lodge Telluride in Mountain Village, with local acts performing most Thursdays from 4 to 7 p.m. throughout the winter season. It's a relaxed après-ski setting for enjoying live performances from the local music community.",
@@ -75,6 +64,17 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/30530/drb-event-new.png"
+  },
+  {
+    "title": "Live Music at Mountain Lodge",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/live-music-at-mountain-lodge/",
+    "description": "Live music returns to the Après Lounge at Mountain Lodge Telluride in Mountain Village, with local acts performing most Thursdays from 4 to 7 p.m. throughout the winter season. It's a relaxed après-ski setting for catching live performances from the local music community.",
+    "pubDate": "2026-12-03T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/50249/alloy-live-music-1800x900.jpg"
   },
   {
     "title": "Movies Under the Stars",
@@ -165,6 +165,17 @@
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/31332/1435687101a20036601e28_1800x900.jpg"
   },
   {
+    "title": "Live Music at Mountain Lodge",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/live-music-at-mountain-lodge/",
+    "description": "Mountain Lodge Telluride hosts recurring live music in its Après Lounge in Mountain Village, with local acts performing most Thursdays from 4 to 7 p.m. throughout the winter season. It's a relaxed après-ski setting for catching live local music after a day on the mountain.",
+    "pubDate": "2026-12-10T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/50249/alloy-live-music-1800x900.jpg"
+  },
+  {
     "title": "Movies Under the Stars",
     "link": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     "description": "Movies Under the Stars is an outdoor film series hosted at the Conference Center Plaza in Mountain Village, screening movies on Saturday evenings at dusk. The series runs weekly from June 13 through August 15, 2026.",
@@ -218,6 +229,17 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/50264/1920_x_1005_px_cover_centered.jpg"
+  },
+  {
+    "title": "Live Music at Mountain Lodge",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/live-music-at-mountain-lodge/",
+    "description": "Live music returns to the Après Lounge at Mountain Lodge Telluride in Mountain Village, with local acts taking the stage most Thursdays from 4 to 7 p.m. throughout the winter season. It's a relaxed après-ski setting for catching live performances from the local music community.",
+    "pubDate": "2026-12-17T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/50249/alloy-live-music-1800x900.jpg"
   },
   {
     "title": "Movies Under the Stars",
@@ -284,6 +306,17 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
+  },
+  {
+    "title": "Live Music at Mountain Lodge",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/live-music-at-mountain-lodge/",
+    "description": "Live music returns to the Après Lounge at Mountain Lodge Telluride in Mountain Village, with local acts performing most Thursdays from 4 to 7 p.m. throughout the winter season. It's a relaxed après-ski setting for catching live performances from the local music community.",
+    "pubDate": "2026-12-24T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/50249/alloy-live-music-1800x900.jpg"
   },
   {
     "title": "Christmas Day Buffet at Alloy Kitchen",
