@@ -3560,24 +3560,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Sign Up for the 2026 Turkey Trot!",
-    source: "San Miguel County",
-    date: "November 5, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1424",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14909"
-  },
-  {
-    title: "Black Bear and Imogene Passes Closed for the Winter",
-    source: "San Miguel County",
-    date: "November 3, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1423",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
-  },
-  {
     title: "Treasurer's Office Closed Weds 11/25 - Fri 11/27",
     source: "San Miguel County",
     date: "November 24, 2026",
@@ -3585,15 +3567,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The Treasurer's office will be closed Weds 11/25 - Fri 11/27.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=553",
     img: ""
-  },
-  {
-    title: "Black Bear and Imogene Passes Closed for the Winter",
-    source: "San Miguel County",
-    date: "November 3, 2026",
-    newsTopic: "community",
-    copy: "Due to changing weather conditions and the onset of winter, Imogene and Black Bear Passes are now officially closed for the season.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=551",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14906"
   },
   {
     title: "Town of Telluride Offices Closed for Thanksgiving, Thursday and Friday, November 26 and 27",
@@ -7886,23 +7859,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_ba744009-b2ab-4c5a-b98a-f9fb25c487cd.html",
     address: "335 W Colorado Avenue, Lots 1, 3, and 5, Block 1, Town of Telluride, CO",
     noticeKey: "pz-hearing-335-w-colorado-subdivision"
-  },
-  {
-    title: "Request for Proposal -- County Jail Medical Provider",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: County Jail Medical Provider.",
-    deadline: "Closes 2/20/2026",
-    expires: "2026-02-20",
-    dates: "11/27",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=212",
-    address: "",
-    smcBidID: "212"
   }
 ];
 
